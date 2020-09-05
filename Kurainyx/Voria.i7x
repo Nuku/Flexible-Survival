@@ -30,7 +30,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Voria	"Voria"
 
-Voria is a woman. The hp of Voria is usually 0.
+Voria is a woman. The HP of Voria is usually 0.
 [Physical details as of game start]
 ScaleValue of Voria is 4. [large sized]
 SleepRhythm of Voria is 0. [0 - awake at all times, 1 - day active, 2 - night active]
@@ -56,8 +56,8 @@ PenileVirgin of Voria is false.
 SexuallyExperienced of Voria is true.
 TwistedCapacity of Voria is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Voria is true. [steriles can't knock people up]
-The description of Voria is "[VoriaDesc]".	[In Section 3 - Scenes]
-The conversation of Voria is { "Plant noises" }.
+Description of Voria is "[VoriaDesc]". [In Section 3 - Scenes]
+Conversation of Voria is { "Plant noises" }.
 The scent of Voria is "     Voria has a distinct floral scent mixed with the smell of sex.".
 
 
@@ -69,9 +69,10 @@ Object	Name
 Plant Takeover	"Plant Takeover"
 
 Plant Takeover is a situation.
-The sarea of Plant Takeover is "Outside".
+ResolveFunction of Plant Takeover is "[ResolveEvent Plant Takeover]".
+Sarea of Plant Takeover is "Outside".
 
-Instead of resolving Plant Takeover:
+to say ResolveEvent Plant Takeover:
 	say "     Roving the streets of the infected city, you come across an odd-looking store that makes you pause. While the place is a seemingly ordinary garden store, the reason the place caught your eye is because its storefront window is completely covered by vines, leaves, and other vegetation from the inside. Curious, you decide to investigate the building. Finding the door unobstructed, you walk into the store's interior, cautious for any signs of danger. What you find is an utter mess. Just like the storefront window, all sorts of plants have grown to larger than normal sizes, filling more than half the store with green leaves and a veritable bouquet of flowers larger than your head. It doesn't take long for you to deduce what caused all of this unnatural growth. The scent of sex permeates the air, and behind patches of green, you see dried cum stains spalltered all over the place. It seems that several horny people had decided to have a very messy romp here, and although it seems like it has been a long time since then, they certainly left their mark behind. Their nanite-infused liquid lust has infected the plants, causing them to rapidly grow out of control.";
 	say "     Fortunately, the oversized vegetation don't seem to move or pose any sort of danger, so you go ahead with a search of the area for anything useful while minding any leftover cum that might still be lingering around. While you don't find anything you can use amidst the foliage, there is an open doorway in the back which you go through, leading you to a small outdoor garden. Unfortunately, it seems like this place was not spared the previous occupants' sexy escapades. While not as bad as inside, the plants here have also grown to abnormal sizes, making it difficult to properly search this section. Wading through the greenery, you find that the far corner of the garden seems to have been spared from the orgy. In the safe space, you find a bucket half-filled with water, but judging by the murky liquid, it's very likely that the water is tainted. Still, you decide to take it, just in case, and you manage to fill two bottles with the contaminated water.";
 	say "     Next to the bucket are several potted plants on a stand with a sign indicating that they are of the carnivorous variety. All but one of the displayed plants have wilted, the lone survivor being a sort of venus fly trap with a dark-blue round, bulbous head and two leaves growing on either side of its stem. With it only being the size of the average human's hand, you feel sorry for the small plant, and you debate if you want to take it back to the abbey garden. On the other hand, you remind yourself that just because the plant looks normal doesn't mean that it's not uninfected.";
@@ -84,16 +85,15 @@ Instead of resolving Plant Takeover:
 		say "     Carefully, you reach toward the surviving venus fly trap, taking one last precaution just in case the plant does turn out to be dangerous, but the plant does not budge at all when you pick up the pot holding it. Satisfied with your haul of two bottles of water, albeit dirty ones, and a new green buddy, you exit the garden store and head straight for the abbey. Fortunately, the store is actually located relatively close to your base, and you make it back home without any trouble. Going into the abbey's garden, you transfer the venus fly trap from its pot and into a nice patch of dirt along the wall. With all the work you have done for this little plant, you figure you might as well name the newest addition to the abbey. It takes a bit for you to come up with something suitable, but you eventually recall a period where you browsed some books in the library out of boredom and learned about a genus of flies named 'Voria', which seems like a fitting name for a fly-eating plant. With Voria settled in its new home, you move on to taking care of other matters while also making a note to check on the plant later.";
 		move Player to Grey Abbey Garden;
 		move Voria to Grey Abbey Garden;
-		now hp of Voria is 1;
+		now HP of Voria is 1;
 		now resolution of Plant Takeover is 1;  [Player took Voria back to Abbey]
 	else:
 		LineBreak;
 		say "     Given the state of the store, taking home strange, unknown plants doesn't seem like a good idea. You leave the carnivorous be and exit the store with two more bottles of water, albeit dirty ones, in your pack.";
-		now hp of Voria is 99;
+		now HP of Voria is 99;
 		now resolution of Plant Takeover is 99;	[Player left Voria at garden store]
 	now Plant Takeover is resolved;
-	increase carried of dirty water by 2;
-	say "[bold type]You gained 2 bottles of dirty water.[roman type][line break]";
+	ItemGain dirty water by 2;
 
 
 Section 3 - Scenes
@@ -166,7 +166,7 @@ to say VoriaDesc:
 		if Player consents:	[Player watches latex fox get eaten]
 			LineBreak;
 			say "     Inching forward to get a better view, you watch as the latex fox is finally brought right up to where Voria is rooted. Slowly, the tentacles and vines binding the vulpine lift it off the ground and up toward the plant's head. It almost looks Voria is grinning at its prey before it opens its maw wide, revealing the blue, squishy interior of its head. As the vines around the helpless fox's muzzle slips away, the vulpine lets out a yelp as the tentacles moves it toward the open mouth so that Voria can clamp its upper lips down on its meal's neck. Through the limited space between the fox and Voria's closed lips, you see glimpses of the plant's tongue dart around, most likely licking and savoring the meal that the carnivorous flora has caught. While Voria seems to be enjoying the experience, the latex fox doesn't share the same sentiments as its struggles intensifies. This prompts another tentacle to emerge from behind Voria's head and snake toward the wriggling beast.";
-			say "     To your surprise, this tentacle has a miniature version of Voria's head that's about the size of a baseball mounted on its end. Instead of restraining the fox, the mini-Voria head goes straight for the vulpine's red latex shaft and completely engulfs it in one go. You can see the infected fox shiver in pleasure from the sudden warmth around its cock as the mouth tentacle licks and suckles on on the rubber rod. With the latex creature being distracted by the blowjob, some of the tentacles restraining it unravels to instead stroke and knead the captive's body, further adding to the overwhelming pleasure that the fox is no doubt in now. Though you are aware that Voria is just doing all of this just to subdue its meal, you can't help but find the act of debauchery hot.";
+			say "     To your surprise, this tentacle has a miniature version of Voria's head that's about the size of a baseball mounted on its end. Instead of restraining the fox, the mini-Voria head goes straight for the vulpine's red latex shaft and completely engulfs it in one go. You can see the infected fox shiver in pleasure from the sudden warmth around its cock as the mouth tentacle licks and suckles on the rubber rod. With the latex creature being distracted by the blowjob, some of the tentacles restraining it unravels to instead stroke and knead the captive's body, further adding to the overwhelming pleasure that the fox is no doubt in now. Though you are aware that Voria is just doing all of this just to subdue its meal, you can't help but find the act of debauchery hot.";
 			WaitLineBreak;
 			say "     With the latex creature being subjected to the warm tongue caressing its face, the suckling mouth constantly working its dick, and the teasing tentacles running over its body, it doesn't take that much longer before the beast succumbs to pleasure. With a squeal of delight, the fox gives one final shudder as it releases its load. At the same time, the mouth tentacles presses into the captive's furry crotch, forming a perfect seal so that not a single drop of the fox's cum escapes the ravenous maw. You can see several tiny bulges of the virile sustenance travel from the source and through the long tentacle, disappearing somewhere behind Voria's main head where it will feed the plant.";
 			say "     But that helping of vulpine seed is just the appetizer for the plant, and with its prey now subdued, Voria promptly moves on to the main course. The fox is pushed deeper into Voria's maw, and though most of the tentacles and vines holding it slip away, the horny beast is too exhausted from its recent climax to do anything. When half the fox is inside of Voria's mouth, the plant tilts its head backwards, allowing gravity to finish the job. You watch the latex beast slowly slip down into the plant until finally, the last of it disappears past Voria's lips. Voria then lowers its head, licking its lips in satisfaction. You can see a few bulges periodically poke around Voria's head as the latex fox tries to struggle out of its confines, but its futile efforts cease after a few moments.";
@@ -178,12 +178,14 @@ to say VoriaDesc:
 		say "     You come to a sort of standoff with Voria, and you're sure that if the plant had eyes, you would be in a staring contest with the carnivorous flora. Eventually, Voria slowly extends a thin vine toward you, cautiously creeping it forward until it stops right in front of you. Recognizing the friendly gesture, you reach forward with your hand and allow Voria to wrap the vine around it. A short, gentle tug beckons you toward the plant, and you start moving toward it, albeit with a small bit of trepidation. Thankfully, as you close the distance, Voria keeps its tentacles off you, only letting the same vine guiding you to touch you.";
 		WaitLineBreak;
 		say "     When you finally stand in front of the main part of the plant's body, the vine slips away from your hand, and Voria dips her head to softly rub it against your body. Although it is a bit odd that you're effectively being nuzzled by a giant plant, you're glad to not be next on Voria's menu, and you return the affection by patting it on its large head, eliciting a quiet, but deep purr from it. It seems like you won't have to worry about Voria because it recognizes you as its caretaker and master. You're glad that the abbey now has a new guard to help keep the place safe, and since Voria has the ability to move around, maybe you can even have it follow you around during your exploration.";
-		say "     The carnivorous plant is now tamed! You can make it your active pet by typing [bold type][link]pet carnivorous plant[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type]";
+		say "     (Voria the carnivorous plant is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Voria[end link][roman type] or [bold type][link]ally carnivorous plant[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 		now HP of Voria is 23;	[Voria fully grown]
 		now Carnivorous Plant is tamed;
 		add "Tamed" to Traits of Carnivorous Plant;
 	else:
 		say "     Voria has grown a lot since you had found it. Its blue head alone can easily fit the average human inside of its maw, and right under it are its four leaves, each the size of a small bed. At least a dozen or so tentacles slowly slither along the ground and many of them as thick and likely as strong as rope. [if companion of Player is Carnivorous Plant]On its underside, [else]Even though its bottom half is burrowed underground right now, you know that on its underside[end if] there are a couple of short but even thicker tentacles that the plant uses to move around, and in the center of those appendages is a sort of sac which acts as the plant's stomach. Looking behind Voria's head, you see that a pair of tentacles have a miniature version of its head mounted on their ends, each the size of a baseball, while another pair of tentacles have phallic-shaped blue tips on their ends.";
+	if companion of Player is Carnivorous Plant:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 Instead of conversing the Voria:
 	if HP of Voria < 23:
@@ -205,10 +207,15 @@ Table of GameCharacterIDs (continued)
 object	name
 Carnivorous Plant	"Carnivorous Plant"
 
-Carnivorous Plant is a pet. The description of Carnivorous Plant is "[CarnivorousPlantDesc]". Carnivorous Plant is a part of the player.
-The weapon damage of Carnivorous Plant is 5.
-The level of Carnivorous Plant is 2.
-The Dexterity of Carnivorous Plant is 10.
+Carnivorous Plant is a pet.
+NPCObject of Carnivorous Plant is Voria.
+understand "Voria" as Carnivorous Plant.
+printed name of Carnivorous Plant is "Voria".
+Description of Carnivorous Plant is "[CarnivorousPlantDesc]".
+Carnivorous Plant is a part of Player.
+Weapon Damage of Carnivorous Plant is 10.
+The level of Carnivorous Plant is 1.
+Dexterity of Carnivorous Plant is 15.
 The summondesc of Carnivorous Plant is "[CarnivorousPlantSummon]".
 The dismissdesc of Carnivorous Plant is "[CarnivorousPlantDismiss]".
 The assault of Carnivorous Plant is "[CarnivorousPlantAssault]".

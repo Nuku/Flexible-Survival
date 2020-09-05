@@ -12,8 +12,8 @@ object	name
 Bubble	"Bubble"
 
 Bubble is a person.
-The description of Bubble is "[bubbledesc]".
-The conversation of Bubble is { "Yay!" }.
+Description of Bubble is "[bubbledesc]".
+Conversation of Bubble is { "Yay!" }.
 
 the scent of Bubble is "Bubble smells of warm latex with a hint of vulpine arousal.".
 

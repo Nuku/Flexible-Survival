@@ -8,11 +8,11 @@ object	name
 Rod Mallrat	"Rod Mallrat"
 
 Rod Mallrat is a person. "[if HP of Ronda is not 100]A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDaniels[or]one of the tables[or]the guarded bathroom area[at random][else]Rod the slut rat is [one of]stretched out on some cushions[or]curled up for a quick nap[or]wiping some stray globs of cum from her fur and then licking them from her fingers[or]tinkering with some odd and ends she's found among the slut rats['] collected junk[at random][end if].".
-The description of rod mallrat is "[roddesc]".
+Description of rod mallrat is "[roddesc]".
 The icon of Rod Mallrat is figure of Rod_icon.
 Rod is a trader.
 Rod Mallrat is in Mall FoodCourt.
-The conversation of Rod Mallrat is { "empty" };
+Conversation of Rod Mallrat is { "empty" };
 
 to say roddesc:
 	project Figure of Rod_icon;
@@ -117,8 +117,8 @@ object	name
 Ronda Mallrat	"Ronda Mallrat"
 
 Ronda Mallrat is a person. "[if HP of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note[else if HP of Ronda is 10]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random][else if HP of Ronda is 100]Ronda [one of]sits with several slut rats fawning over her[or]is stretched out across some cushions, enjoying some expensive chocolates[or]idly rubs her crotch[or]runs her paws over Rod[at random][end if].".
-The description of Ronda Mallrat is "[rondadesc]".
-The conversation of Ronda is { "empty" }.
+Description of Ronda Mallrat is "[rondadesc]".
+Conversation of Ronda is { "empty" }.
 Ronda Mallrat is in Mall Atrium.
 
 a postimport rule: [bugfixing rules for players that import savegames]
@@ -186,7 +186,7 @@ instead of trading the demon seed when the current action involves the ronda:
 		project the figure of RondaSR_icon;
 		say "     Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.";
 		say "     The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with newfound virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
-		delete demon seed;
+		ItemLoss demon seed by 1;
 		now Ronda is nowhere;
 		now HP of ronda is 1;
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -230,8 +230,8 @@ to say rondaitems:
 	now HP of Ronda is 6;
 	now Art Collector is active;
 	increase score by 10;
-	delete lizard juice;
-	delete awesomest fruit;
+	ItemLoss lizard juice by 1;
+	ItemLoss awesomest fruit by 1;
 
 before conversing the Nermine while HP of Ronda is 7:
 	say "[rondaitems2]" instead;
@@ -247,7 +247,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "lizard juice"	"A small vial of the creamy, white cum from one of those lizard girls."	1	lizard juice
 
-lizard juice is a grab object. It is part of the player. It is not temporary.
+lizard juice is a grab object. It is not temporary.
 
 instead of using lizard juice:
 	say "You need to save that to help Ronda.";
@@ -261,14 +261,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Art Collector	"Art Collector"
 
-Art Collector is a situation. The level of Art Collector is 9.
+Art Collector is a situation.
+ResolveFunction of Art Collector is "[ResolveEvent Art Collector]". The level of Art Collector is 9.
 Art Collector is inactive.
-The sarea of Art Collector is "High".
+Sarea of Art Collector is "High".
 
 artleopardfight is a number that varies.
 artattempt is a number that varies.
 
-Instead of resolving a Art Collector:
+to say ResolveEvent Art Collector:
 	if artattempt is 0:
 		say "     Managing to follow Nermine's directions through the available paths through the chaotic city, you manage to circumvent other creatures and obstacles to make it to the address she's provided you. Looking up at the high rise building, your legs ache at the thought of scaling its stairs to reach the penthouse, but there is no other option. You move quietly inside and carefully make your way to the stairwell to begin your ascent. It is long and tiring, but you press on, not wanting to risk being found in such a confined space with the countless creatures which probably inhabit this building. You can see several wet splotches on the stairs, many quite fresh.";
 		say "     After an ascent which leaves you hungry, thirsty and aching, you make it to the access to the penthouse suite. Opening the door, you step into the antechamber connecting to the inoperative elevator and the large doors to the suite. Finding them unlocked, you slip quietly into the spacious foyer and living room, looking at the various pieces on display. One of them, a veil and simple staff are held in a glass case. The veil is a simple band of old, grayed cloth and the staff is little more than a wooden walking stick made from a straight branch, neither having anything remarkable about them. As you look over the case, you try to decide how best to get at the contents, but are interrupted by an angry growl behind you. Turning, you find a large leopardman stalking out of the nearby bedroom and spot several sexy leopardesses on the bed waiting for his return after dealing with the would-be thief. This creature was once likely the art collector and has since gathered a harem of horny females to add to his collection.";
@@ -327,7 +328,7 @@ to say rondarescue:
 			now MonsterID is y;
 			break;
 	say "     Looking around the room, you spot several of the rats in mid-coitus and try to check them out without looking too interested. Not that the rats would mind, per se, but you might get roped into playing with them and lose track of your actual goal.";
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus]+[level of Ronda] -- [dice + bonus + level of Ronda]: vs 17.";
 	if dice + bonus + level of ronda < 17:
@@ -484,10 +485,10 @@ to say helpingrod:
 			say "     After withdrawing and Rod and Ronda change positions, Ronda sends you on your way, saying she wants more private time with him. 'We have so much to catch up on,' she says with a grin, stroking her cock as it gets hard again.";
 		if calcnumber is 3:
 			say "     You shake your head and tell them that you'd not want to get in the way of their loving reunion and head out, hearing Rod start moaning again as Ronda turns her full attention back on buggering her boyfriend.";
-		say "     On the way out, you do snag some supplies from the counter, the two rats too occupied to notice you helping yourself to them. Not that you think they'd object, but they're a bit too distracted to see that you're properly rewarded for your efforts. (Food, chips and a can of soda obtained.)[line break]";
-		increase carried of food by 1;
-		increase carried of chips by 1;
-		increase carried of soda by 1;
+		say "     On the way out, you do snag some supplies from the counter, the two rats too occupied to notice you helping yourself to them. Not that you think they'd object, but they're a bit too distracted to see that you're properly rewarded for your efforts.[line break]";
+		ItemGain food by 1;
+		ItemGain chips by 1;
+		ItemGain soda by 1;
 		increase score by 100;
 
 RodAndRonda ends here.

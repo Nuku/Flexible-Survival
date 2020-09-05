@@ -42,8 +42,8 @@ PenileVirgin of Aster is true.
 SexuallyExperienced of Aster is false.
 MainInfection of Aster is "".
 Aster is nowhere.
-The description of Aster is "[AsterDesc]".
-The conversation of Aster is { "<This is nothing but a placeholder!>" }.
+Description of Aster is "[AsterDesc]".
+Conversation of Aster is { "<This is nothing but a placeholder!>" }.
 The scent of Aster is "     He smells powerful, but also somewhat earthy.".
 
 to say AsterDesc:
@@ -70,10 +70,11 @@ Object	Name
 China Shop	"China Shop"
 
 China Shop is a situation.
+ResolveFunction of China Shop is "[ResolveEvent China Shop]".
 The level of China Shop is 5.
-The sarea of China Shop is "Outside".
+Sarea of China Shop is "Outside".
 
-instead of resolving a China Shop: [Meeting Aster]
+to say ResolveEvent China Shop: [Meeting Aster]
 	say "     As you wander through the city, you notice a store display teeming with fancy tablewares. Shockingly, they seem to be almost completely intact, with only a few damaged or destroyed. Before you have a chance to investigate further, however, you notice there is a very large figure moving around inside the shop. Do you want to investigate the shop?";
 	LineBreak;
 	if Player consents:
@@ -89,11 +90,12 @@ Object	Name
 Trial of Courage	"Trial of Courage"
 
 Trial of Courage is a situation.
+ResolveFunction of Trial of Courage is "[ResolveEvent Trial of Courage]".
 The level of Trial of Courage is 5.
-The sarea of Trial of Courage is "Park".
+Sarea of Trial of Courage is "Park".
 Trial of Courage is inactive.
 
-instead of resolving a Trial of Courage: [Finding the amulet in the park]
+to say ResolveEvent Trial of Courage: [Finding the amulet in the park]
 	say "     While navigating through the park, you come upon what seems to be a large amphitheater. It looks distinctly Greek, composed of stone in intricate designs, though the details of the works seem to be faded and worn with age. Everything about the structure paints it as something far older than should be in this park. Despite the strangeness of the world, this still stands out as particularly interesting, and the sight of it reminds you of what Aster asked you to look for. After all, there are very few places that look more like they hold forgotten treasures of ancient heroes than this.";
 	say "[bold type]Do you want to investigate?[roman type][line break]";
 	LineBreak;
@@ -101,7 +103,7 @@ instead of resolving a Trial of Courage: [Finding the amulet in the park]
 		say "     You decide it's worth checking out more closely, and you move carefully towards the ancient amphitheater. Soon enough, you find an entrance, and when you enter you can easily see that the interior looks much more well-kept than the outer portions. The first thing to catch your eye when you enter is a tall column, with text inscribed on the front in large lettering. At first, it seems to be in an unknown language, but as you examine it in more detail, it seems to resolve itself into something more familiar. While it seems almost like a riddle, you're reasonably certain that it describes a trial necessary to obtain the 'treasures' within. If you're going to get that amulet, you'll have to play along.";
 		say "     As you step up onto the stage, several other people step out from backstage. They all line up in front of you, except for a single one who steps even closer. 'If you wish to pass the trial of the stage, you must act in our play. A worthy attempt will be rewarded, while poor performance will leave you with nothing.' You nod, prepared to do your best as part of this strange test.";
 		[replace this with a scene that involves selecting lines. Better lines, better score, better result. Total failure gives bad end maybe?]
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Charisma Check):[line break]";
 		increase diceroll by bonus;

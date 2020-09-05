@@ -45,7 +45,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 	say "     Amaryllis is among them and she runs into your arms, clearly elated at your success, but many of the others still seem skeptical of you. Before she and Amaryllis have a chance to start arguing again, their leader appears and separates the pair. She then turns to you.";
 	if Player is perminfected:
 		say "     Their leader looks you over for a while, but then frowns and motions for several of the warriors. 'This one is tainted and unable to become one of us. To welcome one in such a state into our midst would lead to our destruction. The traveler may take this as reward for their help against the wolves, but that is all.' A basket of fruit is tossed at your feet while the warriors step forward, ushering you to leave after claiming your reward.";
-		increase carried of food by 2;
+		ItemGain food by 2;
 		now equinoidstatus is 100;
 		now Equinoid Camp is unknown;
 		move player to Park Entrance;
@@ -93,8 +93,8 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 				say "     'To protect and guide our newest member, we shall send one of our young warriors with you. Liliana is to accompany you, to protect you and to guide you back to us should you stray from the herd.' The equinoid rises stiffly and walks to your side[if Player is not lonely], forcing your [companion of Player] to step aside for her[end if]. Amaryllis gives her a bit of a jealous glance, but Liliana is either oblivious to it or ignores it entirely. 'We expect you to keep her with you. This is to be a journey for her as well as protection for you. We will not be pleased if you do not fulfill your duties in this regard.' You glance over at your new equinoid companion and nod to the tribal leader before heading into the compound to look around.";
 				now equinoid warrior is tamed;
 				add "Tamed" to Traits of equinoid warrior;
-				now the companion of the player is equinoid warrior;
-				say "     (The equinoid warrior is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type]pet equinoid warrior[roman type] and initiate sex with her while active by typing [bold type][link]fuck equinoid warrior[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], though the herd may not be pleased about that.)[line break]";
+				now the Companion of Player is equinoid warrior;
+				say "     (Liliana the equinoid warrior is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Liliana[end link][roman type] or [bold type][link]ally equinoid warrior[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Liliana[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				increase score by 25;
 				wait for any key;
 				move player to Equinoid Camp;
@@ -102,7 +102,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 			LineBreak;
 			say "     Reaction to your rejection of the offer is mixed. Amaryllis is clearly disappointed, but Bryony smiles smugly. Many of the tribe seem offended while others are more ambivalent to this. Their leader nods and motions for one of the herd to approach with a basket. 'We accept your decision. We are an honorable people and will provide you this in thanks for your help with the wolves instead,' she says, passing you the small basket of fruit. She drops her voice while talking to you. 'Do not expect that all of the tribe will be pleased with this slight. It would be wise to expect some of the warriors to come seeking to more forcibly add you to the herd as another of their mares instead.'";
 			say "     She turns back to those gathered. 'The traveler has assisted us against the wolves and so may leave here in peace.' And with that, and a little grumbling from some, the equinoids disperse, Amaryllis walking away sadly while Bryony watches you go.";
-			increase carried of food by 2;
+			ItemGain food by 2;
 			now equinoidstatus is 100;
 			now Equinoid Camp is unknown;
 			move player to Park Entrance;
@@ -116,7 +116,7 @@ Equinoid Camp	"Equinoid Camp"
 
 Equinoid Camp is a room. It is fasttravel. It is private. It is sleepsafe.
 The earea of Equinoid Camp is "Park".
-The description of Equinoid Camp is "[EquinoidCampDesc]".
+Description of Equinoid Camp is "[EquinoidCampDesc]".
 
 to say EquinoidCampDesc:
 	say "     You stand in a large and sprawling field of long, swaying grass. Spread out among the area are primitive wooden structures that provide enclosed spaces for rest and recreation. Although spartan in construction, these buildings seem more than sturdy enough to withstand the temperate California weather.";
@@ -131,7 +131,7 @@ Nakoma's Tent	"Nakoma's Tent"
 
 Nakoma's Tent is a room. It is private. It is sleepsafe.
 Nakoma's Tent is east of Equinoid Camp.
-The description of Nakoma's Tent is "[NakomaTentDesc]".
+Description of Nakoma's Tent is "[NakomaTentDesc]".
 
 to say NakomaTentDesc:
 	say "     A roomy and lavishly decorated enclosure, Nakoma's tent is arranged in bohemian style, replete with layered textiles and exotic patterns that lend a disarming atmosphere to her abode. The ground is covered in rugs and silky furs. Her queen-sized bed is arranged with many small, colorful pillows and surrounded by an elegant canopy. The thick tarp of her tent blocks out most the [if daytimer is day]sunlight[else]ambient light[end if], leaving only the warm, flickering glow of sconces and tiki torches to illuminate the area.";

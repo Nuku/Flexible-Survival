@@ -76,9 +76,9 @@ Mysterious Shop	"Mysterious Shop"
 
 The Mysterious Shop is a room. The Mysterious Shop Entrance is a door. It is south of The Mysterious Shop and north of Mall West Wing. The Mysterious Shop Entrance is open.
 
-The description of The Mysterious Shop Entrance is "     People in here keep giving one of the stores on the north side strange looks - and you can see why as you inspect it closer. The [bold type]mysterious shop[roman type] does not seem to... belong there. It is as if someone transplanted it to this location from an old-timey street with brick walls, taking a foot or two of the walls around with it to kind of merge and meld with the normal mall side walls. The wood-framed big glass window allows you a view into a store that looks over-stuffed with all sorts of strange and unusual items.".
+Description of The Mysterious Shop Entrance is "     People in here keep giving one of the stores on the north side strange looks - and you can see why as you inspect it closer. The [bold type]mysterious shop[roman type] does not seem to... belong there. It is as if someone transplanted it to this location from an old-timey street with brick walls, taking a foot or two of the walls around with it to kind of merge and meld with the normal mall side walls. The wood-framed big glass window allows you a view into a store that looks over-stuffed with all sorts of strange and unusual items.".
 
-The description of The Mysterious Shop is "     Bells jingle softly as you enter this rather quiet and eccentric shop, seeming to be still open and doing fine even without power. Softly scented candles cast a dim light over shelves covered with strange and unusual items which seem to be displayed in no discernible order. You can't see any of the normal things you would expect to find in a mall shop however, no nicely packed boxes, no brand name items clamoring for your attention, no well marked shelves, just a rather large strange assortment of items spread out as far as the eye can see. Children's toys are placed next to expensive looking decorations, candle holders lying next to ornamental fans from the orient, almost as if someone merely grabbed anything that interested them, and then spread their new treasures out for people to see. Compared to most other shops you have been in, this one seems quite strange and mysterious indeed although with the city in the state it is currently in you probably shouldn't be too surprised at the strange things you find, although for some reason you can never quite remember seeing this shop here before...".
+Description of The Mysterious Shop is "     Bells jingle softly as you enter this rather quiet and eccentric shop, seeming to be still open and doing fine even without power. Softly scented candles cast a dim light over shelves covered with strange and unusual items which seem to be displayed in no discernible order. You can't see any of the normal things you would expect to find in a mall shop however, no nicely packed boxes, no brand name items clamoring for your attention, no well marked shelves, just a rather large strange assortment of items spread out as far as the eye can see. Children's toys are placed next to expensive looking decorations, candle holders lying next to ornamental fans from the orient, almost as if someone merely grabbed anything that interested them, and then spread their new treasures out for people to see. Compared to most other shops you have been in, this one seems quite strange and mysterious indeed although with the city in the state it is currently in you probably shouldn't be too surprised at the strange things you find, although for some reason you can never quite remember seeing this shop here before...".
 
 Nermine is in The Mysterious Shop.
 Bargain Bin is in The Mysterious Shop.
@@ -127,8 +127,8 @@ SexuallyExperienced of Nermine is true.
 TwistedCapacity of Nermine is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Nermine is true. [steriles can't knock people up]
 MainInfection of Nermine is "".
-The description of Nermine is "[NermineDesc]".
-The conversation of Nermine is { "Mysterious!" }.
+Description of Nermine is "[NermineDesc]".
+Conversation of Nermine is { "Mysterious!" }.
 
 the linkaction of Nermine is "[NermineLinkAction]".
 
@@ -239,6 +239,12 @@ instead of conversing the Nermine:
 		now sortorder entry is 30;
 		now description entry is "Ask Nermine if she has some way of helping Brennan with his little problem";
 	[]
+	if Thirst of Fancy is 5:
+		choose a blank row in table of fucking options;
+		now title entry is "The Stablemaster";
+		now sortorder entry is 40;
+		now description entry is "Ask Nermine about dealing with the Stablemaster";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -275,6 +281,8 @@ instead of conversing the Nermine:
 					say "[NermineRatRitual]";
 				else if (nam is "Let her turn Cole into a girl again" or nam is "Let her call Coura from the back room"):
 					say "[NermineCouraSpell]";
+				else if (nam is "The Stablemaster"):
+					say "[NermineTalk6]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -332,8 +340,8 @@ to say NermineTalk2:
 	else if ( wrcurseNermine is 3 or wrcurseNermine is 4 ) and wrcursestatus >= 3 and wrcursestatus < 100 and wolfsbane is owned:
 		say "     Pulling out the wolfsbane, you set it on the counter. You feel ill just from touching it, but Nermine doesn't seem to have an adverse reaction to its smell. Once she places it in a glass jar you feel a little better, but still suffer from a lingering uneasiness in your stomach. 'Nermine will be preparing the potion while you are to be getting the next thing you are needing.";
 		say "     'There is a shipment of items that were going to be auctioned off. Among them is the silver knife you are wanting. It is looking like this.' She pulls out a published listing from the auction house, pointing out the knife. 'Cure is not needing this specific knife, but knife is special, so should be working better for this. Nermine will be it keeping as her payment, so don't be becoming attached to it,' she adds with a wink. She slips you the listing after circling the lot number in red. She goes on to tell you the location of the warehouse, but cautions you that the Warehouse District was a dangerous part of the city even before the outbreak[if Warehouse District is unknown]. She does provide you with a route she assures you will safely get you to the dockside area[end if].";
-		now carried of wolfsbane is 0;
-		now Warehouse District is known;
+		ItemLoss all wolfsbane;
+		AddNavPoint Warehouse District;
 		now wrcurseNermine is 5;
 		now Getting the Knife is active;
 	else if wrcurseNermine is 5 and wrcursestatus >= 3 and wrcursestatus < 100 and a random chance of 1 in 3 succeeds:
@@ -370,7 +378,7 @@ to say NermineTalk2:
 
 to say NermineTalk3:
 	if debugactive is 1:
-		say "     DEBUG-> HP OF HAYATO [HP of Hayato] <- DEBUG[line break]";
+		say "     DEBUG-> HP of HAYATO [HP of Hayato] <- DEBUG[line break]";
 	if HP of Hayato is 10:
 		say "     Figuring that Nermine's the one who gave Hayato the chastity device now locking him up, you decide to ask her about it. 'Ah... Nermine was knowing an interested buyer would be coming eventually to be purchasing the oni. Not enough room in store to keep him here, but is good advertising. Besides, the muscled oni is not being my style, even if still virgin. Nermine is preferring something that looks sexy in black,' she says, running her eyes over you appraisingly. You try to tell her that you're just looking to help Hayato out, but she waves that off. 'Chastity belt on oni is old piece, but still working good. Right now is being used not quite for intended purpose. Magic can be blocking arousal of wearer, yes, but normally meant to discipline and control them.'";
 		say "     She dangles an old, wrought iron key in front of you, but snatches it away as you reach for it. 'You are interested in purchasing oni for yourself, yes?' she asks. You tell her that you want the key to free him, to which she grins. 'If you are to be purchasing oni, then Nermine is needing suitable replacement. Nermine is hearing there is Japanese [bold type]noh mask[roman type] in office of teacher at city college. She is wanting you to go there and get it for Nermine. May be difficult, but you are to be getting oni sex slave in return,' she says with a naughty grin, once more flashing the key before tucking it behind the counter.";
@@ -480,6 +488,11 @@ to say NermineTalk5:
 	else:
 		say "     The jackaless gives you a smooth smile as you bring up Brutus and says, 'Nermine hopes you are happy with your pet, yes? She wants to respectfully remind you that there are no refunds, no matter what. All deals are final.' With that, she gives you a friendly smile, though you can see the iron will of an unrelenting salesperson shine out from underneath.";
 
+to say NermineTalk6:
+	say "     As you open your mouth to ask Nermine about the item Fancy had sent you to retrieve, a mysterious gust of wind blows through the mall, momentarily making you forget what you were about to say. And your backpack suddenly feels a little heavier, too.";
+	say "     (This quest will be finished soon, but in the meantime, enjoy playing with the finished ponysuit! And thank you for your patience.)";
+  ItemGain Ponysuit by 1;
+
 to say BrutusCassimFuck:
 	say "     As Brutus steps forward after your command, Cassim's eyes widen and he can't help but stare at the demon's rippling muscles - and even more so at the massive shaft hanging between the purple giant's legs. It is clear that this is the biggest penis he's ever seen - making it kind of admirable that the smaller elf stands his ground, showing no fear - although he does gulp visibly as Brutus quickly gets fully hard and the massive erection twitches in Cassim's direction. Coming to a stance with his clawed feet set apart a bit, your demonic companions sets his hands on his hips and says, 'Come here, elf boy!'";
 	say "     With only an eye-blink of hesitation, the slender male steps forward, accompanied by a slight tinkle from his costume. Brutus immediately puts a large hand on his body, squeezing the elven teen's buttocks through their gauzy, sheer coverings, then strokes up Cassim's back before carefully taking hold of his head and guiding it down to his crotch. Having his beardless face rubbed against Brutus's long cock and heavy balls, Cassim's nostrils flare as he gets a good long whiff of Brutus's very masculine scent... and the elf can't help but give an aroused moan. There is no need for further prompting, as the almost naked servant starts to lick Brutus's erection all on his own, using his slender hands to hold the heavy shaft and play with the demon's big balls.";
@@ -505,9 +518,7 @@ to say NermineBrennanTalk:
 	say "     Setting the box on the counter-top with a flourish, Nermine goes on to say, 'This is a very precious item that Nermine herself can guarantee in its functionality.' Undoing a little catch, she opens the box and presents it to you: On a bed of red velvet, a shining golden object rests inside, formed in the characteristic shape of a canine erection. Where the base of a 'normal' dildo would be, it continues on in a fluid curve, finally ending in an elongated oval. This part of it seems to be designed to be slid into a woman's vagina. Stroking along the shimmering shaft's length almost lovingly, the jackaless adds, 'The user of this unique artifact will be able to enjoy [italic type]full[roman type] functionality in all matters like a male. It is quite comfortable to wear, with no limits in the duration - after a while, one can mostly forget it wasn't naturally part of oneself.' Her tone makes you wonder how long Nermine spent as a futanari to experiment. Those comments seem quite specific for anything else to have happened.";
 	WaitLineBreak;
 	say "     Animalistic shape aside, you can't help but think that Brennan would simply love to own Nermine's magic cock. Almost as if she heard you think, the canny female speaks up, 'Of course, with the item being so very rare and a prized personal possession too, Nermine would have to ask for a piece of at least equal worth in trade. The humble storekeeper has something in mind already. She knows of a small group - a cult really - who recently abandoned their previously very secretive manner, in light of the current developments. This provides an opportunity of possibly obtaining the idol they worship. Nermine always was interested in possessing one of those, yet was unable to obtain or even find it. But now, things are clearly different.' With that, she slides a small sheet of folded blue paper over the counter for you to take, then shuts the box once more and stores it away.";
-	LineBreak;
-	say "[bold type]You gain a cult flyer![roman type][line break]";
-	increase carried of cult flyer by 1;
+	ItemGain cult flyer by 1 silently;
 	now Libido of Brennan is 2;
 
 to say RareInfectionMenu:
@@ -559,9 +570,7 @@ to say FemaleSpidertaurTransform:
 			LineBreak;
 			say "     Digging the food out of your pack and handing it over to Nermine, you watch her stash it away behind the counter. Then the jackaless comes up to you and holds out the spindle, allowing you to touch it. Stroking over the rough fibers of black cloth, you let your finger wander to the sharp end, pricking your fingertip on it.";
 			infect "Spidertaur Female";
-			LineBreak;
-			say "[bold type]You lose 1 food![roman type][line break]";
-			decrease carried of food by 1;
+			ItemLoss food by 1;
 		else:
 			say "     Shaking your head, you turn down the sorceress for now. 'A pity. Nermine will keep the item at hand until her dear customer changes their mind,' she tells you, then goes to put the spindle away again.";
 	else:
@@ -714,11 +723,8 @@ to NermineRequestHelp:
 		if carried of peacock feather > 2:
 			say "     'Yes, there they are!' the jackal-woman says as she snatches the large shiny feathers from you. 'Now Nermine can have a pretty new peacock feather necklace to wear!' she adds as she places the glittering feathers in several different positions on her dark neck and glances into a mirror beside the counter as if to see which position she likes best. She notices you watching in amusement and flashes you a soft grin. 'What, not everything is about other customers, sometimes Nermine likes to get pretty things herself too. Still, with her friend being such a good helper,' she says as she reaches out to caress the side of your new muzzle gently. 'So very nice and always so happy to help Nermine out with the shop, maybe [SubjectPro of Player] would like to help her out with her other needs as well?'";
 			say "     Wining, the jackaless runs her hand slowly down your black-furred chest. 'Nermine has one last bit of help to give first though,' the sleek jackal says as she reaches behind the counter and produces another of those familiar-looking jackal totems and hands it to you. 'Just let the totem finish helping become even more attractive, and then maybe Nermine will let her lovely little helper help her out of clothes in back room.' The thought of serving the sultry shopkeeper in a more intimate manner makes your body flush with desire, and you look down at the totem in your hand with anticipation...";
-			LineBreak;
-			say "[bold type]You lose 3 peacock feathers![roman type][line break]";
-			decrease carried of peacock feather by 3;
-			say "[bold type]You gain a jackal totem![roman type][line break]";
-			increase carried of jackal totem by 1;
+			ItemLoss peacock feather by 3;
+			ItemGain jackal totem by 1;
 			say "[bold type]You gain 30 Xp![roman type][line break]";
 			increase XP of Player by 30;
 			stop the action;
@@ -737,9 +743,7 @@ to NermineRequestHelp:
 	else if Nerminehelpstatus is 3:
 		if WineFound is 2:
 			say "     'How wonderful!' Nermine says as you proudly hold out the small vial of dark liquid to her. 'And Nermine's eager visitor got it so nice and fast too! Just the best helper ever!' the jackal-woman exclaims as she reaches over and runs her clawed hand through your fur several times. You find yourself groaning in pleasure under her soft touch, both at the feel of her hand on your fur, but also from the sheer joy of making your lovely jackal mistress so very happy. Before you can examine that thought more closely, Nermine stops petting you and carefully begins to stow the heady wine safely away. 'Nermine has a customer seeking the best party wine ever, who asked her for help. She is sure that with a few drops of this wine in his drink, her customer and his guests will enjoy their best party ever. She just knows he will love being happy drunk Nymph-chasing Satyr,' the jackal-woman says with a grin on her face as she turns back to you, pulling an item out from under the counter as she does so. 'And Nermine has a lovely reward for her wonderful helper as well!' she says happily as she hands you another of those strangely carved jackal totems. 'Just use that to become more like a jackal, and then maybe Nermine and her friend can celebrate helping customers - together in the back room sometime...";
-			LineBreak;
-			say "[bold type]You gain a jackal totem![roman type][line break]";
-			increase carried of jackal totem by 1;
+			ItemGain jackal totem by 1;
 			say "[bold type]You gain 30 Xp![roman type][line break]";
 			increase XP of Player by 20;
 			now Nerminehelpstatus is 4;
@@ -758,11 +762,8 @@ to NermineRequestHelp:
 	else if Nerminehelpstatus is 2:
 		if carried of wyvern goop > 2:
 			say "     'Nermine thanks her visitor for the samples!' the jackaless says with a smile on her muzzle as she takes the goop from you. 'Now Nermine can make several charms to trap one of the beasts for a customer who wants a little pet wyvern. She thinks he will make a handsome mate for the trapped wyvern, as such are things bound to go. Not that her helpful little friend here needs to worry about that,' she says as she reaches over to trace one of her short claws along your cheek in a soft teasing manner. 'Nermine promised to help in return, and she keeps her bargains,' the jackal-woman adds as she reaches underneath the counter again and pulls out another of those polished onyx statues.";
-			LineBreak;
-			say "[bold type]You lose 3 wyvern goop![roman type][line break]";
-			decrease carried of wyvern goop by 3;
-			say "[bold type]You gain a jackal totem![roman type][line break]";
-			increase carried of jackal totem by 1;
+			ItemLoss wyvern goop by 3;
+			ItemGain jackal totem by 1;
 			say "[bold type]You Gain 10 XP![roman type][line break]";
 			increase XP of Player by 10;
 			now Nerminehelpstatus is 6;
@@ -792,9 +793,7 @@ to NermineRequestHelp:
 				say "[bold type](The helping quest requires guy, girl and furry content to be available.)[roman type][line break]";
 			else:
 				say "     'Excellent!' the jackaless says as she claps her hands happily, before reaching underneath the counter. 'Nermine loves to help out her customers!' she says as she brings a small item up from beneath and holds it out to you. Closer inspection reveals the object to be a small black statue of a jackalman with his arms crossed across his chest. Glancing up at Nermine you see the jackal-woman give you a sly wink, then add, 'Nermine thinks this will help her new friend look much better, and get in touch with the power of the jackal. Go on, give it a try!' she says as she hands you the small totem. 'It is no charge for this one. A gift from Nermine to help get started.' The canine shopkeeper says with a grin on her muzzle, as you look down at the little item in your hands with curiosity.";
-				LineBreak;
-				say "[bold type]You gain a jackal totem![roman type][line break]";
-				increase carried of jackal totem by 1;
+				ItemGain jackal totem by 1;
 				now Nerminehelpstatus is 1;
 		else:
 			LineBreak;
@@ -936,11 +935,11 @@ to say NermineStoreFuck_Mallrats:
 		say "     Eventually you come down from the heights of pleasure and find yourself just standing there, gripping the counter, your knot slowly shrinking in Nermine's body. Looking down, you notice a look of absent bliss on the jackal bitch's muzzle, your fertile seed sealed in her depths by the cork of your canine knot. You emit a soft, pleasured sigh and take a moment to revel in your power over this once-proud bitch, now reduced to little more than a pet to fuck and breed at your leisure. As you bask in your post-orgasmic reverie, your idly wandering gaze falls on a mall rat with spiky green hair standing in front of the store window.";
 		WaitLineBreak;
 		project the figure of Danny_clothed_icon;
-		say "     [if hp of Danny > 0]You know the young rat - it's Danny. [end if]Judging from the bulge in his ragged pants, he's been there for a while and seems to have enjoyed the show. Though currently, his attention isn't on you and your pet, but rather something in the mall hallway - several of his buddies he called over to join him, as it turns out a moment later. Now there's a whole group of mall rats gathered in front of the store, jovially gawking at the view you're giving them. A winning grin on your face, you smile at them, then demonstratively stroke a hand down the side of the jackal bitch lying sprawled out on her shop counter, stopping to grope one of her breasts as you do so. There's some murmuring and lewd gesturing among the spectators as [if hp of Danny > 0]Danny[else]the original rat with the green hair[end if] regales them with what he saw, then bravely enters the store to approach you.";
+		say "     [if HP of Danny > 0]You know the young rat - it's Danny. [end if]Judging from the bulge in his ragged pants, he's been there for a while and seems to have enjoyed the show. Though currently, his attention isn't on you and your pet, but rather something in the mall hallway - several of his buddies he called over to join him, as it turns out a moment later. Now there's a whole group of mall rats gathered in front of the store, jovially gawking at the view you're giving them. A winning grin on your face, you smile at them, then demonstratively stroke a hand down the side of the jackal bitch lying sprawled out on her shop counter, stopping to grope one of her breasts as you do so. There's some murmuring and lewd gesturing among the spectators as [if HP of Danny > 0]Danny[else]the original rat with the green hair[end if] regales them with what he saw, then bravely enters the store to approach you.";
 		say "     'Wow, you - you did it! Err - did her I mean!' he yelps after the bells on the door fall silent again, then he keeps going at breakneck speed with 'She can cast spells you know. Can you cast spells too? None of us thought they'd ever see Nermine like this. Not after Brody. He didn't take her no as an answer and kept pestering her. And she got angry - then *Poof* - we call him Bridget now.' Finally running out of steam, the young rat just stares at Nermine, eyes focused on her breasts - at least until she gives a little growl that makes him make a step back. Then the jackaless says 'Is the little rat wanting to join Bridget in her fate? This is still Nermine's store and - '[line break]";
 		WaitLineBreak;
 		project the figure of Nermine_naked_icon;
-		say "     Deciding that it's time to remind your pet bitch of her place, you rotate your hips a bit, moving your knotted shaft inside Nermine's pussy and making her moan and pant from the sensations. That shuts her up pretty well. With a grin, you push her down on the shop counter again, her breasts resting against its top. As you do so, the lone rat with you in the store gulps and looks at you with awe in his eyes - then he takes a deep breath and asks 'Can I - take a picture[if hp of Danny is 0]? And... I'm Danny by the way.' [else]?' [end if]Giving him a gracious nod, you watch the mall rat pull a precious still-working smartphone from a pocket: *Click* - Her lying under you on the counter, a look of well-fucked pleasure on her face. *Click* - The root of your cock and the base of its knot where it vanishes inside her. *Click* - You holding Nermine against your chest, both hands cupping her breasts. *Click, Click, Click*[line break]";
+		say "     Deciding that it's time to remind your pet bitch of her place, you rotate your hips a bit, moving your knotted shaft inside Nermine's pussy and making her moan and pant from the sensations. That shuts her up pretty well. With a grin, you push her down on the shop counter again, her breasts resting against its top. As you do so, the lone rat with you in the store gulps and looks at you with awe in his eyes - then he takes a deep breath and asks 'Can I - take a picture[if HP of Danny is 0]? And... I'm Danny by the way.' [else]?' [end if]Giving him a gracious nod, you watch the mall rat pull a precious still-working smartphone from a pocket: *Click* - Her lying under you on the counter, a look of well-fucked pleasure on her face. *Click* - The root of your cock and the base of its knot where it vanishes inside her. *Click* - You holding Nermine against your chest, both hands cupping her breasts. *Click, Click, Click*[line break]";
 		say "     Showing off with your jackal bitch is quite a bit of fun, and before long you notice that your knot stopped softening at some point and is now again rock-hard inside Nermine - at which point you decide to give Danny and the ever-growing crowd of mall rats outside the store another show. Guiding your pet to the side of the counter so everyone has a nice side-on view of the action, you start grinding your hips against her behind, pulling and stretching her pussy with every movement. The sexy jackal feels amazingly tight and warm around your thrusting canine shaft, with the cum you've already blasted into her squishing around your member. Deeply aroused by you dominating her, she braces herself against the counter and rocks back against you, meeting each thrust of your hips.";
 		WaitLineBreak;
 		say "     Your crowd of spectators moves on to cheering as you fuck Nermine again, giving you the extra satisfaction of hearing them roar each time you thrust deep. Meanwhile, Danny is still busy snapping pictures and Nermine pants and moans under you, begging for you to fuck her harder and faster. With all that going on around you and the canine shopkeeper's inner walls tightly gripping your invading member, it doesn't take all that much longer till you reach another amazing climax. Grabbing the edge of the counter, you hold on tightly as your body twitches with each blast of cum into Nermine's willing womb, once more cementing your claim on her with a second thorough breeding - and in a row too. The sexy bitch comes right along with you, reaching back with one hand to grab one of your butt-cheeks as she revels in the sensations of her [master] filling her up.";
@@ -948,8 +947,8 @@ to say NermineStoreFuck_Mallrats:
 		WaitLineBreak;
 		say "     Turning to meet your muzzle with hers, the jackaless gives you a lick and a kiss, then moans 'Nermine loves that her strong male jackal fucked his pet like this. He showed everyone that she is his.' Her tail wags as she reaches down to cup your balls gently handling them. Then she continues in a husky tone 'Please do so again, my [master]. And soon.'";
 		now Libido of Danny is 1; [saw the player fuck Nermine]
-		if hp of Danny is 0: [never met before]
-			now hp of Danny is 1; [player knows Danny]
+		if HP of Danny is 0: [never met before]
+			now HP of Danny is 1; [player knows Danny]
 	else: [repeat]
 		say "     Your knot pulls and teases at her pussy with every thrust, and soon Nermine is writhing underneath you in orgasm, howling in lust. Her walls clench tight around your pointed canine cock, giving you the last push you needed yourself, triggering a powerful orgasm. Your mind explodes in pleasure as you shoot your load into the all too willing bitch's womb, with Nermine groaning and panting as she feels your jackal seed painting her insides and claiming her body. Spurt after spurt erupts into her depths, breeding the sexy bitch with a potent load.";
 		say "     Eventually you come down from the heights of pleasure and find yourself standing there gripping the counter, your knot slowly shrinking in Nermine's body. Looking down, you notice that the jackal bitch is all but unconscious underneath you, a look of well-fucked pleasure on her face as she lies sprawled out on her shop counter, your fertile seed bottled up in her pussy by your canine knot. As you take a moment to revel in the fact that the sexy bitch is yours - your pet, to fuck and breed when you want - your idly wandering gaze falls on a mall rat with green spiky hair standing in front of the store window.";
@@ -990,11 +989,8 @@ to say NermineStoreFuck_Jaguar:
 		say "     ([link]Y[as]y[end link]) - Change your mind about sharing Nermine.";
 		say "     ([link]N[as]n[end link]) - Nope, she's yours! But he can watch.";
 		if Player consents:
-			LineBreak;
-			say "[bold type]You gain 1 food![roman type][line break]";
-			increase carried of food by 1;
-			say "[bold type]You gain 1 water bottle![roman type][line break]";
-			increase carried of water bottle by 1;
+			ItemGain food by 1;
+			ItemGain water bottle by 1;
 			say "     Agreeing to take payment for Nermine's services, you let the jaguarman put both items on a small table in the store, then wave him closer.";
 			say "[NermineStorefuck_JaguarSuck]";
 		else:
@@ -1215,11 +1211,11 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Jackal Totem"	"A small statue of a jackal posing proudly made out of some shiny black stone. It feels slightly warm in your hands."	1	jackal totem
 
-jackal totem is a grab object. It is part of the player. Understand "totem" and "jackal" as jackal totem.
+jackal totem is a grab object. Understand "totem" and "jackal" as jackal totem.
 
 the scent of jackal totem is "The totem smells like hot sand.".
 
-The usedesc of jackal totem is "[jackaltotemmagic].";
+Usedesc of jackal totem is "[jackaltotemmagic].";
 
 To say jackaltotemmagic:
 	if nightmaretf > 0:

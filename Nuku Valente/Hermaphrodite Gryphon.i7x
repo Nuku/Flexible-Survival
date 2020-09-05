@@ -3,6 +3,25 @@ Version 2 of Hermaphrodite Gryphon by Nuku Valente begins here.
 
 "Adds a Hermaphrodite Gryphon creature to Flexible Survival's Wandering Monsters table"
 
+to say GenerateTrophyList_Blue_Gryphon:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "blue gryphon feather" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "dirty water" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "food" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "gryphon milk" to CombatTrophyList;
+	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
+		add "clean bandages" to CombatTrophyList;
+	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
+		add "gryphon coin" to CombatTrophyList;
+	if a random chance of (5 + LootBonus) in 100 succeeds: [rare drop]
+		add "indigo potion" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
+
 Section 1 - Creature Responses
 
 nohgryphonsex is a number that varies.
@@ -80,7 +99,7 @@ to say gryphonfuck6:
 	say "     The gryphon is surprised to find you rather lacking and nudges you over onto your belly with suddenly gentle hands. She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back. You feel a shaft slide against your rear, dribbling pre across your back entrance. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched painfully by the large member as it forces its way into your bowels. The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed. Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[movichance]";
 
 to say gryphonfuck7:
-	say "     The gryphon[if Player is neuter] is surprised to find you rather lacking in the genital department and[end if] nudges you over onto your belly with suddenly gentle hands. She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back. You feel a shaft slide against your rear, dribbling pre across your back entrance. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched [if scalevalue of the player < 4]painfully [end if]by the large member as it forces its way into your bowels[if Player is female]. Her taloned hand gropes you as she fucks your ass, playfully teasing at the [cunt size desc of Player] pussy she could instead be using[end if][if Player is male]. She takes a hold of your [cock size desc of Player] [Cock of Player] shaft and pumps at it while thrusting into you[end if]. After enjoying a quick ride, the gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed. Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[movichance]";
+	say "     The gryphon[if Player is neuter] is surprised to find you rather lacking in the genital department and[end if] nudges you over onto your belly with suddenly gentle hands. She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back. You feel a shaft slide against your rear, dribbling pre across your back entrance. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched [if scalevalue of Player < 4]painfully [end if]by the large member as it forces its way into your bowels[if Player is female]. Her taloned hand gropes you as she fucks your ass, playfully teasing at the [cunt size desc of Player] pussy she could instead be using[end if][if Player is male]. She takes a hold of your [cock size desc of Player] [Cock of Player] shaft and pumps at it while thrusting into you[end if]. After enjoying a quick ride, the gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed. Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[movichance]";
 
 to say gryphonfuck8:	[MPreg special]
 	say "     When the victorious gryphon pushes you to the ground, your body automatically moves onto all fours with your ass raised. You feel a warm of excitement in your lower belly, like an empty need you hope to be filled. Like an animal in heat, your hidden male womb's decided it wants to be bred. The gryphon grins as you present yourself so easily and rubs her taloned hands over your rear, massaging your butt as it moves into position. With a little spit added, a taloned finger dips into your waiting pucker and wriggles around, drawing a moan from you.";
@@ -199,8 +218,7 @@ to say hgryphon_pw_00: [milking]
 	say "     Approaching the defeated gryphon with confidence, you reach out and place your hands on her full breasts, giving them a squeeze. 'Mmmh! That feels nice,' she murrs in pleasure, leaning into your touch. Several small drops of milk already start leaking from her nipples just from the first caress, and you can see that she's obviously more than ready to give some milk. The gryphoness gives a surprised chuckle as you dig an empty plastic bottle from your pack, then press its open neck against one of her nipples, squeezing the boob around it with your other hand. A first squirt of rich gryphon milk shoots into the bottle followed by another and another. The air fills with the strangely arousing scent of the hybrid creature's milk while you switch back and forth between her breasts, milking both of them equally. Your former opponent clearly doesn't mind at all that you're taking what you want from her, letting out sighs of pleasure and arousal throughout the process.";
 	say "     By the time you've filled up your bottle, the gryphoness is putty in your hands, plyable and oh so very horny. If you hadn't already proven that you can take her in a fight, you think she'd just jump you right away and want to have sex. As things stand, the blue-feathered avian just lies back as you take your hands off her, stroking her own breasts, as well as the erect shaft between her legs. Packing away your fresh milk, you step back from the gryphoness as she begins to masturbate, leaving her behind to take care of herself.";
 	LineBreak;
-	say "[bold type]You gain a bottle of gryphon milk![roman type][line break]";
-	increase carried of gryphon milk by 1;
+	ItemGain gryphon milk by 1;
 
 to say hgryphon_pw_01:
 	say "     Approaching the defeated gryphon with confidence, you nudge her legs apart with your feet to get a better look at that moist slit she has tucked under those balls of hers. Seeing your interest, she raises her hips and holds her scrotum out of the way. You move to your knees, positioning your [cock size desc of Player] member at your victim's quivering slit.";
@@ -250,7 +268,7 @@ to say hgryphon_pw_06:
 	say "***blow her";
 
 to say hgryphon_TG:
-	decrease carried of gryphon cum by 1;
+	ItemLoss gryphon cum by 1;
 	increase hgryphon_TGcount by 1;
 	now lasthgryphon_TG is turns;
 	increase XP of Garrett by 1;
@@ -272,8 +290,8 @@ to say HermGryphonDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -331,8 +349,11 @@ When Play begins:
 	now Cunt Depth entry is 13; [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 7; [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
-	now loot entry is "gryphon milk"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "blue gryphon feather"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "gryphon milk";
+	now CumItem entry is "gryphon cum";
+	now TrophyFunction entry is "[GenerateTrophyList_Blue_Gryphon]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]winged[or]alluring[or]curvaceous[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]gryphon[or]feline[or]hybrid[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -347,7 +368,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -453,6 +474,51 @@ to fullBlueGryphonHermTF:
 		follow the sex change rule;
 		follow the sex change rule;
 		follow the breast change rule;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"blue gryphon feather"	"A single azure blue feather. It is nicely soft and shimmer in the light."	0	blue gryphon feather
+
+blue gryphon feather is a grab object.
+It is temporary.
+blue gryphon feather is infectious.
+Strain of blue gryphon feather is "Blue Gryphon Herm".
+Usedesc of blue gryphon feather is "[blue gryphon feather use]";
+
+to say blue gryphon feather use:
+	say "Holding the feather in your hand, you stroke it over your arm, delighted in its softness. Strangely, the feather disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+
+instead of sniffing blue gryphon feather:
+	say "The feather has a pleasing, not too strong, animal-like scent.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons."	1	gryphon milk
+
+gryphon milk is a grab object. Understand "milk" as gryphon milk. gryphon milk is infectious. Strain of gryphon milk is "Blue Gryphon Herm". Purified of Gryphon Milk is "distilled milk". gryphon milk is milky.
+Usedesc of gryphon milk is "[gryphon milk use]";
+
+to say gryphon milk use:
+	say "The milk is thick, like a shake, but warmer, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
+	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"gryphon coin"	"A triangular piece of blue stone, fairly thin and light. On one side, you see a feather, with a single character of an unknown script is on the flip side."	0	gryphon coin
+
+gryphon coin is a grab object.
+Usedesc of gryphon coin is "[gryphon coin use]";
+
+to say gryphon coin use:
+	say "     You throw the coin into the air, watching it tumble end over end a few times before you catch it again and slap it on the back of your hand:[line break]";
+	if a random chance of 1 in 2 succeeds:
+		say "     [bold type]Feather![roman type][line break]";
+	else:
+		say "     [bold type]Writing![roman type][line break]";
+
+instead of sniffing gryphon coin:
+	say "The coin has an odd, spicy smell to it.";
 
 Section 3 - Endings
 

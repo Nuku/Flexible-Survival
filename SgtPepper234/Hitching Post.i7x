@@ -15,10 +15,10 @@ Picnic Area	"Picnic Area"
 
 Picnic Area is a room.
 earea of Picnic Area is "Park".
-The description of Picnic Area is "     The ground here is poured concrete over a ten meter squared area. Broken benches and built in barbeques indicate that this was once a public picnic spot. Set into the ground nearby is a large set of reinforced prison stocks.".
+Description of Picnic Area is "     The ground here is poured concrete over a ten meter squared area. Broken benches and built in barbeques indicate that this was once a public picnic spot. Set into the ground nearby is a large set of reinforced prison stocks.".
 
 Prison Stocks is an object. It is in the Picnic Area. It is fixed in place. Understand "stocks" as Prison Stocks.
-the description of Prison Stocks is "This heavily reinforced structure is clearly intended to be used for entertainment purposes. You could [link]lock yourself in[as]use prison stocks[end link] if you want to be used like breeding stock.";
+Description of Prison Stocks is "This heavily reinforced structure is clearly intended to be used for entertainment purposes. You could [link]lock yourself in[as]use prison stocks[end link] if you want to be used like breeding stock.";
 
 HitchInPrisonStock is an action applying to nothing.
 understand "lock yourself in" and "use prison stocks" and "use stocks" and "use prison" and "use hitching post" and "use post" and "use hitching" as HitchInPrisonStock.
@@ -51,9 +51,10 @@ Object	Name
 Public Hitching Post	"Public Hitching Post"
 
 Public Hitching Post is a situation.
-The sarea of Public Hitching Post is "Park".
+ResolveFunction of Public Hitching Post is "[ResolveEvent Public Hitching Post]".
+Sarea of Public Hitching Post is "Park".
 
-instead of resolving Public Hitching Post:
+to say ResolveEvent Public Hitching Post:
 	say "     As you wander through the city's open park, you notice something that hadn't caught your eye before. A device set casually near a public rest area, that is quite clearly an old-timey set of prison stocks. There appears be a slam latch to secure the device shut around the prisoner's neck and wrists which fit snugly into the three holes set in the wooden device. The structure looks extremely sturdy, reinforced with thick iron bars and metal bands. A shiny set of solid manacles are set into the floor at ankle height. Or at least they would be shiny if they weren't spattered with sticky and dried white gunk that you can only assume is semen. Between the manacles and the stocks is a horizontal padded beam at hip height. Next to it, a sign stands erected bearing the words, 'Public Hitching Post'. You can only imagine what goes on at this place.";
 	LineBreak;
 	say "     As you inspect the device, you get the feeling that it is used more for fun than punishment. Despite its primitive appearance, a number of modern alterations seem to have been designed to make the device more user-friendly. A plaque on the sign beneath the words, 'Public Hitching Post', provides you with more information. It reads, 'WARNING! Utilizing this device could be dangerous to your health. Device will reset and open automatically after one hour.'";

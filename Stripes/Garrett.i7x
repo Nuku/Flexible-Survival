@@ -9,17 +9,18 @@ Object	Name
 Gryphon Milkman	"Gryphon Milkman"
 
 Gryphon Milkman is a scavevent.
-The sarea of Gryphon Milkman is "Outside".
+ResolveFunction of Gryphon Milkman is "[ResolveEvent Gryphon Milkman]".
+Sarea of Gryphon Milkman is "Outside".
 when play begins:
 	add Gryphon Milkman to BadSpots of FurryList;
 	add Gryphon Milkman to badspots of HermList;
 
-Instead of resolving a Gryphon Milkman:
+to say ResolveEvent Gryphon Milkman:
 	project the figure of Garrett_icon;
 	say "     As you're out and about looking for supplies, you hear the flapping of wings overhead. Before you can do much more than look up, a gryphon lands in front of you. This specimen looks like a pure male, judging from the flat manly chest and the half-hard cock between his legs. He's wearing only a white peaked cap and a wire carrier with several bottles.";
 	say "     'Here, have some milk - it's good for you,' he tells you cheerfully, pushing a milk bottle into your hand and tipping his hat to you. Then he jumps in the air and flies away, leaving you standing there alone.";
 	say "     The milk bottle has a blue silver label with the text [']QaL Dairy[']. The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly.";
-	increase carried of gryphon milk by 1;
+	ItemGain gryphon milk by 1;
 	now Gryphon Milkman is resolved;
 
 Table of GameEventIDs (continued)
@@ -27,14 +28,15 @@ Object	Name
 Free Milk	"Free Milk"
 
 Free Milk is a scavevent.
-The sarea of Free Milk is "Outside".
+ResolveFunction of Free Milk is "[ResolveEvent Free Milk]".
+Sarea of Free Milk is "Outside".
 when play begins:
 	add Free Milk to BadSpots of FurryList;
 	add Free Milk to badspots of HermList;
 
-Instead of resolving a Free Milk:
+to say ResolveEvent Free Milk:
 	say "     Your search for edible items leads you into a residential area. As you stand in the middle of the local street, trying to decide which house might contain something useful, you suddenly realize something - there's a milk bottle standing in front of the door of the house over there - and it's full. Walking over to the house, you take the bottle. It has a blue and silver label with the text [']QaL Dairy[']. The milk is rather cold and smells delicious, but there is a faint smell of something almost otherworldly. You can't help but wonder where it came from. You'd have thought that with the apocalypse and all, deliveries by the milkman would stop, and are there even any cows left with these changing infections?";
-	increase carried of gryphon milk by 1;
+	ItemGain gryphon milk by 1;
 	now Free Milk is resolved;
 
 Table of GameEventIDs (continued)
@@ -42,15 +44,16 @@ Object	Name
 Abandoned Milk	"Abandoned Milk"
 
 Abandoned Milk is a scavevent.
-The sarea of Abandoned Milk is "Outside".
+ResolveFunction of Abandoned Milk is "[ResolveEvent Abandoned Milk]".
+Sarea of Abandoned Milk is "Outside".
 when play begins:
 	add Abandoned Milk to BadSpots of FurryList;
 	add Abandoned Milk to badspots of HermList;
 
-Instead of resolving a Abandoned Milk:
+to say ResolveEvent Abandoned Milk:
 	say "     Your search for edible items leads you into a playground and you see near a bench some men's clothing partially torn, as is the wearer had ripped out of them as they changed form. The back of the shirt is badly shredded, almost as if wings or similar had erupted out their back.";
 	say "     On the bench you see an empty milk bottle lying on its side. You also see an intact a milk bottle standing there - and it's full! Walking over to the bench, you take the bottle, it has a blue silver label with the text [']QaL Dairy[']. The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly. You wonder what became of the person who drank the other bottle, and hope they are happy however they look now!";
-	increase carried of gryphon milk by 1;
+	ItemGain gryphon milk by 1;
 	now Abandoned Milk is resolved;
 
 
@@ -61,8 +64,8 @@ object	name
 Garrett	"Garrett"
 
 Garrett is a man. Garrett is in Qytat Plaza.
-The description of Garrett is "[garrettdesc]".
-The conversation of Garrett is { "Milk!" }.
+Description of Garrett is "[garrettdesc]".
+Conversation of Garrett is { "Milk!" }.
 the scent of the Garrett is "This blue gryphon's scent is quite manly, though there's also the alluring scent of the [']milk['] he delivers as well.".
 The icon of Garrett is Figure of Garrett_icon.
 garrettinfo1 is a truth state that varies. garrettinfo1 is usually false.
@@ -87,7 +90,7 @@ Instead of conversing the Garrett:
 		say "     The male gryphon smiles and puts down his magazine as you come speak to him. 'Hey there. It's nice to have some company. Things have been a little quiet around here. Most of the gryphons have gone out into the city. I was out there for a while, handing out milk, but with the others gone, I'm pretty much out of stock now. Besides, I'm a little bored of the gryphons all being herms. Were there... even any other males besides me...' he adds, mostly to himself before trailing off for a bit as he tries to remember.";
 		if Gryphon Milkman is unresolved:
 			say "     'I do have a little left, if you'd like it[if nongryph is true]. I think you'd look pretty good as a sexy gryphon[end if].' Before you can even respond, he's pushing a cold bottle of milk into your hands. 'Though I think my [']milk['] would do you even better,' he adds with a lustful grin.";
-			increase carried of gryphon milk by 1;
+			ItemGain gryphon milk by 1;
 		else:
 			say "     'Actually, didn't I run into you in the city already. Nice to see you again. I'm sorry, but I don't really have any other samples to give you. Only one to a customer. Though I think my [']milk['] would do you even better,' he adds with a lustful grin.";
 		say "     As it stands, I was thinking it might be time to try a different kind of [']milk[']. But for that, I could use a bit of a hand,' he adds with a grin, rubbing his bulging sheath meaningfully. The tip of his thick, black penis starts to poke free of its fuzzy housing. 'How do you feel about helping a working guy work one out?'";
@@ -231,7 +234,7 @@ to say garrett_handjob_1:
 	say "     Garrett grabs an empty bottle [if Player is not male]with his other hand [end if]and holds it in front of his cock. With the bottle ready, he stops holding back with a satisfied groan of release. Blast after blast of gooey gryphon seed sprays into the bottle and across his hand. Excited and amused by this sight, you do your best to hold his mighty rod steady as it throbs in your hand, trying to help the gryphon stud collect as much of his semen as possible. When finally done, the bottle is [if Player is male]mostly [else]about half-[end if]full and his paw and the bottle are quite sticky with the excess. He grins and makes a kinky show of licking some of the excess from his hand. This naughty sight is very arousing and, when offered, you join him in licking his paw and the outside of the bottle clean of his milky white spooge without a care for the potential consequences.";
 	if HP of Garrett is 1:
 		say "     He sets aside the [if Player is male]mostly filled[else]half-full[end if] bottle after capping it and gives you an appreciative nuzzle. 'I really appreciate your help with that. You see, I've taken to collecting my semen so I can run it through the milk processor. That way I'll end up with some good, wholesome, male gryphon [']milk['] to give out,' he reveals with a grin. 'And as thanks for your help, you can take the first bottle that got finished just a little while ago. I hope you'll be willing to give me a hand making more[if Player_puregryph is true and player is puremale]. As a studly gryphon, you can even help speed up the process by adding your spunk to the mix next time[else]. And maybe once you're fully a male gryphon like me, you can even help speed up the process by adding your spunk to the mix[end if],' he adds with a lustful grin as he imagines just that.";
-		increase carried of gryphon cum by 1;
+		ItemGain gryphon cum by 1;
 		now XP of garrett is 1;
 	else:
 		say "     'Thanks again for your help with that. It's so much more fun to get a helping hand with that,' he says with a satisfied grin";
@@ -240,7 +243,7 @@ to say garrett_handjob_1:
 			say ". I'm going to need to collect some more before I've got enough to run through the processor again. I hope you'll be willing to help me with that once I'm ready to go again. And if you're a pure gryphon stud by then, you can even help add to the mix.'";
 		else:
 			say ". That should be enough to run it through the processor and get some more of my male gryphon milk ready for market. As thanks for helping out, you can have another bottle,' he says, pushing one into your hands with a grin. 'Let's see if we can't get you to become a sexy gryphon stud so you can help add to the product in a more personal manner.'";
-			increase carried of gryphon cum by 1;
+			ItemGain gryphon cum by 1;
 			now XP of garrett is 0;
 	if HP of Garrett is 1:
 		now HP of Garrett is 2;
@@ -262,7 +265,7 @@ to say garrett_handjob_2:
 		say ". I'm going to need to collect some more before I've got enough to run through the processor again. I hope you'll be willing to help me with that once I'm ready to go again.'";
 	else:
 		say ". That should be enough to run it through the processor and get some more male gryphon milk ready for market. As thanks for helping out, you can have another bottle,' he says, pushing one into your hands with a grin. 'With you helping now as a gryphon stud, I can make so much more of this stuff.'";
-		increase carried of gryphon cum by 1;
+		ItemGain gryphon cum by 1;
 		now XP of garrett is 0;
 	if HP of Garrett is 2, now HP of Garrett is 3;
 
@@ -291,7 +294,7 @@ to say garrett_analtop_2:
 		say ". That won't quite be enough to run through the processor, but I don't mind giving you some of the raw stuff to help you be a bigger stud. I hope you'll be willing to help me collect even more once I'm ready to go again.'";
 	else:
 		say ". That should be enough to run it through the processor and get some more male gryphon milk ready for market. As thanks for helping out, you can have another bottle of the processed,' he says, pushing one into your hands with a grin. 'Though you certainly seemed to enjoy your recent dose of the raw materials,' he adds with a caress to your warmth-filled bottom.";
-		increase carried of gryphon cum by 1;
+		ItemGain gryphon cum by 1;
 		now XP of garrett is 0;
 	if HP of Garrett is 3, now HP of Garrett is 4;
 
@@ -308,7 +311,7 @@ to say garrett_analbottom_1:
 		say ". Taste it and you'll agree,' he says, holding out his cock as it drools out the last dregs of his load. Licking your lips at the sight of it, you get on your knees and slurp up those gooey droplets. You moan softly at the taste of his virile spunk and suck every last drop, part of you eager for the tainted nature of the seed you're accepting into yourself.";
 	else:
 		say ". This'll be enough to top up the processor for another batch, so you should take another bottle. It'll help make you into a gryphon stud faster so you can help me make even more.'";
-		increase carried of gryphon cum by 1;
+		ItemGain gryphon cum by 1;
 		now XP of garrett is 0;
 	if HP of Garrett is 4 and a random chance of 1 in 2 succeeds, now HP of Garrett is 5;
 
@@ -326,7 +329,7 @@ to say garrett_analbottom_2:
 		say ".'";
 	else:
 		say ". This should be more than enough to top up the processor to make more of my special milk. Speaking of, you should take another bottle; I'll have more for myself once that next batch is done.'";
-		increase carried of gryphon cum by 1;
+		ItemGain gryphon cum by 1;
 		now XP of garrett is 0;
 	if HP of Garrett is 4, now HP of Garrett is 5;
 
@@ -363,10 +366,10 @@ name	desc	weight	object
 
 gryphon cum is a grab object. gryphon cum is temporary. gryphon cum is cum.
 
-The usedesc of gryphon cum is "[drinkgryphoncum]";
+Usedesc of gryphon cum is "[drinkgryphoncum]";
 
 to say drinkgryphoncum:
-	say "[line break]     Popping the top off the bottle, you catch the heady and arousing scent of masculine gryphon cum. It makes your mouth water and you quickly start guzzling it down. The refined semen drink has a strong, exciting flavor that is also refreshing and satisfying.";
+	say "     Popping the top off the bottle, you catch the heady and arousing scent of masculine gryphon cum. It makes your mouth water and you quickly start guzzling it down. The refined semen drink has a strong, exciting flavor that is also refreshing and satisfying.";
 	increase Libido of Player by 5;
 	PlayerDrink 6;
 	PlayerEat 3;

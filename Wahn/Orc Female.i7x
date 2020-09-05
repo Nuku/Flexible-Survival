@@ -41,12 +41,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Noteworthy Ruin	"Noteworthy Ruin"
 
-Noteworthy Ruin is a situation. The level of Noteworthy Ruin is 8.
-The sarea of Noteworthy Ruin is "Plains".
+Noteworthy Ruin is a situation.
+ResolveFunction of Noteworthy Ruin is "[ResolveEvent Noteworthy Ruin]". The level of Noteworthy Ruin is 8.
+Sarea of Noteworthy Ruin is "Plains".
 when play begins:
 	add Noteworthy Ruin to BadSpots of FemaleList;
 
-Instead of resolving a Noteworthy Ruin:
+to say ResolveEvent Noteworthy Ruin:
 	if HP of Katya is 0: [first time]
 		say "     Roaming through the plains, you pass yet another of the small ruins left over from the city that stretched out in this area before the grass came. There are basically just a few sections of roofless wall still standing, as well as a field of scattered stones and high mounds of rubble. Nothing too interesting - until you spot the [if daytimer is day]very faint line of smoke rising from somewhere between those walls[else]faint shine of firelight that illuminates one section of wall sticking up a little higher than the rest[end if]. It's not a lot - someone is being as careful as possible about giving away their location - but with your close proximity, you did notice it no matter what.";
 		say "     [bold type]Seems like someone has set up camp in that ruin. Shall you go over and have a look who it may be?[roman type][line break]";
@@ -124,8 +125,7 @@ to say OrcFemBeaten:
 				if Player consents:
 					LineBreak;
 					say "     With a grin, you slip the sex toy in your pack. Won't she be surprised to find it missing!";
-					say "(You gain Katya's Dildo.)";
-					increase carried of Katya's Dildo by 1;
+					ItemGain Katya's Dildo by 1;
 					now KatyaDildoTaken is 1; [stole her Dildo]
 					increase Libido of Katya by 3;
 				else:
@@ -140,30 +140,23 @@ to say OrcFemBeaten:
 				if RandomGenNumber is:
 					-- 1:
 						say "two cans of soda and a chocolate and nut energy bar. ";
-						say "(You gain two bottles of soda.)";
-						say "(You gain food.)";
-						increase carried of soda by 2;
-						increase carried of food by 1;
+						ItemGain soda by 2;
+						ItemGain food by 1;
 					-- 2:
 						say "a full medkit, still in its original packaging. ";
-						say "(You gain a medkit.)";
-						increase carried of medkit by 1;
+						ItemGain medkit by 1;
 					-- 3:
 						say "a pocketknife that looks nice and sharp. ";
-						say "(You gain a pocketknife.)";
-						increase carried of pocketknife by 1;
+						ItemGain pocketknife by 1;
 					-- 4:
 						say "a liter bottle of water, with the freshness seal intact.";
-						say "(You gain a water bottle.)";
-						increase carried of water bottle by 1;
+						ItemGain water bottle by 1;
 					-- 5:
 						say "several bags of chips. ";
-						say "(You gain three bags of chips.)";
-						increase carried of chips by 3;
+						ItemGain chips by 3;
 					-- 6:
 						say "a can of... something. The label has fallen off - but you're fairly certain it is food. ";
-						say "(You gain food.)";
-						increase carried of food by 1;
+						ItemGain food by 1;
 					-- 7:
 						say "a quite big dildo, shaped like an equine cock. You can't help but wonder if Katya picked it just for its size or also because she liked the shape. That'd fit her moving out here into the plans too - all those centaurs with their swinging cocks, and other equines too around here. A shimmer of wetness on its length tells you the speckled piece of silicone must be her favorite toy and has been used quite recently.";
 						say "     ([link]Y[as]y[end link]) - Take the horse-cock dildo.";
@@ -171,15 +164,13 @@ to say OrcFemBeaten:
 						if Player consents:
 							LineBreak;
 							say "     With a grin, you slip the sex toy in your pack. Won't she be surprised to find it missing!";
-							say "(You gain Katya's Dildo.)";
-							increase carried of Katya's Dildo by 1;
+							ItemGain Katya's Dildo by 1;
 							now KatyaDildoTaken is 1; [stole her Dildo]
 						else:
 							LineBreak;
 							say "     Letting the sex toy fall from your fingers, you wipe them off on the grass hurriedly.";
 			say "     Other than your find, the roasting bird - an overgrown pigeon you think - is an obvious thing to grab and add to your supply of fresh food. With your armful of ransacked items, you quickly slip out of the camp before Katya recovers and comes to.";
-			say "(You gain food.)";
-			increase carried of food by 1;
+			ItemGain food by 1;
 		wait for any key;
 		move player to Dry Plains;
 
@@ -255,12 +246,10 @@ to say KatyaBeatenSexMenu:
 	clear the screen and hyperlink list;
 
 to say KatyaBeatenSex1:
-	increase carried of orc femcum by 1;
 	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you kneel down beside the downed orc and pull her loincloth off for good. With the ragged fabric out of the way, she looks even more delicious - strong, muscular and yet dazed after a clash and totally vulnerable. With a grin on your face, you brush your hand over her crotch, running your fingers through her pubic hair to touch the clit of this beaten warrioress. Lips drawing back from her sharp tusks, the green-skinned woman moans as you rub her, and goes on to breathe heavily when you proceed to slip two fingers into her snatch.";
 	say "     Finger-fucking and rubbing her magic button, you wind the still semiconscious orc up more and more, making her writhe on the ground and reflexively thrust her hips upwards as if to meet someone's cock being rammed into her pussy. Doing everything you can to stimulate the muscular woman, you soon have her moaning louder and louder. Then, as the trickle of her fluids over your thrusting fingers starts to get ever more intensive, you quickly snatch up the prepared bottle and hold it against her opening, slowly catching a small amount of femcum. Until you actually get her off by rolling her clit between your fingers that is - which is when she lets out a breathless shout and starts to squirt, splashing her sticky juices into the bottle in heavy throbs.";
 	say "     You continue working the orc woman to milk everything you can from her, filling the little bottle about three quarters before her orgasm eventually ebbs off and the female orc calms down again. She is left sprawled out on the ground, panting loudly and awake. Seems like a good time to leg it - if you give her the time to catch her breath, you'll no doubt be in another fight in a second. Putting the cap on your bottle and quickly stashing it away, you give the orc's pussy a last quick fondle, then jump up and quickly leave her camp.";
-	LineBreak;
-	say "     (You gain a bottle of orc femcum.)";
+	ItemGain orc femcum by 1;
 	wait for any key;
 
 to say KatyaBeatenSex2: [fuck her mouth]
@@ -358,7 +347,7 @@ to say KatyaVictoryPussyEating:
 	say "     The next and any further squirts are caught directly on your tongue, covering it with a delicious treat that you eagerly gobble down. If her juices before were tasty, this stuff now is pure ambrosia, making you feel lightheaded and very, very good indeed. You do lose track of time a little about how long you lay there under Katya's pussy, receiving the bounty of her orgasm and doing your very best to prolong it further. At some point - with your tongue still buried in her snatch and wiggling to maybe get a tiny bit more femcum from the woman - Katya eventually gives a pleased sigh and lets go of your hair, making your head fall back onto the sleeping bag.";
 	WaitLineBreak;
 	say "     Before you can get back to licking on your own, the female orc pushes herself off from the ground and stands over you - providing a truly impressive view. With your head on the ground between her feet, your gaze wanders over her long, muscular legs, the tasty pussy and her bush of pubic hair, then above that Katya's ripped abs and shapely breasts. Quite a sexy amazon! She is content to just stand over you for a little while, breathing a bit hard from getting off just now, then eventually blows out her breath and looks down.";
-	say "     'Well, that was fun. You have some skill at pussy eating,' the female orc says in a tone of grudging recognition. There might even have been a little twitch of her mouth indicating a smile, but it is hard to say because her features harden almost immediately afterwards. 'Still, this is MY camp. So fuck off, will you? And you know what expects you if you come back!' That said, she makes a fist and cracks her knuckles with the other hand, watching you as you get back to your feet and slip out of the camp. Wandering away from your encounter with the sexy orc, you commit the path to her hidden camp to memory. Might be fun to visit her sometime - even if you're unlikely to get a friendly welcome.";
+	say "     'Well, that was fun. You have some skill at pussy eating,' the female orc says in a tone of grudging recognition. There might even have been a little twitch of her mouth indicating a smile, but it is hard to say because her features harden almost immediately afterwards. 'Still, this is MY camp. So fuck off, will you? And you know what awaits you if you come back!' That said, she makes a fist and cracks her knuckles with the other hand, watching you as you get back to your feet and slip out of the camp. Wandering away from your encounter with the sexy orc, you commit the path to her hidden camp to memory. Might be fun to visit her sometime - even if you're unlikely to get a friendly welcome.";
 
 to say KatyaVictoryAssEating:
 	say "Crouching down, the powerful woman grabs your arms and pushes them up over your head, pinning them to the ground. She holds you like that in a tight and uncomfortable grip, completely unmoved by your tries to pull your arms aside at least a little to stop them from aching in their current position.";
@@ -383,7 +372,7 @@ to say KatyaVictoryAssEating:
 	say "     Katya instinctively reacts to your head pulling back from her ass by wiggling backwards - which doesn't actually get you back between her buns, lying flat as you are now. What it does instead is put the base of her pussy over your face - exposing you to a little shower of her femcum, trickling down over the orc's folds and with a fair bit landing in your open, panting mouth. It tastes like pure ambrosia - liquid lust, just leaking onto your taste-buds - prompting you to attack her crotch and slurp up what you can like a man possessed.";
 	WaitLineBreak;
 	say "     At some point - with your tongue still buried in her snatch and wiggling to maybe get a tiny bit more femcum from the woman - Katya eventually gives a pleased sigh and pushes herself up from the ground. Almost drunk on the potency of her fluids, you can do little more than lie back and gape at the truly impressive view this gives you. With your head on the ground between her feet, your gaze wanders over her long, muscular legs, the tasty pussy and her bush of pubic hair, then above that Katya's ripped abs and shapely breasts. Quite a sexy amazon! She is content to just stand over you for a little while, breathing a bit hard from getting off just now, then eventually blows out her breath and looks down.";
-	say "     'Well, that was fun. You have some skill at ass eating - and pussy too,' the female orc says in a tone of grudging recognition. There might even have been a little twitch of her mouth indicating a smile, but it is hard to say because her features harden almost immediately afterwards. 'Still, this is MY camp. So fuck off, will you? And you know what expects you if you come back!' That said, she makes a fist and cracks her knuckles with the other hand, watching you as you get back to your feet and slip out of the camp. Wandering away from your encounter with the sexy orc, you commit the path to her hidden camp to memory. Might be fun to visit her sometime - even if you're unlikely to get a friendly welcome.";
+	say "     'Well, that was fun. You have some skill at ass eating - and pussy too,' the female orc says in a tone of grudging recognition. There might even have been a little twitch of her mouth indicating a smile, but it is hard to say because her features harden almost immediately afterwards. 'Still, this is MY camp. So fuck off, will you? And you know what awaits you if you come back!' That said, she makes a fist and cracks her knuckles with the other hand, watching you as you get back to your feet and slip out of the camp. Wandering away from your encounter with the sexy orc, you commit the path to her hidden camp to memory. Might be fun to visit her sometime - even if you're unlikely to get a friendly welcome.";
 
 to say OrcFemDesc:
 	say "     Katya definitively is an orc to be reckoned with. About seven feet tall, her build is broad-shouldered and packed with muscles. She has the typical features that define an orc - green skin, a pair of sharp tusks poking up from her lower mandible, slightly oversized hands and feet, black somewhat bristly hair (which she wears as a mane that hangs down behind her back) - yet there are some differences too. For example the full orbs of her breasts proudly bulging out the fabric of a chest-wrap improvised from ragged cloth, as well as the fact that her loincloth is NOT bulging with a heavy cock dangling between her legs.";
@@ -392,8 +381,8 @@ to say OrcFemDesc:
 Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -444,6 +433,9 @@ When Play begins:
 	now libido entry is 70;
 	now loot entry is "orc femcum";    [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;         [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "orc cum";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]meaty[or]powerful[or]broad[or]bulky[at random]";
 	now type entry is "[one of]orc[at random]";
@@ -458,7 +450,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -565,7 +557,7 @@ instead of sniffing orc femcum:
 	say "You open the lid for a moment and take a sniff. Smells rather tasty actually and you're tempted to take a pull from the bottle.";
 
 orc femcum is a grab object. orc femcum is cum.
-the usedesc of orc femcum is "[orc femcum use]";
+Usedesc of orc femcum is "[orc femcum use]";
 
 to say orc femcum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the thick orc femcum run over your tongue and down your throat. Mmmmh, this stuff has a really great taste that calls for more. You can't help yourself and keep drinking until all of it is gone, filling your mind with a giddy, pleasant buzz. Now where do you get more of this stuff? You're really tempted to return to Katya and milk some more from her.";
@@ -578,7 +570,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "katya's dildo"	"     A well-crafted silicone dildo shaped like an equine cock. It has a broad base including a hefty pair of balls and is styled like an actual equine dick - speckled in shades of black, brown and pink. After regular use by Katya, it seems to have taken on some characteristics from that - somehow, this sex toy is always a little bit wet and slippery and smells of the orc's femcum."	2	katya's dildo
 
-katya's dildo is a grab object. It is part of the player. It is not temporary.
+katya's dildo is a grab object. It is not temporary.
 
 the scent of the katya's dildo is "[SmellingKatyasDildo]".
 
@@ -643,7 +635,7 @@ Object	Name
 Inconspicuous Trail	"Inconspicuous Trail"
 
 Inconspicuous Trail is a room.
-The description of Inconspicuous Trail is "     You're on a fairly seldom-used trail through the expansive grassland of the dry plains. If you hadn't known exactly what to look for, there would be little chance you'd even have noticed this trail. Just a little distance further to the northeast is Katya's hidden camp.".
+Description of Inconspicuous Trail is "     You're on a fairly seldom-used trail through the expansive grassland of the dry plains. If you hadn't known exactly what to look for, there would be little chance you'd even have noticed this trail. Just a little distance further to the northeast is Katya's hidden camp.".
 earea of Inconspicuous Trail is "Plains".
 
 Table of GameRoomIDs (continued)
@@ -652,7 +644,7 @@ Hidden Camp	"Hidden Camp"
 
 Hidden Camp is a room.
 Hidden Camp is northeast of Inconspicuous Trail. Hidden Camp is sleepsafe.
-The description of Hidden Camp is "[KatyasCampDesc]".
+Description of Hidden Camp is "[KatyasCampDesc]".
 earea of Hidden Camp is "Plains".
 
 to say KatyasCampDesc:
@@ -685,7 +677,7 @@ instead of going northeast from Inconspicuous Trail while (Katya is in Hidden Ca
 				if Player consents:
 					LineBreak;
 					say "[KatyaFriendshipPath]";
-					decrease carried of Medkit by 1;
+					ItemLoss Medkit by 1;
 					now KatyaRelationship is 1; [friendly path active]
 				else:
 					LineBreak;
@@ -706,7 +698,7 @@ instead of going northeast from Inconspicuous Trail while (Katya is in Hidden Ca
 			if Player consents:
 				LineBreak;
 				say "[KatyaFriendshipPath]";
-				decrease carried of Medkit by 1;
+				ItemLoss Medkit by 1;
 				now KatyaRelationship is 1; [friendly path active]
 			else:
 				LineBreak;
@@ -799,7 +791,7 @@ to say KatyaFriendshipPath:
 			say "     Air-quotes with her fingers make it clear that she saw through your earlier excuse with little difficulty. Still - she is smiling as she closes the tarp and pins it into place. Definitively a good sign. With a spring in your step, you wander back to a more central section of the dry plains.";
 			wait for any key;
 			move player to Dry Plains;
-			decrease carried of food by 1;
+			ItemLoss food by 1;
 			now HP of Katya is 3; [fourth visit completed successfully]
 		else if carried of food is 1:
 			say "     If only you actually had enough food for the both of you. Seems like you need to go and find some more... ideally of the tasty variant and definitively non-infective foodstuffs only. She might mistrust the offer otherwise.";
@@ -855,8 +847,8 @@ object	name
 Katya	"Katya"
 
 Katya is a woman. Katya is in Hidden Camp.
-The description of Katya is "[KatyaDesc]".
-The conversation of Katya is { "placeholder" }.
+Description of Katya is "[KatyaDesc]".
+Conversation of Katya is { "placeholder" }.
 
 instead of sniffing Katya:
 	say "     Katya has an interesting scent, combining masculine and feminine notes with a little bit of honest sweat. She gives a rough chuckle and grins at you with her tusks showing as you lean in and sniff her.";
@@ -923,7 +915,7 @@ to say KatyaTalk1: [talk about her]
 		say "     'I was poked and prodded by them among jeered comments about me being weak - fuck those assholes, I was still growing into this body! And those 'weird bumps' on my chest were strangely soft when being pinched...' she indicates her breasts with a scornful grunt. 'I screamed when one of them rammed a finger up my pussy, just to see what would happen. Hell of a way to lose your virginity, I can tell you that. The noise brought someone else into the room before long - the big kahuna, gold chain and all on that frigging big brute of an orc. He gave the snot-nosed warriors a stare and they let go of me, then sent them out of the room.";
 		say "     Katya crosses her arms over her chest. 'Tried to punch him when he reached for me. Of course he caught that easily, squeezing my fist till I was wincing in pain. So there I was, alone with daddy and the orc chief, naked and dripping with orc brew. He inspected me - not like them, just looking - then let go.' Turning the police badge over in her hands a few more times, she tugs it away once more. 'Daddy held me in his arms and pleaded, 'Boghrim, please. She's y-' But the big bad orc just waved him off and said, 'No. She can't stay. Half of the tribe has never even seen a woman. They'd never accept her. You saw what the brothers just did.'";
 		WaitLineBreak;
-		say "     Silence stretches out for a few seconds, then the orc goes on to say, 'With that said, he left, kicking the door shut behind him. I was in my daddy's arms crying until Boghrim came back, throwing a bundle of ragged fabric to the ground next to me. [']Take that and go,['] he said gruffly, barely leaving me time to say goodbye and for dad to give me his badge. A few minutes later, I was outside the police station and a block away, with him stopping at a crossroad and pointing down the road - away. [']You're strong. You'll make it. Just stay away from the tribe's territory,['] he said and gave me a push to start walking.' Katya frowns and adds, 'Fucking great parenting, eh? Makes me wanna punch him - then punch him some more... At least he gave me some clothes and food, but still. Well, and another orc brew - that bulked me up some more too. Shoving an hour-old girl into the streets is still a shitty thing to do...' She shrugs and balls one fist, then hits the inside of her open palm on the other side. 'But yeah, fuck him. I don't need anyone. And you should have seen the state of the few orc assholes I met on the streets - after I punched them out, that is...'";
+		say "     Silence stretches out for a few seconds, then the orc goes on to say, 'With that said, he left, kicking the door shut behind him. I was in my daddy's arms crying until Boghrim came back, throwing a bundle of ragged fabric to the ground next to me. [']Take that and go,['] he said gruffly, barely leaving me time to say goodbye and for dad to give me his badge. A few minutes later, I was outside the police station and a block away, with him stopping at a crossroad and pointing down the road - away. [']You're strong. You'll make it. Just stay away from the tribe's territory,['] he said and gave me a push to start walking. Katya frowns and adds, 'Fucking great parenting, eh? Makes me wanna punch him - then punch him some more... At least he gave me some clothes and food, but still. Well, and another orc brew - that bulked me up some more too. Shoving an hour-old girl into the streets is still a shitty thing to do...' She shrugs and balls one fist, then hits the inside of her open palm on the other side. 'But yeah, fuck him. I don't need anyone. And you should have seen the state of the few orc assholes I met on the streets - after I punched them out, that is...'";
 	else if KatyaRelationship is 4: [friend]
 		say "     'Curious, aren't you?' the muscular orc says gruffly, her mouth drawing into a little frown as she crosses her arms and looks at you. For a moment, you think she'll just leave it at that, then she gives a shrug and makes a throwing-away gesture with one muscular arm. 'Fine, I'll tell you about it.' With that said, she strides over to her fire pit and sits down next to it after throwing in a few fresh pieces of wood. The orc stares a moment into the flames, just watching them start to consume what they touch, then glances at you once more as you sit down not far from her. 'So. Bet you're curious where a female orc came from. Strange freak of nature and all that!' Katya begins her tale, then lifts a hand to her improvised bra and pulls out something shiny that she had tucked away under it.";
 		say "     She turns it over in her hands, gleaming in the firelight - it is a police badge, polished to a mirror's sheen. 'Here, this was dad's. I loved how shiny it was from the start. There I was... barely born, suckling on his nipples and with my little green hands closing around this pretty shiny bauble. Hhmf - best thirty minutes of my life, I can tell you that.' She looks down at the badge and seems lost in thought for a moment... then suddenly speaks up and says, 'He told me he was proud to see me grow up so quickly. His little girl, becoming so strong and big. Hell, I wasn't even done growing then - just a narrow beanpole without real strength yet.' Katya goes on to tell you, then raises her arm to flex it and let her gaze wander over the muscles rippling under her green skin.";
@@ -1071,18 +1063,14 @@ to say KatyaSex1:
 		WaitLineBreak;
 		say "     Doing everything you can to stimulate the muscular woman, you soon have her moaning louder and louder. 'Getting kinda close now,' she groans out not much later, in between rapid and aroused panting. Then, as the trickle of her fluids over your thrusting fingers starts to get ever more intensive, you quickly snatch up the prepared bottle and hold it against her opening, slowly catching a small amount of femcum. Until you actually get her off by rolling her clit between your fingers that is - which is when she lets out a satisfied shout and starts to squirt, splashing her sticky juices into the bottle in heavy throbs.";
 		say "     You continue working the orc woman to milk everything you can from her, filling the little bottle about three quarters before her orgasm eventually ebbs off and the female orc calms down again. She is left sprawled out on the ground after letting herself fall back when she came, and is now panting loudly. 'Can't say I didn't enjoy this,' Katya says with a satisfied smirk up at you. 'Just don't expect me to do anything weird and kinky with that stuff. I'm not gonna drink it, remember that!' You simply shrug and screw the cap on the bottle, then stash it away.";
-		LineBreak;
-		say "     (You gain a bottle of orc femcum.)";
-		increase carried of orc femcum by 1;
+		ItemGain orc femcum by 1;
 	else: [befriended by the player]
 		say "     Pulling back from her after some little while of making out with one another, you more moan than say that you want to... capture her essence. She looks at you with a raised eyebrow, soon followed by her eyes widening as you dig around in your backpack and pull out an empty plastic bottle. Snorting amusedly at the show-and-tell, the green-skinned woman grins and says, 'You're one kinky bastard of a [if Player is female]gal[else]dude[end if], that's for sure. But sure, I won't say no to someone getting me off.' Leaning forward and planting another kiss right on your lips, she then steps back a little and immediately begins to strip down, pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs.";
 		say "     Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes [if Player is male]your cock twitch in arousal [else if Player is female]your pussy get wet in arousal [else]your arousal spike sharply [end if]and quickly follow her as she walks over to her sleeping bag. Sitting down, Katya opens her legs wide and leans back, bracing herself on her elbows. Raising one eyebrow at you, she calls out, 'I'm ready if you are.' With a grin on your face, you move over and kneel between her legs, setting the empty bottle down on the ground next to you. Then you brush your hand over Katya's crotch, running your fingers through her pubic hair to touch the clit of the aroused warrioress. Lips drawing back from her sharp tusks, the green-skinned woman moans as you rub her, and goes on to breathe heavily when you proceed to slip two fingers into her snatch. Finger-fucking and rubbing her magic button, you wind the strong orc up more and more, making her writhe on the ground and reflexively thrust her hips upwards as if to meet someone's cock being rammed into her pussy.";
 		WaitLineBreak;
 		say "     Doing everything you can to stimulate the muscular woman, you soon have her moaning louder and louder. 'Getting kinda close now,' she groans out not much later, in between rapid and aroused panting. Then, as the trickle of her fluids over your thrusting fingers starts to get ever more intensive, you quickly snatch up the prepared bottle and hold it against her opening, slowly catching a small amount of femcum. Slowly that is, until you actually get her off by rolling her clit between your fingers - which is when she lets out a satisfied shout and starts to squirt, splashing her sticky juices into the bottle in heavy throbs.";
 		say "     You continue working Katya's magic button to milk everything you can from her, filling the little bottle about three quarters before her orgasm eventually ebbs off and the female orc calms down again. She is left sprawled out on the ground after letting herself fall back when she came, and is now panting loudly. 'Damn - I gotta admit, it felt kinda amazing to be... milked, you know,' Katya says with a satisfied smirk up at you. 'Just don't expect me to do anything weird and kinky with that stuff. I'm not gonna drink it, remember that!' You simply shrug and screw the cap on the bottle, then stash it away and crawl over to your sexy orc. Kissing her on the lips, you make out and thank her for the 'gift', soon finding yourself in an embrace and cuddling with the green-skinned woman. You eagerly return touches and caresses, just enjoying yourself for a little while before getting back up to deal with the harsh realities of post-apocalyptic life.";
-		LineBreak;
-		say "     (You gain a bottle of orc femcum.)";
-		increase carried of orc femcum by 1;
+		ItemGain orc femcum by 1;
 		if KatyaRelationship is 5:
 			now KatyaRelationship is 6; [had sexy times with her]
 

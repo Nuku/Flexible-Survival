@@ -22,7 +22,7 @@ Shag Shack Alley	"Shag Shack Alley"
 
 Shag Shack Alley is a room.
 North of Shag Shack Entrance is Shag Shack Alley.
-The description of Shag Shack Alley is "[ShagShackAlley_Desc]".
+Description of Shag Shack Alley is "[ShagShackAlley_Desc]".
 The scent of Shag Shack Alley is "[ShagShackAlley_Scent]".
 
 Table of GameCharacterIDs (continued)
@@ -30,8 +30,8 @@ object	name
 Azari	"Azari"
 
 Azari is a man.
-The description of Azari is "[Azari_Desc]".
-The conversation of Azari is { "blah" }.
+Description of Azari is "[Azari_Desc]".
+Conversation of Azari is { "blah" }.
 The scent of Azari is "[Azari_Scent]".
 
 to say Azari_Desc:

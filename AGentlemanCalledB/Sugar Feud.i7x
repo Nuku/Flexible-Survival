@@ -10,13 +10,14 @@ Object	Name
 Sugar Shack	"Sugar Shack"
 
 Sugar Shack is a situation.
-The sarea of Sugar Shack is "Fair".
+ResolveFunction of Sugar Shack is "[ResolveEvent Sugar Shack]".
+Sarea of Sugar Shack is "Fair".
 when play begins:
 	add Sugar Shack to BadSpots of FurryList;
 	add Sugar Shack to BadSpots of FemaleList;
 	add Sugar Shack to badspots of HumorousList;
 
-Instead of resolving a Sugar Shack:
+to say ResolveEvent Sugar Shack:
 	setmonster "Sugar Glider";
 	choose row MonsterID in Table of Random Critters;
 	say "     Turning a corner you see a rather curious sight ahead down the midway, one of those brightly colored sugar glider girls scampering around a large stall at the end of the row. As you're considering turning back to avoid a confrontation with the excited marsupial, she spots you watching and calls out to you, waving you over eagerly. Finding yourself curious what she's up to you approach slowly, wary of some sort of trap the giggling girl may have set up, but you reach the stall without incident and find it to be, unsurprisingly, a candy stall.";
@@ -26,7 +27,7 @@ Instead of resolving a Sugar Shack:
 	say "     She squeals with excitement as the machine begins spinning her contribution into sugary fluff, and when she can wait no longer, she simply reaches into the open drum, forgoing the sticks entirely as she collects a great spool of the stuff on her arm. Pulling out a sizable mass of the cottony fluff, the eager glider wastes no time digging in, burying her face in the cotton candy with a muffled 'Mmmm', filling her mouth with the stuff before waving her candy coated hand in your face, offering you a taste. You pull a small piece of the fluff off her arm and poke it into your mouth, savoring the powerful sweetness of the fresh cotton candy, and soon you're reaching for another piece. The two of you continue like this for some time, until her arm has been picked clean. After licking the last of the sweet fluff from between her fingers, the sugar glider gives you a cute smirk and offers you her paw. With the sugary taste of the last batch still on your lips, part of you wants to reach out and accept her paw, but a small part of you wonders if it's really a good idea. Will you take the sugar glider's offer?";
 	if Player consents:
 		say "     'What's the worst that could happen?' you ask yourself as you take the glider's open paw and return her smirk. She cheers as she reaches back into the drum full of spinning cotton candy, pulling your own arm in with her. An itchy tingling sensation builds as the candy fluff collects on your arm, but you are soon distracted from that and the sugar glider wraps her long tail around you, pulling you in close and planting a quick kiss on your cheek.";
-		if SkinName of Player is "Sugar Glider" and BodyName of the player is "Sugar Glider":
+		if SkinName of Player is "Sugar Glider" and BodyName of Player is "Sugar Glider":
 			say "     Moments later when the sugar glider pulls your hand back out of the cotton candy machine, you are delighted to find it covered in soft candy fluff and dig in with a cheer. Distracted by the delicious sugary treat, you hardly notice the sugar glider shifting to the other side of you, taking hold of you other arm and pulling it into the humming machine, this time all the way up to your shoulder.";
 		else:
 			say "     Moments later when the sugar glider pulls your hand back out of the cotton candy machine you are momentarily disappointed to find it lacking the large spool of sugar fluff you were expecting[run paragraph on]";
@@ -79,7 +80,7 @@ Instead of resolving a Sugar Shack:
 	else:
 		say "     Deciding not to risk spending anymore time with this giggling sugar glider, you push her hand away and make for the exit. As you're leaving the sugar glider blows a long raspberry just before something strikes you sharply in the back of the head. Turning around you see her still sticking her tongue out at you with a cute scowl, having had enough of her silly antics, you pick up the broken pieces of the lollipop she threw at you and leave the stall.";
 		now Resolution of Sugar Shack is 2; [sugar gliders refused]
-		increase carried of crushed candies by 1;
+		ItemGain crushed candies by 1;
 	now Sugar Shack is resolved;
 
 to say fullSugarGliderTF:

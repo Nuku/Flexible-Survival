@@ -11,12 +11,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Government Assistance	"Government Assistance"
 
-Government Assistance is a situation. The level of Government Assistance is 6.
+Government Assistance is a situation.
+ResolveFunction of Government Assistance is "[ResolveEvent Government Assistance]". The level of Government Assistance is 6.
 
-Instead of Resolving the Government Assistance:
+to say ResolveEvent Government Assistance:
 	say "     As you are traveling through the city, you recognize a couple of government buildings and offices, largely in ruin. The air is heavy with smoke and soot, but you start to run regardless. You recall that you're close to the State Capitol Building. If there's anywhere they'll know what's going on and where you can get assistance, it'll be there. You cough as you keep pushing through the smoky air, turning a corner to see what has become of the Capitol Building and the surrounding area, dashing your hopes instantly.";
 	say "     The devastation here is extensive, with burnt out and smashed buildings all around. Several of the streets are cracked and broken, spewing flames. It looks almost like some twisted war zone. The creatures here must be particularly dangerous and devastating. From the look of the destruction, these creatures are probably roaming around the whole area, making traveling here quite risky. You'd best be extra cautious if you plan on looking around here.";
-	now The Approaching the Capitol Building is known;
+	AddNavPoint Approaching the Capitol Building;
 	move player to Approaching the Capitol Building;
 	now Government Assistance is resolved;
 
@@ -27,7 +28,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Approaching the Capitol Building	"Approaching the Capitol Building"
 
-Approaching the Capitol Building is a Room. The description of Approaching the Capitol Building is "[app_cap_bldg_desc]".
+Approaching the Capitol Building is a Room. Description of Approaching the Capitol Building is "[app_cap_bldg_desc]".
 The Approaching the Capitol Building is fasttravel.
 earea of Approaching the Capitol Building is "Outside".
 [  The Approaching the Capitol Building is private.	]

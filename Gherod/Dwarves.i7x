@@ -13,9 +13,10 @@ Object	Name
 Savage Dwarf	"Savage Dwarf"
 
 Savage Dwarf is a situation.
-The sarea of Savage Dwarf is "Forest".
+ResolveFunction of Savage Dwarf is "[ResolveEvent Savage Dwarf]".
+Sarea of Savage Dwarf is "Forest".
 
-Instead of resolving a Savage Dwarf:
+to say ResolveEvent Savage Dwarf:
 	say "     During your exploration efforts within the forest, you come across a grassy path near the base of a cliff. A little further ahead, there is - or was - what seems to be an entrance to a tunnel right through the rocky walls. It has collapsed, though you hear a lot of agitation coming from there, namely a short burly man shouting and hitting on the debris with his stone hammer. You can't quite understand what he's saying from here, you're standing too far to be able to hear him decently, but whatever it is, it looks like the man is having an argument with the rubble, or maybe someone is on the other side? [bold type]You could risk approaching him, but there isn't a lot of hiding area if you get closer, and he might see you.[roman type][line break]";
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Get closer.";
@@ -63,10 +64,11 @@ Object	Name
 Collapsed Tunnel	"Collapsed Tunnel"
 
 Collapsed Tunnel is a situation.
-The Prereq1 of Collapsed Tunnel is Savage Dwarf.
-The sarea of Collapsed Tunnel is "Forest".
+ResolveFunction of Collapsed Tunnel is "[ResolveEvent Collapsed Tunnel]".
+Prereq1 of Collapsed Tunnel is Savage Dwarf.
+Sarea of Collapsed Tunnel is "Forest".
 
-Instead of resolving a Collapsed Tunnel:
+to say ResolveEvent Collapsed Tunnel:
 	if Resolution of Collapsed Tunnel is 0: [first time]
 		say "     During your walk around the forest, you come across a familiar path near the rocky cliffs where the collapsed tunnel was found, and with it, the horny dwarf who's now roaming around. Tracing your steps back to the place, you remember the rubble that used to cover the entirety of the passage ahead of you, now partially removed to allow anyone to make it across. You suppose this is the work of the dwarf, who was finally able to remove the obstacles in order to make it to the other side. There's a chance that you might find something interesting if you decide to investigate, but beware that you're very likely to be trespassing dwarven territory. If you have any companions with you, they'll stay at the entrance to make sure you won't get stuck inside while exploring. [bold type]Do you wish to go on ahead, or leave the place for now?[roman type][line break]";
 		LineBreak;
@@ -195,7 +197,7 @@ to CTunnel3: [player successfully gets past the trap]
 	if player consents:
 		LineBreak;
 		say "     This is too good to pass. It is a two-handed weapon made addorned with gold, one of the most beautiful weapons you've ever seen. Plus, it looks pretty strong! No way you're going to leave this here, to remain forgotten and risking it ending up in the wrong hands. Carefully, you remove it from its resting place. You already knew it would be heavy, but not this heavy! Nonetheless, you're strong enough to carry it with you. Now it's only a matter of returning to the tunnel and get the hell out of here before someone notices anything missing, or see you carrying something that isn't supposedly yours.";
-		now carried of golden greathammer is 1;
+		ItemGain golden greathammer by 1;
 		now Resolution of Collapsed Tunnel is 4; [player got out with the greathammer, dwarves provoked]
 		now Collapsed Tunnel is resolved;
 	else:
@@ -211,7 +213,8 @@ Object	Name
 Wedding Wreckers	"Wedding Wreckers"
 
 Wedding Wreckers is a situation.
-The sarea of Wedding Wreckers is "Nowhere".
+ResolveFunction of Wedding Wreckers is "".
+Sarea of Wedding Wreckers is "Nowhere".
 
 to say DwarfQuest1: [Dwarf has the greathammer]
 	say "     Now that the dwarf has been defeated, you are free to claim the greathammer that you found with your own sweat and effort right off his hands, but he's not willing to give it up so easily. 'No! This is my hammer! I worked hard to get it!' Even in his defeated state, he refuses to let go off his weapon, but it isn't a lot to stop you from just taking it out of his hands by force. 'You don't know one thing... You won't like to have that hammer with you, I'm warning...' You dismiss his commentary as rubbish, and walk away from him with your prize in your hands.";
@@ -229,7 +232,7 @@ to say DwarfQuest3: [continuation]
 	say "     But...";
 	say "     As you were walking around the forest, you feel like you are being followed. Is it the scavenger still wanting to recover from his humiliation? You could think this, but you just defeated him, there is no way he could actually bolster up all the strength to keep following you and still fight you for it, right? Didn't he have enough beating for one day? However, the sensation grows stronger, and you think you hear footsteps around you. Maybe a wild creature? Well, now you have the weapon to defend yourself with! You stand your ground this time, and look around you, waiting for something to come out of behind the trees, or the moving bushes. Maybe you should think about taking some cover, since you have no idea what's lurking from the shadows...";
 	say "     'Get [ObjectPro]!' A rough male voice bursts out of nowhere, and suddenly, there's a swarm of... dwarves?! They are coming towards you with their weapons in hand! They're so fast, that the only thing you can do is swing the hammer around. You think you probably hit one of them, but then you black out, a pain on the back of your head being the last thing you feel before you collapse on the ground.";
-	now carried of golden greathammer is 0;
+	ItemLoss all golden greathammer;
 	WaitLineBreak;
 	say "     Some time later, you begin to regain your senses, with an intense headache. Confused as to what happened, you glance around in confusion, finding something amiss... Your golden greathammer is [bold type]gone[roman type]! Still looking around for it, you try to get up, only to lose your balance a second later from the dizziness that's still blocking your senses. 'I wouldn't do that if I were you. Sounds like you were hit pretty hard.' It's a familiar voice, someone you met not long ago... Oh, but of course, the dwarf scavenger! 'Don't worry, this wasn't my fault. I think we provoked the dwarves on the other side of the mountain by intruding in their territory and stealing that weapon.'";
 	say "     As it appears, a bunch of dwarves charged against you, knocked you off your senses and stole the greathammer right off your hands. At least, judging by what the scavenger is saying. 'I followed behind them for a while, sounds like it was a gift for one of the grooms who is going to get married soon. A member of the guard, no less! I guess we pissed them off.' The bearded man crouches next to you, helping you at least to take a proper, straight up sitting position. 'There, you better now?' he asks you. In fact, you're still seeing two of him, but you reassure him, saying you're okay. Though, not without questioning his sudden sympathy for you. 'What, I'm partially responsible for this... I figured I should have made sure you were fine. But I can leave, if you want.'";
@@ -630,7 +633,7 @@ to WWEnd:
 			WaitLineBreak;
 			say "     'Phew... They really were giving us a chase. Someone's gonna be pissed at us.' he says, as you trace your steps back to the surface after an exhausting sprinting for your lives. That narrow passage leading to the trapdoor where this all began is still clear, so you are able to proceed further in and leave out, back to the surface. Just to be safe, you push a boulder towards the top of the entry in order to lock it down, hopefully as long as it stays there. Finally, you can have some time to breathe and enjoy the scenery of the surface, much brighter, plants all around, and with a much clearer atmosphere. You really worked out some sweat!";
 			say "     'I think we should fuck in celebration, but I'm really fucking tired. Also... Well, you're a great bud, might as well have this yourself.' he tells you, handing you the [bold type]golden greathammer[roman type]. Did he drink something while you were in the banquet room or something? You find this hard to believe. 'What? I think you deserve it. Honestly. As long as you let me swing it sometimes, or if you ever sell it... Eh, don't sell it. It's too pretty.' You can only thank him for the generosity. Maybe this was worth the hassle, after all. Then, you share some words and talk a bit. Yogdrak is a pretty funny guy, now that you've got to know him better.";
-			now carried of golden greathammer is 1;
+			ItemGain golden greathammer by 1;
 			WaitLineBreak;
 			say "     'It's probably time for me to go. Take care, friend. Come visit me around here if you want to either talk, fight or fuck. I'm all down for any of those. But I'll still beat you up if you piss me off.' You suppose he's still a wanderer, so in order to find him, you'll still have to search around the area. He just won't be automatically hostile as he was before, but some things never change.";
 			if Resolution of Wedding Wreckers is 4 or Resolution of Wedding Wreckers is 5: [bad rep + treasure]
@@ -924,8 +927,8 @@ to say YogdrakRoamingTalk:
 Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -945,7 +948,7 @@ When Play begins:
 	now desc entry is "[Dwarf Desc]";
 	now face entry is "a weathered middle-aged man's, rugged and long-bearded, with short and shaggy dark brown hair hugging the top of your head";
 	now body entry is "that of a short and burly man, musclebound and covered in hair. Your legs are fairly shorter than an average human's, making you stand half one's height";
-	now skin entry is "peach toned and rough"; [ format as "You have (your text) skin"]
+	now skin entry is "peach toned and rough"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a hairy, compact muscled butt"; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a weathered male visage, rugged features and a long full beard growing out of your jaw and chin. Your hair becomes very short and dyed in a dark brown color"; [ format as "Your face feels funny as (your text)." ]
@@ -976,6 +979,9 @@ When Play begins:
 	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "dwarven ale";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50;          [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "stocky"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "dwarf";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -990,7 +996,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -1114,8 +1120,8 @@ to say DwarfKnight Desc:
 		say "     ";
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -1135,7 +1141,7 @@ When Play begins:
 	now desc entry is "[DwarfKnight Desc]";
 	now face entry is "a weathered middle-aged man's, rugged and long-bearded, with short and shaggy dark brown hair hugging the top of your head";
 	now body entry is "that of a short and burly man, musclebound and covered in hair. Your legs are fairly shorter than an average human's, making you stand half one's height";
-	now skin entry is "peach toned and rough"; [ format as "You have (your text) skin"]
+	now skin entry is "peach toned and rough"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a hairy, compact muscled butt"; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a weathered male visage, rugged features and a long full beard growing out of your jaw and chin. Your hair becomes very short and dyed in a dark brown color"; [ format as "Your face feels funny as (your text)." ]
@@ -1166,6 +1172,9 @@ When Play begins:
 	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50;          [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "stocky"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "dwarf";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -1186,9 +1195,9 @@ name	desc	weight	object
 
 dwarven ale is a grab object.
 
-dwarven ale is infectious. The strain of dwarven ale is "Dwarf Male".
+dwarven ale is infectious. Strain of dwarven ale is "Dwarf Male".
 
-the usedesc of dwarven ale is "You bring the canteen bottle to your mouth and chug its contents down, the drink tasting like a very strong beer that nearly burns down your throat.";
+Usedesc of dwarven ale is "You bring the canteen bottle to your mouth and chug its contents down, the drink tasting like a very strong beer that nearly burns down your throat.";
 
 instead of sniffing dwarven ale:
 	say "This beverage smells a lot like alcohol. It must be very strong.";
@@ -1207,14 +1216,7 @@ to say DwarfMaleTF:
 
 Section 4-2 - Weapons
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"golden greathammer"	"A very well preserved, large stonehammer vastly coated in gold, with artistic details carved all over the shaft and its tip's support. It is truly a beautiful piece. It's exceptionally heavy too, making it difficult to handle."	12	golden greathammer
-
-golden greathammer is an armament. It is part of the player. It has a weapon "[one of]your golden greathammer[or]your heavy golden greathammer[or]your heavy weapon[or]your beautiful golden greathammer[at random]". The weapon damage of golden greathammer is 14. The weapon type of golden greathammer is "Melee". It is not temporary. the objsize of golden greathammer is 4. the hitbonus of golden greathammer is -2.
-
-instead of sniffing golden greathammer:
-	say "The beautiful golden greathammer smells of old, due to its age, and has an obvious trace of metallic scent.";
+[golden greathammer moved to Core Mechanics/Weapons.i7x]
 
 Section 5 - Endings
 

@@ -27,11 +27,12 @@ Object	Name
 Smashed Hive	"Smashed Hive"
 
 Smashed Hive is a situation.
-The sarea of Smashed Hive is "Park".
+ResolveFunction of Smashed Hive is "[ResolveEvent Smashed Hive]".
+Sarea of Smashed Hive is "Park".
 when play begins:
 	add Smashed Hive to BadSpots of FemaleList;
 
-Instead of resolving a Smashed Hive:
+to say ResolveEvent Smashed Hive:
 	if HP of bee girl is 0:
 		say "     As you search through the park, you come across a giant, devastated bee hive. The hive was built around the branches of a large tree and may have been over fifteen feet tall when completed intact. Now, broken fragments of it lay scattered around the area and only some of the upper chunks cling to the top branches to give you a scope of its size. Scattered around the sticky rubble are the bodies of numerous bee girl drones, unmoving. Cautiously, you step between the sticky chunks of honeycomb to take a closer look.";
 		say "     As you follow the bear tracks all around the area, you can see that one or even several bears assaulted the hive for the sweet honey. Much of the honeycomb center has been taken away, though you may be able to retrieve some for yourself. As you look around to find a clean section to pick from, you hear a weak buzz from behind you. Turning, you see one of the bee drone's still alive, struggling to get up despite her injuries.";
@@ -44,15 +45,14 @@ Instead of resolving a Smashed Hive:
 				say "     Taking care not to appear threatening and trying to reassure her that you only want to help, you move slowly over to the bee girl. She buzzes angrily at you, but stumbles and cannot remain upright. Using your medkit, you try your best to patch her up, feeling sorry for this lone survivor";
 				if ( "Expert Medic" is not listed in feats of Player and a random chance of 1 in 10 succeeds ) or ( "Expert Medic" is listed in feats of Player and a random chance of 8 in 100 succeeds ):
 					say ". This uses up the last of that medkit, so you hope it turns out to be worth it.";
-					delete medkit;
+					ItemLoss medkit by 1;
 				else:
 					say ".";
 				say "[beegirlsaved]";
 				now Resolution of Smashed Hive is 1; [saved honey]
 			else:
 				say "     Not wanting to risk getting too close to the enraged bee girl, you grab some chunks of honeycomb and make a run for it.";
-				say "     Honeycomb x 5 obtained.";
-				increase carried of honeycomb by 5;
+				ItemGain honeycomb by 5;
 				increase score by 10;
 				now HP of bee girl is 100;
 				now Resolution of Smashed Hive is 99; [left honey]
@@ -64,21 +64,19 @@ Instead of resolving a Smashed Hive:
 			say "     ([link]N[as]n[end link]) - Grab the honey and run.";
 			if Player consents:
 				say "     Taking care not to appear threatening and trying to reassure her that you only want to help, you move slowly over to the bee girl. She buzzes angrily at you, but stumbles and cannot remain upright. Moving to her side, you inject her with the healing booster, feeling sorry for this lone survivor and hoping it was worth using a booster to save her.";
-				delete healing booster;
+				ItemLoss healing booster by 1;
 				now Resolution of Smashed Hive is 1; [saved honey]
 				say "[beegirlsaved]";
 			else:
 				say "     Not wanting to risk getting too close to the enraged bee girl, you grab some chunks of honeycomb and make a run for it.";
-				say "     Honeycomb x 5 obtained.";
-				increase carried of honeycomb by 5;
+				ItemGain honeycomb by 5;
 				increase score by 10;
 				now HP of bee girl is 100;
 				now Resolution of Smashed Hive is 99; [left honey]
 				now Smashed Hive is resolved;
 		else:
 			say "     Feeling there is nothing that you can do for her, and not wanting to risk staying around an enraged bee girl, you grab some chunks of honeycomb and make a break for it.";
-			say "     Honeycomb x 5 obtained.";
-			increase carried of honeycomb by 5;
+			ItemGain honeycomb by 5;
 			increase score by 10;
 			now HP of bee girl is 100;
 			now Resolution of Smashed Hive is 99; [left honey]
@@ -157,14 +155,13 @@ to say beegirlsaved:
 	say "     Thanks to your timely medical assistance, the bee girl is stabilized. You take a moment to look her over while she's passed out. She has a small body, roughly four feet tall and youthful looking. Her arms are human, but ending in delicate hands with chitinous plates over them. Growing from her sides, she has a smaller pair of insectile arms tucked to her sides. Much of her skin is covered in chitin plating with soft, fluffy hairs like a bumblebee, though her main arms, shoulders and upper chest have human skin, making it seem as if she's wearing a yellow and black dress. Her face is cute and youthful, with long, blond hair. Poking from her hair are a pair of antennae and she has some plating on her chin and throat. Her cute, little rear has a bee's abdomen attached to it, though her stinger's been broken off. Clearly she went down fighting and this was the main injury you had to patch up, as bees normally die after stinging once.";
 	say "     As you're patting her patched-up abdomen, she regains consciousness and starts upright. She buzzes angrily at you before realizing that she's been healed. She calms down and smiles at you. 'Uhh... thank you,' she buzzes softly. Wringing her lower hands together nervously, she gets up and looks around at her ruined hive. With tears in her eyes, she wraps her arms around you and clutches to you tightly. It seems you've made a new friend.";
 	say "     Stroking her soft hair and speaking reassuringly, you manage to calm her down and she smiles up at you. 'I'm Honey. Oh! The honey!' she exclaims, running around to gather up as much as she can of the hive's destroyed supply, putting it into a bag so she'll have something to live off of without her home and sisters. 'Here. You can have a little too,' she says, giving you a couple of pieces as thanks. When you head off, she follows along, having nowhere else to go but with her rescuer.";
-	say "     Honeycomb x 2 obtained.";
-	increase carried of honeycomb by 2;
+	ItemGain honeycomb by 2;
 	increase score by 20;
 	now bee girl is tamed;
 	add "Tamed" to Traits of bee girl;
 	now HP of bee girl is 1;
 	move Honey to Grey Abbey Garden;
-	say "     (The bee girl is now tamed! You can make her your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck bee girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+	say "     (Honey the bee girl is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Honey[end link][roman type] or [bold type][link]ally bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Honey[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 
 
 Section 2 - Bee Girl NPC/Pet
@@ -173,12 +170,14 @@ Table of GameCharacterIDs (continued)
 object	name
 bee girl	"bee girl"
 
-bee girl is a pet. bee girl is a part of the player.
+bee girl is a pet. bee girl is a part of Player.
+NPCObject of bee girl is Honey.
 understand "Honey" as bee girl.
-The description of bee girl is "[HoneyDesc]".
-The weapon damage of bee girl is 3.
+printed name of bee girl is "Honey".
+Description of bee girl is "[HoneyDesc]".
+Weapon Damage of bee girl is 5.
 The level of bee girl is 1.
-The Dexterity of bee girl is 16.
+Dexterity of bee girl is 20.
 The summondesc of bee girl is "[SummonHoney]".
 The dismissdesc of bee girl is "[DismissHoney]".
 The assault of bee girl is "[one of]The bee girl buzzes around, slapping and punching at your foe from behind![or]The bee girl dive bombs the enemy, jabbing with her stinger-less abdomen repeatedly and bashing her fists on their back, buzzing wildly![or]Buzzing angrily, the bumblebee scratches and claws at your foe with her hard, chitinous fingertips![or]The bee drone tosses globs of sticky honey onto your foe, slowing them down while they get unstuck![or]The buzzing drone drops an armload of small rocks and junk onto your enemy from above![at random]".
@@ -203,7 +202,8 @@ object	name
 Honey	"Honey"
 
 Honey is a woman.
-The description of Honey is "[HoneyDesc]".
+ScaleValue of Honey is 2. [human sized]
+Description of Honey is "[HoneyDesc]".
 
 instead of sniffing Honey:
 	say "[HoneyScent]";
@@ -219,7 +219,10 @@ to say HoneyDesc:
 	if Player is in Grey Abbey Garden:
 		say "     At the moment the little bee girl is busy fixing up the garden.";
 	else:
-		say "     At the moment the little bee girl is flying around, buzzing contently.";
+		if companion of Player is felinoid companion:
+			say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
+		else:
+			say "     At the moment the little bee girl is flying around, buzzing contently.";
 
 instead of sniffing bee girl:
 	say "[HoneyScent]";

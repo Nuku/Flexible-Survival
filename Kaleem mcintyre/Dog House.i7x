@@ -6,20 +6,21 @@ Table of GameEventIDs (continued)
 Object	Name
 DogHouse	"DogHouse"
 
-The DogHouse is a situation.
+DogHouse is a situation.
+ResolveFunction of The DogHouse is "[ResolveEvent DogHouse]".
 DogHouse is inactive.
 Fin is a number that varies.
 Tyraffection is a number that varies.
 Homarusearch is a number that varies.
 
-The sarea of DogHouse is "Warehouse".
+Sarea of DogHouse is "Warehouse".
 when play begins:
 	add DogHouse to BadSpots of FurryList;
 	add DogHouse to BadSpots of FemaleList;
 	add DogHouse to BadSpots of MaleList;
 	add DogHouse to badspots of HermList;
 
-Instead of resolving DogHouse:
+to say ResolveEvent DogHouse:
 	if fin is 1:
 		say "     Finding yourself coming across the drab-looking warehouse that Homaru had told you about, you walk up to the metal doors of the edifice and knock. A small slot opens a second later and piercing yellow eyes stare back at you accusingly. 'What do you want?' The person on the other side of the door asks with a voice that's more of a growl than a regular human baritone.";
 		say "     Building up your courage, you find your voice and then tell the other that you're here for the [bold type ]Dog Show[roman type]. Feral yellow eyes glare at you before pulling back when the slot suddenly closes. You [FaceName of Player] ears catch the sounds of locks being flicked and latches being unhooked before finally the metal door is pulled open. What you see from the [if daytimer is day]light coming in from the sun[else]strong rays of the moon pouring in behind you[end if] is a powerful husky/wolf hybrid with enough muscles to put a rhino to shame sneering at you implacably.";
@@ -170,7 +171,7 @@ Instead of resolving DogHouse:
 						LineBreak;
 						say "     Seeing no reason to bother the man over something so trivial, especially in light of his present condition and past trauma, you decide to just watch as Birch runs off into the downtown area. You faintly hope the other man will be alright.";
 						now Resolution of DogHouse is 5; [didn't ask Birch about girlfriend]
-					now Tyr's Club is known;
+					AddNavPoint Tyr's Club;
 					now Homarusearch is 2;
 					increase score by 10;
 					now DogHouse is resolved;
@@ -217,7 +218,7 @@ Instead of resolving DogHouse:
 					now Homarusearch is 2;
 					increase score by 10;
 					now DogHouse is resolved;
-					now Tyr's Club is known;
+					AddNavPoint Tyr's Club;
 					now Resolution of DogHouse is 4; [player won against the wolftaur]
 				else:
 					say "[defeatedbywolf]";
@@ -236,7 +237,7 @@ to say defeatedbywolf:
 	if Player consents:
 		LineBreak;
 		say "     Thinking that it might be better to get the hell out of here before anything else strange can happen, you take your leave of the place before you can get into even more trouble.";
-		now Tyr's Club is known;
+		AddNavPoint Tyr's Club;
 		now Homarusearch is 2;
 		increase score by 10;
 		now DogHouse is resolved;
@@ -266,7 +267,7 @@ to say defeatedbywolf:
 			say "     'You shouldn't go putting yourself in danger over me like that, pup.' You feel somewhat chastised, but at the same time proud when Tyr walks over to nuzzle the underside of your chin. 'Come on, let's go and see if we can deal with the lot downstairs and then get ourselves out of here. I don't know about you, but this place gives me the creeps.' Laughing you follow after the Doberman as he moves around the defeated bunch at your feet. Working with Tyr, the both of you help to free some of the other captured canine mutants and hybrid humans that you had missed before. Once you both are done, you and Tyr find yourself leaving the warehouse behind and then going about your separate ways.";
 			WaitLineBreak;
 			say "     Before you can get too far, you stop and then turn to watch the strong features of Tyr's back flex and ripple as the unpredictably powerful cano-mutant wags his long and thin tail while shaking his rump behind his back, almost as if to tease you. When a cocksure face turns to wink at you from over a broad shoulder, you can only shake your head at the Doberman.";
-			now Tyr's Club is known;
+			AddNavPoint Tyr's Club;
 			now Homarusearch is 2;
 			increase score by 10;
 			now DogHouse is resolved;
@@ -276,7 +277,7 @@ to say defeatedbywolf:
 to say fightlost:
 	say "     Having been defeated by your current opponent, you find yourself getting tossed aside like yesterday's garbage. This consequently leaves Tyr to have fight off the rest by himself. However, the Doberman doesn't seem to mind as he makes a spectacle of defeating the last of the group without so much as breaking a sweat! Once he's done, Tyr grunts and then pops his neck while rolling his shoulders while going over to give you a hand up. 'Nice try warrior. Maybe you should come by my place so that we can work on honing those fighting skills of yours.";
 	say "     You don't sense any malice in the other's words so you don't feel slighted by his slight admonishment. Getting a pat on the shoulder by the other man, both you and the Doberman head out of the warehouse without speaking a word to each other. The silence of the aftermath of the battles you both just fought - well, Tyr more than you - is pervasive enough as it is.";
-	now Tyr's Club is known;
+	AddNavPoint Tyr's Club;
 	now Homarusearch is 2;
 	increase score by 10;
 	now DogHouse is resolved;

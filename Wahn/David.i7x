@@ -82,12 +82,13 @@ Object	Name
 Captured Demon	"Captured Demon"
 
 Captured Demon is a situation.
-The sarea of Captured Demon is "Red".
+ResolveFunction of Captured Demon is "[ResolveEvent Captured Demon]".
+Sarea of Captured Demon is "Red".
 when play begins:
 	add Captured Demon to BadSpots of MaleList; [male soldier, demon brute]
 	add Captured Demon to badspots of DemonList; [demon brute]
 
-Instead of resolving a Captured Demon:
+to say ResolveEvent Captured Demon:
 	say "     Moving through an alley in the seedier part of town, you hear voices from the smashed window of a nearby bar. Careful not to step on anything and make a sound, you slowly walk closer and listen.";
 	say "     'The brute smashed our only working radio. Now we got the mission objective locked down, but can't call in the retrieval team. Anderson's dead and that claw-slash on Kowalski's leg doesn't look good.' You peek over the window-still and see a mid-sized bar, its interior devastated by a fight. In the midst of bullet-holed walls and smashed furniture, there is a demon brute slumped down on a chair, bound with leather straps and chains. Near him, there are four soldiers, one of them just being bandaged on the thigh.";
 	say "     The apparent leader watches the wounded man being patched up, then says 'It can't be helped. No way a man supporting a wounded comrade can make it through the streets alone. I'll have to go with them. Private Jackson, guard the captive until the retrieval team arrives. If need be, give him more sedatives.' He nods to a young-looking soldier, who salutes and says 'Yes sir!' You don't want to get shot by stressed out soldiers, so you have to hurry down the alley a bit to hide behind a dumpster not to get spotted as they move out.";
@@ -134,17 +135,18 @@ Table of GameEventIDs (continued)
 Object	Name
 Thankful Soldier	"Thankful Soldier"
 
-Thankful Soldier is a situation. [meeting the guy from 'Captured Demon' again - if you saved him]
-The Prereq1 of Thankful Soldier is Captured Demon.
+Thankful Soldier is a situation.
+ResolveFunction of Thankful Soldier is "[ResolveEvent Thankful Soldier]". [meeting the guy from 'Captured Demon' again - if you saved him]
+Prereq1 of Thankful Soldier is Captured Demon.
 The Prereq1Resolution of Thankful Soldier is { 1 }.
-The sarea of Thankful Soldier is "Outside".
+Sarea of Thankful Soldier is "Outside".
 when play begins:
 	add Thankful Soldier to BadSpots of MaleList; [male soldier]
 
 TSEventCounter is a number that varies. TSEventCounter is usually 0.
 LastTSEvent is a number that varies. LastTSEvent is usually 555.
 
-Instead of resolving a Thankful Soldier:
+to say ResolveEvent Thankful Soldier:
 	if (LastTSEvent - turns < 4):
 		say "     You walk through the alley where you last met David and check the surrounding area - no luck. Seems like your soldier-friend is patrolling or scouting somewhere else right now. Maybe you should try a bit later again...";
 	else:
@@ -160,9 +162,8 @@ Instead of resolving a Thankful Soldier:
 			if Player consents: [accept supplies]
 				LineBreak;
 				say "     You take the items he offers you and stash them in your pack. 'Hope that'll help you a bit. Stay safe - help is coming, it's just a question of time till more troops arrive and the scientists figure out this whole mess.' He nods to you, then continues his patrol route. You memorize where the alley is in the city, hoping you can catch him on patrol again sometime later.";
-				say "     Food x3, Water x1 obtained.";
-				increase carried of food by 3;
-				increase carried of water bottle by 1;
+				ItemGain food by 3;
+				ItemGain water bottle by 1;
 				now Resolution of Thankful Soldier is 2; [talked to David]
 			else: [fuck the soldier]
 				LineBreak;
@@ -327,8 +328,8 @@ SexuallyExperienced of David is true.
 TwistedCapacity of David is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of David is false. [steriles can't knock people up]
 MainInfection of David is "Human".
-The description of David is "[DavidDesc]".
-The conversation of David is { "Oh, hello." }.
+Description of David is "[DavidDesc]".
+Conversation of David is { "Oh, hello." }.
 The icon of David is Figure of David_clothed_icon.
 DavidBunkerEntry is a number that varies.
 BrutusEscalationTimer is a number that varies.
@@ -586,7 +587,7 @@ to say DavidTalk4: [talk about Brutus]
 	if Libido of David is 51:
 		say "     Bringing up the topic of Brutus, you explain that your demon companion thinks that the demon who attacked him did something, possibly leaving what Brutus called a 'seal of enslavement'. Continuing with the offer by Brutus to have a look for it, you see David become rather uncomfortable as he imagines stripping before the demon. Still, he might be in real danger from it, if he actually has the seal on him and it draws other demons like it seems to be affecting Brutus. You do your best to convince David to agree to Brutus examining him, and...";
 		LineBreak;
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] in a Charisma-Check.";
 		increase diceroll by bonus;
@@ -771,7 +772,7 @@ to say DavidTalk4: [talk about Brutus]
 		say "     As you bring your demon companion up, a happy grin spreads over David's features and he gives your shoulder a pat in camaraderie. 'I can't thank you enough for... well, you set it all up, didn't you? Rescuing me, rescuing Brutus, giving us the opportunity to meet, hah - to fuck even. And now this. I - I can feel where he is now, you know. Or at least where the amulet is. Always. And I know in my heart that he'll always be there for me.'";
 	else if Libido of David is 82: [Brutus fucked David before under his dominant urges]
 		say "     As you bring your demon companion up, a flush spreads over David's face and he says, 'I love the big brute. The sex just takes your breath away. I know he can be a bit rough at times, but I... don't mind. He makes me feel soo good.' There may be a smile on David's face and his breathing gets quicker as he gets aroused from speaking about his demon lover, but you heard the little pause he made when talking about getting fucked roughly.";
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		increase diceroll by bonus;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
@@ -1037,7 +1038,7 @@ to say DavidTalk6: [trip to Camp Bravo]
 			else:
 				say "     Deciding to let them have their 'privacy' - or what passes for it in a semi-public spot like this - you wander over to a nearby tent and have a look inside. Hmm... toilet paper, pens, gun oil... there's piles of all kinds of stuff. You check out box by box while hearing the grunts and eventually roars from outside that accompany your friend's coupling. Eventually, the sounds ebb out and you emerge from the tent - your pack now holding the two MRE's that you found and quietly pocketed. Looking around, you see Brutus sitting against the brick wall of the nearby building, with David straddling his hips and impaled on the demon's thick shaft. The two of them rest a while longer like that, panting to catch their breath, then David stands up on shaky legs, a veritable flood of cum splashing out of his hole as he pulls off Brutus's cock.";
 				say "     As the young man looks down at his lover's creamy load trickling down the inside of his legs, then over to his uniform lying in a small heap nearby, he blows out is breath, clearly wondering how he can make himself presentable again. The purple demon solves that problem by just reaching out and pulling David close again, then licking his own load up from the human's skin and finally burying his face between David's cheeks. The young soldier gasps in renewed lust as Brutus's tongue wiggles deep into him, stroking sensitive spots while the demon eats out his human friend. Eventually, this stimulation even drives David over the edge to another orgasm, moaning deeply as his cock spurts with blast after blast of cum that splatters the ground in front of him.";
-				increase carried of food by 2;
+				ItemGain food by 2 silently;
 			WaitLineBreak;
 			say "     With David now licked clean, inside and out, he puts on his uniform again as soon as he regains his composure, then all of you make your way to the camp commander's tent. Major Padgett is startled as the large demon enters his presence, but between you and David, you manage to calm him down pretty quickly and explain that Brutus is not a threat - and is indeed quite helpful to your task as a bodyguard. The man huffs, 'I can see that, but he's still a danger. Do you realize what creatures like him do to people they catch?' Brutus interjects, 'Terrible things. They do - I did - terrible things. But... the master made me better. Took away my rage and pain.' The major gets pretty interested as he hears about you being the demon's master and lets you show him the amulet, then says, 'Be sure to include all details about that in your report, agent. This could be a boon for the military. But no matter how... tame your creature might be, after all the reports about others of his kind, I do not think that anyone will relax or let their guard down in his presence.'";
 			say "     Since the Major isn't interested in actually talking to Brutus, but rather starts to build cloud-castles about heavy weapons demon support troops, you excuse yourself and walk back out. Brutus remarks, 'There are many masters, bad and... worse. I am happy to actually have been taken into service by a good one. So - thank you again for everything you have done, and letting me meet David.' He lays a hand on David's shoulder and gives him an affectionate squeeze, then the three of you make your way out of the camp and travel back to the library.";
@@ -1387,7 +1388,7 @@ instead of going to Bunker while HP of David is 4 and (Libido of David is 0 or L
 		now Libido of David is 59; [player knows something is up with Brutus]
 		WaitLineBreak;
 		say "     Looking down at his monster of a cock, Brutus takes a deep breath and composes his face to a stoic expression. You can actually see his erection soften a bit while he gives low grunts, soon becoming as soft as he ever gets. Bowing his head to you, he then says, 'I will control myself better from now on.' With that, your powerful companion stalks down the stairs again, clearly wanting to prove to you - and himself - that he's all better now.";
-		let bonus be (( the Perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		increase diceroll by bonus;
 		if diceroll > 12:
@@ -1454,7 +1455,7 @@ instead of going to Bunker while HP of David is 4 and companion of Player is dem
 		say "     DEBUG: DAVID/BRUTUS INTERACTION 2[line break]";
 	if Libido of David is 53: [David thanked Brutus after he got hurt - some attraction here]
 		if a random chance of 4 in 10 succeeds: [40% chance]
-			let bonus be (( the Perception of the player minus 10 ) divided by 2);
+			let bonus be (( Perception of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			increase diceroll by bonus;
 			if a random chance of 1 in 2 succeeds: [David watches Brutus - perceptive players notice his looks linger on Brutus's naked body]

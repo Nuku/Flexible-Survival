@@ -157,7 +157,7 @@ to say SpidertaurPostSex:
 			say "     Satisfied, the spidertaur pulls out of you, lowering your legs to dangle over the edge of the silken sling you're lying on and stroking your body. Then he reaches up to loosen the strands holding your arms, freeing them, after which you pull him down on top of you, holding Aelias's muscled body against your chest and stroking his soft skin. You moan that he can tie you up whenever he wants, rubbing yourself against him and the silken fabric under you. 'I'll hold you to that,' he says, then moves back a bit, allowing you to climb out of the soft spidertaur-silk construct. Aelias plucks a towel from high up in the many strands in the room, handing it to you. As he watches your naked body move when you clean up a bit, he gives you an appreciative look. 'You're my absolutely favorite prey, you know. Handsome and amazing.' Moving closer, he pulls you into an embrace, making out with you.";
 			if SpidertaurRelationship is 4:
 				increase SpidertaurRelationship by 1;
-				increase carried of silk hammock by 1;
+				ItemGain silk hammock by 1;
 				LineBreak;
 				say "     Coming up for air after a while, he says 'I've got something for you.' and moves through the web strands to pull a bundle hidden high above you. At first you think he's got something wrapped up in a large sheet of woven silk, then you recognize what it is by the two stabilizing rods at the ends - a hammock, made of real silk. 'Sleep well in this part of my web, my little fly,' he says as he hands it to you. The whole bundle is surprisingly light and you're sure it'll come in handy when you're out in the city.";
 				LineBreak;
@@ -165,8 +165,7 @@ to say SpidertaurPostSex:
 				LineBreak;
 			else if SpidertaurRelationship is 5:
 				say "     Coming up for air after a while, he says 'I... miss you, when you're not here, and always hope to find you in the streets when I go out.' Looking around for a moment, eyes wandering over the long strands of silk everywhere, he continues, 'My web feels empty without you - so, why don't you... stay? Playing predator and prey out in the city is fun, but I'd just as much - no, more even - like to just spend some time together here with you.'";
-				say "     You're now free to come and go to the [bold type]Spider's Web[roman type] at any time. The location has been added to your nav list.";
-				now Spider's Web is known;
+				AddNavPoint Spider's Web;
 				increase SpidertaurRelationship by 1;
 			LineBreak;
 			say "     Some time later, with you fully dressed again, the spidertaur leads you back to one of the main roads in this part of the city. 'Until next time', you tell him, giving him a goodbye kiss, then watch as he climbs a wall and vanishes over the edge of a roof.";
@@ -208,8 +207,8 @@ to say Spidertaur_Desc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -263,6 +262,9 @@ When Play begins:
 	now libido entry is 25;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "spidertaur hair";[ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 75;         [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strange[or]hybrid[or]mutated[at random]";
 	now type entry is "[one of]arachnid[or]spider-person[at random]";
@@ -277,7 +279,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -382,13 +384,13 @@ Section 3 - Items
 Table of Game Objects (continued)
 name	desc	weight	object
 "spidertaur hair"	"A few long strands of pale-white hair."	1	spidertaur hair
-"silk hammock"	"A large but surprisingly light hammock, made from real spidertaur silk. It has two wooden stability rods at the ends, as well as sticky holding strands to hang it up pretty much anywhere. So you can [bold type]rest[roman type] in comfort wherever you like!"	10	silk hammock
+"silk hammock"	"A large but surprisingly light hammock, made from real spidertaur silk. It has two wooden stability rods at the ends, as well as sticky holding strands to hang it up pretty much anywhere. So you can [bold type]rest[roman type] in comfort wherever you like! You can be sure that it is more restful than any old sleeping bag and the like."	5	silk hammock
 
 instead of sniffing spidertaur hair:
 	say "Doesn't smell of anything, really.";
 
 spidertaur hair is a grab object.
-the usedesc of spidertaur hair is "[spidertaur hair use]";
+Usedesc of spidertaur hair is "[spidertaur hair use]";
 
 to say spidertaur hair use:
 	say "Playing a bit with the long strands of hair, you twirl them around your finger. After a while, they suddenly disintegrate into a fine powder which just seems to melt into your skin...";
@@ -405,7 +407,7 @@ to SpidertaurInfect:
 	infect "Spidertaur Male";
 	now non-infectious entry is true;
 
-spidertaur hair is infectious. The strain of spidertaur hair is "Spidertaur Male".
+spidertaur hair is infectious. Strain of spidertaur hair is "Spidertaur Male".
 
 instead of sniffing silk hammock:
 	say "It doesn't have any noticeable smell, really. Just a bit of silken fabric, in the end";
@@ -420,7 +422,7 @@ Object	Name
 Spider's Web	"Spider's Web"
 
 Spider's Web is a room. It is a fasttravel. Spider's Web is private. Spider's Web is sleepsafe.
-The description of Spider's Web is "[WebDesc]".
+Description of Spider's Web is "[WebDesc]".
 
 to say WebDesc:
 	say "     Aelias's web lies in one of the abandoned buildings at the edge of the warehouse district. From the looks of it, it was a warehouse or industrial building itself at some point in the past, then got rebuilt into a loft-apartment. Now it has been transformed again, the spidertaur having removed all the furniture and building his home and love-nest in here. Between the hardwood floor and the thick wooden beams high on the ceiling, he's put up what must be hundreds if not thousands of thick silk strands, forming elaborate structures with flowing lines. Some are simply functional, like the storage cocoons stuck to the walls and ceiling, but others speak of Aelias's artistic side - decorative objects dangling from the ceiling as well as geometric patterned webs stretched over one wall. And then there's, of course, the sex sling in which you've had quite a few pleasant experiences...";
@@ -469,8 +471,8 @@ TwistedCapacity of Aelias is false. [Twisted Characters can take any penetration
 Sterile of Aelias is false. [steriles can't knock people up]
 MainInfection of Aelias is "Spidertaur Male".
 Aelias is in Spider's Web.
-The description of Aelias is "[AeliasDesc]".
-The conversation of Aelias is { "You're welcome to stay here as long as you want, my lovely little fly. To rest, or have fun..." }.
+Description of Aelias is "[AeliasDesc]".
+Conversation of Aelias is { "You're welcome to stay here as long as you want, my lovely little fly. To rest, or have fun..." }.
 lastfuck of Aelias is usually 555.
 
 to say AeliasDesc:

@@ -10,7 +10,8 @@ Object	Name
 Aussie Pub	"Aussie Pub"
 
 Aussie Pub is a situation.
-The sarea of Aussie Pub is "Red".
+ResolveFunction of Aussie Pub is "[ResolveEvent Aussie Pub]".
+Sarea of Aussie Pub is "Red".
 lastpubvisit is a number that varies.
 pubvisit is a number that varies.
 
@@ -20,7 +21,7 @@ when play begins:
 	add Aussie Pub to badspots of HermList;
 	add Aussie Pub to BadSpots of FurryList;
 
-Instead of resolving a Aussie Pub:
+to say ResolveEvent Aussie Pub:
 	say "     While exploring the area, you come across an Australian themed pub previously called 'Down Under'. Some bright blue paint has been used to add 'TAKE ME' to the front of its name. Through the windows, you can see there are lots of carousing and arousing kangaroos in the pub. You can see them eating, drinking and/or fucking with uproarious enjoyment inside.";
 	if the BodyName of Player is "Red Kangaroo":
 		say "     [bold type]You feel a longing to join them. Do you enter?[roman type][line break]";
@@ -53,7 +54,7 @@ Instead of resolving a Aussie Pub:
 			increase pubvisit by 1;
 			increase HP of Gillian by 1;
 			now lastpubvisit is turns;
-			now Down Under Pub is known;
+			AddNavPoint Down Under Pub;
 			LineBreak;
 			now Resolution of Aussie Pub is 1; [Entered Pub]
 			now Aussie Pub is resolved;
@@ -160,7 +161,7 @@ to say downunderpubvisit:
 		WaitLineBreak;
 		say "     As you're getting ready to leave, the barmaid comes up to you again. She gives your ass a firm squeeze and kisses you lustfully. 'Mmm... I've been keeping my eye on you, hot stuff. How about you drop by and see me some time after hours? I'm in the flat upstairs. Oh, and the name's Gillian,' she adds as she's turning to go, giving her thick tail and meaty rump an enticing sway.";
 		increase HP of Gillian by 1;
-		now Gillian's Flat is known;
+		AddNavPoint Gillian's Flat;
 
 
 Section 3 - Various sex scenes
@@ -269,7 +270,7 @@ Object	Name
 Gillian's Flat	"Gillian's Flat"
 
 Gillian's Flat is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Gillian's Flat is "     Located above the Down Under Pub, Gillian the barmaid's been living here. It's nothing fancy, but it certainly beats living out on the streets, especially these days. The studio apartment is sparsely decorated, having a loveseat and a bed and not much else. The small dining table's pushed up against one wall, probably to leave more room for that big tail of hers to swing around. There's a couple of generic motivational posters up on the wall.[line break]     From here, going [bold type]down[roman type] the stairs will take you to the pub. Exiting and heading [bold type]east[roman type] will lead you back to towards the district's entrance.".
+Description of Gillian's Flat is "     Located above the Down Under Pub, Gillian the barmaid's been living here. It's nothing fancy, but it certainly beats living out on the streets, especially these days. The studio apartment is sparsely decorated, having a loveseat and a bed and not much else. The small dining table's pushed up against one wall, probably to leave more room for that big tail of hers to swing around. There's a couple of generic motivational posters up on the wall.[line break]     From here, going [bold type]down[roman type] the stairs will take you to the pub. Exiting and heading [bold type]east[roman type] will lead you back to towards the district's entrance.".
 [Downtopub is a door. Downtopub is below Gillian's Flat.
 
 Table of GameRoomIDs (continued)
@@ -315,8 +316,8 @@ object	name
 Gillian	"Gillian"
 
 Gillian is a woman. Gillian is in Gillian's Flat.
-The description of Gillian is "[gilliandesc]".
-The conversation of Gillian is { "Work!" }.
+Description of Gillian is "[gilliandesc]".
+Conversation of Gillian is { "Work!" }.
 the scent of the Gillian is "[gillianscent]".
 the fuckscene of Gillian is "[sexwithgillian]".
 The icon of Gillian is Figure of Gillian_icon.

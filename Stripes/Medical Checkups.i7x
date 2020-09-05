@@ -59,13 +59,13 @@ ovipregMedeatalk is a truth state that varies. ovipregMedeatalk is usually false
 Medeapanda is a truth state that varies. Medeapanda is usually false.
 Medeapill is a truth state that varies. Medeapill is usually false.
 
-The description of Doctor Medea is "[MedeaDesc]".
+Description of Doctor Medea is "[MedeaDesc]".
 
 to say MedeaDesc:
 	project the figure of Medea_face_icon;
 	say "     Doctor Medea is a relatively human lizard, with her scaly skin having shades of ochre and yellow. Two spiky ridges run along the sides of her head and down her back, starting at the eyes and vanishing beneath the collar of a professional-looking light green blouse and skirt combo with a doctor's white coat overtop[if Park Entrance is known]. She looks like she had a run-in with one of those lizards at the park[end if][if HP of doctor Medea >= 5 and lust of doctor Medea >= 3]. The doctor's had to loosen her blouse and skirt to make room for the rounded bulge in her belly from an advancing pregnancy of her own[else if Medeaget > 0]. There is now a darker line running down her skirt to where some whitish cum is dripping. It almost looks like she came in herself, since the door was dust covered except for your recent marks[end if].";
 
-The conversation of Doctor Medea is { "Babies!" }.
+Conversation of Doctor Medea is { "Babies!" }.
 
 instead of conversing the Doctor Medea:
 	project the figure of Medea_face_icon;
@@ -619,15 +619,15 @@ to say Medeaadjustments:
 							if nam is "Trade medkit":
 								if carried of medkit > 0:
 									say "     You take out a medkit from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.'";
-									decrease carried of medkit by 1;
-									increase carried of cunt pill by 1;
+									ItemLoss medkit by 1;
+									ItemGain cunt pill by 1;
 								else:
 									say "     You shake your head, stating that you don't have any of them on you. The lizard doctor sighs in disappointment and says, 'I'm sorry then, but I'm afraid that I cannot give you any of my pills then. Perhaps next time.'";
 							if nam is "Trade healing booster":
 								if carried of healing booster > 0:
 									say "     You take out a healing booster from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.'";
-									decrease carried of healing booster by 1;
-									increase carried of cunt pill by 1;
+									ItemLoss healing booster by 1;
+									ItemGain cunt pill by 1;
 								else:
 									say "     You shake your head, stating that you don't have any of them on you. The lizard doctor sighs in disappointment and says, 'I'm sorry then, but I'm afraid that I cannot give you any of my pills then. Perhaps next time.'";
 							wait for any key;
@@ -649,7 +649,7 @@ to say Medeaadjustments:
 							LineBreak;
 							say "     Medea quickly takes your offered medkit over to a counter and begins tinkering with it, along with a number of other medical equipment. It only takes a few moments for the lizard doctor to come back with a needle and syringe filled with a green liquid. 'This will kill the parasite, allowing you to expel the nasty bug. I must warn you though: this will hurt,' Medea explains. She gives you a moment to steel yourself before she injects the concoction directly into your stomach. It only takes a moment for the parasite within you to violently react to Medea's treatment, and you keel over from the intense pain in your belly.";
 							say "     Thankfully, the parasite's movements and the pain dies down after a few moments. With Medea's assistance, you manage to push out a puddle of thick goo, followed by the parasite itself. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and a phallic back end from which you suspect it released the [if larvalaid < 2]slimy goo[else]egg slime[end if] into you. 'Good riddance,' Medea says, glaring at the mess with scorn. She then turns to you with a cheerful smile. 'Congratulations, the treatment was a success.'";
-							decrease carried of medkit by 1;
+							ItemLoss medkit by 1;
 							now insectlarva is false;
 							now preghijack is false;
 							now mpreghijack is false;
@@ -801,9 +801,10 @@ Object	Name
 Abandoned Truck	"Abandoned Truck"
 
 Abandoned Truck is a situation.
-the sarea of Abandoned Truck is "Outside".
+ResolveFunction of Abandoned Truck is "[ResolveEvent Abandoned Truck]".
+Sarea of Abandoned Truck is "Outside".
 
-instead of resolving an Abandoned Truck:
+to say ResolveEvent Abandoned Truck:
 	say "     You come across an abandoned truck, filled with medical supplies. The drivers cab is filled with some sort of goo that covers all the entrances. Maybe some of the supplies can be of use?";
 	if Medeaget is 1:
 		say "     This must be the truck Medea sent you after! Ruffling through it, you gather up the things that she requested.";
@@ -819,8 +820,7 @@ instead of resolving an Abandoned Truck:
 			LineBreak;
 			say "You ruffle through the boxes, searching for a medkit and leaving mess in your wake.";
 			if a random chance of 3 in 8 succeeds:
-				say "You found a medkit!";
-				increase carried of medkit by 1;
+				ItemGain medkit by 1;
 			else:
 				say "You find nothing of interest.";
 			now Resolution of Abandoned Truck is 1; [searched the truck]
@@ -834,10 +834,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Obstetrics Department	"Obstetrics Department"
 
-Obstetrics Department is a situation. Obstetrics Department is inactive.
-the sarea of Obstetrics Department is "Hospital".
+Obstetrics Department is a situation.
+ResolveFunction of Obstetrics Department is "[ResolveEvent Obstetrics Department]". Obstetrics Department is inactive.
+Sarea of Obstetrics Department is "Hospital".
 
-instead of resolving Obstetrics Department:
+to say ResolveEvent Obstetrics Department:
 	say "     Making your way through the darkened hospital, you manage to reach the Obstetrics Department and slip inside, searching for the items that Dr. Medea mentioned needing. This area seems to have been particularly [']active['] during the outbreak, with a lot of sticky fluids of all kinds over everything. Aside from pools of what must be semen and feminine juices, there's a variety of placentae and egg shells scattered around as well. The scent of lust, fertility and virility is very strong in here, making you somewhat dizzy with growing excitement.";
 	let playernum be a random number between 0 and ( 200 + humanity of Player - Libido of Player );
 	say "     [special-style-1][playernum][roman type] vs [special-style-2]120[roman type]: ";
@@ -895,7 +896,7 @@ cunt pill is a grab object. It is temporary.
 instead of sniffing cunt pill:
 	say "The pill's scent is a faint mix of female arousal and antiseptic.";
 
-the usedesc of cunt pill is "[cunt pill use]";
+Usedesc of cunt pill is "[cunt pill use]";
 
 to say cunt pill use:
 	say "You pop the pill into your mouth and swallow it without any trouble.";

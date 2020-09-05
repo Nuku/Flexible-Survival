@@ -7,11 +7,13 @@ Section 1 - Encounter
 
 Table of GameEventIDs (continued)
 Object	Name
-Electric shockers	"Electric shockers"
+Electric Shockers	"Electric shockers"
+Electric Shockers	"Electric Shockers"
 
-Electric shockers is a situation. The level of electric shockers is 10.
+Electric Shockers is a situation.
+ResolveFunction of Electric Shockers is "[ResolveEvent Electric Shockers]". The level of Electric Shockers is 10.
 [This is to restrict low-level players from unknowingly finding the superweapon.]
-The sarea of Electric shockers is "Zoo".
+Sarea of Electric Shockers is "Zoo".
 
 Electricprodstatus is a number that varies.
 eptarget is a number that varies.			[hidden number of viable charges]
@@ -19,13 +21,13 @@ eprecharge is a number that varies.			[number of times it's been recharged]
 eprodused is a truth state that varies.		[indicates whether it's been used in a fight yet or not]
 
 
-Instead of Resolving a Electric shockers:
+to say ResolveEvent Electric Shockers:
 	if Electricprodstatus is 0:
 		say "     Moving through the zoo, you come across one of the zookeeper's shacks that seems to have been left open in the confusion. Taking advantage of the situation, you move inside and start searching the place, although it really doesn't take much looking to find the locked case of what look like extendable cattle prods, obviously intended to shock dangerous animals at a small distance. Unfortunately the case is locked up tight and all your efforts to pry it open fail miserably. You do make a mental note to come back again at another time and perhaps you'll have more luck.";
 		now Electricprodstatus is 1;
 	else if Electricprodstatus is 1:
 		say "     Traveling through the zoo, you come across a rather familiar looking zookeeper's shack, and it looks like someone else has been here recently as well. Deciding to be careful you peek around the door to make sure there isn't some kind of strange beast there waiting for you. You are rather surprised to note that not only is the shack empty again, but it looks like whatever was here had a goal, they seem to have made a concerted assault on the case in the corner holding the powerful electric prods. They seem to have had more success then you, because the case now hangs open loosely, and several of the useful tools have spilled out onto the floor, a quick examination shows you that most of the weapons were damaged too severely to work by whoever broke the case open, but you do manage to find one which you think might actually work for a while before it burns out.";
-		increase carried of electric prod by 1;
+		ItemGain electric prod by 1;
 		now eptarget is a random number between 6 and 12;
 		now Electricprodstatus is 2;
 	else if Electricprodstatus is 2:
@@ -52,9 +54,9 @@ to say electproddesc:
 	else:
 		say "While a powerful electric tool designed to shock and incapacitate wild animals, it is unfortunately burned out and unusable, though it may still be repaired with some replacement parts.";
 
-electric prod is a grab object. It is part of the player. It is fast. It is not temporary. The usedesc of electric prod is "[useelectricprod]".
+electric prod is a grab object. It is fast. It is not temporary. Usedesc of electric prod is "[useelectricprod]".
 
-[It has a weapon "[one of]shocking stick[or]your electric prod[at random]". The weapon damage of electric prod is 22. The weapon type of electric prod is "Melee". It is not temporary. the objsize of electric prod is 2.]
+[It has a weapon "[one of]shocking stick[or]your electric prod[at random]". Weapon Damage of electric prod is 22. Weapon Type of electric prod is "Melee". It is not temporary. Objsize of electric prod is 2.]
 
 the scent of the electric prod is "The electric stun rod smells faintly of ozone.".
 
@@ -98,7 +100,7 @@ to say useelectricprod:
 					say "Your electric prod is now [if eprecharge >= 2]permanently dead and you toss it aside[else]dead until you can repair it[end if].";
 					now Electricprodstatus is 3;
 					now electric prod is not fast;
-					if eprecharge >= 2, delete electric prod;
+					if eprecharge >= 2, ItemLoss electric prod by 1;
 			else if roll + combat bonus > 20:
 				decrease eptarget by 1;
 				say "Hit: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at the [Name entry]. Getting a glancing blow, the electricity shocks it and makes it stagger back, taking some of the fight out of it. Ozone hangs in the air and your electric shocker [if eptarget is 0]sputters and sparks, burning out with the smell of magic smoke[else]is overheated. It will be a while before you can use it again[end if]";
@@ -114,7 +116,7 @@ to say useelectricprod:
 					say "Your electric prod is now [if eprecharge >= 2]permanently dead and you toss it aside[else]dead until you can repair it[end if].";
 					now Electricprodstatus is 3;
 					now electric prod is not fast;
-					if eprecharge >= 2, delete electric prod;
+					if eprecharge >= 2, ItemLoss electric prod by 1;
 			else:
 				say "Miss: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at the [Name entry], but end up missing.";
 				if a random chance of 1 in 4 succeeds and eptarget is not 1, decrease eptarget by 1;

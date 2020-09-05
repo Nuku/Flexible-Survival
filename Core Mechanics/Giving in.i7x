@@ -12,7 +12,7 @@ understand "givein to nanites" as givingup.
 understand "givein to changes" as givingup.
 
 check givingup:
-	if the humanity of Player > 99:
+	if Humanity of Player > 99:
 		say "To what? There is nothing to take control if you do.";
 		stop the action;
 

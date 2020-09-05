@@ -11,17 +11,18 @@ Object	Name
 Feline Friend	"Feline Friend"
 
 Feline Friend is a situation.
-The sarea of Feline Friend is "Park".
+ResolveFunction of Feline Friend is "[ResolveEvent Feline Friend]".
+Sarea of Feline Friend is "Park".
 when play begins:
 	add Feline Friend to BadSpots of MaleList;
 	add Feline Friend to BadSpots of FemaleList;
 	add Feline Friend to BadSpots of FurryList;
 
-Instead of resolving a Feline Friend:
+to say ResolveEvent Feline Friend:
 	say "     Move through the trees after being forced off the path by a pack of wolves you spotted, you try your best to remain quiet while moving quickly. As you hear the pack howl, you push aside some branches, hoping to find another section of path, but instead find yourself at a small clearing before a rocky hillside. There is the mouth to a cave in the cliff's face at this edge of the park. Worried about what may lurk there, you start to step back when you hear a voice call out.";
 	say "     'No, you need not go. Do not worry. I shall not attack you unless provoked,' says the deep, male voice, rich with refinement. 'Come inside, let us talk. I would enjoy some company.'";
 	say "     Uncertain, you are about to leave when you hear the howl of those wolves, closer than before, you hesitate again. A leonine figure steps from the cave, motioning quickly for you to come inside. He does not seem aggressive and still has a suit coat on, though his lower body is unclothed. 'Quick! They'll not be able to notice your scent over mine and they don't dare come here.' Deciding to risk it, you enter the cave.";
-	now Lion's Den is known;
+	AddNavPoint Lion's Den;
 	move player to Lion's Den;
 	now Feline Friend is resolved;
 	now battleground is "void";
@@ -31,7 +32,7 @@ Object	Name
 Lion's Den	"Lion's Den"
 
 Lion's Den is a room. It is fasttravel. It is private.
-The description of Lion's Den is "[lionsdendesc]".
+Description of Lion's Den is "[lionsdendesc]".
 
 the scent of Lion's Den is "There is a faint, damp smell to the lion's den beneath the strong, masculine scent of its occupant.".
 
@@ -49,8 +50,8 @@ object	name
 Leonard	"Leonard"
 
 Leonard is a man. Leonard is in Lion's Den.
-The description of Leonard is "[Leonarddesc]".
-The conversation of Leonard is { "Tut Tut!" }.
+Description of Leonard is "[Leonarddesc]".
+Conversation of Leonard is { "Tut Tut!" }.
 feline_status is a number that varies.
 violinfound is a number that varies.
 Leonardtimer is a number that varies. Leonardtimer is usually 255.
@@ -99,7 +100,7 @@ Instead of conversing the Leonard:
 		else:
 			say "     The handsome lion holds you close as he [one of]strokes a paw along your hip[or]gives your ass a possessive squeeze[or]caresses a paw across your cheek[or]lets his warm, full sheath rub against you[or]nuzzles at your ear[at random]. '[one of]I hope you haven't forgotten about your promise, my dear[or]I do hope you'll be able to find a nice violin for me[or]You might be able to find a violin for me at a concert hall or perhaps even in a music store[or]Have you tried finding a violin at a concert hall in the city? If that doesn't work out, try searching through a music store[or]Please keep looking for me, my dear[if BodyName of Player is listed in infections of Felinelist or FaceName of Player is listed in infections of Felinelist] kitty[end if][at random]. I would so like to play something special for you,' he purrs, [one of]running a finger across your groin[or]caressing your inner thigh[or][if Player is female]rubbing your breast[else]patting your bottom[end if][at random]. You moan and nod in response, [if violinfound is 1 or violinfound is 2][else]eager to rush out and find one to please your sexy lion[end if].";
 	else if HP of Leonard is 5 and violin is owned:
-		delete violin;
+		ItemLoss violin by 1;
 		now HP of Leonard is 6;
 		now the icon of Leonard is the figure of LeonardViolin_icon;
 		now Leonardtimer is turns;
@@ -632,7 +633,7 @@ to say Leonardcarawaysex1:
 		say "     Coming up behind her with padded paws, Leonard places his free hand on her exposed bottom, drawing a moan from her. She initially moves to bend over the counter, clearly having done so before for him, but moves onto all fours when she sees you there as well. Leonard, still at her rear, gets his cock lined up with her wet pussy and, after a little teasing grinding, sinks his manhood into her. Meanwhile, you've taken her mouth, the cute kitty cook lapping lustfully at your juicy folds and sensitive clit.";
 		say "     With the sexy little feline between you both, Leonard's thrusts presses her muzzle against your cunny as if encouraging her to lick deeper, which she does. When not teasing your outer folds or sucking on your clit, her raspy tongue delves into your wet cunny, lapping up your juices. You both run your paws over her, caressing the lustful feline while you purr to her about [one of]how happy you are to have her here[or]what a good kitty she is[or]what a fine addition to the den she's become[or]how her place is here[at random]. When you both finally cum, Caraway releases a muffled mewl of delight as your feminine cum soaks her muzzle even as Leonard's load fills her cunt. By the time you're done, she's left wet and sticky at both ends as she purrs happily while laying on the floor rubbing her warm tummy.";
 	say "     A little later, you notice a small bundle of tasty treats sitting on your pack. Glancing over to the kitchen, Caraway smiles back at you and gives you a wink[one of], turning to show you her bare bottom as she raises her tail teasingly[or] as she sinks a cucumber into her slick pussy[or] and raises the front of her apron, giving you a flash of her creamy pussy[or] as she slips a paw under her apron to play with her creamy pussy[or] as she wipes a glop of cum onto a cracker and eats it with obvious relish[at random].";
-	increase carried of chips by 1;
+	ItemGain chips by 1;
 	infect "Feline";
 
 
@@ -653,12 +654,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Music Store	"Music Store"
 
-Music Store is a situation. The level of Music Store is 2.
-The sarea of Music Store is "Outside".
+Music Store is a situation.
+ResolveFunction of Music Store is "[ResolveEvent Music Store]". The level of Music Store is 2.
+Sarea of Music Store is "Outside".
 Music Store is inactive.
 violinspritefight is a truth state that varies.
 
-Instead of resolving Music Store:
+to say ResolveEvent Music Store:
 	if violinfound is 0 or violinfound is 1:
 		say "     With Leonard's request lingering at the back of your mind as you travel through the city, you stop dead in your tracks when you spot a music store. It seems to have been largely undamaged. You quickly head over to it, failing to notice the signs of activity inside in your eagerness. Pulling the door open, you hear the buzz of little wings from inside the dark store. Suddenly on guard, there's a cry of 'Get [']em, girls!' from a small, high-pitched voice. The volume of the buzzing grows louder and a wave of little, elfin sprites charge out of the doorway, swarming all around you excitedly, forcing you to stumble backwards into the street.";
 	else if violinfound is 2 or violinfound is 3:	[returning]
@@ -671,7 +673,7 @@ Instead of resolving Music Store:
 		say "     Not really interested right now in the more modern rock and roll instruments, you move on. Spotting the section behind one counter. You see they have their smaller selection of classical instruments. There are several brass and woodwind instruments of different quality. Some of these have been knocked around or played with by the flighty sprites, requiring you to step carefully and sift through those on the floor behind the counter to make sure a violin is not beneath one of the others. You are about to give up hope by the time you make it to the far corner, but luckily manage to find one. It is intact and still displayed on the wall, probably because of its placement at the end of the display area.";
 		say "     Not really a judge of quality and just happy to have one at all, you take the violin and search among the cases beneath it, soon finding the one belonging to it. You pack it away, along with some packets of replacement strings, a couple of bows and a packet of wax, knowing at least that much. You also remember to head over to the racks with books of sheet music and grab all those you can find for violins. There aren't that many and they are mostly trainers and for beginners, but a few of them have more advanced pieces as well. With the last minute addition of a music stand, you believe you have everything your handsome lion will need.";
 		say "     With all this tucked away into your pack, you glance over and spot a few of the sprites looking in the window at you. They duck away as you turn at them, but you know they're awaiting your departure to return to their haven. Rather than keep them waiting now that you've got your spoils, you head out. As you leave, you hear the flutter and buzz of their wings as they swoop in from the surrounding roofs to go back to hiding inside the music store. A few of them blow raspberries at you or make crude gestures, but you ignore them, the desire to rush back of Leonard foremost in your mind.";
-		increase carried of violin by 1;
+		ItemGain violin by 1;
 		now violinfound is 10;
 		now Music Store is resolved;
 		now Concert Hall is resolved;
@@ -690,11 +692,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Concert Hall	"Concert Hall"
 
-Concert Hall is a situation. The level of Concert Hall is 4.
-The sarea of Concert Hall is "High".
+Concert Hall is a situation.
+ResolveFunction of Concert Hall is "[ResolveEvent Concert Hall]". The level of Concert Hall is 4.
+Sarea of Concert Hall is "High".
 Concert Hall is inactive.
 
-Instead of resolving Concert Hall:
+to say ResolveEvent Concert Hall:
 	say "     You come across a large theater and concert hall in this affluent portion of the city. There are crude drawings on the glass covering the posters for the upcoming shows, but you can see that a classical concert was planned during the time period around when the outbreak began. Very hopeful that you'll find a violin in there for Leonard, you try the doors. Locked. Barricaded even. Searching around the perimeter, you eventually find a back door that's been left open and you slip inside without delay or thought of caution, the needs of the handsome lion more important than the potential risk.";
 	if "One Pair" is listed in feats of Player or "Just One" is listed in feats of Player:
 		say "     You make your way through the backstage area to the orchestra pit. As you're about to start searching through it, you notice a cute bunny head poke out from behind the curtain. But even as you're trying to decide how to peacefully introduce yourself, there appears another bunny elsewhere, and then another and another still, more and more bunnies around you. They don't move in to approach, but begin to speak.";
@@ -702,7 +705,7 @@ Instead of resolving Concert Hall:
 		say "     Thankfully they don't seem to advance upon you, but there is an increasing sense of menace from them. Worried they could snap and try to mob you at any time, you make your way as quickly as you can to the string section, almost stumbling over some of the chairs, resulting in them adding 'Oaf' and 'Uncouth' to their insults. Not wanting to waste time, you grab one of the violins that have been set out, its case and the assorted sheet music and supplies around it, hoping it will enough for Leonard. You consider looking further, but you can see many more of the bunnies around, some even approaching across the lighting gantries. Deciding you've overstayed your welcome, you apologize and promise to leave them alone even as you shove an unfolded music stand under your arm. You get out of the pit and heading to the exit as quickly as you can. You are watched by them on your whole way out, their strange mix of derisive admonishments and odd insults following you the whole way. No sooner are you outside then the door is slammed shut loudly and barred from the inside.";
 		say "     You are left feeling strangely disconcerted by the whole affair, unsure what that was all about, but thankful to be out of there. Your spirits are quickly buoyed by your realization that you've gotten the violin that your handsome lion so wanted. The desire to rush back to Leonard becomes foremost in your mind.";
 		if morale of Player > 0, now morale of Player is morale of Player / 2;
-		increase carried of violin by 1;
+		ItemGain violin by 1;
 		now violinfound is 21;
 	else:
 		say "     You make your way through the backstage area to the orchestra pit. As you're about to start searching through it, you notice a cute bunny head poke out from behind the curtain. But even as you're trying to decide how to peacefully introduce yourself, there appears another bunny elsewhere, and then another and another still, more and more bunnies moving in to surround you despite no alarm having been raised.";
@@ -711,7 +714,7 @@ Instead of resolving Concert Hall:
 			say "     Having beaten the large group of bizarre bunnies and driven them back, you start searching the orchestra pit for a violin. Thankfully the instruments are actually in the pit and do not appear to have been damaged by the creatures. If anything, it seems like they have been well maintained. Perhaps those teams of bunnies have been playing them? It takes some fumbling around to navigate through the camped space, but you eventually find the string section and locate the violins.";
 			say "     Hopeful that one of these will make a fine instrument for your handsome lion, you look them over. Not really a judge of quality, you take the violin from the stand labelled as '1st violin' in the hopes it will be the best of them all. Putting it in its case, you check the other cases and folders, taking sets of spare strings, bows and wax, as well as as much different sheet music as you can find. Spotting one of the bunnies watching you nervously from behind the curtain, you kindly decide to not just take it all. Certainly several replacements will be enough for Leonard for quite some time.";
 			say "     After storing the case and supplies away in your case, you fold up one of the music stands and start heading back out. The bunny watches you leave the room but doesn't move. There's another watching you from elsewhere before you leave her line of sight, and another safely watching from the distance as you turn the corner. They quietly watch you depart, clearly wary of the intruder who managed to fight them all off.";
-			increase carried of violin by 1;
+			ItemGain violin by 1;
 			now violinfound is 20;
 			now Music Store is resolved;
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
@@ -744,7 +747,7 @@ name	desc	weight	object
 "violin"	"     It's a violin. You're no judge of quality, but it seems in good shape. Along with its case, you have some spare strings, wax, bows and music to go along with it. Most of the weight comes from the music stand you also snagged."	5	violin
 
 violin is a grab object.
-It is part of the player.
+
 It is not temporary.
 
 instead of using violin:
@@ -765,11 +768,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Hunting Prides	"Hunting Prides"
 
-Hunting Prides is a situation. The level of Hunting Prides is 8.
-The sarea of Hunting Prides is "Park".
+Hunting Prides is a situation.
+ResolveFunction of Hunting Prides is "[ResolveEvent Hunting Prides]". The level of Hunting Prides is 8.
+Sarea of Hunting Prides is "Park".
 Hunting Prides is inactive.
 
-Instead of resolving Hunting Prides:
+to say ResolveEvent Hunting Prides:
 	now fightoutcome is 100;
 	if HP of Leonard is 10:
 		say "     As you're traveling through the park, you notice signs that a band of felines has passed by recently. Remembering your promise to Leonard to deal with these roving prides, you start tracking this one down. You follow their trail for a while before hearing some commotion ahead. Following it, you manage to catch up with the group of felines and find them in the midst of attacking another of the feline girls. While you can't be certain, she does seem familiar and may be another of your pride sisters. With a growl, you rush to her aid, charging the band of felines from behind.";

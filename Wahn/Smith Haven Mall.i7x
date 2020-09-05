@@ -79,7 +79,7 @@ Instead of examining the Mall Food Court entrance:
 
 Section 2 - Mall Lot North
 
-The description of Smith Haven Mall Lot North is "[mallnorthlot]".
+Description of Smith Haven Mall Lot North is "[mallnorthlot]".
 earea of Smith Haven Mall Lot North is "Outside".
 
 To say mallnorthlot:
@@ -95,7 +95,7 @@ the scent of Smith Haven Mall Lot North is "The light breeze blowing around you 
 
 Section 3 - Mall Lot East
 
-The description of Smith Haven Mall Lot East is "[malleastlot]".
+Description of Smith Haven Mall Lot East is "[malleastlot]".
 earea of Smith Haven Mall Lot East is "Outside".
 
 To say malleastlot:
@@ -111,7 +111,7 @@ the scent of Smith Haven Mall Lot East is "The light breeze blowing around you c
 
 Section 4 - Mall Lot West
 
-The description of Smith Haven Mall Lot West is "[mallwestlot]".
+Description of Smith Haven Mall Lot West is "[mallwestlot]".
 earea of Smith Haven Mall Lot West is "Outside".
 
 To say mallwestlot:
@@ -127,10 +127,12 @@ the scent of Smith Haven Mall Lot West is "The light breeze blowing around you c
 
 Section 5 - Mall Lot South
 
-The description of Smith Haven Mall Lot South is "[mallsouthlot]".
+Description of Smith Haven Mall Lot South is "[mallsouthlot]".
 earea of Smith Haven Mall Lot South is "Outside".
 
 To say mallsouthlot:
+	if emap is 0:
+		project the Figure of Map_Smith_Haven_Mall_icon;
 	If daytimer is day:
 		say "     Walking into Smith Haven Mall's vast southern parking lot, you see the devastating results of the infection having run rampant. Dotted about the lot are not only parked vehicles with either open doors, broken windows, or both, but also several wrecked vehicles, either smashed into other vehicles or hung up in planters. Scraps of ripped clothing caked in dried fluids litter the ground around the vehicles and about the lot. To the north you can see the entrance to the mall's food court. Just inside the glass doors you are able to see some activity on the other side of them. Looking to the east and to the west just shows more of the same destruction, though off in the distance of the mall's west lot you spot a gas station.";
 	else if findwires is 2 and fixedgens > 2:
@@ -142,7 +144,7 @@ To say mallsouthlot:
 the scent of Smith Haven Mall Lot South is "The light breeze blowing around you carries the lingering scent of cum and messy sex.".
 
 mall map is an object. It is in Smith Haven Mall Lot South. It is fixed in place. Understand "map" as mall map.
-the description of mall map is "[Map_Smith_Haven_Mall_Desc]".
+Description of mall map is "[Map_Smith_Haven_Mall_Desc]".
 The icon of mall map is Figure of Map_Smith_Haven_Mall_icon.
 
 to say Map_Smith_Haven_Mall_Desc:
@@ -150,7 +152,7 @@ to say Map_Smith_Haven_Mall_Desc:
 
 Section 6 - Mall Foyer
 
-The description of Mall Foyer is "[mallfoyer]".
+Description of Mall Foyer is "[mallfoyer]".
 Mall Foyer is sleepsafe.
 earea of Mall Foyer is "Smith Haven".
 
@@ -169,7 +171,7 @@ the scent of Mall Foyer is "The foyer smells heavily of male musk due to the wol
 
 Section 7 - Mall Atrium
 
-The description of Mall Atrium is "[mallatrium]".
+Description of Mall Atrium is "[mallatrium]".
 Mall Atrium is sleepsafe.
 earea of Mall Atrium is "Smith Haven".
 
@@ -190,7 +192,7 @@ Mall West Wing is west of Mall Atrium.
 
 Section 8 - Mall East Wing
 
-The description of Mall East Wing is "[malleastwing]".
+Description of Mall East Wing is "[malleastwing]".
 Mall East Wing is sleepsafe.
 earea of Mall East Wing is "Smith Haven".
 
@@ -211,7 +213,7 @@ the scent of Mall East Wing is "It smells like the mallrats.".
 
 Section 9 - Mall Foodcourt
 
-The description of Mall Foodcourt is "[mfcourt]".
+Description of Mall Foodcourt is "[mfcourt]".
 Mall Foodcourt is sleepsafe.
 earea of Mall Foodcourt is "Smith Haven".
 
@@ -237,7 +239,7 @@ The invent of Mall FoodCourt is { "chair", "food" }.
 
 Section 10 - Mall West Wing
 
-The description of Mall West Wing is "[mallwestwing]".
+Description of Mall West Wing is "[mallwestwing]".
 Mall West Wing is sleepsafe.
 earea of Mall West Wing is "Smith Haven".
 
@@ -264,7 +266,7 @@ The Sewer entrance is below Mall Restroom and above Sewers A7. The Sewer entranc
 Instead of examining the Sewer entrance:
 	say "Through the hole, you see [the other side of the Sewer entrance].";
 
-The description of Mall Restroom is "[mallrestroom]".
+Description of Mall Restroom is "[mallrestroom]".
 
 To say mallrestroom:
 	If findwires is 2 and fixedgens > 2: [power on]
@@ -284,7 +286,7 @@ Shag Shack Entrance	"Shag Shack Entrance"
 Shag Shack Entrance is a room.
 Shag Shack Entrance is northeast of Smith Haven Mall Lot East.
 Shag Shack Entrance is sleepsafe.
-The description of Shag Shack Entrance is "[ShagShackEntranceDesc]".
+Description of Shag Shack Entrance is "[ShagShackEntranceDesc]".
 
 To say ShagShackEntranceDesc:
 	If findwires is 2 and fixedgens > 2: [power on]
@@ -308,7 +310,7 @@ Branson & Partner Reception	"Branson & Partner Reception"
 
 Branson & Partner Reception is a room.
 Branson & Partner Reception is north of Smith Haven Mall Lot North. Branson & Partner Reception is sleepsafe.
-The description of Branson & Partner Reception is "[BPReceptionDesc]".
+Description of Branson & Partner Reception is "[BPReceptionDesc]".
 
 to say BPReceptionDesc:
 	If findwires is 2 and fixedgens > 2: [power on]
@@ -326,7 +328,7 @@ Object	Name
 B&P Company Offices	"B&P Company Offices"
 
 B&P Company Offices is a room. B&P Company Offices is sleepsafe.
-The description of B&P Company Offices is "[BPOfficesDesc]".
+Description of B&P Company Offices is "[BPOfficesDesc]".
 
 to say BPOfficesDesc:
 	say "     The offices of the firm [']Branson & Partner Land Management['] have an air of understated elegance that shows you're in a respectable business establishment. A granite-tiled floor and light gray walls set the frame for a row of modern-looking desks all lined up so that the attractive women sitting at them are facing your way and can greet you with professional smiles. As with the front desk, sheets of lightly frosted glass allow for some enticing glimpses of their long legs, usually ending in hooves or paws. Even the potted plants scattered throughout the large room are obviously still getting watered, shining in a healthy green. All in all, Branson's office staff makes the scene before you appear like it was set in a perfectly normal office on a perfectly normal day.";

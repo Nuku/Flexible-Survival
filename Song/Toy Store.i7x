@@ -7,7 +7,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Toy Store	"Toy Store"
 
-Toy Store is a situation. The level of Toy Store is 1.
+Toy Store is a situation.
+ResolveFunction of Toy Store is "[ResolveEvent Toy Store]". The level of Toy Store is 1.
 when play begins:
 	add Toy Store to BadSpots of MaleList;
 	add Toy Store to BadSpots of FurryList;
@@ -15,7 +16,7 @@ when play begins:
 toystoreseen is a truth state that varies. toystoreseen is usually false.
 toystoreoverride is a truth state that varies. toystoreoverride is usually false.
 
-instead of resolving a toy store:
+to say ResolveEvent toy store:
 	setmonster "Latex Fox";
 	choose row MonsterID from the Table of Random Critters;
 	now non-infectious entry is true;
@@ -88,18 +89,13 @@ to say toystorewin:
 	say "     With a brutal, decisive blow, you strike down the last of the lustful foxes, leaving him whimpering on the ground. Those that haven't been knocked unconscious scamper out the front door to hide, clearly afraid of you now. Relieved that the exhaustive fight's over, you search the now-empty store for anything of use, and you find some food and water in exchange for your troubles. Stuffing them in you pack, you leave the canids['] sex-sullied den before they have a chance to recover and return to this place.";
 	LineBreak;
 	if a random chance of 1 in 2 succeeds:
-		say "[bold type]You gain 1 dirty water![roman type][line break]";
-		increase carried of dirty water by 1;
-		say "[bold type]You gain 1 water bottle![roman type][line break]";
-		increase carried of water bottle by 1;
+		ItemGain dirty water by 1;
+		ItemGain water bottle by 1;
 	else if a random chance of 1 in 2 succeeds:
-		say "[bold type]You gain 2 dirty water![roman type][line break]";
-		increase carried of dirty water by 2;
+		ItemGain dirty water by 2;
 	else:
-		say "[bold type]You gain 2 water bottles![roman type][line break]";
-		increase carried of water bottle by 2;
-	say "[bold type]You gain 2 food![roman type][line break]";
-	increase carried of food by 2;
+		ItemGain water bottle by 2;
+	ItemGain food by 2;
 
 to say toystoreloss:
 	if Player is female: [Females and herms]

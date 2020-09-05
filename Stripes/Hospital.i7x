@@ -16,7 +16,7 @@ City Hospital	"City Hospital"
 City Hospital is a room. It is fasttravel.
 The earea of City Hospital is "Hospital".
 
-The description of City Hospital is "[CityHospitalDesc]";
+Description of City Hospital is "[CityHospitalDesc]";
 
 to say CityHospitalDesc:
 	say "     The exterior of the hospital is quite disheveled. It seems like a large number of people were here when the outbreak started. You can guess that several people, initially surprised by their changes, came to the hospital, leading to the rampant infection of everyone inside, patient and doctor alike. You have to wonder if it is wise to investigate here further[if hospquest > 0]. But looking up at the hospital, you can see several rooms in one corner on the third floor are fully illuminated. And not with the dim glow of the emergency lighting, nor the flicking flames of candles or fires, but the full, smooth light of electricity[end if].";
@@ -45,9 +45,10 @@ Object	Name
 Hung Like A	"Hung Like A"
 
 Hung Like A is a situation.
-The sarea of Hung Like A is "Hospital".
+ResolveFunction of Hung Like A is "[ResolveEvent Hung Like A]".
+Sarea of Hung Like A is "Hospital".
 
-Instead of resolving a Hung Like A:
+to say ResolveEvent Hung Like A:
 	say "     You come across an examination room that has several patient charts tossed on a rumpled bed. You glance over them quickly, finding them all mention cases of 'strange growths' and 'physiological anomalies' found in patients. Those timestamped as the later ones even start commenting on the strange frequency of such occurrences the preliminary examiner's found that evening. The last one talks about a patient with growing hair spreading over his body along with the stiffening of his fingers and nails. It ends with the doctor's rough scrawls about the patient being hung like a horse, that it's so good and how she's letting him take her like his mare so she can properly test it.";
 	increase score by 1;
 	now Hung Like A is resolved;
@@ -57,9 +58,10 @@ Object	Name
 Pharmaceutical Storage	"Pharmaceutical Storage"
 
 Pharmaceutical Storage is a situation.
-The sarea of Pharmaceutical Storage is "Hospital".
+ResolveFunction of Pharmaceutical Storage is "[ResolveEvent Pharmaceutical Storage]".
+Sarea of Pharmaceutical Storage is "Hospital".
 
-Instead of resolving a Pharmaceutical Storage:
+to say ResolveEvent Pharmaceutical Storage:
 	say "     You manage to find the hospital's pharmaceutical storage room. It has clearly been gone through already by someone, as the shelves are barren. There are a few sticky stains and scattered bottles on the floor you carefully avoid stepping on. Carefully, you poke through the remaining items to see if anything useful remains among the last scattered samples and bottles.";
 	say "[drugsearch]";
 	say "[drugsearch]";
@@ -72,47 +74,40 @@ Instead of resolving a Pharmaceutical Storage:
 to say drugsearch:
 	let T be a random number between 1 and 13;
 	if T is 1:
-		say "     You find a medkit.";
-		increase carried of medkit by 1;
+		ItemGain medkit by 1;
 	if T is 2 or T is 3:
-		say "     You find some parts for a medkit among the scattered mess. Maybe someone could put them together?";
+		say "     You gain some parts for a medkit among the scattered mess. Maybe someone could put them together?";
 		increase hasparts by 1;
 	if T is 4:
-		say "     You find a testosterone pill still in the sample pack.";
-		increase carried of testosterone pill by 1;
+		ItemGain testosterone pill by 1;
 	if T is 5:
-		say "     You find an estrogen pill still in the sample pack.";
-		increase carried of estrogen pill by 1;
+		ItemGain estrogen pill by 1;
 	if T is 6:
-		say "     You find an odd pill labelled as being [']estosterogen['] still in its sample pack.";
-		increase carried of estosterogen pill by 1;
+		ItemGain estosterogen pill by 1;
 	if T is 7:
-		say "     You find a cock pill still in the sample pack.";
-		increase carried of cock pill by 1;
+		ItemGain cock pill by 1;
 	if T is 8:
-		say "     You find a birth control pill still in the sample pack.";
-		increase carried of birth control pill by 1;
+		ItemGain birth control pill by 1;
 	if T is 9:
-		say "     You find a fertility enhancement pill still in the sample pack.";
-		increase carried of fertile pill by 1;
+		ItemGain fertile pill by 1;
 	if T is 10:
-		say "     You find a novelty sex-aid pill.";
-		increase carried of libido pill by 1;
+		ItemGain libido pill by 1;
 	if T is 11 or T is 12:
-		say "     You find a small syringe with clear, blue fluid in it and labelled as a [']healing booster['].";
-		increase carried of healing booster by 1;
+		say "     [bold type]You gain a healing booster![roman type] It's a small syringe with clear, blue fluid in it.";
+		ItemGain healing booster by 1 silently;
 	if T is 13:
-		say "     You find a small syringe with cloudy, orange fluid in it and labelled as a [']libido suppressant['].";
-		increase carried of libido suppressant by 1;
+		say "     [bold type]You gain a libido suppressant![roman type] It's a small syringe with cloudy, orange fluid in it.";
+		ItemGain libido suppressant by 1 silently;
 
 Table of GameEventIDs (continued)
 Object	Name
 Ambulance Dock	"Ambulance Dock"
 
 Ambulance Dock is a situation.
-The sarea of Ambulance Dock is "Hospital".
+ResolveFunction of Ambulance Dock is "[ResolveEvent Ambulance Dock]".
+Sarea of Ambulance Dock is "Hospital".
 
-Instead of resolving a Ambulance Dock:
+to say ResolveEvent Ambulance Dock:
 	say "     Most of the ambulances are out of the special parking entrance. The only one here has been crashed into the dock. Stepping over to it, you look in the open back. Unsurprisingly, there is a huge, sticky mess in there. Presumably the last patient they picked up jumped the response team for sex as they were returning to the hospital. You consider searching in there for something that could still be usable, but it seems like a risky venture.";
 	say "     [bold type]Do you proceed?[roman type][line break]";
 	LineBreak;
@@ -142,41 +137,37 @@ Object	Name
 Operating Room	"Operating Room"
 
 Operating Room is a situation.
-The sarea of Operating Room is "Hospital".
+ResolveFunction of Operating Room is "[ResolveEvent Operating Room]".
+Sarea of Operating Room is "Hospital".
 
-Instead of resolving a Operating Room:
+to say ResolveEvent Operating Room:
 	say "     As you are about to turn a corner, you spot a team of several jaguar orderlies marching down the hall towards you. You duck back quickly before they spot you and dive quietly into the nearest room. As you wait quietly around the edge of the door, you can see that this is one of the hospital's operating rooms. Once you hear the group head past and continue on, you let out a sigh of relief and decide to search the room while you're here.";
 	say "     It's clear there was some chaos in here, with overturned tables and surgical tools scattered across the floor. Along with this are several sets of surgical scrubs and piles of clothing, much of it messy with stick fluids. You steer clear of them and check the patient's chart, finding notes about exploratory surgery on an unusual and rapidly forming growth. Clearly another case of a transforming patient gone amuck on the unprepared medical staff.";
 	say "     You do have some good fortune though and spot a bonesaw on the floor. You pick it up and add it to your arsenal. As you slip out the back into the doctor's prep room, you find an exit that leads around one of the barricades, enabling you to get around more of the hospital.";
-	say "     Bonesaw obtained. Time to operate!";
-	increase carried of bonesaw by 1;
+	say "     [bold type]You gain a bonesaw![roman type] Time to operate!";
+	ItemGain bonesaw by 1 silently;
 	increase hospnav by 1;
 	say "[hospprogress]";
 	increase score by 5;
 	now Operating Room is resolved;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"bonesaw"	"A stainless steel bonesaw used for medical procedures. A little unwieldy, but sharp."	3	bonesaw
+[bonesaw moved to Core Mechanics/Weapons.i7x]
 
-bonesaw is an armament. It is part of the player. It has a weapon "[one of]the bonesaw[or]your bonesaw[or]your medical blade[or]the stainless steel saw[at random]". The weapon damage of bonesaw is 6. The weapon type of bonesaw is "Melee". It is not temporary. The objsize of bonesaw is 2.
-
-the scent of the bonesaw is "The bonesaw smells faintly of antiseptic and blood.".
 
 Table of GameEventIDs (continued)
 Object	Name
 Staff Lounge	"Staff Lounge"
 
 Staff Lounge is a situation.
-The sarea of Staff Lounge is "Hospital".
+ResolveFunction of Staff Lounge is "[ResolveEvent Staff Lounge]".
+Sarea of Staff Lounge is "Hospital".
 when play begins:
 	add Staff Lounge to BadSpots of MaleList;
 	add Staff Lounge to BadSpots of FurryList;
 
-Instead of resolving a Staff Lounge:
+to say ResolveEvent Staff Lounge:
 	say "     In one corner of the hospital, you come across a lounge for the staff. Taking a glance inside, you find it unoccupied and go in to search. There are a few chairs and couches, but it seems like some of the staff have used them for [']recreation['] recently. Not wanting to run into a couple of them sneaking in here for more fun, you confine yourself to a quick search of the room. Without power, the food in the fridge has gone bad, but you do manage to find an unopened bottle of water.";
-	say "     Bottle of water obtained.";
-	increase carried of water bottle by 1;
+	ItemGain water bottle by 1;
 	say "     As you are about to head out, you bump into a girlish raccoon in a pink dress, carrying a large dildo in one paw. It seems someone did come for a little fun in the break room.";
 	challenge "Raccoon";
 	say "     Your encounter with the boytoy raccoon over, you leave the lounge to continue your search.";
@@ -188,9 +179,10 @@ Object	Name
 Interruption	"Interruption"
 
 Interruption is a situation.
-The sarea of Interruption is "Hospital".
+ResolveFunction of Interruption is "[ResolveEvent Interruption]".
+Sarea of Interruption is "Hospital".
 
-Instead of resolving a Interruption:
+to say ResolveEvent Interruption:
 	say "     While moving through the halls of the hospital, you poke into the patient rooms on each side, taking a quick glance for anything of interest. At one, you are surprised to find a large jaguar with one of the vixen nurses in his lap, riding his hard cock. He starts to growl and rise as he notices you, but the nurse, not seeing you, rides him harder and gives him a lustful kiss. He purrrumbles as he settles back down, eyes closed as they kiss. You decide to slip quietly back out of the room to leave the couple to their fun.";
 	increase score by 1;
 	now Interruption is resolved;
@@ -200,9 +192,10 @@ Object	Name
 Maternity Ward	"Maternity Ward"
 
 Maternity Ward is a situation.
-The sarea of Maternity Ward is "Hospital".
+ResolveFunction of Maternity Ward is "[ResolveEvent Maternity Ward]".
+Sarea of Maternity Ward is "Hospital".
 
-Instead of resolving a Maternity Ward:
+to say ResolveEvent Maternity Ward:
 	say "     Reaching the hospital's maternity ward, you suppress a shudder and morbidly take a look in to see what has become of it. Inside you find the place busy with vixen nurses. Several are tending to the bassinets while a few others are nurse feeding little foxcub babies. The staff dutifully tend over the cubs, cooing and playing with them happily. You turn and quietly leave, unsure if you are disturbed by the scene inside or relieved that it was not as you feared within.";
 	if HP of Doctor Medea is 3:
 		say "     During your quick peek, you did note that the items of medical equipment Dr. Medea mentioned did not seem to be in there, saving you from having to go in and deal with the large group vixen nurses inside the ward. It seems like you'll have to look elsewhere in the hospital though.";
@@ -219,15 +212,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Radiology	"Radiology"
 
-Radiology is a situation. The level of Radiology is 5.
-The sarea of Radiology is "Hospital".
+Radiology is a situation.
+ResolveFunction of Radiology is "[ResolveEvent Radiology]". The level of Radiology is 5.
+Sarea of Radiology is "Hospital".
 when play begins:
 	add Radiology to BadSpots of FemaleList;
 	add Radiology to BadSpots of MaleList;
 	add Radiology to badspots of HermList;
 	add Radiology to BadSpots of FurryList;
 
-Instead of resolving a Radiology:
+to say ResolveEvent Radiology:
 	say "     The radiology department, where the x-rays are taken, seems to have had recent use. There are several fresh x-rays showing images of the altered physiology of transformees. While some seem to have been taken during partial transformation, most are of completed changes. Many are arranged out on the illuminated viewers with annotations marked on. Most are circles or arrows marking key points with a red wax pencil, but others contain medical jargon about the bones or joints being changed. Briefly distracted by all this, you don't hear the sound of approaching footsteps until it's too late and one of the hospital's creatures steps in.";
 	if coonstatus is 0:
 		say "[hospfight1]";
@@ -316,15 +310,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Pathology	"Pathology"
 
-Pathology is a situation. The level of Pathology is 5.
-The sarea of Pathology is "Hospital".
+Pathology is a situation.
+ResolveFunction of Pathology is "[ResolveEvent Pathology]". The level of Pathology is 5.
+Sarea of Pathology is "Hospital".
 when play begins:
 	add Pathology to BadSpots of FemaleList;
 	add Pathology to BadSpots of MaleList;
 	add Pathology to badspots of HermList;
 	add Pathology to BadSpots of FurryList;
 
-Instead of resolving a Pathology:
+to say ResolveEvent Pathology:
 	say "     Hearing the sound of footsteps and talking approaching, you slip through a nearby door. Inside you find yourself in a medical lab. The room, unlike many of the others has been kept clean and seems largely undisturbed by the events which have struck the hospital. Curious, you are about to look around further when the door opens and in strides the two creatures. You seem to have inadvertently hidden yourself at their destination. The first charges at you while the other, laden with several test tubes and samples, moves to set its burden down first.";
 	if coonstatus is 0:
 		say "[hospfight1]";
@@ -343,9 +338,10 @@ Object	Name
 Cafeteria	"Cafeteria"
 
 Cafeteria is a situation.
-The sarea of Cafeteria is "Hospital".
+ResolveFunction of Cafeteria is "[ResolveEvent Cafeteria]".
+Sarea of Cafeteria is "Hospital".
 
-Instead of resolving a Cafeteria:
+to say ResolveEvent Cafeteria:
 	say "     As you are passing through the dark halls of the hospital, you can hear quite a bit of noise from down one hall. Approaching cautiously, you glance down and see leads to a pair of doors marked 'Cafeteria'. You approach cautiously, glancing between the doors and the hall behind you. At the doors, you peek through the window and see quite a few of the hospital's animal staff inside.";
 	say "     Behind the food counter, an obviously herm raccoon lunchlady is fucking one of her assistants, a breasty cowgirl. Some of the cowgirl's milk leaks from her teat-like nipples onto the food spread out, not that the creatures in line seem to mind. If anything, they only end up taking more from that pile of glop.";
 	say "     At the tables are several others, mainly vixen nurses and jaguar orderlies, though there are a few other creatures mixed in as well. Some of the patrons are eating their food peaceably while others are slaking their appetite for sex. Several of the vixens are being boned roughly by the jaguars. At one table, one vixen is spread out while several furs lick, kiss or suck at her erogenous zones, much to her delight. Another table has a rare female jaguar sitting on the table while two of the males nurse from her breasts and play with her pussy.";
@@ -361,11 +357,12 @@ Object	Name
 Chaplaincy	"Chaplaincy"
 
 Chaplaincy is a situation.
-The sarea of Chaplaincy is "Hospital".
+ResolveFunction of Chaplaincy is "[ResolveEvent Chaplaincy]".
+Sarea of Chaplaincy is "Hospital".
 
-instead of resolving Chaplaincy:
+to say ResolveEvent Chaplaincy:
 	say "     You find yourself in front of the hospital's Chaplaincy, there for the spiritual well-being of patients and family members. Glancing around, you decide to slip inside and have a look around, briefly hoping things will be a little better in here. Sadly, that is not the case and there are signs of several lustful outbursts in here just as everywhere else. You even spot the torn remains of the clergyman's suit and clerical collar, as messy as the other piles of cum-laden clothes. You spot several small vials nearby labelled [']libido suppressant['], most of them empty, though one still remains unused. In the end, he must have decided to give in to his urges rather than keep denying them. You pick it up and store it away. Perhaps it will be useful for you in a moment of need.";
-	increase carried of libido suppressant by 1;
+	ItemGain libido suppressant by 1;
 	increase score by 5;
 	now Chaplaincy is resolved;
 
@@ -373,22 +370,23 @@ Table of GameEventIDs (continued)
 Object	Name
 Records Room	"Records Room"
 
-Records Room is a situation. The level of Records Room is 5.
-The sarea of Records Room is "Hospital".
+Records Room is a situation.
+ResolveFunction of Records Room is "[ResolveEvent Records Room]". The level of Records Room is 5.
+Sarea of Records Room is "Hospital".
 when play begins:
 	add Radiology to BadSpots of FemaleList;
 	add Radiology to BadSpots of MaleList;
 	add Radiology to badspots of HermList;
 	add Radiology to BadSpots of FurryList;
 
-instead of resolving Records Room:
+to say ResolveEvent Records Room:
 	say "     You come across the hospital's records room, where all the patient files are stored. It is tightly packed with ceiling high filing cabinets and shelves. There are a few files set out that seem to have been recently updated to include post-infection data, making you wonder who's still performing medical tests at the hospital. Setting them aside, you move around the room, searching for anything of use and almost bump into a creature as it emerges from a door to another filing room.";
 	if coonstatus is 0:
 		say "[hospfight1]";
 	else:
 		say "[hospfight3]";
 	say "     After your encounter with the creature, you turn to leave the records room before any others come to check on the noise. As you make your way to the door, you spot a syringe of orange liquid on a desk. It is labeled as [']libido suppressant['], possibly left behind by whoever was trying to focus on their records work.";
-	increase carried of libido suppressant by 1;
+	ItemGain libido suppressant by 1;
 	increase score by 5;
 	now Records Room is resolved;
 
@@ -397,9 +395,10 @@ Object	Name
 Surrounding Area	"Surrounding Area"
 
 Surrounding Area is a situation.
-The sarea of Surrounding Area is "Hospital".
+ResolveFunction of Surrounding Area is "[ResolveEvent Surrounding Area]".
+Sarea of Surrounding Area is "Hospital".
 
-instead of resolving Surrounding Area:
+to say ResolveEvent Surrounding Area:
 	say "     Deciding to take a some time to check out the neighborhood around the hospital, you proceed away from the large building and into the nearby residential area. As you cautiously move around the houses, a few things stand out right away. The doors to the homes are open or are broken into. A closer examination shows splintered wood, ripped hinges and broken glass, often with heavy claw marks as well. But far more telling is the fact that it is far too quiet. The city certainly isn't as noisy as it used to be, but there's usually some sounds of activity from time to time. Be it some more peaceful mutants skulking around, weaker creatures fleeing from your approach or the noises of conflict and/or sex (for it's often hard to tell the two apart these days), there is usually some background sounds, but not here. It becomes increasingly disconcerting for you.";
 	say "     As you continue to scout the area out, you consider slipping into one of the homes. Just as you're about to step into the open and head for the open door, a trio of those jaguar orderlies come into view as they turn a corner. They seem to be on patrol in the area, looking around very intently. You slip further into the shadows and wait for them to pass before leaving the neighborhood. It seems the orderlies are still scouring the area for any survivors they can grab and you'd rather not risk being caught by them.";
 	now Surrounding Area is resolved;
@@ -409,9 +408,10 @@ Object	Name
 Stairwell	"Stairwell"
 
 Stairwell is a situation.
-The sarea of Stairwell is "Hospital".
+ResolveFunction of Stairwell is "[ResolveEvent Stairwell]".
+Sarea of Stairwell is "Hospital".
 
-Instead of resolving a Stairwell:
+to say ResolveEvent Stairwell:
 	if a random chance of 1 in 2 succeeds:
 		say "     You manage to reach one to the stairwells, but find the door blocked and unable to open. Glancing through the small window, you see that it's been barricaded from the inside as well as jammed with a heavy metal bar. You will have to continue searching to find another way to the upper floors.";
 	else:
@@ -425,14 +425,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Missing Powder	"Missing Powder"
 
-Missing Powder is a situation. [Added by Blue Bishop]
-the sarea of Missing Powder is "Hospital".
+Missing Powder is a situation.
+ResolveFunction of Missing Powder is "[ResolveEvent Missing Powder]". [Added by Blue Bishop]
+Sarea of Missing Powder is "Hospital".
 
-instead of resolving Missing Powder:
+to say ResolveEvent Missing Powder:
 	say "     You manage to find a small, currently unoccupied patient room. It's unremarkable, save for a small bag with a note laying near it. Picking up the item, you read the note.";
 	say "     [italic type]'Bring this shipment we got from the Warehouse District to the doctor. We figure he'll find it useful. If you screw this up again the only packages you'll be handling will be on the far end of some nameless horror's dick!'[roman type] The note appears to be slightly ruined, partially covered in the dry stain of some dubious fluid...";
 	say "     Checking the bag, it appears to have a couple smaller bags containing a strange, white powder. Very carefully inspecting the contents, it doesn't appear to be anything illicit or infectious, though it does tingle slightly against your touch. You decide to take the bags along with you, for now.";
-	increase carried of nullifying powder by 2;
+	ItemGain nullifying powder by 2;
 	now Missing Powder is resolved;
 
 Section 3 - Helper Dog Event & Pet
@@ -456,7 +457,7 @@ An everyturn rule:
 Locked stairwell is a door. "Off to one side are a pair of heavy, metal doors leading to a stairwell."
 Locked stairwell is lockable and locked.
 Locked stairwell is above City Hospital.
-The description of Locked stairwell is "Off to one side are a pair of heavy, metal doors leading to a stairwell."
+Description of Locked stairwell is "Off to one side are a pair of heavy, metal doors leading to a stairwell."
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -464,7 +465,7 @@ Hidden Lab	"Hidden Lab"
 
 Hidden Lab is a room.
 Hidden Lab is above Locked stairwell.
-The description of Hidden Lab is "     Part of the hospital testing labs have been converted to be used by the white mouse to work on his analysis of the nanite infection. The short fellow has set up several small experiments that are running, likely analyzing some of the biological changes caused by the nanites. These are on the lab tables in the room while the mouse scurries around between them, occasionally having to climb up onto one of the stools to do his work.[line break]     Part of the room has been cleared out to make space for a small cot and collection of supplies. The cot doesn't look like it's been used recently and the food supplies are in disarray. The mouse is probably just grabbing a snack when he remembers to eat, being so focused on his work.[line break]     Off to one side of the room are a pair of collared and chained hybrids, a duo of those mismatched, patchwork chimeras. They have water and food dishes, as well as a small chemical toilet within reach of their tethers. At the moment, they are [one of]fucking[or]laying down[or]kissing[or]fondling one another[or]sleeping[or]eating[or]drinking[or]masturbating[at random].".
+Description of Hidden Lab is "     Part of the hospital testing labs have been converted to be used by the white mouse to work on his analysis of the nanite infection. The short fellow has set up several small experiments that are running, likely analyzing some of the biological changes caused by the nanites. These are on the lab tables in the room while the mouse scurries around between them, occasionally having to climb up onto one of the stools to do his work.[line break]     Part of the room has been cleared out to make space for a small cot and collection of supplies. The cot doesn't look like it's been used recently and the food supplies are in disarray. The mouse is probably just grabbing a snack when he remembers to eat, being so focused on his work.[line break]     Off to one side of the room are a pair of collared and chained hybrids, a duo of those mismatched, patchwork chimeras. They have water and food dishes, as well as a small chemical toilet within reach of their tethers. At the moment, they are [one of]fucking[or]laying down[or]kissing[or]fondling one another[or]sleeping[or]eating[or]drinking[or]masturbating[at random].".
 
 the scent of the Hidden Lab is "The doctor's lab smells primarily of the chemicals and samples from his experiments, but this only partially masks the scents of sex from his chained chimeras.".
 
@@ -490,14 +491,15 @@ Object	Name
 Finding a Way in	"Finding a Way in"
 
 Finding a Way in is a situation.
+ResolveFunction of Finding a Way is "[ResolveEvent Finding a Way in]".
 Finding a Way in is inactive.		[unable to do this until activated]
-The sarea of Finding a Way in is "Hospital".
+Sarea of Finding a Way in is "Hospital".
 
 an everyturn rule: [to restore the openness of the door after an export/import]
 	if Finding a Way in is resolved and locked stairwell is locked:
 		now locked stairwell is unlocked;
 
-Instead of resolving a Finding a Way in:
+to say ResolveEvent Finding a Way in:
 	if hospnav > 2 and hospstairs > 0:		[at least 4 waypoints and the stairs up]
 		say "     After taking many twists and turns through the hospital, you manage to find you way up several stories and over to the lit area. There you pass by the operating theater and head down the hallway towards the door at the end. It is partially open and light flows from it. You approach cautiously, listening intently, but there is little sound coming from the room, labeled as [']Testing Labs['].";
 		say "[meetdrmouse]";
@@ -518,10 +520,10 @@ understand "Mouse" as Doctor Mouse.
 understand "Dr Mouse" as Doctor Mouse.
 DoctorMouseProgress is a number that varies.
 
-The description of Doctor Mouse is "     Dr Mouse is a small, white mouse with red eyes and a pink nose and ears. He's only about three feet tall, and that's to the top of his ears. He's dressed in a white labcoat that goes almost to the floor with his rodent-like feet and thin tail poking out from underneath it. He is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.".
+Description of Doctor Mouse is "     Dr Mouse is a small, white mouse with red eyes and a pink nose and ears. He's only about three feet tall, and that's to the top of his ears. He's dressed in a white labcoat that goes almost to the floor with his rodent-like feet and thin tail poking out from underneath it. He is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.".
 The icon of Doctor Mouse is the figure of DrMouse_icon.
 
-The conversation of Doctor Mouse is { "Squeak!" }.
+Conversation of Doctor Mouse is { "Squeak!" }.
 
 the scent of Doctor Mouse is "The small lab mouse looks at you sternly as you sniff him. He smells of mouse, chemicals and sleepless nights in the lab.".
 
@@ -679,7 +681,7 @@ instead of going to Primary Lab while hospquest is 2:			[Searching the main lab]
 		else:
 			LineBreak;
 			say "     You tell him you are working on something and would like to scavenge parts from it, since he doesn't need it anymore. He doesn't have any objections, as he won't be taking any of the equipment once they are extracted by the military. You carefully unhook the device and carry it off with you. It is somewhat heavy though. Better be worth it.";
-	increase carried of scientific device by 1;
+	ItemGain scientific device by 1;
 	now hospquest is 3;
 	increase score by 5;
 
@@ -689,7 +691,7 @@ name	desc	weight	object
 "scientific device"	"     You see a large scientific device with several leads for input and output."	10	scientific device
 
 scientific device is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 instead of using scientific device:
@@ -702,10 +704,10 @@ to say hospquestpt2:
 	say "     'I have a lot of samples and tests I would like to run. Many of my projects and analyzes have been unable to progress without proper instrumentation. I will need some time to run more tests before I can gain more information. I'm all abuzz with excitement; I want to tackle it all right away. No sleep for me tonight,' he adds with a chuckle.";
 	say "     'But as I promised, I do have a few things for you.' He heads over to one of the cabinets under the work bench and digs around, pushing some of the items aside as he digs around. 'I set this aside for you if you were successful. I know it's not much, but I expect to deliver better once my results start reaching fruition.' From the back, he pulls out a large beaker with a bottle of water and two syringes sitting in it.";
 	say "     'These are healing boosters and a libido suppressant that I created some time ago. The healing booster provides important nutrients and stimulate the nanites to bring about a surge in their healing rate for a brief time, resulting in rapid repair of injuries. The other contains a cocktail of anaphrodisiacs meant to help curb your arousal, for at time at least. They should both be most helpful for you out there, I expect. And a bottle of water as well, as you're probably thirsty after lugging that thing across the city.";
-	delete scientific device;
-	increase carried of healing booster by 1;
-	increase carried of libido suppressant by 1;
-	increase carried of water bottle by 1;
+	ItemLoss scientific device by 1;
+	ItemGain healing booster by 1;
+	ItemGain libido suppressant by 1;
+	ItemGain water bottle by 1;
 	now DoctorMouseProgress is turns;
 	extend game by 6;
 	LineBreak;
@@ -721,7 +723,7 @@ to say hospquestpt3:
 		increase score by 5;
 	if dog milk is owned:
 		say "     'What is this?' he exclaims as you pull out the bottle of dog milk. 'You already have some? Astonishing! I knew you would make a fine assistant, but this is most impressive. There are numerous possibilities for why that dog creature is unique and some of them could affect the results of my other experiments. Ascertaining or removing certain variables will greatly increase the likelihood of gaining meaningful results.'";
-		delete dog milk;
+		ItemLoss dog milk by 1;
 		now DoctorMouseProgress is turns;
 		extend game by 6;
 		increase score by 25;
@@ -732,7 +734,7 @@ to say hospquestpt4:
 		say "     'I need you to get a sample, preferably its milk, from that large canine. Its shemale attributes are unusual and I wish to determine what factor or factors may have made it different and unique.'";
 	if dog milk is owned:
 		say "     'You have it? Excellent work. I knew when you showed up that you'd make a fine assistant. There was just something about you.' He takes the jar of dog milk and starts drawing samples from it, putting them into beakers for testing. 'It will take some time to complete my tests, but I expect I'll have something for you once the results are in.'";
-		delete dog milk;
+		ItemLoss dog milk by 1;
 		now DoctorMouseProgress is turns;
 		extend game by 6;
 		increase score by 20;
@@ -756,7 +758,7 @@ to say hospquestpt6:
 	if carried of Tiger patch < 3:
 		say "     Please remember, I need you to obtain three samples from those rubbery felines, so I can be certain to have enough to obtain results. Please make your way to the State Fair and try to collect some.";
 	if carried of Tiger patch >= 3:
-		decrease carried of Tiger patch by 3;
+		ItemLoss Tiger patch by 3;
 		say "     Good work! I shall set to work on these right away. And while I work on that, I do have another project for you. I have a pair of situations where my orderlies have upset the locals too much to complete their task and I need someone independent of the hospital to go in and complete the job.";
 		say "     I have just obtained word that the museum contains a pair of prehistoric creatures. Aside from representing an unprecedented opportunity to analyze ancient life, it may be important to examine their nanites and see how they affected such changes. The reports from the hospital creatures are somewhat unspecific, but there appears to be an armored, dinosaur-like creature and several smilodons. I would have the others deal with this, but on their original foray into the museum, they must have caused a disruption and now the guardian will not let them re-enter. I need you to obtain samples from both of these.";
 		say "     'The last thing I need for you is to perform a simple pick-up while you are out. There is a jackal shopkeeper who has set herself up in the mall. She has a package for me. The rats who live there will not allow the hospital staff to approach, having been set off by the appearance of one of the jaguars when the order was first placed.";
@@ -770,14 +772,14 @@ to say hospquestpt7:
 		if lava lamp is not owned:
 			say "     If you are not able to obtain a usable sample from this dinosaur creature, be sure to go to its nest and search there. There may be eggs or something else with enough nanites to act as a proper sample. They were very clear that it was female.";
 		if lava lamp is owned:
-			delete lava lamp;
+			ItemLoss lava lamp by 1;
 			say "     The mouse dubiously looks at the lava lamp you've pulled out, but goes to take it. As you explain what you suspect it's been used for, he pulls his hands back quickly and puts on a pair of ill-fitting gloves over his mouse-paw hands. Only then does he handle it, setting it on the lab table. 'I... this is a rather ingenious way to obtain a sample. I... uhh... commend you. Please continue,' he says.";
 			now triclamped is 1;
 	if sabtoothed is 0:
 		if Chipped tooth is not owned:
 			say "     There appear to be several of these smilodons in the museum. Take care, smilodons, popularly known as sabretooth tigers, were the apex predators in their time and are larger than any current feline. Any creatures based on them with nanite enhancement would be... quite powerful.";
 		if Chipped tooth is owned:
-			delete Chipped tooth;
+			ItemLoss Chipped tooth by 1;
 			say "     The mouse looks at the large fang with a mix of awe and delight. He takes it carefully from you and places on a sample tray. Another successful mission completed.";
 			now sabtoothed is 1;
 	if nerminepackage < 5:
@@ -785,7 +787,7 @@ to say hospquestpt7:
 			say "     'The shopkeeper at the mall has a collection of... ahh... [']occult and mystical items['],' he says with a bit of disdain, 'but she does have some historically significant items, and I wanted to obtain something from her. She may want something of similar value in return,' he adds.";
 		if package is owned:
 			say "     The mouse takes the package from you with a smile and puts it on his sample table quietly.";
-			delete package;
+			ItemLoss package by 1;
 			now nerminepackage is 5;
 	if nerminepackage is 5 and sabtoothed is 1 and triclamped is 1:
 		say "     'Excellent work, my assistant. Now I have much to do. I hope you will understand if I ask you to leave me to my investigations for a time. But as a reward, you may have this for the moment,' the small mouse says as he passes you a medkit.";
@@ -806,7 +808,7 @@ to say hospquestpt8:
 		say "     Before you let the mouse inject you, you ask about the jaguars and if you should expect anything like that to happen. Dr Mouse is briefly puzzled by your question. 'Oh, you mean the fangs? Those are just the result of a test I did on them. I needed to see how adjustments to the nanites would propagate through the population. This one was more effective than the first attempt with the vixens. Besides, the creatures out in the city are starting to form into factions and they need to be able to keep the hospital secure. But don't worry. This is just an increase to their healing protocols.' Feeling reassured about the injection if not the jaguars, you allow him to inject you.";
 		say "     You have gained the [']Rapid Healing['] feat.";
 		add "Rapid Healing" to the feats of Player;
-		waitlinebreak;
+		WaitLineBreak;
 		say "     As the nanite update runs through your system, you ask what the jaguar wanted that was so upsetting. 'Oh, I wasn't too upset about the news. It's just harder to understand them now that they've got those big teeth. There's a little pest running around the hospital, distracting the other staff at times. Nothing you need concern yourself with, though. They'll catch the pink perv sooner or later.'";
 		say "     Dr Mouse heads back to his worktable. 'I have to get back to things now. I don't think I'll have anything for you for at least a few days. Please give me some time to process all of these results.'";
 		now DoctorMouseProgress is turns;
@@ -827,7 +829,7 @@ to say hospquestpt9:
 		say "     'I do not have any tasks for...' the white mouse starts to reply when there is a commotion outside the door. He hops off the stool and heads to the door. Reflexively, you ready yourself for combat. The door leading to the depths of the hospital opens and in come a pair of orderlies with a cross-dressing raccoon held firmly in their paws. His gray fur has pink highlights and pink rings around his tail and his candy striper dress has gotten torn. The coon is thrashing and struggling, spewing a mix of insults, pleas and offers of sex to let him go.";
 		say "     As Dr Mouse steps around the worktables and becomes visible to the girly raccoon, his eyes go wide and he falls silent, but struggles all the harder. The orderlies have no trouble holding the little guy and Dr Mouse looks him over critically. His face is very stern and not at all the friendly expression you're used to seeing from the little mouse fellow.";
 		say "     'You've been most disruptive to my hospital of late, you little perv. I had hoped you might come around, as you were a volunteer here. But you are only a distraction for my staff and my projects. And I can't have that, so I can't have you running around unsupervised any longer,' he says ominously.";
-		waitlinebreak;
+		WaitLineBreak;
 		say "     The white mouse then turns to you with his usual smile. 'You have excellent timing. As a reward for your service, I am going to give this troublemaker over to you. Based on some of the findings I've made, there are conditions which the nanites can set up so one host is made subservient to another. While it would only work on weaker creatures, I have been working on a formula to induce this effect.' He motions to the orderlies and they shove the terrified coon boytoy into your arms. 'If you'd like, I could give it to him and make him an obedient pet for you,' he says, heading to his sample fridge.";
 		say "     You look down at the coon in your arms and his eyes are locked on you. He is trembling and whimpers. 'Just get me out of here. He's crazy. Please,' he whispers emphatically. 'I'll go with you. I'll be good. Just don't let him keep me.'";
 		say "     As Dr Mouse comes over with the injection, the raccoon falls silent and buries his face in your chest, trembling in your arms. The mouse holds it up, getting it ready. 'This injection will turn a weak creature like him into a useful pet. Would you like to take him on as a pet? He'd become obedient and helpful, and not so chatty as an added bonus.'";
@@ -855,7 +857,7 @@ to say hospquestpt9:
 				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer. Your cock throbs and your hot seed shoots into his waiting muzzle. He swallows it all down and licks you clean like a good little pet, churring happily.";
 			now pink raccoon is tamed;
 			add "Tamed" to Traits of pink raccoon;
-			say "     (The pink raccoon is now tamed! You can make it your active pet by typing [bold type][link]pet pink raccoon[as]pet pink raccoon[end link][roman type]and initiate sex with him while active by typing [bold type][link]fuck pink raccoon[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+			say "     (Candy the pink raccoon is now a possible ally! You can make him your active ally by typing [bold type][link]ally Candy[end link][roman type] or [bold type][link]ally pink raccoon[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck pink raccoon[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 		else:
 			increase score by 20;
 			now coonstatus is 1;
@@ -864,7 +866,7 @@ to say hospquestpt9:
 			if HP of Sven is 8, now lastSvendrink is turns - 4; [***Adjust as needed for confident Sven]
 			LineBreak;
 			say "     Dr Mouse shrugs as you decide to pass on the injection and passes it to one of the orderlies to put away. 'I still do not want him in my hospital any longer. You will have to take him away from here and keep him out of trouble. Use him for your own enjoyment.' He leans in and jabs the coonboi with a finger. 'You don't want to know what I'll do to you if you ever come back here,' the little mouse whispers harshly in his ear. 'Do you understand?' The girly boi can only whimper louder and nod vigorously. 'Good.'";
-		Waitlinebreak;
+		WaitLineBreak;
 		say "[hospquestpt10]";
 
 to say hospquestpt10:
@@ -934,7 +936,7 @@ instead of going to Primary Lab while hospquest is 11:		[heading to the main lab
 	if HP of Doctor Matt is 100:						[recording]
 		say "     You enter the lab and take stock of the enhancement device in the room. You look it over briefly, then start to unhook it. As you do, you hear a recording click on from the speakers. 'Unauthorized access to secure lab equipment. Warning: This device is protected and its removal cannot be allowed to continue.' An alarm sounds through the building.";
 		say "     You shrug, knowing there is no one here aside from you to worry about and continue. As you're unhooking the nearby terminal, you hear the alarm change to a countdown. That gets your attention and you toss the terminal onto the equipment cart and hustle it out as fast as you can. You wrench your shoulders as you wrestle the cart down the stairs in a hurry, but continue as the numbers reach the single digits.";
-		waitlinebreak;
+		WaitLineBreak;
 		say "     You hear the countdown inside reach zero and several blasts inside the building go off ten seconds later. You are running down the handicap access ramp with the cart as the windows blow out. Glass and rubble bloody your back, but thankfully the equipment was mostly shielded by you and seems undamaged.";
 		say "     You take 15 damage![line break]";
 		say "     Fighting back against the pain, you contact the helicopter for extraction. Having once been a trained rescue team, they are there swiftly. Under your supervision, two of the brutish orderlies move the large machine and the terminal into the helicopter. Loaded up, you climb into the helicopter and ride back with them to the hospital.";
@@ -960,11 +962,11 @@ instead of going to Primary Lab while hospquest is 11:		[heading to the main lab
 			if HP of Doctor Matt is 8:
 				say "     You begin by telling the scientist about hospital, the hidden lab within and the mouse working away there. You tell him of what you saw there, the creatures of the hospital, apparently most if not all of them under the mouse's control. You make sure to mention the mouse's findings and his hypotheses about the infection, noting they were part of the reason you assisted him despite any misgivings.";
 				say "     You relate how you helped him collect some samples he needed to continue his research. But then that research started to manifest as changes and increased power in the hospital denizens. Dr Matt is quite perturbed to hear about this news, both that such experiments were happening and that he was not made aware of another potential source of information on the nanites. You do have to wonder if he's most upset that someone else could have gotten further into their research than he has.";
-				waitlinebreak;
+				WaitLineBreak;
 			say "     You finish by showing Dr Matt the syringe and tell him that Dr Mouse has sent you to remove him from the picture and steal the nanite adjustment system he'd been creating.";
 			say "     'If you're telling me this, I can assume you're not going to go through with it. It has become clear that this Dr Mouse is not interested in a cure at all, but only exploiting the nanites and their hosts. Enhancing the strains out there will only exacerbate the problem of controlling this chaos.' He holds up the needle. 'While there would be some irony in returning this to you and asking you use it on him instead, I don't think he will give you that opportunity. Provided he's not already made himself immune to it, for that matter. I will have to ask you to return to the hospital and deal with him personally.'";
 			if Susan is visible:
-				waitlinebreak;
+				WaitLineBreak;
 				say "     Susan comes up to your side and holds your left in hers, clutching it tightly. Her loving brown eyes look up at her mate. 'Please be careful, my brave buck.' She leans in and gives your cheek a kiss before releasing you.";
 			SanBoost 5;
 			increase score by 20;
@@ -1011,10 +1013,10 @@ to say hospbigfight2:
 	say "     Battered and bloodied, the mad doctor turns and runs. For a moment, you think he's trying to escape and move to cut him off from the exit, but he instead veers off to his storage unit and searches inside for a vial.";
 	say "     'I had planned to further perfect this formula before ridding myself of this feeble body,' the white mouse exclaims. 'But you! You force my hand. And you will suffer for it!'";
 	say "     With that, he slams back the formula and its effects are almost immediate. You charge, hoping to dispatch him before whatever he's doing can be completed, but he's already begun to grow and manages to slam you back a few feet with a strong backhand.";
-	waitlinebreak;
+	WaitLineBreak;
 	say "     His muscles swell and he gains inches of height by the second. His growing body fills the lab coat so much it starts to strain to contain it until it finally fails. The buttons fly as he flexes his new, muscled body and tears the tattered remains from his shoulders.";
 	say "     His head becomes more feral and frightening, with sharp teeth, a mix of predatory canines and rodent incisors. The thick, leonine mane grows in as well as a trio or sharp horns, two on his brow and one at the end of his pointed muzzle. His hands, once cute paws, gain vicious claws and bony plates.";
-	waitlinebreak;
+	WaitLineBreak;
 	say "     The mouse's maleness is not neglected either, gaining a large sheath and heavy balls. Thick, dark yellow grow to replace the white coat over them and this spreads up over the monstrous mouse's chest as well. Clearly excited by the power of the changes, his cock grows hard and starts to emerge. It is thick and blood red, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick.";
 	say "     He chuckles madly as he looks himself over, clearly pleased with the results. 'I am going to enjoy showing you how disappointed I am with you. In slow, agonizing detail,' he rumbles with a deep, threatening voice.";
 	now hospfight is 2;
@@ -1032,7 +1034,7 @@ to say hospbigfight2:
 to say hospranaway:
 	say "     Unable or unwilling to continue fighting the crazed mouse, you vault over one of the worktables and dash to the exit. You slam against the door and dash down the hall to the emergency exit. You rush down the stairs, hearing Dr Mouse yelling above you, but don't even stop to look.";
 	say "     As you approach the bottom of the stairwell, you can see the jaguar orderly on guard inside. His radio squawks with Dr Mouse's voice and you leap down the last four steps. The added momentum lets you shove past the confused orderly and out the door before he can get his orders to stop you. You push through the door and dash into the hospital lobby, then continue running out the door.";
-	waitlinebreak;
+	WaitLineBreak;
 	now the player is in City Hospital;
 	if hospquest is 10:	[Refused upon offer]
 		say "     Panting for breath, you slam against the main entrance doors and stumble out into the [if remainder after dividing turns by 8 > 4]darkness[else]light[end if]. The raccoon, it seems, has been waiting fretfully on the steps for you and rushes into arms. You grab his paw and continue running, pulling him along. He needs no encouragement to leave this place and keeps pace with you as you cross the large parking lot and cut down a side street.";
@@ -1050,22 +1052,22 @@ to say hosploss:
 	now hospbattlelost is 1;
 	say "     Your head is pounding and your vision is hazy even before you open your eyes. Struggling to remember what happened, you try to look around. As you attempt to open them, bright lights blind you and force them shut again, causing you to wince in pain. You try to pull a hand to cover your eyes, but your arm won't move, tightly restrained.";
 	say "     'Ahh, the patient is now awake. We may begin,' you hear from one side. The sound of Dr Mouse's voice rushes reality back to you and you struggle to get up. At his point, you discover that you are tightly strapped down and cannot move.";
-	waitlinebreak;
+	WaitLineBreak;
 	say "     As the spots begin to clear from your vision, there is much to take in. Foremost is the operating table you are strapped onto, held down by thick, leather straps. Above that are large, bright lights shining down on you. As the rest of the room becomes clearer, you start to make out the blurry forms around you. There are several other figures on the operating floor around you, nurses and an orderly, as well as several trays of medical instruments.";
 	say "     Above the operating floor, a larger viewing area above the floor level and surrounding the room comes into focus. Most of the seats are filled with more vixen nurses, jaguar orderlies and canine doctors, but there are a few others as well. There is a rather plastic-looking fish creature who is constantly wiping himself with a wet cloth and surrounded by big breasted owl women. In one corner, there is a cluster crazed weasels in straightjackets secured to their seats, gibbering and snapping at one another. They have a very busty gray skunk woman sitting behind them[if HP of Doctor Moffatt > 0], whom your recognize as Dr. Moffatt[end if]. A few other individual creatures fill scattered seats. You are clearly in the operating theater, where demonstrations of medical procedures are performed for staff and med students.";
-	waitlinebreak;
+	WaitLineBreak;
 	say "     As Dr Mouse steps forward after washing his paws, the room quickly falls silent[if hospfight is 2]. The altered doctor has smoothed down his fur a little and found a much larger lab coat to put on. It barely fits across his shoulders and hangs open, leaving his mutated body and groin uncovered. There are some holes torn into the back by his dorsal spines to make it fit at all[end if]. One of the nurses puts a pair of ill-fitting gloves over his [if hospfight is 1]little[else]twisted[end if] paws as he looks you over. Despite his dispassionate, clinical expression, there is a malicious gleam in his blood red eyes. The [if hospfight is 1]little mouse[else]monstrous mouse[end if] steps up beside you, then turns to look up at the assembled group.";
-	waitlinebreak;
+	WaitLineBreak;
 	say "     'My fellow staff,' he begins. 'Today, we have a very special procedure. As you are no doubt aware, I have been making substantial progress in my research. This is, in part, thanks to my assistant's help,' he says, motioning to you. 'Now, my volunteer will further help me continue that important work.' He stresses volunteer, making it clear to all just how voluntary your participation is. 'Furthermore, I hope to teach the staff more about the infection as well as the price of defiance.'";
 	say "     Throughout his speech, the gathered mass of creatures is quiet. Even the psychotic weasels are silent. There is an aura of fear and respect in the air. It is clear you will receive no help from anyone gathered here.";
-	waitlinebreak;
+	WaitLineBreak;
 	say "     Unwilling to just give up, you continue to struggle against your bonds. The [if hospfight is 2]mutated [end if]mouse gives you a cold look as the grunts of your attempts interrupt him. He motions to the orderly, who gives your head a hard smack with his fist before gagging your mouth. Your head spins while the mouse continues talking, moving on to medical jargon that you can only make out snippets of with your ears ringing from the blow. It is something about the nanites and transformations, but the rest is lost to you.";
-	waitlinebreak;
+	WaitLineBreak;
 	say "     'We will begin the series with an injection to prepare the patient for multiple transformations,' the mad doctor says, taking the syringe from a tray of a half-dozen[if hospfight is 1]. The small mouse steps up onto a wooden crate beside you so he can look over the operating table and his patient[end if]. As he injects the formula into your arm, there is a mad gleam in his eyes. An odd tingling sensation spreads up your arm and throughout your body, and you seem less solid. As an impulse, you try to pull yourself free, but while your arms and body do deform somewhat, it is not enough to pull loose of the straps. Dr Mouse chuckles and goes on to point out this very effect to the audience, informing them the temporary elasticity comes from the tigress samples you brought him the other day.";
-	waitlinebreak;
+	WaitLineBreak;
 	say "[hosptfscene]";
 	say "     Dr Mouse motions to the orderly attending to his procedure. 'Dump that trash on the steps along with its gear. It is of no further use to me.' With those coldly spoken words, the mouse turns his back on you entirely and walks out of the operating theater. The orderly calls forth several of his companions and they drag you, beaten and mutated, to the hospital steps. They toss you and your gear down onto them without a word and head back inside.";
-	waitlinebreak;
+	WaitLineBreak;
 	if BodyName of Player is "Malayan Tiger Male":
 		now BodyName of Player is "Malayan Tiger Herm";
 	if TailName of Player is "Malayan Tiger Male":
@@ -1119,7 +1121,7 @@ to say hosptfscene:
 		choose row MonsterID from the Table of Random Critters;
 	now FaceName of Player is Name entry;
 	now Face of Player is face entry;
-	waitlinebreak;
+	WaitLineBreak;
 	say "     'We shall now move on to the head,' he states, motioning for the orderly to step up. He grabs your neck and squeezes it painfully as he injects the next formula into your carotid artery, sending the fluid up into your head. As a burning sensation courses through your head, the doctor discusses how [face change entry]. As your face shifts and changes, the orderly adjusts the various straps as necessary, keeping you restrained.";
 	while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is TailName of Player or Name entry is FaceName of Player or Name entry is SkinName of Player:
 		sort Table of Random Critters in random order;
@@ -1127,12 +1129,12 @@ to say hosptfscene:
 		choose row MonsterID from the Table of Random Critters;
 	now SkinName of Player is Name entry;
 	now Skin of Player is skin entry;
-	waitlinebreak;
+	WaitLineBreak;
 	say "     The mad mouse picks up a spray bottle and runs his gloved paw over your chest. 'Before we continue with the patient's body, we shall deal with his epidermal layer.' The bottle contains a thin, milky fluid and you can readily guess what at least one of the ingredients is. Taking care not to spray himself, he spritzes a mist of the sticky fluid across your body. You can feel a tingle all over as the mixture is absorbed into your skin and starts to change you. Shivers of pleasure run all over your skin as [skin change entry].";
-	waitlinebreak;
+	WaitLineBreak;
 	say "     When those changes are complete, a pair of the vixen nurses step up and wash you and the table area clean using wet sponges. They pay particular attention to your genitals, sending shivers of delight through you despite, or perhaps because of, your current situation. They giggle and tease you, much to the delight of several of the audience members.";
 	say "     Actually, during this brief break in the procedure, you are able to take stock of the group watching. It seems that some have become rather aroused by your transformation. Several of the female nurses are riding the laps of the jaguars and male dogs while one of the herm nurses has strapped a restrained weasel to the railing and is buggering him hard and fast. Catching your eyes on her, she even winks at you.";
-	waitlinebreak;
+	WaitLineBreak;
 	if hospfight is 2:		[Dr Mouse is monstrous]
 		say "     You can see that the monstrous mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure. Another of the vixen nurses is on her knees, licking and kissing the large cock. Her muzzle is pulled onto the thick shaft as Dr Mouse gets tired of foreplay and starts facefucking her with a low growl. She takes it in eagerly, playing with his heavy balls until he cums down her throat. Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
 	else:		[Dr Mouse is mouse]
@@ -1144,13 +1146,13 @@ to say hosptfscene:
 	now BodyName of Player is Name entry;
 	now Body of Player is body entry;
 	attributeinfect;
-	waitlinebreak;
+	WaitLineBreak;
 	say "     Satiated, the mouse straightens up and regains his composure. 'Ahem! Now that the... intermission is over, let us proceed to the final stages.' He grabs another syringe, the largest yet by far. His paw feels along your body, finding a sensitive spot before jabbing the needle into it, making you wince in pain before the warm tingles of pleasant change flow through you. The jaguar orderly adjusts the various straps as your body alters itself. Continuing to comment, Dr Mouse observes your body as [body change entry].";
 	[below section copied from infect algorithm, update as that is updated]
 	follow the breast change rule;
 	follow the sex change rule;
 	LineBreak;
-	waitlinebreak;
+	WaitLineBreak;
 	if Player is male:
 		while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is TailName of Player or Name entry is FaceName of Player or Name entry is SkinName of Player or Name entry is BodyName of Player or Name entry is CockName of Player:
 			sort Table of Random Critters in random order;
@@ -1161,7 +1163,7 @@ to say hosptfscene:
 		now CockName of Player is Name entry;
 		now Cock of Player is cock entry;
 		follow the sex change rule;
-		waitlinebreak;
+		WaitLineBreak;
 		if Player is not male:	[now female]
 			say "     The mouse doctor smiles as your final changes set in and you are left with only a wet pussy between your legs. He teases your wet folds and turns to the audience. 'It seems I was mistaken. There is one more injection to make,' he announces, slipping a pair of fingers into your vagina, making you moan in response despite yourself. His other paw is at his groin, stroking his stiffening cock back to erection. Many in the audience cheer or laugh at that.";
 			wait for any key;
@@ -1184,13 +1186,13 @@ to say drmousesex:
 	if hospfight is 1:	[normal mouse]
 		say "     The small mouse motions for the orderly, who gently lifts him up onto the operating table with you. The white furred mouse grins down at you, lining up his cock with your pussy, making it clear what final injection he has in mind. You struggle and try to shake your head, but the restraints keep you locked in place. He grins and thrusts his cock hard into you. Thankfully, due to his small size, there is little discomfort and it soon becomes quite pleasurable as mad mouse fucks you zealously.";
 		say "     You can see the audience has become quite worked up again, most of them partaking in sex with their colleagues. A jaguaress is getting pounded by one of the jaguars while several others spray their seed across her body. One vixen herm, who you suspect is the same from earlier, has lured one of the owls away from the sturgeon and is giving her a lap ride on her cock while playing with those enormous, feathered tits[if HP of Doctor Moffatt > 0]. Dr. Moffatt, the hyperherm skunk has another of her weasel patients with his face buried in her lap, stuffed with her giant cock[else]. The big-breasted skunk woman has one of the wild-eyed weasels between her legs[end if].";
-		waitlinebreak;
+		WaitLineBreak;
 		say "     The mouse's paws fondling your breasts brings you back to focusing on him. His gloved paws tease your nipples and he laughs happily, aroused with his power over you. His cock, while small, is quite stimulating and you can feel your excitement growing as his heavy balls slap against your thighs with each thrust the little fellow makes.";
 		say "     'Mmm... I am almost tempted to keep you as a little fucktoy. I'd breed you full of cute little mice over and over again. I bet you'd like that, you slut,' he teases, tweaking your nipples. 'But I can't afford any distractions right now. I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.' And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls. You can feel it fill your pussy to capacity and overflowing as much of it pushes and flows up into your womb.";
 	else:			[monstrous mouse]
 		say "     The monstrous mouse climbs onto the operating table, making it groan from the added weight. That malformed, murine face grins down at you as he lines up his cock with your pussy, making it clear what final injection he has in mind. You struggle and try to shake your head, but the restraints keep you locked in place. He grins and thrusts his cock hard into you. You release a muffled groan as the massive prick spreads your pussy open. Thankfully, some of the elasticized effect still remains and your vagina stretches to accommodate the huge cock with minimal pain.";
 		say "     You can see the audience has become quite worked up again, most of them partaking in sex with their colleagues. A jaguaress is getting pounded by one of the jaguars while several others spray their seed across her body. One vixen herm, who you suspect is the same from earlier, has lured one of the owls away from the sturgeon and is giving her a lap ride on her cock while playing with those enormous, feathered tits.";
-		waitlinebreak;
+		WaitLineBreak;
 		say "     The mouse's large paws fondling your breasts brings you back to focusing on him. His gloved paws tease your nipples and he laughs happily, aroused with his power over you. His monstrous cock is quite stimulating and you can feel your excitement growing as his heavy balls slap against your thighs with each thrust the mutated mouse makes. That spaded tip presses at your cervix, trying to spread it open while the ridges along his shaft feel so delightful against your vaginal walls.";
 		say "     'Mmm... I am almost tempted to keep you as a little fucktoy. I'd breed you full of cute little mice over and over again. I bet you'd like that, you slut,' he teases, tweaking your nipples. 'But I can't afford any distractions right now. I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.' And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls. His spaded glans, pressed against your cervix, forces it to spread open, allowing the bulk of his mutated load to flow up into your womb in an attempt to breed you.[impregchance][impregchance]";
 	say "     Panting, the mad doctor withdraws his spent shaft and hops down with a grin. He raises his arms to the crowd, who manage some dignified clapping despite the major orgy that's broken out across most of the audience section.";
@@ -1199,21 +1201,21 @@ to say drmousesex:
 to say hospvictory:
 	say "     The monstrous Dr Mouse has been dazed by your final blow and has collapsed against a worktable at the far end of the room. He's overturned the nearby water dish and broken the chemical toilet. As the pair of mismatched chimera poke their heads around behind it, having hidden during the fight, you realize just where he's landed.";
 	say "     They scramble over to him, moaning softly with sexual need. Their hard cocks and dripping pussies leak their fluids onto him. One presses its breast to his lips and the addled doctor soon nurses from it, making the chimera coo happily. The other grabs the doctor's cock and sinks itself down onto it, spurting cum onto his chest as it does.";
-	waitlinebreak;
+	WaitLineBreak;
 	if HP of Doctor Matt is 100:
 		say "     Feeling that the doctor is in good hands, you quickly look around the room, gathering any notes and samples you can find from the doctor's work area into one big pile. Worried that someone may notice the commotion and come up to investigate, you don't take any time to look at the stuff. You toss the contents from the doctor's storage case onto the heap. After tearing open his notebook and breaking his laptop, you add them to it.";
 		say "     Reluctant to set a fire that could spread and take out the whole hospital, you instead pour a variety of chemicals onto the accumulated research. Thankfully there are several strong acids used for testing which do an effective job of destroying the material. Having seen what this twisted work has created, you don't want to leave someone else finding it and restarting it, nor do you know anyone you could trust with it. That done, you turn back to check in on the mad doctor and his mismatched lovers.";
 	else:
 		say "     Feeling that the doctor is in good hands, you quickly look around the room, grabbing what notes and samples you can from the doctor's work area. Worried that someone may notice the commotion and come up to investigate, you rush to find as much as you can carry. You take several interesting vials and concoctions from the storage case, carefully stowing them in some padding. The doctor's laptop and research notebook go in there as well.";
 		say "     Having gathered what you could and breaking or spilling chemicals onto the other stuff to keep anyone from following Dr Mouse's research, you turn back to see take another look at the mad doctor and his mismatched lovers.";
-	waitlinebreak;
+	WaitLineBreak;
 	say "     The chimeras have continued to feed and fuck him, resulting in a seemingly random array of changes to his body starting to arise. His head has lost its mouse-like qualities entirely and becomes leonine. While his right arm becomes that of some kind of lizard, his left one bifurcates into a pair of smaller limbs, one an avian wing and the other a monkey's arm. One leg gains a horse's hoof while the other has a goat's. His tail becomes long and serpentine, covered in red scales.";
 	say "     When breasts start to form on what was once the mouse's chest, the chimera riding him pulls off his cock, which is now wholly canine in form, and drives its cock into the new pussy under his balls. That is enough to stir Dr Mouse to wakefulness, but what little intelligence there is in those eyes is fading rapidly as the infection takes over fully. The new herm moans lustfully and wraps her mismatched legs around the chimera's waist, yowling with mindless need.";
 	say "     The second hybrid pulls its breast from their captive's muzzle and replaces it with its cock instead. The ex-mouse takes it into its mouth eagerly, licking and sucking with need. As the new hybrid continues to be mated by the fractured creatures of its own creation, there is nothing but lust in those vacant eyes as she succumbs fully.";
-	waitlinebreak;
+	WaitLineBreak;
 	say "     Satisfied that the mouse is no longer a threat, you step over to the worktable and break off the anchor points for the chains. The trio, too engrossed in sex, don't react more than looking up at you and mewling enticingly for you to join them. Now freed, you are satisfied that the two unfortunate creatures will not be trapped to starve, and that they and their new companion can instead join the others like them in the hospital, where the doctor will never be heard from again.";
 	say "     Your task done, you decide to linger no longer and quickly go down the stairs. Acting as if nothing is amiss, you walk past the jaguar guarding the stairwell and exit the hospital.";
-	waitlinebreak;
+	WaitLineBreak;
 	now the player is in City Hospital;
 	if hospquest is 10:		[Refused upon offer]
 		say "     Outside, you find the pink raccoon waiting for you fretfully on the steps. Seeing you come out alive and well, he dashes into your arms and hugs you tightly. Not wanting to cause a scene, you whisper to him to be quiet and come with you. He takes your hand in his, prancing happily beside you.";
@@ -1260,8 +1262,8 @@ to say tlranaway:
 	LineBreak;
 	wait for any key;
 	now HP of Doctor Matt is 101;
-	move Doctor Matt to dark basement;
-	move Orthas to dark basement;
+	now Doctor Matt is nowhere;
+	now Orthas is nowhere;
 	if Susan is visible:
 		move susan to Hidden Lab;
 	now the door west of Outside Trevor Labs is locked; [not sure how to do this]
@@ -1320,12 +1322,12 @@ to say tlvictory:
 		if HP of Orthas > 1:
 			say "     As the dragoness's belly starts to swell with the telltale sign of her eggs, the doe withdraws her shaft and grins to you. 'Bring that perv over here, hon.' You nod and pull the huskybunny slut over, tossing her atop the dragoness. She moans and grinds her cock against Orthas's belly as the dragoness's ovipositor starts to emerge.";
 			say "     'No, doctor. Don't,' she moans, but cannot help herself as her body's urges push the ovipositor into the dripping and eager snatch right above it. She whimpers a little, but works the flexible, probing flesh deeper in, starting to rut the mindless sextoy whom she's failed to protect.";
-			waitlinebreak;
+			WaitLineBreak;
 			say "     You and Susan set to work gathering up the research material and nanite adjustment system. You load the items onto a cart, adding the infection terminal as well. This work is broken up by occasional glances over at the lustful pair, watching as the dragon eggs start sliding through the ovipositor and into the slut's womb.";
 		else:
 			say "     Having finished thoroughly seeding the dragoness, the doe withdraws her shaft and grins to you. 'Bring that perv over here, hon.' You nod and pull the huskybunny slut over, tossing her atop the dragoness. She moans and grinds her cock against those smooth, hard scales.";
 			say "     'No, doctor. Don't,' Orthas moans, but cannot help herself as the huskybunny's cock is lined up with her pussy, then drives into her. She whimpers a little, but arches her hips up into the thrusts, starting to rut with the mindless sextoy whom she's failed to protect.";
-			waitlinebreak;
+			WaitLineBreak;
 			say "     You and Susan set to work gathering up the research material and nanite adjustment system. You load the items onto a cart, adding the infection terminal as well. This work is broken up by occasional glances over at the lustful pair, watching as the huskybunny drives her cock into the muscled dragoness again and again. As you are heading out, you can hear the huskybunny yip loudly, cumming hard into dragoness and stuffing her full of even more cum.";
 	else:
 		say "     You glance over at Orthas and wonder what to do with her. You have a lot of work to do and she's starting to recover. She'll need something to keep her out of your hair.";
@@ -1337,9 +1339,9 @@ to say tlvictory:
 			LineBreak;
 			say "     You glance over at Orthas and decide not to leave her out of the action. Grabbing the little slut, you pull her off the table and over to the dragoness. Tossing her down onto her black body, you watch as the creature that was once Dr Matt starts to grind her cock against those smooth, hard scales.";
 			say "     'No, doctor. Don't,' Orthas moans, but cannot help herself as the huskybunny's cock is lined up with her pussy, then drives into her. She whimpers a little, but arches her hips up into the thrusts, starting to rut the mindless sextoy whom she's failed to protect.";
-			waitlinebreak;
+			WaitLineBreak;
 			say "     You set to work gathering up the research material and nanite adjustment system. You load the items onto a cart, adding the infection terminal as well. This work is broken up by occasional glances over at the lustful pair, watching as the huskybunny drives her cock into the muscled dragoness again and again[if HP of Orthas > 1]. As you are heading out, you can see that the dragoness's belly is starting to swell with eggs and her ovipositor is pushing those eggs into the furry slut's womb[else]. As you are heading out, you can hear the huskybunny yip loudly, cumming hard into dragoness and stuffing her full of even more cum in an attempt to breed with her[end if].";
-			waitlinebreak;
+			WaitLineBreak;
 		else:
 			LineBreak;
 			now HP of Doctor Matt is 104; [Claimed Dr Matt as pet]
@@ -1348,20 +1350,20 @@ to say tlvictory:
 			SanLoss 5;
 			increase score by 50;
 			say "     You grab battered dragoness and drag her out into the hall, wondering what you can do with her. A quick glance at the other labs shows their doors to be just as flimsy as the one she already broke through, so that's no good. You glance at the stairwell back to the main floor and that is when it hits you. There is that sealed basement beneath the lab. The heavy door should keep her contained for a while and the creature down below would certainly keep her occupied until you're done. Following through on this plan, you toss her down into the sealed basement and call out to draw the monster's attention to the dazed dragoness before fleeing upstairs and barring the door.";
-			waitlinebreak;
+			WaitLineBreak;
 			say "     With her out of the way, you go back upstairs and find your new fucktoy bent over and sucking her own cock with wet moans of delight. You grin and fondle her balls until she cums and get her to pump a load down her own throat, then coax her easily to come along with you. Deciding to call her Sally now, you lead your plaything back to the bunker as quickly as you can. Once inside, you leash her to one of the bunks to keep her out of trouble until you want to play with her again.";
-			waitlinebreak;
+			WaitLineBreak;
 			say "     Back at the lab, you can faintly hear the sticky sounds of Orthas and the creature below and grin. Quite pleased with yourself, you get to work gathering up the research material and nanite adjustment system. You load the items onto a cart, adding the infection terminal as well. As you are heading out, you can hear the dragoness's loud, lustful roars as the creature has its way with her.";
-			waitlinebreak;
+			WaitLineBreak;
 			say "     With Dr Matt, Sally now, locked away for your amusement and Orthas certainly being further corrupted by the monster below, you bring your haul down the stairs in stages and then take it out the door. Having called for the helicopter pickup earlier, it arrives and you instruct the orderlies to load up the equipment before you all return to the hospital and the laboratory hidden within.";
-			waitlinebreak;
+			WaitLineBreak;
 			say "     As the lab fades into the distance you can see the faint sign of incoming choppers coming to land there. It seems that, with no one there to report in, the military has come to investigate the scene and recover any remaining research material. Despite this major setback, without anyone reason to hold back in the hopes of more research, they will probably not delay their plans.";
 	if HP of Doctor Matt is not 104:			[Did not claim as pet]
 		now HP of Doctor Matt is 102;
 		extend game by 56;
 		say "     With Dr Matt in good hands, you [if Susan is visible]and Susan [end if]bring your haul down the stairs in stages and then take it out the door. Having called for the helicopter pickup earlier, it arrives and you instruct the orderlies to load up the equipment before you all return to the hospital and the laboratory hidden within.";
 		say "     As the lab fades into the distance you can see the faint sign of incoming choppers coming to land there. It seems that Orthas called in the military to take the transformed doctor and any remaining research material. They've been dealt a sizable setback to their plans.";
-	decrease the humanity of Player by 5;
+	decrease Humanity of Player by 5;
 	increase score by 50;
 	LineBreak;
 	wait for any key;
@@ -1404,12 +1406,12 @@ Object	Name
 Loading Dock	"Loading Dock"
 
 Loading Dock is a room.
-The description of Loading Dock is "This loading dock is discreetly placed behind and down the hill from Trevor Labs. The security gate outside it has been broken open. From the scattered clothes and splatters of dried, musky fluids around, it seems like some of those infected within got out before the security doors were closed. Using the keycard you found, you can slip in this way to go [link]down[end link] into the underground labs if you'd like. Otherwise, you can head [link]east[end link] around the hill again to get back to the main road.".
+Description of Loading Dock is "This loading dock is discreetly placed behind and down the hill from Trevor Labs. The security gate outside it has been broken open. From the scattered clothes and splatters of dried, musky fluids around, it seems like some of those infected within got out before the security doors were closed. Using the keycard you found, you can slip in this way to go [link]down[end link] into the underground labs if you'd like. Otherwise, you can head [link]east[end link] around the hill again to get back to the main road.".
 
 undergroundlab is a door. undergroundlab is dangerous.
 undergroundlab is below Loading Dock.
 darkbasement2 is below undergroundlab.
-The marea of undergroundlab is "Sealed". The description of undergroundlab is "A security-locked door that is armored and sealed. Thankfully, the security card you found opens it.".
+The marea of undergroundlab is "Sealed". Description of undergroundlab is "A security-locked door that is armored and sealed. Thankfully, the security card you found opens it.".
 
 the scent of Loading Dock is "This place has the stale smell of sex, as if nothing's left this place for some time.".
 
@@ -1430,27 +1432,27 @@ to say posttlscene:
 	say "     Returning to the hospital, you are greeted by Dr Mouse on the helipad. As he and the orderlies escort you [if Susan is visible]and Susan [end if]down to his lab, you relate to him your [if HP of Doctor Matt is 101]partial [end if]success at Trevor Labs. The mouse is [if HP of Doctor Matt > 101]very [end if]pleased with the results.";
 	if HP of Doctor Matt is 101:		[fled/lost fight]
 		say "     'While the infection was not complete, the partial effects you described should severely hamper his... ahem... her abilities to continue her research. At the very least, it will slow down their progress and I can take the lead. While it is unfortunate that you did not get their nanite adjustment system, its gains would have largely been short term. I should still be able to provide the same service as Dr Matt did for you. Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
-		waitlinebreak;
+		WaitLineBreak;
 		say "     'Now, I have taken the liberty of perusing the hospital files and preparing a false identity from the patient records when the military finally do move into the city[if susan]. I will prepare one for your friend as well[end if]. They are physically similar to you, have no next of kin and won't be turning up to throw a wrench into things.' It seems that the good doctor has been thinking ahead for you.";
 	if HP of Doctor Matt is 102:		[won fight - did not keep Sally]
 		say "     'From your report, you have done an excellent job. The complete removal of my rival as competition to discover the nanites['] secrets will make my knowledge all the more valuable. And these notes and equipment will be of great benefit in the here and now.'";
 		say "     'With them, I can more readily test the parameters of the nanites['] abilities and distribute any improvements I discover much more easily. Once I have this hooked up, I should be able to provide services like the doctor did, but with many more options to you. Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
-		waitlinebreak;
+		WaitLineBreak;
 		say "     'Now, I have taken the liberty of perusing the hospital files and preparing a false identity from the patient records when the military finally do move into the city[if susan]. I will prepare one for your friend as well[end if]. They are physically similar to you, have no next of kin and won't be turning up to throw a wrench into things.' It seems that the good doctor has been thinking ahead for you.";
 		now featunlock is 1;
 	if HP of Doctor Matt is 103:		[took from empty lab]
 		say "     'You have done an excellent job. This device just what I need to more readily test the parameters of the nanites['] abilities and distribute any improvements I discover much more easily. Once I have this hooked up, I should also be able to provide many more options to you with it. Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
-		waitlinebreak;
+		WaitLineBreak;
 		now featunlock is 1;
 	if HP of Doctor Matt is 104:		[kept Sally]
 		say "     'From your report, you have done an excellent job. Making my rival into a mindless slut completely removes him as competition to discover the nanites['] secrets and will make my knowledge all the more valuable. The good doctor is of little use to me in his - or should I say her - current state, so you are welcome to keep her for your own amusement, as agreed. And these notes and equipment will be of great benefit in the here and now.'";
 		say "     'With them, I can more readily test the parameters of the nanites['] abilities and distribute any improvements I discover much more easily. Once I have this hooked up, I should be able to provide services like the doctor did, but with many more options to you. Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
-		waitlinebreak;
+		WaitLineBreak;
 		say "     'Now, I have taken the liberty of perusing the hospital files and preparing a false identity from the patient records when the military finally do move into the city[if susan]. I will prepare one for your friend as well[end if]. They are physically similar to you, have no next of kin and won't be turning up to throw a wrench into things.' It seems that the good doctor has been thinking ahead for you.";
 		now featunlock is 1;
 	if susan is visible:
 		say "     'Your friend should stay here for the moment as well. If this Dr Matt found value in observing her, I should do so also. It sounds like he left you with nothing to do all day, my dear deer. Perhaps you would be willing to help me out with a few simple tasks around the lab?' Susan smiles and nods politely to the little white mouse.";
-		waitlinebreak;
+		WaitLineBreak;
 	now hospquest is 14;
 	say "     'Now, as a reward for your continued service,' he says, turning back to you. 'I have prepared an injection to boost your physical abilities. It should result in increased physical strength, agility and endurance, as well as a more athletic body. It will also work to keep you physically fit against weaker infections. This should further obscure your identity should you not change species before being found.'";
 	say "     With the promise of being stronger and better able to deal with the hardships of the infected city, you hold out your arm for the injection. There is a shiver of activity inside you as the nanites go to work, bulking up your muscles and improving your physique as a whole. You become a more rugged version of yourself[if susan is visible]. Susan seems quite impressed by this improved version of you[end if].";
@@ -1484,14 +1486,15 @@ Object	Name
 Dinosaur Nest	"Dinosaur Nest"
 
 Dinosaur Nest is a situation.
-The sarea of Dinosaur Nest is "Museum".
+ResolveFunction of Dinosaur Nest is "[ResolveEvent Dinosaur Nest]".
+Sarea of Dinosaur Nest is "Museum".
 Dinosaur Nest is inactive.		[unable to do this until activated]
 nesteddino is a number that varies.
 dinonest is a number that varies.
 dnfightresult is a number that varies.
 valhosp is a number that varies.
 
-Instead of resolving a Dinosaur Nest:
+to say ResolveEvent Dinosaur Nest:
 	if nesteddino is 0:
 		now nesteddino is 1;
 		say "     Your search of the museum brings you to the dinosaur wing. There the great thunderlizards are on display. You try to move quietly between the displays, trying to fulfill, perhaps foolishly, Dr Mouse's request for dinosaur hunting. You move around, eventually find a large pile of junk in one corner that may be what you're looking for. A mound of debris, tacky cushions, kitschy knick-knacks and old clothes have been build into a large nest. You head over to it and start poking through it in the hopes of finding something.";
@@ -1516,7 +1519,7 @@ Instead of resolving a Dinosaur Nest:
 	if dnfightresult is 1:		[win]
 		say "     Having bested the triceratops woman, you can finish searching her nest in the hopes of finding something to satisfy the mouse doctor. You dig around in her collection of old stuff, but don't see anything for some time. Eventually, you instead smell something and soon track the scent to a lava lamp. Unplugged, the glass lamp is off its stand and is coated in a wet sheen of fluids. Guessing the strange creature has been using it for some improvised fun, you wrap it in a paisley shirt and pack it away.";
 		say "     Lava lamp collected.";
-		increase carried of lava lamp by 1;
+		ItemGain lava lamp by 1;
 		increase score by 10;
 		now Dinosaur Nest is resolved;
 
@@ -1525,7 +1528,7 @@ name	desc	weight	object
 "lava lamp"	"     Inside the paisley shirt, you see a rather sticky lava lamp."	3	lava lamp
 
 lava lamp is a grab object.
-it is part of the player.
+
 It is not temporary.
 lavalamplick is a number that varies.
 
@@ -1596,14 +1599,15 @@ Object	Name
 Viking Longboat	"Viking Longboat"
 
 Viking Longboat is a situation.
-The sarea of Viking Longboat is "Museum".
+ResolveFunction of Viking Longboat is "[ResolveEvent Viking Longboat]".
+Sarea of Viking Longboat is "Museum".
 Viking Longboat is inactive.		[unable to do this until activated]
 lbfight is a number that varies.
 longboatfind is a number that varies.
 rondahosp is a number that varies.
 rodhosp is a number that varies.
 
-Instead of resolving a Viking Longboat:
+to say ResolveEvent Viking Longboat:
 	if longboatfind is 0:
 		say "     Traveling through the museum, you come to the exhibits dealing with the Middle Ages in Europe and its centerpiece, the Viking longboat. It is a huge ship with a carved dragon at its prow and wooden shields and spears along each side. It is on display in the center of the room, taking up most of the space in the large hall, with a velvet rope barrier around it. You are about to hop the barrier when you realize that you need to find a way to scale the ship and get aboard.";
 		say "     Looking around, you spot a tall ladder off to the side where finishing touches to this wing's new display were being made. Grabbing it, you bring it over to the ship with greedy glee in your eyes. You hop the red rope and start towards the ship, only to be halted by a loud call of 'Stop right there!' You freeze and turn, finding yourself being approached by a big, hulking brute of fur and menace wearing a security guard's uniform. You drop the ladder and prepare to defend yourself.";
@@ -1626,8 +1630,7 @@ Instead of resolving a Viking Longboat:
 		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 18:
 			say "Nimbly dashing across the collapsing ship, you manage to make it to the ladder and slide down it, barely touching the rungs at all. You drop the last five feet onto all fours as more ancient lumber rains down and the ladder sways. You scramble back quickly away from the devastated relic until the dust settles. You pull out the two green gems from your pack and look at them before tucking them away again. You look over the heap and decide to grab a souvenir for yourself, swiping one of the spears from the ruined display to add to your arsenal.";
-			say "     Spear added to inventory. Stabby-stabby!";
-			increase carried of spear by 1;
+			ItemGain spear by 1;
 			increase score by 20;
 			now Resolution of Viking Longboat is 1; [stole the spear]
 		else:
@@ -1638,19 +1641,14 @@ Instead of resolving a Viking Longboat:
 		now nerminepackage is 3;
 		now Viking Longboat is resolved;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"spear"	"A Viking spear retrieved from the museum. It is in very good condition for its age."	4	spear
+[spear moved to Core Mechanics/Weapons.i7x]
 
-spear is an armament. It is part of the player. It has a weapon "[one of]your spear[or]the Viking spear[at random]". The weapon damage of spear is 9. The weapon type of spear is "Melee". It is not temporary.
-
-the scent of the spear is "The Viking spear smells of ancient battles. The scent gets your blood pumping for battle.".
 
 Instead of conversing the Nermine while nerminepackage is 3:
-	increase carried of package by 1;
 	say "     'Have you been finding the dragon's eyes for Nermine?' she asks. 'Wonderful. Most beautiful,' she says as she holds them up to the light and gazes through them. 'Even older than I thought, long before put on that ship. Long history. Nermine is very pleased to have these. So much so I will give you some advice.'";
 	say "     'White mousey doctor is wanting something from Nermine's shop. People who want things from my store often get exactly what they were looking for. Be careful with mousey doctor, not get hurt,' the jackal woman says. 'The item in the box is quite old, much of its strength has faded, but it still came from a powerful creature long ago.'";
-	say "     The package for Dr Mouse has been obtained.";
+	say "     [bold type]You gain a package for Dr Mouse![roman type]";
+	ItemGain package by 1;
 	if spear is owned:
 		say "     'And you appear to be most lucky, little helper,' she adds, taking note of the spear you have. 'That is spear of great Viking chief who commanded the boat. A rare find, such a thing,' she says with a little greed in her eye, as if trying to come up with a suitable trade to tempt it away from you.";
 	increase score by 10;
@@ -1661,7 +1659,7 @@ name	desc	weight	object
 "package"	"The sealed package for Doctor Mouse from Nermine's shop. There are some Greek letters scrawled on one side, but you are unable read it."	5	package
 
 package is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 instead of using package:
@@ -1702,8 +1700,8 @@ to say hospquestpt11:
 				say "     He hands the device over to you to examine. 'Should you make contact with an unknown infection source, you can use the device to check to what degree and which strain has infected your body. Being out in the field, I suspect such a device will be of some use to you as some strains may be difficult to diagnose until further secondary features or behaviors arise.'";
 				WaitLineBreak;
 				say "     'The strap can be placed around your wrist, ankle or other limb. It could even be used with the contacts pressed to your body, if you were ever changed to such a radical degree. To check yourself, simply connect it to the analysis unit and press these buttons,' he says as he indicates them, 'to show you how the infection has spread through your body. It has a catalog drawn from this terminal, but unfortunately must remain keyed to you to work and so it presently can't be used to check others.'";
-				say "     Infection monitor obtained. (Quick command: [bold type]pism[roman type])[line break]";
-				increase carried of infection monitor by 1;
+				ItemGain infection monitor by 1;
+				say "     (Quick command: [bold type]pism[roman type])[line break]";
 				increase score by 10;
 
 to say hospquestpt12:

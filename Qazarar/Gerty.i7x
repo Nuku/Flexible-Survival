@@ -10,7 +10,7 @@ Version 1 of Gerty by Qazarar begins here.
 [	5: Kyle threesome available (If sexing Kyle)               ]
 [	6: did threesome                                           ]
 
-[ hp of Gerty                                                ]
+[ HP of Gerty                                                ]
 [   0: NPC not placed                                        ]
 [   1: NPC in the mall lockerroom                            ]
 [   2: NPC in the library                                    ]
@@ -23,7 +23,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Gerty	"Gerty"
 
-Gerty is a man. The hp of Gerty is usually 0.
+Gerty is a man. The HP of Gerty is usually 0.
 [Physical details as of game start]
 ScaleValue of Gerty is 3. [human sized]
 SleepRhythm of Gerty is 0. [0 - awake at all times, 1 - day active, 2 - night active]
@@ -51,13 +51,13 @@ PenileVirgin of Gerty is true.
 SexuallyExperienced of Gerty is false.
 MainInfection of Gerty is "".
 [Gerty will be moved to the Tenvale College Library through Kyle content]
-The description of Gerty is "[GertyDesc]".
-The conversation of Gerty is { "<This is nothing but a placeholder!>" }.
+Description of Gerty is "[GertyDesc]".
+Conversation of Gerty is { "<This is nothing but a placeholder!>" }.
 The scent of Gerty is "     Gerty smells like X.".
 
 to say GertyDesc:
 	if debugactive is 1:
-		say "DEBUG -> GertyRelationship: [GertyRelationship], HP: [hp of Gerty] <- DEBUG[line break]";
+		say "DEBUG -> GertyRelationship: [GertyRelationship], HP: [HP of Gerty] <- DEBUG[line break]";
 	say "     Gerty seems to essentially be an extremely large snake, when positioned upright his head being about as high up as an average person. His scales are mostly green, with a yellow pattern on the top of his head that seems to go back and down. Unlike most of the transformed you have seen, he lacks natural arms entirely on his new form. However, he has a slightly ragged looking harness about relative to his head as you would expect a torso to be, attached to some rather impressive mechanical prostheses that seem to replace them. His mechanical arms and snake-like torso give him the overall appearance of a Naga.";
 
 Section 2 - Talk

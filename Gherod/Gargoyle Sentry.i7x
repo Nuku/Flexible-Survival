@@ -17,7 +17,8 @@ Object	Name
 Gargoyle Sentry	"Gargoyle Sentry"
 
 Gargoyle Sentry is a situation.
-The sarea of Gargoyle Sentry is "Outside".
+ResolveFunction of Gargoyle Sentry is "[ResolveEvent Gargoyle Sentry]".
+Sarea of Gargoyle Sentry is "Outside".
 When play begins:
 	add Gargoyle Sentry to BadSpots of MaleList;
 	add Gargoyle Sentry to BadSpots of VoreList;
@@ -42,7 +43,7 @@ a postimport rule: [fix for having set the event as resolved prematurely in a pr
 	if Resolution of Gargoyle Sentry < 4:
 		now Gargoyle Sentry is not resolved;
 
-instead of resolving a Gargoyle Sentry:
+to say ResolveEvent Gargoyle Sentry:
 	if GargoyleSentryTracker - turns < 7: [encountered the gargoyle in the current day]
 		say "     It is too early for that. You have already seen the gargoyle sentry today, and he takes time to appear again.";
 	else if resolution of Gargoyle Sentry is 0: [never looked into the chest]
@@ -75,7 +76,7 @@ instead of resolving a Gargoyle Sentry:
 		SGargoyleVisit;
 
 to SGargoyleExplore:
-	decrease carried of glowing mushroom by 1;
+	ItemLoss glowing mushroom by 1;
 	say "     Down the hatch goes a shroom, and you start feeling the effects almost immediately. The world around you shifts before your eyes as you feel yourself shrinking to only a few inches tall, [if player is not naked]having even shrunk through your gear and getting completely naked[else]your already naked body remaining as such, even more exposed to danger[end if]. Adrenaline rushes with the anticipation of attempting your dangerous plan before you dare to take a tiny step towards the stone perimeter. Relief arrives down your shoulders as your tiny feet makes it forward without anything out of the ordinary happening, so you start walking around slowly and, effectively, everything goes according to plan. Now that you're inside the safety perimeter, it's time to explore!";
 	say "     The muscular gargoyle sleeps soundly and still, looking menacingly huge from your perspective of view. You don't even want to imagine what he could do to you being of that size if he suddenly came to life and saw an intruder so small and vulnerable, meaning you shouldn't linger for long. Making your way through the rudimentary stone pavement, you head directly towards the place where you've seen the goods, a much longer way than what it would be if you were normal sized... But you manage, after about a few minutes of walking. Then, you climb up through some stones, a task surprisingly easier to accomplish while you're tiny and light, and walk over the edge of some sort of chest. Luckily, it's not closed, as there are a few objects holding the top up in place. The bottom shines, as there must be a few valuables in here!";
 	WaitLineBreak;
@@ -140,19 +141,19 @@ to SGargoyleSearch: [Player searches for gargoyle sentry...]
 			if randomnumber is:
 				-- 1:
 					say "     But not everything is bad. You managed to find a [bold type]bottle of clean water[roman type] during your search, lying abandoned in some random area where it could have possibly been dropped by someone, forgotten or both.";
-					increase carried of water bottle by 1;
+					ItemGain water bottle by 1 silently;
 				-- 2:
 					say "     But not everything is bad. You managed to find a [bold type]soda can[roman type] during your search, lying abandoned in some random area where it could have possibly been dropped by someone, forgotten or both.";
-					increase carried of soda by 1;
+					ItemGain soda by 1 silently;
 				-- 3:
 					say "     But not everything is bad. You managed to find a [bold type]can of food[roman type] during your search, lying abandoned in some random area where it could have possibly been dropped by someone, forgotten or both.";
-					increase carried of food by 1;
+					ItemGain food by 1 silently;
 				-- 4:
 					say "     But not everything is bad. You managed to find a [bold type]pack of chips[roman type] during your search, lying abandoned in some random area where it could have possibly been dropped by someone, forgotten or both.";
-					increase carried of chips by 1;
+					ItemGain chips by 1 silently;
 				-- 5:
 					say "     But not everything is bad. You managed to find a [bold type]bottle of dirty water[roman type] during your search, lying abandoned in some random area where it could have possibly been dropped by someone, forgotten or both.";
-					increase carried of dirty water by 1;
+					ItemGain dirty water by 1 silently;
 			say "     Whenever you are ready to continue your search, simply begin your hunt for the [bold type]Gargoyle Sentry[roman type] until you find him.";
 		else:
 			say "     Whenever you are ready to continue your search, simply begin your hunt for the [bold type]Gargoyle Sentry[roman type] until you find him.";
@@ -380,7 +381,7 @@ to SGargoyleScene3:
 			SGargoyleScene3Respect;
 		else: [Not a failure yet, but the player is struggling...]
 			say "     Your first attempt at it is not very successful, as the creature is enormously heavy. 'Oh? Trying to break free and ignoring my request?! Sounds like a punishment, for you.' he threats you as he is about to tighten his constriction around you, but bolstering up what remains of your strength, you do one last try...";
-			WaitLinebreak;
+			WaitLineBreak;
 			let bonus be (( strength of player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Strength Check):[line break]";
@@ -464,8 +465,8 @@ SexuallyExperienced of Krumirr is false.
 TwistedCapacity of Krumirr is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Krumirr is true. [steriles can't knock people up]
 MainInfection of Krumirr is "Gargoyle".
-The description of Krumirr is "[Krumirrdesc]".
-The conversation of Krumirr is { "<This is nothing but a placeholder!>" }.
+Description of Krumirr is "[Krumirrdesc]".
+Conversation of Krumirr is { "<This is nothing but a placeholder!>" }.
 The scent of Krumirr is "     Krumirr's scent is animalistic, despite him being made of stone, or a hybrid between rock and flesh. It is also a very masculine one, and it is unlike most gargoyles".
 
 to say KrumirrDesc:
@@ -729,7 +730,7 @@ Object	Name
 Chapel Of Abyss	"Chapel Of Abyss"
 
 Chapel Of Abyss is a room. It is sleepsafe.
-The description of Chapel Of Abyss is "[ChapelAbyssDesc]".
+Description of Chapel Of Abyss is "[ChapelAbyssDesc]".
 
 to say ChapelAbyssDesc:
 	say "     This small chapel is surrounded only by darkness when its doors are closed behind you. Inside, you can see various different mementos, artifacts and talismans of different shapes, sizes and colors, all seemingly related to some sort of cult or religion. The floor is made of polished stone, and there is a pedestal in the center of the furthest wall where the Gargoyle Sentry poses during his dormant slumber. When he lets you in, his bright orange eyes are part of the scenery, no matter in which direction you glance towards.";

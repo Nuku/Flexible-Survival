@@ -6,12 +6,13 @@ Object	Name
 Horse Sense	"Horse Sense"
 
 Horse Sense is a situation.
-The sarea of Horse Sense is "Plains".
+ResolveFunction of Horse Sense is "[ResolveEvent Horse Sense]".
+Sarea of Horse Sense is "Plains".
 when play begins:
 	add Horse Sense to BadSpots of FurryList;
 	add Horse Sense to badspots of HermList;
 
-Instead of Resolving a Horse Sense:
+to say ResolveEvent Horse Sense:
 	say "     Finding your way through the plains, you let the cool wind blowing across the open grass fields brush over chest and torso, turning your lips up into a smile. With your [BodyName of Player] body relishing in the pure [']feel['] of all that the plains have to offer, you find yourself letting go of yourself so that your spirit can become wrapped up in sensations of listening to the fluttering grass underneath your feet and rumble of the clouding sky above your head. A crack of thunder disturbs you from your mental reprieve, though, and soon you find your eyes fluttering open just as the first few drops of rain trickle over and across your chest and face.";
 	let bonus be ( intelligence of Player + perception of Player - 20 ) / 2;
 	let dice be a random number from 1 to 20;
@@ -33,14 +34,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Victim	"Victim"
 
-Victim is a situation. The level of Victim is 8.
-The sarea of Victim is "Red".
+Victim is a situation.
+ResolveFunction of Victim is "[ResolveEvent Victim]". The level of Victim is 8.
+Sarea of Victim is "Red".
 when play begins:
 	add Victim to BadSpots of FurryList;
 	add Victim to badspots of HermList;
 	add Victim to BadSpots of MaleList;
 
-Instead of Resolving a Victim:
+to say ResolveEvent Victim:
 	say "     Passing through the streets of the red light district, you hear some commotion nearby and hide around a corner to listen in without being seen. Daring a glance, you can make out the figures of a pimp and a tigress hooker locked in a heated argument. The man is castigating her about something, and when she tries to defy him, his hand is out like a whip to slap her cheek roughly. The harsh impact knocks her to the pavement, and the pimp's temper boils over into shouts and biting insults. Squinting to see more clearly, you realize that he's been trying to force her to drink something, a bottle of milky white fluid clutched tightly in his other hand. The hermaphrodite tigress seems very reluctant to comply, but she hesitantly reaches up to grab the drink when the pimp raises his hand again.";
 	WaitLineBreak;
 	if strength of Player > 15:
@@ -72,9 +74,10 @@ Object	Name
 Runaway	"Runaway"
 
 Runaway is a situation.
-The sarea of Runaway is "Beach".
+ResolveFunction of Runaway is "[ResolveEvent Runaway]".
+Sarea of Runaway is "Beach".
 
-Instead of Resolving a Runaway:
+to say ResolveEvent Runaway:
 	say "     Walking across the sands of the long stretch of beach that the city has to offer you find a curious sight of what looks like a normal person sitting by themselves while shuffling their bare feet across the pale sands. Curious, you go over to them and then grunt to catch their attention when you realize that, yes indeed, the other is a full on human. What you find when the other turns around is a freckled faced boy of about seventeen looking up and down your [BodyName of Player] body somewhat curiously before he smiles up at you. 'Hello, come to watch the waves lap at the shore?' the young man says somewhat quietly. You look out at the small crashing waves and then turn back to the other to give a shake of your head. Telling them that you were actually curious about them and what they are doing here all alone, you find yourself slightly taking a step back when the other chuckles somewhat angrily all of a sudden.";
 	WaitLineBreak;
 	say "     'I ran away from home and found my way coming here. Why do you ask?' You blink at the freckled youth and then ask him if he has actually noticed what's going on around the city as of late. 'Oh...the stuff with the [']deadly['] outbreak? Yeah everyone on the outside knows about it. That's one of the reasons I came here. Nobody would think to look for me out here.' The young man then lowers his head somewhat to let his long shaggy black mane of hair cover his youthful face. 'My folks found out that I'm gay and got on my case pretty bad about it. Since there's a plague or virus or whatever going on around here I figured that this would be the best place to go to since home has just gotten unbearable. Heh, what better place to come for someone who's [']confused['] about their sexuality, right?' the young man scoffs disdainfully.";
@@ -100,15 +103,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Portrait	"Portrait"
 
-Portrait is a situation. The level of Portrait is 9.
-The sarea of Portrait is "Outside".
+Portrait is a situation.
+ResolveFunction of Portrait is "[ResolveEvent Portrait]". The level of Portrait is 9.
+Sarea of Portrait is "Outside".
 when play begins:
 	add Portrait to BadSpots of FurryList;
 	add Portrait to BadSpots of MaleList;
 	add Portrait to badspots of HermList;
 
 
-Instead of Resolving a Portrait:
+to say ResolveEvent Portrait:
 	say "     Making your way through the somewhat desolate streets of the infected city you find yourself stopping dead in your tracks as you notice someone with latex fox ears waving up on their head sitting in front of a large canvas and painting something or the other with their back turned towards you. Feeling particularly nosy at the moment you make you ease on over to the other to see what's going on here. When you do you find your eyes widening in surprise when you see the other person, who happens to be a foxy - in the literal sense of the word - female with a humam-like face wearing thin rimmed glasses, quickly swiping her brush over and along her slowly darkening canvas in an attempt to paint the city around her. From what you can see, despite the ruination that metropolis is in right now, the foxwoman is recreating a beautiful scene in front of her that speaks nothing of the debauchery and depravity that the city has fallen into.";
 	say "     Not seeing a reason to disturb the other you back away from the woman to leave her to her work, only to curse quietly when you spot several mutants coming your way. Looking to the woman and seeing that she's too focused to notice the oncoming danger, you grunt quietly and prepare to fight off the coming group of mutants.";
 	challenge "Husky Alpha";
@@ -126,12 +130,13 @@ Object	Name
 Hurting	"Hurting"
 
 Hurting is a situation.
-The sarea of Hurting is "Hospital".
+ResolveFunction of Hurting is "[ResolveEvent Hurting]".
+Sarea of Hurting is "Hospital".
 when play begins:
 	add Hurting to BadSpots of FurryList;
 	add Hurting to BadSpots of MaleList;
 
-Instead of Resolving a Hurting:
+to say ResolveEvent Hurting:
 	say "     Walking through the halls of the hospital, you find yourself stopping when a sudden loud and anguished whimpering noise catches your attention. On guard, you find yourself looking around and then tracking the helpless sound until you get to a half opened door that leads to an unfamiliar looking room. Cautiously stepping into the small but well-lit area, you creep over to have a look over an overturned desk, only to find someone... or rather something... hiding behind it. Not wanting to startle whoever is there, you make a small sound in the back of your throat and then watch as a head pops up to look at you. The face of one of the weasels that belong in the hospital's psychiatric ward looks at you timidly before ducking back down to whimper fretfully behind his hiding spot.[line break]";
 	say "     [bold type]Should you go over to see if something is wrong with them?[roman type][line break]";
 	LineBreak;
@@ -147,7 +152,7 @@ Instead of Resolving a Hurting:
 		if Player consents:
 			LineBreak;
 			say "     Realizing that going to find an orderly might be better than one of the nurses for the psychotic weasel, you go out to search for one of the jaguars to get their help. Finding one that isn't busy fucking a nurse you tell the other about the weasel hiding in one of the rooms and then have haul ass trying to catch up to the big cat as it charges off down the hall. Leading the other to the weasel you watch as the feline medical attendant goes over to the weasel and then kneels down to murmur something quietly into the psychotic male's ears. The weasel freezes for a split second and then nods gently before being hefted up into the muscular arms of the jaguar. Watching as the orderly carries the out of the room like a babe, more than likely back to a nice padded room you find yourself chuckling somewhat at how, even in the midst of all the insanity going on around here, others are still caring enough to aid those in greater need. The orderly says nothing to you, but you do spy something labeled as a libido suppressant lying on the desk where the feline had passed just a second ago. Maybe the other had left it there as payment for your services?";
-			increase carried of libido suppressant by 1;
+			ItemGain libido suppressant by 1;
 			SanBoost 5;
 			increase score by 5;
 			now Resolution of Hurting is 1; [called an Orderly]
@@ -172,14 +177,15 @@ Object	Name
 Conchien	"Conchien"
 
 Conchien is a situation.
-The sarea of Conchien is "Outside".
+ResolveFunction of Conchien is "[ResolveEvent Conchien]".
+Sarea of Conchien is "Outside".
 beauceronmet is a truth state that varies. beauceronmet is usually false.
 
 when play begins:
 	add Conchien to BadSpots of FurryList;
 	add Conchien to badspots of HermList;
 
-Instead of Resolving a Conchien:
+to say ResolveEvent Conchien:
 	now beauceronmet is true;
 	say "     Walking along the streets of the city, you find the ground suddenly shaking all of a sudden. Thinking that it's an earthquake you freeze and then whip your head around frantically look around for safe cover to stand upon to wait out the tremor. Before you can do that however, the shaking quickly comes to a halt. Confused as to what's going on you blanch when a large shadow crosses over you and then a large finger taps you lightly onto the shoulder. Gulping thickly you turn hesitantly only to see a twelve foot tall Beauceron cuntboy smiling down in your direction almost imploringly. With all the markings that would have made the other look somewhat like a giant Doberman, but not quite because of certain small differences, you find yourself coming to focus on the hot and dripping cunt of the other without really meaning to as the heady scent of canine musk begins to quickly perfume the air. The large folds are leaking a thick, but slow trail of clear honey down onto the ground between the other's feet and you swallow thickly as the scent of the cuntboy begins to get to you.";
 	say "     'Excuse me, have you seen a collie about my size around here anywhere?' You find yourself blinking and then pointing on down the street without thinking. 'Thanks.' The Beauceron places one of his large paws onto his brow and then squints as if trying to look far into the distance. 'Where in the heck did that cousin of mine go to?' the other says and then steps past you to go above to go about his way. The last you see of the other is the slightly curled tail of the Dobie lookalike disappearing down the road with a slight wag offsetting the huge furry appendage.";
@@ -193,14 +199,15 @@ Object	Name
 Chocolate Treat	"Chocolate Treat"
 
 Chocolate Treat is a situation.
-The sarea of Chocolate Treat is "High".
+ResolveFunction of Chocolate Treat is "[ResolveEvent Chocolate Treat]".
+Sarea of Chocolate Treat is "High".
 
 when play begins:
 	add Chocolate Treat to BadSpots of FurryList;
 	add Chocolate Treat to badspots of HumorousList;
 	add Chocolate Treat to badspots of HermList;
 
-Instead of Resolving a Chocolate Treat:
+to say ResolveEvent Chocolate Treat:
 	setmonster "Chocolate Lab";
 	say "     Wandering through the high rise district, you find yourself smelling a sweet scent wafting throughout the slightly musky air of the city, the likes of which cause your stomach to grumble. Feeling yourself growing hungry all of a sudden, you end up following the smell all the way until you notice several Chocolate Labs congregating around each other in a small puppy pile behind the back of a dilapidated building. There are numerous chocolate bar wrappers strewn about, the confectionary dogs clearly full and sated for the moment. The unusual dogs lie together, slightly flowing into one another as their liquid bodies seem to have no clear division between themselves and their neighbors. Not wanting to disturb the pack, but feeling slightly ravenous all the same from their scent, you don't notice when one of the flowing, chocolate canines comes up behind you until you feel something brushing up one side of your leg. Flipping your head around, you watch as the other pants happily up at you before lifting its leg slightly, as if knowing what you want. Understanding rushes through you as you find yourself slurping your lips while greedily eying the bobbing cock of the obviously horny Lab as it dribbles some white chocolate goo.";
 	say "     [bold type]Should you try and sate you appetite with a small taste?[roman type][line break]";

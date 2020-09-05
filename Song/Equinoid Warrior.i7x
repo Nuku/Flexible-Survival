@@ -15,12 +15,14 @@ Table of GameCharacterIDs (continued)
 object	name
 equinoid warrior	"equinoid warrior"
 
-equinoid warrior is a pet. equinoid warrior is a part of the player.
+equinoid warrior is a pet. equinoid warrior is a part of Player.
+NPCObject of equinoid warrior is Liliana.
 understand "Liliana" as equinoid warrior.
-The description of equinoid warrior is "[LilianaDesc]".
-The weapon damage of equinoid warrior is 7.
-The level of equinoid warrior is 3.
-The dexterity of equinoid warrior is 12.
+printed name of equinoid warrior is "Liliana".
+Description of equinoid warrior is "[LilianaDesc]".
+Weapon Damage of equinoid warrior is 10.
+The level of equinoid warrior is 1.
+Dexterity of equinoid warrior is 15.
 The summondesc of equinoid warrior is "[SummonLiliana]".
 The dismissdesc of equinoid warrior is "[DismissLiliana]".
 The assault of equinoid warrior is "[LilianaAttack]".
@@ -58,7 +60,7 @@ AnalVirgin of Liliana is false.
 PenileVirgin of Liliana is false.
 SexuallyExperienced of Liliana is true.
 MainInfection of Liliana is "Black Equinoid".
-The description of Liliana is "[LilianaDesc]".
+Description of Liliana is "[LilianaDesc]".
 
 to say LilianaDesc:
 	say "     This black equinoid may look a little younger than the others, but she's as much a warrior as the rest of her tribe. Liliana has a tall, imposing figure with strong muscles and a glossy coat of black hair. She has bright, hazel eyes and a pretty smile with white, flat teeth. She's dressed in a simple robe that covers but does not truly hide the shape of her muscled bosom or equine cock.";
@@ -66,6 +68,8 @@ to say LilianaDesc:
 		say "     At the moment, the equinoid warrior is relaxing and just enjoying the courtyard.";
 	else:
 		say "     At the moment, the proud warrior is looking around for any hint of trouble.";
+	if companion of Player is equinoid warrior:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing equinoid warrior:
 	say "[LilianaScent]";

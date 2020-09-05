@@ -60,9 +60,9 @@ AnalVirgin of Harold is true.
 PenileVirgin of Harold is false.
 SexuallyExperienced of Harold is true.
 MainInfection of Harold is "Unicorn".
-The description of Harold is "     Standing behind the bar is a well-built and rather horse-like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons. His slightly hoof-like hands not seeming to slow him down at all. A black leather vest resting against his pure white fur makes him look even more striking due to the sharp contrast of colors. Even more striking however is the spiraling horn emerging from the center of the equine's forehead. Its pearlescent sheen catching and reflecting the colored lights of the club, and making it seem to shimmer and burn with a small rainbow of color every time the unicorn bartender moves his head. Catching you looking in his direction, the equine barkeep winks at you and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.".
+Description of Harold is "     Standing behind the bar is a well-built and rather horse-like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons. His slightly hoof-like hands not seeming to slow him down at all. A black leather vest resting against his pure white fur makes him look even more striking due to the sharp contrast of colors. Even more striking however is the spiraling horn emerging from the center of the equine's forehead. Its pearlescent sheen catching and reflecting the colored lights of the club, and making it seem to shimmer and burn with a small rainbow of color every time the unicorn bartender moves his head. Catching you looking in his direction, the equine barkeep winks at you and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.".
 The icon of Harold is Figure of Harold_icon.
-The conversation of Harold is { "Glug glug!" }.
+Conversation of Harold is { "Glug glug!" }.
 
 the scent of Harold is "Harold has an equine scent laced faintly with that of several fine alcohols.".
 
@@ -106,8 +106,8 @@ instead of conversing the Harold:
 	else if Haroldtalk is 3 and ( carried of water bottle < 10 or carried of food < 10 ) and a random chance of 2 in 5 succeeds:
 		say "     [one of]Harold nods for you to come closer and then whispers, 'Did you ever get that food and water I asked you for?' Shaking your head you get a sigh out of the unicorn. 'Look, I know you're busy and all, but I [italic type]really[roman type] need ten things of food and ten things of water, if you can spare them. I'll try to make it worth your while if you can get them ASAP.' Nodding to the other man you tell him that you'll do the best you can.[or]'Did you have any luck finding those supplies I'd asked about?'[or]'Don't forget to keep your eyes open for some of the supplies we need here.'[or]'Most of the staff here don't have much time to collect supplies, so we need help from helpful patrons like you to keep us supplied.'[at random]";
 	else if Haroldtalk is 3 and carried of water bottle >= 10 and carried of food >= 10:
-		decrease carried of water bottle by 10;
-		decrease carried of food by 10;
+		ItemLoss water bottle by 10;
+		ItemLoss food by 10;
 		say "     When you walk up to Harold to let him know that you have the food and water he needs the unicorn quickly waves a hand to hush you and then nods for you to follow him back behind the bar. Once you're in the back Harold has you unload the food and water over by a small generator powered refrigerator unit and then leads you back to the front.";
 		say "     'Thanks a lot for this, I really appreciate it,' Harold whickers gratefully and you nod to the unicorn before turning to head off about your way. 'Hey, hold up a sec.' Stopping you turn to look back at Harold and then find yourself being handed something by the stallion. 'It's not much, but I wanted you to have this. Looking at what the unicorn hands you, you find yourself in possession of a good number of freecred. 'Some guys at Zephyr have been giving these out for nailing the beasts running around... so... yeah...' Wondering how Harold got a hold of these, considering that he's been at the bar the whole time, right before you shrug and then thank the other man for the gift. 'No problem!'";
 		increase freecred by 100;
@@ -319,7 +319,7 @@ object	name
 Drink bar	"Drink bar"
 
 Drink bar is a man.
-The description of Drink bar is "[drinkbardesc]".
+Description of Drink bar is "[drinkbardesc]".
 
 to say drinkbardesc:
 	say "     This well-stocked bar is full of a number of drinks you have never seen before. Some of them obviously were made on site or probably nearby, as they are stored in all sorts of different bottles that were clearly scavenged and cleaned for the purpose with their labels removed. A small sign on the bar lists the available drinks. To order a specific drink from the bar, merely [']Order <drink name>['], although a small notation on the drink sign does say that there is a daily drink limit. The list of drinks is as follows:";

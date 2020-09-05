@@ -14,9 +14,9 @@ understand "sniff [something]" as sniffing.
 understand "smell [something]" as sniffing.
 
 check sniffing:
-	if the location of the player is noun, continue the action;
+	if the Location of Player is noun, continue the action;
 	if noun is not visible, say "What? I don't see any [noun] around here to smell." instead;
-	if the companion of the player is noun:
+	if the Companion of Player is noun:
 		continue the action;
 	else if noun is a pet:
 		say "You don't have one of those with you right now." instead;
@@ -32,7 +32,7 @@ before sniffing:
 			say "I don't see any [Noun] around here to sniff.";
 			stop the action;
 	if the noun is a pet:
-		if the companion of the player is noun:
+		if the Companion of Player is noun:
 			increase score by 0;
 		else:
 			say "I don't see any [Noun] around here to sniff.";
@@ -61,8 +61,8 @@ understand "sniff around" as heresniffing.
 
 
 carry out heresniffing:
-	try sniffing the location of the player;
-[	repeat with X running through all the visible things in the location of the player:
+	try sniffing the Location of Player;
+[	repeat with X running through all the visible things in the Location of Player:
 		try sniffing X; ]
 
 
@@ -120,35 +120,11 @@ the scent of Lab Microwave is "The microwave smells a little from the dried stai
 
 the scent of Infection Terminal is "The infection terminal smells like old, vintage electronics from the time of DOS and dinosaurs.".
 
-the scent of water bottle is "The water bottle smells like plastic.".
-
-the scent of dirty water is "The dirty water smells a little off, but is still potable.".
-
-the scent of food is "The food smells [one of]good[or]appetizing[or]tasty[or]edible[at random].".
-
-the scent of pocketknife is "The pocketknife smells like metal.".
-
-the scent of chair is "The metal chair smells of metal and aging plastic.".
-
 the scent of journal is "The journal smells of cheap leather, paper and ink.".
-
-the scent of medkit is "The medkit smells like antiseptic.".
-
-the scent of face mask is "It smells pretty normal for a face mask; must still be good.".
-
-the scent of gryphon milk is "The milk smells faintly of those gryphon creatures.".
 
 the scent of distilled milk is "The powder smells faintly of milk.".
 
-the scent of glob of goo is "The goo smells faintly of fruit jelly, though you cannot pin down the specific scent.".
-
-the scent of soda is "The soda smells like a can of soda.".
-
-the scent of chips is "The snack treat smells like it's still good.".
-
 the scent of dog milk is "There is a definite dog scent to this milk.".
-
-the scent of cot is "The small cot smells a little moldy, but otherwise a fine spot to take a much-needed nap.".
 
 the scent of infection monitor is "The small device smells of electronics.".
 

@@ -9,11 +9,11 @@ Object	Name
 Ravaged Power Plant	"Ravaged Power Plant"
 
 Ravaged Power Plant is a situation.
+ResolveFunction of Ravaged Power Plant is "[ResolveEvent Ravaged Power Plant]".
 
-instead of resolving a Ravaged Power Plant:
+to say ResolveEvent Ravaged Power Plant:
 	say "     On your walk, you pass a building that was the power station for the city. Now it is dark and silent, and a large hole is smashed through one of the generators. Claw marks cover the floor and walls, and liquids of every kind litter the floor. The fence is also damaged, a large chunk flattened by some large creature that passed by.";
-	now Plant Overview is known;
-	say "     The power plant lobby is nearby, maybe you could return?";
+	AddNavPoint Plant Overview;
 	now Ravaged Power Plant is resolved;
 
 foundparts is a number that varies.
@@ -23,8 +23,9 @@ Object	Name
 Generator Parts	"Generator Parts"
 
 Generator Parts is a situation.
+ResolveFunction of Generator Parts is "[ResolveEvent Generator Parts]".
 
-instead of resolving a Generator Parts:
+to say ResolveEvent Generator Parts:
 	if foundparts is 0:
 		say "     You find a small pile of what looks to be parts of a machine. Or quite a few machines actually. There are dozens and dozens of spark plugs in it, as well as some small circuit boards and various other bits that are harder to identify. Some parts have US Army Part ID numbers engraved on their sides, so they were removed from military equipment. It seems that someone is going around ripping essential parts out of any motor and generator they can find. This must be hindering recovery efforts quite a bit, with how dependent civilization is on electricity. Sadly, you have no idea where this all came from, so even if you took some bits, there is little chance it would be of any use.";
 		now foundparts is 1;
@@ -80,20 +81,20 @@ Control Room is a room. "The Control Room overlooks the plant's generators. Surp
 Control Room is above Plant Lobby.
 
 control panels is a thing. A control panels is in Control Room.
-The description of control panels is "[ControlPanelDesc]".
+Description of control panels is "[ControlPanelDesc]".
 
 to say ControlPanelDesc:
 	if fixedgens < 2:
-		say "The panels are glowing softly, every light red. A small schematic shows that the intact generator is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [bold type]reactivate[roman type] them?";
+		say "The panels are glowing softly, every light red. A small schematic shows that the intact generator is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [link][bold type]reactivate[roman type][as]reactivate control panels[end link] them?";
 	else if fixedgens is 2:
-		say "The panels are glowing softly, all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [bold type]reactivate[roman type] them?";
+		say "The panels are glowing softly, all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [link][bold type]reactivate[roman type][as]reactivate control panels[end link] them?";
 	else if fixedgens is 3:
 		say "The panels are glowing softly, all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, with at least those few lights now shining green. You doubt you'll have as much luck with getting the rest of the city supplied with power again.";
 
 catwalk door is a door.
 catwalk door is lockable and locked.
 catwalk door is west of Control Room.
-The description of catwalk door is "A door in the west wall allows access to the catwalks in the main power plant hall. It's made from metal and looks pretty solid and thick, most likely to stop the uncomfortably loud noise of a whole powerplant's worth of huge generators from damaging the hearing of the operators in here. Several hooks on the wall besides the door hold ear protectors - though you won't need one of those, with most generators destroyed now.".
+Description of catwalk door is "A door in the west wall allows access to the catwalks in the main power plant hall. It's made from metal and looks pretty solid and thick, most likely to stop the uncomfortably loud noise of a whole powerplant's worth of huge generators from damaging the hearing of the operators in here. Several hooks on the wall besides the door hold ear protectors - though you won't need one of those, with most generators destroyed now.".
 
 when play begins:
 	add { "yellow construction helmet" } to invent of control room;
@@ -103,12 +104,12 @@ Object	Name
 Administration Offices	"Administration Offices"
 
 Administration Offices is a room. Administration Offices is north of Plant Lobby.
-The description of Administration Offices is "There isn't much left of the corridor and adjoining offices that formed the administration of the power plant. Looks like some sort of pyromaniac scattered papers and trashed furniture all throughout and set them ablaze. Thankfully the automatic sprinklers seem to have worked and stopped the whole building from burning down.".
+Description of Administration Offices is "There isn't much left of the corridor and adjoining offices that formed the administration of the power plant. Looks like some sort of pyromaniac scattered papers and trashed furniture all throughout and set them ablaze. Thankfully the automatic sprinklers seem to have worked and stopped the whole building from burning down.".
 Instead of sniffing Administration Offices:
 	say "     The scent of wet ash hangs in the air.";
 
 cat key is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 instead of using cat key:
@@ -163,7 +164,7 @@ understand "activate control panels" and "activate controls" and "activate panel
 
 carry out activating:
 	if findwires is 0:
-		if a random number between one and 20 > the intelligence of the player:
+		if a random number between one and 20 > Intelligence of Player:
 			say "The lights stay red, even though you are trying hard to understand the buttons.";
 		else:
 			say "You use your superior intelligence to turn off the emergency shutdown.";
@@ -186,7 +187,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Power Lines	"Power Lines"
 
-Power Lines is a room. "A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. Looking down the line of other still standing towers, you see the city's powerplant not too far away in one direction, and a part of the city you know pretty well in the other. The library is over there, and the mall as well. Maybe you could restore power to them if you [bold type]fixed[roman type] this tower[else if fixedgens is 2]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. A red light is glows at its uppermost tip, signaling that there is power and it's flowing towards the closest part of the city - which should include the library as well as the mall[else]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. The now unbroken lines should allow electricity to reach the nearby part of the city again, though you see that the red light at the uppermost tip of the tower is still off, showing that there is no power. Maybe you should check out the power plant again[end if].".
+Power Lines is a room. "A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. Looking down the line of other still standing towers, you see the city's powerplant not too far away in one direction, and a part of the city you know pretty well in the other. The library is over there, and the mall as well. Maybe you could restore power to them if you [link][bold type]fixed[roman type][as]fix tower[end link] this tower[else if fixedgens is 2]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. A red light is glows at its uppermost tip, signaling that there is power and it's flowing towards the closest part of the city - which should include the library as well as the mall[else]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. The now unbroken lines should allow electricity to reach the nearby part of the city again, though you see that the red light at the uppermost tip of the tower is still off, showing that there is no power. Maybe you should check out the power plant again[end if].".
 Power Lines is fasttravel.
 the earea of Power Lines is "Outside".
 
@@ -207,7 +208,7 @@ check towerfixing:
 
 carry out towerfixing:
 	say "After reattaching one power line that must have ripped off when the tower was damaged, you lift the tower top, grunting even though it's somewhat lighter than you expected. You tilt it, and try to align the bottom of the top to the top of the bottom.";
-	if a random number between one and 20 > the strength of the player:
+	if a random number between one and 20 > Strength of Player:
 		say "The tower top slips, and falls. Maybe you could try to fix it again?";
 	else:
 		say "The tower top slides into place, and the stress on the wires is released.";
@@ -220,7 +221,7 @@ carry out towerfixing:
 Section X - Library Computer
 
 library computer is a thing.
-library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless. You can try to [bold type]turn on the computer[roman type][else]One of the nearby computers is on, but unused. Its screen shows a somewhat garbled screen saver[end if].";
+library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless. You can try to [link][bold type]turn on the computer[roman type][as]turn on computer[end link][else]One of the nearby computers is on, but unused. Its screen shows a somewhat garbled screen saver[end if].";
 
 an everyturn rule:
 	if library computer is unpowered and findwires is 2 and fixedgens > 2:

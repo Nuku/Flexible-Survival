@@ -81,7 +81,7 @@ to say AnastasiaOfferingMenu:
 
 to say AnastasiaOfferingTalk1:
 	say "     You pull out some of the demon seed that you had collected and hand it to Anastasia. The demon prince looks down at the container and gently swishes the liquid around. With a quick wink of his eye, he tips his head back and chugs all of it down in one go. 'Ahhh, nothing like some liquid virility with a hint of hellfire. Thanks, [italic type][master][roman type]!";
-	delete demon seed;
+	ItemLoss demon seed by 1;
 	if Loyalty of Anastasia < 10:
 		increase Loyalty of Anastasia by 1;
 
@@ -111,7 +111,7 @@ Section 3 - Anastasia Master/Slave Events
 
 after going to Grey Abbey Library while (Anastasia is booked and Loyalty of Anastasia is 10 and (the number of bunkered people + the number of booked people > 5) and "Unchained" is listed in Traits of Anastasia):
 	if debugactive is 1:
-		say "     DEBUG: Anastasia WALK-IN - HP OF Anastasia: [HP of Anastasia], Loyalty of Anastasia: [Loyalty of Anastasia][line break]";
+		say "     DEBUG: Anastasia WALK-IN - HP of Anastasia: [HP of Anastasia], Loyalty of Anastasia: [Loyalty of Anastasia][line break]";
 	say "     As you walk into the main lobby of the library, your attention is drawn to the huge demon prince sitting on one of the torn up comfy chairs, his boisterous laughter echoing throughout the building. 'Then there was this one time that my army attacked another hell realm. Of course we won, but the best part was when it came to the spoils! My imps brought in these two captives from the enemy, a guy and a girl who apparently were the prince and princess of their realm. Well, with one look, I knew exactly what needed to be done! So I grabbed the girl and pounded her pussy right there in front of her brother, and pretty soon, the screams turned into moaning, and I shot my load into the bitch haha! Being the nice ruler that I am though, I wasn't about to let her brother feel left out, so while she was passed out, I bent him over my throne. Damn, that slut was a squealer! By the end of the day, I had both of them worshiping my cock like they were born for it.'";
 	say "     Anastasia is apparently sharing his past conquests with your allies, some seem amused while others seem a bit disgusted. You are about to turn and leave when something else catches your ear. 'It's the same way with my new [italic type][master][roman type]. [SubjectProCap of Player] may act like [SubjectPro of Player] is in charge, but when we are alone, it's a completely different story. I mean, I can't keep the li'l subby slut off of my cock!' While Anastasia sharing his past with the others and attempting to open up about himself isn't necessarily a bad thing, talking about you and what happens between the two of you is a completely different matter.";
 	LineBreak;
@@ -176,12 +176,12 @@ after going to Grey Abbey Library while (Anastasia is booked and Loyalty of Anas
 
 [after going to Half-Renovated Room while (HP of Anastasia > 1 and Loyalty of Anastasia is 10):
 	if debugactive is 1:
-		say "     DEBUG: Anastasia WALK-IN - HP OF Anastasia: [HP of Anastasia], Loyalty of Anastasia: [Loyalty of Anastasia][line break]";
+		say "     DEBUG: Anastasia WALK-IN - HP of Anastasia: [HP of Anastasia], Loyalty of Anastasia: [Loyalty of Anastasia][line break]";
 	say "     As you walk into the somewhat renovated room, your eyes are drawn to the demonic slave reclining in his high-backed chair. Anastasia's glowing eyes follow your every move while his scaled tail whips around restlessly behind him.";
 
 	after going to Breakroom while (HP of Anastasia > 1 and Loyalty of Anastasia is 10):
 		if debugactive is 1:
-			say "     DEBUG: Anastasia WALK-IN - HP OF Anastasia: [HP of Anastasia], Loyalty of Anastasia: [Loyalty of Anastasia][line break]";
+			say "     DEBUG: Anastasia WALK-IN - HP of Anastasia: [HP of Anastasia], Loyalty of Anastasia: [Loyalty of Anastasia][line break]";
 	say "     ...";]
 
 Anastasia Loyalty ends here.]

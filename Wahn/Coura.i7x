@@ -109,8 +109,8 @@ object	name
 Cole	"Cole"
 
 Cole is a man.
-The description of Cole is "[ColeDesc]".
-The conversation of Cole is { "<This is nothing but a placeholder!>" }.
+Description of Cole is "[ColeDesc]".
+Conversation of Cole is { "<This is nothing but a placeholder!>" }.
 The scent of Cole is "     ....".
 
 to say ColeDesc:
@@ -121,8 +121,8 @@ object	name
 Coura	"Coura"
 
 Coura is a woman.
-The description of Coura is "[CouraDesc]".
-The conversation of Coura is { "<This is nothing but a placeholder!>" }.
+Description of Coura is "[CouraDesc]".
+Conversation of Coura is { "<This is nothing but a placeholder!>" }.
 The scent of Coura is "     ....".
 
 to say CouraDesc:

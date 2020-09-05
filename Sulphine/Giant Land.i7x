@@ -13,7 +13,7 @@ instead of sniffing magic beans:
 	say "     smell";
 
 magic beans is a grab object. magic beans is not temporary.
-the usedesc of magic beans is "[magic beans use]";
+Usedesc of magic beans is "[magic beans use]";
 
 to say magic beans use:
 	say "     You play around a little with the magic beans, but don't find them all that interesting. Maybe you should plant them in the right spot?";

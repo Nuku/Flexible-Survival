@@ -38,8 +38,10 @@ Table of GameCharacterIDs (continued)
 object	name
 Retriever Girl	"Retriever Girl"
 
-Retriever Girl is a pet. Retriever Girl is a part of the player.
+Retriever Girl is a pet. Retriever Girl is a part of Player.
+NPCObject of Retriever Girl is Karen.
 understand "Karen" as Retriever Girl.
+printed name of Retriever Girl is "Karen".
 [Physical details as of game start]
 ScaleValue of Retriever Girl is 3. [human sized]
 Body Weight of Retriever Girl is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
@@ -77,10 +79,10 @@ AnalVirgin of Retriever Girl is true.
 PenileVirgin of Retriever Girl is true.
 SexuallyExperienced of Retriever Girl is true.
 MainInfection of Retriever Girl is "Retriever Female".
-The description of Retriever Girl is "[KarenDesc]".
-The weapon damage of Retriever Girl is 7.
-The level of Retriever Girl is 5.
-The Dexterity of Retriever Girl is 18.
+Description of Retriever Girl is "[KarenDesc]".
+Weapon Damage of Retriever Girl is 10.
+The level of Retriever Girl is 1.
+Dexterity of Retriever Girl is 10.
 The summondesc of Retriever Girl is "[SummonKaren]".
 The dismissdesc of Retriever Girl is "[DismissKaren]".
 The assault of Retriever Girl is "[one of]Stepping forward quickly, [or]Circling around behind the enemy, [or]Rushing recklessly towards your foe, [or][at random]Karen [one of]strikes with her short claws[or]attacks with a swift, low kick[or]clips the opponent with a quick strike as she runs past[at random].".
@@ -105,7 +107,7 @@ object	name
 Karen	"Karen"
 
 Karen is a woman.
-The description of Karen is "[KarenDesc]".
+Description of Karen is "[KarenDesc]".
 MainInfection of Karen is "Retriever Female".
 
 instead of sniffing Karen:
@@ -227,21 +229,22 @@ Object	Name
 Forgotten Past	"Forgotten Past"
 
 Forgotten Past is a situation.
+ResolveFunction of Forgotten Past is "[ResolveEvent Forgotten Past]".
 Forgotten Past is inactive. [Disabled for reactivation after the player talked to Francois]
-The sarea of Forgotten Past is "Campus".
+Sarea of Forgotten Past is "Campus".
 
 an everyturn rule:
 	if Forgotten Past is inactive and HP of Karen > 6 and HP of Karen < 100:
 		now Forgotten Past is active;
 
-Instead of resolving a Forgotten Past:
+to say ResolveEvent Forgotten Past:
 	if HP of Karen is 7 and companion of Player is Retriever Girl:
 		say "     While exploring a secluded hall of the campus, Karen suddenly stops. You look back at her as her ears perk up. 'I know this place,' she says, lifting her nose to the air and taking a few sniffs. 'I can smell... me.' Striding purposefully down the hall, Karen continues following her nose, pausing briefly at each locker she passes. Finally she stops, several meters down the hall in front of a still-sealed locker. 'This one, it's this one. This was my locker,' she says softly, taking hold of the small pink padlock. 'Can you help me get it open?'";
 		say "     A short while later you finally manage to [if intelligence of Player > strength of Player]open the lock with a makeshift shim[else]break the door off its hinges with a liberal application of brute force[end if]. Stepping aside, you let Karen open the door and peer inside. The locker is filled mostly with textbooks pertaining primarily to animal medicine. It seems she was studying for a veterinary degree at the campus. 'I was going to be a vet... and now here I am, a dog,' she says, running a paw along the neatly stacked books. With a sigh she continues her search of the locker. While most of the locker's contents prove unhelpful, she does find a large book bag, which will hold significantly more than the small sack she's been carrying around, and a couple bottles of water which she shares with you. After picking out a few of the generalized-sounding textbooks and slipping them into her new bag along with the contents of her old bag, she peels the timetable off the locker door and pushes it shut. 'It looks like all my courses took place in one classroom,' she says, looking the timetable over. 'Maybe we could stop by there next?'";
 		say "     As you leave the row of lockers and head back towards safer grounds, you can't help but notice Karen's head held a little higher and an ever-so-slight spring in her step.";
 		say "     (Note - This quest/character is still a work in progress, this is where it ends for now. Sorry! -The author)";
 		now HP of Karen is 8;
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 		now Forgotten Past is resolved;
 	else:
 		say "     While wandering a secluded hall of the campus, you recall Karen was hoping you would bring her here to search for clues to her past. Perhaps you should return here later with her.";

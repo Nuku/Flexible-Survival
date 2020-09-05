@@ -51,7 +51,7 @@ Mall Lockerroom	"Mall Lockerroom"
 
 Mall Lockerroom is a room.
 Mall Lockerroom is southwest of Mall West Wing.
-The description of Mall Lockerroom is "[MallLockerroomDesc]".
+Description of Mall Lockerroom is "[MallLockerroomDesc]".
 
 to say MallLockerroomDesc:
 	say "     The lockerroom that you're standing in is rather big with simple dark blue walls. Bright red lockers fill the room in rows, some appearing to be open, others closed and locked. There is a variety of empty chip bags and empty water bottles littering the room, showing evidence that people live here. Of course, that's not the only thing that proves that there's life here as you can hardly miss the random sleeping bags placed all throughout the room. While the place is pretty messy, you figure it's a lot better than looking like a ghost town, much like most of the places you've seen before.";

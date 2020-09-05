@@ -358,23 +358,23 @@ to say beatthemagicdrake:
 					choose a blank row in table of fucking options;
 					now title entry is "Increase size";
 					now sortorder entry is 1;
-					now description entry is "try using the magic staff to round out your ass further";
+					now description entry is "Try using the magic staff to round out your ass further";
 				else if mdasslevel is 6:
 					choose a blank row in table of fucking options;
 					now title entry is "One step beyond";
 					now sortorder entry is 1;
-					now description entry is "see if you can get your ass even bigger still";
+					now description entry is "See if you can get your ass even bigger still";
 				if mdasslevel > 2:
 					choose a blank row in table of fucking options;
 					now title entry is "Decrease size";
 					now sortorder entry is 2;
-					now description entry is "try using the magic staff to reduce your ass";
+					now description entry is "Try using the magic staff to reduce your ass";
 			else:
 				say "     Before you depart, you look over the drake's strange staff. The headpiece is still aglow with eldritch energy that's leaking from its phallic end. You feel an odd urge to use it to restore that [if mdasslevel is 2]bubble-butt[else if mdasslevel is 3]plump[else if mdasslevel is 4]large[else if mdasslevel is 5]huge[else]mega-booty[end if] ass she'd given you";
 				choose a blank row in table of fucking options;
 				now title entry is "Restore it";
 				now sortorder entry is 3;
-				now description entry is "try using the magic staff to get your draconic butt back";
+				now description entry is "Try using the magic staff to get your draconic butt back";
 			if Player is male:
 				say ". Alternatively, you might also try using it to alter your manhood";
 			say ".";
@@ -383,21 +383,21 @@ to say beatthemagicdrake:
 				choose a blank row in table of fucking options;
 				now title entry is "Cock growth";
 				now sortorder entry is 4;
-				now description entry is "attempt some magical male enhancement";
+				now description entry is "Attempt some magical male enhancement";
 				choose a blank row in table of fucking options;
 				now title entry is "Ball growth";
 				now sortorder entry is 6;
-				now description entry is "try plumping up those balls of yours";
+				now description entry is "Try plumping up those balls of yours";
 				if Cock Length of Player > 1:
 					choose a blank row in table of fucking options;
 					now title entry is "Cock reduction";
 					now sortorder entry is 5;
-					now description entry is "attempt to shrink [if Cock Count of Player > 1]those [cock size desc of Player] cocks[else]that [cock size desc of Player] cock[end if] of yours down a little";
+					now description entry is "Attempt to shrink [if Cock Count of Player > 1]those [cock size desc of Player] cocks[else]that [cock size desc of Player] cock[end if] of yours down a little";
 				if Ball Size of Player > 1:
 					choose a blank row in table of fucking options;
 					now title entry is "Ball reduction";
 					now sortorder entry is 7;
-					now description entry is "attempt to shrink your [Ball Size Adjective of Player] [Balls] down a bit";
+					now description entry is "Attempt to shrink your [Ball Size Adjective of Player] [Balls] down a bit";
 [			if Player is female:
 				choose a blank row in table of fucking options;
 				now title entry is "Cunt growth";
@@ -510,6 +510,7 @@ to say beatthemagicdrake:
 									say "This comes with a drop in pressure on your hips as your bottom shrinks down. The angry dragoness growls impotently as it loses several inches in size, dropping down to a [if mdasslevel is 2]cute bubble-butt[else if mdasslevel is 3]plump rear[else if mdasslevel is 4]large ass[else]huge bottom[end if] that feels a little more manageable for you to deal with.";
 								else if mdstaffaction is 3:
 									say "This power makes your ass quiver and your spine throb. Within a few minutes, the reptilian ass and tail you had before have returned, [if mdasslevel is 2]round[else if mdasslevel is 3]plump[else if mdasslevel is 4]large[else if mdasslevel is 5]huge[else]enormous[end if] and beautiful to the whistling dragoness.";
+									now Tail of Player is "[mdtaildesc].";
 								else:
 									say "[mdstaff_overgrown]";
 							else if mdstaffaction <= 10:		[sexual growth/reduction]
@@ -691,8 +692,8 @@ to say mdstaff_overgrown:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -750,6 +751,9 @@ When Play begins:
 	now libido entry is 45; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]pudgy[or]curvaceous[or]girly[or]feminine[at random]";
 	now type entry is "[one of]draconic[or]dragon[or]reptilian[as decreasingly likely outcomes]";
@@ -764,7 +768,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

@@ -10,7 +10,8 @@ Object	Name
 Canine Patrol	"Canine Patrol"
 
 Canine Patrol is a situation.
-The sarea of Canine Patrol is "Red".
+ResolveFunction of Canine Patrol is "[ResolveEvent Canine Patrol]".
+Sarea of Canine Patrol is "Red".
 when play begins:
 	add Canine Patrol to BadSpots of MaleList;
 [	add Canine Patrol to BadSpots of FemaleList; ]
@@ -19,7 +20,7 @@ when play begins:
 gshepsquad is a number that varies.
 catdogstate is a number that varies.
 
-Instead of resolving a Canine Patrol:
+to say ResolveEvent Canine Patrol:
 	catdogstatecheck;
 	if gshepsquad is 1:
 		say "ERROR - Event closed.";
@@ -68,10 +69,9 @@ Instead of resolving a Canine Patrol:
 		WaitLineBreak;
 		say "     You hadn't noticed at first, but now you can see that the two cops who'd caught the hyenas are humping them vigorously, pounding them hard against the wall. The other cops are lining up, getting ready for their turn at [']punishing['] the criminals. Your exclamation causes the cop near you to look back and notice the scene unfolding. 'Oh dammit. They're starting already. Look, you're free to go but I want to talk to you some more,' he barks quickly and pointing back down the alley from which you came, his attention clearly focused on the sex as his cock pokes from his sheath in anticipation. He hurriedly gives you an intersection and tells you to go there [if catdogstate is 2]if you want to see him[else if catdogstate is 1]to continue this[else]for further questions[end if], telling you to ask for [']Buster[']. And with that, Buster dashes off towards the others. 'Hey! Don't leave your commander out of this,' he calls out to his fellow officers. 'Save me a spot, you mangy horndogs. I want to teach these gang delinquents a good, hard lesson.'";
 		say "     With the canines busy dishing out some sexy justice, you can only shake your head at how this city's clearly gone to the dogs.";
-		say "     [bracket]Now [bold type]K9 Vans[roman type] location is known.[close bracket][line break]";
 		now Resolution of Canine Patrol is 3; [invite to the Vans]
 		now gshepsquad is 4;
-		now K9 Vans is known;
+		AddNavPoint K9 Vans;
 		increase score by 5;
 		now Canine Patrol is resolved; [for now]
 
@@ -84,7 +84,7 @@ K9 Vans	"K9 Vans"
 
 K9 Vans is a room. It is fasttravel. It is private. It is sleepsafe.
 
-The description of K9 Vans is "[k9vansdesc]".
+Description of K9 Vans is "[k9vansdesc]".
 
 to say k9vansdesc:
 	if gshepsquad < 4:
@@ -141,8 +141,8 @@ AnalVirgin of Buster is false.
 PenileVirgin of Buster is false.
 SexuallyExperienced of Buster is true.
 MainInfection of Buster is "German Shepherd Male".
-The description of Buster is "[busterdesc]".
-The conversation of Buster is { "Dogs are awesome!" }.
+Description of Buster is "[busterdesc]".
+Conversation of Buster is { "Dogs are awesome!" }.
 the scent of Buster is "The leader of the canine squad smells of dogs and sex.".
 The icon of Buster is figure of Buster_icon.
 

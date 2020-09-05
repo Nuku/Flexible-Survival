@@ -21,7 +21,8 @@ Object	Name
 Surprise Shark Encounter	"Surprise Shark Encounter"
 
 Surprise Shark Encounter is a situation.
-The sarea of Surprise Shark Encounter is "Atlantis".
+ResolveFunction of Surprise Shark Encounter is "[ResolveEvent Surprise Shark Encounter]".
+Sarea of Surprise Shark Encounter is "Atlantis".
 
 when play begins:
 	add Surprise Shark Encounter to BadSpots of MaleList;
@@ -30,7 +31,7 @@ when play begins:
 after going to Atlantis City Center while (Surprise Shark Encounter is active and Surprise Shark Encounter is not resolved and KurtRelationship is 1):
 	FirstKurtEvent;
 
-instead of resolving Surprise Shark Encounter:
+to say ResolveEvent Surprise Shark Encounter:
 	move player to Atlantis City Center;
 	FirstKurtEvent;
 
@@ -50,9 +51,10 @@ Object	Name
 Predator's Lunch	"Predator's Lunch"
 
 Predator's Lunch is a situation.
+ResolveFunction of Predator's Lunch is "[ResolveEvent Predator's Lunch]".
 Prereq1 of Predator's Lunch is Surprise Shark Encounter.
 Predator's Lunch is inactive.
-The sarea of Predator's Lunch is "Atlantis".
+Sarea of Predator's Lunch is "Atlantis".
 
 when play begins:
 	add Predator's Lunch to BadSpots of MaleList;
@@ -61,7 +63,7 @@ when play begins:
 after going to Atlantis City Market while (Predator's Lunch is active and Predator's Lunch is not resolved and KurtRelationship is 2 and KurtEvent - turns > 2): [Event has happened within the last 3 hours]
 	SecondKurtEvent;
 
-instead of resolving Predator's Lunch:
+to say ResolveEvent Predator's Lunch:
 	move player to Atlantis City Market;
 	SecondKurtEvent;
 
@@ -85,9 +87,10 @@ Object	Name
 Predator's Club Night	"Predator's Club Night"
 
 Predator's Club Night is a situation.
+ResolveFunction of Predator's Club Night is "[ResolveEvent Predator's Club Night]".
 Predator's Club Night is inactive.
 Prereq1 of Predator's Club Night is Predator's Lunch.
-The sarea of Predator's Club Night is "Nowhere".
+Sarea of Predator's Club Night is "Nowhere".
 
 when play begins:
 	add Predator's Club Night to badspots of MaleList;
@@ -96,7 +99,7 @@ when play begins:
 after going to Atlantis City Entrance while (Predator's Club Night is active and PlayerFucked of Kurt is true and KurtRelationship is 3 and KurtEvent - turns > 2 and The Palomino is known):
 	ThirdKurtEvent;
 
-instead of resolving Predator's Club Night:
+to say ResolveEvent Predator's Club Night:
 	move player to Atlantis City Entrance;
 	ThirdKurtEvent;
 
@@ -156,8 +159,8 @@ AnalVirgin of Kurt is true.
 PenileVirgin of Kurt is true.
 SexuallyExperienced of Kurt is false.
 MainInfection of Kurt is "".
-The description of Kurt is "[KurtDesc]".
-The conversation of Kurt is { "<This is nothing but a placeholder!>" }.
+Description of Kurt is "[KurtDesc]".
+Conversation of Kurt is { "<This is nothing but a placeholder!>" }.
 The scent of Kurt is "     The shark-morph smells like a variety of spices, foods, varnished wood and water. You kind of expected the variety of smells from the fact he hangs out in the market area playing his guitar. But you inwardly shrug, guessing it fits him.".
 
 to say KurtDesc:
@@ -334,7 +337,7 @@ understand "kurt test" as testkurt.
 
 carry out testkurt:
 	say "DEBUG: Trident acquired, Poseidon Relationship is now 2, Alana Relationship is now 1, Triton Relationship is now 1, Atlantis is now unlocked, moved player to Atlantis City Entrance, Kurt Relationship is now 1, Market Visits is now 1, First Atlantis Visit is now 1.";
-	now carried of bronze trident is 1;
+	ItemGain bronze trident by 1;
 	increase score by 10;
 	now PoseidonRelationship is 2;
 	change west exit of Sunken Ship to Atlantis City Entrance;

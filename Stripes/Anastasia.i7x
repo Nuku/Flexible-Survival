@@ -47,6 +47,7 @@ Object	Name
 Captured Bird	"Captured Bird"
 
 Captured Bird is a situation.
+ResolveFunction of Captured Bird is "[ResolveEvent Captured Bird]".
 The level of Captured Bird is 3.
 
 when play begins:
@@ -54,7 +55,7 @@ when play begins:
 	add Captured Bird to badspots of HermList;
 	add Captured Bird to BadSpots of FurryList;
 
-Instead of resolving a Captured Bird:
+to say ResolveEvent Captured Bird:
 	say "     Your exploration of the city is interrupted by a loud, avian shriek, soon followed by several feline growls. There is quite a commotion coming from somewhere off to your left. You consider moving away, but the noise seems to be remaining in the same spot, so you decide at least risking a quick peek to see what's going on. Passing between some building, you take cover behind a short fence and gaze out at the small vacant lot across the street.";
 	say "     There are several of those panther taurs in the lot surrounding another creature. The other, a large, red and yellow bird of some kind, is caught in a net trap the panthers probably set up. The bird, nearly as big as a person but completely avian in form, shrieks again and struggles frantically against the net, which oddly enough seems to be on fire. There is some yelling among the panthers that you can't make out through all the commotion and several of them run off, leaving four securing the corners of the net to hold the struggling bird down. Unsure of the felines['] motive aside from possibly cooking their prey while still in the trap, you realize that if you're going to do anything, it will have to be now if there is to be any chance of saving the bird.";
 	say "     [bold type]Will you save the bird?[roman type][line break]";
@@ -75,7 +76,7 @@ Instead of resolving a Captured Bird:
 					say "     The bird moves through the air with an unearthly grace, especially for a bird this large. It banks back towards you, and for a moment you prepare yourself for it to attack you as well, but instead it passes over you as it examines its rescuer closely. You can swear that you can see some sort of intelligence behind the bird's eyes as it nods to you lightly before flying off into the sky.";
 					increase score by 15;
 					now HP of Anastasia is 1;
-					if MaleList is not banned, now A Familiar Feather is active;
+					if MaleList is not banned, now Familiar Feather is active;
 					now Resolution of Captured Bird is 1;	[Saved phoenix]
 		if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
 			say "     Keeping you pinned down, the feline enjoys having some fun with you as the others from her group return. They come with buckets of water, tossing them onto the flaming bird until her fires go out and she's left ashen and shivering in the remains of the net. The panther taurs give some celebratory yells, kisses and gropes before, as a team, dragging off their captured prey in the damaged net. The soaked bird shivers, but does not struggle as it's taken away to meet its fate.";
@@ -90,18 +91,19 @@ Instead of resolving a Captured Bird:
 
 Table of GameEventIDs (continued)
 Object	Name
-A Familiar Feather	"A Familiar Feather"
+Familiar Feather	"Familiar Feather"
 
-A Familiar Feather is a situation.
+Familiar Feather is a situation.
+ResolveFunction of Familiar Feather is "[ResolveEvent Familiar Feather]".
 It is inactive.
-The level of A Familiar Feather is 4.
+The level of Familiar Feather is 4.
 
-instead of resolving A Familiar Feather:
+to say ResolveEvent Familiar Feather:
 	say "     As you wander, something catches your eye. A single, scarlet feather with a yellow trimmed edge lays on the ground before you. It seems familiar, bringing up memories of the firebird you rescued some time ago. Picking it up, you turn the feather over a few times between your fingers before a hauntingly beautiful and feminine voice shakes you from your memories.";
 	say "     'Our paths cross again,' you hear before turning to see the massive bird from before, but this time you get a good look at it. Roughly as tall as a human, the red and gold, hawk-like avian is perching a few paces from you. Her tail feathers were long, trailing behind her, their edges wreathed in a soft glowing flame as she looks towards you with piercing, golden eyes.";
 	WaitLineBreak;
 	say "     'Ever since I came to this world, I have been met with nothing but hostility, yet you...' The bird looks you over, examining your form with a curious gaze and a tilt of her head. 'I know not why, but you risked your life, and I would assume, your only life to save me.' She tilts her head the other way, her crest of head feathers flaring for a moment as she seemed to ponder you. 'A curious creature you are. I think I will keep an eye on you.' Without giving you even a moment to question her, the bird launches herself into the air with a single powerful flap of her wings, and just as suddenly as she came, the bird soars into the distance, blazing like a shooting-star across the sky.";
-	now A Familiar Feather is resolved;
+	now Familiar Feather is resolved;
 	now HP of Anastasia is 2;
 	if MaleList is not banned, now FireAndIce is active;
 
@@ -111,10 +113,11 @@ Object	Name
 FireAndIce	"FireAndIce"
 
 FireAndIce is a situation.
+ResolveFunction of FireAndIce is "[ResolveEvent FireAndIce]".
 It is inactive.
 The level of FireAndIce is 6.
 
-instead of resolving FireAndIce:
+to say ResolveEvent FireAndIce:
 	say "     As you walk the empty streets, a crumpled up newspaper rolls past you like some pathetic urban tumbleweed, but the breeze that carried it is surprisingly chilly. You look back, cautiously, but see nothing out of place. You turn back, beginning your trek once again, only for the air around you to suddenly drop in temperature. Your muscles tense up as the frost starts to form on the asphalt.";
 	say "     A deep bestial growl echoes off the pavement filling you with dread. You try to prepare to fight but your reflexes are slowed by the cold, and before you can react, a massive lizard-like creature lands in front of you, opening its toothy maw and letting out a blast of cold directly into you, knocking you to the ground. You try to get up only to find that the frost has started creep over your body, freezing it in place in a compromising position. Unable to move, you look to the creature who now stalks towards you.";
 	WaitLineBreak;
@@ -129,9 +132,7 @@ instead of resolving FireAndIce:
 	LineBreak;
 	say "     Her eyes seem to glaze over lightly. She looks around as if trying to find your face, but unable to see it. 'Please... Return me to the flames of the earth... Allow me to rise again.' With these words, the life in her eyes fades. You have little time to mourn though as her body suddenly grows searing hot. You drop her on the ground and step back as everything flammable around her starts to ignite; then, she to burst into flames. The fire is intense; even looking at it hurts your eyes, but it isn't long lived. The blaze dies down as quickly as it started, leaving behind a pile of ash.";
 	say "     Curious, you find a stick and poke at the ashes until you feel something hard within them. It takes a few minutes for you to work it out of the ash, but to your surprise, a golden phoenix egg has been left behind. Carefully you pick it up, the shell hot but not enough to burn. You gently put the egg away in your pack as you wonder what you should do with such a legendary ovid. If you want to do as the phoenix asked, you would need to find somewhere exceedingly hot, but if you got to see her again, it might be worth it.";
-	LineBreak;
-	say "[bold type]You received a Phoenix Egg![roman type][line break]";
-	increase carried of phoenix egg by 1;
+	ItemGain phoenix egg by 1;
 	now FireAndIce is resolved;
 	now HP of Anastasia is 3;
 
@@ -142,7 +143,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "phoenix egg"	"     It has a golden shell and is roughly the size of a man's head."	10	phoenix egg
 
-phoenix egg is a grab object. It is part of the player. It is not temporary.
+phoenix egg is a grab object. It is not temporary.
 
 instead of using phoenix egg:
 	say "     You look over the egg, trying to think of a hot place for it to hatch.";
@@ -177,9 +178,7 @@ instead of going down from Volcanic Crater:
 		move player to Volcanic Cave;
 		if phoenix egg is owned:
 			say "     You look around the cave and its open magma pools, deciding this place certainly meets the requirements. Short of throwing it into the volcanic crater itself, this is probably the hottest spot you'll find. It should also be quite safe down here. There's no reason anything should venture into this infernal cave to disturb it. Unpacking it, you bring the egg to one of the magma pools and, hoping you're doing the right thing, lower the egg onto the semi-solid crust covering it. The soft layer dips and cracks a little, letting some of the lava flow up and pool around the egg. It seems unharmed by this and even appears to have become even more golden and lustrous. You sigh in relief and step away, reminding yourself to return to check on it later. You feel thirsty and drained after your climb and stay down here.";
-			LineBreak;
-			say "[bold type]Phoenix Egg Removed.[roman type][line break]";
-			delete phoenix egg;
+			ItemLoss phoenix egg by 1;
 			now lastfuck of Anastasia is turns;
 			now HP of Anastasia is 4;
 			increase score by 25;
@@ -222,8 +221,8 @@ object	name
 Anastasia	"Anastasia"
 
 Anastasia is a woman.
-The description of Anastasia is "[Anastasiadesc]".
-The conversation of Anastasia is { "Burninate!" }.
+Description of Anastasia is "[Anastasiadesc]".
+Conversation of Anastasia is { "Burninate!" }.
 The icon of Anastasia is Figure of Anastasia_icon.
 
 the scent of the Anastasia is "The phoenix has a pleasent scent of woodsmoke.".

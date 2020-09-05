@@ -11,7 +11,7 @@ Private club room	"Private club room"
 
 Private club room is a room.
 
-The description of Private club room is "This smaller back room of the rather rambunctious club is rather mildly lit, the soft light reflecting off the several divans spaced throughout the room. The soft scent of sex and heat filling the air tells you what this room has been used for most recently, though the room only seems to have a single white-furred occupant currently. The loud club music is only a dimly heard counterpoint to the atmosphere of the room, mostly blocked by the rather thick walls and the cushioned walls. Though for some reason that only serves as a reminder of the fact that it is very unlikely that anyone out in the club could hear anything that goes on in here, no matter how loud or kinky it gets...".
+Description of Private club room is "This smaller back room of the rather rambunctious club is rather mildly lit, the soft light reflecting off the several divans spaced throughout the room. The soft scent of sex and heat filling the air tells you what this room has been used for most recently, though the room only seems to have a single white-furred occupant currently. The loud club music is only a dimly heard counterpoint to the atmosphere of the room, mostly blocked by the rather thick walls and the cushioned walls. Though for some reason that only serves as a reminder of the fact that it is very unlikely that anyone out in the club could hear anything that goes on in here, no matter how loud or kinky it gets...".
 Janice is in Private club room.
 
 Palomino is southeast of Private club room.
@@ -66,8 +66,8 @@ AnalVirgin of Janice is true.
 PenileVirgin of Janice is true.
 SexuallyExperienced of Janice is true.
 MainInfection of Janice is "".
-The description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eyeing you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.".
-The conversation of Janice is { "Foxy!" }.
+Description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eyeing you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.".
+Conversation of Janice is { "Foxy!" }.
 The icon of Janice is figure of Janice_icon.
 the scent of Janice is "Janice smells of vixen and lust, perfume and sex, longing and regret.".
 
@@ -107,14 +107,14 @@ instead of conversing the Janice:
 			say "     'I'm really glad to hear that. Please let her know how I'm doing and that I do miss her. I hope she'll be able to come visit me sometime soon. Oh!' she adds, reaching under the divan to pull out a designer blouse, '[bold type]give[roman type] this to her so she'll know it's really me. She's always liked my blouse and wanted one just like it. I don't need it now that I've permanently got this sexy fur coat, so she should have it. I'd [italic type]really[roman type] appreciate it if you did that for me,' she says with a sultry tone in her voice.";
 			say "- Janice's blouse added to your inventory -[line break]";
 			now HP of Kristen is 10;
-			now carried of Janice's blouse is 1;
+			ItemGain Janice's blouse by 1;
 			increase score by 5;
 	else if kristenmsg3 is true and HP of Kristen >= 2 and HP of Kristen < 10:
 		say "     Telling her that you've met Kristen[if kristenmsg1 is true] and that she'd mentioned her[end if], you get a big hug from the sexy vixen. 'Oh, that's simply wonderful. Is she still alright? Did something get her? Turn her into some creature yet or is she still an uninfected human?' she asks with an excited gleam in her eye. You fill her in on her friend, telling her that she's quite safe at the vixen's old place.";
 		say "     'I'm really glad to hear that. Please let her know how I'm doing and that I do miss her. I hope she'll be able to come visit me sometime soon. Oh!' she adds, reaching under the divan to pull out a designer blouse, '[bold type]give[roman type] this to her so she'll know it's really me. She's always liked my blouse and wanted one just like it. I don't need it now that I've permanently got this sexy fur coat, so she should have it. I'd [italic type]really[roman type] appreciate it if you did that for me,' she says with a sultry tone in her voice.";
 		say "- Janice's blouse added to your inventory -[line break]";
 		now HP of Kristen is 10;
-		now carried of Janice's blouse is 1;
+		ItemGain Janice's blouse by 1;
 		increase score by 5;
 	else if HP of Kristen is 10 and a random chance of 1 in 3 succeeds:
 		say "     'Have you gone back to see Kristen yet to [bold type]give[roman type] her my gift? I do so miss her and want her to know that I'm safe and happy. She must be so worried. Please do that for me, sweetie,' she purrs with alluring smile.";
@@ -278,7 +278,7 @@ carry out Vixenposing:
 	else if janicearoused > 0:
 		now lastVixenposing is turns;
 		say "     'Ah, so you want to learn how to make the best use of that sexy body of yours? Well I suppose it would be quite fun to show you how to move that sexy tail of yours,' Janice says with an amused grin as she stretches her lithe body for a minute, before beginning to show off several extremely enticing poses, her soft furred form looking amazing even as her long white fox tail swishes behind her teasingly. Soon she is strutting daintily around the room, her every movement setting your blood on fire with desire as she shows off her rather amazing assets for your inspection. After several minutes she stops teasing you, and begins to give you pointers as she makes you walk around the room and pose just like she did, the unusual amount of balance and muscle control required to look so damn enticing is rather surprising, and you try your best to keep up with her increasingly difficult instructions.";
-		let bonus be (( the dexterity of the player minus 10 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		if Kristen is visible, increase bonus by 2;
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
@@ -302,7 +302,7 @@ name	desc	weight	object
 "Janice's blouse"	"This designer blouse is a gift from Janice to Kristen."	1	Janice's blouse
 
 Janice's blouse is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 instead of using Janice's blouse:
@@ -323,7 +323,7 @@ to say Kristen-giveblouse:
 		say ". That means it's really her.'";
 		say "     Kristen has to dab her eyes a little with the blouse she's so happy to hear the news. 'It's so nice of her to give me this to reassure me. I was always a little jealous about her having one and she'd tease me about it,' she laughs. 'Please thank her for me for the lovely gift.'";
 	now HP of Kristen is 11;
-	now carried of Janice's blouse is 0;
+	ItemLoss Janice's blouse by 1;
 	increase score by 10;
 
 

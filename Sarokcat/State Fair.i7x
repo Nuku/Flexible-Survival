@@ -12,7 +12,7 @@ State Fair	"State Fair"
 State Fair is a room. It is fasttravel.
 The earea of State Fair is "Fair".
 
-The description of State Fair is "     The entrance to the state fair. Colorful banners and signs plaster the large open area. Numerous food shops and game booths are set up near the large ticket booth. The fair entrance seems relatively deserted, and the ticketing area is wide open, allowing people to come and go as they please. While most of the shops and booths are closed up, one of the nearby game booths seems to still be open for business, with an automatic prize dispensing system set up. It looks like the prizes have been somewhat mixed up though. In contrast to the eerie emptiness of the fair entry, you can see some signs of activity and hear some fair noises coming from off to the west down the midway.".
+Description of State Fair is "     The entrance to the state fair. Colorful banners and signs plaster the large open area. Numerous food shops and game booths are set up near the large ticket booth. The fair entrance seems relatively deserted, and the ticketing area is wide open, allowing people to come and go as they please. While most of the shops and booths are closed up, one of the nearby game booths seems to still be open for business, with an automatic prize dispensing system set up. It looks like the prizes have been somewhat mixed up though. In contrast to the eerie emptiness of the fair entry, you can see some signs of activity and hear some fair noises coming from off to the west down the midway.".
 
 instead of sniffing State Fair:
 	say "The scents of popcorn and cotton candy and other treats fill the air. Beneath those enticing scents lie the strange scents of arousal, as if those musky scents are trying to hide beneath them. Among those scents, you catch the whiff of [one of]several felines[or]a rubbery scent[or]plush toys[or]male arousal[or]female heat[or]manly sweat[or]lupine cum[at random]";
@@ -29,8 +29,8 @@ object	name
 Boris the lion	"Boris the lion"
 
 Boris the lion is a man.
-The description of Boris the lion is "     Standing over by the side of the deserted ticket booth is a person dressed up as a very recognizable cartoon character that is always used to promote the fair. Even you recognize that the person is dressed up as the (semi)famous Boris the lion suit. Moving closer to the familiar face, you realize as he turns to look at you that the suit is far more realistic than any suit you have ever seen before. A closer look reveals that there are no loose areas of skin on the costume and no signs of seams anywhere. You come to the conclusion that whatever it may have once been, it isn't a suit anymore, it's Boris the lion!".
-The conversation of Boris is { "Welcome!" }.
+Description of Boris the lion is "     Standing over by the side of the deserted ticket booth is a person dressed up as a very recognizable cartoon character that is always used to promote the fair. Even you recognize that the person is dressed up as the (semi)famous Boris the lion suit. Moving closer to the familiar face, you realize as he turns to look at you that the suit is far more realistic than any suit you have ever seen before. A closer look reveals that there are no loose areas of skin on the costume and no signs of seams anywhere. You come to the conclusion that whatever it may have once been, it isn't a suit anymore, it's Boris the lion!".
+Conversation of Boris is { "Welcome!" }.
 Boris the lion is in State Fair.
 
 the scent of Boris is "Boris smells faintly of funfur and lions[if borisquest is 5]. The scent of his new maleness is strong around him[end if].".
@@ -77,8 +77,8 @@ to say borisquestforcock:
 		say "     Sadly, you again relate to Boris your total lack of success in his quest to be complete, and he gives a sad sigh. 'Knew it couldn't be just that easy, now could it? Well, maybe you will find another stash around out there somewhere, or maybe there is someplace else in town you could find something like that? We only need to find me one, after all. It shouldn't be TOO hard in a city this size. Maybe try exploring in the seedier parts of town?'";
 	else if borisquest is 4:
 		say "     His eyes goes wide as he looks at the size of the toy you brought him. 'Wow!' Boris says as he takes it from you reverentially. 'This is for me? This is great!' he says as he turns it over in his hands. 'Feline style, too! And god I only wish I used to be hung like that!' Boris turns to you with a large grin. 'I have to go try this on right away! It might take a while before it's ready to go, but come back later and we can see how it went!' Boris says as he starts to turn away, then stops. 'Oh, I almost forgot. I got you a couple things for helping me out like this,' he says as he gestures to a small package sitting next to the ticket booth. Before you can thank him, he runs off with his new acquisition into one of the restrooms. Soon you can hear his sharp growls and moans coming from the restroom while he obviously begins fitting his new member, though it's hard to tell whether the sounds are of pain or pleasure.";
-		increase carried of food by 2;
-		increase carried of water bottle by 2;
+		ItemGain food by 2;
+		ItemGain water bottle by 2;
 		increase borisquest by 1;
 		increase boristalk by 1;
 		now lastfuck of Boris is turns;
@@ -162,7 +162,7 @@ object	name
 Carnival game	"Carnival game"
 
 Carnival game is a man.
-The description of Carnival game is "Standing open and apparently ready for business, one of the automated carnival games is set up here and seems to be working, although who knows what kind of prizes it will hand out in the current circumstances.".
+Description of Carnival game is "Standing open and apparently ready for business, one of the automated carnival games is set up here and seems to be working, although who knows what kind of prizes it will hand out in the current circumstances.".
 Carnival game is in State Fair.
 
 instead of sniffing Carnival game:
@@ -190,26 +190,20 @@ carry out gameplay:
 	else:
 		now lastgameplay is turns;
 		say "     Stepping up to the gaming booth, you hit the button and all sorts of targets pop up and go whizzing around the booth as happy music plays. Quickly you snatch up the fake gun attached to the booth and shoot for all your worth!";
-		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 14:
 			say "Your swift reflexes are the death of all little cardboard targets! They will learn to fear your awesome might! Oh hey, you won a prize, too![line break]";
-			let prizegift be a random number from 1 to number of filled rows in the Table of Random Critters;
-			choose row prizegift from the Table of Random Critters;
+			choose a random row from the Table of Random Critters;
 			if there is a loot entry:
-				if loot entry is not "":
-					add loot entry to invent of Player;
-					say "You acquired 1 [loot entry].";
-					increase carried of dirty water by 1;
-					say "You acquired some dirty water!";
+				if loot entry is not "" and loot entry is not " ":
+					ItemGain loot entry by 1;
 				else:
-					increase carried of dirty water by 1;
-					say "You acquired some dirty water!";
+					ItemGain dirty water by 1;
 			else:
-				increase carried of food by 1;
-				say "You acquired some carnival food!";
+				ItemGain food by 1;
 		else:
 			say "The game buzzes at you derisively as you lower your plastic weapon in defeat. The evil cardboard and plastic menaces will apparently live to see another day, although you resolve to come back and try again later as you walk away.";
 

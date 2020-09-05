@@ -9,13 +9,14 @@ Object	Name
 Bobcat Encounter	"Bobcat Encounter"
 
 Bobcat Encounter is a situation.
-The sarea of Bobcat Encounter is "Forest".
+ResolveFunction of Bobcat Encounter is "[ResolveEvent Bobcat Encounter]".
+Sarea of Bobcat Encounter is "Forest".
 
 when play begins:
 	add Bobcat Encounter to BadSpots of MaleList;
 	add Bobcat Encounter to BadSpots of FurryList;
 
-instead of resolving Bobcat Encounter:
+to say ResolveEvent Bobcat Encounter:
 	if Resolution of Bobcat Encounter is 0: [first time]
 		say "     As you walk along a narrow dirt trail through the forest that a fair bit of the inner city turned into, you let your eyes roam over your surroundings, looking for anything of even remote significance or value. While doing so, your gaze falls upon a small furry figure a little distance ahead. The creature appears to be a bobcat, slightly taller than three feet high and covered in short orange fur with black and white stripes. Small cat ears atop the head rotate to take in the sounds of your approach, and the little feline's tail moves left and right in urgent twitches. Fumbling with a large carrying bag on the ground, the bobcat then shoves it into the crevice of a large tree that it is standing in front of. Shoving with all the might of its small body, the bobcat manages to force the bag inside before you come anywhere close, vanishing after it into the thick trunk's insides.";
 		say "     Curiosity draws you towards the tree, and soon you're standing a few yards away, looking into the small crevice on its side. Keeping a little distance just in case the inhabitant is aggressive, you call out a greeting and wait for a reply. A minute passes, then two, and as you are about ready to call it quits and move on, an anthropomorphic bobcat's head, then body, pops out of the crevice. The feline has a lithe but fit body, covered in moderately thick fur that makes it a bit hard to tell if you're looking at a male or female. Large amber eyes stare up at you cautiously, and the cat says, 'What?' The tone of voice reveals that your new acquaintance is a male, as does a casual glance down at his nether regions, now that he's standing up straight enough to make out the outline of his soft dick in the surrounding fur.";
@@ -131,8 +132,7 @@ to say SexWithMilo1:
 		say "     Milo stretches, cracking his neck and wiping his messy cock off over your soft asscheeks. He sighs and begins to make his way back to his hole-home. 'You've definitely earned the chow. Don't eat it all at once now.' He laughs, hopping back into his home and disappearing from sight. A little woozy, you slowly stand, feeling the cat cum dribble out of your ass and down your thighs. Before you can decide on what to do next or what direction you're even going in, you hear Milo's voice echo from inside of his hidey hole. 'Oh! And if you need to find me again, look for the little M's I carved into some of the trees. Should lead you back here!' Well that's useful. If you ever need quick food or a quick fuck, you can try to find one of Milo's trees to follow.";
 		now Resolution of Bobcat Encounter is 2; [talked, ass fuck for food]
 	LineBreak;
-	say "[bold type]You gain 1 food![roman type][line break]";
-	increase carried of food by 1;
+	ItemGain food by 1;
 
 to say SexWithMilo2:
 	say "     You drop to your knees before Milo and lean forward, ducking low. Milo coos as he sees your plan in motion and sits back, leaning against a tree while he watches you with delight. You press your face against his groin and drag your tongue along his slowly hardening cat phallus, glad that Milo doesn't wear clothes, as your hands form around his tasty cock, stroking and squeezing him to full mast. Milo moans and groans above you, lightly pushing forward into your face whenever he can. For yourself, you're just enjoying his wild musky taste while Milo's paws brush into your scalp, petting you affectionately as you start to swallow his feline member.";
@@ -144,8 +144,7 @@ to say SexWithMilo2:
 	say "     Jets of tasty cat cum fill your throat and spills out and around your mouth, dribbling down your chin and around his humping member. You obediently suck down every drop of seed he offers up and even then you're still sucking him clean. He mewls at your enthusiasm but has to pull himself away from your heavenly mouth still trying to suck his dry cock clean. 'Whoa, wow, you're pretty damn good at that. You definitely earned your reward, I'd say.' He laughs, wobbling a little on shaky feet. 'Damn, I might have to keep you if you stay this good,' he says, smiling down at you in good humor. Although you can't help but get just a little excited at the prospect of being fully owned by Milo.";
 	say "     You lick your lips clean of his seed and swallow what remains in your mouth, as well as scooping up any lost droplets that had run down your chin and slurping them down too. Milo chirps approvingly at the sight, his member twitching again briefly. Standing up, you thank Milo for both meals, causing him to burst out laughing. 'Hah! Pretty good. I'll definitely be seeing you around, Kit. Stop on by anytime you're feeling up for it.' He finishes by sitting down again and leaning against his tree, both hands behind his head with a blissed out expression on his cute, feline face. Smiling and sighing, you pocket the food you've rightfully earned and turn back around to get back to the nanite apocalypse.";
 	LineBreak;
-	say "[bold type]You gain 1 food![roman type][line break]";
-	increase carried of food by 1;
+	ItemGain food by 1;
 
 to say WonAgainstMilo:
 	if Player is male:
@@ -169,8 +168,7 @@ to say WonAgainstMilo:
 		say "     You gather your things and go to examine the hole the cat had greeted you from. Kneeling down and examining it you reach in and grip something metal. Pulling it out you find it's a can of food! You reach down and retrieve two more before putting all three in your pack. You then quickly leave both the strange, fucked-silly bobcat and his home behind.";
 		now Resolution of Bobcat Encounter is 23; [fought, used his tongue]
 	LineBreak;
-	say "[bold type]You gain 3 food![roman type][line break]";
-	increase carried of food by 3;
+	ItemGain food by 3;
 
 to say LostAgainstMilo:
 	setmonster "Bobcat";
@@ -227,8 +225,8 @@ to say MiloDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -244,7 +242,7 @@ When Play begins:
 	now desc entry is "[MiloDesc]";
 	now face entry is "a small feline face, with a short cat muzzle that has two incisors poking out of your bottom lip. You have two large feline eyes painted a light-golden color that seem to glow in the dark. Your cat ears flick atop your head a moment as they detect some noise off in the distance.";
 	now body entry is "short and lithe but with powerful lean muscles and covered with orange fur. Your digitigrade legs end in clawed feet and your hands in clawed cat-paws.";
-	now skin entry is "a soft amber-orange fur over your"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "a soft amber-orange fur over your"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a short nearly one foot long furry tail that protrudes from your well-rounded backside.";
 	now cock entry is "dark pink, tapered"; [ Cock. Format as "You have a 'size' [Cock of Player] cock."]
 	now face change entry is "it starts to smoosh in on itself and reform in a rather uncomfortable manner into the form of small feline head. You feel yourself over and can feel a new muzzle that has grown on your now furry face. You feel your head and can feel new furry cat ears protruding from the top."; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -275,6 +273,9 @@ When Play begins:
 	now libido entry is 60; [ Amount player Libido will go up if defeated ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "cat-like";
 	now type entry is "feline";
@@ -289,7 +290,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

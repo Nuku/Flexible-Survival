@@ -58,8 +58,8 @@ SexuallyExperienced of Juergen is true.
 TwistedCapacity of Juergen is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Juergen is true. [steriles can't knock people up]
 MainInfection of Juergen is "".
-The description of Juergen is "[JuergenDesc]".
-The conversation of Juergen is { "<This is nothing but a placeholder!>" }.
+Description of Juergen is "[JuergenDesc]".
+Conversation of Juergen is { "<This is nothing but a placeholder!>" }.
 The scent of Juergen is "     ...".
 
 to say JuergenDesc:

@@ -14,8 +14,8 @@ object	name
 Brooke	"Brooke"
 
 Brooke is a man. Brooke is in The Palomino.
-The description of Brooke is "[brookedesc]".
-The conversation of Brooke is { "Sneak off with me?" }.
+Description of Brooke is "[brookedesc]".
+Conversation of Brooke is { "Sneak off with me?" }.
 brookeandrewtalk is a truth state that varies. brookeandrewtalk is usually false.
 The icon of Brooke is Figure of Brooke_icon.
 brookeanal is a number that varies.

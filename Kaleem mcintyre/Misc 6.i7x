@@ -11,9 +11,10 @@ Object	Name
 Winged Horse	"Winged Horse"
 
 Winged Horse is a situation.
-The sarea of Winged Horse is "Plains".
+ResolveFunction of Winged Horse is "[ResolveEvent Winged Horse]".
+Sarea of Winged Horse is "Plains".
 
-Instead of resolving a Winged Horse:
+to say ResolveEvent Winged Horse:
 	say "     Walking along the dry plains, you find yourself watching as a large shadow hovers over the ground above you. Not really sure what's going on, you tip your head up, only to find a large winged horse looking down at you. White as snow with a wingspan of about twenty feet, you marvel in awe at the majestic creature as it glides above your head once and then twice in a large circle before flying off on about its way. The last you see of the mutated creature is its long, azure colored tail end whipping freely behind its wide backside.";
 	now Winged Horse is resolved;
 
@@ -24,12 +25,13 @@ Object	Name
 Guess that Character One	"Guess that Character One"
 
 Guess that Character One is a situation.
-The sarea of Guess that Character One is "Campus".
+ResolveFunction of Guess that Character One is "[ResolveEvent Guess that Character One]".
+Sarea of Guess that Character One is "Campus".
 When play begins:
 	Add Guess that Character One to BadSpots of FurryList;
 	Add Guess that Character One to BadSpots of MaleList;
 
-Instead of resolving a Guess that Character One:
+to say ResolveEvent Guess that Character One:
 	say "     While making your way across the college campus, you come to a stop as you notice two students, or anthro mutants you assume are students, seeming to argue with each other while sitting together out on the campus's lawn. Not seeing anything dangerous about the others you hesitantly move closer to them to see what the altercation is about. When you do however, you find yourself blinking at what you hear coming from one of them. 'Omae o korosu!' A slim, but toned half naked brown wolf says. The lupines blue eyes are twinkling dangerously as he shouts to a smaller calico cat feline whose bright violet eyes are smiling up at him. Both are sitting on the ground together with a three foot distance between them and from the looks of things it would seem that the wolf is trying to get a point across to the feline. The calico cat seems to be missing it as he smiles charmingly up at the other. 'Omae o kisu?' The feline repeats, though somewhat off the mark. 'Omae o korosu!' The wolf snarls. A little bit of foam is seeping down the side of his dark muzzle as anger shoots through his bristling hide. 'Omae o kisu!' The feline purrs in pride as his long tail goes flailing around wildly behind his tri-colored feline's back.";
 	WaitLineBreak;
 	say "     Obviously these two are having a translation failure, but from what you can see of the purple-eyed feline the other knows exactly what it is saying is incorrect. If what you are seeing is correct the calico is doing what he's doing just to rile the other, but from the way the wolf looks as though he is ready to kill the feline you have to wonder if the calico knows what he's getting himself into. 'Omae o kisu!' The wolf shouts as loud as he can and then blinks as what he just said registers inside of his brain. The calico is moving through the air faster that you can see as the feline pounces on the wolf, knocks the other down and then proceeds to snog the hell out of the lupine. All the wolf can do is hold on for the ride, and the calico's waist, as the feline begins to hump up and down on top of the other's somewhat lanky form while rushing hands down to remove the spandex shorts the lupine has on.";
@@ -52,13 +54,14 @@ Object	Name
 Guess that Character Three	"Guess that Character Three"
 
 Guess that Character Three is a situation.
-The sarea of Guess that Character Three is "Red".
+ResolveFunction of Guess that Character Three is "[ResolveEvent Guess that Character Three]".
+Sarea of Guess that Character Three is "Red".
 When play begins:
 	Add Guess that Character Three to BadSpots of FurryList;
 	Add Guess that Character Three to badspots of HermList;
 	Add Guess that Character Three to BadSpots of MaleList;
 
-Instead of resolving a Guess that Character Three:
+to say ResolveEvent Guess that Character Three:
 	say "     Making your way down the streets of the red light district you find yourself watching an interesting sight as one tigress hooker is standing in between two furry male cat figures who seem to be somewhat perplexed with the she-cat. Curiosity getting the better of you, you walk over to see what's going on, but keep well enough away so that you won't be drawn into the situation, unless things dictate else. 'What part of [']we ain't interested['] don't you get, lady?' A hulking tom cat in a grease pit uniform says while growling somewhat angrily at the red dress wearing female. 'Awww, but honey, I could show you and your little friend here such a good time.' The tigress winks before running a finger down the line of her dress and to the bulge sticking out just slightly. 'Uhm, miss. We're not...that is...my friend and I...we're...uhm.' The more lithe ginger furred feline wearing the same uniform as his cohort stumbles over his words while looking up and down the sexy frame of the tigress. It takes the female a second to understand the lankier feline's words, but once she does... 'Ohhh! Well if you two were into each then you should have just said so earlier.' Waving her hand dismissively the feline hooker brushes the two males off suddenly.";
 	WaitLineBreak;
 	say "     'What!? Where did you get such a crazy idea from, lady?!' The hulking muscular male rants at the now bored looking tigress. Coincidentally this happens at the same time the smaller tom cat says, 'Bingo!' It doesn't take long before the two males are turning their heads to stare at one another in confusion. From what you can see these two have some personal issues to work out between one another. Laughing and shaking your head you move along about your business just as the two males start to sputter and then rub the back of their heads at the same time.";
@@ -72,12 +75,13 @@ Object	Name
 Scopaesthesia	"Scopaesthesia"
 
 Scopaesthesia is a situation.
+ResolveFunction of Scopaesthesia is "[ResolveEvent Scopaesthesia]".
 scopnum is a number that varies.
 When play begins:
 	Add Scopaesthesia to BadSpots of FurryList;
 	Add Scopaesthesia to BadSpots of MaleList;
 
-Instead of resolving a Scopaesthesia:
+to say ResolveEvent Scopaesthesia:
 	if scopnum is 0:
 		say "     Walking along the streets, you find yourself freezing as you feel someone watching you. Turning your head and looking around you find that no one, either mutate or human, is anywhere nearby. However, the feeling of being watched still bothers you. Picking your feet up and moving at a quick pace you decide to move along before something gets started that you may not want to finish.";
 		now scopnum is 1;

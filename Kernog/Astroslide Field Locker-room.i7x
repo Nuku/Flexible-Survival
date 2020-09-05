@@ -19,7 +19,7 @@ Astroslide Field Locker-room	"Astroslide Field Locker-room"
 Astroslide Field Locker-room is a room.
 [Astroslide Football Field is east of Astroslide Field Locker-room.]
 
-The description of Astroslide Field Locker-room is "[FootFieldLockerdesc]".
+Description of Astroslide Field Locker-room is "[FootFieldLockerdesc]".
 
 to say FootFieldLockerdesc:
 	say "     You are standing in the high-standard locker-room of the Tenvale Gorillas team, with quite a few players and fans all around you. The gorilla strain seems to have spread very easily among the athletically minded students of this college, swelling the ranks of the team to unprecedented numbers. In retrospect, it was a good thing that this place was built so generously sized, otherwise the bustling crowd would never fit in here, especially with the whole lot of activity that is going on right now.";
@@ -42,8 +42,8 @@ object	name
 Gorilla Team-Members	"Gorilla Team-Members"
 
 Gorilla Team-Members is a man.
-The description of Gorilla Team-Members is "A highly variable number of gorillas is present at all times in their team locker-room, in all states of dress and undress, as well as sexual arousal. It would be an understatement to say that all these hunky guys, girls and in between are 'just interested' in football - it's more like the whole center of their existence, as you can see from the fact that an adjoining storage room has been totally cleared out to set up numerous bunk beds. Looks like they now live right here next to the field. The gorillas are a definitively are a jovial bunch, and you can hear almost constant chatting, laughing and more than a few aroused moans from all around you.".
-The conversation of Gorilla Team-Members is { "Yap!" }.
+Description of Gorilla Team-Members is "A highly variable number of gorillas is present at all times in their team locker-room, in all states of dress and undress, as well as sexual arousal. It would be an understatement to say that all these hunky guys, girls and in between are 'just interested' in football - it's more like the whole center of their existence, as you can see from the fact that an adjoining storage room has been totally cleared out to set up numerous bunk beds. Looks like they now live right here next to the field. The gorillas are a definitively are a jovial bunch, and you can hear almost constant chatting, laughing and more than a few aroused moans from all around you.".
+Conversation of Gorilla Team-Members is { "Yap!" }.
 Gorilla Team-Members is in Astroslide Field Locker-room.
 
 instead of sniffing Gorilla Team-Members:
@@ -84,7 +84,7 @@ to say RomanHumiliation:
 	say "     Minutes pass. The gorillas all take their turn into their former captain, and as the others arrive, see the scene, and learn of the captain's dirty secret, Roman's torment is prolonged for the whole part of an hour, then two. At first, Roman is struggling, but by his third penetration and fourth forced blowjob, a powerful, forced orgasm shakes his body under the cheers of the crowd. After some time, the gorillas all decide to [']get some rest['], though not before defacing Roman's body with a red marker. Now that the gorillas are not around him anymore, Roman's cum-covered body appears in all his glory. His belly is inflated with all the gorilla semen he was forced to intake, and some drips out from his pussy and mouth. Roman pants, tears drying on his face. Your eyes and his meet, but there is nothing but broken lust in his expression. He's broken.";
 	say "     As you start to make your way out, you notice that the door to Roman's room is ajar. You take a look inside and see a black football helmet lying on a small bench. With a shrug, you opportunistically snag the helmet and add it to your possessions.";
 	say "[bold type]You gain a football helmet![roman type][line break]";
-	increase carried of Roman's stolen football helmet by 1;
+	ItemGain Roman's stolen football helmet by 1 silently;
 
 [General Sex menu]
 instead of fucking the Gorilla Team-Members:
@@ -292,7 +292,8 @@ Object	Name
 PeepingRoman	"PeepingRoman"
 
 PeepingRoman is a situation.
-The sarea of PeepingRoman is "Nowhere".
+ResolveFunction of PeepingRoman is "".
+Sarea of PeepingRoman is "Nowhere".
 
 instead of going to Astroslide Field Locker-room while (PeepingRoman is active and PeepingRoman is not resolved and FurryList is not banned and FurryList is not warded and a random chance of 1 in 3 succeeds):
 	move player to Astroslide Field Locker-room;

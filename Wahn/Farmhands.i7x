@@ -53,8 +53,8 @@ SexuallyExperienced of Farmhand Horsemen is true.
 TwistedCapacity of Farmhand Horsemen is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Farmhand Horsemen is false. [steriles can't knock people up]
 MainInfection of Farmhand Horsemen is "Horseman".
-The description of Farmhand Horsemen is "[FarmhandsDesc]".
-The conversation of Farmhand Horsemen is { "<This is nothing but a placeholder!>" }.
+Description of Farmhand Horsemen is "[FarmhandsDesc]".
+Conversation of Farmhand Horsemen is { "<This is nothing but a placeholder!>" }.
 The scent of Farmhand Horsemen is "     Walking up to one of the horsemen, you sniff at him - he has a nicely masculine scent, with a little bit of fur, straw and sweat in the mix. Seems like the guys are not adverse to doing some good and solid work for their boss at the farm. The farm worker you approached lowers a hand to rub the bulge at his crotch and says, 'I'm game if you wanna get to know me even better.' He chuckles amicably as you make an excuse and take a few steps back from him.".
 
 to say FarmhandsDesc:

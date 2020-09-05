@@ -9,7 +9,7 @@ Version 1 of Sheng by Rikaeus begins here.
 [   4: Has met Sheng outside of the shop                   ]
 [   5: Has agreed to go further in the relationship        ]
 
-[   hp of Sheng                                            ]
+[   HP of Sheng                                            ]
 [   0: Haven't Unlocked Non-Transformative Potions         ]
 [   1: Unlocked Non-Transformative Potions                 ]
 
@@ -33,7 +33,7 @@ White Tiger Alchemy Shop	"White Tiger Alchemy Shop"
 [Room Declaration]
 White Tiger Alchemy Shop is a room.
 White Tiger Alchemy Shop is north of Atlantis City Market.
-The description of White Tiger Alchemy Shop is "[WhiteTiger]".
+Description of White Tiger Alchemy Shop is "[WhiteTiger]".
 earea of White Tiger Alchemy Shop is "Atlantis".
 
 to say WhiteTiger:
@@ -69,8 +69,8 @@ Virgin of Sheng is false.
 AnalVirgin of Sheng is false.
 PenileVirgin of Sheng is false.
 SexuallyExperienced of Sheng is true.
-The description of Sheng is "[ShengDesc]".
-The conversation of Sheng is { "<This is nothing but a placeholder!>" }.
+Description of Sheng is "[ShengDesc]".
+Conversation of Sheng is { "<This is nothing but a placeholder!>" }.
 The scent of Sheng is "     The white tiger gives off a smell of herbs and spices with what appears to be an underlying scent of tea.".
 Sheng is in White Tiger Alchemy Shop.
 
@@ -214,7 +214,7 @@ to say ShengPotionBuy:
 	now sortorder entry is 3;
 	now description entry is "Transform into a Stag";
 	[]
-	if hp of Sheng is 1:
+	if HP of Sheng is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Lust Potion";
 		now sortorder entry is 4;
@@ -263,7 +263,7 @@ to say ShengOtterPotionSale:
 			infect "Sea Otter";
 			infect "Sea Otter";
 			infect "Sea Otter";
-			decrease carried of demon seed by 2;
+			ItemLoss demon seed by 2;
 		else:
 			say "     Shaking your head you say that you've changed your mind, causing the tiger to scoff. 'Don't waste my time, if you're gonna say you're gonna buy something then do so.' Sheng says with a slight glare. Shrugging your shoulders you just let the male get back to work, leaving you to yourself in the shop.";
 	else:
@@ -296,13 +296,13 @@ to say ShengHuskyPotionSale:
 				infect "Husky Alpha";
 				infect "Husky Alpha";
 				infect "Husky Alpha";
-				decrease carried of demon seed by 2;
+				ItemLoss demon seed by 2;
 			else if calcnumber is 2:
 				say "     You point at the Female Husky vial, causing Sheng to nod and slide it over to you, after which you chug the potion, feeling the effects kick in. As you turn to thank the alchemist he's sadly already back at work, so instead you return to the middle of the store.";
 				infect "Husky Bitch";
 				infect "Husky Bitch";
 				infect "Husky Bitch";
-				decrease carried of demon seed by 2;
+				ItemLoss demon seed by 2;
 		else:
 			say "     Shaking your head you say that you've changed your mind, causing the tiger to scoff. 'Don't waste my time, if you're gonna say you're gonna buy something then do so.' Sheng says with a slight glare. Shrugging your shoulders you just let the male get back to work, leaving you to yourself in the shop.";
 	else:
@@ -335,8 +335,8 @@ to say ShengLustPotionSale:
 		say "     [link]N[as]n[end link] - Nah.";
 		if Player consents:
 			say "     You pass over the vials to your master and he gladly takes them and passes over the potion. You pocket it safely, so that it doesn't break. The white tiger chuckles and gives you a smirk. 'Now pet, I don't mind if you plan to use that on me but remember to take care of the resulting problem.' He says with a look that causes shivers to go up your spine as he returns to work.";
-			decrease carried of demon seed by 2;
-			increase carried of lust potion by 1;
+			ItemLoss demon seed by 2;
+			ItemGain lust potion by 1;
 		else:
 			say "     Shaking your head, you say that you'll possibly get one later but not now. Your master nods and puts away the vial. 'Alright pet, just let me know if you want one, just remember what the cost is.' The white tiger says before returning to work.";
 	else:
@@ -421,7 +421,7 @@ to say ShengSex1:
 		WaitLineBreak;
 		say "     Deciding to show your appreciation for this scent and taste, as well as your master's body you move elsewhere, suddenly facing his balls and sheathe. Getting a full hit of your... owner's musk you let out a whimper of pleasure before pushing your nose into his heavy sack. Promptly you start licking at it, enjoying the taste and scent coming from them due to what you presume to be a long day at work. As you worship the underpart of his scrotum his cock starts to peak out of its sheath, showing you a pink cock with bumps all over it that you are sure would feel wonderful in you. However, your interest at the moment isn't that currently, so instead, you momentarily drag your tongue up it, relishing in its taste, before giving your master a look, wishing you could talk right now.";
 		say "     Thankfully though he appears to understand what you want, your desire to continue your worship upward. To show this, he nods his head which prompts you to redirect your tongue to his stomach and trail it upward, enjoying how it dips in between the lines forming his muscles which were hidden behind his clothes. While your tongue is busy your hands try to reach for your own crotch, however a hand grips your head tightly as soon as you try. 'No my little doggy, your first priority is me, not yourself.' Master says with a firm tone, booking no argument. Properly chastised you redirect one of your hands to his cock and start jerking him, making your owner grunt. With your free hand you reach it upward and start letting it roam on his chest as you continue to lick.";
-		WaitlineBreak;
+		WaitLineBreak;
 		say "     Seemingly getting tired of you just licking his stomach after a bit, you're pulled up onto your feet, assumingly given permission to stand. Right after that, your face is pushed into his chest, where you quickly latch onto one of his nipples, pulling at it lightly with your teeth. That gets a groan out of your master, followed by a moan when you twist your hand around his cock with a little bit more grip. 'Mmm, you're such a good puppy aren't you?' He says with pride. Suddenly you're flushed with emotions as a feeling of eagerness comes over you for pleasing your master, your tail wagging in abject happiness. With a new fervor, you lick and suck at the tiger's nipple like, well, an animal possessed.";
 		say "     Your new excitement at serving the male before you appears to have the intended affect, especially when 	you start to jack him off faster. The white tiger leans his head back and begins to moan loudly, practically humping into your hand. It's not long after he starts doing this that you can feel his balls slowly tighten up against your body signifying that he's getting close to shooting. These signs make you proud of yourself, causing you to inwardly preen that you can make your master cum. Of course, as you think this, he lets loose, spilling himself all over your hand and stomach, whispering about how much a good puppy you are.";
 		WaitLineBreak;
@@ -440,7 +440,7 @@ to say ShengSex1:
 		WaitLineBreak;
 		say "     Deciding to show your appreciation for this scent and taste, as well as your master's body you move elsewhere, suddenly facing his balls and sheathe. Getting a full hit of your... owner's scent you let out a whimper before pushing your nose into his heavy sack. Promptly you start licking at it, enjoying the taste and scent coming from them due to what you presume to be a long day at work. As you worship the underpart of his scrotum his cock starts to peak out of its sheath, showing you a pink cock with bumps all over it that you are sure would feel wonderful in you. However, your interest at the moment isn't that currently, so instead, you momentarily drag your tongue up it, relishing in its taste, before giving your master a look, wishing you could talk right now.";
 		say "     Thankfully though he appears to understand what you want, your desire to continue your worship upward. To show this, he nods his head which prompts you to redirect your tongue to his stomach and trail it upward, enjoying how it dips in between the lines forming his muscles which were hidden behind his clothes. While your tongue is busy your hands try to reach for your own crotch, however a hand grips your head tightly as soon as you try. 'No my pet, your first priority is me, not yourself.' Master says with a firm tone, booking no argument. Properly chastised you redirect one of your hands to his cock and start jerking him, making your owner grunt. With your free hand you reach it upward and start letting it roam on his chest as you continue to lick.";
-		WaitlineBreak;
+		WaitLineBreak;
 		say "     Seemingly getting tired of you just licking his stomach after a bit, you're pulled up onto your feet, assumingly given permission to stand. Right after that, your face is pushed into his chest, where you quickly latch onto one of his nipples, pulling at it lightly with your teeth. That gets a groan out of your master, followed by a moan when you twist your hand around his cock with a little bit more grip. 'Mmm, you're such a good [if Player is herm or Player is neuter]pet[else if Player is male]boy[else if Player is female]girl[end if] aren't you?' He says with pride. Suddenly you're flushed with emotions as a feeling of eagerness comes over you for pleasing your master. With a new fervor, you lick and suck at the tiger's nipple like, well, an animal possessed.";
 		say "     Your new excitement at serving the male before you appears to have the intended affect, especially when 	you start to jack him off faster. The white tiger leans his head back and begins to moan loudly, practically humping into your hand. It's not long after he starts doing this that you can feel his balls slowly tighten up against your body signifying that he's getting close to shooting. These signs make you proud of yourself, causing you to inwardly preen that you can make your master cum. Of course, as you think this, he lets loose, spilling himself all over your hand and stomach, whispering about how much a good pet you are.";
 		WaitLineBreak;
@@ -459,7 +459,7 @@ to say ShengSex1:
 		WaitLineBreak;
 		say "     Deciding to show your appreciation for this scent and taste, as well as your master's body you move elsewhere, suddenly facing his balls and sheathe. Getting a full hit of your owner's musk you let out a whimper of pleasure before pushing your nose into his heavy sack. Promptly you start licking at it, enjoying the taste and scent coming from them due to what you presume to be a long day at work. As you worship the underpart of his scrotum his cock starts to peak out of its sheath, showing you a pink cock with bumps all over it that you are sure would feel wonderful in you. However, your interest at the moment isn't that currently, so instead, you momentarily drag your tongue up it, relishing in its taste, before giving your master a look, knowing he would understand what you want.";
 		say "     Just as you knew, the white tiger understood you, nodding his head to your request to move upwards. This prompts you to redirect your tongue to his stomach and trail it upward, enjoying how it dips in between the lines forming his muscles which were hidden behind his clothes. While your tongue is busy you take one of your hands and move it to your master's cock and begin stroking. This action causes him to let out a moan, showing that he clearly approves of your motions. Not wanting your other hand to be idle, you reach it upward and start letting it roam on his chest as you continue to lick and stroke.";
-		WaitlineBreak;
+		WaitLineBreak;
 		say "     Seemingly getting tired of you just licking his stomach after a bit, you're pulled up onto your feet, assumingly given permission to stand. Right after that, your face is pushed into his chest, where you quickly latch onto one of his nipples, pulling at it lightly with your teeth. That gets a groan out of your master, followed by a moan when you twist your hand around his cock with a little bit more grip. 'Mmm, you're such a good puppy aren't you?' He says with pride. Suddenly you're flushed with emotions as a feeling of eagerness comes over you for pleasing your master, causing you to wag your tail in abject happiness. With a new fervor, you lick and suck at the tiger's nipple like, well, an animal possessed.";
 		say "     Your new excitement at serving the male before you appears to have the intended affect, especially when 	you start to jack him off faster. The white tiger leans his head back and begins to moan loudly, practically humping into your hand. It's not long after he starts doing this that you can feel his balls slowly tighten up against your body signifying that he's getting close to shooting. These signs make you proud of yourself, causing you to inwardly preen that you can make your master cum. Of course, as you think this, he lets loose, spilling himself all over your hand and stomach, whispering about how much a good puppy you are.";
 		WaitLineBreak;
@@ -473,7 +473,7 @@ to say ShengSex1:
 		WaitLineBreak;
 		say "     Deciding to show your appreciation for this scent and taste, as well as your master's body you move elsewhere, suddenly facing his balls and sheathe. Getting a full hit of your owner's scent you let out a whimper before pushing your nose into his heavy sack. Promptly you start licking at it, enjoying the taste and scent coming from them due to what you presume to be a long day at work. As you worship the underpart of his scrotum his cock starts to peak out of its sheath, showing you a pink cock with bumps all over it that you are sure would feel wonderful in you. However, your interest at the moment isn't that currently, so instead, you momentarily drag your tongue up it, relishing in its taste, before giving your master a look, knowing he would understand what you want.";
 		say "     Just as you knew, the white tiger understood you, nodding his head to your request to move upwards. This prompts you to redirect your tongue to his stomach and trail it upward, enjoying how it dips in between the lines forming his muscles which were hidden behind his clothes. While your tongue is busy you take one of your hands and move it to your master's cock and begin stroking. This action causes him to let out a moan, showing that he clearly approves of your motions. Not wanting your other hand to be idle, you reach it upward and start letting it roam on his chest as you continue to lick and stroke.";
-		WaitlineBreak;
+		WaitLineBreak;
 		say "     Seemingly getting tired of you just licking his stomach after a bit, you're pulled up onto your feet, assumingly given permission to stand. Right after that, your face is pushed into his chest, where you quickly latch onto one of his nipples, pulling at it lightly with your teeth. That gets a groan out of your master, followed by a moan when you twist your hand around his cock with a little bit more grip. 'Mmm, you're such a good [if Player is herm or Player is neuter]pet[else if Player is male]boy[else if Player is female]girl[end if] aren't you?' He says with pride. Suddenly you're flushed with emotions as a feeling of eagerness comes over you for pleasing your master. With a new fervor, you lick and suck at the tiger's nipple like, well, an animal possessed.";
 		say "     Your new excitement at serving the male before you appears to have the intended affect, especially when 	you start to jack him off faster. The white tiger leans his head back and begins to moan loudly, practically humping into your hand. It's not long after he starts doing this that you can feel his balls slowly tighten up against your body signifying that he's getting close to shooting. These signs make you proud of yourself, causing you to inwardly preen that you can make your master cum. Of course, as you think this, he lets loose, spilling himself all over your hand and stomach, whispering about how much a good pet you are.";
 		WaitLineBreak;
@@ -570,8 +570,9 @@ Object	Name
 Petted In Public	"Petted in Public"
 
 Petted in Public is a situation.
+ResolveFunction of Petted in Public is "".
 Petted in Public is inactive.
-The sarea of Petted in Public is "Atlantis".
+Sarea of Petted in Public is "Atlantis".
 
 when play begins:
 	add Petted in Public to BadSpots of MaleList;
@@ -589,8 +590,8 @@ name	desc	weight	object
 "sheng's pet collar"	"[SCollarDesc]"	1	sheng's pet collar
 
 sheng's pet collar is a grab object.
-the usedesc of sheng's pet collar is "[SCollarUse]".
-it is part of the player.
+Usedesc of sheng's pet collar is "[SCollarUse]".
+
 It is not temporary.
 
 sheng's pet collar is a grab object.
@@ -598,8 +599,8 @@ sheng's pet collar is equipment.
 sheng's pet collar is cursed.
 It is not temporary.
 The printed name of sheng's pet collar is "sheng's pet collar".
-The plural of sheng's pet collar is false.
-The taur-compatible of sheng's pet collar is true.
+Plural of sheng's pet collar is false.
+Taur-compatible of sheng's pet collar is true.
 The size of sheng's pet collar is 0.
 The AC of sheng's pet collar is 0.
 The effectiveness of sheng's pet collar is 0.
@@ -627,7 +628,7 @@ name	desc	weight	object
 
 lust potion is a grab object. It is temporary.
 
-the usedesc of lust potion is "[lust potion use]".
+Usedesc of lust potion is "[lust potion use]".
 
 to say lust potion use:
 	say "     You uncork the bottle and chug it, downing all of the liquid inside. There's a surprisingly chocolatey and nutty taste to it, reminding you of a consistency of chocolate milk. Soon though you're too distracted too think about that as you're feeling hot and aroused, your libido climbing rapidly.";
@@ -688,6 +689,6 @@ carry out potiongiving someone (called x):
 		say "     They're as ready as they're going to be by this point.";
 	else if lastfuck of x - turns >= 24:
 		say "     They're as ready as they're going to be by this point.";
-	decrease carried of lust potion by 1;
+	ItemLoss lust potion by 1;
 
 Sheng ends here.

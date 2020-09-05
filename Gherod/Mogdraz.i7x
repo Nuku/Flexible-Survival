@@ -30,13 +30,14 @@ Section 1 - Intro
 
 Table of GameEventIDs (continued)
 Object	Name
-An Hellish Introduction	"An Hellish Introduction"
+Hellish Introduction	"Hellish Introduction"
 
-An Hellish Introduction is a situation.
-The sarea of An Hellish Introduction is "Nowhere".
+Hellish Introduction is a situation.
+ResolveFunction of Hellish Introduction is "".
+Sarea of Hellish Introduction is "Nowhere".
 
 when play begins:
-	add An Hellish Introduction to badspots of DemonList;
+	add Hellish Introduction to badspots of DemonList;
 
 [ Resolution stages                          ]
 [   0: Mogdraz not met                       ]
@@ -84,9 +85,9 @@ to say MogdrazIntro:
 			now HP of Mogdraz is 30;
 	say "     'You see, I do run a business, and there is one thing I am looking for. Two, in fact! Patrons and Escorts! If you fancy demons, you can pay upfront, and I will provide you with a professional one of your choice... Or, if you wish to be on the other side taking your clients, you can do so and I will pay you a percentage of what you get! But I'm afraid you'll have to look like a demon... If your only desire is matching up with other patrons, however, you may do so for free at the lounge! Such a fine deal, is it not?' He accompanies you out of the room and into the lounge he mentioned. 'Anything else you want to discuss, I will be in my usual sofa. I like watching the action happen, and someone has to keep an eye on the clientele, right?'";
 	say "     As he finishes explaining things, he proceeds to show the space around. It is a fairly normal nightclub, with a pervert or two around the corner every now and then. Sounds like you could give it a try, now that you know its location in the Red Light District.";
-	now resolution of An Hellish Introduction is 1;
+	now resolution of Hellish Introduction is 1;
 	move player to Hellfire Club;
-	now Hellfire Club is known;
+	AddNavPoint Hellfire Club;
 	connect Hellfire Club;
 	WaitLineBreak;
 	if companion of player is demonologist:
@@ -94,7 +95,7 @@ to say MogdrazIntro:
 		WaitLineBreak;
 		MogdrazXaedihr;
 
-instead of going north from Crimson Street while (resolution of An Hellish Introduction is 1 and companion of player is demonologist):
+instead of going north from Crimson Street while (resolution of Hellish Introduction is 1 and companion of player is demonologist):
 	say "     Just as you're about to make an entrance, your sorcerer friend immediately bends the will of the hellfire demons standing as guards, forcing them to collapse on the ground with powerful magic. 'I knew something was going on here.' You try to stop him, to no avail, as he charges ahead into the club. There is nothing you can do but to follow after him, hoping he doesn't make any further trouble...";
 	WaitLineBreak;
 	MogdrazXaedihr;
@@ -108,7 +109,7 @@ to MogdrazXaedihr:
 	WaitLineBreak;
 	say "     Mogdraz chuckles, getting up from his chair and talking as he walks over to the door. 'Even the most strong-willed crave for someone in charge, sometimes. To let go for once and feel someone taking control... Sometimes, they need that. I simply provide what the heart truly desires. But I don't keep their souls, so they're free to go anytime...! They simply choose not to.' Both you and Xaedihr follow him to the exit. The sorcerer makes a polite bow as the club master responds in the same manner, a formal greeting between good friends in nobility, perhaps. 'I shall send you what I learn, Xaed. Just be careful and don't do anything you would regret. Oh, and... Good to see you.' says Mogdraz, as you and Xaedihr take your leave, the dark mage showing signs of joy and hope in his face.";
 	say "     The half-demon now turns to you with a sincere smile. 'Thank you, friend. If it wasn't for you I would have never re-encountered the only demon I owe my life to.' Indeed, this is something you don't see everyday, given Xaedihr's innate hate for the hellspawn. And Mogdraz seems to be capable of dimension traveling, surprisingly. There is a lot you still don't know about that demon... Maybe you can know more by talking to him the next time you find yourself at the Hellfire Club.";
-	now resolution of An Hellish Introduction is 2;
+	now resolution of Hellish Introduction is 2;
 
 [***********************************************************]
 [***********************************************************]
@@ -158,8 +159,8 @@ SexuallyExperienced of Mogdraz is true.
 TwistedCapacity of Mogdraz is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Mogdraz is true. [steriles can't knock people up]
 MainInfection of Mogdraz is "Hellfire Demon".
-The description of Mogdraz is "[Mogdrazdesc]".
-The conversation of Mogdraz is { "<This is nothing but a placeholder!>" }.
+Description of Mogdraz is "[Mogdrazdesc]".
+Conversation of Mogdraz is { "<This is nothing but a placeholder!>" }.
 The scent of Mogdraz is "     Mogdraz smells faintly of brimstone, but he has a rather attractively masculine scent. Being near him makes you feel more [if player is submissive]submissive, your knees weakening in his presence[else if player is dominant]dominant, empowered by his mighty presence[else if player is kinky]kinky, your mind contemplating all the possibilities[else]prone to sexual debauchery[end if]".
 
 to say MogdrazDesc:
@@ -205,7 +206,7 @@ to say MogdrazTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Let Mogdraz know of any developments regarding your sexuality";
 	[]
-	if resolution of An Hellish Introduction > 1:
+	if resolution of Hellish Introduction > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "His situation with Xaedihr";
 		now sortorder entry is 6;
@@ -481,7 +482,7 @@ Hellfire Club	"Hellfire Club"
 
 Hellfire Club is a room. It is a fasttravel. Hellfire Club is private.
 The earea of Hellfire Club is "Red".
-The description of Hellfire Club is "[HellfireClubDesc]".
+Description of Hellfire Club is "[HellfireClubDesc]".
 
 to say HellfireClubDesc:
 	say "     You're standing outside of the Hellfire Club, a place hidden from the common eyes, owned by the infamous Master Mogdraz so referred by the demons which the club is named after. They seem to have acquired their own source of energy, which you do not care to get an explanation from, since it's probably demonic stuff. Inside, [if daytimer is night]the party seems to be ongoing, a barely audible sound of lounge music playing[else]things seem pretty calm, not an audible sound coming from there[end if]. It's a very fetish and BDSM themed club, great for the kinky and for the curious. Guarding the entrance are two burly hellfire demons, eyeing you with a smirk, but they do not stop you thanks to the order given by Mogdraz himself to allow you free entry. You could head further inside the club, or head back south into the ominous and oddly clean Crimson Street.";
@@ -489,10 +490,10 @@ to say HellfireClubDesc:
 to connect Hellfire Club:
 	change the south exit of Hellfire Club to Crimson Street;
 	change the north exit of Crimson Street to Hellfire Club;
-	now Hellfire Club is known;
+	AddNavPoint Hellfire Club;
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	if resolution of An Hellish Introduction > 0: [event resolved the right way, room not connected yet]
+	if resolution of Hellish Introduction > 0: [event resolved the right way, room not connected yet]
 		connect Hellfire Club;
 
 instead of smelling Hellfire Club:
@@ -505,7 +506,7 @@ Hellfire Lounge	"Hellfire Lounge"
 Hellfire Lounge is a room.
 Hellfire Lounge is north of Hellfire Club. It is sleepsafe.
 The earea of Hellfire Lounge is "Red".
-The description of Hellfire Lounge is "[HellfireLoungeDesc]".
+Description of Hellfire Lounge is "[HellfireLoungeDesc]".
 
 to say HellfireLoungeDesc:
 	say "     The lounge of the Hellfire Club is a spatious environment, with a bar counter on one side and many chairs and seats scattered around, screaming lush and delight wherever you look. Here, [if daytimer is night]the noise isn't unbearable, you're even able to have a normal conversation with anyone without having to raise your voice too much, and the bartender is serving drinks as usual[else]some demon lackeys are cleaning up the seats, tables and corners from the previous night, while the bartender is polishing the drinking glasses[end if]. At one corner with peripheral vision for the entire lounge is a large and luxurious red velvet sofa, where the owner of the club, Mogdraz, usually takes his seat, sometimes accompanied by a couple of servants, who he dismisses whenever you approach him. Behind the bar counter, to the west, there's a door to the back rooms with a signal prominently saying [']STAFF ONLY[']. It [if Resolution of Ambush The Purifier < 6]doesn't look like you can go in there for the moment[else]looks like you could go in there, now that you have Mogdraz's permission[end if]. To the south is the entrance, with two burly hellfire demons keeping watch all the time.";
@@ -519,7 +520,7 @@ Hellfire Corridor	"Hellfire Corridor"
 
 Hellfire Corridor is a room. Hellfire Corridor is private. It is sleepsafe.
 The earea of Hellfire Corridor is "Red".
-The description of Hellfire Corridor is "[HellfireCorridorDesc]".
+Description of Hellfire Corridor is "[HellfireCorridorDesc]".
 
 to say HellfireCorridorDesc:
 	say "     Past the Staff door, there is a long and dark corridor, leading to lots of different rooms. Some have their lights lit from inside, and you can hear a few grunts and moans occasionally coming from behind the walls. Apart from these sounds, there's only silence. Right now, you can only head south, down a stairway that seems to lead to the dungeon where captives are held.";
@@ -542,7 +543,7 @@ Hellfire Dungeon	"Hellfire Dungeon"
 Hellfire Dungeon is a room.
 Hellfire Dungeon is below Hellfire Corridor. It is sleepsafe.
 The earea of Hellfire Dungeon is "Red".
-The description of Hellfire Dungeon is "[HellfireDungeonDesc]".
+Description of Hellfire Dungeon is "[HellfireDungeonDesc]".
 
 to say HellfireDungeonDesc:
 	say "     One of the darkest places in the entire Hellfire Club establishment, the dungeon is where Mogdraz's most valuable slaves are kept, among others that he personally fancies. Though this isn't what you expect from a regular dungeon. The place has little light, but the [']cells['] are actually rooms with good conditions for the captives to inhabit. Over a specific area, however, there are racks and other mechanisms that serve to bind and tie, together with a variety of sex toys and tools for a complete BDSM session. This definitely seems to be the place to enact some very kinky fun, and you can occasionally hear someone moaning from inside the rooms.";
@@ -558,11 +559,11 @@ Section X - Dev Cheats
 [***********************************************************]
 [***********************************************************]
 
-GimpMaskSkip is an action applying to nothing.
+[GimpMaskSkip is an action applying to nothing.
 Understand "GiveGimpMask" as GimpMaskSkip.
 
 Carry out GimpMaskSkip:
-	increase carried of gimp mask by 1;
-	say "You have the gimp mask. Go submit to a hellfire demon.";
+	ItemGain gimp mask by 1 silently;
+	say "You have the gimp mask. Go submit to a hellfire demon.";]
 
 Mogdraz ends here.

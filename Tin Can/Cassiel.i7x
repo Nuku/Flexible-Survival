@@ -53,8 +53,8 @@ AnalVirgin of Cassiel is true.
 PenileVirgin of Cassiel is true.
 SexuallyExperienced of Cassiel is false.
 
-The description of Cassiel is "[CassielDesc]".
-The conversation of Cassiel is { "Hello"}.
+Description of Cassiel is "[CassielDesc]".
+Conversation of Cassiel is { "Hello"}.
 
 The scent of Cassiel is "[CassielScent]";
 

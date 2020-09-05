@@ -78,60 +78,60 @@ carry out supersponsor:
 		else if calcnumber is 5:
 			if ssstash > 0:
 				say "     Asking Trixie about some supplies, she nods and tells you about the head librarian's secret stash. Heading there, you open an old filing cabinet and push aside from papers to find a collection of food and drink. 'And since you've been such a nice person, you can use that an extra time for every odd level you reach.'";
-				say "[bold type]1 x water bottle, food, soda and chips obtained.[roman type][line break]";
+				say "[bold type]You gain 1 of water bottle, food, soda and chips![roman type][line break]";
 				decrease ssstash by 1;
-				increase carried of water bottle by 1;
-				increase carried of soda by 1;
-				increase carried of food by 1;
-				increase carried of chips by 1;
+				ItemGain water bottle by 1 silently;
+				ItemGain soda by 1 silently;
+				ItemGain food by 1 silently;
+				ItemGain chips by 1 silently;
 			else:
 				say "     The stash is currently empty, but you'll be able to use it an additional time for every odd level you reach.";
 		else if calcnumber is 6:
 			if ssgbii is false:
 				say "     Mentioning that you'd like some infected items, Trixie nods. 'Yeah, I've got some of those around here somewhere.' Leading the way, she flies into one of the side rooms and points out a small backpack behind a chair. 'While you were hiding out in the bunker, some other survivor ended up camping out in here. It seems they were collecting these things for some reason, so somebody out there probably wants at least some of these. But their last owner got a little too over-excited about testing them and ended up a horny hybrid. You should be careful about that - unless you're into that kind of thing, that is.'";
 				say "     Opening it up, you find an eclectic collection of fluids and goo, all conveniently labelled. Isn't that handy?";
-				say "     You got: ";
+				say "     You gain 1 of: ";
 				if FurryList is not banned:
 					let liststarted be false;
 					if HermList is not banned:
 						now liststarted is true;
-						increase carried of motel key by 1;
-						increase carried of gryphon milk by 1;
+						ItemGain motel key by 1 silently;
+						ItemGain gryphon milk by 1 silently;
 						say "motel key, gryphon milk";
 						if HumorousList is not banned:
-							increase carried of chocolate milk by 1;
+							ItemGain chocolate milk by 1 silently;
 							say ", chocolate milk";
 					if FemaleList is not banned:
-						increase carried of tiger patch by 1;
-						increase carried of cheetah milk by 1;
+						ItemGain tiger patch by 1 silently;
+						ItemGain cheetah milk by 1 silently;
 						if liststarted is true:
 							say ", ";
 						else:
 							now liststarted is true;
 						say "tiger patch, cheetah milk";
 					if MaleList is not banned:
-						increase carried of rhino cum by 1;
-						increase carried of eagle feather by 1;
+						ItemGain rhino cum by 1 silently;
+						ItemGain eagle feather by 1 silently;
 						if liststarted is true:
 							say ", ";
 						else:
 							now liststarted is true;
 						say "rhino cum, eagle feather";
 				else:
-					increase carried of dirty water by 1;
+					ItemGain dirty water by 1 silently;
 					say "dirty water";
 				if FemaleList is not banned:
-					increase carried of glob of goo by 1;
-					increase carried of centaur hair by 1;
+					ItemGain glob of goo by 1 silently;
+					ItemGain centaur hair by 1 silently;
 					say ", glob of goo, centaur hair";
 				if MaleList is not banned:
-					increase carried of centaur cum by 1;
+					ItemGain centaur cum by 1 silently;
 					say ", centaur cum";
 				if DemonList is not banned and MaleList is not banned:
-					increase carried of demon seed by 1;
+					ItemGain demon seed by 1 silently;
 					say ", demon seed";
 				if FeralList is not banned:
-					increase carried of wyvern goop by 1;
+					ItemGain wyvern goop by 1 silently;
 					say ", wyvern goop";
 				say ".";
 				now ssgbii is true;
@@ -140,28 +140,28 @@ carry out supersponsor:
 		else if calcnumber is 7:
 			if ssgpd is false:
 				say "     When you ask for a weapon to help you, Trixie whispers in your ear where one is hidden. Checking there, you find a giant purple dildo. Its handle has a good grip for swinging and it has that right mix of weight, wobble and firmness to make it both an effective and amusing club.";
-				now carried of dildo club is 1;
+				ItemGain dildo club by 1;
 				now ssgpd is true;
 			else:
 				say "     You've already received this reward.";
 		else if calcnumber is 8:
 			if ssbpg is false:
 				say "     Asking Trixie if there's anything around to keep the monster of the city from getting at you, she giggles and tells you to check the 'Lost and Found' box. Digging around in it, all you find of interest is a plastic toy gun. Not quite what you were hoping for, you feel. Still, needing a little levity, you aim the toy at a 'READ!' poster on the wall. But rather than a spray of water or a foam dart, a slimy yellow banana peel splatters onto the cartoony owl's face. You decide to hang onto the odd gun. While probably not a particularly effective weapon, the peels might make your foes off balance if they get hit.";
-				now carried of banana peel gun is 1;
+				ItemGain banana peel gun by 1;
 				now ssbpg is true;
 			else:
 				say "     You've already received this reward.";
 		else if calcnumber is 9:
 			if sshh is false:
 				say "     Worried about some creature cracking your skull or a zombie munching on your brain, you ask if there's anything around to protect yourself. Trixie leads you to a janitorial closet. Among the odds and ends in there, you find a hard hat. According to her, it was forgotten by some contractors the last time some renovations were done. You put the yellow construction helmet on, glad to have something to defend your brain meats from zombies.";
-				now carried of hard hat is 1;
+				ItemGain hard hat by 1;
 				now sshh is true;
 			else:
 				say "     You've already received this reward.";
 		else if calcnumber is 10:
 			if ssos is false:
 				say "     When you say you need some protection if you're going back out there, Trixie points you towards the history section. Mounted on the wall in that disused corner of the library, you find a round shield of bronze mounted on the wall. It is emblazoned with a red-orange 'P' in a ring on its face. How did you never notice it there before now? Taking it down, you find it quite real and in very good shape. The leather straps are solid and the shield itself seems strong enough to take a beating.";
-				now carried of orange shield is 1;
+				ItemGain orange shield by 1;
 				now ssos is true;
 			else:
 				say "     You've already received this reward.";
@@ -177,7 +177,7 @@ carry out supersponsor:
 					add "Tamed" to Traits of petget;
 			say "They are all now yours! (Warning, the code for some pets may react oddly. They are all set as battle-summonable though.)[line break]";
 		else if calcnumber is 13:
-			now carried of Smug Confidence is 1;
+			ItemGain Smug Confidence by 1;
 			say "Ah, there it is. Don't forget to use it.";
 		else if calcnumber is 14:
 			turn the Player into a "Human";
@@ -224,18 +224,16 @@ Instead of smelling Smug Confidence:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"dildo club"	"A big, bright purple dildo. It's about three feet long and has a handle on it for easy swinging."	5	dildo club
 "banana peel gun"	"A colorful toy gun made of plastic. But rather than fire foam darts or shoot water, it's able to launch banana peels without ever needing to be reloaded."	2	banana peel gun
 "orange shield"	"A round shield made of burnished bronze with a red-orange 'P' emblem on it."	6	orange shield
 "hard hat"	"A yellow construction hard hat you've found to help protect your noggin."	2	hard hat
 
 [Dildo Club]
-dildo club is an armament. It is part of the player. It has a weapon "[one of]your phallic club[or]your purple latex club[or]your dildo club with a resounding 'Wubba-Wubba-Wubba-Thwack!' sound[or]the three-foot purple schlong[or]the floppy dildo club[or]your oversized dildo[at random]". The weapon damage of dildo club is 6. The weapon type of dildo club is "Melee". It is not temporary. the objsize of dildo club is 4.
+[dildo club moved to Core Mechanics/Weapons.i7x]
 
-the scent of the dildo club is "The sex toy club smells of latex and your humiliated foes."
 
 [Banana Peel Gun]
-banana peel gun is an armament. It is part of the player. It has a weapon "[one of]your[or]the[purely at random] [one of]strange gun[or]colorful gun[or]plastic gun[or]odd toy gun[or]plantain pistol[or]banana blaster[or]banana peel gun[or]banana peel launcher[at random], [one of]striking your foe in the face[or]tripping up your foe with a messy peel[or]causing your foe to slide into something[or]making your foe stumble and twist themselves painfully[or]causing a comedic pratfall[at random][bananerred]". The weapon damage of banana peel gun is 4. It is not temporary. It is ranged. The objsize of banana peel gun is 3.
+banana peel gun is an armament. It has a weapon "[one of]your[or]the[purely at random] [one of]strange gun[or]colorful gun[or]plastic gun[or]odd toy gun[or]plantain pistol[or]banana blaster[or]banana peel gun[or]banana peel launcher[at random], [one of]striking your foe in the face[or]tripping up your foe with a messy peel[or]causing your foe to slide into something[or]making your foe stumble and twist themselves painfully[or]causing a comedic pratfall[at random][bananerred]". Weapon Damage of banana peel gun is 4. It is not temporary. It is ranged. Objsize of banana peel gun is 3.
 
 the scent of the banana peel gun is "The odd toy gun smells unsurprisingly like banana pudding. Unfortunately, none can be found inside."
 

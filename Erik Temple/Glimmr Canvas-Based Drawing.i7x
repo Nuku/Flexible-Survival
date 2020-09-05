@@ -2669,11 +2669,11 @@ The scenario definition is followed by the list of figures. The list of figures 
 
 	Guard Room is east of Hall. "An exit leads west."
 
-	Up from Entrance Chamber is the Shaft. The description of the Shaft is "The stairs continue up and down, and there is an opening to the south."
+	Up from Entrance Chamber is the Shaft. Description of the Shaft is "The stairs continue up and down, and there is an opening to the south."
 
 	Watch Room is south of the Shaft. "You can return to the north."
 
-	Up from Shaft is the Upper Chamber. The description of the Upper Chamber is "The stair spirals downward, and a curving passage leads south."
+	Up from Shaft is the Upper Chamber. Description of the Upper Chamber is "The stair spirals downward, and a curving passage leads south."
 
 	Flanking Chamber is south of Upper Chamber. "The passage leads back to the west."
 
@@ -2943,7 +2943,7 @@ Note the use of "continue the action" at the end of each rule. Most of the rules
 
 	West End of Tower Street is east of West Tower. East End of Tower Street is east of West End. Main Square is east of East End. Port Fortress is south of Main Square. Bell Tower is north of Main Square. North Tower is north of Bell Tower.
 
-	The description of a room is "[exits]".
+	Description of a room is "[exits]".
 
 	To say exits:
 		say "Exits: ";

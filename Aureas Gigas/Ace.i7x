@@ -4,16 +4,21 @@ Version 1 of Ace by Aureas Gigas begins here.
 VanessaAceInteraction is a number that varies. VanessaAceInteraction is usually 0.
 SnowAceInteraction is a number that varies. SnowAceInteraction is usually 0.
 
+Table of GameEventIDs (continued)
+Object	Name
+Refueling	"Refueling"
+
 Refueling is a situation.
-The Prereq1 of Refueling is Avian Tent.
+ResolveFunction of Refueling is "[ResolveEvent Refueling]".
+Prereq1 of Refueling is Avian Tent.
 The Prereq1Resolution of Refueling is { 1, 2 }.
-The sarea of Refueling is "Forest";
+Sarea of Refueling is "Forest";
 
 when play begins:
 	add Refueling to BadSpots of MaleList;
 	add Refueling to BadSpots of FemaleList;
 
-Instead of resolving a Refueling:
+to say ResolveEvent Refueling:
 	say "     As you travel down a dusty path through the forest you come across the ruins of an aged dollar store, the outside looks thoroughly ransacked with shards of glass from broken car windshields and shredded cardboard lies strewn all around park. Some plastic bags flutter listlessly about in the wind. A massive eighteen-wheeler in the back that has been flipped on side by a large redwood and two elms. One of back doors is open, indicating that the truck was being unloaded when P-Day started. Hoping to find some useful you peek inside to see a variety of boxes that have been shredded to bits. Based on the bite and scratch marks it would seem like a pack of wolves found cargo before you. The few boxes that seem relatively untouched contain items like laundry detergent, brooms, and paper towels. Makes sense that the feral beasts would ignore those remnants of society no longer useful in this post-apocalyptic environment. With the truck a scavenging bust you venture in the back area of the store hoping to have more luck inside the storage room in back of the store.";
 	say "     The faintly rusted hinges creak as you open the heavy metal door. Interestingly the storage room seems relatively untouched. Looks like the wolves weren't able to find a way inside this room. You prop open the door with a box of detergent and begin searching inside the storeroom. To your disappointment, the backroom seems relatively bereft of supplies, with only items like toys, electronic fans, and some cleaning products remaining. Unfortunately, it looks like you came here too late, and some other somewhat sane scavengers found and looted the place before you came in in. With the way the world is now, it makes sense that all the places known to have tons of supplies sitting out would be some of the first targets to get looted. As you walk by the door to the storefront, you hear some grunts and moans coming from the other side of the door. It seems like you are not the only one inside the store!";
 	WaitLineBreak;
@@ -51,11 +56,12 @@ Object	Name
 Jetlagged	"Jetlagged"
 
 Jetlagged is a situation.
-The Prereq1 of Jetlagged is Refueling.
+ResolveFunction of Jetlagged is "[ResolveEvent Jetlagged]".
+Prereq1 of Jetlagged is Refueling.
 The Prereq1Resolution of Jetlagged is { 1, 2 }.
-The sarea of Jetlagged is "Forest".
+Sarea of Jetlagged is "Forest".
 
-Instead of resolving a Jetlagged:
+to say ResolveEvent Jetlagged:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     While traveling through the woods you decide to check on the small settlement where Izzy, Gray, and Ace are located. Walking down the trail leading to the campsite, you notice that the path seems wider and much more well-worn than before. The variety of hoofed, clawed, and taloned footprints in the mud, highlight the variety of foot-traffic that has traveled towards your destination. As you approach a curve in the footpath caused by a massive redwood, you hear variety of clangs, chatter, and flapping of fabric with the wind. The sleepy campsite has surely grown. As you get your first sight of the campgrounds, you notice that the ramshackle makeshift defenses made from bits of wood and scrap metal have been replaced with some proper wooden barriers. You can even see a metal shipping container in the northern section of the camp.";
 	say "     As you gaze upon the changed settlement, a person blurts out, '[']Scuze me. Coming through.' When you move to one side of the trail, you see a white anthro bull who seems vaguely familiar walk past you. Following shortly behind is a portly anthro warthog. Both are wearing large hiking packs. Various items inside clank with every step taken. The shorter porcine fellow inquires, 'Marsden, where are you headed?' The bovine replies, 'Argos Antiques. One of the settlers here found some antique jewelry.' With a wary look in his eyes, the warthog asks, 'Are sure that's a good idea? That Dmitri fellow seems sorta fishy to me.' Giving a flippant shrug, Marsden answers, 'Can't make a profit without taking some risks. Besides, I'm one of his best contacts. That peacock rarely ventures from the high rise district.' From what you can surmise, the pair are traders, some of the few sane people bold enough to venture through the unsafe areas of the city. While the two are out of earshot, you move towards the changed town.";
@@ -73,7 +79,7 @@ Instead of resolving a Jetlagged:
 	say "     Deciding that some lighthearted conversation is needed, Ace shares a story of his youth in the Pacific northwest. And how one when he was fishing at lake with his family he was reeling in a whopper of a trout when an osprey snatched the fish out of the water breaking the line and leaving a feather in its wake. Taking the feather out of one of his pockets, the fighter pilot surmises, 'Maybe this good luck charm is what shaped my current form. Not that I'm complaining, I think my body works well for me.' You begin to feel restless, which can be sensed by stud. 'You seem like you're itching to get back on the trail. I'll see you out.' Exiting the tent, the former pilot states, 'I have to travel to work out some deals with some seagulls at the beach trading supplies for food. I might see you out and about.' He then moves close and whispers, 'And if you ever in the mood for the type of fun that Gray and Izzy have, I offer my services.' He then gives you happy parting words.";
 	WaitLineBreak;
 	move player to Staghorn;
-	now Staghorn is known;
+	AddNavPoint Staghorn;
 	now battleground is "void";
 	now HP of Ace is 2;
 	now Jetlagged is resolved;
@@ -83,7 +89,7 @@ Object	Name
 Staghorn	"Staghorn"
 
 Staghorn is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Staghorn is "[staghorndesc]".
+Description of Staghorn is "[staghorndesc]".
 the scent of Staghorn is "The settlement smells of a hearty stew that is cooking somewhere nearby. There is also the smell of some freshly chopped lumber from freshly built fences.".
 
 to say staghorndesc:
@@ -94,8 +100,43 @@ object	name
 Ace	"Ace"
 
 Ace is a person. Ace is in Staghorn.
-The description of Ace is "[acedesc]".
-The conversation of Ace is { "Skypilot!" }.
+ScaleValue of Ace is 3. [human sized]
+Body Weight of Ace is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Ace is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Ace is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Ace is 3. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Ace is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Ace is 3. [length in inches]
+Breast Size of Ace is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Ace is 2. [count of nipples]
+Asshole Depth of Ace is 8. [inches deep for anal fucking]
+Asshole Tightness of Ace is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Ace is 1. [number of cocks]
+Cock Girth of Ace is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Ace is 8. [length in inches]
+Ball Count of Ace is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Ace is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Ace is 0. [number of cunts]
+Cunt Depth of Ace is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Ace is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Ace is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Ace is false.
+PlayerRomanced of Ace is false.
+PlayerFriended of Ace is false.
+PlayerControlled of Ace is false.
+PlayerFucked of Ace is false.
+OralVirgin of Ace is false.
+Virgin of Ace is true.
+AnalVirgin of Ace is true.
+PenileVirgin of Ace is false.
+SexuallyExperienced of Ace is true.
+TwistedCapacity of Ace is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Ace is true. [steriles can't knock people up]
+MainInfection of Ace is "Human". [since there is no fitting infection for him, he's sterile for now]
+Description of Ace is "[acedesc]".
+Conversation of Ace is { "Skypilot!" }.
 the scent of the Ace is "The avian has a strangely masculine scent that reminds you of the sea.".
 
 to say acedesc:

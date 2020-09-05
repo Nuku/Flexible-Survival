@@ -45,8 +45,7 @@ To say CheetahWomanLoses:
 				say "     The both of you are brought to orgasm almost simultaneously, you are lost in bliss and it feels as if an eternity has passed. You look to your partner and smile, satisfied that you have had your pleasure you gather your things and make on your way, leaving the cheetah woman to whatever fate awaits her";
 		else: [Milking]
 			say "     Moving to restrain her before she can get away, you force her down onto the ground with her [one of]muzzle[or]face[or]snout[at random] pressed against the earth. You [one of]pick up a glass bottle from the ground[or]pull a glass bottle from your bag[or]pick up a plastic bottle from the ground[or]pull a plastic bottle from your bag[at random] and place the container under her [one of]right breast[or]left breast[at random], then begin to stimulate her nipples. Her breathing starts to get heavy as the stimulation to her tits intensifies. Soon she is moaning and purring as milk shoots out her tits and into the container. After you are done with her, you move her slumping body to the side and put a cap on the bottle of cheetah milk, then go on your merry way.";
-			say "     [bold type]You received a bottle of cheetah milk[roman type][line break]";
-			increase carried of cheetah milk by 1;
+			ItemGain cheetah milk by 1;
 	else: [Milking]
 		say "     Moving to restrain her before she can get away, you force her down onto the ground with her [one of]muzzle[or]face[or]snout[at random] pressed against the earth. You [one of]pick up a glass bottle from the ground[or]pull a glass bottle from your bag[or]pick up a plastic bottle from the ground[or]pull a plastic bottle from your bag[at random] and place the container under her [one of]right breast[or]left breast[at random], then begin to stimulate her nipples. Her breathing starts to get heavy as the stimulation to her tits intensifies. Soon she is moaning and purring as milk shoots out her tits and into the container. After you are done with her, you move her slumping body to the side and put a cap on the bottle of cheetah milk, then go on your merry way.";
 
@@ -60,8 +59,8 @@ to say CheetahWomanDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -85,7 +84,7 @@ When Play begins:
 	now desc entry is "[CheetahWomanDesc]";
 	now face entry is "sleek and cheetah-like, with a short muzzle, soft whiskers, and small, rounded ears resting on top of your new head"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "Slim and sleek, with not an ounce of wasted fat anywhere you can spot, its strong tight muscles made for running. You balance easily on your new, pawlike feet, gripping the ground tightly. You find yourself leaning forward slightly as you walk, as if you were always ready to spring into action"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "[one of]cheetah spotted[or]cheetah furred[or]black and yellow spotted[or]sleek furred[or]short fur covered[at random]"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "[one of]cheetah spotted[or]cheetah furred[or]black and yellow spotted[or]sleek furred[or]short fur covered[at random]"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "You have a long, thin feline tail stretching out behind you, constantly lashing and curling around from side to side as if it is always eager to be moving. It is covered in [Skin of Player] skin and provides an excellent counterbalance to swift movement."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feline[or]cheetah[or]barbed[or]pointed[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your mouth pushes out into a slim muzzle, your ears moving to the top of your head as your nose shrinks and becomes part of your new muzzle. Your vision blurs for a minute as your eyes water, then it clears, and the world comes into a new, sharper focus before your now-predatory eyes as many new sharp, enticing scents fill your feline nose"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -116,6 +115,9 @@ When Play begins:
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "cheetah milk";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 40;  [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]lithe[or]sleek[at random]";
 	now type entry is "feline";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -130,7 +132,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -235,9 +237,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "cheetah milk"	"The creamy milk collected from a Cheetah. It has a potent smell to it, yet it's slightly enticing."	1	cheetah milk
 
-cheetah milk is a grab object. It is milky. It is temporary. Understand "milk" as cheetah milk. cheetah milk is infectious. The strain of cheetah milk is "Cheetah Woman".
+cheetah milk is a grab object. It is milky. It is temporary. Understand "milk" as cheetah milk. cheetah milk is infectious. Strain of cheetah milk is "Cheetah Woman".
 
-The usedesc of cheetah milk is "[drinkcheetahmilk]";
+Usedesc of cheetah milk is "[drinkcheetahmilk]";
 
 to say drinkcheetahmilk:
 	say "     You drink down the cheetah milk. It has a strangely pleasant taste and it helps quench your thirst a little. You feel a little more lustful and excited.";
@@ -285,7 +287,7 @@ to say cheetahwomaninheat:
 	increase Libido of Player by 5;
 	if Libido of Player > 99, now Libido of Player is 99;
 	if Libido of Player > 90 and slutfucked > 8:
-		if there are no dangerous doors in the location of the player:
+		if there are no dangerous doors in the Location of Player:
 			if location of Player is fasttravel:
 				now battleground is "Outside";
 			else:
@@ -293,7 +295,7 @@ to say cheetahwomaninheat:
 				increase slutfucked by 1;
 				now battleground is "void";
 		else:
-			let y be a random dangerous door in the location of the player;
+			let y be a random dangerous door in the Location of Player;
 			now battleground is marea of y;
 		if battleground is not "void":
 			let cmonlist be a list of numbers;
@@ -320,7 +322,7 @@ to say cheetahwomaninheat:
 				infect;
 				decrease score by 5;
 				decrease morale of Player by 3;
-				if Player is kinky, increase the morale of the player by 6;
+				if Player is kinky, increase Morale of Player by 6;
 			else:
 				say "As your feline heat courses through you, you sniff the air, trying to catch the scent of a nearby feline, but are unsuccessful[if cmonlist is empty]. Perhaps you'd best head somewhere you know there are more kitties to play with, your heat-filled mind decides[end if].";
 				increase slutfucked by 1;

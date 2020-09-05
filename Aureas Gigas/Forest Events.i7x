@@ -6,7 +6,8 @@ Object	Name
 One flew into the Cuckoos Nest	"One flew into the Cuckoos Nest"
 
 One flew into the Cuckoos Nest is a situation.
-The sarea of One flew into the Cuckoos Nest is "Forest".
+ResolveFunction of One flew into the Cuckoos Nest is "[ResolveEvent One flew into the Cuckoos Nest]".
+Sarea of One flew into the Cuckoos Nest is "Forest".
 CuckooWatched is a number that varies.
 
 when play begins:
@@ -14,7 +15,7 @@ when play begins:
 	add One flew into the Cuckoos Nest to BadSpots of MaleList;
 	add One flew into the Cuckoos Nest to BadSpots of FemaleList;
 
-Instead of resolving a One flew into the Cuckoos Nest:
+to say ResolveEvent One flew into the Cuckoos Nest:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     Moving through the woods, you reach a small clearing that seems rather peaceful. All around, some remains of the buildings from before the forest took over are visible between the trunks, and it seems like people are actually living here. There are a few tents and improvised shelters here and there. One spot in the middle of it might have been a bus stop - with two benches side by side, that looks like the perfect spot to rest a little after your tiring work of exploring.";
 	say "     While walking towards the bench, you pass by a small tent with a male and female cuckoo inside... and can't help but throw a look inside at them. Based on the affectionate ways the two are talking and holding each other, you think that they are probably a couple. With a smile on your lips, you move on and sit down on the nearby bench. Sitting down relieves your aching muscles and re-energizes your body. A short while later, the male cuckoo steps out of the tent and calls back to his mate that he is going to hunt for supplies, then leaves into the woods.";
@@ -42,16 +43,17 @@ Object	Name
 Two Crash into the Cuckoos Nest	"Two Crash into the Cuckoos Nest"
 
 Two Crash into the Cuckoos Nest is a situation.
-The Prereq1 of Two Crash into the Cuckoos Nest is One flew into the Cuckoos Nest.
+ResolveFunction of Two Crash into the Cuckoos Nest is "[ResolveEvent Two Crash into the Cuckoos Nest]".
+Prereq1 of Two Crash into the Cuckoos Nest is One flew into the Cuckoos Nest.
 The Prereq1Resolution of Two Crash into the Cuckoos Nest is { 1, 2 }.
-The sarea of Two crash into the Cuckoos Nest is "Forest".
+Sarea of Two crash into the Cuckoos Nest is "Forest".
 
 when play begins:
 	add Two crash into the Cuckoos Nest to badspots of HumorousList;
 	add Two crash into the Cuckoos Nest to BadSpots of MaleList;
 	add Two crash into the Cuckoos Nest to BadSpots of FemaleList;
 
-Instead of resolving a Two crash into the Cuckoos Nest:
+to say ResolveEvent Two crash into the Cuckoos Nest:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     While traveling through the woods you decide to see what the cuckoo couple you encountered before is up to. Walking back to the small community of transformed people in one of the less dangerous sections of the forest, what you find seems a little larger than what you remember. There is a new little shack or two and additional hammocks in places that used to be vacant. In the midst of it all is a large crackling campfire, around which two infected individuals sit and chat while toasting some marshmallows for s'mores. One of them is an anthro squirrel, who laughs amusedly as his fox-morph companion bites into his sweet treat and soon has a glob of gooey marshmallow dangling from his lips. A little embarrassed, the fox wipes the goop off his mouth, then smiles as he is handed another fresh marshmallow.";
 	say "     You continue on your way to the tent of the cuckoo couple location. Approaching from a different angle than you had previously you see a couple of things that you hadn't seen last time. Behind the tent there appears to be a sizable pile of clothing. ";
@@ -99,15 +101,16 @@ Object	Name
 Avian Tent	"Avian Tent"
 
 Avian Tent is a situation.
-The Prereq1 of Avian Tent is Two Crash into the Cuckoos Nest.
+ResolveFunction of Avian Tent is "[ResolveEvent Avian Tent]".
+Prereq1 of Avian Tent is Two Crash into the Cuckoos Nest.
 The Prereq1Resolution of Avian Tent is { 1, 2 }.
-The sarea of Avian Tent is "Forest";
+Sarea of Avian Tent is "Forest";
 
 when play begins:
 	add Avian Tent to BadSpots of MaleList;
 	add Avian Tent to BadSpots of FemaleList;
 
-Instead of resolving a Avian Tent:
+to say ResolveEvent Avian Tent:
 	say "     As you are making your way through the forest you come across Izzy, the female member of the cuckoo couple you've met before. She is strolling down a path not too far from your own, heading deeper into the woods away from you. Based on the clothing she is wearing and only carrying a metal bar for self-defense it seems like she's on the 'hunt' for something besides supplies. The sexy avian wears a low cut white blouse which has been tied off to show her slender waist, combined with a skimpy tartan miniskirt that hardly conceals anything. As she bends down to get past a low-hanging branch you see that she doesn't have any panties on either.";
 	say "     Curious about whom the adventurous avian will bring back to her tent this time, you do stealthily tail her for a while, soon seeing her approach the wreckage of an air force jet. There are deep scratches all along the fuselage - seems like this thing had a run-in with a wyvern or something similar. Nearby to the wreck is a makeshift shelter made using a parachute as a canopy. Under that sits a large anthro osprey, busy sharpening his combat knife by using a whetstone. This must have been the pilot. The fabric on his air-force jumpsuit is visibly strained by his enlarged form. Eyeing this fine example of masculinity, the cuckooess straightens her feathers for a moment and chuckles softly.";
 	WaitLineBreak;
@@ -147,9 +150,10 @@ Object	Name
 Sandwich Shop	"Sandwich Shop"
 
 Sandwich Shop is a situation.
-The sarea of Sandwich Shop is "Forest".
+ResolveFunction of Sandwich Shop is "[ResolveEvent Sandwich Shop]".
+Sarea of Sandwich Shop is "Forest".
 
-Instead of resolving a Sandwich Shop:
+to say ResolveEvent Sandwich Shop:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say	"     While walking through the woods you cross the ruins of a small mini-mall. Trees seem to have sprouted throughout many of the stores and one of the light-posts in front of the building has fallen on a sedan, with the wreck now covered in heavily grown foliage on the outside and inside of the car. Another light-post is leaning sharply and on the verge of falling over. There are three stores within the building complex - the closest by is a liquor store, shards of glass from broken bottles cover its floor. It appears that anything drinkable is gone, all the shelves long looted.";
 	say "     The next closest store is a mattress store. Its door has a slogan stating 'Sleep... with us!' (the word 'better' is scratched off). All of the beds inside have been completely ruined, their mattresses covered in claw-marks and cum-stains. You see a couple of broken bottles on the floor too - seems like the looters must have decided to start a party in there. Last is a sandwich shop that's part of a small corporate chain. Its inside is a mess with all the tables tipped over, onion peels and shredded lettuce littering the floor and blots of crusted marinara sauce splattered over the walls and menu board.";
@@ -165,7 +169,7 @@ Instead of resolving a Sandwich Shop:
 	if Player consents:
 		say "     You walk into the back area of the store. The stainless steel sink basin used for washing dishes has been bent and pushed aside by a four foot tall sapling that is piercing the floorboards. Interestingly, only the words '12 inches that'll make your mouth water' and 'try our savory... balls' remain readable on the menu board right beside the little tree, with everything else scratched beyond recognition - what an odd coincidence. Or maybe not - you make out some scraps of paint on the gently swaying branches. Wait, there's not even any wind in here! It is definitively moving on its own.";
 		say "     Who knows who or what that plant might once have been and if it retains some memories of its former self... so you decide to keep your distance as you explore further. All of the refrigerators in the back have already ransacked, their doors standing wide open. Still, you then look inside them one by one just to be sure, and your persistence is rewarded - there is a small brown paper bag behind a couple of shredded boxes in one of them! You look inside and find a brownie that has been wrapped in plastic with a small note saying, 'Here's a treat for your break, love M'. A small shiver runs down your spine as you imagine what might have happened to the owner of that brownie, or their partner. But hey, waste not want not, so you nevertheless take the food and slide it into your backpack.";
-		increase carried of food by 1;
+		ItemGain food by 1;
 		now Resolution of Sandwich Shop is 1;
 	else:
 		say "     Seems a little too risky, with likely no reward, so you exit the store and walk in the opposite direction of where the wolves went.";
@@ -183,14 +187,15 @@ Object	Name
 Thief's Punishment	"Thief's Punishment"
 
 Thief's Punishment is a situation.
-The sarea of Thief's Punishment is "Forest".
+ResolveFunction of Thief's Punishment is "[ResolveEvent Thief's Punishment]".
+Sarea of Thief's Punishment is "Forest".
 BridgetPowellEventVar is a number that varies. BridgetPowellEventVar is usually 0.
 
 when play begins:
 	add Thief's Punishment to BadSpots of MaleList;
 	add Thief's Punishment to BadSpots of FemaleList;
 
-instead of resolving Thief's Punishment:
+to say ResolveEvent Thief's Punishment:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     While walking through the woods you come across a small campsite that is next to a collapsed gym. A blue tent has been set up next to it, in front of which a small campfire merrily burns, shining firelight on a workout bench and couple of barbells that must have been salvaged from the ruin. Sitting on the ground right next to the fire is a can of beans and a six-pack of water bottles. While you're still trying to decide what to do now, you hear the sound of a zipper from the tent, then its entrance is pulled open from the inside and a burly anthro tigress comes out.";
 	say "     To say she does a bit of weightlifting would be the understatement of the century - her seven foot tall body is covered in large bulging muscles, washboard abs, and what must be twenty inch biceps when she flexes. She's wearing a black sports bra to cover her D cup breasts, and tight black Lycra shorts whose fabric seems to be strained to their limit by her massive thighs and toned buttocks. The tigress is quick to notice your presence so close to her camp and she smiles, then waves at you, calling out to come over and share her fire. She seems sane enough and fairly friendly so you walk closer and begin to chat with her.";
@@ -228,15 +233,16 @@ Object	Name
 Thief's Reformation	"Thief's Reformation"
 
 Thief's Reformation is a situation.
-The Prereq1 of Thief's Reformation is Thief's Punishment.
+ResolveFunction of Thief's Reformation is "[ResolveEvent Thief's Reformation]".
+Prereq1 of Thief's Reformation is Thief's Punishment.
 The Prereq1Resolution of Thief's Reformation is { 1, 2 }.
-The sarea of Thief's Reformation is "Forest".
+Sarea of Thief's Reformation is "Forest".
 
 when play begins:
 	add Thief's Reformation to BadSpots of MaleList;
 	add Thief's Reformation to BadSpots of FemaleList;
 
-instead of resolving Thief's Reformation:
+to say ResolveEvent Thief's Reformation:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	say "     While walking through the woods, you once again find yourself near the fitness studio ruin and are reminded of the muscled tigress you encountered there earlier. Curious about how she is doing now you decide to head over. Soon stepping out into the little clearing, you see that the campsite is a little different than the first time. A fair bit of rubble from the front of the collapsed gym has been removed, forming a large mound a little off to the side. This now allows a glimpse into the inside of the building - or at least what's left of it, squished between the floor and low-sagging ceiling.";
 	say "     Looks like all that is holding the roof up at least a little are the countless smashed exercise machines, bent and broken from the collapse. Parts of broken mirrors still hang up on some of the small portions of the walls that are still upright, with the rest covering the floor in shards and splinters. But not everywhere, at a second glance - there is actually a path into the mess of a ruin which has been swept free of glass and stone shards, weaving around and sometimes through the tangles of broken machines. Must be a tight squeeze to get through in some places. Doesn't look like Bridget would fit.";

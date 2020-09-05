@@ -19,7 +19,8 @@ Object	Name
 Abandoned Camp	"Abandoned Camp"
 
 Abandoned Camp is a situation.
-The sarea of Abandoned Camp is "Forest".
+ResolveFunction of Abandoned Camp is "[ResolveEvent Abandoned Camp]".
+Sarea of Abandoned Camp is "Forest".
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -58,7 +59,7 @@ when play begins:
 	add Abandoned Camp to badspots of FeralList;
 	add Abandoned Camp to BadSpots of MaleList;
 
-Instead of resolving a Abandoned Camp:
+to say ResolveEvent Abandoned Camp:
 	if HP of Savina is 0:			[First encounter]
 		say "     Your exploration takes you deep into the forest. The trees seem to grow more and more massive the further in you go, many of them being more than several stories tall. Thick branches full of leaves create a canopy that shrouds the area in a perpetual gloom with just enough [if daytimer is day]sun[else]moon[end if]light filtering through for you to guide your way. Surprisingly, you don't have any encounters during your trek. You're not sure if whether your unabated hike is due to the dense foliage obscuring you or other people just not daring to delve this far into the thicket like you, but it makes the walk through nature almost relaxing, even if you do keep alert for any signs of trouble. Eventually, you spy a camping tent that had been set up in a small clearing, and you scope it out from behind the cover of some nearby bushes. Judging by a few scattered items on the ground, the owner had quickly abandoned the area for some reason, which means that there's a good chance that there might be something left behind for you to scavenge.";
 		say "     [bold type]Do you want to search the camp?[roman type][line break]";
@@ -92,9 +93,8 @@ to say SavinaIntroFight:			[Player fights with Gargoyle. Winning creates the Dee
 	if fightoutcome >= 10 and fightoutcome <= 19:	[won fight]
 		say "     The gargoyle hastily flies away from you after its defeat, leaving you free reign to finish your scavenging. Turning your attention back to the cooler, you dig through it and manage to find one unopened can of food underneath all of the trash, which you happily pocket. Seeing nothing else of interest around the campsite, you continue your scavenging inside of the tent. The sight of a tattered sleeping bag surrounded by even more empty water bottles greets you, but a thorough search does reveal one bottle with water still left in it. Unfortunately, the water is murky with a brown tinge. It's still drinkable, but it's mostly likely laced with all sorts of infective material. A sudden rustling from the outside makes you freeze, but after a few moments of nothing else happening, you dismiss the noise as the wind and continue your investigation.";
 		say "     With your mediocre prize still in your grasp, you take another glance at the empty water bottles littering the tent floor and guess that they also held unclean water as well. Upon closer inspection, you also note that the sleeping bag was mostly damaged on the inside with scratches and claw marks. Piecing together the clues, it seems like that the former owner of this camp had became infected from drinking too much tainted water and transformed during their sleep, making them go feral and abandon the camp. Perhaps that gargoyle you dealt with a few moments ago was even the same person. Regardless, it doesn't look like that they will be returning to this place, so you exit the tent as you pack away the remaining dirty water next to the can of food you found earlier.";
-		increase carried of dirty water by 1;
-		increase carried of food by 1;
-		say "[bold type]You gained a bottle of dirty water along with a can of food.[roman type][line break]";
+		ItemGain dirty water by 1;
+		ItemGain food by 1;
 		now Resolution of Abandoned Camp is 99;		[Player vore level too low to meet Savina]
 		if vorelevel > 1:	[Event continues unless 'Less Vore' is set]
 			WaitLineBreak;
@@ -122,7 +122,7 @@ to say SavinaIntroFight:			[Player fights with Gargoyle. Winning creates the Dee
 				WaitLineBreak;
 				say "     When you wake up, you see the trees of the Urban Forest. Memories of your encounter with the snake flicker through your mind, and you wonder if it was only a vivid dream. Your hopes are dashed when you realize that you are still trapped in the serpent's coils, and they squeeze down on you when they feel your movement. 'Finally awake, are we?' the giant reptile says as she pulls you into her gaze. 'Surprised that you're not still inside of me, melting away in a haze of pleasure? While I do find you to be delectable, I have a better use for you. I am Savina, but you may call me Mistress. I saw your battle with that flying brute earlier, and I can make use of your combat prowess. In return for letting you go, I want you to find other morsels and bring them to me. And because I enjoy playing with my new pet, I shall even sweeten the deal by satisfying your carnal desires between tributes. I'm sure that you'll find my offer [italic type]irresistible[roman type].' You shiver as Savina's eyes seem to glow and pulse with power for a moment, and as her words sink in, you nod automatically. With your compliance, Savina smirks deviously and lets her coils slowly slip off of you. Even though your mind is still intact, the snake has left her mark on you, and despite being free, part of you just wants to return to those coils, or better yet, her stomach. Savina smirks knowingly at your longing gaze as you leave her. 'I shall be waiting for you. Don't disappoint me.'";
 				now HP of Savina is 2;
-				now Deep Forest is known;
+				AddNavPoint Deep Forest;
 				move Savina to Deep Forest;
 				move player to Deep Forest;
 				now Resolution of Abandoned Camp is 1;		[Hypnotized by Savina]
@@ -148,14 +148,14 @@ Object	Name
 Deep Forest	"Deep Forest"
 
 Deep Forest is a room. It is fasttravel. It is private.
-The description of Deep Forest is "     You are in a small clearing deep inside of the Urban Forest. The trees here are massive and tower over you, and the area is shrouded in perpetual gloom from the thick canopy. Resting among the tree branches up above, Savina waits for you to do her bidding.".
+Description of Deep Forest is "     You are in a small clearing deep inside of the Urban Forest. The trees here are massive and tower over you, and the area is shrouded in perpetual gloom from the thick canopy. Resting among the tree branches up above, Savina waits for you to do her bidding.".
 
 
 Section 3 - Savina
 
 SavinaTempt is a number that varies. SavinaTempt is usually 0.
-The description of Savina is "[SavinaDesc]".
-The conversation of Savina is { "I'm a snek" }.
+Description of Savina is "[SavinaDesc]".
+Conversation of Savina is { "I'm a snek" }.
 The scent of the Savina is "Intertwined with the earthy smell of the forest, Savina has a unique, alluring musk. You're not sure if it's just another side effect of her hold on you, but there is something comforting about that scent that relaxes you a bit.";
 
 to say SavinaDesc:

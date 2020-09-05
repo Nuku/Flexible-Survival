@@ -22,15 +22,14 @@ Object	Name
 Hungry Piggy	"Hungry Piggy"
 
 Hungry Piggy is a situation.
+ResolveFunction of Hungry Piggy is "[ResolveEvent Hungry Piggy]".
 
-After resolving a hungry piggy, try looking;
-
-Instead of Resolving a Hungry Piggy:
+to say ResolveEvent Hungry Piggy:
 	if hbmr is 0:
 		say "While exploring the city, you stumble upon an odd sight in the basement of one of the buildings. A water pipe must have burst at some point, because the floor of the entire room is covered in mud. What's even stranger is that it looks like someone is living down here despite all the mud.[line break][line break]You spot a strange boar man rolling in the mud on the floor. He's enjoying himself so much that it takes him awhile to realize that someone is in the room. When he finally does, he stares at you with his beady pig eyes for a moment. Not knowing if he's friendly or not, you mentally brace yourself for a fight.[line break][line break]You relax a little when he smiles and says, 'Hello there! My name is Philip. Don't worry, I'm not like those other creatures that are roaming the streets, humping everything in sight. I am really hungry though, could you please FEED me?'";
 		increase hbmr by 1;
 		move player to Pig Pen;
-		now the pig pen is known;
+		AddNavPoint Pig Pen;
 		increase the score by 1;
 		now Hungry Piggy is Resolved;
 
@@ -43,7 +42,7 @@ Pig Pen	"Pig Pen"
 
 Pig Pen is a room. It is fasttravel. It is private.
 
-The description of Pig Pen is "Not a literal pig pen, a basement actually. The floor is covered in a thick layer of mud. It seems whomever lives here is well stocked with small bottles of water, but there is no food anywhere, just a bunch of empty wrappers. There is a foul odor in the air.".
+Description of Pig Pen is "Not a literal pig pen, a basement actually. The floor is covered in a thick layer of mud. It seems whomever lives here is well stocked with small bottles of water, but there is no food anywhere, just a bunch of empty wrappers. There is a foul odor in the air.".
 
 instead of sniffing Pig Pen:
 	say "This place smells like a sty. Oh... wait... yeah.";
@@ -88,9 +87,9 @@ AnalVirgin of Philip is true.
 PenileVirgin of Philip is true.
 SexuallyExperienced of Philip is false.
 MainInfection of Philip is "Messy Pig".
-The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet. He is extremely fat with a bald head, floppy ears, and an upturned nose. Flies are constantly buzzing around him, enticed by his foul odor. He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm. Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Large Shed]. He's made a mudhole of his own in one corner of the large shed by breaking a hole in the wall and cracking a pipe. He spends much of his time lounging in it[end if]. Looking at all the mud, the idea of [bold type]wrestling[roman type] with Philip in it just springs to your mind all of its own.".
+Description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet. He is extremely fat with a bald head, floppy ears, and an upturned nose. Flies are constantly buzzing around him, enticed by his foul odor. He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm. Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Large Shed]. He's made a mudhole of his own in one corner of the large shed by breaking a hole in the wall and cracking a pipe. He spends much of his time lounging in it[end if]. Looking at all the mud, the idea of [bold type]wrestling[roman type] with Philip in it just springs to your mind all of its own.".
 Philip is in Pig Pen.
-The conversation of Philip is { "Oink!" }.
+Conversation of Philip is { "Oink!" }.
 
 instead of conversing Philip:
 	if piginitiation is 2:
@@ -166,7 +165,7 @@ To pigfeed:
 	else if pigfed is 0:
 		now lastpigfed is turns;
 		if food is owned:
-			delete food;
+			ItemLoss food by 1;
 			now pigfed is 1;
 			say "     'Thank you!' he shouts as he snatches the food from you and starts to gobble it down. The boar man goes into a feeding frenzy. He barely chews as he stuffs the food into his mouth and swallows it down. He almost seems to get a little bit fatter before your eyes as he eats. Stray flecks of saliva fly from his mouth and splash on you. Your body immediately begins to feel strange. A loud ripping sound comes from the seat of your pants as a curly pig tail grows out above your butt.";
 			now TailName of Player is "Piggy";
@@ -201,7 +200,7 @@ To pigfeed:
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
 			if food is owned:
-				delete food;
+				ItemLoss food by 1;
 				say "     Thank you,' he shouts as he snatches the food from you and starts to gobble it down.";
 				say "     The boar man goes into a feeding frenzy. He barely chews as he stuffs the food into his mouth and swallows it down. He almost seems to get a little bit fatter before your eyes as he eats. Stray flecks of saliva fly from his mouth and once again splash on you. Your body immediately begins to feel strange. Your body plumps up and your feet ache for a moment as they harden into pig hooves.";
 				say "     When he finishes eating, he eyes you appreciatively, then says, 'You seem to know how to find food. Can I come with you?'";

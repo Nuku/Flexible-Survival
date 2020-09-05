@@ -10,7 +10,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "porn collection"	"     A sizable stack of pornographic magazines of various levels of tastelessness for a myriad of lurid preferences."	2	porn collection
 
-porn collection is a grab object. It is part of the player. It is not temporary.
+porn collection is a grab object. It is not temporary.
 
 the scent of the porn collection is "The bundle of pornographic magazines have a lingering scent of sex to them.".
 

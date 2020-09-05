@@ -65,7 +65,7 @@ AnalVirgin of Erin is true.
 PenileVirgin of Erin is false.
 SexuallyExperienced of Erin is true.
 MainInfection of Erin is "Slut Rat".
-the description of Erin is "[ErinDesc]".
+Description of Erin is "[ErinDesc]".
 
 to say ErinDesc:
 	project the figure of Erin_face_icon;
@@ -274,7 +274,7 @@ AnalVirgin of Violet is true.
 PenileVirgin of Violet is true.
 SexuallyExperienced of Violet is true.
 MainInfection of Violet is "Slut Rat".
-the description of Violet is "[VioletDesc]".
+Description of Violet is "[VioletDesc]".
 
 to say VioletDesc:
 	project the figure of Violet_face_icon;
@@ -480,9 +480,10 @@ Object	Name
 Pirate Standoff	"Pirate Standoff"
 
 Pirate Standoff is a situation.
-The sarea of Pirate Standoff is "Beach".
+ResolveFunction of Pirate Standoff is "[ResolveEvent Pirate Standoff]".
+Sarea of Pirate Standoff is "Beach".
 
-Instead of resolving a Pirate Standoff:
+to say ResolveEvent Pirate Standoff:
 	say "     You hear a commotion in the distance, behind a dune. Curious what it may be, you climb the small hill prudently, crouching as you reach the top. On the other side, you see a pair of young-looking anthro rats, one male and the other female looking like two peas in a pod, surrounded by a gang of pirate sharks. The aquatic predators growl at the pair of rodents, who stand in the middle, back-to-back. 'Arrr, ye sea rats shouldn't [']ave been snoopin['] around,' one of the sharks says. She seems to be the [']captain['] of the group.";
 	say "     'I told you, stupid,' the female rat says, ignoring the pirate. 'We should have thought twice when Smee mentioned [']pirate booties['].'";
 	say "     'Har, Har! Talking [']bout these, girl?' the pirate asks, as she slaps his generous butt. 'Too bad for ye, rattie. The only bootie that'd get plundered today is your and your brother's.'";
@@ -538,7 +539,8 @@ Object	Name
 Rat Twins Invitation	"Rat Twins Invitation"
 
 Rat Twins Invitation is a situation.
-The sarea of Rat Twins Invitation is "Nowhere".
+ResolveFunction of Rat Twins Invitation is "".
+Sarea of Rat Twins Invitation is "Nowhere".
 
 instead of going to Restaurant while (Rat Twins Invitation is active and Rat Twins Invitation is not resolved and HP of Erin is 1):
 	move Erin to Restaurant;
@@ -593,7 +595,8 @@ Object	Name
 Strange Island	"Strange Island"
 
 Strange Island is a situation.
-The sarea of Strange Island is "Nowhere".
+ResolveFunction of Strange Island is "".
+Sarea of Strange Island is "Nowhere".
 
 to say strangeIsland:
 	if level of Erin is 0:
@@ -614,8 +617,7 @@ to say strangeIsland:
 	else if boatfound is 2 or boatfound is 3:
 		say "     You mention your boat to the twins. 'Yay, you got us a boat! Awesome!' the sister says loudly, before hugging you tight against her furry body. 'Okay. Now that step 1 is a-go, we can start collecting some supplies for the trip. A tent, some food... You know, the essentials.'";
 		say "     'For now, could you just make a short trip there and see if there's a safe place we could stay? I don't mind if you want to explore further, but don't go into the military base without us, yet. 'Remember to [bold type]save your position[roman type] on your phone. Just in case,' Erin warns.";
-		say "[bold type]You can now navigate to Vohr Island[roman type][line break]";
-		now Island Pier is known;
+		AddNavPoint Island Pier;
 		now Strange Island is resolved;
 	now level of Erin is 1;
 
@@ -651,11 +653,12 @@ Object	Name
 Tied Rat Twins	"Tied Rat Twins"
 
 Tied Rat Twins is a scavevent.
+ResolveFunction of Tied Rat Twins is "[ResolveEvent Tied Rat Twins]".
 When play begins:
 	now Tied Rat Twins is resolved;
-[The sarea of Tied Rat Twins is "Outside".]
+[Sarea of Tied Rat Twins is "Outside".]
 
-instead of resolving Tied Rat Twins:
+to say ResolveEvent Tied Rat Twins:
 	say "     During your exploration, you come upon what looks like an abandoned sex-shop. The place looks deserted, but there is this permanent buzzing sound coming from inside. This is odd.";
 	say "     [bold type]Do you wish to investigate?[roman type][line break]";
 	LineBreak;
@@ -666,10 +669,8 @@ instead of resolving Tied Rat Twins:
 		say "     You walk inside the shop, if only to check what is the source of all this buzzing. It is even louder when in the shop, as if several toys had been set off at once. And, more worryingly, you hear several persons scream through a gag. You head towards the source of the noise, behind the counter. You stumble upon Eric and Violet. The twins seem to have been caught in the middle of their own patrol, and they have been bound together sturdily with leather cuffs and ropes. They have been forced face-to-face, a vibrating wand stuck against their conjoined crotches. As a 'bonus', Violet got her holes spread apart by dildos, while you recognize the shape of a prostate massager stuck into Erin's ass. For added humiliation, their rodent muzzles have been taped to each other, having them share an embarrassing kiss.";
 		say "     Just as you are coming around, the twins squirm ineffectively against each other, they climax together, probably another of a long series. You hurriedly help them get out of their bounds, and toys. 'Thanks, [if Player is not defaultnamed][name of Player][else]pal[end if],' Erin says weakly. 'It was one hell of an hour. I think I came enough for... Like... A whole week,' Violet comments. 'We were attacked by looters and they caught up with us as we ran away inside,' Erin says. 'Bad idea,' Violet agrees. 'Thankfully, we had stashed our loot before these fuckers get to us. Let us share something with you.'";
 		say "     True to her word, Violet and Erin guide you to a bin just outside the shop, and pull out a bag of chips and an already used bottle of water. 'Watch out on the streets,' Erin says before parting with you.";
-		say "[bold type]You gain 1 bag of chips.[roman type][line break]";
-		say "[bold type]You gain 1 bottle of dirty water.[roman type][line break]";
-		increase carried of chips by 1;
-		increase carried of dirty water by 1;
+		ItemGain chips by 1;
+		ItemGain dirty water by 1;
 	else:
 		LineBreak;
 		say "     You have better things to do. You walk away and continue your exploration.";

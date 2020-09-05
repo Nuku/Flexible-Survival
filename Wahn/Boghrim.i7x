@@ -26,8 +26,7 @@ to say BoghrimSlaveDeal:
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
-				decrease carried of food by 1;
-				LineBreak;
+				ItemLoss food by 1;
 				say "     Digging a package of food out of your pack, you hold it out to Boghrim, who sets Jason down to stand on shaky feet while his orc master takes your offer and starts to munch on it. The human slave sways a bit and looks groggy, a smear of cum on the chin of his handsome face. It's clear that he has been fed at least one load of potent orc cum in addition to what's still dripping out of his hole, making him an easy to handle slave with the intoxicating and addictive effects of orc sperm.";
 				say "     Having paid good food for his service, you don't waste any time and quickly strip. Then you step up to the athletic man, pulling his head to yours to share a hungry kiss and taste a trace of the nectar-like cum on his lips. Eager to sink your bone into this docile slave-boy, you bodily pick him up, holding Jason against your broad orc chest to lower him on top of your proudly standing erection. Given the amount of cum in him, it's pretty easy to just slide in, pushing past the somewhat puffy-looking pucker with your cockhead, then stretching it as you go deeper. And Boghrim is right - the human man's hole really is delightfully tight and gripping.";
 				WaitLineBreak;
@@ -58,8 +57,7 @@ to say BoghrimSlaveDeal:
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
-				decrease carried of food by 1;
-				LineBreak;
+				ItemLoss food by 1;
 				say "     Digging a package of food out of your pack, you hold it out to Boghrim, who accepts it with a grin and says 'Pleasure doing business with you. Jason, take care of him!' Ready and willing to serve, the muscular slave walks up to you and shows off his body for your pleasure. In no time at all, the awesome little show makes you hard as rock, and Jason starts undoing your pants to free your orcish cock. Pushing them down, he bends over to bring his head to your crotch, then wraps his lips around the tip of your shaft, suckling on it softly. The slave gives you a skillful blowjob, getting you all hot and bothered in just a short while, then suddenly he pulls off and looks up at you with an eager expression. Using a hand to wipe off the copious pre-cum that is leaking from your slit, he brings it to his own ass, then proceeds to lube his own ass with it. Standing up, he meets your eyes with an eager expression and moans 'Fuck me, please.'";
 				say "     Eager to sink your bone into this docile slave-boy, you bodily pick him up, holding Jason against your broad orc chest to lower him on top of your proudly standing erection. Lubed and well-used to this by getting pounded by many an orc, it's pretty easy to just slide in, pushing past the somewhat puffy-looking pucker with your cockhead, then stretching it as you go deeper. Despite all this, the human man's hole still is delightfully tight and gripping. He's learned well how to please his masters...";
 				WaitLineBreak;
@@ -76,6 +74,8 @@ to say BoghrimSlaveDeal:
 				say "     Declining the offered trade, you watch Boghrim give a shrug, then hear him grunting 'Your loss,' Boghrim grunts, then starts walking away, accompanied by his slave. He calls over his shoulder 'I'll be in the main hall if you change your mind...'";
 
 Section 2 - NPC
+
+[TODO: Trace the HP values to ensure there is no bug]
 
 [ HP of Boghrim                                   ]
 [ 0: never fucked                                 ]
@@ -110,8 +110,8 @@ AnalVirgin of Boghrim is false.
 PenileVirgin of Boghrim is false.
 SexuallyExperienced of Boghrim is true.
 The MainInfection of Boghrim is "Orc Breeder".
-The description of Boghrim is "[BoghrimDesc]".
-The conversation of Boghrim is { "Mew!" }.
+Description of Boghrim is "[BoghrimDesc]".
+Conversation of Boghrim is { "Mew!" }.
 The icon of Boghrim is Figure of Boghrim_clothed_icon.
 
 to say BoghrimDesc:
@@ -208,8 +208,7 @@ to say BoghrimTalk2: [talk about Jason]
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
-			decrease carried of food by 1;
-			LineBreak;
+			ItemLoss food by 1;
 			say "     Digging a package of food out of your pack, you hold it out to Boghrim, who accepts it with a grin and says 'Pleasure doing business with you.' Handing the food to his orc breeder attendant, Boghrim nods to the free end of the sofa. 'Plant your ass and have fun,' he continues, then pulls his human slave's head up from where he was licking the orc's balls and tells him 'Jason, take care of him!' Ready and willing to serve, the muscular slave stands up and walks to where you flop down on the couch, then gives you a nice lap-dance, showing off a very nice body and wiggling his shapely booty at you. In no time at all, the awesome little show makes you hard as rock, and Jason starts undoing your pants to free your orcish cock. Pushing them down, he bends over to bring his head to your crotch, then wraps his lips around the tip of your shaft, suckling on it softly.";
 			say "     The slave gives you a skillful blowjob, getting you all hot and bothered in just a short while, then suddenly he pulls off and looks up at you with an eager expression. Using a hand to wipe off the copious pre-cum that is leaking from your slit, he brings it to his own ass and proceeds to lube his hole with it. Standing up, he meets your eyes with an eager expression and moans 'Fuck me, please.' Eager to sink your bone into this docile slave-boy, you wave him closer, then direct him to climb on your lap. Quickly moving to straddle your hips, the sexy man's cock pokes you in the abs a moment later as he leans down to meet your lips. You have some fun wrestling the eager sex-pet's tongue with yours, then embrace and lift him a bit, holding Jason against your broad orc chest to lower him on top of your proudly standing erection. Lubed and well-used to this by getting pounded by many an orc, it's pretty easy to just slide in, pushing past the somewhat puffy-looking pucker with your cockhead, then stretching it as you go deeper. Despite all this, the human man's hole still is delightfully tight and gripping. He's learned well how to please his masters...";
 			WaitLineBreak;
@@ -273,7 +272,7 @@ to say BoghrimTalk3: [go hunting]
 		say "     You stop and listen for a second, indeed hearing a silent squeak - which rapidly escalates to the wrenching screech of tortured metal as the wall of cars on your right starts to topple. As reality seems to fall into slow-motion, you frozenly stand where you are while your mind somehow has the time to register the wall isn't just collapse on its own - something is pushing it over... something huge and green, barely seen through the gaps of the car stack. While you make interesting, but momentarily rather useless observations - as you're about to be crushed by a car or three - Boghrim instead just reacts, snatching you up and flinging you to safety with a mighty throw, before...";
 		say "     Time resumes its regular pace with the deafening crash of a number of car wrecks impacting on the ground, just steps behind where you landed. You jump to your feet as quick as you can and look around - hm, where did Boghrim end up at? Thankfully, your fear that he might have been crushed under that whole pile of wreckage proves unnecessary, as you hear him growl, 'Now what the fuck did that? Give me a moment to pull myself out of here...' Seems like he's right against the wall on the other side, where a falling car only came to lean against it, not flat on the ground. Though your relief doesn't last long, as your eyes fall on the massive creature responsible for all this - it's a hydra, stepping over the twisted metal in the wall-opening it created and snapping at you with multiple heads.";
 		WaitLineBreak;
-		now Abandoned Lot is known;
+		AddNavPoint Abandoned Lot;
 		now BoghrimHuntingTrip is 1;
 		now inasituation is true;
 		challenge "Hydra Beast";
@@ -639,6 +638,7 @@ to say BoghrimSex3: [fuck him]
 			say "     Waiting some time longer till the last little spurt of your load is deposited deep inside Boghrim's hole, you eventually pull out of the orc with a wet slurp. A small amount of your cum leaks out as your cockhead pops past the muscled brute's pucker, giving a very nice contrast as it starts to slowly run down between his legs. Seeing it fills you with pride, as it is the visible proof that you bested the orc, in a playful and sexualized wrestling match at least. There is even a little string of cum stretching from your slit to the upper edge of his winking pucker - glistening enticingly in the light and drawing the attention of Jason, who's moved up right next to you on the mattress. He licks his lips and asks in a pleading tone, 'May I -' And that is as far as he gets before you grip his neck softly, pulling him down towards your crotch. The eager human catches your dangling little string of cum with his tongue, slurping it up, then gently pushes against your hip so you make room for him to go down on Boghrim and eat your load out of his ass.";
 			WaitLineBreak;
 			say "     'Oooh yeah, stick your tongue in there deep,' the orc boss groans to his favorite slave, raising his own hips a little bit more to allow Jason easier access. As the human is busy lapping your seed from Boghrim's well-bred hole, you wipe the small amount of cum that stuck to your cock off against his naked side, then move towards the edge of the bed and start looking for your clothes. Giving the two of them one last look and seeing Jason busy pleasing his master -as well as licking up and swallowing the 'evidence' of your activities you left behind, you then close the door properly behind you and make your way back down into the drinking hall.";
+			[TODO: Add douching for him to explain why he doesn't get knocked up]
 			if HP of Boghrim < 3:
 				now HP of Boghrim is 3;
 
@@ -865,9 +865,9 @@ object	name
 Jason	"Jason"
 
 Jason is a man. Jason is in Main Hall.
-The description of Jason is "[JasonDesc]".
+Description of Jason is "[JasonDesc]".
 The icon of Jason is Figure of Jason_clothed_icon.
-The conversation of Jason is { "Having his nose pressed against Boghrim's crotch as he licks and fondles his master makes it just a bit difficult to talk to Jason. Combined with the fact that he's also a bit buzzed from swallowing the big orc's precum, you don't think there's much use talking to him right now..." }.
+Conversation of Jason is { "Having his nose pressed against Boghrim's crotch as he licks and fondles his master makes it just a bit difficult to talk to Jason. Combined with the fact that he's also a bit buzzed from swallowing the big orc's precum, you don't think there's much use talking to him right now..." }.
 
 to say JasonDesc:
 	say "     Jason is an athletic human male, somewhere in his twenties. He has short brown hair and dashingly handsome looks. By now, the young man has fully accepted his new role in life, proudly wearing a very skimpy leather harness that basically just consists of a few straps and a black leather collar around his neck. His legs are covered with a literally skin-tight pair of pants made from some sort of stretchy material - which clearly outlines his constantly half-hard cock. He's currently kneeling at his owner Boghrim's feet, worshiping his master by slowly lapping away at the big orc's balls. The fact that Jason still is a human, completely unchanged by his constant contact with the orcs all around, shows that he must be immune to the nanites - a rarity that would surely make him attractive to the researchers outside of the city and aid the search for a counter-agent...";
@@ -881,8 +881,8 @@ instead of sniffing Jason:
 Section 4 - Infection for combat purposes
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -933,6 +933,9 @@ When Play begins:
 	now libido entry is 70;            [ Target libido the infection will rise towards. ]
 	now loot entry is "orc brew";                     [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;                   [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;                             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]meaty[or]powerful[or]broad[or]bulky[at random]";
 	now type entry is "[one of]orc[at random]";
@@ -947,7 +950,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

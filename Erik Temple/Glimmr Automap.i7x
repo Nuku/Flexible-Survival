@@ -1333,7 +1333,7 @@ And now we provide a geography to move around in:
 
 	A tree is scenery in Rear Lawn. "Looks climbable." Instead of climbing the tree: try going up.
 
-	Up from the Rear Lawn is Treetop. "A tall tree grows here. Large branches scrape against the house." The description of Treetop is "You could climb into the house through the window. Type IN."
+	Up from the Rear Lawn is Treetop. "A tall tree grows here. Large branches scrape against the house." Description of Treetop is "You could climb into the house through the window. Type IN."
 
 	A window is an open door. It is not openable. "The window is open." The window is inside from the Treetop and outside from the Master Bedroom.
 
@@ -1470,7 +1470,7 @@ That's all that's required to add the compass rose functionality. The rest of th
 
 	A tree is scenery in Rear Lawn. "Looks climbable." Instead of climbing the tree: try going up.
 
-	Up from the Rear Lawn is Treetop. "A tall tree grows here. Large branches scrape against the house." The description of Treetop is "You could climb into the house through the window. Type IN."
+	Up from the Rear Lawn is Treetop. "A tall tree grows here. Large branches scrape against the house." Description of Treetop is "You could climb into the house through the window. Type IN."
 
 	A window is an open door. It is not openable. "The window is open." The window is inside from the Treetop and outside from the Master Bedroom.
 

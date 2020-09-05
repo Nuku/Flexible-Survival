@@ -19,7 +19,7 @@ LastCandyWalkin is a number that varies.
 
 to say candycoondesc:
 	setmongender 3; [creature is male]
-	say "     You have encountered a cute raccoon in a pink, candy striper outfit. The uniform is a bright pink with a white apron and skirt. It has a few white stains scattered on it. The raccoon has a slender, feminine build. The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears. The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body. That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt. The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
+	say "     You have encountered a cute raccoon in a pink, candy striper outfit. The raccoon has a slender, feminine build. The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears. The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body. That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt. The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
 
 to say losetocandycoon:
 	choose row MonsterID from the Table of Random Critters;
@@ -79,8 +79,8 @@ to say beatthecandycoon:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -132,6 +132,9 @@ When Play begins:
 	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is "healing booster"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 10; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]girly[or]effeminate[or]slender[at random]";
 	now type entry is "[one of]coon-like[or]raccoon[at random]";
@@ -146,7 +149,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -253,11 +256,14 @@ Table of GameCharacterIDs (continued)
 object	name
 pink raccoon	"pink raccoon"
 
-pink raccoon is a pet. pink raccoon is a part of the player.
-The description of pink raccoon is "The pink coonboi has soft, gray fur with pink highlights and pink rings around his tail. He looks at you with mindless adoration, now a loyal and obedient pet and plaything.".
-The weapon damage of pink raccoon is 4.
-The level of pink raccoon is 2.
-The Dexterity of pink raccoon is 14.
+pink raccoon is a pet. pink raccoon is a part of Player.
+NPCObject of pink raccoon is Candy.
+understand "Candy" as pink raccoon.
+printed name of pink raccoon is "Candy".
+Description of pink raccoon is "The pink coonboi has soft, gray fur with pink highlights and pink rings around his tail. He looks at you with mindless adoration, now a loyal and obedient pet and plaything.".
+Weapon Damage of pink raccoon is 10.
+The level of pink raccoon is 1.
+Dexterity of pink raccoon is 15.
 The summondesc of pink raccoon is "Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close. He churrs happily, ready and eager to obey.".
 The assault of pink raccoon is "[one of]The raccoon charges in, regardless of any risk to himself and strikes wildly at your enemy![or]Your raccoon pet leaps at the enemy, trying to tackle them. He gets them off balance long enough for you to score a quick hit before he's tossed off![or]Yipping angrily, he nips at your foe![or]The coon boy hikes up his skirt and starts masturbating, shooting his hot seed onto his dress in a show that distracts your foe long enough to get in a quick strike![or]The raccoon grabs stray trash and rubble, pelting your enemy with it![at random]".
 the fuckscene of pink raccoon is "[sexwithpinkraccoonpet]".
@@ -422,8 +428,8 @@ PenileVirgin of Candy is false.
 SexuallyExperienced of Candy is true.
 MainInfection of Candy is "Candy Striper".
 
-The description of Candy is "[coondesc]".
-The conversation of Candy is { "Cock!" }.
+Description of Candy is "[coondesc]".
+Conversation of Candy is { "Cock!" }.
 The icon of Candy is figure of Candy_icon.
 candytalk is a number that varies.
 lastCandyfucked is a number that varies. lastCandyfucked is usually 555.
@@ -434,13 +440,15 @@ the scent of the Candy is "The candy coon smell of cotton candy, male arousal an
 
 to say coondesc:
 	say "     The pink raccoon, now going by the name of Candy, is staying peaceably in the bunker. His fur is a light gray with pink highlights. His raccoon mask is pink, as are the stripes on his body and tail. The raccoon has an effeminate body with a tight ass and slender figure. He's sewed his candy striper uniform and is happily prancing around in it, looking quite cute. Watching him, you do notice that he's found some lace-trimmed panties to add to his ensemble, keeping him from completely showing when he sashays around. He's largely keeping himself out of trouble, though occasionally seems to revert to more primal needs and [if HP of Sven >= 10 and HP of Sven < 30]coaxes your feline pet into some more playtime[else]masturbates furiously until the room smells of cotton candy from his sweet cum[end if]. You find yourself unsure if he's succumbed to the nanites or not, though the fact that he hasn't molested anybody yet instills hope, and you'll just hope for the best for now.";
+	if companion of Player is pink raccoon:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 after going to Bunker while coonstatus is 1:
 	now the player is in the Bunker;
 	now coonstatus is 2;
 	say "     As you arrive at the bunker, you can see that the pink coon has arrived there as per your directions. He prances over to you with a grin on his face. 'Thanks for getting me out of there, hon,' he churrs. 'Doc's been going extra-crazy lately. I mean, I think he was a little odd before the whole mouse thing, but since then, he's been doing more and more experiments on everyone at the hospital.' He hugs his arms around himself and shudders a little. 'I think there used to be more doctors... I think... but, well, if there were, there obviously aren't anymore, right?' he asks, looking a bit perturbed by the gap in his memory.'";
 	say "     'I don't really remember who I am anymore. I'm pretty sure I was volunteering at the hospital and that I was gay before the change... which, admittedly, hasn't really changed much... But aside from that, it's all rather hazy. Since I don't remember my name, how about you call me Candy, hon?' He reaches into his pocket and pulls out a small needle, another of the healing boosters. 'I don't really have much to give you to say thanks, but you should probably take this. With the way things are, you might need it out there if you're going to keep running around. Better safe than sorry, right?'";
-	increase carried of healing booster by 1;
+	ItemGain healing booster by 1;
 	if Player is male:
 		say "     'What I'd really like to do is show you how much I appreciate your help,' he says, running a finger up your thigh. 'I doubt I can stop you from keeping up your work out there, but... you don't have to go right away, do you?' he asks, giving you an openly seductive look.";
 		if BodyName of Player is "Raccoon":
@@ -700,7 +708,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and (HP o
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: HP of Candy: [HP of Candy], HP OF FANG: [HP of Fang][line break]";
+		say "     DEBUG: HP of Candy: [HP of Candy], HP of FANG: [HP of Fang][line break]";
 	say "     You walk in to see Candy petting Fang vigorously, the raccoon showering some rare non-sexual affection on the canine. 'Who's a good boy? Who's a good, big, stud boy?' he asks in a sickeningly cute tone of voice. 'It's you! It's you, you're such a good stud!' he adds in. Fang seems to be enjoying himself, judging from his kicking leg and canine grin. You guess in a world like this, a wolf acting so dog-like is hardly the weirdest thing you've ever seen happen. You continue to watch this show of affection for a little while before deciding to get back to the things you were doing before.";
 	now LastCandyWalkin is turns;
 
@@ -709,7 +717,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: HP of Candy: [HP of Candy], HP OF FANG: [HP of Fang][line break]";
+		say "     DEBUG: HP of Candy: [HP of Candy], HP of FANG: [HP of Fang][line break]";
 	say "     Candy seems a bit troubled as you arrive at the library, occasionally glancing at Fang as he generally pads around his territory. He approaches you as you enter. '...I wonder what John would say about this...' he says. 'Fang, I mean. I'm not going to pretend I haven't been enjoying every second of this, but... well, I'm me, y'know? Hopped up on nanites and my own flamboyant tendencies,' he says, pausing for a little while before shrugging. 'Well, it's a new world, and a new me. And I'm not going to go denying myself just for somebody else. Even if he doesn't like it, he'll have to live with it, right?' Candy says. He turns back to Fang, a devious grin on his face. 'Besides, he always said dogs were man's best friend. Really, he should've seen this coming.'";
 	now LastCandyWalkin is turns;
 
@@ -727,7 +735,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: HP of Candy: [HP of Candy], HP OF ALEXANDRA: [HP of Alexandra][line break]";
+		say "     DEBUG: HP of Candy: [HP of Candy], HP of ALEXANDRA: [HP of Alexandra][line break]";
 	say "     Entering the library, you discover Candy curled up in a reading chair with what appears to be a several-years-old fashion magazing, flipping through the pages with an irritated expression on his face. For a moment, you think he hasn't noticed you, but then he speaks. 'Could you do me a favor, sweetie, and let Alexandra know that just because she says she's your second in command, we don't have to sit there and take it every time she starts yelling at us?' he asks, not even looking up from an article about cross-stitching. 'Because if she decides to start pushing me around again just 'cause I dress like a girl, someone's getting their eyes clawed out,' he announces. Seems there's a bit of trouble between the two at the moment...";
 	now LastCandyWalkin is turns;
 
@@ -736,7 +744,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: HP of Candy: [HP of Candy], HP OF ALEXANDRA: [HP of Alexandra][line break]";
+		say "     DEBUG: HP of Candy: [HP of Candy], HP of ALEXANDRA: [HP of Alexandra][line break]";
 	say "     Candy has an odd look on his face when you arrive at the library. 'Hey, uh, you know better than anyone that I'm definitely a bit of a libertine, but...' he frowns. 'You do realize the military might be a bit pissed if they barge in here and see you turned a law enforcement officer into an aggressive, sex-addled bitch, right?' he shakes his head. 'I mean, you do whatever you want with whoever you want, really, but... maybe try to figure out an alibi before the big men with the bigger guns roll into town?' he says. You're not entirely sure how you feel about Candy openly questioning your authority like that, but the raccoon goes off to do something else before you can formulate a response. You scowl a bit and decide you'll ignore it... this time.";
 	now LastCandyWalkin is turns;
 

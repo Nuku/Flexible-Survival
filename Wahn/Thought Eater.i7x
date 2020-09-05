@@ -9,7 +9,7 @@ to say Thought_Eater_Wins:
 	if mindshield helmet is equipped:
 		say "     Your will to resist worn away, you fall to your knees in front of the creature. 'Enough of this,' the thought eater hisses, reaching out to rip the mindshield helmet off your head with his long-fingered hands. Then he smashes the piece of equipment against the nearest wall, multiple times, before letting the bent and broken helmet drop on the ground. 'No one can resist my power, not even with your toys!' He grips your head tightly with one hand, his sharp fingernails starting to dig into your skin for a second, then he pulls it back before doing serious damage. 'Stand!' he commands, which you do - after which you're pulled close against him, his clawed fingers gripping your shoulders as the four tentacles on the thought eater's face start reaching for your head, his beak visible between them. As the suckered lengths of tentacle wrap around your head, it almost feels as if they sink into it, digging through your mind and memories.";
 		now mindshield helmet is not equipped;
-		decrease carried of mindshield helmet by 1;
+		ItemLoss mindshield helmet by 1;
 	else:
 		say "     Your will to resist worn away, you fall to your knees in front of the creature. 'Excellent,' the thought eater hisses, reaching out to cup your head with his long-fingered hand. 'Stand!' he commands, which you do - after which you're pulled close against him, his clawed fingers gripping your shoulders as the four tentacles on the thought eater's face start reaching for your head, his beak visible between them. As the suckered lengths of tentacle wrap around your head, it almost feels as if they sink into it, digging through your mind and memories.";
 	WaitLineBreak;
@@ -226,8 +226,8 @@ to say Thought_Eater_Desc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -279,6 +279,9 @@ When Play begins:
 	now libido entry is 25;               [ Amount player Libido will go up if defeated ]
 	now loot entry is "tentacle tip";     [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 40;           [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]spindly[or]tall[at random]";
 	now type entry is "[one of]hybrid[or]monstrous[at random]";
@@ -293,7 +296,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -403,7 +406,7 @@ instead of sniffing tentacle tip:
 say "It smells like... er... maybe calamar- waah! Suddenly, the thing bends up and tries to find its way into your nose. Quickly pulling it away, you think you've done enough smelling with it for now.";
 
 tentacle tip is a grab object.
-the usedesc of tentacle tip is "[tentacle tip use]";
+Usedesc of tentacle tip is "[tentacle tip use]";
 
 to say tentacle tip use:
 	say "Playing around with the piece of tentacle, you interestedly watch as it stretches and moves, then suddenly wraps itself around your finger. There, it seems to... shrink, staying pressed tightly against your digit as it gets thinner and thinner, then finally is absorbed completely into your skin, vanishing without a trace.";

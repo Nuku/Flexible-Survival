@@ -11,36 +11,33 @@ Object	Name
 Fallen Kunoichi	"Fallen Kunoichi"
 
 Fallen Kunoichi is a situation.
-The sarea of Fallen Kunoichi is "Museum".
+ResolveFunction of Fallen Kunoichi is "[ResolveEvent Fallen Kunoichi]".
+Sarea of Fallen Kunoichi is "Museum".
 when play begins:
 	add Fallen Kunoichi to BadSpots of FurryList;
 
-Instead of resolving a Fallen Kunoichi:
+to say ResolveEvent Fallen Kunoichi:
 	say "     Passing through the halls of the museum, you come across the aftermath of what was an epic battle. Many of the displays here are knocked over or shattered by what must have been powerful blows by a great weapon. You can see gouges cut deep into the walls, many stained with blood. Smaller darts and shuriken are embedded in the wall as well. The floor is marked with several blood stains and cum puddles, as well as soot marks from flash powder or smoke bombs. Clearly many battled a great foe here.";
 	say "     Half-buried in the ruins of one display, you find the grisly remains of a feline ninja cleaved in two at the waist. Drawing off its mask, you see her face feminine locked in an expression of great pain and horror. Something about her death gaze disturbs you deep inside and you are unable to bear the sight of it. You brush her eyes shut and pull the mask back down over her feline face. Beside the fallen kunoichi is her weapon, a bo staff with ornate metal tips. Cautious of any infected blood, you quickly check her [italic type]shinobi shozoko[roman type], but find nothing else of use.";
-	say "     Bo staff obtained.";
-	increase carried of bo staff by 1;
+	say "     You gain Bo's staff!";
+	ItemGain bo staff by 1 silently;
 	increase score by 5;
 	now Fallen Kunoichi is resolved;
 
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"bo staff"	"An ornate fighting staff. A trained martial artist could wield it with greater effectiveness."	2	bo staff
-
-bo staff is an armament. It is part of the player. It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]". The weapon damage of bo staff is 4. The weapon type of bo staff is "Melee". It is not temporary.
+[Bo Staff moved to Core Mechanics/Weapons.i7x]
 
 Table of GameEventIDs (continued)
 Object	Name
 Suddenly Ninjas	"Suddenly Ninjas"
 
 Suddenly Ninjas is a situation.
-The sarea of Suddenly Ninjas is "Museum".
+ResolveFunction of Suddenly Ninjas is "[ResolveEvent Suddenly Ninjas]".
+Sarea of Suddenly Ninjas is "Museum".
 when play begins:
 	add Suddenly Ninjas to BadSpots of FurryList;
 	add Suddenly Ninjas to BadSpots of MaleList;
 
-Instead of resolving a Suddenly Ninjas:
+to say ResolveEvent Suddenly Ninjas:
 	say "     Suddenly! Ninjas! Everywhere!";
 	say "     You are traveling through the museum, minding your own business when suddenly a pack of ninjas leap out to attack you. Ninja stars are flying through the air and the dark costumed cats are leaping in to attack you from all sides, brandishing an array of weapons taken from the Japanese history exhibit. There are too many to try fighting them all. They would bear your down by sheer numbers and countless poisoned shuriken. You are forced to try fleeing, but several of the felines leap in to fight you. You dodge and run, but one is able to make an attempt to stop you, fighting you even as you both run down the hall.";
 	challenge "Ninja Cat";
@@ -83,18 +80,18 @@ Table of GameEventIDs (continued)
 Object	Name
 Losing It	"Losing It"
 
-Losing It is a situation. The level of Losing It is 7.
+Losing It is a situation.
+ResolveFunction of Losing It is "[ResolveEvent Losing It]". The level of Losing It is 7.
 when play begins:
 	add Losing It to BadSpots of FurryList;
 	add Losing It to BadSpots of MaleList;
 
-Instead of resolving a Losing It:
+to say ResolveEvent Losing It:
 	say "     Traveling through the city, you see a stumbling figure with a skirt and a handbag in an alley. Hoping to find another survivor, you rush over, but are disappointed by her current state. Her face is reshaping itself into a feline muzzle while fur spreads over the last of her uncovered skin. But most striking of it is the large erection and hefty balls propping up her... no, his skirt. Suffering a complete gender swap from the infection, the poor woman has become a snow leopard man. You try to help him along while he complains about the wretched heat and pants. Then something changes in his eyes and he looks at you with an animalistic thirst. He grabs you tightly and tries to wrestle you down, his mind unraveling even as you try to help him. You escape his grip, but are left with facing the lustful snow leopard.";
 	challenge "Snow Leopard";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having dealt with the lustful feline, you get ready to leave, but notice the purse next to the tattered remains of the skirt that was torn off in the fight. You take a moment to examine these last remnants of the woman's feminine identity. You carefully avoid several spots of snowmeow cum, whether his or that of the one who changed her, you cannot say, as you shift the clothes around. You are more successful with her purse, finding a canister of mace. It seems she failed to use it in time and paid the price. You mentally remind yourself to use it before things get out of hand and you end up like her... him.";
-		say "     Pepperspray obtained.";
-		increase carried of pepperspray by 1;
+		ItemGain pepperspray by 1;
 		increase score by 5;
 		now Resolution of Losing It is 1;		[Won against Snow Leopard]
 	else if fightoutcome >= 20 and fightoutcome <= 29:
@@ -116,11 +113,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Tour Bus	"Tour Bus"
 
-Tour Bus is a situation. The level of Tour Bus is 6.
+Tour Bus is a situation.
+ResolveFunction of Tour Bus is "[ResolveEvent Tour Bus]". The level of Tour Bus is 6.
 when play begins:
 	add Tour Bus to BadSpots of FurryList;
 
-instead of resolving a Tour Bus:
+to say ResolveEvent Tour Bus:
 	say "     Your path through the city is interrupted by an overturned tour bus. It seems there was quite an accident here, with several cars piled up around the bus as well. You do manage to weave your way through the mess, but it takes some time. You remind yourself not to take this street again next time when passing through this area. You head over to check out the bus, hopeful to find something of use in there. You climb up onto a car, then get on the bus's side. Looking in the windows, you can see several bags and packs, but you also see large amounts of semen and scratches to the seats. Regardless of how the accident came to pass, it seems like the occupants were all transformed into more sexual monsters. Certainly, it would not be safe to enter the bus, given how soaked in cum everything is.";
 	say "     You hop back onto the car, then onto the ground. You start to head on your way, mentally reminding yourself not to take this street again when passing through this area, when you hear a growl from behind you. Crawling out of the bus, you see a large, cougar herm wearing a cap and coat that leads you to suspect this was once the bus driver. It growls again and hops onto the ground, coming at you quickly.";
 	challenge "Cougar";
@@ -134,16 +132,17 @@ Table of GameEventIDs (continued)
 Object	Name
 Trickster	"Trickster"
 
-Trickster is a situation. The level of Trickster is 4.
+Trickster is a situation.
+ResolveFunction of Trickster is "[ResolveEvent Trickster]". The level of Trickster is 4.
 wolffight is a number that varies.
 when play begins:
 	add Trickster to BadSpots of FurryList;
 	add Trickster to BadSpots of MaleList;
 	add Trickster to BadSpots of FemaleList;
 
-instead of resolving a Trickster:
+to say ResolveEvent Trickster:
 	setmonster "Feral Wolf";
-	say "     As you are traveling along, you spot some activity in the distance. At first, fearing that it is another band of monsters, you take cover. But a few moments later, you discover it to be a small team of soldiers moving stealthily through the city. They may be doing recon or on some other kind of mission, but you may be able to get assistance, or even be rescued by them. But even as you're walking up and trying to decide how best to approach them, you see a coyote [if Diegochanged is 0]man[else if Diegochanged is 1]herm[else]woman[end if] carrying a large sack dash into their midst[if diegotalk > 0 and Diegochanged is 0]. You recognize Diego, the coyote trickster, and have to wonder what he is up to this time[else if diegotalk > 0]. You recognize Diego, the coyote trickster, and have to wonder what she is up to this time[end if][if Diegochanged is 0]. He[else]. She[end if] passes the bag quickly to a flabbergasted soldier with a quick 'Here, hold this' before continuing on with a happy chuckle.";
+	say "     As you are traveling along, you spot some activity in the distance. At first, fearing that it is another band of monsters, you take cover. But a few moments later, you discover it to be a small team of soldiers moving stealthily through the city. They may be doing recon or on some other kind of mission, but you may be able to get assistance, or even be rescued by them. But even as you're walking up and trying to decide how best to approach them, you see a coyote [if Diegochanged is 0]man[else if Diegochanged is 1]herm[else]woman[end if] carrying a large sack dash into their midst[if PlayerMet of Diego is true and Diegochanged is 0]. You recognize Diego, the coyote trickster, and have to wonder what he is up to this time[else if PlayerMet of Diego is true]. You recognize Diego, the coyote trickster, and have to wonder what she is up to this time[end if][if Diegochanged is 0]. He[else]. She[end if] passes the bag quickly to a flabbergasted soldier with a quick 'Here, hold this' before continuing on with a happy chuckle.";
 	say "     As the stunned soldiers watch the coyote run off in the direction of the city park and look at the mysterious sack, you hear some approaching howls. If you're going to get out of here, you'll have to do it right now.";
 	say "     [bold type]Do you move to join the soldiers or run and hide to watch what happens?[roman type][line break]";
 	LineBreak;
@@ -151,7 +150,7 @@ instead of resolving a Trickster:
 	say "     ([link]N[as]n[end link]) - Run.";
 	if Player consents:
 		say "     You dash up to the soldiers and pull out your weapon. Knowing your luck, trouble's on the way. You run up to the soldier left holding the bag. Your sudden appearance after the coyote's keeps him off guard long enough to pull the sack from him, finding it stuffed with gray fur inside. You barely have a chance to look up when a large pack of wolves come running around the corner, slamming into the unexpected team of soldiers. Several of the men are knocked down immediately.";
-		let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
+		let the bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 15: ";
 		if dice plus bonus > 15:
@@ -172,10 +171,9 @@ instead of resolving a Trickster:
 				if wolffight is 1:
 					say "     Having beaten the pack alpha and sent him packing, the wolves['] assault on the few remaining soldiers wavers. With a howl from their leader, they snatch up the fallen, partially transformed soldiers and drag them off into the city. They'll be taking them back to their den to finish mating them until they're fully members of the pack. Too tired from the fight, you and the other soldiers are in no shape to give pursuit. As the last of the wolves are running off, you hear some distant laughter, probably from the coyote trickster who enjoyed the show while it lasted[if Park Entrance is unknown]. You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
 					say "     The remaining soldiers thank you for the assistance. Because of the cloud of wolf fur, nearly all of them have picked up ears or tails, but their humanity is mostly intact thanks to your help. They'll have to scrub their recon mission and return to base. You're told they can't take you with them at this time, but they do give over some of their supplies, as they'll re-equip at the base earlier than planned. They keep their guns and ammo, but one of the few who remained fully unchanged passes you his combat knife with a silent nod. After packing the food and water away and strapping on the knife, you're given another round of thanks before they head off.";
-					say "     Food, water bottle and combat knife obtained.";
-					increase carried of food by 1;
-					increase carried of water bottle by 1;
-					increase carried of combat knife by 1;
+					ItemGain food by 1;
+					ItemGain water bottle by 1;
+					ItemGain combat knife by 1;
 					increase score by 20;
 					now Resolution of Trickster is 1;		[Won against wolves]
 		if wolffight is 3:
@@ -198,24 +196,20 @@ instead of resolving a Trickster:
 	now wolffight is 0;
 	now Trickster is resolved;
 
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"combat knife"	"A large combat knife in a belt holster."	2	combat knife
-
-combat knife is an armament. It is part of the player. It has a weapon "[one of]your large knife[or]your combat knife[or]the large blade[or]your combat knife with a strong thrust[or]your large blade with a quick slash[at random]". The weapon damage of combat knife is 6. The weapon type of combat knife is "Melee". It is not temporary.
+[combat knife moved to Core Mechanics/Weapons.i7x]
 
 Table of GameEventIDs (continued)
 Object	Name
 Prank Aftermath	"Prank Aftermath"
 
-Prank Aftermath is a situation. Prank Aftermath is inactive. The level of Prank Aftermath is 7.
+Prank Aftermath is a situation.
+ResolveFunction of Prank Aftermath is "[ResolveEvent Prank Aftermath]". Prank Aftermath is inactive. The level of Prank Aftermath is 7.
 prankevent is a number that varies.
 when play begins:
 	add Prank Aftermath to BadSpots of FurryList;
 	add Prank Aftermath to badspots of HermList;
 
-instead of resolving a Prank Aftermath:
+to say ResolveEvent Prank Aftermath:
 	say "     As you travel through the city, you hear some moaning mewls coming from up ahead. On your guard, you sneak forward and take in the sight of several of those puma creatures playing with what was once a team of six soldiers. The cougars have the men pinned to the ground and are having their way with them. As you watch, the cougars force them to nurse from their breasts or suck their cocks until they develop a wet, new pussy for the herm kitties to fuck. Outnumbered, the soldiers have no chance to escape and there are several felines waiting for their turn to sate their lusts on the transforming humans.";
 	say "     Not normally native to this part of the city, you start to wonder how such a large band of the felines got here when you spot one of them eating a large fish from a basket while she waits for her next turn with the new breedtoys. Remembering that you told Diego an idea you had about using fish to lure some of the felines around for a prank, it seems you've run into the aftermath of your idea";
 	if Libido of Player - humanity of Player < -25:
@@ -252,7 +246,8 @@ Object	Name
 Lovers Bench	"Lovers Bench"
 
 Lovers Bench is a situation.
-The sarea of Lovers Bench is "Park".
+ResolveFunction of Lovers Bench is "[ResolveEvent Lovers Bench]".
+Sarea of Lovers Bench is "Park".
 loversbench is a number that varies.
 when play begins:
 	add Lovers Bench to BadSpots of FurryList;
@@ -261,7 +256,7 @@ when play begins:
 
 lbcomplist is a list of text that varies.
 
-Instead of resolving a Lovers Bench:
+to say ResolveEvent Lovers Bench:
 	if loversbench is 0:				[first visit]
 		say "     While traveling through the park, you come across a pair making out lustfully on one of the benches. The male atop is an anthro wolf with gray fur and a strong build. The female stretched back on the bench is a spotted feline, perhaps an ocelot. Their clothes are scattered around the bench and seem partially torn. You hang back, wary to approach but unwilling to look away from the sight. You watch as the wolf eases his thick cock into the smaller woman's pussy, making her yowl in delight. She puts her arms around him and grabs his rear, pulling him into her with each thrust he makes. The ocelot licks and kisses at the wolf's neck and he brings a paw to caress her breast while the other digs into the back of the wooden bench. When the wolf finally drives his lupine knot into the feline's cunt, they growl passionately, cumming hard[if Player is not neuter]. You do as well, having started playing with yourself at some point while peeping on the spectacle[end if]. Finished, the wolf sags atop the feline as they start licking and kissing one another. The ocelot's markings start to spread into the wolf's pelt while her fur takes on a more grayish tint overall.";
 		say "     You quietly walk away, ashamed of your peeping and quite certain they have succumbed too far to be safe to approach. Even if currently sated, they are both equally infectious. But at least they are a couple.";
@@ -272,14 +267,12 @@ Instead of resolving a Lovers Bench:
 		say "     Your meandering through the park brings you back to the lovers['] bench and find them gone, though their scattered clothes remain. This helps confirm your earlier guess that they'd succumbed. The bench has quite a few scratches and claw marks on it, clearly having been used by many others since the outbreak, as well as older, carved graffiti hearts. You suspect this bench has been a make-out spot for quite some time, being in a more secluded area in the park. Certainly there is a strong scent of sex hanging around it, even in the open air of the park. Remembering the lovemaking you witnessed here, you start to get turned on.";
 		if scenario is "Bunker" or scenario is "Caught Outside":
 			say "     You focus on checking out the scattered clothes for anything of use. The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench. Their food has been reduced to scraps and crumbs and their drink bottles are empty. There is a small pocketknife in the wolf's khakis. It is no better than your own, so you toss it aside. The woman's jeans do yield a small canister of mace, which you store somewhere within easy reach. You leave the rest, finding nothing else of use to you.";
-			say "     Pepperspray obtained.";
-			increase carried of pepperspray by 1;
+			ItemGain pepperspray by 1;
 			increase score by 5;
 		else:
 			say "     You focus on checking out the scattered clothes for anything of use. The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench. Their food has been reduced to scraps and crumbs and their drink bottles are empty. There is a small pocketknife in the wolf's khakis. Thinking it may be a useful tool or perhaps a weapon in a pinch, you take it. The woman's jeans do yield a small canister of mace, which you store somewhere within easy reach. You leave the rest, finding nothing else of use to you.";
-			say "     Pocketknife and pepperspray obtained.";
-			increase carried of pocketknife by 1;
-			increase carried of pepperspray by 1;
+			ItemGain pocketknife by 1;
+			ItemGain pepperspray by 1;
 			increase score by 10;
 		increase loversbench by 1;
 		now Resolution of Lovers Bench is 2;	[Watched second scene]
@@ -538,14 +531,15 @@ Table of GameEventIDs (continued)
 Object	Name
 PeachTree	"PeachTree"
 
-PeachTree is a situation. The level of PeachTree is 7.
-The sarea of PeachTree is "Park".
+PeachTree is a situation.
+ResolveFunction of PeachTree is "[ResolveEvent PeachTree]". The level of PeachTree is 7.
+Sarea of PeachTree is "Park".
 peachtreefight is a number that varies.
 
 when play begins:
 	add PeachTree to badspots of HermList;
 
-Instead of resolving a PeachTree:
+to say ResolveEvent PeachTree:
 	now peachtreefight is 3;
 	say "     Straying down a disused path, you find yourself approaching a large peach tree. The tree is laden with large, juicy fruit. Your mouth salivates just from the scent coming from it";
 	if HP of Joanna >= 7 and HP of Joanna < 90:		[Joanna's seed]
@@ -560,7 +554,7 @@ Instead of resolving a PeachTree:
 			challenge "Parasitic Plant";
 			if lost is 0:
 				say "     Disentangling yourself from the tendrils in the tree and freeing yourself of the vine inside you, you make a quick grab for some of the fruit. You snag a couple of them and then make a run for it as more vines rustle in the canopy. As you move further from the tree, Joanna's seed settles down again. You stroke your belly as if petting it, thankful for the warning it tried to give before its instincts took over.";
-				increase carried of tasty peach by 3;
+				ItemGain tasty peach by 3;
 				increase score by 10;
 				now Resolution of PeachTree is 1;	[Won against plant with Joanna's seed]
 			else:
@@ -583,7 +577,7 @@ Instead of resolving a PeachTree:
 		challenge "Parasitic Plant";
 		if lost is 0:
 			say "     Disentangling yourself from the tendrils in the tree and freed yourself of the vine inside you, you make a quick grab for some of the fruit. You snag a couple of them and then make a run for it as more vines rustle in the canopy.";
-			increase carried of tasty peach by 3;
+			ItemGain tasty peach by 3;
 			increase score by 10;
 			now Resolution of PeachTree is 3;	[Won against plant]
 		else:
@@ -602,7 +596,7 @@ name	desc	weight	object
 
 tasty peach is a grab object. tasty peach is temporary.
 
-the usedesc of tasty peach is "[yummypeach]";
+Usedesc of tasty peach is "[yummypeach]";
 
 to say yummypeach:
 	if "Junk Food Junky" is listed in feats of Player:
@@ -627,13 +621,14 @@ Object	Name
 Concession Stand	"Concession Stand"
 
 Concession Stand is a situation.
-The sarea of Concession Stand is "Fair".
+ResolveFunction of Concession Stand is "[ResolveEvent Concession Stand]".
+Sarea of Concession Stand is "Fair".
 foodvendor is a number that varies.
 when play begins:
 	add Concession Stand to BadSpots of FurryList;
 	add Concession Stand to BadSpots of MaleList;
 
-Instead of resolving a Concession Stand:
+to say ResolveEvent Concession Stand:
 	if foodvendor is 0:
 		say "     Wandering through the bright lights of the state fair, you wander into a cluster of food stands advertising a variety of fried foods and sugary treats. Most are closed up right now, but one seems to be open with a strange figure manning the stand. This man is wearing a bright green suit with yellow trim and a yellow bowler hat. While you think he's human, his features seem to be strangely shifting, making it hard for you to pin down exactly what he looks like. At moments, you think you see a hint of lupine in his eyes or a feline muzzle, but then you can no longer discern these traits. For a second you think you see a broad tail, but then it is gone as if it were never there. Confused by all this, you miss the first part of his sales pitch, where he's trying to entice you into buying some of the snacks he has on sale. '...so like I said, not a penny from your pocket do I want for them. A delicious snack to satisfy your cravings and a cool drink to help you beat the heat,' he says as he motions to the tasty looking treats on display and the cans of soda chilling in an ice barrel.";
 		say "     [bold type]'So, we got a deal?' he asks, holding out his hand.[roman type][line break]";
@@ -645,8 +640,8 @@ Instead of resolving a Concession Stand:
 			say "     The vendor releases you and flips back behind the counter. With a broad grin that seems momentarily feline, he passes you a tray of snacks and a can of soda. You head off, still in a bit of a daze, licking your lips as you try to figure out the flavor of cum you just guzzled down.";
 			randominfect; [first one picks a valid critter while infecting]
 			infect; [second one gives the same infection]
-			increase carried of chips by 1;
-			increase carried of soda by 1;
+			ItemGain chips by 1;
+			ItemGain soda by 1;
 			decrease humanity of Player by a random number between 8 and 6;
 			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 2 and 5;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 1 and 4;
@@ -668,8 +663,8 @@ Instead of resolving a Concession Stand:
 				say "     As you walk up to the stand, the gentleman sets another tray of fried treats and a can of soda on the counter, then leaps over it. You don't say a word as he whips out his cock again. Any thoughts of discussion or dealing with the man fade as you again bury his throbbing meat in your mouth and suck away at it. He chuckles softly and rubs your head, pumping into your mouth. You run your tongue over some feline barbs, then across a pointed, canine glans. It is thick, then long, then almost human, then unnaturally ridged. These changes continue as you try to figure out each new one, loving the ever-changing delight more and more. You put a hand to his ballsack and find it changing as well. The orbs inside always remain quite large and heavy, though their shape shifts subtly. But more apparent is the soft fur, no the hard scales, no the smooth skin, that covered his scrotum. This time your lustful cocksucking is rewarded when you feel a knot briefly locking his cock in your mouth and he sprays thick cum into your mouth. When the knot fades away as if never there, you pull your mouth back and swallow down the semen. You take your purchased wares with a lustfully clouded mind that lingers as you wander back into the flashy fair.";
 				randominfect; [first one picks a valid critter while infecting]
 				infect; [second one gives the same infection]
-				increase carried of chips by 1;
-				increase carried of soda by 1;
+				ItemGain chips by 1;
+				ItemGain soda by 1;
 				decrease humanity of Player by a random number between 10 and 20;
 				if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 3 and 6;
 				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 2 and 5;
@@ -680,8 +675,8 @@ Instead of resolving a Concession Stand:
 				say "     Rubbing his balls and sucking his cock, you lavish attention upon him, becoming more and more eager to please him. When he finally cums, his thick seed comes blasts from a large, leonine cock and you gulp it all down, rubbing your belly as his semen fills it. You get up and lick your lips, barely remembering to take the food items. You were so focused on getting the cum, you barely remembered the purchase at all this time.";
 				randominfect; [first one picks a valid critter while infecting]
 				infect; [second one gives the same infection]
-				increase carried of chips by 1;
-				increase carried of soda by 1;
+				ItemGain chips by 1;
+				ItemGain soda by 1;
 				decrease humanity of Player by a random number between 12 and 24;
 				if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 4 and 8;
 				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 3 and 6;
@@ -762,14 +757,15 @@ Object	Name
 Sweet Exchange	"Sweet Exchange"
 
 Sweet Exchange is a situation.
-The sarea of Sweet Exchange is "Fair".
+ResolveFunction of Sweet Exchange is "[ResolveEvent Sweet Exchange]".
+Sarea of Sweet Exchange is "Fair".
 when play begins:
 	add Sweet Exchange to BadSpots of FurryList;
 	add Sweet Exchange to BadSpots of FemaleList;
 	add Sweet Exchange to BadSpots of MaleList;
 	add Sweet Exchange to badspots of HumorousList;
 
-Instead of resolving a Sweet Exchange:
+to say ResolveEvent Sweet Exchange:
 	say "     From up ahead, you hear a bunch of excited voices and decide to cautiously check it out. What you discover is a mob of pastel colored ferrets poinging up and down in front of a stall. Atop the stall are some sugar gliders covered in cotton candy fur. Both groups are yelling at one another, calling each other names though neither of them seems particularly upset.";
 	say "     'Fork it over, you cotton-brained thief!' one ferret yells. 'Yeah!' 'Sugar snatchers!' 'Give it.' 'PopPopPopPopPop!' the others babble excitedly, many of them making grabby paws in the air towards the bottles and cans of pop the pink marsupials are dangling tantalizingly out of reach.";
 	say "     'Pay up then, you soda jerks,' one sugar glider responds. 'We got this fair and square,' she adds, sticking out her tongue and looking insulted, while several of her friends giggle at that. 'Give us that sweet, sweet candy you've been hoarding, you carbonated tube rats,' another yells of the sugar gliders.";
@@ -777,11 +773,11 @@ Instead of resolving a Sweet Exchange:
 	say "     These strange negotiations go on for a while like this, trading insults, offers of sex and rude gestures as they negotiate their trade of candy for cola. One of the sugar gliders even tantalizes the ferrets with a display of her fingering her two juicy cunts to get them to up their price by a few more bags of jelly beans. As you watch them, you can't help but feel that this rivalry's all in good fun for both sides, more some kind of contest or game they play rather than an actual feud.";
 	if BodyName of Player is "Sugar Ferret" and player is pure:
 		say "     As the deal is coming to a close, the ferrets start passing up bags of candy to the sugar gliders as they dole out the pop in exchange. Seeing as you look like the other ferrets, you slip amongst the crowd and try to push your way to the front. With all the other greedy, excited ferrets mobbing to grab some of that delicious soda, it takes some effort to get to the front of the pack, but eventually you manage to snag some. A rush of giggling excitement runs through you at having gotten some more pop and it takes some effort not to drink it down right away. You instead slip away before any of the other ferrets succumb to their thirst or notice you among them.";
-		increase carried of soda by 1;
+		ItemGain soda by 1;
 		now Resolution of Sweet Exchange is 1;	[Got soda as a Sugar Ferret]
 	else if BodyName of Player is "Sugar Glider" and player is pure:
 		say "     As the deal is coming to a close, the sugar gliders start passing down the cans and bottles of pop in exchange for bags of candy. Seeing as you look like the others, you climb onto a nearby stand and make your way over to the roof of the booth with the rest of the sweet marsupials. The giggling girls pass around the collected bags of candy, stuffing them into their pouches. Unnoticed among them, you manage to get passed some of the candy as well, which you stuff into your [if Player is female]pouch[else]backpack[end if] before making your escape before they catch on.";
-		increase carried of chips by 1;
+		ItemGain chips by 1;
 		now Resolution of Sweet Exchange is 2;	[Got chips as a Sugar Glider]
 	else:
 		say "     As the deal is coming to a close, the two sides start the actual exchange, insults and greedy demands for more next time flying between them even as they do. Seeing as things are wrapping up, you decide it best to withdraw before the swap is complete and the two mobs disperse. With that many sugar-crazed mutants around, you're not sure if you'd be able to remained unnoticed without putting some distance between you and them while you can.";
@@ -794,15 +790,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Caught Glider	"Caught Glider"
 
-Caught Glider is a situation. Caught Glider is inactive.
-The sarea of Caught Glider is "Fair".
+Caught Glider is a situation.
+ResolveFunction of Caught Glider is "[ResolveEvent Caught Glider]". Caught Glider is inactive.
+Sarea of Caught Glider is "Fair".
 when play begins:
 	add Caught Glider to BadSpots of FurryList;
 	add Caught Glider to BadSpots of FemaleList;
 	add Caught Glider to BadSpots of MaleList;
 	add Caught Glider to badspots of HumorousList;
 
-Instead of resolving a Caught Glider:
+to say ResolveEvent Caught Glider:
 	say "     Hearing some commotion start up suddenly behind you, you turn around in time to see one of those cotton-candy-colored sugar gliders run across the laneway. In hot pursuit of her are a pack of the colorful, sugar-crazed ferrets. 'Sugar thief!' 'Come back here!' 'Don't let her get away, guys!' 'Candy-assed scoundrel!' they call out excitedly, laughing as they give chase. Following cautiously, you watch the sugar glider string them along for a while rather than just glide away, giggling as well at the fun and yelling taunts back at them.";
 	say "     But when it looks like she's going to get away, she banks the wrong way and is jumped by several of the ferrets who doubled-back and were waiting atop the roof of one of the stalls. The fluffy pink girl is pulled to the ground and pinned down by the excited ferrets. 'Let's show her what we do to sugar thieves,' one says with a wide, toothy grin. 'Yeah!' 'Do it!' 'Thieves get fucked!' the others cheer.";
 	say "     The sugar glider giggles at this and squirms playfully as the ferrets around her start groping her cute body. 'Oh, don't you dare, you soda jerks. Don't you dare stuff my sweet, juicy cunts,' she says while parting her legs and spreading the wet lips of her two pussies. 'You're such naughty hobs for even suggesting it,' she sniffs haughtily, grinning all the more even as she continues to frig herself.";
@@ -821,13 +818,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Beach Party	"Beach Party"
 
-Beach Party is a situation. The level of Beach Party is 5.
-The sarea of Beach Party is "Beach".
+Beach Party is a situation.
+ResolveFunction of Beach Party is "[ResolveEvent Beach Party]". The level of Beach Party is 5.
+Sarea of Beach Party is "Beach".
 when play begins:
 	add Beach Party to BadSpots of FurryList;
 	add Beach Party to BadSpots of FemaleList;
 
-Instead of resolving a Beach Party:
+to say ResolveEvent Beach Party:
 	say "     Traveling along the beach, you crest a small dune to find a group of bright pink, dolphin girls splashing around in the water. They seem to be throwing a [if daytimer is day]sunny[else]nighttime[end if] beach party for themselves, giggling and playing around a large dolphin pooltoy. One runs over to a small cooler and pulls out a can of soda. After shaking it up, she sprays it wildly across her friend's body, causing her to squeak and laugh as she tries to block the foamy spray[if thirst of Player > 30]. Feeling rather thirsty yourself, you find it disappointing they'd waste a drink like that[end if]. As the foam slides down her body, you notice that something is odd about their appearance. In the [if daytimer is day]sunlight, you can see that the dark cola running down her back can be seen through her[else]moonlight, you can see the foam cola running smoothly down her body[end if]. These dolphin girls are inflatable creatures and completely empty save for air.";
 	say "     It is at this point that you are spotted. And, eager for more fun, the dolphin girl on the beach tosses down the empty can and bounds her way towards you with a vapid smile on her face.";
 	now dolphinflatablefight is 3;
@@ -846,7 +844,7 @@ Instead of resolving a Beach Party:
 				challenge "Bottlenose Toy";
 				if dolphinflatablefight is 1:
 					say "     With the green dolphin sent back into the water, the girls start playing around with it. Some start fingering themselves and each other, rather worked after their amusement with you. With them distracted, you decide to avail yourself of the remaining contents of their cooler, taking the last two cans before heading on your way, the sounds of their playing fading behind you as you go past a pile of rocks.";
-					increase carried of soda by 2;
+					ItemGain soda by 2;
 					increase score by 10;
 					now Resolution of Beach Party is 1;	[Beat Bottlenose Toys and got soda]
 	if dolphinflatablefight is 2:
@@ -886,9 +884,10 @@ Object	Name
 B&R	"B&R"
 
 B&R is a situation.
-The sarea of B&R is "Mall".
+ResolveFunction of B&R is "[ResolveEvent B&R]".
+Sarea of B&R is "Mall".
 
-Instead of resolving a B&R:
+to say ResolveEvent B&R:
 	say "     While roaming around through the sewers, you hear the sound of arguing voices coming towards you. Being cautious, you duck into the shadows and watch the pair approach. They are an odd pair of big, muscled brutes carrying large weapons. The first is a warthog wearing shoulder pads and a torn, red vest, with several hand grenades within easy reach on it. His sharp, white tusks, hoop snoot-ring and bone necklace give him a menacing appearance despite the purple mohawk and sunglasses. The other is a rhino in a yellow wife-beater and cargo pants with a bandoleer of bullets across his chest, as well as a grenade of his own. While he clearly has a bit of a gut on him, his arms are even more muscled than his companion's.";
 	say "     It's hard to follow what exactly they're arguing about as they pause near your hiding place. Most of the time, it sounds like they're searching for turtles, intent on violence, but the rest of the time they're trying to remember an old cartoon they watched as kids. Eventually, they make a decision on which way to go next and continue on. Rather than interrupt the well-armed, volatile and clearly crazy duo, you quietly let them pass before moving on.";
 	now B&R is resolved;
@@ -901,11 +900,12 @@ Object	Name
 Slumbering Giant	"Slumbering Giant"
 
 Slumbering Giant is a situation.
-The sarea of Slumbering Giant is "Zoo".
+ResolveFunction of Slumbering Giant is "[ResolveEvent Slumbering Giant]".
+Sarea of Slumbering Giant is "Zoo".
 when play begins:
 	add Slumbering Giant to BadSpots of MaleList;
 
-Instead of resolving a Slumbering Giant:
+to say ResolveEvent Slumbering Giant:
 	say "     Going over a small rise, you are met with an impressive sight. Lying down in one of the smaller pasture paddocks is a giant human being. You'd guess he's about forty feet tall and he takes up a good part of the grassy area he's sleeping in. You'd not spotted him until now because his chosen napping spot is a depression behind the hill you're on. He's wearing a large tan jacket that's scaled to his size and nothing else. He groans softly and rolls over, giving you a view of his enormous cock, semi-hard in his sleep. Yawning wide, he gives his enormous balls a scratch and his cock a quick rub before his hand slides back to the ground with a heavy thud. Given the size of he and knowing how grumpy you can be if someone wakes you up from a nap, you quietly turn around and sneak off, hoping he won't wake up until you're long gone from here.";
 	now Slumbering Giant is resolved;
 
@@ -913,12 +913,13 @@ Table of GameEventIDs (continued)
 Object	Name
 My Own Zoo Playset	"My Own Zoo Playset"
 
-My Own Zoo Playset is a situation. The level of My Own Zoo Playset is 12.
-The sarea of My Own Zoo Playset is "Zoo".
+My Own Zoo Playset is a situation.
+ResolveFunction of My Own Zoo Playset is "[ResolveEvent My Own Zoo Playset]". The level of My Own Zoo Playset is 12.
+Sarea of My Own Zoo Playset is "Zoo".
 when play begins:
 	add My Own Zoo Playset to BadSpots of MaleList;
 
-Instead of resolving a My Own Zoo Playset:
+to say ResolveEvent My Own Zoo Playset:
 	say "     While moving through an area of empty pens and habitats, you turn hear some activity coming from the opposite side of a thick cluster of trees. Cautiously peering out from some bushes at the edge of the copse of trees, you are met with a startling sight. There's a giant of a man wearing a zookeeper's jacket. He's probably over forty feet tall and is sitting cross-legged on the ground with a couple a cars and zoo maintenance vehicles scattered around him. Given how the grass is all torn up with tire tracks, it looks like he's been pushing them around in a rather... peculiar manner. He mumbles and grumbles about them not being just right, or too out of place, and seems rather obsessed with them being perfectly aligned or organized in a very specific way.";
 	say "     Besides this arrangement of vehicles, he's also got an assortment of animal mutants in an enclosure. Clearly frightened, most of them are huddling in small groups or in what dark corners they can find. Scattered among them are others you'd almost mistake at first to be animal print balls, were they not huge and rolling around slightly as they squirm their arms and legs weakly. Bloated like cum-filled balloons, they've clearly been left rounded by the giant as part of some sexual entertainment. Judging by his many grunts of frustration from before, you can imagine he'd need something to let off some steam, and what's better than some easily reachable critters so ready to receive copious amounts of cum inside them?";
 	WaitLineBreak;
@@ -935,7 +936,7 @@ Instead of resolving a My Own Zoo Playset:
 		now Resolution of My Own Zoo Playset is 2;	[Hid from Human Giant]
 	else:
 		say "     As the giant starts shoving over trees as he searches through the thicket of trees, you spot the zebra running towards you. Grabbing his wrist as he moves past, you pull him in under the branches of a couple of the fallen trees while the giant's looking at the other end of the copse. Keeping your hand over his muzzle you shush his surprised cry and wait with him until the giant finally either gets distracted by something else or just plain gives up. Hearing him thump back towards his previous spot, you get the zebra to move quietly with you to the other side of the (now mostly uprooted) trees and go as quickly as he can move to get some further distance from the giant. The zebra thanks you for your help, giving you a bottle of water he'd stashed before the two of you head your separate ways.";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 		now Resolution of My Own Zoo Playset is 3;	[Saved zebra from Human Giant and given a water bottle]
 	now My Own Zoo Playset is resolved;
 
@@ -947,9 +948,10 @@ Object	Name
 Destroyed Records	"Destroyed Records"
 
 Destroyed Records is a situation.
-The sarea of Destroyed Records is "Sealed".
+ResolveFunction of Destroyed Records is "[ResolveEvent Destroyed Records]".
+Sarea of Destroyed Records is "Sealed".
 
-Instead of resolving a Destroyed Records:
+to say ResolveEvent Destroyed Records:
 	say "     Wandering through the darkened halls of the underground lab complex, your attention is drawn towards the stale smell of smoke and ashes. Following your nose, you find your way into records room that's been purposefully destroyed. There is a large char mark and a pile of ashes on the middle of the floor. It seems someone, probably when things started to go downhill, decided to burn all the records of what was really going on down here. You sift through the mess, finding the charred remains of what were probably once data CDs and DVDs among the mess. You search through it carefully, but they were quite thorough and you're unable to find anything scraps of unburnt paper with more than a few legible letters on them.";
 	increase score by 1;
 	now Destroyed Records is resolved;

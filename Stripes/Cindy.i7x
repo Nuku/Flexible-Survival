@@ -11,7 +11,7 @@ Sunny Snacks	"Sunny Snacks"
 
 Sunny Snacks is a room.
 Sunny Snacks is northeast of Public Beach.
-The description of Sunny Snacks is "[sunnysnacksdesc]".
+Description of Sunny Snacks is "[sunnysnacksdesc]".
 
 the scent of Sunny Snacks is "The scent of the beach hangs in the air, though there's the tasty smells of snacks in the air as well.".
 
@@ -26,8 +26,8 @@ object	name
 Cindy	"Cindy"
 
 Cindy is a woman. Cindy is in Sunny Snacks.
-The description of Cindy is "[cindydesc]".
-The conversation of Cindy is { "What can I get you?" }.
+Description of Cindy is "[cindydesc]".
+Conversation of Cindy is { "What can I get you?" }.
 the fuckscene of Cindy is "[nosexwithcindy]".
 the scent of the Cindy is "The scent of the beach and her various wares are what you smell.".
 
@@ -102,7 +102,7 @@ carry out ssvending:
 				say "You don't have enough credits for that.";
 			else:
 				say "     Ordering a can of soda, Cindy grabs one from under the counter[one of][or] of the requested flavor[or]. It's unrefrigerated but is still quite refreshing[or]. It's probably some generic store brand you don't recognize, but it seems fine[as decreasingly likely outcomes]. You pay her for the pop.";
-				increase carried of soda by 1;
+				ItemGain soda by 1 silently;
 				decrease freecred by 75;
 				now sextablerun is 1;
 		else if calcnumber is 2:
@@ -110,7 +110,7 @@ carry out ssvending:
 				say "You don't have enough credits for that.";
 			else:
 				say "     Requesting some chips, she pulls a single-serving bag out from under the counter[one of][or][or] of the requested flavor[or]. They're an off-brand you've never heard of[as decreasingly likely outcomes].";
-				increase carried of chips by 1;
+				ItemGain chips by 1 silently;
 				decrease freecred by 75;
 				now sextablerun is 1;
 		else if calcnumber is 3:
@@ -203,7 +203,7 @@ instead of going west from Beach Plaza when ( HP of Cindy is 4 and a random chan
 			else:
 				say "     Not quite sure if you believe her or if she's merely deluded, you cautiously turn down her offer. She seems a little disappointed, but thankfully isn't upset. 'How noble of you, helping without any want of reward. Well, I should still thank you in some manner. Here, have some drinks on the house.' She pulls out several cans of pop from the fridge and passes them to you. 'And should you later decide you'd like to take me up on my original offer, it's still open.'";
 				say "     From the sounds outside, it seems the Spartan assault is over. The two of you head back out and Circe starts tidying up the patio with your help. The beachgoers begin to return after the raid and soon life returns to its new version of normal on this beach.";
-				increase carried of soda by 3;
+				ItemGain soda by 3 silently;
 		else:
 			say "     'But that doesn't really matter right now. While I've enjoyed the company of plenty of men in my time, there's something to be said for the passion of a fine woman as well. What do you think?' she asks with a sultry smile. 'I didn't really bring you in here to talk, after all.";
 			say "     [bold type]What do you say to a little [']reward['] as thanks for coming to my aid?' she purrs sensually, moving a hand to caress your side.[roman type][line break]";
@@ -217,7 +217,7 @@ instead of going west from Beach Plaza when ( HP of Cindy is 4 and a random chan
 			else:
 				say "     Not quite sure if you believe her or if she's merely deluded, you politely turn down her offer. She seems a little disappointed, but thankfully isn't upset. 'How noble of you, helping without any want of reward. Well, I should still thank you in some manner. Here, have some drinks on the house.' She pulls out several cans of pop from the fridge and passes them to you. 'And should you later decide you'd like to take me up on my original offer, it's still open.'";
 				say "     From the sounds outside, it seems the Spartan assault is over. The two of you head back out and Circe starts tidying up the patio with your help. The beachgoers begin to return after the raid and soon life returns to its new version of normal on this beach.";
-				increase carried of soda by 3;
+				ItemGain soda by 3 silently;
 		increase score by 20;
 		now Cindy is nowhere;
 		move Circe to Sunny Snacks;
@@ -236,8 +236,8 @@ object	name
 Circe	"Circe"
 
 Circe is a woman.
-The description of Circe is "[circedesc]".
-The conversation of Circe is { "What can I get you?" }.
+Description of Circe is "[circedesc]".
+Conversation of Circe is { "What can I get you?" }.
 the fuckscene of Circe is "[sexwithcirce]".
 the scent of the Circe is "The scent of the beach and her various wares are what you smell.".
 

@@ -8,9 +8,10 @@ Object	Name
 Orc Researcher	"Orc Researcher"
 
 Orc Researcher is a situation.
-The sarea of Orc Researcher is "Warehouse".
+ResolveFunction of Orc Researcher is "[ResolveEvent Orc Researcher]".
+Sarea of Orc Researcher is "Warehouse".
 
-Instead of resolving a Orc Researcher:
+to say ResolveEvent Orc Researcher:
 	say "     As you make your way around the buildings in the Warehouse District, you stop in front of a dilapidated building that more than likely wasn't doing very well long before the nanite incident began. You notice a flickering light in one of the rooms on the second floor. Wondering if it might be a potential survivor hiding out, or at the very least a place that might have some supplies, you start heading to the front door. Sadly, the front door is a crumbling mess, almost as if someone or something smashed their way in. You step back and glance around to look for another potential entrance. However, you wonder if you should even attempt to enter this building after seeing the state of the door.";
 	LineBreak;
 	say "     [bold type]Should you still attempt to find a way in?[roman type][line break]";
@@ -37,7 +38,7 @@ Instead of resolving a Orc Researcher:
 		WaitLineBreak;
 		say "     The scientist groans at the crash and regains consciousness slowly. The orc, having grown tired of dealing with him, simply drags the man away by his foot, informing him, 'You will make a decent, if mouthy, breeder, and you will be very happy belonging to me. Just think, you will be gettin['] dicked every day. Doesn't that sound nice?' The man shouts and screams 'NO!' as he attempts to gain a purchase on the floor, but instead, just leaves the gouges in the wood that you saw earlier. With that, the video ends, and you can't figure out whether or not to feel bad for the scientist. While being a speciest and a xenophobe he still deserved a choice in what you know inevitably happened to him. Going back over to the table where you set down the case of pills, you decide to grab them and hold on to them, since the case is so small it takes up almost no space. You decide that you have had enough of being in this room, not to mention the building.";
 		say "     [if scalevalue of Player <= 3]You walk quickly back downstairs to the window that served as your entryway into the building and hop out, landing softly on the cement outside. [else]Having destroyed the window that you used to get inside, you will need an alternative route out. Looking around the room, you notice that a window and decide that it's better than nothing, making your way over. It's a tight squeeze, but you make it through the window, though unfortunately not before destroying it just like the one downstairs. Huffing, you drop to the street below, causing your feet to sting for a moment after landing, but there is no serious damage done. [end if]Looking back at the building for the last time, you continue on your way. Hearing a strange sound in the distance, you look towards a crumbling wall in the direction of the noise. Only to see a pair of glowing eyes watching you in a calculating way, before their owner runs of.";
-		increase carried of Orc Pill Case by 1;
+		ItemGain Orc Pill Case by 1;
 		increase score by 20;
 		now Resolution of Orc Researcher is 1; [found the pills]
 	else:
@@ -52,9 +53,9 @@ name	desc	weight	object
 "orc pill case"	"You have found this slender metal case in a makeshift lab in the Warehouse District. Based on the research found with it, the pills inside were made by distilling the essence of orc cum into an untainted form. With the help of them, a male could impregnate another male without having to worry about being infected with the orc nanite strain."	0	orc pill case
 
 orc pill case is a grab object.
-It is part of the player.
+
 It is not temporary.
-the usedesc of orc pill case is "[OrcPillCaseUse]".
+Usedesc of orc pill case is "[OrcPillCaseUse]".
 
 instead of sniffing orc pill case:
 	say "     The case itself doesn't have any real smell, but the pills inside have a very strong musky scent.";

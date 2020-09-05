@@ -8,17 +8,16 @@ Object	Name
 Orc Tag Team	"Orc Tag Team"
 
 Orc Tag Team is a situation.
-The sarea of Orc Tag Team is "Warehouse".
+ResolveFunction of Orc Tag Team is "[ResolveEvent Orc Tag Team]".
+Sarea of Orc Tag Team is "Warehouse".
 when play begins:
 	add Orc Tag Team to BadSpots of MaleList;       [male orcs]
 	add Orc Tag Team to badspots of TransList;       [male orcs]
 
-Instead of resolving a Orc Tag Team:
+to say ResolveEvent Orc Tag Team:
 	say "     Always looking for new locations you can scavenge in, your path brings to you to a three floor apartment building with a blocked entrance. Looks like something big fought in the street where it stands, smashing part of the upper floor and sending it tumbling down to block the front door. Of course, this might mean that there could still be something interesting inside, so you look for a different way in. Circling around the block and checking out the alley on the side of the building, you spot its fire escape and the dumpster someone has rolled underneath it to put the ladder into reachable distance. Hmm... seems like someone else had the same idea as you did. With a shrug, you climb on the dumpster, then the fire escape, hoping that something might have been missed. Ascending to the top of the iron staircase, you enter through a window already pried open from the outside.";
 	say "     The interior of the building is a mess - partly caved in from something (a wyvern maybe?) crashing into the side of its roof, with follow-up rain damage. And that's not all, as there are traces of ransacking, as well as one of the tell-tale piles of ripped clothing that point towards a not quite voluntary coupling between the intruder whose steps you are following and most likely a human survivor that was hiding out in here. The crusty patches of dried cum making the floor in that room sticky tell you that eventually, the two of them had a mutual sex romp that lasted for quite a while. This is a boon for you, as the looter seems to have been content with finding a new mate, leaving some of the further rooms untouched. A little more digging around reveals a small stash of food that you eagerly add to your pack.";
-	LineBreak;
-	say "[bold type]You gain 3 food![roman type][line break]";
-	increase carried of food by 3;
+	ItemGain food by 3;
 	WaitLineBreak;
 	say "     Checking out the remaining rooms, you sadly do not find anything else interesting, so you eventually step back out onto the fire escape. Yet before you can start to go down the metal stairs, you spot something green, down in the alley. It is an orc, casually sauntering towards the street corner, more like he's waiting for something than to get anywhere. Thankfully, he isn't looking up, so you are safe in watching him quietly - and a minute or so later, an anthro black panther in ragged jeans runs around the corner and into the alley, right into the waiting orc's grasp. Snatching the muscular feline off his feet and holding his struggling shape in the air, the orc has little trouble in subduing his captive, despite the feline's shouting and struggling. Then another orc comes into view, somewhat out of breath from chasing the panther. 'Nice work Thogk,' orc number one tells the newcomer, greeting his compatriot with a fist-bump.";
 	say "     'Next time, it's your turn to chase, Kurl. Our new breeder you're holding there sure can run,' Thogk replies, still somewhat out of breath, then steps up and gives the anthro's ass a slap. 'Time you learned that you're here to serve your betters. We'll see how much resistance you'll show once you've had a few loads pumped into that sweet ass of yours!' And with that, he hooks his hand over the back of their captive's jeans and tears them off the panther, throwing the shreds on the ground. He laughs in anticipation and gropes the feline, until Kurl suddenly tells him, 'Err... I think our new breeder is defective. Where's his dick, man?' Thogk grunts in surprise and steps around the panther to look at his front, then sticks his hand between the naked guy's legs and feels around. 'Hmpf. Nope, it's not a slit with a reptile dick inside. He's got a pussy!'";

@@ -39,12 +39,14 @@ plnatarmor is a number that varies.	[ Used to hold the player's natural armor va
 plweaknatarmor is a number that varies.	[ Used to hold the player's weakened natural armor value. ]
 pethitbonus is a number that varies.	[ Used to total the player's pet's special hit bonuses. ]
 petchance is a number that varies.		[ Used to hold the player pet's/kids' chance to attack. ]
-monhitbonus is a number that varies.	[ Used to total the enemy's special hit bonuses. ]
+monhitbonus is a number that varies. [@Tag:NotSaved] [ Used to total the enemy's special hit bonuses. ]
 mondodgebonus is a number that varies.	[ Used to total the enemy's special dodge bonuses. ]
 monmindbonus is a number that varies.	[ Used to total the enemy's special mental/will bonuses. ]
 playerpoison is a number that varies.	[ Used to track how poisoned the player may be. ]
 monsterpoison is a number that varies.	[ Used to track how poisoned the monster may be (not currently in use). ]
 lastfightround is a number that varies.	[ Used to track the last round during which a fight occurred. ]
+CombatTrophyList is a list of text that varies.[@Tag:NotSaved]
+LootBonus is a number that varies.[@Tag:NotSaved]
 
 [ fightoutcome                         ]
 [ 100*  - starting value               ]
@@ -114,8 +116,6 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		increase pldodgebonus by dodgebonus of x;
 		increase pldamagebonus by damagebonus of x;
 		increase plfleebonus by fleebonus of x;
-	if weapon object of Player is unwieldy:
-		decrease plhitbonus by the absolute value of ( scalevalue of Player - objsize of weapon object of Player) to the nearest whole number;
 	if weapon object of Player is bo staff or weapon object of Player is wukongStaff:
 		if "Martial Artist" is listed in feats of Player, increase plhitbonus by 1;
 		if "Black Belt" is listed in feats of Player, increase plhitbonus by 1;
@@ -368,9 +368,19 @@ Chapter 2 - Player Attack
 This is the player attack rule:
 	choose row MonsterID from the Table of Random Critters;
 	let currentmonHP be monsterHP;
+	if Debug is at level 10:
+		say "DEBUG: Dex [Dexterity of Player][line break]";
+		say "DEBUG: Lvl [Level of Player][line break]";
+		say "DEBUG: Plhitbonus [plhitbonus][line break]";
 	let the attack bonus be dexterity of Player + ( level of Player * 2 ) + plhitbonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Attack Bonus (Player) [attack bonus][line break]";
 	let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Defense Bonus (Enemy) [defense bonus][line break]";
 	let the combat bonus be attack bonus - defense bonus;
+	if Debug is at level 10:
+		say "DEBUG: Combat Bonus (Player) [Combat bonus][line break]";
 	if ktcockmatch is true:		[That's what you get for thinking with your crotch.]
 		increase Libido of Player by a random number from 0 to 2;
 	if hardmode is true:
@@ -383,12 +393,27 @@ This is the player attack rule:
 			now combat bonus is 19;
 		else if the combat bonus < -22:
 			now combat bonus is -22;
+	[weapon penalty after the capping]
+	if Debug is at level 10:
+		say "DEBUG: Combat Bonus after Capping: [combat bonus][line break]";
+	if weapon object of Player is not Journal:
+		let PenaltyDifference be the absolute value of ( scalevalue of Player - objsize of weapon object of Player) to the nearest whole number;
+		if Debug is at level 10:
+			say "DEBUG: Is Weapon unwieldly? Penalty Difference is - [PenaltyDifference][line break]";
+		if PenaltyDifference is 2:
+			if Debug is at level 10:
+				say "DEBUG: 5 point hit penalty because of ridiculously large weapon.[line break]";
+			decrease combat bonus by 5;
+		else if PenaltyDifference is 1:
+			if Debug is at level 10:
+				say "DEBUG: 2 point hit penalty because of over/undersized weapon.[line break]";
+			decrease combat bonus by 2;
 	let the roll be a random number from 1 to 50;
 	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the combat bonus > 20:
 		let wmstrike be 0;
 		let z be 0;
-		let dam be ( weapon damage of the player times ( a random number from 80 to ( 120 + level of Player ) ) ) divided by 100;
+		let dam be ( weapon damage of Player times ( a random number from 80 to ( 120 + level of Player ) ) ) divided by 100;
 		if weapon object of Player is journal:		[unarmed combat]
 			if "Martial Artist" is listed in feats of Player:
 				increase dam by 1;
@@ -424,12 +449,12 @@ This is the player attack rule:
 			let numnum be ( ( level of Player * 5 ) / 2 ) + 100;
 			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
 		if weapon type of Player is "Melee":
-			increase dam by (( the strength of the player minus 10 ) divided by 2);
+			increase dam by (( Strength of Player minus 10 ) divided by 2);
 			increase dam by pldamagebonus;
 		else if weapon type of Player is "Ranged":
-			increase dam by (( the Perception of the player minus 10 ) divided by 2);
+			increase dam by (( Perception of Player minus 10 ) divided by 2);
 			increase dam by pldamagebonus;
-		if a random chance of the morale of the player in 200 succeeds:
+		if a random chance of Morale of Player in 200 succeeds:
 			say "Filled with sudden motivation, your attack scores particularly well! ";
 			increase dam by dam;
 		if wmstrike is 1:			[Weaponsmaster used]
@@ -658,11 +683,11 @@ Chapter 4 - Submit
 
 This is the submit rule:
 	choose row MonsterID from the Table of Random Critters;
-	let temp be the HP of the player;
+	let temp be HP of Player;
 	now fightoutcome is 22;
 	Lose;
-	if Player is submissive, increase the XP of the player by ( ( 2 + lev entry ) / 5 );
-	if Player is kinky, increase the morale of the player by 6;
+	if Player is submissive, increase XP of Player by ( ( 2 + lev entry ) / 5 );
+	if Player is kinky, increase Morale of Player by 6;
 
 
 Chapter 5 - Flee
@@ -789,7 +814,7 @@ to standardretaliate:
 	else:
 		say "[EnemyCapNameOrTitle] misses!";
 	now peppereyes is 0;
-	if HP of the player > 0 and Libido of Player < 110:
+	if HP of Player > 0 and Libido of Player < 110:
 		[wait for any key;]
 		AttemptToWaitBeforeClear;
 	else:
@@ -839,7 +864,7 @@ to retaliate:
 			say "[EnemyCapNameOrTitle] misses!";
 	now peppereyes is 0; [pepperspray wears off]
 	if bananapeeled > 0, decrease bananapeeled by 1;
-	if HP of the player > 0 and Libido of Player < 110:
+	if HP of Player > 0 and Libido of Player < 110:
 		[wait for any key;]
 		AttemptToWaitBeforeClear;
 	else:
@@ -859,7 +884,7 @@ to standardstrike:
 		now monsterhit is false;
 	else:
 		choose row MonsterID from the Table of Random Critters;
-		let the defense bonus be dexterity of the player + ( level of the player * 2 ) + pldodgebonus + bananapeeled - 10;
+		let the defense bonus be Dexterity of Player + ( Level of Player * 2 ) + pldodgebonus + bananapeeled - 10;
 		let the attack bonus be dex entry + ( lev entry * 2 ) + monhitbonus - 10;
 		let the combat bonus be attack bonus minus defense bonus;
 		if "Flash" is listed in feats of Player and a random chance of 3 in 20 succeeds:
@@ -928,7 +953,7 @@ to standardhit:
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
@@ -1155,6 +1180,7 @@ to win:
 	let ok be 1;
 	let voreprompted be false;
 	let ubprompted be false;
+	[Unbirthing and Vore]
 	if Player can vore and inasituation is false and scalevalue of Player >= scale entry and fightoutcome is 10 and vorechoice is not 2:
 		let vorechance be 25 + ( hunger of Player * 2 );
 		if "Automatic Survival" is listed in feats of Player, now vorechance is 75;
@@ -1256,6 +1282,7 @@ to win:
 			now ok is 0;
 			ubbyplayer; [See Alt Vore file]
 			now fightoutcome is 14; [player ub'ed foe]
+	[Vampirism]
 	if ok is 1 and vampiric is true:
 		if nohealmode is true:
 			increase HP of Player by ( 2 * lev entry ) / 3;
@@ -1264,6 +1291,9 @@ to win:
 		PlayerDrink 3;
 		PlayerEat 1;
 		if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+	[Trophies and Looting]
+	TrophyLootFunction;
+	[Postcombat Scene]
 	if ok is 1 and "Control Freak" is listed in feats of Player:
 		say "Do you want to perform after combat scene?";
 		if Player consents:
@@ -1271,7 +1301,8 @@ to win:
 		else:
 			now ok is 0;
 	if ok is 1, say "[defeated entry]";
-	increase the XP of the player by lev entry times two;
+	[XP Earnings]
+	increase XP of Player by lev entry times two;
 	if ssxpa is true:
 		increase XP of Player by ( lev entry * 2 ) / 3;
 	if the player is dominant:
@@ -1282,61 +1313,17 @@ to win:
 			increase morale of Player by 1; [flat morale boost]
 		else:
 			increase XP of Player by ( lev entry + 2 ) / 5; [10% XP boost]
-	if ktspeciesbonus > 0, increase the XP of the player by (lev entry divided by 2);
+	if ktspeciesbonus > 0, increase XP of Player by (lev entry divided by 2);
 	if the player is not lonely:
 		now lastfight of companion of Player is turns;
-		increase the XP of the companion of the player by lev entry times two;
+		increase the XP of the Companion of Player by lev entry times two;
 		if "Ringmaster" is not listed in feats of Player:
-			decrease the XP of the player by ( lev entry times 2 ) divided by 3;
-	increase the morale of the player by 1;
-	let randomdropchance be lootchance entry;
-	let z be 0;
-	if randomdropchance is 0:
-		now randomdropchance is 0; [no drop = do nothing]
-	else if randomdropchance is 100:
-		now randomdropchance is 100; [always drops = no need to run all the maths]
-		say "[bold type]You gain 1 [loot entry]![roman type][line break]";
-		add loot entry to the invent of the player;
-	else:
-		if "Magpie Eyes" is listed in feats of Player and randomdropchance > 50:
-			now z is ( 100 - randomdropchance ) divided by 3; [scaled increase above 50, prevents numbers over 100]
-			increase randomdropchance by z;
-		else if "Magpie Eyes" is listed in feats of Player and randomdropchance > 0:
-			now z is randomdropchance divided by 3;
-			increase randomdropchance by z;
-		if "Mugger" is listed in feats of Player and muggerison is true:		[flat perception based increase]
-			if perception of Player < 30:
-				increase randomdropchance by ( perception of Player / 2 );
-				if randomdropchance > 100, now randomdropchance is 100;
-			else:
-				increase randomdropchance by 15;
-			if randomdropchance > 100, now randomdropchance is 100;
-		let yy be ( ( ( perception of Player - 10 ) / 2 ) * 3 ); [minor perception bonus to looting, maxed at 30 PER]
-		if yy > 30, now yy is 30;
-		if randomdropchance > 50, now yy is ( yy * ( 100 - randomdropchance ) ) divided by 100;
-		if randomdropchance <= 50, now yy is ( yy * randomdropchance ) divided by 100;
-		now randomdropchance is randomdropchance + yy;
-		if a random chance of randomdropchance in 100 succeeds:
-			say "[bold type]You gain 1 [loot entry]![roman type][line break]";
-			add loot entry to the invent of the player;
-[	let z be 0;
-	if "Magpie Eyes" is listed in feats of Player and lootchance entry > 50:
-		now z is ( 100 - lootchance entry ) divided by 3; [scaled increase above 50, prevents numbers over 100]
-		increase lootchance entry by z;
-	else if "Magpie Eyes" is listed in feats of Player and lootchance entry > 0:
-		now z is lootchance entry divided by 3;
-		increase lootchance entry by z;
-	let yy be ( ( ( perception of Player - 10 ) / 2 ) * 3 ); [minor perception bonus to looting, maxed at 30 PER]
-	if yy > 30, now yy is 30;
-	if lootchance entry > 50, now yy is ( yy * ( 100 - lootchance entry ) ) divided by 100;
-	if lootchance entry <= 50, now yy is ( yy * lootchance entry ) divided by 100;
-	if a random chance of ( lootchance entry + yy ) in 100 succeeds:
-		say "[bold type]You gain 1 [loot entry]![roman type][line break]";
-		add loot entry to the invent of the player;
-	if "Magpie Eyes" is listed in feats of Player and lootchance entry > 0:
-		decrease lootchance entry by z; ]
+			decrease XP of Player by ( lev entry times 2 ) divided by 3;
+	increase Morale of Player by 1;
+	[Collecting Vials]
 	if fightoutcome is not 13 and fightoutcome is not 14 and fightoutcome is not 18 and fightoutcome is not 19:
 		vialchance (Name entry);
+	[Freecred Earnings]
 	let reward be lev entry * 2;
 	if lev entry > 2, increase reward by 1;
 	if lev entry > 4, increase reward by ( lev entry / 4 );
@@ -1389,13 +1376,89 @@ To lose:
 		now lastfight of companion of Player is turns;
 	if HP of Player < 1, now HP of Player is 1;
 	now combat abort is 1;
-	increase the XP of the player by lev entry divided by two;
-	if ktspeciesbonus > 0, increase the XP of the player by 1;
+	increase XP of Player by lev entry divided by two;
+	if ktspeciesbonus > 0, increase XP of Player by 1;
 	decrease the score by 1;
-	decrease the morale of the player by 3;
+	decrease Morale of Player by 3;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
 	follow the ngraphics_blank rule;
 
+
+to RefreshLootBonus:
+	now LootBonus is 0; [reset]
+	if "Magpie Eyes" is listed in feats of Player:
+		increase LootBonus by 10; [extra 10% chance for stuff]
+	if "Mugger" is listed in feats of Player and muggerison is true: [2nd check is for turning the feat on/off]
+		increase LootBonus by 15; [extra 15% chance for stuff]
+	let PerceptionLootBonus be ( ( perception of Player - 10 ) / 2 ); [minor perception bonus to looting, maxed at +10%]
+	if PerceptionLootBonus > 10, now PerceptionLootBonus is 10;
+	increase LootBonus by PerceptionLootBonus;
+
+to TrophyLootFunction: [generates either a trophy prompt or loot for the player]
+	if Debug is at level 10:
+		say "Debug: Trophy/Loot Function activated.";
+	choose row MonsterID from Table of Random Critters;
+	RefreshLootBonus; [updates loot bonus with player feats and perception - maximum of a +35% increase]
+	if TrophyFunction entry is not "-":
+		if Debug is at level 10:
+			say "Debug: Trophy Fork activated.";
+		truncate CombatTrophyList to 0 entries; [cleaning out the list]
+		say "[TrophyFunction entry]"; [makes the local function in the enemy fill the list]
+		if CombatTrophyList is non-empty: [at least one possible trophy generated]
+			say "     [bold type]This fight is just about over, giving you the time to snatch one item as a trophy from your opponent: [roman type][line break]";
+			now sextablerun is 0;
+			blank out the whole of table of fucking options;
+			[]
+			repeat with X running from 1 to the number of entries in CombatTrophyList:
+				choose a blank row in table of fucking options;
+				now title entry is "[entry X of CombatTrophyList]";
+				now description entry is "Snatch the [entry X of CombatTrophyList]";
+			[]
+			sort the table of fucking options in sortorder order;
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Nevermind[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					[ confirm disabled for now - doesn't really add anything of value ]
+					[
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						let nam be title entry;
+					]
+					now sextablerun is 1;
+					ItemGain title entry by 1;
+					SpecialTrophyCheck title entry;
+					wait for any key;
+				else if calcnumber is 0:
+					now sextablerun is 1;
+					say "     You decide not to take anything.";
+					wait for any key;
+				else:
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			clear the screen and hyperlink list;
+	else: [Defaulting back to the old Loot System]
+		if Debug is at level 10:
+			say "Debug: Loot Fork activated.";
+		let randomdropchance be lootchance entry;
+		let z be 0;
+		if randomdropchance is 100: [always drops = no need to run all the maths]
+			ItemGain loot entry by 1;
+		else if randomdropchance > 0:
+			if a random chance of (randomdropchance + LootBonus) in 100 succeeds:
+				ItemGain loot entry by 1;
+
+to SpecialTrophyCheck (TrophyName - text):
+	if TrophyName is:
+	-- "police whistle":
+		add "Whistle_Taken" to Traits of Alexandra;
+	-- "confiscated pills":
+		add "Pills_Taken" to Traits of Alexandra;
 
 Section 5 - Critter Combat
 
@@ -1595,7 +1658,7 @@ this is the humping rule:
 		increase Libido of Player by a random number from 2 to 6;
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 1;
 		if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 1;
-		decrease HP of the player by dam;
+		decrease HP of Player by dam;
 		follow the player injury rule;
 		say "You are [descr].";
 	else:
@@ -1617,7 +1680,7 @@ this is the ftaurpounce rule:		[double-damage pouncing]
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
@@ -1713,12 +1776,12 @@ this is the firebreath rule:
 				now absorb is dam;
 			if absorb > 0:
 				say "You prevent [special-style-1][absorb][roman type] damage!";
-			decrease HP of the player by dam;
+			decrease HP of Player by dam;
 			increase HP of Player by absorb;
 			follow the player injury rule;
 			say "You are [descr].";
 		now peppereyes is 0; [pepperspray wears off]
-		if HP of the player > 0 and Libido of Player < 110:
+		if HP of Player > 0 and Libido of Player < 110:
 			wait for any key;
 		else:
 			if HP of Player <= 0, now fightoutcome is 20;

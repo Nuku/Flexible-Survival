@@ -199,7 +199,7 @@ to say demon brute loses:
 		if a random chance of 1 in 3 succeeds and inasituation is false:
 			LineBreak;
 			say "After the creature is gone, you notice something on the ground. Looks like... a tooth. Pretty long fang, rather. You must have knocked one of the demon's teeth out during your fight. Might be useful for something, so you pick it up.";
-			increase carried of demon tooth by 1;
+			ItemGain demon tooth by 1;
 	else if DBCaptureQuestVar is 4:
 		say "     With a rather loud thud, the demon brute collapses to the ground, defeated. It proceeds to turn into a fine purple mist - but instead of dispersing in the air as before, it swirls around as one tight mass. The cloud of mist wavers as if it's fighting against some pull, then is drawn towards the pentagram in an elongated stream. Whirling around in an ever-tightening spiral, the purple mist finally is absorbed by the now blackened demon tooth in the brazier. As the last bit of it vanishes, the fire and surrounding candles are blown out by a sudden wind, silence falling over the room only disturbed by quiet ticking sounds of the slowly cooling brazier.";
 		now DBCaptureQuestVar is 5;
@@ -461,7 +461,7 @@ name	desc	weight	object
 "demon tooth"	"A pretty long, curved fang with a sharp tip. You knocked it out of a demon brute's mouth. Maybe you could find someone who has knowledge of the supernatural and show it to them - there might be something interesting to be done with it."	1	demon tooth
 
 demon tooth is a grab object. demon tooth is not temporary.
-the usedesc of demon tooth is "And just what do you want to do with it? Maybe find someone who understands the supernatural and give it to them...";
+Usedesc of demon tooth is "And just what do you want to do with it? Maybe find someone who understands the supernatural and give it to them...";
 
 instead of trading the demon tooth when the current action involves the Nermine:
 	if DBCaptureQuestVar is 2:
@@ -480,14 +480,14 @@ instead of trading the demon tooth when the current action involves the Nermine:
 				say "     The jackalwoman nods, then gets out the small box with stuff again and hands it to you. 'This is everything needed. Please do take care to follow the instructions closely. This the last supply of these ingredients Nermine has - they are hard to procure, so there will be only one try for the dear customer to succeed.' With that, Nermine starts to shoo you out of her store. 'Go now, far - Nermine does not want her bones eaten if the attempt fails. When done successfully, do come back and bring the tooth.'";
 				WaitLineBreak;
 				say "     Carrying your box of summoning supplies out of the mall, you make your way along the streets for several blocks until you find a suitable abandoned building. Unrolling the scroll Nermine gave you, you find it's a step-by step instruction manual for demon summoning. After (1) setting up a pentagram painted in demon seed and double-checking that it's closed everywhere, you (2) set up black candles on the points and light them. After that, it's time to (3) put the brazier in the middle and burn the herbs in it. With their spicy odors filling the room, you read further down the list. Hmmm.... (4) is smearing your own blood on the tooth and throwing it into the brazier.";
-				decrease carried of demon seed by 3;
+				ItemLoss demon seed by 3;
 				say "     [bold type]Something about using your blood in a demon summoning ritual just makes you nervous. Do you want to do this anyways?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
 				if Player consents:
 					say "     Having come this far, you poke your thumb with the tooth and spread some blood over it, then lug it into the burning brazier and step back. The fire in the brazier and the candles flare up brightly and a demon brute materializes in the pentagram with an annoyed growl.";
-					decrease carried of demon tooth by 1;
+					ItemLoss demon tooth by 1;
 					now DBCaptureQuestVar is 4;
 					now inasituation is true;
 					challenge "Demon Brute";
@@ -514,7 +514,7 @@ instead of trading the demon tooth when the current action involves the Nermine:
 						now demon brute is tamed;
 						add "Tamed" to Traits of demon brute;
 						LineBreak;
-						say "     (That demon brute is now controlled! You can make him your active companion by typing [bold type][link]pet demon brute[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck demon brute[end link][roman type]. You can see all the pets and followers you have with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to leave a companion home for a while and go out alone? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+						say "     (Brutus the demon brute is now a possible ally! You can make him your active ally by typing [bold type][link]ally Brutus[end link][roman type] or [bold type][link]ally demon brute[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Brutus[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				else:
 					say "     Getting cold feet at almost he last second, you blow out the candles and douse the brazier. Well, there goes your one and only try for this ritual. With the herbs already up in smoke, you won't have any for a second try. But then, maybe that's for the best...";
 					now DBCaptureQuestVar is 99;  [failed]
@@ -546,7 +546,7 @@ to say ChurchDemonCleanse:
 			say "     Hey, looks like it worked. Asking the demon what he'd like to do to you if he were free, you get a puzzled expression and a shrug as an answer. Definitively a step forward from threats of dismemberment. With this hopefully leading to a bit nicer a relationship, having a name to talk to him seems appropriate too, so you ask him about it. As it turns out, your captive demon has the unpronounceable name Ba'haz-eu'nizaal't'chha. You decide to just call him [bold type]'Brutus'[roman type], a name he accepts without complaint.";
 			say "     For now, you banish the demon brute back into your amulet with a magical command. Turning towards the door, you see Aaron standing there, smiling as he gives you a thumbs up. Thanking the fox, you follow him as he leads you back out to the main room of the chapel.";
 			now DBCaptureQuestVar is 6;
-			decrease carried of water bottle by 8;
+			ItemLoss water bottle by 8;
 			now the icon of demon brute is Figure of BrutusGood_icon;
 		else:
 			say "     You thank the priestess for her aid, but tell her that you can't afford trading in so much water right now.";
@@ -596,16 +596,18 @@ SexuallyExperienced of Brutus is true.
 TwistedCapacity of Brutus is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Brutus is false. [steriles can't knock people up]
 MainInfection of Brutus is "Demon Brute".
-The description of Brutus is "[DemonBrutePetDesc]".
-The conversation of Brutus is { "..." }.
+Description of Brutus is "[DemonBrutePetDesc]".
+Conversation of Brutus is { "..." }.
 
 
 Table of GameCharacterIDs (continued)
 object	name
 demon brute	"demon brute"
 
-demon brute is a pet. demon brute is a part of the player.
+demon brute is a pet. demon brute is a part of Player.
+NPCObject of demon brute is Brutus.
 understand "Brutus" as demon brute.
+printed name of demon brute is "Brutus".
 ScaleValue of demon brute is 4. [larger than human]
 Cock Count of demon brute is 1.
 Cock Length of demon brute is 18.
@@ -629,11 +631,11 @@ PenileVirgin of demon brute is false.
 SexuallyExperienced of demon brute is true.
 MainInfection of demon brute is "Demon Brute".
 
-The description of demon brute is "[DemonBrutePetDesc]".
+Description of demon brute is "[DemonBrutePetDesc]".
 The icon of demon brute is Figure of DemonBrute_icon.
-The weapon damage of demon brute is 8.
-The level of demon brute is 5.
-The Dexterity of demon brute is 9.
+Weapon Damage of demon brute is 20.
+The level of demon brute is 1.
+Dexterity of demon brute is 10.
 The summondesc of demon brute is "     Holding your demontooth amulet tightly in your fist, you murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]demon companion[else]captive demon brute[end if]. You tell him 'I want you to help me when I get into fights, OK?' In a [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]deep[else]growling[end if] voice, the demon answers 'Yes... master.'".
 The assault of demon brute is "[one of]The demon brute charges into combat, swinging wildly at your enemy in uncontrolled bloodlust![or]A loud roar of your demon brute frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your demon brute slashes your enemy with his claws![at random]".
 the fuckscene of demon brute is "[sexwithdemonbrutepet]".
@@ -657,8 +659,13 @@ to say DemonBrutePetDesc:
 			say "     Your captured demon brute is certainly impressive in stature, standing tall on his digitigrade legs and showing a broad chest and muscle-packed arms. The humanoid beast has dark purple skin, a frightening face with slits for nostrils, yellow eyes with red slitted pupils, and sharp, intimidating teeth. Three matched pairs of horns crown his head, curved and getting smaller front to back. Between his legs, you see a female's pussy, looking quite inviting. He also has a long, spade-tipped tail protruding from his body somewhere behind, which is constantly flicking back and forth. He wears nothing but a grim expression.";
 		else:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
+	if companion of Player is demon brute:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing demon brute:
+	say "Smells like fire, ash and brimstone.";
+
+instead of sniffing Brutus:
 	say "Smells like fire, ash and brimstone.";
 
 instead of conversing demon brute:
@@ -668,11 +675,20 @@ instead of conversing demon brute:
 		say "[demon brute summoning]";
 		say "[demon brute talk]";
 
+instead of conversing Brutus:
+	say "[demon brute talk]";
+
 to say sexwithdemonbrutepet:
 	if DBCaptureQuestVar is 6:
 		say "     Having gone through the trouble of freeing this demon from his inner torment, maybe you should talk to him first before ordering him to have sex with you. With a clear mind, he'll be able to talk instead of just growling and threatening like he did before.";
 	else:
 		say "[demon brute summoning]";
+		say "[DemonBruteSexMenu]";
+
+instead of fucking Brutus:
+	if DBCaptureQuestVar is 6:
+		say "     Having gone through the trouble of freeing this demon from his inner torment, maybe you should talk to him first before ordering him to have sex with you. With a clear mind, he'll be able to talk instead of just growling and threatening like he did before.";
+	else:
 		say "[DemonBruteSexMenu]";
 
 to say demon brute summoning:
@@ -850,7 +866,7 @@ to say DBTalk2:
 			else:
 				say "Invalid choice. Type [link]1[end link] to talk him into opening up, [link]2[end link] to order him to talk or [link]3[end link] to let the matter rest.";
 		if calcnumber is 1: [talk]
-			let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+			let bonus be (( Charisma of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			increase diceroll by bonus;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
@@ -1518,7 +1534,8 @@ Object	Name
 Demonic Redemption	"Demonic Redemption"
 
 Demonic Redemption is a situation.
-The sarea of Demonic Redemption is "nowhere".
+ResolveFunction of Demonic Redemption is "".
+Sarea of Demonic Redemption is "nowhere".
 
 [Resolution Stages and Notes]
 [1: Triggered the Evil Demon Brute path on the way to the church.]
@@ -1702,8 +1719,8 @@ to say CarlTalk_DB:
 Section 4 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -1755,6 +1772,9 @@ When Play begins:
 	now libido entry is 45;
 	now loot entry is "demon seed";     [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50;         [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]muscular[or]powerful[at random]";
 	now type entry is "demonic";        [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -1769,7 +1789,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -1875,9 +1895,9 @@ name	desc	weight	object
 
 demon seed is a grab object.
 
-demon seed is infectious. The strain of demon seed is "Demon Brute". demon seed is cum.
+demon seed is infectious. Strain of demon seed is "Demon Brute". demon seed is cum.
 
-the usedesc of demon seed is "The warm, sticky liquid tastes sweet as you drink it.";
+Usedesc of demon seed is "The warm, sticky liquid tastes sweet as you drink it.";
 
 instead of sniffing demon seed:
 	say "The demonic semen smells cloyingly sweet.";
@@ -1909,7 +1929,7 @@ this is the bruteforce rule:
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";

@@ -9,8 +9,9 @@ Table of GameEventIDs (continued)
 Object	Name
 Central Library	"Central Library"
 
-Central Library is a situation. The level of Central Library is 6.
-The sarea of Central Library is "High".
+Central Library is a situation.
+ResolveFunction of Central Library is "[ResolveEvent Central Library]". The level of Central Library is 6.
+Sarea of Central Library is "High".
 centrallib is a number that varies.
 libfight is a number that varies.
 harpyfight is a number that varies.
@@ -27,7 +28,7 @@ when play begins:
 	add Central Library to BadSpots of FemaleList;
 	add Central Library to BadSpots of FurryList;
 
-Instead of resolving a Central Library:
+to say ResolveEvent Central Library:
 	if centrallib is 0:
 		now centrallib is 1;
 		say "     You find your way to the city's Central Library, once an impressive stone building that has been suffering due to neglect by the city. And the recent crisis has not helped at all. You can see signs of a fire on one side, blackened with soot. As you get closer, about to cross the street to approach the entrance, you spot a burly security guard on the steps between the stone lions. A large, muscled fellow covered in dark fur and battered jacket. It is one of those crazed wolverines you've seen in the area guarding with manic obsession and great violence.";
@@ -202,10 +203,8 @@ to say libguard2:						[Bribe]
 		say "     Recalling what James said about his poor diet because he can't leave, you offer to help him out with that. 'That would be right neighborly of you,' he replies. 'I could certainly use a meal or two and a couple of drinks.' Do you want to try giving him two meals worth of food and two bottles of water?";
 		if Player consents:
 			now jamesfed is 1;
-			delete food;
-			delete food;
-			delete water bottle;
-			delete water bottle;
+			ItemLoss food by 2;
+			ItemLoss water bottle by 2;
 			say "     James smiles and takes the food from you, offering you a seat beside him on the steps. He goes through almost all of it in rather short order, but does manage to save a little for later. After having eaten, he stretches to get back up. 'You should probably head off now. I got to get back to work.'";
 			say "     Not wanting to lose your opportunity, you reengage him in conversation, asking about how hard it has been to watch the place and how he must find it tough. 'I've done alright. This new body's very good for that. Nothing's been too tough for me to beat. And if things get really bad...' he says, brushing aside his jacket to show a hidden holster. 'I don't want to have to use it though. Even on those creatures. It'd be nice to have another weapon I could use. My fists are good and I'm much stronger now, but something to smack them with would help.'";
 			say "[libweaponoffer]";
@@ -251,17 +250,17 @@ to say libweaponoffer:
 				say ". He seems a little reluctant, but agrees. 'Well, I guess that'd be okay. You've been a good pal and this is a fine gift,' he says, hefting his new, blunt instrument around with a rather wild look in his eyes. 'This'll really help me guard my post. And it is a public library, so go quick and watch out for the librarians. I think they spent a little too long in the mythology section or something. They're not quite right anymore,' he adds cryptically as he pushes you in and closes the door behind you.";
 				now jamesfed is 2;
 				if weaponpick is 1:
-					decrease carried of nightstick by 1;
+					ItemLoss nightstick by 1;
 				else if weaponpick is 2:
-					decrease carried of crowbar by 1;
+					ItemLoss crowbar by 1;
 				else if weaponpick is 3:
-					decrease carried of tire iron by 1;
+					ItemLoss tire iron by 1;
 				else if weaponpick is 4:
-					decrease carried of flotsam club by 1;
+					ItemLoss flotsam club by 1;
 				else if weaponpick is 5:
-					decrease carried of medium sledge by 1;
+					ItemLoss medium sledge by 1;
 				else if weaponpick is 6:
-					decrease carried of mallet by 1;
+					ItemLoss mallet by 1;
 				WaitLineBreak;
 				now Resolution of Central Library is 4; [Gave weapon]
 				say "[libraryexplore]";
@@ -474,7 +473,7 @@ to say libbook3:
 to say libbook4:
 	say "     You come across a book on animals and their mating habits, colorfully titled [']Wild Animals[']. The book has many details and covers a wide gamut of creatures and even has numerous photos of their genitalia or of them in coitus. With a quick perusal, you are able to pick up a better understanding of some of the creatures out there, slightly improving your ability to deal with them. You decide to take the book with you, only partially for the information. While the information in the book may be a little dry and analytical, you also find it strangely arousing. You hang onto it for some [']personal['] reading later.";
 	add 4 to bookcollection;
-	increase carried of Wild Animals by 1;
+	ItemGain Wild Animals by 1;
 	XPGain 25;
 
 
@@ -489,7 +488,7 @@ to say libbook6:
 	say "     You find a book on first aid which might be of use to you. The small pocket-sized book seems to cover most common injuries and how to treat them. While certainly no match for proper training, it should still help you deal with any unfortunate injuries and help you heal faster through proper care and treatment. You put it in your pack and remind yourself to consult it should you get hurt out in the city or when trying to use a medkit.";
 	add 6 to bookcollection;
 	say "     While the manual is in your possession, you will regain health at the rate of 1 faster each turn and recover 2 more HP when using a healing item (unless superseded by the Expert Medic feat).";
-	increase carried of First Aid Manual by 1;
+	ItemGain First Aid Manual by 1;
 
 
 to say libbook7:
@@ -555,7 +554,7 @@ name	desc	weight	object
 "Wild Animals"	"A book on the mating habits of animals that you retrieved from the library. You could use it for a little [']personal['] reading if you'd like to get yourself excited."	2	Wild Animals
 "First Aid Manual"	"A guide to proper first aid that should be handy to hang onto."	1	First Aid Manual
 
-Wild Animals is a grab object. It is part of the player. It is not temporary.
+Wild Animals is a grab object. It is not temporary.
 
 instead of using Wild Animals:
 	say "     You pull out the book and flip through it, letting yourself become excited by the photos and scenes of wild, animal sex described within. You feel hornier after reading it, but also a little less human, having sunk further into the infection's untamed desires.";
@@ -571,7 +570,7 @@ instead of using Wild Animals:
 
 the scent of Wild Animals is "     It smells like an old book, though there's a faintly arousing scent lingering around it as well.".
 
-First Aid Manual is a grab object. It is part of the player. It is not temporary.
+First Aid Manual is a grab object. It is not temporary.
 
 instead of using First Aid Manual:
 	say "     You pull out the book and flip through it, scanning through its procedures for dealing with various injuries. It should be handy if you get hurt out in the city.";

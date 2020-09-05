@@ -38,20 +38,21 @@ Table of GameEventIDs (continued)
 Object	Name
 Hidden Kitty	"Hidden Kitty"
 
-Hidden Kitty is a situation. The level of Hidden Kitty is 5.
-The sarea of Hidden Kitty is "Red".
+Hidden Kitty is a situation.
+ResolveFunction of Hidden Kitty is "[ResolveEvent Hidden Kitty]". The level of Hidden Kitty is 5.
+Sarea of Hidden Kitty is "Red".
 when play begins:
 	add Hidden Kitty to BadSpots of MaleList;
 	add Hidden Kitty to BadSpots of FurryList;
 
-Instead of resolving a Hidden Kitty:
+to say ResolveEvent Hidden Kitty:
 	now lastSvendrink is turns + 8;
 	say "     While exploring in one of the older residential areas at the edge of this seedy district of town, you spot the flash of white and gray as something dashes down the steps and quickly shuts the basement door behind it. You catch sight of someone nervously glancing out from behind the curtains covering the basement window, watching you. As this is atypical behavior for someone who's succumbed, you're hopeful that this is a survivor. You wave and head cautiously to the door, trying to look non-threatening while remaining at the ready. You knock and assure them that you are still sane and want to help. It takes a while, always unsure if they're even listening as you can't risk yelling and drawing any infected to the house.";
 	say "     Eventually, it seems you are able to convince him and he opens the door to his small, basement apartment. As you look the young man over, he wrings his fluffy tail in his hands. The tail is a snowy white with gray and black leopard spots. He has a pair of feline ears poking out from his long, blond hair. For a tall, well-built fellow, he seems very timid and nervous as he shyly invites you in before quickly glancing around and then closing the door again. He speaks with a noticeable Nordic accent.";
 	wait for any key;
 	LineBreak;
 	move player to Sven's Place;
-	now Sven's Place is known;
+	AddNavPoint Sven's Place;
 	now battleground is "void";
 	increase score by 5;
 	now Hidden Kitty is resolved;
@@ -61,7 +62,7 @@ Object	Name
 Sven's Place	"Sven's Place"
 
 Sven's Place is a room. It is fasttravel. It is private.
-The description of Sven's Place is "[SvenPlaceDesc]".
+Description of Sven's Place is "[SvenPlaceDesc]".
 
 the scent of Sven's Place is "The small basement apartment smells faintly of mold and snow leopard from its [if HP of Sven > 3]former [end if]occupant[if HP of Sven is 99]. The scent of snow leopard sex from the cum is strong[end if].".
 
@@ -106,8 +107,8 @@ PenileVirgin of Sven is false.
 SexuallyExperienced of Sven is true.
 MainInfection of Sven is "Snow Leopard".
 
-The description of Sven is "[SvenDesc]".
-The conversation of Sven is { "Mew!" }.
+Description of Sven is "[SvenDesc]".
+Conversation of Sven is { "Mew!" }.
 lastSvendrink is a number that varies. lastSvendrink is usually 555.
 SvenCandyMsg is a number that varies. SvenCandyMsg is usually 0.
 SvenStory1 is a truth state that varies. SvenStory1 is usually false.
@@ -170,7 +171,7 @@ instead of conversing the Sven:
 				say "     You pull out a bottle of water and give it to the poor fellow. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
 				now lastSvendrink is turns;
 				now HP of Sven is 2;
-				decrease carried of water bottle by 1;
+				ItemLoss water bottle by 1;
 				increase score by 5;
 				say "     'I should be okay for a little while now, but please come back and visit again. I do not really want to leave here again.' You start to mention moving him to the bunker, but he fidgets nervously in his seat and shakes his head vigorously. He is clearly not ready for such a trek across the city after his unfortunate first attempt outside.";
 			else:
@@ -190,7 +191,7 @@ instead of conversing the Sven:
 			if Player consents:
 				LineBreak;
 				say "     You pull out a bottle of water and give it to the poor fellow. He is very grateful as he shyly takes it from you. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
-				decrease carried of water bottle by 1;
+				ItemLoss water bottle by 1;
 				now lastSvendrink is turns;
 				now HP of Sven is 2;
 				increase score by 5;
@@ -207,7 +208,7 @@ instead of conversing the Sven:
 			if Player consents:
 				LineBreak;
 				say "     You pull out a bottle of water and give it to the poor fellow. He is very grateful as he shyly takes it from you. He tries his best to drink it down slowly, but soon finishes it off. He seems much better having gotten a much-needed drink.";
-				decrease carried of water bottle by 1;
+				ItemLoss water bottle by 1;
 				now lastSvendrink is turns;
 				now HP of Sven is 3;
 				increase score by 5;
@@ -884,8 +885,8 @@ Table of GameCharacterIDs (continued)
 object	name
 Svetlana	"Svetlana"
 
-Svetlana is a woman. The description of Svetlana is "[SvetlanaDesc]".
-The conversation of Svetlana is { "Mew!" }.
+Svetlana is a woman. Description of Svetlana is "[SvetlanaDesc]".
+Conversation of Svetlana is { "Mew!" }.
 [uses same variables as Sven for easier saving and restoration.]
 
 the scent of the Svetlana is "Svetlana smells of aroused female snow leopard. Lisa's scent clings to her as well.".

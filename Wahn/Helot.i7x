@@ -89,7 +89,7 @@ to say Helot fucks:
 		say "     The Helot rests his hard cock inside you for a moment after he stops cumming, then pulls out and moves to look through your gear.";
 	if carried of food >= 1:
 		say "     Pulling some food from your pack, the Helot hungrily takes a bite and nods to you. 'Ah - I really needed that. Sorry for taking your stuff, but I'm really hungry.' With that, he walks off and leaves you to pick up the rest of your belongings.";
-		decrease carried of food by 1;
+		ItemLoss food by 1;
 	else:
 		say "     Digging in your pack, the Helot looks up after a while, a disappointed expression on his face. 'You don't have any food either? Damn. Looks like this'll be another hungry day for me then.' He shrugs and walks off, and you can hear him murmur 'At least my balls don't ache as much now...'";
 
@@ -230,8 +230,8 @@ to say HelotDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -251,7 +251,7 @@ When Play begins:
 	now desc entry is "[HelotDesc]";
 	now face entry is "a handsome young man's, still smooth and beardless. Shaggy black hair falls down to your shoulders";
 	now body entry is "that of a young man, muscular, but with a lean look that hints at going hungry at least part of the time. Your wear but a pair of sandals and a pretty ragged loincloth of faded cloth";
-	now skin entry is "smooth, sun-bronzed"; [ format as "You have (your text) skin"]
+	now skin entry is "smooth, sun-bronzed"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a tight, firmly muscled butt."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a handsome male visage, smooth-faced and beardless. Shaggy black hair falls down to your shoulders"; [ format as "Your face feels funny as (your text)." ]
@@ -282,6 +282,9 @@ When Play begins:
 	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lean"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "human";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -296,7 +299,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -402,7 +405,8 @@ Object	Name
 Wandering Helot	"Wandering Helot"
 
 Wandering Helot is a situation.
-The sarea of Wandering Helot is "High".
+ResolveFunction of Wandering Helot is "[ResolveEvent Wandering Helot]".
+Sarea of Wandering Helot is "High".
 
 WanderingHelotTimer is a number that varies. [@TagNotSaved]
 WanderingHelotTimer is usually 20000.
@@ -412,7 +416,7 @@ WanderingHelotTimer is usually 20000.
 [ 0: Never seen        ]
 [ 1: Seen once         ]
 
-Instead of Resolving a Wandering Helot:
+to say ResolveEvent Wandering Helot:
 	If resolution of Wandering Helot is 0:
 		say "     While exploring the streets of the once rich and prosper High Rise District, you come across a very unusual event. Far ahead of you, still barely visible from your perspective of view, is a man walking in your direction. From what you can perceive, he's wearing a backpack, holding onto the straps with his posture slightly arched forward, an indicative that whatever he's carrying must be heavy, or that he has found plenty of loot in his last scavenge run. Though what makes your eyes jump is that he, in fact, looks perfectly human... Until his silhouette lightens and his true nature is revealed. A fully fledged, independent and lonesome helot, walking around all by himself, scavenging around the streets of this district, has somehow found a way to escape the college grounds and become a wanderer!";
 		say "     How he managed to do that, you have no idea, but he surely looks a little puffier than the usual helots you encounter under the sometimes cruel ownership of the spartans. This one must have been having success in his adventurous life, and judging by the amount of loot he must have on his back right now, you'd say he's got very good scavenging skills. He hasn't noticed you yet, as you took cover behind a corner to some dark alley before you fell in his line of sight, and he's going to get right past you in a few.";
@@ -494,17 +498,13 @@ to WanderingHelot1:
 				let randomnumber be a random number from 1 to 4;
 				if randomnumber is:
 					-- 1:
-						say "[bold type]bottle of clean water.[roman type][line break]";
-						increase carried of water bottle by 1;
+						ItemGain water bottle by 1;
 					-- 2:
-						say "[bold type]soda can.[roman type][line break]";
-						increase carried of soda by 1;
+						ItemGain soda by 1;
 					-- 3:
-						say "[bold type]can of food.[roman type][line break]";
-						increase carried of food by 1;
+						ItemGain food by 1;
 					-- 4:
-						say "[bold type]pack of chips.[roman type][line break]";
-						increase carried of chips by 1;
+						ItemGain chips by 1;
 				CreatureSexAftermath "Player" receives "OralCock" from "Helot Manservant";
 				say "     With the deal sorted, you say goodbye to each other, each of you carrying on their own ways around the High Rise District.";
 				now WanderingHelotTimer is turns;
@@ -538,20 +538,15 @@ to WanderingHelotTackle:
 			let randomnumber be a random number from 1 to 5;
 			if randomnumber is:
 				-- 1:
-					say "[bold type]bottle of dirty water.[roman type][line break]";
-					increase carried of dirty water by 1;
+					ItemGain dirty water by 1;
 				-- 2:
-					say "[bold type]bottle of clean water.[roman type][line break]";
-					increase carried of water bottle by 1;
+					ItemGain water bottle by 1;
 				-- 3:
-					say "[bold type]soda can.[roman type][line break]";
-					increase carried of soda by 1;
+					ItemGain soda by 1;
 				-- 4:
-					say "[bold type]can of food.[roman type][line break]";
-					increase carried of food by 1;
+					ItemGain food by 1;
 				-- 5:
-					say "[bold type]pack of chips.[roman type][line break]";
-					increase carried of chips by 1;
+					ItemGain chips by 1;
 			say "     Now it's time for you to get up and run away as fast as you can, less you want an enraged helot chasing you. With a quick leg play, you push yourself up and evade his muscular arms, achieving a perfect escape as you hear him shouting behind you 'Coward! Thief!' with his rather and surprising long reaching voice.";
 			say "     With a successful assault, you walk away proudly with your reward, at the cost of the poor helot's hard work...";
 			now WanderingHelotTimer is turns;
@@ -567,19 +562,19 @@ to WanderingHelotTackle:
 			if randomnumber is:
 				-- 1:
 					say "     ... But not before you had snatched [bold type]a bottle of dirty water[roman type] out of his backpack while he was distracted.";
-					increase carried of dirty water by 1;
+					ItemGain dirty water by 1 silently;
 				-- 2:
 					say "     ... But not before you had snatched [bold type]a bottle of clean water[roman type] out of his backpack while he was distracted.";
-					increase carried of water bottle by 1;
+					ItemGain water bottle by 1 silently;
 				-- 3:
 					say "     ... But not before you had snatched [bold type]a soda can[roman type] out of his backpack while he was distracted.";
-					increase carried of soda by 1;
+					ItemGain soda by 1 silently;
 				-- 4:
 					say "     ... But not before you had snatched [bold type]a can of food[roman type] out of his backpack while he was distracted.";
-					increase carried of food by 1;
+					ItemGain food by 1 silently;
 				-- 5:
 					say "     ... But not before you had snatched [bold type]a pack of chips[roman type] out of his backpack while he was distracted.";
-					increase carried of chips by 1;
+					ItemGain chips by 1 silently;
 			now WanderingHelotTimer is turns;
 			CreatureSexAftermath "Player" receives "AssFuck" from "Helot Manservant";
 	else: [gets knocked down badly, Helot runs away]
@@ -591,14 +586,15 @@ Object	Name
 Helot Captive	"Helot Captive"
 
 Helot Captive is a situation.
-The sarea of Helot Captive is "Campus".
+ResolveFunction of Helot Captive is "[ResolveEvent Helot Captive]".
+Sarea of Helot Captive is "Campus".
 
 [Single Event at the campus with a captive Helot and a human possibly being turned into a Helot by being fucked by a Spartan]
 [Resolution Stages                           ]
 [ 1: Human not saved                         ]
 [ 2: Saved the human                         ]
 
-Instead of resolving a Helot Captive:
+to say ResolveEvent Helot Captive:
 	say "     During your stroll inside the College Campus, you come across a quite intriguing scene around the corner of a building, covered by the surrounding walls in a quite discrete spot. A Spartan is dragging a tied up human with him, what seems to have been a lost soldier among the few squads that were sent to this area, and a Helot, also restrained, laying just to the side as his master arrives with the new acquisition. You remain hidden during the whole sequence, as the warrior brings the human up against the wall, and from your angle, he seems to be preparing himself to fuck the poor soldier into submission. You can either [bold type]choose to stay and observe what happens next if you're curious, fight the Spartan and try to at least save the human from being transformed, or simply take your leave[roman type] and pretend you never saw anything.";
 	LineBreak;
 	say "     [link](1)[as]1[end link] - Rescue the human!";
@@ -652,12 +648,13 @@ Object	Name
 Generous Helot	"Generous Helot"
 
 Generous Helot is a situation.
-The sarea of Generous Helot is "Campus".
+ResolveFunction of Generous Helot is "[ResolveEvent Generous Helot]".
+Sarea of Generous Helot is "Campus".
 
 GenerousHelotTimer is a number that varies. [@TagNotSaved]
 GenerousHelotTimer is usually 20000.
 
-Instead of resolving a Generous Helot:
+to say ResolveEvent Generous Helot:
 	if GenerousHelotTimer - turns < 7:
 		say "     While exploring the college campus, you come across a rather athletic man, whose attire is the same as those ancient Spartan servants, a pair of sandals and barely a loincloth to cover their privates. It is a Helot, though instead of lunging himself at you, he gives you a nod and continues on his path. Strangely polite for an unwilling manservant...";
 	else:
@@ -668,7 +665,7 @@ Instead of resolving a Generous Helot:
 		say "     ([link]N[as]n[end link]) - Refuse and let him keep it.";
 		if player consents:
 			say "     You nod, extending your hand to grab the [bold type]canned food[roman type], and he lets you have it. There's a smile on his face as he takes his leave, not even looking behind. How odd...";
-			increase carried of food by 1;
+			ItemGain food by 1 silently;
 			now GenerousHelotTimer is turns;
 		else:
 			say "     You shake your head, refusing his offering and arguing that he, instead, could use extra food. He lowers his arm, looking at you in disappointment. 'Master doesn't let me have it. If I bring this back, he won't share it with me, and I can't eat it...' Even so, you encourage him to have the food for himself, and after a few attempts, he finally decides to pull the can open and start eating hungrily. 'Thanks. You're good.' he says, with few more than those words before he takes his leave. You feel like you did the right thing.";

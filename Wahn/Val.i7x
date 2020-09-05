@@ -57,8 +57,8 @@ SexuallyExperienced of Val is true.
 TwistedCapacity of Val is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Val is false. [steriles can't knock people up]
 MainInfection of Val is "Orc Breeder".
-The description of Val is "[ValDesc]".
-The conversation of Val is { "Mew!" }.
+Description of Val is "[ValDesc]".
+Conversation of Val is { "Mew!" }.
 ValPregCounter is a number that varies.
 ValPregnancy is a number that varies.
 The icon of Val is Figure of OrcBreeder_random_icon.

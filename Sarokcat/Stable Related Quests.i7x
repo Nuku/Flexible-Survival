@@ -10,10 +10,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Equineguardpost	"Equineguardpost"
 
-Equineguardpost is a situation. Equineguardpost is inactive. The level of Equineguardpost is 3.
-The sarea of Equineguardpost is "Stable".
+Equineguardpost is a situation.
+ResolveFunction of Equineguardpost is "[ResolveEvent Equineguardpost]".
+Equineguardpost is inactive. The level of Equineguardpost is 3.
+Sarea of Equineguardpost is "Stable".
 
-Instead of Resolving a Equineguardpost:
+to say ResolveEvent Equineguardpost:
 	if XP of Onyx is 1:
 		let skip be 0;
 		if MaleList is not banned:
@@ -50,13 +52,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Stablestoreroom	"Stablestoreroom"
 
-Stablestoreroom is a situation. Stablestoreroom is inactive.
-The sarea of Stablestoreroom is "Stable".
+Stablestoreroom is a situation.
+ResolveFunction of Stablestoreroom is "[ResolveEvent Stablestoreroom]".
+Stablestoreroom is inactive.
+Sarea of Stablestoreroom is "Stable".
 
-Instead of Resolving a Stablestoreroom:
+to say ResolveEvent Stablestoreroom:
 	if XP of Onyx is 4:
 		say "     Carefully exploring the Stables interior leads you to a room near the front of the area which is almost hidden in a small alcove. Peeking inside cautiously, you find the small room is packed with all sorts of strange items, though most of it appears to be clothing of various sizes. Looking around at the large, unorganized piles of random stuff, you figure this must be where they toss the personal items from their captives when they search them. You sigh slightly as you realize that the necklace Daisy sent you after is probably buried somewhere in the large amount of clutter stacked up in the small room. Figuring you had better get started looking, you shake your head slightly as you begin sorting through the room looking for the necklace the changing mare described.";
-		let bonus be ( the Perception of the player minus 10 ) divided by 2;
+		let bonus be ( Perception of Player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -82,9 +86,10 @@ Object	Name
 Ignored Memos	"Ignored Memos"
 
 Ignored Memos is a situation.
-The sarea of Ignored Memos is "Stable".
+ResolveFunction of Ignored Memos is "[ResolveEvent Ignored Memos]".
+Sarea of Ignored Memos is "Stable".
 
-Instead of Resolving a Ignored Memos:
+to say ResolveEvent Ignored Memos:
 	if MaleList is banned or FemaleList is banned or HermList is banned or FurryList is banned:
 		say "     Wandering through the halls of the Stables, you come across a desk that seems to have a small pile of papers tossed on it haphazardly. Feeling curious as to who would bother with paperwork while the world is going crazy, you decide to take a look at some of the pages. Surprisingly enough, all of the papers seem to be about the same thing, someone writing cryptic notes. They all say things to the effect of 'This quest requires guys, girls, herms and furries.' Odd. Clearly the mad ramblings of some deranged creature.";
 		now Resolution of Ignored Memos is 99; [event critical creatures banned]
@@ -105,16 +110,17 @@ Object	Name
 Hardware Fort	"Hardware Fort"
 
 Hardware Fort is a situation.
+ResolveFunction of Hardware Fort is "[ResolveEvent Hardware Fort]".
 Hardware Fort is inactive.
 Recoveredhardware is a number that varies.
 
-Instead of Resolving a Hardware Fort:
+to say ResolveEvent Hardware Fort:
 	now showlocale is false;
 	if fancyquest is 4:
 		if Recoveredhardware is 0:
 			say "     Wandering down the streets of the city, you come across a sign for a major hardware store; and, mindful of Fancy's request, you decide to see if this one has been looted and destroyed like so many of the other ones, or if it is still intact enough to be worth looting. Turning the corner into the sheltered lot, you find yourself blinking with surprise at the scene laid out in front of you, as the lot in front of you is covered in cars and other bits of junk and salvage piled up in some kind of semblance to a small fortress. Looking at the construction carefully, you can immediately see several items that you figure would be quite useful for the Stables to have, and more importantly what appears to be several small sturdy forklifts which were obviously used to maneuver things into shape, and are probably still working even now. Figuring that if anyplace has the construction materials and tools that the Stables needs, it would be this place, you begin to look for a way in so you can clear this place out of whatever has taken up residence so you can signal the horsemen to come loot the place.";
 			say "     Moving cautiously into the makeshift fortress, you note that it has been inexpertly propped up with beams and items from within the store, and tools are strewn around the area haphazardly as well, which while good in that it indicates there is plenty here to loot, is bad for you in that it is nearly impossible to navigate the twisty maze silently, or safely. And even as you think that, you can see one of the cars nearby start to slide towards you as you bump one of the beams supporting it!";
-			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+			let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
@@ -190,7 +196,7 @@ to hardwarefortphase3:
 				say "     One of the horsemen gives you an approving nod as you finish driving off the last of the beasts attacking your part of the fort. You feel rather proud of yourself as you look behind you at all the work being done at the store, as items are efficiently loaded up onto makeshift carts and the forklifts move some of the cars around so they have better access to the store itself. One of the equines at the wall gestures at you, and you glance over just in time to catch the medkit he tosses at you with an equine grin on his muzzle. Nodding in thanks, you begin to start patching yourself up slightly, only to be interrupted by several large shadows sweeping over the area, it looks like the aerial creatures have decided to bypass the fort and start attacking you and the others directly!";
 				increase HP of Player by 20;
 				if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
-				increase carried of medkit by 1;
+				ItemGain medkit by 1;
 				hardwarefortphase4;
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
 		say "     One of the horsemen gives you a pat on the shoulder as he helps you up after driving off the rest of the creatures. And while you are certainly embarrassed at the situation, and having needed their help at this point, at least they managed to keep things going while you were being [']entertained['] by your recent partner. Feeling somewhat weak after the exertion, when one of them hands you a draft beer and a medkit, you only nod gratefully as you drain the cool drink. You blink for a moment in surprise though as you feel a surge of power shoot through you, and groan as you realize it was a draft horse beer you just drank, and while it definitely makes you feel a bit better, you can already feel your body changing in response. Though you have little time to comment or react as several shadows blot out the sky, and you realize some of the aerial creatures have arrived and are attacking you and your fellow lookouts directly!";
@@ -198,7 +204,7 @@ to hardwarefortphase3:
 		infect "Horseman";
 		increase HP of Player by 40;
 		if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
-		increase carried of medkit by 1;
+		ItemGain medkit by 1;
 		hardwarefortphase4;
 	else if fightoutcome >= 30:	[fled any fight]
 		say "     Having fled, you end up leaving the working horsemen to fend for themselves, much to the angry cries of several of them. They are none too pleased with your cowardice. They seem to fare fairly well, able to hold their ground while working. Rather than risk entering the fray again, you escape in the confusion, heading back towards the library to rest and recover.";
@@ -339,13 +345,13 @@ to hardwarefortphase5:
 		say "rather hefty sledgehammer.";
 		say "     'We done found a couple ah deez in dere, and figured we'z could spare yah one. T'ought yah might enjoy knockin['] some heads wid'it. Yah been doin['] a pretty impressive job so far on dis, I has tah admit. I can seez why Fancy likes yah,' he adds with a raucous laugh and a slap on your back before turning back to organizing the rest of the horses. 'Come on, you lugs. Let's get dis stuff movin[']!'";
 		say "     You find yourself smiling and feeling a bit more confident as you take a few test swings of your new weapon. Knowing you'll need speed for the moment, you tuck it securely through some the straps on your pack for now. Wasting no more time, you drop down outside of the fort in an effort to lead the remaining creatures away.";
-		increase carried of medium sledge by 1;
+		ItemGain medium sledge by 1;
 	else:
 		say "medkit.";
 		say "     'We found dis in dere and figured yah might needs it. Yah didn't do too bad. It wuz a lot tah dealz wid,' he adds with a raucous laugh and a slap on your back before turning back to organizing the rest of the horses. 'Come on, you lugs. Let's get dis stuff movin[']!'";
 		say "     You feel a little better about your earlier failure now that things have worked out. Knowing you don't have any time to sit around and patch yourself up, you stuff the medkit somewhere accessible in case of emergency. Wasting no more time, you drop down outside of the fort in an effort to lead the remaining creatures away.";
-		increase carried of medkit by 1;
-	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+		ItemGain medkit by 1;
+	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
@@ -381,47 +387,38 @@ to hardwarefortphase5:
 	now Hardware Fort is resolved;
 	move player to Grey Abbey Library;
 
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"medium sledge"	"A rather well balanced, professional sledgehammer, this particular one seems to also have been reinforced with some steel sheathing on the handle, and while heavy it certainly looks like it could do a lot of damage to either a wall, or any creature that gets in your way."	15	medium sledge
-
-medium sledge is an armament. It is part of the player. It has a weapon "[one of]your sledgehammer[or]your well balanced sledgehammer[or]your heavy weapon[at random]". The weapon damage of medium sledge is 18. The weapon type of medium sledge is "Melee". It is not temporary. the objsize of medium sledge is 4. the hitbonus of medium sledge is -2.
-
-instead of sniffing medium sledge:
-	say "The large sledge smells of metal and broken concrete, plaster and heads.";
-
+[medium sledge moved to Core Mechanics/Weapons.i7x]
 
 Section 7 - horsepowering (Fancy quest part 3)
 
 Table of GameEventIDs (continued)
 Object	Name
-horsepowering	"horsepowering"
+Horsepowering	"horsepowering"
+Horsepowering	"Horsepowering"
 
-horsepowering is a situation.
-The sarea of horsepowering is "Stable".
+Horsepowering is a situation.
+ResolveFunction of Horsepowering is "[ResolveEvent Horsepowering]".
+Sarea of Horsepowering is "Stable".
 
 generatorfixing is a number that varies.
 
-
-
-Instead of Resolving a horsepowering:
+to say ResolveEvent Horsepowering:
 	if generatorfixing is 3:
 		say "Wandering the halls of the Stables, you notice that someone has obviously started trying to patch the place up, as several areas show signs of recent construction, and the area is considerably cleaner than it was before. You are however distracted from your sightseeing when a horseman appears down the hallway and notices you, you brace yourself for a fight, however you are pleasantly surprised when he merely waves you over. Curious you follow him down the hall where he leads you to a large open room filled with various types of machinery, including what is obviously the brand new generator you helped the horses liberate from the hardware store, as well as the leads for what you can only assume are the solar panels. 'Miss Fancy said we weren't allowed to play with this anymore, so we left it to you like we were told,' the horseman says with a shrug of his impressive shoulders, before leaning closer and whispering loudly, 'She gets scary when she gets angry, so we try to do what she says. No one likes celibacy, after all... Besides, she's kinda hot herself,' he says with a chuckle as he leaves you to your work. With a sigh you begin looking over the generator and the wiring setup, and pull out several of the books you brought to use as reference material while you try to figure the complicated mess of wiring out.";
-		let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+		let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 14:
 			say "After an hour of examining the situation and referring to the books you brought several times, you think you have worked out what you need to do to get things up and running. Unfortunately it looks like it will require some very delicate wiring on your part, and you begin to carefully apply yourself to the rather dangerous problem, hoping you can manage to get it sorted without too much trouble.";
-			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+			let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
 			if diceroll > 14:
 				say "After several hours of careful and conscientious work, you think you are finally ready to try out your modifications to the generator and the electrical system. With a nervous smile you reach over and switch the generator on, bracing yourself just in case your modifications somehow make the whole thing explode or burn the place down around your head. Fortunately, while the generator is quite loud, and the sound of all the machinery in the room starting up does make you jump, your attention to detail and careful hands seem to have resulted in a disasterless generator installation! Grinning happily with relief, you leave the heavy reference books here in case you or some other horse needs them for repairs later, and shut the heavy double doors behind you as you head back out into the Stables. You can't wait to see Fancy's reaction to this latest triumph of yours, and the other equines reaction too of course...";
 				now generatorfixing is 4;
-				now horsepowering is resolved;
+				now Horsepowering is resolved;
 			else:
 				say "Everything is going fine with the wiring until you slip at just the wrong moment and let one of the bare wires you are patching touch you. The world flashes in rainbow colors for a minute as you spasm and flail in agony, destroying most of your work and scattering your notes all over the place. Fortunately you only brushed the wire, but it is still enough of a shock that it takes you several minutes to recover, and your mouth tastes of ozone. Looking down at your shaking hands, you sigh and realize you won't be able to continue any kind of delicate work for a while, and proceed to gather your books back up and stagger out into the Stables proper, forced to come back and start over again at a later time.";
 				decrease HP of Player by 25;
@@ -432,7 +429,6 @@ Instead of Resolving a horsepowering:
 			stop the action;
 	else:
 		say "Wandering around the Stables, you come across a large set of closed doors with several 'danger, high voltage' signs prominently displayed. Due to the general lack of power in this part of the city, you would be tempted to investigate the room, but the heavy chain and padlock holding the doors closed is more than enough to keep you at bay as you turn back to the Stables['] corridors.";
-
 
 after going to the Grey Abbey Library when generatorfixing is 1:
 	say "Returning to the library after your trip to the Stables, you spend a while hunting through several of the electrical texts there, and while they do appear to be helpful, strangely enough the library appears to be lacking a 'Connecting large generators to old wiring for dummies' book. Which just goes to show you the sad state of literature in this current age, you would think no one really expected to be overrun with strange nanomachines which turn people into sex crazed monsters or something, and failed to prepare adequately for the situation. Which is rather unfair when you think about it, though you do find quite a bit of helpful information here anyways, but perhaps you could find some more specialized information out in the city itself?";
@@ -445,11 +441,13 @@ Section 8 - technicalbookstore
 
 Table of GameEventIDs (continued)
 Object	Name
-technicalbookstore	"technicalbookstore"
+Technical Bookstore	"technicalbookstore"
+Technical Bookstore	"Technical Bookstore"
 
-technicalbookstore is a situation.
+Technical Bookstore is a situation.
+ResolveFunction of Technical Bookstore is "[ResolveEvent Technical Bookstore]".
 
-Instead of resolving a technicalbookstore:
+to say ResolveEvent Technical Bookstore:
 	if generatorfixing is 1:
 		say "You spend a while hunting through several of the electrical texts there, and while they do appear to be helpful, strangely enough the library appears to be lacking a 'Connecting large generators to old wiring for dummies' book. Which just goes to show you the sad state of literature in this current age, you would think no one really expected to be overrun with strange nanomachines which turn people into sex crazed monsters or something, and failed to prepare adequately for the situation. Which is rather unfair when you think about it, though you do find quite a bit of helpful information here anyways, but perhaps you could find some more specialized information out in the city itself?";
 		now generatorfixing is 2;
@@ -472,25 +470,27 @@ Section 9 - contract hyenegotiation (Fancy quest part 4)
 
 Table of GameEventIDs (continued)
 Object	Name
-contract hyenegotiation	"contract hyenegotiation"
+Contract Hyenegotiation	"contract hyenegotiation"
+Contract Hyenegotiation	"Contract Hyenegotiation"
 
-contract hyenegotiation is a situation.
+Contract Hyenegotiation is a situation.
+ResolveFunction of Contract Hyenegotiation is "[ResolveEvent Contract Hyenegotiation]".
 provingstallionhood is a number that varies.
 
-Instead of resolving a contract hyenegotiation:
+to say ResolveEvent Contract Hyenegotiation:
 	if provingstallionhood is 1:
 		say "Wandering the streets of the of city, you realize as you hear laughter and cheering echoing off the empty buildings, that your wandering feet have brought you into the hyena gangs territory. Sighing rather nervously you decide you should probably go deal with the hyenas like Fancy asked, and pulling out the letter she gave you and holding it in front of you carefully, you approach the sounds of hyena revelry. As you turn the corner you see a large group of hyenas laughing and enjoying themselves as they watch a couple of captured infected from the rest of the city fight in the middle of a makeshift arena. It isn't long however before one of them notices you, and soon most of them are watching your approach curiously, their arena match temporarily forgotten. Steeling yourself, you hand one of the nearby hyenas the letter from fancy, and grin as he reads out your intention to take over the Stables, and your intention to renegotiate their current agreement as part of your bid to take over the Stables. Several of the hyenas laugh with amusement at your audacity, and you find yourself feeling rather amused for a minute as well.";
 		if matriarchowned is 1:
 			say "After several minutes of laughter as everyone appreciates the irony of their matriarch taking over the Stables as well, one of your gang members steps forward and fills out their agreement to the new contract for you. Though even he can't stop chuckling as he does so. Looking around at the gathering, you find several of the gang members are laughing so hard at the irony of the situation, as well as the jokes going around, that they are nearly unable to stand. Grinning with amusement as well, you wave to your happy gang members, and let them go on about their business enjoying the arena fights, sure that they will have a much more amusing party after your little visit as well, though you do wish you could have hung around a bit longer to enjoy several of your gang sluts with the others... though sadly duty calls...";
 			now provingstallionhood is 2;
 			now Resolution of contract hyenegotiation is 1; [easy finish as Matriarch]
-			now contract hyenegotiation is resolved;
+			now Contract Hyenegotiation is resolved;
 			stop the action;
 		else if matriarchdefeated is 1 or matriarchdefeated is 2:
 			say "One of the hyenas steps forward and looks at you with amusement, 'A slutty little pet like you wants to take over the Stables? Yeah like that is going to happen!' he says with an amused laugh, several of the other hyenas nearby echoing his laugh with amusement. 'Well hell, if the horses are stupid enough to actually let something like that happen, far be it for us to stop them. Though if you actually become the head horsey, well that would sure help us deal with the crazy bastards... after all it's not like you won't do whatever the matriarch says after all is it?' he says with amusement, the truth of his statement making you blush slightly, even as your changing body heats up with desire as you remember your time underneath the matriarch. Seeing your reaction, the hyena negotiator smirks as he snags the paper from you and scrawls his agreement on it, before slapping you on the ass and sending you on your way back to the Stables, the entertainment starting up again behind you as you leave like a good little submissive slut.";
 			now provingstallionhood is 2;
 			now Resolution of contract hyenegotiation is 2; [easy finish as failed Matriarch]
-			now contract hyenegotiation is resolved;
+			now Contract Hyenegotiation is resolved;
 		else:
 			say "After laughing for a bit, one of the hyenas steps forward with a smirk on his face, and the laughter begins to taper off as he addresses you. 'Well you know, this actually sounds pretty fun, and at least you came here to deal with us in person unlike the current arrogant bastard in charge. Tell ya what...' the hyena says with an evil grin as he shows off his sharp carnivores teeth. 'Why don't you give us a bit of amusement, show us just what kind of Stablemaster material you are, since we are here for a show why don't you put one on for us?' he says with a smile as he gestures to the arena and the two creatures currently ready to fight in the next battle, a feline creature and what appears to be a canine creature gathered from around the city. 'If you defeat both of those bastards, I'll give you a chance and we can sign your little paper, if you lose however... well lets just say, you don't want to lose,' the hyena says with a feral grin. The gathered gang members don't wait for you to agree, and before you know it, many clawed hyena hands are shoving you into the makeshift arena, and you stagger for a minute, and look up, only to see they have already released the first monster!";
 			let HyenaPitFightCounter be 0;
@@ -507,19 +507,19 @@ Instead of resolving a contract hyenegotiation:
 				say "Having defeated the surprisingly powerful beasts, you pant and try to relax for a minute, only to be caught up in the cheering and laughter of the hyenas as they grab you and haul you out of the arena. You are slapped on the back several times, and shoved around in the large crowd before eventually finding yourself back in front of what you assume is the same hyena you talked to before. As he steps forward you note he is holding the agreement fancy gave you, and that is now signed as well. 'Not a bad show there,' he says with some amusement as he hands you the paper. 'It was definitely fun to watch, and we certainly enjoyed it. Of course we would probably enjoy matters even more if you would shake up that stable of uptight equines a bit for us as well. So really win or lose it's all good,' he says with an amused chuckle, which is shared by most of the hyenas around you as they slap you on your ass and back and send you on your way back to the Stables.";
 				now provingstallionhood is 2;
 				now Resolution of contract hyenegotiation is 3; [won]
-				now contract hyenegotiation is resolved;
+				now Contract Hyenegotiation is resolved;
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "You barely have time to look up from the ground where your recent mating left you, before the hyenas descend on your already abused body, [HyenegotiationHyenaAbuse]";
 				now provingstallionhood is 2;
 				decrease humanity of Player by 50;
 				now Resolution of contract hyenegotiation is 4; [lost]
-				now contract hyenegotiation is resolved;
+				now Contract Hyenegotiation is resolved;
 			else if fightoutcome is 30: [fled]
 				say "You manage to get away from your attackers, only to run right into the watching hyenas. They bowl you over and descend on your body, [HyenegotiationHyenaAbuse]";
 				now provingstallionhood is 2;
 				decrease humanity of Player by 50;
 				now Resolution of contract hyenegotiation is 5; [fled]
-				now contract hyenegotiation is resolved;
+				now Contract Hyenegotiation is resolved;
 	else:
 		say "Wandering through the streets of the empty city, you are surprised to hear several loud bursts of laughter and the sounds of cheering coming from down one of the side streets. Feeling slightly curious, you carefully peek down the side street, only to see what appears to be a large gathering of those hyenas that have been wandering the city, many of them wearing bandannas and watching some sort of game or event. Realizing there are far too many of them to have a hope of engaging safely, you quickly back off and go back the way you came, shuddering slightly at your close call, and glad none of the beasts noticed you. Although some part of you is still whispering how much fun it would have been to let all those lusty spotted beasts play with your body until you were just as lusty and sexy as they are...";
 
@@ -539,9 +539,10 @@ Object	Name
 Horsepitfight	"Horsepitfight"
 
 Horsepitfight is a situation.
-The sarea of Horsepitfight is "Stable".
+ResolveFunction of Horsepitfight is "[ResolveEvent Horsepitfight]".
+Sarea of Horsepitfight is "Stable".
 
-instead of resolving a Horsepitfight:
+to say ResolveEvent Horsepitfight:
 	if provingstallionhood is 2:
 		say "     Wandering through the halls of the Stables, you notice there seems to be a bit of hush over the area, and you almost aren't surprised when several stallions appear up ahead and gesture you to follow them. You feel increasingly nervous as they lead you to a rather large conference room, with seats scattered around the area, and a cleared circle in the center. From the smell of sweat and sex in the room, it is fairly obvious that the horsemen practice combat here on a fairly regular basis, and just as obvious what happens to the loser. Shaking your head slightly to clear it, you wince as several rather large horsemen step into the center of the circle and smirk at you, looking around you can see a number of other horsemen in the area pretending not to be interested in the building situation.";
 		say "     'Well so you're the new blood eh? I just don't see it happening, not for someone as scrawny as you anyways...' one of the horsemen in the circle says with a laugh, setting several of the others to chuckling as well. 'You may have impressed those hyenas out there, but if you want to get any further you will have to show us you can take on some real stallions, of course if you win we certainly won't object any further to your making the attempt... But if you lose...' The stallion pauses for dramatic effect, and you hear a jingle from one side of the circle and look over to see one of the other stallions showing off a full set of bondage gear obviously intended for use on you. You feel slightly nervous as you see the fully lockable gloves designed to make the hands resemble full hooves, and the straps which would force you to walk on all fours at all times...";
@@ -611,12 +612,14 @@ Section 11 - goldenfocushunt
 
 Table of GameEventIDs (continued)
 Object	Name
-goldenfocushunt	"goldenfocushunt"
+GoldenFocusHunt	"goldenfocushunt"
+GoldenFocusHunt	"GoldenFocusHunt"
 
-goldenfocushunt is a situation.
-The sarea of goldenfocushunt is "Museum".
+GoldenFocusHunt is a situation.
+ResolveFunction of GoldenFocusHunt is "[ResolveEvent GoldenFocusHunt]".
+Sarea of GoldenFocusHunt is "Museum".
 
-instead of resolving a goldenfocushunt:
+to say ResolveEvent GoldenFocusHunt:
 	if hellgatherquest is 2:
 		say "     Wandering the halls of the rather large museum nervously, you finally come across a small alcove in a corner, which has several shiny golden pieces of jewelry on display, including luckily enough, the golden necklace Nermine painstakingly described to you! Feeling rather guilty you glance around you quickly, before examining the glass barrier protecting the items closely, trying to figure out just how to handle your first venture into grand larceny, although several of the pieces Nermine doesn't need should make you quite well off if you can ever get out of this place... You finally find some kind of latch towards the rear of the display you think you can manage to bash open with some effort, and you get to work.";
 		say "     It is almost an hour of rather exhausting labor later when you finally manage to pop the bulletproof glass case open, and it crashes to the floor with a loud thud. The noise is soon joined by a loud and annoyed roar from the direction of the foyer, and you wince as you realize that either one of the silent alarms was still working, or Valerie's hearing is much more sensitive than you thought. You barely have time to swipe the item Nermine sent you for off its display, before you have to turn to face the sounds of the rapidly approaching sphinx, abandoning any hope of swiping anything else as the museum guardian rounds the corner at a run.";
@@ -624,7 +627,7 @@ instead of resolving a goldenfocushunt:
 		if lost is 0:
 			move player to The Mysterious Shop;
 			now hellgatherquest is 3;
-			now goldenfocushunt is resolved;
+			now GoldenFocusHunt is resolved;
 	else:
 		say "     Wandering through the halls of the deserted museum, a glint of something shiny catches your eye, and you pause for a minute to look in one of the many alcoves lining the halls of the museum. The sight of several rather stunning pieces of historical golden jewelry takes your breath away for a bit, as you admire the craftsmanship and the carvings in the sides of the pieces. Considering the circumstances, you are almost tempted to try to take some of the item with you, if it weren't for the rather strong looking glass surrounding the jewelry, that and the fact that you are pretty sure Valerie out in the foyer would probably object rather strongly and violently to any theft of museum property...";
 

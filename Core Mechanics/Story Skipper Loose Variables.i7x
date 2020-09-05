@@ -59,6 +59,8 @@ to VariableSave:
 		now CurrentVariableName is Name entry;
 		if debug is at level 10:
 			say "Stashing variable [CurrentVariableName].";
+		[if debug is at level 10:
+			say "Stashing variable [CurrentVariableName].";]
 		if Type Entry is "text":
 			TextVariableSave;
 		else if Type Entry is "number":
@@ -298,8 +300,6 @@ to TextVariableSave:
 			now TextVarValue entry is ubpreg;
 		-- "VikingKidShape":
 			now TextVarValue entry is VikingKidShape;
-		-- "weaselcolor":
-			now TextVarValue entry is weaselcolor;
 		-- "wolvloc":
 			now TextVarValue entry is wolvloc;
 		-- "wrbody":
@@ -357,6 +357,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is AlexandraIsaacPups;
 		-- "AlexandraFarmhandPups":
 			now NumberVarValue entry is AlexandraFarmhandPups;
+		-- "AlexandraNelsonPups":
+			now NumberVarValue entry is AlexandraNelsonPups;
 		-- "AlexandraCarlInteraction":
 			now NumberVarValue entry is AlexandraCarlInteraction;
 		-- "AlexandraCarlPups":
@@ -717,8 +719,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is colliedefeat;
 		-- "combat abort":
 			now NumberVarValue entry is combat abort;
-		-- "compressedcock":
-			now NumberVarValue entry is compressedcock;
 		-- "ConclaveKnowledge":
 			now NumberVarValue entry is ConclaveKnowledge;
 		-- "ConfSvenEricInteraction":
@@ -799,10 +799,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is DiegoChanged;
 		-- "DiegoFucked":
 			now NumberVarValue entry is DiegoFucked;
-		-- "Diegotalk":
-			now NumberVarValue entry is Diegotalk;
-		-- "DiegoTricked":
-			now NumberVarValue entry is DiegoTricked;
 		-- "dinonest":
 			now NumberVarValue entry is dinonest;
 		-- "dnfightresult":
@@ -1189,10 +1185,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is GorillasMemberQuestCounter;
 		-- "GorillasRep":
 			now NumberVarValue entry is GorillasRep;
-		-- "gotsword":
-			now NumberVarValue entry is gotsword;
-		-- "gotwhip":
-			now NumberVarValue entry is gotwhip;
 		-- "grantbitch":
 			now NumberVarValue entry is grantbitch;
 		-- "grantfucked":
@@ -1511,6 +1503,26 @@ to NumberVariableSave:
 			now NumberVarValue entry is KyrverthStage;
 		-- "KyrverthTimer":
 			now NumberVarValue entry is KyrverthTimer;
+		-- "Kyrverthitemget":
+			now NumberVarValue entry is KyrverthItemGet;
+		-- "KyrverthItemReturned":
+			now NumberVarValue entry is KyrverthItemReturned;
+		-- "KyrverthNutGrowth":
+			now NumberVarValue entry is KyrverthNutGrowth;
+		-- "KyrverthSpikeGrowth":
+			now NumberVarValue entry is KyrverthSpikeGrowth;
+		-- "KyrverthWingType":
+			now NumberVarValue entry is KyrverthWingType;
+		-- "KyrverthCockType":
+			now NumberVarValue entry is KyrverthCockType;
+		-- "KyrverthLockoutTimer":
+			now NumberVarValue entry is KyrverthLockoutTimer;
+		-- "KyrverthEndingTimer":
+			now NumberVarValue entry is KyrverthEndingTimer;
+		-- "KyrverthBodyChanged":
+			now NumberVarValue entry is KyrverthBodyChanged;
+		-- "KyrverthPanicWitnessed":
+			now NumberVarValue entry is KyrverthPanicWitnessed;
 		-- "labhost":
 			now NumberVarValue entry is labhost;
 		-- "labtimerA":
@@ -1599,8 +1611,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is Lastdelaymilitary;
 		-- "lastdenevent":
 			now NumberVarValue entry is lastdenevent;
-		-- "LastDiegoTricked":
-			now NumberVarValue entry is LastDiegoTricked;
 		-- "lastdobiemess":
 			now NumberVarValue entry is lastdobiemess;
 		-- "LastDrinkserved":
@@ -1821,6 +1831,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is Lost;
 		-- "losttoalphahusky":
 			now NumberVarValue entry is losttoalphahusky;
+		-- "lostToHorseman":
+			now NumberVarValue entry is lostToHorseman;
 		-- "LostToZebra":
 			now NumberVarValue entry is LostToZebra;
 		-- "loversbench":
@@ -1909,8 +1921,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is MMP;
 		-- "mondodgebonus":
 			now NumberVarValue entry is mondodgebonus;
-		-- "monhitbonus":
-			now NumberVarValue entry is monhitbonus;
 		-- "monmindbonus":
 			now NumberVarValue entry is monmindbonus;
 		-- "monstercom":
@@ -2283,8 +2293,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is pquest;
 		-- "pr_completion":
 			now NumberVarValue entry is pr_completion;
-		-- "prankevent":
-			now NumberVarValue entry is prankevent;
 		-- "pregtype":
 			now NumberVarValue entry is pregtype;
 		-- "provingstallionhood":
@@ -2407,6 +2415,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is scufflecount;
 		-- "sdbook":
 			now NumberVarValue entry is sdbook;
+		-- "searchesUtSit":
+			now NumberVarValue entry is searchesUtSit;
 		-- "SeraphisContent":
 			now NumberVarValue entry is SeraphisContent;
 		-- "SeraphisNeedy":
@@ -2569,8 +2579,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is stiffedpayment;
 		-- "strangebottledrink":
 			now NumberVarValue entry is strangebottledrink;
-		-- "stripbarcounter":
-			now NumberVarValue entry is stripbarcounter;
+[		-- "stripbarcounter":
+			now NumberVarValue entry is stripbarcounter;]
 		-- "strongbacked":
 			now NumberVarValue entry is strongbacked;
 		-- "struggleatt":
@@ -3250,8 +3260,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is gsd_slut;
 		-- "gsd_special":
 			now TruthVarValue entry is gsd_special;
-		-- "gshep_scarscene":
-			now TruthVarValue entry is gshep_scarscene;
 		-- "gshm":
 			now TruthVarValue entry is gshm;
 		-- "gsnhm":
@@ -3280,12 +3288,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is houndfromhell;
 		-- "hvoreoffer":
 			now TruthVarValue entry is hvoreoffer;
-		-- "hydraheadcheck1":
-			now TruthVarValue entry is hydraheadcheck1;
-		-- "hydraheadcheck2":
-			now TruthVarValue entry is hydraheadcheck2;
-		-- "hydraheadcheck3":
-			now TruthVarValue entry is hydraheadcheck3;
 		-- "hydraheadregrowth":
 			now TruthVarValue entry is hydraheadregrowth;
 		-- "HyenaMatVore":
@@ -3328,6 +3330,14 @@ to TruthVariableSave:
 			now TruthVarValue entry is kristentf3fuck;
 		-- "ktcockmatch":
 			now TruthVarValue entry is ktcockmatch;
+		-- "KyrverthItemStealable":
+			now TruthVarValue entry is KyrverthItemStealable;
+		-- "KyrverthItemTaken":
+			now TruthVarValue entry is KyrverthItemTaken;
+		-- "KyrverthQuestHairGiven":
+			now TruthVarValue entry is KyrverthQuestHairGiven;
+		-- "KyrverthUsedArtifact":
+			now TruthVarValue entry is KyrverthUsedArtifact;
 		-- "LarissaTailed":
 			now TruthVarValue entry is LarissaTailed;
 		-- "LarissaWinged":
@@ -3737,12 +3747,16 @@ to VariableTextLoad:
 		say "Restoring Texts...";
 		read File of TextSave into the Table of GameTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTexts:
+			[
 			if there is no TextVarValue in row x of the Table of GameTexts:
 				debug at level 4 say "Skipping empty text [TextVarName in row x of the Table of GameTexts].[line break]";
 				next;
+			]
 			choose row x in the Table of GameTexts;
+			[
 			if debug is at level 10:
 				say "Restoring text [TextVarName entry].";
+			]
 			if TextVarName entry is:
 				-- "PronounChoice":
 					now PronounChoice of Player is TextVarValue entry;
@@ -3942,8 +3956,6 @@ to VariableTextLoad:
 					now ubpreg is TextVarValue entry;
 				-- "VikingKidShape":
 					now VikingKidShape is TextVarValue entry;
-				-- "weaselcolor":
-					now weaselcolor is TextVarValue entry;
 				-- "wolvloc":
 					now wolvloc is TextVarValue entry;
 				-- "wrbody":
@@ -3970,8 +3982,10 @@ to VariableTextLoad:
 					now wrtail is TextVarValue entry;
 				-- "wrTailName":
 					now wrTailName is TextVarValue entry;
+			[
 			if debug is at level 10:
 				say "DEBUG -> VarName '[TextVarName entry]' restored to '[TextVarValue entry]'.";
+			]
 	else:
 		say "No Text Save File Found!";
 
@@ -3980,12 +3994,16 @@ to VariableNumberLoad:
 		say "Restoring Numbers...";
 		read File of NumberSave into the Table of GameNumbers;
 		repeat with x running from 1 to the number of filled rows in the Table of GameNumbers:
+			[
 			if there is no numberVarValue in row x of the Table of GameNumbers:
 				debug at level 4 say "Skipping empty Number [NumberVarName in row x of the Table of GameNumbers].[line break]";
 				next;
+			]
 			choose row x in the Table of GameNumbers;
+			[
 			if debug is at level 10:
 				say "Restoring Number [NumberVarName entry].";
+			]
 			if NumberVarName entry is:
 				-- "featgained":
 					now featgained of Player is numberVarValue entry;
@@ -4013,6 +4031,8 @@ to VariableNumberLoad:
 					now AlexandraIsaacPups is numberVarValue entry;
 				-- "AlexandraFarmhandPups":
 					now AlexandraFarmhandPups is numberVarValue entry;
+				-- "AlexandraNelsonPups":
+					now AlexandraNelsonPups is numberVarValue entry;
 				-- "AlexandraCarlInteraction":
 					now AlexandraCarlInteraction is numberVarValue entry;
 				-- "AlexandraCarlPups":
@@ -4373,8 +4393,6 @@ to VariableNumberLoad:
 					now colliedefeat is numberVarValue entry;
 				-- "combat abort":
 					now combat abort is numberVarValue entry;
-				-- "compressedcock":
-					now compressedcock is numberVarValue entry;
 				-- "ConclaveKnowledge":
 					now ConclaveKnowledge is numberVarValue entry;
 				-- "ConfSvenEricInteraction":
@@ -4455,10 +4473,6 @@ to VariableNumberLoad:
 					now DiegoChanged is numberVarValue entry;
 				-- "DiegoFucked":
 					now DiegoFucked is numberVarValue entry;
-				-- "Diegotalk":
-					now Diegotalk is numberVarValue entry;
-				-- "DiegoTricked":
-					now DiegoTricked is numberVarValue entry;
 				-- "dinonest":
 					now dinonest is numberVarValue entry;
 				-- "dnfightresult":
@@ -4847,10 +4861,6 @@ to VariableNumberLoad:
 					now GorillasMemberQuestCounter is numberVarValue entry;
 				-- "GorillasRep":
 					now GorillasRep is numberVarValue entry;
-				-- "gotsword":
-					now gotsword is numberVarValue entry;
-				-- "gotwhip":
-					now gotwhip is numberVarValue entry;
 				-- "grantbitch":
 					now grantbitch is numberVarValue entry;
 				-- "grantfucked":
@@ -5169,6 +5179,26 @@ to VariableNumberLoad:
 					now KyrverthStage is numberVarValue entry;
 				-- "KyrverthTimer":
 					now KyrverthTimer is numberVarValue entry;
+				-- "Kyrverthitemget":
+					now KyrverthItemGet is NumberVarValue entry;
+				-- "KyrverthItemReturned":
+					now KyrverthItemReturned is NumberVarValue entry;
+				-- "KyrverthNutGrowth":
+					now KyrverthNutGrowth is NumberVarValue entry;
+				-- "KyrverthSpikeGrowth":
+					now KyrverthSpikeGrowth is NumberVarValue entry;
+				-- "KyrverthWingType":
+					now KyrverthWingType is NumberVarValue entry;
+				-- "KyrverthCockType":
+					now KyrverthCockType is NumberVarValue entry;
+				-- "KyrverthLockoutTimer":
+					now KyrverthLockoutTimer is NumberVarValue entry;
+				-- "KyrverthEndingTimer":
+					now KyrverthEndingTimer is NumberVarValue entry;
+				-- "KyrverthBodyChanged":
+					now KyrverthBodyChanged is NumberVarValue entry;
+				-- "KyrverthPanicWitnessed":
+					now KyrverthPanicWitnessed is NumberVarValue entry;
 				-- "labhost":
 					now labhost is numberVarValue entry;
 				-- "labtimerA":
@@ -5257,8 +5287,6 @@ to VariableNumberLoad:
 					now Lastdelaymilitary is numberVarValue entry;
 				-- "lastdenevent":
 					now lastdenevent is numberVarValue entry;
-				-- "LastDiegoTricked":
-					now LastDiegoTricked is numberVarValue entry;
 				-- "lastdobiemess":
 					now lastdobiemess is numberVarValue entry;
 				-- "LastDrinkserved":
@@ -5479,6 +5507,8 @@ to VariableNumberLoad:
 					now Lost is numberVarValue entry;
 				-- "losttoalphahusky":
 					now losttoalphahusky is numberVarValue entry;
+				-- "lostToHorseman":
+					now lostToHorseman is numberVarValue entry;
 				-- "LostToZebra":
 					now LostToZebra is numberVarValue entry;
 				-- "loversbench":
@@ -5567,8 +5597,6 @@ to VariableNumberLoad:
 					now MMP is numberVarValue entry;
 				-- "mondodgebonus":
 					now mondodgebonus is numberVarValue entry;
-				-- "monhitbonus":
-					now monhitbonus is numberVarValue entry;
 				-- "monmindbonus":
 					now monmindbonus is numberVarValue entry;
 				-- "monstercom":
@@ -5941,8 +5969,6 @@ to VariableNumberLoad:
 					now pquest is numberVarValue entry;
 				-- "pr_completion":
 					now pr_completion is numberVarValue entry;
-				-- "prankevent":
-					now prankevent is numberVarValue entry;
 				-- "pregtype":
 					now pregtype is numberVarValue entry;
 				-- "provingstallionhood":
@@ -6065,6 +6091,8 @@ to VariableNumberLoad:
 					now scufflecount is numberVarValue entry;
 				-- "sdbook":
 					now sdbook is numberVarValue entry;
+				-- "searchesUtSit":
+					now searchesUtSit is numberVarValue entry;
 				-- "SeraphisContent":
 					now SeraphisContent is numberVarValue entry;
 				-- "SeraphisNeedy":
@@ -6229,8 +6257,8 @@ to VariableNumberLoad:
 					now stiffedpayment is numberVarValue entry;
 				-- "strangebottledrink":
 					now strangebottledrink is numberVarValue entry;
-				-- "stripbarcounter":
-					now stripbarcounter is numberVarValue entry;
+[				-- "stripbarcounter":
+					now stripbarcounter is numberVarValue entry;]
 				-- "strongbacked":
 					now strongbacked is numberVarValue entry;
 				-- "struggleatt":
@@ -6609,8 +6637,10 @@ to VariableNumberLoad:
 					now zigseat is numberVarValue entry;
 				-- "zpc_Zc":
 					now zpc_Zc is numberVarValue entry;
+			[
 			if debug is at level 10:
 				say "DEBUG -> VarName '[NumberVarName entry]' restored to '[NumberVarValue entry]'.";
+			]
 	else:
 		say "No Number Save File Found!";
 
@@ -6620,8 +6650,10 @@ to VariableTruthLoad:
 		read File of TruthSave into the Table of GameTruths;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTruths:
 			choose row x in the Table of GameTruths;
+			[
 			if debug is at level 10:
 				say "Restoring Truth [TruthVarName entry].";
+			]
 			if TruthVarName entry is:
 				-- "A_Candy":
 					now A_Candy is TruthVarValue entry;
@@ -6917,8 +6949,6 @@ to VariableTruthLoad:
 					now gsd_slut is TruthVarValue entry;
 				-- "gsd_special":
 					now gsd_special is TruthVarValue entry;
-				-- "gshep_scarscene":
-					now gshep_scarscene is TruthVarValue entry;
 				-- "gshm":
 					now gshm is TruthVarValue entry;
 				-- "gsnhm":
@@ -6947,12 +6977,6 @@ to VariableTruthLoad:
 					now houndfromhell is TruthVarValue entry;
 				-- "hvoreoffer":
 					now hvoreoffer is TruthVarValue entry;
-				-- "hydraheadcheck1":
-					now hydraheadcheck1 is TruthVarValue entry;
-				-- "hydraheadcheck2":
-					now hydraheadcheck2 is TruthVarValue entry;
-				-- "hydraheadcheck3":
-					now hydraheadcheck3 is TruthVarValue entry;
 				-- "hydraheadregrowth":
 					now hydraheadregrowth is TruthVarValue entry;
 				-- "HyenaMatVore":
@@ -6995,6 +7019,14 @@ to VariableTruthLoad:
 					now kristentf3fuck is TruthVarValue entry;
 				-- "ktcockmatch":
 					now ktcockmatch is TruthVarValue entry;
+				-- "KyrverthItemStealable":
+					now KyrverthItemStealable is TruthVarValue entry;
+				-- "KyrverthItemTaken":
+					now KyrverthItemTaken is TruthVarValue entry;
+				-- "KyrverthQuestHairGiven":
+					now KyrverthQuestHairGiven is TruthVarValue entry;
+				-- "KyrverthUsedArtifact":
+					now KyrverthUsedArtifact is TruthVarValue entry;
 				-- "LarissaTailed":
 					now LarissaTailed is TruthVarValue entry;
 				-- "LarissaWinged":
@@ -7277,8 +7309,10 @@ to VariableTruthLoad:
 					now zigorhadiyaquest is TruthVarValue entry;
 				-- "zpc_inzone":
 					now zpc_inzone is TruthVarValue entry;
+			[
 			if debug is at level 10:
 				say "DEBUG -> VarName '[TruthVarName entry]' restored to '[TruthVarValue entry]'.";
+			]
 	else:
 		say "No Truth Save File Found!";
 
@@ -7288,8 +7322,10 @@ to VariableIndexedTextLoad:
 		read File of IndexedTextSave into the Table of GameIndexedTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameIndexedTexts:
 			choose row x in the Table of GameIndexedTexts;
+			[
 			if debug is at level 10:
 				say "Restoring IndexedText [IndexedTextVarName entry].";
+			]
 			if IndexedTextVarName entry is:
 				-- "bcupsize":
 					now bcupsize is IndexedTextVarValue entry;
@@ -7297,8 +7333,10 @@ to VariableIndexedTextLoad:
 					now bmagic is IndexedTextVarValue entry;
 				-- "cupsize":
 					now cupsize is IndexedTextVarValue entry;
+			[
 			if debug is at level 10:
 				say "DEBUG -> VarName '[IndexedTextVarName entry]' restored to '[IndexedTextVarValue entry]'.";
+			]
 	else:
 		say "No IndexedText Save File Found!";
 
@@ -7328,8 +7366,10 @@ to VariableTextListLoad:
 					add TextListVarValue entry to lbcompList;
 				-- "ndmlist":
 					add TextListVarValue entry to ndmList;
+			[
 			if debug is at level 10:
 				say "DEBUG -> [x]: Added '[TextListVarValue entry]' to TextList [TextListName].";
+			]
 	else:
 		say "No TextList Save File Found!";
 
@@ -7371,8 +7411,10 @@ to VariableNumberListLoad:
 					add NumberListVarValue entry to pfpcList;
 				-- "velospostmusings":
 					add NumberListVarValue entry to velospostmusings;
+			[
 			if debug is at level 10:
 				say "DEBUG -> [x]: Added '[NumberListVarValue entry]' to NumberList [NumberListName].";
+			]
 	else:
 		say "No NumberList Save File Found!";
 

@@ -12,13 +12,14 @@ Object	Name
 Hyena Bikers	"Hyena Bikers"
 
 Hyena Bikers is a situation.
-The sarea of Hyena Bikers is "High".
+ResolveFunction of Hyena Bikers is "[ResolveEvent Hyena Bikers]".
+Sarea of Hyena Bikers is "High".
 when play begins:
 	add Hyena Bikers to BadSpots of MaleList;
 	add Hyena Bikers to badspots of HermList;
 	add Hyena Bikers to BadSpots of FurryList;
 
-Instead of resolving a Hyena Bikers:
+to say ResolveEvent Hyena Bikers:
 	setmonster "Hyena Herm";
 	move Grant to Hyena Hideout;
 	say "     As you pass down one street, you see a lot of fresh graffiti sprayed onto the concrete high-rises around you. Looking it over, you see it proclaim the strength of the hyena gang. This puzzles you, as you thought you were well out of hyena territory.";
@@ -51,10 +52,9 @@ Instead of resolving a Hyena Bikers:
 			say "     Having struck down the third gang member, the others start to move in to mob you, but there's a laughing bark from the back. The hyenas stop, turning to look at their leader. He steps up, a big male with a well-built body in a leather jacket. He has a pair of sunglasses that have been modified to fit his muzzle. You ready your weapon, preparing to deal with this stronger enemy, but he speaks instead of attacking.";
 			say "     'You're pretty tough. You're certainly brave and resourceful, managing on your own up to this point. But you should really consider sticking with the hyenas instead of going solo after this. You won't be able to go it alone forever and someone like you could fight for a good position.'";
 			say "     As the first hyena who faced you tries to get back up, he gives hir a hard smack in the back of the head. The herm drops hir tire iron, which the leader kicks over to you. 'Take that, watch yourself and think on the offer.' He boots the defeated hyenas back to their bikes and the gang gets on their bikes and rides off. You are left with your strange prize and the biker's offer mulling through your mind.";
-			increase carried of tire iron by 1;
+			ItemGain tire iron by 1;
 			if hyg < 2:					[alternate progress in joining the gang]
 				now hyg is 2;
-			say "     Tire iron obtained.";
 			increase score by 5;
 			now Resolution of Hyena Bikers is 1; [fought the bikers and won]
 	now Hyena Bikers is resolved;
@@ -140,7 +140,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide you'd like to ride back with the gang as they return to the hideout. The leader nods, saying he's looking forward to getting back as well. [line break]";
 		Move player to Hyena Hideout, without printing a room description;
-		now Hyena Hideout is known;
+		AddNavPoint Hyena Hideout;
 		now Hyena Bikers is resolved;
 	else if title entry is "Abbey":
 		if bikedest is 0:
@@ -155,7 +155,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the Smith Haven Mall. He gives a rough, hyena laugh. 'Planning on doing some shopping? Be sure to take advantage of the five-finger discount sale going on.' [line break]";
 		Move player to Smith Haven Mall Lot South, without printing a room description;
-		now Smith Haven Mall Lot South is known;
+		AddNavPoint Smith Haven Mall Lot South;
 		now Hyena Bikers is resolved;
 	else if title entry is "Park":
 		if bikedest is 0:
@@ -163,7 +163,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the city park. 'Sure, I can drop you there if you'd like. Just be careful, there's a lot of weird stuff in there and don't take your eyes off the plants.' [line break][postridesex]";
 		Move player to Park Entrance, without printing a room description;
-		now Park Entrance is known;
+		AddNavPoint Park Entrance;
 		now Hyena Bikers is resolved;
 	else if title entry is "Beach":
 		if bikedest is 0:
@@ -171,7 +171,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the beach plaza. He gives a rough, hyena laugh. 'Planning on getting a tan? Just be careful, I've heard there's some spooky stuff going on there in the evening.' [line break]";
 		Move player to Beach Plaza, without printing a room description;
-		now Beach Plaza is known;
+		AddNavPoint Beach Plaza;
 		now Hyena Bikers is resolved;
 		[now Beach Area is resolved;] [removes the random event for discovering the beach]
 	else if title entry is "Hospital":
@@ -180,7 +180,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the City Hospital. He seems a little nervous at that. 'Just be careful in there, I've heard tales of strange monsters and the ex-staff capturing people and dragging them back for experiments. We should be safe enough in the parking lot together, but you'll be on your own after I drop you off.' [line break]";
 		Move player to City Hospital, without printing a room description;
-		now City Hospital is known;
+		AddNavPoint City Hospital;
 		now Hyena Bikers is resolved;
 	else if title entry is "State Fair":
 		if bikedest is 0:
@@ -188,12 +188,12 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the State Fair. He gives a rough, hyena laugh. 'Looking for a little fun at the carnival? I've got a fun ride for you right here,' he jokes, giving his ample package a squeeze. [line break]";
 		Move player to State fair, without printing a room description;
-		now State fair is known;
+		AddNavPoint State Fair;
 		now Hyena Bikers is resolved;
 	else if title entry is "High Rise District":
 		now ridemessage is "     You decide to get dropped off in the High Rise District. He gives a rough, hyena laugh. 'Looking to head back where we first met? Didn't know you were so sentimental,' he jokes, though he has a tender smile as he helps you mount up. [line break][postridesex]";
 		Move player to Entrance to the High Rise District, without printing a room description;
-		now Entrance to the High Rise District is known;
+		AddNavPoint Entrance to the High Rise District;
 		now Hyena Bikers is resolved;
 	else if title entry is "Red Light District":
 		if bikedest is 0:
@@ -201,7 +201,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off in the red light district. He seems a little nervous at that. 'Just be careful in there. With the whole city gone sex-crazy, that place has got to be the worst of all. Watch your ass or something'll be humping it.' He's willing to drop you off at the entrance, but won't risk his riders by venturing any further in. [line break]";
 		Move player to Entrance to the Red Light District, without printing a room description;
-		now Entrance to the Red Light District is known;
+		AddNavPoint Entrance to the Red Light District;
 		now Hyena Bikers is resolved;
 	else if title entry is "The Stables":
 		if bikedest is 0:
@@ -216,7 +216,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the Capitol Building. He gives a rough, hyena laugh. 'Are you looking for some help from the governor? Ain't gonna happen. That place is all torn up. Some kinda volcano or meteor strike or something has made a mess of it. I'll drop you off as close as I can, but don't expect to find much.'[line break]";
 		Move player to Approaching the Capitol Building, without printing a room description;
-		now Approaching the Capitol Building is known;
+		AddNavPoint Approaching the Capitol Building;
 		now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
 		now Hyena Bikers is resolved;
 	else if title entry is "Power Plant":
@@ -225,7 +225,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the city's power plant. If he wonders why you want to go there, he holds his tongue. [line break]";
 		Move player to Plant Overview, without printing a room description;
-		now Plant Overview is known;
+		AddNavPoint Plant Overview;
 		now Ravaged Power Plant is resolved; [removes the random event for discovering the power plant]
 		now Hyena Bikers is resolved;
 	else if title entry is "College Campus":
@@ -234,7 +234,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the city's college campus. 'We kept our distance from that spot. It doesn't look like those jocks and their steroids reacted well to this whole mess. You be careful.' [line break]";
 		Move player to College Campus, without printing a room description;
-		now College Campus is known;
+		AddNavPoint College Campus;
 		now Reaching the College is resolved; [removes the random event for discovering the College Campus]
 		now Hyena Bikers is resolved;
 	else if title entry is "Warehouse District":
@@ -243,7 +243,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the warehouse district along the waterfront. 'Good thinking, casing out those warehouses for stuff for the gang.' [line break]";
 		Move player to Warehouse District, without printing a room description;
-		now Warehouse District is known;
+		AddNavPoint Warehouse District;
 		now Hyena Bikers is resolved;
 	else if title entry is "Stay":
 		now ridemessage is "     You decide to decline the ride, telling him that you still have some searching to do around here. He nods and wishes you well, adding that he hopes to see you back at the gang hideout soon.";
@@ -256,7 +256,7 @@ to say bikeattack:
 	[dodge three times - 10 dmg each]
 	say "[line break]     The hyena bikers laugh derisively as they circle around you as you try to find a way out of this mess. Suddenly one veers out and tries to charge you on hir bike.";
 	[WaitLineBreak]
-	let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
+	let the bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 12: ";
 	if dice plus bonus > 12:
@@ -410,14 +410,7 @@ to say bikerbitchsex:
 
 Section 4 - Tire Iron
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"tire iron"	"A heavy tire iron - a good, cliché makeshift weapon."	1	tire iron
-
-tire iron is an armament. It is part of the player. It has a weapon "[one of]your tire iron[or]the tire iron[or]your metal tire iron[at random]". The weapon damage of tire iron is 6. The weapon type of tire iron is "Melee". It is not temporary.
-
-instead of sniffing tire iron:
-	say "The tire iron smells of metal and motor oil.";
+[tire iron moved to Core Mechanics/Weapons.i7x]
 
 
 Section 5 - Grant
@@ -427,8 +420,8 @@ object	name
 Grant	"Grant"
 
 Grant is a man.
-The description of Grant is "[grantdesc]".
-The conversation of Grant is { "Cool!" }.
+Description of Grant is "[grantdesc]".
+Conversation of Grant is { "Cool!" }.
 granttalk is a number that varies.
 grantbitch is a number that varies.
 grantsex is a number that varies.

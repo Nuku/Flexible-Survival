@@ -17,15 +17,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Fox Adventurer	"Fox Adventurer"
 
-Fox Adventurer is a situation. The level of Fox Adventurer is 5.
-The sarea of Fox Adventurer is "Outside".
+Fox Adventurer is a situation.
+ResolveFunction of Fox Adventurer is "[ResolveEvent Fox Adventurer]". The level of Fox Adventurer is 5.
+Sarea of Fox Adventurer is "Outside".
 
 when play begins:
 	add Fox Adventurer to BadSpots of FemaleList;
 	add Fox Adventurer to badspots of HermList;
 	add Fox Adventurer to BadSpots of FurryList;
 
-Instead of resolving Fox Adventurer:
+to say ResolveEvent Fox Adventurer:
 	if HP of Solstice is 0:
 		say "     Traveling the city streets, you take a moment to glance behind you and, as you return your eyes to your path, you find it blocked by another figure. Before you is a female silver fox with several fluffy tails. She's dressed rather more unusually than most others you've met. Her red, sleeveless top is tight over her breasts and she has a pair of khaki shorts with some pouches belted to it. She has a pair of goggles on her head, worn resting above her brow. Slung over her back is a backpack. Her appearance, save for her sexy, vulpine nature would lead you to imagine her as a character in an adventure movie or video game, perhaps raiding tombs or hunting relics. Aside from her paw resting on the machete strapped to her hip, she doesn't seem aggressive.";
 		WaitLineBreak;
@@ -40,7 +41,7 @@ Instead of resolving Fox Adventurer:
 		say "     Managing to find your way through the chaos of the city, you make your way back to the intersection where you first met the vulpine adventurer. True to her word, she steps out from one of the alleyways as you arrive. 'Did you get it?' she asks quickly";
 		if Crow Artifact is owned:
 			say ". Nodding, you slip off your pack and remove the carving. She smiles happily and snatches it out of your hand, looking it over with a critical eye. 'Yes! I've got it all. I've finally struck it big this time!' she says with elation in her voice. She puts a paw over her mouth, suddenly wary that her raised voice will call undo attention. Grabbing your wrist, she leads you between a few buildings. 'You can call me Solstice by the way. I've been in the treasure hunting biz for a while, but this'll be my best find yet, thanks to you.' She slips into a small, vacant shop and shuts the boarded up door behind you. It looks like it was closed down long before the outbreak, making it a fairly safe place to hide out.";
-			delete Crow Artifact;
+			ItemLoss Crow Artifact by 1;
 			WaitLineBreak;
 			say "     Setting the onyx carving onto a table, she slips off her own pack and pulls out two cloth-wrapped bundles. Unwrapping them reveals two more onyx carvings, much like the head, but representing the upper and lower body of a crow. 'Those archaeologists who found this didn't know the first thing about what they were talking about. The head's not part of a staff, it's part of a statuary. I traced some clues and found the Scythian tombs where the other two sections were held. The last had been raided by the ancient Greeks, which is how it ended up in Minos's treasure room. And now, if I... can... just...' she says, focusing on the middle piece, turning some subtle mechanism hidden in the stone. 'There!' she says as short pegs pop from the top and bottom of it so it can be fitted to the others. 'The head alone might be a curiosity, but the whole statue will be worth a whole lot mo-wwwahhhhh!'";
 			WaitLineBreak;
@@ -73,10 +74,11 @@ Instead of resolving Fox Adventurer:
 				increase score by 25;
 			else:
 				say "     Feeling rather uncertain about having sex with the recently-transformed Solstice, you quickly change the subject, pointing out that something has to be done about the statue. She seems a little disappointed, but nods and gets up. Using the cloths she had them bundled in, you gather up each piece and wrap them up again. While the vulpogryph doesn't have plans to put it back together, you both certainly agree that you can't just leave it lying around for someone else to find and reassemble. That done, you remind her about your payment and take the food and water from her. It's not much, but it'll certainly help. She also passes you a small voucher card labelled [']50 credits['], saying it's some kind of new money.";
-				say "     Bottle of water, food and 50 freecred obtained.";
+				say "     [bold type]You gain 500 freecreds![roman type]";
+				LineBreak;
 				increase freecred by 50;
-				increase carried of water bottle by 1;
-				increase carried of food by 1;
+				ItemGain water bottle by 1;
+				ItemGain food by 1;
 				increase score by 25;
 				WaitLineBreak;
 				say "     Before you head out, she gives you a big hug, folding her feathery wings around you. She runs her paws along your back, scritching under your backpack while kissing you. As she lets you go, she gives you a little nip with her beak on your neck. Solstice adds a pat on your behind, saying that she'll see you again soon. Walking off, you go a short distance before you feel a tingle start to spread through you. Feeling the encroaching change, you run your hands over your face and neck, looking for some fluid or break where the nanites might be affecting you, but can't find one. It's not until after the change has run its course that you find it, one of the vulpogryph's feathers having gotten stuck under your backpack.";
@@ -92,18 +94,19 @@ Table of GameEventIDs (continued)
 Object	Name
 Onyx Crow	"Onyx Crow"
 
-Onyx Crow is a situation. The level of Onyx Crow is 5.
+Onyx Crow is a situation.
+ResolveFunction of Onyx Crow is "[ResolveEvent Onyx Crow]". The level of Onyx Crow is 5.
 Prereq1 of Onyx Crow is Fox Adventurer.
 Prereq1Resolution of Onyx Crow is { 1 }.
 Prereq1ResolvedMandatory of Onyx Crow is false.
-The sarea of Onyx Crow is "Museum".
+Sarea of Onyx Crow is "Museum".
 
 when play begins:
 	add Onyx Crow to BadSpots of FemaleList;
 	add Onyx Crow to badspots of HermList;
 	add Onyx Crow to BadSpots of FurryList;
 
-Instead of resolving Onyx Crow:
+to say ResolveEvent Onyx Crow:
 	if HP of Solstice is not 1:	[should not come up, but just in case, we have this.]
 		say "     You find yourself in the Greek Artifacts wing, but are interrupted by the raucous arrival of a large band of Satyrs. Laden with wine and a few nymphs for them to share, they start up an orgy of drinking and sex. There are far too many of them to fight at one time and while it is tempting to join into their debauchery, you manage to pull yourself away lest you lose yourself to their drunken ways.";
 		now Onyx Crow is resolved;
@@ -125,7 +128,7 @@ Instead of resolving Onyx Crow:
 			WaitLineBreak;
 			say "     Investigating further, you look over at the museum's description of this piece. It goes on to talk about it being found in a collection of Greek treasures. '...discovered by so-and-so... treasure vault... king of Crete in the year blah-blah-blah...' The only interesting detail comes when it talks about how the Onyx Crow was probably the headpiece to a staff or scepter and likely of ceremonial significance. Examining the carving, you do find that there is a square hole carved into the underside, which the plaque notes historians believe was used to fit it into place on the handle, but all that remains is the headpiece.";
 			say "     While this trip to the museum has been interesting, you'd best just bring your find back to the vixen adventurer to receive your reward. You tuck the artifact into the bottom of your pack and leave the area, not wanting to get caught by Valerie in here with stolen goods.";
-			increase carried of Crow Artifact by 1;
+			ItemGain Crow Artifact by 1;
 			increase score by 10;
 			now HP of Solstice is 2;
 			now Resolution of Onyx Crow is 1; [won and got the artifact]
@@ -136,7 +139,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Crow Artifact"	"     The black onyx carving is shaped like a crow's head. It is decorated with golden eyes and an ornate golden band around its base."	3	Crow Artifact
 
-Crow Artifact is a grab object. It is part of the player. It is not temporary.
+Crow Artifact is a grab object. It is not temporary.
 
 instead of using Crow Artifact:
 	say "     You probably shouldn't be fiddling around with an expensive, and stolen, artifact. You'd best bring it back to that vulpine adventurer.";
@@ -152,7 +155,7 @@ an everyturn rule:
 
 an everyturn rule:
 	if ( HP of Solstice is 3 or HP of Solstice is 4 ) and Solstice is in Makeshift Rec Room and the player is in the Grey Abbey Library:
-		say "     Returning to the central room of the library, you are startled to find a new person casually waiting for you. Solstice is here, leaning against one of the bookshelves, glancing through a book. The vulpogryph smiles and tucks the book back on the shelf as you come striding over[if HP of Fang is 1 or HP of Fang is 2]. Sparing a quick glance to Fang, who seems as surprised to find the intruder here, the guard wolf dips his ears and slinks back, clearly having failed in his guard duties somehow[else if HP of Fang is 3 or hp of Fang is 4 or hp of Fang is 5]. Fang growls a little from his post at the door, clearly upset that this intruder somehow managed to get past him unnoticed[end if].";
+		say "     Returning to the central room of the library, you are startled to find a new person casually waiting for you. Solstice is here, leaning against one of the bookshelves, glancing through a book. The vulpogryph smiles and tucks the book back on the shelf as you come striding over[if HP of Fang is 1 or HP of Fang is 2]. Sparing a quick glance to Fang, who seems as surprised to find the intruder here, the guard wolf dips his ears and slinks back, clearly having failed in his guard duties somehow[else if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 5]. Fang growls a little from his post at the door, clearly upset that this intruder somehow managed to get past him unnoticed[end if].";
 		say "     'Hey there. Pretty nice setup [if ( number of booked people + number of bunkered people ) > 2]you and your pals have[else]you've[end if] got going here. Not much interest to the critters out there and a reinforced bunker in case things get really bad. Definitely need to get some more supplies for that, though. Things got rather hectic back at my old place, so I figured I could move in here with you, sweetie.' She runs a taloned paw along your side.";
 		if HP of Solstice is 3:
 			say "     Still upset with her about the feather, you push her hand away. 'What? Oh, I'm so sorry, hon. I didn't mean for anything like that to happen. It must've fallen out,' she says apologetically[if the player is partvg]. 'It certainly looks good on you though,' she adds with a grin and another stroke to your altered body[end if]. You calm down, accepting that it could very well have been an accident.";
@@ -167,8 +170,8 @@ object	name
 Solstice	"Solstice"
 
 Solstice is a woman.
-The description of Solstice is "[solsticedesc]".
-The conversation of Solstice is { "Treasure!" }.
+Description of Solstice is "[solsticedesc]".
+Conversation of Solstice is { "Treasure!" }.
 
 to say solsticedesc:
 	say "     Transformed by the strange artifact you helped her recover, Solstice has become an unusual, gryphon-like creature. Her upper body is decidedly avian in nature, with black feathers and a crow's head and beak. Her eyes are sharp and have a lustful glint as they look at you. She has a pair of broad, black wings attached to her back as well. Her paws resemble bird-like talons. There are some hints of her previous, vulpine nature as well, with foxish ears and mammalian breasts filling her red shirt. Her lower body is largely unchanged and is that of a sexy, multi-tailed vixen, though those tails are now covered in black plumage. Her fur is a silvery gray in stark contrast to her darker feathers. Along with her red, sleeveless top, the vulpogryph wears a pair of khaki shorts with attached pouches. She's even set up her bedroll in one of the reading rooms to the side of the library and is keeping her small backpack there as well.";
@@ -202,7 +205,7 @@ carry out lessontiming:
 		now lessontime is 1;
 		say "     At your offer to hear some of her stories, she smiles leads you off to the side room where she's set up her bedroll. Sitting side by side on it, she snuggles you close, enfolding you in her wings. As she tells you about the time she [one of]went in search of Incan gold[or]excavated a Mayan temple[or]searched for a lost city in the African jungle[or]evaded the Chinese police while hunting for an ancient temple[or]traveled across Europe in search of Roman treasures[or]wandered the Arabian deserts in search of treasure[or]followed a map to undersea treasure[or]fought villainous raiders trying to steal her prize[or]circumventing traps and puzzles centuries old in a lost tomb[in random order], her paws alternate between re-enacting the adventure and fondling you. The story is also broken up by nuzzles and nips from her pointed beak. While the story ends with the adventurer [one of]snagging a golden treasure[or]barely making it out alive[or]with some minor artifact[or]making an archaeological discovery, but gaining no actual treasure[or]escaping as the whole place collapses[or]holding a handful of gemstones and jewelry[or]finding a few trinkets to barely meet her expenses[purely at random], you do get the feeling that it was at least a little exaggerated. Regardless, you do find yourself growing closer to the affectionate woman";
 		if perception of Player < 20:
-			let bonus be (( the intelligence of the player minus 10 ) divided by 2);
+			let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			increase diceroll by bonus;
 			if diceroll > 10:

@@ -18,10 +18,10 @@ to say losetoSugarGlider:
 			say "     Despite yourself, you can't help but squirm and laugh at the frantic tickling. In the throes of laughter, you can't resist as she paws through your stuff with one paw while the other and her tail keep you giggling";
 			if carried of chips > 0:
 				say ". Finding your stash of snacks, she swipes some with an exaggerated 'Ah-ha!' and stashes it away. Having claimed her prize, she turns her attention to you now, eager to celebrate her find.[run paragraph on]";
-				decrease carried of chips by 1;
+				ItemLoss chips by 1;
 			else if carried of soda > 0:
 				say ". Finding your stash of snacks empty, she instead turns her attention to your pop and swipes one. 'Well, since you've not got any candy for me, I guess I'll take this instead.' She gives your cheek another lick. 'Oh, don't worry, hon. I'll stop by later and trade it back for some sweet, sweet candy.' That said, she turns her attention to you now, eager to celebrate her find.[run paragraph on]";
-				decrease carried of soda by 1;
+				ItemLoss soda by 1;
 			else:
 				say ". Finding your stash of snacks empty, she mock-pouts and grinds her twin cunts against your leg. 'Nothing for me at all? How about some sweet sex then, you [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random]?' she says with a giggle as she turns her attention back to your body.[run paragraph on]";
 	else:
@@ -58,10 +58,10 @@ to say losetoSugarGlider:
 	if ( BodyName of Player is "Sugar Ferret" or FaceName of Player is "Sugar Ferret" ) and HP of Player > 0:	[steal after]
 		if carried of chips > 0:
 			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while you were having sweet, syrupy sex together. Looking towards her departing figure, you see her turn back and wave tauntingly with the snacks she's stolen tucked into her pouch. She giggles and gives her tail a teasing flick as she rushes away, making her escape.";
-			decrease carried of chips by 1;
+			ItemLoss chips by 1;
 		else if carried of soda > 0:
 			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while you were having sweet, syrupy sex together. Looking towards her departing figure, you see her turn back and wave tauntingly with the soda she's stolen tucked into her pouch. She giggles and gives her tail a teasing flick as she rushes away, making her escape.";
-			decrease carried of soda by 1;
+			ItemLoss soda by 1;
 		else if a random chance of 1 in 3 succeeds and sugarglidernote is false:
 			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while you were having sweet, syrupy sex together. It doesn't seem that anything's been taken, but there is a note left there. 'Next time, make sure there's something for me to swipe, you stupid [one of]ferret[or]tube rat[or]fizz head[or]soda jerk[at random]. XOXOXO.' It's even got a pink, sugary imprint of her lips on it. Looking towards her departing figure, you see her turn back and wave with a giggle before making her escape.";
 			now sugarglidernote is true;
@@ -126,8 +126,8 @@ to say SugarGliderdesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -181,6 +181,9 @@ When Play begins:
 	now libido entry is 65; [ Target libido the infection will rise towards. ]
 	now loot entry is "crushed candies"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 33; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]malleable[or]slender[or]lithe[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "marsupial"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -195,7 +198,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -321,9 +324,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "crushed candies"	"A small pile of broken bits of candy."	0	crushed candies
 
-crushed candies is a grab object. crushed candies is infectious. The strain of crushed candies is "Sugar Glider".
+crushed candies is a grab object. crushed candies is infectious. Strain of crushed candies is "Sugar Glider".
 
-The usedesc of crushed candies is "[crushedcandiesuse]";
+Usedesc of crushed candies is "[crushedcandiesuse]";
 
 to say crushedcandiesuse:
 	say "     Pouring the crumbled candy into your mouth, you crunch away happily at the sweet treat. As you finish your snack you can't help but feel a little giddy, thanks to the burst of sugar induced energy";

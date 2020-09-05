@@ -34,14 +34,15 @@ Object	Name
 Another Doctor	"Another Doctor"
 
 Another Doctor is a situation.
-The sarea of Another Doctor is "Hospital".
+ResolveFunction of Another Doctor is "[ResolveEvent Another Doctor]".
+Sarea of Another Doctor is "Hospital".
 when play begins:
 	add Another Doctor to badspots of HermList;
 	add Another Doctor to BadSpots of FemaleList;
 	add Another Doctor to BadSpots of MaleList;
 	add Another Doctor to BadSpots of FurryList;
 
-Instead of resolving a Another Doctor:
+to say ResolveEvent Another Doctor:
 	say "     While searching through some patient rooms, you hear a noise behind you and freeze. At the door, you spot a large and womanly skunk in a doctor's coat and a short skirt. Her limited clothes can do nothing to contain her considerable assets. Her breasts are each larger than her head and prominently display their plump, round nipples. These melons are so big that she doesn't even bother to try closing the white coat, which you doubt could even be managed. Further down, her hips are very wide and womanly and her thighs are round and meaty to match, all straining the poor skirt's attempt to cover them. But what the skirt completely fails to cover are the skunk woman's huge hanging maleness and oversized balls. The latter are each nearly as large as her breasts and the former hangs down just as low despite its mostly flaccid state.";
 	say "     When you realize that you've been staring at the skunk for some time, you notice that she's been smiling back at you, shifting her position to show off her luscious form all the more. She has a bit of a masculine face, but with full, plump lips with a bit of a predatory smile. Her black hair has a slight wave to it and is kept short at her back. The lighter fur on her skunk pattern is a pale gray and even her darker sections are more a charcoal color than pure black. The only white you can see on her is her pearly white teeth and in her eyes, you realize. Even her irises are an ash gray. This leads you to look again, noting the completely colorless nature of this skunk. The exposed flesh of her nipples and cock are gray and her lips are either naturally black or glossed black.";
 	WaitLineBreak;
@@ -62,7 +63,7 @@ Instead of resolving a Another Doctor:
 		WaitLineBreak;
 		say "     Having given you the limited pass card and some directions, the hyperskunk woman gives you another grin before heading out, her tail giving a broad swish as she sways her ample hips. 'Please don't keep me waiting too long, my dear. I could just about burst with excitement,' she says teasingly as she looks back at you over her shoulder. Still a little stunned by voluptuous skunk woman, it takes you a few moments to recover, grab your stuff and head out. As you debate going to visit her to see what she has in mind, you look over the pass card. At least this will make it a little easier to get around the hospital.";
 		now Resolution of Another Doctor is 3; [Wereraptor infection]
-	now Psych Department is known;
+	AddNavPoint Psych Department;
 	now HP of Doctor Moffatt is 1;
 	increase hospnav by 1;
 	say "[hospprogress]";
@@ -77,7 +78,7 @@ Object	Name
 Psych Department	"Psych Department"
 
 Psych Department is a room. It is fasttravel. It is private.
-The description of Psych Department is "[psychdesc]".
+Description of Psych Department is "[psychdesc]".
 
 to say psychdesc:
 	say "     The office of Dr. Moffatt in the Psychology department has been kept rather tidy though you're quite certain it's changed since the outbreak. Aside from the usual desk, filing cabinet and assorted accoutrements, there are a few straight jackets left strewn around, a colorful array of sex toys standing upright on her desk and the remains of sticky stains on the floor and walls. Speaking of the walls, there are several colorful crayon drawings of what must be the mephit doctor over the white paint. Were it not for the clear emphasis on the skunk's giant assets, you'd think them drawn by a child. There are a few ornamental skunks on her desk as well, though of a more mundane form than the hyper-sexualized scrawls.";
@@ -88,19 +89,19 @@ to say psychfirstarrival:
 	if XP of Doctor Moffatt is 2: [if the player met Moffatt as a skunk or a permanent infection]
 		say "     The doctor smiles at you as you arrive. 'Excellent. I was just thinking about you,' she says as she gets up, showing that her cock's actually mostly hard right now, raising up the front of her skirt to give an even better view of her maleness. 'I hope this means you've decided to help me with my little experiment. I simply want to observe the effects of the infection and transformation to one's psyche over time. As you seem more coherent and sane than most, you should be able to better articulate what's happening to you. Most who become infected change rather rapidly and become rather fixed in their newly obtained form.'";
 		say "     'Considering the fact that your latest physical transformations make you unsuitable for my main work, I want to work with you through hypnosis,' the doctor explains. 'I would like to put you under trance, and watch the effects of implemented suggestions on a nanite infected body. Do you feel up to the task? Just ask me about [bold type]hypnosis[roman type] when you are ready to start,' she says, as she passes you a bottle of water. 'The water's for you. My way of saying thanks for helping me out,' she says with a smile.";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 	else:
 		say "     The doctor smiles at you as you arrive. 'Excellent. I was just thinking about you,' she says as she gets up, showing that her cock's actually mostly hard right now, raising up the front of her skirt to give an even better view of her maleness. 'I hope this means you've decided to help me with my little experiment. I simply want to observe the effects of the infection and transformation to one's psyche over time. As you seem more coherent and sane than most, you should be able to better articulate what's happening to you. Most who become infected change rather rapidly and become rather fixed in their newly obtained form.'";
 		if skunkbeaststatus is 1:
 			say "     'But it seems now that you've since become too tainted by those rather mundane forest skunks. You are no longer a suitable candidate for my testing.' She sighs and teases one of her nipples. 'You could provide help in another form, though. Hypnosis.' You look at the doctor with intrigued eyes. 'I would like to put you under trance, and watch the effects of implemented suggestions on a nanite infected body. Do you feel up to the task? Just ask me about [bold type]hypnosis[roman type] when you are ready to start,' she says, as she passes you a bottle of water. 'The water's for you. My way of saying thanks for helping me out,' she says with a smile.";
 			now XP of doctor moffatt is 2;
 			now HP of doctor moffatt is 2;
-			increase carried of water bottle by 1;
+			ItemGain water bottle by 1;
 		else if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
 			say "     'But it seems you've gone and become too tainted by some strangely persistent infection since I last saw you. It keeps you from being a suitable candidate at all.' She sighs and teases one of her nipples. 'You could provide help in another form, though. Hypnosis.' You look at the doctor with intrigued eyes. 'I would like to put you under trance, and watch the effects of implemented suggestions on a nanite infected body. Do you feel up to the task? Just ask me about [bold type]hypnosis[roman type] when you are ready to start,' she says, as she passes you a bottle of water. 'The water's for you. My way of saying thanks for helping me out,' she says with a smile.";
 			now XP of doctor moffatt is 2;
 			now HP of doctor moffatt is 2;
-			increase carried of water bottle by 1;
+			ItemGain water bottle by 1;
 		else:
 			say "     'It seems there's at least some psychological component to how nanite infection manifests itself. Or, at least, it can be a contributing factor in some cases. Take myself for instance,' she says, running her gloved paws over her breasts and cock with clear pleasure. 'My infection seems to have imprinted on my skunk decorations and a few of my own personal kinks. Yet others find their minds and sexual desires changed utterly by the infection instead.'";
 			if wrcursestatus >= 3 and wrcursestatus < 7:
@@ -113,12 +114,12 @@ to say psychfirstarrival:
 			say "     ([link]N[as]Hypnosis[end link]) I am curious about this hypnosis thing.";
 			if Player consents:
 				say "     'Excellent. Here you go,' she says, passing you a glass sample jar and a bottle of water. 'Before we can get started, I'd like you to collect a sample from one of those skunk girls in the [bold type]forest[roman type]. They shouldn't be much trouble for you, I'm sure,' she says with a smile. 'And the water's for you. My way of saying thanks for helping me out,' she says with a smile.";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1;
 				now XP of Doctor Moffatt is 1;
 				now HP of doctor moffatt is 2;
 			else:
 				say "     'Excellent. Just ask me about [bold type]hypnosis[roman type] when you are ready to start,' she says, as she passes you a bottle of water. 'The water's for you. My way of saying thanks for helping me out,' she says with a smile.";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1;
 				now XP of Doctor Moffatt is 2;
 				now HP of doctor moffatt is 2;
 		now battleground is "void";
@@ -134,8 +135,8 @@ object	name
 Doctor Moffatt	"Doctor Moffatt"
 
 Doctor Moffatt is a person. Doctor Moffatt is in Psych Department.
-The description of Doctor Moffatt is "[drmoffattdesc]".
-The conversation of Doctor Moffatt is { "..." }.
+Description of Doctor Moffatt is "[drmoffattdesc]".
+Conversation of Doctor Moffatt is { "..." }.
 The icon of Doctor Moffatt is figure of DrMoffatt2_icon.
 wrcurseMoffatt is a number that varies.
 
@@ -213,7 +214,7 @@ to say skunkPathDialogue:
 	else if lust of Doctor Moffatt is 1:
 		say "     'You're overdue for your next session. We should get back to that right away. You probably have a lot of stories about what you've seen and done - and who you've done - to tell me all about,' she says with a grin. 'Please let me know when you're ready to get started.'";
 	else if HP of Doctor Moffatt is 2 and Skunk Goo is owned:
-		delete Skunk Goo;
+		ItemLoss Skunk Goo by 1;
 		say "     'You have my sample for me already?' she says with a happy smile before leaning over to give you a peck on the cheek. 'You're so sweet,' she purrs. 'Mmm... we should be able to get started shortly. I just need a few moments to set things up in here,' she adds, giving you a wink and a swish of her wide hips before stepping out momentarily.";
 		say "     While she's out, you take the opportunity to look around the room quickly. You scan her notes, finding a mix of musings about the mental and arousing effects of the infection and notes about some of the weasel patients being cared for in the psych ward. Mixed in with them are some more crayon drawings, presumably by the mental patients. They are a mix of distorted scribbles showing some of the creatures you've seen out in the city and rather lewd pictures of vixens, owls and a rather familiarly big-chested skunk.";
 		say "     With nothing really untowards there, you check out a few of the skunk figurines. There's about ten or so of them set out around the room. Most are tiny things, though there's a couple of larger ones. Picking one up, you look at the rather pudgy, cartoonish skunk with a red bow and a sappy smile. As you're checking the underside of the porcelain figure, you hear a cough behind you. 'If you wanted to check under my skunk's tail,' she says with a grin, 'you just needed to ask.' She takes the figure from you and sets it back down, rubbing her ample bosom against you as she does.";

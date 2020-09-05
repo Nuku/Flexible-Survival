@@ -1,6 +1,6 @@
 Version 1 of Cadmea by Prometheus begins here.
 
-[ hp of Cadmea - relationship variable with the player       ]
+[ HP of Cadmea - relationship variable with the player       ]
 [   0: not met                                               ]
 [   1: Introduced by Cynthia                                 ]
 [   2: Had tea with                                          ]
@@ -27,22 +27,29 @@ Table of GameCharacterIDs (continued)
 object	name
 Cadmea	"Cadmea"
 
-Cadmea is a woman. The hp of Cadmea is usually 0.
-[Physical details as of game start]
+Cadmea is a woman.
 ScaleValue of Cadmea is 3. [human sized]
-SleepRhythm of Cadmea is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Cadmea is 0. [no cock]
-Cock Length of Cadmea is 0. [no cock length]
-Ball Size of Cadmea is 0. [no ball size]
-Ball Count of Cadmea is 0. [no balls]
-Cunt Count of Cadmea is 1. [1 pussy]
-Cunt Depth of Cadmea is 10. [Considerable Capacity]
-Cunt Tightness of Cadmea is 5. [Considerable Capacity]
-Nipple Count of Cadmea is 2. [2 nipples]
-Breast Size of Cadmea is 2. [B cup at the start]
+Body Weight of Cadmea is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Cadmea is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Cadmea is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Cadmea is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Cadmea is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Cadmea is 6. [length in inches]
+Breast Size of Cadmea is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Cadmea is 2. [count of nipples]
+Asshole Depth of Cadmea is 12. [inches deep for anal fucking]
+Asshole Tightness of Cadmea is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Cadmea is 0. [number of cocks]
+Cock Girth of Cadmea is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Cadmea is 0. [Length in Inches]
+Ball Count of Cadmea is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Cadmea is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Cadmea is 1. [number of cunts]
+Cunt Depth of Cadmea is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Cadmea is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Cadmea is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Cadmea is true. [can take oversized members without pain]
-Sterile of Cadmea is false.
 PlayerMet of Cadmea is false.
 PlayerRomanced of Cadmea is false.
 PlayerFriended of Cadmea is false.
@@ -53,14 +60,16 @@ Virgin of Cadmea is false.
 AnalVirgin of Cadmea is false.
 PenileVirgin of Cadmea is false.
 SexuallyExperienced of Cadmea is true.
+TwistedCapacity of Cadmea is true. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Cadmea is false. [steriles can't knock people up]
 MainInfection of Cadmea is "Kitsune".
-The description of Cadmea is "[CadmeaDesc]".
-The conversation of Cadmea is { "Interesting" }.
+Description of Cadmea is "[CadmeaDesc]".
+Conversation of Cadmea is { "Interesting" }.
 The scent of Cadmea is "     The sleek kitsune smells of an amalgamation of floral scents, none of which you can place as being recognizable.".
 
 to say CadmeaDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Cadmea] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Cadmea] <- DEBUG[line break]";
 	else:
 		say "     Cadmea is a svelte white-furred kitsune with seven fluffy tails, suggesting significant power, should she choose to unleash it. The color of her eyes changes with her mood: red while angry, blue while fearful, and lilac most of the time. Wearing a short tunic-like garb that maintains her decency, it seems to be manifested by willpower as when she is distracted, it seems to disappear. Her C cup breasts are covered in fine, short white fur, similar to the fur on her groin, vulpine face, hands, and feet, while the rest of her body has slightly longer fur.";
 		say "     The female kitsune is a cheerful and mischievous person with a good heart. While she happily carries out good-natured trickery, should the need arise, she will fiercely guard those she views as vulnerable using tooth, claw, and magic. That said, combat is not her forte, forcing her to rely on illusions, a skill that she is more adept at. She catches you observing her and levitates, spreading her tails out like a star behind her. Truly a magnificent being.";
@@ -80,15 +89,16 @@ Object	Name
 Dual Leadership	"Dual Leadership"
 
 Dual Leadership is a situation.
+ResolveFunction of Dual Leadership is "[ResolveEvent Dual Leadership]".
 Prereq1 of Dual Leadership is Den of the Pack.
 Prereq1Resolution of Dual Leadership is { 1 }.
 The level of Dual Leadership is 0.
-The sarea of Dual Leadership is "Nowhere".
+Sarea of Dual Leadership is "Nowhere".
 
-after going to Sanctuary Hotel Lobby while (Dual Leadership is active and Dual Leadership is not resolved and hp of Cadmea is 1 and a random chance of 1 in 2 succeeds):
+after going to Sanctuary Hotel Lobby while (Dual Leadership is active and Dual Leadership is not resolved and HP of Cadmea is 1 and a random chance of 1 in 2 succeeds):
 	DualLeadershipEvent;
 
-Instead of resolving Dual Leadership:
+to say ResolveEvent Dual Leadership:
 	DualLeadershipEvent;
 
 to DualLeadershipEvent:
@@ -113,8 +123,8 @@ to DualLeadershipEvent:
 	else: [Be good]
 		say "     You don't want to make a bad impression on them when they barely know you. With Cadmea capable of magic, and Sirius able to walk away from hand to hand combat with a wyvern, making them your enemy seems like a poor life choice. You return to the lobby without succumbing to temptation.";
 		now Resolution of Dual Leadership is 2; [Left Cake]
-	now hp of Cadmea is 2;
-	now hp of Sirius is 1;
+	now HP of Cadmea is 2;
+	now HP of Sirius is 1;
 	[change the up exit of Sanctuary Hotel Lobby to Sanctuary Conference Room; [connecting the location to the travel room]
 	change the down exit of Sanctuary Conference Room to Sanctuary Hotel Lobby; [connecting the location to the travel room]]
 	now Dual Leadership is resolved;

@@ -13,14 +13,71 @@ debugactive is a number that varies.[@Tag:NotSaved] debugactive is 0.
 debuglevel is a number that varies.[@Tag:NotSaved] debuglevel is 1.
 RandomGenNumber is a number that varies.[@Tag:NotSaved]
 
-Testaction1 is an action applying to nothing.
-understand "Testaction1" as Testaction1.
-
-carry out Testaction1:
-	say "Master Cap: [Master].";
-	say "master noncap: [master]";
-
 [ Todo: write Debug code to display _all_ NPC variables]
+
+DetachGrabObs is an action applying to nothing.
+understand "DetachGrabObs" as DetachGrabObs.
+
+check DetachGrabObs:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out DetachGrabObs:
+	repeat with x running through grab objects:
+		now x is nowhere;
+
+AttachGrabObs is an action applying to nothing.
+understand "AttachGrabObs" as AttachGrabObs.
+
+check AttachGrabObs:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out AttachGrabObs:
+	repeat with x running through grab objects:
+		now x is a part of Player;
+
+AttachInventory is an action applying to nothing.
+understand "AttachInventory" as AttachInventory.
+
+check AttachInventory:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out AttachInventory:
+	repeat with x running through owned grab objects:
+		now x is a part of Player;
+
+ZTeleport is an action applying to one topic.
+understand "ZTeleport [text]" as ZTeleport.
+
+check ZTeleport:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out ZTeleport:
+	repeat with x running through rooms:
+		if printed name of x exactly matches the text topic understood, case insensitively:
+			now Player is in x;
+
+ZCall is an action applying to one topic.
+understand "ZCall [text]" as ZCall.
+
+check ZCall:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out ZCall:
+	repeat with x running through persons:
+		if printed name of x exactly matches the text topic understood, case insensitively:
+			now x is in location of Player;
+
+Chapter 1 - Debug Mode
 
 debugmode is an action applying to nothing.
 understand "npcdebug" as debugmode.
@@ -39,13 +96,14 @@ setdebuglevel is an action applying to one number.
 understand "debuglevel [number]" as setdebuglevel.
 
 to activate debug mode:
-	say "NPC DEBUG MODE ACTIVATED.";
+	say "DEBUG MODE ACTIVATED.";
+	say "WARNING: THE USE OF DEBUG COMMANDS CAN ADVERSELY AFFECT THE INTEGRETY OF YOUR CURRENT SAVE, ESPECIALLY IF YOU CHANGE EVENT STATES. USE WITH CAUTION.";
 	if "Debugger" is not listed in Traits of Player:
 		add "Debugger" to Traits of Player;
 	now debugactive is 1;
 
 to disable debug mode:
-	say "NPC DEBUG MODE DISABLED.";
+	say "DEBUG MODE DISABLED.";
 	if "Debugger" is listed in Traits of Player:
 		remove "Debugger" from Traits of Player;
 	now debugactive is 0;
@@ -71,122 +129,31 @@ to decide if debug is at level ( n - number ): [or higher]
 	if debuglevel < n, decide no;
 	decide yes;
 
+
+Chapter 2 - Information Readouts
+
 turncountdisplay is an action applying to nothing.
 understand "turn count" as turncountdisplay.
 understand "turncount" as turncountdisplay.
 understand "current turn" as turncountdisplay.
 understand "currentturn" as turncountdisplay.
 
+check turncountdisplay:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
 carry out turncountdisplay:
-	say "DEBUG: CURRENT TURN IS [turns]";
-
-TestMode is an action applying to nothing.
-TestingActive is a truth state that varies.[@Tag:NotSaved]
-understand "iwannatest" as TestMode.
-
-check TestMode:
-	if TestingActive is true, say "You're already in testing mode." instead;
-
-carry out TestMode:
-	add "Automatic Survival" to feats of Player;
-	add "Bestial Power" to feats of Player;
-	add "Black Belt" to feats of Player;
-	add "Breeding True" to feats of Player;
-	add "City Map" to feats of Player;
-	say "[bestowcitymapfeat]";
-	add "Curious" to feats of Player;
-	add "Dazzle" to feats of Player;
-	add "Dominant" to feats of Player;
-	add "Experienced Scout" to feats of Player;
-	add "Expert Hunter" to feats of Player;
-	add "Expert Medic" to feats of Player;
-	add "Fast Learner" to feats of Player;
-	add "Fertile" to feats of Player;
-	add "Flash" to feats of Player;
-	add "Good Teacher" to feats of Player;
-	add "Haggler" to feats of Player;
-	add "Hardy" to feats of Player;
-	add "Horny Bastard" to feats of Player;
-	add "Litter Bearer" to feats of Player;
-	add "Martial Artist" to feats of Player;
-	add "Master Baiter" to feats of Player;
-	add "Maternal" to feats of Player;
-	add "Mayhem" to feats of Player;
-	add "Mighty Mutation" to feats of Player;
-	add "More Time" to feats of Player;
-	add "MPreg" to feats of Player;
-	add "Mugger" to feats of Player;
-	add "Natural Armaments" to feats of Player;
-	add "Passing Grade Chest" to feats of Player;
-	add "Perky" to feats of Player;
-	add "Regeneration" to feats of Player;
-	add "Ringmaster" to feats of Player;
-	add "Roughing It" to feats of Player;
-	add "Selective Mother" to feats of Player;
-	add "Spartan Diet" to feats of Player;
-	add "Spirited Youth" to feats of Player;
-	add "Stealthy" to feats of Player;
-	add "Strong Back" to feats of Player;
-	add "Strong Psyche" to feats of Player;
-	add "Survivalist" to feats of Player;
-	add "The Horde" to feats of Player;
-	add "Toughened" to feats of Player;
-	add "Unerring Hunter" to feats of Player;
-	add "Vampiric" to feats of Player;
-	now vampiric is true;
-	add "Wary Watcher" to feats of Player;
-	add "Weaponsmaster" to feats of Player;
-	add "Youthful Tides" to feats of Player;
-	now strength of Player is 30;
-	now dexterity of Player is 30;
-	now stamina of Player is 30;
-	now intelligence of Player is 30;
-	now charisma of Player is 30;
-	now perception of Player is 30;
-	now level of Player is 30;
-	now maxHP of Player is 300;
-	now HP of Player is 300;
-	now capacity of Player is 300;
-	increase carried of food by 15;
-	increase carried of water bottle by 15;
-	increase carried of medkit by 5;
-	increase carried of libido suppressant by 10;
-	increase carried of orc cum by 10;
-	increase carried of orc brew by 10;
-	increase carried of gryphon milk by 10;
-	increase carried of glob of goo by 5;
-	increase carried of honeycomb by 5;
-	increase carried of healing booster by 5;
-	increase carried of infection monitor by 1;
-	increase freecred by 5000;
-	sort feats of Player;
-	now Terminatorsleep is true;
-	now TestingActive is true;
-
-SubDomFlip is an action applying to nothing.
-understand "flip janus coin" as SubDomFlip.
-understand "flip sub dom" as SubDomFlip.
-understand "flip subdom" as SubDomFlip.
-
-carry out SubDomFlip:
-	say "     Summoning a magic coin with the two-faced god Janus on its sides, you look at it for a second, then throw the shiny coin into the air. After watching it turn end over end, ";
-	if Player is submissive:
-		say "you catch it in your hand and smack that on the back of the other one.";
-		say "     Lifting your upper hand after that, you see the coin resting on your skin, displaying the strong and determined face of its design. Then the piece of metal suddenly feels hot for a moment, not quite enough to burn you, but almost so. Flowing into you, the energy changes your whole outlook of the world!";
-		remove "Submissive" from feats of Player;
-		add "Dominant" to feats of Player;
-	else if Player is dominant:
-		say "you catch it in your hand and smack that on the back of the other one.";
-		say "     Lifting your upper hand after that, you see the coin resting on your skin, displaying the timid and shy face of its design. Then the piece of metal suddenly feels hot for a moment, not quite enough to burn you, but almost so. Flowing into you, the energy changes your whole outlook of the world!";
-		remove "Dominant" from feats of Player;
-		add "Submissive" to feats of Player;
-	else:
-		say "you catch - no, try to catch it in your hand.";
-		say "     Somehow it slips through your fingers, bouncing off the ground and rolling around a little, until it comes to a sudden standstill. And that is how it remains, just standing on its side, falling over in neither direction. As you pick the little disc of metal off the ground, it is strangely cold between your fingers for a second. Almost seems like it's giving you the cold shoulder since you fit neither of its different faces.";
+	say "DEBUG: CURRENT TURN IS [turns]; Current Turn Count is [turn count]";
 
 PregStatus is an action applying to nothing.
 understand "preg status" as PregStatus.
 understand "pregstatus" as PregStatus.
+
+check PregStatus:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
 
 carry out PregStatus:
 	say "     DEBUG: You summon up a magic mirror and look into it:[line break]";
@@ -258,134 +225,15 @@ carry out PregStatus:
 	else:
 		say "-";
 
-[Allows the player to change their body size without an infection. Useful for testing some scenes.]
-PlayerSizeChange is an action applying to nothing.
-understand "changesize" as PlayerSizeChange.
-understand "change size" as PlayerSizeChange.
-understand "size change" as PlayerSizeChange.
-
-carry out PlayerSizeChange:
-	LineBreak;
-	say "     [bold type]What size do you want your character to be?[roman type][line break]";
-	say "     [link](1)[as]1[end link] Tiny.";
-	say "     [link](2)[as]2[end link] Small.";
-	say "     [link](3)[as]3[end link] Average.";
-	say "     [link](4)[as]4[end link] Large.";
-	say "     [link](5)[as]5[end link] Huge.";
-	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 5:
-		say "Choice? (1-5)>[run paragraph on]";
-		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
-			break;
-		else:
-			say "Invalid choice.";
-	if calcnumber is 1:
-		LineBreak;
-		say "     Set player size to tiny.";
-		now scalevalue of Player is 1;
-	else if calcnumber is 2:
-		LineBreak;
-		say "     Set player size to small.";
-		now scalevalue of Player is 2;
-	else if calcnumber is 3:
-		LineBreak;
-		say "     Set player size to average.";
-		now scalevalue of Player is 3;
-	else if calcnumber is 4:
-		LineBreak;
-		say "     Set player size to large.";
-		now scalevalue of Player is 4;
-	else if calcnumber is 5:
-		LineBreak;
-		say "     Set player size to huge.";
-		now scalevalue of Player is 5;
-
-[Allows the spawning of any item in game.]
-itemcheat is an action applying to one topic.
-understand "itemcheat [text]" as itemcheat.
-
-check itemcheat:
-	if debugactive is 0, say "You aren't currently debugging!" instead;
-
-carry out itemcheat:
-	repeat with x running through grab objects:
-		if the printed name of x exactly matches the text topic understood, case insensitively:
-			increase carried of x by 1;
-			say "     You gain 1 [printed name of x]!";
-			break;
-
-allitemcheat is an action applying to nothing.
-understand "allitemcheat" as allitemcheat.
-
-check allitemcheat:
-	if debugactive is 0, say "You aren't currently debugging!" instead;
-
-carry out allitemcheat:
-	say "     You gain one of everything!";
-	repeat with x running through grab objects:
-		increase carried of x by 1;
-
-ListAllItems is an action applying to nothing.
-understand "ListAllItems" as ListAllItems.
-
-check ListAllItems:
-	if debugactive is 0, say "You aren't currently debugging!" instead;
-
-carry out ListAllItems:
-	repeat with x running from 1 to number of filled rows in table of game objects:
-		choose row x from the table of game objects;
-		say "[Name entry]: [desc entry][line break]";
-
-[Impregnates the player with specified creature.]
-impregwith is an action applying to one topic.
-understand "impreg with [text]" as impregwith.
-
-check impregwith:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
-
-carry out impregwith:
-	repeat with X running from 1 to number of filled rows in Table of Random Critters:
-		choose row X from the Table of Random Critters;
-		if Name entry exactly matches the text topic understood, case insensitively:
-			impregnate with Name entry;
-			break;
-
-[Infects player with any creature to test infection.]
-infectwith is an action applying to one topic.
-understand "infect with [text]" as infectwith.
-
-check infectwith:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
-
-carry out infectwith:
-	repeat with X running from 1 to number of filled rows in Table of Random Critters:
-		choose row X from the Table of Random Critters;
-		if Name entry exactly matches the text topic understood, case insensitively:
-			infect Name entry;
-			break;
-
-[Allows the player to add or remove the "Kinky" feat without leveling. Useful for testing some scenes.]
-AddRemoveKinky is an action applying to nothing.
-understand "add kinky" as AddRemoveKinky.
-understand "remove kinky" as AddRemoveKinky.
-
-carry out AddRemoveKinky:
-	if Player is kinky:
-		say "DEBUG: Kinky removed.";
-		remove "Kinky" from feats of Player;
-	else:
-		say "DEBUG: Kinky added.";
-		add "Kinky" to feats of Player;
-
 
 ShowEncounteredEnemies is an action applying to nothing.
 
 understand "ShowEncounteredEnemies" as ShowEncounteredEnemies.
+
+check ShowEncounteredEnemies:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
 
 carry out ShowEncounteredEnemies:
 	EncounteredEnemiesList;
@@ -395,9 +243,16 @@ to EncounteredEnemiesList:
 	say "Thinking back to your misadventures in the city so far, you call into memory all the creatures you have encountered and fought:[line break]";
 	say "[EncounteredEnemies of Player]";
 
+[TODO: write Infection overview for single infection]
+
 InfectionOverview is an action applying to nothing.
 
 understand "infectionoverview" as InfectionOverview.
+
+check InfectionOverview:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
 
 carry out InfectionOverview:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -501,9 +356,13 @@ to DescriptionDisplay:
 	now looknow is 0;
 	rule succeeds;
 
+
 DebugCurrentMonsterID is an action applying to nothing.
 
 understand "DebugCurrentMonsterID" as DebugCurrentMonsterID.
+
+check DebugCurrentMonsterID:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
 
 carry out DebugCurrentMonsterID:
 	say "Current MonsterID: [MonsterID][line break]";
@@ -513,6 +372,9 @@ carry out DebugCurrentMonsterID:
 DebugCritterRow is an action applying to one topic.
 
 understand "DebugCritterRow [text]" as DebugCritterRow.
+
+check DebugCritterRow:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
 
 carry out DebugCritterRow:
 	let NumericalValue be 0;
@@ -532,7 +394,7 @@ DebugPrintCritterRow is an action applying to one topic.
 understand "DebugPrintCritterRow [text]" as DebugPrintCritterRow.
 
 check DebugPrintCritterRow:
-	if debugactive is 0, say "You aren't currently debugging.";
+	if debugactive is 0, say "You aren't currently debugging!" instead;
 
 carry out DebugPrintCritterRow:
 	let NumericalValue be 0;
@@ -543,6 +405,7 @@ carry out DebugPrintCritterRow:
 		say "[current table row]";
 	else:
 		say "Row Number outside of the table!";
+
 
 to PrereqAnalyze (X - situation):
 	if PrereqCompanion of X is not nothing:
@@ -593,42 +456,6 @@ to PrereqAnalyze (X - situation):
 		else:
 			say "[Resolution of Prereq3 of X] is listed in [Prereq3Resolution of X][line break]";
 
-
-RoomEmptying is an action applying to nothing.
-understand "NukeRoomInvents" as RoomEmptying.
-
-carry out RoomEmptying:
-	repeat with x running through rooms:
-		truncate Invent of x to 0 entries; [cleaning out the old data]
-
-
-RemoveFeat is an action applying to one topic.
-
-understand "RemoveFeat [text]" as RemoveFeat.
-
-check RemoveFeat:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
-
-carry out RemoveFeat:
-	if topic understood is listed in feats of Player:
-		remove topic understood from feats of Player;
-	else:
-		say "[topic understood] is not in Feats of Player!";
-
-DebugInfect is an action applying to one topic.
-
-understand "DebugInfect [text]" as DebugInfect.
-
-check DebugInfect:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
-
-carry out DebugInfect:
-	say "Infecting with [topic understood]:[line break]";
-	infect "[topic understood]";
 
 TagListReadout is an action applying to one topic.
 
@@ -829,6 +656,365 @@ carry out EndingTableReadout:
 		now RowNumberCol is "[N]";
 		say "[RowNumberCol formatted to 4 characters] | [NameCol formatted to 36 characters] | [TypeCol formatted to 20 characters] | [SubTypeCol formatted to 12 characters] | [EndingCol formatted to 39 characters] | [PriorityCol formatted to 8 characters] | [TriggeredCol][line break]";
 	say "[variable letter spacing]";
+
+
+Chapter 3 - Forced Commands
+
+Section 1 - Player Focused Commands
+
+TestMode is an action applying to nothing.
+TestingActive is a truth state that varies.[@Tag:NotSaved]
+understand "iwannatest" as TestMode.
+
+check TestMode:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+	if TestingActive is true, say "You're already in testing mode." instead;
+
+carry out TestMode:
+	add "Automatic Survival" to feats of Player;
+	add "Bestial Power" to feats of Player;
+	add "Black Belt" to feats of Player;
+	add "Breeding True" to feats of Player;
+	add "City Map" to feats of Player;
+	say "[BestowCityMapFeat]";
+	add "Curious" to feats of Player;
+	add "Dazzle" to feats of Player;
+	add "Dominant" to feats of Player;
+	add "Experienced Scout" to feats of Player;
+	add "Expert Hunter" to feats of Player;
+	add "Expert Medic" to feats of Player;
+	add "Fast Learner" to feats of Player;
+	add "Fertile" to feats of Player;
+	add "Flash" to feats of Player;
+	add "Good Teacher" to feats of Player;
+	add "Haggler" to feats of Player;
+	add "Hardy" to feats of Player;
+	add "Horny Bastard" to feats of Player;
+	add "Litter Bearer" to feats of Player;
+	add "Martial Artist" to feats of Player;
+	add "Master Baiter" to feats of Player;
+	add "Maternal" to feats of Player;
+	add "Mayhem" to feats of Player;
+	add "Mighty Mutation" to feats of Player;
+	add "More Time" to feats of Player;
+	add "MPreg" to feats of Player;
+	add "Mugger" to feats of Player;
+	add "Natural Armaments" to feats of Player;
+	add "Passing Grade Chest" to feats of Player;
+	add "Perky" to feats of Player;
+	add "Regeneration" to feats of Player;
+	add "Ringmaster" to feats of Player;
+	add "Roughing It" to feats of Player;
+	add "Selective Mother" to feats of Player;
+	add "Spartan Diet" to feats of Player;
+	add "Spirited Youth" to feats of Player;
+	add "Stealthy" to feats of Player;
+	add "Strong Back" to feats of Player;
+	add "Strong Psyche" to feats of Player;
+	add "Survivalist" to feats of Player;
+	add "The Horde" to feats of Player;
+	add "Toughened" to feats of Player;
+	add "Unerring Hunter" to feats of Player;
+	add "Vampiric" to feats of Player;
+	now vampiric is true;
+	add "Wary Watcher" to feats of Player;
+	add "Weaponsmaster" to feats of Player;
+	add "Youthful Tides" to feats of Player;
+	now strength of Player is 30;
+	now dexterity of Player is 30;
+	now stamina of Player is 30;
+	now intelligence of Player is 30;
+	now charisma of Player is 30;
+	now perception of Player is 30;
+	now level of Player is 30;
+	now maxHP of Player is 300;
+	now HP of Player is 300;
+	now capacity of Player is 300;
+	ItemGain food by 15 silently;
+	ItemGain water bottle by 15 silently;
+	ItemGain medkit by 5 silently;
+	ItemGain libido suppressant by 10 silently;
+	ItemGain orc cum by 10 silently;
+	ItemGain orc brew by 10 silently;
+	ItemGain gryphon milk by 10 silently;
+	ItemGain glob of goo by 5 silently;
+	ItemGain honeycomb by 5 silently;
+	ItemGain healing booster by 5 silently;
+	ItemGain infection monitor by 1 silently;
+	increase freecred by 5000;
+	sort feats of Player;
+	now Terminatorsleep is true;
+	now TestingActive is true;
+
+levelcheat is an action applying to nothing.
+
+understand "givelevel" as levelcheat.
+
+check levelcheat:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out levelcheat:
+	now XP of Player is (10 + (level of Player times 10));
+	if "Fast Learner" is listed in feats of Player:
+		decrease XP of Player by ( level of Player times 2 );
+	level up;
+	decrease score by Level of Player times Level of Player;
+
+[Gives the player all pets]
+PetTest is an action applying to nothing.
+
+understand "AllPetTest" as PetTest.
+
+check PetTest:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out PetTest:
+	repeat with x running through pets: [rebuilds the table of GameCharacters with current data]
+		if x is nullpet:
+			next;
+		now x is tamed;
+
+[Allows the player to change their body size without an infection. Useful for testing some scenes.]
+PlayerSizeChange is an action applying to nothing.
+understand "changesize" as PlayerSizeChange.
+understand "change size" as PlayerSizeChange.
+understand "size change" as PlayerSizeChange.
+
+check PlayerSizeChange:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out PlayerSizeChange:
+	LineBreak;
+	say "     [bold type]What size do you want your character to be?[roman type][line break]";
+	say "     [link](1)[as]1[end link] Tiny.";
+	say "     [link](2)[as]2[end link] Small.";
+	say "     [link](3)[as]3[end link] Average.";
+	say "     [link](4)[as]4[end link] Large.";
+	say "     [link](5)[as]5[end link] Huge.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 5:
+		say "Choice? (1-5)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
+			break;
+		else:
+			say "Invalid choice.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Set player size to tiny.";
+		now scalevalue of Player is 1;
+	else if calcnumber is 2:
+		LineBreak;
+		say "     Set player size to small.";
+		now scalevalue of Player is 2;
+	else if calcnumber is 3:
+		LineBreak;
+		say "     Set player size to average.";
+		now scalevalue of Player is 3;
+	else if calcnumber is 4:
+		LineBreak;
+		say "     Set player size to large.";
+		now scalevalue of Player is 4;
+	else if calcnumber is 5:
+		LineBreak;
+		say "     Set player size to huge.";
+		now scalevalue of Player is 5;
+
+
+[Impregnates the player with specified creature.]
+impregwith is an action applying to one topic.
+understand "impreg with [text]" as impregwith.
+
+check impregwith:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out impregwith:
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
+		if Name entry exactly matches the text topic understood, case insensitively:
+			impregnate with Name entry;
+			break;
+
+[Infects player with any creature to test infection.]
+DebugInfect is an action applying to one topic.
+
+understand "infect with [text]" as DebugInfect.
+understand "DebugInfect [text]" as DebugInfect.
+
+check DebugInfect:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out DebugInfect:
+	say "Infecting with [topic understood]:[line break]";
+	infect "[topic understood]";
+
+Section 2 - Feats
+
+RemoveFeat is an action applying to one topic.
+
+understand "RemoveFeat [text]" as RemoveFeat.
+
+check RemoveFeat:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out RemoveFeat:
+	if topic understood is listed in feats of Player:
+		remove topic understood from feats of Player;
+	else:
+		say "[topic understood] is not in Feats of Player!";
+
+[Allows the player to add or remove the "Kinky" feat without leveling. Useful for testing some scenes.]
+AddRemoveKinky is an action applying to nothing.
+understand "add kinky" as AddRemoveKinky.
+understand "remove kinky" as AddRemoveKinky.
+
+check AddRemoveKinky:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out AddRemoveKinky:
+	if Player is kinky:
+		say "DEBUG: Kinky removed.";
+		remove "Kinky" from feats of Player;
+	else:
+		say "DEBUG: Kinky added.";
+		add "Kinky" to feats of Player;
+
+
+SubDomFlip is an action applying to nothing.
+understand "flip janus coin" as SubDomFlip.
+understand "flip sub dom" as SubDomFlip.
+understand "flip subdom" as SubDomFlip.
+
+check SubDomFlip:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out SubDomFlip:
+	say "     Summoning a magic coin with the two-faced god Janus on its sides, you look at it for a second, then throw the shiny coin into the air. After watching it turn end over end, ";
+	if Player is submissive:
+		say "you catch it in your hand and smack that on the back of the other one.";
+		say "     Lifting your upper hand after that, you see the coin resting on your skin, displaying the strong and determined face of its design. Then the piece of metal suddenly feels hot for a moment, not quite enough to burn you, but almost so. Flowing into you, the energy changes your whole outlook of the world!";
+		remove "Submissive" from feats of Player;
+		add "Dominant" to feats of Player;
+	else if Player is dominant:
+		say "you catch it in your hand and smack that on the back of the other one.";
+		say "     Lifting your upper hand after that, you see the coin resting on your skin, displaying the timid and shy face of its design. Then the piece of metal suddenly feels hot for a moment, not quite enough to burn you, but almost so. Flowing into you, the energy changes your whole outlook of the world!";
+		remove "Dominant" from feats of Player;
+		add "Submissive" to feats of Player;
+	else:
+		say "you catch - no, try to catch it in your hand.";
+		say "     Somehow it slips through your fingers, bouncing off the ground and rolling around a little, until it comes to a sudden standstill. And that is how it remains, just standing on its side, falling over in neither direction. As you pick the little disc of metal off the ground, it is strangely cold between your fingers for a second. Almost seems like it's giving you the cold shoulder since you fit neither of its different faces.";
+
+
+Section 3 - World Manipulation
+
+Spawnmonster is an action applying to one topic.
+
+understand "spawn [text]" as spawnmonster.
+
+check spawnmonster:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out spawnmonster:
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
+		if Name entry exactly matches the text topic understood, case insensitively:
+			now MonsterID is X;
+			now monsterHP is HP entry;
+			challenge;
+			break;
+
+
+unresolvecheat is an action applying to one topic.
+
+understand "unresolve [text]" as unresolvecheat.
+
+check unresolvecheat:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out unresolvecheat:
+	repeat with X running from 1 to number of filled rows in Table of GameEventIDs:
+		choose row X from the Table of GameEventIDs;
+		if Name entry exactly matches the text topic understood, case insensitively:
+			now Object entry is unresolved;
+			break;
+
+
+[Allows the spawning of any item in game.]
+itemcheat is an action applying to one topic.
+understand "itemcheat [text]" as itemcheat.
+
+check itemcheat:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out itemcheat:
+	repeat with x running through grab objects:
+		if the printed name of x exactly matches the text topic understood, case insensitively:
+			ItemGain x by 1;
+			break;
+
+allitemcheat is an action applying to nothing.
+understand "allitemcheat" as allitemcheat.
+
+check allitemcheat:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out allitemcheat:
+	say "     You gain one of everything!";
+	repeat with x running through grab objects:
+		ItemGain x by 1 silently;
+
+ListAllItems is an action applying to nothing.
+understand "ListAllItems" as ListAllItems.
+
+check ListAllItems:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out ListAllItems:
+	repeat with x running from 1 to number of filled rows in table of game objects:
+		choose row x from the table of game objects;
+		say "[Name entry]: [desc entry][line break]";
+
+RoomEmptying is an action applying to nothing.
+understand "NukeRoomInvents" as RoomEmptying.
+
+check RoomEmptying:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out RoomEmptying:
+	repeat with x running through rooms:
+		truncate Invent of x to 0 entries; [cleaning out the old data]
+
+
+Chapter 4 - Experimental Stuff
+
+Testaction1 is an action applying to nothing.
+understand "Testaction1" as Testaction1.
+
+carry out Testaction1:
+	say "Master Cap: [Master].";
+	say "master noncap: [master]";
 
 
 Debugging Tools ends here.

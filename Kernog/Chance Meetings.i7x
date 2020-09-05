@@ -12,9 +12,10 @@ Object	Name
 Chance Meeting	"Chance Meeting"
 
 Chance Meeting is a situation.
-The sarea of Chance Meeting is "Outside".
+ResolveFunction of Chance Meeting is "[ResolveEvent Chance Meeting]".
+Sarea of Chance Meeting is "Outside".
 
-Instead of resolving Chance Meeting:
+to say ResolveEvent Chance Meeting:
 	say "     As you pass by [one of]a derelict[or]an abandoned[or]an uninhabited[or]a deserted[or]a ransacked[at random] [one of]bar[or]school[or]warehouse[or]book store[or]liquor store[or]supermarket[or]kindergarten[or]small house[or]arcade[or]electronics store[at random], you hear voices and rumbling coming from inside.";
 	say "     It may be someone you know. [bold type]Do you wish to investigate?[roman type][line break]";
 	say "[link]Y[as]y[end link] You should check. Who knows?";
@@ -57,7 +58,7 @@ to say Generation Conflict:
 	say "     The four of you keep talking for some time, and eventually, Brennan decides to keep moving. Erin and Violet take their leave as well after offering you and Brennan a spare soda they salvaged from a vending machine. 'It was like the giving tree: we kept kicking, we kept winning,' Erin tells you. On your own once again, you resume your exploration.";
 	say "     Drinking the soda offered by Erin and Violet [bold type]quenched your thirst a little[roman type]. Also, [bold type]you earned an additional soda[roman type].";
 	decrease thirst of Player by 12;
-	increase carried of soda by 1;
+	ItemGain soda by 1;
 	now generationConflictFlag is 1;
 
 Chance Meetings ends here.

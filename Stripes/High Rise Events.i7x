@@ -11,12 +11,13 @@ Object	Name
 Rabid Lawyers	"Rabid Lawyers"
 
 Rabid Lawyers is a situation.
-The sarea of Rabid Lawyers is "High".
+ResolveFunction of Rabid Lawyers is "[ResolveEvent Rabid Lawyers]".
+Sarea of Rabid Lawyers is "High".
 when play begins:
 	add Rabid Lawyers to BadSpots of MaleList;
 	add Rabid Lawyers to BadSpots of FurryList;
 
-Instead of resolving a Rabid Lawyers:
+to say ResolveEvent Rabid Lawyers:
 	say "     While searching the city, you encounter a large pack of wolves in front of a law firm. They are partially dressed in suits, mainly the jackets and ties, though some have the torn-open remains of pants. They are growling and slavering as they snap at each other or swinging their briefcases around. Mixed among the pack are several smaller wolves in skirts or shirts, clutching reports, pouring coffee or helping the larger ones. Much of the helping seems to take the form of the interns sucking them off or getting pounded good and hard by one of the bigger males. Unwilling to face the legal teeth of a pack of rabid lawyers, you slink off as quietly and as quickly as you can.";
 	increase score by 1;
 	now Rabid Lawyers is resolved;
@@ -29,14 +30,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Pigging Out	"Pigging Out"
 
-Pigging Out is a situation. The level of Pigging Out is 3.
-The sarea of Pigging Out is "High".
+Pigging Out is a situation.
+ResolveFunction of Pigging Out is "[ResolveEvent Pigging Out]". The level of Pigging Out is 3.
+Sarea of Pigging Out is "High".
 restaurantpig is a number that varies.	[to be used at a later date]
 when play begins:
 	add Pigging Out to BadSpots of FemaleList;
 	add Pigging Out to BadSpots of FurryList;
 
-Instead of resolving a Pigging Out:
+to say ResolveEvent Pigging Out:
 	say "     You come to a very exclusive restaurant. While you've never been there, you've heard that reservations are required months in advance and that the cuisine is both wonderful and expensive. With the fall of the city, you know you won't be able to order a meal there, but you may be able to get some fine food from the cold locker. As you get closer, you hear some noise coming from the restaurant and approach more cautiously. Glancing through one of the large windows, you see a large sow inside, making a mess of the place. It looks like she has been eating and masturbating all over the place. One hand holds a fistful of food while the other fingers her dripping pussy.";
 	say "[piggycheck]";
 	if tempnum is 1:
@@ -86,9 +88,8 @@ Instead of resolving a Pigging Out:
 					now Resolution of Pigging Out is 3; [fought the pig for food, lost]
 				else:
 					say "     After defeating the pig and sending it on its way, you pick carefully through the ruined restaurant. The food in the main dining area and kitchen is all clearly tainted, but you do manage to find a little in the back of the walk-in cooler that is clean and undamaged by the gorging pig. You get enough for two meals packed away using some of the kitchenware to pack it up. While doing so, you also find a big kitchen knife that you decide to bring along.";
-					say "     Food x 2 and cleaver added to inventory.";
-					increase carried of food by 2;
-					increase carried of cleaver by 1;
+					ItemGain food by 2;
+					ItemGain cleaver by 1;
 					increase score by 5;
 					now Resolution of Pigging Out is 2; [fought the pig for food, won]
 			else:
@@ -111,9 +112,8 @@ Instead of resolving a Pigging Out:
 				now Resolution of Pigging Out is 3; [fought the pig for food, lost]
 			else:
 				say "     After defeating the pig and sending it on its way, you pick carefully through the ruined restaurant. The food in the main dining area and kitchen is all clearly tainted, but you do manage to find a little in the back of the walk-in cooler that is clean and undamaged by the gorging pig. You get enough for two meals packed away using some of the kitchenware to pack it up. While doing so, you also find a big kitchen knife that you decide to bring along.";
-				say "     Food x 2 and cleaver added to inventory.";
-				increase carried of food by 2;
-				increase carried of cleaver by 1;
+				ItemGain food by 2;
+				ItemGain cleaver by 1;
 				increase score by 5;
 				now Resolution of Pigging Out is 2; [fought the pig for food, won]
 		else:
@@ -133,13 +133,8 @@ to say piggycheck:	[to check if Player has a pig-like head or body]
 	if the FaceName of Player is "Piggy":
 		now tempnum is 1;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"cleaver"	"A large kitchen knife, sharp and heavy."	2	cleaver
+[cleaver moved to Core Mechanics/Weapons.i7x]
 
-cleaver is an armament. It is part of the player. It has a weapon "[one of]your cleaver[or]your kitchen knife[or]your cleaver, screaming 'Oneida!' as you swing it[or]your large knife[or]the large blade[or]your cleaver with a heavy chop[at random]". The weapon damage of cleaver is 6. The weapon type of cleaver is "Melee". It is not temporary.
-
-the scent of the cleaver is "The heavy blade smells faintly of blood."
 
 Section 3- Small Park
 
@@ -148,7 +143,8 @@ Object	Name
 Small Park	"Small Park"
 
 Small Park is a situation.
-The sarea of Small Park is "High".
+ResolveFunction of Small Park is "[ResolveEvent Small Park]".
+Sarea of Small Park is "High".
 when play begins:
 	add Small Park to BadSpots of FemaleList;
 	add Small Park to BadSpots of MaleList;
@@ -156,7 +152,7 @@ when play begins:
 	add Small Park to BadSpots of FurryList;
 	add Small Park to badspots of HumorousList;
 
-Instead of resolving a Small Park:
+to say ResolveEvent Small Park:
 	say "     While searching the area, you come across a small park. It is only about a hundred meters in each direction. From a distance, you spot what appear to be discarded piles of clothes, cum puddles and other signs of citizens being transformed. You don't spot any danger at the moment, so perhaps it's safe.";
 	say "     [bold type]Shall you enter the park and investigate further?[roman type][line break]";
 	LineBreak;
@@ -176,12 +172,11 @@ to say dogparksearch:
 	let T be a random number between one and twelve;
 	if T is 1:
 		say "     You look around the park and are fortunately not spotted by any monsters. You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. You get lucky while searching around what appears to be a jogger's outfit, finding an unopened bottle of water that rolled partway under a bush.";
-		say "     Added a water bottle to your supply.";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 		increase score by 1;
 	if T is 2:
 		say "     You look around the park and are fortunately not spotted by any monsters. You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. You get lucky searching one pile of clothes, finding a used can of mace near the torn dress. Quite sure it would be handy, you pick it up and add it to your inventory.";
-		increase carried of pepperspray by 1;
+		ItemGain pepperspray by 1 silently;
 		increase score by 5;
 	if T is 3:
 		say "     You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. As you are inspecting one pile with a stick for added safety, hear the crack of a branch behind you, seeing one of the canine creatures who probably originated here. Having failed to sneak up on you, the male German shepherd approached swiftly.";
@@ -268,12 +263,13 @@ Object	Name
 Corporate Fat Cats	"Corporate Fat Cats"
 
 Corporate Fat Cats is a situation.
-The sarea of Corporate Fat Cats is "High".
+ResolveFunction of Corporate Fat Cats is "[ResolveEvent Corporate Fat Cats]".
+Sarea of Corporate Fat Cats is "High".
 when play begins:
 	add Corporate Fat Cats to BadSpots of MaleList;
 	add Corporate Fat Cats to BadSpots of FurryList;
 
-Instead of resolving a Corporate Fat Cats:
+to say ResolveEvent Corporate Fat Cats:
 	say "     You come across a pair of hefty felines on the steps of one of the many high-rise buildings. Their business suits have mostly been removed and scattered around them. One is a male black cat with white paws and a splash of white on his wide belly. The other is a chubby Maine Coon tom with the thick, fluffy fur of the breed. They are rolling around against one another, groping each other. While stroking the black cat's cock, the other cat goes on about looking forward to some asset growth. The black cat nibbles at the portly Maine Coon's ear, telling him how he wants to set up this merger and come out on top. They continue to go on like this, bantering in corporate lingo while the black cat mounts the other while you walk off, leaving the fat cats to their [']merger['].";
 	increase score by 1;
 	now Corporate Fat Cats is resolved;
@@ -286,7 +282,8 @@ Object	Name
 Veterinary Hospital	"Veterinary Hospital"
 
 Veterinary Hospital is a situation.
-The sarea of Veterinary Hospital is "High".
+ResolveFunction of Veterinary Hospital is "[ResolveEvent Veterinary Hospital]".
+Sarea of Veterinary Hospital is "High".
 doggyness is a number that varies.
 kittyness is a number that varies.
 when play begins:
@@ -295,7 +292,7 @@ when play begins:
 	add Veterinary Hospital to badspots of HermList;
 	add Veterinary Hospital to BadSpots of FurryList;
 
-Instead of resolving a Veterinary Hospital:
+to say ResolveEvent Veterinary Hospital:
 	if lust of Medea is 1:
 		say "     You come across a veterinary hospital at the ground level of one of the high rises. Recalling your discussion with Dr. Medea about the supplies she needs to affect your [if Player is female]infected[else]male[end if] womb's heat cycle, you take a moment to listen for monsters inside. You don't hear any, but it is an animal hospital, so it still seems somewhat risky. Deciding to take the risk, you venture inside.";
 		WaitLineBreak;
@@ -353,8 +350,7 @@ to say vetsearch:
 	decrease humanity of Player by 3;
 	if T is 1:
 		say "     You cautiously enter the veterinary hospital and look around. As you suspected, it was rather hard hit by the outbreak. You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum. The scent of feline and canine arousal is strong in the air, making the infection inside you tingle. Feeling you shouldn't stay long, you scout around and are fortunate to find a medical supply kit that is suitable for your needs. You tuck it under one arm and quickly head out to get some fresh air.";
-		increase carried of medkit by 1;
-		say "     Medkit obtained.";
+		ItemGain medkit by 1;
 		increase score by 3;
 	if T is 2:
 		say "     You cautiously enter the veterinary hospital and look around. As you suspected, it was rather hard hit by the outbreak. You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum. The scent of feline and canine arousal is strong in the air, making the infection inside you tingle. Feeling you shouldn't stay long, you scout around and come across some sample cans of pet food.";
@@ -362,23 +358,19 @@ to say vetsearch:
 		if doggyness is 1:
 			if kittyness is 1:		[both doggy and kitty]
 				say "     At this moment at least, the warring feline and canine urges within you are in harmony and you feel a hunger for all the sample food items. It seems you have enough feline and canine aspects within you that you find the pet food appetizing and are willing to add it to your supply. As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat. You quickly stuff them all into your bag and head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
-				say "     You obtain the equivalent of 3 food.";
-				increase carried of food by 3;
+				ItemGain food by 3;
 				increase score by 5;
 			else:						[just doggy]
 				say "     Looking over the cans of dog food, your tummy rumbles. It seems you have enough canine aspects within you that you find the dog food appetizing and are willing to add it to your supply. As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat. You quickly stuff them into your bag and head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
-				say "     You obtain the equivalent of 2 food.";
-				increase carried of food by 2;
+				ItemGain food by 2;
 				increase score by 3;
 		else if kittyness is 1:				[just kitty]
 			say "     Looking over the cans of cat food, your tummy rumbles. It seems you have enough feline aspects within you that you find the cat food appetizing and are willing to add it to your supply. As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat. You quickly stuff them into your bag and head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
-			say "     You obtain the equivalent of 2 food.";
-			increase carried of food by 2;
+			ItemGain food by 2;
 			increase score by 3;
 		else if hunger of Player > 49:		[starving]
 			say "     You look at the cans of pet food for a moment and your stomach rumbles. Despite being pet food, you are very hungry and need something to eat. As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat. Resigned to your fate, you take one of the cans and add it to your supply. You then quickly head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
-			say "     You obtain the equivalent of 1 food.";
-			increase carried of food by 1;
+			ItemGain food by 1;
 			increase score by 1;
 		else:							[not a kitty or doggy, nor starving]
 			say "     You look at the cans of pet food briefly, then turn and continue searching. You haven't sunk that low yet. A quick look around the rest of the room finds nothing else of interest. Unsuccessful, you quickly head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
@@ -453,24 +445,18 @@ Object	Name
 Golf Store	"Golf Store"
 
 Golf Store is a situation.
-The sarea of Golf Store is "High".
+ResolveFunction of Golf Store is "[ResolveEvent Golf Store]".
+Sarea of Golf Store is "High".
 when play begins:
 	add Golf Store to BadSpots of FurryList;
 
-Instead of resolving a Golf Store:
+to say ResolveEvent Golf Store:
 	say "     While passing down the street, hear a growing sound, like many hard objects striking the pavement again and again. As the sound draws closer, you look around for a place to hide and duck into a small golf store. Peering from behind a display case, you see a small herd of horsemen clomping through the street. They seem in good spirits, but are watchful and some at the edge of the herd are on the lookout. Something in their look tells you to remain hidden, which is later confirmed when you see a few half-changed prisoners at the center of the herd. You continue to watch from the shadow until they're gone. As they march out of earshot, you relax and take a moment to look around the golf store you'd hidden in. You grab a sturdy looking 9-iron from the display, your mind focused on arming yourself after seeing the herd.";
-	say "     Golf club obtained.";
-	increase carried of golf club by 1;
+	ItemGain golf club by 1;
 	increase score by 5;
 	now Golf Store is resolved;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"golf club"	"To an overpaid sports star, it is a piece of high-quality equipment meant for a game of style and skill. To you, a blunt instrument."	2	golf club
-
-golf club is an armament. It is part of the player. It has a weapon "[one of]your golf club[or]your 9 Iron[or]your golf club, getting a bit of a slice on that swing[or]your golf club, calling out FORE! and making a hard swing[at random]". The weapon damage of golf club is 5. The weapon type of golf club is "Melee". It is not temporary.
-
-the scent of the golf club is "The golf club smells faintly of grass, bad slices and bashed heads.".
+[golf club moved to Core Mechanics/Weapons.i7x]
 
 
 Section 7- Electronics Store
@@ -480,11 +466,12 @@ Object	Name
 Electronics Store	"Electronics Store"
 
 Electronics Store is a situation.
-The sarea of Electronics Store is "High".
+ResolveFunction of Electronics Store is "[ResolveEvent Electronics Store]".
+Sarea of Electronics Store is "High".
 when play begins:
 	add Small Park to badspots of HumorousList;
 
-Instead of resolving a Electronics Store:
+to say ResolveEvent Electronics Store:
 	say "     In the corner of one of the high-rise office buildings, you spot an odd pair of beings. They are a duo of strange, cybernetic people with vacant, luminescent eyes. Unlike any of the others you've seen in the city, you are drawn to investigate. From behind a car, you watch them as they eat the electronic hardware from the displays. One is a glossy white with blue highlights and a smooth, dome head. He is dressed in loose-fitting, slacker wear. The other has a matte black finish where he's not flesh and wearing a gray suit and charcoal tie.";
 	say "     As you watch, the darker one twitches and shudders for a moment while trying to swallow down a big mouthful. His eyes blink, then turn a solid blue. He smacks his chest a few times to reboot himself. Once that is settled, he opens his jacket, accesses a panel on himself and pulls out a video card, swapping it for a newer model from one of the shelves.";
 	say "     With this impromptu upgrade completed, they get back to squabbling over the various electronic phones, mp3 players and doodads, babbling marketing buzzwords all the while.";
@@ -498,15 +485,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Cameo	"Cameo"
 
-Cameo is a situation. The level of Cameo is 4.
-The sarea of Cameo is "High".
+Cameo is a situation.
+ResolveFunction of Cameo is "[ResolveEvent Cameo]". The level of Cameo is 4.
+Sarea of Cameo is "High".
 choclabfight is a number that varies.
 when play begins:
 	add Cameo to badspots of HermList;
 	add Cameo to badspots of HumorousList;
 	add Cameo to BadSpots of FurryList;
 
-Instead of resolving a Cameo:
+to say ResolveEvent Cameo:
 	say "     Passing past a collection of deluxe shops, your eye is caught by a premiere chocolate store. Glancing up that the face of the woman for which the store is named, you remember their fine quality products. Your sweet tooth suddenly needs to be satisfied and you go in before you have a chance to think it over. A quick glance around shows the store has been ransacked, with several creamy pools of white or dark chocolate on the floor. The glass displays have chocolate pawprints, both inside and out. You do spot a couple of display boxes and a cameo collection that seem undisturbed at the back of the store and head towards them. But when you reach the middle of the store, those dark puddles reshape themselves, forming into gooey canids made of chocolate. It seems you came across this place as they were cleaning it out and they set a trap for you. You are surrounded by a trio of chocolatey canines.";
 	now choclabfight is 0;
 	challenge "Chocolate Lab";
@@ -540,7 +528,7 @@ Instead of resolving a Cameo:
 						if morale of Player > 0, now morale of Player is 0;
 						say "You feel much better after having your snack.";
 					increase morale of Player by 1;
-					increase carried of chips by 2;
+					ItemGain chips by 2 silently;
 					increase score by 15;
 				else:
 					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. While not very nutritious, you still have enough chocolates and almond bark to be equivalent to roughly one meal.";
@@ -549,7 +537,7 @@ Instead of resolving a Cameo:
 						increase morale of Player by 15;
 						if morale of Player > 0, now morale of Player is 0;
 						say "You feel better having eaten.";
-					increase carried of food by 1;
+					ItemGain food by 1 silently;
 					increase score by 5;
 	if choclabfight is 0:
 		say "     Managing to outmaneuver the chocolate dogs, you push your way out of the store and into the courtyard around the shops. Looking back, you spot the dogs pressed up against the glass, leaving chocolate streaks on windows before they hop down and return to their lustful consumption of the chocolates. You are quite certain there will be nothing left in the store except for the white chocolate stains from their sexual play as they celebrate their victory at defending their delicious prize.";
@@ -600,9 +588,10 @@ Object	Name
 Wild Kingdom	"Wild Kingdom"
 
 Wild Kingdom is a situation.
-The sarea of Wild Kingdom is "High".
+ResolveFunction of Wild Kingdom is "[ResolveEvent Wild Kingdom]".
+Sarea of Wild Kingdom is "High".
 
-Instead of resolving a Wild Kingdom:
+to say ResolveEvent Wild Kingdom:
 	say "     Hearing some activity coming from a small third-floor apartment, you cautiously check it out. Inside you find the small place crammed full of animal people or all kinds. A lamp by the door has 'Raul's Wild Kingdom' stuck onto its shade. In charge and probably the aforementioned Raul is an energetic and enthusiastic capybara with a fuzzy mustache of whiskers off in the back.";
 	say "     Looking around, you are struck by several oddities. Looking up, you see a turtle-man with his chest stuck to the ceiling. He cranes his neck back lazily and waves down at you with a smile. There's also a bulletin board in the foyer that includes a sign-up sheet for [']Poodle Flying Lessons['], but it's all filled up.";
 	if BodyName of Player is "Badger" or FaceName of Player is "Badger":

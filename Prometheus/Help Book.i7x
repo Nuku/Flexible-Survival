@@ -1,11 +1,11 @@
 Version 1 of Help Book by Prometheus begins here.
 
-[ hp of Help Book             ]
+[ HP of Help Book             ]
 [ 0 - Present                 ]
 [ 1 - Removed                 ]
 
 an everyturn rule:
-	if hp of Help Book is 0:
+	if HP of Help Book is 0:
 		if Help Book is not in Grey Abbey Library:
 			move Help Book to Grey Abbey Library;
 
@@ -41,8 +41,8 @@ Virgin of Help Book is true.
 AnalVirgin of Help Book is true.
 SexuallyExperienced of Help Book is false.
 MainInfection of Help Book is "".
-The description of Help Book is "[HelpBookDesc]".
-The conversation of Help Book is { "Words, words, words." }.
+Description of Help Book is "[HelpBookDesc]".
+Conversation of Help Book is { "Words, words, words." }.
 The scent of Help Book is "     The book smells of knowledge and a desire to help. Somehow.".
 
 to say HelpBookDesc:
@@ -50,6 +50,13 @@ to say HelpBookDesc:
 		say "DEBUG -> HP of Help Book: [HP of Help Book] <- DEBUG[line break]";
 	say "     The book looks like a normal book with the title 'Prometheus['] Guide to Surviving the Apocalypse'. It seems to emit an aura of comfort as though it wants to help those in need and you get the impression that it doesn't much care for the rules of this reality.";
 
+HelpBookLookup is an action applying to nothing.
+
+understand "HelpBookLookup" as HelpBookLookup.
+
+carry out HelpBookLookup:
+	say "     You pull out a copy 'Prometheus['] Guide to Surviving the Apocalypse'. It seems to emit an aura of comfort as though it wants to help those in need and you get the impression that it doesn't much care for the rules of this reality.";
+	say "[HelpBookTalkMenu]";
 
 Section 2 - Talking with Help Book
 
@@ -60,7 +67,7 @@ Instead of conversing the Help Book:
 
 to say HelpBookTalkMenu:
 	say "[line break]";
-	say "What do you wish to discuss with Help Book?";
+	say "     [bold type]What do you wish to look up in the Help Book?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -138,7 +145,7 @@ to say HelpBookTalk4: [Commands]
 to say HelpBookTalk5: [Remove Book]
 	say "     As you decide that you don't need the book any more, it crumbles to dust in your hands before blowing away on a non-existent wind. You get the impression that it is gone on to help the next person that needs it and won't be back again.";
 	now Help Book is nowhere;
-	now hp of Help Book is 1;
+	now HP of Help Book is 1;
 
 Section 3 - Sex
 

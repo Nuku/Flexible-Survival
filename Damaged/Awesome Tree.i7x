@@ -17,14 +17,11 @@ to say infect:
 
 to say Give Awesome:
 	if a random number between 1 and 100 > 40:
-		say "[bold type]You gain 1 awesome fruit![roman type][line break]";
-		increase carried of awesome fruit by 1;
+		ItemGain awesome fruit by 1;
 	if a random number between 1 and 100 > 40:
-		say "[bold type]You gain 1 awesomer fruit![roman type][line break]";
-		increase carried of awesomer fruit by 1;
+		ItemGain awesomer fruit by 1;
 	if a random number between 1 and 100 > 85:
-		say "[bold type]You gain 1 awesomest fruit![roman type][line break]";
-		increase carried of awesomest fruit by 1;
+		ItemGain awesomest fruit by 1;
 
 to say awesome attack:
 	if Awesome_boredom is 4:
@@ -33,8 +30,7 @@ to say awesome attack:
 		now thirst of Player is 0;
 		if a random number between 1 and 100 > 90:
 			if awesome bat is not owned:
-				now carried of awesome bat is 1;
-				say "You get an awesome piece of wood that could be used as, an awesome bat!";
+				ItemGain awesome bat by 1;
 		say "[Give Awesome][combat abort]";
 		now fightoutcome is 20;
 	else:
@@ -48,7 +44,7 @@ to say awesome defeat:
 		if awesome bat is owned:
 			if awesome bat is weapon object of Player:
 				try using awesome bat;
-			delete awesome bat;
+			ItemLoss awesome bat by 1;
 			say "Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most awesome senses, the wood taking root and beginning to grow.";
 		say "With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
 		infect;
@@ -85,8 +81,8 @@ to say awesome desc:
 	say "You turn a corner and see it. Looking up you realize due to the shape of the branches you are unable to actually see just how tall this monstrous and truly Awesome Tree is. Its branches are long and you see, among the foliage some fruit that look unbelievably tasty, if you could just shake the tree enough to get one to fall...";
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -108,7 +104,7 @@ When Play begins:
 	now desc entry is "[awesome desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "completely human"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "human-looking"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "[if looknow is 1]human[else]normal human, lovely, healthy-looking[end if]"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "[if looknow is 1]human[else]normal human, lovely, healthy-looking[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -139,6 +135,9 @@ When Play begins:
 	now libido entry is 0; [ Amount player Libido will go up if defeated ]
 	now loot entry is "awesomest fruit"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 100; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]perfect[or][if Player is female]lovely[else]handsome[end if][at random]";
 	now type entry is "human"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -153,7 +152,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -255,13 +254,11 @@ When Play begins:
 
 Section 3 - Monster Heat
 
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "awesomest fruit"	"The most awesomest fruit you ever ate!"	1	awesomest fruit
 "awesomer fruit"	"The most awesomer fruit you ever ate, now with a funky pink logo!"	1	awesomer fruit
 "awesome fruit"	"The most awesome fruit you ever ate, now with a funky blue logo!"	1	awesome fruit
-"awesome bat"	"A heavy branch that you are pretty sure you could use to hit... something."	5	awesome bat
 
 the scent of the awesome fruit is "[awesomefrscent]".
 
@@ -287,7 +284,6 @@ to say AwesomestFrScent:
 	else:
 		say "The strange fruit has a rich mix of male and female scents that seems mouth-wateringly sweet.";
 
-the scent of the awesome bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.".
 
 to say awesome bat proc:
 	choose row MonsterID from the Table of Random Critters;
@@ -297,9 +293,7 @@ to say awesome bat proc:
 			now monsterHP is 0;
 			increase Awesome_noreward by 1;
 
-awesome bat is a armament. It has a weapon "[one of]awesome bat, a double rainbow appears for a brief second,[awesome bat proc][or]bat of awesomeness[or]indestructible length of awesome-wood[at random]".
-The weapon damage of awesome bat is 7. the objsize of awesome bat is 4.
-The weapon type of awesome bat is "Melee". It is not temporary.
+[awesome bat moved to Core Mechanics/Weapons.i7x]
 
 awesomest fruit is a grab object.
 awesomest fruit has a usedesc "[awesomest fruit use]".

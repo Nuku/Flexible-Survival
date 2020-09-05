@@ -46,8 +46,8 @@ SexuallyExperienced of Allen is true.
 TwistedCapacity of Allen is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Allen is false. [steriles can't knock people up]
 MainInfection of Allen is "Husky Alpha".
-The description of Allen is "[AllenDesc]".
-The conversation of Allen is { "Woof." }.
+Description of Allen is "[AllenDesc]".
+Conversation of Allen is { "Woof." }.
 
 to say AllenDesc:
 	say "     <So far, this is a placeholder NPC. Please report on the FS discord how you saw this message.>";

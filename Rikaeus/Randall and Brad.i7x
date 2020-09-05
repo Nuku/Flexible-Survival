@@ -23,8 +23,9 @@ Object	Name
 Hanging out on the Green	"Hanging out on the Green"
 
 Hanging out on the Green is a situation.
+ResolveFunction of Hanging out on the Green is "[ResolveEvent Hanging out on the Green]".
 Hanging out on the Green is inactive.
-The sarea of Hanging out on the Green is "Campus".
+Sarea of Hanging out on the Green is "Campus".
 
 when play begins:
 	add Hanging out on the Green to BadSpots of MaleList;
@@ -42,7 +43,7 @@ instead of going to College Walkway West while (Hanging out on the Green is acti
 	move player to College Walkway West;
 	FirstRandallEvent;
 
-instead of resolving Hanging out on the Green:
+to say ResolveEvent Hanging out on the Green:
 	move player to College Walkway West;
 	FirstRandallEvent;
 
@@ -62,8 +63,9 @@ Object	Name
 Bunny Eavesdropper	"Bunny Eavesdropper"
 
 Bunny Eavesdropper is a situation.
+ResolveFunction of Bunny Eavesdropper is "[ResolveEvent Bunny Eavesdropper]".
 Bunny Eavesdropper is inactive.
-The sarea of Bunny Eavesdropper is "Campus".
+Sarea of Bunny Eavesdropper is "Campus".
 
 when play begins:
 	add Bunny Eavesdropper to BadSpots of MaleList;
@@ -73,7 +75,7 @@ instead of going to College Walkway West while (Bunny Eavesdropper is active and
 	move player to College Belltower;
 	SecondRandallEvent;
 
-instead of resolving Bunny Eavesdropper:
+to say ResolveEvent Bunny Eavesdropper:
 	move player to College Belltower;
 	SecondRandallEvent;
 
@@ -93,8 +95,9 @@ Object	Name
 Operation Horny Bunny	"Operation Horny Bunny"
 
 Operation Horny Bunny is a situation.
+ResolveFunction of Operation Horny Bunny is "[ResolveEvent Operation Horny Bunny]".
 Operation Horny Bunny is inactive.
-The sarea of Operation Horny Bunny is "Campus".
+Sarea of Operation Horny Bunny is "Campus".
 
 when play begins:
 	add Operation Horny Bunny to BadSpots of MaleList;
@@ -104,7 +107,7 @@ instead of going to Lecture Street while (Operation Horny Bunny is active and Op
 	move player to College Belltower;
 	ThirdRandallEvent;
 
-instead of resolving Operation Horny Bunny:
+to say ResolveEvent Operation Horny Bunny:
 	move player to College Belltower;
 	ThirdRandallEvent;
 
@@ -138,8 +141,9 @@ Object	Name
 New Roommates	"New Roommates"
 
 New Roommates is a situation.
+ResolveFunction of New Roommates is "[ResolveEvent New Roommates]".
 New Roommates is inactive.
-The sarea of New Roommates is "Campus".
+Sarea of New Roommates is "Campus".
 
 when play begins:
 	add New Roommates to BadSpots of MaleList;
@@ -149,7 +153,7 @@ instead of going to Dorm Street while (New Roommates is active and New Roommates
 	move player to Dorm Street;
 	FourthRandallEvent;
 
-instead of resolving New Roommates:
+to say ResolveEvent New Roommates:
 	move player to Dorm Street;
 	FourthRandallEvent;
 
@@ -186,7 +190,7 @@ Object	Name
 Randall's Room	"Randall's Room"
 
 Randall's Room is a room.
-The description of Randall's room is "[randallsroomdesc]".
+Description of Randall's room is "[randallsroomdesc]".
 
 to say randallsroomdesc:
 	say "     Getting a better look of the room you notice that the two of them have moved in fully by now. It's a bit hard to tell at first due to both of them being sports players but upon closer examination it's obvious. The first part to note are the posters on the wall. For Randall, he seems to favor track and lewd-ish male model posters, whereas Brad favors basketball themed ones. The next difference is the trophies, which requires you to look a lot closer. At first glance they look the same, but the style of the awards differ slightly. For example, the smaller bunny's are topped with a pair of running shoes but the bigger bun's is crowned with a basketball. Besides that, everything else is mixed. They appear to share a dresser, a computer, even a bed, which you expected the last one considering Randall's insatiable sexual appetite. After looking around you notice Brad playing with his basketball on the bed and the smaller bunny messing with the computer.";
@@ -222,8 +226,8 @@ AnalVirgin of Randall is false.
 PenileVirgin of Randall is true.
 SexuallyExperienced of Randall is true.
 MainInfection of Randall is "".
-The description of Randall is "[RandallDesc]".
-The conversation of Randall is { "<This is nothing but a placeholder!>" }.
+Description of Randall is "[RandallDesc]".
+Conversation of Randall is { "<This is nothing but a placeholder!>" }.
 The scent of Randall is "     Randall gives off the smell of sex and sweat, a scent that you admit fits him considering the bun's insatiable appetite when it comes to sex.".
 
 to say RandallDesc:
@@ -439,8 +443,8 @@ AnalVirgin of Brad is true.
 PenileVirgin of Brad is false.
 SexuallyExperienced of Brad is true.
 MainInfection of Brad is "".
-The description of Brad is "[BradDesc]".
-The conversation of Brad is { "<This is nothing but a placeholder!>" }.
+Description of Brad is "[BradDesc]".
+Conversation of Brad is { "<This is nothing but a placeholder!>" }.
 The scent of Brad is "     Brad gives off the scent of rubber and sweat with the underlying smell of sex. For a basketball player the first two kinda make sense and the last one you attribute to his boyfriend Randall.".
 
 to say BradDesc:

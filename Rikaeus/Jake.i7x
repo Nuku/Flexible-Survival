@@ -17,7 +17,8 @@ Object	Name
 Panda Inspiration	"Panda Inspiration"
 
 Panda Inspiration is a situation.
-The sarea of Panda Inspiration is "Campus".
+ResolveFunction of Panda Inspiration is "[ResolveEvent Panda Inspiration]".
+Sarea of Panda Inspiration is "Campus".
 
 when play begins:
 	add Panda Inspiration to BadSpots of MaleList;
@@ -34,12 +35,12 @@ instead of going to Tenvale College Male Dorms while (Panda Inspiration is not r
 	move player to Tenvale College Male Dorms;
 	FirstJakeEvent;
 
-instead of resolving Panda Inspiration:
+to say ResolveEvent Panda Inspiration:
 	move player to Tenvale College Male Dorms;
 	FirstJakeEvent;
 
 to FirstJakeEvent:
-	say "     When you head on into the hallway that makes up the student lounge on the first floor of the male dorms you suddenly bump into somebody. Turning to whoever you ran into you hear a voice apologize as you do. 'Oh I'm sorry, I wasn't paying attention.' A low-toned voice emanates from them. When you finally see them, you're intrigued, at the very least because of his appearance and the worry on his face. What's before you is obviously a college student that has to be in art classes with the 'Art is Life' shirt and the paint splatters all over his clothes. Beyond that he appears to be a male panda, [if scalevalue of Player < 4]and bigger than you in just about everything. [else if scalevalue of Player is 4]and the same size as you interestingly enough. [else if scalevalue of Player > 4]and smaller than you, which amuses you a little bit. [end if]";
+	say "     When you head on into the hallway that makes up the student lounge on the first floor of the male dorms you suddenly bump into somebody. 'Oh I'm sorry, I wasn't paying attention.' A low-toned voice emanates from them. When you finally see them, you're intrigued, at the very least because of his appearance and the worry on his face. What's before you is obviously a college student that has to be in art classes with the 'Art is Life' shirt and the paint splatters all over his clothes. Beyond that he appears to be a male panda, [if scalevalue of Player < 4]and bigger than you in just about everything. [else if scalevalue of Player is 4]and the same size as you interestingly enough. [else if scalevalue of Player > 4]and smaller than you, which amuses you a little bit. [end if][line break]";
 	say "     The panda looks you up and down before he gets a look on his face, the worry he previously had on it changing to something you can perceive as hope. 'Could you possibly help me with something?' he asks, a slight bit of desperation to his tone. You wonder as to what he possibly needs from you that could be so urgent, after all he just met you. Saying as much, you're sure that if the panda could blush, he would. 'Ah, well I have an assignment due real soon and you're the perfect help for it...' the male says, trailing off. You raise a brow at him causing him to look even more embarrassed. 'Oh I'm so sorry! I'm asking this question without introducing myself! The name's Jake!' he says with a smile, holding out his hand.";
 	WaitLineBreak;
 	say "     Taking a look at the panda's paw before mentally shrugging and accepting it, you shake his hand. His smile widens a bit before he rubs the back of his head with his free hand. Suddenly though he looks as if he's had an idea. 'Hey! Before I ask you to help, how about I show you what I do?' Jake asks you. Now that's an interesting proposition, asking him what he means. 'Well, I want to show you my gallery, it'll help you understand what I do,' the panda says. You nod, what he's asking makes sense, him basically giving you an idea of what you're getting yourself into is a fair offer. So with a shrug you nod your head. He smiles at you and bounces lightly on the pads of his feet.";
@@ -54,8 +55,9 @@ Object	Name
 Panda Question	"Panda Question"
 
 Panda Question is a situation.
+ResolveFunction of Panda Question is "[ResolveEvent Panda Question]".
 Panda Question is resolved.
-The sarea of Panda Question is "Campus".
+Sarea of Panda Question is "Campus".
 
 when play begins:
 	add Panda Question to BadSpots of MaleList;
@@ -64,7 +66,7 @@ instead of going to Creative Street while (Panda Question is not resolved and La
 	move player to Creative Street;
 	SecondJakeEvent;
 
-instead of resolving Panda Question:
+to say ResolveEvent Panda Question:
 	move player to Creative Street;
 	SecondJakeEvent;
 
@@ -86,8 +88,9 @@ Object	Name
 Art Supply Retrieval	"Art Supply Retrieval"
 
 Art Supply Retrieval is a situation.
+ResolveFunction of Art Supply Retrieval is "[ResolveEvent Art Supply Retrieval]".
 Art Supply Retrieval is resolved.
-The sarea of Art Supply Retrieval is "Campus".
+Sarea of Art Supply Retrieval is "Campus".
 
 when play begins:
 	add Art Supply Retrieval to BadSpots of FemaleList;
@@ -96,7 +99,7 @@ instead of going to Lecture Street while (Art Supply Retrieval is not resolved a
 	move player to Lecture Street;
 	ThirdJakeEvent;
 
-instead of resolving Art Supply Retrieval:
+to say ResolveEvent Art Supply Retrieval:
 	move player to Lecture Street;
 	ThirdJakeEvent;
 
@@ -142,8 +145,9 @@ Object	Name
 Grateful Panda	"Grateful Panda"
 
 Grateful Panda is a situation.
+ResolveFunction of Grateful Panda is "[ResolveEvent Grateful Panda]".
 Grateful Panda is resolved.
-The sarea of Grateful Panda is "Campus".
+Sarea of Grateful Panda is "Campus".
 
 when play begins:
 	add Grateful Panda to BadSpots of MaleList;
@@ -152,7 +156,7 @@ instead of going to Lecture Street while (Grateful Panda is not resolved and Las
 	move player to Lecture Street;
 	FourthJakeEvent;
 
-instead of resolving Grateful Panda:
+to say ResolveEvent Grateful Panda:
 	move player to Lecture Street;
 	FourthJakeEvent;
 
@@ -203,8 +207,8 @@ AnalVirgin of Jake is true.
 PenileVirgin of Jake is true.
 SexuallyExperienced of Jake is false.
 MainInfection of Jake is "".
-The description of Jake is "[JakeDesc]".
-The conversation of Jake is { "<This is nothing but a placeholder!>" }.
+Description of Jake is "[JakeDesc]".
+Conversation of Jake is { "<This is nothing but a placeholder!>" }.
 The scent of Jake is "     Jake gives off a scent of clay and paint oils, which is to be expected with the panda's occupation as an art student.".
 
 to say JakeDesc:

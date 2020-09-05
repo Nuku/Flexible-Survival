@@ -26,8 +26,8 @@ to say beateasterbunny:
 Section 4 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -81,6 +81,9 @@ When Play begins:
 	now libido entry is 75; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;
 	now body descriptor entry is "[one of]slender[or]alluring[or]sexy[at random]";
 	now type entry is "[one of]rabbit[or]bunny[or]lapine[at random]";
@@ -95,7 +98,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -258,17 +261,17 @@ to say ebheat:
 				say "     But that is only the first. You've already got the second pushing past your cervix and into your vaginal cavity. The second is easier to get out, your passage having already been stretched by the first. And another push of orgasmic effort forces this second colorful egg out.";
 				say "     Left with the third and final, it is more difficult. While your vagina and pussy may be stretched and lubricated with your femme cum, your inner muscles are tired from the effort. You moan, pant and masturbate yourself furiously to another orgasm that gives the chocolate ovoid the final push out it needs. The colorful egg comes to rest beside its predecessors.";
 				say "     You're left panting and thoroughly drained, yet erotically satisfied after the strange experience. Taking the colorful Easter eggs, you stow them away.";
-				increase carried of Easter egg by 3;
+				ItemGain Easter egg by 3;
 				increase hunger of Player by 12;
 			else if ( "Litter Bearer" is listed in feats of Player and a random chance of 2 in 3 succeeds ) or a random chance of 1 in 4 succeeds:
 				say "     That pleasant weight you've been feeling in your lower belly has grown, resting heavily in your womb. Your bunny cunny quivers and warm juices soak your thighs as the hard lumps inside you shift about with a few clicks. You moan and stagger to someplace to sit. Your uterine walls push at the hard lumps inside you, guiding the first down into your vagina, which continues to push it out. Shivers of delight rock through you even as the candy-shelled egg crowns, building to an orgasmic climax as you manage to push it free.";
 				say "     But that is only the first. You've already got the other one pushing past your cervix and into your vaginal cavity. The second is easier to get out, your passage having already been stretched by the first. And another push of orgasmic effort forces this second colorful egg out.";
 				say "     You're left panting and quite drained, yet erotically satisfied after the strange experience. Taking the colorful Easter eggs, you stow them away.";
-				increase carried of Easter egg by 2;
+				ItemGain Easter egg by 2;
 				increase hunger of Player by 8;
 			else:
 				say "     That small weight you've been feeling in your lower belly has grown, resting heavily in your womb. Your bunny cunny quivers and warm juices soak your thighs as it shifts inside you. You moan and stagger to someplace to sit. Your uterine walls push at the hard lump inside you, guiding it down into your vagina, which continues to push it out. Shivers of delight rock through you even as the candy-shelled egg crowns, building to an orgasmic climax as you manage to push it free. You're left panting and drained, yet erotically satisfied after the strange experience. Taking the colorful Easter egg, you stow it away.";
-				increase carried of Easter egg by 1;
+				ItemGain Easter egg by 1;
 				increase hunger of Player by 4;
 		else:
 			if ( "Litter Bearer" is listed in feats of Player and a random chance of 1 in 4 succeeds ) or a random chance of 1 in 8 succeeds:
@@ -276,17 +279,17 @@ to say ebheat:
 				say "     But that is only the first. You've already got the second pushing past your anal cervix and into your lower intestine. The second is easier to get out, your rectum having already been stretched by the first. And another push of orgasmic effort forces this second colorful egg out.";
 				say "     Left with the third and final, it is more difficult. While your rectum and anus may be stretched and lubricated with egg juices, your inner muscles are tired from the effort. You moan, pant and masturbate yourself furiously to another orgasm that gives the chocolate ovoid the final push out it needs. The colorful egg comes to rest beside its predecessors.";
 				say "     You're left panting and thoroughly drained, yet erotically satisfied after the strange experience. Taking the colorful Easter eggs, you stow them away.";
-				increase carried of Easter egg by 3;
+				ItemGain Easter egg by 3;
 				increase hunger of Player by 12;
 			else if ( "Litter Bearer" is listed in feats of Player and a random chance of 2 in 3 succeeds ) or a random chance of 1 in 4 succeeds:
 				say "     That small weight that you've been feeling in your lower belly has grown, resting heavily in your hidden womb. Your bunny womb trembles and your asshole starts to relax as it shifts inside you with a series of clicks and clacks. You moan and stagger to someplace to sit. Your uterine walls push at the hard lumps inside you, guiding the first down into your bowels, which continues to push it out. Shivers of delight rock through you even as the candy-shelled egg crowns from your anus, building to an orgasmic climax as you manage to push it free.";
 				say "     But that is only the first. You've already got the other one pushing past your anal cervix and into your lower intestine. The second is easier to get out, your passage having already been stretched by the first. And another push of orgasmic effort forces this second colorful egg out.";
 				say "     You're left panting and quite drained, yet erotically satisfied after the strange experience. Taking the colorful Easter eggs, you stow them away.";
-				increase carried of Easter egg by 2;
+				ItemGain Easter egg by 2;
 				increase hunger of Player by 8;
 			else:
 				say "     That small weight you've been feeling in your lower belly has grown, resting heavily in your hidden womb. Your bunny womb trembles and your asshole starts to relax as it shifts inside you. You moan and stagger to someplace to sit. Your uterine walls push at the hard lump inside you, guiding it down into your bowels, which continue to push it out. Shivers of delight rock through you even as the candy-shelled egg crowns from your anus, building to an orgasmic climax as you manage to push it free. You're left panting and drained, yet erotically satisfied after the strange experience. Taking the colorful Easter egg, you stow it away.";
-				increase carried of Easter egg by 1;
+				ItemGain Easter egg by 1;
 				increase hunger of Player by 4;
 		now ebheat_msg is false;
 		now ebheat_egg is 0;

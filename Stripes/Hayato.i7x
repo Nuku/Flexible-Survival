@@ -15,12 +15,13 @@ Object	Name
 Garage Demon	"Garage Demon"
 
 Garage Demon is a situation.
-The sarea of Garage Demon is "Capitol".
+ResolveFunction of Garage Demon is "[ResolveEvent Garage Demon]".
+Sarea of Garage Demon is "Capitol".
 when play begins:
 	add Garage Demon to BadSpots of MaleList;
 	add Garage Demon to badspots of DemonList;
 
-Instead of resolving a Garage Demon:
+to say ResolveEvent Garage Demon:
 	if debugactive is 1:
 		say "DEBUG -> HP of Hayato: [HP of Hayato] <- DEBUG[line break]";
 	if HP of Hayato is 0:
@@ -48,7 +49,7 @@ Instead of resolving a Garage Demon:
 to say haleventtalk:
 	say "     Approaching the imposing figure[if HP of Hayato > 0] again[end if], you try to intice him to conversation. He gets up with a sigh before growling at you to go away as he reaches for his menacing club. He glares at you with his yellow eyes. You try your best to calm him down.";
 	if HP of Hayato < 5:
-		let bonus be ( the charisma of the player minus 10 ) divided by 2;
+		let bonus be ( Charisma of Player minus 10 ) divided by 2;
 		increase bonus by HP of Hayato;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
@@ -75,7 +76,7 @@ to say haleventfight:
 	say "     When you continue the charge, the muscled demon does something unexpected and turns to face the back of the garage. He bashes his club right through the back wall, knocking a large hole in it. He then slams himself into the broken wall, the cracks running through it breaking entirely as your fearsome foe barrels right through it. Having broken free of the garage, he just keeps running, fleeing rather than fighting you, much to your surprise. You almost rush after him in pursuit before you realize the garage is coming down and move back. The building collapses in a cloud of concrete dust.";
 	WaitLineBreak;
 	say "     As you wait for the dust to clear, you think over what just happened, realizing that the demon's blows were all wide. Either he had very poor aim or he wasn't trying to hit you, but instead just looking to scare you off. Regardless, he certainly fled rather than fight you. You ponder what just happened as you attempt to search the rubble for anything that might have survived, but it is difficult work and only yields a small pack of cookies which is intact.";
-	increase carried of chips by 1;
+	ItemGain chips by 1;
 	now HP of Hayato is 99;
 	unleashredoni;
 	now Resolution of Garage Demon is 3; [Tried to fight Hayato]
@@ -88,7 +89,7 @@ to say halhistory:
 	say "     He pauses again, looking down on his strong, meaty hands with their clawed nails and bright red skin. He balls them up into fists before taking a deep breath and relaxing. 'I was thankfully overlooked by the monster. I would not want my first to have been that horrible creature. The others it had attacked were gone, their clothes torn to shreds and demon cum everywhere. I realize now they have probably become more like it, but unable to contend with the dark urges and lusts which took them over.' He shifts uncomfortably on the floor and presses a hand to his tiger-skin loincloth. 'Thankfully, I am menacing enough in appearance that most of them give me a wide berth and do not trouble me.'";
 	say "     Despite his fearsome face and gruff voice, there's a sadness to them as well. As you grow used to his appearance and his voice, it becomes a little easier to read the true emotions beneath them. 'You should perhaps go now. I thank you for the company; it is good to speak to someone again. But now I need to meditate.' You consider trying to talk to him longer, but decide to leave as he's requested. Perhaps he'll be feeling more sociable if you return to this [bold type]disused garage[roman type] later.";
 	PlayerEat 6;
-	now Disused Garage is known;
+	AddNavPoint Disused Garage;
 
 
 Section 2 - Location
@@ -98,7 +99,7 @@ Object	Name
 Disused Garage	"Disused Garage"
 
 Disused Garage is a room. It is fasttravel. It is private.
-The description of Disused Garage is "[disusedgaragedesc]".
+Description of Disused Garage is "[disusedgaragedesc]".
 
 the scent of Disused Garage is "There is a lingering scent of oil hanging around the building.".
 
@@ -114,9 +115,9 @@ object	name
 Hayato	"Hayato"
 
 Hayato is a man. Hayato is in Disused Garage.
-The description of Hayato is "[halonidesc]".
+Description of Hayato is "[halonidesc]".
 The icon of Hayato is Figure of Hayato_icon.
-The conversation of Hayato is { "Hai!" }.
+Conversation of Hayato is { "Hai!" }.
 HayatoHunger is a number that varies.
 
 understand "Hal" as Hayato.
@@ -222,7 +223,7 @@ to say sexwithHayato:
 	else if HP of Hayato < 10:
 		say "     Deciding to make a move on the muscular oni, you recall his uneasiness with the prospect of sex. You can tell he wants it too, but he's worried he'll be like the rampaging oni. You figure you'll need to get rather hands on if you want to overcome his reluctance, but you will need to do so without him catching on too early. You start to chat him up, trying to be subtly seductive as you gradually move closer and closer.";
 		WaitLineBreak;
-		let bonus be ( the charisma of the player minus 10 ) divided by 2;
+		let bonus be ( Charisma of Player minus 10 ) divided by 2;
 		let targetnum be 20;
 		decrease targetnum by HP of Hayato;
 		increase HP of Hayato by 1;
@@ -301,12 +302,12 @@ to say hayatosexmenu:
 		now title entry is "Fuck him";
 		now sortorder entry is 5;
 		now description entry is "take your turn on top";
-	if hp of hayato is 50:
+	if HP of hayato is 50:
 		choose a blank row in table of fucking options;
 		now title entry is "Get bent over";
 		now sortorder entry is 6;
 		now description entry is "be taken roughly in the ass";
-	if hp of hayato is 50:
+	if HP of hayato is 50:
 		choose a blank row in table of fucking options;
 		now title entry is "Get face fucked";
 		now sortorder entry is 7;
@@ -424,14 +425,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Noh Mask	"Noh Mask"
 
-Noh Mask is a situation. Noh Mask is inactive. The level of Noh Mask is 9.
-The sarea of Noh Mask is "Campus".
+Noh Mask is a situation.
+ResolveFunction of Noh Mask is "[ResolveEvent Noh Mask]". Noh Mask is inactive. The level of Noh Mask is 9.
+Sarea of Noh Mask is "Campus".
 when play begins:
 	add Noh Mask to BadSpots of FurryList;
 	add Noh Mask to BadSpots of MaleList;
 	add Noh Mask to BadSpots of FemaleList;
 
-instead of resolving Noh Mask:
+to say ResolveEvent Noh Mask:
 	if HP of Hayato is 11:
 		say "     Recalling Nermine's mention of the noh mask she wants, you search around some likely possibilities for where it may be. You fortunately find it hanging on the wall of the Japanese Language professor's office. Unfortunately though, that office is busily occupied by a trio of felines in ninja outfits with a humanoid female pinned to the desk beneath them. The woman's clothing is torn, exposing much of her exaggeratedly proportioned body. Her eyes are very large and visible through her overhanging bangs of blue hair. As the ninjas run their greedy paws over her smooth skin and grope her breasts, she moans and squirms. 'Ecchi! No, bad kitties!' she says before breaking down into a long moan as one of them slips a pair of fingers into her wet pussy.";
 		say "     It looks like they'll be here for a while, so you'll have to deal with them if you want to get the mask.";
@@ -508,13 +510,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Oni Lair	"Oni Lair"
 
-Oni Lair is a situation. Oni Lair is inactive. The level of Oni Lair is 9.
-The sarea of Oni Lair is "Capitol".
+Oni Lair is a situation.
+ResolveFunction of Oni Lair is "[ResolveEvent Oni Lair]". Oni Lair is inactive. The level of Oni Lair is 9.
+Sarea of Oni Lair is "Capitol".
 when play begins:
 	add Oni Lair to BadSpots of MaleList;
 	add Oni Lair to badspots of DemonList;
 
-instead of resolving Oni Lair:
+to say ResolveEvent Oni Lair:
 	if debugactive is 1:
 		say "DEBUG -> HP of Hayato: [HP of Hayato] <- DEBUG[line break]";
 	if HP of Hayato is 19:
@@ -595,7 +598,7 @@ to say onilairassault:
 		WaitLineBreak;
 		say "     When you and Hayato venture inside, you find that the two guards were indeed telling the truth. It seems the rest of the oni aren't here right now. There's the remains of sandwich fixing, open packets of drink mix and the plastic wrapper for a picnic basket. You're strangely disappointed at having missed them, but relieved as well. Certainly Hayato's seeming much more confident for having gone face to face with his infection. You gather up the remaining supplies you can salvage from the mess and head back to the bunker together.";
 		say "     Upon your return, Hayato pulls you into his arms and gives you another forceful kiss. 'Mmm... I'm feeling so much better after all that. That felt so good to take charge like that and take what I wanted.' He gives your ass a firm squeeze and grinds his crotch against your side, throbbing with growing need. 'How about we do things my way on occasion?' he asks with a lustful growl. From the look on your face you clearly have no objection with this train of thought.";
-		increase carried of food by 2;
+		ItemGain food by 2;
 		increase score by 20;
 		now lastfuck of Hayato is turns + 8;
 		now HP of Hayato is 50;

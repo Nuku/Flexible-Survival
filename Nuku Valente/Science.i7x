@@ -8,7 +8,7 @@ Book - Science Advisor
 
 Nerd is a person. "A science advisor awaits your attention. They have a name, but most just call them the [bold type]nerd[roman type]. Perhaps you want to discuss [bold type]research[roman type].".
 Nerd is in Village center.
-The description of nerd is "[science advisor of tribe of Player]".
+Description of nerd is "[science advisor of tribe of Player]".
 
 After examining the nerd:
 	if progress of current of nerd < cost of current of nerd:
@@ -98,7 +98,7 @@ The nerd has a research called current.
 cur is a text that varies.[@Tag:NotSaved]
 
 Local Survey is a Research.
-The description of it is "Surveying our immediate surroundings will better prepare us for the unexpected (Perception +5%)".
+Description of it is "Surveying our immediate surroundings will better prepare us for the unexpected (Perception +5%)".
 The cost of it is 30.
 The completion of it is Local Survey Rule.
 
@@ -145,12 +145,12 @@ An everyturn rule (this is the SCIENCE rule):
 
 
 Farming is a research.
-The description of it is "Farming the land can be a source of valuable food and/or trade goods. It takes far fewer people to farm food than it does to forage.".
+Description of it is "Farming the land can be a source of valuable food and/or trade goods. It takes far fewer people to farm food than it does to forage.".
 The cost of it is 50.
 It is indefinite.
 
 Ranching is a research.
-The description of it is "Why go hunt wild animals when you can herd and tend to your own?".
+Description of it is "Why go hunt wild animals when you can herd and tend to your own?".
 The validation of it is ranchvalidation rule.
 The cost of it is 100.
 
@@ -159,7 +159,7 @@ This is the ranchvalidation rule:
 	rule fails;
 
 Hunting is a research.
-The description of it is "Hunting techniques allow for efficient exploiting of animal resources on your lands, producing more food and/or trade goods.".
+Description of it is "Hunting techniques allow for efficient exploiting of animal resources on your lands, producing more food and/or trade goods.".
 The cost of it is 50.
 It is indefinite.
 

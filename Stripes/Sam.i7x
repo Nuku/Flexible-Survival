@@ -66,14 +66,15 @@ Object	Name
 Another Researcher	"Another Researcher"
 
 Another Researcher is a situation.
-The sarea of Another Researcher is "Outside".
+ResolveFunction of Another Researcher is "[ResolveEvent Another Researcher]".
+Sarea of Another Researcher is "Outside".
 when play begins:
 	add Another Researcher to BadSpots of FurryList;
 	add Another Researcher to BadSpots of MaleList;
 	add Another Researcher to BadSpots of FemaleList;
 	add Another Researcher to badspots of HermList;
 
-Instead of resolving Another Researcher:
+to say ResolveEvent Another Researcher:
 	say "     While passing along a narrow side street, you hear the not-uncommon sounds of rutting sex coming from somewhere nearby. Picking up something odd about the sounds, you cut across the alley and peek out into the street. There you find a canine finishing up in what appears to be an unchanged human male. The guy being pounded spots you and blushes a little, motioning for you to be quiet and wait. Expecting him to start changing soon, you prepare to back away, but even after the canine is done and gone, no infection appears. The guy gets up slowly and starts rearranging his clothes, waving you over. Confused but cautious, you approach him.";
 	WaitLineBreak;
 	if BodyName of Player is "Human" and the player is pure:
@@ -92,7 +93,7 @@ Instead of resolving Another Researcher:
 	now HP of Sam is 1;
 	increase score by 10;
 	move player to Mini-Lab;
-	now Mini-Lab is known;
+	AddNavPoint Mini-Lab;
 	now battleground is "void";
 	now Another Researcher is resolved;
 
@@ -104,7 +105,7 @@ Object	Name
 Mini-Lab	"Mini-Lab"
 
 Mini-Lab is a room. It is fasttravel. It is private.
-The description of Mini-Lab is "[minilabdesc]".
+Description of Mini-Lab is "[minilabdesc]".
 The invent of Mini-Lab is { "cot" }.
 
 the scent of Mini-Lab is "[minilabscent]".
@@ -136,8 +137,8 @@ object	name
 Sam	"Sam"
 
 Sam is a man. Sam is in Mini-Lab.
-The description of Sam is "[samdesc]".
-The conversation of Sam is { "Thanks." }.
+Description of Sam is "[samdesc]".
+Conversation of Sam is { "Thanks." }.
 the scent of Sam is "[samscent]".
 samformtalk is a truth state that varies. samformtalk is usually false.
 
@@ -240,9 +241,9 @@ to say SamTalk:
 		say "     'I've really got a lot on my plate here with trying to deal with all the tests they need me to take care of now that I'm on my own. Rick and I used to take shifts, but now I've got to do it all. So I was hoping I could get you to give me a hand. There's some tests that they want me to run on some samples from the City Zoo. Rick was working that area when he decided it'd be more fun to just join the fun full-time. I'd lose too much time traveling back and forth out there to be able to keep up with the rest of the work. They want samples of cheetah milk and rhino cum, though I'll make some vials out of it when I'm done.";
 		if Zoo Entrance is unknown:
 			say "     'I haven't made a trip out there yet myself, but he did tell me the route he found to get there. It should be fairly safe and let you avoid the really unsafe or blocked sections.'";
-			now Zoo Entrance is known;
+			AddNavPoint Zoo Entrance;
 		say "     'I've got some extra supplies. I can give you some if you'll gather two samples of both cheetah milk and rhino cum. I'd really appreciate it. Here, you can even take this bottle of water as a down payment.' Deciding it might be a good way to get some extra supplies, you agree to give it a shot. In addition, helping Sam finish up might be your ticket out of this whole mess if you can tag along with him.";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 		now HP of Sam is 2;
 	else if HP of Sam is 2:
 		if carried of cheetah milk < 2 or carried of rhino cum < 2:
@@ -251,30 +252,26 @@ to say SamTalk:
 			else:
 				say "     [one of]'I want to thank you for giving me a hand with this. I don't think I could finish on my own.'[or]'I've got some other tests to run, but then I've got to go right back out and find a few more critters to fill out my quota.'[or]'I wouldn't have considered messing around with a guy before this, but I must say some of those males out there can be a lot of fun.'[or]'Some of those mutants out there are actually pretty sexy. Once you learn to overlook stuff like fur or scales, you can see that there's some really hot ladies (and dudes) out there.'[or]'There's such a wild mix of creatures out there. It's getting kind of fun finding them and just having some wild sex. You should try letting a few of them win more often.'[or]'This resistance treatment's been a big help since I don't have to fight off all the creatures. Though I do have to shoo away those I've already gotten samples from or I don't have the time and energy left to have fun when I finally track down a new one I need.'[or]'I think I'm in the mood to find a [if a random chance of 1 in 3 succeeds]herm[else if a random chance of 1 in 2 succeeds]female[else]male[end if] next time. Hopefully there's one around that I haven't already got.'[or]'It's getting harder to track down creatures I haven't already gotten enough samples from,' he says, motioning to wide array of small vials on the racks.[at random]";
 		else:
-			delete cheetah milk;
-			delete cheetah milk;
-			delete rhino cum;
-			delete rhino cum;
+			ItemLoss cheetah milk by 2;
+			ItemLoss rhino cum by 2;
 			say "     Sam takes the samples you've brought and sets them on the table. 'Wonderful, [if Player is female]babe[else]man[end if]. This is a big help. I'm going to get started on these tests right away. Next stuff I'm going to need is some gel from those jelly-people in the red light district of town. There's three different kinds of them - pink, blue and purple - and I'll need a sample from each of them. Got to analyze what makes them different. And here, take this stuff as a reward for helping me out,' he adds, handing you some dried food and another bottle of water.";
 			if Entrance to the Red Light District is unknown:
 				say "     'Since you haven't been there before - let me tell you - that place is really wild. I mean, I had lots of fun there and all gathering nanite samples, but the creatures there can be extra intense. I was really tempted to go back and visit that tigress in the alley again. She was quite the ride and well worth the milk I gave her.' He then proceeds to show you a route into the city's red light district.";
-				now Entrance to the Red Light District is known;
-			increase carried of food by 1;
-			increase carried of water bottle by 1;
+				AddNavPoint Entrance to the Red Light District;
+			ItemGain food by 1;
+			ItemGain water bottle by 1;
 			increase score by 20;
 			now HP of Sam is 3;
 	else if HP of Sam is 3:
 		if pink gel is owned and blue gel is owned and purple gel is owned:
-			delete pink gel;
-			delete blue gel;
-			delete purple gel;
-			say "     You set down the samples of gel you'd collected on the work table. 'Awesome! That's another one of the tests on the list I can finish off. Let's see, how about you grab me some eagle feathers next? I'll need at least two of them, I think. Those eagles are flying out over the Dry Plains to the east of the city.'";
-			if Dry Plains is unknown:
-				say "     'Things are pretty open out there with few buildings still left standing. It used to be mostly suburbs and small ranches, but something's making them all collapse really quickly. Don't expect to find as much going on out there, but it's pretty open so you shouldn't have too much trouble finding some of those eagles.'";
-				now Dry Plains is known;
+			ItemLoss pink gel by 1;
+			ItemLoss blue gel by 1;
+			ItemLoss purple gel by 1;
+			say "     You set down the samples of gel you'd collected on the work table. 'Awesome! That's another one of the tests on the list I can finish off. Let's see, how about you grab me some eagle feathers next? I'll need at least two of them, I think. Those eagles are flying out over the Dry Plains to the east of the city. Things are pretty open out there with few buildings still left standing. It used to be mostly suburbs and small ranches, but something's making them all collapse really quickly. Don't expect to find as much going on out there, but it's pretty open so you shouldn't have too much trouble finding some of those eagles.'";
+			AddNavPoint Dry Plains;
 			say "     He digs around in his supplies and pulls some stuff out for you. 'Here, how about some snacks this time? Some sugar'll keep you going.'";
-			increase carried of soda by 1;
-			increase carried of chips by 1;
+			ItemGain soda by 1;
+			ItemGain chips by 1;
 			increase score by 20;
 			now HP of Sam is 4;
 		else:
@@ -446,12 +443,12 @@ SamTest is an action applying to nothing.
 understand "Sam Test" as SamTest.
 
 carry out SamTest:
-	increase carried of cheetah milk by 2;
-	increase carried of rhino cum by 2;
-	increase carried of pink gel by 1;
-	increase carried of blue gel by 1;
-	increase carried of purple gel by 1;
-	increase carried of eagle feather by 2;
+	ItemGain cheetah milk by 2 silently;
+	ItemGain rhino cum by 2 silently;
+	ItemGain pink gel by 1 silently;
+	ItemGain blue gel by 1 silently;
+	ItemGain purple gel by 1 silently;
+	ItemGain eagle feather by 2 silently;
 
 
 Section 4 - Confrontation at the Mini-Lab
@@ -588,10 +585,10 @@ to assaultonminilab:
 	else if calcnumber is 3:
 		say "     Deciding it's every [if Player is female]woman for herself[else]man for himself[end if], you rush over to Sam's supplies and grab a quick armload and make a run for it. As you do this, Sam calls out with a mix of pleas for help and curses for leaving him, but you turn a deaf ear, rushing up the steps and out of the basement. Leaving Sam to his feline fate, you head back to the library to consider your next course of action.";
 		WaitLineBreak;
-		increase carried of food by 1;
-		increase carried of water bottle by 1;
-		increase carried of chips by 1;
-		increase carried of soda by 1;
+		ItemGain food by 1;
+		ItemGain water bottle by 1;
+		ItemGain chips by 1;
+		ItemGain soda by 1;
 		SanLoss 12;
 		now HP of Sam is 100;
 		now Sam is nowhere;
@@ -1107,7 +1104,7 @@ to say SamShroom:
 	if hunger of Sam is 0:	[First talk with Sam about shrinking shrooms]
 		say "     Sam waves a hand over the vials scattered around the shed. 'As you can see here, I've been busy collecting more samples, but I must admit that it's getting harder to find more unique specimens. If you happen to find anything interesting during your explorations, please let me know.'";
 		if MushroomCaveVisited is 1:	[Had visited the shrinking shroom site]
-			say "Recalling the miniaturized landscape that you found earlier, you tell Sam about it, which swiftly grabs the [if hp of Sam < 30]dragontaur's[else if hp of Sam < 50]vixentaur's[else]dracovixentaur's[end if] attention. 'Fascinating,' Sam responds. 'And you believe that this shrunken area has something to do with nanites and radiation? This is definitely something that I need to look into. You wouldn't happen to have brought back a sample from that area, would you?'";
+			say "Recalling the miniaturized landscape that you found earlier, you tell Sam about it, which swiftly grabs the [if HP of Sam < 30]dragontaur's[else if HP of Sam < 50]vixentaur's[else]dracovixentaur's[end if] attention. 'Fascinating,' Sam responds. 'And you believe that this shrunken area has something to do with nanites and radiation? This is definitely something that I need to look into. You wouldn't happen to have brought back a sample from that area, would you?'";
 			if glowing mushroom is owned:
 				say "     [bold type]Do you give a glowing mushroom to Sam?[roman type][line break]";
 				LineBreak;
@@ -1117,7 +1114,7 @@ to say SamShroom:
 					LineBreak;
 					say "     You pull out a mushroom that you harvested from the site in question and give it to the scientist. 'Interesting... Very interesting...' Sam says as they take the shroom and slowly turn it around to examine the glowing green fungus. 'I would love to have some more of these to run tests on, but I imagine that it would be a major hassle to constantly run back and forth just to sate my curiosity. Hmm... I wonder...' Sam looks over to one of the vial stashes lying around and sifts through it, extracting one vial filled with a murky-white liquid before going outside. Curious, you follow the taur to the back of the shed where there are several large planter boxes filled with soil. Sam puts the mushroom into one of the boxes, completely covering it with dirt, and then pours the vial's contents where the fungus was planted.";
 					say "     You and Sam stare at the planter box for several minutes, and to your surprise, several tiny green mushrooms eventually pop up from the soil. Sam chuckles at your amazement and explains, 'I used extracted nutrients from some of the rapidly growing plant life that have been popping up in some parts of the city.' Sam looks back to the mushrooms, which seemed to have stopped growing once they were about half the size of the original. 'I'm glad to see that my little gardening project works, and although it will take a bit longer before this batch fully matures, it looks like I'll be able to grow my own mushrooms here to fuel my research. Thank you for bringing this incredible find to me. Give me a moment to study them, and I'll share whatever information that I can get.'";
-					decrease carried of glowing mushroom by 1;
+					ItemLoss glowing mushroom by 1;
 					now hunger of Sam is 10;
 				else:	[Sam goes searching for their own shrinking shrooms]
 					say "[SamShroomSearch]";
@@ -1135,7 +1132,7 @@ to say SamShroom:
 	else if hunger of Sam is 20:	[Sam gives player a shrinking shroom]
 		say "     You ask if Sam can give you a shrinking shroom. 'Sure thing. Here you go.' Sam takes out a shrinking shroom from a covered storage container and then hands it to you with a smile.";
 		now hunger of Sam is 11;
-		increase carried of glowing mushroom by 1;
+		ItemGain glowing mushroom by 1;
 	else:	[Sam doesn't have a shrinking shroom to give to player]
 		say "     You ask if Sam can give you a shrinking shroom. 'Sorry, but I've used all of the shrinking shrooms on experiments and tests,' Sam apologizes. 'I'll try to save you one from the next batch.'";
 
@@ -1156,7 +1153,7 @@ an everyturn rule:	[Timer for Sam's Shrinking Shroom Content]
 		increase hunger of Sam by 1;
 
 to say SamShroomIntro:
-	say "     You tell Sam that you're willing to help with studying their insides, and the [if hp of Sam < 30]dragontaur[else if hp of Sam < 50]vixentaur[else]dracovixentaur[end if] smiles at you with both eagerness and gratitude. 'Thank you[if player is not defaultnamed], [name of player][end if],' they say. 'I'm sure that this will be an enlightening experience for the both of us.' Sam takes out a shrinking shroom from a covered storage container and gives it to you. It only takes a few moments after you consume the mushroom before the room gets seemingly bigger as you shrink. Soon, you're no bigger than a mouse, and the towering taur in front of you feels like that they're as big as a house due to your diminutive size. Sam quickly but neatly sets aside your belongings before they lay their open hand on the ground in front of you, allowing you to climb onto it. Once you're situated, Sam carefully raises their hand, and even though you know that they are moving at a slow speed for your safety, the trip up still has a hint of foreboding as you pass by a sea of [if hp of Sam < 30]blue scales[else if hp of Sam < 50]pink fur[else]violet scales and fur[end if] until you're face to gigantic face with the scientist's muzzle.";
+	say "     You tell Sam that you're willing to help with studying their insides, and the [if HP of Sam < 30]dragontaur[else if HP of Sam < 50]vixentaur[else]dracovixentaur[end if] smiles at you with both eagerness and gratitude. 'Thank you[if player is not defaultnamed], [name of player][end if],' they say. 'I'm sure that this will be an enlightening experience for the both of us.' Sam takes out a shrinking shroom from a covered storage container and gives it to you. It only takes a few moments after you consume the mushroom before the room gets seemingly bigger as you shrink. Soon, you're no bigger than a mouse, and the towering taur in front of you feels like that they're as big as a house due to your diminutive size. Sam quickly but neatly sets aside your belongings before they lay their open hand on the ground in front of you, allowing you to climb onto it. Once you're situated, Sam carefully raises their hand, and even though you know that they are moving at a slow speed for your safety, the trip up still has a hint of foreboding as you pass by a sea of [if HP of Sam < 30]blue scales[else if HP of Sam < 50]pink fur[else]violet scales and fur[end if] until you're face to gigantic face with the scientist's muzzle.";
 
 to say SamShroomOral:	[Oral Shrinking Shroom scene]
 	say "[SamShroomIntro]";
@@ -1175,8 +1172,8 @@ to say SamShroomAnal:	[Anal Shrinking Shroom scene]
 	say "[SamShroomIntro]";
 	say "     'Alright, so the goal is for you to enter my anus for this sample collection, however, there is a bit of a small problem, and it has to do with, well, you being so small. I need samples from deep inside of me, and while you might be the appropriate size, it's going to be tough for you to power your way in. My hands cannot reach back there to assist you, but fortunately, I have a tool that will solve our problems... in a slightly unorthodox way.' Using the hand that's not holding you, Sam reaches into a nearby box and pulls out a dildo, and not just any dildo. While it was shaped like an ordinary human dick, the size of it would have been more fitting on a horse, which is actually appropriately fitting for Sam's large tauric body.";
 	WaitLineBreak;
-	say "     'I found this during one of my jaunts around the city, and this thing has helped me with the extraction process from several difficult subjects. [if hp of Sam < 30 or hp of Sam > 49]Although, I haven't used it since this body of mine has a much better version built right into it,' they add with a chuckle. '[end if]You'll be holding onto this thing when it goes inside of me, and hopefully, we'll be able to get you in really deep. So, you ready?' Though you know that your role is nothing more than a bizarre mix of butt food and an add-on sex toy, you can't help but feel a bit excited and curious with the plan. Nodding your assent, Sam affixes the dildo onto the shed wall, and after adjusting it so that it's level with their ass, you are brought right up to the giant plastic phallus. You climb onto the dildo, the synthetic cock slightly cold and soft to the touch, and you make your way to its tip. Once you wrapped your limbs around the sex toy, Sam says, 'Alright, I'm going to start. Hold on tight. This is going to be quite the ride for the both of us.'";
-	say "     The taur scientist turns around, showing off a titanic ass of [if hp of Sam < 30]blue scales[else if hp of Sam < 50]pink fur[else]violet scales and fur[end if] with a puckered hole right in its center, which just so happens to be your destination. The humongous booty slowly moves closer, encompassing your vision, and even from a distance, you get a whiff of the musk emanating from it. Sam moans when the dildo tip slowly pushes inside of him, and you're soon plunged into a darkness of musk and taut flesh sliding along and engulfing your entire body. The anal walls clenches down tightly on your intrusion, but the squeezing sensation only lasts for a moment before you feel the surrounding flesh slide in the opposite direction until you find yourself back in the outside world.";
+	say "     'I found this during one of my jaunts around the city, and this thing has helped me with the extraction process from several difficult subjects. [if HP of Sam < 30 or HP of Sam > 49]Although, I haven't used it since this body of mine has a much better version built right into it,' they add with a chuckle. '[end if]You'll be holding onto this thing when it goes inside of me, and hopefully, we'll be able to get you in really deep. So, you ready?' Though you know that your role is nothing more than a bizarre mix of butt food and an add-on sex toy, you can't help but feel a bit excited and curious with the plan. Nodding your assent, Sam affixes the dildo onto the shed wall, and after adjusting it so that it's level with their ass, you are brought right up to the giant plastic phallus. You climb onto the dildo, the synthetic cock slightly cold and soft to the touch, and you make your way to its tip. Once you wrapped your limbs around the sex toy, Sam says, 'Alright, I'm going to start. Hold on tight. This is going to be quite the ride for the both of us.'";
+	say "     The taur scientist turns around, showing off a titanic ass of [if HP of Sam < 30]blue scales[else if HP of Sam < 50]pink fur[else]violet scales and fur[end if] with a puckered hole right in its center, which just so happens to be your destination. The humongous booty slowly moves closer, encompassing your vision, and even from a distance, you get a whiff of the musk emanating from it. Sam moans when the dildo tip slowly pushes inside of him, and you're soon plunged into a darkness of musk and taut flesh sliding along and engulfing your entire body. The anal walls clenches down tightly on your intrusion, but the squeezing sensation only lasts for a moment before you feel the surrounding flesh slide in the opposite direction until you find yourself back in the outside world.";
 	WaitLineBreak;
 	say "     However, your respite doesn't last long as the gargantuan ass pushes right back into the dildo, returning you to the musky depths. In and out you go of the tunnel of flesh as Sam fucks themself on the phallic wall ornament, each push sinking both the sex toy and you deeper into the taur. 'A-almost there!' Sam announces after a while, heavily panting from the lustful exertion. 'Get ready to let go!' With a loud groan, Sam gives one final push, taking the dildo all the way to the hilt and plunging you deep inside of them. While Sam catches their breath, you let go of the dildo, and soon, the plastic phallus withdraws, leaving you behind. With your phallic transport gone, the surrounding walls promptly clamp down on your hapless form, the clenching muscles slowly drawing you even deeper.";
 	say "     The tight tunnel makes it impossible for you to do anything but squirm, which quickly becomes a problem. Your head swims with lust from being exposed to the depths of Sam's intoxicating aroma, and the surrounding flesh caressing you from all sides only adds to the fire stirring in your loins. While you cannot tend to yourself by normal means, you're able to shift yourself until you can press your groin right up against a wall, grinding your [if player is male]cock[smn][else if player is female]cunt[sfn][else]crotch[end if] against the supple flesh. It doesn't take long for you to moan out in pleasure when your body twitches from your climax[if player is male], your cum smearing against the walls[else if player is female], your juices smearing against the walls[end if]. Exhausted from both your orgasm and the ordeal needed to achieve it, you slowly drift off to sleep to the oddly relaxing caress of Sam's anal walls as they draw you deeper and deeper into the taur.";

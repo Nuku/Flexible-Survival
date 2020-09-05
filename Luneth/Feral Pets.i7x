@@ -29,12 +29,14 @@ Table of GameCharacterIDs (continued)
 object	name
 Cute Crab	"Cute Crab"
 
-Cute Crab is a pet. Cute Crab is a part of the player.
+Cute Crab is a pet. Cute Crab is a part of Player.
+NPCObject of Cute Crab is Snips.
 understand "Snips" as Cute Crab.
-The description of Cute Crab is "[SnipsDesc]".
-The weapon damage of Cute Crab is 6.
+printed name of Cute Crab is "Snips".
+Description of Cute Crab is "[SnipsDesc]".
+Weapon Damage of Cute Crab is 5.
 The level of Cute Crab is 1.
-The Dexterity of Cute Crab is 8.
+Dexterity of Cute Crab is 20.
 The summondesc of Cute Crab is "[SummonSnips]".
 The dismissdesc of Cute Crab is "[DismissSnips]".
 The assault of Cute Crab is "[one of]Your crab snaps with his great pincers![or]Scuttling crazily, you are not even entirely sure when your crab landed a blow.[at random]".
@@ -85,7 +87,7 @@ AnalVirgin of Snips is true.
 PenileVirgin of Snips is true.
 SexuallyExperienced of Snips is false.
 MainInfection of Snips is "".
-The description of Snips is "[Snipsdesc]".
+Description of Snips is "[Snipsdesc]".
 
 instead of sniffing the Cute Crab:
 	say "[SnipsScent]";
@@ -98,6 +100,8 @@ to say SnipsScent:
 
 to say Snipsdesc:
 	say "     It's so cute! He has huge eyes that seem to stare into your soul and big pincers that go clackity-clack. The little crab has a reddish-yellow shell, while the tips of its claws are a soft pearly-white. His huge eyes stand on slender stalks that seem to follow you wherever you go. The long spindly legs coming out of his small abdomen carry it side to side, however his steps are clumsy, causing him to fall down on occasion.";
+	if companion of Player is cute crab:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing the Snips:
 	if Player is in Computer Lab and Snips is in Computer Lab:
@@ -194,20 +198,21 @@ Object	Name
 Lost Crab	"Lost Crab"
 
 Lost Crab is a situation.
-The sarea of Lost Crab is "Beach".
+ResolveFunction of Lost Crab is "[ResolveEvent Lost Crab]".
+Sarea of Lost Crab is "Beach".
 
-Instead of resolving Lost Crab:
+to say ResolveEvent Lost Crab:
 	say "     While you are exploring, you happen across a crab. The crab has unusually large and expressive eyes. It clacks its great pincers at you, but you don't get much feeling of malice from it.";
 	if food is owned:
 		say "     The crab scuttles towards you and reaches out to poke lightly at where your food is stored. Do you want to give it some?";
 		if the player consents:
-			delete food;
+			ItemLoss food by 1;
 			say "     The crab munches quite happily at the food, blowing a few bubbles in between bites to show its appreciation. Laying down next to the crab, you can't help but laugh a little bit at how happy it looks just nibbling away at its food. Without a second thought you reach out and stroke the smooth shell, causing the crab to stop eating and just stare at you with its abnormally huge eyes. From somewhere further down the beach, you can hear a loud roar echo out. The little crab doesn't hesitate to scuttle closer to you, seeking shelter. Wrapping an arm around the frightened crustacean, you continue to play protector while it finishes its meal. Once it is finished eating you get up to carry on with your exploration of the area, glancing back down at the crab to say goodbye. You are met with those huge eyes that almost look back at you imploringly.";
 			say "     The crab raises its pincers in an act that on a human would almost look like it's asking to be picked up. A little leery of the sharp claws, you lean down scooping up the crab. Thankfully, you had interpreted the action correctly as the crab seems content to now come with you. Deciding that if this little guy... errr girl... whatever it is, is going to join you it needs a name. Thinking to yourself a bit, your eyes immediately are drawn to the sizable claws that it's sporting. A name pops into your head: Snips! The name goes with the claws while at the same time is perfect for a cute little crab. Informing your companion of their new name all that you receive in response is a few bubbles blown at you. That decided, you go back to the exploration of the beach.";
 			now cute crab is tamed;
 			add "Tamed" to Traits of cute crab;
 			move Snips to Computer Lab;
-			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing [link]pet cute crab[as]pet cute crab[end link]. You can see all of the pets that you have tamed with the [link]pet[as]pet[end link] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [link]pet dismiss[as]pet dismiss[end link], or just [link]dismiss[as]dismiss[end link])[roman type][line break]";
+			say "     (Snips the cute crab is now a possible ally! You can make him your active ally by typing [bold type][link]ally Snips[end link][roman type] or [bold type][link]ally crab[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			now Resolution of Lost Crab is 1; [fed the crab]
 		else:
 			say "     The crab scuttles away sadly.";
@@ -223,12 +228,14 @@ Table of GameCharacterIDs (continued)
 object	name
 house cat	"house cat"
 
-house cat is a pet. house cat is a part of the player.
+house cat is a pet. house cat is a part of Player.
+NPCObject of house cat is Dinah.
 understand "Dinah" as house cat.
-The description of the house cat is "[DinahDesc]".
-The weapon damage of house cat is 5.
+printed name of house cat is "Dinah".
+Description of the house cat is "[DinahDesc]".
+Weapon Damage of house cat is 5.
 The level of house cat is 1.
-The Dexterity of house cat is 9.
+Dexterity of house cat is 20.
 The summondesc of house cat is "[SummonDinah]".
 The dismissdesc of house cat is "[DismissDinah]".
 The assault of house cat is "[one of]Your opponent moves back from your attack, only to trip over a strategically placed house cat![or]With a loud yowl, Dinah launches herself at your opponents face, biting and scratching like mad![or]The house cat eyes your opponent carefully, before turning her back on them and licking her paws in utter disdain. The shocking display of utter indifference seems to damage your opponents confidence[or]All of a sudden the combat stops for a moment as you and your opponent are startled at a loud yowl. Looking down, you barely have a second to realize that your opponent had managed to step on your cat's tail, before Dinah rips into your opponent in fury.[or]Taking advantage of your foe's distraction, Dinah picks an opportune moment to attack.[or]Spotting something of interest on the other side of the melee, Dinah quickly darts through the combat, somehow managing to claw your opponent as she does so.[at random]".
@@ -279,7 +286,7 @@ AnalVirgin of Dinah is true.
 PenileVirgin of Dinah is true.
 SexuallyExperienced of Dinah is false.
 MainInfection of Dinah is "".
-The description of Dinah is "[DinahDesc]".
+Description of Dinah is "[DinahDesc]".
 
 instead of sniffing Dinah:
 	say "[DinahScent]";
@@ -292,6 +299,8 @@ to say DinahScent:
 
 to say DinahDesc:
 	say "     Dinah is covered in soft calico fur, and seems to be happy enough to just follow you along and see what happens, and perhaps take care of any extra milk that you might come across. The pink rhinestone collar she has around her neck seems to sparkle with every move she makes. Her whiskers twitch as she smells the area for anything of interest.";
+	if companion of Player is house cat:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing house cat:
 	say "     Your little kitty smells like a normal cat.";
@@ -360,12 +369,14 @@ Section 2.3 - House Cat Event
 
 Table of GameEventIDs (continued)
 Object	Name
-Lost house cat	"Lost house cat"
+Lost House Cat	"Lost house cat"
+Lost house cat	"Lost House Cat"
 
-Lost house cat is a situation.
-The sarea of Lost house cat is "Outside".
+Lost House Cat is a situation.
+ResolveFunction of Lost House Cat is "[ResolveEvent Lost House Cat]".
+Sarea of Lost House Cat is "Outside".
 
-Instead of resolving Lost house cat:
+to say ResolveEvent Lost House Cat:
 	say "     Heading through the streets of the city, you spy a small form dart down an alleyway ahead of you, the shape moving too quickly for you to get anything more than an impression of four legs and fur. Curious, you pause for a minute, trying to decide whether you should investigate the shape further.";
 	if Player consents:
 		say "     Looking down the alleyway, you don't see anything out of the usual at first, though the alley provides plenty of places for something to hide if it was small enough. Searching carefully, you are about to give up looking when you notice a small cardboard box trembling slightly as you pass close to it. Kneeling down and approaching the shaking box cautiously, you slowly lift the edge of the box up and look underneath it, only to be hissed at by a small cat, before it darts out from under the box and behind a nearby dumpster, its feline eyes shining out at you warily from the darkened space. You realize that the small cat seems to have been given a large enough scare recently that it is still terribly frightened. If you want it to calm down, perhaps you should offer it something that cats like?";
@@ -403,11 +414,11 @@ Instead of resolving Lost house cat:
 					WaitLineBreak;
 					say "     Having finished the milk, the cat looks up at you as if to see if you have any more, moving a bit closer as it does so. You cautiously extend your hand to it, which it thoroughly sniffs with its soft nose before sneezing. Apparently reaching some decision about you, the cat then walks right up to where you are sitting and begins rubbing itself against your legs. You begin stroking its fur as it does, managing to get the worst of the dirt and grime off of it before it gets tired of being petted and begins to examine your pack for signs of more milk. You are able get a better look at its neck, a small pink rhinestone collar slightly covered by its soft fur.";
 					say "     Fingering the tiny silver name tag you are able to read the name Dinah. Obviously the cat is a pretty little girl going by the name at least. Stretching as you sit up, you are surprised when you look around and realize how much time has passed while you took care of the little cat. Deciding that you should be heading back, you realize after a few steps that you seem to have a feline following you, but after thinking about it a second, you realize that the little house cat probably wouldn't last much longer out here on the streets alone. You let Dinah follow you all the way back to the Library.";
-					delete chosenmilk;
+					ItemLoss chosenmilk by 1;
 					now house cat is tamed;
 					add "Tamed" to Traits of house cat;
 					move Dinah to Computer Lab;
-					say "(The house cat is now tamed! You can make it your active pet by typing [bold type][link]pet house cat[end link][roman type]. You can see all of the pets that you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+					say "     (Dinah the house cat is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Dinah[end link][roman type] or [bold type][link]ally house cat[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					now Resolution of Lost house cat is 1; [fed and adopted the cat]
 					now Lost house cat is resolved;
 				else:
@@ -446,12 +457,14 @@ Table of GameCharacterIDs (continued)
 object	name
 Exotic Bird	"Exotic Bird"
 
-Exotic Bird is a pet. Exotic Bird is a part of the player.
+Exotic Bird is a pet. Exotic Bird is a part of Player.
+NPCObject of Exotic Bird is Chirpy.
 understand "Chirpy" as Exotic Bird.
-The description of the exotic bird is "[ChirpyDesc]".
-The weapon damage of Exotic Bird is 2.
+printed name of Exotic Bird is "Chirpy".
+Description of the exotic bird is "[ChirpyDesc]".
+Weapon Damage of Exotic Bird is 5.
 The level of Exotic Bird is 1.
-The Dexterity of Exotic Bird is 15.
+Dexterity of Exotic Bird is 20.
 The summondesc of Exotic Bird is "[SummonChirpy]".
 The dismissdesc of Exotic Bird is "[SummonChirpy]".
 The assault of Exotic Bird is "[one of]Chirpy dive bombs your opponent![or]Chirpy flaps her wings in your adversary's face, blinding it![or]Diving down to engage, your bird friend scratches at your opponent with her talons![or]Your opponent jumps and twists around in pain with Chirpy pecking at its scalp.[or]Taking advantage of your foe's momentary distraction, Chirpy manages to land a few quick attacks.[or]Your bird friend takes a moment to relieve herself, fortuitously right on your opponent.[at random]".
@@ -502,7 +515,7 @@ AnalVirgin of Chirpy is true.
 PenileVirgin of Chirpy is true.
 SexuallyExperienced of Chirpy is false.
 MainInfection of Chirpy is "".
-The description of Chirpy is "[ChirpyDesc]".
+Description of Chirpy is "[ChirpyDesc]".
 
 instead of sniffing Chirpy:
 	say "[ChirpyScent]";
@@ -515,6 +528,8 @@ to say ChirpyScent:
 
 to say ChirpyDesc:
 	say "     This exotic bird is nice and happy now! You aren't sure just what kind of exotic bird Chirpy is, but she has brilliantly colored feathers and lovely plumage on the back of her head. The bird is only slightly larger than a parrot, but she seems to have taken a liking to you, and will occasionally stop and rest on your shoulder, though the rest of the time she is flying nearby.";
+	if companion of Player is exotic bird:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing Exotic Bird:
 	say "     It smells like an exotic bird with a faint, tropical scent to it.";
@@ -585,26 +600,28 @@ Object	Name
 Scared Bird	"Scared Bird"
 
 Scared Bird is a situation.
-The sarea of Scared Bird is "Zoo".
-Instead of resolving Scared Bird:
+ResolveFunction of Scared Bird is "[ResolveEvent Scared Bird]".
+Sarea of Scared Bird is "Zoo".
+
+to say ResolveEvent Scared Bird:
 	say "     Traveling along the Zoo paths, you hear a strange noise from up ahead. Moving carefully to investigate the area where you heard the noise, you look around the tree there but don't actually see anything. You are about to turn to leave when you hear the sound again from up in the branches. Looking up, you are surprised to see a rather scared-looking exotic bird taking shelter up in the branches, its brilliant plumage obvious at this distance as it huddles nervously above you. You realize that it must have escaped from one of the exotic bird exhibits, and you sigh when you realize that its chances of survival in this violent city without help are pretty slim. Maybe you should try convincing it to come along with you instead of just hiding here?";
 	if carried of food is 0:
 		say "     A quick glance shows that you don't have any food with which to try and coax the bird down with. You'll have to try again later once you've found some food.";
 	else:
 		if Player consents:
 			say "Making soft noises at the bird, you attempt to coax it down with a bit of food and friendly words, trying hard to convince it that you want to be its friend.";
-			let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+			let bonus be (( Charisma of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
 			if diceroll > 17:
 				say "Your honeyed words and sweet tones eventually manage to coax the scared bird down out of the tree, where you feed it a bit of food as it begins to get used to your presence. Given a closer look, you are impressed by the bird's wonderfully bright feathers, but you still have no clue exactly what type of bird it is. Sighing, you decide that your knowledge of birds is just too insufficient for what is obviously a rare species of bird, and resolve to try to find out just what kind of bird it is, if you ever manage to get out of this crazy city that is. After several hours of coaxing and calming the bird, it seems quite happy to go along with you as you head back into the city, obviously happy not to be alone any longer.";
 				say "     Landing on your shoulder, the chipper little bird cuddles up to your neck. You should probably give your new little friend a name. Hmm... a chipper bird name. Chirpy... that sounds like a good name for her. Trying out the name for her, she seems to like it, singing her sweet melody happily.";
-				delete food;
+				ItemLoss food by 1;
 				now Exotic Bird is tamed;
 				add "Tamed" to Traits of Exotic Bird;
 				move Chirpy to Computer Lab;
-				say "(The exotic bird is now tamed! You can make it your active pet by typing [bold type][link]pet exotic bird[end link][roman type]. You can see all of the pets that you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+				say "     (Chirpy the exotic bird is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Chirpy[end link][roman type] or [bold type][link]ally exotic bird[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now Resolution of Scared Bird is 1; [adopted the bird]
 				now Scared bird is resolved;
 			else:
@@ -635,12 +652,14 @@ Table of GameCharacterIDs (continued)
 object	name
 helper dog	"helper dog"
 
-helper dog is a pet. helper dog is a part of the player.
+helper dog is a pet. helper dog is a part of Player.
+NPCObject of helper dog is Hobo.
 understand "Hobo" as helper dog.
-The description of helper dog is "[HoboDesc]".
-The weapon damage of helper dog is 6.
-The level of helper dog is 5.
-The Dexterity of helper dog is 15.
+printed name of helper dog is "Hobo".
+Description of helper dog is "[HoboDesc]".
+Weapon Damage of helper dog is 10.
+The level of helper dog is 1.
+Dexterity of helper dog is 15.
 The summondesc of helper dog is "[SummonHobo]".
 The dismissdesc of helper dog is "[DismissHobo]".
 The assault of helper dog is "[one of]The helper dog jogs between your enemy's legs, snapping at them![or]Growling menacingly, Hobo snaps at your foe, allowing you to score another glancing blow![or]Barking loudly, your loyal dog charges and bites the enemy![or]Your faithful companion bites your opponent's ankle, growling deep in its throat until the leg finally pulls free![or]With a loud bark, the helper dog leaps at your enemy and bites their arm![or]Moving around behind them, Hobo grabs their arm and pulls back, knocking them off balance for you to score a quick hit![or]In a surprising display of cleverness, your helper dog pulls a rope he's found across your enemy's path, causing them to stumble briefly![at random]".
@@ -648,6 +667,7 @@ the fuckscene of helper dog is "You make the offer to your canine companion, but
 
 to say SummonHobo:
 	now Hobo is nowhere;
+	project Figure of Hobo_icon;
 	if Player is in Computer Lab and Hobo is in Computer Lab: [summoning while standing next to him]
 		say "     Leaning down, you ruffle one of Hobo's ears, telling him that it's time to get back out into the city. He happily wags his tail as he begins to trail you.[hoboreset]";
 	else: [regular summoning]
@@ -692,7 +712,7 @@ AnalVirgin of Hobo is true.
 PenileVirgin of Hobo is true.
 SexuallyExperienced of Hobo is false.
 MainInfection of Hobo is "".
-The description of Hobo is "[HoboDesc]".
+Description of Hobo is "[HoboDesc]".
 
 instead of sniffing the Helper Dog:
 	say "[HoboScent]";
@@ -704,7 +724,10 @@ to say HoboScent:
 	say "     Your Hobo smells like a normal dog, surprisingly given the circumstances.";
 
 to say Hobodesc:
+	project Figure of Hobo_icon;
 	say "     Hobo is a black and white shepherd with soulful and intelligent brown eyes. He will follow you and loyally assist you with your troubles.";
+	if companion of Player is helper dog:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing the Hobo:
 	if Player is in Computer Lab and Hobo is in Computer Lab:
@@ -773,11 +796,12 @@ Object	Name
 Mournful Dog	"Mournful Dog"
 
 Mournful Dog is a situation.
-The sarea of Mournful Dog is "Hospital".
+ResolveFunction of Mournful Dog is "[ResolveEvent Mournful Dog]".
+Sarea of Mournful Dog is "Hospital".
 hdog is a number that varies.
 dogfoodcount is a number that varies.
 
-Instead of resolving a Mournful Dog:
+to say ResolveEvent Mournful Dog:
 	if hdog is 0:			[first time finding]
 		say "     While searching through a hallway of patient rooms, you open one to a terrible smell of decay. You retch several times[if humanity of Player < 50], barely hearing the soft growling coming from within,[end if] before recovering and taking stock of the room. There is a body on the hospital bed, clearly long dead and unremoved. On the floor beside it is a [if humanity of Player < 50]growling[else]sad[end if] dog. The dog is a black and white shepherd wearing a bright vest on its bony flanks, denoting it as a helper dog.";
 		say "     It seems that the poor beast's master passed away, and in the ensuing chaos at the Hospital, was left here since. It is unclear if they died before the outbreak took hold or if they were too weak and the infection finished them off before it could change and heal them. The dog, probably hostile to the infected hospital staff, has continued to protect its master and kept them from the removing the body.";
@@ -788,7 +812,7 @@ Instead of resolving a Mournful Dog:
 		if food is owned:
 			say "     The dog, clearly reluctant to leave its master, has not been able to feed itself properly. Do you offer it some food?";
 			if the player consents:
-				delete food;
+				ItemLoss food by 1;
 				increase dogfoodcount by 3;
 				let bonus be (( charisma of Player minus 10 ) divided by 2);
 				let featbonus be 0;
@@ -802,7 +826,7 @@ Instead of resolving a Mournful Dog:
 					now helper dog is tamed;
 					add "Tamed" to Traits of helper dog;
 					move Hobo to Computer Lab;
-					say "     (The helper dog is now tamed! You can make it your active pet by typing [bold type][link]pet helper dog[as]pet helper dog[end link][roman type]. You can see all of the pets that you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+					say "     (Hobo the helper dog is now a possible ally! You can make him your active ally by typing [bold type][link]ally Hobo[end link][roman type] or [bold type][link]ally helper dog[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					increase score by 10;
 					now Resolution of Mournful Dog is 1; [adopted the dog]
 					now Mournful Dog is resolved;
@@ -819,7 +843,7 @@ Instead of resolving a Mournful Dog:
 		if food is owned:
 			say "     The dog, clearly reluctant to leave its master, has not been able to feed itself properly. Do you offer it some food?";
 			if the player consents:
-				delete food;
+				ItemLoss food by 1;
 				increase dogfoodcount by 3;
 				let bonus be (( charisma of Player minus 10 ) divided by 2);
 				let featbonus be 0;
@@ -863,13 +887,13 @@ an everyturn rule:
 		if lastfuck of helper dog - turns >= 4:
 			if thirst of Player > 50 and carried of water bottle is 0 and carried of soda is 0 and hobo-water-gift is false:
 				say "     Just as you're thinking once again that your mouth and throat are terribly dry, Hobo pads up to you and drops something at your feet. Looking down, you see that it's a [bold type]bottle of water[roman type], clean and unopened. Surprised at the dog's cleverness, you pat Hobo's head as you pick up the drink.";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1;
 				now hobo-water-gift is true;
 				now hobo-water-reminder is turns;
 				now lastfuck of helper dog is turns;
 			else if hunger of Player > 50 and carried of food is 0 and carried of chips is 0 and hobo-food-gift is false:
 				say "     Your stomach grumbles with hunger as you check your pack again for anything worth eating, or at least worth risking eating. Just as you set your pack back down, you here a second soft thump behind you. Turning, you see that Hobo has dropped a plastic bag with some [bold type]food[roman type] in it on the ground. The black and white shepherd sits there giving you an odd look. You pick up the bag and pat his head, surprised at how clever he is.";
-				increase carried of food by 1;
+				ItemGain food by 1;
 				now hobo-food-gift is true;
 				now hobo-food-reminder is turns;
 				now lastfuck of helper dog is turns;
@@ -889,7 +913,7 @@ an everyturn rule:
 			else if Libido of Player > 80 and inheat is true and slutfucked > 5 and hobo-libidosupp is false:
 				if libido suppressant is not owned:
 					say "     As you continue to struggle to cope with your heat and its urges, you are momentarily distracted from your thoughts of sex by the helper dog dropping something at your feet. Stopping to take a look at it, you find it to be a syringe filled with a cloudy, orange fluid. The label marks it as a [bold type]libido suppressant[roman type]. Hmm... perhaps that will help. What a clever dog.";
-					increase carried of libido suppressant by 1;
+					ItemGain libido suppressant by 1;
 				else:
 					say "     As you continue to struggle to cope with your heat and its urges, you are momentarily distracted from your thoughts of sex when you catch the helper dog rummaging through your pack. You tell him to stop and are about to pull him away when he pulls a syringe of cloudy, orange fluid from your pack, the libido suppressant. Delicately holding it in his mouth, he pads over to you and drops it in your hand. Hmmm... perhaps that will help. What a clever dog.";
 				now hobo-libidosupp is true;
@@ -901,10 +925,10 @@ an everyturn rule:
 			else if medkit is not owned and healing booster is not owned and hobo-medical - turns >= 16 and hobo-medical-gift < 2:
 				if hobo-medical-gift is 0:
 					say "     You stop and look around when you notice that Hobo has disappeared from your side. You take a quick look around the area for him, only to eventually find him back where you started with a [bold type]medkit[roman type] at his feet. You pet the clever dog on the head as you take the medkit.";
-					increase carried of medkit by 1;
+					ItemGain medkit by 1;
 				else if hobo-medical-gift is 1:
 					say "     Hobo reappears at your side before you even knew he was gone, holding something in his muzzle. Taking the syringe from him, you examine it. It is labeled as a [bold type]healing booster[roman type] and contains a clear, blue fluid. You pat the dog's head, thanking the clever shepherd for it.";
-					increase carried of healing booster by 1;
+					ItemGain healing booster by 1;
 				now hobo-medical is turns;
 				increase hobo-medical-gift by 1;
 				now lastfuck of helper dog is turns;

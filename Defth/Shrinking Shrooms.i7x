@@ -5,14 +5,16 @@ Section 1 - Event
 
 Table of GameEventIDs (continued)
 Object	Name
-Mushroom cave	"Mushroom cave"
+Mushroom Cave	"Mushroom Cave"
+Mushroom Cave	"Mushroom cave"
 
-Mushroom cave is a situation.
-The sarea of Mushroom cave is "Outside".
+Mushroom Cave is a situation.
+ResolveFunction of Mushroom Cave is "[ResolveEvent Mushroom Cave]".
+Sarea of Mushroom Cave is "Outside".
 
 MushroomCaveVisited is a number that varies. MushroomCaveVisited is usually 0
 
-Instead of resolving a Mushroom cave:
+to say ResolveEvent Mushroom Cave:
 	if MushroomCaveVisited is 0: [first visit]
 		say "     Stepping inside the dark alley, you find yourself drawn to a green glow at the end of it, a peculiar scene, even for the place that you are in. There is an opening in the side of one of the buildings flanking the alley. Looking through the hole in the wall, you realize that the rest of the building has mostly collapsed and is nothing more but rubble, and you're standing at the entrance of a small 'cave' in the pile. Entering this 'cave', you find something like a mini-forest in there. Some, if not all, of the plants there are miniature versions of the same ones that you would find outside. Even some inanimate items like garbage dumpsters and trash cans lying outside of the cave and in the alley have shrunk. Right through the middle of this whole ecosystem, a river flows, feeding the amazing sight with life. It is but a trickle of goop to you, but it's a mighty flow to the tiny forest. Glowing with an otherworldly green color, it slowly flows from an opening in the rubble and unloads down a sewer drain a short while later. It is possible that this is some kind of radioactive leak from inside the destroyed building, and with the touch of the nanites, it was made into a shrinking concoction. Looking at the green river, you spot some mushrooms growing near the sewer that don't appear to be tiny like all of the other stuff, but they still glow faintly with that green color. The shrooms probably absorbed the features of both the radioactive stuff and the nanites.";
 		say "     [bold type]Do you pick some of the mushrooms?[roman type][line break]";
@@ -21,7 +23,7 @@ Instead of resolving a Mushroom cave:
 		say "     ([link]N[as]n[end link]) - Nah, eating stuff growing next to glowing sludge might be a bad idea, and besides, you won't need them anyway.";
 		if Player consents:
 			say "     You carefully pick some of the mushrooms and put them into your backpack, sighing happily that you didn't shrink while doing so.";
-			increase carried of glowing mushroom by 3;
+			ItemGain glowing mushroom by 3 silently;
 			now Resolution of Mushroom Cave is 1; [picked shrooms #1]
 		else:
 			say "     There is no need to pick them right now. You leave this place behind (for now) and continue exploring the city.";
@@ -35,7 +37,7 @@ Instead of resolving a Mushroom cave:
 		if Player consents:
 			LineBreak;
 			say "     You carefully pick some of the mushrooms and put them into your backpack, sighing happily that you didn't shrink while doing so.";
-			increase carried of Glowing mushroom by 3;
+			ItemGain Glowing mushroom by 3 silently;
 			now Resolution of Mushroom Cave is 3; [picked shrooms]
 		else:
 			LineBreak;
@@ -50,11 +52,11 @@ name	desc	weight	object
 
 glowing mushroom is a grab object. It is temporary.
 
-The usedesc of glowing mushroom is "[glowing mushroom use]".
+Usedesc of glowing mushroom is "[glowing mushroom use]".
 
 To say glowing mushroom use:
 	say "     You quickly shrink, your body getting smaller and smaller by the second. Meanwhile, the clothes and gear you carry stay the same size, quickly outgrowing your diminishing stature. Looking at the now giant world with awe, you wonder how you will be able to survive while being small as a mouse. And should you just leave your equipment behind? Not seeing too much hope for making it far like this, you decide to wait. Thankfully, after some time, you feel yourself growing back to normal. Looks like the effects weren't permanent - this time, at least.";
-	decrease carried of glowing mushroom by 1;
+	ItemLoss glowing mushroom by 1;
 
 Understand "mushroom" as glowing mushroom.
 Understand "shrooms" as glowing mushroom.
@@ -64,16 +66,18 @@ Section 3 - Events
 
 Table of GameEventIDs (continued)
 Object	Name
-Hungry dog	"Hungry dog"
+Hungry Dog	"Hungry Dog"
+Hungry Dog	"Hungry dog"
 
-Hungry dog is a situation.
-The sarea of Hungry dog is "Outside".
+Hungry Dog is a situation.
+ResolveFunction of Hungry Dog is "[ResolveEvent Hungry Dog]".
+Sarea of Hungry Dog is "Outside".
 When play begins:
 	add Hungry dog to BadSpots of FurryList;
 	add Hungry dog to BadSpots of MaleList;
 	add Hungry dog to badspots of VoreList;
 
-Instead of resolving a Hungry dog:
+to say ResolveEvent Hungry Dog:
 	if vorelevel > 2:
 		say "     While exploring the nanite-infested city you hear some noises coming from an alley beside you. You turn around, trying your best to peek stealthily into the alley. Inside, you find what appears to be a giant, anthro German shepherd gorging himself with... some kind of food. By his side, you see a pile of clothes tossed carelessly aside. Most of them look like ordinary clothes, but there are some camo pattern uniforms in the mix, and they are all stained with what appears to be blood. This is weird - none of the German shepherds you found hunting in the city were wearing anything. Why would this one have clothes, or even take them off while he eats?";
 		say "     Oh god! Your legs tremble with the sudden realization, and you almost lose your breath. It can't be! He is eating someone!? Almost as if sniffing your fear, the beast puts his muzzle to the air and starts to turn around...";
@@ -89,7 +93,7 @@ Instead of resolving a Hungry dog:
 				WaitLineBreak;
 				say "     Sniffing you, the dog quickly pushes his muzzle into your backpack. With an impish smile, he quickly grabs the glowing mushrooms that you had. Looks like this dog does know what they do to those who eat them. Holding the mushrooms with one hand and pulling you by the neck with the other, he tries to force the mushrooms into your mouth. Since you won't cooperate, he holds your [FaceName of Player]nose, depriving you of oxygen. Try as you might, you can't escape his hold, and you are starting to need air quick. Opening your mouth just for a bit gives the strong dog enough time to shove the shrooms down your throat, forcing you to eat and swallow them. 'Stupid prey,' the shepherd says with a winning smile. 'You should know your place. Being my meal is the best end for someone like you.'";
 				say "     As soon as you swallow, you feel your body changing, quickly losing height and weight. The world keeps getting bigger and bigger, as well as the shepherd in front of you. Soon, all you can see is his paws as the now-absolutely-enormous predator grabs you. When you are brought in front of his giant face, you can see his saliva glistening, while his eyes shine with hunger. 'Thanks for the meal,' is all you hear after that.";
-				decrease carried of glowing mushroom by 1;
+				ItemLoss glowing mushroom by 1;
 				say "     [bold type]Do you accept your fate?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Let the huge beast eat you without trying to fight.";
@@ -151,17 +155,19 @@ Instead of resolving a Hungry dog:
 
 Table of GameEventIDs (continued)
 Object	Name
-Little trouble	"Little trouble"
+Little Trouble	"Little trouble"
+Little Trouble	"Little Trouble"
 
-Little trouble is a situation.
-The sarea of Little trouble is "Outside".
+Little Trouble is a situation.
+ResolveFunction of Little Trouble is "[ResolveEvent Little Trouble]".
+Sarea of Little Trouble is "Outside".
 When play begins:
 	add Little trouble to BadSpots of FurryList;
 	add Little trouble to BadSpots of MaleList;
 	add Little trouble to BadSpots of FemaleList;
 	add Little trouble to badspots of VoreList;
 
-Instead of resolving Little trouble:
+to say ResolveEvent Little Trouble:
 	say "     While exploring the city and wandering through an alley, you find a small hole at the foot of one of the two walls flanking you. The building it belongs to looks oriental in decoration. There are some banners with Chinese letters hanging on poles from the upper stories, but they're hard to read since the colors are pretty faded. The rest of the wall you're standing in front of is painted with some red and gold design across it. Upon hearing some noises from inside the building, you decide to crouch down and take a peek. You can't see much of what is going on inside, but clearly, something is making rhythmic banging noises in there.";
 	WaitLineBreak;
 	say "What do you want to do?";
@@ -231,7 +237,7 @@ to say LittleExplorer:
 
 to say LittleShroom:
 	say "     Eating one of your mushrooms, you quickly diminish in size and soon have to crawl out of the pile of clothes and gear you had on you. Looks like you have to enter naked - better be quick so that the chance of someone coming along and finding your stuff is minimal. Making your way to the hole, you can more easily look inside from your new viewpoint. The place looks like a run down kitchen from what you see. There are some canned food on the other side of the room that you should be able to roll over to the hole and add to your possessions.";
-	decrease carried of glowing mushroom by 1;
+	ItemLoss glowing mushroom by 1;
 	if ublevel < 3: [non-ub enthusiast players]
 		say "     In one corner of the kitchen lies a cum-stained mattress, with a husky bitch sleeping on it, sitting slumped back against the wall. She has her legs spread enough that you can see her pussy - its nether lips slightly spread and looking quite inviting. Yet even if you wanted to, right now, you're just not in any position or size category to do anything with her. ";
 	else: [more ub selected]
@@ -298,8 +304,7 @@ to say ChineseSupplies:
 	WaitLineBreak;
 	say "     Wary about the sleeping husky on her mattress, you are quick to run and find a cupboard to hide behind. From there, you lock your gaze on the husky at the other end of the room. The dog squirms a little and opens her eyes just a bit, yawning. Her large mouth is big enough to swallow you up in one gulp, and it shows an impressive array of sharp, intimidating teeth, as well as a very long tongue curling down a bit at the end. Her gaze roams over the room and seeing nothing out of the ordinary due to the already-present mess, she soon gives in to her tiredness again. Stretching out on the mattress this time, which puts her colossal boobies in a very nice display for your miniature self, she goes back to sleep.";
 	say "     Breathing a sigh of relief, you go back to your cans, rolling them on towards the exit and getting there without any further trouble. After pushing them out of the hole to add to your pile of gear, you wait a while until you finally feel yourself growing. Quickly getting dressed again, you put the two cans into your backpack and get ready for more adventures out in the city.";
-	say "[bold type]You gain 2 food![roman type][line break]";
-	increase carried of food by 2;
+	ItemGain food by 2;
 	now Resolution of Little Trouble is 4; [shrunk, stole supplies]
 
 to say ChineseUB:

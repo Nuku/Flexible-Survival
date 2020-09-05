@@ -40,14 +40,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Gryphon's Plot	"Gryphon's Plot"
 
-Gryphon's Plot is a situation. The level of Gryphon's Plot is 2.
-the sarea of Gryphon's Plot is "Outside".
+Gryphon's Plot is a situation.
+ResolveFunction of Gryphon's Plot is "[ResolveEvent Gryphon's Plot]". The level of Gryphon's Plot is 2.
+Sarea of Gryphon's Plot is "Outside".
 
 when play begins:
 	add Gryphon's Plot to badspots of HermList;
 	add Gryphon's Plot to BadSpots of FurryList;
 
-instead of resolving a Gryphon's Plot:
+to say ResolveEvent Gryphon's Plot:
 	if Resolution of Gryphon's Plot is 0 or Resolution of Gryphon's Plot is 1: [first time or repeat after failing to find them]
 		say "     As you make your way through the city, a loud screeching noise catches your attention. Your eyes quickly survey the immediate area, the noise sounding awfully close to one a gryphon would make. As another screech joins the first, you realize that not just one gryphon is involved. As the gryphon's calls transform from warning to aggressive, you find yourself wondering what is going on, and if you should take a risk in order to find out. The area being filled with many buildings, it is likely the sound may be bouncing off of them, which could lead to you being misled. Despite this, you conclude that finding the source would be difficult, but not impossible.";
 		say "     Of course, the question is, do you want to?[line break]";
@@ -136,9 +137,7 @@ instead of resolving a Gryphon's Plot:
 			if Player consents:
 				LineBreak;
 				say "     As you nod in agreement, you watch the soldiers['] faces instantly light up. The leader gives you a friendly pat on the back and speaks, 'I knew that we could count on you again. All you have to do is take these binoculars here and tell us if anyone tries to sneak up on us from behind. Think that you can handle it?' You nod, it sounds easy enough. You stand on lookout for a long while as the men scout out the nearby gryphon nest, then storm in and give the gryphon pack a good thrashing. After you see the soldiers emerge victorious through your binoculars, they leave the nest behind and make their way over to you again. 'Well, we showed them not to challenge the US army, eh?' one of the soldiers says, giving you a thumbs up. Each of the men digs out an MRE from his pack and hands it to you, as a little thanks for the help. 'We felt much better knowing that you had our back,' the leader adds before the small group says their goodbyes and leaves.";
-				LineBreak;
-				say "[bold type]You gain 3 units of food![roman type][line break]";
-				increase carried of food by 3;
+				ItemGain food by 3;
 				now Resolution of Gryphon's Plot is 11; [helped the soldiers beat up the gryphons]
 			else:
 				LineBreak;
@@ -176,9 +175,7 @@ instead of resolving a Gryphon's Plot:
 					say "     Approaching the group, you are met with looks of surprise as one soldier rises to speak, hands outstretched. 'Are you sure that you want to come near us? You look pretty uninfected to me. We would hate to accidentally do the same thing to you that the other gryphons did to us...' With that, another one of the gryphons stands up, looking saddened as he offers an explanation 'We were human once just like you, and then we ran into a group of gryphons, and we fought them. Needless to say, we lost, and our purely human forms were soon taken away. We don't want that for you...' the other gryphons nod their agreement, as they reach into their packs, each pulling out an MRE before tossing them at your feet.";
 					LineBreak;
 					say "     The one that looks to be in charge addresses you, 'Good luck out there, and try to keep your humanity intact. When we were human, we were reminded of who we were each and every time we had a chance to look at our faces. Now, we can't anymore, and we fear that we may forget, so take these MREs, and please be careful. Experiencing this ourselves, we would never wish this fate to befall another.' With that said, they all return to their places around the fire, turning their backs on you as they sit in silence. Feeling that the conversation is over, you pick up the MREs and carefully place them inside of your pack, before continuing along your way.";
-					LineBreak;
-					say "[bold type]You gain 3 units of food![roman type][line break]";
-					increase carried of food by 3;
+					ItemGain food by 3;
 					now Resolution of Gryphon's Plot is 33; [human player talked to soldier gryphons]
 				else:
 					LineBreak;
@@ -224,22 +221,16 @@ instead of resolving a Gryphon's Plot:
 					increase GroupFightCounter by 1;
 				if fightoutcome < 20: [player won]
 					say "     The third gryphon, wary of the defeat of the first two, draws back from you. Whimpering with a sexual need and looking ashamed, he addresses you, 'I'm sorry, I don't what came over me. I guess the infection has taken home more rapidly than I can control or I had realized.' The gryphon then drops two MREs at your feet, turning to you with a look of regret. 'Please, take these as an apology. I'm sorry that I don't have more to offer...' He then spreads his wings and disappears into the distance. His two companions use the moment in which you pounce on the food to make their own escapes.";
-					LineBreak;
-					say "[bold type]You gain 2 units of food![roman type][line break]";
-					increase carried of food by 2;
+					ItemGain food by 2;
 					now Resolution of Gryphon's Plot is 42; [player fought off the vengeful soldier gryphons]
 				else if fightoutcome > 19 and fightoutcome < 30: [lost]
 					say "     Not strong enough to single-handedly defeat the group of gryphons, you fall to your knees, the loser of the battle. With pleased smirks, the soldiers converge upon you, bending you over to have the best access to your holes. Taking turns, the gryphons [if Player is male]shove themselves balls-deep into your ass[else if Player is female]shove themselves balls-deep into your soaking wet pussy[else]rub themselves against the underside of your sexless crotch where it feels good[end if]. Soon, undeniably locked in a mix of sex and sweat, it isn't long before you lose all sense of consciousness.";
 					if carried of food > 2:
 						say "     You wake three hours later, your body covered in large amounts of cum as you collect your pack, which you notice is three cans of food lighter...";
-						LineBreak;
-						say "[bold type]You lost 3 units of food![roman type][line break]";
-						decrease carried of food by 3;
+						ItemLoss food by 3;
 					else if carried of water bottle > 2:
 						say "     You wake three hours later, your body covered in large amounts of cum as you collect your pack, which you notice is three bottles of water lighter...";
-						LineBreak;
-						say "[bold type]You lost 3 bottles of water![roman type][line break]";
-						decrease carried of water bottle by 3;
+						ItemLoss water bottle by 3;
 					else:
 						say "     You wake three hours later, your body covered in a bucket load of cum as you collect your pack, which you notice thankfully has the same heft as before. You guess that despite the gryphons having you in a vulnerable position, they had decided to leave your belongings alone. Shrugging your shoulders at the fact, you clean as much cum as you can off of your body, before slowly but surely continuing along your way...";
 					now Resolution of Gryphon's Plot is 43; [player lost to the vengeful soldier gryphons]
@@ -265,23 +256,17 @@ instead of resolving a Gryphon's Plot:
 			increase GroupFightCounter by 1;
 		if fightoutcome < 20: [player won]
 			say "     The third gryphon, wary of the defeat of the first two, draws back from you. 'Looks like that you can hold up in a fight by yourself. I may not like what you did to me, but as a soldier, I can respect the fact that you stood your ground. Good luck surviving in this fucked-up city.' The gryphon then drops two MREs at your feet, before spreading his wings and disappearing into the distance. His two companions use the moment in which you pounce on the food to make their own escapes.";
-			LineBreak;
-			say "[bold type]You gain 2 units of food![roman type][line break]";
-			increase carried of food by 2;
+			ItemGain food by 2;
 			now Resolution of Gryphon's Plot is 51; [player fought off vengeful soldier gryphons]
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     Not strong enough to single-handedly defeat the vengeful group of gryphons, you fall to your knees, the loser of the battle. With pleased smirks, the soldiers converge upon you, two of them taking turns beating you as the third helps himself to any items he wants from your pack. Between the two of them, it isn't long before you have thoroughly learned your lesson, falling into a state of unconsciousness.";
 			PlayerWounded 10;
 			if carried of food > 2:
 				say "     You wake three hours later, your body stiff as you collect your pack, which you notice is three cans of food lighter...";
-				LineBreak;
-				say "[bold type]You lost 3 units of food![roman type][line break]";
-				decrease carried of food by 3;
+				ItemLoss food by 3;
 			else if carried of water bottle > 2:
 				say "     You wake three hours later, your body stiff as you collect your pack, which you notice is three bottles of water lighter...";
-				LineBreak;
-				say "[bold type]You lost 3 bottles of water![roman type][line break]";
-				decrease carried of water bottle by 3;
+				ItemLoss water bottle by 3;
 			else:
 				say "     You wake three hours later, your body stiff as you collect your pack, which you notice has the same heft as before. You guess that despite the gryphons taking apart its contents, they couldn't find anything that they wanted. Shrugging your shoulders at the fact and ignoring the protests of your thoroughly bruised body, you slowly, but surely, continue along your way, making a note in your head to try and avoid the soldiers should you encounter them in the near future...";
 				now Resolution of Gryphon's Plot is 59; [player got a beating from vengeful soldier gryphons]
@@ -291,20 +276,14 @@ instead of resolving a Gryphon's Plot:
 		now Gryphon's Plot is Resolved; [event will not come up again]
 	else if Resolution of Gryphon's Plot is 90 or Resolution of Gryphon's Plot is 20: [player tried to help, failed, gryphons are pissed]
 		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaims, 'Hey, I know you. You tried to help us fight the gryphons off that one day. Don't worry about the fact that you didn't succeed. We still appreciate that you tried. Besides, all of us are starting to like our new forms anyway. I always wanted to fly when I was a kid. Granted, I was thinking it would be as an airplane pilot, but you know, growing wings of my own I guess is the next best thing.' The soldier then reaches into his pack, pulling out three MREs and hands them to you with a wink. 'For the road, kid. Good luck out there.' With that said, he returns to his seat near their makeshift fire, as you continue on your way, three MREs richer than before...";
-		LineBreak;
-		say "[bold type]You gain 3 units of food![roman type][line break]";
-		increase carried of food by 3;
+		ItemGain food by 3;
 		now Resolution of Gryphon's Plot is 91; [player got a thanks from the soldier gryphons for trying to help]
 		now Gryphon's Plot is Resolved; [event will not come up again]
 
 to say PlayerWinsVsGryphonPlot1: [player beat up the 3 gryphons]
 	say "     Victorious, you stop to catch your breath, the last gryphon unconscious on the ground before you. The soldiers run up to you, looks of gratitude upon their faces. Although wary of your own exposure to nanites, they express their thanks with 2 MREs, and some sound advice. Although it isn't much, you can tell its heartfelt. The soldiers get rid of the barricade, making short work of it now that they are no longer being bombarded, then hop into their jeep drive off, smiling and giving you a wave as they pass by. Staying at the site a while longer, you take advantage of the downed gryphons, harvesting a bottle of milk and adding it to your backpack. In saving the soldiers, you also find yourself feeling more sane. Overall, things went well, all things considered.";
-	LineBreak;
-	say "[bold type]You gain 2 units of food![roman type][line break]";
-	increase carried of food by 2;
-	LineBreak;
-	say "[bold type]You gain a bottle of gryphon milk![roman type][line break]";
-	increase carried of gryphon milk by 1;
+	ItemGain food by 2;
+	ItemGain gryphon milk by 1;
 	SanBoost 15;
 
 to say PlayerLosesVsGryphonPlot1: [player lost to the 3 gryphons]
@@ -312,14 +291,10 @@ to say PlayerLosesVsGryphonPlot1: [player lost to the 3 gryphons]
 	say "     Breathing heavily, you fall to the ground, too exhausted to continue the fight. As you do so, the gryphons no longer see you as a threat and renew the aerial assault on the soldiers. While your own intervention was enough to allow the soldiers to somewhat regain their bearings, you watch helplessly as the gryphons show it to not be enough. As they corner the desperate men, their shafts harden in anticipation. You struggle to get back on your feet as you watch the gryphons fuck the soldiers, the formerly uninfected men becoming increasingly less human. Smiling in satisfaction as their goal is accomplished, they turn to you, smirking. 'Your turn,' one gryphon screeches out just as you finally get back onto your feet. You attempt to escape their grasp, but between the three of them, it isn't long before they have you held down, taking turns at shoving their cocks inside of your [if Player is female]pussy[else]ass[end if]. The by now fully transformed soldiers join in, and you soon lose consciousness in the midst of a gang-bang by horny gryphons. You wake a couple hours later, cum covering every surface of your body.";
 	if carried of food > 1:
 		say "     Picking up your pack, you notice that you are two cans of food short, but that's not the only thing on your mind. Having lost the brave soldiers to their fate, despite everything you could do, makes you feel a bit less sure of yourself, thinking that maybe the situation in the city is hopeless after all.";
-		LineBreak;
-		say "[bold type]You lost 2 units of food![roman type][line break]";
-		decrease carried of food by 2;
+		ItemLoss food by 2;
 	else if carried of water bottle > 1:
 		say "     Picking up your pack, you notice that you are two bottles of water short, but that's not the only thing on your mind. Having lost the brave soldiers to their fate, despite everything you could do, makes you feel a bit less sure of yourself, thinking that maybe the situation in the city is hopeless after all.";
-		LineBreak;
-		say "[bold type]You lost 2 bottles of water![roman type][line break]";
-		decrease carried of water bottle by 2;
+		ItemLoss water bottle by 2;
 	else:
 		say "     Having lost the brave soldiers to their fate, despite everything you could do, makes you feel a bit less sure of yourself, thinking that maybe the situation in the city is hopeless after all.";
 	SanLoss 15;
@@ -484,14 +459,10 @@ to say PlayerWatchesGryphonPlot1: [player observes the gryphons]
 		say "     Slowly making your way towards the gryphons and their new pets, you start to strip off your gear. The gryphons spot your approach and become slightly alarmed, but they smirk as you make your submissive intent clear. Now standing tall in your fully naked form in front of the gryphons, you offer no resistance as one makes a move to bend you over, shoving themselves deep inside of your ass over and over until you lose yourself in a gangbang of all those gryphons taking turns with you.";
 		if carried of food > 1:
 			say "     Waking up a few hours later, you notice that your pack is two cans of food short, but you shrug the loss off in good spirits. After all, you had a lot of fun in your time with the gryphons...";
-			LineBreak;
-			say "[bold type]You lost 2 units of food![roman type][line break]";
-			decrease carried of food by 2;
+			ItemLoss food by 2;
 		else if carried of water bottle > 1:
 			say "     Waking up a few hours later, you notice that your pack is two bottles of water short, but you shrug the loss off in good spirits. After all, you had a lot of fun in your time with the gryphons...";
-			LineBreak;
-			say "[bold type]You lost 2 bottles of water![roman type][line break]";
-			decrease carried of water bottle by 2;
+			ItemLoss water bottle by 2;
 		else:
 			say "     Waking up a few hours later, you are sticky all over with dried cum, but you shrug it off in good spirits. After all, you had a lot of fun in your time with the gryphons...";
 		LineBreak;

@@ -681,7 +681,7 @@ to say YamatM_4: [Cunt Catching]
 		if Player consents:
 			say "     '[one of]Oh[or]Hmm[or]What[at random]? [one of]I thought you wanted to be in control[or]Seems someone bit off more than they could chew[or]Not so arrogant now, I imagine[at random]!' Teasing you as the dragon does, he does at least oblige your request, talons wrapping around you a second time. Gradually raising you up the rod, you can feel each ridge leave you, air already heavy with the scent of sex, loud with the organ's wet departure.";
 			say "     At around the halfway point, he harshly plunges you back down on the briefly exposed length, loudly slapping against the serpent's scaled underbelly, before repeating this ritual. He seems a little surprised that you can handle him so easily, so he picks up the motion pretty quickly, all the better for you.";
-			say "     By this point, your impressive size makes you able to withstand the strain of being constantly railed by this terrible organ, and it's the dragon himself that seems to have a bit of difficulty with keeping pace.";
+			say "     By this point, your impressive size makes you able to withstand Strain of being constantly railed by this terrible organ, and it's the dragon himself that seems to have a bit of difficulty with keeping pace.";
 			say "     '[one of]S-such skill[or]S-Still you persist?[run paragraph on][or]I-I will outlast you[at random]!' He tries to force your bliss before his, but eventually he's succumbs to his overwhelming need, bathed in the hot, panting breath of the serpent until the air is filled with his loud roar.";
 			say "     Harshly pumped with gout after successive gout of his massive load, your belly balloons outward[if scalevalue of Player > 4] almost[end if] immediately before it begins to gush out from your hole, the dragon keeping you pinned lest you fire off like a rocket. The whole ordeal more than enough to finally set you off[if Player is male]cock[smn] painting the dragon with your [Cum Load Size of Player] load[else]cunt firmly squeezing against the dragon's overwhelming intrusion[end if].";
 			say "     As his fury subsides, you slowly pull yourself free of the dragon's softening dick, a flood of his seed escaping you in its wake, before climbing off him. Taking a moment to clean himself off of the mess, he seems a little taken aback at how quickly you recover.";
@@ -800,7 +800,7 @@ to say YamatM_5: [Anal Catching]
 		if Player consents:
 			say "     '[one of]Oh[or]Hmm[or]What[at random]? [one of]I thought you wanted to be in control[or]Seems someone bit off more than they could chew[or]Not so arrogant now, I imagine[at random]!' Teasing you as the dragon does, he does at least oblige your request, talons wrapping around you a second time. Gradually raising you up the rod, you can feel each ridge leave you, air already heavy with the scent of sex, loud with the organ's wet departure.";
 			say "     At around the halfway point, he harshly plunges you back down on the briefly exposed length, loudly slapping against the serpent's scaled underbelly, before repeating this ritual. He seems a little surprised that you can handle him so easily, so he picks up the motion pretty quickly, all the better for you.";
-			say "     By this point, your tainted skill makes you strong enough to withstand the strain of being constantly railed by this terrible organ, and it's the dragon himself that seems to have a bit of difficulty with keeping pace.";
+			say "     By this point, your tainted skill makes you strong enough to withstand Strain of being constantly railed by this terrible organ, and it's the dragon himself that seems to have a bit of difficulty with keeping pace.";
 			say "     '[one of]S-such skill[or]H-how is this possible?[run paragraph on][or]T-this is impossible[at random]!' He tries to force your bliss before his, but eventually he's succumbs to his overwhelming need, bathed in the hot, panting breath of the serpent until the air is filled with his loud roar.";
 			say "     Harshly pumped with gout after successive gout of his massive load, your belly balloons outward[if scalevalue of Player > 4] almost[end if] immediately before it begins to gush out from your ass, the dragon keeping you pinned lest you fire off like a rocket. The whole ordeal more than enough to finally set you off [if Player is male]cock[smn] painting the dragon with your [Cum Load Size of Player] load[else if Player is female]cunt[sfn] gushing and staining the dragon[else]much in spite your lack of proper outlet[end if].";
 			say "     As his fury subsides, you slowly pull yourself free of the dragon's softening dick, a flood of his seed escaping you in its wake, before climbing off him. Taking a moment to clean himself off of the mess, he seems a little taken aback at how quickly you recover.";
@@ -905,8 +905,8 @@ to yamatbiasshift:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -965,6 +965,9 @@ When Play begins:
 	now libido entry is 25;
 	now loot entry is "dragon scale";
 	now lootchance entry is 40;
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 5;
 	now body descriptor entry is "[one of]slender[or]serpentine[or]flexible[or]elongated[at random]";
 	now type entry is "[one of]draconic[or]serpentine[at random]";
@@ -979,7 +982,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -1086,9 +1089,9 @@ name	desc	weight	object
 "dragon scale"	"A yellow, slightly shimmering dragon scale."	1	dragon scale
 "dragon hair"	"Some strands of golden hair that shimmer slightly in the light."	1	dragon hair
 
-dragon scale is a grab object. dragon scale is infectious. The strain of dragon scale is "Yamato Dragon".
+dragon scale is a grab object. dragon scale is infectious. Strain of dragon scale is "Yamato Dragon".
 the scent of dragon scale is "The yellow scale smells strange and otherworldly.".
-The usedesc of dragon scale is "[usedragonscale]";
+Usedesc of dragon scale is "[usedragonscale]";
 
 to say usedragonscale:		[only alters sizes, not gender]
 	choose row MonsterID from Table of Random Critters;
@@ -1109,9 +1112,9 @@ to say usedragonscale:		[only alters sizes, not gender]
 		now sex entry is "nochange";
 	say "     Following the strange urge you have, press the large scale to your chest. As the spot starts to tingle, the scale slowly sinks into you and those tingles spread out across your body.";
 
-dragon hair is a grab object. dragon hair is infectious. The strain of dragon hair is "Yamato Dragoness".
+dragon hair is a grab object. dragon hair is infectious. Strain of dragon hair is "Yamato Dragoness".
 the scent of dragon hair is "The golden hair smells of exotic, otherworldly scents.".
-The usedesc of dragon hair is "[usedragonhair]";
+Usedesc of dragon hair is "[usedragonhair]";
 
 to say usedragonhair:
 	choose row MonsterID from Table of Random Critters;

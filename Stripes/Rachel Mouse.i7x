@@ -11,12 +11,13 @@ Object	Name
 Quiet Apartment Building	"Quiet Apartment Building"
 
 Quiet Apartment Building is a situation.
-The sarea of Quiet Apartment Building is "Red".
+ResolveFunction of Quiet Apartment Building is "[ResolveEvent Quiet Apartment Building]".
+Sarea of Quiet Apartment Building is "Red".
 when play begins:
 	add Quiet Apartment Building to badspots of HermList;
 	add Quiet Apartment Building to BadSpots of FurryList;
 
-Instead of resolving a Quiet Apartment Building:
+to say ResolveEvent Quiet Apartment Building:
 	say "     Wandering off from the main strip, you come across a small, three story apartment building that seems quiet and relatively untouched. You find yourself looking it over, wondering if you should go in and take a look around. ";
 	if BodyName of Player is "Mental Mouse" and humanity of Player <= 75:
 		say "There's just something about the place that seems to be calling to you, and before you can even consider else, you head in to search it.";
@@ -95,8 +96,8 @@ to say mouseapts:
 		now mouse girl is tamed;
 		add "Tamed" to Traits of mouse girl;
 		move Rachel to Pantry;
-		now the companion of the player is mouse girl;
-		say "     (The mouse girl is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type][link]pet mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck mouse girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], but then the mouse collective will be tracking you again.)";
+		now the Companion of Player is mouse girl;
+		say "     (Rachel the mouse girl is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Rachel[end link][roman type] or [bold type][link]ally mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Rachel[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break], but then the mouse collective will be tracking you again.)";
 		increase score by 20;
 		wait for any key;
 
@@ -115,12 +116,14 @@ Table of GameCharacterIDs (continued)
 object	name
 mouse girl	"mouse girl"
 
-mouse girl is a pet. mouse girl is a part of the player.
+mouse girl is a pet. mouse girl is a part of Player.
+NPCObject of mouse girl is Rachel.
 understand "Rachel" as mouse girl.
-The description of mouse girl is "[RachelDesc]".
-The weapon damage of mouse girl is 5.
-The level of mouse girl is 3.
-The Dexterity of mouse girl is 15.
+printed name of mouse girl is "Rachel".
+Description of mouse girl is "[RachelDesc]".
+Weapon Damage of mouse girl is 10.
+The level of mouse girl is 1.
+Dexterity of mouse girl is 15.
 The summondesc of mouse girl is "[SummonRachel]".
 The dismissdesc of mouse girl is "[DismissRachel]".
 The assault of mouse girl is "[RachelAttack]".
@@ -147,7 +150,7 @@ object	name
 Rachel	"Rachel"
 
 Rachel is a woman.
-The description of Rachel is "[RachelDesc]".
+Description of Rachel is "[RachelDesc]".
 
 instead of sniffing Rachel:
 	say "[RachelScent]";
@@ -168,6 +171,8 @@ to say RachelDesc:
 	say "     Despite her small size, this mouse girl has considerable psychic powers. From what you've seen and sensed, she's probably one of the strongest among them. Having been selected by the mouse collective's hive mind as your intended mate, you sensed her powerful mind and can't help but feel a strong attachment to her. Intent on coaxing you back to them, she has chosen to accompany you to show you the pleasures of mousedom to convince you to return. You'll have to keep her close by if you want to avoid having the mice constantly tracking you down.";
 	say "     As if sensing your mind focused on her, the mouse girl [one of]bends over to pick something up, swishing her tail to lift the back of her dress and flash her pussy at you[or]runs her paws along her feminine body[or]teases her nipples in a little show for you[or]brushes the front of her dress, making the growing erection under it more prominent[or]grins coquettishly[or]sends a fresh wave of her love for you into your mind[or]nibbles at some cheese and crackers she found, somehow making it seem sexy[at random]. You can't help but think as you look at her that joining the mouse collective wouldn't be so bad if it means being with her.";
 	if a random chance of 2 in 5 succeeds, decrease humanity of Player by 1;
+	if companion of Player is mouse girl:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing mouse girl:
 	say "[RachelScent]";

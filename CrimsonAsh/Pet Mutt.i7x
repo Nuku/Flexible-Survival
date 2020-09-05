@@ -22,16 +22,13 @@ after going to Main & 7th Street while (Pet Mutt is in Main & 7th Street and Ene
 	if randomnumber is:
 		-- 1:
 			LineBreak;
-			say "[bold type]You gain a soda bottle![roman type][line break]";
-			increase carried of soda by 1;
+			ItemGain soda by 1;
 		-- 2:
 			LineBreak;
-			say "[bold type]You gain food![roman type][line break]";
-			increase carried of food by 1;
+			ItemGain food by 1;
 		-- 3:
 			LineBreak;
-			say "[bold type]You gain a medkit![roman type][line break]";
-			increase carried of medkit by 1;
+			ItemGain medkit by 1;
 	now Energy of Pet Mutt is 0;
 
 an everyturn rule:
@@ -85,8 +82,8 @@ SexuallyExperienced of Pet Mutt is true.
 TwistedCapacity of Pet Mutt is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Pet Mutt is false. [steriles can't knock people up]
 MainInfection of Pet Mutt is "Feral Mutt".
-The description of Pet Mutt is "[Pet MuttDesc]".
-The conversation of Pet Mutt is { "<This is nothing but a placeholder!>" }.
+Description of Pet Mutt is "[Pet MuttDesc]".
+Conversation of Pet Mutt is { "<This is nothing but a placeholder!>" }.
 The scent of Pet Mutt is "     [PetMuttName] smells like a dog, a feral musky hound. It's not necessarily unpleasant, but certainly noticeable and distinctive scent to this particular canine, as you well know.".
 
 to say Pet MuttDesc:

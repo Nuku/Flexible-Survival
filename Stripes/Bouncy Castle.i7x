@@ -33,8 +33,9 @@ Table of GameEventIDs (continued)
 Object	Name
 Snared Vixen	"Snared Vixen"
 
-Snared Vixen is a situation. The level of Snared Vixen is 5.
-the sarea of Snared Vixen is "Beach".
+Snared Vixen is a situation.
+ResolveFunction of Snared Vixen is "[ResolveEvent Snared Vixen]". The level of Snared Vixen is 5.
+Sarea of Snared Vixen is "Beach".
 
 when play begins:
 	add Snared Vixen to BadSpots of FemaleList; [We may want to add an event later to allow people with 'girl' banned access to the Bouncy Castle]
@@ -47,7 +48,7 @@ when play begins:
 	now entry 9 of dolphinlist is entry 3 of tempList;
 	now entry 11 of dolphinlist is entry 4 of tempList;
 
-Instead of resolving a Snared Vixen:
+to say ResolveEvent Snared Vixen:
 	say "     As you're traveling along the beach, you can hear some giggling in the distance. As you crest the next sandy rise, you can see several bright pink dolphin girls playing with a vixen they've found. She's struggling a little, but her resistance becomes less and less as the playful inflatables tease her body while taking off what few scraps of clothes she has. As they're several hundred yards away, you'd not be able to get there in time to interfere if you wanted to. It's hard to make out all the details at this distance.";
 	say "     [bold type]Are you interested in watching or shall you just continue on your way?[roman type][line break]";
 	LineBreak;
@@ -63,7 +64,7 @@ Instead of resolving a Snared Vixen:
 			say "     The boat you've used to travel to the pirate island is more than capable of handling the short jaunt out to the bouncy castle, so you should be able to make it out there.";
 		else if hasgills is 1:
 			say "     It would take a bit of work, but you should be able to swim all the way out to the bouncy castle thanks to your gills.";
-		now Bouncy Castle is known;
+		AddNavPoint Bouncy Castle;
 		now HP of Bubble is 1;
 		[moved generating Dolphinlist to the game start, see above]
 		now vixcountdown is 29;
@@ -112,7 +113,7 @@ instead of navigating Bouncy Castle:
 to say bcnavigate:
 	if location of Player is not Beach Plaza and location of Player is not Public Beach: [Skips this if the player is already in Beach Plaza or Public Beach]
 		say "     You begin by making your way back to the beach";
-		let the bonus be (( the perception of the player minus 10 ) divided by 2);
+		let the bonus be (( Perception of Player minus 10 ) divided by 2);
 		now battleground is "Outside";
 		if a random number from 1 to 20 < 10 minus bonus:
 			say ", encountering an enemy on the way there.";
@@ -130,7 +131,7 @@ to say bcnavigate:
 	else if boatfound is 2:		[rowboat]
 		say "     Returning to the rowboat you found, you drag it into the water and start your journey. It is hard work rowing the boat, but it certainly beats swimming the whole way. As you're making your way through the rocking outcroppings on your way to the floating castle, you watch warily for any signs of the creatures infesting these waters.";
 		now rowing is true;
-		if a random number between 1 and 20 > the perception of the player:
+		if a random number between 1 and 20 > Perception of Player:
 			swimmingfight; [details in Hellerhound\Underwater Zone.i7x]
 		now rowing is false;
 		say "     Eventually, you make it out to the buoyant castle, rowing up close to it. Your arms are sore from all the rowing, but you have managed to arrive at your destination. Worried your boat might scrape a hole in its rubbery hide, you moor your boat to one of the tethers tying the castle between the rocks. You swim the short distance to the floating castle and make your way inside.";
@@ -172,112 +173,112 @@ Object	Name
 Bouncy Castle	"Bouncy Castle"
 
 The Bouncy Castle is a room. Bouncy Castle is fasttravel. Bouncy Castle is unknown. Bouncy Castle is private.
-The description of Bouncy Castle is "[bcentrance]".
+Description of Bouncy Castle is "[bcentrance]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Fencing Room	"Fencing Room"
 
 The Fencing Room is a room. The Fencing Room is east of Bouncy Castle.
-The description of Fencing Room is "[bcfencingroom]".
+Description of Fencing Room is "[bcfencingroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Bouncing Play Room	"Bouncing Play Room"
 
 The Bouncing Play Room is a room. The Bouncing Play Room is south of Fencing Room. The Bouncing Play Room is east of Ball Pit Room.
-The description of Bouncing Play Room is "[bcplayroom]".
+Description of Bouncing Play Room is "[bcplayroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Ball Pit Room	"Ball Pit Room"
 
 The Ball Pit Room is a room. The Ball Pit Room is south of Toy Room.
-The description of Ball Pit Room is "[bcballpitroom]".
+Description of Ball Pit Room is "[bcballpitroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Toy Room	"Toy Room"
 
 The Toy Room is a room. The Toy Room is west of Bouncy Castle.
-The description of Toy Room is "[bctoyroom]".
+Description of Toy Room is "[bctoyroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Punching Pillars	"Punching Pillars"
 
 The Punching Pillars is a room. The Punching Pillars is west of Ball Pit Room.
-The description of Punching Pillars is "[bcpunchingpillars]".
+Description of Punching Pillars is "[bcpunchingpillars]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Knight's Chambers	"Knight's Chambers"
 
 The Knight's Chambers is a room. The Knight's Chambers is north of Punching Pillars.
-The description of Knight's Chambers is "[bcknightschambers]".
+Description of Knight's Chambers is "[bcknightschambers]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Great Hall	"Great Hall"
 
 The Great Hall is a room. The Great Hall is east of Bouncing Play Room.
-The description of Great Hall is "[bcgreathall]".
+Description of Great Hall is "[bcgreathall]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 King's Chambers	"King's Chambers"
 
 The King's Chambers is a room. The King's Chambers is north of Great Hall.
-The description of King's Chambers is "[bckingschamber]".
+Description of King's Chambers is "[bckingschamber]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Lower Tower	"Lower Tower"
 
 The Lower Tower is a room. The Lower Tower is southeast of Ball Pit Room.
-The description of Lower Tower is "[bclowertower]".
+Description of Lower Tower is "[bclowertower]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Upper Tower	"Upper Tower"
 
 The Upper Tower is a room. The Upper Tower is above Lower Tower.
-The description of Upper Tower is "[bcuppertower]".
+Description of Upper Tower is "[bcuppertower]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Tower Turret	"Tower Turret"
 
 The Tower Turret is a room. The Tower Turret is above Upper Tower.
-The description of Tower Turret is "[bctowerturret]".
+Description of Tower Turret is "[bctowerturret]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Upper Hall	"Upper Hall"
 
 The Upper Hall is a room. The Upper Hall is north of Upper Tower.
-The description of Upper Hall is "[bcupperhall]".
+Description of Upper Hall is "[bcupperhall]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Western Parapets	"Western Parapets"
 
 The Western Parapets is a room. The Western Parapets is west from Upper Hall.
-The description of Western Parapets is "[bcwestparapets]".
+Description of Western Parapets is "[bcwestparapets]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Eastern Parapets	"Eastern Parapets"
 
 The Eastern Parapets is a room. The Eastern Parapets is east from Upper Hall.
-The description of Eastern Parapets is "[bceastparapets]".
+Description of Eastern Parapets is "[bceastparapets]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Castle Throne Room	"Castle Throne Room"
 
 The Castle Throne Room is a room. The Castle Throne Room is northeast of Western Parapets. The Castle Throne Room is northwest of Eastern Parapets.
-The description of Castle Throne Room is "[bcthroneroom]".
+Description of Castle Throne Room is "[bcthroneroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -670,7 +671,7 @@ to say bckingchair:
 			else:
 				say "     Your final attempt to break free seems to require the last of your strength and you sag back into the seat. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1]. With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. There they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]. With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. As they are flattened out, they turn into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]. Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
 				say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [BodyName of Player] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
-				Waitlinebreak;
+				WaitLineBreak;
 				now bcfinalchairform is BodyName of Player;
 				now humanity of Player is 0;
 				trigger ending "Bouncy Castle New Chair";
@@ -886,7 +887,7 @@ to say bcknightschambers:
 		if Player consents:
 			say "     Wary of some kind of trap, you cautiously reach out for the white inflatable and give it a gentle poke. When it does nothing more than flap its tiny wings all the more, you touch it again and then let your hand rest on its surface. Not seeing or feeling anything strange happening, you pick it up. The ducky toy flaps its wings excitedly and almost seems to smile. You strongly suspect that this is not another trap of the castle, but an earlier victim of it. Certainly the cute little thing seems safe enough, so you decide to take it with you. You could put it on and wear it or let its air out and store it in your pack.";
 			increase score by 5;
-			now carried of ducky swimring is 1;
+			ItemGain ducky swimring by 1;
 			now floatertaken is true;
 		else:
 			say "     Worried that this might be some new form of trap laid by the castle, you take a step back and leave the duck swim ring where it is. It seems a little sad that you've not touched it, but continues to try and get your attention by what little movement it is capable of.";
@@ -2210,7 +2211,7 @@ to say bcfinalsuccess:
 		say "     'Oh... Well, thanks for saving me, I guess,' she says, briefly disappointed, before her mind wanders again. 'Maybe someone else out there would like a little latex lovin[']. I know I do,' she yips merrily. 'Well, time for me to head off, sweetie. Thanks for the rescue,' she says, giving your ass a squeeze before dashing off with a girlish giggle.";
 		now HP of Bubble is 3;
 		move player to Public Beach;
-	increase carried of water bottle by 3;
+	ItemGain water bottle by 3;
 	increase score by 60;
 	if bcuntethered is 1:
 		now Bouncy Castle is unknown;
@@ -2272,14 +2273,15 @@ an everyturn rule:
 			now HP of Bubble is 100;
 
 
-
+[
 Section X - Debug - Not for release
+]
 
 dolphincastletesting is an action applying to nothing.
 understand "dolcastletest" as dolphincastletesting.
 
 carry out dolphincastletesting:
-	try resolving Snared Vixen;
+	say "[ResolveFunction of Snared Vixen]";
 	WaitLineBreak;
 	move player to Bouncy Castle;
 

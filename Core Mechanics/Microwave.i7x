@@ -6,7 +6,7 @@ Version 1 of Microwave by Core Mechanics begins here.
 Section 1 - Basic Functionality
 
 Lab Microwave is an object. It is in Primary Lab. It is fixed in place. Understand "microwave" as Lab Microwave.
-The description of Lab Microwave is "A small microwave lays, almost hidden, in the corner, perhaps you could [bold type]microwave[roman type] something.".
+Description of Lab Microwave is "A small microwave lays, almost hidden, in the corner, perhaps you could [bold type]microwave[roman type] something.".
 
 Purifying is an action applying to one thing.
 
@@ -21,9 +21,9 @@ Carry out Purifying:
 		say "You don't think that can get any more pure, at least not this way.";
 		stop the action;
 	let num be 0;
-	delete noun;
+	ItemLoss noun by 1;
 	say "After microwaving the [noun] on a low setting, you are left with [purified of the noun].";
-	add purified of the noun to the invent of the player;
+	ItemGain purified of the noun by 1;
 
 Section 2 - New Items
 
@@ -35,8 +35,8 @@ name	desc	weight	object
 distilled cum is a grab object. understand "cum" as distilled cum. understand "distilled" as distilled cum. distilled cum is cum.
 distilled booze is a grab object. understand "booze" as distilled booze. understand "distilled" as distilled booze.
 
-the usedesc of distilled cum is "[DistilledCumUse]".
-the usedesc of distilled booze is "[DistilledBoozeUse]".
+Usedesc of distilled cum is "[DistilledCumUse]".
+Usedesc of distilled booze is "[DistilledBoozeUse]".
 
 to say DistilledCumUse:
 	say "Or not so eagerly, as you don't think eating this powder will be the most pleasant experience... And you're gonna want something to wash it down with. It takes some effort to force the slightly bitter powder down your throat, but once it hits your belly, your body is filled with a sudden warmth that quickly pools and focuses between your legs...";
@@ -60,72 +60,72 @@ instead of sniffing distilled booze:
 Section 3 - Items to purify
 
 [ Water ]
-The purified of dirty water is "water bottle".
+Purified of dirty water is "water bottle".
 
 [ Milk ]
-The purified of acid milk is "distilled milk".
-The purified of batcubus milk is "distilled milk".
-The purified of cheetah milk is "distilled milk".
-The purified of dog milk is "distilled milk".
-The purified of cow milk is "distilled milk".
-The purified of cowboy milk is "distilled milk".
-The purified of acid milk is "distilled milk".
-The purified of gryphon milk is "distilled milk".
-The purified of margay milk is "distilled milk".
-The purified of panther milk is "distilled milk".
+Purified of acid milk is "distilled milk".
+Purified of batcubus milk is "distilled milk".
+Purified of cheetah milk is "distilled milk".
+Purified of dog milk is "distilled milk".
+Purified of cow milk is "distilled milk".
+Purified of cowboy milk is "distilled milk".
+Purified of acid milk is "distilled milk".
+Purified of gryphon milk is "distilled milk".
+Purified of margay milk is "distilled milk".
+Purified of panther milk is "distilled milk".
 
 [ Food ]
-The purified of blue gel is "food".
-The purified of cheese is "food".
-The purified of cheesecake is "food".
-The purified of Dog Treats is "food".
-The purified of Easter egg is "food".
-The purified of gingerbread is "food".
-The purified of musky cock flower is "food".
-The purified of lembas bread is "food".
-The purified of glob of goo is "food".
-The purified of mammoth jerky is "food".
-The purified of pink gel is "food".
-The purified of pita bread is "food".
-The purified of purple gel is "food".
-The purified of psionic egg is "food".
-The purified of psionic larva is "food".
-The purified of roasted nuts is "food".
-The purified of skunk goo is "food".
-The purified of sticky sushi is "food".
-The purified of tentacle tip is "food".
-The purified of awesome fruit is "food".
-The purified of awesomer fruit is "food".
-The purified of awesomest fruit is "food".
-The purified of wyvern goop is "food".
+Purified of blue gel is "food".
+Purified of cheese is "food".
+Purified of cheesecake is "food".
+Purified of Dog Treats is "food".
+Purified of Easter egg is "food".
+Purified of gingerbread is "food".
+Purified of musky cock flower is "food".
+Purified of lembas bread is "food".
+Purified of glob of goo is "food".
+Purified of mammoth jerky is "food".
+Purified of pink gel is "food".
+Purified of pita bread is "food".
+Purified of purple gel is "food".
+Purified of psionic egg is "food".
+Purified of psionic larva is "food".
+Purified of roasted nuts is "food".
+Purified of skunk goo is "food".
+Purified of sticky sushi is "food".
+Purified of tentacle tip is "food".
+Purified of awesome fruit is "food".
+Purified of awesomer fruit is "food".
+Purified of awesomest fruit is "food".
+Purified of wyvern goop is "food".
 
 [ Cum ]
-The purified of centaur cum is "distilled cum".
-The purified of earthen seed is "distilled cum".
-The purified of demon seed is "distilled cum".
-The purified of fennec semen is "distilled cum".
-The purified of gecko cum is "distilled cum".
-The purified of hawkman male cum is "distilled cum".
-The purified of orc cum is "distilled cum".
-The purified of gryphon cum is "distilled cum".
-The purified of pewter seed is "distilled cum".
-The purified of rhino cum is "distilled cum".
-The purified of sea dragon cum is "distilled cum".
-The purified of silver semen is "distilled cum".
-The purified of smilodon cum is "distilled cum".
-The purified of wolf cum is "distilled cum".
-The purified of orc femcum is "distilled cum".
+Purified of centaur cum is "distilled cum".
+Purified of earthen seed is "distilled cum".
+Purified of demon seed is "distilled cum".
+Purified of fennec semen is "distilled cum".
+Purified of gecko cum is "distilled cum".
+Purified of hawkman male cum is "distilled cum".
+Purified of orc cum is "distilled cum".
+Purified of gryphon cum is "distilled cum".
+Purified of pewter seed is "distilled cum".
+Purified of rhino cum is "distilled cum".
+Purified of sea dragon cum is "distilled cum".
+Purified of silver semen is "distilled cum".
+Purified of smilodon cum is "distilled cum".
+Purified of wolf cum is "distilled cum".
+Purified of orc femcum is "distilled cum".
 
 [ Alcohol ]
-The purified of mead horn is "distilled booze".
-The purified of orc brew is "distilled booze".
-The purified of Pan's Special Reserve is "distilled booze".
-The purified of pony cider is "distilled booze".
-The purified of satyr wine is "distilled booze".
-The purified of satyress wine is "distilled booze".
-The purified of egg nog is "distilled booze".
+Purified of mead horn is "distilled booze".
+Purified of orc brew is "distilled booze".
+Purified of Pan's Special Reserve is "distilled booze".
+Purified of pony cider is "distilled booze".
+Purified of satyr wine is "distilled booze".
+Purified of satyress wine is "distilled booze".
+Purified of egg nog is "distilled booze".
 
 [ Soda ]
-The purified of sports drink is "soda".
+Purified of sports drink is "soda".
 
 Microwave ends here.

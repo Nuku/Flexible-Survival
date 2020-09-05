@@ -11,8 +11,9 @@ Object	Name
 Strange Shop	"Strange Shop"
 
 Strange Shop is a situation.
+ResolveFunction of Strange Shop is "[ResolveEvent Strange Shop]".
 
-Instead of resolving a Strange Shop:
+to say ResolveEvent Strange Shop:
 	say "     Traveling through the deserted streets of the city, you stumble into a small gathering of ebonflame dragators that appear to be squabbling over which of them gets what looks like a recently captured human. Unfortunately they notice you almost immediately and a cry goes up as a number of them turn your way. Apparently your appearance has helped simplify the argument as they are eager to get another person to breed, and around eight or so of the dangerous fiery beasts immediately head your way. Staring at the large number of creatures arrayed against you, you do the only sensible thing in this situation and run. There really isn't anything you can do for their current captive, even if you tried...";
 	say "     The beasts are hot on your heels as you dart through alleyways and down the mostly deserted streets of the city. You just can't seem to shake your pursuers however, and as you run from them in a reckless sprint, you find that the chase is attracting a good deal of additional from other infected in the city. Glancing back, you are shocked to see that there are now a group of gryphons squabbling with a wyvern above, the only reason one of them hasn't swooped down yet being their disagreement of who gets to do it. Then a pair of harpies joins the throng, further heating up the shouting and screeching match. Man, you really built a train of predators eager to snatch you! And worse yet, the dragators are gaining ground on you too!";
 	WaitLineBreak;
@@ -31,7 +32,7 @@ Instead of resolving a Strange Shop:
 		WaitLineBreak;
 		say "     With that said, she twists the ornate door-handle, opening the wooden door into what clearly is a mid-sized storage room, overstuffed with more strange items. She smirks mysteriously as she walks in on slender paws, then pulls a small wooden box out of one of the shelves, carrying it with her as she walks back out into the store and closes the door once more. Opening what she is carrying and revealing leaves inside, the jackaless asks, 'Should Nermine make two cups of tea? It might provide some relaxation for overstressed nerves.' Once more baffled by the strangeness that is her and her store, you accept, drinking a cup of admittedly excellent tea with the storekeeper before you eventually step out into the mall.";
 	move player to Mall West Wing;
-	now Smith Haven Mall Lot South is known;
+	AddNavPoint Smith Haven Mall Lot South;
 	now Strange Shop is resolved;
 
 Section 2 - Quest Events
@@ -40,14 +41,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Bacchus Wine	"Bacchus Wine"
 
-Bacchus Wine is a situation. The level of Bacchus Wine is 4.
-The Sarea of Bacchus Wine is "Museum".
+Bacchus Wine is a situation.
+ResolveFunction of Bacchus Wine is "[ResolveEvent Bacchus Wine]". The level of Bacchus Wine is 4.
+Sarea of Bacchus Wine is "Museum".
 WineFound is a number that varies.
 
 when play begins:
 	add Bacchus Wine to BadSpots of MaleList;
 
-Instead of resolving a Bacchus Wine:
+to say ResolveEvent Bacchus Wine:
 	if WineFound is 0 or WineFound is 2: [regular scene or repeat after quest]
 		if WineFound is 2:
 			say "     Wandering through the museum halls, you return once more to the casks full of rich dark satyr wine, you realize that while you don't need any more wine for Nermine, you could still take a drink or two yourself...";
@@ -71,7 +73,7 @@ Instead of resolving a Bacchus Wine:
 			say "     Deciding it is best not to mess with strange casks and other such things in these dark halls, you continue on your way leaving the drink untouched.";
 	else if WineFound is 1: [player is supposed to bring wine to Nermine]
 		say "     Traveling down the museum halls, you spot several satyrs bemoaning their current lack of booze, then setting out to 'get a refill'. They seem fairly focused on getting more wine, not really noticing you as you stand in a shadowy archway when they move past. Remembering Nermine's request for some of the satyr wine straight from the source, you attempt to stealthily follow the nimble goat-men through the halls.";
-		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
 		increase diceroll by bonus;
@@ -89,13 +91,14 @@ Object	Name
 Stolen Jewelry	"Stolen Jewelry"
 
 Stolen Jewelry is a situation.
-The Sarea of Stolen Jewelry is "Museum".
+ResolveFunction of Stolen Jewelry is "[ResolveEvent Stolen Jewelry]".
+Sarea of Stolen Jewelry is "Museum".
 HyenaTrailing is a number that varies.
 
-Instead of resolving a Stolen Jewelry:
+to say ResolveEvent Stolen Jewelry:
 	if RareQuesting is 8:
 		say "     Traveling through the dimly lit hallways of the museum, you eventually find the room you are looking for in the Egyptian section and wander inside hopefully. Sadly it doesn't take more than a short look for you to determine that just as Nermine feared, the items you are looking for have already been stolen. Sighing at how much more complicated this is going to be you carefully begin searching the room for any sign of who the thief might be, or where they have taken it.";
-		let bonus be (( the perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
 		increase diceroll by bonus;
@@ -119,16 +122,17 @@ Table of GameEventIDs (continued)
 Object	Name
 Alternative Entry	"Alternative Entry"
 
-Alternative Entry is a situation. The level of Alternative Entry is 8.
-The Sarea of Alternative Entry is "Museum".
+Alternative Entry is a situation.
+ResolveFunction of Alternative Entry is "[ResolveEvent Alternative Entry]". The level of Alternative Entry is 8.
+Sarea of Alternative Entry is "Museum".
 when play begins:
 	add Alternative Entry to BadSpots of MaleList;
 	add Alternative Entry to BadSpots of FurryList;
 
-Instead of resolving a Alternative Entry:
+to say ResolveEvent Alternative Entry:
 	if HyenaTrailing is 2:
 		say "     After returning to the Egyptian exhibit you proceed to attempt to backtrack the hyena thieves trail through the dim hallways of the museum, relying on your keen powers of observation to help (and perhaps a little luck as well).";
-		let bonus be (( the perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
 		increase diceroll by bonus;
@@ -168,12 +172,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Hyena Challenge	"Hyena Challenge"
 
-Hyena Challenge is a situation. The level of Hyena Challenge is 12.
+Hyena Challenge is a situation.
+ResolveFunction of Hyena Challenge is "[ResolveEvent Hyena Challenge]". The level of Hyena Challenge is 12.
 when play begins:
 	add Hyena Challenge to badspots of HermList;
 	add Hyena Challenge to BadSpots of FurryList;
 
-Instead of resolving a Hyena Challenge:
+to say ResolveEvent Hyena Challenge:
 	if HyenaTrailing is 4:
 		if matriarchdefeated > 0 and matriarchowned is 0: [player is the omega hyena]
 			say "     Moving through the city with purpose, you quickly head to the hyena gang hideout you know so well from your earlier failed attempts to challenge the matriarch. Approaching the building, you find several of the gang members talking about their most recent score from the museum. Realizing they must know what happened to the items Nermine wanted, you try to steel your courage as you go over to demand the more dominant hyenas tell you what they know. Recognizing you as their matriarch's submissive little pet hyena, the other gang members break into laughter at your meek attempt to challenge them.";
@@ -255,10 +260,11 @@ Object	Name
 Anubis Statue	"Anubis Statue"
 
 Anubis Statue is a situation.
-The Sarea of Anubis Statue is "Museum".
+ResolveFunction of Anubis Statue is "[ResolveEvent Anubis Statue]".
+Sarea of Anubis Statue is "Museum".
 statuequest is a number that varies.
 
-Instead of resolving a Anubis Statue:
+to say ResolveEvent Anubis Statue:
 	if statuequest is 0:
 		say "     Wandering through the twisting (and possibly shifting) corridors of the museum, you find yourself face to face with a large statue of a jackal-man. The statue seems to be made out of some strange black stone and you almost get the feeling that it is looking straight at you. A helpful museum info-plaque tells you that this depicts the god Anubis, who was worshiped in ancient Egypt...";
 	else if statuequest is 1:
@@ -282,23 +288,22 @@ Instead of resolving a Anubis Statue:
 		say "     Returning to the museum with the samples the strange man sent you to retrieve, you luckily manage to retrace your steps to the empty pedestal, and are unsurprised to find the jackal-like man leaning up against it with an amused grin. 'Found them I see?' he says with a smirk as he takes the bundle of vials from you eagerly. 'Trust me, these little beauties will make it more than worth your while,' the jackalman says as he begins to carefully mix the pheromones together, the scent of some strange sort of musk filling your nose as he does so. 'Ah there we go!' he says happily as he takes a whiff of the completed project, seeming satisfied as he pulls out a familiar looking ankh with a jackal embossed on it.";
 		say "     The man gives you a wink as he slowly pours the mixture over the ankh, and the metal seems to almost absorb the liquid into itself. 'There we go now, once you use this little beauty, that little shopkeep won't be able to keep her hands off of you. The jackal musk and enhanced pheromone mix should make sure of that,' the man says with a grin as he hands you the strangely scented ankh. 'I told you this little side trip of yours would be beneficial to both of us now didn't I? I look forward to seeing how it works out,' he says in a voice filled with amusement as he turns and wanders off into the dark museum halls again.";
 		now statuequest is 0;
-		LineBreak;
-		say "[bold type]You gain a strange ankh![roman type][line break]";
-		increase carried of strange ankh by 1;
+		ItemGain strange ankh by 1;
 		now Resolution of Anubis Statue is 3; [brought back the samples]
 
 Table of GameEventIDs (continued)
 Object	Name
 Bestial Pheromones	"Bestial Pheromones"
 
-Bestial Pheromones is a situation. The level of Bestial Pheromones is 4.
-The Sarea of Bestial Pheromones is "Zoo".
+Bestial Pheromones is a situation.
+ResolveFunction of Bestial Pheromones is "[ResolveEvent Bestial Pheromones]". The level of Bestial Pheromones is 4.
+Sarea of Bestial Pheromones is "Zoo".
 anubisrequest is a number that varies.
 when play begins:
 	add Bestial Pheromones to BadSpots of FemaleList;
 	add Bestial Pheromones to BadSpots of FurryList;
 
-Instead of resolving a Bestial Pheromones:
+to say ResolveEvent Bestial Pheromones:
 	if anubisrequest is 0:
 		say "     Traveling through the zoo, you come across one of the medical labs used for treatment of the animals, and decide to look inside. Looking around you realize this is actually one of the labs where they store and keep track of sperm and pheromones collected from the animals in several large coolers. While the coolers still seem to be functioning, probably due to some sort of emergency power supply, many of the vials are strewn across the area and smashed open, showing clearly you aren't the first person to search the area. The broken vials exude a scent that makes your head swim in arousal, and as you look around the room, and you realize that some of the fluids in here is almost certainly from the recent visitors rubbing one out or fucking right in the midst of all this chaos. Looking around quickly in case the arousing smells have attracted anything to the area, you quickly retreat before you run the danger of succumbing to the powerful scents and do something you shouldn't.";
 	else if anubisrequest is 1:
@@ -312,7 +317,7 @@ Instead of resolving a Bestial Pheromones:
 		now inasituation is false; [reset]
 		if fightoutcome < 20: [player won]
 			say "     Driving off the pair of sleek cheetahs, you look inside the room carefully, finding it to be full of several large coolers, several of which are standing open, their contents spilled out upon the floor. You now realize why the felines were so attracted to this place - the mingled musk and pheromones of numerous animals filling the air is quite a potent mixture, making your thoughts wander as you look around. Realizing you can't stay here long without giving in to your primal urges, you quickly pull out the paper the jackal-man gave you and begin to search the area, hoping the vials you need aren't lying among those smashed on the floor.";
-			let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+			let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Intelligence Check):[line break]";
 			increase diceroll by bonus;
@@ -331,15 +336,17 @@ Instead of resolving a Bestial Pheromones:
 
 Table of GameEventIDs (continued)
 Object	Name
-Twisted fruit grove	"Twisted fruit grove"
+Twisted Fruit Grove	"Twisted fruit grove"
+Twisted Fruit Grove	"Twisted Fruit Grove"
 
-Twisted fruit grove is a situation. The level of twisted fruit grove is 4.
-The Sarea of Twisted fruit grove is "Park".
+Twisted Fruit Grove is a situation.
+ResolveFunction of Twisted Fruit Grove is "[ResolveEvent Twisted Fruit Grove]". The level of twisted fruit grove is 4.
+Sarea of Twisted Fruit Grove is "Park".
 FelinoidRescued is a number that varies.
 when play begins:
-	add Twisted fruit grove to badspots of HermList;
+	add Twisted Fruit Grove to badspots of HermList;
 
-Instead of resolving a Twisted fruit grove:
+to say ResolveEvent Twisted Fruit Grove:
 	if FelinoidRescued is 1: [player lost the fight to save the Felinoid]
 		say "     Traveling through the twists and turns of the park, you notice the scenery seems to slowly be twisting and changing, again becoming even more vine-covered and lewd with every step you take. Remembering the last time you were here, you grip your weapon tightly as you hurry quickly down the path, eager to get this over with. The landscape seems to grow increasingly disturbing as you travel, until eventually you are back at the thin curtain of vines from before, the strange twisted glade mostly quiet now, save for a large mass of vines near the area where the felinoid who saved you before was dragged off. You can still see some movement as the beast struggles within his viney prison, and hope you aren't too late to help return the favor. Stepping forward you realize as the glade explodes into motion again that without a distraction in the form of a large cat, this is going to be a much harder fight indeed...";
 		let PlantFightCounter be 0;
@@ -490,8 +497,8 @@ object	name
 Rare Counter	"Rare Counter"
 
 Rare Counter is a man.
-The description of Rare Counter is "[RareCounterDesc]".
-The conversation of Rare Counter is { "Treasure!" }.
+Description of Rare Counter is "[RareCounterDesc]".
+Conversation of Rare Counter is { "Treasure!" }.
 Rare Counter is in The Mysterious Shop.
 
 to say RareCounterDesc:
@@ -536,8 +543,7 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 		say "     'Ah, Nermine thanks her brave guest gratefully!' the jackal-woman says with bright grin on her silver-painted muzzle as she takes the basket full of strange fruit from you. 'These are very rare fruit indeed, and will certainly fetch a very high price to the right buyer!' she says brightly as she sets the basket down on the counter next to her, before reaching underneath it to produce the shiny golden ankh she showed you earlier. 'And speaking of price, here is the one that was agreed upon as well,' with a purr in her voice, she hands you the golden ankh, its weight feeling surprisingly good in your hands as you hold it up to inspect the gleaming metal in the candlelight. 'It is more than just a golden trinket,' the jackal-woman says teasingly as she gathers up the basket and heads towards the back room.";
 		say "     You are almost entranced by the beauty of the craftsmanship on your new possession, barely registering anything but the ankh until Nermine's eventual return. Stepping up close beside you, she leans forward and whispers into your ear, 'The treasure Nermine's friend is holding is a very special and powerful ankh indeed. Some might just value it for its gold, but this humble shopkeeper is sure that her visitor will go beyond such trivialities. If [heshe] uses its true power, [heshe] will become ready for further helping Nermine out and earn more rewards.' A sly smile on her muzzle, the jackaless strokes a finger gently along your arm, brushing against the side of your hand holding the ankh, then withdrawing. As she moves back behind the counter afterwards, you can't help but be very curious about what she meant...";
 		LineBreak;
-		say "[bold type]You gain a strange ankh![roman type][line break]";
-		now carried of strange ankh is 1;
+		ItemGain strange ankh by 1;
 		now RareQuesting is 3; [first ankh awarded]
 	else if RareQuesting is 3: [no further progress after the first ankh]
 		say "     As you bring up the rare items laid out under the glass counter again, the jackaless looks you up and down, as if searching for something. She appears slightly disappointed for a second, then brushes the expression aside and gives you a friendly smile more typical of the strange shopkeeper. 'Nermine thinks her brave helper should try using the power of the ankh she has provided. It will surely help [ObjectPro of Player] in the tasks ahead if [heshe] wants to assist the jackaless further.' She doesn't go into any more detail than that as you ask what the ankh will actually do, only giving you a sly smile and answering, 'There is no explaining about these matters, only doing and seeing.'";
@@ -553,7 +559,7 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 			say "     'Ah, the brave adventurer found [hisher] treasure!' Nermine says with a large smile on her muzzle as she eagerly takes the small handful of golden coins you are holding out from you, leaving you feeling vaguely sad as those precious golden circles disappear behind the counter. When you point out that that was all there was in the pirate stash, she blinks at you in surprise. 'Only so few coins left? Well, then it is especially fortunate that Nermine's helper managed to find them! This makes them far more precious and she will have to adjust the price accordingly,' the jackal-woman says, a smile tugging at the corners of her muzzle. Then she pulls out the small golden ankh she promised you earlier and hands it to you. 'Nermine thinks this was more than earned then, though she also believes there might still be further coins left out there if one were to go and look again,' she says with a grin. As you weigh the warm golden ankh in your hands and wonder whether it was worth the handful of treasure you just traded for it...";
 			LineBreak;
 			say "[bold type]You gain a strange ankh![roman type][line break]";
-			now carried of strange ankh is 1;
+			ItemGain strange ankh by 1;
 			now TreasureFound is 0;
 			now RareQuesting is 6; [gold coins delivered]
 		else:
@@ -572,9 +578,7 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 		WaitLineBreak;
 		say "     After a moment, Nermine grins again before reaching under the counter. 'Nermine thinks she still needs to pay her tireless helper for all [hisher] help, and she has one last ankh to share now,' the shopkeeper says as she places the golden ankh into your hands. 'Nermine also thinks she has other promise to fulfill as well. Though that can wait until after her new friend has used ankh to look even more handsome.' She smiles as she says those words and runs her tongue along the sides of her muzzle, licking her lips eagerly as she stares at you in anticipation.";
 		now RareQuesting is 10; [museum treasures delivered - ankh #3 awarded]
-		LineBreak;
-		say "[bold type]You gain a strange ankh![roman type][line break]";
-		now carried of strange ankh is 1;
+		ItemGain strange ankh by 1;
 	else if RareQuesting is 10: [third ankh not yet used]
 		say "     'Nermine hopes her new friend will use the ankh sometime soon,' the sultry jackaless says, as she traces the tip of her claw along the edge of her breasts slowly. 'She just can't wait to see how much better her friend will look with a nice proud muzzle of [hisher] own,' Nermine adds, her voice starting to come out in soft lusty breaths, as she stares at you in eager anticipation.";
 	else if RareQuesting is 11: [third ankh used]
@@ -625,33 +629,30 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "strange ankh"	"A small golden ankh with an image of a jackal-headed beastman set into the base. It feels oddly warm in your hands."	5	strange ankh
 
-strange ankh is a grab object. It is part of the player. Understand "ankh" and "strange" as strange ankh.
+strange ankh is a grab object. Understand "ankh" and "strange" as strange ankh.
 
-The usedesc of strange ankh is "[jackalankhmagic].";
+Usedesc of strange ankh is "[jackalankhmagic].";
 
 the scent of strange ankh is "The golden ankh smells faintly of desert sand and masculine musk.".
 
 To say jackalankhmagic:
 	if Nightmaretf > 0:
 		say "     You rub the small golden ankh curiously, only to feel a strange burning sensation in your body as if two great forces were warring within. Letting out a gasp of surprise as the ankh seems to heat up - enough to sear flesh - you drop the item instinctively. Waving your hand and looking down at it, you realize that there is no trace of any damage after all, not even any reddening. Could it be that you've just imagined the feeling? But no, glancing down at the ankh, you see that it has melted into a small puddle of molten gold, sizzling a bit on the ground. Somehow you don't think that was what was supposed to happen...";
-		say "[bold type]You lose a strange ankh![roman type][line break]";
-		now carried of strange ankh is 0;
+		ItemLoss all strange ankh;
 		now JackalManTF is 5;
 		now NermineTalk is 1;
 		stop the action;
 	if wrcursestatus >= 7 and wrcursestatus < 100:
 		say "     You rub the small, golden ankh curiously and hiss in pain as it starts to heat up, scalding your hand. You toss it aside. Something about you seems to be incompatible with it.";
 		now NermineTalk is 1;
-		say "[bold type]You lose a strange ankh![roman type][line break]";
-		now carried of strange ankh is 0;
+		ItemLoss all strange ankh;
 		stop the action;
 	if JackalManTF is 0:
 		say "     You smile as you rub the small golden ankh between your hands, the warm metal feeling nice and almost soft as you rub at it. Suddenly the small ankh almost seems to melt into your hands, leaving a soft tingling dusting of gold where the small trinket was before. As you stare at your palms, you feel a strange shifting sensation in your body, seeming to center on your rear. Glancing over your shoulder, you are surprised to see your ass starting to stretch and change, your rear flattening out as a long predatory black jackal-like tail forms behind you. In a strangely pleasant stretching sensation, your new tail grows until its tip is hanging just below your knees. You stare down at the appendage and can't help but try it out - moving the tail from side to side a little a few times, with it reacting with surprising dexterity. Next, you take a few steps and are pleased to note that it helps your balance greatly. Thinking to yourself, the though of how hot and sexy the jackal tail looks comes unbidden to your mind...";
 		now TailName of Player is "Jackalman";
 		now TailSpeciesName of Player is "Jackal";
 		now Tail of Player is "You have a long sleek jackal's tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
-		say "[bold type]You lose a strange ankh![roman type][line break]";
-		now carried of strange ankh is 0;
+		ItemLoss strange ankh by 0;
 		StatChange "Dexterity" by 4;
 		now RareQuesting is 4;
 		now JackalManTF is 1;
@@ -662,8 +663,7 @@ To say jackalankhmagic:
 		now SkinName of Player is "Jackalman";
 		now SkinSpeciesName of Player is "Jackal";
 		now Skin of Player is "[one of]dark black[or]sleek black furred[or]jackal-furred[at random]";
-		say "[bold type]You lose a strange ankh![roman type][line break]";
-		now carried of strange ankh is 0;
+		ItemLoss strange ankh by 0;
 		StatChange "Charisma" by 3;
 		StatChange "Stamina" by 3;
 		now RareQuesting is 7;
@@ -677,8 +677,7 @@ To say jackalankhmagic:
 		now Face of Player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seems both predatory and strangely sexy at the same time.";
 		now RareQuesting is 11;
 		now statuequest is 1;
-		say "[bold type]You lose a strange ankh![roman type][line break]";
-		now carried of strange ankh is 0;
+		ItemLoss strange ankh by 0;
 		StatChange "Charisma" by 4;
 		StatChange "Perception" by 4;
 		now JackalManTF is 3;
@@ -696,14 +695,13 @@ To say jackalankhmagic:
 		now CockName of Player is "Jackalman";
 		now CockSpeciesName of Player is "Jackal";
 		now Cock of Player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
-		say "[bold type]You lose a strange ankh![roman type][line break]";
-		now carried of strange ankh is 0;
+		ItemLoss strange ankh by 0;
 		StatChange "Strength" by 4;
 		StatChange "Dexterity" by 2;
 		now JackalManTF is 4;
 	if JackalManTF is 5:
 		say "     You examine the strange ankh in your hand, but it seems to slip out of your fingers. When you look for it, you can't seem to find it. Oh well, you'd already asked Nermine to reverse its effects, so that's probably for the best.";
-		now carried of strange ankh is 0;
+		ItemLoss all strange ankh;
 
 An everyturn rule:
 	if JackalManTF is 5:

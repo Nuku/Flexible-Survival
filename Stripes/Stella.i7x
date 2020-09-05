@@ -19,12 +19,13 @@ Object	Name
 Eager Dal	"Eager Dal"
 
 Eager Dal is a situation.
-The sarea of Eager Dal is "Red".
+ResolveFunction of Eager Dal is "[ResolveEvent Eager Dal]".
+Sarea of Eager Dal is "Red".
 when play begins:
 	add Eager Dal to badspots of HermList;
 	add Eager Dal to BadSpots of FurryList;
 
-Instead of resolving a Eager Dal:
+to say ResolveEvent Eager Dal:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Stella]. Location: [location of Stella]. Alexandra's hint: [if AT_Stella is true]Given[else]Not given[end if]. <- DEBUG[line break]";
 	if HP of Stella is 0:
@@ -126,8 +127,8 @@ SexuallyExperienced of Stella is true.
 TwistedCapacity of Stella is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Stella is false. [steriles can't knock people up]
 MainInfection of Stella is "Dalmatian Herm".
-The description of Stella is "[stelladesc]".
-The conversation of Stella is { "Try my dick!" }.
+Description of Stella is "[stelladesc]".
+Conversation of Stella is { "Try my dick!" }.
 The icon of Stella is Figure of Stella_icon.
 StellaNPCInt is a text that varies. StellaNPCInt is usually "AAAAAAAAAAAA".
 

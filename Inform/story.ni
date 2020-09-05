@@ -412,7 +412,7 @@ with 1000 blank rows
 
 Allobjs is a list of text that varies.[@NotSaved]
 Grab Object is a kind of thing.
-a grab object has a number called objsize. The objsize of grab object is usually 3.	[Used only for armaments and journal.]
+a grab object has a number called objsize. Objsize of grab object is usually 3.	[Used only for armaments and journal.]
 things have a text called scent.
 rooms have a text called scent.
 The player has a grab object called weapon object. A weapon object is usually journal.
@@ -428,7 +428,7 @@ Equipment can be cursed or not cursed. Equipment is usually not cursed. [can't t
 Equipment has a text called descmod. The descmod of equipment is usually "".
 Equipment has a text called placement. The placement of equipment is usually "end".
 Equipment has a text called slot. The slot of equipment is usually "".
-Equipment has a truth state called taur-compatible. The taur-compatible of equipment is usually false.
+Equipment has a truth state called taur-compatible. Taur-compatible of equipment is usually false.
 Equipment has a number called GA. The GA of equipment is usually 0. [neutral]
 Equipment has a list of text called Traits.
 Equipment has a number called size. The size of equipment is usually 3.
@@ -437,12 +437,14 @@ Equipment has a number called effectiveness. The effectiveness of equipment is u
 Equipment has a number called dodgebonus. The dodgebonus of equipment is usually 0.	[Rare, usually magic]
 Equipment has a number called damagebonus. The damagebonus of equipment is usually 0.	[Rare, usually magic]
 Equipment has a number called fleebonus. The fleebonus of equipment is usually 0.		[Usually a penalty]
+Equipment has a text called skillcheck bonus. The skillcheck bonus of equipment is usually "".
+Equipment has a number called skillcheck value. The skillcheck value of equipment is usually 0.
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious.
 A grab object can be milky. A grab object is usually not milky.
 A grab object can be cum. A grab object is usually not cum.
-A grab object has a truth state called plural. The plural of a grab object is usually false.
+A grab object has a truth state called plural. Plural of a grab object is usually false.
 A grab object has a text called strain.
 A grab object has a text called trade.
 A grab object has a text called purified.
@@ -454,7 +456,7 @@ Hardmode is a truth state that varies. Hardmode is usually false.
 nohealmode is a truth state that varies. nohealmode is usually false.
 blindmode is a truth state that varies. blindmode is usually false.
 Lastjournaluse is a number that varies. Lastjournaluse is 248.
-Targetturns is a number that varies.
+Targetturns is a number that varies. Targetturns is usually -240.
 Started is a number that varies.
 Freefeats is a number that varies.
 Lost is a number that varies.
@@ -466,8 +468,10 @@ NewGraphicsRatio is a number that varies. NewGraphicsRatio is usually 30.
 NewGraphicsOpened is a truth state that varies. NewGraphicsOpened is usually false. [set to true for entire playthrough if graphics window opened - unless inline/disabled specified at start]
 [For use with new safe restore]
 RestoreMode is a truth state that varies. RestoreMode is usually false.
+CurrentMedkitSupplies is a number that varies.[@Tag:NotSaved] [uses left in the currently open medkit]CurrentMedkitSupplies is usually 5.
 
 A situation is a kind of thing.
+A situation has a text called ResolveFunction. ResolveFunction of a situation is usually "[ResolveError]".
 A situation can be resolved or unresolved. A situation is usually unresolved.
 A situation can be active or inactive. A situation is usually active.
 A situation has a number called Resolution.
@@ -483,19 +487,21 @@ A situation has a list of numbers called Prereq3Resolution. Prereq3Resolution is
 A situation has an object called PrereqCompanion.
 A situation has a text called PrereqTime. The PrereqTime of a situation is usually "Any".
 [TODO: Add PrereqNavpoint]
-A situation has a text called sarea. The sarea of a situation is usually "Outside".
+A situation has a text called sarea. Sarea of a situation is usually "Outside".
 A situation has a number called level. The level of a situation is usually 0.
 A situation has a number called minscore. The minscore of a situation is usually -2147483648.
 A featset is a kind of thing.
 inasituation is a truth state that varies. inasituation is normally false.
 
-PlaceholderSituation is a situation. PlaceholderSituation is resolved. [needs to always be resolved]
+to say ResolveError:
+	say "ERROR: The situation that caused this message to appear is not properly set up. Please report the situation and this message on the Flexible Survival Discord Server!";
 
-instead of sniffing a situation:
-	say "You can't see any such thing.";
+PlaceholderSituation is a situation.
+PlaceholderSituation is resolved. [needs to always be resolved]
+ResolveFunction of PlaceholderSituation is "[ResolveEvent PlaceholderSituation]".
 
-instead of examining a situation:
-	say "You can't see any such thing.";
+to say ResolveEvent PlaceholderSituation:
+	say "This is the placeholder situation. How did you see this?";
 
 Definition: A situation (called x) is available:
 	if sarea of x is "Nowhere", no; [not findable through exploration/hunting]
@@ -523,12 +529,12 @@ Definition: A situation (called x) is PrereqComplete:
 	yes;
 
 Definition: A situation (called x) is close:
-	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of x is "Allzones" or the sarea of x is "allzones" ) ):
+	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( (battleground is "Outside" or battleground is "High" or battleground is "Capitol" or battleground is "Park" or battleground is "Forest" or battleground is "Beach") and ( Sarea of x is "Allzones" or Sarea of x is "allzones" ) ):
 		yes;
 	no;
 
 Definition: A scavevent (called x) is scavable:
-	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( sarea of x is "Allzones" or the sarea of x is "allzones" ):
+	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( (battleground is "Outside" or battleground is "High" or battleground is "Capitol" or battleground is "Park" or battleground is "Forest" or battleground is "Beach") and ( sarea of x is "Allzones" or Sarea of x is "allzones" ) ):
 		if score < minscore of x:
 			no;
 		else if hardmode is true:
@@ -543,7 +549,7 @@ Definition: A grab object (called x) is wielded:
 
 Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
 	if grab object is journal, no;
-	if the absolute value of ( scalevalue of Player - objsize of x ) > 1, yes;
+	if (absolute value of ( scalevalue of Player - objsize of x )) > 0, yes;
 	no;
 
 A person can be asleep. A person is usually not asleep.
@@ -1670,12 +1676,33 @@ A room can be private. A room is usually not private.
 A room can be sleepsafe. A room is usually not sleepsafe.
 A room has a text called earea. earea is usually "void". [exploration area]
 The player is wearing a watch.
-The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
+The player is wearing a backpack. Description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
 
 instead of examining a grab object (called x):
-	say "[the desc corresponding to a object of x in the table of game objects]";
+	say "[the desc corresponding to a object of x in the table of game objects][line break]";
 	if "Weaponsmaster" is listed in feats of Player and x is an armament:
 		say "     Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
+	if x is an armament:
+		if (ScaleValue of Player - objsize of x) is:
+		-- 4: [4 size categories difference - huge player (5), size 1 weapon]
+			say "     Trying to use this as a weapon is utterly ridiculous, given your size. Don't even try it!";
+		-- 3: [3 categories difference]
+			say "     Trying to use this as a weapon is fairly ridiculous, given your size.";
+		-- 2: [2 categories difference]
+			say "     Trying to use this as a weapon is incredibly difficult, as it is far to small for you to comfortably hold.";
+		-- 1: [1 category difference]
+			say "     Given that it is made for someone smaller than you, this isn't all that easy to use as a weapon.";
+		-- 0: [proper size for the player]
+			say "     This is just the right size for you to wield comfortably.";
+		-- -1: [1 categories difference]
+			say "     A bit big for comfortable use, but with both hands and some effort, you'll manage.";
+		-- -2: [2 categories difference]
+			say "     Trying to use this as a weapon is incredibly difficult, as its sheer size threatens to pull you over.";
+		-- -3: [3 categories difference]
+			say "     Trying to use this as a weapon is fairly ridiculous, given your size.";
+		-- -4: [4 size categories difference - tiny player (1), size 5 weapon]
+			say "     Don't even think about using this in combat! Well, you might hide under its bulk, but that's about it.";
+
 
 Does the player mean examining a situation: it is very unlikely.
 
@@ -1716,54 +1743,6 @@ The cot is rooted in place. The cot is restful.
 
 Section - Vending Machine
 
-To add (item - a text) to invent of Player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			increase carried of x by 1;
-			break;
-
-To add (item - a text) to the invent of Player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			increase carried of x by 1;
-			break;
-
-To add (item - a text) to the invent of the player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			increase carried of x by 1;
-			break;
-
-To add (item - a text) to invent of the player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			increase carried of x by 1;
-			break;
-
-To remove (item - a text) from invent of Player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			now carried of x is 0;
-			break;
-
-To remove (item - a text) from the invent of Player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			now carried of x is 0;
-			break;
-
-To remove (item - a text) from the invent of the player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			now carried of x is 0;
-			break;
-
-To remove (item - a text) from invent of the player:
-	repeat with x running through grab objects:
-		if the printed name of x matches the text item:
-			now carried of x is 0;
-			break;
-
 To decide which number is numeric/numerical value of (T - indexed text):
 	let S be 1;
 	let L be the number of characters in T;
@@ -1800,13 +1779,13 @@ Carry out vending:
 
 Instead of attacking the Cola Vending machine:
 	say "You give the soda machine a solid whack, ";
-	let the bonus be (( the strength of the player minus 10 ) divided by 2);
+	let the bonus be (( Strength of Player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: ";
 	increase dice by bonus;
 	if dice > 15:
 		say "A soda can pops out!";
-		add "soda" to invent of Player;
+		ItemGain soda by 1;
 		increase score by 1;
 		increase dispensed of cola vending machine by 1;
 	else:
@@ -1818,7 +1797,7 @@ Instead of attacking the Cola Vending machine:
 
 Book 3 - Definitions
 
-Definition: a direction (called D) is valid if the room D from the location of the player is a room.
+Definition: a direction (called D) is valid if the room D from the Location of Player is a room.
 Definition: A grab object (called D) is owned:
 	if there is a name corresponding to a object of d in the table of game objects:
 		if the carried of d > 0, yes;
@@ -1831,7 +1810,7 @@ Definition: A grab object (called D) is stored:
 
 Definition: A grab object (called D) is present:
 	if there is a name corresponding to a object of d in the table of game objects:
-		if the name corresponding to a object of d in the table of game objects is listed in the invent of the location of the player, yes;
+		if the name corresponding to a object of d in the table of game objects is listed in the invent of the Location of Player, yes;
 	no;
 
 before examining the grab object (called x):
@@ -1844,58 +1823,22 @@ before examining the grab object (called x):
 
 Book 5 - Tables
 
+[ Items moved to Core Mechanics/Misc Items]
+[ Milk moved to Core Mechanics/Milking.i7x]
+
+
 Table of Game Objects
 name	desc	weight	object	sortname (indexed text)
-"medkit"	"A small, white, plastic box with a red cross on it. It has all the things needed for basic medical needs on the go! Using it will restore a lot of HP, more with good intelligence."	3	medkit
-"water bottle"	"A bottle of water. Good for slaking thirst."	1	water bottle
-"dirty water"	"A bottle of contaminated water. Drinker beware."	1	dirty water
-"food"	"Some food. Nothing fancy. Maybe a sandwich, or a husky girl leg, whatever happens to be handy."	2	food
 "journal"	"A small, leather-clad book. Spending some time [link]writing[as]use journal[end link] in it can help clear your thoughts and recenter your troubled mind. Or if you have something especially important that you want to remember, you could just [link]write down a note[as]write a note[end link] at the back end of it. [if number of filled rows in Table of JournalNotes > 0]In fact, you remember noting down some things in it that must have been important somehow. You can [link]browse through your notes[as]browse notes[end link] if you want to. Alternatively, [link]ripping them all out[as]rip notes[end link] is also possible.[end if][line break]"	2	journal
-"pocketknife"	"Mighty big for a pocket knife, nice and solid too. Could be handy."	1	pocketknife
-"chair"	"A metal folding chair that belongs in a food court. It could serve as a weapon in a pinch!"	10	chair
-"gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons. You are fairly certain drinking it would be a poor idea, but maybe there is a use for it?"	2	gryphon milk
-"distilled milk"	"Some creature's milk boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled milk
-"glob of goo"	"A small bottle of strange, neon colored, goop"	1	glob of goo
-"soda"	"A can of some soda or another. Somehow, it is still cool to the touch"	1	soda
-"chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
-"cot"	"A folding cot. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
-"dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
-"face mask"	"A basic filtered face mask. Maybe it will help? Probably not[first time]. You doubt it was designed with this madness in mind[only]."	3	face mask
-[
-"heuristic processor"	"A small electronic circuit. You've been told it's amazingly adaptive and can learn anything. Probably nonsense, but maybe you can find a use for it, somehow."	1	heuristic processor
-"reprogramming device"	"An attempt by Dr. Mouse to build a device to reprogram the nanites. It's too bulky, and doesn't have the processing capacity to be of any use in the field. Perhaps you could find a way around those limitations?"	13	reprogramming device
-"infection scanner"	"Upgraded Infection Monitor. Or it would have been, it's clearly not finished. It's missing any sort of display to show what it finds. Perhaps you could use it's scanner parts elsewhere?"	7	infection scanner
-]
 
-face mask is equipment. It is not temporary.
-The descmod of face mask is "A filtered mask covers nose and mouth in a vain attempt to help. ".
-The placement of face mask is "face".
-journal is a grab object. It is a part of the player. It is not temporary. The carried of journal is 1.
+journal is a grab object. It is not temporary. The carried of journal is 1.
 journal has a number called hitbonus. hitbonus of journal is usually 0.
-cot is a grab object. It is not temporary.
-understand "Bed" as cot.
 Understand "book" as journal.
-medkit is a grab object. It is fast. It is not temporary.
-dirty water is a grab object. The trade of dirty water is "chips".
-understand "water" as dirty water.
-water bottle is a grab object. The trade of water bottle is "chips".
-Does the player mean using the dirty water: it is unlikely.
-Does the player mean stashing the dirty water: it is unlikely.
-Does the player mean retrieving the dirty water: it is unlikely.
-dog milk is a grab object. It is milky.
-soda is a grab object.
-chips is a grab object.
-glob of goo is a grab object. glob of Goo is infectious. The strain of glob of goo is "Goo Girl".
-food is a grab object. The trade of food is "soda".
-pocketknife is a armament. It is a part of the player. It has a weapon "[one of]your large knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]". The weapon damage of pocketknife is 5. The weapon type of pocketknife is "Melee". It is not temporary. the objsize of pocketknife is 2.
-understand "knife" as pocketknife.
-chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary. the objsize of chair is 4.
-understand "seat" as chair.
-gryphon milk is a grab object. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Blue Gryphon Herm". The trade of Gryphon Milk is "distilled milk". gryphon milk is milky.
-distilled milk is a grab object. It is not milky.
 
+[Pocketknife moved to Core Mechanics/Weapons.i7x]
+[Chair moved to Core Mechanics/Weapons.i7x]
 
-The invent of the player is { "journal" }.
+The invent of Player is { "journal" }.
 
 Table of Start Game
 title	subtable	description	toggle
@@ -1965,8 +1908,8 @@ title	subtable	description	toggle
 "Exit"	--	"Previous Menu"	menu exit rule
 
 Table of Random Critters
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
-false	"Anthro Dragon"	"Anthro Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [Skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [Skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	""	0	"default"	false
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+false	"Anthro Dragon"	"Anthro Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [Skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [Skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	""	""	"-"	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	""	0	"default"	false
 
 Table of New Infection Parts
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
@@ -1988,10 +1931,16 @@ To say level up needed:
 
 Table of Fancy Status
 left	central	right
-"Location: [the player's surroundings]"	"Time: [time of day] Lvl: [level of Player]"	"HP:[HP of Player]/[maxHP of Player]"
-"Freecred: [freecred]"	"Hunger: [hunger of Player] Thirst: [thirst of Player] Libido: [Libido of Player]"	"Score:[score]/[maximum score]"
-"Sanity: [humanity of Player]/100"	"Evac: [( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0]  Kids: [(number of filled rows in Table of PlayerChildren + number of entries in childrenfaces)][end if]"	"XP:[XP of Player]/[level up needed]"
-""	"[if NewGraphicsInteger is 0] [else]Current image artist: [ngraphics_currentartist][end if]"	""
+"Location: [Location of Player][if Location of Player is fasttravel] ([link]Navpoint[as]nav[end link])[end if]"	"Name: [if Player is not defaultnamed][Name of Player][else][link]Pick one?[as]rename[end link][end if] | Condition: [SleepMessage] | [link]Inventory[as]i[end link] | [link]Feats[as]FeatList[end link] | [link]Allies[as]Allies[end link]"	"HP: [HP of Player]/[maxHP of Player]"
+"Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"STR: [strength of Player] | DEX: [dexterity of Player] | STA: [stamina of Player] | CHA: [Charisma of Player] | INT: [intelligence of Player] | PER: [perception of Player]"	"XP: [XP of Player]/[level up needed]"
+"Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"Hunger: [hunger of Player]/100 | Thirst: [thirst of Player]/100 | Libido: [Libido of Player]/100 | Humanity: [humanity of Player]/100"	"LVL: [level of Player]"
+"Freecred: [freecred]"	"[link]Help[as]HelpBookLookup[end link][if NewGraphicsInteger is 0] [else] | Art by: [ngraphics_currentartist] ([link]art credits[end link])[end if]"	"Score: [score]/[maximum score]"
+[
+"Location: [the player's surroundings]"	"Date: [DateYear]-[DateMonth]-[DateDay] Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"HP:[HP of Player]/[maxHP of Player]"
+"Freecred: [freecred]"	"Time: [time of day]"	"Score:[score]/[maximum score]"
+"Sanity: [humanity of Player]/100"	"Lvl: [level of Player] Hunger: [hunger of Player] Thirst: [thirst of Player] Libido: [Libido of Player] [if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0] Kids: [(number of filled rows in Table of PlayerChildren + number of entries in childrenfaces)][end if]"	"XP:[XP of Player]/[level up needed]"
+""	"[if NewGraphicsInteger is 0] [else]Current image artist: [ngraphics_currentartist] (see [link]art credits[as]try art credits[end link])[end if]"	""
+]
 
 to say exitlist:
 	repeat with nam running through valid directions:
@@ -2362,7 +2311,7 @@ carry out Inventorying:
 	[these are the default item actions in front of the item name]
 	let itemactions be {{"U", "use"}, {"L", "look"}, {"S", "smell"}, {"D", "drop"}, {"J", "junk"}, {"X", "junkall"}};
 	if the number of owned grab objects > 0:
-		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and HP of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and HP of Kristen is 10 and jblouse is 1 ) or ( Christy is visible and carried of super spicy sausage > 0 and HP of Christy > 1 and HP of Christy < 50 )][bold type][bracket]T[close bracket][roman type]rade, [end if][if the number of smither in the location of the player > 0][bold type][bracket]I[close bracket][roman type]mprove, [end if][bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved. ";
+		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the Location of Player > 0 or ( Ronda is visible and HP of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and HP of Kristen is 10 and jblouse is 1 ) or ( Christy is visible and carried of super spicy sausage > 0 and HP of Christy > 1 and HP of Christy < 50 )][bold type][bracket]T[close bracket][roman type]rade, [end if][if the number of smither in the Location of Player > 0][bold type][bracket]I[close bracket][roman type]mprove, [end if][bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved. ";
 		let weight be 0;
 		[5 more than in the original version, but therefore the indicators will not add to it anymore]
 		let baseavailcolumns be a number;
@@ -2387,8 +2336,8 @@ carry out Inventorying:
 		[generic trader check]
 		let traderavailable be 0;
 		let tradeguy be a person;
-		if the number of trader in the location of the player > 0:
-			now tradeguy is a random trader in the location of the player;
+		if the number of trader in the Location of Player > 0:
+			now tradeguy is a random trader in the Location of Player;
 			let traderavailable be 1;
 		[go through all the stuff]
 		repeat with x running from 1 to the number of rows in the table of game objects:
@@ -2422,7 +2371,7 @@ carry out Inventorying:
 						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Christy[end link]";
 				else if traderavailable is 1:
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to [tradeguy][end link]";
-				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the location of the player > 0:
+				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
 					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [itemname][end link]";
 				[get available columns, plus 6 to show the increase to the original value]
 				let availcolumns be baseavailcolumns;
@@ -2551,7 +2500,6 @@ understand "equip [owned grab object]" as using.
 understand "hold [owned grab object]" as using.
 understand "wield [owned grab object]" as using.
 understand "write in [owned grab object]" as using.
-understand "use cot" as resting.
 
 Check using a grab object (called x):
 	if hardmode is true and x is journal and (LastJournaluse minus 8) < turns:
@@ -2574,22 +2522,6 @@ Carry out massusing:
 		else:
 			say "You don't see any [second noun] in your backpack.";
 ]
-
-
-Resolving is an action applying to one thing.
-
-Carry out resolving a situation (called x):
-	say "This situation has not been properly written!";
-
-After resolving a situation:
-	try looking;
-	[follow the ngraphics_blank rule;]
-
-to delete (x - a grab object):
-	decrease the carried of x by 1;
-	if carried of x < 0:
-		now carried of x is 0;
-		say "ERROR: There was no [x] to remove. Please report where this occurred.";
 
 instead of waiting:
 	follow the turnpass rule;
@@ -2685,8 +2617,67 @@ definition: Daytimer is night:
 		yes;
 
 LastTurnDay is a truth state that varies.
+DateDay is a number that varies. DateDay is usually 11.
+DateMonth is a number that varies. DateMonth is usually 4.
+DateYear is a number that varies. DateYear is usually 2008.
 
 an everyturn rule:
+	if TimekeepingVar is 0 or TimekeepingVar is -8: [early dawn, 0:00-3:00]
+		increase DateDay by 1;
+		if DateMonth is 1: [January]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 2;
+		else if DateMonth is 2: [February]
+			if DateYear is 2008:
+				if DateDay is 30:
+					now DateDay is 1;
+					now DateMonth is 3;
+			else:
+				if DateDay is 29:
+					now DateDay is 1;
+					now DateMonth is 3;
+		else if DateMonth is 3: [March]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 4;
+		else if DateMonth is 4: [April]
+			if DateDay is 31:
+				now DateDay is 1;
+				now DateMonth is 5;
+		else if DateMonth is 5: [May]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 6;
+		else if DateMonth is 6: [June]
+			if DateDay is 31:
+				now DateDay is 1;
+				now DateMonth is 7;
+		else if DateMonth is 7: [July]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 8;
+		else if DateMonth is 8: [August]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 9;
+		else if DateMonth is 9: [September]
+			if DateDay is 31:
+				now DateDay is 1;
+				now DateMonth is 10;
+		else if DateMonth is 10: [October]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 11;
+		else if DateMonth is 11: [November]
+			if DateDay is 31:
+				now DateDay is 1;
+				now DateMonth is 12;
+		else if DateMonth is 12: [December]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 1;
+				increase DateYear by 1;
 	if daytimer is day: [currently day]
 		if LastTurnDay is false: [last turn was night]
 			say "[bold type]The sun rises over the city.[roman type][line break]";
@@ -2715,7 +2706,7 @@ an everyturn rule:
 		now LastTurnDay is false;
 		if Player is in Urban Forest and WerewolfRelationship is 0:
 			if WerewolfWatching is false: [initial message]
-				say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resing on you can't be all in your head, can it?";
+				say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resting on you can't be all in your head, can it?";
 				now WerewolfWatching is true;
 			else: [repeat message for following turns]
 				if a random chance of 1 in 3 succeeds:
@@ -2753,7 +2744,7 @@ To process (x - a grab object):
 		say "You eagerly use the [x]!";
 		let found be 0;
 		let num be 0;
-		delete x;
+		ItemLoss x by 1 silently;
 	else:
 		say "You use the [x].";
 	if usedesc of x is empty:
@@ -2891,9 +2882,6 @@ To process (x - a grab object):
 				if morale of Player > 0, now morale of Player is 0;
 				say "You feel better having drunken something.";
 		sfsodadrink;
-	else if x is gryphon milk:
-		say "The milk is thick, like a shake, but warmer, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
-		PlayerDrink 15;
 	else if x is manufactured milk:
 		say "The milk is thick, like a shake, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
 		PlayerDrink 15;
@@ -2924,7 +2912,7 @@ To process (x - a grab object):
 	else if x is a journal:
 		follow the brain descr rule;
 		say "You settle down and start scribbling in your journal about your [descr]. ";
-		if the humanity of Player < 100:
+		if Humanity of Player < 100:
 			let healed be 10 + ( ( level of Player + perception of Player - 10 ) / 2 );
 			if caffeinehigh of Player > 0:
 				now healed is healed / 2;
@@ -2938,7 +2926,7 @@ To process (x - a grab object):
 			say "([humanity of Player]/100).";
 			now Lastjournaluse is turns;
 		follow turnpass rule;
-	else if x is a armament:
+	else if x is an armament:
 		if weapon object of Player is x: [unequip]
 			unwield x;
 		else: [equip]
@@ -2978,36 +2966,6 @@ To process (x - a grab object):
 			else:
 				say "     [bold type]You start wearing the [x].[roman type][line break]";
 				now x is equipped;
-	else if x is a medkit:
-		let healed be 10 + level of Player + ( ( intelligence of Player minus 10 ) divided by 2 );
-		if "Expert Medic" is listed in the feats of Player:
-			if Paula is visible:
-				now healed is ( healed * 133 ) / 100;
-			else:
-				now healed is ( healed times 125 ) divided by 100;
-		else if Paula is visible:
-			now healed is ( healed times 125 ) divided by 100;
-		else if carried of First Aid Manual > 0:
-			increase healed by 2;
-		if "Rapid Healing" is listed in the feats of Player:
-			now healed is ( healed times 115 ) divided by 100;
-		if "Regeneration" is listed in the feats of Player:
-			now healed is ( healed times 115 ) divided by 100;
-		if nohealmode is true:
-			now healed is ( healed * 125 ) / 100;
-		if ssmb is true:
-			now healed is ( healed * 3 ) / 2;
-		increase HP of Player by healed;
-		if HP of Player > maxHP of Player:
-			decrease healed by HP of Player minus maxHP of Player;
-			now HP of Player is maxHP of Player;
-		say "Using your medkit, [if Paula is visible]Paula helps you [one of]treat the worst of your wounds[or]bandage up the worst of your wounds[or]spray your cuts with anesthetic[or]clean and dress your wounds[at random], making sure to kiss them to make it all better[else][one of]you spray your cuts with anesthetic[or]you bandage your worst wounds[at random][end if]. You regain [special-style-1][healed][roman type] HP.";
-		if a random chance of 1 in 10 succeeds:
-			say "You have used up the last of the medkit.";
-			if "Expert Medic" is listed in the feats of Player and a random chance of 2 in 10 succeeds:
-				say "You manage to save the medkit with your amazing skills.";
-			else:
-				delete medkit;
 	else if x is a pepperspray:
 		if inafight is 1:
 			say "[line break][usepepperspray]";
@@ -3030,11 +2988,11 @@ To process (x - a grab object):
 			decrease healed by HP of Player minus maxHP of Player;
 			now HP of Player is maxHP of Player;
 		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate. You regain [special-style-1][healed][roman type] HP.";
-		delete healing booster;
+		ItemLoss healing booster by 1;
 	if tan > hunger of player and "Tanuki Salts" is listed in feats of player:
 		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
 		playerEat 5;
-		increase the morale of the player by 5;
+		increase Morale of Player by 5;
 
 
 understand "talk [person]" as conversing.
@@ -3297,12 +3255,12 @@ understand "grab [present grab object]" as grabbing.
 carry out grabbing something (called x):
 	let found be 0;
 	let num be 0;
-	repeat with Q running through invent of the location of the player:
+	repeat with Q running through invent of the Location of Player:
 		increase num by 1;
 		if q matches the regular expression printed name of x, case insensitively:
 			now found is 1;
-			Add q to invent of Player;
-			remove entry num from invent of the location of the player;
+			ItemGain q by 1;
+			remove entry num from invent of the Location of Player;
 			if x is equipment:
 				say "You pick up the [printed name of x] and tuck [if plural of x is true]them[else]it[end if] in your backpack.";
 			else:
@@ -3337,7 +3295,7 @@ carry out burninating something (called x):
 			if found < 2:
 				say "You're using that right now. Stop using it before you drop it.";
 				continue the action;
-	delete x;
+	ItemLoss x by 1;
 
 
 Understand the command "trashall" as something new.
@@ -3363,23 +3321,23 @@ carry out allburninating something (called x):
 						say "You're wielding that, so you'd best stop using it first.";
 					else:
 						say "You trash all of them but the [x] you're using. Bye-bye.";
-						now carried of x is 1;
+						ItemLoss x by (carried of x - 1) silently;
 				else:
 					say "You trash them all. Bye-bye.";
-					now carried of x is 0;
+					ItemLoss all x silently;
 			else if x is an equipment:
 				if x is equipped:
 					if found is 1:
 						say "You're using that right now. You need to take it off to trash it.";
 					else:
 						say "You trash all of them but the [x] you're wearing. Bye-bye.";
-						now carried of x is 1;
+						ItemLoss x by (carried of x - 1) silently;
 				else:
 					say "You trash them all. Bye-bye.";
-					now carried of x is 0;
+					ItemLoss all x silently;
 			else:
 				say "You trash them all. Bye-bye.";
-				now carried of x is 0;
+				ItemLoss all x silently;
 		else:
 			say "You change your mind.";
 
@@ -3408,9 +3366,9 @@ carry out littering something (called x):
 				continue the action;
 	repeat through table of game objects:
 		if printed name of x in lower case matches the text Name entry in lower case:
-			add Name entry to the invent of the location of the player;
+			add Name entry to the invent of the Location of Player;
 			break;
-	delete x;
+	ItemLoss x by 1;
 
 Looting is an action applying to nothing.
 
@@ -3423,15 +3381,15 @@ understand "grab all" as looting.
 carry out looting:
 	let found be 0;
 	let num be 0;
-	repeat with Q running through invent of the location of the player:
+	repeat with Q running through invent of the Location of Player:
 		increase num by 1;
 		now found is 1;
-		Add q to invent of Player;
+		ItemGain q by 1;
 		say "You pick up the [q] and tuck it in your backpack.";
 	if found is 0:
 		say "You don't see anything around here.";
 	else:
-		now the invent of the location of the player is { };
+		now the invent of the Location of Player is { };
 
 before taking a thing:
 	if noun is rooted in place:
@@ -3454,12 +3412,12 @@ Check trading:
 
 Carry out trading:
 	say "You offer up [the noun] to [second noun] and they look it over for a moment before nodding and drawing out a [trade of the noun] and handing it to you. A fair trade, right?";
-	Add trade of the noun to invent of Player;
+	ItemGain trade of the noun by 1;
 	if "Haggler" is listed in feats of Player and a random chance of 1 in 3 succeeds:
 		say "You get a second one free with your amazing negotiating skills.";
-		Add trade of the noun to invent of Player;
+		ItemGain trade of the noun by 1;
 	let num be 0;
-	delete noun;
+	ItemLoss noun by 1;
 
 skipcockchange is a truth state that varies. skipcockchange is usually false.
 
@@ -4544,7 +4502,7 @@ to Pet level up:
 		decrease XP of companion of Player by ( level of companion of Player minus 1 ) times 10;
 		if "Good Teacher" is listed in feats of Player:
 			increase XP of companion of Player by ( level of companion of Player minus 1 ) times 4;
-		say "Your [companion of Player] has gained level [level of companion of Player]! Congratulations!";
+		say "[companion of Player] has gained level [level of companion of Player]! Congratulations!";
 		if remainder after dividing level of companion of Player by 3 is 0:
 			increase weapon damage of companion of Player by 1;
 		if remainder after dividing level of companion of Player by 5 is 0:
@@ -4597,9 +4555,9 @@ To level up:
 	increase maxHP of Player by ( stamina of Player minus 10 ) divided by 2;
 	increase maxHP of Player by 2;
 	now HP of Player is maxHP of Player;
-	if the remainder after dividing level of the player by 5 is 0 and "Ultimatum" is not listed in feats of Player:
+	if the remainder after dividing Level of Player by 5 is 0 and "Ultimatum" is not listed in feats of Player:
 		funfeatget;
-	increase score by level of the player times level of the player;
+	increase score by Level of Player times Level of Player;
 
 [ Fight and challenge moved to Core Mechanics/Fighting.i7x]
 
@@ -4653,6 +4611,8 @@ check resting:
 		say "You rest on the bed in the back of the cell.";
 	else if silk hammock is owned or silk hammock is present:
 		say "You set up your silken hammock at the next appropriate spot and lie in it, resting for a while.";
+	else if sleeping bag is owned or sleeping bag is present:
+		say "You roll out the sleeping bag in an appropriate spot and lie in it, resting for a while.";
 	else if "Roughing It" is listed in feats of Player:
 		say "You hunker down somewhere secluded for a quick nap.";
 		now roughing is true;
@@ -4660,7 +4620,7 @@ check resting:
 		say "You have nothing to rest on.";
 		stop the action;
 	if companion of Player is not rubber tigress:
-		if ( there is a dangerous door in the location of the player or the location of Player is fasttravel or the earea of location of Player is not "void") and location of Player is not sleepsafe:
+		if ( there is a dangerous door in the Location of Player or the location of Player is fasttravel or the earea of location of Player is not "void") and location of Player is not sleepsafe:
 			now battleground is "Outside"; [standard setting]
 			if the earea of location of Player is not "void":
 				now battleground is the earea of location of Player;
@@ -4681,8 +4641,8 @@ check resting:
 			say "You are thankfully able to complete your nap in peace.";
 
 to Rest:
-	let num1 be maxHP of the player divided by 4;
-	let num2 be ( ( stamina of the player * 3 ) / 2 ) + level of the player;
+	let num1 be maxHP of Player divided by 4;
+	let num2 be ( ( Stamina of Player * 3 ) / 2 ) + Level of Player;
 	if cot is owned or cot is present or the player is in Bunker or silk hammock is owned or silk hammock is present:
 		if num1 >= num2, increase HP of Player by num1; [best value chosen]
 		if num2 > num1, increase HP of Player by num2;
@@ -4713,6 +4673,16 @@ to Rest:
 				StatChange "Perception" by 2 silently;
 			now WellRestedTimer is 6;
 
+to say Sleepmessage:
+	if Terminatorsleep is true or SleepTimerCount < 5:
+		say "Rested";
+	else if SleepTimerCount < 8:
+		say "[link]Spent[as]rest[end link]";
+	else if SleepTimerCount < 11:
+		say "[link]Tired[as]rest[end link]";
+	else:
+		say "[link]Beat[as]rest[end link]";
+
 carry out resting:
 	if companion of Player is rubber tigress:
 		artemisnap;
@@ -4729,7 +4699,7 @@ carry out resting:
 This is the explore rule:
 	let something be 0;
 	let roomfirst be 1;
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	if "Curious" is listed in feats of Player, increase bonus by 3;
 	if blindmode is true, increase bonus by 3; [increased odds of finding something interesting]
 	if a random chance of 2 in 5 succeeds, now roomfirst is 0; [Will it check for a room or situation first?]
@@ -4767,7 +4737,7 @@ This is the explore rule:
 				say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
 			now something is 1;
 			now inasituation is true;
-			try resolving L;
+			say "[ResolveFunction of L]";
 			now inasituation is false;
 			now battleground is "void";
 			wait for any key;
@@ -4789,9 +4759,6 @@ This is the explore rule:
 		else:
 			say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of Player].";
 	follow the turnpass rule;
-[	wait for any key;
-	now the menu depth is 0;]
-	[try looking;]
 	rule succeeds.
 
 exploring is an action applying to nothing.
@@ -4801,7 +4768,7 @@ check exploring:
 	if location of Player is not fasttravel and earea of location of Player is "void", say "You cannot explore from here." instead;
 
 carry out exploring:
-	if there is a dangerous door in the location of the player:
+	if there is a dangerous door in the Location of Player:
 		let l be a random visible dangerous door;
 		if l is not nothing, now battleground is the marea of l;
 		if l is nothing, now battleground is "Outside"; [***]
@@ -4810,7 +4777,7 @@ carry out exploring:
 	follow the explore rule;
 
 to randomfightchance:
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	if "Stealthy" is listed in feats of Player, now bonus is -1;
 	if "Curious" is listed in feats of Player, increase bonus by 2;
 	if "Bad Luck" is listed in feats of Player, increase bonus by 1;
@@ -4842,8 +4809,8 @@ This is the turnpass rule:
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	if HP of Velos > 2:
-		if Velos is not in the location of the player:		[traveling w/player]
-			now Velos is in the location of the player;
+		if Velos is not in the Location of Player:		[traveling w/player]
+			now Velos is in the Location of Player;
 	if Breast Size of Player > 26, now Breast Size of Player is 26;
 	let oldlib be Libido of Player;
 	if Libido of Player < 100 and "Horny Bastard" is listed in feats of Player:
@@ -4857,13 +4824,13 @@ This is the turnpass rule:
 		say "Your thoughts have sunk to almost constant depravity![no line break][if Player is male] Your cock[smn] remain[smv] perpetually hard and leaking precum.[no line break][end if][if Cunt Count of Player is 1] Your cunt[sfn] [isfv] hot and dripping juices as your arousal builds.[no line break][end if][line break]";
 	if hunger of Player < 0, now hunger of Player is 0;
 	if thirst of Player < 0, now thirst of Player is 0;
-	if the HP of the player < the maxHP of the player and nohealmode is false:
-		increase the HP of the player by the stamina of the player divided by 2;
+	if HP of Player < MaxHP of Player and nohealmode is false:
+		increase HP of Player by Stamina of Player divided by 2;
 		if carried of First Aid Manual > 0, increase HP of Player by 1;
 	if "Regeneration" is listed in feats of Player:
-		increase the HP of the player by (level of Player divided by 3);
+		increase HP of Player by (level of Player divided by 3);
 	if "Rapid Healing" is listed in feats of Player:
-		increase the HP of the player by 2;
+		increase HP of Player by 2;
 [	let yy be 4;
 	if "Resistant" is listed in feats of Player, increase yy by 2;
 	if "Mutable" is listed in feats of Player, decrease yy by 1;
@@ -4950,8 +4917,8 @@ This is the turnpass rule:
 		now Libido of Player is 75;
 		if "Horny Bastard" is listed in feats of Player, now Libido of Player is 80;
 		if "Cold Fish" is listed in feats of Player, now Libido of Player is 60;
-	if the HP of the player > the maxHP of the player, now the HP of the player is the maxHP of the player;
-	if the HP of the player < 0, now the HP of the player is 1;
+	if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
+	if HP of Player < 0, now HP of Player is 1;
 	if ( a random number from 1 to 20 ) > ( a random number between 1 and ( stamina of Player + 1 ) ):
 		increase hunger of Player by 1;
 		if number of filled rows in Table of PlayerChildren > 0 and a random chance of 1 in 2 succeeds, increase hunger of Player by 1;
@@ -5021,7 +4988,7 @@ This is the turnpass rule:
 		else if hunger of Player > 3:
 			say "You feel a little hungry.";
 		if hunger of Player > 30:
-			decrease the morale of the player by ( hunger of Player minus 30 ) divided by 5;
+			decrease Morale of Player by ( hunger of Player minus 30 ) divided by 5;
 		if hunger of Player > 99:
 			now HP of Player is -9999;
 			end the story saying "You have died of hunger.";
@@ -5034,14 +5001,14 @@ This is the turnpass rule:
 		else if thirst of Player > 12:
 			say "You feel a little thirsty.";
 		if thirst of Player > 30:
-			decrease the morale of the player by ( thirst of Player minus 30 ) divided by 5;
+			decrease Morale of Player by ( thirst of Player minus 30 ) divided by 5;
 		if thirst of Player > 99:
 			now HP of Player is -9999;
 			end the story saying "You have died of thirst.";
 		if hunger of Player > 50 or thirst of Player > 50:
 			say "Maybe you should [bold type]scavenge[roman type] for food! Go to a quick travel location and find something quick.";
-		let maxmorale be ( the charisma of the player plus the perception of the player );
-		let moralereset be ( maxmorale plus the level of the player );
+		let maxmorale be ( Charisma of Player plus Perception of Player );
+		let moralereset be ( maxmorale plus Level of Player );
 		if "Perky" is listed in feats of Player:
 			increase moralereset by ( moralereset divided by 5);
 			increase maxmorale by ( maxmorale divided by 5);
@@ -5050,9 +5017,9 @@ This is the turnpass rule:
 			if SP > 20, now SP is 20;
 			increase moralereset by SP;
 			increase maxmorale by SP;
-		else if the morale of the player > moralereset:
+		else if Morale of Player > moralereset:
 			say "The rush of giddiness leaves you as your morale normalizes, leaving you feeling confident but no longer manic.";
-			now the morale of the player is maxmorale;
+			now Morale of Player is maxmorale;
 	let corruption be 0;
 	if SkinName of Player is not "Human", increase corruption by a random number from 0 to 1;
 	if CockName of Player is not "Human", increase corruption by a random number from 0 to 1;
@@ -5065,18 +5032,18 @@ This is the turnpass rule:
 			increase corruption by a random number from 0 to 1;
 		if "Strong Psyche" is listed in feats of Player:
 			decrease corruption by a random number from 0 to 2;
-		decrease corruption by a random number from 0 to ( ( Perception of the player minus 10) divided by 2 );
-		decrease corruption by a random number from 0 to ( ( Charisma of the player minus 10) divided by 2 );
+		decrease corruption by a random number from 0 to ( ( Perception of Player minus 10) divided by 2 );
+		decrease corruption by a random number from 0 to ( ( Charisma of Player minus 10) divided by 2 );
 	if corruption > 0:
-		decrease the humanity of Player by corruption;
+		decrease Humanity of Player by corruption;
 		follow the brain descr rule;
 		say "The nanites inside you work at rewiring your stubborn brain, leaving you with [descr] ([humanity of Player]/100)[line break]";
 		if humanity of Player < 50:
 			say "Maybe you should [bold type]use[roman type] that [bold type]journal[roman type] to help collect your thoughts.";
 	pregprotocol; [Moved to pregnancy in core mechanics]
-	if the humanity of Player < 1 and Scenario is not "Researcher" and skipturnblocker is 0:
+	if Humanity of Player < 1 and Scenario is not "Researcher" and skipturnblocker is 0:
 		end the story saying "Your mind is lost to the infection.";
-	if the humanity of Player < 1 and scenario is "Researcher", now humanity of Player is 1;
+	if Humanity of Player < 1 and scenario is "Researcher", now humanity of Player is 1;
 	decrease turns by 1;
 	if ( turns minus targetturns ) <= 0 and playon is 0 and skipturnblocker is 0:
 		end the story saying "You survived until the rescue came.";
@@ -5110,7 +5077,7 @@ This is the monster injury rule:
 	rule succeeds;
 
 This is the player injury rule:
-	let per be ( HP of the player times 100 ) divided by maxHP of the player;
+	let per be ( HP of Player times 100 ) divided by maxHP of Player;
 	if per <= 10:
 		now descr is "[if Playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]on death's door[or]almost defeated[or]barely mobile[at random]";
 	else if per <= 40:
@@ -5253,7 +5220,7 @@ instead of examining a person (called x):
 		follow the self examine rule;
 		follow the afterexamine rules;
 	else:
-		say "[The description of x]";
+		say "[Description of x]";
 		if hypernull is 0:
 			try linkactioning x;
 
@@ -5265,7 +5232,7 @@ carry out linkactioning:
 	linkaction noun;
 
 linkcheck is a person that varies.[@Tag:NotSaved]
-The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][if linkcheck is companion of Player], [link]dismiss[as]dismiss[end link][else], [link]fuck[as]fuck [linkcheck][end link][end if][line break]";
+The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][if linkcheck is companion of Player], [link]dismiss[as]dismiss[end link][end if], [link]fuck[as]fuck [linkcheck][end link][line break]";
 
 to linkaction (x - Person):
 	now linkcheck is x;
@@ -5288,18 +5255,16 @@ carry out showstatting:
 To showstats (x - Person):
 	sort Feats of Player;
 	sort Traits of Player;
-	say "Strength: [strength of the x], Dexterity: [dexterity of the x], Stamina: [stamina of the x], Charisma: [Charisma of the x], Intelligence: [intelligence of the x], Perception: [perception of the x].";
+	say "Strength: [strength of x], Dexterity: [dexterity of x], Stamina: [stamina of x], Charisma: [Charisma of x], Intelligence: [intelligence of x], Perception: [perception of x].";
 	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [HP of x]/[maxHP of x] Libido: [Libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100.";
 	let z be ( level of x plus one) times 10;
 	if "Fast Learner" is listed in feats of x:
 		now z is ( level of x plus one) times 8;
 	say "Level: [level of x], XP: [XP of x]/[z]";
 	if the number of entries in feats of the x > 0:
-		say ", Feats: [feats of the x][line break]";
+		say ", [link]Feats[as]FeatsList[end link][line break]";
 	if debugactive is 1:
 		say "DEBUG -> Traits: [Traits of Player][line break]";
-	if debugactive is 1:
-		say "DEBUG -> Invent: [Invent of Player][line break]";
 
 This is the self examine rule:
 	now looknow is 1;
@@ -5611,11 +5576,11 @@ This is the self examine rule:
 	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
 		say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	if the player is not lonely:
-		say "Accompanying you, you have a level [level of companion of Player] [link][companion of Player][as]look [companion of Player][end link]. [initial appearance of companion of Player]";
+		say "Accompanying you is [link][companion of Player][as]look [companion of Player][end link], which is level [level of companion of Player].";
 	now looknow is 0;
 	rule succeeds;
 
-The description of Offspring is "[OffspringDesc]".
+Description of Offspring is "[OffspringDesc]".
 
 instead of conversing the Offspring:
 	if (number of filled rows in Table of PlayerBunkerChildren) > 1:
@@ -5703,35 +5668,29 @@ instead of sniffing offspring present:
 	say "The box smells very mysterious.";
 
 offspring present is a grab object.
-the usedesc of offspring present is "[offspring present use]";
+Usedesc of offspring present is "[offspring present use]";
 
 to say offspring present use:
 	say "Curious about what your child got you, you carefully open the present and find ";
 	let RandomChance be a random number from 1 to 15;
 	if RandomChance < 4: [1-3]
 		say "a soda bottle inside!";
-		say "[bold type]You gain 1 soda![roman type][line break]";
-		increase carried of soda by 1;
+		ItemGain soda by 1;
 	else if RandomChance < 8: [4-7]
 		say "a bag of chips inside!";
-		say "[bold type]You gain 1 chips![roman type][line break]";
-		increase carried of chips by 1;
+		ItemGain chips by 1;
 	else if RandomChance < 11: [8-10]
 		say "a water bottle inside!";
-		say "[bold type]You gain 1 water bottle![roman type][line break]";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 	else if RandomChance < 14: [11-13]
 		say "a can of food inside!";
-		say "[bold type]You gain 1 food![roman type][line break]";
-		increase carried of food by 1;
+		ItemGain food by 1;
 	else if RandomChance is 14:
 		say "a baseball cap inside!";
-		say "[bold type]You gain 1 baseball cap![roman type][line break]";
-		increase carried of baseball cap by 1;
+		ItemGain baseball cap by 1;
 	else if RandomChance is 15:
 		say "a red herring plushie!";
-		say "[bold type]You gain 1 red herring![roman type][line break]";
-		increase carried of red herring by 1;
+		ItemGain red herring by 1;
 
 This is the location choice rule:
 	choose row current menu selection in the table of starting location;
@@ -5771,7 +5730,7 @@ This is the location choice rule:
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now Description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
@@ -5781,13 +5740,14 @@ This is the location choice rule:
 					now area entry is "Park";
 					break;
 			increase score by 600;
+			now DateMonth is 6;
 			extend game by 240;
 		if title entry is "Hard mode":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now Description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
@@ -5797,6 +5757,7 @@ This is the location choice rule:
 					now area entry is "Park";
 					break;
 			increase score by 900;
+			now DateMonth is 6;
 			extend game by 240;
 			now hardmode is true;
 		if hardmode is false:
@@ -5810,12 +5771,12 @@ This is the location choice rule:
 	rule succeeds;
 
 This is the final stats rule:
-	now the morale of the player is the charisma of the player plus the perception of the player;
-	now the HP of the player is the stamina of the player times two;
-	increase the HP of the player by 5;
-	now the maxHP of the player is the HP of the player;
-	now the humanity of Player is 100;
-	now the capacity of the player is five times the strength of the player;
+	now Morale of Player is Charisma of Player plus Perception of Player;
+	now HP of Player is Stamina of Player times two;
+	increase HP of Player by 5;
+	now MaxHP of Player is HP of Player;
+	now Humanity of Player is 100;
+	now the Capacity of Player is five times Strength of Player;
 	now the menu depth is 0;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	while 1 is 1:
@@ -5837,7 +5798,7 @@ This is the final stats rule:
 This is the male choice rule:
 	now Cock Count of Player is 1;
 	now Cock Length of Player is 6;
-	now the Ball Size of the player is 3;
+	now the Ball Size of Player is 3;
 	now Nipple Count of Player is 2;
 	now Breast Size of Player is 0;
 	remove womanhood from Player;
@@ -5869,28 +5830,28 @@ This is the d18 rule:
 
 This is the random stats rule:
 	follow the d18 rule;
-	now the strength of the player is d18;
+	now Strength of Player is d18;
 	follow the d18 rule;
-	now the Dexterity of the player is d18;
+	now Dexterity of Player is d18;
 	follow the d18 rule;
-	now the Stamina of the player is d18;
+	now Stamina of Player is d18;
 	follow the d18 rule;
-	now the Charisma of the player is d18;
+	now Charisma of Player is d18;
 	follow the d18 rule;
-	now the Intelligence of the player is d18;
+	now Intelligence of Player is d18;
 	follow the d18 rule;
-	now the Perception of the player is d18;
+	now Perception of Player is d18;
 	decrease the score by 1;
 	rule succeeds.
 
 This is the starting stats rule:
 	[default stats]
-	now the strength of the player is 12;
-	now the Dexterity of the player is 12;
-	now the Stamina of the player is 12;
-	now the Charisma of the player is 12;
-	now the Intelligence of the player is 12;
-	now the Perception of the player is 12;
+	now Strength of Player is 12;
+	now Dexterity of Player is 12;
+	now Stamina of Player is 12;
+	now Charisma of Player is 12;
+	now Intelligence of Player is 12;
+	now Perception of Player is 12;
 	decrease the score by 0;
 	rule succeeds.
 
@@ -5899,7 +5860,7 @@ This is the starting gender rule:
 	now Cock Count of Player is 1;
 	now Cock Girth of Player is 3;
 	now Cock Length of Player is 6;
-	now Ball Size of the player is 3;
+	now Ball Size of Player is 3;
 	now Nipple Count of Player is 2;
 	now Breast Size of Player is 0;
 	remove womanhood from Player;
@@ -5907,14 +5868,54 @@ This is the starting gender rule:
 
 This is the Menu Exit Rule:
 	decrease the menu depth by 1;
-[	carry out the displaying activity;
-	clear the screen;
-	try looking;]
 	rule succeeds.
 
 
 Instead of examining the infection terminal:
-	say "Filled with glowing characters, the terminal lists all identified infections with some stats beside:[line break]";
+	say "     Looking at the terminal, you see a lot of text on its screen. If you want, you can select a category and read it.";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Infections";
+	now sortorder entry is 1;
+	now description entry is "Check out the list of known infections";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Credits";
+	now sortorder entry is 2;
+	now description entry is "Check out the 'Credits', whatever that may be";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Infections"):
+					say "[TerminalInfections]";
+				else if (nam is "Credits"):
+					say "[TerminalCredits]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You turn away from the terminal.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say TerminalInfections:
 	let z be 0;
 	sort Table of Random Critters in lev order;
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
@@ -5928,9 +5929,9 @@ Instead of examining the infection terminal:
 				now z is 0;
 	say "End Infection list.[line break]";
 	wait for any key; [don't apply waiterhater, used to separate monsters from credits]
-	say "Under it is something called a 'credit' list, how odd.";
+
+to say TerminalCredits:
 	say "[complete list of extension credits]";
-	say "End Credit list.[line break]";
 
 To Plot:
 	let x be the location;
@@ -6025,7 +6026,6 @@ This is the finish stats rule:
 		else:
 			say "Type 'm' or 'f'.> [run paragraph on]";
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-[	try looking;]
 	rule succeeds;
 
 ScavengingAction is an action applying to nothing.
@@ -6059,7 +6059,7 @@ carry out ScavengingAction:
 	else:
 		now battleground is "Outside";
 	say "You set out in the desperate search of food and water.";
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	if "Survivalist" is listed in feats of Player, increase bonus by 4;
 	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	let the dice be a random number from 1 to 20;
@@ -6067,15 +6067,15 @@ carry out ScavengingAction:
 	if dice plus bonus > 9:
 		now inasituation is true;
 		if a random chance of 3 in 4 succeeds:
-			try resolving potential resources;
+			say "[ResolveFunction of Potential Resources]";
 		else:
 			now tempnum is 1;
 			let L be a random available scavevent;
 			If L is not nothing:
 				say "[one of]During your search for supplies, you end up at[or]Searching systematically for resources, you locate[or]Following signs of recent activity, you end up at[or]Doing a slow circuit while scavenging, you manage to find[or]Wandering around aimlessly in search of supplies, you locate[at random] [L].";
-				try resolving L;
+				say "[ResolveFunction of L]";
 			else if L is nothing:
-				try resolving potential resources;
+				say "[ResolveFunction of Potential Resources]";
 		now inasituation is false;
 		say "[line break]";
 	else:
@@ -6153,34 +6153,6 @@ to setmonster ( x - text ) silence state is (Silence - a number): [puts an infec
 		say "ERROR - Creature '[x]' not found. (setmonster)[line break]";
 	else if debugactive is 1 and Silence is 0:
 		say "DEBUG: Current [']monster['] set to: [MonsterID] = [Name entry][line break]";
-
-Section x - Debug Commands - Not for release
-
-[Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
-
-Spawnmonster is an action applying to one topic.
-
-understand "spawn [text]" as spawnmonster.
-
-carry out spawnmonster:
-	repeat with X running from 1 to number of filled rows in Table of Random Critters:
-		choose row X from the Table of Random Critters;
-		if Name entry exactly matches the text topic understood, case insensitively:
-			now MonsterID is X;
-			now monsterHP is HP entry;
-			challenge;
-			break;
-
-levelcheat is an action applying to nothing.
-
-understand "givelevel" as levelcheat.
-
-carry out levelcheat:
-	now XP of the player is (10 + (level of Player times 10));
-	if "Fast Learner" is listed in feats of Player:
-		decrease XP of Player by ( level of Player times 2 );
-	level up;
-	decrease score by level of the player times level of the player;
 
 Section Lists of Tables - Not for release
 
@@ -6343,6 +6315,7 @@ Include Inline Hyperlinks by Nuku Valente.
 Include Masturbate by Core Mechanics.
 Include Microwave by Core Mechanics.
 Include Milking by Core Mechanics.
+Include Misc Items by Core Mechanics.
 Include Navigation by Core Mechanics.
 Include Notes by Core Mechanics.
 Include Needy Heat by Core Mechanics.
@@ -6357,6 +6330,7 @@ Include Store Mechanics by Core Mechanics.
 Include Sleeptimer by Core Mechanics.
 Include Tape Inventory by Core Mechanics.
 Include Text Capture by Eric Eve.
+Include Weapons by Core Mechanics.
 
 [Locations]
 Include Apocalypse Store by Omen.
@@ -6439,6 +6413,7 @@ Include Chance Meetings by Kernog.
 Include Combat Helmet by Nuku Valente.
 Include Control Pills by Hellerhound.
 [Include Disorganization by Kaleem mcintyre.] [Disabled till review]
+Include Diego Events by Vinickus.
 Include Dmitri the Peacock by Aureas Gigas.
 Include Dry Plains Events by Stripes.
 Include Endings by Darthan.
@@ -6485,6 +6460,7 @@ Include Main Storyline by Stripes.
 Include Male Dorm Events by Rikaeus.
 Include Mall Events by Sarokcat.
 Include Mall Expansion by Wahn.
+Include Misc Events by Pandemonium.
 Include Misc 10 by Kaleem mcintyre.
 Include Misc 3 by Kaleem mcintyre.
 Include Misc 4 by Kaleem mcintyre.
@@ -6587,7 +6563,6 @@ Include Cannon by Hiccup.
 Include Cat Ninjas by Stripes.
 Include Catgirl by Wahn.
 Include Caveman by TheRecipe.
-Include Centaur by Hellerhound.
 Include Centaur Mare by Stripes.
 Include Centaur Stallion by Stripes.
 Include Cerberus by Stripes.
@@ -6698,6 +6673,8 @@ Include Imp by Wahn.
 Include Impala by UrsaOmega.
 Include Incubus by Stripes.
 Include Inflatable Vulpine by Stripes.
+Include Jackal Alpha by Gherod.
+Include Jackal Femboy by Gherod.
 Include Jackal Guard by Xenophiliac.
 Include Jackalboy by Sarokcat.
 Include Jackalman by Sarokcat.
@@ -6739,6 +6716,7 @@ Include MothGirl by Guest Writers.
 Include Mpreg Platypus by Sapphire.
 Include Mul by Wahn.
 Include Mushroom Men by AGentlemanCalledB.
+Include Mutant Centaur by Hellerhound.
 Include Mutated Islanders by Kernog.
 Include Naga by Nuku Valente.
 Include Naiad by Wahn.
@@ -6819,18 +6797,6 @@ Include Sugar Glider by AGentlemanCalledB.
 Include Taurus by Defth.
 Include Teddy Bear by Sarokcat.
 Include Tenrec by StripeGuy.
-[
-Include Testcreature1 by Wahn.
-Include Testcreature2 by Wahn.
-Include Testcreature3 by Wahn.
-Include Testcreature4 by Wahn.
-Include Testcreature5 by Wahn.
-Include Testcreature6 by Wahn.
-Include Testcreature7 by Wahn.
-Include Testcreature8 by Wahn.
-Include Testcreature9 by Wahn.
-Include Testcreature10 by Wahn.
-]
 Include Thought Eater by Wahn.
 Include Tiger by Sarokcat.
 Include Tiger Cop by Stripes.
@@ -6857,12 +6823,14 @@ Include Wyvern by Damaged.
 Include Xeno by Stripes.
 Include Yamato Dragon by Blue Bishop.
 Include Yamato Dragoness by Blue Bishop.
+Include Yinglet by KazeSequeris.
 Include Yuppie Mink by StripeGuy.
 Include Zebra by Vervaine.
 
 [NPCs]
 Include Ace by Aureas Gigas.
 Include Adam by Wahn.
+Include Aeca by Wahn.
 Include Alex by Stripes.
 Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
@@ -6894,6 +6862,7 @@ Include Brian by Vinickus.
 Include Brooke by Stripes.
 Include Bryony by Song.
 Include Bubble by Stripes.
+Include Callidora by Prometheus.
 Include Cassiel by Tin Can.
 Include Cynthia by Prometheus.
 Include Campus Gym by UrsaOmega.
@@ -7107,17 +7076,12 @@ instead of going somewhere while player is overburdened:
 	say "You are too over burdened to move. Drop some of that junk!";
 
 instead of going through a dangerous door (called x):
-	if the HP of the player < 1:
+	if HP of Player < 1:
 		say "You are too injured to go far. You rest instead.";
 		Rest;
 	else:
 		now battleground is marea of x;
 		follow the explore rule;
-[		change the current menu to the table of Basic Actions;
-		carry out the displaying activity;
-		clear the screen;]
-	[try looking.]
-
 
 gsgl is a number that varies. gsgl is usually 1.
 glstart is a number that varies. glstart is usually 2.
@@ -7231,7 +7195,7 @@ To startgenderlockshift:
 		-- 3:	[male]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;
-			now the Ball Size of the player is 3;
+			now the Ball Size of Player is 3;
 			now Breast Size of Player is 0;
 			remove womanhood from Player;
 		-- 4:		[female]
@@ -7243,7 +7207,7 @@ To startgenderlockshift:
 		-- 5:		[shemale]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;
-			now the Ball Size of the player is 3;
+			now the Ball Size of Player is 3;
 			now Breast Size of Player is 2;
 			remove womanhood from Player;
 		-- 6: [cuntboy]
@@ -7255,7 +7219,7 @@ To startgenderlockshift:
 		-- 7: [male herm]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;
-			now the Ball Size of the player is 3;
+			now the Ball Size of Player is 3;
 			now Cunt Count of Player is 1;
 			now Cunt Depth of Player is 6;
 			now Cunt Tightness of Player is 4;
@@ -7263,7 +7227,7 @@ To startgenderlockshift:
 		-- 8: [herm]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;
-			now the Ball Size of the player is 3;
+			now the Ball Size of Player is 3;
 			now Cunt Count of Player is 1;
 			now Cunt Depth of Player is 6;
 			now Cunt Tightness of Player is 4;
@@ -7271,7 +7235,7 @@ To startgenderlockshift:
 		-- 9: [always cocky]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;
-			now the Ball Size of the player is 3;
+			now the Ball Size of Player is 3;
 		-- 10: [always a pussy]
 			now Cunt Count of Player is 1;
 			now Cunt Depth of Player is 6;
@@ -7344,12 +7308,12 @@ To startFunFeatget: [alternate funfeatget used for start]
 				say "Invalid Feat.";
 
 to randomstatstart:	[same total points, but spread randomly between 10 to 18]
-	now the strength of the player is 10;
-	now the Dexterity of the player is 10;
-	now the Stamina of the player is 10;
-	now the Charisma of the player is 10;
-	now the Intelligence of the player is 10;
-	now the Perception of the player is 10;
+	now Strength of Player is 10;
+	now Dexterity of Player is 10;
+	now Stamina of Player is 10;
+	now Charisma of Player is 10;
+	now Intelligence of Player is 10;
+	now Perception of Player is 10;
 	[Boost two stats for increased spread in results]
 	let T be a random number between 1 and 6;
 	if T is 1:
@@ -7469,6 +7433,10 @@ To startcreatureban: [bans creatures, as requested]
 	repeat with n running through situations:
 		let bad be 0;
 		repeat with q running through all banned flags:
+			if n is listed in badspots of q:
+				say "[n] removed due to [q].";
+				now bad is 1;
+		repeat with q running through all banned tags:
 			if n is listed in badspots of q:
 				say "[n] removed due to [q].";
 				now bad is 1;
@@ -8668,12 +8636,13 @@ to eyecolorsetting: [ Green, Blue, Gray, Brown, Hazel, Amber, Red]
 		now menuexit is 1;
 
 to playernaming:
-	say "[bold type]Please enter new name: [roman type][line break]";
+	say "Note: You can always change your name at a later point with the 'rename' command.";
+	say "[bold type]Please enter your new name: [roman type][line break]";
 	get typed command as playerinput;
 	now name of Player is playerinput;
 
 to say menuwardlist:
-	if CockVoreList is warded or FurryList is warded or MaleList is warded or FemaleList is warded or HumorousList is warded or DemonList is warded or HermList is warded or IncestList is warded or TransList is warded or MindcontrolList is warded or NonconList is warded or VoreList is warded:
+	if CockVoreList is warded or FurryList is warded or MaleList is warded or FemaleList is warded or HumorousList is warded or DemonList is warded or HermList is warded or CuckList is warded or IncestList is warded or TransList is warded or MindcontrolList is warded or NonconList is warded or VoreList is warded:
 		say "[bold type]Warded: [bracket] ";
 		if CockVoreList is warded:
 			say "Cockvore ";
@@ -8693,6 +8662,8 @@ to say menuwardlist:
 			say "Hellspawn ";
 		if TransList is warded:
 			say "Transgender ";
+		if CuckList is warded:
+			say "Cuck ";
 		if IncestList is warded:
 			say "Incest ";
 		if NonconList is warded:
@@ -8706,7 +8677,7 @@ to say menuwardlist:
 		say "[bold type]None Warded[roman type][line break]";
 
 to say menubanlist:
-	if CockVoreList is banned or FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned or VoreList is banned:
+	if CockVoreList is banned or FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or CuckList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned or VoreList is banned:
 		say "[bold type]Banned: [bracket] ";
 		if CockVoreList is banned:
 			say "Cockvore ";
@@ -8726,6 +8697,8 @@ to say menubanlist:
 			say "Hellspawn ";
 		if TransList is banned:
 			say "Transgender ";
+		if CuckList is banned:
+			say "Cuck ";
 		if IncestList is banned:
 			say "Incest ";
 		if NonconList is banned:
@@ -8887,7 +8860,7 @@ to say gsopt_start:
 	if gspg is 1:	[male]
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 6;
-		now the Ball Size of the player is 3;
+		now the Ball Size of Player is 3;
 		now Nipple Count of Player is 2;
 		remove womanhood from Player;
 		now Breast Size of Player is 0;
@@ -8903,11 +8876,11 @@ to say gsopt_start:
 		startgenderlockshift;
 ]
 	gs_stats;
-	now the morale of the player is the charisma of the player plus the perception of the player;
-	now the HP of the player is the stamina of the player times two;
-	increase the HP of the player by 5;
-	now the maxHP of the player is the HP of the player;
-	now the capacity of the player is five times the strength of the player;
+	now Morale of Player is Charisma of Player plus Perception of Player;
+	now HP of Player is Stamina of Player times two;
+	increase HP of Player by 5;
+	now MaxHP of Player is HP of Player;
+	now the Capacity of Player is five times Strength of Player;
 	now humanity of Player is 100;
 	if gsgl > 1, startgenderlockget;
 	follow the SetPlayerPronouns rule;
@@ -8937,45 +8910,45 @@ to say gsopt_start:
 	say "Want more details on the game and updates? ----- [bold type]https://blog.flexiblesurvival.com/[roman type]  ------[line break][line break]";
 	WaitLineBreak;
 	if scenario is "Bunker":
-		increase carried of black t-shirt by 1;
+		ItemGain black t-shirt by 1 silently;
 		now black t-shirt is equipped;
-		increase carried of dark-blue jeans by 1;
+		ItemGain dark-blue jeans by 1 silently;
 		now dark-blue jeans are equipped;
-		increase carried of white briefs by 1;
+		ItemGain white briefs by 1 silently;
 		now white briefs is equipped;
-		increase carried of brown loafers by 1;
+		ItemGain brown loafers by 1 silently;
 		now brown loafers is equipped;
 	else if scenario is "Caught Outside":
-		increase carried of white t-shirt by 1;
+		ItemGain white t-shirt by 1 silently;
 		now white t-shirt is equipped;
-		increase carried of black jeans by 1;
+		ItemGain black jeans by 1 silently;
 		now black jeans are equipped;
 	else if scenario is "Rescuer Stranded":
-		increase carried of camo shirt by 1;
+		ItemGain camo shirt by 1 silently;
 		now camo shirt is equipped;
-		increase carried of green camo pants by 1;
+		ItemGain green camo pants by 1 silently;
 		now green camo pants are equipped;
-		increase carried of black boxer briefs by 1;
+		ItemGain black boxer briefs by 1 silently;
 		now black boxer briefs are equipped;
-		increase carried of black combat boots by 1;
+		ItemGain black combat boots by 1 silently;
 		now black combat boots is equipped;
 	else if scenario is "Forgotten":
-		increase carried of blue sleeveless shirt by 1;
+		ItemGain blue sleeveless shirt by 1 silently;
 		now blue sleeveless shirt is equipped;
-		increase carried of ripped black jeans by 1;
+		ItemGain ripped black jeans by 1 silently;
 		now ripped black jeans are equipped;
-		increase carried of white briefs by 1;
+		ItemGain white briefs by 1 silently;
 		now white briefs is equipped;
-		increase carried of brown loafers by 1;
+		ItemGain brown loafers by 1 silently;
 		now brown loafers is equipped;
 	else if scenario is "Researcher":
-		increase carried of white t-shirt by 1;
+		ItemGain white t-shirt by 1 silently;
 		now white t-shirt is equipped;
-		increase carried of dark-blue jeans by 1;
+		ItemGain dark-blue jeans by 1 silently;
 		now dark-blue jeans are equipped;
-		increase carried of black boxer briefs by 1;
+		ItemGain black boxer briefs by 1 silently;
 		now black boxer briefs are equipped;
-		increase carried of black combat boots by 1;
+		ItemGain black combat boots by 1 silently;
 		now black combat boots is equipped;
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
@@ -8989,7 +8962,7 @@ to say gsopt_start:
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now Description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
@@ -9042,7 +9015,7 @@ to say silent_start:
 	if gspg is 1: [male]
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 6;
-		now the Ball Size of the player is 3;
+		now the Ball Size of Player is 3;
 		now Nipple Count of Player is 2;
 		now Breast Size of Player is 0;
 		remove womanhood from Player;
@@ -9057,11 +9030,11 @@ to say silent_start:
 		startgenderlockshift;
 	]
 	gs_stats;
-	now the morale of the player is the charisma of the player plus the perception of the player;
-	now the HP of the player is the stamina of the player times two;
-	increase the HP of the player by 5;
-	now the maxHP of the player is the HP of the player;
-	now the capacity of the player is five times the strength of the player;
+	now Morale of Player is Charisma of Player plus Perception of Player;
+	now HP of Player is Stamina of Player times two;
+	increase HP of Player by 5;
+	now MaxHP of Player is HP of Player;
+	now the Capacity of Player is five times Strength of Player;
 	now humanity of Player is 100;
 	if gsgl > 1, startgenderlockget;
 	follow the SetPlayerPronouns rule;
@@ -9122,45 +9095,45 @@ to say silent_start:
 	say "	Just a moment. There are a few more things to prepare...";
 	WaitLineBreak;
 	if scenario is "Bunker":
-		increase carried of black t-shirt by 1;
+		ItemGain black t-shirt by 1 silently;
 		now black t-shirt is equipped;
-		increase carried of dark-blue jeans by 1;
+		ItemGain dark-blue jeans by 1 silently;
 		now dark-blue jeans are equipped;
-		increase carried of white briefs by 1;
+		ItemGain white briefs by 1 silently;
 		now white briefs is equipped;
-		increase carried of brown loafers by 1;
+		ItemGain brown loafers by 1 silently;
 		now brown loafers is equipped;
 	else if scenario is "Caught Outside":
-		increase carried of white t-shirt by 1;
+		ItemGain white t-shirt by 1 silently;
 		now white t-shirt is equipped;
-		increase carried of black jeans by 1;
+		ItemGain black jeans by 1 silently;
 		now black jeans are equipped;
 	else if scenario is "Rescuer Stranded":
-		increase carried of camo shirt by 1;
+		ItemGain camo shirt by 1 silently;
 		now camo shirt is equipped;
-		increase carried of green camo pants by 1;
+		ItemGain green camo pants by 1 silently;
 		now green camo pants are equipped;
-		increase carried of black boxer briefs by 1;
+		ItemGain black boxer briefs by 1 silently;
 		now black boxer briefs are equipped;
-		increase carried of black combat boots by 1;
+		ItemGain black combat boots by 1 silently;
 		now black combat boots is equipped;
 	else if scenario is "Forgotten":
-		increase carried of blue sleeveless shirt by 1;
+		ItemGain blue sleeveless shirt by 1 silently;
 		now blue sleeveless shirt is equipped;
-		increase carried of ripped black jeans by 1;
+		ItemGain ripped black jeans by 1 silently;
 		now ripped black jeans are equipped;
-		increase carried of white briefs by 1;
+		ItemGain white briefs by 1 silently;
 		now white briefs is equipped;
-		increase carried of brown loafers by 1;
+		ItemGain brown loafers by 1 silently;
 		now brown loafers is equipped;
 	else if scenario is "Researcher":
-		increase carried of white t-shirt by 1;
+		ItemGain white t-shirt by 1 silently;
 		now white t-shirt is equipped;
-		increase carried of dark-blue jeans by 1;
+		ItemGain dark-blue jeans by 1 silently;
 		now dark-blue jeans are equipped;
-		increase carried of black boxer briefs by 1;
+		ItemGain black boxer briefs by 1 silently;
 		now black boxer briefs are equipped;
-		increase carried of black combat boots by 1;
+		ItemGain black combat boots by 1 silently;
 		now black combat boots is equipped;
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
@@ -9174,7 +9147,7 @@ to say silent_start:
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now Description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
@@ -9194,7 +9167,7 @@ to say silent_start:
 	if gsbm is true: [Blind mode alteration]
 		increase score by 100;
 		now blindmode is true;
-	now Zephyr Lobby is known;
+	AddNavPoint Zephyr Lobby;
 	WaitLineBreak;
 
 to say set_invcolumns:
@@ -9217,14 +9190,29 @@ to say set_invcolumns:
 Book 10 - Let the Games Begin
 
 to say promptsay:
-	let x be the location of the player;
+	let x be the Location of Player;
+	if companion of Player is not NullPet and NPCObject of Companion of Player is not Nullpet:
+		now NPCObject of Companion of Player is in location of Player;
+		now Sleeping of NPCObject of Companion of Player is false;
 	let z be the number of entries in invent of x;
 	if z > 0:
 		say "Visible Objects: ";
 		repeat with q running through invent of x:
+			if there is a name of q in the Table of Game Objects:
+				choose a row with name of q in the Table of Game Objects;
+				now object entry is part of Player;
 			say "[link][q][as]get [q][end link] ";
 		say " [link]get everything[as]get all[end link]";
 		say "[line break]";
+	else:
+		repeat with k running through grab objects:
+			now k is nowhere;
+	[invisibly attaching the carried objects to keep the rickety FS inventory system going]
+	repeat with j running through owned grab objects:
+		now j is a part of Player;
+	if Player is in Bunker:
+		repeat with j running through stored grab objects:
+			now j is a part of Player;
 	say "Status: ";
 	if hunger of Player > 30:
 		say "[link][bracket]HUNGRY[close bracket][as]eat food[end link] ";
@@ -9255,7 +9243,7 @@ to say promptsay:
 	else if earea of location of Player is not "void":
 		say " [bracket][link]scavenge[end link], [link]explore[end link][close bracket]";
 	say ", Visible Things: ";
-	repeat with y running through the things in the location of the player:
+	repeat with y running through the things in the Location of Player:
 		if y is a door, next;
 		if y is the player:
 			say "[link][y][as]look me[end link] ";
@@ -9265,10 +9253,6 @@ to say promptsay:
 	say "[line break]>";
 
 When play begins:
-	repeat with x running through situations:
-		now x is a part of the player;
-	repeat with x running through grab objects:
-		now x is a part of the player;
 	now the command prompt is "[promptsay]";
 
 When play begins:
@@ -9288,7 +9272,7 @@ When play begins:
 	else:
 		now hypernull is 1;
 	repeat with x running through featsets:
-		now x is a part of the player;
+		now x is a part of Player;
 	if gsgt is 1: [sets name of scenario for menu based on preset]
 		now scenario is "Bunker";
 	else if gsgt is 2:

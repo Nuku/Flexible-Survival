@@ -34,14 +34,15 @@ Object	Name
 HypnoGeeks	"HypnoGeeks"
 
 HypnoGeeks is a situation.
+ResolveFunction of HypnoGeeks is "[ResolveEvent HypnoGeeks]".
 The level of HypnoGeeks is 5. [minimum level to find the event]
-The sarea of HypnoGeeks is "Campus".
+Sarea of HypnoGeeks is "Campus".
 
 when play begins: [flags for blocking this event]
 	add HypnoGeeks to BadSpots of MaleList;
 	add HypnoGeeks to BadSpots of FurryList;
 
-Instead of resolving a HypnoGeeks:
+to say ResolveEvent HypnoGeeks:
 	say "     Making your way through the campus grounds isn't as difficult as the rest of the city, but you make sure to keep your guard up. A couple of half-dressed stags stumble out of a nearby building, antlers locking together as they wrestle for dominance and move onto the front lawn. It's a situation that isn't exactly strange these days, but two bucks in rut is still something that you'd rather avoid. Crossing the street, you plan to keep moving forward, but you pause when you hear a loud yelp and a short scuffle. Something's going on around the back side of the building, and unless the collectively sixteen points of buck back there lose interest in each other long enough to hear what's going on, you're the only one that might be able to help.";
 	LineBreak;
 	say "     [bold type]Someone could be in serious danger. Do you want to investigate?[roman type][line break]";
@@ -82,12 +83,10 @@ Instead of resolving a HypnoGeeks:
 				say "     'Killer, dude! Can't believe these dumb losers have stuff like this,' the canine you saved says as he steps up beside you and looks down at the broken device in your hands. He laughs and puts his arm around your shoulders. 'Who knows what they would've have done to me had you not showed up. My girl would've probably been really mad if they were making me screw other chicks.' He stops and gets a horrified look on his face, prompting you to ask what he's thinking. 'Aw, man, just... what if they wanted me to screw other bros? Do you think 'No Homo' counts when you're bein['] brainwashed or whatever? That is not what Landon does.' The jock shudders before he lets go of you. You make a mental note that Landon has yet to zip up his pants, nor has his raging erection subsided since your rescue, but you don't say anything, letting him continue, 'Anyways, bro, you helped me out, so I'll help you out. I got some supplies that I can share with ya to show my thanks.' He collects a bottle of water and a packet of food from a nearby dropped backpack that apparently is his, which you graciously accept.";
 				say "     Landon stands close to you as you pack the reward for his rescue away. You don't see when the mice scamper off, but sure enough, as soon as you lift your head, the nerds have vanished. Your saved muscled hunk also starts to walk off, but he turns around and gives you a wink. 'Maybe I'll see you around, bro?' You nod, and have to wonder if maybe that little box did more damage than he realizes. Either way, you pack the supplies away and make your way back onto the road where you entered. Out of curiosity, you look back to where those stags were fighting before, but all you see is a single cum-stained varsity jacket, lying forgotten on the lawn. Must have gotten hot and heavy. You shrug and continue onwards, happy that you could help at least one person out in this crazy mouse-zap-dog world.";
 				LineBreak;
-				say "[bold type]You gain 1 food![roman type][line break]";
-				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				now Stamina of Landon is 1;
-				increase carried of defective device by 1;
-				increase carried of food by 1;
-				increase carried of water bottle by 1;
+				ItemGain defective device by 1 silently;
+				ItemGain food by 1;
+				ItemGain water bottle by 1;
 				now Resolution of HypnoGeeks is 1; [saved the dog, saved the world]
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "     With one last blow, you crumple backwards next to the very retriever that you meant to save. You look up and see the bare-assed hunk, his pants still at his ankles ever since you interrupted the nerds['] fun. Refusing to become their next plaything, you struggle to push yourself up, but pause when you come face to face with the hunk's rock hard cock. You're surprised to find it still holding strong and leaking precum profusely while you were fighting for his honor. Taking advantage of your distraction, a small foot plants into your battered side, and, without any energy to resist, you collapse on your side, staring up at the winners of the fight. Looking up into Arthur's face, the mouse says, 'Look at this little twerp! Did you actually think that you could beat [']me[']? I'm way too high a level for some crappy noob like you to beat!' Reece picks this moment to also pipe up, 'Guess we're superior to them in mind [italic type]and[roman type] in body!'";
@@ -220,7 +219,7 @@ name	desc	weight	object
 the scent of defective device is "The device smells like burnt metal.".
 
 defective device is a grab object. defective device is not temporary.
-the usedesc of defective device is "[DefectiveDeviceUse]";
+Usedesc of defective device is "[DefectiveDeviceUse]";
 
 to say DefectiveDeviceUse:
 		say "     You attempt to make use of the device, pushing some buttons. Sadly, the only result is a bit of a burned smell and a strange sound from inside the box.";

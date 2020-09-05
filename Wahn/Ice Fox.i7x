@@ -46,8 +46,8 @@ Section 2 - Creature Responses
 Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -103,6 +103,9 @@ When Play begins:
 	now libido entry is 70;
 	now loot entry is "snow star";     [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;         [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]anthro[or]lithe[or]slender[at random]";
 	now type entry is "[one of]vulpine[at random]";
@@ -117,7 +120,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -226,7 +229,7 @@ instead of sniffing snow star:
 say "     The little piece of ice smells fresh, a little like a menthol bonbon.";
 
 snow star is a grab object.
-the usedesc of snow star is "[snow star use]";
+Usedesc of snow star is "[snow star use]";
 
 to say snow star use:
 	say "     You pull out the little star of ice and look at it from close up, enjoying the shimmer of light in its facet for a moment. Then you place it on your outstretched tongue, trembling in pleasure as it melts right away and a little bit of Miyuki's magic fills your body.";
@@ -240,7 +243,7 @@ Object	Name
 Snowy Forest Trail	"Snowy Forest Trail"
 
 Snowy Forest Trail is a room. Snowy Forest Trail is northeast of Urban Forest.
-The description of Snowy Forest Trail is "     You're on a narrow trail through the urban forest, in an area of fairly dense growth. Fragments of the buildings formerly occupying this part of the city are few and far between, with trees and other plants forming what seems to be a century-old forest. Interestingly, this part of the woods is a lot cooler than the rest of the city, with some snow covering low-hanging branches and the ground under your feet. Despite this, you don't actually feel uncomfortable, which might actually be a wholly positive result of the nanites. Towards the north, this effect only gets more pronounced - there are white flakes in the air there, falling at a placid pace to settle in a glistening blanket of undisturbed snow.".
+Description of Snowy Forest Trail is "     You're on a narrow trail through the urban forest, in an area of fairly dense growth. Fragments of the buildings formerly occupying this part of the city are few and far between, with trees and other plants forming what seems to be a century-old forest. Interestingly, this part of the woods is a lot cooler than the rest of the city, with some snow covering low-hanging branches and the ground under your feet. Despite this, you don't actually feel uncomfortable, which might actually be a wholly positive result of the nanites. Towards the north, this effect only gets more pronounced - there are white flakes in the air there, falling at a placid pace to settle in a glistening blanket of undisturbed snow.".
 earea of Snowy Forest Trail is "Forest".
 
 Table of GameRoomIDs (continued)
@@ -248,7 +251,7 @@ Object	Name
 Forest Cave Entrance	"Forest Cave Entrance"
 
 Forest Cave Entrance is a room. Forest Cave Entrance is north of Snowy Forest Trail.
-The description of Forest Cave Entrance is "[ForestCaveEntranceDesc]".
+Description of Forest Cave Entrance is "[ForestCaveEntranceDesc]".
 earea of Forest Cave Entrance is "Forest".
 
 to say ForestCaveEntranceDesc:
@@ -265,14 +268,14 @@ Object	Name
 Frozen Cave Tunnel	"Frozen Cave Tunnel"
 
 Frozen Cave Tunnel is a room. Frozen Cave Tunnel is northeast of Forest Cave Entrance.
-The description of Frozen Cave Tunnel is "     You're in what seems like a natural cave tunnel, leading steadily downwards in a slow curve. Might actually be a spiral, now that you think of it - remembering the part you've already got behind you and what you can see ahead. And you can actually see, despite being underground and in a cave, thanks to the ever-present snow all around you. Each flake has a tiny and dim glow to it, making them whiter than white and creating a beautiful sparkling effect that covers the ground in a smooth layer and has settled into all of the cracks and rough surfaces of the cave walls. Seeing wondrous sights like this makes it hard to remember that you're still in the city sometimes, and that all of this didn't exist just a short while ago.".
+Description of Frozen Cave Tunnel is "     You're in what seems like a natural cave tunnel, leading steadily downwards in a slow curve. Might actually be a spiral, now that you think of it - remembering the part you've already got behind you and what you can see ahead. And you can actually see, despite being underground and in a cave, thanks to the ever-present snow all around you. Each flake has a tiny and dim glow to it, making them whiter than white and creating a beautiful sparkling effect that covers the ground in a smooth layer and has settled into all of the cracks and rough surfaces of the cave walls. Seeing wondrous sights like this makes it hard to remember that you're still in the city sometimes, and that all of this didn't exist just a short while ago.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Ice Fox's Den	"Ice Fox's Den"
 
 Ice Fox's Den is a room. Ice Fox's Den is below Frozen Cave Tunnel.
-The description of Ice Fox's Den is "[IceFoxDenDesc]";
+Description of Ice Fox's Den is "[IceFoxDenDesc]";
 
 to say IceFoxDenDesc:
 	say "     You're in a moderately sized cavern, spreading out around you. On the smooth black stone floor (granite, if you'd have to guess), there are some pieces of furniture scattered about, tables and chairs, plus a number shelves - all of them white. Hard to say if that is their natural color or if it's just the thin layer of frost covering them. In the back, there is what can only be called a nest - a circular affair of many blankets on the ground, with countless big and small pillows piled in it. The walls enfolding the place seem fairly natural and cave-like, with sparkling snow having settled on every bump and unevenness, filling the place with a smooth and even light. Finally, the ceiling above you is quite a sight, as what seems to be a snow-storm whirls in the air there, centered on a palm-sized star of a snow flake, with more and more snow constantly being created as steamers of flakes are sent to blow up the tunnel up to the surface.";
@@ -284,7 +287,7 @@ Object	Name
 Snow Rabbit's Warren	"Snow Rabbit's Warren"
 
 Snow Rabbit's Warren is a room.
-The description of Snow Rabbit's Warren is "[SnowRabbitsWarrenDesc]";
+Description of Snow Rabbit's Warren is "[SnowRabbitsWarrenDesc]";
 
 to say SnowRabbitsWarrenDesc:
 	say "     You're in a mid-sized cave that is split into two parts by a not quite hip-high wall of ice. The far side of it has a colossal mound of snow, almost reaching the rocky ceiling at its highest point. Numerous snow-white rabbits are hopping around in this enclosure, and also digging into the snow, creating tunnels and chambers within. The little animals look basically just like oval fluffs of fur when they sit down, only extending their surprisingly long legs when they move around. On the 'visitor' side of the cave, Russel has made a camp for himself in a little niche, with a sleeping bag rolled out as well as stacks of supplies that he needs to care for his charges.";
@@ -295,7 +298,7 @@ Object	Name
 Snow Fox Enclosure	"Snow Fox Enclosure"
 
 Snow Fox Enclosure is a room.
-The description of Snow Fox Enclosure is "[SnowFoxEnclosureDesc]";
+Description of Snow Fox Enclosure is "[SnowFoxEnclosureDesc]";
 
 to say SnowFoxEnclosureDesc:
 	say "     You're in a mid-sized cave that is split into two parts by a not quite hip-high wall of ice. The far side of it has what seems to be a miniature cliff molded out of its back wall, with a comfy fox-sized cave dug into it and a sloping path to the top up one side. All of this is covered in a liberal scattering of snow. Numerous snow-white foxes are moving around in this enclosure, yipping and with some chasing each other up to the lookout spot and down again. Aubrey the foxtaur is in their midst, playing with the little vulpines by throwing several rubber balls for her charges to run after and bring back. She seems totally focused on playtime with the foxes, barely registering you other than a friendly smile and wave as you come in. On your side of the ice wall, there is a big nest of warm blankets in one corner of the irregularly shaped room. Looks like Aubrey and Barbara share it.";
@@ -379,10 +382,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Carambola Tree	"Carambola Tree"
 
-Carambola Tree is a situation. Carambola Tree is inactive.
-The sarea of Carambola Tree is "Zoo".
+Carambola Tree is a situation.
+ResolveFunction of Carambola Tree is "[ResolveEvent Carambola Tree]". Carambola Tree is inactive.
+Sarea of Carambola Tree is "Zoo".
 
-instead of resolving a Carambola Tree:
+to say ResolveEvent Carambola Tree:
 	say "     Remembering Miyuki's request, you keep an eye out for the tropical carambola tree during your exploration of the expansive City Zoo grounds. With all of the roaming infected, blocked pathways, and whatnot, it isn't easy at all, but eventually, you do spot the characteristic yellow fruit hanging from a tree not far away. You hurry over to it and pick those that look ripe and juicy and are hanging low enough. Yet just as you want to leave with the lucky find, a large tigertaur steps into your way from behind the nearby bushes. 'What do you think you are doing? That's my tree, and my fruit!' she growls, annoyed that you've intruded in what she sees as her territory. Without any further hesitation, the tigress attacks!";
 	challenge "Tigertaur";
 	if fightoutcome < 20: [player won]
@@ -398,10 +402,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Arctic Enclosure	"Arctic Enclosure"
 
-Arctic Enclosure is a situation. Arctic Enclosure is inactive.
-The sarea of Arctic Enclosure is "Zoo".
+Arctic Enclosure is a situation.
+ResolveFunction of Arctic Enclosure is "[ResolveEvent Arctic Enclosure]". Arctic Enclosure is inactive.
+Sarea of Arctic Enclosure is "Zoo".
 
-instead of resolving a Arctic Enclosure:
+to say ResolveEvent Arctic Enclosure:
 	if HP of Miyuki is 1:
 		say "     Remembering Miyuki's request, you roam through the expansive area of the zoo and search for the arctic animal enclosure. Despite there being numerous signs all over the place with maps, it is actually fairly hard to find. Some areas are completely impassable due to being claimed by overgrown plants or dangerous ferals. Following a quite circuitous route and having to go off-trail into what feels like a tropical jungle, you eventually reach a mid-sized building standing in the shadow of the border wall. There are no lights or power anywhere here, meaning that the whole bank of heat exchange units on the side of the building is sitting still and silent. This doesn't look good for the comfort of anyone who might still be living in there.";
 		say "     Stepping out from between the tropical trees, you move along the remains of the path that once led to the building, making sure that you don't stumble over any roots or debris on the ground. Noticing how far off all of the mating calls and other noises of the zoo seem right now, you wonder why this section is so deathly quiet. Then your gaze falls upon what must be the reason: The large wooden display at the entrance of the arctic enclosure is totally scratched up at one end, with large vertical lines that look like someone sharpened their claws there. The same claws most likely carved a message in the rest of the board - 'Fuck off! They're all mine!' Seems like someone or something territorial claimed this place, explaining why you haven't seen anyone else since you stumbled into the forest to get here.";
@@ -539,8 +544,8 @@ SexuallyExperienced of Miyuki is true.
 TwistedCapacity of Miyuki is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Miyuki is false. [steriles can't knock people up]
 MainInfection of Miyuki is "Ice Fox".
-The description of Miyuki is "[MiyukiDesc]".
-The conversation of Miyuki is { "placeholder" }.
+Description of Miyuki is "[MiyukiDesc]".
+Conversation of Miyuki is { "placeholder" }.
 
 instead of sniffing Miyuki:
 	say "     Miyuki has an interesting scent - crisp and fresh, reminding you of fallen snow. There are some undertones of a pleasant furry smell, as well as a faint hint at... peppermint?";
@@ -632,7 +637,7 @@ to say MiyukiTalk3: [talk about becoming an ice fox]
 	if lastSnowStarGiven - turns > 8: [didn't give the player one in the last day]
 		say "     You step up to Miyuki and compliment her about herself, the fox's beautiful body and her snow-white fur. She seems to eat up the praise, becoming quite pleased and smiling at you, until she eventually asks in a chuckle, 'So - what is it that you want from me? I recognize shameless flattery building up to a request.' Oops - busted! You start to apologize, but she just waves you off and says, 'You can tell me sweet nothings all day every day, sweetie. But aside from that - really, just tell me what you want.' You explain that you absolutely love her looks and would be thrilled to be just like her.";
 		say "     'Hmhm,' the ice fox says in a thoughtful tone, then replies, 'What you're asking is not quite as easy as your people's normal transformations, but... I like you, so let's give it a try.' With a flourish, she stretches out her charcoal-gray paw-hand between you, palm up, and waits for one of the snow-flakes dancing in the air to land on it. With a smile, the sorceress then starts to very gently blow over it, and before your very eyes the tiny speck of ice grows and grows into a thin disc. No, a star actually - a snow star! 'Here, my gift to you!' Miyuki says with a chuckle, handing you the little star for you to keep.";
-		increase carried of snow star by 1;
+		ItemGain snow star by 1 silently;
 		now lastSnowStarGiven is turns;
 	else: [gave the player one already that day]
 		say "     As you start asking for another snow star, Miyuki shakes her head in a slow gesture of negation. 'I'm sorry, I gave you one today already. That little star was a piece of my personal magic, you know. As much as I wish it was, that is not limitless. So... maybe tomorrow, okay?'";

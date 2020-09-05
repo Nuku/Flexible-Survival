@@ -11,9 +11,10 @@ Object	Name
 Mysterious Briefcase	"Mysterious Briefcase"
 
 Mysterious Briefcase is a situation.
-The sarea of Mysterious Briefcase is "Outside".
+ResolveFunction of Mysterious Briefcase is "[ResolveEvent Mysterious Briefcase]".
+Sarea of Mysterious Briefcase is "Outside".
 
-instead of resolving Mysterious Briefcase:
+to say ResolveEvent Mysterious Briefcase:
 	say "     Roaming through the city, always on the lookout for supplies or other interesting objects that might help you survive, you spot an abandoned car some distance ahead. Glancing left and right for any creatures that might be lying in ambush for scavengers, you approach slowly, carefully stepping around pieces of glass and trash that might make a noise. There is no trace of the occupant of the car, just a wide-open driver's door. Maybe they tried to escape whatever creature that left some deep dents in the car's hood and brought it to a standstill. A few steps from the car, you spot an unusual briefcase lying on the ground, emblazoned with a rounded company logo. The sturdy case looks intact and was most likely dropped by the fleeing driver, with the chasing monster more interested in the person than their possessions. A lucky break for you, it seems.";
 	say "     Checking over the briefcase, you notice the sturdy locks at the front and briefly worry that you'll have to hunt for a key. But as luck would have it, you find that it is currently unlocked! Inside the briefcase are several vials of a murky blue liquid and a jumbled mess of papers, no doubt from when the briefcase was dropped and thrown around. As you do not really have the time to read through all of it on the street, you begin to skim through the first few pages, gleaning that whoever this briefcase belonged to was some sort of scientist before the outbreak. He was apparently working on means to increase male virility and the size of their endowments, but his experiments were just too potent and extreme for any normal male to handle without passing out after a while. Thankfully, the effects were only temporary, so no one came to harm, but the researcher was working on a way to weaken the formula.";
 	say "     [bold type]What do you want to do with this?[roman type][line break]";

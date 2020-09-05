@@ -17,7 +17,8 @@ Object	Name
 The Sword in the Stone	"The Sword in the Stone"
 
 The Sword in the Stone is a situation.
-The sarea of The Sword in the Stone is "Forest".
+ResolveFunction of The Sword in the Stone is "[ResolveEvent The Sword in the Stone]".
+Sarea of The Sword in the Stone is "Forest".
 
 when play begins:
 	add The Sword in the Stone to badspots of MaleList;
@@ -26,7 +27,7 @@ when play begins:
 
 NathanielHP is a number that varies. NathanielHP is usually 0.
 
-Instead of resolving The Sword in the Stone (while demonologist is tamed and player is male):
+to say ResolveEvent The Sword in the Stone (while demonologist is tamed and player is male):
 	say "     As you wander through the forest, you find a old beaten path that leads deeper into the woods. Following this path, you enter into a section of woods that feels almost magical. The air temperature drops to that of a chilly morning, a slight frost forming over nearby folliage. Emerging from the dense overgrowth, you see a resplendent longsword sticking inside of a rock in the center of a clearing ahead of you. Letting out a relieved sigh, you begin to make your way to the clearing. The sword looks beautiful, glinting in the faint light that makes it through the canopy. You now stand infront of the sword, what do you do?";
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Try to pull the sword out of the stone.";
@@ -70,11 +71,12 @@ Object	Name
 The Campsite	"The Campsite"
 
 The Campsite is a situation.
+ResolveFunction of The Campsite is "[ResolveEvent The Campsite]".
 The Campsite is inactive.
-The sarea of The Campsite is "Forest".
+Sarea of The Campsite is "Forest".
 
-Instead of resolving The Campsite
-	say "     You're wandering through the forest when you come across a destroyed campsite. There is a small firepit with what looks to be marshmallows on some sticks. Most of them are burned as if they were left to sit near the fire for too long. You come across two finely made backbacks near the remains of the tent, they look be be designed for hiking. Most of the stuff has been looked through already, but based on the the clothing it looks like there were two men at this campsite, one very short and the other very tall. After some digging, you come across some IDs that depict the two men. The first appears to be from the college, he's a tall handsome graduate student with well styled shoulder length hair and a short neatly trimmed beard that goes by the name Nathaniel. The black hair really stands out well on his pale skin. The other is a younger man with a cheerful expression, with platinum blond hair that's short on the sides and long on top that goes by the name Owen. He also has pale white skin, and checking again they both have the same striking ice blue eyes. The younger man's ID It looks to be a temporary university ID, perhaps he was here for orientation or some kind of event.";
+to say ResolveEvent The Campsite
+	say "     You're wandering through the forest when you come across a destroyed campsite. There is a small firepit with what looks to be marshmallows on some sticks. Most of them are burned as if they were left to sit near the fire for too long. You come across two finely made backbacks near the remains of the tent, they look be be designed for hiking. Most of the stuff has been looked through already, but based on the clothing it looks like there were two men at this campsite, one very short and the other very tall. After some digging, you come across some IDs that depict the two men. The first appears to be from the college, he's a tall handsome graduate student with well styled shoulder length hair and a short neatly trimmed beard that goes by the name Nathaniel. The black hair really stands out well on his pale skin. The other is a younger man with a cheerful expression, with platinum blond hair that's short on the sides and long on top that goes by the name Owen. He also has pale white skin, and checking again they both have the same striking ice blue eyes. The younger man's ID It looks to be a temporary university ID, perhaps he was here for orientation or some kind of event.";
 	say "     One final search of the bag yields a camera, tough the screen is cracked. Given the hiking gear, you suspect the cause might have been dropping it accidentally. It does have a tape in it so you pop it out and add it to your backpack. Putting the bag down, you turn your attention to what remains of the tent. The canvas is well made and mostly intact, it doesn't look like anything ripped into it from the outside. You pull the canvas away so that you can see what is inside the collapsed tent. It's surprisingly difficult to move, something is weighing it down. Once you finished moving it to the side it becomes clear what was causing the trouble. The bottom of the tent has been utterly destroyed and is covered in jizz [if WSlevel is 3] and piss if the smell is anything to go by[end if], leaving a trail of fluid behind the top portion of the tent that you dragged away.";
 	WaitLineBreak;
 	say "     You stand there in awe for a moment, there is so much spooge that you could fill a bathtub. You step closer to the puddle of spooge, nearly slipping as you walk into a small pit in the ground. Who sets up camp in a pit? You wonder to yourself as you get closer to the scene of the crime. You grab a nearby stick and try to poke into the spooge and try to scrape things off the bottom, only to realize that the spoogue is nearly three feet deep. But that's not all, you notice that the hole in the ground is deeper at one end and more shallow at the other. It's like something hit it at a angle. You dig around a bit in the deep part of the hole and manage to drag something up towards the surface. Something dark and slimy emerges from the pool of spooge giving you a minor scare before you realize its an object and not a person.";
@@ -87,7 +89,7 @@ Instead of resolving The Campsite
 
 Section 3 - Tape - Hiker Boys Tape
 
-Instead of resolving HikerBoysTape:
+to say ResolveEvent HikerBoysTape:
 	say "     At the beginning of the tape, you see the face of a handsome young man with platinum blonde hair and striking ice blue eyes, who is currently looking down at the camera with a furrowed brow. He appears to be in his late teens, maintaining a smooth and youthful face. A few expensive looking earings decorate one his ears, giving a slightly punkish look to him. His shoulders are quite muscular and from what you can tell he's wearing a black tank top, though most of his torso is off the screen. 'Is this this on? Oh, I got it!' A brief flash of a cocky grin crosses the screen before the camera is moved and pointed outside a car window. The scenery is beautiful as the car drives up a winding road in the mountains. The large water reservoir can be seen on the horizon, just above the imposing dam. The morning sunlight glints beautifully on the surface of the lake and on the small layer of frost covering the nearby trees. The camera pans up and over the lake onto the mountains which are covered in snow simply due to the elevation.";
 	say "     You hear a chuckle from someone else, followed by a smooth but deep voice, 'Good timing, we just got to the scenic parts.' The camera pans over the front wind shield before settling on the driver. This man could be a model, he's quite tall and very musuclar. A stylish leather jacket adorns his chest, though left open to reveal a simple t-shirt with a logo of the college wrestling team. The fabric is pulled taught over his body, putting his musculature on full display. His large thighs stretch the trendy ripped jeans, leaving little to the imagination. The young man seems to adjust the camera slight, centering the view on the large bulge in the mans pants. 'Yup, definately a good view.' The younger man comments cheekily, though the older man doesn't appear to notice the shenanigans.";
 	WaitLineBreak;
@@ -126,12 +128,13 @@ Object	Name
 Looking for the Brothers	"Looking for the Brothers"
 
 Looking for the Brothers is a situation.
+ResolveFunction of Looking for the Brothers is "[ResolveEvent Looking for the Brothers]".
 Looking for the Brothers is inactive.
-The sarea of Looking for the Brothers is "Forest".
+Sarea of Looking for the Brothers is "Forest".
 
 LookingForTheBrothersResolution is a number that varies. LookingForTheBrothersResolution is usually 0.
 
-Instead of resolving Looking for the Brothers
+to say ResolveEvent Looking for the Brothers
 	if LookingForTheBrothersResolution is 0:
 		say "     As you look for the two brothers, you come across a small field where some of the grass has been burned. Reaching down to the blackened ash, you run your fingers through it, finding it has the consistency of a fine sand and feels warm to the touch. You search the area for additional clues and come across signs of a fight. Following this trail leads you to a small field with a prone figure in the center. Looking around for a moment, you make sure the area is clear before heading closer to the man. It appears to be a knight who has fallen in combat, he's unconscious but otherwise stable with a few bruises here and there. Some of his clothing also looks a bit singed, notably the clothing in the crotch area exposing his sizable manhood and now gaping hole. He seems to be resting peacefully at the moment despite his current state of health.";
 		say "     Kneeling down next to the man gives you a better view of the sexual activity that occured following the fight. His torso and face are smattered with cum and a black substance similiar to what you found at the tent. You rub a finger through the black substance and taste it once again, its as heavenly as you remember but tastes slightly different. Unlike the cum you tasted at the campsite, this cum is rather hot as if it was recently shot out of nice cock. Oddly, you find the knights cock is also covered in black cum, though there is white cum there as well. You assume the white cum belongs to the knight and give his cock a little squeeze just to be sure. surprisingly, its black cum that leaks out of his cock and a quick taste confirms its the same that covers the torso of the knight.";

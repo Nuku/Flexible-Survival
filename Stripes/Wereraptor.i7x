@@ -21,15 +21,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Paleontology Professor	"Paleontology Professor"
 
-Paleontology Professor is a situation. The level of Paleontology Professor is 7.
-The sarea of Paleontology Professor is "Campus".
+Paleontology Professor is a situation.
+ResolveFunction of Paleontology Professor is "[ResolveEvent Paleontology Professor]". The level of Paleontology Professor is 7.
+Sarea of Paleontology Professor is "Campus".
 
 when play begins:
 	add Paleontology Professor to BadSpots of FurryList;
 
 utahmet is a truth state that varies. utahmet is usually false.
 
-Instead of resolving a Paleontology Professor:
+to say ResolveEvent Paleontology Professor:
 	if MaleList is banned and FemaleList is banned:
 		say "     You find your way into the biology building in the hopes of finding answers or at least supplies and happen across the door to a paleontology professor's office. On the door is a notice saying that the professor was transferred due to content restrictions. Odd.";
 		say "(This content requires that at least one of Guy or Girl content be available in the game. - Mgmt)[line break]";
@@ -326,8 +327,8 @@ to say wrvict3:		[69 w/male]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -385,6 +386,9 @@ When Play begins:
 	now libido entry is 45; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]animalistic[purely at random]";
 	now type entry is "[one of]wereraptor[or]raptor[or]saurian[or]reptilian[purely at random]";
@@ -399,7 +403,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -774,7 +778,7 @@ to wrcurserecede:
 	StatChange "Intelligence" by 2;
 
 to wrcurserampage:
-	if there is a dangerous door in the location of the player or the location of Player is fasttravel:
+	if there is a dangerous door in the Location of Player or the location of Player is fasttravel:
 		say "     You can feel the primitive, feral instincts of your wereraptor body trying to erode your conscious thought as its lust and hunger rise. You catch the scent of prey in the air and your limited control snaps. You head out into the city as nothing more than a wild beast seeking to slake its hunger and lust upon its prey.";
 		now skipturnblocker is 1; [player effectively unconscious, delays/skips end of turn messages]
 		SanLoss 6;
@@ -816,12 +820,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Greenhouse	"Greenhouse"
 
-Greenhouse is a situation. The level of Greenhouse is 7. Greenhouse is inactive.
-The sarea of Greenhouse is "Campus".
+Greenhouse is a situation.
+ResolveFunction of Greenhouse is "[ResolveEvent Greenhouse]". The level of Greenhouse is 7. Greenhouse is inactive.
+Sarea of Greenhouse is "Campus".
 
 grhouse is a truth state that varies. grhouse is usually false.
 
-Instead of resolving Greenhouse:
+to say ResolveEvent Greenhouse:
 	if grhouse is false:
 		say "     Remembering Nermine's instructions, you keep your eyes open as you travel around the campus. Not recalling having seen one there before and unable to find out anywhere, you're about to give up when you swing back around towards the biology building again for another pass. And that's when you spot it as you come around the edge of the chemistry building. Linking it to the biology building, there is a connecting hallway and the topmost level of that passage is a greenhouse.";
 	else:
@@ -852,7 +857,7 @@ Instead of resolving Greenhouse:
 				WaitLineBreak;
 				say "     Relaxing a little, you tell her that you just want the plant and that she should let you have it in return for freeing her. 'I appreciate your assistance and I've been very tolerant, but you can't take that plant. It's very toxic and is quite dangerous. Just put the wolfsbane down and get out of here before you attract some unwanted trouble. I'm willing to be a little tolerant with you given the circumstances, but it won't last long.'";
 				say "     She tries to sound intimidating, but is clearly nervous and keeps several yards away from you. Figuring she's scared of a battle-hardened survivalist such as yourself, you [if weapon object of Player is not journal]wave your [weapon object of Player] in her direction[else]shake your fist menacingly at her[end if]. You growl that the college has already gone to hell and that you need this monkswood, wolfsbane or whatever it's called. You then slam the pot to the ground, shattering it beside the other one. You grab several of the plants by their stalks, shake the dirt from their roots and leave, leaving the professor to cautiously advance once you move to leave.";
-		increase carried of wolfsbane by 1;
+		ItemGain wolfsbane by 1;
 		now wrcurseNermine is 3;
 		now Greenhouse is resolved;
 		increase score by 20;
@@ -870,7 +875,7 @@ name	desc	weight	object
 "wolfsbane"	"A bunch of roots from the monkshood."	1	wolfsbane
 
 wolfsbane is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 instead of using wolfsbane:
@@ -885,12 +890,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Getting the Knife	"Getting the Knife"
 
-Getting the Knife is a situation. The level of Getting the Knife is 7. Getting the Knife is inactive.
-The sarea of Getting the Knife is "Warehouse".
+Getting the Knife is a situation.
+ResolveFunction of Getting the Knife is "[ResolveEvent Getting the Knife]". The level of Getting the Knife is 7. Getting the Knife is inactive.
+Sarea of Getting the Knife is "Warehouse".
 
 wrknifefight is a truth state that varies. wrknifefight is usually false.
 
-Instead of resolving Getting the Knife:
+to say ResolveEvent Getting the Knife:
 	say "     Doing your best to circumvent the creatures roaming around here, you make your way to the address Nermine provided. It is a non-descript warehouse like so many others in this area. You start looking around, trying to find a way into the building, only to be interrupted by a growl behind you. Turning around, you find yourself faced with a large, burly wolverine in a security guard uniform.";
 	now wrknifefight is true;
 	challenge "Wolverine Guard";
@@ -904,14 +910,14 @@ Instead of resolving Getting the Knife:
 to say wrgetknife:
 	say "     Checking around the building, you find a half-open window along one side of the warehouse. It is quite high up, but you thankfully there are some old crates you can stack to get up to it. After managing to get inside, you start looking around. Thankfully, there's not much being stored in here right now, so it doesn't take you very long to find the shipping crate with the silver knife in it.";
 	say "     The knife seems a little unusual when compared to the other items you've seen around Nermine's store. The handle is rather plain and made of wood, with only a few swirls carved into it. The blade is about ten inches long and has a slight curve to it. The silver blade shows some tarnish, but appears to still have a keen edge to it. Uncertain why Nermine would care for such a thing when compared to the more ornate items in the lot, you shrug and put it away.";
-	increase carried of silver knife by 1;
+	ItemGain silver knife by 1;
 	let bonus be ( intelligence of Player + perception of Player - 20 ) divided by 2;
 	let dice be a random number from 1 to 20;
 	if bonus + dice > 18:
 		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		say "You are about to head out when you realize that you're about to walk away from this collection of antiquities without even checking out any of the others. Just because Nermine doesn't want any of them doesn't mean they can't be of use to you. You flip through the auction list. It appears the items come from an estate sale and while most of them are nothing of interest to you, one of the photos catches your eye. Finding the crate, you break into it and pull out the torso mannequin with a chainmail vest on it. Now that might come in handy, you muse as you head out, feeling a little closer to being rid of your cursed affliction.";
 		increase score by 20;
-		increase carried of chainmail vest by 1;
+		ItemGain chainmail vest by 1;
 	else:
 		say "     Having gotten what you came for, you make a hasty exit from the warehouse. You feel a little closer to being rid of your cursed affliction.";
 	now wrcurseNermine is 6;
@@ -919,14 +925,11 @@ to say wrgetknife:
 	now Getting the Knife is resolved;
 
 
+[Silver Knife moved to Core Mechanics/Weapons.i7x]
+
 Table of Game Objects (continued)
 name	desc	weight	object
-"silver knife"	"An old silver knife with a ten inch blade and a slight curve to it. It seems particularly well weighted."	2	silver knife
 "chainmail vest"	"A heavy chainmail vest that always seems to be a good fit thanks to nanite adjustment."	20	chainmail vest
-
-silver knife is an armament. It is part of the player. It has a weapon "[one of]the silver knife[or]the old knife[or]the curved knife[or]the silver dagger[at random]". The weapon damage of silver knife is 6. The weapon type of silver knife is "Melee". It is not temporary. the objsize of silver knife is 2. the hitbonus of silver knife is 2.
-
-the scent of the silver knife is "     While the silver knife has no strong scent, something about it makes you uneasy whenever you bring it close.".
 
 chainmail vest is equipment. It is not temporary.
 The AC of chainmail vest is 40.
@@ -944,12 +947,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Dinosaur Skeleton	"Dinosaur Skeleton"
 
-Dinosaur Skeleton is a situation. The level of Dinosaur Skeleton is 9. Dinosaur Skeleton is inactive.
-The sarea of Dinosaur Skeleton is "Museum".
+Dinosaur Skeleton is a situation.
+ResolveFunction of Dinosaur Skeleton is "[ResolveEvent Dinosaur Skeleton]". The level of Dinosaur Skeleton is 9. Dinosaur Skeleton is inactive.
+Sarea of Dinosaur Skeleton is "Museum".
 
 wrdinoskel is a truth state that varies. wrdinoskel is usually false.
 
-Instead of resolving Dinosaur Skeleton:
+to say ResolveEvent Dinosaur Skeleton:
 	if daytimer is day:
 		say "     As you travel through the museum, you end up finding yourself in one of the upper sections of the Dinosaur exhibit. There are several small- to mid-sized skeletons on display there, including one of a raptor. You are momentarily excited at the prospect of being freed from your curse, but then recall that the ritual requires it be done at night. Given the amount of activity around here from the denizens of the museum, you decide against just sticking around until then and resolve to come back after nightfall.";
 	else if silver knife is not owned:
@@ -989,7 +993,7 @@ to say wrcureattempt:
 		say "     You stagger to your feet, feeling very weak and worn from your blood loss, but also as if a great burden has been lifted from you. You watch as the last of your blood bubbles on the fossilized bones and disappears. You're uncertain if it boiled away or was absorbed into the dry bones, but it is gone. In short order, the slashes on your shoulders fade away, healed and gone as if they were never there. Having beaten its power, you know you cannot be tainted by it again.";
 		say "     Not wanting to linger here any longer, you prepare to leave only to notice that the silver knife is missing. You suspect it's somehow already found its way back to Nermine.";
 		if weapon object of Player is silver knife, unwield silver knife silently;
-		now carried of silver knife is 0;
+		ItemLoss all silver knife silently;
 		if humanity of Player < 100:
 			SanBoost 1;
 			increase humanity of Player by ( 100 - humanity of Player ) / 2;
@@ -1007,12 +1011,12 @@ to say wrcureattempt:
 			say "     The wereraptor growls victoriously and grabs the potion with visible trepidation before racing headlong to the balcony overlooking the lower floors. With a hissing laugh, he tosses the vial down as you scream. There is a distance crash as your precious cure is destroyed. Dr. Utah clacks back across the tiled floor and runs his taloned hand across your body. 'Soon you will come to accept your proper nature and forsake your foolish reluctance. It is time for the saurians to rise again, new and stronger.' He leans in closer and runs his tongue along your face. 'I look forward to hunting with you,' he adds with a grope between your legs before turning and leaving.";
 		say "     Once you've recovered enough to stand, you prepare yourself to leave. You glance around and realize that your silver knife is gone. You suspect it's somehow already found its way back to Nermine. With your cure gone and your payment made, you get the feeling that you're on your own now.";
 		if weapon object of Player is silver knife, unwield silver knife silently;
-		now carried of silver knife is 0;
+		ItemLoss all silver knife silently;
 		now wrcurseNermine is 10;
 	else:
 		say "     As you turn and run, the speedy wereraptor makes a final charge and swipes her claws at you. This knocks the potion from your hand, sending it tumbling to the ground and breaking. With its scent in the air, your revulsion kicks in and you move quickly to get away, the transformed professor fleeing as well. When you stop and try to catch your breath now that you're far from the smell of it, you realize that your silver knife is missing as well. You suspect it's somehow already found its way back to Nermine. With your cure gone and your payment made, you get the feeling that you're on your own now.";
 		if weapon object of Player is silver knife, unwield silver knife silently;
-		now carried of silver knife is 0;
+		ItemLoss all silver knife silently;
 		now wrcurseNermine is 10;
 
 
@@ -1029,7 +1033,7 @@ to say wrcurseaccept:
 		say "     When the process is done, she pushes your head back and you both stumble apart and fall to the ground. You feel weak and tired. But you know that will pass, for you are a wereraptor now and the blood in you is strong now. You rise and look yourself over and while you see no differences, you know the power within you has grown and it cannot be taken from you now by foolish concoctions or a wretched kn-. You stop and look around, but can find no trace of the silver knife, leading you to conclude that it has somehow made its way back to Nermine.";
 		say "     Dr. Utah rises and snarls triumphantly, a cry that you return. 'There is much to do before our kind can spread and rule the wretched mammals. I shall return to my office and begin the preparations. There are others I have infected who show promise and may soon accept the gift as you have,' she hisses softly, licking your muzzle. 'Those who accept it shall rise as we have and those who don't shall fall,' she concludes, running her hands over your body before turning and charging away.";
 		say "     As the rush of your acceptance of the curse starts to fade, you wonder about the choice you've made, but do not feel that it is a mistake. The wereraptor is a part of you now and its instincts are a part of your mind. Its hunger is yours, but you are now in control. There is no point in denying these desires for you have made them your own.";
-		now Paleontology Office is known;
+		AddNavPoint Paleontology Office;
 [		say "***raptor sex goes here?";]
 	else:
 		say "     Looking down at the bottle of poisonous aconite and the silver knife that makes your skin crawl just to look at it, you reject them. Your wereraptor body knows they are cursed and seek to kill you, not save you. You hurl the bottle fast and far, sending over the balcony to the floor far below. Dr. Utah gives a triumphant, hissing laugh and strides forward, running his taloned hands over your body.";
@@ -1044,7 +1048,7 @@ to say wrcurseaccept:
 		say "     Dr. Utah rises and snarls triumphantly, a cry that you return. 'There is much to do before our kind can spread and rule the wretched mammals. I shall return to my office and begin the preparations. There are others I have infected who show promise and may soon accept the gift as you have,' he hisses softly, licking your muzzle. 'Those who accept it shall rise as we have and those who don't shall fall,' he concludes, running his hands over your body before turning and charging away.";
 		say "     As the rush of your acceptance of the curse starts to fade, you wonder about the choice you've made, but do not feel that it is a mistake. The wereraptor is a part of you now and its instincts are a part of your mind. Its hunger is yours, but you are now in control. There is no point in denying these desires for you have made them your own.";
 		wrcurserestore;
-		now Paleontology Office is known;
+		AddNavPoint Paleontology Office;
 [		say "***raptor sex goes here?";]
 	now wrcursestatus is 7;
 	now wrcurseactivity is true;

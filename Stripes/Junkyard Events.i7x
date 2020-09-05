@@ -10,13 +10,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Goblin Trap	"Goblin Trap"
 
-Goblin Trap is a situation. The level of Goblin Trap is 2.
-The sarea of Goblin Trap is "Junkyard".
+Goblin Trap is a situation.
+ResolveFunction of Goblin Trap is "[ResolveEvent Goblin Trap]". The level of Goblin Trap is 2.
+Sarea of Goblin Trap is "Junkyard".
 goblinfight is a number that varies.
 when play begins:
 	add Goblin Trap to BadSpots of MaleList;
 
-Instead of resolving a Goblin Trap:
+to say ResolveEvent Goblin Trap:
 	say "     As you are traveling along, looking over the various junk piles as you go, you inadvertently set off a hidden trap. A snare closes around your ankles and pulls your feet out from under you as you hear a heavy weight strike the ground nearby, pulling the rope. This also sets off a spring trap which sends a cluster of machine parts at you, aimed to land at your location. Battered by the volley of junk, you try to extricate yourself from the snare as a giggling goblin scrambles out from his hidey-hole in the junkpile after you set off his trap. 'Hee hee! It worked! It worked! And now to claim my prize,' he cackles as he comes at you as you get your legs free. You have taken 12 damage.";
 	decrease HP of Player by 12;
 	now goblinfight is 3;
@@ -37,15 +38,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Raiding Party	"Raiding Party"
 
-Raiding Party is a situation. The level of Raiding Party is 2.
-The sarea of Raiding Party is "Junkyard".
+Raiding Party is a situation.
+ResolveFunction of Raiding Party is "[ResolveEvent Raiding Party]". The level of Raiding Party is 2.
+Sarea of Raiding Party is "Junkyard".
 junknum is a number that varies.
 when play begins:
 	add Raiding Party to BadSpots of MaleList;
 	add Raiding Party to BadSpots of FurryList;
 	add Raiding Party to badspots of HermList;
 
-Instead of resolving a Raiding Party:
+to say ResolveEvent Raiding Party:
 	say "     As you search through the junkyard, you can hear some cackling laughter coming closer as well as the sounds of an angry feline. There is a smack and the feline sounds are silenced with a whimper, but the cackling laughter gets louder. You can tell there are several people laughing and they're getting closer.";
 	say "     [bold type]Shall you stay and wait for them to see what's going on or shall you make your escape while you can?[roman type][line break]";
 	LineBreak;
@@ -76,7 +78,7 @@ Instead of resolving a Raiding Party:
 						say "[losetotigress]";
 						now junknum is 0;
 						say "     Your romp with the feline over, shi gives you one last kiss before telling you shi needs to get back to work. Shi points off towards the seedier part of town and tells you of a route leading you there, should you want to find hir and hir sisters for more fun.";
-						now Entrance to the Red Light District is known;
+						AddNavPoint Entrance to the Red Light District;
 						increase score by 10;
 						now Resolution of Raiding Party is 1; [won, fucked Tigress Hooker]
 					else:
@@ -103,9 +105,10 @@ Object	Name
 Stripped Car	"Stripped Car"
 
 Stripped Car is a situation.
-The sarea of Stripped Car is "Junkyard".
+ResolveFunction of Stripped Car is "[ResolveEvent Stripped Car]".
+Sarea of Stripped Car is "Junkyard".
 
-Instead of resolving a Stripped Car:
+to say ResolveEvent Stripped Car:
 	say "     You come across a stripped car that has been pulled across the pathway between the piles. Wary of an ambush, you look around, but it seems no one is here. Taking a closer look, stripped is the proper way to describe this car. It's hub caps, hood, side panels, front grill and many other parts seem to have all been recently and forcibly removed. There are deep gouges from feline claw marks and twisted metal all over it where parts where torn off. Even the stereo is gone. You will have to be careful to avoid any felines strong enough to drag around a car and tear parts off by hand.";
 	increase score by 1;
 	now Stripped Car is resolved;
@@ -118,12 +121,13 @@ Object	Name
 Scattered Trash	"Scattered Trash"
 
 Scattered Trash is a situation.
-The sarea of Scattered Trash is "Junkyard".
+ResolveFunction of Scattered Trash is "[ResolveEvent Scattered Trash]".
+Sarea of Scattered Trash is "Junkyard".
 when play begins:
 	add Scattered Trash to BadSpots of FemaleList;
 	add Scattered Trash to BadSpots of FurryList;
 
-Instead of resolving a Scattered Trash:
+to say ResolveEvent Scattered Trash:
 	say "     You come across a mess of garbage scattered here, sprawling across the path between the junk mounds here. From the looks of it, it seems this stuff has been rummaged through and possibly even rolled around in. As it is just tossed around, there are clear spots to walk while you move through it. You decide to keep your eyes open in case you spot anything of interest while making your way through the trash.";
 	WaitLineBreak;
 	let bonus be (( perception of Player + dexterity of Player minus 20 ) divided by 2 );
@@ -131,7 +135,7 @@ Instead of resolving a Scattered Trash:
 	say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 	if bonus + dice > 15:
 		say "You manage to spot a sticky mess as you're stepping around through the trash. It's hard to tell over the scent of the surrounding garbage, but it's clearly the sexual fluids from some kind of creature. Finishing picking around the trash, you do manage to find a container of water. The small jug has enough for a drink of water, but it seems to have been filled after the outbreak and is probably not clean.";
-		increase carried of dirty water by 1;
+		ItemGain dirty water by 1;
 		increase score by 1;
 	else:
 		say "As you're trying to maneuver around the scattered trash, you place your foot on something slick just as you're turning to look at something shiny. Your foot comes out from under you and you fall onto your back, landing among the trash in something sticky. Getting up quickly, you notice it is a puddle of sexual fluids from some kind of creature. You try to wipe it off, but it's clearly too late as the tingles and prickles of spreading infection start.";
@@ -157,10 +161,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Stray Cat	"Stray Cat"
 
-Stray Cat is a situation. The level of Stray Cat is 7.
-The sarea of Stray Cat is "Junkyard".
+Stray Cat is a situation.
+ResolveFunction of Stray Cat is "[ResolveEvent Stray Cat]". The level of Stray Cat is 7.
+Sarea of Stray Cat is "Junkyard".
 
-Instead of resolving a Stray Cat:
+to say ResolveEvent Stray Cat:
 	say "     On a search through the scrapyard, you find your path blocked by a sweaty and panting snow leopard. It seems he wandered in here and has gotten lost. Startled to see you there, he gives a dry mrowl that cracks in his dry throat before stalking towards you quickly. ";
 	if dirty water is owned or water bottle is owned:
 		say "You have some water in your pack which may satisfy him long enough to make your escape.";
@@ -195,7 +200,7 @@ Instead of resolving a Stray Cat:
 	now Stray Cat is resolved;
 
 to say dirtysnow:
-	delete dirty water;
+	ItemLoss dirty water by 1;
 	say "     Quickly pulling off your pack, you reach into it and pull out a jug of dirty water. You toss it to the charging feline, who swats at it with his paw before realizing what it is. The container breaks open, sending the water over him. Startled, he comes to a stop and shakes his head before realizing it's water and he starts licking it from his fur. As you start to back away, his body starts to change, altered by the dirty water.";
 	say "     Fascinated, you watch as he starts to mewl softly as the sensations wash over him, causing him to fall to his knees. From the strength of his reactions, you are very grateful that you didn't end up drinking that water yourself. His body grows taller and thinner, but with a strong chest and shoulders. His shoulders and back twitch and bulge before a pair of large, fully-formed bat wings burst from them. The pain (or pleasure?) of this causes him to mrowl loudly. With his head raised to cry out, you can see his face and muzzle changing, growing longer and narrower. His ears enlarge, becoming big and pointed as he turns into some feline-bat hybrid.";
 	say "     His bat-like ears twitch as he mrowls again and they lock on you. Hearing your echo with his heightened senses, he starts to get up. This breaks the spell of watching his transformation and you turn to get away from this new and potentially dangerous creature you've spawned. You run around one mound, then dash down another path in the hopes of evading him. You start to make a third turn when he comes swooping out of the air, already able to fly on his new wings. Cut off, you will have to face him.";
@@ -220,7 +225,7 @@ to say dirtysnow:
 
 
 to say bottlesnow:
-	delete water bottle;
+	ItemLoss water bottle by 1;
 	say "     Quickly pulling off your pack, you reach into it and pull out a bottle of water. You toss it to the charging feline, who bats it aside at first, but then realizes what it is. He drops to all fours, scrambling on the hard ground in an attempt to turn, then runs to chase after the water bottle. Taking the opportunity to head off, you can hear the parched feline gulping it down and a distant [']Thank you['] when he's finished. Wanting to be safe, you keep moving, just in case he decides to come back for more.";
 	increase score by 10;
 	increase morale of Player by 3;

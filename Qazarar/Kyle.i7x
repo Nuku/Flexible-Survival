@@ -25,7 +25,7 @@ Version 1 of Kyle by Qazarar begins here.
 [   0: not sexable                                           ]
 [   1: sexable                                               ]
 
-[ hp of Kyle                                                 ]
+[ HP of Kyle                                                 ]
 [	0: not on date                                             ]
 [   1: on a date                                             ]
 
@@ -46,7 +46,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Kyle	"Kyle"
 
-Kyle is a man. The hp of Kyle is usually 0.
+Kyle is a man. The HP of Kyle is usually 0.
 [Physical details as of game start]
 ScaleValue of Kyle is 3. [human sized]
 SleepRhythm of Kyle is 0. [0 - awake at all times, 1 - day active, 2 - night active]
@@ -73,14 +73,14 @@ AnalVirgin of Kyle is true.
 PenileVirgin of Kyle is true.
 SexuallyExperienced of Kyle is false.
 MainInfection of Kyle is "".
-The description of Kyle is "[KyleDesc]".
-The conversation of Kyle is { "<This is nothing but a placeholder!>" }.
+Description of Kyle is "[KyleDesc]".
+Conversation of Kyle is { "<This is nothing but a placeholder!>" }.
 The scent of Kyle is "     Kyle smells like scales and paper.".
 Kyle is in Brookstone Books.
 
 to say KyleDesc:
 	if debugactive is 1:
-		say "DEBUG -> KyleRelationship: [KyleRelationship], HP: [hp of Kyle] <- DEBUG[line break]";
+		say "DEBUG -> KyleRelationship: [KyleRelationship], HP: [HP of Kyle] <- DEBUG[line break]";
 	else:
 		say "     The lizardman before you is covered in small, bright green scales on all of his visible skin, which is more than a little owing to his lack of shirt. He is taller than average, making him stand out even more against the numerous mall rats inhabiting this place. The only item of clothing he is wearing on his lithe frame is a pair of cargo pants. Perched on his reptilian face are a pair of glasses, through which his eyes peer at you intently.";
 
@@ -287,7 +287,7 @@ to say KyleTalk5: [talk about relationship]
 			LineBreak;
 			say "     Kyle looks incredibly happy. 'Oh, man, this is gonna be great. But what should we do...' He thinks for a moment, and looks through a few things at his table. 'Okay, I've got an idea. I don't really want to head too far out, so that cuts a lot of options. But let's meet up in the Mall Atrium, and go from there. Whenever you're ready I'll see you there, and we can do this.";
 			now KyleRelationship is 6;
-			now hp of Kyle is 1;
+			now HP of Kyle is 1;
 		else:
 			LineBreak;
 			say "     Kyle looks incredibly disappointed. 'I understand. There's a lot of reasons you may not want to date at the moment, and I won't press. Just... please keep visiting me, okay?'";
@@ -305,7 +305,7 @@ to say KyleTalk5: [talk about relationship]
 			LineBreak;
 			say "     Kyle looks incredibly happy. 'Oh, man, this is gonna be great. But what should we do...' He thinks for a moment, and looks through a few things at his table. 'Okay, I've got an idea. I don't really want to head too far out, so that cuts a lot of options. But let's meet up in the Mall Atrium, and go from there. Whenever you're ready I'll see you there, and we can do this.";
 			now KyleRelationship is 6;
-			now hp of Kyle is 1;
+			now HP of Kyle is 1;
 		else:
 			LineBreak;
 			say "     Kyle looks incredibly disappointed. 'I understand. There's a lot of reasons you may not want to date at the moment, and I won't press. Just... please keep visiting me, okay?'";
@@ -316,9 +316,9 @@ to say KyleTalk6: [talk about banging]
 		now Libido of Kyle is 1;
 
 to say KyleTalk7: [ask for date]
-	if hp of Kyle is 0:
+	if HP of Kyle is 0:
 		say "     'Another date, huh?' Kyle looks at you, and smiles. 'Well, the last one was pretty great, wasn't it? Why not?' He gets up from his seat at the table, walks around, and gives you a brief hug. 'I'd love to. I suppose I'll meet up with you in the Atrium again, and we'll decide from there.'";
-		now hp of Kyle is 1;
+		now HP of Kyle is 1;
 	else:
 		say "     'Yep, I'm pretty excited for our next date. Can't wait to meet up in the Atrium for it soon. Don't keep me waiting, alright?'";
 
@@ -444,11 +444,12 @@ Object	Name
 Angry Snake	"Angry Snake"
 
 Angry Snake is a situation.
+ResolveFunction of Angry Snake is "[ResolveEvent Angry Snake]".
 The level of Angry Snake is 4.
-The sarea of Angry Snake is "High".
+Sarea of Angry Snake is "High".
 Angry Snake is inactive.
 
-instead of resolving a Angry Snake:
+to say ResolveEvent Angry Snake:
 	if GertyQuest is 1:
 		say "     As you wander the High Rise District, a sign catches your eyes. It reads 'The Read Scare', and along with the iconography, you can tell that it was clearly a bookstore at one point. Remembering your promise to Kyle, you go to check it out, and go closer. As you near the front door, however, you can hear the sounds of something happening, a disturbance in the otherwise quiet air of the city block. Alarmed, you rush in the door, only to be greeted by a strange sight. Before you are three German shepherds, standing together and growling menacingly at what seems to be a large fort constructed of books, set up between two of the bookshelves. Periodically one will inch closer, and then you finally see what's been keeping them at bay.";
 		say "     A snake-like head emerges from an opening in the fort, and soon after a mechanical looking claw device reaches out alongside, and hurls what seems to be a large, hardbound copy of War and Peace at the lead canine, shouting all the while. 'Face the wrath of Tolstoy, fiends! Get thee away! To the classics section with you!' The book was thrown expertly, and connects with an audible smack against the muzzle of the targeted feral. The German shepherd whimpers at the attack, and backs further away, his companions alongside. If your hunch is correct, then it seem Gerty has been holed up here for some time, defending himself in an unconventional manner.";
@@ -503,7 +504,7 @@ instead of resolving a Angry Snake:
 			now Resolution of Angry Snake is 3; [fled the fight]
 		now inasituation is false;
 
-instead of going to Mall Atrium while hp of Kyle is 1: [Kyle date event] [{]
+instead of going to Mall Atrium while HP of Kyle is 1: [Kyle date event] [{]
 	KyleDateEvent;
 
 to KyleDateEvent:
@@ -511,10 +512,10 @@ to KyleDateEvent:
 	say "     As you enter the main room of the mall, you see Kyle leaning up against the wall, slightly out of the way of the main crowds. You walk over to him, dodging out of the way of a mall rat as you go. When you get close, Kyle notices you, and smiles. 'Glad to see you. Now, we should probably decide what we're actually going to do for the date.' He stteps away from the wall, and glances around the atrium. 'I'm not entirely sure about leaving the mall for it, since it can be pretty dangerous out there, and I'm not really good at the whole danger thing. And I'm sure we could have an excellent time here in the mall. But I'll leave the decision to you. Where do you want to go?'";
 	if KyleRelationship < 10:
 		now KyleRelationship is 10;
-		now hp of Kyle is 0;
+		now HP of Kyle is 0;
 		say KyleDate1;
 	else:
-		now hp of Kyle is 0;
+		now HP of Kyle is 0;
 		say "[KyleDateMenu]";
 
 to say KyleDateMenu:

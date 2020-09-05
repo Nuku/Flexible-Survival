@@ -11,10 +11,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Egyptian Wing	"Egyptian Wing"
 
-Egyptian Wing is a situation. The level of Egyptian Wing is 10.
-The sarea of Egyptian Wing is "Museum".
+Egyptian Wing is a situation.
+ResolveFunction of Egyptian Wing is "[ResolveEvent Egyptian Wing]".
+The level of Egyptian Wing is 10.
+Sarea of Egyptian Wing is "Museum".
 
-Instead of Resolving a Egyptian Wing:
+to say ResolveEvent Egyptian Wing:
 	say "     Exploring the halls of the city's museum, you're amazed at the sheer amount of archaic objects on display; artifacts and relics from across the globe are here, objects from different times in humanity's lifetime proudly presented throughout the hallways of the Museum. Haphazardly choosing a corridor to follow, you continue to be astounded by the insane amount of history and knowledge present, learning so much in your brief jaunts through the labyrinthine passages. So enraptured by the exhibits within, you almost barge straight into an information sigh standing in the middle of the corridor, barely preventing yourself from bashing yourself against it. Glaring irritatedly at the offending signpost, you take a second to read the notice, wondering what's so important that someone left it in the middle of the hallway. Displayed in bold lettering across the paper tacked to the signpost is:";
 	LineBreak;
 	say "     [bold type]   The Egyptian Wing[roman type][line break]";
@@ -24,7 +26,7 @@ Instead of Resolving a Egyptian Wing:
 	WaitLineBreak;
 	say "     You recall that this is where Valerie said that she was in when the nanite outbreak began; you can only begin to imagine what wonders await you in the exhibits ahead. Grabbing your map, you mark down the location of the Egyptian Wing; you don't want to forget how to get here.";
 	move player to Egypt Wing Entrance;
-	now Egypt Wing Entrance is known;
+	AddNavPoint Egypt Wing Entrance;
 	now Egyptian Wing is resolved;
 
 [Jade Scarab event located in Sarokcat's Consolidated Museum file]
@@ -34,14 +36,15 @@ Object	Name
 Finding Winged Orb	"Finding Winged Orb"
 
 Finding Winged Orb is a situation.
+ResolveFunction of Finding Winged Orb is "[ResolveEvent Finding Winged Orb]".
 Finding Winged Orb is inactive. [activated by accepting Amuran's quest]
-The sarea of Finding Winged Orb is "Park".
+Sarea of Finding Winged Orb is "Park".
 
 an everyturn rule:
 	if Finding Winged Orb is inactive and (AmuranAwoken is 2 or AmuranAwoken > 3):
 		now Finding Winged Orb is active;
 
-instead of resolving Finding Winged Orb:
+to say ResolveEvent Finding Winged Orb:
 	say "     Walking through what used to be the city park, you're struck by how much the park has changed. The trees haven't been trimmed in forever, grass is now overrunning the sidewalks; the park is not in a good state. An unfamiliar glint catches your eye as you contemplate the park, however, glimmering out from a nearby tree. Carefully looking around, you check to make sure no one is nearby; seeing no creatures present, you carefully approach the tree, wondering what could be shining so brightly.";
 	say "     You eventually come to the tree that's so brightly shining, still on the lookout for any sex-crazed creatures. Finally glimpsing the object stuck in the tree, surprise soon overwhelms you at what lies buried within it. An elegant, ornate emblem protrudes from the majestic tree, somehow partially buried in the trunk. From the glances you can see, it looks as if the emblem resembles the carving on Amuran's sarcophagus; a circle with two majestic wings protruding from its sides. This has to be one of Amuran's sigils, somehow buried partially within the tree. Taking a large breath and steeling yourself for what you have to do, you grab onto a thick branch and begin to climb the tree; the artifact is only a few feet up.";
 	let bonus be ((dexterity of Player minus 10) divided by 2);
@@ -58,7 +61,7 @@ instead of resolving Finding Winged Orb:
 		else:
 			say "     Exhausted after your battle, you're still happy that you were able to find one of the sigils that Amuran needs. Hoisting yourself up, you ready yourself to continue, remembering to deliver the emblem to the divine servant.";
 		now Resolution of Finding Winged Orb is 2; [fell out of the tree]
-	increase carried of winged sun by 1;
+	ItemGain winged sun by 1;
 	now Finding Winged Orb is resolved;
 
 Section 2 - Areas and Rooms
@@ -100,7 +103,7 @@ Sanctum of Horus	"Sanctum of Horus"
 Sanctum of Horus is a room.
 
 [Egypt Wing Entrance]
-The description of Egypt Wing Entrance is "[EgyptWingEntrDesc]".
+Description of Egypt Wing Entrance is "[EgyptWingEntrDesc]".
 
 to say EgyptWingEntrDesc:
 	say "     Stretching out before your gaze is the Egyptian exhibit of the city's museum. While much of this exhibit is crumbling or destroyed as a result of recent events, the areas that are unscathed provide an incredible amount of awe and wonder. The unbroken glass cases ahead of you hold gold jewelry and ancient tablets, while displays of archaic pottery contend to the craftsmanship of the ancient Egyptians. Looking forward, you see that a large foyer is ahead, providing access to the rest of the intact wing.";
@@ -110,7 +113,7 @@ instead of sniffing Egypt Wing Entrance:
 Egyptian Wing Foyer is north of Egypt Wing Entrance.
 
 [Egyptian Wing Foyer]
-The description of Egyptian Wing Foyer is "[EgyptWingFoyerDesc]".
+Description of Egyptian Wing Foyer is "[EgyptWingFoyerDesc]".
 
 to say EgyptWingFoyerDesc: [East passage left for possible further expansions]
 	say "     This section of the museum wing serves as the foyer of the Egyptian exhibits. Paintings and tapestries hang along the wall, depicting stories, gods and peoples long forgotten. A few glass cases still remain unbroken, displaying simple artifacts with little seeable value. Pieces of broken glass and pottery line the floor, the current occupants of the Museum obviously not concerned with historical preservation. To the east lied a passage further into the Egyptian Wing, but a recent collapse has blocked off that hallway. Further ahead, what looks to be some sort of large artifact lies in the passage ahead, heavily peaking your curiosity. Lastly, westward lies a very plain room, bare of glass displays or other artifacts.";
@@ -123,7 +126,7 @@ Egypt Wing Entrance is south of Egyptian Wing Foyer.
 Mythical Murals is east of Egyptian Wing Foyer.
 
 [Mythical Mural]
-The description of Mythical Murals is "[MythicalMuralDesc]".
+Description of Mythical Murals is "[MythicalMuralDesc]".
 
 to say MythicalMuralDesc:
 	say "     Thinking that this room was barren, you're astounded as you enter this place; your previous observation was entirely mistaken. Lining the walls of this room are gargantuan murals, preserved almost perfectly in thick glass cases. Scenes and people unknown to you are depicted beautifully on the hardy papyrus rolls, spelling out some of the myths and beliefs of the long-dead Egyptians. Looking across them, you're able to see that there are three separate canvases present, one on each wall. You consider trying to [bold type]analyze[roman type] the large [bold type]murals[roman type], to see if you're able to decipher what they are portraying.";
@@ -148,7 +151,7 @@ carry out EgyptMuralExamine:
 		say "     On the other side of this mural, under the watchful gaze of Osiris, the people of Egypt bow before their rightful pharaoh. Men, women, and children kneel down in front of his throne, giving themselves over to the rule of Osiris. This mural is obviously depicting the time when Osiris was the ruling pharaoh of Egypt, bringing forward an age of prosperity for the empire of the Nile.";
 		WaitLineBreak;
 		say "     Walking over to the eastern mural, you find this one much less jovial. Two men are displayed on the left side of the mural, one of them Osiris, pharaoh of Egypt. The other man, standing behind Osiris, can only be Set, the god of violence and chaos. Tricking Osiris into getting into a wooden box, Set seals Osiris within it, filling the box with lead and throwing it into the Nile. Set brutally ends the reign of Osiris, Set's jealousy having proven the victor.";
-		say "     Searching throughout Egypt, Isis, the husband of Osiris, hunted for his corpse; she finally founds it embedded within a wooden pillar within a palace along the Phoenician coast. Removing the coffin of her husband, she finds Osiris dead, Set's violent methods having killed the king of Egypt. Reciting a spell of revival, Isis brings Osiris's body to life, with the subsequent intimate relations resulting in Isis's insemination. Her spell soon wears off, and Osiris once again dies.";
+		say "     Searching throughout Egypt, Isis, the wife of Osiris, hunted for his corpse; she finally finds it embedded within a wooden pillar within a palace along the Phoenician coast. Removing the coffin of her husband, she finds Osiris dead, Set's violent methods having killed the king of Egypt. Reciting a spell of revival, Isis brings Osiris's body to life, with the subsequent intimate relations resulting in Isis's insemination. Her spell soon wears off, and Osiris once again dies.";
 		say "     Continuing the story on the right side of this mural, you see Isis hiding Osiris's body somewhere in Egypt, away from the wrathful vengeance of Set. Retreating herself into the desert, she soon births a son; Horus, lord of the sky. Set, having found out what Isis had done, hunts throughout Egypt for her and her son. Stumbling upon the body of Osiris, Set flies into a vengeful rage and tears his body into pieces, scattering them across Egypt.";
 		WaitLineBreak;
 		say "     Wandering over to the final mural, you can tell that the finale is still before you. Already having raised Horus to adulthood, Isis once again travels through Egypt, collecting the dismembered parts of her husband. Reconstructing Osiris's body and mummifying him, Isis prepares Osiris for the traditional burial of the Egyptian people. Watching her dedication to Osiris, the rest of the Egyptian pantheon admires her love of Osiris; together, the pantheon resurrects Osiris, who thusly becomes the undead god of the underworld.";
@@ -158,7 +161,7 @@ carry out EgyptMuralExamine:
 		say "     Putting your mind to the task of deciphering these paintings, you use all of your knowledge to try and figure out what these walls say. However, despite all of your thought, you are unable to make any progress on finding what these murals say. Sighing to yourself, you decide that it may be best to come back later, when you've learned more.";
 
 [Golden Doors]
-The description of Golden Doors is "[GoldenDoorsDesc]".
+Description of Golden Doors is "[GoldenDoorsDesc]".
 
 EgyptianRiddle is a number that varies.
 MenuRiddleNumber is a number that varies.
@@ -291,7 +294,7 @@ instead of going west from Golden Doors while SethTempleNumber is 1:
 	say "     A large stone door blocks your path forward; the temple has been sealed by a force unknown.";
 
 [Temple of Set]
-The description of Temple of Set is "[TempleOfSetDesc]".
+Description of Temple of Set is "[TempleOfSetDesc]".
 
 to say TempleOfSetDesc:
 	say "     Walking into the inky shadow of this room, you squint your eyes as you examine the room, trying your best to work out what's in here. The only light you have are from lit torches along the wall, shining low light throughout the strange alcove. As your eyes slowly adjust to the darkness, a large statue exposes itself to you, standing watchfully in the back of the room. [if intelligence of Player > 15]You immediately recognize this as a statue of Set, Egyptian lord of chaos[else]You don't know the significance of the statue, but you feel very intimidated by it[end if]. Build in front of the imposing statue is a simple stone altar, a few lines of hieroglyphics lining the sides of the table. On each side of the altar lie sizable stone statues. Jackal-headed guards watch over the shrine, holding deadly metal blades.";
@@ -320,7 +323,7 @@ carry out SwordOfSeth:
 		challenge "Jackal Guard";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     Having vanquished the stone guardians and claimed the ancient sword, you leave the temple as a massive stone door seals it behind you. You're shocked at the sudden thump of the closing door, and you can only wonder if you've earned the ire of a powerful being...";
-			now carried of ancient blade is 1;
+			ItemGain ancient blade by 1;
 			now SethTempleNumber is 1;
 			move player to Golden Doors;
 	if fightoutcome >= 20 and fightoutcome <= 29:
@@ -334,7 +337,7 @@ carry out SwordOfSeth:
 	now inasituation is false;
 
 [Sanctum of Horus]
-The description of Sanctum of Horus is "[SanctumOfHorusDesc]";
+Description of Sanctum of Horus is "[SanctumOfHorusDesc]";
 
 AmuranAwoken is a number that varies.
 
@@ -413,7 +416,7 @@ instead of conversing Amuran:
 		StatChange "Intelligence" by 1;
 		StatChange "Perception" by 1;
 		increase lust of Amuran by 1;
-		decrease carried of jade scarab by 1;
+		ItemLoss jade scarab by 1;
 	else if carried of winged sun is 1:
 		say "     Unsurprisingly, you see that Amuran has (probably) not moved from his sitting position since you've last seen him; he's still sitting in front of the glimmering pool of water, meditating peacefully. Quietly approaching him, you quickly figure out that he still does not notice you. Once again tapping his shoulder, he soon turns to look at you, letting you talk first. Searching around in your pack for his emblem, you pull out the winged sun and hand it to him, giving him back one of his godly conduits.";
 		say "     Rapidly closing his chitinous hands over his sigil, beams of light begin to emanate from the emblem, shining out brilliantly in the warm air surrounding you. In a few seconds, a blast of orange light shoots out from the shining emblem; as the light fades, it seems that the sigil is gone. Standing in front of you is a contented-looking Amuran, stretching out happily in the shining rays of the sun.";
@@ -423,7 +426,7 @@ instead of conversing Amuran:
 		StatChange "Dexterity" by 1;
 		StatChange "Stamina" by 1;
 		increase lust of Amuran by 1;
-		decrease carried of winged sun by 1;
+		ItemLoss winged sun by 1;
 	else if lust of Amuran is 2:
 		say "     Approaching the meditating insect-man, you're quite surprised when Amuran turns to notice you first, instead of you having to patiently wait for him. Nonchalantly rising to his chitinous claws and turning to you, he crosses his arms over his chest and bows to you; most likely thanking you for the return of his abilities. Finishing his wordless thanks a few moments later, he rises to his full majesty before speaking.";
 		say "     'I must award my sincerest of thanks, young one, for the assistance you have rendered me. It would have been many a twilight before I could have departed this holy temple, lost so as my power was. Now, however, I return to full strength, and can carry out my task.' Telling him that you were quite happy to help, you ask what he has to do to find this relic.";
@@ -452,7 +455,7 @@ instead of conversing Amuran:
 				follow the turnpass rule;
 				say "     Your trek continues onwards for another few hours. During the explorations, you and Amuran talk about your lives and experiences, figuring out more about each other. While your adventures cannot hold a candle to the things Amuran has seen or done, he still seems quite interested in [']normal['] mortal life.";
 				say "     Finally, you come across the area that Amuran must have seen. Smoke and dust fills the air ahead of you, the ruins of buildings burning with everlasting fires. Releasing a heavy sigh, Amuran speaks: 'Yes, this is the place that I saw.' Turning to look at you, he continues: 'We must venture into the burning ruins. As always, be on guard, young one.'";
-				now Approaching the Capitol Building is known;
+				AddNavPoint Approaching the Capitol Building;
 				now lust of Amuran is 0;
 				now HP of Amuran is 6;
 				say "[AmuranFinalQuest]";
@@ -475,9 +478,9 @@ object	name
 Amuran	"Amuran"
 
 Amuran is a man.
-The description of Amuran is "[AmuranDescription]";
+Description of Amuran is "[AmuranDescription]";
 
-The conversation of Amuran is { "Spooky Scary Scarab Beetle." }.
+Conversation of Amuran is { "Spooky Scary Scarab Beetle." }.
 The scent of Amuran is "     The insectoid man smells of magic and sand, evoking memories of places long-forgotten.";
 
 instead of fucking Amuran:
@@ -696,17 +699,8 @@ to say AmuranCuntStuffed:
 
 Section X - Items
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"ancient blade"	"An ancient sword of Egyptian make, the blade looks as if it was forged yesterday. Hieroglyphics are carved into the blade, telling stories that are long forgotten."	6	ancient blade
+[Ancient Blade moved to Core Mechanics/Weapons.i7x]
 
-ancient blade is an armament.
-It is part of the player.
-It has a weapon "[one of]the ancient blade[or]the Egyptian blade[or]the warrior's blade[at random]".
-The weapon damage of ancient blade is 15.
-The weapon type of ancient blade is "Melee".
-It is not temporary.
-the scent of ancient blade is "The weapon smells of forged metal, with a hint of dirt and dust.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -714,9 +708,9 @@ name	desc	weight	object
 
 jade scarab is a grab object.
 it is not temporary.
-it is part of the player.
+
 the scent of jade scarab is "The metal scarab smells of metal, with a faint hint of something you can't recall...".
-the usedesc of jade scarab is "[JadeScarabUse]".
+Usedesc of jade scarab is "[JadeScarabUse]".
 
 to say JadeScarabUse:
 	LineBreak;
@@ -729,9 +723,9 @@ name	desc	weight	object
 
 winged sun is a grab object.
 it is not temporary.
-it is part of the player.
+
 the scent of winged sun is "You're overwhelmed with the scent of hot, dry air; it's almost like you're standing on the surface of the sun.".
-the usedesc of winged sun is "[WingedSunUse]".
+Usedesc of winged sun is "[WingedSunUse]".
 
 to say WingedSunUse:
 	LineBreak;

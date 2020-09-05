@@ -46,8 +46,8 @@ OralVirgin of Arcanologist is true.
 Virgin of Arcanologist is true.
 AnalVirgin of Arcanologist is true.
 
-The description of Arcanologist is "[ArcanologistDesc]".
-The conversation of Arcanologist is { "mew" }.
+Description of Arcanologist is "[ArcanologistDesc]".
+Conversation of Arcanologist is { "mew" }.
 [Arcanologist is in ???]
 
 The scent of Arcanologist is "[ArcanologistScent]";

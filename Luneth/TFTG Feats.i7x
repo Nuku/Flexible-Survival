@@ -3,10 +3,15 @@ Version 1 of TFTG Feats by Luneth begins here.
 Section 1 - Artemis's Disciple/Apollo's Disciple
 [These two feats main focus is creating both good and bad game ends focused on males becoming permanent females and vice versa with no chance of going back. This will also be paired up with the Brutalist/Worthless feats eventually. Side note: once the appearance content is added to descriptions this will also effect that.]
 
-Divine Twins is a situation.
-the sarea of Divine Twins is "Museum".
+Table of GameEventIDs (continued)
+Object	Name
+Divine Twins	"Divine Twins"
 
-instead of resolving Divine Twins:
+Divine Twins is a situation.
+ResolveFunction of Divine Twins is "[ResolveEvent Divine Twins]".
+Sarea of Divine Twins is "Museum".
+
+to say ResolveEvent Divine Twins:
 	say "     Continuing to explore the Museum, your attention is drawn to what sounds like a heated argument. Choosing to listen in on what they are fighting about, you identify that one voice is male while the other is female. The woman has a regal voice, but at the same time, there is an edge to it that speaks volumes about how it would not be wise to cross her. 'Brother, we both know that women should be the ones that should be in control. Looking at the state of this world is proof enough of this fact!' Her sibling has the same regality in his voice, however he seems to be far quicker to anger. 'The only reason that this place has advanced as far as it has is strictly because men have been the ones in charge! Females are built for nothing more than serving males and procreation!' The disagreement is clearly over gender superiority.";
 	LineBreak;
 	say "     [bold type]Do you really want to get involved in this situation?[roman type][line break]";

@@ -11,7 +11,7 @@ Object	Name
 Overgrown Area	"Overgrown Area"
 
 Overgrown Area is a Room.
-The description of Overgrown Area is "[OvergrownBlockDesc]";
+Description of Overgrown Area is "[OvergrownBlockDesc]";
 
 to say OvergrownBlockDesc:
 	if daytimer is night:	[night]
@@ -51,15 +51,15 @@ name	desc	weight	object
 "hellhound collar"	"[HCollarDesc]"	1	hellhound collar
 
 hellhound collar is a grab object.
-the usedesc of hellhound collar is "[HCollarUse]".
+Usedesc of hellhound collar is "[HCollarUse]".
 It is not temporary.
 
 hellhound collar is a grab object.
 hellhound collar is equipment.
 hellhound collar is cursed.
 It is not temporary.
-The plural of hellhound collar is false.
-The taur-compatible of hellhound collar is true.
+Plural of hellhound collar is false.
+Taur-compatible of hellhound collar is true.
 The size of hellhound collar is 0.
 The AC of hellhound collar is 0.
 The effectiveness of hellhound collar is 0.
@@ -150,7 +150,7 @@ to Hellhound infect female:
 	WaitLineBreak;
 	say "     You wake up several hours later with your clothing torn to ribbons and slimy, yellow-tinged seed forming a puddle between your legs. Feeling your neck, there is a seamless leather collar, engraved with strange infernal characters tightly wrapped around it. Somehow you've been brought back to the bunker, and true to the demon dog's words, you no longer show any signs of the infection. You seem to have been completely restored to a human form... except for one place. Between your legs is a lewd dripping demon bitch twat, swollen and puffy, leaking the hellhound's piss and cum as you hear a chuckle in your mind. 'Such a pretty bitch you are. Please, go out and enjoy yourself. You are now immune to the changes, just as I promised, as one of us. You will easily return to the form you want to hold, with one or two things that can't be hidden. Such are the rules, there must always be SOME kind visible proof or our infernal origins. Return to me once you a properly... ready,' the voice says, fading out and leaving you alone with your thoughts in the bunker.";
 	say "     Your insides clench with a fiery heat, longing to have a litter of hellhound pups gestating inside you.";
-	increase carried of hellhound collar by 1;
+	ItemGain hellhound collar by 1;
 	repeat with z running through equipped equipment:
 		if slot of z is "neck":
 			now z is not equipped;
@@ -190,7 +190,7 @@ to Hellhound infect male:
 	WaitLineBreak;
 	say "     You wake up several hours later, your clothing torn to ribbons. Feeling your neck, there is a seamless leather collar, engraved with strange infernal characters tightly wrapped around it. Somehow you've been brought back to the bunker, and true to the demon-dog's words, you no longer show any signs of the infection. You seem to have been completely restored to a human form... except for one place. Glancing down, you have the dirty and fouled hellhound shaft from the night before, dried up cum peeling from your skin and making the fur clump together. As you try and take this development in, you hear a chuckle in your mind 'Mmmmmmm, that WAS an enjoyable night, puppy. But you're not quite up to the task yet. You are not ready to be a male in my pack. Return to me once you have a little more... experience,' the voice fades away, leaving you alone with your thoughts in the bunker.";
 	say "     An unholy urge fills you as rub at yourself through your pants. Females, bitches - you need to fill them with your seed.";
-	increase carried of hellhound collar by 1;
+	ItemGain hellhound collar by 1;
 	repeat with z running through equipped equipment:
 		if slot of z is "neck":
 			now z is not equipped;
@@ -213,7 +213,7 @@ to Hellhound infect male:
 	now SleepRhythm of Player is 0;
 	now Cock Count of Player is 1;
 	now Cock Length of Player is 6;
-	now the Ball Size of the player is 4;
+	now the Ball Size of Player is 4;
 	now Nipple Count of Player is 2;
 	now Breast Size of Player is 0;
 	now Libido of Player is 100;
@@ -288,19 +288,19 @@ every turn (This is the check Hellhound rule):
 			if FaceName of Player is not "Hellhound":
 				LineBreak;
 				now FaceName of Player is "Hellhound";
-				now Face of Player is "leather dog collar around your neck, and a charmingly human";
+				now Face of Player is "charmingly human, with a leather dog collar around your neck";
 				say "     Your face seems to heat up, and feel like soft putty for a few moments as the Hellhound's [']gift['] returns your face to its original, human configuration.";
 			if BodyName of Player is not "Hellhound":
 				LineBreak;
 				now BodyName of Player is "Hellhound";
 				if maleHound is True:
-					now Body of Player is "appears perfectly human at first. But sprouting between your legs is a sheath and coarse fur that remains dirty no matter how much you attempt to clean yourself";
+					now Body of Player is "perfectly human at first glance, but sprouting between your legs is a sheath and coarse fur that remains dirty no matter how much you attempt to clean yourself";
 					now scalevalue of Player is 3;
 					now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
 					now bodytype of Player is "human";
 					now SleepRhythm of Player is 0;
 				else:
-					now Body of Player is "appears perfectly human at first. But on your belly there are six nipples, and between your legs rests a swollen, permanently in-heat Hellhound twat";
+					now Body of Player is "perfectly human at first glance, but between your legs rests a swollen, permanently in-heat Hellhound twat";
 					now scalevalue of Player is 3;
 					now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
 					now bodytype of Player is "human";
@@ -313,10 +313,13 @@ every turn (This is the check Hellhound rule):
 				now Cunt Count of Player is 0;
 				now Cock Count of Player is 1;
 				now Cock Length of Player is 6;
-				now the Ball Size of the player is 4;
+				now the Ball Size of Player is 4;
 				now Cunt Depth of Player is 0;
 				now Cunt Tightness of Player is 0;
-				now Nipple Count of Player is 2;
+				if maleHound is True:
+					now Nipple Count of Player is 2;
+				else:
+					now Nipple Count of Player is 6;
 				now Breast Size of Player is 0;
 			else:
 				if Player is male:
@@ -334,7 +337,7 @@ every turn (This is the check Hellhound rule):
 				now hellHoundLevel is 2;
 				say "     As you surrender your humanity, the hellhound's [']gift['] starts to manifest as the curse it truly is. Your mind starts to embrace the perverted and foul nature that the infernal mutt inflicted upon you. A soft chuckle echoes through your mind and, in your backpack, your journal turns to dust.";
 				say "     You also get an unsettling urge to return to where you first encountered the infernal hound.";
-				delete journal;
+				ItemLoss journal by 1;
 			if SkinName of Player is not "Hellhound":
 				LineBreak;
 				now SkinName of Player is "Hellhound";
@@ -373,7 +376,7 @@ every turn (This is the check Hellhound rule):
 				now Cunt Count of Player is 0;
 				now Cock Count of Player is 1;
 				now Cock Length of Player is 6;
-				now the Ball Size of the player is 4;
+				now the Ball Size of Player is 4;
 				now Cunt Depth of Player is 0;
 				now Cunt Tightness of Player is 0;
 				now Nipple Count of Player is 2;
@@ -392,7 +395,7 @@ every turn (This is the check Hellhound rule):
 			if hellHoundLevel < 3:
 				now hellHoundLevel is 3;
 				say "     You surrender completely, abandoning your humanity and embracing your infernal nature. Nothing matters to you any more besides pleasure and breeding, spawning as many of your kind as possible.";
-				delete journal;
+				ItemLoss journal by 1;
 			if SkinName of Player is not "Hellhound":
 				LineBreak;
 				now SkinName of Player is "Hellhound";
@@ -431,7 +434,7 @@ every turn (This is the check Hellhound rule):
 				now Cunt Count of Player is 0;
 				now Cock Count of Player is 1;
 				now Cock Length of Player is 6;
-				now the Ball Size of the player is 4;
+				now the Ball Size of Player is 4;
 				now Cunt Depth of Player is 0;
 				now Cunt Tightness of Player is 0;
 				now Nipple Count of Player is 2;
@@ -686,7 +689,7 @@ This is the Hellhound Curse rule:
 		else if mousecurse is 1:											[chosen by the mouse-collective]
 			say "     As your mind fades, more and more of your infernal taint comes to the fore, hands becoming paws, face stretching out into a muzzle, coarse dirty fur spreading all over your body. But then Rachel is there, holding you tightly in her small arms, somehow her weak arms able to hold back the powerful force of your infernal pact. As your mate clutches to you, you can feel her mind pushing against that dark power. Soon you can feel somewhere above her mind, greater than it, the collective hive-mind of all the mice, focused on this. Your body starts changing again, becoming more mouse-like this time until you are fully a mouse like your loving mate and the other mice of the collective, though of the same gender as you were before. The darkness fades as the bond of the dark pact is shattered by their mental might, freeing you to become fully one of them instead.";
 			say "[fullmousification]";
-		else if HP of the player > 0:
+		else if HP of Player > 0:
 			follow the check hellhound rule;
 			if maleHound is true:
 				if churchangelprisoner is true:

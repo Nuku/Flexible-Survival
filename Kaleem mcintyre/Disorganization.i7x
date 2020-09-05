@@ -9,14 +9,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Disorganization	"Disorganization"
 
-Disorganization is a situation. The level of Disorganization is 9.
+Disorganization is a situation.
+ResolveFunction of Disorganization is "[ResolveEvent Disorganization]". The level of Disorganization is 9.
 DRS is a number that varies.[@Tag:NotSaved]
 when play begins:
 	add Disorganization to BadSpots of FurryList;
 	add Disorganization to BadSpots of MaleList;
 	add Disorganization to badspots of HermList;
 
-Instead of resolving Disorganization:
+to say ResolveEvent Disorganization:
 	If drs is 0:
 		say "     Walking through the dimly lit alleyways of the city, you manage to come across a lump of a figure lying prone on the trash strewn ground. Cautious as to who or rather what this might be, you carefully pad your way over to the thing, ready to run away at a moment's notice. Hoping vehemently that the thing is not some lust drunk mutant taking a nap, you pad closer and closer until the rotting scent of decay actually starts to cloy against your sinuses. When the figure doesn't immediately wake after you poke at it several times, you find yourself calming down slightly as you realize that it's you're dealing with the dead body of a soldier instead of some other kind of freak.";
 		say "     It's sad that sights like this are becoming normal. Idle curiosity makes you wonder how the armed forces member died out here like this. The spatter of blood around the other's head has you guessing that it must have been a head wound, but you aren't going to flip the person over to find out, the soldier was lying face down so you can only see his/her backside. Pulling backwards and then saying a quiet utterance of a prayer, you somberly turn from the dead figure to leave, however, before you can do so a voice suddenly calls out making you jumping almost a foot into the air.";
@@ -31,8 +32,8 @@ Instead of resolving Disorganization:
 		say "     You're not sure what to do, but maybe it wouldn't be so bad to do this for the other man. Considering the friend he lost and all it might be good for you to see if you can wheedle some way to escape from out of this place before everything goes completely to hell. A positive response from you has the man sighing and then laughing slightly in relief. 'Thanks. I appreciate this. Also, please take those dog tags and this transceiver with you. The recon team, if they're still alive and sane, will want them as proof of validity to who you say you are.' You nod, even though the other can't see you. 'Thanks again. Hey, this might be seen as in bad taste, but one has to get paid for their work and all so take whatever you find useful from my buddy and use it to stay alive.'";
 		WaitLineBreak;
 		say "     At that the person on the opposite end of the communication line drops the call. You wonder if this is really happening. Is the world really going so crazy right now or are you having a nightmare that you can't seem to wake up from? Looking into the dead soldier's half open eyes you calmly reassure yourself that this could never be a bad dream, it's just too horrible to be anything out of even your most twisted of fantasies. You close the canid-man's eyes before searching through his gear.";
-		increase carried of water bottle by 1;
-		increase carried of food by 1;
+		ItemGain water bottle by 1;
+		ItemGain food by 1;
 		decrease Libido of Player by 30;
 		if Libido of Player < 0, now Libido of Player is 0;
 		now drs is 1;
@@ -53,7 +54,7 @@ Instead of resolving Disorganization:
 			say "     Reaching out and pulling at the other man's arm you fight with him to stop the changing mutant from killing himself, a flashback to the other dead soldier making you somewhat frantic as you don't want to see a repeat of this past happening played out in full detail! The struggle lasts for several seconds, the transforming mutant putting up a really good fight despite your resolve, but eventually his superior skills at hand-to-hand end up with you being pushed back against away from him. 'Why in the hell are you trying to stop me!' The other shouts and you can't help but shout back that this isn't the way to go out.";
 			WaitLineBreak;
 			say "     That he's a soldier and that soldiers are made of harder stuff than this! 'Heheh, soldier? Are you kidding? Look at me!?' The other man points down, and though you don't want to look, knowing what's happening down there already, you find your gaze taking you to the sight of the man's penis shrinking while dribbles of milky white hot female honey oozed down underneath his balls, no doubt from the opening of his new cunt. 'I'll barely be a man in a couple of hours! You really think I want to live like this for the rest of my life? As some bitch to a fucking freak?!";
-			let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+			let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus]:[line break]";
 			increase diceroll by bonus;
@@ -93,7 +94,7 @@ Instead of resolving Disorganization:
 			LineBreak;
 			say "     Common sense fails you as you walk over to the other, warily though, to see if you can offer aid. When you speak out to draw the other's you find yourself flustering however, as the face of a rubbery latex fox looks back at you with a happy smile on its shiny orangish-red muzzle. The moan from before seems to have come from the creature trying to get itself off. You groan as you shake your head and then back away, really you think to yourself, you should have known better than that in this creepy place. However, before you pull away completely you find your eyes catching the sight of something glinting around the vulpine's neck.";
 			say "     A thick gulp makes and a shudder later you nervously you take a few steps closer to the creature. What you see, as you again had feared is that around the critter's throat there are silver dog tags hanging limply down onto the mutant's chest. Looking to the thing and then seeing that it is staring at you with confused, yet intelligent eyes you chance going over to try and grab the things from off of the other's neck. A part of you hoping desperately that the mutant doesn't try to attack you.";
-			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+			let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
@@ -143,11 +144,11 @@ Instead of resolving Disorganization:
 		StatChange "perception" by 1;
 		StatChange "intelligence" by 1;
 		decrease morale of Player by 15;
-		increase carried of food by 2;
-		increase carried of water bottle by 2;
-		increase carried of chips by 1;
-		increase carried of medkit by 1;
-		increase carried of pepperspray by 1;
+		ItemGain food by 2;
+		ItemGain water bottle by 2;
+		ItemGain chips by 1;
+		ItemGain medkit by 1;
+		ItemGain pepperspray by 1;
 		increase score by 50;
 		extend game by 8;
 		now Disorganization is resolved;

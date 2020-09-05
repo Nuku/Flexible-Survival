@@ -12,9 +12,10 @@ Object	Name
 dragatorspot	"dragatorspot"
 
 dragatorspot is a situation.
-The sarea of dragatorspot is "Capitol".
+ResolveFunction of dragatorspot is "[ResolveEvent dragatorspot]".
+Sarea of dragatorspot is "Capitol".
 
-Instead of resolving dragatorspot:
+to say ResolveEvent dragatorspot:
 	say "     Down the street, you spot a crocodile-like beast. It has six legs and is covered in dark purple scales - one of the ebonflame dragators. You watch it with sympathy as it knocks over trash cans and uses its huge jaws and teeth to rummage through the refuse. Such a stupid, unclean creature is easily avoided.";
 	increase score by 1;
 	now dragatorspot is resolved;
@@ -24,10 +25,11 @@ Object	Name
 whelpspot	"whelpspot"
 
 whelpspot is a situation.
-The sarea of whelpspot is "Capitol".
+ResolveFunction of whelpspot is "[ResolveEvent whelpspot]".
+Sarea of whelpspot is "Capitol".
 whelpspotnum is a number that varies.
 
-Instead of resolving whelpspot:
+to say ResolveEvent whelpspot:
 	say "     A shadow darts overhead and you instinctively dive for cover. Hiding in an abandoned car, you watch worriedly while a flock of [one of]dark[or]ebonflame[stopping] whelps swoops overhead. They do not linger long, heading off in the direction of the Capitol Building.";
 	increase score by 1;
 	increase whelpspotnum by 1;
@@ -41,9 +43,10 @@ Object	Name
 Ebonflame Nest	"Ebonflame Nest"
 
 Ebonflame Nest is a situation.
-The sarea of Ebonflame Nest is "Capitol".
+ResolveFunction of Ebonflame Nest is "[ResolveEvent Ebonflame Nest]".
+Sarea of Ebonflame Nest is "Capitol".
 
-Instead of resolving Ebonflame Nest:
+to say ResolveEvent Ebonflame Nest:
 	setmonster "Ebonflame Whelp";
 	say "     Upon your travels across this blasted parts of the city, you ";
 	let bonus be ( perception of Player - 10 ) / 2;
@@ -136,8 +139,8 @@ to say ebonflamegauntlet:
 			break;
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Finishing yet another off, what couple stragglers remain scatter and flee from you. Eyeing some food and water left in their wake, you grab it before departing, returning to the wrecked city.";
-		increase carried of food by 1;
-		increase carried of water bottle by 1;
+		ItemGain food by 1;
+		ItemGain water bottle by 1;
 		now Resolution of Ebonflame Nest is 1; [fought and won]
 
 
@@ -148,9 +151,10 @@ Object	Name
 Strange Meeting	"Strange Meeting"
 
 Strange Meeting is a situation.
-The sarea of Strange Meeting is "Capitol".
+ResolveFunction of Strange Meeting is "[ResolveEvent Strange Meeting]".
+Sarea of Strange Meeting is "Capitol".
 
-Instead of resolving Strange Meeting:
+to say ResolveEvent Strange Meeting:
 	say "     Traveling through the ruined area, you happen upon what appears to be a set of ebonflame dragonkin in the distance. Thankfully not being spotted, you duck behind some rubble, watching what they do.";
 	say "     They appear to just be standing there, one drake flanked by a pair of dragators, their intent soon made somewhat clear when a new party - a set of dark elves - calmly advance upon them. You imagine this would be rather odd for the two to meet in this manner, and it's clear that they share this sentiment as they look none too fond of this arrangement.";
 	say "     Too far to hear what they actually say, they seem to be arguing over something, tossing accusations left and right and not really coming to any agreement. It would appear that tension is running high enough that they might turn on each other before they're interrupted when a sound from the open area, opposite to you, draws their attention.";
@@ -165,9 +169,10 @@ Object	Name
 Failed Escape	"Failed Escape"
 
 Failed Escape is a situation.
-The sarea of Failed Escape is "Capitol".
+ResolveFunction of Failed Escape is "[ResolveEvent Failed Escape]".
+Sarea of Failed Escape is "Capitol".
 
-Instead of resolving Failed Escape:
+to say ResolveEvent Failed Escape:
 	say "     You encounter what appears to be a crashed military helicopter. Its equipment is completely roasted and its once-occupants are nowhere to be found. Upon closer inspection, there appears to be the stains of some sexual fluids, long since dried and caked on the charred surfaces, perhaps inferring the fate of those who tried to escape on this.";
 	now Failed Escape is resolved;
 
@@ -179,9 +184,10 @@ Object	Name
 Charred Pickets	"Charred Pickets"
 
 Charred Pickets is a situation.
-The sarea of Charred Pickets is "Capitol".
+ResolveFunction of Charred Pickets is "[ResolveEvent Charred Pickets]".
+Sarea of Charred Pickets is "Capitol".
 
-Instead of resolving Charred Pickets:
+to say ResolveEvent Charred Pickets:
 	say "     You manage to find some peculiar picket signs strewn about a small area, too burnt up to make out what they might have been for. You imagine that the people carrying these signs were rudely interrupted in the middle of their protest.";
 	now charred pickets is resolved;
 

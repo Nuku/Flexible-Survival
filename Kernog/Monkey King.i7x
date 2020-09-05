@@ -137,8 +137,8 @@ to say beattheMonkeyKing:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -191,6 +191,9 @@ When Play begins:
 	now libido entry is 30; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lithe"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "simian"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -205,7 +208,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -343,10 +346,11 @@ Object	Name
 Monkey King Service	"Monkey King Service"
 
 Monkey King Service is a situation.
-The sarea of Monkey King Service is "Museum".
+ResolveFunction of Monkey King Service is "[ResolveEvent Monkey King Service]".
+Sarea of Monkey King Service is "Museum".
 The level of Monkey King Service is 3. [event unlocks at lvl 3]
 
-instead of resolving Monkey King Service:
+to say ResolveEvent Monkey King Service:
 	if "Monkey" is not listed in EncounteredEnemies of Player:
 		say "     You notice an exposition on imperial China exposition during your exploration of the museum. You decide to give it a look, but there is not much to see. All the art pieces have been looted by someone, and only the fake pagodas and other Chinese decorations remain. 'Good timing!' a booming masculine voice startles you. 'You, peasant! Come over here! I have a mission of upmost importance for you!' Whoever it is, he is thinking very high of himself...";
 		say "     [bold type]Should you follow the voice, and check what he wants?[roman type][line break]";
@@ -377,12 +381,13 @@ Object	Name
 Crashing The Satyr Party	"Crashing The Satyr Party"
 
 Crashing The Satyr Party is a situation.
-The Prereq1 of Crashing The Satyr Party is Monkey King Service.
+ResolveFunction of Crashing The Satyr Party is "[ResolveEvent Crashing The Satyr Party]".
+Prereq1 of Crashing The Satyr Party is Monkey King Service.
 The Prereq1Resolution of Crashing The Satyr Party is { 1 }.
-The sarea of Crashing The Satyr Party is "Museum".
+Sarea of Crashing The Satyr Party is "Museum".
 The level of Crashing The Satyr Party is 3. [event unlocks at lvl 3]
 
-instead of resolving Crashing the Satyr Party:
+to say ResolveEvent Crashing the Satyr Party:
 	say "     During your patrol, you hear the sound of music, and several rowdy voices. You approach carefully, and stumble upon a group of satyrs and nymphs in the middle of an orgy. Vine cups are passed around, while couples or small groups form here and there, and swap members regularly. You remember the [']task['] that Wukong had charged you with, and you fetch the drug-filled pouch from your backpack. Should you go with it? It could be interesting to have the simian as your ally. The thought of giving the monkey a lesson for treating everyone around him like manure also comes to your mind.";
 	say "[bold type]Decisions, decisions...[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Help Wukong.";
@@ -451,12 +456,13 @@ Object	Name
 Hunt Of Mammoth Proportions	"Hunt Of Mammoth Proportions"
 
 Hunt Of Mammoth Proportions is a situation.
-The Prereq1 of Hunt Of Mammoth Proportions is Crashing the Satyr Party.
+ResolveFunction of Hunt Of Mammoth Proportions is "[ResolveEvent Hunt Of Mammoth Proportions]".
+Prereq1 of Hunt Of Mammoth Proportions is Crashing the Satyr Party.
 The Prereq1Resolution of Hunt Of Mammoth Proportions is { 1 }. [must have successfully helped]
-The sarea of Hunt Of Mammoth Proportions is "Museum".
+Sarea of Hunt Of Mammoth Proportions is "Museum".
 The level of Hunt Of Mammoth Proportions is 8. [event unlocks at lvl 8]
 
-instead of resolving Hunt Of Mammoth Proportions:
+to say ResolveEvent Hunt Of Mammoth Proportions:
 	say "     Your walk into the Museum is interrupted by Wukong saltoing in front of you. 'Ah, if it is not my favorite servant!' The monkey greets you. 'Do you remember what I told you, about my big plans for us? Well, follow me!' Rather than you following him, Wukong grabs your hand and pulls you towards the Paleolithic section of the museum.";
 	say "     He eventually stops, and you with him, behind a rock, and points at a mass of brown fur a dozen meters across. The giant furball actually moves, and you realize that it is a living being: an anthro mammoth, to be precise. Wukong and you dive behind a rock before she can see you, but you had time to notice that [']she['] was a hermaphrodite, and that her private parts were larger than most beings you met in the infected city.";
 	say "     'As you recall from the incident with these goat-men,' Wukong says, 'nobody seems to give me the proper respect, treating me as if I was their [']pal['] and talking to me as if I was a commoner. So, I decided to prove them all that I am worthy of my reputation and my station. To do so, we shall hunt down henceforth the mightiest being in this museum, which is this hideous elephantine thing. Of course, I count on [italic type]you[roman type] to assist me.'";
@@ -530,12 +536,13 @@ Object	Name
 Take My Royal Word For Granite	"Take My Royal Word For Granite"
 
 Take My Royal Word For Granite is a situation.
-The Prereq1 of Take My Royal Word for Granite is Crashing the Satyr Party.
+ResolveFunction of Take My Royal Word For Granite is "[ResolveEvent Take My Royal Word For Granite]".
+Prereq1 of Take My Royal Word for Granite is Crashing the Satyr Party.
 The Prereq1Resolution of Take My Royal Word for Granite is { 4 }. [must have successfully sabotaged]
-The sarea of Take My Royal Word For Granite is "Museum".
+Sarea of Take My Royal Word For Granite is "Museum".
 The level of Take My Royal Word For Granite is 8. [event unlocks at lvl 8]
 
-instead of resolving Take My Royal Word For Granite:
+to say ResolveEvent Take My Royal Word For Granite:
 	say "     As you are about to leave the reception, Valerie stops you. 'Please, wait a minute. You look strong, and I... We need help.' The sphinx catches up with you and begins to explain. 'You have surely met this [']Wukong['] fellow by now. A little nutty, thinks himself as the Monkey King of Chinese lore. Ever since that incident with the satyrs, he became more and more unhinged, and while he was formerly only a nuisance, he is now a real danger to the inhabitants of the museum. [bold type]Can you help us resolve this issue?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - You don't have to hear it twice. You're in.";
 	say "     ([link]N[as]n[end link]) - This looks like trouble.";
@@ -553,8 +560,8 @@ instead of resolving Take My Royal Word For Granite:
 			say "     You take your sweet time, exploring Wukong's statufied body with your hands, taking fun at noticing that doing certain things like tickling his armpits or pinching his rigid nipples earn you additional drops of precum. Eventually, you decide to take care of Wukong's penis directly. You take it into your hand and stroke it slowly. You are quickly rewarded by cum squirting out from the opening and splashing on your arm. He seems to have cum; however his petrified cock was still at full hardness, and vulnerable to more assaults.";
 			say "     You resume your stroking, trying to keep the monkey on the edge as long as you can. Not an easy endeavor as he is perfectly immobile. His stone-like temporary nature allows you to get naughty, such as giving his ballsack some hearty slaps, which makes his member release even more precum, like a leaked faucet. With more touches and, soon after, some licking, you make Wukong cum for a second time.";
 			say "     Just as you got yourself into the game, someone taps on your shoulder. It is one of the satyrs from earlier. It seems that a small assembly has formed behind you, and they too want to harass the Asian primate. You realize that a lot of time had already passed, and all things considered you have other things to do. You leave your spot to the satyr, and begin to walk away. On the way, you notice Wukong's staff. It looks like a sturdy weapon, and so you decide to take it for yourself.";
-			say "[bold type]You receive Wukong's staff.[roman type][line break]";
-			increase carried of wukongStaff by 1;
+			say "[bold type]You gain Wukong's staff![roman type][line break]";
+			ItemGain wukongStaff by 1 silently;
 			now Resolution of Take My Royal Word For Granite is 1; [fought + won]
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     'Ha ha ha! I knew it!' the monkey shouts as he dances around your tired body. 'You are no match for me! And... Hm? And what is this?' Wukong approaches from the sack that Valerie had given you earlier. He begins to unwrap it. You realize that the wrong side is facing you, and you muster your last strengths to stand up and run towards the primate. At this moment, the rag falls to the ground, revealing the statufied head of a gorgon. Her eyes flash, blinding you. You suddenly feel a wave of hotness feel your body. You realize that you are becoming strangely aroused, when [if Cock Count of Player is 1]your cock becomes erect in a flash[else if Cock Count of Player > 1]your cocks become erect in a flash[else if Cunt Count of Player is 1]your pussy turns wet in an instant[else]your pussies turn wet in an instant[end if]. At the same time, your movements become more and more sluggish. To your horror, your skin takes a grayish complexion while your muscles become immobile. A scream has barely the time to escape your mouth before your entire body becomes petrified.";
@@ -578,11 +585,8 @@ instead of resolving Take My Royal Word For Granite:
 
 Section 5 - Specific Items
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"Wukong's staff"	"An simple yet expertly crafted fighting staff, carved then polished with care to provide maximum efficiency. A golden leaf is riveted to the middle of the staff, ornately decorated with detailed figures of various animals, provides your hands with a good grip."	2	wukongStaff
+[Wukong's staff moved to Core Mechanics/Weapons.i7x]
 
-wukongStaff is an armament. It is part of the player. It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]". The weapon damage of wukongStaff is 5. The weapon type of wukongStaff is "Melee". It is not temporary.
 
 Section 6 - NPC/Pet
 
@@ -592,7 +596,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Wukong	"Wukong"
 
-Wukong is a person. Wukong is in Nowhere. The description of Wukong is "[wukongDesc]".
+Wukong is a person. Wukong is in Nowhere. Description of Wukong is "[wukongDesc]".
 
 to say wukongDesc:
 	if Resolution of Monkey Duel is 1:

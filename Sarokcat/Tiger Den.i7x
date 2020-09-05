@@ -12,7 +12,7 @@ Tiger Den	"Tiger Den"
 
 Tiger Den is a room. It is fasttravel. Tiger Den is sleepsafe. It is private.
 the scent of Tiger Den is "The enclosed basement hideout smells strongly of tigers.".
-The description of Tiger Den is "[tigerden desc]".
+Description of Tiger Den is "[tigerden desc]".
 
 to say tigerden desc:
 	say "     Sparsely furnished, this large concrete basement garage bears a slight resemblance to your own emergency bunker back at the library, and while it seems to be not quite as well hidden, its size certainly seems to make up for it. Half of the large room is however sectioned off by small movable screens someone has set up, separating the basement into a slightly confusing maze of temporary rooms. In the half of the room that is still open, you can see several tiger-like humans, with alterations ranging from merely tiger furred with some feline features, to those with a full tiger head and only a few human features like hands and walking on two legs, much like the one you rescued. It looks like they have barricaded the defensible entry way with scavenged furniture and items, and with the traps they have placed in the empty maintenance tunnels, it seems like they should be safe from most of the infected as long as they can stay here, although several of the tigers do eye you warily as you move around the den, just in case you decide to do something stupid and cause trouble. Heading east will take you into the tiger's washroom.";
@@ -23,7 +23,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Washroom	"Washroom"
 
-Washroom is a room. The description of Washroom is "[twashroom desc]".
+Washroom is a room. Description of Washroom is "[twashroom desc]".
 The invent of Washroom is { "dirty water" }.
 
 to say twashroom desc:
@@ -36,14 +36,15 @@ Table of GameEventIDs (continued)
 Object	Name
 TigerVSTaur	"TigerVSTaur"
 
-TigerVSTaur is a situation. The level of TigerVSTaur is 9.
-The sarea of TigerVSTaur is "Zoo".
+TigerVSTaur is a situation.
+ResolveFunction of TigerVSTaur is "[ResolveEvent TigerVSTaur]". The level of TigerVSTaur is 9.
+Sarea of TigerVSTaur is "Zoo".
 when play begins:
 	add TigerVSTaur to badspots of HermList;
 	add TigerVSTaur to BadSpots of FurryList;
 	add TigerVSTaur to BadSpots of MaleList;
 
-Instead of Resolving a TigerVSTaur:
+to say ResolveEvent TigerVSTaur:
 	say "     Traveling down the zoo pathways, you hear a strange roaring noise nearby, followed by some violent sounds, after a few seconds the sounds fade somewhat, and you cautiously peek through the greenery to see a strange sight on one of the employee travel paths of the zoo. Two creatures appear to have been fighting here, strangely enough it appears to be a couple of the tigertaurs that have been plaguing the zoo. Closer inspection however, reveals that only one of the combatants happens to be a tigertaur, the other combatant appears to be merely an extremely tiger-like humanoid, with no tiger-like lower body at all! The combat is quickly drawing to a close however, as the tigertaurs larger form seems to give it an advantage against the more human-like tiger, and indeed as you watch, the tigerman seems to be growing more and more aroused and less able to resist the tigertaurs advances. You could intervene if you wanted, but it truly doesn't look like the situation is any of your affair. Do you interfere?";
 	if Player consents:
 		say "     You quickly resolve to involve yourself in what is essentially not your conflict, but unable to see it continue without taking some action on your part. You rush from hiding and into the fray, startling both combatants into taking a step back for second startled by your sudden presence, you have only a few seconds however before the conflict will obviously resume, in which to decide just who to aid. The tigertaur seemed to be winning the fight so far, and it might make more sense for you to ally yourself with the obviously superior power, but you could also take the greater risk and try to aid the tiger against the strong tigertaur if you choose. Do you side with the tigertaur?";
@@ -63,7 +64,7 @@ Instead of Resolving a TigerVSTaur:
 			now HP of Chase is 1;
 			now PlayerMet of Chase is true;
 			move player to Tiger Den;
-			now Tiger Den is known;
+			AddNavPoint Tiger Den;
 			now Resolution of TigerVSTaur is 2; [helped Chase]
 			now TigerVSTaur is resolved;
 	else:

@@ -5,9 +5,10 @@ Object	Name
 Tidepool Treasure	"Tidepool Treasure"
 
 Tidepool Treasure is a scavevent.
-The sarea of Tidepool Treasure is "Beach".
+ResolveFunction of Tidepool Treasure is "[ResolveEvent Tidepool Treasure]".
+Sarea of Tidepool Treasure is "Beach".
 
-Instead of resolving a Tidepool Treasure:
+to say ResolveEvent Tidepool Treasure:
 	say "     You come across a large tide-pool, easily several feet across and probably about a foot deep in the center. It's full of small coral and shellfish, with starfish latched onto the half-buried rocks and kelp curling under the shallow surface. In the middle of it rests a small object covered in some sort of undersea moss, but it doesn't look natural. Circling the pool for a better view, it's clear that it's a bottle of some kind, perhaps soda or water, and maybe even unopened!";
 	say "     [bold type]Do you want to try and take the bottle?[roman type][line break]";
 	LineBreak;
@@ -31,7 +32,7 @@ Instead of resolving a Tidepool Treasure:
 				say "Invalid choice. Type [link]1[end link] to try and steal the bottle, [link]2[end link] to run for it or [link]3[end link] to submit to the trap.";
 		if calcnumber is 1:
 			LineBreak;
-			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+			let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]21[roman type] (Dexterity Check):[line break]";
 			increase diceroll by bonus;
@@ -39,13 +40,11 @@ Instead of resolving a Tidepool Treasure:
 				if a random chance of 1 in 2 succeeds:
 					say "     You wrench the prize from its surprisingly strong home, freeing your wrist and bolting for dry land, dodging past the tentacles that lash at your legs. You add the water to your pack and leave the odd tide-pool behind.";
 					LineBreak;
-					say "[bold type]You gain 1 water bottle![roman type][line break]";
-					increase carried of water by 1;
+					ItemGain water by 1;
 				else:
 					say "     You wrench the prize from its surprisingly strong home, freeing your wrist and bolting for dry land, dodging past the tentacles that lash at your legs. You add the soda to your pack and leave the odd tide-pool behind.";
 					LineBreak;
-					say "[bold type]You gain 1 soda![roman type][line break]";
-					increase carried of soda by 1;
+					ItemGain soda by 1;
 			else:
 				say "     You pull the bottle out, freeing your wrist at the same time and getting ready to run for it. As you head for dry land you mistime your steps, and one of your legs is dragged out from under you. Stumbling, you find your hands and knees planted in the silt, and the creatures coil their pinkish tentacles around your limbs. They tear up your clothing and discard the scraps, leaving you bare naked on all fours in the center of the pool.";
 				say "[tidepoolfail]";

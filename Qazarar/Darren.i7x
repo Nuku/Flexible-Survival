@@ -33,8 +33,8 @@ PenileVirgin of Darren is false.
 SexuallyExperienced of Darren is false.
 Darren is nowhere.
 MainInfection of Darren is "Salamander".
-The description of Darren is "[DarrenDesc]".
-The conversation of Darren is { "<This is nothing but a placeholder!>" }.
+Description of Darren is "[DarrenDesc]".
+Conversation of Darren is { "<This is nothing but a placeholder!>" }.
 The scent of Darren is "     He smells of smoke and fire.".
 
 to say DarrenDesc:
@@ -169,7 +169,7 @@ Object	Name
 Salamander Hideaway	"Salamander Hideaway"
 
 Salamander Hideaway is a room.
-The description of Salamander Hideaway is "     This small service building has clearly been repurposed into a living space, with a number of comfortable pieces of furniture scattered around the space, and a makeshift kitchen set up in one corner.".
+Description of Salamander Hideaway is "     This small service building has clearly been repurposed into a living space, with a number of comfortable pieces of furniture scattered around the space, and a makeshift kitchen set up in one corner.".
 Approaching the Capitol Building is northwest of Salamander Hideaway.
 Salamander Hideaway is southeast of Approaching the Capitol Building.
 

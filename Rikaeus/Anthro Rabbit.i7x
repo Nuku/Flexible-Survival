@@ -28,7 +28,7 @@ to say AnthroRabbVictory:
 		say "     Dropping to the floor and holding your hands up as if to present yourself in a submissive stance. The rabbits however look at you rather oddly, not comprehending what the heck you're doing. 'Maybe soon-to-be pack-member needs a hug?' one of them suggests. They all perk up at this and walk up to you and start hugging you, rubbing themselves up against you in a lovingly-like fashion, clearly trying to cheer you up in a misperceived assumption that you're sad. After a few minutes, you feel them leave you alone on the ground with accomplished looks on their faces.";
 		if lucky rabbit foot is not owned:
 			say "     Before you get up and leave, you notice something on the ground though. Pushing yourself onto your feet, you move towards it and see that it's a rabbit's foot. You think to yourself and assume that the bunnies left this behind, perhaps for you? You shrug your shoulders and pick it up, feeling the velvety softness of the fur, such nicety probably would be a pleasure in such a chaotic time. So, you quickly decide to pocket it, perhaps it could help you in dark times.";
-			increase carried of lucky rabbit foot by 1;
+			ItemGain lucky rabbit foot by 1;
 		infect "Anthro Rabbit";
 	else: [beaten]
 		say "     Falling back onto the ground as one of the rabbits give you one good punch, they all punch you. 'New pack member!' you hear some of them mutter again as they all move towards you and start rubbing their paws over you, massaging your wounds as if trying to make you feel better. It certainly does make you feel better, easing the aches and pains a little bit. Once they're done, all of the bunnies look over you and nod their heads before chittering amongst themselves and running off, giving you one last glance as they leave.";
@@ -41,8 +41,8 @@ to say AnthroRabbBeaten:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -66,7 +66,7 @@ When Play begins:
 	now desc entry is "[AnthroRabbDesc]";
 	now face entry is "that of a rabbit, with distinctive ears sprouting from the top of your head and flopping downwards";
 	now body entry is "far below average height but agile and your hands are human in quality, fingers and everything though they are lightly padded. The same goes for your feet, though they're a tad bit larger, possibly to help you with jumping.";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "short fur covering almost every inch of your body";[ skin Description, format as the text "You have (your text) skin"]
+	now skin entry is "short fur covering almost every inch of your body";[ skin Description, format as the text "Your body is covered in (your text) skin"]
 	now tail entry is "You have a [one of]short[or]fluffy[or]twitchy[at random] rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheathed[or]rabbit[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "floppy bunny ears sprout from the top of your head and hang on the sides of your face"; [ face change text. format as "Your face feels funny as (your text)" ]
@@ -97,6 +97,9 @@ When Play begins:
 	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]fit[or]slender[or]cute[at random]";
 	now type entry is "[one of]bunny[or]rabbit[at random]";
@@ -111,7 +114,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -220,8 +223,7 @@ instead of sniffing lucky rabbit foot:
 	say "What are you expecting it to smell like? Okay, maybe a little bit of musk if anything, but that's it.";
 
 lucky rabbit foot is a grab object.
-the usedesc of lucky rabbit foot is "[lucky rabbit foot use]".
-lucky rabbit foot is part of the player.
+Usedesc of lucky rabbit foot is "[lucky rabbit foot use]".
 lucky rabbit foot is not temporary.
 
 to say lucky rabbit foot use:
@@ -232,7 +234,7 @@ to say lucky rabbit foot use:
 		SanBoost 15;
 		now LastLuckyFootTurn is turns;
 
-lucky rabbit foot is infectious. The strain of lucky rabbit foot is "Anthro Rabbit".
+lucky rabbit foot is infectious. Strain of lucky rabbit foot is "Anthro Rabbit".
 
 Section 3 - Sex Menus for the rabbits
 

@@ -1,7 +1,7 @@
 Version 1 of Zeke by Qazarar begins here.
 [Version 1 - new NPC]
 
-[ hp of Zeke                                                 ]
+[ HP of Zeke                                                 ]
 [	0: Not met                                                 ]
 [	1: Met                                                     ]
 
@@ -13,7 +13,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Zeke	"Zeke"
 
-Zeke is a man. The hp of Zeke is usually 0.
+Zeke is a man. The HP of Zeke is usually 0.
 [Physical details as of game start]
 ScaleValue of Zeke is 3. [human sized]
 SleepRhythm of Zeke is 0. [0 - awake at all times, 1 - day active, 2 - night active]
@@ -40,14 +40,14 @@ AnalVirgin of Zeke is true.
 PenileVirgin of Zeke is true.
 SexuallyExperienced of Zeke is false.
 MainInfection of Zeke is "Red Fox".
-The description of Zeke is "[ZekeDesc]".
-The conversation of Zeke is { "<This is nothing but a placeholder!>" }.
+Description of Zeke is "[ZekeDesc]".
+Conversation of Zeke is { "<This is nothing but a placeholder!>" }.
 The scent of Zeke is "     Zeke smells like a little bit musky and furry, kinda like a humanoid fox is always bound to be.".
 Zeke is in Gaming Den.
 
 to say ZekeDesc:
 	if debugactive is 1:
-		say "DEBUG -> ZekeRelationship: [ZekeRelationship], HP: [hp of Zeke] <- DEBUG[line break]";
+		say "DEBUG -> ZekeRelationship: [ZekeRelationship], HP: [HP of Zeke] <- DEBUG[line break]";
 	say "     Zeke is a fox man, with fluffy ears and a tail. In addition he is wearing a pair of jeans, and a t-shirt that says <SHIRT REDACTED>.";
 
 Section 2 - Talk
@@ -120,13 +120,13 @@ to say ZekeTalk1: [talk about him]
 
 to say ZekeTalk2: [playing games]
 	say "     Zeke takes very little time to setup a game for the two of you to play. This time his pick is a fighting game, though not one you're overly familiar with. He gives you a brief while to practice before taking you right into a longer tournament mode, where he immediately gets very focused every time the gameplay starts.";
-	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+	let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Intelligence Check):[line break]";
 	increase diceroll by bonus;
 	if diceroll > 19:
 		say "     Once you start playing, it feels somewhat familiar, and you find yourself able to apply some skills you'd almost forgotten you had to it, and end up soundly trouncing Zeke at his own game. He is completely speechless at you victory, simply sitting with a shocked look for several moments, before he laughs heartily. 'Impressive stuff! Even I could hardly beat you at that. Play that impressive deserves a reward.' Zeke stands, and walks over to a cupboard, rifling through it for a few moments. Soon after, he tosses you a bag of chips. 'You earned it. Now come back some time, you hear? I need a rematch against that.'";
-		increase carried of chips by 1;
+		ItemGain chips by 1;
 	else if diceroll > 15:
 		say "     Your skills win out, and your general practice at this, along with quickly picking up the moves, means you manage to scrape out a win. As the sight of his defeat on the screen, Zeke is almost speechless. 'Wow, you're not half bad. A little more practice, and you can be as pro as I am. And I'd definitely like to help you practice.'";
 	else:
@@ -157,7 +157,7 @@ instead of fucking the Zeke:
 			say "     ([link]N[as]n[end link]) - Lose and get dominated.";
 			LineBreak;
 			if Player consents:
-				let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+				let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Intelligence Check):[line break]";
 				increase diceroll by bonus;
@@ -374,8 +374,7 @@ instead of going south from Mall East Wing while ZekeRelationship is 0:
 	move player to Game Store;
 	say "     As you enter the game shop, you notice that there is someone else browsing the shelves, currently leaning over and unintentionally showing off a fluffy tail poking out through a hole in a pair of jeans. After a few moments of watching it swish around, he stands up, a case in hand, and turns away from the shelf. Now that he is fully visible, you can see that he is clearly a fox, albeit on two legs, and in addition to a pair of jeans is wearing a slightly worn shirt displaying the text <MESSAGE REDACTED>. When he realizes that you're there, he starts briefly, and then speaks. 'Oh, hey. You here for some games too? Wait, that's a silly question. Why else would you be in the game shop, after all?'";
 	say "     The fox takes a momentary pause, and extends his hand. 'I'm Zeke, by the way. And you are?' You shake his hand, and introduce yourself. 'Well, nice to meet you. You might have guessed, but I tend to play a lot of video games. Even with this whole disaster going on, I still have a pretty nice setup. If you ever want to hang out and play some games, you should visit. I haven't had a lot of opportunity for anything multiplayer lately, and it's nice to have a little variety. Plus, I don't know why, but you seem to me like the sort of person who enjoys video games. Actually, hang on a moment.' Zeke takes off a backpack, which you hadn't noticed he was wearing, and puts the game he was carrying into it. Then he digs out a scrap of paper and scribbles something on it, before handing it to you. It seems to contain directions. 'Now you should be able to find my place, when you want. See you around, I hope.' With that the fox picks up his backpack, and leaves the store.";
-	say "     [bold type]You now know the location of Zeke's Gaming Den![roman type][line break]";
-	now Gaming Den is known;
+	AddNavPoint Gaming Den;
 	now ZekeRelationship is 1;
 
 Section 5 - Location
@@ -385,7 +384,7 @@ Object	Name
 Gaming Den	"Gaming Den"
 
 Gaming Den is a room. It is a fasttravel. It is private.
-The description of Gaming Den is "     The basement is surprisingly spacious, with a large entertainment center set up on one wall. Other walls feature shelves, packed with games, movies, books, and miscellaneous paraphernalia. The center space around the room is taken up by several couches, chairs, and beanbags, set up facing the television.".
+Description of Gaming Den is "     The basement is surprisingly spacious, with a large entertainment center set up on one wall. Other walls feature shelves, packed with games, movies, books, and miscellaneous paraphernalia. The center space around the room is taken up by several couches, chairs, and beanbags, set up facing the television.".
 The scent of Gaming Den is "<text>".
 
 Table of GameRoomIDs (continued)
@@ -393,7 +392,7 @@ Object	Name
 Game Store	"Game Store"
 
 Game Store is a room.
-The description of Game Store is "     The store is almost nothing but shelves and shelves full of games and game accessories. There are plenty of places that have been cleaned out on the shelves, but for the most part it all still seems to be there. It seems there have been other priorities to collecting video games.".
+Description of Game Store is "     The store is almost nothing but shelves and shelves full of games and game accessories. There are plenty of places that have been cleaned out on the shelves, but for the most part it all still seems to be there. It seems there have been other priorities to collecting video games.".
 Mall East Wing is north of Game Store.
 
 Zeke ends here.

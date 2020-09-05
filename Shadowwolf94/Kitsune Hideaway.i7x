@@ -14,7 +14,7 @@ Foxy Hideaway	"Foxy Hideaway"
 
 Foxy Hideaway is a room. It is fasttravel. It is private.
 
-The description of Foxy Hideaway is "All around you the scents of flora and fauna surround the small, enclosed area kept hidden behind a single door. The smells of the various plants range from jasmine, to lavender, to roses, to honeysuckles, filling up the silver vulpine's den. From what you can see, Kitsune has placed a large four-poster bed in the middle of his hideaway - strange considering that there is grass growing from the floor around the feet of the plush sleeping pallet. There are also two nightstands on either side of the room with elegant lamps dominating the top of said stand; both are on, but running at a low lighting. On both the left and right sides of the walls are tapestries with silver and white nine-tailed kitsunes standing regal in place, almost as though they were watching the room for intruders. Besides the flowers growing throughout the room, there are small ornaments, such as vases and other assorted pottery, placed onto the floor with incense sticks burning within them. With all of this grandiose ensemble collected together, the room should feel oppressive, but it instead feels... open, for some reason.".
+Description of Foxy Hideaway is "All around you the scents of flora and fauna surround the small, enclosed area kept hidden behind a single door. The smells of the various plants range from jasmine, to lavender, to roses, to honeysuckles, filling up the silver vulpine's den. From what you can see, Kitsune has placed a large four-poster bed in the middle of his hideaway - strange considering that there is grass growing from the floor around the feet of the plush sleeping pallet. There are also two nightstands on either side of the room with elegant lamps dominating the top of said stand; both are on, but running at a low lighting. On both the left and right sides of the walls are tapestries with silver and white nine-tailed kitsunes standing regal in place, almost as though they were watching the room for intruders. Besides the flowers growing throughout the room, there are small ornaments, such as vases and other assorted pottery, placed onto the floor with incense sticks burning within them. With all of this grandiose ensemble collected together, the room should feel oppressive, but it instead feels... open, for some reason.".
 
 instead of sniffing Foxy Hideaway:
 	say "The scent of a male vulpine wafts gently throughout the room. This pleasant smell is chased by the strong musk of incense endlessly burning away inside of small ornamental jars.";
@@ -52,8 +52,8 @@ AnalVirgin of Kitsune is false.
 PenileVirgin of Kitsune is false.
 SexuallyExperienced of Kitsune is true.
 MainInfection of Kitsune is "Kitsune".
-The description of Kitsune is "A beautiful silver vulpine stands on two digitigrade legs while looking at you with heated, but controlled eyes. Nine tails dance teasingly behind the fox-man's back as he smiles at you good-naturedly. His long and lithe form seems to almost sway slightly with the subtle motions of Kitsune rocking his hips from side to side. His smile soon turns saucy as Kitsune looks you up and down, his eyes lingering a particularly long time on your groin as though studying a tempting morsel, before he looks up to your face once again. With a predatory grin crossing his muzzle, you can't help but feel slightly on edge as the feral nature of the other shines through the graceful visage that the vulpine puts on for you. Though somewhat human-like in appearance, there is no doubt of the fox-man's animal nature as Kitsune stares at you with a growing hunger. A slow sweep of a red tongue along full and pale lips lets you know not to forget this.".
-The conversation of Kitsune is { "Hmmm!" }.
+Description of Kitsune is "A beautiful silver vulpine stands on two digitigrade legs while looking at you with heated, but controlled eyes. Nine tails dance teasingly behind the fox-man's back as he smiles at you good-naturedly. His long and lithe form seems to almost sway slightly with the subtle motions of Kitsune rocking his hips from side to side. His smile soon turns saucy as Kitsune looks you up and down, his eyes lingering a particularly long time on your groin as though studying a tempting morsel, before he looks up to your face once again. With a predatory grin crossing his muzzle, you can't help but feel slightly on edge as the feral nature of the other shines through the graceful visage that the vulpine puts on for you. Though somewhat human-like in appearance, there is no doubt of the fox-man's animal nature as Kitsune stares at you with a growing hunger. A slow sweep of a red tongue along full and pale lips lets you know not to forget this.".
+Conversation of Kitsune is { "Hmmm!" }.
 Kitsune is in Foxy Hideaway.
 
 Kitsunetalk is a number that varies.
@@ -210,7 +210,7 @@ to say KitsuneGenitalComment: [Comments on player's genitals]
 		say "Those are quite considerably sized breasts. I think that you could almost use them as weapons, especially given the current state of the city.'";
 
 to say KitsuneSpeciesComment: [Comments on player's species]
-	if player is not pure:
+	if player is not pure or Bodyname of Player is "Hybrid":
 		say "     'Couldn't just settle on one infection could you? Had to try multiple, and now you don't really count as anything in particular beyond being chimeric. I suppose that I shouldn't discount the possibility that this was forced upon you though. If it pleases you, I could make you into quite the attractive kitsune like myself. Fluffy fur, multiple tails, dashing figure... what's not to like? That was a rhetorical question, just in case you were going to answer. I like myself and that's the main thing, just like it is important that you are content with whatever form you take. ";
 	else if BodyName of Player is "Kitsune":
 		say "     'Now there's an attractive form. I must compliment you on your impeccable choice in appearance, and whomever it was that gave you such a fine figure deserves a reward. Such lush fur and beautiful coloration really brings out your eyes. If I were you, I would be careful to stay looking like this while adventuring around the city and perhaps convincing others to consider it as a look. Because to be honest, who wouldn't look good as a multi-tailed fox? However with such a form comes responsibilities such as mischief and trickery, though not of the malicious kind, we aren't monsters. Perhaps you can tell me about your activities when you have the time. Preferably in [italic type]great detail[roman type]. ";
@@ -276,6 +276,10 @@ to say KitsuneSpeciesComment: [Comments on player's species]
 		say "     'I see that you have a thing for bears. Is it a size thing, or do you have a fetish for really tight hugs? The feel of a larger body pressed up against your own, wrapping you in an embrace and allowing you to feel their warmth through their fur... Mmmmm, such a delightful image. Perhaps I could persuade you at some point to allow me this feeling, or perhaps you would prefer to be the one hugged? Why not both? I have all the time in the world, or at least as long as your soldiers don't move in. I get the impression that they aren't big on hugs at the moment. ";
 	else if BodyName of Player is listed in infections of VulpineList:
 		say "     'So close to the perfect form, but you missed out slightly, don't you think? Still, such lush fur and beautiful coloration really brings out your eyes, and you only need a few more tails to improve the look. If you ask nicely, I might help you in the final step to becoming a kitsune. All it would take would be a hand in collecting some of my essence, or possibly a mouth... But back to you. Even as a normal fox, there are certain expectations. Ignore the myth about foxes only enjoying being penetrated themselves. Your sexual preferences should be your own. Also, while you don't need to be as mischievous as that coyote in the park, at least try and commit some trickery. There is a reputation to maintain. ";
+	else if Bodyname of Player is listed in infections of BodyHorrorList:
+		say "     'Well then... would you look at you. I don't think I've seen anything as, shall we say, [']full of character['] for quite some time. I can't imagine that there are many denizens of the city who would willingly choose to look like that or find it attractive, but the majority is quite often wrong so you have my admiration for your confidence in going out looking like that. You really do look like the stuff of nightmares, though humans really do have an obsession with chaos, evil, and the Nightmare Realms so I suppose that I shouldn't be too surprised. Just promise that you won't let the corruption of the outside seep to deeply into your soul or you might find yourself hunted by more competent individuals that soldiers. ";
+	else if Bodyname of Player is listed in infections of OtherworldlyList:
+		say "     'Someone's enjoys their science fiction and isn't afraid for everyone to know it. Yes, I know what sci-fi is, this isn't the first time I've visited your world and I must say that it is entertaining at leats for a while before you have parasites ripping their way out of a host's body or ripping someone's spine out. I much prefer xenophilic relationships deepening as opposed to attempts at conquest but to each their own. At least with how this city is at the moment sex is much more prevalent. If you do require a host for your young at least find someone willing and impregnate them in a more conventional manner. Childbirth may be painful, but much less so when they don't cause permanent damage to the mother. ";
 	else: [Anything else]
 		say "     ERROR. If you are seeing this, then it means that you are of an infection that we haven't covered in the dialogue. Could you please report this to the bug channel of the Flexible Survival Discord server, and we will try to remedy this. Thank you.";
 
@@ -316,7 +320,7 @@ Check kitfoodrequest:
 
 Carry out kitfoodrequest:
 	say "Kitsune smirks at you before going off... somewhere... and then returning with a bit of food for you. 'Please, take this and take care.'";
-	increase carried of food by 1;
+	ItemGain food by 1;
 	now lastfoodrun is turns;
 	increase Kitsunefood by 1;
 
@@ -330,7 +334,7 @@ Check kitwaterrequest:
 
 Carry out kitwaterrequest:
 	say "Kitsune nods to you and then goes about his way to collect some water. It takes a minute but soon the other returns to gracefully hand you a bottle of water. 'May this help you on your journey, little one.'";
-	increase carried of water bottle by 1;
+	ItemGain water bottle by 1;
 	now lastwaterrun is turns;
 	increase Kitsunewater by 1;
 ]
@@ -521,8 +525,8 @@ to say Kitsune attack:
 	say "These are filler messages and should not be seen, as there's no fight with Kitsune.";
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -549,7 +553,7 @@ When Play begins:
 	now desc entry is "A silver furred vulpine stands on two digitigrade legs while looking at you calculatingly. Piercing azure eyes glare at you somewhat hotly as if the fox-man is trying to undress you with his eyes. Just exactly who or what is this creature that stands with nine soft and flowing tails at his backside? The loincloth tied over his waist tells you nothing, save that the other is well endowed."; [ Description of the creature when you encounter it.]
 	now face entry is "a silver foxy muzzles now makes up the mask that is your face. With all of the normal vulpine highlights that make you appear as a fox, the only thing that differentiates you from the other canids around here is the fact that you're eyes are piercing blue. Deep and fathomless, it appears as though you have more wisdom than what would be considered normal for a mortal"; [You have a (your text) face."]
 	now body entry is "now that of a creature who is one of both vulpine and human in genetic makeup. A lithe frame hides the dense muscles you have underneath your thick pelt of soft fur. On down your twin digitigrade legs hold you steadily as you balance yourself on your rough paw pads. Grace and poise seem to be the words that define you as the power inside of your veins almost sings with mystical energy"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]silver fur[or]heavy pelted[or]kitsune coat[or]supremely fluffy fox fur[at random] over your"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]silver fur[or]heavy pelted[or]kitsune coat[or]supremely fluffy fox fur[at random] over your"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "A single fox tail sways behind you, swaying almost as if lonesome in want of others to be alongside of it. Thick and luxurious in texture, your tail does possess a sort of superior quality about itself that others would find themselves in awe of were they to look at you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]vulpine[or]canid[or]tapered[or]sheathed[or]thickly knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your eyes blink as you notice that your face has pushed out to form a narrow fox muzzle colored with moonlight silver fur. Cocking your head to the side you notice that you can hear the wind blowing around you and gape when you realize that your ears have pushed up on top of your head. Long and furry, the twitching folds flip up and down as you move them out of instinct, not to mention curiosity. Looking between your face you notice that you have a black dotted nose, a few whiskers on each side of your snout and finally that your tongue is now long and thick as you pop the organ out from your muzzle"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -580,6 +584,9 @@ When Play begins:
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender" Use [one of] to vary ]
 	now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -594,7 +601,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

@@ -11,7 +11,7 @@ Pirate Island	"Pirate Island"
 
 Pirate Island is a room. It is fasttravel. It is private.
 
-The description of Pirate Island is "     Finally, the island with the treasure marked on the map! The small island seems to be a rather nice island not far off the coast, seeming just like many other similar islands in the area. This one, however, happens to be riddled with what seems to be a rather large amount of caves and tunnels, just waiting to be explored.".
+Description of Pirate Island is "     Finally, the island with the treasure marked on the map! The small island seems to be a rather nice island not far off the coast, seeming just like many other similar islands in the area. This one, however, happens to be riddled with what seems to be a rather large amount of caves and tunnels, just waiting to be explored.".
 
 instead of sniffing Pirate Island:
 	say "The island smells of the ocean and fetid sea caves.";
@@ -21,7 +21,7 @@ object	name
 Treasure cave	"Treasure cave"
 
 Treasure cave is a man.
-The description of Treasure cave is "     Not just one cave, but a large series of caves that dot the shores of the island. They look like the perfect place for some suspicious pirate to have hidden some treasure. Still, the dark openings look ominous, and you can hear water sloshing within some of them occasionally. It will take a lot of bravery to explore these caves. You will have to [']hunt for treasure['] in them.".
+Description of Treasure cave is "     Not just one cave, but a large series of caves that dot the shores of the island. They look like the perfect place for some suspicious pirate to have hidden some treasure. Still, the dark openings look ominous, and you can hear water sloshing within some of them occasionally. It will take a lot of bravery to explore these caves. You will have to [']hunt for treasure['] in them.".
 Treasure cave is in Pirate Island.
 
 instead of linkactioning Treasure Cave when treasurefound is 0:
@@ -82,8 +82,7 @@ carry out treasurehunt:
 					stop the action;
 				if T is 2:
 					say "     Walking through the dark and damp caves, you hear a soft trickling noise from one of the nearby alcoves, deciding to investigate you find a small stream trickling up from a crack in the wall. Taking a look at the small spring you find the water is both crisp and clear, and decide to gather some of it up to take with you. You continue exploring through the caves, but eventually find they twist and turn back on each other, and you end up back on the beach.[line break]";
-					say "[bold type]You gain 1 water bottle![roman type][line break]";
-					increase carried of water bottle by 1;
+					ItemGain water bottle by 1;
 					stop the action;
 				if T is 3:
 					say "     Walking through the caves, you find yourself starting to jog a bit, and then a bit more, as you move along the long cave, always following the left passage when it appears in an attempt to solve the maze of passages within. After some time you begin to tire, but there is no end to the cave in sight, as you move in the dim light you realize your surrounding seem increasingly familiar even as you continue to jog along. Finally in frustration you take a right turn instead of a left turn, and almost immediately shoot back out onto the beach from the cave you entered from, with an embarrassed glance behind you, you realize the left part of that cave looped in a large circle, and you have been running around it for hours. You sigh as you plop down on the beach to rest for a minute, still you do feel slightly more dexterous from all that jogging you find yourself thinking, as you let the waves lap at your body.[line break]";
@@ -99,16 +98,12 @@ carry out treasurehunt:
 					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
-							say "[bold type]You acquired 1 [loot entry].[roman type][line break]";
-							add loot entry to invent of Player;
-							say "[bold type]You acquired 1 dirty water![roman type][line break]";
-							increase carried of dirty water by 1;
+							ItemGain loot entry by 1;
+							ItemGain dirty water by 1;
 						else:
-							say "[bold type]You acquired 1 pirate bandana![roman type][line break]";
-							increase carried of pirate bandana by 1;
+							ItemGain pirate bandana by 1;
 					else:
-						say "[bold type]You acquired some seafood![roman type][line break]";
-						increase carried of food by 1;
+						ItemGain food by 1;
 					stop the action;
 				if T is 6:
 					say "     Traveling through the caves, you come across a large open cave with light filtering in from above. As you look in the cave, a glint of light catches on something shiny in a small pool towards the rear of the cave. Thinking it might be the treasure, you quickly hurry over to take a look, only to realize your mistake when you hear a roar from behind you. The cave seems to be a Sea Dragon's lair!";
@@ -132,30 +127,22 @@ carry out treasurehunt:
 					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
-							add loot entry to invent of Player;
-							say "You acquired 1 [loot entry].";
-							increase carried of dirty water by 1;
-							say "You acquired some dirty water!";
+							ItemGain loot entry by 1;
+							ItemGain dirty water by 1;
 						else:
-							increase carried of pirate bandana by 1;
-							say "You acquired a pirate bandana!";
+							ItemGain pirate bandana by 1;
 					else:
-						increase carried of food by 1;
-						say "You acquired some seafood!";
+						ItemGain food by 1;
 					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
 					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
-							add loot entry to invent of Player;
-							say "You acquired 1 [loot entry].";
-							increase carried of dirty water by 1;
-							say "You acquired some dirty water!";
+							ItemGain loot entry by 1;
+							ItemGain dirty water by 1;
 						else:
-							increase carried of pirate bandana by 1;
-							say "You acquired a pirate bandana!";
+							ItemGain pirate bandana by 1;
 					else:
-						increase carried of food by 1;
-						say "You acquired some seafood!";
+						ItemGain food by 1;
 					stop the action;
 				if T is 8:
 					say "     Hunting through the dark and dreary caves, you begin to wonder if you will ever find the treasure that is supposedly to be hidden in this place, sighing you continue your long journey through the caves, only to come across a cave exit that leads to a secluded pool on the interior of the island. Looking around you realize this place is absolutely beautiful, and seems to speak to something deep down inside you. Deciding not to worry about treasure for a time, you spend some time basking in the beautiful light as you watch it shine off the pool, and drinking your fill of the gloriously clear water. Eventually you get back up to leave, feeling much happier after your visit to the nice pool.";
@@ -194,11 +181,12 @@ Object	Name
 Noteinbottle	"Noteinbottle"
 
 Noteinbottle is a situation.
-The sarea of Noteinbottle is "Beach".
+ResolveFunction of Noteinbottle is "[ResolveEvent Noteinbottle]".
+Sarea of Noteinbottle is "Beach".
 
 tmapfound is a number that varies.
 
-Instead of resolving a Noteinbottle:
+to say ResolveEvent Noteinbottle:
 	say "     Walking along the beach and enjoying the view of the surf, you notice something bobbing on the waves just out of reach of shore. Do you dive in to try to get it?";
 	if Player consents:
 		now fightoutcome is 100;
@@ -229,15 +217,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Findingboat	"Findingboat"
 
-Findingboat is a situation. The level of Findingboat is 7.
-the sarea of Findingboat is "Beach".
+Findingboat is a situation.
+ResolveFunction of Findingboat is "[ResolveEvent Findingboat]". The level of Findingboat is 7.
+Sarea of Findingboat is "Beach".
 boatfound is a number that varies.	[tracks need for a boat for Bouncy Castle quest]
 [0 = not looking, 1 = looking, 2 = dingy, 3 = boat]
 
-Instead of resolving Findingboat:
+to say ResolveEvent Findingboat:
 	if tmapfound is 2:
 		say "     Wandering along the beach, you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, even though they wouldn't go too far, they might be able to get you to the island shown on the map[if boatfound is 2]! While your little dingy won't make to the island, one of these might be able to do the job[else if boatfound is 1]. After you get back, you could probably use this to get to that bouncy castle the dolphins have set up, you think, though the thoughts of gold are in the foremost of your mind right now[else if boatfound is 4]. After you get back, you could probably use this to get to Vohr Island, following the tip of the rat twins, though the thoughts of gold are in the foremost of your mind right now[end if]. Deciding to take a look, you spend some time searching through the boats to find one that could get you where you need to go.";
-		let bonus be (( the Perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -248,7 +237,7 @@ Instead of resolving Findingboat:
 				challenge "Shark Herm";
 				if lost is 0:
 					say "     Victorious over the pirates who seem intent on stopping you from reaching the island, you continue along your way, and soon the small island is in sight, the island doesn't seem much different from many other small islands in these waters, but you are sure it is the right one, and even better yet, you can see a much easier path back to the shore from here and a cove to store your boat. It should be much easier to visit and leave the island now that you have been here once!";
-					now Pirate Island is known;
+					AddNavPoint Pirate Island;
 					Move player to Pirate Island;
 					now Findingboat is resolved;
 					now tmapfound is 3;
@@ -262,8 +251,7 @@ Instead of resolving Findingboat:
 		now boatfound is 2;
 	else if boatfound is 4:
 		say "     You find a small rowboat that's been dragged up into the short strip of woods along this section of beach. It seems to have been here for a while, but still looks serviceable. You certainly wouldn't be able to take any long trips with it, but it should be capable of the trip out to Vohr Island.";
-		say "[bold type]You can now navigate to Vohr Island[roman type][line break]";
-		now Island Pier is known;
+		AddNavPoint Island Pier;
 		now boatfound is 2;
 	else:
 		say "     Traveling along the beach, you come across a large, jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, but they probably wouldn't be able to take you very far, so you end up continuing on your way, forced to look for another method of getting out of the city.";

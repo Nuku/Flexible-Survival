@@ -16,7 +16,7 @@ Gryphon nest	"Gryphon nest"
 
 Gryphon nest is a room.
 
-The description of Gryphon nest is "     This small room is tucked between several of the other tents filling the area, its soft canvas surrounding a small private enclosure filled with a large variety of different cushions and cloths, the soft light from the glowing floor and tent cloth illuminating the area. You can see several small items and trinkets, scattered amongst the cushions, but your eyes are drawn most to the heavily pregnant herm gryphon lying sprawled out on the cushions, a small collar with a tag hanging from around her neck.".
+Description of Gryphon nest is "     This small room is tucked between several of the other tents filling the area, its soft canvas surrounding a small private enclosure filled with a large variety of different cushions and cloths, the soft light from the glowing floor and tent cloth illuminating the area. You can see several small items and trinkets, scattered amongst the cushions, but your eyes are drawn most to the heavily pregnant herm gryphon lying sprawled out on the cushions, a small collar with a tag hanging from around her neck.".
 Timothy is in Gryphon nest.
 Gryphon nest is west of Qytat Plaza.
 
@@ -60,13 +60,13 @@ AnalVirgin of Timothy is false.
 PenileVirgin of Timothy is false.
 SexuallyExperienced of Timothy is true.
 MainInfection of Timothy is "Blue Gryphon Herm".
-The description of Timothy is "[TimothyDesc]".
+Description of Timothy is "[TimothyDesc]".
 
 to say TimothyDesc:
 	project the Figure of Timothy_icon;
 	say "     Lying on a rather large pile of stolen cushions is a rather striking blue-furred gryphon, her attractive blue-feathered wings half spread out behind her as she reclines back. The creature's talon-like hands are absently rubbing its large, white furred belly, obviously quite pregnant and unable to move quickly. Its large breasts are slowly dribbling milk as it shifts its body slightly, giving you a good look at both its thick black cock resting up against the gryphon's distended belly, and the rather large and obviously well-used passage resting between the gryphon's leonine thighs. Its leonine tail twitches where it is lying between her slightly spread legs as the hermaphrodite gryphon cocks her avian head to look at you, her tongue hanging out the side of her beak slightly as she pants and rubs herself a bit more. You notice a small collar with a tag hanging around her neck, the tag just reading 'Pet'";
 
-the conversation of Timothy is { "EggsEggsEggs!" }.
+Conversation of Timothy is { "EggsEggsEggs!" }.
 
 instead of linkactioning Timothy when HP of timothy > 0:
 	say "Possible Actions: [link]talk[as]talk Timothy[end link], [link]smell[as]smell Timothy[end link], [link]fuck[as]fuck Timothy[end link], [link]milk[as]milk Timothy[end link][line break]";
@@ -135,7 +135,7 @@ carry out Timothymilking:
 		say "     'Oh that sounds wonderful!' Timothy murrs as she rubs her obviously full breasts, several small drops of milk already leaking from her nipples as you move forward to take her breasts in your hands. Looking around somewhat you find an oddly shaped bowl near the cushions, a small curved depression built into its lip, as you bring it up to her breasts you find the depression matches the curve of her breast, the bowl obviously made for situations like this. The pregnant gryphoness moans as she holds the bowl in place while you softly massage her breasts, soft gryphon milk beginning to flow under your hands as you tease her nipples. The air fills with the strangely arousing scent of the strange hybrids milk, as the bowl slowly beings to fill, making you lick your lips slightly as you think about what the potent milk must taste like. You soon lose yourself in the feel of her soft furred breasts underneath your hands, running your hands over and through her fur rhythmically as you coax her milk into the swiftly filling bowl.";
 		say "     Soon the bowl is completely full, and you are forced to set it aside, though Timothy's breasts are still leaking milk onto her fur as she pants, her head thrown back in obvious pleasure at being milked. Unable to help yourself, you find yourself lowering your head down to her damp breasts, and stretching your tongue out to take a taste of the milk straight from the source. You and Timothy both moan as your tongue licks over her nipple, the taste of her lovely body on your tongue is just amazing, and you quickly find yourself licking and sucking slightly on her nipples, soft trickles of milk filling your mouth with its wonderful taste, before you finally sit back panting almost as much as the gryphoness is from the lovely experience. Looking down at the full bowl, you decide not to let any of that wonderful milk go to waste, and gather some of it up to take with you.";
 		infect "Blue Gryphon Herm";
-		increase carried of gryphon milk by 1;
+		ItemGain gryphon milk by 1;
 		now lastTimothymilked is turns;
 
 

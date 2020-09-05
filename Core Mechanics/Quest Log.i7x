@@ -94,7 +94,7 @@ carry out ListCompletedQuests:
 		]
 
 To MainStorylineLog:
-	if hp of Doctor Matt is:
+	if HP of Doctor Matt is:
 		-- 2:
 			say "[bold type]Doctor Matt: [roman type]You've met Doctor Matt and he's asked you to retrieve two samples each of milk from the hermaphrodite gryphons around the city and globs of goo from the goo girls found in the mall sewer.";
 		-- 3:

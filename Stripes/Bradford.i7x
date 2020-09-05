@@ -10,12 +10,13 @@ Object	Name
 Bounty Hunter	"Bounty Hunter"
 
 Bounty Hunter is a situation.
-The sarea of Bounty Hunter is "Red".
+ResolveFunction of Bounty Hunter is "[ResolveEvent Bounty Hunter]".
+Sarea of Bounty Hunter is "Red".
 when play begins:
 	add Bounty Hunter to BadSpots of FurryList;
 	add Bounty Hunter to BadSpots of MaleList;
 
-Instead of resolving Bounty Hunter:
+to say ResolveEvent Bounty Hunter:
 	follow the breast descr rule;
 	if perception of Player > 15 or "Wary Watcher" is listed in feats of Player:
 		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. It's only moments before you were going to be grabbed from behind that you realize that things were actually too quiet. Going back on alert, you're able to dodge the oncoming grapple and roll to the side. Getting up a few feet away, you find it is a tough looking bull-man confronting you.";
@@ -36,7 +37,7 @@ Instead of resolving Bounty Hunter:
 	say "     Crossing the street, he enters another storefront and leads up into what was formerly a second floor accounting office. While straining to look professional, the former businessplace is clearly cheap and trashy. The office furniture is old and mismatched, and the walls are covered in ad posters to have your taxes done and claims about big returns. Given the neighborhood, that's unsurprising.";
 	WaitLineBreak;
 	move player to Bradford's Camp;
-	now Bradford's Camp is known;
+	AddNavPoint Bradford's Camp;
 	now battleground is "void";
 	now HP of Bradford is 1;
 	now Bounty Hunter is resolved;
@@ -49,7 +50,7 @@ Object	Name
 Bradford's Camp	"Bradford's Camp"
 
 Bradford's Camp is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Bradford's Camp is "[bradfordcampdesc]".
+Description of Bradford's Camp is "[bradfordcampdesc]".
 
 the scent of Bradford's Camp is "The former accountant's office turned temporary stakeout camp smells of Bradford and wood chips overlaid on that of paperwork.".
 
@@ -64,8 +65,8 @@ object	name
 Bradford	"Bradford"
 
 Bradford is a person. Bradford is in Bradford's Camp.
-The description of Bradford is "[bradforddesc]".
-The conversation of Bradford is { "Moo, mutherfuckah!" }.
+Description of Bradford is "[bradforddesc]".
+Conversation of Bradford is { "Moo, mutherfuckah!" }.
 the scent of the Bradford is "The bull man has a somewhat musky scent of sweat, but not overpoweringly so.".
 The icon of Bradford is Figure of Bradford_icon.
 
@@ -98,7 +99,7 @@ Instead of conversing the Bradford:
 		say "***Unknown error. Adjusting.";
 		now HP of Bradford is 1;
 		now Bounty Hunter is resolved;
-		now Bradford's Camp is known;
+		AddNavPoint Bradford's Camp;
 	else if HP of Bradford is 1:
 		say "     'The name's Bradford,' he says, holding out his hand to shake. 'I didn't mean to start us off on the wrong foot. Like I said - kinda tough to tell who's who out there these days. Makes my job as a bounty hunter all the harder. Which is what I wanted to talk about.' He takes a breath and uses the moment to peek through the blinds, scanning up and down the street.";
 		say "     'Now, as you can prob'bly guess, I'm lookin['] for someone who should be comin['] by here sooner or later. But it's takin['] longer'n expected. With all them monsters about, there's plenty of bounty contracts for a guy like me, but I don't want to miss my chance with this guy. Whole reason I came to this God-forsaken city in the first place. Ended up bullified for my troubles. Ain't no way I'm leavin['] without him. But that ain't why I called you up here.'";

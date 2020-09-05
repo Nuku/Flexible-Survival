@@ -7,6 +7,23 @@ Version 3 of Alpha Husky by Sarokcat begins here.
 
 "Adds an Alpha Husky to Flexible Survival's Wandering Monsters table, with impreg chance"
 
+to say GenerateTrophyList_Husky_Alpha:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "husky alpha fur" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "dirty water" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "food" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "soda" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "tennis ball" to CombatTrophyList;
+	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
+		add "clean bandages" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
+
 Section 1 - Creature Responses
 
 Alphahuskypet is a number that varies.
@@ -80,16 +97,17 @@ to say Alpha Husky attack:
 			infect "Husky Bitch";
 		if Husky Gathering is inactive and Husky Gathering is not resolved and fertile pill is owned:
 			say "     You notice that one of your pills seems to be missing. A fertile pill. What would the alpha want with one of those? The mystery has no immediate answers, and you proceed back to safer grounds.";
-			delete fertile pill;
+			ItemLoss fertile pill by 1;
 			now Husky Gathering is active;
 
 Table of GameEventIDs (continued)
 Object	Name
 Husky Gathering	"Husky Gathering"
 
-Husky Gathering is a situation. It is inactive.
+Husky Gathering is a situation.
+ResolveFunction of Husky Gathering is "[ResolveEvent Husky Gathering]". It is inactive.
 
-Instead of resolving Husky Gathering:
+to say ResolveEvent Husky Gathering:
 	say "     A sudden chorus of barks and shouts catches your attention. Just emerging from around the bend is a group, no, pack of huskies. Most appear male, and those males catch sight of you. Approaching with a joyous war cry, they move to try and cut off your escape.";
 	Challenge "Husky Alpha";
 	if fightoutcome >= 20 and fightoutcome <= 29:
@@ -114,9 +132,7 @@ to say alpha huskypack lost:
 		say "     Time passes, and the sounds of the others grow quieter. You can't see them either, but you can't see much but the thighs of your rapist. He pulls free of your sore mouth and barks a word of thanks before hopping to his feet and dashing off, leaving you to recover.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Husky Alpha";
 		let z be a random owned grab object;
-		decrease carried of z by 1;
-[		sort invent of the player in random order; ]
-[		remove entry 1 from invent of the player; ]
+		ItemLoss z by 1;
 	else: [ player submitted ]
 		say "     Seeing you take a submissive posture, the pack immediately stops their assault. They press in at you from all directions, petting and licking you all over. The leader, however, is looking you in the eyes. 'If you want to join us,' he says, 'you will have to be stronger than that.";
 		if Player is male:
@@ -311,8 +327,7 @@ to say AlphaHuskyMilking:
 	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you decide to take what you want from the defeated canine instead of letting him force it upon you. Slamming his shoulders down firmly, you tell the muscular man to stay, like the dog he is, then reach for his crotch and start rubbing it. As his sheath starts to fill from your touch, the husky's resistance ebbs off and soon his doggy cock emerges, with your opponent beginning to pant. He still struggles a little bit, wanting to be dominant and on top, but you growl at him until his ears dip. Only then do you take the hand that was pressing down on his chest away, using it to caress his balls instead. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the rapid beat of his heart.";
 	say "     You stroke and fondle your defeated canine a bit, grinning as you push the groaning captive closer and closer to orgasm. You tease him by saying that he should just be a good little pet dog and stop his huffing and puffing about being an Alpha, which starts the husky grumbling a bit - right until you begin squeezing tighter and give his dick a long stroke up and down and he pants as needily as a bitch in heat. With a chuckle, you continue to caress his manhood, and when he finally can't hold back any more, you quickly snatch up your prepared bottle and hold it to his cock, successfully catching spurt after spurt of milky white cum in it. He's got a respectable output and fills a little bit less than half the bottle before he sinks back in exhaustion, panting loudly. Looks like you've finished off the cowed dog for now, so you cap the bottle of cum and pack it away and give him a casual wave to slink off. Tail low at having been beaten and milked, the husky trots away, looking for some place to lick his wounds and salve his pride.";
 	LineBreak;
-	say "[bold type]You gain a bottle of husky alpha cum![roman type][line break]";
-	increase carried of husky alpha cum by 1;
+	ItemGain husky alpha cum by 1;
 
 to say AlphaHuskyBeating:
 	say "     Deciding this aggressive dog could use a bit of harsh discipline, you give him a few more smacks. 'Bad dog! Bad dog!' You rain blows down upon him, kicking and punching him until he's cowering in a corner. With a final kick of his ass, you eventually send him running. He slinks off with his tail between his legs to find someplace to lick his wounds and salve his pride.";
@@ -324,8 +339,8 @@ to say AlphaHuskyRelease:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -381,6 +396,9 @@ When Play begins:
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "husky alpha fur";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50;  [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "husky alpha man-milk";
+	now CumItem entry is "husky alpha cum";
+	now TrophyFunction entry is "[GenerateTrophyList_Husky_Alpha]";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if latexhuskymode is true][one of]quadrupedal[or]altered[or]animalistic[at random][else][one of]altered[or]animalistic[at random][end if]";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]canine[or]husky[at random]";
@@ -395,7 +413,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -499,13 +517,13 @@ name	desc	weight	object
 "husky alpha fur"	"A tuft of grey and white fur that looks like it has been pulled out of the coat of a husky. It's nicely soft."	0	husky alpha fur
 
 husky alpha fur is a grab object.
-the usedesc of husky alpha fur is "[HuskyAlphaFurUse]".
-it is part of the player.
 It is temporary.
+husky alpha fur is infectious.
+Strain of husky alpha fur is "Husky Alpha".
+Usedesc of husky alpha fur is "[husky alpha cum use]";
 
 to say HuskyAlphaFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Husky Alpha";
 
 instead of sniffing husky alpha fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
@@ -514,18 +532,36 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "husky alpha cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Husky Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	husky alpha cum
 
-husky alpha cum is a grab object. husky alpha cum is cum.
-the usedesc of husky alpha cum is "[husky alpha cum use]";
+husky alpha cum is a grab object.
+husky alpha cum is cum.
+husky alpha cum is infectious.
+Strain of husky alpha cum is "Husky Bitch".
+Usedesc of husky alpha cum is "[husky alpha cum use]";
 
 to say husky alpha cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
-	if "Iron Stomach" is not listed in feats of player:
-		infect "Husky Bitch";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"husky alpha man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Husky Alpha Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	husky alpha man-milk
 
 instead of sniffing husky alpha cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
+husky alpha man-milk is a grab object.
+husky alpha man-milk is milky.
+Purified of husky alpha man-milk is "distilled milk".
+husky alpha man-milk is infectious.
+Strain of husky alpha man-milk is "Husky Alpha".
+Usedesc of husky alpha man-milk is "[husky alpha man-milk use]";
+
+to say husky alpha man-milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing husky alpha man-milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Alpha Husky ends here.

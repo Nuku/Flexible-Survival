@@ -51,7 +51,7 @@ to say FootballTryouts:
 	now GorillasMemberQuestCounter is turns; [to count the time till the next stage]
 
 to say GorillaCheck1:
-	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]21[roman type] (Dexterity Check):[line break]";
 	increase diceroll by bonus;
@@ -65,7 +65,7 @@ to say GorillaCheck1:
 		increase TryoutScore by 2;
 
 to say GorillaCheck2:
-	let bonus be (( the Strength of the player minus 10 ) divided by 2);
+	let bonus be (( Strength of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]21[roman type] (Strength Check):[line break]";
 	increase diceroll by bonus;
@@ -79,7 +79,7 @@ to say GorillaCheck2:
 		increase TryoutScore by 2;
 
 to say GorillaCheck3:
-	let bonus be (( the Stamina of the player minus 10 ) divided by 2);
+	let bonus be (( Stamina of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Stamina Check):[line break]";
 	increase diceroll by bonus;
@@ -105,13 +105,11 @@ to say FootballTryoutsResults:
 	now GorillasMember is 3;
 	if TryoutScore is 7: [maximum points]
 		say "     'You really wowed us out there,' the primate says with a broad grin and holds out his hand in congratulation. Accepting a firm grip on your forearm and returning the same on his powerful furry limb, you are told, 'When we put everyone's data on the planning board, it immediately became clear that we had to have you on the team. Hell, you were at the top in front of everyone else. That'll make a fine addition to our team!' Waving his hand to indicate the entrance to the locker-room, he goes on to say, 'Be sure to come by regularly to either train or play a match. The Fourmont Wolves got stuck on the campus with the infection, and they are always eager for a play-off. Oh, and before I forget...' Roman fetches some football pads and hands them to you, under the cheers of your new teammates. 'Here's your gear. Take care of it, okay?'";
-		say "[bold type]You gain football pads![roman type][line break]";
-		increase carried of football pads by 1;
+		ItemGain football pads by 1;
 		now GorillasRep is 9; [star player]
 	else if TryoutScore > 4: [okay results]
 		say "     'Congratulations you made it into the team,' the primate says with a grin and holds out his hand in congratulation. Accepting a firm grip on your forearm and returning the same on his powerful furry limb, you are told, 'When we put everyone's data on the planning board, you rated well in the upper third. Didn't take much convincing for everyone to agree that you deserve a shot on the team.' Waving his hand to indicate the large locker room, he goes on to say, 'Be sure to come by regularly to train. You should make it to the main team in no time. Oh, and before I forget...' Roman fetches some football pads and hands them to you, under the cheers of your new teammates. 'Here's your gear. Take care of it, okay?'";
-		say "[bold type]You gain football pads![roman type][line break]";
-		increase carried of football pads by 1;
+		ItemGain football pads by 1;
 		now GorillasRep is 4;  [b team player]
 	else: [moderate to bad results]
 		say "     'Listen, we had a look at your results and... made a team decision that you will not be joining as a player,' the primate tells you with a somewhat apologetic expression. Yet as you bow your head in shame and begin turning to walk away, he grabs hold of your arm and adds, 'Wait I haven't finished yet. I thought it was brave of you to do the tryouts, no matter what came of it, so... I have an offer for you. A way you can still be part of the team and help out. You could be either a [if Player is female]water girl or a laundry girl[else]water boy or a laundry boy[end if].' Roman gives you a supportive slap on the shoulder. 'It will be no small job, managing all these boys['] laundry, but every effort counts, and for that you have my thanks. [bold type]If you work for the team enough times, I am certain that someone will put a good word for you, and put your name forward for the next draft[roman type]. Come back anytime you want, champ. I'm sure that I'll see you on the football field in no time.'";
@@ -160,7 +158,7 @@ to say GorillaLaundryService2:
 		WaitLineBreak;
 		say "     After his powerful orgasm, the ape's muscles seems to turn into jelly, and you immediately pull away, gasping for air. 'D-Damn. Between you and my friend, you're definitely the best sucker,' he says. After the both of you recovered, the football player goes to fetch a can of soda and throws it in your direction. 'As thanks.' You catch it mid-flight, making it grin. 'Nice catch. Once you build some strength, you should talk to the team captain about some promotion. You'd make a good player.' On these words, the gorilla heads for the exit. 'Good luck with the rest of the laundry,' he wishes you.";
 		say "     You say goodbye too, and go back to your duty. Meeting your new friend has put you in a good mood, and you manage to handle the rest of the clothes way before the team comes back from training. You are even able to take some time to sit on a bench and take some whiffs at the thong that he gave you. It's not the same smell than the other time. Is it his hyena friend's? Your thoughts are interrupted by the hubbub of the team and its groupie escort. After another round of sweaty clothes collection, Roman tells you that you are done for today and free to go.";
-		add "soda" to invent of Player;
+		ItemGain soda by 1;
 		increase GorillasRep by 2;
 		now laundryProgress is 2;
 	else:
@@ -408,8 +406,7 @@ to say GorillaTrainingEnd:
 	say "     You grab a water bottle from the nearest water-boy, then head straight for the showers. After a playful shower with the other members of the team, you come back on the field and take your leave of Roman. 'Yeah, nice work back there, champ. You're more than welcome to come back tomorrow'";
 	if carried of football pads is 0:
 		say "     You see some of the other players leaving with their football pads still on them. 'I know. Since the campus is not quite safe, and the city even less, I allow the boys to take their gear with them if they want,' Roman replies, when asked. 'Of course, it applies for you, too. Keep these pads, you never know what kind of sick bastard you could meet out there.' You thank Roman for the advice, and grab back your football pads from the locker.";
-		say "[bold type]You gain football pads![roman type][line break]";
-		increase carried of football pads by 1;
+		ItemGain football pads by 1;
 
 
 [Football match.]
@@ -428,12 +425,12 @@ to say FootballMatch:
 
 to say FootballMatchDefense:
 	say "     After a short moment of tension, the Fourmont Wolves play the ball. While most players throw themselves against each other, the Wolves['] quarterback readies a long pass towards the receiver facing you.";
-	let bonus be (( the Perception of the player minus 10 ) divided by 2);
+	let bonus be (( Perception of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
 	increase diceroll by bonus;
 	[preparing stamina roll]
-	let bonus be (( the Stamina of the player minus 10 ) divided by 2);
+	let bonus be (( Stamina of Player minus 10 ) divided by 2);
 	if diceroll > 16:
 		say "     The receiver starts his sprint, but you have kept your eyes on him, and you put yourself in an interception course.";
 		increase bonus by 2;
@@ -459,12 +456,12 @@ to say FootballMatchDefense:
 
 to say FootballMatchOffense:
 	say "     You are take your position as a receiver,[if HP of Roman >= 11] as the cheerleaders entice the crowd to cheer for your team,[end if] and wait for your teammates to start the game. You hear Roman shout his orders as the quarterback. It seems he's calling for you to make a sprint down your lane, and grab as much terrain as possible. As soon as the down begins, you start running as fast as you can, while Roman gets ready to throw the ball towards you. The Fourmont Wolves seem to have understood what you were doing, and, like a mirror of the previous phase, the cornerback and the safety are coming for you. You notice the cornerback getting uncomfortably close, in the corner of your vision.";
-	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Dexterity Check):[line break]";
 	increase diceroll by bonus;
 	[preparing strength roll]
-	let bonus be (( the Strength of the player minus 10 ) divided by 2);
+	let bonus be (( Strength of Player minus 10 ) divided by 2);
 	if diceroll > 16:
 		say "     You suddenly jump on the side, and feints the cornerback, as he tries to get his hands on you. He fails, and falls on the ground as he misses your tackle. You look up, and see the ball coming your way. You jump and catch it, and turn around to see the safety running towards you, straight in front of you. You brace yourself for the inescapable impact.";
 		increase bonus by 2;
@@ -493,8 +490,7 @@ to say FootballMatchEnd:
 	say "     'Good job, boys,' Roman congratulates the team. 'We'll get them next time, for sure. Take some rest, have some fun with the fans, and see you for the next match.'";
 	if carried of football pads is 0:
 		say "     You see some of the other players leaving with their football pads still on them. 'I know. Since the campus is not quite safe, and the city even less, I allow the boys to take their gear with them if they want,' Roman replies, when asked. 'Of course, it applies for you, too. Keep these pads, you never know what kind of sick bastard you could meet out there.'";
-		say "[bold type]You gain football pads![roman type][line break]";
-		increase carried of football pads by 1;
+		ItemGain football pads by 1;
 
 
 Tenvale Gorillas Football Team ends here.

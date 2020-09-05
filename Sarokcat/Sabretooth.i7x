@@ -29,8 +29,8 @@ To say Sabretooth loss:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -56,7 +56,7 @@ When Play begins:
 	now desc entry is "[mongendernum 3]     You hear something softly moving behind you, and turn around to see a large sabre-toothed cat slowly stalking down the halls toward you on its wide paws. Its large feral body covered in golden striped fur as it draws closer, though you find your eyes locked to its more intimidating large teeth, as the large cat's muscles tense, and it pounces at you!";
 	now face entry is "that of a large cat. The two large fangs extending from your jaws, however, mark your face as that of one of the most deadly prehistoric hunters, a sabretooth's"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "long, large and powerfully muscled. You find yourself resting easily on four large feline paws, each toe equipped with a sharp claw, your changed body feeling comfortable in its new quadrupedal stance. Your neck muscles have shifted along with the rest of your body, allowing your head to face forward properly on its new, fully feline form, the figure of one of the most powerful and dangerous predators of the prehistoric era"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]golden furred[or]feline[or]softly furred[or]golden striped[or]thick, golden furred[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]golden furred[or]feline[or]softly furred[or]golden striped[or]thick, golden furred[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a long feline tail, slowly lashing behind your tightly muscled hindquarters, its feline length seeming to sway softly in an invitation to anyone passing behind you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feline[or]bestial[or]Sabretooth[or]barbed[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "Your face seems to tingle and go numb, as several bones your face crack and begin to reshape themselves, your mouth pushing forward as your jaws change and fill with sharp feline teeth, your nose seeming to flatten out and merge into your newly forming muzzle. Your vision seems to blur as your eyes shift position on your head slightly, while your ears seem to move back to the rear of your head, even as they shift into a more rounded feline shape. Your vision sharpens again, and you find yourself staring out at the world from above a predatory feline muzzle, your head already coming to resemble that of a large cat. You find your new muzzle stretching out in a powerful yawn, as the two distinctive large fangs of a sabretooth begin to grow downwards from your jaw, until finally you snap your jaw closed, and you run your new feline tongue over your new teeth a few times as you get used to your new fully changed face"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -87,6 +87,9 @@ When Play begins:
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "Chipped tooth";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 40;  [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]powerful[or]quadrupedal[at random]";
 	now type entry is "[one of]feline[or]prehistoric[at random]";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -101,7 +104,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -207,9 +210,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Chipped tooth"	"A rather large chipped piece of tooth, obviously knocked off of something with tremendous fangs"	1	Chipped tooth
 
-Chipped tooth is a grab object. It is part of the player. Understand "tooth" and "chipped" as Chipped tooth. Chipped tooth is infectious. The strain of Chipped tooth is "Sabretooth".
+Chipped tooth is a grab object. Understand "tooth" and "chipped" as Chipped tooth. Chipped tooth is infectious. Strain of Chipped tooth is "Sabretooth".
 
-The usedesc of Chipped tooth is "Looking at the small chipped piece of tooth, you find yourself rubbing it between your hands slightly, enjoying the feel of its strange texture. Suddenly, you let out a small yelp as the sharp part of the tooth cuts you, and you drop the piece of tooth as you rub the small cut. Looking around, you can't see where the bit of tooth ended up, and sigh as you give up on your trophy and continue on your way.".
+Usedesc of Chipped tooth is "Looking at the small chipped piece of tooth, you find yourself rubbing it between your hands slightly, enjoying the feel of its strange texture. Suddenly, you let out a small yelp as the sharp part of the tooth cuts you, and you drop the piece of tooth as you rub the small cut. Looking around, you can't see where the bit of tooth ended up, and sigh as you give up on your trophy and continue on your way.".
 
 instead of sniffing Chipped tooth:
 	say "The large fang somehow smells quite old despite looking rather new.";

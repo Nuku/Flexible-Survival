@@ -4,7 +4,7 @@ Version 3 of Sylvia by Prometheus begins here.
 [Version 2: Added gender preference paths - By Prometheus]
 [Version 3: Bad Breakup and Cheat's Retribution events added - By Prometheus]
 
-[ hp of Sylvia - relationship variable with the player          ]
+[ HP of Sylvia - relationship variable with the player          ]
 [   0: not met                                                  ]
 [   1: told you her room number                                 ]
 [   2: watched her give a BJ + told them her room number        ]
@@ -58,7 +58,7 @@ Version 3 of Sylvia by Prometheus begins here.
 
 [QUEST LOG]
 to SylviaQuestLog:
-	if hp of Sylvia is:
+	if HP of Sylvia is:
 		-- 0:
 			say "     You should not see this.";
 		-- 1:
@@ -114,7 +114,7 @@ an everyturn rule:
 		move Sylvia to Sylvia's Room;
 	else: [Away exploring]
 		now Sylvia is nowhere;
-	if (hp of Sylvia > 5) or (hpM of Sylvia > 4) or (hpF of Sylvia > 4):
+	if (HP of Sylvia > 5) or (hpM of Sylvia > 4) or (hpF of Sylvia > 4):
 		if SylviaSampleCounter > 0:
 			decrease SylviaSampleCounter by 1;
 
@@ -127,7 +127,7 @@ Object	Name
 Sylvia's Room	"Sylvia's Room"
 
 Sylvia's Room is a room.
-The description of Sylvia's Room is "[SylviasRoomDesc]".
+Description of Sylvia's Room is "[SylviasRoomDesc]".
 
 to say SylviasRoomDesc:
 	say "     The floor of Sylvia's room is clean. The walls, however, are covered in pictures of various canines. Wolves, foxes, corgis, border collies, the list goes on. If she didn't have a window, you would think that side would be plastered with them too. On a bookshelf, there are hundreds of books on various subjects, including biology and mythology. A desk is pushed against the wall in one corner with a dead laptop, a photo frame, a vase with some flowers, and two well-thumbed books. One is Charles Darwin's [']On the Origin of Species['], and the other is a children's book with dogs and a smiling family. Beside the window is a small armchair with a cushion depicting a border collie. Her bed is well made, but there are strands of fur on it, not all of it looks like hers...";
@@ -138,22 +138,29 @@ Table of GameCharacterIDs (continued)
 object	name
 Sylvia	"Sylvia"
 
-Sylvia is a woman. The hp of Sylvia is usually 0.
-[Physical details as of game start]
+Sylvia is a woman.
 ScaleValue of Sylvia is 3. [human sized]
-SleepRhythm of Sylvia is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Sylvia is 0. [no cock]
-Cock Length of Sylvia is 0. [no cock length]
-Ball Size of Sylvia is 0. [no ball size]
-Ball Count of Sylvia is 0. [no balls]
-Cunt Count of Sylvia is 1. [1 pussy]
-Cunt Depth of Sylvia is 8. [gets stretched a bit by an alpha husky]
-Cunt Tightness of Sylvia is 3. [gets stretched a bit by an alpha husky]
-Nipple Count of Sylvia is 2. [2 nipples]
-Breast Size of Sylvia is 3. [C cup at the start]
+Body Weight of Sylvia is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Sylvia is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Sylvia is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Sylvia is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Sylvia is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Sylvia is 6. [length in inches]
+Breast Size of Sylvia is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Sylvia is 2. [count of nipples]
+Asshole Depth of Sylvia is 8. [inches deep for anal fucking]
+Asshole Tightness of Sylvia is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Sylvia is 0. [number of cocks]
+Cock Girth of Sylvia is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Sylvia is 0. [length in inches]
+Ball Count of Sylvia is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Sylvia is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Sylvia is 1. [number of cunts]
+Cunt Depth of Sylvia is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Sylvia is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Sylvia is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Sylvia is false. [can take oversized members without pain]
-Sterile of Sylvia is true.
 PlayerMet of Sylvia is false.
 PlayerRomanced of Sylvia is false.
 PlayerFriended of Sylvia is false.
@@ -164,24 +171,26 @@ Virgin of Sylvia is false.
 AnalVirgin of Sylvia is false.
 PenileVirgin of Sylvia is true.
 SexuallyExperienced of Sylvia is true.
+TwistedCapacity of Sylvia is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Sylvia is true. [steriles can't knock people up]
 MainInfection of Sylvia is "".
+Description of Sylvia is "[SylviaDesc]".
+Conversation of Sylvia is { "Woof woof" }.
+The scent of Sylvia is "     The pretty collie smells mostly like a dog. Cleanish, but with undertones of other creatures.".
 [Custom Variables]
 hpM of Sylvia is a number that varies. hpM of Sylvia is usually 0.
 hpF of Sylvia is a number that varies. hpF of Sylvia is usually 0.
 SylviaConv is a number that varies. SylviaConv is usually 0.
 SylviaVirginCheck is a number that varies. SylviaVirginCheck is usually 0.
 SylviaTrapVar is a number that varies. SylviaTrapVar is usually 0.
-The description of Sylvia is "[SylviaDesc]".
-The conversation of Sylvia is { "Woof woof" }.
-The scent of Sylvia is "     The pretty collie smells mostly like a dog. Cleanish, but with undertones of other creatures.".
 
 to say SylviaDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Sylvia] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Sylvia] <- DEBUG[line break]";
 	else:
-		say "     Sylvia is a young anthro border collie. Her hind legs, paws, chest, muzzle, and the tip of her fluffy tail are white, while the rest of her fur is black. She gazes at you with green eyes, an abnormality in dogs. [if (hp of Sylvia < 4) or (hpM of Sylvia > 0) or (hpF of Sylvia < 3)]The shirt she wears does little to hide her two C cup breasts, but keeps them from the eyes of passing creatures. She is wearing a royal blue skirt that hides her thighs from view[else]Her lack of clothing means that you can see her two C cup breasts, covered in white fur. You can also see her canine vulva, a small amount of moisture glistening at the bottom[end if].";
+		say "     Sylvia is a young anthro border collie. Her hind legs, paws, chest, muzzle, and the tip of her fluffy tail are white, while the rest of her fur is black. She gazes at you with green eyes, an abnormality in dogs. [if (HP of Sylvia < 4) or (hpM of Sylvia > 0) or (hpF of Sylvia < 3)]The shirt she wears does little to hide her two C cup breasts, but keeps them from the eyes of passing creatures. She is wearing a royal blue skirt that hides her thighs from view[else]Her lack of clothing means that you can see her two C cup breasts, covered in white fur. You can also see her canine vulva, a small amount of moisture glistening at the bottom[end if].";
 		LineBreak;
-		say "     From the interactions you've had with her so far, Sylvia is a confident young lady, though your first encounter shows that she can be brought to despair. [if (hp of Sylvia < 4) or (hpM of Sylvia > 0) or (hpF of Sylvia < 3)]While she seems fairly sexually open, people that she is unfamiliar with must first earn her trust and respect before they can expect to be pleasured by the border collie[else]Due to your help and time spent with her, she willingly will tend to some of your carnal needs[end if]. She looks back at you, striking a seductive pose, before sticking her tongue out lightheartedly.";
+		say "     From the interactions you've had with her so far, Sylvia is a confident young lady, though your first encounter shows that she can be brought to despair. [if (HP of Sylvia < 4) or (hpM of Sylvia > 0) or (hpF of Sylvia < 3)]While she seems fairly sexually open, people that she is unfamiliar with must first earn her trust and respect before they can expect to be pleasured by the border collie[else]Due to your help and time spent with her, she willingly will tend to some of your carnal needs[end if]. She looks back at you, striking a seductive pose, before sticking her tongue out lightheartedly.";
 
 [Character Notes - Sylvia:
 
@@ -234,7 +243,7 @@ to say SylviaTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Find out about where her interest in biology came from";
 	[]
-	If (hp of Sylvia > 5) or (hpM of Sylvia > 4) or (hpF of Sylvia > 4) and SylviaSampleCounter is 0:
+	If (HP of Sylvia > 5) or (hpM of Sylvia > 4) or (hpF of Sylvia > 4) and SylviaSampleCounter is 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Help with research";
 		now sortorder entry is 6;
@@ -332,7 +341,7 @@ to say SylviaTalk6: [Samples from friends]
 		now sortorder entry is 1;
 		now description entry is "Have a trip to the zoo and see the herm panther";
 	[]
-	[if hp of Blanche > 2 and FemaleList is not banned and MaleList is not banned and FemaleList is not warded and MaleList is not warded:
+	[if HP of Blanche > 2 and FemaleList is not banned and MaleList is not banned and FemaleList is not warded and MaleList is not warded:
 		choose a blank row in table of fucking options;
 		now title entry is "Blanche";
 		now sortorder entry is 2;
@@ -404,8 +413,7 @@ to say AngieSample: [Sylvia X Angie]
 	WaitLineBreak;
 	say "     The zookeeper doesn't wait before pressing her penis deeper, the collie's throat bulging around its girth. You question how Sylvia is able to do this without gagging or showing any discomfort. She seems to be taking the [']no hands['] policy seriously, not stimulating her dripping pussy as her face is used by the horny feline. 'Mmm, where did you find this girl? She knows how to treat a cock that's for sure,' Angie moans. As if feeling that that sells her short, Sylvia sneaks her tongue out and traces it over the kitty's balls each time she bottoms out. The feline's hands play over the collie's breasts in reward for this treatment, caressing the swell of flesh and tweaking the nipples. 'I don't think I'm going to last much longer. Your throat is [italic type]tight[roman type].' Giving a few final thrusts, Angie withdraws as she begins to cum. The first few spurts shoot into the canine's mouth and esophagus, the following jets splattering over her face and chest. 'I hope you can still use those as samples,' the pantheress says with slight worry. 'Not that I would mind having to do this again.'";
 	say "     As Sylvia sits up, she is quite the sight. Semen drips from her breasts upwards, matting her fur. 'I think there's plenty of sample material here, don't you think[if Player is not defaultnamed] [name of Player][end if]?' You have to agree, there is probably enough cum on her to fill a glass. You pass her one of the vials from her backpack and she scrapes a decent pool from her nose into it. 'You'd put many of the men at the campus to shame with that release. I might be back to continue this another time if that's alright with you Angie,' the collie says as she tightens the lid of the vial. The feline blushes beneath her fur and mumbles that that should be fine [if AngieAroused is 50]as long as Midnight can join in too[else]and that perhaps they could do more[end if]. Collecting a few strands of fur from the pantheress's arm, Sylvia stores the samples and slings her backpack over her shoulder again. You both wave goodbye to Angie and walk back to the campus. The zoology student is going to need a long shower later, but gives you a bottle of water in payment first.";
-	say "[bold type]You gain a water bottle![roman type][line break]";
-	increase carried of water bottle by 1;
+	ItemGain water bottle by 1;
 	NPCSexAftermath Sylvia receives "OralCock" from Angie;
 	now SylviaSampleCounter is 8;
 
@@ -413,7 +421,7 @@ to say AngieSample: [Sylvia X Angie]
 	say "     You remember the mature white wolf that you saved in the Capitol District and are about to suggest her as a potential sample donor when Julian enters the room behind you. 'Fancy seeing you here[if Player is not defaultnamed] [name of Player][end if]. Helping Sylvia with her research?' he asks as the collie walks over and gives him a loving hug. 'They're indispensable, I don't know what I would do without either of you. But I believe [if Player is herm]they [else if Player is male]he [else]she [end if]was about to say something before you came in,' Sylvia says, and expectant look directed at you. You tell them about Blanche and how you saved her from Drakes and helped her back to her den. 'She sounds nice. I think I'll come along too,' the dark-furred wolf responds. 'Nice, Julian. Expressing interest in another woman in front of your girlfriend,' the collie dryly replies. 'I didn't mean it exactly like that, and anyway, I thought we were polyamorous?' the lupine says, ears flat against his head in embarrassment.";
 	say "     'Don't worry, we are. I just like teasing you about it. Not many people were open about such relationships before the outbreak and I like to feel that I was ahead of the trend. But we should go and meet this wolf woman before our friend here decides we need some privacy.' They don't take long to pack the necessary equipment and soon you are walking across the campus and towards the gate. 'Would you like to take point on this expedition Julian. Because I wouldn't want you to miss out on experiencing how [']nice['] Blanche is. You might sulk,' Sylvia asks, smiling like a coal-scuttle. 'I graciously accept your offer, feel free to observe,' the wolf replies, bowing extravagantly, causing a few passersby to look on curiously. The collie snorts and pushes him forward. 'Well then, lead dear alpha.' You escort them as you trudge through the city, ensuring that you aren't taken by surprise, the two of them remaining relaxed and looking around as you travel. Before long, you are outside Blanche's makeshift den and you knock before entering, the scientists following you inside.";
 	WaitLineBreak;
-	say "     Blanche looks up as you descent the stairs into the basement, her tail wagging slowly behind her as she sees that it is you, though it slows for a moment as she sees that you have company. 'Who are they?,' she cautiously asks while eying them warily. [if hp of Blanche > 6]'And please keep your voices down. The children are sleeping.' [end if]Before you can reply, Sylvia steps forward, hands held up in an unthreatening manner. 'Hello, my name is Sylvia, and this is my friend Julian. We met [if Player is not defaultnamed][name of Player] [else]your rescuer [end if]at the college. I'm a biologist doing research on the forms that the nanite plague has changed people into. And I was wondering whether you would be willing to provide a sample of biological material for study?' Blanche waves for her to lower her hands, but still looks wary of the two students.";
+	say "     Blanche looks up as you descent the stairs into the basement, her tail wagging slowly behind her as she sees that it is you, though it slows for a moment as she sees that you have company. 'Who are they?,' she cautiously asks while eying them warily. [if HP of Blanche > 6]'And please keep your voices down. The children are sleeping.' [end if]Before you can reply, Sylvia steps forward, hands held up in an unthreatening manner. 'Hello, my name is Sylvia, and this is my friend Julian. We met [if Player is not defaultnamed][name of Player] [else]your rescuer [end if]at the college. I'm a biologist doing research on the forms that the nanite plague has changed people into. And I was wondering whether you would be willing to provide a sample of biological material for study?' Blanche waves for her to lower her hands, but still looks wary of the two students.";
 	say "     'Where are our manners? Would you like something to eat or drink?' Julian interjects. 'I would be interested in talking to you for a bit if you don't mind, even if you would prefer not to take part in our research, and you can never have too much food or drink when the outside can be so dangerous.' Blanche reacts with a small smile at the black wolf's offer, eyeing him up, though you are unsure whether it is to gauge whether he is a threat or a potential lover. 'That sounds very civilized. I don't see why I can't at least allow you to convince me of the merits of your proposal, and you seem an interesting couple so I would be lying if I said I wasn't interested in knowing more about you. Come. I'll clear one of the desks and share what food you can spare,' the white wolf replies. She brushes some papers from a table while you collect some chairs and the two students lay out the selection of sandwiches and cans of drink from a backpack.";
 	WaitLineBreak;
 	say "     As you seat yourselves, Sylvia apologizes to Blanche. 'I'm sorry for behaving like I was more concerned about the science than I was about you. I haven't met too many people in the city who thought of me as a person as opposed to a potential receptacle for breeding, so I try and explain what I want before they try and jump me. I'm glad that Julian appears to remember proper etiquette when I can't.'";]
@@ -421,30 +429,26 @@ to say AngieSample: [Sylvia X Angie]
 to say BubbleSample: [Take sample from Bubble. Sylvia X Latex Vixen]
 	say "     Wondering whether Sylvia would be interested in meeting Bubble, you inform her of the latex vixen living on the upper floors of the library. The collie happily collects her equipment in a bag and follows you through the city. Luckily, there are no attacks, and you arrive at the library safely. 'I do like the smell of books,' the canine confesses as you walk over to the stairs. Upon reaching the second floor, you are greeted by Bubble, whom is lounging around on a chair, her legs spread and a paw rubbing over her gash. She looks up, but doesn't stop masturbating. 'Oh, hi. I didn't realize we were having anyone new here today. Where'd they find you?' The two women look at each other, though Sylvia doing so with more scrutiny as she makes mental notes of interesting features and qualities. 'Your friend here,' the collie gestures at you, 'has agreed to help me with my research into the infection of the city. Would you be willing to provide a sample, perhaps some of the lubrication that seems to be pouring from your vagina?'";
 	say "     'Ooh, someone's confident. Perhaps you could earn it. With your tongue, say?' Bubble responds cheekily. Unfazed, Sylvia drops to her knees, collecting a small amount of the secretion before pressing her mouth up against the vixen's leaking vulva. The sound of slurping and moaning fills the library, both participants caring little if anyone else knows what they are doing. A paw strokes over the vixen's rubbery skin, feeling the bulge of her breasts before returning to spread her pussy wide for the finale. With a gasp, Bubble begins squirting her lube across the floor, the collie quickly moving her face out of the way, though keeping her fingers pistoning in and out. 'Mmm, you definitely earnt your sample,' the vixen tiredly mumbles. With all parties satisfied, Sylvia stands up and collects her belongings. Just to make sure of her safety, you escort her back to her room, chatting about how you met Bubble. 'Thank you, I'll be sure to compare Bubble's sample with those of other latex creatures,' the collie says, tossing you a water bottle";
-	say "[bold type]You gain a water bottle![roman type][line break]";
-	increase carried of water bottle by 1;
+	ItemGain water bottle by 1;
 	NPCSexAftermath Bubble receives "OralPussy" from Sylvia;
 	now SylviaSampleCounter is 8;
 
 to say CrabSample: [Take sample from crab. Non-sexual.]
 	say "     Hoping that the crab can be of help to the collie, you lift her onto the bed. Sylvia instantly squeaks in surprise and falls to her knees next to it. 'She's so adorable! What's her name? Please say that you have named for her. She's so cute.' You are slightly taken aback by how enthusiastic she is being about the crab, but you have to admit, the crab is rather sweet. The student pulls a tin of fish food out of a bag and sprinkles some on her palm, before offering it to the crab. If her eyes could go out on stalks even more, then you are sure that the crustacean would do so as she quickly scuttles onto the canine's paw. While she feeds, Sylvia brushes her back with a cotton swab, collecting any detritus that may have collected there. Once the food is finished, the collie returns your companion to you, along with a bottle of clean water in thanks.";
-	say "[bold type]You gain a water bottle![roman type][line break]";
-	increase carried of water bottle by 1;
+	ItemGain water bottle by 1;
 	now SylviaSampleCounter is 8;
 
 to say DashSample: [Sylvia, Julian and fox. Non-sexual]
 	project Figure of Dash_icon;
 	say "     You lift the small fox onto Sylvia's bed and ask him to sit still and be brave while Sylvia gets a fur sample. However, he doesn't listen and begins to snuffle around on her duvet, taking in all the interesting smells that permeate the fabric. You hear the door open behind you and someone enter. 'Oh, hello. Who's the handsome fellow on the bed? You haven't found yourself a new man have you Sylvia?' they ask, their voice identifying them as Julian. Sylvia lets out a snort. 'I think he's a bit young for me. Maybe when he's older,' she jokes back. 'When he's tired of exploring and hopefully before finding some of the items I keep under my bed, Dash here is going to donate some fur for my research.' Julian sits on the bed, startling the young fox for a moment before the vulpine begins to nudge the dark-furred wolf, familiarizing himself with his scent. 'He's so adorable! Where did you find him?' Julian asks you, stroking the smaller canidae's back. You explain that you found him in the park and gave him some food and since then the little fox had wanted to be with you.";
 	say "     As you tell the tale, Sylvia sits on the other side of the kit who is basking in being the center of attention. 'I'd consider kidnapping him from you and keeping him for myself, but I haven't checked the college's rules on pets since the outbreak,' the collie teases you while scritching under his chin. Judging from his current behavior you might wonder whether the fox would accept this, but you know him better than that and you imagine it would take a greater bribe than mere attention to separate him from you. Giving the cute fur donor a kiss on his snout, Sylvia stands up again and brushes the fur that has collected in her palm into a clear plastic bag and labels it. 'Julian, let the puppy go. He has important business in the city that we are keeping him from. He and his sidekick are going to save the world,' she mock scolds the wolf. With a sigh he too stands up. 'Fine. I came to tell you that Dr. Vayne wanted to discuss some of your research. Bye[if Player is not defaultnamed] [name of Player][end if].' 'Another successful sample taken but I should go and talk to Dr. Vayne. Here. Have a water bottle in payment. Make sure you share it with Dash,' the collie says as she brushes any loose fur from her clothes.";
-	say "[bold type]You gain a water bottle![roman type][line break]";
-	increase carried of water bottle by 1;
+	ItemGain water bottle by 1;
 	now SylviaSampleCounter is 8;
 
 to say DeniseSample: [Take sample from Denise. Sylvia X Gryphoness]
 	say "     You gesture to the hermaphrodite gryphon following you and introduce her to the collie. 'You have such pretty feathers,' Sylvia croons, stroking a paw over the vibrant, blue plumage. Denise leans towards the attention, enjoying the affection. 'Would you mind if I took two feathers? One can be molted, but I would like a fresh one for comparison,' the student requests, her hand getting closer to the gryphon's back end. While initially hesitant, your companion agrees when Sylvia's hand reaches her genitals, a thumb rubbing over her pussy while her palm cups her balls. Pleased at such easy consent, Sylvia stoops and picks a feather off of the floor before grasping one on the gryphoness's neck. With a sharp pull, a feather comes away in her hand, though not without a pained squawk from Denise. The collie quickly stores her samples in two vials before turning back to you both. 'Now that that's out of the way, perhaps I can reward such a pretty bird for her bravery.'";
 	say "     Denise is keen, and you don't have any problem with that. After all, being plucked must hurt. Sylvia goes down between the gryphon's legs, grasping her cock in one hand and massaging her cunt with the other. Denise lets out a warble and begins thrusting her hips forward, pushing the collie's fingers into her slit and her shaft through the canine's grip. Content to just watch, you sit on the bed and allow them to continue. With a slurp, Sylvia takes the avian's shaft into her mouth, her tongue dancing over its length as it is withdrawn. This continues for several minutes, the thrusts speeding up as Denise closes on orgasm. Pulling out of the collie's mouth, your gryphoness companion squirts her cum over the collie, who sits there, allowing herself to be splattered with spooge. When Denise has finished, the canine collects some of the semen in a vial and adds it to her collection. Overall, a very productive session. Sylvia tosses you a bottle of water in thanks.";
-	say "[bold type]You gain a water bottle![roman type][line break]";
-	increase carried of water bottle by 1;
+	ItemGain water bottle by 1;
 	NPCSexAftermath Sylvia receives "OralCock" from Denise;
 	now SylviaSampleCounter is 8;
 
@@ -459,7 +463,7 @@ Section 4 - Sex
 instead of fucking Sylvia:
 	if (lastfuck of Sylvia - turns < 6): [she got fucked in the last 18 hours = 6 turns]
 		say "     Sylvia looks at you, an amused expression gracing her face. 'Letting your instincts control you? Sorry, but you'll have to find someone else.' She then melodramatically places a hand to her forehead. 'For I have... a headache.'";
-	else if ((hp of Sylvia < 4) and (hpM of Sylvia < 3) and (hpF of Sylvia < 3)): [relationship not high enough]
+	else if ((HP of Sylvia < 4) and (hpM of Sylvia < 3) and (hpF of Sylvia < 3)): [relationship not high enough]
 		say "     'As attractive as you are, we got to know each other more in other ways before I let you ravish me.' She gasps. 'We could talk about BOYS.'";
 	else: [ready for sex]
 		say "     Looking around the room, you see the collie isn't paying attention to you, instead, gazing out the window with a book in hand. The moisture around her groin suggests that she is ready though.'";
@@ -576,8 +580,9 @@ Object	Name
 Despairing Biologist	"Despairing Biologist"
 
 Despairing Biologist is a situation.
+ResolveFunction of Despairing Biologist is "[ResolveEvent Despairing Biologist]".
 The level of Despairing Biologist is 0.
-The sarea of Despairing Biologist is "Campus".
+Sarea of Despairing Biologist is "Campus".
 
 when play begins:
 	add Despairing Biologist to BadSpots of FurryList;
@@ -586,7 +591,7 @@ instead of going to College Walkway East while (Despairing Biologist is active a
 	move player to College Walkway East;
 	DespairingBiologistEvent;
 
-Instead of resolving Despairing Biologist:
+to say ResolveEvent Despairing Biologist:
 	DespairingBiologistEvent;
 
 to DespairingBiologistEvent: [Meet Sylvia]
@@ -623,14 +628,14 @@ to DespairingBiologistEvent: [Meet Sylvia]
 				say "     The male continues to hammer himself into the canine's mouth, occasionally stroking the back of her head or scratching an ear. Noticing his imminent orgasm, the collie brings a hand up between her mouth and his knot, preventing its entrance to her mouth. Giving a few last thrusts, Julian cums inside Sylvia's mouth, his knot throbbing between her fingers. Short of breath, the biology student pulls back, semen oozing from her mouth as the lupine cock slips out, still contracting and leaving trails of sperm on the ground. Swallowing the contents of her mouth, the collie stands up, dusting her knees off and straightening her skirt. 'Mmm, not bad for a first experience. I might even consider doing that again,' she says brightly before kissing her companion on the nose.";
 				say "     'But, fair is fair, I haven't had an orgasm,' she chuckles, playfully attempting to drag the lupine up. As you step forward to offer your services for such a task, she looks at you and laughs good naturedly. 'I only met you a moment ago. What sort of girl would I be if I allowed anyone I met to watch me fellate a friend before allowing the stranger to go down on me.' Seeing your disappointment, she relents slightly. 'I'll tell you what, prove to me that you're not just interested in me sexually. Talk to me later in my room when we aren't both horny, then I'll consider whether you are worth knowing. Room number 059, toodle pip.' Beginning to feel like a third wheel, you leave the two bonding, and continue through the college.";
 				NPCSexAftermath Sylvia receives "OralCock" from Julian;
-				now hp of Sylvia is 2; [watched BJ, got room number]
+				now HP of Sylvia is 2; [watched BJ, got room number]
 				now Resolution of Despairing Biologist is 2; [watched BJ]
 			else: [do not watch]
 				LineBreak;
 				say "     Allowing the wolf to feel the attentions of the collie, you turn to leave. Sylvia pulls back from his cock momentarily and calls after you, 'I'm in room 059 of the female dormitory if you want to talk to me more. You seemed nice enough.' Noting the room in your head, you push past the branches and continue through the college.";
 				NPCSexAftermath Sylvia receives "OralCock" from Julian;
 				now Resolution of Despairing Biologist is 3; [didn't watch BJ]
-				now hp of Sylvia is 1; [got room number]
+				now HP of Sylvia is 1; [got room number]
 			add "Sylvia Quest" to OpenQuests of Player;
 			change the northeast exit of Tenvale College Female Dorms to Sylvia's Room; [connecting the location to the travel room]
 			change the southeast exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
@@ -638,7 +643,7 @@ to DespairingBiologistEvent: [Meet Sylvia]
 			LineBreak;
 			say "     Feeling slightly embarrassed at the willingness of the pair to let you watch, you mutter something about needing to be somewhere before walking hurriedly back the way you came, the collie giggling behind you.";
 			now Resolution of Despairing Biologist is 99; [disinterest]
-			now hp of Sylvia is 100; [event refused, no further contact with her]
+			now HP of Sylvia is 100; [event refused, no further contact with her]
 	add "Sylvia Quest" to OpenQuests of Player;
 	now Despairing Biologist is resolved; [It won't happen again]
 	now LastCampusWalkin is turns;
@@ -648,12 +653,13 @@ Object	Name
 Room 059	"Room 059"
 
 Room 059 is a situation.
+ResolveFunction of Room 059 is "".
 Prereq1 of Room 059 is Despairing Biologist.
 Prereq1Resolution of Room 059 is { 1, 2, 3 }.
 The level of Room 059 is 0.
-The sarea of Room 059 is "Nowhere".
+Sarea of Room 059 is "Nowhere".
 
-instead of going northeast from Tenvale College Female Dorms while (Room 059 is active and Room 059 is PrereqComplete and Room 059 is not resolved and (hp of Sylvia is 1 or hp of Sylvia is 2) or (hpM of Sylvia is 1) or (hpF of Sylvia is 1)):
+instead of going northeast from Tenvale College Female Dorms while (Room 059 is active and Room 059 is PrereqComplete and Room 059 is not resolved and (HP of Sylvia is 1 or HP of Sylvia is 2) or (hpM of Sylvia is 1) or (hpF of Sylvia is 1)):
 	move player to Tenvale College Female Dorms;
 	Room059Event;
 
@@ -683,7 +689,7 @@ to Room059Event: [First time to Sylvia's room]
 	else if hpF of Sylvia is 1:
 		now hpF of Sylvia is 2;
 	else:
-		now hp of Sylvia is 3; [Met her in her room]
+		now HP of Sylvia is 3; [Met her in her room]
 	now Room 059 is resolved;
 
 Table of GameEventIDs (continued)
@@ -691,12 +697,13 @@ Object	Name
 Unnatural Heat	"Unnatural Heat"
 
 Unnatural Heat is a situation.
+ResolveFunction of Unnatural Heat is "".
 Prereq1 of Unnatural Heat is Room 059.
 Prereq1Resolution of Unnatural Heat is { 1, 2 }.
 The level of Unnatural Heat is 0.
-The sarea of Unnatural Heat is "Nowhere".
+Sarea of Unnatural Heat is "Nowhere".
 
-instead of going northeast from Tenvale College Female Dorms while (Unnatural Heat is active and Unnatural Heat is PrereqComplete and Unnatural Heat is not resolved and SylviaConv is 5 and (hp of Sylvia is 3 or hpM of Sylvia is 2 or hpF of Sylvia is 2) and a random chance of 1 in 4 succeeds):
+instead of going northeast from Tenvale College Female Dorms while (Unnatural Heat is active and Unnatural Heat is PrereqComplete and Unnatural Heat is not resolved and SylviaConv is 5 and (HP of Sylvia is 3 or hpM of Sylvia is 2 or hpF of Sylvia is 2) and a random chance of 1 in 4 succeeds):
 	move player to Tenvale College Female Dorms;
 	UnnaturalHeatEvent;
 
@@ -760,9 +767,7 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 			LineBreak;
 			if carried of libido suppressant > 0: [present]
 				say "     Knowing that time is of the essence, you place your bag on the bed and start searching through it. It doesn't take you long to find what you are looking for. Grabbing the syringe, you shout to Sylvia that you've got one. She quickly crawls over to you and grabs it from your proffered hand. Suddenly, a knock interrupts your search, and you both turn around. In the doorway is a very concerned looking wolf, whom you recognize as Julian. 'Are you alright, Sylvia? I saw you dash through the campus, and you don't seem to have your satchel with you.' Julian inquires worriedly, casting curious glances at why you and the collie are scrabbling about on the floor. Sylvia hurriedly explains the same story she just told you, her paws fiddling with the syringe.";
-				LineBreak;
-				say "[bold type]You lose one libido suppressant![roman type][line break]";
-				decrease carried of libido suppressant by 1;
+				ItemLoss libido suppressant by 1;
 				say "     Julian's eyes widen, and he steps into the room before closing the door, hiding the collie girl's predicament from any passerby. Seeing what is in her hands, he lets out a sigh and relaxes slightly. 'It's a good thing that your friend had some. I'm down to my last one. I'll ask the twins to make another hospital run, just in case,' Julian addresses the collie. With a grateful glance at you, Sylvia flicks the tip before pulling her skirt off and stabbing the needle into her thigh. While the effects of her arousal have lessened, the lips of her cunt are still damp with her juices, and she still pants with need. [if Player is male]'While I would have preferred that this wasn't so desperate, I'm going to need more help. Would you... mount me? I fear that I have been sent into heat,' the collie girl pleads with you, her pussy clenching. Sylvia then turns to Julian. 'Would you like some oral attention? You did try and help,' she offers, unbuttoning her blouse and throwing it onto the bed. Shocked, Julian hesitantly agrees, pulling his trousers and shirt off and placing them beside his friend's[else]'Julian, while I would have preferred that this wasn't so desperate, I'm going to need more help. Would you... mount me? I fear that I have been sent into heat,' the collie girl pleads, her pussy clenching. Shocked, Julian hesitantly agrees, pulling his trousers and shirt off and placing them on her bed. Sylvia then turns to you. 'Would you like some oral attention? You did try and help,' she offers, unbuttoning her blouse and throwing it atop Julian's clothes[end if]. 'Otherwise, could you give us some privacy?'";
 				WaitLineBreak;
 				say "     [bold type]Do you wish to take her up on the offer?[roman type][line break]";
@@ -845,8 +850,8 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 				else: [not interested]
 					say "     You shake your head, helping her was enough. You wish them well and leave them to their coupling. As you close the door, you hear a yip of pleasure.";
 					now resolution of Unnatural Heat is 9; [Searched your bag, Suppressant not found, Not interested]
-		now hp of Sylvia is 4; [helped with heat]
-		now hp of Julian is 1;
+		now HP of Sylvia is 4; [helped with heat]
+		now HP of Julian is 1;
 	now Unnatural Heat is resolved;
 
 Table of GameEventIDs (continued)
@@ -854,18 +859,19 @@ Object	Name
 Beach Field Research	"Beach Field Research"
 
 Beach Field Research is a situation.
+ResolveFunction of Beach Field Research is "[ResolveEvent Beach Field Research]".
 Prereq1 of Beach Field Research is Unnatural Heat.
 Prereq2 of Beach Field Research is Julian's Room Event.
 Prereq1Resolution of Beach Field Research is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
 Prereq2Resolution of Beach Field Research is { 0, 1 }.
 The level of Beach Field Research is 0.
-The sarea of Beach Field Research is "Beach".
+Sarea of Beach Field Research is "Beach".
 
-after going to Public Beach while (Beach Field Research is active and Beach Field Research is PrereqComplete and Beach Field Research is not resolved and daytimer is day and hp of Julian is 3 and a random chance of 1 in 2 succeeds):
+after going to Public Beach while (Beach Field Research is active and Beach Field Research is PrereqComplete and Beach Field Research is not resolved and daytimer is day and HP of Julian is 3 and a random chance of 1 in 2 succeeds):
 	move player to Public Beach;
 	BeachFieldResearchEvent;
 
-Instead of resolving Beach Field Research:
+to say ResolveEvent Beach Field Research:
 	BeachFieldResearchEvent;
 
 to BeachFieldResearchEvent: [Meet the group up close]
@@ -891,19 +897,19 @@ to BeachFieldResearchEvent: [Meet the group up close]
 	WaitLineBreak;
 	say "     Sylvia raises a cup with lemonade, causing the group to quieten down. 'We came together because we all agreed that studying the changes in the city could benefit society, but also be fun for us. We may not be the most selfless of people, but our research could be none the less important. While there are most likely others studying in similar fashion to us, we should not let this hinder or discourage us. Without Julian, I may never have gone along this path. For that, I give him thanks,' Sylvia intones. Julian dips his head in recognition but blushes slightly at Evelyn's jab of 'I thought that you'd already rewarded him.' They all chuckle, the wolf included, before Sylvia continues. 'While, yes, Julian has been given certain 'benefits', if not for him and [name of Player], who joined us for this picnic, I may have been just another needy bitch in the city, at the mercy of my heat and the many virile males. For this reason, I think that they could be of use to our project. Do you all agree?";
 	say "     They all assent enthusiastically, all of their eyes appraising you. 'If you could all raise your glasses,' the collie requests, which you all do. 'To friendship and science,' she toasts, joined by your voices. Soon after the celebration, you all begin clearing up the picnic, gathering bottles, plates, and cutlery into the wicker basket. As you help them, Sylvia kneels next to you, 'Come by my room at some point, then I'll explain how you can help us. It also means that I get to see you, though I'm sure the knowledge that you are helping advance science is all that you need,' the collie jokes before continuing, 'Don't feel rushed though. We all know that you have other things to do, and we have things we can do without you anyway. I would offer whether you wanted to walk back with us, but you look like you have things you want to do while you're here. So, bye for now,' she says sweetly, causing the others to call farewell too. As they leave, you think how lucky you have been finding friendly people in a city full of those overcome by the nanites.";
-	now hp of Sylvia is 5;
-	now hp of Julian is 4;
+	now HP of Sylvia is 5;
+	now HP of Julian is 4;
 	now hpM of Sylvia is 4;
 	now hpF of Sylvia is 4;
 	now Beach Field Research is resolved;
 
-instead of going northeast from Tenvale College Female Dorms while (hp of Sylvia is 5 or hpM of Sylvia is 4 or hpF of Sylvia is 4):
+instead of going northeast from Tenvale College Female Dorms while (HP of Sylvia is 5 or hpM of Sylvia is 4 or hpF of Sylvia is 4):
 	SylviaJobProp;
 
 to SylviaJobProp: [Opens up interactions between Sylvia and Pets/Companions]
 	say "     As you walk into Sylvia's room, you are greeted by the soft curves of her rear as she bends over, looking through a duffel bag. Letting out a polite cough, you casually lean against the wall, watching her. Without looking up, the collie calls, 'Please [name of Player], enjoy the view. I'm just looking for the syringes.' Straightening up, she turns to you with a smile, a sealed packet with a syringe inside grasped in her paw. 'I'm glad that you can still appreciate my backside, considering you probably see them all the time wandering around the city,' she teases. 'Though it did take you long enough to get here, so perhaps you don't have time to admire the scenery. As I've explained before, I wish to study interactions of the infected with each other, especially groups. As such, we believe that you may be in a position to help, considering that you roam around the city meeting all sorts of people in various states of mind.";
 	say "     'So, if you find any friendly residents of the city that would be willing to donate biological material, whatever they're comfortable with, could you tell me? Julian will be helping in this too, so we can all go together to collect the sample. The twins mainly requisition equipment and food, but they may join us sometimes.' As if on cue, Julian enters the room, nodding as he sees you. 'Explaining how they can help?' the wolf inquires. Sylvia nods before continuing, 'We can pay you in food or water if you would like, though sometimes, we may have something more interesting to give you if you're lucky. I think that sums it up. Now, if you could leave, Julian and I have some planning to do. Yes, I literally mean planning. If we were about to have sex, I'd invite you, but we have to decide which areas are safe enough to reconnoiter while still being of use to the study. Now go and find us some sexy beasts to study.' She bids you farewell with a wink.";
-	now hp of Sylvia is 6;
+	now HP of Sylvia is 6;
 	now hpM of Sylvia is 5;
 	now hpF of Sylvia is 5;
 	now Sylvia's Reward is active;
@@ -913,13 +919,14 @@ Object	Name
 Sylvia's Reward	"Sylvia's Reward"
 
 Sylvia's Reward is a situation.
+ResolveFunction of Sylvia's Reward is "".
 Sylvia's Reward is inactive.
 Prereq1 of Sylvia's Reward is Beach Field Research.
 Prereq1Resolution of Sylvia's Reward is { 1, 2 }.
 The level of Sylvia's Reward is 0.
-The sarea of Sylvia's Reward is "Nowhere".
+Sarea of Sylvia's Reward is "Nowhere".
 
-instead of going northeast from Tenvale College Female Dorms while (Sylvia's Reward is active and Sylvia's Reward is PrereqComplete and Sylvia's Reward is not resolved and (hp of Sylvia is 6 or hpF of Sylvia is 5) and a random chance of 1 in 2 succeeds):
+instead of going northeast from Tenvale College Female Dorms while (Sylvia's Reward is active and Sylvia's Reward is PrereqComplete and Sylvia's Reward is not resolved and (HP of Sylvia is 6 or hpF of Sylvia is 5) and a random chance of 1 in 2 succeeds):
 	move player to Tenvale College Female Dorms;
 	SylviasReward;
 
@@ -1018,7 +1025,7 @@ to SylviasReward: [Sylvia willing to allow you to mate with her]
 	else: [Refused]
 		say "     You softly shake your head, stepping away from the shocked collie. You don't really think about her in that way. After all, you have a considerable amount to do in the city and may not have the time to spend with her in future. 'Well then. This is surprising. Could I have some time alone please?' You feel slightly guilty doing this to the student, but when you aren't attracted to her, sex just wouldn't do it for you. You leave, quietly closing the door, but not quite quick enough to avoid hearing a sniffle.";
 		now Resolution of Sylvia's Reward is 7; [Refused]
-	now hp of Sylvia is 7;
+	now HP of Sylvia is 7;
 	now Sylvia's Reward is resolved;
 
 Table of GameEventIDs (continued)
@@ -1026,15 +1033,16 @@ Object	Name
 Bad Breakup	"Bad Breakup"
 
 Bad Breakup is a situation.
+ResolveFunction of Bad Breakup is "[ResolveEvent Bad Breakup]".
 Prereq1 of Bad Breakup is Beach Field Research.
 Prereq1Resolution of Bad Breakup is { 1, 2 }.
-The sarea of Bad Breakup is "Nowhere".
+Sarea of Bad Breakup is "Nowhere".
 
 instead of going north from Dorm Street while (Bad Breakup is active and Bad Breakup is PrereqComplete and Bad Breakup is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	BadBreakupEvent;
 
-instead of resolving Bad Breakup:
+to say ResolveEvent Bad Breakup:
 	BadBreakupEvent;
 
 to BadBreakupEvent: [Cheating Boyfriend]
@@ -1055,15 +1063,16 @@ Object	Name
 Cheat's Retribution	"Cheat's Retribution"
 
 Cheat's Retribution is a situation.
+ResolveFunction of Cheat's Retribution is "[ResolveEvent Cheat's Retribution]".
 Prereq1 of Cheat's Retribution is Bad Breakup.
 Prereq1Resolution of Cheat's Retribution is { 1 }.
-The sarea of Cheat's Retribution is "Campus".
+Sarea of Cheat's Retribution is "Campus".
 
 instead of going to College Walkway East while (Cheat's Retribution is active and Cheat's Retribution is PrereqComplete and Cheat's Retribution is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 8):
 	move player to Tenvale College Female Dorms;
 	CheatsRetributionEvent;
 
-instead of resolving Cheat's Retribution:
+to say ResolveEvent Cheat's Retribution:
 	CheatsRetributionEvent;
 
 to CheatsRetributionEvent: [Ethan's Punishment]
@@ -1102,16 +1111,17 @@ Object	Name
 Charming Picnic	"Charming Picnic"
 
 Charming Picnic is a situation.
+ResolveFunction of Charming Picnic is "[ResolveEvent Charming Picnic]".
 Prereq1 of Charming Picnic is Unnatural Heat.
 Prereq1Resolution of Charming Picnic is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
 The level of Charming Picnic is 0.
-The sarea of Charming Picnic is "Campus".
+Sarea of Charming Picnic is "Campus".
 
-instead of going to College Walkway East while (Charming Picnic is active and Charming Picnic is PrereqComplete and Charming Picnic is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (Charming Picnic is active and Charming Picnic is PrereqComplete and Charming Picnic is not resolved and (HP of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	CharmingPicnicEvent;
 
-Instead of resolving Charming Picnic:
+to say ResolveEvent Charming Picnic:
 	CharmingPicnicEvent;
 
 to CharmingPicnicEvent: [Picnic]
@@ -1125,16 +1135,17 @@ Object	Name
 Badminton One	"Badminton One"
 
 Badminton One is a situation.
+ResolveFunction of Badminton One is "[ResolveEvent Badminton One]".
 Prereq1 of Badminton One is Unnatural Heat.
 Prereq1Resolution of Badminton One is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
 The level of Badminton One is 0.
-The sarea of Badminton One is "Campus".
+Sarea of Badminton One is "Campus".
 
-instead of going to College Walkway East while (Badminton One is active and Badminton One is PrereqComplete and Badminton One is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (Badminton One is active and Badminton One is PrereqComplete and Badminton One is not resolved and (HP of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	BadmintonOneEvent;
 
-Instead of resolving Badminton One:
+to say ResolveEvent Badminton One:
 	BadmintonOneEvent;
 
 to BadmintonOneEvent: [Game of badminton]
@@ -1143,17 +1154,22 @@ to BadmintonOneEvent: [Game of badminton]
 	now Badminton One is resolved;
 	now LastCampusWalkin is turns;
 
+Table of GameEventIDs (continued)
+Object	Name
+College Canine Lovers	"College Canine Lovers"
+
 College Canine Lovers is a situation.
+ResolveFunction of College Canine Lovers is "[ResolveEvent College Canine Lovers]".
 Prereq1 of College Canine Lovers is Unnatural Heat.
 Prereq1Resolution of College Canine Lovers is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
 The level of College Canine Lovers is 0.
-The sarea of College Canine Lovers is "Campus".
+Sarea of College Canine Lovers is "Campus".
 
-instead of going to College Walkway East while (College Canine Lovers is PrereqComplete and College Canine Lovers is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and daytimer is day and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (College Canine Lovers is PrereqComplete and College Canine Lovers is not resolved and (HP of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and daytimer is day and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	CollegeCanineLoversEvent;
 
-Instead of resolving College Canine Lovers:
+to say ResolveEvent College Canine Lovers:
 	CollegeCanineLoversEvent;
 
 to CollegeCanineLoversEvent:
@@ -1184,9 +1200,7 @@ to say MalePrefUnnaturalHeatEvent: [MalePref Alternative]
 		LineBreak;
 		if carried of libido suppressant > 0: [present]
 			say "     Knowing that time is of the essence, you place your bag on the bed and start searching through. It doesn't take you long to find what you are looking for. Grabbing the syringe, you shout to Sylvia that you've got one. She quickly crawls over to you and grabs it from your proffered hand. Suddenly, a knock interrupts your search and you both turn around. In the doorway is a very concerned looking wolf whom you recognize as Julian. 'Are you alright Sylvia? I saw you dash through the campus, and you don't seem to have your satchel with you.' Julian inquires worriedly, casting curious glances at why you and the collie are scrabbling about on the floor. Sylvia hurriedly explains the same story she just told you, her paws fiddling with the syringe.";
-			LineBreak;
-			say "[bold type]You lose one libido suppressant![roman type][line break]";
-			decrease carried of libido suppressant by 1;
+			ItemLoss libido suppressant by 1;
 			say "     Julian's eyes widen, and he steps into the room before closing the door, hiding the collie girl's predicament from any passers-by. Seeing what is in her hands, he lets out a sigh and relaxes slightly. 'It's a good thing your friend had some, I'm down to my last one. I'll ask the twins to make another hospital run, just in case.' Julian addresses the collie. With a grateful glance at you, Sylvia	pulls her skirt up and stabs the needle into her thigh. While the visible effects of her arousal have lessened, she still pants with need. 'Julian, while I would have preferred that this wasn't so desperate, I'm going to need more help. Would you... mount me. I fear that I have been sent into heat,' the collie girl pleads. Shocked, Julian hesitantly agrees, pulling his trousers and shirt off and placing them on her bed. Sylvia then turns to you. 'Could you give us some privacy as I don't think you have much of an interest in me and this may be passionate.'";
 			say "     You wish them well and leave them to their coupling. As you close the door, you hear a yip of pleasure.";
 			now resolution of Unnatural Heat is 11; [MPref, Searched your bag, Suppressant found]
@@ -1219,9 +1233,7 @@ to say FemPrefUnnaturalHeatEvent: [Sylvia removes skirt]
 		LineBreak;
 		if carried of libido suppressant > 0: [present]
 			say "     Knowing that time is of the essence, you place your bag on the bed and start searching through. It doesn't take you long to find what you are looking for. Grabbing the syringe, you shout to Sylvia that you've got one. She quickly crawls over to you and grabs it from your proffered hand. Suddenly, a knock interrupts your search and you both turn around. In the doorway is a very concerned looking wolf whom you recognize as Julian. 'Are you alright Sylvia? I saw you dash through the campus, and you don't seem to have your satchel with you.' Julian inquires worriedly, casting curious glances at why you and the collie are scrabbling about on the floor. Sylvia hurriedly explains the same story she just told you, her paws fiddling with the syringe.";
-			LineBreak;
-			say "[bold type]You lose one libido suppressant![roman type][line break]";
-			decrease carried of libido suppressant by 1;
+			ItemLoss libido suppressant by 1;
 			say "     Julian's eyes widen, and he steps into the room before closing the door, hiding the collie girl's predicament from any passers-by. Seeing what is in her hands, he lets out a sigh and relaxes slightly. 'It's a good thing your friend had some, I'm down to my last one. I'll ask the twins to make another hospital run, just in case.' Julian addresses the collie. With a grateful glance at you, Sylvia flicks the tip before pulling her skirt off and stabbing the needle into her thigh. While the effects of her arousal have lessened, the lips of her cunt are still damp with her juices, and she still pants with need. 'Julian, while I would have preferred that this wasn't so desperate, I'm going to need more help. Would you... mount me. I fear that I have been sent into heat,' the collie girl pleads, her pussy clenching. Shocked, Julian hesitantly agrees, pulling his trousers and shirt off and placing them on her bed. Sylvia then turns to you. 'I'm very grateful for your help but I think I'm going to need Julian to help me and from your previous reactions I gather you won't want to be involved so could we have some privacy? I'll make it up to you later.";
 			say "     You wish them well and leave them to their coupling. As you close the door, you hear a yip of pleasure.";
 			now resolution of Unnatural Heat is 14; [FPref, Searched your bag, Suppressant found]
@@ -1239,12 +1251,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Sylvia's City Research One	"Sylvia's City Research One"
 
-Sylvia's City Research One is a situation. [Huskies]
+Sylvia's City Research One is a situation.
+ResolveFunction of Sylvia's City Research One is "[ResolveEvent Sylvia's City Research One]". [Huskies]
 Prereq1 of Sylvia's City Research One is Beach Field Research.
 Prereq1Resolution of Sylvia's City Research One is { 1, 2 }.
-The sarea of Sylvia's City Research One is "Outside".
+Sarea of Sylvia's City Research One is "Outside".
 
-Instead of resolving Sylvia's City Research One:
+to say ResolveEvent Sylvia's City Research One:
 	SylviasCityResearchOneEvent;
 
 to SylviasCityResearchOneEvent:
@@ -1323,12 +1336,13 @@ to SylviasCityResearchOneEvent:
 Object	Name
 Sylvia City Research Two	"Sylvia City Research Two"
 
-Sylvia City Research Two is a situation. [Hyenas]
+Sylvia City Research Two is a situation.
+ResolveFunction of Sylvia City Research Two is "[ResolveEvent Sylvia City Research Two]". [Hyenas]
 Prereq1 of Sylvia City Research Two is Beach Field Research.
 Prereq1Resolution of Sylvia City Research Two is { 1, 2 }.
-The sarea of Sylvia City Research Two is "Outside".
+Sarea of Sylvia City Research Two is "Outside".
 
-Instead of resolving Sylvia City Research Two:
+to say ResolveEvent Sylvia City Research Two:
 	SylviaCityResearchTwoEvent;
 
 to say SylviaCityResearchTwoEvent:

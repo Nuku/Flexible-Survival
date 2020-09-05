@@ -47,20 +47,17 @@ Object	Name
 Annoyed Hyena	"Annoyed Hyena"
 
 Annoyed Hyena is a situation.
-The sarea of Annoyed Hyena is "Junkyard".
+ResolveFunction of Annoyed Hyena is "[ResolveEvent Annoyed Hyena]".
+Sarea of Annoyed Hyena is "Junkyard".
 when play begins:
 	add Annoyed Hyena to badspots of HermList;
 	add Annoyed Hyena to BadSpots of FurryList;
 
-Instead of Resolving a Annoyed Hyena:
-	say "     While exploring, you accidentally run face first into what at first seems a warm, furry wall. Upon recovering and taking a second look, you realize that it's actually a hyena. A tall, obviously intimidating hyena. Her sharp predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other hyenas that you've met in the past. She doesn't seem to be hostile to you, or at least not just yet to say the least... as she just seems to be more amused by your presence than anything else.";
-	WaitLineBreak;
-	say "     Her slacks seem to conceal an obvious bulge. Seems she's pretty much the same as the rest of the hyenas around here by the looks of it... though she at least covers it up!";
-	WaitLineBreak;
+to say ResolveEvent Annoyed Hyena:
+	say "     While exploring, you accidentally run face first into what at first seems a warm, furry wall. Upon recovering and taking a second look, you realize that it's actually a hyena. A tall, obviously intimidating hyena. Her sharp predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other hyenas that you've met in the past. She doesn't seem to be hostile to you, or at least not just yet to say the least... as she just seems to be more amused by your presence than anything else. Her slacks seem to conceal an obvious bulge. Seems she's pretty much the same as the rest of the hyenas around here by the looks of it... though she at least covers it up!";
 	say "     'Well now, just what do we have here? Someone new around to have fun with... suppose I might be up for you visiting me. I definitely need more company. And by company, I mean a warm squealing bitch underneath me, giving me exactly what I want. Come on over and I promise I'll make you regret it later,' she growls with a big wink at you. 'I have a little shack set up nearby. Just come over anytime you want to get treated like the fucktoy that you are[if the player is submissive]. You seem like the type that needs a good, rough mistress[end if].' And with that, she just turns and disappears, leaving you slightly baffled and curious... but also very much wanting to see just what she has in store for you!";
-	say "     Hyena Shack is now known.";
 	now HP of Hadiya is 1;
-	now Hyena Shack is known;
+	AddNavPoint Hyena Shack;
 	now Annoyed Hyena is resolved;
 
 
@@ -72,7 +69,7 @@ Hyena Shack	"Hyena Shack"
 
 Hyena Shack is a room. It is fasttravel. It is private.
 
-The description of Hyena Shack is "[hyenashackdesc]".
+Description of Hyena Shack is "[hyenashackdesc]".
 
 to say hyenashackdesc:
 	if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and HP of Hadiya < 63):
@@ -90,8 +87,8 @@ object	name
 Hadiya	"Hadiya"
 
 Hadiya is a person. Hadiya is in Hyena Shack.
-The description of Hadiya is "[hadiyadesc]".
-The conversation of Hadiya is { "Bend over!" }.
+Description of Hadiya is "[hadiyadesc]".
+Conversation of Hadiya is { "Bend over!" }.
 the scent of Hadiya is "Hadiya smells like a strong, dominant hyena herm.".
 The fuckscene of Hadiya is "[sexwithHadiya]".
 the icon of Hadiya is usually Figure of Hadiya_0_icon.
@@ -288,10 +285,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Goblin Thief	"Goblin Thief"
 
-Goblin Thief is a situation. Goblin Thief is inactive.
-The sarea of Goblin Thief is "Junkyard".
+Goblin Thief is a situation.
+ResolveFunction of Goblin Thief is "[ResolveEvent Goblin Thief]". Goblin Thief is inactive.
+Sarea of Goblin Thief is "Junkyard".
 
-Instead of resolving Goblin Thief:
+to say ResolveEvent Goblin Thief:
 	if debugactive is 1:
 		say "DEBUG (Hadiya) -> HP: [HP of Hadiya], hadiyafucked: [hadiyafucked], lastfuck: [lastfuck of Hadiya], Hyena Gang ref: [if hadiyahyg is true]Y[else]N[end if] <- DEBUG[line break]";
 		say "DEBUG (Gobby) -> HP: [HP of Gobby], lastfuck: [lastfuck of Gobby] <- DEBUG[line break]";
@@ -366,7 +364,7 @@ Instead of resolving Goblin Thief:
 		else if HP of Hadiya is 61 or HP of Hadiya is 62:
 			now HP of Hadiya is 63;
 		now lastfuck of Hadiya is 255;
-		now carried of girl's jacket is 0;
+		ItemLoss girl's jacket by 1;
 		now Goblin Thief is resolved;
 	else:
 		say "ERROR-Hadiya-[HP of Hadiya]E: You should not be able to get this result. Event should be closed at this time.";
@@ -379,8 +377,8 @@ object	name
 Gobby	"Gobby"
 
 Gobby is a man.
-The description of Gobby is "[gobbydesc]".
-The conversation of Gobby is { "Yes, O Great-Red-Toothy-Beast!" }.
+Description of Gobby is "[gobbydesc]".
+Conversation of Gobby is { "Yes, O Great-Red-Toothy-Beast!" }.
 the scent of Gobby is "Hadiya's scent clings to Gobby.".
 The fuckscene of Gobby is "[sexwithGobby]".
 the icon of Gobby is Figure of Gobby_icon.

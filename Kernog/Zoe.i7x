@@ -68,11 +68,11 @@ AnalVirgin of Zoe is true.
 PenileVirgin of Zoe is true.
 SexuallyExperienced of Zoe is false.
 MainInfection of Zoe is "".
-The Loyalty of Zoe is normally 0.
-The XP of Zoe is normally 0.
+Loyalty of Zoe is usually 0.
+XP of Zoe is usually 0.
 
-The description of Zoe is "[ZoeDesc]".
-The conversation of Zoe is {"Placeholder"}.
+Description of Zoe is "[ZoeDesc]".
+Conversation of Zoe is {"Placeholder"}.
 instead of sniffing Zoe:
 	say "Zoe's fur retains the smell of the paint she uses during her getaways.";
 
@@ -99,13 +99,13 @@ instead of conversing the Zoe:
 				extend game by 6;
 			else if randomnumber is 2:
 				say "     'While I was doing my things in an alleyway, a mutant crawled out from his hiding place and tried to trade me a couple of water bottles. And by [']trade['], he meant suck his cock. [if HP of Zoe is 1]This asshole reminded me of that guard, but I held myself from obliterating his groin with a kick[else]Because of what almost happened with that security guard, the other day, I knew better than to trust this pervert[end if]. I had a better idea in mind.' I approached from the fucker, and began to kneel. Poor asshole let his guard down, and he did not expect a rabbit's legs to have this much power. I snatched the bottles, and ran ahead while the poor schmuck screamed bloody murder.' Zoe chuckled, and lobbed to you a full bottle. 'Take this one. I would feel bad not giving you a share, since you're the reason I am not desperate enough to debase myself for some supplies.'";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1;
 			else if randomnumber is 3:
 				say "     [one of]'I had found the perfect spot for a big painting, and I started going to work. Half-an-hour later, two hyenas were coming out of the building on the other side of the street and go in my direction. I thought I was in big trouble and prepared to run, but they made big signs at me and told me not to be afraid. They were looking for someone to help [']decorate['] their place, and they liked what I was doing. So they hired me for the job, and paid me in food. There was more than enough for me, so here's a little [']rent['] of sorts, for letting me sleep here.'[or]Since I had nothing better to do today, I stopped by the hyenas again. They wanted a fresco in their backroom. They are a super polite bunch actually. They cleaned the place before I went to work, and everyone came to greet me during the day. And once again, they gave me way too much food for a small bunny like me. Here, have some.'[stopping] Zoe hands out a beg of chips to you.";
-				increase carried of chips by 1;
+				ItemGain chips by 1;
 			else:
 				say "     'So, I, huh... I went back to the mall.' You immediately frown at her words, but Zoe is quick to defend herself. 'It's not what you think! I was not there to tag anything. [one of]I just wanted to get some new clothes. I was a little stressed at first; I was afraid that one of the guards remember me. But then one of the rats noticed and brought me to their boss. Ronda was her name. She told me that I was not the first one the guards [if HP of Zoe is 1]abused[else]tried to abuse[end if] and that she was on the case. And she even gave me a free coupon as an apology. And tada...' Zoe takes a T-shirt and a pair of shorts, both new, from her bag and shows them to you proudly.[or] I was there to restock, actually. It almost felt like a normal shopping mall. On a very calm day, and with mutants everywhere.'[stopping] Zoe picks up a can of pepperspray and gives it to you. 'And I did not need this, actually. Since you are almost always out there, I think that you would make a better use of it.'";
-				increase carried of pepperspray by 1;
+				ItemGain pepperspray by 1;
 			now XP of Zoe is 0;
 			if Loyalty of Zoe < 5:
 				increase Loyalty of Zoe by 1;
@@ -556,7 +556,7 @@ Part B - Suspicious Van
 Suspicious Van is a closed container. It is openable.
 Suspicious Van is locked.
 Suspicious Van is in Smith Haven Mall Lot West.
-The description of Suspicious Van is "[suspiciousVanDesc]".
+Description of Suspicious Van is "[suspiciousVanDesc]".
 
 instead of sniffing Suspicious Van:
 	say "It smells of oil[if Resolution of Rabbit Tagger is 1], and there is a lingering smell of male sweat and cum in the vicinity[end if].";
@@ -600,8 +600,8 @@ Wolverine Pimp is a man.
 Wolverine Pimp is in Nowhere.
 Understand "van guard" as Wolverine Pimp.
 
-The description of Wolverine Pimp is "You gauge the anthro wolverine sitting in a chair, next to the van. He wears a tattered security guard outfit, which he seems to have [']upgraded['] by ripping out the sleeves. His clothes are tattered with stains, which you suspect may not be water or grape juice. The guard raises an eyebrow at you. 'What are you looking at?'".
-The conversation of Wolverine Pimp is { "[one of]'Looking for fun times? [bold type]Trade me[roman type] some food or beverage, and you'll get a turn.'[or]'The girl's here of her own will, I swear. Not that you can disprove anything... Heh heh!'[or]'Watch out if you want a pass with the bunny: she bites. Don't forget to use the ring gag.'[or]'I wonder when the boss will let her go. Hell, I'd rather wonder [italic type]if[roman type] the boss will let her go. Ha ha ha...'[at random]" }.
+Description of Wolverine Pimp is "You gauge the anthro wolverine sitting in a chair, next to the van. He wears a tattered security guard outfit, which he seems to have [']upgraded['] by ripping out the sleeves. His clothes are tattered with stains, which you suspect may not be water or grape juice. The guard raises an eyebrow at you. 'What are you looking at?'".
+Conversation of Wolverine Pimp is { "[one of]'Looking for fun times? [bold type]Trade me[roman type] some food or beverage, and you'll get a turn.'[or]'The girl's here of her own will, I swear. Not that you can disprove anything... Heh heh!'[or]'Watch out if you want a pass with the bunny: she bites. Don't forget to use the ring gag.'[or]'I wonder when the boss will let her go. Hell, I'd rather wonder [italic type]if[roman type] the boss will let her go. Ha ha ha...'[at random]" }.
 
 instead of sniffing Wolverine Pimp:
 	say "The wolverine gives off an intimidating, bestial smell.";
@@ -611,28 +611,28 @@ instead of trading the food when the current action involves the Wolverine Pimp:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
-		decrease carried of food by 1;
+		ItemLoss food by 1;
 
 instead of trading the water bottle when the current action involves the Wolverine Pimp:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
-		decrease carried of water bottle by 1;
+		ItemLoss water bottle by 1;
 
 instead of trading the chips when the current action involves the Wolverine Pimp:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
-		decrease carried of chips by 1;
+		ItemLoss chips by 1;
 
 instead of trading the soda when the current action involves the Wolverine Pimp:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
-		decrease carried of soda by 1;
+		ItemLoss soda by 1;
 
 to say wolverineTrade:
 	say "     The guard grabs your offering and puts it into his bag. 'Thaaank you!' He gets off his seat and unlocks the backdoor of the van with his key. 'Here's the rules: no maiming, no blood, no piss, no shitstuff. You got one hour; if I bang on the door, it doesn't matter if you're [']almost there[']: you pull out and you get out. Are we good? Good.' After this, he opens the van, letting you gaze at Zoe's lying form in the back.";
@@ -677,7 +677,8 @@ Object	Name
 Rabbit Tagger	"Rabbit Tagger"
 
 Rabbit Tagger is a situation.
-The sarea of Rabbit Tagger is "Nowhere".
+ResolveFunction of Rabbit Tagger is "".
+Sarea of Rabbit Tagger is "Nowhere".
 
 [Event trigger]
 instead of going to Smith Haven Mall Lot West while (a random chance of 1 in 3 succeeds and Rabbit Tagger is not resolved):
@@ -700,6 +701,7 @@ to ZoeTheTaggerRabbitEvents:
 		LineBreak;
 		say "     'No no no! Please I'm sor- ahhh!' Zoe starts to say, then lets out a shocked yell as the wolverine thrusts into her from behind, burying half his length into her pussy and claiming the bunny's cherry. 'Best to get it over quick, you see?' he tells her in a satisfied tone, then licks her cheek again before taking the fur at the back of her neck between his teeth and driving the rest of the way into her trembling pussy. With a deep grunt at bottoming out in a virgin girl, the wolverine holds her tight to his chest and starts to grope her chest, feeling the bunny's small boobs hiding under the fabric of her hoodie. 'Nice and tight,' the big man adds a moment later, grinding his hips against her rear a little.";
 		say "     The wolverine slowly pulls out of his captive and rubs the slick length of his shaft against her furry buttocks, then sinks it back into Zoe's pussy with a harsh thrust, followed by another and another. Certainly looks like a demanding introduction to womanhood and fucking for the anthro girl. Zoe gets pounded from behind for a little while, biting her lip as she tries to suppress any noise from her throat and with tears welling up at the realization that this will always stay with her as her first time being fucked. When she finally can't help but let out a mixture of a whimper and moan on one of his deep thrusts, the mall guard pauses and pulls her up, leaning around to look her in the eye.";
+		NPCSexAftermath Zoe receives "PussyFuck" from Logan;
 		WaitLineBreak;
 		say "     'Not such a good idea to piss of Officer Logan, eh girl? Wait - I wanna see your face as I pound the lesson home!' the wolverine grunts in a cruel mixture of lust and amusement. He reaches down to grab the pants from around her lower legs, impatiently tugging them off her legs to free the bunny's slender limbs. Now that Zoe is naked from the hips down, Logan withdraws his cock from her with a wet slurp, then rolls her over on her back. Before she knows it, he has her legs spread and raised while leaning over her. 'Bad girls like you need to be taught a lesson,' he grunts and licks her face, then thrusts his manhood home into her body. 'Ah, you bastard!' Zoe replies as he nudges her cervix and presses against it, his big shaft reaching deep into her petite body.";
 		say "     Pinning his captive bunny to the asphalt with one hand, the wolverine fucks her hard, pistoning his dick in and out of her snatch. Given the typical little alterations the nanites make to people's minds, Zoe soon can't help but moan and tremble under him, her traitor body enjoying being dicked and machine whispers in her head telling her to just go along with it, despite everything wrong with this pairing. It doesn't take much longer before Logan lets out a satisfied growl and positions his cock so that just the head is inside her, his balls and shaft throbbing hard with spurt after spurt of cum shooting up the bunny's pussy. 'This is what little sluts like you were made for,' he says harshly while still coming into her, grinning down at the shocked girl.";

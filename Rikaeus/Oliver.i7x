@@ -25,13 +25,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Leather Daddy Kitty	"Leather Daddy Kitty"
 
-Leather Daddy Kitty is a situation. The level of Leather Daddy Kitty is 2.
-The sarea of Leather Daddy Kitty is "high".
+Leather Daddy Kitty is a situation.
+ResolveFunction of Leather Daddy Kitty is "[ResolveEvent Leather Daddy Kitty]". The level of Leather Daddy Kitty is 2.
+Sarea of Leather Daddy Kitty is "high".
 when play begins:
 	add Leather Daddy Kitty to BadSpots of MaleList; [Oliver is a male kitty]
 	add Leather Daddy Kitty to BadSpots of FurryList; [Oliver is a kitty]
 
-Instead of resolving a Leather Daddy Kitty:
+to say ResolveEvent Leather Daddy Kitty:
 	if OliverRelationship is 1 or player is submissive:
 		say "     While exploring the high rise district you are suddenly tackled to the ground by a rotund shape. Upon closer inspection, it is a large, pudgy ocelot, standing at six feet tall and probably over three hundred pounds. He is wearing a leather harness, fingerless gloves, a cod piece covering his rather large bulge, and a cap with the same material as the harness. You are quickly distracted from his looks when you notice that the male is nuzzling your face. 'Mmmm you must be the little kitty my sub was talking about. I sure can smell him on you,' the ocelot says, inhaling your scent. Little ocelot? You hurriedly recall a submissive kitty that had asked you if you liked to be the big kitty or little one before sexing you up. 'I see that you remember him. I sure did punish him for having sex with you without my permission. But now I think it was unwarranted, you are a delectable little catch,' he purrs at you.";
 		say "     With a sigh, the chubby yet fit kitty gets off of you. 'As much as I'd like to take you here and now, you need to learn that you must come to me,' the ocelot says, starting to walk away. However, before he leaves your line of sight, the male turns towards you and smiles. 'Two things you need to know. One, your soon-to-be master's name is Oliver, I give you permission to call me by that. Two, if you wish to explore this further, make your way to the Kitty Sex Dungeon,' the dominant guy informs, winking at you before he leaves you there to muse on the brand new information you have.";
@@ -65,7 +66,7 @@ Object	Name
 Kitty Sex Dungeon	"Kitty Sex Dungeon"
 
 Kitty Sex Dungeon is a room. It is private.
-The description of Kitty Sex Dungeon is "[DungeonDesc]"
+Description of Kitty Sex Dungeon is "[DungeonDesc]"
 
 to say DungeonDesc:
 	say "     The room is a stereotypical sex dungeon. There is a sex bench in the middle of the room, stocks against the wall, sex toys on shelves and so much more. On top of that, the entire place smells of sex and sweat, something that fills you with warmth as you think of the many things that have happened in this area. Interesting enough, there are no items for punishment via pain like flogs or whips. Perhaps Oliver punishes with pleasure rather than pain?[if Player is not neuter] You shudder at the thought of being denied orgasm.[end if]";
@@ -101,8 +102,8 @@ AnalVirgin of Oliver is false.
 PenileVirgin of Oliver is false.
 SexuallyExperienced of Oliver is true.
 MainInfection of Oliver is "".
-The description of Oliver is "[OliverDesc]".
-The conversation of Oliver is { "<this is nothing but a placeholder!>" }.
+Description of Oliver is "[OliverDesc]".
+Conversation of Oliver is { "<this is nothing but a placeholder!>" }.
 The scent of Oliver is "The big kitty smells heavily of male musk as well as sex, something that makes you moan out loud, making him smirk at you.".
 
 to say OliverDesc:

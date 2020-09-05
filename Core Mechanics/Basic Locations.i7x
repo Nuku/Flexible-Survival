@@ -6,20 +6,25 @@ Object	Name
 NPC Nexus	"NPC Nexus"
 NPC Nexus	"nothing"
 NPC Nexus	"nowhere"
+SituationNexus	"SituationNexus"
 
 NPC Nexus is a room.
-The description of NPC Nexus is "This is the extradimensional storage room for unused NPCs. If you somehow ended up here during an import, please include your 'FSCharacterSave.glkdata' file in a bug report on the FS Discord. Also - DON'T PANIC - Trixie will be along in the next turn to pick you up for a trip back into the bunker".
+Description of NPC Nexus is "This is the extradimensional storage room for unused NPCs. If you somehow ended up here during an import, please include your 'FSCharacterSave.glkdata' file in a bug report on the FS Discord. Also - DON'T PANIC - Trixie will be along in the next turn to pick you up for a trip back into the bunker".
+
+SituationNexus is a room.
+Description of SituationNexus is "This is the extradimensional storage room for unused Situations. DON'T PANIC - Trixie will be along in the next turn to pick you up for a trip back into the bunker".
 
 
 Table of GameRoomIDs (continued)
 Object	Name
 Bunker	"Bunker"
 
-Bunker is a room. The description of Bunker is "[bunker desc]".
+Bunker is a room. Description of Bunker is "[bunker desc]".
+Bunker is sleepsafe.
 The invent of Bunker is { "face mask", "medkit", "medkit", "water bottle", "water bottle", "water bottle", "food", "food", "pocketknife", "cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.".
 The Library Door is east of Main & 7th Street.
-The description of the Library Door is "Solid oak doors lend a stately appearance to the library.".
+Description of the Library Door is "Solid oak doors lend a stately appearance to the library.".
 Grey Abbey Library is east of Library Door.
 Bunker is below Grey Abbey Library.
 The player is in Bunker.
@@ -42,7 +47,7 @@ Object	Name
 Communal Shower	"Communal Shower"
 
 Communal Shower is north of Bunker.
-Communal Shower is a room. The description of Communal Shower is "[bshower desc]".
+Communal Shower is a room. Description of Communal Shower is "[bshower desc]".
 Communal Shower is sleepsafe.
 lastShowerUse is a number that varies. lastShowerUse is usually 10000.
 
@@ -61,7 +66,7 @@ Object	Name
 Underground Restroom	"Underground Restroom"
 
 Underground Restroom is northeast of Bunker.
-Underground Restroom is a room. The description of Underground Restroom is "[brestroom desc]".
+Underground Restroom is a room. Description of Underground Restroom is "[brestroom desc]".
 Underground Restroom is sleepsafe.
 
 after looking while player is in Underground Restroom:
@@ -76,7 +81,7 @@ Object	Name
 Maintenance Storeroom	"Maintenance Storeroom"
 
 Maintenance Storeroom is southwest of Bunker.
-Maintenance Storeroom is a room. The description of Maintenance Storeroom is "[bmaintenance desc]".
+Maintenance Storeroom is a room. Description of Maintenance Storeroom is "[bmaintenance desc]".
 Maintenance Storeroom is sleepsafe.
 
 after looking while player is in Maintenance Storeroom:
@@ -84,7 +89,29 @@ after looking while player is in Maintenance Storeroom:
 
 to say bmaintenance desc:
 	project the Figure of Map_Bunker_Storeroom_icon;
-	say "     The maintenance room you have turned into your own private lodgings. Looking around, it isn't very large by any standards, and much of that is filled with cluttered shelving. Along the back wall is a twin size bed that the old janitor probably used to nap during breaks. The walls on the left and right are haphazardly lined with shelves and filing cabinets. There's nothing of any real interest inside of or on top of them, but you may find a use for the extra storage space in time.";
+	if Memento Collection is not in Maintenance Storeroom:
+		say "     The maintenance room you have turned into your own private lodgings. Looking around, it isn't very large by most standards, and much of that is filled with cluttered shelving. Along the back wall is a twin size bed that the old janitor probably used to nap during breaks. The walls on the left and right are haphazardly lined with shelves and filing cabinets. There's nothing of any real interest inside of in or on top of them, but you may find a use for the extra storage space in time."; [" You'd just need to [link]unclutter[end link] it first.";]
+	else:
+		say "     You're in the maintenance room you have turned into your own private lodgings. Looking around, it isn't very large by most, but at least it looks a bit more roomy now that you've taken care of the mess that formerly was strewn about. Now the shelving is straightened out and fairly empty, allowing for you to stash some mementos there. Along the back wall is a twin size bed that the old janitor probably used to nap during breaks, now covered in a fresh bedspread at least.";
+
+UnclutterStoreroom is an action applying to nothing.
+understand "unclutter" as UnclutterStoreroom.
+
+Check UnclutterStoreroom:
+	if location of Player is not Maintenance Storeroom:
+		say "You don't see anything you can unclutter here." instead;
+
+Carry out UnclutterStoreroom:
+	say "     Looking around, you dump out an almost empty box of cleaning supplies, filling it with all the loose items in the shelves that you'd never ever need or want to use anyways. That clears up a bunch of space, and after carrying your box outside and putting it down in the back corner of the larger bunker room, you return to the now seemingly more roomy storeroom. The cleaning supplies are old, but still usable, which allows you to clean up a bit too before you add them into the box of stuff outside. Then, with the shelves not loaded as before, you manage to straighten them out, followed by exploring the filing cabinet that was blocked before. In it, you find various items that people must have lost in the library over the years. One of them is a friendly-looking little figurine of an anthro dinosaur, which you place on the shelves with a chuckle. Finally, in a bottom drawer you find a folded bedspread, which you gladly put onto the bed you've claimed as your own.";
+	say "     Taking a deep breath, you look around and can't help but feel good about what you've accomplished. This'll be a much nicer place to stay in now.";
+	SanBoost 10;
+
+
+[
+now Memento Collection is in Maintenance Storeroom;
+]
+Memento Collection is a container. Memento Collection is transparent. Memento Collection is not openable. Memento Collection is not lockable. Memento Collection is not enterable.
+Description of Memento Collection is "     You've made room to stash mementos of your time in the city in the shelves here.".
 
 
 Table of GameRoomIDs (continued)
@@ -94,7 +121,7 @@ Grey Abbey Library	"Grey Abbey Library"
 Grey Abbey Library is a room.
 Grey Abbey Library is fasttravel.
 Grey Abbey Library is sleepsafe.
-The description of Grey Abbey Library is "[abbey desc]".
+Description of Grey Abbey Library is "[abbey desc]".
 The earea of Grey Abbey Library is "Outside".
 
 after looking while player is in Grey Abbey Library:
@@ -127,7 +154,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Main & 7th Street	"Main & 7th Street"
 
-The description of Main & 7th Street is "[7thMainDesc]".
+Description of Main & 7th Street is "[7thMainDesc]". It is fasttravel.
 The earea of Main & 7th Street is "Outside".
 
 after looking while player is in Main & 7th Street:
@@ -146,7 +173,7 @@ Looted Shops	"Looted Shops"
 
 Looted Shops is west of Main & 7th Street.
 The earea of Looted Shops is "Outside".
-The description of Looted Shops is "[LootedShopsDesc]".
+Description of Looted Shops is "[LootedShopsDesc]".
 
 to say LootedShopsDesc:
 	say "     You wander down the center of the empty 7th Street to stay away from the piles of trash and shards from shattered shop windows that dominate the sidewalk on both sides. There are barely any windows that haven't been vandalized, and many of the doors were torn out of their frames or clawed to pieces. You can't say if the destruction stemmed from pure malice or just some overly large creature making an entrance; it doesn't matter which really, as the result is the same. In the southwest, a thin path has been cleared through the trash and debris, leading to a shop that seems to have been of continuing interest of someone - or alternatively the target of some scavengers. The sign above the door declares it to be [']George's Animal Emporium['].";
@@ -159,7 +186,7 @@ Object	Name
 George's Animal Emporium	"George's Animal Emporium"
 
 George's Animal Emporium is southwest of Looted Shops.
-The description of George's Animal Emporium is "[PetShopDesc]".
+Description of George's Animal Emporium is "[PetShopDesc]".
 
 to say PetShopDesc:
 	say "     You're in a mid-sized pet store that has been recently looted. Judging from the tracks in the dust and grime blown in through the open front door, numerous people and creatures came and went before you. Almost all of the shelves have been rifled through and some even knocked over, creating quite a mess in here. Empty bags of all sorts of pet food are scattered everywhere, sometimes lying in sticky pools of what is clearly cum. With the food gone and the sheer scale of the mess in here, there could be some interesting and useful items to find if one were to spend some time to [link]sort[as]sort chaotic mess[end link] through the chaotic mess. Since digging up anything of worth will be rather work intensive, this would probably not be worth the time unless you had a use for it.";
@@ -176,10 +203,10 @@ Breakroom	"Breakroom"
 Breakroom is west of Half-Renovated Room.
 Breakroom is a room.
 Breakroom is sleepsafe.
-The description of Breakroom is "[gbreakroom desc]".
+Description of Breakroom is "[gbreakroom desc]".
 The invent of Breakroom is { "food" }.
 Library Microwave is an object. It is in Breakroom. It is fixed in place. Understand "microwave" as Library Microwave.
-The description of Library Microwave is "[LibraryMicrowaveDesc]".
+Description of Library Microwave is "[LibraryMicrowaveDesc]".
 
 to say LibraryMicrowaveDesc:
 	say "     A black, mid-sized microwave stands on one of the countertops in the breakroom. ";
@@ -205,7 +232,7 @@ Half-Renovated Room	"Half-Renovated Room"
 Half-Renovated Room is a room.
 Half-Renovated Room is north of Grey Abbey Library.
 Half-Renovated Room is sleepsafe.
-The description of Half-Renovated Room is "[LibrarySideRoomDesc]";
+Description of Half-Renovated Room is "[LibrarySideRoomDesc]";
 
 after looking while player is in Half-Renovated Room:
 	project the Figure of Map_Library_North3_icon;
@@ -220,7 +247,7 @@ Object	Name
 Pantry	"Pantry"
 
 Pantry is west of Breakroom.
-Pantry is a room. The description of Pantry is "[gpantry desc]".
+Pantry is a room. Description of Pantry is "[gpantry desc]".
 Pantry is sleepsafe.
 
 after looking while player is in Pantry:
@@ -234,7 +261,7 @@ Object	Name
 Computer Lab	"Computer Lab"
 
 Computer Lab is south of Grey Abbey Library.
-Computer Lab is a room. The description of Computer Lab is "[gcomputerlab desc]".
+Computer Lab is a room. Description of Computer Lab is "[gcomputerlab desc]".
 Computer Lab is sleepsafe.
 The invent of Computer Lab is { "soda" }.
 
@@ -252,7 +279,7 @@ Back Of The Library	"Back Of The Library"
 Back Of The Library is east of Grey Abbey Library.
 Back Of The Library is a room.
 Back Of The Library is sleepsafe.
-The description of Back Of The Library is "[gbackofthelibrary desc]".
+Description of Back Of The Library is "[gbackofthelibrary desc]".
 
 after looking while player is in Back Of The Library:
 	project the Figure of Map_Library_Back_icon;
@@ -265,7 +292,7 @@ Object	Name
 Makeshift Rec Room	"Makeshift Rec Room"
 
 Makeshift Rec Room is north of Back Of The Library.
-Makeshift Rec Room is a room. The description of Makeshift Rec Room is "[grecroom desc]".
+Makeshift Rec Room is a room. Description of Makeshift Rec Room is "[grecroom desc]".
 Makeshift Rec Room is sleepsafe.
 
 after looking while player is in Makeshift Rec Room:
@@ -279,7 +306,7 @@ Object	Name
 Courtyard	"Courtyard"
 
 Courtyard is east of Back Of The Library.
-Courtyard is a room. The description of Courtyard is "[gcourtyard desc]".
+Courtyard is a room. Description of Courtyard is "[gcourtyard desc]".
 The invent of Courtyard is { "dirty water" }.
 
 after looking while player is in Courtyard:
@@ -293,7 +320,7 @@ Object	Name
 Large Shed	"Large Shed"
 
 Large Shed is north of Courtyard.
-Large Shed is a room. The description of Large Shed is "[glargeshed desc]".
+Large Shed is a room. Description of Large Shed is "[glargeshed desc]".
 Large Shed is sleepsafe.
 
 when play begins:
@@ -310,7 +337,7 @@ Object	Name
 Grey Abbey Garden	"Grey Abbey Garden"
 
 Grey Abbey Garden is south of Courtyard.
-Grey Abbey Garden is a room. The description of Grey Abbey Garden is "[ggarden desc]".
+Grey Abbey Garden is a room. Description of Grey Abbey Garden is "[ggarden desc]".
 
 after looking while player is in Grey Abbey Garden:
 	project the Figure of Map_Library_Garden_icon;
@@ -323,7 +350,7 @@ Object	Name
 Grey Abbey 2F	"Grey Abbey 2F"
 
 Grey Abbey 2F is above Grey Abbey Library.
-Grey Abbey 2F is a room. The description of Grey Abbey 2F is "[abbey 2F desc]".
+Grey Abbey 2F is a room. Description of Grey Abbey 2F is "[abbey 2F desc]".
 Grey Abbey 2F is sleepsafe.
 
 the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty odor is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.".
@@ -339,7 +366,7 @@ Object	Name
 Sitting Area	"Sitting Area"
 
 Sitting Area is northeast of Grey Abbey 2F.
-Sitting Area is a room. The description of Sitting Area is "[usittingarea desc]".
+Sitting Area is a room. Description of Sitting Area is "[usittingarea desc]".
 Sitting Area is sleepsafe.
 
 The invent of Sitting Area is { "chips" }.
@@ -360,7 +387,7 @@ Object	Name
 Garden View	"Garden View"
 
 Garden View is southeast of Sitting Area.
-Garden View is a room. The description of Garden View is "[ugardenview desc]".
+Garden View is a room. Description of Garden View is "[ugardenview desc]".
 Garden View is sleepsafe.
 
 after looking while player is in Garden View:
@@ -375,21 +402,21 @@ Darkened Alcove	"Darkened Alcove"
 
 Darkened Alcove is southwest of Garden View.
 Darkened Alcove is southeast of Grey Abbey 2F.
-Darkened Alcove is a room. The description of Darkened Alcove is "[udarkenedalcove desc]".
+Darkened Alcove is a room. Description of Darkened Alcove is "[udarkenedalcove desc]".
 Darkened Alcove is sleepsafe.
 
 after looking while player is in Darkened Alcove:
 	project the figure of Map_Library_2F_South_icon;
 
 to say udarkenedalcove desc:
-	say "     This area goes a bit further away from the railing than the rest of the second floor. Under closer inspection, you find the reason why. What was at one point an office had its flimsy walls collapse, but there's no hint as to what caused it. The light from the windows in the back of library don't reach this room due to the walled-off features that were part of the original design. While still light enough to see your surroundings, it does feel gloomier and slightly creepy. From here, you can head northeast towards the garden view windows or northwest to return to the second floor landing. There is also a hatch in the ceiling leading up into the attic.";
+	say "     This area goes a bit further away from the railing than the rest of the second floor. Under closer inspection, you find the reason why. What was at one point a separate room had its flimsy walls collapse, but there's no hint as to what caused it. Must have been a special collection there or so. Now it's a total shambles, with debris and fallen bookshelves everywhere. The light from the windows in the back of library don't reach this room due to the walled-off features that were part of the original design. While still light enough to see your surroundings, it does feel gloomier and slightly creepy. From here, you can head northeast towards the garden view windows or northwest to return to the second floor landing. There is also a hatch in the ceiling leading up into the attic.";
 
 Table of GameRoomIDs (continued)
 Object	Name
 Attic	"Attic"
 
 Attic is above Darkened Alcove.
-Attic is a room. The description of Attic is "[tattic desc]".
+Attic is a room. Description of Attic is "[tattic desc]".
 Attic is sleepsafe.
 The invent of Attic is { "water bottle" }.
 
@@ -463,7 +490,7 @@ Lost in the Woods is a room.
 Lost in the Woods is east of Faint Trail.
 
 Faint Trail is a door.
-The description of a faint trail is "A faint trail that heads eastwards into the deep woods. It looks dangerous - who knows what is lurking out there?".
+Description of a faint trail is "A faint trail that heads eastwards into the deep woods. It looks dangerous - who knows what is lurking out there?".
 Faint Trail is dangerous.
 The marea of Faint Trail is "Park".
 
@@ -472,7 +499,7 @@ Object	Name
 Green Apartment Building	"Green Apartment Building"
 
 Green Apartment Building is a room. It is fasttravel.
-The description of Green Apartment Building is "[GreenAptDesc]".
+Description of Green Apartment Building is "[GreenAptDesc]".
 The earea of Green Apartment Building is "Outside".
 
 to say GreenAptDesc:
@@ -483,7 +510,7 @@ Object	Name
 Overgrown Rooftop	"Overgrown Rooftop"
 
 Overgrown Rooftop is a room. Overgrown Rooftop is above Green Apartment Building.
-The description of Overgrown Rooftop is "[GreenRoofDesc]";
+Description of Overgrown Rooftop is "[GreenRoofDesc]";
 
 to say GreenRoofDesc:
 	say "     The roof of this apartment building is at least partially covered in soil, allowing a rooftop garden to grow on it. You see a large section of green grass (getting a bit long, now that no one is taking care of it anymore), some bushes and even a large planter with a cherry tree next to a vegetable garden. Must have been quite a nice spot to hang out on for the inhabitants. Looking over to the rooftop access to the interior of the building, you find that it has been thoroughly barricaded - from the inside, it seems. Thus the only way to get down again is the fire escape attached to one outside face of the freestanding building.";
@@ -495,10 +522,71 @@ Object	Name
 Green Lobby	"Green Lobby"
 
 Green Lobby is a room. Green Lobby is inside from Green Apartment Building.
-The description of Green Lobby is "[GreenLobbyDesc]";
+Description of Green Lobby is "[GreenLobbyDesc]";
 
 to say GreenLobbyDesc:
-	say "     Just inside the building is a small lobby, with numerous post-boxes on one wall and a (surprisingly) still powered elevator. It opens up freely as you push the dimly glowing button, revealing a generous cabin, complete with a control panel that only has one button, for the lobby. Everything else is keyholes, four to each floor. Someone sure liked their privacy. Checking the interior stairway access door right next to it, you find it jammed; a glance through its little window reveals that about twenty feet of the stairway are completely barricaded by mixed pieces of furniture. Four doorways lead off into what must be the ground floor apartments - 1A, 1B, 1C and 1D. [if hp of Otto < 4]The first two and the last all have been nailed shut and the words 'Carnivorous Furniture' spray-painted on them[else]1A and 1D have been nailed shut and the words 'Closed for Repair' carefully stencilled onto signs hanging from their doorknobs[end if], while the door of apartment 1C is just leaned to[if hp of Otto > 3]. The door marked as 1B looks newly cleaned and you remember that this is where Doctor Fuchs has moved into[end if].";
+	say "     Just inside the building is a small lobby, with numerous post-boxes on one wall and a (surprisingly) still powered elevator. It opens up freely as you push the dimly glowing button, revealing a generous cabin, complete with a control panel that only has one button, for the lobby. Everything else is keyholes, four to each floor. Someone sure liked their privacy. Checking the interior stairway access door right next to it, you find it jammed; a glance through its little window reveals that about twenty feet of the stairway are completely barricaded by mixed pieces of furniture. Four doorways lead off into what must be the ground floor apartments - 1A, 1B, 1C and 1D. [if HP of Otto < 4]The first two and the last all have been nailed shut and the words 'Carnivorous Furniture' spray-painted on them[else]1A and 1D have been nailed shut and the words 'Closed for Repair' carefully stencilled onto signs hanging from their doorknobs[end if], while the door of apartment 1C is just leaned to[if HP of Otto > 3]. The door marked as 1B looks newly cleaned and you remember that this is where Doctor Fuchs has moved into[end if].";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Red Apartment Building	"Red Apartment"
+Red Apartment Building	"Red Apartment Building"
+[Upper entry is a bugfix for a renamed room]
+
+Red Apartment Building is a room. It is fasttravel.
+Description of Red Apartment Building is "[RedAptDesc]".
+The earea of Red Apartment Building is "Outside".
+
+to say RedAptDesc:
+	say "     Standing in a somewhat out of the way neighborhood, a red-tinted apartment building rises before you, four stories tall. A fire escape clings to the outside of its structure, its retracting lowest set of stairs out of reach due to sturdy springs holding it up. In the area around the building, you can see several groups of partially infected people, mooching around and murmuring as they give you looks.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Red Apartment 1st Floor	"Red Apartment 1st Floor"
+Red Apartment 2nd Floor	"Red Apartment 2nd Floor"
+Red Apartment 3rd Floor	"Red Apartment 3rd Floor"
+Red Apartment 4th Floor	"Red Apartment 4th Floor"
+
+Red Apartment 1st Floor is a room.
+Red Apartment 1st Floor is inside from Red Apartment Building.
+Description of Red Apartment 1st Floor is "[RedApt1stDesc]".
+
+to say RedApt1stDesc:
+	say "     The interior lobby of the red apartment building is marked by the typical sights of the nanite apocalypse: Scattered clothes and possessions of people who were overtaken by feral infected, combined with crusty patches of dried cum on the floor, walls and sometimes even ceiling. The fact that the building has fairly large glass doors on two sides seems to have worked against the inhabitants, making them easily visible for passing predators. Several of the doors are marked with claw-slashes and half-torn out of their frames, while others show more calculated destruction. There must have been a crowbar at work for those, likely from looters going for a quick smash and grab. A stairway allows access to the next floor up.";
+
+Red Apartment 2nd Floor is a room.
+Red Apartment 2nd Floor is above Red Apartment 1st Floor.
+Description of Red Apartment 2nd Floor is "[RedApt2ndDesc]".
+
+to say RedApt2ndDesc:
+	say "     The middle section of the red apartment building seems to have been a sort of communal area, with a seating area of several sofas, as well as a vending machine. Of course, the latter has been broken into and cleaned out down to the last chocolate bar, and one sofa has been pushed to block the end of the stairway coming up from below. Two other pieces of furniture seem to be missing entirely, with scratchmarks on the linoleum floor allowing a guess that they were dragged into one apartment in the northeast. Glancing around, you see less damage than on the floor below, with only one or two doors having experienced a looter's touch. A stairway on the other side of the room leads further up in the building.";
+
+Red Apartment 3rd Floor is a room.
+Red Apartment 3rd Floor is above Red Apartment 2nd Floor.
+Description of Red Apartment 3rd Floor is "[RedApt3rdDesc]".
+
+to say RedApt3rdDesc:
+	say "     The middle section of the red apartment building seems to have been a sort of communal area, with formerly neat rows of chairs lined up before a small podium and whiteboard. The typical chaos of the city shows in the fact that several chairs are knocked over or pushed together in untidy clumps, and someone has scrawled lewd, but surprisingly artistic scenes of varied interspecies sex on the whole board. The doors of apartments all around you appear untouched. A stairway on the other side of the room leads further up in the building.";
+
+Red Apartment 4th Floor is a room.
+Red Apartment 4th Floor is above Red Apartment 3rd Floor.
+Description of Red Apartment 4th Floor is "[RedApt4thDesc]".
+
+to say RedApt4thDesc:
+	say "     The middle section of the red apartment building seems to have been a sort of communal area, which meant a community garden under large skylights. The front section appears to be mostly decorative, while further back, there are a number of fruit-bearing plants, surprisingly still with their rich bounty attached. Yet the temptation to go help yourself to some is quickly suppressed as you notice that at least one large, spindly plant is actually a monstrously large stick insect, standing perfectly motionless among the greenery with raised striking claws. It doesn't react in any way to your presence, or being spoken to. The doors of apartments all around you appear untouched, and a stairway leads down to the next lower floor. Finally, there is a fairly inconspicuous 'roof access' door on the opposite side of the room.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Red Apartment Rooftop	"Red Apartment Rooftop"
+
+Red Apartment Rooftop is a room.
+Red Apartment Rooftop is above Red Apartment 4th Floor.
+Description of Red Apartment Rooftop is "[RedRoofDesc]";
+
+to say RedRoofDesc:
+	say "     The roof of this apartment building covered in loose gravel, with some lichen and moss growing on it. The center section is made up of large skylights, allowing the sun to reach the community garden inside.";
+	if staircaselocation is 1:
+		say "     There appears to be a ghostly staircase just a step away from the back left corner of the building. You'd have missed it if you hadn't known it was there. Maybe you could go even further by using it up? (Or plunge to your death as you step off the roof... it does look incredibly transparent to the eyes.)";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -511,14 +599,17 @@ LastTrashSearchTurn is a number that varies. [@Tag:NotSaved]
 Dry Plains is a room. It is fasttravel. "     At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you, all the way to the harsh and insurmountable cliff-faces of Mount Shirley, the northern barrier of the wide river valley the city was originally founded in. You don't see any kind of military cordon here, making you suspect those already infected have spread out here before the military was mobilized to close it off. Smoke rising far in the northwest makes you guess that their lines are probably there, at the chokepoint between the mountain and the expansive Pacifica Nature Preserve. Some hoof prints you spot in a sandy patch nearby furthers the assumption that it is no longer human civilization that rules here. As for the open grasslands, it looks like the something leveled just about all of the scattered buildings further out. Now all that is left of them among the dirt and grassland are mounds of rubble. The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.".
 The earea of Dry Plains is "Plains".
 Plains Door is a door. The marea of plains door is "Plains". "The plains stretch out before you, with slight rolls in the landscape and dotted with fallen buildings and other rare features.". Plains Door is dangerous. Plains door is east of dry plains.
-Plains door is west of wandering the plains.
+Plains door is west of Wandering the Plains.
+
+the scent of the dry plains is "The dry plains smell lightly of dry grasses and disturbed earth. There is little of man-made origin to smell on the air except the scents coming from the city behind you.".
 
 Table of GameRoomIDs (continued)
 Object	Name
-Wandering the plains	"Wandering the plains"
+Wandering the Plains	"Wandering the Plains"
 
-Wandering the plains is a room.
+Wandering the Plains is a room.
 
-the scent of the dry plains is "The dry plains smell lightly of dry grasses and disturbed earth. There is little of man-made origin to smell on the air except the scents coming from the city behind you.".
+the scent of the Wandering the Plains is "The dry plains smell lightly of dry grasses and disturbed earth. There is little of man-made origin to smell on the air except the scents coming from the city behind you.".
+
 
 Basic Locations ends here.

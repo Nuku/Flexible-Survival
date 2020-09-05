@@ -26,8 +26,8 @@ HermList is a flag.
 MaleList is a flag.
 TransList is a flag.
 
-
 CockVoreList is a tag.
+CuckList is a tag.
 IncestList is a tag.
 MindcontrolList is a tag.
 NonconList is a tag.
@@ -38,7 +38,7 @@ The player has a list of text called BanList.
 
 to new ban menu:
 	let FlagList be { "Body Horror", "Furry", "Males", "Females", "Transgender", "Hermaphrodite", "Humorous", "Humanoid", "Hellspawn", "Feral"};
-	let TagList be {"Noncon", "Incest", "Vore", "Cockvore", "Mindcontrol"};
+	let TagList be {"Noncon", "Cuck", "Incest", "Vore", "Cockvore", "Mindcontrol"};
 	let countnumber be 1;
 	let nbmexit be 0;
 	while nbmexit is 0:
@@ -123,6 +123,8 @@ to oldflagban (flagname - text):
 			now FeralList is banned;
 		-- "Transgender":
 			now TransList is banned;
+		-- "Cuck":
+			now CuckList is banned;
 		-- "Incest":
 			now IncestList is banned;
 		-- "Noncon":
@@ -154,6 +156,8 @@ to oldflagward (flagname - text):
 			now FeralList is warded;
 		-- "Transgender":
 			now TransList is warded;
+		-- "Cuck":
+			now CuckList is warded;
 		-- "Incest":
 			now IncestList is warded;
 		-- "Noncon":
@@ -185,6 +189,8 @@ to oldflagunban (flagname - text):
 			now FeralList is not banned;
 		-- "Transgender":
 			now TransList is not banned;
+		-- "Cuck":
+			now CuckList is not banned;
 		-- "Incest":
 			now IncestList is not banned;
 		-- "Noncon":
@@ -218,6 +224,8 @@ to oldflagunward (flagname - text):
 			now TransList is not warded;
 		-- "Incest":
 			now IncestList is not warded;
+		-- "Cuck":
+			now CuckList is not warded;
 		-- "Noncon":
 			now NonconList is not warded;
 		-- "Mindcontrol":

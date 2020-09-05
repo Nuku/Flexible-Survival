@@ -10,7 +10,8 @@ Object	Name
 Captivating Plumage	"Captivating Plumage"
 
 Captivating Plumage is a situation.
-The sarea of Captivating Plumage is "High".
+ResolveFunction of Captivating Plumage is "[ResolveEvent Captivating Plumage]".
+Sarea of Captivating Plumage is "High".
 Peacocked is a number that varies. Peacocked is usually 0.
 
 when play begins:
@@ -18,7 +19,7 @@ when play begins:
 	add Captivating Plumage to BadSpots of FemaleList;
 	add Captivating Plumage to badspots of HermList;
 
-Instead of resolving a Captivating Plumage:
+to say ResolveEvent Captivating Plumage:
 	if debugactive is 1:
 		say "     DEBUG -> ENCOUNTER # [Peacocked] <- DEBUG[line break]";
 	if Peacocked is 0:
@@ -109,7 +110,7 @@ Instead of resolving a Captivating Plumage:
 		now Resolution of Captivating Plumage is 5;
 	else if Peacocked is 5:
 		say "     As you walk through the increasingly familiar streets of the high-rise district, a strong urge compels you to check on the peacock's progress. Entering the store, you notice Dmitri looking over a map of the high-rise district. Wooden chess pieces dot the board to mark ideal surveillance spots, and hasty scribbles mark those points which have been removed or omitted. When you greet the birdlike man, he turns to look at you and says, 'We're going back to March Hares['] hideout again. Their assistance is going to be vital for the plan, but you don't need to think about that right now. Just relax...' Beginning to sing a calming tune, the enchanting male picks up a black strip of cloth. The avian begins to spread his tail feathers wide to completely envelop your view. Enthralled by the colorful eyespots on his feathers, you don't object when the improvised blindfold is wrapped around your head. You shudder as Dmitri removes any clothing or gear from your body, his delicate touch as soothing as it is arousing.";
-		say "     Once stripped completely nude, the anthro peacock grabs hold of your hand to help guide you as walk out the door and through the roads of the district. To your astonishment, the fresh Californian air doesn't feel quite as cold as usual, so your body hardly notices a small gust of wind blow by, the sound of a tattered flag ruffling in the breeze reverberating against the concrete buildings. After walking around two city blocks, you overhear the conversation of a group of women that seem to be huddled closely together. One of them gasps as you walk by, the peacock clearing his throat to stifle any commentary from the women. A short while afterwards, you reach the gang's hideout. The two sentries outside chuckle and say, 'The boss has been expecting you.' One of the guards guides the two of you into a room filled with multiple conversations going on at the same time. A sharp whistle causes everyone to go silent.";
+		say "     Once stripped completely nude, the anthro peacock grabs hold of your hand to help guide you as walk out the door and through the roads of the district. To your astonishment, the fresh Californian air doesn't feel quite as cold as usual, so your body hardly notices a small gust of wind blow by, the sound of a tattered flag ruffling in the breeze reverberating against the concrete buildings. After walking around two city blocks, you overhear Conversation of a group of women that seem to be huddled closely together. One of them gasps as you walk by, the peacock clearing his throat to stifle any commentary from the women. A short while afterwards, you reach the gang's hideout. The two sentries outside chuckle and say, 'The boss has been expecting you.' One of the guards guides the two of you into a room filled with multiple conversations going on at the same time. A sharp whistle causes everyone to go silent.";
 		WaitLineBreak;
 		say "     You hear a familiar feminine voice utter commandingly, 'Hares, our new friend Dmitri has brought someone along who is eager to help take the edge off.' A resounding series of cheers and hurrahs echo throughout the group. Giving you a gentle push towards the middle of the circle, the lapine gang leader smugly says, 'How about you give them a show.' One of the gang members turns on a boombox which starts to play a hip-hop song. The base of the beat reverberates up and down your spine, and an urge to dance starts to course through your nerves. You begin to sway your hips to the tempo of the beat, the rowdy crowd cheering and whistling to goad you on. As you dance close to edges of the crowd, the occasional stray hand begins to roam up and down your body, [if Breast Size of Player > 4]some of the bolder ones grabbing your large breasts, [end if]but the majority seem to focus on your booty.";
 		say "     After a couple of songs, the crowd has gotten very worked up. A deep baritone voice says impatiently, 'No offense boss, we're gonna need more than just a dance. I've got a hard-on that could crack concrete.' A roar of laughter goes through the crowd. Clover responds, 'Hold your horse cock, our lovely guest will get to it.' She then asks Dmitri, 'How about you get our star ready?' Leaning in close, your peacock partner in crime gets you to kneel on the ground. He begins to whisper words of encouragement in your ear, his soothing voice teasing that 'You're going to feel so good as you please them. With how sexy you are, you deserve to be the center of attention.' Your tongue begins to grow restless, craving to suck a cock or lick a pussy. Sensing your readiness, the lapine boss commands, 'Ichi, you're up first.' The blindfold you are wearing doesn't completely obstruct your vision, so you see the outline of a small anthro bunny girl approaching your face. She then stammers out, 'Please lick my pussy.'";
@@ -146,7 +147,7 @@ Instead of resolving a Captivating Plumage:
 		say "     After all the rowdy rabbits have left the store, Dmitri takes a seat on a leather chair and exhales loudly, as if a massive weight has just been taken off his chest. With a contented sigh, the peacock says, 'It's finally over, all that time and effort finally paid off.' You take a seat close by, feeling much more relaxed now that your little heist is out of the way. The avian looks deeply into your eyes and says in a tone that echoes through your nerves, 'You did a wonderful job. Feel free to come by anytime, and I'll make sure you feel good.' Somehow, a part of your mind feels like you've gained back a small modicum of control. You are now able to visit Argos Antiques whenever you want.";
 		WaitLineBreak;
 		move player to Argos Antiques;
-		now Argos Antiques is known;
+		AddNavPoint Argos Antiques;
 		now battleground is "void";
 		now peacocked is 8;
 		now Resolution of Captivating Plumage is 8;
@@ -157,7 +158,7 @@ Object	Name
 Argos Antiques	"Argos Antiques"
 
 Argos Antiques is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Argos Antiques is "[argosantdesc]".
+Description of Argos Antiques is "[argosantdesc]".
 the scent of Argos Antiques is "The antique store smells of aged wood and soft fragrances.".
 
 to say argosantdesc:
@@ -194,8 +195,8 @@ AnalVirgin of Dmitri is true.
 PenileVirgin of Dmitri is false.
 SexuallyExperienced of Dmitri is true.
 MainInfection of Dmitri is "Peacock".
-The description of Dmitri is "[dmitridesc]".
-The conversation of Dmitri is { "Fanout!" }.
+Description of Dmitri is "[dmitridesc]".
+Conversation of Dmitri is { "Fanout!" }.
 the scent of the Dmitri is "The avian has a rather enticing scent of jasmine and sage that makes him seem all the more entrancing.".
 
 to say dmitridesc:

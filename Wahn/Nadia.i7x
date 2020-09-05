@@ -110,8 +110,8 @@ SexuallyExperienced of Nadia is true.
 TwistedCapacity of Nadia is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Nadia is true. [steriles can't knock people up]
 MainInfection of Nadia is "".
-The description of Nadia is "[NadiaDesc]".
-The conversation of Nadia is { "Mew!" }.
+Description of Nadia is "[NadiaDesc]".
+Conversation of Nadia is { "Mew!" }.
 
 NadiaDescription is a number that varies. NadiaDescription is usually 1.
 NadiaFertilityCounter is a number that varies. NadiaFertilityCounter is usually 0.
@@ -575,33 +575,29 @@ Table of GameEventIDs (continued)
 Object	Name
 Bird Troubles	"Bird Troubles"
 
-Bird Troubles is a situation. The level of Bird Troubles is 5. [meeting event in which you can take her home]
-The sarea of Bird Troubles is "Campus".
+Bird Troubles is a situation.
+ResolveFunction of Bird Troubles is "[ResolveEvent Bird Troubles]". The level of Bird Troubles is 5. [meeting event in which you can take her home]
+Sarea of Bird Troubles is "Campus".
 when play begins:
 	add Bird Troubles to BadSpots of FemaleList;
 
-Instead of resolving a Bird Troubles:
-	say "     The science faculty of Fairhaven College, once a place that churned out graduates for local organizations like Trevor Labs and the City Hospital, now lie largely abandoned since the outbreak. The teaching laboratories occupy one block near the back of the building, and it's there you find yourself as you wander the campus, examining a couple of trucks parked by a loading dock. The trucks are empty, long looted of anything that might have been valuable, but what catches your attention is a potential entrance into the faculty building by way of a number of shutters and doors set into the rear of the loading dock.";
-	say "     These must be the back entrances to the labs, though which bulky materiel is loaded. Perhaps there's something useful remaining inside - after all, the city has been full of surprises so far. Most of the loading bays are shuttered and locked, but there's a door in the back which has been blocked by a fallen length of thick steel piping that's caught between two others to form a bar of sorts, wedging shut the outward-opening door. It's thick, riddled with claw marks and slightly bent, but isn't too heavy to lift and you're in before too long.";
+to say ResolveEvent Bird Troubles:
+	say "     The science faculty of Fairhaven College, once a place that churned out graduates for local organizations like Trevor Labs and the City Hospital, now lie largely abandoned since the outbreak. The teaching laboratories occupy one block near the back of the building, and it's there you find yourself as you wander the campus, examining a couple of trucks parked by a loading dock. The trucks are empty, long looted of anything that might have been valuable, but what catches your attention is a potential entrance into the faculty building by way of a number of shutters and doors set into the rear of the loading dock. These must be the back entrances to the labs, through which bulky materiel is loaded. Perhaps there's something useful remaining inside - after all, the city has been full of surprises so far.";
+	say "     Most of the loading bays are shuttered and locked, but there's a door in the back which has been blocked by a fallen length of thick steel piping that's caught between two others to form a bar of sorts, wedging shut the outward-opening door. It's thick, riddled with claw marks and slightly bent, but isn't too heavy to lift and you're in before too long. Behind the door is a long corridor doors leading to individual laboratories on either side, a draft carrying air in from the small windows set high into the walls. Looking through the glass windows separating them from the corridors proper, most of the specimens have died from thirst and starvation in the cages, an unhappy end even for lab animals. Yet in one of them, the cages have been thrown open - not forced, but thrown - and there's someone collapsed on the ground inside! Carefully, you ease open the door and peer inside, holding your breath.";
 	WaitLineBreak;
-	say "     Behind the door is a long corridor doors leading to individual laboratories on either side, a draft carrying air in from the small windows set high into the walls. Looking through the glass windows separating them from the corridors proper, most of the specimens have died from thirst and starvation in the cages, an unhappy end even for lab animals. Yet in one of them, the cages have been thrown open - not forced, but thrown - and there's someone collapsed on the ground inside! Carefully, you ease open the door and peer inside, holding your breath.";
-	say "     Face-down on the ground is a bird-woman, her figure thin and scrawny, her hands and feet now talons. Her feathers are a dull, muted shade of various colors, her crimson hair is messy and unkempt, and her tail-feathers are long and sweeping, reaching down to her calves. The wings that jut from between her shoulder blades are bent at entirely unnatural angles, much like pictures of pigeon roadkill you've seen. Perhaps in a different time and place she could have been truly beautiful, but right now that beauty is just broken, not unlike a cracked mirror.";
-	WaitLineBreak;
-	say "     Roused by your footsteps as you approach, she raises her head and scrambles to her feet, whimpering and shielding herself with her hands until she realizes you're not a threat - and you're equally relieved that she isn't one, either.";
-	say "     'Someone came,' the bird-woman says, slumping her shoulders. 'Someone finally came. Who knows how long I spent trying to break down that door, that and the front entrance - I was beginning to wonder if this was how I would die, trapped and alone...I watched the animals die one by one from hunger in their cages, but I didn't dare to let them go...wondering if I would end up like them...'";
-	WaitLineBreak;
-	say "     Well, at least she's not going to be dying now. You ask for her name, and she nods. 'My name is Nadia. I'm...' she looks down at her talons, seeming fit to burst into tears at any time. '...I was a student here. Are those things still out there? I've lost count of how many days I've spent trapped in these laboratories.";
-	say "     'Do you have somewhere I could go?' she asks hopefully. 'I...I can't stay here anymore, and I don't think there's anywhere that's safe on campus, not after hearing some of the noises that go on outside all day and night.'";
+	say "     Face-down on the ground is a bird-woman, her figure thin and scrawny, her hands and feet now talons. Her feathers are a dull, muted shade of various colors, her crimson hair is messy and unkempt, and her tail-feathers are long and sweeping, reaching down to her calves. The wings that jut from between her shoulder blades are bent at entirely unnatural angles, much like pictures of pigeon roadkill you've seen. Perhaps in a different time and place she could have been truly beautiful, but right now that beauty is just broken, not unlike a cracked mirror. Roused by your footsteps as you approach, she raises her head and scrambles to her feet, whimpering and shielding herself with her hands until she realizes you're not a threat - and you're equally relieved that she isn't one, either. 'Someone came,' the bird-woman says, slumping her shoulders.";
+	say "     'Someone finally came. Who knows how long I spent trying to break down that door, that and the front entrance - I was beginning to wonder if this was how I would die, trapped and alone... I watched the animals die one by one from hunger in their cages, but I didn't dare to let them go... wondering if I would end up like them...' Well, at least she's not going to be dying now. You ask for her name, and she nods. 'My name is Nadia. I'm...' she looks down at her talons, seeming fit to burst into tears at any time. '...I was a student here. Are those things still out there? I've lost count of how many days I've spent trapped in these laboratories. Do you have somewhere I could go?' she asks hopefully. 'I... I can't stay here anymore, and I don't think there's anywhere that's safe on campus, not after hearing some of the noises that go on outside all day and night.'";
+	LineBreak;
+	say "     [bold type]What do you reply?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Take her with you to the library.";
+	say "     ([link]N[as]n[end link]) - Tell her she can't come with you.";
 	if Player consents:
 		LineBreak;
-		say "     'My full name is Nadia Sokolova,' the bird-woman explains as she limps after you through the city and back to the library. 'But just call me Nadia, if you will. I'm an education major, or at least, I was before all this started. I was hoping... well, there's no harm in saying it if I'm going to be staying with you, am I? We have to trust each other.";
-		say "     'I didn't want to go to college - didn't see the value in it when there aren't really any classes on how to be a wife and mother. What I wanted to do was to raise a family, then maybe later there would be time for everything else, but everyone pressured me to go, said I had no ambition, that I shouldn't...' she chokes back tears. 'I eventually gave in when my mother told me I could earn my Mrs. degree while studying as well, and I'd hoped that picking out education would let me work with children when I graduated.";
+		say "     'My full name is Nadia Sokolova,' the bird-woman explains as she limps after you through the city and back to the library. 'But just call me Nadia, if you will. I'm an education major, or at least, I was before all this started. I was hoping... well, there's no harm in saying it if I'm going to be staying with you, is there? We have to trust each other. I didn't want to go to college - didn't see the value in it when there aren't really any classes on how to be a wife and mother. What I wanted to do was to raise a family, then maybe later there would be time for everything else, but everyone pressured me to go, said I had no ambition, that I shouldn't...' she chokes back tears. 'I eventually gave in when my mother told me I could earn my Mrs. degree while studying as well, and I'd hoped that picking out education would let me work with children when I graduated.";
+		say "     'When all this started, I was passing by the science faculty on the way to class - most of the professors and my classmates had turned into horrid furry things and Greeks or something, and while one of them took my clothes, they didn't manage to take me. After that, I didn't dare make a run for the dorms, nor did I dare shout for help, so I holed up in a cluster of the natural sciences labs. I didn't expect the door to get blocked like that while I was inside, I'd finished all the snacks the lab techs left in their offices, and I was so hungry, so...' It's a while until she gets over her embarrassment. 'There were a couple of exotic birds on loan from the zoo, you see. They were too pretty for me to let them just die, and they were so friendly, never tried to bite or claw me or anything, unlike some of the other animals.'";
 		WaitLineBreak;
-		say "     'When all this started, I was passing by the science faculty on the way to class - most of the professors and my classmates had turned into horrid furry things and Greeks or something, and while one of them took my clothes, they didn't manage to take me. After that, I didn't dare make a run for the dorms, nor did I dare shout for help, so I holed up in a cluster of the natural sciences labs. I didn't expect the door to get blocked like that while I was inside, I'd finished all the snacks the lab techs left in their offices, and I was so hungry, so...'";
-		say "     It's a while until she gets over her embarrassment. 'There were a couple of exotic birds on loan from the zoo, you see. They were too pretty for me to let them just die, and they were so friendly, never tried to bite or claw me or anything, unlike some of the other animals. There was a whole bunch of juicy fruit in one of the freezers for them, so I fed them and kept them alive while trapped in there. The fruit was clearly marked as not for people, but there wasn't anything left, so...' she ruffles her feathers. 'I ended up like this, and I keep on getting these strange urges, like I need to... um... anyways, I opened their cages shortly before you found me. The window was too small for me to fit through, but at least they're free now.'";
-		WaitLineBreak;
-		say "     With that, Nadia finishes her story and looks about the library, her gaze falling on the staircase to the second floor. Drawn by some invisible force, she heads upstairs with you following, and after looking about the library's second floor, begins pulling cushions off the sofa and arranging them in a circular pattern on an empty spot on the floor. You watch her for a few moments before finally realizing that she's building a nest thanks to her avian instincts, a suspicion that's confirmed by her flopping straight into the middle of the small pile and nestling down with no small satisfaction.";
-		say "     'Thank you for letting me stay here,' she chirps. 'It's the first time since this mess started that anything's happened to give me hope. I was watching, waiting for so long, afraid to call for help yet desperately hoping someone would come before I died... and you did. Again, thank you so much.'";
+		say "     'There was a whole bunch of juicy fruit in one of the freezers for them, so I fed them and kept them alive while trapped in there. The fruit was clearly marked as not for people, but there wasn't anything left, so...' she ruffles her feathers. 'I ended up like this, and I keep on getting these strange urges, like I need to... um... anyways, I opened their cages shortly before you found me. The window was too small for me to fit through, but at least they're free now.' With that, Nadia finishes her story and looks about the library, her gaze falling on the staircase to the second floor. Drawn by some invisible force, she heads upstairs with you following, and after looking about the library's second floor, begins pulling cushions off the sofa and arranging them in a circular pattern on an empty spot on the floor.";
+		say "     You watch her for a few moments before finally realizing that she's building a nest thanks to her avian instincts, a suspicion that's confirmed by her flopping straight into the middle of the small pile and nestling down with no small satisfaction. 'Thank you for letting me stay here,' she chirps. 'It's the first time since this mess started that anything's happened to give me hope. I was watching, waiting for so long, afraid to call for help yet desperately hoping someone would come before I died... and you did. Again, thank you so much.'";
 		move Nadia to Garden View;
 		move player to Garden View;
 		now HP of Nadia is 1;
@@ -619,7 +615,7 @@ Instead of resolving a Bird Troubles:
 		now NadiaChar-L is "0";
 		now NadiaChar-M is "0";
 		[Testing Fertile Pills]
-		[increase carried of fertile pill by 50;]
+		[ItemGain fertile pill by 50;]
 		now Resolution of Bird Troubles is 1; [recruited Nadia]
 	else:
 		LineBreak;
@@ -633,26 +629,25 @@ Table of GameEventIDs (continued)
 Object	Name
 Lost Chick	"Lost Chick"
 
-Lost Chick is a situation. The level of Lost Chick is 5. Lost Chick is inactive.
-The sarea of Lost Chick is "Campus".
+Lost Chick is a situation.
+ResolveFunction of Lost Chick is "[ResolveEvent Lost Chick]". The level of Lost Chick is 5. Lost Chick is inactive.
+Sarea of Lost Chick is "Campus".
 
 when play begins:
 	add Lost Chick to BadSpots of FemaleList; [female gymnasts]
 
-Instead of resolving a Lost Chick:
+to say ResolveEvent Lost Chick:
 	if HP of Nadia is 2: [first attempt]
-		say "     Remembering Nadia's words, you decide to keep an eye out for her missing chick while exploring the college campus. Most of the small grocery stores that serviced the students living on-campus have long been looted, as have the cafeteria storerooms, but if Nadia's suspicions were right then the little one wouldn't have been very interested in finding anything on the empty shelves anyway. Still, you wander about a little while longer, and it's then that you're rewarded with the faint sound of a brief squawk and set out in that direction.";
-		say "     Indeed, a flash of color greets you as you round a corner - one of Nadia's brood is perched on a high ledge, below which a trio of feline gymnasts prowl continuously, occasionally eyeing the colorful avian and trying various ways and means of getting up that seriously suggests that they must have failed the first round of tryouts. Nevertheless, they keep on trying to get at their prize despite their constant failures - those must have been some truly tenacious girls when they were human.";
-		say "     It would have been a comical sight, really, if it weren't your daughter who was perched so high up. The trio of feline gymnasts aren't exactly very successful in their repeated attempts to get at her, leaving her in no immediate danger, but they are preventing her from making an escape. The occasional angry shriek or kick keeps them down - it's a wonder that more mutants haven't been drawn by the spectacle.";
+		say "     Remembering Nadia's words, you decide to keep an eye out for her missing chick while exploring the college campus. Most of the small grocery stores that serviced the students living on-campus have long been looted, as have the cafeteria storerooms, but if Nadia's suspicions were right then the little one wouldn't have been very interested in finding anything on the empty shelves anyway. Still, you wander about a little while longer, and it's then that you're rewarded with the faint sound of a brief squawk and set out in that direction. Indeed, a flash of color greets you as you round a corner - one of Nadia's brood is perched on a high ledge, below which a trio of feline gymnasts prowl continuously, occasionally eyeing the colorful avian and trying various ways and means of getting up that seriously suggests that they must have failed the first round of tryouts.";
+		say "     Nevertheless, they keep on trying to get at their prize despite their constant failures - those must have been some truly tenacious girls when they were human. It would have been a comical sight, really, if it weren't your daughter who was perched so high up. The trio of feline gymnasts aren't exactly very successful in their repeated attempts to get at her, leaving her in no immediate danger, but they are preventing her from making an escape. The occasional angry shriek or kick keeps them down - it's a wonder that more mutants haven't been drawn by the spectacle.";
 		LineBreak;
-		say "     Vera flutters as you approach, quickly recognizing you. 'Daddy, help!'";
+		say "     Vera flutters as you approach, quickly recognizing you. [bold type]'Daddy, help!'[roman type][line break]";
 		LineBreak;
 		say "     [LostChickFight]";
 	else if HP of Nadia is 3: [repeat attempt]
-		say "     Making your way back to where you last saw Nadia's missing chick, a flash of color greets you as you round a corner - Vera is still perched on a high ledge, below which the trio of feline gymnasts prowl continuously, occasionally eyeing the colorful avian and trying various ways and means of getting up. Looks like they're totally focused on their prize despite and just won't stop till they have her - those must have been some truly tenacious girls when they were human.";
-		say "     It would have been a comical sight, really, if it weren't your daughter who was perched so high up. The trio of feline gymnasts aren't exactly very successful in their repeated attempts to get at her, leaving her in no immediate danger, but they are preventing her from making an escape. The occasional angry shriek or kick keeps them down - it's a wonder that more mutants haven't been drawn by the spectacle.";
+		say "     Making your way back to where you last saw Nadia's missing chick, a flash of color greets you as you round a corner - Vera is still perched on a high ledge, below which the trio of feline gymnasts prowl continuously, occasionally eyeing the colorful avian and trying various ways and means of getting up. Looks like they're totally focused on their prize despite and just won't stop till they have her - those must have been some truly tenacious girls when they were human. It would have been a comical sight, really, if it weren't your daughter who was perched so high up. The trio of feline gymnasts aren't exactly very successful in their repeated attempts to get at her, leaving her in no immediate danger, but they are preventing her from making an escape. The occasional angry shriek or kick keeps them down - it's a wonder that more mutants haven't been drawn by the spectacle.";
 		LineBreak;
-		say "     Vera flutters as you approach, quickly recognizing you. 'Daddy, help!'";
+		say "     Vera flutters as you approach, quickly recognizing you. [bold type]'Daddy, help!'[roman type][line break]";
 		LineBreak;
 		say "     [LostChickFight]";
 
@@ -694,7 +689,7 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 	if Player consents:
 		LineBreak;
 		say "     Chirping with delight, Nadia grabs the fertile pill out of the air with her talons as you toss it to her. You're worried that she might devour it as-is, but she easily rips apart the foil package and tosses it aside before popping the pill into her beak and swallowing. Crooning softly, the broody bird settles back into her nest to wait for it to work, and work it does.";
-		decrease carried of fertile pill by 1;
+		ItemLoss fertile pill by 1;
 		if NadiaPregCounter1 is 0:[not pregnant yet]
 			say "     Slowly, Nadia begins to moan softly as a gentle warmth gathers in her lower belly and begins to spread out to the rest of her body. Unable to control herself, the bird of paradise rubs her breasts as they grow bigger and firmer, milk glands and ducts within developing to better feed future chicks she will bear. The rest of her body is not forgotten - her hips widen a little, the bone structure shifting to better allow eggs through. Not to be left out, her pussy grows wet as it becomes more prominent, her thickening lips advertising her newfound boost in fertility.";
 			say "     The transformation complete, Nadia sinks back into her nest with a contented sigh with her wings splayed out. She looks happier, her body more motherly and elegant, the myriad colors on her body more vibrant. A good time for her to be bred, in fact, and she looks eager enough.";
@@ -780,7 +775,7 @@ instead of going up from Grey Abbey Library while (Nadia is in Garden View and N
 	say "     Indeed, it's hard to deny that Nadia has changed drastically since coming to the library, both in outlook and body, and she spends the next few moments snuggling her petite form up against you, her warm feathers leaving behind much of her floral scent as they brush against you. She says nothing, closing her eyes and making small, happy noises in the back of her throat, content to just lie about and feel warm. Drawn by their mother's maternal crooning, some of Nadia's younger chicks join in the cuddle as well, and there's space enough for all of them as she takes each and every one into her embrace.";
 	WaitLineBreak;
 	say "     It's a little while later that you wake up and slowly disentangle yourself from the warm cocoon of fluff, careful not to wake any of Nadia's sleeping chicks gathered all around her as you gather up the cloak in your arms. Nadia herself is fast asleep with her youngest chick in her arms, doing what she does best, surrounded by everyone and everything she loves, a warm, happy mother goddess to her enormous brood.";
-	increase carried of feathered cloak by 1;
+	ItemGain feathered cloak by 1 silently;
 	now HP of Nadia is 5;
 
 instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaChickCounter > 1 and NadiaChar-J is "0"):
@@ -804,8 +799,7 @@ instead of navigating Grey Abbey Library while (NadiaChar-J is "1" and (GreenTum
 	say "     Gently, you urge Nadia to set down the trowel and gather up her petite form in a warm hug. Nadia cheeps as she snuggles against you, enjoying the warmth and feel of your body, then reluctantly pulls away. 'Mm, that felt nice. It's odd,' Nadia says, fluffing her feathers. 'Ever since becoming a pretty bird, I can't taste anything spicy. Just tried a few of the chili peppers, and they just tasted sweet. Strange, right? But I suppose it's nothing to get too worried about - if I started worrying about that, I'd have to start worrying about this.' She runs her talons over the firm curves of her avian body. 'But enough about me. Let me help you with that...'";
 	WaitLineBreak;
 	say "     That said, Nadia calls over one of her chicks and presses an armful of fresh veggies into your hands. 'I'm not exactly a big fan of raw vegetables, but it's not as if there's a stove in here, is there? In any case, do enjoy the fruits of the harvest. There's more than enough for everyone.' She giggles a little at some private joke, then gives you a wave before turning back to her work.";
-	say "     ([bold type]3 food gained[roman type])";
-	increase carried of food by 3;
+	ItemGain food by 3;
 	now NadiaChar-J is "2";
 
 instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaDescription > 3 and NadiaChickCounter > 9 and NadiaChar-J is "2"):

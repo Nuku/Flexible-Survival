@@ -32,8 +32,8 @@ object	name
 Lucy	"Lucy"
 
 Lucy is a woman.
-The description of Lucy is "[lucydesc]".
-The conversation of Lucy is { "Hey baby!" }.
+Description of Lucy is "[lucydesc]".
+Conversation of Lucy is { "Hey baby!" }.
 
 the scent of Lucy is "The rat girl smells of perfume and nail polish.".
 
@@ -200,10 +200,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Memories of the Mall	"Memories of the Mall"
 
-Memories of the Mall is a situation. It is inactive.
-The sarea of Memories of the Mall is "Outside".
+Memories of the Mall is a situation.
+ResolveFunction of Memories of the Mall is "[ResolveEvent Memories of the Mall]". It is inactive.
+Sarea of Memories of the Mall is "Outside".
 
-Instead of resolving a Memories of the Mall:
+to say ResolveEvent Memories of the Mall:
 	say "     As you're walking around the city, you find your mind wandering back to the mall, and more specifically, to your rat girlfriend waiting there. Little things you keep seeing remind you of her - stuff like the way that husky's breasts bounce when she runs, or the tight ass on that other mutant, or the unchanged rat you see scurrying between some trash cans. Unable to get your sexy girlfriend off your mind, you change directions and strike off towards the mall to see her again. Once you arrive, you make your way back to the atrium to see her again.";
 	if Libido of Player < 50, increase Libido of Player by 5;
 	increase lastfuck of Lucy by 6; [ready for more sex]
@@ -227,7 +228,7 @@ to mallrecall:
 		if a random chance of recallchance in 100 succeeds:
 			if Smith Haven Mall Lot South is unknown:
 				say "     As you start heading back to safe territory after your excursion, you find yourself wandering off in a new direction. Following buried instincts, you feel drawn somewhere... safe... somewhere... cool... You eventually arrive at the southern parking lot of a large mall. While you are largely confused by this, you can't help but feel that part of you wants to call this place home. Knowing it's somehow safe, you go inside and head to the large atrium at the center of the plaza, finding lots of other rats living there already.";
-				now Smith Haven Mall Lot South is known;
+				AddNavPoint Smith Haven Mall Lot South;
 			else if HP of Lucy >= 2:
 				say "     As you start heading back to safe territory after your excursion, you find yourself thinking of Lucy and the mall, wanting to head back there to see your girlfriend again. The mall's a safe place, you remind yourself, and head back in that direction eagerly. You arrive safely and enter the shopping plaza[if the player is mallratbodied], feeling quite at home here[end if], and head to the central atrium.";
 			else:

@@ -12,8 +12,8 @@ name	desc	weight	object
 scalemail is a grab object.
 scalemail is equipment.
 It is not temporary.
-The plural of scalemail is false.
-The taur-compatible of scalemail is true.
+Plural of scalemail is false.
+Taur-compatible of scalemail is true.
 The size of scalemail is 3.
 The AC of scalemail is 50.
 The effectiveness of scalemail is 60.
@@ -31,8 +31,8 @@ name	desc	weight	object
 Gambeson is a grab object.
 Gambeson is equipment.
 It is not temporary.
-The plural of Gambeson is false.
-The taur-compatible of Gambeson is true.
+Plural of Gambeson is false.
+Taur-compatible of Gambeson is true.
 The size of Gambeson is 3.
 The AC of Gambeson is 30.
 The effectiveness of Gambeson is 80.
@@ -50,8 +50,8 @@ name	desc	weight	object
 Leather Vambraces is a grab object.
 Leather Vambraces is equipment.
 It is not temporary.
-The plural of Leather Vambraces is false.
-The taur-compatible of Leather Vambraces is true.
+Plural of Leather Vambraces is false.
+Taur-compatible of Leather Vambraces is true.
 The size of Leather Vambraces is 3.
 The AC of Leather Vambraces is 60.
 The effectiveness of Leather Vambraces is 30.
@@ -62,24 +62,11 @@ the scent of Leather Vambraces is "They have that new leather smell.".
 
 Part 4 - Makeshift-Spear
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"Makeshift-Spear"	"Made by binding the blade of your old pocket knife to a sturdy wooden rod, this Makeshift-Spear is a much better choice for combat than its two separate parts."	3	Makeshift-Spear
-
-Makeshift-Spear is an armament. It is part of the player. It has a weapon "your Makeshift-Spear". The weapon damage of Makeshift-Spear is 5. The weapon type of Makeshift-Spear is "Melee". It is not temporary.
-
-the scent of the Makeshift-Spear is "The wood smells a little musty. It brings back memories of the Urban Forest.".
+[Makeshift-Spear moved to Core Mechanics/Weapons.i7x]
 
 Part 5 - Broke-Ass Hoe
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"Broke-Ass Hoe"	"This garden hoe has seen better days. The end has been broken off, but the long, hard shaft should still be usable as a weapon."	2	Broke-Ass Hoe
-
-Broke-Ass Hoe is an armament. It is part of the player. It has a weapon "your Broke-Ass Hoe". The weapon damage of Broke-Ass Hoe is 2. The weapon type of Broke-Ass Hoe is "Melee". It is not temporary.
-
-the scent of the Broke-Ass Hoe is "Do you normally make a habit of sniffing your hoes?".
-
+[Broke-Ass Hoe moved to Core Mechanics/Weapons.i7x]
 
 Section 2 - Materials
 
@@ -91,7 +78,7 @@ name	desc	weight	object
 
 cloth scrap is a grab object. It is not temporary.
 
-the usedesc of cloth scrap is "[cloth scrap use]".
+Usedesc of cloth scrap is "[cloth scrap use]".
 
 to say cloth scrap use:
 	say "     What would you even use a pile of cloth scraps for? Maybe if you find a suitably resourceful person, they could craft something from it.";
@@ -104,7 +91,7 @@ name	desc	weight	object
 
 leather scrap is a grab object. It is not temporary.
 
-the usedesc of leather scrap is "[leather scrap use]".
+Usedesc of leather scrap is "[leather scrap use]".
 
 to say leather scrap use:
 	say "     What would you even use a pile of leather scraps for? Maybe if you find a suitably resourceful person, they could craft something from it.";

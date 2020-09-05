@@ -111,8 +111,8 @@ AnalVirgin of Chase is true.
 SexuallyExperienced of Chase is true.
 MainInfection of Chase is "Tiger".
 
-The description of Chase is "[ChaseDesc]".
-The conversation of Chase is { "mew" }.
+Description of Chase is "[ChaseDesc]".
+Conversation of Chase is { "mew" }.
 Chase is in Tiger Den.
 
 The scent of Chase is "[ChaseScent]";
@@ -256,8 +256,8 @@ to say RegularChaseHelp:
 		if carried of water bottle < 5 or carried of food < 8:
 			say "     [one of]'Hey, sorry to bug ya, but did you ever get that food? We need like 8 containers of food and maybe 5 bottles of water, if you can spare that much.'[or]'Did you have any luck finding those supplies I'd asked about?'[or]'Don't forget to keep your eyes open for some of the supplies we need here.'[or]'Did you see those small packs of rabbits roaming around? God they always make my mouth water...'[at random]";
 		else:
-			decrease carried of water bottle by 5;
-			decrease carried of food by 8;
+			ItemLoss water bottle by 5;
+			ItemLoss food by 8;
 			say "     'Whoa, thanks a lot for this! This should keep the rest of us going for a while longer!' Chase nuzzles the side of your neck and then licks you across your throat. A shiver racks down your spine from the rough wet feel of the tiger's tongue sliding along your [facename of Player] throat. When the feline pulls back, Chase says, 'Hey, why don't I show you some neat tricks we tigers like to pull off? It may help you to fight and run away better when you're outside foraging or whatever.";
 			Increase XP of Player by 40 + ( 3 * level of Player );
 			now RegChaseHelp is 2;

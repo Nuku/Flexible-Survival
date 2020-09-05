@@ -70,7 +70,7 @@ AnalVirgin of Team Captain Roman is false.
 PenileVirgin of Team Captain Roman is false.
 SexuallyExperienced of Team Captain Roman is false.
 MainInfection of Team Captain Roman is "Football Gorilla Male".
-The description of Team Captain Roman is "[RomanDesc]".
+Description of Team Captain Roman is "[RomanDesc]".
 
 to say RomanDesc:
 	if debugactive is 1:
@@ -85,7 +85,7 @@ to say RomanDesc:
 		else:
 			say "Roman stands out from the rest of the players. He looks more mature, and in opposition to his teammates, who strut on the field with only a helmet and a shoulder-pad, and nothing else. His shorts are not padded anymore, letting everyone see that he is now transgender.";
 
-The conversation of Team Captain Roman is { "Yap!" }.
+Conversation of Team Captain Roman is { "Yap!" }.
 Team Captain Roman is in Astroslide Football Field.
 
 instead of sniffing Team Captain Roman:
@@ -271,7 +271,7 @@ to say RomanConfront:
 	now HP of Roman is 2;
 
 to say RomanConvince:
-	let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+	let bonus be (( Charisma of Player minus 10 ) divided by 2);
 	if GorillasMember > 3:
 		increase bonus by 2;
 	if Player is female and Breast Size of Player is 0:
@@ -293,7 +293,7 @@ to say RomanConvince:
 		say "     'We already talked about it: I don't trust you enough to tell you about it. Please let it go,' Roman replies to your query.";
 
 to say RomanEncourage:
-	let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+	let bonus be (( Charisma of Player minus 10 ) divided by 2);
 	increase bonus by XP of Roman;
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Charisma Check):[line break]";
@@ -312,7 +312,7 @@ to say RomanEncourage:
 		say "     Everyone goes back to their business, and once Roman finishes to say goodbye to the last group, he traps you in a very, very tight hug. '[if Player is not defaultnamed][name of Player], [end if]I cannot find the words to thank you,' he says. 'It's like a weight just lifted from my shoulders. If I can do anything... [italic type]anything[roman type] to repay you, tell me. I consider you one of my closest friends. Actually...'";
 		say "     Roman runs to the locker-room, and comes back a couple of minutes later, a football helmet in his hands. 'I want you to take this. First one I received when joining the team, and still good,' the Gorilla explains as he lobs the helmet in your arms. 'You're going back into the city, right? You'll need it.' Thanking profusely Roman, you strap the helmet to your backpack.";
 		say "[bold type]You gain a football helmet![roman type][line break]";
-		increase carried of Roman's gifted football helmet by 1;
+		ItemGain Roman's gifted football helmet by 1 silently;
 		now HP of Roman is 5;
 	else:
 		say "     You give your best arguments to Roman. 'Thank you for your concern, but I don't think I am ready yet,' he replies. Nonetheless, your words had some effect on him.";
@@ -599,9 +599,10 @@ Object	Name
 Grocery Store Security Camera	"Grocery Store Security Camera"
 
 Grocery Store Security Camera is a situation.
-The sarea of Grocery Store Security Camera is "Outside".
+ResolveFunction of Grocery Store Security Camera is "[ResolveEvent Grocery Store Security Camera]".
+Sarea of Grocery Store Security Camera is "Outside".
 
-instead of resolving Grocery Store Security Camera:
+to say ResolveEvent Grocery Store Security Camera:
 	say "     You find a grocery store on your way. The place has been looted until only the metallic shelves remain, but you still decide to give the place a quick check, just in case. As you have guessed, the store is totally empty. The floor is covered with cum stains, who go all the way to the back room. A soft whirr catches your attention to the ceiling, and your eye meet the one of a small motion-activated security camera. Taken by a sudden inspiration, you fetch a stool lying nearby, and open the security camera to grab its tape. This could prove useful[if Lost Camera is unresolved], provided you find some kind of viewing equipment, like a video camera[end if].";
 	say "[bold type]Grocery Store Tape has been added to your tape inventory![roman type][line break]";
 	add "Grocery Store Tape" to tapes of Player;
@@ -628,9 +629,10 @@ Object	Name
 Orca Volleyball Player	"Orca Volleyball Player"
 
 Orca Volleyball Player is a situation.
-The sarea of Orca Volleyball Player is "Beach".
+ResolveFunction of Orca Volleyball Player is "[ResolveEvent Orca Volleyball Player]".
+Sarea of Orca Volleyball Player is "Beach".
 
-Instead of resolving a Orca Volleyball Player:
+to say ResolveEvent Orca Volleyball Player:
 	say "     You spot a small crowd nearby. As you approach, you see a volleyball flying in the air, followed by the massive frame of an orca jumping to receive it.";
 	if HP of Roman is not 6:
 		say "     You mix yourself with the crowd and watch the match. While all the players play well, the killer whale is undoubtedly the best one. Despite his large body, he manages to cover a lot of ground, and his smashes leave no chance to its opponents. You do not mind the match to be unbalanced, if it means being able to ogle the orca's generous package flopping in his skin-tight swimming trunks. You take your leave at the same time the gorgeous cetacean leaves the field.";
@@ -660,9 +662,10 @@ Object	Name
 Husky Gang	"Husky Gang"
 
 Husky Gang is a situation.
-The sarea of Husky Gang is "Outside".
+ResolveFunction of Husky Gang is "[ResolveEvent Husky Gang]".
+Sarea of Husky Gang is "Outside".
 
-Instead of resolving a Husky Gang:
+to say ResolveEvent Husky Gang:
 	project the Figure of HuskyAlpha_soft_icon;
 	say "     Sounds from an animated discussion echoes through the street, coming from just around the corner. Deciding to act cautiously, you hide behind the rusting remains of a car and wait for the group to pass. Soon, a large pack of Huskies turn the corner. You count at least ten females, escorted by a muscular Alpha Husky.";
 	if HP of Roman is not 10:

@@ -6,7 +6,8 @@ Object	Name
 Soldier Squad	"Soldier Squad"
 
 Soldier Squad is a situation.
-The sarea of Soldier Squad is "Warehouse".
+ResolveFunction of Soldier Squad is "[ResolveEvent Soldier Squad]".
+Sarea of Soldier Squad is "Warehouse".
 when play begins:
 	add Soldier Squad to BadSpots of MaleList;       [male soldiers]
 	add Soldier Squad to BadSpots of FemaleList;      [one changes into a female husky]
@@ -14,7 +15,7 @@ when play begins:
 
 SquadEncounters is a number that varies. SquadEncounters is usually 0.
 
-Instead of resolving a Soldier Squad:
+to say ResolveEvent Soldier Squad:
 	if debugactive is 1:
 		say "     DEBUG -> ENCOUNTER # [SquadEncounters] <- DEBUG[line break]";
 	if SquadEncounters is 0:
@@ -278,17 +279,15 @@ Object	Name
 Human Urges	"Human Urges"
 
 Human Urges is a situation.
-The sarea of Human Urges is "Red".
+ResolveFunction of Human Urges is "[ResolveEvent Human Urges]".
+Sarea of Human Urges is "Red".
 when play begins:
 	add Human Urges to BadSpots of MaleList;      [male soldier]
 	add Human Urges to BadSpots of FemaleList;     [female soldier]
 
-Instead of resolving a Human Urges:
-	say "     As you wander through one of the residential areas next to this seedy section of town, you hear moaning coming from an open window of a nearby house. Curious what kind of creatures are in there, you slowly walk closer, careful not to make a sound. When you arrive at the window and peek inside, you see that it's... humans.";
-	say "     Their city-camouflage clothing strewn about on the floor and rifles leaning against the opposite wall, you see two soldiers in intimate embrace on a bed. It's a man and a woman, with his hips pumping up and down as he fucks her with fast strokes while she holds him close to her body. One doesn't have to be infected with nanites to feel the basic urges of human existence - and with what's going on in the city and the sexual sights around here especially, those two turned to each other to let off some steam.";
-	WaitLineBreak;
-	say "     You silently watch them go at it, sliding your hand down to your own crotch to stroke yourself. Both of the soldiers look pretty good, sweat glistening on their trained bodies as they move in unison. Soon, the woman's moans rise as she gets closer and closer, then turn into full-fledged lustful screams as she orgasms. Her partner isn't far behind, plunging his shaft deep into her pussy and grunting with each shot of semen he cums into her.";
-	say "     They lie on the bed in each other's arms for a moment, then the man pulls his cum-dripping cock out of her and stands up, going for a pack of cigarettes lying on a dresser nearby. The woman just lies there, softly stroking her wet pussy lips as she rides out the last bit of her orgasm. Unseen, but deep inside her, her partner's sperm race onwards, doing their duty in the battle to keep humanity going. The fastest of them soon finds a fertile egg, burrowing into it and starts a new life. Only time will tell if its parents succeed in their mission to protect humanity or if it and they will become something different in the end.";
+to say ResolveEvent Human Urges:
+	say "     As you wander through one of the residential areas next to this seedy section of town, you hear moaning coming from an open window of a nearby house. Curious what kind of creatures are in there, you slowly walk closer, careful not to make a sound. When you arrive at the window and peek inside, you see that it's... humans. Their city-camouflage clothing strewn about on the floor and rifles leaning against the opposite wall, you see two soldiers in intimate embrace on a bed. It's a man and a woman, with his hips pumping up and down as he fucks her with fast strokes while she holds him close to her body. One doesn't have to be infected with nanites to feel the basic urges of human existence - and with what's going on in the city and the sexual sights around here especially, those two turned to each other to let off some steam.";
+	say "     You silently watch them go at it, sliding your hand down to your own crotch to stroke yourself. Both of the soldiers look pretty good, sweat glistening on their trained bodies as they move in unison. Soon, the woman's moans rise as she gets closer and closer, then turn into full-fledged lustful screams as she orgasms. Her partner isn't far behind, plunging his shaft deep into her pussy and grunting with each shot of semen he cums into her. They lie on the bed in each other's arms for a moment, then the man pulls his cum-dripping cock out of her and stands up, going for a pack of cigarettes lying on a dresser nearby. The woman just lies there, softly stroking her wet pussy lips as she rides out the last bit of her orgasm. Unseen, but deep inside her, her partner's sperm race onwards, doing their duty in the battle to keep humanity going. The fastest of them soon finds a fertile egg, burrowing into it and starts a new life. Only time will tell if its parents succeed in their mission to protect humanity or if it and they will become something different in the end.";
 	increase score by 5;
 	now Human Urges is resolved;
 	now battleground is "void";
@@ -298,7 +297,8 @@ Object	Name
 Soldiers & Snowmeows	"Soldiers & Snowmeows"
 
 Soldiers & Snowmeows is a situation.
-The sarea of Soldiers & Snowmeows is "Red".
+ResolveFunction of Soldiers & Snowmeows is "[ResolveEvent Soldiers & Snowmeows]".
+Sarea of Soldiers & Snowmeows is "Red".
 when play begins:
 	add Soldiers & Snowmeows to BadSpots of MaleList;      [male soldier & snow leopard]
 	add Soldiers & Snowmeows to BadSpots of FurryList;    [snow leopard involved]
@@ -311,7 +311,7 @@ SnowmeowSoldierStatus is a number that varies. SnowmeowSoldierStatus is usually 
 [  2: player bred Bob                     ]
 [  3: Lee transformed in the store        ]
 
-Instead of resolving a Soldiers & Snowmeows:
+to say ResolveEvent Soldiers & Snowmeows:
 	if debugactive is 1:
 		say "     DEBUG -> SNOWMEOWSOLDIERSTATUS [SnowmeowSoldierStatus] <- DEBUG[line break]";
 	if SnowmeowSoldierStatus is 0:
@@ -393,12 +393,13 @@ Object	Name
 Dangerous Load	"Dangerous Load"
 
 Dangerous Load is a situation.
-The sarea of Dangerous Load is "Outside".
+ResolveFunction of Dangerous Load is "[ResolveEvent Dangerous Load]".
+Sarea of Dangerous Load is "Outside".
 when play begins:
 	add Dangerous Load to BadSpots of MaleList;
 	add Dangerous Load to BadSpots of FurryList;
 
-Instead of resolving a Dangerous Load:
+to say ResolveEvent Dangerous Load:
 	say "     Wandering through the mostly empty streets, skirting around piles of rubble and wrecked cars, you can't help but think how quiet it is - too quiet for comfort really, as this makes you wonder what monster might be hiding behind the next corner. Then, as you come to the next street intersection and peek around the edge of a brick building, you are surprised by the fact that it isn't one of the infected in some sort of strange shape that you see. No, instead there are two humans just a few steps away - dressed in army fatigues and armed with rifles.";
 	say "     The men spot you at the same time as you see them, and the front man - twenty-something, brown-haired and with a manly, square-jawed face, a corporal from his rank markings - brings up his weapon in a flash and calls out to you, 'Step out where I can see you. NOW!' Somewhat intimidated by his threatening pose, you comply, giving the man a questioning look as you slowly raise your hands. 'Are there any more around the corner behind you?' he demands to know, relaxing a little bit again as you shake your head in what seems to be a sufficiently honest way.";
 	WaitLineBreak;
@@ -422,8 +423,8 @@ Instead of resolving a Dangerous Load:
 		WaitLineBreak;
 		say "     The young soldier out of whose ass it slipped starts to lean down to take it again, exposing his clearly well-fucked and cum-dripping asshole to both corporal Shaw and yourself. This prompts the other man to clear his throat and say, 'Leave it, kid. I - I don't think the sample you had is still valid now anyways.' Looking back at him and realizing his state of mostly un-dress, Kerry blushes and replies with a, 'Yes sir!' Then he scrambles to improvise at least a loincloth from his jacket, replacing the split pants.";
 		say "     The two soldiers gather their stuff, faces red with embarrassment, then talk with one another in quiet murmurs for a moment. Finally, private Kerry approaches you a bit shyly. 'Um, I gotta thank you for what you did. Helping me stop - you know... transforming. So. Here, take this - I can't wear it anyways now.' With that, he hands you his army helmet, as well as two MREs. The soldiers then march off, clearly not wanting to talk about what happened here.";
-		increase carried of food by 2;
-		increase carried of combat helmet by 1;
+		ItemGain food by 2;
+		ItemGain combat helmet by 1;
 		now Resolution of Dangerous Load is 3; [stopped the transformation]
 	else: [let the transformation happen]
 		LineBreak;
@@ -441,8 +442,8 @@ Instead of resolving a Dangerous Load:
 			WaitLineBreak;
 			say "     As the hard washboard abs of the trained soldier start to vanish from sight when his belly swells with every further spurt of minotaur cum, corporal Shaw's body doesn't stay unchanged either - the man starts sprouting small horns just a short moment afterwards. Seems like he's got a noticeable resistance to the transformation, but with enough fucking by his huge partner, that will no doubt wear away. After finishing himself in the man and taking a short break, Kerry the minotaur wanders off, still with the other soldier impaled on his prick.";
 			say "     You have little doubt that he'll keep fucking him, all the way until they are both minotaurs and beyond. Left behind after the conclusion of their coupling, you check over the scene of broken gear and ripped clothing. Salvaging what you can, you carry off two MREs and an army helmet that might just be useful for protecting you.";
-			increase carried of food by 2;
-			increase carried of combat helmet by 1;
+			ItemGain food by 2;
+			ItemGain combat helmet by 1;
 			now Resolution of Dangerous Load is 1; [kicked the booster away, watched them fuck]
 		else: [nope]
 			LineBreak;
@@ -455,12 +456,13 @@ Object	Name
 Lone Soldier	"Lone Soldier"
 
 Lone Soldier is a situation.
-The sarea of Lone Soldier is "Outside".
+ResolveFunction of Lone Soldier is "[ResolveEvent Lone Soldier]".
+Sarea of Lone Soldier is "Outside".
 when play begins:
 	add Lone Soldier to BadSpots of MaleList;
 	add Lone Soldier to BadSpots of FurryList;
 
-Instead of resolving a Lone Soldier:
+to say ResolveEvent Lone Soldier:
 	say "     Wandering through the mostly empty streets, skirting around piles of rubble and wrecked cars, you can't help but think how quiet it is - too quiet for comfort really. Therefore you're not really surprised when grunts, growls and shouts echo out of a nearby alley, drawing your attention. Being the curious person that you are, you do a little sprint over to the opening of said alley and peek inside. The fight going on in the alley is between two anthro hyenas in leather jackets and a male soldier. As you stick your head around the corner, the muscular black guy just punches the first of his attackers right in the muzzle, sending her sprawling on the floor. This enrages the second hyena quite a bit, who throws himself on the soldier, earning him a painful punch to the side but also forcing the human into close-up wrestling to keep the hyena's gnashing teeth from his throat.";
 	say "     You find yourself drawn into watching the muscular soldier struggle with his opponent - lots of punching, squeezing, scratching, biting, and even some groping from the hyena. This guy is clearly no novice to fighting and uses ALL weapons available to him - including the fact that the nanites override people's will to resist if they get horny enough. The conclusion of their fight is uncertain for a while - but eventually the soldier starts to get the upper hand as he manages to catch the canine's closed maw in grip. With the threat of being bitten momentarily removed, the human uses his handhold to twist back his enemy's head, then slams a shoulder into the anthro's chest to bull-rush him into the nearest wall. With a hollow thunk, the hyena's head impacts the bricks, after which his human opponent lets go, allowing the canine to crumple bonelessly to the floor. He is still alive, from what you can see - with the nanites, most wounds heal sooner or later after all - but surely out for the count.";
 	WaitLineBreak;
@@ -488,8 +490,8 @@ Instead of resolving a Lone Soldier:
 			LineBreak;
 			say "     He lets out the breath he was holding in a burst and replies, 'Thank god! That's a relief!' With that said, Monty quickly pulls his pants back up and zips up again, ending the quite nice view of his upper buttocks that you had. Then he turns around and gives you a beaming grin, slapping your shoulder in camaraderie. 'Thanks for not being weird about this,' he says, then continues, 'And don't think I go around mooning people - it was an emergency. But yeah... plenty fine of you to help.' The bald-shaven man looks at you and then gives a little snort, pulling the backpack from over his shoulder. 'Guess I should give you a proper thanks, not just a wet handshake, eh? Here, take this.'";
 			say "     Monty holds out a MRE and water bottle for you, nodding in a friendly way as you accept the items from him. Then he pats your shoulder again and says, 'Okay then, I think it's time to get going - make use of that quiet area you mentioned to get as far as I can. You watch out for yourself, alright? Maybe what I'm... er, 'carrying' will help with a cure and all. That's what the furry dude in the lab-coat said at least.' With that, he marches off in the direction you came from, quickly turning around the nearby corner and moving out of sight.";
-			increase carried of food by 1;
-			increase carried of water bottle by 1;
+			ItemGain food by 1;
+			ItemGain water bottle by 1;
 			now Resolution of Lone Soldier is 4; [told Monty the truth]
 		else: [watch him strip]
 			LineBreak;
@@ -514,15 +516,15 @@ Instead of resolving a Lone Soldier:
 				LineBreak;
 				say "     Clearing your throat and then casually asking what he's got between his buttocks, you cause the soldier to stand up straight and turn around quickly, stiff-backed and tense. You actually have to step back a little as his swinging dick almost slaps you. Monty covers his crotch with both hands and quickly replies, 'That's, err... classified. Yeah, that's what it is! But don't leave me hanging please. What's the verdict? Do I need to stock up on flea shampoo soon?' Shaking your head a little to throw off the image of the shiny treasure between his buns, you explain that the fur was only a bit of transfer from the hyenas. Monty lets out a relieved breath and replies, 'Thank god!' With that said, Monty quickly pulls his pants back up and zips up again, ending the show of seeing his trained body.";
 				say "     'Thanks for... checking up on me. Even if you got a bit grope-happy in between.' The bald-shaven man looks at you and then gives a little snort, pulling the backpack from over his shoulder. 'Guess I should give you a proper thanks, not just a wet handshake, eh? Here, take this.' Monty holds out a MRE and water bottle for you, nodding in a friendly way as you accept the items from him. Then he pats your shoulder again and says, 'Okay then, I think it's time to get going - make use of that quiet area you mentioned to get as far as I can. You watch out for yourself, alright?' With that, he marches off in the direction you came from, quickly turning around the nearby corner and moving out of sight.";
-				increase carried of food by 1;
-				increase carried of water bottle by 1;
+				ItemGain food by 1;
+				ItemGain water bottle by 1;
 				now Resolution of Lone Soldier is 4; [asked him about it]
 			else if calcnumber is 2: [touch]
 				LineBreak;
 				say "     Pushing against the decorative gemstone a little, you draw a pleased moan from Monty as the plug presses into his prostate, followed by him clenching his buttocks together. Turning halfway, the man looks down upon you with drawn-together brows and says, 'Hey! Don't. Don't touch that! It's... just for the mission!' He glowers a little, then raises one eyebrow. 'So - what's the verdict? Do I need to stock up on flea shampoo soon?' Shaking your head a little to throw off the image of the shiny treasure between his buns, you explain that the fur was only a bit of transfer from the hyenas. Monty lets out a relieved breath and replies, 'Thank god!' With that said, Monty quickly pulls his pants back up and zips up again, ending the show of seeing his trained body.";
 				say "     'Thanks for... checking up on me. Even if you got a bit grope-happy in between.' The bald-shaven man looks at you and then gives a little snort, pulling the backpack from over his shoulder. 'Guess I should give you a proper thanks, not just a wet handshake, eh? Here, take this.' Monty holds out a MRE and water bottle for you, nodding in a friendly way as you accept the items from him. Then he pats your shoulder again and says, 'Okay then, I think it's time to get going - make use of that quiet area you mentioned to get as far as I can. You watch out for yourself, alright? Maybe what I'm... er, 'carrying' will help with a cure and all. That's what the furry dude in the lab-coat said at least.' With that, he marches off in the direction you came from, quickly turning around the nearby corner and moving out of sight.";
-				increase carried of food by 1;
-				increase carried of water bottle by 1;
+				ItemGain food by 1;
+				ItemGain water bottle by 1;
 				now Resolution of Lone Soldier is 3; [touched Monty's plug]
 			else if calcnumber is 3: [pull]
 				LineBreak;
@@ -555,8 +557,8 @@ Instead of resolving a Lone Soldier:
 				LineBreak;
 				say "     Pretending you didn't see a surprisingly flashy sex toy between the buttocks of the African-American soldier, you look to the side in time for him not to see you staring as he turns around again. 'So - what's the verdict? Do I need to stock up on flea shampoo soon?' Shaking your head, you explain that the fur was only a bit of transfer from the hyenas. Monty lets out a relieved breath and replies, 'Thank god!' With that said, Monty quickly pulls his pants back up and zips up again, ending the show of seeing his trained body. 'Thanks for... checking up on me. Even if you got a bit grope-happy in between.' The bald-shaven man looks at you and then gives a little snort, pulling the backpack from over his shoulder.";
 				say "     'Guess I should give you a proper thanks, not just a wet handshake, eh? Here, take this.' Monty holds out a MRE and water bottle for you, nodding in a friendly way as you accept the items from him. Then he pats your shoulder again and says, 'Okay then, I think it's time to get going - make use of that quiet area you mentioned to get as far as I can. You watch out for yourself, alright?' With that, he marches off in the direction you came from, quickly turning around the nearby corner and moving out of sight.";
-				increase carried of food by 1;
-				increase carried of water bottle by 1;
+				ItemGain food by 1;
+				ItemGain water bottle by 1;
 				now Resolution of Lone Soldier is 5; [ignored the plug]
 	else: [don't warn him]
 		LineBreak;
@@ -571,11 +573,12 @@ Object	Name
 Containment Barrier	"Containment Barrier"
 
 Containment Barrier is a situation.
-The sarea of Containment Barrier is "Outside".
+ResolveFunction of Containment Barrier is "[ResolveEvent Containment Barrier]".
+Sarea of Containment Barrier is "Outside".
 
 ContainmentBarrierEncounters is a number that varies.
 
-Instead of resolving a Containment Barrier:
+to say ResolveEvent Containment Barrier:
 	if ContainmentBarrierEncounters is 0:
 		say "     Moving on and on through the city, you eventually come upon an area where the city just stops suddenly. And not just in one spot, but a wide band extending left and right. Beyond the alley you are standing in, a solid block's worth of buildings has been flattened - through the use of explosives, from the scorched looks of it. Several excavators are actively moving around, pushing rubble to fill the caved-in roads. Seems like someone remembered that the sewers were also a possible access path and destroyed them through the use of more explosives. The question of who is doing all this is easy enough to answer, as there are numerous soldiers visible on the other side of this line cutting through the outer city. And not only that - there's a tank at a street-crossing a little ahead too!";
 		say "     You are still contemplating maybe walking out of the alley and letting them take you in for quarantine or something, when a prerecorded message starts to blare from a series of set-up speakers: 'Please remain in your homes. A red-code quarantine is under effect. We will be forced to shoot at anyone approaching the containment zone.' Well, that's clear enough - you keep your distance and quietly wander back up the alley you are in. Seems like you'll have to survive within the city after all, with this easy out denied to you.";

@@ -13,12 +13,14 @@ Section 1 - The Situation
 
 Table of GameEventIDs (continued)
 Object	Name
-potential resources	"potential resources"
+Potential Resources	"Potential Resources"
+Potential Resources	"Potential Resources"
 
-potential resources is a scavevent.
-The sarea of potential resources is "Allzones".
+Potential Resources is a scavevent.
+ResolveFunction of Potential Resources is "[ResolveEvent Potential Resources]".
+Sarea of Potential Resources is "Allzones".
 
-Instead of resolving a potential resources:
+to say ResolveEvent Potential Resources:
 	let difficulty be a random number from 6 to 16;
 	if hardmode is true, increase difficulty by a random number between 0 and 3;
 	let y be "food";
@@ -59,7 +61,7 @@ Instead of resolving a potential resources:
 	if MaleList is banned and FemaleList is banned and x is 5, now x is a random number between 1 and 4;
 	if x is 1:
 		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
-		add y to invent of Player;
+		ItemGain y by 1;
 	else if x is 2:
 		say "It is up high, forcing you to climb up after it. It looks ";
 		if difficulty < 8:
@@ -75,14 +77,14 @@ Instead of resolving a potential resources:
 		say " to climb.";
 		if companion of Player is bee girl:
 			say "As you prepare to make the treacherous climb, Honey grabs your hand and pulls you back. 'Don't risk it. I can get it for you, honeybunch.' And with that, her translucent wings start to buzz, flying her up into the air to grab the [y] and brings it to you with a happy smile.";
-			add y to invent of Player;
+			ItemGain y by 1;
 		else if companion of Player is Exotic Bird:
 			say "As you prepare to make the dangerous climb, your bird pet calls out and swooping in. Its dive takes it past the [y], which it grabs in its talons and drops into your hands, saving you from having to make the climb yourself.";
-			add y to invent of Player;
+			ItemGain y by 1;
 		else if companion of Player is Gryphoness:
 			let gryphlets be Libido of gryphoness / 4;
 			say "As you prepare to make the risky climb, Denise pulls you back and flaps her wings. 'I can get that for you easily, sweetie,' she says as she takes to the air. The gryphoness's wings lift her up alongside the [y], letting her take it with ease. She brings it back to you, earning a thank-you hug[if gryphlets is 1] from you and your gryphlet child[else if gryphlets is 2]from you and your gryphlet children[end if].";
-			add y to invent of Player;
+			ItemGain y by 1;
 		else:
 			let bonus be ( dexterity of Player plus level of Player minus 10 ) divided by 2;
 			if hardmode is true and bonus > 10, now bonus is 10;
@@ -97,7 +99,7 @@ Instead of resolving a potential resources:
 				decrease HP of Player by 10;
 			else:
 				say "Successfully shimmying up, you snag the [y] triumphantly and stuff it into your backpack.";
-				add y to invent of Player;
+				ItemGain y by 1;
 	else if x is 3:
 		say "It is up stuck under something heavy. It looks ";
 		if difficulty < 8:
@@ -121,7 +123,7 @@ Instead of resolving a potential resources:
 			say "You try your best to lift up the barrier, but to no avail, denying you the [y].";
 		else:
 			say "Successfully hoisting the obstacle up, you snag the [y] triumphantly and stuff it into your backpack.";
-			add y to invent of Player;
+			ItemGain y by 1;
 	else if x is 4:
 		say "It is in the hands of a sentient! Though mutant, perhaps you could convince them to give it up. It looks like they have enough for themselves. They appear ";
 		if difficulty < 8:
@@ -149,13 +151,13 @@ Instead of resolving a potential resources:
 			say "Your arguments fall on deaf ears. Wait, does this guy even have ears?";
 		else:
 			say "After working out the specifics, you are handed the [y] and stuff it into your backpack";
-			add y to invent of Player;
+			ItemGain y by 1;
 			if "Haggler" is listed in feats of Player:
 				let aa be a random number from 1 to charisma of Player;
 				let bb be difficulty * 2;
 				let bb be a random number from 1 to bb;
 				if aa >= bb:
-					add y to invent of Player;
+					ItemGain y by 1;
 					say ". You even manage to haggle a second one from the mutant";
 			if petbonus is true:
 				say ", though having an intimidating guard by your side may have helped a little";
@@ -166,13 +168,13 @@ Instead of resolving a potential resources:
 			if Player consents:
 				say "[scavsex_f01]";
 				say ". You're tossed the [y] by one of her friends";
-				add y to invent of Player;
+				ItemGain y by 1;
 				if "Haggler" is listed in feats of Player:
 					let aa be a random number from 1 to charisma of Player;
 					let bb be difficulty * 2;
 					let bb be a random number from 1 to bb;
 					if aa >= bb:
-						add y to invent of Player;
+						ItemGain y by 1;
 						say " and even manage to haggle a second one from them";
 				say ".";
 				if Player is submissive or player is kinky:
@@ -191,13 +193,13 @@ Instead of resolving a potential resources:
 			if Player consents:
 				say "[scavsex_m01]";
 				say ". You're tossed the [y] by one of his friends";
-				add y to invent of Player;
+				ItemGain y by 1;
 				if "Haggler" is listed in feats of Player:
 					let aa be a random number from 1 to charisma of Player;
 					let bb be difficulty * 2;
 					let bb be a random number from 1 to bb;
 					if aa >= bb:
-						add y to invent of Player;
+						ItemGain y by 1;
 						say " and even manage to haggle a second one from them";
 				say ".";
 				if Player is submissive or player is kinky:

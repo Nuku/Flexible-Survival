@@ -19,7 +19,7 @@ Pediatrics Lobby	"Pediatrics Lobby"	"Pediatrics Lobby"	"Central City"
 Pig Pen	"Pig Pen"	"Pig Pen"	"Central City"
 Police Station Twelve	"Police Station Twelve"	"Police Station Twelve"	"Central City"
 Rabbit Den	"Rabbit Den"	"Rabbit Den"	"Central City"
-Red Apartment	"Red Apartment"	"Red Apartment"	"Central City"
+Red Apartment Building	"Red Apartment Building"	"Red Apartment Building"	"Central City"
 Tyr's Club	"Tyr's Club"	"Tyr's Club"	"Central City"
 Park Entrance	"Park Entrance"	"Park Entrance"	"City Park"
 Equinoid Camp	"Equinoid Camp"	"Equinoid Camp"	"City Park"
@@ -36,6 +36,7 @@ Slut Rat Den	"Slut Rat Den"	"Slut Rat Den"	"Commercial District"
 The Palomino	"The Palomino"	"The Palomino"	"Commercial District"
 Froggy Hideout	"Froggy Hideout"	"Froggy Hideout"	"Commercial District"
 Dry Plains	"Dry Plains"	"Dry Plains"	"Dry Plains"
+Entrance to Red Rock Lair	"Entrance to Red Rock Lair"	"Entrance to Red Rock Lair"	"Dry Plains"
 McDermott Farm Entrance	"McDermott Farm Entrance"	"McDermott Farm Entrance"	"Dry Plains"
 Rocky Outcropping	"Rocky Outcropping"	"Rocky Outcropping"	"Dry Plains"
 State Fair	"State Fair"	"State Fair"	"Fairgrounds"
@@ -217,7 +218,7 @@ carry out navigating:
 	if noun is location of Player:
 		say "You're already there.";
 		stop the action;
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	now battleground is "Outside";
 	if a random number from 1 to 20 < 10 minus bonus and battleground is not "void":
 		if there is a area of Battleground in the Table of Random Critters:

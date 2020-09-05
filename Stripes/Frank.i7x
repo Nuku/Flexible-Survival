@@ -24,14 +24,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Mephitness	"Mephitness"
 
-Mephitness is a situation. The level of Mephitness is 6.
-The sarea of Mephitness is "High".
+Mephitness is a situation.
+ResolveFunction of Mephitness is "[ResolveEvent Mephitness]". The level of Mephitness is 6.
+Sarea of Mephitness is "High".
 when play begins:
 	add Mephitness to BadSpots of MaleList;
 	add Mephitness to BadSpots of FemaleList;
 	add Mephitness to BadSpots of FurryList;
 
-Instead of resolving a Mephitness:
+to say ResolveEvent Mephitness:
 	say "     As you travel the city streets, you hear some commotion up ahead and getting closer. Taking cover, you watch as a hefty fellow with a skunk head and tail wheezes as he runs past you with a trio of skunk girls in hot pursuit. He staggers and drops his pack as he scrambles to keep going[if Urban Forest is known]. Given your distance from that forested area, it's clear the chase has been going on for a while[end if]. The skunk girls move in, giggling at their panting, exhausted prey. They seem reinvigorated by their chase coming to a close and their prize ready for the taking.";
 	say "     They all seem quite distracted and haven't spotted you. And that backpack is just sitting there. Given how much he's already changed, there may not be much point in trying to help him and it may be best to get the supplies. Do you take this opportunity to charge to the rescue or do you grab the backpack and make a run for it?";
 	say "     [bold type]Charge to the rescue or grab the backpack and run?[roman type][line break]";
@@ -52,7 +53,7 @@ Instead of resolving a Mephitness:
 			wait for any key;
 			now battleground is "void";
 			move player to Comic Shop;
-			now Comic Shop is known;
+			AddNavPoint Comic Shop;
 			increase score by 20;
 			now Resolution of Mephitness is 1; [Player is Skunklord, Rescued Frank]
 		else:
@@ -73,7 +74,7 @@ Instead of resolving a Mephitness:
 						wait for any key;
 						now battleground is "void";
 						move player to Comic Shop;
-						now Comic Shop is known;
+						AddNavPoint Comic Shop;
 						increase score by 20;
 						now Resolution of Mephitness is 2; [Rescued Frank]
 			if skunkfight is 3:
@@ -84,11 +85,10 @@ Instead of resolving a Mephitness:
 				now Resolution of Mephitness is 4; [Tried to rescue Frank, Lost]
 	else:
 		say "     More enticed by the backpack and its potential contents than the certainty of a fight with the trio of skunk girls, you slip out and grab the backpack before making your escape. You can hear the excited moans of their prey getting louder and more feminine as they transform him into another sultry skunk girl like themselves. Once you have some safe distance between you and them, you open up the pack to find a collection of snack foods and drinks, through there is a tin of ravioli as well. A side pocket has a canister of pepperspray which may be useful.";
-		say "     Food, chips, soda x2 and pepperspray obtained.";
-		increase carried of pepperspray by 1;
-		increase carried of food by 1;
-		increase carried of chips by 1;
-		increase carried of soda by 2;
+		ItemGain pepperspray by 1;
+		ItemGain food by 1;
+		ItemGain chips by 1;
+		ItemGain soda by 2;
 		increase score by 15;
 		now Resolution of Mephitness is 5; [Ignored Frank, Stole bag]
 	now skunkfight is 0;
@@ -99,7 +99,7 @@ Object	Name
 Comic Shop	"Comic Shop"
 
 Comic Shop is a room. It is fasttravel. It is private.
-The description of Comic Shop is "[comicshopdesc]".
+Description of Comic Shop is "[comicshopdesc]".
 
 the scent of Comic Shop is "The comic shop smells stale and musty, with an odor of skunk musk in the air as well.".
 
@@ -114,8 +114,8 @@ object	name
 Frank	"Frank"
 
 Frank is a man. Frank is in Comic Shop.
-The description of Frank is "[frankdesc]".
-The conversation of Frank is { "NERD!" }.
+Description of Frank is "[frankdesc]".
+Conversation of Frank is { "NERD!" }.
 The icon of Frank is Figure of Frank_icon.
 franksex is a number that varies.
 frankmalesex is a number that varies.

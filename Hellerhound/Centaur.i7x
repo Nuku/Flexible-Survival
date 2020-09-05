@@ -13,11 +13,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Apple Tree	"Apple Tree"
 
-Apple Tree is a situation. The level of Apple Tree is 6.
-The sarea of Apple Tree is "Plains".
+Apple Tree is a situation.
+ResolveFunction of Apple Tree is "[ResolveEvent Apple Tree]". The level of Apple Tree is 6.
+Sarea of Apple Tree is "Plains".
 centaurmate is a number that varies.
 
-Instead of resolving a Apple Tree:
+to say ResolveEvent Apple Tree:
 	say "     Wandering across the plains, you come to one of the few trees scattered throughout it. As you approach, you can see a centaur stallion plucking the apples from the tree and stuffing them into his pack and his mouth. A little wary, but hopeful at the prospect of food, you continue forward cautiously and approach from behind. As you get nearer, you can see that the centaur has become strange and twisted by the apples he's gathering and eating. Each time he gobbles one down, fresh green tentacles under his equine belly writhe and his large cock and balls become greener. Some roots from the tree have started to slide up his legs, moving to further corrupt him.";
 	say "     Shall you call out and continue to approach this tainted centaur?";
 	if Player consents:
@@ -61,7 +62,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "fresh apple"	"A rosy red apple."	1	fresh apple
 
-fresh apple is a grab object. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. The strain of fresh apple is "Mutant Centaur". The purified of fresh apple is "food".
+fresh apple is a grab object. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. Strain of fresh apple is "Mutant Centaur". Purified of fresh apple is "food".
 
 the scent of fresh apple is "The apple smells fresh and juicy at first, though you notice a strange, rotten smell hidden beneath that.".
 
@@ -70,14 +71,14 @@ Section 4 - Creature Responses
 To say centaur defeat:
 	if Libido of Player < 50:
 		say "The centaur groans, falling onto its face as you strike the final blow. An apple spills out of the pack on its back.";
-		increase carried of fresh apple by 1;
+		ItemGain fresh apple by 1;
 	if Libido of Player > 50 and player is male:
 		say "The centaur is lying on the ground with its tail skewed off to the side, is the perfect target for your [Cock of Player] maleness. You sidle up behind the centaur, ignored by it in the pain and embarrassment of loss, and slowly insert your cock.";
 		WaitLineBreak;
 		say "The centaur starts as it realizes what you are doing, and two green tentacles, covered with bumps, raise out from under the body of the centaur.";
-		if the humanity of Player > 90:
+		if Humanity of Player > 90:
 			say "You instantly pull out, looking at the tentacles like the abomination they are. You kick dirt over the centaur as you leave, stealing an apple from its pack.";
-			increase carried of fresh apple by 1;
+			ItemGain fresh apple by 1;
 			increase Libido of Player by 20;
 		else:
 			say "The appearance of the helping tentacles is a welcome development, and you begin thrusting with vigor, the lubrication of the creature's waste keeping you from ripping the walls.";
@@ -91,11 +92,11 @@ To say centaur defeat:
 			SanLoss 4;
 	if Libido of Player > 50 and Cock Count of Player is 0 and player is female:
 		say "The centaur groans and falls to the ground, his legs crumpling and shoving him onto his side. You get a good view of a massive, green cock with vine-like bumps on the shaft. Its sheath is a darker green, and a matching ball sack hangs down half a foot from the powerful member, two giant round forms stretching the skin. What really gets to you is the two tentacles, like growths, that sprout from stump-like protrusions of the base of its sheath.";
-		if the humanity of Player < 40:
+		if Humanity of Player < 40:
 			say "The sight of those tentacles drives you insane with lust. You grab them and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain that when mixed with your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock could fuck, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then you hear a moan, and the centaur climaxes, spraying thick green seed all over the dusty ground and its underside. The tendrils retract from your body, and you leave the centaur, accepting an apple that it offers you.";
-			increase carried of fresh apple by 1;
+			ItemGain fresh apple by 1;
 			now Libido of Player is 0;
-		else if the humanity of Player < 90:
+		else if Humanity of Player < 90:
 			say "The sight of the tentacles doesn't bother your fuzzy mind in the least as you leap onto the centaur's furry belly and rub yourself forward and back, arousing yourself and trying to raise yourself to orgasm. Your dripping pussy leaves streaks of wetness on the centaur's fur, and after a short while, something wet and large pokes at your back, breaking your concentration. You stop and turn back in surprise to see the huge green cock starkly erect, its precum-dripping tip a few inches from your face. A trail of precum leads along your body to your back. It isn't done growing, and pushes you forwards a few inches before it is fully ready.";
 			say "You turn and place the cock at your waiting entrance, smearing your hole with precum as you try and force it in.";
 			if Cunt Tightness of Player < 16:[too small, cock won't fit]
@@ -103,7 +104,7 @@ To say centaur defeat:
 				say "You open your mouth wide and fit as much of it in as you can, which means only the soft head. You start to lick it and suck at the hole, drinking in the juices, until it climaxes.";
 				say "The spray of fluid begins slowly, but increases in flow rapidly until you cannot swallow it all, and it shoves your face back, and sprays of hot green cum soak your whole body in a few seconds.";
 				say "After cleaning up the centaur as well as yourself, you go on your way, with an apple as payment.";
-				increase carried of fresh apple by 1;
+				ItemGain fresh apple by 1;
 				now Libido of Player is 0;
 			else: [cock will fit]
 				say "After pulling at it for a moment, the head goes in. Your walls contract, bringing more of it inside you, and you closer to the monstrous testicles. All of a sudden, the two tentacles that had been lying limp on the ground dart into your ass, causing you to gasp from addictive pleasure.";
@@ -111,17 +112,18 @@ To say centaur defeat:
 				say "You drift off into a haze of pleasure, filled with slapping noises of the centaur's balls. You come out of the haze into your orgasm, pleasure flooding your senses and hot cum flooding your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and its shaft, covering what is in the way with green seed.[impregchance][impregchance]";
 				say "The centaur pulls out of you with a splotchy noise, green cum running like a small stream from your abused lips, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
 				if a random chance of one in two succeeds:
-					increase carried of fresh apple by 1;
-				increase carried of fresh apple by 1;
+					ItemGain fresh apple by 2;
+				else:
+					ItemGain fresh apple by 1;
 		else if Player is kinky:
 			say "The tentacles put your lust back where it came from, and you leave the stricken centaur where it is.";
 			say "You find an apple in its discarded backpack.";
 			decrease Libido of Player by 10;
-			increase carried of fresh apple by 1;
+			ItemGain fresh apple by 1;
 		else:
 			say "The sight of the tentacles puts you off your lunch, and you lose it a short time later, heaving your guts all over the ground.";
 			increase hunger of Player by 10;
-			decrease the HP of the player by 8;
+			decrease HP of Player by 8;
 			say "You feel weaker after losing your lunch. Maybe you aren't good enough to survive the new world.";
 			now Libido of Player is 0;
 		[todo]
@@ -134,8 +136,9 @@ to say centaur rape female:
 	say "[impregchance][impregchance]";
 	say "The centaur pulls out of you with a splotchy noise, green cum running like a small stream from your abused lips, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
 	if a random chance of one in two succeeds:
-		increase carried of fresh apple by 1;
-	increase carried of fresh apple by 1;
+		ItemGain fresh apple by 2;
+	else:
+		ItemGain fresh apple by 1;
 	if centaurmate is 1:			[Extra infection for mate]
 		infect "Mutant Centaur";
 	if Apple Tree is not resolved:	[Extra infection for event]
@@ -153,7 +156,7 @@ An everyturn rule:
 			now Libido of Player is 0;
 			decrease Cock Length of Player by 4;
 			say "Your cock keeps bleeding, and shrank a little just now.";
-			decrease the HP of the player by 4;
+			decrease HP of Player by 4;
 			say "The loss of blood is making you feel woozy.";
 			if Cock Length of Player < 1:
 				now Cock Count of Player is 0;
@@ -199,8 +202,8 @@ to say centaurmeet:
 Section 5 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -224,7 +227,7 @@ When Play begins:
 	now desc entry is "[centaurmeet]"; [ Description of the creature when you encounter it.]
 	now face entry is "human, with horse ears"; [ Face description, format as "Your face is (your text)"]
 	now body entry is "that of a centaur, with a muscled, human upper torso. Your body has well-defined muscles, but they seem a little strange and don't quite move right. Your arms are strong and muscular, and roughly human in appearance as well. Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of bottle green hooves";
-	now skin entry is "human on your upper body and blending smoothly into black horsehair on your bottom half to cover your"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "human on your upper body and blending smoothly into black horsehair on your bottom half to cover your"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a green, flowing tail like a horse coming from just above your behind. It wriggles and squirms unlike a horsetail though, moving more like a tentacle.";
 	now cock entry is "[one of]green and equine[or]equine and tentacled[or]bumped and tentacled[or]bumped and equine[or]green and bump-covered[at random]";
 	now face change entry is "your ears become longer and grow fur, changing shape to become like a horse's"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -255,6 +258,9 @@ When Play begins:
 	now libido entry is 0; [done in the loss/win text]		[ Amount player Libido will go up if defeated ]
 	now loot entry is "fresh apple";
 	now lootchance entry is 20;        [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[or]corrupted[at random]";
 	now type entry is "centaur"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -269,7 +275,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

@@ -42,8 +42,8 @@ Virgin of Ares is true.
 AnalVirgin of Ares is true.
 PenileVirgin of Ares is false.
 SexuallyExperienced of Ares is true.
-The description of Ares is "[AresDesc]".
-The conversation of Ares is { "Woof." }.
+Description of Ares is "[AresDesc]".
+Conversation of Ares is { "Woof." }.
 AresDannyEncounters is a number that varies.
 
 to say AresDesc:
@@ -56,6 +56,8 @@ to say AresDesc:
 		say "He sits right in front of the door to his kennel, watching you intently and hoping for another chance of getting out for a walk with you.";
 	else if HP of Ares is 3 or HP of Ares is 5:
 		say "He sits right in front of the door to his kennel, watching you intently and hoping for another chance of getting out for a walk with you. Looking down at his naked body and the raging hardon between his legs, you see that he's also thinking of mounting you again...";
+	if companion of Player is human dog:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing Ares:
 	if HP of Ares is 1:
@@ -721,12 +723,14 @@ Table of GameCharacterIDs (continued)
 object	name
 human dog	"human dog"
 
-human dog is a pet. human dog is a part of the player.
-understand "ares" as human dog.
-The description of human dog is "[AresPetDesc]".
-The weapon damage of human dog is 8.
-The level of human dog is 10.
-The Dexterity of human dog is 10.
+human dog is a pet. human dog is a part of Player.
+NPCObject of human dog is Ares.
+understand "Ares" as human dog.
+printed name of human dog is "Ares".
+Description of human dog is "[AresPetDesc]".
+Weapon Damage of human dog is 10.
+The level of human dog is 1.
+Dexterity of human dog is 15.
 The summondesc of human dog is "     Calling out for Ares, the human dog comes to your side pretty quickly, obviously having followed you all this time not too far behind. With a satisfied bark, he takes position beside you and just a step ahead, ready to protect his bitch in any situation.".
 The assault of human dog is "[one of]Ares charges into combat, growling and snapping at your enemy.[or]Loud and insistent barking of your human dog frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your human dog claws at your enemy with his hands, leaving shallow but painful gashes.[at random]".
 the fuckscene of human dog is "[SexWithAresPet]".

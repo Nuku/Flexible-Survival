@@ -10,9 +10,10 @@ Object	Name
 Loaded Catapult	"Loaded Catapult"
 
 Loaded Catapult is a situation.
-The sarea of Loaded Catapult is "Outside".
+ResolveFunction of Loaded Catapult is "[ResolveEvent Loaded Catapult]".
+Sarea of Loaded Catapult is "Outside".
 
-instead of resolving Loaded Catapult:
+to say ResolveEvent Loaded Catapult:
 	if the Bait of Diego is journal:
 		now demandIndex is a random number from 1 to the number of entries in BaitList;
 		now the Bait of Diego is entry demandIndex of BaitList;
@@ -42,7 +43,7 @@ instead of resolving Loaded Catapult:
 			say "     You carefully maneuver your hands around the well-placed trap on the machine, focused on only the prize and making sure no unintended consequences occur. It takes a bit of time and patience, but you soon have your trophy in your grasp, taking it back just as carefully as you reached for it. As soon as you are in the clear you stash your prize into your pack, sighing in relief that you were able to outwit whomever tried to trick you with this trap.";
 			LineBreak;
 			say "[bold type]You gain 1 [Bait of Diego]![roman type][line break]";
-			increase carried of Bait of Diego by 1;
+			ItemGain Bait of Diego by 1 silently;
 			say "     Hm, despite having 'won', you can't quite help wondering what would happen if this device was actually fired. Then a little voice at the back of your mind whispers that you should simply try it - just for the fun of it.";
 			say "     [bold type]Fire the catapult?[roman type][line break]";
 			LineBreak;
@@ -58,7 +59,7 @@ instead of resolving Loaded Catapult:
 			say "     As you manage to get your fingers on your prize, you accidentally put a little too much pressure on the mechanism, causing the fishing line to rub up against a sharp edge and snap with a twang. Gears spin and the catapult fires with a resounding noise of the firing arm thumping against the holding bar in the blink of an eye. Thankfully, you manage to avoid being hit by any moving part and just fall on your ass as you jump to safety. From your position on the ground, you see the bag sail high into the air, above the nearby buildings and further on after that, making you lose sight of it. You wince a little as a loud splash of the thing hitting the ground can be heard a few heartbeats later - no doubt having made an unholy mess of whatever was its designated target. Whatever it was - surely, now the place is painted a creamy white. Whelp, better get out of here before someone figures out what idiot fired this thing. So you take your trophy of a job poorly done and make a run for it!";
 			LineBreak;
 			say "[bold type]You gain 1 [Bait of Diego]![roman type][line break]";
-			increase carried of Bait of Diego by 1;
+			ItemGain Bait of Diego by 1 silently;
 	else:
 		LineBreak;
 		say "     <...>";
@@ -87,7 +88,7 @@ gotcatares is a number that varies.
 catadiff is a number that varies.
 catadiff is 20.
 
-instead of resolving a loaded catapult:
+to say ResolveEvent loaded catapult:
 	say "You find a loaded catapult, a large plastic grocery bag filled with a thick liquid in the cup, and the arms just waiting to let fly.";
 	say "You look up to find the target, tilting your [FaceSpeciesName of Player in lower case] head into the distance. There seems to be a large military blockade there, a huge earthen wall with turrets and barbed wire, giant tanks in lines behind that, and then armed men stretching as far as the eye can see. They are all alert and tense, probably from the one who set this up.";
 	say "Do you want to check out what the bags are filled with?";
@@ -117,13 +118,13 @@ instead of resolving a loaded catapult:
 			increase catadiff by 10;
 		if Player consents:
 			say "You begin to wriggle into the tangle of ropes.";
-			if a random number between one and catadiff is greater than the dexterity of the player:[the catapult fires]
+			if a random number between one and catadiff is greater than Dexterity of Player:[the catapult fires]
 				say "You accidentally bump a trigger rope, and the contraption begins to swing. You get out of there fast. [catapult fire]";
 			else:
 				say "You manage to get the resources without touching the ropes.";
 				repeat with T running from one to three:
-					increase carried of food by 1;
-					increase carried of water bottle by 1;
+					ItemGain food by 1;
+					ItemGain water bottle by 1;
 					now gotcatares is 1;
 		else:
 			say "You look at the resources, tortured by their nearness, but decide to leave them be.";

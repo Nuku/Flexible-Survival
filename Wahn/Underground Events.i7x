@@ -6,7 +6,8 @@ Object	Name
 Captive Breeding	"Captive Breeding"
 
 Captive Breeding is a situation.
-The sarea of Captive Breeding is "Sealed".
+ResolveFunction of Captive Breeding is "[ResolveEvent Captive Breeding]".
+Sarea of Captive Breeding is "Sealed".
 
 when play begins:
 	add Captive Breeding to BadSpots of FemaleList;
@@ -14,7 +15,7 @@ when play begins:
 
 CaptiveBreederEncounter is a number that varies.
 
-Instead of resolving a Captive Breeding:
+to say ResolveEvent Captive Breeding:
 	if a random chance of 1 in 2 succeeds: [impregnated woman]
 		say "     Walking through the dark passages of the expansive underground warren that is the basement of the Trevor Labs, you hear something from up ahead - moaning. [if CaptiveBreederEncounter is 0]Who might that be, down here in the lair of the tentacle beasts? [else]Could that be... another breeding subject of the tentacle monsters? Just how many people did they drag down here? [end if]Warily, you move closer to the source of the noise. Looking into the doorway of a storage room filled with rows of shelves, you find a woman, lying on the ground. Spread-eagled, her forearms and lower legs are stuck to the ground by some kind of substance, looking like solidified slimy goo. She's naked, and her belly bulges massively upwards in obvious pregnancy.";
 		say "     Moving closer, you try talking to her, but the only answers you're getting are more gasps and moans. Judging from some clear goop smeared around her mouth, you'd guess something's been... feeding her, to keep her alive in captivity. Most likely whatever that is is laden with drugs and aphrodisiacs too, with as unfocused her eyes are right now. Your examination is interrupted by a sudden splashing noise and a gasp from the human woman. Looking down, you see a puddle of slime spread between her legs and the skin of her belly ripple with movement under it.";
@@ -160,7 +161,8 @@ Object	Name
 Trashed Refuge	"Trashed Refuge"
 
 Trashed Refuge is a situation.
-The sarea of Trashed Refuge is "Sealed".
+ResolveFunction of Trashed Refuge is "[ResolveEvent Trashed Refuge]".
+Sarea of Trashed Refuge is "Sealed".
 
 when play begins:
 	add Trashed Refuge to BadSpots of FemaleList;
@@ -173,7 +175,7 @@ when play begins:
 [3 - seen, searched twice]
 [4 - seen, searched three times]
 
-Instead of resolving a Trashed Refuge:
+to say ResolveEvent Trashed Refuge:
 	if Resolution of Trashed Refuge is 0:
 		say "     You come upon a room in the uppermost level of the underground complex that looks like it was used by people seeking refuge from the things going on out in the city. Sadly, that doesn't seem to have worked out for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
@@ -186,10 +188,10 @@ Instead of resolving a Trashed Refuge:
 			say "     Digging through the possessions of the refugees that were holed up here, you find several identity cards - looks like they were employees of the Trevor Labs... from the looks of it though, mostly administrative personnel. Most likely they didn't even know what was being cooked up down here.";
 			if a random chance of 1 in 2 succeeds:
 				say "     Your search also reveals a bottle of water, with its seal still intact. Score!";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1 silently;
 			else:
 				say "     Your search also reveals an energy bar. Hmm - honey and nut flavored - in an unbroken package. Score!";
-				increase carried of food by 1;
+				ItemGain food by 1 silently;
 			if a random chance of 6 in 8 succeeds:
 				infect "Tentacle Horror";
 			now Resolution of Trashed Refuge is 1; [1st visit done]
@@ -209,10 +211,10 @@ Instead of resolving a Trashed Refuge:
 			say "     Digging through the possessions of the refugees that were holed up here, you find several identity cards - looks like they were employees of the Trevor Labs... from the looks of it though, mostly administrative personnel. Most likely they didn't even know what was being cooked up down here.";
 			if a random chance of 1 in 2 succeeds:
 				say "     Your search also reveals a bottle of water, with its seal still intact. Score!";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1 silently;
 			else:
 				say "     Your search also reveals an energy bar. Hmm - honey and nut flavored, in an unbroken package. Score!";
-				increase carried of food by 1;
+				ItemGain food by 1 silently;
 			if a random chance of 6 in 8 succeeds:
 				infect "Tentacle Horror";
 			now Resolution of Trashed Refuge is 2; [2nd visit]
@@ -230,10 +232,10 @@ Instead of resolving a Trashed Refuge:
 			LineBreak;
 			if a random chance of 1 in 2 succeeds:
 				say "     Your search brings to light a can of soda, hidden under the stained folds of a sleeping bag. Score!";
-				increase carried of soda by 1;
+				ItemGain soda by 1 silently;
 			else:
 				say "     A rustling sound as you poke a pile of ragged clothes makes you look closer, digging out a bag of chips from its depths. Score!";
-				increase carried of chips by 1;
+				ItemGain chips by 1 silently;
 			if a random chance of 6 in 8 succeeds:
 				infect "Tentacle Horror";
 			now Resolution of Trashed Refuge is 3; [3rd visit]
@@ -254,9 +256,10 @@ Object	Name
 Hidden Sublevel	"Hidden Sublevel"
 
 Hidden Sublevel is a situation.
-The sarea of Hidden Sublevel is "Sealed".
+ResolveFunction of Hidden Sublevel is "[ResolveEvent Hidden Sublevel]".
+Sarea of Hidden Sublevel is "Sealed".
 
-Instead of resolving a Hidden Sublevel:
+to say ResolveEvent Hidden Sublevel:
 	say "     You come upon a mid-sized room with an elevator, dark and spooky like the rest of the complex under the Trevor Labs. The opposite wall from that elevator looks interesting - seems like a whole section of it was designed to slide away sideways and is currently in that position. Behind where the wall cover would be, there's a thick reinforced door, large enough to require powerful motors to open and close it. Whether this hidden entrance was constructed to keep something out - or in - it's wide open now, and without power to the building, it's stuck for good that way...";
 	now Hidden Sublevel is resolved;
 
@@ -265,10 +268,11 @@ Object	Name
 Failed Experiments	"Failed Experiments"
 
 Failed Experiments is a situation.
-The Prereq1 of Failed Experiments is Hidden Sublevel.
-The sarea of Failed Experiments is "Sealed".
+ResolveFunction of Failed Experiments is "[ResolveEvent Failed Experiments]".
+Prereq1 of Failed Experiments is Hidden Sublevel.
+Sarea of Failed Experiments is "Sealed".
 
-Instead of resolving a Failed Experiments:
+to say ResolveEvent Failed Experiments:
 	say "     In the depths of the hidden section in this underground complex, you find a room with row after row of glass tanks. Small and large, they're filled with formaldehyde in which... things are preserved. From just clumps of tentacles, to animals sprouting too many limbs or even heads, to... deformed creatures which have a dismaying resemblance to humans. Seems like even before the nanite infection, unnatural things were being done in these labs. With a shiver running down your spine, you turn away from the failed experiments and make your way back to the surface, unsuccessfully trying to forget what you saw.";
 	now Failed Experiments is resolved;
 
@@ -277,12 +281,13 @@ Object	Name
 Mindshield Storage	"Mindshield Storage"
 
 Mindshield Storage is a situation.
-The Prereq1 of Mindshield Storage is Hidden Sublevel.
-The sarea of Mindshield Storage is "Sealed".
+ResolveFunction of Mindshield Storage is "[ResolveEvent Mindshield Storage]".
+Prereq1 of Mindshield Storage is Hidden Sublevel.
+Sarea of Mindshield Storage is "Sealed".
 
 MSStorageVisited is a number that varies. MSStorageVisited usually is 0.
 
-Instead of resolving a Mindshield Storage:
+to say ResolveEvent Mindshield Storage:
 	if MSStorageVisited is 0:
 		say "     In the depths of the hidden section in this underground complex, you find a storage room with rows of shelves. They hold quite a few boxes, all of them with printed labels saying 'Mindshield 2.361'. Opening one up, you see there's a helmet in there, smooth and shiny on the outside, but with a mesh of hexagonal discs covering the inside.";
 		LineBreak;
@@ -293,7 +298,7 @@ Instead of resolving a Mindshield Storage:
 		if Player consents:
 			LineBreak;
 			say "     Adding the shiny helmet to your pack, you make your way back to the surface.";
-			increase carried of mindshield helmet by 1;
+			ItemGain mindshield helmet by 1 silently;
 		else:
 			LineBreak;
 			say "     You can't just carry everything you find with you, so you put the helmet back in its box. After all, you could always come back here if you ever need one.";
@@ -302,13 +307,13 @@ Instead of resolving a Mindshield Storage:
 		say "     In the depths of the hidden section in this underground complex, you find your way back to the mindshield storage room. As before, rows of shelves hold many boxes of extra helmets. Opening one up, you have a look at the helmet in there, smooth and shiny on the outside, but with a mesh of hexagonal discs covering the inside. Do you want to take one of them with you?";
 		if Player consents:
 			say "     Adding the shiny helmet to your pack, you make your way back to the surface.";
-			increase carried of mindshield helmet by 1;
+			ItemGain mindshield helmet by 1 silently;
 		else:
 			say "     You can't just carry everything you find with you, so you put the helmet back in its box. After all, you could always come back here if you ever need one.";
 		increase MSStorageVisited by 1;
 	else if MSStorageVisited is 2:
 		say "     In the depths of the hidden section in this underground complex, you find your way back to the mindshield storage room. But this time - it's a chaotic mess. All around you, there are fallen shelves and cracked, splintered helmets, out of their packages. Seems like something else found this room, which didn't like the protective mindshields lying around. Digging through the chaos, you find a helmet that seems undamaged. This'll be the last one you get, though, with all the others destroyed.";
-		increase carried of mindshield helmet by 1;
+		ItemGain mindshield helmet by 1 silently;
 		now Mindshield Storage is resolved;
 
 Table of Game Objects (continued)
@@ -318,8 +323,8 @@ name	desc	weight	object
 mindshield helmet is a grab object.
 mindshield helmet is equipment.
 It is not temporary.
-The plural of mindshield helmet is false.
-The taur-compatible of mindshield helmet is true.
+Plural of mindshield helmet is false.
+Taur-compatible of mindshield helmet is true.
 The size of mindshield helmet is 3.
 The AC of mindshield helmet is 10.
 The effectiveness of mindshield helmet is 60.
@@ -333,11 +338,12 @@ Object	Name
 Holding Cell Four	"Holding Cell Four"
 
 Holding Cell Four is a situation.
-The Prereq1 of Holding Cell Four is Hidden Sublevel.
-The sarea of Holding Cell Four is "Sealed".
+ResolveFunction of Holding Cell Four is "[ResolveEvent Holding Cell Four]".
+Prereq1 of Holding Cell Four is Hidden Sublevel.
+Sarea of Holding Cell Four is "Sealed".
 CellFourVisits is a number that varies.
 
-Instead of resolving a Holding Cell Four:[repeatable event]
+to say ResolveEvent Holding Cell Four:[repeatable event]
 	[
 	if CellFourVisits is 5:
 		say "     In the depths of the hidden section in this underground complex, you come upon a door bearing the sign 'Holding Cell Four - Warning, danger of mental influence - Wear mindshield helmet before entering.' A red light (which must be on emergency power) glows on the wall next to the word 'unlocked'.";

@@ -41,8 +41,8 @@ object	name
 Sidney	"Sidney"
 
 Sidney is a woman.
-The description of Sidney is "[sidneydesc]".
-The conversation of Sidney is { "Thanks." }.
+Description of Sidney is "[sidneydesc]".
+Conversation of Sidney is { "Thanks." }.
 the scent of Sidney is "[sidneyscent]".
 sidneyformtalk is a truth state that varies. sidneyformtalk is usually false.
 sidneyanal is a truth state that varies. sidneyanal is usually false.
@@ -59,7 +59,8 @@ Object	Name
 Meeting Sidney	"Meeting Sidney"
 
 Meeting Sidney is a situation.
-The sarea of Meeting Sidney is "Outside".
+ResolveFunction of Meeting Sidney is "[ResolveEvent Meeting Sidney]".
+Sarea of Meeting Sidney is "Outside".
 when play begins:
 	add Meeting Sidney to BadSpots of FurryList;
 	add Meeting Sidney to BadSpots of FemaleList;
@@ -68,7 +69,7 @@ sa_redvixen is a truth state that varies. sa_redvixen is usually false.
 sa_otteress is a truth state that varies. sa_otteress is usually false.
 sa_wusky is a truth state that varies. sa_wusky is usually false.
 
-Instead of resolving Meeting Sidney:
+to say ResolveEvent Meeting Sidney:
 	if HP of Sidney is 0:
 		say "     Traveling through the city, you spot a weaponless soldier staring blankly out of a blown-out window of a ruined building. The unattractive man looks down at a small device he's holding, rolling it around in his hand. Given how he's lost in thought, he doesn't notice your cautious approach until you're just a couple of meters away. When he does spot you, he [if the player is bodily human and the player is facially human and the player is skintone human]jumps up in surprise and puts the thing back into his pocket[else]jumps back in surprise and moves to escape further into the building. He pauses when you call out to him, but keeps his distance for the moment[end if]. Once he realizes that you only want to talk, he calms down and allows you to come closer.";
 		say "     The soldier introduces himself as Sidney. 'My squad's... gone. We had a rough time of it on this mission. At first, only a few got picked off one at a time. One got too curious about some sticky gunk he'd found and went downhill fast after that. The rest got taken down and transformed during an attack, turning into sex beasts of all genders. I'd barely managed to get away from that last one.' He doesn't seem particular broken up about the whole matter, more relating it matter-of-factly and maybe even with a bit of longing.";

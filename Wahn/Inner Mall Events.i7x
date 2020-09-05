@@ -46,12 +46,13 @@ Object	Name
 Dressing Room Rampage	"Dressing Room Rampage"
 
 Dressing Room Rampage is a situation.
-The sarea of Dressing Room Rampage is "Smith Haven".
+ResolveFunction of Dressing Room Rampage is "[ResolveEvent Dressing Room Rampage]".
+Sarea of Dressing Room Rampage is "Smith Haven".
 
 when play begins:
 	add Dressing Room Rampage to BadSpots of FurryList;
 
-Instead of resolving a Dressing Room Rampage:
+to say ResolveEvent Dressing Room Rampage:
 	say "     Wandering the hallways of the Smith Haven Mall, you pass through crowds of all sorts of people: lots of mall rats, other anthros, demi-human hybrids, as well as very rare pure humans. You stroll in and out of various stores, some occupied by the refugees of the outbreak, others laying abandoned. But just as you pass through a fancy clothing boutique that is empty of people, you hear something - the slapping sound of flesh on flesh, followed by a lewd moan. Curiosity guides your steps deeper into the store, walking along the aisles full of skimpy garments that are less than useless in the current crisis, until you spot a series of dressing rooms against the back wall. You notice that the third little room has its curtain drawn closed, and it is moving a little, as if being bumped around by its occupants. Judging by their tone of voice, the moans emanating from within must belong to two men who are clearly distracted indulging in carnal pleasures.";
 	say "     [bold type]Do you want to pull back the curtain and have a closer look?[roman type][line break]";
 	LineBreak;
@@ -81,10 +82,10 @@ Instead of resolving a Dressing Room Rampage:
 				say "     Spit-roasting the pale-skinned elf between the two of you is a lot of fun, and soon, you can hear the grunts of the fucking polar bear get more and more intense, heralding his impending orgasm. You take up the challenge and really push his bottom boy's face up against your [if Player is female]pussy, sending your own arousal soaring from the new depth his questing tongue can reach[else]crotch, sending your own arousal soring from the increase in licking that brings with it[end if]. It is a close thing, but in the end, the broad-shouldered ursine is the first to come, thrusting in all the way and breeding the twinky elf with heavy spurts of his potent seed. You're only moments behind though, hands clamped on your pointy-eared partner as you start to [if Player is female]squirt femcum into his face. He happily catches it with his tongue, then puts his lips over your clit to suckle on it and prolong your orgasm[else]tremble against his soft-skinned face[end if].";
 				say "     Blissfully riding out the height of pleasure, you stay leaned over the small form of the elfin bottom, your [if Player is female]sex feeling hot and wet[else]body feeling hot and sweaty[end if], until you suddenly feel a tapping on your thighs. It takes a heartbeat or two for you to register what it actually is - you've still got the elf's head wedged against your crotch, holding him rather tightly. Somewhat shamefaced, you quickly let go of his long silky hair, freeing the little guy to raise his upper body. 'Thanks,' he says with an eager smile and looks up at you, amber eyes meeting your own as the guy smiles and licks his lips. Meanwhile, the polar bear top behind him reaches around his still thoroughly impaled bottom boy and takes hold of his hard cock, jerking him off with rapid pumps of his large hand.";
 			WaitLineBreak;
-			say "     Wound up as the elf already is from your threesome, it doesn't take very long before he moans out loud and starts to cum, splattering the ground between his legs with spurt of his creamy white load. The polar bear keeps holding his cock until his orgasm has run its course, then brings his furry hand to the elf's face and has him lick up a streak of cum matting the fur on the side of the index finger. 'That's my boy,' the big ursine says proudly, tousling the elf's long hair. Then he turns his gaze to you and says, 'What do you think of this little slut?' The beaming smile and thumbs up he gets in response is all the bear needs to know. With a chuckle, he adds, 'Would you believe that this sweet twink was my top when we stumbled into the mall together? I'm Mark and he's Jay by the way. Been together for five years now, just... the other way around, before things happened.'";
-			say "     'Hey [mister],' the exhausted elf tells you in a happy tone, lifting himself from being bent over and leaning back against the polar bear's broad chest, now giving you the full view of his slender, naked body for the first time. He is a sexy twink indeed, with his belly currently bulging out a fair bit, both from Mark's cock as well as the load of cum the bear pumped into him. Strong, white-furred arms wrap around the lithe elf and Mark adds, 'Crazy how things happen, eh? Came here to find refuge together with my man. I was a happy sub ever since I lost my virginity, but after some alone-time with Santa Claws... I started feeling differently. Stronger. More dominant. You know how it goes.' Jay leans into his embrace happily, rubbing his cheek against the polar bear's white fur, then adding a playful comment of, 'I love how my big bear daddy makes me feel. He's shown me a whole new side of myself.'";
+			say "     Wound up as the elf already is from your threesome, it doesn't take very long before he moans out loud and starts to cum, splattering the ground between his legs with spurt of his creamy white load. The polar bear keeps holding his cock until his orgasm has run its course, then brings his furry hand to the elf's face and has him lick up a streak of cum matting the fur on the side of the index finger. 'That's my boy,' the big ursine says proudly, tousling the elf's long hair. Then he turns his gaze to you and says, 'What do you think of this little slut?' The beaming smile and thumbs up he gets in response is all the bear needs to know. With a chuckle, he adds, 'Would you believe that this sweet twink was my top when we stumbled into the mall together? I'm Mark and he's Jay, by the way. Been together for five years now, just... the other way around, before things happened.'";
+			say "     'Hey [mister],' the exhausted elf says in a happy tone, lifting himself from being bent over and leaning back against the polar bear's broad chest, now giving you the full view of his slender, naked body for the first time. He is a sexy twink indeed, with his belly currently bulging out a fair bit, both from Mark's cock as well as the load of cum the bear pumped into him. Strong, white-furred arms wrap around the lithe elf and Mark adds, 'Crazy how things happen, eh? Came here to find refuge together with my man. I was a happy sub ever since I lost my virginity, but after some alone-time with Santa Claws... I started feeling differently. Stronger. More dominant. You know how it goes.' Jay leans into his embrace happily, rubbing his cheek against the polar bear's white fur, then adding a playful comment of, 'I love how my big bear daddy makes me feel. He's shown me a whole new side of myself.'";
 			WaitLineBreak;
-			say "     After you introduce yourself[if Player is not defaultnamed] as [name of Player][end if], the three of you chat a little while longer until Mark grows soft enough that his dick slips out of his lover all on its own. What doesn't come out though is cum, as all of it is apparently so deeply planted into the elven bottom that there is no danger of leakage from his tight behind. The two of them start picking up clothes to get dressed again, which actually is a bit of a difficult task with all three of you in the small dressing room. After bumping into each other a few times, you are actually allowed to go first at getting dressed, so you can step out and give them a bit more space. As you are about to pull the curtain shut behind yourself, Mark gives you an eager grin, while Jay cheerfully calls out, 'Have a nice day. Hope to see you again sometime [mister].'";
+			say "     After you introduce yourself[if Player is not defaultnamed] as [name of Player][end if], the three of you chat a little while longer until Mark grows soft enough that his dick slips out of his lover all on its own. What doesn't come out though is cum, as all of it is apparently so deeply planted into the elven bottom that there is no danger of leakage from his tight behind. The two of them start picking up clothes to get dressed again, which is actually a bit of a difficult task with all three of you in the small dressing room. After bumping into each other a few times, you are actually allowed to go first at getting dressed, so you can step out and give them a bit more space. As you are about to pull the curtain shut behind yourself, Mark gives you an eager grin, while Jay cheerfully calls out, 'Have a nice day! Hope to see you again sometime [mister].'";
 			now JayMarkRelationship is 3; [fucked around with the two of them, player knows the names]
 			now Resolution of Dressing Room Rampage is 1; [fucked around in the dressing room]
 		else:
@@ -106,11 +107,12 @@ Object	Name
 Elven Issues	"Elven Issues"
 
 Elven Issues is a situation.
-The Prereq1 of Elven Issues is Dressing Room Rampage.
+ResolveFunction of Elven Issues is "[ResolveEvent Elven Issues]".
+Prereq1 of Elven Issues is Dressing Room Rampage.
 The Prereq1Resolution of Elven Issues is { 1, 2, 3 }.
-The sarea of Elven Issues is "Smith Haven".
+Sarea of Elven Issues is "Smith Haven".
 
-Instead of resolving a Elven Issues:
+to say ResolveEvent Elven Issues:
 	say "     As you go for a stroll through the mall, you suddenly hear a bit of a commotion ahead of you. Shouts of 'Hey, stop! That's mine! Thief!' come from somewhere ahead, followed by the sight of a kangaroo-morph sprinting your way. She is rushing through the thick crowd of people in the middle of the east wing of the mall at a breakneck pace, followed by a small-ish figure in a green and red outfit, running as fast as he can and furiously calling after her. It is a Christmas elf, and one you know: [if JayMarkRelationship is 3]Jay, the boyfriend of Mark the polar bear, whom you met in the dressing room of a fancy boutique[else]He was getting pounded by a quite large polar bear in the dressing room of a fancy boutique when you stumbled over him[end if]. Looks like the kangaroo will pass right by you in a few seconds.";
 	say "     [bold type]How do you react to this?[roman type][line break]";
 	LineBreak;
@@ -120,7 +122,7 @@ Instead of resolving a Elven Issues:
 		LineBreak;
 		project the figure of Jay_elf_outfit_icon;
 		say "     Holding out your foot at just the right moment, you pull the legs out under the thieving marsupial, sending her to fall flat on her face. The four foot tall elf chasing after her calls out in vindication, rushing to stand over the kangaroo with his arms crossed in front of his chest. 'Just because I'm small doesn't mean you can just take whatever you want. Give it back.' Looking up defiantly, she doesn't reply for a long moment. [if JayMarkRelationship is 3]Jay[else]The elf[end if] suddenly grabs a handful of hair, pulling her head up sharply. He meets the woman's eyes with a steely gaze and says in a low tone, 'I am not some weak little victim, stupid bitch. Now give it back, or I'll tell the wolverines all about a certain petty thief disturbing the peace. You'll be out on the street before you know it.' With a growl under her breath, the kangaroo reaches into her pouch, pulling out a thin leather strap tied into a loop. A heavy gold ring dangles from it, clearly belonging to a man. Pulling the band over his head and stuffing the ring under his clothing to let the ring dangle over his breastbone, Jay takes a deep breath and lets it out slowly.";
-		say "     After that, he hisses to the kangaroo, 'Get out of here, and I better not see you causing trouble again.' After pushing herself up to stand, the woman runs off without looking back. As soon as she is gone, the diminutive man turns to you and says, [if JayMarkRelationship is 1]'Thank you, [mister]. I'm Jay, by the way. It's a pleasure to meet you.' [else]'Thank you, [mister].' [end if]You introduce yourself [if Player is not defaultnamed]as [name of Player][else]in turn[end if] and nod for him to continue. 'I don't have much left from my life before. This was one of the commitment rings I got for myself and Mark. It doesn't even fit me anymore like this, and he's the provider now, but one should always remember where you come from.' With the way he says this, you sense that he has accepted his new self, but he clearly still gets frustrated when bigger people pick on him. Reaching out, the elf shakes your hand and smiles, then adds, 'I'll make sure to return the favor sometime. For now, I need to head to the entrance court to meet up with Mark. Since I can't exactly help him scavenge out there, the least I can do is give him a warm welcome when he returns.' With that said, he ducks into the crowd and is gone a moment later.";
+		say "     After that, he hisses to the kangaroo, 'Get out of here, and I better not see you causing trouble again.' After pushing herself up to stand, the woman runs off without looking back. As soon as she is gone, the diminutive man turns to you and says, [if JayMarkRelationship is 1]'Thank you, [mister]. I'm Jay, by the way. It's a pleasure to meet you.' [else]'Thank you, [mister].' [end if]You introduce yourself [if Player is not defaultnamed]as [name of Player][else]in turn[end if] and nod for him to continue. 'I don't have much left from my life before. This was one of the commitment rings I got for myself and Mark. It doesn't even fit me anymore like this, and he's the provider now, but one should always remember where you come from.' With the way he says this, you sense that he has accepted his new self, but he clearly still gets frustrated when bigger people pick on him. Reaching out, the elf shakes your hand and smiles, then adds, 'I'll make sure to return the favor sometime. For now, I need to head to the north entrance to meet up with Mark. Since I can't exactly help him scavenge out there, the least I can do is give him a warm welcome when he returns.' With that said, he ducks into the crowd and is gone a moment later.";
 		now Resolution of Elven Issues is 1; [helped Jay]
 	else:
 		LineBreak;
@@ -133,12 +135,13 @@ Object	Name
 Mark's Dinner Invite	"Mark's Dinner Invite"
 
 Mark's Dinner Invite is a situation.
-The Prereq1 of Mark's Dinner Invite is Elven Issues.
+ResolveFunction of Mark's Dinner Invite is "[ResolveEvent Mark's Dinner Invite]".
+Prereq1 of Mark's Dinner Invite is Elven Issues.
 The Prereq1Resolution of Mark's Dinner Invite is { 1 }. [must have helped Jay]
-The sarea of Mark's Dinner Invite is "Smith Haven".
+Sarea of Mark's Dinner Invite is "Smith Haven".
 
-Instead of resolving a Mark's Dinner Invite:
-	say "     As you walk into the east wing of the mall, you draw the attention of a powerful polar bear, towering a full head over the surrounding crowd of people. Moving towards you with long strides, he has little trouble navigating the hallway despite how crowded it is, a swarm of mall rats congregating around the video game store nearby. Then again, no one really wants to stand in the way of such a muscular and broad-shouldered ursine, so they all quickly step out of his path on their own volition. The big white bear moves to stand before you, gives you a brief inspection, and then creases a broad grin as he offers you his large hand-paw to shake.";
+to say ResolveEvent Mark's Dinner Invite:
+	say "     As you walk into the east wing of the mall, you draw the attention of a powerful polar bear, towering a full head over the surrounding crowd of people. Moving towards you with long strides, he has little trouble navigating the hallway despite how crowded it is, with a swarm of mall rats congregating around the video game store nearby. Then again, no one really wants to stand in the way of such a muscular and broad-shouldered ursine, so they all quickly step out of his path on their own volition. The big white bear moves to stand before you, gives you a brief inspection, and then creases a broad grin as he offers you his large hand-paw to shake.";
 	say "     '[if JayMarkRelationship is 1]Hey there, I'm Mark [end if]I hear you've been helping out my man. Thank you. Things have been hard for him since the transformation. So, how about joining us for dinner sometime? Got some good hauls out in the city recently, and we'd be happy to share a little something with a nice person like yourself,' the bear offers with a smile that shows off his large, sharp fangs. 'When you have the time, just meet me at the north entrance of the mall in the evening. I always come in on that side after a day's scavenging and hang out a bit with the wolverines. And be sure you're hungry, it'll be a nice little feast.' The bear squeezes your shoulder in a friendly way, then walks off again, leaving you to dwell on his offer.";
 	now Mark's Dinner Invite is resolved;
 	now JayMarkRelationship is 2; [player knows their names (for sure)]
@@ -153,12 +156,13 @@ Object	Name
 Size Envy	"Size Envy"
 
 Size Envy is a situation.
-The sarea of Size Envy is "Smith Haven".
+ResolveFunction of Size Envy is "[ResolveEvent Size Envy]".
+Sarea of Size Envy is "Smith Haven".
 
 when play begins:
 	add Size Envy to BadSpots of FurryList;
 
-Instead of resolving a Size Envy:
+to say ResolveEvent Size Envy:
 	say "     Wandering the hallways of the Smith Haven Mall, you pass through crowds of all sorts of people: lots of mall rats, other anthros, demi-human hybrids, as well as very rare pure humans. You curiously stroll in and out of the various stores - some are occupied by the refugees, others lay abandoned. Going into one of the places that is inhabited, your attention is drawn by a group of young men huddled in the far corner, with one of them suddenly calling out, 'No way! You're just pulling our leg.' Casually turning your steps to move closer, you inspect the little group of guys: there is a German shepherd-human hybrid sporting paw-feet and a tail, a slender mall rat with spiky, purple hair, a shirtless anthro donkey wearing jeans, and a clockwork fox standing there in the nude, unconcerned about showing off his metallic body and all of its details.";
 	say "     'Nope, I'm not!' the mall rat says with a proud smirk on his face, then grabs the front of his baggy pants and gives his crotch a squeeze. 'You simply can't be bigger then Axel,' the clockwork fox interjects, raising his arm with a few soft clicks and pointing at the donkey-boy, who nods and adds, 'Not to toot my own horn, but us equines are just naturally bigger, you know. And you're... well, short. In height, I mean.' Crossing his arms in front of his chest, the partially canine young man (whose voice you recognize as being the one who called out) demands, 'So cut the tall tales, Nicholas! Just admit that you were making it up.' Nicholas the mall rat just keeps grinning, then wiggles his eyebrows and says, 'Wanna bet that I'm bigger than all of you, Rob? A bottle of water each, winner takes all? You in too Axel, Milton?' Nods of agreement go through the little group, though when Nicholas pulls out a tape measure from his pocket, the guys pause as they realize that he planned this.";
 	WaitLineBreak;
@@ -254,9 +258,7 @@ to say SizeEnvy_BJ:
 	say "     After catching his breath, Nicholas says, 'Time to pay up.' Rob, Axel and Milton have made themselves presentable again in the meantime, and they each grab a bottle of water from their packs, bringing it back to hand to you. Their mall rat friend stays fully naked from the hips down, unconcerned with his giant dick swinging between his legs as he goes to grab his pants, then pulls out one more water bottle from one of the large side pockets. This leaves you with a nice and even number of pure water bottles. While you pack them away and clean yourself up, the mall rat thanks you and tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
 	PlayerDrink 20;
 	PlayerEat 20;
-	LineBreak;
-	say "[bold type]You gain 4 water bottles![roman type][line break]";
-	increase carried of water bottle by 4;
+	ItemGain water bottle by 4;
 	if Player is male:
 		now SizeEnvyTracker is 2; [player gave a BJ to the guys - as a man]
 		now AxelRelationship is 4;
@@ -273,33 +275,25 @@ to say SizeEnvy_Compete:
 	if Cock Length of Player > 15: [player wins]
 		say "     With a confident grin on your face, you pull out your own [Cock of Player] manhood, jerking its length before the gathered friends. 'Fucking hell,' Rob groans as he sees what you bring to the competition, and even Nicholas gives you a respectful nod after he measures your erection. '[Cock Length of Player] inches, I'm impressed. Guess we have a winner, guys. Time to pay up.' Rob and Axel quickly shove their dicks back into their pants with startled expressions and walk off to get your payment. Meanwhile, Milton just opens a little pressure valve on his clockwork body, allowing the shaft of his brass cock to shrink to its original size with a soft hiss, then also goes to get a water bottle from his pack. Their mall rat friend stays fully naked from the hips down, stroking himself gently before leaning a bit closer to you and whispering, 'This never was about the water. I don't begrudge you the win. And thanks for showing your piece. It's a good one.'";
 		say "     As the others start to come back, Nicholas winks at you, then grabs his own pants and pulls a bottle from one of the many pockets on it, handing it to you. One by one, the young men do the same, leaving you with a nice and even number of pure water bottles. While you pack them away, the mall rat tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
-		LineBreak;
-		say "[bold type]You gain 4 water bottles![roman type][line break]";
-		increase carried of water bottle by 4;
+		ItemGain water bottle by 4;
 		now SizeEnvyTracker is 50; [player competed - won]
 		now Resolution of Size Envy is 3; [competed - 1st]
 	else if Cock Length of Player is 15: [evenly matched]
 		say "     With a confident grin on your face, you pull out your own [Cock of Player] manhood, jerking its length before the gathered friends. 'Fucking hell,' Rob groans as he sees what you bring to the competition, and even Nicholas gives you a respectful nod after he measures your erection. '[Cock Length of Player] inches, I'm impressed. Guess we're evenly matched, so let's split. You keep your stake and get one more, I'll take the rest. Okay guys, time to pay up.' Rob and Axel quickly shove their dicks back into their pants with startled expressions, then walk off to get your payment. Meanwhile, Milton just opens a little pressure valve on his clockwork body, allowing the shaft of his brass cock to shrink to its original size with a soft hiss, then also goes to get a water bottle from his pack.";
 		say "     Their mall rat friend stays fully naked from the hips down, stroking himself gently before leaning a bit closer to you and whispering, 'This never was about the water. I don't begrudge you half the pot. And thanks for showing your piece. It's a good one.' As the others start to come back, Nicholas winks at you, then grabs his own pants and pulls a bottle from one of the many pockets on it, handing it to you. One by one, the remaining young men give him their bottles, leaving him with a nice armful of pure water bottles. After stuffing them into his backpack, the mall rat tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
-		LineBreak;
-		say "[bold type]You gain 1 water bottle![roman type][line break]";
-		increase carried of water bottle by 1;
+		ItemGain water bottle by 1;
 		now SizeEnvyTracker is 51; [player competed - draw]
 		now Resolution of Size Envy is 4; [competed - draw]
 	else if Cock Length of Player > 8: [third place]
 		say "     Putting on a confident expression, you pull out your own [Cock of Player] manhood, jerking its length before the gathered friends. 'Fucking hell,' Rob groans as he sees what you bring to the competition, and even Nicholas gives you a respectful nod after he measures your erection. '[Cock Length of Player] inches, not bad at all, but I still win. Okay guys, time to pay up.' Rob and Axel quickly shove their dicks back into their pants with startled expressions, then walk off to get your payment. Meanwhile, Milton just opens a little pressure valve on his clockwork body, allowing the shaft of his brass cock to shrink to its original size with a soft hiss, then also goes to get a water bottle from his pack.";
 		say "     Their mall rat friend stays fully naked from the hips down, stroking himself gently before leaning a bit closer to you and whispering, 'This never was about the water, to be honest. Thanks for showing your piece. It's a good one.' As the others start to come back, Nicholas winks at you, then accepts the stakes of each of his friends, and finally your own bet, leaving him with a nice armful of pure water bottles. After stuffing them into his backpack, the mall rat tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
-		LineBreak;
-		say "[bold type]You lose 1 water bottle![roman type][line break]";
-		decrease carried of water bottle by 1;
+		ItemLoss water bottle by 1;
 		now SizeEnvyTracker is 52; [player competed - third place]
 		now Resolution of Size Envy is 5; [competed - 3rd]
 	else:
 		say "     Somewhat nervous about exposing yourself in what turned out to be a group of very big boys indeed, you pull out your own [Cock of Player] manhood, jerking its length before the gathered friends. 'Finally someone smal-' Rob starts to say, then clamps his hand in front of his mouth, getting red-faced. Nicholas simply gives you an encouraging smile and comes closer to measure your erection. '[Cock Length of Player] inches, not bad at all, but that still leaves me the undisputed winner. Okay guys, time to pay up.' Rob and Axel quickly shove their dicks back into their pants with startled expressions, then walk off to get your payment. Meanwhile, Milton just opens a little pressure valve on his clockwork body, allowing the shaft of his brass cock to shrink to its original size with a soft hiss, then also goes to get a water bottle from his pack.";
 		say "     Their mall rat friend stays fully naked from the hips down, stroking himself gently before leaning a bit closer to you and whispering, 'This never was about the water, to be honest. Thanks for showing your piece too. No need to be self-conscious just because we're bigger. It all depends on how you use [']em, right?' As the others start to come back, Nicholas winks at you, then accepts the stakes of each of his friends, and finally your own bet, leaving him with a nice armful of pure water bottles. After stuffing them into his backpack, the mall rat tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
-		LineBreak;
-		say "[bold type]You lose 1 water bottle![roman type][line break]";
-		decrease carried of water bottle by 1;
+		ItemLoss water bottle by 1;
 		now SizeEnvyTracker is 53; [player competed - third place]
 		now Resolution of Size Envy is 6; [competed - last]
 	now AxelRelationship is 2; [two sided introductions]
@@ -310,11 +304,12 @@ Object	Name
 Standard Maintenance	"Standard Maintenance"
 
 Standard Maintenance is a situation.
-The Prereq1 of Standard Maintenance is Size Envy.
+ResolveFunction of Standard Maintenance is "[ResolveEvent Standard Maintenance]".
+Prereq1 of Standard Maintenance is Size Envy.
 The Prereq1Resolution of Standard Maintenance is { 1, 2, 3, 4, 5, 6, 7 }.
-The sarea of Standard Maintenance is "Smith Haven".
+Sarea of Standard Maintenance is "Smith Haven".
 
-Instead of resolving a Standard Maintenance:
+to say ResolveEvent Standard Maintenance:
 	say "     Wandering the hallways of the Smith Haven Mall, you pass through crowds of all sorts of people: lots of mall rats, other anthros, demi-human hybrids, as well as very rare pure humans. You curiously stroll in and out of the various stores - some are occupied by the refugees, others lay abandoned. Eventually you wander into a place you have been in before where you saw those four young men comparing their lengths. By pure chance, one of the guys is actually there too - Milton, the clockwork fox. He is sitting cross-legged on a large white mat, bent over forward as he disassembles his foot-paw, spreading countless little cogs and pieces of machinery out around him. A spray-can in his hand hisses a little as he uses the compressed air inside to clean his mechanical parts.";
 	say "     [bold type]What do you want to do now?[roman type][line break]";
 	LineBreak;
@@ -336,10 +331,11 @@ Object	Name
 Donkey Needs	"Donkey Needs"
 
 Donkey Needs is a situation.
+ResolveFunction of Donkey Needs is "[ResolveEvent Donkey Needs]".
 Donkey Needs is inactive.
-The sarea of Donkey Needs is "Smith Haven".
+Sarea of Donkey Needs is "Smith Haven".
 
-Instead of resolving a Donkey Needs:
+to say ResolveEvent Donkey Needs:
 	if AxelLastBJ - turns < 8: [not horny right now]
 		say "[DonkeyChat]";
 	else: [horny Axel]
@@ -365,9 +361,7 @@ Instead of resolving a Donkey Needs:
 		else if calcnumber is 2:
 			LineBreak;
 			say "     Smiling at the donkey boy, you lower your hand and rub it over his bulge, drawing a needy grunt from him. You then you tell him that if he wants you to get him off, he has to pay for it. Axel looks at you with a disappointed expression, sputtering, 'B-but I thought... Uhm... Okay, fine - I'll get something. Be right back.' With that, the donkey boy hurries off into the crowd, returning a few minutes later with a bottle of fresh water for you. He swallows visibly as you accept the payment, then waits while you stuff it in your pack.";
-			LineBreak;
-			say "[bold type]You gain 1 water bottle![roman type][line break]";
-			increase carried of water bottle by 1;
+			ItemGain water bottle by 1;
 			say "[HallwayBlowAxel]";
 		else if calcnumber is 3:
 			LineBreak;
@@ -402,11 +396,11 @@ to say HallwayBlowAxel:
 to say AxelBJ:
 	say "     Eager to play with the horny donkey boy, you move your hands to his hips, running them along the belt-line of his jeans until you reach his crotch. The anthro equine's cock is straining against the tough fabric of the jeans, only having gotten harder from the buildup of sexual tension between the two of you. Axel's hot breath washes over your ear as you bend your head down to open the button of his pants, soon followed by the zipper. As you pull open the front of his pants, the young man quickly hooks both thumbs over the upper edge of his jeans and shoves. He lets out a relieved gasp as his dick is finally freed from its prison of cloth, jerking upwards and whacking against your body from the suddenness of being released. As you already know, Axel is a big boy indeed, standing erect at thirteen inches of equine cock.";
 	WaitLineBreak;
-	say "     The magnificent shaft is covered in jet-black skin and has a visible ring a third down its length from Axel's sheath. Its end is blunted, with a flaring rim around the head of the cock and pre-cum already leaking from its slit. His erection is warm to the touch as you take hold of it, giving your young friend a slow and teasing stroke. '[one of]Nnnhgh, fuck yeah[or]Hell yeah[or]Just like that[or]Damn, that's good[or]Fuck[or]Suck it[or]Fucking tease[at random]!' he groans out loud, eager for you to continue. Still stroking the donkey boy's cock, you crouch down and bury your nose in the wrinkled flesh of his weighty balls, starting out your oral service by getting a good, deep huff of his masculine aroma and then lapping at his cum-factories with your tongue. Axel groans in pleasure as you slather first one, then the other in your spit and also gently suckle on them. Each deft lick slowly moves higher, tracing the veins on his length with your tongue.";
+	say "     The magnificent shaft is covered in jet-black skin and has a visible ring a third down its length from Axel's sheath. Its end is blunted, with a flaring rim around the head of the cock and pre-cum already leaking from its slit. His erection is warm to the touch as you take hold of it, giving your young friend a slow and teasing stroke. '[one of]Nnnhgh, fuck yeah[or]Hell yeah[or]Just like that[or]Damn, that's good[or]Fuck[or]Suck it[or]Fucking tease[at random]!' he groans out loud, eager for you to continue. Still stroking the donkey boy's cock, you crouch down and bury your nose in the wrinkled flesh of his weighty balls, starting out your oral service by getting a good, deep huff of his masculine aroma and then lapping at his cum-factories with your tongue. Axel groans in pleasure as you slather first one, then the other, in your spit and also gently suckle on them. Each deft lick slowly moves higher, tracing the veins on his length with your tongue.";
 	say "     Arousal boiling in his veins, your eager partner can't help himself from scraping one hoof over the stone floor of the hallway, then stomping loudly as you reach his dickhead and engulf it with your lips. Sucking on the broad and flared tip smears the taste of Axel's pre-cum over your palate, delightfully rich and nutty. This leaves you eager for the main event too, so you inhale as much of that equine prick as you can until you feel it in the back of your throat. Waiting a few seconds to let Axel revel in the sensation of tightness, you slowly pull back off his dick to take a gasping breath and look up at him, strings of spit still connecting you to his cock. '[one of]Damn, that's so hot! [or]Your throat feels so good! [or]You look hot like that! [or]Like that dick, eh? [at random]More please!' the donkey boy grunts out, placing a hand on your head to nudge you closer to his crotch.";
 	WaitLineBreak;
 	say "     Grinning at the eagerness of your equine partner, you set to work bobbing your mouth up and down on his shaft, slurping your tongue over his length as you go along. Especially some teasing touches of the flared rim and his cum-slit drive Axel wild, creating more noise with his hooves on the stone floor tiles. With the musky scent of this virile male thick in your nose and his hand now actively pushing you to go deeper when throating him, you kind of lose track of time, with nothing on your mind except servicing your partner's cock. After who knows how long, Axel lets out an urgent grunt of, '[one of]I'm gonna cuuuummmmMMMMMM[or]Gonna cream you, slut[or]Take my load, bitch[or]Take this, babe[or]Hope you're ready for this load[at random]!' and starts blasting thick spurts of creamy equine seed into your mouth. The first jet flows directly into your stomach as he's lodged deep in your throat when his cock throbs hard. After another pulse or two, you pull yourself off his fire hose-like erection.";
-	say "     A fresh gush of cum squirts out and covers your tongue in an explosion of Axel's taste, eagerly lapped up and swallowed to make room for the next. Grunting and whinnying, your equine partner fills your mouth with a deluge of cum, almost adding it quicker than you can gulp it down. Soon, there is enough nut-milk in your stomach to be considered as a hearty meal, and you can't help but drool a little cum, unable to keep it all contained with your lips around Axel's shaft. Thankfully, this is about the time when he finally runs out of steam, so only a few drips and dollops of his cream land on the donkey boy's discarded jeans. '[one of]Fuck that was good[or]I'm totally fucked out[or]That was fricking awesome[or]Oh my god, you're a cum vampire[or]Holy shit, you're a keeper[at random]!' Axel pants, so exhausted from the intense orgasm that he has to lean back against the wall to brace himself. Meanwhile, you pull off his cock and gulp down the extra mouthful of cum, then give your eager partner a grin.";
+	say "     A fresh gush of cum squirts out and covers your tongue in an explosion of Axel's taste, eagerly lapped up and swallowed to make room for the next. Grunting and whinnying, your equine partner fills your mouth with a deluge of cum, almost adding it quicker than you can gulp it down. Soon, there is enough nut-milk in your stomach to be considered a hearty meal, and you can't help but drool a little cum, unable to keep it all contained with your lips around Axel's shaft. Thankfully, this is about the time when he finally runs out of steam, so only a few drips and dollops of his cream land on the donkey boy's discarded jeans. '[one of]Fuck that was good[or]I'm totally fucked out[or]That was fricking awesome[or]Oh my god, you're a cum vampire[or]Holy shit, you're a keeper[at random]!' Axel pants, so exhausted from the intense orgasm that he has to lean back against the wall to brace himself. Meanwhile, you pull off his cock and gulp down the extra mouthful of cum, then give your eager partner a grin.";
 	WaitLineBreak;
 	say "     '[one of]Best blowjob I've ever got[or]That was one GREAT blowjob[or]You totally drained my balls[or]Damn, that was some primo head[at random]!' Axel is happy to announce in thanks, giving you a shaky fist-bump before pulling his pants back up. A satisfied grin on his face, the young man stumbles off, leaving you behind to wipe away the cum-drool from your lips and suck it off your fingers. Given the state of the city, a free meal certainly isn't something to scoff at...";
 	PlayerEat 20;
@@ -422,11 +416,12 @@ Object	Name
 Donkey Chat	"Donkey Chat"
 
 Donkey Chat is a situation.
-The Prereq1 of Donkey Chat is Size Envy.
+ResolveFunction of Donkey Chat is "[ResolveEvent Donkey Chat]".
+Prereq1 of Donkey Chat is Size Envy.
 The Prereq1Resolution of Donkey Chat is { 1, 2, 3, 4, 5, 6, 7 }.
-The sarea of Donkey Chat is "Smith Haven".
+Sarea of Donkey Chat is "Smith Haven".
 
-Instead of resolving a Donkey Chat:
+to say ResolveEvent Donkey Chat:
 	say "[DonkeyChat]";
 
 to say DonkeyChat:
@@ -462,7 +457,7 @@ to say DonkeyChat:
 				say "Invalid choice. Type [link]1[end link] to chat, [link]2[end link] to listen to music with him or [link]3[end link] to offer a blowjob.";
 		if calcnumber is 1: [chat]
 			LineBreak;
-			say "     You start chatting with Axel, at first recounting the things you've seen and done out in the city, then going on to other topics. He explains that he is actually in a band, together with his buddy Milton. Seems like the donkey boy decided not to rack up college loans and instead wants to follow his dream of working his way up as a musician. With the two of you just talking about [']normal['] topics and his excited recounting of gigs they had, as well as their hopes of attracting a producer's attention, time just flies by. Somehow, if feels good for your mental stability to just brush off the grim reality of the current city events and listen to the young man tell you of his dreams. Eventually, he winds down in his tale and thanks you for listening, then gives you a smile and a fist-bump before setting out to meet his friends at the food court.";
+			say "     You start chatting with Axel, at first recounting the things you've seen and done out in the city, then going on to other topics. He explains that he is actually in a band, together with his buddy Milton. Seems like the donkey boy decided not to rack up college loans and instead wants to follow his dream of working his way up as a musician. With the two of you just talking about [']normal['] topics and his excited recounting of gigs they had, as well as their hopes of attracting a producer's attention, time just flies by. Somehow, it feels good for your mental stability to just brush off the grim reality of the current city events and listen to the young man tell you of his dreams. Eventually, he winds down in his tale and thanks you for listening, then gives you a smile and a fist-bump before setting out to meet his friends at the food court.";
 			SanBoost 5;
 			now Resolution of Donkey Chat is 1; [talked]
 		else if calcnumber is 2: [listen to the music]
@@ -532,7 +527,8 @@ Object	Name
 Full Litter	"Full Litter"
 
 Full Litter is a situation.
-The sarea of Full Litter is "Smith Haven".
+ResolveFunction of Full Litter is "[ResolveEvent Full Litter]".
+Sarea of Full Litter is "Smith Haven".
 
 instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 0 and Full Litter is active and Full Litter is not resolved and a random chance of 1 in 3 succeeds):
 	move player to Mall Atrium;
@@ -540,11 +536,11 @@ instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns 
 		say "     DEBUG: Walk-in Event around the mall - Misc atmosphere setting[line break]";
 	FullLitterEvent;
 
-instead of resolving Full Litter:
+to say ResolveEvent Full Litter:
 	FullLitterEvent;
 
 to FullLitterEvent:
-	say "     As you move through the food court into the atrium, you pass by a rare sight - a fully human woman. She is wearing a thin white top and a long, red skirt that ends just below her knees. She is conversing with another woman, a canine with bushy looking tan fur and small pointed ears. The human woman is cradling her swollen chest. 'Oh my gosh, Linda, you're pregnant! I'm so happy for you!' the canine cheers, embracing the human in a hug. 'Thank you so much, I'm so happy my husband and I finally did it!' Linda replies, looking softly at her bulging stomach. 'So, what are you carrying in there?' the canine asks, giving a soft poke at the woman's stomach. Linda looks up excitedly, replying, 'A full litter of puppies! We're so happy to have this many kids!' The two then happily embrace again. Your path leads you past them, and soon you leave them behind you. It seems like even different species won't stop a mother from loving her children, and the thought brings a smile to your face.";
+	say "     As you move through the food court into the atrium, you pass by a rare sight - a fully human woman. She is wearing a thin white top and a long, red skirt that ends just below her knees. She is conversing with another woman, a canine with bushy looking tan fur and small pointed ears. The human woman is cradling her swollen belly. 'Oh my gosh, Linda, you're pregnant! I'm so happy for you!' the canine cheers, embracing the human in a hug. 'Thank you so much, I'm so happy my husband and I finally did it!' Linda replies, looking softly at her bulging stomach. 'So, what are you carrying in there?' the canine asks, giving a soft poke at the woman's stomach. Linda looks up excitedly, replying, 'A full litter of puppies! We're so happy to have this many kids!' The two then happily embrace again. Your path leads you past them, and soon you leave them behind you. It seems like even different species won't stop a mother from loving her children, and the thought brings a smile to your face.";
 	now Full Litter is resolved;
 	now lastMallInteriorScene is turns;
 
@@ -553,9 +549,10 @@ Object	Name
 Cat Toy Vendors	"Cat Toy Vendors"
 
 Cat Toy Vendors is a situation.
-The sarea of Cat Toy Vendors is "Smith Haven".
+ResolveFunction of Cat Toy Vendors is "[ResolveEvent Cat Toy Vendors]".
+Sarea of Cat Toy Vendors is "Smith Haven".
 
-instead of resolving Cat Toy Vendors:
+to say ResolveEvent Cat Toy Vendors:
 	say "     Wandering through the hallways of the expansive Smith Haven Mall, you spot some cat-morphs selling various custom cat toys to their feline kin. Apparently a surprising number of the transformed people in the crowd of refugees in here are captivated by an instinctual love of mice on string. It is charming to see their wide-eyed expressions as many a head track a toy mouse being demonstrated, with them instinctively wiggling their butts as they get into a slightly pouncing stance. The vendors giggle to each other as a whole group of new customers line up and get ready to trade food and drinks for the small toys being sold.";
 	now Cat Toy Vendors is resolved;
 
@@ -564,9 +561,10 @@ Object	Name
 Prowling Macho	"Prowling Macho"
 
 Prowling Macho is a situation.
-The sarea of Prowling Macho is "Smith Haven".
+ResolveFunction of Prowling Macho is "[ResolveEvent Prowling Macho]".
+Sarea of Prowling Macho is "Smith Haven".
 
-instead of resolving Prowling Macho:
+to say ResolveEvent Prowling Macho:
 	say "     On your way through the expansive Smith Haven Mall, you spot a big and broad-shouldered wolfman standing tall at the side, letting his gaze roam over the people slowly moving past him. He wears a cocky smile on his muzzle and not much else, save for a spiked collar to emphasize his masculinity. There's clearly no ring to attach a leash on that thing, so this is definitely a Top Dog. Arms crossed in front of his muscular chest, the big guy's gaze follows this or that woman, and he's clearly entertaining some lurid fantasies by way that the tip of his canine shaft is poking out of the black-furred sheath between his legs. He reminds you of a predator searching for prey, but at least not the kind that roam the streets outside and stake their claims by force. He then apparently makes his decision and strides through the crowd, with people almost automatically parting before his towering form.";
 	say "     Holding out a large paw-hand in front of a female lynx, whose sizable breasts and nipple piercings show clearly through her stretched sleeveless top, the guy stops her in her tracks and says, 'Hey there, babe. You seem like a broad who knows how to have fun. Want me to show you a good time?' Not giving her much time to gather her thoughts, he proceeds to raise his hand and stroke the side of her furred arm, then bends forward to [']whisper['] into her ear, loud enough for you to catch as well, 'I could smell your heat from half a dozen steps away. Come on, you know you want it.' And with that, he gives her tufted ear a playful nip and draws the woman's hand to his crotch. Letting out an involuntary moan as she feels the warmth of his manhood under her fingers, the lynx bites her lip, then nods salaciously to him. With a satisfied chuckle from the wolfman, he lays an arm around her to draw her close, then guides his new conquest towards a small mall restroom nearby.";
 	say "     [bold type]Do you want to go after them and see what happens next?[roman type][line break]";
@@ -576,7 +574,7 @@ instead of resolving Prowling Macho:
 	if Player consents:
 		LineBreak;
 		say "     By the time you manage to push your way through the crowd and enter the restroom, the wolfman already has his lynx laid out between the two basins of the room's counter. Her back rests against the gray and white tiles of the room's back wall, and she moans helplessly as the macho dude tugs her pants off with one quick wrench, throwing them aside in a crumpled-up wad. 'Yeah, that's what I'm talking about!' he calls out in satisfaction as he draws his thumb through the slightly swollen and gaping folds of her sex, then draws out strings of her sticky wetness between his fingers for a moment before licking them off. Grinning at the woman whimpering in helpless lust, he hooks his fingers under her top and pushes it up and above the curves of her breasts, revealing a pair of silvery rings adorning her nipples. 'Very nice,' he adds, tugging on the piercings and making her gasp at the rough stimulation.";
-		say "     Taking hold of his by now fully erect doggy cock, the wolfman smacks it on the short fur of her flat belly, then grinds the underside of his shaft against her clit. 'So, what's your name anyways? I'm Ray, and you'd do well to remember that.' Continuing to tease her drenched pussy, the wolfman watches with great amusement as she opens her mouth to moan with helpless need, eventually managing to gasp out a reply, 'G- *oohhh* Grace. My *god!* my name is Grace.' With a broad grin on his muzzle, the hunky wolfman replies, 'Then get ready for the ride of a lifetime, Gracie!' before ramming his thick shaft into her pussy, thumping the lynx against the back wall before he grasps her by the hips to keep his new fuck-hole steady as he saws in and out of her.";
+		say "     Taking hold of his by now fully erect doggy cock, the wolfman smacks it on the short fur of her flat belly, then grinds the underside of his shaft against her clit. 'So, what's your name anyways? I'm Ray, and you'd do well to remember that.' Continuing to tease her drenched pussy, the wolfman watches with great amusement as she opens her mouth to moan with helpless need, eventually managing to gasp out a reply, 'G- oohhh- Grace. My god! my name is Grace.' With a broad grin on his muzzle, the hunky wolfman replies, 'Then get ready for the ride of a lifetime, Gracie!' before ramming his thick shaft into her pussy, thumping the lynx against the back wall before he grasps her by the hips to keep his new fuck-hole steady as he saws in and out of her.";
 		WaitLineBreak;
 		say "     Ray clearly doesn't believe in taking things slow. You can see his muscular form ripple all over as the wolfman really pounds into his smaller partner, his balls slapping wetly against her buttocks with every eager pump into Grace's sopping sex. She doesn't seem to object to his roughness in the slightest, almost shouting out her eager moans, her hands scrambling to brace herself against the wall or a basin while she's reamed by that hard canine cock. Standing just a few steps away from the two of them, you're enthralled by the spectacle of this handsome male mounting his partner, his hips rocking back and forth as he slams into her. Soon enough, his knot starts to fill out, making Grace gasp and arch her back as it pops in and back out of her pussy a few times before his fingers wrap around the still-growing bulge.";
 		say "     'Sorry, slut, but I've got better things to do than hang out here for half an hour till this thing goes down and slides out of ya again. Maybe I'll knot ya next time,' Ray tells the moaning lynx in a no-nonsense tone. He then goes right back to fucking her like a man possessed, only now with his hand in place to prevent him from hilting her. After a few more wild thrusts, the larger male throws his head back and lets out a full-throated howl, his fingers clenching tight around his knot as he starts to unload into Grace. You can see the muscles of his ass and legs tense rhythmically as he floods her pussy with his virile seed, creating a sticky white mess as the feline's sex overflows with virile cream. Dipping a finger into the cum squirting out around his throbbing cock, Ray paints the letter [']R['] on the fur of Grace's belly, then pulls out of her with little further ceremony.";
@@ -636,16 +634,14 @@ Object	Name
 SailboatPainting	"SailboatPainting"
 
 SailboatPainting is a situation.
-The sarea of SailboatPainting is "Smith Haven".
+ResolveFunction of SailboatPainting is "[ResolveEvent SailboatPainting]".
+Sarea of SailboatPainting is "Smith Haven".
 
-instead of resolving SailboatPainting:
+to say ResolveEvent SailboatPainting:
 	say "     You are scanning around the stores and kiosks of the mall, when your attention stops on a heavy-set black-furred Mallrat standing in front of an art store. A gray knit cap covers his head, and his clothing consists of a blue heavily food-stained dress shirt, dirty khaki pants and a green Army jacket. He clutches a brown paper bag and a can of soda in his left paw. The closer you get to him, the more pungent his musk becomes. The slovenly rat-man stands stock still, not seeming to notice you or even twitching his tail. Between his horrible hygiene and the filthy state of his clothes, you wouldn't be surprised if he'd been standing there for days. Instead, he is intently focused on a framed gray-dot painting set on a display easel.";
-	say "     You are about to ask what he's looking for, when your eyes focus in just the right way to see a hidden picture. 'Oh, a sailboat,' you say out loud. A few seconds pass in silence, before the unkempt rodent bellows out a rage scream loud enough for the entire Mall to hear. He disdainfully throws aside his bag and soda before dejectedly kicking over the easel and storming away. Not quite sure of what you just did to set him off, you shrug, collect the lunch he left behind (waste not want not) and continue on your way.";
-	LineBreak;
-	say "[bold type]You gain 1 soda![roman type][line break]";
-	increase carried of soda by 1;
-	say "[bold type]You gain 1 food![roman type][line break]";
-	increase carried of food by 1;
+	say "     You are about to ask what he's looking for, when your eyes focus in just the right way to see a hidden picture. 'Oh, a sailboat,' you say out loud. A few seconds pass in silence, before the unkempt rodent bellows out a rage scream loud enough for the entire mall to hear. He disdainfully throws aside his bag and soda before dejectedly kicking over the easel and storming away. Not quite sure of what you just did to set him off, you shrug, collect the lunch he left behind (waste not want not) and continue on your way.";
+	ItemGain soda by 1;
+	ItemGain food by 1;
 	now SailboatPainting is resolved;
 
 Inner Mall Events ends here.

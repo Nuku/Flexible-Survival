@@ -37,8 +37,8 @@ object	name
 Brian	"Brian"
 
 Brian is a man.
-The description of Brian is "[BrianNPCDesc]".
-The conversation of Brian is { "Ouch!" }.
+Description of Brian is "[BrianNPCDesc]".
+Conversation of Brian is { "Ouch!" }.
 Brian is in Border Wall.
 The icon of Brian is figure of Brian_icon.
 The scent of Brian is "     Brian smells like a man's man, masculine, musky, and sweaty.".

@@ -52,13 +52,14 @@ Object	Name
 Naga Hybrid	"Naga Hybrid"
 
 Naga Hybrid is a situation.
-The sarea of Naga Hybrid is "Plains".
+ResolveFunction of Naga Hybrid is "[ResolveEvent Naga Hybrid]".
+Sarea of Naga Hybrid is "Plains".
 
 when play begins:
 	add Naga Hybrid to BadSpots of FemaleList;
 	add Naga Hybrid to BadSpots of FurryList;
 
-Instead of resolving a Naga Hybrid:
+to say ResolveEvent Naga Hybrid:
 	if HP of Serenity is 0:			[First encounter]
 		say "     You freeze when you hear the distinctive sound of a rattlesnake's tail from behind. Slowly turning around, you see that instead of an ordinary snake, a naga is staring right at you from a short distance away, its bodily curves and facial features showing that it is female. In her 'standing' position, she is easily several feet taller than most people, and that does not include the rest of her long, snake-like body that trails behind her. A hood expands from the sides of her head, and her body is covered with a few white and black scales, but the majority of them are a brown that is similar in color to the dirt of the surrounding area, which helps explain how she managed to sneak up on you. At the end of her tail, you can see and hear the telltale rattle that initially caught your attention, which suggests that she is a hybrid between a rattlesnake and a cobra. Around her neck is a silver necklace in the shape of a heart with a snake coiled around it.";
 		say "     'And what have we here? I seem to have stumbled upon a lost traveler,' the naga remarks in a teasing tone, her forked tongue flicking out. She begins to rattle her tail in a constant beat as she slowly slithers toward you with a confident smirk. 'Do not worry. I am not here to fight. In fact, why don't you let me take care of you for a while? Let me embrace you, and I will help you forget your worries.' Even though the naga truly seems to not be violent, there is still an obvious danger behind her offer, and yet, there is something about her enticing words and the oddly soothing rattling that tempts you to let this sultry serpent have her way with you.";
@@ -130,7 +131,7 @@ Instead of resolving a Naga Hybrid:
 				decrease HP of Player by 30;
 				now HP of Serenity is 100;
 				now Resolution of Naga Hybrid is 5; [Serenity fought and grabbed the box]
-			decrease carried of Lockbox by 1;
+			ItemLoss Lockbox by 1;
 			now Naga Hybrid is resolved;
 		else:
 			LineBreak;
@@ -147,13 +148,11 @@ to say PlainsSerenitySubmit:		[Player hypnotized, gives cunnilingus, and receive
 	if carried of food > 1:
 		say "     The snake takes a few moments to rifle through your backpack. 'This shall do nicely,' she says, pulling out a can of food and setting it to the side for later. 'Dealing with my prey is hungry work. Be glad that I only require one package from you. Now, to keep up my end of the bargain.' The naga's coils pull you close toward her chest, and they shift to allow her hands to peel away your clothes.";
 		say "[PlainsSerenityHand]";
-		say "     [bold type]The naga took a can of food from you.[roman type][line break]";
-		decrease carried of food by 1;
+		ItemLoss food by 1;
 	else if carried of water bottle > 1:
 		say "     The snake takes a few moments to rifle through your backpack. 'This shall do nicely,' she says, pulling out a bottle of water and setting it to the side for later. 'Dealing with my prey is thirsty work. Be glad that I only require one bottle from you. Now, to keep up my end of the bargain.' The naga's coils pull you close toward her chest, and they shift to allow her hands to peel away your clothes.";
 		say "[PlainsSerenityHand]";
-		say "     [bold type]The naga took a bottle of water from you.[roman type][line break]";
-		decrease carried of water bottle by 1;
+		ItemLoss water bottle by 1;
 	else:		[no snu-snu for the poor]
 		say "     The snake takes a few moments to rifle through your backpack, and to your horror, she looks up at you with a frown. 'It seems that you have nothing that interests me.' You plead for the naga to help you, but she merely shakes her head and unwinds her coils from you, gently dropping you onto your feet. 'Dealing with my prey is hungry work. I am not running a charity operation here.' You bow your head in disappointment, but the hybrid lifts your gaze back up to her smirking face. 'That just means you know that you should be carrying plenty of supplies for the next time you submit to me. I look forward to you being my prey again.' With that, the captivating reptile slithers off. It takes a few minutes before the naga's hypnosis wears off, but the unquenched fire in your loins remains. As you resume your exploration, you wonder if perhaps you can [bold type]find something else in the Dry Plains[roman type] besides your rations to appease the naga.";
 		increase Libido of Player by 30;
@@ -181,14 +180,15 @@ Object	Name
 Large Cave	"Large Cave"
 
 Large Cave is a situation.
+ResolveFunction of Large Cave is "[ResolveEvent Large Cave]".
 Large Cave is inactive.
 Prereq1 of Large Cave is Naga Hybrid.
 Prereq1ResolvedMandatory of Large Cave is false.
 Prereq1Resolution of Large Cave is { 1, 2 }
 
-The sarea of Large Cave is "Plains".
+Sarea of Large Cave is "Plains".
 
-Instead of resolving Large Cave:
+to say ResolveEvent Large Cave:
 	say "     You come across a large cave that is about two or three stories tall. Small holes on the ceiling allow [if daytimer is day]sunlight to illuminate[else]the moon to dimly light up[end if] the interior. The path is straight for only a short distance before it curves to the left, meaning that you will have to enter the cave to explore its depths. However, you hesitate to proceed inside, and for good reason. The area reeks of sex, and judging by the huge patches of dried cum painting the cave's walls, it seems that this is likely the home of a large beast. Still, there's a decent chance that you might be able to find something of interest inside.";
 	say "     [bold type]Should you go inside the cave?[roman type][line break]";
 	LineBreak;
@@ -200,24 +200,21 @@ Instead of resolving Large Cave:
 		say "     With no sign of any danger, you search the backpack, finding it packed with shiny objects, trophies, and various trinkets. It seems that the owner of this camp was either a looter or a thief, and they likely had to abandon this backpack when the current occupant moved into the cave. While it is tempting to keep the small fortune worth of stuff, they have little practical use in helping you survive the nanite-infested city and would just add unnecessary weight to lug around. Discarding the valuables, you dig through the rest of the backpack and find useful supplies in the form of some food and water, which you set aside to take later. Near the bottom of the backpack, you find a lockbox that has a picture of a heart with a snake around it on the cover. Staring at the decoration because it looks familiar, it takes a moment for you to recall that the mysterious rattlesnake and cobra hybrid was wearing a necklace with the same symbol. You try to open the container, but unsurprisingly, it looks like you need a key to unlock it.";
 		if HermList is banned:		[Skip behemoth fight]
 			say "     Not wanting to stick around in case the cave's occupant comes back, you hastily stuff the lockbox and supplies into your bag and beat a hasty retreat, making it outside without issue. As you resume your exploring, you wonder if the lockbox truly belonged to the naga hybrid, and if it did, maybe you could strike a bargain with her.";
-			say "     [bold type]You found 2 cans of food, 2 bottles of water, and a Lockbox[roman type][line break]";
-			increase carried of food by 2;
-			increase carried of water bottle by 2;
+			ItemGain food by 2;
+			ItemGain water bottle by 2;
 		else:
 			say "     Suddenly, you hear thundering footsteps coming from the entrance to the cavern, and you hastily stuff the lockbox into your backpack. Peeking out from behind the rubble, you gasp when a behemoth comes lumbering in. While the monster doesn't notice you at first, it does when you accidentally knock over a rock as you try to sneak out. The behemoth gets up and turns to you with a menacing growl, intent on dealing with your intrusion.";
 			challenge "Behemoth";
 			if fightoutcome >= 10 and fightoutcome <= 19:			[Won against the behemoth]
 				say "     With the behemoth dealt with, you are free to continue your search. You find nothing else of valuable in the camp, so you pack away the supplies that you had almost forgotten when the behemoth interrupted you. Suddenly, the behemoth begins to stir. Not wanting to stick around in case the beast is ready for another round, you hastily stuff the lockbox and supplies into your bag and beat a hasty retreat, making it outside without issue. As you resume your exploring, you wonder if the lockbox truly belongs to the naga hybrid, and if it did, maybe you could strike a bargain with her.";
-				say "     [bold type]You found 2 cans of food, 2 bottles of water, and a Lockbox[roman type][line break]";
-				increase carried of food by 2;
-				increase carried of water bottle by 2;
+				ItemGain food by 2;
+				ItemGain water bottle by 2;
 			if fightoutcome >= 20 and fightoutcome <= 29:			[Lost to behemoth]
 				say "     Covered in behemoth fluids and recovering from your loss, you remember the food and water still laying on the cave floor, forgotten during your tussle with the beast. At least you had managed to safely stow the lockbox before you were taken away. As you resume your exploring, you wonder if the lockbox truly belongs to the naga hybrid, and if it did, maybe you could strike a bargain with her.";
 				say "     [bold type]You found a Lockbox[roman type][line break]";
 			if fightoutcome >= 30:			[Fled from behemoth]
 				say "     Managing to get away from the behemoth, you exit the cave, relieved to see that the beast did not care to chase after you. However, you then remember the food and water still laying on the cave floor, forgotten during your tussle with the behemoth. While you are disappointed that you lost some valuable supplies, at least you had managed to safely stow the lockbox before you fled. As you resume your exploring, you wonder if the lockbox truly belongs to the naga hybrid, and if it did, maybe you could strike a bargain with her.";
-				say "     [bold type]You found a Lockbox[roman type][line break]";
-		increase carried of Lockbox by 1;
+		ItemGain Lockbox by 1;
 		now Large Cave is resolved;
 		now HP of Serenity is 2;
 	else:			[Did not go into the cave]
@@ -231,7 +228,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Lockbox"	"     It's a simple lockbox, and on its cover is a picture of a silver heart with a snake coiled around it. You don't have the key to unlock it."	5	Lockbox
 
-Lockbox is a grab object. It is part of the player. It is not temporary.
+Lockbox is a grab object. It is not temporary.
 
 instead of using Lockbox:
 	say "     You try and pry the lockbox open, but it refuses to open.";
@@ -241,8 +238,8 @@ Section 4 - Serenity in the Grey Abbey Library
 
 SerenityVore is a truth state that varies. SerenityVore is usually false.
 SerenityHunger is a number that varies. SerenityHunger is usually 0.
-The description of Serenity is "[Serenitydesc]".
-The conversation of Serenity is { "Snek Stuff" }.
+Description of Serenity is "[Serenitydesc]".
+Conversation of Serenity is { "Snek Stuff" }.
 The scent of the Serenity is "Serenity smells faintly of the dry sand and vegetation from where you had first met her, mixed with a subtle, alluring musk. The naga eyes you with amusement while you smell her and comments, 'I see that you can't get enough of me.";
 
 to say Serenitydesc:
@@ -572,8 +569,8 @@ to say SerenityStruggle:
 Section 6 - Infection
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -630,6 +627,9 @@ When Play begins:
 	now libido entry is 95;            [ Amount player Libido will go up if defeated ]
 	now loot entry is "";              [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "caprine";
 	now type entry is "demon";
@@ -644,7 +644,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

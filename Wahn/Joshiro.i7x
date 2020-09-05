@@ -26,14 +26,13 @@ Object	Name
 Road Wanderer	"Road Wanderer"
 
 Road Wanderer is a situation.
-The sarea of Road Wanderer is "High".
+ResolveFunction of Road Wanderer is "[ResolveEvent Road Wanderer]".
+Sarea of Road Wanderer is "High".
 
-Instead of resolving a Road Wanderer:
+to say ResolveEvent Road Wanderer:
 	if HP of Joshiro is 0: [never met before]
 		say "     Exploring the streets of the high rise district, you wander past piles of trash, check out abandoned cars and houses, all while taking care not to draw any attention from wandering beasts. Luck is with you today, as your scavenging is soon rewarded by finding a forgotten bag of salted nuts under the seat of one of the cars. It's a bit dusty but still good, even if the best before date makes you guess that the owner of the car must have dropped it under the seat months ago. You pack the food into your backpack with a grin on your face, then set out to see if you'll find more nice stuff today.";
-		LineBreak;
-		say "[bold type]You gain 1 food![roman type][line break]";
-		increase carried of food by 1;
+		ItemGain food by 1;
 		LineBreak;
 		say "     Continuing on your way, you soon reach a street corner, which brings with it a curious sight. There's a human man there, just openly strolling down the centerline of the road as if he is ready to take on the world. Even more outrageous is his outfit: The muscular Asian man's only real article of clothing is a pair of loose, bright red shorts, as if he just stepped out of a kickboxing ring or fitness studio, baring his V-shaped chest for the world to see. Other than that, the only fabric on the man are a pair of martial arts handwraps. Looking at the guy's handsome face and the boyish grin he throws you as he examines you in turn, you can't help but think that he must be fairly tough, if he made it till now while cockily strutting through the street.";
 		LineBreak;
@@ -93,12 +92,13 @@ Object	Name
 Slut Wanderer	"Slut Wanderer"
 
 Slut Wanderer is a situation.
+ResolveFunction of Slut Wanderer is "[ResolveEvent Slut Wanderer]".
 Prereq1 of Slut Wanderer is Road Wanderer.
 Prereq1Resolution of Slut Wanderer is { 1, 2, 3, 4, 5, 6, 7 }.
 PrereqTime of Slut Wanderer is "Night".
-The sarea of Slut Wanderer is "High".
+Sarea of Slut Wanderer is "High".
 
-Instead of resolving a Slut Wanderer:
+to say ResolveEvent Slut Wanderer:
 	say "     Wandering through the streets of the high rise district at night leaves a whole different feeling than during the day. With only the dim light of the moon to illuminate your surroundings, the absence of light, electricity and the sounds of civilization is glaringly obvious. Buildings rise as dark shadows over you, creating long canyons sticking up against the starry expanse of the sky. Yet that doesn't mean there aren't any noises to be heard: The clatter of a can or something being kicked down the road, far-off splintering glass and clawed paws scraping over the asphalt are just a few of the sounds that reach your ears, as if to remind you that this isn't the city you knew anymore. None of it seems to have anything to do with you, as you are careful about any footsteps following you. No, it's just the creatures of the city going about their business - living, scavenging, and all too often noisily fucking.";
 	say "     One of the latter cases is something you become aware of as you pass a small side alley, as unrestrained lewd moans echo from its depth, their pitch and volume marked by what must be rhythmic thrusts against the person being fucked. You're about to just walk past when you hear the same masculine voice call out in a lewd tone, 'Yeah! Pound the tiger, kitty!' A satisfied growl from some sort of large beast follows in reply, combined with another deep thrust. A second later things click in your mind: You recognize the person that is in the alley, it's Joshiro Higashi, whom you met before, wandering the streets of this area. Sounds like he's gotten himself into some sort of sexual situation, which isn't too surprising, given his outlook and the fact that he was walking around in just a pair of skimpy shorts.";
 	LineBreak;
@@ -213,11 +213,12 @@ Object	Name
 Jumping The Dobie	"Jumping The Dobie"
 
 Jumping The Dobie is a situation.
-The Prereq1 of Jumping The Dobie is Road Wanderer.
+ResolveFunction of Jumping The Dobie is "[ResolveEvent Jumping The Dobie]".
+Prereq1 of Jumping The Dobie is Road Wanderer.
 The Prereq1Resolution of Jumping The Dobie is { 1, 2, 3, 4, 5, 6 }.
-The sarea of Jumping The Dobie is "Red".
+Sarea of Jumping The Dobie is "Red".
 
-Instead of resolving a Jumping The Dobie:
+to say ResolveEvent Jumping The Dobie:
 	say "     Strolling through the red light district, you come upon a warehouse or something, fairly inconspicuous even though it is two stories tall. It doesn't really look like anyone has paid the place too much attention since the nanite apocalypse began, which might mean that there is something worthwhile left inside. The front door is locked tight, but through the chain link fence surrounding an adjacent parking lot, you see a small side door at the far end of the building, next to a loading dock. Maybe that could be your way in.";
 	say "     [bold type]Do you try to get access to the building?[roman type][line break]";
 	LineBreak;
@@ -225,11 +226,9 @@ Instead of resolving a Jumping The Dobie:
 	say "     ([link]N[as]n[end link]) - Nah, who knows what is waiting inside.";
 	if Player consents:
 		LineBreak;
-		say "     Out to find a way in, you wander along the fence and after just a little while, you come upon a spot where it is damaged, showing all the signs of being worked on with a bolt cutter. This allows you to bend up a part of the mesh and slip inside, to soon arrive at the side door. On closer inspection, its frame has a patchy look around the lock, where it was inexpertly repaired after a previous break-in. This is only to your advantage, as it takes only a sharp wrench of the doorknob to rip the soft plaster out of the wall, after which the door swings open with no trouble at all. Beyond, a well-filled warehouse awaits you, pallets of boxes stacked high in it. Curious what you have found here, you move to the closest one and make short work of a carton box, out of which you pull... DVDs and BluRay Disks of various porn releases. There must be thousands and tens of thousands of those in here!";
+		say "     Out to find a way in, you wander along the fence and after just a little while, you come upon a spot where it is damaged, showing all the signs of being worked on with a bolt cutter. This allows you to bend up a part of the mesh and slip inside, to soon arrive at the side door. On closer inspection, its frame has a patchy look around the lock, where it was inexpertly repaired after a previous break-in. This is only to your advantage, as it takes only a sharp wrench of the doorknob to rip the soft plaster out of the wall, after which the door swings open with no trouble at all. Beyond, a well-filled warehouse awaits you, pallets of boxes stacked high in it. Curious what you have found here, you move to the closest one and make short work of a carton box, out of which you pull... DVDs and Blu-Ray Disks of various porn releases. There must be thousands and tens of thousands of those in here!";
 		say "     Checking several more boxes for anything that might be a bit more useful than the disks, you are disappointed in finding just more of the same. Well, almost - that one section is all interracial, this one gay, and so on. After about half an hour of searching, you're almost ready to call it a day and simply leaving, but then you realize that there is a set of stairs on the wall near the front of the building, leading to a boxy office on stilts. Hoping that there might be something up there at least, you dash through the fairly dark inside of the building to check it out, then climb up the metal stairway and enter it. Hmm, going through the rooms, you find an unpowered computer, several filing cabinets, a fireman hunk calendar with delivery dates, and... a stash of energy bars in the lowest drawer of the desk! Grinning, you shovel the treasured items into your backpack.";
-		LineBreak;
-		say "[bold type]You gain 3 food![roman type][line break]";
-		increase carried of food by 3;
+		ItemGain food by 3;
 		WaitLineBreak;
 		project the Figure of Tyke_clothed_icon;
 		say "     Over the rustling of the candy wrappers, you pretty much overhear the first call coming from outside the building, only realizing something is going on as it is repeated and you register the louder words of 'Hey Tyke!' Zipping up your backpack, you stand up and step towards the office's windows, through which you can see the adjoining building (a garage) and the parking lot between it and your location. Tyke, the towering and fairly over-muscled doberman you've seen at Darius's place is standing in it, next to a party bus that must have been in some sort of accident, as only some fragments remain of the tinted windows it once had. The person shouting after the large canine is another man you know - Joshiro, whom you ";
@@ -260,13 +259,13 @@ Instead of resolving a Jumping The Dobie:
 			say "     Resilient as he is, the Japanese hunk bounces back from even that impact and start another teasing shout, 'Hah that's one nice mo-Uucck!' Interrupted by a large paw-hand closing on his throat, Joshiro brings out only a choking noise as he is lifted off the ground. 'Okay, ENOUGH of this! Li'l bitch! I'll - I... I'll fuck you up you damn faggot and I'm not gonna be gentle!' Tyke shouts loudly, shaking his captive a little bit till he is almost passed out and surely seeing stars. With a snort, the large dobie throws the dazed male over his shoulder and pushes the door of the damaged bus open. Looks like things are just about to get heavy. In short notice, Joshiro is thrown onto a broad sofa inside the bus, his red shorts wrenched down and flung out one window, then pushed into doggy-style position, head pressed into the cushions by Tyke's large hand, ass raised up in presentation.";
 			say "     With his blood pumping as it is now, Tyke doesn't waste much time in undoing his zipper and pushing down his shorts, then hefting the massive piece of meat between his legs to line it up with Joshiro's ass. Growling aggressively, the large dobie just rams himself home, overwhelming the man's pucker in a sharp thrust that brings with it a squelching noise. 'What the?! You're fuller than a three dollar whore! Damn, look at all the frigging cum squelching out of you!' Looking at it from your perspective, it's hard to tell if Joshiro's copious mating with all sorts of creatures is what saves his ass from being torn up in the rough pounding that follows, or if Tyke throws his last restraints overboard as he realizes just what a slut he's got under him. No matter which, he goes wild, really hammering the rape-bait human with all his might.";
 			WaitLineBreak;
-			say "     Joshiro lets out whorish moans with each new thrust into is raised ass, apparently enjoying himself despite the hard treatment. He holds himself defiantly against the anal invasion from his prized top, shuddering and often drifting into micro orgasms as Tyke drills himself into Joshiro's depths like few could possibly do. In the heat of the moment, the hulking Doberman anthro hefts a leg up and pins his manslut down by the shoulder blades; causing the tanned Japanese hunk to moan even more lewdly than before into the musky bus's couch. Shifting the angle of his brutal fucking flexes Joshiro's hole in a slightly different way than before, and the next harsh thrust by the alpha male canine creates a narrow squirt of cum fountaining up from the human's rear, splattering Tyke's chest and the side of his muzzle. 'What's that smell? Nnnghh.' Tyke grunts out somewhat puzzled, then reflexively licks the splash of white off his muzzle.";
+			say "     Joshiro lets out whorish moans with each new thrust into is raised ass, apparently enjoying himself despite the hard treatment. He holds himself defiantly against the anal invasion from his prized top, shuddering and often drifting into micro orgasms as Tyke drills himself into Joshiro's depths like few could possibly do. In the heat of the moment, the hulking Doberman anthro hefts a leg up and pins his man-slut down by the shoulder blades; causing the tanned Japanese hunk to moan even more lewdly than before into the musky bus's couch. Shifting the angle of his brutal fucking flexes Joshiro's hole in a slightly different way than before, and the next harsh thrust by the alpha male canine creates a narrow squirt of cum fountaining up from the human's rear, splattering Tyke's chest and the side of his muzzle. 'What's that smell? Nnnghh.' Tyke grunts out somewhat puzzled, then reflexively licks the splash of white off his muzzle.";
 			say "     'Y-yeah Babe! You like it too, eh? That's orc cum! Some green brute named Mul gave me the fuck of my life when this whole situation started, and since then... I've been craving to be bred. Found a hunky greenskin not long before I came to you too. The stuff's awesome and keeps you going nonstop!' Tyke shakes his head and comments, 'Dayum! Ya sound like a crack whore, li'l fag.' Yet even as he does so, the big man's hand wipes off the cum from his chest, and he licks it clean seemingly on autopilot. The drug-like aphrodisiacs in the orc seed unfold their effects only seconds later, driving Tyke to renew his assault on the helpless human under him. As the dobie is getting close to orgasming, the bulge at the base of his cock starts to swell, which means that the next harsh thrust rams an especially large intruder past Joshiro's pucker, making both of them grunt in helpless lust.";
 			WaitLineBreak;
 			say "     Barking in satisfaction as his balls slap Joshiro's ass and his knot locks the two of them together, Tyke follows up with a loud howl as his balls start to flood the martial artist's already well-bred ass. With no place to go due to the thick shaft plugging his rear end, all the cum gushing into the moaning human stays right inside him, meaning that his belly swells up moment by moment, soon making him appear almost as if he was in an early pregnancy. The sensation of being filled by the aggressive top is enough to drive Joshiro over the edge just a few heartbeats after Tyke, and he bucks wildly under the large man, creaming the couch he's pinned on. The two of them grind against each other for some more time, riding out their mutual climaxes and enjoying the afterglow.";
 			say "     A little while later, Tyke looks around for a more comfortable place to be than bent over his sweaty boytoy, then just slides his arm under the man and picks him up. Carrying Joshiro along, he throws himself onto a clean couch, his knotted partner clutched to the broad chest on the dobie. Leaning back and letting out a long breath, Tyke says, 'Well, you're a crazy, faggot bitch. But I kinda like how you squeeze my dick.' 'You mean like this?' Joshiro replies, arching his body and swaying his hips, which draws a shocked indrawn breath from the doberman, followed by him clutching his fucktoy to keep him still. 'No one ever tell you that a knot is sensitive after cumming?' he barks out with a wince. 'I don't fuck dogs. Regularly, I mean. How should I know?' Joshiro tells him with a grin, then reaches up to scratch behind the other man's ears.";
 			WaitLineBreak;
-			say "     Solence stretches out between the two of them for a while, with Tyke simply holding the other man to his chest and allowing Joshiro to rub the sensitive base of his ears. Finally, the massive 'So, err... I'm not gay, you know.' The tanned Asian man resting on his chest shrugs in reply. 'Never said you were. But you're really quite the fucker, that's for sure. I'll keep coming back for more, so how about you stop resisting? Not like you didn't enjoy this round.' With that said, the human tugs one of the large paws of his fucker to lay on his bulging belly, swollen with Tyke's cum. After grunting noncommittally, Tyke falls silent and just sits there for a little while, his fingers stroking over the curve of Joshiro's belly with surprising gentleness.";
+			say "     Silence stretches out between the two of them for a while, with Tyke simply holding the other man to his chest and allowing Joshiro to rub the sensitive base of his ears. Finally, the massive 'So, err... I'm not gay, you know.' The tanned Asian man resting on his chest shrugs in reply. 'Never said you were. But you're really quite the fucker, that's for sure. I'll keep coming back for more, so how about you stop resisting? Not like you didn't enjoy this round.' With that said, the human tugs one of the large paws of his fucker to lay on his bulging belly, swollen with Tyke's cum. After grunting noncommittally, Tyke falls silent and just sits there for a little while, his fingers stroking over the curve of Joshiro's belly with surprising gentleness.";
 			say "     Finally, he says, 'Aw fuck it, why not? You've really got one sweet fucking ass. So, you're my bitch now li'l J, just so we understand each other. Gonna fuck you when I want, where I want, and you better be available.' The tanned martial artist grins broadly as he hears his top say those words, and he replies, 'Will do, big dog, will do.' Then he leans his head back against the large canine's broad chest and dozes off, with Tyke himself not far behind. Looks like they really exhausted themselves with all the fucking and fighting.";
 			now Resolution of Jumping The Dobie is 1; [watched them fuck]
 		else:
@@ -284,12 +283,16 @@ Object	Name
 Sloppy Seconds	"Sloppy Seconds"
 
 Sloppy Seconds is a situation.
-The Prereq1 of Sloppy Seconds is JoshiroEncounterTale 1.
-The Prereq2 of Sloppy Seconds is Jumping The Dobie.
+ResolveFunction of Sloppy Seconds is "[ResolveEvent Sloppy Seconds]".
+Prereq1 of Sloppy Seconds is JoshiroEncounterTale 1.
+Prereq2 of Sloppy Seconds is Jumping The Dobie.
 The Prereq2Resolution of Sloppy Seconds is { 1, 2 }.
-The sarea of Sloppy Seconds is "Red".
+Sarea of Sloppy Seconds is "Red".
 
-Instead of resolving a Sloppy Seconds:
+when play begins:
+	add Sloppy Seconds to Badspots of CuckList;
+
+to say ResolveEvent Sloppy Seconds:
 	say "     Exploring the red light district, you are just strolling along a street and passing some unimpressive houses that likely have long been looted when a scuffle breaks out on the other side of the street. Looks like a herm hyena and a tigress hooker are having a disagreement about the price of her services. The noise soon draws the feline's pimp, who approaches in a combative manner. For a second it looks like the hyena will get fleeced by those two, but then she calls out loudly and two more of her kind step out of a nearby alley. This escalation heralds trouble, you're sure, and since you have better things to do than getting dragged into that, you take the easy way out by stepping into the building right before you through its leaned-to door. Sounds of a fight start just as you close the door behind you.";
 	say "     You check for a back door, but have little luck, so you shrug and decide to check the building out while you wait for situation outside to die down. Sadly, the interior of the building is about what you expected: Run-down apartments with their flimsy furniture mostly smashed by someone who rifled through them. Going from room to room, you find nothing worth even the effort of bending down to pick it up, and eventually end up on the roof of the two story building. There's a little wooden shack built in the back corner of it, a pigeon coop, but even that is just filled with open cages and a whole lot of scattered feathers. You idly wonder if this means that the owner became a pigeon himself, the birds transformed, or something came and ate them. No way to tell really, so eventually you shrug and leave the shack through its crooked door.";
 	WaitLineBreak;
@@ -588,7 +591,7 @@ to say JoshiroForcedSexMenu:
 	clear the screen and hyperlink list;
 
 to say JoshiroForcedSex1: [face fuck]
-	say "     Grabbing the swaying martial artist, you tell him with a grin that you want to enjoy his mouth, then push down hard on his shoulder, sending him to fall to the floor. After that, you take hold of his head by the hair and pull him up into a kneeling posture. Smiling, you [SelfStripCrotch], then take hold of your [Cock of Player] shaft and slap it against his cheek. Joshiro lets out a defeated moan but is too weak to resist you further. You stroke his handsome face for a moment before forcefully slamming his mouth onto your cock, right down to griding his face into your pubes like the man-slut he is. There is something intensely satisfying about hearing as he gags and gurgles. Squirming in your grasp, the punch-drunk guy mumbles something unintelligible due to the girth of your cock between his lips. You show the defeated stud who's boss around here, pound hard and fast into his amazing throat.";
+	say "     Grabbing the swaying martial artist, you tell him with a grin that you want to enjoy his mouth, then push down hard on his shoulder, sending him to fall to the floor. After that, you take hold of his head by the hair and pull him up into a kneeling posture. Smiling, you [SelfStripCrotch], then take hold of your [Cock of Player] shaft and slap it against his cheek. Joshiro lets out a defeated moan but is too weak to resist you further. You stroke his handsome face for a moment before forcefully slamming his mouth onto your cock, right down to grinding his face into your pubes like the man-slut he is. There is something intensely satisfying about hearing as he gags and gurgles. Squirming in your grasp, the punch-drunk guy mumbles something unintelligible due to the girth of your cock between his lips. You show the defeated stud who's boss around here, pound hard and fast into his amazing throat.";
 	say "     He clearly is a veteran cock-sucker, as Joshiro instinctively works his throat muscles to accommodate the rough face-fucking you give him. This drives your lust to whole new levels and you work his mouth even harder now that you know he can take it. Each sloppy slap of your crotch to his blushed red face draws a gurgled moan and sends his bruised, sweaty muscled form bouncing lewdly. Meanwhile, the sexy man's red boxing shorts tent prominently and sport a wet patch where the tip of Joshiro's cock is. Clearly, the dude loves being manhandled by a dominant partner, which gives you an idea. You reluctantly pull out of the eager male slut, then grab him by the hair and drag the Asian hunk over to a nearby wall. Pulling up his strength-less arms and pinning them over his head, you then continue your relentless assault on your defeated opponent.";
 	WaitLineBreak;
 	say "     Pounding against his face with rhythmic thrusts, you chuckle at the strings of spit and pre-cum that tether to your crotch and his handsome face on every pull back. The fluids drip down onto the trained body of the martial artist, trickling down over his abs to where you can see his cock still straining against its cloth prison. As you bottom out in Joshiro's mouth, a small spurt of shoots from its tip, oozing right through the soaked fabric. 'Nhhhghl!' the Asian man gurgles around your shaft, his arms twitching weakly against your grasp. You laugh at whatever he wanted to say and teasingly ask if he wanted you to go harder. Joshiro's eyes widen at that, and he groans when you answer yourself and note that that's surely what he wants. You grin at your own perversions, thrusting harder, faster and deeper now. Pulling out to completely then shoving it back in deep as the Asian Adonis's body instinctively rises in protest - only to be quelled by your lust driven aggression.";
@@ -620,8 +623,8 @@ to say JoshiroForcedSex3: [ride]
 Section 4 - Enemy Definition
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -672,6 +675,9 @@ When Play begins:
 	now libido entry is 75;            [ Amount player Libido will go up if defeated ]
 	now loot entry is "";              [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "Human";
 	now type entry is "human";
@@ -686,7 +692,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -828,8 +834,8 @@ SexuallyExperienced of Joshiro is true.
 TwistedCapacity of Joshiro is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Joshiro is false. [steriles can't knock people up]
 MainInfection of Joshiro is "Human".
-The description of Joshiro is "[JoshiroDesc]".
-The conversation of Joshiro is { "Woof." }.
+Description of Joshiro is "[JoshiroDesc]".
+Conversation of Joshiro is { "Woof." }.
 
 to say JoshiroDesc:
 	say "WIP";

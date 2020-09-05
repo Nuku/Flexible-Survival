@@ -28,7 +28,7 @@ Bunny_Girl_gene is an infection gene. The tf table of Bunny_Girl_gene is Table o
 
 Gene_attack of Bunny_Girl_gene is {lay,claw,bite};
 
-The pdesc of Bunny_Girl_gene is "You are a sexy female anthro rabbit with soft white fur. You have large double-D cup breasts with visible dusty pink nipples. You have wide hips, showcasing your swollen female sex, which is very damp, especially when you are about to lay an egg[if entry 4 of the body of the player is Bunny_Girl_gene]. Your womb is full of eggs, making you look about four months pregnant[end if].".
+The pdesc of Bunny_Girl_gene is "You are a sexy female anthro rabbit with soft white fur. You have large double-D cup breasts with visible dusty pink nipples. You have wide hips, showcasing your swollen female sex, which is very damp, especially when you are about to lay an egg[if entry 4 of the body of player is Bunny_Girl_gene]. Your womb is full of eggs, making you look about four months pregnant[end if].".
 
 The npcdesc of Bunny_Girl_gene is "This is an anthropomorphic bunny girl, her teeth bared and sharp claws ready to strike, laying eggs to share with all!".
 
@@ -70,7 +70,7 @@ Section 2 - Bunny Girl Definition
 
 A Bunny Girl is a kind of monster. The body of a Bunny Girl is usually {Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene, Bunny_Girl_gene}. A Bunny Girl is monstrous. A Bunny Girl is fully infected. A Bunny Girl is usually unsuited. A Bunny Girl is female. A Bunny Girl is tailed. The monster gene of a Bunny Girl is Bunny_Girl_gene.
 
-The description of Bunny Girl is "This is an anthropomorphic bunny girl, her teeth bared and sharp claws ready to strike, laying eggs to share with all!"
+Description of Bunny Girl is "This is an anthropomorphic bunny girl, her teeth bared and sharp claws ready to strike, laying eggs to share with all!"
 
 The hitdesc of Bunny Girl is "squeezes out an egg right into HER waiting hands, now to find someone who wants to eat it![line break]She approaches YOU with a brightly colored egg in HER hand. You have reservations about accepting it, but something about the bunny girl makes YOU trust HER. You reach and accept the egg, chewing it softly before it is gone. The bunny girl nods knowingly at you and pats you on the ass before moving away.".
 

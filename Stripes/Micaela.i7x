@@ -10,12 +10,13 @@ Object	Name
 Easter Eggs	"Easter Eggs"
 
 Easter Eggs is a scavevent.
-The sarea of Easter Eggs is "Forest".
+ResolveFunction of Easter Eggs is "[ResolveEvent Easter Eggs]".
+Sarea of Easter Eggs is "Forest".
 when play begins:
 	add Easter Eggs to BadSpots of FurryList;
 	add Easter Eggs to badspots of HermList;
 
-Instead of resolving Easter Eggs:
+to say ResolveEvent Easter Eggs:
 	say "     Entering a small glade between the trees, you look around cautiously before crossing into it. At one edge, you spot a strange splash of color tucked under a bush. You approach and brush the leaves aside to see a mound of decorated eggs. They're colorful, some with solid colors and others striped or spotted - Easter eggs.";
 	say "     Leaning over to pick one up, you get a pair of surprises. The first come in the form of the wet film coating the eggs. The second is the [if level of Player > 5]increasingly [end if]familiar press of a large erection against your rear, lightly humping it.";
 	WaitLineBreak;
@@ -43,7 +44,7 @@ Instead of resolving Easter Eggs:
 		else:
 			say "[micaelaintro_pass]";
 			now HP of Micaela is 1;
-	now Bunny House is known;
+	AddNavPoint Bunny House;
 	now Easter Eggs is resolved;
 
 to say micaelaintro_01:
@@ -55,7 +56,7 @@ to say micaelaintro_01:
 	say "     As she settles into a good, fast rhythm, her gloved hands run over your [bodydesc of Player] body, stroking and caressing you even as she fucks your brains out. She [if Nipple Count of Player > 0]teases your nipples, [end if][if Player is male]fondles your cock[smn] [end if][if Player is male and CockName of Player is not listed in infections of InternalCockList]and balls playfully, [else]playfully, [end if][if Cunt Count of Player > 2]fingers your other pussies, [else if Cunt Count of Player is 2]fingers your other pussy, [else if Cunt Count of Player is 1]rubs across your spread pussy lips, [end if]caresses your sides and (most frequently) rubs your [if gestation of child > 0]pregnant [end if]belly while moaning in pleasure. It's at one of these times that she closes her pretty eyes and pushes fully into you, moaning happily as she cums hard. Bursts of gooey bunny seed shoot into your [if Player is female]pussy and flow into your womb[else]ass and flow into your bowels[end if] as her over-productive balls make her cum like a horse. When she's finally done and pulled out, your [if Player is female]womb feels[else]bowels feel[end if] wonderfully warm and full with her semen.[ovichance]";
 	say "     She cuddles you close and gives you another peck on the cheek. 'That was lots of fun, sweetie. We should do it again sometime. My name's Micaela and I live in the pastel blue house not far from here,' she says, pointing down a path. She's soon taking that path, humming and skipping merrily while swinging her basket of eggs as she goes.";
 	infect "Easter Bunny";
-	increase carried of Easter egg by 1;
+	ItemGain Easter egg by 1;
 
 to say micaelaintro_02:
 	say "     Rather than let the unknown bunny screw you, you pull away and turn around. As she stumbles forward, you grab her and press her up against a nearby tree. You press your stiffening member against her butt, drawing a giggle from her. 'Oh no, I guess it's more eggs for me,' she moans over-dramatically. She giggles again and flips up the back of her dress, showing off her cute bunny-butt and enlarged pussy along with her plump ballsack and stiff nine-incher. The sight of the bunny herm on display arouses you to full hardness and you mount her with a lustful groan.";
@@ -64,7 +65,7 @@ to say micaelaintro_02:
 	say "     'Oh, you're really good at this, sweetie. Mmm... come on... gimme another batch of eggs,' she moans, pushing back harder. She rubs a gloved hand over her tummy and closes her mismatched eyes, perhaps imagining the colorful eggs you'll give her. That kinky thought has you moan and bury yourself even harder and deeper into her[if Cock Length of Player > 30]. Your mighty rod bulges her belly outwards dramatically and she rubs across the phallic stretch in her tummy[else if Cock Length of Player > 20]. Your oversized rod bulges her belly outwards and she rubs across the throbbing bump in her tummy[end if]. Your [Cock of Player] penis pulses inside her and you groan in release, pumping shot after shot of your hot semen into her needy belly. You drain your balls, emptying your [Cum Load Size of Player] load into her womb. And as you're doing so, the lusty bunny cums as well, spraying large, gooey blasts as her over-productive balls make her cum like a racehorse.";
 	say "     After you pull out, she cuddles you close and gives you peck on the cheek. 'That was lots of fun, sweetie. We should do it again sometime. My name's Micaela and I live in the pastel blue house not far from here,' she says, pointing down a path. She's soon taking that path, humming and skipping merrily while swinging her basket of eggs as she goes, leaking a trail of semen as she does.";
 	infect "Easter Bunny";
-	increase carried of Easter egg by 1;
+	ItemGain Easter egg by 1;
 
 to say micaelaintro_pass:
 	say "     Rather than let the unknown bunny screw you, you pull away and turn around. As she stumbles forward, you drop the egg and grab her arm to keep her from falling over. She giggles a little and smiles at your courtesy. 'Thanks for the catch. Not in the mood? That's alright. If you change your mind and find yourself in the mood for some Easter cheer, you always come see me for some fun. My name's Micaela and I live in the pastel blue house not far from here,' she says, pointing down a path. She's soon taking that path, humming as she skips merrily while swinging her basket of eggs as she goes, though she does pause partway to flip up the back of her dress with a giggle. This shows off her cute bunny-butt and enlarged pussy along with her plump ballsack and stiff nine-incher. The sight of the bunny herm is a tantalizing one, tempting you into indeed returning.";
@@ -77,7 +78,7 @@ Object	Name
 Bunny House	"Bunny House"
 
 Bunny House is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Bunny House is "[bunnyhousedesc]".
+Description of Bunny House is "[bunnyhousedesc]".
 
 the scent of Bunny House is "Micaela's scents of arousal, rabbits and candy hang in the air here.";
 
@@ -92,8 +93,8 @@ object	name
 Micaela	"Micaela"
 
 Micaela is a person. Micaela is in Bunny House.
-The description of Micaela is "[micaeladesc]".
-The conversation of Micaela is { "Eggies!" }.
+Description of Micaela is "[micaeladesc]".
+Conversation of Micaela is { "Eggies!" }.
 the scent of the Micaela is "The colorful bunny smells of arousal, rabbits and candy.".
 micaelastory1 is a truth state that varies. micaelastory1 is usually false.
 micaela_bf is a number that varies.
@@ -119,7 +120,7 @@ Instead of conversing the Micaela:
 		say "***Unknown error. Adjusting.";
 		now HP of Micaela is 1;
 		now Easter Eggs is resolved;
-		now Bunny House is known;
+		AddNavPoint Bunny House;
 	if HP of Micaela is 1 or HP of Micaela is 2:
 		say "     Micaela smiles as you come over. 'Hey there. I'm glad you decided to stop by. [if HP of Micaela is 1]Did you change your mind about having some fun[else]Are you in the mood for more fun[end if]?' she asks, spreading her legs and showing off her dual-gendered loins.";
 		say "     'I've run into some other nasty folks out there in the woods, especially those mean wolves. That's why I've been hiding stashes of my eggs in the forest. That way there's always some around to help me get back to my cute bunny self when one of those meanies catch me and fuck me,' she says, lightly running her fingers across her damp folds. 'I love the sex, but if I stop being my pretty bunny self, who'll spread Easter cheer around here?";
@@ -314,9 +315,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Easter egg"	"A candy-coated chocolate egg the size of an ordinary egg."	1	Easter egg
 
-Easter egg is a grab object. Easter egg is infectious. Easter egg is temporary. The strain of Easter egg is "Easter Bunny".
+Easter egg is a grab object. Easter egg is infectious. Easter egg is temporary. Strain of Easter egg is "Easter Bunny".
 
-The usedesc of Easter egg is "[eatEasteregg]";
+Usedesc of Easter egg is "[eatEasteregg]";
 
 to say eatEasteregg:
 	say "     With the smell of candy and chocolate coming from the Easter egg, you find yourself hungry for it. Popping the treat into your mouth, you let the candy shell dissolve sweetly on your tongue before you bite into its chocolate center. Mmm... delicious. And exciting. You feel a little randier at the thought of just where these eggs come from";

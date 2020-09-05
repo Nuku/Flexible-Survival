@@ -13,12 +13,13 @@ Object	Name
 FindingKristen	"FindingKristen"
 
 FindingKristen is a situation.
-The sarea of FindingKristen is "Outside".
+ResolveFunction of FindingKristen is "[ResolveEvent FindingKristen]".
+Sarea of FindingKristen is "Outside".
 when play begins:
 	add FindingKristen to BadSpots of FemaleList;
 	add FindingKristen to BadSpots of FurryList;
 
-Instead of resolving FindingKristen:
+to say ResolveEvent FindingKristen:
 	if HP of Kristen is not 0:
 		say "ERROR-Kristen-[HP of Kristen]E: This event should already be resolved!";
 	else:
@@ -48,7 +49,7 @@ Instead of resolving FindingKristen:
 					say "     She's leading you along the rear of a stretch of two-story shops. Several of them have been damaged by the rampage of some creature. She slips into the lower floor of a half-ruined travel agency and grabs the extension ladder stashed inside. Carrying it a few buildings over, she uses it to climb up to the second story of one of them and go through an open window. After you follow her up, the pulls the ladder inside, cutting off the means of entry.";
 					now HP of Kristen is 2;
 					move player to Kristen's Hideout;
-					now Kristen's Hideout is known;
+					AddNavPoint Kristen's Hideout;
 					now Resolution of FindingKristen is 1; [Kristen saved]
 					increase score by 20;
 			if fightoutcome >= 20 and fightoutcome <= 29:
@@ -73,7 +74,7 @@ Object	Name
 Kristen's Hideout	"Kristen's Hideout"
 
 Kristen's Hideout is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Kristen's Hideout is "[krishideoutdesc]".
+Description of Kristen's Hideout is "[krishideoutdesc]".
 
 the scent of Kristen's Hideout is "[krishideoutscent]".
 
@@ -128,8 +129,8 @@ to say krishideoutdesc:
 Section 2 - Kristen
 
 Kristen is a woman. Kristen is in Kristen's Hideout.
-The description of Kristen is "[kristendesc]".
-The conversation of Kristen is { "Thanks." }.
+Description of Kristen is "[kristendesc]".
+Conversation of Kristen is { "Thanks." }.
 kristenmsg1 is a truth state that varies. kristenmsg1 is usually false.	[K mentioned J]
 kristenmsg2 is a truth state that varies. kristenmsg2 is usually false.	[general info]
 kristenmsg3 is a truth state that varies. kristenmsg3 is usually false.	[J mentioned K]
@@ -433,7 +434,7 @@ to say kristentf_phase4_3:		[seductive]
 	if daytimer is day:		[daytime - park picnic]
 		say ". Having her gather some supplies from the cupboards, the two of you exit down the ladder. Praising her lovely appearance and reiterating that you'll protect her on the journey, you make your way towards the city park.";
 		say "     [if Park Entrance is unknown]Fortunately, your half-remembered details on how to get there turn out to be correct and you luckily avoid any significant trouble on the way[else]Fortunately, you encounter no significant trouble on the way[end if]";
-		if diegotalk > 0:	[met Diego]
+		if PlayerMet of Diego is true:	[met Diego]
 			say ". Seeing Diego waiting there as usual, you wrap your arm around the vixen protectively and give the coyote a sly wink as you pass. [if diegochanged is 0]He[else]She[end if] makes a show of growling lustfully at her, but slinks off when you advance. Kristen is impressed by your bravery and gives you a hug and a kiss while you and Diego share a thumbs up behind her back.";
 		else:			[not met Diego]
 			say ". Spotting [if Park Entrance is unknown]a[else]that[end if] coyote hanging out by the entrance, Kristen moves closer and you put your arm protectively around her. He gives her a lecherous look, but makes a show of backing off when you move between them. Kristen hugs and kisses you for being so brave. Glancing over, you spot the coyote, leaning casually against the wall again, give you a wink and a thumbs up behind her back, which you return.";
@@ -463,17 +464,15 @@ to say kristentf_phase4_3:		[seductive]
 			say "     As you're cleaning up your picnic site, you take a few moments to look through the scattered clothes likely dropped and forgotten by others using this popular make-out spot. You have to be careful, as some of the stuff left behind it covered in sticky stains, but by lifting them with a branch, you're able to check them out";
 			if scenario is "Bunker" or scenario is "Caught Outside":
 				say ". The food you find has been reduced to scraps and crumbs and the drink bottles are empty. You do find a small pocketknife in a pair of khakis, but it's no better than your own, so you toss it aside. A pair of jeans yields something of use though, a small canister of mace, which you store somewhere within easy reach. You leave the rest, finding nothing else of use to you.";
-				say "     Pepperspray obtained.";
-				increase carried of pepperspray by 1;
+				ItemGain pepperspray by 1;
 				increase score by 5;
 			else:
 				say ". The food you find has been reduced to scraps and crumbs and the drink bottles are empty. You do find a small pocketknife in a pair of khakis and, thinking it might be a useful tool or perhaps a weapon in a pinch, you take it. A pair of jeans yields something of use though, a small canister of mace, which you store somewhere within easy reach. You leave the rest, finding nothing else of use to you.";
-				say "     Pocketknife and pepperspray obtained.";
-				increase carried of pocketknife by 1;
-				increase carried of pepperspray by 1;
+				ItemGain pocketknife by 1;
+				ItemGain pepperspray by 1;
 				increase score by 10;
 			now loversbench is 2;
-		now Park Entrance is known;
+		AddNavPoint Park Entrance;
 		PlayerEat 12;
 		PlayerDrink 12;
 	else:		[nighttime - Ferris wheel]

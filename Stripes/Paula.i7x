@@ -21,7 +21,7 @@ Section 0 - Rescuing Paula
 to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 	say "     Agreeing to go along, you make sure you've got your pack and gear ready before heading out together. You and Alexandra chat a little on the trip, but are mostly quiet to help avoid drawing attention to yourselves. Thankfully, aside from a few easily dispatched troublemakers, the journey there is uneventful.";
 	move player to City Hospital;
-	now City Hospital is known;
+	AddNavPoint City Hospital;
 	say "     You and the doberman cop head into the dark and foreboding hospital. Wary and on edge, you travel the halls together, checking inside some patient rooms in the hopes of finding useful supplies. Things proceed slowly at first, coming across a few useful items from time to time, stockpiling them in the packs you've brought. Coming to an intersection, you spot a notice on an unblocked set of doors which states that the area beyond as being for staff only. Feeling that would be a more likely area to look for medical supplies, you signal for Alexandra to follow you down that way.";
 	say "     As you pass along the darkened halls, you hear some activity up ahead. You both freeze and listen, wary of danger.";
 	WaitLineBreak;
@@ -99,8 +99,8 @@ object	name
 Paula	"Paula"
 
 Paula is a woman.
-The description of Paula is "[pauladesc]".
-The conversation of Paula is { "Sexy treatment." }.
+Description of Paula is "[pauladesc]".
+Conversation of Paula is { "Sexy treatment." }.
 The icon of Paula is Figure of Paula_icon.
 
 the scent of the Paula is "The vixen smells of antiseptic, medicine and faintly of vulpine arousal.".

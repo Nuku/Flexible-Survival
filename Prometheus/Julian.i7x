@@ -1,6 +1,6 @@
 Version 1 of Julian by Prometheus begins here.
 
-[ hp of Julian - relationship variable with the player       ]
+[ HP of Julian - relationship variable with the player       ]
 [   0: not met                                               ]
 [   1: Sylvia's heat dealt with                              ]
 [   2: Got his room number                                   ]
@@ -13,7 +13,7 @@ Version 1 of Julian by Prometheus begins here.
 
 [QUEST LOG]
 to JulianQuestLog:
-	if hp of Julian is:
+	if HP of Julian is:
 		-- 1:
 			say "[bold type]Julian Quest: [roman type]Having helped Sylvia get over her heat, I should get to know Julian more if I want to spend more time with them.";
 		-- 2:
@@ -45,7 +45,7 @@ Object	Name
 Julian's Room	"Julian's Room"
 
 Julian's Room is a room.
-The description of Julian's Room is "[JuliansRoomDesc]".
+Description of Julian's Room is "[JuliansRoomDesc]".
 
 to say JuliansRoomDesc:
 	say "     Julian's room looks like ordered chaos. There are piles of books, games, and other belongings lying around, but he seems to know where things are. His bed is crumpled, but mostly made, strands of fur covering the duvet, and a soft toy of a wolf snuggles in the corner. Beneath the bed, a locked case pokes out, the contents as of yet unknown. Despite the mess, his desk space is clean, a powerless laptop pushed carefully to the side to make space for several pads of paper.";
@@ -56,22 +56,29 @@ Table of GameCharacterIDs (continued)
 object	name
 Julian	"Julian"
 
-Julian is a man. The hp of Julian is usually 0.
-[Physical details as of game start]
+Julian is a man.
 ScaleValue of Julian is 3. [human sized]
-SleepRhythm of Julian is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Julian is 1. [One cock]
+Body Weight of Julian is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Julian is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Julian is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Julian is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Julian is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Julian is 6. [length in inches]
+Breast Size of Julian is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Julian is 2. [count of nipples]
+Asshole Depth of Julian is 8. [inches deep for anal fucking]
+Asshole Tightness of Julian is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Julian is 1. [number of cocks]
+Cock Girth of Julian is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
 Cock Length of Julian is 10. [10 Inches]
-Ball Size of Julian is 6.
-Ball Count of Julian is 2. [Two balls]
-Cunt Count of Julian is 0. [No pussy]
-Cunt Depth of Julian is 0. [No Cunt]
-Cunt Tightness of Julian is 0. [No Cunt]
-Nipple Count of Julian is 2. [2 nipples]
-Breast Size of Julian is 0. [Flat at the start]
+Ball Count of Julian is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Julian is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
+Cunt Count of Julian is 0. [number of cunts]
+Cunt Depth of Julian is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Julian is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Julian is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Julian is false. [can take oversized members without pain]
-Sterile of Julian is false.
 PlayerMet of Julian is false.
 PlayerRomanced of Julian is false.
 PlayerFriended of Julian is false.
@@ -82,14 +89,16 @@ Virgin of Julian is true.
 AnalVirgin of Julian is false.
 PenileVirgin of Julian is false.
 SexuallyExperienced of Julian is true.
+TwistedCapacity of Julian is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Julian is false. [steriles can't knock people up]
 MainInfection of Julian is "Alpha Wolf".
-The description of Julian is "[JulianDesc]".
-The conversation of Julian is { "Woof grrr" }.
-The scent of Julian is "     Julian, unsurprisingly smells like a wolf. Though there are different undertones...".
+Description of Julian is "[JulianDesc]".
+Conversation of Julian is { "Woof grrr" }.
+The scent of Julian is "     Julian, unsurprisingly smells like a wolf. Though there are different undertones..."
 
 to say JulianDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Julian] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Julian] <- DEBUG[line break]";
 	else:
 		say "     Julian is a young male wolf with pitch-black fur covering his entire body. While he usually walks on two legs, you get the impression that if he wanted to, he could drop to all fours for greater speed or balance. He looks at you with curious, dark-brown eyes, feeling self-conscious as you observe him. He wears black trousers and a white shirt, hiding his body from view, though the impressive bulge in his trousers suggests an impressive organ.";
 		say "     From what Sylvia has said and the times you have met him, he seems to be a quiet student, though you have seen him being more boisterous and active. Very loyal to his friends, you seemed to have piqued his interest with your willingness to aid Sylvia. Realizing that you have been almost studying him for a while, you bring your gaze back to meet his, a smile cresting his lips.";
@@ -169,7 +178,7 @@ Section 4 - Sex
 instead of fucking Julian:
 	if (lastfuck of Julian - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     'Quite the sex drive you have there. Sorry, but it hasn't been that long since we last... you know... Give me a bit more time, then I'll be ready again.'";
-	else if hp of Julian < 4: [relationship not high enough]
+	else if HP of Julian < 4: [relationship not high enough]
 		say "     'While I am looking forward to feeling your body against mine... Wait. Why did I describe it like that? I feel really embarrassed... Please. Let me get to know you more, then we can discuss this.'";
 	else: [ready for sex]
 		say "     Looking at the wolf, you can see the ruddy tip of his penis peeking out of his sheath. Noticing your glance, Julian blushes, but turns to give you a better view and inviting further action.";
@@ -253,16 +262,17 @@ Object	Name
 Wolf's Invitation	"Wolf's Invitation"
 
 Wolf's Invitation is a situation.
+ResolveFunction of Wolf's Invitation is "[ResolveEvent Wolf's Invitation]".
 Prereq1 of Wolf's Invitation is Unnatural Heat.
 Prereq1Resolution of Wolf's Invitation is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
 The level of Wolf's Invitation is 0.
-The sarea of Wolf's Invitation is "Campus".
+Sarea of Wolf's Invitation is "Campus".
 
-instead of going to College Walkway East while (Wolf's Invitation is active and Wolf's Invitation is PrereqComplete and Wolf's Invitation is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (Wolf's Invitation is active and Wolf's Invitation is PrereqComplete and Wolf's Invitation is not resolved and (HP of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	WolfsInvitationEvent;
 
-Instead of resolving Wolf's Invitation:
+to say ResolveEvent Wolf's Invitation:
 	WolfsInvitationEvent;
 
 to WolfsInvitationEvent: [Room invitation from Julian]
@@ -274,7 +284,7 @@ to WolfsInvitationEvent: [Room invitation from Julian]
 	if Player consents: [Stay]
 		LineBreak;
 		say "     He turns to you, nervously scratching a wrist. 'What you did to help Sylvia was really kind,' he mumbles, conversing with people he barely knows apparently not his strong point. 'She seems to trust you, and I trust her judgement, so... would you like to talk some more at some point? I'd like to get to know you more, especially if you're going to be one of Sylvia's friends.' He looks at you earnestly, his deep brown eyes meeting your own. 'I'll let you think about it more,' he says, standing up, 'Come and see me if you feel like it.' After giving you his room number, he walks away, his social anxiety overcoming his desire to continue talking to you. You stand up and return to the path, trying to decide whether, and if so when, you want to visit his room.";
-		now hp of Julian is 2; [Got room number]
+		now HP of Julian is 2; [Got room number]
 		add "Julian Quest" to OpenQuests of Player;
 		now Resolution of Wolf's Invitation is 1; [got invited]
 		change the northeast exit of Tenvale College Male Dorms to Julian's Room; [connecting the location to the travel room]
@@ -282,7 +292,7 @@ to WolfsInvitationEvent: [Room invitation from Julian]
 	else: [Go]
 		say "     Apologizing that you have places to be, you leave the wolf dejected on the bench and return to the path. You don't think that he'll be doing that again.";
 		now Resolution of Wolf's Invitation is 99; [rejected him]
-		now hp of Julian is 100; [Rejected him]
+		now HP of Julian is 100; [Rejected him]
 	now Wolf's Invitation is resolved;
 
 Table of GameEventIDs (continued)
@@ -290,18 +300,19 @@ Object	Name
 Julian's Room Event	"Julian's Room Event"
 
 Julian's Room Event is a situation.
+ResolveFunction of Julian's Room Event is "".
 Prereq1 of Julian's Room Event is Wolf's Invitation.
 Prereq1Resolution of Julian's Room Event is { 1 }.
 The level of Julian's Room Event is 0.
-The sarea of Julian's Room Event is "Nowhere".
+Sarea of Julian's Room Event is "Nowhere".
 
-instead of going northeast from Tenvale College Male Dorms while (Julian's Room Event is active and Julian's Room Event is PrereqComplete and Julian's Room Event is not resolved and hp of Julian is 2):
+instead of going northeast from Tenvale College Male Dorms while (Julian's Room Event is active and Julian's Room Event is PrereqComplete and Julian's Room Event is not resolved and HP of Julian is 2):
 	JuliansRoomEvent;
 
 to JuliansRoomEvent: [First Time to Julian's Room]
 	say "     As you walk down the corridor, the merriment of the students reverberates off the walls. You reach Julian's room and knock on his door, his voice from within telling you to enter. You close the door behind you as you step into a disorderly room, clutter on the table that the wolf is sitting at, who is seemingly copying passages from a textbook. He turns to face you, a smile breaking across his face at your decision to come and see him despite his nervous invitation. 'I'm glad that you came. Would you like a seat?' He offers the desk chair that he was just sitting in as he perches on the edge of the fur-covered bed. You do so, swiveling so that you are facing him, and wait for him to begin a conversation.";
 	say "     'Considering so far every time that you've seen me, it has been in some connection with Sylvia to put it lightly. I thought that I should probably tell you a bit more about myself. As you know, my name is Julian, and I am from Canada. I'm studying biophysics, though being part of Sylvia's research team means that I do other things too as she is more focused on biology,' the wolf explains, scratching his arm nervously. You quickly introduce yourself, shaking his hand to show that you don't mind his social ineptitude. He beams at you and continues, 'I don't have many friends, Sylvia and the twins being the only people I really socialize with, though I'm hoping that you would be willing to spend time with us too. Who knows, you might be able to help our research progress, but you'd have to talk to Sylvia about it. We're going to the beach at some point. Perhaps you could join us and meet the whole group? But unfortunately, you've caught me at a bad moment. I have an assignment due tomorrow, and I've barely started. You seem nice, so please come back again. I really do want to get to know you better,' he says suggestively, glancing at your form.";
-	now hp of Julian is 3; [Met him in his room]
+	now HP of Julian is 3; [Met him in his room]
 	now resolution of Julian's Room Event is 1;
 	now Julian's Room Event is resolved;
 
@@ -310,14 +321,15 @@ Object	Name
 Suppressant Supply Run	"Suppressant Supply Run"
 
 Suppressant Supply Run is a situation.
+ResolveFunction of Suppressant Supply Run is "".
 Prereq1 of Suppressant Supply Run is Julian's Room Event.
 Prereq1Resolution of Suppressant Supply Run is { 1 }.
 Prereq2 of Suppressant Supply Run is Beach Field Research.
 Prereq2Resolution of Suppressant Supply Run is { 1, 2 }.
 The level of Suppressant Supply Run is 0.
-The sarea of Suppressant Supply Run is "Nowhere".
+Sarea of Suppressant Supply Run is "Nowhere".
 
-instead of going northeast from Tenvale College Male Dorms while (Suppressant Supply Run is active and Suppressant Supply Run is PrereqComplete and Suppressant Supply Run is not resolved and hp of Julian is 4 and a random chance of 1 in 2 succeeds):
+instead of going northeast from Tenvale College Male Dorms while (Suppressant Supply Run is active and Suppressant Supply Run is PrereqComplete and Suppressant Supply Run is not resolved and HP of Julian is 4 and a random chance of 1 in 2 succeeds):
 	SuppressantSupplyRunEvent;
 
 to SuppressantSupplyRunEvent: [Trip to Hospital for Libido Suppressants. Meet Cynthia]
@@ -390,10 +402,9 @@ to SuppressantSupplyRunEvent: [Trip to Hospital for Libido Suppressants. Meet Cy
 		WaitLineBreak;
 		say "     You and Julian introduce yourselves and thank them for the rescue. '[if Player is not defaultnamed][name of Player][else]That one[end if], I've seen moving around the city before,' Cynthia says to Argos. 'They seem to have a base in the library.' You are slightly concerned that someone else knows where you have been living without you telling them. 'And Julian is one of the students at the College. He seems to be friends with the collie and the two cats.' Julian confirms this, looking almost reverentially at the wolves. 'We were searching for libido suppressants,' he replies in answer to why you were in the hospital. 'We use them as insurance against inopportune arousal, but those two soldiers interrupted us and we have now lost the chance.' In response, Cynthia quickly re-enters the building in which she had previously been observing your predicament, and returns with a small satchel. 'I have a few left in here from earlier in the outbreak, but I don't use them any more so you can have them. I hope that helps.'";
 		say "     Your companion thanks her profusely, sliding the satchel into a pocket of his bag before slinging it over his shoulder. Cynthia addresses you both, 'Here isn't a safe place to explain, but should Donald and Keith threaten you again, or anyone else, you can find us near that [bold type]Bright Alley[roman type], you know the one. I'll explain there should you decide to come. I suppose that you could go there at some point anyway. There may be some people who may be interested in meeting you. But for now, we must go. We wish you well.' She and the lead wolves nod at you before leaving the street with the rest of the pack via alleyways and ruined buildings. Working out your bearings, you and Julian begin working your way back to the college, mission complete, albeit not as smoothly as you had hoped. After a thankfully uneventful return trip, you enter Julian's room, where he collapses on the bed with a sigh. 'That could have ended badly. Help yourself to a syringe before I take them to the twins. Thank you so very much for your aid. I wouldn't have managed it without you. I'm really exhausted, so I think I'll take a nap. See you soon.'";
-		say "[bold type]You gain one libido suppressant![roman type][line break]";
-		increase carried of libido suppressant by 1;
-		now hp of Julian is 5;
-		now hp of Cynthia is 1;
+		ItemGain libido suppressant by 1;
+		now HP of Julian is 5;
+		now HP of Cynthia is 1;
 		now resolution of Suppressant Supply Run is 1;
 		now Suppressant Supply Run is resolved;
 	else: [Wait]

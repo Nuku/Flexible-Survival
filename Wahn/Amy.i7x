@@ -117,8 +117,8 @@ SexuallyExperienced of Amy is false.
 MainInfection of Amy is "Husky Bitch".
 
 The icon of Amy is Figure of Amy_icon.
-The description of Amy is "[AmyDesc]".
-The conversation of Amy is { "Woof." }.
+Description of Amy is "[AmyDesc]".
+Conversation of Amy is { "Woof." }.
 
 instead of conversing the Amy:
 	project the figure of Amy_face_icon;
@@ -295,7 +295,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 		now HP of Amy is 10;
 	else if HP of Amy is 10:[mature virgin, told the player she's horny]
 		say "     As you enter the library, you see Amy sitting on her mattress, reading one of those romance novels with a pirate and a half-dressed woman on the front. She's slowly rubbing her breasts, moaning silently - which makes you remember her coming to talk to you about losing her virginity. The young husky woman is clearly aching to be fucked - you should probably just follow her invitation and take care of her - sometime soon.";
-	else if hp of Amy > 10:
+	else if HP of Amy > 10 and CuckList is not banned:
 		say "[AmyNPCSexTable]";
 
 to say AmyNPCSexTable:
@@ -452,8 +452,8 @@ to say AmyNPCSexTable:
 				say "[AmyNPCSexTable]";
 		-- 3: [Fang]
 			if Fang is in Grey Abbey Library:
-				if XP of Amy is 0 and hp of Fang > 1:[first interest of Fang in her]
-					if hp of Fang < 5:
+				if XP of Amy is 0 and HP of Fang > 1:[first interest of Fang in her]
+					if HP of Fang < 5:
 						say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Her head is leaned back, eyes closed, and she moans silently to herself. Looks like she's pretty horny, aching for a fuck. A fact that hasn't gone unnoticed by someone else... close to her, slowly stalking forward is Fang, his canine shaft hanging erect under his black-furred body. Then suddenly, he pounces the young husky, making her give a surprised yip that leads over to a lust-filled gasp as the wolf sinks his cock deep into her pussy with the first thrust. As deep in the grip of her own libido as she is, Amy just accepts the virile male on top of her, moaning as he starts rutting her with urgent movements.";
 						if HP of Fang < 3: [Omega Fang can be stopped]
 							LineBreak;
@@ -620,7 +620,7 @@ to say AmyNPCSexTable:
 				else if (lastfuck of Fang - turns) > 12 and XP of Amy is 1 and a random chance of 1 in 5 succeeds:
 					if HP of Fang < 3: [Omega Fang]
 						say "     Entering the library, you see Amy - on all fours on her bedding, with Fang mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again and he was only too happy to fuck the horny husky. The black wolf pounds into her hard and fast while the young husky's needy cunt grips and squeezes around that feral wolf cock. She moans about how strong your pet wolf is, how virile, to breed her like the bitch she is. Clearly pleased by those words, Fang takes the fur of her neck between his teeth in a careful bite and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling the husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking your wolf's seed. When his knot goes down, he pops his cock from her, letting his excess semen flow out to soak into the mattress, leaving the scent of it upon Amy and her bedding as a reminder to you and others that he bred her.";
-					else if hp of Fang is 3 or hp of Fang is 4: [Alpha Fang]
+					else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
 						say "     Entering the library, you see Amy - on all fours on her bedding, with Fang mounting her from behind. As he should be - as Alpha, he's got the right to take any female - or male - he likes, whenever he wants. He pounds into her hard and fast while the young husky's needy cunt grips and squeezes around that feral wolf cock. She moans about how strong your big alpha is, how virile, to breed her like the bitch she is. Clearly pleased by those words, Fang takes the fur of her neck between his teeth in a careful bite and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling the husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking your master's seed. When his knot goes down, he pops his cock from her, letting his excess semen flow out to soak into the mattress, leaving the scent of it upon Amy and her bedding as a reminder to you and others that she belongs to him.";
 					else: [Beta Fang]
 						say "     Entering the library, you see Amy on all fours with Fang mounting her from behind. Whether she is being bred due to needing relief from her mounting arousal or the wolf strengthening his bond with her again is unimportant as either way they both seem to be enjoying their coupling. Amy doesn't hesitate to express her enjoyment of being pounded by the larger male, pushing back to meet his thrusts as she moans for him to breed her like the bitch she is and to fill her with his virile seed to put a litter of puppies in her. This encourages Fang to more vigorously mate with her, lightly grasping the fur of her neck between his teeth as he plunges his steadily swelling knot past her engorged vulva, the squelches and slurps showing just how lustful the both of them are.";
@@ -1452,12 +1452,12 @@ to say AmySex7: [Felinoid+Amy+Player Threesome]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Amy a hostile stare. Seeing the other fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Amy closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if XP of Amy is 99:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Amy a hostile stare. Seeing the other fuck someone he's been forbidden to mount doesn't make him happy. Not happy at all. The feline clutches Amy closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		else if hp of Fang is 3 or hp of Fang is 4: [Alpha Fang]
+		else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
 			if XP of Amy is 0:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Amy a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if XP of Amy is 1:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Amy a hostile stare. Seeing the other fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
-		else if hp of Fang is 5:
+		else if HP of Fang is 5:
 			if XP of Amy is 0:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Amy a hostile stare. Looks like he's not happy that the big cat is bonding with Amy before he has had a chance to. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang stares him down for a moment before reluctantly retreating. While Klauz may be able to intimidate your wolf guard at the moment, you hope that there won't be any issue in future, you think to yourself as you doze off...";
 			if XP of Amy is 1:
@@ -1543,7 +1543,7 @@ to say AmySex8: [Fang+Amy+Player Threesome]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Klauz standing some distance away among the bookshelves and giving Fang and Amy a calculating look. Seems almost like he's up to something - filling Amy again to make her his alone possibly. Oh well, the rivalry between them will hopefully work itself out sometime in the end, you tell yourself as you doze off...";
 			else if level of Amy is 99: [Felinoid forbidden to fuck her]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Klauz standing some distance away among the bookshelves and giving the Fang and Amy a calculating look. You see him pad closer and give a low, frustrated growl. Fang growls in response, holding his own. Klauz then pads to lie down on the floor between you and the door, grooming himself with the occasional glance at the three of you. In your sleepy haze, you almost think the feline's just biding his time before taking Amy and you as well, but that must be your imagination you tell yourself as you doze off...";
-	else if hp of Fang is 5: [Beta Fang]
+	else if HP of Fang is 5: [Beta Fang]
 		say "     Walking over to Fang, you crouch next to the big wolf and stroke him, rubbing his warm belly fur and his quickly hardening erection. With your friend hot and ready to go, you and he walk over to the mattress you put up here in the library for the husky girl.";
 		say "     Soon after, Amy comes into sight from among the long bookshelves in the library, walking towards you slowly, the stack of books in her hands so high that she can't actually see what is in front of her. As she comes closer, you walk up to her and take more than half of the books from her. She says 'Thank you, that's very nice of you.' - then she notices the look of lust in your eyes and Fang's presence. 'Oh,' she says in an amused tone and sets down her books on the ground, then continues with 'Were you boys waiting for me? I wonder why...' in a playfully innocent tone. A moment later, she betrays that she's no blushing virgin as she moves up close to you, her hand feeling up the tent in your pants. With a lustful wink, she then saunters over to her bedding, swishing her tail while demonstratively shaking her hips.";
 		WaitLineBreak;

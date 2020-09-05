@@ -7,12 +7,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Cow Hunting	"Cow Hunting"
 
-Cow Hunting is a situation. The level of Cow Hunting is 5.
-The sarea of Cow Hunting is "Plains".
+Cow Hunting is a situation.
+ResolveFunction of Cow Hunting is "[ResolveEvent Cow Hunting]". The level of Cow Hunting is 5.
+Sarea of Cow Hunting is "Plains".
 when play begins:
 	add Cow Hunting to badspots of HermList; [Cuntboy cowboy]
 
-Instead of resolving a Cow Hunting:
+to say ResolveEvent Cow Hunting:
 	project the Figure of Corbin_face_icon;
 	say "     Roaming through the plains, you see a person off in the distance who waves and starts walking towards you. As he comes closer, you see that it's a guy in the shape of a humanoid horse, wearing a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area. His chest is bare, showing off a well-built upper body with washboard abs.";
 	say "     'Hi there, I'm Corbin James. I was wondering if you might have seen a cow somewhere... an actual one, I mean. Some critter broke through the fences and the cows got out over at the farm I work at. I found most of them, but the best producer, Wendy, is still missing...'";
@@ -32,7 +33,7 @@ Instead of resolving a Cow Hunting:
 	if calcnumber is 1: [no]
 		LineBreak;
 		say "     He nods as you tell him you haven't seen any standard non-infected cows around since before the outbreak. 'Well, thanks anyways. But if you do find her after all please come and tell me over at the farm. It's the [bold type]McDermott family farm[roman type] a few miles that way. Or if you could just bring Wendy along... then there'd be a reward in it for you. No worries, she's pretty tame and tractable as long as there isn't a slavering beast running after her.' With that, the cowboy makes his goodbye and walks off to keep searching.";
-		now McDermott Farm Entrance is known;
+		AddNavPoint McDermott Farm Entrance;
 		move Duke to Sheep Meadow SW; [putting him in his starting position]
 		now thirst of Duke is 1; [starting the day/night movement of Duke]
 		now thirst of Corbin is 1; [starting the day/night movement of Corbin]
@@ -52,7 +53,7 @@ Instead of resolving a Cow Hunting:
 	else if calcnumber is 3: [seriously?]
 		LineBreak;
 		say "     He shrugs 'Why the hell not? Even if I now look like this, it's my job. And a farm isn't the worst place to wait out these strange times - plenty of food, you know. So what about the cow? Have you seen her? No? Well, time to keep searching for me then. If you see her by any chance later - bring the old gal to the [bold type]McDermott farm[roman type] - a few miles that way. There's a reward.' With that, the horsey cowboy walks off to keep searching for the missing cow.";
-		now McDermott Farm Entrance is known;
+		AddNavPoint McDermott Farm Entrance;
 		move Duke to Sheep Meadow SW; [putting him in his starting position]
 		now thirst of Duke is 1; [starting the day/night movement of Duke]
 		now thirst of Corbin is 1; [starting the day/night movement of Corbin]
@@ -64,12 +65,13 @@ Object	Name
 Missing Cow	"Missing Cow"
 
 Missing Cow is a situation.
-The Prereq1 of Missing Cow is Cow Hunting.
+ResolveFunction of Missing Cow is "[ResolveEvent Missing Cow]".
+Prereq1 of Missing Cow is Cow Hunting.
 The Prereq1Resolution of Missing Cow is { 1, 3 }.
 The level of Missing Cow is 5.
-The sarea of Missing Cow is "Plains".
+Sarea of Missing Cow is "Plains".
 
-Instead of resolving a Missing Cow:
+to say ResolveEvent Missing Cow:
 	project the Figure of FeralGryphon_hard_icon;
 	say "     Roaming through the plains, you suddenly hear loud mooing coming from somewhere and as you look around, you spot an... interesting scene a moderate distance away. Looks like a cow - a regular, non-transformed one - who's just being fucked by a pretty large gryphon. The winged predator is holding the bovine only lightly with his taloned paws as he ruts her from behind and it doesn't look like she minds getting fucked by him - in fact, the sounds she makes seem rather pleased.";
 	say "     This must be Wendy, the missing cow Corbin told you about. There's that reward waiting for you if you manage to bring her back to the McDermott Farm. What do you want to do about her now? You could just... wait, hoping the gryphon might fly off after he got his rocks off - on the other hand, there's no guarantee that the feral beast won't just want a quick snack after sex and could eat her.";
@@ -179,8 +181,8 @@ TwistedCapacity of Wendy is false.
 Sterile of Wendy is false.
 MainInfection of Wendy is "Human".
 The HP of Wendy is normally 0.
-The description of Wendy is "[WendyDesc]".
-The conversation of Wendy is { "Moh Moo Moh Mooo Moo - Moh!" }.
+Description of Wendy is "[WendyDesc]".
+Conversation of Wendy is { "Moh Moo Moh Mooo Moo - Moh!" }.
 
 instead of sniffing Wendy:
 	say "Wendy smells like a cow - so a big, furry animal. With her stall being cleaned as often as it does, that's not a half-bad smell.";

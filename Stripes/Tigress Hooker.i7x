@@ -404,49 +404,49 @@ to say paymentcheck:
 	now tempnum is 0; [reset payment flag again, jic]
 	if gryphon milk is owned:
 		say "     Finding a container of gryphon milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'Birdy milk at that. That makes for a happy kitty!' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete gryphon milk;
+		ItemLoss gryphon milk by 1;
 	else if dolphin milk is owned:
 		say "     Finding a container of dolphin milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'Fishy milk at that. That makes for a happy kitty!' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete dolphin milk;
+		ItemLoss dolphin milk by 1;
 	else if panther milk is owned:
 		say "     Finding a container of panther milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'You brought kitty milk for the kitty. That makes for a happy kitty!' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete panther milk;
+		ItemLoss panther milk by 1;
 	else if cheetah milk is owned:
 		say "     Finding a container of cheetah milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'You brought kitty milk for the kitty. That makes for a happy kitty!' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete cheetah milk;
+		ItemLoss cheetah milk by 1;
 	else if cow milk is owned:
 		say "     Finding a container of cow milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'Good old cow milk, rich and creamy. That makes for a happy kitty!' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete cow milk;
+		ItemLoss cow milk by 1;
 	else if chocolate milk is owned:
 		say "     Finding a container of white chocolate milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'Oh my, creamy white chocolate milk! The matron will be so pleased with me!' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete chocolate milk;
+		ItemLoss chocolate milk by 1;
 	else if vixen milk is owned:
 		say "     Finding a container of vixen milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'Ugh! It smells like medicine and musky vixens. Maybe we can boil that fox smell out of it,' she muses. Keeping her find as payment, she sets your backpack aside.";
-		delete vixen milk;
+		ItemLoss vixen milk by 1;
 	else if dog milk is owned:
 		say "     Finding a container of dog milk, she smiles happily. 'Ooo! Cream for the kitty.' she opens it and sniffs. 'Ugh, it smells of dog. Well, it's still milk, so I'll take it! Maybe we can boil that dog smell out of it,' she muses. Keeping her find as payment, she sets your backpack aside.";
-		delete dog milk;
+		ItemLoss dog milk by 1;
 	else if Tasty Fish is owned:
 		say "     Finding the fish you've wrapped in old newspaper, she smiles happily. 'Ooo! Tasty feesh! We'll be eating well back at the motel tonight,' she rumbles happily. Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete Tasty Fish;
+		ItemLoss Tasty Fish by 1;
 	else if soda is owned:
 		say "     Finding a can of soda, she smiles happily. 'Hey! This is my favorite flavor. I haven't been able to find one for days.' Keeping her find as payment, she sets your backpack aside.";
-		delete soda;
+		ItemLoss soda by 1;
 	else if water bottle is owned:
 		say "     Finding a water bottle, she pulls it out. 'Here we go. We always need more fresh water.' Keeping her find as payment, she sets your backpack aside.";
-		delete water bottle;
+		ItemLoss water bottle by 1;
 	else if dirty water is owned:
 		say "     Finding a bottle of dirty water, she pulls it out. 'Here we go. I was getting a little thirsty working out here.' Keeping her find as payment, she sets your backpack aside.";
-		delete dirty water;
+		ItemLoss dirty water by 1;
 	else if chips is owned:
 		say "     Finding a bag of chips, she smiles. 'Hey! This is my favorite flavor. I thought they'd discontinued it, but you found one.' Keeping her find as payment, she leans down and gives you a kiss on the cheek for bringing her such a tasty treat.";
-		delete chips;
+		ItemLoss chips by 1;
 	else if food is owned:
 		say "     Finding some food in your pack, she pulls it out. 'Things have been getting a little lean back at the motel. It'll be good to have a full meal.' Keeping her find as payment, she sets your backpack aside.";
-		delete food;
+		ItemLoss food by 1;
 	else if motel key is owned:
 		say "     Digging all the way to the bottom of your pack in search of something of interest, she finds a motel key down there. 'Oh my! Where did you find this? We were worried it was lost. Thanks for finding and returning it, sweetie,' she purrrs, kissing your cheek and giving you a playful grope.";
-		delete motel key;
+		ItemLoss motel key by 1;
 	else:										[No payment. Smacked around, then raped.]
 		say "     Having gone through your whole bag and having found nothing of interest to her, she growls and slams the bag into your face. As you yell out, she grabs your throat, silencing your cry. 'Trying to get a little fun with the kitty without paying the price? Well, I'll give you all the hot tigress you can take, you little fool.' she growls again, kneeing you in the gut before slamming you up against the brick face of one of the buildings. she seems even stronger in her anger and you are unable to stop her sudden assault.";
 		say "     Before you have a chance to recover, her teeth are at the back of your neck and her throbbing cock grinds against your rear. You look for a means to escape, but those sharp teeth keep you in place. Then suddenly it's too late and the tigress's cock is pushing into your back door, spreading your tailhole open painfully fast. she gives you no time to adjust to the rapid intrusion, pounding you in quick, hard strokes. Despite yourself, you start to grow aroused from the assfuck you're receiving, but she holds your arms tightly to the wall, preventing you from tending to your growing arousal.";
@@ -465,8 +465,8 @@ to say paymentcheck:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -490,7 +490,7 @@ When Play begins:
 	now desc entry is "[tigress_desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "now a feminine tiger face and long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your pretty, blue eyes"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "curvaceous and desirable, moving with feline fluidity. Your body moves sensually with every step, drawing in the eye of all who see you. Your hands are human in shape, but with feline claws, paw pads and fur"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "ivory white fur streaked with tiger stripes that covers your"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "ivory white fur streaked with tiger stripes that covers your"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "From your rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with [one of]concealed nervousness[or]excitement[or]lustful playfulness[at random]."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "ebon feline"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shifts and changes, forming a short muzzle. Your new nose and muzzle twitch as your whiskers grow in. Though you cannot see them yet, somehow you know your eyes have turned a pale, icy blue. Long, luscious black hair flows down, curling lightly to give you a full and sexy locks. You can feel your ears shifting, poking free as they become cute and tiger-like"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -521,6 +521,9 @@ When Play begins:
 	now libido entry is 0; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is "motel key"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 75; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceous[or]flexible[at random]";
 	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -535,7 +538,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -640,7 +643,7 @@ name	desc	weight	object
 "motel key"	"You see a motel room key dangling from a red key fob."	0	motel key
 
 motel key is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 instead of using motel key:

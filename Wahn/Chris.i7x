@@ -33,6 +33,8 @@ Version 1 of Chris by Wahn begins here.
 [  22: breeder Chris and Urik got into talking     ]
 [  99: Urik warned away from breeder Chris         ]
 
+[TODO: Add cross-content if the player starts a tribe with Urik ]
+
 Table of GameCharacterIDs (continued)
 object	name
 Chris	"Chris"
@@ -61,8 +63,8 @@ AnalVirgin of Chris is true.
 PenileVirgin of Chris is true.
 SexuallyExperienced of Chris is false.
 The MainInfection of Chris is "Orc Warrior".
-The description of Chris is "[ChrisDesc]".
-The conversation of Chris is { "Mew!" }.
+Description of Chris is "[ChrisDesc]".
+Conversation of Chris is { "Mew!" }.
 The icon of Chris is Figure of Chris_clothed_icon.
 WarriorChrisPlayerFucked is a number that varies. [number of times the player has been fucked by warrior Chris]
 WarriorChrisDominance is a number that varies.
@@ -114,9 +116,7 @@ instead of trading the orc brew when the current action involves the Chris:
 			now the icon of Chris is Figure of OrcWarrior_random_icon;
 			now Cock Length of Chris is 14;
 			now Ball Size of Chris is 8;
-			LineBreak;
-			say "[bold type]You lose 1 orc brew![roman type][line break]";
-			decrease carried of orc brew by 1;
+			ItemLoss orc brew by 1;
 		else:
 			LineBreak;
 			say "     Acknowledging that his father didn't want this for Chris, you let him give the mug back to you and pack it away.";
@@ -124,9 +124,7 @@ instead of trading the orc brew when the current action involves the Chris:
 		say "     You hand Chris the mug of orc brew, which the young man accepts and looks at with interest. Opening the lid, he sniffs at it, and watches the liquid slosh around in the mug as he shakes it slightly. 'No thanks, I don't think I'd like to drink that. Do you have any delicious orc cum instead?'";
 	else if Libido of Chris is 2:
 		say "     Accepting the mug of orc brew from you, Chris hefts the heavy container and carelessly rips the lid off, then quaffs its contents greedily. Spilling at least a third of it, the orc warrior drains the whole tankard, then gives a resounding belch and throws the mug aside. 'Just what I needed. A drink for real men!'";
-		LineBreak;
-		say "[bold type]You lose 1 orc brew![roman type][line break]";
-		decrease carried of orc brew by 1;
+		ItemLoss orc brew by 1;
 
 instead of trading the orc cum when the current action involves the Chris:
 	if Libido of Chris is 0:
@@ -140,17 +138,13 @@ instead of trading the orc cum when the current action involves the Chris:
 			say "     It doesn't take all that much effort to lay his concerns to rest, talking the young orc into setting the bottle to his lips. A moment later, he's busy drinking down the flavorful orc cum, hungrily swallowing it all. His first taste of orc cum does make him rather tipsy, causing him to slur the words 'Hmm... tasty. I wanna more.' At the same time, a subtle but noticeable change goes through his body - features becoming a bit more rounded and slightly feminine, his body still lithe and muscled, but with wider hips fitting to the child-bearing role of orc breeders. The bulge at the front of his pants gets a bit smaller too, as he won't need that massive a cock in his new fate as a submissive bottom. Further up, the sharp tusks in Chris's mouth shrink in size, becoming rather cute little ones instead. As all those bodily changes stabilize and set into place, you can almost see the shift of his thought processes in the depth of his eyes, the need and desire to get mounted and bred rising to the forefront.";
 			now Libido of Chris is 1;
 			now the icon of Chris is Figure of OrcBreeder_random_icon;
-			LineBreak;
-			say "[bold type]You lose 1 orc cum![roman type][line break]";
-			decrease carried of orc cum by 1;
+			ItemLoss orc cum by 1;
 		else:
 			LineBreak;
 			say "     Acknowledging that his father didn't want this for Chris, you let him give the bottle back to you and pack it away.";
 	else if Libido of Chris is 1:
 		say "     You hand Chris the bottle of orc cum, which the young man accepts and with eager hands, already licking his lips. Immediately taking the cap off, he puts the bottle to his lips and chugs down the light green, thick and creamy liquid, only stopping when it's all gone. 'Hmmm... tasty!' he hums, lightly shaking the bottle to get the last drops out of it. Chris then asks, in the typical manner of an insatiable orc breeder, 'Do you have more?'";
-		LineBreak;
-		say "[bold type]You lose 1 orc cum![roman type][line break]";
-		decrease carried of Orc Cum by 1;
+		ItemLoss Orc Cum by 1;
 	else if Libido of Chris is 2:
 		say "     Accepting the plastic bottle of orc cum from you, Chris weighs it in his big hand, looking at the light green, thick and creamy liquid within. He screws the cap off and sniffs it, then hands it back to you. 'No thanks, I'd rather have something with some booze in it. A drink for real men!'";
 
@@ -489,7 +483,7 @@ to say ChrisSex5: [milk cum out of Chris]
 		WaitLineBreak;
 		say "     The green-skinned brute's output is actually too much to be contained by the bottle, eventually gushing out of its open top as the next heavy spurt churns the seed already inside to a froth. Hastily, you let go of his cock and pull the lid from your pocket, then pull the bottle away after another splurge and cap it. Somehow the milky white content of the bottle look incredibly tasty to you right now. Must be the aroma of orc cum that wafts heavy into your nose. Then suddenly, the almost time-stopped moment of you staring down at the bottle in your hand is broken - by a fresh cum-shot hitting you in the face. Looking up, you realize that Chris is holding his prick, aiming it right at you as he chuckles and grunts with every further spurt.";
 		say "     'Get a bigger bottle next time,' the orc teen says in an amused tone as he cums on your face, creaming you good with the ebbing-off orgasm. 'Or better yet - don't. I like that look on you,' he adds after a second or two, placing a large hand on your face to rub in the cum. Swiping up some, he playfully lets it stretch goopy lines between his fingers, then pushes the sticky digits into your mouth to be licked clean. 'Yeah, be the cum-slut that you deserve to be,' he grunts in satisfaction, amused about how eagerly you suck on his fingers. Then the teenage orc adds, 'Think of me when you drink this,' patting the bottle in your hands, then walking off to throw himself onto his sofa to rest. You're left behind, somewhat sticky and hungry for more. For a moment, you want to just chug the bottle right now, but manage to push down the instinct and pack it away instead.";
-	increase carried of orc cum by 1;
+	ItemGain orc cum by 1;
 
 instead of navigating Grey Abbey Library while (Libido of Chris is 2 and Chris is in Sitting Area and Dexterity of Chris is 0):
 	say "[NavCheck Grey Abbey Library]";

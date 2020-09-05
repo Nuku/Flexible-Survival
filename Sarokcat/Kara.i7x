@@ -49,8 +49,8 @@ AnalVirgin of Kara is false.
 PenileVirgin of Kara is false.
 SexuallyExperienced of Kara is true.
 MainInfection of Kara is "Hyena Herm".
-The description of Kara is "The sexy looking hyena herm you rescued seems to have found a leather jacket somewhere, and a pair of leather boots she has obviously had to customize to fit her new hyena paws. Her mobile hyena ears have a small array of silver and gold hoops and studs in them, and she has several smaller piercings spaced rather sexily across her muzzle. Her soft hyena patterned fur also has several visible designs in it along the arms and her thighs, the ink of her tattoos seeming to have colored the hyena fur as it grew in. Catching you looking at her, the new hyena herm eyes you back curiously, and with not a little bit of lust..".
-The conversation of Kara is { "Yip!" }.
+Description of Kara is "The sexy looking hyena herm you rescued seems to have found a leather jacket somewhere, and a pair of leather boots she has obviously had to customize to fit her new hyena paws. Her mobile hyena ears have a small array of silver and gold hoops and studs in them, and she has several smaller piercings spaced rather sexily across her muzzle. Her soft hyena patterned fur also has several visible designs in it along the arms and her thighs, the ink of her tattoos seeming to have colored the hyena fur as it grew in. Catching you looking at her, the new hyena herm eyes you back curiously, and with not a little bit of lust..".
+Conversation of Kara is { "Yip!" }.
 
 the scent of Kara is "Kara smells like an aroused hyena herm.".
 

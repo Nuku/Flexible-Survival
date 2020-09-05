@@ -8,15 +8,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Gourmet Treats	"Gourmet Treats"
 
-Gourmet Treats is a situation. The level of Gourmet Treats is 8.
-The sarea of Gourmet Treats is "High".
+Gourmet Treats is a situation.
+ResolveFunction of Gourmet Treats is "[ResolveEvent Gourmet Treats]". The level of Gourmet Treats is 8.
+Sarea of Gourmet Treats is "High".
 
 when play begins:
 	add Gourmet Treats to BadSpots of MaleList;       [random encounter may involve male opponents]
 	add Gourmet Treats to BadSpots of FemaleList;     [random encounter may involve female opponents]
 	add Gourmet Treats to BadSpots of FurryList;     [random encounter will involve canine opponents]
 
-Instead of Resolving a Gourmet Treats:
+to say ResolveEvent Gourmet Treats:
 	if HP of Karen is 1:
 		say "     While traveling through the high rise district, you come across what you can only assume is the strange bakery Karen mentioned. While the boarded-up windows prevent you from seeing inside, the large sign above the door makes it clear that this is the place. The weathered sign reads Bone-Appetit and features a rather plump cartoon canine in a chef's uniform. Eager to follow through with your plan to free yourself from Rex, you reach for the door handle. Slowly pulling the door open a crack, you peer inside the building; noticing some movement and groaning near the back counter, you pause for a moment before steeling yourself and swinging the door open.";
 	else:
@@ -40,14 +41,14 @@ Instead of Resolving a Gourmet Treats:
 		say "     'Do not worry, mon ami[if Player is purefemale]e[end if]. They left after having their fun; you're safe here now,' says a voice with a thick French accent. You turn towards the voice, seeing a figure step out of a nearby doorway. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'I appreciate your attempts to save me from those canine ruffians, and I'm sorry it ended the way it did,' he continues. 'I am Francois, master chef, at your service.'";
 		now Gourmet Treats is resolved;
-		now Bone-Appetit is known;
+		AddNavPoint Bone-Appetit;
 		now Resolution of Gourmet Treats is 2; [fought, lost]
 		move player to Bone-Appetit;
 	else if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having finally dealt with the [if T is 1]huskies[else if T is 2]German Shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if], you chase the last stragglers out the door and block it up behind them, propping up a table and a few chairs against it to keep any others out. Satisfied with the security of the building, you approach the canines['] captive, looking him over before kneeling down to help him to a sitting position. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'Thank you, mon ami[if Player is purefemale]e[end if],' the man says with a strong French accent. 'I shudder to imagine where I'd be had you not come along. I am Francois, master chef, at your service.'";
 		now Gourmet Treats is resolved;
-		now Bone-Appetit is known;
+		AddNavPoint Bone-Appetit;
 		now Resolution of Gourmet Treats is 1; [fought, won]
 		move player to Bone-Appetit;
 	else:
@@ -160,7 +161,7 @@ Object	Name
 Bone-Appetit	"Bone-Appetit"
 
 Bone-Appetit is a room. It is fasttravel. It is private.
-The description of Bone-Appetit is "[BoneAppetitdesc]".
+Description of Bone-Appetit is "[BoneAppetitdesc]".
 
 instead of sniffing Bone-Appetit:
 	say "     Despite the lack of any product on display, the small bakery still has a strangely warm, meaty aroma[if FaceName of Player is listed in infections of Caninelist] that quickly has you salivating hungrily[end if], which you can only assume is the result of the many hand made pet treats that used to line the shelves.";
@@ -215,8 +216,8 @@ AnalVirgin of Francois is true.
 PenileVirgin of Francois is true.
 SexuallyExperienced of Francois is false.
 MainInfection of Francois is "".
-The description of Francois is "[Francoisdesc]".
-The conversation of Francois is { "Numnum!" }.
+Description of Francois is "[Francoisdesc]".
+Conversation of Francois is { "Numnum!" }.
 The icon of Francois is Figure of Francois_icon.
 understand "Francis" as Francois.
 understand "Francois" as Francois.
@@ -243,7 +244,7 @@ Instead of conversing the Francois:
 		say "     Without another word Francois gets to work, gathering a few supplies before starting in earnest. Soon the entire bakery is filled with the warm scents of his work, and you find your mouth watering[if BodyName of Player is not listed in the infections of Caninelist and FaceName of Player is not listed in infections of Caninelist], despite knowing they are snacks intended for dogs[end if].";
 		say "     Eventually Francois finishes his work and returns with a small paper bag filled with fresh treats. [if BodyName of Player is listed in the infections of Caninelist or FaceName of Player is listed in infections of Caninelist or hunger of Player > 60]The enticing scent wafting from the bag in your hands proves to be too much, and you eagerly fish a treat out. Francois simply grins at you as he watches you enjoy a sample of his work. Still licking the last few crumbs of your snack from your lips, you[else]You[end if] stow the bag away in your pack and give Francois your regards before deciding on your next move.";
 		now HP of Karen is 3;
-		now carried of Dog Treats is 1;
+		ItemGain Dog Treats by 1;
 	else if HP of Francois is 0:
 		say "     'I must thank you again, mon ami[if Player is purefemale]e[end if],' Francois says as he steps around the counter, 'but perhaps I could ask another favor of you? I have a desire to create, to expand my art, and there must be so many exotic and interesting new flavors out in this city now. Oh how I would love to experiment with them, but sadly, I am no fighter. I fear I cannot go out there to gather these new ingredients myself, but you, mon [if Player is purefemale]héroïne[else]héro[end if], seem more than capable of surviving out there. If you bring back any potential ingredients you find, I would love to bake something for you[if Player is male], and perhaps I could 'reward' you in other ways as well,' he says, licking his lips as his eyes stray to your groin. 'Just[else]. Just[end if] bring back anything you find and let me know you would like me to [link]bake[as]bake Francois[end link] for you.";
 		now HP of Francois is 1;
@@ -470,81 +471,81 @@ carry out Francoisbaking:
 			say "[BoysenberryBlossomGet]";
 			remove 3 from Francois_Undiscovered;
 			add 3 to Francois_Discovered;
-			decrease carried of blue gel by 1;
-			decrease carried of Awesome Fruit by 1;
+			ItemLoss blue gel by 1;
+			ItemLoss Awesome Fruit by 1;
 			now Francoisbaked is 1;
 		else if pink gel is owned and Awesomer Fruit is owned and 4 is listed in Francois_Undiscovered:
 			say "[MuffinMuffinGet]";
 			remove 4 from Francois_Undiscovered;
 			add 4 to Francois_Discovered;
-			decrease carried of pink gel by 1;
-			decrease carried of Awesomer Fruit by 1;
+			ItemLoss pink gel by 1;
+			ItemLoss Awesomer Fruit by 1;
 			now Francoisbaked is 1;
 		else if blue gel is owned and chocolate milk is owned and 2 is listed in Francois_Undiscovered:
 			say "[bleuettonneGet]";
 			remove 2 from Francois_Undiscovered;
 			add 2 to Francois_Discovered;
-			decrease carried of blue gel by 1;
-			decrease carried of chocolate milk by 1;
+			ItemLoss blue gel by 1;
+			ItemLoss chocolate milk by 1;
 			now Francoisbaked is 1;
 		else if pink gel is owned and distilled milk is owned and 1 is listed in Francois_Undiscovered:
 			say "[CrèmeAbondanteGet]";
 			remove 1 from Francois_Undiscovered;
 			add 1 to Francois_Discovered;
-			decrease carried of pink gel by 1;
-			decrease carried of distilled milk by 1;
+			ItemLoss pink gel by 1;
+			ItemLoss distilled milk by 1;
 			now Francoisbaked is 1;
 		else if musky cock flower is owned and honeycomb is owned and 5 is listed in Francois_Undiscovered:
 			say "[lollicockGet]";
 			remove 5 from Francois_Undiscovered;
 			add 5 to Francois_Discovered;
-			decrease carried of honeycomb by 1;
-			decrease carried of musky cock flower by 1;
+			ItemLoss honeycomb by 1;
+			ItemLoss musky cock flower by 1;
 			now Francoisbaked is 1;
 		else if ebonflame scale is owned and glowing ember is owned and chocolate milk is owned and 6 is listed in Francois_Undiscovered:
 			say "[dragonmoelleuxGet]";
 			remove 6 from Francois_Undiscovered;
 			add 6 to Francois_Discovered;
-			decrease carried of ebonflame scale by 1;
-			decrease carried of glowing ember by 1;
-			decrease carried of chocolate milk by 1;
-			increase carried of dragon moelleux by 1;
+			ItemLoss ebonflame scale by 1;
+			ItemLoss glowing ember by 1;
+			ItemLoss chocolate milk by 1;
+			ItemGain dragon moelleux by 1;
 			now Francoisbaked is 1;
 		else if soda is owned and pony cider is owned and crushed candies is owned and 7 is listed in Francois_Undiscovered:
 			say "[fizz-aux-pommesGet]";
 			remove 7 from Francois_Undiscovered;
 			add 7 to Francois_Discovered;
-			decrease carried of soda by 1;
-			decrease carried of pony cider by 1;
-			decrease carried of crushed candies by 1;
-			increase carried of fizz-aux-pommes by 1;
+			ItemLoss soda by 1;
+			ItemLoss pony cider by 1;
+			ItemLoss crushed candies by 1;
+			ItemGain fizz-aux-pommes by 1;
 			now Francoisbaked is 1;
 		else if Satyr wine is owned and wyvern goop is owned and crushed candies is owned and 8 is listed in Francois_Undiscovered:
 			say "[vin-coeurGet]";
 			remove 8 from Francois_Undiscovered;
 			add 8 to Francois_Discovered;
-			decrease carried of Satyr wine by 1;
-			decrease carried of wyvern goop by 1;
-			decrease carried of crushed candies by 1;
-			increase carried of vin-coeur by 1;
+			ItemLoss Satyr wine by 1;
+			ItemLoss wyvern goop by 1;
+			ItemLoss crushed candies by 1;
+			ItemGain vin-coeur by 1;
 			now Francoisbaked is 1;
 		else if egg nog is owned and pixie dust is owned and blue gel is owned and 9 is listed in Francois_Undiscovered: [gingerbread - egg nog + pixie dust + Blue gel]
 			say "[gingerbreadGet]";
 			remove 9 from Francois_Undiscovered;
 			add 9 to Francois_Discovered;
-			decrease carried of egg nog by 1;
-			decrease carried of pixie dust by 1;
-			decrease carried of blue gel by 1;
-			increase carried of gingerbread by 1;
+			ItemLoss egg nog by 1;
+			ItemLoss pixie dust by 1;
+			ItemLoss blue gel by 1;
+			ItemGain gingerbread by 1;
 			now Francoisbaked is 1;
 		else if cheese is owned and pixie dust is owned and pink gel is owned and 10 is listed in Francois_Undiscovered: [cheesecake - cheese + pixie dust + pink gel]
 			say "[cheesecakeGet]";
 			remove 10 from Francois_Undiscovered;
 			add 10 to Francois_Discovered;
-			decrease carried of cheese by 1;
-			decrease carried of pixie dust by 1;
-			decrease carried of pink gel by 1;
-			increase carried of cheesecake by 1;
+			ItemLoss cheese by 1;
+			ItemLoss pixie dust by 1;
+			ItemLoss pink gel by 1;
+			ItemGain cheesecake by 1;
 			now Francoisbaked is 1;
 		if Francoisbaked is not 1:
 			say "     After looking over everything you've brought him, Francois decides none of your potential combinations of ingredients would make a good dish.";
@@ -625,95 +626,95 @@ to say FrancoisBakingMenu:
 					if pink gel is owned and distilled milk is owned:
 						now sextablerun is 1;
 						say "     Francois takes the pink gel and distilled milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of creamy pastries, offering one to you as he places the rest into one of his displays.";
-						decrease carried of pink gel by 1;
-						decrease carried of distilled milk by 1;
-						increase carried of crème abondante by 1;
+						ItemLoss pink gel by 1;
+						ItemLoss distilled milk by 1;
+						ItemGain crème abondante by 1;
 					else:
 						say "You do not have the required ingredients: pink gel and distilled milk.";
 				else if title entry is "bleuettonne":
 					if blue gel is owned and chocolate milk is owned:
 						now sextablerun is 1;
 						say "     Francois takes the blue gel and chocolate milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of chocolates, offering one to you as he places the rest into one of his displays.";
-						decrease carried of blue gel by 1;
-						decrease carried of chocolate milk by 1;
-						increase carried of bleuettonne by 1;
+						ItemLoss blue gel by 1;
+						ItemLoss chocolate milk by 1;
+						ItemGain bleuettonne by 1;
 					else:
 						say "You do not have the required ingredients: blue gel and chocolate milk.";
 				else if title entry is "boysenberry blossom":
 					if blue gel is owned and Awesome Fruit is owned:
 						now sextablerun is 1;
 						say "     Francois takes the blue gel and Awesome Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of fruit-filled pastries, offering one to you as he places the rest into one of his displays.";
-						decrease carried of blue gel by 1;
-						decrease carried of Awesome Fruit by 1;
-						increase carried of boysenberry blossom by 1;
+						ItemLoss blue gel by 1;
+						ItemLoss Awesome Fruit by 1;
+						ItemGain boysenberry blossom by 1;
 					else:
 						say "You do not have the required ingredients: blue gel and Awesomer Fruit.";
 				else if title entry is "Muffin muffin":
 					if pink gel is owned and Awesomer Fruit is owned:
 						now sextablerun is 1;
 						say "     Francois takes the pink gel and Awesomer Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of muffins, offering one to you as he places the rest into one of his displays.";
-						decrease carried of pink gel by 1;
-						decrease carried of Awesomer Fruit by 1;
-						increase carried of Muffin muffin by 1;
+						ItemLoss pink gel by 1;
+						ItemLoss Awesomer Fruit by 1;
+						ItemGain Muffin muffin by 1;
 					else:
 						say "You do not have the required ingredients: pink gel and Awesome Fruit.";
 				else if title entry is "lollicock":
 					if honeycomb is owned and musky cock flower is owned:
 						now sextablerun is 1;
 						say "     Francois takes the honeycomb and musky cock flower from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of red candy cocks, offering one to you as he places the rest into one of his displays.";
-						decrease carried of honeycomb by 1;
-						decrease carried of musky cock flower by 1;
-						increase carried of lollicock by 1;
+						ItemLoss honeycomb by 1;
+						ItemLoss musky cock flower by 1;
+						ItemGain lollicock by 1;
 					else:
 						say "You do not have the required ingredients: honeycomb and musky cock flower.";
 				else if title entry is "dragon moelleux":
 					if ebonflame scale is owned and glowing ember is owned and chocolate milk is owned:
 						now sextablerun is 1;
 						say "     Francois takes the dark scale, glowing ember and chocolate milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a plate of small chocolate cakes, offering one to you as he places the rest into one of his displays.";
-						decrease carried of ebonflame scale by 1;
-						decrease carried of glowing ember by 1;
-						decrease carried of chocolate milk by 1;
-						increase carried of dragon moelleux by 1;
+						ItemLoss ebonflame scale by 1;
+						ItemLoss glowing ember by 1;
+						ItemLoss chocolate milk by 1;
+						ItemGain dragon moelleux by 1;
 					else:
 						say "You do not have the required ingredients: ebonflame scale, glowing ember and chocolate milk.";
 				else if title entry is "fizz-aux-pommes":
 					if pony cider is owned and soda is owned and crushed candies is owned:
 						now sextablerun is 1;
 						say "     Francois takes the pony cider, soda and crushed candies from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. Rather than the usual warm aromas of his cooking, you merely hear plenty of mixing and stirring. Eventually Francois returns with a pitcher filled with a fizzing amber liquid, offering you a bottle full before pouring the rest into individual bottles.";
-						decrease carried of pony cider by 1;
-						decrease carried of soda by 1;
-						decrease carried of crushed candies by 1;
-						increase carried of fizz-aux-pommes by 1;
+						ItemLoss pony cider by 1;
+						ItemLoss soda by 1;
+						ItemLoss crushed candies by 1;
+						ItemGain fizz-aux-pommes by 1;
 					else:
 						say "You do not have the required ingredients: pony cider, soda and crushed candies.";
 				else if title entry is "vin-coeur":
 					if wyvern goop is owned and Satyr wine is owned and crushed candies is owned:
 						now sextablerun is 1;
 						say "     Francois takes the crushed candies, Satyr wine and wyvern goop from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a large cake and several dishes. He portions the cake out into several slices, offering you one with a smile before placing the rest in one of his displays";
-						decrease carried of wyvern goop by 1;
-						decrease carried of soda by 1;
-						decrease carried of Satyr wine by 1;
-						increase carried of vin-coeur by 1;
+						ItemLoss wyvern goop by 1;
+						ItemLoss soda by 1;
+						ItemLoss Satyr wine by 1;
+						ItemGain vin-coeur by 1;
 					else:
 						say "You do not have the required ingredients: crushed candies, Satyr wine and wyvern goop.";
 				else if title entry is "gingerbread": [gingerbread - egg nog + pixie dust + blue gel]
 					if egg nog is owned and pixie dust is owned and blue gel is owned:
 						now sextablerun is 1;
 						say "     Francois takes the egg nog, pixie dust and blue gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a tray full of small colorful gingerbread cookies. He offers you a couple before placing the rest into one of his displays.";
-						decrease carried of egg nog by 1;
-						decrease carried of pixie dust by 1;
-						decrease carried of blue gel by 1;
-						increase carried of gingerbread by 2;
+						ItemLoss egg nog by 1;
+						ItemLoss pixie dust by 1;
+						ItemLoss blue gel by 1;
+						ItemGain gingerbread by 2;
 					else:
 						say "You do not have the required ingredients, egg nog, pixie dust and blue gel.";
 				else if title entry is "cheesecake": [cheesecake - cheese + pixie dust + pink gel]
 					if cheese is owned and pixie dust is owned and pink gel is owned:
 						now sextablerun is 1;
 						say "     Francois takes the cheese, pixie dust and pink gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with creamy looking strawberry cheesecake. He divides the cake into several portions before wrapping a couple slices for you and placing the rest in one of his displays.";
-						decrease carried of cheese by 1;
-						decrease carried of pixie dust by 1;
-						decrease carried of pink gel by 1;
-						increase carried of cheesecake by 2;
+						ItemLoss cheese by 1;
+						ItemLoss pixie dust by 1;
+						ItemLoss pink gel by 1;
+						ItemGain cheesecake by 2;
 					else:
 						say "You do not have the required ingredients, cheese, pixie dust and pink gel.";
 				else if title entry is "Abort":
@@ -807,7 +808,7 @@ to say BoysenberryBlossomGet:
 			say "     Francois licks his lips as he eyes up your enlarged member, and you can't help but notice his apron tenting slightly at his crotch. 'Mmm, what a lovely side effect. I cannot wait to start selling these.'";
 	else:
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
-		increase carried of boysenberry blossom by 1;
+		ItemGain boysenberry blossom by 1;
 
 to say MuffinMuffinGet:
 	say "     'What a lovely combination of flavors,' Francois says as he tastes the pink gel and Awesomer Fruit. 'I must test their potential further!' After collecting a few other things from behind the counter, Francois quickly heads to his kitchen to get started. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of muffins and offers you one. Would you like to taste it right now? (Y/N)";
@@ -819,7 +820,7 @@ to say MuffinMuffinGet:
 			say "     'Not my first choice, but an interesting result nonetheless,' Francois says as he watches your hand drift down towards your groin. 'I am certain it will be popular.'";
 	else:
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
-		increase carried of muffin muffin by 1;
+		ItemGain muffin muffin by 1;
 
 to say bleuettonneGet:
 	say "     After tasting the blue gel, Francois takes it and the chocolate milk without another word, collecting a few other things from behind the counter before hurrying back to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of chocolates. 'A simple but effective technique. You must try one,' Francois says with a smile, placing the tray on the counter in front of you. Would you like to taste one right now? (Y/N)";
@@ -831,7 +832,7 @@ to say bleuettonneGet:
 			say "     'Oh my, what a magnifique result,' Francois says with a grin as he watches your groin change.";
 	else:
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
-		increase carried of bleuettonne by 1;
+		ItemGain bleuettonne by 1;
 
 to say CrèmeAbondanteGet:
 	say "     After tasting the pink gel and distilled milk, Francois quickly pours both into an empty bowl and starts mixing before he even reaches the doorway to his kitchen. 'Ah, crème à la fraise, I am certain I can do something with this,' you hear him say to himself as you watch his tail disappear around the corner. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of pink creme topped pastries, placing them in front of you with a smile. Would you like to taste one right now? (Y/N)";
@@ -843,7 +844,7 @@ to say CrèmeAbondanteGet:
 			say "     Francois cocks his head to the side as he watches your chest swell. 'I have a feeling this will be a popular dish among les femmes,' he says while eyeing your growing mammaries. 'I am glad I was not the first to test it though.'";
 	else:
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
-		increase carried of crème abondante by 1;
+		ItemGain crème abondante by 1;
 
 to say lollicockGet:
 	say "     'What an unusual herb,' Francois says as he picks up the musky cock flower, taking a deep sniff of its musty scent. 'Hmm... perhaps...' Francois trails off as he spots the honeycomb, before inspiration strikes. Francois quickly gathers a few other things from behind the counter before stepping into his kitchen. Eventually Francois returns with a small tray of cock-shaped lollipops and a silly grin on his face. 'What do you think, mon ami[if Player is purefemale]e[end if]? Would you like to try one?' he asks, waving the phallic candy in your face. (Y/N)";
@@ -876,7 +877,7 @@ to say lollicockGet:
 			say "'Mon dieu! What an unexpected result!' Francois says, licking his lips as he eyes up your new candy member. 'I certainly would like to give that a taste,' he says with a naughty smirk.";
 	else:
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
-		increase carried of lollicock by 1;
+		ItemGain lollicock by 1;
 
 to say dragonmoelleuxGet:
 	say "     'I have a good feeling about this, mon ami[if Player is purefemale]e[end if],' Francois says, taking the dark scale, glowing ember and chocolate milk and heading to his kitchen. A rich chocolaty scent fills the bakery as he works, making your mouth water in anticipation as you wait.";
@@ -899,18 +900,16 @@ to say gingerbreadGet:
 		say "'Oh là!' Francois exclaims as he watches your changes slow to and end. 'I hope you're not still hungry,' he says with a silly grin as he eyes your altered form.";
 	else:
 		say "     Accepting the cookies from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
-		now carried of gingerbread is 2;
+		ItemGain gingerbread by 2;
 
 to say cheesecakeGet:
 	say "     Francois['] expression lights up as he spots the cheese and he plucks it eagerly out of the pile before rummaging through and selecting the pixie dust and pink gel to go with it. 'This will do wonderfully, C'est magnifique!' Francois exclaims as he places the ingredients in a large mixing bowl to carry back into his kitchen. The rich sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a delicate looking strawberry cheesecake, he cuts the cake into slices with a smile, placing a couple small wedges on a plate for you with a grin. Would you like to taste it now? (Y/N)";
 	if Player consents:
-		now carried of cheesecake is 2;
 		say "[cheesecake Use]";
-		now carried of cheesecake is 0;
 		say "'Oh là!' Francois says as he watches your changes slow to and end. 'I guess what they say is true. You really are what you eat,' he says with a silly grin.";
 	else:
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
-		now carried of cheesecake is 2;
+		ItemGain cheesecake by 2;
 
 Section 5 - Baked Goods
 
@@ -1056,7 +1055,7 @@ to say lollicock Use:
 	if hunger of Player < 0, now hunger of Player is 0;
 
 dragon moelleux is a grab object. It is not temporary. It is fast.
-The usedesc of dragon moelleux is "[dragonmoelleuxuse]".
+Usedesc of dragon moelleux is "[dragonmoelleuxuse]".
 the scent of dragon moelleux is "     The small chocolate cake smells rich and sweet, as well as a little spicy.".
 
 to say dragonmoelleuxuse:
@@ -1088,12 +1087,12 @@ to say dragonmoelleuxuse:
 		if Playerdam > 0:
 			say "     However, the flame does not leave you unscathed. You suffer [playerdam] damage!";
 			decrease HP of Player by playerdam;
-		decrease carried of dragon moelleux by 1;
+		ItemLoss dragon moelleux by 1;
 	else:
 		say "     That's probably not a good idea right now.";
 
 fizz-aux-pommes is a grab object. It is not temporary. It is fast.
-The usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]".
+Usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]".
 the scent of fizz-aux-pommes is "     The bubbling drink smells of overwhelmingly sweet apple.".
 
 to say fizz-aux-pommesuse:
@@ -1103,13 +1102,13 @@ to say fizz-aux-pommesuse:
 		increase plhitbonus by 3;
 		increase pldodgebonus by 3;
 		increase Libido of Player by 15;
-		decrease carried of fizz-aux-pommes by 1;
+		ItemLoss fizz-aux-pommes by 1;
 		follow the player attack rule;
 	else:
 		say "That's probably not a good idea right now.";
 
 vin-coeur is a grab object. It is not temporary. It is fast.
-The usedesc of vin-coeur is "[vin-coeuruse]".
+Usedesc of vin-coeur is "[vin-coeuruse]".
 the scent of vin-coeur is "     rich and heavy (temporary desc!)".
 
 to say vin-coeuruse:
@@ -1119,7 +1118,7 @@ to say vin-coeuruse:
 		increase pldamagebonus by 2;
 		decrease pldodgebonus by 1;
 		decrease pldodgebonus by 1;
-		decrease carried of vin-coeur by 1;
+		ItemLoss vin-coeur by 1;
 		follow the player attack rule;
 	else:
 		say "That's probably not a good idea right now.";
@@ -1156,7 +1155,7 @@ to say cheesecake Use:
 			say "     Pulling both slices of cheesecake from your bag, you quickly unwrap both before gorging yourself with the rich strawberry cake.";
 			cheesecakeinfect;
 			cheesecakeinfect;
-			decrease carried of cheesecake by 2;
+			ItemLoss cheesecake by 2;
 			if cheesecakemode is 1 and player is cheesecakebodied:
 				say "     After your large serving of the delicious cake, your belly rumbles as your cheesecake body shifts and swells, becoming plump and rubenesque.";
 			now cheesecakemode is 0;
@@ -1164,14 +1163,14 @@ to say cheesecake Use:
 		else:
 			say "     Keeping your gluttony in check, you pull only one slice of the tempting cheesecake from your bag, carefully unwrapping it and savoring the rich strawberry flavor in a few small bites.";
 			cheesecakeinfect;
-			decrease carried of cheesecake by 1;
+			ItemLoss cheesecake by 1;
 			if cheesecakemode is 0 and player is cheesecakebodied:
 				say "     Indulging in only a small serving of the rich cheesecake, your belly rumbles as your plump confectionary body slims down to become thin and sexy.";
 			now cheesecakemode is 1;
 	else:
 		say "     Pulling the cheesecake from your bag, you carefully unwrap it before savoring the rich strawberry flavor in a few small bites.";
 		cheesecakeinfect;
-		decrease carried of cheesecake by 1;
+		ItemLoss cheesecake by 1;
 		if cheesecakemode is 0 and player is cheesecakebodied:
 			say "     Indulging in only a small serving of the rich cheesecake, your belly rumbles as your plump confectionary body slims down to become thin and sexy.";
 		now cheesecakemode is 1;

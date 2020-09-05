@@ -18,10 +18,11 @@ The File of PlayerSave (owned by another project) is called "FSPlayerSave".
 The File of NewPlayerSave (owned by another project) is called "FSNewPlayerSave".
 The File of PlayerListsSave (owned by another project) is called "FSPlayerListsSave".
 The File of BeastSave (owned by another project) is called "FSBeastSave".
+The File of BeastVariableSave (owned by another project) is called "FSBeastVariableSave".
 The File of NoteSave (owned by another project) is called "FSNoteSave".
 
 PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
-PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist", "Carnivorous Plant" };
+PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder" };
 
 an everyturn rule:
 	if Player is in NPC Nexus:
@@ -157,6 +158,9 @@ to EventRestore:
 		repeat with x running from 1 to the number of filled rows in the Table of GameEvents:
 			choose row x in the Table of GameEvents;
 			let EventIdName be Name entry;
+			[bugfixes for renamed events]
+			if EventIdName is "unused tool":
+				now EventIdName is "Unused Tool";
 			if there is a name of EventIdName in the Table of GameEventIDs:
 				let EventObject be the object corresponding to a name of EventIdName in the Table of GameEventIDs;
 				if ResolveState entry is "Resolved":
@@ -172,11 +176,12 @@ to EventRestore:
 				[bugfix code after re-naming Midway to Fair]
 				if sarea of EventObject is "Midway":
 					now sarea of EventObject is "Fair";
+				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";
+				]
 			else:
-				if debug is at level 10:
-					say "DEBUG -> [x]: EventIdName: [EventIdName] not found in Table of GameEventIDs!";
+				say "DEBUG -> [x]: EventIdName: [EventIdName] not found in Table of GameEventIDs! Please report this message on the FS Discord!";
 	else:
 		say "No Event Save File Found!";
 	blank out the whole of Table of GameEvents; [empty it after restoring]
@@ -235,11 +240,12 @@ to RoomRestore:
 					now RoomObject is sleepsafe;
 				else:
 					now RoomObject is not sleepsafe;
+				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] found and set to: [Reachability entry]; [ExplorationStatus entry]; [RestSafety entry]";
+				]
 			else:
-				if debug is at level 10:
-					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
+				say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
 	if the File of RoomInventorySave exists:
 		repeat with x running through rooms:
 			truncate Invent of x to 0 entries; [cleaning out the old data]
@@ -248,12 +254,12 @@ to RoomRestore:
 		repeat with x running from 1 to the number of filled rows in the Table of GameRoomInventories:
 			choose row x in the Table of GameRoomInventories;
 			let RoomIdName be RoomName entry;
-			if there is a name of RoomIdName in the Table of GameRoomIDs:
+			if there is a name of RoomIdName in the Table of GameRoomIDs: [room exists]
 				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
-				add ItemName entry to Invent of RoomObject;
+				if there is a name of ItemName entry in the Table of Game Objects: [item exists]
+					add ItemName entry to Invent of RoomObject;
 			else:
-				if debug is at level 10:
-					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
+				say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
 	else:
 		say "No Room Save File Found!";
 	blank out the whole of Table of GameRooms; [empty out all old data]
@@ -297,6 +303,8 @@ to PossessionRestore:
 		repeat with x running from 1 to the number of filled rows in the Table of GamePossessions:
 			choose row x in the Table of GamePossessions;
 			let PossessionIdName be Name entry;
+			[some small bugfixes due to items that got renamed]
+			if PossessionIdName is "sturdy jeans", now PossessionIdName is "dark-blue jeans";
 			if there is a name of PossessionIdName in the Table of Game Objects:
 				let PossessionObject be the object corresponding to a name of PossessionIdName in the Table of Game Objects;
 				now carried of PossessionObject is CarriedNumber entry;
@@ -310,11 +318,12 @@ to PossessionRestore:
 						now PossessionObject is cursed;
 					else:
 						now PossessionObject is not cursed;
+				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] found and set to: [carried of PossessionObject] carried and [stashed of PossessionObject] stored.";
+				]
 			else:
-				if debug is at level 10:
-					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] not found in Table of Game Objects!";
+				say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] not found in Table of Game Objects! Please report this message on the FS Discord!";
 	else:
 		say "No Possession Save File Found!";
 	blank out the whole of Table of GamePossessions; [empty out all old data]
@@ -422,7 +431,7 @@ to CharacterSave:
 		say "DEBUG -> File of TraitSave written.[line break]";
 
 to CharacterRestore:
-	if the File of CharacterVariableSave exists:
+	if the File of CharacterVariableSave exists: [new, expanded character variable file]
 		say "Restoring Characters...";
 		read File of CharacterVariableSave into the Table of GameCharacterVariables;
 		repeat with x running from 1 to the number of filled rows in the Table of GameCharacterVariables:
@@ -432,7 +441,7 @@ to CharacterRestore:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
 				if CharacterIdName is listed in PetList:
 					if debug is at level 10:
-						say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
+						say "DEBUG -> Pets are part of Player, thus they don't get moved.[line break]";
 				[
 				else if CharacterIdName is "yourself":
 					if debug is at level 10:
@@ -514,12 +523,13 @@ to CharacterRestore:
 				now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
 				now TwistedCapacity of CharacterObject is TwistedCapacity entry;
 				now Sterile of CharacterObject is Sterile entry;
+				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
+				]
 			else:
-				if debug is at level 10:
-					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs!";
-	else if the File of CharacterSave exists:
+				say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs! Please report this message on the FS Discord!";
+	else if the File of CharacterSave exists: [old file for backwards compatibility, only used if the new file does not exist]
 		say "Restoring Characters...";
 		read File of CharacterSave into the Table of GameCharacters;
 		repeat with x running from 1 to the number of filled rows in the Table of GameCharacters:
@@ -529,7 +539,7 @@ to CharacterRestore:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
 				if CharacterIdName is listed in PetList:
 					if debug is at level 10:
-						say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
+						say "DEBUG -> Pets are part of Player, thus they don't get moved.[line break]";
 				[
 				else if CharacterIdName is "yourself":
 					if debug is at level 10:
@@ -579,11 +589,12 @@ to CharacterRestore:
 				now OralVirgin of CharacterObject is OralVirgin entry;
 				now Virgin of CharacterObject is Virgin entry;
 				now AnalVirgin of CharacterObject is AnalVirgin entry;
+				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
+				]
 			else:
-				if debug is at level 10:
-					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs!";
+				say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs! Please report this message on the FS Discord!";
 	else:
 		say "No Character Save File Found!";
 	blank out the whole of Table of GameCharacters; [empty out all old data]
@@ -608,8 +619,10 @@ to TraitRestore:
 					add TraitText entry to Traits of CharacterObject;
 					if TraitText entry is "Tamed": [pets]
 						now CharacterObject is tamed;
+					[
 					if debug is at level 10:
 						say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
+					]
 	else:
 		say "No Trait Save File Found!";
 
@@ -1019,27 +1032,58 @@ to ChildrenRestore:
 
 to BeastSave:
 	say "Saving Beasts...";
-	blank out the whole of Table of GameBeasts; [empty out all old data]
-	if number of rows in Table of Random Critters > number of rows in the Table of GameBeasts: [making sure we got enough room for all situations]
-		say "Error! Not enough rows to save all Beasts in the Table of GameBeasts. Please report this on the FS Discord.";
-	repeat with x running from 1 to the number of filled rows in the Table of Random Critters: [rebuilds the table of GameBeasts with current data]
+	blank out the whole of Table of GameBeastVariables; [empty out all old data]
+	if number of rows in Table of Random Critters > number of rows in the Table of GameBeastVariables: [making sure we got enough room for all situations]
+		say "Error! Not enough rows to save all Beasts in the Table of GameBeastVariables. Please report this on the FS Discord.";
+	repeat with x running from 1 to the number of filled rows in the Table of Random Critters: [rebuilds the table of GameBeastVariables with current data]
 		choose row x in the Table of Random Critters;
 		let BeastName be Name entry;
 		let BeastArea be Area entry;
 		let BeastNonInfect be non-infectious entry;
 		let BeastSex be sex entry;
-		choose a blank row in the table of GameBeasts;
+		let BeastType be enemy type entry;
+		choose a blank row in the table of GameBeastVariables;
 		now Name entry is BeastName;
 		now Area entry is BeastArea;
 		now non-infectious entry is BeastNonInfect;
 		now sex entry is BeastSex;
-	write File of BeastSave from the Table of GameBeasts; [freshly made table gets saved to file]
-	blank out the whole of Table of GameBeasts; [empty after saving]
+		now enemy type entry is BeastType;
+	write File of BeastVariableSave from the Table of GameBeastVariables; [freshly made table gets saved to file]
+	blank out the whole of Table of GameBeastVariables; [empty after saving]
 	if debug is at level 10:
-		say "DEBUG -> File of BeastSave written.[line break]";
+		say "DEBUG -> File of BeastVariableSave written.[line break]";
 
 to BeastRestore:
-	if the File of BeastSave exists:
+	if the File of BeastVariableSave exists:
+		read File of BeastVariableSave into the Table of GameBeastVariables;
+		repeat with x running from 1 to the number of filled rows in the Table of GameBeastVariables:
+			choose row x in the Table of GameBeastVariables;
+			let BeastName be Name entry;
+			let BeastArea be Area entry;
+			let BeastNonInfect be non-infectious entry;
+			let BeastSex be sex entry;
+			let BeastType be enemy type entry;
+			[some small bugfixes due to renamed creatures]
+			if Beastname is "Ogre", now Beastname is "Ogre Male";
+			if Beastname is "Elven Hunter", now Beastname is "Elven Male";
+			if Beastname is "Rubber tigress", now Beastname is "Rubber Tigress";
+			if Beastname is "Football Gorilla", now Beastname is "Football Gorilla Male";
+			if there is a Name of BeastName in the Table of Random Critters:
+				choose row with Name of BeastName in Table of Random Critters;
+				now Area entry is BeastArea;
+				[bugfix code after re-naming Midway to Fair]
+				if Area entry is "Midway":
+					now Area entry is "Fair";
+				now non-infectious entry is BeastNonInfect;
+				now sex entry is BeastSex;
+				now enemy type entry is BeastType;
+				[
+				if debug is at level 10:
+					say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
+				]
+			else:
+				say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters! Please report this message on the FS Discord!";
+	else if the File of BeastSave exists:
 		read File of BeastSave into the Table of GameBeasts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameBeasts:
 			choose row x in the Table of GameBeasts;
@@ -1055,11 +1099,12 @@ to BeastRestore:
 					now Area entry is "Fair";
 				now non-infectious entry is BeastNonInfect;
 				now sex entry is BeastSex;
+				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
+				]
 			else:
-				if debug is at level 10:
-					say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters!";
+				say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters! Please report this message on the FS Discord!";
 	else:
 		say "No Beast Save File Found!";
 	blank out the whole of Table of GameBeasts; [empty out all old data]
@@ -1099,8 +1144,8 @@ To say ProgressionExport:
 	if Player consents:
 		LineBreak;
 		if Player is not lonely:
-			say "     Preparing to travel to an alternate reality, you send your current companion away to await this in a safe place.";
-			try Dismissing;
+			say "     Preparing to travel to an alternate reality, you send your current ally away to await this in a safe place.";
+			try DismissPlayerPet;
 		if wrcursestatus is 5:
 			wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 		LineBreak;
@@ -1155,13 +1200,13 @@ Trixie is a person. Trixie is in Grey Abbey Library.
 
 The scent of Trixie is "Trixie smells of broken universes and rewritten fate. How anything can smell like that or how you can even know that smell disturbs you to your very core.".
 
-The description of Trixie is "[Trixiedesc]".
+Description of Trixie is "[Trixiedesc]".
 
 to say Trixiedesc:
 	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Support us at: https://www.patreon.com/FS'[line break]";
 	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'. Hmmm.";
 	say "     She's also found a ballcap on that says 'Using [link]Export Progress[end link] will save your progress for transfer to a new game version. [link]Import Progress[end link] should restore everything in the new version.' That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
 
-The conversation of Trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [link]Import Progress[end link]. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
+Conversation of Trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [link]Import Progress[end link]. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
 
 Story Skipper ends here.

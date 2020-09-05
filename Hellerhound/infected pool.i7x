@@ -8,7 +8,8 @@ Object	Name
 Pure Pool	"Pure Pool"
 
 Pure Pool is a situation.
-The sarea of Pure Pool is "Park".
+ResolveFunction of Pure Pool is "[ResolveEvent Pure Pool]".
+Sarea of Pure Pool is "Park".
 PurePoolSeen is a truth state that varies. PurePoolSeen is usually false.
 PurePoolPolluted is a truth state that varies. PurePoolPolluted is usually false.
 PurePoolPollutedByPlayer is a truth state that varies. PurePoolPollutedByPlayer is usually false.
@@ -16,7 +17,7 @@ PurePoolPollutedByPlayer is a truth state that varies. PurePoolPollutedByPlayer 
 when play begins:
 	add Pure Pool to BadSpots of FemaleList;
 
-instead of resolving Pure Pool:
+to say ResolveEvent Pure Pool:
 	if PurePoolSeen is false:
 		say "     You smell in the air a slight difference, seeming cleaner, more pure. You look around for the source.";
 		say "     You come across a pool of water in the park. Unlike the puddles in the city, this one is clean and clear, and you can see the red stones at the bottom. You take a small drink and feel less thirsty.";

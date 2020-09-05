@@ -32,8 +32,8 @@ AnalVirgin of Bryony is false.
 PenileVirgin of Bryony is false.
 SexuallyExperienced of Bryony is true.
 MainInfection of Bryony is "Black Equinoid".
-The description of Bryony is "[BryonyDesc]".
-The conversation of Bryony is { "Watch yourself." }.
+Description of Bryony is "[BryonyDesc]".
+Conversation of Bryony is { "Watch yourself." }.
 The scent of Bryony is "     Bryony smells distinctly masculine, a strong equine musk wafting from her body. Hints of soap and floral perfume barely mask the scent of her virility.".
 
 The HP of Bryony is usually 0.
@@ -399,17 +399,13 @@ to say BryonyGuard3:
 		let randomnumber be a random number from 1 to 4;
 		if randomnumber is:
 			-- 1:
-				say "[bold type]You gain some food![roman type][line break]";
-				increase carried of food by 1;
+				ItemGain food by 1;
 			-- 2:
-				say "[bold type]You gain a water bottle![roman type][line break]";
-				increase carried of water bottle by 1;
+				ItemGain water bottle by 1;
 			-- 3:
-				say "[bold type]You gain a bag of chips![roman type][line break]";
-				increase carried of chips by 1;
+				ItemGain chips by 1;
 			-- 4:
-				say "[bold type]You gain a can of soda![roman type][line break]";
-				increase carried of soda by 1;
+				ItemGain soda by 1;
 		LineBreak;
 	else:
 		say "sends you off again, feeling good about helping around the camp.";

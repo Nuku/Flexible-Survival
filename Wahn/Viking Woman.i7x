@@ -120,10 +120,10 @@ to say Viking wins:
 						say "     'What kind of monster are you, meekly surrendering to me? I was told there are powerful beasts in the world, not... this.' With a scoff, she shoves you to the ground. 'Let's see if you've at least got something worth taking.' With that, she starts poking around in your stuff.";
 						if carried of food >= 1:
 							say "     Finding some food in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without any look back.";
-							decrease carried of food by 1;
+							ItemLoss food by 1;
 						else if carried of water bottle >= 1:
 							say "     Finding a bottle of water in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without a look back.";
-							decrease carried of water bottle by 1;
+							ItemLoss water bottle by 1;
 						else:
 							say "     Not finding anything to her liking as she throws one after another of your belongings aside, the Viking woman grumbles 'What a waste of time.' Then she turns away from you and walks off, leaving you lying in the dust without any look back.";
 				else if VikingRelationship is 2: [submit after one victory]
@@ -144,10 +144,10 @@ to say Viking wins:
 						say "     'Hmph - you're just another of those weaklings that run around like frightened chickens when they're raided. I had hoped to find somewhat more impressing people in this new land.' With a scoff, she shoves you to the ground. 'Let's see if you've at least got something worth taking.' With that, she starts poking around in your stuff.";
 						if carried of food >= 1:
 							say "     Finding some food in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without any look back.";
-							decrease carried of food by 1;
+							ItemLoss food by 1;
 						else if carried of water bottle >= 1:
 							say "     Finding a bottle of water in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without a look back.";
-							decrease carried of water bottle by 1;
+							ItemLoss water bottle by 1;
 						else:
 							say "     Not finding anything to her liking as she throws one after another of your belongings aside, the Viking woman grumbles 'What a waste of time.' Then she turns away from you and walks off, leaving you lying in the dust without any look back.";
 				else if VikingRelationship is 2: [submit after one victory]
@@ -169,10 +169,10 @@ to say Viking wins:
 						say "     Leaving you dazed with her last blow, she gives you a shove and you fall on your ass. 'A bit weak for a monster, aren't you? Oh well, maybe you're just a stunted one.' Looking down on your prone form, she lets her gaze wander over you appraisingly. 'Let's see if you've at least got something worth taking.' With that, she starts poking around in your stuff.";
 						if carried of food >= 1:
 							say "     Finding some food in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without any look back.";
-							decrease carried of food by 1;
+							ItemLoss food by 1;
 						else if carried of water bottle >= 1:
 							say "     Finding a bottle of water in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without a look back.";
-							decrease carried of water bottle by 1;
+							ItemLoss water bottle by 1;
 						else:
 							say "     Not finding anything to her liking as she throws one after another of your belongings aside, the Viking woman grumbles 'What a waste of time.' Then she turns away from you and walks off, leaving you lying in the dust without any look back.";
 				else if VikingRelationship is 2: [loss after one victory]
@@ -193,10 +193,10 @@ to say Viking wins:
 						say "     Leaving you dazed with her last blow, she gives you a shove and you fall on your ass. 'A bit weak for a monster, aren't you? Oh well, maybe you're just a stunted one.' Looking down on your prone form, she lets her gaze wander over you appraisingly. 'Let's see if you've at least got something worth taking.' With that, she starts poking around in your stuff.";
 						if carried of food >= 1:
 							say "     Finding some food in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without any look back.";
-							decrease carried of food by 1;
+							ItemLoss food by 1;
 						else if carried of water bottle >= 1:
 							say "     Finding a bottle of water in your pack, she puts it in her satchel and then walks away, leaving you lying in the dust without a look back.";
-							decrease carried of water bottle by 1;
+							ItemLoss water bottle by 1;
 						else:
 							say "     Not finding anything to her liking as she throws one after another of your belongings aside, the Viking woman grumbles 'What a waste of time.' Then she turns away from you and walks off, leaving you lying in the dust without any look back.";
 				else if VikingRelationship is 2: [loss after one victory]
@@ -784,8 +784,8 @@ to say VikingWomanAttacks:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -805,7 +805,7 @@ When Play begins:
 	now desc entry is "[VikingDesc]";
 	now face entry is "a handsome young woman's, framed by a mane of shoulder-long, unkempt blond hair";
 	now body entry is "that of a young woman, quite fit and healthy. It is garbed in a woolen tunic and pants, plus a pair of leather boots";
-	now skin entry is "smooth, pale"; [ format as "You have (your text) skin"]
+	now skin entry is "smooth, pale"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a tight, firmly muscled butt."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a handsome female visage. Your hair turns into a shoulder-length blond mane"; [ format as "Your face feels funny as (your text)." ]
@@ -836,6 +836,9 @@ When Play begins:
 	now libido entry is 10;                [ Amount player Libido will go up if defeated ]
 	now loot entry is "mead horn";         [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 40;            [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;                  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "Nordic"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "human";             [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -850,7 +853,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -957,10 +960,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Chieftain's Challenge	"Chieftain's Challenge"
 
-Chieftain's Challenge is a situation. The level of Chieftain's Challenge is 1. Chieftain's Challenge is inactive.
-The sarea of Chieftain's Challenge is "Beach".
+Chieftain's Challenge is a situation.
+ResolveFunction of Chieftain's Challenge is "[ResolveEvent Chieftain's Challenge]".
+The level of Chieftain's Challenge is 1. Chieftain's Challenge is inactive.
+Sarea of Chieftain's Challenge is "Beach".
 
-Instead of resolving a Chieftain's Challenge:
+to say ResolveEvent Chieftain's Challenge:
 	if the player is not facially human or the player is not bodily human or the player is not skintone human: [they see the player as a monster]
 		say "     Arriving at the rocky part of the beach, you find an armored gray-bearded Viking waiting for you there. The old man glowers at you as you come closer, then calls in a disparaging tone 'So you actually showed up, outlander monster. I'd have expected you to run like a coward.' Turning from you to climb on the largest of the rocks, he waves to the viking ship out in the ocean, signaling them. You see smaller boats getting lowered into the water, Vikings getting in them and rowing towards the shore. 'It won't be long until the clan is here to witness your death. Chief Frithjof will gut you for what you did to Sonya,' the old man says as he climbs back down and leans against the rocks to watch the ship and boats.";
 		WaitLineBreak;
@@ -1051,8 +1056,8 @@ to say VikingDuelVictory:
 	else:
 		say "     You smile at Sonya, but shake your head, telling her it'd be too cruel to show all those men and women a perfect body - her perfect body - that they can never have. Not that you aren't tempted, you say with a grin, goosing Sonya's ass playfully. 'As you wish, [if Player is purefemale]my wife[else]my husband[end if],' she says, then gives you another quick kiss before going to fill your mead-horns again. Stories of battles and raids told by the other Vikings follow, although with another mead cask soon empty, the tales get more and more incomprehensible.";
 		say "     Nevertheless, the party is great fun - at least what you remember of it when you wake up several hours later, lying in a pile of furs next to Sonya on her bed. Seems like the two of you wanted to get some action going at some point, but drunkenly fell asleep before you got more than halfway undressed. With a wince at the hangover almost splitting your skill, you stand up quietly, leaving your wife to sleep hers off in peace. Going back on deck, you find one man who isn't quite as bad off as yourself, then let him row you back to shore. As you leave the boat, he tells you how you can signal for a pickup when you want to return to the [bold type]Viking Ship[roman type].";
-	increase carried of viking sword by 1;
-	now Viking Ship is known;
+	ItemGain viking sword by 1;
+	AddNavPoint Viking Ship;
 	now VikingRelationship is 20;
 
 to say VikingPublicSex:
@@ -1067,7 +1072,7 @@ to say VikingPublicSex:
 		WaitLineBreak;
 		say "     ...and that is where you fell asleep too, only awakening several hours later beside Sonya, on a ship full of still-dozing or already awake and hung-over Vikings. Having to get back to your efforts of surviving in this new world, you find one man who isn't quite as bad off, then let him row you back to shore. As you leave the boat, he tells you how you can signal for a pickup when you want to return to the [bold type]Viking Ship[roman type].";
 		NPCSexAftermath Sonya receives "PussyFuck" from Player;
-		now Viking Ship is known;
+		AddNavPoint Viking Ship;
 		if VikingPregnancy is 0: [not already preggers]
 			let VikingPregChance be a random number from 1 to 20;
 			if VikingPregChance > 10: [50% chance]
@@ -1108,7 +1113,7 @@ Object	Name
 Viking Ship	"Viking Ship"
 
 Viking Ship is a room. It is a fasttravel. Viking Ship is private.
-The description of Viking Ship is "[VShipDesc]".
+Description of Viking Ship is "[VShipDesc]".
 
 to say VShipDesc:
 	if daytimer is day:
@@ -1150,7 +1155,7 @@ Object	Name
 Sonya's Cabin	"Sonya's Cabin"
 
 Sonya's Cabin is a room.
-The description of Sonya's Cabin is "[SCDesc]".
+Description of Sonya's Cabin is "[SCDesc]".
 
 to say SCDesc:
 	say "     Sonya's cabin is relatively big - being the chieftain's daughter has its perks - and sports a bed big enough for two, covered in soft furs. You can see that it's bolted to the wooden floorboards, just like the two chests that stand against the opposite wall. Not much for loose clutter, these vikings - those three items are the only furniture in here. But then, that's just a sensible thing to do, avoiding things being thrown around in a storm... and also allowing to do all kinds of sexy stuff in the bed without it knocking against the neighboring cabin wall.";
@@ -1228,8 +1233,8 @@ SexuallyExperienced of Sonya is true.
 MainInfection of Sonya is "Human".
 The HP of Sonya is normally 0.
 Sonya is in Sonya's Cabin.
-The description of Sonya is "[SonyaDesc]".
-The conversation of Sonya is { "Mew!" }.
+Description of Sonya is "[SonyaDesc]".
+Conversation of Sonya is { "Mew!" }.
 
 instead of sniffing Sonya:
 	say "Sonya has a pleasant feminine smell.";
@@ -1686,7 +1691,7 @@ instead of sniffing mead horn:
 say "You open the stopper for a moment and take a sniff. Mmmh! Delicious honey-wine.";
 
 mead horn is a grab object.
-the usedesc of mead horn is "[mead horn use]";
+Usedesc of mead horn is "[mead horn use]";
 
 
 to say mead horn use:
@@ -1705,16 +1710,7 @@ to VikingWomanInfect:
 	infect "Viking Woman";
 	now non-infectious entry is true;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"viking sword"	"A beautifully crafted sword, about 30 inches long, with a keen edge to its blade. The favorite weapon of your Viking wife, Sonya, it became yours as you married. Better take good care of it - it's a pretty good weapon, well-balanced... and there might be some marital problems ahead if you let it rust or lose it."	5	viking sword
-
-viking sword is an armament.
-It is part of the player.
-It has a weapon "shining steel blade". The weapon damage of viking sword is 8. The weapon type of viking sword is "Melee". It is not temporary. The objsize of viking sword is 2.
-
-Instead of sniffing viking sword:
-	say "The blade smells of nothing but metal. Sonya always kept it clean without fail, and you've done the same since you got it.";
+[Viking Sword moved to Core Mechanics/Weapons.i7x]
 
 
 [

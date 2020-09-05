@@ -10,8 +10,8 @@ object	name
 Lance	"Lance"
 
 Lance is a man.
-The description of Lance is "     Leaning against the bar casually is the lithe avian form of the black swan you rescued from the clutches of the hyenas. He is now dressed in a loose black studded outfit, with lots of extra buckles, and his new beak already sports several piercings, which jingle slightly as he bobs his head to the loud music happily.".
-The conversation of Lance is { "Honk!" }.
+Description of Lance is "     Leaning against the bar casually is the lithe avian form of the black swan you rescued from the clutches of the hyenas. He is now dressed in a loose black studded outfit, with lots of extra buckles, and his new beak already sports several piercings, which jingle slightly as he bobs his head to the loud music happily.".
+Conversation of Lance is { "Honk!" }.
 The fuckscene of Lance is "[nosexwithlance]".
 
 the scent of Lance is "He smells like an avian male with the scents of gay sex clinging to his feathers.".
@@ -23,13 +23,13 @@ instead of conversing the Lance:
 	else if HP of Lance is 1:
 		say "     'I know you've already done me a huge favor just by finding and rescuing me from that mess, but...' he pauses momentarily to look at his dancing lover on stage. 'But I could us a bit of help. I want to get a nice gift for my special bird. Since you're still out there braving the city, I was hoping you'd be able to get something for me to give him. I don't really have much to repay you, but I'd really appreciate it.'";
 		say "     He passes you a pink business card for a lingerie shop. 'I got this from one of the dancing girls. She used to get her things there. My sweetie's into wearing women's lingerie sometimes for our special, private fun. Go there and pick out something hot for him. Oh, here's his measurements,' he adds, stuffing a folded note into your hand as well.";
-		now Lingerie Store is known;
+		AddNavPoint Lingerie Store;
 		now HP of Lance is 2;
 	else if sexy nightie is owned and HP of Lance < 4:
 		say "     Motioning for Lance to come over, you slip to a less busy spot and let him know you've gotten a sexy nightie for his boyfriend. He smiles and bounces from foot to foot. 'Good goin['], hon. Let's see it!' he says eagerly. Slipping it out of your pack, you let him have a peek inside. He gives an appreciative whistle as he looks it over. 'Sweeeet! Great job, [if Player is female]babe[else]man[end if]! He's going to soooo love it.' He quickly shuts the box and holds it behind his back, doing a shuffling walk as he slips out of sight before his boyfriend or anyone else spots the package and the surprise is ruined.";
 		increase score by 20;
 		now HP of Lance is 4;
-		now carried of sexy nightie is 0;
+		ItemLoss sexy nightie by 1;
 	else if ( HP of Lance is 2 or HP of Lance is 3 ) and a random chance of 1 in 4 succeeds:
 		say "     [one of]'Please don't forget about finding something for my BF at that [bold type]lingerie store[roman type] I told you about.'[or]'Be sure to pick out something nice for my honey-birdie at that [bold type]lingerie store[roman type] I told you about.'[at random]";
 	else if HP of Lance is 4:

@@ -1,7 +1,9 @@
-Doran by Blue Bishop begins here.
-[ Version 3.0: Documentation and structure updates                           ]
+Version 4 of Doran by Blue Bishop begins here.
 
 "Adds Doran to Flexible Survival's Wandering Monsters table"
+
+[ Version 3.0: Documentation and structure updates]
+[ Version 4: Added Section for special scenes. Added 1 Dom Scene with possible OV ending - Gherod]
 
 Section 1.0 - Doran Coding Miscellany
 
@@ -55,7 +57,7 @@ when play begins:
 [   1 = Strict sex autofire                                                  ]
 [   2 = Loose sex autofire (wait 2 days after having sex)                    ]
 
-[ DoranPlayerBlueballing - Boolean, Doran Blue-Balling of the player         ]
+[ DoranPlayerBlueballing - Boolean, Doran Blue-Balling the player            ]
 [   false = Initial. Nothing happens                                         ]
 [   true = Player has been blue-balled in the scene                          ]
 
@@ -167,10 +169,10 @@ to say Doran_Lose:
 		if a random chance of 1 in 2 succeeds and DoranFoodTimer - turns >= 16:
 			if a random chance of 1 in 2 succeeds:
 				say ". He even returns a few seconds later, bottle of water in maw, before setting it down in front of you and retreating a second time, extremely peculiar...";
-				add "water bottle" to invent of Player;
+				ItemGain water bottle by 1;
 			else:
 				say ". He even returns a few seconds later, can of food in maw, before setting it down in front of you and retreating a second time, extremely peculiar...";
-				add "food" to invent of Player;
+				ItemGain food by 1;
 			now DoranFoodTimer is turns;
 		else:
 			say ".";
@@ -257,7 +259,7 @@ to say Doran_Beat:
 		say "     You point out that you lack the proper equipment, and thusly have little to gain from such an interaction. This revelation seems to confuse him a fair bit, but he otherwise concedes.";
 		say "     'Very well; however, if things change for my victor, I'm always available.' He goes on to explain where he resides. Apparently there's a cave within a not-too-distant [bold type]Rocky Outcropping[roman type], and his instructions are clear enough that you should have no issue getting there, 'Doran's the name, by the way.'";
 		say "     Once he's done, he makes to leave in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
-	now the rocky outcropping is known;
+	AddNavPoint Rocky Outcropping;
 	choose row MonsterID from the Table of Random Critters;
 	now area entry is "Nowhere";
 
@@ -387,8 +389,8 @@ to say DoranVictory_TurnDown: [turn down]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -435,6 +437,9 @@ When Play begins:
 	now libido entry is 45;
 	now loot entry is "";
 	now lootchance entry is 0;
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;
 	now body descriptor entry is "draconic";
 	now type entry is "draconic";
@@ -449,7 +454,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -557,7 +562,7 @@ Rocky Outcropping	"Rocky Outcropping"
 
 Rocky Outcropping is a room. It is fasttravel. It is private. It is sleepsafe.
 Outcropping Exit is a door. Outcropping Exit is dangerous. The marea of Outcropping Exit is "Plains". Outcropping Exit is undescribed. Outcropping Exit is east of Rocky Outcropping.
-the description of Rocky Outcropping is "[RockyOutcroppingDescription]".
+Description of Rocky Outcropping is "[RockyOutcroppingDescription]".
 to say RockyOutcroppingDescription:
 	dorangendercheck;
 	say "     The cavernous alcove, of which Doran resides in, is quite large and spacious for the [gdragon]. You find it littered with various bits and baubles [ghe]'s no doubt stumbled upon and collected for [ghis] amusement, though nothing of particular interest or value catches your eye. It's a little unkempt, but isn't all that bad all things considered. [if daytimer is day]For the most part, light floods in from the cave's entrance, though there's also a campfire near the cave's center which still contains a few errant, glowing embers, indicative of its recent use[else]Faint starlight creeps in from the outside, though the main source of illumination remains [ghis] roaring campfire at the cave's center[end if]. No doubt the surrounding outcropping of stone shields the place from the wind, making the cave relatively calm and quiet.";
@@ -594,7 +599,7 @@ PenileVirgin of Doran is true.
 SexuallyExperienced of Doran is false.
 MainInfection of Doran is "Peculiar Dragon".
 the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link], [link]discuss[as]discuss doran[end link][line break]".
-the description of Doran is "[DoranLook]".
+Description of Doran is "[DoranLook]".
 the fuckscene of Doran is "[DoranSex]".
 
 instead of sniffing Rocky Outcropping:
@@ -766,6 +771,12 @@ to say DoranSexMenu: [Doran Sex Protocol]
 		now sortorder entry is 10;
 		now description entry is "Give [ghim] a taste";
 		[]
+		if DoranRole <= 0 and DoranRoleIntensity is 0 and DoranSelfGender is false and player is not dominant: [Male and Dominant only, for submissive or neutral(experimenting or versatile) players]
+			choose a blank row from table of fucking options;
+			now title entry is "Submit to Doran and worship [ghis] cock";
+			now sortorder entry is 11;
+			now description entry is "Give the [gdragon] your best treatment as his submissive";
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows from table of fucking options:
 			choose row y from the table of fucking options;
@@ -805,6 +816,9 @@ to say DoranSexMenu: [Doran Sex Protocol]
 								say "[DoranDom_RidingBehind]"; [Riding Behind]
 						-- 10:
 							say "[DoranDom_Oral]"; [oral sex scene]
+						-- 11:
+							say "[DoranDom_SubmitWorshipCockSoft]"; [oral sex scene, but more dominant, in a soft manner]
+					wait for any key;
 			else if calcnumber is 0:
 				say "     Change your mind and do something else?";
 				if Player consents:
@@ -2745,7 +2759,7 @@ to say DoranBodyModMenu: [NEW! Body Modification]
 							say "     'Ah, [DoranPlayerRegard] has reconsidered, by the looks of it! As I said before, I suppose a particularly virile strain of seed would augment my own. I imagine it'd take a lot longer to clean up the messes afterwards! [if DoranInternal is false]I'm guessing it would also alter the size of certain 'assets', as an additional side effect. [end if]Does this prospect excite [DoranPlayerRegard]?'";
 						if Player consents:
 							say "[DoranModBallsMenu]"; [Modify Balls/Cum]
-							delete tappeditem;
+							ItemLoss tappeditem by 1;
 						else:
 							say "     'Very well, [DoranPlayerRegard]. Don't be afraid to ask me about it again if you change your mind.'";
 						now Trixieexit is 1;
@@ -2810,7 +2824,7 @@ to say DoranBodyModMenu: [NEW! Body Modification]
 							say "     'Hm? ...Oh! This again. Yes, I'm certain these will give me breasts, if that's what [DoranPlayerRegard] wishes.'";
 						if Player consents:
 							say "[DoranModTitsMenu]"; [Modify Tits]
-							delete tappeditem;
+							ItemLoss tappeditem by 1;
 						else:
 							say "     'Very well, [DoranPlayerRegard]. Don't be afraid to ask me about it again if you change your mind.'";
 						now Trixieexit is 1;
@@ -3079,10 +3093,10 @@ to say DoranGetFood: [Food requisition/NEW! Breastfeeding]
 		else:
 			if DoranFoodType is 1:
 				say "     'Ah, yes! I found some water, maybe it will help [DoranPlayerRegard]?' [gche] hands it over to you.";
-				add "water bottle" to invent of Player;
+				ItemGain water bottle by 1;
 			else:
 				say "     'Ah, yes! I found some food, maybe it will help [DoranPlayerRegard]?' [gche] hands it over to you.";
-				add "food" to invent of Player;
+				ItemGain food by 1;
 			now DoranFoodType is a random number between 1 and 2;
 		now DoranFoodTimer is turns;
 	else:
@@ -4297,7 +4311,7 @@ blued is an action applying to nothing. [Developer Cheat]
 understand "blue dawn" as blued.
 carry out blued:
 	say "It is done.";
-	now Rocky Outcropping is known;
+	AddNavPoint Rocky Outcropping;
 
 to say doranmusing: [Requires first talking to Doran]
 	say "     You decide to summon Velos before a slightly confused Doran. It takes a moment for the serpent to oblige this request, and when [ghe] pulls out and sees the [gdragon], [ghe] immediately cries out in abject terror. Doran [ghim]self looks equally terrified at the sight of the serpent.";
@@ -4305,7 +4319,54 @@ to say doranmusing: [Requires first talking to Doran]
 	say "     '[DoranPlayerRegard], I beg of them, if they have other friends, don't bring them to me.' Instinctively, you ask why, to which [ghe] reels back slightly, 'I beg once more, [DoranPlayerRegard], what we share must between us only.' [gche] won't budge any further on the subject, and you're ultimately forced to leave it at that.";
 	add 24 to velospostmusings;
 
-Section 6 - Endings
+Section 6 - Special Scenes
+
+[By Gherod]
+[]
+[This section contains scenes written in a very different style, which are kept separate for organizations' sake. The idea is to keep the main idea about Doran as a character, but with more detailed scenes and less invasive variations, hence why most scenes have these locked beforehand.]
+
+to say DoranDom_SubmitWorshipCockSoft: [Oral Sex, but more Dominant, in a soft manner]
+	say "     You approach Doran with your intentions clear, forwarding your suggestion to him in a manner he understands immediately. With a smirk on his face, he sarcastically questions your desire to fully submit to him in such ways. 'And does my [DoranPlayerRegard] understand what that entails?' his words come delivered to you in a much more commanding tone as his emphasizes his regal posture, standing straight up and overshadowing you with his impressive draconic frame. His assertive posture and slightly stretched wings to further augment the size difference between you immediately touches you in a way that makes you feel very submissive to the large beast. While he ostentatiously flaunts his private areas, the tip of his knotted dick points out of his sheathe with only the eagerness to expand forward.";
+	say "     Feeling the need to look at him in the eye, turning your head upwards, you nod, encouraging his grin to spread across his face in satisfaction. 'Good... I deeply appreciate when my [DoranPlayerRegard] knows [PosAdj] place. It pleases me considerably.' Licking his lips in antecipation, you soon notice his sizable draconic cock growing towards you, as he shamelessly lets you observe. Without any further words, he simply points at you with one finger, which you follow with your gaze, as he guides it to his masculine appendage, which keeps rising to attention. Then, he gestures you to come, eyeing you at every second with each step you take towards his beastly dong. 'Perhaps it would be best if you began pleasuring me. I only reward the good [boygirl]s...' he says, leaning back a bit, comfortably enough to begin enjoying his time as you provide him your special service.";
+	WaitLineBreak;
+	say "     Kneeling in front of the magnificent beast that Doran is, you bring your hands over his still expanding cock, giving it some tentative strokes as you feel it harden in your grasp, ever until his knot swells, a signal that his manhood is primed to its highest state of erection. As it is now throbbing in clear appreciation to your caressing touch, you lean in for a gently kiss around the gleaming pointy tip, a tingle that releases a small, breathy moan of pleasure from the dragon's mouth. 'Take your time truly worshipping my cock... you will be my slave for the next few hours. I hope you didn't have anything important to do out there...' - he makes a pause, observing you taking your tongue all around his shaft quite diligently - 'That is, more important than serving me... Which I doubt.' He finishes with a cocky chuckle, while ever so slightly patting on the back of your head, encouraging you to give in deeply to him.";
+	say "     There is no reason to offer any resistance, so you simply put your hands to work around his [if DoranBallModStatus >= 0]expanded balls, full to the brim[else]taut ballsack[end if] yearning to your touch like the two magnificent orbs that they are, while you work with your lips and tongue to kiss and lick all over that masterpiece of a dragon cock. Pleased with your efforts, Doran lean his head back, letting you do your thing as he focuses on the sensations you are giving, the long dragon truly enjoying being under your care. You even plant a bigger kiss around his knot, already tempted to swell given the immense pleasure your teasing is giving him. 'Ohh... I might have to think about keeping you here forever... I could get used to having such a good slave...' he teases you, returning his gaze back at you, then pushing your head back to the tip of his cock. 'Go on, put it in... I want to see your lips stretch before my appendage.' he orders, with another grin spread across his face.";
+	WaitLineBreak;
+	say "     Following his demands, you do exactly as his words command you to do, pushing his great, pulsing rod into your mouth, your lips parting to accomodate his thickness inside you, only greeted by your tongue which eagerly wiggles around the pointy tip by the time it arrives inside. You keep pushing, all the way until it pokes at the back of your throat, which makes your dragon master smile in satisfaction. 'Mmmh... That's it... Ohh you're such a good [boygirl], aren't you? I bet you can take more of it...' he suggests, once more grinning at you, as you took barely half of the entirety of his eighteen inches of pure dragon dick, throbbing every second, with a special spike taking place just now. 'Take your time... I won't force it in... This time, at least...' adds the horny draconic beast, brushing against your cheek in an almost jokingly manner.";
+	say "     With a push, you attempt to take more of his length inside you, letting it slide into your throat with the bravery it required. Doran moans, feeling his cock sink in deeper in your mouth, barely managing to keep his eyes open. 'Yesss... Oh, that's right... So right...' he keeps grunting slightly, and you start to sense a slight, albeit gentle, pressure on the back of your head, suggesting you should keep pushing. Already unable to breathe with so much dragon cock clogging your respiratory tract, you keep attempting your best at taking the rest of it in you, as much as possible. The dragon only keeps you in place, making you hold it in for as long as he desires. 'This is where you belong... With my manhood deeply allodged inside of you, providing me all the pleasure I crave... Isn't that right, my [DoranPlayerRegard]?' You can hardly answer in such a state, only managing a severely muffled moan that seems to actually feel good to him. 'Mhm... Of course it is... Glad you agree with me.'";
+	WaitLineBreak;
+	say "     With tears running down your watery eyes, you are finally allowed to pull back and catch a well deserved breath, but the dragon's prick hasn't been completely satisfied yet. If anything, it just grew harder, more eager for your attention. 'Now if you keep doing that a few more times, you might get your reward...' he playfully winks at you, brushing his clawed paws against your face once more, perhaps in an attempt to wipe it clean of any water drops. But as he does this, he gently pulls you to his cock once again, poking at your lips sooner than you had intended. The dragon's persistance, however, does not discourage you. With the promise of a reward, you do your best to correspond to his expectations, promptly opening wide to receive his sizable dong back inside.";
+	say "     This time, you do not let it simply linger before your throat. If anything, you receive it more eagerly, twirling your tongue around the tip of his cock as soon as you are able, while pushing it deeper inside, soon to meet the back of your mouth and sink back right in your throat. You want to give your best, to show him that you are worthy of his reward, so you pull it in, as deep as it can go. 'Mmh... my [DoranPlayerRegard] is getting the hang of it...' he comments, as you continue to get more and more of his many inches down your throat, until you're once again holding it all in for his pleasure. He shows you a great smile, nodding at you to keep going... And you know immediately what he means. Pulling slightly to allow yourself a quick recovery, you then shove it all back in, holding for a few more seconds, repeating the same after that... over... and over again...";
+	WaitLineBreak;
+	say "     You catch yourself deepthroating Doran with so much effort that it gets the elongated beast humping against your mouth, grunting as a dragon would facing a situation of great pleasure. He delivers no additional words to you, his body language speaking for itself. At some point, you're barely moving your head, as he thrusts in and out of your throat to his heart's content, simply holding you in place as you keep taking his draconic dong, slamming the swollen knot against your lips in a rather rough manner, but not enough for it to be actually disregardful towards you. You maintain your very best posture in order to keep receiving his cock, and that eventually proves fruitful when he manages to muster a few words amidst his ecstactic state. 'You've been a really... good [boygirl]...' he says, pausing for a grunt he cannot contain - 'Are you ready for your reward...? It's coming, now...' ending with an intensification of movements, to which you can only endure as your throat is thoroughly fucked by the dragon...";
+	say "     It is not too long until you can hear Doran release a prolonged grunt, his whole body shaking in bliss as you feel his climax coming at full speed. He then grabs your head, holding it in place - yes, even tighter than before - as he gives a deep thrust into your throat. Then, you feel a large, warm spurt, followed by another, and another, being shot right down to your stomach, as he has you drinking his load until the very last drop[if DoranBallModStatus >= 0], which given the size of his augmented balls, only keeps on going and going until your belly starts to swell with the absurd amount of cum the dragon manages to pump into you[else], which is a lot of cum that ends up resting in your belly, making you feel stuffed with all the spunk sloshing inside[end if]. The rest of his dragon seed ends up in your face, as you have to pull out to catch a much needed breath before you fainted. Even then, his cock throbs a few more drops as his orgasm subsides, the magnificent beast looking down on you with clear satisfaction painted in his face.";
+	WaitLineBreak;
+	say "     'I must say that my [DoranPlayerRegard] is quite proficient at pleasing me this way. Perhaps I shall use [ObjectPro] in the future, whenever I feel like it. I'm certain [SubjectPro] would make time for the privilege to serve me.' says Doran with the biggest grin, once again brushing his clawed paws against your face, picking up any leftovers of his seed and directing them towards your lips. 'Come, now... we shouldn't let that go to waste...' he adds, while having you lick his fingers off any cum you haven't managed to swallow, something you obediently do while maintaining eye contact with your draconic master.";
+	if DoranVoreStatus is 2: [Vore is active]
+		say "     As he keeps having you in his grasp, the big dragon begins to lick his own lips as his breathing deepens somewhat, unconsciously pulling you closer to him. You feel yourself laying your hands on his scaled body, thicker than you are, as a true dragon would be, and gives you a glare that looks more hungry than horny. 'I'm wondering... would my [DoranPlayerRegard] appreciate a second reward? One that would also please me greatly...' he asks you, as he suggestively rubs his own belly. You know by then what he really means...";
+		Linebreak;
+		say "     ([link]Y[as]y[end link]) - Allow the dragon to make you his meal.";
+		say "     ([link]N[as]n[end link]) - Humbly reject his reward.";
+		if player consents:
+			Linebreak;
+			DoranDom_SubmitOralVore;
+		else:
+			say "     With all due respect to your draconic superior, you let him know that you will have to reject his proposal, as you do not feel worthy enough of receiving it just yet. He takes your response with utmost respect. 'Such dedication! Very well, then. There will be plenty of opportunities to prove yourself to me some more.' He lets go of you before finishing. 'For now, you may go... I must have need of you soon enough, so it would be best for both of us that you don't keep me waiting for long.' he lets you know, with his extraordinarily regal mannerisms, that you have obligations as his [DoranPlayerRegard] towards him. Perhaps you wouldn't mind doing this more regularly...?";
+	else:
+		say "     'Very well, you may go now. I must have need of you soon enough, so it would be best for both of us that you don't keep me waiting for long.' he lets you know, with his extraordinarily regal mannerisms, that you have obligations as his [DoranPlayerRegard] towards him. Perhaps you wouldn't mind doing this more regularly...?";
+
+to DoranDom_SubmitOralVore: [Oral Vore for special Submit scenes]
+	say "     More like, you beg him to take you into his belly, letting him know that it would also be your pleasure to serve as his meal. He smiles, draws his long draconic tongue across his lips in antecipation, as he presses your face against his scaled body. You could swear you can feel his insides calling for you, yearning to hold you within. 'Such is the way of any [DoranPlayerRegard], caring for their master and serving them in any way possible.' he says, before leaning his head closer to yours and giving you a lick across your face, wet and sloppy as drops of his saliva run down your cheeks. He keeps doing it, his mouth getting closer by the second as he takes his time to get a taste of you. 'My [boygirl] tastes so good... Mmh... Come here, now...'";
+	say "     With a slow and tender embrace, he holds you between his large clawed paws before opening his mouth wide, pulling you in with relative ease, engulfing your head all at once inside the moist cavern, tongue twirling across your face as he continues to feel your taste. There is pulsing flesh all around you, as hot as it can get, with his jaw being able to extend so much that the dragon can actually shove you inside, up to your shoulders. After that, it's a breeze for him, simply pushing further as your head slips inside his throat, beginning to swallow you. The walls of his esophagus throb and constrict you, pulling you deeper as more of your body follows, and the dragon makes sure he doesn't hurt you in the process with his sharp teeth, masterfully bringing your weight off the ground as soon as he has got you half-way in.";
+	WaitLineBreak;
+	say "     Gravity serves its purpose in assisting the beast, allowing him to keep swallowing you with ease. Eventually, it's just your legs kicking the air outside, not that you are offering any resistance, but it's just your reflexive movements. Supporting the rest of you with his paw, he simply sucks what's left in, your legs sliding inside his mouth all the way to your feet. Then, he closes his lips shut, having thoroughly consumed you, and with one final gulp, you're completely pulled down his throat. Doran leans backwards, enjoying your slow trip down towards his belly as he gives it plenty of rubbing, eagerly awaiting your arrival. 'What a tasty meal you are... Surely my [DoranPlayerRegard] won't mind staying there for the next few hours, will [SubjectPro]?' he asks, his voice rumbling through his whole body and arriving at you from every direction, but you know very well that is a rhetorical question. You have no choice.";
+	say "     His insides have adapted to hold you within, curled up inside his belly as the wet walls surrounding you hold onto you tightly. The vibrations in front of you suggests Doran is still feeling you up inside him, rubbing his paw across the surface in which your form is bulging outwards. Eventually, you lose track of time, all that darkness and momentum, plus all the efforts you have put during the past time you were addressing the dragon's desires, which have made you tired, make you close your eyes in drowsiness. Eventually, you black out, diving into a deep slumber as the dragon thoroughly enjoys your presence in him.";
+	WaitLineBreak;
+	follow the turnpass rule;
+	say "     A few hours have passed, and you find yourself waking up already outside, cuddling with the big dragon, who is holding you close by. Your mind is slightly confused at the moment, but eventually you catch up with everything that happened. Doran then realizes you're up, and greets you with a playful lick. 'Mmmh... my [DoranPlayerRegard] was really tasty. Although [SubjectPro] stopped moving after a good while, so I worried. Perhaps [SubjectPro] was too tired?' he asks you, legitimately wanting to know if you were doing well. You assure him, which he responds with yet another lick. It gives you the feeling he actually would eat you again, if you asked.";
+	say "     'Very well, you may go now. I must have need of you soon enough, so it would be best for both of us that you don't keep me waiting for long.' he lets you know, with his extraordinarily regal mannerisms, that you have obligations as his [DoranPlayerRegard] towards him. Perhaps you wouldn't mind doing this more regularly...?";
+
+Section 7 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

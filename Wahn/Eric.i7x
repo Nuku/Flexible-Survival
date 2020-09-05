@@ -118,6 +118,13 @@ Version 5 of Eric by Wahn begins here.
 [   1: Eric and Ryo met                                              ]
 [   2: Eric listened to stories by Ryo                               ]
 
+[ TODO: Make Eric hide in the bunker after being brought in          ]
+[       Scene: he flinches as the player enters the bunker, player   ]
+[              can talk him into getting out more (enabling all the) ]
+[              library scenes                                        ]
+
+[ TODO: Add pimping for sex slave Eric                               ]
+
 EricOrcPillMpreg is a number that varies. [able to be mpregged?]
 EricCurrentBabyDaddy is a text that varies.
 EricOffspringCount is a number that varies.
@@ -150,12 +157,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Barricaded Lockerroom	"Barricaded Lockerroom"
 
-Barricaded Lockerroom is a situation. The level of Barricaded Lockerroom is 8.
-The sarea of Barricaded Lockerroom is "Campus".
+Barricaded Lockerroom is a situation.
+ResolveFunction of Barricaded Lockerroom is "[ResolveEvent Barricaded Lockerroom]". The level of Barricaded Lockerroom is 8.
+Sarea of Barricaded Lockerroom is "Campus".
 when play begins:
 	add Barricaded Lockerroom to badspots of HermList; [cuntboy, later a fight against a hulking cheerleader]
 
-Instead of resolving a Barricaded Lockerroom:
+to say ResolveEvent Barricaded Lockerroom:
 	say "     While exploring the sports arena on the campus, you come upon the closed door to the men's locker room, looking rather battered with lots of claw scratches on it. When you try the door-handle, it opens only a crack before bumping into something heavy - accompanied by a loud clanking noise. A man's voice can be heard from inside a moment later: 'Stay away you crazy critters! I'm warning you - I've got a baseball bat and am willing to use it. You're not getting another bite out of me!'";
 	LineBreak;
 	say "     Do you want to try to talk the guy into letting you in? (Y/N)";
@@ -189,7 +197,7 @@ Object	Name
 Sports Arena Lockerroom	"Sports Arena Lockerroom"
 
 Sports Arena Lockerroom is a room. It is fasttravel. It is private.
-The description of Sports Arena Lockerroom is "[lroomdesc]".
+Description of Sports Arena Lockerroom is "[lroomdesc]".
 
 instead of sniffing Sports Arena Lockerroom:
 	say "You don't smell anything noteworthy. With a nanite virus apocalypse going on right outside the door, there haven't been any large numbers of sweaty athletes in here for some time now.";
@@ -262,8 +270,8 @@ SexuallyExperienced of Eric is true.
 TwistedCapacity of Eric is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Eric is false. [steriles can't knock people up]
 MainInfection of Eric is "Human".
-The description of Eric is "[EricDesc]".
-The conversation of Eric is { "Mew!" }.
+Description of Eric is "[EricDesc]".
+Conversation of Eric is { "Mew!" }.
 EricFleeingCountdown is a number that varies.
 
 instead of sniffing Eric:
@@ -412,8 +420,8 @@ instead of conversing the Eric:
 						move player to bunker;
 					else: [really save him]
 						LineBreak;
-						say "     After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male German shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him...";
-						say "     The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. The lockerroom won't be safe much longer. You give him some time to come down from his highly aroused state, then tell him to get dressed and that you're taking him to your bunker. Eric thanks you, at the same time getting very red in the face as he realizes you saw... all of him. Twenty minutes later, he steps out from behind a row of lockers, dressed in shorts and a t-shirt and hefting a backpack with his most important gear and supplies. Soon you depart towards the bunker, Eric still rather silent beside you as he thinks about what happened to him.";
+						say "     After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male German shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him... The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. The lockerroom won't be safe much longer.";
+						say "     You give Eric some time to come down from his highly aroused state, then tell him to get dressed and that you're taking him to your bunker. Eric thanks you, at the same time getting very red in the face as he realizes you saw... all of him. Ten minutes later, he steps out from behind a row of lockers, dressed in shorts and a t-shirt and hefting a backpack with his most important gear and supplies. Soon you depart towards the bunker, Eric still rather silent beside you as he thinks about what happened to him.";
 						now HP of Eric is 1;
 						now thirst of Eric is 1;
 						move Eric to bunker;
@@ -462,12 +470,6 @@ to say EricTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Talk about what comes to mind";
 	[]
-	if HP of Eric is 99 and lust of Eric is 2:
-		choose a blank row in table of fucking options;
-		now title entry is "Implement your plan to get him fucked by David";
-		now sortorder entry is 2;
-		now description entry is "Push Eric to put out for David";
-	[]
 	if (HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32) and lust of Eric is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Get him interested in David (sexually)";
@@ -483,30 +485,36 @@ to say EricTalkMenu:
 	if HP of David is 4:
 		choose a blank row in table of fucking options;
 		now title entry is "David";
-		now sortorder entry is 5;
+		now sortorder entry is 71;
 		now description entry is "Talk about David with Eric";
 	[]
+	if HP of Eric is 99 and lust of Eric is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Implement your plan to get him fucked by David";
+		now sortorder entry is 72;
+		now description entry is "Push Eric to put out for David";
+	[
 	if HP of Eric > 9 and HP of Eric < 20 and UrikEricInteraction < 99 and UrikEricInteraction > 1: [cboy Eric, ate orc cum before]
 		choose a blank row in table of fucking options;
 		now title entry is "Urik";
-		now sortorder entry is 6;
+		now sortorder entry is 73;
 		now description entry is "Talk about Urik with Eric";
-	[]
+	]
 	if HP of Eric > 9 and HP of Eric < 99 and TomeFound > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "The old book";
-		now sortorder entry is 7;
+		now sortorder entry is 80;
 		now description entry is "Talk about the strange tome Eric found";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Offer Eric an item";
-	now sortorder entry is 20;
+	now sortorder entry is 90;
 	now description entry is "Give Eric a gift";
 	[]
 	if (player is male and "Cocked" is listed in Traits of Eric and orc pill case is owned and EricOrcPillMpreg < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Talk to Eric about the orc pills";
-		now sortorder entry is 21;
+		now sortorder entry is 91;
 		now description entry is "Get a feel for how Eric will react to the orc pill";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -729,8 +737,7 @@ to say EricTalk7:
 		if Player consents:
 			LineBreak;
 			say "     Doing your best to be as convincing as you can be, you talk Eric into letting you have the book. He goes over to grab it, then holds it out for you... although he only lets go several seconds after you already have your hands on it. As soon as it leaves his grasp and you pack the book away, the young guy blinks a few times and shakes his head as if to clear away some mental cobwebs, then is his usual friendly self again and proceeds to chat a little while longer with you.";
-			increase carried of ancient tome by 1;
-			say "(You gain an ancient tome.)";
+			ItemGain ancient tome by 1;
 			now TomeFound is 100; [player took the book right at the start]
 			now lastTomeInteraction is turns;
 		else:
@@ -745,8 +752,7 @@ to say EricTalk7:
 		if Player consents:
 			LineBreak;
 			say "     Clearing your throat, you ask Eric if you can have the book - and he doesn't react to that at all, almost as if he hadn't heard a word you said. After waiting a moment or two, you finally decide to just take it. Walking over to his bed, you pull the book out from under Eric's pillow and tugging the tome under your arm. 'Hey!' Eric reacts with a slight delay, coming after you. 'I was reading that, give it back!' the red-headed college student complains, but you tell him in a friendly, but firm, tone that you'll have to check this thing out for yourself first. He reaches out in a bid to snatch the book back, but you keep it out of his reach. Finally he crosses his arms and sighs, then adds, 'Fine. I'll get something else to read then.' With a somewhat sullen expression on his face, Eric walks off towards the stairwell.";
-			increase carried of ancient tome by 1;
-			say "(You gain an ancient tome.)";
+			ItemGain ancient tome by 1;
 			now TomeFound is 99; [player took the book after Eric had a read]
 			now lastTomeInteraction is turns;
 		else:
@@ -761,8 +767,7 @@ to say EricTalk7:
 		if Player consents:
 			LineBreak;
 			say "     Clearing your throat, you ask Eric if you can have the book - and he doesn't react to that at all, almost as if he hadn't heard a word you said. After waiting a moment or two, you finally decide to just take it. Walking over to his bed, you pull the book out from under Eric's pillow and tugging the tome under your arm. 'Hey!' Eric reacts with a slight delay, coming after you. 'I was reading that, give it back!' the red-headed college student complains with determination, but you tell him in a friendly, but firm, tone that you'll have to check this thing out for yourself first. He reaches out in a bid to snatch the book back, but you keep it out of his hands even as he tries to wrestle it from your grasp. Finally he crosses his arms and sighs, then adds, 'Fine. I'll get something else to read then.' With a somewhat sullen expression on his face, Eric walks off towards the stairwell.";
-			increase carried of ancient tome by 1;
-			say "(You gain an ancient tome.)";
+			ItemGain ancient tome by 1;
 			now TomeFound is 98; [player took the book after Eric was tentacle-fucked (without the player knowing about it)]
 			now lastTomeInteraction is turns;
 		else:
@@ -814,7 +819,7 @@ to say EricTalk7:
 			if Player consents:
 				LineBreak;
 				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
-				decrease carried of ancient tome by 1;
+				ItemLoss ancient tome by 1;
 				now TomeFound is 97; [player gave Eric the book back after he got almost tentacle-fucked]
 			else:
 				LineBreak;
@@ -829,7 +834,7 @@ to say EricTalk7:
 			if Player consents:
 				LineBreak;
 				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
-				decrease carried of ancient tome by 1;
+				ItemLoss ancient tome by 1;
 				now TomeFound is 96; [player gave Eric the book back after he got tentacle-fucked]
 			else:
 				LineBreak;
@@ -856,8 +861,7 @@ to say EricTalk7:
 		if Player consents:
 			LineBreak;
 			say "     Clearing your throat, you ask Eric if you can have the book - and he doesn't react to that at all, almost as if he hadn't heard a word you said. After waiting a moment or two, you finally decide to just take it. Walking over to his bed, you pull the book out from under Eric's pillow and tugging the tome under your arm. 'Hey!' Eric reacts with a slight delay, coming after you. 'I was reading that, give it back!' the red-headed college student complains, but you tell him in a friendly, but firm, tone that you'll have to check this thing out for yourself first. He reaches out in a bid to snatch the book back, but you keep it out of his reach. Finally he crosses his arms and sighs, then adds, 'Fine. I'll get something else to read then.' With a somewhat sullen expression on his face, Eric walks off towards the stairwell.";
-			increase carried of ancient tome by 1;
-			say "(You gain an ancient tome.)";
+			ItemGain ancient tome by 1;
 			now TomeFound is 99; [player took the book after Eric had a read]
 			now lastTomeInteraction is turns;
 		else:
@@ -873,7 +877,7 @@ to say EricTalk7:
 			if Player consents:
 				LineBreak;
 				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
-				decrease carried of ancient tome by 1;
+				ItemLoss ancient tome by 1;
 				now TomeFound is 3; [player gave Eric the book back after he got almost tentacle-fucked, so same state as never having taken the book at all]
 			else:
 				LineBreak;
@@ -888,7 +892,7 @@ to say EricTalk7:
 			if Player consents:
 				LineBreak;
 				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";
-				decrease carried of ancient tome by 1;
+				ItemLoss ancient tome by 1;
 				now TomeFound is 2; [Eric is back to reading the tome]
 			else:
 				LineBreak;
@@ -903,7 +907,7 @@ to say EricTalk7:
 			if Player consents:
 				LineBreak;
 				say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric steps up and thanks you as he accepts the book. He exchanges some more words in friendly conversation with you, then walks off with the book held tightly to his chest.";
-				decrease carried of ancient tome by 1;
+				ItemLoss ancient tome by 1;
 				now TomeFound is 1; [Eric got the book now]
 			else:
 				LineBreak;
@@ -930,7 +934,7 @@ to say EricTalk7:
 to say centaurcum_Eric:
 	say "     You hand your bottle of centaur stallion cum to Eric, who puts it to his lips after a nod of encouragement from you and takes a deep pull. You wait several minutes, during which his hopeful expression slowly begins to wane as nothing happens - until suddenly, he's wracked by a convulsion. You hold Eric tightly so he doesn't fall off his camp bed until he relaxes a short time later. Looking down at the new bulge in his shorts, it's clear at least something happened.";
 	say "     Opening the zipper of his shorts, you pull them down to reveal his crotch - now pussy-less, but with a new blunt-tipped horse's cock and large balls. To help Eric accept being an - almost human - male again, you grab his erect newly grown member with both hands and pump them up and down on it. Encouraged by his lustful moans, you keep jerking him off and play with his balls with one hand. Pretty soon, his thick shaft pulses in your hand, and large globs of white seed blast out of the tip of his horsecock and all over Eric's chest. As he lies back on his bed, you hear him pant 'Thank you.'";
-	delete centaur cum;
+	ItemLoss centaur cum by 1;
 	now HP of Eric is 21;
 	now thirst of Eric is 21;
 	add "Cocked" to Traits of Eric;
@@ -938,7 +942,7 @@ to say centaurcum_Eric:
 to say satyrwine_Eric:
 	say "     You hand your bottle of satyr wine to Eric, who puts it to his lips after a nod of encouragement from you and takes a deep pull. You wait several minutes, during which his hopeful expression slowly begins to wane as nothing happens - until suddenly, he's wracked by a convulsion. You hold Eric tightly so he doesn't fall off his camp bed until he relaxes a short time later. Looking down at the new bulge in his shorts, it's clear at least something happened.";
 	say "     Opening the zipper of his shorts, you pull them down to reveal his crotch - now pussy-less, but with a new capric, goat-like cock and large balls. To help Eric accept being an - almost human - male again, you grab his erect newly grown member with both hands and pump them up and down on it. Encouraged by his lustful moans, you keep jerking him off and play with his balls with one hand. Pretty soon, his thick shaft pulses in your hand, and large globs of white seed blast out of the tip of his satyrcock and all over Eric's chest. As he lies back on his bed, you hear him pant 'Thank you.'";
-	delete Satyr Wine;
+	ItemLoss Satyr Wine by 1;
 	now HP of Eric is 31;
 	now thirst of Eric is 31;
 	add "Cocked" to Traits of Eric;
@@ -946,7 +950,7 @@ to say satyrwine_Eric:
 to say OrcBrew_Eric:
 	say "     You hand your beer stein of orc brew to Eric, who puts it to his lips after a nod of encouragement from you and takes a deep pull. You wait several minutes, during which his hopeful expression slowly begins to wane as nothing happens - until suddenly, he's wracked by a convulsion. You hold Eric tightly so he doesn't fall off his camp bed until he relaxes a short time later. Looking down at the new bulge in his shorts, it's clear at least something happened.";
 	say "     Opening the zipper of his shorts, you pull them down to reveal his crotch - now pussy-less, but with a new uncut cock and large balls. Of note is that the young man's erect shaft doesn't conform to his skin color, but rather has a vibrant green shade. At its base is a thick bush of black pubic hair. To help Eric accept being an - almost human - male again, you grab his erect newly grown member with both hands and pump them up and down on it. Encouraged by his lustful moans, you keep jerking him off and play with his balls. Pretty soon, his thick shaft pulses in your hand, and large globs of white seed blast out of the tip of his orc cock and all over Eric's chest. As he lies back on his bed, you hear him pant 'Thank you.' When he grabs a used shirt from under the sheets to wipe himself clean, there is one other thing of note: his chest is now sprouting some additional chest hair that wasn't there before, and you think he's a bit more toned too. Seems like the orc brew made Eric more manly overall.";
-	delete Orc Brew;
+	ItemLoss Orc Brew by 1;
 	now HP of Eric is 41;
 	now thirst of Eric is 41;
 	add "Cocked" to Traits of Eric;
@@ -959,7 +963,7 @@ instead of trading the pomegranate seed when the current action involves the Eri
 		say "     It begins at the face, which softens a bit and takes on feminine features with oh so kissable lips, and suddenly is framed in shoulder-length red curls. The wave of change then runs down over his body, making the black t-shirt Eric is wearing fill out at the front, with the curve of perky B-cup breasts making you eager for a chance to see them laid bare. What follows next are many more big and small changes - the proportions of arms and legs, hands and feet, a slight widening of the hips to ease future pregnancies, his skin smoothing out and becoming naturally hairless. Even simple things like the way he stands or holds his upper body. When the transformation finishes a moment later, you're almost stunned by the sight of this beautiful woman you helped bring into the world. Your friend is no longer Eric, no he - now she - is Erica.";
 		WaitLineBreak;
 		say "     After Erica looks down over herself and gives a delighted little giggle at her new body, she rushes forward to embrace you tightly - which brings her perky breasts into contact with your chest, pressing softly against you. 'Wow, this feels even better than I...' This is as far as she gets, before noticing the sensations of brushing her nipples against someone with only a thin shirt in between. 'Oh - ooh,' she sighs softly, pulling back slightly, then continues, 'That feels amazing. I - thank you so much, but... I think I've got to experiment a bit with this. Though if you want me to give you a reward for all your hard work... I'd be more than willing to have some fun later, you know.'";
-		decrease carried of pomegranate seed by 1;
+		ItemLoss pomegranate seed by 1;
 		now Dexterity of Erica is 5;
 		now HP of Eric is 200;
 		move Erica to Bunker;
@@ -2378,7 +2382,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of
 		project the figure of Eric_face_icon;
 	say "     As you come down into the bunker, you see Eric sitting cross-legged on a nearby bunk, a book in hand. He looks up, having noticed your arrival, and with a smile on his face the young man sets down his reading and walks up to you. 'Hey there and welcome back,' the red-headed student says, then puts a hand on your shoulder and gives you a friendly squeeze. 'I wanted to say again how thankful I am for everything you've done for me. Letting me stay with you down here and... other things. Never really knew quite how rough the city now is - before running into those hellhounds.' You chat a little and Eric clearly shows pretty good spirits, as well as newfound enthusiasm at the living arrangements and mixed company in the bunker and library.";
 	say "     Wanting to hear how things now stand between him and Rane, you ask - and the young man blushes slightly before answering. 'Rane - um. He's... we've come to an understanding, things are alright now.' Becoming tongue-tied and shy about the matter, you focus your gaze on Eric - but you can't detect any sense of fear or sadness in him, as he was when he ran off";
-	let bonus be (( the Perception of the player minus 10 ) divided by 2);
+	let bonus be (( Perception of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	increase diceroll by bonus;
 	if diceroll > 10:
@@ -2981,13 +2985,15 @@ to say EricMeetsAlexandra:
 		say "     Stepping forward and clearing your throat loudly, you draw the attention of Alexandra and Eric. While the young man gives you a shame-faced 'hand in the cookie jar' expression, the doberwoman grins broadly, wagging her tail as she gives Eric's clit another rub that makes him moan out loud. 'Hey boss,' she calls out to you, then licks the side of Eric's face playfully. Only after you flat out order her to leave the young trans man in peace does she stop groping and playing with Eric, giving a little huff as she lets go of him. 'Fine, fine, you're the boss,' the doberwoman half-growls, after which Eric pants out, 'I'm sorry for staring,' and runs off, snatching up his book as he goes along. 'Guess you brought that one here as a special pet, eh? Okay, I'll keep my hands off him, even if he is a cute li'l bitch.' With that said, the anthro canine walks over to the sofa, bends forward to pick up her jeans in the most provocative way possible, her dripping pussy in full view. Clothing in hand, she walks off after that.";
 		now AlexandraEricInteraction is 99; [Eric + Alexandra interaction stopped]
 
-after going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and UrikEricInteraction is 0):
+
+
+after going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik > 8 and Thirst of Urik > 0 and PlayerRomanced of Urik is false and "Selective Breeding" is not listed in Traits of Urik and UrikEricInteraction is 0):
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS URIK - UrikEricInteraction: [UrikEricInteraction][line break]";
 	try looking;
 	say "[EricMeetsUrik]";
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and UrikEricInteraction is 0):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik > 8 and Thirst of Urik > 0 and PlayerRomanced of Urik is false and "Selective Breeding" is not listed in Traits of Urik and UrikEricInteraction is 0):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2996,44 +3002,57 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eri
 	say "[EricMeetsUrik]";
 
 to say EricMeetsUrik:
-	say "     Entering the ground floor of the library, everything seems normal at first, but then the sound of someone's running steps draws your attention to the upper library floor. As you look up, a panicked Eric reaches the railing at a full sprint, catching himself on it and panting in exhaustion. He catches sight of you and calls out, 'Help! There's this huge green guy up here and he -' And that's how far he gets before a large green hand grips Eric by the back of the neck and pulls him out of sight, followed by the sound of a scuffle.";
-	say "     Uh-oh. Looks like Urik doesn't really know how to play nice with others. You sprint up the stairs to the upper library floor to see the orc standing near the far wall, holding Eric by the throat. 'Guess having a *growl* master isn't so bad if he keeps his lair stocked with little snacks,' Urik grumbles, then feels up Eric's pecs and abs and sniffs the still weakly kicking young man. Then he continues, 'A bit bony and with a strange smell, but you'll do boy. I wanna take someone NOW!' With that said, the green-skinned brute wrenches down Eric's shorts, only to stop in confusion. 'The fuck?! Where's your dick?'";
+	say "     Entering the ground floor of the library, everything seems normal at first, but then the sound of someone's running steps draws your attention to the upper library floor. As you look up, a panicked Eric reaches the railing at a full sprint, catching himself on it and panting in exhaustion. He catches sight of you and calls out, 'Help! There's this huge green guy up here and he -' And that's how far he gets before a large green hand grips Eric by the back of the neck and pulls him out of sight, followed by the sound of a scuffle. Uh-oh. Looks like Urik doesn't really know how to play nice with others. You sprint up the stairs to the upper library floor to see the orc standing near the far wall, holding onto a struggling Eric, a handful of the young man's t-shirt in his grasp.";
+	say "     'Why did'ya run, breeder boy?' Urik slurs a little, laughing and grinning as he feels up Eric's chest with his free hand. 'Come on, I'm horny - let me show you what an orc cock in you feels like! Gonna love it, I know it! ";
+	if "Stud" is listed in Traits of Urik or "Molestation Detox" is listed in Traits of Urik: [Urik may fuck others (with/without violence)]
+		say "But don'tcha get ideas about my ass - that's [if Player is not defaultnamed][Name of Player][else]the chief[end if]'s!' the orc says jovially, slapping his own buttocks with a large green hand and giving them a grope that he obviously enjoys. ";
+	else if "Everything Goes" is listed in Traits of Urik: [he may be fucked by others]
+		say "But don'tcha think that you get to fuck me back,' the orc says jovially, wagging his finger in front of Eric's face. ";
+	say "Urik barely seems to register that the human is staring wide-eyed at his enormous bulge and weakly hitting his arm as he's trying to get away, which is a bit surprising even given their relative strength. 'Calm down little buddy. Not gonna hurtcha! ";
+	if "Molestation Detox" is listed in Traits of Urik:
+		say "Do it real slow, get'cha ready and... yeah. Dick might be big, but it'll feel great for you, just wait!' ";
+	else:
+		say "Your hole's gonna get extra stretchy from my pre! Don'tcha worry about this dick - it'll fit and you'll love it, hah!' ";
+	say "As you step forward to move closer to them, you realize why that might be the case, as you almost stumble over an empty plastic bottle lying on the ground. It still has a small amount of cloudly fluid sticking to the inside. Looks like your orc finished off a bottle of the orc cum you gave him, and he's basically in rut now!";
 	WaitLineBreak;
-	say "     As the orc warrior turned breeder lets go of Eric and the half-naked teen stumbles a few steps away from him, you finally close up to them. The first thing you do is put an arm around Eric, helping to keep him from falling over as he pulls his clothes back on and asking if he's okay. The college athlete rubs the somewhat bruised back of his neck with a hand and replies, 'Give me a minute, but... yeah. Still, that orc is a menace - why did you bring him here?!' Relieved that the young trans male is okay (mostly anyways), you tell him that he'll see in a moment. And with that, you wheel around and hone in on Urik.";
-	say "     The orc has wandered off a little, giving Eric sidelong looks in disapproval. Then you grab him by the arm and let the green-skinned brute have it - really putting him in his place and making it clear that HE is the lowest orc on the totem pole. Everyone in his tribe watched him lose his cherry and then you won his ass as your personal breeder! Sliding a hand under his loincloth and gripping his balls tightly, you look into his eyes with a steely gaze and raise an eyebrow, waiting. 'Fine,' the muscular hunk grumbles, 'I'm your breeder, master. To use when you see fit. And...' He stops with a scowl, then only continues after you give his hairy orbs a sharp squeeze, 'And anyone here in your lair is... above me. I - will - obey - them - too.'";
+	say "     'A few breedings will put more muscle on your tiny body too, orc cum's great in making breeders bulk up, hah! You'll do fine, boy!' With that said, the green-skinned brute wrenches down Eric's shorts, only to stop in confusion. 'The fuck?! Where's your dick?' As the orc warrior/breeder lets go of Eric and takes a few steps back in surprise, you finally close up to them. The first thing you do is step between the orc and human, asking if Eric is okay. The college athlete pulls his pants back up and stares wide-eyed past you at Urik, then replies, 'Give me a minute, but... yeah. Still, that orc is a menace - why did you bring him here?!' Relieved that the young trans male is okay (mostly anyways), you tell him to relax and wait for a moment. With that said, you turn your attention to Urik. The orc has wandered off a little further, and is swaying a little on his feet, showing his obvious drunkenness. Furthermore, he's casually stroking his bulge, only throwing a confused look once in a while towards Eric.";
+	say "     Walking over to the orc, you take him by the arm and say that he can't just snatch up Eric, as he's got a special place in your tribe here. 'Uh, fine... he's weird anyways,' Urik replies with a little bit of a grumble, then shrugs. 'Cute little thing like that, really wanted to fuck him but he's not even a dude!' As he hears this, Eric calls out, 'Hey! I'm still a dude you green oaf! Just because of, err, I'm a bit different doesn't mean that I'm not!' He's quite red in the face, getting agitated at finding himself being put down as... 'less' than a full person in Urik's eyes. He almost seems ready to attack the orc, despite their greatly different size and power. Shocked out of his drunken haze by the aggression in the air, the orc puffs out his enormous, muscular chest and reflexively balls up his fists. Then his gaze pulls away from Eric, back to you standing between the two of them, and some of the air goes out of the big orc.";
 	WaitLineBreak;
-	say "     Having pulled that grudging concession of obedience from the orc, you let go of his balls and take a deep breath. There, one difficult orc-slave-owner situation dealt with before it got any worse, and hopefully for good. After a casual command for Urik to finger his hole like the needy breeder he knows he is, you turn your attention back to Eric. The college student is somewhat nonplussed at what he just witnessed, looking back and forth between the two of you and observing wide-eyed that Urik does indeed fall to his knees, then sucks on his fingers to make them wet for his own asshole. As the orc's thick finger sinks into the gripping embrace of his pucker, Urik gives an aroused moan, breaking Eric from his shocked silence.";
-	say "     'T-that guy is... your slave?' the young redhead asks unbelievingly, then says, 'But... but... why? How?!' With a smile at the green-skinned brute who is by now up to two fingers up his rear end, you explain to Eric that Urik more than deserves his fate, and that you did win him, fair and square, at a competition. Eric blinks as he takes in those facts, then asks, 'So... um, he won't try anything again then?' You just smile and point at the strong orc fingering himself, telling Eric that Urik may be big and strong, but that he now is a breeder a heart, living to take your commands and get his ass ridden hard. Eric bites his lip and looks at the orc in an all new light, eyes wandering over Urik's muscular physique.";
+	say "     Silence stretches out for a few seconds, with the two of them basically just staring at each other. Then finally, the orc grunts and nods at the much smaller human. 'Meh, fine I guess. Don't get your panties in a twist, didn't mean to put ya down.' Eric's still red in the face and seems about to shout something back, then hesitates and glances down over himself, remembering that he actually is wearing panties these days. He shakes out of the realization and finally replies in a somewhat sulky tone, 'Watch what you say, bricks for brains!' Urik snorts at the somewhat lame term, looking at Eric with a raised eyebrow, 'Gotta say, Red - you got more balls than some dudes who actually have balls!' Then the orc shrugs and turns to wander off without another word, leaving Eric standing where he is.";
+	say "     After the orc is gone, Eric calms down a little, staring after him. 'What's that asshole's problem? And why is he here, in the library?' the young man finally asks you. You explain to him that orcs have a fairly nonhuman culture, and pretty much are universally male. Him being drunk didn't help the orc's tact any either. 'No shit, I noticed!' Eric huffs out, apparently not in the mood for any further explanations. He whirls around and stalks off to be alone for a little while. As you are left alone at the sight of their clash, you can't help but feel that the first interaction between those two might have gone better. Maybe you should give them some time to cool off before talking to either of them about the other, or even arranging another meeting.";
+
+
+
+[
+	say "Having pulled that grudging concession from the orc, you give his arm a light punch and take a deep breath. There, one difficult orc situation dealt with before it got any worse, and hopefully for good. After a casual command for Urik to stay where he is for now, you turn your attention back to Eric. The college student is somewhat nonplussed at what he just witnessed, looking back and forth between the two of you and observing wide-eyed that Urik does indeed stand ready for your further commands, looking somewhat shameful at being admonished by you. 'T-that guy obeys you?' the young redhead asks unbelievingly, then says, 'But... but... why? How?!' With a smile at the green-skinned brute you explain to Eric that you won Urik, fair and square, at a competition and then took him home with you. Eric blinks as he takes in those facts, then asks, 'So... um, he won't try anything again then?' You just smile and lean in to Eric, telling him that Urik may be big and strong, but that he now is an orc breeder a heart, living to take your commands and get his ass ridden hard. Eric bites his lip and looks at the orc in an all new light, eyes wandering over Urik's muscular physique.";
 	LineBreak;
-	say "     [bold type]It almost looks like your friend is interested in big, bad muscled guys. Do you suggest to Eric that he nevertheless should rather stay away from Urik ([link]Y[as]y[end link]), or do you want to involve the young trans-guy in some fun with your orcish slut ([link]N[as]n[end link])?[roman type][line break]";
+	say "     [bold type]It almost looks like your friend is interested in big, bad muscled guys. Do you suggest to Eric that he nevertheless should rather stay away from Urik ([link]Y[as]y[end link]), or do you want to involve the young trans-guy in some fun with your orcish tribesman ([link]N[as]n[end link])?[roman type][line break]";
 	if Player consents: [stop this scene line for good]
-		say "     Pulling Eric aside a little bit, you tell him that obedience training with Urik may still be a little bit... hit and miss, so for the moment, it is advisable for him not to be spending any time close to the orc. Urik shouldn't try to grab him after the talking-to you gave the orc, but who knows what ideas the brute might come up with in the throes of passion. The college athlete gives a last sidelong glance at Urik's magnificently muscled body, then nods to you and turns away after thanking you again for saving him. A moment later, he walks over to the stairs and goes back down to the main library floor.";
-		say "     Meanwhile, you move in closer and crouching down next to your private orc breeder, stroking over Urik's broad chest, then whisper some additional commands to him. This time, the former orc warrior is far too turned on to complain much, instead panting out the requested words of 'I'm yours master. Please let your slut get off!' With a satisfied grin on your face, you take hold of Urik's thick prick and stroke it with both hands, giving the orc his reward for being nice and submissive. As wound-up as he already is, it takes mere moments to drive the green-skinned hunk over the edge, humping his hips into the air rhythmically as his balls send forth a geyser's worth of cum - which you aim right at his own face. The first shot just leaves a creamy streak across his cheek, but the second hits Urik's open mouth and is eagerly swallowed, with the next and the ones after making quite a mess of your pet breeder's face, neck and chest.";
+		say "     Pulling Eric aside a little bit, you tell him that following proper may still be a little bit... hit and miss for Urik. Therefore, for the moment, it is advisable for him not to be spending any time close to the orc. Urik shouldn't try to grab him after the talking-to you gave the orc, but who knows what ideas the brute might come up with in the throes of passion. The college athlete gives a last sidelong glance at Urik's magnificently muscled body, then nods to you and turns away after thanking you again for saving him. A moment later, he walks over to the stairs and goes back down to the main library floor. Meanwhile, you move in closer and address Urik once more, telling him that he should just keep his distance from Eric from now on.";
 		now UrikEricInteraction is 99; [Eric steered away from Urik]
 	else: [let things go on]
 		project the Figure of Eric_Urik_naked_icon;
 		say "     [bold type]Do you want to offer Eric a ride on the orc, suggesting it as a kind of 'turnabout's fair play' in which he gets his pussy eaten ([link]Y[as]y[end link]), or will you just let him have his fill in watching Urik ([link]N[as]n[end link])?[roman type][line break]";
 		if Player consents: [Eric gets licked]
 			LineBreak;
-			say "     Wanting to give Eric a nice show, you tell Urik to turn around and flex a bit, which the big orc does with little more than a slight grumble. This also reveals the very erect shaft of his manhood, barely covered by the loose fabric of his loincloth hanging over it. With a grin, you pull the thin cloth to the side and take hold of it, wagging the towering erection in the direction of the watching student. Before much longer, Urik is lying on his back, stretched out on the library floor, legs raised high as he fingers himself with eager fingers. The large orc moans loudly at the anal stimulation, leaking a copious amount of pre-cum, and you notice Eric's breaths coming more quickly as the college athlete unobtrusively rubs his own crotch.";
-			say "     And that is when you step up behind your college student friend, sliding an arm around him and 'helping him' rub his pussy while you whisper enticing thoughts into his ear. After all, Urik did treat Eric rather roughly before - so the least your young friend deserves is paying the orc back by using him to get off. Aroused as he is and with you pushing him along to a decision, Eric soon gives in to his desires and nods to you over his shoulder, agreeing to using your green-skinned slave. With a broad smile on your face, you slide both hands under the belt-line of the young trans-man's shorts, then push them down to drop to the floor, followed by pulling Eric's sleeveless t-shirt off his body. With a light slap on his butt, you tell him to have fun, then stand back and watch him approach Urik.";
+			say "     Wanting to give Eric a nice show, you tell Urik to turn around and flex a bit, which the big orc does readily. This also reveals the very erect shaft of his manhood, barely covered by the flexible material of his pants as it strains to hold it all in. With a grin, you un-hook the fabric from his erection, allowing the massive cock of the orc to flop out. Taking hold of the huge green shaft, you then wag it in the direction of the watching student. After a few quiet words of commands, Urik gets down onto the library floor, stretches out on his back and raises his legs  to finger himself with eager fingers. The large orc moans loudly at the anal stimulation, leaking a copious amount of pre-cum, and you notice Eric's breaths coming more quickly as the college athlete unobtrusively rubs his own crotch.";
+			say "     And that is when you step up behind your college student friend, sliding an arm around him and 'helping him' rub his pussy while you whisper enticing thoughts into his ear. After all, Urik did treat Eric rather roughly before - so the least your young friend deserves is paying the orc back by using him to get off. Aroused as he is and with you pushing him along to a decision, Eric soon gives in to his desires and nods to you over his shoulder, agreeing to using your green-skinned warrior. With a broad smile on your face, you slide both hands under the belt-line of the young trans-man's shorts, then push them down to drop to the floor, followed by pulling Eric's sleeveless t-shirt off his body. With a light slap on his butt, you tell him to have fun, then stand back and watch him approach Urik.";
 			WaitLineBreak;
 			say "     'I - I want you to lick me,' the college athlete says shyly as he steps up to Urik, prompting the orc to focus on his naked form, then frown as he sees Eric's female parts again. 'Yeah right. You can-' the orc snorts derisively, only to fall silent as you clear your throat loudly. He grumbles something that might have been 'frigging pussy-boy', then looks at Eric expectantly. As the naked young guy bites his lip and hesitantly says, 'We could go like...' Urik impatiently grunts and reaches out, hooking a large hand around Eric's hip. With his muscular fingers gripping Eric's rounded buttocks, the orc pulls him down on top of himself quick move, then man-handles the transgendered youth to straddle his face. As the green-skinned brute starts to finger his ass once more, he also begins eating out Eric, sticking his tongue deep into the young man's pussy.";
 			say "     'Ooooaaahhhh!' Eric gasps in pleasure from Urik's oral service, throwing back his head and grinding against the orc's face. With one arm stretching behind himself to brace against the firmly muscled chest of the super-sized orc breeder, Eric's other hand gets busy rubbing his clit. Meanwhile, Urik keeps fingering himself, leaking copious pre-cum from his proudly standing erection - and the muscled brute wipes up some of the clear fluid with his hand, then brings it to Eric's ass, smearing the college student's rear with orc pre and starting to play a finger over his pucker. Between Urik's tongue wiggling inside his pussy and the aphrodisiacs produced in an orc's balls being absorbed through his skin, Eric soon is in a sexual haze that has him trembling and moaning on top of his partner. He barely feels the sting as Urik's thick middle finger penetrates his ass with a sudden thrust, then starts moving in and out in the same fast rhythm that the orc uses on his own back door.";
 			WaitLineBreak;
-			say "     The orc and human cuntboy are a sight to behold - naked, moaning and panting as they are, right here in the open on the upper floor of the library. Despite the push you gave to make the orc service him, Eric has fallen back into a more familiar submissive role and seems pretty happy in that position. Although he is on top of the larger male, riding his face and grinding against it, Urik clearly calls the shots - stoking the college student's raging libido with one finger deep inside his ass and his tongue buried deep in Eric's pussy. This seems to have mollified him a bit to the task of having to service another and Urik goes at it with an almost eager readiness.";
-			say "     After a short while of watching the two of them, you notice Eric's gasps getting more and more breathless and increasing in intensity, until he eventually lets out a satisfied shout and humps his hips into Urik's face hard. As the trans-male gasps in orgasm and his pussy starts leaking femcum all over the orc's mouth (to be eagerly slurped up), his back passage tenses and grips Urik's finger like a vise. Your orc slave proceeds to give some small tugs and thrusts with his hand, playfully prolonging Eric's climax with the varied sensations before the college athlete finally relaxes enough to slide out his invading digit.";
+			say "     The orc and human cuntboy are a sight to behold - naked, moaning and panting as they are, right here in the open on the upper floor of the library. Despite the push you gave to make the orc service him, Eric has fallen back into a more familiar submissive role and seems pretty happy in that position. Although he is on top of the larger male, riding his face and grinding against it, Urik clearly calls the shots - stoking the college student's raging libido with one finger deep inside his ass and his tongue buried deep in Eric's pussy. This seems to have mollified him a bit to the task of having to service another and Urik goes at it with an almost eager readiness. After a short while of watching the two of them, you notice Eric's gasps getting more and more breathless and increasing in intensity, until he eventually lets out a satisfied shout and humps his hips into Urik's face hard.";
+			say "     As the trans-male gasps in orgasm and his pussy starts leaking femcum all over the orc's mouth (to be eagerly slurped up), his back passage tenses and grips Urik's finger like a vise. Your orc tribesman proceeds to give some small tugs and thrusts with his hand, playfully prolonging Eric's climax with the varied sensations before the college athlete finally relaxes enough to slide out his invading digit. Now gripping his own thick shaft with his large hand, the orc proceeds to jerk himself off while finger-fucking his ass, rapidly building up to an explosive eruption of cum from his towering pole, hitting Eric's back with a resounding splat, then again, and again, really creaming the young man and his own chest. The two of them sink back on the floor in a panting, sweaty heap, riding out their respective orgasms to the fullest and catching their breaths.";
 			WaitLineBreak;
-			say "     Now gripping his own thick shaft with his large hand, the orc proceeds to jerk himself off while finger-fucking his ass, rapidly building up to an explosive eruption of cum from his towering pole, hitting Eric's back with a resounding splat, then again, and again, really creaming the young man and his own chest. The two of them sink back on the floor in a panting, sweaty heap, riding out their respective orgasms to the fullest and catching their breaths. Eventually, Eric starts to push himself up a little, wanting to get up and saying, 'Wow, that was awesome!' - but Urik suddenly pins him to his chest with one hand, wiping up a long swath of the white splatters on the redhead's back.";
-			say "     'You haven't felt half of what it means to be taken by an orc yet, boy!' the orc calls out in a gruff tone, then starts licking his own seed off his hand with gusto, slurping off finger by finger. As soon as he is done, the big brute grips Eric's head by the young man's hair and gives him a deep French kiss. When the two of them pull apart again, you can see strings of spit and orc cum stretch between their lips and tongues, making it clear that Urik gave Eric a big snowball of cum to swallow. The orc chuckles as he sees Eric's eyes go round and a flush of renewed arousal spreads over the student's face - he's getting drunk on the orc's seed! You allow Urik to clean his sexual partner of the rest of his cum - with his tongue - then help Eric dress and guide him down to his bed to sleep off the buzz.";
+			say "     Eventually, Eric starts to push himself up a little, wanting to get up and saying, 'Wow, that was awesome!' - but Urik suddenly pins him to his chest with one hand, wiping up a long swath of the white splatters on the redhead's back. 'You haven't felt half of what it means to be taken by an orc yet, boy!' the orc calls out in a gruff tone, then starts licking his own seed off his hand with gusto, slurping off finger by finger. As soon as he is done, the big brute grips Eric's head by the young man's hair and gives him a deep French kiss. When the two of them pull apart again, you can see strings of spit and orc cum stretch between their lips and tongues, making it clear that Urik gave Eric a big snowball of cum to swallow. The orc chuckles as he sees Eric's eyes go round and a flush of renewed arousal spreads over the student's face - he's getting drunk on the orc's seed! You allow Urik to clean his sexual partner of the rest of his cum - with his tongue - then help Eric dress and guide him down to his bed to sleep off the buzz.";
 			move player to bunker;
 			now UrikEricInteraction is 2; [Eric got a taste of orc cum]
 		else: [just watch]
 			LineBreak;
-			say "     Wanting to give Eric a nice show, you tell Urik to turn around and flex a bit, which the big orc does with little more than a slight grumble. This also reveals the very erect shaft of his manhood, barely covered by the loose fabric of his loincloth hanging over it. With a grin, you pull the thin cloth to the side and take hold of it, wagging the towering erection in the direction of the watching student. Before much longer, Urik is lying on his back, stretched out on the library floor, legs raised high as he fingers himself with eager fingers. The large orc moans loudly at the anal stimulation, leaking a copious amount of pre-cum, and you notice Eric's breaths coming more quickly as the college athlete unobtrusively rubs his own crotch.";
-			say "     Crouching down next to your private orc breeder, you stroke over Urik's broad chest, then whisper some additional commands to him. This time, the former orc warrior is far too turned on to complain much, instead panting out the requested words of 'I'm yours master. Please let your slut get off!' Wiggling your eyebrows at the still closely watching Eric, you do take hold of Urik's thick prick and stroke it with both hands, giving the orc his reward for being nice and submissive. As wound-up as he already is, it takes mere moments to drive the green-skinned hunk over the edge, humping his hips into the air rhythmically as his balls send forth a geyser's worth of cum - which you aim right at his own face. The first shot just leaves a creamy streak across his cheek, but the second hits Urik's open mouth and is eagerly swallowed, with the next and the ones after making quite a mess of your pet breeder's face, neck and chest.";
+			say "     Wanting to give Eric a nice show, you tell Urik to turn around and flex a bit, which the big orc does readily. This also reveals the very erect shaft of his manhood, barely covered by the flexible material of his pants as it strains to hold it all in. With a grin, you un-hook the fabric from his erection, allowing the massive cock of the orc to flop out. Taking hold of the huge green shaft, you then wag it in the direction of the watching student. After a few quiet words of commands, Urik gets down onto the library floor, stretches out on his back and raises his legs  to finger himself with eager fingers. The large orc moans loudly at the anal stimulation, leaking a copious amount of pre-cum, and you notice Eric's breaths coming more quickly as the college athlete unobtrusively rubs his own crotch.";
+			say "     Crouching down next to your supersized orc breeder, you stroke over Urik's broad chest, then ask Eric if he likes the show. As he nods wide-eyed, Urik looks up at you and asks, '[UrikPlayerAddress], can I get off now? Please?' Wiggling your eyebrows at the still closely watching Eric, you do take hold of Urik's thick prick and stroke it with both hands, giving the orc his reward for his obedience. As wound-up as he already is, it takes mere moments to drive the green-skinned hunk over the edge, humping his hips into the air rhythmically as his balls send forth a geyser's worth of cum - which you aim right at his own face. The first shot just leaves a creamy streak across his cheek, but the second hits Urik's open mouth and is eagerly swallowed, with the next and the ones after making quite a mess of your pet breeder's face, neck and chest.";
 			WaitLineBreak;
-			say "     You keep a hold of Urik's erection and hose him down good, then eventually let go of the warm and throbbing shaft when he runs out of steam. Patting his hard abs now turned cum-gutters, you push the gooey globs of his load around a little in the ridges and valleys of hard muscle, then present your hand to the orc to be licked clean. Once he is done hungrily licking cum off your fingers, you tell him to clean himself up, then casually walk over to Eric, a wide grin on your face. 'You weren't kidding about him,' the young man says in a somewhat breathless tone, then hastily snatches away his hand as he realizes he is still rubbing himself with you right in front of him. 'I - I gotta take care of something. T-thanks for saving me - again,' Eric continues, then quickly moves towards the stairs down to the main floor.";
+			say "     You keep a hold of Urik's erection and hose him down good, then eventually let go of the warm and throbbing shaft when he runs out of steam. Patting his hard abs now turned cum-gutters, you push the gooey globs of his load around a little in the ridges and valleys of hard muscle, then present your hand to the orc to be licked clean. Once he is done hungrily licking cum off your fingers, you tell him to clean himself up, then casually walk over to Eric, a wide grin on your face. 'You weren't kidding about him obeying you,' the young man says in a somewhat breathless tone, then hastily snatches away his hand as he realizes he is still rubbing himself with you right in front of him. 'I - I gotta take care of something. T-thanks for saving me - again,' Eric continues, then quickly moves towards the stairs down to the main floor.";
 			now UrikEricInteraction is 1; [Eric got off on watching Urik]
 	now lastUrikEricInteraction is turns;
 
@@ -3046,7 +3065,7 @@ after going up from Grey Abbey Library while (Eric is in Bunker and HP of Eric >
 	say "[EricWatchesUrik]";
 
 to say EricWatchesUrik:
-	say "     As you walk up the stairs to the upper floor of the library, you hear deep-voiced grunts and moans from somewhere ahead - which turn out to be coming from your personal breeder slave. Urik is lying on one of the sofas arranged between the rows of bookshelves, eyes closed as he makes aroused noises. The broad-shouldered hunk of an orc warrior (that got turned into a bottom bitch) is jerking himself while finger-fucking his own ass with three thick digits. Since being broken in as a butt-slut, his desire - or rather need - to be fucked has only grown. Interestingly, the orc isn't alone. You spot Eric standing nearby, eyes glued to the muscled physique of the green-skinned male while having one hand inside his shorts, making more than obvious rubbing movements. The college athlete is frigging himself while watching Urik!";
+	say "     As you walk up the stairs to the upper floor of the library, you hear deep-voiced grunts and moans from somewhere ahead - which turn out to be coming from your orc breeder/warrior Urik. The orc is lying on one of the sofas arranged between the rows of bookshelves, eyes closed as he makes aroused noises. The broad-shouldered hunk of an orc warrior is jerking himself while finger-fucking his own ass with three thick digits. Since being fed what must have been gallons of Boghrim's cum, his desire - or rather need - to be fucked has only grown. Interestingly, the orc isn't alone. You spot Eric standing nearby, eyes glued to the muscled physique of the green-skinned male while having one hand inside his shorts, making more than obvious rubbing movements. The college athlete is frigging himself while watching Urik!";
 	say "     [bold type]Do you want to move closer and stealthily observe what happens between them next ([link]Y[as]y[end link]), or will you just let the two of them alone and turn your attention elsewhere ([link]N[as]n[end link])?[roman type][line break]";
 	if Player consents: [watch]
 		LineBreak;
@@ -3082,7 +3101,7 @@ after going up from Grey Abbey Library while (Eric is in Bunker and (HP of Eric 
 	say "[EricUrik69]";
 
 to say EricUrik69:
-	say "     As you walk up the stairs to the upper floor of the library, you hear somewhat muffled grunts and moans from somewhere ahead - which turn out to be coming from one of the large sofas arranged for comfortable reading throughout the library. Moving towards it between the bookshelves, you see someone sit up, coming into sight from behind the backrest - it is Eric and he is naked, throwing his head back as he lets out a satisfied moan. Then a muscular green-skinned forearm with a large strong hand rises into view too, pushing the college athlete's chest down again, resulting in slurping sounds a second later. It is relatively obvious what's up, and even before you get to a position to get an unobstructed view, you know that Eric and your orc slave Urik are getting it on.";
+	say "     As you walk up the stairs to the upper floor of the library, you hear somewhat muffled grunts and moans from somewhere ahead - which turn out to be coming from one of the large sofas arranged for comfortable reading throughout the library. Moving towards it between the bookshelves, you see someone sit up, coming into sight from behind the backrest - it is Eric and he is naked, throwing his head back as he lets out a satisfied moan. Then a muscular green-skinned forearm with a large strong hand rises into view too, pushing the college athlete's chest down again, resulting in slurping sounds a second later. It is relatively obvious what's up, and even before you get to a position to get an unobstructed view, you know that Eric and your orc warrior/breeder Urik are getting it on.";
 	say "     From what you can see a moment later, the young cuntboy is straddling Urik's face and getting eaten out while at the same time suckling on the head of the orc's throbbing erection and playing with his balls. For a second, you wonder if Urik got grabby with your friend again, but the fact that Eric is on top and willingly participates does quell that fear quickly. Not that the orc isn't calling the shots in their coupling, as becomes obvious when he gropes around for Eric's arm and hand, pulling it lower to his buttocks and thus directing Eric to finger his asshole, which the shy college student starts doing right away.";
 	LineBreak;
 	say "     [bold type]Do you want to move even closer and watch them go at it ([link]Y[as]y[end link]), or will you just let them have their fun in peace and turn your attention elsewhere ([link]N[as]n[end link])?[roman type][line break]";
@@ -3102,7 +3121,7 @@ to say EricUrik69:
 		say "     After catching his breath for a few seconds, the athletic student immediately pounces on Urik's shaft again, slurping up the spilled cum - at least until Urik suddenly lifts the young human and spins him around. Eric finds himself face to face with the muscled brute, pulled into a deep kiss. Lips pressed together, Urik explores Eric's mouth with his tongue and steals part of the cum he still hadn't swallowed. You see the orc gulp it down with obvious pleasure, then sink back to rest on the sofa after getting his fix too. The two of them doze off like that, stretched out together with Eric lying on top of the orc.";
 	else:
 		LineBreak;
-		say "     Smiling at the fact that Eric is getting out of his shell a bit and searched out your orc slave for some fun, you turn away from the two of them, leaving them to continue with their 69 in private.";
+		say "     Smiling at the fact that Eric is getting out of his shell a bit and searched out your orc tribesman for some fun, you turn away from the two of them, leaving them to continue with their 69 in private.";
 	now UrikEricInteraction is 4; [Urik and Eric had a 69]
 	now lastUrikEricInteraction is turns;
 
@@ -3114,7 +3133,7 @@ after going up from Grey Abbey Library while (Eric is in Bunker and (HP of Eric 
 
 to say EricUrikBJ:
 	say "     As you walk up the stairs to the upper floor of the library, you spot Eric walking into the space between two long bookshelves, seemingly moving along with a specific purpose if you had to guess from his stride. Curious what he's up to, you start to follow, going after him with about twenty feet between you and both of you moving along between the shelves. You're of half a mind to just call out to him and ask where he's going when Eric suddenly slows down, the rhythm of his previously so determined steps interrupted and becoming more irregular. The college athlete bites his lip and looks to the side for a second, bending his head a bit to peer across the backs of the shelf's books, looking at something behind them. He stays like that for a few seconds more, then takes a deep breath and starts to move on, soon turning the corner as the shelf ends and walking towards out of sight.";
-	say "     Your suspicion about whom Eric might be interested in meeting up here is confirmed when you get to the spot from which Eric spied at him from behind the shelf - it is Urik, your orc slave. The muscular brute is dozing on one of the many sofas in the library, sitting on it in a relaxed posture with his legs spread and arms on the backrest. Seems a bit like he's found at least a little bit to like about being yours now - contrary to an orc warrior's existence, he's got a pretty comfortable time of leisure here. Eric is currently approaching the resting orc, walking up to Urik with renewed vigor after almost faltering before. A moment later, he's at the sofa and quietly sits down next to the orc. The athletic student stays quiet for a little while, just taking in the muscled brute right next to him, then eventually raises a hand and slowly stretches it out towards Urik's bare chest. Blushing a little bit as he strokes over the orc's firm pec first, Eric moves on to shake Urik a little to wake him up and says 'Hello' in a shy tone.";
+	say "     Your suspicion about whom Eric might be interested in meeting up here is confirmed when you get to the spot from which Eric spied at him from behind the shelf - it is Urik, your orc warrior/breeder. The muscular brute is dozing on one of the many sofas in the library, sitting on it in a relaxed posture with his legs spread and arms on the backrest. Seems a bit like he's found at least a little bit to like about being yours now - contrary to an orc warrior's existence, he's got a pretty comfortable time of leisure here. Eric is currently approaching the resting orc, walking up to Urik with renewed vigor after almost faltering before. A moment later, he's at the sofa and quietly sits down next to the orc. The athletic student stays quiet for a little while, just taking in the muscled brute right next to him, then eventually raises a hand and slowly stretches it out towards Urik's bare chest. Blushing a little bit as he strokes over the orc's firm pec first, Eric moves on to shake Urik a little to wake him up and says 'Hello' in a shy tone.";
 	LineBreak;
 	say "     [bold type]Do you want to keep watching what happens between them next ([link]Y[as]y[end link]), or will you turn your attention elsewhere ([link]N[as]n[end link])?[roman type][line break]";
 	if Player consents: [watch]
@@ -3129,7 +3148,7 @@ to say EricUrikBJ:
 		say "     'As for the other thing...' Urik goes on to say, then slides the thumb of his left hand under Eric's shorts again and this time pushes them halfway down the young athlete's legs in one go. As Eric isn't wearing underwear (maybe in anticipation of something like this?), this of course reveals the little treasure trail of red hair leading down from his navel, leading to a well-trimmed bush of pubic hair and the transgendered teen's pussy. The large orc strokes his index finger over Eric's folds and clit, drawing an aroused squeak from the naked human as he says, 'I kinda dig it now. It's not a foot-long, throbbing dick, but... fun in its own way.' With that said, Urik puts the tip of his thumb on Eric's clit and rubs a little back and forth, making the teenager moan and squirm against his arm.";
 		say "     After having some clear enjoyment in teasing Eric with very gentle touches and stroking (for an orc), Urik lets go of him eventually, allowing the panting student to catch his breath again. 'But hey, if you wanna thank me kindly, I know just the way,' the orc says next, giving Eric a beaming smile. 'Yes? How can I - oh!' Eric starts to say, then gives an open-mouthed stare at the thick green shaft that springs up as Urik pulls aside his bulging loincloth. Perfectly happy to make use of this opportunity, Urik simply slides a hand up to cup the head of his human friend, then pushes Eric down to his crotch. A loud and satisfied grunt echoes through the library as the green-skinned throbbing cock-head slips between the cuntboy's lips, stretching them wide as Urik wedges the tip of his dick into Eric's mouth.";
 		WaitLineBreak;
-		say "     'Ngghhh - yeah!' your orc slave calls out when Eric starts suckling on his erection and playing his tongue over the cum-slit at the very top. Well-familiar with the taste and pleasurable effects of orc cum by now, Urik's little friend eagerly slurps up the little throbs of pre that leak out. His cheeks start to redden a little - not in a blush this time, but rather the start of getting buzzed on the bounty of Urik's balls. Even though Eric can take little more than the head of the green-skinned hunk's shaft, the young man is doing a nice job of worshiping the orc's manhood, stroking its girthy length with both hands while sucking on it. At the same time, Urik moves his hand down to the pale-skinned buttocks of his little friend, groping their firm curves and then feeling around for Eric's holes. Soon, the orc has two fingers thrusting in and out of Eric, fingering both his ass and pussy at the same time.";
+		say "     'Ngghhh - yeah!' your orc warrior/breeder calls out when Eric starts suckling on his erection and playing his tongue over the cum-slit at the very top. Well-familiar with the taste and pleasurable effects of orc cum by now, Urik's little friend eagerly slurps up the little throbs of pre that leak out. His cheeks start to redden a little - not in a blush this time, but rather the start of getting buzzed on the bounty of Urik's balls. Even though Eric can take little more than the head of the green-skinned hunk's shaft, the young man is doing a nice job of worshiping the orc's manhood, stroking its girthy length with both hands while sucking on it. At the same time, Urik moves his hand down to the pale-skinned buttocks of his little friend, groping their firm curves and then feeling around for Eric's holes. Soon, the orc has two fingers thrusting in and out of Eric, fingering both his ass and pussy at the same time.";
 		say "     Watching the two of them please one another with such eagerness, you can see clearly that Urik has a soft spot for Eric - while he may have his hand on the trans teen's head, he isn't actually trying to push him further down on his erection, instead just letting him take as much as he is able and even tousling his hair with surprising gentleness. Along the same lines, rubbing Eric just to please him is not something the typical orc warrior would even think of, and yet your tamed orc is doing it all on his own initiative. It is debatable what caused this change in the green-skinned brute - could be being fucked by Toven and serving as Boghrim's cum-dump during the slave hunt, or maybe your own treatment of the orc after you won him, or even just something about Eric that makes even the most brutish people and feral beasts come to care for him. No matter what, the two of them together sure give a hot show on that sofa.";
 		WaitLineBreak;
 		say "     Urik and Eric's bout of cock-sucking and fingering heats up quickly as Eric soon decides to feel around lower, cupping the orc's balls and then stroking the start of his butt-crack even further down. This draws a happy grunt from his partner and within moments, Urik slides his hips right up to the edge of his seat, basically opening up full access to his back door. Still suckling hard on the big brute's hard shaft, Eric runs his hand down between Urik's firm buns, then pushes in three fingers against the trembling pucker he encounters. Bellowing a deep grunt full of lust and pleasure, the orc throws his head back against the sofa cushions and thrusts up his hips, shoving several more inches into a wide-eyed Eric's mouth.";
@@ -3142,7 +3161,7 @@ to say EricUrikBJ:
 		say "     With everything over but the cleaning up - which the two of them start doing by licking cum and femcum off one another - you stroll back into the more open area of the library before the two of you have any opportunity to stop you. The thought that it surely was refreshing to see that Urik can be nice if he wants to springs up in your mind, and you can't help but smile a little before turning back to other matters.";
 	else:
 		LineBreak;
-		say "     Smiling at the fact that Eric is getting out of his shell a bit and searched out your orc slave for some fun, you turn away from the two of them and walk away. Before you're even halfway down the long row of bookshelves, a loud moan and slurping noises from behind you show that someone's sure having a good time right now.";
+		say "     Smiling at the fact that Eric is getting out of his shell a bit and searched out your orc tribesman for some fun, you turn away from the two of them and walk away. Before you're even halfway down the long row of bookshelves, a loud moan and slurping noises from behind you show that someone's sure having a good time right now.";
 	now UrikEricInteraction is 5; [Urik and Eric talked and Urik got a BJ]
 	now lastUrikEricInteraction is turns;
 
@@ -3155,10 +3174,10 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eri
 	say "[EricUrikHangOut]";
 
 to say EricUrikHangOut:
-	say "     Coming into the library, you spot a familiar pair of people sitting on one of the sofas in the relatively open central section of the building. Looks like Eric is hanging out with your orcish slave Urik and is leaning against the side of the big, green-skinned brute as he reads a book. Meanwhile, the orc himself is asleep, head leaned back as he dozes peacefully with an arm wrapped around Eric's side. Despite the orc not really being the book-reading type, this apparently didn't stop Eric from trying to get him interested anyways. Still, while it was only to be expected that he at some point dropped the book his smaller human friend selected, what does catch your attention is that the orc seems to have stayed with Eric afterwards, just holding on to him right until he fell asleep.";
+	say "     Coming into the library, you spot a familiar pair of people sitting on one of the sofas in the relatively open central section of the building. Looks like Eric is hanging out with your orcish warrior/breeder Urik and is leaning against the side of the big, green-skinned brute as he reads a book. Meanwhile, the orc himself is asleep, head leaned back as he dozes peacefully with an arm wrapped around Eric's side. Despite the orc not really being the book-reading type, this apparently didn't stop Eric from trying to get him interested anyways. Still, while it was only to be expected that he at some point dropped the book his smaller human friend selected, what does catch your attention is that the orc seems to have stayed with Eric afterwards, just holding on to him right until he fell asleep.";
 	say "     The two of them together on the sofa sure do make a nice picture - one large orc with bulging muscles and next to him a lithe athlete of a young human, snug against the larger male. You find yourself watching them for longer than you expected, right until the point in which Eric does look up and notices you. With a smile, he calls out to you, waving to come closer. 'Hi, how are things out there? Nothing too bad roaming the streets right now, I hope?' the college athlete asks in a friendly tone and you chat a little with him about what critters you saw on your way back. This conversation does wake up Urik after a little while, and with a little snorted grunt, he raises his head and opens his eyes while reflexively drawing Eric closer.";
 	WaitLineBreak;
-	say "     'Huh? Whut - oh, its you boss,' the orc grunts, obviously still a bit sleepy as he blinks at you. Then he looks at the young man pressed to his side and a hint of a smile tugs at the corners of his mouth. Returning his gaze to you, Urik adds, 'Been 'nice' to your friend since we... had that talk. Hell, he even made me join him for a 'book club' and all.' Judging from the snort that follows, Urik seems to find the basic idea of spending time like this ridiculous, but then... he nevertheless did try his best to participate. You talk a little with the big brute, stressing that he should also have an eye out for the library's security - as some creatures might notice the inhabited building and could come looking for loot, or sexual partners.";
+	say "     'Huh? Whut - oh, its you [UrikPlayerAddress],' the orc grunts, obviously still a bit sleepy as he blinks at you. Then he looks at the young man pressed to his side and a hint of a smile tugs at the corners of his mouth. Returning his gaze to you, Urik adds, 'Been 'nice' to your friend since we... had that talk. Hell, he even made me join him for a 'book club' and all.' Judging from the snort that follows, Urik seems to find the basic idea of spending time like this ridiculous, but then... he nevertheless did try his best to participate. You talk a little with the big brute, stressing that he should also have an eye out for the library's security - as some creatures might notice the inhabited building and could come looking for loot, or sexual partners.";
 	say "     When you're done talking with the two of them, you say your goodbyes and start walking towards the front desk of the library to sort through your equipment a bit. As you go along, you hear Urik's deep voice from behind you. 'So, li'l E... this reading thing isn't really my wavelength. How about we get something more interesting going? I know that 'pussy' thing of yours wants to be touched a lot. How about getting a full-on ride? Feel an orc cock in it!' The sound of indrawn breath makes you guess that the orc likely slid his hand somewhere intimate and is touching Eric. 'I - um...' Eric starts, then gives a breathless pant, 'Want to, but but... it's too public here and... oooh!' Glancing over your shoulder, you see that Urik's on his feet now, carrying Eric in a pose that has him half-hanging over one green-skinned shoulder. With a tusk-bearing smile on his face, the orc gives Eric's ass a squeeze with the hand holding on to him, then walks towards the stairs to the upper floor.";
 	LineBreak;
 	say "     [bold type]Do you let Urik walk off with Eric to fuck him ([link]Y[as]y[end link]), or will you stop the orc cold, ordering him not to ([link]N[as]n[end link])?[roman type][line break]";
@@ -3175,7 +3194,7 @@ to say EricUrikHangOut:
 			say "     'I - um... like wearing them,' Eric admits, and as Urik keeps stroking up and down he pants out the words, 'They're so soft... and... nice against... my pussy.' Giving a gruff chuckle at the admission, Urik says, 'Told ya before - stop being such a pussy. Err - you know what I mean. Just wear what you want and own it - you're definitively rocking the panties, little dude.' With an aroused grunt, Urik pounces on Eric, sucking on his nipples and lightly nibbling on them while at the same time drawing the black tanga side and pushing a finger in between his nether lips. Moans fill this corner of the library as Eric is fingered and licked, writhing in pleasure and with his hands holding on tightly to the sofa cushions.";
 			WaitLineBreak;
 			say "     After taking his time in pleasuring Eric for a bit, Urik eventually pulls his thrusting digit out of the red-headed teenager's pussy. Bringing the finger up to his mouth, the orc licks it off like a treat, ending in a deliberate loud pop. 'You're one sweet little treat,' Urik says with a laugh, then follows up by carefully peeling the by now quite soaked panties off Eric. He holds the little shred of black fabric in his hand for a second, then brings it to his nose and takes a deep breath. 'Smells just like you. I'm gonna keep it,' the green-skinned brute says with a grin, then tugs the scrunched up tanga away under a sofa cushion. Eric's eyes go wide at the realization that Urik likes him - and lusts after him - enough to want to keep a memento, then even wider as the orc rips the loincloth off his crotch, revealing the thick green shaft of his erection.";
-			say "     'Never thought I'd be this hard for fucking anything other than a hot slave's ass,' Urik groans in a lusty tone and spreads Eric's legs to move on top of the smaller human. This brings his crotch into contact with the pale-skinned student's, the curve of his hairy balls brushing against Eric's skin as he lowers himself, then rubs the shaft of his manhood up and down against the outer folds of the cuntboy's pussy. Thick, glistening drops of pre form at the tip of the orc's shaft, soon dripping down into the trimmed bush of Eric's pubes or being brushed off on the slightly protruding little button of his clit. Until Urik stops for a second that is, holding his index finger under the leaking cum-slit of his erection and wiping off a glistening dollop of the sticky liquid. Then he brings his hand to Eric's face, smearing the young athlete's lips with his pre - and Eric responds by enveloping the tip of his finger with his lips, suckling on it.";
+			say "     'Never thought I'd be this hard for fucking anything other than a hot breeder's ass,' Urik groans in a lusty tone and spreads Eric's legs to move on top of the smaller human. This brings his crotch into contact with the pale-skinned student's, the curve of his hairy balls brushing against Eric's skin as he lowers himself, then rubs the shaft of his manhood up and down against the outer folds of the cuntboy's pussy. Thick, glistening drops of pre form at the tip of the orc's shaft, soon dripping down into the trimmed bush of Eric's pubes or being brushed off on the slightly protruding little button of his clit. Until Urik stops for a second that is, holding his index finger under the leaking cum-slit of his erection and wiping off a glistening dollop of the sticky liquid. Then he brings his hand to Eric's face, smearing the young athlete's lips with his pre - and Eric responds by enveloping the tip of his finger with his lips, suckling on it.";
 			WaitLineBreak;
 			say "     The sexual tension between the two of them reaches its height when Urik leans down to give Eric a deep and hungry kiss - and his hand moves to line his shaft up with the pussyboy's opening. Then the orc presses in - firmly, but slowly nudging apart Eric's dripping wet nether lips. The lithe human stiffens a little, lying stretched out under the looming bulk of his orcish partner, then moans loudly into Urik's open mouth as the head and another further inch of the green-skinned brute's prick slides into him. 'Nnnghh! So tight!' Urik growls in obvious pleasure and holds on to his sexual partner tightly, half-lifting him off the sofa. You can see the firm cords of muscle in his legs tense, then relax again, as the orc holds himself back from hammering into Eric hard, instead giving him a moment to get used to the thick cock.";
 			if EricVirginityTaken is 0: [virgin Eric]
@@ -3267,6 +3286,8 @@ to say EricUrikLibraryFuckRepeat:
 		LineBreak;
 		say "     With a small smile on your lips, you turn around and walk back the way you came, leaving the unlikely couple to continue their fun in private.";
 	now lastUrikEricInteraction is turns;
+]
+
 
 [ Ryousei Interactions                 ]
 
@@ -3420,7 +3441,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and HP of 
 	say "     Sven listens intently to Eric's further tale, how he barricaded himself in the lockerroom and all that, until the college athlete gets even more distraught as he brings up the fate of his ex-girlfriend Stacy. 'If I - if things hadn't gone as they did the day before, I could have been there to protect her. Maybe she'd still be human, you know...' Eric quietly sobs, putting his face in his hands. Then a white-furred paw closes on the college student's shoulder and Sven gives him a little shake to get him out of his slump. 'Hey, you don't know that. And don't blame yourself. From what you told me, she dumped you, not the other way around, and you still went out to look for her afterwards regardless.'";
 	WaitLineBreak;
 	say "     'Some things just happen, no matter what you do. It's... fate, I guess. Just look at me, hah!' Sven goes on to say, holding up his white-furred right arm and wiggling with the digits of his paw. Eric raises one hand to touch his arm, stroking over the soft fur - which seems to help him lay the self-recriminations to rest for now. Smiling as his newfound friend touches him gently, Sven goes on to casually snake his quite long tail around the sitting human, the end angling upwards ever so slowly until it tickles the side of Eric's neck, just under the ear. Rubbing his neck, the college athlete is surprised as his hand encounters the soft tail-tip, making him turn his head and look right at it.";
-	say "     The conversation of the two college students turns to nicer topics afterwards, with Sven telling an action-packed story about how you and he fought off the snow leopard and answering Eric's questions about how it feels to be a big cat with fur and all that. You drift away after a little while, leaving the two of them to talk and get to know each other better. One thing is for sure though - they're hitting it off quite well, and you don't doubt that Sven and Eric will be fast friends in no time.";
+	say "     Conversation of the two college students turns to nicer topics afterwards, with Sven telling an action-packed story about how you and he fought off the snow leopard and answering Eric's questions about how it feels to be a big cat with fur and all that. You drift away after a little while, leaving the two of them to talk and get to know each other better. One thing is for sure though - they're hitting it off quite well, and you don't doubt that Sven and Eric will be fast friends in no time.";
 	now ConfSvenEricInteraction is 1;
 	now lastConfSvenEricInteraction is turns;
 
@@ -3432,7 +3453,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Eric first Fang sex walkin, XP of Erica: [Xp of Erica], HP of Eric: [HP of Eric], lastfuck of Eric: [lastfuck of Eric] [line break]";
-	if hp of Fang < 5:
+	if HP of Fang < 5:
 		say "     As you enter the library, you see Eric walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, he's been spending quite a bit of his time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave him to his reading, you see Fang's furred shape silently stalk after Eric. Knowing that he's a wild and horny beast, you see where this might lead...";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Go after them to see what happens and maybe do something about it.";

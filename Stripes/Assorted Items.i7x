@@ -16,7 +16,7 @@ name	desc	weight	object
 
 libido pill is a grab object. It is temporary.
 
-the usedesc of libido pill is "[libido pill use]".
+Usedesc of libido pill is "[libido pill use]".
 
 to say libido pill use:
 	say "[line break]     You pop the sex drug into your mouth and swallow it. There's a slight medicinal taste to it, but you forget that as it quickly gets to work. Soon you're feeling hot and aroused, your libido climbing rapidly.";
@@ -80,7 +80,7 @@ carry out pillgiving someone (called x):
 		say "     They're as ready as they're going to be by this point.";
 	else if lastfuck of x - turns >= 24:
 		say "     They're as ready as they're going to be by this point.";
-	decrease carried of libido pill by 1;
+	ItemLoss libido pill by 1;
 
 
 when play begins:

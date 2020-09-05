@@ -27,12 +27,13 @@ Object	Name
 Circle of Life	"Circle of Life"
 
 Circle of Life is a situation.
-The sarea of Circle of Life is "Zoo".
+ResolveFunction of Circle of Life is "[ResolveEvent Circle of Life]".
+Sarea of Circle of Life is "Zoo".
 
 when play begins:
 	add Circle of Life to BadSpots of FurryList;
 
-Instead of resolving a Circle of Life:
+to say ResolveEvent Circle of Life:
 	say "     While exploring the large expanse of the zoo, wandering along the walkways and even through the (usually breached) enclosures where the main way is blocked, you suddenly hear a not too distant roar, followed by frightened cries from a number of female voices. In the subsequent moments, the sound of hooves on asphalt comes closer rapidly as you decide to duck out of sight until you know more about what is going on. Hidden behind a bush, you see a whole group of anthro gazelles sprint past in full flight - Panicked, one of the group members actually runs the wrong way at a fork just a short distance ahead. She is about two dozen feet down when she notices that something is up as she takes in the lack of her kin around her. Stopping in a scrape of hooves upon stone, the separated gazelle heavily pants as she looks back the way she came.";
 	say "     The anthro girl looks around frantically as her muscles tighten, she is about to backtrack and try to get back to the herd - but then her eyes fall upon yourself and widen, causing her to freeze mid-step. Gaze jumping from left to right, she takes in all the possibilities of escape from every angle. Unfortunately for her, before she is able to make a clear decision, her time is up. A satisfied roar sounds from the site of the now long-gone herd, prompting the gazelle to take action as she runs straight ahead. A moment later, the powerful form of a male lion flashes past you. Although being part anthro, the large feline chooses to bound after her on all fours with neck breaking speed.";
 	LineBreak;
@@ -83,9 +84,10 @@ Object	Name
 Jungle Chase	"Jungle Chase"
 
 Jungle Chase is a situation.
-The sarea of Jungle Chase is "Zoo".
+ResolveFunction of Jungle Chase is "[ResolveEvent Jungle Chase]".
+Sarea of Jungle Chase is "Zoo".
 
-Instead of resolving a Jungle Chase:
+to say ResolveEvent Jungle Chase:
 	say "     Walking along the pathways of the zoo, you find yourself in an area overgrown by a lot of tropical plants. Between the towering trees, broad-leafed bushes and plants, colorful flowers, countless ferns and even vines hanging down from above, you get the feeling that you're walking through a jungle and not simply a footpath in the middle of a large city. The zoo really is quite expansive, and if there weren't some glimpses of buildings between the greenery here or there, you could almost believe you were somewhere in the Indian rain-forest right now. Admiring the diverse environment around you, a loud and angry roar suddenly shakes you out of your reverie - it sounds fairly close too, and is quickly getting louder! Your eyes frantically search the area before you see that the path you're on forks about a dozen feet ahead, one way soon ending at the thoroughly barricaded door of a zoo building, the other being where the noise is coming from.";
 	LineBreak;
 	say "     [bold type]What do you do now?[roman type][line break]";
@@ -130,11 +132,12 @@ Object	Name
 Meeting Malakhi	"Meeting Malakhi"
 
 Meeting Malakhi is a situation.
-The Prereq1 of Meeting Malakhi is Jungle Chase.
+ResolveFunction of Meeting Malakhi is "[ResolveEvent Meeting Malakhi]".
+Prereq1 of Meeting Malakhi is Jungle Chase.
 The Prereq1Resolution of Meeting Malakhi is { 1, 2, 3 }.
-The sarea of Meeting Malakhi is "Zoo".
+Sarea of Meeting Malakhi is "Zoo".
 
-Instead of resolving a Meeting Malakhi:
+to say ResolveEvent Meeting Malakhi:
 	project the Figure of Malakhi_icon;
 	say "     As you walk along one of the many cobblestone paths through the expansive zoo, your way once again leads you into the section that seems almost like a primeval jungle. Tropical plants, up to and including colossal trees with widely branching tops are all around you, creating a beautiful image of greens and bright splashes of color added by large flowers. Everything feels very [italic type]alive[roman type] here and you actually just stand still for a moment to take in the beauty of your surroundings. Then a rustling sound breaks you out of the peaceful moment, making you remember that jungles may be pretty, but also are home to countless predators... like tigers, for example. Preparing yourself for a fight as soon as that thought shoots through your head, you focus on the bushes which are emitting the rustling noise and... laugh out loud as a small pot-bellied pig comes rushing out between them, looks at you and runs off with a squeal.";
 	say "     But you are not the only one laughing - a young man's amused chuckle joins yours, followed by the words, 'Hey there. You're new!' Startled, you glance up and see a boyish human face with a mane of black hair surrounding it look at you. The owner of the attractive, sun-browned visage is a naked human-panther hybrid, his legs hooked over a branch as he hangs upside down and smiles at you. Your eyes wander a bit all of their own, taking in his mostly human body, lithe and flexible as it is, plus the fact that he has a long black tail and claws on his hands and feet. 'Welcome! I'm Malakhi,' he adds with a friendly and enthusiastic wave of his hands, then goes on to say, 'So, we don't get many visitors to the zoo these days. What brings you here? Let me guess! You're... on a sex safari and wanna fuck animals from every continent?!'";
@@ -176,14 +179,15 @@ Object	Name
 Tiger Trick	"Tiger Trick"
 
 Tiger Trick is a situation.
-The Prereq1 of Tiger Trick is Meeting Malakhi.
+ResolveFunction of Tiger Trick is "[ResolveEvent Tiger Trick]".
+Prereq1 of Tiger Trick is Meeting Malakhi.
 The Prereq1Resolution of Tiger Trick is { 1, 2, 3, 4 }.
-The sarea of Tiger Trick is "Zoo".
+Sarea of Tiger Trick is "Zoo".
 
 when play begins:
 	add Tiger Trick to BadSpots of FurryList;
 
-Instead of resolving a Tiger Trick:
+to say ResolveEvent Tiger Trick:
 	project the Figure of Malakhi_icon;
 	say "     Walking through the zoo along one of the many cobblestone pathways winding their way through its expansive acreage, you hear the sounds of many wild beasts all around you. The loudest at the moment are the roars and rhythmic growls of some sort of large creature, fairly close to your current position. Somehow, you can't help but feel curious about what exactly it might actually be. Eager to find out, you quickly follow one path leading in the right direction, soon reaching a bend that brings you into sight of the source of all this noise. There is a female tigertaur not too far ahead, pinning a hunky male zebra to the grass on a small meadow between tropical trees. She is holding him down while at the same time pumping her rear end up and down on his equine member. Even a fleeting glance to the striped guy's face tells you that he is far from sorry about being captured by her.";
 	say "     Interestingly, you are not the only one watching the two of them in their lewd and public copulation. On a low-bending branch of a nearby tree, Malakhi is sitting, his slender legs and tail dangling down to just about head height for you. As usual, the panther-hybrid is completely naked, presenting himself in nothing but sun-bronzed skin. He is watching the striped predator make use of her captive with eager eyes, though the look on his face is one of amusement rather than arousal.";
@@ -235,14 +239,15 @@ Object	Name
 Zookeepers at Work	"Zookeepers at Work"
 
 Zookeepers at Work is a situation.
-The Prereq1 of Zookeepers at Work is Tiger Trick.
+ResolveFunction of Zookeepers at Work is "[ResolveEvent Zookeepers at Work]".
+Prereq1 of Zookeepers at Work is Tiger Trick.
 The Prereq1Resolution of Zookeepers at Work is { 1, 2, 3, 4 }.
-The sarea of Zookeepers at Work is "Zoo".
+Sarea of Zookeepers at Work is "Zoo".
 
 when play begins:
 	add Zookeepers at Work to BadSpots of FurryList;
 
-Instead of resolving a Zookeepers at Work:
+to say ResolveEvent Zookeepers at Work:
 	if BarnabasRelationship is 0: [first time]
 		say "     Strolling along the pathways of the zoo, you come upon a fairly large enclosure that actually seems fully intact and even well-cared for. The nearby information sign about it tells you that this is a simulated piece of Savannah, with a number of peaceful animals living together in it. Stepping up to the iron bars of the fence separating the enclosure from the walkway, you see a feral ostrich parading around with raised head. It looks like a completely 'normal' animal, most likely one of the original inhabitants of the zoo. Then suddenly, a metallic banging noise makes you listen up, with the huge bird whirling around to focus on the source, then fluffing up her wings and dashing towards the opposite end of the enclosure, together with a few antelopes of various types and a small family of wildebeest.";
 		say "     Walking after the mix of animals along the outside of the metal border fence, you see what attracted them: A piece of the artificial rock backing of the enclosure has been opened up like a door, providing access for the black panther anthro who is walking towards the animals with two well-filled metal buckets in his hands. The muscular male wears nothing but a blue baseball cap that reads 'City Zoo' on its front. Pulling the feed-bucket away as one wildebeest tries to just stick its muzzle in it, the man says in an amused tone, 'Hey, no queue-jumping. You can have your food together with everyone else Deke!' Behind the panther, someone else comes out of the hidden door - and it is a person you know: Malakhi, the partially panther-morphed young man that you encountered before. He is (as usual) bare-ass naked and quite comfortable in just his sun-bronzed skin, pushing a wheelbarrow and pitchfork along.";
@@ -307,14 +312,15 @@ Object	Name
 Zookeepers at Play	"Zookeepers at Play"
 
 Zookeepers at Play is a situation.
-The Prereq1 of Zookeepers at Play is Zookeepers at Work.
+ResolveFunction of Zookeepers at Play is "[ResolveEvent Zookeepers at Play]".
+Prereq1 of Zookeepers at Play is Zookeepers at Work.
 The Prereq1Resolution of Zookeepers at Play is { 1, 2, 3 }.
-The sarea of Zookeepers at Play is "Zoo".
+Sarea of Zookeepers at Play is "Zoo".
 
 when play begins:
 	add Zookeepers at Play to BadSpots of FurryList;
 
-Instead of resolving a Zookeepers at Play:
+to say ResolveEvent Zookeepers at Play:
 	say "     Strolling along the pathways of the zoo, you come upon a mid-sized enclosure that actually seems fully intact and even well-cared for. The nearby information sign about it tells you that it is the home of a jaguarundi, a south American wildcat. You can see it resting in the branches of a small tropical tree sticking up just on the other side of the water-filled ditch separating the animal from any zoo visitors like yourself. The real show right now though isn't the small-ish feline but rather who else is in there. You recognize Barnabas and Malakhi, the anthro panther zookeeper and his panther-hybrid intern, taking turns washing themselves under a tiny waterfall that feeds the water barrier after a dozen feet of an artificial brook. It is just wide enough for one of them to stand under - which Barnabas is doing right now, quickly rubbing himself with a piece of soap and rinsing it off before stepping to the side, his short fur plastered to his body, showing off all its muscles.";
 	say "     Malakhi is next, the mostly human young man moving into the spray of obviously cold water, judging from the sounds he makes as it splashes his sun-bronzed skin and runs down over his slender form. Soaping himself up with frantic haste, he emerges soon after, dripping wet and shivering. 'Let's get you dry, my boy,' Barnabas tells him in a caring tone, shaking out a large towel and wrapping it (and his arms) around the younger male, rubbing Malakhi dry from head to toe. The panther-hybrid very clearly enjoys the zookeeper's hands on his body, leaning into his touch and putting a hand on Barnabas shoulder as the man crouches down to dry his legs. 'Ooh, that feels really nice,' he sighs in pleasure, fingers stroking the back of his anthro panther's neck. You can see that the young man's cock has hardened and is now sticking straight out.";
 	WaitLineBreak;
@@ -347,9 +353,10 @@ Object	Name
 Escaped Wolf Pack	"Escaped Wolf Pack"
 
 Escaped Wolf Pack is a situation.
-The sarea of Escaped Wolf Pack is "Zoo".
+ResolveFunction of Escaped Wolf Pack is "[ResolveEvent Escaped Wolf Pack]".
+Sarea of Escaped Wolf Pack is "Zoo".
 
-Instead of resolving Escaped Wolf Pack:
+to say ResolveEvent Escaped Wolf Pack:
 	EscapedWolfPackEvent;
 
 to EscapedWolfPackEvent: [Bent bars in zoo]
@@ -362,9 +369,10 @@ Object	Name
 Meerkat Patrol	"Meerkat Patrol"
 
 Meerkat Patrol is a situation.
-The sarea of Meerkat Patrol is "Zoo".
+ResolveFunction of Meerkat Patrol is "[ResolveEvent Meerkat Patrol]".
+Sarea of Meerkat Patrol is "Zoo".
 
-Instead of resolving Meerkat Patrol:
+to say ResolveEvent Meerkat Patrol:
 	MeerkatPatrolEvent;
 
 to MeerkatPatrolEvent: [Meerkats returning from an excursion to the city]
@@ -388,13 +396,14 @@ Object	Name
 Lemur Jerks	"Lemur Jerks"
 
 Lemur Jerks is a situation.
-The sarea of Lemur Jerks is "Zoo".
+ResolveFunction of Lemur Jerks is "[ResolveEvent Lemur Jerks]".
+Sarea of Lemur Jerks is "Zoo".
 
 when play begins:
 	add Lemur Jerks to BadSpots of FurryList;
 	add Lemur Jerks to BadSpots of MaleList;
 
-instead of resolving Lemur Jerks:
+to say ResolveEvent Lemur Jerks:
 	say "     As you're walking the stone-lined walkways of the zoo you hear a weird noise from behind you, followed by muffled laughter. Turning around, the source of it isn't immediately obvious - until another spurt of cum sprays right past your nose, just barely missing you. Glancing up you spot a group of what appear to be lemur-men in a large tree, making a sport of trying to hit you as they jerk off. It looks like there are about four of them up there, looking fairly close to what you know of regular lemurs: they're covered in brownish-red to gray hair and sport long furry tails with a black and white stripe pattern. What isn't so typical are the intelligent green eyes with which they observe you, or the fact that they're joking with one another like a group of horny frat boys. 'You always were shit at aiming, with a basketball or a dick!' one of them riles up the last one who came and missed you, while a third one is panting eagerly as he jerks himself with furious speed.";
 	say "     'Gnnngh! Watch and weep guys as I cream [ObjectPro of Player]!' the lemur boasts, and despite the danger you can't help but catch your gaze on the massive ten-inch monster of a cock he is stroking between his legs. For a little guy, that's one freaking huge member! Of course, this means that you are barely in time to remember that you really should get some cover, jumping out of the way of your second close call at lemur bukkake today. The groaning and grunting monkey's friends holler and laugh as his seed splashes nothing but the ground, ribbing him mercilessly. Snickering and only throwing quick glances at you, they're mostly busy with each other. When the topic of 'You just wait, I'll be ready for another shot in a second' comes up, you decide it might be best to move on from the tree that houses these rascals. As you hurry off, the monkeys blow a raspberry after you and laugh among themselves.";
 	now Lemur Jerks is resolved;
@@ -404,14 +413,15 @@ Object	Name
 Gazelle Breeding Bitch	"Gazelle Breeding Bitch"
 
 Gazelle Breeding Bitch is a situation.
-The sarea of Gazelle Breeding Bitch is "Zoo".
+ResolveFunction of Gazelle Breeding Bitch is "[ResolveEvent Gazelle Breeding Bitch]".
+Sarea of Gazelle Breeding Bitch is "Zoo".
 
 when play begins:
 	add Gazelle Breeding Bitch to BadSpots of FurryList;
 	add Gazelle Breeding Bitch to BadSpots of FemaleList;
 	add Gazelle Breeding Bitch to badspots of HermList;
 
-instead of resolving Gazelle Breeding Bitch:
+to say ResolveEvent Gazelle Breeding Bitch:
 	say "     While walking the zoo grounds you overhear what sounds to be a series of dog yips and yelps. Curiosity over the sounds wins out over caution, and you're soon peering around a corner, your gaze falling onto the familiar sight of a sexual encounter just about to start. About thirty feet distant, a little group of herm gazelle girls crowded around anthro retriever. The canine bitch appears to be in heat, lying on the ground amidst a scattering of clothes that she seems to have clawed off her body. She is panting heavily, the dripping cunt between her legs matting the fur of her crotch and inner legs. This spectacle seems to have awakened strong urges in the usually fairly shy gazelles, their hard cocks explaining why fleeing herd animals went on the offensive here. There are four of the tawny-furred antelopes, and a second later, they start stroking over their own cocks and pussies as they stare at the naked canine.";
 	say "     A gazelle makes the first step, her rock-hard shaft leading the way towards the retriever's squirming body. Smiling broadly as she kneels between the young woman's legs, she simply places the head of her shaft over the burning hot entrance of the bitch and thrusts in deep. The dog girl yelps loudly and lolls her tongue out of her canine muzzle, smiling blissfully as her deep need is finally fulfilled. Soon she's being fucked with reckless abandon by the gazelle, by which time the other herms follow their leader's example. One of them straddles the retriever's chest, presenting her with a hard cock to lap, while the other two kneel left and right of the dog and find their shafts grabbed by the canine bitch's furry paws.";
 	WaitLineBreak;
@@ -424,13 +434,14 @@ Object	Name
 Egged Tigress	"Egged Tigress"
 
 Egged Tigress is a situation.
-The sarea of Egged Tigress is "Zoo".
+ResolveFunction of Egged Tigress is "[ResolveEvent Egged Tigress]".
+Sarea of Egged Tigress is "Zoo".
 
 when play begins:
 	add Egged Tigress to BadSpots of FurryList;
 	add Egged Tigress to BadSpots of FemaleList;
 
-instead of resolving Egged Tigress:
+to say ResolveEvent Egged Tigress:
 	say "     As you wander past a little shop deeper in the zoo that seems to have offered snacks and souvenirs to the visitors, you hear squeaking noises coming from within. Curiosity aroused, you creep closer and peer through one of the open sales windows. There is a fairly large and brightly colored tigress in there, writhing on the floor. You can immediately tell that this isn't an animal but rather a rubber creature since its skin shines with reflections in the light and the creature's limbs twist and bend with far greater flexibility than anything with bones ever could. Worry starts to rise in you as thoughts of some new and terrible affliction hurting the infected spring up in your mind, but then you notice that she isn't thrashing around in pain or anything; it's rather the opposite in fact. The tigress is smiling ecstatically, with even a little drool trickling out of the corners of her muzzle.";
 	say "     The source of her strange behavior becomes apparent as the tigress rolls over onto her back and twitches a little, drawing your gaze to her bulging belly. It looks absolutely stuffed, with several quite large bulges inside, shifting against one another as she caresses her belly. At least four of whatever that is are inside her, and her rubber skin is notably wet in places, like between her legs and at those splatters over her upper chest. Something tells you that the large yellow feathers scattered about have something to do with that too. Must have been a fight here that the tigress lost. Not that she seems to be concerned about that. A loud moan comes from the rubber creature and she thrashes around for a second, then groans as a large purple egg is slowly pushed out through her thankfully quite stretchy pussy. With a high-pitched squeak, it gets squeezed out of the tigress, rolling a few feet over the floor before being joined by another.";
 	WaitLineBreak;
@@ -442,14 +453,15 @@ Object	Name
 Panda Shepherd	"Panda Shepherd"
 
 Panda Shepherd is a situation.
-The sarea of Panda Shepherd is "Zoo".
+ResolveFunction of Panda Shepherd is "[ResolveEvent Panda Shepherd]".
+Sarea of Panda Shepherd is "Zoo".
 
 when play begins:
 	add Panda Shepherd to BadSpots of FurryList;
 	add Panda Shepherd to BadSpots of FemaleList;
 	add Panda Shepherd to BadSpots of MaleList;
 
-instead of resolving Panda Shepherd:
+to say ResolveEvent Panda Shepherd:
 	say "     Passing by the panda habitat you hear a thumping noise. Sounds like a rhythm of low beats, followed shortly by a low cry. Sneaking closer to the habitat, you creep up behind a little thicket of bamboo and peer through cracks between the poles. The first thing you notice is the black and white furry back of a panda girl. She is busy bouncing up and down on a thick knotted canine shaft, belonging to a German shepherd that has his muzzle buried in the panda's hefty cleavage. Muffled as well as unmuffled moans of pleasure can be heard as the panda rides the male shepherd, filling the area with loud slapping sounds. Then suddenly, the panda falls forward and her tongue lolls slightly from her mouth. 'Ahh! Yes! I'm so close, k-keep going doggie!' she squeals at the height of her voice. Unable to really answer since his muzzle is buried under her breasts and upper body, the shepherd simply lets out a low, barely audible whine as he jackhammers his hips upward as much as possible.";
 	say "     Moments later, the panda girl lets out a low groan and then a loud scream of pleasure as she orgasms around the shepherd's cock. Her anthro canine partner isn't far behind, popping his knot inside her pussy with a frantic thrust, then emptying his seed into her. You can literally see the twitch and pulse of his furry balls as they send forth a deluge of cum to thoroughly soak her womb and claim it. Before long, a thin trail of cum starts leaking out of the panda's cunt, seemingly from his deposit being too much to be contained inside her even by a hard knot plugging the hole. The panda collapses to the side a few seconds later, pulling her partner along with her as they are still connected at the hips by his dick. Being freed from the large woman's weight on top of him, the German shepherd pants in relief, looking slightly flattened, dazed, yet also quite satisfied at having bred her.";
 	LineBreak;
@@ -462,7 +474,8 @@ Object	Name
 Elven Mount	"Elven Mount"
 
 Elven Mount is a situation.
-The sarea of Elven Mount is "Zoo".
+ResolveFunction of Elven Mount is "[ResolveEvent Elven Mount]".
+Sarea of Elven Mount is "Zoo".
 
 when play begins:
 	add Elven Mount to BadSpots of FurryList;
@@ -470,7 +483,7 @@ when play begins:
 	add Elven Mount to BadSpots of MaleList;
 	add Elven Mount to badspots of FeralList;
 
-instead of resolving Elven Mount:
+to say ResolveEvent Elven Mount:
 	say "     Wandering through the zoo and stepping onto one of the bigger thoroughfares through the zoo from a side passage, you suddenly you hear the dominant growl of a big cat somewhere from the side. Yet as you spin around to face your foe, things aren't quite what you expected. About thirty feet to your left, a seemingly intact enclosure for large predators harbors a feral cheetah perched in a dominant position over a woman. She's an elf from what you can see, with pointy ears and surrounded by seemingly hastily stripped off clothes that would fit a fantasy setting. Maybe she wandered into the zoo from somewhere else? Wherever she might have come from, she's currently under a clearly horny dominant cheetah. Though the position apparently wasn't forced upon her, as the woman's face is clearly showing pleasure... and embarrassment at being caught, as she stares back you through the chain fence surrounding the enclosure.";
 	say "     Biting down on her lip and now quite being able to suppress a whorish moan, the elf's face blushes heavily, followed by her shrugging to herself and giving up on trying to appear as anything other than a feral lover. With a squeal in pleasure, the next thing she does is push back against the cheetah's humping, taking his feline cock with obvious pleasure. Craning her neck to look at her mate, the woman calls out, 'We have company. Why don't you show [ObjectPro of Player] again how you claimed me earlier, my love?' Seeming to understand her words, the male cheetah wastes little time after giving you a quick glance and a toothy grin. Rearing back, he demonstratively thrusts his long and barbed cock into the elf's waiting entrance, burying it to the hilt. The elf lets out a needy whimper as he clamps his teeth on the back of her neck, holding her firm without breaking the delicate-looking skin on the woman.";
 	WaitLineBreak;
@@ -483,9 +496,10 @@ Object	Name
 Cheetah Trade	"Cheetah Trade"
 
 Cheetah Trade is a scavevent.
-The sarea of Cheetah Trade is "Zoo".
+ResolveFunction of Cheetah Trade is "[ResolveEvent Cheetah Trade]".
+Sarea of Cheetah Trade is "Zoo".
 
-instead of resolving Cheetah Trade:
+to say ResolveEvent Cheetah Trade:
 	say "     While searching for useful gear in the area you enter one of the cheetah habitats. The enclosure seems abandoned at first glance and sadly there doesn't seem to be anything useful here either, but just as you are about to leave again, you notice a dotted tail hanging down out of the crown of a tree not too far from you. Glancing up, you see a feral cheetah stretched out on a larger branch! She appears to be gnawing on the corner of a medkit wedged into a split in the branches. As you start considering whether it's worth the trouble or not to challenge the big cat for her prize, she turns her head towards you and focuses slitted eyes in a wary glance. Opening her feline maw to speak, she calls out 'Want toy? Earn it!' Glancing back towards her hindquarters, the big cat twitches her tail and you realize that she's requesting a sexual favor from you.";
 	say "     By sheer coincidence, a little gust of wind flaring up in that very moment sends the musky scent of her feline heat wafting into your nose. You can tell the female feral is wet with lust and desperate need. Her striped tail waves beckoningly at you, calling up thoughts of mating with the feral in your mind.";
 	LineBreak;
@@ -504,9 +518,7 @@ instead of resolving Cheetah Trade:
 		else: [not edited yet]
 			say "     Shuffling up to the cat whose ass is raised for fucking, you get on your knees, level with her muscular feline ass. Not having equipment for fucking the cat, you nevertheless step up to the challenge to earn her 'toy'. You run your hands over her soft, furry ass and she lets out a slightly impatient growl, pushing her ass toward you. Her winking cat cunt mushes against your lips, and as you taste the heat of a feline predator, you can't help but simply dive in. You plunge your hungry tongue in as deep as it will go into her soaked sex. She responds lustfully, meowing heavily and gushing fem cum on your face. Seemed like a mini orgasm for her.";
 			say "     Licking your lips of her salty, addicting flavor, you dive back in, running your hands over her ass and caressing it gently as you eat out her dripping, heated sex. You thumb into her asshole and nibble on her outer lips while she mewls at your efforts. When you push your face forward and thumb deeper into her tight ass again, she breaks down. Her limbs go limp and she collapses, spraying feline fem cum all over your face and growling loudly before it comes to a stop. Soon she's just breathing heavily beneath your hands and seemingly dazed from her orgasm. Licking off your lips again and smiling, you give her ass a smack and collect what you had rightfully earned, then head out of the habitat.";
-		LineBreak;
-		say "[bold type]You gain a medkit![roman type][line break]";
-		increase carried of medkit by 1;
+		ItemGain medkit by 1;
 		now Resolution of Cheetah Trade is 1; [sexually satisfied the cheetah and got a medkit]
 	else:
 		LineBreak;
@@ -520,13 +532,14 @@ Object	Name
 Bird Masturbation	"Bird Masturbation"
 
 Bird Masturbation is a situation.
-The sarea of Bird Masturbation is "Zoo".
+ResolveFunction of Bird Masturbation is "[ResolveEvent Bird Masturbation]".
+Sarea of Bird Masturbation is "Zoo".
 
 when play begins:
 	add Bird Masturbation to BadSpots of FurryList;
 	add Bird Masturbation to BadSpots of FemaleList;
 
-instead of resolving Bird Masturbation:
+to say ResolveEvent Bird Masturbation:
 	say "     Deciding to rest against the side of a gift shop for a few moments, you lean against it and tilt your head up to rest against the wall. At first you think it's just some decoration on the roof of the building across from you, but as your eyes set upon it, you realize that it's a woman - a bird of paradise, to be exact. She's covered in a rainbow of lovely colored feathers, with a pair of just as lovely wings that sprout from her back, which would explain her being on a roof. Additionally, one of her long, talon-tipped fingers is slowly moving in and out between her legs. She moves a finger slowly into her cloaca-like pussy, her head tilted down, focused on her work.";
 	say "     [bold type]Do you want to continue watching her go at it?[roman type][line break]";
 	LineBreak;
@@ -548,13 +561,14 @@ Object	Name
 Lemur Conga Gangbang	"Lemur Conga Gangbang"
 
 Lemur Conga Gangbang is a situation.
-The sarea of Lemur Conga Gangbang is "Zoo".
+ResolveFunction of Lemur Conga Gangbang is "[ResolveEvent Lemur Conga Gangbang]".
+Sarea of Lemur Conga Gangbang is "Zoo".
 
 when play begins:
 	add Lemur Conga Gangbang to BadSpots of FurryList;
 	add Lemur Conga Gangbang to BadSpots of MaleList;
 
-instead of resolving Lemur Conga Gangbang:
+to say ResolveEvent Lemur Conga Gangbang:
 	say "     As you are walking through a more tree'd-in area of the zoo, you hear the excited gibbering of... something? You look around but can't seem to locate the sound, until you hear more, they sound a mix between monkey grunts and human words. It sounds like at least four of them gibbering and mumbling, spinning around again and again readying yourself for a fight you still see nothing. Until a squeal of laughter finally draws you to look up above you, there, about thirty feet into the trees are what look to be lemur men. Each of them behind the other in a conga line, sitting on a thick branch... butt fucking each other...";
 	say "     You're almost not surprised but you can't help but stare up at the five lemur men. All humping at different paces into the others ass, some going slow, others drooling and humping away like mad as they go. A few stare down at you and laugh, others make rude gestures to you and the forefront lemur with nowhere to stick his dick just looks down to you. Tongue lolled out as he strokes himself off at the sight of you. The show only goes on for about a minute, and as your getting ready to leave, the foremost lemur finishes. He spurts his seed down to the ground below, luckily missing you by a few feet, the dick buried within him only furthering his spurting seed as it dribbles into the dirt.";
 	say "     The rest of them follow shortly after, grunting, hooting and giggling as they hump away at each other. The one in the back finishes next, then the one in the middle, then the entire line erupts into moans as they fill their partners ass with thick lemur seed. They continue gyrating and moving for a while, a few of them reaching over to embrace the kin they just seeded. The one in the back of the line simply falls back on the branch, tongue lolled out and seemingly asleep now. You look up, a little perplexed but shake your head and quickly move on.";
