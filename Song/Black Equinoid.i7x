@@ -43,7 +43,7 @@ to say beattheequinoid:
 		say "[equinoidcampinvite]"; [Invite to visit the black equinoid camp. See the Equinoid Camp file]
 	else if HP of Roman is 8: [Football team recruits quest. Lower priority than Equinoid Camp]
 		say "     [one of]As you look at the hermaphrodite, you remember Roman's request. You mention why you are here, in the hopes that this creature is the one that you are looking for. 'Gorillas? Ah, yes. They try to come around from time to time, as if they could tread on our herd lands freely. I think I wanted to join them, but my memories are all fuzzy. And who would join these weaklings anyway.'[or]You recognize the equinoid as the one Roman wants you to recruit. 'You again,' the horse says as she recognizes you too. 'Trying to convince me to quite my brethren once again?'[stopping]";
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		increase bonus by XP of Roman;
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
@@ -256,7 +256,7 @@ lucky horseshoe is a grab object.
 instead of sniffing lucky horseshoe:
 	say "The horseshoe smells of earth and old metal.";
 
-the usedesc of lucky horseshoe is "[lucky horseshoe use]";
+Usedesc of lucky horseshoe is "[lucky horseshoe use]";
 
 to say lucky horseshoe use:
 	say "You hurl the horseshoe over your [one of]left[or]right[at random] shoulder and don't look back, hoping for the best.";

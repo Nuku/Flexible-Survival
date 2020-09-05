@@ -26,7 +26,7 @@ Daily Training Session	"Daily Training Session"
 Daily Training Session is a situation.
 ResolveFunction of Daily Training Session is "[ResolveEvent Daily Training Session]".
 Daily Training Session is inactive.
-The sarea of Daily Training Session is "Campus".
+Sarea of Daily Training Session is "Campus".
 
 when play begins:
 	add Daily Training Session to BadSpots of MaleList;
@@ -59,7 +59,7 @@ History Class Lesson	"History Class Lesson"
 History Class Lesson is a situation.
 ResolveFunction of History Class Lesson is "[ResolveEvent History Class Lesson]".
 History Class Lesson is inactive.
-The sarea of History Class Lesson is "Campus".
+Sarea of History Class Lesson is "Campus".
 
 when play begins:
 	add History Class Lesson to BadSpots of MaleList;
@@ -90,7 +90,7 @@ Private Masturbation	"Private Masturbation"
 Private Masturbation is a situation.
 ResolveFunction of Private Masturbation is "[ResolveEvent Private Masturbation]".
 Private Masturbation is inactive.
-The sarea of Private Masturbation is "Campus".
+Sarea of Private Masturbation is "Campus".
 
 when play begins:
 	add Private Masturbation to BadSpots of MaleList;
@@ -158,7 +158,7 @@ History Video	"History Video"
 History Video is a situation.
 ResolveFunction of History Video is "[ResolveEvent History Video]".
 History Video is inactive.
-The sarea of History Video is "Campus".
+Sarea of History Video is "Campus".
 
 when play begins:
 	add History Video to BadSpots of MaleList;
@@ -218,8 +218,8 @@ AnalVirgin of Pericles is false.
 PenileVirgin of Pericles is false.
 SexuallyExperienced of Pericles is true.
 MainInfection of Pericles is "".
-The description of Pericles is "[PericlesDesc]".
-The conversation of Pericles is { "<This is nothing but a placeholder!>" }.
+Description of Pericles is "[PericlesDesc]".
+Conversation of Pericles is { "<This is nothing but a placeholder!>" }.
 The scent of Pericles is "     Pericles smells like sweat and hard work, something to be expected of the leader of the Spartans and Helots. Beyond that he smells like the pages of a book.".
 
 to say PericlesDesc:

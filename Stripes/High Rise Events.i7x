@@ -12,7 +12,7 @@ Rabid Lawyers	"Rabid Lawyers"
 
 Rabid Lawyers is a situation.
 ResolveFunction of Rabid Lawyers is "[ResolveEvent Rabid Lawyers]".
-The sarea of Rabid Lawyers is "High".
+Sarea of Rabid Lawyers is "High".
 when play begins:
 	add Rabid Lawyers to BadSpots of MaleList;
 	add Rabid Lawyers to BadSpots of FurryList;
@@ -32,7 +32,7 @@ Pigging Out	"Pigging Out"
 
 Pigging Out is a situation.
 ResolveFunction of Pigging Out is "[ResolveEvent Pigging Out]". The level of Pigging Out is 3.
-The sarea of Pigging Out is "High".
+Sarea of Pigging Out is "High".
 restaurantpig is a number that varies.	[to be used at a later date]
 when play begins:
 	add Pigging Out to BadSpots of FemaleList;
@@ -144,7 +144,7 @@ Small Park	"Small Park"
 
 Small Park is a situation.
 ResolveFunction of Small Park is "[ResolveEvent Small Park]".
-The sarea of Small Park is "High".
+Sarea of Small Park is "High".
 when play begins:
 	add Small Park to BadSpots of FemaleList;
 	add Small Park to BadSpots of MaleList;
@@ -264,7 +264,7 @@ Corporate Fat Cats	"Corporate Fat Cats"
 
 Corporate Fat Cats is a situation.
 ResolveFunction of Corporate Fat Cats is "[ResolveEvent Corporate Fat Cats]".
-The sarea of Corporate Fat Cats is "High".
+Sarea of Corporate Fat Cats is "High".
 when play begins:
 	add Corporate Fat Cats to BadSpots of MaleList;
 	add Corporate Fat Cats to BadSpots of FurryList;
@@ -283,7 +283,7 @@ Veterinary Hospital	"Veterinary Hospital"
 
 Veterinary Hospital is a situation.
 ResolveFunction of Veterinary Hospital is "[ResolveEvent Veterinary Hospital]".
-The sarea of Veterinary Hospital is "High".
+Sarea of Veterinary Hospital is "High".
 doggyness is a number that varies.
 kittyness is a number that varies.
 when play begins:
@@ -446,7 +446,7 @@ Golf Store	"Golf Store"
 
 Golf Store is a situation.
 ResolveFunction of Golf Store is "[ResolveEvent Golf Store]".
-The sarea of Golf Store is "High".
+Sarea of Golf Store is "High".
 when play begins:
 	add Golf Store to BadSpots of FurryList;
 
@@ -467,7 +467,7 @@ Electronics Store	"Electronics Store"
 
 Electronics Store is a situation.
 ResolveFunction of Electronics Store is "[ResolveEvent Electronics Store]".
-The sarea of Electronics Store is "High".
+Sarea of Electronics Store is "High".
 when play begins:
 	add Small Park to badspots of HumorousList;
 
@@ -487,7 +487,7 @@ Cameo	"Cameo"
 
 Cameo is a situation.
 ResolveFunction of Cameo is "[ResolveEvent Cameo]". The level of Cameo is 4.
-The sarea of Cameo is "High".
+Sarea of Cameo is "High".
 choclabfight is a number that varies.
 when play begins:
 	add Cameo to badspots of HermList;
@@ -589,7 +589,7 @@ Wild Kingdom	"Wild Kingdom"
 
 Wild Kingdom is a situation.
 ResolveFunction of Wild Kingdom is "[ResolveEvent Wild Kingdom]".
-The sarea of Wild Kingdom is "High".
+Sarea of Wild Kingdom is "High".
 
 to say ResolveEvent Wild Kingdom:
 	say "     Hearing some activity coming from a small third-floor apartment, you cautiously check it out. Inside you find the small place crammed full of animal people or all kinds. A lamp by the door has 'Raul's Wild Kingdom' stuck onto its shade. In charge and probably the aforementioned Raul is an energetic and enthusiastic capybara with a fuzzy mustache of whiskers off in the back.";

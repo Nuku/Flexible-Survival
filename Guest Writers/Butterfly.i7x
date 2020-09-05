@@ -762,11 +762,11 @@ the scent of damaged negligee is "The damaged negligee smells of sex. You take a
 the scent of cute panties is "The cute panties smell like freshly aired linen with a slight hint of perfume.".
 the scent of sexy nightie is "The sexy nightie smell like freshly aired linen with a slight hint of perfume.".
 
-the usedesc of testosterone pill is "[testosterone pill use]".
-the usedesc of pristine negligee is "You cannot use that here.".
-the usedesc of damaged negligee is "You cannot use that here.".
-the usedesc of cute panties is "You cannot use that here.".
-the usedesc of sexy nightie is "You picked that up for Lance's boyfriend. Hmmm... what was his name again?".
+Usedesc of testosterone pill is "[testosterone pill use]".
+Usedesc of pristine negligee is "You cannot use that here.".
+Usedesc of damaged negligee is "You cannot use that here.".
+Usedesc of cute panties is "You cannot use that here.".
+Usedesc of sexy nightie is "You picked that up for Lance's boyfriend. Hmmm... what was his name again?".
 
 before using a grab object (called x):
 	if x is testosterone pill:
@@ -1015,7 +1015,7 @@ to say butterfly grove scene:
 				impregnatebutterfly;
 			wait for any key;
 			SanLoss 5;
-			if the humanity of Player < 10:
+			if Humanity of Player < 10:
 				end the story saying "You decide against leaving after all.";
 		else:
 			say "You decide you don't really want to spend time with her.";
@@ -1040,7 +1040,7 @@ to say butterfly grove scene:
 			infect "Butterfly";
 			wait for any key;
 			SanLoss 5;
-			if the humanity of Player < 10:
+			if Humanity of Player < 10:
 				end the story saying "You decide against leaving after all.";
 		else:
 			say "You decide you don't really want to spend time with her right now.";

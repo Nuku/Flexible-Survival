@@ -12,7 +12,7 @@ Goblin Trap	"Goblin Trap"
 
 Goblin Trap is a situation.
 ResolveFunction of Goblin Trap is "[ResolveEvent Goblin Trap]". The level of Goblin Trap is 2.
-The sarea of Goblin Trap is "Junkyard".
+Sarea of Goblin Trap is "Junkyard".
 goblinfight is a number that varies.
 when play begins:
 	add Goblin Trap to BadSpots of MaleList;
@@ -40,7 +40,7 @@ Raiding Party	"Raiding Party"
 
 Raiding Party is a situation.
 ResolveFunction of Raiding Party is "[ResolveEvent Raiding Party]". The level of Raiding Party is 2.
-The sarea of Raiding Party is "Junkyard".
+Sarea of Raiding Party is "Junkyard".
 junknum is a number that varies.
 when play begins:
 	add Raiding Party to BadSpots of MaleList;
@@ -106,7 +106,7 @@ Stripped Car	"Stripped Car"
 
 Stripped Car is a situation.
 ResolveFunction of Stripped Car is "[ResolveEvent Stripped Car]".
-The sarea of Stripped Car is "Junkyard".
+Sarea of Stripped Car is "Junkyard".
 
 to say ResolveEvent Stripped Car:
 	say "     You come across a stripped car that has been pulled across the pathway between the piles. Wary of an ambush, you look around, but it seems no one is here. Taking a closer look, stripped is the proper way to describe this car. It's hub caps, hood, side panels, front grill and many other parts seem to have all been recently and forcibly removed. There are deep gouges from feline claw marks and twisted metal all over it where parts where torn off. Even the stereo is gone. You will have to be careful to avoid any felines strong enough to drag around a car and tear parts off by hand.";
@@ -122,7 +122,7 @@ Scattered Trash	"Scattered Trash"
 
 Scattered Trash is a situation.
 ResolveFunction of Scattered Trash is "[ResolveEvent Scattered Trash]".
-The sarea of Scattered Trash is "Junkyard".
+Sarea of Scattered Trash is "Junkyard".
 when play begins:
 	add Scattered Trash to BadSpots of FemaleList;
 	add Scattered Trash to BadSpots of FurryList;
@@ -163,7 +163,7 @@ Stray Cat	"Stray Cat"
 
 Stray Cat is a situation.
 ResolveFunction of Stray Cat is "[ResolveEvent Stray Cat]". The level of Stray Cat is 7.
-The sarea of Stray Cat is "Junkyard".
+Sarea of Stray Cat is "Junkyard".
 
 to say ResolveEvent Stray Cat:
 	say "     On a search through the scrapyard, you find your path blocked by a sweaty and panting snow leopard. It seems he wandered in here and has gotten lost. Startled to see you there, he gives a dry mrowl that cracks in his dry throat before stalking towards you quickly. ";

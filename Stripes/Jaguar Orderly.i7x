@@ -287,7 +287,7 @@ libsuppcount is a number that varies.
 
 the scent of the libido suppressant is "The libido suppressant smells of chemicals and medicine.".
 
-the usedesc of libido suppressant is "[libsupp]".
+Usedesc of libido suppressant is "[libsupp]".
 
 to say libsupp:
 	increase libsuppcount by 2;

@@ -37,8 +37,8 @@ object	name
 Melanie	"Melanie"
 
 Melanie is a woman.
-The description of Melanie is "[MelanieDesc]".
-The conversation of Melanie is { "Hello" }.
+Description of Melanie is "[MelanieDesc]".
+Conversation of Melanie is { "Hello" }.
 Melanie is in Branson & Partner Reception.
 
 the scent of Melanie is "The young woman smells pretty nice - a fresh furry scent overlain a hint of a pleasant perfume. She never wavers in her friendly demeanor, even as you lean forward to sniff at her.".
@@ -118,7 +118,7 @@ to say MelanieTalk3: [ask to meet Mr. B]
 	if HP of Melanie is 100:
 		say "     She shakes her head as you bring up talking to her boss. 'I'm sorry [if Player is female]Ma'am[else]Sir[end if], but I was told not to allow you up. Trust me, it's better to hear this from me than from Mr. B directly.'";
 	else if HP of Melanie is 1:
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Charisma Check):[line break]";
 		increase diceroll by bonus;
@@ -221,7 +221,7 @@ City Hall Offices	"City Hall Offices"
 
 City Hall Offices is a situation.
 ResolveFunction of City Hall Offices is "[ResolveEvent City Hall Offices]". The level of City Hall Offices is 1. City Hall Offices is inactive.
-The sarea of City Hall Offices is "High".
+Sarea of City Hall Offices is "High".
 
 to say ResolveEvent City Hall Offices:
 	now battleground is "Void"; [avoids random fights after]

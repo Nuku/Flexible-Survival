@@ -42,8 +42,8 @@ Virgin of Ares is true.
 AnalVirgin of Ares is true.
 PenileVirgin of Ares is false.
 SexuallyExperienced of Ares is true.
-The description of Ares is "[AresDesc]".
-The conversation of Ares is { "Woof." }.
+Description of Ares is "[AresDesc]".
+Conversation of Ares is { "Woof." }.
 AresDannyEncounters is a number that varies.
 
 to say AresDesc:
@@ -725,8 +725,8 @@ human dog is a pet.
 NPCObject of human dog is Ares.
 understand "Ares" as human dog.
 printed name of human dog is "Ares".
-The description of human dog is "[AresPetDesc]".
-The weapon damage of human dog is 10.
+Description of human dog is "[AresPetDesc]".
+Weapon Damage of human dog is 10.
 The level of human dog is 1.
 The Dexterity of human dog is 15.
 The summondesc of human dog is "[SummonHumanDog]".

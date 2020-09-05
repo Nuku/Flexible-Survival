@@ -90,7 +90,7 @@ Restaurateur's Office	"Restaurateur's Office"
 
 Restaurateur's Office is a situation.
 ResolveFunction of Restaurateur's Office is "[ResolveEvent Restaurateur's Office]". Restaurateur's Office is inactive.
-The sarea of Restaurateur's Office is "Museum".
+Sarea of Restaurateur's Office is "Museum".
 when play begins:
 	add Restaurateur's Office to BadSpots of MaleList;       [monkey king]
 	add Restaurateur's Office to BadSpots of FurryList;     [monkey king]
@@ -292,8 +292,8 @@ Virgin of Bastet is false.
 AnalVirgin of Bastet is true.
 PenileVirgin of Bastet is true.
 SexuallyExperienced of Bastet is true.
-The description of Bastet is "[BastetDesc]".
-The conversation of Bastet is { "Mew!" }.
+Description of Bastet is "[BastetDesc]".
+Conversation of Bastet is { "Mew!" }.
 
 instead of sniffing Bastet:
 	say "     Bastet has an interesting, spicy scent in her fur that speaks of ancient mysteries and the potential of great power.";

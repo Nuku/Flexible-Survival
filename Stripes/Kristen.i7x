@@ -14,7 +14,7 @@ FindingKristen	"FindingKristen"
 
 FindingKristen is a situation.
 ResolveFunction of FindingKristen is "[ResolveEvent FindingKristen]".
-The sarea of FindingKristen is "Outside".
+Sarea of FindingKristen is "Outside".
 when play begins:
 	add FindingKristen to BadSpots of FemaleList;
 	add FindingKristen to BadSpots of FurryList;
@@ -74,7 +74,7 @@ Object	Name
 Kristen's Hideout	"Kristen's Hideout"
 
 Kristen's Hideout is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Kristen's Hideout is "[krishideoutdesc]".
+Description of Kristen's Hideout is "[krishideoutdesc]".
 
 the scent of Kristen's Hideout is "[krishideoutscent]".
 
@@ -129,8 +129,8 @@ to say krishideoutdesc:
 Section 2 - Kristen
 
 Kristen is a woman. Kristen is in Kristen's Hideout.
-The description of Kristen is "[kristendesc]".
-The conversation of Kristen is { "Thanks." }.
+Description of Kristen is "[kristendesc]".
+Conversation of Kristen is { "Thanks." }.
 kristenmsg1 is a truth state that varies. kristenmsg1 is usually false.	[K mentioned J]
 kristenmsg2 is a truth state that varies. kristenmsg2 is usually false.	[general info]
 kristenmsg3 is a truth state that varies. kristenmsg3 is usually false.	[J mentioned K]

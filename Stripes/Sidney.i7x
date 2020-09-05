@@ -41,8 +41,8 @@ object	name
 Sidney	"Sidney"
 
 Sidney is a woman.
-The description of Sidney is "[sidneydesc]".
-The conversation of Sidney is { "Thanks." }.
+Description of Sidney is "[sidneydesc]".
+Conversation of Sidney is { "Thanks." }.
 the scent of Sidney is "[sidneyscent]".
 sidneyformtalk is a truth state that varies. sidneyformtalk is usually false.
 sidneyanal is a truth state that varies. sidneyanal is usually false.
@@ -60,7 +60,7 @@ Meeting Sidney	"Meeting Sidney"
 
 Meeting Sidney is a situation.
 ResolveFunction of Meeting Sidney is "[ResolveEvent Meeting Sidney]".
-The sarea of Meeting Sidney is "Outside".
+Sarea of Meeting Sidney is "Outside".
 when play begins:
 	add Meeting Sidney to BadSpots of FurryList;
 	add Meeting Sidney to BadSpots of FemaleList;

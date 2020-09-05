@@ -53,7 +53,7 @@ Naga Hybrid	"Naga Hybrid"
 
 Naga Hybrid is a situation.
 ResolveFunction of Naga Hybrid is "[ResolveEvent Naga Hybrid]".
-The sarea of Naga Hybrid is "Plains".
+Sarea of Naga Hybrid is "Plains".
 
 when play begins:
 	add Naga Hybrid to BadSpots of FemaleList;
@@ -186,7 +186,7 @@ Prereq1 of Large Cave is Naga Hybrid.
 Prereq1ResolvedMandatory of Large Cave is false.
 Prereq1Resolution of Large Cave is { 1, 2 }
 
-The sarea of Large Cave is "Plains".
+Sarea of Large Cave is "Plains".
 
 to say ResolveEvent Large Cave:
 	say "     You come across a large cave that is about two or three stories tall. Small holes on the ceiling allow [if daytimer is day]sunlight to illuminate[else]the moon to dimly light up[end if] the interior. The path is straight for only a short distance before it curves to the left, meaning that you will have to enter the cave to explore its depths. However, you hesitate to proceed inside, and for good reason. The area reeks of sex, and judging by the huge patches of dried cum painting the cave's walls, it seems that this is likely the home of a large beast. Still, there's a decent chance that you might be able to find something of interest inside.";
@@ -238,8 +238,8 @@ Section 4 - Serenity in the Grey Abbey Library
 
 SerenityVore is a truth state that varies. SerenityVore is usually false.
 SerenityHunger is a number that varies. SerenityHunger is usually 0.
-The description of Serenity is "[Serenitydesc]".
-The conversation of Serenity is { "Snek Stuff" }.
+Description of Serenity is "[Serenitydesc]".
+Conversation of Serenity is { "Snek Stuff" }.
 The scent of the Serenity is "Serenity smells faintly of the dry sand and vegetation from where you had first met her, mixed with a subtle, alluring musk. The naga eyes you with amusement while you smell her and comments, 'I see that you can't get enough of me.";
 
 to say Serenitydesc:

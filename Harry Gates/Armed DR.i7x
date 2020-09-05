@@ -18,7 +18,7 @@ The present health of a person is usually 100.
 	repeat with victim running through people:
 		now the present health of the victim is the max health of the victim.]
 
-The max health of the player is usually 100.
+The max health of player is usually 100.
 
 Definition: a person is dead if his present health < 1.
 
@@ -565,7 +565,7 @@ Example: *** Trolls - Bob, king of the trolls, must be destroyed! This example s
 
 		Use no scoring.
 
-		A crossbow is a bow. The description of the crossbow is "An old crossbow. It still functions, but only barely." The maximum damage of the crossbow is 25.
+		A crossbow is a bow. Description of the crossbow is "An old crossbow. It still functions, but only barely." The maximum damage of the crossbow is 25.
 
 		A sharpened bone is a kind of knife. The maximum damage of a sharpened bone is 15.
 
@@ -574,10 +574,10 @@ Example: *** Trolls - Bob, king of the trolls, must be destroyed! This example s
 		A potion is a kind of thing.
 
 		Instead of drinking a potion:
-			if the present health of the player < 86 begin;
-				let elixir be a random potion carried by the player;
+			if the present health of Player < 86 begin;
+				let elixir be a random potion carried by Player;
 				say "You gulp down the vile tasting potion. 15 points have been restored to your health.";
-				change the present health of the player to the present health of the player + 15;
+				change the present health of Player to the present health of Player + 15;
 				remove elixir from play;
 			else;
 				say "Drinking the potion while your health is [present health of Player] will do you no good. Save it for when you need it.";
@@ -585,9 +585,9 @@ Example: *** Trolls - Bob, king of the trolls, must be destroyed! This example s
 
 		A troll is a kind of person. The max health of a troll is usually 40. A troll is usually hostile. Every troll carries one sharpened bone.
 
-		Forrest is a room. The description of forest is "A lush forest. In front of you is a cave. A peculiar odor wafts out from the cave. Strangely, you neither see nor here any animals. Will you go in?" The crossbow and one potion are here.
+		Forrest is a room. Description of forest is "A lush forest. In front of you is a cave. A peculiar odor wafts out from the cave. Strangely, you neither see nor here any animals. Will you go in?" The crossbow and one potion are here.
 
-		Cave is a room. Cave is inside from forest. The description of cave is "A dank cave. It smells rather like trolls." A troll called a tall troll is in cave.
+		Cave is a room. Cave is inside from forest. Description of cave is "A dank cave. It smells rather like trolls." A troll called a tall troll is in cave.
 
 		Passage is north of cave. The description is "A narrow passage leading deeper into the cave." A troll called a short troll is here. It carries two potions.
 

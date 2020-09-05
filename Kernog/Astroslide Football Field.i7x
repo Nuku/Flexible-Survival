@@ -11,7 +11,7 @@ Astroslide Football Field is west of Athletic Street.
 Astroslide Football Field is east of Astroslide Field Locker-room.
 earea of Astroslide Football Field is "Campus".
 
-The description of Astroslide Football Field is "[AstroslideFootFielddesc]".
+Description of Astroslide Football Field is "[AstroslideFootFielddesc]".
 
 to say AstroslideFootFielddesc:
 	if Astroslide Football Field is unvisited:

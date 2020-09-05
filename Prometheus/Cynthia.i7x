@@ -19,7 +19,7 @@ else: [Away on patrol]
 
 Section 1 - Room Declaration
 [Cynthia's Room is a room.
-The description of Cynthia's Room is "[CynthiasRoomDesc]".
+Description of Cynthia's Room is "[CynthiasRoomDesc]".
 
 to say CynthiasRoomDesc:
 	say "     ";]
@@ -66,15 +66,15 @@ SexuallyExperienced of Cynthia is true.
 TwistedCapacity of Cynthia is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Cynthia is true. [steriles can't knock people up]
 MainInfection of Cynthia is "".
-The description of Cynthia is "[CynthiaDesc]".
-The conversation of Cynthia is { "Interesting" }.
+Description of Cynthia is "[CynthiaDesc]".
+Conversation of Cynthia is { "Interesting" }.
 The scent of Cynthia is "     Cynthia smells very strongly of wolves, which is not surprising considering how much time she spends around them".
 
 to say CynthiaDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Cynthia] <- DEBUG[line break]";
 	else:
-		say "     The sniper's face looks human, her neck-length, pale blonde hair hiding her ears from view. It is a pretty face, though not overly beautiful, the strain of constant vigilance showing. She is dressed in a form fitting, but not overly tight, gray uniform, a black beret on her head, black leather gloves on her hands, and has a modified rifle on her back. Deep-blue eyes glance cautiously around, making sure that little surprises her.";
+		say "     The sniper's face looks human, her neck-length, pale blonde hair hiding her ears from view. It is a pretty face, though not overly beautiful, Strain of constant vigilance showing. She is dressed in a form fitting, but not overly tight, gray uniform, a black beret on her head, black leather gloves on her hands, and has a modified rifle on her back. Deep-blue eyes glance cautiously around, making sure that little surprises her.";
 		say "     Though she seems relatively cheerful, there is a darkness behind her eyes, a remnant of her actions in the past. She seems to genuinely care about the infected in the city, but equally dislike the governmental forces attempting to quarantine everyone. Her usual unwillingness to kill seems strange for a mercenary, but who are you to judge. She sees you studying her and starts to fiddle shyly with a half gas mask that is hooked on her belt, not meeting your eyes.";
 
 Section 3 - Talking
@@ -96,7 +96,7 @@ ResolveFunction of Den of the Pack is "[ResolveEvent Den of the Pack]".
 Prereq1 of Den of the Pack is Suppressant Supply Run.
 Prereq1Resolution of Den of the Pack is { 1 }.
 The level of Den of the Pack is 0.
-The sarea of Den of the Pack is "Outside".
+Sarea of Den of the Pack is "Outside".
 
 after going to Bright Alley while (Den of the Pack is active and Den of the Pack is not resolved and HP of Cynthia is 1 and a random chance of 1 in 2 succeeds):
 	DenofthePackEvent;
@@ -139,7 +139,7 @@ ResolveFunction of ArcheTech Warehouse is "[ResolveEvent ArcheTech Warehouse]".
 ArcheTech Warehouse is inactive.
 Prereq1 of ArcheTech Warehouse is Dual Leadership.
 The level of ArcheTech Warehouse is 0.
-The sarea of ArcheTech Warehouse is "Nowhere".
+Sarea of ArcheTech Warehouse is "Nowhere".
 
 after going to Sanctuary Hotel Lobby while (ArcheTech Warehouse is active and ArcheTech Warehouse is not resolved and ArcheTech Warehouse is PrereqComplete and HP of Cadmea is 2 and a random chance of 1 in 2 succeeds):
 	ArcheTechWarehouseEvent;
@@ -183,7 +183,7 @@ Sanctuary Alleyway	"Sanctuary Alleyway"
 
 Sanctuary Alleyway is a room. It is fasttravel.
 Sanctuary Alleyway is private.
-The description of Sanctuary Alleyway is "[SanctuaryAlleywayDesc]".
+Description of Sanctuary Alleyway is "[SanctuaryAlleywayDesc]".
 The earea of Sanctuary Alleyway is "Outside".
 
 to say SanctuaryAlleywayDesc:
@@ -194,7 +194,7 @@ Object	Name
 Sanctuary Hotel Lobby	"Sanctuary Hotel Lobby"
 
 Sanctuary Hotel Lobby is a room. Sanctuary Hotel Lobby is inside from Sanctuary Alleyway.
-The description of Sanctuary Hotel Lobby is "[SanctuaryHotelLobbyDesc]";
+Description of Sanctuary Hotel Lobby is "[SanctuaryHotelLobbyDesc]";
 
 to say SanctuaryHotelLobbyDesc:
 	say "     In contrast to the appearance of being deserted that the outside of the Sanctuary Hotel instills, the lobby is decorated luxuriously. Thick carpets, gold leaf, and marble adorn the spacious room, and a wide staircase arcs around the far wall. Unfortunately the front door is obscured behind rubble, detracting from the majesty of the room with how out of place the concrete looks against the rest of the décor. Looking at the structural integrity, the rubble came from elsewhere, how, you do not know. Beside the front desk, the lights of a glass elevator shine, showing a private source of power for the building, likely generators. Around the room are at least eight wolves acting as security, eyes gazing about constantly. A few refugees from the horrors outside sit in the plush armchairs beside some of the marble columns, huddled with family or idly reading magazines from coffee tables. There are likely more of them occupying the rooms above you.";
@@ -204,7 +204,7 @@ Object	Name
 Sanctuary Conference Room	"Sanctuary Conference Room"
 
 Sanctuary Conference Room is a room.
-The description of Sanctuary Conference Room is "[SanctuaryConferenceRoomDesc]".
+Description of Sanctuary Conference Room is "[SanctuaryConferenceRoomDesc]".
 
 to say SanctuaryConferenceRoomDesc:
 	say "     The conference room is dominated by a large walnut table in the center, surrounded by cushioned chairs. A ceiling height window gives a view over the remains of what was probably once an impressive boulevard but is now cluttered with abandoned cars and rubbish. Along one edge of the room are several cabinets with cups and saucers visible through the glass to be neatly stacked and clean. The opposite wall has two paintings and a locked door. It seems to be where the Den Mother and Pack Alpha run the day to day operations of the Pack and as such, they have made sure that it is comfortable for them.";]

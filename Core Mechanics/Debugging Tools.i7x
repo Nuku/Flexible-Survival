@@ -37,7 +37,7 @@ check AttachGrabObs:
 
 carry out AttachGrabObs:
 	repeat with x running through grab objects:
-		now x is a part of the player;
+		now x is a part of Player;
 
 AttachInventory is an action applying to nothing.
 understand "AttachInventory" as AttachInventory.
@@ -49,7 +49,7 @@ check AttachInventory:
 
 carry out AttachInventory:
 	repeat with x running through owned grab objects:
-		now x is a part of the player;
+		now x is a part of Player;
 
 ZTeleport is an action applying to one topic.
 understand "ZTeleport [text]" as ZTeleport.
@@ -758,11 +758,11 @@ check levelcheat:
 		stop the action;
 
 carry out levelcheat:
-	now XP of the player is (10 + (level of Player times 10));
+	now XP of Player is (10 + (level of Player times 10));
 	if "Fast Learner" is listed in feats of Player:
 		decrease XP of Player by ( level of Player times 2 );
 	level up;
-	decrease score by level of the player times level of the player;
+	decrease score by Level of Player times Level of Player;
 
 [Gives the player all pets]
 PetTest is an action applying to nothing.

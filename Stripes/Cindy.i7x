@@ -11,7 +11,7 @@ Sunny Snacks	"Sunny Snacks"
 
 Sunny Snacks is a room.
 Sunny Snacks is northeast of Public Beach.
-The description of Sunny Snacks is "[sunnysnacksdesc]".
+Description of Sunny Snacks is "[sunnysnacksdesc]".
 
 the scent of Sunny Snacks is "The scent of the beach hangs in the air, though there's the tasty smells of snacks in the air as well.".
 
@@ -26,8 +26,8 @@ object	name
 Cindy	"Cindy"
 
 Cindy is a woman. Cindy is in Sunny Snacks.
-The description of Cindy is "[cindydesc]".
-The conversation of Cindy is { "What can I get you?" }.
+Description of Cindy is "[cindydesc]".
+Conversation of Cindy is { "What can I get you?" }.
 the fuckscene of Cindy is "[nosexwithcindy]".
 the scent of the Cindy is "The scent of the beach and her various wares are what you smell.".
 
@@ -236,8 +236,8 @@ object	name
 Circe	"Circe"
 
 Circe is a woman.
-The description of Circe is "[circedesc]".
-The conversation of Circe is { "What can I get you?" }.
+Description of Circe is "[circedesc]".
+Conversation of Circe is { "What can I get you?" }.
 the fuckscene of Circe is "[sexwithcirce]".
 the scent of the Circe is "The scent of the beach and her various wares are what you smell.".
 

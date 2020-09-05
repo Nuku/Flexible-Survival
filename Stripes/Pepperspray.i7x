@@ -84,7 +84,7 @@ this is the peppersprayattack rule:
 	[Perform an attempt to flee at +4 from the weakened enemy & +5 to dodge (if needed)]
 	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
 	choose row MonsterID from the Table of Random Critters;
-	let the attack bonus be (( the dexterity of the player plus the intelligence of the player minus 12 ) divided by 2) plus level of the player;
+	let the attack bonus be (( Dexterity of Player plus Intelligence of Player minus 12 ) divided by 2) plus Level of Player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
 	increase combat bonus by gascloud; [cannot release gas cloud if pepperspraying, but will still linger]
@@ -129,7 +129,7 @@ this is the peppersprayattack rule:
 to say enhancedattack:
 	choose row MonsterID from the Table of Random Critters;
 	[Improves players attack chance by 3 for these attack actions]
-	let the attack bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player;
+	let the attack bonus be (( Dexterity of Player minus 4 ) divided by 2) plus Level of Player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
 	if "Know Thyself" is listed in feats of Player:		[That's what you get for thinking with your crotch.]
@@ -144,7 +144,7 @@ to say enhancedattack:
 	if the roll plus the combat bonus > 8:
 		let wmstrike be 0;
 		let z be 0;
-		let dam be ( weapon damage of the player times ( a random number from 80 to ( 120 + level of Player ) ) ) divided by 100;
+		let dam be ( weapon damage of player times ( a random number from 80 to ( 120 + level of Player ) ) ) divided by 100;
 		if weapon object of Player is journal:
 			if "Martial Artist" is listed in feats of Player:
 				increase dam by 1;
@@ -176,8 +176,8 @@ to say enhancedattack:
 			let numnum be ( ( level of Player * 5 ) / 2 ) + 100;
 			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
 		if weapon type of Player is "Melee":
-			increase dam by (( the strength of the player minus 10 ) divided by 2);
-		if a random chance of the morale of the player in 200 succeeds:
+			increase dam by (( Strength of Player minus 10 ) divided by 2);
+		if a random chance of Morale of Player in 200 succeeds:
 			say "Filled with sudden motivation, your attack scores particularly well! ";
 			increase dam by dam;
 		if wmstrike is 1:			[Weaponsmaster used]
@@ -286,7 +286,7 @@ to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Co
 		say "";
 	else:
 		choose row MonsterID from the Table of Random Critters;
-		let the defense bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player; [+3 greater chance to dodge]
+		let the defense bonus be (( Dexterity of Player minus 4 ) divided by 2) plus Level of Player; [+3 greater chance to dodge]
 		let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 		let the combat bonus be attack bonus minus defense bonus;
 		if "Flash" is listed in feats of Player and a random chance of 3 in 20 succeeds:
@@ -307,7 +307,7 @@ to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Co
 				increase absorb by dam divided by 5;
 			if absorb > 0:
 				say "You prevent [absorb] damage!";
-			decrease HP of the player by dam;
+			decrease HP of Player by dam;
 			increase HP of Player by absorb;
 			follow the player injury rule;
 			say "You are [descr].";

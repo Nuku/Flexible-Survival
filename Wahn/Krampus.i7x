@@ -26,7 +26,7 @@ Krampus's Cave	"Krampus's Cave"
 
 Krampus's Cave is a room.
 Krampus's Cave is north of Christmas Village.
-The description of Krampus's Cave is "[KrampusCaveDesc]".
+Description of Krampus's Cave is "[KrampusCaveDesc]".
 
 to say KrampusCaveDesc:
 	say "     You find yourself in what seems to be a natural cave with rough, rocky walls. The entrance tunnel curves a little bit and leads downwards, separating the inside from the bright, snow-covered Christmas Village. It feels as if you stepped into another world entirely when you came in - a place much more primal and ancient, yet still somehow connected to the laughter and joy you distantly hear from the outside. A softly crackling fire fills a niche in the far wall, illuminating the cave in a flickering, orange glow that makes shadows dance. You can see a few shimmering, red-and-silver Christmas baubles hanging off of the walls on red ribbons, among more grim decorations like chains and manacles, a large, coiled-up whip, and other such gear. A huge, red sack lies on the ground next to a heap of soft furs, piled on top of each other to serve as the goat-demon's bed. With the flickering lighting, it almost appears like something inside the sack is moving from time to time, but that's surely just your imagination.";
@@ -74,8 +74,8 @@ SexuallyExperienced of Krampus is true.
 TwistedCapacity of Krampus is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Krampus is false. [steriles can't knock people up]
 MainInfection of Krampus is "Goat-Demon".
-The description of Krampus is "[KrampusDesc]".
-The conversation of Krampus is { "<This is nothing but a placeholder!>" }.
+Description of Krampus is "[KrampusDesc]".
+Conversation of Krampus is { "<This is nothing but a placeholder!>" }.
 The scent of Krampus is "[KrampusScent]";
 
 to say KrampusDesc:

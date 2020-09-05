@@ -346,7 +346,7 @@ this is the animehammer rule:		[double-damage]
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
@@ -358,9 +358,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "sticky sushi"	"A small tray of rather suspect sushi."	1	sticky sushi
 
-sticky sushi is a grab object. sticky sushi is infectious. The strain of sticky sushi is "Anime Babe".
+sticky sushi is a grab object. sticky sushi is infectious. Strain of sticky sushi is "Anime Babe".
 
-The usedesc of sticky sushi is "[eatstickysushi]";
+Usedesc of sticky sushi is "[eatstickysushi]";
 
 to say eatstickysushi:
 	say "     Deciding to risk eating the sushi despite how old it probably is, you tentatively pop a piece into your mouth. Finding it quite tasty, if having a somewhat odd flavor, you rapidly consume the rest of the tray. It feels good to eat something, though there's an odd rumbling noise in your tummy that makes you giggle cutely.";

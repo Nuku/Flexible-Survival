@@ -47,7 +47,7 @@ Leather Wolves	"Leather Wolves"
 
 Leather Wolves is a situation.
 ResolveFunction of Leather Wolves is "[ResolveEvent Leather Wolves]".
-The sarea of Leather Wolves is "Red".
+Sarea of Leather Wolves is "Red".
 when play begins:
 	add Leather Wolves to BadSpots of FemaleList;
 	add Leather Wolves to BadSpots of MaleList;
@@ -70,7 +70,7 @@ Object	Name
 Cuero Lobo	"Cuero Lobo"
 
 Cuero Lobo is a room. It is fasttravel. It is private.
-The description of Cuero Lobo is "[cuerolobodesc]".
+Description of Cuero Lobo is "[cuerolobodesc]".
 
 the scent of Cuero Lobo is "The store smells of cured leather, oil and lupine arousal.".
 
@@ -90,8 +90,8 @@ object	name
 Zigor	"Zigor"
 
 Zigor is a man. Zigor is in Cuero Lobo.
-The description of Zigor is "[zigordesc]".
-The conversation of Zigor is { "Hola!" }.
+Description of Zigor is "[zigordesc]".
+Conversation of Zigor is { "Hola!" }.
 The icon of Zigor is Figure of Zigor_icon.
 zigseat is a number that varies.		[seat configuration: 0 = normal, 1 = taur]
 zigorcycle is a truth state that varies. zigorcycle is usually false. [Monitors if Zigor's training has been cycled.]

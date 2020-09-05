@@ -8,7 +8,7 @@ Pack Bang	"Pack Bang"
 
 Pack Bang is a situation.
 ResolveFunction of Pack Bang is "[ResolveEvent Pack Bang]".
-The sarea of Pack bang is "Forest".
+Sarea of Pack bang is "Forest".
 When play begins:
 	add Pack Bang to badspots of FeralList;
 	add Pack Bang to BadSpots of MaleList;

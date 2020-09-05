@@ -182,8 +182,8 @@ name	desc	weight	object
 "ferret cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Ferret Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	ferret cum
 
 ferret cum is a grab object. ferret cum is cum.
-ferret cum is infectious. The strain of ferret cum is "Ferret".
-the usedesc of Ferret cum is "[Ferret cum use]";
+ferret cum is infectious. Strain of ferret cum is "Ferret".
+Usedesc of Ferret cum is "[Ferret cum use]";
 
 to say Ferret cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";

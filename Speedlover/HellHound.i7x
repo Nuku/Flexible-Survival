@@ -11,7 +11,7 @@ Object	Name
 Overgrown Area	"Overgrown Area"
 
 Overgrown Area is a Room.
-The description of Overgrown Area is "[OvergrownBlockDesc]";
+Description of Overgrown Area is "[OvergrownBlockDesc]";
 
 to say OvergrownBlockDesc:
 	if daytimer is night:	[night]
@@ -51,7 +51,7 @@ name	desc	weight	object
 "hellhound collar"	"[HCollarDesc]"	1	hellhound collar
 
 hellhound collar is a grab object.
-the usedesc of hellhound collar is "[HCollarUse]".
+Usedesc of hellhound collar is "[HCollarUse]".
 It is not temporary.
 
 hellhound collar is a grab object.
@@ -213,7 +213,7 @@ to Hellhound infect male:
 	now SleepRhythm of Player is 0;
 	now Cock Count of Player is 1;
 	now Cock Length of Player is 6;
-	now the Ball Size of the player is 4;
+	now the Ball Size of Player is 4;
 	now Nipple Count of Player is 2;
 	now Breast Size of Player is 0;
 	now Libido of Player is 100;
@@ -313,7 +313,7 @@ every turn (This is the check Hellhound rule):
 				now Cunt Count of Player is 0;
 				now Cock Count of Player is 1;
 				now Cock Length of Player is 6;
-				now the Ball Size of the player is 4;
+				now the Ball Size of Player is 4;
 				now Cunt Depth of Player is 0;
 				now Cunt Tightness of Player is 0;
 				if maleHound is True:
@@ -376,7 +376,7 @@ every turn (This is the check Hellhound rule):
 				now Cunt Count of Player is 0;
 				now Cock Count of Player is 1;
 				now Cock Length of Player is 6;
-				now the Ball Size of the player is 4;
+				now the Ball Size of Player is 4;
 				now Cunt Depth of Player is 0;
 				now Cunt Tightness of Player is 0;
 				now Nipple Count of Player is 2;
@@ -434,7 +434,7 @@ every turn (This is the check Hellhound rule):
 				now Cunt Count of Player is 0;
 				now Cock Count of Player is 1;
 				now Cock Length of Player is 6;
-				now the Ball Size of the player is 4;
+				now the Ball Size of Player is 4;
 				now Cunt Depth of Player is 0;
 				now Cunt Tightness of Player is 0;
 				now Nipple Count of Player is 2;
@@ -689,7 +689,7 @@ This is the Hellhound Curse rule:
 		else if mousecurse is 1:											[chosen by the mouse-collective]
 			say "     As your mind fades, more and more of your infernal taint comes to the fore, hands becoming paws, face stretching out into a muzzle, coarse dirty fur spreading all over your body. But then Rachel is there, holding you tightly in her small arms, somehow her weak arms able to hold back the powerful force of your infernal pact. As your mate clutches to you, you can feel her mind pushing against that dark power. Soon you can feel somewhere above her mind, greater than it, the collective hive-mind of all the mice, focused on this. Your body starts changing again, becoming more mouse-like this time until you are fully a mouse like your loving mate and the other mice of the collective, though of the same gender as you were before. The darkness fades as the bond of the dark pact is shattered by their mental might, freeing you to become fully one of them instead.";
 			say "[fullmousification]";
-		else if HP of the player > 0:
+		else if HP of Player > 0:
 			follow the check hellhound rule;
 			if maleHound is true:
 				if churchangelprisoner is true:

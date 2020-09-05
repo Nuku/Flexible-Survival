@@ -76,8 +76,8 @@ AnalVirgin of Adam is true.
 PenileVirgin of Adam is true.
 SexuallyExperienced of Adam is false.
 MainInfection of Adam is "Minotaur".
-The description of Adam is "[AdamDesc]".
-The conversation of Adam is { "<This is nothing but a placeholder!>" }.
+Description of Adam is "[AdamDesc]".
+Conversation of Adam is { "<This is nothing but a placeholder!>" }.
 The scent of Adam is "     Adam has a nice scent somewhere between the pheromone-laden musk of his father and a clean human man's smell. It doesn't have you ripping your clothes off, but sure is attractive.".
 
 to say AdamDesc:

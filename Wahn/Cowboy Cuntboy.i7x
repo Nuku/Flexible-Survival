@@ -227,13 +227,13 @@ instead of sniffing cowboy milk:
 	say "Smells good, fresh milk...";
 
 cowboy milk is a grab object.
-the usedesc of cowboy milk is "[cowboy milk use]";
+Usedesc of cowboy milk is "[cowboy milk use]";
 
 to say cowboy milk use:
 	say "Screwing the cap of the plastic bottle, you put it to your lips and drink its contents with deep swallows of the fresh and tasty milk.";
 	decrease thirst of Player by 10;
 
-cowboy milk is infectious. The strain of cowboy milk is "Gypsy Horse Transman".
+cowboy milk is infectious. Strain of cowboy milk is "Gypsy Horse Transman".
 
 
 [

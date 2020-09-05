@@ -51,7 +51,7 @@ Policeman	"Policeman"
 
 Policeman is a situation.
 ResolveFunction of Policeman is "[ResolveEvent Policeman]".
-The sarea of Policeman is "High".
+Sarea of Policeman is "High".
 
 to say ResolveEvent Policeman:
 	project the icon of Sgt Marks;
@@ -88,7 +88,7 @@ to say ResolveEvent Policeman:
 			LineBreak;
 			now mqstatus is 98;
 			say "[line break]     With almost no warning, the officer swings his nightstick hard and fast at your head!";
-			let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
+			let the bonus be (( Dexterity of Player minus 10 ) divided by 2);
 			let the dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 16: ";
 			if dice plus bonus > 16:
@@ -166,7 +166,7 @@ Object	Name
 Police Car	"Police Car"
 
 Police Car is a room. It is private. It is fasttravel.
-The description of Police Car is "[policecardesc]".
+Description of Police Car is "[policecardesc]".
 
 the scent of the Police Car is "This area smells faintly of gasoline and sun-heated cars, as well as dried patches of old cum.".
 
@@ -186,8 +186,8 @@ object	name
 Sgt Marks	"Sgt Marks"
 
 Sgt Marks is a man. Sgt Marks is in Police Car.
-The description of Sgt Marks is "     The tiger cop is quite large and impressively strong looking. His police jacket hangs open, unable to close around his broad, striped chest. His pants mostly fit, thought the bottom of the legs are torn open and leave the bottom third of his leg uncovered. To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast. His tail thrashes about with barely contained excitement as he checks over his equipment and supplies as he gets ready to enact his plan.".
-The conversation of Sgt Marks is { "WhoresWhoresWhoresWhores!" }.
+Description of Sgt Marks is "     The tiger cop is quite large and impressively strong looking. His police jacket hangs open, unable to close around his broad, striped chest. His pants mostly fit, thought the bottom of the legs are torn open and leave the bottom third of his leg uncovered. To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast. His tail thrashes about with barely contained excitement as he checks over his equipment and supplies as he gets ready to enact his plan.".
+Conversation of Sgt Marks is { "WhoresWhoresWhoresWhores!" }.
 sgtmarkstalk is a number that varies.
 The icon of Sgt Marks is figure of SgtMarks_icon.
 
@@ -531,7 +531,7 @@ Object	Name
 Abandoned Storefront	"Abandoned Storefront"
 
 Abandoned Storefront is a room. It is private.
-The description of Abandoned Storefront is "     If you're seeing this, something went wrong.".
+Description of Abandoned Storefront is "     If you're seeing this, something went wrong.".
 [Set this empty room west of the Red Light District, and catch players entering with an event.]
 [Preferably figure out how to have a direction without an empty room set, like on the campus. If so, do that.]
 

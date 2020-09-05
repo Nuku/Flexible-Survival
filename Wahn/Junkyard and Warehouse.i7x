@@ -18,7 +18,7 @@ Abandoned Lot	"Abandoned Lot"
 Abandoned Lot is a room.
 Abandoned Lot is fasttravel.
 The earea of Abandoned Lot is "Outside".
-the description of Abandoned Lot is "[LotDesc]".
+Description of Abandoned Lot is "[LotDesc]".
 
 to say LotDesc:
 	say "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the nanite outbreak, this place clearly off the beaten path and ill-used. Bordering the lot are a series of broken-down, graffiti-colored warehouses. Old 'Authorized Personnel Only' signs lay on the ground.";
@@ -117,7 +117,7 @@ Instead of entering the Storage Room:
 	try going south;
 
 Instead of going through the Warehouse Door:
-	if location of the player is the Abandoned Lot:
+	if Location of Player is the Abandoned Lot:
 		try going south;
 	else:
 		move player to the Abandoned Lot;
@@ -144,7 +144,7 @@ Instead of going south from the Abandoned Lot:
 				let changed be false;
 				if the player is not skintone human:
 					now changed is true;
-				if the tail of the player is not "":
+				if the tail of Player is not "":
 					now changed is true;
 				if the player is not bodily human:
 					now changed is true;
@@ -195,7 +195,7 @@ Junkyard Alley	"Junkyard Alley"
 
 Junkyard Alley is a room.
 The earea of Junkyard Alley is "Outside".
-the description of Junkyard Alley is "[JunkAlleyDesc]"
+Description of Junkyard Alley is "[JunkAlleyDesc]"
 
 Junkyard Alley is southeast of Abandoned Lot.
 
@@ -249,8 +249,8 @@ SexuallyExperienced of Steven is true.
 TwistedCapacity of Steven is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Steven is false. [steriles can't knock people up]
 MainInfection of Steven is "Morgan Horse Stallion".
-The description of Steven is "[StevenDesc]".
-The conversation of Steven is { "<This is nothing but a placeholder!>" }.
+Description of Steven is "[StevenDesc]".
+Conversation of Steven is { "<This is nothing but a placeholder!>" }.
 The fuckscene of Steven is "[sexwithSteven]".
 
 to say StevenDesc:
@@ -662,7 +662,7 @@ Old Stallion Friendship	"Old Stallion Friendship"
 
 Old Stallion Friendship is a situation.
 ResolveFunction of Old Stallion Friendship is "".
-The sarea of Old Stallion Friendship is "Nowhere".
+Sarea of Old Stallion Friendship is "Nowhere".
 
 instead of going southeast from Abandoned Lot while (Resolution of Old Stallion Friendship is 0 and Steven is in Steven's Home):
 	say "     Scrounging around you find scratches along the ground nearest a wall, coincidentally it's the wall of the inhabited warehouse. The scratches form a sort of semicircle of chipped granite and whitened pavement. Looking a bit closer you can see a loose bit of aluminum siding, and as you pull at it you can hear the sounds of people on the other side. You even peak around the edge to see the people meandering around inside. [bold type]Maybe this would help Steven get back.[roman type][line break]";
@@ -927,7 +927,7 @@ Junkyard Digups	"Junkyard Digups"
 Junkyard Digups is a situation.
 ResolveFunction of Junkyard Digups is "[ResolveEvent Junkyard Digups]".
 The printed name of Junkyard Digups is "A pile of garbage".
-The sarea of Junkyard Digups is "Junkyard".
+Sarea of Junkyard Digups is "Junkyard".
 jdigup is a number that varies.
 
 to say ResolveEvent Junkyard Digups:
@@ -959,7 +959,7 @@ Junkyard Entrance	"Junkyard Entrance"
 
 Junkyard Entrance is a room.
 Junkyard Entrance is outside of Steven's Home. Nowhere is inside of Junkyard Entrance.
-[The sarea of Steven's Home is "Junkyard."]
+[Sarea of Steven's Home is "Junkyard."]
 
 instead of sniffing Steven's Home:
 	say "This spot in the junkyard smells of Steven and his manly, equine scent. It only partially blocks the pervasive scent of the junkyard though.";
@@ -970,7 +970,7 @@ Junkyard Home	"Junkyard Home"
 
 Junkyard Home is a situation.
 ResolveFunction of Junkyard Home is "[ResolveEvent Junkyard Home]".
-The sarea of Junkyard Home is "Junkyard".
+Sarea of Junkyard Home is "Junkyard".
 
 to say ResolveEvent Junkyard Home:
 	if Stevenremoved is 0:
@@ -992,7 +992,7 @@ Unused Tool	"Unused Tool"
 
 Unused Tool is a situation.
 ResolveFunction of Unused Tool is "[ResolveEvent Unused Tool]".
-The sarea of Unused Tool is "Junkyard".
+Sarea of Unused Tool is "Junkyard".
 
 to say ResolveEvent Unused Tool:
 	say "As you explore the junkyard, you come across a pile of discarded tools. You search through the pile for something interesting.";
@@ -1016,7 +1016,7 @@ Signs of a Scuffle	"Signs of a Scuffle"
 
 Signs of a Scuffle is a situation.
 ResolveFunction of Signs of a Scuffle is "[ResolveEvent Signs of a Scuffle]".
-The sarea of Signs of a Scuffle is "Junkyard".
+Sarea of Signs of a Scuffle is "Junkyard".
 scufflecount is a number that varies.
 
 to say ResolveEvent Signs of a Scuffle:

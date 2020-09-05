@@ -110,8 +110,8 @@ AnalVirgin of Boghrim is false.
 PenileVirgin of Boghrim is false.
 SexuallyExperienced of Boghrim is true.
 The MainInfection of Boghrim is "Orc Breeder".
-The description of Boghrim is "[BoghrimDesc]".
-The conversation of Boghrim is { "Mew!" }.
+Description of Boghrim is "[BoghrimDesc]".
+Conversation of Boghrim is { "Mew!" }.
 The icon of Boghrim is Figure of Boghrim_clothed_icon.
 
 to say BoghrimDesc:
@@ -865,9 +865,9 @@ object	name
 Jason	"Jason"
 
 Jason is a man. Jason is in Main Hall.
-The description of Jason is "[JasonDesc]".
+Description of Jason is "[JasonDesc]".
 The icon of Jason is Figure of Jason_clothed_icon.
-The conversation of Jason is { "Having his nose pressed against Boghrim's crotch as he licks and fondles his master makes it just a bit difficult to talk to Jason. Combined with the fact that he's also a bit buzzed from swallowing the big orc's precum, you don't think there's much use talking to him right now..." }.
+Conversation of Jason is { "Having his nose pressed against Boghrim's crotch as he licks and fondles his master makes it just a bit difficult to talk to Jason. Combined with the fact that he's also a bit buzzed from swallowing the big orc's precum, you don't think there's much use talking to him right now..." }.
 
 to say JasonDesc:
 	say "     Jason is an athletic human male, somewhere in his twenties. He has short brown hair and dashingly handsome looks. By now, the young man has fully accepted his new role in life, proudly wearing a very skimpy leather harness that basically just consists of a few straps and a black leather collar around his neck. His legs are covered with a literally skin-tight pair of pants made from some sort of stretchy material - which clearly outlines his constantly half-hard cock. He's currently kneeling at his owner Boghrim's feet, worshiping his master by slowly lapping away at the big orc's balls. The fact that Jason still is a human, completely unchanged by his constant contact with the orcs all around, shows that he must be immune to the nanites - a rarity that would surely make him attractive to the researchers outside of the city and aid the search for a counter-agent...";

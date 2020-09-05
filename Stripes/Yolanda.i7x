@@ -37,7 +37,7 @@ Raven Nest	"Raven Nest"
 
 Raven Nest is a room. It is sleepsafe.
 Raven Nest is northeast from Red Apartment 2nd Floor.		[see the Qytat a'th Lundrues.i7x file in the Hellerhound folder for this location.]
-The description of Raven Nest is "[ravennestdesc]";
+Description of Raven Nest is "[ravennestdesc]";
 
 the scent of Raven Nest is "This place smells of birds with a tinge of sexual arousal.";
 
@@ -55,8 +55,8 @@ object	name
 Yolanda	"Yolanda"
 
 Yolanda is a woman. Yolanda is in The Raven Nest.
-The description of Yolanda is "[yolandadesc]".
-The conversation of Yolanda is { "Caw!" }.
+Description of Yolanda is "[yolandadesc]".
+Conversation of Yolanda is { "Caw!" }.
 yolandaqytat is a truth state that varies. yolandaqytat is usually false.
 yolandatreasure is a truth state that varies. yolandatreasure is usually false.
 yolandakeyfob is a truth state that varies. yolandakeyfob is usually false.

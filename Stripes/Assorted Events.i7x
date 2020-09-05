@@ -12,7 +12,7 @@ Fallen Kunoichi	"Fallen Kunoichi"
 
 Fallen Kunoichi is a situation.
 ResolveFunction of Fallen Kunoichi is "[ResolveEvent Fallen Kunoichi]".
-The sarea of Fallen Kunoichi is "Museum".
+Sarea of Fallen Kunoichi is "Museum".
 when play begins:
 	add Fallen Kunoichi to BadSpots of FurryList;
 
@@ -32,7 +32,7 @@ Suddenly Ninjas	"Suddenly Ninjas"
 
 Suddenly Ninjas is a situation.
 ResolveFunction of Suddenly Ninjas is "[ResolveEvent Suddenly Ninjas]".
-The sarea of Suddenly Ninjas is "Museum".
+Sarea of Suddenly Ninjas is "Museum".
 when play begins:
 	add Suddenly Ninjas to BadSpots of FurryList;
 	add Suddenly Ninjas to BadSpots of MaleList;
@@ -150,7 +150,7 @@ to say ResolveEvent Trickster:
 	say "     ([link]N[as]n[end link]) - Run.";
 	if Player consents:
 		say "     You dash up to the soldiers and pull out your weapon. Knowing your luck, trouble's on the way. You run up to the soldier left holding the bag. Your sudden appearance after the coyote's keeps him off guard long enough to pull the sack from him, finding it stuffed with gray fur inside. You barely have a chance to look up when a large pack of wolves come running around the corner, slamming into the unexpected team of soldiers. Several of the men are knocked down immediately.";
-		let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
+		let the bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 15: ";
 		if dice plus bonus > 15:
@@ -247,7 +247,7 @@ Lovers Bench	"Lovers Bench"
 
 Lovers Bench is a situation.
 ResolveFunction of Lovers Bench is "[ResolveEvent Lovers Bench]".
-The sarea of Lovers Bench is "Park".
+Sarea of Lovers Bench is "Park".
 loversbench is a number that varies.
 when play begins:
 	add Lovers Bench to BadSpots of FurryList;
@@ -534,7 +534,7 @@ PeachTree	"PeachTree"
 
 PeachTree is a situation.
 ResolveFunction of PeachTree is "[ResolveEvent PeachTree]". The level of PeachTree is 7.
-The sarea of PeachTree is "Park".
+Sarea of PeachTree is "Park".
 peachtreefight is a number that varies.
 
 when play begins:
@@ -597,7 +597,7 @@ name	desc	weight	object
 
 tasty peach is a grab object. tasty peach is temporary.
 
-the usedesc of tasty peach is "[yummypeach]";
+Usedesc of tasty peach is "[yummypeach]";
 
 to say yummypeach:
 	if "Junk Food Junky" is listed in feats of Player:
@@ -623,7 +623,7 @@ Concession Stand	"Concession Stand"
 
 Concession Stand is a situation.
 ResolveFunction of Concession Stand is "[ResolveEvent Concession Stand]".
-The sarea of Concession Stand is "Fair".
+Sarea of Concession Stand is "Fair".
 foodvendor is a number that varies.
 when play begins:
 	add Concession Stand to BadSpots of FurryList;
@@ -759,7 +759,7 @@ Sweet Exchange	"Sweet Exchange"
 
 Sweet Exchange is a situation.
 ResolveFunction of Sweet Exchange is "[ResolveEvent Sweet Exchange]".
-The sarea of Sweet Exchange is "Fair".
+Sarea of Sweet Exchange is "Fair".
 when play begins:
 	add Sweet Exchange to BadSpots of FurryList;
 	add Sweet Exchange to BadSpots of FemaleList;
@@ -793,7 +793,7 @@ Caught Glider	"Caught Glider"
 
 Caught Glider is a situation.
 ResolveFunction of Caught Glider is "[ResolveEvent Caught Glider]". Caught Glider is inactive.
-The sarea of Caught Glider is "Fair".
+Sarea of Caught Glider is "Fair".
 when play begins:
 	add Caught Glider to BadSpots of FurryList;
 	add Caught Glider to BadSpots of FemaleList;
@@ -821,7 +821,7 @@ Beach Party	"Beach Party"
 
 Beach Party is a situation.
 ResolveFunction of Beach Party is "[ResolveEvent Beach Party]". The level of Beach Party is 5.
-The sarea of Beach Party is "Beach".
+Sarea of Beach Party is "Beach".
 when play begins:
 	add Beach Party to BadSpots of FurryList;
 	add Beach Party to BadSpots of FemaleList;
@@ -886,7 +886,7 @@ B&R	"B&R"
 
 B&R is a situation.
 ResolveFunction of B&R is "[ResolveEvent B&R]".
-The sarea of B&R is "Mall".
+Sarea of B&R is "Mall".
 
 to say ResolveEvent B&R:
 	say "     While roaming around through the sewers, you hear the sound of arguing voices coming towards you. Being cautious, you duck into the shadows and watch the pair approach. They are an odd pair of big, muscled brutes carrying large weapons. The first is a warthog wearing shoulder pads and a torn, red vest, with several hand grenades within easy reach on it. His sharp, white tusks, hoop snoot-ring and bone necklace give him a menacing appearance despite the purple mohawk and sunglasses. The other is a rhino in a yellow wife-beater and cargo pants with a bandoleer of bullets across his chest, as well as a grenade of his own. While he clearly has a bit of a gut on him, his arms are even more muscled than his companion's.";
@@ -902,7 +902,7 @@ Slumbering Giant	"Slumbering Giant"
 
 Slumbering Giant is a situation.
 ResolveFunction of Slumbering Giant is "[ResolveEvent Slumbering Giant]".
-The sarea of Slumbering Giant is "Zoo".
+Sarea of Slumbering Giant is "Zoo".
 when play begins:
 	add Slumbering Giant to BadSpots of MaleList;
 
@@ -916,7 +916,7 @@ My Own Zoo Playset	"My Own Zoo Playset"
 
 My Own Zoo Playset is a situation.
 ResolveFunction of My Own Zoo Playset is "[ResolveEvent My Own Zoo Playset]". The level of My Own Zoo Playset is 12.
-The sarea of My Own Zoo Playset is "Zoo".
+Sarea of My Own Zoo Playset is "Zoo".
 when play begins:
 	add My Own Zoo Playset to BadSpots of MaleList;
 
@@ -950,7 +950,7 @@ Destroyed Records	"Destroyed Records"
 
 Destroyed Records is a situation.
 ResolveFunction of Destroyed Records is "[ResolveEvent Destroyed Records]".
-The sarea of Destroyed Records is "Sealed".
+Sarea of Destroyed Records is "Sealed".
 
 to say ResolveEvent Destroyed Records:
 	say "     Wandering through the darkened halls of the underground lab complex, your attention is drawn towards the stale smell of smoke and ashes. Following your nose, you find your way into records room that's been purposefully destroyed. There is a large char mark and a pile of ashes on the middle of the floor. It seems someone, probably when things started to go downhill, decided to burn all the records of what was really going on down here. You sift through the mess, finding the charred remains of what were probably once data CDs and DVDs among the mess. You search through it carefully, but they were quite thorough and you're unable to find anything scraps of unburnt paper with more than a few legible letters on them.";

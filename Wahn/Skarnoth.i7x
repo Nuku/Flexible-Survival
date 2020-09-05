@@ -63,8 +63,8 @@ SexuallyExperienced of Skarnoth is true.
 TwistedCapacity of Skarnoth is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Skarnoth is false. [steriles can't knock people up]
 MainInfection of Skarnoth is "Demon Prince".
-The description of Skarnoth is "[SkarnothDesc]".
-The conversation of Skarnoth is { "Woof." }.
+Description of Skarnoth is "[SkarnothDesc]".
+Conversation of Skarnoth is { "Woof." }.
 SkarnothLibraryEntry is a number that varies. [when he was brought in]
 
 to say SkarnothDesc:

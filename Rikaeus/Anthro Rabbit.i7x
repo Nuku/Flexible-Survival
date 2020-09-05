@@ -223,7 +223,7 @@ instead of sniffing lucky rabbit foot:
 	say "What are you expecting it to smell like? Okay, maybe a little bit of musk if anything, but that's it.";
 
 lucky rabbit foot is a grab object.
-the usedesc of lucky rabbit foot is "[lucky rabbit foot use]".
+Usedesc of lucky rabbit foot is "[lucky rabbit foot use]".
 lucky rabbit foot is not temporary.
 
 to say lucky rabbit foot use:
@@ -234,7 +234,7 @@ to say lucky rabbit foot use:
 		SanBoost 15;
 		now LastLuckyFootTurn is turns;
 
-lucky rabbit foot is infectious. The strain of lucky rabbit foot is "Anthro Rabbit".
+lucky rabbit foot is infectious. Strain of lucky rabbit foot is "Anthro Rabbit".
 
 Section 3 - Sex Menus for the rabbits
 

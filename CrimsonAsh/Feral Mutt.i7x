@@ -644,7 +644,7 @@ Mutt Pack Submission	"Mutt Pack Submission"
 Mutt Pack Submission is a situation.
 ResolveFunction of Mutt Pack Submission is "[ResolveEvent Mutt Pack Submission]".
 Mutt Pack Submission is inactive. [activated by fighting the mutt pack]
-The sarea of Mutt Pack Submission is "Junkyard".
+Sarea of Mutt Pack Submission is "Junkyard".
 
 when play begins:
 	add Mutt Pack Submission to BadSpots of FurryList;
@@ -713,7 +713,7 @@ Mutt Pack Attack	"Mutt Pack Attack"
 Mutt Pack Attack is a situation.
 ResolveFunction of Mutt Pack Attack is "[ResolveEvent Mutt Pack Attack]".
 Mutt Pack Attack is inactive.
-The sarea of Mutt Pack Attack is "Junkyard".
+Sarea of Mutt Pack Attack is "Junkyard".
 
 when play begins:
 	add Mutt Pack Attack to BadSpots of FurryList;

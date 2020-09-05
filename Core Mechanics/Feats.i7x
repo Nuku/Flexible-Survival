@@ -17,6 +17,17 @@ FeralBirths is a number that varies. FeralBirths is usually 0.
 vampiric is a truth state that varies. vampiric is usually false.
 The player has a number called featgained.
 
+FeatList is an action applying to nothing.
+understand "Feats List" as FeatList.
+understand "FeatsList" as FeatList.
+understand "Feat List" as FeatList.
+understand "FeatList" as FeatList.
+understand "Feats" as FeatList.
+
+carry out FeatList:
+	sort Feats of Player;
+	say "Feats: [Feats of Player]";
+
 Featgetting is an action applying to nothing.
 understand "volunteer" as featgetting.
 

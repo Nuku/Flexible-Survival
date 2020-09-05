@@ -40,7 +40,7 @@ Overrun Garden	"Overrun Garden"
 
 Overrun Garden is a situation.
 ResolveFunction of Overrun Garden is "[ResolveEvent Overrun Garden]". The level of Overrun Garden is 10.
-The sarea of Overrun Garden is "High".
+Sarea of Overrun Garden is "High".
 when play begins:
 	add Overrun Garden to badspots of HermList;
 	add Overrun Garden to BadSpots of FemaleList;
@@ -154,7 +154,7 @@ Spreading Flowers	"Spreading Flowers"
 
 Spreading Flowers is a situation.
 ResolveFunction of Spreading Flowers is "".
-The sarea of Spreading Flowers is "Nowhere".
+Sarea of Spreading Flowers is "Nowhere".
 
 JoannaSFTimer is a number that varies. [@Tag:NotSaved]
 JoannaSFTimer is usually 20000.
@@ -229,7 +229,7 @@ Hybrid Experimentations	"Hybrid Experimentations"
 
 Hybrid Experimentations is a situation.
 ResolveFunction of Hybrid Experimentations is "[ResolveEvent Hybrid Experimentations]". Hybrid Experimentations is inactive.
-The sarea of Hybrid Experimentations is "Sealed".
+Sarea of Hybrid Experimentations is "Sealed".
 
 to say ResolveEvent Hybrid Experimentations:
 	if resolution of Hybrid Experimentations is 0:
@@ -519,7 +519,7 @@ Object	Name
 Flower Garden	"Flower Garden"
 
 Flower Garden is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Flower Garden is "     Joanna's garden is lush and beautiful, thriving with large and fragrant flowers under her care. Having cleared away the remains of the monstrous plant, she's taken its place at the center of the garden. She uproots herself from time to time to walk around and tend to her flowers. There is a stone path to walk that weaves through the various beds and bushes.".
+Description of Flower Garden is "     Joanna's garden is lush and beautiful, thriving with large and fragrant flowers under her care. Having cleared away the remains of the monstrous plant, she's taken its place at the center of the garden. She uproots herself from time to time to walk around and tend to her flowers. There is a stone path to walk that weaves through the various beds and bushes.".
 lastflowersmell is a number that varies. lastflowersmell is usually 555.
 Skyscrapers2 is a door. "Leaving here to the east heads back into the High Rise District.".
 Skyscrapers2 is west of Financial Sector and east of Flower Garden. It is dangerous.
@@ -546,8 +546,8 @@ object	name
 Joanna	"Joanna"
 
 Joanna is a woman. Joanna is in Flower Garden.
-The description of Joanna is "[joannadesc]".
-The conversation of Joanna is { "Sunshine!" }.
+Description of Joanna is "[joannadesc]".
+Conversation of Joanna is { "Sunshine!" }.
 lastjoannajuice is a number that varies. lastjoannajuice is usually 555.
 joannatalk is a number that varies.
 joannaoffernum is a number that varies.
@@ -994,7 +994,7 @@ Dog Chase	"Dog Chase"
 
 Dog Chase is a situation.
 ResolveFunction of Dog Chase is "[ResolveEvent Dog Chase]". The level of Dog Chase is 2.
-The sarea of Dog Chase is "Outside".
+Sarea of Dog Chase is "Outside".
 when play begins:
 	add Dog Chase to BadSpots of FurryList;
 	add Dog Chase to BadSpots of MaleList;

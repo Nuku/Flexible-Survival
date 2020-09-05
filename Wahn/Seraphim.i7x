@@ -484,9 +484,9 @@ SexuallyExperienced of Gabriel is false.
 TwistedCapacity of Gabriel is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Gabriel is false. [steriles can't knock people up]
 MainInfection of Gabriel is "Seraphim Warrior".
-The description of Gabriel is "[Gabrieldesc]".
+Description of Gabriel is "[Gabrieldesc]".
 The icon of Gabriel is Figure of Gabriel_icon.
-The conversation of Gabriel is { "Mew!" }.
+Conversation of Gabriel is { "Mew!" }.
 
 to say Gabrieldesc:
 	if debugactive is 1:

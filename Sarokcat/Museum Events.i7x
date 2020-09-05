@@ -13,7 +13,7 @@ Sealed Wing	"Sealed Wing"
 
 Sealed Wing is a situation.
 ResolveFunction of Sealed Wing is "[ResolveEvent Sealed Wing]".
-The sarea of Sealed Wing is "Museum".
+Sarea of Sealed Wing is "Museum".
 
 to say ResolveEvent Sealed Wing:
 	say "     Traveling through the empty museum corridors, you come across some large, closed double doors. Looking closer, you can see that someone has wrapped chains around the door handles; and from the looks of things, tried to push a bench in front of the doors as well. Wondering what could be so dangerous, you note someone has scribbled a small note underneath a sign telling you about the wing. The note reads: 'Do NOT open! Really, I mean it. Seriously, you don't want to go in there; it's not fun, it's not pretty, so just turn around and leave now, while you can! Signed- Val.' Deciding to take the sign's advice, you turn around to leave; though you do you find yourself wondering what could be so dangerous about a 'Modern Art' exhibit?";
@@ -34,7 +34,7 @@ Updating Artwork	"Updating Artwork"
 
 Updating Artwork is a situation.
 ResolveFunction of Updating Artwork is "[ResolveEvent Updating Artwork]".
-The sarea of Updating Artwork is "Museum".
+Sarea of Updating Artwork is "Museum".
 
 to say ResolveEvent Updating Artwork:
 	say "     Wandering along the peaceful museum hallways, you take time to glance at some of the paintings hanging along the wall, only to stop and stare at them in shock. It appears someone has gone around with some paint and markers and 'updated' several of these valuable antiques, putting in glasses, mustaches, and funny hats on the characters within. Perhaps worst of all, you can see that all of the male subjects now have rather large genitalia painted on in lewd colors, and to add insult to injury, a closer inspection reveals that many of the cocks the unknown artist added are more suitable to animals then humans! Sighing at the absolute waste of art, you continue on your way down the hall; after a while though, you are forced to admit, that in the case of some of the artists, the new 'updates' are actually an improvement.";
@@ -50,7 +50,7 @@ Drunken Satyrs	"Drunken Satyrs"
 
 Drunken Satyrs is a situation.
 ResolveFunction of Drunken Satyrs is "[ResolveEvent Drunken Satyrs]".
-The sarea of Drunken Satyrs is "Museum".
+Sarea of Drunken Satyrs is "Museum".
 
 to say ResolveEvent Drunken Satyrs:
 	say "     Wandering along the museum hallways, you stop as you encounter a large group of satyrs sprawled across the hall, the reek of wine and booze permeating the air. This was obviously the site of a massive party, and from the looks of things was a great revel while it lasted; unfortunately, the participants seem to have finally passed out where they were standing (or laying), proving that even satyrs have their limits. You step lightly among the passed out bodies as you continue along your way, careful not to wake any of them from their no-doubt much-needed rest.";
@@ -66,7 +66,7 @@ Strange Drums	"Strange Drums"
 
 Strange Drums is a situation.
 ResolveFunction of Strange Drums is "[ResolveEvent Strange Drums]".
-The sarea of Strange Drums is "Museum".
+Sarea of Strange Drums is "Museum".
 
 to say ResolveEvent Strange Drums:
 	say "     Wandering the museum hallways, you are surprised to hear the sound of strange tribal drums echoing through the halls. Looking around, you try to trace the sound, but no matter which way you turn, they seem to fade. Finally, after frustrated searching for over an hour, you give up and continue on your way, wondering just what is going on within the museum.";
@@ -81,7 +81,7 @@ Missing Sabretooth	"Missing Sabretooth"
 
 Missing Sabretooth is a situation.
 ResolveFunction of Missing Sabretooth is "[ResolveEvent Missing Sabretooth]".
-The sarea of Missing Sabretooth is "Museum".
+Sarea of Missing Sabretooth is "Museum".
 
 to say ResolveEvent Missing Sabretooth:
 	say "     Wandering around the museum, you come to the section on primitive lifestyles. Deciding to take a look, you see several displays with primitive men fighting something, but whatever was there before is gone now. Reading the little plaque on the display, you realize that the sabretooth tigers are missing; swiftly glancing around, you note that all the sabretooths from the area appear to be missing. You quickly hurry to leave, but as you do, a strange thought hits you; weren't the sabre-like teeth a primarily male characteristic, like a lion's mane? If that's the case, you worry about what they will do to get a female....";
@@ -97,7 +97,7 @@ Giant Battleaxe	"Giant Battleaxe"
 
 Giant Battleaxe is a situation.
 ResolveFunction of Giant Battleaxe is "[ResolveEvent Giant Battleaxe]".
-The sarea of Giant Battleaxe is "Museum".
+Sarea of Giant Battleaxe is "Museum".
 
 to say ResolveEvent Giant Battleaxe:
 	say "     Wandering around the roman section of the museum, you come across an area where someone or something has leaned a large battleaxe up against one of the displays. You can't help but gawk at the size of the thing; its shaft is a good four feet long, the blade almost another two feet long and two feet wide on each side. You try lifting the large weapon for a second, but can't even manage to budge the massive thing. Leaving it where it lies, you hurry on, hoping not to meet whatever kind of creature uses a weapon like that.";
@@ -114,7 +114,7 @@ Missing Lamp	"Missing Lamp"
 
 Missing Lamp is a situation.
 ResolveFunction of Missing Lamp is "[ResolveEvent Missing Lamp]".
-The sarea of Missing Lamp is "Museum".
+Sarea of Missing Lamp is "Museum".
 
 LampVariable is a number that varies.
 
@@ -153,7 +153,7 @@ Night Watchmen Uniform	"Night Watchmen Uniform"
 
 Night Watchmen Uniform is a situation.
 ResolveFunction of Night Watchmen Uniform is "[ResolveEvent Night Watchmen Uniform]".
-The sarea of Night watchmen uniform is "Museum".
+Sarea of Night watchmen uniform is "Museum".
 
 to say ResolveEvent Night watchmen uniform:
 	say "     Wandering along the museum hallways, you notice a scrap of gray in an alcove and decide take a closer look. Upon closer inspection, you find that the gray color is scraps of cloth from what were once a night watchman's uniform. Looking around, you can't find any clues as to what might have happened to the guard; but if the scraps are any indication, it probably wasn't good.";
@@ -169,7 +169,7 @@ Art Appreciation	"Art Appreciation"
 
 Art Appreciation is a situation.
 ResolveFunction of Art Appreciation is "[ResolveEvent Art Appreciation]".
-The sarea of Art Appreciation is "Museum".
+Sarea of Art Appreciation is "Museum".
 
 to say ResolveEvent Art Appreciation:
 	say "     Wandering along the museum hallways, you find yourself pausing to take in the magnificent artwork gracing the halls. Deciding to relax and take your time, you wander through the rooms, enjoying the art and beauty surrounding you. Eventually, you come to a different section of the museum, but you feel much better for having stopped to appreciate the art.";

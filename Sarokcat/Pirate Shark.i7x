@@ -235,9 +235,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "pirate bandana"	"A slightly damp bit of black cloth, with a skull and crossbones on the front, closer inspection reveals that the skull has sharp shark-like teeth."	1	pirate bandana
 
-pirate bandana is a grab object. Understand "bandana" and "bandana" as pirate bandana. Pirate bandana is infectious. The strain of pirate bandana is "Shark Herm".
+pirate bandana is a grab object. Understand "bandana" and "bandana" as pirate bandana. Pirate bandana is infectious. Strain of pirate bandana is "Shark Herm".
 
-The usedesc of pirate bandana is "Looking at the small piece of cloth, you decide to put it on for a minute, tying it around your head and grinning at the vicious look it gives you. You pose for a minute in your new bandana, before the much abused cloth finally tears and falls to the ground, you sigh sadly at the loss of your new fashion accessory, but still feel much more piratical afterwards.";
+Usedesc of pirate bandana is "Looking at the small piece of cloth, you decide to put it on for a minute, tying it around your head and grinning at the vicious look it gives you. You pose for a minute in your new bandana, before the much abused cloth finally tears and falls to the ground, you sigh sadly at the loss of your new fashion accessory, but still feel much more piratical afterwards.";
 
 
 Section 3 - Endings

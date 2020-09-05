@@ -13,7 +13,7 @@ Fin is a number that varies.
 Tyraffection is a number that varies.
 Homarusearch is a number that varies.
 
-The sarea of DogHouse is "Warehouse".
+Sarea of DogHouse is "Warehouse".
 when play begins:
 	add DogHouse to BadSpots of FurryList;
 	add DogHouse to BadSpots of FemaleList;

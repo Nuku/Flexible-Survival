@@ -37,8 +37,8 @@ AnalVirgin of Mary is true.
 PenileVirgin of Mary is false.
 SexuallyExperienced of Mary is true.
 MainInfection of Mary is "Ewe".
-The description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around. You remember her introducing herself as Mary.".
-The conversation of Mary is { "Baa, honey!" }.
+Description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around. You remember her introducing herself as Mary.".
+Conversation of Mary is { "Baa, honey!" }.
 the fuckscene of Mary is "[sexwithmary]".
 Mary is in New Ewe Storeroom.
 

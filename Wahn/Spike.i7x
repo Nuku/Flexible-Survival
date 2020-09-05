@@ -172,7 +172,7 @@ instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Libra
 
 to say SpikeAccepted:
 	say "     As you agree to take Spike along as your companion, his tail starts wagging up a storm and the young man says excitedly, 'Right on! We'll make this city ours! Let's have some fun!' With his hand lowering to rub the crotch of his jeans, you have little doubt what sort of 'fun' he expects to soon have. Taking another drag from his smoke, the anthro canine then flicks it aside and takes position by your side, steeling his expression to be properly tough and just a bit overbearing, as he expects the right-hand man of 'The Boss' would need to be.";
-	say "     (Spike the doberman is now a possible ally! You can make him your active ally by typing [bold type][link]ally Spike[end link][roman type] or [bold type][link]ally doberman[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Spike[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+	say "     (Spike the doberman is now a possible ally! You can make him your active ally by typing [bold type][link]ally Spike[end link][roman type] or [bold type][link]ally doberman[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Spike[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 	now HP of Spike is 1;
 	add "Tamed" to Traits of doberman companion;
 	now doberman companion is tamed;
@@ -189,10 +189,10 @@ NPCObject of doberman companion is Spike.
 understand "Spike" as doberman companion.
 understand "Doberman" as doberman companion.
 printed name of doberman companion is "Spike".
-The description of doberman companion is "[SpikeDesc]".
-The weapon damage of doberman companion is 15.
+Description of doberman companion is "[SpikeDesc]".
+Weapon Damage of doberman companion is 15.
 The level of doberman companion is 1.
-The Dexterity of doberman companion is 10.
+Dexterity of doberman companion is 10.
 The summondesc of doberman companion is "[SummonSpike]".
 The dismissdesc of doberman companion is "[DismissSpike]".
 The assault of doberman companion is "[one of]Spike pounces your opponent, landing some good hits.[or]The anthro doberman by your side lands a kick on the leg of your opponent, hurting and distracting them.[or]An aggressive bark by Spike distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, Spike snaps for your enemy with his teeth, leaving a gash as he is fought off.[at random]".
@@ -264,8 +264,8 @@ SexuallyExperienced of Spike is true.
 TwistedCapacity of Spike is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Spike is false. [steriles can't knock people up]
 MainInfection of Spike is "Doberman Male".
-The description of Spike is "[SpikeDesc]".
-The conversation of Spike is { "<This is nothing but a placeholder!>" }.
+Description of Spike is "[SpikeDesc]".
+Conversation of Spike is { "<This is nothing but a placeholder!>" }.
 The scent of Spike is "     Spike's scent of dog is almost drowned out by some sort of after-shave he's found out in the city. It's a good, masculine scent, you only wish he wouldn't be using quite as much of it.".
 
 to say SpikeDesc:

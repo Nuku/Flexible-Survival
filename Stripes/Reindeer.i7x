@@ -255,11 +255,11 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "egg nog"	"AKA chicken milk. That holiday drink, spiked rather heavily with brandy by the smell of it."	1	egg nog
 
-egg nog is a grab object. egg nog is infectious. understand "chicken milk" as egg nog. The strain of egg nog is "Reindeer". egg nog is temporary.
+egg nog is a grab object. egg nog is infectious. understand "chicken milk" as egg nog. Strain of egg nog is "Reindeer". egg nog is temporary.
 
 the scent of egg nog is "The egg nog smells fresh and strongly of good brandy, making you want to drink it and remember Christmases past.".
 
-The usedesc of egg nog is "[nogging]";
+Usedesc of egg nog is "[nogging]";
 
 to say nogging:
 	say "[line break]     You drink down the tasty egg nog, feeling the warmth of the brandy-rich flowing into you. You are filled with a burst of the holiday spirit and a lustful longing for someone to share this feeling with. You feel a little better all around because of it even as the warmth changes from that of the alcohol to the warmth of your activated infection.";
@@ -333,15 +333,15 @@ to say reindeerheat:
 			increase Libido of Player by a random number from 3 to 8;
 			if Libido of Player > 100, now Libido of Player is 100;
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping puss[yfn]. Feeling the strength of your heat pulsing through you, you are so thirsty. You look around for something to satisfy your thirst for holiday cheer. Remembering the egg nog, you pull it out from your pack and take a drink.[nogging]";
-		else if "egg nog" is listed in invent of the location of the player:
+		else if "egg nog" is listed in invent of the Location of Player:
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping puss[yfn]. Feeling the strength of your heat pulsing through you, you are so thirsty. You look around for something to satisfy your thirst for holiday cheer. Spotting the egg nog, you grab it and take a drink.";
 			let num be 0;
-			repeat with Q running through invent of the location of the player:
+			repeat with Q running through invent of the Location of Player:
 				increase num by 1;
 				if q matches the text "egg nog", case insensitively:
 					ItemGain q by 1 silently;
 					break;
-			remove entry num from invent of the location of the player;
+			remove entry num from invent of the Location of Player;
 			ItemGain egg nog by 1 silently;
 			process egg nog;
 		else:

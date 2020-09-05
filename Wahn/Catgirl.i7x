@@ -60,8 +60,8 @@ SexuallyExperienced of Fiona is true.
 TwistedCapacity of Fiona is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Fiona is false. [steriles can't knock people up]
 MainInfection of Fiona is "Catgirl". [currently no infection available]
-The description of Fiona is "[FionaDesc]".
-The conversation of Fiona is { "<This is nothing but a placeholder!>" }.
+Description of Fiona is "[FionaDesc]".
+Conversation of Fiona is { "<This is nothing but a placeholder!>" }.
 The scent of Fiona is "     Fiona has a light, floral scent with an underlying note of clean fur.".
 
 to say FionaDesc:

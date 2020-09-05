@@ -729,8 +729,8 @@ MainInfection of Lucifer is "Feral Mustang Stallion".
 
 
 Lucifer is in Mustang Paddock.
-The description of Lucifer is "[Luciferdesc]".
-The conversation of Lucifer is { "Mew!" }.
+Description of Lucifer is "[Luciferdesc]".
+Conversation of Lucifer is { "Mew!" }.
 
 instead of conversing Lucifer:
 	say "     The feral mustang gives a loud neigh as you try to draw him into a conversation. Make of that what you will.";

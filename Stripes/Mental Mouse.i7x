@@ -23,7 +23,7 @@ to say mousedesc:
 	if level of Player > 4:
 		say "[mousebuff]";
 		say "     As the mice draw nearer, there is a rustling behind you as another of these mice pops up behind you[if lev entry is 6 or lev entry is 7], and another[else if lev entry > 7], and then a few more start popping up from all around[end if]. With reinforcements now, this [if lev entry < 6]quartet of mice[else if lev entry < 21]group of [ (lev entry / two ) + one ] mice[else]large group of mice[end if] move in to forcibly welcome you as member of this strange mouse-collective.";
-	if mousecurse is 1 and mouse girl is the companion of the player:
+	if mousecurse is 1 and mouse girl is the Companion of Player:
 		say "     Rachel moves in close beside you. 'I told you all that I'll bring this one in on my own,' she says to the other mice, clearly speaking aloud for your benefit. 'We should not wait any longer. This one is meant to be with us,' they others respond, moving in. It seems that your mate is more independent than most of the other mice in the collective, but is unable to sway the mouse hive-mind into waiting now that they've stumbled across you again.";
 
 to say mousebuff:
@@ -363,7 +363,7 @@ this is the mentalmouse rule:
 				now dam is (dam * 150) divided by 100;
 				say "The enemy finds a particular vulnerability in your mental defenses - Critical Hit![line break]";
 			say "[one of]Being this close to them, you can feel their minds tugging at yours, weakening your resolve[or]You can feel what must be their united thoughts at the edge of your mind, whispering for you to give in and accept mousedom with them[or]The mice surround you and look at you funny. You thoughts get cloudy and it becomes harder to stay focused on resisting them[at random]! You take [special-style-2][dam][roman type] damage[if mousecurse is 1] and you grow more aroused[end if]!";
-			decrease HP of the player by dam; [No armor protection from the mental whammy]
+			decrease HP of Player by dam; [No armor protection from the mental whammy]
 			if mousecurse is 1:
 				let libdam be 2;
 				increase libdam by a random number between 0 and ( lev entry / 2 );
@@ -375,7 +375,7 @@ this is the mentalmouse rule:
 		else:
 			say "You can feel the touch of their mousey minds at the edge of yours, but you manage to block them out for the moment!";
 		now peppereyes is 0;
-		if HP of the player > 0 and Libido of Player < 110:
+		if HP of Player > 0 and Libido of Player < 110:
 			wait for any key;
 		else:
 			if HP of Player <= 0, now fightoutcome is 20;
@@ -409,9 +409,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "cheese"	"A wedge of tasty cheese stamped with a mouse on the rind."	1	cheese
 
-cheese is a grab object. cheese is infectious. The strain of cheese is "Mental Mouse".
+cheese is a grab object. cheese is infectious. Strain of cheese is "Mental Mouse".
 
-The usedesc of cheese is "[eatcheese]";
+Usedesc of cheese is "[eatcheese]";
 
 to say eatcheese:
 	say "     You pull out the wedge of cheese and, after double-checking its continued freshness, you take a small nibble of it. That nibble becomes a bite, and then another and another until it's completely gone before you know it.";

@@ -11,7 +11,7 @@ Wet Clothes	"Wet Clothes"
 
 Wet Clothes is a situation.
 ResolveFunction of Wet Clothes is "[ResolveEvent Wet Clothes]".
-the sarea of Wet Clothes is "Warehouse".
+Sarea of Wet Clothes is "Warehouse".
 
 to say ResolveEvent Wet Clothes:
 	say "     While exploring the city, you discover several small piles of shredded clothes. The clothes, a large part of the sidewalk, and several nearby parked cars are completely soaked in spooge. Whatever did this, sprayed gallons of the stuff everywhere, soaking, and probably mutating, all the humans nearby. You decide to leave before whatever did this 'cums' back.";
@@ -26,7 +26,7 @@ Failed Survivor	"Failed Survivor"
 
 Failed Survivor is a situation.
 ResolveFunction of Failed Survivor is "[ResolveEvent Failed Survivor]".
-the sarea of Failed Survivor is "Junkyard".
+Sarea of Failed Survivor is "Junkyard".
 
 to say ResolveEvent Failed Survivor:
 	say "     While exploring the junkyard, you discover a discarded backpack that looks very similar to yours. You open it up and see that the only thing inside is a journal. You look at the journal and start to read it.";
@@ -46,7 +46,7 @@ Tracks	"Tracks"
 
 Tracks is a situation.
 ResolveFunction of Tracks is "[ResolveEvent Tracks]".
-the sarea of Tracks is "Plains".
+Sarea of Tracks is "Plains".
 
 to say ResolveEvent Tracks:
 	say "     While exploring around some collapsing buildings, you discover a short trail of footprints leading through some mud. At first, the footprints are human, but the tracks slowly change until they look like they were made by hooves. You follow the tracks as long as you can, but you eventually lose the trail.";

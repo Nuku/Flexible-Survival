@@ -23,7 +23,7 @@ Refugee Mare	"Refugee Mare"
 
 Refugee Mare is a situation.
 ResolveFunction of Refugee Mare is "[ResolveEvent Refugee Mare]". Refugee Mare is inactive.
-The sarea of Refugee Mare is "Smith Haven".
+Sarea of Refugee Mare is "Smith Haven".
 
 when play begins:
 	add Refugee Mare to BadSpots of FurryList;

@@ -347,7 +347,7 @@ Monkey King Service	"Monkey King Service"
 
 Monkey King Service is a situation.
 ResolveFunction of Monkey King Service is "[ResolveEvent Monkey King Service]".
-The sarea of Monkey King Service is "Museum".
+Sarea of Monkey King Service is "Museum".
 The level of Monkey King Service is 3. [event unlocks at lvl 3]
 
 to say ResolveEvent Monkey King Service:
@@ -382,9 +382,9 @@ Crashing The Satyr Party	"Crashing The Satyr Party"
 
 Crashing The Satyr Party is a situation.
 ResolveFunction of Crashing The Satyr Party is "[ResolveEvent Crashing The Satyr Party]".
-The Prereq1 of Crashing The Satyr Party is Monkey King Service.
+Prereq1 of Crashing The Satyr Party is Monkey King Service.
 The Prereq1Resolution of Crashing The Satyr Party is { 1 }.
-The sarea of Crashing The Satyr Party is "Museum".
+Sarea of Crashing The Satyr Party is "Museum".
 The level of Crashing The Satyr Party is 3. [event unlocks at lvl 3]
 
 to say ResolveEvent Crashing the Satyr Party:
@@ -457,9 +457,9 @@ Hunt Of Mammoth Proportions	"Hunt Of Mammoth Proportions"
 
 Hunt Of Mammoth Proportions is a situation.
 ResolveFunction of Hunt Of Mammoth Proportions is "[ResolveEvent Hunt Of Mammoth Proportions]".
-The Prereq1 of Hunt Of Mammoth Proportions is Crashing the Satyr Party.
+Prereq1 of Hunt Of Mammoth Proportions is Crashing the Satyr Party.
 The Prereq1Resolution of Hunt Of Mammoth Proportions is { 1 }. [must have successfully helped]
-The sarea of Hunt Of Mammoth Proportions is "Museum".
+Sarea of Hunt Of Mammoth Proportions is "Museum".
 The level of Hunt Of Mammoth Proportions is 8. [event unlocks at lvl 8]
 
 to say ResolveEvent Hunt Of Mammoth Proportions:
@@ -537,9 +537,9 @@ Take My Royal Word For Granite	"Take My Royal Word For Granite"
 
 Take My Royal Word For Granite is a situation.
 ResolveFunction of Take My Royal Word For Granite is "[ResolveEvent Take My Royal Word For Granite]".
-The Prereq1 of Take My Royal Word for Granite is Crashing the Satyr Party.
+Prereq1 of Take My Royal Word for Granite is Crashing the Satyr Party.
 The Prereq1Resolution of Take My Royal Word for Granite is { 4 }. [must have successfully sabotaged]
-The sarea of Take My Royal Word For Granite is "Museum".
+Sarea of Take My Royal Word For Granite is "Museum".
 The level of Take My Royal Word For Granite is 8. [event unlocks at lvl 8]
 
 to say ResolveEvent Take My Royal Word For Granite:
@@ -596,7 +596,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Wukong	"Wukong"
 
-Wukong is a person. Wukong is in Nowhere. The description of Wukong is "[wukongDesc]".
+Wukong is a person. Wukong is in Nowhere. Description of Wukong is "[wukongDesc]".
 
 to say wukongDesc:
 	if Resolution of Monkey Duel is 1:

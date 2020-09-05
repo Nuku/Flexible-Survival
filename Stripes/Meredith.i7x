@@ -164,8 +164,8 @@ object	name
 Meredith	"Meredith"
 
 Meredith is a woman.
-The description of Meredith is "[Meredithdesc]".
-The conversation of Meredith is { "Oops!" }.
+Description of Meredith is "[Meredithdesc]".
+Conversation of Meredith is { "Oops!" }.
 
 the scent of the Meredith is "[if HP of Meredith is 1]Meredith still has the stale and fading scent of a parking garage clinging to her[else]Meredith smells of horses and female arousal[end if].".
 

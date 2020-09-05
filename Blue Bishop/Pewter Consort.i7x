@@ -885,9 +885,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "pewter seed"	"[pewterseeddesc]"	1	pewter seed
 
-pewter seed is a grab object. pewter seed is infectious. The strain of pewter seed is "Pewter Consort". pewter seed is cum.
+pewter seed is a grab object. pewter seed is infectious. Strain of pewter seed is "Pewter Consort". pewter seed is cum.
 the scent of pewter seed is "There's a slight, metallic sweetness hidden under its more masculine aroma.".
-The usedesc of pewter seed is "     You have little difficulty downing the warm fluid. It makes you a little tingly all over...";
+Usedesc of pewter seed is "     You have little difficulty downing the warm fluid. It makes you a little tingly all over...";
 
 to say pewterseeddesc:
 	say "The silvery seed of a strange, eyeless monster";

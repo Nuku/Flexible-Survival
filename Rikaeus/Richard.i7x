@@ -48,8 +48,8 @@ AnalVirgin of Richard is true.
 PenileVirgin of Richard is true.
 SexuallyExperienced of Richard is false.
 MainInfection of Richard is "Satyr".
-The description of Richard is "[RichardDesc]".
-The conversation of Richard is { "<This is nothing but a placeholder!>" }.
+Description of Richard is "[RichardDesc]".
+Conversation of Richard is { "<This is nothing but a placeholder!>" }.
 The scent of Richard is "     Richard smells like sex and musk, something that you expected from a randy satyr like him. However, beneath that scent you can smell... chocolate?".
 
 to say RichardDesc:

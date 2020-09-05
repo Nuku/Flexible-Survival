@@ -2104,7 +2104,7 @@ To say wyvern goop use:
 	SanLoss 4;
 	increase Libido of Player by 1;
 
-wyvern goop is a grab object. wyvern goop is infectious. The strain of wyvern goop is "Wyvern".
+wyvern goop is a grab object. wyvern goop is infectious. Strain of wyvern goop is "Wyvern".
 wyvern goop has a usedesc "[wyvern goop use]".
 
 Wyvern ends here.

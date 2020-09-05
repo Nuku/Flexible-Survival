@@ -353,7 +353,7 @@ name	desc	weight	object
 foul scuttler spit is a grab object.
 It is temporary.
 
-the usedesc of foul scuttler spit is "[FoulScuttlerUse]".
+Usedesc of foul scuttler spit is "[FoulScuttlerUse]".
 
 to say FoulScuttlerUse:
 	say "     You look disgustingly at the goopy liquid in the jar, wondering if you're insane for doing this. Steeling yourself, you bring the jar to your lips, quickly drinking the Foul Scuttler saliva. Contrary to your belief, the fluid does not taste horrendous, but it's not exactly tasty, either. Soon enough, you've drained the jar, putting it back into your pack for later use.";

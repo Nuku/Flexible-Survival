@@ -14,7 +14,7 @@ Creeping Grass	"Creeping Grass"
 
 Creeping Grass is a situation.
 ResolveFunction of Creeping Grass is "[ResolveEvent Creeping Grass]".
-The sarea of Creeping Grass is "Plains".
+Sarea of Creeping Grass is "Plains".
 
 to say ResolveEvent Creeping Grass:
 	say "     As you check out a few fallen buildings, you notice that the rubble pile has already been partially covered by the dry grasses of the plains. Somehow, despite their recent collapse, the plains are already starting to cover and reclaim them. Checking more closely and prodding it with a stick, you can see that the grass roots, instead of burrowing into the soil, have climbed up the fallen beams and boards, spreading to grow fresh grass overtop of them. Putting some weight on the covered spot, it breaks and crumbles easily, showing that the grasses are breaking down and destroying the ruins they cover.";
@@ -30,7 +30,7 @@ Ranch House	"Ranch House"
 
 Ranch House is a situation.
 ResolveFunction of Ranch House is "[ResolveEvent Ranch House]".
-The sarea of Ranch House is "Plains".
+Sarea of Ranch House is "Plains".
 
 to say ResolveEvent Ranch House:
 	say "     You come the ruins of what was probably a ranch house. You search through the broken home, but find nothing of use or value. Looking around, you see that some of the fence still stands and notice a second fallen structure. Going over, you can quickly tell that this was once a small stable from the smell of horses hanging over it. You take care where you step, avoiding the dark messes as well as the white ones from equine cum. Hoof-prints in the dirt around the stable head off into the plains where the transformed horses probably live now in some altered form.";
@@ -46,7 +46,7 @@ Soaring Eagle	"Soaring Eagle"
 
 Soaring Eagle is a situation.
 ResolveFunction of Soaring Eagle is "[ResolveEvent Soaring Eagle]".
-The sarea of Soaring Eagle is "Plains".
+Sarea of Soaring Eagle is "Plains".
 
 to say ResolveEvent Soaring Eagle:
 	say "     Taking a short break under one of the rare trees on the plains, you spot a shadow drift across the ground. Looking up, you spot an eagle high up in the sky. As you watch it, you notice that it is not a normal eagle, but some kind of eagle man. Deciding to take no risks, you wait in the shadow of the tree until he passes from sight.";
@@ -62,7 +62,7 @@ Partial Ruin	"Partial Ruin"
 
 Partial Ruin is a situation.
 ResolveFunction of Partial Ruin is "[ResolveEvent Partial Ruin]". The level of Partial Ruin is 5.
-The sarea of Partial Ruin is "Plains".
+Sarea of Partial Ruin is "Plains".
 when play begins:
 	add Partial Ruin to badspots of HermList;
 	add Partial Ruin to BadSpots of FurryList;
@@ -98,7 +98,7 @@ Hardware Store Ruins	"Hardware Store Ruins"
 
 Hardware Store Ruins is a situation.
 ResolveFunction of Hardware Store Ruins is "[ResolveEvent Hardware Store Ruins]".
-The sarea of Hardware Store Ruins is "Plains".
+Sarea of Hardware Store Ruins is "Plains".
 
 to say ResolveEvent Hardware Store Ruins:
 	say "     You wander across the dry plains, following the path of a worn-down road as it meanders through the rolling hills. The smell of dust still lingers in the air, likely the result of a herd of centaurs as they move through the plains. Not wanting to be caught off guard, you walk with further haste, until the dust settles, and you can once again relax. You pause for a moment to catch your breath. Taking the opportunity to survey your	surroundings, you think you spot a number of buildings up ahead. You approach to a safe distance, your eyes scanning the horizon for both peril and plunder, until eventually, they settle on the ruins of an old hardware store.";
@@ -106,7 +106,7 @@ to say ResolveEvent Hardware Store Ruins:
 	LineBreak;
 	if Player consents:
 		let diceRoll be a random number from 1 to 20;
-		let bonus be ( ( the Perception of the player minus 10 ) divided by 2 );
+		let bonus be ( ( Perception of Player minus 10 ) divided by 2 );
 		let perceptionRoll be diceRoll plus bonus;
 		say "     You proceed to clamber into the ruins, moving aside fallen junk in an effort to find something of use. The rubble is difficult to move and the task quickly becomes both tiring and frustrating. More and	more as you work, you come to believe this place was picked completely clean before it collapsed. While some parts are too buried to reach and check, those you can find yield nothing of value at all. At one point, you notice a solid plank of wood buried under the rubble that looks like it might be of use. You give it a tug, but it barely moves. You pull again, getting it to budge this time, but you can see that it's a bit longer than you thought and moves much of the surrounding rubble along with it.";
 		say "     You roll 1d20([diceRoll])+[bonus] = [special-style-1][perceptionRoll][roman type] vs [special-style-2]10[roman type] (Perception Check):[line break]";
@@ -119,7 +119,7 @@ to say ResolveEvent Hardware Store Ruins:
 				say "[CentaurHardwareFight]";
 			else:
 				let diceRoll be a random number from 1 to 20;
-				let bonus be ( ( the Dexterity of the player minus 10 ) divided by 2 );
+				let bonus be ( ( Dexterity of Player minus 10 ) divided by 2 );
 				let dexterityRoll be diceRoll plus bonus;
 				say "     You roll 1d20([diceRoll])+[bonus]: [special-style-1][dexterityRoll][roman type] vs [special-style-2]10[roman type] (Dexterity Check):[line break]";
 				if dexterityRoll < 10:
@@ -172,7 +172,7 @@ Hunting Party	"Hunting Party"
 
 Hunting Party is a situation.
 ResolveFunction of Hunting Party is "[ResolveEvent Hunting Party]". The level of Hunting Party is 9.
-The sarea of Hunting Party is "Plains".
+Sarea of Hunting Party is "Plains".
 horsefight is a number that varies.
 when play begins:
 	add Hunting Party to BadSpots of MaleList;
@@ -208,7 +208,7 @@ Pit Trap	"Pit Trap"
 
 Pit Trap is a situation.
 ResolveFunction of Pit Trap is "[ResolveEvent Pit Trap]". The level of Pit Trap is 5.
-The sarea of Pit Trap is "Plains".
+Sarea of Pit Trap is "Plains".
 when play begins:
 	add Pit Trap to badspots of HermList;
 	add Pit Trap to BadSpots of FurryList;
@@ -302,7 +302,7 @@ Watering Hole	"Watering Hole"
 
 Watering Hole is a situation.
 ResolveFunction of Watering Hole is "[ResolveEvent Watering Hole]". The level of Watering Hole is 8.
-The sarea of Watering Hole is "Plains".
+Sarea of Watering Hole is "Plains".
 when play begins:
 	add Watering Hole to BadSpots of MaleList;
 	add Watering Hole to BadSpots of FurryList;
@@ -397,7 +397,7 @@ Treasure Hunters	"Treasure Hunters"
 
 Treasure Hunters is a situation.
 ResolveFunction of Treasure Hunters is "[ResolveEvent Treasure Hunters]".
-The sarea of Treasure Hunters is "Plains".
+Sarea of Treasure Hunters is "Plains".
 when play begins:
 	add Treasure Hunters to badspots of HermList;
 	add Treasure Hunters to BadSpots of FurryList;

@@ -46,8 +46,8 @@ SexuallyExperienced of Davies is true.
 TwistedCapacity of Davies is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Davies is false. [steriles can't knock people up]
 MainInfection of Davies is "Husky Bitch".
-The description of Davies is "[DaviesDesc]".
-The conversation of Davies is { "Woof." }.
+Description of Davies is "[DaviesDesc]".
+Conversation of Davies is { "Woof." }.
 
 to say DaviesDesc:
 	say "     <So far, this is a placeholder NPC. Please report on the FS discord how you saw this message.>";

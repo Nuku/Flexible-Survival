@@ -42,7 +42,7 @@ Paratrooper	"Paratrooper"
 
 Paratrooper is a situation.
 ResolveFunction of Paratrooper is "[ResolveEvent Paratrooper]". Paratrooper is inactive. [unlocked after 3rd stage of 'Military presence']
-The sarea of Paratrooper is "Plains".
+Sarea of Paratrooper is "Plains".
 when play begins:
 	add Paratrooper to BadSpots of FemaleList;
 
@@ -101,8 +101,8 @@ object	name
 Vanessa	"Vanessa"
 
 Vanessa is a woman.
-The description of Vanessa is "[Vanessadesc]".
-The conversation of Vanessa is { "Neigh!" }.
+Description of Vanessa is "[Vanessadesc]".
+Conversation of Vanessa is { "Neigh!" }.
 
 the scent of the Vanessa is "Vanessa smells softly of horses[if HP of Vanessa > 3] and arousal[end if].".
 

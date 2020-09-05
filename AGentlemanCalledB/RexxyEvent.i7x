@@ -32,7 +32,7 @@ Forced Adoption	"Forced Adoption"
 Forced Adoption is a situation.
 ResolveFunction of Forced Adoption is "[ResolveEvent Forced Adoption]".
 
-The sarea of Forced Adoption is "High".
+Sarea of Forced Adoption is "High".
 when play begins:
 	add Forced Adoption to BadSpots of MaleList;
 	add Forced Adoption to BadSpots of FemaleList;
@@ -83,7 +83,7 @@ bonelust is a number that varies. [tracks time without using bone or fucking Rex
 
 Dog Bone is a grab object.
 Dog Bone has a usedesc "[DogBoneUse]".
-Dog Bone is infectious. The strain of Dog Bone is "Retriever Female". It is not temporary.
+Dog Bone is infectious. Strain of Dog Bone is "Retriever Female". It is not temporary.
 
 the scent of Dog Bone is "The bone-shaped doggie dildo smells strongly of canine sex, much like the bitch you acquired it from.".
 
@@ -150,12 +150,12 @@ Rex's Place	"Rex's Place"
 
 Rex's Place is a room. It is fasttravel. It is private.
 
-The description of Rex's Place is "     Crawling on all fours through the doggy door, you find yourself in a small but surprisingly tidy single room home. There are even a few pictures still hanging from the walls, mostly featuring an attractive blonde woman and her large Golden Retriever. As you spot Rex sitting in the back with his happy retriever sexpet, there is little doubt in your mind as to what became of the woman in the pictures.".
+Description of Rex's Place is "     Crawling on all fours through the doggy door, you find yourself in a small but surprisingly tidy single room home. There are even a few pictures still hanging from the walls, mostly featuring an attractive blonde woman and her large Golden Retriever. As you spot Rex sitting in the back with his happy retriever sexpet, there is little doubt in your mind as to what became of the woman in the pictures.".
 Rex is in Rex's Place.
 Karen is in Rex's Place.
 Treat Jar is in Rex's Place.
 
-The description of Treat Jar is "     Sitting on the table next to Rex's seat is a large glass jar full of bone-shaped cookies. You find your mouth watering and stomach growling as you stare at the doggy treats. Rex spots you eyeing them longingly and a canine smile crosses his muzzle, 'If you want a treat, you're going to have to beg like a good little sexpet,' he informs you.".
+Description of Treat Jar is "     Sitting on the table next to Rex's seat is a large glass jar full of bone-shaped cookies. You find your mouth watering and stomach growling as you stare at the doggy treats. Rex spots you eyeing them longingly and a canine smile crosses his muzzle, 'If you want a treat, you're going to have to beg like a good little sexpet,' he informs you.".
 the scent of Treat Jar is "Between the smell of canine sex pervading Rex's small house and the thick glass, you can't even catch a whiff of the scent from the jar full of doggy treats.".
 
 treatbegging is an action applying to nothing.
@@ -215,8 +215,8 @@ AnalVirgin of Rex is true.
 PenileVirgin of Rex is false.
 SexuallyExperienced of Rex is true.
 MainInfection of Rex is "Retriever Female".
-The description of Rex is "[Rexdescribing]".
-The conversation of Rex is { "rextalk" }.
+Description of Rex is "[Rexdescribing]".
+Conversation of Rex is { "rextalk" }.
 
 to say Rexdescribing:
 	say "     Lounging on a couch near the back of the room is a large retriever male. On the table beside him, you spot the doggy bone sextoy he took from you when you first met, but as you begin to think of a way to get your prize back, you find your attention drawn to his large, sheathed doggy cock instead. Your goal of getting the toy back slips from your mind as you begin to wonder how much more fun the real thing must be.";
@@ -261,7 +261,7 @@ instead of conversing the Rex:
 				now Retriever Girl is tamed;
 				add "Tamed" to Traits of Retriever Girl;
 				move Karen to Breakroom;
-				say "     (Karen is now a possible companion! You can make her your active companion by typing [bold type][link]companion Karen[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Karen[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				say "     (Karen is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Karen[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Karen[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				ItemLoss all Dog Treats;
 				now Libido of Karen is turns;
 				now HP of Rex is 50;

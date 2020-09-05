@@ -15,7 +15,7 @@ Corrupt Kennel	"Corrupt Kennel"
 
 Corrupt Kennel is a situation.
 ResolveFunction of Corrupt Kennel is "[ResolveEvent Corrupt Kennel]".
-The sarea of Corrupt Kennel is "Forest".
+Sarea of Corrupt Kennel is "Forest".
 when play begins:
 	add Corrupt Kennel to BadSpots of FurryList;
 	add Corrupt Kennel to BadSpots of MaleList;
@@ -48,7 +48,7 @@ to say ResolveEvent Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! O
 	else if calcnumber is 2:
 		WaitLineBreak;
 		say "     You follow Dominick inside, eager to show him who's boss.";
-		let bonus be (( the Strength of the player minus 5 ) divided by 2);
+		let bonus be (( Strength of Player minus 5 ) divided by 2);
 		let diceroll be a random number from 1 to 30;
 		say "     You roll 1d30([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -78,7 +78,7 @@ Object	Name
 Happy Puppy Kennel	"Happy Puppy Kennel"
 
 Happy Puppy Kennel is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Happy Puppy Kennel is "[hpkdesc]".
+Description of Happy Puppy Kennel is "[hpkdesc]".
 
 the scent of Happy Puppy Kennel is "There's a strong, canine scent suffusing the place - most prevalently that of Dominick.";
 
@@ -146,8 +146,8 @@ object	name
 Dominick	"Dominick"
 
 Dominick is a person. Dominick is in Happy Puppy Kennel.
-The description of Dominick is "[dominickdesc]".
-The conversation of Dominick is { "Bitches love me!" }.
+Description of Dominick is "[dominickdesc]".
+Conversation of Dominick is { "Bitches love me!" }.
 the scent of the Dominick is "Dominick has a strong, commanding scent that makes you want to bury your face in his balls and take a big, strong whiff of him.".
 understand "Dom" as Dominick.
 

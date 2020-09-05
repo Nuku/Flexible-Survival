@@ -20,7 +20,7 @@ Campus Lovers	"Campus Lovers"
 
 Campus Lovers is a situation.
 ResolveFunction of Campus Lovers is "[ResolveEvent Campus Lovers]".
-The sarea of Campus Lovers is "Campus".
+Sarea of Campus Lovers is "Campus".
 
 when play begins:
 	add Campus Lovers to BadSpots of MaleList;

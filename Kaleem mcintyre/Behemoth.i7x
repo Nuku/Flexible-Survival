@@ -261,12 +261,12 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "behemoth horn"	"A large piece of a behemoth's horn that was knocked off during battle."	1	  behemoth horn
 
-behemoth horn is a grab object. Understand "horn" as behemoth horn. behemoth horn is infectious. The strain of behemoth horn is "Behemoth".
+behemoth horn is a grab object. Understand "horn" as behemoth horn. behemoth horn is infectious. Strain of behemoth horn is "Behemoth".
 
 instead of sniffing behemoth horn:
 	say "     The scent coming from the behemoth horn is heavy with musk, both male and female, and some filled with pride.";
 
-The usedesc of behemoth horn is "Taking the behemoth horn and rolling it around inside of your hand you find you have the sudden strange urge to place the onyx piece of bone up against your skull. Not seeing any reason why you shouldn't, you place the horn on top of your head, right between your scalp and forehead. When nothing immediately happens you shrug and think nothing more of it, but when you remove your hand and then horn continues to stay in place realize that something is about to happen to you. The onset of a throbbing in your skull and at your backside are definitely clues towards this assumption as you find yourself grunting somewhat in discomfort as your body goes to shifting around on its own.";
+Usedesc of behemoth horn is "Taking the behemoth horn and rolling it around inside of your hand you find you have the sudden strange urge to place the onyx piece of bone up against your skull. Not seeing any reason why you shouldn't, you place the horn on top of your head, right between your scalp and forehead. When nothing immediately happens you shrug and think nothing more of it, but when you remove your hand and then horn continues to stay in place realize that something is about to happen to you. The onset of a throbbing in your skull and at your backside are definitely clues towards this assumption as you find yourself grunting somewhat in discomfort as your body goes to shifting around on its own.";
 
 
 Section 3 - Endings

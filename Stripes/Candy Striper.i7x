@@ -260,8 +260,8 @@ pink raccoon is a pet.
 NPCObject of pink raccoon is pink raccoon.
 understand "Candy" as pink raccoon.
 printed name of pink raccoon is "Candy".
-The description of pink raccoon is "The pink coonboi has soft, gray fur with pink highlights and pink rings around his tail. He looks at you with mindless adoration, now a loyal and obedient pet and plaything.".
-The weapon damage of pink raccoon is 10.
+Description of pink raccoon is "The pink coonboi has soft, gray fur with pink highlights and pink rings around his tail. He looks at you with mindless adoration, now a loyal and obedient pet and plaything.".
+Weapon Damage of pink raccoon is 10.
 The level of pink raccoon is 1.
 The Dexterity of pink raccoon is 15.
 The Summondesc of pink raccoon is "[SummonPinkRaccoon]".
@@ -444,8 +444,8 @@ PenileVirgin of Candy is false.
 SexuallyExperienced of Candy is true.
 MainInfection of Candy is "Candy Striper".
 
-The description of Candy is "[coondesc]".
-The conversation of Candy is { "Cock!" }.
+Description of Candy is "[coondesc]".
+Conversation of Candy is { "Cock!" }.
 The icon of Candy is figure of Candy_icon.
 candytalk is a number that varies.
 lastCandyfucked is a number that varies. lastCandyfucked is usually 555.

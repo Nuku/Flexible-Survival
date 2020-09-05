@@ -10,8 +10,8 @@ object	name
 Newt	"Newt"
 
 Newt is a woman.
-The description of Newt is "[newtdesc]".
-The conversation of Newt is { "Hiss" }.
+Description of Newt is "[newtdesc]".
+Conversation of Newt is { "Hiss" }.
 
 the scent of Newt is "     It is difficult to smell Newt over the vapors of the magma cave, but she does have a pleasantly arousing scent when you get up close to her.".
 

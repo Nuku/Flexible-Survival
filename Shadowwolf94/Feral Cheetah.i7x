@@ -414,7 +414,7 @@ to say cheetahheat:
 			say "[victory entry]";
 			infect;
 			decrease the score by 5;
-			increase the morale of the player by 3;
+			increase Morale of Player by 3;
 
 
 Section 4 - Endings
@@ -427,7 +427,7 @@ This is the Feral Cheetah Infection rule:
 	if Player has a body of "Feral Cheetah":
 		trigger ending "Feral Cheetah Infection"; [Here it states, that the ending has been played.]
 		if cheetahmate is 0:
-			if the humanity of Player < 10:
+			if Humanity of Player < 10:
 				if Player is female:
 					say "     You join the growing band of converts and soon take your place as the pack leader's proud mate. Your group manages to keep away the human forces with sheer speed and cunning, maintaining control of the zoo and some of the surrounding area even as the rest of the city is pacified.";
 				else:

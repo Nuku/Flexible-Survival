@@ -11,7 +11,7 @@ Central Library	"Central Library"
 
 Central Library is a situation.
 ResolveFunction of Central Library is "[ResolveEvent Central Library]". The level of Central Library is 6.
-The sarea of Central Library is "High".
+Sarea of Central Library is "High".
 centrallib is a number that varies.
 libfight is a number that varies.
 harpyfight is a number that varies.

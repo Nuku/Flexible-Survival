@@ -221,8 +221,8 @@ object	name
 Anastasia	"Anastasia"
 
 Anastasia is a woman.
-The description of Anastasia is "[Anastasiadesc]".
-The conversation of Anastasia is { "Burninate!" }.
+Description of Anastasia is "[Anastasiadesc]".
+Conversation of Anastasia is { "Burninate!" }.
 The icon of Anastasia is Figure of Anastasia_icon.
 
 the scent of the Anastasia is "The phoenix has a pleasent scent of woodsmoke.".

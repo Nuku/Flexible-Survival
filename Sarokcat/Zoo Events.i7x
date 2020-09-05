@@ -12,12 +12,12 @@ Section 2 - Hyena cages
 
 Table of GameEventIDs (continued)
 Object	Name
-Hyena Cages	"Hyena cages"
+Hyena Cages	"Hyena Cages"
 Hyena Cages	"Hyena cages"
 
 Hyena Cages is a situation.
 ResolveFunction of Hyena Cages is "[ResolveEvent Hyena Cages]".
-The sarea of Hyena Cages is "Zoo".
+Sarea of Hyena Cages is "Zoo".
 
 to say ResolveEvent Hyena Cages:
 	say "     As you walk around the zoo you come to an enclosure. A couple of the metal bars that once held its residents inside are broken and bent, leaving a gap large enough for a human-sized creature to get through. Whatever escaped must have been quite strong to break solid steel. With a cursory glance at the enclosure you can see a pile of cloth scraps lies just outside the bars, the smell of cum wafts over from the pile leaving little doubt as what might have happened to it.";
@@ -62,7 +62,7 @@ Pachyderm Predicament	"Pachyderm Predicament"
 
 Pachyderm Predicament is a situation.
 ResolveFunction of Pachyderm Predicament is "[ResolveEvent Pachyderm Predicament]".
-The sarea of Pachyderm Predicament is "Zoo".
+Sarea of Pachyderm Predicament is "Zoo".
 when play begins:
 	add Pachyderm Predicament to badspots of HermList;
 	add Pachyderm Predicament to BadSpots of FurryList;
@@ -82,7 +82,7 @@ Snake Knot	"Snake Knot"
 
 Snake Knot is a situation.
 ResolveFunction of Snake Knot is "[ResolveEvent Snake Knot]".
-The sarea of Snake Knot is "Zoo".
+Sarea of Snake Knot is "Zoo".
 
 to say ResolveEvent Snake Knot:
 	say "     Traveling past the snake house, you decide to chance a glance inside, only to stare in amazement at a writhing knot of snakes of various sizes filling the room. The smell of snakes and sex fills the area, and their hissing is only broken by the occasional moan or cry of ecstasy, proving that there are a few non-snakes caught up in their mating knot as well, though you are sure they're soon to transform. Carefully, you back away from the door, not desiring to get caught up in their mating frenzy, though it could be fun to try if there were fewer of them...";
@@ -93,12 +93,12 @@ Section 5 - Useful pamphlet
 
 Table of GameEventIDs (continued)
 Object	Name
-Useful Pamphlet	"Useful pamphlet"
 Useful Pamphlet	"Useful Pamphlet"
+Useful Pamphlet	"Useful pamphlet"
 
 Useful Pamphlet is a situation.
 ResolveFunction of Useful Pamphlet is "[ResolveEvent Useful Pamphlet]".
-The sarea of Useful Pamphlet is "Zoo".
+Sarea of Useful Pamphlet is "Zoo".
 
 to say ResolveEvent Useful Pamphlet:
 	say "     Wandering around the zoo, you come across an area dedicated to visitor information. You browse through the few remaining pamphlets and find a couple that seem to be very pertinent on how to defend yourself from wild animals. Useful information indeed under the current circumstances!";
@@ -117,7 +117,7 @@ Unidentified Sex Scene	"Unidentified Sex Scene"
 
 Unidentified Sex Scene is a situation.
 ResolveFunction of Unidentified Sex Scene is "[ResolveEvent Unidentified Sex Scene]".
-The sarea of Unidentified Sex Scene is "Zoo".
+Sarea of Unidentified Sex Scene is "Zoo".
 
 to say ResolveEvent Unidentified Sex Scene:
 	say "     Traveling through the zoo area, you arrive at one of the resting areas. In the mood for a short break, you move closer. Unfortunately, it seems several other people or creatures were here before you, and it is obvious not much [']resting['] occurred, although several of the participants were probably horizontal at one point. Looking around, you survey the splatters of cum from several unidentified participants, several articles of shed clothing tossed around haphazardly, and a variety of mixed animal prints tracked in the dirt. You really aren't sure just who all or what all enjoyed themselves here, but they definitely had a lot of fun. Sighing, you leave without taking a rest, the scene making you too nervous, and aroused, to stay there any longer.";
@@ -130,12 +130,12 @@ Section 7 - Grizzly gone
 
 Table of GameEventIDs (continued)
 Object	Name
-Grizzly Gone	"Grizzly gone"
+Grizzly Gone	"Grizzly Gone"
 Grizzly Gone	"Grizzly gone"
 
 Grizzly Gone is a situation.
 ResolveFunction of Grizzly Gone is "[ResolveEvent Grizzly Gone]".
-The sarea of Grizzly Gone is "Zoo".
+Sarea of Grizzly Gone is "Zoo".
 
 to say ResolveEvent Grizzly Gone:
 	say "     Traveling through the zoo in search of anything of use, you come across a zookeeper's hut that seems like something broke into it. Taking a chance, you look inside and see that most of the area seems to be empty and smelling of sex. About to leave, you notice several hurried notes someone left. Picking them up, you begin to leaf through them.";
@@ -154,7 +154,7 @@ Tasty Treats	"Tasty Treats"
 
 Tasty Treats is a situation.
 ResolveFunction of Tasty Treats is "[ResolveEvent Tasty Treats]".
-The sarea of Tasty Treats is "Zoo".
+Sarea of Tasty Treats is "Zoo".
 
 to say ResolveEvent Tasty Treats:
 	say "     Wandering along the zoo pathways, you come across a zoo candy cart, stuffed full with plenty of still-wrapped treats and snacks. After checking around to make sure it is safe, you take a short break to help yourself to several different delicious snacks before moving on your way, feeling happy and full.";
@@ -170,12 +170,12 @@ Section 10 - Panda parade
 
 Table of GameEventIDs (continued)
 Object	Name
-Panda Parade	"Panda parade"
 Panda Parade	"Panda Parade"
+Panda Parade	"Panda parade"
 
 Panda Parade is a situation.
 ResolveFunction of Panda Parade is "[ResolveEvent Panda Parade]".
-The sarea of Panda Parade is "Zoo".
+Sarea of Panda Parade is "Zoo".
 
 to say ResolveEvent Panda Parade:
 	say "     Traveling through the zoo, you stop as you see a bearlike, white and black colored ursine. Tottering down one of the other paths, a zookeeper's hat still sits jauntily atop the very well-endowed panda's head. You back off out of sight of the panda as it trots past, seemingly intent on moving as fast as it can down the path.";
@@ -187,12 +187,12 @@ Section 11 - Petting zoo
 
 Table of GameEventIDs (continued)
 Object	Name
-Petting Zoo	"Petting zoo"
 Petting Zoo	"Petting Zoo"
+Petting Zoo	"Petting zoo"
 
 Petting Zoo is a situation.
 ResolveFunction of Petting Zoo is "[ResolveEvent Petting Zoo]".
-The sarea of Petting Zoo is "Zoo".
+Sarea of Petting Zoo is "Zoo".
 
 to say ResolveEvent Petting Zoo:
 	say "     Traveling along the empty zoo paths, you come across the petting zoo area. Thinking surely there can't be much threat there, you decide to stop by and investigate for a minute. Entering the petting zoo, you are only slightly surprised to find the area empty. More surprising is the large amount of children's clothing and a number of backpacks scattered around on the ground. Obviously, there was a school bus visiting the area at some point recently. You sigh as you look around, then give a halfhearted search of the backpacks lying around. You find several items of food and water and decide to take them with you. It doesn't count as taking candy from kids if they aren't around, does it?";
@@ -205,12 +205,12 @@ Section 12 - Instructional video
 
 Table of GameEventIDs (continued)
 Object	Name
-Instructional Video	"Instructional video"
 Instructional Video	"Instructional Video"
+Instructional Video	"Instructional video"
 
 Instructional Video is a situation.
 ResolveFunction of Instructional Video is "[ResolveEvent Instructional Video]".
-The sarea of Instructional Video is "Zoo".
+Sarea of Instructional Video is "Zoo".
 
 to say ResolveEvent Instructional Video:
 	say "     Coming across one of the zoo buildings in your wanderings, you try taking a look inside and find a small, open, class-like area with several desks set up and a projector hooked up to a VCR. Taking a closer look at the VCR, you notice that it's labeled [']Animal Handling Training[']. Feeling curious, you push play and settle down to watch a bit. Soon you are caught up in all the tips and tricks the training tape teaches to aspiring zookeepers on how to handle the animals and deal with any trouble. By the time the tape clicks off an hour later, you find yourself feeling much more confident about your ability to deal with any animals or beasts that you might come across.";
@@ -222,12 +222,12 @@ Section 13 - Vet supplies
 
 Table of GameEventIDs (continued)
 Object	Name
-Vet Supplies	"Vet supplies"
 Vet Supplies	"Vet Supplies"
+Vet Supplies	"Vet supplies"
 
 Vet Supplies is a situation.
 ResolveFunction of Vet Supplies is "[ResolveEvent Vet Supplies]".
-The sarea of Vet Supplies is "Zoo".
+Sarea of Vet Supplies is "Zoo".
 
 to say ResolveEvent Vet Supplies:
 	say "     Traveling down some of the zoo maintenance pathways, you come across a small veterinary bag, obviously used by one of the employees to treat the animals. Unfortunately for the employee involved, from the torn vegetation and scent of animal sex in the area, it looks like they were the one who got their [']treatment['] today instead. Still deciding there might be something useful to you in the bag, you begin to sort through the various supplies inside. Strangely most of what seems to be contained within is a variety of animal hormone shots, and treatments for either male or female animals depending. You think you could probably inject yourself with some of the animal hormone boosters, and the extra hormones could help you maintain your gender identity... but should you really be using medicine designed for animals? Do you inject yourself?";
@@ -325,12 +325,12 @@ Section 14 - Feeding time
 
 Table of GameEventIDs (continued)
 Object	Name
-Feeding Time	"Feeding time"
 Feeding Time	"Feeding Time"
+Feeding Time	"Feeding time"
 
 Feeding Time is a situation.
 ResolveFunction of Feeding Time is "[ResolveEvent Feeding Time]". The level of Feeding Time is 9.
-The sarea of Feeding Time is "Zoo".
+Sarea of Feeding Time is "Zoo".
 when play begins:
 	add Feeding Time to badspots of HermList;
 	add Feeding Time to BadSpots of FurryList;
@@ -365,7 +365,7 @@ Security Station	"Security Station"
 
 Security Station is a situation.
 ResolveFunction of Security Station is "[ResolveEvent Security Station]".
-The sarea of Security Station is "Zoo".
+Sarea of Security Station is "Zoo".
 when play begins:
 	add Security Station to BadSpots of MaleList;
 	add Security Station to BadSpots of FemaleList;
@@ -382,12 +382,12 @@ Section 16 - Broken fences
 
 Table of GameEventIDs (continued)
 Object	Name
-Broken Fences	"Broken fences"
 Broken Fences	"Broken Fences"
+Broken Fences	"Broken fences"
 
 Broken Fences is a situation.
 ResolveFunction of Broken Fences is "[ResolveEvent Broken Fences]".
-The sarea of Broken Fences is "Zoo".
+Sarea of Broken Fences is "Zoo".
 
 to say ResolveEvent Broken Fences:
 	say "     While traveling through the zoo paths, you note a small broken area of the underbrush, and out of curiosity move a little closer to take a look. Behind the foliage, you can see the back of one of the animal enclosures, a nice thick area of fence designed to keep the animals inside. Of course in this case you can see how this group of animals got out, as the fence has been broken and torn here where it isn't easily visible, leaving more than enough room for someone, or something, to slip into or out of the enclosure. Examining the edges of the fence, you find yourself more than a little worried about encountering something able to do that kind of damage to the special cage fences, and you decide to move along down the pathway quickly, just in case it might still be in the area.";
@@ -398,12 +398,12 @@ Section 17 - Wandering beasts
 
 Table of GameEventIDs (continued)
 Object	Name
-Wandering Beasts	"Wandering beasts"
 Wandering Beasts	"Wandering Beasts"
+Wandering Beasts	"Wandering beasts"
 
 Wandering Beasts is a situation.
 ResolveFunction of Wandering Beasts is "[ResolveEvent Wandering Beasts]".
-The sarea of Wandering Beasts is "Zoo".
+Sarea of Wandering Beasts is "Zoo".
 
 to say ResolveEvent Wandering Beasts:
 	say "     While traveling through the zoo, you feel the hair on the back of your neck stand up, sensing that something large is coming your way. Somewhat panicked, you waste no time in ducking down behind one of the bushes, doing your best to conceal yourself from whatever is approaching. You are just in time to see a large group of different beasts come charging down the zoo pathways, obviously hot on the scent of a still changeable person. You hold your breath as the small stampede passes, only letting it out after they have all passed by safely, sighing with relief as you step out of your impromptu hiding place. Hearing a noise behind you, you realize that you started to relax too soon, as when you turn, you find yourself staring at one of the beasts that was straggling behind the stampede!";
@@ -415,12 +415,12 @@ Section 18 - Roaming spots
 
 Table of GameEventIDs (continued)
 Object	Name
-Roaming Spots	"Roaming spots"
 Roaming Spots	"Roaming Spots"
+Roaming Spots	"Roaming spots"
 
 Roaming Spots is a situation.
 ResolveFunction of Roaming Spots is "[ResolveEvent Roaming Spots]".
-The sarea of Roaming Spots is "Zoo".
+Sarea of Roaming Spots is "Zoo".
 
 to say ResolveEvent Roaming Spots:
 	say "     Wandering through the zoo, you find yourself alongside one of the small stands of trees set up against the sides of the zoo. You freeze as you hear a noise come from the branches up ahead, and slowly look up, not seeing anything for a minute, before suddenly realizing that a large leopardman is slowly moving across the branches. You feel your cheeks heating up even as you try to hold your breath, your eyes fixed on his large sheath even as the spotted leopardman slowly shifts into the next tree. You watch with a mixture of fascination and a strange desire as the sleek feline stretches up from his position in his newest tree, until he can grip the top of the zoo wall easily. You blink as in one swift movement the lithe Leopard hauls himself onto the top of the wall, before sliding down out of sight on the other side.";
@@ -432,12 +432,12 @@ Section 19 - Picture striping
 
 Table of GameEventIDs (continued)
 Object	Name
-Picture Striping	"Picture striping"
 Picture Striping	"Picture Striping"
+Picture Striping	"Picture striping"
 
 Picture Striping is a situation.
 ResolveFunction of Picture Striping is "[ResolveEvent Picture Striping]".
-The sarea of Picture Striping is "Zoo".
+Sarea of Picture Striping is "Zoo".
 when play begins:
 	add Picture Striping to BadSpots of MaleList;
 	add Picture Striping to BadSpots of FemaleList;
@@ -458,7 +458,7 @@ Lazy River	"Lazy River"
 
 Lazy River is a situation.
 ResolveFunction of Lazy River is "[ResolveEvent Lazy River]".
-The sarea of Lazy River is "Zoo".
+Sarea of Lazy River is "Zoo".
 when play begins:
 	add Lazy River to BadSpots of MaleList;
 	add Lazy River to BadSpots of FurryList;

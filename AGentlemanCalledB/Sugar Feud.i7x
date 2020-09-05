@@ -11,7 +11,7 @@ Sugar Shack	"Sugar Shack"
 
 Sugar Shack is a situation.
 ResolveFunction of Sugar Shack is "[ResolveEvent Sugar Shack]".
-The sarea of Sugar Shack is "Fair".
+Sarea of Sugar Shack is "Fair".
 when play begins:
 	add Sugar Shack to BadSpots of FurryList;
 	add Sugar Shack to BadSpots of FemaleList;
@@ -27,7 +27,7 @@ to say ResolveEvent Sugar Shack:
 	say "     She squeals with excitement as the machine begins spinning her contribution into sugary fluff, and when she can wait no longer, she simply reaches into the open drum, forgoing the sticks entirely as she collects a great spool of the stuff on her arm. Pulling out a sizable mass of the cottony fluff, the eager glider wastes no time digging in, burying her face in the cotton candy with a muffled 'Mmmm', filling her mouth with the stuff before waving her candy coated hand in your face, offering you a taste. You pull a small piece of the fluff off her arm and poke it into your mouth, savoring the powerful sweetness of the fresh cotton candy, and soon you're reaching for another piece. The two of you continue like this for some time, until her arm has been picked clean. After licking the last of the sweet fluff from between her fingers, the sugar glider gives you a cute smirk and offers you her paw. With the sugary taste of the last batch still on your lips, part of you wants to reach out and accept her paw, but a small part of you wonders if it's really a good idea. Will you take the sugar glider's offer?";
 	if Player consents:
 		say "     'What's the worst that could happen?' you ask yourself as you take the glider's open paw and return her smirk. She cheers as she reaches back into the drum full of spinning cotton candy, pulling your own arm in with her. An itchy tingling sensation builds as the candy fluff collects on your arm, but you are soon distracted from that and the sugar glider wraps her long tail around you, pulling you in close and planting a quick kiss on your cheek.";
-		if SkinName of Player is "Sugar Glider" and BodyName of the player is "Sugar Glider":
+		if SkinName of Player is "Sugar Glider" and BodyName of Player is "Sugar Glider":
 			say "     Moments later when the sugar glider pulls your hand back out of the cotton candy machine, you are delighted to find it covered in soft candy fluff and dig in with a cheer. Distracted by the delicious sugary treat, you hardly notice the sugar glider shifting to the other side of you, taking hold of you other arm and pulling it into the humming machine, this time all the way up to your shoulder.";
 		else:
 			say "     Moments later when the sugar glider pulls your hand back out of the cotton candy machine you are momentarily disappointed to find it lacking the large spool of sugar fluff you were expecting[run paragraph on]";

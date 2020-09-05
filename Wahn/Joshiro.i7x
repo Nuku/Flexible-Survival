@@ -27,7 +27,7 @@ Road Wanderer	"Road Wanderer"
 
 Road Wanderer is a situation.
 ResolveFunction of Road Wanderer is "[ResolveEvent Road Wanderer]".
-The sarea of Road Wanderer is "High".
+Sarea of Road Wanderer is "High".
 
 to say ResolveEvent Road Wanderer:
 	if HP of Joshiro is 0: [never met before]
@@ -96,7 +96,7 @@ ResolveFunction of Slut Wanderer is "[ResolveEvent Slut Wanderer]".
 Prereq1 of Slut Wanderer is Road Wanderer.
 Prereq1Resolution of Slut Wanderer is { 1, 2, 3, 4, 5, 6, 7 }.
 PrereqTime of Slut Wanderer is "Night".
-The sarea of Slut Wanderer is "High".
+Sarea of Slut Wanderer is "High".
 
 to say ResolveEvent Slut Wanderer:
 	say "     Wandering through the streets of the high rise district at night leaves a whole different feeling than during the day. With only the dim light of the moon to illuminate your surroundings, the absence of light, electricity and the sounds of civilization is glaringly obvious. Buildings rise as dark shadows over you, creating long canyons sticking up against the starry expanse of the sky. Yet that doesn't mean there aren't any noises to be heard: The clatter of a can or something being kicked down the road, far-off splintering glass and clawed paws scraping over the asphalt are just a few of the sounds that reach your ears, as if to remind you that this isn't the city you knew anymore. None of it seems to have anything to do with you, as you are careful about any footsteps following you. No, it's just the creatures of the city going about their business - living, scavenging, and all too often noisily fucking.";
@@ -214,9 +214,9 @@ Jumping The Dobie	"Jumping The Dobie"
 
 Jumping The Dobie is a situation.
 ResolveFunction of Jumping The Dobie is "[ResolveEvent Jumping The Dobie]".
-The Prereq1 of Jumping The Dobie is Road Wanderer.
+Prereq1 of Jumping The Dobie is Road Wanderer.
 The Prereq1Resolution of Jumping The Dobie is { 1, 2, 3, 4, 5, 6 }.
-The sarea of Jumping The Dobie is "Red".
+Sarea of Jumping The Dobie is "Red".
 
 to say ResolveEvent Jumping The Dobie:
 	say "     Strolling through the red light district, you come upon a warehouse or something, fairly inconspicuous even though it is two stories tall. It doesn't really look like anyone has paid the place too much attention since the nanite apocalypse began, which might mean that there is something worthwhile left inside. The front door is locked tight, but through the chain link fence surrounding an adjacent parking lot, you see a small side door at the far end of the building, next to a loading dock. Maybe that could be your way in.";
@@ -284,10 +284,10 @@ Sloppy Seconds	"Sloppy Seconds"
 
 Sloppy Seconds is a situation.
 ResolveFunction of Sloppy Seconds is "[ResolveEvent Sloppy Seconds]".
-The Prereq1 of Sloppy Seconds is JoshiroEncounterTale 1.
-The Prereq2 of Sloppy Seconds is Jumping The Dobie.
+Prereq1 of Sloppy Seconds is JoshiroEncounterTale 1.
+Prereq2 of Sloppy Seconds is Jumping The Dobie.
 The Prereq2Resolution of Sloppy Seconds is { 1, 2 }.
-The sarea of Sloppy Seconds is "Red".
+Sarea of Sloppy Seconds is "Red".
 
 when play begins:
 	add Sloppy Seconds to Badspots of CuckList;
@@ -834,8 +834,8 @@ SexuallyExperienced of Joshiro is true.
 TwistedCapacity of Joshiro is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Joshiro is false. [steriles can't knock people up]
 MainInfection of Joshiro is "Human".
-The description of Joshiro is "[JoshiroDesc]".
-The conversation of Joshiro is { "Woof." }.
+Description of Joshiro is "[JoshiroDesc]".
+Conversation of Joshiro is { "Woof." }.
 
 to say JoshiroDesc:
 	say "WIP";

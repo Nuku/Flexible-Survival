@@ -181,8 +181,8 @@ name	desc	weight	object
 "red panda cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Red Panda Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	red panda cum
 
 red panda cum is a grab object. red panda cum is cum.
-red panda cum is infectious. The strain of red panda cum is "Red Panda".
-the usedesc of red panda cum is "[Red Panda cum use]";
+red panda cum is infectious. Strain of red panda cum is "Red Panda".
+Usedesc of red panda cum is "[Red Panda cum use]";
 
 to say Red Panda cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";

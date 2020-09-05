@@ -61,7 +61,7 @@ to say ninjaattack:
 		if Libido of Player > 110, now Libido of Player is 110;
 		let dammy be a random number between 2 and 3;
 		if hardmode is true, increase dammy by ( square root of lev entry );
-		decrease the HP of Player by dammy;
+		decrease HP of Player by dammy;
 		say "You take [dammy] damage from the ninja star.";]
 	let T be a random number between 1 and 6;
 	if T is 1:
@@ -281,7 +281,7 @@ this is the ninjastar rule:
 			if absorb > dammy:
 				now absorb is dammy;
 			say "While making another acrobatic set of leaps and dodges, the ninja slips a shuriken from his robe and tosses it at you. The bladed star stabs into your [one of]shoulder[or]hip[or]side[or]thigh[or]leg[at random] for [special-style-2][dammy][roman type] damage[if absorb > 0]. Your defenses manage to prevent [special-style-1][absorb][roman type] HP of this damage[end if]. There is a stab of pain from the strike, followed from a warm heat that flows into you from the wound, causing a surge of lustful desires in you. As these thoughts momentarily distract you, the feline ninja moves in to make his attack.";
-			decrease HP of the player by dammy;
+			decrease HP of Player by dammy;
 			increase HP of Player by absorb;
 		else:
 			say "The [one of]feline ninja[or]cat ninja[or]ninja[as decreasingly likely outcomes] [one of]flicks a shuriken at you that narrowly misses[or]pulls a ninja star from his dark robes, but you manage to evade it[or]tries to hit you with a surprise shuriken strike, but you catch the motion of his hand and are ready to dodge[or]throws a ninja star he pulls from his robes, but misses[purely at random]!";

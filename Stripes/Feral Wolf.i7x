@@ -441,12 +441,12 @@ name	desc	weight	object
 "wolf cum"	"A vial of thick, creamy, white liquid. [']Infection sample - species: wolf['] is written on the side."	1	wolf cum
 
 wolf cum is a grab object. wolf cum is cum.
-Wolf Cum is infectious. The strain of Wolf Cum is "Feral Wolf".
+Wolf Cum is infectious. Strain of Wolf Cum is "Feral Wolf".
 
 instead of sniffing wolf cum:
 	say "The wolf semen smells of wolves and cum, naturally.";
 
-the usedesc of Wolf Cum is "[Wolf Cum use]";
+Usedesc of Wolf Cum is "[Wolf Cum use]";
 
 to say Wolf Cum use:
 	say "You shrug and gulp down the creamy liquid, gasping as you feel a sudden heat in your groin. Moaning as you rub your crotch, you realize that you need to get fucked, NOW!";

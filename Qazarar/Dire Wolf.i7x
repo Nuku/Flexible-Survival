@@ -281,12 +281,12 @@ name	desc	weight	object
 "dire-wolf cum"	"A vial of thick, creamy, white liquid. [']Infection sample - species: dire wolf['] is written on the side."	1	dire-wolf cum
 
 dire-wolf cum is a grab object. dire-wolf cum is cum.
-dire-wolf cum is infectious. The strain of dire-wolf cum is "Dire Wolf".
+dire-wolf cum is infectious. Strain of dire-wolf cum is "Dire Wolf".
 
 instead of sniffing dire-wolf cum:
 	say "The dire wolf semen smells of wolves and cum, naturally.";
 
-the usedesc of dire-wolf cum is "[dire-wolf cum use]";
+Usedesc of dire-wolf cum is "[dire-wolf cum use]";
 
 to say dire-wolf cum use:
 	say "You shrug and gulp down the creamy liquid, gasping as you feel a sudden heat in your groin. Moaning as you rub your crotch, you realize that you need to get fucked, NOW!";

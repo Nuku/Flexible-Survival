@@ -9,7 +9,7 @@ Pure Pool	"Pure Pool"
 
 Pure Pool is a situation.
 ResolveFunction of Pure Pool is "[ResolveEvent Pure Pool]".
-The sarea of Pure Pool is "Park".
+Sarea of Pure Pool is "Park".
 PurePoolSeen is a truth state that varies. PurePoolSeen is usually false.
 PurePoolPolluted is a truth state that varies. PurePoolPolluted is usually false.
 PurePoolPollutedByPlayer is a truth state that varies. PurePoolPollutedByPlayer is usually false.

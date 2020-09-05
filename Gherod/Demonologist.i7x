@@ -30,7 +30,7 @@ Hellish Trashpile	"Hellish Trashpile"
 
 Hellish Trashpile is a situation.
 ResolveFunction of Hellish Trashpile is "[ResolveEvent Hellish Trashpile]".
-The sarea of Hellish Trashpile is "Warehouse".
+Sarea of Hellish Trashpile is "Warehouse".
 
 when play begins:
 	add Hellish Trashpile to badspots of DemonList;
@@ -211,7 +211,7 @@ Hell Realm	"Hell Realm"
 
 Hell Realm is a situation.
 ResolveFunction of Hell Realm is "".
-The sarea of Hell Realm is "Nowhere".
+Sarea of Hell Realm is "Nowhere".
 
 to say HellRealmRitual:
 	say "     After analyzing the tome, you managed to find the pages regarding the ritual you saw being performed in the tape. By drawing a pentagram on the floor, illuminated by candles, you only need to speak the ancient words written in the book in order to call a portal leading into a realm of Hell. Then, you should expect a crimson wormhole, large enough to allow you through, to take shape in front of you. The way you have to select which realm you end up traveling to is by changing a few words, and to deepen the connection, you need to throw something into the pentagram. A good mix is a bottle of [bold type]Demon Seed[roman type] and a dissolved [bold type]Libido Pill[roman type]. After acquiring these two items, you're all set for an attempt.";
@@ -574,7 +574,7 @@ Strange Sorcerer	"Strange Sorcerer"
 
 Strange Sorcerer is a situation.
 ResolveFunction of Strange Sorcerer is "".
-The sarea of Strange Sorcerer is "Nowhere".
+Sarea of Strange Sorcerer is "Nowhere".
 
 instead of navigating Grey Abbey Library while (Strange Sorcerer is active and Strange Sorcerer is not resolved and Resolution of Hell Realm > 3):
 	say "[NavCheck Grey Abbey Library]";
@@ -620,7 +620,7 @@ instead of navigating Grey Abbey Library while (Strange Sorcerer is active and S
 						say "     Given his dizzy state, which you clearly observe in his lack of balance, you decide to offer him a free stay in the bunker for as long as he needs. 'Thank you. I might have to accept that, I don't know enough about this world to walk around freely, and the library was always a good base.' Carefully, you help Xaedihr walk through and introduce him to his new bed. He gladly takes the time to rest for a while. 'Hey, I know you had no obligation in letting me stay, but I should thank you again for everything. Here, have this, in case we get separated again.' He hands you some sort of trinket, a small pin with a tiny red gem in the middle. He tells you a couple of strange words which make it glow. 'Works like a summon call. When I get better, I'll be able to aid you outside. Just let me know.'";
 						say "     The sorcerer needs some rest, so you leave him be for the moment. Eventually, he'll able to get up and occupy himself with some books in the library.";
 						LineBreak;
-						say "     (Xaedihr the demonologist is now a possible ally! You can make him your active ally by typing [bold type][link]ally Xaedihr[end link][roman type] or [bold type][link]ally demonologist[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Xaedihr[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+						say "     (Xaedihr the demonologist is now a possible ally! You can make him your active ally by typing [bold type][link]ally Xaedihr[end link][roman type] or [bold type][link]ally demonologist[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Xaedihr[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						Move Xaedihr to Grey Abbey Library;
 						add "Tamed" to Traits of demonologist;
 						Now demonologist is tamed;
@@ -641,7 +641,7 @@ instead of navigating Grey Abbey Library while (Strange Sorcerer is active and S
 		say "     Given his dizzy state, which you clearly observe in his lack of balance, you decide to offer him a free stay in the bunker for as long as he needs. 'Thank you. I might have to accept that, I don't know enough about this world to walk around freely, and the library was always a good base.' Carefully, you help Xaedihr walk through and introduce him to his new bed. He gladly takes the time to rest for a while. 'Hey, I know you had no obligation in letting me stay, but I should thank you again for everything. Here, have this, in case we get separated again.' He hands you some sort of trinket, a small pin with a tiny red gem in the middle. He tells you a couple of strange words which make it glow. 'Works like a summon call. When I get better, I'll be able to aid you outside. Just let me know.'";
 		say "     The sorcerer needs some rest, so you leave him be for the moment. Eventually, he'll able to get up and occupy himself with some books in the library.";
 		LineBreak;
-		say "     (Xaedihr the demonologist is now a possible ally! You can make him your active ally by typing [bold type][link]ally Xaedihr[end link][roman type] or [bold type][link]ally demonologist[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Xaedihr[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+		say "     (Xaedihr the demonologist is now a possible ally! You can make him your active ally by typing [bold type][link]ally Xaedihr[end link][roman type] or [bold type][link]ally demonologist[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Xaedihr[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 		Move Xaedihr to Grey Abbey Library;
 		add "Tamed" to Traits of demonologist;
 		Now demonologist is tamed;
@@ -651,7 +651,7 @@ to SSOutOfQuestions:
 	say "     You have no more questions to ask Xaedihr right now, so you proceed to invite him to stay at the bunker, given his dizzy state, which you clearly observe in his lack of balance. 'Thank you. I might have to accept that, I don't know enough about this world to walk around freely, and the library was always a good base.' Carefully, you help Xaedihr walk through and introduce him to his new bed. He gladly takes the time to rest for a while. 'Hey, I know you had no obligation in letting me stay, but I should thank you again for everything. Here, have this, in case we get separated again.' He hands you some sort of trinket, a small pin with a tiny red gem in the middle. He tells you a couple of strange words which make it glow. 'Works like a summon call. When I get better, I'll be able to aid you outside. Just let me know.'";
 	say "     The sorcerer needs some rest, so you leave him be for the moment. Eventually, he'll able to get up and occupy himself with some books in the library.";
 	LineBreak;
-	say "     (Xaedihr the demonologist is now a possible ally! You can make him your active ally by typing [bold type][link]ally Xaedihr[end link][roman type] or [bold type][link]ally demonologist[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Xaedihr[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+	say "     (Xaedihr the demonologist is now a possible ally! You can make him your active ally by typing [bold type][link]ally Xaedihr[end link][roman type] or [bold type][link]ally demonologist[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Xaedihr[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 	Move Xaedihr to Grey Abbey Library;
 	add "Tamed" to Traits of demonologist;
 	Now demonologist is tamed;
@@ -705,8 +705,8 @@ SexuallyExperienced of Xaedihr is true.
 TwistedCapacity of Xaedihr is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Xaedihr is true. [steriles can't knock people up]
 MainInfection of Xaedihr is "Incubus".
-The description of Xaedihr is "[Xaedihrdesc]".
-The conversation of Xaedihr is { "<This is nothing but a placeholder!>" }.
+Description of Xaedihr is "[Xaedihrdesc]".
+Conversation of Xaedihr is { "<This is nothing but a placeholder!>" }.
 The scent of Xaedihr is "     Xaedihr smells fresh and masculine, giving out the idea he's using cologne, though you never saw him spraying himself with such a thing. Whatever it is, it kind of makes you want more, somehow. Is it a spell?".
 
 to say XaedihrDesc:
@@ -725,10 +725,10 @@ demonologist is a pet.
 NPCObject of demonologist is Xaedihr.
 understand "Xaedihr" as demonologist.
 printed name of demonologist is "Xaedihr".
-The description of demonologist is "[XaedihrDesc]".
-The weapon damage of demonologist is 15.
+Description of demonologist is "[XaedihrDesc]".
+Weapon Damage of demonologist is 15.
 The level of demonologist is 1.
-The Dexterity of demonologist is 15.
+Dexterity of demonologist is 15.
 The summondesc of demonologist is "[SummonXaedihr]".
 The dismissdesc of demonologist is "[DismissXaedihr]".
 The assault of demonologist is "[one of]Xaedihr swiftly swings his arm around with a dark aura, striking your foe with a crimson bolt.[or]With an arcane gesture, Xaedihr slashes your foe with an invoked phantom claw, leaving a red trail behind.[or]Your half-demon companion manages to immobilize the enemy with a dark tendril, allowing you to score a quick hit![or]Running to the side, your mage buddy summons a large tendril from the ground, slamming the enemy with great force.[or]Xaedihr gives out a chuckle as he teleports back and forth by the target, quickly stabbing them with a short blade.[or]With a demonic chant, shadow purple flames envelop your foe as Xaedihr snaps his fingers, leaving the target singed with a dark burn.[or]Leaping backwards and spinning around, the sorcerer launches forward a shadow sphere, crashing against the target with considerable power.[at random]".
@@ -1538,7 +1538,7 @@ Xaedihr Experiments	"Xaedihr Experiments"
 
 Xaedihr Experiments is a situation.
 ResolveFunction of Xaedihr Experiments is "".
-The sarea of Xaedihr Experiments is "Nowhere".
+Sarea of Xaedihr Experiments is "Nowhere".
 
 [***********************************************************]
 Section 6-1-1 - Incubus Experiment
@@ -1617,7 +1617,7 @@ XaedihrAtticus	"XaedihrAtticus"
 
 XaedihrAtticus is a situation.
 ResolveFunction of XaedihrAtticus is "".
-The sarea of XaedihrAtticus is "Nowhere".
+Sarea of XaedihrAtticus is "Nowhere".
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -1625,7 +1625,7 @@ XaedihrRane	"XaedihrRane"
 
 XaedihrRane is a situation.
 ResolveFunction of XaedihrRane is "".
-The sarea of XaedihrRane is "Nowhere".
+Sarea of XaedihrRane is "Nowhere".
 
 [***********************************************************]
 Section 6-2-A - Xaedihr & Atticus
@@ -1724,7 +1724,7 @@ Corruption of Dreams	"Corruption of Dreams"
 
 Corruption of Dreams is a situation.
 ResolveFunction of Corruption of Dreams is "".
-The sarea of Corruption of Dreams is "Nowhere".
+Sarea of Corruption of Dreams is "Nowhere".
 
 when play begins:
 	add Corruption of Dreams to badspots of DemonList;
@@ -1756,7 +1756,7 @@ Dullahan Knight	"Dullahan Knight"
 
 Dullahan Knight is a situation.
 ResolveFunction of Dullahan Knight is "".
-The sarea of Dullahan Knight is "Nowhere".
+Sarea of Dullahan Knight is "Nowhere".
 
 when play begins:
 	add Dullahan Knight to badspots of DemonList;

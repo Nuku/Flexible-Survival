@@ -36,7 +36,7 @@ HypnoGeeks	"HypnoGeeks"
 HypnoGeeks is a situation.
 ResolveFunction of HypnoGeeks is "[ResolveEvent HypnoGeeks]".
 The level of HypnoGeeks is 5. [minimum level to find the event]
-The sarea of HypnoGeeks is "Campus".
+Sarea of HypnoGeeks is "Campus".
 
 when play begins: [flags for blocking this event]
 	add HypnoGeeks to BadSpots of MaleList;
@@ -219,7 +219,7 @@ name	desc	weight	object
 the scent of defective device is "The device smells like burnt metal.".
 
 defective device is a grab object. defective device is not temporary.
-the usedesc of defective device is "[DefectiveDeviceUse]";
+Usedesc of defective device is "[DefectiveDeviceUse]";
 
 to say DefectiveDeviceUse:
 		say "     You attempt to make use of the device, pushing some buttons. Sadly, the only result is a bit of a burned smell and a strange sound from inside the box.";

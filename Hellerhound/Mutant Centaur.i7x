@@ -17,7 +17,7 @@ Apple Tree	"Apple Tree"
 
 Apple Tree is a situation.
 ResolveFunction of Apple Tree is "[ResolveEvent Apple Tree]". The level of Apple Tree is 6.
-The sarea of Apple Tree is "Plains".
+Sarea of Apple Tree is "Plains".
 centaurmate is a number that varies.
 
 to say ResolveEvent Apple Tree:
@@ -64,7 +64,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "fresh apple"	"A rosy red apple."	1	fresh apple
 
-fresh apple is a grab object. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. The strain of fresh apple is "Mutant Centaur". The purified of fresh apple is "food".
+fresh apple is a grab object. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. Strain of fresh apple is "Mutant Centaur". Purified of fresh apple is "food".
 
 the scent of fresh apple is "The apple smells fresh and juicy at first, though you notice a strange, sickly sweet smell hidden beneath that.".
 

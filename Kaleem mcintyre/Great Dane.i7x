@@ -254,9 +254,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "trophy bandage"	"A thick piece of cloth that looks as though it could be used to brace something."	1	trophy bandage
 
-trophy bandage is a grab object. Understand "bandage" as trophy bandage. trophy bandage is infectious. The strain of trophy bandage is "Great Dane".
+trophy bandage is a grab object. Understand "bandage" as trophy bandage. trophy bandage is infectious. Strain of trophy bandage is "Great Dane".
 
-The usedesc of trophy bandage is "The strip of cloth you won off of a Great Dane fighter down at Tyr's club. Soft, but kind of scratchy maybe you could make it into a tourniquet if you had more of them?";
+Usedesc of trophy bandage is "The strip of cloth you won off of a Great Dane fighter down at Tyr's club. Soft, but kind of scratchy maybe you could make it into a tourniquet if you had more of them?";
 
 
 Section 3 - Endings

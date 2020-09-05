@@ -39,7 +39,7 @@ Poor Kitty	"Poor Kitty"
 
 Poor Kitty is a situation.
 ResolveFunction of Poor Kitty is "[ResolveEvent Poor Kitty]".
-The sarea of Poor Kitty is "Fair".
+Sarea of Poor Kitty is "Fair".
 when play begins:
 	add Poor Kitty to BadSpots of FemaleList;
 	add Poor Kitty to BadSpots of FurryList;
@@ -81,7 +81,7 @@ to say ResolveEvent Poor Kitty:
 			now HP of rubber tigress is 3;
 			now Resolution of Poor Kitty is 2;		[Artemis recruited]
 			now Libido of rubber tigress is 30;
-			say "     (Artemis the rubber tigress is now a possible companion! You can make her your active companion by typing [bold type][link]companion Artemis[end link][roman type] or [bold type][link]ally rubber tigress[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Artemis[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+			say "     (Artemis the rubber tigress is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Artemis[end link][roman type] or [bold type][link]ally rubber tigress[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Artemis[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			now Poor Kitty is resolved;
 		else:
 			say "     Continuing to walk along, you turn around the next corner, and once out of sight, run around the stand. You move quietly as you sneak back onto the main thoroughfare, finding the strange tigress poking her head around the corner[if weapon object of Player is not journal]. You pull out your weapon and charge at her[else]. You raise your fists and charge at her[end if]. She gives a shrill shriek of surprise and scrambles away. You don't expect that thing will be bothering you again.";
@@ -111,10 +111,10 @@ rubber tigress is a pet.
 NPCObject of rubber tigress is Artemis.
 understand "Artemis" as rubber tigress.
 printed name of rubber tigress is "Artemis".
-The description of rubber tigress is "[ArtemisDesc]".
-The weapon damage of rubber tigress is 10.
+Description of rubber tigress is "[ArtemisDesc]".
+Weapon Damage of rubber tigress is 10.
 The level of rubber tigress is 1.
-The Dexterity of rubber tigress is 15.
+Dexterity of rubber tigress is 15.
 The summondesc of rubber tigress is "[SummonArtemis]".
 The dismissdesc of rubber tigress is "[DismissArtemis]".
 The assault of rubber tigress is "[ArtemisAttack]".
@@ -141,7 +141,7 @@ object	name
 Artemis	"Artemis"
 
 Artemis is a woman.
-The description of Artemis is "[ArtemisDesc]".
+Description of Artemis is "[ArtemisDesc]".
 
 instead of sniffing Artemis:
 	say "[ArtemisScent]";

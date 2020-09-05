@@ -48,7 +48,7 @@ Annoyed Hyena	"Annoyed Hyena"
 
 Annoyed Hyena is a situation.
 ResolveFunction of Annoyed Hyena is "[ResolveEvent Annoyed Hyena]".
-The sarea of Annoyed Hyena is "Junkyard".
+Sarea of Annoyed Hyena is "Junkyard".
 when play begins:
 	add Annoyed Hyena to badspots of HermList;
 	add Annoyed Hyena to BadSpots of FurryList;
@@ -69,7 +69,7 @@ Hyena Shack	"Hyena Shack"
 
 Hyena Shack is a room. It is fasttravel. It is private.
 
-The description of Hyena Shack is "[hyenashackdesc]".
+Description of Hyena Shack is "[hyenashackdesc]".
 
 to say hyenashackdesc:
 	if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and HP of Hadiya < 63):
@@ -87,8 +87,8 @@ object	name
 Hadiya	"Hadiya"
 
 Hadiya is a person. Hadiya is in Hyena Shack.
-The description of Hadiya is "[hadiyadesc]".
-The conversation of Hadiya is { "Bend over!" }.
+Description of Hadiya is "[hadiyadesc]".
+Conversation of Hadiya is { "Bend over!" }.
 the scent of Hadiya is "Hadiya smells like a strong, dominant hyena herm.".
 The fuckscene of Hadiya is "[sexwithHadiya]".
 the icon of Hadiya is usually Figure of Hadiya_0_icon.
@@ -287,7 +287,7 @@ Goblin Thief	"Goblin Thief"
 
 Goblin Thief is a situation.
 ResolveFunction of Goblin Thief is "[ResolveEvent Goblin Thief]". Goblin Thief is inactive.
-The sarea of Goblin Thief is "Junkyard".
+Sarea of Goblin Thief is "Junkyard".
 
 to say ResolveEvent Goblin Thief:
 	if debugactive is 1:
@@ -377,8 +377,8 @@ object	name
 Gobby	"Gobby"
 
 Gobby is a man.
-The description of Gobby is "[gobbydesc]".
-The conversation of Gobby is { "Yes, O Great-Red-Toothy-Beast!" }.
+Description of Gobby is "[gobbydesc]".
+Conversation of Gobby is { "Yes, O Great-Red-Toothy-Beast!" }.
 the scent of Gobby is "Hadiya's scent clings to Gobby.".
 The fuckscene of Gobby is "[sexwithGobby]".
 the icon of Gobby is Figure of Gobby_icon.

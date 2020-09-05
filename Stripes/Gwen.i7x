@@ -25,8 +25,8 @@ object	name
 Gwen	"Gwen"
 
 Gwen is a woman.
-The description of Gwen is "[gwendesc]".
-The conversation of Gwen is { "Mama!" }.
+Description of Gwen is "[gwendesc]".
+Conversation of Gwen is { "Mama!" }.
 the fuckscene of Gwen is "[sexwithGwen]".
 the scent of the Gwen is "Gwen smells of horses.".
 

@@ -8,11 +8,11 @@ object	name
 Rod Mallrat	"Rod Mallrat"
 
 Rod Mallrat is a person. "[if HP of Ronda is not 100]A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDaniels[or]one of the tables[or]the guarded bathroom area[at random][else]Rod the slut rat is [one of]stretched out on some cushions[or]curled up for a quick nap[or]wiping some stray globs of cum from her fur and then licking them from her fingers[or]tinkering with some odd and ends she's found among the slut rats['] collected junk[at random][end if].".
-The description of rod mallrat is "[roddesc]".
+Description of rod mallrat is "[roddesc]".
 The icon of Rod Mallrat is figure of Rod_icon.
 Rod is a trader.
 Rod Mallrat is in Mall FoodCourt.
-The conversation of Rod Mallrat is { "empty" };
+Conversation of Rod Mallrat is { "empty" };
 
 to say roddesc:
 	project Figure of Rod_icon;
@@ -117,8 +117,8 @@ object	name
 Ronda Mallrat	"Ronda Mallrat"
 
 Ronda Mallrat is a person. "[if HP of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note[else if HP of Ronda is 10]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random][else if HP of Ronda is 100]Ronda [one of]sits with several slut rats fawning over her[or]is stretched out across some cushions, enjoying some expensive chocolates[or]idly rubs her crotch[or]runs her paws over Rod[at random][end if].".
-The description of Ronda Mallrat is "[rondadesc]".
-The conversation of Ronda is { "empty" }.
+Description of Ronda Mallrat is "[rondadesc]".
+Conversation of Ronda is { "empty" }.
 Ronda Mallrat is in Mall Atrium.
 
 a postimport rule: [bugfixing rules for players that import savegames]
@@ -264,7 +264,7 @@ Art Collector	"Art Collector"
 Art Collector is a situation.
 ResolveFunction of Art Collector is "[ResolveEvent Art Collector]". The level of Art Collector is 9.
 Art Collector is inactive.
-The sarea of Art Collector is "High".
+Sarea of Art Collector is "High".
 
 artleopardfight is a number that varies.
 artattempt is a number that varies.
@@ -328,7 +328,7 @@ to say rondarescue:
 			now MonsterID is y;
 			break;
 	say "     Looking around the room, you spot several of the rats in mid-coitus and try to check them out without looking too interested. Not that the rats would mind, per se, but you might get roped into playing with them and lose track of your actual goal.";
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus]+[level of Ronda] -- [dice + bonus + level of Ronda]: vs 17.";
 	if dice + bonus + level of ronda < 17:

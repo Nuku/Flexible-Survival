@@ -78,7 +78,7 @@ name	desc	weight	object
 
 cloth scrap is a grab object. It is not temporary.
 
-the usedesc of cloth scrap is "[cloth scrap use]".
+Usedesc of cloth scrap is "[cloth scrap use]".
 
 to say cloth scrap use:
 	say "     What would you even use a pile of cloth scraps for? Maybe if you find a suitably resourceful person, they could craft something from it.";
@@ -91,7 +91,7 @@ name	desc	weight	object
 
 leather scrap is a grab object. It is not temporary.
 
-the usedesc of leather scrap is "[leather scrap use]".
+Usedesc of leather scrap is "[leather scrap use]".
 
 to say leather scrap use:
 	say "     What would you even use a pile of leather scraps for? Maybe if you find a suitably resourceful person, they could craft something from it.";

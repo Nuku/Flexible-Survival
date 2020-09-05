@@ -251,8 +251,8 @@ name	desc	weight	object
 "nerdy mouse fur"	"A tuft of grey and white fur that looks like it has been pulled out of the coat of a mouse. It's nicely soft."	0	nerdy mouse fur
 
 nerdy mouse fur is a grab object. It is temporary.
-the usedesc of nerdy mouse fur is "[NerdyMouseFurUse]".
-nerdy mouse fur is infectious. The strain of nerdy mouse fur is "Nerdy Mouse".
+Usedesc of nerdy mouse fur is "[NerdyMouseFurUse]".
+nerdy mouse fur is infectious. Strain of nerdy mouse fur is "Nerdy Mouse".
 
 to say NerdyMouseFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
@@ -265,8 +265,8 @@ name	desc	weight	object
 "nerdy mouse cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Nerdy Mouse Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	nerdy mouse cum
 
 nerdy mouse cum is a grab object. nerdy mouse cum is cum.
-nerdy mouse cum is infectious. The strain of nerdy mouse cum is "Nerdy Mouse".
-the usedesc of nerdy mouse cum is "[nerdy mouse cum use]";
+nerdy mouse cum is infectious. Strain of nerdy mouse cum is "Nerdy Mouse".
+Usedesc of nerdy mouse cum is "[nerdy mouse cum use]";
 
 to say nerdy mouse cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";

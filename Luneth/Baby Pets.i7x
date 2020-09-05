@@ -32,10 +32,10 @@ Little fox is a pet.
 NPCObject of Little fox is Dash.
 understand "Dash" as little fox.
 printed name of little fox is "Dash".
-The description of the little fox is "[DashDesc]".
-The weapon damage of little fox is 5.
+Description of the little fox is "[DashDesc]".
+Weapon Damage of little fox is 5.
 The level of little fox is 1.
-The Dexterity of little fox is 20.
+Dexterity of little fox is 20.
 The summondesc of little fox is "[SummonDash]".
 The dismissdesc of little fox is "[DismissDash]".
 The assault of little fox is "[one of]The little fox darts forward quickly and trips your opponent![or]Yipping and harassing your opponent, the little fox allows you to score a glancing blow![or]Growling ferociously, your little fox friend springs forward to attack, only to slip and knock over some junk nearby, luckily pelting your opponent with it.[or]Your opponent jumps and twists around suddenly in pain, allowing you to see your little fox friend hanging onto their rear valiantly by their teeth.[or]Taking advantage of your foe's momentary distraction, your pet fox manages to get in a few solid nips.[at random]".
@@ -86,7 +86,7 @@ AnalVirgin of Dash is true.
 PenileVirgin of Dash is true.
 SexuallyExperienced of Dash is false.
 MainInfection of Dash is "".
-The description of Dash is "[Dashdesc]".
+Description of Dash is "[Dashdesc]".
 
 instead of sniffing the little fox:
 	say "[DashScent]";
@@ -171,7 +171,7 @@ Abandoned Fox	"Abandoned Fox"
 
 Abandoned Fox is a situation.
 ResolveFunction of Abandoned Fox is "[ResolveEvent Abandoned Fox]".
-The sarea of Abandoned Fox is "Park".
+Sarea of Abandoned Fox is "Park".
 
 to say ResolveEvent Abandoned Fox:
 	say "     Traveling through the park, you hear a strange soft noise coming from one of the nearby bushes. It sounds almost like something small calling out. Do you investigate?";
@@ -187,7 +187,7 @@ to say ResolveEvent Abandoned Fox:
 				now little fox is tamed;
 				add "Tamed" to Traits of little fox;
 				move Dash to Computer Lab;
-				say "     (Dash the little fox is now a possible ally! You can make him your active ally by typing [bold type][link]ally Dash[end link][roman type] or [bold type][link]ally fox[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				say "     (Dash the little fox is now a possible ally! You can make him your active ally by typing [bold type][link]ally Dash[end link][roman type] or [bold type][link]ally fox[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now Resolution of Abandoned Fox is 1; [fed and adopted the fox]
 				now Abandoned Fox is resolved;
 			else:
@@ -285,10 +285,10 @@ skunk kit is a pet.
 NPCObject of skunk kit is Peppy.
 understand "Peppy" as skunk kit.
 printed name of skunk kit is "Peppy".
-The description of the skunk kit is "[Peppydesc]".
-The weapon damage of skunk kit is 5.
+Description of the skunk kit is "[Peppydesc]".
+Weapon Damage of skunk kit is 5.
 The level of skunk kit is 1.
-The Dexterity of skunk kit is 20.
+Dexterity of skunk kit is 20.
 The summondesc of skunk kit is "[SummonPeppy]".
 The dismissdesc of skunk kit is "[DismissPeppy]".
 The assault of skunk kit is "[one of]The little skunk viciously launches itself at your attacker![or]Turning around, the skunk sprays your attacker in the face![or]Afraid of being left alone again, the little skunk goes into a frenzy of biting![or]All of a sudden the powerful scent of skunk washes over the fight from where your little skunk kit is playing nearby.[or]Taking advantage of your foes['] distraction, the skunk nips and bites at whatever part of your opponent it can reach.[or]Your adversary pauses for a minute as the little skunk growls at it, startling it enough for you to land a hit![or]The little skunk charges in to protect you, and your opponent seems so startled at its sudden appearance it falls backwards.[or]The little skunk tries to threaten your adversary from the sidelines, and spotting the skunk your adversary recoils in fear of its smell.[at random]".
@@ -339,7 +339,7 @@ AnalVirgin of Peppy is true.
 PenileVirgin of Peppy is true.
 SexuallyExperienced of Peppy is false.
 MainInfection of Peppy is "Skunk".
-The description of Peppy is "[Peppydesc]".
+Description of Peppy is "[Peppydesc]".
 
 instead of sniffing the skunk kit:
 	say "[PeppyScent]";
@@ -430,7 +430,7 @@ Lost Skunk Kit	"Lost Skunk Kit"
 
 Lost Skunk Kit is a situation.
 ResolveFunction of Lost Skunk Kit is "[ResolveEvent Lost Skunk Kit]".
-The sarea of Lost Skunk Kit is "Forest".
+Sarea of Lost Skunk Kit is "Forest".
 when play begins:
 	add Lost Skunk Kit to BadSpots of FemaleList;
 	add Lost Skunk Kit to BadSpots of FurryList;
@@ -459,7 +459,7 @@ to say ResolveEvent Lost Skunk Kit:
 						sblinfect;
 					else:
 						infect "Skunk";
-					say "     (Peppy the skunk kit is now a possible ally! You can make him your active ally by typing [bold type][link]ally Peppy[end link][roman type] or [bold type][link]ally skunk kit[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+					say "     (Peppy the skunk kit is now a possible ally! You can make him your active ally by typing [bold type][link]ally Peppy[end link][roman type] or [bold type][link]ally skunk kit[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					now Resolution of Lost skunk kit is 1; [adopted the skunk]
 					now Lost skunk kit is resolved;
 				else:

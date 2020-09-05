@@ -62,7 +62,7 @@ Husky Pack	"Husky Pack"
 Husky Pack is a situation.
 ResolveFunction of Husky Pack is "[ResolveEvent Husky Pack]".
 The level of Husky Pack is 8.
-the sarea of Husky Pack is "Outside".
+Sarea of Husky Pack is "Outside".
 when play begins:
 	add Husky Pack to BadSpots of FemaleList;
 	add Husky Pack to BadSpots of FurryList;
@@ -133,7 +133,7 @@ to say SarahRescue:
 	now Resolution of Husky Pack is 1; [fought to rescue Sarah]
 	say "     Determined to stop what's going on, you jump forward slamming your shoulder into the alpha husky. He stumbles and falls with a grunt at having the air driven out of his lungs through the sudden lunge, pulling his captive down with him. You make use of the chance at having him out of the way and quickly pick the woman off the ground (grabbing her arm and not the leash). Time seems to slow down as she smiles in gratitude and you glimpse the stamped plaque reading 'Sarah' on her collar, then both of you turn to start running away from the pack of huskies. You make the first step towards escape, but then suddenly something swats sideways against your lower ankle - it is the alpha husky, intent on sweeping your legs out from under you from his position on the ground.";
 	say "     Sent stumbling by his blow, you smack your head into the stone wall of the building and are momentarily dazed, giving the muscular canine enough time to stand up. Since you are pretty out of it as he steps up afterwards, the husky pays you little notice, instead dragging his claws along Sarah's side. Blood wells up from the harsh scratches he leaves on her pale skin, showing that he didn't hold back at all and really wanted to hurt her. The casual violence and cruelty serves to focus your mind again - you'll have to fight to get out of this!";
-	increase morale of the player by 10;
+	increase Morale of Player by 10;
 	say "     You are about to jump forward to challenge the husky, but a member of his pack acts first and pounces on you.";
 	let GroupFightCounter be 0;
 	now fightoutcome is 0; [reset]
@@ -387,7 +387,7 @@ SexuallyExperienced of Sarah is true.
 TwistedCapacity of Sarah is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Sarah is false. [steriles can't knock people up]
 MainInfection of Sarah is "Husky Bitch".
-The description of Sarah is "[SarahDesc]";
+Description of Sarah is "[SarahDesc]";
 
 to say SarahDesc:
 	if debugactive is 1:
@@ -398,7 +398,7 @@ to say SarahDesc:
 		project the figure of Sarah_naked_icon;
 	say "     Sarah is a lithe and thin woman with gray-white husky fur, plus anthro paw-hands and feet. A canine head and bushy tail complete her look of an anthro dog. There are white scar lines down her side where the alpha husky that you rescued her from slashed her during your fight. [SarahSlutState][SarahPupstate]";
 
-The conversation of Sarah is { "Woof!" }.
+Conversation of Sarah is { "Woof!" }.
 
 instead of sniffing Sarah:
 	say "She smells like a [if SarahPregnant is not 0]pregnant, [end if]horny husky[if SarahSlut > 2]. The scent of her arousal is quite strong from your lustful pet bitch[end if].";
@@ -1163,7 +1163,7 @@ An everyturn rule:
 			say "Having sired so many puppies, you feel buoyed with happiness and a greater urge to get through this ordeal to protect them.";
 			say "You and Sarah have earned the [']Proud Parent['] feat, making her more fertile and you more eager to protect your growing kennel.";
 			FeatGain "Proud Parent";
-			increase morale of the player by 5;
+			increase Morale of Player by 5;
 			increase score by 12;
 		now SarahPregnant is 0;
 	if SarahPregnant > 1:

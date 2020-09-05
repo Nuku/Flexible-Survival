@@ -413,7 +413,7 @@ This is the player attack rule:
 	if the roll plus the combat bonus > 20:
 		let wmstrike be 0;
 		let z be 0;
-		let dam be ( weapon damage of the player times ( a random number from 80 to ( 120 + level of Player ) ) ) divided by 100;
+		let dam be ( weapon damage of Player times ( a random number from 80 to ( 120 + level of Player ) ) ) divided by 100;
 		if weapon object of Player is journal:		[unarmed combat]
 			if "Martial Artist" is listed in feats of Player:
 				increase dam by 1;
@@ -449,12 +449,12 @@ This is the player attack rule:
 			let numnum be ( ( level of Player * 5 ) / 2 ) + 100;
 			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
 		if weapon type of Player is "Melee":
-			increase dam by (( the strength of the player minus 10 ) divided by 2);
+			increase dam by (( Strength of Player minus 10 ) divided by 2);
 			increase dam by pldamagebonus;
 		else if weapon type of Player is "Ranged":
-			increase dam by (( the Perception of the player minus 10 ) divided by 2);
+			increase dam by (( Perception of Player minus 10 ) divided by 2);
 			increase dam by pldamagebonus;
-		if a random chance of the morale of the player in 200 succeeds:
+		if a random chance of Morale of Player in 200 succeeds:
 			say "Filled with sudden motivation, your attack scores particularly well! ";
 			increase dam by dam;
 		if wmstrike is 1:			[Weaponsmaster used]
@@ -687,11 +687,11 @@ Chapter 4 - Submit
 
 This is the submit rule:
 	choose row MonsterID from the Table of Random Critters;
-	let temp be the HP of the player;
+	let temp be HP of Player;
 	now fightoutcome is 22;
 	Lose;
-	if Player is submissive, increase the XP of the player by ( ( 2 + lev entry ) / 5 );
-	if Player is kinky, increase the morale of the player by 6;
+	if Player is submissive, increase XP of Player by ( ( 2 + lev entry ) / 5 );
+	if Player is kinky, increase Morale of Player by 6;
 
 
 Chapter 5 - Flee
@@ -818,7 +818,7 @@ to standardretaliate:
 	else:
 		say "[EnemyCapNameOrTitle] misses!";
 	now peppereyes is 0;
-	if HP of the player > 0 and Libido of Player < 110:
+	if HP of Player > 0 and Libido of Player < 110:
 		[wait for any key;]
 		AttemptToWaitBeforeClear;
 	else:
@@ -868,7 +868,7 @@ to retaliate:
 			say "[EnemyCapNameOrTitle] misses!";
 	now peppereyes is 0; [pepperspray wears off]
 	if bananapeeled > 0, decrease bananapeeled by 1;
-	if HP of the player > 0 and Libido of Player < 110:
+	if HP of Player > 0 and Libido of Player < 110:
 		[wait for any key;]
 		AttemptToWaitBeforeClear;
 	else:
@@ -888,7 +888,7 @@ to standardstrike:
 		now monsterhit is false;
 	else:
 		choose row MonsterID from the Table of Random Critters;
-		let the defense bonus be dexterity of the player + ( level of the player * 2 ) + pldodgebonus + bananapeeled - 10;
+		let the defense bonus be Dexterity of Player + ( Level of Player * 2 ) + pldodgebonus + bananapeeled - 10;
 		let the attack bonus be dex entry + ( lev entry * 2 ) + monhitbonus - 10;
 		let the combat bonus be attack bonus minus defense bonus;
 		if "Flash" is listed in feats of Player and a random chance of 3 in 20 succeeds:
@@ -957,7 +957,7 @@ to standardhit:
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
@@ -1306,7 +1306,7 @@ to win:
 			now ok is 0;
 	if ok is 1, say "[defeated entry]";
 	[XP Earnings]
-	increase the XP of the player by lev entry times two;
+	increase XP of Player by lev entry times two;
 	if ssxpa is true:
 		increase XP of Player by ( lev entry * 2 ) / 3;
 	if the player is dominant:
@@ -1317,7 +1317,7 @@ to win:
 			increase morale of Player by 1; [flat morale boost]
 		else:
 			increase XP of Player by ( lev entry + 2 ) / 5; [10% XP boost]
-	if ktspeciesbonus > 0, increase the XP of the player by (lev entry divided by 2);
+	if ktspeciesbonus > 0, increase XP of Player by (lev entry divided by 2);
 	if the player is not lonely:
 		repeat with z running through companionList of Player:
 			now lastfight of z is turns;
@@ -1382,10 +1382,10 @@ To lose:
 			now lastfight of x is turns;
 	if HP of Player < 1, now HP of Player is 1;
 	now combat abort is 1;
-	increase the XP of the player by lev entry divided by two;
-	if ktspeciesbonus > 0, increase the XP of the player by 1;
+	increase XP of Player by lev entry divided by two;
+	if ktspeciesbonus > 0, increase XP of Player by 1;
 	decrease the score by 1;
-	decrease the morale of the player by 3;
+	decrease Morale of Player by 3;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
 	follow the ngraphics_blank rule;
 
@@ -1664,7 +1664,7 @@ this is the humping rule:
 		increase Libido of Player by a random number from 2 to 6;
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 1;
 		if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 1;
-		decrease HP of the player by dam;
+		decrease HP of Player by dam;
 		follow the player injury rule;
 		say "You are [descr].";
 	else:
@@ -1686,7 +1686,7 @@ this is the ftaurpounce rule:		[double-damage pouncing]
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
@@ -1782,12 +1782,12 @@ this is the firebreath rule:
 				now absorb is dam;
 			if absorb > 0:
 				say "You prevent [special-style-1][absorb][roman type] damage!";
-			decrease HP of the player by dam;
+			decrease HP of Player by dam;
 			increase HP of Player by absorb;
 			follow the player injury rule;
 			say "You are [descr].";
 		now peppereyes is 0; [pepperspray wears off]
-		if HP of the player > 0 and Libido of Player < 110:
+		if HP of Player > 0 and Libido of Player < 110:
 			wait for any key;
 		else:
 			if HP of Player <= 0, now fightoutcome is 20;

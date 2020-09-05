@@ -48,8 +48,8 @@ PenileVirgin of Joey is true.
 SexuallyExperienced of Joey is false.
 MainInfection of Joey is "".
 The Libido of Joey is usually 0.
-The description of Joey is "[JoeyDesc]".
-The conversation of Joey is { "<This is nothing but a placeholder!>" }.
+Description of Joey is "[JoeyDesc]".
+Conversation of Joey is { "<This is nothing but a placeholder!>" }.
 The scent of Joey is "     Joey has a nice, furry scent.".
 
 to say JoeyDesc:
@@ -210,7 +210,7 @@ Stray Catboy	"Stray Catboy"
 Stray Catboy is a situation.
 ResolveFunction of Stray Catboy is "[ResolveEvent Stray Catboy]".
 The level of Stray Catboy is 5.
-The sarea of Stray Catboy is "Outside".
+Sarea of Stray Catboy is "Outside".
 
 to say ResolveEvent Stray Catboy:
 	say "     While exploring the area, your attention is drawn by the sounds of battle. Curious about what is going on, you head in that direction, rounding a corner just in time to see the end of the fight, with a short feline lying prone on the ground, clearly worse for wear, and a feral wolf looming over him. From the rigid member hanging below the wolf, you can clearly tell what is about to happen. If you stepped in, you could almost certainly do something.";

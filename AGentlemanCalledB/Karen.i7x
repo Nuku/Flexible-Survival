@@ -79,10 +79,10 @@ AnalVirgin of Retriever Girl is true.
 PenileVirgin of Retriever Girl is true.
 SexuallyExperienced of Retriever Girl is true.
 MainInfection of Retriever Girl is "Retriever Female".
-The description of Retriever Girl is "[KarenDesc]".
-The weapon damage of Retriever Girl is 10.
+Description of Retriever Girl is "[KarenDesc]".
+Weapon Damage of Retriever Girl is 10.
 The level of Retriever Girl is 1.
-The Dexterity of Retriever Girl is 10.
+Dexterity of Retriever Girl is 10.
 The summondesc of Retriever Girl is "[SummonKaren]".
 The dismissdesc of Retriever Girl is "[DismissKaren]".
 The assault of Retriever Girl is "[one of]Stepping forward quickly, [or]Circling around behind the enemy, [or]Rushing recklessly towards your foe, [or][at random]Karen [one of]strikes with her short claws[or]attacks with a swift, low kick[or]clips the opponent with a quick strike as she runs past[at random].".
@@ -107,7 +107,7 @@ object	name
 Karen	"Karen"
 
 Karen is a woman.
-The description of Karen is "[KarenDesc]".
+Description of Karen is "[KarenDesc]".
 MainInfection of Karen is "Retriever Female".
 
 instead of sniffing Karen:
@@ -231,7 +231,7 @@ Forgotten Past	"Forgotten Past"
 Forgotten Past is a situation.
 ResolveFunction of Forgotten Past is "[ResolveEvent Forgotten Past]".
 Forgotten Past is inactive. [Disabled for reactivation after the player talked to Francois]
-The sarea of Forgotten Past is "Campus".
+Sarea of Forgotten Past is "Campus".
 
 an everyturn rule:
 	if Forgotten Past is inactive and HP of Karen > 6 and HP of Karen < 100:

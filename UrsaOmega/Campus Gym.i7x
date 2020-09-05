@@ -23,7 +23,7 @@ Working Out	"Working Out"
 
 Working Out is a situation.
 ResolveFunction of Working Out is "[ResolveEvent Working Out]".
-the sarea of Working Out is "Campus".
+Sarea of Working Out is "Campus".
 
 to say ResolveEvent Working Out:
 	say "     You come across a large building; through the glass windows you can see rows of exercise equipment. The whole setup is still in remarkably good shape. This must have been the campus's gym! Interestingly enough, it appears to still be occupied; you can see some figures moving inside. Do you want to check inside now?";
@@ -44,7 +44,7 @@ Campus Gym	"Campus Gym"
 
 Campus Gym is a room. It is fasttravel. It is private.
 
-The description of Campus Gym is "The interior of the gym is in even better shape than the exterior; the equipment all appears to be clean, and in good order, and the room itself has been kept quite pristine and orderly. Gear and supplies stacked against some of the walls is the only indicator that something is off outside. Some of the equipment is occupied by humanoid figures, focusing on their workouts.".
+Description of Campus Gym is "The interior of the gym is in even better shape than the exterior; the equipment all appears to be clean, and in good order, and the room itself has been kept quite pristine and orderly. Gear and supplies stacked against some of the walls is the only indicator that something is off outside. Some of the equipment is occupied by humanoid figures, focusing on their workouts.".
 
 instead of sniffing Campus Gym:
 	say "The room smells like sweat and hard work.";
@@ -61,8 +61,8 @@ Randy	"Randy"
 
 Randy is a man.
 Randy is in Campus Gym.
-The description of Randy is "A tall, muscular male rhino-man wearing a tank top and track pants. A nametag states his name as simply 'Randy'. From the way he walks around the gym floor helping people, you suspect he's a former (current?) staff member of the gym.".
-The conversation of Randy is { "What's up?" }.
+Description of Randy is "A tall, muscular male rhino-man wearing a tank top and track pants. A nametag states his name as simply 'Randy'. From the way he walks around the gym floor helping people, you suspect he's a former (current?) staff member of the gym.".
+Conversation of Randy is { "What's up?" }.
 lastworkout is a number that varies. lastworkout is usually 500.
 workoutprice is a number that varies. workoutprice is usually 100.
 the HP of Randy is usually 0.

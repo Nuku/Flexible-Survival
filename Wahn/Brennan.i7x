@@ -102,7 +102,7 @@ Lone Survivor	"Lone Survivor"
 
 Lone Survivor is a situation.
 ResolveFunction of Lone Survivor is "[ResolveEvent Lone Survivor]".
-The sarea of Lone Survivor is "Outside".
+Sarea of Lone Survivor is "Outside".
 
 to say ResolveEvent Lone Survivor:
 	if BrennanRelationship is 0:
@@ -354,7 +354,7 @@ Army Convoy	"Army Convoy"
 
 Army Convoy is a situation.
 ResolveFunction of Army Convoy is "[ResolveEvent Army Convoy]".
-The sarea of Army Convoy is "Nowhere".
+Sarea of Army Convoy is "Nowhere".
 
 instead of going to Grey Abbey Library while (Army Convoy is active and Army Convoy is not resolved and BrennanRelationship is 4 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
 	move player to Grey Abbey Library;
@@ -412,7 +412,7 @@ name	desc	weight	object
 "signal flag"	"A little piece of red fabric, hanging from a looped string. Looks fairly unassuming, but Brennan told you that you can contact him by hanging it up at a number of prominent places. He'll come search you out at the library then."	0	signal flag
 
 signal flag is a grab object.
-the usedesc of signal flag is "[SignalFlagUse]".
+Usedesc of signal flag is "[SignalFlagUse]".
 
 It is not temporary.
 
@@ -481,7 +481,7 @@ Thanks & Cherries	"Thanks & Cherries"
 Thanks & Cherries is a situation.
 ResolveFunction of Thanks & Cherries is "[ResolveEvent Thanks & Cherries]".
 Thanks & Cherries is inactive.
-The sarea of Thanks & Cherries is "Nowhere".
+Sarea of Thanks & Cherries is "Nowhere".
 
 instead of going to Grey Abbey Library while (Thanks & Cherries is active and Thanks & Cherries is not resolved and BrennanRelationship is 6 and a random chance of 1 in 2 succeeds):
 	move player to Grey Abbey Library;
@@ -527,7 +527,7 @@ Wolf Whisperer	"Wolf Whisperer"
 Wolf Whisperer is a situation.
 ResolveFunction of Wolf Whisperer is "[ResolveEvent Wolf Whisperer]".
 Wolf Whisperer is inactive.
-The sarea of Wolf Whisperer is "Outside".
+Sarea of Wolf Whisperer is "Outside".
 
 to say ResolveEvent Wolf Whisperer:
 	if BrennanRelationship is 7:
@@ -635,7 +635,7 @@ Entrance Checks	"Entrance Checks"
 Entrance Checks is a situation.
 ResolveFunction of Entrance Checks is "".
 Entrance Checks is inactive. [blocked till BrennanRelationship reaches 8]
-The sarea of Entrance Checks is "Nowhere".
+Sarea of Entrance Checks is "Nowhere".
 
 instead of going north from Smith Haven Mall Lot South while (Entrance Checks is active and Entrance Checks is not resolved and BrennanRelationship > 7 and BrennanRelationship < 90 and a random chance of 1 in 3 succeeds):
 	if debugactive is 1:
@@ -655,7 +655,7 @@ Bunny Frat Invite is a situation.
 ResolveFunction of Bunny Frat Invite is "[ResolveEvent Bunny Frat Invite]".
 Bunny Frat Invite is inactive. [blocked till BrennanRelationship reaches 8]
 The level of Bunny Frat Invite is 0.
-The sarea of Bunny Frat Invite is "Campus".
+Sarea of Bunny Frat Invite is "Campus".
 
 instead of going to College Walkway East while (Bunny Frat Invite is active and Bunny Frat Invite is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway East;
@@ -678,7 +678,7 @@ Fountain Discussion	"Fountain Discussion"
 Fountain Discussion is a situation.
 ResolveFunction of Fountain Discussion is "[ResolveEvent Fountain Discussion]".
 Fountain Discussion is inactive.
-The sarea of Fountain Discussion is "Campus". [Fountain]
+Sarea of Fountain Discussion is "Campus". [Fountain]
 
 instead of going to College Fountain while (Fountain Discussion is active and Fountain Discussion is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
@@ -704,7 +704,7 @@ Infernal Offer	"Infernal Offer"
 Infernal Offer is a situation.
 ResolveFunction of Infernal Offer is "[ResolveEvent Infernal Offer]".
 Infernal Offer is inactive.
-The sarea of Infernal Offer is "Campus". [Fountain]
+Sarea of Infernal Offer is "Campus". [Fountain]
 
 instead of going to College Fountain while (Infernal Offer is active and Infernal Offer is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
@@ -727,7 +727,7 @@ Slaver Caravan	"Slaver Caravan"
 Slaver Caravan is a situation.
 ResolveFunction of Slaver Caravan is "[ResolveEvent Slaver Caravan]".
 Slaver Caravan is inactive.
-The sarea of Slaver Caravan is "Outside".
+Sarea of Slaver Caravan is "Outside".
 
 to say ResolveEvent Slaver Caravan:
 	project the figure of Brennan_clothed_icon;
@@ -742,7 +742,7 @@ Slave Hunter	"Slave Hunter"
 Slave Hunter is a situation.
 ResolveFunction of Slave Hunter is "[ResolveEvent Slave Hunter]".
 Slave Hunter is inactive.
-The sarea of Slave Hunter is "Outside".
+Sarea of Slave Hunter is "Outside".
 
 to say ResolveEvent Slave Hunter:
 	say "     The clatter of hooves on asphalt makes you pause and listen for where the noise is coming from. It seems to be quite close, and before you can do much more than take a little bit of cover in a somewhat deeper entrance doorframe, a gasping and wheezing anthro Dalmatian sprints past your position. He is in full flight, panic obvious in his every movement. The canine is about forty feet down the road when his pursuer appears - a centaur moving at full gallop. The human half of the hybrid is swinging a lasso as he dashes after the runaway, soon launching it and bringing the Dalmatian to the ground in a bone-rattling tumble. 'Told ya running is pointless, doggie. Got a buyer who pays premium for anything with spots. No way I was gonna let you just skip out on me.' With great sureness and speed, he trusses the captive dog up and throws him to hang over his equine back.";
@@ -757,7 +757,7 @@ Trip to the Water Tower is a situation.
 ResolveFunction of Trip to the Water Tower is "[ResolveEvent Trip to the Water Tower]".
 Trip to the Water Tower is inactive. [blocked till BrennanRelationship reaches 8]
 The level of Trip to the Water Tower is 0.
-The sarea of Trip to the Water Tower is "Outside".
+Sarea of Trip to the Water Tower is "Outside".
 
 to say ResolveEvent Trip to the Water Tower:
 	project the figure of Brennan_face_icon;
@@ -1025,13 +1025,13 @@ Survivor Refuge	"Survivor Refuge"
 
 Survivor Refuge is a room. Survivor Refuge is above Green Lobby.
 Survivor Refuge is sleepsafe.
-The description of Survivor Refuge is "[SurvivorRefugeDesc]".
+Description of Survivor Refuge is "[SurvivorRefugeDesc]".
 
 to say SurvivorRefugeDesc:
 	say "     The apartment that Brennan has claimed as his base of operations has a fairly nice loft setup, with one big room containing the living space, kitchen and dining area. Only the bedroom and bathroom are separated off, with the former lying towards the west, the latter to the south. The apartment has floors made out of walnut wood, shining in a rich reddish-brown, as well as simple but elegant furniture in similar earthen tones. Looks like the original owner had a fair bit of money and good taste, and so had Brennan, when he decided to move into this apartment. This place felt a welcoming and friendly, just like him. He seems to have kept the living space tidy, even now, during the height of the nanite apocalypse. This included bringing in a row of sorting boxes, now well-filled with useful salvage. Additionally, a weightlifting bench has been set up, including numerous weights which were clearly not part of the original setup.";
 
 Brennan's Microwave is an object. It is in Survivor Refuge. It is fixed in place. Understand "microwave" as Brennan's Microwave.
-The description of Brennan's Microwave is "A mid-sized white microwave stands on one of the work surfaces of the kitchen, clashing a bit with the décor. But who cares about that as long as you can [bold type]microwave[roman type] stuff with it?".
+Description of Brennan's Microwave is "A mid-sized white microwave stands on one of the work surfaces of the kitchen, clashing a bit with the décor. But who cares about that as long as you can [bold type]microwave[roman type] stuff with it?".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -1039,7 +1039,7 @@ Brennan's Bedroom	"Brennan's Bedroom"
 
 Brennan's Bedroom is a room. Brennan's Bedroom is west of Survivor Refuge.
 Brennan's Bedroom is sleepsafe.
-The description of Brennan's Bedroom is "[BrennansRoomDesc]".
+Description of Brennan's Bedroom is "[BrennansRoomDesc]".
 
 to say BrennansRoomDesc:
 	say "     Brennan's bedroom is fairly large and kept in the same style as the main part as the loft - walnut floor and elegant furniture also made from wood in rich tones of red and brown. One of those is an expansive double bed, fairly low to the ground and with a really thick mattress. This gives a lot of room for people to do all sorts of things on it. The bed is standing on a large, white and very fluffy carpet. You see in this room more signs cluing you on Brennan's practical nature: a spare baseball bat leaning against the wall just beside the bed, a telescope for scouting and observation set up near the window, as well as a writing desk in one corner, which has a cleanly organized collection of medkits, immunity boosters and all sorts of other emergency items.";
@@ -1050,7 +1050,7 @@ Brennan's Bathroom	"Brennan's Bathroom"
 
 Brennan's Bathroom is a room. Brennan's Bathroom is south of Survivor Refuge.
 Brennan's Bathroom is sleepsafe.
-The description of Brennan's Bathroom is "[BrennansBathroomDesc]".
+Description of Brennan's Bathroom is "[BrennansBathroomDesc]".
 
 to say BrennansBathroomDesc:
 	say "     The bathroom of the apartment is a fairly nice affair, decked out in gray marble and everything. Too bad the water isn't actually running. You see a number of large water canisters stacked up in one corner, with elbow-long protective gloves on lying on top and the words 'DIRTY WATER' scrawled on each one. Seems like Brennan has to fill the reservoir of the toilet by hand. A plastic bucket is standing in a large walk-in shower cabin, with a soft-looking natural sponge right next to it. Not the luxury of what the room could provide if the water was actually running, but at least it's a way to keep clean...";
@@ -1100,8 +1100,8 @@ Virgin of Brennan is false.
 AnalVirgin of Brennan is false.
 PenileVirgin of Brennan is true.
 SexuallyExperienced of Brennan is true.
-The description of Brennan is "[BrennanDesc]".
-The conversation of Brennan is { "<This is nothing but a placeholder!>" }.
+Description of Brennan is "[BrennanDesc]".
+Conversation of Brennan is { "<This is nothing but a placeholder!>" }.
 The scent of Brennan is "     Brennan smells nicely masculine, with a little hint of sweat on his muscular chest, as well as... something else, rather hard to place your finger on.".
 
 to say BrennanDesc:
@@ -1487,7 +1487,7 @@ name	desc	weight	object
 "cult flyer"	"A small piece of blue paper with a few small ink smudges. You'd guess it was run through a hand-cranked mimeograph. Maybe you should [bold type]read[roman type] it."	1	cult flyer
 
 cult flyer is a grab object.
-the usedesc of cult flyer is "[cultflyeruse]".
+Usedesc of cult flyer is "[cultflyeruse]".
 
 It is not temporary.
 instead of sniffing cult flyer:
@@ -2091,7 +2091,7 @@ Brennan Shower Walkin	"Brennan Shower Walkin"
 
 Brennan Shower Walkin is a situation.
 ResolveFunction of Brennan Shower Walkin is "".
-The sarea of Brennan Shower Walkin is "Nowhere".
+Sarea of Brennan Shower Walkin is "Nowhere".
 
 when play begins:
 	add Brennan Shower Walkin to badspots of TransList;
@@ -2108,7 +2108,7 @@ Feeding Wolves	"Feeding Wolves"
 
 Feeding Wolves is a situation.
 ResolveFunction of Feeding Wolves is "".
-The sarea of Feeding Wolves is "Nowhere".
+Sarea of Feeding Wolves is "Nowhere".
 
 after going to Survivor Refuge while (Feeding Wolves is active and Feeding Wolves is not resolved and (TimekeepingVar is -2 or TimekeepingVar is -3 or TimekeepingVar is -4 or TimekeepingVar is 6 or TimekeepingVar is 5 or TimekeepingVar is 4) and a random chance of 1 in 2 succeeds): [first time, Brennan awake and in the apartment, 50% chance]
 	project the figure of Brennan_face_icon;
@@ -2122,7 +2122,7 @@ Soldier Questions	"Soldier Questions"
 
 Soldier Questions is a situation.
 ResolveFunction of Soldier Questions is "".
-The sarea of Soldier Questions is "Nowhere".
+Sarea of Soldier Questions is "Nowhere".
 
 after going to Survivor Refuge while (Soldier Questions is not resolved and XP of Brennan is 0 and (TimekeepingVar is -2 or TimekeepingVar is -3 or TimekeepingVar is -4 or TimekeepingVar is 6 or TimekeepingVar is 5 or TimekeepingVar is 4) and a random chance of 1 in 2 succeeds): [first time, Brennan awake and in the apartment, 50% chance]
 	project the figure of Brennan_face_icon;

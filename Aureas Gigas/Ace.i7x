@@ -10,9 +10,9 @@ Refueling	"Refueling"
 
 Refueling is a situation.
 ResolveFunction of Refueling is "[ResolveEvent Refueling]".
-The Prereq1 of Refueling is Avian Tent.
+Prereq1 of Refueling is Avian Tent.
 The Prereq1Resolution of Refueling is { 1, 2 }.
-The sarea of Refueling is "Forest";
+Sarea of Refueling is "Forest";
 
 when play begins:
 	add Refueling to BadSpots of MaleList;
@@ -57,9 +57,9 @@ Jetlagged	"Jetlagged"
 
 Jetlagged is a situation.
 ResolveFunction of Jetlagged is "[ResolveEvent Jetlagged]".
-The Prereq1 of Jetlagged is Refueling.
+Prereq1 of Jetlagged is Refueling.
 The Prereq1Resolution of Jetlagged is { 1, 2 }.
-The sarea of Jetlagged is "Forest".
+Sarea of Jetlagged is "Forest".
 
 to say ResolveEvent Jetlagged:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
@@ -89,7 +89,7 @@ Object	Name
 Staghorn	"Staghorn"
 
 Staghorn is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Staghorn is "[staghorndesc]".
+Description of Staghorn is "[staghorndesc]".
 the scent of Staghorn is "The settlement smells of a hearty stew that is cooking somewhere nearby. There is also the smell of some freshly chopped lumber from freshly built fences.".
 
 to say staghorndesc:
@@ -135,8 +135,8 @@ SexuallyExperienced of Ace is true.
 TwistedCapacity of Ace is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Ace is true. [steriles can't knock people up]
 MainInfection of Ace is "Human". [since there is no fitting infection for him, he's sterile for now]
-The description of Ace is "[acedesc]".
-The conversation of Ace is { "Skypilot!" }.
+Description of Ace is "[acedesc]".
+Conversation of Ace is { "Skypilot!" }.
 the scent of the Ace is "The avian has a strangely masculine scent that reminds you of the sea.".
 
 to say acedesc:

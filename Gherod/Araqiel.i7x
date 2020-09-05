@@ -27,7 +27,7 @@ Purifier One	"Purifier One"
 
 Purifier One is a situation.
 ResolveFunction of Purifier One is "[ResolveEvent Purifier One]".
-The sarea of Purifier One is "Campus".
+Sarea of Purifier One is "Campus".
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -35,7 +35,7 @@ Purifier Two	"Purifier Two"
 
 Purifier Two is a situation.
 ResolveFunction of Purifier Two is "[ResolveEvent Purifier Two]".
-The sarea of Purifier Two is "Red".
+Sarea of Purifier Two is "Red".
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -43,7 +43,7 @@ Purifier Three	"Purifier Three"
 
 Purifier Three is a situation.
 ResolveFunction of Purifier Three is "[ResolveEvent Purifier Three]".
-The sarea of Purifier Three is "Mall".
+Sarea of Purifier Three is "Mall".
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -51,7 +51,7 @@ Ambush The Purifier	"Ambush The Purifier"
 
 Ambush The Purifier is a situation.
 ResolveFunction of Ambush The Purifier is "".
-The sarea of Ambush The Purifier is "Nowhere".
+Sarea of Ambush The Purifier is "Nowhere".
 
 AraqielTrackerCollege is a number that varies. AraqielTrackerCollege is usually 1. [@Tag:NotSaved]
 AraqielTrackerRedLight is a number that varies. AraqielTrackerRedLight is usually 0. [@Tag:NotSaved]
@@ -431,8 +431,8 @@ SexuallyExperienced of Araqiel is true.
 TwistedCapacity of Araqiel is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Araqiel is true. [steriles can't knock people up]
 MainInfection of Araqiel is "".
-The description of Araqiel is "[Araqieldesc]".
-The conversation of Araqiel is { "<This is nothing but a placeholder!>" }.
+Description of Araqiel is "[Araqieldesc]".
+Conversation of Araqiel is { "<This is nothing but a placeholder!>" }.
 The scent of Araqiel is "     Araqiel smells [if HP of Araqiel is 3]almost like a demon, having lost his purity to the hellfires, sharing some of their masculine musk that faintly resembles brimstone and fire[else]masculine, sweet and pure, though all of this still manages to be slightly arousing thanks to him having fallen a bit, already[end if]. Though there's always still a hint of his characteristic minty scent".
 
 to say AraqielDesc:

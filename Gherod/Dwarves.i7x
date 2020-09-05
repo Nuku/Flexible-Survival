@@ -14,7 +14,7 @@ Savage Dwarf	"Savage Dwarf"
 
 Savage Dwarf is a situation.
 ResolveFunction of Savage Dwarf is "[ResolveEvent Savage Dwarf]".
-The sarea of Savage Dwarf is "Forest".
+Sarea of Savage Dwarf is "Forest".
 
 to say ResolveEvent Savage Dwarf:
 	say "     During your exploration efforts within the forest, you come across a grassy path near the base of a cliff. A little further ahead, there is - or was - what seems to be an entrance to a tunnel right through the rocky walls. It has collapsed, though you hear a lot of agitation coming from there, namely a short burly man shouting and hitting on the debris with his stone hammer. You can't quite understand what he's saying from here, you're standing too far to be able to hear him decently, but whatever it is, it looks like the man is having an argument with the rubble, or maybe someone is on the other side? [bold type]You could risk approaching him, but there isn't a lot of hiding area if you get closer, and he might see you.[roman type][line break]";
@@ -65,8 +65,8 @@ Collapsed Tunnel	"Collapsed Tunnel"
 
 Collapsed Tunnel is a situation.
 ResolveFunction of Collapsed Tunnel is "[ResolveEvent Collapsed Tunnel]".
-The Prereq1 of Collapsed Tunnel is Savage Dwarf.
-The sarea of Collapsed Tunnel is "Forest".
+Prereq1 of Collapsed Tunnel is Savage Dwarf.
+Sarea of Collapsed Tunnel is "Forest".
 
 to say ResolveEvent Collapsed Tunnel:
 	if Resolution of Collapsed Tunnel is 0: [first time]
@@ -214,7 +214,7 @@ Wedding Wreckers	"Wedding Wreckers"
 
 Wedding Wreckers is a situation.
 ResolveFunction of Wedding Wreckers is "".
-The sarea of Wedding Wreckers is "Nowhere".
+Sarea of Wedding Wreckers is "Nowhere".
 
 to say DwarfQuest1: [Dwarf has the greathammer]
 	say "     Now that the dwarf has been defeated, you are free to claim the greathammer that you found with your own sweat and effort right off his hands, but he's not willing to give it up so easily. 'No! This is my hammer! I worked hard to get it!' Even in his defeated state, he refuses to let go off his weapon, but it isn't a lot to stop you from just taking it out of his hands by force. 'You don't know one thing... You won't like to have that hammer with you, I'm warning...' You dismiss his commentary as rubbish, and walk away from him with your prize in your hands.";
@@ -1195,9 +1195,9 @@ name	desc	weight	object
 
 dwarven ale is a grab object.
 
-dwarven ale is infectious. The strain of dwarven ale is "Dwarf Male".
+dwarven ale is infectious. Strain of dwarven ale is "Dwarf Male".
 
-the usedesc of dwarven ale is "You bring the canteen bottle to your mouth and chug its contents down, the drink tasting like a very strong beer that nearly burns down your throat.";
+Usedesc of dwarven ale is "You bring the canteen bottle to your mouth and chug its contents down, the drink tasting like a very strong beer that nearly burns down your throat.";
 
 instead of sniffing dwarven ale:
 	say "This beverage smells a lot like alcohol. It must be very strong.";

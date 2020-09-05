@@ -10,7 +10,7 @@ Gourmet Treats	"Gourmet Treats"
 
 Gourmet Treats is a situation.
 ResolveFunction of Gourmet Treats is "[ResolveEvent Gourmet Treats]". The level of Gourmet Treats is 8.
-The sarea of Gourmet Treats is "High".
+Sarea of Gourmet Treats is "High".
 
 when play begins:
 	add Gourmet Treats to BadSpots of MaleList;       [random encounter may involve male opponents]
@@ -161,7 +161,7 @@ Object	Name
 Bone-Appetit	"Bone-Appetit"
 
 Bone-Appetit is a room. It is fasttravel. It is private.
-The description of Bone-Appetit is "[BoneAppetitdesc]".
+Description of Bone-Appetit is "[BoneAppetitdesc]".
 
 instead of sniffing Bone-Appetit:
 	say "     Despite the lack of any product on display, the small bakery still has a strangely warm, meaty aroma[if FaceName of Player is listed in infections of Caninelist] that quickly has you salivating hungrily[end if], which you can only assume is the result of the many hand made pet treats that used to line the shelves.";
@@ -216,8 +216,8 @@ AnalVirgin of Francois is true.
 PenileVirgin of Francois is true.
 SexuallyExperienced of Francois is false.
 MainInfection of Francois is "".
-The description of Francois is "[Francoisdesc]".
-The conversation of Francois is { "Numnum!" }.
+Description of Francois is "[Francoisdesc]".
+Conversation of Francois is { "Numnum!" }.
 The icon of Francois is Figure of Francois_icon.
 understand "Francis" as Francois.
 understand "Francois" as Francois.
@@ -1055,7 +1055,7 @@ to say lollicock Use:
 	if hunger of Player < 0, now hunger of Player is 0;
 
 dragon moelleux is a grab object. It is not temporary. It is fast.
-The usedesc of dragon moelleux is "[dragonmoelleuxuse]".
+Usedesc of dragon moelleux is "[dragonmoelleuxuse]".
 the scent of dragon moelleux is "     The small chocolate cake smells rich and sweet, as well as a little spicy.".
 
 to say dragonmoelleuxuse:
@@ -1092,7 +1092,7 @@ to say dragonmoelleuxuse:
 		say "     That's probably not a good idea right now.";
 
 fizz-aux-pommes is a grab object. It is not temporary. It is fast.
-The usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]".
+Usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]".
 the scent of fizz-aux-pommes is "     The bubbling drink smells of overwhelmingly sweet apple.".
 
 to say fizz-aux-pommesuse:
@@ -1108,7 +1108,7 @@ to say fizz-aux-pommesuse:
 		say "That's probably not a good idea right now.";
 
 vin-coeur is a grab object. It is not temporary. It is fast.
-The usedesc of vin-coeur is "[vin-coeuruse]".
+Usedesc of vin-coeur is "[vin-coeuruse]".
 the scent of vin-coeur is "     rich and heavy (temporary desc!)".
 
 to say vin-coeuruse:

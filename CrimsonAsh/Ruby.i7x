@@ -27,7 +27,7 @@ Urban Cliff	"Urban Cliff"
 
 Urban Cliff is a situation.
 ResolveFunction of Urban Cliff is "[ResolveEvent Urban Cliff]".
-The sarea of Urban Cliff is "Capitol".
+Sarea of Urban Cliff is "Capitol".
 
 when play begins:
 	add Urban Cliff to BadSpots of FemaleList;
@@ -390,8 +390,8 @@ PenileVirgin of Ruby is true. [got no cock]
 SexuallyExperienced of Ruby is true.
 MainInfection of Ruby is "Crimson Dragon".
 
-The description of Ruby is "[RubyDesc]".
-The conversation of Ruby is { "Growl." }.
+Description of Ruby is "[RubyDesc]".
+Conversation of Ruby is { "Growl." }.
 
 to say RubyDesc:
 	say "     Ruby is a tall humanoid, a dragon woman with violet hair running down her head and spine while ending at the point of a long tail. The rest of her is covered in mostly reddish scales while her chest and tummy area sports an orange/red texture. Her eyes glow an amber-yellow and in the middle, surrounded by blood red irises. She's nearly seven feet tall with clear musculature and definition rippling on her naked body, yet still clearly feminine with steady curves, D-cup breasts and a draconic slit tucked between her legs.";
@@ -509,14 +509,14 @@ Ruby's Cave	"Ruby's Cave"
 
 Ruby's Cave is a room.
 Ruby's Cave is down from Ashen Cliff.
-The description of Ruby's Cave is "Ruby's humble abode consists of a short tunnel that leads into a natural cave, about sixty by thirty feet in its farthest extent. It is dimly lit by glowing volcanic rock formations and holds some scavenged furniture brought in by the dragoness.".
+Description of Ruby's Cave is "Ruby's humble abode consists of a short tunnel that leads into a natural cave, about sixty by thirty feet in its farthest extent. It is dimly lit by glowing volcanic rock formations and holds some scavenged furniture brought in by the dragoness.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Ashen Cliff	"Ashen Cliff"
 
 Ashen Cliff is a room.
-The description of Ashen Cliff is "You stand at the upper end of creating a sloping cliff that's about 300 feet wide. Some titanic force sundered the very ground here, with either your half rising, the lower end being shoved down, or both, afterwards. This has torn apart countless buildings and streets, creating the new cliff whose steep slope consists of bare rock, debris and volcanic ash. A little distance from where you are is the opening that leads to Ruby's cave. You could go into that if you want to visit her.".
+Description of Ashen Cliff is "You stand at the upper end of creating a sloping cliff that's about 300 feet wide. Some titanic force sundered the very ground here, with either your half rising, the lower end being shoved down, or both, afterwards. This has torn apart countless buildings and streets, creating the new cliff whose steep slope consists of bare rock, debris and volcanic ash. A little distance from where you are is the opening that leads to Ruby's cave. You could go into that if you want to visit her.".
 
 
 Ruby ends here.

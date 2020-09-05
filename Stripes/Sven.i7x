@@ -40,7 +40,7 @@ Hidden Kitty	"Hidden Kitty"
 
 Hidden Kitty is a situation.
 ResolveFunction of Hidden Kitty is "[ResolveEvent Hidden Kitty]". The level of Hidden Kitty is 5.
-The sarea of Hidden Kitty is "Red".
+Sarea of Hidden Kitty is "Red".
 when play begins:
 	add Hidden Kitty to BadSpots of MaleList;
 	add Hidden Kitty to BadSpots of FurryList;
@@ -62,7 +62,7 @@ Object	Name
 Sven's Place	"Sven's Place"
 
 Sven's Place is a room. It is fasttravel. It is private.
-The description of Sven's Place is "[SvenPlaceDesc]".
+Description of Sven's Place is "[SvenPlaceDesc]".
 
 the scent of Sven's Place is "The small basement apartment smells faintly of mold and snow leopard from its [if HP of Sven > 3]former [end if]occupant[if HP of Sven is 99]. The scent of snow leopard sex from the cum is strong[end if].".
 
@@ -107,8 +107,8 @@ PenileVirgin of Sven is false.
 SexuallyExperienced of Sven is true.
 MainInfection of Sven is "Snow Leopard".
 
-The description of Sven is "[SvenDesc]".
-The conversation of Sven is { "Mew!" }.
+Description of Sven is "[SvenDesc]".
+Conversation of Sven is { "Mew!" }.
 lastSvendrink is a number that varies. lastSvendrink is usually 555.
 SvenCandyMsg is a number that varies. SvenCandyMsg is usually 0.
 SvenStory1 is a truth state that varies. SvenStory1 is usually false.
@@ -885,8 +885,8 @@ Table of GameCharacterIDs (continued)
 object	name
 Svetlana	"Svetlana"
 
-Svetlana is a woman. The description of Svetlana is "[SvetlanaDesc]".
-The conversation of Svetlana is { "Mew!" }.
+Svetlana is a woman. Description of Svetlana is "[SvetlanaDesc]".
+Conversation of Svetlana is { "Mew!" }.
 [uses same variables as Sven for easier saving and restoration.]
 
 the scent of the Svetlana is "Svetlana smells of aroused female snow leopard. Lisa's scent clings to her as well.".

@@ -58,7 +58,7 @@ to say Dobermandesc:
 	else if dobielibido < 50:
 		project the figure of Alexandra_clothed0_frown_icon;
 		say "     A female Doberman in a cop's uniform charges at you, growling firmly for you to halt and be searched. In the brief moment before she's upon you, you can see that she's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle, and her short fur has the two-tone black and tan markings of the breed. She is wearing a light blue shirt, darker pants and a policeman's hat. She has an average-sized rack under her shirt.";
-		if the player is bodily human and the player is facially human and the player is skintone human and the tail of the player is "":
+		if the player is bodily human and the player is facially human and the player is skintone human and the tail of Player is "":
 			say "     '[one of]Halt, citizen[or]Freeze! Police[or]Stand down, citizen[at random]!' she calls out one last time, pulling out her nightstick.";
 		else:
 			say "     '[one of]Halt, mutant[or]Freeze! Police[or]Surrender, creature[or]Come quietly[or]I order you to stand down, mutant[at random]!' she calls out one last time, pulling out her nightstick.";
@@ -740,7 +740,7 @@ name	desc	weight	object
 "doberman bitch fur"	"A tuft of dark brown fur that looks like it has been pulled out of the coat of a doberman. It's nicely soft."	0	doberman bitch fur
 
 doberman bitch fur is a grab object.
-the usedesc of doberman bitch fur is "[DobermanBitchFurUse]".
+Usedesc of doberman bitch fur is "[DobermanBitchFurUse]".
 It is temporary.
 
 to say DobermanBitchFurUse:
@@ -760,7 +760,7 @@ name	desc	weight	object
 "confiscated pills"	"A plastic baggie containing countless nondescript pills in all sorts of shapes and colors. It is labeled in neat handwriting, declaring the contents to have been confiscated some days ago. With the nanite apocalypse in full swing, it seems the dobie cop didn't have time to turn them in yet."	0	confiscated pills
 
 confiscated pills is a grab object. it is not temporary.
-the usedesc of confiscated pills is "[RandomPillsUse]".
+Usedesc of confiscated pills is "[RandomPillsUse]".
 
 to say RandomPillsUse:
 	say "     Opening the baggie and picking one of the pills, you look at it for a second or two, then throw it into your mouth and swallow. What could go wrong when taking some unidentified pills, right?";
@@ -794,7 +794,7 @@ name	desc	weight	object
 
 police whistle is a grab object.
 
-the usedesc of police whistle is "[PoliceWhistleUse]".
+Usedesc of police whistle is "[PoliceWhistleUse]".
 It is not temporary.
 
 to say PoliceWhistleUse:
@@ -814,7 +814,7 @@ name	desc	weight	object
 
 alexandra's badge is a grab object.
 
-the usedesc of alexandra's badge is "[AlexandraBadgeUse]".
+Usedesc of alexandra's badge is "[AlexandraBadgeUse]".
 It is not temporary.
 
 to say AlexandraBadgeUse:

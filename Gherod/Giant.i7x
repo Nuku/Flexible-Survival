@@ -504,7 +504,7 @@ name	desc	weight	object
 "giant essence"	"A very slippery liquid with an almost transparent color, only slightly white, which is the precum of a human giant."	1	giant essence
 
 giant essence is a grab object.
-the usedesc of giant essence is "[giant essence use]";
+Usedesc of giant essence is "[giant essence use]";
 
 to say giant essence use:
 	say "     The warm, sticky liquid tastes really salty as you drink it. You feel it going down your throat, leaving you craving for something of titanic proportions...";

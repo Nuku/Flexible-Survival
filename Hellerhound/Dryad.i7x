@@ -10,7 +10,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dryad cum"	"A bottle of dryad cum? Man, you will scavenge anything."	3	dryad cum
 
-dryad cum is a grab object. dryad cum is infectious. The strain of dryad cum is "Dryad". The purified of dryad cum is "distilled cum". dryad cum is cum.
+dryad cum is a grab object. dryad cum is infectious. Strain of dryad cum is "Dryad". Purified of dryad cum is "distilled cum". dryad cum is cum.
 
 the scent of dryad cum is "The dryad cum smells like a mix of semen and tree sap.".
 
@@ -257,9 +257,9 @@ This is the Dryad Infection rule:
 	if Player has a body of "Dryad":
 		trigger ending "Dryad Infection";
 		say "     Life as a dryad is hard. Your naked stature and vines, not to mention fear of clothes, keep you separate from the normal humans. They also constantly get you in trouble with the law, who are still trying to cope with your kind's breach of public nudity. ";
-		if the humanity of Player < 10:
+		if Humanity of Player < 10:
 			say "The revival of the city does you no good, and you are soon behind bars for several acts of misconduct. You end up with a life sentence and spend the rest of your time attempting to control the impulses the nanites wired into you.";
-		else if the humanity of Player < 50:
+		else if Humanity of Player < 50:
 			say "A few days into the revival of the city, you decide to become another one of the trees on the road where you found the original. Growing bark and leaves, you form a new tree, and a new puzzle for the city council, who had not authorized the planting of new trees in their budget. You and your fellow trees take payments from those who wish your services and return to your lot at night. Altogether, it isn't a boring life, with all the odd clients that come around and the food they bring.";
 		else:
 			say "You eventually overcome your fear of clothing and become relatively normal to those who don't see you without it or your hat. You are able to resume life as normal.";

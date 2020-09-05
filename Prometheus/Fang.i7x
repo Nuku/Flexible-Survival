@@ -115,8 +115,8 @@ SexuallyExperienced of Fang is true.
 TwistedCapacity of Fang is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Fang is false. [steriles can't knock people up]
 MainInfection of Fang is "Feral Wolf".
-The description of Fang is "[fangdesc]".
-The conversation of Fang is { "Grrrr!" }.
+Description of Fang is "[fangdesc]".
+Conversation of Fang is { "Grrrr!" }.
 Libido of Fang is usually 0.		[represents status w/fucking Sandra - saved]
 lust of Fang is usually 0.		[tracks sex w/Fang in this play through (controls Sandra variations)]
 FangWS is a number that varies.
@@ -1456,7 +1456,7 @@ an everyturn rule:
 	if the player is in the Grey Abbey Library and ( HP of Fang is 3 or HP of Fang is 4 ) and felinoid companion is tamed:
 		increase ffrivalry by 1;
 		let num be a random number between 5 and 20;
-		if num >= ffrivalry and Felinoid companion is the companion of the player:
+		if num >= ffrivalry and Felinoid companion is the Companion of Player:
 			project the Figure of Fang_face_icon;
 			say "[one of]Fang locks his steely gaze on Klauz and growls softly.[or]Klauz rubs up against you, pushing you away from Fang in a possessive manner.[or]The felinoid at your side growls at Fang.[or]Your felinoid companion and your alpha wolf growl and snap at one another from a few feet away for a minute.[or]Your alpha wolf and the felinoid exchange angry glares at one another and possessives stares at you.[or]Fang growls at Klauz as he moves between you and him. They glare at each other like that for a few moments before breaking off, both clearly angry at the other's presence near you.[or]The feral wolf and large felinoid growl and hiss at one another as they circle around you like you're some kind of prize.[at random]";
 			now ffrivalry is 0;
@@ -1474,7 +1474,7 @@ Alpha's Shepherd Watcher	"Alpha's Shepherd Watcher"
 Alpha's Shepherd Watcher is a situation.
 ResolveFunction of Alpha's Shepherd Watcher is "".
 The level of Alpha's Shepherd Watcher is 0.
-The sarea of Alpha's Shepherd Watcher is "Nowhere".
+Sarea of Alpha's Shepherd Watcher is "Nowhere".
 
 instead of going to Grey Abbey Library while (HP of Fang is 3 or HP of Fang is 4) and Fang is in Grey Abbey Library and (gsd_pet >= 20 and Korvin is in Makeshift Rec Room) and MaleList is not warded and MaleList is not banned and Alpha's Shepherd Watcher is not resolved and a random chance of 1 in 2 succeeds:
 	say "     Entering the library, you are met by your Alpha who brushes against your side possessively. You are pleased that he has seen fit to greet you this way and give him a friendly pat in return, the large wolf letting out a contented groan as you scratch him under the chin. It would seem that he is in a more affectionate mood than usual and decide to make the most of it as he rolls on his side with you atop him, rubbing the thick fur of his tummy with your hand occasionally straying to brush against his full sheath, feeling the heat radiating from it. Unfortunately, the moment is soon ruined by a snicker behind a bookshelf and you manage to look up in time to see a flicker of tan and black disappear from view. You aren't the only one to have noticed them as Fang leaps to his feet, sending you sprawling, and darts after the voyeur, his mood distinctly soured and irritation likely to be taken out on whoever dared sound mocking.";
@@ -1497,7 +1497,7 @@ ResolveFunction of Alpha's Shepherd Domination is "".
 Prereq1 of Alpha's Shepherd Domination is Alpha's Shepherd Watcher.
 Prereq1Resolution of Alpha's Shepherd Domination is { 1 }.
 The level of Alpha's Shepherd Domination is 0.
-The sarea of Alpha's Shepherd Domination is "Nowhere".
+Sarea of Alpha's Shepherd Domination is "Nowhere".
 
 instead of going to Grey Abbey Library while (HP of Fang is 3 or HP of Fang is 4) and Fang is in Grey Abbey Library and (gsd_pet >= 20 and Korvin is in Makeshift Rec Room) and lastfuck of Fang - turns > 7 and Alpha's Shepherd Domination is not resolved and Alpha's Shepherd Domination is PrereqComplete and MaleList is not warded and MaleList is not banned and a random chance of 1 in 2 succeeds:
 	say "     A crash as you enter the library along with the absence of Fang from his usual position by the door tips you off that something is happening and you quickly run towards the noise to investigate and lend any assistance necessary. However, when you reach the source, a more open area with couches and armchairs pushed to the edge, you discover your Alpha looming over Korvin, the German shepherd crouched close to the floor and his ears lowered submissively as he ensures that he doesn't meet his superior's eye. It would seem that his previous irreverence towards the wolf has caught up with him and now Fang is going to pound some respect into him if his emerging cock is anything to go by, so you decide to get comfortable in one of the chairs and watch the wolf have some pleasure as he more thoroughly establishes his dominance over the canine. Fang doesn't seem to mind your presence, circling around the dog and sniffing at his scent, whereas Korvin almost seems embarrassed to be in such a position in front of you.";

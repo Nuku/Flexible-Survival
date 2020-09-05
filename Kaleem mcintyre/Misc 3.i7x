@@ -16,7 +16,7 @@ Jam Session	"Jam Session"
 
 Jam Session is a situation.
 ResolveFunction of Jam Session is "[ResolveEvent Jam Session]".
-The sarea of Jam Session is "Junkyard".
+Sarea of Jam Session is "Junkyard".
 when play begins:
 	add Jam Session to BadSpots of FurryList;
 	add Jam Session to BadSpots of MaleList;
@@ -39,7 +39,7 @@ Blind Boy's Love	"Blind Boy's Love"
 
 Blind Boy's Love is a situation.
 ResolveFunction of Blind Boy's Love is "[ResolveEvent Blind Boy's Love]".
-The sarea of Blind Boy's Love is "Junkyard".
+Sarea of Blind Boy's Love is "Junkyard".
 when play begins:
 	add Blind Boy's Love to BadSpots of FurryList;
 	add Blind Boy's Love to BadSpots of MaleList;
@@ -75,7 +75,7 @@ Dragonian Trial	"Dragonian Trial"
 
 Dragonian Trial is a situation.
 ResolveFunction of Dragonian Trial is "[ResolveEvent Dragonian Trial]".
-The sarea of Dragonian Trial is "Beach".
+Sarea of Dragonian Trial is "Beach".
 
 when play begins:
 	add Dragonian Trial to BadSpots of MaleList;

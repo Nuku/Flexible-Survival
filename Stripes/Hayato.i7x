@@ -16,7 +16,7 @@ Garage Demon	"Garage Demon"
 
 Garage Demon is a situation.
 ResolveFunction of Garage Demon is "[ResolveEvent Garage Demon]".
-The sarea of Garage Demon is "Capitol".
+Sarea of Garage Demon is "Capitol".
 when play begins:
 	add Garage Demon to BadSpots of MaleList;
 	add Garage Demon to badspots of DemonList;
@@ -49,7 +49,7 @@ to say ResolveEvent Garage Demon:
 to say haleventtalk:
 	say "     Approaching the imposing figure[if HP of Hayato > 0] again[end if], you try to intice him to conversation. He gets up with a sigh before growling at you to go away as he reaches for his menacing club. He glares at you with his yellow eyes. You try your best to calm him down.";
 	if HP of Hayato < 5:
-		let bonus be ( the charisma of the player minus 10 ) divided by 2;
+		let bonus be ( Charisma of Player minus 10 ) divided by 2;
 		increase bonus by HP of Hayato;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
@@ -99,7 +99,7 @@ Object	Name
 Disused Garage	"Disused Garage"
 
 Disused Garage is a room. It is fasttravel. It is private.
-The description of Disused Garage is "[disusedgaragedesc]".
+Description of Disused Garage is "[disusedgaragedesc]".
 
 the scent of Disused Garage is "There is a lingering scent of oil hanging around the building.".
 
@@ -115,9 +115,9 @@ object	name
 Hayato	"Hayato"
 
 Hayato is a man. Hayato is in Disused Garage.
-The description of Hayato is "[halonidesc]".
+Description of Hayato is "[halonidesc]".
 The icon of Hayato is Figure of Hayato_icon.
-The conversation of Hayato is { "Hai!" }.
+Conversation of Hayato is { "Hai!" }.
 HayatoHunger is a number that varies.
 
 understand "Hal" as Hayato.
@@ -223,7 +223,7 @@ to say sexwithHayato:
 	else if HP of Hayato < 10:
 		say "     Deciding to make a move on the muscular oni, you recall his uneasiness with the prospect of sex. You can tell he wants it too, but he's worried he'll be like the rampaging oni. You figure you'll need to get rather hands on if you want to overcome his reluctance, but you will need to do so without him catching on too early. You start to chat him up, trying to be subtly seductive as you gradually move closer and closer.";
 		WaitLineBreak;
-		let bonus be ( the charisma of the player minus 10 ) divided by 2;
+		let bonus be ( Charisma of Player minus 10 ) divided by 2;
 		let targetnum be 20;
 		decrease targetnum by HP of Hayato;
 		increase HP of Hayato by 1;
@@ -427,7 +427,7 @@ Noh Mask	"Noh Mask"
 
 Noh Mask is a situation.
 ResolveFunction of Noh Mask is "[ResolveEvent Noh Mask]". Noh Mask is inactive. The level of Noh Mask is 9.
-The sarea of Noh Mask is "Campus".
+Sarea of Noh Mask is "Campus".
 when play begins:
 	add Noh Mask to BadSpots of FurryList;
 	add Noh Mask to BadSpots of MaleList;
@@ -512,7 +512,7 @@ Oni Lair	"Oni Lair"
 
 Oni Lair is a situation.
 ResolveFunction of Oni Lair is "[ResolveEvent Oni Lair]". Oni Lair is inactive. The level of Oni Lair is 9.
-The sarea of Oni Lair is "Capitol".
+Sarea of Oni Lair is "Capitol".
 when play begins:
 	add Oni Lair to BadSpots of MaleList;
 	add Oni Lair to badspots of DemonList;

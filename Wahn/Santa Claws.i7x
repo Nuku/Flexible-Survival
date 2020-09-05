@@ -53,8 +53,8 @@ TwistedCapacity of Santa Claws is false. [Twisted Characters can take any penetr
 Sterile of Santa Claws is false. [steriles can't knock people up]
 MainInfection of Santa Claws is "Polar Bear Male".
 Santa Claws is in Christmas Village.
-The description of Santa Claws is "[Santa Claws Desc]".
-The conversation of Santa Claws is { "Roar." }.
+Description of Santa Claws is "[Santa Claws Desc]".
+Conversation of Santa Claws is { "Roar." }.
 lastfuck of Santa Claws is usually 555.
 
 
@@ -84,7 +84,7 @@ Christmas Village	"Christmas Village"
 
 Christmas Village is a room.
 Christmas Village is east of Mall East Wing.
-The description of Christmas Village is "[CVillageDesc]".
+Description of Christmas Village is "[CVillageDesc]".
 
 to say CVillageDesc:
 	say "     Around you, a little winter wonderland occupies this section of the Mall. There are evergreen conifer trees that sprout out of the snow-covered ground, mostly hiding the walls and letting things appear as if you're in a midwinter forest, with the front sides of the stores appearing as block houses built from round tree trunks. Only the north side looks different, with what appears to be an unhewn rock-wall behind the trees, complete with a somewhat foreboding entrance to a cave. There are many petite Christmas Elves dressed in green clothes going about their business here, following tracks through the snow, chatting and laughing. Among them, you see some visiting Mall rats and other species, but the majority of people are elves. In the center of it all stands a large cushioned throne, carved with many decorative designs, and on it sits Santa Claws, the master of this domain.";

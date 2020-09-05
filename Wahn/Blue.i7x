@@ -27,7 +27,7 @@ Goo Refuge	"Goo Refuge"
 
 Goo Refuge is a room.
 Goo Refuge is north of Haven Community Center.
-The description of Goo Refuge is "[GooRefugeDesc]".
+Description of Goo Refuge is "[GooRefugeDesc]".
 Goo Refuge is sleepsafe.
 
 to say GooRefugeDesc:
@@ -69,8 +69,8 @@ Virgin of Blue Speaker is false.
 AnalVirgin of Blue Speaker is false.
 PenileVirgin of Blue Speaker is false.
 SexuallyExperienced of Blue Speaker is true.
-The description of Blue Speaker is "[Blue SpeakerDesc]".
-The conversation of Blue Speaker is { "<This is nothing but a placeholder!>" }.
+Description of Blue Speaker is "[Blue SpeakerDesc]".
+Conversation of Blue Speaker is { "<This is nothing but a placeholder!>" }.
 The scent of Blue Speaker is "     The aquamarine goo person smells somewhat fruity, making you wonder if the goo would taste that way too.".
 
 when play begins:

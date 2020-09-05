@@ -461,7 +461,7 @@ name	desc	weight	object
 "demon tooth"	"A pretty long, curved fang with a sharp tip. You knocked it out of a demon brute's mouth. Maybe you could find someone who has knowledge of the supernatural and show it to them - there might be something interesting to be done with it."	1	demon tooth
 
 demon tooth is a grab object. demon tooth is not temporary.
-the usedesc of demon tooth is "And just what do you want to do with it? Maybe find someone who understands the supernatural and give it to them...";
+Usedesc of demon tooth is "And just what do you want to do with it? Maybe find someone who understands the supernatural and give it to them...";
 
 instead of trading the demon tooth when the current action involves the Nermine:
 	if DBCaptureQuestVar is 2:
@@ -514,7 +514,7 @@ instead of trading the demon tooth when the current action involves the Nermine:
 						now demon brute is tamed;
 						add "Tamed" to Traits of demon brute;
 						LineBreak;
-						say "     (Brutus the demon brute is now a possible ally! You can make him your active ally by typing [bold type][link]ally Brutus[end link][roman type] or [bold type][link]ally demon brute[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Brutus[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+						say "     (Brutus the demon brute is now a possible ally! You can make him your active ally by typing [bold type][link]ally Brutus[end link][roman type] or [bold type][link]ally demon brute[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Brutus[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				else:
 					say "     Getting cold feet at almost he last second, you blow out the candles and douse the brazier. Well, there goes your one and only try for this ritual. With the herbs already up in smoke, you won't have any for a second try. But then, maybe that's for the best...";
 					now DBCaptureQuestVar is 99;  [failed]
@@ -596,8 +596,8 @@ SexuallyExperienced of Brutus is true.
 TwistedCapacity of Brutus is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Brutus is false. [steriles can't knock people up]
 MainInfection of Brutus is "Demon Brute".
-The description of Brutus is "[DemonBrutePetDesc]".
-The conversation of Brutus is { "..." }.
+Description of Brutus is "[DemonBrutePetDesc]".
+Conversation of Brutus is { "..." }.
 
 
 Table of GameCharacterIDs (continued)
@@ -631,11 +631,11 @@ PenileVirgin of demon brute is false.
 SexuallyExperienced of demon brute is true.
 MainInfection of demon brute is "Demon Brute".
 
-The description of demon brute is "[DemonBrutePetDesc]".
+Description of demon brute is "[DemonBrutePetDesc]".
 The icon of demon brute is Figure of DemonBrute_icon.
-The weapon damage of demon brute is 20.
+Weapon Damage of demon brute is 20.
 The level of demon brute is 1.
-The Dexterity of demon brute is 10.
+Dexterity of demon brute is 10.
 The summondesc of demon brute is "     Holding your demontooth amulet tightly in your fist, you murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]demon companion[else]captive demon brute[end if]. You tell him 'I want you to help me when I get into fights, OK?' In a [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]deep[else]growling[end if] voice, the demon answers 'Yes... master.'".
 The assault of demon brute is "[one of]The demon brute charges into combat, swinging wildly at your enemy in uncontrolled bloodlust![or]A loud roar of your demon brute frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your demon brute slashes your enemy with his claws![at random]".
 the fuckscene of demon brute is "[sexwithdemonbrutepet]".
@@ -864,7 +864,7 @@ to say DBTalk2:
 			else:
 				say "Invalid choice. Type [link]1[end link] to talk him into opening up, [link]2[end link] to order him to talk or [link]3[end link] to let the matter rest.";
 		if calcnumber is 1: [talk]
-			let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+			let bonus be (( Charisma of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			increase diceroll by bonus;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
@@ -1533,7 +1533,7 @@ Demonic Redemption	"Demonic Redemption"
 
 Demonic Redemption is a situation.
 ResolveFunction of Demonic Redemption is "".
-The sarea of Demonic Redemption is "nowhere".
+Sarea of Demonic Redemption is "nowhere".
 
 [Resolution Stages and Notes]
 [1: Triggered the Evil Demon Brute path on the way to the church.]
@@ -1893,9 +1893,9 @@ name	desc	weight	object
 
 demon seed is a grab object.
 
-demon seed is infectious. The strain of demon seed is "Demon Brute". demon seed is cum.
+demon seed is infectious. Strain of demon seed is "Demon Brute". demon seed is cum.
 
-the usedesc of demon seed is "The warm, sticky liquid tastes sweet as you drink it.";
+Usedesc of demon seed is "The warm, sticky liquid tastes sweet as you drink it.";
 
 instead of sniffing demon seed:
 	say "The demonic semen smells cloyingly sweet.";
@@ -1927,7 +1927,7 @@ this is the bruteforce rule:
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";

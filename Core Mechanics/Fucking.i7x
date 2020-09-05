@@ -62,8 +62,8 @@ Testerbot	"Testerbot"
 
 Testerbot is a person.
 [ Testerbot is in Primary Lab.	]			[Removed again - testing over]
-The description of Testerbot is "[testerbotdesc]".
-The conversation of Testerbot is { "Disgusting!" }.
+Description of Testerbot is "[testerbotdesc]".
+Conversation of Testerbot is { "Disgusting!" }.
 lastfuck of Testerbot is usually 555.
 
 to say testerbotdesc:				[Description]

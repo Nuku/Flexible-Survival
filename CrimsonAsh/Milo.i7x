@@ -10,7 +10,7 @@ Bobcat Encounter	"Bobcat Encounter"
 
 Bobcat Encounter is a situation.
 ResolveFunction of Bobcat Encounter is "[ResolveEvent Bobcat Encounter]".
-The sarea of Bobcat Encounter is "Forest".
+Sarea of Bobcat Encounter is "Forest".
 
 when play begins:
 	add Bobcat Encounter to BadSpots of MaleList;

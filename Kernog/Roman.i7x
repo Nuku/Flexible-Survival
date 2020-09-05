@@ -70,7 +70,7 @@ AnalVirgin of Team Captain Roman is false.
 PenileVirgin of Team Captain Roman is false.
 SexuallyExperienced of Team Captain Roman is false.
 MainInfection of Team Captain Roman is "Football Gorilla Male".
-The description of Team Captain Roman is "[RomanDesc]".
+Description of Team Captain Roman is "[RomanDesc]".
 
 to say RomanDesc:
 	if debugactive is 1:
@@ -85,7 +85,7 @@ to say RomanDesc:
 		else:
 			say "Roman stands out from the rest of the players. He looks more mature, and in opposition to his teammates, who strut on the field with only a helmet and a shoulder-pad, and nothing else. His shorts are not padded anymore, letting everyone see that he is now transgender.";
 
-The conversation of Team Captain Roman is { "Yap!" }.
+Conversation of Team Captain Roman is { "Yap!" }.
 Team Captain Roman is in Astroslide Football Field.
 
 instead of sniffing Team Captain Roman:
@@ -271,7 +271,7 @@ to say RomanConfront:
 	now HP of Roman is 2;
 
 to say RomanConvince:
-	let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+	let bonus be (( Charisma of Player minus 10 ) divided by 2);
 	if GorillasMember > 3:
 		increase bonus by 2;
 	if Player is female and Breast Size of Player is 0:
@@ -293,7 +293,7 @@ to say RomanConvince:
 		say "     'We already talked about it: I don't trust you enough to tell you about it. Please let it go,' Roman replies to your query.";
 
 to say RomanEncourage:
-	let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+	let bonus be (( Charisma of Player minus 10 ) divided by 2);
 	increase bonus by XP of Roman;
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Charisma Check):[line break]";
@@ -600,7 +600,7 @@ Grocery Store Security Camera	"Grocery Store Security Camera"
 
 Grocery Store Security Camera is a situation.
 ResolveFunction of Grocery Store Security Camera is "[ResolveEvent Grocery Store Security Camera]".
-The sarea of Grocery Store Security Camera is "Outside".
+Sarea of Grocery Store Security Camera is "Outside".
 
 to say ResolveEvent Grocery Store Security Camera:
 	say "     You find a grocery store on your way. The place has been looted until only the metallic shelves remain, but you still decide to give the place a quick check, just in case. As you have guessed, the store is totally empty. The floor is covered with cum stains, who go all the way to the back room. A soft whirr catches your attention to the ceiling, and your eye meet the one of a small motion-activated security camera. Taken by a sudden inspiration, you fetch a stool lying nearby, and open the security camera to grab its tape. This could prove useful[if Lost Camera is unresolved], provided you find some kind of viewing equipment, like a video camera[end if].";
@@ -630,7 +630,7 @@ Orca Volleyball Player	"Orca Volleyball Player"
 
 Orca Volleyball Player is a situation.
 ResolveFunction of Orca Volleyball Player is "[ResolveEvent Orca Volleyball Player]".
-The sarea of Orca Volleyball Player is "Beach".
+Sarea of Orca Volleyball Player is "Beach".
 
 to say ResolveEvent Orca Volleyball Player:
 	say "     You spot a small crowd nearby. As you approach, you see a volleyball flying in the air, followed by the massive frame of an orca jumping to receive it.";
@@ -663,7 +663,7 @@ Husky Gang	"Husky Gang"
 
 Husky Gang is a situation.
 ResolveFunction of Husky Gang is "[ResolveEvent Husky Gang]".
-The sarea of Husky Gang is "Outside".
+Sarea of Husky Gang is "Outside".
 
 to say ResolveEvent Husky Gang:
 	project the Figure of HuskyAlpha_soft_icon;

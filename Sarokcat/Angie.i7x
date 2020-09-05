@@ -40,7 +40,7 @@ AngieTrapped	"AngieTrapped"
 
 AngieTrapped is a situation.
 ResolveFunction of AngieTrapped is "[ResolveEvent AngieTrapped]".
-The sarea of AngieTrapped is "Zoo".
+Sarea of AngieTrapped is "Zoo".
 when play begins:
 	add AngieTrapped to badspots of HermList;
 	add AngieTrapped to BadSpots of FurryList;
@@ -83,7 +83,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "catnip "	"A small packet of catnip. It's pretty light, containing only dried, fragrant leaves."	0	catnip
 
-the usedesc of catnip is "[catnip use]";
+Usedesc of catnip is "[catnip use]";
 
 instead of sniffing catnip:
 	say "[catnip use]";
@@ -121,7 +121,7 @@ to say zoogiftscent:
 
 The invent of Zoo Giftshop is { "chips", "soda" }.
 
-The description of Zoo Giftshop is "[shopappearance]".
+Description of Zoo Giftshop is "[shopappearance]".
 
 to say shopappearance:
 	if AngieAroused is 50: [ Angie + Midnight in the gift shop ]
@@ -252,8 +252,8 @@ AnalVirgin of Angie is true.
 PenileVirgin of Angie is true.
 SexuallyExperienced of Angie is true.
 MainInfection of Angie is "Panther Herm".
-The description of Angie is "[AngieAppearance]".
-The conversation of Angie is { "Mewl!" }.
+Description of Angie is "[AngieAppearance]".
+Conversation of Angie is { "Mewl!" }.
 The icon of Angie is the figure of Angie_icon.
 
 
@@ -595,7 +595,7 @@ to say AngieSex1: [fucking her]
 	if AngieAroused is 0:
 		say "     Angie looks at you with desire, though she is still hesitant about this and says, 'I'm not really sure it's OK to just give in to the urges like this, but it does feel so very, very good. Do you really think it's OK?' Seems like she'll need a little bit of convincing yet before you can fuck her. Doing your best to calm and reassure her, you...";
 		LineBreak;
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
 		increase diceroll by bonus;
@@ -663,7 +663,7 @@ to say AngieSex2: [getting fucked by Angie]
 	if AngieAroused is 0:
 		say "     Angie looks at you with desire, though she is still hesitant about this and says, 'I'm not really sure it's OK to just give in to the urges like this, but it does feel so very, very good. Do you really think it's OK?' Seems like she'll need a little bit of convincing yet before you can fuck her. Doing your best to calm and reassure her, you...";
 		LineBreak;
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
 		increase diceroll by bonus;
@@ -749,7 +749,7 @@ to say AngieSex3: [herm sex with Angie]
 	if AngieAroused is 0:
 		say "     Angie looks at you with desire, though she is still hesitant about this and says, 'I'm not really sure it's OK to just give in to the urges like this, but it does feel so very, very good. Do you really think it's OK?' Seems like she'll need a little bit of convincing yet before you can fuck her. Doing your best to calm and reassure her, you...";
 		LineBreak;
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
 		increase diceroll by bonus;
@@ -942,7 +942,7 @@ to say AngieSex6: [giving her a blowjob]
 	if AngieAroused is 0:
 		say "     Angie looks at you with desire, though she is still hesitant about this and says, 'I'm not really sure it's OK to just give in to the urges like this, but it does feel so very, very good. Do you really think it's OK?' Seems like she'll need a little bit of convincing yet before you can fuck her. Doing your best to calm and reassure her, you...";
 		LineBreak;
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
 		increase diceroll by bonus;

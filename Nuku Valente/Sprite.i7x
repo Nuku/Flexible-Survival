@@ -244,9 +244,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "fairy dust"	"A sweet smelling powder that glistens in the light."	0	fairy dust
 
-fairy dust is a grab object. fairy dust is infectious. The strain of fairy dust is "City Sprite".
+fairy dust is a grab object. fairy dust is infectious. Strain of fairy dust is "City Sprite".
 
-The usedesc of fairy dust is "[tastefairydust]";
+Usedesc of fairy dust is "[tastefairydust]";
 
 to say tastefairydust:
 	say "     Looking at the sparkling powder, you dab your finger into it and give it a taste. It is quite sweet on your tongue, though it also carries a faintly feminine flavor as well. As you sample more of it, there's a growing tingling sensation on your tongue and you feel a little lighter on your feet.";

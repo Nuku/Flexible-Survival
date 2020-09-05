@@ -13,7 +13,7 @@ Anal Probing	"Anal Probing"
 
 Anal Probing is a situation.
 ResolveFunction of Anal Probing is "[ResolveEvent Anal Probing]".
-The sarea of Anal Probing is "Beach".
+Sarea of Anal Probing is "Beach".
 
 when play begins:
 	add Anal Probing to BadSpots of FurryList;

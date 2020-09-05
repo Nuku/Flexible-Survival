@@ -47,7 +47,7 @@ to say BeatTheWhiptail: [Catch her if you can. Beware, she's got no time for pen
 		increase WhiptailLossCount by 1;
 	else if WhiptailLossCount > 1:
 		say "     The reptilian beauty takes a step back, but you're wise to her tricks now, lunging forward to grab her before she takes off.";
-		let bonus be (( the strength of the player minus 10 ) divided by 2);
+		let bonus be (( Strength of Player minus 10 ) divided by 2);
 		let xx be WhiptailLossCount / 2;
 		if xx > 8, now xx is 8;
 		increase bonus by xx;

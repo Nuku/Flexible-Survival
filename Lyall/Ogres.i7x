@@ -20,7 +20,7 @@ Ogre Encounter	"Ogre Encounter"
 Ogre Encounter is a situation.
 ResolveFunction of Ogre Encounter is "[ResolveEvent Ogre Encounter]".
 The level of Ogre Encounter is 10. [minimum level to find the event]
-The sarea of Ogre Encounter is "Junkyard".
+Sarea of Ogre Encounter is "Junkyard".
 
 when play begins: [flags for blocking this event]
 	add Ogre Encounter to BadSpots of MaleList;
@@ -211,7 +211,7 @@ Object	Name
 Ogre's Camp	"Ogre's Camp"
 
 Ogre's Camp is a room. It is a fasttravel. It is private.
-The description of Ogre's Camp is "     You shouldn't be seeing this, as navigating to the Ogre Camp should bring up an encounter scene with them. Please report on the FS Discord how you saw this.".
+Description of Ogre's Camp is "     You shouldn't be seeing this, as navigating to the Ogre Camp should bring up an encounter scene with them. Please report on the FS Discord how you saw this.".
 
 instead of Navigating Ogre's Camp while (Resolution of Ogre Encounter is 8): [player is their willing playmate and is visiting]
 	say "     Wandering the city you find yourself back at the Ogres impromptu camp. You can see them sitting around talking amongst each other, not a care in the world. Though it appears that they cleaned up the mess of beer cans and empty bottles from last time. You are quickly welcomed by Mogs, who shouts 'Look who came back to visit' Kogs and Gurke look your direction pleased that you came back. 'Sit down and relax with us for a little bit, ' Gurke says, patting a spot on the wood log he's sitting on. You're not sure what kind of tree the logs from Oak or something; it's a dark, almost brown color. You walk over there and take a seat on the log next to Gurke. The moment you get situated he wraps his arm around you and asks, 'What did you come here for today, you want out life stories, some fun, or something else?' He elbows your ribs playfully while asking.";

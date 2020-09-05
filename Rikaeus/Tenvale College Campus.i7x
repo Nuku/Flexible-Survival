@@ -10,7 +10,7 @@ Reaching the College	"Reaching the College"
 
 Reaching the College is a situation.
 ResolveFunction of Reaching the College is "[ResolveEvent Reaching the College]".
-The sarea of Reaching the College is "Outside".
+Sarea of Reaching the College is "Outside".
 
 to say ResolveEvent Reaching the College:
 	say "     Your meandering path through the city brings you into some new territory. What was previously blockaded by monster activity and traffic accidents has been circumvented by following a few footpaths you'd missed earlier. Exiting from one of these, you step into an area that's a little less densely packed and has some patches of green between the buildings. Just as you're recogn-[line break]";
@@ -62,7 +62,7 @@ College Campus Entrance	"College Campus Entrance"
 College Campus Entrance is a room. It is fasttravel. It is private.
 earea of College Campus Entrance is "Campus".
 
-The description of College Campus Entrance is "[campusdesc]".
+Description of College Campus Entrance is "[campusdesc]".
 
 to say campusdesc:
 	say "     Tenvale College stretches out before you. The institution is wedged into a section of the city that has grown denser around it, giving the fairly open and green campus a refreshing contrast to the rest of the surroundings. Renowned for its strong sports program, you know that there are multiple large sporting locations on the edge of the campus, even though you can't see them from right here, due to various other buildings all around. To the northwest, northeast, east, and west are walkways that lead to other parts of the campus, cutting through the grassy expanse around you. Another pathway leads straight north, to a fountain where you see multiple students hanging out, clearly on free time.";
@@ -84,7 +84,7 @@ The marea of Campus Grounds is "Campus".
 the scent of College Campus Entrance is "[one of]You catch a whiff of sweat and arousal[or]You notice the strong scent of rabbits[or]Like elsewhere in the city, the scent of sex lingers in the air[at random].".
 
 campus map is an object. It is in College Campus Entrance. It is fixed in place. Understand "map" as campus map.
-the description of campus map is "[Map_Tenvale_College_Desc]".
+Description of campus map is "[Map_Tenvale_College_Desc]".
 The icon of campus map is Figure of Map_Tenvale_College_icon.
 
 to say Map_Tenvale_College_Desc:
@@ -100,7 +100,7 @@ College Walkway East is east of College Campus Entrance.
 College Walkway East is southwest of Dorm Street.
 College Walkway East is northwest of Greek Street.
 College Walkway East is southeast of College Walkway Northeast.
-The description of College Walkway East is "[campuseastdesc]".
+Description of College Walkway East is "[campuseastdesc]".
 earea of College Walkway East is "Campus".
 
 to say campuseastdesc:
@@ -114,7 +114,7 @@ Greek Street	"Greek Street"
 
 Greek Street is a room.
 Greek Street is southeast of College Walkway East.
-The description of Greek Street is "[greekdesc]".
+Description of Greek Street is "[greekdesc]".
 earea of Greek Street is "Campus".
 
 to say greekdesc:
@@ -128,7 +128,7 @@ Dorm Street	"Dorm Street"
 
 Dorm Street is a room.
 Dorm Street is northeast of College Walkway East.
-The description of Dorm Street is "[dormstreetdesc]".
+Description of Dorm Street is "[dormstreetdesc]".
 earea of Dorm Street is "Campus".
 
 to say dormstreetdesc:
@@ -142,7 +142,7 @@ Second Floor Male Dorms	"Second Floor Male Dorms"
 
 Second Floor Male Dorms is a room.
 Second Floor Male Dorms is above Tenvale College Male Dorms.
-The description of Second Floor Male Dorms is "Upon looking around you notice that the second floor of the male dorms looks pretty much the same as the first floor, at least aesthetically. There is another notice board on the wall but this one has sign up sheets for, surprisingly, the Spartans on the campus. It is by then that you realize that there are a quite a few of them wandering around on this floor, making you muse that perhaps this is where they stay. Thankfully, at least for the atmosphere, the soldier-like college students aren't the only ones up here. Like below there are other students wandering around from room to room hanging out with their friends or just studying.".
+Description of Second Floor Male Dorms is "Upon looking around you notice that the second floor of the male dorms looks pretty much the same as the first floor, at least aesthetically. There is another notice board on the wall but this one has sign up sheets for, surprisingly, the Spartans on the campus. It is by then that you realize that there are a quite a few of them wandering around on this floor, making you muse that perhaps this is where they stay. Thankfully, at least for the atmosphere, the soldier-like college students aren't the only ones up here. Like below there are other students wandering around from room to room hanging out with their friends or just studying.".
 
 [Room Declaration]
 
@@ -152,7 +152,7 @@ Tenvale College Male Dorms	"Tenvale College Male Dorms"
 
 Tenvale College Male Dorms is a room.
 Tenvale College Male Dorms is east of Dorm Street.
-The description of Tenvale College Male Dorms is "[collegedormdesc]".
+Description of Tenvale College Male Dorms is "[collegedormdesc]".
 
 to say collegedormdesc:
 	say "     The dorm hallway is rather well kept for a building during an apocalypse and if you didn't know any better, you'd think that said apocalypse never happened. First and foremost you can spot random guys talking happily amongst each other, not acting upon the baser urges that everyone else in the city have already acted upon. Next, there are various cork boards with club recruitment posters pinned to them. While they could be old versions, upon closer look you notice that they've been redrawn to include the new looks of each of the clubs, an example being the football team's wolfmen. Beyond that you can see that various rooms are occupied by people but figure that it'd be best to only visit someone rather than randomly searching the large building. Who knows who or what you might find otherwise. If you wish to leave you could always return to Dorm Street by going west.";
@@ -163,7 +163,7 @@ Tenvale College Female Dorms	"Tenvale College Female Dorms"
 
 Tenvale College Female Dorms is a room.
 Tenvale College Female Dorms is north of Dorm Street.
-The description of Tenvale College Female Dorms is "[collegefdormdesc]".
+Description of Tenvale College Female Dorms is "[collegefdormdesc]".
 
 to say collegefdormdesc:
 	say "     The dorm hallway is rather well kept for a building during an apocalypse and if you didn't know any better, you'd think that said apocalypse never happened. First and foremost you can spot random women talking happily amongst each other, not acting upon the baser urges that everyone else in the city have already acted upon. Next, there are various cork boards with club recruitment posters pinned to them. While they could be old versions, upon closer look you notice that they've been redrawn to include the new looks of each of the clubs, as well as a big scorecard for something called the 'Cheerleader Breeding Competition'. Beyond that you can see that various rooms are occupied by people but figure that it'd be best to only visit someone rather than randomly searching the large building. Who knows who or what you might find otherwise. If you wish to leave you could always return to Dorm Street by going south.";
@@ -175,7 +175,7 @@ Object	Name
 Richard's Room	"Richard's Room"
 
 Richard's Room is a room.
-The description of Richard's Room is "[richardroomdesc]".
+Description of Richard's Room is "[richardroomdesc]".
 
 to say richardroomdesc:
 	say "     The satyr boy's room is what you expect of a college student. Plastered all over the walls are lewd pictures of naked women and men, however upon closer examination you spot posters of male couples fucking that look to be recent acquisitions. You muse that Richard's recent goat changes appear to have enhanced his various desires. Turning your attention from the posters you notice there's various items on the floor from a football to stray jock straps to even a stray dildo. Out of the entire mess the only things that look to be neat are his bed which is covered in dark blue bedsheets and blankets and his computer area which is clean of junk.";
@@ -187,7 +187,7 @@ Object	Name
 Pericles' Room	"Pericles' Room"
 
 Pericles' Room is a room.
-The description of Pericles' Room is "[periclesroomdesc]".
+Description of Pericles' Room is "[periclesroomdesc]".
 
 to say periclesroomdesc:
 	say "     The strong male's room is the complete opposite of what one would define as a Spartan room. He has posters of various fictional books lining the wall as well as various weapons, both meticulously taken care of. On top of that, there is a large bookshelf filled with various books that match the posters. Beyond that he has a simple bed with red sheets, a computer sitting in the corner for his homework, and a window looking over the entire campus. The Spartan-Helot himself is wandering between throughout the room doing various things from looking at paperwork to looking out upon the campus. One last thing you do note is that this room seems to be larger than the other dorm rooms. This causes you to guess that the wall to the room next door was knocked down to give it more size.";
@@ -199,7 +199,7 @@ Object	Name
 Jake's Room	"Jake's Room"
 
 Jake's Room is a room.
-The description of Jake's Room is "[jakesroomdesc]".
+Description of Jake's Room is "[jakesroomdesc]".
 
 to say jakesroomdesc:
 	say "     There are two things you notice when you enter the panda's room. First and foremost is the size of the room. It's twice the size you would have guessed with the spacing of the doors, causing you to suspect that the wall was knocked down to add more room. The second item you notice is the large tarp covering the right half of the room that's splattered with the occasional bits of paint. Beyond just the tarp there are various art supplies on that side with an easel, a pottery stand, and a sculpting stand. It's on that side that you find Jake. On the left side you find a lounging area with a bed, a couch, and a computer that you assume is for the panda to do his homework for his other subjects. [if Lust of Jake is 1]On the wall above the couch you spot a very familiar and intimate picture of you sucking off Jake. [end if]Next to the couch is a table and sitting on it is an instant camera which you take note of. Taking a glance at your friend he seems to be hard at work at one of his many art projects.";
@@ -211,7 +211,7 @@ Object	Name
 Wally's Room	"Wally's Room"
 
 Wally's Room is a room.
-The description of Wally's Room is "[wallysroomdesc]"
+Description of Wally's Room is "[wallysroomdesc]"
 
 to say wallysroomdesc:
 	say "     Taking a glance around the otter's room you notice it's not that very decorated, though to be honest it does make sense, since he is new to the campus. What it is decorated with is bits and bobs obviously from his previous home, a computer for school-work, a bookshelf, and a bed. Deciding to take a look at the items from his cave, you wander around, looking at them. Some of them are seashells that you assume he found while wandering the beach. Another one of the items is a photo of a young teen and his parents, something you assume to be a family picture for Wally. The last of the major items appears to be what's on your friends bed and he's sitting on. It's a large blue quilt that covers the entire thing, seemingly handmade. It intrigues you, as you wonder if the otter made it himself. Other than all that the room is rather bare";
@@ -231,7 +231,7 @@ College Fountain is north of College Campus Entrance.
 College Fountain is south of College Administration Building.
 College Fountain is west of College Walkway Northeast.
 College Fountain is east of College Walkway Northwest.
-The description of College Fountain is "[fountaindesc]".
+Description of College Fountain is "[fountaindesc]".
 earea of College Fountain is "Campus".
 
 to say fountaindesc:
@@ -248,7 +248,7 @@ College Administration Building is north of College Fountain.
 College Administration Building is northwest of College Walkway Northeast.
 College Administration Building is northeast of College Walkway Northwest.
 College Administration Building is below Dean's Office.
-The description of College Administration Building is "[CABdesc]".
+Description of College Administration Building is "[CABdesc]".
 
 to say CABdesc:
 	say "     The administration building is rather bright and filled to the brim with motivational posters. In your personal opinion you feel as if the entire thing is extremely corny. But then again to be honest, they [italic type]are[roman type] trying to recruit new students. Though you swear that one of those posters is new and is encouraging sex. Ignoring the weird ass posters for a second, the administration area is rather bland otherwise. There is a desk in the center of the room with ropes making a line for people to stand in. You assume that this is where people go to get registered.";
@@ -261,7 +261,7 @@ Dean's Office	"Dean's Office"
 
 Dean's Office is a room.
 Dean's Office is above College Administration Building.
-The description of Dean's Office is "[DeanDesc]".
+Description of Dean's Office is "[DeanDesc]".
 
 to say DeanDesc:
 	say "     The dean's office is surprisingly clean, something you didn't expect as you figured there'd be a lot of paperwork. Although upon closer examination, you see that there is, if the amount on the desk says anything. Against the walls are shelves with ancient looking items, some of them appearing to be from thousands of years ago. From what you know of the person who runs the school though it's to be expected as he is rather old. That is if you can call a thousands of years old angel that rather than ancient.";
@@ -278,7 +278,7 @@ College Walkway Northwest is southeast of College Belltower.
 College Walkway Northwest is west of College Fountain.
 College Walkway Northwest is southwest of College Administration Building.
 College Walkway Northwest is northeast of College Walkway West.
-The description of College Walkway Northwest is "[campusnorthwestdesc]".
+Description of College Walkway Northwest is "[campusnorthwestdesc]".
 earea of College Walkway Northwest is "Campus".
 
 to say campusnorthwestdesc:
@@ -292,7 +292,7 @@ Creative Street	"Creative Street"
 
 Creative Street is a room.
 Creative Street is west of College Walkway Northwest.
-The description of Creative Street is "[creativestreetdesc]".
+Description of Creative Street is "[creativestreetdesc]".
 
 to say creativestreetdesc:
 	say "     The street you're on is sexually clean for the most part in regards to fluids like cum and stuff. However looking around you realize the buildings are covered in paint. Not messily though, as they appear to make up multiple murals all over the place. They're rather beautiful and catch your eyes for a few minutes as you stare at them. Other than that there are a few students wandering about, some of them going into buildings marked as museums, galleries, etc. A few of them are covered in paint themselves making you assume that they're art students. Overall this place is pretty nice looking. If you look to the east you see a walkway that leads away from here.";
@@ -306,7 +306,7 @@ College Belltower	"College Belltower"
 College Belltower is a room.
 College Belltower is northwest of College Walkway Northwest.
 College Belltower is below The Clouds.
-The description of College Belltower is "[belltowerdesc]".
+Description of College Belltower is "[belltowerdesc]".
 
 to say belltowerdesc:
 	say "     The belltower seems to be the oldest building on the campus. Judging by the people hanging around, it seems to be the prime location for winged college students. On the ground, there is a mix of various species, but as mentioned earlier it's primarily the location for people with flight. If you look upward you can see some of the students flying up high to a location that you have no idea of. Perhaps you can look around campus for information on what's up there, although you might know someone who has an idea of what is, maybe someone who is kind enough to tell you.";
@@ -321,7 +321,7 @@ College Walkway West is a room.
 College Walkway West is west of College Campus Entrance.
 College Walkway West is southeast of Lecture Street.
 College Walkway West is northeast of Athletic Street.
-The description of College Walkway West is "[campuswestdesc]".
+Description of College Walkway West is "[campuswestdesc]".
 earea of College Walkway West is "Campus".
 
 to say campuswestdesc:
@@ -335,7 +335,7 @@ Athletic Street	"Athletic Street"
 
 Athletic Street is a room.
 Athletic Street is southwest of College Walkway West.
-The description of Athletic Street is "[athleticstreetdesc]".
+Description of Athletic Street is "[athleticstreetdesc]".
 earea of Athletic Street is "Campus".
 
 to say athleticstreetdesc:
@@ -349,7 +349,7 @@ Lecture Street	"Lecture Street"
 
 Lecture Street is a room.
 Lecture Street is northwest of College Walkway West.
-The description of Lecture Street is "[lecturestreetdesc]".
+Description of Lecture Street is "[lecturestreetdesc]".
 earea of Lecture Street is "Campus".
 
 to say lecturestreetdesc:
@@ -362,7 +362,7 @@ Object	Name
 Satyr Frat Dummy Room	"Satyr Frat Dummy Room"
 
 Satyr Frat Dummy Room is a room.
-The description of Satyr Frat Dummy Room is "";
+Description of Satyr Frat Dummy Room is "";
 
 [Spartan Dummy Room]
 
@@ -372,7 +372,7 @@ Spartan Dummy Room	"Spartan Dummy Room"
 
 Spartan Dummy Room is a room.
 Spartan Dummy Room is west of Lecture Street.
-The description of Spartan Dummy Room is "";
+Description of Spartan Dummy Room is "";
 
 [Lecture Dummy Room]
 
@@ -382,7 +382,7 @@ Lecture Dummy Room	"Lecture Dummy Room"
 
 Lecture Dummy Room is a room.
 Lecture Dummy Room is north of Lecture Street.
-The description of Lecture Dummy Room is "";
+Description of Lecture Dummy Room is "";
 
 [Player Dorm Room]
 
@@ -391,7 +391,7 @@ Object	Name
 Your Dorm Room	"Your Dorm Room"
 
 Your Dorm Room is a room.
-The description of Your Dorm Room is "     Your room is at the moment a rather bland place with simple blue walls and a beige carpet floor. The bed is off to the side, your sheets a basic dark red color. Against the wall is a bookshelf you guess would be for textbooks for classes or any other reading material you like and next to it is a standard black desk with a very comfortable looking chair. Overall, it's not that interesting but to be honest, it has not been lived in so it does have a reason to look this way.";
+Description of Your Dorm Room is "     Your room is at the moment a rather bland place with simple blue walls and a beige carpet floor. The bed is off to the side, your sheets a basic dark red color. Against the wall is a bookshelf you guess would be for textbooks for classes or any other reading material you like and next to it is a standard black desk with a very comfortable looking chair. Overall, it's not that interesting but to be honest, it has not been lived in so it does have a reason to look this way.";
 
 [Room Declaration]
 
@@ -401,7 +401,7 @@ Tenvale College Library	"Tenvale College Library"
 
 Tenvale College Library is a room.
 Tenvale College Library is northeast of College Walkway Northeast.
-The description of Tenvale College Library is "[tenvalelibrarydesc]".
+Description of Tenvale College Library is "[tenvalelibrarydesc]".
 
 to say tenvalelibrarydesc:
 	say "     The library is rather large, bigger than the one at the bunker. There are rows upon rows of books, though you feel like you should have expected this, as Tenvale College is a private college funded by a lot of money, or at least it was before the nanite apocalypse. You see students sitting at various tables, studying for classes it appears. Though, by the noise of moaning in the background and what sounds like balls slapping against someone's ass there is more than just class work being done. Maybe at some point you'll run into someone who takes residence in this place?";
@@ -418,7 +418,7 @@ College Walkway Northeast is east of College Fountain.
 College Walkway Northeast is southeast of College Administration Building.
 College Walkway Northeast is northwest of College Walkway East.
 College Walkway Northeast is southwest of Tenvale College Library.
-The description of College Walkway Northeast is "[campusnortheastdesc]".
+Description of College Walkway Northeast is "[campusnortheastdesc]".
 earea of College Walkway Northeast is "Campus".
 
 to say campusnortheastdesc:

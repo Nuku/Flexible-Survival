@@ -13,7 +13,7 @@ Entrance to the Red Light District	"Entrance to the Red Light District"
 
 Entrance to the Red Light District is a room. It is fasttravel.
 The earea of Entrance to the Red Light District is "Red".
-The description of Entrance to the Red Light District is "This street leads to the city's Red Light District. You will never find a more wretched hive of perverts and sex addicts. You must be cautious."
+Description of Entrance to the Red Light District is "This street leads to the city's Red Light District. You will never find a more wretched hive of perverts and sex addicts. You must be cautious."
 Investigate Red Light is a door. "More of the district waits to be explored to the north and south.". It is dangerous. Investigate Red Light is south of Red Light District and north of Entrance to the Red Light District.
 the marea of Investigate Red Light is "Red".
 
@@ -32,13 +32,13 @@ Object	Name
 Adult Shopping Center "Adult Shopping Center"
 
 Adult Shopping Center is a room. Red Light Entrance is east of Adult Shopping Center.
-The description of Adult Shopping Center is "Stores full of adult toys and pornos line the streets. Judging by the puddles of cum and pussy juice everywhere, the infection must have swept through this place like a hurricane.".
+Description of Adult Shopping Center is "Stores full of adult toys and pornos line the streets. Judging by the puddles of cum and pussy juice everywhere, the infection must have swept through this place like a hurricane.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Side Street "Side Street"
 
 Side Street is a room. North from the Side Street is a room called Adult Shopping Center.
-The description of Side Street is "This is the alley behind one of the adult stores in the red light district. This place is filthy and very seeding looking.".
+Description of Side Street is "This is the alley behind one of the adult stores in the red light district. This place is filthy and very seeding looking.".
 
 Red Light ends here.

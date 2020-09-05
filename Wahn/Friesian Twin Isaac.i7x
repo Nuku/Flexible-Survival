@@ -57,8 +57,8 @@ SexuallyExperienced of Isaac is true.
 TwistedCapacity of Isaac is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Isaac is false. [steriles can't knock people up]
 MainInfection of Isaac is "Horseman".
-The description of Isaac is "[Isaacdesc]".
-The conversation of Isaac is { "Meep!" }.
+Description of Isaac is "[Isaacdesc]".
+Conversation of Isaac is { "Meep!" }.
 
 instead of sniffing Isaac:
 	say "     A";

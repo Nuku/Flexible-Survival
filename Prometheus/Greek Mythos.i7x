@@ -36,7 +36,7 @@ Labors Introduction	"Labors Introduction"
 
 Labors Introduction is a situation.
 ResolveFunction of Labors Introduction is "[ResolveEvent Labors Introduction]".
-The sarea of Labors Introduction is "Museum".
+Sarea of Labors Introduction is "Museum".
 The Level of Labors Introduction is 30.
 
 [This can stay here, for the time when we eventually make more rooms in the museum. One thing that should be remembered is that _Navigation_ is not _Going_ - it's a completely different command that moves the player by a code command, not the act of walking that would trigger the code below]
@@ -68,7 +68,7 @@ Meet the Nemean Lion is a situation.
 ResolveFunction of Meet the Nemean Lion is "[ResolveEvent Meet the Nemean Lion]".
 Prereq1 of Meet the Nemean Lion is Labors Introduction.
 The level of Meet the Nemean Lion is 30.
-The sarea of Meet the Nemean Lion is "Plains".
+Sarea of Meet the Nemean Lion is "Plains".
 
 instead of going to Dry Plains while (Meet the Nemean Lion is active and Meet the Nemean Lion is not resolved and TwelveLaborsStage is 1 and a random chance of 1 in 5 succeeds):
 	move player to Dry Plains;

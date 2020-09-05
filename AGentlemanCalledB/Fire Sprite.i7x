@@ -461,7 +461,7 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 			now absorb is dam;
 		if absorb > 0:
 			say "You prevent [special-style-1][absorb][roman type] damage!";
-		decrease HP of the player by dam;
+		decrease HP of Player by dam;
 		increase HP of Player by absorb;
 		if M is 5:
 			now N is 1;
@@ -480,16 +480,16 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "glowing ember"	"A small glowing ember, which seems to stay warm regardless of how you store it."	0	glowing ember
 
-glowing ember is a grab object. glowing ember is infectious. The strain of glowing ember is "Fire Sprite".
+glowing ember is a grab object. glowing ember is infectious. Strain of glowing ember is "Fire Sprite".
 
-The usedesc of glowing ember is "[glowingemberuse]";
+Usedesc of glowing ember is "[glowingemberuse]";
 
 to say glowingemberuse:
 	say "     Rolling the small, warm ember between your fingers you begin to find it difficult to focus on anything but its warm light. You hear the crackling of flame in the distance as you slip further and further out of focus, your vision filling with nothing but the pleasant light and flickering of flames...";
 	WaitLineBreak;
 	say "     You come to your senses some time later. Glancing around, you find the small ember missing. It is hard to shake the strange desire to light something on fire.";
 
-the scent of glowing ember is "The small ember smells faintly smoky.".
+Scent of glowing ember is "The small ember smells faintly smoky.".
 
 Section 5 - Endings
 

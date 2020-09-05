@@ -53,8 +53,8 @@ object	name
 Corbin	"Corbin"
 
 Corbin is a man. The HP of Corbin is normally 0. Corbin is in Worker Barracks.
-The description of Corbin is "[CorbinDesc]".
-The conversation of Corbin is { "Mew!" }.
+Description of Corbin is "[CorbinDesc]".
+Conversation of Corbin is { "Mew!" }.
 CorbinPregnancy is a number that varies. [pregnancy progress variable - after 36 turns, the pregnancy becomes visible]
 CorbinKidCounter is a number that varies.
 CorbinPregCounter is a number that varies.

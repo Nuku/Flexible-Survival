@@ -6,7 +6,7 @@ Object	Name
 Zoo Entrance	"Zoo Entrance"
 
 Zoo Entrance is a room. It is fasttravel.
-The description of Zoo Entrance is "[ZooEntranceDesc]".
+Description of Zoo Entrance is "[ZooEntranceDesc]".
 The earea of Zoo Entrance is "Outside".
 
 to say ZooEntranceDesc:
@@ -22,7 +22,7 @@ Object	Name
 Zoo Parking	"Zoo Parking"
 
 Zoo Parking is a room.
-The description of Zoo Parking is "[ZooParkingDesc]".
+Description of Zoo Parking is "[ZooParkingDesc]".
 
 to say ZooParkingDesc:
 	say "     The zoo has a fairly large parking space, complete with eight spots for buses. There are still a fairly large number of cars on it, so your guess would be that the spreading nanite infection reached the zoo during the opening hours and most owners of those cars are still inside, in whichever form they now have...";
@@ -33,7 +33,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Fence Path	"Fence Path"
 
-Fence Path is a room. The description of Fence Path is "[FencePathDesc]".
+Fence Path is a room. Description of Fence Path is "[FencePathDesc]".
 
 to say FencePathDesc:
 	say "     You're on a path running along the outer edge of the zoo here. It's quite nicely laid out, with a lot of grass and decorative plants on both sides. Behind the bushes, in the west, you see the metal border fence, tall and made of wrought iron with spikes on the top. To the north, a tall wall looms up some small distance away. As you walk along the path, you see one of the bars has been cut out of the fence of the cheetah exhibit in the east. You could climb into the enclosure through the resulting hole...";
@@ -41,7 +41,7 @@ to say FencePathDesc:
 Fence Path is north of Zoo Entrance. Cheetah Habitat is east of Fence Path. Border Wall is north of Fence Path. The earea of Fence Path is "Zoo".
 
 Dirty Hose is an object. It is in the fence path. It is fixed in place. Understand "hose" as dirty hose.
-the description of dirty hose is "This old hose was once used to water plants or maybe spray the animals. A faint trickle of water still drips from it. You could [']drink['] it, if you trust the water.".
+Description of dirty hose is "This old hose was once used to water plants or maybe spray the animals. A faint trickle of water still drips from it. You could [']drink['] it, if you trust the water.".
 
 instead of drinking the dirty hose:
 	ItemGain dirty water by 1;
@@ -55,7 +55,7 @@ Object	Name
 Border Wall	"Border Wall"
 
 Border Wall is a room.
-The description of Border Wall is "[BorderWallDesc]".
+Description of Border Wall is "[BorderWallDesc]".
 
 to say BorderWallDesc:
 	say "     The outer boundary of the zoo in the north is formed by a huge wall that extends far in both directions, cutting the city off from what lies beyond. You vaguely remember reading about its construction at the start of the last century - apparently a fair bit of the countryside towards the north was owned by a single rich man then, who was mad as a hatter with germophobia and whatnot. At some point the guy decided he never wanted to see another human in his life, resulting in the construction of the 'Great Wall of the West'. It doesn't even have any openings, just arches around an area a dozen miles in circumference which borders the ocean. No one has been on the other side of since then, as the land is held by a trust and has been declared a nature sanctuary. Which means that it would actually make it a good place to flee to, escaping the creature-infested inner city.";
@@ -67,7 +67,7 @@ Object	Name
 Cheetah Habitat	"Cheetah Habitat"
 
 Cheetah Habitat is a room. The earea of Cheetah Habitat is "Zoo".
-The description of Cheetah Habitat is "[CheetahHabitatDesc]".
+Description of Cheetah Habitat is "[CheetahHabitatDesc]".
 
 to say CheetahHabitatDesc:
 	say "     This is the home of cheetahs, a relatively large and open area with a few rocks and trees. From the looks of it, there are none out and about right now, though that might change at any moment. After all, there is a large cat flap in the side of the building forming the front of the enclosure. One of the panes of glass meant for dividing animals from visitors has been shattered into pieces, so you can just walk though the hole and exit the habitat and cheetah house through the doors in its south wall.[CheetahLickChance]";
@@ -85,7 +85,7 @@ to say CheetahLickChance:
 		say "     It is eerily quiet in here. You should probably leave now.";
 
 The Cheetah Doors is a door.
-The description of Cheetah Doors is "A pair of double doors leads in and out of the cheetah house.".
+Description of Cheetah Doors is "A pair of double doors leads in and out of the cheetah house.".
 understand "door" or "gate" as the Cheetah Doors.
 Zoo Entryway is south of Cheetah Doors.
 Cheetah Habitat is north of Cheetah Doors.
@@ -96,7 +96,7 @@ Zoo Entryway	"Zoo Entryway"
 
 Zoo Entryway is a room. Zoo Entryway is east of Zoo Entrance.
 The earea of Zoo Entryway is "Zoo".
-The description of Zoo Entryway is "[ZooEntrywayDesc]".
+Description of Zoo Entryway is "[ZooEntrywayDesc]".
 
 to say ZooEntrywayDesc:
 	say "     This is the main entryway of the zoo, start of the main path winding its way between the animal enclosures. The path is comfortably wide, clearly meant for large groups of visitors and leads on to the northeast, its surface formed by well-laid cobblestones. Flanking it in the north is the cheetah exhibit, while there are public restrooms on the south side.";
@@ -109,7 +109,7 @@ Zoo Restrooms	"Zoo Restrooms"
 
 Zoo Restrooms is a room. Zoo Restrooms is south of Zoo Entryway.
 The earea of Zoo Restrooms is "Zoo".
-The description of Zoo Restrooms is "[ZooRestroomsDesc]".
+Description of Zoo Restrooms is "[ZooRestroomsDesc]".
 
 to say ZooRestroomsDesc:
 	say "     You're in the zoo's large public restrooms. Looks like someone went on a rampage in here... the stall doors of all the toilets have been ripped off, and it seems like something used toilet-paper rolls as chew toys, spreading shredded paper all throughout the rooms. Some large muddy paw-prints at the entrance show that it must have been an animal of some kind.";
@@ -122,7 +122,7 @@ Main Path 1	"Main Path 1"
 
 Main Path 1 is a room. Main Path 1 is northeast of Zoo Entryway.
 The earea of Main Path 1 is "Zoo".
-The description of Main Path 1 is "[MainPath1Desc]".
+Description of Main Path 1 is "[MainPath1Desc]".
 
 to say MainPath1Desc:
 	say "     You're on the cobbled main path of the zoo, in between many different exhibits. In this section, there's the alligator enclosure in the north and a bird house with an enormous web canopy connected to it in the south. Coming from the entrance in the southwest, the path continues to the east, where it leads deeper into the zoo.";
@@ -135,7 +135,7 @@ Main Path 2	"Main Path 2"
 
 Main Path 2 is a room. Main Path 2 is east of Main Path 1.
 The earea of Main Path 2 is "Zoo".
-The description of Main Path 2 is "[MainPath2Desc]".
+Description of Main Path 2 is "[MainPath2Desc]".
 
 to say MainPath2Desc:
 	say "     You're on the cobbled main path of the zoo, in between many different exhibits. In this section, there's the snake house in the north, and in the south you can see the enormous web canopy of the bird enclosure arching over a moderately large forest area. If you want to go in and check it out, the bird house forming the entry is to the west of you. Further east, the path widens onto a small plaza.";
@@ -148,7 +148,7 @@ Zoo Rest Area	"Zoo Rest Area"
 
 Zoo Rest Area is a room.
 Zoo Rest Area is east of Main Path 2. The earea of Zoo Rest Area is "Zoo".
-The description of Zoo Rest Area is "[ZooRestAreaDesc]".
+Description of Zoo Rest Area is "[ZooRestAreaDesc]".
 
 to say ZooRestAreaDesc:
 	say "     This plaza in the midst of the zoo was meant to serve as a rest area for the visitors. Surrounding a bronze statue of a tiger in the middle, there are benches, several picnic tables and a number of food stands - thoroughly looted now, and one even has been completely flattened. Even those stands that sold non-edible goods were ransacked, the shreds of white fluff scattered about them attesting to the gruesome end of quite a few stuffed toys. Seeing this scene of devastation reminds you strongly that this isn't a safe and peaceful place anymore. Clearly, there are wild beasts out and roaming the area and you should take care if you want to explore any of the many paths leading off in all directions, leading to the expansive grounds of the zoo. It might just be a good idea to go back west towards to the entrance.";
@@ -174,7 +174,7 @@ name	desc	weight	object
 the scent of red herring is "The plushy inexplicably smells of licorice.".
 
 red herring is a grab object. red herring is not temporary.
-the usedesc of red herring is "[HerringUse]";
+Usedesc of red herring is "[HerringUse]";
 
 to say HerringUse:
 	say "     Stroking over the red plush toy, you relax a bit, though your mind keeps wondering if you should use it for something specific, maybe give it to someone?";
@@ -189,7 +189,7 @@ Bird House	"Bird House"
 
 Bird House is a room. Bird House is south of Main Path 1.
 The earea of Bird House is "Zoo".
-The description of Bird House is "[BirdHouseDesc]".
+Description of Bird House is "[BirdHouseDesc]".
 
 to say BirdHouseDesc:
 	say "     You're in the bird house, which contains informative plaques and signs explaining lots of facts about all the feathered creatures. Then there is a door to the back area in which the zookeepers cared for the birds, which you assume contains supplies and all kinds of stuff - sadly, it's locked, and with a pretty sturdy lock too. And finally, there is a kind of airlock, consisting of two doors and a bit of hallway in between that leads into the bird enclosure itself. Back north is the exit to the main zoo pathway.";
@@ -201,14 +201,14 @@ Object	Name
 Bird Enclosure	"Bird Enclosure"
 
 Bird Enclosure is a room. The earea of Bird Enclosure is "Zoo".
-The description of Bird Enclosure is "[BirdEnclosureDesc]".
+Description of Bird Enclosure is "[BirdEnclosureDesc]".
 
 to say BirdEnclosureDesc:
 	say "     This bird enclosure isn't so much a cage as it is a small piece of forest under an enormous web-canopy, held up by very long steel struts and quite a few strands of steel cables. There's nothing between the birds and the walkways through the enclosure - which might not be such a good thing these days, now that you think of it. Who knows what creatures now populate this area and how dangerous they are.[BirdExposureChance]";
 
 the scent of Bird Enclosure is "This whole area smells strongly of birds.".
 
-The Bird Doors is a door. The description of Bird Doors is "     Two doors with a short corridor in between make sure that none of the birds leave their enclosure. Or they did, in the time before there were intelligent bird-creatures in here. They might still pose a problem for some inhabitants of the habitat, but many will no doubt be able to go in and out here.".
+The Bird Doors is a door. Description of Bird Doors is "     Two doors with a short corridor in between make sure that none of the birds leave their enclosure. Or they did, in the time before there were intelligent bird-creatures in here. They might still pose a problem for some inhabitants of the habitat, but many will no doubt be able to go in and out here.".
 understand "door" or "gate" or "doors" as the Bird doors.
 Bird House is outside of Bird Doors.
 Bird Enclosure is inside of Bird Doors.
@@ -231,7 +231,7 @@ Snake house	"Snake house"
 
 Snake house is a room. Snake house is north of Main Path 2.
 The earea of Snake House is "Zoo".
-The description of Snake house is "[SnakeHouseDesc]".
+Description of Snake house is "[SnakeHouseDesc]".
 
 to say SnakeHouseDesc:
 	say "     This house has quite a number of terrariums set into the walls of room after room. They're all empty, which might just be the result of having their glass fronts smashed in. No evidence remains who did this or why, but you can make out where the snakes went from the tracks through all the little glass fragments on the floor. They lead outside, ending at a nearby sewer grate that has been bent and warped, creating an opening big enough to slither through, though not for you to follow. Looks like any snakes are now in the sewers.";
@@ -244,7 +244,7 @@ Gator Pit	"Gator Pit"
 
 Gator Pit is a room. Gator Pit is north of Main Path 1.
 The earea of Gator Pit is "Mall".
-The description of Gator Pit is "[GatorPitDesc]".
+Description of Gator Pit is "[GatorPitDesc]".
 
 to say GatorPitDesc:
 	say "     This enclosure held alligators once, but it's empty now. Behind a shattered glass wall, there is a pit formed from artificial rock that clearly held water once. In the middle of that is... a footprint? Almost looks like a giant stepped on it - and broke right through, his weight collapsing a section of the alligators['] water pit into the sewer tunnel not far below. Which might just be where the alligators went. The way into the tunnels is still open, if you want to dare climbing down over the rubble and explore the sewers. Although it looks dangerous down there...";
@@ -260,7 +260,7 @@ Sewers A7	"Sewers A7"
 
 Sewers A7 is a room.
 Sewers A7 is below Sewer Exploration.
-The marea of Sewer Exploration is "Mall". The Sewer Exploration is open. The description of Sewer Exploration is "The black hole of the sewer tunnel is accessible through climbing down over the rubble in the gator enclosure. Looks dangerous down there, but nothing ventured, nothing gained, right?". understand "tunnel" and "hole" as the Sewer Exploration.
+The marea of Sewer Exploration is "Mall". The Sewer Exploration is open. Description of Sewer Exploration is "The black hole of the sewer tunnel is accessible through climbing down over the rubble in the gator enclosure. Looks dangerous down there, but nothing ventured, nothing gained, right?". understand "tunnel" and "hole" as the Sewer Exploration.
 
 [Angie and the Zoo Giftshop have been moved to the Angie file in Sarokcat's folder.]
 

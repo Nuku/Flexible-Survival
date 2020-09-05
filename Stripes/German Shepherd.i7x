@@ -794,7 +794,7 @@ to say gsd_recruited:
 	now HP of gshep is 1;
 	now GShepLastScene is turns;
 	say "     Looking around, you find some heavy rope and use that to make a temporary leash for the muzzle-scarred German shepherd. He tugs at it a few times, but leaves it alone when you tell him to stop pawing at it. You ask him if he's got a name he can remember, which throws him for a loop. 'What a stupid question? Of course I remember... my... name...' He ends up bemused for a time, scratching his ear with one paw as he tries to think. 'K-... Ka-? Ko-? Korvin? I think it was, I mean, it is Korvin.' He seems a little more self-assured again now that he's got a name.";
-	say "     (Korvin the German shepherd is now a possible ally! You can make him your active ally by typing [bold type][link]ally Korvin[end link][roman type] or [bold type][link]ally gshep[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Korvin[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+	say "     (Korvin the German shepherd is now a possible ally! You can make him your active ally by typing [bold type][link]ally Korvin[end link][roman type] or [bold type][link]ally gshep[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Korvin[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 
 
 to say attk gsd:
@@ -981,7 +981,7 @@ name	desc	weight	object
 "german shepherd male fur"	"A tuft of tan fur that looks like it has been pulled out of the coat of a German shepherd. It's nicely soft."	0	german shepherd male fur
 
 german shepherd male fur is a grab object.
-the usedesc of german shepherd male fur is "[GermanShepherdMaleFurUse]".
+Usedesc of german shepherd male fur is "[GermanShepherdMaleFurUse]".
 
 It is temporary.
 
@@ -998,7 +998,7 @@ name	desc	weight	object
 
 german shepherd male cum is a grab object. german shepherd male cum is cum.
 german shepherd male cum is infectious. Strain of german shepherd male cum is "German Shepherd Bitch".
-the usedesc of german shepherd male cum is "[GermanShepherdMaleCumUse]";
+Usedesc of german shepherd male cum is "[GermanShepherdMaleCumUse]";
 
 to say GermanShepherdMaleCumUse:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";

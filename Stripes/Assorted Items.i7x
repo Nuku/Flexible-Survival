@@ -16,7 +16,7 @@ name	desc	weight	object
 
 libido pill is a grab object. It is temporary.
 
-the usedesc of libido pill is "[libido pill use]".
+Usedesc of libido pill is "[libido pill use]".
 
 to say libido pill use:
 	say "[line break]     You pop the sex drug into your mouth and swallow it. There's a slight medicinal taste to it, but you forget that as it quickly gets to work. Soon you're feeling hot and aroused, your libido climbing rapidly.";

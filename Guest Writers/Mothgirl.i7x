@@ -262,7 +262,7 @@ cock pill is a grab object. It is temporary.
 instead of sniffing cock pill:
 	say "The small pill smells faintly of male pheromones and arousal.";
 
-the usedesc of cock pill is "[cock pill use]";
+Usedesc of cock pill is "[cock pill use]";
 
 to say cock pill use:
 	say "You take the pill and pop it into your mouth...";

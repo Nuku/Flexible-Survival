@@ -27,7 +27,7 @@ Leather Daddy Kitty	"Leather Daddy Kitty"
 
 Leather Daddy Kitty is a situation.
 ResolveFunction of Leather Daddy Kitty is "[ResolveEvent Leather Daddy Kitty]". The level of Leather Daddy Kitty is 2.
-The sarea of Leather Daddy Kitty is "high".
+Sarea of Leather Daddy Kitty is "high".
 when play begins:
 	add Leather Daddy Kitty to BadSpots of MaleList; [Oliver is a male kitty]
 	add Leather Daddy Kitty to BadSpots of FurryList; [Oliver is a kitty]
@@ -66,7 +66,7 @@ Object	Name
 Kitty Sex Dungeon	"Kitty Sex Dungeon"
 
 Kitty Sex Dungeon is a room. It is private.
-The description of Kitty Sex Dungeon is "[DungeonDesc]"
+Description of Kitty Sex Dungeon is "[DungeonDesc]"
 
 to say DungeonDesc:
 	say "     The room is a stereotypical sex dungeon. There is a sex bench in the middle of the room, stocks against the wall, sex toys on shelves and so much more. On top of that, the entire place smells of sex and sweat, something that fills you with warmth as you think of the many things that have happened in this area. Interesting enough, there are no items for punishment via pain like flogs or whips. Perhaps Oliver punishes with pleasure rather than pain?[if Player is not neuter] You shudder at the thought of being denied orgasm.[end if]";
@@ -102,8 +102,8 @@ AnalVirgin of Oliver is false.
 PenileVirgin of Oliver is false.
 SexuallyExperienced of Oliver is true.
 MainInfection of Oliver is "".
-The description of Oliver is "[OliverDesc]".
-The conversation of Oliver is { "<this is nothing but a placeholder!>" }.
+Description of Oliver is "[OliverDesc]".
+Conversation of Oliver is { "<this is nothing but a placeholder!>" }.
 The scent of Oliver is "The big kitty smells heavily of male musk as well as sex, something that makes you moan out loud, making him smirk at you.".
 
 to say OliverDesc:

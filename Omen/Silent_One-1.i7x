@@ -9,7 +9,7 @@ The Silent One	"The Silent One"
 
 The Silent One is a situation.
 ResolveFunction of The Silent One is "".
-The sarea of The Silent One is "Nowhere".
+Sarea of The Silent One is "Nowhere".
 
 when play begins:
 	add The Silent One to badspots of OtherworldlyList;
@@ -26,7 +26,7 @@ to say The Silent One:
 		WaitLineBreak;
 		say "     Minutes pass as it continues to violate your throat, which has long since gone partially numb. Thankfully it begins to slow down, you let out a relieved sigh as the punishment draws to a close. [if player is kinky]Suddenly your jaw is force open even wider than before as you feel something pass through the tentacle into your mouth. With wide eyes, you watch as the bump travels further and further into your mouth before it dissapears completely from your view. An electric shock travels down your spine as you feel the large object push its way down your throat and into your stomach. Once the object is deposited, the creature withdraws its tentacle and sets you down gently before carrying on to tend to the bookshelves. As you suspected, you throat is too raw to make noise for the next few hours. Though your surprised to find the pain has ceased, it seems the egg it placed in your stomach was to help your recovery.[else]The creature quickly withdraws its appendage and uncerimoniously drops you on the ground. It wastes no time as it travels away from you, leaving you to recover on your own. Your throat is so raw that you doubt you'll be able to say much for several hours.[end if] After a few minutes, you manage to pick yourself up.";
 	else:
-		let bonus be (( the Dexterity of the player minus 10) divided by 2);
+		let bonus be (( Dexterity of Player minus 10) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;

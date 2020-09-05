@@ -15,7 +15,7 @@ Dog Walking	"Dog Walking"
 
 Dog Walking is a situation.
 ResolveFunction of Dog Walking is "[ResolveEvent Dog Walking]". The level of Dog Walking is 7.
-The sarea of Dog Walking is "Warehouse".
+Sarea of Dog Walking is "Warehouse".
 when play begins:
 	add Dog Walking to BadSpots of MaleList;
 	add Dog Walking to BadSpots of FurryList;
@@ -236,9 +236,9 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 15;
 	now sex entry is "Male";
-	now HP entry is 75;
-	now lev entry is 10;
-	now wdam entry is 10;
+	now HP entry is 55;
+	now lev entry is 9;
+	now wdam entry is 9;
 	now area entry is "Nowhere";          [ Case sensitive]
 	now Cock Count entry is 1;                 [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 11;
@@ -424,9 +424,8 @@ SexuallyExperienced of Mike is true.
 TwistedCapacity of Mike is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Mike is false. [steriles can't knock people up]
 MainInfection of Mike is "Blacktail Stag".
-The description of Mike is "[MikeDesc]".
-The conversation of Mike is { "Oh, hello." }.
-The icon of Mike is Figure of Mike_icon.
+Description of Mike is "[MikeDesc]".
+Conversation of Mike is { "Oh, hello." }.
 
 to say MikeDesc:
 	project the Figure of Mike_face_icon;
@@ -439,7 +438,7 @@ Object	Name
 Mike's Home	"Mike's Home"
 
 Mike's Home is a room. It is a fasttravel. It is private.
-The description of Mike's Home is "     You're at a house with a very large fenced backyard at the edge of the warehouse district. A good location for a dog breeder, as the neighbors didn't complain about noise. At the side of the house (north from you) is the back entrance. Mike has given you the hidden location of the back door's key.".
+Description of Mike's Home is "     You're at a house with a very large fenced backyard at the edge of the warehouse district. A good location for a dog breeder, as the neighbors didn't complain about noise. At the side of the house (north from you) is the back entrance. Mike has given you the hidden location of the back door's key.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -448,7 +447,7 @@ Mike's Office	"Mike's Office"
 Mike's Office is a room.
 Mike's Office is north of Mike's Home.
 Mike's Office is sleepsafe.
-The description of Mike's Office is "     You're in Mike's office, a relatively large room. A desk with a computer stands in the back, next to a filing cabinet. Lots of boxes of equipment and sacks of dog food line the walls. Seemingly a new addition to the room is a single bed in the center, its white sheets showing a few stains that are most likely dried cum[if HP of Mike < 5]. Lea, Mike's transformed dog, lies on it, whining pitifully[end if].".
+Description of Mike's Office is "     You're in Mike's office, a relatively large room. A desk with a computer stands in the back, next to a filing cabinet. Lots of boxes of equipment and sacks of dog food line the walls. Seemingly a new addition to the room is a single bed in the center, its white sheets showing a few stains that are most likely dried cum[if HP of Mike < 5]. Lea, Mike's transformed dog, lies on it, whining pitifully[end if].".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -457,7 +456,7 @@ Dog Kennels	"Dog Kennels"
 Dog Kennels	is a room.
 Dog Kennels is east of Mike's Office.
 Dog Kennels is sleepsafe.
-The description of Dog Kennels is "     This part of the building consists of a long hallway lined with quite a few large dog kennels on each side. In them are Mike's transformed dogs, many of which rest on air mattresses he added when they became human. The rest sit in front of their wire mesh kennel doors, giving you dog-eyed looks in hope of a walk or some play-time.".
+Description of Dog Kennels is "     This part of the building consists of a long hallway lined with quite a few large dog kennels on each side. In them are Mike's transformed dogs, many of which rest on air mattresses he added when they became human. The rest sit in front of their wire mesh kennel doors, giving you dog-eyed looks in hope of a walk or some play-time.".
 
 instead of sniffing Mike:
 	say "     Mike has a nice smell, strong and masculine.";
@@ -700,8 +699,8 @@ SexuallyExperienced of Lea is true.
 TwistedCapacity of Lea is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Lea is false. [steriles can't knock people up]
 MainInfection of Lea is "Human".
-The description of Lea is "     Originally one of Mike's dogs, Lea is now a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with her pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication[if HP of Mike < 5]. A deep gash from a leopardman's claw marks her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon[else if HP of Mike > 4]. A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again[end if].".
-The conversation of Lea is { "Woof." }.
+Description of Lea is "     Originally one of Mike's dogs, Lea is now a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with her pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication[if HP of Mike < 5]. A deep gash from a leopardman's claw marks her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon[else if HP of Mike > 4]. A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again[end if].".
+Conversation of Lea is { "Woof." }.
 
 instead of fucking Lea:
 	if HP of Mike < 5:
@@ -760,8 +759,8 @@ SexuallyExperienced of Xerxes is true.
 TwistedCapacity of Xerxes is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Xerxes is false. [steriles can't knock people up]
 MainInfection of Xerxes is "Human".
-The description of Xerxes is "[XerxesDesc]".
-The conversation of Xerxes is { "Woof." }.
+Description of Xerxes is "[XerxesDesc]".
+Conversation of Xerxes is { "Woof." }.
 LastXerxesTalk is a number that varies. LastXerxesTalk is usually 555.
 HP of Xerxes is usually 0.
 
@@ -1526,8 +1525,8 @@ PenileVirgin of Helen is true.
 SexuallyExperienced of Helen is false.
 MainInfection of Helen is "Human".
 
-The description of Helen is "[HelenDesc]".
-The conversation of Helen is { "Woof." }.
+Description of Helen is "[HelenDesc]".
+Conversation of Helen is { "Woof." }.
 LastHelenTalk is a number that varies. LastHelenTalk is usually 555.
 HP of Helen is usually 0.
 HelenPregnant is a number that varies.

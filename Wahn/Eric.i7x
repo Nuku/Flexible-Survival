@@ -152,7 +152,7 @@ Barricaded Lockerroom	"Barricaded Lockerroom"
 
 Barricaded Lockerroom is a situation.
 ResolveFunction of Barricaded Lockerroom is "[ResolveEvent Barricaded Lockerroom]". The level of Barricaded Lockerroom is 8.
-The sarea of Barricaded Lockerroom is "Campus".
+Sarea of Barricaded Lockerroom is "Campus".
 when play begins:
 	add Barricaded Lockerroom to badspots of HermList; [cuntboy, later a fight against a hulking cheerleader]
 
@@ -190,7 +190,7 @@ Object	Name
 Sports Arena Lockerroom	"Sports Arena Lockerroom"
 
 Sports Arena Lockerroom is a room. It is fasttravel. It is private.
-The description of Sports Arena Lockerroom is "[lroomdesc]".
+Description of Sports Arena Lockerroom is "[lroomdesc]".
 
 instead of sniffing Sports Arena Lockerroom:
 	say "You don't smell anything noteworthy. With a nanite virus apocalypse going on right outside the door, there haven't been any large numbers of sweaty athletes in here for some time now.";
@@ -263,8 +263,8 @@ SexuallyExperienced of Eric is true.
 TwistedCapacity of Eric is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Eric is false. [steriles can't knock people up]
 MainInfection of Eric is "Human".
-The description of Eric is "[EricDesc]".
-The conversation of Eric is { "Mew!" }.
+Description of Eric is "[EricDesc]".
+Conversation of Eric is { "Mew!" }.
 EricFleeingCountdown is a number that varies.
 
 instead of sniffing Eric:
@@ -2375,7 +2375,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of
 		project the figure of Eric_face_icon;
 	say "     As you come down into the bunker, you see Eric sitting cross-legged on a nearby bunk, a book in hand. He looks up, having noticed your arrival, and with a smile on his face the young man sets down his reading and walks up to you. 'Hey there and welcome back,' the red-headed student says, then puts a hand on your shoulder and gives you a friendly squeeze. 'I wanted to say again how thankful I am for everything you've done for me. Letting me stay with you down here and... other things. Never really knew quite how rough the city now is - before running into those hellhounds.' You chat a little and Eric clearly shows pretty good spirits, as well as newfound enthusiasm at the living arrangements and mixed company in the bunker and library.";
 	say "     Wanting to hear how things now stand between him and Rane, you ask - and the young man blushes slightly before answering. 'Rane - um. He's... we've come to an understanding, things are alright now.' Becoming tongue-tied and shy about the matter, you focus your gaze on Eric - but you can't detect any sense of fear or sadness in him, as he was when he ran off";
-	let bonus be (( the Perception of the player minus 10 ) divided by 2);
+	let bonus be (( Perception of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	increase diceroll by bonus;
 	if diceroll > 10:
@@ -3411,7 +3411,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and HP of 
 	say "     Sven listens intently to Eric's further tale, how he barricaded himself in the lockerroom and all that, until the college athlete gets even more distraught as he brings up the fate of his ex-girlfriend Stacy. 'If I - if things hadn't gone as they did the day before, I could have been there to protect her. Maybe she'd still be human, you know...' Eric quietly sobs, putting his face in his hands. Then a white-furred paw closes on the college student's shoulder and Sven gives him a little shake to get him out of his slump. 'Hey, you don't know that. And don't blame yourself. From what you told me, she dumped you, not the other way around, and you still went out to look for her afterwards regardless.'";
 	WaitLineBreak;
 	say "     'Some things just happen, no matter what you do. It's... fate, I guess. Just look at me, hah!' Sven goes on to say, holding up his white-furred right arm and wiggling with the digits of his paw. Eric raises one hand to touch his arm, stroking over the soft fur - which seems to help him lay the self-recriminations to rest for now. Smiling as his newfound friend touches him gently, Sven goes on to casually snake his quite long tail around the sitting human, the end angling upwards ever so slowly until it tickles the side of Eric's neck, just under the ear. Rubbing his neck, the college athlete is surprised as his hand encounters the soft tail-tip, making him turn his head and look right at it.";
-	say "     The conversation of the two college students turns to nicer topics afterwards, with Sven telling an action-packed story about how you and he fought off the snow leopard and answering Eric's questions about how it feels to be a big cat with fur and all that. You drift away after a little while, leaving the two of them to talk and get to know each other better. One thing is for sure though - they're hitting it off quite well, and you don't doubt that Sven and Eric will be fast friends in no time.";
+	say "     Conversation of the two college students turns to nicer topics afterwards, with Sven telling an action-packed story about how you and he fought off the snow leopard and answering Eric's questions about how it feels to be a big cat with fur and all that. You drift away after a little while, leaving the two of them to talk and get to know each other better. One thing is for sure though - they're hitting it off quite well, and you don't doubt that Sven and Eric will be fast friends in no time.";
 	now ConfSvenEricInteraction is 1;
 	now lastConfSvenEricInteraction is turns;
 

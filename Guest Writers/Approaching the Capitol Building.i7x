@@ -28,7 +28,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Approaching the Capitol Building	"Approaching the Capitol Building"
 
-Approaching the Capitol Building is a Room. The description of Approaching the Capitol Building is "[app_cap_bldg_desc]".
+Approaching the Capitol Building is a Room. Description of Approaching the Capitol Building is "[app_cap_bldg_desc]".
 The Approaching the Capitol Building is fasttravel.
 earea of Approaching the Capitol Building is "Outside".
 [  The Approaching the Capitol Building is private.	]

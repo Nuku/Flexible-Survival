@@ -422,7 +422,7 @@ name	desc	weight	object
 
 skunk goo is a grab object.
 
-skunk goo is infectious. The strain of skunk goo is "Skunk".
+skunk goo is infectious. Strain of skunk goo is "Skunk".
 
 The scent of skunk goo is "The gooey black gunk smells strongly of skunk.".
 

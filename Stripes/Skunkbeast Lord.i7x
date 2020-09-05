@@ -23,7 +23,7 @@ Skunkbeast Battle	"Skunkbeast Battle"
 
 Skunkbeast Battle is a situation.
 ResolveFunction of Skunkbeast Battle is "[ResolveEvent Skunkbeast Battle]". The level of Skunkbeast Battle is 15.
-The sarea of Skunkbeast Battle is "Forest".
+Sarea of Skunkbeast Battle is "Forest".
 skunkbeaststatus is a number that varies.
 when play begins:
 	add Skunkbeast Battle to BadSpots of MaleList;
@@ -116,7 +116,7 @@ to say ResolveEvent Skunkbeast Battle:
 				if Ball Size of Player < Cock Length entry, now Ball Size of Player is Ball Size entry;
 			if "Herm Preferred" is listed in feats of Player:
 				now sex entry is "Both";
-			now the strain of skunk goo is "Skunkbeast Lord";
+			now Strain of skunk goo is "Skunkbeast Lord";
 			WaitLineBreak;
 			if Libido of Player < 75, now Libido of Player is 75;
 			if skrp is 1:

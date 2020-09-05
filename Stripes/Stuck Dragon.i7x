@@ -68,7 +68,7 @@ Find Building	"Find Building"
 
 Find Building is a situation.
 ResolveFunction of Find Building is "[ResolveEvent Find Building]".
-the sarea of Find Building is "Mall".
+Sarea of Find Building is "Mall".
 
 to say ResolveEvent Find Building:
 	say "While exploring the sewer, you spot a ladder leading up to a manhole. You climb the ladder and push up on the manhole cover. After a bit of effort, you shift the manhole cover to the side and climb the rest of the way up the ladder. You look around and see that you're back on the city streets, in front of an old building. You don't know if you'll find anything of interest inside, but it could be worth exploring. The nearby streets are completely blocked by debris and wrecked cars so you wouldn't have been able to find this place if you hadn't gone through the sewers.";
@@ -82,14 +82,14 @@ Object	Name
 Isolated Street	"Isolated Street"
 
 Isolated Street is a room. It is fasttravel. It is private. Inside from the Isolated Street is a room called Old Building.
-The description of Isolated Street is "The only thing of interest on this street is an old, rundown building that has been around for a while. It's been condemned for as long as you can remember, so you have no idea what this building was used for.".
+Description of Isolated Street is "The only thing of interest on this street is an old, rundown building that has been around for a while. It's been condemned for as long as you can remember, so you have no idea what this building was used for.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Old Building	"Old Building"
 
 Old Building is a room.
-The description of Old Building is "[dragonessbldg]".
+Description of Old Building is "[dragonessbldg]".
 
 to say dragonessbldg:
 	say "[dragonessupdate]     There are small piles of useless junk and debris scattered around inside the old building. There is a fine layer of dust is on almost every surface in sight. Other than the door you entered through, the only other doorway you can see is completely blocked by ";
@@ -131,8 +131,8 @@ object	name
 dragoness	"dragoness"
 
 dragoness is a person. dragoness is in Old Building.
-The description of dragoness is "[dragonessdesc]".
-The conversation of dragoness is { "Poot!" }.
+Description of dragoness is "[dragonessdesc]".
+Conversation of dragoness is { "Poot!" }.
 dragonessfuck is a number that varies.
 
 instead of sniffing dragoness:
@@ -259,7 +259,7 @@ Another Ladder	"Another Ladder"
 
 Another Ladder is a situation.
 ResolveFunction of Another Ladder is "[ResolveEvent Another Ladder]".
-the sarea of Another Ladder is "Mall".
+Sarea of Another Ladder is "Mall".
 
 to say ResolveEvent Another Ladder:
 	if NoIntroduction is 0:
@@ -277,13 +277,13 @@ Object	Name
 Back Alley	"Back Alley"
 
 Back Alley is a room. It is fasttravel. It is private. Inside from the Back Alley is a room called Back Room.
-The description of Back Alley is "You're standing in an alley behind an old building. It's the same old building that you found earlier. Debris and wrecked cars have cut off this area from the rest of the city. There is a side entrance to the old building here. It looks like you've found the way around the blocked doorway. Hopefully the dragoness has not yet been found.".
+Description of Back Alley is "You're standing in an alley behind an old building. It's the same old building that you found earlier. Debris and wrecked cars have cut off this area from the rest of the city. There is a side entrance to the old building here. It looks like you've found the way around the blocked doorway. Hopefully the dragoness has not yet been found.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Back Room	"Back Room"
 
-Back Room is a room. The description of Back Room is "[backroomdesc]".
+Back Room is a room. Description of Back Room is "[backroomdesc]".
 
 to say backroomdesc:
 	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]
@@ -315,8 +315,8 @@ object	name
 Christy	"Christy"
 Christy	"Christopher"
 
-Christy is a woman. Christy is in Back Room. The description of Christy is "[christydesc]".
-The conversation of Christy is { "Rawr!" }.
+Christy is a woman. Christy is in Back Room. Description of Christy is "[christydesc]".
+Conversation of Christy is { "Rawr!" }.
 MainInfection of Christy is "Slutty Dragoness".
 understand "Christopher" as Christy.
 understand "Chris" as Christy.
@@ -425,7 +425,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Small Dark Room	"Small Dark Room"
 
-Small Dark Room is a room. The description of Small Dark Room is "     You're curled up in a ball inside a dark room that is so small that the curved walls and ceiling are pressing against your body from all sides. You should try to [link]STRUGGLE[end link] to get out.".
+Small Dark Room is a room. Description of Small Dark Room is "     You're curled up in a ball inside a dark room that is so small that the curved walls and ceiling are pressing against your body from all sides. You should try to [link]STRUGGLE[end link] to get out.".
 dragontype is a number that varies.
 
 instead of sniffing Small Dark Room:
@@ -860,7 +860,7 @@ to say christyuhoh:
 				else:
 					say "     With the passage blocked and a rampage dragoness past that, you're have no choice but follow the tunnels back to the zoo. You make your way out, sore and aching all over, before eventually collapsing on a bench nearly to recover. At least you're somewhere far from the dragoness now. But those thoughts are banished as you find yourself wondering if you told [Christy] how you found her in the first place. Or worse yet, where the bunker is.";
 					move player to Gator Pit;
-				if HP of the player is 1:
+				if HP of Player is 1:
 					follow the turnpass rule;
 					now HP of Player is 1; [still HP of 1 after resting]
 
@@ -873,7 +873,7 @@ Dragon Prey	"Dragon Prey"
 
 Dragon Prey is a situation.
 ResolveFunction of Dragon Prey is "[ResolveEvent Dragon Prey]".
-The sarea of Dragon Prey is "Outside".
+Sarea of Dragon Prey is "Outside".
 Dragon Prey is inactive.
 
 when play begins:
@@ -1772,7 +1772,7 @@ to say sldrheat:
 	increase Libido of Player by a random number between 2 and 6;
 	if Libido of Player > 99, now Libido of Player is 99;
 	if Libido of Player > 90 and slutfucked > 8:
-		if there are no dangerous doors in the location of the player:
+		if there are no dangerous doors in the Location of Player:
 			if location of Player is fasttravel:
 				now battleground is "Outside";
 			else:
@@ -1780,7 +1780,7 @@ to say sldrheat:
 				increase slutfucked by 1;
 				now battleground is "void";
 		else:
-			let y be a random dangerous door in the location of the player;
+			let y be a random dangerous door in the Location of Player;
 			now battleground is marea of y;
 		if battleground is not "void":
 			let cmonlist be a list of numbers;
@@ -1805,7 +1805,7 @@ to say sldrheat:
 				infect;
 				decrease score by 5;
 				decrease morale of Player by 3;
-				if Player is kinky, increase the morale of the player by 6;
+				if Player is kinky, increase Morale of Player by 6;
 			else:
 				say "As your draconic heat courses through you, you call out your need with the roar of a dragoness looking to be bred, but the call goes unanswered. Your heat-filled desires make you want to head elsewhere in the hopes of finding some dragon, or barring that, a powerful lizard or reptile, to breed you.";
 				increase slutfucked by 1;

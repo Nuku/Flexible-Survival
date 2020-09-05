@@ -313,7 +313,7 @@ this is the ppstrike rule: [possible sonic attack and sets upcoming strike]
 	else:
 		choose row MonsterID from the Table of Random Critters;
 		now ppatt is false;
-		let the defense bonus be stamina of the player + ( level of Player * 2 ) - 10;
+		let the defense bonus be Stamina of Player + ( level of Player * 2 ) - 10;
 		if gascloud > 0, decrease gascloud by 1;
 		let the attack bonus be sta entry + ( lev entry * 2 ) - 10;
 		let the combat bonus be attack bonus minus defense bonus;
@@ -352,7 +352,7 @@ this is the ppattack rule:
 			now absorb is dam;
 		if absorb > 0:
 			say "You prevent [special-style-1][absorb][roman type] damage!";
-		decrease HP of the player by dam;
+		decrease HP of Player by dam;
 		increase HP of Player by absorb;
 		let libinc be a random number between 1 and dam;
 		if "Horny Bastard" is listed in feats of Player, increase libinc by 1;
@@ -375,7 +375,7 @@ name	desc	weight	object
 
 musky cock flower is a grab object.
 musky cock flower has a usedesc "[facerape use]".
-musky cock flower is infectious. The strain of musky cock flower is "Parasitic Plant".
+musky cock flower is infectious. Strain of musky cock flower is "Parasitic Plant".
 
 instead of sniffing musky cock flower:
 	say "The strange blossom smells strongly of cum and male musk.";
@@ -501,11 +501,11 @@ to say parasiticlust:
 			decrease the score by 3;
 			if Player is kinky:
 				say "With your deep, lustful hunger sated for the moment, you massage your abused holes and lick your cum-covered lips. Now that was a good fucking session!";
-				increase the morale of the player by 5;
+				increase Morale of Player by 5;
 				now Libido of Player is (Libido of Player) / 2;
 			else:
 				say "Your deep, lustful hunger sated for the moment, you feel ashamed and depressed for what you have done.";
-				decrease the morale of the player by a random number from 5 to 10;
+				decrease Morale of Player by a random number from 5 to 10;
 				now Libido of Player is 0;
 		else if Libido of Player > 90:
 			increase timetillrampage by 1;

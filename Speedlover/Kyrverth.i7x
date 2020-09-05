@@ -82,8 +82,8 @@ AnalVirgin of Kyrverth is true.
 PenileVirgin of Kyrverth is true.
 SexuallyExperienced of Kyrverth is false.
 MainInfection of Kyrverth is "".
-The description of Kyrverth is "[KyrverthDesc]".
-The conversation of Kyrverth is { "<This is nothing but a placeholder!>" }.
+Description of Kyrverth is "[KyrverthDesc]".
+Conversation of Kyrverth is { "<This is nothing but a placeholder!>" }.
 The scent of Kyrverth is "[KyrverthSmellDesc]".
 Kyrverth is in Dragons Den.
 [Normal Variables																]
@@ -114,7 +114,7 @@ Object	Name
 Overgrown Street	"Overgrown Street"
 
 West of Entrance to the High Rise District is Overgrown Street.
-The description of Overgrown Street is "[OvergrownStreetDesc]".
+Description of Overgrown Street is "[OvergrownStreetDesc]".
 
 [Room Declaration - Dragons Den will go public after first encounter with Kyrverth]
 Table of GameRoomIDs (continued)
@@ -122,7 +122,7 @@ Object	Name
 Dragons Den	"Dragons Den"
 
 Dragons Den is a room.
-The description of Dragons Den is "[DragonsDenDesc]".
+Description of Dragons Den is "[DragonsDenDesc]".
 
 to say OvergrownStreetDesc:
 	say "     What used to be a bustling high street in the upmarket end of town now looks like it hasn't been inhabited for years. Buildings with faded paint have smashed windows and vines climbing the walls. The road has cracks running down the length of it and grass pokes through the concrete to grab the sunlight. Towards the end of the street there is an old roundabout with a broken fountain in the center. A tree sprouts from the center of the fountain and shades the area around it. You feel tempted to take a seat under its leaves for a while.";
@@ -811,7 +811,7 @@ after going to Dragons Den while (KyrverthStage is 6 and a random chance of 1 in
 Strange Sighting is a situation.
 ResolveFunction of Strange Sighting is "[ResolveEvent Strange Sighting]".
 The level of Strange Sighting is 5. [minimum level to find the event]
-The sarea of Strange Sighting is "High". [or "Park", or "Museum", ...]
+Sarea of Strange Sighting is "High". [or "Park", or "Museum", ...]
 
 when play begins: [flags for blocking this event]
 	add Strange Sighting to BadSpots of MaleList;
@@ -850,7 +850,7 @@ to say ResolveEvent Strange Sighting: [Very first meeting with the dragon]
 Jewel Heist is a situation.
 ResolveFunction of Jewel Heist is "[ResolveEvent Jewel Heist]".
 The level of Jewel Heist is 5. [minimum level to find the event]
-The sarea of Jewel Heist is "High". [or "Park", or "Museum", ...]
+Sarea of Jewel Heist is "High". [or "Park", or "Museum", ...]
 Jewel Heist is resolved.
 
 when play begins: [flags for blocking this event]
@@ -987,7 +987,7 @@ to EnableKyrverthItemEvents: [Enabling events for player to encounter]
 Valuable Museum Artifact is a situation.
 ResolveFunction of Valuable Museum Artifact is "[ResolveEvent Valuable Museum Artifact]".
 The level of Valuable Museum Artifact is 5. [minimum level to find the event]
-The sarea of Valuable Museum Artifact is "Museum". [or "Park", or "Museum", ...]
+Sarea of Valuable Museum Artifact is "Museum". [or "Park", or "Museum", ...]
 Valuable Museum Artifact is inactive.
 
 when play begins: [flags for blocking these events]
@@ -1034,7 +1034,7 @@ to say ResolveEvent Valuable Museum Artifact:
 Valuable Warehouse Artifact is a situation.
 ResolveFunction of Valuable Warehouse Artifact is "[ResolveEvent Valuable Warehouse Artifact]".
 The level of Valuable Warehouse Artifact is 5. [minimum level to find the event]
-The sarea of Valuable Warehouse Artifact is "Warehouse". [or "Park", or "Museum", ...]
+Sarea of Valuable Warehouse Artifact is "Warehouse". [or "Park", or "Museum", ...]
 Valuable Warehouse Artifact is inactive.
 
 to say ResolveEvent Valuable Warehouse Artifact:
@@ -1061,7 +1061,7 @@ to say ResolveEvent Valuable Warehouse Artifact:
 Valuable RLD Artifact is a situation.
 ResolveFunction of Valuable RLD Artifact is "[ResolveEvent Valuable RLD Artifact]".
 The level of Valuable RLD Artifact is 5. [minimum level to find the event]
-The sarea of Valuable RLD Artifact is "Red". [or "Park", or "Museum", ...]
+Sarea of Valuable RLD Artifact is "Red". [or "Park", or "Museum", ...]
 Valuable RLD Artifact is inactive.
 
 to say ResolveEvent Valuable RLD Artifact:
@@ -1087,7 +1087,7 @@ to say ResolveEvent Valuable RLD Artifact:
 Valuable Stables Artifact is a situation.
 ResolveFunction of Valuable Stables Artifact is "[ResolveEvent Valuable Stables Artifact]".
 The level of Valuable Stables Artifact is 5. [minimum level to find the event]
-The sarea of Valuable Stables Artifact is "Stable". [or "Park", or "Museum", ...]
+Sarea of Valuable Stables Artifact is "Stable". [or "Park", or "Museum", ...]
 Valuable Stables Artifact is inactive.
 
 to say ResolveEvent Valuable Stables Artifact:
@@ -1240,7 +1240,7 @@ name	desc	weight	object
 
 
 Anubis Mask is a grab object.
-the usedesc of Anubis Mask is "[anubismaskuse]".
+Usedesc of Anubis Mask is "[anubismaskuse]".
 
 It is temporary.
 
@@ -1263,7 +1263,7 @@ instead of sniffing Anubis Mask:
 		say "     The mask smells of old dust.";
 
 Racing Horseshoe is a grab object.
-the usedesc of Racing Horseshoe is "[racinghorseshoeuse]".
+Usedesc of Racing Horseshoe is "[racinghorseshoeuse]".
 
 It is temporary.
 
@@ -1290,7 +1290,7 @@ instead of sniffing Racing Horseshoe:
 		say "     The horseshoe has that telltale smell of horses. It's not a strong smell, but it's definitely there.";
 
 Golden Sculpture is a grab object.
-the usedesc of Golden Sculpture is "[goldensculptureuse]".
+Usedesc of Golden Sculpture is "[goldensculptureuse]".
 
 It is temporary.
 
@@ -1348,7 +1348,7 @@ instead of sniffing Golden Sculpture:
 		say "     The cock has a strange smell to it, has this been... used before?";
 
 Tiger Suit is a grab object.
-the usedesc of Tiger Suit is "[tigersuituse]".
+Usedesc of Tiger Suit is "[tigersuituse]".
 
 It is temporary.
 

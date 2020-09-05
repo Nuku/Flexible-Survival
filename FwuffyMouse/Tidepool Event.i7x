@@ -6,7 +6,7 @@ Tidepool Treasure	"Tidepool Treasure"
 
 Tidepool Treasure is a scavevent.
 ResolveFunction of Tidepool Treasure is "[ResolveEvent Tidepool Treasure]".
-The sarea of Tidepool Treasure is "Beach".
+Sarea of Tidepool Treasure is "Beach".
 
 to say ResolveEvent Tidepool Treasure:
 	say "     You come across a large tide-pool, easily several feet across and probably about a foot deep in the center. It's full of small coral and shellfish, with starfish latched onto the half-buried rocks and kelp curling under the shallow surface. In the middle of it rests a small object covered in some sort of undersea moss, but it doesn't look natural. Circling the pool for a better view, it's clear that it's a bottle of some kind, perhaps soda or water, and maybe even unopened!";
@@ -32,7 +32,7 @@ to say ResolveEvent Tidepool Treasure:
 				say "Invalid choice. Type [link]1[end link] to try and steal the bottle, [link]2[end link] to run for it or [link]3[end link] to submit to the trap.";
 		if calcnumber is 1:
 			LineBreak;
-			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+			let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]21[roman type] (Dexterity Check):[line break]";
 			increase diceroll by bonus;

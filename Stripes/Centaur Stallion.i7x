@@ -284,7 +284,7 @@ this is the hoofstomp rule:		[double-damage hoof stomping]
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
@@ -299,13 +299,13 @@ name	desc	weight	object
 "centaur hair"	"Some thick, dark brown hair."	0	centaur hair
 
 centaur cum is a grab object.
-the usedesc of centaur cum is "[centaurcumuse]".
+Usedesc of centaur cum is "[centaurcumuse]".
 
 It is temporary.
 centaur cum is cum.
 
 centaur hair is a grab object.
-the usedesc of centaur hair is "[centaurhairuse]".
+Usedesc of centaur hair is "[centaurhairuse]".
 
 It is temporary.
 

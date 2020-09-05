@@ -208,8 +208,8 @@ SexuallyExperienced of Tobias is true.
 TwistedCapacity of Tobias is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Tobias is false. [steriles can't knock people up]
 MainInfection of Tobias is "Doberman Male".
-The description of Tobias is "[TobiasDesc]".
-The conversation of Tobias is { "<This is nothing but a placeholder!>" }.
+Description of Tobias is "[TobiasDesc]".
+Conversation of Tobias is { "<This is nothing but a placeholder!>" }.
 The scent of Tobias is "     Tobias smells nicely masculine, in a furry, earthy way with a little bit of honest sweat in the mix too.".
 
 to say TobiasDesc:

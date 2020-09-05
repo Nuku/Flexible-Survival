@@ -10,7 +10,7 @@ Mysterious Stranger	"Mysterious Stranger"
 Mysterious Stranger is a situation.
 ResolveFunction of Mysterious Stranger is "[ResolveEvent Mysterious Stranger]". The level of Mysterious Stranger is 7.
 
-The sarea of Mysterious Stranger is "Outside".
+Sarea of Mysterious Stranger is "Outside".
 
 to say ResolveEvent Mysterious Stranger:
 	say "     'Hey, you over there with the [FaceName of Player] face. Come here for a second.' It's the sound of the other's voice that makes you stop dead in your tracks more than what the other just said. Having not become used to being addressed so casually you stop dead in your tracks and then turn to have a look over at the...[italic type]man[roman type], at least you think it's a man from the sound of the other's voice, standing in front of an overturned Cadillac. Some unfamiliar instinct has you lowering your guard as you step closer to the unknown person, who oddly enough seems quite human given his very [italic type]normal[roman type] looking gait.";
@@ -32,7 +32,7 @@ name	desc	weight	object
 "Capsule"	"A white capsule that's supposed to affect stamina?"	0	Capsule
 
 Capsule is a grab object.
-the usedesc of Capsule is "[capsuleuse]".
+Usedesc of Capsule is "[capsuleuse]".
 
 It is temporary.
 
@@ -55,7 +55,7 @@ Air Drop	"Air Drop"
 Air Drop is a situation.
 ResolveFunction of Air Drop is "[ResolveEvent Air Drop]". The level of Air Drop is 3.
 
-The sarea of Air Drop is "Outside".
+Sarea of Air Drop is "Outside".
 
 to say ResolveEvent Air Drop:
 	say "     The whirling sound of a helicopter's blades spinning like mad catches the edge of your hearing and in looking skyward you find yourself noting a large whirlybird with a massive metal crate tied to a long wire flying overhead. Not sure what this is all about, but curious anyway you head off into the direction the helicopter is going. It takes you some time but eventually you end up trailing the helicopter all the way to a seemingly abandoned junkyard.";
@@ -78,7 +78,7 @@ Magical Girl	"Magical Girl"
 
 Magical Girl is a situation.
 ResolveFunction of Magical Girl is "[ResolveEvent Magical Girl]".
-The sarea of Magical Girl is "Outside".
+Sarea of Magical Girl is "Outside".
 When play begins:
 	Add Magical Girl to badspots of HumorousList;
 
@@ -133,7 +133,7 @@ June Mermaid	"June Mermaid"
 
 June Mermaid is a situation.
 ResolveFunction of June Mermaid is "[ResolveEvent June Mermaid]".
-The sarea of June Mermaid is "Warehouse".
+Sarea of June Mermaid is "Warehouse".
 
 to say ResolveEvent June Mermaid:
 	say "     Heading along one of the boardwalks of the warehouse district's north dock, you come to find a young mermaid. You blink twice to be sure, but yes, you are seeing a naked half-female, half-fish woman, sitting along one of the lower docks and talking to a young otter. The two seem to be chuckling over something, but you can't hear the conversation from where you are. Taking the time to watch the two of them you look to see the mermaid, with her long cerulean hair and ample bosom, as she leans over next to the otter, who is quite male from what your eyes can tell you of the other's gender, and then goes to town nuzzling the other somewhat fondly. It's only the sudden shout of someone calling out for someone else that breaks up this tender little moment.";
@@ -150,7 +150,7 @@ Anomaly	"Anomaly"
 
 Anomaly is a situation.
 ResolveFunction of Anomaly is "[ResolveEvent Anomaly]".
-The sarea of Anomaly is "Warehouse".
+Sarea of Anomaly is "Warehouse".
 
 to say ResolveEvent Anomaly:
 	say "     Walking along the pier of the warehouse docks, you notice a large shadow trailing through the water. Moving further towards the edge of the docks, you wonder if what you are seeing is a naturally born whale or something else; however, upon noting that the dark shadow seems too long to be a whale and too big to be a squid, you find yourself mystified by what you are seeing. When the shadow suddenly moves away about a minute later, you figure that whatever you are seeing it isn't hostile, so there's no sense in contemplating on it further since it doesn't seem to want to make itself known.";
@@ -167,7 +167,7 @@ Free Catch	"Free Catch"
 
 Free Catch is a situation.
 ResolveFunction of Free Catch is "[ResolveEvent Free Catch]".
-The sarea of Free Catch is "Warehouse".
+Sarea of Free Catch is "Warehouse".
 When play begins:
 	Add Free Catch to BadSpots of FurryList;
 
@@ -186,7 +186,7 @@ Rumors	"Rumors"
 
 Rumors is a situation.
 ResolveFunction of Rumors is "[ResolveEvent Rumors]".
-The sarea of Rumors is "Warehouse".
+Sarea of Rumors is "Warehouse".
 
 to say ResolveEvent Rumors:
 	say "     While standing on one of the docks of the pier you find yourself listening to the words of a small group of people that just happen to be passing by. 'Hey, you know how these Zephyr corp people keep coming around and advertising their company all over the city, especially down here at the docks?' a middle aged orca quietly asks his companions, a brown otter and a three headed bipedal hydra. 'Yeah, so what?' the otter asks, unimpressed. 'Well, rumor has it that they were in business long before the epidemic hit this side of the states,' the orca mutters somewhat quietly. 'Where'd you hear such a thing from?' the hydra's three heads ask all at the same time. 'From my cousin down south. She told me that they had these weird people come around and set up an office in the area where she is staying right before a serious of strange events started to take place down there.'";
@@ -203,7 +203,7 @@ Diving Contest	"Diving Contest"
 
 Diving Contest is a situation.
 ResolveFunction of Diving Contest is "[ResolveEvent Diving Contest]".
-The sarea of Diving Contest is "Warehouse".
+Sarea of Diving Contest is "Warehouse".
 
 to say ResolveEvent Diving Contest:
 	say "     Moving over to the pier and listening to several groups of mutants arguing with each other over who can dive the best you watch as a somewhat bored looking pirate shark comes over and then offers a challenge to the groups. The rules are simply: whoever can show off the best moves while diving gets to put their group's mark on a board at the front of the pier for this week and be named Diving Champs. This sets the respective groups on fire and soon the contest to see who can dive the best gets quickly under way. You don't stay to watch the show, but you do notice how everyone seems to be getting along better now since they have a way to exert some of their pent up aggressions with one another. Maybe this will be a key to helping to figure things out for later, you think before moving on.";
@@ -219,7 +219,7 @@ Lackadaisical	"Lackadaisical"
 
 Lackadaisical is a situation.
 ResolveFunction of Lackadaisical is "[ResolveEvent Lackadaisical]".
-The sarea of Lackadaisical is "Warehouse".
+Sarea of Lackadaisical is "Warehouse".
 When play begins:
 	Add Lackadaisical to BadSpots of FurryList;
 

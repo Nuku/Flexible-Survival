@@ -47,7 +47,7 @@ Shark Warrior	"Shark Warrior"
 
 Shark Warrior is a situation.
 ResolveFunction of Shark Warrior is "[ResolveEvent Shark Warrior]".
-The sarea of Shark Warrior is "Beach".
+Sarea of Shark Warrior is "Beach".
 when play begins:
 	add Shark Warrior to BadSpots of MaleList;
 	add Shark Warrior to BadSpots of FurryList;
@@ -504,7 +504,7 @@ name	desc	weight	object
 
 Devil's Purse is a grab object. Understand "dpurse" as Devil's Purse.
 
-The usedesc of Devil's Purse is "[DevilsPurseUsing]";
+Usedesc of Devil's Purse is "[DevilsPurseUsing]";
 
 to say DevilsPurseUsing:
 	say "You take out the empty egg casing, and give it an experimental lick. Despite the smell its taste is pretty pleasant, like a mix of fish and something sweet that you cannot quite pin. You engulf it entirely in your mouth and are invested in licking and chewing along the rubbery membrane. After some time you end up swallowing the tough and slippery skin, content with the effects it may have on you.";

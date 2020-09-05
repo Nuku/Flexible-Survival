@@ -133,8 +133,6 @@ to say alpha huskypack lost:
 		CreatureSexAftermath "Player" receives "OralCock" from "Husky Alpha";
 		let z be a random owned grab object;
 		ItemLoss z by 1;
-[		sort invent of the player in random order; ]
-[		remove entry 1 from invent of the player; ]
 	else: [ player submitted ]
 		say "     Seeing you take a submissive posture, the pack immediately stops their assault. They press in at you from all directions, petting and licking you all over. The leader, however, is looking you in the eyes. 'If you want to join us,' he says, 'you will have to be stronger than that.";
 		if Player is male:
@@ -521,8 +519,8 @@ name	desc	weight	object
 husky alpha fur is a grab object.
 It is temporary.
 husky alpha fur is infectious.
-The strain of husky alpha fur is "Husky Alpha".
-the usedesc of husky alpha fur is "[husky alpha cum use]";
+Strain of husky alpha fur is "Husky Alpha".
+Usedesc of husky alpha fur is "[husky alpha cum use]";
 
 to say HuskyAlphaFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
@@ -537,8 +535,8 @@ name	desc	weight	object
 husky alpha cum is a grab object.
 husky alpha cum is cum.
 husky alpha cum is infectious.
-The strain of husky alpha cum is "Husky Bitch".
-the usedesc of husky alpha cum is "[husky alpha cum use]";
+Strain of husky alpha cum is "Husky Bitch".
+Usedesc of husky alpha cum is "[husky alpha cum use]";
 
 to say husky alpha cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -554,10 +552,10 @@ instead of sniffing husky alpha cum:
 
 husky alpha man-milk is a grab object.
 husky alpha man-milk is milky.
-The purified of husky alpha man-milk is "distilled milk".
+Purified of husky alpha man-milk is "distilled milk".
 husky alpha man-milk is infectious.
-The strain of husky alpha man-milk is "Husky Alpha".
-the usedesc of husky alpha man-milk is "[husky alpha man-milk use]";
+Strain of husky alpha man-milk is "Husky Alpha".
+Usedesc of husky alpha man-milk is "[husky alpha man-milk use]";
 
 to say husky alpha man-milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";

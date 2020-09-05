@@ -32,8 +32,8 @@ AnalVirgin of Amaryllis is false.
 PenileVirgin of Amaryllis is false.
 SexuallyExperienced of Amaryllis is true.
 MainInfection of Amaryllis is "Black Equinoid".
-The description of Amaryllis is "[AmaryllisDesc]".
-The conversation of Amaryllis is { "I choose you, playerchu!" }.
+Description of Amaryllis is "[AmaryllisDesc]".
+Conversation of Amaryllis is { "I choose you, playerchu!" }.
 The scent of Amaryllis is "     Amaryllis smells like clean fur and grassy fields with a hint of equine arousal.".
 
 to say AmaryllisDesc:

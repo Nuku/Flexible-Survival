@@ -69,10 +69,10 @@ orc supersized breeder is a pet.
 NPCObject of orc supersized breeder is Urik.
 understand "Urik" as orc supersized breeder.
 printed name of orc supersized breeder is "Urik".
-The description of orc supersized breeder is "[UrikDesc]".
-The weapon damage of orc supersized breeder is 20.
+Description of orc supersized breeder is "[UrikDesc]".
+Weapon Damage of orc supersized breeder is 20.
 The level of orc supersized breeder is 1.
-The Dexterity of orc supersized breeder is 10.
+Dexterity of orc supersized breeder is 10.
 The summondesc of orc supersized breeder is "[SummonUrik]".
 The dismissdesc of orc supersized breeder is "[DismissUrik]".
 The assault of orc supersized breeder is "[one of]Urik lands some heavy punches on your opponent.[or]The orc gives your opponent a good kick.[or]A bellowed insult by Urik distracts your enemy a moment - long enough for you to score a quick hit![or]Urik lands a back-handed slap on your opponent's face.[at random]".
@@ -150,7 +150,7 @@ SexuallyExperienced of Urik is true.
 TwistedCapacity of Urik is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Urik is false. [steriles can't knock people up]
 MainInfection of Urik is "Orc Warrior".
-The description of Urik is "[UrikDesc]".
+Description of Urik is "[UrikDesc]".
 The icon of Urik is Figure of Urik_clothed_icon.
 
 to say UrikDesc:
@@ -166,7 +166,7 @@ to say UrikDesc:
 		say "     Urik looks the part of a proud orc warrior, tall and strong, with a brutishly handsome face, his square jaw showing two sharp tusks jutting upwards. There are only two pieces of 'clothing' on his impressive physique, leaving little to the imagination. The first is a quite well-crafted leather harness that is strapped around Urik's chest - a masterpiece of tough, studded leather and shiny buckles that promises lots of handholds for fucking him. Covering the large orc's thighs, there is a tight-fitting pair of trunks with a mesh pouch at the front (showing off his package), as well as decorative slits on the sides. It is completely open on the back side, with only two straps on the top and bottom, allowing unrestricted access to his ass. The orc has black hair, an unruly mop of long strands falling down between his shoulder-blades, accentuated by a short beard following his chin-line. There is a moderate amount of chest hair on his pecs, curling around Urik's pierced nipples, then leading down to his crotch in a thinner treasure trail of hair. The bush of his pubes can be seen through the mesh of Urik's underwear and his legs bear a nice amount of body hair too.";
 		say "     As Urik notices your attention, the orc looks aside, careful not to meet your gaze, and he angles his body a little bit to show the curve of his ass. It almost seems to be a reflexive act, him falling into submissive behavior now that you've made it clear that you expect him to be mainly your breeding slut.";
 
-The conversation of Urik is { "<Placeholder>" }.
+Conversation of Urik is { "<Placeholder>" }.
 
 The scent of Urik is "     Urik has a quite masculine smell, underlined with a little bit of sweat and cum that somehow just makes him more attractive.".
 
@@ -502,7 +502,7 @@ to say UrikTalk5: [talk about Spike]
 
 to say UrikTalk_Companion: [companion Urik]
 	say "     As you offer Urik the chance to go out into the city with you, the orc livens up immediately, a grin instantly appearing on his face as he bellows, 'FUCK YEAH! Finally some action!' He flexes his arms in an impressive gun-show, then brings a balled-up fist into the palm of his other hand with a loud smack. 'Really hope you weren't kidding about that, [UrikPlayerAddress]! I'm ready to go, just say the word!' Smiling, you step closer to the orc, laying a hand on his arm and squeezing it in camaraderie. Reminding him that he's a powerful warrior that you want by your side makes the orc stand tall and proud. You've definitely earned a lot of respect from him with this.";
-	say "     (Urik the supersized orc breeder is now a possible ally! You can make him your active ally by typing [bold type][link]ally Urik[end link][roman type] or [bold type][link]ally orc supersized breeder[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Urik[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+	say "     (Urik the supersized orc breeder is now a possible ally! You can make him your active ally by typing [bold type][link]ally Urik[end link][roman type] or [bold type][link]ally orc supersized breeder[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Urik[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 	now orc supersized breeder is tamed;
 
 [TODO: add more content for the wyvern nest - for example a call-out to the military jeep being snatched up by a wyvern]
@@ -1149,7 +1149,7 @@ object	name
 Territory Marker	"Territory Marker"
 
 Territory Marker is a person. [for easy saving, and in vase some variables are needed in the future]
-The description of Territory Marker is "[MarkerDesc]".
+Description of Territory Marker is "[MarkerDesc]".
 
 to say MarkerDesc:
 	say "     A large sign, constructed of a number of rebar steel rods and the motor hood of a car has been put up in front of the library by Urik. He drove the rods into the asphalt of the street with enough force to shatter it, making sure that this sign is well and truly planted where is. On it, the text that the orc created is well-readable and even has shadows behind the letters for added effect: '[if player is not defaultnamed]Territory of [Name of Player]! Keep Out!' [else]Tribal Territory! Keep Out!' [end if]A snarling orc's face at the upper right corner (similar to Urik himself) and what looks to be a scattering of fallen skulls at the base of the sign drive the message home.";

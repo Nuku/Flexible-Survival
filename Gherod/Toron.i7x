@@ -39,8 +39,8 @@ AnalVirgin of Toron is false.
 PenileVirgin of Toron is false.
 SexuallyExperienced of Toron is true.
 MainInfection of Toron is "".
-The description of Toron is "[ToronDesc]".
-The conversation of Toron is { "<This is nothing but a placeholder!>" }.
+Description of Toron is "[ToronDesc]".
+Conversation of Toron is { "<This is nothing but a placeholder!>" }.
 The scent of Toron is "     Toron smells... like nothing. He's completely odorless. You can't help but think there's something quite odd about this fellow.".
 
 to say ToronDesc:
@@ -781,7 +781,7 @@ instead of sniffing tonic of mountainous strength:
 say "You open the flask for a moment and take a sniff. Then, you are wishing you wouldn't have done that, because the smell is so strong and concentrated in an alcohol-like scent that you begin to cough immediately, in much pain. And you are supposed to drink this?";
 
 tonic of mountainous strength is a grab object.
-the usedesc of tonic of mountainous strength is "[tonic of mountainous strength use]";
+Usedesc of tonic of mountainous strength is "[tonic of mountainous strength use]";
 
 to say tonic of mountainous strength use:
 	if HellfireDrinkTimer > 0:

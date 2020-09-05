@@ -18,7 +18,7 @@ Insect Hive	"Insect Hive"
 
 Insect Hive is a situation.
 ResolveFunction of Insect Hive is "[ResolveEvent Insect Hive]".
-The sarea of Insect Hive is "High".
+Sarea of Insect Hive is "High".
 when play begins:
 	add Insect Hive to BadSpots of MaleList;
 	add Insect Hive to badspots of FeralList;

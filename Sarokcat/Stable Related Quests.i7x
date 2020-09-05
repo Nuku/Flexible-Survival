@@ -13,7 +13,7 @@ Equineguardpost	"Equineguardpost"
 Equineguardpost is a situation.
 ResolveFunction of Equineguardpost is "[ResolveEvent Equineguardpost]".
 Equineguardpost is inactive. The level of Equineguardpost is 3.
-The sarea of Equineguardpost is "Stable".
+Sarea of Equineguardpost is "Stable".
 
 to say ResolveEvent Equineguardpost:
 	if XP of Onyx is 1:
@@ -55,12 +55,12 @@ Stablestoreroom	"Stablestoreroom"
 Stablestoreroom is a situation.
 ResolveFunction of Stablestoreroom is "[ResolveEvent Stablestoreroom]".
 Stablestoreroom is inactive.
-The sarea of Stablestoreroom is "Stable".
+Sarea of Stablestoreroom is "Stable".
 
 to say ResolveEvent Stablestoreroom:
 	if XP of Onyx is 4:
 		say "     Carefully exploring the Stables interior leads you to a room near the front of the area which is almost hidden in a small alcove. Peeking inside cautiously, you find the small room is packed with all sorts of strange items, though most of it appears to be clothing of various sizes. Looking around at the large, unorganized piles of random stuff, you figure this must be where they toss the personal items from their captives when they search them. You sigh slightly as you realize that the necklace Daisy sent you after is probably buried somewhere in the large amount of clutter stacked up in the small room. Figuring you had better get started looking, you shake your head slightly as you begin sorting through the room looking for the necklace the changing mare described.";
-		let bonus be ( the Perception of the player minus 10 ) divided by 2;
+		let bonus be ( Perception of Player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -87,7 +87,7 @@ Ignored Memos	"Ignored Memos"
 
 Ignored Memos is a situation.
 ResolveFunction of Ignored Memos is "[ResolveEvent Ignored Memos]".
-The sarea of Ignored Memos is "Stable".
+Sarea of Ignored Memos is "Stable".
 
 to say ResolveEvent Ignored Memos:
 	if MaleList is banned or FemaleList is banned or HermList is banned or FurryList is banned:
@@ -120,7 +120,7 @@ to say ResolveEvent Hardware Fort:
 		if Recoveredhardware is 0:
 			say "     Wandering down the streets of the city, you come across a sign for a major hardware store; and, mindful of Fancy's request, you decide to see if this one has been looted and destroyed like so many of the other ones, or if it is still intact enough to be worth looting. Turning the corner into the sheltered lot, you find yourself blinking with surprise at the scene laid out in front of you, as the lot in front of you is covered in cars and other bits of junk and salvage piled up in some kind of semblance to a small fortress. Looking at the construction carefully, you can immediately see several items that you figure would be quite useful for the Stables to have, and more importantly what appears to be several small sturdy forklifts which were obviously used to maneuver things into shape, and are probably still working even now. Figuring that if anyplace has the construction materials and tools that the Stables needs, it would be this place, you begin to look for a way in so you can clear this place out of whatever has taken up residence so you can signal the horsemen to come loot the place.";
 			say "     Moving cautiously into the makeshift fortress, you note that it has been inexpertly propped up with beams and items from within the store, and tools are strewn around the area haphazardly as well, which while good in that it indicates there is plenty here to loot, is bad for you in that it is nearly impossible to navigate the twisty maze silently, or safely. And even as you think that, you can see one of the cars nearby start to slide towards you as you bump one of the beams supporting it!";
-			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+			let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
@@ -351,7 +351,7 @@ to hardwarefortphase5:
 		say "     'We found dis in dere and figured yah might needs it. Yah didn't do too bad. It wuz a lot tah dealz wid,' he adds with a raucous laugh and a slap on your back before turning back to organizing the rest of the horses. 'Come on, you lugs. Let's get dis stuff movin[']!'";
 		say "     You feel a little better about your earlier failure now that things have worked out. Knowing you don't have any time to sit around and patch yourself up, you stuff the medkit somewhere accessible in case of emergency. Wasting no more time, you drop down outside of the fort in an effort to lead the remaining creatures away.";
 		ItemGain medkit by 1;
-	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
@@ -398,20 +398,20 @@ Horsepowering	"Horsepowering"
 
 Horsepowering is a situation.
 ResolveFunction of Horsepowering is "[ResolveEvent Horsepowering]".
-The sarea of Horsepowering is "Stable".
+Sarea of Horsepowering is "Stable".
 
 generatorfixing is a number that varies.
 
 to say ResolveEvent Horsepowering:
 	if generatorfixing is 3:
 		say "Wandering the halls of the Stables, you notice that someone has obviously started trying to patch the place up, as several areas show signs of recent construction, and the area is considerably cleaner than it was before. You are however distracted from your sightseeing when a horseman appears down the hallway and notices you, you brace yourself for a fight, however you are pleasantly surprised when he merely waves you over. Curious you follow him down the hall where he leads you to a large open room filled with various types of machinery, including what is obviously the brand new generator you helped the horses liberate from the hardware store, as well as the leads for what you can only assume are the solar panels. 'Miss Fancy said we weren't allowed to play with this anymore, so we left it to you like we were told,' the horseman says with a shrug of his impressive shoulders, before leaning closer and whispering loudly, 'She gets scary when she gets angry, so we try to do what she says. No one likes celibacy, after all... Besides, she's kinda hot herself,' he says with a chuckle as he leaves you to your work. With a sigh you begin looking over the generator and the wiring setup, and pull out several of the books you brought to use as reference material while you try to figure the complicated mess of wiring out.";
-		let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+		let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 14:
 			say "After an hour of examining the situation and referring to the books you brought several times, you think you have worked out what you need to do to get things up and running. Unfortunately it looks like it will require some very delicate wiring on your part, and you begin to carefully apply yourself to the rather dangerous problem, hoping you can manage to get it sorted without too much trouble.";
-			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+			let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
@@ -540,7 +540,7 @@ Horsepitfight	"Horsepitfight"
 
 Horsepitfight is a situation.
 ResolveFunction of Horsepitfight is "[ResolveEvent Horsepitfight]".
-The sarea of Horsepitfight is "Stable".
+Sarea of Horsepitfight is "Stable".
 
 to say ResolveEvent Horsepitfight:
 	if provingstallionhood is 2:
@@ -617,7 +617,7 @@ GoldenFocusHunt	"GoldenFocusHunt"
 
 GoldenFocusHunt is a situation.
 ResolveFunction of GoldenFocusHunt is "[ResolveEvent GoldenFocusHunt]".
-The sarea of GoldenFocusHunt is "Museum".
+Sarea of GoldenFocusHunt is "Museum".
 
 to say ResolveEvent GoldenFocusHunt:
 	if hellgatherquest is 2:

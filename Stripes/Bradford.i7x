@@ -11,7 +11,7 @@ Bounty Hunter	"Bounty Hunter"
 
 Bounty Hunter is a situation.
 ResolveFunction of Bounty Hunter is "[ResolveEvent Bounty Hunter]".
-The sarea of Bounty Hunter is "Red".
+Sarea of Bounty Hunter is "Red".
 when play begins:
 	add Bounty Hunter to BadSpots of FurryList;
 	add Bounty Hunter to BadSpots of MaleList;
@@ -50,7 +50,7 @@ Object	Name
 Bradford's Camp	"Bradford's Camp"
 
 Bradford's Camp is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Bradford's Camp is "[bradfordcampdesc]".
+Description of Bradford's Camp is "[bradfordcampdesc]".
 
 the scent of Bradford's Camp is "The former accountant's office turned temporary stakeout camp smells of Bradford and wood chips overlaid on that of paperwork.".
 
@@ -65,8 +65,8 @@ object	name
 Bradford	"Bradford"
 
 Bradford is a person. Bradford is in Bradford's Camp.
-The description of Bradford is "[bradforddesc]".
-The conversation of Bradford is { "Moo, mutherfuckah!" }.
+Description of Bradford is "[bradforddesc]".
+Conversation of Bradford is { "Moo, mutherfuckah!" }.
 the scent of the Bradford is "The bull man has a somewhat musky scent of sweat, but not overpoweringly so.".
 The icon of Bradford is Figure of Bradford_icon.
 

@@ -323,7 +323,7 @@ GildwingKoboldTest	"GildwingKoboldTest"
 
 GildwingKoboldTest is a situation.
 ResolveFunction of GildwingKoboldTest is "[ResolveEvent GildwingKoboldTest]".
-The sarea of GildwingKoboldTest is "Nowhere".
+Sarea of GildwingKoboldTest is "Nowhere".
 
 when play begins:
 	add GildwingKoboldTest to BadSpots of FemaleList;

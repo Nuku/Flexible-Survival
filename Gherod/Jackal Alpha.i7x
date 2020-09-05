@@ -482,7 +482,7 @@ name	desc	weight	object
 "jackal alpha fur"	"A tuft of dark fur that looks like it has been pulled out of the coat of a jackal. It's nicely soft."	0	jackal alpha fur
 
 jackal alpha fur is a grab object.
-the usedesc of jackal alpha fur is "[JackalAlphaFurUse]".
+Usedesc of jackal alpha fur is "[JackalAlphaFurUse]".
 
 It is temporary.
 
@@ -499,7 +499,7 @@ name	desc	weight	object
 
 jackal alpha cum is a grab object. jackal alpha cum is cum.
 jackal alpha cum is infectious. Strain of jackal alpha cum is "Jackal Femboy".
-the usedesc of jackal alpha cum is "[jackal alpha cum use]";
+Usedesc of jackal alpha cum is "[jackal alpha cum use]";
 
 to say jackal alpha cum use:
 	say "Lifting the flask to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich, sweet and animal-like. Swishing it around in your mouth a little, you finish the flask off, then stuff it back into your collection of 'empties'.";

@@ -6,7 +6,7 @@ Female Dorm One	"Female Dorm One"
 
 Female Dorm One is a situation.
 ResolveFunction of Female Dorm One is "".
-The sarea of Female Dorm One is "Nowhere".
+Sarea of Female Dorm One is "Nowhere".
 
 when play begins:
 	add Female Dorm One to BadSpots of FemaleList;
@@ -42,7 +42,7 @@ Female Dorm Two	"Female Dorm Two"
 
 Female Dorm Two is a situation.
 ResolveFunction of Female Dorm Two is "".
-The sarea of Female Dorm Two is "Nowhere".
+Sarea of Female Dorm Two is "Nowhere".
 
 instead of going north from Dorm Street while (Female Dorm Two is active and Female Dorm Two is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
@@ -63,7 +63,7 @@ Female Dorm Three	"Female Dorm Three"
 
 Female Dorm Three is a situation.
 ResolveFunction of Female Dorm Three is "".
-The sarea of Female Dorm Three is "Nowhere".
+Sarea of Female Dorm Three is "Nowhere".
 
 when play begins:
 	add Female Dorm Three to BadSpots of FemaleList;
@@ -99,7 +99,7 @@ Female Dorm Four	"Female Dorm Four"
 
 Female Dorm Four is a situation.
 ResolveFunction of Female Dorm Four is "".
-The sarea of Female Dorm Four is "Nowhere".
+Sarea of Female Dorm Four is "Nowhere".
 
 when play begins:
 	add Female Dorm Four to BadSpots of FemaleList;
@@ -135,7 +135,7 @@ Female Dorm Five	"Female Dorm Five"
 
 Female Dorm Five is a situation.
 ResolveFunction of Female Dorm Five is "".
-The sarea of Female Dorm Five is "Nowhere".
+Sarea of Female Dorm Five is "Nowhere".
 
 when play begins:
 	add Female Dorm Five to BadSpots of FemaleList;
@@ -164,7 +164,7 @@ Female Dorm Six	"Female Dorm Six"
 
 Female Dorm Six is a situation.
 ResolveFunction of Female Dorm Six is "".
-The sarea of Female Dorm Six is "Nowhere".
+Sarea of Female Dorm Six is "Nowhere".
 
 when play begins:
 	add Female Dorm Six to BadSpots of FemaleList;

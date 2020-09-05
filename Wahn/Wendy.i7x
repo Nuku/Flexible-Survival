@@ -9,7 +9,7 @@ Cow Hunting	"Cow Hunting"
 
 Cow Hunting is a situation.
 ResolveFunction of Cow Hunting is "[ResolveEvent Cow Hunting]". The level of Cow Hunting is 5.
-The sarea of Cow Hunting is "Plains".
+Sarea of Cow Hunting is "Plains".
 when play begins:
 	add Cow Hunting to badspots of HermList; [Cuntboy cowboy]
 
@@ -66,10 +66,10 @@ Missing Cow	"Missing Cow"
 
 Missing Cow is a situation.
 ResolveFunction of Missing Cow is "[ResolveEvent Missing Cow]".
-The Prereq1 of Missing Cow is Cow Hunting.
+Prereq1 of Missing Cow is Cow Hunting.
 The Prereq1Resolution of Missing Cow is { 1, 3 }.
 The level of Missing Cow is 5.
-The sarea of Missing Cow is "Plains".
+Sarea of Missing Cow is "Plains".
 
 to say ResolveEvent Missing Cow:
 	project the Figure of FeralGryphon_hard_icon;
@@ -181,8 +181,8 @@ TwistedCapacity of Wendy is false.
 Sterile of Wendy is false.
 MainInfection of Wendy is "Human".
 The HP of Wendy is normally 0.
-The description of Wendy is "[WendyDesc]".
-The conversation of Wendy is { "Moh Moo Moh Mooo Moo - Moh!" }.
+Description of Wendy is "[WendyDesc]".
+Conversation of Wendy is { "Moh Moo Moh Mooo Moo - Moh!" }.
 
 instead of sniffing Wendy:
 	say "Wendy smells like a cow - so a big, furry animal. With her stall being cleaned as often as it does, that's not a half-bad smell.";

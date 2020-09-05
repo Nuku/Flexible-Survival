@@ -5,8 +5,8 @@ object	name
 Denise	"Denise"
 
 Denise is a woman.
-The description of Denise is "[DeniseDesc]".
-The conversation of Denise is { "Mew!" }.
+Description of Denise is "[DeniseDesc]".
+Conversation of Denise is { "Mew!" }.
 MainInfection of Denise is "Blue Gryphon Herm".
 The icon of Denise is Figure of BlueGryphon_icon;
 

@@ -67,7 +67,7 @@ Lost Trident	"Lost Trident"
 Lost Trident is a situation.
 ResolveFunction of Lost Trident is "[ResolveEvent Lost Trident]". The level of Lost Trident is 9.
 
-The sarea of Lost Trident is "Beach".
+Sarea of Lost Trident is "Beach".
 When play begins:
 	Add Lost Trident to BadSpots of FurryList;
 	Add Lost Trident to BadSpots of MaleList;
@@ -125,7 +125,7 @@ Object	Name
 Atlantis City Center	"Atlantis City Center"
 
 Atlantis City Center is a room.
-The description of Atlantis City Center is "[AtlantisCenter]".
+Description of Atlantis City Center is "[AtlantisCenter]".
 earea of Atlantis City Center is "Atlantis".
 
 to say AtlantisCenter:
@@ -138,7 +138,7 @@ Object	Name
 Atlantis City Market	"Atlantis City Market"
 
 Atlantis City Market is a room.
-The description of Atlantis City Market is "[AtlantisMarket]".
+Description of Atlantis City Market is "[AtlantisMarket]".
 earea of Atlantis City Market is "Atlantis".
 
 to say AtlantisMarket:
@@ -151,7 +151,7 @@ Object	Name
 Atlantis City Residential	"Atlantis City Residential"
 
 Atlantis City Residential is a room.
-The description of Atlantis City Residential is "[AtlantisResidential]".
+Description of Atlantis City Residential is "[AtlantisResidential]".
 earea of Atlantis City Residential is "Atlantis".
 
 to say AtlantisResidential:
@@ -162,7 +162,7 @@ Object	Name
 Kurt's Abode	"Kurt's Abode"
 
 Kurt's Abode is a room.
-The description of Kurt's Abode is "[KurtsAbode]".
+Description of Kurt's Abode is "[KurtsAbode]".
 
 to say KurtsAbode:
 	say "     The living room of the shark-musician is rather quaint, though from what you know of the man it's to be expected. The area is decorated with simple paintings of the city as well as various types of guitars, which you're sure he can play. To your right is a doorway that leads to his kitchen which from where you're standing you can see it is rather spick and span. Wandering around a bit more you muse that your friend is a very clean person but you guess that's not exactly a bad thing in any situation really. Though you do have a thought to tell the shark-morph that he needs more furniture or something to spruce up the place.";
@@ -175,7 +175,7 @@ Object	Name
 Royal Palace Entrance	"Royal Palace Entrance"
 
 Royal Palace Entrance is a room.
-The description of Royal Palace Entrance is "[RoyalPalace]".
+Description of Royal Palace Entrance is "[RoyalPalace]".
 earea of Royal Palace Entrance is "Atlantis".
 
 to say RoyalPalace:
@@ -188,7 +188,7 @@ Object	Name
 Royal Throne Room	"Royal Throne Room"
 
 Royal Throne Room is a room.
-The description of Royal Throne Room is "[ThroneRoom]".
+Description of Royal Throne Room is "[ThroneRoom]".
 earea of Royal Throne Room is "Atlantis".
 
 to say ThroneRoom:
@@ -200,7 +200,7 @@ Royal Bed Chambers	"Royal Bed Chambers"
 
 Royal Bed Chambers is a room.
 Royal Bed Chambers is north of Royal Throne Room.
-The description of Royal Bed Chambers is "[PoseidonBedroom]".
+Description of Royal Bed Chambers is "[PoseidonBedroom]".
 earea of Royal Bed Chambers is "Atlantis".
 
 to say PoseidonBedroom:
@@ -212,7 +212,7 @@ Atlantis City Park	"Atlantis City Park"
 
 Atlantis City Park is a room.
 Atlantis City Residential is east of Atlantis City Park.
-The description of Atlantis City Park is "[AtlantisPark]".
+Description of Atlantis City Park is "[AtlantisPark]".
 earea of Atlantis City Park is "Atlantis".
 
 to say AtlantisPark:
@@ -337,8 +337,8 @@ AnalVirgin of Triton is true.
 PenileVirgin of Triton is true.
 SexuallyExperienced of Triton is false.
 MainInfection of Triton is "".
-The description of Triton is "[TritonDesc]".
-The conversation of Triton is { "<This is nothing but a placeholder!>" }.
+Description of Triton is "[TritonDesc]".
+Conversation of Triton is { "<This is nothing but a placeholder!>" }.
 The scent of Triton is "He smells of the ocean and a bit of musk. Though he has an underlying smell of spice.".
 
 to say TritonDesc:
@@ -445,8 +445,8 @@ AnalVirgin of Alana is true.
 PenileVirgin of Alana is true.
 SexuallyExperienced of Alana is false.
 MainInfection of Alana is "".
-The description of Alana is "[AlanaDesc]".
-The conversation of Alana is { "<This is nothing but a placeholder!>" }.
+Description of Alana is "[AlanaDesc]".
+Conversation of Alana is { "<This is nothing but a placeholder!>" }.
 The scent of Alana is "     Alana smells like sweat and lavender oddly enough.".
 
 to say AlanaDesc:

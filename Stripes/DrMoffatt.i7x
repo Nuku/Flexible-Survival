@@ -35,7 +35,7 @@ Another Doctor	"Another Doctor"
 
 Another Doctor is a situation.
 ResolveFunction of Another Doctor is "[ResolveEvent Another Doctor]".
-The sarea of Another Doctor is "Hospital".
+Sarea of Another Doctor is "Hospital".
 when play begins:
 	add Another Doctor to badspots of HermList;
 	add Another Doctor to BadSpots of FemaleList;
@@ -78,7 +78,7 @@ Object	Name
 Psych Department	"Psych Department"
 
 Psych Department is a room. It is fasttravel. It is private.
-The description of Psych Department is "[psychdesc]".
+Description of Psych Department is "[psychdesc]".
 
 to say psychdesc:
 	say "     The office of Dr. Moffatt in the Psychology department has been kept rather tidy though you're quite certain it's changed since the outbreak. Aside from the usual desk, filing cabinet and assorted accoutrements, there are a few straight jackets left strewn around, a colorful array of sex toys standing upright on her desk and the remains of sticky stains on the floor and walls. Speaking of the walls, there are several colorful crayon drawings of what must be the mephit doctor over the white paint. Were it not for the clear emphasis on the skunk's giant assets, you'd think them drawn by a child. There are a few ornamental skunks on her desk as well, though of a more mundane form than the hyper-sexualized scrawls.";
@@ -135,8 +135,8 @@ object	name
 Doctor Moffatt	"Doctor Moffatt"
 
 Doctor Moffatt is a person. Doctor Moffatt is in Psych Department.
-The description of Doctor Moffatt is "[drmoffattdesc]".
-The conversation of Doctor Moffatt is { "..." }.
+Description of Doctor Moffatt is "[drmoffattdesc]".
+Conversation of Doctor Moffatt is { "..." }.
 The icon of Doctor Moffatt is figure of DrMoffatt2_icon.
 wrcurseMoffatt is a number that varies.
 

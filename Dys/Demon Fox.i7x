@@ -230,12 +230,12 @@ demon fox fur is a grab object.
 instead of sniffing demon fox fur:
 	say "The fur has a distinct, musky smell to it, reminding you of the fox you got it from.";
 
-the usedesc of demon fox fur is "[DemonFoxFurUse]";
+Usedesc of demon fox fur is "[DemonFoxFurUse]";
 
 to say DemonFoxFurUse:
 	say "You shrug before opening your mouth and eating the fur. Oddly enough, it almost seems to heat up, before it dissolves in your mouth, a strong wave of heat rushing through your body.";
 
-demon fox fur is infectious. The strain of demon fox fur is "Demon Fox".
+demon fox fur is infectious. Strain of demon fox fur is "Demon Fox".
 
 Section 4 - Tome Specific Scenes
 

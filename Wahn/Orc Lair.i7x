@@ -32,14 +32,14 @@ Orcish Slave Raid	"Orcish Slave Raid"
 
 Orcish Slave Raid is a situation.
 ResolveFunction of Orcish Slave Raid is "[ResolveEvent Orcish Slave Raid]".
-The sarea of Orcish Slave Raid is "Warehouse".
+Sarea of Orcish Slave Raid is "Warehouse".
 when play begins:
 	add Orcish Slave Raid to BadSpots of MaleList;       [male orcs]
 
 to say ResolveEvent Orcish Slave Raid:
 	project the figure of Orc_Brothers_clothed_icon;
 	if SlaveRaidEncounters is 0: [first time]
-		say "     Walking along a street between some warehouses, you suddenly hear claws scratching on asphalt and shouting voices from an alley ahead. Just a few seconds later, a panicky looking anthro fox guy comes dashing into view, head turned to look over his shoulder - which means he isn't looking where he's going and collides with you at full speed, spilling the two of you onto the ground. Directly behind him, a trio of very muscular men come out of the alley - tall and green as they are, dressed only in loincloths, there's no doubt that they're orcs. [if OrcSlaverStatus is 3]And orcs you know at that - Mul, Yatur and Koghh, the orc slavers that you had a run-in with before[else]From the relatively similar looks, they might be brothers[end if]. One of them grabs the fallen would-be escapee by the neck and lifts him off the ground, then smiles around his sharp tusks and nods towards you. [if OrcSlaverStatus is 0]'Look, our little runner got us an extra treat,' he chuckles, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [else if OrcSlaverStatus is 2]'Look, it's the little bitch that escaped from the lair. What nice coincidence that our runner led us here,' he chuckles, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [else if OrcSlaverStatus is 3]'Look, it's our runaway breeder. Come on little bitch, we'll bring you back home and give you what you really need,' he chuckles, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [else if OrcSlaverStatus is 50]'This time, you're going down. We'll make a breeder out of you yet,' he grunts, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [end if]You barely have time to get up and take a combat stance before the other two orcs are upon you...";
+		say "     Walking along a street between some warehouses, you suddenly hear claws scratching on asphalt and shouting voices from an alley ahead. Just a few seconds later, a panicky looking anthro fox guy comes dashing into view, head turned to look over his shoulder - which means he isn't looking where he's going and collides with you at full speed, spilling the two of you onto the ground. Directly behind him, a very muscular man comes out of the alley - tall and green, dressed only in a loincloth and with a necklace of wooden beads and teeth, there's no doubt that he's an orc. A second after, two more orcs follow him, dressed in garments made from shredded police uniforms, close behind but still a step distant. [if OrcSlaverStatus is 3]And orcs you know at that - Mul, Yatur and Koghh, the orc slavers that you had a run-in with before[else]From the relatively similar looks, they might be brothers[end if]. One of them grabs the fallen would-be escapee by the neck and lifts him off the ground, then smiles around his sharp tusks and nods towards you. [if OrcSlaverStatus is 0]'Look, our little runner got us an extra treat,' he chuckles, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [else if OrcSlaverStatus is 2]'Look, it's the little bitch that escaped from the lair. What nice coincidence that our runner led us here,' he chuckles, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [else if OrcSlaverStatus is 3]'Look, it's our runaway breeder. Come on little bitch, we'll bring you back home and give you what you really need,' he chuckles, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [else if OrcSlaverStatus is 50]'This time, you're going down. We'll make a breeder out of you yet,' he grunts, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [end if]You barely have time to get up and take a combat stance before the other two orcs are upon you...";
 		LineBreak;
 		now inasituation is true;
 		now OrcSpecialFightNumber is 4; [fighting Yatur]
@@ -350,7 +350,7 @@ Object	Name
 Orc Lair Side Entrance	"Orc Lair Side Entrance"
 
 Orc Lair Side Entrance is a room. It is a fasttravel. It is private.
-The description of Orc Lair Side Entrance is "     You're standing outside a side door leading into the Capitol District police station. The street leading up to here has the typical blasted and fire-blackened look for the area. Maybe it'd be a good idea not to stay here too long, with this being the main orc lair in the city. Sooner or later, one of them is bound to come out or return here...".
+Description of Orc Lair Side Entrance is "     You're standing outside a side door leading into the Capitol District police station. The street leading up to here has the typical blasted and fire-blackened look for the area. Maybe it'd be a good idea not to stay here too long, with this being the main orc lair in the city. Sooner or later, one of them is bound to come out or return here...".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -358,7 +358,7 @@ Dark Hallway 2	"Dark Hallway 2"
 
 Dark Hallway 2 is a room.
 Dark Hallway 2 is west of Orc Lair Side Entrance.
-The description of Dark Hallway 2 is "     You're in a long windowless hallway continuing to the west and ending at the side door of the building in the east. An unmarked door leads to the north. It's pretty dark in here with no windows or electricity for the lights on the ceiling.".
+Description of Dark Hallway 2 is "     You're in a long windowless hallway continuing to the west and ending at the side door of the building in the east. An unmarked door leads to the north. It's pretty dark in here with no windows or electricity for the lights on the ceiling.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -366,7 +366,7 @@ Observation Room	"Observation Room"
 
 Observation Room is a room.
 Observation Room is north of Dark Hallway 2.
-The description of Observation Room is "     This is a relatively small room with recording equipment and a one-way-mirror window in the west wall, allowing a view into the interrogation room to the west. Not much to see currently, though - it's pretty dark in there. Though from what you can make out of its contents... and the splash of what's clearly dried cum on the glass, you'd bet that room has seen quite a bit of use recently. Interestingly, the sound system is hooked up to a car battery standing on the single table in here - so you bet one could also hear everything going on next door clearly. Maybe it'd be worth your while to [bold type]wait[roman type] here and observe what might happen.".
+Description of Observation Room is "     This is a relatively small room with recording equipment and a one-way-mirror window in the west wall, allowing a view into the interrogation room to the west. Not much to see currently, though - it's pretty dark in there. Though from what you can make out of its contents... and the splash of what's clearly dried cum on the glass, you'd bet that room has seen quite a bit of use recently. Interestingly, the sound system is hooked up to a car battery standing on the single table in here - so you bet one could also hear everything going on next door clearly. Maybe it'd be worth your while to [bold type]wait[roman type] here and observe what might happen.".
 
 before going North from Dark Hallway 2:
 	say "     The door of the observation room is a bit warped or something, requiring you to wiggle and lift the doorknob a bit as you open it. That fact, together with the relatively small size of the room might actually make it a rare safe spot in the orc lair. If you do want to get some rest somewhere in here, this would be the place to do it...";
@@ -377,7 +377,7 @@ Dark Hallway 1	"Dark Hallway 1"
 
 Dark Hallway 1 is a room.
 Dark Hallway 1 is west of Dark Hallway 2.
-The description of Dark Hallway 1 is "     You're in a long windowless hallway continuing to the east and ending at the entrance of a large room in the west. From the sounds of many orcs talking, drinking and fucking that echo from in there, you're pretty sure you shouldn't go that way right now. Thankfully, with no electricity to run the lights, it's pretty dark in the hallway, so you're relatively safe in its shadowy length. A locked door bearing a plaque with 'Interrogation' on it leads to the north, while another with the sign 'Cells' lies to the south.".
+Description of Dark Hallway 1 is "     You're in a long windowless hallway continuing to the east and ending at the entrance of a large room in the west. From the sounds of many orcs talking, drinking and fucking that echo from in there, you're pretty sure you shouldn't go that way right now. Thankfully, with no electricity to run the lights, it's pretty dark in the hallway, so you're relatively safe in its shadowy length. A locked door bearing a plaque with 'Interrogation' on it leads to the north, while another with the sign 'Cells' lies to the south.".
 
 after going west from Dark Hallway 2 while a random chance of 1 in 2 succeeds:
 	say "     [OrcLairMainChamberWatching]";
@@ -391,7 +391,7 @@ Main Hall	"Main Hall"
 
 Main Hall is a room.
 Main Hall is west of Dark Hallway 1.
-The description of Main Hall is "     This is the main hall of the orc lair, where the big brutes come to chug beer, hang out, fuck and fight. All the desks in what previously was the main working area of this police station have been pushed together to form a long table in the center of the room, which is laden with food and drink - whole kegs of beer and all kinds of other stuff. Mattresses and sofas brought in from somewhere else are strewn about the room - with some of them currently in use by the twenty-odd orcs present.".
+Description of Main Hall is "     This is the main hall of the orc lair, where the big brutes come to chug beer, hang out, fuck and fight. All the desks in what previously was the main working area of this police station have been pushed together to form a long table in the center of the room, which is laden with food and drink - whole kegs of beer and all kinds of other stuff. Mattresses and sofas brought in from somewhere else are strewn about the room - with some of them currently in use by the twenty-odd orcs present.".
 
 instead of going West from Dark Hallway 1:
 	if BodyName of Player is "Orc Warrior" and player is pure:
@@ -487,7 +487,7 @@ Bright Hallway 1	"Bright Hallway 1"
 
 Bright Hallway 1 is a room.
 Bright Hallway 1 is west of Main Hall.
-The description of Bright Hallway 1 is "     You're in a long hallway with a big, wire-reinforced window at its end in the west. That and the row of still-working fluorescent lights on the ceiling illuminate it brightly. Two closed (and locked) doors flank the hallway to the north and south, while it extends further to the west and ends in the east at the main hall of the police station turned orc lair.".
+Description of Bright Hallway 1 is "     You're in a long hallway with a big, wire-reinforced window at its end in the west. That and the row of still-working fluorescent lights on the ceiling illuminate it brightly. Two closed (and locked) doors flank the hallway to the north and south, while it extends further to the west and ends in the east at the main hall of the police station turned orc lair.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -495,7 +495,7 @@ Bright Hallway 2	"Bright Hallway 2"
 
 Bright Hallway 2 is a room.
 Bright Hallway 2 is west of Bright Hallway 1.
-The description of Bright Hallway 2 is "     You're in a long hallway that ends at a big, wire-reinforced window in the west wall. That and the row of still-working fluorescent lights on the ceiling illuminate it brightly. Two doors flank this section of the hallway to the north and south, with the northern one closed and locked, while the southern one hangs a bit crookedly and has a splintered ruin where its lock and handle once were.".
+Description of Bright Hallway 2 is "     You're in a long hallway that ends at a big, wire-reinforced window in the west wall. That and the row of still-working fluorescent lights on the ceiling illuminate it brightly. Two doors flank this section of the hallway to the north and south, with the northern one closed and locked, while the southern one hangs a bit crookedly and has a splintered ruin where its lock and handle once were.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -503,7 +503,7 @@ Police Station Lockerroom	"Police Station Lockerroom"
 
 Police Station Lockerroom is a room.
 Police Station Lockerroom is south of Bright Hallway 2.
-The description of Police Station Lockerroom is "[PLRDesc]".
+Description of Police Station Lockerroom is "[PLRDesc]".
 PLRLooted is a number that varies.
 
 to say PLRDesc:
@@ -548,7 +548,7 @@ The scent of police vest is "The vest smells slightly of sweat, which isn't too 
 
 To LootLocker:
 	say "     The only way to get into the locker without tools that you don't have is through the door at the front, so you don't have much choice but to try to lift the heavy piece of furniture. After a moment of mentally preparing yourself for the hard task, you step up to where they're lying on the floor and grab the sides.";
-	let bonus be (( the Strength of the player minus 10 ) divided by 2);
+	let bonus be (( Strength of Player minus 10 ) divided by 2);
 	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Strength Check)[line break]";
@@ -590,12 +590,12 @@ Breeder Lockup A	"Breeder Lockup A"
 
 Breeder Lockup A is a room.
 Breeder Lockup A is south of Dark Hallway 1.
-The description of Breeder Lockup A is "     You're in a room holding two large cells to the east and west - most likely originally the 'drunk tank' and another group holding cell. Now the orcs use them to lock up their newly caught slaves. A door to the north allows you to leave this place again. A bent nail to hold a key is driven into the south wall, well out of reach of anyone inside the cells.".
+Description of Breeder Lockup A is "     You're in a room holding two large cells to the east and west - most likely originally the 'drunk tank' and another group holding cell. Now the orcs use them to lock up their newly caught slaves. A door to the north allows you to leave this place again. A bent nail to hold a key is driven into the south wall, well out of reach of anyone inside the cells.".
 
 Cell Door 1 is a door.
 Cell Door 1 is west of Breeder Lockup A.
 Cell Door 1 is lockable and locked.
-The description of Cell Door 1 is "     A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it[if CellDoorStatus is 1 or CellDoorStatus is 3]. Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if].".
+Description of Cell Door 1 is "     A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it[if CellDoorStatus is 1 or CellDoorStatus is 3]. Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if].".
 Cell Key unlocks Cell Door 2.
 
 Table of GameRoomIDs (continued)
@@ -605,12 +605,12 @@ Slave Cell 1	"Slave Cell 1"
 Slave Cell 1 is a room.
 Slave Cell 1 is west of Cell Door 1.
 Slave Cell 1 is sleepsafe.
-The description of Slave Cell 1 is "     This large cell holds a bed in the back, as well as a backless leather bench that's clearly meant to have sex on. It's seen quite a bit of use, judging from the cum-stains all over it and on the floor around. Shreds of fabric and quite a few ripped pieces of clothing lie strewn about on the floor. The only exit from this cell is a door in the east. [if Cell Key is owned]Good that you have a key, otherwise you might get stuck in here[else if CellDoorStatus is 1 or CellDoorStatus is 3]Good that the lock is busted, otherwise you'd be stuck in here[else]You're stuck in here - unless you find a way to [link]escape[as]escape the cell[end link][end if].".
+Description of Slave Cell 1 is "     This large cell holds a bed in the back, as well as a backless leather bench that's clearly meant to have sex on. It's seen quite a bit of use, judging from the cum-stains all over it and on the floor around. Shreds of fabric and quite a few ripped pieces of clothing lie strewn about on the floor. The only exit from this cell is a door in the east. [if Cell Key is owned]Good that you have a key, otherwise you might get stuck in here[else if CellDoorStatus is 1 or CellDoorStatus is 3]Good that the lock is busted, otherwise you'd be stuck in here[else]You're stuck in here - unless you find a way to [link]escape[as]escape the cell[end link][end if].".
 
 Cell Door 2 is a door.
 Cell Door 2 is east of Breeder Lockup A.
 Cell Door 2 is lockable and locked.
-The description of Cell Door 2 is "     A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it[if CellDoorStatus is 2 or CellDoorStatus is 3]. Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if]".
+Description of Cell Door 2 is "     A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it[if CellDoorStatus is 2 or CellDoorStatus is 3]. Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if]".
 Cell Key unlocks Cell Door 2.
 
 Table of GameRoomIDs (continued)
@@ -620,7 +620,7 @@ Slave Cell 2	"Slave Cell 2"
 Slave Cell 2 is a room.
 Slave Cell 2 is east of Cell Door 2.
 Slave Cell 2 is sleepsafe.
-The description of Slave Cell 2 is "     This large cell holds a bed in the back, as well as a backless leather bench that's clearly meant to have sex on. It's seen quite a bit of use, judging from the cum-stains all over it and on the floor around. Shreds of fabric and quite a few ripped pieces of clothing lie strewn about on the floor. The only exit from this cell is a door in the west. [if Cell Key is owned]Good that you have a key, otherwise you might get stuck in here[else if CellDoorStatus is 2 or CellDoorStatus is 3]Good that the lock is busted, otherwise you'd be stuck in here[else]You're stuck in here - unless you find a way to [link]escape[as]escape the cell[end link][end if].".
+Description of Slave Cell 2 is "     This large cell holds a bed in the back, as well as a backless leather bench that's clearly meant to have sex on. It's seen quite a bit of use, judging from the cum-stains all over it and on the floor around. Shreds of fabric and quite a few ripped pieces of clothing lie strewn about on the floor. The only exit from this cell is a door in the west. [if Cell Key is owned]Good that you have a key, otherwise you might get stuck in here[else if CellDoorStatus is 2 or CellDoorStatus is 3]Good that the lock is busted, otherwise you'd be stuck in here[else]You're stuck in here - unless you find a way to [link]escape[as]escape the cell[end link][end if].".
 
 after going west from Breeder Lockup A:
 	try looking;
@@ -1382,8 +1382,8 @@ object	name
 Orc Mob	"Orc Mob"
 
 Orc Mob is a man.
-The description of Orc Mob is "[OrcMobDesc]".
-The conversation of Orc Mob is { "Yap!" }.
+Description of Orc Mob is "[OrcMobDesc]".
+Conversation of Orc Mob is { "Yap!" }.
 Orc Mob is in Main Hall.
 
 to say OrcMobDesc:

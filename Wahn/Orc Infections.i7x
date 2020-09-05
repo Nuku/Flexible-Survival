@@ -481,13 +481,13 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"orc brew"	"A stone mug with a simple lid that keeps its contents from sloshing out. The yellow-green fluid inside does look kinda like beer. Though how the orcs might have produced it is a mystery - maybe for the better."	1	orc brew
+"orc brew"	"A beer stein with a tight-fitting metal lid on a hinge that keeps its contents from sloshing out. On the side of it, you see the printed words 'Orctoberfest 2008', with the first 'r' being scrawled on with a sharpie. The yellow-green fluid inside does look kinda like beer. Though how the orcs might have produced it is a mystery - maybe for the better."	1	orc brew
 
 instead of sniffing orc brew:
 say "You open the lid for a moment and take a sniff. Spicy, and definitively alcoholic.";
 
 orc brew is a grab object.
-the usedesc of orc brew is "[orc brew use]";
+Usedesc of orc brew is "[orc brew use]";
 
 to say orc brew use:
 	say "Lifting the beer stein in one hand, you thumb the lid open and take a deep quaff of the liquid within. Hmm, tasty in a strange spicy way, and good against thirst. You can't help yourself and keep drinking until all of it is gone, leaving you wanting for more. The empty mug you throw away, it being too heavy to lug around as an empty container.";
@@ -683,7 +683,7 @@ say "You open the lid for a moment and take a sniff. Smells rather tasty actuall
 
 orc cum is a grab object. orc cum is cum.
 orc cum is infectious. Strain of orc cum is "Orc Breeder".
-the usedesc of orc cum is "[orc cum use]";
+Usedesc of orc cum is "[orc cum use]";
 
 to say orc cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy orc cum run over your tongue and down your throat. Mmmmh, this stuff has a really great taste that calls for more. You can't help yourself and keep drinking until all of it is gone, filling your mind with a giddy, pleasant buzz. Now where do you get more of this stuff? You're really tempted to find an orc and just suck it right out of his cock.";

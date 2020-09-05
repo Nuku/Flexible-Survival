@@ -10,7 +10,7 @@ Mushroom Cave	"Mushroom cave"
 
 Mushroom Cave is a situation.
 ResolveFunction of Mushroom Cave is "[ResolveEvent Mushroom Cave]".
-The sarea of Mushroom Cave is "Outside".
+Sarea of Mushroom Cave is "Outside".
 
 MushroomCaveVisited is a number that varies. MushroomCaveVisited is usually 0
 
@@ -52,7 +52,7 @@ name	desc	weight	object
 
 glowing mushroom is a grab object. It is temporary.
 
-The usedesc of glowing mushroom is "[glowing mushroom use]".
+Usedesc of glowing mushroom is "[glowing mushroom use]".
 
 To say glowing mushroom use:
 	say "     You quickly shrink, your body getting smaller and smaller by the second. Meanwhile, the clothes and gear you carry stay the same size, quickly outgrowing your diminishing stature. Looking at the now giant world with awe, you wonder how you will be able to survive while being small as a mouse. And should you just leave your equipment behind? Not seeing too much hope for making it far like this, you decide to wait. Thankfully, after some time, you feel yourself growing back to normal. Looks like the effects weren't permanent - this time, at least.";
@@ -71,7 +71,7 @@ Hungry Dog	"Hungry dog"
 
 Hungry Dog is a situation.
 ResolveFunction of Hungry Dog is "[ResolveEvent Hungry Dog]".
-The sarea of Hungry Dog is "Outside".
+Sarea of Hungry Dog is "Outside".
 When play begins:
 	add Hungry dog to BadSpots of FurryList;
 	add Hungry dog to BadSpots of MaleList;
@@ -160,7 +160,7 @@ Little Trouble	"Little Trouble"
 
 Little Trouble is a situation.
 ResolveFunction of Little Trouble is "[ResolveEvent Little Trouble]".
-The sarea of Little Trouble is "Outside".
+Sarea of Little Trouble is "Outside".
 When play begins:
 	add Little trouble to BadSpots of FurryList;
 	add Little trouble to BadSpots of MaleList;

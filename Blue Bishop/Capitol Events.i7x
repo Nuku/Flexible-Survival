@@ -13,7 +13,7 @@ dragatorspot	"dragatorspot"
 
 dragatorspot is a situation.
 ResolveFunction of dragatorspot is "[ResolveEvent dragatorspot]".
-The sarea of dragatorspot is "Capitol".
+Sarea of dragatorspot is "Capitol".
 
 to say ResolveEvent dragatorspot:
 	say "     Down the street, you spot a crocodile-like beast. It has six legs and is covered in dark purple scales - one of the ebonflame dragators. You watch it with sympathy as it knocks over trash cans and uses its huge jaws and teeth to rummage through the refuse. Such a stupid, unclean creature is easily avoided.";
@@ -26,7 +26,7 @@ whelpspot	"whelpspot"
 
 whelpspot is a situation.
 ResolveFunction of whelpspot is "[ResolveEvent whelpspot]".
-The sarea of whelpspot is "Capitol".
+Sarea of whelpspot is "Capitol".
 whelpspotnum is a number that varies.
 
 to say ResolveEvent whelpspot:
@@ -44,7 +44,7 @@ Ebonflame Nest	"Ebonflame Nest"
 
 Ebonflame Nest is a situation.
 ResolveFunction of Ebonflame Nest is "[ResolveEvent Ebonflame Nest]".
-The sarea of Ebonflame Nest is "Capitol".
+Sarea of Ebonflame Nest is "Capitol".
 
 to say ResolveEvent Ebonflame Nest:
 	setmonster "Ebonflame Whelp";
@@ -152,7 +152,7 @@ Strange Meeting	"Strange Meeting"
 
 Strange Meeting is a situation.
 ResolveFunction of Strange Meeting is "[ResolveEvent Strange Meeting]".
-The sarea of Strange Meeting is "Capitol".
+Sarea of Strange Meeting is "Capitol".
 
 to say ResolveEvent Strange Meeting:
 	say "     Traveling through the ruined area, you happen upon what appears to be a set of ebonflame dragonkin in the distance. Thankfully not being spotted, you duck behind some rubble, watching what they do.";
@@ -170,7 +170,7 @@ Failed Escape	"Failed Escape"
 
 Failed Escape is a situation.
 ResolveFunction of Failed Escape is "[ResolveEvent Failed Escape]".
-The sarea of Failed Escape is "Capitol".
+Sarea of Failed Escape is "Capitol".
 
 to say ResolveEvent Failed Escape:
 	say "     You encounter what appears to be a crashed military helicopter. Its equipment is completely roasted and its once-occupants are nowhere to be found. Upon closer inspection, there appears to be the stains of some sexual fluids, long since dried and caked on the charred surfaces, perhaps inferring the fate of those who tried to escape on this.";
@@ -185,7 +185,7 @@ Charred Pickets	"Charred Pickets"
 
 Charred Pickets is a situation.
 ResolveFunction of Charred Pickets is "[ResolveEvent Charred Pickets]".
-The sarea of Charred Pickets is "Capitol".
+Sarea of Charred Pickets is "Capitol".
 
 to say ResolveEvent Charred Pickets:
 	say "     You manage to find some peculiar picket signs strewn about a small area, too burnt up to make out what they might have been for. You imagine that the people carrying these signs were rudely interrupted in the middle of their protest.";

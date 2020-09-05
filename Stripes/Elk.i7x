@@ -162,9 +162,9 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 15;
 	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now HP entry is 53; [ The monster's starting HP. ]
-	now lev entry is 9; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 9; [ Monster's average damage when attacking. ]
+	now HP entry is 90; [ The monster's starting HP. ]
+	now lev entry is 11; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 11; [ Monster's average damage when attacking. ]
 	now area entry is "Forest"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 15; [ Length in inches infection will make cock grow to if cocks. ]
@@ -309,7 +309,7 @@ name	desc	weight	object
 "elk antler"	"A chunk of an elk's antler, probably knocked off during a fight."	2	elk antler
 
 elk antler is a grab object.
-the usedesc of elk antler is "[elkantleruse]".
+Usedesc of elk antler is "[elkantleruse]".
 
 It is temporary.
 

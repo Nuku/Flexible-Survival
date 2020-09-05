@@ -265,7 +265,7 @@ Hunted Survivor	"Hunted Survivor"
 
 Hunted Survivor is a situation.
 ResolveFunction of Hunted Survivor is "[ResolveEvent Hunted Survivor]".
-The sarea of Hunted Survivor is "Sealed".
+Sarea of Hunted Survivor is "Sealed".
 
 when play begins:
 	add Hunted Survivor to BadSpots of MaleList;

@@ -18,7 +18,7 @@ Panda Inspiration	"Panda Inspiration"
 
 Panda Inspiration is a situation.
 ResolveFunction of Panda Inspiration is "[ResolveEvent Panda Inspiration]".
-The sarea of Panda Inspiration is "Campus".
+Sarea of Panda Inspiration is "Campus".
 
 when play begins:
 	add Panda Inspiration to BadSpots of MaleList;
@@ -57,7 +57,7 @@ Panda Question	"Panda Question"
 Panda Question is a situation.
 ResolveFunction of Panda Question is "[ResolveEvent Panda Question]".
 Panda Question is resolved.
-The sarea of Panda Question is "Campus".
+Sarea of Panda Question is "Campus".
 
 when play begins:
 	add Panda Question to BadSpots of MaleList;
@@ -90,7 +90,7 @@ Art Supply Retrieval	"Art Supply Retrieval"
 Art Supply Retrieval is a situation.
 ResolveFunction of Art Supply Retrieval is "[ResolveEvent Art Supply Retrieval]".
 Art Supply Retrieval is resolved.
-The sarea of Art Supply Retrieval is "Campus".
+Sarea of Art Supply Retrieval is "Campus".
 
 when play begins:
 	add Art Supply Retrieval to BadSpots of FemaleList;
@@ -147,7 +147,7 @@ Grateful Panda	"Grateful Panda"
 Grateful Panda is a situation.
 ResolveFunction of Grateful Panda is "[ResolveEvent Grateful Panda]".
 Grateful Panda is resolved.
-The sarea of Grateful Panda is "Campus".
+Sarea of Grateful Panda is "Campus".
 
 when play begins:
 	add Grateful Panda to BadSpots of MaleList;
@@ -207,8 +207,8 @@ AnalVirgin of Jake is true.
 PenileVirgin of Jake is true.
 SexuallyExperienced of Jake is false.
 MainInfection of Jake is "".
-The description of Jake is "[JakeDesc]".
-The conversation of Jake is { "<This is nothing but a placeholder!>" }.
+Description of Jake is "[JakeDesc]".
+Conversation of Jake is { "<This is nothing but a placeholder!>" }.
 The scent of Jake is "     Jake gives off a scent of clay and paint oils, which is to be expected with the panda's occupation as an art student.".
 
 to say JakeDesc:

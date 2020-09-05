@@ -65,7 +65,7 @@ AnalVirgin of Erin is true.
 PenileVirgin of Erin is false.
 SexuallyExperienced of Erin is true.
 MainInfection of Erin is "Slut Rat".
-the description of Erin is "[ErinDesc]".
+Description of Erin is "[ErinDesc]".
 
 to say ErinDesc:
 	project the figure of Erin_face_icon;
@@ -274,7 +274,7 @@ AnalVirgin of Violet is true.
 PenileVirgin of Violet is true.
 SexuallyExperienced of Violet is true.
 MainInfection of Violet is "Slut Rat".
-the description of Violet is "[VioletDesc]".
+Description of Violet is "[VioletDesc]".
 
 to say VioletDesc:
 	project the figure of Violet_face_icon;
@@ -481,7 +481,7 @@ Pirate Standoff	"Pirate Standoff"
 
 Pirate Standoff is a situation.
 ResolveFunction of Pirate Standoff is "[ResolveEvent Pirate Standoff]".
-The sarea of Pirate Standoff is "Beach".
+Sarea of Pirate Standoff is "Beach".
 
 to say ResolveEvent Pirate Standoff:
 	say "     You hear a commotion in the distance, behind a dune. Curious what it may be, you climb the small hill prudently, crouching as you reach the top. On the other side, you see a pair of young-looking anthro rats, one male and the other female looking like two peas in a pod, surrounded by a gang of pirate sharks. The aquatic predators growl at the pair of rodents, who stand in the middle, back-to-back. 'Arrr, ye sea rats shouldn't [']ave been snoopin['] around,' one of the sharks says. She seems to be the [']captain['] of the group.";
@@ -540,7 +540,7 @@ Rat Twins Invitation	"Rat Twins Invitation"
 
 Rat Twins Invitation is a situation.
 ResolveFunction of Rat Twins Invitation is "".
-The sarea of Rat Twins Invitation is "Nowhere".
+Sarea of Rat Twins Invitation is "Nowhere".
 
 instead of going to Restaurant while (Rat Twins Invitation is active and Rat Twins Invitation is not resolved and HP of Erin is 1):
 	move Erin to Restaurant;
@@ -596,7 +596,7 @@ Strange Island	"Strange Island"
 
 Strange Island is a situation.
 ResolveFunction of Strange Island is "".
-The sarea of Strange Island is "Nowhere".
+Sarea of Strange Island is "Nowhere".
 
 to say strangeIsland:
 	if level of Erin is 0:
@@ -656,7 +656,7 @@ Tied Rat Twins is a scavevent.
 ResolveFunction of Tied Rat Twins is "[ResolveEvent Tied Rat Twins]".
 When play begins:
 	now Tied Rat Twins is resolved;
-[The sarea of Tied Rat Twins is "Outside".]
+[Sarea of Tied Rat Twins is "Outside".]
 
 to say ResolveEvent Tied Rat Twins:
 	say "     During your exploration, you come upon what looks like an abandoned sex-shop. The place looks deserted, but there is this permanent buzzing sound coming from inside. This is odd.";

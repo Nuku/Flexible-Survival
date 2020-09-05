@@ -46,7 +46,7 @@ object	name
 Inflatable Otter Suit	"Inflatable Otter Suit"
 
 Inflatable Otter Suit is a person. [mostly male/herm oriented]
-The description of Inflatable Otter Suit is "[InflatableOtterSuitDesc]".
+Description of Inflatable Otter Suit is "[InflatableOtterSuitDesc]".
 The HP of Inflatable Otter Suit is 0.
 The Lust of Inflatable Otter Suit is 0.
 The Libido of Inflatable Otter Suit is 0.
@@ -486,7 +486,7 @@ object	name
 Stuffed Otter Suit	"Stuffed Otter Suit"
 
 Stuffed Otter Suit is a person. [mostly female/neuter oriented]
-The description of Stuffed Otter Suit is "[StuffedOtterSuitDesc]".
+Description of Stuffed Otter Suit is "[StuffedOtterSuitDesc]".
 
 Instead of sniffing Stuffed Otter Suit:
 	say "     The inflatable otter suit smells of saltwater and fresh synthetics. The heady scent of sex emanates from its undoubtedly sordid interior.";

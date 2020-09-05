@@ -239,7 +239,7 @@ name	desc	weight	object
 
 estrogen pill is a grab object. It is temporary.
 
-the usedesc of estrogen pill is "[estrogen pill use]";
+Usedesc of estrogen pill is "[estrogen pill use]";
 
 before using a grab object (called x):
 	if x is estrogen pill:

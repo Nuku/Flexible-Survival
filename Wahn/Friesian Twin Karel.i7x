@@ -57,8 +57,8 @@ SexuallyExperienced of Karel is true.
 TwistedCapacity of Karel is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Karel is false. [steriles can't knock people up]
 MainInfection of Karel is "Horseman".
-The description of Karel is "[Kareldesc]".
-The conversation of Karel is { "Meep!" }.
+Description of Karel is "[Kareldesc]".
+Conversation of Karel is { "Meep!" }.
 
 instead of sniffing Karel:
 	say "     A";

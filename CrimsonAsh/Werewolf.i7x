@@ -20,7 +20,7 @@ Werewolf Surprise	"Werewolf Surprise"
 
 Werewolf Surprise is a situation.
 ResolveFunction of Werewolf Surprise is "".
-The sarea of Werewolf Surprise is "Nowhere".
+Sarea of Werewolf Surprise is "Nowhere".
 
 when play begins:
 	add Werewolf Surprise to BadSpots of FemaleList;

@@ -63,8 +63,8 @@ SexuallyExperienced of Logan is true.
 TwistedCapacity of Logan is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Logan is false. [steriles can't knock people up]
 MainInfection of Logan is "Wolverine Guard".
-The description of Logan is "[LoganDesc]".
-The conversation of Logan is { "<This is nothing but a placeholder!>" }.
+Description of Logan is "[LoganDesc]".
+Conversation of Logan is { "<This is nothing but a placeholder!>" }.
 The scent of Logan is "     Logan smells nicely masculine, with just the smallest amount of sexy sweat to his body, complete with lots of pheromones that can drive almost anyone wild in lust.".
 
 to say LoganDesc:

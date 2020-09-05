@@ -40,7 +40,7 @@ name	desc	weight	object
 
 medkit is a grab object. It is fast. It is not temporary.
 
-the usedesc of medkit is "[medkit use]";
+Usedesc of medkit is "[medkit use]";
 
 to say medkit use:
 	if HP of Player < MaxHP of Player:
@@ -88,7 +88,7 @@ name	desc	weight	object
 
 clean bandages is a grab object.
 
-the usedesc of clean bandages is "[clean bandages use]";
+Usedesc of clean bandages is "[clean bandages use]";
 
 to say clean bandages use:
 	if HP of Player < MaxHP of Player:
@@ -119,7 +119,7 @@ name	desc	weight	object
 adhesive bandage is a grab object.
 adhesive bandage is fast.
 
-the usedesc of adhesive bandage is "[adhesive bandage use]";
+Usedesc of adhesive bandage is "[adhesive bandage use]";
 
 to say adhesive bandage use:
 	if HP of Player < MaxHP of Player:
@@ -139,7 +139,7 @@ name	desc	weight	object
 indigo potion is a grab object.
 indigo potion is fast.
 
-the usedesc of indigo potion is "[indigo potion use]";
+Usedesc of indigo potion is "[indigo potion use]";
 
 to say indigo potion use:
 	say "You pop the cork and down the potion in a single gulp. NNNGggghhhaaAHH! Its sour taste has you pulling a pained grimace, but somehow you feel better for having drunk that stuff.";
@@ -159,13 +159,13 @@ name	desc	weight	object
 
 cot is a grab object. It is not temporary.
 understand "Bed" as cot.
-the usedesc of cot is "[cot use]";
+Usedesc of cot is "[cot use]";
 
 to say cot use:
 	try resting;
 
 sleeping bag is a grab object. It is not temporary.
-the usedesc of sleeping bag is "[sleeping bag use]";
+Usedesc of sleeping bag is "[sleeping bag use]";
 
 to say sleeping bag use:
 	try resting;
@@ -179,7 +179,7 @@ name	desc	weight	object
 tennis ball is a grab object.
 It is not temporary.
 
-the usedesc of tennis ball is "[tennis ball use]";
+Usedesc of tennis ball is "[tennis ball use]";
 
 to say tennis ball use:
 	say "Unsure what exactly to do with the tennis ball, you throw it from hand to hand a few times and bounce it off the ground.";

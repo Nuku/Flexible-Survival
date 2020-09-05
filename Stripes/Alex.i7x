@@ -9,7 +9,7 @@ object	name
 Alex	"Alex"
 
 Alex is a man. Alex is in Alex's Condo.
-The conversation of alex is { "Poing!" }.
+Conversation of alex is { "Poing!" }.
 alexbrunch is a number that varies.
 alexdiego is a number that varies.
 alexleeinfo is a number that varies.
@@ -27,14 +27,14 @@ to say alexscent:
 	else:
 		say "Alex smells of male ferret and brunchtime fun.";
 
-The description of Alex is "[if alexbrunch < 4]A mostly humanoid male with ferret-like ears and a long, sinuous tail. He has a twitchy animal nose with whiskers around it. He has a slightly rumpled suit on, still looking good despite his changes. He is a pleasant enough looking person who looks even better in those moments when he's not stressed or worried by his clients[else]Alex is a sexy ferret male, with a cute mustelid head. His twitchy animal nose has an array of whiskers around it. He has a slightly rumpled suit on, still looking good despite his changes. You find his new look quite pleasing to the eyes and he certainly seems much happier and friendlier of late. It seems the changes he's undergone are for the better[end if].".
+Description of Alex is "[if alexbrunch < 4]A mostly humanoid male with ferret-like ears and a long, sinuous tail. He has a twitchy animal nose with whiskers around it. He has a slightly rumpled suit on, still looking good despite his changes. He is a pleasant enough looking person who looks even better in those moments when he's not stressed or worried by his clients[else]Alex is a sexy ferret male, with a cute mustelid head. His twitchy animal nose has an array of whiskers around it. He has a slightly rumpled suit on, still looking good despite his changes. You find his new look quite pleasing to the eyes and he certainly seems much happier and friendlier of late. It seems the changes he's undergone are for the better[end if].".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Alex's Condo	"Alex's Condo"
 
 Alex's Condo is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Alex's Condo is "     Near the top of the high rise condo building, Alex's home has a good view of the area, if partially blocked by several of the other surrounding high rises. His place is fairly well-maintained, the mustelid tidying up occasionally. It does have the faint, tangy smell of mustelid musk, but it's not too strong. It is well-furnished, with expensive, trendy-looking furniture and décor. The big screen television and large stereo are silent, but fill a sizable portion of one wall. Several pieces of classy art adorn the others, all matching nicely with each other and the room décor as a whole. There are several legal briefs and law books open on the coffee table in the living room. Scattered around the floor are several colorful rubber objects, clearly outlets for any ferrety urges[if alexbrunch > 3]. There has been an increase in the number of rubber toys and shiny things scattered around the condo as the lawyer's gotten more ferrety[end if]. A glance in the kitchen shows that it's not as tidy, and is equally ultra-modern, if now useless. He's set up a small camper stove on his stove top and is using that for cooking. Between bouts of manic ferretness, the mustelid lawyer is sitting on his couch, focusing on his papers.".
+Description of Alex's Condo is "     Near the top of the high rise condo building, Alex's home has a good view of the area, if partially blocked by several of the other surrounding high rises. His place is fairly well-maintained, the mustelid tidying up occasionally. It does have the faint, tangy smell of mustelid musk, but it's not too strong. It is well-furnished, with expensive, trendy-looking furniture and décor. The big screen television and large stereo are silent, but fill a sizable portion of one wall. Several pieces of classy art adorn the others, all matching nicely with each other and the room décor as a whole. There are several legal briefs and law books open on the coffee table in the living room. Scattered around the floor are several colorful rubber objects, clearly outlets for any ferrety urges[if alexbrunch > 3]. There has been an increase in the number of rubber toys and shiny things scattered around the condo as the lawyer's gotten more ferrety[end if]. A glance in the kitchen shows that it's not as tidy, and is equally ultra-modern, if now useless. He's set up a small camper stove on his stove top and is using that for cooking. Between bouts of manic ferretness, the mustelid lawyer is sitting on his couch, focusing on his papers.".
 
 the scent of Alex's Condo is "[alexcondoscent]".
 
@@ -89,7 +89,7 @@ Meet Alex	"Meet Alex"
 
 Meet Alex is a situation.
 ResolveFunction of Meet Alex is "[ResolveEvent Meet Alex]".
-The sarea of meet alex is "High".
+Sarea of meet alex is "High".
 AlexProgress is a number that varies.
 AlexTalk is a number that varies.
 
@@ -120,7 +120,7 @@ Find Lorenda	"Find Lorenda"
 
 Find Lorenda is a situation.
 ResolveFunction of Find Lorenda is "[ResolveEvent Find Lorenda]".
-The sarea of Find Lorenda is "Red".
+Sarea of Find Lorenda is "Red".
 Find Lorenda is inactive.
 Lisacheat is a number that varies.
 

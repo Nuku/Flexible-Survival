@@ -7,7 +7,7 @@ Captive Breeding	"Captive Breeding"
 
 Captive Breeding is a situation.
 ResolveFunction of Captive Breeding is "[ResolveEvent Captive Breeding]".
-The sarea of Captive Breeding is "Sealed".
+Sarea of Captive Breeding is "Sealed".
 
 when play begins:
 	add Captive Breeding to BadSpots of FemaleList;
@@ -162,7 +162,7 @@ Trashed Refuge	"Trashed Refuge"
 
 Trashed Refuge is a situation.
 ResolveFunction of Trashed Refuge is "[ResolveEvent Trashed Refuge]".
-The sarea of Trashed Refuge is "Sealed".
+Sarea of Trashed Refuge is "Sealed".
 
 when play begins:
 	add Trashed Refuge to BadSpots of FemaleList;
@@ -257,7 +257,7 @@ Hidden Sublevel	"Hidden Sublevel"
 
 Hidden Sublevel is a situation.
 ResolveFunction of Hidden Sublevel is "[ResolveEvent Hidden Sublevel]".
-The sarea of Hidden Sublevel is "Sealed".
+Sarea of Hidden Sublevel is "Sealed".
 
 to say ResolveEvent Hidden Sublevel:
 	say "     You come upon a mid-sized room with an elevator, dark and spooky like the rest of the complex under the Trevor Labs. The opposite wall from that elevator looks interesting - seems like a whole section of it was designed to slide away sideways and is currently in that position. Behind where the wall cover would be, there's a thick reinforced door, large enough to require powerful motors to open and close it. Whether this hidden entrance was constructed to keep something out - or in - it's wide open now, and without power to the building, it's stuck for good that way...";
@@ -269,8 +269,8 @@ Failed Experiments	"Failed Experiments"
 
 Failed Experiments is a situation.
 ResolveFunction of Failed Experiments is "[ResolveEvent Failed Experiments]".
-The Prereq1 of Failed Experiments is Hidden Sublevel.
-The sarea of Failed Experiments is "Sealed".
+Prereq1 of Failed Experiments is Hidden Sublevel.
+Sarea of Failed Experiments is "Sealed".
 
 to say ResolveEvent Failed Experiments:
 	say "     In the depths of the hidden section in this underground complex, you find a room with row after row of glass tanks. Small and large, they're filled with formaldehyde in which... things are preserved. From just clumps of tentacles, to animals sprouting too many limbs or even heads, to... deformed creatures which have a dismaying resemblance to humans. Seems like even before the nanite infection, unnatural things were being done in these labs. With a shiver running down your spine, you turn away from the failed experiments and make your way back to the surface, unsuccessfully trying to forget what you saw.";
@@ -282,8 +282,8 @@ Mindshield Storage	"Mindshield Storage"
 
 Mindshield Storage is a situation.
 ResolveFunction of Mindshield Storage is "[ResolveEvent Mindshield Storage]".
-The Prereq1 of Mindshield Storage is Hidden Sublevel.
-The sarea of Mindshield Storage is "Sealed".
+Prereq1 of Mindshield Storage is Hidden Sublevel.
+Sarea of Mindshield Storage is "Sealed".
 
 MSStorageVisited is a number that varies. MSStorageVisited usually is 0.
 
@@ -339,8 +339,8 @@ Holding Cell Four	"Holding Cell Four"
 
 Holding Cell Four is a situation.
 ResolveFunction of Holding Cell Four is "[ResolveEvent Holding Cell Four]".
-The Prereq1 of Holding Cell Four is Hidden Sublevel.
-The sarea of Holding Cell Four is "Sealed".
+Prereq1 of Holding Cell Four is Hidden Sublevel.
+Sarea of Holding Cell Four is "Sealed".
 CellFourVisits is a number that varies.
 
 to say ResolveEvent Holding Cell Four:[repeatable event]

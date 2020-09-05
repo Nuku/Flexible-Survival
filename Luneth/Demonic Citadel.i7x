@@ -10,7 +10,7 @@ Object	Name
 Entrance Portal(Moh)	"Entrance Portal(Moh)"
 
 Entrance Portal(Moh) is west of Lava Beds(Moh).
-Entrance Portal(Moh) is a room. The description of Entrance Portal(Moh) is "[Entrance Portal(Moh) desc]".
+Entrance Portal(Moh) is a room. Description of Entrance Portal(Moh) is "[Entrance Portal(Moh) desc]".
 Entrance Portal(Moh) is sleepsafe.
 
 to say Entrance Portal(Moh) desc:
@@ -28,7 +28,7 @@ Lava Beds(Moh)	"Lava Beds(Moh)"
 
 Lava Beds(Moh) is east of Entrance Portal(Moh).
 Lava Beds(Moh) is west of Nykrata Grove(Moh).
-Lava Beds(Moh) is a room. The description of Lava Beds(Moh) is "[Lava Beds(Moh) desc]".
+Lava Beds(Moh) is a room. Description of Lava Beds(Moh) is "[Lava Beds(Moh) desc]".
 Lava Beds(Moh) is sleepsafe.
 
 to say Lava Beds(Moh) desc:
@@ -46,7 +46,7 @@ Nykrata Grove(Moh)	"Nykrata Grove(Moh)"
 
 Nykrata Grove(Moh) is east of Lava Beds(Moh).
 Nykrata Grove(Moh) is west of Stables(Moh).
-Nykrata Grove(Moh) is a room. The description of Nykrata Grove(Moh) is "[Nykrata Grove(Moh) desc]".
+Nykrata Grove(Moh) is a room. Description of Nykrata Grove(Moh) is "[Nykrata Grove(Moh) desc]".
 Nykrata Grove(Moh) is sleepsafe.
 
 to say Nykrata Grove(Moh) desc:
@@ -63,7 +63,7 @@ Object	Name
 Stables(Moh)	"Stable(Moh)"
 
 Stables(Moh) is east of Nykrata Grove(Moh).
-Stables(Moh) is a room. The description of Stables(Moh) is "[Stables(Moh) desc]".
+Stables(Moh) is a room. Description of Stables(Moh) is "[Stables(Moh) desc]".
 Stables(Moh) is sleepsafe.
 
 to say Stables(Moh) desc:
@@ -82,7 +82,7 @@ Perilous Cliffs(Moh)	"Perilous Cliffs(Moh)"
 Perilous Cliffs(Moh) is south of Nykrata Grove(Moh).
 Perilous Cliffs(Moh) is west of Arena(Moh).
 Perilous Cliffs(Moh) is north of Precipice Landing(Moh).
-Perilous Cliffs(Moh) is a room. The description of Perilous Cliffs(Moh) is "[Perilous Cliffs(Moh) desc]".
+Perilous Cliffs(Moh) is a room. Description of Perilous Cliffs(Moh) is "[Perilous Cliffs(Moh) desc]".
 Perilous Cliffs(Moh) is sleepsafe.
 
 to say Perilous Cliffs(Moh) desc:
@@ -101,7 +101,7 @@ Object	Name
 Arena(Moh)	"Arena(Moh)"
 
 Arena(Moh) is east of Perilous Cliffs(Moh).
-Arena(Moh) is a room. The description of Arena(Moh) is "[Arena(Moh) desc]".
+Arena(Moh) is a room. Description of Arena(Moh) is "[Arena(Moh) desc]".
 Arena(Moh) is sleepsafe.
 
 to say Arena(Moh) desc:
@@ -121,7 +121,7 @@ Precipice Landing(Moh) is south of Perilous Cliffs(Moh).
 Precipice Landing(Moh) is east of Market(Moh).
 Precipice Landing(Moh) is west of Wet Path(Moh).
 Precipice Landing(Moh) is north of Spire Entrance(Moh).
-Precipice Landing(Moh) is a room. The description of Precipice Landing(Moh) is "[Precipice Landing(Moh) desc]".
+Precipice Landing(Moh) is a room. Description of Precipice Landing(Moh) is "[Precipice Landing(Moh) desc]".
 Precipice Landing(Moh) is sleepsafe.
 
 to say Precipice Landing(Moh) desc:
@@ -140,7 +140,7 @@ Object	Name
 Market(Moh)	"Market(Moh)"
 
 Market(Moh) is west of Precipice Landing(Moh).
-Market(Moh) is a room. The description of Market(Moh) is "[Market(Moh) desc]".
+Market(Moh) is a room. Description of Market(Moh) is "[Market(Moh) desc]".
 Market(Moh) is sleepsafe.
 
 to say Market(Moh) desc:
@@ -158,7 +158,7 @@ Wet Path(Moh)	"Wet Path(Moh)"
 
 Wet Path(Moh) is east of Precipice Landing(Moh).
 Wet Path(Moh) is west of Small Guardhouse(Moh).
-Wet Path(Moh) is a room. The description of Wet Path(Moh) is "[Wet Path(Moh) desc]".
+Wet Path(Moh) is a room. Description of Wet Path(Moh) is "[Wet Path(Moh) desc]".
 Wet Path(Moh) is sleepsafe.
 
 to say Wet Path(Moh) desc:
@@ -176,7 +176,7 @@ Small Guardhouse(Moh)	"Small Guardhouse(Moh)"
 
 Small Guardhouse(Moh) is east of Wet Path(Moh).
 Small Guardhouse(Moh) is south of Hot Spring(Moh).
-Small Guardhouse(Moh) is a room. The description of Small Guardhouse(Moh) is "[Small Guardhouse(Moh) desc]".
+Small Guardhouse(Moh) is a room. Description of Small Guardhouse(Moh) is "[Small Guardhouse(Moh) desc]".
 Small Guardhouse(Moh) is sleepsafe.
 
 to say Small Guardhouse(Moh) desc:
@@ -194,7 +194,7 @@ Object	Name
 Hot Spring(Moh)	"Hot Spring(Moh)"
 
 Hot Spring(Moh) is north of Small Guardhouse(Moh).
-Hot Spring(Moh) is a room. The description of Hot Spring(Moh) is "[Hot Spring(Moh) desc]".
+Hot Spring(Moh) is a room. Description of Hot Spring(Moh) is "[Hot Spring(Moh) desc]".
 Hot Spring(Moh) is sleepsafe.
 
 to say Hot Spring(Moh) desc:
@@ -214,7 +214,7 @@ Spire Entrance(Moh) is south of Precipice Landing(Moh).
 Spire Entrance(Moh) is west of Barracks(Moh).
 Spire Entrance(Moh) is east of Trophy Hall(Moh).
 Spire Entrance(Moh) is north of Main Hall(Moh).
-Spire Entrance(Moh) is a room. The description of Spire Entrance(Moh) is "[Spire Entrance(Moh) desc]".
+Spire Entrance(Moh) is a room. Description of Spire Entrance(Moh) is "[Spire Entrance(Moh) desc]".
 Spire Entrance(Moh) is sleepsafe.
 
 to say Spire Entrance(Moh) desc:
@@ -232,7 +232,7 @@ Object	Name
 Portal Room(Moh)	"Portal Room(Moh)"
 
 Portal Room(Moh) is south of Barracks(Moh).
-Portal Room(Moh) is a room. The description of Portal Room(Moh) is "[Portal Room(Moh) desc]".
+Portal Room(Moh) is a room. Description of Portal Room(Moh) is "[Portal Room(Moh) desc]".
 Portal Room(Moh) is sleepsafe.
 
 to say Portal Room(Moh) desc:
@@ -251,7 +251,7 @@ Library(Moh)	"Library(Moh)"
 Library(Moh) is west of Trophy Hall(Moh).
 Library(Moh) is east of Wings Entrance(Moh).
 Library(Moh) is north of Dining Hall(Moh).
-Library(Moh) is a room. The description of Library(Moh) is "[Library(Moh) desc]".
+Library(Moh) is a room. Description of Library(Moh) is "[Library(Moh) desc]".
 Library(Moh) is sleepsafe.
 
 to say Library(Moh) desc:
@@ -272,7 +272,7 @@ Barracks(Moh)	"Barracks(Moh)"
 Barracks(Moh) is north of Portal Room(Moh).
 Barracks(Moh) is west of Dungeon(Moh).
 Barracks(Moh) is east of Spire Entrance(Moh).
-Barracks(Moh) is a room. The description of Barracks(Moh) is "[Barracks(Moh) desc]".
+Barracks(Moh) is a room. Description of Barracks(Moh) is "[Barracks(Moh) desc]".
 Barracks(Moh) is sleepsafe.
 
 to say Barracks(Moh) desc:
@@ -290,7 +290,7 @@ Object	Name
 Showers(Moh)	"Showers(Moh)"
 
 Showers(Moh) is south of Trophy Hall(Moh).
-Showers(Moh) is a room. The description of Showers(Moh) is "[Showers(Moh) desc]".
+Showers(Moh) is a room. Description of Showers(Moh) is "[Showers(Moh) desc]".
 Showers(Moh) is sleepsafe.
 
 to say Showers(Moh) desc:
@@ -309,7 +309,7 @@ Trophy Hall(Moh)	"Trophy Hall(Moh)"
 
 Trophy Hall(Moh) is west of Spire Entrance(Moh).
 Trophy Hall(Moh) is east of Library(Moh).
-Trophy Hall(Moh) is a room. The description of Trophy Hall(Moh) is "[Trophy Hall(Moh) desc]".
+Trophy Hall(Moh) is a room. Description of Trophy Hall(Moh) is "[Trophy Hall(Moh) desc]".
 Trophy Hall(Moh) is sleepsafe.
 
 to say Trophy Hall(Moh) desc:
@@ -327,7 +327,7 @@ Dining Room(Moh)	"Dining Room(Moh)"
 
 Dining Room(Moh) is south of Library(Moh).
 Dining Room(Moh) is north of Kitchen(Moh).
-Dining Room(Moh) is a room. The description of Dining Room(Moh) is "[Dining Room(Moh) desc]".
+Dining Room(Moh) is a room. Description of Dining Room(Moh) is "[Dining Room(Moh) desc]".
 Dining Room(Moh) is sleepsafe.
 
 to say Dining Room(Moh) desc:
@@ -344,7 +344,7 @@ Object	Name
 Kitchen(Moh)	"Kitchen(Moh)"
 
 Kitchen(Moh) is south of Dining Room(Moh).
-Kitchen(Moh) is a room. The description of Kitchen(Moh) is "[Kitchen(Moh) desc]".
+Kitchen(Moh) is a room. Description of Kitchen(Moh) is "[Kitchen(Moh) desc]".
 Kitchen(Moh) is sleepsafe.
 
 to say Kitchen(Moh) desc:
@@ -361,7 +361,7 @@ Object	Name
 War Room(Moh)	"War Room(Moh)"
 
 War Room(Moh) is east of Throne Room(Moh).
-War Room(Moh) is a room. The description of War Room(Moh) is "[War Room(Moh) desc]".
+War Room(Moh) is a room. Description of War Room(Moh) is "[War Room(Moh) desc]".
 War Room(Moh) is sleepsafe.
 
 to say War Room(Moh) desc:
@@ -379,7 +379,7 @@ Main Hall(Moh)	"Main Hall(Moh)"
 
 Main Hall(Moh) is south of Spire Entrance(Moh).
 Main Hall(Moh) is north of Throne Room(Moh).
-Main Hall(Moh) is a room. The description of Main Hall(Moh) is "[Main Hall(Moh) desc]".
+Main Hall(Moh) is a room. Description of Main Hall(Moh) is "[Main Hall(Moh) desc]".
 Main Hall(Moh) is sleepsafe.
 
 to say Main Hall(Moh) desc:
@@ -398,7 +398,7 @@ Throne Room(Moh)	"Throne Room(Moh)"
 Throne Room(Moh) is south of Main Hall(Moh).
 Throne Room(Moh) is east of Master Bedroom(Moh).
 Throne Room(Moh) is west of War Room(Moh).
-Throne Room(Moh) is a room. The description of Throne Room(Moh) is "[Throne Room(Moh) desc]".
+Throne Room(Moh) is a room. Description of Throne Room(Moh) is "[Throne Room(Moh) desc]".
 Throne Room(Moh) is sleepsafe.
 
 to say Throne Room(Moh) desc:
@@ -419,7 +419,7 @@ Dungeon(Moh)	"Dungeon(Moh)"
 
 Dungeon(Moh) is east of Portal Room(Moh).
 Dungeon(Moh) is north of Breeding Pit(Moh).
-Dungeon(Moh) is a room. The description of Dungeon(Moh) is "[Dungeon(Moh) desc]".
+Dungeon(Moh) is a room. Description of Dungeon(Moh) is "[Dungeon(Moh) desc]".
 Dungeon(Moh) is sleepsafe.
 
 to say Dungeon(Moh) desc:
@@ -438,7 +438,7 @@ Object	Name
 Breeding Pit(Moh)	"Breeding Pit(Moh)"
 
 Breeding Pit(Moh) is west of Breeding Pit(Moh).
-Breeding Pit(Moh) is a room. The description of Breeding Pit(Moh) is "[Breeding Pit(Moh) desc]".
+Breeding Pit(Moh) is a room. Description of Breeding Pit(Moh) is "[Breeding Pit(Moh) desc]".
 Breeding Pit(Moh) is sleepsafe.
 
 to say Breeding Pit(Moh) desc:
@@ -454,7 +454,7 @@ Object	Name
 Master Bedroom(Moh)	"Master Bedroom(Moh)"
 
 Master Bedroom(Moh) is west of Throne Room(Moh).
-Master Bedroom(Moh) is a room. The description of Master Bedroom(Moh) is "[Master Bedroom(Moh) desc]".
+Master Bedroom(Moh) is a room. Description of Master Bedroom(Moh) is "[Master Bedroom(Moh) desc]".
 Master Bedroom(Moh) is sleepsafe.
 
 to say Master Bedroom(Moh) desc:
@@ -472,7 +472,7 @@ Object	Name
 The Room of Sight(Moh)	"The Room of Sight(Moh)"
 
 The Room of Sight(Moh) is south of Master Bedroom(Moh).
-The Room of Sight(Moh) is a room. The description of The Room of Sight(Moh) is "[The Room of Sight(Moh) desc]".
+The Room of Sight(Moh) is a room. Description of The Room of Sight(Moh) is "[The Room of Sight(Moh) desc]".
 The Room of Sight(Moh) is sleepsafe.
 
 to say The Room of Sight(Moh) desc:
@@ -492,7 +492,7 @@ Object	Name
 Wings Entrance(Moh)	"Wings Entrance(Moh)"
 
 Wings Entrance(Moh) is west of Library(Moh).
-Wings Entrance(Moh) is a room. The description of Wings Entrance(Moh) is "[Wings Entrance(Moh) desc]".
+Wings Entrance(Moh) is a room. Description of Wings Entrance(Moh) is "[Wings Entrance(Moh) desc]".
 Wings Entrance(Moh) is sleepsafe.
 
 to say Wings Entrance(Moh) desc:

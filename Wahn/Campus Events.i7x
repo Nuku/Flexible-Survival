@@ -15,7 +15,7 @@ Marching Band	"Marching Band"
 
 Marching Band is a situation.
 ResolveFunction of Marching Band is "[ResolveEvent Marching Band]".
-The sarea of Marching Band is "Campus".
+Sarea of Marching Band is "Campus".
 
 to say ResolveEvent Marching Band:
 	say "     While exploring the campus, you are suddenly surprised to hear the sound of music starting up. A welcome change from the normal sounds of sex-crazed creatures and horny mutants, you cautiously head over to investigate. You find a variety of infected creatures stuffed into ill-fitting uniforms and carrying instruments as they try to coalesce into a marching band. They start up and stop several times, distracted by one or more of them deciding to hump another, give a blow job or otherwise give in to their sexual desires. But eventually they do get going as their border collie band leader nips them back into position, once everyone's gotten off one last time. The horny group then marches off playing the national anthem as they make their way towards one of the fields.";
@@ -30,7 +30,7 @@ Arts Department	"Arts Department"
 
 Arts Department is a situation.
 ResolveFunction of Arts Department is "[ResolveEvent Arts Department]". The level of Arts Department is 3.
-The sarea of Arts Department is "Campus".
+Sarea of Arts Department is "Campus".
 when play begins:
 	add Arts Department to BadSpots of FemaleList;
 	add Arts Department to BadSpots of FurryList;
@@ -58,7 +58,7 @@ Wandering the Campus	"Wandering the Campus"
 
 Wandering the Campus is a situation.
 ResolveFunction of Wandering the Campus is "[ResolveEvent Wandering the Campus]". The level of Wandering the Campus is 9.
-The sarea of Wandering the Campus is "Campus".
+Sarea of Wandering the Campus is "Campus".
 campuswander is a list of numbers that varies.
 campuswanderfight is a number that varies.
 when play begins:
@@ -131,7 +131,7 @@ Anime Club	"Anime Club"
 
 Anime Club is a situation.
 ResolveFunction of Anime Club is "[ResolveEvent Anime Club]". the level of Anime Club is 12.
-The sarea of Anime Club is "Campus".
+Sarea of Anime Club is "Campus".
 animeclubfight is a truth state that varies. animeclubfight is usually false.
 
 when play begins:

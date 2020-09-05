@@ -28,7 +28,7 @@ Circle of Life	"Circle of Life"
 
 Circle of Life is a situation.
 ResolveFunction of Circle of Life is "[ResolveEvent Circle of Life]".
-The sarea of Circle of Life is "Zoo".
+Sarea of Circle of Life is "Zoo".
 
 when play begins:
 	add Circle of Life to BadSpots of FurryList;
@@ -85,7 +85,7 @@ Jungle Chase	"Jungle Chase"
 
 Jungle Chase is a situation.
 ResolveFunction of Jungle Chase is "[ResolveEvent Jungle Chase]".
-The sarea of Jungle Chase is "Zoo".
+Sarea of Jungle Chase is "Zoo".
 
 to say ResolveEvent Jungle Chase:
 	say "     Walking along the pathways of the zoo, you find yourself in an area overgrown by a lot of tropical plants. Between the towering trees, broad-leafed bushes and plants, colorful flowers, countless ferns and even vines hanging down from above, you get the feeling that you're walking through a jungle and not simply a footpath in the middle of a large city. The zoo really is quite expansive, and if there weren't some glimpses of buildings between the greenery here or there, you could almost believe you were somewhere in the Indian rain-forest right now. Admiring the diverse environment around you, a loud and angry roar suddenly shakes you out of your reverie - it sounds fairly close too, and is quickly getting louder! Your eyes frantically search the area before you see that the path you're on forks about a dozen feet ahead, one way soon ending at the thoroughly barricaded door of a zoo building, the other being where the noise is coming from.";
@@ -133,9 +133,9 @@ Meeting Malakhi	"Meeting Malakhi"
 
 Meeting Malakhi is a situation.
 ResolveFunction of Meeting Malakhi is "[ResolveEvent Meeting Malakhi]".
-The Prereq1 of Meeting Malakhi is Jungle Chase.
+Prereq1 of Meeting Malakhi is Jungle Chase.
 The Prereq1Resolution of Meeting Malakhi is { 1, 2, 3 }.
-The sarea of Meeting Malakhi is "Zoo".
+Sarea of Meeting Malakhi is "Zoo".
 
 to say ResolveEvent Meeting Malakhi:
 	project the Figure of Malakhi_icon;
@@ -180,9 +180,9 @@ Tiger Trick	"Tiger Trick"
 
 Tiger Trick is a situation.
 ResolveFunction of Tiger Trick is "[ResolveEvent Tiger Trick]".
-The Prereq1 of Tiger Trick is Meeting Malakhi.
+Prereq1 of Tiger Trick is Meeting Malakhi.
 The Prereq1Resolution of Tiger Trick is { 1, 2, 3, 4 }.
-The sarea of Tiger Trick is "Zoo".
+Sarea of Tiger Trick is "Zoo".
 
 when play begins:
 	add Tiger Trick to BadSpots of FurryList;
@@ -240,9 +240,9 @@ Zookeepers at Work	"Zookeepers at Work"
 
 Zookeepers at Work is a situation.
 ResolveFunction of Zookeepers at Work is "[ResolveEvent Zookeepers at Work]".
-The Prereq1 of Zookeepers at Work is Tiger Trick.
+Prereq1 of Zookeepers at Work is Tiger Trick.
 The Prereq1Resolution of Zookeepers at Work is { 1, 2, 3, 4 }.
-The sarea of Zookeepers at Work is "Zoo".
+Sarea of Zookeepers at Work is "Zoo".
 
 when play begins:
 	add Zookeepers at Work to BadSpots of FurryList;
@@ -313,9 +313,9 @@ Zookeepers at Play	"Zookeepers at Play"
 
 Zookeepers at Play is a situation.
 ResolveFunction of Zookeepers at Play is "[ResolveEvent Zookeepers at Play]".
-The Prereq1 of Zookeepers at Play is Zookeepers at Work.
+Prereq1 of Zookeepers at Play is Zookeepers at Work.
 The Prereq1Resolution of Zookeepers at Play is { 1, 2, 3 }.
-The sarea of Zookeepers at Play is "Zoo".
+Sarea of Zookeepers at Play is "Zoo".
 
 when play begins:
 	add Zookeepers at Play to BadSpots of FurryList;
@@ -354,7 +354,7 @@ Escaped Wolf Pack	"Escaped Wolf Pack"
 
 Escaped Wolf Pack is a situation.
 ResolveFunction of Escaped Wolf Pack is "[ResolveEvent Escaped Wolf Pack]".
-The sarea of Escaped Wolf Pack is "Zoo".
+Sarea of Escaped Wolf Pack is "Zoo".
 
 to say ResolveEvent Escaped Wolf Pack:
 	EscapedWolfPackEvent;
@@ -370,7 +370,7 @@ Meerkat Patrol	"Meerkat Patrol"
 
 Meerkat Patrol is a situation.
 ResolveFunction of Meerkat Patrol is "[ResolveEvent Meerkat Patrol]".
-The sarea of Meerkat Patrol is "Zoo".
+Sarea of Meerkat Patrol is "Zoo".
 
 to say ResolveEvent Meerkat Patrol:
 	MeerkatPatrolEvent;
@@ -397,7 +397,7 @@ Lemur Jerks	"Lemur Jerks"
 
 Lemur Jerks is a situation.
 ResolveFunction of Lemur Jerks is "[ResolveEvent Lemur Jerks]".
-The sarea of Lemur Jerks is "Zoo".
+Sarea of Lemur Jerks is "Zoo".
 
 when play begins:
 	add Lemur Jerks to BadSpots of FurryList;
@@ -414,7 +414,7 @@ Gazelle Breeding Bitch	"Gazelle Breeding Bitch"
 
 Gazelle Breeding Bitch is a situation.
 ResolveFunction of Gazelle Breeding Bitch is "[ResolveEvent Gazelle Breeding Bitch]".
-The sarea of Gazelle Breeding Bitch is "Zoo".
+Sarea of Gazelle Breeding Bitch is "Zoo".
 
 when play begins:
 	add Gazelle Breeding Bitch to BadSpots of FurryList;
@@ -435,7 +435,7 @@ Egged Tigress	"Egged Tigress"
 
 Egged Tigress is a situation.
 ResolveFunction of Egged Tigress is "[ResolveEvent Egged Tigress]".
-The sarea of Egged Tigress is "Zoo".
+Sarea of Egged Tigress is "Zoo".
 
 when play begins:
 	add Egged Tigress to BadSpots of FurryList;
@@ -454,7 +454,7 @@ Panda Shepherd	"Panda Shepherd"
 
 Panda Shepherd is a situation.
 ResolveFunction of Panda Shepherd is "[ResolveEvent Panda Shepherd]".
-The sarea of Panda Shepherd is "Zoo".
+Sarea of Panda Shepherd is "Zoo".
 
 when play begins:
 	add Panda Shepherd to BadSpots of FurryList;
@@ -475,7 +475,7 @@ Elven Mount	"Elven Mount"
 
 Elven Mount is a situation.
 ResolveFunction of Elven Mount is "[ResolveEvent Elven Mount]".
-The sarea of Elven Mount is "Zoo".
+Sarea of Elven Mount is "Zoo".
 
 when play begins:
 	add Elven Mount to BadSpots of FurryList;
@@ -497,7 +497,7 @@ Cheetah Trade	"Cheetah Trade"
 
 Cheetah Trade is a scavevent.
 ResolveFunction of Cheetah Trade is "[ResolveEvent Cheetah Trade]".
-The sarea of Cheetah Trade is "Zoo".
+Sarea of Cheetah Trade is "Zoo".
 
 to say ResolveEvent Cheetah Trade:
 	say "     While searching for useful gear in the area you enter one of the cheetah habitats. The enclosure seems abandoned at first glance and sadly there doesn't seem to be anything useful here either, but just as you are about to leave again, you notice a dotted tail hanging down out of the crown of a tree not too far from you. Glancing up, you see a feral cheetah stretched out on a larger branch! She appears to be gnawing on the corner of a medkit wedged into a split in the branches. As you start considering whether it's worth the trouble or not to challenge the big cat for her prize, she turns her head towards you and focuses slitted eyes in a wary glance. Opening her feline maw to speak, she calls out 'Want toy? Earn it!' Glancing back towards her hindquarters, the big cat twitches her tail and you realize that she's requesting a sexual favor from you.";
@@ -533,7 +533,7 @@ Bird Masturbation	"Bird Masturbation"
 
 Bird Masturbation is a situation.
 ResolveFunction of Bird Masturbation is "[ResolveEvent Bird Masturbation]".
-The sarea of Bird Masturbation is "Zoo".
+Sarea of Bird Masturbation is "Zoo".
 
 when play begins:
 	add Bird Masturbation to BadSpots of FurryList;
@@ -562,7 +562,7 @@ Lemur Conga Gangbang	"Lemur Conga Gangbang"
 
 Lemur Conga Gangbang is a situation.
 ResolveFunction of Lemur Conga Gangbang is "[ResolveEvent Lemur Conga Gangbang]".
-The sarea of Lemur Conga Gangbang is "Zoo".
+Sarea of Lemur Conga Gangbang is "Zoo".
 
 when play begins:
 	add Lemur Conga Gangbang to BadSpots of FurryList;

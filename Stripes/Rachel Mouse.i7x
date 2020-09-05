@@ -12,7 +12,7 @@ Quiet Apartment Building	"Quiet Apartment Building"
 
 Quiet Apartment Building is a situation.
 ResolveFunction of Quiet Apartment Building is "[ResolveEvent Quiet Apartment Building]".
-The sarea of Quiet Apartment Building is "Red".
+Sarea of Quiet Apartment Building is "Red".
 when play begins:
 	add Quiet Apartment Building to badspots of HermList;
 	add Quiet Apartment Building to BadSpots of FurryList;
@@ -96,8 +96,8 @@ to say mouseapts:
 		now mouse girl is tamed;
 		add "Tamed" to Traits of mouse girl;
 		move Rachel to Pantry;
-		now the companion of the player is mouse girl;
-		say "     (Rachel the mouse girl is now a possible companion! You can make her your active companion by typing [bold type][link]companion Rachel[end link][roman type] or [bold type][link]ally mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Rachel[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break], but then the mouse collective will be tracking you again.)";
+		now the Companion of Player is mouse girl;
+		say "     (Rachel the mouse girl is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Rachel[end link][roman type] or [bold type][link]ally mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Rachel[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break], but then the mouse collective will be tracking you again.)";
 		increase score by 20;
 		wait for any key;
 
@@ -120,10 +120,10 @@ mouse girl is a pet.
 NPCObject of mouse girl is Rachel.
 understand "Rachel" as mouse girl.
 printed name of mouse girl is "Rachel".
-The description of mouse girl is "[RachelDesc]".
-The weapon damage of mouse girl is 10.
+Description of mouse girl is "[RachelDesc]".
+Weapon Damage of mouse girl is 10.
 The level of mouse girl is 1.
-The Dexterity of mouse girl is 15.
+Dexterity of mouse girl is 15.
 The summondesc of mouse girl is "[SummonRachel]".
 The dismissdesc of mouse girl is "[DismissRachel]".
 The assault of mouse girl is "[RachelAttack]".
@@ -150,7 +150,7 @@ object	name
 Rachel	"Rachel"
 
 Rachel is a woman.
-The description of Rachel is "[RachelDesc]".
+Description of Rachel is "[RachelDesc]".
 
 instead of sniffing Rachel:
 	say "[RachelScent]";

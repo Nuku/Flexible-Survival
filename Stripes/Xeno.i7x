@@ -240,9 +240,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "acid milk"	"The green, acidic milk of a xeno slowly eating away at its container."	1	acid milk
 
-acid milk is a grab object. It is milky. It is temporary. acid milk is infectious. The strain of acid milk is "Xeno Drone".
+acid milk is a grab object. It is milky. It is temporary. acid milk is infectious. Strain of acid milk is "Xeno Drone".
 
-The usedesc of acid milk is "[drinkacidmilk]";
+Usedesc of acid milk is "[drinkacidmilk]";
 
 to say drinkacidmilk:
 	say "     Foolishly, you take a gulp of the acid milk. ";

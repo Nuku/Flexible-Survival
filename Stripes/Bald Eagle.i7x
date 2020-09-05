@@ -245,9 +245,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "eagle feather"	"Exactly what it sounds like."	0	eagle feather
 
-eagle feather is a grab object. eagle feather is infectious. The strain of eagle feather is "Bald Eagle".
+eagle feather is a grab object. eagle feather is infectious. Strain of eagle feather is "Bald Eagle".
 
-The usedesc of eagle feather is "[useeaglefeather]";
+Usedesc of eagle feather is "[useeaglefeather]";
 
 to say useeaglefeather:
 	say "     After twirling the feather around by the quill, you decide to start brushing is along your face. The soft feel of it brushing against you feels very nice. You continue this for a while until finally noticing that the feather has shrunk away and been absorbed into you.";

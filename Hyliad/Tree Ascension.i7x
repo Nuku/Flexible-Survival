@@ -7,7 +7,7 @@ Giant Tree Ascension	"Giant Tree Ascension"
 
 Giant Tree Ascension is a situation.
 ResolveFunction of Giant Tree Ascension is "[ResolveEvent Giant Tree Ascension]".
-The sarea of Giant Tree Ascension is "Forest".
+Sarea of Giant Tree Ascension is "Forest".
 
 to say ResolveEvent Giant Tree Ascension:
 	say "     Making your way between the buildings, your attention is soon grabbed by an absolutely gigantic tree which seems to have taken roots into a large building. You count five different floors; however, the tree appears to have completely outgrown the building itself, not only becoming as large, but much taller, and culminating in a sea of green leaves that appear so far away that it almost gives you vertigo.";
@@ -130,7 +130,7 @@ to say TreeAscention4_Fight:
 
 to say TreeAscention4_Sneak:
 	LineBreak;
-	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]21[roman type] (Dexterity Check):[line break]";
 	increase diceroll by bonus;

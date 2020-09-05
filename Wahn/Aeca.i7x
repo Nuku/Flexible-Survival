@@ -57,8 +57,8 @@ SexuallyExperienced of Aeca is false.
 TwistedCapacity of Aeca is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Aeca is false. [steriles can't knock people up]
 MainInfection of Aeca is "Hawkman".
-The description of Aeca is "[Aecadesc]".
-The conversation of Aeca is { "Meep!" }.
+Description of Aeca is "[Aecadesc]".
+Conversation of Aeca is { "Meep!" }.
 
 instead of sniffing Aeca:
 	say "     A";

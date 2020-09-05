@@ -50,8 +50,8 @@ SexuallyExperienced of Callidora is true.
 TwistedCapacity of Callidora is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Callidora is true. [steriles can't knock people up]
 MainInfection of Callidora is "".
-The description of Callidora is "[CallidoraDesc]".
-The conversation of Callidora is { "Beautiful. Absolutely beautiful. You have never heard anything so beautiful before in your life. Beautiful." }.
+Description of Callidora is "[CallidoraDesc]".
+Conversation of Callidora is { "Beautiful. Absolutely beautiful. You have never heard anything so beautiful before in your life. Beautiful." }.
 The scent of Callidora is "     You don't know how it is possible, but Callidora smells of sunlight, happiness, and love.".
 
 to say CallidoraDesc:
@@ -79,7 +79,7 @@ Birth of a Goddess	"Birth of a Goddess"
 Birth of a Goddess is a situation.
 ResolveFunction of Birth of a Goddess is "[ResolveEvent Birth of a Goddess]".
 The level of Birth of a Goddess is 0.
-The sarea of Birth of a Goddess is "Beach".
+Sarea of Birth of a Goddess is "Beach".
 
 instead of going to Public Beach while Birth of a Goddess is unresolved and daytimer is day and a random chance of 1 in 3 succeeds:
 	move player to Public Beach;

@@ -11,7 +11,7 @@ Poppy Field	"Poppy Field"
 
 Poppy Field is a situation.
 ResolveFunction of Poppy Field is "[ResolveEvent Poppy Field]".
-The sarea of Poppy Field is "Park".
+Sarea of Poppy Field is "Park".
 when play begins:
 	add Poppy Field to badspots of HermList;
 
@@ -51,7 +51,7 @@ Fallen Tree	"Fallen Tree"
 
 Fallen Tree is a situation.
 ResolveFunction of Fallen Tree is "[ResolveEvent Fallen Tree]". The level of Fallen Tree is 4.
-The sarea of Fallen Tree is "Park".
+Sarea of Fallen Tree is "Park".
 when play begins:
 	add Fallen Tree to BadSpots of FemaleList;
 	add Fallen Tree to BadSpots of FurryList;
@@ -78,7 +78,7 @@ Felinoid Lair	"Felinoid Lair"
 
 Felinoid Lair is a situation.
 ResolveFunction of Felinoid Lair is "[ResolveEvent Felinoid Lair]".
-The sarea of Felinoid Lair is "Park".
+Sarea of Felinoid Lair is "Park".
 when play begins:
 	add Felinoid Lair to BadSpots of FemaleList;
 	add Felinoid Lair to BadSpots of FurryList;

@@ -7,7 +7,7 @@ Breeding Pack	"Breeding Pack"
 
 Breeding Pack is a situation.
 ResolveFunction of Breeding Pack is "[ResolveEvent Breeding Pack]".
-The sarea of Breeding Pack is "High".
+Sarea of Breeding Pack is "High".
 
 when play begins:
 	add Breeding Pack to BadSpots of FurryList;

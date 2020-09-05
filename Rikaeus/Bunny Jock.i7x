@@ -261,7 +261,7 @@ name	desc	weight	object
 "bunweiser beer"	"It's a capped beer bottle with a label declaring it Bunweiser Beer. The logo is a white bunny face winking at you."	1	bunweiser beer
 
 bunweiser beer is a grab object.
-the usedesc of bunweiser beer is "[bunweiseruse]".
+Usedesc of bunweiser beer is "[bunweiseruse]".
 
 It is temporary.
 
@@ -294,7 +294,7 @@ this is the powerplay rule:
 		now absorb is dam;
 	if absorb is greater than 0:
 		say "You prevent [absorb] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";

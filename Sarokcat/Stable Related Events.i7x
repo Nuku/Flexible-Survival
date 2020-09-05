@@ -11,7 +11,7 @@ Kitchenkegger	"Kitchenkegger"
 
 Kitchenkegger is a situation.
 ResolveFunction of Kitchenkegger is "[ResolveEvent Kitchenkegger]".
-The sarea of Kitchenkegger is "Stable".
+Sarea of Kitchenkegger is "Stable".
 when play begins:
 	add Kitchenkegger to BadSpots of MaleList;
 	add Kitchenkegger to BadSpots of FurryList;
@@ -46,11 +46,11 @@ Tack Room	"Tack Room"
 
 Tack Room is a situation.
 ResolveFunction of Tack Room is "[ResolveEvent Tack Room]".
-The sarea of Tack Room is "Stable".
+Sarea of Tack Room is "Stable".
 
 to say ResolveEvent Tack Room:
 	say "     Wandering through the narrow halls of the Stables, you come across a rather strangely marked room, labeled [']Tack room[']. Curiosity getting the better of you, you try the door and find it unlocked. A peek inside shows you a rather large room filled with all sorts of saddles and leather instruments lining the walls. The strong scent of well-oiled and well-used leather fills your nose as you wander carefully into the room, your eyes drawn to the many different types of harnesses and straps hung up carefully along the walls. As you continue to look around, you find yourself noticing that more and more of these pieces of equipment are equally sized for usage on more than just horses, and you find yourself growing worried as you wander through the large array of bridles and blinders. You find quite a few gags, whips, and breaking harnesses as well, and the mingled smell of equine sex underlie the scent of leather.";
-	let bonus be (( the Perception of the player minus 10 ) divided by 2);
+	let bonus be (( Perception of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
 	increase diceroll by bonus;
@@ -72,7 +72,7 @@ Onyxroom	"Onyxroom"
 
 Onyxroom is a situation.
 ResolveFunction of Onyxroom is "[ResolveEvent Onyxroom]".
-The sarea of Onyxroom is "Stable".
+Sarea of Onyxroom is "Stable".
 
 to say ResolveEvent Onyxroom:
 	say "     Exploring deeper into the maze of halls and rooms of the converted hotel, you find yourself in another hallway much like the others. Checking to make sure that you are alone, you venture down the hallway, noticing that next to each of the doors is a neatly engraved name plate, obviously the name of the room's occupant. Halfway down the hall, you see a name plate that reads [']Onyx[']. Taking a deep breath, you open the door to the room and go inside. On the walls is an assortment of horse tack done in black leather. Bridles and halters of every description hang neatly from the walls alongside reigns and bits. A large, old-fashioned horse collar hangs on another wall, and on a stand sits an English saddle. Exploring further, you find that the closet is filled with fetish clothes and other outfits while the dresser drawers are filled with more clothes and an even larger assortment of sex toys. Quickly backing out of the room, you don't know if you should feel sorry for [if XP of Onyx > 0]the young man you met in the holding pens[else]its eventual occupant[end if] or a little bit envious.";
@@ -89,7 +89,7 @@ Unlucky Elevator	"Unlucky Elevator"
 
 Unlucky Elevator is a situation.
 ResolveFunction of Unlucky Elevator is "[ResolveEvent Unlucky Elevator]".
-The sarea of Unlucky Elevator is "Stable".
+Sarea of Unlucky Elevator is "Stable".
 
 to say ResolveEvent Unlucky Elevator:
 	say "     Wandering through the halls of the old hotel, you come across an elevator that appears to be open and ready for passengers, and while you don't actually expect the elevator to work without power to this area of the city, you decide to investigate it anyways. Looking around inside, you see that it seems to be a rather normal old style elevator. Without much use to be found in it, however, you get a bit of a surprise when you look at the floor buttons. It seems that aside from the ground floor, all of the floor buttons are labeled 13, despite the fact that there are certainly more than 13 floors in the building. You feel a little unsettled as you stare at the similarly labeled buttons, and decide as you step out of the elevator quickly, that you might not want to ride in that rather unlucky seeming elevator even if the power was running, as you quickly continue on your way.";
@@ -106,7 +106,7 @@ Lupine Visit	"Lupine Visit"
 
 Lupine Visit is a situation.
 ResolveFunction of Lupine Visit is "[ResolveEvent Lupine Visit]".
-The sarea of Lupine Visit is "Stable".
+Sarea of Lupine Visit is "Stable".
 
 to say ResolveEvent Lupine Visit:
 	say "     Traveling around the large building, you come across a pair of large horsemen escorting what appears to be a rather well-dressed wolfman carrying a briefcase through the halls. Quickly ducking into a dark corner, you hide as they pass by, the unusual sight of the horsemen escort, as well as the fact that the odd wolfman actually was bothering to wear clothes, makes you wonder just what was going on there. Shrugging, you chalk it up as just another strange happening in the city as you continue on your way with a bit more caution, just in case any more of those horsemen are nearby.";
@@ -122,7 +122,7 @@ Soldierstabling	"Soldierstabling"
 
 Soldierstabling is a situation.
 ResolveFunction of Soldierstabling is "[ResolveEvent Soldierstabling]".
-The sarea of Soldierstabling is "Stable".
+Sarea of Soldierstabling is "Stable".
 Soldierhorsetf is a number that varies.
 when play begins:
 	add Soldierstabling to BadSpots of FemaleList;
@@ -172,7 +172,7 @@ Satisfied Customer	"Satisfied Customer"
 
 Satisfied Customer is a situation.
 ResolveFunction of Satisfied Customer is "[ResolveEvent Satisfied Customer]".
-The sarea of Satisfied Customer is "Stable".
+Sarea of Satisfied Customer is "Stable".
 when play begins:
 	add Satisfied Customer to BadSpots of FurryList;
 
@@ -192,7 +192,7 @@ Hyenahorsemeet	"Hyenahorsemeet"
 Hyenahorsemeet is a situation.
 ResolveFunction of Hyenahorsemeet is "[ResolveEvent Hyenahorsemeet]".
 hyenastabledeal is a number that varies.
-The sarea of Hyenahorsemeet is "Stable".
+Sarea of Hyenahorsemeet is "Stable".
 
 to say ResolveEvent Hyenahorsemeet:
 	say "     As you wander down the halls of the hotel aimlessly, you hear a rather harsh burst of laughter in the distance, the unusual sound seeming rather out of place in the horses['] hotel. Deciding that this bears further investigation, you carefully proceed in the direction you heard the sound coming from, arriving at last to a small conference room which appears to be occupied. Peeking inside, you see a rather surreal sight, as you find several of those hyenas who are everywhere out on the streets, sitting down and talking rather animatedly with a couple of horsemen that appear to be rather more intelligent than the rest, while a rather large bull-like man wearing a suit top and with polished horns leans back and listens with unconcealed amusement.";
@@ -211,7 +211,7 @@ Waitingcustomer	"Waitingcustomer"
 
 Waitingcustomer is a situation.
 ResolveFunction of Waitingcustomer is "[ResolveEvent Waitingcustomer]".
-The sarea of Waitingcustomer is "Stable".
+Sarea of Waitingcustomer is "Stable".
 
 to say ResolveEvent Waitingcustomer:
 	say "     Heading through the mostly empty halls of the sex hotel, you find yourself coming across what appears to be a rather strange-looking waiting room, with images of all kinds of sexy horses plastering the walls of the dimly lit room, along with a number of benches and other areas set up to provide seating for those who aren't fully human anymore. As you look around, you shudder as you hear a noise from behind you, and realize that there was already a creature in here waiting their turn to have some fun, and as it draws closer, you are pretty sure that it has decided that now that you are here, it doesn't have to wait any longer. Cautiously, you brace yourself as you turn around to face this new opponent.";
@@ -236,7 +236,7 @@ Videoshow	"Videoshow"
 
 Videoshow is a situation.
 ResolveFunction of Videoshow is "[ResolveEvent Videoshow]".
-The sarea of Videoshow is "Stable".
+Sarea of Videoshow is "Stable".
 
 to say ResolveEvent Videoshow:
 	say "     Wandering around in the area near the entryway, you find yourself peeking through several doors marked 'Employees only', and eventually come across a strange room set up like a small theater. Interestingly enough, you see that someone has managed to hook the room up to some source of power, and the projector seems ready and able to work at any time. A glance at the label on the film shows that it is labeled as 'Basic Training,' which makes you rather curious about the contents.";
@@ -265,7 +265,7 @@ Horsegarden	"Horsegarden"
 
 Horsegarden is a situation.
 ResolveFunction of Horsegarden is "[ResolveEvent Horsegarden]".
-The sarea of Horsegarden is "Stable".
+Sarea of Horsegarden is "Stable".
 
 to say ResolveEvent Horsegarden:
 	say "     Poking around on the ground floor of the hotel, you find a path leading out to a rather large enclosed inner garden, with a number of small tasty looking plants carefully maintained in neat little rows and a small scenic looking pond positioned in the center of the picturesque grassy garden. You are about to wander out into the rather pleasant-looking garden, when you note a small group of horses wandering over to the pond for a drink. You watch the horses carefully for a minute, the rather large beasts appearing to be almost completely normal animals, and you are about to relax when you catch the eye of one of the beasts and see a gleam of intelligence spark in those equine eyes. The horse gives a soft whicker, and soon, the whole small herd are watching you with what you can only assume is anticipation as you stand there in the doorway.";
@@ -289,7 +289,7 @@ Transformationledger	"Transformationledger"
 
 Transformationledger is a situation.
 ResolveFunction of Transformationledger is "[ResolveEvent Transformationledger]".
-The sarea of Transformationledger is "Stable".
+Sarea of Transformationledger is "Stable".
 
 to say ResolveEvent Transformationledger:
 	if Resolution of Transformationledger is 0:

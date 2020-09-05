@@ -56,8 +56,8 @@ PenileVirgin of Voria is false.
 SexuallyExperienced of Voria is true.
 TwistedCapacity of Voria is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Voria is true. [steriles can't knock people up]
-The description of Voria is "[VoriaDesc]". [In Section 3 - Scenes]
-The conversation of Voria is { "Plant noises" }.
+Description of Voria is "[VoriaDesc]". [In Section 3 - Scenes]
+Conversation of Voria is { "Plant noises" }.
 The scent of Voria is "     Voria has a distinct floral scent mixed with the smell of sex.".
 
 
@@ -70,7 +70,7 @@ Plant Takeover	"Plant Takeover"
 
 Plant Takeover is a situation.
 ResolveFunction of Plant Takeover is "[ResolveEvent Plant Takeover]".
-The sarea of Plant Takeover is "Outside".
+Sarea of Plant Takeover is "Outside".
 
 to say ResolveEvent Plant Takeover:
 	say "     Roving the streets of the infected city, you come across an odd-looking store that makes you pause. While the place is a seemingly ordinary garden store, the reason the place caught your eye is because its storefront window is completely covered by vines, leaves, and other vegetation from the inside. Curious, you decide to investigate the building. Finding the door unobstructed, you walk into the store's interior, cautious for any signs of danger. What you find is an utter mess. Just like the storefront window, all sorts of plants have grown to larger than normal sizes, filling more than half the store with green leaves and a veritable bouquet of flowers larger than your head. It doesn't take long for you to deduce what caused all of this unnatural growth. The scent of sex permeates the air, and behind patches of green, you see dried cum stains spalltered all over the place. It seems that several horny people had decided to have a very messy romp here, and although it seems like it has been a long time since then, they certainly left their mark behind. Their nanite-infused liquid lust has infected the plants, causing them to rapidly grow out of control.";
@@ -178,7 +178,7 @@ to say VoriaDesc:
 		say "     You come to a sort of standoff with Voria, and you're sure that if the plant had eyes, you would be in a staring contest with the carnivorous flora. Eventually, Voria slowly extends a thin vine toward you, cautiously creeping it forward until it stops right in front of you. Recognizing the friendly gesture, you reach forward with your hand and allow Voria to wrap the vine around it. A short, gentle tug beckons you toward the plant, and you start moving toward it, albeit with a small bit of trepidation. Thankfully, as you close the distance, Voria keeps its tentacles off you, only letting the same vine guiding you to touch you.";
 		WaitLineBreak;
 		say "     When you finally stand in front of the main part of the plant's body, the vine slips away from your hand, and Voria dips her head to softly rub it against your body. Although it is a bit odd that you're effectively being nuzzled by a giant plant, you're glad to not be next on Voria's menu, and you return the affection by patting it on its large head, eliciting a quiet, but deep purr from it. It seems like you won't have to worry about Voria because it recognizes you as its caretaker and master. You're glad that the abbey now has a new guard to help keep the place safe, and since Voria has the ability to move around, maybe you can even have it follow you around during your exploration.";
-		say "     (Voria the carnivorous plant is now a possible companion! You can make her your active companion by typing [bold type][link]companion Voria[end link][roman type] or [bold type][link]ally carnivorous plant[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+		say "     (Voria the carnivorous plant is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Voria[end link][roman type] or [bold type][link]ally carnivorous plant[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 		now HP of Voria is 23;	[Voria fully grown]
 		now Carnivorous Plant is tamed;
 		add "Tamed" to Traits of Carnivorous Plant;
@@ -217,7 +217,7 @@ printed name of Carnivorous Plant is "Voria".
 The description of Carnivorous Plant is "[CarnivorousPlantDesc]".
 The weapon damage of Carnivorous Plant is 10.
 The level of Carnivorous Plant is 1.
-The Dexterity of Carnivorous Plant is 15.
+Dexterity of Carnivorous Plant is 15.
 The summondesc of Carnivorous Plant is "[CarnivorousPlantSummon]".
 The dismissdesc of Carnivorous Plant is "[CarnivorousPlantDismiss]".
 The assault of Carnivorous Plant is "[CarnivorousPlantAssault]".

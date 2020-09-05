@@ -16,7 +16,7 @@ Fetish Store	"Fetish Store"
 
 Fetish Store is a situation.
 ResolveFunction of Fetish Store is "[ResolveEvent Fetish Store]".
-The sarea of Fetish Store is "Red".
+Sarea of Fetish Store is "Red".
 
 to say ResolveEvent Fetish Store:
 	if Resolution of Fetish Store is 0:
@@ -322,7 +322,7 @@ Raided Corner Store	"Raided Corner Store"
 
 Raided Corner Store is a situation.
 ResolveFunction of Raided Corner Store is "[ResolveEvent Raided Corner Store]". The level of Raided Corner Store is 3.
-The sarea of Raided Corner Store is "Red".
+Sarea of Raided Corner Store is "Red".
 when play begins:
 	add Raided Corner Store to badspots of HermList;
 	add Raided Corner Store to BadSpots of FurryList;
@@ -369,7 +369,7 @@ Flooded Street	"Flooded Street"
 
 Flooded Street is a situation.
 ResolveFunction of Flooded Street is "[ResolveEvent Flooded Street]". The level of Flooded Street is 3.
-The sarea of Flooded Street is "Red".
+Sarea of Flooded Street is "Red".
 when play begins:
 	add Flooded Street to BadSpots of MaleList;
 	add Flooded Street to badspots of HumorousList;
@@ -399,7 +399,7 @@ Strip Bar	"Strip Bar"
 
 Strip Bar is a situation.
 ResolveFunction of Strip Bar is "[ResolveEvent Strip Bar]".
-The sarea of Strip Bar is "Red".
+Sarea of Strip Bar is "Red".
 stripbarcounter is a number that varies.
 when play begins:
 	add Strip Bar to badspots of HermList;
@@ -489,7 +489,7 @@ Evangelist	"Evangelist"
 
 Evangelist is a situation.
 ResolveFunction of Evangelist is "[ResolveEvent Evangelist]".
-The sarea of Evangelist is "Red".
+Sarea of Evangelist is "Red".
 when play begins:
 	add Evangelist to BadSpots of FemaleList;
 	add Evangelist to BadSpots of MaleList;
@@ -595,7 +595,7 @@ Business as Usual	"Business as Usual"
 
 Business as Usual is a situation.
 ResolveFunction of Business as Usual is "[ResolveEvent Business as Usual]".
-The sarea of Business as Usual is "Red".
+Sarea of Business as Usual is "Red".
 when play begins:
 	add Business as Usual to BadSpots of FurryList;
 
@@ -616,7 +616,7 @@ Kink Warehouse	"Kink Warehouse"
 
 Kink Warehouse is a situation.
 ResolveFunction of Kink Warehouse is "[ResolveEvent Kink Warehouse]".
-The sarea of Kink Warehouse is "Red".
+Sarea of Kink Warehouse is "Red".
 when play begins:
 	add Kink Warehouse to BadSpots of FurryList;
 
@@ -673,7 +673,7 @@ to say ResolveEvent Kink Warehouse:
 							if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
 								say "     The horseman manages to get the better of you, and it's all you can do to scramble away before he can catch you. You're going to have to try again later, once your bruises have faded.";
 						else if (nam is "Sneak past"):
-							let bonus be (( the Perception of the player minus 10 ) divided by 2);
+							let bonus be (( Perception of Player minus 10 ) divided by 2);
 							if "Experienced Scout" is listed in feats of Player, increase bonus by 5;
 							let diceroll be a random number from 1 to 20;
 							say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";

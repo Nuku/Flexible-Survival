@@ -51,8 +51,8 @@ PenileVirgin of Gerty is true.
 SexuallyExperienced of Gerty is false.
 MainInfection of Gerty is "".
 [Gerty will be moved to the Tenvale College Library through Kyle content]
-The description of Gerty is "[GertyDesc]".
-The conversation of Gerty is { "<This is nothing but a placeholder!>" }.
+Description of Gerty is "[GertyDesc]".
+Conversation of Gerty is { "<This is nothing but a placeholder!>" }.
 The scent of Gerty is "     Gerty smells like X.".
 
 to say GertyDesc:

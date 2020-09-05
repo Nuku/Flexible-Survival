@@ -57,8 +57,8 @@ AnalVirgin of Lindsey is true.
 PenileVirgin of Lindsey is false.
 SexuallyExperienced of Lindsey is true.
 MainInfection of Lindsey is "Wolftaur".
-The description of Lindsey is "[LindseyDesc]".
-The conversation of Lindsey is { "Suck it!" }.
+Description of Lindsey is "[LindseyDesc]".
+Conversation of Lindsey is { "Suck it!" }.
 Lindsey is in Zoo Restrooms.
 
 to say LindseyDesc:

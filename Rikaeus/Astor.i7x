@@ -29,7 +29,7 @@ Azure Dragon Culinary Tastes	"Azure Dragon Culinary Tastes"
 [Room Declaration]
 Azure Dragon Culinary Tastes is a room.
 Azure Dragon Culinary Tastes is northwest of Atlantis City Market.
-The description of Azure Dragon Culinary Tastes is "[AzureDragon]".
+Description of Azure Dragon Culinary Tastes is "[AzureDragon]".
 earea of Azure Dragon Culinary Tastes is "Atlantis".
 
 to say AzureDragon:
@@ -65,8 +65,8 @@ Virgin of Astor is false.
 AnalVirgin of Astor is false.
 PenileVirgin of Astor is false.
 SexuallyExperienced of Astor is true.
-The description of Astor is "[AstorDesc]".
-The conversation of Astor is { "<This is nothing but a placeholder!>" }.
+Description of Astor is "[AstorDesc]".
+Conversation of Astor is { "<This is nothing but a placeholder!>" }.
 The scent of Astor is "     The azure dragon gives off a scent of spices, meats, and vegetables, which is pretty drool-worthy on its own.".
 Astor is in Azure Dragon Culinary Tastes.
 

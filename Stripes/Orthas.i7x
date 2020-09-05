@@ -21,8 +21,8 @@ object	name
 Orthas	"Orthas"
 
 Orthas is a person. "A dragon person, clearly female, is watching the area. She wears a handwritten name badge that reads 'Orthas'.".
-The description of Orthas is "[OrthasNPCdesc]".
-The conversation of Orthas is { "Eggses!" }.
+Description of Orthas is "[OrthasNPCdesc]".
+Conversation of Orthas is { "Eggses!" }.
 Orthas is in Trevor Labs Lobby.
 
 the scent of Orthas is "Orthas smells like a strong, powerful dragoness[if HP of Orthas is 2 or HP of Orthas is 3]. She has a lingering scent of arousal hanging over her[else if HP of Orthas is 4]. She has a strong scent of arousal and egg-laying hanging over her[end if].".
@@ -40,7 +40,7 @@ Meeting Orthas	"Meeting Orthas"
 
 Meeting Orthas is a situation.
 ResolveFunction of Meeting Orthas is "[ResolveEvent Meeting Orthas]".
-The sarea of Meeting Orthas is "Nowhere".
+Sarea of Meeting Orthas is "Nowhere".
 
 instead of going to Trevor Labs Lobby while (Meeting Orthas is not resolved and Resolution of Meeting Orthas is 0 and Orthas is in Trevor Labs Lobby):
 	move player to Trevor Labs Lobby;
@@ -240,7 +240,7 @@ Orthas's House	"Orthas's House"
 
 Orthas's House is a situation.
 ResolveFunction of Orthas's House is "[ResolveEvent Orthas's House]". The level of Orthas's House is 5. It is inactive.
-The sarea of Orthas's House is "Red".
+Sarea of Orthas's House is "Red".
 
 to say ResolveEvent Orthas's House:
 	if HP of Orthas is not 5:
@@ -340,7 +340,7 @@ instead of using footlocker:
 
 the scent of the footlocker is "There's no particular scent to this.".
 
-crossbow is armament. It has a weapon "[one of]a quick shot[or]a well-aimed shot[or]your crossbow[or]a crossbow quarrel[or]a launched quarrel[at random]". It is ranged. It is not temporary. The weapon damage of crossbow is 6. The objsize of crossbow is 3.
+crossbow is armament. It has a weapon "[one of]a quick shot[or]a well-aimed shot[or]your crossbow[or]a crossbow quarrel[or]a launched quarrel[at random]". It is ranged. It is not temporary. Weapon Damage of crossbow is 6. Objsize of crossbow is 3.
 
 
 Section 4 - Sex with Orthas

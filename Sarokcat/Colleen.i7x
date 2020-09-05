@@ -11,7 +11,7 @@ WomanFruitTree	"WomanFruitTree"
 
 WomanFruitTree is a situation.
 ResolveFunction of WomanFruitTree is "[ResolveEvent WomanFruitTree]".
-The sarea of WomanFruitTree is "Park".
+Sarea of WomanFruitTree is "Park".
 ColleenDeclined is a number that varies.
 
 to say ResolveEvent WomanFruitTree:
@@ -107,8 +107,8 @@ AnalVirgin of Colleen is true.
 PenileVirgin of Colleen is true.
 SexuallyExperienced of Colleen is false.
 MainInfection of Colleen is "human".
-The description of Colleen is "[CollenStatus]".
-The conversation of Colleen is { "Woof!" }.
+Description of Colleen is "[CollenStatus]".
+Conversation of Colleen is { "Woof!" }.
 the linkaction of Colleen is "[ColleenLinkAction]".
 
 to say ColleenLinkAction:

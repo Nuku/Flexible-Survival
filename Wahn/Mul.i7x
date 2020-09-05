@@ -45,8 +45,8 @@ SexuallyExperienced of Mul is true.
 TwistedCapacity of Mul is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Mul is false. [steriles can't knock people up]
 MainInfection of Mul is "Orc Breeder".
-The description of Mul is "[MulDesc]".
-The conversation of Mul is { "Mew!" }.
+Description of Mul is "[MulDesc]".
+Conversation of Mul is { "Mew!" }.
 MulAnalAcceptance is a number that varies.
 The icon of Mul is Figure of Mul_clothed_icon.
 

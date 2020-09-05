@@ -71,8 +71,8 @@ SexuallyExperienced of Jay is true.
 TwistedCapacity of Jay is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Jay is false. [steriles can't knock people up]
 MainInfection of Jay is "Christmas Elf Male".
-The description of Jay is "[JayDesc]".
-The conversation of Jay is { "<This is nothing but a placeholder!>" }.
+Description of Jay is "[JayDesc]".
+Conversation of Jay is { "<This is nothing but a placeholder!>" }.
 The icon of Jay is Figure of Jay_elf_outfit_icon.
 The scent of Jay is "     Jay must wash regularly, as there is little discernible odor to his skin. What you do detect are motes of cinnamon, spices and a hint of gingerbread, the aroma complementing his appearance. There's also a faint trace of his ursine partner's musk, no doubt courtesy of their frequent lovemaking.".
 
@@ -252,7 +252,7 @@ Harbor Swap Meet	"Harbor Swap Meet"
 Harbor Swap Meet is a situation.
 ResolveFunction of Harbor Swap Meet is "[ResolveEvent Harbor Swap Meet]".
 Harbor Swap Meet is inactive.
-The sarea of Harbor Swap Meet is "Warehouse".
+Sarea of Harbor Swap Meet is "Warehouse".
 
 to say ResolveEvent Harbor Swap Meet:
 	if thirst of Jay is 2:

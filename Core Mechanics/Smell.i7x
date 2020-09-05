@@ -14,9 +14,9 @@ understand "sniff [something]" as sniffing.
 understand "smell [something]" as sniffing.
 
 check sniffing:
-	if the location of the player is noun, continue the action;
+	if the Location of Player is noun, continue the action;
 	if noun is not visible, say "What? I don't see any [noun] around here to smell." instead;
-	if the companion of the player is noun:
+	if the Companion of Player is noun:
 		continue the action;
 	else if noun is a pet:
 		say "You don't have one of those with you right now." instead;
@@ -32,7 +32,7 @@ before sniffing:
 			say "I don't see any [Noun] around here to sniff.";
 			stop the action;
 	if the noun is a pet:
-		if the companion of the player is noun:
+		if the Companion of Player is noun:
 			increase score by 0;
 		else:
 			say "I don't see any [Noun] around here to sniff.";
@@ -61,8 +61,8 @@ understand "sniff around" as heresniffing.
 
 
 carry out heresniffing:
-	try sniffing the location of the player;
-[	repeat with X running through all the visible things in the location of the player:
+	try sniffing the Location of Player;
+[	repeat with X running through all the visible things in the Location of Player:
 		try sniffing X; ]
 
 

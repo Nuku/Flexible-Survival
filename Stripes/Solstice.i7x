@@ -19,7 +19,7 @@ Fox Adventurer	"Fox Adventurer"
 
 Fox Adventurer is a situation.
 ResolveFunction of Fox Adventurer is "[ResolveEvent Fox Adventurer]". The level of Fox Adventurer is 5.
-The sarea of Fox Adventurer is "Outside".
+Sarea of Fox Adventurer is "Outside".
 
 when play begins:
 	add Fox Adventurer to BadSpots of FemaleList;
@@ -99,7 +99,7 @@ ResolveFunction of Onyx Crow is "[ResolveEvent Onyx Crow]". The level of Onyx Cr
 Prereq1 of Onyx Crow is Fox Adventurer.
 Prereq1Resolution of Onyx Crow is { 1 }.
 Prereq1ResolvedMandatory of Onyx Crow is false.
-The sarea of Onyx Crow is "Museum".
+Sarea of Onyx Crow is "Museum".
 
 when play begins:
 	add Onyx Crow to BadSpots of FemaleList;
@@ -170,8 +170,8 @@ object	name
 Solstice	"Solstice"
 
 Solstice is a woman.
-The description of Solstice is "[solsticedesc]".
-The conversation of Solstice is { "Treasure!" }.
+Description of Solstice is "[solsticedesc]".
+Conversation of Solstice is { "Treasure!" }.
 
 to say solsticedesc:
 	say "     Transformed by the strange artifact you helped her recover, Solstice has become an unusual, gryphon-like creature. Her upper body is decidedly avian in nature, with black feathers and a crow's head and beak. Her eyes are sharp and have a lustful glint as they look at you. She has a pair of broad, black wings attached to her back as well. Her paws resemble bird-like talons. There are some hints of her previous, vulpine nature as well, with foxish ears and mammalian breasts filling her red shirt. Her lower body is largely unchanged and is that of a sexy, multi-tailed vixen, though those tails are now covered in black plumage. Her fur is a silvery gray in stark contrast to her darker feathers. Along with her red, sleeveless top, the vulpogryph wears a pair of khaki shorts with attached pouches. She's even set up her bedroll in one of the reading rooms to the side of the library and is keeping her small backpack there as well.";
@@ -205,7 +205,7 @@ carry out lessontiming:
 		now lessontime is 1;
 		say "     At your offer to hear some of her stories, she smiles leads you off to the side room where she's set up her bedroll. Sitting side by side on it, she snuggles you close, enfolding you in her wings. As she tells you about the time she [one of]went in search of Incan gold[or]excavated a Mayan temple[or]searched for a lost city in the African jungle[or]evaded the Chinese police while hunting for an ancient temple[or]traveled across Europe in search of Roman treasures[or]wandered the Arabian deserts in search of treasure[or]followed a map to undersea treasure[or]fought villainous raiders trying to steal her prize[or]circumventing traps and puzzles centuries old in a lost tomb[in random order], her paws alternate between re-enacting the adventure and fondling you. The story is also broken up by nuzzles and nips from her pointed beak. While the story ends with the adventurer [one of]snagging a golden treasure[or]barely making it out alive[or]with some minor artifact[or]making an archaeological discovery, but gaining no actual treasure[or]escaping as the whole place collapses[or]holding a handful of gemstones and jewelry[or]finding a few trinkets to barely meet her expenses[purely at random], you do get the feeling that it was at least a little exaggerated. Regardless, you do find yourself growing closer to the affectionate woman";
 		if perception of Player < 20:
-			let bonus be (( the intelligence of the player minus 10 ) divided by 2);
+			let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			increase diceroll by bonus;
 			if diceroll > 10:

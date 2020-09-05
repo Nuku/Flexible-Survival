@@ -22,7 +22,7 @@ Dirty Alley	"Dirty Alley"
 
 Dirty Alley is a room.
 Dirty Alley is east of Smith Haven Mall Lot East.
-The description of Dirty Alley is "[DirtyAlleyDesc]".
+Description of Dirty Alley is "[DirtyAlleyDesc]".
 
 to say DirtyAlleyDesc:
 	say "     Dumpsters and trash bags litter the floor, with most of the back-alley next to the mattress store turned brothel being coated in a layer of grime. Corrugated metal fire escapes on both sides block most of the light that might be falling into the narrow alley otherwise, shrouding everything in half-shadow. Despite all this, it seems like someone has made the place their home. In a corner formed between a fence closing the end of the alley, a dumpster and the side wall of the Shag Shack, there is an improvised bedding arrangement. A wooden pallet forms the base, apparently piled with numerous plastic bags full of packing peanuts, bubble wrap and all sorts of other material to create a lumpy and uneven mattress. Some salvaged blankets cover the jumbled mess and a frayed, unkempt duvet cover completes the picture of homeless squalor. A crumpled plastic tarp next to it seems to be held ready for when it may rain.";
@@ -73,8 +73,8 @@ Sterile of Blake is false. [steriles can't knock people up]
 MainInfection of Blake is "Brown Rat Male".
 
 Blake is in Dirty Alley.
-The description of Blake is "[BlakeDesc]".
-The conversation of Blake is { "Mew!" }.
+Description of Blake is "[BlakeDesc]".
+Conversation of Blake is { "Mew!" }.
 
 to say BlakeDesc:
 	if debugactive is 1:

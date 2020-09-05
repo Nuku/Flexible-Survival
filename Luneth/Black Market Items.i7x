@@ -10,7 +10,7 @@ name	desc	weight	object
 
 bitch breaker gel is a grab object. It is temporary.
 
-the usedesc of bitch breaker gel is "[bitch breaker gel use]".
+Usedesc of bitch breaker gel is "[bitch breaker gel use]".
 
 to say bitch breaker gel use:
 	if debugactive is 1:
@@ -35,7 +35,7 @@ name	desc	weight	object
 
 breeder serum is a grab object. It is temporary.
 
-the usedesc of breeder serum is "[breeder serum use]".
+Usedesc of breeder serum is "[breeder serum use]".
 
 to say breeder serum use:
 	if debugactive is 1:
@@ -63,7 +63,7 @@ name	desc	weight	object
 
 cock remover is a grab object. It is temporary.
 
-the usedesc of cock remover is "[cock remover use]".
+Usedesc of cock remover is "[cock remover use]".
 
 to say cock remover use:
 	if debugactive is 1:
@@ -87,7 +87,7 @@ name	desc	weight	object
 
 sissifier gel is a grab object. It is temporary.
 
-the usedesc of sissifier gel is "[sissifier gel use]".
+Usedesc of sissifier gel is "[sissifier gel use]".
 
 to say sissifier gel use:
 	if debugactive is 1:
@@ -117,7 +117,7 @@ name	desc	weight	object
 
 trap serum is a grab object. It is temporary.
 
-the usedesc of trap serum is "[trap serum use]".
+Usedesc of trap serum is "[trap serum use]".
 
 to say trap serum use:
 	if debugactive is 1:
@@ -149,7 +149,7 @@ name	desc	weight	object
 
 pussy spreader cream is a grab object. It is temporary.
 
-the usedesc of pussy spreader cream is "[pussy spreader cream use]".
+Usedesc of pussy spreader cream is "[pussy spreader cream use]".
 
 to say pussy spreader cream use:
 	if debugactive is 1:
@@ -174,7 +174,7 @@ name	desc	weight	object
 
 cock holster upgrade is a grab object. It is temporary.
 
-the usedesc of cock holster upgrade is "[cock holster upgrade use]".
+Usedesc of cock holster upgrade is "[cock holster upgrade use]".
 
 to say cock holster upgrade use:
 	if debugactive is 1:
@@ -199,7 +199,7 @@ name	desc	weight	object
 
 cunt remover is a grab object. It is temporary.
 
-the usedesc of cunt remover is "[cunt remover use]".
+Usedesc of cunt remover is "[cunt remover use]".
 
 to say cunt remover use:
 	if debugactive is 1:
@@ -223,7 +223,7 @@ name	desc	weight	object
 
 rightntight cream is a grab object. It is temporary.
 
-the usedesc of rightntight cream is "[rightntight cream use]".
+Usedesc of rightntight cream is "[rightntight cream use]".
 
 to say rightntight cream use:
 	if debugactive is 1:
@@ -251,7 +251,7 @@ name	desc	weight	object
 
 cervix smasher upgrade is a grab object. It is temporary.
 
-the usedesc of cervix smasher upgrade is "[cervix smasher upgrade use]".
+Usedesc of cervix smasher upgrade is "[cervix smasher upgrade use]".
 
 to say cervix smasher upgrade use:
 	if debugactive is 1:
@@ -279,7 +279,7 @@ name	desc	weight	object
 
 tits inflator pump is a grab object. It is temporary.
 
-the usedesc of tits inflator pump is "[tits inflator pump use]".
+Usedesc of tits inflator pump is "[tits inflator pump use]".
 
 to say tits inflator pump use:
 	if debugactive is 1:
@@ -298,7 +298,7 @@ name	desc	weight	object
 
 tits deflator pump is a grab object. It is temporary.
 
-the usedesc of tits deflator pump is "[tits deflator pump use]".
+Usedesc of tits deflator pump is "[tits deflator pump use]".
 
 to say tits deflator pump use:
 	if Breast Size of Player > 0:
@@ -317,7 +317,7 @@ name	desc	weight	object
 
 tits multiplier injection is a grab object. It is temporary.
 
-the usedesc of tits multiplier injection is "[tits multiplier injection use]".
+Usedesc of tits multiplier injection is "[tits multiplier injection use]".
 
 to say tits multiplier injection use:
 	if debugactive is 1:
@@ -342,7 +342,7 @@ name	desc	weight	object
 
 tits divider injection is a grab object. It is temporary.
 
-the usedesc of tits divider injection is "[tits divider injection use]".
+Usedesc of tits divider injection is "[tits divider injection use]".
 
 to say tits divider injection use:
 	if debugactive is 1:
@@ -367,7 +367,7 @@ name	desc	weight	object
 
 mama milkshake is a grab object. It is temporary.
 
-the usedesc of mama milkshake is "[mama milkshake use]".
+Usedesc of mama milkshake is "[mama milkshake use]".
 
 to say mama milkshake use:
 	say "     ";
@@ -380,7 +380,7 @@ name	desc	weight	object
 
 wide receiver is a grab object. It is temporary.
 
-the usedesc of wide receiver is "[wide receiver use]".
+Usedesc of wide receiver is "[wide receiver use]".
 
 to say wide receiver use:
 	say "     ";
@@ -393,7 +393,7 @@ name	desc	weight	object
 
 tight end is a grab object. It is temporary.
 
-the usedesc of tight end is "[tight end use]".
+Usedesc of tight end is "[tight end use]".
 
 to say tight end use:
 	say "     ";]
@@ -413,10 +413,10 @@ name	desc	weight	object
 "zephyr protective riot shield"	"[RiotShieldProtectDesc]"	4	zephyr protective riot shield
 
 zephyr protective riot shield is equipment. It is not temporary.
-the usedesc of zephyr protective riot shield is "[RiotShieldProtectUse]".
+Usedesc of zephyr protective riot shield is "[RiotShieldProtectUse]".
 The AC of zephyr protective riot shield is 46.
 The effectiveness of zephyr protective riot shield is 42.
-The objsize of zephyr protective riot shield is 4.
+Objsize of zephyr protective riot shield is 4.
 The placement of zephyr protective riot shield is "shield".
 The descmod of zephyr protective riot shield is "You hold the riot shield in your hands, its size is large enough to cover most of your torso. It is painted black with the zephyr trademark branded across the front, just underneath the vision slot.".
 The slot of zephyr protective riot shield is "shield".

@@ -47,7 +47,7 @@ Dressing Room Rampage	"Dressing Room Rampage"
 
 Dressing Room Rampage is a situation.
 ResolveFunction of Dressing Room Rampage is "[ResolveEvent Dressing Room Rampage]".
-The sarea of Dressing Room Rampage is "Smith Haven".
+Sarea of Dressing Room Rampage is "Smith Haven".
 
 when play begins:
 	add Dressing Room Rampage to BadSpots of FurryList;
@@ -108,9 +108,9 @@ Elven Issues	"Elven Issues"
 
 Elven Issues is a situation.
 ResolveFunction of Elven Issues is "[ResolveEvent Elven Issues]".
-The Prereq1 of Elven Issues is Dressing Room Rampage.
+Prereq1 of Elven Issues is Dressing Room Rampage.
 The Prereq1Resolution of Elven Issues is { 1, 2, 3 }.
-The sarea of Elven Issues is "Smith Haven".
+Sarea of Elven Issues is "Smith Haven".
 
 to say ResolveEvent Elven Issues:
 	say "     As you go for a stroll through the mall, you suddenly hear a bit of a commotion ahead of you. Shouts of 'Hey, stop! That's mine! Thief!' come from somewhere ahead, followed by the sight of a kangaroo-morph sprinting your way. She is rushing through the thick crowd of people in the middle of the east wing of the mall at a breakneck pace, followed by a small-ish figure in a green and red outfit, running as fast as he can and furiously calling after her. It is a Christmas elf, and one you know: [if JayMarkRelationship is 3]Jay, the boyfriend of Mark the polar bear, whom you met in the dressing room of a fancy boutique[else]He was getting pounded by a quite large polar bear in the dressing room of a fancy boutique when you stumbled over him[end if]. Looks like the kangaroo will pass right by you in a few seconds.";
@@ -136,9 +136,9 @@ Mark's Dinner Invite	"Mark's Dinner Invite"
 
 Mark's Dinner Invite is a situation.
 ResolveFunction of Mark's Dinner Invite is "[ResolveEvent Mark's Dinner Invite]".
-The Prereq1 of Mark's Dinner Invite is Elven Issues.
+Prereq1 of Mark's Dinner Invite is Elven Issues.
 The Prereq1Resolution of Mark's Dinner Invite is { 1 }. [must have helped Jay]
-The sarea of Mark's Dinner Invite is "Smith Haven".
+Sarea of Mark's Dinner Invite is "Smith Haven".
 
 to say ResolveEvent Mark's Dinner Invite:
 	say "     As you walk into the east wing of the mall, you draw the attention of a powerful polar bear, towering a full head over the surrounding crowd of people. Moving towards you with long strides, he has little trouble navigating the hallway despite how crowded it is, a swarm of mall rats congregating around the video game store nearby. Then again, no one really wants to stand in the way of such a muscular and broad-shouldered ursine, so they all quickly step out of his path on their own volition. The big white bear moves to stand before you, gives you a brief inspection, and then creases a broad grin as he offers you his large hand-paw to shake.";
@@ -157,7 +157,7 @@ Size Envy	"Size Envy"
 
 Size Envy is a situation.
 ResolveFunction of Size Envy is "[ResolveEvent Size Envy]".
-The sarea of Size Envy is "Smith Haven".
+Sarea of Size Envy is "Smith Haven".
 
 when play begins:
 	add Size Envy to BadSpots of FurryList;
@@ -305,9 +305,9 @@ Standard Maintenance	"Standard Maintenance"
 
 Standard Maintenance is a situation.
 ResolveFunction of Standard Maintenance is "[ResolveEvent Standard Maintenance]".
-The Prereq1 of Standard Maintenance is Size Envy.
+Prereq1 of Standard Maintenance is Size Envy.
 The Prereq1Resolution of Standard Maintenance is { 1, 2, 3, 4, 5, 6, 7 }.
-The sarea of Standard Maintenance is "Smith Haven".
+Sarea of Standard Maintenance is "Smith Haven".
 
 to say ResolveEvent Standard Maintenance:
 	say "     Wandering the hallways of the Smith Haven Mall, you pass through crowds of all sorts of people: lots of mall rats, other anthros, demi-human hybrids, as well as very rare pure humans. You curiously stroll in and out of the various stores - some are occupied by the refugees, others lay abandoned. Eventually you wander into a place you have been in before where you saw those four young men comparing their lengths. By pure chance, one of the guys is actually there too - Milton, the clockwork fox. He is sitting cross-legged on a large white mat, bent over forward as he disassembles his foot-paw, spreading countless little cogs and pieces of machinery out around him. A spray-can in his hand hisses a little as he uses the compressed air inside to clean his mechanical parts.";
@@ -333,7 +333,7 @@ Donkey Needs	"Donkey Needs"
 Donkey Needs is a situation.
 ResolveFunction of Donkey Needs is "[ResolveEvent Donkey Needs]".
 Donkey Needs is inactive.
-The sarea of Donkey Needs is "Smith Haven".
+Sarea of Donkey Needs is "Smith Haven".
 
 to say ResolveEvent Donkey Needs:
 	if AxelLastBJ - turns < 8: [not horny right now]
@@ -417,9 +417,9 @@ Donkey Chat	"Donkey Chat"
 
 Donkey Chat is a situation.
 ResolveFunction of Donkey Chat is "[ResolveEvent Donkey Chat]".
-The Prereq1 of Donkey Chat is Size Envy.
+Prereq1 of Donkey Chat is Size Envy.
 The Prereq1Resolution of Donkey Chat is { 1, 2, 3, 4, 5, 6, 7 }.
-The sarea of Donkey Chat is "Smith Haven".
+Sarea of Donkey Chat is "Smith Haven".
 
 to say ResolveEvent Donkey Chat:
 	say "[DonkeyChat]";
@@ -528,7 +528,7 @@ Full Litter	"Full Litter"
 
 Full Litter is a situation.
 ResolveFunction of Full Litter is "[ResolveEvent Full Litter]".
-The sarea of Full Litter is "Smith Haven".
+Sarea of Full Litter is "Smith Haven".
 
 instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 0 and Full Litter is active and Full Litter is not resolved and a random chance of 1 in 3 succeeds):
 	move player to Mall Atrium;
@@ -550,7 +550,7 @@ Cat Toy Vendors	"Cat Toy Vendors"
 
 Cat Toy Vendors is a situation.
 ResolveFunction of Cat Toy Vendors is "[ResolveEvent Cat Toy Vendors]".
-The sarea of Cat Toy Vendors is "Smith Haven".
+Sarea of Cat Toy Vendors is "Smith Haven".
 
 to say ResolveEvent Cat Toy Vendors:
 	say "     Wandering through the hallways of the expansive Smith Haven Mall, you spot some cat-morphs selling various custom cat toys to their feline kin. Apparently a surprising number of the transformed people in the crowd of refugees in here are captivated by an instinctual love of mice on string. It is charming to see their wide-eyed expressions as many a head track a toy mouse being demonstrated, with them instinctively wiggling their butts as they get into a slightly pouncing stance. The vendors giggle to each other as a whole group of new customers line up and get ready to trade food and drinks for the small toys being sold.";
@@ -562,7 +562,7 @@ Prowling Macho	"Prowling Macho"
 
 Prowling Macho is a situation.
 ResolveFunction of Prowling Macho is "[ResolveEvent Prowling Macho]".
-The sarea of Prowling Macho is "Smith Haven".
+Sarea of Prowling Macho is "Smith Haven".
 
 to say ResolveEvent Prowling Macho:
 	say "     On your way through the expansive Smith Haven Mall, you spot a big and broad-shouldered wolfman standing tall at the side, letting his gaze roam over the people slowly moving past him. He wears a cocky smile on his muzzle and not much else, save for a spiked collar to emphasize his masculinity. There's clearly no ring to attach a leash on that thing, so this is definitely a Top Dog. Arms crossed in front of his muscular chest, the big guy's gaze follows this or that woman, and he's clearly entertaining some lurid fantasies by way that the tip of his canine shaft is poking out of the black-furred sheath between his legs. He reminds you of a predator searching for prey, but at least not the kind that roam the streets outside and stake their claims by force. He then apparently makes his decision and strides through the crowd, with people almost automatically parting before his towering form.";
@@ -635,7 +635,7 @@ SailboatPainting	"SailboatPainting"
 
 SailboatPainting is a situation.
 ResolveFunction of SailboatPainting is "[ResolveEvent SailboatPainting]".
-The sarea of SailboatPainting is "Smith Haven".
+Sarea of SailboatPainting is "Smith Haven".
 
 to say ResolveEvent SailboatPainting:
 	say "     You are scanning around the stores and kiosks of the mall, when your attention stops on a heavy-set black-furred Mallrat standing in front of an art store. A gray knit cap covers his head, and his clothing consists of a blue heavily food-stained dress shirt, dirty khaki pants and a green Army jacket. He clutches a brown paper bag and a can of soda in his left paw. The closer you get to him, the more pungent his musk becomes. The slovenly rat-man stands stock still, not seeming to notice you or even twitching his tail. Between his horrible hygiene and the filthy state of his clothes, you wouldn't be surprised if he'd been standing there for days. Instead, he is intently focused on a framed gray-dot painting set on a display easel.";

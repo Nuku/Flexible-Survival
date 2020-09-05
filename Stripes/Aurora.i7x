@@ -12,7 +12,7 @@ Giant's Frozen Yogurt	"Giant's Frozen Yogurt"
 
 Giant's Frozen Yogurt is a situation.
 ResolveFunction of Giant's Frozen Yogurt is "[ResolveEvent Giant's Frozen Yogurt]".
-The sarea of Giant's Frozen Yogurt is "Capitol".
+Sarea of Giant's Frozen Yogurt is "Capitol".
 the level of Giant's Frozen Yogurt is 5.
 when play begins:
 	add Giant's Frozen Yogurt to BadSpots of FemaleList;
@@ -81,7 +81,7 @@ to say freeing_aurora:
 			now frost giantess is tamed;
 			add "Tamed" to Traits of frost giantess;
 			move Aurora to Breakroom;
-			say "     (Aurora the frost giantess is now a possible companion! You can make her your active companion by typing [bold type][link]companion Aurora[end link][roman type] or [bold type][link]ally frost giantess[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Aurora[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+			say "     (Aurora the frost giantess is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Aurora[end link][roman type] or [bold type][link]ally frost giantess[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Aurora[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			increase score by 10;
 			now Resolution of Giant's Frozen Yogurt is 1;	[Recruited Aurora]
 			now Giant's Frozen Yogurt is resolved;
@@ -102,10 +102,10 @@ frost giantess is a pet.
 NPCObject of frost giantess is Aurora.
 understand "Aurora" as frost giantess.
 printed name of frost giantess is "Aurora".
-The description of frost giantess is "[AuroraDesc]".
-The weapon damage of frost giantess is 20.
+Description of frost giantess is "[AuroraDesc]".
+Weapon Damage of frost giantess is 20.
 The level of frost giantess is 1.
-The Dexterity of frost giantess is 5.
+Dexterity of frost giantess is 5.
 The summondesc of frost giantess is "[SummonAurora]".
 The dismissdesc of frost giantess is "[DismissAurora]".
 The assault of frost giantess is "[aurora_attack]".
@@ -131,7 +131,7 @@ object	name
 Aurora	"Aurora"
 
 Aurora is a woman.
-The description of Aurora is "[AuroraDesc]".
+Description of Aurora is "[AuroraDesc]".
 
 instead of sniffing Aurora:
 	say "[AuroraScent]";

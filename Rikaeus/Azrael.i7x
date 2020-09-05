@@ -77,8 +77,8 @@ AnalVirgin of Azrael is true.
 PenileVirgin of Azrael is true.
 SexuallyExperienced of Azrael is false.
 MainInfection of Azrael is "".
-The description of Azrael is "[AzraelDesc]".
-The conversation of Azrael is { "<This is nothing but a placeholder>" }.
+Description of Azrael is "[AzraelDesc]".
+Conversation of Azrael is { "<This is nothing but a placeholder>" }.
 The scent of Azrael is "He smells like a summer breeze, interestingly enough. Though you guess you should expect that as he's an angel.".
 
 to say AzraelDesc:

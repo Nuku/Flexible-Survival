@@ -229,7 +229,7 @@ this is the swarmattack rule:		[damage bonus based on remaining health]
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
@@ -249,7 +249,7 @@ this is the sporecloud rule: [Spore aura following spore blast attack]
 			let dam be wdam entry / 4;
 			increase dam by a random number between 0 and 1;
 			say "     [one of]Breathing heavily as a result of your continued fighting[or]As you try to catch your breath[or]Taking a deep breath[at random], you inhale the lingering airborne spores, causing a [one of]painful fit of coughing[or]warm tingling in your chest[or]powerful sneeze[at random]. You suffer [special-style-2][dam][roman type] damage.";
-			decrease HP of the player by dam;
+			decrease HP of Player by dam;
 			if BodyName of Player is "Mushroom Men":
 				say "     The fungal spores have [one of]an especially strong[or]an unusual[or]a powerful[at random] effect on your mushroom body, arousing you slightly.";
 				increase Libido of Player by a random number between 1 and 3;

@@ -412,7 +412,7 @@ with 1000 blank rows
 
 Allobjs is a list of text that varies.[@NotSaved]
 Grab Object is a kind of thing.
-a grab object has a number called objsize. The objsize of grab object is usually 3.	[Used only for armaments and journal.]
+a grab object has a number called objsize. Objsize of grab object is usually 3.	[Used only for armaments and journal.]
 things have a text called scent.
 rooms have a text called scent.
 The player has a grab object called weapon object. A weapon object is usually journal.
@@ -456,7 +456,7 @@ Hardmode is a truth state that varies. Hardmode is usually false.
 nohealmode is a truth state that varies. nohealmode is usually false.
 blindmode is a truth state that varies. blindmode is usually false.
 Lastjournaluse is a number that varies. Lastjournaluse is 248.
-Targetturns is a number that varies.
+Targetturns is a number that varies. Targetturns is usually -240.
 Started is a number that varies.
 Freefeats is a number that varies.
 Lost is a number that varies.
@@ -487,7 +487,7 @@ A situation has a list of numbers called Prereq3Resolution. Prereq3Resolution is
 A situation has an object called PrereqCompanion.
 A situation has a text called PrereqTime. The PrereqTime of a situation is usually "Any".
 [TODO: Add PrereqNavpoint]
-A situation has a text called sarea. The sarea of a situation is usually "Outside".
+A situation has a text called sarea. Sarea of a situation is usually "Outside".
 A situation has a number called level. The level of a situation is usually 0.
 A situation has a number called minscore. The minscore of a situation is usually -2147483648.
 A featset is a kind of thing.
@@ -529,12 +529,12 @@ Definition: A situation (called x) is PrereqComplete:
 	yes;
 
 Definition: A situation (called x) is close:
-	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of x is "Allzones" or the sarea of x is "allzones" ) ):
+	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( (battleground is "Outside" or battleground is "High" or battleground is "Capitol" or battleground is "Park" or battleground is "Forest" or battleground is "Beach") and ( Sarea of x is "Allzones" or Sarea of x is "allzones" ) ):
 		yes;
 	no;
 
 Definition: A scavevent (called x) is scavable:
-	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( sarea of x is "Allzones" or the sarea of x is "allzones" ):
+	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( (battleground is "Outside" or battleground is "High" or battleground is "Capitol" or battleground is "Park" or battleground is "Forest" or battleground is "Beach") and ( sarea of x is "Allzones" or Sarea of x is "allzones" ) ):
 		if score < minscore of x:
 			no;
 		else if hardmode is true:
@@ -1676,7 +1676,7 @@ A room can be private. A room is usually not private.
 A room can be sleepsafe. A room is usually not sleepsafe.
 A room has a text called earea. earea is usually "void". [exploration area]
 The player is wearing a watch.
-The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
+The player is wearing a backpack. Description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
 
 instead of examining a grab object (called x):
 	say "[the desc corresponding to a object of x in the table of game objects][line break]";
@@ -1779,7 +1779,7 @@ Carry out vending:
 
 Instead of attacking the Cola Vending machine:
 	say "You give the soda machine a solid whack, ";
-	let the bonus be (( the strength of the player minus 10 ) divided by 2);
+	let the bonus be (( Strength of Player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: ";
 	increase dice by bonus;
@@ -1797,7 +1797,7 @@ Instead of attacking the Cola Vending machine:
 
 Book 3 - Definitions
 
-Definition: a direction (called D) is valid if the room D from the location of the player is a room.
+Definition: a direction (called D) is valid if the room D from the Location of Player is a room.
 Definition: A grab object (called D) is owned:
 	if there is a name corresponding to a object of d in the table of game objects:
 		if the carried of d > 0, yes;
@@ -1810,7 +1810,7 @@ Definition: A grab object (called D) is stored:
 
 Definition: A grab object (called D) is present:
 	if there is a name corresponding to a object of d in the table of game objects:
-		if the name corresponding to a object of d in the table of game objects is listed in the invent of the location of the player, yes;
+		if the name corresponding to a object of d in the table of game objects is listed in the invent of the Location of Player, yes;
 	no;
 
 before examining the grab object (called x):
@@ -1838,7 +1838,7 @@ Understand "book" as journal.
 [Pocketknife moved to Core Mechanics/Weapons.i7x]
 [Chair moved to Core Mechanics/Weapons.i7x]
 
-The invent of the player is { "journal" }.
+The invent of Player is { "journal" }.
 
 Table of Start Game
 title	subtable	description	toggle
@@ -1931,10 +1931,16 @@ To say level up needed:
 
 Table of Fancy Status
 left	central	right
-"Location: [the player's surroundings]"	"Time: [time of day] Lvl: [level of Player]"	"HP:[HP of Player]/[maxHP of Player]"
-"Freecred: [freecred]"	"Hunger: [hunger of Player] Thirst: [thirst of Player] Libido: [Libido of Player]"	"Score:[score]/[maximum score]"
-"Sanity: [humanity of Player]/100"	"Evac: [( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0]  Kids: [(number of filled rows in Table of PlayerChildren + number of entries in childrenfaces)][end if]"	"XP:[XP of Player]/[level up needed]"
-""	"[if NewGraphicsInteger is 0] [else]Current image artist: [ngraphics_currentartist][end if]"	""
+"Location: [Location of Player][if Location of Player is fasttravel] ([link]Navpoint[as]nav[end link])[end if]"	"Name: [if Player is not defaultnamed][Name of Player][else][link]Pick one?[as]rename[end link][end if] | Condition: [SleepMessage] | [link]Inventory[as]i[end link] | [link]Feats[as]FeatList[end link] | [link]Allies[as]Allies[end link]"	"HP: [HP of Player]/[maxHP of Player]"
+"Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"STR: [strength of Player] | DEX: [dexterity of Player] | STA: [stamina of Player] | CHA: [Charisma of Player] | INT: [intelligence of Player] | PER: [perception of Player]"	"XP: [XP of Player]/[level up needed]"
+"Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"Hunger: [hunger of Player]/100 | Thirst: [thirst of Player]/100 | Libido: [Libido of Player]/100 | Humanity: [humanity of Player]/100"	"LVL: [level of Player]"
+"Freecred: [freecred]"	"[link]Help[as]HelpBookLookup[end link][if NewGraphicsInteger is 0] [else] | Art by: [ngraphics_currentartist] ([link]art credits[end link])[end if]"	"Score: [score]/[maximum score]"
+[
+"Location: [the player's surroundings]"	"Date: [DateYear]-[DateMonth]-[DateDay] Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"HP:[HP of Player]/[maxHP of Player]"
+"Freecred: [freecred]"	"Time: [time of day]"	"Score:[score]/[maximum score]"
+"Sanity: [humanity of Player]/100"	"Lvl: [level of Player] Hunger: [hunger of Player] Thirst: [thirst of Player] Libido: [Libido of Player] [if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0] Kids: [(number of filled rows in Table of PlayerChildren + number of entries in childrenfaces)][end if]"	"XP:[XP of Player]/[level up needed]"
+""	"[if NewGraphicsInteger is 0] [else]Current image artist: [ngraphics_currentartist] (see [link]art credits[as]try art credits[end link])[end if]"	""
+]
 
 to say exitlist:
 	repeat with nam running through valid directions:
@@ -2305,7 +2311,7 @@ carry out Inventorying:
 	[these are the default item actions in front of the item name]
 	let itemactions be {{"U", "use"}, {"L", "look"}, {"S", "smell"}, {"D", "drop"}, {"J", "junk"}, {"X", "junkall"}};
 	if the number of owned grab objects > 0:
-		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and HP of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and HP of Kristen is 10 and jblouse is 1 ) or ( Christy is visible and carried of super spicy sausage > 0 and HP of Christy > 1 and HP of Christy < 50 )][bold type][bracket]T[close bracket][roman type]rade, [end if][if the number of smither in the location of the player > 0][bold type][bracket]I[close bracket][roman type]mprove, [end if][bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved. ";
+		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the Location of Player > 0 or ( Ronda is visible and HP of Ronda is 0 and dseed is 1 ) or ( Kristen is visible and HP of Kristen is 10 and jblouse is 1 ) or ( Christy is visible and carried of super spicy sausage > 0 and HP of Christy > 1 and HP of Christy < 50 )][bold type][bracket]T[close bracket][roman type]rade, [end if][if the number of smither in the Location of Player > 0][bold type][bracket]I[close bracket][roman type]mprove, [end if][bold type](*)[roman type] equipped/wielded, [bold type](+)[roman type] improved. ";
 		let weight be 0;
 		[5 more than in the original version, but therefore the indicators will not add to it anymore]
 		let baseavailcolumns be a number;
@@ -2330,8 +2336,8 @@ carry out Inventorying:
 		[generic trader check]
 		let traderavailable be 0;
 		let tradeguy be a person;
-		if the number of trader in the location of the player > 0:
-			now tradeguy is a random trader in the location of the player;
+		if the number of trader in the Location of Player > 0:
+			now tradeguy is a random trader in the Location of Player;
 			let traderavailable be 1;
 		[go through all the stuff]
 		repeat with x running from 1 to the number of rows in the table of game objects:
@@ -2365,7 +2371,7 @@ carry out Inventorying:
 						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Christy[end link]";
 				else if traderavailable is 1:
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to [tradeguy][end link]";
-				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the location of the player > 0:
+				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
 					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [itemname][end link]";
 				[get available columns, plus 6 to show the increase to the original value]
 				let availcolumns be baseavailcolumns;
@@ -2611,8 +2617,67 @@ definition: Daytimer is night:
 		yes;
 
 LastTurnDay is a truth state that varies.
+DateDay is a number that varies. DateDay is usually 11.
+DateMonth is a number that varies. DateMonth is usually 4.
+DateYear is a number that varies. DateYear is usually 2008.
 
 an everyturn rule:
+	if TimekeepingVar is 0 or TimekeepingVar is -8: [early dawn, 0:00-3:00]
+		increase DateDay by 1;
+		if DateMonth is 1: [January]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 2;
+		else if DateMonth is 2: [February]
+			if DateYear is 2008:
+				if DateDay is 30:
+					now DateDay is 1;
+					now DateMonth is 3;
+			else:
+				if DateDay is 29:
+					now DateDay is 1;
+					now DateMonth is 3;
+		else if DateMonth is 3: [March]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 4;
+		else if DateMonth is 4: [April]
+			if DateDay is 31:
+				now DateDay is 1;
+				now DateMonth is 5;
+		else if DateMonth is 5: [May]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 6;
+		else if DateMonth is 6: [June]
+			if DateDay is 31:
+				now DateDay is 1;
+				now DateMonth is 7;
+		else if DateMonth is 7: [July]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 8;
+		else if DateMonth is 8: [August]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 9;
+		else if DateMonth is 9: [September]
+			if DateDay is 31:
+				now DateDay is 1;
+				now DateMonth is 10;
+		else if DateMonth is 10: [October]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 11;
+		else if DateMonth is 11: [November]
+			if DateDay is 31:
+				now DateDay is 1;
+				now DateMonth is 12;
+		else if DateMonth is 12: [December]
+			if DateDay is 32:
+				now DateDay is 1;
+				now DateMonth is 1;
+				increase DateYear by 1;
 	if daytimer is day: [currently day]
 		if LastTurnDay is false: [last turn was night]
 			say "[bold type]The sun rises over the city.[roman type][line break]";
@@ -2641,7 +2706,7 @@ an everyturn rule:
 		now LastTurnDay is false;
 		if Player is in Urban Forest and WerewolfRelationship is 0:
 			if WerewolfWatching is false: [initial message]
-				say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resing on you can't be all in your head, can it?";
+				say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resting on you can't be all in your head, can it?";
 				now WerewolfWatching is true;
 			else: [repeat message for following turns]
 				if a random chance of 1 in 3 succeeds:
@@ -2847,7 +2912,7 @@ To process (x - a grab object):
 	else if x is a journal:
 		follow the brain descr rule;
 		say "You settle down and start scribbling in your journal about your [descr]. ";
-		if the humanity of Player < 100:
+		if Humanity of Player < 100:
 			let healed be 10 + ( ( level of Player + perception of Player - 10 ) / 2 );
 			if caffeinehigh of Player > 0:
 				now healed is healed / 2;
@@ -2927,7 +2992,7 @@ To process (x - a grab object):
 	if tan > hunger of player and "Tanuki Salts" is listed in feats of player:
 		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
 		playerEat 5;
-		increase the morale of the player by 5;
+		increase Morale of Player by 5;
 
 
 understand "talk [person]" as conversing.
@@ -3190,12 +3255,12 @@ understand "grab [present grab object]" as grabbing.
 carry out grabbing something (called x):
 	let found be 0;
 	let num be 0;
-	repeat with Q running through invent of the location of the player:
+	repeat with Q running through invent of the Location of Player:
 		increase num by 1;
 		if q matches the regular expression printed name of x, case insensitively:
 			now found is 1;
 			ItemGain q by 1;
-			remove entry num from invent of the location of the player;
+			remove entry num from invent of the Location of Player;
 			if x is equipment:
 				say "You pick up the [printed name of x] and tuck [if plural of x is true]them[else]it[end if] in your backpack.";
 			else:
@@ -3301,7 +3366,7 @@ carry out littering something (called x):
 				continue the action;
 	repeat through table of game objects:
 		if printed name of x in lower case matches the text Name entry in lower case:
-			add Name entry to the invent of the location of the player;
+			add Name entry to the invent of the Location of Player;
 			break;
 	ItemLoss x by 1;
 
@@ -3316,7 +3381,7 @@ understand "grab all" as looting.
 carry out looting:
 	let found be 0;
 	let num be 0;
-	repeat with Q running through invent of the location of the player:
+	repeat with Q running through invent of the Location of Player:
 		increase num by 1;
 		now found is 1;
 		ItemGain q by 1;
@@ -3324,7 +3389,7 @@ carry out looting:
 	if found is 0:
 		say "You don't see anything around here.";
 	else:
-		now the invent of the location of the player is { };
+		now the invent of the Location of Player is { };
 
 before taking a thing:
 	if noun is rooted in place:
@@ -4490,9 +4555,9 @@ To level up:
 	increase maxHP of Player by ( stamina of Player minus 10 ) divided by 2;
 	increase maxHP of Player by 2;
 	now HP of Player is maxHP of Player;
-	if the remainder after dividing level of the player by 5 is 0 and "Ultimatum" is not listed in feats of Player:
+	if the remainder after dividing Level of Player by 5 is 0 and "Ultimatum" is not listed in feats of Player:
 		funfeatget;
-	increase score by level of the player times level of the player;
+	increase score by Level of Player times Level of Player;
 
 [ Fight and challenge moved to Core Mechanics/Fighting.i7x]
 
@@ -4576,8 +4641,8 @@ check resting:
 			say "You are thankfully able to complete your nap in peace.";
 
 to Rest:
-	let num1 be maxHP of the player divided by 4;
-	let num2 be ( ( stamina of the player * 3 ) / 2 ) + level of the player;
+	let num1 be maxHP of Player divided by 4;
+	let num2 be ( ( Stamina of Player * 3 ) / 2 ) + Level of Player;
 	if cot is owned or cot is present or the player is in Bunker or silk hammock is owned or silk hammock is present:
 		if num1 >= num2, increase HP of Player by num1; [best value chosen]
 		if num2 > num1, increase HP of Player by num2;
@@ -4608,6 +4673,16 @@ to Rest:
 				StatChange "Perception" by 2 silently;
 			now WellRestedTimer is 6;
 
+to say Sleepmessage:
+	if Terminatorsleep is true or SleepTimerCount < 5:
+		say "Rested";
+	else if SleepTimerCount < 8:
+		say "[link]Spent[as]rest[end link]";
+	else if SleepTimerCount < 11:
+		say "[link]Tired[as]rest[end link]";
+	else:
+		say "[link]Beat[as]rest[end link]";
+
 carry out resting:
 	if rubber tigress is listed in companionList of Player:
 		artemisnap;
@@ -4624,7 +4699,7 @@ carry out resting:
 This is the explore rule:
 	let something be 0;
 	let roomfirst be 1;
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	if "Curious" is listed in feats of Player, increase bonus by 3;
 	if blindmode is true, increase bonus by 3; [increased odds of finding something interesting]
 	if a random chance of 2 in 5 succeeds, now roomfirst is 0; [Will it check for a room or situation first?]
@@ -4693,7 +4768,7 @@ check exploring:
 	if location of Player is not fasttravel and earea of location of Player is "void", say "You cannot explore from here." instead;
 
 carry out exploring:
-	if there is a dangerous door in the location of the player:
+	if there is a dangerous door in the Location of Player:
 		let l be a random visible dangerous door;
 		if l is not nothing, now battleground is the marea of l;
 		if l is nothing, now battleground is "Outside"; [***]
@@ -4702,7 +4777,7 @@ carry out exploring:
 	follow the explore rule;
 
 to randomfightchance:
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	if "Stealthy" is listed in feats of Player, now bonus is -1;
 	if "Curious" is listed in feats of Player, increase bonus by 2;
 	if "Bad Luck" is listed in feats of Player, increase bonus by 1;
@@ -4734,8 +4809,8 @@ This is the turnpass rule:
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	if HP of Velos > 2:
-		if Velos is not in the location of the player:		[traveling w/player]
-			now Velos is in the location of the player;
+		if Velos is not in the Location of Player:		[traveling w/player]
+			now Velos is in the Location of Player;
 	if Breast Size of Player > 26, now Breast Size of Player is 26;
 	let oldlib be Libido of Player;
 	if Libido of Player < 100 and "Horny Bastard" is listed in feats of Player:
@@ -4749,13 +4824,13 @@ This is the turnpass rule:
 		say "Your thoughts have sunk to almost constant depravity![no line break][if Player is male] Your cock[smn] remain[smv] perpetually hard and leaking precum.[no line break][end if][if Cunt Count of Player is 1] Your cunt[sfn] [isfv] hot and dripping juices as your arousal builds.[no line break][end if][line break]";
 	if hunger of Player < 0, now hunger of Player is 0;
 	if thirst of Player < 0, now thirst of Player is 0;
-	if the HP of the player < the maxHP of the player and nohealmode is false:
-		increase the HP of the player by the stamina of the player divided by 2;
+	if HP of Player < MaxHP of Player and nohealmode is false:
+		increase HP of Player by Stamina of Player divided by 2;
 		if carried of First Aid Manual > 0, increase HP of Player by 1;
 	if "Regeneration" is listed in feats of Player:
-		increase the HP of the player by (level of Player divided by 3);
+		increase HP of Player by (level of Player divided by 3);
 	if "Rapid Healing" is listed in feats of Player:
-		increase the HP of the player by 2;
+		increase HP of Player by 2;
 [	let yy be 4;
 	if "Resistant" is listed in feats of Player, increase yy by 2;
 	if "Mutable" is listed in feats of Player, decrease yy by 1;
@@ -4842,8 +4917,8 @@ This is the turnpass rule:
 		now Libido of Player is 75;
 		if "Horny Bastard" is listed in feats of Player, now Libido of Player is 80;
 		if "Cold Fish" is listed in feats of Player, now Libido of Player is 60;
-	if the HP of the player > the maxHP of the player, now the HP of the player is the maxHP of the player;
-	if the HP of the player < 0, now the HP of the player is 1;
+	if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
+	if HP of Player < 0, now HP of Player is 1;
 	if ( a random number from 1 to 20 ) > ( a random number between 1 and ( stamina of Player + 1 ) ):
 		increase hunger of Player by 1;
 		if number of filled rows in Table of PlayerChildren > 0 and a random chance of 1 in 2 succeeds, increase hunger of Player by 1;
@@ -4913,7 +4988,7 @@ This is the turnpass rule:
 		else if hunger of Player > 3:
 			say "You feel a little hungry.";
 		if hunger of Player > 30:
-			decrease the morale of the player by ( hunger of Player minus 30 ) divided by 5;
+			decrease Morale of Player by ( hunger of Player minus 30 ) divided by 5;
 		if hunger of Player > 99:
 			now HP of Player is -9999;
 			end the story saying "You have died of hunger.";
@@ -4926,14 +5001,14 @@ This is the turnpass rule:
 		else if thirst of Player > 12:
 			say "You feel a little thirsty.";
 		if thirst of Player > 30:
-			decrease the morale of the player by ( thirst of Player minus 30 ) divided by 5;
+			decrease Morale of Player by ( thirst of Player minus 30 ) divided by 5;
 		if thirst of Player > 99:
 			now HP of Player is -9999;
 			end the story saying "You have died of thirst.";
 		if hunger of Player > 50 or thirst of Player > 50:
 			say "Maybe you should [bold type]scavenge[roman type] for food! Go to a quick travel location and find something quick.";
-		let maxmorale be ( the charisma of the player plus the perception of the player );
-		let moralereset be ( maxmorale plus the level of the player );
+		let maxmorale be ( Charisma of Player plus Perception of Player );
+		let moralereset be ( maxmorale plus Level of Player );
 		if "Perky" is listed in feats of Player:
 			increase moralereset by ( moralereset divided by 5);
 			increase maxmorale by ( maxmorale divided by 5);
@@ -4942,9 +5017,9 @@ This is the turnpass rule:
 			if SP > 20, now SP is 20;
 			increase moralereset by SP;
 			increase maxmorale by SP;
-		else if the morale of the player > moralereset:
+		else if Morale of Player > moralereset:
 			say "The rush of giddiness leaves you as your morale normalizes, leaving you feeling confident but no longer manic.";
-			now the morale of the player is maxmorale;
+			now Morale of Player is maxmorale;
 	let corruption be 0;
 	if SkinName of Player is not "Human", increase corruption by a random number from 0 to 1;
 	if CockName of Player is not "Human", increase corruption by a random number from 0 to 1;
@@ -4957,18 +5032,18 @@ This is the turnpass rule:
 			increase corruption by a random number from 0 to 1;
 		if "Strong Psyche" is listed in feats of Player:
 			decrease corruption by a random number from 0 to 2;
-		decrease corruption by a random number from 0 to ( ( Perception of the player minus 10) divided by 2 );
-		decrease corruption by a random number from 0 to ( ( Charisma of the player minus 10) divided by 2 );
+		decrease corruption by a random number from 0 to ( ( Perception of Player minus 10) divided by 2 );
+		decrease corruption by a random number from 0 to ( ( Charisma of Player minus 10) divided by 2 );
 	if corruption > 0:
-		decrease the humanity of Player by corruption;
+		decrease Humanity of Player by corruption;
 		follow the brain descr rule;
 		say "The nanites inside you work at rewiring your stubborn brain, leaving you with [descr] ([humanity of Player]/100)[line break]";
 		if humanity of Player < 50:
 			say "Maybe you should [bold type]use[roman type] that [bold type]journal[roman type] to help collect your thoughts.";
 	pregprotocol; [Moved to pregnancy in core mechanics]
-	if the humanity of Player < 1 and Scenario is not "Researcher" and skipturnblocker is 0:
+	if Humanity of Player < 1 and Scenario is not "Researcher" and skipturnblocker is 0:
 		end the story saying "Your mind is lost to the infection.";
-	if the humanity of Player < 1 and scenario is "Researcher", now humanity of Player is 1;
+	if Humanity of Player < 1 and scenario is "Researcher", now humanity of Player is 1;
 	decrease turns by 1;
 	if ( turns minus targetturns ) <= 0 and playon is 0 and skipturnblocker is 0:
 		end the story saying "You survived until the rescue came.";
@@ -5002,7 +5077,7 @@ This is the monster injury rule:
 	rule succeeds;
 
 This is the player injury rule:
-	let per be ( HP of the player times 100 ) divided by maxHP of the player;
+	let per be ( HP of Player times 100 ) divided by maxHP of Player;
 	if per <= 10:
 		now descr is "[if Playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]on death's door[or]almost defeated[or]barely mobile[at random]";
 	else if per <= 40:
@@ -5145,7 +5220,7 @@ instead of examining a person (called x):
 		follow the self examine rule;
 		follow the afterexamine rules;
 	else:
-		say "[The description of x]";
+		say "[Description of x]";
 		if hypernull is 0:
 			try linkactioning x;
 
@@ -5188,18 +5263,16 @@ carry out showstatting:
 To showstats (x - Person):
 	sort Feats of Player;
 	sort Traits of Player;
-	say "Strength: [strength of the x], Dexterity: [dexterity of the x], Stamina: [stamina of the x], Charisma: [Charisma of the x], Intelligence: [intelligence of the x], Perception: [perception of the x].";
+	say "Strength: [strength of x], Dexterity: [dexterity of x], Stamina: [stamina of x], Charisma: [Charisma of x], Intelligence: [intelligence of x], Perception: [perception of x].";
 	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [HP of x]/[maxHP of x] Libido: [Libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100.";
 	let z be ( level of x plus one) times 10;
 	if "Fast Learner" is listed in feats of x:
 		now z is ( level of x plus one) times 8;
 	say "Level: [level of x], XP: [XP of x]/[z]";
 	if the number of entries in feats of the x > 0:
-		say ", Feats: [feats of the x][line break]";
+		say ", [link]Feats[as]FeatsList[end link][line break]";
 	if debugactive is 1:
 		say "DEBUG -> Traits: [Traits of Player][line break]";
-	if debugactive is 1:
-		say "DEBUG -> Invent: [Invent of Player][line break]";
 
 This is the self examine rule:
 	now looknow is 1;
@@ -5516,7 +5589,7 @@ This is the self examine rule:
 	now looknow is 0;
 	rule succeeds;
 
-The description of Offspring is "[OffspringDesc]".
+Description of Offspring is "[OffspringDesc]".
 
 instead of conversing the Offspring:
 	if (number of filled rows in Table of PlayerBunkerChildren) > 1:
@@ -5604,7 +5677,7 @@ instead of sniffing offspring present:
 	say "The box smells very mysterious.";
 
 offspring present is a grab object.
-the usedesc of offspring present is "[offspring present use]";
+Usedesc of offspring present is "[offspring present use]";
 
 to say offspring present use:
 	say "Curious about what your child got you, you carefully open the present and find ";
@@ -5666,7 +5739,7 @@ This is the location choice rule:
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now Description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
@@ -5676,13 +5749,14 @@ This is the location choice rule:
 					now area entry is "Park";
 					break;
 			increase score by 600;
+			now DateMonth is 6;
 			extend game by 240;
 		if title entry is "Hard mode":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now Description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
@@ -5692,6 +5766,7 @@ This is the location choice rule:
 					now area entry is "Park";
 					break;
 			increase score by 900;
+			now DateMonth is 6;
 			extend game by 240;
 			now hardmode is true;
 		if hardmode is false:
@@ -5705,12 +5780,12 @@ This is the location choice rule:
 	rule succeeds;
 
 This is the final stats rule:
-	now the morale of the player is the charisma of the player plus the perception of the player;
-	now the HP of the player is the stamina of the player times two;
-	increase the HP of the player by 5;
-	now the maxHP of the player is the HP of the player;
-	now the humanity of Player is 100;
-	now the capacity of the player is five times the strength of the player;
+	now Morale of Player is Charisma of Player plus Perception of Player;
+	now HP of Player is Stamina of Player times two;
+	increase HP of Player by 5;
+	now MaxHP of Player is HP of Player;
+	now Humanity of Player is 100;
+	now the Capacity of Player is five times Strength of Player;
 	now the menu depth is 0;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	while 1 is 1:
@@ -5732,7 +5807,7 @@ This is the final stats rule:
 This is the male choice rule:
 	now Cock Count of Player is 1;
 	now Cock Length of Player is 6;
-	now the Ball Size of the player is 3;
+	now the Ball Size of Player is 3;
 	now Nipple Count of Player is 2;
 	now Breast Size of Player is 0;
 	remove womanhood from Player;
@@ -5764,28 +5839,28 @@ This is the d18 rule:
 
 This is the random stats rule:
 	follow the d18 rule;
-	now the strength of the player is d18;
+	now Strength of Player is d18;
 	follow the d18 rule;
-	now the Dexterity of the player is d18;
+	now Dexterity of Player is d18;
 	follow the d18 rule;
-	now the Stamina of the player is d18;
+	now Stamina of Player is d18;
 	follow the d18 rule;
-	now the Charisma of the player is d18;
+	now Charisma of Player is d18;
 	follow the d18 rule;
-	now the Intelligence of the player is d18;
+	now Intelligence of Player is d18;
 	follow the d18 rule;
-	now the Perception of the player is d18;
+	now Perception of Player is d18;
 	decrease the score by 1;
 	rule succeeds.
 
 This is the starting stats rule:
 	[default stats]
-	now the strength of the player is 12;
-	now the Dexterity of the player is 12;
-	now the Stamina of the player is 12;
-	now the Charisma of the player is 12;
-	now the Intelligence of the player is 12;
-	now the Perception of the player is 12;
+	now Strength of Player is 12;
+	now Dexterity of Player is 12;
+	now Stamina of Player is 12;
+	now Charisma of Player is 12;
+	now Intelligence of Player is 12;
+	now Perception of Player is 12;
 	decrease the score by 0;
 	rule succeeds.
 
@@ -5794,7 +5869,7 @@ This is the starting gender rule:
 	now Cock Count of Player is 1;
 	now Cock Girth of Player is 3;
 	now Cock Length of Player is 6;
-	now Ball Size of the player is 3;
+	now Ball Size of Player is 3;
 	now Nipple Count of Player is 2;
 	now Breast Size of Player is 0;
 	remove womanhood from Player;
@@ -5993,7 +6068,7 @@ carry out ScavengingAction:
 	else:
 		now battleground is "Outside";
 	say "You set out in the desperate search of food and water.";
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	if "Survivalist" is listed in feats of Player, increase bonus by 4;
 	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	let the dice be a random number from 1 to 20;
@@ -7009,7 +7084,7 @@ instead of going somewhere while player is overburdened:
 	say "You are too over burdened to move. Drop some of that junk!";
 
 instead of going through a dangerous door (called x):
-	if the HP of the player < 1:
+	if HP of Player < 1:
 		say "You are too injured to go far. You rest instead.";
 		Rest;
 	else:
@@ -7128,7 +7203,7 @@ To startgenderlockshift:
 		-- 3:	[male]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;
-			now the Ball Size of the player is 3;
+			now the Ball Size of Player is 3;
 			now Breast Size of Player is 0;
 			remove womanhood from Player;
 		-- 4:		[female]
@@ -7140,7 +7215,7 @@ To startgenderlockshift:
 		-- 5:		[shemale]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;
-			now the Ball Size of the player is 3;
+			now the Ball Size of Player is 3;
 			now Breast Size of Player is 2;
 			remove womanhood from Player;
 		-- 6: [cuntboy]
@@ -7152,7 +7227,7 @@ To startgenderlockshift:
 		-- 7: [male herm]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;
-			now the Ball Size of the player is 3;
+			now the Ball Size of Player is 3;
 			now Cunt Count of Player is 1;
 			now Cunt Depth of Player is 6;
 			now Cunt Tightness of Player is 4;
@@ -7160,7 +7235,7 @@ To startgenderlockshift:
 		-- 8: [herm]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;
-			now the Ball Size of the player is 3;
+			now the Ball Size of Player is 3;
 			now Cunt Count of Player is 1;
 			now Cunt Depth of Player is 6;
 			now Cunt Tightness of Player is 4;
@@ -7168,7 +7243,7 @@ To startgenderlockshift:
 		-- 9: [always cocky]
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 6;
-			now the Ball Size of the player is 3;
+			now the Ball Size of Player is 3;
 		-- 10: [always a pussy]
 			now Cunt Count of Player is 1;
 			now Cunt Depth of Player is 6;
@@ -7241,12 +7316,12 @@ To startFunFeatget: [alternate funfeatget used for start]
 				say "Invalid Feat.";
 
 to randomstatstart:	[same total points, but spread randomly between 10 to 18]
-	now the strength of the player is 10;
-	now the Dexterity of the player is 10;
-	now the Stamina of the player is 10;
-	now the Charisma of the player is 10;
-	now the Intelligence of the player is 10;
-	now the Perception of the player is 10;
+	now Strength of Player is 10;
+	now Dexterity of Player is 10;
+	now Stamina of Player is 10;
+	now Charisma of Player is 10;
+	now Intelligence of Player is 10;
+	now Perception of Player is 10;
 	[Boost two stats for increased spread in results]
 	let T be a random number between 1 and 6;
 	if T is 1:
@@ -8569,7 +8644,7 @@ to eyecolorsetting: [ Green, Blue, Gray, Brown, Hazel, Amber, Red]
 		now menuexit is 1;
 
 to playernaming:
-	say "Note: You can always change your name at a later point with the 'rename xxx' command.";
+	say "Note: You can always change your name at a later point with the 'rename' command.";
 	say "[bold type]Please enter your new name: [roman type][line break]";
 	get typed command as playerinput;
 	now name of Player is playerinput;
@@ -8793,7 +8868,7 @@ to say gsopt_start:
 	if gspg is 1:	[male]
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 6;
-		now the Ball Size of the player is 3;
+		now the Ball Size of Player is 3;
 		now Nipple Count of Player is 2;
 		remove womanhood from Player;
 		now Breast Size of Player is 0;
@@ -8809,11 +8884,11 @@ to say gsopt_start:
 		startgenderlockshift;
 ]
 	gs_stats;
-	now the morale of the player is the charisma of the player plus the perception of the player;
-	now the HP of the player is the stamina of the player times two;
-	increase the HP of the player by 5;
-	now the maxHP of the player is the HP of the player;
-	now the capacity of the player is five times the strength of the player;
+	now Morale of Player is Charisma of Player plus Perception of Player;
+	now HP of Player is Stamina of Player times two;
+	increase HP of Player by 5;
+	now MaxHP of Player is HP of Player;
+	now the Capacity of Player is five times Strength of Player;
 	now humanity of Player is 100;
 	if gsgl > 1, startgenderlockget;
 	follow the SetPlayerPronouns rule;
@@ -8895,7 +8970,7 @@ to say gsopt_start:
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now Description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
@@ -8948,7 +9023,7 @@ to say silent_start:
 	if gspg is 1: [male]
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 6;
-		now the Ball Size of the player is 3;
+		now the Ball Size of Player is 3;
 		now Nipple Count of Player is 2;
 		now Breast Size of Player is 0;
 		remove womanhood from Player;
@@ -8963,11 +9038,11 @@ to say silent_start:
 		startgenderlockshift;
 	]
 	gs_stats;
-	now the morale of the player is the charisma of the player plus the perception of the player;
-	now the HP of the player is the stamina of the player times two;
-	increase the HP of the player by 5;
-	now the maxHP of the player is the HP of the player;
-	now the capacity of the player is five times the strength of the player;
+	now Morale of Player is Charisma of Player plus Perception of Player;
+	now HP of Player is Stamina of Player times two;
+	increase HP of Player by 5;
+	now MaxHP of Player is HP of Player;
+	now the Capacity of Player is five times Strength of Player;
 	now humanity of Player is 100;
 	if gsgl > 1, startgenderlockget;
 	follow the SetPlayerPronouns rule;
@@ -9080,7 +9155,7 @@ to say silent_start:
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now Description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
@@ -9136,7 +9211,7 @@ to say promptsay:
 		repeat with q running through invent of x:
 			if there is a name of q in the Table of Game Objects:
 				choose a row with name of q in the Table of Game Objects;
-				now object entry is part of the player;
+				now object entry is part of Player;
 			say "[link][q][as]get [q][end link] ";
 		say " [link]get everything[as]get all[end link]";
 		say "[line break]";
@@ -9145,7 +9220,10 @@ to say promptsay:
 			now k is nowhere;
 	[invisibly attaching the carried objects to keep the rickety FS inventory system going]
 	repeat with j running through owned grab objects:
-		now j is a part of the player;
+		now j is a part of Player;
+	if Player is in Bunker:
+		repeat with j running through stored grab objects:
+			now j is a part of Player;
 	say "Status: ";
 	if hunger of Player > 30:
 		say "[link][bracket]HUNGRY[close bracket][as]eat food[end link] ";
@@ -9176,7 +9254,7 @@ to say promptsay:
 	else if earea of location of Player is not "void":
 		say " [bracket][link]scavenge[end link], [link]explore[end link][close bracket]";
 	say ", Visible Things: ";
-	repeat with y running through the things in the location of the player:
+	repeat with y running through the things in the Location of Player:
 		if y is a door, next;
 		if y is the player:
 			say "[link][y][as]look me[end link] ";
@@ -9205,7 +9283,7 @@ When play begins:
 	else:
 		now hypernull is 1;
 	repeat with x running through featsets:
-		now x is a part of the player;
+		now x is a part of Player;
 	if gsgt is 1: [sets name of scenario for menu based on preset]
 		now scenario is "Bunker";
 	else if gsgt is 2:

@@ -212,7 +212,7 @@ this is the rattymilk rule:
 	decrease humanity of Player by a random number between 1 and 4;
 	if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	follow the player injury rule;
 	say "You are [descr].";
 
@@ -264,7 +264,7 @@ to say slut rat victory:
 		if Libido of Player > 80, now Libido of Player is 80;
 		infect "Slut Rat";
 	else:
-		if the location of the player is Slut Rat Den:
+		if the Location of Player is Slut Rat Den:
 			say "     The rat grins as she pushes you towards the others, 'Let's remind this one how we treat bad people.' Of course, how they treat bad people and how they treat good people can be a bit foggy at times. At the call, the other rats stop their coupling and stroking and other diversions to instead gather around you with hungry expressions.";
 		else:
 			say "     Defeated, she grabs you and hauls you rapidly back towards her den, grinning the whole way like she knows a joke she does not care yet to share. When you arrive, you find many large pillows strewn about comfortably, and almost half a dozen other slut rats, stroking themselves, or each other, or kissing and otherwise engaged. They all pause when you are hauled in, and scramble to their feet, rushing up to enjoy and share the fresh meat.";
@@ -494,7 +494,7 @@ lastratdartthrow is a number that varies. lastratdartthrow is usually 555.
 ratdartcount is a number that varies.
 
 check ratdarts:
-	if the location of the player is not Slut Rat Den, say "What darts?" instead;
+	if the Location of Player is not Slut Rat Den, say "What darts?" instead;
 	if SlutRatDenVisitTimes < 1:
 		say "The rats scowl at you when you approach the dart board. Perhaps you should reconsider.";
 		say "Continue?";
@@ -525,7 +525,7 @@ Carry out ratdarts:
 		if remainder after dividing ratdartcount by 4 is 0 and SlutRatDenPoolTable is 1:
 			say "     The same slut rat from earlier [one of]looks up from plowing another smaller rat as you approach the board again. 'Hey newbie, any luck finding us that pool table or somethin[']?' she asks, not breaking her pace. You shake your head and she grumbles, 'Bummer!' and returns to nibbling on her current lover's ear.[or]scratches in itch on her chest, making her large breasts jiggle. 'Any luck with getting us something else to do?' she bitches.[or]yawns in boredom. 'We should really have something more than darts. Go back topside and look for a classy pool table. Try the High Rise District for a fancy pool hall,' she suggests. 'Yeah, get moving!' a few of the others pipe up.[or]presses another rat's face to her dripping pussy. 'You should really head topside and find us that pool table,' she complains. 'Yeah! And look for a skeeb-' the second girl starts to say, but is cut off as the bigger rat stuffs her face back to her cunt.[in random order]";
 			WaitLineBreak;
-		let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
+		let the bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: Taking a brief breath, you draw back the dart and eye the center circle. With a sudden thrust, the dart sails forward. ";
 		let total be bonus + dice;
@@ -616,7 +616,7 @@ Pool Hall	"Pool Hall"
 Pool Hall is a situation.
 ResolveFunction of Pool Hall is "[ResolveEvent Pool Hall]".
 Pool Hall is inactive.
-The sarea of Pool Hall is "High".
+Sarea of Pool Hall is "High".
 
 to say ResolveEvent Pool Hall:
 	if SlutRatDenPoolTable is 1:
@@ -629,7 +629,7 @@ to say ratstopoolhall:
 	if BodyName of Player is "Slut Rat":
 		LineBreak;
 		say "     Returning to the Slut Rat Den, you locate try to mobilize the troops against the cougars of the pool hall. The large rat who started this plan is all on board, as is the skeeball nut. Most of them are reluctant to leave their life of lustful indolence to go, so you try your best to convince them.";
-		let the bonus be (( the charisma of the player minus 10 ) divided by 2);
+		let the bonus be (( Charisma of Player minus 10 ) divided by 2);
 		if slutratsub < 5, increase bonus by ( 5 - slutratsub ); [increase for being a dominant rat]
 		if slutratsub > 5, increase bonus by ( slutratsub + 5 ); [increase for being a popular slut]
 		let the dice be a random number from 1 to 20;
@@ -719,8 +719,8 @@ object	name
 Pool Table	"Pool Table"
 
 Pool Table is a person. "There is the pool table you helped retrieve at one end of the spacious rat den, available for play when not in use by the others. Despite being new, it's already picked up a few stains from rather [']enthusiastic['] play. To see if anyone wants a game, simply [bold type]talk pool[roman type]."
-The description of Pool Table is "     This is the pool table that you, Eight-ball, Skeeball and the others were able to retrieve for the rat's den. It's picked up a few stains from some [']enthusiastic['] play, but is still in good shape. It's very popular with the girls and makes for another welcome diversion[if lastpoolgame - turns < 8]. The table is currently in use by some of the others[else]. The table is free if you'd like a game, just [bold type]talk pool[roman type] of see if you can convince someone to have a game with you[end if].".
-The conversation of Pool Table is { "Scratch!" }.
+Description of Pool Table is "     This is the pool table that you, Eight-ball, Skeeball and the others were able to retrieve for the rat's den. It's picked up a few stains from some [']enthusiastic['] play, but is still in good shape. It's very popular with the girls and makes for another welcome diversion[if lastpoolgame - turns < 8]. The table is currently in use by some of the others[else]. The table is free if you'd like a game, just [bold type]talk pool[roman type] of see if you can convince someone to have a game with you[end if].".
+Conversation of Pool Table is { "Scratch!" }.
 lastpoolgame is a number that varies. lastpoolgame is usually 555.
 
 the scent of the Pool Table is "The pool table smalls of the rats that have been playing it and of the stains they've left on it.".
@@ -744,7 +744,7 @@ instead of conversing the Pool Table:
 	if T is 3, now targetnum is 10 + a random number between 1 and 3 + ( level of Player / 10 );
 	if T is 4, now targetnum is 12 + a random number between 1 and 3 + ( level of Player / 10 );
 	if Player consents:
-		let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
+		let the bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: vs [targetnum].";
 		if dice plus bonus < targetnum:

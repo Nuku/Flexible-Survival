@@ -11,7 +11,7 @@ object	name
 Chaotic Mess	"Chaotic Mess"
 
 Chaotic Mess is a person. Chaotic Mess is in George's Animal Emporium.
-The description of Chaotic Mess is "     Most of George's Animal Emporium is filled with a terrible mess, as the store's contents have been rifled through multiple times already. The looters were clearly not interested in putting things back into their original positions. This has resulted in a sprawling chaos of items scattered everywhere, ankle deep in places and hip high for a human in others. If you had a specific friend or pet in mind, you could very well find them a gift or something in here. Maybe you should try to [link]sort[as]sort chaotic mess[end link] through the chaotic mess?".
+Description of Chaotic Mess is "     Most of George's Animal Emporium is filled with a terrible mess, as the store's contents have been rifled through multiple times already. The looters were clearly not interested in putting things back into their original positions. This has resulted in a sprawling chaos of items scattered everywhere, ankle deep in places and hip high for a human in others. If you had a specific friend or pet in mind, you could very well find them a gift or something in here. Maybe you should try to [link]sort[as]sort chaotic mess[end link] through the chaotic mess?".
 
 the linkaction of Chaotic Mess is "Possible Actions: [link]smell[as]smell chaotic mess[end link], [link]sort[as]sort chaotic mess[end link][line break]";
 
@@ -56,7 +56,7 @@ instead of sniffing fur brush:
 	say "     The fur brush smells of natural wood, combined with the scent of beeswax and olive oil. Certainly a high quality piece of equipment.";
 
 fur brush is a grab object. fur brush is not temporary.
-the usedesc of fur brush is "[fur brush use]";
+Usedesc of fur brush is "[fur brush use]";
 
 to say fur brush use:
 	say "     You play around a little with the wooden brush, stroking your hand over the nubs and bristles on it. Having it along should certainly be useful if you want to give a pet or furred companion some affection. The surprisingly ergonomic handle has several prominent ridges and a smooth texture, making you think of at least one extra use for the foot-long piece of wood.";

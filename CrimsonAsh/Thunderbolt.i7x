@@ -25,7 +25,7 @@ Campus Thunder	"Campus Thunder"
 Campus Thunder is a situation.
 ResolveFunction of Campus Thunder is "[ResolveEvent Campus Thunder]".
 The level of Campus Thunder is 0.
-The sarea of Campus Thunder is "Campus". [Fountain]
+Sarea of Campus Thunder is "Campus". [Fountain]
 
 instead of going south from College Administration Building while (Campus Thunder is active and Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
 	move player to College Fountain;
@@ -105,7 +105,7 @@ Object	Name
 Thunderbolt's Stable	"Thunderbolt's Stable"
 
 Thunderbolt's Stable is a room.
-The description of Thunderbolt's Stable is "[TStableDesc]".
+Description of Thunderbolt's Stable is "[TStableDesc]".
 
 to say TStableDesc:
 	say "     Thunderbolt's stable is a mid-sized pen thrown together by the lioness sisters Ariana and Eres. It has all the basic amenities to keep a horse well cared for: a trough, a few bales of hay and a wooden lean-to big enough for the big stallion to sleep under.";
@@ -157,8 +157,8 @@ AnalVirgin of Thunderbolt is true.
 PenileVirgin of Thunderbolt is false.
 SexuallyExperienced of Thunderbolt is true.
 MainInfection of Thunderbolt is "".
-The description of Thunderbolt is "[ThunderboltDesc]".
-The conversation of Thunderbolt is { "<This is nothing but a placeholder!>" }.
+Description of Thunderbolt is "[ThunderboltDesc]".
+Conversation of Thunderbolt is { "<This is nothing but a placeholder!>" }.
 The scent of Thunderbolt is "     You sniff the feral horse. He smells like cut hay and soap, the sisters must keep him well bathed.".
 
 to say ThunderboltDesc:
@@ -260,8 +260,8 @@ object	name
 Ariana	"Ariana"
 
 Ariana is a woman.
-The description of Ariana is "[ArianaDesc]".
-The conversation of Ariana is { "<This is nothing but a placeholder!>" }.
+Description of Ariana is "[ArianaDesc]".
+Conversation of Ariana is { "<This is nothing but a placeholder!>" }.
 The scent of Ariana is "     Ariana smells musky from a days jog, the scent underlain by a sweet smell of perfume and pheromones.".
 
 to say ArianaDesc:
@@ -315,8 +315,8 @@ object	name
 Eres	"Eres"
 
 Eres is a woman.
-The description of Eres is "[EresDesc]".
-The conversation of Eres is { "<This is nothing but a placeholder!>" }.
+Description of Eres is "[EresDesc]".
+Conversation of Eres is { "<This is nothing but a placeholder!>" }.
 The scent of Eres is "     Eres smells of evergreen grass with a hint of the innards of a book.".
 
 to say EresDesc:

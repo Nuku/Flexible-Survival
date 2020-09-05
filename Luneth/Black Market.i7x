@@ -28,7 +28,7 @@ Object	Name
 Zephyr Storeroom	"Zephyr Storeroom"
 
 West of Zephyr Lobby is Zephyr Storeroom.
-Zephyr Storeroom is a room. The description of Zephyr Storeroom is "[zephyrstoreroom desc]".
+Zephyr Storeroom is a room. Description of Zephyr Storeroom is "[zephyrstoreroom desc]".
 
 to say zephyrstoreroom desc:
 	say "     Entering the storeroom you can see boxes going all the way up to the ceiling. Along the walls in black paint someone has also done measurements, going by those, the room tops out at around twenty feet. The containers are grey and massive, obviously they must have a forklift stashed away somewhere in here as well. Color wise the room is a mixture of grey, white, and... off white, a very drab look to be sure. Off to the side in the back is a single desk with mountains of paperwork covering it, you can only assume that this mess belongs to Barret.";
@@ -40,8 +40,8 @@ object	name
 Barrett	"Barrett"
 
 Barrett is a man. He is in Zephyr Storeroom. The HP of Barrett is usually 0.
-The description of Barrett is "[BarrettDesc]".
-The conversation of Barrett is { "Arrg" }.
+Description of Barrett is "[BarrettDesc]".
+Conversation of Barrett is { "Arrg" }.
 
 to say BarrettDesc:
 	say "     Barret is a hispanic man that appears to be in his early to mid forties. He is around 6[']3 with a large build that at first glance could be confused as heavy set, however upon further inspection he appears incredibly muscular. His green eyes compliment his darker complexion giving him a slightly exotic look and his jet black hair is styled in a crew cut with a trimmed goatee to match. At the moment he is wearing a white tank top that shows off his massive arms and round belly, with a pair of black cargo pants that showcase his stockier legs and huge behind. A pair of silver dog tags hang from around his neck, in all honesty he looks more like a soldier or a mercenary than a guy that deals in stock taking.";

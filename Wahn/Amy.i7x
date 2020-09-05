@@ -117,8 +117,8 @@ SexuallyExperienced of Amy is false.
 MainInfection of Amy is "Husky Bitch".
 
 The icon of Amy is Figure of Amy_icon.
-The description of Amy is "[AmyDesc]".
-The conversation of Amy is { "Woof." }.
+Description of Amy is "[AmyDesc]".
+Conversation of Amy is { "Woof." }.
 
 instead of conversing the Amy:
 	project the figure of Amy_face_icon;

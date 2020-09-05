@@ -27,7 +27,7 @@ Four Leg Wrath	"Four Leg Wrath"
 
 Four Leg Wrath is a situation.
 ResolveFunction of Four Leg Wrath is "[ResolveEvent Four Leg Wrath]".
-The sarea of Four Leg Wrath is "Plains".
+Sarea of Four Leg Wrath is "Plains".
 
 to say ResolveEvent Four Leg Wrath:
 	if BodyName of player is "Behemoth" or BodyName of player is "Human Giant" or scalevalue of player > 4:
@@ -205,9 +205,9 @@ That Red Cave	"That Red Cave"
 
 That Red Cave is a situation.
 ResolveFunction of That Red Cave is "[ResolveEvent That Red Cave]".
-The PreReq1 of That Red Cave is Four Leg Wrath.
+Prereq1 of That Red Cave is Four Leg Wrath.
 The PreReq1Resolution of That Red Cave is { 3 }.
-The sarea of That Red Cave is "Plains".
+Sarea of That Red Cave is "Plains".
 
 to say ResolveEvent That Red Cave:
 	say "     After having encountered that one peculiar behemoth person who could actually talk and act with the intelligence of a normal person (which is, by the way, an extremely odd situation, given the fact most behemoths are not talkative at all, grunting and fucking everything that moves... or worse, given their size) and experienced a few events together, he (yes, [']he['], as it was established already that he is an actual person, or something like that) has let you know that he lives in a cave close to the mountains, accessible through the Dry Plains... of all places. Traveling through such a vast area only to arrive at the only visible rocky region from here is, indeed, a chore, but you have gone through worse. In fact, things look particularly calm, you haven't been ambushed by any sex-crazed creature so far.";
@@ -237,7 +237,7 @@ Entrance to Red Rock Lair	"Entrance to Red Rock Lair"
 
 Entrance to Red Rock Lair is a room. It is a fasttravel. Entrance to Red Rock Lair is private.
 The earea of Entrance to Red Rock Lair is "Plains".
-The description of Entrance to Red Rock Lair is "[DiavoborgLairEntranceDesc]".
+Description of Entrance to Red Rock Lair is "[DiavoborgLairEntranceDesc]".
 
 to say DiavoborgLairEntranceDesc:
 	say "     The entrance to Diavoborg's Lair lays east of your position and at the base of a smaller mount, which is an extension connected to a bigger mountain, being large enough for any giant-sized beast to fit in comfortably. From here, you can see the vast area of the Dry Plains, hiding behind fog at longer distances.";
@@ -261,7 +261,7 @@ Red Rock Lair Hall	"Red Rock Lair Hall"
 Red Rock Lair Hall is a room.
 Red Rock Lair Hall is east of Entrance to Red Rock Lair. It is sleepsafe.
 The earea of Red Rock Lair Hall is "Plains".
-The description of Red Rock Lair Hall is "[DiavoborgLairHallDesc]".
+Description of Red Rock Lair Hall is "[DiavoborgLairHallDesc]".
 
 to say DiavoborgLairHallDesc:
 	say "     This particular division serves as the hall of Diavoborg's Lair, leading to other rooms that the behemoth himself excavated. There isn't a lot to tell about, only that it is ample and spacious, so that Diavoborg can freely move around. At the middle of this particular room there is a firecamp, bigger than you are used to, which is lit during the night to provide some light. He also took the time to hang some torches on the walls, since little light gets in the deepest parts of the cave. One of these paths leads to his resting place, while the other seems unfinished, with rubble scattered around. Perhaps the red behemoth is working on something.";
@@ -278,7 +278,7 @@ Red Rock Resting Chamber	"Red Rock Resting Chamber"
 Red Rock Resting Chamber is a room.
 Red Rock Resting Chamber is southeast of Red Rock Lair Hall. It is sleepsafe.
 The earea of Red Rock Resting Chamber is "Plains".
-The description of Red Rock Resting Chamber is "[DiavoborgRestingChamberDesc]".
+Description of Red Rock Resting Chamber is "[DiavoborgRestingChamberDesc]".
 
 to say DiavoborgRestingChamberDesc:
 	say "     Here is where Diavoborg retreats to sleep. He has set up a really neat bedrock to serve as bed for someone his size, which would probably feel a little too hard and uncomfortable for you. The walls have lit torches, so that this division doesn't fall into pitch darkness. It also looks like the behemoth has a pretty collection of colorful gemstones and different rocks, all organized and ordered by size, appearance and shape. There are some wild scratches on the floor, as well.";
@@ -330,8 +330,8 @@ SexuallyExperienced of Diavoborg is true.
 TwistedCapacity of Diavoborg is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Diavoborg is true. [steriles can't knock people up]
 MainInfection of Diavoborg is "Behemoth".
-The description of Diavoborg is "[Diavoborgdesc]".
-The conversation of Diavoborg is { "<This is nothing but a placeholder!>" }.
+Description of Diavoborg is "[Diavoborgdesc]".
+Conversation of Diavoborg is { "<This is nothing but a placeholder!>" }.
 The scent of Diavoborg is "     Diavoborg smells like a beast you can't quite compare to anything but the behemoths themselves, though perhaps the closest would be something between a bull and a dragon. It is very animalistic, nonetheless, especially around his junk, which makes you quite dizzy at first if you take a deeper whiff while standing next to him".
 
 to say DiavoborgDesc:

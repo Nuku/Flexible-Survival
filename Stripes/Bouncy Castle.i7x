@@ -35,7 +35,7 @@ Snared Vixen	"Snared Vixen"
 
 Snared Vixen is a situation.
 ResolveFunction of Snared Vixen is "[ResolveEvent Snared Vixen]". The level of Snared Vixen is 5.
-the sarea of Snared Vixen is "Beach".
+Sarea of Snared Vixen is "Beach".
 
 when play begins:
 	add Snared Vixen to BadSpots of FemaleList; [We may want to add an event later to allow people with 'girl' banned access to the Bouncy Castle]
@@ -113,7 +113,7 @@ instead of navigating Bouncy Castle:
 to say bcnavigate:
 	if location of Player is not Beach Plaza and location of Player is not Public Beach: [Skips this if the player is already in Beach Plaza or Public Beach]
 		say "     You begin by making your way back to the beach";
-		let the bonus be (( the perception of the player minus 10 ) divided by 2);
+		let the bonus be (( Perception of Player minus 10 ) divided by 2);
 		now battleground is "Outside";
 		if a random number from 1 to 20 < 10 minus bonus:
 			say ", encountering an enemy on the way there.";
@@ -131,7 +131,7 @@ to say bcnavigate:
 	else if boatfound is 2:		[rowboat]
 		say "     Returning to the rowboat you found, you drag it into the water and start your journey. It is hard work rowing the boat, but it certainly beats swimming the whole way. As you're making your way through the rocking outcroppings on your way to the floating castle, you watch warily for any signs of the creatures infesting these waters.";
 		now rowing is true;
-		if a random number between 1 and 20 > the perception of the player:
+		if a random number between 1 and 20 > Perception of Player:
 			swimmingfight; [details in Hellerhound\Underwater Zone.i7x]
 		now rowing is false;
 		say "     Eventually, you make it out to the buoyant castle, rowing up close to it. Your arms are sore from all the rowing, but you have managed to arrive at your destination. Worried your boat might scrape a hole in its rubbery hide, you moor your boat to one of the tethers tying the castle between the rocks. You swim the short distance to the floating castle and make your way inside.";
@@ -173,112 +173,112 @@ Object	Name
 Bouncy Castle	"Bouncy Castle"
 
 The Bouncy Castle is a room. Bouncy Castle is fasttravel. Bouncy Castle is unknown. Bouncy Castle is private.
-The description of Bouncy Castle is "[bcentrance]".
+Description of Bouncy Castle is "[bcentrance]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Fencing Room	"Fencing Room"
 
 The Fencing Room is a room. The Fencing Room is east of Bouncy Castle.
-The description of Fencing Room is "[bcfencingroom]".
+Description of Fencing Room is "[bcfencingroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Bouncing Play Room	"Bouncing Play Room"
 
 The Bouncing Play Room is a room. The Bouncing Play Room is south of Fencing Room. The Bouncing Play Room is east of Ball Pit Room.
-The description of Bouncing Play Room is "[bcplayroom]".
+Description of Bouncing Play Room is "[bcplayroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Ball Pit Room	"Ball Pit Room"
 
 The Ball Pit Room is a room. The Ball Pit Room is south of Toy Room.
-The description of Ball Pit Room is "[bcballpitroom]".
+Description of Ball Pit Room is "[bcballpitroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Toy Room	"Toy Room"
 
 The Toy Room is a room. The Toy Room is west of Bouncy Castle.
-The description of Toy Room is "[bctoyroom]".
+Description of Toy Room is "[bctoyroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Punching Pillars	"Punching Pillars"
 
 The Punching Pillars is a room. The Punching Pillars is west of Ball Pit Room.
-The description of Punching Pillars is "[bcpunchingpillars]".
+Description of Punching Pillars is "[bcpunchingpillars]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Knight's Chambers	"Knight's Chambers"
 
 The Knight's Chambers is a room. The Knight's Chambers is north of Punching Pillars.
-The description of Knight's Chambers is "[bcknightschambers]".
+Description of Knight's Chambers is "[bcknightschambers]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Great Hall	"Great Hall"
 
 The Great Hall is a room. The Great Hall is east of Bouncing Play Room.
-The description of Great Hall is "[bcgreathall]".
+Description of Great Hall is "[bcgreathall]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 King's Chambers	"King's Chambers"
 
 The King's Chambers is a room. The King's Chambers is north of Great Hall.
-The description of King's Chambers is "[bckingschamber]".
+Description of King's Chambers is "[bckingschamber]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Lower Tower	"Lower Tower"
 
 The Lower Tower is a room. The Lower Tower is southeast of Ball Pit Room.
-The description of Lower Tower is "[bclowertower]".
+Description of Lower Tower is "[bclowertower]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Upper Tower	"Upper Tower"
 
 The Upper Tower is a room. The Upper Tower is above Lower Tower.
-The description of Upper Tower is "[bcuppertower]".
+Description of Upper Tower is "[bcuppertower]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Tower Turret	"Tower Turret"
 
 The Tower Turret is a room. The Tower Turret is above Upper Tower.
-The description of Tower Turret is "[bctowerturret]".
+Description of Tower Turret is "[bctowerturret]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Upper Hall	"Upper Hall"
 
 The Upper Hall is a room. The Upper Hall is north of Upper Tower.
-The description of Upper Hall is "[bcupperhall]".
+Description of Upper Hall is "[bcupperhall]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Western Parapets	"Western Parapets"
 
 The Western Parapets is a room. The Western Parapets is west from Upper Hall.
-The description of Western Parapets is "[bcwestparapets]".
+Description of Western Parapets is "[bcwestparapets]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Eastern Parapets	"Eastern Parapets"
 
 The Eastern Parapets is a room. The Eastern Parapets is east from Upper Hall.
-The description of Eastern Parapets is "[bceastparapets]".
+Description of Eastern Parapets is "[bceastparapets]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Castle Throne Room	"Castle Throne Room"
 
 The Castle Throne Room is a room. The Castle Throne Room is northeast of Western Parapets. The Castle Throne Room is northwest of Eastern Parapets.
-The description of Castle Throne Room is "[bcthroneroom]".
+Description of Castle Throne Room is "[bcthroneroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name

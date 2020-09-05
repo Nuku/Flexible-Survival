@@ -27,7 +27,7 @@ Dressing Room Crisis	"Dressing Room Crisis"
 
 Dressing Room Crisis is a situation.
 ResolveFunction of Dressing Room Crisis is "[ResolveEvent Dressing Room Crisis]".
-The sarea of Dressing Room Crisis is "Smith Haven".
+Sarea of Dressing Room Crisis is "Smith Haven".
 The PrereqTime of Dressing Room Crisis is "Day".
 
 when play begins:
@@ -132,10 +132,10 @@ Mall Optician	"Mall Optician"
 
 Mall Optician is a situation.
 ResolveFunction of Mall Optician is "[ResolveEvent Mall Optician]".
-The Prereq1 of Mall Optician is Dressing Room Crisis.
+Prereq1 of Mall Optician is Dressing Room Crisis.
 The Prereq1Resolution of Mall Optician is { 1, 2 }.
 The PrereqTime of Mall Optician is "Day".
-The sarea of Mall Optician is "Smith Haven".
+Sarea of Mall Optician is "Smith Haven".
 
 to say ResolveEvent Mall Optician:
 	say "     Strolling through the hallways of the expansive Smith Haven Mall, your way brings you to the west wing and you remember what Diana said about living in an optician store somewhere hereabouts. Checking out one of the large floor-plans of the mall standing a certain places, you figure out just where you need to go and swing by to check the place out. Soon, you see the glass front of the store a little distance ahead, its doors open and a number of people visible inside. For a second, you think you're in the wrong place after all, as the men and women inside all seem to be senior citizens in the beginning states of transformation: mostly showing some characteristics of dog- and cat-morphs, but you can also see one woman with rainbow-colored feathers lining the sides of her arms. Then suddenly, Diana comes into sight, stepping out behind a large display of sunglasses, together with an old woman who has white fur like a Siamese cat, pointy feline ears and a long tail.";
@@ -316,8 +316,8 @@ SexuallyExperienced of Diana is true.
 TwistedCapacity of Diana is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Diana is false. [steriles can't knock people up]
 MainInfection of Diana is "Sphinx".
-The description of Diana is "[Dianadesc]".
-The conversation of Diana is { "Meep!" }.
+Description of Diana is "[Dianadesc]".
+Conversation of Diana is { "Meep!" }.
 
 to say Dianadesc:
 	if Libido of Diana is 0: [gryphon legs, human middle, cat head]

@@ -74,8 +74,8 @@ SexuallyExperienced of Lilith is true.
 TwistedCapacity of Lilith is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Lilith is false. [steriles can't knock people up]
 MainInfection of Lilith is "Succubus".
-The description of Lilith is "[LilithDesc]".
-The conversation of Lilith is { "Mew!" }.
+Description of Lilith is "[LilithDesc]".
+Conversation of Lilith is { "Mew!" }.
 lastLilithTalk is a number that varies. lastLilithTalk is usually 555.		[turn-counter for talking delays (humanity restoration)]
 LilithPregnancy is a number that varies.
 LilithKidCounter is a number that varies.

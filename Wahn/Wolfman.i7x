@@ -314,7 +314,7 @@ name	desc	weight	object
 "sports drink"	"A plastic bottle filled with a clear reddish sports drink. The brand symbol is a black wolf's head."	1	sports drink
 
 sports drink is a grab object.
-the usedesc of sports drink is "[sportsdrinkuse]".
+Usedesc of sports drink is "[sportsdrinkuse]".
 
 It is temporary.
 
@@ -346,7 +346,7 @@ Entrance to the Lair	"Entrance to the Lair"
 Entrance to the Lair is a situation.
 ResolveFunction of Entrance to the Lair is "[ResolveEvent Entrance to the Lair]".
 The level of Entrance to the Lair is 5. Entrance to the Lair is inactive.
-The sarea of Entrance to the Lair is "Outside".
+Sarea of Entrance to the Lair is "Outside".
 
 to say ResolveEvent Entrance to the Lair:
 	say "     Looking around a bit, you soon find the warehouse Septus mentioned. It's hard to miss, with a large wolf's head painted on the facade. As you come close to the building, two wolfmen guarding the front instantly spot you. One goes inside, the other stays at the entrance door and eyes you warily. Several minutes later, Septus comes out with the other wolfman, visibly perking up as he spots you. 'It's okay, guys. Our visitor is a friend.' He waves you closer, holding open the door to let you in. The warehouse they made into their base is pretty large and surprisingly well equipped. Between improvised walls made from large boxes there are sections filled with exercise equipment, beds, supplies and whatnot. In the main area at least a score of wolfmen is present, most of which are working out - accompanied by three young human women doing stretches and a little naked cheer-leading routine in front of them.";
@@ -367,7 +367,7 @@ Object	Name
 Wolfman Lair	"Wolfman Lair"
 
 Wolfman Lair is a room. It is fasttravel. It is private.
-The description of Wolfman Lair is "[lairdesc]".
+Description of Wolfman Lair is "[lairdesc]".
 
 to say lairdesc:
 	say "     The warehouse they made into their base is pretty large and surprisingly well equipped. Between improvised walls made from large boxes there are sections filled with exercise equipment, beds, supplies and whatnot. In the main area usually about a score of wolfmen is present, most of which are busy working out - accompanied by young human women cheering them on and doing some suggestive stretches in front of them - in the nude. When one of the wolves takes a break, they often get accompanied by one - or more - of the women to the adjoining sections. In which case lustful moans and howls soon follow[if HP of Septus >= 7 and HP of Septus < 50]. You can't help but smile as you look over at the great, growing team you've got[end if].";
@@ -462,8 +462,8 @@ Sterile of Jennifer is false.
 MainInfection of Jennifer is "Human".
 
 Jennifer is in Wolfman Lair. The HP of Jennifer is normally 0.
-The description of Jennifer is "[Jenniferdesc]".
-The conversation of Jennifer is { "Grrr!" }.
+Description of Jennifer is "[Jenniferdesc]".
+Conversation of Jennifer is { "Grrr!" }.
 Jenniferfucked is a number that varies. Jenniferfucked is normally 0.
 
 instead of sniffing Jennifer:
@@ -974,8 +974,8 @@ Sterile of Septus is false. [steriles can't knock people up]
 MainInfection of Septus is "Football Wolfman".
 
 Septus is in Wolfman Lair. The HP of Septus is normally 100.
-The description of Septus is "[Septusdesc]".
-The conversation of Septus is { "Grrr!" }.
+Description of Septus is "[Septusdesc]".
+Conversation of Septus is { "Grrr!" }.
 The icon of Septus is Figure of Septus_icon.
 lastSeptusfucked is a number that varies. lastSeptusfucked is normally 555.
 
@@ -1361,7 +1361,7 @@ to say CheerleaderTryout2:
 	LineBreak;
 	say "     Leading you over to a large mat on the side of the room, Jennifer calls out for two of her teammates who join her quickly, soon to be followed by several more girls and wolfmen as they direct you to strip and go through a few poses and moves.";
 	LineBreak;
-	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Dexterity-Check)";
 	increase diceroll by bonus;
@@ -1388,7 +1388,7 @@ to say CheerleaderPractice:
 		say "     ([link]N[as]n[end link]) - Postpone till later.";
 		if Player consents:
 			LineBreak;
-			let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+			let bonus be (( Charisma of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Charisma-Check)";
 			increase diceroll by bonus;

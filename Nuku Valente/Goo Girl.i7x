@@ -265,8 +265,8 @@ name	desc	weight	object
 glob of goo is a grab object.
 It is temporary.
 glob of goo is infectious.
-The strain of glob of goo is "Goo Girl".
-the usedesc of glob of goo is "[glob of goo use]";
+Strain of glob of goo is "Goo Girl".
+Usedesc of glob of goo is "[glob of goo use]";
 
 to say glob of goo use:
 	say "     Putting the handful of goo into your mouth, you are pleased to learn that it tastes a bit like mint. Chewing and letting the flavor cover your whole tongue, you swallow the goo.";

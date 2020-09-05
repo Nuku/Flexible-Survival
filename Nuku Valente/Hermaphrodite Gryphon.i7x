@@ -14,7 +14,7 @@ to say GenerateTrophyList_Blue_Gryphon:
 	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
 		add "gryphon milk" to CombatTrophyList;
 	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
-		add "clean bandage" to CombatTrophyList;
+		add "clean bandages" to CombatTrophyList;
 	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
 		add "gryphon coin" to CombatTrophyList;
 	if a random chance of (5 + LootBonus) in 100 succeeds: [rare drop]
@@ -99,7 +99,7 @@ to say gryphonfuck6:
 	say "     The gryphon is surprised to find you rather lacking and nudges you over onto your belly with suddenly gentle hands. She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back. You feel a shaft slide against your rear, dribbling pre across your back entrance. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched painfully by the large member as it forces its way into your bowels. The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed. Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[movichance]";
 
 to say gryphonfuck7:
-	say "     The gryphon[if Player is neuter] is surprised to find you rather lacking in the genital department and[end if] nudges you over onto your belly with suddenly gentle hands. She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back. You feel a shaft slide against your rear, dribbling pre across your back entrance. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched [if scalevalue of the player < 4]painfully [end if]by the large member as it forces its way into your bowels[if Player is female]. Her taloned hand gropes you as she fucks your ass, playfully teasing at the [cunt size desc of Player] pussy she could instead be using[end if][if Player is male]. She takes a hold of your [cock size desc of Player] [Cock of Player] shaft and pumps at it while thrusting into you[end if]. After enjoying a quick ride, the gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed. Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[movichance]";
+	say "     The gryphon[if Player is neuter] is surprised to find you rather lacking in the genital department and[end if] nudges you over onto your belly with suddenly gentle hands. She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back. You feel a shaft slide against your rear, dribbling pre across your back entrance. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched [if scalevalue of Player < 4]painfully [end if]by the large member as it forces its way into your bowels[if Player is female]. Her taloned hand gropes you as she fucks your ass, playfully teasing at the [cunt size desc of Player] pussy she could instead be using[end if][if Player is male]. She takes a hold of your [cock size desc of Player] [Cock of Player] shaft and pumps at it while thrusting into you[end if]. After enjoying a quick ride, the gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed. Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[movichance]";
 
 to say gryphonfuck8:	[MPreg special]
 	say "     When the victorious gryphon pushes you to the ground, your body automatically moves onto all fours with your ass raised. You feel a warm of excitement in your lower belly, like an empty need you hope to be filled. Like an animal in heat, your hidden male womb's decided it wants to be bred. The gryphon grins as you present yourself so easily and rubs her taloned hands over your rear, massaging your butt as it moves into position. With a little spit added, a taloned finger dips into your waiting pucker and wriggles around, drawing a moan from you.";
@@ -483,8 +483,8 @@ name	desc	weight	object
 blue gryphon feather is a grab object.
 It is temporary.
 blue gryphon feather is infectious.
-The strain of blue gryphon feather is "Blue Gryphon Herm".
-the usedesc of blue gryphon feather is "[blue gryphon feather use]";
+Strain of blue gryphon feather is "Blue Gryphon Herm".
+Usedesc of blue gryphon feather is "[blue gryphon feather use]";
 
 to say blue gryphon feather use:
 	say "Holding the feather in your hand, you stroke it over your arm, delighted in its softness. Strangely, the feather disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
@@ -496,8 +496,8 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons."	1	gryphon milk
 
-gryphon milk is a grab object. Understand "milk" as gryphon milk. gryphon milk is infectious. The strain of gryphon milk is "Blue Gryphon Herm". The purified of Gryphon Milk is "distilled milk". gryphon milk is milky.
-the usedesc of gryphon milk is "[gryphon milk use]";
+gryphon milk is a grab object. Understand "milk" as gryphon milk. gryphon milk is infectious. Strain of gryphon milk is "Blue Gryphon Herm". Purified of Gryphon Milk is "distilled milk". gryphon milk is milky.
+Usedesc of gryphon milk is "[gryphon milk use]";
 
 to say gryphon milk use:
 	say "The milk is thick, like a shake, but warmer, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
@@ -508,7 +508,7 @@ name	desc	weight	object
 "gryphon coin"	"A triangular piece of blue stone, fairly thin and light. On one side, you see a feather, with a single character of an unknown script is on the flip side."	0	gryphon coin
 
 gryphon coin is a grab object.
-the usedesc of gryphon coin is "[gryphon coin use]";
+Usedesc of gryphon coin is "[gryphon coin use]";
 
 to say gryphon coin use:
 	say "     You throw the coin into the air, watching it tumble end over end a few times before you catch it again and slap it on the back of your hand:";

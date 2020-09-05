@@ -14,7 +14,7 @@ Section 1 - Tight Fit
 
 Tight Fit is a scavevent.
 ResolveFunction of Tight Fit is "[ResolveEvent Tight Fit]".
-The sarea of Tight Fit is "Allzones".
+Sarea of Tight Fit is "Allzones".
 tightfitcount is a number that varies.
 
 to say ResolveEvent Tight Fit:
@@ -79,7 +79,7 @@ to say ResolveEvent Tight Fit:
 		else:
 			say "extremely difficult";
 		say " [if scalevalue of Player is 3]to squirm in and out of[else if scalevalue of Player is 2] for a normal person to squirm in and out of. Being smaller, you've got a better shot at making it[end if].";
-		let bonus be ( the dexterity of the player minus 10 ) divided by 2;
+		let bonus be ( Dexterity of Player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		if scalevalue of Player is 2, increase bonus by 5;
@@ -105,7 +105,7 @@ Protected Supplies	"Protected Supplies"
 
 Protected Supplies is a scavevent.
 ResolveFunction of Protected Supplies is "[ResolveEvent Protected Supplies]".
-The sarea of Protected Supplies is "Allzones".
+Sarea of Protected Supplies is "Allzones".
 
 to say ResolveEvent Protected Supplies:
 	let y be "food";
@@ -214,7 +214,7 @@ Dropped Handbag	"Dropped Handbag"
 
 Dropped Handbag is a scavevent.
 ResolveFunction of Dropped Handbag is "[ResolveEvent Dropped Handbag]".
-the sarea of Dropped Handbag is "Allzones".
+Sarea of Dropped Handbag is "Allzones".
 
 to say ResolveEvent Dropped Handbag:
 	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it. Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.";
@@ -262,7 +262,7 @@ Dented Bike	"Dented Bike"
 
 Dented Bike is a scavevent.
 ResolveFunction of Dented Bike is "[ResolveEvent Dented Bike]".
-The sarea of Dented Bike is "Allzones".
+Sarea of Dented Bike is "Allzones".
 dentedbikecount is a number that varies.
 
 to say ResolveEvent Dented Bike:
@@ -297,7 +297,7 @@ Looted Supermarket	"Looted Supermarket"
 
 Looted Supermarket is a scavevent.
 ResolveFunction of Looted Supermarket is "[ResolveEvent Looted Supermarket]".
-The sarea of Looted Supermarket is "Allzones".
+Sarea of Looted Supermarket is "Allzones".
 supermarketcount is a number that varies.
 
 to say ResolveEvent Looted Supermarket:
@@ -366,7 +366,7 @@ Abandoned Cars	"Abandoned Cars"
 
 Abandoned Cars is a scavevent.
 ResolveFunction of Abandoned Cars is "[ResolveEvent Abandoned Cars]".
-The sarea of Abandoned Cars is "Allzones".
+Sarea of Abandoned Cars is "Allzones".
 
 to say ResolveEvent Abandoned Cars:
 	say "You check out a few abandoned cars - looks like they were in a mid-size accident when the infection hit. They've all been looted - or just shredded inside and out by their changing owners. The trunk of one of them is still closed, and you soon learn why - it's been warped by the impact of another car and won't open.";
@@ -407,7 +407,7 @@ Manna from Heaven	"Manna from Heaven"
 
 Manna from Heaven is a scavevent.
 ResolveFunction of Manna from Heaven is "[ResolveEvent Manna from Heaven]".
-The sarea of Manna from Heaven is "Outside".
+Sarea of Manna from Heaven is "Outside".
 
 to say ResolveEvent Manna from Heaven:
 	say "Moving through the city, you suddenly hear cawing and shouting from somewhere above. It's a harpy flying in your direction, clutching something in her claws - closely followed by another who keeps insulting her. Sounds like they're having a disagreement of the ownership of the can of peaches the first one has in her talons. Before long, that dissolves into a furious mid-flight clawing match during which the fought-over can is knocked out of the claw holding it - and literally falls into your hands. You quickly dash off with it before the harpies team up and attack you.";
@@ -423,7 +423,7 @@ Plains Scavenging	"Plains Scavenging"
 
 Plains Scavenging is a scavevent.
 ResolveFunction of Plains Scavenging is "[ResolveEvent Plains Scavenging]".
-The sarea of Plains Scavenging is "Plains"
+Sarea of Plains Scavenging is "Plains"
 
 to say ResolveEvent Plains Scavenging:
 	let y be "food";
@@ -526,7 +526,7 @@ to say ResolveEvent Plains Scavenging:
 			say "As you prepare to make the dangerous crossing, Denise pulls you back and flaps her wings. 'I can get that for you easily, sweetie,' she says as she takes to the air. The gryphoness flaps over to grab the [y] and brings it back to you, earning a warm hug[if gryphlets is 1] from you and your gryphlet child[else if gryphlets is 2] from you and your gryphlet children[end if].";
 			ItemGain y by 1;
 		else:
-			let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
+			let bonus be ( Dexterity of Player plus Level of Player minus 10 ) divided by 2;
 			if hardmode is true and bonus > 10, now bonus is 10;
 			if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 			let dice be a random number from 1 to 20;
@@ -548,7 +548,7 @@ Garden Veggies	"Garden Veggies"
 
 Garden Veggies is a scavevent.
 ResolveFunction of Garden Veggies is "[ResolveEvent Garden Veggies]".
-The sarea of Garden Veggies is "Outside".
+Sarea of Garden Veggies is "Outside".
 veggiegardenfight is a number that varies.
 gardenveg is a number that varies.
 lastgardenveg is a number that varies. lastgardenveg is usually 255.
@@ -600,7 +600,7 @@ Free Drink	"Free Drink"
 
 Free Drink is a scavevent.
 ResolveFunction of Free Drink is "[ResolveEvent Free Drink]".
-The sarea of Free Drink is "Campus".
+Sarea of Free Drink is "Campus".
 when play begins:
 	add Free Drink to BadSpots of MaleList;
 
@@ -663,7 +663,7 @@ DbLD	"DbLD"
 
 DbLD is a scavevent.
 ResolveFunction of DbLD is "[ResolveEvent DbLD]".
-The sarea of DbLD is "Allzones".
+Sarea of DbLD is "Allzones".
 
 to say ResolveEvent DbLD:
 	say "     While searching through the city for supplies, you come across the corpse of an excessively muscled man with a grizzled face. It seems that some creature took rather violent exception to him from the signs of destruction all around. The nearby walls are littered with bullet holes, though you don't spot any blood from his whatever his enemy was. Whatever strange infection this unlucky person had, it really left him unable to fight. Given his lack of actual wrists and ankles, it's clear he'd have trouble standing and fighting, let alone supporting his own top-heavy weight on his small, misshapen feet. Given the hundreds of bullet holes, it seems he had trouble aiming that giant gun of his (now shattered into pieces) thanks to his perpetually squinting eyes.";
@@ -683,7 +683,7 @@ Patient Rooms	"Patient Rooms"
 
 Patient Rooms is a scavevent.
 ResolveFunction of Patient Rooms is "[ResolveEvent Patient Rooms]".
-The sarea of Patient Rooms is "Hospital".
+Sarea of Patient Rooms is "Hospital".
 patrooms is a number that varies.
 
 to say ResolveEvent Patient Rooms:
@@ -736,7 +736,7 @@ to say ResolveEvent Patient Rooms:
 				say "Your specific hunting leads you towards your target.";
 	if patrooms is 0 and a random chance of 1 in 3 succeeds:	[blocked room]
 		say "     Deciding to search through some of the hospital rooms for items left behind during the outbreak, you go through several rooms and find nothing before reaching one that's been barricaded from the inside. Checking carefully, it doesn't appear that anyone is inside there now. A little puzzled, you risk asking if anyone's there, but get no response. But peering through the window, you also see a bottle of water sitting out on the small dresser inside.";
-		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
+		let bonus be ( Strength of Player plus Level of Player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
@@ -766,7 +766,7 @@ Shattered House	"Shattered House"
 
 Shattered House is a scavevent.
 ResolveFunction of Shattered House is "[ResolveEvent Shattered House]".
-The sarea of Shattered House is "Allzones".
+Sarea of Shattered House is "Allzones".
 
 to say ResolveEvent Shattered House:
 	say "     As you travel along, you are forced to cut down a side street to avoid a small cluster of creatures lustfully fucking in the road up ahead. Down this street, you pass a few houses, including one that seems to have been partially blown out from the inside. Given the lack of fire damage and excessive amounts of sticky fluids, you'd guess that whoever once lived in there became very large very quickly";
@@ -776,7 +776,7 @@ to say ResolveEvent Shattered House:
 		ItemGain food by 1;
 	else if x is 3:
 		say ".";
-		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
+		let bonus be ( Strength of Player plus Level of Player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
@@ -789,7 +789,7 @@ to say ResolveEvent Shattered House:
 			say "     Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down. Seeing more underneath, you try to lift up the rubble to search for more, but it's too heavy to move before an ominous creaking sound ends you back before more of the house collapses.";
 	else if x is 4:
 		say ".";
-		let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
+		let bonus be ( Dexterity of Player plus Level of Player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
@@ -804,7 +804,7 @@ to say ResolveEvent Shattered House:
 			ItemGain food by 1;
 	else if x is 5:
 		say ".";
-		let bonus be ( the perception of the player plus level of the player minus 10 ) divided by 2;
+		let bonus be ( Perception of Player plus Level of Player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
@@ -835,7 +835,7 @@ Scattered Clothing	"Scattered Clothing"
 
 Scattered Clothing is a scavevent.
 ResolveFunction of Scattered Clothing is "[ResolveEvent Scattered Clothing]".
-The sarea of Scattered Clothing is "Allzones".
+Sarea of Scattered Clothing is "Allzones".
 
 to say ResolveEvent Scattered Clothing:
 	say "     Searching [one of]a small store[or]a convenience store[or]a gas station[or]a motel[or]a coffee shop[or]a newsstand[or]a taco truck[at random], you find that another scavenger has already been there before you. Poking around a little on the odd chance that something may have been missed, it sadly turns out that the place has been quite thoroughly ransacked. You're well out of luck for any food or drink to be found here. But then, just as you are about to give up on the location, your gaze falls upon an article of clothing that (for once) isn't torn, shredded, encrusted in dried cum or stained in some other horrible way. Given how hard it is to observe even the most basic levels of cleanliness in a situation like the nanite apocalypse, clean secondhand clothing is actually a quite lucky find, so you quickly add it to your pack.";

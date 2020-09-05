@@ -122,7 +122,7 @@ Carry out vialselling:
 
 Section 4 - Purchasing from Zephyr
 
-The price sign is a backdrop. It is in Zephyr Lobby. The description of the price sign is "[price list]".
+The price sign is a backdrop. It is in Zephyr Lobby. Description of the price sign is "[price list]".
 
 Instead of smelling the price sign:
 	say "The price sign has little in the way of scent of its own.";
@@ -141,7 +141,7 @@ name	desc	weight	object
 "nanite collector"	"[nanitecolldesc]"	25	nanite collector
 "pistol"	"A small, but serviceable, hand gun. It has a stylized Z on the grip. It never seems to run out of bullets, and gets oddly warm when you fire it."	2	pistol
 
-pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[or]your pistol[at random]". It is ranged. It is not temporary. The weapon damage of pistol is 7. The objsize of pistol is 2.
+pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[or]your pistol[at random]". It is ranged. It is not temporary. Weapon Damage of pistol is 7. Objsize of pistol is 2.
 
 
 nanite collector is equipment. It is not temporary.
@@ -244,7 +244,7 @@ Beach Detector Site	"Beach Detector Site"
 
 Beach Detector Site is a situation.
 ResolveFunction of Beach Detector Site is "[ResolveEvent Beach Detector Site]". It is inactive.
-The sarea of Beach Detector Site is "Beach".
+Sarea of Beach Detector Site is "Beach".
 
 to say ResolveEvent Beach Detector Site:
 	say "     Keeping an eye out for an appropriate spot to place the device for Zephyr, you notice a tall outcropping of rock out in the water that you might be able to scale. It is certainly closer closer than most of the other rocks as well, so you should be able to swim out to it";
@@ -286,7 +286,7 @@ Red Light Detector Site	"Red Light Detector Site"
 
 Red Light Detector Site is a situation.
 ResolveFunction of Red Light Detector Site is "[ResolveEvent Red Light Detector Site]". It is inactive.
-The sarea of Red Light Detector Site is "Red".
+Sarea of Red Light Detector Site is "Red".
 
 to say ResolveEvent Red Light Detector Site:
 	say "     While scouting around in the fancier parts of this neighborhood, you spot a large nightclub and sex show with a huge neon sign. Somehow the neon outline of a twenty-five feet tall, big breasted woman is still lit, flashing along with the name of the club. It certainly seems to the be the tallest spot around, the sign rising high above the three story building, dwarfing all around it";
@@ -319,7 +319,7 @@ High Rise Detector Site	"High Rise Detector Site"
 
 High Rise Detector Site is a situation.
 ResolveFunction of High Rise Detector Site is "[ResolveEvent High Rise Detector Site]". It is inactive.
-The sarea of High Rise Detector Site is "High".
+Sarea of High Rise Detector Site is "High".
 ndmhigh is a number that varies.
 
 to say ResolveEvent High Rise Detector Site:
@@ -370,7 +370,7 @@ Park Detector Site	"Park Detector Site"
 
 Park Detector Site is a situation.
 ResolveFunction of Park Detector Site is "[ResolveEvent Park Detector Site]". It is inactive.
-The sarea of Park Detector Site is "Park".
+Sarea of Park Detector Site is "Park".
 
 to say ResolveEvent Park Detector Site:
 	say "     You're unsure where in the park you could place the device which would be suitable for Zephyr's requirements. You somehow doubt sticking it in a tree will quite be enough to satisfy them. As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park. Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area";

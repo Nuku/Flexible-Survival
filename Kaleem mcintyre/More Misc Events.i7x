@@ -15,7 +15,7 @@ Unorthodox Sight	"Unorthodox Sight"
 
 Unorthodox Sight is a situation.
 ResolveFunction of Unorthodox Sight is "[ResolveEvent Unorthodox Sight]".
-The sarea of Unorthodox Sight is "Red".
+Sarea of Unorthodox Sight is "Red".
 when play begins:
 	add Unorthodox Sight to BadSpots of FurryList;
 	add Unorthodox Sight to BadSpots of MaleList;
@@ -54,7 +54,7 @@ Family Fun	"Family Fun"
 
 Family Fun is a situation.
 ResolveFunction of Family Fun is "[ResolveEvent Family Fun]".
-The sarea of Family Fun is "Beach".
+Sarea of Family Fun is "Beach".
 when play begins:
 	add Family Fun to BadSpots of FurryList;
 	add Family Fun to BadSpots of MaleList;
@@ -78,7 +78,7 @@ Auto Shop	"Auto Shop"
 
 Auto Shop is a situation.
 ResolveFunction of Auto Shop is "[ResolveEvent Auto Shop]".
-The sarea of Auto Shop is "Red".
+Sarea of Auto Shop is "Red".
 when play begins:
 	add Auto Shop to BadSpots of FurryList;
 	add Auto Shop to BadSpots of MaleList;

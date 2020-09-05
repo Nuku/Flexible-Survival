@@ -11,7 +11,7 @@ ResolveFunction of Apartment 319 is "[ResolveEvent Apartment 319]".
 Apartment 319 is inactive.
 AptAid is a number that varies.
 
-The sarea of Apartment 319 is "High".
+Sarea of Apartment 319 is "High".
 When play begins:
 	Add Apartment 319 to badspots of DemonList;
 	Add Apartment 319 to BadSpots of FurryList;

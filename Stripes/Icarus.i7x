@@ -48,8 +48,8 @@ object	name
 Icarus	"Icarus"
 
 Icarus is a person.
-The description of Icarus is "[Icarusdesc]".
-The conversation of Icarus is { "Wilder!" }.
+Description of Icarus is "[Icarusdesc]".
+Conversation of Icarus is { "Wilder!" }.
 icarusscene1 is a truth state that varies. icarusscene1 is usually false.
 icarusscene2 is a truth state that varies. icarusscene2 is usually false.
 tti_scene is a number that varies.

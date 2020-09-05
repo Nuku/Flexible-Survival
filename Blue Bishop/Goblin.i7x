@@ -439,7 +439,7 @@ to say mgob_vicsex1:	[m-gob vaginal sex]
 		say "; however, this isn't nearly enough to get yourself off, forcing the [if scalevalue of Player > 2]diminutive[end if] goblin to endure your persistent abuse, forcing him to orgasm a number of additional times before you achieve your bliss, milking the poor creature dry before you finally relent.";
 	else:
 		say ", wracking you with the throes of your own subsequent release. [if scalevalue of Player > 3]Straining the goblin even further as you more firmly pin him down[else]Tightening your grip around the goblin[end if], your greedy hole milks the creature of his seed [']til naught remains before you finally relent.";
-	say "     Getting off of him, you straighten yourself up while your [if scalevalue of Player > 3]little victim is left crawling away after the strain of your abuse[else]victim slowly escapes from your further wrath[end if]. He makes it to a goblin tunnel in one of the junk piles and scrambles inside for safety.";
+	say "     Getting off of him, you straighten yourself up while your [if scalevalue of Player > 3]little victim is left crawling away after Strain of your abuse[else]victim slowly escapes from your further wrath[end if]. He makes it to a goblin tunnel in one of the junk piles and scrambles inside for safety.";
 
 
 to say mgob_vicsex2:	[m-gob anal sex]

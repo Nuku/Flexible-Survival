@@ -17,9 +17,9 @@ Gryphoness is a pet. The description of gryphoness is "[gryphonessdesc]".
 NPCObject of Gryphoness is Denise.
 understand "Denise" as gryphoness.
 printed name of gryphoness is "Denise".
-The weapon damage of Gryphoness is 10.
+Weapon Damage of Gryphoness is 10.
 The level of Gryphoness is 1.
-The Dexterity of Gryphoness is 20.
+Dexterity of Gryphoness is 20.
 The summondesc of Gryphoness is "[summongryphoness]".
 The dismissdesc of Gryphoness is "[dismissgryphoness]".
 The assault of Gryphoness is "[gryphonessassault]".
@@ -274,7 +274,7 @@ Lonely Gryphoness	"Lonely Gryphoness"
 
 Lonely Gryphoness is a situation.
 ResolveFunction of Lonely Gryphoness is "[ResolveEvent Lonely Gryphoness]".
-The sarea of Lonely Gryphoness is "Outside".
+Sarea of Lonely Gryphoness is "Outside".
 when play begins:
 	add Lonely Gryphoness to badspots of HermList;
 	add Lonely Gryphoness to BadSpots of FurryList;
@@ -301,7 +301,7 @@ to say ResolveEvent Lonely Gryphoness:
 			if Player consents:
 				LineBreak;
 				say "     As the gryphon backs away in panic, her eyes wide even as she backs away, you lower your weapon and try to convince her you mean her no harm.";
-				let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+				let bonus be (( Charisma of Player minus 10 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus]= [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Charisma Check):[line break]";
 				increase diceroll by bonus;
@@ -329,7 +329,7 @@ Gryphoness Nest	"Gryphoness Nest"
 
 Gryphoness Nest is a situation.
 ResolveFunction of Gryphoness Nest is "[ResolveEvent Gryphoness Nest]". Gryphoness Nest is inactive.
-The sarea of Gryphoness Nest is "Beach".
+Sarea of Gryphoness Nest is "Beach".
 when play begins:
 	add Gryphoness Nest to badspots of HermList;
 	add Gryphoness Nest to BadSpots of FurryList;
@@ -373,7 +373,7 @@ to say ResolveEvent Gryphoness Nest:
 		say "     Looking around the small cave, you find that it is actually stuffed with a strange variety of items, small piles of books, anime figurines, and CDs, stacked next to a pile of band posters. At least half of the small alcove however is taken up with a small pile of tattered cushions, that seem to make up the gryphons bed. Following the gryphon inside, you find that the two of you nearly fill up the small space, bumping into each other slightly, as you move around.";
 		say "     'Um just have a seat anywhere,' Denise says as she looks around at the small mess of a cave, before sighing and plopping down on the cushions herself, seeming slightly uncomfortable as you shift around until you are sprawled across the cushions next to her. Noticing she seems rather uncomfortable around you still, you ask her about herself and how she ended up like she currently is as a way to break the ice.";
 		LineBreak;
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]= [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Charisma Check):[line break]";
 		increase diceroll by bonus;
@@ -405,7 +405,7 @@ to say ResolveEvent Gryphoness Nest:
 						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
-						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+						say "     (Denise the gryphoness is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Denise[end link][roman type] or  [bold type][link]ally gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						now Resolution of Gryphoness Nest is 6; [male gryphon player with gryphon cock recruited her]
 						now Gryphoness Nest is resolved;
 						follow the turnpass rule;
@@ -422,7 +422,7 @@ to say ResolveEvent Gryphoness Nest:
 						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
-						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+						say "     (Denise the gryphoness is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Denise[end link][roman type] or  [bold type][link]ally gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						now Resolution of Gryphoness Nest is 7; [gryphon player with non gryphon cock recruited her]
 						now Gryphoness Nest is resolved;
 				else:
@@ -443,7 +443,7 @@ to say ResolveEvent Gryphoness Nest:
 					move Denise to Garden View;
 					now gryphoncomforted is 3;
 					infect "Blue Gryphon Herm";
-					say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+					say "     (Denise the gryphoness is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Denise[end link][roman type] or  [bold type][link]ally gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					now Resolution of Gryphoness Nest is 8; [female gryphon player recruited her]
 					now Gryphoness Nest is resolved;
 			else:
@@ -472,7 +472,7 @@ to say ResolveEvent Gryphoness Nest:
 						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
-						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+						say "     (Denise the gryphoness is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Denise[end link][roman type] or  [bold type][link]ally gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						now Resolution of Gryphoness Nest is 9; [male player recruited her]
 						now Gryphoness Nest is resolved;
 					else:
@@ -484,7 +484,7 @@ to say ResolveEvent Gryphoness Nest:
 						move Denise to Garden View;
 						now gryphoncomforted is 3;
 						infect "Blue Gryphon Herm";
-						say "     (Denise the gryphoness is now a possible companion! You can make her your active companion by typing [bold type][link]companion Denise[end link][roman type] or  [bold type][link]companion gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the companions you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+						say "     (Denise the gryphoness is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Denise[end link][roman type] or  [bold type][link]ally gryphoness[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Denise[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 						now Resolution of Gryphoness Nest is 10; [female player recruited her]
 						now Gryphoness Nest is resolved;
 				else:

@@ -81,7 +81,7 @@ Incubus Offspring Meeting	"Incubus Offspring Meeting"
 
 Incubus Offspring Meeting is a situation.
 ResolveFunction of Incubus Offspring Meeting is "".
-The sarea of Incubus Offspring Meeting is "Nowhere".
+Sarea of Incubus Offspring Meeting is "Nowhere".
 
 when play begins:
 	add Incubus Offspring Meeting to BadSpots of MaleList;
@@ -228,7 +228,7 @@ Atticus_Payback	"Atticus_Payback"
 
 Atticus_Payback is a situation.
 ResolveFunction of Atticus_Payback is "".
-The sarea of Atticus_Payback is "Nowhere".
+Sarea of Atticus_Payback is "Nowhere".
 
 when play begins:
 	add Atticus_Payback to BadSpots of MaleList;
@@ -512,8 +512,8 @@ AnalVirgin of Atticus is false.
 PenileVirgin of Atticus is false.
 SexuallyExperienced of Atticus is true.
 MainInfection of Atticus is "Incubus".
-The description of Atticus is "[AtticusDesc]".
-The conversation of Atticus is { "<This is nothing but a placeholder!>" }.
+Description of Atticus is "[AtticusDesc]".
+Conversation of Atticus is { "<This is nothing but a placeholder!>" }.
 The scent of Atticus is "     Atticus smells nicely masculine, with just the smallest amount of sexy sweat to his body, complete with lots of pheromones that can drive almost anyone wild in lust.".
 
 to say AtticusDesc:
@@ -580,7 +580,7 @@ Atticus's Bedroom	"Atticus's Bedroom"
 
 Atticus's Bedroom is a room.
 Atticus's Bedroom is sleepsafe.
-The description of Atticus's Bedroom is "[AtticusRoomDesc]".
+Description of Atticus's Bedroom is "[AtticusRoomDesc]".
 
 after looking while player is in Atticus's Bedroom:
 	if findwires < 2 and fixedgens < 3:

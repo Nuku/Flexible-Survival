@@ -12,7 +12,7 @@ Winged Horse	"Winged Horse"
 
 Winged Horse is a situation.
 ResolveFunction of Winged Horse is "[ResolveEvent Winged Horse]".
-The sarea of Winged Horse is "Plains".
+Sarea of Winged Horse is "Plains".
 
 to say ResolveEvent Winged Horse:
 	say "     Walking along the dry plains, you find yourself watching as a large shadow hovers over the ground above you. Not really sure what's going on, you tip your head up, only to find a large winged horse looking down at you. White as snow with a wingspan of about twenty feet, you marvel in awe at the majestic creature as it glides above your head once and then twice in a large circle before flying off on about its way. The last you see of the mutated creature is its long, azure colored tail end whipping freely behind its wide backside.";
@@ -26,7 +26,7 @@ Guess that Character One	"Guess that Character One"
 
 Guess that Character One is a situation.
 ResolveFunction of Guess that Character One is "[ResolveEvent Guess that Character One]".
-The sarea of Guess that Character One is "Campus".
+Sarea of Guess that Character One is "Campus".
 When play begins:
 	Add Guess that Character One to BadSpots of FurryList;
 	Add Guess that Character One to BadSpots of MaleList;
@@ -55,7 +55,7 @@ Guess that Character Three	"Guess that Character Three"
 
 Guess that Character Three is a situation.
 ResolveFunction of Guess that Character Three is "[ResolveEvent Guess that Character Three]".
-The sarea of Guess that Character Three is "Red".
+Sarea of Guess that Character Three is "Red".
 When play begins:
 	Add Guess that Character Three to BadSpots of FurryList;
 	Add Guess that Character Three to badspots of HermList;

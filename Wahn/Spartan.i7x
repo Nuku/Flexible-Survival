@@ -363,7 +363,7 @@ History Lecture	"History Lecture"
 
 History Lecture is a situation.
 ResolveFunction of History Lecture is "[ResolveEvent History Lecture]". [repeatable event infecting with Spartan/Helot strains - source of it all]
-The sarea of History Lecture is "Campus".
+Sarea of History Lecture is "Campus".
 
 when play begins:
 	add History Lecture to BadSpots of MaleList;
@@ -530,12 +530,12 @@ instead of sniffing pita bread:
 say "Mmmh! Fresh bread, tasty meat and garlic.";
 
 pita bread is a grab object.
-the usedesc of pita bread is "[pita bread use]";
+Usedesc of pita bread is "[pita bread use]";
 
 to say pita bread use:
 	say "Taking the bread into your hands, you bite into it and... it's really good. Bread, salad, sauce - and the meat is even still warm. Something tells you that it has to be packed with nanites through and through to keep it in this state, but you don't really care at the moment as you devour the tasty treat...";
 	PlayerEat 15;
 
-pita bread is infectious. The strain of pita bread is "Spartan Warrior".
+pita bread is infectious. Strain of pita bread is "Spartan Warrior".
 
 Spartan ends here.

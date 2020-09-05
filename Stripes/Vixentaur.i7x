@@ -250,7 +250,7 @@ this is the vxntaurpounce rule:		[damage+arousing pounce]
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	increase Libido of Player by a random number from 3 to 8;

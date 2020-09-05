@@ -10,8 +10,8 @@ object	name
 Lance	"Lance"
 
 Lance is a man.
-The description of Lance is "     Leaning against the bar casually is the lithe avian form of the black swan you rescued from the clutches of the hyenas. He is now dressed in a loose black studded outfit, with lots of extra buckles, and his new beak already sports several piercings, which jingle slightly as he bobs his head to the loud music happily.".
-The conversation of Lance is { "Honk!" }.
+Description of Lance is "     Leaning against the bar casually is the lithe avian form of the black swan you rescued from the clutches of the hyenas. He is now dressed in a loose black studded outfit, with lots of extra buckles, and his new beak already sports several piercings, which jingle slightly as he bobs his head to the loud music happily.".
+Conversation of Lance is { "Honk!" }.
 The fuckscene of Lance is "[nosexwithlance]".
 
 the scent of Lance is "He smells like an avian male with the scents of gay sex clinging to his feathers.".

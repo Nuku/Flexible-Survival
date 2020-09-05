@@ -272,11 +272,11 @@ this is the bopsong rule:
 		if FaceName of Player is listed in Infections of Avianlist:
 			increase Libido of Player by a random number between 0 and 2;
 		say "[if BodyName of Player is listed in infections of Avianlist or FaceName of Player is listed in infections of Avianlist]Your avian nature is particularly captivated by the exotically captivating [one of]bird[or]female[at random] before you and you start to sing back to her, starting to move in time with her dancing[else]Unable to look away from the [one of]sexy[or]exotic[or]alluring[or]vibrant[or]colorful[at random] [one of]bird woman[or]avian[or]bird of paradise[purely at random]'s sensual and erotic motions, your feel an increasing need to [one of]be with her[or]join in her dance[or]stop and listen to her song[or]simply enjoy the musical song[purely at random][end if]. The entire display drains some of your resistance, arousing you further and tempting you to give in and join in the bird's mating dance! You take [special-style-2][dam][roman type] damage!";
-		decrease HP of the player by dam;
+		decrease HP of Player by dam;
 		follow the player injury rule;
 		say "You are [descr][if HP of Player > 0 and Libido of Player < 110] and it takes an effort of will to refocus your mind and break your gaze away from those deep eyes of hers[end if].";
 		now peppereyes is 0; [pepperspray wears off]
-		if HP of the player > 0 and Libido of Player < 110:
+		if HP of Player > 0 and Libido of Player < 110:
 			wait for any key;
 		else:
 			if HP of Player <= 0, now fightoutcome is 20;

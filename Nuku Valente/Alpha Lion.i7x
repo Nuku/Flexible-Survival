@@ -66,7 +66,7 @@ Section 2 - Alpha Lion Definition
 
 A Alpha Lion is a kind of monster. The body of a Alpha Lion is usually {Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene, Alpha_Lion_gene}. A Alpha Lion is monstrous. A Alpha Lion is fully infected. A Alpha Lion is usually unsuited. A Alpha Lion is male. A Alpha Lion is tailed. The monster gene of a Alpha Lion is Alpha_Lion_gene.
 
-The description of Alpha Lion is "A large, strongly muscled and powerful lion/human hybrid. He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate."
+Description of Alpha Lion is "A large, strongly muscled and powerful lion/human hybrid. He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate."
 
 The hitdesc of Alpha Lion is "scratches YOU in the bodypart, spreading feline infection further!".
 

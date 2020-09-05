@@ -53,7 +53,7 @@ Centaur Gangbang	"Centaur Gangbang"
 
 Centaur Gangbang is a situation.
 ResolveFunction of Centaur Gangbang is "[ResolveEvent Centaur Gangbang]". The level of Centaur Gangbang is 5.
-The sarea of Centaur Gangbang is "Plains".
+Sarea of Centaur Gangbang is "Plains".
 when play begins:
 	add Centaur Gangbang to badspots of HermList;      [Thomas becomes a herm in/after this scene]
 	add Centaur Gangbang to BadSpots of MaleList;                [male centaurs]
@@ -201,8 +201,8 @@ SexuallyExperienced of Thomas is true.
 TwistedCapacity of Thomas is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Thomas is false. [steriles can't knock people up]
 MainInfection of Thomas is "Centaur Stallion".
-The description of Thomas is "[ThomasDesc]".
-The conversation of Thomas is { "Mew!" }.
+Description of Thomas is "[ThomasDesc]".
+Conversation of Thomas is { "Mew!" }.
 lastThomasTalk is a number that varies. lastThomasTalk is usually 555.		[turn-counter for talking delays (humanity restoration)]
 ThomasSaved is a number that varies. ThomasSaved is usually 555.					[saved to put in a delay of at least 10 turns before Felix shows up]
 SandySaved is a number that varies. SandySaved is usually 555. [saved to put in a delay of at least 10 turns before Jill shows up]

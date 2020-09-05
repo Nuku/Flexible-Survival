@@ -17,9 +17,12 @@ Table of GameCharacterIDs (continued)
 object	name
 Duke	"Duke"
 
-Duke is a man. The HP of Duke is normally 0. The thirst of Duke is normally 2. Duke is in Sheep Meadow SE.
-The description of Duke is "[DukeDesc]".
-The conversation of Duke is { "Mew!" }.
+Duke is a man.
+HP of Duke is normally 0.
+Thirst of Duke is normally 2.
+Duke is in Sheep Meadow SE.
+Description of Duke is "[DukeDesc]".
+Conversation of Duke is { "Mew!" }.
 
 instead of sniffing Duke:
 	say "Duke has a pleasant animalistic smell, just like a male dog. Though there seems to be an undertone of sheep-musk there too.";
@@ -329,8 +332,8 @@ object	name
 Shawn	"Shawn"
 
 Shawn is a man.
-The description of Shawn is "[ShawnDesc]".
-The conversation of Shawn is { "Mew!" }.
+Description of Shawn is "[ShawnDesc]".
+Conversation of Shawn is { "Mew!" }.
 
 instead of sniffing Shawn:
 	say "Shawn has a pleasant animalistic smell, woolly and masculine.";

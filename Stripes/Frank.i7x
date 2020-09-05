@@ -26,7 +26,7 @@ Mephitness	"Mephitness"
 
 Mephitness is a situation.
 ResolveFunction of Mephitness is "[ResolveEvent Mephitness]". The level of Mephitness is 6.
-The sarea of Mephitness is "High".
+Sarea of Mephitness is "High".
 when play begins:
 	add Mephitness to BadSpots of MaleList;
 	add Mephitness to BadSpots of FemaleList;
@@ -99,7 +99,7 @@ Object	Name
 Comic Shop	"Comic Shop"
 
 Comic Shop is a room. It is fasttravel. It is private.
-The description of Comic Shop is "[comicshopdesc]".
+Description of Comic Shop is "[comicshopdesc]".
 
 the scent of Comic Shop is "The comic shop smells stale and musty, with an odor of skunk musk in the air as well.".
 
@@ -114,8 +114,8 @@ object	name
 Frank	"Frank"
 
 Frank is a man. Frank is in Comic Shop.
-The description of Frank is "[frankdesc]".
-The conversation of Frank is { "NERD!" }.
+Description of Frank is "[frankdesc]".
+Conversation of Frank is { "NERD!" }.
 The icon of Frank is Figure of Frank_icon.
 franksex is a number that varies.
 frankmalesex is a number that varies.

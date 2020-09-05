@@ -56,8 +56,8 @@ SexuallyExperienced of Jerome is true.
 TwistedCapacity of Jerome is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Jerome is true. [steriles can't knock people up]
 MainInfection of Jerome is "".
-The description of Jerome is "[JeromeDesc]".
-The conversation of Jerome is { "Pay up!" }.
+Description of Jerome is "[JeromeDesc]".
+Conversation of Jerome is { "Pay up!" }.
 Jerome is in Shag Shack Entrance.
 
 the scent of Jerome is "Jerome smells mainly of cheap aftershave, with a hint of fish underneath. He is a shark after all.".

@@ -213,9 +213,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "tousky quill"	"Exactly what it sounds like."	0	tousky quill
 
-tousky quill is a grab object. tousky quill is infectious. The strain of tousky quill is "Quilled Tousky".
+tousky quill is a grab object. tousky quill is infectious. Strain of tousky quill is "Quilled Tousky".
 
-The usedesc of tousky quill is "[usetouskyquill]";
+Usedesc of tousky quill is "[usetouskyquill]";
 
 to say usetouskyquill:
 	say "     You fiddle briefly with the large tousky quill and end up pricking yourself with it. Ouch! Dropping it, you suck on your poked finger. Your mind becomes clouded, making you muddle-headed and giddy about everything.";

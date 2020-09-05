@@ -130,8 +130,8 @@ SexuallyExperienced of Lux is false.
 TwistedCapacity of Lux is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Lux is false. [steriles can't knock people up]
 MainInfection of Lux is "Feral Wolf".
-The description of Lux is "[Luxdesc]".
-The conversation of Lux is { "Bark! Woof! Woof!" }.
+Description of Lux is "[Luxdesc]".
+Conversation of Lux is { "Bark! Woof! Woof!" }.
 
 the scent of the Lux is "     The pale-furred lupine smells strongly of wolf, albeit a slightly feminine scent.".
 
@@ -269,8 +269,8 @@ SexuallyExperienced of Umbra is false.
 TwistedCapacity of Umbra is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Umbra is false. [steriles can't knock people up]
 MainInfection of Umbra is "Feral Wolf".
-The description of Umbra is "[Umbradesc]".
-The conversation of Umbra is { "Bark! Woof! Woof!" }.
+Description of Umbra is "[Umbradesc]".
+Conversation of Umbra is { "Bark! Woof! Woof!" }.
 the scent of the Umbra is "     The dark-furred wolf smells rather masculine and wolfy, his musk obvious to the nose.".
 
 to say Umbradesc:
