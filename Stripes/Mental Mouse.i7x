@@ -23,7 +23,7 @@ to say mousedesc:
 	if level of Player > 4:
 		say "[mousebuff]";
 		say "     As the mice draw nearer, there is a rustling behind you as another of these mice pops up behind you[if lev entry is 6 or lev entry is 7], and another[else if lev entry > 7], and then a few more start popping up from all around[end if]. With reinforcements now, this [if lev entry < 6]quartet of mice[else if lev entry < 21]group of [ (lev entry / two ) + one ] mice[else]large group of mice[end if] move in to forcibly welcome you as member of this strange mouse-collective.";
-	if mousecurse is 1 and mouse girl is the Companion of Player:
+	if mousecurse is 1 and mouse girl is listed in companionList of Player:
 		say "     Rachel moves in close beside you. 'I told you all that I'll bring this one in on my own,' she says to the other mice, clearly speaking aloud for your benefit. 'We should not wait any longer. This one is meant to be with us,' they others respond, moving in. It seems that your mate is more independent than most of the other mice in the collective, but is unable to sway the mouse hive-mind into waiting now that they've stumbled across you again.";
 
 to say mousebuff:

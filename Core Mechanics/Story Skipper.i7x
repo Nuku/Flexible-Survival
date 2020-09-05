@@ -439,11 +439,6 @@ to CharacterRestore:
 			let CharacterIdName be Name entry;
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
-				[
-				else if CharacterIdName is "yourself":
-					if debug is at level 10:
-						say "DEBUG -> The player doesn't get moved.[line break]";
-				]
 				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
 					move CharacterObject to TargetRoom;

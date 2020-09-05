@@ -341,7 +341,7 @@ to say RyouseiDesc:
 		say "     Having made himself at home in the library, the large cat usually hangs out on the ground floor - doing Tai Chi exercises, browsing books or meditating while sitting cross-legged on a sofa. He never is far from the front door though, and you notice that he frequently glances over to it, ready to react in case someone - or something - might invade your refuge. As he notices your attention on himself, the tiger gives you a companionable nod and a wink. Seems like he's more than ready to chat - or do other things...";
 	else:
 		say "     Accompanying you on your adventures throughout the city, he is never far away, usually just a step behind and a little to the side - leaving you the lead as his local guide. As he notices your attention on himself, the tiger gives you a companionable nod and a wink. Seems like he's more than ready to chat - or do other things...";
-	if companion of Player is royal tiger:
+	if royal tiger is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing royal tiger:
@@ -353,7 +353,7 @@ to say RyouseiScent:
 instead of conversing the Ryousei:
 	if Player is in Grey Abbey Library and Ryousei is in Grey Abbey Library:
 		say "[RyouseiTalkMenu]";
-	else if companion of Player is royal tiger:
+	else if royal tiger is listed in companionList of Player:
 		say "[RyouseiTalkMenu]";
 	else:
 		say "     Ryousei isn't here.";
@@ -364,7 +364,7 @@ instead of conversing royal tiger:
 	else:
 		if Player is in Grey Abbey Library and Ryousei is in Grey Abbey Library:
 			say "[RyouseiTalkMenu]";
-		else if companion of Player is royal tiger:
+		else if royal tiger is listed in companionList of Player:
 			say "[RyouseiTalkMenu]";
 		else:
 			say "     Ryousei isn't here.";
@@ -754,7 +754,7 @@ to say RyouseiXerxesSex: [Ryousei, Xerxes & the player have fun]
 
 Section 5 - Events
 
-instead of navigating Grey Abbey Library while (companion of Player is royal tiger and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
+instead of navigating Grey Abbey Library while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -762,13 +762,13 @@ instead of navigating Grey Abbey Library while (companion of Player is royal tig
 		say "     DEBUG: RYOUSAI / XERXES MEETING[line break]";
 	say "[RyouseiMeetsXerxes]";
 
-instead of going outside from Grey Abbey Library while (companion of Player is royal tiger and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
+instead of going outside from Grey Abbey Library while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / XERXES MEETING[line break]";
 	say "[RyouseiMeetsXerxes]";
 
-instead of going down from Grey Abbey 2F while (companion of Player is royal tiger and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
+instead of going down from Grey Abbey 2F while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / XERXES MEETING[line break]";
@@ -801,7 +801,7 @@ to say RyouseiMeetsXerxes:
 		NPCSexAftermath Xerxes receives "AssFuck" from Ryousei;
 	now RyouseiXerxes is 1;
 
-instead of going up from Grey Abbey Library while (companion of Player is royal tiger and Hayato is in Darkened Alcove and RyouseiHayato is 0):
+instead of going up from Grey Abbey Library while (royal tiger is listed in companionList of Player and Hayato is in Darkened Alcove and RyouseiHayato is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / HAYATO MEETING[line break]";
@@ -814,7 +814,7 @@ instead of going up from Grey Abbey Library while (companion of Player is royal 
 	say "     Smoothing down the ruffled fur over his neck, Ryousei steps up to Hayato and gives him a deep bow. 'My apologies. I clearly let the memories of past encounters of... actual oni... get the better of me. Now then - please do me the honor of telling me your tale. The least I can do is listen to it, no matter how long.' The royal tiger stands calmly in front of the red oni, both hands with their sheathed claws clasped in front of himself. 'Um - eh... yes of course,' Hayato replies a moment later, still a bit flustered. As he waves Ryousei to one of the thin sitting mats he laid out in his camp and the tiger sits down in a cross-legged pose, you leave the two of them to get acquainted.";
 	now RyouseiHayato is 1;
 
-instead of going up from Grey Abbey Library while (companion of Player is royal tiger and Rane is in Sitting Area and RyouseiRane is 0):
+instead of going up from Grey Abbey Library while (royal tiger is listed in companionList of Player and Rane is in Sitting Area and RyouseiRane is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / RANE MEETING[line break]";
