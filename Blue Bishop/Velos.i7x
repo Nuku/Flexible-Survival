@@ -12,7 +12,7 @@ Strange Serpent	"Strange Serpent"
 Strange Serpent is a situation. The minscore of Strange Serpent is 200.
 The sarea of Strange Serpent is "Mall".
 
-Instead of resolving Strange Serpent:
+to say ResolveEvent Strange Serpent:
 	if HP of Velos is 0 or HP of Velos is 1:
 		say "     As you explore the sewers, you're suddenly jolted to attention when you hear something nearby call for your attention.";
 		say "     'Psst, over here!' It remarks, compelling you - once it becomes clear there's no immediate danger - to a nearby wall. Dimly lit against a service light, you can see the silhouette of what appears to be some manner of snake. Sickly pale in its complexion and looking to be in the six foot length range, its surface appears slick as it reflects the light, its clear level of mental articulation betraying its otherwise ordinary appearance.";

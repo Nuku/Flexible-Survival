@@ -534,12 +534,6 @@ to CharacterRestore:
 			let CharacterIdName be Name entry;
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
-<<<<<<< HEAD
-=======
-				if CharacterIdName is listed in PetList:
-					if debug is at level 10:
-						say "DEBUG -> Pets are part of Player, thus they don't get moved.[line break]";
->>>>>>> upstream/master
 				[
 				else if CharacterIdName is "yourself":
 					if debug is at level 10:

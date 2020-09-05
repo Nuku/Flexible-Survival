@@ -53,7 +53,7 @@ to say ebwhelpvic:
 			now mpreghijack is true;
 			now ebwhelphijack is 2;
 			now hijackgestation is 8;
-		CreatureSexAftermath Player receives "AssFuck" from Ebonflame Whelp;
+		CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Whelp";
 	else if tempnum is 1:
 		say ". Completely without restraint the lizard makes a beeline for your ass. Nipping and clawing at your hips, it's little legs flit about in a weak attempt at removing any obstruction before properly positioning itself. [if HP of Player > 0]Obliging the small dragon, you eventually help him get him properly positioned[else]You weakly try to push the small dragon off of you, but this only invites him to nip and claw at you into submission, eventually getting himself into position[end if].";
 		say "     With a tainted urgency, you immediately feel yourself [if scalevalue of Player < 4]impaled[else]stabbed[end if] by the tiny monster's instantly erect dick up[if Cunt Count of Player > 1] one of[end if] your barely ready cunt[sfn], burying it's long, tapered length down your hole until he's slapping his smooth, scaled crotch between your thighs. You feel the thing, like a searing hot poker, worm its way around your innards, sputtering its molten-hot precum[if scalevalue of Player < 4] deep[end if] inside you. Absolutely dead set on weakly pounding your hole into oblivion, you have to endure the sounds of its loud, wanton squealing filling air, hardly drowning out his increasingly wet motions.";
@@ -67,7 +67,7 @@ to say ebwhelpvic:
 			now preghijack is true;
 			now ebwhelphijack is 1;
 			now hijackgestation is 8;
-		CreatureSexAftermath Player receives "PussyFuck" from Ebonflame Whelp;
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Whelp";
 	else:
 		say ". You're barely given a chance to ready yourself before he presses the base of his cock firmly against your face, flooding your senses with the tainted aroma of the creature's heady scent. He clearly wants you to suck him off, but either by some weird instinct or by a particularly sadistic tendency, he's not hard in the slightest, meaning you'd have to oblige him more than usual to suck him off.";
 		say "     [if HP of Player > 0]Conceding to this shameful relegation, you lower[else]Not wanting to be the subject of the creature's constant clawing and squealing, you eventually concede to this shameful relegation, lowering[end if] your head to engulf the pointed tip of the whelp's jet-black dick, the insistence of the tiny creature forcing you to swallow down more and more of its substantive length until your lips are flush against his coarse scales. [if scalevalue of Player > 3]Massive form sucking off this tiny beast, your taste is awash in the sting of his scalding precum, the creature starting to cling[else]Struggling to breathe as your taste is awash in the sting of his scalding precum, the creature starts clinging[end if] to you as tightly as it possibly can, dead set on making sure you never let up.";
@@ -77,7 +77,7 @@ to say ebwhelpvic:
 		if ebwhelphijack > 0:
 			say "     [italic type]Still bloated from the original whelp's violation, consuming all this burning fluid seems to have worsened your situation by accelerating your twisted offspring's growth...[roman type][line break]";
 			decrease hijackgestation by 1;
-		CreatureSexAftermath Player receives "OralCock" from Ebonflame Whelp;
+		CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Whelp";
 
 to say ebwhelpdef:
 	if birthedwhelp is true:

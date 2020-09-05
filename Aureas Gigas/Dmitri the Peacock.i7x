@@ -125,8 +125,8 @@ to say ResolveEvent Captivating Plumage:
 		say "     After stroking that cervine cock and reptilian hemipenis to completion, two more come to fill their place. While you are busy giving handjobs to the new pair, you feels something heavy slap against your back. Based on the sensation of a ring-like bulge, you can safely assume that the underside of a girthy equine cock is rubbing against your spine. On your left side, you hear the sounds of fingers sliding into a slick pussy. Some of the spent members of the crowd shout out 'Cover [']em in femcum, Septa!' and 'Plaster [']em Oct!' As if on cue, the March Hares cum all over you. Hot pulses of canine seed shoot down your throat, filling your gullet with that virile essence. Once spent, the knot deflates surprisingly quickly, and the embarrassed male quickly walks away. Clover then shouts, 'All right Hares, you've had your fun. Now get back to work!' Heeding her words, they begin to clear out. Taking off your blindfold, Clover and Dmitri clean you off using a couple of rags.";
 		WaitLineBreak;
 		say "     The boss rabbit says, 'You did a great job, sugar. The March Hares will have your back.' The peacock then helps you stand up and the two of you head back for the antique store. Once you are at the antique store, Dmitri runs a hand down the small of your back and proudly states, 'You've completely surpassed my expectations. With the help of our new friends, this heist should go a lot easier.' You redress with any clothing or equipment that you were wearing before this outing and head out the door. The colorful fowl stands at the doorway, waving a friendly goodbye as you leave.";
-		CreatureSexAftermath "Player" receives "OralPussy" from Gunbunny;
-		CreatureSexAftermath "Player" receives "OralCock" from German Shepherd Male;
+		CreatureSexAftermath "Player" receives "OralPussy" from "Gunbunny";
+		CreatureSexAftermath "Player" receives "OralCock" from "German Shepherd Male";
 		now Peacocked is 6;
 		now Resolution of Captivating Plumage is 6;
 	else if Peacocked is 6:

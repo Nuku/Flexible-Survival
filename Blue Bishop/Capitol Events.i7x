@@ -106,11 +106,11 @@ to say ResolveEvent Ebonflame Nest:
 				say ". The impact is strong enough to render you unconscious, the chittering sound of ebonflame whelps the only thing you can recall before you black out.";
 				say "     Your consciousness is roused once again by strained squeals and yipping of your apparent assailants. The writhing, heated flesh of a few whelps on you, more strewn about, rather exhausted themselves. As you shift, it immediately becomes clear that you're partially doused with the creatures['] glowing seed[if scalevalue of Player > 3], an impressive feat for someone as large as you. These whelps have either been very busy, or you've been out for quite some time[else]. The whelps must have been busy with you while you were lying unconscious[end if].";
 				say "     Though you still feel a couple heaving against your [if scalevalue of Player > 3]large [end if]behind, it's clear they're all too spent to fight you. Embarrassed as you are, you easily shove them off, weakly pulling yourself back up the hole. As you crawl back from whence you came, it's clear by the twisted aftertaste in your mouth that the small creatures made the most of what they could against your helpless form.";
-				CreatureSexAftermath Player receives "OralCock" from Ebonflame Whelp;
+				CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Whelp";
 				if player is female:
-					CreatureSexAftermath Player receives "PussyFuck" from Ebonflame Whelp;
+					CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Whelp";
 				else:
-					CreatureSexAftermath Player receives "AssFuck" from Ebonflame Whelp;
+					CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Whelp";
 				infect "Ebonflame Whelp";
 				infect "Ebonflame Whelp";
 				infect "Ebonflame Whelp";
@@ -133,11 +133,11 @@ to say ebonflamegauntlet:
 				say "     Unable to handle this many whelps, [if HP of Player > 0]you concede to submitting to the beasts[else]you eventually fall to one of them, who squawks loudly to brag of its prowess over its kin[end if], those felled prior slowly rising up to recover from your attack before the whole lot of them descend upon you. Engulfed in numerous masses of twisted, ebonflame scales, the chirping, chittering noises they emit are almost unbearable[if Player is submissive]. You are too overwhelmed by your submissive inclinations to resist their wanton, fiery desire[else if HP of Player > 0]. Their wanton, fiery desires is too overwhelming for you to resist[else]. Your impotent attempts at pushing them away too inadequate to dissuade their wanton, fiery desire[end if].";
 			say "     You're briefly forced to cry out, though they will not abide your involvement in their lust-laden song, your mouth immediately plugged by the [if scalevalue of Player > 3]erections of two of the whelps[else]cock of one of these whelps[end if]. [if HP of Player < 1]Weakened[else]Twisted[end if] moans muffled by [if scalevalue of Player > 3]their inadequate tools[else]its inadequate tool[end if], [if Cunt Count of Player > 2]they seek to plug your other holes, two more thrusting into two of your cunts, while the remainder assail your frame with their own irreverent, heaving assault[else if Cunt Count of Player is 2]they seek to plug your other holes, two more thrusting into both of your cunts, while the remainder assail your frame with their own irreverent, heaving assault[else if Cunt Count of Player is 1]they seek to plug your other hole, two of them managing to fit themselves into your cunt, an affair the cramped pair seem to fight over between thrusts, while the remainder assail your frame with their own irreverent, heaving assault[else if anallevel > 1 and scalevalue of Player > 3]they seek to plug your other hole, two of them managing to fit themselves past your anal ring, exploiting your large size to both thrust into your inviting portal, while the remainder assail your frame with their own irreverent, heaving assault[else if anallevel > 1]they seek to plug your other hole, two of them managing to fit themselves past your anal ring, an affair the cramped pair seem to fight over between thrusts, while the remainder assail your frame with their own irreverent, heaving assault[else]the remainder assailing your frame with their own irreverent, heaving thrusts[end if]. A handful of heated, sweat-laden minutes pass before feel one cry out in blissful release, its kin soon following suit.";
 			say "     You are quick to assume that they are finished with their fun, but it's clear that, since you came down on -their- home, they have nowhere else to be, and they thusly continue to use you, new ones falling in place when one becomes too exhausted. What feels like an eternity passes before they're all finally spent and [if HP of Player > 0 or player is submissive]have nothing left to offer you[else]you've recovered enough to push them off[end if]. Exhausted, covered in sexual fluids, and quite embarrassed with yourself, you pull yourself out of the hole and back from whence you came before their parents might return.";
-			CreatureSexAftermath Player receives "OralCock" from Ebonflame Whelp;
+			CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Whelp";
 			if player is female:
-				CreatureSexAftermath Player receives "PussyFuck" from Ebonflame Whelp;
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Whelp";
 			else:
-				CreatureSexAftermath Player receives "AssFuck" from Ebonflame Whelp;
+				CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Whelp";
 			infect "Ebonflame Whelp";
 			infect "Ebonflame Whelp";
 			infect "Ebonflame Whelp";
