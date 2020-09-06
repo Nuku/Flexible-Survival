@@ -123,8 +123,7 @@ templust is a number that varies.
 tempthirst is a number that varies.
 
 to say SummonArtemis:
-	now Artemis is nowhere;
-	if Player is in Courtyard and Artemis is in Courtyard: [summoning while standing next to her]
+	if Artemis is visible: [summoning while standing next to her]
 		say "     With a sharp whistle you call Artemis over to you, rubbing her head gently the two of you begin to make your way back out into the city.";
 	else: [regular summoning]
 		say "     The rubber tigress gives a soft mew and nuzzles at your thigh as you call her over. She purrs happily when you scritch her ears.";

@@ -740,7 +740,6 @@ when play begins:
 	add "Feral" to Traits of human dog;
 
 to say SummonHumanDog:
-	now Ares is nowhere;
 	say "     Calling out for Ares, the human dog comes to your side pretty quickly, obviously having followed you all this time not too far behind. With a satisfied bark, he takes position beside you and just a step ahead, ready to protect his bitch in any situation.";
 
 to say DismissHumanDog:

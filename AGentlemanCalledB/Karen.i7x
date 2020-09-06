@@ -89,9 +89,8 @@ The assault of Retriever Girl is "[one of]Stepping forward quickly, [or]Circling
 the fuckscene of Retriever Girl is "[SexWithKaren]".
 
 to say SummonKaren:
-	now Karen is nowhere;
-	if Player is in Breakroom and Karen is in Breakroom: [summoning while standing next to her]
-		say "     ...";
+	if Karen is visible: [summoning while standing next to her]
+		say "     Karen smiles happily as you wave her over, hiking her bag up over her shoulder as she jogs forward.";
 	else: [regular summoning]
 		say "     Karen smiles happily as you wave her over, hiking her bag up over her shoulder as she jogs forward.";
 

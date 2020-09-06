@@ -86,11 +86,9 @@ to say SummonUrik:
 			now Sleeping of Urik is false;
 		else:
 			say "     Calling out for Urik to join you is answered by a bellow of '[one of]Oh yeah[or]Nice[or]Finally[or]Let's get rockin[or]Hammer time[at random]!' from the orc, who jumps to his feet and cracks his knuckles. The towering orc is more than ready to get fighting by your side!";
-		now Urik is nowhere;
 	else: [regular summoning]
 		say "     And how do you want to do that? Cell phone reception kinda went downhill with the start of the nanite apocalypse and it's not like you can just magic up Urik to appear next to you. Go pick him up yourself.";
-		if orc supersized breeder is listed in companionList of Player:
-			remove orc supersized breeder from companionList of Player;
+		now SummonFailure is true;
 
 to say DismissUrik:
 	project the Figure of Urik_clothed_icon;

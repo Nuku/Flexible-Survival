@@ -88,8 +88,7 @@ MainInfection of gshep is "German Shepherd Male".
 
 
 to say SummonKorvin:
-	now Korvin is nowhere;
-	if Player is in Makeshift Rec Room and Korvin is in Makeshift Rec Room: [summoning while standing next to him]
+	if Korvin is visible: [summoning while standing next to him]
 		say "     Calling for Korvin, the German shepherd joins you at your side. He seems excited at the prospect of busting some heads.";
 	else: [regular summoning]
 		say "     Calling for Korvin, the German shepherd joins you at your side. He seems excited at the prospect of busting some heads.";

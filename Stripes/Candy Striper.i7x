@@ -280,8 +280,7 @@ to say PinkRacconDesc:
 the scent of the pink raccoon is "The pink coonboi smell of cotton candy, arousal and sex, all with a faint hint of your own scent beneath that.".
 
 to say SummonPinkRaccoon:
-	move Pink Raccoon to location of player;
-	if Player is in Computer Lab and Candy is in Computer Lab:
+	if Pink Raccoon is visible:
 		say "     Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close. He churrs happily, ready and eager to obey.";
 	else:
 		say "     Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close. He churrs happily, ready and eager to obey.";

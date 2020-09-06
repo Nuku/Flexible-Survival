@@ -9200,11 +9200,9 @@ Book 10 - Let the Games Begin
 to say promptsay:
 	let x be the location of the player;
 	if companionList of Player is not empty:
-	 	repeat with y running through companionList of Player:
+		repeat with y running through companionList of Player:
 			if NPCObject of y is not Nullpet:
 				now NPCObject of y is in location of Player;
-	[if companion of Player is not NullPet and NPCObject of Companion of Player is not Nullpet:
-		now NPCObject of Companion of Player is in location of Player;]
 	let z be the number of entries in invent of x;
 	if z > 0:
 		say "Visible Objects: ";

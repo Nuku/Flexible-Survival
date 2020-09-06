@@ -59,6 +59,7 @@ lastfuck of Santa Claws is usually 555.
 
 
 to say Santa Claws Desc:
+	project the Figure of SantaClaws_face_icon;
 	setmongender 3;
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Santa Claws], LEVEL: [level of Santa Claws] <- DEBUG[line break]";
@@ -71,6 +72,7 @@ instead of going east from Mall East Wing while HP of Santa Claws is 0:
 	say "     Do you really want to explore this strange place?";
 	if Player consents:
 		move player to Christmas Village;
+		project the Figure of SantaClaws_face_icon;
 		say "     Passing the curtain of snowfall, you enter a pretty little winter wonderland. One can still make out the general shape of the Mall, the wide corridor with skylights above, but things have been... transformed quite a bit. There are evergreen conifer trees that sprout out of the snow-covered ground, mostly hiding the walls and letting things appear as if you're in a midwinter forest, with the front sides of the stores appearing as block houses built from round tree trunks. There are many petite humanoids dressed in green clothes going about their business here, following tracks through the snow, chatting and laughing. Looks like they're Christmas Elves, with their unlined, delicate features and the pointy ears sticking out to the sides.";
 		say "     In the center of it all stands a large cushioned throne, carved with many decorative designs, and on it sits a man in a bright red suit - an anthro polar bear. As he lets his gaze wander over his domain, smiling at all the little elves, he notices you and waves you closer with a clawed hand. In a deep voice, the polar bear says, 'Welcome to Santa Claws's little village, visitor. Be advised that this is my realm and I don't condone violence - this is a place to be jolly, so leave any troubles outside. Rest, get your present and enjoy some time here before you have to go back - or stay, as one of my Christmas Elves, if you wish.'";
 		now HP of Santa Claws is 1;
@@ -96,7 +98,8 @@ instead of conversing the Santa Claws:
 	say "[SantaTalkMenu]";
 
 to say SantaTalkMenu:
-	say "What do you want to talk with Santa Claws about?";
+	project the Figure of SantaClaws_face_icon;
+	say "     [bold type]What do you want to talk with Santa Claws about?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

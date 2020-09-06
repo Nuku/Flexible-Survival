@@ -741,7 +741,6 @@ to say SummonXaedihr:
 		say "     You call out Xaedihr, inviting him to join you on your day outside. 'Field research it is, then. Might as well practice a few spells. Just don't think I'll be carrying you around like a damsel, please.' He walks up to you, ready to leave.";
 	else: [regular summoning]
 		say "     You take the trinket Xaedihr gave you to summon him in case you needed and recite the magic words. Not too soon after, he appears next to you like a crimson light. 'Caught up something interesting or you just missed me?' he says, readying himself to follow you.";
-	now Xaedihr is nowhere;
 
 to say DismissXaedihr:
 	if Player is in Grey Abbey Library:

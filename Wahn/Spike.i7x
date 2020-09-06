@@ -209,11 +209,9 @@ to say SummonSpike:
 			now Sleeping of Spike is false;
 		else:
 			say "     You give a sharp whistle and wave to Spike, directing him to follow you. The young canine quickly rushes to your side and takes his spot to support you.";
-		now Spike is nowhere;
 	else: [regular summoning]
 		say "     And how do you want to do that? Cell phone reception kinda went downhill with the start of the nanite apocalypse and it's not like you can just magic up Spike to appear next to you. Go pick him up yourself.";
-		if doberman companion is listed in companionList of Player:
-			remove doberman companion from companionList of Player;
+		now SummonFailure is true;
 
 to say DismissSpike:
 	project the figure of Spike_face_icon;

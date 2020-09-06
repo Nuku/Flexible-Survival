@@ -7,7 +7,8 @@ Version 1 of Saber Kitty by Blaydrex begins here.
 
 Section 1 - Creature Responses
 
-to say saber attack:
+to say saber_wins:
+	project the Figure of Saber_Kitty_icon;
 	if Player is male:
 		say "     The saber kitty swipes at you one more time, ripping your clothes and knocking you down onto your butt. When you stay down she smiles that toothy smile, drawing extra attention to those pearly white fangs of hers. 'Finally, a male to play with,' she says as she saunters over to you, her pussy dripping audibly onto the floor with her desperate, heat-filled need. She frowns when she notices you aren't hard. She pushes your chest, making you lay down, and then straddles your face, keeping her pussy just barely out of reach of your face as she begins to lick your cock. She fondles your cock as she continues licking you. Her breasts rub on your stomach.";
 		say "     It isn't long before you begin to smell her heat. The scent starts to fog your mind and you begin to breathe deeply, taking in more and more of her scent. It isn't long before her scent and teasing brings you to a painfully hard erection. The second you are hard, she purrs loudly in delight and wastes no time in turning around and impaling herself on your rod. She begins to ride you with reckless abandon, a rather large puddle of her juices rapidly forming under you.";
@@ -23,9 +24,9 @@ to say saber attack:
 		say "     The saber kitty swipes at you one more time, ripping your clothes and knocking you down onto your butt. When you stay down, she eyes your crotch with disappointment. 'No cock or pussy for the kitty? Well, you'll just have to make it up to me in another way, slut,' she rumbles before forcing your face against her drooling cunt. It doesn't take long before your entire face is covered in her juices. The scent of her overpowering heat begins to fog your senses and you are filled with an intense arousal you can do little to sate.";
 		say "     Despite your need, you can't bring yourself to remove your hands from her thighs as you lustfully lick her cunt. She smirks, grinding her drooling pussy against you. 'Such a good slut. It won't be long before you learn how good it is to be a sexy saber kitty like me if you keep this up,' she says, mewling at your efforts to get her off. It isn't much longer before she cums hard over your already soaked face. Before she can go your lust gets the better of you and you begin to tend to her some more. This only bring more mewling and purring from her. 'Oh yes, you'll make such a good saber kitty,' she says in a moan. You bring her to several orgasms before you get too tired. She smiles and walks off, leaving a trail of her dripping juices on the ground and you completely unsated.";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Saber Kitty";
-	infect;
 
-to say saber loss:
+to say saber_loses:
+	project the Figure of Saber_Kitty_icon;
 	if Player is male:
 		say "     She staggers back as you deal the final blow. After recovering she purrs happily at finding someone so strong. She approaches you with her toothy smile, drawing extra attention to her pearly white fangs. She gently rubs herself against you, the scent of her heat filling the air. 'Wanna play with the saber kitty, love?' she asks, mewling. It's hard to think. Do you take her up on the offer or do you run before it is too late? You might risk infection if you give in...";
 		if Player consents:
@@ -45,6 +46,11 @@ to say saber loss:
 			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
 		else:
 			say "     This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
+
+to say SaberKittyDesc:
+	project the Figure of Saber_Kitty_icon;
+	setmongender 4;
+	say "     As you're walking you hear a faint dripping on the ground behind you. You rapidly spin around to see a sexy anthro Saber-toothed Tiger in front of you. It doesn't take long to find the source of the dripping sound as you look down to see her red, swollen pussy dripping copious amounts of fluids onto the ground. She is obviously in heat, and the smell hits you hard in seconds. Her body is beautiful and athletic, with abs and faint but powerful muscles. 'Don't worry, love. You'll learn to enjoy the heat and being knocked up,' she adds before pouncing.";
 
 Section 2 - Creature Insertion
 
@@ -69,9 +75,9 @@ When Play begins:
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The sexy saber kitty pounces on you and bites into your shoulder, sinking her large fangs in. She eventually lets go, but it hurt a lot[or]She swipes at you with her claws, scratching you. Hopefully that won't leave a mark[or]She smirks and grinds her body against your. At first nothing seems suspicious, but then she slashes your side with her claw, leaving a gash as she jumps away[at random]."; [ Successful attack message ]
-	now defeated entry is "[saber loss]";
-	now victory entry is "[saber attack]";
-	now desc entry is "[mongendernum 4]     As you're walking you hear a faint dripping on the ground behind you. You rapidly spin around to see a sexy anthro Saber-toothed Tiger in front of you. It doesn't take long to find the source of the dripping sound as you look down to see her red, swollen pussy dripping copious amounts of fluids onto the ground. She is obviously in heat, and the smell hits you hard in seconds. Her body is beautiful and athletic, with abs and faint but powerful muscles. 'Don't worry, love. You'll learn to enjoy the heat and being knocked up,' she adds before pouncing.";
+	now defeated entry is "[saber_loses]";
+	now victory entry is "[saber_wins]";
+	now desc entry is "[SaberKittyDesc]";
 	now face entry is "feline and beautiful female smilodon, with two sexy fangs showing at all times"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "feminine, with curves to your body that are to die for and some sexy abs. Your arms have muscles that barely show, but show enough to show that you are indeed stronger than it would seem and end in clawed paws that still can grip things. Your legs have strong thighs for leaping and pouncing on your prey but are shapely and attractive as well as muscled and end in digitigrade feet";
 	now skin entry is "covered in a soft beige fur that turns white on the front of your torso and the inside of your ass cheeks";

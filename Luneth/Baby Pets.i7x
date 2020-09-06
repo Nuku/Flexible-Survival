@@ -45,8 +45,7 @@ when play begins:
 	add "Feral" to Traits of little fox;
 
 to say SummonDash:
-	now Dash is nowhere;
-	if Player is in Computer Lab and Dash is in Computer Lab: [summoning while standing next to him]
+	if Dash is visible: [summoning while standing next to him]
 		say "     Going up to Dash, you crouch down and gently rub his ears. After showing your little fox kit some love, he gets super excited and begins to jump all over the place. Once he has calmed down a bit, he scrambles into your pack ready for a brand new journey!";
 	else: [regular summoning]
 		say "     Wriggling his way out of your pack, Dash looks around the area before sitting down and staring at you with its bright shining eyes, eager to explore.";
@@ -303,8 +302,7 @@ when play begins:
 	add "Feral" to Traits of Skunk Kit;
 
 to say SummonPeppy:
-	now Peppy is nowhere;
-	if Player is in Computer Lab and Peppy is in Computer Lab: [summoning while standing next to him]
+	if Peppy is visible: [summoning while standing next to him]
 		say "     Walking up and lightly scratching behind Peppy's ears, causing a loud churring sound from within. Giving a nod towards the door, the little skunk is quick to wobble outside. Apparently deciding that if he's going on this journey, then he is going to be the one leading it.";
 	else: [regular summoning]
 		say "     You call out for the little skunk you rescued to come help you out, and it comes trotting up from where it was following you, ready and eager to assist his friend, the smell of skunk filling the area around you.";

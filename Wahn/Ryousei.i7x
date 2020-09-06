@@ -269,8 +269,7 @@ The assault of royal tiger is "[one of]Ryousei wades into the fight with sure st
 the fuckscene of royal tiger is "[sexwithRyousei]".
 
 to say SummonRyousei:
-	now Ryousei is nowhere;
-	if Player is in Grey Abbey Library and Ryousei is in Grey Abbey Library: [summoning while standing next to him]
+	if Ryousei is visible: [summoning while standing next to him]
 		say "     Walking a few steps over to where your tiger companion currently resides, you tell him that you'd like him to accompany you. The muscular feline stands up and smiles, then puts the palms of his hands together and gives a little bow. 'Of course, my friend. It is good that you have chosen to let me share your path. Onwards then, to grand adventures!' With that said, the proud tiger takes position by your side, ready to support you in what fights lie ahead.";
 	else: [regular summoning]
 		say "     Calling out the words, 'Watashi wa anata ni yonde, Ryousei,' you wait expectantly, and in a little swirl of blue energy, the muscled tiger indeed appears before you. He puts the palms of his hands together and gives a little bow to you, then says, '[if daytimer is day]Konnichiwa[else]Konbanwa[end if], my friend. It is good that you have chosen to let me share your path. Onwards then, to grand adventures!' With that said, the proud tiger takes position by your side, ready to support you in what fights lie ahead.";

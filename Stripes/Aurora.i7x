@@ -113,9 +113,8 @@ the fuckscene of frost giantess is "[SexWithAurora]".
 
 
 to say SummonAurora:
-	now Aurora is nowhere;
-	if Player is in Breakroom and Aurora is in Breakroom: [summoning while standing next to her]
-		say "     ...";
+	if Aurora is visible: [summoning while standing next to her]
+		say "     Hearing your call, Aurora the frost giantess comes over to join you at your side. She flexes her arms, adjusts her freezer backpack and gives you a merry slap on the back that [if scalevalue of Player < 4]nearly knocks you over[else]makes you stumble momentarily[end if].";
 	else: [regular summoning]
 		say "     Hearing your call, Aurora the frost giantess comes over to join you at your side. She flexes her arms, adjusts her freezer backpack and gives you a merry slap on the back that [if scalevalue of Player < 4]nearly knocks you over[else]makes you stumble momentarily[end if].";
 

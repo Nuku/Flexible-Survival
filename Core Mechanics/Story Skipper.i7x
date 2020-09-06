@@ -21,9 +21,9 @@ The File of BeastSave (owned by another project) is called "FSBeastSave".
 The File of BeastVariableSave (owned by another project) is called "FSBeastVariableSave".
 The File of NoteSave (owned by another project) is called "FSNoteSave".
 
-[PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
+PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
 PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder" };
-]
+
 an everyturn rule:
 	if Player is in NPC Nexus:
 		say "     Trixie the fairy flutters into existence right next to you and looks at you with a puzzled expression. 'Now now, you really should be somewhere else. How in the world did you end up here? If you do remember the room where you're supposed to be, please report that on the FS Discord channel as a bug. But for now, let's get you back in the city at least.'";

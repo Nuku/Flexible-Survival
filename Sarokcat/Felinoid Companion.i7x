@@ -133,10 +133,9 @@ the fuckscene of felinoid Companion is "[sexwithfelinoidpet]".
 
 
 to say SummonKlauz:
-	now Klauz is nowhere;
 	project the Figure of Klauz_face_icon;
-	if Player is in Back Of The Library and Klauz is in Back Of The Library: [summoning while standing next to him]
-		say "     ...";
+	if Klauz is visible: [summoning while standing next to him]
+		say "     Walking up to the big cat, you give him a few scritches on the head and behind his ears. Klauz rubs up against you in greeting, obviously looking forward to exploring with you.";
 	else: [regular summoning]
 		say "     Turning to look around, you spot the large felinoid from the park lurking quite a ways behind you, obviously keeping an eye on you from a distance. Feeling a smile tugging at your face, you gesture several times for him to approach, and after a minute, Klauz seems to get the idea as he pads forward and rubs up against you in greeting, obviously looking forward to exploring with you.";
 

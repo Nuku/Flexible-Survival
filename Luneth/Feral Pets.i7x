@@ -46,8 +46,7 @@ when play begins:
 	add "Feral" to Traits of Cute Crab;
 
 to say SummonSnips:
-	now Snips is nowhere;
-	if Player is in Computer Lab and Snips is in Computer Lab: [summoning while standing next to him]
+	if Snips is visible: [summoning while standing next to him]
 		say "     Letting your cute crab Snips know that it's time to head out, Snips quickly climbs onto your foot, ready for adventure!";
 	else: [regular summoning]
 		say "     Bursting from the ground near you, your cute crab appears. Snips clacks its pincers together in an excited fashion like a castanet player.";
@@ -245,8 +244,7 @@ The assault of house cat is "[one of]Your opponent moves back from your attack, 
 the fuckscene of house cat is "With all of the sex-crazed people out there, you're looking to fuck an ordinary house cat? You are one crazy pervert.".
 
 to say SummonDinah:
-	now Dinah is nowhere;
-	if Player is in Computer Lab and Dinah is in Computer Lab: [summoning while standing next to her]
+	if Dinah is visible: [summoning while standing next to her]
 		say "     You call Dinah over to you, watching as she stalks over to your side, walking like a predator on the prowl.";
 	else: [regular summoning]
 		say "     You begin to call out for Dinah, only to stop in embarrassment as you realize she is already washing her paws nearby, watching you, obviously amused at your antics.";
@@ -469,13 +467,12 @@ Weapon Damage of Exotic Bird is 5.
 The level of Exotic Bird is 1.
 Dexterity of Exotic Bird is 20.
 The summondesc of Exotic Bird is "[SummonChirpy]".
-The dismissdesc of Exotic Bird is "[SummonChirpy]".
+The dismissdesc of Exotic Bird is "[DismissChirpy]".
 The assault of Exotic Bird is "[one of]Chirpy dive bombs your opponent![or]Chirpy flaps her wings in your adversary's face, blinding it![or]Diving down to engage, your bird friend scratches at your opponent with her talons![or]Your opponent jumps and twists around in pain with Chirpy pecking at its scalp.[or]Taking advantage of your foe's momentary distraction, Chirpy manages to land a few quick attacks.[or]Your bird friend takes a moment to relieve herself, fortuitously right on your opponent.[at random]".
 The fuckscene of exotic bird is "The exotic bird is too small for that sort of thing.".
 
 to say SummonChirpy:
-	now Chirpy is nowhere;
-	if Player is in Computer Lab and Chirpy is in Computer Lab: [summoning while standing next to her]
+	if Chirpy is visible: [summoning while standing next to her]
 		say "     Reaching out, you lightly pet Chirpy's brightly colored feathers. With a tip of your head, she instantly flutters over, landing softly on your shoulder.";
 	else: [regular summoning]
 		say "     Hearing you whistle, Chirpy flaps over and takes up position overhead, keeping an eye out for any threats.";
@@ -669,9 +666,8 @@ The assault of helper dog is "[one of]The helper dog jogs between your enemy's l
 the fuckscene of helper dog is "You make the offer to your canine companion, but he is uninterested.".
 
 to say SummonHobo:
-	now Hobo is nowhere;
 	project Figure of Hobo_icon;
-	if Player is in Computer Lab and Hobo is in Computer Lab: [summoning while standing next to him]
+	if Hobo is visible: [summoning while standing next to him]
 		say "     Leaning down, you ruffle one of Hobo's ears, telling him that it's time to get back out into the city. He happily wags his tail as he begins to trail you.[hoboreset]";
 	else: [regular summoning]
 		say "     Coming obediently to your call, Hobo moves to your side, ready and eager to assist you.[hoboreset]";

@@ -13,6 +13,10 @@ A pet has a number called lastfight. lastfight is usually 255.
 A pet has a person called NPCObject. NPCObject of a pet is usually NullPet.
 The player has a list of pets called CompanionList.
 
+a postimport rule:
+	repeat with CurrentPet running through pets:
+		now CurrentPet is nowhere; [banished to the void]
+
 Definition: A person is lonely:
 	if companionList of Player is empty, yes;
 Definition: A person is not lonely:
@@ -63,17 +67,17 @@ to AddCompanionFunction (NewCompanion - a text):
 			now AddPet is Z;
 			break;
 	if AddPet is NullPet:
-		say "     You have no ally called [NewCompanion]!";
+		say "     You have no ally called [NewCompanion in title case]!";
 	else:
 		let MaxCompanions be 1;
 		if "Double Team" is listed in feats of Player:
 			increase MaxCompanions by 1;
 		if AddPet is listed in companionList of Player:
-			say "     [NewCompanion] is already following you!";
+			say "     [AddPet] is already following you!";
 		else:
 			let y be number of entries in companionList of Player;
 			if y >= MaxCompanions:
-				say "     You cannot have any more allies following you right now! If you want to choose [NewCompanion], you'll have to send someone else away!";
+				say "     You cannot have any more allies following you right now! If you want to choose [AddPet], you'll have to send someone else away!";
 			else:
 				say "[summondesc of AddPet]";
 				if SummonFailure is false: [pet summon successful]
@@ -115,7 +119,7 @@ to DismissFunction (InputName - a text):
 			now DismissPet is Z;
 			break;
 	if DismissPet is NullPet:
-		say "     You have no ally called [InputName]!";
+		say "     You have no ally called [InputName in title case]!";
 	else if DismissPet is not listed in companionList of Player:
 		say "     [DismissPet] is not following you!";
 	else:

@@ -516,14 +516,11 @@ Strange Doll	"strange doll"
 Strange Doll	"Strange Doll"
 Strange Doll	"Your doll-twin"
 
-understand "Doll-Twin" as strange doll.
-printed name of strange doll is "Your doll-twin".
-The level of strange doll is 1.
-The summondesc of strange doll is "     You pull the strange little doll from the shop out of your pack, and set it on the ground next to you, the doll lies there for a minute on the ground, before twitching and picking itself up. The little miniature version of you looks around the area, before looking up at you and saluting, obviously ready and willing to help.".
 Strange Doll is a pet.
 NPCObject of Strange Doll is Strange Doll.
 understand "Your Doll-Twin" as Strange Doll.
 understand "Doll-Twin" as Strange Doll.
+understand "Twin" as Strange Doll.
 understand "Doll" as Strange Doll.
 printed name of Strange Doll is "Your doll-twin".
 Description of Strange Doll is "[StrangeDollDesc]".
@@ -540,7 +537,6 @@ dollfound is a number that varies.
 the scent of Strange Doll is "The strange doll smells strangely like you.".
 
 to say SummonStrangeDoll:
-	move Strange Doll to location of Player;
 	say "     You pull the strange little doll from the shop out of your pack, and set it on the ground next to you, the doll lies there for a minute on the ground, before twitching and picking itself up. The little miniature version of you looks around the area, before looking up at you and saluting, obviously ready and willing to help.";
 
 to say DissmisStrangeDoll:
