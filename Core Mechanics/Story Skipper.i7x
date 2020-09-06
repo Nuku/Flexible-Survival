@@ -439,17 +439,9 @@ to CharacterRestore:
 			let CharacterIdName be Name entry;
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
-				if CharacterIdName is listed in PetList:
-					if debug is at level 10:
-						say "DEBUG -> Pets are part of Player, thus they don't get moved.[line break]";
-				[
-				else if CharacterIdName is "yourself":
-					if debug is at level 10:
-						say "DEBUG -> The player doesn't get moved.[line break]";
-				]
-				else if there is a name of LocationName entry in the Table of GameRoomIDs:
+				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
-					move CharacterObject to TargetRoom;
+					move CharacterObject to TargetRoom, without printing a room description;
 				else:
 					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
@@ -547,7 +539,7 @@ to CharacterRestore:
 				]
 				else if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
-					move CharacterObject to TargetRoom;
+					move CharacterObject to TargetRoom, without printing a room description;
 				else:
 					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
@@ -619,6 +611,8 @@ to TraitRestore:
 					add TraitText entry to Traits of CharacterObject;
 					if TraitText entry is "Tamed": [pets]
 						now CharacterObject is tamed;
+					if TraitText entry is "Current Companion":
+						add CharacterObject to CompanionList of Player;
 					[
 					if debug is at level 10:
 						say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
@@ -1191,6 +1185,7 @@ to say ProgressionImport:
 	NoteRestore;
 	VariableLoad;
 	RunPostImportRules;
+	try looking; [start the player off in their new playthrough]
 
 Table of GameCharacterIDs (continued)
 object	name

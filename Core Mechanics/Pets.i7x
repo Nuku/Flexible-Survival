@@ -10,6 +10,7 @@ A pet has a text called assault.
 A pet has a number called lastfight. lastfight is usually 255.
 A pet has a person called NPCObject. NPCObject of a pet is usually NullPet.
 The player has a pet called companion.
+The player has a list of pets called CompanionList.
 
 Definition: A person is lonely:
 	if companion of Player is nullpet, yes;
