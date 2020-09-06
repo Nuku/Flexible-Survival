@@ -280,6 +280,9 @@ to say SpikeDesc:
 		say "     Having claimed a corner of the upper library floor as his, Spike has made a little man-cave for himself, dragging a mattress up from the bunker and setting the desk that had occupied the corner as a little reading nook on its side, to block a passage between two bookshelves. Posters of scantily dressed human women, as well as one or two with anthro furry erotic art have been pinned to the back wall so that he can look at them when lying down. Which Spikes does quite a bit, day-dreaming about things while stroking himself[if Spike is asleep]. Right now though, the slender doberman is [bold type]asleep[roman type], stretched out naked on his mattress with his usual outfit in a pile next to it[end if].";
 	else:
 		say "     Accompanying you on your travel throughout the city, he is never far away, usually just a step behind and a little to the side, serving as muscle and glowering at anyone who might dream of crossing you. As he notices your attention on himself, the doberman strokes a hand through his green-dyed hair and gives you a [if Libido of Spike > 40]slightly frightened[else]respectful[end if] nod.";
+	if doberman companion is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type]";
+		LineBreak;
 
 everyturn rule:
 	if doberman companion is tamed and Spike is in Sitting Area:

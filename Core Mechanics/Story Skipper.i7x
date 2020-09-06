@@ -529,11 +529,6 @@ to CharacterRestore:
 			let CharacterIdName be Name entry;
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
-				[
-				else if CharacterIdName is "yourself":
-					if debug is at level 10:
-						say "DEBUG -> The player doesn't get moved.[line break]";
-				]
 				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
 					move CharacterObject to TargetRoom;
@@ -608,6 +603,8 @@ to TraitRestore:
 					add TraitText entry to Traits of CharacterObject;
 					if TraitText entry is "Tamed": [pets]
 						now CharacterObject is tamed;
+					if TraitText entry is "currentCompanion":
+						now CharacterObject is currentCompanion;
 					[
 					if debug is at level 10:
 						say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
@@ -1132,10 +1129,10 @@ To say ProgressionExport:
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
 		LineBreak;
-		if Player is not lonely:
+		[if Player is not lonely:
 			say "     Preparing to travel to an alternate reality, you send your current ally away to await this in a safe place.";
 			repeat with x running through companionList of Player:
-				DismissFunction  printed name of x;
+				DismissFunction  printed name of x;]
 		if wrcursestatus is 5:
 			wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 		LineBreak;

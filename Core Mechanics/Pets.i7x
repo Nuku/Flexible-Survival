@@ -6,6 +6,7 @@ Version 3 of Pets by Core Mechanics begins here.
 
 Pet is a kind of person.
 A pet can be tamed. A pet is usually not tamed.
+A pet can be currentCompanion. A pet is usually not currentCompanion.
 A pet has text called summondesc.
 A pet has text called dismissdesc. Dismissdesc is usually "You send your ally away.".
 A pet has a text called assault.
@@ -47,6 +48,8 @@ to AddCompanionFunction (NewCompanion - a text):
 			else:
 				say "[summondesc of AddPet]";
 				if SummonFailure is false: [pet summon successful]
+					add "currentCompanion" to Traits of Addpet;
+					now Addpet is currentCompanion;
 					add Addpet to companionList of Player;
 				else:	[failed to call the pet]
 					now SummonFailure is false; [reset]
@@ -90,6 +93,8 @@ to DismissFunction (InputName - a text):
 	else:
 		say "[dismissdesc of DismissPet]";
 		if DismissFailure is false:
+			remove "currentCompanion" from Traits of DismissPet;
+			now DismissPet is not currentCompanion;
 			remove DismissPet from companionList of Player;
 		else: [pet couldn't be sent away]
 			now DismissFailure is false; [reset]
