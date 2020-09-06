@@ -1,4 +1,4 @@
-tallionboi by Sarokcat n Verath begins here.
+Stallionboi by Sarokcat n Verath begins here.
 
 "Adds a Stallionboi to Flexible Survival's Wandering Monsters table, with impreg chance"
 
