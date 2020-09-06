@@ -15,7 +15,7 @@ Jana by Kirov begins here.
 
 [ Level of Jana			- Toggle for some chit-chat ]
 
-[ Armor of Jana			- Toggle for room connection import fix ]
+[ Armor of Jana			- Not used ]
 
 Section 0 - Setup and Declaration
 
@@ -81,21 +81,37 @@ XP of Jana is 0.
 Level of Jana is 0.
 Armor of Jana is 0.
 
+JanaRoomFix is a number that varies. [@Tag:Notsaved]			[ used to control whether the import fix has been run ]
+JanaRoomFix is usually 0.
+
 Table of GameRoomIDs (continued)
 Object	Name
 Janas Bedroom	"Janas Bedroom"
 
 Janas Bedroom is a room. It is sleepsafe. The description of Janas Bedroom is "     You are greeted with the sight of a spartanly furnished room, with little more than a bed and nightstand as far as living accommodations are concerned. The exception, however, is the impressive array of lewd toys and bondage gear displayed proudly on the shelving of the nearest wall. There's even a pillory stashed into a corner, positioned perfectly to have someone strapped inside and be 'punished.'".
 
-change the West exit of Janas Bedroom to Mares Quarters;
+to connect Janas Bedroom:
+	change the West exit of Janas Bedroom to Mares Quarters;
+	if HP of Jana > 0:
+		change the East exit of Mares Quarters to Janas Bedroom;
 
-After going to Jana's Bedroom for the first time:
+After going to Janas Bedroom for the first time:
 	say "     You knock on the door to the room which Jana told you was hers, then step back to wait. After only a short pause, the door opens to reveal the stunning Amazon, complete with her leather getup. 'Hey there, Sweetie,' she greets you with a wink. 'Glad you decided to stop by. Come on in.' She waves you in and you step inside as she closes the door behind you. She gestures toward the small one-room living quarters, letting you take in the sight. 'Welcome to my humble abode!'";
 
 an everyturn rule: [ bugfixing rules for players that import savegames ]
-	if ( Armor of Jana is 0 ) and ( HP of Jana > 0 ): [ Jana is revealed her location to the player ]
-		[ change the South exit of Overgrown Street to Dragons Den; ]
-		now Armor of Jana is 1;
+	if ( JanaRoomFix is 0 ) and ( HP of Jana > 0 ): [ Jana has revealed her location to the player ]
+		change the East exit of Mares Quarters to Janas Bedroom;
+		now JanaRoomFix is 1;
+
+to say JanaInit:
+	connect Janas Bedroom;
+	move Jana to Janas Bedroom;
+
+When Play begins:
+	say "[JanaInit]";
+
+a postimport rule: [bugfixing rules for players that import savegames]
+	say "[JanaInit]";
 
 Section 1 - Discussion
 
