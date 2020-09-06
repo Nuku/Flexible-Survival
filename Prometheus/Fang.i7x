@@ -1456,7 +1456,7 @@ an everyturn rule:
 	if the player is in the Grey Abbey Library and ( HP of Fang is 3 or HP of Fang is 4 ) and felinoid companion is tamed:
 		increase ffrivalry by 1;
 		let num be a random number between 5 and 20;
-		if num >= ffrivalry and Felinoid companion is the Companion of Player:
+		if num >= ffrivalry and Felinoid companion is listed in companionList of Player:
 			project the Figure of Fang_face_icon;
 			say "[one of]Fang locks his steely gaze on Klauz and growls softly.[or]Klauz rubs up against you, pushing you away from Fang in a possessive manner.[or]The felinoid at your side growls at Fang.[or]Your felinoid companion and your alpha wolf growl and snap at one another from a few feet away for a minute.[or]Your alpha wolf and the felinoid exchange angry glares at one another and possessives stares at you.[or]Fang growls at Klauz as he moves between you and him. They glare at each other like that for a few moments before breaking off, both clearly angry at the other's presence near you.[or]The feral wolf and large felinoid growl and hiss at one another as they circle around you like you're some kind of prize.[at random]";
 			now ffrivalry is 0;

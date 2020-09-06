@@ -31,6 +31,7 @@ to say ebdrakevic:
 		else:
 			say ". You're half afraid she'll continue assaulting you, but it seems she finally gets bored and goes off to harass something else.";
 			say "     Thankfully, as you finally find a place to catch your breath, the ordeal doesn't leave you with any lasting damage, but you imagine you're going to have some trouble walking for a couple hours...";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Drake";
 	else if Player is female and a random chance of 2 in 3 succeeds:
 		say "     Her plans become clear when you feel the tip one of her talons caress along the crevice of your sore behind, teasing you before the razor sharp thing forces its way through[if Cunt Count of Player > 1] one of[end if] your cunt[sfn]. She cackles as you tremble against her digit so casually shaming you.";
 		say "     '[one of]Such a soft hole, I'm going to take great joy in ravaging it[or]I'm going to love tearing you in half[or]Oh, don't worry, you're not going to feel a thing... After I'm done with you[at random]!' Finally pulling the talon free, it's apparent she wanted to humiliate you more than prepare, [if scalevalue of Player > 3]climbing on top of[else]positioning herself behind[end if] you before the pointed tip of the reptile's savage dick briefly presses against you supple lips. Immediately, she plunges the massive thing as far in as she can, grunting as she forces what remains with successive thrusts. Not only is it apparent that she doesn't care to prepare you, but she actively enjoys hearing you howl in pain as her sharp barbs dig into your tender flesh, laughing and mocking you all along the way.";
@@ -43,6 +44,7 @@ to say ebdrakevic:
 		else:
 			say ". You're half afraid she'll continue assaulting you, but it seems she finally gets bored and goes off to harass something else.";
 			say "     Thankfully, as you finally find a place to catch your breath, the ordeal doesn't leave you with any lasting damage, but you imagine you're going to have some trouble walking for a couple hours...";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Drake";
 	else:
 		say "     The dragoness circles around your[if scalevalue of Player > 3] larger,[end if] [bodytype of Player] form, she wraps [if scalevalue of Player > 3]both[else]one[end if] of her scaled hands around your neck, pulling your head forward until you're forced to stare down her glowing eyes.";
 		say "     '[one of]Ha[or]Hmm[or]Hmpf[at random], [one of]like what you see[or]don't you find me pretty[or]are you arrogant, or just plain stupid[at random]? [one of]How about a kiss for the lady[or]Would you like to feel this lady's tongue[at random]?' She doesn't seem to care for your response, because immediately she presses her coarse, scaled lip against yours, her powerful tendril-like tongue piercing your maw's depths.";
@@ -55,6 +57,7 @@ to say ebdrakevic:
 			say "     You feel like you briefly black out from the intense sensation. You quickly regain consciousness, however, as the cackling monster kicks at you, having left you slumped on the ground...";
 		else:
 			say "     You feel like you briefly black out from the intense sensation. When you regain you thoughts, it seems she had push you off of her and left you abandoned, a faint memory of her mocking laughter and the intense pain of being full with her molten seed all she's left you with. Once the discomfort subsides and your head clears, you're able to scramble off someplace safe.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Drake";
 
 to say ebdrakedef:
 	say "     The drake reels backward, panting for breath as she falls to her knees, gouts of smoke spouting from her lips and nostrils.";

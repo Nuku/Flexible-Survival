@@ -183,7 +183,9 @@ to say losetodolphinflatable:
 			if dolescape is not 2:
 				now dolinfloss is -100;
 				now XP of Player is 0; [prevents accidental level up]
-				if the player is not lonely, now XP of companion of Player is 0;
+				if the player is not lonely:
+					repeat with x running through companionList of Player:
+						now XP of x is 0;
 				now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
 				now TailName of Player is "Bottlenose Toy"; [TODO: Seems outdated. Remove this? (@Stadler#3007)]
 				now FaceName of Player is "Bottlenose Toy";

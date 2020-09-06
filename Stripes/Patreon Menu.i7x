@@ -56,19 +56,24 @@ carry out supersponsor:
 				now ssmb is false;
 			say "     The maintenance boost improves the effectiveness of medkits and using the journal by 50%. It is now [if ssmb is true]active[else]inactive[end if]";
 		else if calcnumber is 3:
-			if companion of Player is nullpet:
+			if companionList of Player is empty:
 				say "     'How do you expect to train one of your pets if you don't have them here with you?' Trixie asks.";
-			else if level of companion of Player >= level of Player - 3:
-				say "     'The pet trainer can only train a pet until they're three levels below your own. This one's already reached that point,' Trixie explains.";
-			else:
-				say "     During your conversation with Trixie, the [companion of Player] has been confused and concerned as you talk to apparently no one. Trixie waggles here fingers in their direction and they fall into a trance. A set of VR goggles and headphones are magicked onto their head and start to play. They absorb the information from the VR session, auto-magically training them in mere minutes. Once the training session is over, the equipment disappears and your companion comes out of their trance with increased skill.";
-				let nn be ( level of Player - level of companion of Player ) - 3;
-				let XPfactor be 5;
-				if "Good Teacher" is listed in feats of Player:
-					now XPfactor is 3;
-				increase XP of companion of Player by ( ( level of companion of Player * 2 ) + ( nn - 1 ) ) * nn * XPfactor;
-				repeat with x running from 1 to nn:
-					pet level up;
+			else if number of entries in companionList of Player is greater than 1:
+				say "Choose which companion you would like to train";
+			else if number of entries in companionList of Player is 1:
+				let x be entry 1 of companionList of Player;
+				if x is not NullPet:
+					if level of x >= level of Player - 3:
+						say "     'The pet trainer can only train a pet until they're three levels below your own. This one's already reached that point,' Trixie explains.";
+					else:
+						say "     During your conversation with Trixie, the [x] has been confused and concerned as you talk to apparently no one. Trixie waggles her fingers in their direction and they fall into a trance. A set of VR goggles and headphones are magicked onto their head and start to play. They absorb the information from the VR session, auto-magically training them in mere minutes. Once the training session is over, the equipment disappears and your companion comes out of their trance with increased skill.";
+						let nn be ( level of Player - level of x ) - 3;
+						let XPfactor be 5;
+						if "Good Teacher" is listed in feats of Player:
+							now XPfactor is 3;
+						increase XP of x by ( ( level of x * 2 ) + ( nn - 1 ) ) * nn * XPfactor;
+						repeat with h running from 1 to nn:
+							pet level up x;
 		else if calcnumber is 4:
 			if ssxpa is false:
 				now ssxpa is true;

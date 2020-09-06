@@ -199,7 +199,7 @@ to say ResolveEvent To The Unknown:
 		ItemGain null essence by 1 silently;
 		say "     You have obtained a [bold type]Null Essence[roman type] and placed it in your inventory.";
 		WaitLineBreak;
-		if companion of player is demonologist or Xaedihr is in Grey Abbey Library:
+		if demonologist is listed in companionList of Player or Xaedihr is in Grey Abbey Library:
 			say "     'Ah... That is the void, alright. Such openings are obviously traces of clumsy dimensional traveling.' You hear a voice speaking behind you, and notice that Xaedihr was tagging along right after you. 'Do not enter this place if you don't have to. It will consume your mind the more time you spend in there. This was just a glimpse of what it can do... Even experienced sorcerers choose to stay away.' He explains, walking to your side in the process. 'But if you must, then I recommend that you take me with you. This [italic type]Null Essence[roman type] that you've got has tremendously useful properties, and I find myself helplessly drawn to it.' Indeed, it might be a good idea to have someone as powerful as your half-demon friend accompanying you through perilous realms like this.";
 			say "     'Though do be wary of that serpent, it seems to be the gatekeeper and it will, most certainly, attempt to eat you. Whole. Literally. Very ill-advised, even if you happen to be a vore enthusiast, in which case I will feed you to it myself.' He finishes speaking with a tone of sarcasm, so remarkable that you're actually not quite sure if he is serious or not. Regardless, you thank him for the explanation. It would be far worse going in blind.";
 		else:
@@ -372,7 +372,7 @@ to say VRMoveOptions:
 					increase VRTentacleAbominationTracker by 1;
 			if VRDarkTyrantTracker is 3: [Will always attack first]
 				say "     That was a bad decision. With the Dark Tyrant on your tail, not attempting to move through the dimensional line of this realm only earns you a direct confrontation with his great and menacing shadow. Your immediate surroundings darken as the gigantic abomination of dark slime grows before you, licking his own black gooey face with a hungry toothy grin. Solid liquid drips from each of his extremities, including from the monstrous shape of a cock permanently erect between his massive legs, its slit gaping as the pitch black goo keeps leaking.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     [italic type]It doesn't seem like Xaedihr can help you here, either. You've gotten separated from him.[roman type][line break]";
 				WaitLineBreak;
 				say "[VRDarkTyrantPreBattle]";
@@ -411,7 +411,7 @@ to say VRMoveOptions:
 					increase VRTentacleAbominationTracker by 1;
 			if VRDarkTyrantTracker is 3:
 				say "     That was a bad decision. With the Dark Tyrant on your tail, not attempting to move through the dimensional line of this realm only earns you a direct confrontation with his great and menacing shadow. Your immediate surroundings darken as the gigantic abomination of dark slime grows before you, licking his own black gooey face with a hungry toothy grin. Solid liquid drips from each of his extremities, including from the monstrous shape of a cock permanently erect between his massive legs, its slit gaping as the pitch black goo keeps leaking.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     [italic type]It doesn't seem like Xaedihr can help you here, either. You've gotten separated from him.[roman type][line break]";
 				WaitLineBreak;
 				say "[VRDarkTyrantPreBattle]";
@@ -460,32 +460,32 @@ to VREncounterTrackerCheck:
 			if a random chance of 1 in 2 succeeds:
 				now VRVoidSerpentTracker is 3; [shape]
 				say "     There is a long shape slowly wiggling by your side, visible beyond the veil. If you were to move an inch, it would probably see you.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     [italic type]Whispering, Xaedihr tells you 'Hold your position, or it will see you.'[roman type][line break]";
 			else:
 				now VRVoidSerpentTracker is 4; [hissing]
 				say "     An ominous hissing disturbs you for a moment, and it is coming from further ahead. There seems to be a giant serpent right in the middle of your path, but it is not advancing. It seems you are not standing where it wants you to be.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     [italic type]Whispering, Xaedihr tells you 'If it behaves like any normal snake, it doesn't like to be challenged. Don't make any sudden movements, but most importantly, back away, carefully.'[roman type][line break]";
 		else if VRVoidSerpentTracker is 4: [in case they don't stop hissing]
 			say "     An ominous hissing disturbs you for a moment, and it is coming from further ahead. There seems to be a giant serpent right in the middle of your path, but it is not advancing. It seems you are not standing where it wants you to be.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				say "     [italic type]Whispering, Xaedihr tells you 'If it behaves like any normal snake, it doesn't like to be challenged. Don't make any sudden movements, but most importantly, back away, carefully.'[roman type][line break]";
 		if a random chance of 3 in 5 succeeds and VRPeculiarSummonerTracker < 3:
 			increase VRPeculiarSummonerTracker by 1;
 		if VRPeculiarSummonerTracker is 3:
 			say "     You feel like you are being observed by someone of a great power, and that they are very close. It is impossible to tell from which direction you are sensing this, but it seems to be from within the core line. Perhaps there is a chance you could lose them if you were to not be in their line of sight?";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				say "     [italic type]Whispering, Xaedihr tells you 'Lose them beyond the veil, they won't be able to follow. But if you can't, I doubt they will attack carelessly.'[roman type][line break]";
 		if VRTentacleAbominationLinger is 3:
 			say "     The sluggish, ominous presence that used to threaten you from above seems to be gone, for now.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				say "     [italic type]'Tentacle Abomination gone. That's a relief.' says Xaedihr as he turns to you.[roman type][line break]";
 			now VRTentacleAbominationTracker is 1;
 			now VRTentacleAbominationLinger is 0;
 		if VRTentacleAbominationTracker is 3:
 			say "     There is an ominous presence hovering above you, with a sort of sluggish and slimey sounds echoing through. Looking up, there seems to be nothing, but there is this imminent sensation that something, or someone, might be about to fall right on top of you.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				say "     [italic type]Whispering, Xaedihr tells you 'Look out for those tentacle abominations. They are everywhere, so don't linger around in the exact same spot for too long, unless you want one of them to find you. Although I don't think it likes snakes... but even so, it will stay in the veil, too, so beware.'[roman type][line break]";
 			if a random chance of 3 in 4 succeeds:
 				increase VRTentacleAbominationLinger by 1;
@@ -493,7 +493,7 @@ to VREncounterTrackerCheck:
 			increase VRDarkTyrantTracker by 1;
 		if VRDarkTyrantTracker is 3:
 			say "     [bold type]The air freezes around you. Not physically or in any realistic meaning of the word, but in the form of a menacing presence hovering over you. Its great shadow surges, ready to catch you in a moment of distraction...[roman type][line break]";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				say "     [italic type]Whispering, Xaedihr tells you 'Well, you see that black thing you summoned when you pulled the sword? Don't stop running now, or you will get eaten by it. And stick to the core line. The other monsters won't be a problem with its presence.'[roman type][line break]";
 	else: [Dark Tyrant is an imminent threat]
 		say "     [bold type]You are still in imminent danger of being caught by the Dark Tyrant.[roman type][line break]";
@@ -554,7 +554,7 @@ to VREvents: [Events that can happen]
 		else:
 			if VRTentacleAbominationTracker is 4:
 				say "     Although as you make your way across the veil, you notice a disturbance in the walls when you attempt to proceed, as if something was waiting for you... The air around you stops, and there is no sound but just one comparable to a giant slimey slug crawling over the surface. Then, it's not just one, but many, many of them, and their shapes seem to be appearing in the form of shadows, all while something in the middle starts poking at the wall of darkness from the other side.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     [italic type]'I would strongly recommend a hasty retreat. Else you want to have a date with an especially... tentacular being.' says Xaedihr, as he urges you to leave.[roman type][line break]";
 				if carried of ancient tome > 0 and TentacleInteractions > 0:
 					say "     [bold type]Something seems to be going terribly wrong with your Ancient Tome... It seems to be pounding at your mind like an angry ram,[roman type] for the lack of a better description, as all it gives you is a throbbing headache.";
@@ -637,7 +637,7 @@ to say AbyssalEdgeEvent:
 	WaitLineBreak;
 	say "     These trickeries of the mind continue for what seems to be an eternity, testing your patience and resilence to their extremes. Even if you wanted to head back, you would have to cross all the illusionary walls again, which seem to be ever shifting. In fact, whenever you walk, the opening that is your obstacle changes its position as if it was a reflex of light, and at the same time, it becomes your obstacle. You learn how to use your head to figure out your way forward, but it takes a heavy toll on you. It is expected from a place that attempts to bring you to desperation all the time, one that is unforgiving for the weak wills.";
 	say "     An idea about the apocalypse and the nanites sprouts in your mind, planting a suggestion about how much better it is than this wretched place. Your thoughts dwell in the many sex-crazed creatures who would offer, or sometimes just forcingly give you, a long time of ecstacy and pleasure that is much more preferred than this darkness. You even find yourself mumbling about it out loud...";
-	if companion of player is demonologist:
+	if demonologist is listed in companionList of Player:
 		say "     [italic type]...But you're very quickly brought to reality once you feel a powerful smack on the back of your head. 'Really? Are you broken so easily? It's just a simple illusion, no need to wish to get raped out of despair.' Xaedihr is paying attention to your condition and watching after you... in his own way.'[roman type][line break]";
 	else:
 		say "     ...But you need to shake away from it. You can't give up here just now, this is simply a mind trick. You can still press on and hopefully find what this place is hiding from you, though not without suffering from the struggle.";
@@ -645,7 +645,7 @@ to say AbyssalEdgeEvent:
 	say "     It doesn't take long, now. Walking just a bit more eventually pays off, and you're free of those sick walls attempting to drive you crazy. And what you see in front of you now is... peculiar, to say the least.";
 	WaitLineBreak;
 	say "     In a large area of only what seems to be comparable to a castle's chamber, a single light ray shines upon the handle of an upside down sword stuck into a pedestal that seems to be bleeding, but this [']blood['] is pitch black, dripping into another pool of darkness surrounding it. Something about this sends shivers down your spine, because of how much it resembles a living being with an open wound.";
-	if companion of player is demonologist:
+	if demonologist is listed in companionList of Player:
 		say "     [italic type]'I would not pull that sword if I were you. It seems to be sealing something. The moment that you remove it from the pedestal will probably release something into this realm. Something that I am not quite sure it is defeatable without some sort of extravagant ritual. But I won't stop you. Damned be this dimension, for all I care.' Xaedihr gives you important information and a personal opinion.";
 	say "     It seems like you [italic type]could[roman type] pull the sword off and claim it, but you don't know what consequences it could bring...";
 	say "     [bold type]Will you do it?[roman type]";
@@ -664,7 +664,7 @@ to say AbyssalEdgeEvent:
 		WaitLineBreak;
 		say "     You have released the [bold type]Dark Tyrant[roman type] into this realm, and it will chase you around from now on. If it lurks close, do not stop moving, or it won't hesitate to consume you. This is a battle you cannot win.";
 		say "     Also your [bold type]Abyssal Edge[roman type] became an [bold type]Abyssal Remnant[roman type].";
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			say "     [italic type]Your half-demon friend turns to you, looking at the broken sword hilt in your hands still. 'Do not throw it away. Let me have a look at it once we leave.' he says, before he allows you to keep going. Interestingly enough, he doesn't seem fazed by what just happened.[roman type][line break]";
 		now Resolution of Gift From Abyss is 2; [Dark Tyrant has been released]
 		now VRDarkTyrantTracker is 0;
@@ -718,7 +718,7 @@ to say VRGatewayToFreedom:
 	say "     [bold type]Gateway To Freedom[roman type][line break]";
 	say "     Amidst your steps towards the unknown, the dimensional walls around you shift and take shape into a tunnel right before you can perceive it completely, looking like you just walked into a pathway to an entirely different place. As the obscurity unveils itself, a dimming luminosity strikes your eyes, making you reflexively cover your face to avoid the dazzle. In fact, you feel yourself lighter as your body begins to warm, a heat of familiarity so noticeable in contrast beginning to cover you and wash the fear away. It welcomes you with an inviting embrace, as if it wanted your presence to merge with its own.";
 	say "     However, you do not feel compelled to press on, having the chance to head back into the darkness of the Void if you so desire. Having this chance, nonetheless, fills you with the hope that you're inevitably deprived of while roaming the depths of such an undesirable place.";
-	if companion of player is demonologist:
+	if demonologist is listed in companionList of Player:
 		say "     [italic type]Xaedihr, who still remains in your shadow, finds it pertinent to assure you that this is safe. 'We found a way out. No danger here. Press on if you want to leave, go back if you don't. I'll follow you regardless.'[roman type][line break]";
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Allow the light to take you in.";
@@ -823,7 +823,7 @@ to say VRUnfortunatePrey:
 	WaitLineBreak;
 	if player is kinky:
 		say "     The way the serpent seemed to feed on someone who was walking by, taking its sweet time to taste and feel its prey before swallowing them down entirely, it just seemed to turn you on, somehow... You are not quite sure why, or maybe you are? Nonetheless, this place definitely does something to you, and you can't help but be thinking about it for a while...";
-		if companion of player is demonologist and "Invoke Dream - Void Serpent I" is not listed in traits of Xaedihr:
+		if demonologist is listed in companionList of Player and "Invoke Dream - Void Serpent I" is not listed in traits of Xaedihr:
 			say "     [italic type]'Really? That turned you on? Oh, please, do remind me to kick your ass into its mouth the second it appears to fight us, then let me know how it feels! Don't worry about gruesome and slow death as your body melts in digestive acid, I will summon your spirit or something.' Ah, your snarky and sarcastic [']friend['] wishing you the best, as expected from Xaedihr. 'No, I don't wish you death, I was just being an ass. Though if you want to safely experience that, I might... be able to reproduce something nice during your sleep. Just don't... go on a suicide streak, okay? No need for that.' Oh, is he actually worrying about you? You're not quite sure what to think of that either, but it seems he can actually do something new for you.[roman type][line break]";
 			say "     Xaedihr has learned a new spell, [bold type]Invoke Dream - Void Serpent I[roman type], which can be used anytime when talking to him. It will reproduce a scene with the Void Serpent at the safety of your familiar world, or even home.";
 			say "     This will happen sometimes when facing certain events for kinky fellows. One could guess this is the half-demon's desperate attempt to protect those who are especially kinky from making dangerous decisions, or perhaps he's just kinky himself. We will never know.";
@@ -849,7 +849,7 @@ to say VRUnfortunatePrey:
 
 to say VRCreepyVisage: [Oh no.]
 	say "     ... Though as you make your way beyond the veil, you find only darkness. It is worse than finding nothing at all, since the way behind you blocks everytime you manage to make it across. With no other option but to continue, you thread carefully in hopes of this being just tough luck and nothing special, or just a tiny little drawback. Have to remain positive in one if to make it through this place safely, but the atmosphere is so dense... There is only lifeless silence, nothing else at all. It is as if you went somewhere you should not be walking into... Your mind is immediately thrown into disarray.";
-	if companion of player is demonologist:
+	if demonologist is listed in companionList of Player:
 		say "     [italic type]Then you look back, looking for your companion. He's gone. Between you and your surroundings, there is nothing but darkness.[roman type][line break]";
 	WaitLineBreak;
 	Linebreak;
@@ -958,7 +958,7 @@ to say VRTendrilPlants:
 		say "[VRMoveOptions]";
 
 to VRTPKinkyLoss:
-	if companion of player is demonologist: [Xaedihr is there]
+	if demonologist is listed in companionList of Player: [Xaedihr is there]
 		say "     [italic type]Noticing your state of uncontrollable arousal, Xaedihr intervenes immediately.[roman type][line break]";
 		say "     'Okay, insult me however you want, decide to not bring me along next time, but right now, I won't let you touch these no matter how hard you try.' What?! Xaedihr is keeping you away from the fun! He is just pushing you forward without letting you have a tiny little whiff of those sweet fragrances, or just a brief touch of that floral warmth... or a taste of that oozing thick sap... 'There is enough dick and pussy to play with outside, you don't need these. Jeez, what are you, a sex addict? Must I save you from making dumb decisions all the time?' You struggle, even though the half-demon's strength is incomparably significant against yours, but you are in no real condition to think for yourself right now. For some reason. What were you doing, again? Right now, you are just feeling Xaedihr's considerable bulge rubbing against your buttocks, and his muscular arms holding yours still very tightly...";
 		say "     'Ah, crap... This place goes on and on... What a nuisance.' He's starting to pant, having to almost drag you forward as you mindlessly fight against his efforts. 'How about covering your nose next time you're in here?! Ugh, and stop... thrashing about! I swear I'll knock you out!' Although no matter how much the half-demon attempts to stop you, he too begins to feel affected by the continuous rubbing you're providing him with, a hard-on starting to appear obvious underneath his dark pants. 'Fuck fuck fuck... Not now... You horny, fucking... Argh! T-this is not the place for that!' Now he is seriously panting from arousal, and when out of ideas, he attempts to cover your nose and mouth from breathing in any of those arousing spores. The other hand, however... heads towards your sex, as he begins to caress you between the legs.";
@@ -1068,7 +1068,7 @@ to say VRQuestionableStuff:
 	WaitLineBreak;
 	say "     During one of your pauses to catch up your breath, you begin to hear some odd sounds. Something squishy, reminding you of air trying to escape some thick liquid, then a slimey stretch... It's coming from above you, so you immediately lift your gaze... only to find out that the ceiling is occupied by tons of phalic tentacles and thin-pointed tendrils slowly wiggling their way down, and an enormous [one of]veiny penis-shaped creature[or]plump pussy-shaped creature[at random] hovering over your head as their central mass, approaching you at an alarming rate. When you realize this, a drop of some thick liquid falls right on your face, and it persists no matter how much you attempt to rub it off, making your skin incredibly soft and slippery!";
 	say "     Might be the thing that allows them to feed on and swallow struggling prey like you with little effort, and it does seem to do something else to you! Your entire body feels a little tingly...";
-	if companion of player is demonologist:
+	if demonologist is listed in companionList of Player:
 		say "     [italic type]Behind you, Xaedihr makes a recommendation 'Ignore that thought and proceed further. If anything happens, I can push them away. Go!'[roman type][line break]";
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - You could actually use this to slip your way through more easily...";
@@ -1076,7 +1076,7 @@ to say VRQuestionableStuff:
 	if Player consents: [covering themselves in the juice is a bad idea, its arousing properties with the rubbing against the walls makes it more difficult... the beast catches up and swallows the player. Xaedihr is unable to save them, his only option being leaving on his own.]
 		Linebreak;
 		say "     Yes! You could just keep rubbing that slimey and slippery stuff all over your body and stuff, and that will help you feel better while grinding and rubbing yourself against the walls to... Wait, it does feel good... So good...! The more you cover yourself with it, the better it feels. You can't stop... You cannot help yourself but to continue to do it... What is it? Why is it so hot...? Why can't you think anymore? There is just ecstacy taking over your mind, now, and you're unable to move an inch. It's not like you want to, even, it feels so damn good that you don't care about anything else. Is there someone calling for you? Was there any goal you had in mind? None of it matters now. You want to feel all of these hot tendrils that were to come to get you caress every inch of you, as they do so well...";
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			say "     [italic type]You see a flash of red before your eyes... You don't remember what it could mean... But it is gone, now.[roman type][line break]";
 		WaitLineBreak;
 		VRTPBadEnd2;
@@ -1085,7 +1085,7 @@ to say VRQuestionableStuff:
 		say "     Well, you cannot stay here! Those things will catch up to you if you don't move! Making haste, you try your best to squeeze through the walls the fastest you can. It actually starts to hurt, the friction between your skin and its hard surface will surely leave cuts and stratches on your whole body, but it is a matter of survival, so you cannot be picky about it. Trying your very best, you try to create enough momentum to slide through between the walls by pushing yourself with both your hands, knees and feet. It hurts, badly, and your back feels like it's burning hot, but you don't let that discourage you. Just a little hesitation would have you covered in that thick stuff, and gave any of its extensions enough time to catch you.";
 		say "     Your hasty movements provoke the tendrils even further, and them seem to be moving faster thanks to that... Which is bad. Some of them graze at your arms as you shake them off, and one wraps around your leg as you try to kick it away. You are so close...";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			say "     [italic type]'Away with you, filthy stuff.' says Xaedihr in a contemptuous tone, as flames as black as the void burn through the tentacles that are threatening you. Surprisingly, it doesn't harm you in any way, but it surely relieves you. Besides that, the tendrils are still small enough to kick, shove away and smash against the wall as they retreat in pain, or something similar. Adrenaline surges through you as you fight for your life, until you're finally able to pull off and escape through the exit of this wretched area!";
 			say "     You breathe in relief, for being back in the relative familiarity of the core line. 'Now we know where those demons got the tentacle beasts from. It appears they have easy access to the void... This is bad.' comments your half-demon companion, contemplating the abominations from just now. They appear to be of the same ones you faced in the Hell Realm.[roman type][line break]";
 			if "Strong Psyche" is listed in feats of Player:
@@ -1293,7 +1293,7 @@ to VROddTreasurePathChoice:
 			say "     There is another sound that you hear, one much more subtle than the thuds, within the intervals of the triple hits. Something metallic and heavy being dragged across the ground, nearing your position from above, but you don't quite see it. Must be at a higher level... but then you hear it from your right. Both directions, forward and backward, are completely dark, and you're remaining there with only your torch in hand, with no other choice but to continue. You do so, walking towards the darkness once more, daring the dangers of the void to come and get you, because nothing else can be done about it. It rings louder in your ears, the thuds, the metal, and suddenly...";
 			WaitLineBreak;
 			say "     Your torch goes off.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				say "     [italic type]And you find yourself alone, realizing you had lost Xaedihr in the middle of these ruins.[roman type][line break]";
 			say "     Blinded in darkness as you are, you no longer have any control over the situation, if you ever had in the first place, and at the same time, you are sinking in silence. Still, there is no other way but forward, and despite your inability to see, you continue to walk. Step after step, the only thing that begins to change is an ominous light slowly appearing at the end of the tunnel. You cannot help it, your movements quicken as you see yourself approaching the light, like a faint hope that has emerged from within the darkest of times. But... it, too, goes off, sooner than you would have liked. The thuds happen again, and the metallic sound being dragged right towards you.";
 			WaitLineBreak;
@@ -1325,7 +1325,7 @@ to VROddTreasurePathChoice:
 				say "     This seems to have been the best call, as you are delivered across the veil and back to the core line.";
 				if player is kinky:
 					say "     However... how bad would it be to be the Elk Head Reaper's slave for a day...? Perhaps if you reencountered this creature, there would be a chance you could... volunteer for punishment.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     [italic type]'Huh, I was getting worried. Where have you been?' asks Xaedihr, as he sees you returning to his side. 'We should be more careful, getting separated like this could be bad.'[roman type][line break]";
 				now Resolution of Odd Treasure is 1;
 				WaitLineBreak;
@@ -1345,7 +1345,7 @@ to VROddTreasurePathChoice:
 			if player consents:
 				Linebreak;
 				say "     After taking all your options into consideration, you decide to keep walking forward, into the ever darkening path ahead where you will meet the Elk Head Reaper.  Everything still looks the same as before, with nothing new that's worth of notice. The sound from before stopped as well, now leaving a deafening silence in which the only thing you can hear is your own steps on the dirty ground.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     [italic type]Xaedihr sticks close to you, this time ready to defend you in case something bad happens.[roman type][line break]";
 				WaitLineBreak;
 				say "     As you make your way ahead, you begin to hear the three consecutive thuds echoing through the dusty dark tunnels. You know this to be the warning [EHRSubjectPro] does to announce [EHRPosAdj] presence in order to keep intruders away, or perhaps it is simply to instigate a feeling of fright as you venture into [EHRPosAdj] territory. It is not long until your steps are heard, the silence resuming its concerning hum as a sense of vulnerability strikes you like a thunder. Then, the sound of metal being dragged across the dirty floor reaches your ears, a constant wave that tickles your ears and provoking utmost discomfort in you. It seems to announce that the Elk Head Reaper is going further away from your position, but the sense of uncertainty fills you with doubt.";
@@ -1374,7 +1374,7 @@ to VROddTreasurePathChoice:
 						WaitLineBreak;
 						say "     'I warned you. If I ever saw you again, I would destroy you.' [EHRSubjectPro] says, approaching you with mere inches of distance, but remaining still, as if awaiting an answer from you.";
 						say "     'Do you accept your fate?'";
-						if companion of player is demonologist:
+						if demonologist is listed in companionList of Player:
 							WaitLineBreak;
 							say "     [italic type]You hear Xaedihr whispering behind you, the creature seemingly ignoring his presence. You don't know how, but he tells you something... 'I can help you fight [EHRObjectPro], but it's going to be tough... If you think you can't take [EHRObjectPro], just submit to [EHRPosAdj] will. Knowing [if player is submissive]you, you might even enjoy it[else]things, [EHRSubjectPro] will simply take what [EHRSubjectPro] wants from you and leave you be[end if]...[roman type][line break]'";
 						Linebreak;
@@ -1396,7 +1396,7 @@ to VROddTreasurePathChoice:
 					WaitLineBreak;
 					say "     'Such is the audacity of a mortal whose soul is so within my reach. Either you desire punishment, or you do not know what is good for you...' the demonic voice haunts your ears as the reaper eyes you through the elk skull, awaiting your reply after asking one last question.";
 					say "     'Do you accept your fate?'";
-					if companion of player is demonologist:
+					if demonologist is listed in companionList of Player:
 						WaitLineBreak;
 						say "     [italic type]You hear Xaedihr whispering behind you, the creature seemingly ignoring his presence. You don't know how, but he tells you something... 'I can help you fight [EHRObjectPro], but it's going to be tough... If you think you can't take [EHRObjectPro], just submit to [EHRPosAdj] will. Knowing [if player is submissive]you, you might even enjoy it[else]things, [EHRSubjectPro] will simply take what [EHRSubjectPro] wants from you and leave you be[end if]...[roman type][line break]'";
 					Linebreak;
@@ -1477,7 +1477,7 @@ to OTElkHeadReaperFight:
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     There was nothing you could do against the reaper's much superior strength. With one last strikes, it manages to pin you down as your attempts to resist come off as futile. Your body is exhausted, and while the creature has the upper hand, nothing remains for you but to accept your fate as [EHRPosAdj] new slave...";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			Linebreak;
 			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -1496,7 +1496,7 @@ to OTElkHeadReaperFight:
 	else if fightoutcome is 30: [fled]
 		say "     Flee? There is no escape from the monsters of the Void once you engage in battle with one of them. All you managed to do was to give the reaper enough time to catch you in [EHRPosAdj] grasp...";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			Linebreak;
 			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -1539,7 +1539,7 @@ to OTElkHeadReaperSubmit:
 			WaitLineBreak;
 			say "     There are a myriad of questions you could ask, but by instinct, you feel like it is not the time. Instead, you decide to walk away as he has ordered. He does not chase you, nor looks at you... And you can definitely feel the weight of his cum in your belly sloshing around inside you as you move. This is all very confusing...";
 			say "     With nothing else to do, you decide to follow through an extra exit that formed in the vicinity. It ends up taking you back to the Core Line, leaving the reaper's territory behind.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				WaitLineBreak;
 				say "     [italic type]Xaedihr catches up to you soon, looking at your... quaint shape. 'I see you got a filling from the elk boy reaper... Cute.' he comments, in an almost sarcastic way, as he pokes at your belly. 'You would cry if I told you what these void reapers are... Or maybe not, but it is a sad story. Either way, as long as you fulfill their desires, they won't hurt you. Think of them like a sincere version of a demon. They're not tricksters, just lost souls that hunger for others... But they can't actually take yours if you don't defy them.' he explains, as he lets go of you. 'Most do. Most people don't want to die... That is why the Grim Reaper is the most successful. This one... This one is very peculiar, though. Do keep me updated if you intend to continue to submit to him. Oh, and I'd appreciate if I could watch... For scientific purposes, obviously...' His last words seemed like a joke, but you really can expect anything from your half-demon companion...[roman type]";
 			WaitLineBreak;
@@ -1575,7 +1575,7 @@ to OTElkHeadReaperSubmit:
 			WaitLineBreak;
 			say "     There are a myriad of questions you could ask, but by instinct, you feel like it is not the time. Instead, you decide to walk away as she has ordered. She does not chase you, nor looks at you... And you can still feel the smell and taste of her pussy in your mouth. This is all very confusing...";
 			say "     With nothing else to do, you decide to follow through an extra exit that formed in the vicinity. It ends up taking you back to the Core Line, leaving the reaper's territory behind.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				WaitLineBreak;
 				say "     [italic type]Xaedihr catches up to you soon. 'I see you got a... private session with the elk girl reaper... Cute.' he comments, in an almost sarcastic way, as he points at your still glistening cheeks, probably still wet from the ordeal. 'You would cry if I told you what these void reapers are... Or maybe not, but it is a sad story. Either way, as long as you fulfill their desires, they won't hurt you. Think of them like a sincere version of a demon. They're not tricksters, just lost souls that hunger for others... But they can't actually take yours if you don't defy them.' he explains, as he lets go of you. 'Most do. Most people don't want to die... That is why the Grim Reaper is the most successful. This one... This one is very peculiar, though. Do keep me updated if you intend to continue to submit to her. Oh, and I'd appreciate if I could watch... For scientific purposes, obviously...' His last words seemed like a joke, but you really can expect anything from your half-demon companion...[roman type]";
 		else:
@@ -1598,7 +1598,7 @@ to OTElkHeadReaperDominate:
 to VRObtainUnknownVoidRelicOne:
 	say "     For the remainder of your adventure in the reaper's territory, you continue down the unexplored path ahead, traversing the tunnel unhindered. The bare light that exists comes from the faint amount of torches scattered along the walls, which dim just enough light so you don't trip over any of the loose rocks in the way. For some reason, the your surroundings seem fragile and easily shattered, so you thread carefully until you finally encounter a point of interest.";
 	say "     In front of you, there is a sort of an altar, far away from being of a religious nature. It looks demonic, even, with some odd symbols engraved in the stone that you cannot quite understand...";
-	if companion of player is demonologist:
+	if demonologist is listed in companionList of Player:
 		WaitLineBreak;
 		say "     [italic type]Fortunately, you do happen to have a demonologist companion with you. He inspects the altar with care, taking a few quiet minutes... 'Interesting how this realm seems to have connections to Hell. One would think it would stand as neutral as it could, but the fact that this dimension keeps throwing more darkness than angels at us is quite concerning. Anyway, the altar speaks of [']blood of the puregivers['] in a very... ancient manner, which I presume it would correspond to a Purifier Rank type of angel's blood, perhaps. Out of all the heavenly winged seraphs that are taking a vacation out there, who knows... One might be useful for us at some point.' he says, scratching his red beard with peculiar interest. 'Perhaps we should take note of this for future reference. It looks important...'[roman type][line break]";
 	else:
@@ -1902,7 +1902,7 @@ to say VRVoidSerpentPreBattle:
 			VREventsRoll;
 		else:
 			say "     With such a risky move in mind, you have to make sure you can get it right. By letting the serpent have the first strike and being prepared for it, you go for the dodge as the enraged creature lunged at you.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				Linebreak;
 				let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
@@ -1934,7 +1934,7 @@ to say VRVoidSerpentPreBattle:
 			VREventsRoll;
 		else:
 			say "     With such a risky move in mind, you have to make sure you can get it right. By letting the serpent have the first strike and being prepared for it, you go for the dodge as the enraged creature lunged at you.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				Linebreak;
 				let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
@@ -2273,7 +2273,7 @@ to VRVoidSerpentFightConclusion:
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     There was nothing you could do against the serpent's much superior strength. With one last body slam, it manages to pin you down as your attempts to resist come off as futile. Your body is exhausted, its venom running within you and your movements become sluggish, nothing remains for you but to accept your fate as its prey...";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			Linebreak;
 			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -2293,7 +2293,7 @@ to VRVoidSerpentFightConclusion:
 	else if fightoutcome is 30: [fled]
 		say "     Flee? There is no escape from the monsters of the Void once you engage in battle with one of them. All you managed to do was to give the serpent enough time to catch you in its grasp...";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			Linebreak;
 			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -2341,7 +2341,7 @@ to VRPeculiarSummonerFightConclusion: [The peculiar summoner is one of the few '
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     The way they move, their expertise at combat, you feel yourself overwhelmed by so much efficiency and technical experience. You are no match for the peculiar summoner, as they trap you in a hand made of some sort of rock that grips around you tightly. You are held helpless, and left at the robed figure's mercy...";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			Linebreak;
 			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -2378,7 +2378,7 @@ to VRTentacleAbominationFightConclusion:
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     No matter how much you struggle against the massive cluster of tentacles, it only grows stronger by the second you are fighting it, providing you with quite the challenge. Although, a few more strikes are you're barely capable of moving, having the tentacles finally reach you and immobilize you in place. All you see now is yourself being dragged through the floor as more of the abomination's extensions wrap themselves around your body...";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			Linebreak;
 			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -2404,7 +2404,7 @@ to VRTentacleAbominationFightConclusion:
 	else if fightoutcome is 30: [fled]
 		say "     Flee? There is no escape from the monsters of the Void once you engage in battle with one of them. All you managed to do was to give the abomination enough time to stretch its tentacles towards your legs, making you trip, then fall... and become a vulnerable target for the rest of them.";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			Linebreak;
 			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;

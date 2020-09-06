@@ -65,7 +65,7 @@ Table of GameCharacterIDs (continued)
 object	name
 orc supersized breeder	"orc supersized breeder"
 
-orc supersized breeder is a pet. orc supersized breeder is a part of Player.
+orc supersized breeder is a pet.
 NPCObject of orc supersized breeder is Urik.
 understand "Urik" as orc supersized breeder.
 printed name of orc supersized breeder is "Urik".
@@ -89,7 +89,8 @@ to say SummonUrik:
 		now Urik is nowhere;
 	else: [regular summoning]
 		say "     And how do you want to do that? Cell phone reception kinda went downhill with the start of the nanite apocalypse and it's not like you can just magic up Urik to appear next to you. Go pick him up yourself.";
-		now companion of Player is nullpet;
+		if orc supersized breeder is listed in companionList of Player:
+			remove orc supersized breeder from companionList of Player;
 
 to say DismissUrik:
 	project the Figure of Urik_clothed_icon;
@@ -164,7 +165,7 @@ to say UrikDesc:
 	else if PlayerControlled of Urik is true:
 		say "     Urik looks the part of a proud orc warrior, tall and strong, with a brutishly handsome face, his square jaw showing two sharp tusks jutting upwards. There are only two pieces of 'clothing' on his impressive physique, leaving little to the imagination. The first is a quite well-crafted leather harness that is strapped around Urik's chest - a masterpiece of tough, studded leather and shiny buckles that promises lots of handholds for fucking him. Covering the large orc's thighs, there is a tight-fitting pair of trunks with a mesh pouch at the front (showing off his package), as well as decorative slits on the sides. It is completely open on the back side, with only two straps on the top and bottom, allowing unrestricted access to his ass. The orc has black hair, an unruly mop of long strands falling down between his shoulder-blades, accentuated by a short beard following his chin-line. There is a moderate amount of chest hair on his pecs, curling around Urik's pierced nipples, then leading down to his crotch in a thinner treasure trail of hair. The bush of his pubes can be seen through the mesh of Urik's underwear and his legs bear a nice amount of body hair too.";
 		say "     As Urik notices your attention, the orc looks aside, careful not to meet your gaze, and he angles his body a little bit to show the curve of his ass. It almost seems to be a reflexive act, him falling into submissive behavior now that you've made it clear that you expect him to be mainly your breeding slut.";
-	if companion of Player is orc supersized breeder:
+	if orc supersized breeder is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 Conversation of Urik is { "<Placeholder>" }.
@@ -267,7 +268,7 @@ to say UrikTalkMenu:
 		now sortorder entry is 99;
 		now description entry is "Send Urik to stay with you in the Grey Abbey Library";
 	[]
-	if Urik is in Sitting Area or supersized orc breeder is companion of player:
+	if Urik is in Sitting Area or orc supersized breeder is listed in companionList of Player:
 		choose a blank row in table of fucking options;
 		now title entry is "How he should address you";
 		now sortorder entry is 100;
@@ -374,7 +375,11 @@ to say UrikTalk_BikerCop: [storytime with Urik]
 		say "     As you bring up the bike cop that Urik mentioned before, the orc's face draws into a wide grin. 'Made you curious with that one, eh? It was a pretty hot time, in more ways than one!' ";
 	else:
 		say "     As you bring up the bike cop again, the orc's face draws into a wide grin. 'Can't get enough of hearing about the little slut? Hah! Hope one of these days I can take you to enjoy Pat yourself!' ";
-	say "[if supersized orc breeder is companion of player]Chuckling as he adjusts his cock inside the stretchy shorts he's wearing, Urik gives an amused grunt, then starts to tell you the story[else]Leading you over to the sofa he has claimed as his own, the orc leans back into a comfortable sitting position, adjusting his cock inside the stretchy shorts he's wearing. Sharing a lewd look with you and reaching over to touch your thigh lightly, Urik lets out an amused grunt and starts to tell you the story[end if]: 'Okay, it was back in... [']92, yeah that sounds about right, and I was on the Mother Road, driving west, towards the coast. Absolute beauty of a bike giving a deep, rich vibration between my legs, and a young stud having his arms around my chest from behind. Man, I loved that bike - lots of power, and with the tank and trim lacquered in a bright metallic scarlet red. Did the finish myself when I got it back in [']88. The dude behind me on his third or so ride-along was Troy, my nineteen year old nephew. He was close to being accepted in the gang at that point. Solid, dependable lad, despite who his mother was.' Urik's voice takes on a biting edge as he says the last words, but he quickly brushes the thought aside and continues.";
+	if orc supersized breeder is listed in companionList of Player:
+		say "Chuckling as he adjusts his cock inside the stretchy shorts he's wearing, Urik gives an amused grunt, then starts to tell you the story";
+	else:
+		say "Leading you over to the sofa he has claimed as his own, the orc leans back into a comfortable sitting position, adjusting his cock inside the stretchy shorts he's wearing. Sharing a lewd look with you and reaching over to touch your thigh lightly, Urik lets out an amused grunt and starts to tell you the story";
+	say ": 'Okay, it was back in... [']92, yeah that sounds about right, and I was on the Mother Road, driving west, towards the coast. Absolute beauty of a bike giving a deep, rich vibration between my legs, and a young stud having his arms around my chest from behind. Man, I loved that bike - lots of power, and with the tank and trim lacquered in a bright metallic scarlet red. Did the finish myself when I got it back in [']88. The dude behind me on his third or so ride-along was Troy, my nineteen year old nephew. He was close to being accepted in the gang at that point. Solid, dependable lad, despite who his mother was.' Urik's voice takes on a biting edge as he says the last words, but he quickly brushes the thought aside and continues.";
 	say "     'So, there we were in the hot summer of 92, driving along at a good pace in the late afternoon sun, wind blowing into our faces and the open road stretching out to the horizon. Then I hear the motor of another bike, followed by a siren. Glance over my shoulder confirmed it was a fucking pig, having the nerve to wave me to the side. Twice actually, after I gave him the handsign to fuck off the first time.' Felt Troy's chest vibrate against my back as he laughed about the idiot's persistence. He knew what was what by that time, being close to initiation. Urik shakes his head in amusement at the idea of having to obey the law, then audibly cracks his knuckles. 'So, when it became clear the punk wouldn't go away, I slowed down and let my bike run out on the shoulder of the road, flicking down the kickstand. With me and Troy getting off the bike, biker piggy came to a stop not too far behind. I gave Troy a little wave to circle around when the cop strutted up to us.' Pitching his voice high, the orc adds, 'How fast do you think you were going, sir?'";
 	WaitLineBreak;
 	say "     Snorting, Urik explains, 'Man, when I got a good look at him, I realized a little piglet in disguise was standing there in front of me. Couldn't have been that much older than Troy, and trying so hard to appear as a proper man, from polished boots all the way up to mirror-shined aviator glasses and a clunky police helmet. Laughed as I saw it, and that made the boy angry.' Again changing his voice, Urik adds, 'Sir, this is no laughing matter! I'm gonna have to write you a ticket!' Grinning, Urik recounts, 'Such a stupid, overconfident kid. Still, I found him amusing and thought I'd give him a last chance, so I met his gaze as he was starting to reach for his little ticketing book. Then I reached up to tap the patch on my jacket, wanting to hell him that you don't ticket someone like me, and he just ignored it. Guess no one had taken that piggy aside to tell him what was what before sending him out on the road.'";
@@ -1265,7 +1270,7 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loya
 		now PlayerControlled of Urik is true; [squashed his hopes, told him he's just a cumslut]
 	now Loyalty of Urik is 6; [bro/slut decision made]
 
-instead of navigating Grey Abbey Library while (Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik is 6 and companion of player is not orc supersized breeder and a random chance of 2 in 5 succeeds): [Urik catches a hawkman]
+instead of navigating Grey Abbey Library while (Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik is 6 and orc supersized breeder is not listed in companionList of Player and a random chance of 2 in 5 succeeds): [Urik catches a hawkman]
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1339,8 +1344,8 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Play
 		try looking;
 		now Charisma of Urik is 99; [let him go]
 		now Loyalty of Urik is 8; [hawkman dealt with, grumpy Urik]
-	if companion of Player is orc supersized breeder:
-		now companion of Player is nullpet;
+	if orc supersized breeder is listed in companionList of Player:
+		remove orc supersized breeder from companionList of Player;
 
 after going to Sitting Area while (Urik is in Sitting Area and (Loyalty of Urik is 7 or Loyalty of Urik is 8)): [post-bird discussion]
 	if debugactive is 1:
@@ -1412,7 +1417,7 @@ instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true a
 		say "     DEBUG: Urik offers looting[line break]";
 	if Urik is in Sitting Area:
 		say "     As you arrive at the library, you immediately see Urik, who's casually leaning against the corner of the front desk, waiting for you. 'Hey [UrikPlayerAddress]!' he calls out, coming to a stand and walking up to you. Offering a respectful fist-bump that you return, the orc clears his throat, 'Just so you know, I've been looking around a bit in the neighborhood. Found some places not too far away that could have great loot. So... how about we have a little trip?' With a hopeful expression, the orc wiggles his eyebrows at you, then steps back over to the desk, leaning over it to grab a large sports bag that he demonstratively holds up, showing you just how much room for loot is in it. Finally, he hangs it over one shoulder by a solid-looking strap, grinning as he ways, 'I'm ready anytime, just talk to me and say the word!'";
-	else if companion of player is orc supersized breeder:
+	else if orc supersized breeder is listed in companionList of Player:
 		say "     As you arrive at the library and enter, Urik reaches out and taps your shoulder. 'Hey [UrikPlayerAddress]. I wanted to talk to you about something,' he says, coming to a stand before you and meeting your gaze. 'Remember that I checked out the neighborhood a bit on the way here? Well, there actually were a few places nearby that looked like they might have great loot. So... how about we have a little trip? Didn't want to bring it up before, since the location is actually fairly close to here, and I needed to get something from here anyways.' With a hopeful expression, the orc wiggles his eyebrows at you, then walks over to the front desk, leaning over it to grab a large sports bag stashed behind. Demonstratively holding it up, the orc shows you just how much room for loot is in it, then hangs it over one shoulder by a solid-looking strap. 'I'm ready anytime, just talk to me and say the word!'";
 	now Loyalty of Urik is 10; [he offered looting trips]
 	now Perception of Urik is 1; [enabled the talk option]

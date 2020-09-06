@@ -74,7 +74,7 @@ AlexandraBrutusInteraction is a number that varies.
 AlexandraKorvinInteraction is a number that varies.
 AlexandraCarlInteraction is a number that varies.
 
-instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of Player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
+instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and demon brute is listed in companionList of Player and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -82,13 +82,13 @@ instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of 
 		say "     DEBUG: Alexandra bangs Brutus - AlexandraBrutusInteraction: [AlexandraBrutusInteraction][line break]";
 	say "[AlexandraBrutusCuckScene]";
 
-instead of going up from Bunker while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of Player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
+instead of going up from Bunker while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and demon brute is listed in companionList of Player and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Alexandra bangs Brutus - AlexandraBrutusInteraction: [AlexandraBrutusInteraction][line break]";
 	say "[AlexandraBrutusCuckScene]";
 
-instead of going down from Grey Abbey 2F while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of Player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
+instead of going down from Grey Abbey 2F while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and demon brute is listed in companionList of Player and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Alexandra bangs Brutus - AlexandraBrutusInteraction: [AlexandraBrutusInteraction][line break]";
@@ -155,7 +155,7 @@ to say AlexandraBrutusCuckScene:
 		say "     'Spoilsport,' Alexandra barks, less than amused, then makes a few steps to pick up the jacket you so unceremoniously dumped on the floor. She shrugs into it, then zips up the front (a rare occurrence as she usually loves to present her breasts) and turns back to throw you a dirty look. 'Guess I'll have to look elsewhere to find something long and hard,' she adds in a mocking tease, stroking her fingers up and down the nightstick hanging from her belt. With that, she whirls around with a huff and stalks off.";
 		now AlexandraBrutusInteraction is 100;
 
-instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of Player is gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction is 0):
+instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and gshep is listed in companionList of Player and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction is 0):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -197,7 +197,7 @@ to say AlexandraKorvinCuckScene1:
 		say "     As Korvin grunts deeply and starts to come soon after, spraying quite a few long strings of his cum into your bent palm, you loudly say what a good pet he is. With a snide look at Alexandra, you add a moment later that at least one doggie here knows how to behave himself, then raise your hand to Korvin's muzzle. As the canine starts to eat his own load, you grin at the doberwoman bitch. Nothing more needs to be said, as it becomes clear to her that Korvin is YOURS, and Alexandra walks off with a huff.";
 		now AlexandraKorvinInteraction is 100; [stopped things cold]
 
-instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of Player is gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and gshep is listed in companionList of Player and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -239,7 +239,7 @@ to say AlexandraKorvinCuckScene2:
 	impregAlexandraChance with "Korvin";
 	NPCSexAftermath Alexandra receives "PussyFuck" from gshep; [Korvin's pet object is called gshep]
 
-instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of Player is not gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and gshep is not listed in companionList of Player and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

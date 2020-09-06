@@ -518,7 +518,7 @@ Definition: A situation (called x) is available:
 	no;
 
 Definition: A situation (called x) is PrereqComplete:
-	if PrereqCompanion of x is not nothing and PrereqCompanion of x is not companion of Player, no;
+	if PrereqCompanion of x is not nothing and PrereqCompanion of x is not listed in companionList of Player, no;
 	if PrereqTime is not "Any" and ((PrereqTime is "Day" and Daytimer is night) or (PrereqTime is "Night" and Daytimer is day)), no;
 	if Prereq1ResolvedMandatory of x is true and Prereq1 of x is not resolved, no;
 	if Resolution of Prereq1 of x is not listed in Prereq1Resolution of x, no;
@@ -4494,19 +4494,19 @@ To translate (k - a number):
 		now keychar is "INVALID";
 
 
-to Pet level up:
-	if companion of Player is nullpet:
+to Pet level up (companion - a pet):
+	if companionList of Player is empty:
 		increase score by 0;
 	else:
-		increase level of companion of Player by 1;
-		decrease XP of companion of Player by ( level of companion of Player minus 1 ) times 10;
+		increase level of companion by 1;
+		decrease XP of companion by ( level of companion minus 1 ) times 10;
 		if "Good Teacher" is listed in feats of Player:
-			increase XP of companion of Player by ( level of companion of Player minus 1 ) times 4;
-		say "[companion of Player] has gained level [level of companion of Player]! Congratulations!";
-		if remainder after dividing level of companion of Player by 3 is 0:
-			increase weapon damage of companion of Player by 1;
-		if remainder after dividing level of companion of Player by 5 is 0:
-			increase dexterity of companion of Player by 1;
+			increase XP of companion by ( level of companion minus 1 ) times 4;
+		say "[companion] has gained level [level of companion]! Congratulations!";
+		if remainder after dividing level of companion by 3 is 0:
+			increase weapon damage of companion by 1;
+		if remainder after dividing level of companion by 5 is 0:
+			increase dexterity of companion by 1;
 
 To level up:
 	increase level of Player by 1;
@@ -4619,8 +4619,8 @@ check resting:
 	else:
 		say "You have nothing to rest on.";
 		stop the action;
-	if companion of Player is not rubber tigress:
-		if ( there is a dangerous door in the Location of Player or the location of Player is fasttravel or the earea of location of Player is not "void") and location of Player is not sleepsafe:
+	if rubber tigress is not listed in companionList of Player:
+		if ( there is a dangerous door in the location of the player or the location of Player is fasttravel or the earea of location of Player is not "void") and location of Player is not sleepsafe:
 			now battleground is "Outside"; [standard setting]
 			if the earea of location of Player is not "void":
 				now battleground is the earea of location of Player;
@@ -4684,7 +4684,7 @@ to say Sleepmessage:
 		say "[link]Beat[as]rest[end link]";
 
 carry out resting:
-	if companion of Player is rubber tigress:
+	if rubber tigress is listed in companionList of Player:
 		artemisnap;
 		if nohealmode is true:
 			increase HP of Player by (level of rubber tigress) / 3; [grants additional rest]
@@ -5232,7 +5232,15 @@ carry out linkactioning:
 	linkaction noun;
 
 linkcheck is a person that varies.[@Tag:NotSaved]
-The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][if linkcheck is companion of Player], [link]dismiss[as]dismiss[end link][end if], [link]fuck[as]fuck [linkcheck][end link][line break]";
+The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][PetdismissCheck linkcheck], [link]fuck[as]fuck [linkcheck][end link][line break]";
+
+to say PetdismissCheck (linkcheck - a person):
+	if number of entries in companionList of Player is greater than 0:
+		let linkname be "";
+		now linkname is printed name of linkcheck;
+		repeat with companion running through companionList of Player:
+			if printed name of companion exactly matches the text linkname, case insensitively:
+				say ", [link]dismiss[as]dismiss [linkcheck][end link]";
 
 to linkaction (x - Person):
 	now linkcheck is x;
@@ -5576,7 +5584,8 @@ This is the self examine rule:
 	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
 		say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	if the player is not lonely:
-		say "Accompanying you is [link][companion of Player][as]look [companion of Player][end link], which is level [level of companion of Player].";
+		repeat with companion running through companionList of Player:
+			say "Accompanying you is [link][companion][as]look [companion][end link], which is level [level of companion].";
 	now looknow is 0;
 	rule succeeds;
 
@@ -9189,10 +9198,13 @@ to say set_invcolumns:
 Book 10 - Let the Games Begin
 
 to say promptsay:
-	let x be the Location of Player;
-	if companion of Player is not NullPet and NPCObject of Companion of Player is not Nullpet:
-		now NPCObject of Companion of Player is in location of Player;
-		now Sleeping of NPCObject of Companion of Player is false;
+	let x be the location of the player;
+	if companionList of Player is not empty:
+	 	repeat with y running through companionList of Player:
+			if NPCObject of y is not Nullpet:
+				now NPCObject of y is in location of Player;
+	[if companion of Player is not NullPet and NPCObject of Companion of Player is not Nullpet:
+		now NPCObject of Companion of Player is in location of Player;]
 	let z be the number of entries in invent of x;
 	if z > 0:
 		say "Visible Objects: ";

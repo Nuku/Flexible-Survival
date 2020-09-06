@@ -13,7 +13,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Gryphoness	"Gryphoness"
 
-Gryphoness is a pet. Description of gryphoness is "[gryphonessdesc]". Gryphoness is a part of Player.
+Gryphoness is a pet. The description of gryphoness is "[gryphonessdesc]".
 NPCObject of Gryphoness is Denise.
 understand "Denise" as gryphoness.
 printed name of gryphoness is "Denise".
@@ -115,7 +115,7 @@ instead of sniffing Gryphoness:
 		say "ERROR-Denise-3S: You should not be able to smell her right now.";
 
 An everyturn rule:
-	if companion of Player is Gryphoness and skipturnblocker is 0:
+	if Gryphoness is listed in companionList of Player and skipturnblocker is 0:
 		now tempnum is the remainder after dividing Libido of gryphoness by 4;
 		if a random number between one and 20 < ( 6 - tempnum ) and lastfuck of gryphoness - turns >= 4:
 			say "[sexwithgryphoness]";
@@ -217,7 +217,7 @@ an everyturn rule:
 		decrease lust of gryphoness by 1;       [pregnancy countdown]
 		if lust of gryphoness is 0: [time for the birth]
 			increase Libido of gryphoness by 1;   [increase to tempnum 3 -> birth message for next summon primed]
-			if companion of Player is gryphoness: [Denise is along as a pet]
+			if Gryphoness is listed in companionList of Player: [Denise is along as a pet]
 				say "     Looking around, you notice that Denise had slipped away while you were distracted with something. You wait for a little while and she returns, but ";
 				if T is 0:
 					say "not alone. She is cradling a young gryphlet in her arms, nursing her from her bosom. Her pregnant belly is already going down, her child delivered while she had slipped away. You both stroke and hug your new child, looking her over. You feel a swell of happiness and love for this unusual child. Like her mother, the young herm has blue feathers and tawny, leonine fur. She grows quickly and is soon walking alongside her mother, a cute, younger version of Denise in miniature.";
@@ -257,7 +257,7 @@ an everyturn rule:
 				say "You find your mind wandering to Denise, thinking about her and [if GryphonessKnowpreg is 1]her pregnancy[else]missing her for some reason[end if]. Perhaps you should check on her.";
 			increase score by 5;
 		else if lust of gryphoness is 16: [belly shows after 1 day]
-			if companion of Player is gryphoness and GryphonessKnowpreg is 0:
+			if Gryphoness is listed in companionList of Player and GryphonessKnowpreg is 0:
 				say "     Looking over at Denise, you notice that her belly's starting to swell rounder. She smiles happily at you, running her paws over her growing pregnancy. It seems you successfully knocked her up recently.";
 				now GryphonessKnowpreg is 1;
 			else if Player is in Garden View and Denise is in Garden View and GryphonessKnowpreg is 0:

@@ -42,7 +42,7 @@ To say Succubus loss:
 		say ""; [dealt with at the source]
 	else:
 		if lisaartemiscount1 > 0 and lisaartemiscount1 < 5, increase lisaartemiscount1 by 1;
-		if companion of Player is demon brute and HP of Lilith is 0 and inasituation is false:
+		if demon brute is listed in companionList of Player and HP of Lilith is 0 and inasituation is false:
 			if Player is male:
 				if BodyName of Player is "Incubus":
 					say "     'Good fight, dark brother,' the succubus says with a smile as she raises her hands in surrender and you order your companion to stop fighting and stand still. 'You are definitely the more powerful seducer,' she acknowledges with a smile as you grin back at her, 'and you do have a most interesting pet... how did you get him so - tame?'";

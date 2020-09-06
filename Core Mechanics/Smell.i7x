@@ -16,7 +16,7 @@ understand "smell [something]" as sniffing.
 check sniffing:
 	if the Location of Player is noun, continue the action;
 	if noun is not visible, say "What? I don't see any [noun] around here to smell." instead;
-	if the Companion of Player is noun:
+	if noun is listed in companionList of Player:
 		continue the action;
 	else if noun is a pet:
 		say "You don't have one of those with you right now." instead;
@@ -32,7 +32,7 @@ before sniffing:
 			say "I don't see any [Noun] around here to sniff.";
 			stop the action;
 	if the noun is a pet:
-		if the Companion of Player is noun:
+		if noun is listed in companionList of Player:
 			increase score by 0;
 		else:
 			say "I don't see any [Noun] around here to sniff.";

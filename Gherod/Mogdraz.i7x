@@ -90,12 +90,12 @@ to say MogdrazIntro:
 	AddNavPoint Hellfire Club;
 	connect Hellfire Club;
 	WaitLineBreak;
-	if companion of player is demonologist:
+	if demonologist is listed in companionList of Player:
 		say "     Just as you're about to leave, a familiar silhouette shows up by the entrance, walking towards you. Judging from the absence of guards, you come to a pretty obvious conclusion of who it is. Your companion Xaedihr has followed you back here, and he made sure to clear his own way...";
 		WaitLineBreak;
 		MogdrazXaedihr;
 
-instead of going north from Crimson Street while (resolution of Hellish Introduction is 1 and companion of player is demonologist):
+instead of going north from Crimson Street while (resolution of Hellish Introduction is 1 and demonologist is listed in companionList of Player):
 	say "     Just as you're about to make an entrance, your sorcerer friend immediately bends the will of the hellfire demons standing as guards, forcing them to collapse on the ground with powerful magic. 'I knew something was going on here.' You try to stop him, to no avail, as he charges ahead into the club. There is nothing you can do but to follow after him, hoping he doesn't make any further trouble...";
 	WaitLineBreak;
 	MogdrazXaedihr;

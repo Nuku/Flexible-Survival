@@ -422,7 +422,10 @@ to say NermineTalk5:
 		WaitLineBreak;
 		say "     'Come greet the visitor Cassim,' Nermine continues, looking with keen eyes at how the elven servant performs as he steps up to you and gives a deep bow, his hands pressed together before his chest. 'As-salamu alaykum,' the elf says as he lifts his head again, looking at you with shyly with almond-shaped eyes. 'How may I serve, effendi?' Before you can reply, Nermine interjects, 'Well done boy. You are learning. Our guest has brought along another opportunity for you to broaden your horizons.' With that, both of them turn to you again, Nermine with an expectant expression, Cassim in taunt anticipation at his next task.";
 		LineBreak;
-		say "     Do you [if companion of Player is not demon brute]summon and [end if]command Brutus to introduce the slender elf to his thick piece of a cock?";
+		say "     Do you ";
+		if demon brute is not listed in companionList of Player:
+			say "summon and ";
+		say "command Brutus to introduce the slender elf to his thick piece of a cock?";
 		if Player consents:
 			LineBreak;
 			say "     As Brutus steps forward after your command, Cassim's eyes widen and he can't help but stare at the demon's rippling muscles - and even more so at the massive shaft hanging between the purple giant's legs. It is clear that this is the biggest penis he's ever seen - making it kind of admirable that the smaller elf stands his ground, showing no fear - although he does gulp visibly as Brutus quickly gets fully hard and the massive erection twitches in Cassim's direction. Coming to a stance with his clawed feet set apart a bit, your demonic companions sets his hands on his hips and says, 'Come here, elf boy!'";
@@ -456,7 +459,10 @@ to say NermineTalk5:
 		WaitLineBreak;
 		say "     'Come greet the visitor Cassim,' Nermine continues, looking with keen eyes at how the elven servant performs as he steps up to you and gives a deep bow, his hands pressed together before his chest. 'As-salamu alaykum,' the elf says as he lifts his head again, looking at you with shyly with almond-shaped eyes. 'How may I serve, effendi?' Before you can reply, Nermine interjects, 'Well done boy. You are learning. Our guest has brought along another opportunity for you to broaden your horizons.' With that, both of them turn to you again, Nermine with an expectant expression, Cassim in taunt anticipation at his next task.";
 		LineBreak;
-		say "     Do you [if companion of Player is not demon brute]summon and [end if]command Brutus to introduce the slender elf to his thick piece of a cock?";
+		say "     Do you ";
+		if demon brute is not listed in companionList of Player:
+			say "summon and ";
+		say "command Brutus to introduce the slender elf to his thick piece of a cock?";
 		if Player consents:
 			LineBreak;
 			say "[BrutusCassimFuck]";
@@ -476,7 +482,10 @@ to say NermineTalk5:
 		WaitLineBreak;
 		say "     'Come greet the visitor Cassim,' Nermine continues, looking with keen eyes at how the elven servant performs as he steps up to you and gives a deep bow, his hands pressed together before his chest. 'As-salamu alaykum,' the elf says as he lifts his head again, looking at you with shyly with almond-shaped eyes. 'How may I serve, effendi?' Before you can reply, Nermine interjects, 'Well done boy. You are learning. Our guest has brought along another opportunity for you to broaden your horizons.' With that, both of them turn to you again, Nermine with an expectant expression, Cassim in taunt anticipation at his next task.";
 		LineBreak;
-		say "     Do you [if companion of Player is not demon brute]summon and [end if]command Brutus to introduce the slender elf to his thick piece of a cock?";
+		say "     Do you ";
+		if demon brute is not listed in companionList of Player:
+			say "summon and ";
+		say "command Brutus to introduce the slender elf to his thick piece of a cock?";
 		if Player consents:
 			LineBreak;
 			say "[BrutusCassimFuck]";
@@ -491,7 +500,7 @@ to say NermineTalk5:
 to say NermineTalk6:
 	say "     As you open your mouth to ask Nermine about the item Fancy had sent you to retrieve, a mysterious gust of wind blows through the mall, momentarily making you forget what you were about to say. And your backpack suddenly feels a little heavier, too.";
 	say "     (This quest will be finished soon, but in the meantime, enjoy playing with the finished ponysuit! And thank you for your patience.)";
-  ItemGain Ponysuit by 1;
+	ItemGain Ponysuit by 1;
 
 to say BrutusCassimFuck:
 	say "     As Brutus steps forward after your command, Cassim's eyes widen and he can't help but stare at the demon's rippling muscles - and even more so at the massive shaft hanging between the purple giant's legs. It is clear that this is the biggest penis he's ever seen - making it kind of admirable that the smaller elf stands his ground, showing no fear - although he does gulp visibly as Brutus quickly gets fully hard and the massive erection twitches in Cassim's direction. Coming to a stance with his clawed feet set apart a bit, your demonic companions sets his hands on his hips and says, 'Come here, elf boy!'";

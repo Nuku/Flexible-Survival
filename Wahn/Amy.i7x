@@ -811,7 +811,7 @@ to say AmyNPCSexTable:
 			else:
 				say "[AmyNPCSexTable]";
 		-- 6: [Brutus]
-			if demon brute is tamed and companion of Player is demon brute and DemonBruteStatus < 2 and (DBCaptureQuestVar is 5 or DBCaptureQuestVar is 7):
+			if demon brute is tamed and demon brute is listed in companionList of Player and DemonBruteStatus < 2 and (DBCaptureQuestVar is 5 or DBCaptureQuestVar is 7):
 				if BrutusAmySex is 0: [first interest of Brutus in her]
 					if DBCaptureQuestVar is 5: [evil Brutus]
 						say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. As you stand there, eyes riveted on her naked form, you suddenly feel warmth radiate from right beside you. Turning your head, you see that its source is your captive demon brute, or rather his enormous cock, fully erect as it is right now. A lusty rumble comes from the beast's throat and his clawed hands twitch a bit as he is held back from what he'd love to do now by the amulet's magic.";

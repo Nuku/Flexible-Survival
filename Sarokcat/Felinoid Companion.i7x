@@ -118,7 +118,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Felinoid Companion	"Felinoid Companion"
 
-Felinoid Companion is a pet. Felinoid Companion is a part of Player.
+Felinoid Companion is a pet.
 NPCObject of Felinoid Companion is Klauz.
 understand "Klauz" as Felinoid Companion.
 printed name of Felinoid Companion is "Klauz".
@@ -204,14 +204,14 @@ to say KlauzScent:
 to say Klauzdesc:
 	project the Figure of Klauz_face_icon;
 	say "     Klauz, the white-golden felinoid that you rescued, is lean and powerful as he stalks along besides you eagerly, obviously one of the most powerful allies you could have as you try to survive in the city. Of course he still doesn't seem to have recovered completely from his ordeal, and is thus more than content to let you take the lead in combat and in your travels around the city. You can't help but wonder just how the large cat sees you and why he bothers following you around - whether he sees you more as a friend, a companion, or as a potential mate...";
-	if companion of Player is felinoid companion:
+	if felinoid companion is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing the Klauz:
 	project the Figure of Klauz_face_icon;
 	if Player is in Back Of The Library and Klauz is in Back Of The Library:
 		say "[KlauzTalkMenu]";
-	else if companion of Player is Felinoid companion:
+	else if felinoid companion is listed in companionList of Player:
 		say "[KlauzTalkMenu]";
 	else:
 		say "     Klauz isn't here.";
@@ -223,7 +223,7 @@ instead of conversing Felinoid companion:
 		project the Figure of Klauz_face_icon;
 		if Player is in Back Of The Library and Klauz is in Back Of The Library:
 			say "[KlauzTalkMenu]";
-		else if companion of Player is Felinoid companion:
+		else if felinoid companion is listed in companionList of Player:
 			say "[KlauzTalkMenu]";
 		else:
 			say "     Klauz isn't here.";
@@ -270,7 +270,7 @@ to say KlauzTalk1:
 Section 3 - Felinoid companion sex
 
 An everyturn rule:
-	if companion of Player is Felinoid companion and skipturnblocker is 0:
+	if felinoid companion is listed in companionList of Player and skipturnblocker is 0:
 		if a random number between one and 20 < 6 and lastfuck of felinoid companion - turns >= 4:
 			say "[sexwithfelinoidpet]";
 

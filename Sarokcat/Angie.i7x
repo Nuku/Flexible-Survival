@@ -155,17 +155,17 @@ instead of using feline porn:
 			say "     You settle yourself down to really enjoy some personal time and relieve your excess arousal. You pull out a selection of the merchandise showing graceful feline shapes, in addition to a few of Keith's pictures, and begin playing with yourself. You start by rubbing over your [BodyName of Player] body[if Breast Size of Player > 8], caressing your nipples and teasing your huge breasts, running your fingers over their sensitive flesh[else if Breast Size of Player > 5], caressing your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else if Breast Size of Player > 2], caressing your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else] and teasing your nipples[end if][if Nipple Count of Player > 2]. You lavish attention upon each pair in turn, helping to get yourself wound up for a bigger release[end if].";
 			if Player is herm:
 				say "     Being a herm, you place a hand at your cock[smn] and the other at your cunt[sfn] and start playing with them. You stroke your [cock size desc of Player] [Cock of Player] shaft slowly at first while fingering the wet folds of your puss[yfn]. Precum dribbles onto you while your feminine juices soak your other hand. You move your hand away from time to time to rub your [Ball Size Adjective of Player] [Balls], feeling the pressure build up in them.";
-				if companion of Player is mouse girl:
+				if mouse girl is listed in companionList of Player:
 					say "     As you continue to play with yourself, your mind wanders to thinking of sexy mice and all the fun things you could do with them. Glancing over, you spot Rachel sitting nearby, playing with herself as she watches you. She grins at you knowingly as fresh images of you surrounded by horny mice fill your mind. Moaning, you become even more aroused and play with yourself even more vigorously. You even start to share in the mouse girl's sensations as well.";
 				say "     You keep teasing yourself, holding back your orgasm a little longer, wanting to really enjoy it... until finally you moan loudly and cum hard, releasing a [if Ball Size of Player < 12]sizable blast[else if Ball Size of Player < 25]stream[else]veritable torrent[end if] of thick semen, creating a messy pool of your seed as you spray it onto yourself and the ground nearby. Your cunt quivers and squeezes down around your fingers, [if Libido of Player < 75]soaking your hand[else if Libido of Player < 90]sending your juices down your legs until a small puddle is formed[else]blasting a gush of feminine juices that soaks your thighs and runs down your legs to form a large, musky puddle[end if]. You keep stroking and pumping until you're left panting and moaning, almost passing out from the much-needed release.";
 			else if Player is male:
 				say "     You take hold of your [if Cock Count of Player > 1]cocks and start playing with them[else]cock and start playing with it[end if]. You stroke your [cock size desc of Player] [Cock of Player] shaft[smn] slowly at first, pleasing yourself as only you can, knowing just what feels right. Precum dribbles down your meat to get spread over it as you stroke yourself. You move a hand away from time to time to rub your [Ball Size Adjective of Player] [Balls], feeling the pressure build up in them.";
-				if companion of Player is mouse girl:
+				if mouse girl is listed in companionList of Player:
 					say "     As you continue to play with yourself, your mind wanders to thoughts of sexy mice and all the fun things you could do with them. Glancing over, you spot Rachel sitting nearby, playing with herself as she watches you. She grins at you knowingly as fresh images of you surrounded by horny mice fill your mind. Moaning, you become even more aroused and play with yourself even more vigorously. You even start to share in the mouse girl's sensations as well.";
 				say "     You keep teasing yourself, holding back your orgasm a little longer, wanting to really enjoy it... until finally you moan loudly and cum hard, releasing a [if Ball Size of Player < 12]sizable blast[else if Ball Size of Player < 25]stream[else]veritable torrent[end if] of thick semen, creating a messy pool of your musky seed as you spray it onto yourself and the ground nearby. You keep stroking and pumping until you're left panting and moaning, almost passing out from the much-needed release.";
 			else if Player is female:
 				say "     You move your hands down to start fingering the wet folds of your puss[yfn]. You work [if Cunt Tightness of Player is 1]a finger[else if Cunt Tightness of Player < 4]a pair of fingers[else if Cunt Tightness of Player < 6]a trio of fingers[else]a trio of fingers and eventually your whole hand[end if] into your gripping, squeezing vagina. You rub and tease along your inner walls and make sure to pay proper attention to your sensitive clit.";
-				if companion of Player is mouse girl:
+				if mouse girl is listed in companionList of Player:
 					say "     As you continue to play with yourself, your mind wanders to thinking of sexy mice and all the fun things you could do with them. Glancing over, you spot Rachel sitting nearby, playing with herself as she watches you. She grins at you knowingly as fresh images of you surrounded by horny mice fill your mind. Moaning, you become even more aroused and play with yourself even more vigorously. You even start to share in the mouse girl's sensations as well.";
 				say "     You keep teasing yourself, holding back your orgasm a little longer, wanting to really enjoy it... until finally you moan loudly and cum hard, [if Libido of Player < 75]soaking your hand[else if Libido of Player < 90]sending your juices down your legs until a small puddle is formed[else]blasting a gush of feminine juices that soaks your thighs and runs down your legs to form a large, musky puddle[end if] as your cunt quivers and squeezes down around your fingers. You keep rubbing and fingering yourself until you're left panting and moaning, almost passing out from the much-needed release.";
 			let muskwave be ( Libido of Player + ( Ball Size of Player * 3 ) + ( Cunt Tightness of Player * 5 ) );
@@ -173,7 +173,7 @@ instead of using feline porn:
 			decrease humanity of Player by a random number between 2 and 5;
 			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
-			if the companion of Player is mouse girl:
+			if the mouse girl is listed in companionList of Player:
 				decrease humanity of Player by 2;
 				if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
 				if a random chance of 2 in 3 succeeds:
@@ -195,7 +195,7 @@ instead of using feline porn:
 
 to say SimpleFelineMast:
 	say "     You settle yourself down to [if Player is herm]play around with your junk for a bit[else if Player is male]jerk yourself off briefly[else]give yourself a quick fingering[end if]. You grab one of the photos for added inspiration and get yourself off, relieving some of your excess arousal";
-	if the companion of Player is mouse girl:
+	if the mouse girl is listed in companionList of Player:
 		say ". Partway into your masturbatory session, thoughts of sexy mice slip into your mind.";
 		decrease humanity of Player by 1;
 		if a random chance of 1 in 2 succeeds:

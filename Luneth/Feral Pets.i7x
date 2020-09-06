@@ -29,7 +29,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Cute Crab	"Cute Crab"
 
-Cute Crab is a pet. Cute Crab is a part of Player.
+Cute Crab is a pet.
 NPCObject of Cute Crab is Snips.
 understand "Snips" as Cute Crab.
 printed name of Cute Crab is "Snips".
@@ -41,6 +41,9 @@ The summondesc of Cute Crab is "[SummonSnips]".
 The dismissdesc of Cute Crab is "[DismissSnips]".
 The assault of Cute Crab is "[one of]Your crab snaps with his great pincers![or]Scuttling crazily, you are not even entirely sure when your crab landed a blow.[at random]".
 the fuckscene of Cute Crab is "The crab is too small and too cute for that sort of thing - you perv.".
+
+when play begins:
+	add "Feral" to Traits of Cute Crab;
 
 to say SummonSnips:
 	now Snips is nowhere;
@@ -100,13 +103,13 @@ to say SnipsScent:
 
 to say Snipsdesc:
 	say "     It's so cute! He has huge eyes that seem to stare into your soul and big pincers that go clackity-clack. The little crab has a reddish-yellow shell, while the tips of its claws are a soft pearly-white. His huge eyes stand on slender stalks that seem to follow you wherever you go. The long spindly legs coming out of his small abdomen carry it side to side, however his steps are clumsy, causing him to fall down on occasion.";
-	if companion of Player is cute crab:
+	if Cute Crab is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing the Snips:
 	if Player is in Computer Lab and Snips is in Computer Lab:
 		say "[SnipsTalkMenu]";
-	else if companion of Player is Cute Crab:
+	else if Cute Crab is listed in companionList of Player:
 		say "[SnipsTalkMenu]";
 	else:
 		say "     Snips isn't here.";
@@ -117,7 +120,7 @@ instead of conversing Cute Crab:
 	else:
 		if Player is in Computer Lab and Snips is in Computer Lab:
 			say "[SnipsTalkMenu]";
-		else if companion of Player is Cute Crab:
+		else if Cute Crab is listed in companionList of Player:
 			say "[SnipsTalkMenu]";
 		else:
 			say "     Snips isn't here.";
@@ -228,7 +231,7 @@ Table of GameCharacterIDs (continued)
 object	name
 house cat	"house cat"
 
-house cat is a pet. house cat is a part of Player.
+house cat is a pet.
 NPCObject of house cat is Dinah.
 understand "Dinah" as house cat.
 printed name of house cat is "Dinah".
@@ -299,7 +302,7 @@ to say DinahScent:
 
 to say DinahDesc:
 	say "     Dinah is covered in soft calico fur, and seems to be happy enough to just follow you along and see what happens, and perhaps take care of any extra milk that you might come across. The pink rhinestone collar she has around her neck seems to sparkle with every move she makes. Her whiskers twitch as she smells the area for anything of interest.";
-	if companion of Player is house cat:
+	if house cat is listed in companionList of Player:
 		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing house cat:
@@ -308,7 +311,7 @@ instead of sniffing house cat:
 instead of conversing the Dinah:
 	if Player is in Computer Lab and Dinah is in Computer Lab:
 		say "[DinahTalkMenu]";
-	else if companion of Player is house cat:
+	else if house cat is listed in companionList of Player:
 		say "[DinahTalkMenu]";
 	else:
 		say "     Dinah isn't here.";
@@ -319,7 +322,7 @@ instead of conversing house cat:
 	else:
 		if Player is in Computer Lab and Dinah is in Computer Lab:
 			say "[DinahTalkMenu]";
-		else if companion of Player is house cat:
+		else if house cat is listed in companionList of Player:
 			say "[DinahTalkMenu]";
 		else:
 			say "     Dinah isn't here.";
@@ -457,7 +460,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Exotic Bird	"Exotic Bird"
 
-Exotic Bird is a pet. Exotic Bird is a part of Player.
+Exotic Bird is a pet.
 NPCObject of Exotic Bird is Chirpy.
 understand "Chirpy" as Exotic Bird.
 printed name of Exotic Bird is "Chirpy".
@@ -528,7 +531,7 @@ to say ChirpyScent:
 
 to say ChirpyDesc:
 	say "     This exotic bird is nice and happy now! You aren't sure just what kind of exotic bird Chirpy is, but she has brilliantly colored feathers and lovely plumage on the back of her head. The bird is only slightly larger than a parrot, but she seems to have taken a liking to you, and will occasionally stop and rest on your shoulder, though the rest of the time she is flying nearby.";
-	if companion of Player is exotic bird:
+	if Exotic Bird is listed in companionList of Player:
 		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing Exotic Bird:
@@ -537,7 +540,7 @@ instead of sniffing Exotic Bird:
 instead of conversing the Chirpy:
 	if Player is in Computer Lab and Chirpy is in Computer Lab:
 		say "[ChirpyTalkMenu]";
-	else if companion of Player is Exotic Bird:
+	else if Exotic Bird is listed in companionList of Player:
 		say "[ChirpyTalkMenu]";
 	else:
 		say "     Chirpy isn't here.";
@@ -548,7 +551,7 @@ instead of conversing Exotic Bird:
 	else:
 		if Player is in Computer Lab and Chirpy is in Computer Lab:
 			say "[ChirpyTalkMenu]";
-		else if companion of Player is Exotic Bird:
+		else if Exotic Bird is listed in companionList of Player:
 			say "[ChirpyTalkMenu]";
 		else:
 			say "     Chirpy isn't here.";
@@ -652,7 +655,7 @@ Table of GameCharacterIDs (continued)
 object	name
 helper dog	"helper dog"
 
-helper dog is a pet. helper dog is a part of Player.
+helper dog is a pet.
 NPCObject of helper dog is Hobo.
 understand "Hobo" as helper dog.
 printed name of helper dog is "Hobo".
@@ -726,13 +729,13 @@ to say HoboScent:
 to say Hobodesc:
 	project Figure of Hobo_icon;
 	say "     Hobo is a black and white shepherd with soulful and intelligent brown eyes. He will follow you and loyally assist you with your troubles.";
-	if companion of Player is helper dog:
+	if helper dog is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing the Hobo:
 	if Player is in Computer Lab and Hobo is in Computer Lab:
 		say "[HoboTalkMenu]";
-	else if companion of Player is helper dog:
+	else if helper dog is listed in companionList of Player:
 		say "[HoboTalkMenu]";
 	else:
 		say "     Hobo isn't here.";
@@ -743,7 +746,7 @@ instead of conversing helper dog:
 	else:
 		if Player is in Computer Lab and Hobo is in Computer Lab:
 			say "[HoboTalkMenu]";
-		else if companion of Player is helper dog:
+		else if helper dog is listed in companionList of Player:
 			say "[HoboTalkMenu]";
 		else:
 			say "     Hobo isn't here.";
@@ -883,7 +886,7 @@ to say hoboreset:
 	now lastfuck of helper dog is turns;
 
 an everyturn rule:
-	if companion of Player is helper dog and skipturnblocker is 0:
+	if helper dog is listed in companionList of Player and skipturnblocker is 0:
 		if lastfuck of helper dog - turns >= 4:
 			if thirst of Player > 50 and carried of water bottle is 0 and carried of soda is 0 and hobo-water-gift is false:
 				say "     Just as you're thinking once again that your mouth and throat are terribly dry, Hobo pads up to you and drops something at your feet. Looking down, you see that it's a [bold type]bottle of water[roman type], clean and unopened. Surprised at the dog's cleverness, you pat Hobo's head as you pick up the drink.";

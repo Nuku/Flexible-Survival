@@ -466,7 +466,7 @@ to say SarahTalkMenu:
 		now sortorder entry is 4;
 		now description entry is "Talk about what she thinks caused the infection";
 	[]
-	if resolution of Demonic Redemption is 2 and companion of player is demon brute:
+	if resolution of Demonic Redemption is 2 and demon brute is listed in companionList of Player:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask her for help regarding your Demon Brute";
 		now sortorder entry is 5;

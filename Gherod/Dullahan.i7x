@@ -282,12 +282,23 @@ to say DullahanFuck: [player fucks the Dullahan]
 Section 5 - Tome Specific Scenes
 
 to say DullahanFirstRead:
-	say "     After speaking with Xaedihr, you actually manage to find a section of the tome you haven't explored yet. [if companion of player is demonologist or player is in Grey Abbey Library]You call out for the half-demon, as you think you're onto something important here. 'Huh? What did you find?' he asks, leaning his head over the pages next to you. 'Interesting... I don't remember this ritual being here. But it speaks of the headless knight, Dullahan.'[end if] A closer inspection leads you to a brief introduction of this mythical entity.";
+	say "     After speaking with Xaedihr, you actually manage to find a section of the tome you haven't explored yet. ";
+	if demonologist is listed in companionList of Player or player is in Grey Abbey Library:
+		say "You call out for the half-demon, as you think you're onto something important here. 'Huh? What did you find?' he asks, leaning his head over the pages next to you. 'Interesting... I don't remember this ritual being here. But it speaks of the headless knight, Dullahan.'";
+	say " A closer inspection leads you to a brief introduction of this mythical entity.";
 	WaitLineBreak;
 	say "     A spirit imbued with darkness and sorrow, the Dullahan endlessly wanders in a world reigned by death. The pathway only the ones destined to pass away are condemned to take, once the headless knight finds their souls and transports them to their resting place. Male in aspect, sporting a statuesque height and a helmet in the place of his head, the Dullahan is as strong as he is intimidating, making his victim's only hope to surrender immediately. He carries a greataxe made of human bones, ready to decapitate anyone who dares to cross his path. The only way to permanently kill a Dullahan is by finding his head and destroy it, however, doing so will release a vengeful wraith that will haunt his murderer for eternity.";
-	say "     [if companion of player is demonologist or player is in Grey Abbey Library]Xaedihr once again turns to you with a unconvinced tone. 'He doesn't look like a fun fellow... Don't you want to mess around with the demon fox instead? Or the tentacles? Or even with me?!' he questions you, but self-awareness strikes him as he notices your interest in the content[else]You collect your own thoughts about what you've just read[end if]. Indeed, this appears to be a rather dangerous creature to be dealing with, and unlike most of the ones you encounter, the headless knight doesn't seem remotely interested in raping his victims. The way the text puts it, it looks like the Dullahan will actually slay anything and anyone in his path. If you want to earn his respect, you'll have to defeat him in battle, and then perhaps you could appeal to his lust. After all, why would the Ancient Tome hoard such a creature if they were devoid of any carnal desire?";
+	if demonologist is listed in companionList of Player or player is in Grey Abbey Library:
+		say "     Xaedihr once again turns to you with a unconvinced tone. 'He doesn't look like a fun fellow... Don't you want to mess around with the demon fox instead? Or the tentacles? Or even with me?!' he questions you, but self-awareness strikes him as he notices your interest in the content.";
+	else:
+		say "     You collect your own thoughts about what you've just read.";
+	say " Indeed, this appears to be a rather dangerous creature to be dealing with, and unlike most of the ones you encounter, the headless knight doesn't seem remotely interested in raping his victims. The way the text puts it, it looks like the Dullahan will actually slay anything and anyone in his path. If you want to earn his respect, you'll have to defeat him in battle, and then perhaps you could appeal to his lust. After all, why would the Ancient Tome hoard such a creature if they were devoid of any carnal desire?";
 	WaitLineBreak;
-	say "     The answer to this question is revealed once you flip the page and see an image of a very tall, barely armored knight - in all honesty, he's only wearing greaves and gauntlets, and something you could barely call shoulder plates, to which a cloak is attached - subduing a human, tied up with chains and a collar, powerless to his overwhelming might. The tome is clear on how the Dullahan claims his victories, and sees sex as an act of domination or submission, depending on the end. It is said that once you're claimed by the demonic spirit, your soul is condemned to travel with him until the end of days. [if companion of player is demonologist or player is in Grey Abbey Library]'In other words, if you lose to him, you become his bitch for all eternity. Huh, I wonder why they didn't put this page before all that nightmare inducing description. He's quite big down there, isn't he? Woow...' says Xaedihr, cutting your line of thoughts abruptly and pointing at the imagine with great interest[else]In other words, if you ever lose to a Dullahan, your soul will be claimed for all eternity[end if].";
+	say "     The answer to this question is revealed once you flip the page and see an image of a very tall, barely armored knight - in all honesty, he's only wearing greaves and gauntlets, and something you could barely call shoulder plates, to which a cloak is attached - subduing a human, tied up with chains and a collar, powerless to his overwhelming might. The tome is clear on how the Dullahan claims his victories, and sees sex as an act of domination or submission, depending on the end. It is said that once you're claimed by the demonic spirit, your soul is condemned to travel with him until the end of days. ";
+	if demonologist is listed in companionList of Player or player is in Grey Abbey Library:
+		say "'In other words, if you lose to him, you become his bitch for all eternity. Huh, I wonder why they didn't put this page before all that nightmare inducing description. He's quite big down there, isn't he? Woow...' says Xaedihr, cutting your line of thoughts abruptly and pointing at the imagine with great interest.";
+	else:
+		say "In other words, if you ever lose to a Dullahan, your soul will be claimed for all eternity.";
 	say "     The ritual procedure is explained soon after. [bold type]Perhaps it's a good idea to make sure Xaedihr is your current companion before trying to face this dangerous foe.[roman type][line break]";
 	now resolution of Dullahan Knight is 1;
 
@@ -296,7 +307,7 @@ to say DullahanSummon:
 		say "     The pages on the Dullahan Knight summoning ritual are blank. Your previous actions must have caused this, and now your chance with the mythical headless horserider will forever be gone.";
 	else if resolution of Corruption of Dreams is 2 or resolution of Corruption of Dreams is 4 or resolution of Corruption of Dreams is 6:
 		say "     You attempt to put your focus on this, but your mind is just too tired right now. Maybe you should get some rest first.";
-	else if companion of player is not demonologist and resolution of Dullahan Knight is 1: [warning if going the first time without Xaedihr]
+	else if demonologist is not listed in companionList of Player and resolution of Dullahan Knight is 1: [warning if going the first time without Xaedihr]
 		say "     You chose to proceed with summoning a dangerous demonic creature without Xaedihr, who is an expert demonologist able to protect you significantly during your confrontations with the dark knight. The events that will follow can be punishing and unrelentless without proper guidance, and you know what will happen if you lose to the Dullahan in battle. [bold type]Are you sure you wish to dwelve into demonic affairs all by yourself?[roman type][line break]";
 		say "     [link](Y)[as]y[end link] - Danger? What danger? Just continue with the ritual.";
 		say "     [link](N)[as]n[end link] - Let's be cautious about this.";
@@ -308,7 +319,7 @@ to say DullahanSummon:
 			Linebreak;
 			say "     With your decision made, you cease your actions at once.";
 			stop the action;
-	else if companion of player is demonologist and resolution of Dullahan Knight is 1: [first time, with Xaedihr, skipping warning]
+	else if demonologist is listed in companionList of Player and resolution of Dullahan Knight is 1: [first time, with Xaedihr, skipping warning]
 		Linebreak;
 		DullahanSummon1;
 	else if resolution of Dullahan Knight is 2: [Dullahan rematch]
@@ -319,7 +330,7 @@ to say DullahanSummon:
 		DullahanSummon3;
 
 to DullahanSummon1:
-	if companion of player is demonologist: [Xaedihr is with player. They cannot lose battle or submit to Dullahan. Death by wrong choices is still possible, but right choices have guaranteed success]
+	if demonologist is listed in companionList of Player: [Xaedihr is with player. They cannot lose battle or submit to Dullahan. Death by wrong choices is still possible, but right choices have guaranteed success]
 		say "     'Are you ready to begin?' asks your half-demon companion, seemingly fearful of what you might encounter past this point. 'Just be careful. We're dealing with an unknown entity here. I have no idea how difficult this will be for us, so... I advise caution. Just... emphasizing that part.' With everything said and set, you are now ready to perform the ritual, that is, after you move to an open space where the rite can be executed without any major issues. Xaedihr does most of it for you with his greater experience, and insists that you stay behind him. A few arcane gestures and unpronounceable words, and soon, the familiar crimson energy begins enveloping the area in front of you. Soon, the environment around you becomes somewhat gloomier and darker, a misty fog surrounding you.";
 		say "     Eventually, you are unable to see anything beyond that curtain of dust, and no summon involves a change in your whereabouts. Something is definitely wrong. Xaedihr goes silent for a while and lets go of the book, which is now floating in front of you both. 'I am certain I have done everything well! This isn't a normal summoning ritual...' he exclaims, worry visible in his expression as the pages flip madly, then an high frequency sound bursting through your ears almost painfully. The inhuman sounds continue in what seems like a true descent to Hell, and the only thing you can do is wait it out.";
 		WaitLineBreak;
@@ -351,19 +362,29 @@ to DullahanSummon1Choice1:
 			say "Invalid choice. Type [link]1[end link] to stay put and calm, [link]2[end link] to rise your guard, [link]3[end link] to initiate the fight yourself and charge ahead, or [link]4[end link] to attempt an escape.";
 	if calcnumber is 1:
 		Linebreak;
-		say "     [if companion of player is demonologist]Following Xaedihr's recommendation, you decide to stay put and ease your breathing. The Dullahan continues to move in your direction, slowly and steadily. 'Good, he's moving this way. Let him come.'[else]Following your best intuition, you decide to stay put and ease your breathing. The Dullahan continues to move in your direction, slowly and steadily.[end if]";
+		if demonologist is listed in companionList of Player:
+			say "     Following Xaedihr's recommendation, you decide to stay put and ease your breathing. The Dullahan continues to move in your direction, slowly and steadily. 'Good, he's moving this way. Let him come.'";
+		else:
+			say "     Following your best intuition, you decide to stay put and ease your breathing. The Dullahan continues to move in your direction, slowly and steadily.";
 		DullahanSummon1a;
 	else if calcnumber is 2:
 		Linebreak;
-		say "     Your posture is stationary, but defensive. The Dullahan senses your readiness for battle and swings his greataxe around, keeping it stretched towards one side as he moves towards you. [if companion of player is demonologist]'Wasn't I clear when I told you not to look like a threat? You'll put us both in danger!' - exclaims the half-demon, followed by a sigh - 'But he's coming this way, I guess. Let him approach.'[end if]";
-		if companion of player is demonologist:
+		say "     Your posture is stationary, but defensive. The Dullahan senses your readiness for battle and swings his greataxe around, keeping it stretched towards one side as he moves towards you.";
+		if demonologist is listed in companionList of Player:
+			say " 'Wasn't I clear when I told you not to look like a threat? You'll put us both in danger!' - exclaims the half-demon, followed by a sigh - 'But he's coming this way, I guess. Let him approach.'";
+		if demonologist is listed in companionList of Player:
 			if loyalty of Xaedihr < 30:
 				say "     [bold type]Looks like Xaedihr got a little annoyed with your choice.[roman type][line break]";
 				decrease loyalty of Xaedihr by 1;
 		DullahanSummon1a;
 	else if calcnumber is 3:
 		Linebreak;
-		say "     You have no time for this. If all you need is to take off his horse, then a head-on attack could work, if you're strong enough. With this in mind, you get ready and dash towards the Dullahan, [if companion of player is demonologist]hearing Xaedihr cursing from behind you. 'You fool! What did I tell you?!' he tries to put some sense into you, but his voice is soon too far to be clearly audible[else]somehow questioning your decision as the intimidating shape of the knight becomes more obvious[end if]. As you approach the dark knight, he moves forward a bit more with his greataxe in hand, ready to counterattack your charge.";
+		say "     You have no time for this. If all you need is to take off his horse, then a head-on attack could work, if you're strong enough. With this in mind, you get ready and dash towards the Dullahan,";
+		if demonologist is listed in companionList of Player:
+			say " hearing Xaedihr cursing from behind you. 'You fool! What did I tell you?!' he tries to put some sense into you, but his voice is soon too far to be clearly audible.";
+		else:
+			say " somehow questioning your decision as the intimidating shape of the knight becomes more obvious.";
+		say " As you approach the dark knight, he moves forward a bit more with his greataxe in hand, ready to counterattack your charge.";
 		say "     Your bravery, however, is not rewarded. As soon as you come in reach of the horserider, you're presented with the cold, sharp feeling of his heavy blade across your neck. An intense pain takes over as the world around you spins before your eyes, until you stop feeling anything at all.";
 		WaitLineBreak;
 		now battleground is "Void";
@@ -380,7 +401,7 @@ to DullahanSummon1Choice1:
 		end the story saying "Your body lies decapitated on the floor in a bloody mess.";
 
 to DullahanSummon1a:
-	if companion of player is demonologist: [Xaedihr gives a 100% chance of success]
+	if demonologist is listed in companionList of Player: [Xaedihr gives a 100% chance of success]
 		say "     A dead silence remains between you both, but not for long. Soon, the dark knight hurries his shadow horse and charges towards you, with his greataxe ready to swing at you. Xaedihr whispers next to you 'It shouldn't be long, now...' as he quietly readies up a spell. With the Dullahan drawing so closer, your heartbeat accelerates, feeling a cold sweat running down your forehead and your hands shaking. A ghastly, unknown voice speaks to you, in your mind, on the last seconds before the horserider strikes... '...YOUR SOUL IS MINE...'";
 		say "     'To Hell with your threats.' says the half-demon, as if he heart it too, and lunges himself at your direction, pushing you to the side and launching a precise strike with a sturdy purple tendril around his mount's legs. The attack is so powerful that the knight is thrown off his shadow horse, which vanishes as it falls on the ground, ending up several meters away from you with a loud crash, but with his greataxe still in reach. 'His horse is gone now, but he's still a formidable enemy. Do not take victory for granted.' warns Xaedihr with a good purpose, as it's not long until the Dullahan manages to stand on his feet, like nothing happened. The ominous voice is heard, once more, but clearer this time '...Fools. You will submit, and your souls shall be claimed...'";
 		say "     With a grin, the sorcerer turns to you. 'Well, prepare for a fight! I'll back you up, not matter what happens.'";

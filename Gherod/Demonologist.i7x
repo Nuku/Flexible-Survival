@@ -254,7 +254,7 @@ to HellRealmEvent:
 		HellRealmBadEnd1;
 	else if calcnumber is 3:
 		Linebreak;
-		if companion of player is demon brute and DemonBruteStatus is 0:
+		if demon brute is listed in companionList of Player and DemonBruteStatus is 0:
 			if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7:
 				say "     It is clear that you have no escape, as the demon stands ready to knock you down, and he probably has some friends on their way, judging from what you saw in the tape. Taking this into account, you look at Brutus, and you look back at the demon at the portal, and within a fraction of seconds, you start pretending you're your pet's captured victim. It takes a while until your demonic companion understands what you're trying to do - which seemed obvious, as you're literally calling him 'Master' and reminding him of an 'exclusivity deal' he made with you - but as soon as he understands the plan, he grins back at the demon brute, grabs you and puts you by his shoulder as if you were a sack of something, accidentally exposing your ass to the enemy.";
 				say "     'What?! No sharing the slave? You're no fun!' says the hostile demon brute, followed by a frustrated grunt. '[SubjectProCap of Player] is mine. That was the deal in exchange for [PosAdj of Player] soul and eternal servitude.' clarifies your demon companion assertively as he's questioned about not offering your holes to be plundered raw. Doesn't take much more to convince the brute to back off, as Brutus walks into the portal without a problem. Strangely, the demons couldn't tell the difference between a cleansed one and themselves, however, you guess this might only be limited to the brutes, so the more intelligent ones might be able to detect the lack of corruption in him.";
@@ -346,7 +346,7 @@ to HellRealmTheGrid:
 				Linebreak;
 				say "     Running away sounds about right. You excuse yourself and get ready to run, but as soon as you give a step towards the door, the imp yells and blasts a fireball in your direction, which passes by you and stalls you on spot. 'Not so fast! Who said you could leave?! Now you'll have to present yourself to the masters! That's right! They'll know what to do with you! Maybe hook you up on the machines! For eternity! HAH!' his screeching voice keeps making your ears want to cry, but as he talks, he gets closer to you... There's an opportunity, and you take it. You smash the imp's head with a closed fist using all your strength, and he collapses on the ground. That was surprisingly easy! Well, now with the imp out of the way, you're free to investigate the room.";
 			else if calcnumber is 3:
-				if companion of player is demon brute and DemonBruteStatus is 0 and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7):
+				if demon brute is listed in companionList of Player and DemonBruteStatus is 0 and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7):
 					Linebreak;
 					say "     You turn to your demon companion, and to the imp, the gesture itself being suggestive enough regarding what you're thinking. The brute nods with a grin as he looks at the little fiend, whose expression changes abruptly when he realizes the big brute is walking towards him. 'Wait, no! Not you! Not another! My quarrel is with that stupid mortal! Why are you even following a surfacer, either way?! WEAK!' yells the imp, but Brutus shows a deaf ear to whatever he says. The tiny demon tries to escape the large purple hand reaching over him, but no matter how hard he tries, your companion is large enough to reach him with little effort.";
 					say "     'Gah! Put me down! Let me go! Don't-... mmph!' Despite the imp's pleads for mercy, Brutus grabs his head, engulfing it entirely with his palm, and everything else you hear is just a whimpering, muffled high pitched voice. As you watch, the demon brute turns to you with a hopeful glare, as if awaiting new instructions. [bold type]You suppose you could let your loyal follower have his way with the imp, or just have him find a way to silence the annoying fiend for the time being.[roman type][line break]";
@@ -712,7 +712,7 @@ The scent of Xaedihr is "     Xaedihr smells fresh and masculine, giving out the
 to say XaedihrDesc:
 	project Figure of Xaedihr_Full_icon;
 	say "     The mystic sorcerer you encountered in one of the many Hell realms is, in fact, an half-demon. Nothing gives it away except his looks and aura, a little too out of this world to suggest he's only a human. Xaedihr is a pale redhead with flawless skin, has a short hair styled to his right side, some of it laying softly above his forehead, lime green eyes, a beard to complement his chiseled jawline, and a purple-ish tattoo around his left eye. He's fairly muscular and somewhat bulky even, filling up his clothes just nicely. He wears nothing under his long dark leather jacket, only a pair of tight black pants that gives away his considerable bulge, and some combat boots to complete his edgy look. He wears an earstud on his left ear, and hanging around his neck is a pendant with the Crimson Ruby, gleaming with a mystical energy.";
-	if companion of Player is demonologist:
+	if demonologist is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 [***********************************************************]
@@ -723,7 +723,7 @@ Table of GameCharacterIDs (continued)
 object	name
 demonologist	"demonologist"
 
-demonologist is a pet. demonologist is a part of Player.
+demonologist is a pet.
 NPCObject of demonologist is Xaedihr.
 understand "Xaedihr" as demonologist.
 printed name of demonologist is "Xaedihr".
@@ -1230,7 +1230,7 @@ to say XaedihrSexMenu:
 		now sortorder entry is 6;
 		now description entry is "Let him know you want to submit to him";
 	[]
-	if Player is male and loyalty of Xaedihr > -1 and companion of player is demon brute and DemonBruteStatus is 0 and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7):
+	if Player is male and loyalty of Xaedihr > -1 and demon brute is listed in companionList of Player and DemonBruteStatus is 0 and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7):
 		choose a blank row in table of fucking options;
 		now title entry is "Propose a threesome with Brutus";
 		now sortorder entry is 7;
@@ -1633,7 +1633,7 @@ Sarea of XaedihrRane is "Nowhere".
 Section 6-2-A - Xaedihr & Atticus
 [***********************************************************]
 
-after going to Burned-Out Chapel while (resolution of XaedihrAtticus is 0 and player is male and Atticus is in Burned-Out Chapel and companion of player is demonologist and PlayerMet of Atticus is true and Incubus Offspring Meeting is resolved and Elijah is not in Burned-Out Chapel): [Player has a cock (for now a required condition), Atticus is there, with all his checks, Elijah not in there (too complex), first contact between Xaedihr and Atticus]
+after going to Burned-Out Chapel while (resolution of XaedihrAtticus is 0 and player is male and Atticus is in Burned-Out Chapel and demonologist is listed in companionList of Player and PlayerMet of Atticus is true and Incubus Offspring Meeting is resolved and Elijah is not in Burned-Out Chapel): [Player has a cock (for now a required condition), Atticus is there, with all his checks, Elijah not in there (too complex), first contact between Xaedihr and Atticus]
 	say "     As you step in the chapel with Xaedihr following you around, a glance over your shoulder shows the half-demon quite entertained with the building's architecture, or what's left of it. 'What relationship do you really have with this place? You keep coming back here and I'm still not fully aware of why.' he asks, not looking back at you, but instead fixating his gaze on all the structure's details. 'A shame this burned down. Must have been quite the view... Now it's a house of lust.' finishes the sorcerer with a sarcastic tone as he turns around and walks back to you. 'Have you actually gotten involved with the succubus currently owning this place?'";
 	WaitLineBreak;
 	say "     It doesn't take long for you both to be welcomed by a young and attractive demon, who instantly spots you by the entrance. His naked body, illuminated by the delicate lights of the candles scattered all around the altar, stands visible to you and at very few steps away. Your half-demon companion follows up with a concluding statement 'Well, of course you did. Why was I hoping for a different turn of events...' as he looks at you with his eyebrow frowned. Seems like the sorcerer was perceptive enough to conclude Atticus is our demon son. With a rather cocky grin on his handsome face, the young demon is to almost open his mouth to greet you, but remains rather surprised at Xaedihr's intense glare. 'Daddy brought a friend this time, I see! Though why does he stare at me like that? Do I look that good?' he boldly strikes a few words towards the mage, who immediately squints his eyes at the incubus.";
@@ -1684,7 +1684,7 @@ after going to Burned-Out Chapel while (resolution of XaedihrAtticus is 0 and pl
 Section 6-2-R - Xaedihr & Rane
 [***********************************************************]
 
-instead of going up from Grey Abbey Library while ((companion of Player is demonologist or Xaedihr is in Grey Abbey Library) and loyalty of Xaedihr > 9 and Rane is in Sitting Area and Resolution of XaedihrRane is 0):
+instead of going up from Grey Abbey Library while ((demonologist is listed in companionList of Player or Xaedihr is in Grey Abbey Library) and loyalty of Xaedihr > 9 and Rane is in Sitting Area and Resolution of XaedihrRane is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: XAEDIHR / RANE MEETING[line break]";

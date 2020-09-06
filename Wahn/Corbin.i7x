@@ -127,7 +127,7 @@ instead of going east from Central Farm Square while (HP of Corbin < 2 and dayti
 	now lastfuck of Corbin is turns;
 	now HP of Corbin is 2; [player learned Corbin's secret]
 
-instead of going to Central Farm Square while (companion of Player is Felinoid companion and HP of Corbin < 2 and daytimer is night and Dexterity of Corbin is 0):
+instead of going to Central Farm Square while (felinoid companion is listed in companionList of Player and HP of Corbin < 2 and daytimer is night and Dexterity of Corbin is 0):
 	if debugactive is 1:
 		say "DEBUG -> FELINOID + CORBIN WALKIN 1 <- DEBUG[line break]";
 	say "     As you walk onto the central farm square, Klauz gives a short rumble from his throat and stops suddenly, raising his head to sniff the air. Whatever it is that drew the feral beast's attention, he's obviously very keen on it and huffs deeply, while his tail raises almost straight up and twitches with interest. A moment later, the large cat leaves your side and pads over to the entrance of the milking shed, only giving a casual glance back at you before he vanishes inside.";
@@ -177,7 +177,7 @@ instead of going to Central Farm Square while (companion of Player is Felinoid c
 		NPCSexAftermath Corbin receives "PussyFuck" from Klauz;
 		move player to Central Farm Square;
 
-instead of going to Central Farm Square while (companion of Player is Felinoid companion and HP of Corbin > 1 and HP of Corbin < 100 and daytimer is night and a random chance of 1 in 3 succeeds):
+instead of going to Central Farm Square while (felinoid companion is listed in companionList of Player and HP of Corbin > 1 and HP of Corbin < 100 and daytimer is night and a random chance of 1 in 3 succeeds):
 	if debugactive is 1:
 		say "DEBUG -> FELINOID + CORBIN WALKIN REPEAT <- DEBUG[line break]";
 	say "     As you walk onto the central farm square, Klauz gives a short rumble from his throat and stops suddenly, raising his head to sniff the air. Whatever it is that drew the feral beast's attention, he's obviously very keen on it and huffs deeply, while his tail raises almost straight up and twitches with interest. A moment later, the large cat leaves your side and pads over to the entrance of the milking shed, only giving a casual glance back at you before he vanishes inside.";
@@ -330,7 +330,7 @@ instead of going southwest from Central Farm Square while (CorbinPregnancy is 4 
 		say "     As you enter the barracks, Corbin quickly comes up to you and gives you a hug. 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he waves over a little boy in his early teens and introduces you to his horseman child.";
 	else if Libido of Corbin is 3: [felinoid was the father]
 		say "     As you enter the barracks, Corbin quickly wanders over to you ";
-		if companion of player is felinoid companion:
+		if felinoid companion is listed in companionList of Player:
 			say "and Klauz. He crouches down before the big cat and lays his arms around him, stroking the purring feline's fur before standing back up. Addressing the both of you, he then says, 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he waves over a little horseman boy in his early teens that is standing nearby and introduces you to his horseman child. You can see that the kid has a bit of a felinoid hybrid look to him.";
 		else:
 			say "and looks around a little, as if expecting someone to be there. 'Oh, he's not here with you, is he? Your sexy felinoid I mean. I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he waves over a little horseman boy in his early teens that is standing nearby and introduces you to his horseman child. You can see that the kid has a bit of a felinoid hybrid look to him.";
@@ -347,7 +347,7 @@ instead of going east from Central Farm Square while (CorbinPregnancy is 4 and d
 	else if Libido of Corbin is 2: [a horseman was the father]
 		say "     As you enter the barracks, Corbin quickly comes up to you and gives you a hug. 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he tells you that your child is in the barracks, a sweet little horseman boy in his early teens.";
 		say "     As you enter the barracks, Corbin quickly wanders over to you ";
-		if companion of player is felinoid companion:
+		if felinoid companion is listed in companionList of Player:
 			say "and Klauz. He crouches down before the big cat and lays his arms around him, stroking the purring feline's fur before standing back up. Addressing the both of you, he then says, 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he waves over a little horseman boy in his early teens that is standing nearby and introduces you to his horseman child. You can see that the kid has a bit of a felinoid hybrid look to him.";
 		else:
 			say "and looks around a little, as if expecting someone to be there. 'Oh, he's not here with you, is he? Your sexy felinoid I mean. I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he waves over a little horseman boy in his early teens that is standing nearby and introduces you to his horseman child. You can see that the kid has a bit of a felinoid hybrid look to him.";
@@ -454,7 +454,7 @@ to say CorbinSexMenu:
 		now sortorder entry is 6;
 		now description entry is "Milk the equine cuntboy";
 	[]
-	if (HP of Corbin > 1 and companion of Player is felinoid companion and Corbin is in Milking Shed Main Room):
+	if (HP of Corbin > 1 and felinoid companion is listed in companionList of Player and Corbin is in Milking Shed Main Room):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Corbin mount Klauz";
 		now sortorder entry is 7;

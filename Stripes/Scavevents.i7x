@@ -52,13 +52,13 @@ to say ResolveEvent Tight Fit:
 					now y is "soda";
 				say "Your specific hunting leads you towards your target.";
 	say "Always on the lookout for more supplies, you spot a tight [one of]crawlspace[or]hole[or]drainage pipe[at random] that looks like it's recently been disturbed. Heading over to check it out, your suspicions were correct and you spot a [y] that someone has stashed at the far end of the dark tunnel.";
-	if companion of Player is bee girl:
+	if bee girl is listed in companionList of Player:
 		say "Honey buzzes up to you and grabs your hand as you're pondering going in after it. 'I can get it for you, honeybunch.' And with that, the small bee girl folds in her wings and wriggles into the tunnel and back out, used to negotiating the narrow tunnels of the hive. She hands the [y] to you with a smile.";
 		ItemGain y by 1;
-	else if companion of Player is helper dog:
+	else if helper dog is listed in companionList of Player:
 		say "Even as you're pondering your chances of getting in there to reach it, Hobo moves around you crawls into the tunnel. The clever dog comes back out with the [y] in his teeth, dropping it at your feet. Surprised at the dog's cleverness, you scritch his ears.";
 		ItemGain y by 1;
-	else if companion of Player is mouse girl:
+	else if mouse girl is listed in companionList of Player:
 		say "While pondering your chances of being able to squeeze in there to get it, Rachel gives you a peck on the cheek. 'Let me take care of this for you, sexy,' she says before scurrying into and out of the hole. She passes you the [y] with a grin. 'Just another reason why it's better to be a mousy like me.'";
 		ItemGain y by 1;
 	else if scalevalue of Player is 1:
@@ -487,7 +487,7 @@ to say ResolveEvent Plains Scavenging:
 		say " to contend with.";
 		let petbonus be false;
 		let bonus be ( Charisma of Player plus Level of Player minus 10 ) divided by 2;
-		if companion of Player is equinoid warrior or companion of Player is felinoid companion or companion of Player is demon brute or companion of Player is royal tiger:
+		if equinoid warrior is listed in companionList of Player or felinoid companion is listed in companionList of Player or demon brute is listed in companionList of Player or royal tiger is listed in companionList of Player:
 			increase bonus by 2;
 			now petbonus is true;
 		if hardmode is true and bonus > 10, now bonus is 10;
@@ -515,13 +515,13 @@ to say ResolveEvent Plains Scavenging:
 		else:
 			say "extremely difficult";
 		say " to traverse.";
-		if companion of Player is bee girl:
+		if bee girl is listed in companionList of Player:
 			say "As you prepare to make the treacherous crossing through the rubble, Honey grabs your hand and pulls you back. 'Don't risk it. I can get it for you, honeybunch.' And with that, her translucent wings start to buzz, carrying her into the air enough to hover up to grab the [y] for you and return with a happy smile.";
 			ItemGain y by 1;
-		else if companion of Player is Exotic Bird:
+		else if Exotic Bird is listed in companionList of Player:
 			say "As you prepare to make the dangerous crossing, your bird pet calls out sharply and takes the air. It swoops over to the [y], grabs it in its talons and returns it to you, saving you from climbing across the broken ruins.";
 			ItemGain y by 1;
-		else if companion of Player is Gryphoness:
+		else if Gryphoness is listed in companionList of Player:
 			let gryphlets be Libido of gryphoness / 4;
 			say "As you prepare to make the dangerous crossing, Denise pulls you back and flaps her wings. 'I can get that for you easily, sweetie,' she says as she takes to the air. The gryphoness flaps over to grab the [y] and brings it back to you, earning a warm hug[if gryphlets is 1] from you and your gryphlet child[else if gryphlets is 2] from you and your gryphlet children[end if].";
 			ItemGain y by 1;
