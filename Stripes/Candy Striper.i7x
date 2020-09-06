@@ -269,6 +269,9 @@ The Dismissdesc of pink raccoon is "[DismissPinkRaccoon]".
 The assault of pink raccoon is "[one of]The raccoon charges in, regardless of any risk to himself and strikes wildly at your enemy![or]Your raccoon pet leaps at the enemy, trying to tackle them. He gets them off balance long enough for you to score a quick hit before he's tossed off![or]Yipping angrily, he nips at your foe![or]The coon boy hikes up his skirt and starts masturbating, shooting his hot seed onto his dress in a show that distracts your foe long enough to get in a quick strike![or]The raccoon grabs stray trash and rubble, pelting your enemy with it![at random]".
 the fuckscene of pink raccoon is "[sexwithpinkraccoonpet]".
 
+when play begins:
+	add "Feral" to Traits of pink raccoon;
+
 the scent of the pink raccoon is "The pink coonboi smell of cotton candy, arousal and sex, all with a faint hint of your own scent beneath that.".
 
 to say SummonPinkRaccoon:

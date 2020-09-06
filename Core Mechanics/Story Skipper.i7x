@@ -441,7 +441,7 @@ to CharacterRestore:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
 				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
-					move CharacterObject to TargetRoom;
+					move CharacterObject to TargetRoom, without printing a room description;
 				else:
 					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
@@ -604,7 +604,7 @@ to TraitRestore:
 					if TraitText entry is "Tamed": [pets]
 						now CharacterObject is tamed;
 					if TraitText entry is "currentCompanion":
-						now CharacterObject is currentCompanion;
+						add CharacterObject to companionList of Player;
 					[
 					if debug is at level 10:
 						say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
@@ -1129,10 +1129,6 @@ To say ProgressionExport:
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
 		LineBreak;
-		[if Player is not lonely:
-			say "     Preparing to travel to an alternate reality, you send your current ally away to await this in a safe place.";
-			repeat with x running through companionList of Player:
-				DismissFunction  printed name of x;]
 		if wrcursestatus is 5:
 			wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 		LineBreak;

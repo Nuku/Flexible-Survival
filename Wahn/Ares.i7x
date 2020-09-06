@@ -734,6 +734,9 @@ The dismissdesc of human dog is "[DismissHumanDog]".
 The assault of human dog is "[one of]Ares charges into combat, growling and snapping at your enemy.[or]Loud and insistent barking of your human dog frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your human dog claws at your enemy with his hands, leaving shallow but painful gashes.[at random]".
 the fuckscene of human dog is "[SexWithAresPet]".
 
+when play begins:
+	add "Feral" to Traits of human dog;
+
 to say SummonHumanDog:
 	now Ares is nowhere;
 	say "     Calling out for Ares, the human dog comes to your side pretty quickly, obviously having followed you all this time not too far behind. With a satisfied bark, he takes position beside you and just a step ahead, ready to protect his bitch in any situation.";

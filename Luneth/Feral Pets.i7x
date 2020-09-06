@@ -42,6 +42,9 @@ The dismissdesc of Cute Crab is "[DismissSnips]".
 The assault of Cute Crab is "[one of]Your crab snaps with his great pincers![or]Scuttling crazily, you are not even entirely sure when your crab landed a blow.[at random]".
 the fuckscene of Cute Crab is "The crab is too small and too cute for that sort of thing - you perv.".
 
+when play begins:
+	add "Feral" to Traits of Cute Crab;
+
 to say SummonSnips:
 	now Snips is nowhere;
 	if Player is in Computer Lab and Snips is in Computer Lab: [summoning while standing next to him]

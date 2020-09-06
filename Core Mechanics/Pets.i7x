@@ -6,13 +6,42 @@ Version 3 of Pets by Core Mechanics begins here.
 
 Pet is a kind of person.
 A pet can be tamed. A pet is usually not tamed.
-A pet can be currentCompanion. A pet is usually not currentCompanion.
 A pet has text called summondesc.
 A pet has text called dismissdesc. Dismissdesc is usually "You send your ally away.".
 A pet has a text called assault.
 A pet has a number called lastfight. lastfight is usually 255.
 A pet has a person called NPCObject. NPCObject of a pet is usually NullPet.
 The player has a list of pets called CompanionList.
+
+Definition: A person is lonely:
+	if companionList of Player is empty, yes;
+Definition: A person is not lonely:
+	if companionList of Player is empty, no;
+
+MaxCompanions is a number that varies.[@Tag:NotSaved] MaxCompanions is usually 1.
+
+to CalcMaxCompanions:
+	now MaxCompanions is 1;
+	if "Double Team" is listed in feats of Player:
+		increase MaxCompanions by 1;
+
+an every turn rule:
+	CalcMaxCompanions;
+	if number of entries in companionList of Player > MaxCompanions:
+		repeat with CurrentPet running through companionList of Player:
+			let DismissName be "";
+			now DismissName is printed name of CurrentPet;
+			if "Feral" is listed in Traits of CurrentPet:
+				if Player is booked or Player is bunkered:
+					say "     [bold type]As your party seems a bit big right now, you decide to send your companion home.[roman type][line break]";
+					DismissFunction DismissName;
+					break;
+				else:
+					next;
+			else:
+				say "     [bold type]As your party seems a bit big right now, you decide to send your companion home.[roman type][line break]";
+				DismissFunction DismissName;
+				break;
 
 AddCompanion is an action applying to one topic.
 
@@ -49,7 +78,6 @@ to AddCompanionFunction (NewCompanion - a text):
 				say "[summondesc of AddPet]";
 				if SummonFailure is false: [pet summon successful]
 					add "currentCompanion" to Traits of Addpet;
-					now Addpet is currentCompanion;
 					add Addpet to companionList of Player;
 				else:	[failed to call the pet]
 					now SummonFailure is false; [reset]
@@ -94,7 +122,6 @@ to DismissFunction (InputName - a text):
 		say "[dismissdesc of DismissPet]";
 		if DismissFailure is false:
 			remove "currentCompanion" from Traits of DismissPet;
-			now DismissPet is not currentCompanion;
 			remove DismissPet from companionList of Player;
 		else: [pet couldn't be sent away]
 			now DismissFailure is false; [reset]
