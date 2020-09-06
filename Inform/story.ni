@@ -6911,6 +6911,7 @@ Include Fang by Prometheus.
 Include Farmhands by Wahn.
 Include Felix by Wahn.
 Include Finn by Wahn.
+Include Flint by Gherod.
 Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
 Include Friesian Twin Isaac by Wahn.

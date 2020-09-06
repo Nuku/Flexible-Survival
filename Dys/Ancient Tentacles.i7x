@@ -83,6 +83,8 @@ to TentacleBreed:
 	WaitLineBreak;
 	say "     The fleshy orb in your mouth forces itself down your throat before it comes to lie in your stomach, while the next ones follow closely behind it. It's at this time that you feel the first egg pressing into your asshole, as you feel it stretching to accommodate the girth of the arriving flesh-covered orb. It then slowly travels through your body before it comes to rest in its destination. As with the tendril in your mouth, this one keeps pumping eggs into you. Egg after egg enters through your esophagus almost painfully, and you can't help but whimper in fear as you see your stomach bulging outwards, multiple distinct eggs visible through the stretched skin. Eventually, you're completely stuffed full of the eggy cargo, and the tentacles start to withdraw from you.";
 	say "     With surprising care, you're smoothly delivered to the ground, unable to move, as the beast lets go of your body. You see the tentacles removing themselves from plain sight, retracting back into the ground. You're then left lying down on the floor, weakened and abused, as your belly remains painfully extended to hoard the many eggs that have been shoved inside you.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Tentacle Horror";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Tentacle Horror";
 	now LastTentacleFuck is turns;
 
 to TentacleFuck:
@@ -96,6 +98,8 @@ to TentacleFuck:
 	say "     Your long wait is finally over as your whole body contracts, waves of heated pleasure surging through you as the beast milks you and rams against your prostate, so powerfully that you feel each spurt of cum being shot harder than ever! Your orgasm lasts for a while, but the creature doesn't let go of you just yet. Just when you start feeling each and every one of the tentacles thickening, the creature keeps them shoved as deep as possible inside you or around you, and suddenly, its tips begin splooging a thick, blue fluid all over and in you. It lasts so long that your belly has to extend in order to be able to hoard all the juice that's being pumped in you, and you can't help but whimper in fear of being blown up by the thing's massive load!";
 	WaitLineBreak;
 	say "     But it doesn't come to that point. The tentacles withdraw from your body as a flood of bluish semen leaks out of your abused hole. You see the tentacles removing themselves from plain sight, retracting back into the ground. You're then left lying down on the floor, weakened and abused, as your belly remains painfully filled with the beast's cum. You reflexively cough, and you're shocked to realize the creature filled you so much that you're also oozing the liquid from your nose! However, you're too full to be able to move around just yet, so you wait it out for a while until your body processes the contents delivered inside you.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Tentacle Horror";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Tentacle Horror";
 	now LastTentacleFuck is turns;
 
 Section 2 - Initial Events
@@ -123,6 +127,8 @@ to say TentaclesFirstEncounter:
 			say "     A new tentacle finds its way into your ass and begins thrusting wildly into you. The writhing appendage forces itself deep into you, only to yank itself out again. Another tendril slips into your mouth and starts thrusting into your throat roughly. This ritual continues for quite some time, before the tentacles stop, with their tips buried deep inside you. Each of the tendrils quiver before a fluid suddenly bursts from them. You can only guess it's the monster's cum, if the taste is anything to go by. You do your best to drink down all the fluids, and by the time the eruption of fluids has ended, your belly is distended almost comically. The two tendrils suddenly yank themselves out of you, and a flood of bluish semen leaks out of your abused holes.";
 		WaitLineBreak;
 		say "     The tentacles seem to be done with you, and you can't do anything to stop them anyway, so they just recede back into the ground. You're unsure if you'll ever see them again, or if you even want to...";
+		CreatureSexAftermath "Player" receives "OralCock" from "Tentacle Horror";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Tentacle Horror";
 		now TentacleInteractions is 1;
 		now TentacleStatus is 12; [got raped]
 		UpdateTomeEventPending;
