@@ -668,13 +668,8 @@ check potiongiving someone (called x):
 	else if x is Rod Mallrat and HP of Ronda < 100:
 		say "     Rod has no interest in taking those or trading for them.";
 	[character specific restrictions, such as when the <lastfuck of x> variable is used for other things, would go here.]
-	else if x is a pet:
-		if x is not tamed:
-			say "Who?" instead;
-		else if x is not companion of player:
-			say "I don't see them around right now. You'll have to call them over first." instead;
-		else if fuckscene of x is empty:
-			say "There's little point in giving a potion to them." instead;
+	else if x is a pet and fuckscene of x is empty:
+		say "There's little point in giving a potion to them." instead;
 	else if lastfuck of the x >= 255:
 		say "They're not prepared to take one of those from you at this time." instead;
 	else if lastfuck of the x is 254 or lastfuck of the x - turns >= 24:

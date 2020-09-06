@@ -35,7 +35,8 @@ to say ebgatorvic:
 		else:
 			say ". Like a fire hose, the lizard's dick pumps its substantial, molten cum deep into your bowels, making you wince and cry out in the intense, searing sensation.";
 			say "     Still high from the throes of bliss - and its motion further lubricated by its glowing seed - it still continues to fuck you senselessly, forcing a weak, strained orgasm, [if Player is male]your unattended cock[smn] staining the ground with your [Cum Load Size of Player] load[else if Player is female]your unattended cunt[sfn] staining the ground with your juices[else]causing you to writhe in insatiable need[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if scalevalue of Player > 4 or player is twistcapped] slightly[end if] gaping hole.";
-			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.[mimpregchance]";
+			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Dragator";
 	else if Player is female:
 		say "     You soon feel the slightly flat head of the reptile's[if ebgatord is 0][else] peculiar,[end if] oversized dick press against[if Cunt Count of Player > 1] one of[end if] your cunt[sfn]";
 		if ebgatord is 0:
@@ -56,7 +57,8 @@ to say ebgatorvic:
 		else:
 			say ". Like a fire hose, the lizard's dick pumps its substantial, molten cum deep into your bowels, making you wince and cry out in the intense, searing sensation.";
 			say "     Still high from the throes of bliss - and its motion further lubricated by its glowing seed - it still continues to fuck you senselessly, forcing a weak, strained orgasm, your [if Player is male]unattended cock[smn] staining the ground with your [Cum Load Size of Player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if Cunt Depth of Player > 11] slightly[end if] gaping hole.";
-			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.[impregchance]";
+			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Dragator";
 	else:
 		say "     You soon feel the slightly flat head of the reptile's[if ebgatord is 0][else] peculiar,[end if] oversized dick press against your face";
 		if ebgatord is 0:
@@ -68,6 +70,7 @@ to say ebgatorvic:
 		say "     After what feels like hours of being pounded into the ground, the dragon-gator finally roars out, sinking its sharp talons into you as it plunges its wide organ [if scalevalue of Player < 4]as deep as he can[else]all the way[end if] inside you one last time. Like a fire hose, the lizard's dick pumps its substantial, molten cum deep into your stomach, making you wince and gag out in the intense, searing sensation.";
 		say "     Still high from the throes of bliss - and its motion further lubricated by its glowing seed - it still continues to fuck you senselessly until it's eventually apparent to him that he's completely spent. Finally satisfied, the beast wrenches his still-hard rod from your maw, quickly gasping and coughing against the marginally cooler open air.";
 		say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Dragator";
 
 impregnatevalid is a truth state that varies. impregnatevalid is usually false.
 ebgatorcarrying is a number that varies. ebgatorcarrying is usually 1.

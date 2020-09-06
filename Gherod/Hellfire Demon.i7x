@@ -14,7 +14,7 @@ to say HellDemon wins:
 		if HP of Player > 0: [player submits]
 			if (gimp mask is equipped) and Hellfire Club is not known:
 				say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction as you kneel down in front of him. 'That easy, huh... Master Mogdraz will indeed love you. Now be a good [boygirl] and stay still.' Following his words, you suddenly feel some kind of clothed bag covering your head before you're lifted from the ground into what seems to be the demon's shoulder. You can't see anything, but you know he's carrying you to some place. Each large step he takes only makes you [if player is submissive]more eager[else]more nervous[end if] to know what your next destination will be. But one thing you're certain, is that you're going to meet this Mogdraz person, whoever they might be.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     You're also wondering why Xaedihr hasn't done anything to rescue you... Is that why you bring powerful companions with you? To see you being carried around - or worse! - by some random demonic creature?! He better be following you...";
 				say "[MogdrazIntro]";
 			else:
@@ -28,7 +28,7 @@ to say HellDemon wins:
 		else: [player loses]
 			if gimp mask is equipped and Hellfire Club is not known:
 				say "     Unable to keep fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'Still putting up a fight, huh... Master Mogdraz will indeed love your spirit. Now be a good [boygirl] and stay still.' Following his words, you suddenly feel some kind of clothed bag covering your head before you're lifted from the ground into what seems to be the demon's shoulder. You can't see anything, but you know he's carrying you to some place. Each large step he takes only makes you [if player is submissive]more eager[else]more nervous[end if] to know what your next destination will be. But one thing you're certain, is that you're going to meet this Mogdraz person, whoever they might be.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     You're also wondering why Xaedihr hasn't done anything to rescue you... Is that why you bring powerful companions with you? To see you being carried around - or worse! - by some random demonic creature?! He better be following you...";
 				say "[MogdrazIntro]";
 			else:
@@ -115,7 +115,7 @@ to say HellDemon loses:
 			now sortorder entry is 4;
 			now description entry is "Let him use your ass and give you a nice fuck";
 		[]
-			if companion of player is demonologist and libido of Xaedihr > 0:
+			if demonologist is listed in companionList of Player and libido of Xaedihr > 0:
 				choose a blank row in table of fucking options;
 				now title entry is "Double tag him with Xaedihr";
 				now sortorder entry is 7;

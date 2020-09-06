@@ -353,19 +353,19 @@ to say SylviaTalk6: [Samples from friends]
 		now sortorder entry is 3;
 		now description entry is "Take the collie to see the inflatable vixen";
 	[]
-	if companion of Player is cute crab:
+	if Cute Crab is listed in companionList of Player:
 		choose a blank row in table of fucking options;
 		now title entry is "Crab";
 		now sortorder entry is 4;
 		now description entry is "See whether the crab will help her";
 	[]
-	if companion of Player is little fox:
+	if little fox is listed in companionList of Player:
 		choose a blank row in table of fucking options;
 		now title entry is "Dash";
 		now sortorder entry is 5;
 		now description entry is "Ask the baby fox to be brave and give a sample";
 	[]
-	if companion of Player is gryphoness:
+	if Gryphoness is listed in companionList of Player:
 		choose a blank row in table of fucking options;
 		now title entry is "Denise";
 		now sortorder entry is 6;

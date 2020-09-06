@@ -91,12 +91,10 @@ to say mouseapts:
 		say "     'We found you. Sensed you among those in the city. You have a mind flexible enough to become one with us. Even if you don't know that now, I know you'll come to accept us, and accept me, in time.' She runs her paws over you again, sharing a sense of her devotion with you. 'The mouse collective will keep looking for you now. Even if you change now, they'll be able to find you. Unless I'm with you, that is,' she adds, running a finger along the edge of your sensitive mouse ears, sending a thrill of pleasure through you, both body and mind.";
 		WaitLineBreak;
 		say "     Before you can ask her why, she senses the question (or perhaps just guesses it), and gives you a peck on the cheek. 'Oh, I'm quite sure I'll be able to convince you on my own. I'll just have to show you how wonderful being a mousey can be. I'd much rather convince you. It'll be more fun this way,' she adds with a soft, squeaking giggle. Lacking any other options, it seems best if you let the mouse girl come with you. Certainly, if you try to leave without her, she'll raise the alarm. It is only by her good graces that you're able to leave at all. Besides, she probably wouldn't have let you exit at all if she'd senses you wouldn't take her along.";
-		if the player is not lonely:
-			say "     Rachel stares at your [companion of Player], who had been hiding outside since you got here, and it slinks off. She smiles and takes your hand in hers, chirring softly.";
 		now mouse girl is tamed;
 		add "Tamed" to Traits of mouse girl;
 		move Rachel to Pantry;
-		now the Companion of Player is mouse girl;
+		add mouse girl to companionList of Player;
 		say "     (Rachel the mouse girl is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Rachel[end link][roman type] or [bold type][link]ally mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Rachel[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break], but then the mouse collective will be tracking you again.)";
 		increase score by 20;
 		wait for any key;
@@ -116,7 +114,7 @@ Table of GameCharacterIDs (continued)
 object	name
 mouse girl	"mouse girl"
 
-mouse girl is a pet. mouse girl is a part of Player.
+mouse girl is a pet.
 NPCObject of mouse girl is Rachel.
 understand "Rachel" as mouse girl.
 printed name of mouse girl is "Rachel".
@@ -132,8 +130,7 @@ rachelfuck is a number that varies.
 The icon of mouse girl is Figure of Rachel_icon.
 
 to say SummonRachel:
-	now Rachel is nowhere;
-	if Player is in Pantry and Rachel is in Pantry: [summoning while standing next to her]
+	if Rachel is visible: [summoning while standing next to her]
 		say "     Rachel stands up from where she was meditating. Without a word, she comes to stand by your side.";
 	else: [regular summoning]
 		say "     Walking up to join you before you even call out for her, Rachel the mouse girl grins up at you.";
@@ -171,8 +168,6 @@ to say RachelDesc:
 	say "     Despite her small size, this mouse girl has considerable psychic powers. From what you've seen and sensed, she's probably one of the strongest among them. Having been selected by the mouse collective's hive mind as your intended mate, you sensed her powerful mind and can't help but feel a strong attachment to her. Intent on coaxing you back to them, she has chosen to accompany you to show you the pleasures of mousedom to convince you to return. You'll have to keep her close by if you want to avoid having the mice constantly tracking you down.";
 	say "     As if sensing your mind focused on her, the mouse girl [one of]bends over to pick something up, swishing her tail to lift the back of her dress and flash her pussy at you[or]runs her paws along her feminine body[or]teases her nipples in a little show for you[or]brushes the front of her dress, making the growing erection under it more prominent[or]grins coquettishly[or]sends a fresh wave of her love for you into your mind[or]nibbles at some cheese and crackers she found, somehow making it seem sexy[at random]. You can't help but think as you look at her that joining the mouse collective wouldn't be so bad if it means being with her.";
 	if a random chance of 2 in 5 succeeds, decrease humanity of Player by 1;
-	if companion of Player is mouse girl:
-		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing mouse girl:
 	say "[RachelScent]";
@@ -184,7 +179,7 @@ to say RachelScent:
 instead of conversing the Rachel:
 	if Player is in Pantry and Rachel is in Pantry:
 		say "[RachelTalkMenu]";
-	else if companion of Player is mouse girl:
+	else if mouse girl is listed in companionList of Player:
 		say "[RachelTalkMenu]";
 	else:
 		say "     Rachel isn't here.";
@@ -195,7 +190,7 @@ instead of conversing mouse girl:
 	else:
 		if Player is in Pantry and Rachel is in Pantry:
 			say "[RachelTalkMenu]";
-		else if companion of Player is mouse girl:
+		else if mouse girl is listed in companionList of Player:
 			say "[RachelTalkMenu]";
 		else:
 			say "     Rachel isn't here.";
@@ -292,7 +287,7 @@ to say sexwithmousegirl:
 
 
 An everyturn rule:
-	if companion of Player is mouse girl and skipturnblocker is 0:
+	if mouse girl is listed in companionList of Player and skipturnblocker is 0:
 		increase Libido of Player by 5;
 		let diceroll be a random number from 40 to 200; [lust check vs 200, player libido 40 or less auto-wins]
 		if diceroll < Libido of Player and lastfuck of mouse girl - turns >= 4:

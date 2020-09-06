@@ -101,7 +101,9 @@ to teddybearvored:
 		say "     As you slumber inside that soft belly, you dream of teddy bears and warm hugs. These dreams go on and on, filling your mind with their fuzzy thoughts of plush happiness until that is all that remains. You come to shortly after being let out of the plush bear, rising up and giving her a soft, padded hug with your teddy bear body. You, like her, are a living teddy bear creature, both in body and in mind. After some playful, kinky cuddling together, you skip down the midway, padded paw in padded paw.";
 		now teddyvored is -100;
 		now XP of Player is 0;  [prevents accidental level up]
-		if the player is not lonely, now XP of companion of Player is 0;
+		if the player is not lonely:
+			repeat with x running through companionList of Player:
+				now XP of x is 0;
 		now non-infectious entry is true;  [prevents regular teddy bear infection from occurring]
 		setmonster "Teddy Bear" silently;
 		turn the Player into a "Teddy Bear" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]

@@ -254,7 +254,7 @@ Table of GameCharacterIDs (continued)
 object	name
 royal tiger	"royal tiger"
 
-royal tiger is a pet. royal tiger is a part of Player.
+royal tiger is a pet.
 NPCObject of royal tiger is Ryousei.
 understand "Ryousei" as royal tiger.
 understand "Ryo" as royal tiger.
@@ -269,8 +269,7 @@ The assault of royal tiger is "[one of]Ryousei wades into the fight with sure st
 the fuckscene of royal tiger is "[sexwithRyousei]".
 
 to say SummonRyousei:
-	now Ryousei is nowhere;
-	if Player is in Grey Abbey Library and Ryousei is in Grey Abbey Library: [summoning while standing next to him]
+	if Ryousei is visible: [summoning while standing next to him]
 		say "     Walking a few steps over to where your tiger companion currently resides, you tell him that you'd like him to accompany you. The muscular feline stands up and smiles, then puts the palms of his hands together and gives a little bow. 'Of course, my friend. It is good that you have chosen to let me share your path. Onwards then, to grand adventures!' With that said, the proud tiger takes position by your side, ready to support you in what fights lie ahead.";
 	else: [regular summoning]
 		say "     Calling out the words, 'Watashi wa anata ni yonde, Ryousei,' you wait expectantly, and in a little swirl of blue energy, the muscled tiger indeed appears before you. He puts the palms of his hands together and gives a little bow to you, then says, '[if daytimer is day]Konnichiwa[else]Konbanwa[end if], my friend. It is good that you have chosen to let me share your path. Onwards then, to grand adventures!' With that said, the proud tiger takes position by your side, ready to support you in what fights lie ahead.";
@@ -341,7 +340,7 @@ to say RyouseiDesc:
 		say "     Having made himself at home in the library, the large cat usually hangs out on the ground floor - doing Tai Chi exercises, browsing books or meditating while sitting cross-legged on a sofa. He never is far from the front door though, and you notice that he frequently glances over to it, ready to react in case someone - or something - might invade your refuge. As he notices your attention on himself, the tiger gives you a companionable nod and a wink. Seems like he's more than ready to chat - or do other things...";
 	else:
 		say "     Accompanying you on your adventures throughout the city, he is never far away, usually just a step behind and a little to the side - leaving you the lead as his local guide. As he notices your attention on himself, the tiger gives you a companionable nod and a wink. Seems like he's more than ready to chat - or do other things...";
-	if companion of Player is royal tiger:
+	if royal tiger is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing royal tiger:
@@ -353,7 +352,7 @@ to say RyouseiScent:
 instead of conversing the Ryousei:
 	if Player is in Grey Abbey Library and Ryousei is in Grey Abbey Library:
 		say "[RyouseiTalkMenu]";
-	else if companion of Player is royal tiger:
+	else if royal tiger is listed in companionList of Player:
 		say "[RyouseiTalkMenu]";
 	else:
 		say "     Ryousei isn't here.";
@@ -364,7 +363,7 @@ instead of conversing royal tiger:
 	else:
 		if Player is in Grey Abbey Library and Ryousei is in Grey Abbey Library:
 			say "[RyouseiTalkMenu]";
-		else if companion of Player is royal tiger:
+		else if royal tiger is listed in companionList of Player:
 			say "[RyouseiTalkMenu]";
 		else:
 			say "     Ryousei isn't here.";
@@ -552,12 +551,12 @@ to say RyouseiSexMenu:
 		now title entry is "Let Ryousei eat your pussy";
 		now sortorder entry is 2;
 		now description entry is "Feel the big cat's tongue lap over your crotch";
-	[
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "69 with Ryousei";
 	now sortorder entry is 3;
 	now description entry is "Share mutual oral pleasure";
-	]
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Get fucked in the ass by Ryousei";
 	now sortorder entry is 10;
@@ -656,25 +655,22 @@ to say RyouseiPlayer69: [player 69 with Ryo]
 	say "     Nodding eagerly to the tall tiger, you lean into his touch as he puts his arms around you, drawing you close against his furred body. Ryousei feels warm and soft against your skin, yet with a rock-solid firmness underneath, speaking of many years of hard martial training. Towards you, he's showing his gentler side right now, stroking your shoulders and back with strong hands, while at the same time lowering his head to yours. Meeting his muzzle, you're drawn into a long kiss, with his tongue wrestling pleasurably with your own. His continuing purr vibrates throughout your body, putting you into a very relaxed, open state. Ryousei's hand snakes down to your crotch, [if Player is not naked]slipping under your clothes[else]making use of your nakedness[end if] and feeling for your sex, [if player is male]soon encountering your firm [cock of player] rod. Fingers sliding up your shaft, he brushes them over your dickhead, then brings them up to his face, licking your pre-cum off with a grin. [else if player is female]soon encountering your wet pussy. Fingers stroking over your folds, he rubs your clit for a few moments, then brings them up to his face, licking your female juices off with a grin. [else]soon realizing that you are genderless. But he doesn't let that discourage him, instead simply petting the sensitive skin of your pubic mound.";
 	WaitLineBreak;
 	say "     He continues to stimulate with just his fingers for a little while longer, then says in a lusty tone, 'How about we take this to the next level? I long to taste your arousal on my tongue!' With that said, he starts to [if player is not naked]slide his hands under your clothes, caressing your body and pulling them off piece by piece. [else]caress your body too, giving you a wink. [end if]Eager to feel Ryousei's touch, you [if player is not naked]readily help the anthro tiger to strip you naked, [else]lean into his embrace for a time, [end if]then watch as he himself quickly shrugs out of the kimono he wears. Putting an arm around you, Ryousei then moves to gently lower your naked form on top of the resulting small pile of discarded clothing, giving you a soft place to lie as he joins you on the ground. His striped form stretches out next to you, lying on his side, and you can see the red shaft of his cock close to your face, fully erect and with its pointy tip glistening with pre.";
-	[-----]
+	say "     A loud purr fills the air between you as Ryousei moves his head closer to your crotch. You can feel his warm breath against your [if player is male]erection[else if player is female]nether lips[else]pubic mound[end if], coupled with his whiskers against your skin, as he inhales deeply several times, taking in your scent. Moving a paw-hand on top of your crotch, he strokes you gently. 'It is interesting how different - yet similar - beings are in that area, especially if one travels to other worlds. Yours is beautiful, as are you - and the scent of your arousal is simply amazing.' The large cat follows up his compliment with a slow, long lick, all the way from the base of your [if player is male]shaft to its throbbing head[else if player is female]pussy to the sensitive clit at the top[else]pubic mound to your navel[end if]. The slight roughness of his warm, wet tongue sends tingles of pleasure up your spine and makes you writhe on the ground, in the process of which your face bumps against his own manhood, hard and ready just inches before your eyes.";
 	WaitLineBreak;
-	say "     The tiger general makes out with you for a quite pleasurable time before he eventually moves lower, bringing his head to the same level as your crotch. You can feel his warm breath against your nether lips as he leans over them and inhales deeply several times, taking in your scent. Moving a paw-hand on top of your crotch, he strokes your clit and nether lips gently, tracing their outline. 'It is interesting how every one of these is a little different, with their folds and pleasure spots - especially if one travels to other worlds. Yours is beautiful, as are you - and the scent of your arousal is simply amazing.'";
-	say "     The large cat follows up his compliment with a slow, long lick, all the way from the base of your pussy to the sensitive clit at the top. The slight roughness of his warm, wet tongue against your female parts sends tingles of pleasure up your spine and makes you writhe on the ground. Then Ryousei puts one of his large paw-hands on your belly in a calming gesture and as you raise your head to look down, you see him smiling at you. 'Did you like that?' the noble feline asks with a purr vibrating in his chest. Replying with an eager nod and a pleased sigh prompts him to start brushing over your nether lips with a teasing touch that has you let out a loud moan.";
+	say "     Remembering that you wanted to share mutual pleasure with the tiger, not just let him take care of your body, you focus on the otherworldly cat's manhood and reach out to touch it and the weighty pair of balls in his white-furred sack. Ryousei's cum-factories are warm and soft under your fingers as you give them a squeeze, then feel for the folds of his sheath resting loosely at the base of the erect cock sticking out at you. Sliding a finger inside and tracing it around the very root of the tiger's erection draws a pleased rumble from his broad chest, followed by Ryousei giving your crotch another long, stimulating lick. Then you move on to wrapping your hand around his shaft itself, with it lying hot and firm in your grasp in its full nonhuman glory. It features twin bulges near the base, not quite a canine knot, but close enough to surely provide extra pleasure when fucking someone. Further up, there are nubby, soft spines along the shaft, and especially the rim of his dickhead.";
+	say "     Leaning in, you stick out your tongue and lick over the dickhead of your companion, tasting his arousal as pre-cum starts to well up from the cum-slit. Taking this as a signal to start going down on you in earnest, Ryousei opens his muzzle and presses forward against your crotch, [if player is male]taking your shaft into his mouth[else if player is female]cupping your clit and pussy with his lips[else]cupping your pubes with his lips[end if] and lapping at you with his soft, yet also somewhat rough tongue, giving you an enticing mix of sensations. Not wanting to be outdone, you slide your lips over his dickhead, engulfing it in your mouth and suckling, while at the same time squeezing his bulging cock at the base. Starting out as a pleasure-filled grumble in this broad chest, Ryousei begins to purr deeply and loudly, the vibration giving his oral attention another layer of stimulation that hits you in a very, very good way.";
 	WaitLineBreak;
-	say "     After a little while of building up your anticipation and need even further, the tiger finally starts to focus on your clit, rubbing it with a gentle, steady touch. Man, that feels good. No, GREAT! You can't help but squirm and tremble under his touch, straining to raise your hips towards him - and the tiger reacts to your unvoiced invitation, sliding two fingers into your pussy a moment later. Your feline companion wasn't kidding when he said he did have experience in these matters too - as he knows just how to wiggle his probing digits and where to brush against very sensitive spots deep inside your body.";
-	say "     With a single finger on the magic button of your clit, he proceeds to drive you to breathless arousal, writhing on top of your improvised bedding as [if Player is purefemale]your pussy gets very wet and swollen, ready for more[else if Player is male]your cock goes rock hard and starts to drip with pre-cum[else]feelings of intense pleasure wash over you[end if]. 'I want to taste you,' the muscled tiger tells you as he lowers his head until his muzzle touches your crotch, starting to lick you in earnest this time.";
+	say "     You proceed to go deeper on Ryousei's cock, bobbing your head as you slide your lips along his shaft and feeling for his soft spines with the tip of your tongue. It isn't just that these are made to stimulate his partners, but apparently the tiger is also quite sensitive when they're played with, so you make sure to really give him some nice attention there. Especially the rim of his dickhead is ribbed with the little bumps, making it fun to tighten your lips around it with just his dickhead in your mouth and feeling Ryousei tremble in pleasure as a result. He is sure to give back as good as he gets from you, suckling, licking and caressing your most sensitive spots, leaving you breathless and intensely aroused. [if Anallevel > 2 and player is male]You can also feel the anthro tiger slide a paw-hand between your legs, followed by a soft finger-pad stroke over your pucker. It is wet with spit, making it easier to slide into you as Ryousei presses forward and feels around for your prostate. Soon he finds the pleasure-button and starts pressing against it lightly, giving your already tightly wound libido another push. [end if][line break]";
+	say "     The roller-coaster ride of mutual pleasuring that the two of you are on builds more and more, until you finally reach the point of no return, reflexively humping your hips against Ryousei's face as the wave of orgasm breaks over you. [if Player is male]With your erect [cock of player] shaft being driven down his throat, Ryousei gulps and swallows, making his inner muscles squeeze and flex around you as your first blast of cum shoots into him. It almost feels like he's milking you, drawing heavier spurts from your throbbing balls and eagerly swallowing everything that you have to give. [else if Player is female]Driving his tongue deeper into your pussy to now reach even more pleasure-spots while his soft-furred muzzle and wet nose rub your clit, you are treated to a glorious bit of tongue-play as he licks and teases you all throughout your climax. It almost feels like there's no end to it, with Ryousei skillfully pushing your buttons to make sure your lust doesn't flag for a long, long time. [else]Pushing his muzzle firmly against your sensitive pubes, you are treated to a glorious bit of tongue-play as he licks and teases all the little sensitive spots he found on your sexless, but still receptive nether region. It almost feels like there's no end to it, with Ryousei skillfully pushing your buttons to make sure your lust doesn't flag for a long, long time. [end if]Finding yourself lost in your own pleasure, you are reminded of the tiger's own need to finish by him moving his hips a little, making his throbbing cock push between your panting lips again. At his prompt, you get back to sucking on your purring partner, inhaling as much of his big cock as you can and giving it all the attention you can muster.";
 	WaitLineBreak;
-	say "     Brush after brush of that amazing tongue, he laps over your sex and wiggles it to give your clit special attention, while at the same time still sliding his fingers in and out of your pussy. The feeling of him pleasuring you - inside and out - is literally breathtaking, forcing you to pant for air in between letting out long, oh so pleased gasps. Wow. Just... wow. The large feline winds you up expertly, building your arousal more and more, then pausing at just the right moment to extend your pleasure and keep you just at the brink of orgasm. It could almost be called sensual torture to nearly reach the point of no return several times, then be strung along by your partner for another dip and dip and rise in the roller-coaster of pleasure that he is taking you on.";
-	say "     You're almost ready to scream out loud for him to let you come at last - but it seems Ryousei has gauged well just how far he should push you - and suddenly, he attacks your clit with full force, sucking on it and teasing it - hard - with the tip of his tongue. At the same time, his two fingers in your pussy stretch it a little more to allow a third to slip in, which then stretches even deeper and brushes against one very sensitive spot. The all-out assault on your pleasure centers is something you just can't - and don't want to - resist, pushing you to a screaming orgasm just moments later.";
-	WaitLineBreak;
-	say "     For you don't know how long, you forget all about the city, the nanites, everything that is going on - your whole world instead being the warm furry shape between your legs, the sensations of him moving against you - and inside you. Bliss fills your being as one intense touch and stimulation follows the next - prolonging the sensations of your climax so it only tapers off very slowly, at the end of which you're left exhausted but oh so very satisfied. The anthro tiger pushes himself up to kneel between your legs and grins down at your naked form as you lie there and try to catch your breath.";
-	say "     'It was my pleasure to satisfy you,' he says with a purr, then nods down to his own crotch, showing the well-sized shaft of his erection that rests in his hand. Stroking up and down on his hard shaft, the horny tiger doesn't take long to reach his own release. Throb after heavy throb of his cum erupts from his cock, painting your crotch and lower body with streaks of white[if Player is male] and mixing with your own cum that you covered your front with when you came[end if]. Panting rapidly with his head thrown back and eyes closed, Ryousei rides out his climax until the throbs of cum eventually ebbs off, then looks down over you. 'But my task is not done it seems - let me help you clean up,' he adds in an amused tone, then lowers himself on top of you and starts to lick all over your naked body.";
-	WaitLineBreak;
-	say "     You spend a pleasurable time being cat-washed and caressed by the muscular tiger, sharing more than a few kisses with him and tasting his cum on your lips. Eventually, he lies down beside you and puts an arm around you, caressing your side and wearing a thoughtful expression on his face. Then, after taking in your naked form for a long moment, he says, 'Being your companion makes the time on this wretched world bearable, even... pleasant, at times. Which makes me wonder about the time when I will eventually find my way back home. Would you like to accompany me, leave this place? My army needs people like you - strong and dependable. There will be hardship, but also rewards...' Ryousei caresses your cheek gently, then puts a finger on your lips. 'Do not answer now, it is moot until I can open a portal anyways. Just... think about it,' he says, then gets up to groom his fur into its usual impeccable state and get dressed.";
-	if player is female:
-		NPCSexAftermath Ryousei receives "OralPussy" from Player;
+	say "     You can feel a large paw-hand come to rest on the back of your head, a sign of the urgency of Ryousei's lust as he can't help but want to take over. Spreading his fingers to cradle your head in a firm grasp, the tiger pushes you deeper onto his cock at the same time as thrusting forwards with his hips, really sinking as much of his length as he can into your warm and welcoming mouth. Frantic thrusts follow that have his heavy balls slap your chin in a rapid pattern, until he soon lets out a full-throated roar as he starts to unload a deluge of cum straight into your stomach. Feeling his thick cock throb again and again, you revel in getting your sexy anthro off, swallowing to give his erection some additional stimulation. Eventually, when you start to feel a bit faint from not breathing for so long, you pull off his shaft, easily escaping the now slack grip of his hand on your head. As you start to gasp for air urgently, but still with a smile on your lips from the fun you had together, Ryousei's cock keeps throbbing, with some of the ebbing spurts of cum painting white streaks on your face.";
+	say "     A minute or so later, the anthro tiger pushes himself up from lying on his side, now half-sitting next to you. He reaches out to pull you up to him and leans in to lick your face, dutifully cleaning up the mess he made there and swallowing his own cum. When your face his clean of tiger cum, he says with a purr, 'It was amazing to share pleasure with you!' You chuckle and kiss his muzzle, responding that you had a great time too. This leads to a little bit more time of caresses and further cat-washing by the muscular tiger, until you eventually sink down to lie together, now side by side. Ryousei puts an arm around you, a thoughtful expression on his face. Then, after taking in your naked form for a long moment, he says, 'Being your companion makes the time on this wretched world bearable, even... pleasant, at times. Which makes me wonder about the time when I will eventually find my way back home. Would you like to accompany me, leave this place? My army needs people like you - strong and dependable. There will be hardship, but also rewards...' Ryousei caresses your cheek gently, then puts a finger on your lips. 'Do not answer now, it is moot until I can open a portal anyways. Just... think about it,' he says, then gets up to groom his fur into its usual impeccable state and get dressed.";
 	if Player is male:
 		NPCSexAftermath Ryousei receives "OralCock" from Player;
+	else if player is female:
+		NPCSexAftermath Ryousei receives "OralPussy" from Player;
+	else:
+		NPCSexAftermath Ryousei receives "Other" from Player;
 	NPCSexAftermath Player receives "OralCock" from Ryousei;
 
 to say RyouseiFucksPlayer: [player gets fucked in the ass]
@@ -754,7 +750,7 @@ to say RyouseiXerxesSex: [Ryousei, Xerxes & the player have fun]
 
 Section 5 - Events
 
-instead of navigating Grey Abbey Library while (companion of Player is royal tiger and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
+instead of navigating Grey Abbey Library while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -762,13 +758,13 @@ instead of navigating Grey Abbey Library while (companion of Player is royal tig
 		say "     DEBUG: RYOUSAI / XERXES MEETING[line break]";
 	say "[RyouseiMeetsXerxes]";
 
-instead of going outside from Grey Abbey Library while (companion of Player is royal tiger and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
+instead of going outside from Grey Abbey Library while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / XERXES MEETING[line break]";
 	say "[RyouseiMeetsXerxes]";
 
-instead of going down from Grey Abbey 2F while (companion of Player is royal tiger and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
+instead of going down from Grey Abbey 2F while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / XERXES MEETING[line break]";
@@ -801,7 +797,7 @@ to say RyouseiMeetsXerxes:
 		NPCSexAftermath Xerxes receives "AssFuck" from Ryousei;
 	now RyouseiXerxes is 1;
 
-instead of going up from Grey Abbey Library while (companion of Player is royal tiger and Hayato is in Darkened Alcove and RyouseiHayato is 0):
+instead of going up from Grey Abbey Library while (royal tiger is listed in companionList of Player and Hayato is in Darkened Alcove and RyouseiHayato is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / HAYATO MEETING[line break]";
@@ -814,7 +810,7 @@ instead of going up from Grey Abbey Library while (companion of Player is royal 
 	say "     Smoothing down the ruffled fur over his neck, Ryousei steps up to Hayato and gives him a deep bow. 'My apologies. I clearly let the memories of past encounters of... actual oni... get the better of me. Now then - please do me the honor of telling me your tale. The least I can do is listen to it, no matter how long.' The royal tiger stands calmly in front of the red oni, both hands with their sheathed claws clasped in front of himself. 'Um - eh... yes of course,' Hayato replies a moment later, still a bit flustered. As he waves Ryousei to one of the thin sitting mats he laid out in his camp and the tiger sits down in a cross-legged pose, you leave the two of them to get acquainted.";
 	now RyouseiHayato is 1;
 
-instead of going up from Grey Abbey Library while (companion of Player is royal tiger and Rane is in Sitting Area and RyouseiRane is 0):
+instead of going up from Grey Abbey Library while (royal tiger is listed in companionList of Player and Rane is in Sitting Area and RyouseiRane is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / RANE MEETING[line break]";

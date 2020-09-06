@@ -1,6 +1,8 @@
-Version 2 of Pets by Core Mechanics begins here.
-[Version 2.1 - Command tweaks]
+Version 3 of Pets by Core Mechanics begins here.
 [- Originally Authored By: Nuku Valente -]
+[ Version 2.1 - Command tweaks ]
+[ Version 3 - Rebuild of the pet system by Bigfish and Wahn ]
+
 
 Pet is a kind of person.
 A pet can be tamed. A pet is usually not tamed.
@@ -9,54 +11,126 @@ A pet has text called dismissdesc. Dismissdesc is usually "You send your ally aw
 A pet has a text called assault.
 A pet has a number called lastfight. lastfight is usually 255.
 A pet has a person called NPCObject. NPCObject of a pet is usually NullPet.
-The player has a pet called companion.
+The player has a list of pets called CompanionList.
+
+a postimport rule:
+	repeat with CurrentPet running through pets:
+		now CurrentPet is nowhere; [banished to the void]
 
 Definition: A person is lonely:
-	if companion of Player is nullpet, yes;
-
+	if companionList of Player is empty, yes;
 Definition: A person is not lonely:
-	if companion of Player is nullpet, no;
+	if companionList of Player is empty, no;
 
-before examining a pet (called x):
-	if debugactive is 1:
-		say "DEBUG -> Traits of [x]: [Traits of x][line break]";
-	if x is the Companion of Player:
-		increase score by 0;
+MaxCompanions is a number that varies.[@Tag:NotSaved] MaxCompanions is usually 1.
+
+to CalcMaxCompanions:
+	now MaxCompanions is 1;
+	if "Double Team" is listed in feats of Player:
+		increase MaxCompanions by 1;
+
+an every turn rule:
+	CalcMaxCompanions;
+	if number of entries in companionList of Player > MaxCompanions:
+		repeat with CurrentPet running through companionList of Player:
+			let DismissName be "";
+			now DismissName is printed name of CurrentPet;
+			if "Feral" is listed in Traits of CurrentPet:
+				if Player is booked or Player is bunkered:
+					say "     [bold type]As your party seems a bit big right now, you decide to send your companion home.[roman type][line break]";
+					DismissFunction DismissName;
+					break;
+				else:
+					next;
+			else:
+				say "     [bold type]As your party seems a bit big right now, you decide to send your companion home.[roman type][line break]";
+				DismissFunction DismissName;
+				break;
+
+AddCompanion is an action applying to one topic.
+
+understand "pet [text]" as AddCompanion.
+understand "ally [text]" as AddCompanion.
+
+SummonFailure is a truth state that varies.[@Tag:NotSaved] SummonFailure is usually false.
+
+carry out AddCompanion:
+	let InputName be the topic understood;
+	AddCompanionFunction InputName;
+
+to AddCompanionFunction (NewCompanion - a text):
+	let AddPet be Nullpet;
+	repeat with Z running through tamed pets:
+		let PetName be "";
+		now PetName is printed name of Z;
+		if PetName exactly matches the text NewCompanion, case insensitively:
+			now AddPet is Z;
+			break;
+	if AddPet is NullPet:
+		say "     You have no ally called [NewCompanion in title case]!";
 	else:
-		say "I don't see any [x] around here at the moment.";
-		stop the action;
+		let MaxCompanions be 1;
+		if "Double Team" is listed in feats of Player:
+			increase MaxCompanions by 1;
+		if AddPet is listed in companionList of Player:
+			say "     [AddPet] is already following you!";
+		else:
+			let y be number of entries in companionList of Player;
+			if y >= MaxCompanions:
+				say "     You cannot have any more allies following you right now! If you want to choose [AddPet], you'll have to send someone else away!";
+			else:
+				say "[summondesc of AddPet]";
+				if SummonFailure is false: [pet summon successful]
+					add "currentCompanion" to Traits of Addpet;
+					add Addpet to companionList of Player;
+				else:	[failed to call the pet]
+					now SummonFailure is false; [reset]
 
-Table of GameCharacterIDs (continued)
-object	name
-Nullpet	"Nullpet"
+DismissFailure is a truth state that varies.[@Tag:NotSaved] DismissFailure is usually false.
 
-Nullpet is a pet. Nullpet is a part of Player;
+understand "dismiss [text]" as DismissCompanion.
 
-DismissPlayerPet is an action applying to nothing.
-understand "ally dismiss" as DismissPlayerPet.
-understand "pet dismiss" as DismissPlayerPet.
-understand "dismiss" as DismissPlayerPet.
+DismissCompanion is an action applying to one topic.
 
-carry out DismissPlayerPet:
-	if Player is lonely:
-		say "There is no ally around to dismiss.";
+carry out DismissCompanion:
+	let InputName be the topic understood;
+	DismissFunction InputName;
+
+understand "dismiss" as DismissFirstCompanion.
+understand "ally dismiss" as DismissFirstCompanion.
+understand "pet dismiss" as DismissFirstCompanion.
+
+DismissFirstCompanion is an action applying to nothing.
+
+carry out DismissFirstCompanion:
+	If Number of Entries in companionList of Player is 0:
+		say "     You don't have any ally following you right now!";
 	else:
-		say "[dismissdesc of companion of Player]";
-		now companion of Player is nullpet;
+		let DismissName be "";
+		now DismissName is printed name of entry 1 of companionList of Player;
+		DismissFunction DismissName;
 
-CallPlayerPet is an action applying to one thing.
-understand "ally [tamed pet]" as CallPlayerPet.
-understand "pet [tamed pet]" as CallPlayerPet.
-
-carry out CallPlayerPet a pet (called x):
-	if companion of Player is not x:
-		if Player is not lonely:
-			say "[dismissdesc of companion of Player]";
-			LineBreak;
-		now the companion of Player is x;
-		say "[summondesc of x]";
+to DismissFunction (InputName - a text):
+	let DismissPet be Nullpet;
+	repeat with Z running through tamed pets:
+		let PetName be "";
+		now PetName is printed name of Z;
+		if PetName exactly matches the text InputName, case insensitively:
+			now DismissPet is Z;
+			break;
+	if DismissPet is NullPet:
+		say "     You have no ally called [InputName in title case]!";
+	else if DismissPet is not listed in companionList of Player:
+		say "     [DismissPet] is not following you!";
 	else:
-		say "They are already your current ally.";
+		say "[dismissdesc of DismissPet]";
+		if DismissFailure is false:
+			remove "currentCompanion" from Traits of DismissPet;
+			remove DismissPet from companionList of Player;
+		else: [pet couldn't be sent away]
+			now DismissFailure is false; [reset]
+
+
 
 CountPlayerPets is an action applying to nothing.
 understand "allies" as CountPlayerPets.
@@ -76,10 +150,11 @@ Carry out CountPlayerPets:
 		LineBreak;
 	else:
 		say "[PetList]";
-	if companion of Player is nullpet:
+	if companionList of Player is empty:
 		say "Active Ally: NONE[line break]";
 	else:
-		say "Active Ally: [companion of Player][line break]";
+		repeat with z running through companionList of Player:
+			say "Active Ally: [z][line break]";
 	say "Ally COMMANDS:[line break]";
 	say "[bold type]ally <name>[roman type] - Make the named ally your active one.";
 	say "[bold type]ally dismiss[roman type] - Send away your ally (for now).";
@@ -126,11 +201,18 @@ carry out PetOverview:
 			say "[PetOverviewName formatted to 20 characters] | [PetOverviewLvl formatted to 3 characters] | [PetOverviewDmg formatted to 3 characters] | [PetOverviewDex formatted to 3 characters] |[line break]";
 		say "[variable letter spacing]";
 
+
+Table of GameCharacterIDs (continued)
+object	name
+Nullpet	"Nullpet"
+
+Nullpet is a pet.
+
 Table of GameCharacterIDs (continued)
 object	name
 Latex Vixen	"Latex Vixen"
 
-Latex Vixen is a pet. Latex Vixen is a part of Player.
+Latex Vixen is a pet.
 understand "Example" as Latex Vixen.
 printed name of Latex Vixen is "Example".
 Description of Latex Vixen is "Sleek latex lines run over hir bright green and black form. Shi has a narrow snout with oddly solid looking teeth, often bared in a grin or smile. She has ripe C cupped breasts, a long shiny tail and a cock that stands out against her black belly, as pink as the belly is deep black.".

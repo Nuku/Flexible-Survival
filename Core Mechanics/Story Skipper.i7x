@@ -439,17 +439,9 @@ to CharacterRestore:
 			let CharacterIdName be Name entry;
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
-				if CharacterIdName is listed in PetList:
-					if debug is at level 10:
-						say "DEBUG -> Pets are part of Player, thus they don't get moved.[line break]";
-				[
-				else if CharacterIdName is "yourself":
-					if debug is at level 10:
-						say "DEBUG -> The player doesn't get moved.[line break]";
-				]
-				else if there is a name of LocationName entry in the Table of GameRoomIDs:
+				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
-					move CharacterObject to TargetRoom;
+					move CharacterObject to TargetRoom, without printing a room description;
 				else:
 					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
@@ -537,17 +529,9 @@ to CharacterRestore:
 			let CharacterIdName be Name entry;
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
-				if CharacterIdName is listed in PetList:
-					if debug is at level 10:
-						say "DEBUG -> Pets are part of Player, thus they don't get moved.[line break]";
-				[
-				else if CharacterIdName is "yourself":
-					if debug is at level 10:
-						say "DEBUG -> The player doesn't get moved.[line break]";
-				]
-				else if there is a name of LocationName entry in the Table of GameRoomIDs:
+				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
-					move CharacterObject to TargetRoom;
+					move CharacterObject to TargetRoom, without printing a room description;
 				else:
 					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
@@ -619,6 +603,8 @@ to TraitRestore:
 					add TraitText entry to Traits of CharacterObject;
 					if TraitText entry is "Tamed": [pets]
 						now CharacterObject is tamed;
+					if TraitText entry is "currentCompanion":
+						add CharacterObject to companionList of Player;
 					[
 					if debug is at level 10:
 						say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
@@ -1143,9 +1129,6 @@ To say ProgressionExport:
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
 		LineBreak;
-		if Player is not lonely:
-			say "     Preparing to travel to an alternate reality, you send your current ally away to await this in a safe place.";
-			try DismissPlayerPet;
 		if wrcursestatus is 5:
 			wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 		LineBreak;
@@ -1191,6 +1174,7 @@ to say ProgressionImport:
 	NoteRestore;
 	VariableLoad;
 	RunPostImportRules;
+	try looking; [start the player off in their new playthrough]
 
 Table of GameCharacterIDs (continued)
 object	name

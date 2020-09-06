@@ -167,6 +167,7 @@ to say GloryChoice1: [player charm]
 	now Refugee Mare is resolved;
 
 to say GloryChoice2: [Christmas Village]
+	project the Figure of SantaClaws_face_icon;
 	say "     As you tell Glory that you know just the place for her, the young woman is rather suspicious at first, but after a little talking to, she lets you lead her deeper into the mall. Soon arriving in the east wing, the hybrid mare looks up in wonder as you near the wall of falling snowflakes that marks the entrance of the Christmas Village and she literally squeals in joy as she sees what lies beyond. Santa Claws awaits the two of you on his large throne and he gives a friendly 'Ho ho ho' as he waves the two of you closer. Introducing Glory to him and explaining that she needs a place to stay where she can feel safe and protected once more, you earn a knowing nod from Santa, who smiles and then stands up to give his visitor a welcoming hug, saying that she can stay as long as she wants.";
 	say "     With some quickly summoned elves guiding Glory away to her new home in one of the block-houses, the bear clears his throat and watches her go, then turns back to you. 'Thank you for taking care of her and guiding Glory here. She will be safe, that I can promise you. At the same time, those who have been hit as hard as her rarely want to leave the Christmas Village again, instead preferring to stay as new elves in my domain. We will see how things turn out with her, but I wanted to tell you what you can expect.'";
 	now GloryFate is 10; [brought to Christmas Village]

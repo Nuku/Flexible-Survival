@@ -81,7 +81,7 @@ to say ResolveEvent Smashed Hive:
 			now HP of bee girl is 100;
 			now Resolution of Smashed Hive is 99; [left honey]
 	else if HP of bee girl is 1:
-		if companion of Player is bee girl:
+		if bee girl is listed in companionList of Player:
 			say "     Your meandering through the park takes you back to the ruins of the shattered bee hive. The sticky rubble has been picked through since you were last here, the last of the honey having been taken. Even the bodies of the fallen drones are gone - something you don't want to think about too much. Looking down at Honey, who is clutching your side tightly, she could have shared their grisly fate had you not helped her[if scalevalue of Player is 1]. As you hug her[else]. As you kneel down to hug her[end if], you notice some bear tracks and dried dribbles of honey heading off into the woods. You might be able to track down one of the bears responsible for this, if you want to.";
 			say "     [bold type]Shall you try?[roman type][line break]";
 			LineBreak;
@@ -170,7 +170,7 @@ Table of GameCharacterIDs (continued)
 object	name
 bee girl	"bee girl"
 
-bee girl is a pet. bee girl is a part of Player.
+bee girl is a pet.
 NPCObject of bee girl is Honey.
 understand "Honey" as bee girl.
 printed name of bee girl is "Honey".
@@ -184,8 +184,7 @@ The assault of bee girl is "[one of]The bee girl buzzes around, slapping and pun
 the fuckscene of bee girl is "[SexWithHoney]".
 
 to say SummonHoney:
-	now Honey is nowhere;
-	if Player is in Grey Abbey Garden and Honey is in Grey Abbey Garden: [summoning while standing next to her]
+	if Honey is visible: [summoning while standing next to her]
 		say "     Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
 	else: [regular summoning]
 		say "     Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
@@ -219,7 +218,7 @@ to say HoneyDesc:
 	if Player is in Grey Abbey Garden:
 		say "     At the moment the little bee girl is busy fixing up the garden.";
 	else:
-		if companion of Player is felinoid companion:
+		if bee girl is listed in companionList of Player:
 			say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 		else:
 			say "     At the moment the little bee girl is flying around, buzzing contently.";
@@ -233,7 +232,7 @@ to say HoneyScent:
 instead of conversing the Honey:
 	if Player is in Grey Abbey Garden and Honey is in Grey Abbey Garden:
 		say "[HoneyTalkMenu]";
-	else if companion of Player is bee girl:
+	else if bee girl is listed in companionList of Player:
 		say "[HoneyTalkMenu]";
 	else:
 		say "     Honey isn't here.";
@@ -244,7 +243,7 @@ instead of conversing bee girl:
 	else:
 		if Player is in Grey Abbey Garden and Honey is in Grey Abbey Garden:
 			say "[HoneyTalkMenu]";
-		else if companion of Player is bee girl:
+		else if bee girl is listed in companionList of Player:
 			say "[HoneyTalkMenu]";
 		else:
 			say "     Honey isn't here.";
@@ -415,7 +414,7 @@ to say HoneySex6: [Queen bee fun with Honey]
 Section 3 - Sexxxings
 
 An everyturn rule:
-	if companion of Player is bee girl and skipturnblocker is 0:
+	if bee girl is listed in companionList of Player and skipturnblocker is 0:
 		if Player is not neuter:
 			increase Libido of Player by 6;
 			let diceroll be a random number from 35 to 200; [lust check vs 200, player libido 35 or less auto-wins]

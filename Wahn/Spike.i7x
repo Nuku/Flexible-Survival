@@ -113,7 +113,7 @@ an everyturn rule:
 		add "Tamed" to Traits of doberman companion;
 		now doberman companion is tamed;
 		now thirst of Spike is 1; [default "Boss" name]
-	if doberman companion is tamed and companion of Player is not doberman companion and (Spike is in NPC Nexus or Spike is nowhere): [if the player had him as companion as they exported, he won't be in his room]
+	if doberman companion is tamed and doberman companion is not listed in companionList of Player and (Spike is in NPC Nexus or Spike is nowhere): [if the player had him as companion as they exported, he won't be in his room]
 		move Spike to Sitting Area;
 	if MaxHP of Spike is 0:
 		now MaxHP of Spike is 1;
@@ -123,6 +123,7 @@ Section 1 - Introduction
 instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Library and Libido of Alexandra > 2 and a random chance of 1 in 4 succeeds and HP of Spike is 0):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
+	now Spike is in Grey Abbey Library;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Meeting Spike[line break]";
@@ -163,11 +164,13 @@ instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Libra
 			LineBreak;
 			say "     Telling the young man that no, you [italic type]actually[roman type] just want him to go back to his mother hand help her keep on top of the unruly bunch of his siblings, Spike growls under his breath. Flinging the cigarette away with an angry flick of his wrist, the anthro canine grumbles, 'This is fucking stupid,' and looks to the ground sulkily. For a moment, it seems like he'll just reject your decision, but then he suddenly looks up at you and barks out, 'I thought that you'd be different. Like a real leader or something!' And with that, he turns his back to you, shuffling off to get back into the library.";
 			now HP of Spike is 100;
+			now Spike is nowhere;
 	else: [send him away - you monster!]
 		LineBreak;
 		say "     As you tell the young dog that he should go off on his own, he freezes in motion for a second, not sure what to reply. Clearly, this is one option that he hadn't even considered when he played through things in his mind. You see him swallow nervously, glancing to the library entrance for a second before he shakes his head to himself. 'Okay then, I'll do it,' Spike says, his firm tone sounding just a little bit brittle to your ears as he pushes himself off from the wall. 'I'm gonna go make my own way, out there. Alone in the city,' he adds, taking a few slow steps down the road as if waiting to hear you say that he passed the test and that you'll keep him now. But no, all you give him is a wish for good luck, which leaves Spike standing there for a moment longer, his back turned to you, before he runs away, not stopping for one second before he is out of sight.";
 		decrease Libido of Alexandra by 1; [one less teen following Alexandra around]
 		now HP of Spike is 99;
+		now Spike is nowhere;
 	now PlayerMet of Spike is true;
 
 to say SpikeAccepted:
@@ -176,7 +179,7 @@ to say SpikeAccepted:
 	now HP of Spike is 1;
 	add "Tamed" to Traits of doberman companion;
 	now doberman companion is tamed;
-	now companion of Player is doberman companion;
+	AddCompanionFunction "doberman companion";
 
 Section 2 - Combat Pet
 
@@ -184,7 +187,7 @@ Table of GameCharacterIDs (continued)
 object	name
 doberman companion	"doberman companion"
 
-doberman companion is a pet. doberman companion is a part of Player.
+doberman companion is a pet.
 NPCObject of doberman companion is Spike.
 understand "Spike" as doberman companion.
 understand "Doberman" as doberman companion.
@@ -206,10 +209,9 @@ to say SummonSpike:
 			now Sleeping of Spike is false;
 		else:
 			say "     You give a sharp whistle and wave to Spike, directing him to follow you. The young canine quickly rushes to your side and takes his spot to support you.";
-		now Spike is nowhere;
 	else: [regular summoning]
 		say "     And how do you want to do that? Cell phone reception kinda went downhill with the start of the nanite apocalypse and it's not like you can just magic up Spike to appear next to you. Go pick him up yourself.";
-		now companion of Player is nullpet;
+		now SummonFailure is true;
 
 to say DismissSpike:
 	project the figure of Spike_face_icon;
@@ -279,7 +281,7 @@ to say SpikeDesc:
 		say "     Having claimed a corner of the upper library floor as his, Spike has made a little man-cave for himself, dragging a mattress up from the bunker and setting the desk that had occupied the corner as a little reading nook on its side, to block a passage between two bookshelves. Posters of scantily dressed human women, as well as one or two with anthro furry erotic art have been pinned to the back wall so that he can look at them when lying down. Which Spikes does quite a bit, day-dreaming about things while stroking himself[if Spike is asleep]. Right now though, the slender doberman is [bold type]asleep[roman type], stretched out naked on his mattress with his usual outfit in a pile next to it[end if].";
 	else:
 		say "     Accompanying you on your travel throughout the city, he is never far away, usually just a step behind and a little to the side, serving as muscle and glowering at anyone who might dream of crossing you. As he notices your attention on himself, the doberman strokes a hand through his green-dyed hair and gives you a [if Libido of Spike > 40]slightly frightened[else]respectful[end if] nod.";
-	if companion of Player is doberman companion:
+	if doberman companion is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 everyturn rule:
@@ -330,7 +332,7 @@ to say SpikeTalkCheck:
 				say "     Seeing that your companion is resting, you decide to wait and talk to him later.";
 		else:
 			say "[SpikeTalkMenu]";
-	else if companion of Player is doberman companion:
+	else if doberman companion is listed in companionList of Player:
 		say "[SpikeTalkMenu]";
 	else:
 		say "     Spike isn't here.";
@@ -459,7 +461,7 @@ to say SpikeTalkMenu:
 to say SpikePickup:
 	say "     You give a sharp whistle and wave to Spike, directing him to follow you. The young canine quickly rushes to your side and takes his spot to support you.";
 	now Spike is nowhere;
-	now companion of Player is doberman companion;
+	AddCompanionFunction "doberman companion";
 
 to say SpikeTalk3: [himself]
 	say "     Lifting his arms and putting both hands behind his head, Spike looks at you and shrugs. 'You know most of it anyways. After all, you were the one who tamed the tough bitch that is my mom and brought her to the library. She had me and the others not much later. Living with all of them as a pack wasn't half-bad at first either. You should have seen the things that we did together! There are some corners in the library that... ah, but that's old news. Anyways, mom kept treating me like a pup even when I grew up. Hell, I was fully grown for days and she still lumped me in with the others. Got pretty annoyed with that shit, fast, so I started exploring the surrounding city blocks on my own. Anything to get out from under her paw a bit, you know?' Patting the leg of his ripped jeans and tugging on his skin-tight mesh shirt, the anthro doberman proudly explains that he found them scavenging.";
@@ -1626,7 +1628,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	say "     Walking along the upper floor of the library, you see Urik ahead of you, leaning against one of the walls and appearing a little bored. 'Hey boss,' he says, giving you a nod as he notices your presence. Just a short moment later, Spike appears from the back of the room where he's made his camp, attempting to walk past the orc. 'So, you keep a dobie, eh?' Urik comments, holding out a thick arm to block the way for your companion. 'Had a few of such puppies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!";
 	say "[SpikeMeetsUrik_Control]";
 
-after going to Sitting Area while (Urik is in Sitting Area and companion of Player is doberman companion and PlayerControlled of Urik is true and Stamina of Spike is 0):
+after going to Sitting Area while (Urik is in Sitting Area and doberman companion is listed in companionList of Player and PlayerControlled of Urik is true and Stamina of Spike is 0):
 	if debugactive is 1:
 		say "     DEBUG: Spike MEETS URIK - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -2011,7 +2013,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		say "     Walking along the upper floor of the library, you see Urik ahead of you, leaning against one of the walls and appearing a little bored. 'Hey boss,' he says, giving you a nod as he notices your presence. Just a short moment later, Spike appears from the back of the room where he's made his camp, attempting to walk past the orc. 'So, you keep a dobie, eh?' Urik comments, holding out a thick arm to block the way for your companion. 'Had a few of such puppies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their short tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!'";
 	say "[SpikeMeetsUrik_Friend]";
 
-after going to Sitting Area while (Urik is in Sitting Area and companion of Player is doberman companion and PlayerFriended of Urik is true and Dexterity of Spike is 0 and Libido of Spike < 40): [excludes forcefully broken in Spike]
+after going to Sitting Area while (Urik is in Sitting Area and doberman companion is listed in companionList of Player and PlayerFriended of Urik is true and Dexterity of Spike is 0 and Libido of Spike < 40): [excludes forcefully broken in Spike]
 	if debugactive is 1:
 		say "     DEBUG: Spike MEETS URIK - Dexterity of Spike: [Dexterity of Spike][line break]";
 	try looking;

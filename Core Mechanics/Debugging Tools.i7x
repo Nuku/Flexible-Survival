@@ -714,7 +714,7 @@ carry out TestMode:
 	add "Strong Back" to feats of Player;
 	add "Strong Psyche" to feats of Player;
 	add "Survivalist" to feats of Player;
-	add "The Horde" to feats of Player;
+	add "Double Team" to feats of Player;
 	add "Toughened" to feats of Player;
 	add "Unerring Hunter" to feats of Player;
 	add "Vampiric" to feats of Player;
@@ -779,6 +779,7 @@ carry out PetTest:
 		if x is nullpet:
 			next;
 		now x is tamed;
+		add "Tamed" to Traits of x;
 
 [Allows the player to change their body size without an infection. Useful for testing some scenes.]
 PlayerSizeChange is an action applying to nothing.

@@ -28,7 +28,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Little fox	"Little fox"
 
-Little fox is a pet. little fox is a part of Player.
+Little fox is a pet.
 NPCObject of Little fox is Dash.
 understand "Dash" as little fox.
 printed name of little fox is "Dash".
@@ -41,9 +41,11 @@ The dismissdesc of little fox is "[DismissDash]".
 The assault of little fox is "[one of]The little fox darts forward quickly and trips your opponent![or]Yipping and harassing your opponent, the little fox allows you to score a glancing blow![or]Growling ferociously, your little fox friend springs forward to attack, only to slip and knock over some junk nearby, luckily pelting your opponent with it.[or]Your opponent jumps and twists around suddenly in pain, allowing you to see your little fox friend hanging onto their rear valiantly by their teeth.[or]Taking advantage of your foe's momentary distraction, your pet fox manages to get in a few solid nips.[at random]".
 The fuckscene of little fox is "The little fox kit is both too small and too young for such shenanigans. There are plenty of fox-people running around; go find some of them if that's what you're into.".
 
+when play begins:
+	add "Feral" to Traits of little fox;
+
 to say SummonDash:
-	now Dash is nowhere;
-	if Player is in Computer Lab and Dash is in Computer Lab: [summoning while standing next to him]
+	if Dash is visible: [summoning while standing next to him]
 		say "     Going up to Dash, you crouch down and gently rub his ears. After showing your little fox kit some love, he gets super excited and begins to jump all over the place. Once he has calmed down a bit, he scrambles into your pack ready for a brand new journey!";
 	else: [regular summoning]
 		say "     Wriggling his way out of your pack, Dash looks around the area before sitting down and staring at you with its bright shining eyes, eager to explore.";
@@ -102,13 +104,13 @@ to say DashDesc:
 		say "     DEBUG -> FangDash: [FangDashRel] <- DEBUG[line break]";
 	project Figure of Dash_icon;
 	say "     Dash is so cute and friendly! He has a cute little fox face with eyes that shine with love as they stare up at you. His lithe and quick body is almost constantly in motion as it explores the world around you. The little fox's coloring was a bit of shock at first, with it being more brown and gray than you would have figured. Then again, maybe that is just the normal coloring for fox's when they are young like yours.";
-	if companion of Player is little fox:
+	if little fox is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing the Dash:
 	if Player is in Computer Lab and Dash is in Computer Lab:
 		say "[DashTalkMenu]";
-	else if companion of Player is little fox:
+	else if little fox is listed in companionList of Player:
 		say "[DashTalkMenu]";
 	else:
 		say "     Dash isn't here.";
@@ -119,7 +121,7 @@ instead of conversing little fox:
 	else:
 		if Player is in Computer Lab and Dash is in Computer Lab:
 			say "[DashTalkMenu]";
-		else if companion of Player is little fox:
+		else if little fox is listed in companionList of Player:
 			say "[DashTalkMenu]";
 		else:
 			say "     Dash isn't here.";
@@ -283,7 +285,7 @@ Table of GameCharacterIDs (continued)
 object	name
 skunk kit	"skunk kit"
 
-skunk kit is a pet. skunk kit is a part of Player.
+skunk kit is a pet.
 NPCObject of skunk kit is Peppy.
 understand "Peppy" as skunk kit.
 printed name of skunk kit is "Peppy".
@@ -296,9 +298,11 @@ The dismissdesc of skunk kit is "[DismissPeppy]".
 The assault of skunk kit is "[one of]The little skunk viciously launches itself at your attacker![or]Turning around, the skunk sprays your attacker in the face![or]Afraid of being left alone again, the little skunk goes into a frenzy of biting![or]All of a sudden the powerful scent of skunk washes over the fight from where your little skunk kit is playing nearby.[or]Taking advantage of your foes['] distraction, the skunk nips and bites at whatever part of your opponent it can reach.[or]Your adversary pauses for a minute as the little skunk growls at it, startling it enough for you to land a hit![or]The little skunk charges in to protect you, and your opponent seems so startled at its sudden appearance it falls backwards.[or]The little skunk tries to threaten your adversary from the sidelines, and spotting the skunk your adversary recoils in fear of its smell.[at random]".
 The fuckscene of skunk kit is "The little skunk kit you've rescued is too young and small for such perversions.".
 
+when play begins:
+	add "Feral" to Traits of Skunk Kit;
+
 to say SummonPeppy:
-	now Peppy is nowhere;
-	if Player is in Computer Lab and Peppy is in Computer Lab: [summoning while standing next to him]
+	if Peppy is visible: [summoning while standing next to him]
 		say "     Walking up and lightly scratching behind Peppy's ears, causing a loud churring sound from within. Giving a nod towards the door, the little skunk is quick to wobble outside. Apparently deciding that if he's going on this journey, then he is going to be the one leading it.";
 	else: [regular summoning]
 		say "     You call out for the little skunk you rescued to come help you out, and it comes trotting up from where it was following you, ready and eager to assist his friend, the smell of skunk filling the area around you.";
@@ -354,11 +358,11 @@ to say PeppyScent:
 
 to say Peppydesc:
 	say "     The skunk kit you rescued is obviously the offspring of one of the larger skunk beasts roaming the forest, as even as young as it obviously is, it's already the size of an average dog or perhaps even slightly larger. Peppy stares up at you adoringly however, with love in his eyes for his savior, exploring the world around it with the innocence of youth. How long that innocence will last though as he grows is anyone's guess, but for now its happy skunk-like antics bring a smile to your face.";
-	if companion of Player is skunk kit:
+	if skunk kit is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 An everyturn rule:
-	if companion of Player is skunk kit:
+	if skunk kit is listed in companionList of Player:
 		if a random number between one and 20 < 4:
 			say "[one of]The scent from Peppy wafts over you strongly, causing your body to change![or]Peppy comes up to you and nuzzles you, and you find yourself changing.[or]Peppy calls out for his mother, and you find yourself filling in for her.[or]Peppy rubs up against you, his skunky smell teasing your nose with images of mature skunk beasts.[or]Peppy is startled by something and sprays the area, hitting you as well![at random]";
 			if skunkbeaststatus is 1:
@@ -369,7 +373,7 @@ An everyturn rule:
 instead of conversing the Peppy:
 	if Player is in Computer Lab and Peppy is in Computer Lab:
 		say "[PeppyTalkMenu]";
-	else if companion of Player is skunk kit:
+	else if skunk kit is listed in companionList of Player:
 		say "[PeppyTalkMenu]";
 	else:
 		say "     Peppy isn't here.";
@@ -380,7 +384,7 @@ instead of conversing skunk kit:
 	else:
 		if Player is in Computer Lab and Peppy is in Computer Lab:
 			say "[PeppyTalkMenu]";
-		else if companion of Player is skunk kit:
+		else if skunk kit is listed in companionList of Player:
 			say "[PeppyTalkMenu]";
 		else:
 			say "     Peppy isn't here.";
