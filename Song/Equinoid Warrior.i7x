@@ -68,6 +68,8 @@ to say LilianaDesc:
 		say "     At the moment, the equinoid warrior is relaxing and just enjoying the courtyard.";
 	else:
 		say "     At the moment, the proud warrior is looking around for any hint of trouble.";
+	if equinoid warrior is listed in companionList of Player:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing equinoid warrior:
 	say "[LilianaScent]";
@@ -79,11 +81,10 @@ to say LilianaScent:
 	say "     Liliana smells of the equinoids, reminding you of the herd.";
 
 to say SummonLiliana:
-	if Player is in Courtyard and Liliana is in Courtyard: [summoning while standing next to her]
+	if Liliana is visible: [summoning while standing next to her]
 		say "     You inform Liliana that it's time to head out. She slams her fist into a hoofed hand, showing that she is ready for a fight.";
 	else: [regular summoning]
 		say "     Liliana strides up to your side with a determined look on her equine face.";
-	now Liliana is nowhere;
 
 to say DismissLiliana:
 	move Liliana to Courtyard;

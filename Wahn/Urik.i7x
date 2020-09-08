@@ -86,11 +86,9 @@ to say SummonUrik:
 			now Sleeping of Urik is false;
 		else:
 			say "     Calling out for Urik to join you is answered by a bellow of '[one of]Oh yeah[or]Nice[or]Finally[or]Let's get rockin[or]Hammer time[at random]!' from the orc, who jumps to his feet and cracks his knuckles. The towering orc is more than ready to get fighting by your side!";
-		now Urik is nowhere;
 	else: [regular summoning]
 		say "     And how do you want to do that? Cell phone reception kinda went downhill with the start of the nanite apocalypse and it's not like you can just magic up Urik to appear next to you. Go pick him up yourself.";
-		if orc supersized breeder is listed in companionList of Player:
-			remove orc supersized breeder from companionList of Player;
+		now SummonFailure is true;
 
 to say DismissUrik:
 	project the Figure of Urik_clothed_icon;
@@ -165,6 +163,8 @@ to say UrikDesc:
 	else if PlayerControlled of Urik is true:
 		say "     Urik looks the part of a proud orc warrior, tall and strong, with a brutishly handsome face, his square jaw showing two sharp tusks jutting upwards. There are only two pieces of 'clothing' on his impressive physique, leaving little to the imagination. The first is a quite well-crafted leather harness that is strapped around Urik's chest - a masterpiece of tough, studded leather and shiny buckles that promises lots of handholds for fucking him. Covering the large orc's thighs, there is a tight-fitting pair of trunks with a mesh pouch at the front (showing off his package), as well as decorative slits on the sides. It is completely open on the back side, with only two straps on the top and bottom, allowing unrestricted access to his ass. The orc has black hair, an unruly mop of long strands falling down between his shoulder-blades, accentuated by a short beard following his chin-line. There is a moderate amount of chest hair on his pecs, curling around Urik's pierced nipples, then leading down to his crotch in a thinner treasure trail of hair. The bush of his pubes can be seen through the mesh of Urik's underwear and his legs bear a nice amount of body hair too.";
 		say "     As Urik notices your attention, the orc looks aside, careful not to meet your gaze, and he angles his body a little bit to show the curve of his ass. It almost seems to be a reflexive act, him falling into submissive behavior now that you've made it clear that you expect him to be mainly your breeding slut.";
+	if orc supersized breeder is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 Conversation of Urik is { "<Placeholder>" }.
 
@@ -223,23 +223,30 @@ to say UrikTalkMenu:
 		now sortorder entry is 7;
 		now description entry is "Let Urik tell you about his sister, and what went on with her";
 	[
+	if "Urik's Past" is listed in Traits of Urik:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him about Declan"; [TODO: write this scene]
+		now sortorder entry is 8;
+		now description entry is "Carefully ask him about his old friend";
+	]
+	[
 	if "Yoga" is listed in Traits of Urik:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask him about doing yoga"; [TODO: write this scene]
-		now sortorder entry is 8;
+		now sortorder entry is 9;
 		now description entry is "Bring up that he seems an odd person to be doing yoga";
-	]
+	[]
 	if UrikEricInteraction > 0 and Urik is in Grey Abbey Library:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about Eric";
 		now sortorder entry is 20;
-		now description entry is "Chat with your orc slave about Eric";
-	[]
+		now description entry is "Chat with your orc about Eric";
+	]
 	if Stamina of Spike > 0 and Urik is in Grey Abbey Library:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about Spike";
 		now sortorder entry is 21;
-		now description entry is "Chat with your orc slave about Spike";
+		now description entry is "Chat with your orc about Spike";
 	[]
 	if orc supersized breeder is not tamed and Urik is in Grey Abbey Library and PlayerFriended of Urik is true and Loyalty of Urik > 5 and Loyalty of Urik < 80:
 		choose a blank row in table of fucking options;
@@ -271,6 +278,12 @@ to say UrikTalkMenu:
 		now sortorder entry is 101;
 		now description entry is "Hand Urik a bottle of potent orcish cum to sate his cravings";
 	[]
+	[
+	choose a blank row in table of fucking options;
+	now title entry is "Ask him about what orc cum"; [TODO: write this scene (rut/heat for Urik, orc cum effects - drunk + bulking up breeders + ...)]
+	now sortorder entry is 102;
+	now description entry is "Inquire about effects of orc cum on Urik";
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

@@ -118,6 +118,13 @@ Version 5 of Eric by Wahn begins here.
 [   1: Eric and Ryo met                                              ]
 [   2: Eric listened to stories by Ryo                               ]
 
+[ TODO: Make Eric hide in the bunker after being brought in          ]
+[       Scene: he flinches as the player enters the bunker, player   ]
+[              can talk him into getting out more (enabling all the) ]
+[              library scenes                                        ]
+
+[ TODO: Add pimping for sex slave Eric                               ]
+
 EricOrcPillMpreg is a number that varies. [able to be mpregged?]
 EricCurrentBabyDaddy is a text that varies.
 EricOffspringCount is a number that varies.
@@ -413,8 +420,8 @@ instead of conversing the Eric:
 						move player to bunker;
 					else: [really save him]
 						LineBreak;
-						say "     After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male German shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him...";
-						say "     The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. The lockerroom won't be safe much longer. You give him some time to come down from his highly aroused state, then tell him to get dressed and that you're taking him to your bunker. Eric thanks you, at the same time getting very red in the face as he realizes you saw... all of him. Twenty minutes later, he steps out from behind a row of lockers, dressed in shorts and a t-shirt and hefting a backpack with his most important gear and supplies. Soon you depart towards the bunker, Eric still rather silent beside you as he thinks about what happened to him.";
+						say "     After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male German shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him... The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. The lockerroom won't be safe much longer.";
+						say "     You give Eric some time to come down from his highly aroused state, then tell him to get dressed and that you're taking him to your bunker. Eric thanks you, at the same time getting very red in the face as he realizes you saw... all of him. Ten minutes later, he steps out from behind a row of lockers, dressed in shorts and a t-shirt and hefting a backpack with his most important gear and supplies. Soon you depart towards the bunker, Eric still rather silent beside you as he thinks about what happened to him.";
 						now HP of Eric is 1;
 						now thirst of Eric is 1;
 						move Eric to bunker;
@@ -463,12 +470,6 @@ to say EricTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Talk about what comes to mind";
 	[]
-	if HP of Eric is 99 and lust of Eric is 2:
-		choose a blank row in table of fucking options;
-		now title entry is "Implement your plan to get him fucked by David";
-		now sortorder entry is 2;
-		now description entry is "Push Eric to put out for David";
-	[]
 	if (HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32) and lust of Eric is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Get him interested in David (sexually)";
@@ -484,30 +485,36 @@ to say EricTalkMenu:
 	if HP of David is 4:
 		choose a blank row in table of fucking options;
 		now title entry is "David";
-		now sortorder entry is 5;
+		now sortorder entry is 71;
 		now description entry is "Talk about David with Eric";
 	[]
+	if HP of Eric is 99 and lust of Eric is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Implement your plan to get him fucked by David";
+		now sortorder entry is 72;
+		now description entry is "Push Eric to put out for David";
+	[
 	if HP of Eric > 9 and HP of Eric < 20 and UrikEricInteraction < 99 and UrikEricInteraction > 1: [cboy Eric, ate orc cum before]
 		choose a blank row in table of fucking options;
 		now title entry is "Urik";
-		now sortorder entry is 6;
+		now sortorder entry is 73;
 		now description entry is "Talk about Urik with Eric";
-	[]
+	]
 	if HP of Eric > 9 and HP of Eric < 99 and TomeFound > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "The old book";
-		now sortorder entry is 7;
+		now sortorder entry is 80;
 		now description entry is "Talk about the strange tome Eric found";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Offer Eric an item";
-	now sortorder entry is 20;
+	now sortorder entry is 90;
 	now description entry is "Give Eric a gift";
 	[]
 	if (player is male and "Cocked" is listed in Traits of Eric and orc pill case is owned and EricOrcPillMpreg < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Talk to Eric about the orc pills";
-		now sortorder entry is 21;
+		now sortorder entry is 91;
 		now description entry is "Get a feel for how Eric will react to the orc pill";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -2978,13 +2985,15 @@ to say EricMeetsAlexandra:
 		say "     Stepping forward and clearing your throat loudly, you draw the attention of Alexandra and Eric. While the young man gives you a shame-faced 'hand in the cookie jar' expression, the doberwoman grins broadly, wagging her tail as she gives Eric's clit another rub that makes him moan out loud. 'Hey boss,' she calls out to you, then licks the side of Eric's face playfully. Only after you flat out order her to leave the young trans man in peace does she stop groping and playing with Eric, giving a little huff as she lets go of him. 'Fine, fine, you're the boss,' the doberwoman half-growls, after which Eric pants out, 'I'm sorry for staring,' and runs off, snatching up his book as he goes along. 'Guess you brought that one here as a special pet, eh? Okay, I'll keep my hands off him, even if he is a cute li'l bitch.' With that said, the anthro canine walks over to the sofa, bends forward to pick up her jeans in the most provocative way possible, her dripping pussy in full view. Clothing in hand, she walks off after that.";
 		now AlexandraEricInteraction is 99; [Eric + Alexandra interaction stopped]
 
-after going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik > 8 and PlayerRomanced of Urik is false and "Selective Breeding" is not listed in Traits of Urik and UrikEricInteraction is 0):
+
+
+after going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik > 8 and Thirst of Urik > 0 and PlayerRomanced of Urik is false and "Selective Breeding" is not listed in Traits of Urik and UrikEricInteraction is 0):
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS URIK - UrikEricInteraction: [UrikEricInteraction][line break]";
 	try looking;
 	say "[EricMeetsUrik]";
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik > 8 and PlayerRomanced of Urik is false and "Selective Breeding" is not listed in Traits of Urik and UrikEricInteraction is 0):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik > 8 and Thirst of Urik > 0 and PlayerRomanced of Urik is false and "Selective Breeding" is not listed in Traits of Urik and UrikEricInteraction is 0):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2993,6 +3002,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eri
 	say "[EricMeetsUrik]";
 
 to say EricMeetsUrik:
+	say "     Entering the ground floor of the library, everything seems normal at first, but then the sound of someone's running steps draws your attention to the upper library floor. As you look up, a panicked Eric reaches the railing at a full sprint, catching himself on it and panting in exhaustion. He catches sight of you and calls out, 'Help! There's this huge green guy up here and he -' And that's how far he gets before a large green hand grips Eric by the back of the neck and pulls him out of sight, followed by the sound of a scuffle. Uh-oh. Looks like Urik doesn't really know how to play nice with others. You sprint up the stairs to the upper library floor to see the orc standing near the far wall, holding onto a struggling Eric, a handful of the young man's t-shirt in his grasp.";
 	say "     Entering the ground floor of the library, everything seems normal at first, but then the sound of someone's running steps draws your attention to the upper library floor. As you look up, a panicked Eric reaches the railing at a full sprint, catching himself on it and panting in exhaustion. He catches sight of you and calls out, 'Help! There's this huge green guy up here and he -' And that's how far he gets before a large green hand grips Eric by the back of the neck and pulls him out of sight, followed by the sound of a scuffle. Uh-oh. Looks like Urik doesn't really know how to play nice with others. You sprint up the stairs to the upper library floor to see the orc standing near the far wall, holding Eric by the throat. 'Why did you run, breeder boy? If you're in the lair, you must be used to getting dicked, no?' Urik grunts, then feels up Eric's pecs and abs and sniffs the still weakly kicking young man. Then he continues, 'A bit bony and with a strange smell, but you'll do boy. I wanna take someone NOW!' With that said, the green-skinned brute wrenches down Eric's shorts, only to stop in confusion. 'The fuck?! Where's your dick?'";
 	say "     As the orc warrior turned breeder lets go of Eric and the half-naked teen stumbles a few steps away from him, you finally close up to them. The first thing you do is put an arm around Eric, helping to keep him from falling over as he pulls his clothes back on and asking if he's okay. The college athlete rubs the somewhat bruised back of his neck with a hand and replies, 'Give me a minute, but... yeah. Still, that orc is a menace - why did you bring him here?!' Relieved that the young trans male is okay (mostly anyways), you tell him that he'll see in a moment. And with that, you wheel around and hone in on Urik. The orc has wandered off a little, giving Eric sidelong looks in disapproval. Then you grab him by the arm and let the green-skinned brute have it - saying that he can't just snatch up Eric, as he's got a special place in your tribe here. 'Oh, okay...' he replies with a little bit of a grumble, then shrugs and nods to you.";
 	WaitLineBreak;

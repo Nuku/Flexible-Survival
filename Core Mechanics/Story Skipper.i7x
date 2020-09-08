@@ -531,7 +531,7 @@ to CharacterRestore:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
 				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
-					move CharacterObject to TargetRoom;
+					move CharacterObject to TargetRoom, without printing a room description;
 				else:
 					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
@@ -1174,6 +1174,7 @@ to say ProgressionImport:
 	NoteRestore;
 	VariableLoad;
 	RunPostImportRules;
+	try looking; [start the player off in their new playthrough]
 
 Table of GameCharacterIDs (continued)
 object	name

@@ -35,7 +35,6 @@ to say gryphonessdesc:
 to say summongryphoness:
 	now tempnum is the remainder after dividing Libido of gryphoness by 4;
 	let T be ( Libido of gryphoness / 4 );
-	now Denise is nowhere;
 	project Figure of BlueGryphon_icon;
 	if Player is not in Garden View: [regular summoning]
 		say "     You sing out several notes of the song the way the gryphon you encountered taught you, your voice echoing through the empty city, and before long you hear an answering voice responding, and with flap of wings from above, and you look up just in time to see the herm gryphon you helped hurl herself into your arms, cooing and rubbing up against your body eagerly.";

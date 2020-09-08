@@ -45,8 +45,7 @@ when play begins:
 	add "Feral" to Traits of little fox;
 
 to say SummonDash:
-	now Dash is nowhere;
-	if Player is in Computer Lab and Dash is in Computer Lab: [summoning while standing next to him]
+	if Dash is visible: [summoning while standing next to him]
 		say "     Going up to Dash, you crouch down and gently rub his ears. After showing your little fox kit some love, he gets super excited and begins to jump all over the place. Once he has calmed down a bit, he scrambles into your pack ready for a brand new journey!";
 	else: [regular summoning]
 		say "     Wriggling his way out of your pack, Dash looks around the area before sitting down and staring at you with its bright shining eyes, eager to explore.";
@@ -105,6 +104,8 @@ to say DashDesc:
 		say "     DEBUG -> FangDash: [FangDashRel] <- DEBUG[line break]";
 	project Figure of Dash_icon;
 	say "     Dash is so cute and friendly! He has a cute little fox face with eyes that shine with love as they stare up at you. His lithe and quick body is almost constantly in motion as it explores the world around you. The little fox's coloring was a bit of shock at first, with it being more brown and gray than you would have figured. Then again, maybe that is just the normal coloring for fox's when they are young like yours.";
+	if little fox is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing the Dash:
 	if Player is in Computer Lab and Dash is in Computer Lab:
@@ -301,8 +302,7 @@ when play begins:
 	add "Feral" to Traits of Skunk Kit;
 
 to say SummonPeppy:
-	now Peppy is nowhere;
-	if Player is in Computer Lab and Peppy is in Computer Lab: [summoning while standing next to him]
+	if Peppy is visible: [summoning while standing next to him]
 		say "     Walking up and lightly scratching behind Peppy's ears, causing a loud churring sound from within. Giving a nod towards the door, the little skunk is quick to wobble outside. Apparently deciding that if he's going on this journey, then he is going to be the one leading it.";
 	else: [regular summoning]
 		say "     You call out for the little skunk you rescued to come help you out, and it comes trotting up from where it was following you, ready and eager to assist his friend, the smell of skunk filling the area around you.";
@@ -358,6 +358,8 @@ to say PeppyScent:
 
 to say Peppydesc:
 	say "     The skunk kit you rescued is obviously the offspring of one of the larger skunk beasts roaming the forest, as even as young as it obviously is, it's already the size of an average dog or perhaps even slightly larger. Peppy stares up at you adoringly however, with love in his eyes for his savior, exploring the world around it with the innocence of youth. How long that innocence will last though as he grows is anyone's guess, but for now its happy skunk-like antics bring a smile to your face.";
+	if skunk kit is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 An everyturn rule:
 	if skunk kit is listed in companionList of Player:

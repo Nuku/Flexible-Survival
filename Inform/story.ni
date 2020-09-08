@@ -6911,6 +6911,7 @@ Include Fang by Prometheus.
 Include Farmhands by Wahn.
 Include Felix by Wahn.
 Include Finn by Wahn.
+Include Flint by Gherod.
 Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
 Include Friesian Twin Isaac by Wahn.
@@ -6950,6 +6951,7 @@ Include Joshiro by Wahn.
 Include J'Reth by Prometheus.
 Include Juergen by Wahn.
 Include Julian by Prometheus.
+Include Jana by Kirov.
 Include Kai by WhiteRabbit.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
@@ -9200,11 +9202,9 @@ Book 10 - Let the Games Begin
 to say promptsay:
 	let x be the location of the player;
 	if companionList of Player is not empty:
-	 	repeat with y running through companionList of Player:
+		repeat with y running through companionList of Player:
 			if NPCObject of y is not Nullpet:
 				now NPCObject of y is in location of Player;
-	[if companion of Player is not NullPet and NPCObject of Companion of Player is not Nullpet:
-		now NPCObject of Companion of Player is in location of Player;]
 	let z be the number of entries in invent of x;
 	if z > 0:
 		say "Visible Objects: ";

@@ -130,6 +130,7 @@ Figure of ShadowBeast_icon is the file "ShadowBeast.jpg".
 Figure of Pewter_Consort_icon is the file "Pewter_Consort.jpg".
 Figure of PirateShark_icon is the file "sharkpirate.png".
 Figure of Ram_naked_icon is the file "Ram_naked.jpg".
+Figure of Saber_Kitty_icon is the file "Saber Kitty.jpg".
 Figure of SeaDragon_hard_icon is the file "Sea Dragon hard.jpg".
 Figure of SeaDragon_soft_icon is the file "Sea Dragon soft.jpg".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
@@ -140,6 +141,8 @@ Figure of Spartan_face_icon is the file "Spartan_face.jpg".
 Figure of SpartanHelot_dressed_icon is the file "SpartanHelot_dressed.jpg".
 Figure of SpartanHelot_naked_icon is the file "SpartanHelot_naked.jpg".
 Figure of Spartan_icon is the file "Spartan.jpg".
+Figure of Stallionboi_hard_icon is the file "Stallionboi_hard.jpg".
+Figure of Stallionboi_clothed_icon is the file "Stallionboi_clothed.jpg".
 Figure of Succubus_clothed_icon is the file "Succubus_clothed.jpg".
 Figure of SugarGlider_icon is the file "Sugar_Glider.jpg".
 Figure of ThoughtEater_icon is the file "ThoughtEater.jpg".
@@ -384,6 +387,7 @@ Figure of Ryousei_fundoshi_icon is the file "Ryousei_fundoshi.jpg".
 Figure of Ryousei_naked_icon is the file "Ryousei_naked.jpg".
 Figure of Ryousei_wink_icon is the file "Ryousei_wink.jpg".
 Figure of Sally_icon is the file "sally_ig.jpg".
+Figure of SantaClaws_face_icon is the file "Santa Claws.jpg".
 Figure of sandy_icon is the file "sandra.jpg".
 Figure of Sarah_clothed_icon is the file "Sarah_clothed.jpg".
 Figure of Sarah_face_icon is the file "Sarah_face.jpg".
@@ -1015,13 +1019,17 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Ryousei_fundoshi"	Figure of Ryousei_fundoshi_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_naked"	Figure of Ryousei_naked_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_wink"	Figure of Ryousei_wink_icon	"ValdericBlackstag"	g-black	"normal"
+"Saber Kitty"	Figure of Saber_Kitty_icon	"Vashaa"	g-White	"normal"
 "Sally"	Figure of Sally_icon	"Furball"	g-white	"normal"
 "Sand Man"	Figure of SandMan_icon	"Rastear"	g-black	"normal"
 "Sandy"	Figure of sandy_icon	""	g-white	"normal"
+"Santa Claws"	Figure of SantaClaws_face_icon	"SineAlas"	g-black	"normal"
 "Sarah_clothed"	Figure of Sarah_clothed_icon	"Lyttathebug"	g-white	"normal"
 "Sarah_face"	Figure of Sarah_face_icon	"Lyttathebug"	g-white	"normal"
 "Sarah_face_naked"	Figure of Sarah_face_naked_icon	"Lyttathebug"	g-white	"normal"
 "Sarah_naked"	Figure of Sarah_naked_icon	"Lyttathebug"	g-white	"normal"
+"Stallionboi hard"	Figure of Stallionboi_hard_icon	"Vashaa"	g-White	"normal"
+"Stallionboi clothed"	Figure of Stallionboi_clothed_icon	"Vashaa"	g-White	"normal"
 "Satyress_naked"	Figure of Satyress_naked_icon	"Vashaa"	g-White	"normal"
 "Sea Dragon Hard"	Figure of SeaDragon_hard_icon	"Vashaa"	g-white	"normal"
 "Sea Dragon Soft"	Figure of SeaDragon_soft_icon	"Vashaa"	g-white	"normal"
@@ -1308,6 +1316,7 @@ carry out artistcredits:
 	say "     Queen Bee by Caltroplay @ furaffinity.net[line break]";
 	say "     Ram by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Reindeer by MoT @ furaffinity.net[line break]";
+	say "     Saber Kitty by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Sand Man by Rastear @ y-gallery.net[line break]";
 	say "     Satyress by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Sea Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
@@ -1318,6 +1327,7 @@ carry out artistcredits:
 	say "     Snow Leopard by Anymouse1968 @ Furaffinity.net[line break]";
 	say "     Spartan by Obieblu @ tumblr.com[line break]";
 	say "     Spartan & Helot by Obieblu @ tumblr.com[line break]";
+	say "     Stallionboi by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Succubus by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Sugar Glider by Xilrayne @ https://inkbunny.net/Xilrayne[line break]";
 	say "     Thought Eater by Rastear @ y-gallery.net[line break]";
@@ -1461,6 +1471,7 @@ carry out artistcredits:
 	say "     Sally by Furball @ furaffinity.net[line break]";
 	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sam (as Vixentaur) by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Santa Claws by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Sandra by Trav @ ???[line break]";
 	say "     Sarah by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Septus by Feralise @ furaffinity.net[line break]";

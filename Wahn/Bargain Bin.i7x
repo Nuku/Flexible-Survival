@@ -111,10 +111,7 @@ carry out bargainhunting:
 		else if Z is 9: [biting monster]
 			say "     Reaching deep into the bin, you feel something moving under all of those strange items piled in it! A heartbeat later, whatever it is chumps down on your searching fingers, making you withdraw your hand immediately. Looking down at it, you can't help but stare as blood slowly drips from your fingers, trickling down from a [bold type]nasty bite-wound[roman type] on your hand. Nermine seems rather embarrassed by the whole affair as she helps you bandage up your new wound, and the jackal glares at the bin for a minute as if reprimanding whatever bit you. 'Nermine is sorry, sometimes things are not happy to end up in bargain bin. The jackaless apologizes and decides to make good for such a sad misunderstanding,' the jackal says with a shrug, then quickly refunds your food and water, and even places an extra packet of food and bottle of water out for the inconvenience.";
 			LineBreak;
-			say "[bold type]You lose 25 HP![roman type][line break]";
-			decrease HP of Player by 25;
-			if HP of Player < 0:
-				now HP of Player is 1;
+			PlayerWounded 25;
 			ItemGain food by 2;
 			ItemGain water bottle by 2;
 		else if Z is 10: [pocket watch]
@@ -515,29 +512,31 @@ Section 2 - Strange Doll Companion
 
 Table of GameCharacterIDs (continued)
 object	name
-strange doll	"strange doll"
+Strange Doll	"strange doll"
+Strange Doll	"Strange Doll"
+Strange Doll	"Your doll-twin"
 
-strange doll is a pet.
-NPCObject of strange doll is strange doll.
-understand "Your Doll-Twin" as strange doll.
-understand "Doll-Twin" as strange doll.
-understand "Doll" as strange doll.
-printed name of strange doll is "Your doll-twin".
-The description of strange doll is "[StrangeDollDesc]".
-The weapon damage of strange doll is 5.
-The level of strange doll is 1.
-The Dexterity of strange doll is 15.
-The summondesc of strange doll is "[SummonStrangeDoll]".
-The dismissdesc of strange doll is "[DissmisStrangeDoll]".
-The assault of strange doll is "[one of]The strange doll picks up something from the ground nearby, and tries to stab your attacker with it![or]Running up under your attacker, your strange plush doll tosses itself at their legs, tangling them up![or]The strange doll of you mimics your attack, striking at your opponent![or]Your opponent suddenly cries out in pain, your little ally having managed to score a hit in a sensitive area.[or]Taking advantage of your foes distraction, your little doll gets in several good hits.[or]All of a sudden your opponent stops fighting and begins to try to claw at their face, taking the opportunity to land an extra hit, you notice your little plush doll managed to climb up and put its hands over their eyes.[or]All of a sudden your opponent is startled by a sudden rain of debris tossed at it by your little ally, causing it to fall backwards[or]Imitating you, your little mini me attacks the beast with wild abandon![at random]".
-the fuckscene of strange doll is "The little doll doesn't respond to your strange offer.".
+Strange Doll is a pet.
+NPCObject of Strange Doll is Strange Doll.
+understand "Your Doll-Twin" as Strange Doll.
+understand "Doll-Twin" as Strange Doll.
+understand "Twin" as Strange Doll.
+understand "Doll" as Strange Doll.
+printed name of Strange Doll is "Your doll-twin".
+Description of Strange Doll is "[StrangeDollDesc]".
+Weapon Damage of Strange Doll is 5.
+Level of Strange Doll is 1.
+Dexterity of Strange Doll is 15.
+Summondesc of Strange Doll is "[SummonStrangeDoll]".
+Dismissdesc of Strange Doll is "[DissmisStrangeDoll]".
+Assault of Strange Doll is "[one of]The strange doll picks up something from the ground nearby, and tries to stab your attacker with it![or]Running up under your attacker, your strange plush doll tosses itself at their legs, tangling them up![or]The strange doll of you mimics your attack, striking at your opponent![or]Your opponent suddenly cries out in pain, your little ally having managed to score a hit in a sensitive area.[or]Taking advantage of your foes distraction, your little doll gets in several good hits.[or]All of a sudden your opponent stops fighting and begins to try to claw at their face, taking the opportunity to land an extra hit, you notice your little plush doll managed to climb up and put its hands over their eyes.[or]All of a sudden your opponent is startled by a sudden rain of debris tossed at it by your little ally, causing it to fall backwards[or]Imitating you, your little mini me attacks the beast with wild abandon![at random]".
+Fuckscene of Strange Doll is "The little doll doesn't respond to your strange offer.".
 
 dollfound is a number that varies.
 
-the scent of strange doll is "The strange doll smells strangely like you.".
+the scent of Strange Doll is "The strange doll smells strangely like you.".
 
 to say SummonStrangeDoll:
-	now Strange Doll is nowhere;
 	say "     You pull the strange little doll from the shop out of your pack, and set it on the ground next to you, the doll lies there for a minute on the ground, before twitching and picking itself up. The little miniature version of you looks around the area, before looking up at you and saluting, obviously ready and willing to help.";
 
 to say DissmisStrangeDoll:

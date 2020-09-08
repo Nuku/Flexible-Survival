@@ -19,7 +19,7 @@ LastCandyWalkin is a number that varies.
 
 to say candycoondesc:
 	setmongender 3; [creature is male]
-	say "     You have encountered a cute raccoon in a pink, candy striper outfit. The uniform is a bright pink with a white apron and skirt. It has a few white stains scattered on it. The raccoon has a slender, feminine build. The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears. The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body. That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt. The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
+	say "     You have encountered a cute raccoon in a pink, candy striper outfit. The raccoon has a slender, feminine build. The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears. The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body. That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt. The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
 
 to say losetocandycoon:
 	choose row MonsterID from the Table of Random Critters;
@@ -260,23 +260,27 @@ pink raccoon is a pet.
 NPCObject of pink raccoon is pink raccoon.
 understand "Candy" as pink raccoon.
 printed name of pink raccoon is "Candy".
-Description of pink raccoon is "The pink coonboi has soft, gray fur with pink highlights and pink rings around his tail. He looks at you with mindless adoration, now a loyal and obedient pet and plaything.".
+Description of pink raccoon is "[PinkRacconDesc]".
 Weapon Damage of pink raccoon is 10.
-The level of pink raccoon is 1.
-The Dexterity of pink raccoon is 15.
-The Summondesc of pink raccoon is "[SummonPinkRaccoon]".
-The Dismissdesc of pink raccoon is "[DismissPinkRaccoon]".
-The assault of pink raccoon is "[one of]The raccoon charges in, regardless of any risk to himself and strikes wildly at your enemy![or]Your raccoon pet leaps at the enemy, trying to tackle them. He gets them off balance long enough for you to score a quick hit before he's tossed off![or]Yipping angrily, he nips at your foe![or]The coon boy hikes up his skirt and starts masturbating, shooting his hot seed onto his dress in a show that distracts your foe long enough to get in a quick strike![or]The raccoon grabs stray trash and rubble, pelting your enemy with it![at random]".
-the fuckscene of pink raccoon is "[sexwithpinkraccoonpet]".
+Level of pink raccoon is 1.
+Dexterity of pink raccoon is 15.
+Summondesc of pink raccoon is "[SummonPinkRaccoon]".
+Dismissdesc of pink raccoon is "[DismissPinkRaccoon]".
+Assault of pink raccoon is "[one of]The raccoon charges in, regardless of any risk to himself and strikes wildly at your enemy![or]Your raccoon pet leaps at the enemy, trying to tackle them. He gets them off balance long enough for you to score a quick hit before he's tossed off![or]Yipping angrily, he nips at your foe![or]The coon boy hikes up his skirt and starts masturbating, shooting his hot seed onto his dress in a show that distracts your foe long enough to get in a quick strike![or]The raccoon grabs stray trash and rubble, pelting your enemy with it![at random]".
+Fuckscene of pink raccoon is "[sexwithpinkraccoonpet]".
 
 when play begins:
 	add "Feral" to Traits of pink raccoon;
 
+to say PinkRacconDesc:
+	say "     The pink coonboi has soft, gray fur with pink highlights and pink rings around his tail. He looks at you with mindless adoration, now a loyal and obedient pet and plaything.";
+	if pink raccoon is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
+
 the scent of the pink raccoon is "The pink coonboi smell of cotton candy, arousal and sex, all with a faint hint of your own scent beneath that.".
 
 to say SummonPinkRaccoon:
-	now Pink Raccoon is nowhere;
-	if Player is in Computer Lab and Candy is in Computer Lab:
+	if Pink Raccoon is visible:
 		say "     Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close. He churrs happily, ready and eager to obey.";
 	else:
 		say "     Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close. He churrs happily, ready and eager to obey.";
@@ -287,7 +291,6 @@ to say DismissPinkRaccoon:
 		say "     The girly raccoon wraps his arms around you, hugging you before leaving your side. Eager to return to it when you call.";
 	else:
 		say "     The girly raccoon wraps his arms around you, hugging you before leaving your side. Eager to return to it when you call.";
-	[if Player is not in Computer Lab:]
 
 to say sexwithpinkraccoonpet:
 	[puts Raccoon as lead monster in case of impregnation]

@@ -558,7 +558,7 @@ This is the player attack rule:
 						say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
 						decrease monsterHP by dam;
 					else:
-						say "Your [z] misses!";
+						say "[z] misses!";
 		else if a random chance of petchance in 1000 succeeds:
 			LineBreak;
 			let z be entry 1 of companionList of Player;
@@ -581,7 +581,7 @@ This is the player attack rule:
 					say "[assault of z][run paragraph on]  [special-style-2][dam][roman type] damage inflicted!";
 					decrease monsterHP by dam;
 				else:
-					say "Your [z] misses!";
+					say "[z] misses!";
 	LineBreak;
 	if monsterHP is not currentmonHP:
 		follow the monster injury rule;

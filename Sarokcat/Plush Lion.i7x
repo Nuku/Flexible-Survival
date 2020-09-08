@@ -63,8 +63,7 @@ to plushlionvored:
 		now XP of Player is 0;  [prevents accidental level up]
 		if the player is not lonely:
 			repeat with x running through companionList of Player:
-				if x is NullPet:
-					now XP of x is 0;
+				now XP of x is 0;
 		now non-infectious entry is true;  [prevents regular plush lion infection from occurring]
 		setmonster "Plush Lion" silently;
 		turn the Player into a "Plush Lion";

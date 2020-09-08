@@ -88,8 +88,7 @@ MainInfection of gshep is "German Shepherd Male".
 
 
 to say SummonKorvin:
-	now Korvin is nowhere;
-	if Player is in Makeshift Rec Room and Korvin is in Makeshift Rec Room: [summoning while standing next to him]
+	if Korvin is visible: [summoning while standing next to him]
 		say "     Calling for Korvin, the German shepherd joins you at your side. He seems excited at the prospect of busting some heads.";
 	else: [regular summoning]
 		say "     Calling for Korvin, the German shepherd joins you at your side. He seems excited at the prospect of busting some heads.";
@@ -190,6 +189,8 @@ to say Korvindesc:
 			project the figure of Korvin_blackcollar_icon;
 		say "     Korvin, the anthro German shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face. He's got the typical brown and black coat of the breed. He's buff and well-built, though not overly so. His most distinguishing feature is the ragged scar that runs along his cheek and muzzle. Such marks are rare, even with the amount of fighting between mutants in the city. He's also nude, wearing nothing save for the black studded collar you've given him, adding to his air of menace.";
 		say "     Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life. You've been able to help him better cope with that, letting him recover a little self-control. He still retains some of that independent streak of his, but he accepts you as his friend and master and will follow your orders fairly loyally.";
+	if gshep is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 to say gshep_attack:
 	choose row MonsterID from the Table of Random Critters;
@@ -613,10 +614,7 @@ to say gshep_inactive_scene:
 	else:
 		LineBreak;
 		say "     Seeing the way his paws are clenching into fists and how he's fidgeting from foot to foot, you decide he could use a chance to blow off some steam. You pause a bit to remind him that it's your decision before nodding and telling him to get ready. He gives a growl of anticipation and smacks a fist into his palm a few times. 'I've been ready all day.' You add that you'll agree this one time, but that he'll have to be more self-controlled in the future - he's not a wild dog anymore. He nods and takes a breath, settling down a little before fist-pumping. 'Come on! Let's do this thing!'";
-		if the player is not lonely and gshep is not listed in companionList of Player:
-			say "     Your current companion backs off at a glare from Korvin, leaving him to accompany you instead. The German shepherd clearly wants to go out and fight alongside his alpha - just the two of you against the city.";
-			remove entry 1 from companionList of Player;
-		AddCompanionFunction "gshep";
+		add gshep to CompanionList of Player;
 		now battleground is "Outside";
 		say "     Once outside, the dog goes sniffing for a fight, chasing after the first interesting trail he comes across. You follow him as he soon leads you to an encounter with a roaming denizen of the city.";
 		WaitLineBreak;

@@ -630,21 +630,30 @@ AnalVirgin of demon brute is false.
 PenileVirgin of demon brute is false.
 SexuallyExperienced of demon brute is true.
 MainInfection of demon brute is "Demon Brute".
-
 Description of demon brute is "[DemonBrutePetDesc]".
 The icon of demon brute is Figure of DemonBrute_icon.
 Weapon Damage of demon brute is 20.
 The level of demon brute is 1.
 Dexterity of demon brute is 10.
-The summondesc of demon brute is "     Holding your demontooth amulet tightly in your fist, you murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]demon companion[else]captive demon brute[end if]. You tell him 'I want you to help me when I get into fights, OK?' In a [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]deep[else]growling[end if] voice, the demon answers 'Yes... master.'".
-The assault of demon brute is "[one of]The demon brute charges into combat, swinging wildly at your enemy in uncontrolled bloodlust![or]A loud roar of your demon brute frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your demon brute slashes your enemy with his claws![at random]".
-the fuckscene of demon brute is "[sexwithdemonbrutepet]".
+Summondesc of demon brute is "[SummonBrutus]".
+Dismissdesc of demon brute is "[DismissBrutus]".
+Assault of demon brute is "[one of]The demon brute charges into combat, swinging wildly at your enemy in uncontrolled bloodlust![or]A loud roar of your demon brute frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your demon brute slashes your enemy with his claws![at random]".
+Fuckscene of demon brute is "[sexwithdemonbrutepet]".
+
+to say SummonBrutus:
+	say "     Holding your demontooth amulet tightly in your fist, you murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]demon companion[else]captive demon brute[end if]. You tell him 'I want you to help me when I get into fights, OK?' In a [if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7]deep[else]growling[end if] voice, the demon answers 'Yes... master.'";
+
+to say DismissBrutus:
+	say "     You raise your demontooth amulet and command Brutus to return to it. The large purple demon looks at you, then turns into a swirling cloud of smoke and vanishes into the magic item.";
+	now Brutus is nowhere;
 
 to say DemonBrutePetDesc:
 	if DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7: [cleansed]
 		if DemonBruteStatus is 0:
+			project Figure of BrutusGood_icon;
 			say "     Brutus is certainly impressive in stature, standing tall on his digitigrade legs and showing a broad chest and muscle-packed arms. Cleansing the demon brute from the evil he carried around in him for so long has had a distinct effect on his appearance. Now, the humanoid beast's purple skin is several shades lighter than before, and while his face still looks rather frightening, the permanent scowl has left it. He looks upon the world with new eyes - literally, as they now show white eyeballs with azure blue, still slitted, pupils. Three matched pairs of horns crown his head, curved and getting smaller front to back, though you think they're less sharp and jagged than before. Between the enlarged and well-toned thighs of Brutus hangs a thick, veiny cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum. He also has a long, spade-tipped tail protruding from his body somewhere behind, lazily flicking through the air from time to time.";
 		else if DemonBruteStatus is 1:
+			project Figure of BrutusGood_icon;
 			say "     Brutus is certainly impressive in stature, standing tall on his digitigrade legs and showing a broad chest and muscle-packed arms. Cleansing the demon brute from the evil he carried around in him for so long has had a distinct effect on his appearance. Now, the humanoid beast's purple skin is several shades lighter than before, and while his face still looks rather frightening, the permanent scowl has left it. He looks upon the world with new eyes - literally, as they now show white eyeballs with azure blue, still slitted, pupils. Three matched pairs of horns crown his head, curved and getting smaller front to back, though you think they're less sharp and jagged than before. Between the enlarged and well-toned thighs of Brutus hangs a thick, veiny cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum, and you know for a fact that there's a pussy right under those balls between his legs. He also has a long, spade-tipped tail protruding from his body somewhere behind, lazily flicking through the air from time to time.";
 		else if DemonBruteStatus is 2:
 			say "     Brutus is certainly impressive in stature, standing tall on his digitigrade legs and showing a broad chest and muscle-packed arms. Cleansing the demon brute from the evil he carried around in him for so long has had a distinct effect on his appearance. Now, the humanoid beast's purple skin is several shades lighter than before, and while his face still looks rather frightening, the permanent scowl has left it. He looks upon the world with new eyes - literally, as they now show white eyeballs with azure blue, still slitted, pupils. Three matched pairs of horns crown his head, curved and getting smaller front to back, though you think they're less sharp and jagged than before. Between his legs, you see a female's pussy, looking quite inviting. He also has a long, spade-tipped tail protruding from his body somewhere behind, lazily flicking through the air from time to time.";
@@ -652,13 +661,17 @@ to say DemonBrutePetDesc:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 	else: [original 'evil']
 		if DemonBruteStatus is 0:
+			project Figure of BrutusEvil_icon;
 			say "     Your captured demon brute is certainly impressive in stature, standing tall on his digitigrade legs and showing a broad chest and muscle-packed arms. The humanoid beast has dark purple skin, a frightening face with slits for nostrils, yellow eyes with red slitted pupils, and sharp, intimidating teeth. Three matched pairs of horns crown his head, curved and getting smaller front to back. Between his legs hangs a thick cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum. He also has a long, spade-tipped tail protruding from his body somewhere behind, which is constantly flicking back and forth. He wears nothing but a grim expression.";
 		else if DemonBruteStatus is 1:
+			project Figure of BrutusEvil_icon;
 			say "     Your captured demon brute is certainly impressive in stature, standing tall on his digitigrade legs and showing a broad chest and muscle-packed arms. The humanoid beast has dark purple skin, a frightening face with slits for nostrils, yellow eyes with red slitted pupils, and sharp, intimidating teeth. Three matched pairs of horns crown his head, curved and getting smaller front to back. Between his legs hangs a thick cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum, and you know for a fact that there's a pussy right under those balls between his legs. He also has a long, spade-tipped tail protruding from his body somewhere behind, which is constantly flicking back and forth. He wears nothing but a grim expression.";
 		else if DemonBruteStatus is 2:
 			say "     Your captured demon brute is certainly impressive in stature, standing tall on his digitigrade legs and showing a broad chest and muscle-packed arms. The humanoid beast has dark purple skin, a frightening face with slits for nostrils, yellow eyes with red slitted pupils, and sharp, intimidating teeth. Three matched pairs of horns crown his head, curved and getting smaller front to back. Between his legs, you see a female's pussy, looking quite inviting. He also has a long, spade-tipped tail protruding from his body somewhere behind, which is constantly flicking back and forth. He wears nothing but a grim expression.";
 		else:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
+	if demon brute is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing demon brute:
 	say "Smells like fire, ash and brimstone.";
@@ -1940,7 +1953,7 @@ Section 6 - Endings
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "DBrute Slave"	"BadEnd"	"Slave"	DBrute Slave rule	20	false
-"demon bruteInfection"	"Infection"	""	Demon Brute Infection rule	1000	false
+"Demon Brute Infection"	"Infection"	""	Demon Brute Infection rule	1000	false
 
 This is the DBrute Slave rule:
 	if ending "DBrute Slave" is triggered:
@@ -1949,7 +1962,7 @@ This is the DBrute Slave rule:
 
 This is the Demon Brute Infection rule:
 	if Player has a body of "Demon Brute":
-		trigger ending "demon bruteInfection";
+		trigger ending "Demon Brute Infection";
 		if humanity of Player < 10:
 			say "     You find yourself overcome with lust, your balls simply aching, ready to burst. You need to find some relief, and soon! You go on a proper rampage, pushing over small trees and walls, and smashing in windows, and generally wreaking havoc. You eventually spot what you want, a woman in her prime. She is a [one of]human-feline mix, with large cat-ears, a tail, and beautiful black fur[or]husky-human mix, with soft white and gray fur and a puffy white-gray tail[at random]. You seize her, and, without much resistance on her part, are able to gain control. You tear her clothes away, revealing her naked, furry body. She seems too overcome with lust to worry about the size of your cock. But, then again, you aren't the only one with a large tool, and you aren't the first to rut with this girl. She wraps her arms and legs around your large body, her wet sex exposed and moistening, ready for your massive meat. You thrust into her without hesitating, and before long the both of you are moaning and grunting two lust-filled monsters mating like the animals they have become. During the ordeal, the girl climaxes several times, each time becoming more intense than the last. You can feel that you are approaching your climax as well, and your grunts become more frequent. Then, as she is hit by her most powerful orgasm yet, her tight sex squeezes your big meat, enough to push you ever the edge. You begin to come, shooting your seed up inside your new bitch. She pants and moans as your cum fills her womb, causing it to swell to a great size. Massive quantities of cum spill out onto the ground beneath your feet, and a constant stream of it is leaking out around your cock. You realize that this ordeal was too much for the girl, and that she has passed out. Since you really enjoyed your time with this girl, you decide to hold onto her as you disappear back to your den, that safe-room you started your journey in. You set up the cot, and then lay her down on it, her pussy still leaking fluid. Months of wild mating later, and she is heavily pregnant with your brood, which gives you the utmost satisfaction.";
 		else:

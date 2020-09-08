@@ -130,8 +130,7 @@ rachelfuck is a number that varies.
 The icon of mouse girl is Figure of Rachel_icon.
 
 to say SummonRachel:
-	now Rachel is nowhere;
-	if Player is in Pantry and Rachel is in Pantry: [summoning while standing next to her]
+	if Rachel is visible: [summoning while standing next to her]
 		say "     Rachel stands up from where she was meditating. Without a word, she comes to stand by your side.";
 	else: [regular summoning]
 		say "     Walking up to join you before you even call out for her, Rachel the mouse girl grins up at you.";

@@ -712,6 +712,8 @@ The scent of Xaedihr is "     Xaedihr smells fresh and masculine, giving out the
 to say XaedihrDesc:
 	project Figure of Xaedihr_Full_icon;
 	say "     The mystic sorcerer you encountered in one of the many Hell realms is, in fact, an half-demon. Nothing gives it away except his looks and aura, a little too out of this world to suggest he's only a human. Xaedihr is a pale redhead with flawless skin, has a short hair styled to his right side, some of it laying softly above his forehead, lime green eyes, a beard to complement his chiseled jawline, and a purple-ish tattoo around his left eye. He's fairly muscular and somewhat bulky even, filling up his clothes just nicely. He wears nothing under his long dark leather jacket, only a pair of tight black pants that gives away his considerable bulge, and some combat boots to complete his edgy look. He wears an earstud on his left ear, and hanging around his neck is a pendant with the Crimson Ruby, gleaming with a mystical energy.";
+	if demonologist is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 [***********************************************************]
 Section 5-1 - As Companion
@@ -739,7 +741,6 @@ to say SummonXaedihr:
 		say "     You call out Xaedihr, inviting him to join you on your day outside. 'Field research it is, then. Might as well practice a few spells. Just don't think I'll be carrying you around like a damsel, please.' He walks up to you, ready to leave.";
 	else: [regular summoning]
 		say "     You take the trinket Xaedihr gave you to summon him in case you needed and recite the magic words. Not too soon after, he appears next to you like a crimson light. 'Caught up something interesting or you just missed me?' he says, readying himself to follow you.";
-	now Xaedihr is nowhere;
 
 to say DismissXaedihr:
 	if Player is in Grey Abbey Library:

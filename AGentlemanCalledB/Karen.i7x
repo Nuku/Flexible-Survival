@@ -89,9 +89,8 @@ The assault of Retriever Girl is "[one of]Stepping forward quickly, [or]Circling
 the fuckscene of Retriever Girl is "[SexWithKaren]".
 
 to say SummonKaren:
-	now Karen is nowhere;
-	if Player is in Breakroom and Karen is in Breakroom: [summoning while standing next to her]
-		say "     ...";
+	if Karen is visible: [summoning while standing next to her]
+		say "     Karen smiles happily as you wave her over, hiking her bag up over her shoulder as she jogs forward.";
 	else: [regular summoning]
 		say "     Karen smiles happily as you wave her over, hiking her bag up over her shoulder as she jogs forward.";
 
@@ -121,6 +120,8 @@ to say KarenDesc:
 		say "     Looking over Karen, you recognize her as the same retriever bitch that you saw abducted by Rex some time ago, now wearing a thin pink collar with a heart-shaped tag that has her name engraved on it.";
 	else:
 		say "     Karen is a shapely female canine with a thick coat of golden fur. Currently unclothed, her four firms breasts and delicate female features are all out on display. Her canine tail wags happily behind her as she notices you looking at her.";
+	if Retriever Girl is listed in companionList of Player:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 instead of sniffing Retriever Girl:
 	say "[KarenScent]";

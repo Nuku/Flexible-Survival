@@ -184,8 +184,7 @@ The assault of bee girl is "[one of]The bee girl buzzes around, slapping and pun
 the fuckscene of bee girl is "[SexWithHoney]".
 
 to say SummonHoney:
-	now Honey is nowhere;
-	if Player is in Grey Abbey Garden and Honey is in Grey Abbey Garden: [summoning while standing next to her]
+	if Honey is visible: [summoning while standing next to her]
 		say "     Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
 	else: [regular summoning]
 		say "     Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
@@ -219,7 +218,10 @@ to say HoneyDesc:
 	if Player is in Grey Abbey Garden:
 		say "     At the moment the little bee girl is busy fixing up the garden.";
 	else:
-		say "     At the moment the little bee girl is flying around, buzzing contently.";
+		if bee girl is listed in companionList of Player:
+			say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
+		else:
+			say "     At the moment the little bee girl is flying around, buzzing contently.";
 
 instead of sniffing bee girl:
 	say "[HoneyScent]";

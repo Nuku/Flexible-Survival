@@ -56,6 +56,8 @@ to say AresDesc:
 		say "He sits right in front of the door to his kennel, watching you intently and hoping for another chance of getting out for a walk with you.";
 	else if HP of Ares is 3 or HP of Ares is 5:
 		say "He sits right in front of the door to his kennel, watching you intently and hoping for another chance of getting out for a walk with you. Looking down at his naked body and the raging hardon between his legs, you see that he's also thinking of mounting you again...";
+	if human dog is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing Ares:
 	if HP of Ares is 1:
@@ -727,19 +729,19 @@ understand "Ares" as human dog.
 printed name of human dog is "Ares".
 Description of human dog is "[AresPetDesc]".
 Weapon Damage of human dog is 10.
-The level of human dog is 1.
-The Dexterity of human dog is 15.
-The summondesc of human dog is "[SummonHumanDog]".
-The dismissdesc of human dog is "[DismissHumanDog]".
-The assault of human dog is "[one of]Ares charges into combat, growling and snapping at your enemy.[or]Loud and insistent barking of your human dog frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your human dog claws at your enemy with his hands, leaving shallow but painful gashes.[at random]".
-the fuckscene of human dog is "[SexWithAresPet]".
+Level of human dog is 1.
+Dexterity of human dog is 15.
+Summondesc of human dog is "[SummonHumanDog]".
+Dismissdesc of human dog is "[DismissHumanDog]".
+Assault of human dog is "[one of]Ares charges into combat, growling and snapping at your enemy.[or]Loud and insistent barking of your human dog frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your human dog claws at your enemy with his hands, leaving shallow but painful gashes.[at random]".
+Fuckscene of human dog is "[SexWithAresPet]".
 
 when play begins:
 	add "Feral" to Traits of human dog;
 
 to say SummonHumanDog:
-	now Ares is nowhere;
 	say "     Calling out for Ares, the human dog comes to your side pretty quickly, obviously having followed you all this time not too far behind. With a satisfied bark, he takes position beside you and just a step ahead, ready to protect his bitch in any situation.";
+
 to say DismissHumanDog:
 	move Ares to Dog Kennels;
 	say "     Telling Ares to go back home, he gives a low whine then barks as he returns to his kennel.";

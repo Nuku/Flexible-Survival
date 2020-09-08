@@ -133,10 +133,9 @@ the fuckscene of felinoid Companion is "[sexwithfelinoidpet]".
 
 
 to say SummonKlauz:
-	now Klauz is nowhere;
 	project the Figure of Klauz_face_icon;
-	if Player is in Back Of The Library and Klauz is in Back Of The Library: [summoning while standing next to him]
-		say "     ...";
+	if Klauz is visible: [summoning while standing next to him]
+		say "     Walking up to the big cat, you give him a few scritches on the head and behind his ears. Klauz rubs up against you in greeting, obviously looking forward to exploring with you.";
 	else: [regular summoning]
 		say "     Turning to look around, you spot the large felinoid from the park lurking quite a ways behind you, obviously keeping an eye on you from a distance. Feeling a smile tugging at your face, you gesture several times for him to approach, and after a minute, Klauz seems to get the idea as he pads forward and rubs up against you in greeting, obviously looking forward to exploring with you.";
 
@@ -204,6 +203,8 @@ to say KlauzScent:
 to say Klauzdesc:
 	project the Figure of Klauz_face_icon;
 	say "     Klauz, the white-golden felinoid that you rescued, is lean and powerful as he stalks along besides you eagerly, obviously one of the most powerful allies you could have as you try to survive in the city. Of course he still doesn't seem to have recovered completely from his ordeal, and is thus more than content to let you take the lead in combat and in your travels around the city. You can't help but wonder just how the large cat sees you and why he bothers following you around - whether he sees you more as a friend, a companion, or as a potential mate...";
+	if felinoid companion is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing the Klauz:
 	project the Figure of Klauz_face_icon;

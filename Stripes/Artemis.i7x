@@ -123,8 +123,7 @@ templust is a number that varies.
 tempthirst is a number that varies.
 
 to say SummonArtemis:
-	now Artemis is nowhere;
-	if Player is in Courtyard and Artemis is in Courtyard: [summoning while standing next to her]
+	if Artemis is visible: [summoning while standing next to her]
 		say "     With a sharp whistle you call Artemis over to you, rubbing her head gently the two of you begin to make your way back out into the city.";
 	else: [regular summoning]
 		say "     The rubber tigress gives a soft mew and nuzzles at your thigh as you call her over. She purrs happily when you scritch her ears.";
@@ -187,6 +186,8 @@ to say ArtemisDesc:
 		say "     While your companion, the loyal rubber tigress can keep an ear perked for trouble if you're sleeping outside, keeping you safe from unwanted interruption.";
 	else:
 		say "     While your companion, the loyal rubber tigress borrows your body while you rest. This will keep you safe from interruption and put you in a sleepwalking state full of kinky dreams while you rest and enjoy the pleasure of the fun she's having as she gets her much-needed relief.";
+	if rubber tigress is listed in companionList of Player:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 	if HP of rubber tigress >= 10 and ( lust of rubber tigress is 0 or thirst of rubber tigress is 0 ):
 		LineBreak;
 		say "     Having obtained the set of rubber toys for Artemis, you can now use them to modify her. You have [if lust of rubber tigress is 0 and thirst of rubber tigress is 0]both the feline cock dildo and the vagina toy[else if lust of rubber tigress is 0]the feline cock dildo[else]the vagina toy[end if] available. Shall you use [if lust of rubber tigress + thirst of rubber tigress is 0]them[else]it[end if] to alter your rubber tigress pet?";

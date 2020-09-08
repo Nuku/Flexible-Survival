@@ -187,8 +187,10 @@ to say VoriaDesc:
 		if Carnivorous Plant is listed in companionList of Player:
 			say "On its underside, ";
 		else:
-			say "Even though its bottom half is burrowed underground right now, you know that on its underside";
-		say " there are a couple of short but even thicker tentacles that the plant uses to move around, and in the center of those appendages is a sort of sac which acts as the plant's stomach. Looking behind Voria's head, you see that a pair of tentacles have a miniature version of its head mounted on their ends, each the size of a baseball, while another pair of tentacles have phallic-shaped blue tips on their ends.";
+			say "Even though its bottom half is burrowed underground right now, you know that on its underside ";
+		say "there are a couple of short but even thicker tentacles that the plant uses to move around, and in the center of those appendages is a sort of sac which acts as the plant's stomach. Looking behind Voria's head, you see that a pair of tentacles have a miniature version of its head mounted on their ends, each the size of a baseball, while another pair of tentacles have phallic-shaped blue tips on their ends.";
+	if Carnivorous Plant is listed in companionList of Player:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 Instead of conversing the Voria:
 	if HP of Voria < 23:
@@ -214,14 +216,14 @@ Carnivorous Plant is a pet.
 NPCObject of Carnivorous Plant is Voria.
 understand "Voria" as Carnivorous Plant.
 printed name of Carnivorous Plant is "Voria".
-The description of Carnivorous Plant is "[CarnivorousPlantDesc]".
-The weapon damage of Carnivorous Plant is 10.
-The level of Carnivorous Plant is 1.
+Description of Carnivorous Plant is "[CarnivorousPlantDesc]".
+Weapon damage of Carnivorous Plant is 10.
+Level of Carnivorous Plant is 1.
 Dexterity of Carnivorous Plant is 15.
-The summondesc of Carnivorous Plant is "[CarnivorousPlantSummon]".
-The dismissdesc of Carnivorous Plant is "[CarnivorousPlantDismiss]".
-The assault of Carnivorous Plant is "[CarnivorousPlantAssault]".
-the fuckscene of Carnivorous Plant is "[CarnivorousPlantSex]".
+Summondesc of Carnivorous Plant is "[CarnivorousPlantSummon]".
+Dismissdesc of Carnivorous Plant is "[CarnivorousPlantDismiss]".
+Assault of Carnivorous Plant is "[CarnivorousPlantAssault]".
+Fuckscene of Carnivorous Plant is "[CarnivorousPlantSex]".
 
 understand "Voria" as Carnivorous Plant.
 
