@@ -140,7 +140,7 @@ To challenge:
 		level up;
 	if companionList of Player is not empty:
 		repeat with companion running through companionList of Player:
-			if companion is NullPet:
+			if companion is not NullPet:
 				now needed is ( level of companion ) times 10;
 				if "Good Teacher" is listed in feats of Player:
 					now needed is ( level of companion ) times 6;
