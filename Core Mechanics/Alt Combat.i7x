@@ -159,10 +159,10 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	if the player is not lonely or number of filled rows in the Table of PlayerChildren > 0:
 		now petchance is ( charisma of Player * 250 ) / 12;
 		if petchance > 500, now petchance is 500;
-		if "Good Teacher" is listed in feats of Player, increase petchance by 20;
-		if "Ringmaster" is listed in feats of Player, increase petchance by 20;
+		if "Good Teacher" is listed in feats of Player, increase petchance by 50;
+		if "Ringmaster" is listed in feats of Player, increase petchance by 50;
 		increase petchance by square root of ( 30 * charisma of Player );
-		if petchance > 650, now petchance is 650;
+		if petchance > 750, now petchance is 750;
 	if "Toughened" is listed in feats of Player:		[boosting natural protection]
 		now plnatarmor is 625; [25^2]
 		now plweaknatarmor is 156; [ (25/2)^2 ]

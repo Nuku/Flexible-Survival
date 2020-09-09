@@ -83,7 +83,7 @@ to say lizgirl defeat:
 			say "     'Did you not want this? Was the canvas too flawed?' she murmurs before collapsing on the ground.";
 		else:
 			say "     With a whine she says, 'I only wanted what was best for you, now another artist must finish my work' before collapsing.";
-	if HP of ronda is 4:
+	if HP of Ronda is 4:
 		say "     Remembering that the lizard girl has part of the cure for Ronda, you run your hands over her body and slip a finger into her wet pussy. You start to rub and finger her cunt, making her moan and squirm in pleasure. She grips your shoulders firmly and bucks her hips as you pump a pair of fingers into her again and again. As her excitement builds and her vaginal walls quiver around your digits, she moans and bucks her hips almost as if thrusting before finally climaxing loudly. She sags against you, panting for breath after her orgasm. Still holding her up with one arm, you place a small vial under her pussy to gather the leaking juices, a little surprised to find them a thick and creamy white instead of clear juices. Sealing up the unusual sample, you resist the urge to lick your fingers clean and instead wipe them off after taking a moment to enjoy her thick, musky scent.";
 		ItemGain lizard juice by 1;
 		now HP of ronda is 5;
