@@ -228,6 +228,7 @@ after going to Half-Renovated Room while "Solo Skarnoth Bonds" is listed in Trai
 
 
 Part 2 - Solo Brutus Path
+
 [if you turn down the threesome option either sexually or platonically this will pop as a way to still get the master's bite trait]
 [this will need a variation for if the player mentioned brutus training or if they were condescending]
 [Brutus's side event will be based on a impromptu fighting competition with a human gang the choice point will be on whether you want to handle this like a tournament or a non-con free for all]
@@ -236,7 +237,7 @@ Part 2 - Solo Brutus Path
 [if loyalty of brutus is 5 then non sexual path was taken else sexual was]
 after going to Grey Abbey Library while "Solo Brutus Bonds" is listed in Traits of Brutus-MoH:
 	say "     ...";]
-]
+	
 Part 3 - Skarnoth&Brutus Threesome Path
 
 after going to Maintenance Storeroom while (Skarnoth is booked and SkarnothMasterSlave > 1 and "Brother-in-Arms" is listed in Traits of Skarnoth-Moh and "Brother-in-Arms" is listed in Traits of Brutus-MoH and demon brute is listed in companionList of Player and DBCaptureQuestVar is 5 and DemonBruteStatus is 0 and "Master's Bite" is listed in Traits of demon brute and HP of Lilith > 0):
