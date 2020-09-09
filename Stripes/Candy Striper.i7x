@@ -259,6 +259,7 @@ pink raccoon	"pink raccoon"
 pink raccoon is a pet.
 NPCObject of pink raccoon is pink raccoon.
 understand "Candy" as pink raccoon.
+IDList of pink raccoon is { "Candy", "candy", "raccoon", "pink raccoon", "candy striper" }.
 printed name of pink raccoon is "Candy".
 Description of pink raccoon is "[PinkRacconDesc]".
 Weapon Damage of pink raccoon is 10.

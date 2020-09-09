@@ -101,6 +101,7 @@ frost giantess	"frost giantess"
 frost giantess is a pet.
 NPCObject of frost giantess is Aurora.
 understand "Aurora" as frost giantess.
+IDList of frost giantess is { "Aurora", "aurora", "giant", "giantess", "frost giant", "frost giantess" }.
 printed name of frost giantess is "Aurora".
 Description of frost giantess is "[AuroraDesc]".
 Weapon Damage of frost giantess is 20.
@@ -121,9 +122,9 @@ to say SummonAurora:
 to say DismissAurora:
 	move Aurora to Breakroom;
 	if Player is not in Breakroom: [regular dismiss]
-		say "     ...";
+		say "";
 	else: [dismissing her in the abbey]
-		say "     ...";
+		say "";
 
 Table of GameCharacterIDs (continued)
 object	name

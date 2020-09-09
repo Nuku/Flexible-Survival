@@ -32,6 +32,7 @@ Cute Crab	"Cute Crab"
 Cute Crab is a pet.
 NPCObject of Cute Crab is Snips.
 understand "Snips" as Cute Crab.
+IDList of Cute Crab is { "Snips", "snips", "crab", "cute crab" }.
 printed name of Cute Crab is "Snips".
 Description of Cute Crab is "[SnipsDesc]".
 Weapon Damage of Cute Crab is 5.
@@ -233,6 +234,7 @@ house cat	"house cat"
 house cat is a pet.
 NPCObject of house cat is Dinah.
 understand "Dinah" as house cat.
+IDList of house cat is { "Dinah", "dinah", "cat", "house cat" }.
 printed name of house cat is "Dinah".
 Description of the house cat is "[DinahDesc]".
 Weapon Damage of house cat is 5.
@@ -461,6 +463,7 @@ Exotic Bird	"Exotic Bird"
 Exotic Bird is a pet.
 NPCObject of Exotic Bird is Chirpy.
 understand "Chirpy" as Exotic Bird.
+IDList of exotic bird is { "Chirpy", "chirpy", "bird", "exotic bird" }.
 printed name of Exotic Bird is "Chirpy".
 Description of the exotic bird is "[ChirpyDesc]".
 Weapon Damage of Exotic Bird is 5.
@@ -655,6 +658,7 @@ helper dog	"helper dog"
 helper dog is a pet.
 NPCObject of helper dog is Hobo.
 understand "Hobo" as helper dog.
+IDList of helper dog is { "Hobo", "hobo", "dog", "helper", "helper dog", "service dog" }.
 printed name of helper dog is "Hobo".
 Description of helper dog is "[HoboDesc]".
 Weapon Damage of helper dog is 10.

@@ -215,6 +215,7 @@ Carnivorous Plant	"Carnivorous Plant"
 Carnivorous Plant is a pet.
 NPCObject of Carnivorous Plant is Voria.
 understand "Voria" as Carnivorous Plant.
+IDList of Carnivorous Plant is { "Voria", "voria", "plant", "carnivorous plant" }.
 printed name of Carnivorous Plant is "Voria".
 Description of Carnivorous Plant is "[CarnivorousPlantDesc]".
 Weapon damage of Carnivorous Plant is 10.

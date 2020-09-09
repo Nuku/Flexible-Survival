@@ -522,6 +522,7 @@ understand "Your Doll-Twin" as Strange Doll.
 understand "Doll-Twin" as Strange Doll.
 understand "Twin" as Strange Doll.
 understand "Doll" as Strange Doll.
+IDList of Strange Doll is { "Doll", "doll", "strange doll", "twin", "doll twin", "doll-twin", "your doll-twin", "Your doll-twin", "Your Doll-Twin" }.
 printed name of Strange Doll is "Your doll-twin".
 Description of Strange Doll is "[StrangeDollDesc]".
 Weapon Damage of Strange Doll is 5.

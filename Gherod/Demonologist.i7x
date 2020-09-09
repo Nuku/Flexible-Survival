@@ -726,6 +726,7 @@ demonologist	"demonologist"
 demonologist is a pet.
 NPCObject of demonologist is Xaedihr.
 understand "Xaedihr" as demonologist.
+IDList of demonologist is { "Xaedihr", "xaedihr", "demonologist" }.
 printed name of demonologist is "Xaedihr".
 Description of demonologist is "[XaedihrDesc]".
 Weapon Damage of demonologist is 15.

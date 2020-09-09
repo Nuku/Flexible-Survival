@@ -74,6 +74,8 @@ check ZCall:
 
 carry out ZCall:
 	repeat with x running through persons:
+		if x is a pet:
+			next;
 		if printed name of x exactly matches the text topic understood, case insensitively:
 			now x is in location of Player;
 
