@@ -1935,14 +1935,12 @@ left	central	right
 "Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"STR: [strength of Player] | DEX: [dexterity of Player] | STA: [stamina of Player] | CHA: [Charisma of Player] | INT: [intelligence of Player] | PER: [perception of Player]"	"XP: [XP of Player]/[level up needed]"
 "Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"Hunger: [hunger of Player]/100 | Thirst: [thirst of Player]/100 | Libido: [Libido of Player]/100 | Humanity: [humanity of Player]/100"	"LVL: [level of Player]"
 "Freecred: [freecred]"	"[link]Help[as]HelpBookLookup[end link][if NewGraphicsInteger is 0] [else] | Art by: [ngraphics_currentartist] ([link]art credits[end link])[end if]"	"Score: [score]/[maximum score]"
-
-Table of Narrow Status
-left	right
-"Location: [Location of Player][if Location of Player is fasttravel] ([link]Navpoint[as]nav[end link])[end if]"	"HP: [HP of Player]/[maxHP of Player]"
-"Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"XP: [XP of Player]/[level up needed]"
-"Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"LVL: [level of Player]"
-"Freecred: [freecred]"	"Score: [score]/[maximum score]"
-
+[
+"Location: [the player's surroundings]"	"Date: [DateYear]-[DateMonth]-[DateDay] Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"HP:[HP of Player]/[maxHP of Player]"
+"Freecred: [freecred]"	"Time: [time of day]"	"Score:[score]/[maximum score]"
+"Sanity: [humanity of Player]/100"	"Lvl: [level of Player] Hunger: [hunger of Player] Thirst: [thirst of Player] Libido: [Libido of Player] [if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0] Kids: [(number of filled rows in Table of PlayerChildren + number of entries in childrenfaces)][end if]"	"XP:[XP of Player]/[level up needed]"
+""	"[if NewGraphicsInteger is 0] [else]Current image artist: [ngraphics_currentartist] (see [link]art credits[as]try art credits[end link])[end if]"	""
+]
 
 to say exitlist:
 	repeat with nam running through valid directions:
@@ -2138,13 +2136,8 @@ when play begins:
 
 Part 2 - Rules
 
-StatusBarSetting is a number that varies.
-
 First for constructing the status line (this is the bypass status line map rule):
-	if StatusBarSetting is 0:
-		fill status bar with Table of Fancy Status;
-	else:
-		fill status bar with Table of Narrow Status;
+	fill status bar with table of fancy status;
 
 d18 is a number that varies.[@Tag:NotSaved]
 descr is a text that varies.
@@ -2155,16 +2148,6 @@ Lusting is a text that varies.
 [ Hunting moved to Hunting.i7x in Core Mechanics ]
 
 [ Fast Travel moved to Navigation.i7x in Core Mechanics ]
-
-statusbarchange is an action applying to nothing.
-
-understand "statusbarchange" as statusbarchange.
-
-carry out statusbarchange:
-	if StatusBarSetting is 0:
-		now StatusBarSetting is 1;
-	else if StatusBarSetting is 1:
-		now StatusBarSetting is 0;
 
 understand "vial [text]" as vialing.
 
@@ -4738,7 +4721,7 @@ This is the explore rule:
 		let L be a random unknown fasttravel not private room;
 		if L is not nothing:
 			randomfightchance;
-			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[or]Going off towards a previously unexplored part of the city, you find yourself at[at random] [bold type][L][roman type].";
+			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[or]Going off towards a previously unexplored part of the city, you find yourself at[at random] [L].";
 			move player to L;
 			now something is 1;
 			plot;
@@ -4749,9 +4732,9 @@ This is the explore rule:
 		let L be a random available situation;
 		If L is not nothing:
 			if battleground is "Smith Haven":
-				say "Wandering around a bit, you find [bold type][L][roman type].";
+				say "Wandering around a bit, you find [L].";
 			else:
-				say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [bold type][L][roman type].";
+				say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
 			now something is 1;
 			now inasituation is true;
 			say "[ResolveFunction of L]";
@@ -4764,7 +4747,7 @@ This is the explore rule:
 		let L be a random unknown fasttravel not private room;
 		if L is not nothing:
 			randomfightchance;
-			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[or]Going off towards a previously unexplored part of the city, you find yourself at[at random] [bold type][L][roman type].";
+			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[or]Going off towards a previously unexplored part of the city, you find yourself at[at random] [L].";
 			move player to L;
 			now something is 1;
 			plot;
@@ -6968,7 +6951,6 @@ Include Joshiro by Wahn.
 Include J'Reth by Prometheus.
 Include Juergen by Wahn.
 Include Julian by Prometheus.
-Include Jana by Kirov.
 Include Kai by WhiteRabbit.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.

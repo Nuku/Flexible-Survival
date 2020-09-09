@@ -173,6 +173,7 @@ bee girl	"bee girl"
 bee girl is a pet.
 NPCObject of bee girl is Honey.
 understand "Honey" as bee girl.
+IDList of bee girl is { "Honey", "honey", "bee", "girl", "bee girl" }.
 printed name of bee girl is "Honey".
 Description of bee girl is "[HoneyDesc]".
 Weapon Damage of bee girl is 5.

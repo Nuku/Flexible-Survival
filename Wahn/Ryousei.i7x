@@ -258,6 +258,7 @@ royal tiger is a pet.
 NPCObject of royal tiger is Ryousei.
 understand "Ryousei" as royal tiger.
 understand "Ryo" as royal tiger.
+IDList of royal tiger is { "Ryousei", "ryousei", "ryo", "Ryo", "tiger", "tiger warrior", "tiger general", "royal tiger" }.
 printed name of royal tiger is "Ryousei".
 Description of royal tiger is "[RyouseiDesc]".
 Weapon Damage of royal tiger is 15.

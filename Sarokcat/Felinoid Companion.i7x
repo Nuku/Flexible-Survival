@@ -121,6 +121,7 @@ Felinoid Companion	"Felinoid Companion"
 Felinoid Companion is a pet.
 NPCObject of Felinoid Companion is Klauz.
 understand "Klauz" as Felinoid Companion.
+IDList of Felinoid Companion is { "Klauz", "klauz", "cat", "feline", "felinoid", "felinoid companion" }.
 printed name of Felinoid Companion is "Klauz".
 Description of Felinoid Companion is "[Klauzdesc]".
 Weapon Damage of Felinoid Companion is 15.

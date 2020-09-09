@@ -51,6 +51,7 @@ gshep	"gshep"
 gshep is a pet.
 understand "Korvin" as gshep.
 NPCObject of gshep is Korvin.
+IDList of gshep is { "Korvin", "korvin", "dog", "gshep", "shepherd", "german shepherd", "German shepherd" }.
 printed name of gshep is "Korvin".
 Description of gshep is "[Korvindesc]".
 Conversation of gshep is { "Bark!" }.

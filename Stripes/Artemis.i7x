@@ -110,6 +110,7 @@ rubber tigress	"rubber tigress"
 rubber tigress is a pet.
 NPCObject of rubber tigress is Artemis.
 understand "Artemis" as rubber tigress.
+IDList of rubber tigress is { "Artemis", "artemis", "rubber tiger", "tigress", "rubber tigress" }.
 printed name of rubber tigress is "Artemis".
 Description of rubber tigress is "[ArtemisDesc]".
 Weapon Damage of rubber tigress is 10.

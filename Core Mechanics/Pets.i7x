@@ -8,6 +8,7 @@ Pet is a kind of person.
 A pet can be tamed. A pet is usually not tamed.
 A pet has text called summondesc.
 A pet has text called dismissdesc. Dismissdesc is usually "You send your ally away.".
+A pet has a list of text called IDList.
 A pet has a text called assault.
 A pet has a number called lastfight. lastfight is usually 255.
 A pet has a person called NPCObject. NPCObject of a pet is usually NullPet.
@@ -61,9 +62,7 @@ carry out AddCompanion:
 to AddCompanionFunction (NewCompanion - a text):
 	let AddPet be Nullpet;
 	repeat with Z running through tamed pets:
-		let PetName be "";
-		now PetName is printed name of Z;
-		if PetName exactly matches the text NewCompanion, case insensitively:
+		if NewCompanion is listed in IDList of Z:
 			now AddPet is Z;
 			break;
 	if AddPet is NullPet:
@@ -113,9 +112,7 @@ carry out DismissFirstCompanion:
 to DismissFunction (InputName - a text):
 	let DismissPet be Nullpet;
 	repeat with Z running through tamed pets:
-		let PetName be "";
-		now PetName is printed name of Z;
-		if PetName exactly matches the text InputName, case insensitively:
+		if InputName is listed in IDList of Z:
 			now DismissPet is Z;
 			break;
 	if DismissPet is NullPet:

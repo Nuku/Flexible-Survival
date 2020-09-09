@@ -31,6 +31,7 @@ Little fox	"Little fox"
 Little fox is a pet.
 NPCObject of Little fox is Dash.
 understand "Dash" as little fox.
+IDList of little fox is { "Dash", "dash", "fox", "little fox" }.
 printed name of little fox is "Dash".
 Description of the little fox is "[DashDesc]".
 Weapon Damage of little fox is 5.
@@ -288,6 +289,7 @@ skunk kit	"skunk kit"
 skunk kit is a pet.
 NPCObject of skunk kit is Peppy.
 understand "Peppy" as skunk kit.
+IDList of skunk kit is { "Peppy", "peppy", "skunk", "skunk kit", "kit" }.
 printed name of skunk kit is "Peppy".
 Description of the skunk kit is "[Peppydesc]".
 Weapon Damage of skunk kit is 5.

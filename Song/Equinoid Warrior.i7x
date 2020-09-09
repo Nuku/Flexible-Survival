@@ -18,6 +18,7 @@ equinoid warrior	"equinoid warrior"
 equinoid warrior is a pet.
 NPCObject of equinoid warrior is Liliana.
 understand "Liliana" as equinoid warrior.
+IDList of equinoid warrior is { "Liliana", "liliana", "warrior", "equine", "equinoid", "equinoid warrior" }.
 printed name of equinoid warrior is "Liliana".
 Description of equinoid warrior is "[LilianaDesc]".
 Weapon Damage of equinoid warrior is 10.
