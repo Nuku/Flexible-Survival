@@ -216,6 +216,7 @@ after going to Half-Renovated Room while "Solo Skarnoth Bonds" is listed in Trai
 
 
 Part 2 - Solo Brutus Path
+
 [if you turn down the threesome option either sexually or platonically this will pop as a way to still get the master's bite trait]
 [this will need a variation for if the player mentioned brutus training or if they were condescending]
 [Brutus's side event will be based on a impromptu fighting competition with a human gang the choice point will be on whether you want to handle this like a tournament or a non-con free for all]
