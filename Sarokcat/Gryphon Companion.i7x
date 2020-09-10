@@ -16,6 +16,7 @@ Gryphoness	"Gryphoness"
 Gryphoness is a pet. The description of gryphoness is "[gryphonessdesc]".
 NPCObject of Gryphoness is Denise.
 understand "Denise" as gryphoness.
+IDList of gryphoness is { "Denise", "denise", "gryphon", "gryphoness" }.
 printed name of gryphoness is "Denise".
 Weapon Damage of Gryphoness is 10.
 The level of Gryphoness is 1.

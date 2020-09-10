@@ -607,6 +607,7 @@ demon brute	"demon brute"
 demon brute is a pet.
 NPCObject of demon brute is Brutus.
 understand "Brutus" as demon brute.
+IDList of demon brute is { "Brutus", "brutus", "demon", "brute", "demon brute" }.
 printed name of demon brute is "Brutus".
 ScaleValue of demon brute is 4. [larger than human]
 Cock Count of demon brute is 1.

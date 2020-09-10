@@ -191,6 +191,7 @@ doberman companion is a pet.
 NPCObject of doberman companion is Spike.
 understand "Spike" as doberman companion.
 understand "Doberman" as doberman companion.
+IDList of doberman companion is { "Spike", "spike", "dog", "Dobie", "dobie", "Doberman", "doberman", "Doberman Companion", "doberman companion" }.
 printed name of doberman companion is "Spike".
 Description of doberman companion is "[SpikeDesc]".
 Weapon Damage of doberman companion is 15.

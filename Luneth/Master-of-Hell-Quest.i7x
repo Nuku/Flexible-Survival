@@ -69,7 +69,7 @@ after going to Half-Renovated Room while (Skarnoth is booked and SkarnothMasterS
 	say "     [bold type]Do you want to attempt making Brutus feel better?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Yes, let the demonic slave play with your royal slut, at least for a bit.";
 	say "     [link](2)[as]2[end link] - Yes, but you'll think of something different since you don't really think of them sexually.";
-	say "     [link](3)[as]3[end link] - Maybe, but first they both need to understand that their bodies belong to you.";
+	say "     [link](3)[as]3[end link] - Maybe, but they both need to understand that their bodies belong to you.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
 		say "Choice? (1-3)>[run paragraph on]";
@@ -188,7 +188,7 @@ after going to Half-Renovated Room while (Skarnoth is booked and SkarnothMasterS
 
 Section 2 - Second Event
 
-Part 1 - Solo Skarnoth Path
+[Part 1 - Solo Skarnoth Path
 [if you turn down the threesome option either sexually or platonically this will pop as a way to still get the master's bite trait]
 [this will need a variation for sub skarnoth vs himbo skarnoth as well as an added variation for whether you had the last scene end on a sexual note or not]
 [Skarnoth's side event will be based on him becoming your lord-in-waiting and possibly some minor combat training for him and the choice point for the master's bite trait will be on whether you decided to train him sexually or in a more servitude manner]
@@ -199,43 +199,32 @@ Part 1 - Solo Skarnoth Path
 [SkarnothDrugStatus else: normal]
 [if humanity is < 0: non-sexualized]
 [if humanity is > 0: sexualized]
-[
-say "     You confidently walk up to Skarnoth's throne and firmly grab the demonic prince by his jaw, surprising him with a dominating kiss of ownership. Reaching down, you grab his ";
+
+[say "     You confidently walk up to Skarnoth's throne and firmly grab the demonic prince by his jaw, surprising him with a dominating kiss of ownership. Reaching down, you grab his ";
 if "Nude" is listed in traits of Skarnoth:
 	say "fully-exposed";
 else:
 	say "cloth-covered";
-say ", half-hard cock and give it a firm squeeze. A moan escapes from the infernal royal's throat, and with a cocky smirk on your lips you decide to let go and walk back over towards your demon brute, you take note of his massive erection and decide to have some fun. Brutus barely acknowledges your presence, too busy glaring daggers at what was once his lord. Once you are close enough, you wrap your fingers around the brute's bumpy and ridged shaft.";
+say ", half-hard cock and give it a firm squeeze. A moan escapes from the infernal royal's throat, and with a cocky smirk on your lips you decide to let go and walk back over towards your demon brute, you take note of his massive erection and decide to have some fun. Brutus barely acknowledges your presence, too busy glaring daggers at what was once his lord. Once you are close enough, you wrap your fingers around the brute's bumpy and ridged shaft.";]
 
-you could go to check in on Skarnoth and find him in some sort of lazy moment, basically playing around with the idea that without being in power he's lost his purpose. this would cause the idea of training up his confidence as well as making him more useful, the training would be tied into two parts. one being servitude with a sexual (cleaning while being revealing and a little obscene) and non-sexual route (simply keeping the place in order). the second being some combat training with a sexual (focusing on tempting and seducing an opponent) and non-sexual route (pure violence). the end of the event would prolly be in the shower room where the ending would be either him simply washing you down, or well yeah you get it, ending in the bite.
-
+[you could go to check in on Skarnoth and find him in some sort of lazy moment, basically playing around with the idea that without being in power he's lost his purpose. this would cause the idea of training up his confidence as well as making him more useful, the training would be tied into two parts. one being servitude with a sexual (cleaning while being revealing and a little obscene) and non-sexual route (simply keeping the place in order). the second being some combat training with a sexual (focusing on tempting and seducing an opponent) and non-sexual route (pure violence). the end of the event would prolly be in the shower room where the ending would be either him simply washing you down, or well yeah you get it, ending in the bite.]
 after going to Half-Renovated Room while "Solo Skarnoth Bonds" is listed in Traits of Skarnoth-Moh:
-	say "     Walking into the messy room, you are surprised to see Skarnoth simply lounging around on his recharge station, his lava colored eyes closed. After finally gaining some semblance of freedom, you fully expected him to at the very least attempt to explore more of library. The [if SkarnothDrugStatus is 2]dumb muscle slut [else]muscled sub [end if]finally acknowledges your entrance by slowly opening his eyes, the hellspawn regarding your form with [if SkarnothDrugStatus is 2]unabashed desire[else]respectful obedience[end if]. Deciding to take the initiative, you slowly saunter up to the demon, all the while contemplating on what the former master of hell could be doing with his time. The crimson haired male [if humanity of Skarnoth-Moh > 0]allows one of his clawed hands to begin trailing down his tan chest [else]almost instinctively bares his throat to you [end if]as his gaze follows your approach.";
-	say "     Once you're standing directly in front of the demon he finally spreads his full lips into a wicked smirk, [if SkarnothDrugStatus is 2]'Hey [master], like what did I do to earn a visit?' [else]'Hey [master], whatever could I have done to earn a visit from you?' [end if]While Skarnoth's voice still holds its usual cocky edge, you can see in his eyes and body language that the hellspawn is definitely a little nervous by your presence. With a smirk of your own, you begin to question the demon about what he's been doing with his temporary freedom. At first the former master of hell just stares back at you like a deer in the headlights, but eventually he breaks the silence, [if SkarnothDrugStatus is 2]'Umm... Well I guess I've been thinking about sex a lot lately and how awesome it is, but like also how that means things will be different now. It kinda makes my head hurt to think about it too much.' [else]'Well... I've been thinking about the changes in my life, and what that could mean for my future.' [end if]It doesn't take a rocket scientist to know that this line of thought without any action to go with it could lead to some incredibly depressive thoughts.";
+	say "     Walking into the messy room, you are surprised to see Skarnoth simply lounging around on his recharge station, his lava colored eyes closed. After finally having gained some semblance of freedom, you fully expected him to at the very least attempt to explore more often. The[if SkarnothDrugStatus is 2] dumb muscle slut [else] muscled sub [end if]finally acknowledges your entrance by slowly opening his eyes and regarding your form with[if SkarnothDrugStatus is 2] unabashed desire[else] respectful obedience[end if]. Deciding to take the initiative, you slowly strut up to the demon, all the while thinking on what the former master of hell could be doing with his free time. The crimson haired male [if humanity of Skarnoth-Moh > 0]allows one of his clawed hands to begin trailing down his tan chest [else]almost instinctively bares his throat to you [end if]as his gaze follows your approach.";
+	say "     Once you're standing directly in front of the demon he finally spreads his full lips into a wicked smirk, 'Hey [master], Whatever could I have done to have earned a visit from you?' While Skarnoth's voice still holds its usual cocky edge, you can see in his eyes and body language though that the hellspawn is definitely a little nervous by your presence. With a smirk of your own, you begin to question the demon about what he's been doing with his temporary freedom. At first the former master of hell just stares back at you like a deer in the headlights, but eventually he breaks the silence, 'Well... I've been thinking on how my life has changed and what that means for me.' It doesn't take a rocket scientist to know that this line of thought without any action to go with it can lead to incredibly depressive thoughts.";
 	WaitLineBreak;
-	if humanity of Skarnoth-MoH > 0:
-		say "     Leaning forward, you grab the demon's jaw, forcing him to look into your eyes and quickly cover his lips with your own. Using your tongue, you begin to explore Skarnoth's mouth, from his thick and powerful tongue all the way to his sharp and pointed canines. A deep moan arises from his throat as the hellspawn finally gets over his shock and begins to kiss you back passionately. In this battle of wills you're clearly the victor, but you can't deny the fact that the demon attempting to give as good as he gets is turning you on even more. Reaching down, you slowly slide your hand up the length of the demon's ";
-		if "Nude" is listed in traits of Skarnoth:
-			say "already hardening cock";
-		else:
-			say "cloth-covered erection";
-		say ", applying some slight pressure causes the hellspawn's moans to take on a much more needy and high pitched tone. Knowing that you have to stop things from escalating, you pull back from the full lips that attempt to follow you. This is supposed to be about more than sex, it's about helping Skarnoth find purpose in his new life.";
-	else:
-		say "     Leaning forward, you place a hand on the demon's shoulder, as he looks up to meet your gaze you do your best to put an expression of comradery on your face. Skarnoth looks a little shocked by your response, but a smile quickly forms on his lips once he realizes that you are actually trying to be supportive. [if SkarnothDrugStatus is 2]'Thanks [master], I got all these weird thoughts going on in my head, like should I be worried? Or scared? Honestly I'd rather just keep it simple and focus on sex, ya'know the important stuff. How to get as much as I can and where I can get it, haha. My gut tells me that as long as you own me, that will never be a problem.' [else]'Thanks [master], I know it must seem pretty pathetic for me to be thinking about everything that's already happened and letting those thoughts scare me a little bit, it's just the idea of what that could mean for me in the future. But the fact that you get it and are willing to let me have that moment of weakness does make me feel a bit better.' [end if]";
-	say "     Stepping away from the demon, you explain to him that you have some ideas on ways to help him adjust to this role reversal. 'What kind of ideas [master]?' Rather than explain yourself, you instead tell him to get up and follow you if he wants to find out more. [if SkarnothDrugStatus is 2]Without a second thought, Skarnoth launches himself out of his chair fully [else]While still looking a bit unsure of the situation, Skarnoth slowly rises from his chair and [end if]prepared to follow you. Leading the infernal prince out of the library, the man looks terrified, more than likely due to the fact that his powers took a serious knock after you claimed him as your slave. Deciding that it would be best if the demon were to calm down a bit, you attempt to change the subject by asking him how his [']charge['] is doing since he hasn't tried being this far away from his chair before.";
-	WaitLineBreak;
-	say "     'Yeah it's doing alright I think, but I'm not really sure how long it will last. Why would we need to leave the safety of the library though [master]? '";]
+	say "     ";
 
 
 Part 2 - Solo Brutus Path
+
 [if you turn down the threesome option either sexually or platonically this will pop as a way to still get the master's bite trait]
 [this will need a variation for if the player mentioned brutus training or if they were condescending]
 [Brutus's side event will be based on a impromptu fighting competition with a human gang the choice point will be on whether you want to handle this like a tournament or a non-con free for all]
 [a courtyard option would be preferred]
-[loyalty = affection stat
+[loyalty = affection stat]
 [if loyalty of brutus is 5 then non sexual path was taken else sexual was]
 after going to Grey Abbey Library while "Solo Brutus Bonds" is listed in Traits of Brutus-MoH:
-	say "     ...";]
+	say "     ...";
 ]
 Part 3 - Skarnoth&Brutus Threesome Path
 

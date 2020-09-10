@@ -117,6 +117,7 @@ mouse girl	"mouse girl"
 mouse girl is a pet.
 NPCObject of mouse girl is Rachel.
 understand "Rachel" as mouse girl.
+IDList of mouse girl is { "Rachel", "rachel", "mouse", "girl", "mouse girl" }.
 printed name of mouse girl is "Rachel".
 Description of mouse girl is "[RachelDesc]".
 Weapon Damage of mouse girl is 10.

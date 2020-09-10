@@ -41,6 +41,7 @@ Retriever Girl	"Retriever Girl"
 Retriever Girl is a pet.
 NPCObject of Retriever Girl is Karen.
 understand "Karen" as Retriever Girl.
+IDList of Retriever Girl is { "Karen", "karen", "girl", "retriever", "retriever girl" }.
 printed name of Retriever Girl is "Karen".
 [Physical details as of game start]
 ScaleValue of Retriever Girl is 3. [human sized]

@@ -726,6 +726,7 @@ human dog	"human dog"
 human dog is a pet.
 NPCObject of human dog is Ares.
 understand "Ares" as human dog.
+IDList of human dog is { "Ares", "ares", "dog", "human", "human dog" }.
 printed name of human dog is "Ares".
 Description of human dog is "[AresPetDesc]".
 Weapon Damage of human dog is 10.

@@ -68,6 +68,7 @@ orc supersized breeder	"orc supersized breeder"
 orc supersized breeder is a pet.
 NPCObject of orc supersized breeder is Urik.
 understand "Urik" as orc supersized breeder.
+IDList of orc supersized breeder is { "Urik", "urik", "orc", "orc warrior", "warrior", "breeder", "orc breeder", "orc supersized breeder" }.
 printed name of orc supersized breeder is "Urik".
 Description of orc supersized breeder is "[UrikDesc]".
 Weapon Damage of orc supersized breeder is 20.
