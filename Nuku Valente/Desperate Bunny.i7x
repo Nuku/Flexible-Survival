@@ -55,7 +55,7 @@ to say ResolveEvent Needy Rabbit Girl:
 			now battleground is "Outside";
 			choose row with a area of battleground in the Table of Random Critters;
 			follow cock descr rule;
-			say "     You ask her if she has been infected, and she nods. 'My rabbit bit me and I changed, but not as much as some of the people I have seen. Have you seen those [Name entry]s? Crazy, right?' She presses to your front as she talks, letting her shapely fore compress against you. You can feel she has become quite endowed, six breasts of decreasing size nudging against your body, making your [cock size desc of Player], [Cock of Player] cock stiffen lightly.";
+			say "     You ask her if she has been infected, and she nods. 'My rabbit bit me and I changed, but not as much as some of the people I have seen. Have you seen those [one of]husky bitches[or]giant wyverns[or]living robot people[or]walking dick things[at random]? Crazy, right?' She presses to your front as she talks, letting her shapely fore compress against you. You can feel she has become quite endowed, six breasts of decreasing size nudging against your body, making your [cock size desc of Player], [Cock of Player] cock stiffen lightly.";
 			say "     Do you follow your urges?";
 			if Player consents:
 				say "     As if she could detect the decision being made in your eyes, she reaches for your groin, rubbing slowly as a smile forms on her muzzle. 'Well, since you asked,' which you had not yet, 'Yes.' She grabs at a hand and guides you into a basement. 'My home,' she explains before turning to you.";

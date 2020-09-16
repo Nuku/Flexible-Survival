@@ -45,7 +45,7 @@ to say Tigertaur Loses:
 		If thirst of Player > 30:
 			say "     Defeated, the tigertaur growls in disbelief before turning tail to flee. Feeling your thirst start to overcome you, you think about how the tigertaur's rich and thick milk would satisfy you and you wonder if maybe you could try and stop the creature from leaving so you can get a quick drink. Is it worth the chance of infection though?";
 			if Player consents:
-				say "     Feeling bold, you quickly grab the stripped feline by the tail, halting hir from running off. Muscle tensing in aggravation, you watch nervously as the other swivels hir head around to glare at you warningly. Not wanting to get into another fight with the predatory feline, you reach a hand up to paw at the tigertaur's full breast to show hir your intention. Slowly the feline's glare shifts into a mask of [one of]confusion[or]bemusement[or]understanding[or]concern[at random] before it slips its tail from your grasp and turns it's tauric form towards you giving you complete access to her upper torso. [one of]Gently you[or]Cautiously you[or]Eagerly you[at random] continue to palm the same breast you had been playing with before, tugging at the nipple hidden beneath the tawny fur to help the feline's milk within flow outward, before you reach out to nuzzle your [FaceName of Player] nose into the tiger herm's [one of]firm[or]muscular[or]deceptively soft[at random] abdomen.";
+				say "     Feeling bold, you quickly grab the stripped feline by the tail, halting her from running off. Muscle tensing in aggravation, you watch nervously as the other swivels her head around to glare at you warningly. Not wanting to get into another fight with the predatory feline, you reach a hand up to paw at the tigertaur's full breast to show her your intention. Slowly the feline's glare shifts into a mask of [one of]confusion[or]bemusement[or]understanding[or]concern[at random] before it slips its tail from your grasp and turns it's tauric form towards you giving you complete access to her upper torso. [one of]Gently you[or]Cautiously you[or]Eagerly you[at random] continue to palm the same breast you had been playing with before, tugging at the nipple hidden beneath the tawny fur to help the feline's milk within flow outward, before you reach out to nuzzle your [FaceName of Player] nose into the tiger herm's [one of]firm[or]muscular[or]deceptively soft[at random] abdomen.";
 				WaitLineBreak;
 				say "     A calm, yet demanding paw reaches out to grab the back of your head, forcing your face to ride up into the tigertaur's buxom chest. Without hesitation you latch your lips around her firm teat to begin nursing from the feline, your [FaceName of Player] tongue stroking along the length of the firm mound of flesh to help the milk flow deep into your throat. A rumbling growl rents the air as the tigertaur pulls your head closer into her chest as the sensations of having her milk filled breast empty out into your mouth makes her tail lash wildly behind her. Stroking the feline's tit while at the same time nuzzling into her chest, you make a soft hum into the back of your throat which cause the muscles of the tigertaur's breast to dribble more and more creamy tiger milk down into your belly.";
 				WaitLineBreak;
@@ -70,8 +70,8 @@ to say TigertaurDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -122,7 +122,8 @@ When Play begins:
 	now Cunt Count entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12;
 	now Cunt Tightness entry is 4;
-	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 70;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "lucky horseshoe";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";

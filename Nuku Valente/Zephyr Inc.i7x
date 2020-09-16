@@ -156,7 +156,7 @@ to say nanitecolldesc:
 Table of Zephyr Goods
 name	price	object	allowed
 "nanite collector"	360	nanite collector	noresearch rule
-"Zephyr Personal Communicator"	350	zpc	true rule
+"zephyr personal communicator"	350	zpc	true rule
 "medkit"	275	medkit	true rule
 "pistol"	550	pistol	true rule
 "pepperspray"	320	pepperspray	pepper rule

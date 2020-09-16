@@ -1875,6 +1875,7 @@ title	subtable	description	toggle
 Table of Basic Combat
 title	subtable	description	toggle
 "Attack"	--	"Attack!!!"	player attack rule
+"Seduce"	--	"Make Love Not War!"	player seduce rule
 "Item"	--	"Quick, where's my healing potion?!"	combat item rule
 "Pass"	--	"Hey look, a distraction!"	combat pass rule
 "Flee"	--	"Run away!!!"	flee rule
@@ -1899,7 +1900,7 @@ title	subtable	description	toggle
 ["Examine yourself"	--	--	Self examine rule]
 "Help"	Table of Help	"Get some help on this madness!"
 "Strength: [strength of Player], Dexterity: [dexterity of Player], Stamina: [stamina of Player], Charisma: [Charisma of Player], Intelligence: [intelligence of Player], Perception: [perception of Player]."	--	"Stats"	--
-"Health: [HP of Player]/[maxHP of Player], Lust: [lust of Player], Morale: [morale of Player], Humanity: [Humanity of Player]"	--	"More stats"	--
+"Health: [HP of Player]/[maxHP of Player], Libido: [Libido of Player], Morale: [morale of Player], Humanity: [Humanity of Player]"	--	"More stats"	--
 "Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours, Score: [score]"	--	"Time until the game ends."	Turnpass rule
 
 Table of Help
@@ -1908,12 +1909,12 @@ title	subtable	description	toggle
 "Exit"	--	"Previous Menu"	menu exit rule
 
 Table of Random Critters
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
-false	"Anthro Dragon"	"Anthro Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [Skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [Skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	""	""	"-"	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	""	0	"default"	false
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+false	"Anthro Dragon"	"Anthro Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [Skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [Skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	False	40	""	0	"-"	""	""	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	""	0	"default"	false
 
 Table of New Infection Parts
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
-"Anthro Dragon"	"Anthro Dragoness"	4	8	7	"your face draws forward into a reptilian snout, covered in black overlapping scales"	"a sharp-toothed anthro dragoness"	"draconic"	"scaly"	"black"	"pair of spiraling horns"	0	"straight"	"black"	"ponytail"	""	0	"crimson"	"slitted"	10	10	"broad"	"purple"	7	"your torso broadens, with overlapping black scales growing out of your skin to give it an armor-plated look"	"broad, covered in overlapping black scales"	"draconic"	"scale-covered tummy"	"scaled"	"black"	"layered"	"perky"	5	0	2	"scarlet"	"oval"	"a pair of leathery black wings sprout from your upper back, unfolding to stretch wide to your left and right"	"the pair of leathery wings growing from beneath your shoulderblades"	"scaled"	"black"	"sharp claws sprout from the tips of your fingers and black scales form on the outside of your arms"	"long and plated in overlapping black scales, ending in clawed hands"	"scaled"	"black"	"bipedal"	"black scales garb them into overlapping armor and sharp scales form on your feet"	"long and plated in overlapping black scales, ending in clawed feet"	"scaled"	"black"	"it widens and flexible scales grow to cover its curves"	"ass, covered in flexible black scales"	"scaled"	"black"	4	"A long tail sprouts from your lower back, forming black scales and a spade at the end"	"long, black-scaled tail ending in a spade"	"scaled"	"black"	10	3	"black"	"ridges form along the underside of the shaft, leading up to a pointed tip"	"has a pointed tip and a number of ridges along the underside of the shaft"	"draconic"	"scarlet"	0	0	0	"balls in a firm sack of leathery skin"	0	0	"it takes on a triangular shape, with the clit at the lowest point"	"draconic"	"scarlet"	"triangular in shape, with its clit at the lower point"	1	14	6	3
+"Anthro Dragon"	"Anthro Dragoness"	4	8	7	"your face draws forward into a reptilian snout, covered in black overlapping scales"	"a sharp-toothed anthro dragoness"	"draconic"	"scaly"	"black"	"pair of spiraling horns"	0	"straight"	"black"	"ponytail"	""	0	"crimson"	"slitted"	10	10	"broad"	"purple"	7	"your torso broadens, with overlapping black scales growing out of your skin to give it an armor-plated look"	"broad, covered in overlapping black scales"	"draconic"	"scale-covered tummy"	"scaled"	"black"	"layered"	"perky"	5	0	2	"scarlet"	"oval"	"a pair of leathery black wings sprout from your upper back, unfolding to stretch wide to your left and right"	"the pair of leathery wings growing from beneath your shoulder-blades"	"scaled"	"black"	"sharp claws sprout from the tips of your fingers and black scales form on the outside of your arms"	"long and plated in overlapping black scales, ending in clawed hands"	"scaled"	"black"	"bipedal"	"black scales garb them into overlapping armor and sharp scales form on your feet"	"long and plated in overlapping black scales, ending in clawed feet"	"scaled"	"black"	"it widens and flexible scales grow to cover its curves"	"ass, covered in flexible black scales"	"scaled"	"black"	4	"A long tail sprouts from your lower back, forming black scales and a spade at the end"	"long, black-scaled tail ending in a spade"	"scaled"	"black"	10	3	"black"	"ridges form along the underside of the shaft, leading up to a pointed tip"	"has a pointed tip and a number of ridges along the underside of the shaft"	"draconic"	"scarlet"	0	0	0	"balls in a firm sack of leathery skin"	0	0	"it takes on a triangular shape, with the clit at the lowest point"	"draconic"	"scarlet"	"triangular in shape, with its clit at the lower point"	1	14	6	3
 
 When Play begins:
 	add "Anthro Dragoness" to infections of ReptileList;
@@ -2053,88 +2054,6 @@ TailweaponList is a marker.
 
 [TODO: replace this one in the code with the locomotion lists]
 NoLegList is a marker. [list of infections without legs]
-
-[
-when play begins:
-	add { "Anthro Shaft Beast", "Dragon", "Anthro Dragoness", "Drone Wasp", "Ebonflame drake", "Ebonflame Dragator", "Ebonflame Whelp", "Dolphin Herm", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Shaft Beast", "Killer Whale", "Lizard Girl", "Naga", "Shark Herm", "Red Kangaroo", "Gator Herm", "Skunk", "Spidergirl", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of TailweaponList;
-
-when play begins:
-	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar Male", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Panther Herm", "Panther Taur", "Plush lion", "Rubber Puma", "Rubber Tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Malayan Tiger Herm", "Wildcat" } to infections of FelineList;
-
-when play begins:
-	add { "Husky Alpha", "Alpha Wolf", "Ember Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmatian", "Doberman Bitch", "Doberman Male", "Husky Bitch", "Feral Wolf", "German Shepherd Male", "German Shepherd Bitch", "Jackalboy", "Jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever Female", "Smooth Collie Shemale", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of CanineList;
-
-when play begins:
-	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Morgan Horse Stallion", "Stallionboi", "Unicorn", "Zebra Stallion" } to infections of EquineList;
-
-when play begins:
-	add { "Arctic fox", "Clockwork Fox", "Latex Vixen Herm", "Kitsune", "Latex Fox", "Vixen Nurse", "Vulpogryph" } to infections of VulpineList;
-
-when play begins:
-	add { "Dragon", "Anthro Dragoness", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "Horny Dragon", "Hydra Beast", "Lizard Girl", "Naga", "Reptaur", "Gator Herm", "Sierrasaur", "Slutty Dragoness", "Snake", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness" } to infections of ReptileList;
-
-when play begins:
-	add { "Black Wasp", "Butterfly", "Drone Wasp", "Mothgirl", "Spidergirl", "Spidertaur Male", "Spidertaur Female" } to infections of InsectList;
-
-when play begins:
-	add { "Pod Person", "Dryad", "Mushroom Men", "Parasitic Plant" } to infections of PlantList;
-
-when play begins:
-	add { "Bald Eagle", "Bird of Paradise", "Fluffy Owl", "Harpy", "Hawkman Male", "Blue Gryphon Herm", "Peacock", "Quilled Tousky", "Siren", "Vulpogryph" } to infections of AvianList;
-
-when play begins:
-	add { "Bald Eagle", "Fluffy Owl", "Hawkman Male", "Blue Gryphon Herm" } to infections of AvianpredList;
-
-when play begins:
-	add { "Beaver", "Hyper Squirrel", "Slut Rat" } to infections of RodentList;
-
-when play begins:
-	add { "Bottlenose Toy", "Latex Vixen Herm", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber Puma", "Rubber Tigress" } to infections of LatexList;
-
-when play begins:
-	add { "Liquidshifter" } to infections of SlimeList;
-
-when play begins:
-	add { "Goblin", "Hydra Beast", "Mothgirl" } to infections of MagicalList;
-
-when play begins:
-	add { "Clockwork Fox", "Junkman", "Wildcat" } to infections of MachineList;
-
-when play begins:
-	add { "Caveman", "Helot Manservant", "Spartan", "Viking Woman" } to infections of HumanList;
-
-when play begins:
-	add { "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "Reptaur", "Skunk Taur", "Spidertaur Male", "Spidertaur Female", "Tigertaur", "Wolftaur" } to infections of TaurList;
-[Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional. It also does not include the Spidergirl and Spidertaur forms, as their genitals are located in the front where the human pelvis would be, and therefore would not match with scenes specifically designed for taur anatomy.]
-
-when play begins:
-	add { "Blue Gel", "Pink Gel", "Purple Gel" } to infections of NoLegList;
-
-when play begins:
-	add { "Husky Alpha", "Alpha Wolf", "Ember Breeder", "Arctic fox", "Black Wolf", "Cerberus", "Chocolate Lab", "Clockwork Fox", "Coyote", "Dalmatian", "Doberman Bitch", "Dracovixentaur", "Husky Bitch", "Fennec", "Feral Wolf", "Football Wolfman", "German Shepherd Male", "Hellhound", "Blue Gryphon Herm", "Latex Vixen Herm", "Hyena Herm", "Jackalboy", "Jackalman", "Kitsune", "Latex Fox", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Quilled Tousky", "Retriever Female", "Smooth Collie Shemale", "Vixen Nurse", "Vixentaur", "Vulpogryph", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of KnottedCockList;
-
-when play begins:
-	add { "Feral Sea Dragon", "Feral Sea Dragoness", "Dolphin Herm", "Hydra Beast", "Naga", "Shark Herm", "Sierrasaur", "Snake", "Yamato Dragon", "Yamato Dragoness", "Wyvern", "Spidertaur Male" } to infections of InternalCockList;
-
-when play begins:
-	add { "Anthro Shaft Beast", "Ember Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Panther Herm", "Panther Taur", "Plush lion", "Rubber Tigress", "Sabretooth", "Shadow Beast Male", "Sphinx", "Snow Bat", "Tiger", "Malayan Tiger Male", "Tigertaur", "Malayan Tiger Herm", "Wildcat", "Rubber Puma" } to infections of BarbedCockList;
-
-when play begins:
-	add { "Dragontaur", "Dracovixentaur", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragoness", "Feral Sea Dragon", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon", "Wyvern" } to infections of FirebreathList;
-
-when play begins:
-	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Donkeyman", "Donkeywoman", "Friendship Pony", "Giraffe", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Palomino Stallion", "Pegasus", "Reindeer", "Sierrasaur", "Stallionboi", "Unicorn", "Zebra Stallion", "Wyvern" } to infections of BluntCockList;
-
-when play begins:
-	add { "Bald Eagle", "Bird of Paradise", "Black Wasp", "Butterfly", "Dragontaur", "Dracovixentaur", "Drone Wasp", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame drake", "Fire Sprite", "Fluffy Owl", "Fruit Bat", "Hawkman Male", "Harpy", "Blue Gryphon Herm", "Mothgirl", "Pegasus", "Queen Bee", "Reindeer", "Snow Bat", "Vulpogryph", "Yamato Dragon", "Yamato Dragoness", "Wyvern" } to infections of FlightList;
-
-when play begins:
-	add { "Bottlenose Toy", "Feral Sea Dragon", "Feral Sea Dragoness", "Dolphin Herm", "Killer Whale", "Shark Herm", "Platypus", "Sea Otter", "Gator Herm" } to infections of SwimList;
-
-when play begins:
-	add { "Frost Drake", "Avalon Kobold" } to infections of OviImpregnatorList;
-]
-
 
 Part 2 - Rules
 
@@ -2529,16 +2448,6 @@ Carry out using a grab object (called x):
 		process x;
 	else:
 		say "You don't see any [x] in your backpack.";
-
-[MassUsing is an action applying to a number and one thing.
-Understand "use [number] [owned grab object]" as massusing.
-Carry out massusing:
-	repeat with z running from 1 to number:
-		if second noun is owned:
-			process second noun;
-		else:
-			say "You don't see any [second noun] in your backpack.";
-]
 
 instead of waiting:
 	follow the turnpass rule;
@@ -3008,7 +2917,7 @@ To process (x - a grab object):
 		ItemLoss healing booster by 1;
 	if tan > hunger of player and "Tanuki Salts" is listed in feats of player:
 		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
-		playerEat 5;
+		PlayerEat 5;
 		increase Morale of Player by 5;
 
 
@@ -3093,14 +3002,6 @@ carry out autoattacksubmit:
 
 Section Hyperlinks
 
-[creates method to toggle hyperlinks on/off at any point in game.]
-[HyperToggle is an action applying to nothing.
-understand "Hyper Toggle" as HyperToggle.
-carry out HyperToggle:
-	if hypernull is 0:
-		now hypernull is 1;
-	else if hypernull is 1:
-		now hypernull is 0;]
 HyperlinksActivated is an action applying to nothing.
 understand "Hyper On" as HyperlinksActivated.
 
@@ -3881,7 +3782,6 @@ To Infect:
 				say "You feel your social sense swelling with [Name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
 				increase Charisma of Player by 1;
 	if Libido of Player < libido entry:
-[		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [Name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";]
 		let oldlib be Libido of Player;
 		increase Libido of Player by 1;
 		increase Libido of Player by ( libido entry minus Libido of Player ) divided by 3;
@@ -5093,6 +4993,19 @@ This is the monster injury rule:
 		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random]";
 	rule succeeds;
 
+This is the monster libido rule:
+	choose row MonsterID from the Table of Random Critters;
+	let LibidoPercentage be ( monsterLibido - monsterLibidoPenalty );
+	if LibidoPercentage < 10:
+		now descr is "[one of]calm[or]composed[at random]";
+	else if LibidoPercentage < 40:
+		now descr is "[one of]somewhat aroused[or]a little enticed[at random]";
+	else if LibidoPercentage < 80:
+		now descr is "[one of]quite aroused[or]enticed[at random]";
+	else:
+		now descr is "[one of]aroused beyond all bounds[or]ready for a good fuck[at random]";
+	rule succeeds;
+
 This is the player injury rule:
 	let per be ( HP of Player times 100 ) divided by maxHP of Player;
 	if per <= 10:
@@ -5112,15 +5025,15 @@ This is the brain descr rule:
 		now descr is "[one of]lightly tainted[or]occasionally plagued with odd instinctual[at random][lusting]";
 	else if humanity of Player > 30:
 		if FaceName of Player is not "Human":
-			now descr is "increasingly [FaceName of Player] perspective[lusting]";
+			now descr is "increasingly [faceSpeciesName of Player in lower case] perspective[lusting]";
 		else if BodyName of Player is not "Human":
-			now descr is "increasingly [BodyName of Player] perspective[lusting]";
+			now descr is "increasingly [bodySpeciesName of Player in lower case] perspective[lusting]";
 		else if SkinName of Player is not "Human":
-			now descr is "increasingly [SkinName of Player] perspective[lusting]";
+			now descr is "increasingly [skinSpeciesName of Player in lower case] perspective[lusting]";
 		else if CockName of Player is not "Human":
-			now descr is "increasingly [CockName of Player] perspective[lusting]";
+			now descr is "increasingly [cockSpeciesName of Player in lower case] perspective[lusting]";
 		else if TailName of Player is not "Human":
-			now descr is "increasingly [TailName of Player] perspective[lusting]";
+			now descr is "increasingly [tailSpeciesName of Player in lower case] perspective[lusting]";
 		else:
 			now descr is "increasingly corrupted perspective[lusting]";
 	else:
@@ -5129,10 +5042,6 @@ This is the brain descr rule:
 	if Libido of Player > 80:
 		let RandomCreature be a random number from 1 to number of entries in EncounteredEnemies of Player;
 		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [entry RandomCreature of EncounteredEnemies of Player in lower case] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
-[
-		let mun be a random number from 1 to number of filled rows in Table of Random Critters;
-		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [name in row MonsterID of the Table of Random Critters] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
-]
 	else if Libido of Player > 40:
 		now lusting is " thoughts. You are [one of]distracted by doodling a big breasted monster[or]distracted by doodling a big cocked monster[or]distracted by taking a moment to rub at yourself[at random].";
 	else if Libido of Player > 20:
@@ -5484,20 +5393,20 @@ This is the self examine rule:
 	let CrotchVisible be true;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "waist":
+			now CrotchVisible is false;
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
-				now CrotchVisible is false;
 	if CrotchVisible is true: [no pants, so undies might be visible]
 		repeat with x running through equipped owned equipment:
 			if slot of x is "crotch":
+				now CrotchVisible is false;
 				if descmod of x is "":
 					break;
 				else:
 					say "[descmod of x] ";
-					now CrotchVisible is false;
-	if CrotchVisible is true: [no undies, so the actual crotch is visible]
+	if CrotchVisible is true: [no pants or undies, so the actual crotch is visible]
 		say "Your [BodyName of Player in lower case] waist and legs are bare-ass naked, exposing your privates for everyone to see. ";
 	let Barefoot be true;
 	repeat with x running through equipped owned equipment:

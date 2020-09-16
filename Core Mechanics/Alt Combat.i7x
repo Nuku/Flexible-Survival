@@ -18,6 +18,9 @@ skipretaliate is a truth state that varies. [Used to detect if a monster will be
 avoidance is a number that varies.		[ Used to track if a player automatically avoids an attack. ]
 gascloud is a number that varies.		[ Tracks the ongoing strength of a player's ambient gas cloud. ]
 monsterHP is a number that varies.		[ Remaining monster HP. ]
+monsterLust is a number that varies.		[ Current monster Lust. ]
+monsterLibido is a number that varies.		[ Current monster Libido. ]
+monsterLibidoPenalty is a number that varies.		[ Current monster Libido Penalty due to you punching them. ]
 monsterpowerup is a number that varies.	[ Used to track if a monster got a powerup that needs to be monitored or later removed. ]
 missskip is a number that varies.		[ Used to indicate if the default monster miss message should be omitted. ]
 monsterhit is a truth state that varies.	[ Used to denote if the monster hit ]
@@ -31,6 +34,7 @@ duckyactive is a truth state that varies.	[ Used to mark if the ducky's last-min
 velossaved is a truth state that varies.	[ Used to mark if Velos's last-minute save has been used this turn. ]
 velossavedyes is a truth state that varies. [ Used to mark if Velos has ever used his last-minute save.]
 plhitbonus is a number that varies.		[ Used to total the player's special hit bonuses. ]
+plseducebonus is a number that varies.		[ Used to total the player's special hit bonuses. ]
 pldodgebonus is a number that varies.	[ Used to total the player's special dodge bonuses. ]
 pldamagebonus is a number that varies.	[ Used to total the player's special damage bonuses. ]
 plfleebonus is a number that varies.	[ Used to total the player's special flee bonuses. ]
@@ -91,11 +95,14 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	now bananapeeled is 0;
 	now eprodused is false;
 	now monsterHP is HP entry;
+	now monsterLibido is Libido entry;
+	now monsterLibidoPenalty is 0;
 	now gascloud is 0;
 	now playerpoison is 0;
 	now monsterpoison is 0;
 	now lost is 0;
 	now plhitbonus is 0;
+	now plseducebonus is 0;
 	now pldodgebonus is 0;
 	now pldamagebonus is 0;
 	now plfleebonus is 0;
@@ -182,20 +189,12 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 			increase plweaknatarmor by 25;
 	now fightoutcome is 100;
 	let nam be Name entry;
-[	let typ be type entry; ]
 	let found be 0;
 	repeat through the table of game art:
 		if title entry is nam:
 			now found is 1;
-			[follow the ngraphics_open rule;]
 			project icon entry;
 			break;
-[	if found is 0:
-		repeat through the table of game art:
-			if title entry matches the text typ:
-				now found is 1;
-				project icon entry;
-				break; ]
 	choose row MonsterID from Table of Random Critters;
 	if enemy type entry is 0: [non-unique enemies]
 		say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";
@@ -223,7 +222,7 @@ To Combat Menu:
 		say "     You are too aroused to consider resisting the creature.";
 		now fightoutcome is 21;
 		lose;
-	while HP of Player > 0 and monsterHP > 0:
+	while HP of Player > 0 and monsterHP > 0 and (monsterLibido - monsterLibidoPenalty) < 100 :
 		if combat abort is 1:
 			now combat abort is 0;
 			[wait for any key;
@@ -254,12 +253,14 @@ To Combat Menu:
 			next;
 		else:
 			if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-			say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]F[roman type]lee, [bold type]S[roman type]ubmit, [bold type]T[roman type]hrow the fight[line break]";
+			say "Choose your action numerically or use: [bold type]A[roman type]ttack, S[bold type]e[roman type]duce, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]F[roman type]lee, [bold type]S[roman type]ubmit, [bold type]T[roman type]hrow the fight[line break]";
 			let combatopt be 0;
 			repeat through table of basic combat:
 				increase combatopt by 1;
 				say "[bold type][combatopt][roman type] - [link][title entry][as][combatopt][end link][line break][run paragraph on]";
-			say "Your HP: [HP of Player]/[maxHP of Player]  Libido: [Libido of Player]      [EnemyCapNameOrTitle] HP: [monsterHP]/[HP in row MonsterID of Table of Random Critters] >[run paragraph on]";
+			say "Your HP: [HP of Player]/[maxHP of Player]  Libido: [Libido of Player]/100[line break]";
+			say "[EnemyCapNameOrTitle] HP: [monsterHP]/[HP in row MonsterID of Table of Random Critters]  Libido: [monsterLibido - monsterLibidoPenalty]/100[line break]";
+			say ">[run paragraph on]";
 			let k be 0;
 			now keychar is "INVALID";
 			change the text of the player's command to "";
@@ -280,55 +281,27 @@ To Combat Menu:
 				LineBreak;
 				follow the player attack rule;
 				next;
-			if keychar in lower case exactly matches the text "i" or keychar in lower case exactly matches the text "2":
+			if keychar in lower case exactly matches the text "e" or keychar in lower case exactly matches the text "2":
+				LineBreak;
+				follow the player seduce rule;
+				next;
+			if keychar in lower case exactly matches the text "i" or keychar in lower case exactly matches the text "3":
 				LineBreak;
 				follow the combat item rule;
 				next;
-			if keychar in lower case exactly matches the text "p" or keychar in lower case exactly matches the text "3":
+			if keychar in lower case exactly matches the text "p" or keychar in lower case exactly matches the text "4":
 				LineBreak;
 				follow the combat pass rule;
 				next;
-			if keychar in lower case exactly matches the text "f" or keychar in lower case exactly matches the text "4":
+			if keychar in lower case exactly matches the text "f" or keychar in lower case exactly matches the text "5":
 				LineBreak;
 				follow the flee rule;
 				next;
-			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "5":
+			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "6":
 				LineBreak;
 				follow the submit rule;
 				next;
-			if keychar in lower case exactly matches the text "t" or keychar in lower case exactly matches the text "6":
-				LineBreak;
-				follow the throw combat rule;
-				next;
-			if keychar in lower case matches the text "attack":
-				LineBreak;
-				follow the player attack rule;
-				next;
-			if keychar in lower case matches the text "item":
-				LineBreak;
-				follow the combat item rule;
-				next;
-			if keychar in lower case matches the text "pass":
-				LineBreak;
-				follow the combat pass rule;
-				next;
-			if keychar in lower case matches the text "submit":
-				LineBreak;
-				follow the submit rule;
-				next;
-			if keychar in lower case matches the text "flee":
-				LineBreak;
-				follow the flee rule;
-				next;
-			if keychar in lower case matches the text "throw":
-				LineBreak;
-				follow the throw combat rule;
-				next;
-			if keychar in lower case matches the text "throw the fight":
-				LineBreak;
-				follow the throw combat rule;
-				next;
-			if keychar in lower case matches the text "throw fight":
+			if keychar in lower case exactly matches the text "t" or keychar in lower case exactly matches the text "7":
 				LineBreak;
 				follow the throw combat rule;
 				next;
@@ -530,6 +503,7 @@ This is the player attack rule:
 			increase dam by y;
 			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at the [EnemyNameOrTitle] for [special-style-2][y][roman type] damage!";
 		decrease monsterHP by dam;
+		increase monsterLibidoPenalty by 20;
 	else:
 		say "You miss!";
 	if Player is not lonely:
@@ -614,6 +588,68 @@ to say EnemyCapNameOrTitle:
 		say "[name entry]";
 	else:
 		say "[enemy title entry]";
+
+
+Chapter 2 - Seduce
+
+This is the player seduce rule:
+	choose row MonsterID from the Table of Random Critters;
+	let currentmonLust be monsterLust;
+	if Debug is at level 10:
+		say "DEBUG: Cha [Charisma of Player][line break]";
+		say "DEBUG: Per [Perception of Player][line break]";
+	let the seduce bonus be Perception of Player + ( level of Player * 2 ) + plseducebonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Seduction Bonus (Player) [seduce bonus][line break]";
+	let the seduction defense bonus be ( 20 - (monsterLibido divided by 3) ) + ( lev entry * 2 ) + monmindbonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Seduction seduction defense bonus (Enemy) [seduction defense bonus][line break]";
+	let the combat bonus be seduce bonus - seduction defense bonus;
+	if Debug is at level 10:
+		say "DEBUG: Combat Bonus (Player) [Combat bonus][line break]";
+	if hardmode is true:
+		if the combat bonus > 16:
+			now combat bonus is 16;
+		else if the combat bonus < -25:
+			now combat bonus is -25;
+	else:
+		if the combat bonus > 19:
+			now combat bonus is 19;
+		else if the combat bonus < -22:
+			now combat bonus is -22;
+	if Debug is at level 10:
+		say "DEBUG: Combat Bonus after Capping: [combat bonus][line break]";
+	if monsterLibidoPenalty > 0:
+		decrease combat bonus by monsterLibidoPenalty;
+		if Debug is at level 10:
+			say "DEBUG: Combat Bonus after Penalty: [combat bonus][line break]";
+	let the roll be a random number from 1 to 50;
+	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	if the roll plus the combat bonus > 20 and SeductionImmune entry is false:
+		let LibidoIncrease be ( (Charisma of Player divided by three) * ( a random number from 70 to 130 ) ) divided by 100;
+		if a random chance of Morale of Player in 200 succeeds:
+			say "Filled with sudden inspiration, your seduction attempt scores particularly well! ";
+			increase LibidoIncrease by LibidoIncrease;
+		say "You [one of]expose yourself to[or]present yourself to[or]entice[at random] the [EnemyNameOrTitle] for a [special-style-2][LibidoIncrease][roman type] libido increase!";
+		increase monsterLibido by LibidoIncrease;
+	else:
+		if SeductionImmune entry is true:
+			say "Your seduction attempt fails! Doesn't look like you'll get anywhere with this tactic.";
+		else:
+			say "Your seduction attempt fails!";
+	LineBreak;
+	follow the monster libido rule;
+	say "[EnemyCapNameOrTitle] is [descr].";
+	if monsterLibido minus monsterLibidoPenalty < 100:
+		if BeforeCombat is 0:
+			choose row monstercom from table of Critter Combat;
+			if Playerpoison > 0, follow the playerpoisoned rule;
+			if there is a continuous in row monstercom of the table of Critter Combat:
+				follow the continuous entry;
+			if combat abort is 0 and skipretaliate is false, follow the combat entry;
+	else:
+		now fightoutcome is 11; [monster submits to player]
+		win;
 
 Chapter 2 - Item Use
 
@@ -1338,7 +1374,6 @@ to win:
 	say "[line break]A soft chime informs you that you have received [special-style-1][reward][roman type] freecred, and now have [freecred] creds.";
 	if Libido of Player > 25, decrease Libido of Player by 4;
 	AttemptToWaitBeforeClear; [wait for any key;]
-	[clear the screen and hyperlink list;]
 	AttemptToClearHyper;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
 	if gshep is listed in companionList of Player:
@@ -1376,7 +1411,7 @@ To lose:
 		if Libido of Player < libido entry and non-infectious entry is false:
 			increase Libido of Player by 4;
 		else:
-			increase Libido of Player by 2;
+			increase Libido of Player by 1;
 	if the player is not lonely:
 		repeat with x running through companionList of Player:
 			now lastfight of x is turns;

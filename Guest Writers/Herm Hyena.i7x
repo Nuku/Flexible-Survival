@@ -136,8 +136,8 @@ to say beatthehyena06:	[give blow job]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -190,7 +190,8 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 7; [ Width of female sex infection will try and give you ]
-	now libido entry is 20; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
@@ -325,7 +326,7 @@ This is the Hyena Herm Infection rule:
 		else:
 			say "Life as a hyena proves difficult in civilized life. Your laugh unnerves most, to say nothing of that grin. You wander a bit aimlessly, finding a job in a local coffee shop and keeping the cups full and your mouth shut for most of the day.";
 			if Player is herm:
-				say "One day, your monotony is interrupted when a mutant wanders in. Your heart skips a beat and your nose flares. Another hyena! Shi approaches you directly, and stuffs a card into your numb hands before leaving, her tail wagging in a way that invites attention, making you ragingly hard. You duck to the bathroom, to take care of that problem, and to check out the card. An address. You rush over as soon as your shift is over to find a small suburban house. A knock at the door has it swinging open quickly. Shi grabs you and hauls you into the house and into hir arms. Maybe this hyena thing won't be so bad, after all.";
+				say "One day, your monotony is interrupted when a mutant wanders in. Your heart skips a beat and your nose flares. Another hyena! Shi approaches you directly, and stuffs a card into your numb hands before leaving, her tail wagging in a way that invites attention, making you ragingly hard. You duck to the bathroom, to take care of that problem, and to check out the card. An address. You rush over as soon as your shift is over to find a small suburban house. A knock at the door has it swinging open quickly. Shi grabs you and hauls you into the house and into her arms. Maybe this hyena thing won't be so bad, after all.";
 			else if Player is male:
 				say "You notice a particular college student, female, who comes in quite frequently. She's getting a degree in anthropology, and seems quite fascinated with how the virus has changed the human condition in some ways, and not in others. She gabs on at you for hours, leaving you nodding softly. You fail to grasp most of it, but you know you like her, and your body likes her, soft scent teasing you to a half firm arousal every time she stops by. She comes in one time, crying, and tells you a story about how her boyfriend cheated on her and left her. Unable to hold back any longer, you admit your love for her. This scares her at first, and she vanishes from the shop for several weeks, leaving you despondent and alone.[line break][line break]But she does return, and holds your hands, and asks to go slow. A date at the park, a trip to the movies. You get more chances to talk with her and be with her, and something builds. There is no one 'moment', it simply grows into a deep, satisfying, relationship. You eventually marry and sire pups in the woman of your life.";
 			else:

@@ -134,7 +134,7 @@ instead of sniffing adhesive bandage:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"indigo potion"	"A small vial filled with a small amount of liquid so fark indigo that it is almost black."	0	indigo potion
+"indigo potion"	"A small vial filled with a small amount of liquid so dark indigo that it is almost black."	0	indigo potion
 
 indigo potion is a grab object.
 indigo potion is fast.

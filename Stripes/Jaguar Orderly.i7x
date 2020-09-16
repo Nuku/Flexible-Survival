@@ -102,8 +102,8 @@ to say jagride:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -134,7 +134,7 @@ When Play begins:
 	now body change entry is "it tightens with strong muscles. Your body becomes short and stocky, but powerful. Your hands are now paw-like fists"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "it is covered by golden fur decorated with black rosettes"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you grow a long, slender tail. As it lashes behind you angrily, fur coats it, a golden yellow and covered in black spots"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "turns a deep red in color"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "your cock turns a deep red in color"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 18;
 	now sta entry is 16;
@@ -155,7 +155,8 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 8;
 	now Cunt Tightness entry is 3;
-	now libido entry is 33; [ Set to zero in this monster to control elsewhere ]
+	now SeductionImmune entry is false;
+	now libido entry is 25; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is "libido suppressant"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";

@@ -65,9 +65,11 @@ to say Dobermandesc:
 	else if dobielibido < 100 or inasituation is true:
 		project the figure of Alexandra_clothed1_frown_icon;
 		say "     The female Doberman cop has found you again and growls angrily, pulling out her nightstick. She's looking more disheveled and wild-eyed than before, her lusts starting to take hold of her. She still has her uniform on, but her shirt's half unbuttoned to show off her breasts better and you can see moist juices soaking her thighs. Despite her attempts to restrain it, her tail wags excitedly at having found you again, regardless of her apparent anger at you.";
+		increase monsterLibido by 25; [she's riled up now, easier to seduce]
 	else:
 		project the figure of Alexandra_clothed2_frown_icon;
 		say "     The female Doberman cop has found you again and snarls at you. She's looking rather rougher now, with her shirt hanging open to expose her bare breasts and the crotch of her pants soaked and stained with her fluids. From the wild look in her eyes and the way she slaps her palm with her nightstick, it looks like she's through being the good cop and intends to come down on you hard. Her tail wags and you catch the scent of fresh arousal coming from her, clearly her body wanting to play some more - one way or another.";
+		increase monsterLibido by 50; [she's very riled up now, easier to seduce]
 		increase str entry by 2;
 		if hardmode is false, now lev entry is 9;
 		increase HP entry by lev entry;
@@ -562,8 +564,8 @@ to say beatthedobie3:			[high-lust cop player victory]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -616,7 +618,8 @@ When Play begins:
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 10; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 2; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 50; [ Target libido the infection will rise towards. ]
+	now SeductionImmune entry is false;
+	now libido entry is 25; [ Target libido the infection will rise towards. ]
 	now loot entry is "doberman bitch fur"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";

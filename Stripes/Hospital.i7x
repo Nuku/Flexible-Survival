@@ -495,8 +495,8 @@ ResolveFunction of Finding a Way is "[ResolveEvent Finding a Way in]".
 Finding a Way in is inactive.		[unable to do this until activated]
 Sarea of Finding a Way in is "Hospital".
 
-an everyturn rule: [to restore the openness of the door after an export/import]
-	if Finding a Way in is resolved and locked stairwell is locked:
+a postimport rule: [to restore the openness of the door after an export/import]
+	if Finding a Way in is resolved:
 		now locked stairwell is unlocked;
 
 to say ResolveEvent Finding a Way in:

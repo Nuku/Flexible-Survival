@@ -212,7 +212,7 @@ Latex Vixen	"Latex Vixen"
 Latex Vixen is a pet.
 understand "Example" as Latex Vixen.
 printed name of Latex Vixen is "Example".
-Description of Latex Vixen is "Sleek latex lines run over hir bright green and black form. Shi has a narrow snout with oddly solid looking teeth, often bared in a grin or smile. She has ripe C cupped breasts, a long shiny tail and a cock that stands out against her black belly, as pink as the belly is deep black.".
+Description of Latex Vixen is "Sleek latex lines run over her bright green and black form. She has a narrow snout with oddly solid looking teeth, often bared in a grin or smile. She has ripe C cupped breasts, a long shiny tail and a cock that stands out against her black belly, as pink as the belly is deep black.".
 Weapon Damage of latex vixen is 10.
 The level of latex vixen is 4.
 Dexterity of latex vixen is 12.
