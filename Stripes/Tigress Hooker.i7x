@@ -18,14 +18,14 @@ to say tigress_desc:
 	let debit be 0;
 	if mqstatus is 3:				[fighting tigresses at the motel]
 		say "     The lovely tigress is quite upset at the intruder to her motel home. She growls angrily and readies to deal with you soundly so she can have her way with you and put you in your place. Under her.";
-		if hardmode is true and level of Player > 5, let debit be level of Player - 5;
+		if HardMode is true and level of Player > 5, let debit be level of Player - 5;
 		now HP entry is 55 + ( debit * 4 );
 		now monsterHP is 55 + ( debit * 4 );
 		now wdam entry is 7 + ( debit / 3 );
 		now lev entry is 5 + debit;
 	else if mqstatus is 6:				[fighting the matron]
 		say "     The tigress matron of the motel is a larger and more impressive female. She's got an extra foot of height on any of her girls and a much fuller rack as well. her long, flowing orange hair swishes as she pulls off the bathrobe she was wearing, baring her strong and sensual body to you. She looks at you with a strange expression, clearly not pleased that you've burst in here after hurting several of her girls, but eager to put you in your place. her dark nipples and cock are hard with her anticipation of enjoying a new plaything.";
-		if hardmode is true and level of Player > 8, let debit be level of Player - 8;
+		if HardMode is true and level of Player > 8, let debit be level of Player - 8;
 		now HP entry is 90 + ( debit * 6 );
 		now monsterHP is 90 + ( debit * 6 );
 		now wdam entry is 12 + ( ( 4 * debit ) / 11 );
@@ -33,7 +33,7 @@ to say tigress_desc:
 	else:					[standard tigress]
 		say "     Leaning against a building is a striking female feline. She is wearing a skimpy outfit, a short top and even shorter skirt. This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes. Her bosom and stomach have snowy, white fur that covers them. Her ears have [one of]large hoop earrings[or]a trio of small studs[or]tattoos of stars on the inside[or]long, dangling earrings[at random]. Her [one of]long black hair is held in a pony tail[or]hair is dyed a bright red[or]orange hair is styled into fiery mane[or]dark hair has been bleached blond, though you can see the darker roots.[or]hair is neon pink and very long, hanging to her waist[or]hair is a deep blue, with green tips[at random].";
 		say "     Spotting you before you can move away, she flicks her cigarette aside and sizes you up quickly. 'So honey, you lookin['] for a little fun? For a little something, I'll show you a good time.' As she steps up, you catch the edge of something extra making a bulge under her skirt. Clearly this tigress hooker is equipped to pleasure any client she may find. And she's found you!";
-		if hardmode is true and level of Player > 5, let debit be level of Player - 5;
+		if HardMode is true and level of Player > 5, let debit be level of Player - 5;
 		now HP entry is 55 + ( debit * 4 );
 		now monsterHP is 55 + ( debit * 4 );
 		now wdam entry is 7 + ( debit / 3 );

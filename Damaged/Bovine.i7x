@@ -15,7 +15,7 @@ BullMaster is a number that varies. [You showed the feral bull who's boss. What 
 
 to say bovine desc:
 	let debit be 0;
-	if hardmode is true and level of Player > 6, let debit be level of Player - 6;
+	if HardMode is true and level of Player > 6, let debit be level of Player - 6;
 	choose row MonsterID from the Table of Random Critters;
 	if a random number from 1 to 10 > 3:	[Anthro Cow]
 		setmongender 4; [creature is female]

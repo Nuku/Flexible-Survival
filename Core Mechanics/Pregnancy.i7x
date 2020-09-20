@@ -1,6 +1,28 @@
 Version 1 of Pregnancy by Core Mechanics begins here.
 [Version 1.3 - Fix attempt for Mpreg + NPC issues - Stripes]
 
+Chapter 0 - Impregnation Stand-in Character Shells
+
+[For objects/tables and functions of player offspring, see Offspring.i7x]
+
+Table of GameCharacterIDs (continued)
+object	name
+Impregnator	"Impregnator"
+Impregnatee	"Impregnatee"
+child	"child"
+
+Impregnator is a creature.
+The printed name of Impregnator is "Impregnator".
+
+Impregnatee is a creature.
+The printed name of Impregnatee is "Impregnatee".
+
+Child is a creature.
+The printed name of Child is "Child".
+Child has a number called Gestation.
+Child can be born. Child is not born.
+
+
 Chapter 1 - Definitions and Variables
 
 A person can be impreg_ok. A person is usually not impreg_ok.
@@ -16,6 +38,16 @@ A person can be fpreg_able. A person is usually not fpreg_able.
 A person can be fpreg_now. A person is usually not fpreg_now.
 A person can be partial_vacant. A person is usually partial_vacant.
 A person can be total_vacant. A person is usually total_vacant.
+
+[Lists of Child Body Parts - remnants of the previous system of tracking offspring (vs the current tables) - kept for backwards compatibility]
+Childrenfaces is a list of text that varies.
+Childrenskins is a list of text that varies.
+Childrenbodies is a list of text that varies.
+
+ovipregnant is a truth state that varies. ovipregnant is usually false.		[marks if ovi-pregnant now]
+ovipregalways is a truth state that varies. ovipregalways is usually false.	[marks if allowed to pick always ovi]
+
+mpregcount is a number that varies. [mpreg experience]
 
 [Male and/or Female]
 

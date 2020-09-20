@@ -182,7 +182,7 @@ to say wereraptordesc:
 	now dex entry is 19;
 	now HP entry is 45;
 	now lev entry is 8;
-	if lev entry < level of Player and hardmode is true:
+	if lev entry < level of Player and HardMode is true:
 		now debit is ( level of Player ) - 8;
 		increase lev entry by debit;
 		increase dex entry by debit / 5;

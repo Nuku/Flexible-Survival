@@ -3,6 +3,9 @@ Version 3 of Pets by Core Mechanics begins here.
 [ Version 2.1 - Command tweaks ]
 [ Version 3 - Rebuild of the pet system by Bigfish and Wahn ]
 
+Part 0 - Basic Setup
+
+Chapter 1 - Declarations
 
 Pet is a kind of person.
 A pet can be tamed. A pet is usually not tamed.
@@ -12,16 +15,27 @@ A pet has a list of text called IDList.
 A pet has a text called assault.
 A pet has a number called lastfight. lastfight is usually 255.
 A pet has a person called NPCObject. NPCObject of a pet is usually NullPet.
+
 The player has a list of pets called CompanionList.
 
+Chapter 2 - Definitions
+
+Definition: A person is lonely:
+	if companionList of Player is empty, yes;
+
+Definition: A person is not lonely:
+	if companionList of Player is empty, no;
+
+Chapter 3 - Bugfix
+
+[backwards compatibility fix]
 a postimport rule:
 	repeat with CurrentPet running through pets:
 		now CurrentPet is nowhere; [banished to the void]
 
-Definition: A person is lonely:
-	if companionList of Player is empty, yes;
-Definition: A person is not lonely:
-	if companionList of Player is empty, no;
+Part 1 - Pet Functions
+
+Chapter 1 - Maximum Companions
 
 MaxCompanions is a number that varies.[@Tag:NotSaved] MaxCompanions is usually 1.
 
@@ -47,6 +61,8 @@ an every turn rule:
 				say "     [bold type]As your party seems a bit big right now, you decide to send your companion home.[roman type][line break]";
 				DismissFunction DismissName;
 				break;
+
+Chapter 2 - Adding Combat Companions
 
 AddCompanion is an action applying to one topic.
 
@@ -84,6 +100,18 @@ to AddCompanionFunction (NewCompanion - a text):
 					add Addpet to companionList of Player;
 				else:	[failed to call the pet]
 					now SummonFailure is false; [reset]
+
+to ForceCompanionJoin (NewCompanion - a text):
+	let AddPet be Nullpet;
+	repeat with Z running through tamed pets:
+		if NewCompanion is listed in IDList of Z:
+			now AddPet is Z;
+			break;
+	if AddPet is not NullPet:
+		add "currentCompanion" to Traits of Addpet;
+		add Addpet to companionList of Player;
+
+Chapter 3 - Removing Combat Companions
 
 DismissFailure is a truth state that varies.[@Tag:NotSaved] DismissFailure is usually false.
 
@@ -127,7 +155,17 @@ to DismissFunction (InputName - a text):
 		else: [pet couldn't be sent away]
 			now DismissFailure is false; [reset]
 
+to ForceCompanionDismiss (NewCompanion - a text):
+	let DismissPet be Nullpet;
+	repeat with Z running through tamed pets:
+		if NewCompanion is listed in IDList of Z:
+			now DismissPet is Z;
+			break;
+	if DismissPet is not NullPet:
+		remove "currentCompanion" from Traits of DismissPet;
+		remove DismissPet from companionList of Player;
 
+Chapter 4 - Companion Screen
 
 CountPlayerPets is an action applying to nothing.
 understand "allies" as CountPlayerPets.
@@ -156,6 +194,8 @@ Carry out CountPlayerPets:
 	say "[bold type]ally <name>[roman type] - Make the named ally your active one.";
 	say "[bold type]ally dismiss[roman type] - Send away your ally (for now).";
 	say "[link][bold type]ally overview[roman type][end link] - Display a table with the stats of all currently available allies.";
+
+Chapter 5 - Companion Overview Table
 
 Table of PetOverviewList
 Name (text)	Lvl(number)	Dmg(number)	Dex(number)
@@ -198,6 +238,23 @@ carry out PetOverview:
 			say "[PetOverviewName formatted to 20 characters] | [PetOverviewLvl formatted to 3 characters] | [PetOverviewDmg formatted to 3 characters] | [PetOverviewDex formatted to 3 characters] |[line break]";
 		say "[variable letter spacing]";
 
+Chapter 6 - Leveling Up Companions
+
+to Pet level up (companion - a pet):
+	if companionList of Player is empty:
+		increase score by 0;
+	else:
+		increase level of companion by 1;
+		decrease XP of companion by ( level of companion minus 1 ) times 10;
+		if "Good Teacher" is listed in feats of Player:
+			increase XP of companion by ( level of companion minus 1 ) times 4;
+		say "[companion] has gained level [level of companion]! Congratulations!";
+		if remainder after dividing level of companion by 3 is 0:
+			increase weapon damage of companion by 1;
+		if remainder after dividing level of companion by 5 is 0:
+			increase dexterity of companion by 1;
+
+Part 2 - Example Companion
 
 Table of GameCharacterIDs (continued)
 object	name

@@ -13,7 +13,7 @@ to say fleshblobdesc:
 	if level of Player > 8 and a random chance of 2 in 3 succeeds, increase qq by 1;
 	if level of Player < qq and level of Player > 5, now qq is level of Player + 1;
 	let zz be a random number between 1 and 12;
-	if hardmode is true and level of Player > 8:		[Hard Mode Version!]
+	if HardMode is true and level of Player > 8:		[Hard Mode Version!]
 		increase qq by level of Player - 8;
 		now HP entry is 18 + ( ( 4 * qq ) + zz + a random number between 0 and qq );
 		now monsterHP is HP entry;

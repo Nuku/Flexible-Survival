@@ -375,7 +375,7 @@ this is the cerberus rule:
 			let rangenum be ( 80 - ( peppereyes * 4 ) );
 			now cmdmg is 0;
 			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 ); [dmg/hit at 75%]
-			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+			if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 				now cmdmg is (cmdmg * 150) divided by 100;
 				say "Critical Hit! ";
 			say "The [one of]first[or]right[at random] head [one of]bites[or]chews on[or]latches onto[or]clamps onto[purely at random] your left [one of]arm[or]shoulder[or]wrist[or]hand[or]side[or]hip[or]thigh[or]leg[at random], doing [special-style-2][cmdmg][roman type] damage!";
@@ -388,7 +388,7 @@ this is the cerberus rule:
 			let rangenum be ( 80 - ( peppereyes * 4 ) );
 			now cmdmg is 0;
 			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 ); [dmg/hit at 75%]
-			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+			if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 				now cmdmg is (cmdmg * 150) divided by 100;
 				say "Critical Hit! ";
 			say "The [one of]second[or]middle[or]central[at random] head [one of]bites[or]chews on[or]latches onto[or]tears into[purely at random] your [one of]shoulder[or]chest[or]side[or]hip[or]waist[at random], doing [special-style-2][cmdmg][roman type] damage!";
@@ -401,7 +401,7 @@ this is the cerberus rule:
 			let rangenum be ( 80 - ( peppereyes * 4 ) );
 			now cmdmg is 0;
 			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 ); [dmg/hit at 75%]
-			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+			if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 				now cmdmg is (cmdmg * 150) divided by 100;
 				say "Critical Hit! ";
 			say "The [one of]last[or]left[or]final[at random] head [one of]bites[or]sinks its teeth into[or]chomps into[purely at random] your left [one of]arm[or]shoulder[or]wrist[or]hand[or]side[or]hip[or]thigh[or]leg[at random], doing [special-style-2][cmdmg][roman type] damage!";

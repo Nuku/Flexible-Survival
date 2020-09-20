@@ -30,7 +30,7 @@ to say siamesecatdesc:
 	setmongender 19; [creatures are mixed/variable]
 	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of Player > 5, let debit be level of Player - 5;
+	if HardMode is true and level of Player > 5, let debit be level of Player - 5;
 	now dex entry is 18 + ( debit / 5 ); [set to midpoint]
 	now wdam entry is 5 + ( debit / 3 ); [set to midpoint]
 	now malecatHP is HP entry;
@@ -73,7 +73,7 @@ to say siameseattack:
 		[Dmg calc for first blow]
 		choose row MonsterID from the Table of Random Critters;
 		let dammy be ( wdam entry times a random number from 80 to 120 ) divided by 100;
-		if hardmode is true and a random chance of 1 in 10 succeeds:
+		if HardMode is true and a random chance of 1 in 10 succeeds:
 			now dammy is (dammy * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 		let absorbby be 0; [***to be fixed***]

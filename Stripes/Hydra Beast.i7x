@@ -16,7 +16,7 @@ to say hydrabeastdesc:
 	setmongender 3; [creature is male]
 	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of Player > 12, let debit be level of Player - 12;
+	if HardMode is true and level of Player > 12, let debit be level of Player - 12;
 	now lev entry is 12 + debit;
 	now HP entry is 100 + ( debit * 5 );
 	now monsterHP is 100 + ( debit * 5 );
@@ -464,7 +464,7 @@ this is the hydrabeast rule:
 				let rangenum be ( 80 - ( peppereyes * 4 ) );
 				now hbdmg is 0;
 				now hbdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 166 ); [dmg/hit at 60%]
-				if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+				if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 					now hbdmg is (hbdmg * 150) divided by 100;
 					say "[special-style-2]Critical Hit![roman type] ";
 				else:

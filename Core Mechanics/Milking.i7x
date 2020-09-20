@@ -13,7 +13,18 @@ name	desc	weight	object
 "macho milk"	"A creamy, energizing milk with a faintly spicy-like taste."	1	macho milk
 
 mothers milk is a grab object. Understand "milk" as mothers milk. Purified of mothers milk is "distilled milk". mothers milk is milky.
+
 distilled milk is a grab object. It is not milky.
+
+Usedesc of distilled milk is "[distilled milk use]";
+
+to say distilled milk use:
+	say "Ugh, dry milk. It takes some effort to force the almost sickeningly sweet powder down your throat, but once it hits your belly, your body is wracked with powerful waves of alternating lust and breathlessness.";
+	increase thirst of Player by 5;
+	grow breasts by 3;
+	say "[line break]";
+
+
 
 Usedesc of mothers milk is "[mothers milk use]";
 
@@ -33,7 +44,6 @@ to say mothers milk use:
 	PlayerHealed healed;
 	PlayerDrink 20;
 
-dog milk is a grab object. Understand "milk" as dog milk. It is milky. dog milk is infectious. Strain of dog milk is "Smooth Collie Shemale". Purified of dog milk is "distilled milk". dog milk is milky.
 panther milk is a grab object. Understand "milk" as panther milk. panther milk is infectious. Strain of panther milk is "Panther Taur". Purified of panther milk is "distilled milk". panther milk is milky.
 chocolate milk is a grab object. Understand "milk" as chocolate milk. chocolate milk is infectious. Strain of chocolate milk is "Chocolate Lab". Purified of chocolate milk is "distilled milk". chocolate milk is milky.
 vixen milk is a grab object. Understand "milk" as vixen milk. vixen milk is infectious. Strain of vixen milk is "Vixen Nurse". Purified of vixen milk is "distilled milk". vixen milk is milky.
@@ -41,9 +51,6 @@ sweet milk is a grab object. Understand "milk" as sweet milk. sweet milk is infe
 macho milk is a grab object. Understand "milk" as macho milk. macho milk is infectious. Strain of macho milk is "Cow-boi Male". Purified of macho milk is "distilled milk". macho milk is milky.
 [cum/milk object will come from creatures]
 lastmilking is a number that varies. lastmilking is usually 500.
-
-
-
 
 PlayerBreastMilking is an action applying to nothing.
 understand "milkme" as PlayerBreastMilking.

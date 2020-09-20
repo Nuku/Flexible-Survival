@@ -18,7 +18,7 @@ to say snowbatdesc:
 		now sex entry is "Female";
 	say "[daynightcheck]";
 	let debit be 0;
-	if hardmode is true and level of Player > 9, let debit be level of Player - 9;
+	if HardMode is true and level of Player > 9, let debit be level of Player - 9;
 	now dex entry is 20 + nightcheck + ( ( debit + 4 ) / 5 ); [equivalent to +4 dex at night]
 	now wdam entry is 10 + ( ( 4 * debit / 11 ) ); [strong dmg growth rate for hard mode]
 	now HP entry is 70 + ( debit * 5 ); [strong HP growth rate for hard mode]

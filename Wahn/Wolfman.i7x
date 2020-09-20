@@ -87,7 +87,7 @@ to say Wolfmandesc:
 		now enemy type entry is 2; [name known]
 	else if HP of Septus is 6:
 		let debit be 0;
-		if hardmode is true and level of Player > 12, let debit be level of Player - 12;
+		if HardMode is true and level of Player > 12, let debit be level of Player - 12;
 		now dex entry is 20 + ( ( debit * 2 ) / 5 );
 		now HP entry is 95 + ( debit * 5 );
 		now monsterHP is 95 + ( debit * 5 );

@@ -601,7 +601,7 @@ to say tigercopdesc:
 	setmongender 3; [creature is male]
 	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of Player > 8, let debit be level of Player - 8; [Boss hard mode growth rates]
+	if HardMode is true and level of Player > 8, let debit be level of Player - 8; [Boss hard mode growth rates]
 	now HP entry is 90 + ( debit * 6 );
 	now monsterHP is 90 + ( debit * 6 );
 	now wdam entry is 12 + ( ( 4 * debit ) / 11 );

@@ -4,7 +4,7 @@ Version 2 of Alt Combat by Core Mechanics begins here.
 
 "Oh my God! Who gave them super-powers?!"
 
-Section 0 - Basic variables
+Part 0 - Basic variables
 
 monstercom is a number that varies.		[ This represents the row on the table of Critter Combat to be used in this fight. ]
 altattackmade is a number that varies.	[ This tracks whether an alternate attack what chosen. ]
@@ -27,6 +27,7 @@ monsterhit is a truth state that varies.	[ Used to denote if the monster hit ]
 bonusattack is a number that varies.	[ Used to track how many bonus attacks a player's earned in a round. ]
 chargeup is a number that varies.		[ Used to track an attack that charges across several turns. ]
 fightoutcome is a number that varies.	[ Used to track the different outcomes of a fight. ]
+Lost is a number that varies. [ Previously used to track if the player won or lost - replaced by more complex fightoutcome system - kept for backwards compatibility until all "lost" checks are removed]
 absorb is a number that varies.          [ Used to track the damage absorbed by armor/shield/feats. ]
 damagein is a number that varies.		[ Used to pass the damage to the various aborbancy subroutines. ]
 damageout is a number that varies.		[ Used to receive the adjusted damage after using one of the absorbancy subroutines. ]
@@ -75,8 +76,17 @@ LootBonus is a number that varies.[@Tag:NotSaved]
 [ 30*   - player flee                  ]
 [ NOTES: Alt-Combat will only award the basic values marked with an asterisk. Most events should only concern themselves with those results, often lumping all losses into one group. ]
 
+Table of Basic Combat
+title	subtable	description	toggle
+"Attack"	--	"Attack!"	player attack rule
+"Seduce"	--	"Make Love Not War!"	player seduce rule
+"Item"	--	"Quick, where's my medkit?!"	combat item rule
+"Pass"	--	"Hey look, a distraction!"	combat pass rule
+"Flee"	--	"Run away!"	flee rule
+"Submit"	--	"Maybe it isn't so bad?"	submit rule
+"Throw Fight"	--	"Let them think they won."	throw combat rule
 
-Section 1 - Prepping for Combat
+Part 2 - Prepping for Combat
 
 when play begins:
 	if "Human" is not listed in EncounteredEnemies of Player:
@@ -89,8 +99,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	now combat abort is 0;
 	setmongender 0; [clear monster gender]
 	now skipretaliate is false;
-	if lev entry < level of Player and hardmode is true:
-		hardmodeboost;
+	if lev entry < level of Player and HardMode is true:
+		HardModeboost;
 	now peppereyes is 0;
 	now bananapeeled is 0;
 	now eprodused is false;
@@ -203,7 +213,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	else if enemy type entry is 2: [unique enemies whose name is known]
 		say "[bold type]You run into [enemy Name entry].[roman type][line break][desc entry][line break]";
 
-Section 2 - Combat
+Part 3 - Combat
 
 Chapter 0 - Combat Menu
 
@@ -257,7 +267,7 @@ To Combat Menu:
 			let combatopt be 0;
 			repeat through table of basic combat:
 				increase combatopt by 1;
-				say "[bold type][combatopt][roman type] - [link][title entry][as][combatopt][end link][line break][run paragraph on]";
+				say "[bold type][combatopt][roman type] - [link][title entry][as][combatopt][end link] ([description entry])[line break][run paragraph on]";
 			say "Your HP: [HP of Player]/[maxHP of Player]  Libido: [Libido of Player]/100[line break]";
 			say "[EnemyCapNameOrTitle] HP: [monsterHP]/[HP in row MonsterID of Table of Random Critters]  Libido: [monsterLibido - monsterLibidoPenalty]/100[line break]";
 			say ">[run paragraph on]";
@@ -335,8 +345,7 @@ this is the monster combat mode rule:
 to say combat abort:
 	now combat abort is 1;
 
-
-Chapter 2 - Player Attack
+Chapter 1 - Player Attack
 
 This is the player attack rule:
 	choose row MonsterID from the Table of Random Critters;
@@ -356,7 +365,7 @@ This is the player attack rule:
 		say "DEBUG: Combat Bonus (Player) [Combat bonus][line break]";
 	if ktcockmatch is true:		[That's what you get for thinking with your crotch.]
 		increase Libido of Player by a random number from 0 to 2;
-	if hardmode is true:
+	if HardMode is true:
 		if the combat bonus > 16:
 			now combat bonus is 16;
 		else if the combat bonus < -25:
@@ -516,7 +525,7 @@ This is the player attack rule:
 				if z is not NullPet:
 					now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
 					let the combat bonus be attack bonus minus defense bonus;
-					if hardmode is true:
+					if HardMode is true:
 						if the combat bonus > 16:
 							now combat bonus is 16;
 						else if the combat bonus < -25:
@@ -539,7 +548,7 @@ This is the player attack rule:
 			if z is not NullPet:
 				now attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
 				let the combat bonus be attack bonus minus defense bonus;
-				if hardmode is true:
+				if HardMode is true:
 					if the combat bonus > 16:
 						now combat bonus is 16;
 					else if the combat bonus < -25:
@@ -607,7 +616,7 @@ This is the player seduce rule:
 	let the combat bonus be seduce bonus - seduction defense bonus;
 	if Debug is at level 10:
 		say "DEBUG: Combat Bonus (Player) [Combat bonus][line break]";
-	if hardmode is true:
+	if HardMode is true:
 		if the combat bonus > 16:
 			now combat bonus is 16;
 		else if the combat bonus < -25:
@@ -651,7 +660,7 @@ This is the player seduce rule:
 		now fightoutcome is 11; [monster submits to player]
 		win;
 
-Chapter 2 - Item Use
+Chapter 3 - Item Use
 
 This is the combat item rule:
 	now battleitem is 0;
@@ -708,8 +717,7 @@ object	holding (number)	objname (indexed text)	description (indexed text)
 journal	1	"journal"	"nothing"
 with 24 blank rows.
 
-
-Chapter 3 - Combat Pass
+Chapter 4 - Combat Pass
 
 This is the combat pass rule:
 	choose row monstercom from table of Critter Combat;
@@ -718,8 +726,7 @@ This is the combat pass rule:
 		follow the continuous entry;
 	if combat abort is 0, follow the combat entry;
 
-
-Chapter 4 - Submit
+Chapter 6 - Submit
 
 This is the submit rule:
 	choose row MonsterID from the Table of Random Critters;
@@ -729,8 +736,7 @@ This is the submit rule:
 	if Player is submissive, increase XP of Player by ( ( 2 + lev entry ) / 5 );
 	if Player is kinky, increase Morale of Player by 6;
 
-
-Chapter 5 - Flee
+Chapter 6 - Flee
 
 This is the flee rule:
 	choose row MonsterID from the Table of Random Critters;
@@ -770,7 +776,7 @@ This is the flee rule:
 		if HP of Velos > 2 and scalevalue of Player < 3 and velosfleepenalty is false:
 			say "The added weight and discomfort of the heavy serpent inside your [Body Size Adjective of Player] body does make it a little harder to get away.";
 			now velosfleepenalty is true;
-		if hardmode is true:
+		if HardMode is true:
 			if the combat bonus < -25:
 				now combat bonus is -25;
 		else:
@@ -791,14 +797,13 @@ This is the flee rule:
 			if combat abort is 0, follow the combat entry;
 	follow the ngraphics_blank rule;
 
-Chapter 6 - Throw the Fight
+Chapter 7 - Throw the Fight
 
 This is the throw combat rule:
 	now fightoutcome is 20;
 	now HP of Player is -2;
 	say "You allow yourself to be subdued while putting up a token struggle.";
 	Lose;
-
 
 Chapter P - Poison
 
@@ -829,10 +834,9 @@ this is the playerpoisoned rule:
 			if Libido of Player >= 110, now fightoutcome is 21;
 			lose;
 
+Part 4 - Monster Counterattack
 
-Section 3 - Monster Counterattack
-
-Book 0 - Retaliation Rule
+Chapter 1 - Retaliation Rule
 
 this is the retaliation rule:
 	choose row monstercom from table of Critter Combat;
@@ -841,7 +845,7 @@ this is the retaliation rule:
 	else:
 		retaliate; [follows the advanced model if alternate]
 
-Book 1 - Standard Retaliate
+Chapter 2 - Standard Retaliate
 
 [ Since it's default, it skips checking the alternates. ]
 
@@ -863,7 +867,7 @@ to standardretaliate:
 		Lose;
 	rule succeeds;
 
-Book 2 - Alternate Retaliation
+Chapter 3 - Alternate Retaliation
 
 [ Non-standard rules apply ]
 
@@ -913,7 +917,7 @@ to retaliate:
 		Lose;
 	rule succeeds;
 
-Book 3 - Striking and Avoidance
+Part 5 - Striking and Avoidance
 
 to standardstrike:
 	choose row monstercom from table of Critter Combat;
@@ -930,7 +934,7 @@ to standardstrike:
 		if "Flash" is listed in feats of Player and a random chance of 3 in 20 succeeds:
 			say "Calling upon your hidden power, you flash brightly with light, filling the [EnemyNameOrTitle]'s eyes with spots.";
 			decrease combat bonus by 6;
-		if hardmode is true:
+		if HardMode is true:
 			if the combat bonus > 19:
 				now combat bonus is 19;
 			else if the combat bonus < -22:
@@ -977,13 +981,13 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 		now velossaved is true;
 		now avoidance is 1;
 
-Book 4 - Standard Hit and Damage
+Part 6 - Standard Hit and Damage
 
 to standardhit:
 	choose row MonsterID from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
-	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "[Attack entry]  You take [special-style-2][dam][roman type] damage!";
@@ -999,7 +1003,7 @@ to standardhit:
 	say "You are [descr].";
 
 
-Book 5 - Absorbancy Variants
+Part 7 - Absorbancy Variants
 
 to say normalabsorbancy:		[normal absorbancy]
 	now absorb is 0;
@@ -1208,8 +1212,7 @@ to say nofeatabsorbancy:
 	now damageout is ( midcalc + 99 ) / 100; [protection rounds down]
 	now absorb is damagein - damageout;
 
-
-Section 4 - Loss and Victory
+Part 8 - Loss and Victory
 
 to win:
 	choose row MonsterID from Table of Random Critters;
@@ -1324,7 +1327,7 @@ to win:
 			now fightoutcome is 14; [player ub'ed foe]
 	[Vampirism]
 	if ok is 1 and vampiric is true:
-		if nohealmode is true:
+		if NoHealMode is true:
 			increase HP of Player by ( 2 * lev entry ) / 3;
 		else:
 			increase HP of Player by lev entry;
@@ -1501,6 +1504,46 @@ to SpecialTrophyCheck (TrophyName - text):
 	-- "confiscated pills":
 		add "Pills_Taken" to Traits of Alexandra;
 
+Part 112 - Descriptive Elements for Combat
+
+This is the monster injury rule:
+	choose row MonsterID from the Table of Random Critters;
+	let per be ( monsterHP times 100 ) divided by HP entry;
+	if per < 10:
+		now descr is "[one of]on death's door[or]almost defeated[or]barely mobile[at random]";
+	else if per < 40:
+		now descr is "[one of]wounded[or]bashed around[or]significantly harmed[at random]";
+	else if per < 80:
+		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random]";
+	else:
+		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random]";
+	rule succeeds;
+
+This is the monster libido rule:
+	choose row MonsterID from the Table of Random Critters;
+	let LibidoPercentage be ( monsterLibido - monsterLibidoPenalty );
+	if LibidoPercentage < 10:
+		now descr is "[one of]calm[or]composed[at random]";
+	else if LibidoPercentage < 40:
+		now descr is "[one of]somewhat aroused[or]a little enticed[at random]";
+	else if LibidoPercentage < 80:
+		now descr is "[one of]quite aroused[or]enticed[at random]";
+	else:
+		now descr is "[one of]aroused beyond all bounds[or]ready for a good fuck[at random]";
+	rule succeeds;
+
+This is the player injury rule:
+	let per be ( HP of Player times 100 ) divided by maxHP of Player;
+	if per <= 10:
+		now descr is "[if Playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]on death's door[or]almost defeated[or]barely mobile[at random]";
+	else if per <= 40:
+		now descr is "[if Playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]wounded[or]bashed around[or]significantly harmed[at random]";
+	else if per <= 80:
+		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type][line break]";
+	else:
+		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type][line break]";
+	rule succeeds;
+
 Section 5 - Critter Combat
 
 Chapter 0 - Definition of entries
@@ -1660,7 +1703,7 @@ this is the intstrike rule:
 		if "Flash" is listed in feats of Player and a random chance of 3 in 20 succeeds:
 			say "Calling upon your hidden power, you flash brightly with light, filling the [EnemyNameOrTitle]'s eyes with spots.";
 			decrease combat bonus by 6;
-		if hardmode is true:
+		if HardMode is true:
 			if the combat bonus > 19:
 				now combat bonus is 19;
 			else if the combat bonus < -22:
@@ -1692,7 +1735,7 @@ this is the humping rule:
 		let rangenum be ( 80 - ( peppereyes * 4 ) );
 		let xyz be ( a random number from rangenum to 120 ) + 30 + ( 2 * lev entry );
 		let dam be ( ( wdam entry times xyz ) / 100 );
-		if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 		say "You are grabbed by the [EnemyNameOrTitle], which grinds its throbbing cock against your [bodytype of Player] body. Precum dribbles from it onto you, the scent of which momentarily entices your infected body, making you press back against their [body descriptor entry] form as the [cock entry] shaft is humped against you. It takes an effort of will to resist giving into the alluring creature, but you manage to push it away. Your drive to continue resisting has waned somewhat after the arousing attack. You take [special-style-2][dam][roman type] damage!";
@@ -1711,7 +1754,7 @@ this is the ftaurpounce rule:		[double-damage pouncing]
 	choose row MonsterID from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 ); [Double damage]
-	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "The [one of][EnemyNameOrTitle][or]feline[or]feline taur[or]large cat[purely at random] growls and pounces playfully atop you, [one of]knocking[or]pushing[or]slamming[purely at random] you down briefly. Its many paws knead and claw at you while the feline rumbles and purrs at having caught its [one of]toy[or]prey[or]plaything[purely at random], rubbing its body against yours. This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";

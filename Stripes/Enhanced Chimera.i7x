@@ -33,7 +33,7 @@ to say enhancedchimeradesc:
 		now combat abort is 1;
 	else:
 		say "     The creature's cock throbs harder and it releases a lustful growl, rushing you with obvious intent.";
-		if hardmode is false and ( lev entry is 14 or lev entry is 15 ) and level of Player < 16:
+		if HardMode is false and ( lev entry is 14 or lev entry is 15 ) and level of Player < 16:
 			say "     This particular hybrid seems especially powerful and dangerous. Best be careful.";
 
 to say ec_mixnmatch:
@@ -41,7 +41,7 @@ to say ec_mixnmatch:
 	choose row MonsterID from the Table of Random Critters;
 	let qq be a random number between 11 and 15;
 	let zz be a random number between 1 and 16;
-	if hardmode is true and level of Player > 13:		[Hard Mode Version!]
+	if HardMode is true and level of Player > 13:		[Hard Mode Version!]
 		increase qq by level of Player - 13;
 		now HP entry is 36 + ( ( 5 * qq ) + zz + a random number between 0 and qq );
 		now monsterHP is HP entry;

@@ -360,7 +360,7 @@ this is the mentalmouse rule:
 			let rangenum2 be 120 + lev entry;
 			if mousecurse is 1, increase rangenum2 by 20;
 			let dam be ( ( wdam entry times a random number from rangenum to rangenum2 ) / 100 );
-			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+			if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 				now dam is (dam * 150) divided by 100;
 				say "The enemy finds a particular vulnerability in your mental defenses - Critical Hit![line break]";
 			say "[one of]Being this close to them, you can feel their minds tugging at yours, weakening your resolve[or]You can feel what must be their united thoughts at the edge of your mind, whispering for you to give in and accept mousedom with them[or]The mice surround you and look at you funny. You thoughts get cloudy and it becomes harder to stay focused on resisting them[at random]! You take [special-style-2][dam][roman type] damage[if mousecurse is 1] and you grow more aroused[end if]!";

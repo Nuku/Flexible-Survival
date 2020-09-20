@@ -402,9 +402,28 @@ to say rsscbodyentry:
 	else:
 		say "that of a voluptuous woman with digitigrade legs ending in paws";
 
-[Dog Milk is a drinkable item that reduces thirst but causes breast size to increase as well as up to 6 breasts (total, not additional) to grow on the player with no other transformative effects. Growth is limited to one inch at a time. I have no idea how to code this in though.
-This could be a good item to use to further progress the 'sister' plot-line with Sandra. Say that she thinks one more thing needs to be done, but she needs some milk, and since it's already been established by her prior dialogue that she dislikes the feral gryphons, she refuses gryphon milk. She'll take the Dog Milk though, drink it herself and then give you a drink the same way she does when you visit her and are thirsty enough, except with the fresh nanites involved she gives you 6 instantly, and can do this to forms that don't normally allow it like the gryphon body.]
+Table of Game Objects (continued)
+name	desc	weight	object
+"dog milk"	"A bottle of dog milk? Man you will take anything."	1	dog milk
 
+dog milk is a grab object.
+Understand "milk" as dog milk. It is milky.
+dog milk is infectious.
+Strain of dog milk is "Smooth Collie Shemale".
+Purified of dog milk is "distilled milk".
+
+Usedesc of dog milk is "[dog milk use]";
+
+to say dog milk use:
+	say "Somehow still warm, you guzzle it down without thinking too hard about its origins. A prickly warmth fills your belly as the cream flows along your gullet.";
+	PlayerDrink 15;
+	repeat with Z running from 1 to number of filled rows in Table of Random Critters:
+		choose row Z from the Table of Random Critters;
+		let zed be "collie";
+		if Name entry exactly matches the text zed, case insensitively:
+			now MonsterID is Z;
+			break;
+	if "Iron Stomach" is not listed in feats of Player, follow the sex change rule;
 
 Section 3 - Heat Table
 

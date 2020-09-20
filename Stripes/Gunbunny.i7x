@@ -324,7 +324,7 @@ to gb_gatling_attack:
 	if monsterhit is true:
 		let rangenum be ( 80 - ( peppereyes * 4 ) );
 		let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
-		if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
 			say "A shot strikes a particular vulnerable spot - Critical Hit![line break]";
 		increase damagetotal by dam;
@@ -336,7 +336,7 @@ to gb_gatling_attack:
 	if monsterhit is true:
 		let rangenum be ( 80 - ( peppereyes * 4 ) );
 		let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
-		if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
 			say "A shot strikes a particular vulnerable spot - Critical Hit![line break]";
 		increase damagetotal by dam;
@@ -348,7 +348,7 @@ to gb_gatling_attack:
 	if monsterhit is true:
 		let rangenum be ( 80 - ( peppereyes * 4 ) );
 		let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
-		if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
 			say "A shot strikes a particular vulnerable spot - Critical Hit![line break]";
 		increase damagetotal by dam;

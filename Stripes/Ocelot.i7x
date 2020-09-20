@@ -298,7 +298,7 @@ to say ocelotdesc:
 	now ocelotsize is 0; [only small one for now]
 	say "     You are [one of]surprised[or]startled[at random] by a small, speedy feline running out from cover. Finding himself [one of]confronted[or]blocked[at random] by you, he stops and bares his claws. This small fellow is short and slender, maybe around five feet tall. His golden-brown fur is beautifully spotted and striped, lighter at the belly, though densely filled with black spots there are well. The ocelot is wearing a black leather harness, collar, cuffs and a codpiece over what seems to be an average-sized package. In it, he looks like someone's boytoy kitty slave. He shifts from foot to foot, preparing to strike.";
 	let debit be 0;
-	if hardmode is true and level of Player > 3, let debit be level of Player - 3; [one level behind player]
+	if HardMode is true and level of Player > 3, let debit be level of Player - 3; [one level behind player]
 	now HP entry is 22 + ( debit * 3 );
 	now monsterHP is 22 + ( debit * 3 );
 	now wdam entry is 5 + ( debit / 3 );
@@ -319,11 +319,11 @@ to say ocelotdesc:
 	else:
 		now sex entry is "Male";
 	now ocelotsize be a random number between 0 and 1;
-	if hardmode is false and level of Player < 2, now ocelotsize is 0;
+	if HardMode is false and level of Player < 2, now ocelotsize is 0;
 	let debit be 0;
 	if ocelotsize is 0:
 		say "     You are [one of]surprised[or]startled[at random] by a small, speedy feline running out from cover. Finding himself [one of]confronted[or]blocked[at random] by you, he stops and bares his claws. This small fellow is short and slender, maybe around five feet tall. His golden-brown fur is beautifully spotted and striped, lighter at the belly, though densely filled with black spots there are well. The ocelot is wearing a black leather harness, collar, cuffs and a codpiece over what seems to be an average-sized package. In it, he looks like someone's boytoy kitty slave. He shifts from foot to foot, preparing to strike.";
-		if hardmode is true and level of Player > 3, let debit be level of Player - 3; [one level behind player]
+		if HardMode is true and level of Player > 3, let debit be level of Player - 3; [one level behind player]
 		now HP entry is 22 + ( debit * 3 );
 		now monsterHP is 22 + ( debit * 3 );
 		now wdam entry is 5 + ( debit / 3 );
@@ -336,7 +336,7 @@ to say ocelotdesc:
 		now cha entry is 14;
 	else:
 		say "     You find yourself facing off with a very large, rotund feline. The pudgy ocelot glares at you angrily for disturbing him and bares his claws. This big fellow is quite large, maybe six feet tall, but well over 300 lbs. His golden-brown fur is beautifully spotted and striped, lighter at the belly, though densely filled with black spots there are well. The ocelot is wearing a black leather harness, fingerless gloves, cap and a codpiece over what seems to be rather sizable package. In all this, he looks like someone's leather daddy kitty. He shifts his leather cap, making sure its snug with his feline ears poking out before preparing to strike.";
-		if hardmode is true and level of Player > 3, let debit be level of Player - 3; [one level above player]
+		if HardMode is true and level of Player > 3, let debit be level of Player - 3; [one level above player]
 		now HP entry is 33 + ( debit * 4 );
 		now monsterHP is 33 + ( debit * 4 );
 		now wdam entry is 7 + ( debit / 3 );

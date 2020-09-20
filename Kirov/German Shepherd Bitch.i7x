@@ -43,6 +43,7 @@ to say gsbDescription:
 				now HP of Katherine is 1;
 		if gsbKatherine is true:
 			[ The player is encountering Katherine ]
+			project Figure of Katherine_icon;
 			if Energy of Katherine < 3:
 				say "     Walking along the street, you hear a familiar patter of pawsteps behind you. You turn and are not surprised when you're faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her B cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. 'Well, look who we have here. Trespassing on my turf again?' she says, [bold type]clearly recognizing you from past encounters.[roman type] From the way she carries herself, it's clear she's seen her fair share of scuffles and won, and the stance she takes as you finish taking her in tells you she intends to add one more to the list.";
 			else if Energy of Katherine < 5:

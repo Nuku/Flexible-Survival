@@ -62,12 +62,11 @@ to say ResolveEvent Victim:
 			SanBoost 10;
 			increase score by 5;
 			now Resolution of Victim is 2; [lost to the pimp]
-			now Victim is resolved;
 		else:
 			say "     Managing to deal with the little slime as best you can by at least keeping him occupied, you find that the tigress hooker has taken the smart route and gone on about her way as the female herm is now nowhere in sight. Shrugging, but feeling as though you did a good thing you go about your business without thinking about what may happen to the tigress come later. After all, there's only so much you can do for one person.";
 			SanBoost 5;
 			now Resolution of Victim is 3; [fought and won against the pimp]
-			now Victim is resolved;
+		now Victim is resolved;
 
 Table of GameEventIDs (continued)
 Object	Name

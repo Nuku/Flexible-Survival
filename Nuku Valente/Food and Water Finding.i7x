@@ -14,7 +14,7 @@ Section 1 - The Situation
 Table of GameEventIDs (continued)
 Object	Name
 Potential Resources	"Potential Resources"
-Potential Resources	"Potential Resources"
+Potential Resources	"potential resources"
 
 Potential Resources is a scavevent.
 ResolveFunction of Potential Resources is "[ResolveEvent Potential Resources]".
@@ -22,7 +22,7 @@ Sarea of Potential Resources is "Allzones".
 
 to say ResolveEvent Potential Resources:
 	let difficulty be a random number from 6 to 16;
-	if hardmode is true, increase difficulty by a random number between 0 and 3;
+	if HardMode is true, increase difficulty by a random number between 0 and 3;
 	let y be "food";
 	let x be a random number from 1 to 8;
 	if x is 1 or x is 2:
@@ -87,7 +87,7 @@ to say ResolveEvent Potential Resources:
 			ItemGain y by 1;
 		else:
 			let bonus be ( dexterity of Player plus level of Player minus 10 ) divided by 2;
-			if hardmode is true and bonus > 10, now bonus is 10;
+			if HardMode is true and bonus > 10, now bonus is 10;
 			if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 			if "Three Bags Full" is listed in feats of Player and BodyName of Player is "Ewe", increase bonus by 1;
 			if "Three Bags Full" is listed in feats of Player and BodyName of Player is "Ram", increase bonus by 1;
@@ -114,7 +114,7 @@ to say ResolveEvent Potential Resources:
 			say "extremely difficult";
 		say " to lift.";
 		let bonus be ( strength of Player plus level of Player minus 10 ) divided by 2;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
@@ -142,7 +142,7 @@ to say ResolveEvent Potential Resources:
 		if equinoid warrior is listed in companionList of Player or felinoid companion is listed in companionList of Player or demon brute is listed in companionList of Player or royal tiger is listed in companionList of Player:
 			increase bonus by 2;
 			now petbonus is true;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";

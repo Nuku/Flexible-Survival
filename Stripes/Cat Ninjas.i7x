@@ -22,7 +22,7 @@ to say ninjadesc:
 			say "     As you move down the halls of the museum, you hear a faint sound from behind you and turn around quickly. You are narrowly missed by a triad of flying shuriken that embed themselves into the floor beside you. There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours. Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you. The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
 	else:
 		let dammy be 8;
-		if hardmode is true, increase dammy by ( square root of lev entry );
+		if HardMode is true, increase dammy by ( square root of lev entry );
 		decrease HP of Player by dammy;
 		increase Libido of Player by 10;
 		if Libido of Player > 110, now Libido of Player is 110;
@@ -60,7 +60,7 @@ to say ninjaattack:
 		increase Libido of Player by a random number between 2 and 5;
 		if Libido of Player > 110, now Libido of Player is 110;
 		let dammy be a random number between 2 and 3;
-		if hardmode is true, increase dammy by ( square root of lev entry );
+		if HardMode is true, increase dammy by ( square root of lev entry );
 		decrease HP of Player by dammy;
 		say "You take [dammy] damage from the ninja star.";]
 	let T be a random number between 1 and 6;
@@ -276,7 +276,7 @@ this is the ninjastar rule:
 			increase Libido of Player by a random number between 2 and 5;
 			if Libido of Player > 110, now Libido of Player is 110;
 			let dammy be a random number between 2 and 3;
-			if hardmode is true, increase dammy by ( square root of lev entry );
+			if HardMode is true, increase dammy by ( square root of lev entry );
 			now damagein is dammy;
 			say "[normalabsorbancy]";
 			if absorb > dammy:

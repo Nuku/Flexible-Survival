@@ -139,7 +139,7 @@ To say butterfly defeat:
 					choose row y in Table of Random Critters;
 					if Name entry is "Butterfly":
 						let debit be 0;
-						if hardmode is true and level of Player > 3, let debit be level of Player - 3;
+						if HardMode is true and level of Player > 3, let debit be level of Player - 3;
 						now lev entry is 3 + debit;
 						now str entry is 16;
 						now dex entry is 16 + ( lev entry / 5 );
@@ -206,7 +206,7 @@ To say butterfly defeat:
 					choose row y in Table of Random Critters;
 					if Name entry is "Butterfly":
 						let debit be 0;
-						if hardmode is true and level of Player > 3, let debit be level of Player - 3;
+						if HardMode is true and level of Player > 3, let debit be level of Player - 3;
 						now lev entry is 3 + debit;
 						now str entry is 16;
 						now dex entry is 16 + ( lev entry / 5 );
@@ -309,7 +309,7 @@ To say butterfly attack:
 			choose row y in Table of Random Critters;
 			if Name entry is "Butterfly":
 				let debit be 0;
-				if hardmode is true and level of Player > 3, let debit be level of Player - 3;
+				if HardMode is true and level of Player > 3, let debit be level of Player - 3;
 				now lev entry is 3 + debit;
 				now str entry is 16;
 				now dex entry is 16 + ( lev entry / 5 );
@@ -695,7 +695,7 @@ This is the butterflytreatment choice rule:
 					choose row y in Table of Random Critters;
 					if Name entry is "Butterfly":
 						let debit be 0;
-						if hardmode is true and level of Player > 4, let debit be level of Player - 4;
+						if HardMode is true and level of Player > 4, let debit be level of Player - 4;
 						now lev entry is 4 + debit;
 						now str entry is 32;
 						now dex entry is 32 + ( lev entry / 5 );
@@ -878,7 +878,7 @@ to say butterfly grove scene:
 			choose row y in Table of Random Critters;
 			if Name entry is "Butterfly":
 				let debit be 0;
-				if hardmode is true and level of Player > 3, let debit be level of Player - 3;
+				if HardMode is true and level of Player > 3, let debit be level of Player - 3;
 				now lev entry is 3 + debit;
 				now str entry is 16;
 				now dex entry is 16 + ( lev entry / 5 );

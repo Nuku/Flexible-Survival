@@ -33,7 +33,7 @@ To say shark loss:
 		say "";
 	else:
 		choose row MonsterID from the Table of Random Critters;
-		if ( hardmode is false and level of Player < ( lev entry + 2 ) ) or dexterity of Player < ( dex entry + 2 ) or Cock Count of Player is 0:
+		if ( HardMode is false and level of Player < ( lev entry + 2 ) ) or dexterity of Player < ( dex entry + 2 ) or Cock Count of Player is 0:
 			say "     Your blows send the pirate shark reeling backwards, making the strange beast cry out in pain. Before you can press the advantage though, the shark-like pirate turns and dives into the water again, her tail and her fin cutting through the water as she flees. Somehow though, you don't think you have seen the last of these shark pirates...";
 		else if nopiratesharksex > 2 and ( the remainder after dividing nopiratesharksex by 5 is not 0 ):
 			say "     Your blows send the pirate shark reeling backwards, making the strange beast cry out in pain. Like with the others of its kind, you choose not to press your advantage, instead letting the shark-like pirate turn and dive into the water again. Her tail and her fin cut through the water as she flees. Somehow though, you don't think you have seen the last of these shark pirates...";

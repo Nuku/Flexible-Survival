@@ -27,7 +27,7 @@ to say drmousedesc:
 	setmongender 3;
 	if hospfight is 1:
 		say "     Dr Mouse, barely four feet tall, intends to fight you. With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak. But the murine doctor snarls angrily and charges at you, tiny paws clenched into fists. You ready to strike, prepared to deal with the mad doctor once and for all.";
-		if hardmode is true and level of Player > 4, let debit be level of Player - 4;
+		if HardMode is true and level of Player > 4, let debit be level of Player - 4;
 		now HP entry is 30 + ( debit * 2 );
 		now monsterHP is 30 + ( debit * 2 );
 		now wdam entry is 3 + ( debit / 8 );
@@ -43,11 +43,11 @@ to say drmousedesc:
 	if hospfight is 2:
 		say "     The now monstrous mouse is attacking you. His altered body is huge, almost nine feet tall and bristling with sharp claws, teeth, horns and spikes. He has managed to give himself a powerful physique and seems to have retained his twisted mind. His hide is toughened, making it much harder to harm the mutated hybrid he's become.";
 		let debit be 0;
-		if hardmode is true and level of Player > 12, let debit be level of Player - 12;
+		if HardMode is true and level of Player > 12, let debit be level of Player - 12;
 		now HP entry is 150 + ( debit * 6 );
 		now monsterHP is 150 + ( debit * 6 );
 		now wdam entry is 10;
-		if hardmode is true, now wdam entry is 12 + ( ( 2 * debit ) / 5 );
+		if HardMode is true, now wdam entry is 12 + ( ( 2 * debit ) / 5 );
 		now lev entry is 12 + debit;
 		now libido entry is 10;
 		now str entry is 20;

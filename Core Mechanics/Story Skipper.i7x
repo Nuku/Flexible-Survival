@@ -3,6 +3,12 @@ Version 224 of Story Skipper by Core Mechanics begins here.
 [ Version 223.1 - Updated w/Enhanced Chimera material ]
 [ Version 224 - Completely rewritten - Wahn]
 
+Part 0 - Variables
+
+postimport rules is a rulebook.
+
+Chapter 1 - Save Files
+
 The File of EventSave (owned by another project) is called "FSEventSave".
 The File of RoomSave (owned by another project) is called "FSRoomSave".
 The File of RoomInventorySave (owned by another project) is called "FSRoomInventorySave".
@@ -867,7 +873,11 @@ to PlayerSave:
 		now TransMaleInterest entry is TransMaleInterest of Player;
 		now FemaleInterest entry is FemaleInterest of Player;
 		now TransFemaleInterest entry is TransFemaleInterest of Player;
-		now HermInterest entry is HermInterest of Player;
+		[TODO: Incorporate these into the export when they are actually used]
+		[
+		now MaleHermInterest entry is MaleHermInterest of Player;
+		now FemaleHermInterest entry is FemaleHermInterest of Player;
+		]
 		write File of NewPlayerSave from the Table of NewPlayerData; [freshly made table gets saved to file]
 		blank out the whole of Table of NewPlayerData; [empty after saving]
 		if debug is at level 10:
@@ -1020,7 +1030,11 @@ to PlayerRestore:
 		now TransMaleInterest of Player is TransMaleInterest entry;
 		now FemaleInterest of Player is FemaleInterest entry;
 		now TransFemaleInterest of Player is TransFemaleInterest entry;
-		now HermInterest of Player is HermInterest entry;
+		[TODO: Incorporate these into the export when they are actually used]
+		[
+		now MaleHermInterest of Player is MaleHermInterest entry;
+		now FemaleHermInterest of Player is FemaleHermInterest entry;
+		]
 		if debug is at level 10:
 			say "DEBUG -> New Player Data restored.";
 	else if NewTypeInfectionActive is true:

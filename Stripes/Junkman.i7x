@@ -10,7 +10,7 @@ to say junkmandesc:
 	choose row MonsterID from the Table of Random Critters;
 	let qq be a random number between 4 and 8;
 	let zz be ( a random number between 1 and 6 ) + ( a random number between 1 and 6 );
-	if hardmode is true and level of Player > 6:		[Heavy Duty Model!]
+	if HardMode is true and level of Player > 6:		[Heavy Duty Model!]
 		increase qq by level of Player - 7;
 		now HP entry is ( ( ( 13 times qq ) divided by 2 ) + zz + a random number between 0 and qq );
 		now monsterHP is HP entry;
@@ -31,7 +31,7 @@ to say junkmandesc:
 	else:
 		now sex entry is "Male";
 	say "     As you round a corner, you catch sight of a strange figure. Looking vaguely human, it has several chunks of junk that have grown from or fused with its body. There are metal pipes, plates of metal, unidentifiable chunks and other assorted bits to replace parts of his skin or body. There is a [one of]plastic guard[or]metal panel[or]steel plate[or]brass globe[at random] placed over his groin to protect his junk. Despite looking like a strange cyborg made of scrap, it moves quite organically. Spotting you, he releases a groan like grinding metal and charges to attack.";
-	if hardmode is false and ( lev entry is 7 or lev entry is 8 ):
+	if HardMode is false and ( lev entry is 7 or lev entry is 8 ):
 		say "     This particular junkman seems especially powerful and dangerous. Best be careful.";
 
 to say losetojunkman:

@@ -70,7 +70,7 @@ to say ResolveEvent Overrun Garden:
 		setmonster "Parasitic Plant";
 		choose row MonsterID from the Table of Random Critters;
 		let debit be 0;
-		if hardmode is true and level of Player > 10, let debit be level of Player - 10;
+		if HardMode is true and level of Player > 10, let debit be level of Player - 10;
 		now dex entry is 16 + ( debit / 5 );
 		now HP entry is 100 + ( debit * 6 );
 		now monsterHP is 100 + ( debit * 6 );

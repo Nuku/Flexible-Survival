@@ -605,6 +605,30 @@ This is the SetPlayerPronouns rule:
 				else: [male, cuntboy, neuter masc]
 					SetMalePronouns for player;
 
+A person can be MProN. A person is usually not MProN.
+
+Definition: A person (called x) is MProN:
+	if PronounSet of x is "Male", yes;
+	no;
+
+A person can be FProN. A person is usually not FProN.
+
+Definition: A person (called x) is FProN:
+	if PronounSet of x is "Female", yes;
+	no;
+
+A person can be HProN. A person is usually not HProN.
+
+Definition: A person (called x) is HProN:
+	if PronounSet of x is "Herm", yes;
+	no;
+
+A person can be NProN. A person is usually not NProN.
+
+Definition: A person (called x) is NProN:
+	if PronounSet of x is "Neuter", yes;
+	no;
+
 [Menu]
 
 pronounsetting is an action applying to nothing.

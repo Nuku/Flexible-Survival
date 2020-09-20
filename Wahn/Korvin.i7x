@@ -615,7 +615,7 @@ to say gshep_inactive_scene:
 	else:
 		LineBreak;
 		say "     Seeing the way his paws are clenching into fists and how he's fidgeting from foot to foot, you decide he could use a chance to blow off some steam. You pause a bit to remind him that it's your decision before nodding and telling him to get ready. He gives a growl of anticipation and smacks a fist into his palm a few times. 'I've been ready all day.' You add that you'll agree this one time, but that he'll have to be more self-controlled in the future - he's not a wild dog anymore. He nods and takes a breath, settling down a little before fist-pumping. 'Come on! Let's do this thing!'";
-		add gshep to CompanionList of Player;
+		ForceCompanionJoin "Korvin";
 		now battleground is "Outside";
 		say "     Once outside, the dog goes sniffing for a fight, chasing after the first interesting trail he comes across. You follow him as he soon leads you to an encounter with a roaming denizen of the city.";
 		WaitLineBreak;
@@ -630,7 +630,7 @@ to say gshep_inactive_scene:
 			decrease morale of Player by 5;
 		say "     When the two of you return to the library, he goes to find somewhere to curl up. You know he won't always do so patiently, but you're confident he'll wait until called upon from now on. You continue on into the bunker, getting back to what you were doing before.";
 		now gshep_inactive is 1;
-		remove gshep from companionList of Player;
+		ForceCompanionDismiss "Korvin";
 	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 		say "[gshep_collar_prompt]";
 

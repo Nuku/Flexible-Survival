@@ -183,7 +183,7 @@ to say VixenNurseDesc:
 	if vixgender is 0:
 		setmongender 4; [creature is female]
 		say "     You find yourself face to face with a sensually curved vixen in a tight, little nurse's outfit. She has a short cut, white apron with a black top under it. There's even a traditional, white nurse's cap with a red cross on it on the vixen's head. She has lustrous, gray fur, indicating that her infection originated from a silver fox. Glancing down those long, slender legs you see they end in digitigrade paws. To her ample chest, she holds a large clipboard. You can still see the bumps that the perky nipples on her four breasts make in the fabric, unblocked by the clipboard. She looks you over quickly and tut-tuts, saying '[one of]It looks like one patient's gotten out of bed[or]Bend over, sweetie. It's time to take your temperature[or]You look like you need a little TLC[or]Please return to the waiting area. The doctor will see you shortly. Until then, let me take care of you[at random].' She raises her clipboard, seemingly intent on clubbing you with it.";
-		if hardmode is true and level of Player > 4, let debit be level of Player - 4;
+		if HardMode is true and level of Player > 4, let debit be level of Player - 4;
 		now HP entry is 36 + ( debit * 4 );
 		now monsterHP is 36 + ( debit * 4 );
 		now lev entry is 4 + debit;
@@ -193,7 +193,7 @@ to say VixenNurseDesc:
 		setmongender 5; [creature is herm]
 		say "     You find yourself face to face with one of those sensually curved vixen in the tight, little nurse's outfit. She has lustrous, gray fur, indicating that her infection originated from a silver fox. She has a traditional, white nurse's cap with a red cross on it on the vixen's head. She is wearing a short cut, white apron with a black top under it.";
 		say "     And there your eyes stop, finding that something is amiss with this naughty nurse. Her tight dress has a rather sizable bulge in it and it is growing larger as you watch. It's a trap! Grinning, she rubs the firm lump and says, '[one of]It looks like one patient's gotten out of bed. I'll tuck you in good and tight[or]Bend over, sweetie. Mmm... I want to take your temperature[or]You look like you need a dose of my medicine[or]Let me give you a thorough examination, my pretty patient[at random].' She rubs her four breasts and moans lustfully before charging at you.";
-		if hardmode is true and level of Player > 7, now debit is level of Player - 7;
+		if HardMode is true and level of Player > 7, now debit is level of Player - 7;
 		now HP entry is 72 + ( debit * 4 );
 		now monsterHP is 72 + ( debit * 4 );
 		now lev entry is 7 + debit;
@@ -406,6 +406,27 @@ name	desc	weight	object
 healing booster is a grab object. It is fast. It is not temporary.
 
 the scent of the healing booster is "The healing booster smells of chemicals and medicine.".
+
+usedesc of healing booster is "[healing booster use]".
+
+to say healing booster use:
+	let healed be 20;
+	if "Expert Medic" is listed in the feats of Player:
+		now healed is 25;
+	else if carried of First Aid Manual > 0:
+		increase healed by 2;
+	if "Rapid Healing" is listed in the feats of Player:
+		increase healed by 2;
+	if "Regeneration" is listed in the feats of Player:
+		increase healed by 3;
+	if NoHealMode is true:
+		now healed is ( healed * 125 ) / 100;
+	increase HP of Player by healed;
+	if HP of Player > maxHP of Player:
+		decrease healed by HP of Player minus maxHP of Player;
+		now HP of Player is maxHP of Player;
+	say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate. You regain [special-style-1][healed][roman type] HP.";
+	ItemLoss healing booster by 1;
 
 
 Section 3 - Endings

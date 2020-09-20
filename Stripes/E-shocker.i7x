@@ -71,7 +71,7 @@ to say useelectricprod:
 			let the attack bonus be dexterity of Player + ( level of Player * 2 ) + plhitbonus + scale entry - 10;
 			let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
 			let the combat bonus be attack bonus - defense bonus;
-			if hardmode is true:
+			if HardMode is true:
 				if the combat bonus > 16:
 					now combat bonus is 16;
 				else if the combat bonus < -25:

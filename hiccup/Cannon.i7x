@@ -273,11 +273,11 @@ this is the cockcannon rule:
 			let ccnum be per entry + lev entry + monhitbonus + 5;
 		else if cannonprep is 2:		[Masturbate - dex]
 			let playernum be 12;
-			if hardmode is true, increase playernum by ( level of Player / 2 );
+			if HardMode is true, increase playernum by ( level of Player / 2 );
 			let ccnum be dex entry + lev entry + monmindbonus + 5;
 		else if cannonprep is 3:		[Fire - stam]
 			let playernum be 12;
-			if hardmode is true, increase playernum by ( level of Player / 2 );
+			if HardMode is true, increase playernum by ( level of Player / 2 );
 			let ccnum be sta entry + lev entry + monmindbonus + 5;
 		if "Flash" is listed in feats of Player and a random chance of 3 in 20 succeeds:
 			say "Calling upon your hidden power, you flash brightly with light, [one of]filling the phallic creature's eyes with spots[or]startling the Cock Cannon[or]making it harder for the Cock Cannon to focus on its [if cannonprep is 0 or cannonprep is 1]aiming[else]self-pleasure[end if][purely at random].";

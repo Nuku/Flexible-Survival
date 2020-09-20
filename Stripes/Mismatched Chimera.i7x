@@ -22,7 +22,7 @@ to say mischimdesc:
 	say "[mixnmatch]     You have seen a variety of strange creatures and hominids in the city, but this is definitely one of the strangest. Somehow, it is a strange, cobbled-together mish-mash of other creatures. The body parts don't match and you can see stitchmarks in several places where they were grafted together. Several other spots have scars from what may have been medical procedures or experiments.";
 	say "     This unfortunate creature has the head of a [headdata] sewn onto its [torsodata] body. Its body has several smaller mismatched patches and scars. The strange chimera's right arm and shoulder are that of a [rarmdata], ending in a clawed human hand while its left forearm has that of a [larmdata] grafted on. Its left leg is fully that of a [llegdata] attached on at the hip while its right leg is that of a [rlegdata] from the knee down. Stitched to its chest are [breastdata] mismatched breasts while a [cockdata] dick hangs between its legs over a large, stitched-up scrotum. It looks at you with its mismatched, animal eyes and growls lustfully before attacking.";
 	choose row MonsterID from the Table of Random Critters;
-	if hardmode is false and ( lev entry is 8 or lev entry is 9 ) and level of Player < 10:
+	if HardMode is false and ( lev entry is 8 or lev entry is 9 ) and level of Player < 10:
 		say "     This particular hybrid seems especially powerful and dangerous. Best be careful.";
 
 to say mixnmatch:
@@ -46,7 +46,7 @@ to say mixnmatch:
 	choose row MonsterID from the Table of Random Critters;
 	let qq be a random number between 5 and 9;
 	let zz be a random number between 1 and 15;
-	if hardmode is true and level of Player > 7:		[Hard Mode Version!]
+	if HardMode is true and level of Player > 7:		[Hard Mode Version!]
 		increase qq by level of Player - 7;
 		now HP entry is 27 + ( ( 5 * qq ) + zz + a random number between 0 and qq );
 		now monsterHP is HP entry;

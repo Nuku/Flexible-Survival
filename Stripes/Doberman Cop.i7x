@@ -45,7 +45,7 @@ to say Dobermandesc:
 	setmongender 4; [creature is female]
 	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of Player > 7, let debit be level of Player - 7;
+	if HardMode is true and level of Player > 7, let debit be level of Player - 7;
 	now dobieresist is 0;
 	now str entry is 14;
 	now HP entry is 60 + ( debit * 4 );
@@ -71,7 +71,7 @@ to say Dobermandesc:
 		say "     The female Doberman cop has found you again and snarls at you. She's looking rather rougher now, with her shirt hanging open to expose her bare breasts and the crotch of her pants soaked and stained with her fluids. From the wild look in her eyes and the way she slaps her palm with her nightstick, it looks like she's through being the good cop and intends to come down on you hard. Her tail wags and you catch the scent of fresh arousal coming from her, clearly her body wanting to play some more - one way or another.";
 		increase monsterLibido by 50; [she's very riled up now, easier to seduce]
 		increase str entry by 2;
-		if hardmode is false, now lev entry is 9;
+		if HardMode is false, now lev entry is 9;
 		increase HP entry by lev entry;
 		increase monsterHP by lev entry;
 		increase wdam entry by ( wdam entry / 7 );

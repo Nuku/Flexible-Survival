@@ -186,7 +186,7 @@ this is the rattymilk rule:
 	say "She draws you close with a loud rumble[if face mask is equipped], pushes your face mask aside[end if] and presses your lips to a breast, holding you still until you start drinking from her. Intense warmth rushes through your body, making you lustful and less eager to resist the sexy rat";
 	choose row MonsterID from the Table of Random Critters;
 	let dam be ( ( ( wdam entry + square root of wdam entry - peppereyes ) times a random number from 80 to 120 ) / 100 );
-	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say ". You end up getting a very large dose of her milk before you are able to push away - Critical Hit";
 	say "! You take [special-style-2][dam][roman type] damage";
@@ -223,14 +223,14 @@ to say slutratdesc:
 	choose row MonsterID from Table of Random Critters;
 	let debit be 0;
 	if rondafight is 3:
-		if hardmode is true and level of Player > 9, let debit be level of Player - 9;
+		if HardMode is true and level of Player > 9, let debit be level of Player - 9;
 		now HP entry is 69 + ( debit * 5 ); [- How many HP has the monster got? -]
 		now monsterHP is 69 + ( debit * 5 );
 		now wdam entry is 15 + ( debit / 3 ); [-Amount of Damage monster Does when attacking.-]
 		now lev entry is 9 + debit;
 		say "     Despite your hopes of saving her, you find yourself facing off against the slut rat Ronda. She is a tall and intimidating wall of fur and leather, appearing female at first glance. But you know better, sporting a bulging package under her tight, leather outfit. She has a lustful look in her eyes, having decided she'd rather repay you for the chocolates with sex than listening to what you have to say. You try to calm her down and get her to focus, but that moment of remembrance is fading. In her confusion, she seems to think you're just looking to scrap to see who's on top, as the slut rats sometimes do. Being the first of the slut rats, she is a little bigger and tougher than the others.";
 	else:
-		if hardmode is true and level of Player > 6, let debit be level of Player - 6;
+		if HardMode is true and level of Player > 6, let debit be level of Player - 6;
 		now HP entry is 45 + ( debit * 5 ); [- How many HP has the monster got? -]
 		now monsterHP is 45 + ( debit * 5 );
 		now wdam entry is 13 + ( debit / 3 ); [-Amount of Damage monster Does when attacking.-]

@@ -449,7 +449,7 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 	while N is 0:
 		choose row MonsterID from the Table of Random Critters;
 		let dam be ( wdam entry * a random number between ( 45 - ( peppereyes * 4 ) ) and 85 ) / 100;
-		if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 		if P is 0:

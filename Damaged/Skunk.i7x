@@ -12,7 +12,7 @@ skunkfight is a number that varies.
 to say skunk_desc:
 	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of Player > 5, let debit be level of Player - 5;
+	if HardMode is true and level of Player > 5, let debit be level of Player - 5;
 	if a random number from 1 to 10 > 3 or skunkfight is 3 or skunkbeaststatus is 1: [female skunk]
 		setmongender 4; [creature is female]
 		say "A very female anthropomorphic skunk with hints of animal, its curves and breasts leave you wanting, without any reservations, to fuck it senseless.";

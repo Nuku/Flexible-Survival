@@ -14,7 +14,7 @@ to say jaguardesc:
 	now lev entry is 8;
 	now wdam entry is 10;
 	now int entry is 10;
-	if lev entry < level of Player and hardmode is true:
+	if lev entry < level of Player and HardMode is true:
 		now debit is ( level of Player ) - lev entry;
 		increase lev entry by debit;
 		increase HP entry by debit * 4;

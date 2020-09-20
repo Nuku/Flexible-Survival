@@ -195,7 +195,7 @@ to say sidney_rfv_cap:
 	let playernum be dexterity of Player + ( level of Player / 2 );
 	if "Black Belt" is listed in feats of Player, increase playernum by 2;
 	let monsternum be 18;
-	if hardmode is true:
+	if HardMode is true:
 		increase monsternum by level of Player / 3;
 	let playernum be a random number between 1 and playernum;
 	let monsternum be a random number between 1 and monsternum;
@@ -264,7 +264,7 @@ to say sidney_otteress_cap:
 		if "Black Belt" is listed in feats of Player:
 			increase bonus by 1;
 		let targetnum be 13;
-		if hardmode is true:
+		if HardMode is true:
 			increase targetnum by level of Player / 3;
 		let dice be a random number between 1 and 20;
 		say "     Strength - You roll 1d20([dice])+[bonus]: [dice + bonus] vs [targetnum]: ";

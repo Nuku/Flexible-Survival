@@ -36,7 +36,7 @@ to say ramdesc:
 to cmbtshift:
 	let debit be 0;
 	choose row MonsterID from the Table of Random Critters;
-	if hardmode is true and level of Player > 6, let debit be level of Player - 6;
+	if HardMode is true and level of Player > 6, let debit be level of Player - 6;
 	now HP entry is 50 + ( debit * 4 );
 	now monsterHP is HP entry;
 	now lev entry is 6 + debit;

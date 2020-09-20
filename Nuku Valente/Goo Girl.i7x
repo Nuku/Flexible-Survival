@@ -271,6 +271,13 @@ Usedesc of glob of goo is "[glob of goo use]";
 
 to say glob of goo use:
 	say "     Putting the handful of goo into your mouth, you are pleased to learn that it tastes a bit like mint. Chewing and letting the flavor cover your whole tongue, you swallow the goo.";
+	if hunger of Player > 5:
+		increase score by 2;
+	PlayerEat 6;
+	if morale of Player < 0:
+		increase morale of Player by 15;
+		if morale of Player > 0, now morale of Player is 0;
+		say "You feel better having eaten.";
 
 instead of sniffing glob of goo:
 	say "     Smells a bit like mint.";

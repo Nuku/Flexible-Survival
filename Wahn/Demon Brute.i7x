@@ -1932,7 +1932,7 @@ this is the bruteforce rule:
 	choose row MonsterID from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 );  [double damage]
-	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "[one of]The demonic creature[or]The [Name entry][or]Your enemy[or]The demon[purely at random] growls and charges you, pinning you against a wall briefly. It leans its strong, heavy body against yours and punches you several times in the [one of]gut[or]side[or]solar plexus[or]sternum[or]breadbasket[purely at random]. It then [if scalevalue of Player < 4]tosses you aside[else]shoulders you back[end if] roughly with another growl, sending you tumbling. You suffer [special-style-2][dam][roman type] damage!";

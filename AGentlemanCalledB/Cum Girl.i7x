@@ -59,7 +59,7 @@ to say CumGirldesc:
 	let cumgrowth be cumgirlfed / 5;
 	if cumgrowth > 10, now cumgrowth is 10;
 	let debit be 0;
-	if hardmode is true:
+	if HardMode is true:
 		if level of Player > 4:
 			let debit be level of Player - 4;
 			now lev entry is level of Player;

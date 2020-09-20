@@ -155,7 +155,7 @@ to say sbldesc:
 	setmongender 3; [creature is male]
 	choose row MonsterID from Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of Player > 15, let debit be level of Player - 15;
+	if HardMode is true and level of Player > 15, let debit be level of Player - 15;
 	say "     This skunkbeast is much larger than the others you've seen in the forest. While it mostly resembles a normal skunk, it is massive and almost the size of a small elephant. It has large paws with elongated claws and large, pointed teeth filling its giant muzzle. Under its belly, you can see its huge, black cock which leaks precum that is rich with the arousing scent of the skunk creatures. Several of the other skunks and skunkbeasts move in around you both but don't interfere as this battle begins. The skunkbeast lord's dark eyes are fixed on you with an animalistic intent, though it is cunning enough to keep you from reaching the gun. You will have to try your best to fight off the creature in the hopes of reaching the weapon if you want any hope of winning this battle.";
 	now HP entry is 120 + ( debit * 6 ); [- How many HP has the monster got? -]
 	now monsterHP is 120 + ( debit * 6 );

@@ -176,13 +176,13 @@ when play ends:
 	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
 
 to ratetheplayer:
-	if gsgl is 1 and score > 0:
+	if GenderLock is 1 and score > 0:
 		now tempnum is (score / 20);
 		increase score by tempnum;
 	if "Ultimatum" is listed in feats of Player and score > 0:
 		now tempnum2 is (score / 10);
 	say "In Scenario: [bold type][scenario][roman type], you have achieved a score of [bold type][score][roman type].";
-	if gsgl is 1 and score > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
+	if GenderLock is 1 and score > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
 	if "Ultimatum" is listed in feats of Player and score > 0, say "Your Ultimatum perk grants you a bonus of [tempnum2] points.";
 	say "You've achieve the rank of: [bold type]";
 	if score < 0:

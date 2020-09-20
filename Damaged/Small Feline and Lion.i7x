@@ -22,7 +22,7 @@ to say feline desc:
 		setmongender 14; [creatures are female]
 		say "     You are facing off against a small pride of roving feline girls. The little lionesses look much like the other small feline girls you've encountered in the park before, but have temporarily abandoned the pretense of looking cute and innocent. Formed into a hunting party, they're out to rough up other felines and capture them, even if they already belong to another pride. As Leonard has requested, you'll have to defeat and break up these groups to help protect your pride sisters[if HP of Leonard is 10]. Thankfully this group's already a little worn down from trying to chase down the feline girl they were fighting, who you're happy to see is able to get away safely thanks to your timely intervention[end if].";
 		let levcalc be level of Hunting Prides;
-		if hardmode is true:
+		if HardMode is true:
 			if level of Player > level of Hunting Prides:
 				now levcalc is level of Player;
 				if HP of Leonard is 10:
@@ -43,7 +43,7 @@ to say feline desc:
 	else if Feline_type is 4:	[forced male lion fight w/usurper]
 		setmongender 3; [creature is male]
 		say "     You are facing a large, strongly muscled and powerful lion/human hybrid. He has a black mane and golden fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate. Looking at him, you can feel something inside you, some buried urge, starting to push to let such a big, strong male just have his way with you.";
-		if hardmode is true and level of Player > 14, let debit be level of Player - 14;
+		if HardMode is true and level of Player > 14, let debit be level of Player - 14;
 		now HP entry is 75 + ( debit * 5 );
 		now monsterHP is 75 + ( debit * 5 );
 		now wdam entry is 20 + ( ( 4 * debit ) / 11 );
@@ -68,7 +68,7 @@ to say feline desc:
 			say "     A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile. At first, you almost mistake her for a younger infected person, but soon realize that's incorrect. She is quite developed for her short size, sporting B cups and wide hips. And she seems to be eyeing you rather provocatively. She mrowls softly and licks her muzzle, coming towards you with a look of lustful hunger.";
 		else:
 			say "     You've encountered another of those feline girls. Looking like a cute lioness girl about four feet in height, she is covered in fur with round lion ears and a bright smile. She is quite developed for her size, sporting B cups and wide hips and seems to be eyeing you rather provocatively.";
-		if hardmode is true and level of Player > 3, let debit be level of Player - 3;
+		if HardMode is true and level of Player > 3, let debit be level of Player - 3;
 		now Feline_type is 1;
 		now HP entry is 20 + ( debit * 3 );
 		now monsterHP is 20 + ( debit * 3 );
@@ -85,7 +85,7 @@ to say feline desc:
 		if HP of Leonard >= 15 and HP of Leonard < 100:
 			setmongender 3; [creature is male]
 			say "     Before you is one of the male lions of the park. He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate. He roars as he sees you, moving in as his cock slips further from its sheath. Perhaps you're recognized as the matronly female of Leonard's pride or perhaps he simply sees a sexy lioness, but either way, it seems he wants to claim you as his own.";
-		if hardmode is true and level of Player > 14, let debit be level of Player - 14;
+		if HardMode is true and level of Player > 14, let debit be level of Player - 14;
 		now Feline_type is 2;
 		now HP entry is 75 + ( debit * 5 );
 		now monsterHP is 75 + ( debit * 5 );
@@ -254,8 +254,8 @@ to say finallion vict:
 to say feline cleanup: [post-battle reset of stats to catgirl values]
 	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of Player > 3, let debit be level of Player - 3;
-	if hardmode is false and Feline_type is 2 and monsterHP <= 0, increase XP of Player by 22; [XP difference for beating the male]
+	if HardMode is true and level of Player > 3, let debit be level of Player - 3;
+	if HardMode is false and Feline_type is 2 and monsterHP <= 0, increase XP of Player by 22; [XP difference for beating the male]
 	now Feline_type is 1;
 	now HP entry is 20 + ( debit * 3 );
 	now wdam entry is 7 + ( debit / 3 );

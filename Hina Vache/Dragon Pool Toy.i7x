@@ -24,7 +24,7 @@ to say DragonPoolToyDesc:
 			say "     You deftly dodge the blow. ";
 		else:
 			let dammy be 8;
-			if hardmode is true:
+			if HardMode is true:
 				increase dammy by ( square root of lev entry );
 			decrease HP of Player by dammy;
 			say "     You are smacked right in the face, and you groan as you take [dammy] from the attack.";

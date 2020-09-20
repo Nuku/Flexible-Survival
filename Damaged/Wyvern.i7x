@@ -87,7 +87,7 @@ to say WYVDESC:
 			say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. [if scalevalue of Player < 4]You feel that same crazed compulsion to take on the creature so much larger than you. [end if]You raise your [if weapon object of Player is journal]fists[else]weapon in the air[end if] and give a wild battle cry before rushing at it.";
 		if level of Player >= 20:
 			let debit be 0;
-			if hardmode is true and level of Player > 25:
+			if HardMode is true and level of Player > 25:
 				now debit is level of Player - 25;
 			now WYVLEV is 1;
 			now HP entry is ( a random number between 200 and 275 ) + ( debit * 5 );
