@@ -32,6 +32,12 @@ name	desc	weight	object
 ESPP bunker keycard is a grab object. It is not temporary.
 manufactured milk is a grab object. Understand "milk" as manufactured milk. manufactured milk is infectious. Strain of manufactured milk is "Bottlenose Toy". The trade of manufactured milk is "distilled milk". Purified of manufactured milk is "distilled milk". manufactured milk is milky.
 
+Usedesc of manufactured milk is "[manufactured milk use]";
+
+to say manufactured milk use:
+	say "The milk is thick, like a shake, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
+	PlayerDrink 15;
+
 
 Section 2 - Entrance
 

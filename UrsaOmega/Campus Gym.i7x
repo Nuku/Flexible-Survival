@@ -232,7 +232,7 @@ to say statraining:
 		say "     Your ability to handle everything the treadmill could throw at you put you in a good mood - your body's ability to handle even the greatest of challenges lifts your spirits.";
 		increase morale of Player by 10;
 	now lastworkout is turns;
-	say "     Randy gives me a lusty grin. 'Hey, uh, would you be interested in some stamina training of a... Different kind?'";
+	say "     Randy gives you a lusty grin. 'Hey, uh, would you be interested in some stamina training of a... Different kind?'";
 	if Player consents:
 		say "[endurancesex]";
 		if HP of Randy < 2, now HP of Randy is 2;

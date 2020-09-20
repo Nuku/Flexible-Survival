@@ -1,6 +1,30 @@
 Version 1 of Basic Locations by Core Mechanics begins here.
 [Version 1.5 - Library Expansion - Luneth]
 
+Section 1 - Room Definitions
+
+A room can be known or unknown. A room is usually unknown. [marks if the player knows a fasttravel room]
+A room can be fasttravel. A room is usually not fasttravel. [reachable through the 'nav' system]
+A room can be private. A room is usually not private. [private rooms cannot be found randomly or through hunting]
+A room can be sleepsafe. A room is usually not sleepsafe. [no encounter chance when sleeping there]
+A room has a text called earea. earea is usually "void". [exploration area]
+Rooms has a list of text called invent. [room inventory]
+Rooms have a text called scent.
+
+[Outdated 'danger door' concept, kept around for backwards compatibility]
+A door can be dangerous.
+A door has a text called marea.
+
+instead of going through a dangerous door (called x):
+	if HP of Player < 1:
+		say "You are too injured to go far. You rest instead.";
+		Rest;
+	else:
+		now battleground is marea of x;
+		follow the explore rule;
+
+Section 2 - Debug Room
+
 Table of GameRoomIDs (continued)
 Object	Name
 NPC Nexus	"NPC Nexus"
@@ -14,6 +38,7 @@ Description of NPC Nexus is "This is the extradimensional storage room for unuse
 SituationNexus is a room.
 Description of SituationNexus is "This is the extradimensional storage room for unused Situations. DON'T PANIC - Trixie will be along in the next turn to pick you up for a trip back into the bunker".
 
+Section 3 - Main Hub and other standard rooms
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -606,6 +631,7 @@ the scent of the dry plains is "The dry plains smell lightly of dry grasses and 
 Table of GameRoomIDs (continued)
 Object	Name
 Wandering the Plains	"Wandering the Plains"
+Wandering the Plains	"wandering the plains"
 
 Wandering the Plains is a room.
 

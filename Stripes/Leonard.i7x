@@ -805,7 +805,7 @@ to say ResolveEvent Hunting Prides:
 			say "With your focus on the nervous feline, you almost drop your guard, but a few small things suddenly set you on edge. The park's grown too quiet. The brief yet excited glance the cat girl makes behind you. The faint sound of a padded paw stepping closer. Instinctively, you roll to the side as there is a whoosh through the air you once occupied as the feline sneaking up behind you just misses you with a heavy stick. You scramble back a few steps only to find yourself surrounded by another hunting pack of felines. The dark-haired one giggles merrily. 'Oh, aren't you precious? Standing up for your pride sisters, are you? Well, we're not going to let your pride steal away the rest of the girls from our master. We're too clever for that.'";
 		else:
 			say "Keeping focused on the nervous feline, you gradually draw her closer. Not wanting to startle her, you let her come to you, hoping she might even have some useful information if she's been watching and evading the hunting prides. She stops just out of your reach and gives you a pretty smile that makes you smile all the more just before something large and heavy hits you upside the head. Knocked for a loop by the blow, your head spins as you find yourself surrounded by another hunting pack of felines while the dark-haired feline giggles merrily. 'Oh, aren't you precious? Standing up for your pride sisters, are you? Well, we're not going to let your pride steal away the rest of the girls from our master. We're too clever for that.'";
-			if hardmode is true and level of Player > 12:
+			if HardMode is true and level of Player > 12:
 				decrease HP of Player by level of Player + square root of level of Player;
 			else:
 				decrease HP of Player by 15;

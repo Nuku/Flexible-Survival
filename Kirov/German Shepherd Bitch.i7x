@@ -43,6 +43,7 @@ to say gsbDescription:
 				now HP of Katherine is 1;
 		if gsbKatherine is true:
 			[ The player is encountering Katherine ]
+			project Figure of Katherine_icon;
 			if Energy of Katherine < 3:
 				say "     Walking along the street, you hear a familiar patter of pawsteps behind you. You turn and are not surprised when you're faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her B cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. 'Well, look who we have here. Trespassing on my turf again?' she says, [bold type]clearly recognizing you from past encounters.[roman type] From the way she carries herself, it's clear she's seen her fair share of scuffles and won, and the stance she takes as you finish taking her in tells you she intends to add one more to the list.";
 			else if Energy of Katherine < 5:
@@ -259,8 +260,8 @@ to say gsbRecruitSex1:
 Section 5 - Monster Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	say "[gsbInsert]";
@@ -316,7 +317,8 @@ to say gsbInsert:
 	now Cunt Count entry is 1; [ if > 0 and sex = female or both, indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 8;
 	now Cunt Tightness entry is 3;
-	now libido entry is 10; [ Amount libido goes up by if you submit or are defeated by this monster ]
+	now SeductionImmune entry is false;
+	now libido entry is 20; [ Amount libido goes up by if you submit or are defeated by this monster ]
 	now loot entry is "german shepherd bitch fur";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";

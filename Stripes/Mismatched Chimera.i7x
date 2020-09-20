@@ -22,7 +22,7 @@ to say mischimdesc:
 	say "[mixnmatch]     You have seen a variety of strange creatures and hominids in the city, but this is definitely one of the strangest. Somehow, it is a strange, cobbled-together mish-mash of other creatures. The body parts don't match and you can see stitchmarks in several places where they were grafted together. Several other spots have scars from what may have been medical procedures or experiments.";
 	say "     This unfortunate creature has the head of a [headdata] sewn onto its [torsodata] body. Its body has several smaller mismatched patches and scars. The strange chimera's right arm and shoulder are that of a [rarmdata], ending in a clawed human hand while its left forearm has that of a [larmdata] grafted on. Its left leg is fully that of a [llegdata] attached on at the hip while its right leg is that of a [rlegdata] from the knee down. Stitched to its chest are [breastdata] mismatched breasts while a [cockdata] dick hangs between its legs over a large, stitched-up scrotum. It looks at you with its mismatched, animal eyes and growls lustfully before attacking.";
 	choose row MonsterID from the Table of Random Critters;
-	if hardmode is false and ( lev entry is 8 or lev entry is 9 ) and level of Player < 10:
+	if HardMode is false and ( lev entry is 8 or lev entry is 9 ) and level of Player < 10:
 		say "     This particular hybrid seems especially powerful and dangerous. Best be careful.";
 
 to say mixnmatch:
@@ -46,7 +46,7 @@ to say mixnmatch:
 	choose row MonsterID from the Table of Random Critters;
 	let qq be a random number between 5 and 9;
 	let zz be a random number between 1 and 15;
-	if hardmode is true and level of Player > 7:		[Hard Mode Version!]
+	if HardMode is true and level of Player > 7:		[Hard Mode Version!]
 		increase qq by level of Player - 7;
 		now HP entry is 27 + ( ( 5 * qq ) + zz + a random number between 0 and qq );
 		now monsterHP is HP entry;
@@ -157,8 +157,8 @@ to say beatthemischim:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -210,6 +210,7 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12;
 	now Cunt Tightness entry is 5;
+	now SeductionImmune entry is false;
 	now libido entry is 60; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]

@@ -4515,7 +4515,7 @@ A Stag is a infection model. It is a hunter. It is rare. Description of a Stag i
 The move rate of a Stag is 2.
 The attack rate of a Stag is 2.
 The reflex of a Stag is 12.
-The primary attack description of a Stag is "Approaches with a grin on hir face, hir thick organ splashing around as shi grabs at".
+The primary attack description of a Stag is "Approaches with a grin on her face, her thick organ splashing around as shi grabs at".
 The TF description of a Stag is "tears off their pants heedless of who is watching, jerking at their aroused member as their body grows large breasts. Huge antlers project from their head as they groan, becoming a".
 
 Section - Coyote

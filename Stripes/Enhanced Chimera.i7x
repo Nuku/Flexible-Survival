@@ -33,7 +33,7 @@ to say enhancedchimeradesc:
 		now combat abort is 1;
 	else:
 		say "     The creature's cock throbs harder and it releases a lustful growl, rushing you with obvious intent.";
-		if hardmode is false and ( lev entry is 14 or lev entry is 15 ) and level of Player < 16:
+		if HardMode is false and ( lev entry is 14 or lev entry is 15 ) and level of Player < 16:
 			say "     This particular hybrid seems especially powerful and dangerous. Best be careful.";
 
 to say ec_mixnmatch:
@@ -41,7 +41,7 @@ to say ec_mixnmatch:
 	choose row MonsterID from the Table of Random Critters;
 	let qq be a random number between 11 and 15;
 	let zz be a random number between 1 and 16;
-	if hardmode is true and level of Player > 13:		[Hard Mode Version!]
+	if HardMode is true and level of Player > 13:		[Hard Mode Version!]
 		increase qq by level of Player - 13;
 		now HP entry is 36 + ( ( 5 * qq ) + zz + a random number between 0 and qq );
 		now monsterHP is HP entry;
@@ -176,8 +176,8 @@ to say beattheenhancedchimera:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -231,6 +231,7 @@ When Play begins:
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 16;
 	now Cunt Tightness entry is 10;
+	now SeductionImmune entry is false;
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]

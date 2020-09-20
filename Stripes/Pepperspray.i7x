@@ -88,9 +88,9 @@ this is the peppersprayattack rule:
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
 	increase combat bonus by gascloud; [cannot release gas cloud if pepperspraying, but will still linger]
-	if hardmode is true and the combat bonus < -9:				[pepperspray limits hardmode penalty to -9]
+	if HardMode is true and the combat bonus < -9:				[pepperspray limits HardMode penalty to -9]
 		now the combat bonus is -9;
-	if hardmode is false and the combat bonus < -8:				[pepperspray limits regular penalty to -8]
+	if HardMode is false and the combat bonus < -8:				[pepperspray limits regular penalty to -8]
 		now the combat bonus is -8;
 	let the roll be a random number from 1 to 20;
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
@@ -134,10 +134,10 @@ to say enhancedattack:
 	let the combat bonus be attack bonus minus defense bonus;
 	if "Know Thyself" is listed in feats of Player:		[That's what you get for thinking with your crotch.]
 		if CockName of Player is Name entry, increase Libido of Player by a random number from 0 to 2;
-	if hardmode is true:
-		if the combat bonus > 12:				[pepperspray increases hardmode bonus limit to +12]
+	if HardMode is true:
+		if the combat bonus > 12:				[pepperspray increases HardMode bonus limit to +12]
 			now combat bonus is 12;
-		else if the combat bonus < -8:			[pepperspray limits hardmode penalty to -8]
+		else if the combat bonus < -8:			[pepperspray limits HardMode penalty to -8]
 			now combat bonus is -8;
 	let the roll be a random number from 1 to 20;
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
@@ -254,7 +254,7 @@ to say enhancedattack:
 		repeat with z running through tamed pets:
 			now attack bonus is ( ( dexterity of z minus 4 ) divided by 2 ) plus level of z; [+3 to hit for each pet]
 			let the combat bonus be attack bonus minus defense bonus;
-			if hardmode is true and combat bonus > 12:	[pepperspray increases hardmode bonus limit to +12]
+			if HardMode is true and combat bonus > 12:	[pepperspray increases HardMode bonus limit to +12]
 				now combat bonus is 12;
 			now roll is a random number from 1 to 20;
 			if roll plus the combat bonus > 8:
@@ -267,7 +267,7 @@ to say enhancedattack:
 		repeat with companion running through companionList of Player:
 			now attack bonus is ( ( dexterity of companion minus 4 ) divided by 2 ) plus level of companion; [+3 to hit for pet]
 			let the combat bonus be attack bonus minus defense bonus;
-			if hardmode is true and combat bonus > 12:		[pepperspray increases hardmode bonus limit to +12]
+			if HardMode is true and combat bonus > 12:		[pepperspray increases HardMode bonus limit to +12]
 				now combat bonus is 12;
 			now roll is a random number from 1 to 20;
 			if roll plus the combat bonus > 8:
@@ -292,13 +292,13 @@ to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Co
 		if "Flash" is listed in feats of Player and a random chance of 3 in 20 succeeds:
 			say "Calling upon your hidden power, you flash brightly with light, filling the [Name entry]'s eyes with spots.";
 			decrease combat bonus by 3;
-		if hardmode is true and the combat bonus < -10:
+		if HardMode is true and the combat bonus < -10:
 			now the combat bonus is -10;
 		let the roll be a random number from 1 to 20;
 		say "[Name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 		if the roll plus the combat bonus > 8:
 			let dam be ( wdam entry times a random number from 67 to 120 ) divided by 100; [chance for weaker attacks]
-			if hardmode is true and a random chance of 1 in 12 succeeds:					[lower chance of hard mode critical]
+			if HardMode is true and a random chance of 1 in 12 succeeds:					[lower chance of hard mode critical]
 				now dam is (dam * 150) divided by 100;
 				say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 			say "[Attack entry] You take [dam] damage!";

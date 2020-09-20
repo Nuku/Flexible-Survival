@@ -66,7 +66,7 @@ to say ResolveEvent Tight Fit:
 		ItemGain y by 1;
 	else if scalevalue of Player is 3 or scalevalue of Player is 2:
 		let difficulty be a random number from 6 to 16;
-		if hardmode is true, increase difficulty by a random number between 0 and 3;
+		if HardMode is true, increase difficulty by a random number between 0 and 3;
 		say "The tunnel looks like it would be ";
 		if difficulty < 8:
 			say "easy";
@@ -80,7 +80,7 @@ to say ResolveEvent Tight Fit:
 			say "extremely difficult";
 		say " [if scalevalue of Player is 3]to squirm in and out of[else if scalevalue of Player is 2] for a normal person to squirm in and out of. Being smaller, you've got a better shot at making it[end if].";
 		let bonus be ( Dexterity of Player minus 10 ) divided by 2;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		if scalevalue of Player is 2, increase bonus by 5;
 		let dice be a random number from 1 to 20;
@@ -146,7 +146,7 @@ to say ResolveEvent Protected Supplies:
 	repeat with tt running from 1 to number of filled rows in Table of Random Critters:
 		choose row tt from the Table of Random Critters;
 		if there is a lev entry:
-			if lev entry > level of Player and hardmode is false:
+			if lev entry > level of Player and HardMode is false:
 				next;
 		else:
 			next;
@@ -168,8 +168,8 @@ to say ResolveEvent Protected Supplies:
 			now MonsterID is Z;
 			break;
 		choose row MonsterID from the Table of Random Critters;
-		if lev entry < level of Player and hardmode is true:
-			hardmodeboost;
+		if lev entry < level of Player and HardMode is true:
+			HardModeboost;
 		say "In your searching through the city, you come across some [y] and move to get it.";
 		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
 		wait for any key;
@@ -268,7 +268,7 @@ dentedbikecount is a number that varies.
 to say ResolveEvent Dented Bike:
 	say "You find a dented bicycle, lying abandoned on the road. The shreds of its former owner's clothing are hanging from it and a few small tufts of fur are scattered around, leaving you to wonder what happened to him or her.";
 	let difficulty be a random number from 8 to 16;
-	if hardmode is true, increase difficulty by a random number between 0 and 2;
+	if HardMode is true, increase difficulty by a random number between 0 and 2;
 	let bonus be ( perception of Player + level of Player minus 10 ) divided by 2;
 	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	let dice be a random number from 1 to 20;
@@ -305,7 +305,7 @@ to say ResolveEvent Looted Supermarket:
 	let t be a random number between 1 and 4;
 	if t is 1:
 		let difficulty be a random number from 6 to 16;
-		if hardmode is true, increase difficulty by a random number between 0 and 2;
+		if HardMode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( perception of Player + level of Player minus 10 ) divided by 2;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
@@ -316,7 +316,7 @@ to say ResolveEvent Looted Supermarket:
 			say "You continue looking elsewhere for supplies, but aren't able to find any on this trip.";
 	else if t is 2:
 		let difficulty be 12;
-		if hardmode is true, increase difficulty by a random number between 0 and 2;
+		if HardMode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( intelligence of Player + level of Player minus 10 ) divided by 2;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
@@ -328,7 +328,7 @@ to say ResolveEvent Looted Supermarket:
 			say "You wander elsewhere to look for supplies, but aren't able to find any on this trip.";
 	else if t is 3:
 		let difficulty be 12;
-		if hardmode is true, increase difficulty by a random number between 0 and 2;
+		if HardMode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( intelligence of Player + level of Player minus 10 ) divided by 2;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
@@ -341,7 +341,7 @@ to say ResolveEvent Looted Supermarket:
 	else if t is 4:
 		let x be 0;
 		let difficulty be a random number from 10 to 18;
-		if hardmode is true, increase difficulty by a random number between 0 and 2;
+		if HardMode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( strength of Player + level of Player minus 10 ) divided by 2;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		if crowbar is owned:
@@ -372,7 +372,7 @@ to say ResolveEvent Abandoned Cars:
 	say "You check out a few abandoned cars - looks like they were in a mid-size accident when the infection hit. They've all been looted - or just shredded inside and out by their changing owners. The trunk of one of them is still closed, and you soon learn why - it's been warped by the impact of another car and won't open.";
 	let x be 0;
 	let difficulty be a random number from 8 to 15;
-	if hardmode is true, increase difficulty by a random number between 0 and 2;
+	if HardMode is true, increase difficulty by a random number between 0 and 2;
 	let bonus be ( strength of Player minus 10 ) divided by 2;
 	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	if crowbar is owned:
@@ -472,7 +472,7 @@ to say ResolveEvent Plains Scavenging:
 		ItemGain y by 1;
 	else if x is 2:
 		let difficulty be a random number from 6 to 16;
-		if hardmode is true, increase difficulty by a random number between 0 and 3;
+		if HardMode is true, increase difficulty by a random number between 0 and 3;
 		say "Sighing in annoyance you notice that there are some mutants lording over a few items, the [y] among them. Seeming peaceful enough folks, you head on over. The one in charge looks up at you with a grunt of annoyance at the interruption. From the looks of the creature, he should be ";
 		if difficulty < 8:
 			say "easy";
@@ -490,7 +490,7 @@ to say ResolveEvent Plains Scavenging:
 		if equinoid warrior is listed in companionList of Player or felinoid companion is listed in companionList of Player or demon brute is listed in companionList of Player or royal tiger is listed in companionList of Player:
 			increase bonus by 2;
 			now petbonus is true;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
@@ -502,7 +502,7 @@ to say ResolveEvent Plains Scavenging:
 			ItemGain y by 1;
 	else if x is 3:
 		let difficulty be a random number from 6 to 16;
-		if hardmode is true, increase difficulty by a random number between 0 and 3;
+		if HardMode is true, increase difficulty by a random number between 0 and 3;
 		say "It is perched precariously among some rubble of a collapsing building. It looks ";
 		if difficulty < 8:
 			say "easy";
@@ -527,7 +527,7 @@ to say ResolveEvent Plains Scavenging:
 			ItemGain y by 1;
 		else:
 			let bonus be ( Dexterity of Player plus Level of Player minus 10 ) divided by 2;
-			if hardmode is true and bonus > 10, now bonus is 10;
+			if HardMode is true and bonus > 10, now bonus is 10;
 			if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
@@ -737,7 +737,7 @@ to say ResolveEvent Patient Rooms:
 	if patrooms is 0 and a random chance of 1 in 3 succeeds:	[blocked room]
 		say "     Deciding to search through some of the hospital rooms for items left behind during the outbreak, you go through several rooms and find nothing before reaching one that's been barricaded from the inside. Checking carefully, it doesn't appear that anyone is inside there now. A little puzzled, you risk asking if anyone's there, but get no response. But peering through the window, you also see a bottle of water sitting out on the small dresser inside.";
 		let bonus be ( Strength of Player plus Level of Player minus 10 ) divided by 2;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
@@ -777,7 +777,7 @@ to say ResolveEvent Shattered House:
 	else if x is 3:
 		say ".";
 		let bonus be ( Strength of Player plus Level of Player minus 10 ) divided by 2;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
@@ -790,7 +790,7 @@ to say ResolveEvent Shattered House:
 	else if x is 4:
 		say ".";
 		let bonus be ( Dexterity of Player plus Level of Player minus 10 ) divided by 2;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 16:[line break]";
@@ -805,7 +805,7 @@ to say ResolveEvent Shattered House:
 	else if x is 5:
 		say ".";
 		let bonus be ( Perception of Player plus Level of Player minus 10 ) divided by 2;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";

@@ -7,7 +7,7 @@ Section 1 - Creature Responses
 to say slaodesc:
 	setmongender 19; [creatures are mixed/variable]
 	choose row MonsterID from Table of Random Critters;
-	if hardmode is true and level of Player > 4:
+	if HardMode is true and level of Player > 4:
 		let debit be level of Player - 4;
 		now HP entry is 45 + ( ( debit * 9 ) / 2 );
 		now monsterHP is 45 + ( ( debit * 9 ) / 2 );
@@ -38,8 +38,8 @@ to say slaoattack:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -88,6 +88,7 @@ When Play begins:
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	now SeductionImmune entry is false;
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
@@ -217,7 +218,7 @@ this is the slaodoubleteam rule:		[struck by both at once for increased dmg]
 	choose row MonsterID from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 66 ); [+50% dmg]
-	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "Coming at you both at once, the [one of]sea lion[or]purple inflatable[or]plump male[at random] [one of]bumps against one of your legs[or]noses firmly at your groin[or]presses his large body against your legs[or]grabs onto your hips with his flippers and humps your leg with his inflated penis[at random] while the [one of]orca[or]magenta inflatable[or]floating female[at random] [one of]bumps against your shoulder[or]noses firmly at your chest[or]presses her large body against your torso[or]turns quickly and slaps the white underside of her tail into your face[at random]. Being struck by both at once makes it much more difficult for you to stay upright and continue fighting. You take [special-style-2][dam][roman type] damage.";

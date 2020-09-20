@@ -325,8 +325,8 @@ to say beatthefpony:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -384,6 +384,7 @@ When Play begins:
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 10;
 	now Cunt Tightness entry is 6;
+	now SeductionImmune entry is false;
 	now libido entry is 55; [ Target libido the infection will rise towards. ]
 	now loot entry is "pony cider"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 22; [ Percentage chance of dropping loot, from 0-100. ]
@@ -520,7 +521,7 @@ this is the fpony rule:
 		if "Horny Bastard" is listed in feats of Player, increase libgrowth by a random number between 0 and 2;
 		if libgrowth > 10, now libgrowth is 10;
 		increase Libido of Player by libgrowth;
-		say "[one of]'We shouldn't fight over this. Let's be friends!' [or]'I'm sorry. Let's just snuggle, friend!' [or]'How about we just kiss and make up?' [or]'Let's get to know each other,' [or]'Stop being so grumpy and gimme a kiss,' [or]'I know! A kiss will cheer you up,' [at random]the pony says, putting her forelegs around you in a hug while you're still recovering from her recent assault. She pulls you into a kiss for [special-style-2][wdam entry / 2][roman type] damage and [if libgrowth < 5]slightly [end if]increased libido[if HP of Player > 0 and lust of Player < 110]. You moan softly and reach to grab that ass of hers, but recover your reason and push her back[else]. You moan softly into the kiss and reach back, grabbing that ass of hers right on that design of [rfponybm] on her flank[end if].";
+		say "[one of]'We shouldn't fight over this. Let's be friends!' [or]'I'm sorry. Let's just snuggle, friend!' [or]'How about we just kiss and make up?' [or]'Let's get to know each other,' [or]'Stop being so grumpy and gimme a kiss,' [or]'I know! A kiss will cheer you up,' [at random]the pony says, putting her forelegs around you in a hug while you're still recovering from her recent assault. She pulls you into a kiss for [special-style-2][wdam entry / 2][roman type] damage and [if libgrowth < 5]slightly [end if]increased libido[if HP of Player > 0 and Libido of Player < 110]. You moan softly and reach to grab that ass of hers, but recover your reason and push her back[else]. You moan softly into the kiss and reach back, grabbing that ass of hers right on that design of [rfponybm] on her flank[end if].";
 
 Section 4 - TF mechanics
 

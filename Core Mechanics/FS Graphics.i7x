@@ -1,14 +1,24 @@
 FS Graphics by Core Mechanics begins here.
 [- Originally Authored By: Nuku Valente -]
 
+Part 0 - Variables
+
+graphics is a truth state that varies.
+NewGraphics is a truth state that varies. NewGraphics is usually true.
+NewGraphicsInteger is a number that varies. NewGraphicsInteger is usually 2.
+NewGraphicsDebugMode is a truth state that varies. NewGraphicsDebugMode is usually false.
+NewGraphicsRatio is a number that varies. NewGraphicsRatio is usually 30.
+NewGraphicsOpened is a truth state that varies. NewGraphicsOpened is usually false. [set to true for entire playthrough if graphics window opened - unless inline/disabled specified at start]
 
 [Please Note!]
 [Unix filesystem names can be case sensitive. Try to match the letter case here with the actual filename case]
 
-
 Figure of title_graphic is the file "title.jpg".
 Figure of pixel is the file "pixel.jpg".
 Figure of pixel_icon is the file "pixel.jpg".
+
+A thing has a figure name called icon.
+The icon of a thing is usually figure of pixel.
 
 [infection icons]
 Figure of AlphaHusky_icon is the file "FS_AlphaHusky.jpg".
@@ -315,6 +325,7 @@ Figure of Jason_clothed_icon is the file "Jason_clothed.jpg".
 Figure of Jason_naked_icon is the file "Jason_naked.jpg".
 Figure of Jill_icon is the file "Jill.jpg".
 Figure of Jimmy_icon is the file "Jimmy_ig.jpg".
+Figure of Katherine_icon is the file "Katherine.jpg".
 Figure of Katya_clothed_icon is the file "Katya.png".
 Figure of Klauz_face_icon is the file "Klauz_face.jpg".
 Figure of Koghh_clothed_icon is the file "Koghh_clothed.jpg".
@@ -570,10 +581,6 @@ Figure of emap_mall_pkboutique_icon is the file "emap_mall_pkboutique.png".
 Figure of emap_mall_restrooms_icon is the file "emap_mall_restrooms.png".
 Figure of emap_mall_shagshack_icon is the file "emap_mall_shagshack.png".
 Figure of emap_mall_westwing_icon is the file "emap_mall_westwing.png".
-
-A thing has a figure name called icon.
-The icon of a thing is usually figure of pixel.
-graphics is a truth state that varies.
 
 before examining a thing (called t):
 	if the icon of t is figure of pixel:
@@ -908,6 +915,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Jennifer"	Figure of Jennifer_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Jill"	Figure of Jill_icon	"Sususmiles"	g-white	"normal"
 "Jimmy"	Figure of Jimmy_icon	"Redragon"	g-white	"normal"
+"Katherine"	Figure of Katherine_icon	"Vashaa"	g-white	"normal"
 "Katya"	Figure of Katya_clothed_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Klauz_face"	Figure of Klauz_face_icon	"SineAlas"	g-black	"normal"
 "Red Kangaroo"	Figure of kangaroo_icon	"Anonymous"	g-white	"normal"
@@ -1430,6 +1438,7 @@ carry out artistcredits:
 	say "     Jay by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Jill by Sususmiles @ furaffinity.net[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
+	say "     Katherine by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Katya by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Klauz by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";

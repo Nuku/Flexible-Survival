@@ -16,7 +16,9 @@ Instead of using the old boombox:
 	say "     Looking over the old styled machine you find yourself wondering what flavor of music would be good to listen to right now. There are several switches, all with certain types of music on them, so you have options.";
 	say "[musicsession][line break]"; 	]
 
-
+a postimport rule:
+	if Old Record Store is resolved and Resolution of Old Record Store is 1:
+		now BoomBox is in the Bunker;
 
 Section 1 - Old BoomBox
 
@@ -81,8 +83,6 @@ to say ResolveEvent Old Record Store:
 		say "     Deciding to err on the side of caution, you spin on your heel and then march straightaway from the creepy music store. And though you don't notice it during your posthaste retreat, another -click- resounds throughout the air, the building's door having shut tight once again.";
 		now Resolution of Old Record Store is 99; [disinterest]
 		now Old Record Store is resolved;
-
-
 
 Section 4 - Playing Music
 

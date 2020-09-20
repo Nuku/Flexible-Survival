@@ -242,7 +242,7 @@ to say haroldmalesex:
 			say "     He pulls some bottles from under the bar and starts pouring shots, setting them up in two long rows. 'Okay, so this is how we'll work it. We've got to balance your drink on the back of our hands and drink them like that. Spill it and you can lick it up while I fuck you.' Understanding the rules, you nod to him and get ready to start, eager to win and get a sample of his prize ass.";
 			let playernum be level of Player + stamina of Player + dexterity of Player;
 			let haroldnum be 36;
-			if hardmode is true, increase haroldnum by level of Player / 2;
+			if HardMode is true, increase haroldnum by level of Player / 2;
 			let playernum be a random number between 1 and playernum;
 			let haroldnum be a random number between 1 and haroldnum;
 			say "     [special-style-1][playernum][roman type] vs [special-style-2][haroldnum][roman type]: ";
@@ -258,7 +258,7 @@ to say haroldmalesex:
 			say "     He pulls some bottles from under the bar and starts pouring shots, setting them up in pairs in two long rows. 'Okay, so this is how we'll work it. I'll flip the coin. If it lands heads, you drink from the right glass; tails and it's the left. Whoever drinks the right one first scores. First to five wins. Oh, and spilling a drink's the express to being this pony's ride.' Understanding the rules, you nod to him and get ready to start, your competitive nature as well as the prize of hot unicorn ass urges you to win.";
 			let playernum be level of Player + stamina of Player + perception of Player;
 			let haroldnum be 32;
-			if hardmode is true, increase haroldnum by level of Player / 2;
+			if HardMode is true, increase haroldnum by level of Player / 2;
 			let playernum be a random number between 1 and playernum;
 			let haroldnum be a random number between 1 and haroldnum;
 			say "     [special-style-1][playernum][roman type] vs [special-style-2][haroldnum][roman type]: ";

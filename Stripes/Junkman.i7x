@@ -10,7 +10,7 @@ to say junkmandesc:
 	choose row MonsterID from the Table of Random Critters;
 	let qq be a random number between 4 and 8;
 	let zz be ( a random number between 1 and 6 ) + ( a random number between 1 and 6 );
-	if hardmode is true and level of Player > 6:		[Heavy Duty Model!]
+	if HardMode is true and level of Player > 6:		[Heavy Duty Model!]
 		increase qq by level of Player - 7;
 		now HP entry is ( ( ( 13 times qq ) divided by 2 ) + zz + a random number between 0 and qq );
 		now monsterHP is HP entry;
@@ -26,15 +26,12 @@ to say junkmandesc:
 		now dex entry is ( qq + 10 + a random number between 0 and 2 );
 	if "Female Preferred" is listed in feats of Player:
 		now sex entry is "Female";
-		now libido entry is 50;
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
-		now libido entry is 60;
 	else:
 		now sex entry is "Male";
-		now libido entry is 40;
 	say "     As you round a corner, you catch sight of a strange figure. Looking vaguely human, it has several chunks of junk that have grown from or fused with its body. There are metal pipes, plates of metal, unidentifiable chunks and other assorted bits to replace parts of his skin or body. There is a [one of]plastic guard[or]metal panel[or]steel plate[or]brass globe[at random] placed over his groin to protect his junk. Despite looking like a strange cyborg made of scrap, it moves quite organically. Spotting you, he releases a groan like grinding metal and charges to attack.";
-	if hardmode is false and ( lev entry is 7 or lev entry is 8 ):
+	if HardMode is false and ( lev entry is 7 or lev entry is 8 ):
 		say "     This particular junkman seems especially powerful and dangerous. Best be careful.";
 
 to say losetojunkman:
@@ -52,8 +49,8 @@ to say beatthejunkman:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -101,7 +98,8 @@ When Play begins:
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 8; [ Depth of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 5; [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 40; [ Target libido the infection will rise towards. ]
+	now SeductionImmune entry is false;
+	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";

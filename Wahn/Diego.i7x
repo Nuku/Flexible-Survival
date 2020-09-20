@@ -964,7 +964,7 @@ to ResetAlphaHuskyStats:
 	now wdam entry is 10;
 
 [
-		if hardmode is true and level of Player > 9, let debit be level of Player - 9;
+		if HardMode is true and level of Player > 9, let debit be level of Player - 9;
 		now HP entry is 69 + ( debit * 5 ); [- How many HP has the monster got? -]
 		now monsterHP is 69 + ( debit * 5 );
 		now wdam entry is 15 + ( debit / 3 ); [-Amount of Damage monster Does when attacking.-]

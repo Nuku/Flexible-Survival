@@ -516,12 +516,12 @@ to say beatOrthas:
 to say Orthasdesc:
 	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of Player > 12, let debit be level of Player - 12;
+	if HardMode is true and level of Player > 12, let debit be level of Player - 12;
 	now lev entry is 12 + debit;
 	now HP entry is 150 + ( debit * 6 );
 	now monsterHP is 150 + ( debit * 6 );
 	now wdam entry is 10;
-	if hardmode is true, now wdam entry is 12 + ( ( 2 * debit ) / 5 );
+	if HardMode is true, now wdam entry is 12 + ( ( 2 * debit ) / 5 );
 	say "[line break]     Orthas, the black dragon, steps forward to battle you. She stands about six and a half feet tall and has a very athletic body. Her bat-like wings are each about three feet long and folded onto her back at the moment. And while she may have large, F-cup breasts, they don't seem to affect her balance or ability to fight at all. Her eyes blaze with anger and thick smoke curls up from her nostrils as she moves to deal with you for your betrayal.";
 	if Susan is in Primary Lab:
 		say "     The dragoness is still rather woozy after the blow given to her by the doe. While it doesn't look like she'll be able to help you further with the fight, she has made the dragoness a little easier to deal with.";
@@ -533,8 +533,8 @@ to say Orthasdesc:
 Section 6 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -588,6 +588,7 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12;
 	now Cunt Tightness entry is 5;
+	now SeductionImmune entry is false;
 	now libido entry is 20; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]

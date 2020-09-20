@@ -37,7 +37,7 @@ number	effect
 27	quit rule
 
 This is the quit rule:
-	if the current menu is table of start game or current menu is the table of sex choice or current menu is the table of basic combat:
+	if current menu is the table of basic combat:
 		rule fails;
 	else:
 		decrease the menu depth by 1;

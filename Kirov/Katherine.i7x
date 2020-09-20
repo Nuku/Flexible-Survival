@@ -72,6 +72,7 @@ Conversation of Katherine is { "Woof!" }.
 The fuckscene of Katherine is "[KatherineSexCheck]".
 
 to say KatherineDescription:
+	project Figure of Katherine_icon;
 	if debugactive is 1:
 		say "     DEBUG -> Energy: [Energy of Katherine], HP: [HP of Katherine], XP: [XP of Katherine], Level: [Level of Katherine], Armor: [Armor of Katherine] <- DEBUG[line break]";
 	say "     Katherine is a tall and athletic woman with the form of an anthro German shepherd. She is covered in long, shaggy fur with the black and brown shadings typical for the breed. Despite the aura of toughness that surrounds her, she unconsciously lifts and wags her tail when she sees you looking at her, a clear sign that you've tamed the bitch.";
