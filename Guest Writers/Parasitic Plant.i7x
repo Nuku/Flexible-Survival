@@ -85,7 +85,7 @@ to say PlantOrSeedRegular:
 	say "[submitcheck]";
 	let debit be 0;
 	if peachtreefight is 3:
-		if hardmode is true and level of Player > 7, let debit be level of Player - 7;
+		if HardMode is true and level of Player > 7, let debit be level of Player - 7;
 		now dex entry is 16 + ( debit + 2 / 5 );
 		now HP entry is 60 + ( debit * 5 );
 		now monsterHP is 60 + ( debit * 5 );
@@ -93,7 +93,7 @@ to say PlantOrSeedRegular:
 		now wdam entry is 7 + ( ( 2 * debit ) / 5 );
 		say "     This strange plant has spread its vines through the branches of the peach tree and bonded itself to it. You, as many others probably been before, were lured in by the temptation presented by the juicy fruit. The sweet scent of peaches accompanies the dribbling juices that leak from the tips of the vines. The tendril inside you pulses and throbs as those in the tree come down to restrain you so it may complete its tentacular assault upon you. You'll need to break free of the vine locked inside you if you are to escape.";
 	else: [regular park plant]
-		if hardmode is true and level of Player > 4, let debit be level of Player - 4;
+		if HardMode is true and level of Player > 4, let debit be level of Player - 4;
 		now dex entry is 16 + ( ( debit + 4 ) / 5 );
 		now HP entry is 40 + ( debit * 4 );
 		now monsterHP is 40 + ( debit * 4 );
@@ -126,8 +126,8 @@ to say didnotsubmit:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -177,7 +177,8 @@ When Play begins:
 	now Cunt Count entry is 3; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 15; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 5; [ Width of female sex infection will try and give you ]
-	now libido entry is 40; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "musky cock flower";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
@@ -317,7 +318,7 @@ this is the ppstrike rule: [possible sonic attack and sets upcoming strike]
 		if gascloud > 0, decrease gascloud by 1;
 		let the attack bonus be sta entry + ( lev entry * 2 ) - 10;
 		let the combat bonus be attack bonus minus defense bonus;
-		if hardmode is true:
+		if HardMode is true:
 			if the combat bonus > 19:
 				now combat bonus is 19;
 			else if the combat bonus < -22:
@@ -341,7 +342,7 @@ this is the ppattack rule:
 		standardhit;
 	else:
 		let dam be ( ( wdam entry times a random number from 80 to ( 120 + lev entry ) ) / 100 );
-		if hardmode is true and a random chance of 1 in 10 succeeds:
+		if HardMode is true and a random chance of 1 in 10 succeeds:
 			now dam is (dam * 150) divided by 100;
 			say "The plant pulses and writhes energetically - Critical Hit!";
 		say "[didnotsubmit][one of]The bulb inside of you inflates suddenly, causing your belly to expand due to its size[or]The vine inside you wriggles and squirms in an arousing manner[or]The knot inside you pulses as the plant spurts a mind numbing fluid that makes you more aroused[at random]! You take [special-style-2][dam][roman type] damage and grow more aroused!";

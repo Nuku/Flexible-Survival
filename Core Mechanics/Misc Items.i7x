@@ -9,9 +9,61 @@ name	desc	weight	object
 "food"	"Some food. Nothing fancy. Maybe a sandwich, or a can of beans, whatever happens to be handy."	2	food
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
 
-chips is a grab object.
 food is a grab object. The trade of food is "soda".
 the scent of food is "The food smells [one of]good[or]appetizing[or]tasty[or]edible[at random].".
+
+Usedesc of food is "[food use]";
+
+to say food use:
+	if "Junk Food Junky" is listed in feats of Player:
+		if hunger of Player > 8:
+			increase score by 2;
+		PlayerEat 9;
+		say "You eat the food, feeling a little disappointed it's not junk food!";
+		if morale of Player < 0:
+			increase morale of Player by 10;
+			if morale of Player > 0, now morale of Player is 0;
+			say "You feel a little better having eaten some boring food.";
+	else:
+		if hunger of Player > 11:
+			increase score by 4;
+		PlayerEat 12;
+		say "You feel less hungry after wolfing down some food, yum!";
+		if morale of Player < 0:
+			increase morale of Player by 30;
+			if morale of Player > 0, now morale of Player is 0;
+			say "You feel better having eaten.";
+	if "Tanuki Salts" is listed in feats of player:
+		PlayerEat 4;
+		say "Ah, those secret spices help so much!";
+
+chips is a grab object.
+the scent of chips is "The chips smell [one of]good[or]appetizing[or]tasty[or]edible[at random].".
+
+Usedesc of chips is "[food use]";
+
+to say chips use:
+	if labhost > 0 and BodyName of Player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
+		say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something. There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole. You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body. Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
+	else if "Junk Food Junky" is listed in feats of Player:
+		if hunger of Player > 14:
+			increase score by 5;
+		PlayerEat 15;
+		say "Snack time! You wolf down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random] with delight. YUM!";
+		if morale of Player < 0:
+			increase morale of Player by 36;
+			if morale of Player > 0, now morale of Player is 0;
+			say "You feel much better after having a snack.";
+		increase morale of Player by 1;
+	else:
+		if hunger of Player > 5:
+			increase score by 2;
+		PlayerEat 6;
+		say "You feel less hungry after wolfing down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random], yum!";
+		if morale of Player < 0:
+			increase morale of Player by 15;
+			if morale of Player > 0, now morale of Player is 0;
+			say "You feel better having eaten.";
 
 Section 2 - Drinks
 
@@ -22,10 +74,100 @@ name	desc	weight	object
 "soda"	"A can of some soda or another. Somehow, it is still cool to the touch."	1	soda
 
 dirty water is a grab object. The trade of dirty water is "chips".
-the scent of dirty water is "The dirty water smells a little off, but is still potable.".
+the scent of dirty water is "The water smells a little off, but is still potable.".
+
+Usedesc of dirty water is "[water bottle use]";
+
+to say dirty water use:
+	if "Junk Food Junky" is listed in feats of Player:
+		if thirst of Player > 0:
+			increase score by thirst of Player divided by 3;
+			if thirst of Player > 15:
+				decrease score by ( thirst of Player minus 15 ) divided by 3;
+		PlayerDrink 15;
+		say "You feel a little less thirty after drinking some bland water!";
+		if morale of Player < 0:
+			increase morale of Player by 20;
+			if morale of Player > 0, now morale of Player is 0;
+			say "After drinking something, you feel a little better.";
+	else:
+		if thirst of Player > 0:
+			increase score by thirst of Player divided by 3;
+			if thirst of Player > 25:
+				decrease score by ( thirst of Player minus 25 ) divided by 3;
+		PlayerDrink 25;
+		say "You feel less thirsty after guzzling some water, yum!";
+		if morale of Player < 0:
+			increase morale of Player by 62;
+			if morale of Player > 0, now morale of Player is 0;
+			say "After drinking something, you feel better.";
+	if "Iron Stomach" is not listed in feats of Player:
+		let RandomRow be a random number from 1 to the number of rows in the Table of Random Critters;
+		choose row RandomRow from the Table of Random Critters;
+		while area entry is "Nowhere": [runs circles until it finds an available creature]
+			now RandomRow is a random number from 1 to the number of rows in the Table of Random Critters;
+			choose row RandomRow from the Table of Random Critters;
+		infect Name entry;
+
 water bottle is a grab object. The trade of water bottle is "chips".
 the scent of water bottle is "The water bottle smells like plastic.".
+
+Usedesc of water bottle is "[water bottle use]";
+
+to say water bottle use:
+	if "Junk Food Junky" is listed in feats of Player:
+		if thirst of Player > 0:
+			increase score by thirst of Player divided by 3;
+			if thirst of Player > 15:
+				decrease score by ( thirst of Player minus 15 ) divided by 3;
+		PlayerDrink 15;
+		say "You feel a little less thirty after drinking some bland water!";
+		if morale of Player < 0:
+			increase morale of Player by 20;
+			if morale of Player > 0, now morale of Player is 0;
+			say "After drinking something, you feel a little better.";
+	else:
+		if thirst of Player > 0:
+			increase score by thirst of Player divided by 3;
+			if thirst of Player > 25:
+				decrease score by ( thirst of Player minus 25 ) divided by 3;
+		PlayerDrink 25;
+		say "You feel less thirsty after guzzling some water, yum!";
+		if morale of Player < 0:
+			increase morale of Player by 62;
+			if morale of Player > 0, now morale of Player is 0;
+			say "After drinking something, you feel better.";
+
 soda is a grab object.
+the scent of soda is "Smells of sugary goodness and all the artificial flavors you crave!".
+
+Usedesc of soda is "[soda use]";
+
+to say soda use:
+	if "Junk Food Junky" is listed in feats of Player:
+		if thirst of Player > 0:
+			increase score by thirst of Player divided by 3;
+			if thirst of Player > 30:
+				decrease score by ( thirst of Player minus 30 ) divided by 3;
+		PlayerDrink 30;
+		say "Awesome! Soda! You down the delicious can of [if Player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if]. YUM!";
+		if morale of Player < 0:
+			increase morale of Player by 75;
+			if morale of Player > 0, now morale of Player is 0;
+			say "You feel much better having had a soda.";
+		increase morale of Player by 1;
+	else:
+		if thirst of Player > 0:
+			increase score by thirst of Player divided by 3;
+			if thirst of Player > 12:
+				decrease score by ( thirst of Player minus 12 ) divided by 3;
+		PlayerDrink 12;
+		say "You feel less thirsty after guzzling some soda, [if Player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if] yum!";
+		if morale of Player < 0:
+			increase morale of Player by 30;
+			if morale of Player > 0, now morale of Player is 0;
+			say "You feel better having drunken something.";
+	sfsodadrink;
 
 understand "water" as dirty water.
 Does the player mean using the dirty water: it is unlikely.
@@ -39,6 +181,7 @@ name	desc	weight	object
 "medkit"	"A small, white, plastic box with a red cross on it. It has all the things needed for basic medical needs on the go! Using it will restore a lot of HP, more with good intelligence."	3	medkit
 
 medkit is a grab object. It is fast. It is not temporary.
+CurrentMedkitSupplies is a number that varies.[@Tag:NotSaved] [uses left in the currently open medkit]CurrentMedkitSupplies is usually 5.
 
 Usedesc of medkit is "[medkit use]";
 
@@ -60,7 +203,7 @@ to say medkit use:
 			now healed is ( healed times 115 ) divided by 100;
 		if "Regeneration" is listed in the feats of Player:
 			now healed is ( healed times 115 ) divided by 100;
-		if nohealmode is true:
+		if NoHealMode is true:
 			now healed is ( healed * 125 ) / 100;
 		if ssmb is true:
 			now healed is ( healed * 3 ) / 2;
@@ -134,7 +277,7 @@ instead of sniffing adhesive bandage:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"indigo potion"	"A small vial filled with a small amount of liquid so fark indigo that it is almost black."	0	indigo potion
+"indigo potion"	"A small vial filled with a small amount of liquid so dark indigo that it is almost black."	0	indigo potion
 
 indigo potion is a grab object.
 indigo potion is fast.
@@ -158,6 +301,7 @@ name	desc	weight	object
 "sleeping bag"	"A simple sleeping bag. It's not the most comfortable, or restful, but it brings with it the advantage of portability."	5	sleeping bag
 
 cot is a grab object. It is not temporary.
+cot is restful.
 understand "Bed" as cot.
 Usedesc of cot is "[cot use]";
 

@@ -16,7 +16,7 @@ to say panda appears:
 		if Player is male:
 			say ". The panda-like woman's eyes fix on you, and then drop down to your [Cock of Player] cock. 'Ooooh a male!' she exclaims. [one of]'Please fuck me now!' [or]'Did you know pandas are an endangered species?' she asks slyly. 'Want to help me repopulate?' [or]'Yes! Take me now!' [or]'Finally I can get laid!' [or]'You're mine!' [or]'Finally I found a man!' [or]'You would make a handsome panda!' [at random]the pandawoman says lustily. Not waiting to see your response, she charges forward clearly intent on getting laid.";
 		else:
-			say ". The panda-like woman's eyes fix on you, scanning over your female form, and seeming disappointed at what they find. 'Another woman?' the panda cries out in exasperation. [one of]'We don't need any more competition for mates around here!' [or]'You won't get the men while I'm around!' [or]'Maybe we can MAKE you a man!' [or]'You must have hidden the men for yourself! I'll beat their location out of you!' [or]I needed someone to vent my frustration on anyways,' [at random]she says with a growl of pure frustration. Not bothering to let you respond, she charges forward, fire in her eyes.";
+			say ". The panda-like woman's eyes fix on you, scanning over your female form, and seeming disappointed at what they find. 'Another woman?' the panda cries out in exasperation. [one of]'We don't need any more competition for mates around here!' [or]'You won't get the men while I'm around!' [or]'Maybe we can MAKE you a man!' [or]'You must have hidden the men for yourself! I'll beat their location out of you!' [or]'I needed someone to vent my frustration on anyways,' [at random]she says with a growl of pure frustration. Not bothering to let you respond, she charges forward, fire in her eyes.";
 
 to say panda attack:
 	choose row MonsterID from the Table of Random Critters;
@@ -45,8 +45,8 @@ To say panda loss:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -97,7 +97,8 @@ When Play begins:
 	now Cunt Count entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	now libido entry is 40;  [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 85;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "lucky horseshoe";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";

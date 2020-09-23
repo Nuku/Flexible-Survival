@@ -859,7 +859,7 @@ to say ResolveEvent Mournful Dog:
 					say "You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head. Reaching over, you pull the sheets over his former master's body, then you both leave together.";
 					now helper dog is tamed;
 					add "Tamed" to Traits of helper dog;
-					say "(The helper dog is now tamed! You can make it your active pet by typing [bold type]pet helper dog[roman type]. You can see all of the pets that you have tamed with the [bold type]pet[roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])";
+					say "(Hobo dog is now tamed! You can make it your active ally by typing [bold type]ally Hobo[roman type]. You can see all of the pets that you have tamed with the [bold type]ally[roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type]ally dismiss[roman type], or just [bold type]dismiss[roman type])";
 					now lastfuck of helper dog is turns;
 					increase score by 10;
 					now Resolution of Mournful Dog is 1; [adopted the dog]

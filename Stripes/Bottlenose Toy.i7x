@@ -25,13 +25,13 @@ to say dolphinflatabledesc:
 		now dolphinmode is 2;
 	else if dolcastlefight is 3:
 		now dolphinmode is 3;
-	else if (hardmode is false and level of Player < 5) or a random chance of 3 in 4 succeeds:	[girl only at low level]
+	else if (HardMode is false and level of Player < 5) or a random chance of 3 in 4 succeeds:	[girl only at low level]
 		now dolphinmode is 1;
 	else:																			[25% of toy mode]
 		now dolphinmode is 2;
 	if dolphinmode is 1:
 		let debit be 0;
-		if hardmode is true and level of Player > 1, now debit is level of Player - 1;
+		if HardMode is true and level of Player > 1, now debit is level of Player - 1;
 		now HP entry is 18 + ( debit * 3 );
 		now monsterHP is 18 + ( debit * 3 );
 		now wdam entry is 3 + ( debit / 4 );
@@ -41,7 +41,7 @@ to say dolphinflatabledesc:
 		say "     As you walk along the beach, you encounter another of the unusual creatures that have come into being. Rising from her playing in the water is an anthropomorphic dolphin girl, but what makes her strange is that she seems completely inflatable. Her skin is a bright pink and glossy white, with visible seams and everything. As she removes her red towel from around her waist, you can see that there are inflation nozzles where her nipples should be and another wet [']seam['] between her legs, showing her to be ready for more than innocent waterfront playing. There is a strange glisten to the towel's appearance, letting you realize that it is made of a living vinyl and has now bonded to her fin-like hand. She spins it into a rat-tail with a grin and moves in with a playful giggle.";
 	else if dolphinmode is 2:
 		let debit be 0;
-		if hardmode is true and level of Player > 5, now debit is level of Player - 5;
+		if HardMode is true and level of Player > 5, now debit is level of Player - 5;
 		now HP entry is 38 + ( debit * 4 );
 		now monsterHP is 38 + ( debit * 4 );
 		now lev entry is 5 + debit;
@@ -50,7 +50,7 @@ to say dolphinflatabledesc:
 		say "     Resting peacefully on the beach is what looks at first to be a normal, child's inflatable beach toy. Aside from being a bigger model than most, nearly a man's height in length from nose to tail, it seems like others you've seen before. It is a bright green dolphin with a white underbelly and a cartoony grin on its bottlenose face. There is a darker section of textured rubber designed like a big scarf to provide better grip as well as a pair of small handles at its side for a child to hold. It seems innocent enough, until it starts to move on its own. With an airy giggle, it floats up into the air and does a playful backwards flip. This flip lets you see there's a slick slit towards the rear its underbelly, showing that this is no pure, children's toy but another of the unusual creatures that have come into being. As it playfully swims through the air past you, you try to push it away, finding the inflated creature's skin surprisingly durable for a beach toy. Turning around, it pulls its scarf off, fusing it to the tip of its fin and spins it in the air like a large, green towel to strike at you.";
 	else if dolphinmode is 3:	[feral dolphin toy in castle]
 		let debit be 0;
-		if hardmode is true and level of Player > 5, now debit is level of Player - 5;
+		if HardMode is true and level of Player > 5, now debit is level of Player - 5;
 		now HP entry is 38 + ( debit * 4 );
 		now monsterHP is 38 + ( debit * 4 );
 		now lev entry is 5 + debit;
@@ -478,8 +478,8 @@ to say dolphinflatableattack:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -534,6 +534,7 @@ When Play begins:
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 24; [ Depth of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 10; [ Width of female sex the infection will try to give a player. ]
+	now SeductionImmune entry is false;
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]

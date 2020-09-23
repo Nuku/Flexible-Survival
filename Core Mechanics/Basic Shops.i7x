@@ -26,7 +26,7 @@ Carry out BuyingAction:
 		ItemGain Name entry by 1 silently;
 		decrease freecred by price entry;
 	else if price sign is visible: [Zephyr store in Zephyr Lobby; see file Zephyr Inc.i7x]
-		if SoughtItem is a name listed in the table of zephyr goods:
+		if SoughtItem is a name listed in the table of zephyr goods or SoughtItem is "Zephyr Personal Communicator" or SoughtItem is "zephyr personal communicator":
 			say "";
 		else:
 			say "That doesn't seem to be sold here.";
@@ -35,7 +35,7 @@ Carry out BuyingAction:
 			say "You can't afford the [Name entry], it costs [price entry] freecred.";
 			continue the action;
 		say "You purchase [Name entry] for [price entry] creds.";
-		if Name entry is "Zephyr Personal Communicator":
+		if Name entry is "Zephyr Personal Communicator" or Name entry is "zephyr personal communicator":
 			ItemGain zpc by 1 silently;
 		else:
 			ItemGain Name entry by 1 silently;

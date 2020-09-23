@@ -2,6 +2,8 @@ Version 3 of Settings Menus by Core Mechanics begins here.
 [Version 3.3 - Inventory columns option added]
 [- Originally Authored By: Stripes -]
 
+Section 1 - Trixie's Setting and Cheat Menu
+
 Trixiecheating is an action applying to nothing.
 weakwilled is a truth state that varies.
 
@@ -58,7 +60,7 @@ carry out Trixiecheating:
 				add "Unerring Hunter" to feats of Player;
 				decrease score by 500;
 				say "You have gained the 'Unerring Hunter' cheat, but are penalized 500 points.";
-				say "You now have access to the 'huntinglist' listing (appearing as [bracket]Hunt[close bracket]).";
+				say "You now have access to the 'huntinglist' listing (appearing as [bracket]Hunt[close bracket])."; [See Core Mechanics/Hunting.i7x]
 		else if calcnumber is 2:
 			if "Automatic Survival" is listed in feats of Player:
 				remove "Automatic Survival" from feats of Player;
@@ -192,9 +194,7 @@ carry out Trixiecheating:
 		wait for any key;
 		clear the screen and hyperlink list;
 
-[-----]
-
-[anallevel is a number that varies. anallevel is usually 2.][@Tag:NotSaved]		[normal]
+Chapter 1 - AnalLevel Adjustment
 
 analadjusting is an action applying to nothing.
 
@@ -234,9 +234,7 @@ carry out analadjusting:
 		say "Exiting menu.";
 		LineBreak;
 
-[-----]
-
-[WSlevel is a number that varies.[@Tag:NotSaved] WSlevel is usually 2.]		[normal]
+Chapter 2 - WSLevel Adjustment
 
 WSadjusting is an action applying to nothing.
 
@@ -270,11 +268,7 @@ carry out WSadjusting:
 		say "Exiting menu.";
 		LineBreak;
 
-[-----]
-
-[vorelevel is a number that varies.[@Tag:NotSaved] vorelevel is usually 2.]		[normal]
-[hvorelevel is a number that varies.[@Tag:NotSaved] hvorelevel is usually 1.]		[no hard vore]
-[UBlevel is a number that varies.[@Tag:NotSaved] UBlevel is usually 2.]			[normal]
+Chapter 3 - VoreLevel Adjustment
 
 voremenuing is an action applying to nothing.
 
@@ -374,9 +368,7 @@ carry out voremenuing:
 			say "Exiting menu.";
 			now voreexit is 1;
 
-[-----]
-
-[ovipreglevel is a number that varies.[@Tag:NotSaved] ovipreglevel is usually 2.]		[normal]
+Chapter 4 - OviPregLevel Adjustment
 
 oviadjusting is an action applying to nothing.
 
@@ -415,7 +407,7 @@ carry out oviadjusting:
 		say "Exiting menu.";
 		LineBreak;
 
-[-----]
+Chapter 5 - Ban/Ward Flag Adjustment
 
 Flagadjusting is an action applying to nothing.
 
@@ -461,29 +453,72 @@ carry out Flagadjusting:
 					else:
 						now Q is warded;
 
-[-----]
+Part 2 - Single Setting Commands
 
-huntinglisting is an action applying to nothing.
+Chapter 1 - HyperLink Adjustment
 
-understand "huntinglist" as huntinglisting.
+HyperlinksActivated is an action applying to nothing.
+understand "Hyper On" as HyperlinksActivated.
 
-check huntinglisting:
-	if "Unerring Hunter" is not listed in feats of Player:
-		say "You do not currently have this ability." instead;
-	if earea of location of Player is "void":
-		say "I don't see any good hunting grounds around here." instead;
+carry out HyperlinksActivated:
+	now hypernull is 0;
 
-carry out huntinglisting:
-	sort Table of Random Critters in lev order;
-	now battleground is the earea of location of Player;
-	repeat with X running from 1 to number of filled rows in Table of Random Critters:
-		choose row X from the Table of Random Critters;
-		if there is no area entry, next;
-		if there is no Name entry, next;
-		if area entry matches the text battleground, case insensitively:
-			if enemy title entry is empty or enemy title entry is "":
-				say "[link][Name entry][as]hunt [Name entry][end link][line break]";
-			else:
-				say "[link][enemy title entry][as]hunt [enemy title entry][end link][line break]";
+HyperlinksDeactivated is an action applying to nothing.
+understand "Hyper Off" as HyperlinksDeactivated.
+
+carry out HyperlinksDeactivated:
+	now hypernull is 1;
+
+Chapter 2 - WaitHate Adjustment
+
+WaitHateFunction is an action applying to nothing.
+WaitHateCommand is an action applying to nothing.
+understand "waits off" as WaitHateCommand.
+understand "i hate to wait" as WaitHateCommand. [old command, keep for time being, eventually remove?]
+
+carry out WaitHateCommand:
+	WaitHateFunction;
+
+To WaitHateFunction:
+	now waiterhater is 1; [yes, you do hate to wait]
+	say "The text rarely waits for you to press a key...[line break]... before continuing.";
+
+WaitLoveFunction is an action applying to nothing.
+WaitLoveCommand is an action applying to nothing.
+understand "waits on" as WaitLoveCommand.
+understand "i love to wait" as WaitLoveCommand. [old command, keep for time being, eventually remove?]
+
+carry out WaitLoveCommand:
+	WaitLoveFunction;
+
+To WaitLoveFunction:
+	now waiterhater is 0; [returns waiting to normal]
+	say "Delays waiting for a key stroke to occur.";
+
+Chapter 3 - WaitHate Adjustment
+
+ClearLessFunction is an action applying to nothing.
+ClearLessCommand is an action applying to nothing.
+understand "clears off" as ClearLessCommand.
+understand "the clears are gone" as ClearLessCommand. [old command, keep for time being, eventually remove?]
+
+carry out ClearLessCommand:
+	ClearLessFunction;
+
+To ClearLessFunction:
+	now clearnomore is 1; [turns off clears]
+	say "The screen clears less often.";
+
+ClearMoreFunction is an action applying to nothing.
+ClearMoreCommand is an action applying to nothing.
+understand "clears on" as ClearMoreCommand.
+understand "the clears are back" as ClearMoreCommand. [old command, keep for time being, eventually remove?]
+
+carry out ClearMoreCommand:
+	ClearMoreFunction;
+
+To ClearMoreFunction:
+	now clearnomore is 0; [returns clearing to normal]
+	say "Screen clearing occurs frequently.";
 
 Settings Menus ends here.

@@ -146,7 +146,7 @@ this is the capitol wandering rule:
 		if level of Player > 3:
 			say "     As you are trying to traverse the area, you are spotted by a roaming creature which moves in to confront you.";
 			fight;
-			if ( ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
+			if ( ( HardMode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
 				say "     As you are trying to recover from your last encounter, another roving creature finds you.";
 				fight;
 			say "     After that delay, you continue on your way, hoping to find someplace to a little safer, if at least only for the moment.";

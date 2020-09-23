@@ -262,7 +262,7 @@ to say sexwithBrian05_prelim:		[anal on Brian preliminary - not been fucked befo
 	if "Dominant" is listed in feats of Player, increase playernum by 2;
 	if Player is submissive, decrease playernum by 2;
 	let briannum be 75;  [approx equiv for Rhino]
-	if hardmode is true, increase briannum by level of Player / 2;
+	if HardMode is true, increase briannum by level of Player / 2;
 	now briannum is a random number between 1 and briannum;
 	now playernum is a random number between 1 and playernum;
 	say "     [special-style-1][playernum][roman type] vs [special-style-2][briannum][roman type]: ";

@@ -11,6 +11,7 @@ Section 1 - Visceral Painting
 Table of GameEventIDs (continued)
 Object	Name
 Visceral Painting	"Visceral Painting"
+Visceral Painting	"Moving painting"
 
 Visceral Painting is a situation.
 ResolveFunction of Visceral Painting is "[ResolveEvent Visceral Painting]". [updating "Moving painting" by Sarokcat]
@@ -69,6 +70,7 @@ Section 1 - Lingua Franca
 Table of GameEventIDs (continued)
 Object	Name
 Lingua Franca	"Lingua Franca"
+Lingua Franca	"Languages Department"
 
 Lingua Franca is a situation.
 ResolveFunction of Lingua Franca is "[ResolveEvent Lingua Franca]". [revising "Languages Department" by Wahn]
@@ -107,6 +109,7 @@ Section 2 - PoliSci
 Table of GameEventIDs (continued)
 Object	Name
 PoliSci	"PoliSci"
+PoliSci	"Politics"
 
 PoliSci is a situation.
 ResolveFunction of PoliSci is "[ResolveEvent PoliSci]". [revising "Politics" by hiccup]
@@ -135,6 +138,7 @@ Section 1 - Sewer Stalker
 Table of GameEventIDs (continued)
 Object	Name
 Sewer Stalker	"Sewer Stalker"
+Sewer Stalker	"Ritual Location"
 
 Sewer Stalker is a situation.
 ResolveFunction of Sewer Stalker is "[ResolveEvent Sewer Stalker]". [revising "Ritual Location" by Kaleem]

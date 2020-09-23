@@ -34,7 +34,7 @@ To fight:
 				say "DEBUG -> Can't fight with creature [Name entry] because it has Banned: [BannedStatus entry][line break]";
 			next;
 		if there is a lev entry:
-			if lev entry > level of Player + 1 and hardmode is false:
+			if lev entry > level of Player + 1 and HardMode is false:
 				next;
 		else:
 			next;
@@ -169,15 +169,14 @@ To Challenge (x - text):
 	else:
 		say "     ERROR: Creature [x] not found.";
 
-to hardmodeboost: [Controls level boosting for hard mode, runs BEFORE any internal creature adjustments]
+to HardModeboost: [Controls level boosting for hard mode, runs BEFORE any internal creature adjustments]
 	let debit be 0;
 	choose row MonsterID from the Table of Random Critters;
-	if lev entry < level of Player and hardmode is true:
+	if lev entry < level of Player and HardMode is true:
 		now debit is ( level of Player ) - lev entry;
 		increase lev entry by debit;
 		increase HP entry by debit * 4;
 		increase wdam entry by (debit / 3);
 		increase dex entry by (debit / 5);
-
 
 Fighting ends here.

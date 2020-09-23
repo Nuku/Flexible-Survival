@@ -150,10 +150,10 @@ to say AresWalk_Park:
 	else: [fight]
 		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dog. Or so you think at least, until you hear the warning growl from Ares, who spotted something coming your way from one of the side streets.";
 		LineBreak;
-		add human dog to companionList of Player;
+		ForceCompanionJoin "Ares";
 		now battleground is "Outside";
 		fight;
-		remove human dog from companionList of Player;
+		ForceCompanionDismiss "Ares";
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
 			say "     Looks as if Ares managed to flee when you lost the fight, but remained in the area. Now that the attacker is gone, he trots up to you, showing his own bruises from the fight. With a supportive whine to get up, the human dog rubs his head against your side, then takes a guarding position to protect you from any new threats. Not really in the mood to continue this excursion after getting a beating, you return to Mike's home soon after and bring Ares back to his kennel.";
 		else if fightoutcome >= 30:[fled]
@@ -233,10 +233,10 @@ to say AresHelenWalk:
 	else: [fight]
 		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dog. Or so you think at least, until you hear the warning growl from Ares, who spotted something coming your way from one of the side streets.";
 		LineBreak;
-		add human dog to companionList of Player;
+		ForceCompanionJoin "Ares";
 		now battleground is "Outside";
 		fight;
-		remove human dog from companionList of Player;
+		ForceCompanionDismiss "Ares";
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
 			say "     Looks as if Helen and Ares managed to flee when you lost the fight, but remained in the area. Now that the attacker is gone, they trot up to you, Ares showing his own bruises from the fight. With supportive whines to get up, the human dogs rub their heads against your side and Ares even takes a guarding position to protect you from any new threats. Not really in the mood to continue this excursion after getting a beating, you drop off Ares at Mike's hope and take Helen back to the library.";
 		else if fightoutcome >= 30:[fled]
@@ -417,10 +417,10 @@ to say AresXerxesWalk:
 	else: [fight]
 		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dog. Or so you think at least, until you hear the warning growl from Ares, who spotted something coming your way from one of the side streets.";
 		LineBreak;
-		add human dog to companionList of Player;
+		ForceCompanionJoin "Ares";
 		now battleground is "Outside";
 		fight;
-		remove human dog from companionList of Player;
+		ForceCompanionDismiss "Korvin";
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
 			say "     Looks as if Xerxes and Ares managed to flee when you lost the fight, but remained in the area. Now that the attacker is gone, they trot up to you, Ares showing his own bruises from the fight. With supportive whines to get up, the human dogs rub their heads against your side and Ares even takes a guarding position to protect you from any new threats. Not really in the mood to continue this excursion after getting a beating, you drop off Ares at Mike's hope and take Xerxes back to the library.";
 		else if fightoutcome >= 30:[fled]

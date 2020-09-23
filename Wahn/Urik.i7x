@@ -237,19 +237,19 @@ to say UrikTalkMenu:
 		now sortorder entry is 9;
 		now description entry is "Bring up that he seems an odd person to be doing yoga";
 	[]
-	if UrikEricInteraction > 0 and Urik is in Grey Abbey Library:
+	if UrikEricInteraction > 0 and Urik is booked:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about Eric";
 		now sortorder entry is 20;
 		now description entry is "Chat with your orc about Eric";
 	]
-	if Stamina of Spike > 0 and Urik is in Grey Abbey Library:
+	if Stamina of Spike > 0 and Urik is booked:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about Spike";
 		now sortorder entry is 21;
 		now description entry is "Chat with your orc about Spike";
 	[]
-	if orc supersized breeder is not tamed and Urik is in Grey Abbey Library and PlayerFriended of Urik is true and Loyalty of Urik > 5 and Loyalty of Urik < 80:
+	if orc supersized breeder is not tamed and Urik is booked and PlayerFriended of Urik is true and Loyalty of Urik > 5 and Loyalty of Urik < 80:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask if he'd like to accompany you out into the city";
 		now sortorder entry is 70;
@@ -267,7 +267,7 @@ to say UrikTalkMenu:
 		now sortorder entry is 99;
 		now description entry is "Send Urik to stay with you in the Grey Abbey Library";
 	[]
-	if Urik is in Sitting Area or orc supersized breeder is listed in companionList of Player:
+	if Urik is booked or orc supersized breeder is listed in companionList of Player:
 		choose a blank row in table of fucking options;
 		now title entry is "How he should address you";
 		now sortorder entry is 100;

@@ -616,7 +616,7 @@ to say ResolveEvent Business as Usual:
 		LineBreak;
 		say "     With a shake of your head, you decide to leave them to finish their deal in the full privacy of a grimy alley.";
 	say "     Laughing slightly as you realize its time to head out, you walk away thinking that even in these strange times, the world's oldest profession lives on.";
-	increase score of player by 1;
+	increase the score by 1;
 	now Business as Usual is resolved;
 
 

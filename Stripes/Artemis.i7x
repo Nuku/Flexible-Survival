@@ -949,7 +949,7 @@ after resting while rubber tigress is listed in companionList of Player:
 		say "     Looking yourself and her both over carefully, it seems you're both unchanged from these somnolescent escapades. Since everything seems fine and intact, you can't really get upset with the kitty for wanting in on the fun, given her circumstances. To show you're not upset, you give her a big, tight hug that briefly distorts her rubbery body and makes her head bulge comically. She releases a long, squeaking mew to rebalance the air inside her before nuzzling and licking you again, a less sticky one this time.";
 		now Libido of Player is Libido of Player / 2;
 	else:
-		say "     When you awaken from slumber, you find yourself well rested and a little less aroused (at least for the moment). Artemis is just starting to wake up as you shift about. After a yawn and a stretch, she's nuzzling you and purring happily, looking to get some [']morning['] scritches from you. Having shared so much with the rubbery feline, you can't but feel closer to her.";
+		say "     When you awaken from slumber, you find yourself well rested and a little less aroused (at least for the moment). Artemis is just starting to wake up as you shift about. After a yawn and a stretch, she's nuzzling you and purring happily, looking to get some [']morning['] scritches from you. Having shared so much with the rubbery feline, you can't help but feel closer to her.";
 		now Libido of Player is ( Libido of Player * 3 ) / 4;
 	now lastfuck of rubber tigress is turns;
 	now lastArtemisglomp is turns;

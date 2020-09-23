@@ -90,7 +90,7 @@ to searching the sewers: [this is copied from the scavenge function, with minor 
 	if a random number from 1 to 20 < z:
 		if there is a area of Battleground in the Table of Random Critters:
 			Fight;
-			if ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 12 succeeds ):
+			if ( HardMode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 12 succeeds ):
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
 	follow turnpass rule;

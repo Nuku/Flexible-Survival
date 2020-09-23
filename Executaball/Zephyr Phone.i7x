@@ -61,6 +61,8 @@ to say zpcdesc:
 
 
 zpc is a grab object. zpc is not temporary.
+understand "Zephyr Personal Communicator" as zpc.
+understand "zephyr personal communicator" as zpc.
 
 zpcturnon is an action applying to nothing.
 Understand "turn on the zpc" as zpcturnon.

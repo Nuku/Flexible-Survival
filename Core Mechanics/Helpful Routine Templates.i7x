@@ -2,6 +2,8 @@ Helpful Routine Templates by Core Mechanics begins here.
 [NOTE: DO NOT COMPILE THIS WITH GAME. The purpose of this extension is to provide useful routine templates]
 [ - Originally Made by Blue Bishop - ]
 
+[TODO: UPDATE THIS]
+
 Section 1 - Basic Routines
 
 to malemonstersex: [This is the most basic version of Player loss routines for male creatures]

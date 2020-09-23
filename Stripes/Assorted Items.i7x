@@ -3,13 +3,6 @@ Version 1 of Assorted Items by Stripes begins here.
 
 "A holding file for some unassigned drop items and other such stuff."
 
-
-Section 1 - Nullo Wafers
-
-[ - Project discarded, replaced by BlueBishop's nullification powder - ]
-
-Section 2 - Libido Pill
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "libido pill"	"A sex-enhancement pill for getting you (or someone else) horny."	0	libido pill

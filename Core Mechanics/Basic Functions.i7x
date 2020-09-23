@@ -329,6 +329,20 @@ to AddNavPoint (RoomObj - room) silence state is (Silence - a number):
 			if Silence is 0:
 				say "[bold type]['][RoomObj]['][roman type] has been added to your list of available navpoints. You will now be able to [bold type]nav[roman type]igate there from any of the fasttravel locations in the city by using the command [bold type]nav [RoomObj][roman type].";
 
+
+understand "rename" as PlayerRenaming.
+
+PlayerRenaming is an action applying to nothing.
+
+carry out PlayerRenaming:
+	playernaming; []
+
+to playernaming:
+	say "Note: You can always change your name at a later point with the 'rename NAME' command.";
+	say "[bold type]Please enter your new name: [roman type][line break]";
+	get typed command as playerinput;
+	now name of Player is playerinput;
+
 understand "testNPCSexAftermath" as NPCSexAftermathAction.
 
 NPCSexAftermathAction is an action applying to nothing.
@@ -666,6 +680,7 @@ to StatChange (Statname - a text) by (Modifier - a number) silence state is (Sil
 					increase stamina of Player by 1;
 					if remainder after dividing stamina of Player by 2 is 0:
 						increase maxHP of Player by level of Player + 1;
+						increase HP of Player by level of Player + 1;
 				else:
 					decrease stamina of Player by 1;
 					if remainder after dividing stamina of Player by 2 is 1:
@@ -699,12 +714,6 @@ carry out StatLossAction:
 to say NonCombatError:
 	say "ERROR! This is a noncombat creature that you should never see in a fight. Please report how you saw this on the FS Discord or Forum.";
 
-understand "rename" as PlayerRenaming.
-
-PlayerRenaming is an action applying to nothing.
-
-carry out PlayerRenaming:
-	playernaming;
 
 HighestPlayerStat is a text that varies.
 

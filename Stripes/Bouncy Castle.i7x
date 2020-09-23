@@ -119,7 +119,7 @@ to say bcnavigate:
 			say ", encountering an enemy on the way there.";
 			if there is a area of Battleground in the Table of Random Critters:
 				Fight;
-				if ( ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
+				if ( ( HardMode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
 					say "As you are trying to recover from your last encounter, another roving creature finds you.";
 					Fight;
 		else:
@@ -597,7 +597,7 @@ to say bckingschamber:
 				if levbonus > 5, now levbonus is 5;
 				increase bonus by levbonus;
 				let difficulty be 10;
-				if hardmode is true, increase difficulty by 2;
+				if HardMode is true, increase difficulty by 2;
 				let dice be a random number from 1 to 20;
 				say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 				if dice + bonus >= difficulty:
@@ -625,7 +625,7 @@ to say bckingchair:
 	let playernum be a random number between 1 and strength of Player;
 	let chairnum be 15;
 	if SkinName of Player is listed in infections of Latexlist, increase chairnum by 2;
-	if hardmode is true, increase chairnum by ( level of Player / 6 );
+	if HardMode is true, increase chairnum by ( level of Player / 6 );
 	let chairnum be a random number between 1 and chairnum;
 	if Playernum >= chairnum:
 		let chairescape be true;
@@ -646,7 +646,7 @@ to say bckingchair:
 		let playernum be a random number between 1 and playernum;
 		let chairnum be 170;
 		if SkinName of Player is listed in infections of Latexlist, increase chairnum by 30;
-		if hardmode is true, increase chairnum by level of Player;
+		if HardMode is true, increase chairnum by level of Player;
 		let chairnum be a random number between 1 and chairnum;
 		if Playernum >= chairnum:
 			let chairescape be true;
@@ -664,7 +664,7 @@ to say bckingchair:
 			let playernum be a random number between 1 and strength of Player;
 			let chairnum be 18;
 			if SkinName of Player is listed in infections of Latexlist, increase chairnum by 3;
-			if hardmode is true, increase chairnum by ( level of Player / 5 );
+			if HardMode is true, increase chairnum by ( level of Player / 5 );
 			let chairnum be a random number between 1 and chairnum;
 			if Playernum >= chairnum:
 				let chairescape be true;
@@ -771,7 +771,7 @@ to say bcpptendril:
 	let tendrilnum be 30;
 	if SkinName of Player is listed in infections of Latexlist, increase tendrilnum by 2;
 	if BodyName of Player is "Anime Babe", increase tendrilnum by 4;
-	if hardmode is true, increase tendrilnum by ( level of Player / 4 );
+	if HardMode is true, increase tendrilnum by ( level of Player / 4 );
 	let tendrilnum be a random number between 1 and tendrilnum;
 	if Playernum >= tendrilnum:
 		let tendrilescape be true;
@@ -790,7 +790,7 @@ to say bcpptendril:
 		let tendrilnum be 170;
 		if SkinName of Player is listed in infections of Latexlist, increase tendrilnum by 15;
 		if BodyName of Player is "Anime Babe", increase tendrilnum by 25;
-		if hardmode is true, increase tendrilnum by level of Player / 2;
+		if HardMode is true, increase tendrilnum by level of Player / 2;
 		let tendrilnum be a random number between 1 and tendrilnum;
 		if Playernum >= tendrilnum:
 			let tendrilescape be true;
@@ -817,7 +817,7 @@ to say bcpptendril:
 			let tendrilnum be 18;
 			if SkinName of Player is listed in infections of Latexlist, increase tendrilnum by 2;
 			if BodyName of Player is "Anime Babe", increase tendrilnum by 3;
-			if hardmode is true, increase tendrilnum by ( level of Player / 6 );
+			if HardMode is true, increase tendrilnum by ( level of Player / 6 );
 			let tendrilnum be a random number between 1 and tendrilnum;
 			if Playernum >= tendrilnum:
 				let tendrilescape be true;
@@ -975,7 +975,7 @@ to say bcwestparapets:
 		else if lastbcchair - turns >= 4:
 			let playernum be a random number between 1 and dexterity of Player;
 			let chairnum be 15;
-			if hardmode is true, increase chairnum by ( level of Player / 4 );
+			if HardMode is true, increase chairnum by ( level of Player / 4 );
 			let chairnum be a random number between 1 and chairnum;
 			if Playernum >= chairnum:
 				say "     You take care as you navigate the room, planning to avoid the red spots in the hopes of not activating the chair again. But you are suddenly surprised as one of the spots slides across the floor, almost getting under your foot before you can hop to avoid it. You take your last few steps quickly before the floor has the chance to put another spot underfoot. Shall you head [link]northeast (1)[as]1[end link] to the [if bcseenthroneroom is true]throne room[else]next room[end if], [link]east (2)[as]2[end link] back to the upper hall or [link]take the slide (3)[end link] to leave this place?";
@@ -1197,7 +1197,7 @@ to chairpassivelosses:
 	if x is 1:				[dexterity]
 		let playernum be a random number between 1 and dexterity of Player;
 		let chairnum be 15;
-		if hardmode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by ( level of Player / 4 );
 		let chairnum be a random number between 1 and chairnum;
 [		say "Dex: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1210,7 +1210,7 @@ to chairpassivelosses:
 	else if x is 2:		[strength]
 		let playernum be a random number between 1 and strength of Player;
 		let chairnum be 17;
-		if hardmode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by ( level of Player / 4 );
 		let chairnum be a random number between 1 and chairnum;
 [		say "Str: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1223,7 +1223,7 @@ to chairpassivelosses:
 	else if x is 3:
 		let playernum be a random number between 1 and perception of Player;
 		let chairnum be 18;
-		if hardmode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by ( level of Player / 4 );
 		let chairnum be a random number between 1 and chairnum;
 [		say "Per: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1238,7 +1238,7 @@ to chairpassivelosses:
 	let playernum be ( 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) );
 	let playernum be a random number between 1 and playernum;
 	let chairnum be 175;
-	if hardmode is true, increase chairnum by level of Player;
+	if HardMode is true, increase chairnum by level of Player;
 	let chairnum be a random number between 1 and chairnum;
 [	say "Libido: Playernum: [playernum] vs Chairnum: [chairnum]";]
 	if Playernum >= chairnum:
@@ -1256,7 +1256,7 @@ to chairpassivelosses:
 		if x is 1:				[intelligence]
 			let playernum be a random number between 1 and intelligence of Player;
 			let chairnum be 15;
-			if hardmode is true, increase chairnum by ( level of Player / 4 );
+			if HardMode is true, increase chairnum by ( level of Player / 4 );
 			let chairnum be a random number between 1 and chairnum;
 [			say "Int: Playernum: [playernum] vs Chairnum: [chairnum]";]
 			if Playernum >= chairnum:
@@ -1269,7 +1269,7 @@ to chairpassivelosses:
 		else if x is 2:		[dexterity]
 			let playernum be a random number between 1 and dexterity of Player;
 			let chairnum be 17;
-			if hardmode is true, increase chairnum by ( level of Player / 4 );
+			if HardMode is true, increase chairnum by ( level of Player / 4 );
 			let chairnum be a random number between 1 and chairnum;
 [			say "Dex: Playernum: [playernum] vs Chairnum: [chairnum]";]
 			if Playernum >= chairnum:
@@ -1282,7 +1282,7 @@ to chairpassivelosses:
 		else:				[strength]
 			let playernum be a random number between 1 and strength of Player;
 			let chairnum be 18;
-			if hardmode is true, increase chairnum by ( level of Player / 4 );
+			if HardMode is true, increase chairnum by ( level of Player / 4 );
 			let chairnum be a random number between 1 and chairnum;
 [			say "Str: Playernum: [playernum] vs Chairnum: [chairnum]";]
 			if Playernum >= chairnum:
@@ -1298,7 +1298,7 @@ to chairpassivelosses:
 			let playernum be ( 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) );
 			let playernum be a random number between 1 and playernum;
 			let chairnum be 175;
-			if hardmode is true, increase chairnum by level of Player;
+			if HardMode is true, increase chairnum by level of Player;
 			let chairnum be a random number between 1 and chairnum;
 [			say "Libido: Playernum: [playernum] vs Chairnum: [chairnum]";] [Threshold]
 			if Playernum >= chairnum:
@@ -1925,7 +1925,7 @@ to say bcchairfinal1: [FLOT - Check?]
 	let playernum be ( 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) );
 	let playernum be a random number between 1 and playernum;
 	let chairnum be 175;
-	if hardmode is true, increase chairnum by level of Player;
+	if HardMode is true, increase chairnum by level of Player;
 	let chairnum be a random number between 1 and chairnum;
 [	say "Libido: Playernum: [playernum] vs Chairnum: [chairnum]";]
 	if Playernum >= chairnum:
@@ -1942,7 +1942,7 @@ to say bcchairfinal1: [FLOT - Check?]
 	if t is 1:		[strength]
 		let playernum be a random number between 1 and strength of Player;
 		let chairnum be 15;
-		if hardmode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by ( level of Player / 4 );
 		let chairnum be a random number between 1 and chairnum;
 [		say "Str: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1955,7 +1955,7 @@ to say bcchairfinal1: [FLOT - Check?]
 	else if t is 2:	[stamina]
 		let playernum be a random number between 1 and stamina of Player;
 		let chairnum be 17;
-		if hardmode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by ( level of Player / 4 );
 		let chairnum be a random number between 1 and chairnum;
 [		say "Sta: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1966,7 +1966,7 @@ to say bcchairfinal1: [FLOT - Check?]
 	else if t is 3:	[dexterity]
 		let playernum be a random number between 1 and dexterity of Player;
 		let chairnum be 18;
-		if hardmode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by ( level of Player / 4 );
 		let chairnum be a random number between 1 and chairnum;
 [		say "Dex: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1984,7 +1984,7 @@ to say bcchairfinal1: [FLOT - Check?]
 		let playernum be ( 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) );
 		let playernum be a random number between 1 and playernum;
 		let chairnum be 180;
-		if hardmode is true, increase chairnum by level of Player;
+		if HardMode is true, increase chairnum by level of Player;
 		let chairnum be a random number between 1 and chairnum;
 [		say "Libido: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -2003,7 +2003,7 @@ to say bcchairfinal1: [FLOT - Check?]
 			if x is 1:				[intelligence]
 				let playernum be a random number between 1 and intelligence of Player;
 				let chairnum be 15;
-				if hardmode is true, increase chairnum by ( level of Player / 4 );
+				if HardMode is true, increase chairnum by ( level of Player / 4 );
 				let chairnum be a random number between 1 and chairnum;
 [				say "Int: Playernum: [playernum] vs Chairnum: [chairnum]";]
 				if Playernum >= chairnum:
@@ -2016,7 +2016,7 @@ to say bcchairfinal1: [FLOT - Check?]
 			else if x is 2:		[dexterity]
 				let playernum be a random number between 1 and dexterity of Player;
 				let chairnum be 17;
-				if hardmode is true, increase chairnum by ( level of Player / 4 );
+				if HardMode is true, increase chairnum by ( level of Player / 4 );
 				let chairnum be a random number between 1 and chairnum;
 [				say "Dex: Playernum: [playernum] vs Chairnum: [chairnum]";]
 				if Playernum >= chairnum:
@@ -2029,7 +2029,7 @@ to say bcchairfinal1: [FLOT - Check?]
 			else:				[strength]
 				let playernum be a random number between 1 and strength of Player;
 				let chairnum be 18;
-				if hardmode is true, increase chairnum by ( level of Player / 4 );
+				if HardMode is true, increase chairnum by ( level of Player / 4 );
 				let chairnum be a random number between 1 and chairnum;
 [				say "Str: Playernum: [playernum] vs Chairnum: [chairnum]";]
 				if Playernum >= chairnum:
@@ -2047,7 +2047,7 @@ to say bcchairfinal1: [FLOT - Check?]
 				let playernum be ( 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) );
 				let playernum be a random number between 1 and playernum;
 				let chairnum be 185;
-				if hardmode is true, increase chairnum by level of Player;
+				if HardMode is true, increase chairnum by level of Player;
 				let chairnum be a random number between 1 and chairnum;
 [				say "Libido: Playernum: [playernum] vs Chairnum: [chairnum]";]
 				if Playernum >= chairnum:

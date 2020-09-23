@@ -52,7 +52,7 @@ to say ResolveEvent Ebonflame Nest:
 	let bonus be ( perception of Player - 10 ) / 2;
 	let target be 12;
 	if "Bad Luck" is listed in feats of Player, increase target by 1;
-	if hardmode is true, increase target by 2;
+	if HardMode is true, increase target by 2;
 	let dice be a random number from 1 to 20;
 	if bonus + dice > target:
 		say "suddenly stop, detecting some rather strangely sunken and cracked pavement. You pick up a nearby rock and throw it at the patch of asphalt, which slowly creaks until it collapses in on itself. And to think, you nearly walked over that!";
@@ -73,7 +73,7 @@ to say ResolveEvent Ebonflame Nest:
 		let bonus be ( dexterity of Player - 10 ) / 2;
 		let target be 15;
 		if "Bad Luck" is listed in feats of Player, increase target by 1;
-		if hardmode is true, increase target by 2;
+		if HardMode is true, increase target by 2;
 		let dice be a random number from 1 to 20;
 		if bonus + dice > target:
 			say ". Using your quick reflexes, you immediately roll away from the crumbling pavement, which collapses in on itself in your wake. Dusting yourself off, you move to see what your poor luck might of had in store for you.";
@@ -92,7 +92,7 @@ to say ResolveEvent Ebonflame Nest:
 		else:
 			say ". Too slow to react, the pavement gives way, you following in its wake as you descend into a shallow cave, landing on the broken earth with an audible thud";
 			let dam be a random number between 1 and 8;
-			if hardmode is true, increase dam by a random number between 0 and 4;
+			if HardMode is true, increase dam by a random number between 0 and 4;
 			if "Toughened" is listed in feats of Player, decrease dam by 2;
 			if "Bad Luck" is listed in feats of Player, increase dam by 2;
 			if dam < 1, now dam is 1;
@@ -119,7 +119,7 @@ to say ResolveEvent Ebonflame Nest:
 
 to say ebonflamegauntlet:
 	let maxwhelps be 4;
-	if "Bad Luck" is listed in feats of Player or hardmode is true, increase maxwhelps by 1;
+	if "Bad Luck" is listed in feats of Player or HardMode is true, increase maxwhelps by 1;
 	let whelpnumbers be maxwhelps;
 	repeat with N running from one to whelpnumbers:
 		challenge "Ebonflame Whelp";

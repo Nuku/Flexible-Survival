@@ -9,8 +9,8 @@ Version 1 of Butterfly by Guest Writers begins here.
 Section 1 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 Section 2 - Variable and constant definitions
 
@@ -139,7 +139,7 @@ To say butterfly defeat:
 					choose row y in Table of Random Critters;
 					if Name entry is "Butterfly":
 						let debit be 0;
-						if hardmode is true and level of Player > 3, let debit be level of Player - 3;
+						if HardMode is true and level of Player > 3, let debit be level of Player - 3;
 						now lev entry is 3 + debit;
 						now str entry is 16;
 						now dex entry is 16 + ( lev entry / 5 );
@@ -206,7 +206,7 @@ To say butterfly defeat:
 					choose row y in Table of Random Critters;
 					if Name entry is "Butterfly":
 						let debit be 0;
-						if hardmode is true and level of Player > 3, let debit be level of Player - 3;
+						if HardMode is true and level of Player > 3, let debit be level of Player - 3;
 						now lev entry is 3 + debit;
 						now str entry is 16;
 						now dex entry is 16 + ( lev entry / 5 );
@@ -309,7 +309,7 @@ To say butterfly attack:
 			choose row y in Table of Random Critters;
 			if Name entry is "Butterfly":
 				let debit be 0;
-				if hardmode is true and level of Player > 3, let debit be level of Player - 3;
+				if HardMode is true and level of Player > 3, let debit be level of Player - 3;
 				now lev entry is 3 + debit;
 				now str entry is 16;
 				now dex entry is 16 + ( lev entry / 5 );
@@ -485,7 +485,8 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 10; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 3; [ Width of female sex infection will try and give you ]
-	now libido entry is 20; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "testosterone pill";
 	now lootchance entry is 5; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
@@ -694,7 +695,7 @@ This is the butterflytreatment choice rule:
 					choose row y in Table of Random Critters;
 					if Name entry is "Butterfly":
 						let debit be 0;
-						if hardmode is true and level of Player > 4, let debit be level of Player - 4;
+						if HardMode is true and level of Player > 4, let debit be level of Player - 4;
 						now lev entry is 4 + debit;
 						now str entry is 32;
 						now dex entry is 32 + ( lev entry / 5 );
@@ -877,7 +878,7 @@ to say butterfly grove scene:
 			choose row y in Table of Random Critters;
 			if Name entry is "Butterfly":
 				let debit be 0;
-				if hardmode is true and level of Player > 3, let debit be level of Player - 3;
+				if HardMode is true and level of Player > 3, let debit be level of Player - 3;
 				now lev entry is 3 + debit;
 				now str entry is 16;
 				now dex entry is 16 + ( lev entry / 5 );
