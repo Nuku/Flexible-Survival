@@ -28,10 +28,10 @@ to say GenerateTrophyList_Doberman_Cop:
 	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
 		add "food" to CombatTrophyList;
 	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
-		add "medkit" to CombatTrophyList;
-	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
 		add "water bottle" to CombatTrophyList;
-	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "medkit" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
 		add "pepper spray" to CombatTrophyList;
 	if Debug is at level 10:
 		say "DEBUG: Trophy List: [CombatTrophyList].";
@@ -774,7 +774,7 @@ to say RandomPillsUse:
 		PlayerHunger 15;
 		PlayerThirst 15;
 	else if RandomPillEffect is 2:
-		say "     A few minutes after taking the pill, you become aware of the fact that you have seven fingers on one of your hands. Raising it to check out all these digits in detail, your hand leaves a wavy, rainbow-colored aftershadow in your area of sight. Whoo - trippy! After the shadow catches up with your hand eventually, you stare at your hand and try to count just how many fingers you have. It is difficult since they kinda wiggle on their own, and even bringing in your other hand to count them one by one is a challenge, as you kinda keep missing and have to start all over again.";
+		say "     A few minutes after taking the pill, you become aware of the fact that you have seven fingers on one of your hands. Raising it to check out all these digits in detail, your hand leaves a wavy, rainbow-colored after-shadow in your area of sight. Whoo - trippy! After the shadow catches up with your hand eventually, you stare at your hand and try to count just how many fingers you have. It is difficult since they kinda wiggle on their own, and even bringing in your other hand to count them one by one is a challenge, as you kinda keep missing and have to start all over again.";
 		SanLoss 25;
 	else if RandomPillEffect > 2 and RandomPillEffect < 6:
 		say "     You actually feel pretty good after taking the pill. Energized, one could almost say.";

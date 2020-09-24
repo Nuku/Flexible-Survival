@@ -72,7 +72,7 @@ When play begins:
 	say "Before the game begins..."; [warn the player what to expect next]
 	say "Do you want hyperlinks? (Y/N)[line break]";
 	if Player consents:
-		now hypernull is hypernull;
+		now hypernull is 0;
 	else:
 		now hypernull is 1;
 	repeat with x running through featsets:

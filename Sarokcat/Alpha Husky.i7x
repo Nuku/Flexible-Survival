@@ -521,7 +521,7 @@ husky alpha fur is a grab object.
 It is temporary.
 husky alpha fur is infectious.
 Strain of husky alpha fur is "Husky Alpha".
-Usedesc of husky alpha fur is "[husky alpha cum use]";
+Usedesc of husky alpha fur is "[HuskyAlphaFurUse]";
 
 to say HuskyAlphaFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
@@ -544,12 +544,12 @@ to say husky alpha cum use:
 	PlayerDrink 5;
 	SanLoss 5;
 
+instead of sniffing husky alpha cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "husky alpha man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Husky Alpha Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	husky alpha man-milk
-
-instead of sniffing husky alpha cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 husky alpha man-milk is a grab object.
 husky alpha man-milk is milky.

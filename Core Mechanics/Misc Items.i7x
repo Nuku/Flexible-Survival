@@ -332,6 +332,51 @@ instead of sniffing  tennis ball:
 	say "Smells like rubber.";
 
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"wad of cash"	"A big wad of cash, held in a roll-shape by a rubber band. Odd, how useless it feels in your current situation."	0	wad of cash
+
+wad of cash is a grab object.
+It is not temporary.
+
+Usedesc of wad of cash is "[wad of cash use]";
+
+to say wad of cash use:
+	say "Pulling off the rubber band, you run your finger over the end of the paper money. It is a properly impressive concentration of wealth, small enough to fit into someone's pocket. If only you could buy anything with it here and now...";
+
+instead of sniffing wad of cash:
+	say "Smells green. Definitely green.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"bag of wallets"	"A plastic shopping bag, stuffed with dozens upon dozens of wallets. Big, small, leather, plastic, thin and thick, there are all sorts of them in here. Looks like someone just collected these on the streets, if you're interpreting some suspicious stains correctly."	2	bag of wallets
+
+bag of wallets is a grab object.
+It is not temporary.
+
+Usedesc of bag of wallets is "[bag of wallets use]";
+
+to say bag of wallets use:
+	say "Digging your hand into the bag of wallets, you feel around a little and ";
+	let randomnumber be a random number from 1 to 8;
+	if randomnumber is:
+		-- 1:
+			say "pull a man's [one of]brown[or]black[or]tan[at random] leather wallet out. Flicking it open, you see a [one of]bearded[or]goateed[or]smooth-shaven[at random] [one of]black[or]white[or]Asian[or]Latino[at random] man stare out at you from his driver's license with a [one of]neutral[or]slightly bored[at random] expression. Casually rifling through the wallet, you find [one of]a moderate amount[or]it empty[or]a fair bit[at random] of money, a credit card and a [one of]library card[or]picture of what must be his family[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]condom[or]business card[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
+		-- 2:
+			say "feel something wet and squishy against your skin. Ugh, seems like that one hadn't dried out fully before it was added to the collection! Pulling your hand out, you do your best to wipe it clean quickly.";
+			weakrandominfect;
+		-- 3:
+			say "pull a woman's [one of]blue[or]colorful[or]flowery[or]white[at random] [one of]leather[or]canvas[at random] wallet out. Flicking it open, you see a [one of]young[or]middle-aged[or]mature[at random] [one of]black[or]white[or]Asian[or]Latino[at random] woman stare out at you from her driver's license with a [one of]neutral[or]slightly bored[at random] expression. Casually rifling through the wallet, you find [one of]a moderate amount[or]it empty[or]a fair bit[at random] of money, a credit card and a [one of]library card[or]picture of what must be her family[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]business card[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
+		-- 4:
+			say "feel something that is more plastic-y and solid than expected. Taking hold and pulling it out, you are pleasantly surprised at having found a chocolate bar in an unopened package - it's even got extra nuts!";
+			ItemGain food by 1;
+		-- 5:
+			say "pull a plastic wallet covered with a prominently placed [one of]robot[or]superhero[or]pattern[or]alien[at random] printed on it. Flicking it open, you see a [one of]student ID card[or]learners permit drivers license with a young-looking face on it[or]cute picture of a dog[or]cute picture of a cat[at random], as well as [one of]a moderate amount[or]a total absence[or]a little bit[at random] of money, and a [one of]library card[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]condom[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
+
+instead of sniffing bag of wallets:
+	say "Opening up the bag, you hold your nose over the opening and sniff a wild mixture of scents, given the mixed contents. Underlying it all, a faint scent of cum is always present.";
+
+
 [
 "heuristic processor"	"A small electronic circuit. You've been told it's amazingly adaptive and can learn anything. Probably nonsense, but maybe you can find a use for it, somehow."	1	heuristic processor
 "reprogramming device"	"An attempt by Dr. Mouse to build a device to reprogram the nanites. It's too bulky, and doesn't have the processing capacity to be of any use in the field. Perhaps you could find a way around those limitations?"	13	reprogramming device
