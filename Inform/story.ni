@@ -120,6 +120,7 @@ Include Situations by Core Mechanics. [declares situation objects and associated
 Include Scavenging by Core Mechanics. [declares scavenging (subtype of situations) and associated functions]
 Include Time by Core Mechanics. [declares the time, date, etc. variables and associated functions]
 Include Rest by Core Mechanics. [declares resting functions, and the need for sleep]
+Include Inline Hyperlinks by Nuku Valente.
 Include Game UI by Core Mechanics. [declares status bar details, and command prompt]
 Include Lists and Banning by Core Mechanics. [declares global lists and content banning functions]
 Include Game Objects by Core Mechanics. [declares object types: grab object, armament and equipment, plus associated functions ]
@@ -159,7 +160,6 @@ Include Fighting by Core Mechanics.
 Include Fucking by Core Mechanics.
 Include Game Endings by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
-Include Inline Hyperlinks by Nuku Valente.
 Include Masturbate by Core Mechanics.
 Include Microwave by Core Mechanics.
 Include Milking by Core Mechanics.

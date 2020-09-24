@@ -39,7 +39,7 @@ name	desc	weight	object
 
 pocketknife is an armament. It is not temporary.
 understand "knife" as pocketknife.
-It has a weapon "[one of]your large knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]".
+It has a weapon "[one of]your knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]".
 Weapon Damage of pocketknife is 5.
 Weapon Type of pocketknife is "Melee".
 Objsize of pocketknife is 3.
@@ -69,6 +69,19 @@ Weapon Type of sharp screw is "Melee".
 Objsize of sharp screw is 1.
 Hitbonus of sharp screw is -1. [not a weapon]
 Scent of sharp screw is "The screw smells of metal, with a hint of sawdust."
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"switchblade"	"This thing looks like just an inconspicuous metal handle, at least until you press the button and the sharp blade flicks out."	1	switchblade
+
+switchblade is an armament. It is not temporary.
+understand "blade" as switchblade.
+It has a weapon "[one of]your switchblade[or]your blade[or]your trusty switchblade[or]flashing steel[at random]".
+Weapon Damage of switchblade is 6.
+Weapon Type of switchblade is "Melee".
+Objsize of switchblade is 3.
+Hitbonus of switchblade is 0. [nothing special]
+Scent of switchblade is "The switchblade smells like metal.".
 
 Section 2 - Moderate Blades
 
@@ -222,6 +235,17 @@ Objsize of claw hammer is 3.
 Hitbonus of claw hammer is 0. [nothing special]
 Scent of the claw hammer is "The sturdy hammer smells of metal and sweat.".
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"iron knuckles"	"A classic set of iron knuckles used for dealing giving the wearer some extra punch!"	1	iron knuckles
+
+iron knuckles is an armament. It is not temporary.
+It has a weapon "[one of]your iron knuckles[or]your metal punch[or]your iron punch[at random]".
+Weapon Damage of iron knuckles is 5.
+Weapon Type of iron knuckles is "Melee".
+Objsize of iron knuckles is 3.
+Hitbonus of iron knuckles is 0. [nothing special]
+Scent of the iron knuckles is "The iron knuckles smells like metal.".
 
 Table of Game Objects (continued)
 name	desc	weight	object

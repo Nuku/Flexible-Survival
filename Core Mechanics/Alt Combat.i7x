@@ -81,7 +81,7 @@ title	subtable	description	toggle
 "Attack"	--	"Attack!"	player attack rule
 "Seduce"	--	"Make Love Not War!"	player seduce rule
 "Item"	--	"Quick, where's my medkit?!"	combat item rule
-"Pass"	--	"Hey look, a distraction!"	combat pass rule
+"Pass"	--	"Wait for the right moment!"	combat pass rule
 "Flee"	--	"Run away!"	flee rule
 "Submit"	--	"Maybe it isn't so bad?"	submit rule
 "Throw Fight"	--	"Let them think they won."	throw combat rule
