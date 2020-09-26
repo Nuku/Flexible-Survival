@@ -386,7 +386,7 @@ to say Diana_TalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Find out how she ended up living with a bunch of senior citizens";
 	[]
-	if Diana is in Food Court:
+	if Diana is in Mall Foodcourt:
 		choose a blank row in table of fucking options;
 		now title entry is "Charm her and stealthily finger Diana's pussy";
 		now sortorder entry is 4;
