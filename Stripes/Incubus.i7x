@@ -9,6 +9,7 @@ Section 1 - Creature Responses
 incubusnosex is a number that varies.
 
 to say incubusdesc:
+	project Figure of Incubus_clothed_icon;
 	setmongender 3; [creature is male]
 	say "     You are confronted by a person who moves to block your path. At first, you could almost mistake him for a handsome man, were it not for some extra features which confirm a more sinister nature. Atop his lovely face are a pair of small, red horns and his amber eyes have a hint of an unearthly glow to them. On his back, there is a pair of large bat-like wings in a dark red color. Finally, from the end of his spine extends a long, slender tail ending in a spaded tip. His physique is well-toned and his [one of]cream[or]pink[or]tan[or]chocolate[at random] skin is smooth and without blemish despite the mess of the surrounding city. The man's body is beautifully muscled, but not massively so, looking like a statue of Adonis come to life.";
 	say "     His tail gives a swish as he looks you over with a lustful grin. '[one of]Now, you may be able to provide some amusement[or]Give in to your urges and enjoy physical pleasure[or]I'm looking forward to filling you properly[or][if Player is female]Spread your legs[else]Bend over[end if] for me, my lovely. You know you want me in you[or]I know what you desire. Let me give it to you[or]Join me in delicious, sinful pleasure[at random],' he says with a silky, seductive voice and a sinister smile on his full, red lips. His hands run across his shapely body, showing it off for you before moving down to slide over the bulge his erect cock makes in the supple leather pants that are his only article of clothing.";
@@ -17,6 +18,7 @@ to say losetoincubus:
 	if inasituation is true:
 		say ""; [dealt with at the source]
 	else:
+		project Figure of Incubus_naked_icon;
 		now incubusnosex is 0;
 		if BodyName of Player is "Incubus" or BodyName of Player is "Succubus":
 			if Player is female:
@@ -70,6 +72,7 @@ to say beattheincubus:
 	if inasituation is true:
 		say ""; [dealt with at the source]
 	else:
+		project Figure of Incubus_naked_icon;
 		if BodyName of Player is "Incubus" or BodyName of Player is "Succubus":
 			if Player is male:
 				say "     'Well done, my infernal sibling,' the incubus says with a smile as he bows in submission to you. 'You are definitely the more powerful seducer,' he acknowledges with another, lower bow and you can't help but smile, feeling strangely at ease now that the combat is over. 'Shall you claim your prize?' he says with a grin, turning around and getting onto all fours. His tail arches up and his shapely, bubble butt is offered to you. You are quite tempted by the sight, eager to give him the good, hard fucking he would have given you.";
@@ -308,8 +311,6 @@ Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Incubus Infection"	"Infection"	""	Incubus Infection rule	1000	false
 
-[A sample structure for succumbing/surviving messages at the end of the game.]
-[Numerous other examples can be found in existing creature files.]
 This is the Incubus Infection rule:
 	if Player has a body of "Incubus":
 		trigger ending "Incubus Infection"; [Here it states, that the ending has been played.]
