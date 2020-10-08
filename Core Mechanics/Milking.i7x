@@ -102,9 +102,9 @@ lastCockMilking is a number that varies. [@Tag:NotSaved] lastCockMilking is usua
 
 check PlayerCockmilking:
 	if Cock count of Player is 0:
-		say "You don't appear to have anything worth milking.";
+		say "You don't appear to have anything worth milking." instead;
 	if lastCockMilking - turns < 1:
-		say "Your balls have been drained recently. You'll need to wait before another worthwhile milking.";
+		say "Your balls have been drained recently. You'll need to wait before another worthwhile milking." instead;
 
 Carry out PlayerCockmilking:
 	let CumVolume be 0; [calculate depending on ball size]
