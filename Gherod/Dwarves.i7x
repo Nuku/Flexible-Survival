@@ -1199,7 +1199,11 @@ dwarven ale is a grab object.
 
 dwarven ale is infectious. Strain of dwarven ale is "Dwarf Male".
 
-Usedesc of dwarven ale is "You bring the canteen bottle to your mouth and chug its contents down, the drink tasting like a very strong beer that nearly burns down your throat.";
+Usedesc of dwarven ale is "[dwarven ale use]".
+to say dwarven ale use:
+	say "You bring the canteen bottle to your mouth and chug its contents down, the drink tasting like a very strong beer that nearly burns down your throat.";
+	PlayerDrink 10;
+	addAlcPoints 4;
 
 instead of sniffing dwarven ale:
 	say "This beverage smells a lot like alcohol. It must be very strong.";
