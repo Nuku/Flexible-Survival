@@ -269,6 +269,7 @@ It is temporary.
 to say bunweiseruse:
 	say "You open up the bottle and put it to your mouth. The drink has the taste of cheap beer, the good kind thankfully.";
 	PlayerDrink 8;
+	addAlcPoints 1;
 	infect "Bunny Jock";
 
 instead of sniffing bunweiser beer:

@@ -145,6 +145,7 @@ Book 2 - More Core Mechanics
 
 Include Alt Combat by Core Mechanics.
 Include Alt Vore by Core Mechanics.
+Include AlcoholMechanics by Core Mechanics.
 Include Assorted Items by Stripes.
 Include Basic Functions by Core Mechanics.
 Include Basic Locations by Core Mechanics.
@@ -679,6 +680,7 @@ Include Zebra by Vervaine.
 
 Part 4 - NPCs
 
+Include Absinthe by Bigfish15079.
 Include Ace by Aureas Gigas.
 Include Adam by Wahn.
 Include Aeca by Wahn.
