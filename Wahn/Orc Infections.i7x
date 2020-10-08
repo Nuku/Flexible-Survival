@@ -491,7 +491,8 @@ orc brew is a grab object.
 Usedesc of orc brew is "[orc brew use]";
 
 to say orc brew use:
-	say "Lifting the beer stein in one hand, you thumb the lid open and take a deep quaff of the liquid within. Hmm, tasty in a strange spicy way, and good against thirst. You can't help yourself and keep drinking until all of it is gone, leaving you wanting for more. The empty mug you throw away, it being too heavy to lug around as an empty container.";
+	say "Lifting the beer stein in one hand, you thumb the lid open and take a deep quaff of the liquid within. Hmm, tasty in a strange spicy way, and good against thirst. You can't help yourself and keep drinking until all of it is gone, leaving you wanting for more. You throw away the empty mug, it being too heavy to lug around as an empty container.";
+	addAlcPoints 2;
 	PlayerDrink 6;
 	OrcInfect;
 

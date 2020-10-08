@@ -680,6 +680,7 @@ Include Zebra by Vervaine.
 
 Part 4 - NPCs
 
+Include Absinthe by Bigfish15079.
 Include Ace by Aureas Gigas.
 Include Adam by Wahn.
 Include Aeca by Wahn.
