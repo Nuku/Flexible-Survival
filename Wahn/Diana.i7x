@@ -413,7 +413,7 @@ to say Diana_TalkMenu:
 					say "[Diana_RegularTalk2]";
 				if (nam is "Ask about her friends"):
 					say "[Diana_RegularTalk3]";
-				if (nam is "Crouch down in front of her and eat her out"):
+				if (nam is "Charm her and stealthily finger Diana's pussy"):
 					say "[DianaFingering_FoodCourt]";
 				wait for any key;
 		else if calcnumber is 0:
