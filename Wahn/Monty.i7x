@@ -394,10 +394,10 @@ to say MontyTalk4: [Special Transport]
 			say "Invalid choice. Type [link]1[end link] to apologize, [link]2[end link] to compliment his ass and say you're not sorry you went for it or [link]3[end link] to suggest asking his buddies to help.";
 	if calcnumber is 1: [sorry]
 		LineBreak;
-		say "     You tell Monty you're sorry for getting him into this kind of situation, which he accepts graciously enough. 'Guess I just have an irresistible ass then, eh? Prime black booty that no one can resist. I'm not even mad about it, [if Resolution of Lone Soldier is 2]your tongue felt pretty nice and all[else]not with you helping me before[end if].' He shrugs and makes a throwing-away gesture. 'Still, now I gotta work out how to do this shit. Guess I'll just have to, you know, move to a private place to do it. Definetely not gonna do it in front of the guys and get a rep of being the barrack's bottom boy. Gonna be weird, to work my own ass over with those toys.'";
+		say "     You tell Monty you're sorry for getting him into this kind of situation, which he accepts graciously enough. 'Guess I just have an irresistible ass then, eh? Prime black booty that no one can resist. I'm not even mad about it, [if Resolution of Lone Soldier is 2]your tongue felt pretty nice and all[else]not with you helping me before[end if].' He shrugs and makes a throwing-away gesture. 'Still, now I gotta work out how to do this shit. Guess I'll just have to, you know, move to a private place to do it. Definitely not gonna do it in front of the guys and get a rep of being the barrack's bottom boy. Gonna be weird, to work my own ass over with those toys.'";
 	else if calcnumber is 2: [not sorry]
 		LineBreak;
-		say "     You admit to Monty that his ass was to nice to keep your hands away from. If you were in the same situation again, you'd not do anything different. The man looks at you somewhat wide-eyed and after a moment, a chuckle bubbles up from him. 'Guess I just have an irresistible ass then, eh? Prime black booty that no one can resist. I'm not even mad about it, [if Resolution of Lone Soldier is 2]your tongue felt pretty nice and all[else]not with you helping me before[end if].' He shrugs and makes a throwing-away gesture. 'Still, now I gotta work out how to do this shit. Guess I'll just have to, you know, move to a private place to do it. Definetely not gonna do it in front of the guys and get a rep of being the barrack's bottom boy. Gonna be weird, to work my own ass over with those toys.'";
+		say "     You admit to Monty that his ass was to nice to keep your hands away from. If you were in the same situation again, you'd not do anything different. The man looks at you somewhat wide-eyed and after a moment, a chuckle bubbles up from him. 'Guess I just have an irresistible ass then, eh? Prime black booty that no one can resist. I'm not even mad about it, [if Resolution of Lone Soldier is 2]your tongue felt pretty nice and all[else]not with you helping me before[end if].' He shrugs and makes a throwing-away gesture. 'Still, now I gotta work out how to do this shit. Guess I'll just have to, you know, move to a private place to do it. Definitely not gonna do it in front of the guys and get a rep of being the barrack's bottom boy. Gonna be weird, to work my own ass over with those toys.'";
 	else if calcnumber is 3:
 		LineBreak;
 		say "     You tell Monty that he should just get over himself and pick a guy to help him train. They'll enjoy it, you're fairly certain. The black man, grimaces and shakes his head, 'Naw man, I can't do that. Me and the guys are tight, but that's not something you ask. Gotta think of how it'd look. I really don't wanna get a rep of being the barrack's bottom boy. That's death for your career and shit.' He shrugs and makes a throwing-away gesture. 'Still, I gotta work out how to do this shit. Guess I'll just have to, you know, move to a private place to do it. And it's gonna be weird, to work my own ass over with those toys.'";
@@ -960,6 +960,8 @@ to say MontySex9: [toy workout2]
 
 to say MontySex10: [fucking Monty's ass]
 	say "...";
+	if "PlayerDicked_1" is not listed in Traits of Monty:
+		add "PlayerDicked_1" to Traits of Monty; [Memory for having had the actual player cock inside him]
 	NPCSexAftermath Monty receives "AssFuck" from Player;
 
 Section 3 - Endings

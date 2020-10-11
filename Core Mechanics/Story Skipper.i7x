@@ -16,6 +16,7 @@ The File of PossessionSave (owned by another project) is called "FSPossessionSav
 The File of CharacterSave (owned by another project) is called "FSCharacterSave".
 The File of CharacterVariableSave (owned by another project) is called "FSCharacterVariableSave".
 The File of CharacterVariable2Save (owned by another project) is called "FSCharacterVariable2Save".
+The File of SexStats (owned by another project) is called "SexStats".
 The File of UnbornChildSave (owned by another project) is called "FSUnbornChildSave".
 The File of ChildrenSave (owned by another project) is called "FSChildrenSave".
 The File of ChildrenBunkerSave (owned by another project) is called "FSChildrenBunkerSave".
@@ -882,7 +883,36 @@ to PlayerSave:
 		blank out the whole of Table of NewPlayerData; [empty after saving]
 		if debug is at level 10:
 			say "DEBUG -> File of NewPlayerSave written.[line break]";
+	PlayerSexStatsSave;
 
+to PlayerSexStatsSave:
+	blank out the whole of Table of SexStats; [empty out all old data]
+	choose a blank row in the table of PlayerData;
+	now OralPussyGiven entry is OralPussyGiven of Player;
+	now OralPussyTaken entry is OralPussyTaken of Player;
+	now OralCockGiven entry is OralCockGiven of Player;
+	now OralCockTaken entry is OralCockTaken of Player;
+	now AssFuckGiven entry is AssFuckGiven of Player;
+	now AssFuckTaken entry is AssFuckTaken of Player;
+	now PussyFuckGiven entry is PussyFuckGiven of Player;
+	now PussyFuckTaken entry is PussyFuckTaken of Player;
+	write File of SexStats from the Table of SexStats; [freshly made table gets saved to file]
+	if debug is at level 10:
+		say "DEBUG -> File of SexStats written.[line break]";
+
+to PlayerSexStatsRestore:
+	if the File of SexStats exists:
+		read File of SexStats into the Table of SexStats;
+		choose row 1 in the Table of SexStats;
+		now OralPussyGiven of Player is OralPussyGiven entry;
+		now OralPussyTaken of Player is OralPussyTaken entry;
+		now OralCockGiven of Player is OralCockGiven entry;
+		now OralCockTaken of Player is OralCockTaken entry;
+		now AssFuckGiven of Player is AssFuckGiven entry;
+		now AssFuckTaken of Player is AssFuckTaken entry;
+		now PussyFuckGiven of Player is PussyFuckGiven entry;
+		now PussyFuckTaken of Player is PussyFuckTaken entry;
+	blank out the whole of Table of SexStats; [empty out all old data]
 
 to PlayerRestore:
 	if the File of PlayerSave exists:
@@ -1040,6 +1070,7 @@ to PlayerRestore:
 	else if NewTypeInfectionActive is true:
 		say "No Additional Player Data Save File Found!";
 	blank out the whole of Table of NewPlayerData; [empty out all old data]
+	PlayerSexStatsRestore;
 
 to ChildrenSave:
 	say "Saving unborn children...";

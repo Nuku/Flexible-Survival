@@ -32,7 +32,7 @@ to say GenerateTrophyList_Doberman_Cop:
 	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
 		add "medkit" to CombatTrophyList;
 	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
-		add "pepper spray" to CombatTrophyList;
+		add "pepperspray" to CombatTrophyList;
 	if Debug is at level 10:
 		say "DEBUG: Trophy List: [CombatTrophyList].";
 

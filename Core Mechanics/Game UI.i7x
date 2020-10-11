@@ -247,7 +247,11 @@ To showstats (x - Person):
 		now z is ( level of x plus one) times 8;
 	say "Level: [level of x], XP: [XP of x]/[z]";
 	if the number of entries in feats of the x > 0:
-		say ", [link]Feats[as]FeatsList[end link][line break]";
+		say ", [link]Feats[as]FeatsList[end link]";
+	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0: [more than zero children of both types combined]
+		say ", [link]Offspring[as]ListOffspring[end link][line break]";
+	else:
+		LineBreak;
 	if debugactive is 1:
 		say "DEBUG -> Traits: [Traits of Player][line break]";
 
@@ -491,10 +495,23 @@ This is the self examine rule:
 		if placement of x is "end":
 			say " [descmod of x]";
 	[ ^^ Eqipment Descriptions Done ]
-	[ Children Descriptions Below   ]
-	[old style children, imported]
-	LineBreak;
-	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
+	if the player is not lonely:
+		repeat with companion running through companionList of Player:
+			say "Accompanying you is [link][companion][as]look [companion][end link], which is level [level of companion].";
+	now looknow is 0;
+	rule succeeds;
+
+ListFollowingChildren is an action applying to nothing.
+understand "ListFollowingChildren" as ListFollowingChildren.
+understand "List Following Children" as ListFollowingChildren.
+understand "List Offspring" as ListFollowingChildren.
+understand "ListOffspring" as ListFollowingChildren.
+
+carry out ListFollowingChildren:
+	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 0: [no children following]
+		say "You do not have any offspring trailing after you.[line break]";
+		stop the action;
+	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
 		say "Trailing behind come your children:[line break]";
 	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
 		say "Trailing behind comes your child:[line break]";
@@ -570,12 +587,7 @@ This is the self examine rule:
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
 		say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
-		say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
-	if the player is not lonely:
-		repeat with companion running through companionList of Player:
-			say "Accompanying you is [link][companion][as]look [companion][end link], which is level [level of companion].";
-	now looknow is 0;
-	rule succeeds;
+		say "They look as alert and human as you are, taking after you eagerly. Despite their age, they have already grown to young adult stature, both physically and in apparent emotional and mental development.";
 
 Chapter 3 - Linkaction
 

@@ -141,6 +141,8 @@ Figure of Pewter_Consort_icon is the file "Pewter_Consort.jpg".
 Figure of PirateShark_icon is the file "sharkpirate.png".
 Figure of Ram_naked_icon is the file "Ram_naked.jpg".
 Figure of Saber_Kitty_icon is the file "Saber Kitty.jpg".
+Figure of Sabretooth_soft_icon is the file "Sabretooth_soft.jpg".
+Figure of Sabretooth_hard_icon is the file "Sabretooth_hard.jpg".
 Figure of SeaDragon_hard_icon is the file "Sea Dragon hard.jpg".
 Figure of SeaDragon_soft_icon is the file "Sea Dragon soft.jpg".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
@@ -1028,6 +1030,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Ryousei_naked"	Figure of Ryousei_naked_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_wink"	Figure of Ryousei_wink_icon	"ValdericBlackstag"	g-black	"normal"
 "Saber Kitty"	Figure of Saber_Kitty_icon	"Vashaa"	g-White	"normal"
+"Sabretooth_hard"	Figure of Sabretooth_hard_icon	"Vashaa"	g-White	"normal"
+"Sabretooth_soft"	Figure of Sabretooth_soft_icon	"Vashaa"	g-White	"normal"
 "Sally"	Figure of Sally_icon	"Furball"	g-white	"normal"
 "Sand Man"	Figure of SandMan_icon	"Rastear"	g-black	"normal"
 "Sandy"	Figure of sandy_icon	""	g-white	"normal"
@@ -1325,6 +1329,7 @@ carry out artistcredits:
 	say "     Ram by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Reindeer by MoT @ furaffinity.net[line break]";
 	say "     Saber Kitty by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Sabretooth by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Sand Man by Rastear @ y-gallery.net[line break]";
 	say "     Satyress by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Sea Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";

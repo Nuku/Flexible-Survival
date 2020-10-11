@@ -136,6 +136,14 @@ Player has a list of text called OralVirginitiesTaken. [trophy list - enable dis
 Player has a list of text called PenileVirginitiesTaken. [trophy list - enable display once the sex aftermath function has been spread to most infections]
 Player has a list of text called OpenQuests. [for use if we ever get the quest list to work]
 Player has a list of text called CompletedQuests. [for use if we ever get the quest list to work]
+Player has a number called OralPussyGiven.
+Player has a number called OralPussyTaken.
+Player has a number called OralCockGiven.
+Player has a number called OralCockTaken.
+Player has a number called AssFuckGiven.
+Player has a number called AssFuckTaken.
+Player has a number called PussyFuckGiven.
+Player has a number called PussyFuckTaken.
 
 Section 2 - Body Parts
 
