@@ -233,7 +233,8 @@ Figure of Blot_icon is the file "FSTF_blot.jpg".
 Figure of Boghrim_clothed_icon is the file "Boghrim_clothed.jpg".
 Figure of Boghrim_naked_icon is the file "Boghrim_naked.jpg".
 Figure of Boghrim_face_icon is the file "Boghrim_face.jpg".
-Figure of Bradford_icon is the file "Bradford_ig.jpg".
+Figure of Bradford_clothed_icon is the file "Bradford_clothed.jpg".
+Figure of Bradford_naked_icon is the file "Bradford_naked.jpg".
 Figure of Brennan_clothed_icon is the file "Brennan_clothed.jpg".
 Figure of Brennan_face_icon is the file "Brennan_face.jpg".
 Figure of Brooke_icon is the file "Brooke.jpg".
@@ -374,6 +375,8 @@ Figure of Mul_clothed_icon is the file "Mul_clothed.jpg".
 Figure of Mul_naked_icon is the file "Mul_naked.jpg".
 Figure of Mul_face_icon is the file "Mul_face.jpg".
 Figure of Nadia_icon is the file "FS_Nadia_ig.jpg".
+Figure of Nelson_clothed_icon is the file "Nelson_clothed.jpg".
+Figure of Nelson_naked_icon is the file "Nelson_naked.jpg".
 Figure of Nermine_clothed_icon is the file "Nermine_clothed.jpg".
 Figure of Nermine_clothed_face_icon is the file "Nermine_clothed_face.jpg".
 Figure of Nermine_naked_icon is the file "Nermine_naked.jpg".
@@ -751,7 +754,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Bovine_F"	Figure of Bovine_F_icon	""	g-white	"normal"	[only shown for female version]
 "Boy_To_Fox_Shampoo1"	Figure of Boy_To_Fox_Shampoo1_icon	"Watsup"	g-white	"normal"
 "Boy_To_Fox_Shampoo2"	Figure of Boy_To_Fox_Shampoo2_icon	"Watsup"	g-white	"normal"
-"Bradford"	Figure of Bradford_icon	"Anymouse1968"	g-white	"normal"
+"Bradford_clothed"	Figure of Bradford_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Bradford_naked"	Figure of Bradford_naked_icon	"SteppeCrow"	g-white	"normal"
 "Brennan_clothed"	Figure of Brennan_clothed_icon	"SineAlas"	g-black	"normal"
 "Brennan_face"	Figure of Brennan_face_icon	"SineAlas"	g-black	"normal"
 "Brooke"	Figure of Brooke_icon	"Otterbits"	g-black	"normal"
@@ -989,6 +993,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Mul_face"	Figure of Mul_face_icon	"Kupo Klein"	g-black	"normal"
 "Nadia"	Figure of Nadia_icon	"Anymouse1968"	g-white	"normal"
 "Naga"	Figure of Naga_icon	"Rastear"	g-black	"normal"
+"Nelson_clothed"	Figure of Nelson_clothed_icon	"Ticl"	g-white	"normal"
+"Nelson_naked"	Figure of Nelson_naked_icon	"Ticl"	g-white	"normal"
 "Nermine_clothed"	Figure of Nermine_clothed_icon	"Lytta"	g-black	"normal"
 "Nermine_clothed_face"	Figure of Nermine_clothed_face_icon	"Lytta"	g-black	"normal"
 "Nermine_naked"	Figure of Nermine_naked_icon	"Lytta"	g-black	"normal"
@@ -1378,7 +1384,7 @@ carry out artistcredits:
 	say "     Blanche (lineart) by Xenotropos @ furaffinity.net[line break]";
 	say "     Blot by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Boghrim by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Bradford by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Bradford by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Brennan by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Brian by dhstein @ furaffinity.net[line break]";
 	say "     Brooke by Otterbits @ https://www.furaffinity.net/user/otterbits/[line break]";
@@ -1467,6 +1473,7 @@ carry out artistcredits:
 	say "     Moreau by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Mul by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Nadia by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Nelson by Ticl @ https://www.furaffinity.net/user/ticl/[line break]";
 	say "     Nermine by Lyttathebug @ furaffinity.net[line break]";
 	say "     Newt by Anyare @ furaffinity.net[line break]";
 	say "     Orbul by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
@@ -1565,7 +1572,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "Strype", "Sususmiles", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Wahn", "Watsup", "Wemd", "Xenotropos"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Wahn", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;

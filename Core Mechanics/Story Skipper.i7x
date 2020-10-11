@@ -887,7 +887,7 @@ to PlayerSave:
 
 to PlayerSexStatsSave:
 	blank out the whole of Table of SexStats; [empty out all old data]
-	choose a blank row in the table of PlayerData;
+	choose a blank row in the table of SexStats;
 	now OralPussyGiven entry is OralPussyGiven of Player;
 	now OralPussyTaken entry is OralPussyTaken of Player;
 	now OralCockGiven entry is OralCockGiven of Player;
@@ -897,6 +897,7 @@ to PlayerSexStatsSave:
 	now PussyFuckGiven entry is PussyFuckGiven of Player;
 	now PussyFuckTaken entry is PussyFuckTaken of Player;
 	write File of SexStats from the Table of SexStats; [freshly made table gets saved to file]
+	blank out the whole of Table of SexStats; [empty out all old data]
 	if debug is at level 10:
 		say "DEBUG -> File of SexStats written.[line break]";
 

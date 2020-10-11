@@ -30,7 +30,7 @@ to say ResolveEvent Bounty Hunter:
 	say "     Quick as a whip, the gruff bull pulls a sawed-off shotgun into his hands and points it straight at your chest. This gives you serious pause, during which looks you over with a mean gaze. His eyes look you over up and down, but rather than stop at either your face or your junk, they stop somewhere in between[if Breast Size of Player > 4]. And while they do linger on your [short breast size desc of Player] a little longer, it's not there they stop either[end if]. Eventually he seems satisfied though and lowers the gun, and you heave a large sigh of relief.";
 	say "     'Sorry [']bout that. Thought you might've been someone else,' he says, slipping the shotgun into a leather holster at his hip. 'Tellin['] who's who these days ain't easy.'";
 	WaitLineBreak;
-	say "     No longer being held at gunpoint, you're able to relax and take in your would-be assailant. This tough-looking bull-man is decked out in a torn pair of black jeans, khaki vest and ripped gray t-shirt. His clothing has old stains on it in a few places, though the rips are newer, probably stretched out by his transformation. In addition to the holstered shotgun, he's got a large knife on his other hip. Hanging around his thick neck are a pair of binoculars and a string necklace with an assortment of animal teeth on it.";
+	say "     No longer being held at gunpoint, you're able to relax and take in your would-be assailant. This tough-looking bull-man is decked out in a torn pair of black jeans, an open vest and a gold chain with a bounty hunter's badge attached to it. His clothing has old stains on it in a few places, though the rips are newer, probably stretched out by his transformation. In addition to the holstered shotgun, he's got a large knife on his other hip. Hanging around his thick neck are a pair of binoculars and a string necklace with an assortment of animal teeth on it.";
 	say "     This guy's been transformed into a stocky bull of a man. His bovine head is on a short neck and has its horns protruding from the sides of his temples. His body's bulky with muscle, and while he stands only a little above six feet tall, he looks like he could take on someone much larger with his bare hands. Any boots he may have worn have been discarded, his feet now ending in hardened hooves. His bovine coat is predominantly a russet red, with white on his head, down the center of his chest and at the end of his limbs.";
 	WaitLineBreak;
 	say "     You start to ask him what all of that was about, but he waves you off, saying it's none of your business. He gives you another look over. 'You do seem to be keepin['] it together pretty good though. Care to chat for a bit. I got a bit of a business proposition for you.' And while there's nothing quite like having been held at gunpoint by someone to start a relationship, you do decide to go ahead and hear him out.";
@@ -68,7 +68,6 @@ Bradford is a person. Bradford is in Bradford's Camp.
 Description of Bradford is "[bradforddesc]".
 Conversation of Bradford is { "Moo, mutherfuckah!" }.
 the scent of the Bradford is "The bull man has a somewhat musky scent of sweat, but not overpoweringly so.".
-The icon of Bradford is Figure of Bradford_icon.
 
 bradfordbounty is a number that varies.
 bradfordstory is a number that varies.
@@ -88,13 +87,15 @@ bradfordstory4 is a truth state that varies. bradfordstory4 is usually false.
 
 to say bradforddesc:
 	say "[bradforddebug]";
-	say "     [if HP of Bradford < 2]This guy's[else]Bradford's[end if] been transformed into a stocky bull of a man standing a little over six feet tall. His bovine head is on a short neck and has its horns protruding from the sides of his temples. He's wearing a pair of torn black jeans, khaki vest and ripped gray shirt. His clothing has a few old stains on it and shows several newer rips where his transformation's strained the material to fit his bulked-up muscles. He's armed and ready, carrying a sawed-off shotgun in a holster at his side and has a large knife on his other hip. Hanging around his thick neck are a pair of binoculars and a string necklace with an assortment of pointy animal teeth on it. Any boots he may have worn have been discarded, his feet now ending in hardened hooves. His bovine coat is predominantly a russet red, with white on his head, down the center of his chest and at the end of his limbs.";
+	project figure of Bradford_clothed_icon;
+	say "     [if HP of Bradford < 2]This guy's[else]Bradford's[end if] been transformed into a stocky bull of a man standing a little over six feet tall. His bovine head is on a short neck and has its horns protruding from the sides of his temples. He's wearing a pair of torn black jeans and a vest that leaves his chest uncovered, showing off the muscles of his abs and pecs. His clothing has a few old stains on it and shows several newer rips where his transformation's strained the material to fit his bulked-up muscles. He's armed and ready, carrying a sawed-off shotgun in a holster at his side and has a large knife on his other hip. Hanging around his thick neck is a gold chain with a bounty hunter's badge attached to it. Any boots he may have worn have been discarded, his feet now ending in hardened hooves. His bovine coat is predominantly a russet red, with white on his head, down the center of his chest and at the end of his limbs.";
 
 
 Section 4 - Dialog
 
 Instead of conversing the Bradford:
 	say "[bradforddebug]";
+	project figure of Bradford_clothed_icon;
 	if HP of Bradford is 0:
 		say "***Unknown error. Adjusting.";
 		now HP of Bradford is 1;
@@ -164,7 +165,7 @@ Instead of conversing the Bradford:
 		extend game by 4;
 	else if HP of Bradford < 4:
 		say "[randombodypart]";
-		say "     [one of]'How's that bounty sheet comin['] along? Says you've got to deal with another [bold type][bradfordbounty] [if HP of Bradford is 2]cock cannon(s)[else if HP of Bradford is 3]latex wol(f|ves)[end if][roman type].'[or]'You don't get ahead in my line of work by being lazy. Gotta work for your money.'[or]You try to ask about his target, but he just grumbles for you to focus on your part of the job and he'll do his. And with that, he takes another look out the window.[or]Spotting some activity, Bradford grabs his binoculars and checks out the [bodyselector] intently for several seconds. 'Nope.'[or]'I don't mind the added muscles, but this was my favorite outfit,' he says, tugging at his stretched shirt collar.[or]'Shouldn't you be out there working on those bounties?'[or]Using his big knife, Bradford quietly whittles at a chunk of wood while watching out the window. 'Some times this job's just about bein['] patient.'[at random]";
+		say "     [one of]'How's that bounty sheet comin['] along? Says you've got to deal with another [bold type][bradfordbounty] [if HP of Bradford is 2]cock cannon(s)[else if HP of Bradford is 3]latex wol(f|ves)[end if][roman type].'[or]'You don't get ahead in my line of work by being lazy. Gotta work for your money.'[or]You try to ask about his target, but he just grumbles for you to focus on your part of the job and he'll do his. And with that, he takes another look out the window.[or]Spotting some activity, Bradford grabs his binoculars and checks out the [bodyselector] intently for several seconds. 'Nope.'[or]'I don't mind the added muscles, but this was my favorite outfit,' he says, tugging at the collar of his vest.[or]'Shouldn't you be out there working on those bounties?'[or]Using his big knife, Bradford quietly whittles at a chunk of wood while watching out the window. 'Some times this job's just about bein['] patient.'[at random]";
 	else if bradfordstory1 is false and a random chance of 1 in 3 succeeds:
 		now bradfordstory1 is true;
 		say "     'This body of mine is like them cows on my da's ranch. Big, dumb Bradfords. Named after [']em and everything. I always hated them and that place. Left as soon as I could. Must be someone's idea of a sick joke, me lookin['] like this.'";
@@ -174,6 +175,7 @@ Instead of conversing the Bradford:
 		say "[BradfordTalkMenu]";
 
 to say BradfordTalkMenu:
+	project figure of Bradford_clothed_icon;
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -225,7 +227,7 @@ to say BradfordTalkMenu:
 
 to say chitchatwithBradford: [smalltalk with Bradford]
 	say "[randombodypart]";
-	say "     [one of]'You don't get ahead in my line of work by being lazy. Gotta work for your money.'[or]You try to ask about his target, but he tells you to stay out of this one. And with that, he takes another look out the window.[or]Spotting some activity, Bradford grabs his binoculars and checks out the [bodyselector] intently for several seconds. 'Nope.'[or]'I don't mind the added muscles, but this was my favorite outfit,' he says, tugging at his stretched shirt collar.[or]'I appreciate that help with the bounties. With a helpin['] hand around I can get through a lot more, and worry a lot less.'[or]Using his big knife, Bradford quietly whittles at a chunk of wood while watching out the window. 'Some times this job's just about bein['] patient.'[at random]";
+	say "     [one of]'You don't get ahead in my line of work by being lazy. Gotta work for your money.'[or]You try to ask about his target, but he tells you to stay out of this one. And with that, he takes another look out the window.[or]Spotting some activity, Bradford grabs his binoculars and checks out the [bodyselector] intently for several seconds. 'Nope.'[or]'I don't mind the added muscles, but this was my favorite outfit,' he says, tugging at the collar of his vest.[or]'I appreciate that help with the bounties. With a helpin['] hand around I can get through a lot more, and worry a lot less.'[or]Using his big knife, Bradford quietly whittles at a chunk of wood while watching out the window. 'Some times this job's just about bein['] patient.'[at random]";
 
 to say bountyBoardBradford: [bounties with Bradford]
 	if bradfordbounty > 0 and bradfordBountyNum > 0:
@@ -423,6 +425,7 @@ to say sexwithBradford:
 		clear the screen and hyperlink list;
 
 to say Bradfordsexmenu:
+	project figure of Bradford_naked_icon;
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -565,6 +568,7 @@ to say sexwithBradfordLapride:		[vaginal - lap ride]
 	if HP of Bradford < 7, increase HP of Bradford by 1;
 
 to say sexwithBradfordMidnight: [night sex with Bradford]
+	project figure of Bradford_naked_icon;
 	say "     At your suggestion, you're surprised to see Bradford close the window he usually has open, setting his binoculars on a nearby table before approaching you. 'Alright, been meanin['] to get some shuteye soon anyhow, nothing much here ever happens at night.' Moving one hand down to unzip his pants, you take that as a sign to get rid of your own, as well as any other article of clothing you may be wearing. He closes in fast, muscular arms wrapping around your side to hold your hips gently in his calloused hands. With the glow of the bright moon serving as your only source of light your vision is encompassed by shadows and bulging abs. He kisses you, his broad tongue finding its way into your willing mouth with more passion than your used to seeing from the bull, his roaming hands mirroring yours as you both fumble to the hard mattress on the ground. By the time you get there his own clothing had disappeared, a breadcrumb trail leading to your sweltering bodies tangled up on the makeshift bed.";
 	say "     Not wasting any time you straddle his hips, feeling his now rigid cock press between your asscheeks, pre already oozing out the tip of his ten-inch dick and slathering against your backdoor pucker. For a moment you both enjoy the hot closeness, your hands on his bare chiseled chest as you both breath raggedly in the dim moonlight.";
 	WaitLineBreak;
