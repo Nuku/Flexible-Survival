@@ -285,6 +285,7 @@ to say ammy_sex_lap:
 			else:
 				say "     You rather lay back and enjoy the musky smell of the mess you're covered in until you start feeling something.";
 				ammy_infect;
+			NPCSexAftermath Player receives "OralCock" from Ammy;
 		else:
 			say "     Leaning forward Ammy places her hands on your shoulders, eyes closed with a concentrated expression in her face. 'W..wh..wait! I don't want to get too much ahead without giving you something in return,' she gasps with a smile before nuzzling at your cheek. Of course you obey, stopping your doing and pulling your hands from between the two of you, giving the equine a second to catch breath.";
 			say "     Ammy looks at you happily, moving forward against you, her breasts rubbing at your face... her prick at your [ammy_playerchestdesc]. [if Breast Size of Player > 0]In fact, her long equine cock is quickly finding its way in between your breasts[else]Her long equine prick is drooling precum across your chest[end if] as she kneels above your groin now. Almost painfully slowly starts sliding downwards, until you can feel the tip of your cock entering her wet folds. She slowly moves down further until you are completely engulfed in her accommodating pussy. You hear her groan as she rises again, then falls again on your cock. Ammy's body rubs against yours as she begins to ride you, quickly picking up in pace, steadily fucking you, her surprisingly soft pussy sliding around your cock. Her rhythm reaches the steady beat of the dull beat of the music of the other room.";
@@ -292,6 +293,7 @@ to say ammy_sex_lap:
 			say "     Seconds feel like minutes as you peak. It takes a felt eternity until you come down again, panting. Feeling a bit dizzy you lift your head up, looking deep into Ammy's gaze. You both don't say a word and just remain in this close position for a bit until she pulls herself off, her still huge, semi-erect prick flopping against your belly.";
 			say "     'That was nice...' she says in her soft voice and hugs you in a sticky embrace. After a while she gets up and tells you she wants to shower or it'll be a hell of getting her fur and mane clean again or something you don't really get, her long tail moving along swaying hips.";
 			if a random chance of 1 in 3 succeeds, ammy_infect;
+			NPCSexAftermath Ammy receives "PussyFuck" from Player;
 	else:
 		[***Scene missing? - brief opt-out for now]
 		say "     Rather than let things get out of hand, you rein yourself in and switch to some affectionate snuggling. While this does leave the equine herm a little blue-balled, she's seems to appreciate a good snuggle as well. She eventually has to get back to work, giving you a peck on the cheek before going with a smile.";
@@ -304,6 +306,7 @@ to say ammy_sex_fellatio_giving:
 	say "     From this situation it doesn't take long until you hear her whine out in bliss. One final strong thrust pushing as much as possible of her cock into your mouth. Head pointing upwards, arching her back forward she begins to orgasm, cum flooding your mouth. You try to swallow down as much as possible but quickly finding yourself at the limit, letting it just run down your [bodytype of Player] body. More and more waves of cum hit you, her female sex also squirting liquids until the powerful peak finally begins to fade.";
 	say "     'Haaaah... oh my, thank you! I needed this! I'm sorry... but I got to get going now. Perhaps we can do something like this again soon? And next time you won't get away this easy! Nyehehee~' she laughs and gives you a hug, picking up her panties that lay on the ground before leaving.";
 	if a random chance of 1 in 3 succeeds, ammy_infect;
+	NPCSexAftermath Player receives "OralCock" from Ammy;
 
 to say ammy_sex_fellatio_receiving:
 	say "     With an evil grin on her face, Ammy keeps looking at you as her gaze slowly drifts downwards, eying your crotch. While licking her chops she looks back at your face, speaking in a teasing voice, 'Would you like if I'd make you happy down there, hmm?'";
@@ -322,6 +325,10 @@ to say ammy_sex_fellatio_receiving:
 		say "     Your thrusting is getting more and more uncontrolled until finally you begin to orgasm. You can feel your jizz shooting into her mouth while you watch her swallowing down all of it. While you writhe your body in peak you also notice her cumming from the taste of your own cum, painting the [one of]area between your legs[or]floor under your[at random] white while juices are dripping from between her legs. You need to throw your head back as shot after shot spurts out of your cock.";
 		say "     While your orgasm finally fades, you spot Ammy's cleaning up your cock eagerly, enjoying you to the last drop. After she's done she gets up and sits next to you, leaning her curvy, soft-furred body against yours in afterglow.";
 	if a random chance of 1 in 5 succeeds, ammy_infect;
+	if player is male:
+		NPCSexAftermath Ammy receives "OralCock" from Player;
+	else:
+		NPCSexAftermath Ammy receives "OralPussy" from Player;
 
 to say ammy_sex_frombehind:
 	say "     Standing right next to her comfortable looking bed the white equine closes her eyes while gently embracing you with her petite arms, pressing her soft furred body against you. Your own hands start to stroke along her curves, feeling the soft fur on them, her wonderful sweet and rosy smell invading your nostrils. Pulling even closer to each other your [FaceName of Player] face touches her muzzle, lips touching each other while you feel her caressing your cheek. You suckle on each other's lips a few times before you start kissing, her wide tongue dancing with yours. During your tight embrace you feel your bodies rubbing against each other, her soft breasts with perky nipples pressing against your [ammy_playerchestdesc]. All while Ammy's hands slowly roam downwards your back and sides until they eventually arrive at whatever you wear on your hips, entering it and brushing over your crotch. You find yourself moaning into the kiss, pushing your lips harder against hers as you notice a grin forming on her beautiful equine face, her eyes still closed enjoying the moment.";
@@ -341,6 +348,7 @@ to say ammy_sex_frombehind:
 		say "     Smilingly you grab her sensitive shoulders and pull her back up onto you. In fact you pull her so hard that she ends up more sitting on top of your lap rather than laying in front of you while you kneel there. Not wasting any time you two continue where you stopped, Ammy guiding your tool right back into her again before teetering up and down. 'Oh yes that's SO much better,' the white furred beauty whispers as you two start to get into the rhythm again. The equine's tail keeps whipping you softly while you push and pull her, licking and suckling at her shoulders and neck while you rock her. Ammy keeps arching her back, holding herself up only by her two petite hands placed behind her hips onto your sides. Watching this female in front of you ache and burn in pleasure brings you even closer to the edge until with final thrust you feel yourself explode into the unicorn.";
 		say "     Already with the first shot of jizz you pump into her belly you can feel her contracting around you, waving her head from side to side as she moans loudly, joining you in bliss. You groan and wriggle your hips uncomfortably as you keep Ammy as tight on you as possible while she just keeps moaning louder and louder, cum spurting out of her cock while she arches her back even further - messing up all the nice made bed with lots of creamy white horsecum. A few timeless moments that feel like minutes you stay in this blissful state until both of you slowly calm down again, Ammy exhausted falling off you, cum dripping out of her used folds.";
 	say "     Now you two lay there, catching breath until eventually Ammy states 'Oh my... I hope you just had as much fun as I did' before hugging you, nuzzling and cuddling against you before she notices the mess around you, giggling. You spend a few more minutes of blissful afterglow together until the energetic horse gets up again, sweetly kissing you on your forehead before leaving.";
+	NPCSexAftermath Ammy receives "PussyFuck" from Player;
 
 [
 to say ammy_sex_ontable:

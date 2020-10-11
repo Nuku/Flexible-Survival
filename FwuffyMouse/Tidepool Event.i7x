@@ -71,5 +71,9 @@ to say tidepoolfail:
 		WaitLineBreak;
 		say "     The creatures release your head long enough for you to notice another odd sea-creature emerging from the pool and latching onto your cock. It slides itself down onto your member, tiny suckers grabbing your crotch around the base and sticking the hot, convulsing mollusk firmly in place. The inside of it squirms and slides over it, and it feels like tiny tendrils are licking at the head of it. It's all too much at this point, and you cum into the small, latched-on sea creature, clenching down around the triple-threat of tentacles inside you. The limb in your mouth jerks back, shooting a final load over your back and sliding back down into the water. Finally, the creatures cum into your ass and pull free while the ones grabbing your body slip away, leaving you in the filthy pool with a hungry sea creature stuck to you.";
 	say "     The action stirred up so much silt and goop in the pool that you'd never mistake it for the serene, glassy spot it once was. Dragging yourself onto drier sand, you start to work at removing the shellfish latched to you. You manage to get it off, but only after [if Player is male]it teases your uncomfortably sensitive cock longer than you'd have liked[else]forcing you to cum into your palm as you try to pull it off your clit[end if]. Exhausted but wary, you decide to put some distance between yourself and the pool before sleeping this one off.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Tentacle Horror";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Tentacle Horror";
+	if player is female:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Tentacle Horror";
 
 Tidepool Event ends here.

@@ -1,5 +1,6 @@
-Version 2 of Leopardman by Sarokcat begins here.
-[ Version 2 - Special variations added for Art Collector event ]
+Version 3 of Leopardman by Vinickus begins here.
+[Version 2 of Leopardman by Sarokcat begins here.]
+[ Version 2 - Special variations added for Art Collector event]
 
 "Adds a Leopardman to Flexible Survival's Wandering Monsters table"
 
@@ -55,20 +56,113 @@ to say Leopardman attack:
 
 To say Leopardman loss:
 	project Figure of Leopardman_hard_icon;
-	if artleopardfight is 3:
-		now artleopardfight is 1;
-		say "     The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. As you step forward to continue the fight, the feline glances to the side and dashes off into the office on the opposite side of the room, slamming the door and locking it.";
-	else if inasituation is true:
+	if inasituation is true:
 		say ""; [dealt with at the event source]
 	else:
-		say "     The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. As you step forward to continue the fight, the feline glances to the side, and leaps for one of the buildings instead of leaping at you, and you watch with frustration as the injured feline climbs quickly out of reach before disappearing over the roof. Sighing you continue on your way through the city.";
+		if artleopardfight is 3:
+			now artleopardfight is 1;
+			say "     The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. You are quick to act after that, jumping at him and pinning him to a nearby office wall. With a grin, you think up some things you could do with this virile man.";
+		else:
+			say "     The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. You don't give him a chance to react. With quick reflexes, you soon have him pinned to a nearby brick wall. It's got holes galore, and frankly isn't that stable, but you have the advantage, and you doubt he can topple anything in his weekend state.";
+		LineBreak;
+		say "What do you want to do with the Leopardman?";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Immediately fall to your knees and worship this feline adonis";
+		now sortorder entry is 1;
+		now description entry is "While he's at your mercy, why not show him true appreciation";
+		[]
+		if player is male: [Option only visible for males]
+			choose a blank row in table of fucking options;
+			now title entry is "Beg him to let you worship his paws";
+			now sortorder entry is 2;
+			now description entry is "Slip yourself under his big paws";
+		[]
+		if player is male: [Option only visible for males]
+			choose a blank row in table of fucking options;
+			now title entry is "Turn around and bend over, smacking your ass";
+			now sortorder entry is 3;
+			now description entry is "Feel him inside you and breed you";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]100 - Nevermind[as]100[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if (nam is "Immediately fall to your knees and worship this feline adonis"):
+						say "[LeopardmanVictorySexOral]";
+					if (nam is "Beg him to let you worship his paws"):
+						say "[LeopardmanVictorySexPaw]";
+					if (nam is "Turn around and bend over, smacking your ass"):
+						say "[LeopardmanVictorySexAnal]";
+			else if calcnumber is 100:
+				say "Leave him?";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Yes.";
+				say "     ([link]N[as]n[end link]) - No.";
+				if the player consents:
+					now sextablerun is 1;
+					say "     You step back from the Leopardman, shaking your head as he gives you a shocked look.";
+					wait for any key;
+				else:
+					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
+
+to say LeopardmanVictorySexOral:
+	say "     With your body so close to his, you can't help but find yourself lost in the sight of the man, the feel of the man. His fur rubs against your skin, and it drives your mind wild, drawing a moan from your clenched lips. You try to keep a tough face, a war face, but the leopardman sees right through you. His lips curl up in one of the smarmiest grins of glee you have ever seen. It only drives you further from sane thought, leaving you with nothing but need. You are just about to beg to get to worship him, but he just licks his lips and pushes off the wall, forcing you to stumble a few feet back. It is then that he leans back against the wall and folds his arms. His head then nods towards his dripping erection. You now no longer have to beg, as he simply says, 'Suck,[if player is male] boy[else] bitch[end if].' You are then on your knees before him in seconds. There's nothing left to do but give in to your screaming mind.";
+	say "     The first taste of his seed, his precum, forces a desperate moan from your lips. That sound illicites a chuckle of approval from above, and one that draws a strange glee from your primal mind. Your tongue has already lashed the tip of the barbed cock before you clean, and so the only thing left to do is wrap your lips around that object of worship. As soon as you've curled your mouth around his cock, the leopardman forces his hips forward and grabs your head. He's no longer leaning against the wall, and now hunches over your form as he drives his prick straight down your throat. It's hard to care, to think beyond what pleases him, especially with all of the aphrodisac-like smells surrounding you. His musk makes your mind fall into a mire of constant need, and there's nothing you can, or want to, do to crawl out.";
+	WaitLineBreak;
+	say "     There's nothing left but to worship this great male before you, to run your hands over his abdominals and thighs, all while he begins to pound your face and throat. You gag off and on for a few minutes as he picks up speed, as his soft barbs rub against your throat, and as he grows ever more vicious in lust. So with little other choice, you force your throat to behave; Soon he's easily pushing in and out of it as you constrict your esophagus each time he thrusts in, and loosen it as he pulls out. It makes it easy for him to keep a fast rhythm. Your hands soon stroke down his furred, muscled back as they trail towards his ass. Those digits of yours then grip at his muscled rear as he pounds into you with ever more force. You're left in a daze as you hang on for dear life.";
+	say "     The leopardman shows little concern for you, and keeps up his savage thrusts for several more minutes. It's not until you start yanking him into you that you feel his hips flex, and his grip tighten. That feline cock even lurches and throbs as you both hold each other close. Your face is perpetually stuck in his crotch as he lets out a yowl that deafens all other sound. You then feel it: the first fiery founts of feline cum. You guzzle it down as if it is the nectar of the gods. If nothing else, it would serve as the perfect substitute. Eventually, everything has to end, and as the surges of seed slow to a dribble, he begins to slide out of your mouth. The leopardman then gives you a pat on the head and a few scratches behind the ears. 'Good job, slut,' he purrs out.";
+	WaitLineBreak;
+	say "     Once the feline rod is pulled out, the lopardman turns to leave. He glances back, though, and gives you a toothy grin. 'Next time you're under me, it'll be on my terms.' Then with a lusty purr, he sprints off.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Leopardman";
+	infect "Leopardman";
+
+to say LeopardmanVictorySexPaw:
+	say "     With a glance down at his paws, you lose control. The sight of those fluffy, feline, furred and muscled paws just makes you a slave to lust. It seems the leopard notices your weakness, as his toes begin to wiggle and flick up and down. It's at that point that you lose all pretense of control over this situation. Even if you are the one that beat the leopardman, it won't give you control of your own base needs: or any way out of needing to worship those furred feline paws. You don't even notice that you have released the leopard until his own hands grip at your shoulders, pushing you down to your knees, and then onto your back. There's no resistance from you, and why would there be? There's such a sexy beast in control of you, and that's what you want, afterall.";
+	say "     The leopard grins down at you as he grazes a paw back and forth across your face. Each time you try and bring your nose closer, the paw pulls back. He keeps the teasing up for quite awhile, getting you to beg for him to smother you in his musk. There's not convincing him at first, but eventually he seems to grow bored with your begging, and sits on your stomach. His bubble butt is placed right against your dick, allowing his furred ass to tickle along your sensitive flesh. Most importantly, however, both of his paws move to your face, pressing against you, grinding into you, and wiping away the sweat and musky scents.";
+	WaitLineBreak;
+	say "     The paws are well cared for, with smooth pads, lush fur, and currently free of any smells other than the masculine. It's debilitating to your mind to have your nose filled with such a musky treat, to have your mind dragged down by those damn digitigrade feet. You're cock leaks fluids all along the leopard's ass, all along the fluffy, smooth fur on his chiseled cheeks. He even orients himself to where your cock rests right against the crack, almost letting you hotdog him. However, he's clearly just teasing you as he rubs his pawpads all over your nose. 'lick,' the leopard purrs out. It's a simple word, a simple command, and is all that is needed for your tongue to dart out and taste his musky pads.";
+	say "     Your wet muscle laps along the smooth flesh of one paw's pads, dragging up and down from one side of each pad to the other. There's three on each foot, and the first foot, the first pad, is soon drenched in saliva as you spend several minutes just worshping it with every bit of effort you can muster. The purring from above sturs you on towards the next pad on that paw, letting your tastepuds be awash in yet more musk, fresh musk. The sweat comes off quickly, but the musk lasts just a bit longer, letting your mind get that much more drunk off it. The next pad is much like the second, leaving you almost entirely ignorant of your own cock, of your own need. There's only worship, only desire for your feline overlord.";
+	WaitLineBreak;
+	say "     There's a sensation of dampness along your stomach and lower chest, a feeling that's accompanied by that ass rubbing harder against your dick. The back of your mind knows what's happening, but the part in control in that moment doesn't care. The wetness gets more noticeable as you move onto the next paw, as you lather and salivate all over the first pad of that paw. As the taste of musk and sweat begins to grow mute there, you move onto your next target, and then your next. Once you've fully lathered every pad of both paws, your tongue laps between the toes, moving from one paw to the other, back and forth, making sure to constantly worship both, to have your tongue trapped between those toes almost nonstop.";
+	say "     It's once this has been going on for several minutes that you feel a burst of wetness cover your torso. The rubbing against your cock grows more intense, and the pressure of the paws against your face grows stronger. The paws then leave your face, your mind still stuck in a daze as the leopard stands up, and by the time your eyes focus enough, and by the time your able to glance around, you're alone. That's when you take the chance to glance down at your torso. The feline came all over you, leaving your entire stomach, and most of your chest, thoroughly caked in cum. Without much other choice, and with your mind still lost to need, you begin to scoop the fluids up in your hands, smelling it before licking your hands clean. It's not until you're fully cleaned up that you realize what you just did. You're then left to simply gather your things and move on.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Leopardman";
+	infect "Leopardman";
+
+to say LeopardmanVictorySexAnal:
+	say "     You know what this man wants, his cock gives you quite the obvious image of need, and you know what your mind is screaming at you to do. So you step back, looking up and down the leopard as he raises a brow in confusion. He even begins to glance around for a way to escape, but before your new friend can leave, you turn around and bend over. You even go as far as to smack your ass. Without glancing back, you can't quite tell his response, but before you have to look, you feel fur against your rear. 'If I had known you were such a whore, I would have just told you to bend over,' the male purrs out. It's then that you feel the wet, barbed tip of your partner's cock rubbing between your cheeks. He begins to grind and hump at you, growing more insistent as he leaks along your lower back and butt. Only when it gets thoroughly damp down there, do you feel the tip start circling your hole.";
+	say "     The barbs feel odd against your anus, but not bad, more like a mix of small tongues and insistent fingers. It catches you off guard enough to distract you as those barbs are soon placed directly against your hole. Luckily for you, the feline leaks like a broken sieve, and all his copious seed works quite well to slick the entry of that barbed dick. The leopard keeps applying more and more pressure to his penetration, not stopping his pushing until you feel a sudden pop and a sharp pain. Thankfully, that pain is quickly replaced by an odd sense of fullness, and an odd sense of pleasure. Both are no doubt caused by the way the barbs are scraping against the inside of your ass, and right against your prostate. It's strange how the leopardman seems to take his time, stroking down your sides to calm you down, even hunching over your form to lick at an ear. He goes so far as to whisper into said ear, 'Shh. You'll be alright. Soon you'll be taking me like a true whore.'";
+	WaitLineBreak;
+	say "     After a few minutes of his stroking, his whispers and intermittent licking, he jams his cock balls deep. The sudden movement forces you to fall over, catching yourself on your hands and knees. Your hands burn and your knees are suffering blunt pain. It all distracts you from the pillaging cock in your rear, and your mind only shifts from the pain when you feel that rod pulling out. The barbs scrape along your insides, driving a mewl of pleasure from your lips, and when those same barbs stop right on your prostate, those mewls grow stronger. The leopardman doesn't even comment, settling for slamming his cock right back in. His hips slam against your ass, his balls against your balls, and this new pace is soon the standard. He pulls out to the tip, and then slams back in to the base. His pace quickens with each thrust, each fuck of your insides. You're being driven to a mindless state of lust as he keeps his humping up, as his barbs keep scraping against your prostate. There's nothing to be done but to brace yourself and weather the storm of ecstasy.";
+	say "     In, out, in, out, over and over and over he goes. You're mind seems to slip entirely into a state of suspended lust. There's no relief, no end, just constant bursts of pleasure through your entire body, from head to toe. The feline even begins to nibble at your ears, trading from one to the other as his humping grows more feverish. You swear you can feel the virile pre, that he's leaking out in impossible quantities, sloshing around inside you. It's when you think he can't get any rougher, that he slams into you with such force you can no longer support yourself. You fall onto the cold ground as he keeps you pinned with your ass raised. He then starts pounding at your ass at such a speed you'll no doubt have bruises. There's nothing to be thought or said in that moment, nothing for your mind to do but keep you breathing and conscious.";
+	WaitLineBreak;
+	say "     You start to wonder if the pleasure will even let you stay conscious, or let you keep your sanity, and when that thought comes to mind your cock lurches. There's no slowing down for the feline as your ass tightens from your oncoming orgasm, no slowing as you release copious amounts of seed onto the ground beneath you both. The leopardman doesn't even make a comment as your ass pulses around his cock. However, his cock soon lodges itself fully in your rear, his balls slamming against you as his hips are held tight to your ass. You then feel it, the surges of cum from that glorious rod, the pulses through it, and the throbbing of the testicles held against you. It doesn't end, it doesn't even slow down for several minutes. You could swear your stomach is bulging out from the onslought of cum this male is filling you with, and only when you start questioning if it'll ever end, does the cream filling stop.";
+	say "     The feline then gives your neck a nibble and lick before yanking out of you. His sudden exit leaves you to collapse on the ground. It's then that you feel him wipe his cock onto your ass. Glancing behind you, you see his grin of absolute superiority, and then you see his ass as he walks away. You're left on the ground, leaking cum from your ass and cock as your still lust addled mind drives your thoughts. It's not for several minutes that you have the strength to stand and gather your belongings. Once everything is settled though, you manage to hobble off back to where you were before the pounding.";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Leopardman";
+	infect "Leopardman";
 
 
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -120,10 +214,9 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 10;
 	now Cunt Tightness entry is 4;
-	now SeductionImmune entry is false;
-	now libido entry is 50;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
+	now libido entry is 50;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "Spotted fur";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 30;  [ Chance of loot dropping 0-100 ]
+	now lootchance entry is 50;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
 	now TrophyFunction entry is "-";

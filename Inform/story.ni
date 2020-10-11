@@ -355,6 +355,7 @@ Include Smell by Core Mechanics.
 Include Smith Haven Mall by Wahn.
 Include Soldier Events by Wahn.
 Include SpartanVikingCouple by Rikaeus.
+Include Special Forces Events by Vinickus.
 Include Stable Related Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
 Include Storage Locker by Core Mechanics.
@@ -542,7 +543,7 @@ Include Latex Ermine by Stripes.
 Include Latex Fox by Nuku Valente.
 Include Latex Mistress by Stripes.
 Include Latex Wolf by Stripes.
-Include Leopardman by Sarokcat.
+Include Leopardman by Vinickus.
 Include Liquidshifter by Ssely.
 Include Lizard Girl by Damaged.
 Include Lusty Skunk by Nuku Valente.
@@ -693,7 +694,7 @@ Include Alexandra Cuckolding by Wahn.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Amaryllis by Song.
 Include Amy by Wahn.
-Include Andrew by Stripes.
+Include Andrew by Gherod.
 Include Angie by Sarokcat.
 Include Anthony by Wahn.
 Include Araqiel by Gherod.
@@ -767,6 +768,7 @@ Include Gerty by Qazarar.
 Include Glory by Wahn.
 Include Good Alexandra by Wahn.
 Include Gordon by Rikaeus.
+Include Gregory by Wahn.
 Include Gus by Hyliad.
 Include Gwen by Stripes.
 Include Hadiya by Stripes.
@@ -776,7 +778,7 @@ Include Hayato by Stripes.
 Include Help Book by Prometheus.
 Include HornyHorsey by femtoAmpere.
 [Include Horus by Rikaeus.]
-Include Hungry Boar Man by Closerhenry.
+Include Hungry Boar Man by Gherod.
 Include Hyper Squirrel by Nuku Valente.
 Include HypnoGeeks by Luneth.
 Include Icarus by Stripes.
