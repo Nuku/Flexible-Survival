@@ -563,6 +563,7 @@ Usedesc of orc femcum is "[orc femcum use]";
 to say orc femcum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the thick orc femcum run over your tongue and down your throat. Mmmmh, this stuff has a really great taste that calls for more. You can't help yourself and keep drinking until all of it is gone, filling your mind with a giddy, pleasant buzz. Now where do you get more of this stuff? You're really tempted to return to Katya and milk some more from her.";
 	PlayerDrink 6;
+	addAlcPoints 2;
 	SanLoss 10;
 	if "Iron Stomach" is not listed in Feats of Player:
 		OrcFemaleInfect;

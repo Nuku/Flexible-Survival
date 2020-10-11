@@ -538,6 +538,7 @@ Include Killer Whale by Stripes.
 Include Knight by Stripes.
 Include Koballoon by Song.
 Include Kobold Gang by Closerhenry.
+Include Koghh by Wahn.
 Include Komodo Dragon by Stripes.
 Include Latex Ermine by Stripes.
 Include Latex Fox by Nuku Valente.
@@ -655,6 +656,7 @@ Include Tiger Cop by Stripes.
 Include Tiger Shark by Lone Wanderer.
 Include Tigertaur by Sarokcat.
 Include Tigress Hooker by Stripes.
+Include Toven by Wahn.
 Include Trash Coon by Stripes.
 Include Triceratops by Stripes.
 Include Twisted Pimp by Sarokcat.
@@ -675,6 +677,7 @@ Include Wyvern by Damaged.
 Include Xeno by Stripes.
 Include Yamato Dragon by Blue Bishop.
 Include Yamato Dragoness by Blue Bishop.
+Include Yatur by Wahn.
 Include Yinglet by KazeSequeris.
 Include Yuppie Mink by StripeGuy.
 Include Zebra by Vervaine.

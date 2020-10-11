@@ -745,7 +745,7 @@ to say VentLoganCommandSex:
 	say "     The three of you ride out your bliss and wait for Vent's knot to shrink down. When it does you realize that if you leave Logan like this he'll slowly realize what's happening. So instead you order him to clean up his mess with his tongue while you clean his ass. The wolverine nods and puts his face to the ground and slurps up his own cum. You look for something to clean with before finding a towel that you use to wipe his butt. About a few minutes later you're finally done. You then order the male to forget what happened here and to go on his own way before uttering the end command phrase. When you do, the glazed eyes go away and he walks away from the two of you. Once gone you look to Vent and see him staring at you in both what appears to be admiration and lust.";
 	NPCSexAftermath Logan receives "OralCock" from Player;
 	NPCSexAftermath Logan receives "OralCock" from Vent;
-	NPCSexAftermath Logan receives "AssFuck" form Player;
+	NPCSexAftermath Logan receives "AssFuck" from Player;
 	say "[VentFoxLastScavScene]";
 
 to say VentFoxLastScavScene:
