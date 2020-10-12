@@ -260,7 +260,7 @@ to say PhilipTalkPIG:
 		if piginitiation is 2:
 			now piginitiation is 3;
 
-the fuckscene of philip is "[sexwithphilip]".
+the fuckscene of Philip is "[sexwithphilip]".
 
 instead of sniffing Philip:
 	say "Philip has the strong scent of a male hog[if pigfucked > 3]. You've become quite used to his musky scent and find it quite arousing now[end if].";
