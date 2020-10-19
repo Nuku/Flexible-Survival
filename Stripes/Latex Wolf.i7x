@@ -109,7 +109,7 @@ to say LatexWolfSexMenu:
 
 to say ButtFuckLatexWolf:
 	say "     The wolf lets out a needy whimper as you approach, his body squeaking as he lowers his head and lifts his ass towards you invitingly. You have no intention of letting such a nice ass go to waste either, and you remove your equipment as you step forward. You grab hold of his hips, his cool skin stretching between your fingers. Using your firm grip on him to your advantage, you easily align yourself with his pucker, placing the tip of your [Cock of Player] cock teasingly at the wolf's entrance. The canine whimpers, squeaks and pushes back towards you needily, but your firm grip keeps you in control.";
-	say "     You lean over the wolf and thrust forward, sinking deep into his tight tailhole as it stretches around you with a squeak. The lupine lets out a low, pleased rumble at the feeling of your hard length within him and pushes back against your hips with a needful whine. Your pre lubricates his insides, the wolf's hole becoming slick and slidy, making it ease it easy for you to slip out of him, only to force yourself back in. You continue to hammer into the wolf, drawing pleasured groans from both of you as you increase your pace. Resting more of your weight on his back, feeling the sleek smoothness of his latex form against your chest, you reach around his body with one arm and feel around until you manage to grasp the wolven shaft. His length has an unnaturally smooth texture, slickened by a coat of lube-like as you pound against his prostate.";
+	say "     You lean over the wolf and thrust forward, sinking deep into his tight tailhole as it stretches around you with a squeak. The lupine lets out a low, pleased rumble at the feeling of your hard length within him and pushes back against your hips with a needful whine. Your pre lubricates his insides, the wolf's hole becoming slick and slidy, making it ease it easy for you to slip out of him, only to force yourself back in. You continue to hammer into the wolf, drawing pleasured groans from both of you as you increase your pace. Resting more of your weight on his back, feeling the sleek smoothness of his latex form against your chest, you reach around his body with one arm and feel around until you manage to grasp the wolf shaft. His length has an unnaturally smooth texture, slickened by a coat of lube-like precum as you pound against his prostate.";
 	WaitLineBreak;
 	say "     You stroke the creature's cock in time with your thrusts, fucking him hard enough to rock him forward, causing him to squeak with the movement. The pleasure for you both starts to build, and among the squeaking and heavy breathing, you can hear the wolf whimper, followed by a pleasured howl as he cums. You pull your hand away from his cock as black liquid-latex cum gushes onto the ground. You pause for a moment as the wolf's ears fold and appear to begin melting. He looks back towards you, a happy grin on the canine's face as his whole body starts to soften and melt.";
 	say "     You're so close to finishing. Do you pull out and cum safely on him, or do you stay inside and risk getting some of the melting latex on you?";
@@ -127,8 +127,8 @@ to say ButtFuckLatexWolf:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 
 When Play begins:
@@ -155,7 +155,7 @@ When Play begins:
 	now desc entry is "[mongendernum 3]     You are startled when you hear a rubbery, skidding noise [if a random chance of 1 in 2 succeeds]from behind you[else if a random chance of 1 in 2 succeeds]to your left[else]to your right[end if]. Turning to face the noise, you spot a black and white latex wolf whipping around the corner."; [ Description of the creature when you encounter it.]
 	now face entry is "elongated with a muzzle and sharp teeth"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "lupine, bent onto all fours. Your insides feel strange, as if they are made of something shifting and changing"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "rubbery latex with black, fur-like patterned"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "rubbery latex with black, fur-like patterned"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "Thin and black, your tail whips back and forth behind you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]knotted[or]tapered canine[or]dark crimson colored[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your nose elongates, growing into a muzzle as your teeth sharpen"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -183,9 +183,13 @@ When Play begins:
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	now libido entry is 5; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 5; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "dirty water";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]rubbery[or]latex[or]animalistic[or]flexible[at random]";
 	now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -200,7 +204,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

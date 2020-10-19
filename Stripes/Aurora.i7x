@@ -11,12 +11,13 @@ Object	Name
 Giant's Frozen Yogurt	"Giant's Frozen Yogurt"
 
 Giant's Frozen Yogurt is a situation.
-The sarea of Giant's Frozen Yogurt is "Capitol".
+ResolveFunction of Giant's Frozen Yogurt is "[ResolveEvent Giant's Frozen Yogurt]".
+Sarea of Giant's Frozen Yogurt is "Capitol".
 the level of Giant's Frozen Yogurt is 5.
 when play begins:
 	add Giant's Frozen Yogurt to BadSpots of FemaleList;
 
-Instead of resolving a Giant's Frozen Yogurt:
+to say ResolveEvent Giant's Frozen Yogurt:
 	if HP of frost giantess is 0:			[first time finding]
 		say "     Turning down some damaged streets, you get to an area where the ground is cracked and there are several flows of molten magma. As you're surveying this, you hear a booming female voice call out to you. Looking over, you find a large figure standing on the opposite side of one of these lava streams. She waves her arms frantically over her head and continues to call out, trying to get your attention. Curiously cautious, you approach.";
 		say "     The giantess stands roughly ten or eleven feet tall and has a strong build with some obvious muscle to it. Her skin is powder blue in color and she has darker blue hair. Her eyes are purple, as are her lips and nipples. These last you can partially see through the stretched material of her torn shirt trying to cope with her enlarged body and bosom. While proportionately about a C-cup to her size, that makes them something more like big F-cup tits. Her pants, now stretched to their limit around her hips, are now tight shorts on her large frame.";
@@ -80,7 +81,7 @@ to say freeing_aurora:
 			now frost giantess is tamed;
 			add "Tamed" to Traits of frost giantess;
 			move Aurora to Breakroom;
-			say "     (Aurora the frost giantess is now a possible companion! You can make her your active companion by typing [bold type][link]companion Aurora[end link][roman type] or [bold type][link]companion frost giantess[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Aurora[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+			say "     (Aurora the frost giantess is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Aurora[end link][roman type] or [bold type][link]ally frost giantess[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Aurora[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			increase score by 10;
 			now Resolution of Giant's Frozen Yogurt is 1;	[Recruited Aurora]
 			now Giant's Frozen Yogurt is resolved;
@@ -97,13 +98,15 @@ Table of GameCharacterIDs (continued)
 object	name
 frost giantess	"frost giantess"
 
-frost giantess is a pet. frost giantess is a part of the player.
+frost giantess is a pet.
+NPCObject of frost giantess is Aurora.
 understand "Aurora" as frost giantess.
+IDList of frost giantess is { "Aurora", "aurora", "giant", "giantess", "frost giant", "frost giantess" }.
 printed name of frost giantess is "Aurora".
-The description of frost giantess is "[AuroraDesc]".
-The weapon damage of frost giantess is 8.
-The level of frost giantess is 2.
-The Dexterity of frost giantess is 7.
+Description of frost giantess is "[AuroraDesc]".
+Weapon Damage of frost giantess is 20.
+The level of frost giantess is 1.
+Dexterity of frost giantess is 5.
 The summondesc of frost giantess is "[SummonAurora]".
 The dismissdesc of frost giantess is "[DismissAurora]".
 The assault of frost giantess is "[aurora_attack]".
@@ -111,25 +114,24 @@ the fuckscene of frost giantess is "[SexWithAurora]".
 
 
 to say SummonAurora:
-	now Aurora is nowhere;
-	if Player is in Breakroom and Aurora is in Breakroom: [summoning while standing next to her]
-		say "     ...";
+	if Aurora is visible: [summoning while standing next to her]
+		say "     Hearing your call, Aurora the frost giantess comes over to join you at your side. She flexes her arms, adjusts her freezer backpack and gives you a merry slap on the back that [if scalevalue of Player < 4]nearly knocks you over[else]makes you stumble momentarily[end if].";
 	else: [regular summoning]
 		say "     Hearing your call, Aurora the frost giantess comes over to join you at your side. She flexes her arms, adjusts her freezer backpack and gives you a merry slap on the back that [if scalevalue of Player < 4]nearly knocks you over[else]makes you stumble momentarily[end if].";
 
 to say DismissAurora:
 	move Aurora to Breakroom;
 	if Player is not in Breakroom: [regular dismiss]
-		say "     ...";
+		say "";
 	else: [dismissing her in the abbey]
-		say "     ...";
+		say "";
 
 Table of GameCharacterIDs (continued)
 object	name
 Aurora	"Aurora"
 
 Aurora is a woman.
-The description of Aurora is "[AuroraDesc]".
+Description of Aurora is "[AuroraDesc]".
 
 instead of sniffing Aurora:
 	say "[AuroraScent]";
@@ -147,6 +149,8 @@ to say AuroraDesc:
 	project the Figure of Aurora_clothed_icon;
 	say "     Aurora the frost giantess is about 10 and a half feet tall and has a strong build with some obvious muscle to it. While not toned to body-builder level, her muscles do have obvious definition as if from regular exercise. Added to her overall size, this makes her quite physically powerful. Her skin is pale blue in color and she has darker blue hair. Her eyes are purple, as are her lips and nipples. These last you can partially see through the stretched material of her torn shirt trying to cope with her enlarged body and bosom. Were she of normal height, they'd be nice C-cups; being as large as she is, they're something more like big F-cup tits. Her pants, now stretched to their limit around her hips, are now tight shorts on her large frame, hugging her strong hips and toned buttocks.";
 	say "     She's friendly and eager to help you, willing to even come along and fight by your side. While no trained warrior, her punches hit like a ton of bricks. The heat of the city does wear on her, which is why she's carries a small retail ice cream freezer like a backpack. It's full of frozen yogurt and somehow is always cold despite not even being plugged in. Fighting will eventually tire her out and overheat her, but she'll keep fighting as long as you do out of loyalty.";
+	if frost giantess is listed in companionList of Player:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 
 to say aurora_attack:
 	choose row MonsterID from the Table of Random Critters;
@@ -158,7 +162,7 @@ instead of conversing frost giantess:
 	else:
 		if Player is in Breakroom and Aurora is in Breakroom:
 			say "[AuroraTalkMenu]";
-		else if companion of Player is frost giantess:
+		else if frost giantess is listed in companionList of Player:
 			say "[AuroraTalkMenu]";
 		else:
 			say "     Aurora isn't here.";

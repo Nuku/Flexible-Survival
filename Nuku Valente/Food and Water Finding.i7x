@@ -13,14 +13,16 @@ Section 1 - The Situation
 
 Table of GameEventIDs (continued)
 Object	Name
-potential resources	"potential resources"
+Potential Resources	"Potential Resources"
+Potential Resources	"potential resources"
 
-potential resources is a scavevent.
-The sarea of potential resources is "Allzones".
+Potential Resources is a scavevent.
+ResolveFunction of Potential Resources is "[ResolveEvent Potential Resources]".
+Sarea of Potential Resources is "Allzones".
 
-Instead of resolving a potential resources:
+to say ResolveEvent Potential Resources:
 	let difficulty be a random number from 6 to 16;
-	if hardmode is true, increase difficulty by a random number between 0 and 3;
+	if HardMode is true, increase difficulty by a random number between 0 and 3;
 	let y be "food";
 	let x be a random number from 1 to 8;
 	if x is 1 or x is 2:
@@ -73,19 +75,19 @@ Instead of resolving a potential resources:
 		else:
 			say "extremely difficult";
 		say " to climb.";
-		if companion of Player is bee girl:
+		if bee girl is listed in companionList of Player:
 			say "As you prepare to make the treacherous climb, Honey grabs your hand and pulls you back. 'Don't risk it. I can get it for you, honeybunch.' And with that, her translucent wings start to buzz, flying her up into the air to grab the [y] and brings it to you with a happy smile.";
 			ItemGain y by 1;
-		else if companion of Player is Exotic Bird:
+		else if Exotic Bird is listed in companionList of Player:
 			say "As you prepare to make the dangerous climb, your bird pet calls out and swooping in. Its dive takes it past the [y], which it grabs in its talons and drops into your hands, saving you from having to make the climb yourself.";
 			ItemGain y by 1;
-		else if companion of Player is Gryphoness:
+		else if Gryphoness is listed in companionList of Player:
 			let gryphlets be Libido of gryphoness / 4;
 			say "As you prepare to make the risky climb, Denise pulls you back and flaps her wings. 'I can get that for you easily, sweetie,' she says as she takes to the air. The gryphoness's wings lift her up alongside the [y], letting her take it with ease. She brings it back to you, earning a thank-you hug[if gryphlets is 1] from you and your gryphlet child[else if gryphlets is 2]from you and your gryphlet children[end if].";
 			ItemGain y by 1;
 		else:
 			let bonus be ( dexterity of Player plus level of Player minus 10 ) divided by 2;
-			if hardmode is true and bonus > 10, now bonus is 10;
+			if HardMode is true and bonus > 10, now bonus is 10;
 			if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 			if "Three Bags Full" is listed in feats of Player and BodyName of Player is "Ewe", increase bonus by 1;
 			if "Three Bags Full" is listed in feats of Player and BodyName of Player is "Ram", increase bonus by 1;
@@ -112,7 +114,7 @@ Instead of resolving a potential resources:
 			say "extremely difficult";
 		say " to lift.";
 		let bonus be ( strength of Player plus level of Player minus 10 ) divided by 2;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
@@ -137,10 +139,10 @@ Instead of resolving a potential resources:
 		say " to sway.";
 		let petbonus be false;
 		let bonus be ( charisma of Player plus level of Player minus 10 ) divided by 2;
-		if companion of Player is equinoid warrior or companion of Player is felinoid companion or companion of Player is demon brute or companion of Player is royal tiger:
+		if equinoid warrior is listed in companionList of Player or felinoid companion is listed in companionList of Player or demon brute is listed in companionList of Player or royal tiger is listed in companionList of Player:
 			increase bonus by 2;
 			now petbonus is true;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";

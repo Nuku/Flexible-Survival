@@ -4,8 +4,8 @@ Version 5 of Slutrat by Nuku Valente begins here.
 Section 0 - Slut Rat Monster
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -29,7 +29,7 @@ When Play begins:
 	now desc entry is "[slutratdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "furry and narrow snout, with quivering black nose set in the middle of a very female, but clearly rodent"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "bent to emphasize fertile signals, with wide hips and narrow waist. You feel like you're putting out a constant ready signal to anyone looking at you"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]black furred[or]rat furred[or]softly furred[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]black furred[or]rat furred[or]softly furred[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a long, [Skin of Player] tail. It is segmented, like a rat tail should be, thin and whip-like, moving about in long motions."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheathed[or]leaking[or]human like[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face draws forward into a long snout as hair spills to your shoulders"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -57,9 +57,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 7; [ Width of female sex infection will try and give you ]
-	now libido entry is 50; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "soda";
 	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceous[at random]";
 	now type entry is "[one of]murine[or]ratty[or]rodent[at random]";
@@ -74,7 +78,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -182,7 +186,7 @@ this is the rattymilk rule:
 	say "She draws you close with a loud rumble[if face mask is equipped], pushes your face mask aside[end if] and presses your lips to a breast, holding you still until you start drinking from her. Intense warmth rushes through your body, making you lustful and less eager to resist the sexy rat";
 	choose row MonsterID from the Table of Random Critters;
 	let dam be ( ( ( wdam entry + square root of wdam entry - peppereyes ) times a random number from 80 to 120 ) / 100 );
-	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say ". You end up getting a very large dose of her milk before you are able to push away - Critical Hit";
 	say "! You take [special-style-2][dam][roman type] damage";
@@ -209,7 +213,7 @@ this is the rattymilk rule:
 	decrease humanity of Player by a random number between 1 and 4;
 	if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	follow the player injury rule;
 	say "You are [descr].";
 
@@ -219,14 +223,14 @@ to say slutratdesc:
 	choose row MonsterID from Table of Random Critters;
 	let debit be 0;
 	if rondafight is 3:
-		if hardmode is true and level of Player > 9, let debit be level of Player - 9;
+		if HardMode is true and level of Player > 9, let debit be level of Player - 9;
 		now HP entry is 69 + ( debit * 5 ); [- How many HP has the monster got? -]
 		now monsterHP is 69 + ( debit * 5 );
 		now wdam entry is 15 + ( debit / 3 ); [-Amount of Damage monster Does when attacking.-]
 		now lev entry is 9 + debit;
 		say "     Despite your hopes of saving her, you find yourself facing off against the slut rat Ronda. She is a tall and intimidating wall of fur and leather, appearing female at first glance. But you know better, sporting a bulging package under her tight, leather outfit. She has a lustful look in her eyes, having decided she'd rather repay you for the chocolates with sex than listening to what you have to say. You try to calm her down and get her to focus, but that moment of remembrance is fading. In her confusion, she seems to think you're just looking to scrap to see who's on top, as the slut rats sometimes do. Being the first of the slut rats, she is a little bigger and tougher than the others.";
 	else:
-		if hardmode is true and level of Player > 6, let debit be level of Player - 6;
+		if HardMode is true and level of Player > 6, let debit be level of Player - 6;
 		now HP entry is 45 + ( debit * 5 ); [- How many HP has the monster got? -]
 		now monsterHP is 45 + ( debit * 5 );
 		now wdam entry is 13 + ( debit / 3 ); [-Amount of Damage monster Does when attacking.-]
@@ -261,7 +265,7 @@ to say slut rat victory:
 		if Libido of Player > 80, now Libido of Player is 80;
 		infect "Slut Rat";
 	else:
-		if the location of the player is Slut Rat Den:
+		if the Location of Player is Slut Rat Den:
 			say "     The rat grins as she pushes you towards the others, 'Let's remind this one how we treat bad people.' Of course, how they treat bad people and how they treat good people can be a bit foggy at times. At the call, the other rats stop their coupling and stroking and other diversions to instead gather around you with hungry expressions.";
 		else:
 			say "     Defeated, she grabs you and hauls you rapidly back towards her den, grinning the whole way like she knows a joke she does not care yet to share. When you arrive, you find many large pillows strewn about comfortably, and almost half a dozen other slut rats, stroking themselves, or each other, or kissing and otherwise engaged. They all pause when you are hauled in, and scramble to their feet, rushing up to enjoy and share the fresh meat.";
@@ -491,7 +495,7 @@ lastratdartthrow is a number that varies. lastratdartthrow is usually 555.
 ratdartcount is a number that varies.
 
 check ratdarts:
-	if the location of the player is not Slut Rat Den, say "What darts?" instead;
+	if the Location of Player is not Slut Rat Den, say "What darts?" instead;
 	if SlutRatDenVisitTimes < 1:
 		say "The rats scowl at you when you approach the dart board. Perhaps you should reconsider.";
 		say "Continue?";
@@ -522,7 +526,7 @@ Carry out ratdarts:
 		if remainder after dividing ratdartcount by 4 is 0 and SlutRatDenPoolTable is 1:
 			say "     The same slut rat from earlier [one of]looks up from plowing another smaller rat as you approach the board again. 'Hey newbie, any luck finding us that pool table or somethin[']?' she asks, not breaking her pace. You shake your head and she grumbles, 'Bummer!' and returns to nibbling on her current lover's ear.[or]scratches in itch on her chest, making her large breasts jiggle. 'Any luck with getting us something else to do?' she bitches.[or]yawns in boredom. 'We should really have something more than darts. Go back topside and look for a classy pool table. Try the High Rise District for a fancy pool hall,' she suggests. 'Yeah, get moving!' a few of the others pipe up.[or]presses another rat's face to her dripping pussy. 'You should really head topside and find us that pool table,' she complains. 'Yeah! And look for a skeeb-' the second girl starts to say, but is cut off as the bigger rat stuffs her face back to her cunt.[in random order]";
 			WaitLineBreak;
-		let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
+		let the bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: Taking a brief breath, you draw back the dart and eye the center circle. With a sudden thrust, the dart sails forward. ";
 		let total be bonus + dice;
@@ -611,10 +615,11 @@ Object	Name
 Pool Hall	"Pool Hall"
 
 Pool Hall is a situation.
+ResolveFunction of Pool Hall is "[ResolveEvent Pool Hall]".
 Pool Hall is inactive.
-The sarea of Pool Hall is "High".
+Sarea of Pool Hall is "High".
 
-Instead of resolving a Pool Hall:
+to say ResolveEvent Pool Hall:
 	if SlutRatDenPoolTable is 1:
 		say "     Passing down a side street between the high rises, you spot a pool hall. Recalling the request from the rats, you head on over to check the place out. It is a rather upscale looking place, probably used by business managers, bankers and lawyers working in the area. A place to go and have [']meetings['] while charging their clients. Looking inside, you find that it's been taken over by a group of pumas. They seem to have polished off most of the contents of the bar and are now playing pool or fucking on the tables. A pair of the herm cougars are even trying to do both at once, lining up a shot on the side pocket while her competitor gets ready to drive her cock into her back hole to make her scratch. Even with this kind of enthusiastic playing going on, some of the tables appear to still be in good condition. Surely the rats could find one to make off with down the subway tunnels to add to the den. The cats are too numerous for you to take on alone. You should go back to the rats and let them know about your find.";
 	now lastratvisit is turns + 8;
@@ -625,7 +630,7 @@ to say ratstopoolhall:
 	if BodyName of Player is "Slut Rat":
 		LineBreak;
 		say "     Returning to the Slut Rat Den, you locate try to mobilize the troops against the cougars of the pool hall. The large rat who started this plan is all on board, as is the skeeball nut. Most of them are reluctant to leave their life of lustful indolence to go, so you try your best to convince them.";
-		let the bonus be (( the charisma of the player minus 10 ) divided by 2);
+		let the bonus be (( Charisma of Player minus 10 ) divided by 2);
 		if slutratsub < 5, increase bonus by ( 5 - slutratsub ); [increase for being a dominant rat]
 		if slutratsub > 5, increase bonus by ( slutratsub + 5 ); [increase for being a popular slut]
 		let the dice be a random number from 1 to 20;
@@ -715,8 +720,8 @@ object	name
 Pool Table	"Pool Table"
 
 Pool Table is a person. "There is the pool table you helped retrieve at one end of the spacious rat den, available for play when not in use by the others. Despite being new, it's already picked up a few stains from rather [']enthusiastic['] play. To see if anyone wants a game, simply [bold type]talk pool[roman type]."
-The description of Pool Table is "     This is the pool table that you, Eight-ball, Skeeball and the others were able to retrieve for the rat's den. It's picked up a few stains from some [']enthusiastic['] play, but is still in good shape. It's very popular with the girls and makes for another welcome diversion[if lastpoolgame - turns < 8]. The table is currently in use by some of the others[else]. The table is free if you'd like a game, just [bold type]talk pool[roman type] of see if you can convince someone to have a game with you[end if].".
-The conversation of Pool Table is { "Scratch!" }.
+Description of Pool Table is "     This is the pool table that you, Eight-ball, Skeeball and the others were able to retrieve for the rat's den. It's picked up a few stains from some [']enthusiastic['] play, but is still in good shape. It's very popular with the girls and makes for another welcome diversion[if lastpoolgame - turns < 8]. The table is currently in use by some of the others[else]. The table is free if you'd like a game, just [bold type]talk pool[roman type] of see if you can convince someone to have a game with you[end if].".
+Conversation of Pool Table is { "Scratch!" }.
 lastpoolgame is a number that varies. lastpoolgame is usually 555.
 
 the scent of the Pool Table is "The pool table smalls of the rats that have been playing it and of the stains they've left on it.".
@@ -740,7 +745,7 @@ instead of conversing the Pool Table:
 	if T is 3, now targetnum is 10 + a random number between 1 and 3 + ( level of Player / 10 );
 	if T is 4, now targetnum is 12 + a random number between 1 and 3 + ( level of Player / 10 );
 	if Player consents:
-		let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
+		let the bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: vs [targetnum].";
 		if dice plus bonus < targetnum:

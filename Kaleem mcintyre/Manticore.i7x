@@ -84,8 +84,8 @@ To say Manticore loss:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -112,7 +112,7 @@ When Play begins:
 	now desc entry is "[mongendernum 3]The beat of red wings has you looking around and then up for danger. However, nothing can prepare you for what you find as a large black maned lion with rust red fur and a long scorpion tail drops down onto the ground in front of you. Larger than a normal lion and covered in a spiky crimson pelt, the creature glares at you hotly while folding its large wings behind its back and then roars a challenge at you.";
 	now face entry is "strong and angular, the likes of which you can be proud of as it shows off your leonine features. Rounded furry ears twitching curiously up above on your head, you possess a jet black mane framing the outer edges of your face to hide said ears from being seen by most. Narrow golden eyes look out to the world around you as your feline features jut out almost arrogantly at all those who would look upon your face"; [You have a (your text) face."]
 	now body entry is "thrums with ancient power as the blood of the legendary manticore sings throughout your veins. With the quadrupedal frame of a normal lion, you stand almost half a foot taller than the average king of beasts as thick muscular legs hold up your powerfully built, if not slightly bulky frame. A pair of red, bat-like wings flap slightly against your back"; [ Body Description, format as "Your Body (your text)"]
-	now skin entry is "[one of]rust red furred[or]spiky furred[or]a dense and course pelt covers your[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]rust red furred[or]spiky furred[or]a dense and course pelt covers your[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "Like the ancient manticores from ages past, you have a scorpion tail framing your backside, coiling tightly around your left leg. Stronger than the insect who is known for the appendage, your tail possesses a strange, mutated form of the normal manticore venom. Instead of normal poison, your tail tip can insert a strong aphrodisiac into your victims to make them susceptible to your advances, whether they want it or not."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]leonine[or]barbed[or]lion-like[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your features morph and reform into that of a lion-like muzzle. Course red fur covers your features from head to neck as your ears round until they are shaped like those of a lion's. An itchy feeling goes up and down your neck as more and more fur pushes out, but this time much darker than blood read as black fur surrounds your throat to become a new mane. Eyes darkening into a deep golden color your nose pushes out and then spreads until soon you have a manticore's face"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -140,9 +140,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 15;
 	now Cunt Tightness entry is 10;
-	now libido entry is 75; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]winged[or]quadrupedal[or]strong[or]powerful[at random]";
 	now type entry is "[one of]leonine[or]feline[or]mythological[as decreasingly likely outcomes]";
@@ -157,7 +161,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -265,7 +269,7 @@ this is the tailstinger rule:
 	choose row MonsterID from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 66 ); [+50% damage]
-	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 	if Playerpoison is 0:
 		increase playerpoison by 4 + ( lev entry / 5 );
@@ -280,7 +284,7 @@ this is the tailstinger rule:
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
@@ -314,6 +318,6 @@ This is the Manticore Infection rule:
 			else:
 				say "     By the time the military comes, you have long since adapted to how to handle yourself and they are quick to give you a clean bill of health. However, the outside world all but bores you and you end up finding yourself just drifting before coming across a broken down ranch where you, and those you brought along with you from the city, settle down to make a new home for yourselves. Turning the surrounding area into your new hunting grounds, after making sure that your new [']family['] will be alright after fixing up the place, you go about bothering the local townspeople in the village closest to your home. Nothing too serious of course, maybe some cattle stolen once every couple of months or a village youth kidnapped and brought to your home to toy with whenever you're bored, you always return the youth, unharmed, though slightly changed in one way or another. Yet as your antics continue to become a slight bane to the villagers, just like in the days of legend, they start to ask roaming mutants to go to try and make you leave them alone. Most of the so-called [']warriors['] are merely chumps that don't know what they're doing, you're quick to amuse yourself with these fools, nothing serious of course, just some random fun. However, when a hulking amazon of a mare comes to challenge you, you find yourself quickly outmatched by the female.";
 				LineBreak;
-				say "     Accepting defeat at her hand and then bowing before the other, you find out that the [']amazon['] is really a hermaphrodite that was looking for a good companion for her journey. The mare, or rather stallion-mare as shi liked to be called, quickly takes you with hir on hir journey when shi realizes that your antics are mostly the result of boredom with the world around you. You agree to go with her, but only after you tell the dragoness, whose name happens to be Olivia, that you'll always return home for a week to check over your [']family['] as not everyone wants to go off on a journey with you[if Fang is in the Grey Abbey Library]. Fang enjoys the chance for adventure though and turns out to be a longtime companion whom the stallion-mare reluctantly comes to find pleasant enough to follow after the two of you on your journeys[else if felinoid is tamed]. Your felinoid pet is a good tracker/hunter on the days when both your and the stallion-mare are scavenging for food. The creature's quiet nature makes it easy to get along with so that's always a plus for Olivia[end if]. Quickly you and the Olivia make a name for each other as bounty hunters and renegade heroes handling out of control mutants for the Prometheans and new government trying to clean up the world. The money that comes in is a small reward for you as the real prize you both look forward to is rutting with each other after a long day of fighting/scouting as your pheromone sacs ooze your excitement out to the [']fe-male['] when wanting hir to mount you. Shi is always happy to do so as her foot long cocks, of which she has three, are always in need to be stroked by your tender insides. Long nights are spent in each other's arms as even longer says are spent on the road with both of you seeking glory.";
+				say "     Accepting defeat at her hand and then bowing before the other, you find out that the [']amazon['] is really a hermaphrodite that was looking for a good companion for her journey. The mare, or rather stallion-mare as she liked to be called, quickly takes you with her on her journey when she realizes that your antics are mostly the result of boredom with the world around you. You agree to go with her, but only after you tell the dragoness, whose name happens to be Olivia, that you'll always return home for a week to check over your [']family['] as not everyone wants to go off on a journey with you[if Fang is in the Grey Abbey Library]. Fang enjoys the chance for adventure though and turns out to be a longtime companion whom the stallion-mare reluctantly comes to find pleasant enough to follow after the two of you on your journeys[else if felinoid is tamed]. Your felinoid pet is a good tracker/hunter on the days when both your and the stallion-mare are scavenging for food. The creature's quiet nature makes it easy to get along with so that's always a plus for Olivia[end if]. Quickly you and the Olivia make a name for each other as bounty hunters and renegade heroes handling out of control mutants for the Prometheans and new government trying to clean up the world. The money that comes in is a small reward for you as the real prize you both look forward to is rutting with each other after a long day of fighting/scouting as your pheromone sacs ooze your excitement out to the [']female['] when wanting her to mount you. Shi is always happy to do so as her foot long cocks, of which she has three, are always in need to be stroked by your tender insides. Long nights are spent in each other's arms as even longer says are spent on the road with both of you seeking glory.";
 
 Manticore ends here.

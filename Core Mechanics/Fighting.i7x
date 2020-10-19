@@ -11,7 +11,7 @@ To fight:
 	now MonsterID is a random number from 1 to number of filled rows in the Table of Random Critters;
 	let Q be a list of numbers;
 	if "Unerring Hunter" is not listed in feats of Player: [only adds random monsters if the player isn't an unerring hunter]
-		if ( BodyName of Player is "Mental Mouse" or mousecurse is 1 ) and companion of Player is not mouse girl:	[hunted by the mouse collective]
+		if ( BodyName of Player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not listed in companionList of Player:	[hunted by the mouse collective]
 			if there is a name of "Mental Mouse" in the Table of Random Critters:
 				add "Mental Mouse" to PossibleEncounters;
 				if humanity of Player < 75:
@@ -34,7 +34,7 @@ To fight:
 				say "DEBUG -> Can't fight with creature [Name entry] because it has Banned: [BannedStatus entry][line break]";
 			next;
 		if there is a lev entry:
-			if lev entry > level of Player + 1 and hardmode is false:
+			if lev entry > level of Player + 1 and HardMode is false:
 				next;
 		else:
 			next;
@@ -105,11 +105,14 @@ To fight:
 			let needed be (level of Player plus 1) times 10;
 		if XP of Player >= needed and humanity of Player > 0:
 			level up;
-		now needed is ( level of companion of Player ) times 10;
-		if "Good Teacher" is listed in feats of Player:
-			now needed is ( level of companion of Player ) times 6;
-		if XP of companion of Player >= needed and level of companion of Player < level of Player and humanity of Player > 0 and player is not lonely:
-			pet level up;
+		if companionList of Player is not empty:
+			repeat with x running through companionList of Player:
+				if x is not NullPet:
+					now needed is ( level of x ) times 10;
+					if "Good Teacher" is listed in feats of Player:
+						now needed is ( level of x ) times 6;
+					if XP of x >= needed and level of x < level of Player and humanity of Player > 0:
+						pet level up x;
 	if debugactive is 1:
 		say "     DEBUG: Random Monster Choosing Ended[line break]";
 	rule succeeds;
@@ -135,11 +138,14 @@ To challenge:
 		let needed be (level of Player plus 1) times 10;
 	if XP of Player >= needed and humanity of Player > 0:
 		level up;
-	now needed is ( level of companion of Player ) times 10;
-	if "Good Teacher" is listed in feats of Player:
-		now needed is ( level of companion of Player ) times 6;
-	if XP of companion of Player >= needed and level of companion of Player < level of Player and humanity of Player > 0 and player is not lonely:
-		pet level up;
+	if companionList of Player is not empty:
+		repeat with companion running through companionList of Player:
+			if companion is not NullPet:
+				now needed is ( level of companion ) times 10;
+				if "Good Teacher" is listed in feats of Player:
+					now needed is ( level of companion ) times 6;
+				if XP of companion >= needed and level of companion < level of Player and humanity of Player > 0:
+					pet level up companion;
 	rule succeeds;
 
 To Challenge (x - text):
@@ -163,15 +169,14 @@ To Challenge (x - text):
 	else:
 		say "     ERROR: Creature [x] not found.";
 
-to hardmodeboost: [Controls level boosting for hard mode, runs BEFORE any internal creature adjustments]
+to HardModeboost: [Controls level boosting for hard mode, runs BEFORE any internal creature adjustments]
 	let debit be 0;
 	choose row MonsterID from the Table of Random Critters;
-	if lev entry < level of Player and hardmode is true:
+	if lev entry < level of Player and HardMode is true:
 		now debit is ( level of Player ) - lev entry;
 		increase lev entry by debit;
 		increase HP entry by debit * 4;
 		increase wdam entry by (debit / 3);
 		increase dex entry by (debit / 5);
-
 
 Fighting ends here.

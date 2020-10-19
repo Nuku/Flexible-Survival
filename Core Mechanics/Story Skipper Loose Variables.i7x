@@ -59,6 +59,8 @@ to VariableSave:
 		now CurrentVariableName is Name entry;
 		if debug is at level 10:
 			say "Stashing variable [CurrentVariableName].";
+		[if debug is at level 10:
+			say "Stashing variable [CurrentVariableName].";]
 		if Type Entry is "text":
 			TextVariableSave;
 		else if Type Entry is "number":
@@ -355,6 +357,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is AlexandraIsaacPups;
 		-- "AlexandraFarmhandPups":
 			now NumberVarValue entry is AlexandraFarmhandPups;
+		-- "AlexandraNelsonPups":
+			now NumberVarValue entry is AlexandraNelsonPups;
 		-- "AlexandraCarlInteraction":
 			now NumberVarValue entry is AlexandraCarlInteraction;
 		-- "AlexandraCarlPups":
@@ -795,8 +799,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is DiegoChanged;
 		-- "DiegoFucked":
 			now NumberVarValue entry is DiegoFucked;
-		-- "Diegotalk":
-			now NumberVarValue entry is Diegotalk;
 		-- "dinonest":
 			now NumberVarValue entry is dinonest;
 		-- "dnfightresult":
@@ -1091,8 +1093,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is frbatbeaten;
 		-- "freecred":
 			now NumberVarValue entry is freecred;
-		-- "Freefeats":
-			now NumberVarValue entry is Freefeats;
 		-- "FriesianRelationship":
 			now NumberVarValue entry is FriesianRelationship;
 		-- "fsdbias":
@@ -1161,10 +1161,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is givingupton;
 		-- "GloryFate":
 			now NumberVarValue entry is GloryFate;
-		-- "glshiftstart":
-			now NumberVarValue entry is glshiftstart;
-		-- "glstart":
-			now NumberVarValue entry is glstart;
 		-- "gobgender":
 			now NumberVarValue entry is gobgender;
 		-- "goblinfight":
@@ -1203,12 +1199,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is gsd_pet;
 		-- "gsd_var":
 			now NumberVarValue entry is gsd_var;
-		-- "gsexit":
-			now NumberVarValue entry is gsexit;
-		-- "gsgl":
-			now NumberVarValue entry is gsgl;
-		-- "gsgt":
-			now NumberVarValue entry is gsgt;
+		-- "GenderLock":
+			now NumberVarValue entry is GenderLock;
 		-- "gshep_bed_scene":
 			now NumberVarValue entry is gshep_bed_scene;
 		-- "gshep_fights":
@@ -1223,10 +1215,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is GShepLastScene;
 		-- "gshepsquad":
 			now NumberVarValue entry is gshepsquad;
-		-- "gsms":
-			now NumberVarValue entry is gsms;
-		-- "gspg":
-			now NumberVarValue entry is gspg;
 		-- "GusTalkProgress":
 			now NumberVarValue entry is GusTalkProgress;
 		-- "hadiyafucked":
@@ -1501,6 +1489,26 @@ to NumberVariableSave:
 			now NumberVarValue entry is KyrverthStage;
 		-- "KyrverthTimer":
 			now NumberVarValue entry is KyrverthTimer;
+		-- "Kyrverthitemget":
+			now NumberVarValue entry is KyrverthItemGet;
+		-- "KyrverthItemReturned":
+			now NumberVarValue entry is KyrverthItemReturned;
+		-- "KyrverthNutGrowth":
+			now NumberVarValue entry is KyrverthNutGrowth;
+		-- "KyrverthSpikeGrowth":
+			now NumberVarValue entry is KyrverthSpikeGrowth;
+		-- "KyrverthWingType":
+			now NumberVarValue entry is KyrverthWingType;
+		-- "KyrverthCockType":
+			now NumberVarValue entry is KyrverthCockType;
+		-- "KyrverthLockoutTimer":
+			now NumberVarValue entry is KyrverthLockoutTimer;
+		-- "KyrverthEndingTimer":
+			now NumberVarValue entry is KyrverthEndingTimer;
+		-- "KyrverthBodyChanged":
+			now NumberVarValue entry is KyrverthBodyChanged;
+		-- "KyrverthPanicWitnessed":
+			now NumberVarValue entry is KyrverthPanicWitnessed;
 		-- "labhost":
 			now NumberVarValue entry is labhost;
 		-- "labtimerA":
@@ -1589,8 +1597,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is Lastdelaymilitary;
 		-- "lastdenevent":
 			now NumberVarValue entry is lastdenevent;
-		-- "LastDiegoTricked":
-			now NumberVarValue entry is LastDiegoTricked;
 		-- "lastdobiemess":
 			now NumberVarValue entry is lastdobiemess;
 		-- "LastDrinkserved":
@@ -1805,12 +1811,12 @@ to NumberVariableSave:
 			now NumberVarValue entry is LOK;
 		-- "longboatfind":
 			now NumberVarValue entry is longboatfind;
-		-- "looknow":
-			now NumberVarValue entry is looknow;
 		-- "Lost":
 			now NumberVarValue entry is Lost;
 		-- "losttoalphahusky":
 			now NumberVarValue entry is losttoalphahusky;
+		-- "lostToHorseman":
+			now NumberVarValue entry is lostToHorseman;
 		-- "LostToZebra":
 			now NumberVarValue entry is LostToZebra;
 		-- "loversbench":
@@ -1899,8 +1905,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is MMP;
 		-- "mondodgebonus":
 			now NumberVarValue entry is mondodgebonus;
-		-- "monhitbonus":
-			now NumberVarValue entry is monhitbonus;
 		-- "monmindbonus":
 			now NumberVarValue entry is monmindbonus;
 		-- "monstercom":
@@ -2273,8 +2277,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is pquest;
 		-- "pr_completion":
 			now NumberVarValue entry is pr_completion;
-		-- "prankevent":
-			now NumberVarValue entry is prankevent;
 		-- "pregtype":
 			now NumberVarValue entry is pregtype;
 		-- "provingstallionhood":
@@ -2397,6 +2399,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is scufflecount;
 		-- "sdbook":
 			now NumberVarValue entry is sdbook;
+		-- "searchesUtSit":
+			now NumberVarValue entry is searchesUtSit;
 		-- "SeraphisContent":
 			now NumberVarValue entry is SeraphisContent;
 		-- "SeraphisNeedy":
@@ -2559,10 +2563,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is stiffedpayment;
 		-- "strangebottledrink":
 			now NumberVarValue entry is strangebottledrink;
-		-- "stripbarcounter":
-			now NumberVarValue entry is stripbarcounter;
-		-- "strongbacked":
-			now NumberVarValue entry is strongbacked;
 		-- "struggleatt":
 			now NumberVarValue entry is struggleatt;
 		-- "sugarferretfight":
@@ -3080,8 +3080,10 @@ to TruthVariableSave:
 			now TruthVarValue entry is blanchetalk2;
 		-- "blanchetalk3":
 			now TruthVarValue entry is blanchetalk3;
-		-- "blindmode":
-			now TruthVarValue entry is blindmode;
+		-- "BlindMode":
+			now TruthVarValue entry is BlindMode;
+		-- "blindmode": [previous spelling with other capitalization]
+			now TruthVarValue entry is BlindMode;
 		-- "bloblost":
 			now TruthVarValue entry is bloblost;
 		-- "bopseen":
@@ -3228,8 +3230,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is graphics;
 		-- "grhouse":
 			now TruthVarValue entry is grhouse;
-		-- "gsbm":
-			now TruthVarValue entry is gsbm;
 		-- "gsd_attack":
 			now TruthVarValue entry is gsd_attack;
 		-- "gsd_fled":
@@ -3240,18 +3240,12 @@ to TruthVariableSave:
 			now TruthVarValue entry is gsd_slut;
 		-- "gsd_special":
 			now TruthVarValue entry is gsd_special;
-		-- "gshep_scarscene":
-			now TruthVarValue entry is gshep_scarscene;
-		-- "gshm":
-			now TruthVarValue entry is gshm;
-		-- "gsnhm":
-			now TruthVarValue entry is gsnhm;
 		-- "HadGusBackgroundTalk":
 			now TruthVarValue entry is HadGusBackgroundTalk;
 		-- "hadiyahyg":
 			now TruthVarValue entry is hadiyahyg;
-		-- "Hardmode":
-			now TruthVarValue entry is Hardmode;
+		-- "HardMode":
+			now TruthVarValue entry is HardMode;
 		-- "heat enabled":
 			now TruthVarValue entry is heat enabled;
 		-- "heatturnskipper":
@@ -3312,6 +3306,14 @@ to TruthVariableSave:
 			now TruthVarValue entry is kristentf3fuck;
 		-- "ktcockmatch":
 			now TruthVarValue entry is ktcockmatch;
+		-- "KyrverthItemStealable":
+			now TruthVarValue entry is KyrverthItemStealable;
+		-- "KyrverthItemTaken":
+			now TruthVarValue entry is KyrverthItemTaken;
+		-- "KyrverthQuestHairGiven":
+			now TruthVarValue entry is KyrverthQuestHairGiven;
+		-- "KyrverthUsedArtifact":
+			now TruthVarValue entry is KyrverthUsedArtifact;
 		-- "LarissaTailed":
 			now TruthVarValue entry is LarissaTailed;
 		-- "LarissaWinged":
@@ -3402,8 +3404,8 @@ to TruthVariableSave:
 			now TruthVarValue entry is NewGraphicsOpened;
 		-- "nmformswitch":
 			now TruthVarValue entry is nmformswitch;
-		-- "nohealmode":
-			now TruthVarValue entry is nohealmode;
+		-- "NoHealMode":
+			now TruthVarValue entry is NoHealMode;
 		-- "nosquirrelanal":
 			now TruthVarValue entry is nosquirrelanal;
 		-- "obliging":
@@ -3472,8 +3474,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is sblzephyr;
 		-- "SerenityVore":
 			now TruthVarValue entry is SerenityVore;
-		-- "showlocale":
-			now TruthVarValue entry is showlocale;
 		-- "sidneyanal":
 			now TruthVarValue entry is sidneyanal;
 		-- "sidneyformtalk":
@@ -4005,6 +4005,8 @@ to VariableNumberLoad:
 					now AlexandraIsaacPups is numberVarValue entry;
 				-- "AlexandraFarmhandPups":
 					now AlexandraFarmhandPups is numberVarValue entry;
+				-- "AlexandraNelsonPups":
+					now AlexandraNelsonPups is numberVarValue entry;
 				-- "AlexandraCarlInteraction":
 					now AlexandraCarlInteraction is numberVarValue entry;
 				-- "AlexandraCarlPups":
@@ -4445,8 +4447,6 @@ to VariableNumberLoad:
 					now DiegoChanged is numberVarValue entry;
 				-- "DiegoFucked":
 					now DiegoFucked is numberVarValue entry;
-				-- "Diegotalk":
-					now Diegotalk is numberVarValue entry;
 				-- "dinonest":
 					now dinonest is numberVarValue entry;
 				-- "dnfightresult":
@@ -4743,8 +4743,6 @@ to VariableNumberLoad:
 					now frbatbeaten is numberVarValue entry;
 				-- "freecred":
 					now freecred is numberVarValue entry;
-				-- "Freefeats":
-					now Freefeats is numberVarValue entry;
 				-- "FriesianRelationship":
 					now FriesianRelationship is numberVarValue entry;
 				-- "fsdbias":
@@ -4813,10 +4811,6 @@ to VariableNumberLoad:
 					now givingupton is numberVarValue entry;
 				-- "GloryFate":
 					now GloryFate is numberVarValue entry;
-				-- "glshiftstart":
-					now glshiftstart is numberVarValue entry;
-				-- "glstart":
-					now glstart is numberVarValue entry;
 				-- "gobgender":
 					now gobgender is numberVarValue entry;
 				-- "goblinfight":
@@ -4855,12 +4849,10 @@ to VariableNumberLoad:
 					now gsd_pet is numberVarValue entry;
 				-- "gsd_var":
 					now gsd_var is numberVarValue entry;
-				-- "gsexit":
-					now gsexit is numberVarValue entry;
+				-- "GenderLock":
+					now GenderLock is numberVarValue entry;
 				-- "gsgl":
-					now gsgl is numberVarValue entry;
-				-- "gsgt":
-					now gsgt is numberVarValue entry;
+					now GenderLock is numberVarValue entry;
 				-- "gshep_bed_scene":
 					now gshep_bed_scene is numberVarValue entry;
 				-- "gshep_fights":
@@ -4875,10 +4867,6 @@ to VariableNumberLoad:
 					now GShepLastScene is numberVarValue entry;
 				-- "gshepsquad":
 					now gshepsquad is numberVarValue entry;
-				-- "gsms":
-					now gsms is numberVarValue entry;
-				-- "gspg":
-					now gspg is numberVarValue entry;
 				-- "GusTalkProgress":
 					now GusTalkProgress is numberVarValue entry;
 				-- "hadiyafucked":
@@ -5153,6 +5141,26 @@ to VariableNumberLoad:
 					now KyrverthStage is numberVarValue entry;
 				-- "KyrverthTimer":
 					now KyrverthTimer is numberVarValue entry;
+				-- "Kyrverthitemget":
+					now KyrverthItemGet is NumberVarValue entry;
+				-- "KyrverthItemReturned":
+					now KyrverthItemReturned is NumberVarValue entry;
+				-- "KyrverthNutGrowth":
+					now KyrverthNutGrowth is NumberVarValue entry;
+				-- "KyrverthSpikeGrowth":
+					now KyrverthSpikeGrowth is NumberVarValue entry;
+				-- "KyrverthWingType":
+					now KyrverthWingType is NumberVarValue entry;
+				-- "KyrverthCockType":
+					now KyrverthCockType is NumberVarValue entry;
+				-- "KyrverthLockoutTimer":
+					now KyrverthLockoutTimer is NumberVarValue entry;
+				-- "KyrverthEndingTimer":
+					now KyrverthEndingTimer is NumberVarValue entry;
+				-- "KyrverthBodyChanged":
+					now KyrverthBodyChanged is NumberVarValue entry;
+				-- "KyrverthPanicWitnessed":
+					now KyrverthPanicWitnessed is NumberVarValue entry;
 				-- "labhost":
 					now labhost is numberVarValue entry;
 				-- "labtimerA":
@@ -5241,8 +5249,6 @@ to VariableNumberLoad:
 					now Lastdelaymilitary is numberVarValue entry;
 				-- "lastdenevent":
 					now lastdenevent is numberVarValue entry;
-				-- "LastDiegoTricked":
-					now LastDiegoTricked is numberVarValue entry;
 				-- "lastdobiemess":
 					now lastdobiemess is numberVarValue entry;
 				-- "LastDrinkserved":
@@ -5457,12 +5463,12 @@ to VariableNumberLoad:
 					now LOK is numberVarValue entry;
 				-- "longboatfind":
 					now longboatfind is numberVarValue entry;
-				-- "looknow":
-					now looknow is numberVarValue entry;
 				-- "Lost":
 					now Lost is numberVarValue entry;
 				-- "losttoalphahusky":
 					now losttoalphahusky is numberVarValue entry;
+				-- "lostToHorseman":
+					now lostToHorseman is numberVarValue entry;
 				-- "LostToZebra":
 					now LostToZebra is numberVarValue entry;
 				-- "loversbench":
@@ -5551,8 +5557,6 @@ to VariableNumberLoad:
 					now MMP is numberVarValue entry;
 				-- "mondodgebonus":
 					now mondodgebonus is numberVarValue entry;
-				-- "monhitbonus":
-					now monhitbonus is numberVarValue entry;
 				-- "monmindbonus":
 					now monmindbonus is numberVarValue entry;
 				-- "monstercom":
@@ -5925,8 +5929,6 @@ to VariableNumberLoad:
 					now pquest is numberVarValue entry;
 				-- "pr_completion":
 					now pr_completion is numberVarValue entry;
-				-- "prankevent":
-					now prankevent is numberVarValue entry;
 				-- "pregtype":
 					now pregtype is numberVarValue entry;
 				-- "provingstallionhood":
@@ -6049,6 +6051,8 @@ to VariableNumberLoad:
 					now scufflecount is numberVarValue entry;
 				-- "sdbook":
 					now sdbook is numberVarValue entry;
+				-- "searchesUtSit":
+					now searchesUtSit is numberVarValue entry;
 				-- "SeraphisContent":
 					now SeraphisContent is numberVarValue entry;
 				-- "SeraphisNeedy":
@@ -6213,10 +6217,6 @@ to VariableNumberLoad:
 					now stiffedpayment is numberVarValue entry;
 				-- "strangebottledrink":
 					now strangebottledrink is numberVarValue entry;
-				-- "stripbarcounter":
-					now stripbarcounter is numberVarValue entry;
-				-- "strongbacked":
-					now strongbacked is numberVarValue entry;
 				-- "struggleatt":
 					now struggleatt is numberVarValue entry;
 				-- "sugarferretfight":
@@ -6745,8 +6745,10 @@ to VariableTruthLoad:
 					now blanchetalk2 is TruthVarValue entry;
 				-- "blanchetalk3":
 					now blanchetalk3 is TruthVarValue entry;
+				-- "BlindMode":
+					now BlindMode is TruthVarValue entry;
 				-- "blindmode":
-					now blindmode is TruthVarValue entry;
+					now BlindMode is TruthVarValue entry;
 				-- "bloblost":
 					now bloblost is TruthVarValue entry;
 				-- "bopseen":
@@ -6893,8 +6895,6 @@ to VariableTruthLoad:
 					now graphics is TruthVarValue entry;
 				-- "grhouse":
 					now grhouse is TruthVarValue entry;
-				-- "gsbm":
-					now gsbm is TruthVarValue entry;
 				-- "gsd_attack":
 					now gsd_attack is TruthVarValue entry;
 				-- "gsd_fled":
@@ -6905,18 +6905,14 @@ to VariableTruthLoad:
 					now gsd_slut is TruthVarValue entry;
 				-- "gsd_special":
 					now gsd_special is TruthVarValue entry;
-				-- "gshep_scarscene":
-					now gshep_scarscene is TruthVarValue entry;
-				-- "gshm":
-					now gshm is TruthVarValue entry;
-				-- "gsnhm":
-					now gsnhm is TruthVarValue entry;
 				-- "HadGusBackgroundTalk":
 					now HadGusBackgroundTalk is TruthVarValue entry;
 				-- "hadiyahyg":
 					now hadiyahyg is TruthVarValue entry;
+				-- "HardMode":
+					now HardMode is TruthVarValue entry;
 				-- "Hardmode":
-					now Hardmode is TruthVarValue entry;
+					now HardMode is TruthVarValue entry;
 				-- "heat enabled":
 					now heat enabled is TruthVarValue entry;
 				-- "heatturnskipper":
@@ -6977,6 +6973,14 @@ to VariableTruthLoad:
 					now kristentf3fuck is TruthVarValue entry;
 				-- "ktcockmatch":
 					now ktcockmatch is TruthVarValue entry;
+				-- "KyrverthItemStealable":
+					now KyrverthItemStealable is TruthVarValue entry;
+				-- "KyrverthItemTaken":
+					now KyrverthItemTaken is TruthVarValue entry;
+				-- "KyrverthQuestHairGiven":
+					now KyrverthQuestHairGiven is TruthVarValue entry;
+				-- "KyrverthUsedArtifact":
+					now KyrverthUsedArtifact is TruthVarValue entry;
 				-- "LarissaTailed":
 					now LarissaTailed is TruthVarValue entry;
 				-- "LarissaWinged":
@@ -7067,8 +7071,10 @@ to VariableTruthLoad:
 					now NewGraphicsOpened is TruthVarValue entry;
 				-- "nmformswitch":
 					now nmformswitch is TruthVarValue entry;
+				-- "NoHealMode":
+					now NoHealMode is TruthVarValue entry;
 				-- "nohealmode":
-					now nohealmode is TruthVarValue entry;
+					now NoHealMode is TruthVarValue entry;
 				-- "nosquirrelanal":
 					now nosquirrelanal is TruthVarValue entry;
 				-- "obliging":
@@ -7137,8 +7143,6 @@ to VariableTruthLoad:
 					now sblzephyr is TruthVarValue entry;
 				-- "SerenityVore":
 					now SerenityVore is TruthVarValue entry;
-				-- "showlocale":
-					now showlocale is TruthVarValue entry;
 				-- "sidneyanal":
 					now sidneyanal is TruthVarValue entry;
 				-- "sidneyformtalk":

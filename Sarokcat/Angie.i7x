@@ -39,12 +39,13 @@ Object	Name
 AngieTrapped	"AngieTrapped"
 
 AngieTrapped is a situation.
-The sarea of AngieTrapped is "Zoo".
+ResolveFunction of AngieTrapped is "[ResolveEvent AngieTrapped]".
+Sarea of AngieTrapped is "Zoo".
 when play begins:
 	add AngieTrapped to badspots of HermList;
 	add AngieTrapped to BadSpots of FurryList;
 
-Instead of Resolving a AngieTrapped:
+to say ResolveEvent AngieTrapped:
 	if AngieHappy is 0:
 		say "     Wandering along the zoo pathways, you hear several of the creatures roaming the zoo apparently fighting nearby. Curious, you move slightly closer to investigate and see that a few of the beasts are indeed fighting outside one of the smaller animal pens. You really aren't sure what they are fighting about, but it could be dangerous to interfere. Do you do so anyways?";
 		if Player consents:
@@ -82,7 +83,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "catnip "	"A small packet of catnip. It's pretty light, containing only dried, fragrant leaves."	0	catnip
 
-the usedesc of catnip is "[catnip use]";
+Usedesc of catnip is "[catnip use]";
 
 instead of sniffing catnip:
 	say "[catnip use]";
@@ -120,7 +121,7 @@ to say zoogiftscent:
 
 The invent of Zoo Giftshop is { "chips", "soda" }.
 
-The description of Zoo Giftshop is "[shopappearance]".
+Description of Zoo Giftshop is "[shopappearance]".
 
 to say shopappearance:
 	if AngieAroused is 50: [ Angie + Midnight in the gift shop ]
@@ -135,7 +136,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "feline porn"	"     A small stack of pages from various nature books, describing the mating habits of the different types of big cats, intermixed with a number of photographs of a majestic lion. The beast is shown in his enclosure in the zoo, then a few of him mounting a lioness and a picture of him rolled on his back, with a human hand rubbing his belly. The following pics depict said hand (which must be Keith's) rubbing quite a bit lower and soon wrapping around the lion's erect cock. This is definitely a collection for enthusiasts about felines..."	1	feline porn
 
-feline porn is a grab object. It is part of the player. It is not temporary.
+feline porn is a grab object. It is not temporary.
 
 the scent of the feline porn is "The bundle of pornographic texts and photos have a lingering scent of sex to them.".
 
@@ -154,17 +155,17 @@ instead of using feline porn:
 			say "     You settle yourself down to really enjoy some personal time and relieve your excess arousal. You pull out a selection of the merchandise showing graceful feline shapes, in addition to a few of Keith's pictures, and begin playing with yourself. You start by rubbing over your [BodyName of Player] body[if Breast Size of Player > 8], caressing your nipples and teasing your huge breasts, running your fingers over their sensitive flesh[else if Breast Size of Player > 5], caressing your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else if Breast Size of Player > 2], caressing your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else] and teasing your nipples[end if][if Nipple Count of Player > 2]. You lavish attention upon each pair in turn, helping to get yourself wound up for a bigger release[end if].";
 			if Player is herm:
 				say "     Being a herm, you place a hand at your cock[smn] and the other at your cunt[sfn] and start playing with them. You stroke your [cock size desc of Player] [Cock of Player] shaft slowly at first while fingering the wet folds of your puss[yfn]. Precum dribbles onto you while your feminine juices soak your other hand. You move your hand away from time to time to rub your [Ball Size Adjective of Player] [Balls], feeling the pressure build up in them.";
-				if companion of Player is mouse girl:
+				if mouse girl is listed in companionList of Player:
 					say "     As you continue to play with yourself, your mind wanders to thinking of sexy mice and all the fun things you could do with them. Glancing over, you spot Rachel sitting nearby, playing with herself as she watches you. She grins at you knowingly as fresh images of you surrounded by horny mice fill your mind. Moaning, you become even more aroused and play with yourself even more vigorously. You even start to share in the mouse girl's sensations as well.";
 				say "     You keep teasing yourself, holding back your orgasm a little longer, wanting to really enjoy it... until finally you moan loudly and cum hard, releasing a [if Ball Size of Player < 12]sizable blast[else if Ball Size of Player < 25]stream[else]veritable torrent[end if] of thick semen, creating a messy pool of your seed as you spray it onto yourself and the ground nearby. Your cunt quivers and squeezes down around your fingers, [if Libido of Player < 75]soaking your hand[else if Libido of Player < 90]sending your juices down your legs until a small puddle is formed[else]blasting a gush of feminine juices that soaks your thighs and runs down your legs to form a large, musky puddle[end if]. You keep stroking and pumping until you're left panting and moaning, almost passing out from the much-needed release.";
 			else if Player is male:
 				say "     You take hold of your [if Cock Count of Player > 1]cocks and start playing with them[else]cock and start playing with it[end if]. You stroke your [cock size desc of Player] [Cock of Player] shaft[smn] slowly at first, pleasing yourself as only you can, knowing just what feels right. Precum dribbles down your meat to get spread over it as you stroke yourself. You move a hand away from time to time to rub your [Ball Size Adjective of Player] [Balls], feeling the pressure build up in them.";
-				if companion of Player is mouse girl:
+				if mouse girl is listed in companionList of Player:
 					say "     As you continue to play with yourself, your mind wanders to thoughts of sexy mice and all the fun things you could do with them. Glancing over, you spot Rachel sitting nearby, playing with herself as she watches you. She grins at you knowingly as fresh images of you surrounded by horny mice fill your mind. Moaning, you become even more aroused and play with yourself even more vigorously. You even start to share in the mouse girl's sensations as well.";
 				say "     You keep teasing yourself, holding back your orgasm a little longer, wanting to really enjoy it... until finally you moan loudly and cum hard, releasing a [if Ball Size of Player < 12]sizable blast[else if Ball Size of Player < 25]stream[else]veritable torrent[end if] of thick semen, creating a messy pool of your musky seed as you spray it onto yourself and the ground nearby. You keep stroking and pumping until you're left panting and moaning, almost passing out from the much-needed release.";
 			else if Player is female:
 				say "     You move your hands down to start fingering the wet folds of your puss[yfn]. You work [if Cunt Tightness of Player is 1]a finger[else if Cunt Tightness of Player < 4]a pair of fingers[else if Cunt Tightness of Player < 6]a trio of fingers[else]a trio of fingers and eventually your whole hand[end if] into your gripping, squeezing vagina. You rub and tease along your inner walls and make sure to pay proper attention to your sensitive clit.";
-				if companion of Player is mouse girl:
+				if mouse girl is listed in companionList of Player:
 					say "     As you continue to play with yourself, your mind wanders to thinking of sexy mice and all the fun things you could do with them. Glancing over, you spot Rachel sitting nearby, playing with herself as she watches you. She grins at you knowingly as fresh images of you surrounded by horny mice fill your mind. Moaning, you become even more aroused and play with yourself even more vigorously. You even start to share in the mouse girl's sensations as well.";
 				say "     You keep teasing yourself, holding back your orgasm a little longer, wanting to really enjoy it... until finally you moan loudly and cum hard, [if Libido of Player < 75]soaking your hand[else if Libido of Player < 90]sending your juices down your legs until a small puddle is formed[else]blasting a gush of feminine juices that soaks your thighs and runs down your legs to form a large, musky puddle[end if] as your cunt quivers and squeezes down around your fingers. You keep rubbing and fingering yourself until you're left panting and moaning, almost passing out from the much-needed release.";
 			let muskwave be ( Libido of Player + ( Ball Size of Player * 3 ) + ( Cunt Tightness of Player * 5 ) );
@@ -172,7 +173,7 @@ instead of using feline porn:
 			decrease humanity of Player by a random number between 2 and 5;
 			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
-			if the companion of Player is mouse girl:
+			if the mouse girl is listed in companionList of Player:
 				decrease humanity of Player by 2;
 				if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
 				if a random chance of 2 in 3 succeeds:
@@ -194,7 +195,7 @@ instead of using feline porn:
 
 to say SimpleFelineMast:
 	say "     You settle yourself down to [if Player is herm]play around with your junk for a bit[else if Player is male]jerk yourself off briefly[else]give yourself a quick fingering[end if]. You grab one of the photos for added inspiration and get yourself off, relieving some of your excess arousal";
-	if the companion of Player is mouse girl:
+	if the mouse girl is listed in companionList of Player:
 		say ". Partway into your masturbatory session, thoughts of sexy mice slip into your mind.";
 		decrease humanity of Player by 1;
 		if a random chance of 1 in 2 succeeds:
@@ -251,8 +252,8 @@ AnalVirgin of Angie is true.
 PenileVirgin of Angie is true.
 SexuallyExperienced of Angie is true.
 MainInfection of Angie is "Panther Herm".
-The description of Angie is "[AngieAppearance]".
-The conversation of Angie is { "Mewl!" }.
+Description of Angie is "[AngieAppearance]".
+Conversation of Angie is { "Mewl!" }.
 The icon of Angie is the figure of Angie_icon.
 
 
@@ -594,7 +595,7 @@ to say AngieSex1: [fucking her]
 	if AngieAroused is 0:
 		say "     Angie looks at you with desire, though she is still hesitant about this and says, 'I'm not really sure it's OK to just give in to the urges like this, but it does feel so very, very good. Do you really think it's OK?' Seems like she'll need a little bit of convincing yet before you can fuck her. Doing your best to calm and reassure her, you...";
 		LineBreak;
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
 		increase diceroll by bonus;
@@ -662,7 +663,7 @@ to say AngieSex2: [getting fucked by Angie]
 	if AngieAroused is 0:
 		say "     Angie looks at you with desire, though she is still hesitant about this and says, 'I'm not really sure it's OK to just give in to the urges like this, but it does feel so very, very good. Do you really think it's OK?' Seems like she'll need a little bit of convincing yet before you can fuck her. Doing your best to calm and reassure her, you...";
 		LineBreak;
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
 		increase diceroll by bonus;
@@ -748,7 +749,7 @@ to say AngieSex3: [herm sex with Angie]
 	if AngieAroused is 0:
 		say "     Angie looks at you with desire, though she is still hesitant about this and says, 'I'm not really sure it's OK to just give in to the urges like this, but it does feel so very, very good. Do you really think it's OK?' Seems like she'll need a little bit of convincing yet before you can fuck her. Doing your best to calm and reassure her, you...";
 		LineBreak;
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
 		increase diceroll by bonus;
@@ -941,7 +942,7 @@ to say AngieSex6: [giving her a blowjob]
 	if AngieAroused is 0:
 		say "     Angie looks at you with desire, though she is still hesitant about this and says, 'I'm not really sure it's OK to just give in to the urges like this, but it does feel so very, very good. Do you really think it's OK?' Seems like she'll need a little bit of convincing yet before you can fuck her. Doing your best to calm and reassure her, you...";
 		LineBreak;
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
 		increase diceroll by bonus;

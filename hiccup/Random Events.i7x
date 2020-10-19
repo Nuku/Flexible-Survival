@@ -10,33 +10,25 @@ Object	Name
 Wet Clothes	"Wet Clothes"
 
 Wet Clothes is a situation.
-the sarea of Wet Clothes is "Warehouse".
+ResolveFunction of Wet Clothes is "[ResolveEvent Wet Clothes]".
+Sarea of Wet Clothes is "Warehouse".
 
-Instead of Resolving a Wet Clothes:
+to say ResolveEvent Wet Clothes:
 	say "     While exploring the city, you discover several small piles of shredded clothes. The clothes, a large part of the sidewalk, and several nearby parked cars are completely soaked in spooge. Whatever did this, sprayed gallons of the stuff everywhere, soaking, and probably mutating, all the humans nearby. You decide to leave before whatever did this 'cums' back.";
 	increase the score by 1;
 	now Wet Clothes is Resolved;
 
-Table of GameEventIDs (continued)
-Object	Name
-Politics	"Politics"
-
-Politics is a situation.
-the sarea of Politics is "Campus".
-
-Instead of Resolving a Politics:
-	say "     While exploring the campus near the Poli-Sci building, you stumble upon an odd sight. You spot a humanoid donkey and a humanoid elephant arguing and fighting with one another. Not wanting to get dragged into the fight, you sneak away before they notice you.";
-	increase the score by 1;
-	now Politics is Resolved;
+["Politics" event revised in Misc Events file - Pandemonium]
 
 Table of GameEventIDs (continued)
 Object	Name
 Failed Survivor	"Failed Survivor"
 
 Failed Survivor is a situation.
-the sarea of Failed Survivor is "Junkyard".
+ResolveFunction of Failed Survivor is "[ResolveEvent Failed Survivor]".
+Sarea of Failed Survivor is "Junkyard".
 
-Instead of Resolving a Failed Survivor:
+to say ResolveEvent Failed Survivor:
 	say "     While exploring the junkyard, you discover a discarded backpack that looks very similar to yours. You open it up and see that the only thing inside is a journal. You look at the journal and start to read it.";
 	LineBreak;
 	say "     Day 1: When the mutants first appeared I took shelter in an old basement for several days, but I can't stand waiting any longer. I'm going to get out of this crazy city!";
@@ -53,9 +45,10 @@ Object	Name
 Tracks	"Tracks"
 
 Tracks is a situation.
-the sarea of Tracks is "Plains".
+ResolveFunction of Tracks is "[ResolveEvent Tracks]".
+Sarea of Tracks is "Plains".
 
-Instead of Resolving a Tracks:
+to say ResolveEvent Tracks:
 	say "     While exploring around some collapsing buildings, you discover a short trail of footprints leading through some mud. At first, the footprints are human, but the tracks slowly change until they look like they were made by hooves. You follow the tracks as long as you can, but you eventually lose the trail.";
 	increase the score by 1;
 	now Tracks is Resolved;

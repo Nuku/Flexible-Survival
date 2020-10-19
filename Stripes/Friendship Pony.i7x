@@ -325,8 +325,8 @@ to say beatthefpony:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -384,9 +384,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 10;
 	now Cunt Tightness entry is 6;
+	now SeductionImmune entry is false;
 	now libido entry is 55; [ Target libido the infection will rise towards. ]
 	now loot entry is "pony cider"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 22; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]smooth[or][if Player is puremale]stocky[else]slender[end if][or]toyetic[at random]";
 	now type entry is "[one of]equine[or]pony[at random]";
@@ -401,7 +405,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -517,7 +521,7 @@ this is the fpony rule:
 		if "Horny Bastard" is listed in feats of Player, increase libgrowth by a random number between 0 and 2;
 		if libgrowth > 10, now libgrowth is 10;
 		increase Libido of Player by libgrowth;
-		say "[one of]'We shouldn't fight over this. Let's be friends!' [or]'I'm sorry. Let's just snuggle, friend!' [or]'How about we just kiss and make up?' [or]'Let's get to know each other,' [or]'Stop being so grumpy and gimme a kiss,' [or]'I know! A kiss will cheer you up,' [at random]the pony says, putting her forelegs around you in a hug while you're still recovering from her recent assault. She pulls you into a kiss for [special-style-2][wdam entry / 2][roman type] damage and [if libgrowth < 5]slightly [end if]increased libido[if HP of Player > 0 and lust of Player < 110]. You moan softly and reach to grab that ass of hers, but recover your reason and push her back[else]. You moan softly into the kiss and reach back, grabbing that ass of hers right on that design of [rfponybm] on her flank[end if].";
+		say "[one of]'We shouldn't fight over this. Let's be friends!' [or]'I'm sorry. Let's just snuggle, friend!' [or]'How about we just kiss and make up?' [or]'Let's get to know each other,' [or]'Stop being so grumpy and gimme a kiss,' [or]'I know! A kiss will cheer you up,' [at random]the pony says, putting her forelegs around you in a hug while you're still recovering from her recent assault. She pulls you into a kiss for [special-style-2][wdam entry / 2][roman type] damage and [if libgrowth < 5]slightly [end if]increased libido[if HP of Player > 0 and Libido of Player < 110]. You moan softly and reach to grab that ass of hers, but recover your reason and push her back[else]. You moan softly into the kiss and reach back, grabbing that ass of hers right on that design of [rfponybm] on her flank[end if].";
 
 Section 4 - TF mechanics
 
@@ -759,9 +763,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "pony cider"	"A bottle of golden liquid labeled as [']cider[']."	1	pony cider
 
-pony cider is a grab object. pony cider is infectious. The strain of pony cider is "Friendship Pony".
+pony cider is a grab object. pony cider is infectious. Strain of pony cider is "Friendship Pony".
 
-The usedesc of pony cider is "[drinkponycider]";
+Usedesc of pony cider is "[drinkponycider]";
 
 to say drinkponycider:
 	choose row MonsterID from Table of Random Critters;

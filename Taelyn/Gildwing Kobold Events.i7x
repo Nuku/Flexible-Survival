@@ -322,14 +322,15 @@ Object	Name
 GildwingKoboldTest	"GildwingKoboldTest"
 
 GildwingKoboldTest is a situation.
-The sarea of GildwingKoboldTest is "Nowhere".
+ResolveFunction of GildwingKoboldTest is "[ResolveEvent GildwingKoboldTest]".
+Sarea of GildwingKoboldTest is "Nowhere".
 
 when play begins:
 	add GildwingKoboldTest to BadSpots of FemaleList;
 	add GildwingKoboldTest to BadSpots of MaleList;
 	add GildwingKoboldTest to BadSpots of FurryList;
 
-Instead of resolving GildwingKoboldTest:
+to say ResolveEvent GildwingKoboldTest:
 	GildwingKoboldTest;
 
 instead of going east from Avalon-Crossroads while (Resolution of GildwingKoboldTest is 0):

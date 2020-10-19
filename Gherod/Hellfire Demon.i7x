@@ -12,9 +12,9 @@ to say HellDemon wins:
 		say ""; [dealt with at the source]
 	else:
 		if HP of Player > 0: [player submits]
-			if gimp mask is equipped and Hellfire Club is not known:
+			if (gimp mask is equipped) and Hellfire Club is not known:
 				say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction as you kneel down in front of him. 'That easy, huh... Master Mogdraz will indeed love you. Now be a good [boygirl] and stay still.' Following his words, you suddenly feel some kind of clothed bag covering your head before you're lifted from the ground into what seems to be the demon's shoulder. You can't see anything, but you know he's carrying you to some place. Each large step he takes only makes you [if player is submissive]more eager[else]more nervous[end if] to know what your next destination will be. But one thing you're certain, is that you're going to meet this Mogdraz person, whoever they might be.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     You're also wondering why Xaedihr hasn't done anything to rescue you... Is that why you bring powerful companions with you? To see you being carried around - or worse! - by some random demonic creature?! He better be following you...";
 				say "[MogdrazIntro]";
 			else:
@@ -28,7 +28,7 @@ to say HellDemon wins:
 		else: [player loses]
 			if gimp mask is equipped and Hellfire Club is not known:
 				say "     Unable to keep fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'Still putting up a fight, huh... Master Mogdraz will indeed love your spirit. Now be a good [boygirl] and stay still.' Following his words, you suddenly feel some kind of clothed bag covering your head before you're lifted from the ground into what seems to be the demon's shoulder. You can't see anything, but you know he's carrying you to some place. Each large step he takes only makes you [if player is submissive]more eager[else]more nervous[end if] to know what your next destination will be. But one thing you're certain, is that you're going to meet this Mogdraz person, whoever they might be.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     You're also wondering why Xaedihr hasn't done anything to rescue you... Is that why you bring powerful companions with you? To see you being carried around - or worse! - by some random demonic creature?! He better be following you...";
 				say "[MogdrazIntro]";
 			else:
@@ -115,7 +115,7 @@ to say HellDemon loses:
 			now sortorder entry is 4;
 			now description entry is "Let him use your ass and give you a nice fuck";
 		[]
-			if companion of player is demonologist and libido of Xaedihr > 0:
+			if demonologist is listed in companionList of Player and libido of Xaedihr > 0:
 				choose a blank row in table of fucking options;
 				now title entry is "Double tag him with Xaedihr";
 				now sortorder entry is 7;
@@ -334,7 +334,7 @@ to say HellDemon Desc:
 		project Figure of HellfireDemon_clothed_icon;
 		say "     Standing in front of you is yet another intimidating creature of Hell. A deep crimson, tall and powerful demon, with large tauric horns on the top of his head, approaches you from the darkness. Your eyes inevitably land on the massive bulge barely contained by a leather jockstrap, jiggling slightly at each step that he takes. On top of that, his athletic body is covered in muscle, with a simple harness around his hairy pectorals, and while he generally looks more human in appearance than the brutish of demons, his dark sharp claws still prove a threat to you. With a grin on his face, he speaks to you:[line break]";
 		if gimp mask is equipped and Hellfire Club is not known:
-			say "     'A gimp mask? Such depravity... so delicious! [bold type]You'll make a great slave candidate for Master Mogdraz![roman type] Be a good [boygirl] and I'll take you there. Or don't, and I'll drag you with me anyway! He will be very... very pleased to meet you.' With this, the demon lunges himself at you.";
+			say "     'A gimp mask? Such depravity... so delicious! [bold type]You'll make a great slave candidate for Master Mogdraz[roman type]! Be a good [boygirl] and I'll take you there. Or don't, and I'll drag you with me anyway! He will be very... very pleased to meet you.' With this, the demon lunges himself at you.";
 		else if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
 			say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. Now be a good lad and do what you're told, or I'll make you.' With this, the demon lunges himself at you.";
 		else:
@@ -343,8 +343,8 @@ to say HellDemon Desc:
 Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -373,16 +373,16 @@ When Play begins:
 	now skin change entry is "you begin to feel a strange burning sensation. You look down, and realize that your skin color has turned into a deep shade of red"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you feel it becoming tighter, powerful, and more fit. This is followed by a strange feeling at the base of your spine, and then there is a very strange, and painful, burning sensation, as if your flesh is boiling and liquefying. The pain lasts for some time, but, when it finally subsides, you can feel your new, long demon tail sway back and forth behind you, equipped with a spaded tip and everything"; [ format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it begins to grow thicker, large bumps sprouting up all across its surface"; [ format as "Your cock feels funny as (your text)." ]
-	now str entry is 20;
+	now str entry is 22;
 	now dex entry is 18;
 	now sta entry is 14;
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 13;
 	now sex entry is "Male";
-	now HP entry is 75;
-	now lev entry is 11;
-	now wdam entry is 14;
+	now HP entry is 115;
+	now lev entry is 13;
+	now wdam entry is 21;
 	now area entry is "Red";         [ Case sensitive]
 	now Cock Count entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 17;
@@ -393,9 +393,13 @@ When Play begins:
 	now Cunt Count entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	now libido entry is 65;             [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 80;             [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "hellfire seed";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50;          [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]muscular[or]powerful[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "demonic";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -410,7 +414,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -516,7 +520,7 @@ name	desc	weight	object
 "hellfire seed"	"The white, gooey seed of one of your past demonic lovers. It smells very sweet, a little like burnt cream, and feels really hot."	1	hellfire seed
 
 hellfire seed is a grab object.
-the usedesc of hellfire seed is "[hellfire seed use]";
+Usedesc of hellfire seed is "[hellfire seed use]";
 
 to say hellfire seed use:
 	say "     The warm, sticky liquid tastes almost too hot, but very sweet, as you drink it. You feel the warm seed going down your throat, leaving the delightful sensation of a tasty and hot beverage.";
@@ -546,8 +550,8 @@ name	desc	weight	object
 leather jockstrap is a grab object.
 leather jockstrap is equipment.
 It is not temporary.
-The plural of leather jockstrap is false.
-The taur-compatible of leather jockstrap is false.
+Plural of leather jockstrap is false.
+Taur-compatible of leather jockstrap is false.
 The size of leather jockstrap is 3.
 The AC of leather jockstrap is 0.
 The effectiveness of leather jockstrap is 0.

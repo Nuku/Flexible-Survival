@@ -15,7 +15,7 @@ Section - Initiation
 
 When play begins:
 	request glulx hyperlink event in main window;
-	request glulx hyperlink event in status window.
+	request glulx hyperlink event in status window;
 
 Section - Event handling
 
@@ -25,10 +25,15 @@ A glulx hyperlink rule (this is the default inline hyperlink handling rule):
 		cancel glulx hyperlink request in main window; [just to be safe]
 		cancel glulx hyperlink request in status window; [just to be safe]
 		follow the hyperlink processing rules;
+	[reset in both windows?]
+	request glulx hyperlink event in main window;
+	request glulx hyperlink event in status window;
+	[
 	if the status window is the hyperlink source:
 		request glulx hyperlink event in status window;
 	else:
 		request glulx hyperlink event in main window.
+	]
 
 To request glulx hyperlink event in the/-- main window:
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)) glk_request_hyperlink_event(gg_mainwin); -)
@@ -334,7 +339,7 @@ Example: ** Maze - It can be difficult to work with text substitutions in Inform
 
 	Include Inline Hyperlinks by Daniel Stelzer.
 
-	The printed name of a room is "Maze". The description of a room is usually "A maze of twisty little passages, all alike. Exits: [exits]".
+	The printed name of a room is "Maze". Description of a room is usually "A maze of twisty little passages, all alike. Exits: [exits]".
 
 	To say exits:
 		let count be the number of adjacent rooms;
@@ -353,7 +358,7 @@ Example: ** Maze - It can be difficult to work with text substitutions in Inform
 	Object	Name
 	R01	"R01"
 
-	R01 is a room. R02 is north of R01. R03 is east of R01. R04 is north of R02 and northwest of R03. R05 is northeast of R02. R06 is north of R05. R07 is west of R06. R08 is southwest of R04 and northwest of R02. R09 is east of R06. R10 is northeast of R06. R11 is east of R10. R12 is southeast of R09. R13 is south of R12. R14 is northeast of R12. R14 is southeast of R11. R15 is up from R03. R16 is east of R15. R17 is north of R16. R18 is down from R17. The description of R18 is "A maze of twisty little passages, all alike. A breeze blows from the northeast. Exits: [exits]"
+	R01 is a room. R02 is north of R01. R03 is east of R01. R04 is north of R02 and northwest of R03. R05 is northeast of R02. R06 is north of R05. R07 is west of R06. R08 is southwest of R04 and northwest of R02. R09 is east of R06. R10 is northeast of R06. R11 is east of R10. R12 is southeast of R09. R13 is south of R12. R14 is northeast of R12. R14 is southeast of R11. R15 is up from R03. R16 is east of R15. R17 is north of R16. R18 is down from R17. Description of R18 is "A maze of twisty little passages, all alike. A breeze blows from the northeast. Exits: [exits]"
 
 	Exit is northeast of R18. Exit is outside from R18. The printed name of Exit is "Outside". "You emerge into sunlight." Southwest from Exit is nowhere. Inside from Exit is nowhere. After looking in Exit, end the story finally.
 
@@ -478,7 +483,7 @@ A companion rule for input redirects the player's typed direction command in the
 	12	going outside
 
 
-	The printed name of a room is "Maze". The description of a room is usually "A maze of twisty little passages, all alike. Exits: [if the player is deranged][skewed exits][else][exits][end if]".
+	The printed name of a room is "Maze". Description of a room is usually "A maze of twisty little passages, all alike. Exits: [if the player is deranged][skewed exits][else][exits][end if]".
 
 	There is a red pill in R01. The red pill is edible. "A [link]red pill[as]eat red pill[end link] lies on the floor here. Perhaps this will give you the mental acuity necessary to see through the maze!"
 
@@ -497,6 +502,6 @@ A companion rule for input redirects the player's typed direction command in the
 	Object	Name
 	R01	"R01"
 
-	R01 is a room. R02 is north of R01. R03 is east of R01. R04 is north of R02 and northwest of R03. R05 is northeast of R02. R06 is north of R05. R07 is west of R06. R08 is southwest of R04 and northwest of R02. R09 is east of R06. R10 is northeast of R06. R11 is east of R10. R12 is southeast of R09. R13 is south of R12. R14 is northeast of R12. R14 is southeast of R11. R15 is up from R03. R16 is east of R15. R17 is north of R16. R18 is down from R17. The description of R18 is "A maze of twisty little passages, all alike. A breeze blows from the northeast. Exits: [exits]"
+	R01 is a room. R02 is north of R01. R03 is east of R01. R04 is north of R02 and northwest of R03. R05 is northeast of R02. R06 is north of R05. R07 is west of R06. R08 is southwest of R04 and northwest of R02. R09 is east of R06. R10 is northeast of R06. R11 is east of R10. R12 is southeast of R09. R13 is south of R12. R14 is northeast of R12. R14 is southeast of R11. R15 is up from R03. R16 is east of R15. R17 is north of R16. R18 is down from R17. Description of R18 is "A maze of twisty little passages, all alike. A breeze blows from the northeast. Exits: [exits]"
 
 	Exit is northeast of R18. Exit is outside from R18. The printed name of Exit is "Outside". "You emerge into sunlight." Southwest from Exit is nowhere. Inside from Exit is nowhere. After looking in Exit, end the story finally.

@@ -6,17 +6,18 @@ Table of GameEventIDs (continued)
 Object	Name
 Secure Area	"Secure Area"
 
-Secure Area is a situation. The level of Secure Area is 12.
+Secure Area is a situation.
+ResolveFunction of Secure Area is "[ResolveEvent Secure Area]". The level of Secure Area is 12.
 halodestroyed is a number that varies.
 
-instead of resolving a Secure Area:
+to say ResolveEvent Secure Area:
 	say "     On your jaunt through the city, you come across a yard, mostly intact, covered with barbed wire and odd defensive technology you could have sworn was science fiction. Behind the barriers, one of which is a shimmering halo in midair, stand two creatures, tall, but their silhouette is blurred by the halo, and you cannot make out if they are human or not. You can still make out the huge doors, made of something clearish white...";
 	if MaleList is banned:
 		say "     There is a large sign on the fence surrounding the facility which reads: [']Please be advised: This facility is now closed due to a lack of male content.[']";
 		now secure area is resolved;
 		now Resolution of Secure Area is 100; [content banned]
 		continue the action;
-	if a random number between 5 and 20 < the perception of the player:
+	if a random number between 5 and 20 < Perception of Player:
 		say "     Oh my god. You realize that the doors are made of diamond. What needs that much protection?";
 	say "[line break][line break]";
 	say "Do you wish to get to the door?";
@@ -24,9 +25,9 @@ instead of resolving a Secure Area:
 		let dragatorwon be 0;
 		let dragatordefeated be 0;
 		say "     You run towards the barriers, determined to get inside.";
-		if a random number between 5 and 35 < the dexterity of the player:[player gets through to halo]
+		if a random number between 5 and 35 < Dexterity of Player:[player gets through to halo]
 			say "     Running and jumping and twisting, you manage to get thorough to the halo, which you approach with caution.";
-			if a random number between one and 35 < the strength of the player: [breaks halo]
+			if a random number between one and 35 < Strength of Player: [breaks halo]
 				now halodestroyed is 1;
 				say "     You slam the halo with all your might and feel it crumble beneath you, revealing the rest of the way.";
 				WaitLineBreak;
@@ -48,7 +49,7 @@ instead of resolving a Secure Area:
 						say "     You stand, panting, as the last gargoyle collapses.";
 						say "     Catching your breath, you march up to the doors and see the hairline crack in the stone.";
 						say "     You shove your hands into the opening, cracking the stone while pulling the door with as much strength as your tired body can muster after all that.";
-						if a random number between 5 and 30 < the strength of the player:
+						if a random number between 5 and 30 < Strength of Player:
 							say "     The door creaks open, and you walk into the dimly lit area.";
 							say "     There are glyphs and writings covering the wall, and some show people in various states of infection. Looking closer, you notice that the writings seem to denote that the nanites can be controlled, but it doesn't show how. You will have to search elsewhere for more information.";
 							increase the score by 500;
@@ -63,7 +64,7 @@ instead of resolving a Secure Area:
 				say "     The halo resists all your efforts to break through, and you are forced to be on your way.";
 		else:
 			say "     You trip and fall onto one of the barbed wire fences! Yow!";
-			decrease the HP of the player by 20;
+			decrease HP of Player by 20;
 			say "     An odd tingling runs through you, and with jarring suddenness you are back on the street, looking away from the secure house.";
 	else:
 		say "     You wisely avoid what could only be more trouble than it is worth.";
@@ -86,7 +87,7 @@ carry out shifting:
 	if Resolution of Secure Area < 2:
 		say "You do not know how to do that!";
 		stop the action;
-	if the humanity of Player < 50:
+	if Humanity of Player < 50:
 		say "Your feral impulses prevent you from concentrating hard enough to change.";
 		stop the action;
 	[say "You sense becoming human would be nearly impossible after doing this. Do you wish to continue anyway?";
@@ -208,7 +209,7 @@ This is the Shifter Check rule:
 		trigger ending "Shifter Check";
 		exclude "Infection" endings;
 		exclude "NPCSharedInfection" endings;
-		if the humanity of Player > 50:
+		if Humanity of Player > 50:
 			say "Your knowledge of how to shift aids you when you decide to help the rescue, and as a reward for your help, the army decides to replace the nanites you had with a new kind that do not spread.";
 		else:
 			say "Your feral impulses prevent the concentration required for shifting, and the knowledge doesn't return until the rescue comes.";

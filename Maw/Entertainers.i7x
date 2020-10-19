@@ -2,7 +2,7 @@ Entertainers by Maw begins here.
 
 Public Relations is a research.
 The cost of it is 60.
-The description of it is "Our people are bored. We should encourage the arts to entertain them.".
+Description of it is "Our people are bored. We should encourage the arts to entertain them.".
 
 Entertainer is a job.
 The validation of Entertainer is the entertainvailable rule.

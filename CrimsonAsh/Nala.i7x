@@ -13,7 +13,8 @@ Object	Name
 Harmless Joke	"Harmless Joke"
 
 Harmless Joke is a situation.
-The sarea of Harmless Joke is "Nowhere".
+ResolveFunction of Harmless Joke is "".
+Sarea of Harmless Joke is "Nowhere".
 
 when play begins:
 	add Harmless Joke to BadSpots of FemaleList;
@@ -34,7 +35,8 @@ Object	Name
 Fool Me Once	"Fool Me Once"
 
 Fool Me Once is a situation.
-The sarea of Fool Me Once is "Nowhere".
+ResolveFunction of Fool Me Once is "".
+Sarea of Fool Me Once is "Nowhere".
 
 when play begins:
 	add Fool Me Once to BadSpots of FemaleList;
@@ -53,7 +55,8 @@ Object	Name
 Fool Me Twice	"Fool Me Twice"
 
 Fool Me Twice is a situation.
-The sarea of Fool Me Twice is "Nowhere".
+ResolveFunction of Fool Me Twice is "".
+Sarea of Fool Me Twice is "Nowhere".
 
 when play begins:
 	add Fool Me Twice to BadSpots of FemaleList;
@@ -141,8 +144,8 @@ AnalVirgin of Nala is true.
 PenileVirgin of Nala is true.
 SexuallyExperienced of Nala is false.
 MainInfection of Nala is "".
-The description of Nala is "[NalaDesc]".
-The conversation of Nala is { "<This is nothing but a placeholder!>" }.
+Description of Nala is "[NalaDesc]".
+Conversation of Nala is { "<This is nothing but a placeholder!>" }.
 The scent of Nala is "     Nala smells like roses with a small hint of brimstone oddly enough. She gives you a lewd smile as you inhale her fragrance.";
 
 to say NalaDesc:

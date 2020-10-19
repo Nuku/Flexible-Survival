@@ -11,36 +11,32 @@ Object	Name
 Fallen Kunoichi	"Fallen Kunoichi"
 
 Fallen Kunoichi is a situation.
-The sarea of Fallen Kunoichi is "Museum".
+ResolveFunction of Fallen Kunoichi is "[ResolveEvent Fallen Kunoichi]".
+Sarea of Fallen Kunoichi is "Museum".
 when play begins:
 	add Fallen Kunoichi to BadSpots of FurryList;
 
-Instead of resolving a Fallen Kunoichi:
+to say ResolveEvent Fallen Kunoichi:
 	say "     Passing through the halls of the museum, you come across the aftermath of what was an epic battle. Many of the displays here are knocked over or shattered by what must have been powerful blows by a great weapon. You can see gouges cut deep into the walls, many stained with blood. Smaller darts and shuriken are embedded in the wall as well. The floor is marked with several blood stains and cum puddles, as well as soot marks from flash powder or smoke bombs. Clearly many battled a great foe here.";
 	say "     Half-buried in the ruins of one display, you find the grisly remains of a feline ninja cleaved in two at the waist. Drawing off its mask, you see her face feminine locked in an expression of great pain and horror. Something about her death gaze disturbs you deep inside and you are unable to bear the sight of it. You brush her eyes shut and pull the mask back down over her feline face. Beside the fallen kunoichi is her weapon, a bo staff with ornate metal tips. Cautious of any infected blood, you quickly check her [italic type]shinobi shozoko[roman type], but find nothing else of use.";
-	say "     You gain Bo's staff!";
-	ItemGain bo staff by 1 silently;
+	ItemGain bo staff by 1;
 	increase score by 5;
 	now Fallen Kunoichi is resolved;
 
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"bo staff"	"An ornate fighting staff. A trained martial artist could wield it with greater effectiveness."	2	bo staff
-
-bo staff is an armament. It is part of the player. It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]". The weapon damage of bo staff is 4. The weapon type of bo staff is "Melee". It is not temporary.
+[Bo Staff moved to Core Mechanics/Weapons.i7x]
 
 Table of GameEventIDs (continued)
 Object	Name
 Suddenly Ninjas	"Suddenly Ninjas"
 
 Suddenly Ninjas is a situation.
-The sarea of Suddenly Ninjas is "Museum".
+ResolveFunction of Suddenly Ninjas is "[ResolveEvent Suddenly Ninjas]".
+Sarea of Suddenly Ninjas is "Museum".
 when play begins:
 	add Suddenly Ninjas to BadSpots of FurryList;
 	add Suddenly Ninjas to BadSpots of MaleList;
 
-Instead of resolving a Suddenly Ninjas:
+to say ResolveEvent Suddenly Ninjas:
 	say "     Suddenly! Ninjas! Everywhere!";
 	say "     You are traveling through the museum, minding your own business when suddenly a pack of ninjas leap out to attack you. Ninja stars are flying through the air and the dark costumed cats are leaping in to attack you from all sides, brandishing an array of weapons taken from the Japanese history exhibit. There are too many to try fighting them all. They would bear your down by sheer numbers and countless poisoned shuriken. You are forced to try fleeing, but several of the felines leap in to fight you. You dodge and run, but one is able to make an attempt to stop you, fighting you even as you both run down the hall.";
 	challenge "Ninja Cat";
@@ -83,12 +79,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Losing It	"Losing It"
 
-Losing It is a situation. The level of Losing It is 7.
+Losing It is a situation.
+ResolveFunction of Losing It is "[ResolveEvent Losing It]". The level of Losing It is 7.
 when play begins:
 	add Losing It to BadSpots of FurryList;
 	add Losing It to BadSpots of MaleList;
 
-Instead of resolving a Losing It:
+to say ResolveEvent Losing It:
 	say "     Traveling through the city, you see a stumbling figure with a skirt and a handbag in an alley. Hoping to find another survivor, you rush over, but are disappointed by her current state. Her face is reshaping itself into a feline muzzle while fur spreads over the last of her uncovered skin. But most striking of it is the large erection and hefty balls propping up her... no, his skirt. Suffering a complete gender swap from the infection, the poor woman has become a snow leopard man. You try to help him along while he complains about the wretched heat and pants. Then something changes in his eyes and he looks at you with an animalistic thirst. He grabs you tightly and tries to wrestle you down, his mind unraveling even as you try to help him. You escape his grip, but are left with facing the lustful snow leopard.";
 	challenge "Snow Leopard";
 	if fightoutcome >= 10 and fightoutcome <= 19:
@@ -115,11 +112,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Tour Bus	"Tour Bus"
 
-Tour Bus is a situation. The level of Tour Bus is 6.
+Tour Bus is a situation.
+ResolveFunction of Tour Bus is "[ResolveEvent Tour Bus]". The level of Tour Bus is 6.
 when play begins:
 	add Tour Bus to BadSpots of FurryList;
 
-instead of resolving a Tour Bus:
+to say ResolveEvent Tour Bus:
 	say "     Your path through the city is interrupted by an overturned tour bus. It seems there was quite an accident here, with several cars piled up around the bus as well. You do manage to weave your way through the mess, but it takes some time. You remind yourself not to take this street again next time when passing through this area. You head over to check out the bus, hopeful to find something of use in there. You climb up onto a car, then get on the bus's side. Looking in the windows, you can see several bags and packs, but you also see large amounts of semen and scratches to the seats. Regardless of how the accident came to pass, it seems like the occupants were all transformed into more sexual monsters. Certainly, it would not be safe to enter the bus, given how soaked in cum everything is.";
 	say "     You hop back onto the car, then onto the ground. You start to head on your way, mentally reminding yourself not to take this street again when passing through this area, when you hear a growl from behind you. Crawling out of the bus, you see a large, cougar herm wearing a cap and coat that leads you to suspect this was once the bus driver. It growls again and hops onto the ground, coming at you quickly.";
 	challenge "Cougar";
@@ -133,16 +131,17 @@ Table of GameEventIDs (continued)
 Object	Name
 Trickster	"Trickster"
 
-Trickster is a situation. The level of Trickster is 4.
+Trickster is a situation.
+ResolveFunction of Trickster is "[ResolveEvent Trickster]". The level of Trickster is 4.
 wolffight is a number that varies.
 when play begins:
 	add Trickster to BadSpots of FurryList;
 	add Trickster to BadSpots of MaleList;
 	add Trickster to BadSpots of FemaleList;
 
-instead of resolving a Trickster:
+to say ResolveEvent Trickster:
 	setmonster "Feral Wolf";
-	say "     As you are traveling along, you spot some activity in the distance. At first, fearing that it is another band of monsters, you take cover. But a few moments later, you discover it to be a small team of soldiers moving stealthily through the city. They may be doing recon or on some other kind of mission, but you may be able to get assistance, or even be rescued by them. But even as you're walking up and trying to decide how best to approach them, you see a coyote [if Diegochanged is 0]man[else if Diegochanged is 1]herm[else]woman[end if] carrying a large sack dash into their midst[if diegotalk > 0 and Diegochanged is 0]. You recognize Diego, the coyote trickster, and have to wonder what he is up to this time[else if diegotalk > 0]. You recognize Diego, the coyote trickster, and have to wonder what she is up to this time[end if][if Diegochanged is 0]. He[else]. She[end if] passes the bag quickly to a flabbergasted soldier with a quick 'Here, hold this' before continuing on with a happy chuckle.";
+	say "     As you are traveling along, you spot some activity in the distance. At first, fearing that it is another band of monsters, you take cover. But a few moments later, you discover it to be a small team of soldiers moving stealthily through the city. They may be doing recon or on some other kind of mission, but you may be able to get assistance, or even be rescued by them. But even as you're walking up and trying to decide how best to approach them, you see a coyote [if Diegochanged is 0]man[else if Diegochanged is 1]herm[else]woman[end if] carrying a large sack dash into their midst[if PlayerMet of Diego is true and Diegochanged is 0]. You recognize Diego, the coyote trickster, and have to wonder what he is up to this time[else if PlayerMet of Diego is true]. You recognize Diego, the coyote trickster, and have to wonder what she is up to this time[end if][if Diegochanged is 0]. He[else]. She[end if] passes the bag quickly to a flabbergasted soldier with a quick 'Here, hold this' before continuing on with a happy chuckle.";
 	say "     As the stunned soldiers watch the coyote run off in the direction of the city park and look at the mysterious sack, you hear some approaching howls. If you're going to get out of here, you'll have to do it right now.";
 	say "     [bold type]Do you move to join the soldiers or run and hide to watch what happens?[roman type][line break]";
 	LineBreak;
@@ -150,7 +149,7 @@ instead of resolving a Trickster:
 	say "     ([link]N[as]n[end link]) - Run.";
 	if Player consents:
 		say "     You dash up to the soldiers and pull out your weapon. Knowing your luck, trouble's on the way. You run up to the soldier left holding the bag. Your sudden appearance after the coyote's keeps him off guard long enough to pull the sack from him, finding it stuffed with gray fur inside. You barely have a chance to look up when a large pack of wolves come running around the corner, slamming into the unexpected team of soldiers. Several of the men are knocked down immediately.";
-		let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
+		let the bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 15: ";
 		if dice plus bonus > 15:
@@ -196,24 +195,20 @@ instead of resolving a Trickster:
 	now wolffight is 0;
 	now Trickster is resolved;
 
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"combat knife"	"A large combat knife in a belt holster."	2	combat knife
-
-combat knife is an armament. It is part of the player. It has a weapon "[one of]your large knife[or]your combat knife[or]the large blade[or]your combat knife with a strong thrust[or]your large blade with a quick slash[at random]". The weapon damage of combat knife is 6. The weapon type of combat knife is "Melee". It is not temporary.
+[combat knife moved to Core Mechanics/Weapons.i7x]
 
 Table of GameEventIDs (continued)
 Object	Name
 Prank Aftermath	"Prank Aftermath"
 
-Prank Aftermath is a situation. Prank Aftermath is inactive. The level of Prank Aftermath is 7.
+Prank Aftermath is a situation.
+ResolveFunction of Prank Aftermath is "[ResolveEvent Prank Aftermath]". Prank Aftermath is inactive. The level of Prank Aftermath is 7.
 prankevent is a number that varies.
 when play begins:
 	add Prank Aftermath to BadSpots of FurryList;
 	add Prank Aftermath to badspots of HermList;
 
-instead of resolving a Prank Aftermath:
+to say ResolveEvent Prank Aftermath:
 	say "     As you travel through the city, you hear some moaning mewls coming from up ahead. On your guard, you sneak forward and take in the sight of several of those puma creatures playing with what was once a team of six soldiers. The cougars have the men pinned to the ground and are having their way with them. As you watch, the cougars force them to nurse from their breasts or suck their cocks until they develop a wet, new pussy for the herm kitties to fuck. Outnumbered, the soldiers have no chance to escape and there are several felines waiting for their turn to sate their lusts on the transforming humans.";
 	say "     Not normally native to this part of the city, you start to wonder how such a large band of the felines got here when you spot one of them eating a large fish from a basket while she waits for her next turn with the new breedtoys. Remembering that you told Diego an idea you had about using fish to lure some of the felines around for a prank, it seems you've run into the aftermath of your idea";
 	if Libido of Player - humanity of Player < -25:
@@ -250,7 +245,8 @@ Object	Name
 Lovers Bench	"Lovers Bench"
 
 Lovers Bench is a situation.
-The sarea of Lovers Bench is "Park".
+ResolveFunction of Lovers Bench is "[ResolveEvent Lovers Bench]".
+Sarea of Lovers Bench is "Park".
 loversbench is a number that varies.
 when play begins:
 	add Lovers Bench to BadSpots of FurryList;
@@ -259,7 +255,7 @@ when play begins:
 
 lbcomplist is a list of text that varies.
 
-Instead of resolving a Lovers Bench:
+to say ResolveEvent Lovers Bench:
 	if loversbench is 0:				[first visit]
 		say "     While traveling through the park, you come across a pair making out lustfully on one of the benches. The male atop is an anthro wolf with gray fur and a strong build. The female stretched back on the bench is a spotted feline, perhaps an ocelot. Their clothes are scattered around the bench and seem partially torn. You hang back, wary to approach but unwilling to look away from the sight. You watch as the wolf eases his thick cock into the smaller woman's pussy, making her yowl in delight. She puts her arms around him and grabs his rear, pulling him into her with each thrust he makes. The ocelot licks and kisses at the wolf's neck and he brings a paw to caress her breast while the other digs into the back of the wooden bench. When the wolf finally drives his lupine knot into the feline's cunt, they growl passionately, cumming hard[if Player is not neuter]. You do as well, having started playing with yourself at some point while peeping on the spectacle[end if]. Finished, the wolf sags atop the feline as they start licking and kissing one another. The ocelot's markings start to spread into the wolf's pelt while her fur takes on a more grayish tint overall.";
 		say "     You quietly walk away, ashamed of your peeping and quite certain they have succumbed too far to be safe to approach. Even if currently sated, they are both equally infectious. But at least they are a couple.";
@@ -281,190 +277,191 @@ Instead of resolving a Lovers Bench:
 		now Resolution of Lovers Bench is 2;	[Watched second scene]
 	else if loversbench is 2:		[third+ visit]
 		say "     Returning to the area around the lovers['] bench, you decide to search around it again. Thinking others may have lost or forgotten items in their rush of excitement, you check among the scraps of clothes for any other lost or discarded items. Sadly, you are unable to locate anything new or of any use.";
-	if loversbench is 2 and printed name of companion of Player is not listed in lbcomplist and player is not neuter:
-		if companion of Player is pink raccoon:
-			WaitLineBreak;
-			setmonster "Raccoon";
-			if Player is male:
-				say "     As you're finishing up your scavenging, your pink raccoon pet takes your hand in his and pulls you over to the bench with a soft chirr. He smiles and kneels on the bench, flagging his tail up to uncover his tight rump. He makes a needful moan. It seems your pet wants to enjoy the lovers['] bench with you as well. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer. You stand behind him and give his rump a squeeze, spreading his cheeks and lining up your cock with his pink pucker. You dribble pre onto it, then slowly ease into him, enjoying the sound of his soft moan as you penetrate him.";
-				say "     Gripping the bench tightly with his little claws, he leaves fresh holes in the wood while you thrust into him. You stroke his back and sides, telling him what a good pet he is and how much you love him. Something about the bench makes this more than just sex, but instead lovemaking. Your coon smiles back at you and his cotton candy scent fills the air, mingling with all the other arousing scents. You reach around to pump at his cock while you work your cock into his tight bottom. His pink, banded tail wraps around your waist, snugging you lovingly.";
-				say "     After a powerfully long orgasm that pumps your seed into your pet's ass and his own sweet-smelling cum is added to bench's scents, you withdraw. Your pet is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
-			else:
-				say "     As you're finishing up your scavenging, your pink raccoon pet takes your hand in his and pulls you over to the bench with a soft chirr. He smiles and nuzzles you, guiding you to lay back on the bench. You can see the front of his skirt standing up as his erect cock makes it rise. He makes a needful moan as you slip a hand under his skirt to fondle his balls. It seems your pet wants to enjoy the lovers['] bench with you as well. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer. You stretch back on the bench, leaving one leg draped over the side, giving your pink pet clear access to your dripping slit. He climbs atop you, lining up his cock even as he nuzzles at your neck. You scritch his ears and caress his back as his penis sinks into your cunt, enjoying the sound of his soft moan as he slowly, tenderly penetrates you.";
-				say "     Gripping the bench tightly with his little claws, her leaves fresh holes in the wood while he thrusts into you. You stroke his back and sides, telling him what a good pet he is and how much you love him. Something about the bench makes this more than just sex, but instead lovemaking. Your coon smiles down at you, kissing and nuzzling your face as you do the same. His cotton candy scent fills the air, mingling with all the other arousing scents. You reach around to grab his rump, squeezing it and making him moan as you pull him to thrust harder and harder into your dripping pussy.";
-				say "     After a powerfully long orgasm that pumps an impressive load of his coonboi seed into your pussy, he withdraws slowly. Your pet is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.[impregchance]";
-			now lastfuck of pink raccoon is turns;
-			infect "Raccoon";
-			now Libido of Player is Libido of Player / 2;
-			SanLoss 5;
-			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
-			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
-			increase XP of pink raccoon by ( level of pink raccoon + 1 ) * 3;
-			increase score by 20;
-			now Resolution of Lovers Bench is 3;	[Did Lovers Bench with Candy]
-		else if companion of Player is Gryphoness:
-			WaitLineBreak;
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Blue Gryphon Herm":
-					now MonsterID is y;
-					break;
-			say "     As you're finishing up your scavenging, Denise takes your hand in hers and grins playfully at you. She gives you a tug over to the bench. 'We should... umm... I mean, everyone's using this bench for...' she says softly as she sits back on it, running her paws over her lovely body. Her nipples are quite hard, as is her cock and gryphon juices drip from her aroused pussy. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on her offer.";
-			if Player is male:
-				say "     You snuggle up beside her on the bench, nuzzling and kissing one another. Her paw soon find its way to your cock and strokes at your stiff shaft. With her other arm around you, she moves to lay back on the bench while guiding you atop her. Soon enough, you are lining your cock up with that dripping snatch and sinking into her, causing her to moan lustfully. You continue kissing as you thrust into her, enjoying the warm, wet grip of her cunt around you. Her paws roam over your body while her taloned feet dig into the bench, adding her marks to those of the others who've used it. Your sex is lustful, but loving as well, as something about the bench makes this more like lovemaking than raw sex. With one hand on the bench for support like that wolf, you let the other stroke Denise's bosom as she sings out her love for you and you respond in kind.";
-				say "     After a powerfully long orgasm that pumps your seed into the sexy gryphoness's pussy and her own cum sprays across her body and the bench, you withdraw. Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to her.";
-			else:
-				say "     You snuggle up beside her on the bench, nuzzling and kissing one another. Her paw soon find its way to your pussy and she fingers and teases your wet folds. With her other arm around you, she moves to sit at one corner of the bench and guides you to sit in her lap. Soon enough, you are lining up her throbbing cock with your wet hole while kissing your loving companion. You moan in pleasure as you sink down on her leonine cock, gripping her shoulders. She nuzzles your bosom, licking and sucking at your nipples before moving her head back up to kiss you. You continue kissing as you ride in her lap, enjoying the feel of her throbbing meat inside your cunt. One paw roams over your body while the other digs into the bench, adding her marks to those of the others who've used it. Your ride her cock lustfully, but loving as well, as something about the bench makes this more like lovemaking than raw sex. With your arms around her, you hold her lovingly while scritching at her wing roots, which makes her sing out her love for you and you respond in kind.";
-				say "     After a powerfully long orgasm that pumps an impressive load of her gryphon seed into your pussy and her own female juices leak onto the bench to join the others, you ease yourself off her spent shaft. Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to her.[ovichance]";
-			now lastfuck of gryphoness is turns;
-			infect "Blue Gryphon Herm";
-			now Libido of Player is Libido of Player / 2;
-			SanLoss 5;
-			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
-			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
-			increase XP of Gryphoness by ( level of Gryphoness + 1 ) * 3;
-			increase score by 20;
-			now Resolution of Lovers Bench is 4;	[Did Lovers Bench with Denise]
-		else if companion of Player is Felinoid companion:
-			WaitLineBreak;
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Felinoid":
-					now MonsterID is y;
-					break;
-			if Player is female:
-				say "     As you're finishing up your scavenging, your felinoid companion snuggles up to you, rumbling and purring as he starts nudging you over to the bench with his strong body. You sit on the bench and he puts his front paws on either side of you, nuzzling and licking at your face. You can see his aroused cock, red and throbbing as it drips precum on your leg. It seems your companion wants to enjoy the lovers['] bench with you as well. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer. You move to lay back on the bench, putting your hips at one edge so your four-legged feline can mount you. And he quickly does, lining up his cock with your dripping snatch before slowly sinking into you. You moan in delight and run your hands over his sides and hips as his large, feline cock eases into you.";
-				say "     His large paws dig into the bench beside your head, leaving fresh scratches in the wood while he thrusts into you. You nuzzle and kiss his feline face, telling him what a good kitty he is and how much you love him. Something about the bench makes this more than just sex, but instead lovemaking. Your kitty seems to smile down at you as he lickgrooms your face and chest, running his raspy tongue over your breasts. You reach back to rub his large balls and squeeze his tightly muscled rear while he thrusts into you. The sex is somehow both wildly animalistic and tenderly loving as the feline beast mates with you.";
-				say "     After a powerfully long orgasm that pumps a huge load of his feline seed into your pussy, he eases his spent shaft from your cream-filled cunt. Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.[fimpregchance]";
-			else:
-				say "     As you're finishing up your scavenging, your felinoid companion snuggles up to you, rumbling and purring as he starts nudging you over to the bench with his strong body. You sit on the bench and he puts his front paws on either side of you, nuzzling and licking at your face. You can see his aroused cock, red and throbbing as it drips precum on your leg. It seems your companion wants to enjoy the lovers['] bench with you as well. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer. You put your hands at his hips and get him to climb a little further onto the bench, bringing his large cock within reach of your mouth. You start licking and kissing at his throbbing meat, then slide your mouth down over it, enjoying his mrowl of pleasure as you do.";
-				say "     His large paws dig into the back of the bench, leaving fresh scratches in the wood as he thrusts gently into your muzzle. Your face is buried in his soft fur as you run your fingers through it, stroking his belly and thighs as you lick and suck his cock. You slide your mouth off, telling him what a good kitty he is and how much you love him as you kiss his cock and balls. Something about the bench makes this more than just sex, but instead lovemaking. Your kitty seems to smile down at you as you take him in your mouth again and he starts thrusting softly. You reach rub his large balls and squeeze his tightly muscled rear while he rocks his hips. The sex is somehow both wildly animalistic and tenderly loving as the feline beast pumps his cock as you take it fully into your mouth and down your throat.";
-				say "     After a powerfully long orgasm that pumps a huge load of his feline seed into your belly, he eases his spent shaft from your mouth. Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
-			now lastfuck of felinoid companion is turns;
-			infect "Felinoid";
-			now Libido of Player is Libido of Player / 2;
-			SanLoss 5;
-			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
-			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
-			increase XP of Felinoid companion by ( level of Felinoid companion + 1 ) * 3;
-			increase score by 20;
-			now Resolution of Lovers Bench is 5;	[Did Lovers Bench with Felinoid]
-		else if companion of Player is bee girl:
-			WaitLineBreak;
-			say "     As you're finishing up your scavenging, Honey buzzes on over and takes your hand in her. She smiles up at you and grins playfully. She gives your arm a gentle tug with her four hands. 'I want to try out the bench, now that I have someone special to share it with,' she buzzes softly. 'I used to see couples here when I was...' She pauses, remembering her lost sisters. 'But I have you now[if HP of bee girl >= 5], a strong and caring queen bee[end if],' she says, smiling up at your with a mix of lust and adoration as you walk with her to the bench to take her up on her offer. Her nipples, normally hidden, are quite hard, and her honeyed juices run down her legs. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your small companion up on her offer.";
-			if Player is male:
-				say "     Honey climbs up onto the bench, raising her bee abdomen up and waving her cute little bottom at you. The soft, golden puff over her pussy is soaked in her juices and you can see her soft lips parted and ready for you. The bumblebee drone buzzes excitedly as you move in behind her and get your hard cock lined up with her eager pussy. She pushes herself back onto your cock slowly, clearly holding back from pushing it all in quickly, wanting to savor this moment. Once you're stuffed inside her, you wrap your arms around her insect abdomen and start thrusting. Her wings buzz frantically and her abdomen twitches in your arms. 'Mmm... kiss it. Please, I want you to kiss me there,' she moans as her pussy quivers and squeezes around you at the thought of it. So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others. Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex. With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";
-				say "     After a powerfully long orgasm that pumps your seed into the cute bumblebee girl's pussy while her honeyed juices soak you both, you slide your spent cock from her. Your companion is extra-snugly after the lovemaking, nuzzling against your side as she holds your hand in her four small hands and you happily return this affection, feeling closer to her.";
-			else:
-				say "     Honey lays back on the middle of the bench and motions for you to climb atop her. Bringing your pussy to her lips, she starts licking and kissing at your sex, running her long proboscis over your wet folds before sliding it into you like a flower full of rich nectar. Her talented tongue delves inside you again and again, licking and teasing at your sensitive inner walls as it slides to your very depths to please you. You run your hand over her insect abdomen and she buzzes with delight. 'Mmm... kiss it. Please, I want you to kiss me there,' she moans before diving her tongue into you again. Her tongue is writhing inside you at the thought of it. So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others. Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex. With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";
-				say "     After a powerfully long orgasm that soaks the cute bumblebee girl's face in your female nectar while her honeyed juices soak her crotch as her lower hands finger herself vigorously, you climb slowly off from overtop her. Your companion is extra-snugly after the lovemaking, nuzzling against your side as she holds your hand in her four small hands and you happily return this affection, feeling closer to her.";
-			now lastfuck of bee girl is turns;
-			if HP of bee girl >= 5, infect "Queen Bee";
-			now Libido of Player is Libido of Player / 2;
-			SanLoss 5;
-			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
-			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
-			increase XP of bee girl by ( level of bee girl + 1 ) * 3;
-			increase score by 20;
-			now Resolution of Lovers Bench is 6;	[Did Lovers Bench with Honey]
-		else if companion of Player is mouse girl:
-			WaitLineBreak;
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Mental Mouse":
-					now MonsterID is y;
-					break;
-			say "     As you're finishing up your scavenging, Rachel moves up beside you, running her paws over your [bodytype of Player] body and taking your hand in her little paws. She smiles up at you, looking deep into your eyes. 'You want to spend some time with me on the bench, don't you?' she says softly and you nod, the heavy scent of lust in the air and her mental powers make you long to play with the sexy mousie on it. 'Just some personal time for you and I, none of the others listening in this time.' The idea to resist doesn't even pop into your mind and you [if scalevalue of Player >= 3]scoop her up into your arms and onto[else]rush her over to[end if] the bench.";
-			if Player is male:
-				if scalevalue of Player >= 3:
-					say "     You set Rachel down on the lovers['] bench and she stands on it with her hands gripping the back rest. Now elevated for easier mounting, the small mouse raises her tail and wiggles her rear with a needy squeak. Her exposed pussy is dripping wet and her murine cock is hard and dribbling precum, her body as aroused by the lustful scents as yours is. You move in behind her and get your hard cock lined up with her wet cunt. She pushes herself back onto your cock quickly, releasing another squeak as she grips the bench. Leaning overtop of the smaller mouse girl, you grab the back of the bench as well and give her ears a nibble as you start pounding into her. She shivers in pleasure at the nibbles and slides her slender tail around your waist.";
-					say "     As you continue thrusting into her, you can feel her pleasure as well as your own, sharing your growing love for each other. You can feel the quivers of her pussy around your cock as well as the intense sensations this gives her. You can feel the pulse of her cock as well as the growing pressure inside her balls as you stroke her maleness. You can even sense her gripping the wood tightly and her small claws digging into it to leave fresh marks on the bench. 'Oh, my love. It feels so good to be with you. We should be together forever,' the busty little herm squeaks. 'Accept your place with me and it will always be like this.' You moan and nuzzle at her neck, feeling your bond with this beautiful creature growing stronger as something about the bench makes this more like lovemaking than raw sex.";
+	repeat with companion running through companionList of Player:
+		if loversbench is 2 and printed name of companion is not listed in lbcomplist and player is not neuter:
+			if pink raccoon is listed in companionList of Player:
+				WaitLineBreak;
+				setmonster "Raccoon";
+				if Player is male:
+					say "     As you're finishing up your scavenging, your pink raccoon pet takes your hand in his and pulls you over to the bench with a soft chirr. He smiles and kneels on the bench, flagging his tail up to uncover his tight rump. He makes a needful moan. It seems your pet wants to enjoy the lovers['] bench with you as well. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer. You stand behind him and give his rump a squeeze, spreading his cheeks and lining up your cock with his pink pucker. You dribble pre onto it, then slowly ease into him, enjoying the sound of his soft moan as you penetrate him.";
+					say "     Gripping the bench tightly with his little claws, he leaves fresh holes in the wood while you thrust into him. You stroke his back and sides, telling him what a good pet he is and how much you love him. Something about the bench makes this more than just sex, but instead lovemaking. Your coon smiles back at you and his cotton candy scent fills the air, mingling with all the other arousing scents. You reach around to pump at his cock while you work your cock into his tight bottom. His pink, banded tail wraps around your waist, snugging you lovingly.";
+					say "     After a powerfully long orgasm that pumps your seed into your pet's ass and his own sweet-smelling cum is added to bench's scents, you withdraw. Your pet is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
 				else:
-					say "     You and Rachel climb up onto the bench, getting onto all fours atop it. Both being rather small, you can easily both fit on the bench. The small mouse raises her tail and wiggles her rear with a needy squeak. Her exposed pussy is dripping wet and her murine cock is hard and dribbling precum, her body as aroused by the lustful scents as yours is. You move in behind her and get your hard cock lined up with her wet cunt. She pushes herself back onto your cock quickly, releasing another squeak as she grips the bench. Leaning overtop of the smaller mouse girl, you place a hand on the back of the bench for support as the other moves to your sexy lover's cock as you start pounding into her. She shivers in pleasure at the stroking and slides her slender tail around your waist.";
-					say "     As you continue thrusting into her, you can feel her pleasure as well as your own, sharing your growing love for each other. You can feel the quivers of her pussy around your cock as well as the intense sensations this gives her. You can feel the pulse of her cock as well as the growing pressure inside her balls as you stroke her maleness. You can even sense her gripping the wood tightly and her small claws digging into it to leave fresh marks on the bench. 'Oh, my love. It feels so good to be with you. We should be together forever,' the busty little herm squeaks. 'Accept your place with me, with all of us, and it will always be like this.' You moan and nuzzle at her neck, feeling your bond with this beautiful creature growing stronger as something about the bench makes this more like lovemaking than raw sex.";
-				say "     After a powerfully long orgasm that pumps your seed into the cute mouse girl's pussy while her own seed blasts to splatter across the backrest, you slide your cock from her. Your companion is extra-snugly after the lovemaking, nuzzling at your side as she holds your hand in hers and wraps her tail around your wrist, and you happily return this affection, feeling much closer to her.";
+					say "     As you're finishing up your scavenging, your pink raccoon pet takes your hand in his and pulls you over to the bench with a soft chirr. He smiles and nuzzles you, guiding you to lay back on the bench. You can see the front of his skirt standing up as his erect cock makes it rise. He makes a needful moan as you slip a hand under his skirt to fondle his balls. It seems your pet wants to enjoy the lovers['] bench with you as well. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer. You stretch back on the bench, leaving one leg draped over the side, giving your pink pet clear access to your dripping slit. He climbs atop you, lining up his cock even as he nuzzles at your neck. You scritch his ears and caress his back as his penis sinks into your cunt, enjoying the sound of his soft moan as he slowly, tenderly penetrates you.";
+					say "     Gripping the bench tightly with his little claws, her leaves fresh holes in the wood while he thrusts into you. You stroke his back and sides, telling him what a good pet he is and how much you love him. Something about the bench makes this more than just sex, but instead lovemaking. Your coon smiles down at you, kissing and nuzzling your face as you do the same. His cotton candy scent fills the air, mingling with all the other arousing scents. You reach around to grab his rump, squeezing it and making him moan as you pull him to thrust harder and harder into your dripping pussy.";
+					say "     After a powerfully long orgasm that pumps an impressive load of his coonboi seed into your pussy, he withdraws slowly. Your pet is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.[impregchance]";
+				now lastfuck of pink raccoon is turns;
+				infect "Raccoon";
+				now Libido of Player is Libido of Player / 2;
+				SanLoss 5;
+				if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
+				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
+				increase XP of pink raccoon by ( level of pink raccoon + 1 ) * 3;
+				increase score by 20;
+				now Resolution of Lovers Bench is 3;	[Did Lovers Bench with Candy]
+			else if Gryphoness is listed in companionList of Player:
+				WaitLineBreak;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
+					if Name entry is "Blue Gryphon Herm":
+						now MonsterID is y;
+						break;
+				say "     As you're finishing up your scavenging, Denise takes your hand in hers and grins playfully at you. She gives you a tug over to the bench. 'We should... umm... I mean, everyone's using this bench for...' she says softly as she sits back on it, running her paws over her lovely body. Her nipples are quite hard, as is her cock and gryphon juices drip from her aroused pussy. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on her offer.";
+				if Player is male:
+					say "     You snuggle up beside her on the bench, nuzzling and kissing one another. Her paw soon find its way to your cock and strokes at your stiff shaft. With her other arm around you, she moves to lay back on the bench while guiding you atop her. Soon enough, you are lining your cock up with that dripping snatch and sinking into her, causing her to moan lustfully. You continue kissing as you thrust into her, enjoying the warm, wet grip of her cunt around you. Her paws roam over your body while her taloned feet dig into the bench, adding her marks to those of the others who've used it. Your sex is lustful, but loving as well, as something about the bench makes this more like lovemaking than raw sex. With one hand on the bench for support like that wolf, you let the other stroke Denise's bosom as she sings out her love for you and you respond in kind.";
+					say "     After a powerfully long orgasm that pumps your seed into the sexy gryphoness's pussy and her own cum sprays across her body and the bench, you withdraw. Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to her.";
+				else:
+					say "     You snuggle up beside her on the bench, nuzzling and kissing one another. Her paw soon find its way to your pussy and she fingers and teases your wet folds. With her other arm around you, she moves to sit at one corner of the bench and guides you to sit in her lap. Soon enough, you are lining up her throbbing cock with your wet hole while kissing your loving companion. You moan in pleasure as you sink down on her leonine cock, gripping her shoulders. She nuzzles your bosom, licking and sucking at your nipples before moving her head back up to kiss you. You continue kissing as you ride in her lap, enjoying the feel of her throbbing meat inside your cunt. One paw roams over your body while the other digs into the bench, adding her marks to those of the others who've used it. Your ride her cock lustfully, but loving as well, as something about the bench makes this more like lovemaking than raw sex. With your arms around her, you hold her lovingly while scritching at her wing roots, which makes her sing out her love for you and you respond in kind.";
+					say "     After a powerfully long orgasm that pumps an impressive load of her gryphon seed into your pussy and her own female juices leak onto the bench to join the others, you ease yourself off her spent shaft. Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to her.[ovichance]";
+				now lastfuck of gryphoness is turns;
+				infect "Blue Gryphon Herm";
+				now Libido of Player is Libido of Player / 2;
+				SanLoss 5;
+				if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
+				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
+				increase XP of Gryphoness by ( level of Gryphoness + 1 ) * 3;
+				increase score by 20;
+				now Resolution of Lovers Bench is 4;	[Did Lovers Bench with Denise]
+			else if felinoid companion is listed in companionList of Player:
+				WaitLineBreak;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
+					if Name entry is "Felinoid":
+						now MonsterID is y;
+						break;
+				if Player is female:
+					say "     As you're finishing up your scavenging, your felinoid companion snuggles up to you, rumbling and purring as he starts nudging you over to the bench with his strong body. You sit on the bench and he puts his front paws on either side of you, nuzzling and licking at your face. You can see his aroused cock, red and throbbing as it drips precum on your leg. It seems your companion wants to enjoy the lovers['] bench with you as well. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer. You move to lay back on the bench, putting your hips at one edge so your four-legged feline can mount you. And he quickly does, lining up his cock with your dripping snatch before slowly sinking into you. You moan in delight and run your hands over his sides and hips as his large, feline cock eases into you.";
+					say "     His large paws dig into the bench beside your head, leaving fresh scratches in the wood while he thrusts into you. You nuzzle and kiss his feline face, telling him what a good kitty he is and how much you love him. Something about the bench makes this more than just sex, but instead lovemaking. Your kitty seems to smile down at you as he lickgrooms your face and chest, running his raspy tongue over your breasts. You reach back to rub his large balls and squeeze his tightly muscled rear while he thrusts into you. The sex is somehow both wildly animalistic and tenderly loving as the feline beast mates with you.";
+					say "     After a powerfully long orgasm that pumps a huge load of his feline seed into your pussy, he eases his spent shaft from your cream-filled cunt. Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.[fimpregchance]";
+				else:
+					say "     As you're finishing up your scavenging, your felinoid companion snuggles up to you, rumbling and purring as he starts nudging you over to the bench with his strong body. You sit on the bench and he puts his front paws on either side of you, nuzzling and licking at your face. You can see his aroused cock, red and throbbing as it drips precum on your leg. It seems your companion wants to enjoy the lovers['] bench with you as well. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer. You put your hands at his hips and get him to climb a little further onto the bench, bringing his large cock within reach of your mouth. You start licking and kissing at his throbbing meat, then slide your mouth down over it, enjoying his mrowl of pleasure as you do.";
+					say "     His large paws dig into the back of the bench, leaving fresh scratches in the wood as he thrusts gently into your muzzle. Your face is buried in his soft fur as you run your fingers through it, stroking his belly and thighs as you lick and suck his cock. You slide your mouth off, telling him what a good kitty he is and how much you love him as you kiss his cock and balls. Something about the bench makes this more than just sex, but instead lovemaking. Your kitty seems to smile down at you as you take him in your mouth again and he starts thrusting softly. You reach rub his large balls and squeeze his tightly muscled rear while he rocks his hips. The sex is somehow both wildly animalistic and tenderly loving as the feline beast pumps his cock as you take it fully into your mouth and down your throat.";
+					say "     After a powerfully long orgasm that pumps a huge load of his feline seed into your belly, he eases his spent shaft from your mouth. Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
+				now lastfuck of felinoid companion is turns;
+				infect "Felinoid";
+				now Libido of Player is Libido of Player / 2;
+				SanLoss 5;
+				if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
+				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
+				increase XP of Felinoid companion by ( level of Felinoid companion + 1 ) * 3;
+				increase score by 20;
+				now Resolution of Lovers Bench is 5;	[Did Lovers Bench with Felinoid]
+			else if bee girl is listed in companionList of Player:
+				WaitLineBreak;
+				say "     As you're finishing up your scavenging, Honey buzzes on over and takes your hand in her. She smiles up at you and grins playfully. She gives your arm a gentle tug with her four hands. 'I want to try out the bench, now that I have someone special to share it with,' she buzzes softly. 'I used to see couples here when I was...' She pauses, remembering her lost sisters. 'But I have you now[if HP of bee girl >= 5], a strong and caring queen bee[end if],' she says, smiling up at your with a mix of lust and adoration as you walk with her to the bench to take her up on her offer. Her nipples, normally hidden, are quite hard, and her honeyed juices run down her legs. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your small companion up on her offer.";
+				if Player is male:
+					say "     Honey climbs up onto the bench, raising her bee abdomen up and waving her cute little bottom at you. The soft, golden puff over her pussy is soaked in her juices and you can see her soft lips parted and ready for you. The bumblebee drone buzzes excitedly as you move in behind her and get your hard cock lined up with her eager pussy. She pushes herself back onto your cock slowly, clearly holding back from pushing it all in quickly, wanting to savor this moment. Once you're stuffed inside her, you wrap your arms around her insect abdomen and start thrusting. Her wings buzz frantically and her abdomen twitches in your arms. 'Mmm... kiss it. Please, I want you to kiss me there,' she moans as her pussy quivers and squeezes around you at the thought of it. So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others. Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex. With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";
+					say "     After a powerfully long orgasm that pumps your seed into the cute bumblebee girl's pussy while her honeyed juices soak you both, you slide your spent cock from her. Your companion is extra-snugly after the lovemaking, nuzzling against your side as she holds your hand in her four small hands and you happily return this affection, feeling closer to her.";
+				else:
+					say "     Honey lays back on the middle of the bench and motions for you to climb atop her. Bringing your pussy to her lips, she starts licking and kissing at your sex, running her long proboscis over your wet folds before sliding it into you like a flower full of rich nectar. Her talented tongue delves inside you again and again, licking and teasing at your sensitive inner walls as it slides to your very depths to please you. You run your hand over her insect abdomen and she buzzes with delight. 'Mmm... kiss it. Please, I want you to kiss me there,' she moans before diving her tongue into you again. Her tongue is writhing inside you at the thought of it. So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others. Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex. With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";
+					say "     After a powerfully long orgasm that soaks the cute bumblebee girl's face in your female nectar while her honeyed juices soak her crotch as her lower hands finger herself vigorously, you climb slowly off from overtop her. Your companion is extra-snugly after the lovemaking, nuzzling against your side as she holds your hand in her four small hands and you happily return this affection, feeling closer to her.";
+				now lastfuck of bee girl is turns;
+				if HP of bee girl >= 5, infect "Queen Bee";
+				now Libido of Player is Libido of Player / 2;
+				SanLoss 5;
+				if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
+				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
+				increase XP of bee girl by ( level of bee girl + 1 ) * 3;
+				increase score by 20;
+				now Resolution of Lovers Bench is 6;	[Did Lovers Bench with Honey]
+			else if mouse girl is listed in companionList of Player:
+				WaitLineBreak;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
+					if Name entry is "Mental Mouse":
+						now MonsterID is y;
+						break;
+				say "     As you're finishing up your scavenging, Rachel moves up beside you, running her paws over your [bodytype of Player] body and taking your hand in her little paws. She smiles up at you, looking deep into your eyes. 'You want to spend some time with me on the bench, don't you?' she says softly and you nod, the heavy scent of lust in the air and her mental powers make you long to play with the sexy mousie on it. 'Just some personal time for you and I, none of the others listening in this time.' The idea to resist doesn't even pop into your mind and you [if scalevalue of Player >= 3]scoop her up into your arms and onto[else]rush her over to[end if] the bench.";
+				if Player is male:
+					if scalevalue of Player >= 3:
+						say "     You set Rachel down on the lovers['] bench and she stands on it with her hands gripping the back rest. Now elevated for easier mounting, the small mouse raises her tail and wiggles her rear with a needy squeak. Her exposed pussy is dripping wet and her murine cock is hard and dribbling precum, her body as aroused by the lustful scents as yours is. You move in behind her and get your hard cock lined up with her wet cunt. She pushes herself back onto your cock quickly, releasing another squeak as she grips the bench. Leaning overtop of the smaller mouse girl, you grab the back of the bench as well and give her ears a nibble as you start pounding into her. She shivers in pleasure at the nibbles and slides her slender tail around your waist.";
+						say "     As you continue thrusting into her, you can feel her pleasure as well as your own, sharing your growing love for each other. You can feel the quivers of her pussy around your cock as well as the intense sensations this gives her. You can feel the pulse of her cock as well as the growing pressure inside her balls as you stroke her maleness. You can even sense her gripping the wood tightly and her small claws digging into it to leave fresh marks on the bench. 'Oh, my love. It feels so good to be with you. We should be together forever,' the busty little herm squeaks. 'Accept your place with me and it will always be like this.' You moan and nuzzle at her neck, feeling your bond with this beautiful creature growing stronger as something about the bench makes this more like lovemaking than raw sex.";
+					else:
+						say "     You and Rachel climb up onto the bench, getting onto all fours atop it. Both being rather small, you can easily both fit on the bench. The small mouse raises her tail and wiggles her rear with a needy squeak. Her exposed pussy is dripping wet and her murine cock is hard and dribbling precum, her body as aroused by the lustful scents as yours is. You move in behind her and get your hard cock lined up with her wet cunt. She pushes herself back onto your cock quickly, releasing another squeak as she grips the bench. Leaning overtop of the smaller mouse girl, you place a hand on the back of the bench for support as the other moves to your sexy lover's cock as you start pounding into her. She shivers in pleasure at the stroking and slides her slender tail around your waist.";
+						say "     As you continue thrusting into her, you can feel her pleasure as well as your own, sharing your growing love for each other. You can feel the quivers of her pussy around your cock as well as the intense sensations this gives her. You can feel the pulse of her cock as well as the growing pressure inside her balls as you stroke her maleness. You can even sense her gripping the wood tightly and her small claws digging into it to leave fresh marks on the bench. 'Oh, my love. It feels so good to be with you. We should be together forever,' the busty little herm squeaks. 'Accept your place with me, with all of us, and it will always be like this.' You moan and nuzzle at her neck, feeling your bond with this beautiful creature growing stronger as something about the bench makes this more like lovemaking than raw sex.";
+					say "     After a powerfully long orgasm that pumps your seed into the cute mouse girl's pussy while her own seed blasts to splatter across the backrest, you slide your cock from her. Your companion is extra-snugly after the lovemaking, nuzzling at your side as she holds your hand in hers and wraps her tail around your wrist, and you happily return this affection, feeling much closer to her.";
+				else:
+					say "     Running your hands over each other, you can feel the mousie's stiff cock pressing against you and you can sense what she wants of you. Unwilling to deny the needs of your sexy little lover, you lay your [bodytype of Player] body across the bench with your hips and legs hanging off the edge, offering up your [if Player is female]pussy[else]ass[end if] to the mouse girl. She runs her little paws over your backside and squeaks happily, pleased that this puts you at the perfect height for her cock. Moving in behind you, she lines up her throbbing maleness with your waiting hole and slowly sinks into you. You can't help but moan and squeak in delight as you're penetrated, gripping the wood firmly as she starts pounding into you.";
+					say "     As she continues thrusting into you, you can feel her pleasure as well as your own, sharing your growing love for each other. You can feel her cock inside you as well as the intense pleasure of your [if Player is female]wet vagina[else]tight hole[end if] sliding across her hard flesh as well as the growing pressure inside her balls. You can feel the quivering of her aroused pussy and the wet juices running down her thighs, as well as the slap of her own balls against her clit as she thrusts. Sharing in all of this, you moan loudly and grip the bench firmly, digging fresh marks into it with your nails. 'Oh, my love. It feels so good to be with you. We should be together forever,' the busty little herm squeaks. 'Accept your place with me, with all of us, and it will always be like this.' You moan and nod eagerly, pressing back into her thrusts and feeling your bond with this beautiful creature growing stronger as something about the bench makes this more like lovemaking than raw sex.";
+					say "     After a powerfully long orgasm that sends her hot seed into your [if Player is female]waiting womb and your synchronous climax[else]stuffed bottom[end if], she slides her cock slowly from you, caressing your ass. Your companion is extra-snugly after the lovemaking, nuzzling at your side as she holds your hand in hers and wraps her tail around your wrist, and you happily return this affection, feeling much closer to her.[impregchance]";
+				now lastfuck of bee girl is turns;
+				infect "Mental Mouse";
+				now Libido of Player is Libido of Player / 2;
+				SanLoss 20;
+				if "Strong Psyche" is listed in feats of Player, SanBoost 5;
+				if "Weak Psyche" is listed in feats of Player, SanLoss 5;
+				increase XP of mouse girl by ( level of mouse girl + 1 ) * 3;
+				increase score by 20;
+				now Resolution of Lovers Bench is 7;	[Did Lovers Bench with Rachel]
+			else if equinoid warrior is listed in companionList of Player:
+				say "     As you're finishing up your scavenging, Liliana strides up beside you to run her hoofed hands over your [bodytype of Player] body. She smiles at you with a lustful hunger in her eyes. '[if Player is blequinoidbodied]Come, join me over here and I will remind you of the warm embrace of the herd[else]We may be away from the herd, but we can still keep one another fulfilled[end if],' she says, guiding you towards the bench. Having gotten quite aroused by the scents of bestial lusts in the air, the sight of the aroused equinoid with her perky nipples, equine erection and dripping pussy entice you to take her up on her offer.";
+				if ( player is purefemale ) or ( player is female and player is submissive ):
+					say "     The young warrior pushes you down onto the bench with an excited whinny, her hands moving down to spread your legs as you lean back on it. Divesting each other of your gear, you take a moment to kiss passionately while groping one another. One of her hands finds its way to your pussy and she plunges a pair of digits into you. Your [if Player is blequinoidbodied]knicker[else]moan[end if] of pleasure is met with her tongue pressing past your lips to wrestle with yours.";
+					say "     Once her fingering has gotten you quite wet, she slips her fingers out and holds your pussy spread open for her equinoid cock to fill. With a slow, steady thrust, she buries most of it into you while you quiver with delight in your seat. Her hooves move to your ass and grip it firmly while you grab onto the bench for support before she starts fucking you in earnest, pounding into you like a stallion. The feel of that big horsecock of hers stuffed inside you, plunging in and out, has you panting and nickering for more even as you push back into her thrusts. Your nails dig into the wood as you try to hang on (in more than one sense of the word), adding fresh marks to those of the others who've used it.";
+					say "     She pounds into you with such energy, but she is loving about it as well, something about the bench making this more like lovemaking than raw sex. 'Mmm... you're so strong, but also wonderfully eager to be ridden. When our journey's done, perhaps you'd enjoy being the first of my mares,' the sexy warrior says with a blush. 'You'd breed such mighty colts.' She ends up neighing out the last word as she thrusts deep into you and blasts her hot seed inside you, flooding your womb with her virile load. You cry out in climax as well, clenching your vagina down around that equine log to milk as much as your loving companion can give.[impregchance]";
+					say "     By the time your long orgasms are done, she's pumped an impressive load of her equinoid seed into your pussy. A mix of her juices and yours leaks out onto the bench to join the others, adding to the arousing scent that clings here. With another kiss, she eases her spent shaft from you. After the lovemaking, Liliana is more snuggly than usual, caressing your body tenderly as she gives your neck soft nips. Returning this affection in kind, you feel that you've grown closer to her.";
+				else if ( player is male and player is submissive and anallevel > 1) or player is neuter:
+					say "     The young warrior pushes you down onto the bench with an excited whinny, her hands moving down to spread your legs as you lean back on it. Divesting each other of your gear, you take a moment to kiss passionately while groping one another. One of her hands finds its way between your asscheeks and rubs against your anal ring. Those roaming digits soon pry you open, thick fingers curling in your depths to stroke along your sensitive lining[if Player is male] and massage your needy prostate[end if]. Your [if Player is blequinoidbodied]knicker[else]moan[end if] of pleasure is met with her tongue pressing past your lips to wrestle with yours.";
+					say "     Once her fingering has gotten you sufficiently [if Player is male]hard and [end if]excited, she slips her fingers out and holds your hole spread open for her equinoid cock to fill. With a slow, steady thrust, she buries most of it into you while you quiver with delight in your seat. Her hooves move to your ass and grip it firmly while you grab onto the bench for support before she starts fucking you in earnest, pounding into you like a stallion. The feel of that big horsecock of hers stuffed inside you, plunging in and out, has you panting and nickering for more even as you push back into her thrusts. Your nails dig into the wood as you try to hang on (in more than one sense of the word), adding fresh marks to those of the others who've used it.";
+					say "     She pounds into you with such energy, but she is loving about it as well, something about the bench making this more like lovemaking than raw sex. 'Mmm... you're so strong, but also wonderfully eager to be ridden. When our journey's done, perhaps you'd enjoy being the first of my mates,' the sexy warrior says with a blush. [if Player is mpreg_ok]'You'd breed such mighty colts.' She ends up neighing out the last word as she thrusts deep into you and blasts her hot seed inside you, flooding your hidden womb[else]After rutting you for a good, long while, she thrusts deep into you and blasts her hot seed inside you, flooding your colon[end if] with her virile load. You [if Player is male]cry out in climax as well, clenching[else]shudder in perverse delight and clench[end if] your ass down around that equine log to milk as much as your loving companion can give.[mimpregchance]";
+					say "     By the time [if Player is male]your long orgasms are done, she's pumped an impressive load of her equinoid seed into your bowels. A mix of her juices and yours leaks[else]her long orgasm is done, she's pumped an impressive load of her equinoid seed into your bowels. Her juices leak[end if] out onto the bench to join the others, adding to the arousing scent that clings here. With another kiss, she eases her spent shaft from you. After the lovemaking, Liliana is more snuggly than usual, caressing your body tenderly as she gives your neck soft nips. Returning this affection in kind, you feel that you've grown closer to her.";
+				else:
+					say "     The young warrior allows you to push her down onto the bench, giving a soft nicker as you do. She spreads her legs and raises her equine cock and ballsack to show you her dripping snatch. After divesting each other of your gear, you are pulled into a passionate kiss by the eager herm during which she fondles your cock and aims it at that juicy pussy she was showing off earlier. With an excited [if Player is blequinoidbodied]whinny[else]groan[end if], you thrust into her, running your hands over her sexy black body as you ease your meat into her wanton hole. Her tongue dives into your mouth as you moan, sliding against yours as you start mating with the lovely equinoid.";
+					say "     Her pussy is hot and juicy, feeling wonderful around your cock, and feeling her own dribbling shaft pressed between you both only adds to the excitement. From the way it's pulsing and drooling pre, you can tell she's really enjoying being ridden. As you pick up the pace, she grips the wood of the bench hard, digging her hoof-like fingers into it, adding fresh marks to the many already there from the others who've used it.";
+					say "     You pound away at her zealously, working equally hard for her pleasure and for your own. Something about the bench makes this more like lovemaking than raw sex. 'Mmmm... you're so strong and so passionate. When our journey's over, I might even be willing to accept being one of your mares,' the sexy warrior says with a bright blush. 'You'd give me such mighty colts.' She ends up neighing out the last word as her pussy clamps down around you and her cock slaps across her chest, cum spurting in a fountain from it. The sight, scent and sensation of her cumming are enough to push you to orgasm as well. You hold one another tightly while you pump your [Cum Load Size of Player] load into her dark-lipped cunt.";
+					say "     By the time your long orgasms are done, she's splattered you both thoroughly with an impressive load of equinoid semen. A mix of her juices and yours leak out onto the bench to join the others, adding to the arousing scent that clings here. With another kiss, you ease your spent shaft from her. After the lovemaking, Liliana is more snuggly than usual, caressing your body tenderly as she fawns over you. Returning this affection in kind, you feel that you've grown closer to her.";
+				now lastfuck of equinoid warrior is turns;
+				infect "Black Equinoid";
+				now Libido of Player is Libido of Player / 2;
+				now Libido of equinoid warrior is 0;
+				SanLoss 5;
+				if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
+				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
+				increase XP of equinoid warrior by ( level of equinoid warrior + 1 ) * 3;
+				increase score by 20;
+				now Resolution of Lovers Bench is 8;	[Did Lovers Bench with Liliana]
+			else if demon brute is listed in companionList of Player and DBCaptureQuestVar > 5:
+				WaitLineBreak;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
+					if Name entry is "Demon Brute":
+						now MonsterID is y;
+						break;
+				if DemonBruteStatus < 2: [male/herm Brutus]
+					say "     As you're finishing up your scavenging, you notice Brutus standing next to the bench, his nostrils flaring as he takes deep breaths of the air around it. The smells here seem to be affecting him quite a bit, as his massive cock is fully erect and even dripping precum. And he's not the only one - the musk of all the previous couples making use of this place has your own libido ramped up pretty high...";
+					say "     Ogling the naked form of your demonic companion, lustful thoughts going through your head, you find yourself stepping closer to him. 'Master?' Brutus asks as he turns his head, then falls silent as his eyes meet yours, both of you drawn into the pretty intense connection you feel right then. After a moment of being lost in each other's eyes, a deep, lust-filled grumble comes from Brutus's broad chest, and he looks at the bench, then back at you. 'Do you want to...' is all that he has time to say before you pull his horned head to yours, kissing him deeply and hungrily.";
+					if Player is male: [male+herm]
+						if anallevel > 1:	 [anal sex not blocked]
+							let DBAnalScene be a random number from 1 to 10;
+							if Player is submissive:
+								increase DBAnalScene by 2;
+							if DBAnalScene < 5:
+								say "     [BenchAnalFuckDB]";
+							else:
+								say "     [BenchAnalDBFucksPlayer]";
+						else: [anal sex blocked]
+							say "     [BenchDBBlowsPlayer]";
+					else: [female player]
+						say "     [BenchDBFucksPlayer]";
+				else: [female Brutus]
+					say "     As you're finishing up your scavenging, you notice Brutus standing next to the bench, his nostrils flaring as he takes deep breaths of the air around it. The smells here seem to be affecting him quite a bit, as his pussy looks open and swollen, now dripping wet. And he's not the only one - the musk of all the previous couples making use of this place has your own libido ramped up pretty high...";
+					say "     Ogling the naked form of your demonic companion, lustful thoughts going through your head, you find yourself stepping closer to him. 'Master?' Brutus asks as he turns his head, then falls silent as his eyes meet yours, both of you drawn into the pretty intense connection you feel right then. After a moment of being lost in each other's eyes, a deep, lust-filled grumble comes from Brutus's broad chest, and he looks at the bench, then back at you. 'Do you want to...' is all that he has time to say before you pull his horned head to yours, kissing him deeply and hungrily.";
+					if Player is male: [male+herm player]
+						say "     [BenchFuckDB]";
+					else: [female player]
+						say "     [BenchDBFemaleSex]";
+				now lastfuck of demon brute is turns;
+				now Libido of Player is Libido of Player / 2;
+				SanLoss 5;
+				if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
+				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
+				increase XP of demon brute by ( level of demon brute + 1 ) * 3;
+				increase score by 20;
+				now Resolution of Lovers Bench is 9;	[Did Lovers Bench with Brutus]
 			else:
-				say "     Running your hands over each other, you can feel the mousie's stiff cock pressing against you and you can sense what she wants of you. Unwilling to deny the needs of your sexy little lover, you lay your [bodytype of Player] body across the bench with your hips and legs hanging off the edge, offering up your [if Player is female]pussy[else]ass[end if] to the mouse girl. She runs her little paws over your backside and squeaks happily, pleased that this puts you at the perfect height for her cock. Moving in behind you, she lines up her throbbing maleness with your waiting hole and slowly sinks into you. You can't help but moan and squeak in delight as you're penetrated, gripping the wood firmly as she starts pounding into you.";
-				say "     As she continues thrusting into you, you can feel her pleasure as well as your own, sharing your growing love for each other. You can feel her cock inside you as well as the intense pleasure of your [if Player is female]wet vagina[else]tight hole[end if] sliding across her hard flesh as well as the growing pressure inside her balls. You can feel the quivering of her aroused pussy and the wet juices running down her thighs, as well as the slap of her own balls against her clit as she thrusts. Sharing in all of this, you moan loudly and grip the bench firmly, digging fresh marks into it with your nails. 'Oh, my love. It feels so good to be with you. We should be together forever,' the busty little herm squeaks. 'Accept your place with me, with all of us, and it will always be like this.' You moan and nod eagerly, pressing back into her thrusts and feeling your bond with this beautiful creature growing stronger as something about the bench makes this more like lovemaking than raw sex.";
-				say "     After a powerfully long orgasm that sends her hot seed into your [if Player is female]waiting womb and your synchronous climax[else]stuffed bottom[end if], she slides her cock slowly from you, caressing your ass. Your companion is extra-snugly after the lovemaking, nuzzling at your side as she holds your hand in hers and wraps her tail around your wrist, and you happily return this affection, feeling much closer to her.[impregchance]";
-			now lastfuck of bee girl is turns;
-			infect "Mental Mouse";
-			now Libido of Player is Libido of Player / 2;
-			SanLoss 20;
-			if "Strong Psyche" is listed in feats of Player, SanBoost 5;
-			if "Weak Psyche" is listed in feats of Player, SanLoss 5;
-			increase XP of mouse girl by ( level of mouse girl + 1 ) * 3;
-			increase score by 20;
-			now Resolution of Lovers Bench is 7;	[Did Lovers Bench with Rachel]
-		else if companion of Player is equinoid warrior:
-			say "     As you're finishing up your scavenging, Liliana strides up beside you to run her hoofed hands over your [bodytype of Player] body. She smiles at you with a lustful hunger in her eyes. '[if Player is blequinoidbodied]Come, join me over here and I will remind you of the warm embrace of the herd[else]We may be away from the herd, but we can still keep one another fulfilled[end if],' she says, guiding you towards the bench. Having gotten quite aroused by the scents of bestial lusts in the air, the sight of the aroused equinoid with her perky nipples, equine erection and dripping pussy entice you to take her up on her offer.";
-			if ( player is purefemale ) or ( player is female and player is submissive ):
-				say "     The young warrior pushes you down onto the bench with an excited whinny, her hands moving down to spread your legs as you lean back on it. Divesting each other of your gear, you take a moment to kiss passionately while groping one another. One of her hands finds its way to your pussy and she plunges a pair of digits into you. Your [if Player is blequinoidbodied]knicker[else]moan[end if] of pleasure is met with her tongue pressing past your lips to wrestle with yours.";
-				say "     Once her fingering has gotten you quite wet, she slips her fingers out and holds your pussy spread open for her equinoid cock to fill. With a slow, steady thrust, she buries most of it into you while you quiver with delight in your seat. Her hooves move to your ass and grip it firmly while you grab onto the bench for support before she starts fucking you in earnest, pounding into you like a stallion. The feel of that big horsecock of hers stuffed inside you, plunging in and out, has you panting and nickering for more even as you push back into her thrusts. Your nails dig into the wood as you try to hang on (in more than one sense of the word), adding fresh marks to those of the others who've used it.";
-				say "     She pounds into you with such energy, but she is loving about it as well, something about the bench making this more like lovemaking than raw sex. 'Mmm... you're so strong, but also wonderfully eager to be ridden. When our journey's done, perhaps you'd enjoy being the first of my mares,' the sexy warrior says with a blush. 'You'd breed such mighty colts.' She ends up neighing out the last word as she thrusts deep into you and blasts her hot seed inside you, flooding your womb with her virile load. You cry out in climax as well, clenching your vagina down around that equine log to milk as much as your loving companion can give.[impregchance]";
-				say "     By the time your long orgasms are done, she's pumped an impressive load of her equinoid seed into your pussy. A mix of her juices and yours leaks out onto the bench to join the others, adding to the arousing scent that clings here. With another kiss, she eases her spent shaft from you. After the lovemaking, Liliana is more snuggly than usual, caressing your body tenderly as she gives your neck soft nips. Returning this affection in kind, you feel that you've grown closer to her.";
-			else if ( player is male and player is submissive and anallevel > 1) or player is neuter:
-				say "     The young warrior pushes you down onto the bench with an excited whinny, her hands moving down to spread your legs as you lean back on it. Divesting each other of your gear, you take a moment to kiss passionately while groping one another. One of her hands finds its way between your asscheeks and rubs against your anal ring. Those roaming digits soon pry you open, thick fingers curling in your depths to stroke along your sensitive lining[if Player is male] and massage your needy prostate[end if]. Your [if Player is blequinoidbodied]knicker[else]moan[end if] of pleasure is met with her tongue pressing past your lips to wrestle with yours.";
-				say "     Once her fingering has gotten you sufficiently [if Player is male]hard and [end if]excited, she slips her fingers out and holds your hole spread open for her equinoid cock to fill. With a slow, steady thrust, she buries most of it into you while you quiver with delight in your seat. Her hooves move to your ass and grip it firmly while you grab onto the bench for support before she starts fucking you in earnest, pounding into you like a stallion. The feel of that big horsecock of hers stuffed inside you, plunging in and out, has you panting and nickering for more even as you push back into her thrusts. Your nails dig into the wood as you try to hang on (in more than one sense of the word), adding fresh marks to those of the others who've used it.";
-				say "     She pounds into you with such energy, but she is loving about it as well, something about the bench making this more like lovemaking than raw sex. 'Mmm... you're so strong, but also wonderfully eager to be ridden. When our journey's done, perhaps you'd enjoy being the first of my mates,' the sexy warrior says with a blush. [if Player is mpreg_ok]'You'd breed such mighty colts.' She ends up neighing out the last word as she thrusts deep into you and blasts her hot seed inside you, flooding your hidden womb[else]After rutting you for a good, long while, she thrusts deep into you and blasts her hot seed inside you, flooding your colon[end if] with her virile load. You [if Player is male]cry out in climax as well, clenching[else]shudder in perverse delight and clench[end if] your ass down around that equine log to milk as much as your loving companion can give.[mimpregchance]";
-				say "     By the time [if Player is male]your long orgasms are done, she's pumped an impressive load of her equinoid seed into your bowels. A mix of her juices and yours leaks[else]her long orgasm is done, she's pumped an impressive load of her equinoid seed into your bowels. Her juices leak[end if] out onto the bench to join the others, adding to the arousing scent that clings here. With another kiss, she eases her spent shaft from you. After the lovemaking, Liliana is more snuggly than usual, caressing your body tenderly as she gives your neck soft nips. Returning this affection in kind, you feel that you've grown closer to her.";
-			else:
-				say "     The young warrior allows you to push her down onto the bench, giving a soft nicker as you do. She spreads her legs and raises her equine cock and ballsack to show you her dripping snatch. After divesting each other of your gear, you are pulled into a passionate kiss by the eager herm during which she fondles your cock and aims it at that juicy pussy she was showing off earlier. With an excited [if Player is blequinoidbodied]whinny[else]groan[end if], you thrust into her, running your hands over her sexy black body as you ease your meat into her wanton hole. Her tongue dives into your mouth as you moan, sliding against yours as you start mating with the lovely equinoid.";
-				say "     Her pussy is hot and juicy, feeling wonderful around your cock, and feeling her own dribbling shaft pressed between you both only adds to the excitement. From the way it's pulsing and drooling pre, you can tell she's really enjoying being ridden. As you pick up the pace, she grips the wood of the bench hard, digging her hoof-like fingers into it, adding fresh marks to the many already there from the others who've used it.";
-				say "     You pound away at her zealously, working equally hard for her pleasure and for your own. Something about the bench makes this more like lovemaking than raw sex. 'Mmmm... you're so strong and so passionate. When our journey's over, I might even be willing to accept being one of your mares,' the sexy warrior says with a bright blush. 'You'd give me such mighty colts.' She ends up neighing out the last word as her pussy clamps down around you and her cock slaps across her chest, cum spurting in a fountain from it. The sight, scent and sensation of her cumming are enough to push you to orgasm as well. You hold one another tightly while you pump your [Cum Load Size of Player] load into her dark-lipped cunt.";
-				say "     By the time your long orgasms are done, she's splattered you both thoroughly with an impressive load of equinoid semen. A mix of her juices and yours leak out onto the bench to join the others, adding to the arousing scent that clings here. With another kiss, you ease your spent shaft from her. After the lovemaking, Liliana is more snuggly than usual, caressing your body tenderly as she fawns over you. Returning this affection in kind, you feel that you've grown closer to her.";
-			now lastfuck of equinoid warrior is turns;
-			infect "Black Equinoid";
-			now Libido of Player is Libido of Player / 2;
-			now Libido of equinoid warrior is 0;
-			SanLoss 5;
-			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
-			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
-			increase XP of equinoid warrior by ( level of equinoid warrior + 1 ) * 3;
-			increase score by 20;
-			now Resolution of Lovers Bench is 8;	[Did Lovers Bench with Liliana]
-		else if companion of Player is demon brute and DBCaptureQuestVar > 5:
-			WaitLineBreak;
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Demon Brute":
-					now MonsterID is y;
-					break;
-			if DemonBruteStatus < 2: [male/herm Brutus]
-				say "     As you're finishing up your scavenging, you notice Brutus standing next to the bench, his nostrils flaring as he takes deep breaths of the air around it. The smells here seem to be affecting him quite a bit, as his massive cock is fully erect and even dripping precum. And he's not the only one - the musk of all the previous couples making use of this place has your own libido ramped up pretty high...";
-				say "     Ogling the naked form of your demonic companion, lustful thoughts going through your head, you find yourself stepping closer to him. 'Master?' Brutus asks as he turns his head, then falls silent as his eyes meet yours, both of you drawn into the pretty intense connection you feel right then. After a moment of being lost in each other's eyes, a deep, lust-filled grumble comes from Brutus's broad chest, and he looks at the bench, then back at you. 'Do you want to...' is all that he has time to say before you pull his horned head to yours, kissing him deeply and hungrily.";
-				if Player is male: [male+herm]
-					if anallevel > 1:	 [anal sex not blocked]
-						let DBAnalScene be a random number from 1 to 10;
-						if Player is submissive:
-							increase DBAnalScene by 2;
-						if DBAnalScene < 5:
-							say "     [BenchAnalFuckDB]";
-						else:
-							say "     [BenchAnalDBFucksPlayer]";
-					else: [anal sex blocked]
-						say "     [BenchDBBlowsPlayer]";
-				else: [female player]
-					say "     [BenchDBFucksPlayer]";
-			else: [female Brutus]
-				say "     As you're finishing up your scavenging, you notice Brutus standing next to the bench, his nostrils flaring as he takes deep breaths of the air around it. The smells here seem to be affecting him quite a bit, as his pussy looks open and swollen, now dripping wet. And he's not the only one - the musk of all the previous couples making use of this place has your own libido ramped up pretty high...";
-				say "     Ogling the naked form of your demonic companion, lustful thoughts going through your head, you find yourself stepping closer to him. 'Master?' Brutus asks as he turns his head, then falls silent as his eyes meet yours, both of you drawn into the pretty intense connection you feel right then. After a moment of being lost in each other's eyes, a deep, lust-filled grumble comes from Brutus's broad chest, and he looks at the bench, then back at you. 'Do you want to...' is all that he has time to say before you pull his horned head to yours, kissing him deeply and hungrily.";
-				if Player is male: [male+herm player]
-					say "     [BenchFuckDB]";
-				else: [female player]
-					say "     [BenchDBFemaleSex]";
-			now lastfuck of demon brute is turns;
-			now Libido of Player is Libido of Player / 2;
-			SanLoss 5;
-			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
-			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
-			increase XP of demon brute by ( level of demon brute + 1 ) * 3;
-			increase score by 20;
-			now Resolution of Lovers Bench is 9;	[Did Lovers Bench with Brutus]
-		else:
-			increase Libido of Player by ( 100 - Libido of Player ) / 4;
-			say "     Aroused by the lingering scent of sex around the area, your eyes are drawn to the bench. You find yourself thinking that it might be more fun if you were to bring some [if lbcomplist is not empty]new [end if]companionship here next time.";
-		add printed name of companion of Player to lbcompList;
+				increase Libido of Player by ( 100 - Libido of Player ) / 4;
+				say "     Aroused by the lingering scent of sex around the area, your eyes are drawn to the bench. You find yourself thinking that it might be more fun if you were to bring some [if lbcomplist is not empty]new [end if]companionship here next time.";
+			add printed name of companion to lbcompList;
 
 [
 		now Lovers Bench is resolved;
@@ -534,14 +531,15 @@ Table of GameEventIDs (continued)
 Object	Name
 PeachTree	"PeachTree"
 
-PeachTree is a situation. The level of PeachTree is 7.
-The sarea of PeachTree is "Park".
+PeachTree is a situation.
+ResolveFunction of PeachTree is "[ResolveEvent PeachTree]". The level of PeachTree is 7.
+Sarea of PeachTree is "Park".
 peachtreefight is a number that varies.
 
 when play begins:
 	add PeachTree to badspots of HermList;
 
-Instead of resolving a PeachTree:
+to say ResolveEvent PeachTree:
 	now peachtreefight is 3;
 	say "     Straying down a disused path, you find yourself approaching a large peach tree. The tree is laden with large, juicy fruit. Your mouth salivates just from the scent coming from it";
 	if HP of Joanna >= 7 and HP of Joanna < 90:		[Joanna's seed]
@@ -598,7 +596,7 @@ name	desc	weight	object
 
 tasty peach is a grab object. tasty peach is temporary.
 
-the usedesc of tasty peach is "[yummypeach]";
+Usedesc of tasty peach is "[yummypeach]";
 
 to say yummypeach:
 	if "Junk Food Junky" is listed in feats of Player:
@@ -623,13 +621,14 @@ Object	Name
 Concession Stand	"Concession Stand"
 
 Concession Stand is a situation.
-The sarea of Concession Stand is "Fair".
+ResolveFunction of Concession Stand is "[ResolveEvent Concession Stand]".
+Sarea of Concession Stand is "Fair".
 foodvendor is a number that varies.
 when play begins:
 	add Concession Stand to BadSpots of FurryList;
 	add Concession Stand to BadSpots of MaleList;
 
-Instead of resolving a Concession Stand:
+to say ResolveEvent Concession Stand:
 	if foodvendor is 0:
 		say "     Wandering through the bright lights of the state fair, you wander into a cluster of food stands advertising a variety of fried foods and sugary treats. Most are closed up right now, but one seems to be open with a strange figure manning the stand. This man is wearing a bright green suit with yellow trim and a yellow bowler hat. While you think he's human, his features seem to be strangely shifting, making it hard for you to pin down exactly what he looks like. At moments, you think you see a hint of lupine in his eyes or a feline muzzle, but then you can no longer discern these traits. For a second you think you see a broad tail, but then it is gone as if it were never there. Confused by all this, you miss the first part of his sales pitch, where he's trying to entice you into buying some of the snacks he has on sale. '...so like I said, not a penny from your pocket do I want for them. A delicious snack to satisfy your cravings and a cool drink to help you beat the heat,' he says as he motions to the tasty looking treats on display and the cans of soda chilling in an ice barrel.";
 		say "     [bold type]'So, we got a deal?' he asks, holding out his hand.[roman type][line break]";
@@ -758,14 +757,15 @@ Object	Name
 Sweet Exchange	"Sweet Exchange"
 
 Sweet Exchange is a situation.
-The sarea of Sweet Exchange is "Fair".
+ResolveFunction of Sweet Exchange is "[ResolveEvent Sweet Exchange]".
+Sarea of Sweet Exchange is "Fair".
 when play begins:
 	add Sweet Exchange to BadSpots of FurryList;
 	add Sweet Exchange to BadSpots of FemaleList;
 	add Sweet Exchange to BadSpots of MaleList;
 	add Sweet Exchange to badspots of HumorousList;
 
-Instead of resolving a Sweet Exchange:
+to say ResolveEvent Sweet Exchange:
 	say "     From up ahead, you hear a bunch of excited voices and decide to cautiously check it out. What you discover is a mob of pastel colored ferrets poinging up and down in front of a stall. Atop the stall are some sugar gliders covered in cotton candy fur. Both groups are yelling at one another, calling each other names though neither of them seems particularly upset.";
 	say "     'Fork it over, you cotton-brained thief!' one ferret yells. 'Yeah!' 'Sugar snatchers!' 'Give it.' 'PopPopPopPopPop!' the others babble excitedly, many of them making grabby paws in the air towards the bottles and cans of pop the pink marsupials are dangling tantalizingly out of reach.";
 	say "     'Pay up then, you soda jerks,' one sugar glider responds. 'We got this fair and square,' she adds, sticking out her tongue and looking insulted, while several of her friends giggle at that. 'Give us that sweet, sweet candy you've been hoarding, you carbonated tube rats,' another yells of the sugar gliders.";
@@ -790,15 +790,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Caught Glider	"Caught Glider"
 
-Caught Glider is a situation. Caught Glider is inactive.
-The sarea of Caught Glider is "Fair".
+Caught Glider is a situation.
+ResolveFunction of Caught Glider is "[ResolveEvent Caught Glider]". Caught Glider is inactive.
+Sarea of Caught Glider is "Fair".
 when play begins:
 	add Caught Glider to BadSpots of FurryList;
 	add Caught Glider to BadSpots of FemaleList;
 	add Caught Glider to BadSpots of MaleList;
 	add Caught Glider to badspots of HumorousList;
 
-Instead of resolving a Caught Glider:
+to say ResolveEvent Caught Glider:
 	say "     Hearing some commotion start up suddenly behind you, you turn around in time to see one of those cotton-candy-colored sugar gliders run across the laneway. In hot pursuit of her are a pack of the colorful, sugar-crazed ferrets. 'Sugar thief!' 'Come back here!' 'Don't let her get away, guys!' 'Candy-assed scoundrel!' they call out excitedly, laughing as they give chase. Following cautiously, you watch the sugar glider string them along for a while rather than just glide away, giggling as well at the fun and yelling taunts back at them.";
 	say "     But when it looks like she's going to get away, she banks the wrong way and is jumped by several of the ferrets who doubled-back and were waiting atop the roof of one of the stalls. The fluffy pink girl is pulled to the ground and pinned down by the excited ferrets. 'Let's show her what we do to sugar thieves,' one says with a wide, toothy grin. 'Yeah!' 'Do it!' 'Thieves get fucked!' the others cheer.";
 	say "     The sugar glider giggles at this and squirms playfully as the ferrets around her start groping her cute body. 'Oh, don't you dare, you soda jerks. Don't you dare stuff my sweet, juicy cunts,' she says while parting her legs and spreading the wet lips of her two pussies. 'You're such naughty hobs for even suggesting it,' she sniffs haughtily, grinning all the more even as she continues to frig herself.";
@@ -817,13 +818,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Beach Party	"Beach Party"
 
-Beach Party is a situation. The level of Beach Party is 5.
-The sarea of Beach Party is "Beach".
+Beach Party is a situation.
+ResolveFunction of Beach Party is "[ResolveEvent Beach Party]". The level of Beach Party is 5.
+Sarea of Beach Party is "Beach".
 when play begins:
 	add Beach Party to BadSpots of FurryList;
 	add Beach Party to BadSpots of FemaleList;
 
-Instead of resolving a Beach Party:
+to say ResolveEvent Beach Party:
 	say "     Traveling along the beach, you crest a small dune to find a group of bright pink, dolphin girls splashing around in the water. They seem to be throwing a [if daytimer is day]sunny[else]nighttime[end if] beach party for themselves, giggling and playing around a large dolphin pooltoy. One runs over to a small cooler and pulls out a can of soda. After shaking it up, she sprays it wildly across her friend's body, causing her to squeak and laugh as she tries to block the foamy spray[if thirst of Player > 30]. Feeling rather thirsty yourself, you find it disappointing they'd waste a drink like that[end if]. As the foam slides down her body, you notice that something is odd about their appearance. In the [if daytimer is day]sunlight, you can see that the dark cola running down her back can be seen through her[else]moonlight, you can see the foam cola running smoothly down her body[end if]. These dolphin girls are inflatable creatures and completely empty save for air.";
 	say "     It is at this point that you are spotted. And, eager for more fun, the dolphin girl on the beach tosses down the empty can and bounds her way towards you with a vapid smile on her face.";
 	now dolphinflatablefight is 3;
@@ -882,9 +884,10 @@ Object	Name
 B&R	"B&R"
 
 B&R is a situation.
-The sarea of B&R is "Mall".
+ResolveFunction of B&R is "[ResolveEvent B&R]".
+Sarea of B&R is "Mall".
 
-Instead of resolving a B&R:
+to say ResolveEvent B&R:
 	say "     While roaming around through the sewers, you hear the sound of arguing voices coming towards you. Being cautious, you duck into the shadows and watch the pair approach. They are an odd pair of big, muscled brutes carrying large weapons. The first is a warthog wearing shoulder pads and a torn, red vest, with several hand grenades within easy reach on it. His sharp, white tusks, hoop snoot-ring and bone necklace give him a menacing appearance despite the purple mohawk and sunglasses. The other is a rhino in a yellow wife-beater and cargo pants with a bandoleer of bullets across his chest, as well as a grenade of his own. While he clearly has a bit of a gut on him, his arms are even more muscled than his companion's.";
 	say "     It's hard to follow what exactly they're arguing about as they pause near your hiding place. Most of the time, it sounds like they're searching for turtles, intent on violence, but the rest of the time they're trying to remember an old cartoon they watched as kids. Eventually, they make a decision on which way to go next and continue on. Rather than interrupt the well-armed, volatile and clearly crazy duo, you quietly let them pass before moving on.";
 	now B&R is resolved;
@@ -897,11 +900,12 @@ Object	Name
 Slumbering Giant	"Slumbering Giant"
 
 Slumbering Giant is a situation.
-The sarea of Slumbering Giant is "Zoo".
+ResolveFunction of Slumbering Giant is "[ResolveEvent Slumbering Giant]".
+Sarea of Slumbering Giant is "Zoo".
 when play begins:
 	add Slumbering Giant to BadSpots of MaleList;
 
-Instead of resolving a Slumbering Giant:
+to say ResolveEvent Slumbering Giant:
 	say "     Going over a small rise, you are met with an impressive sight. Lying down in one of the smaller pasture paddocks is a giant human being. You'd guess he's about forty feet tall and he takes up a good part of the grassy area he's sleeping in. You'd not spotted him until now because his chosen napping spot is a depression behind the hill you're on. He's wearing a large tan jacket that's scaled to his size and nothing else. He groans softly and rolls over, giving you a view of his enormous cock, semi-hard in his sleep. Yawning wide, he gives his enormous balls a scratch and his cock a quick rub before his hand slides back to the ground with a heavy thud. Given the size of he and knowing how grumpy you can be if someone wakes you up from a nap, you quietly turn around and sneak off, hoping he won't wake up until you're long gone from here.";
 	now Slumbering Giant is resolved;
 
@@ -909,12 +913,13 @@ Table of GameEventIDs (continued)
 Object	Name
 My Own Zoo Playset	"My Own Zoo Playset"
 
-My Own Zoo Playset is a situation. The level of My Own Zoo Playset is 12.
-The sarea of My Own Zoo Playset is "Zoo".
+My Own Zoo Playset is a situation.
+ResolveFunction of My Own Zoo Playset is "[ResolveEvent My Own Zoo Playset]". The level of My Own Zoo Playset is 12.
+Sarea of My Own Zoo Playset is "Zoo".
 when play begins:
 	add My Own Zoo Playset to BadSpots of MaleList;
 
-Instead of resolving a My Own Zoo Playset:
+to say ResolveEvent My Own Zoo Playset:
 	say "     While moving through an area of empty pens and habitats, you turn hear some activity coming from the opposite side of a thick cluster of trees. Cautiously peering out from some bushes at the edge of the copse of trees, you are met with a startling sight. There's a giant of a man wearing a zookeeper's jacket. He's probably over forty feet tall and is sitting cross-legged on the ground with a couple a cars and zoo maintenance vehicles scattered around him. Given how the grass is all torn up with tire tracks, it looks like he's been pushing them around in a rather... peculiar manner. He mumbles and grumbles about them not being just right, or too out of place, and seems rather obsessed with them being perfectly aligned or organized in a very specific way.";
 	say "     Besides this arrangement of vehicles, he's also got an assortment of animal mutants in an enclosure. Clearly frightened, most of them are huddling in small groups or in what dark corners they can find. Scattered among them are others you'd almost mistake at first to be animal print balls, were they not huge and rolling around slightly as they squirm their arms and legs weakly. Bloated like cum-filled balloons, they've clearly been left rounded by the giant as part of some sexual entertainment. Judging by his many grunts of frustration from before, you can imagine he'd need something to let off some steam, and what's better than some easily reachable critters so ready to receive copious amounts of cum inside them?";
 	WaitLineBreak;
@@ -943,9 +948,10 @@ Object	Name
 Destroyed Records	"Destroyed Records"
 
 Destroyed Records is a situation.
-The sarea of Destroyed Records is "Sealed".
+ResolveFunction of Destroyed Records is "[ResolveEvent Destroyed Records]".
+Sarea of Destroyed Records is "Sealed".
 
-Instead of resolving a Destroyed Records:
+to say ResolveEvent Destroyed Records:
 	say "     Wandering through the darkened halls of the underground lab complex, your attention is drawn towards the stale smell of smoke and ashes. Following your nose, you find your way into records room that's been purposefully destroyed. There is a large char mark and a pile of ashes on the middle of the floor. It seems someone, probably when things started to go downhill, decided to burn all the records of what was really going on down here. You sift through the mess, finding the charred remains of what were probably once data CDs and DVDs among the mess. You search through it carefully, but they were quite thorough and you're unable to find anything scraps of unburnt paper with more than a few legible letters on them.";
 	increase score by 1;
 	now Destroyed Records is resolved;

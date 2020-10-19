@@ -42,7 +42,7 @@ To say Succubus loss:
 		say ""; [dealt with at the source]
 	else:
 		if lisaartemiscount1 > 0 and lisaartemiscount1 < 5, increase lisaartemiscount1 by 1;
-		if companion of Player is demon brute and HP of Lilith is 0 and inasituation is false:
+		if demon brute is listed in companionList of Player and HP of Lilith is 0 and inasituation is false:
 			if Player is male:
 				if BodyName of Player is "Incubus":
 					say "     'Good fight, dark brother,' the succubus says with a smile as she raises her hands in surrender and you order your companion to stop fighting and stand still. 'You are definitely the more powerful seducer,' she acknowledges with a smile as you grin back at her, 'and you do have a most interesting pet... how did you get him so - tame?'";
@@ -96,8 +96,8 @@ to say SuccubusDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -118,7 +118,7 @@ When Play begins:
 	now desc entry is "[SuccubusDesc]";
 	now face entry is "that of a beautiful human's, your strange slit pupiled eyes and the small horns poking out of your hair, the only clue that your almost perfect features hide the lusty desires of a succubus behind your innocent"; [You have a (your text) face."]
 	now body entry is "surprisingly perfect, your muscles and curves nicely defined, your long eye-catching legs perfect for showing off, and your soft hands with their long nails are just made for stroking and petting the opposite sex. The only true sign of your unusual nature, are the two large bat-like wings, folded up against your back, and while they are not quite powerful enough to lift you aloft yet, though you think that might change sometime soon"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]soft, human[or]pale[or]perfect[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]soft, human[or]pale[or]perfect[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a perfect sexy ass with a long, slender tail attached. It is a classic devil tail: thin, red and ending in a spaded tip."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]amazing[or]incubus[or]perfect[or]human-like[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into a softer more sexual appearance, soft horns pushing out of your lovely new waterfall of long silken hair"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -146,9 +146,13 @@ When Play begins:
 	now Cunt Count entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12;
 	now Cunt Tightness entry is 6;
-	now libido entry is 80;          [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 80;          [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "libido pill"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 20;       [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;            [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if Player is female]sultry[else]handsome[end if][at random]";
 	now type entry is "demonic";     [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -163,7 +167,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

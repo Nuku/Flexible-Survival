@@ -13,9 +13,10 @@ Object	Name
 Creeping Grass	"Creeping Grass"
 
 Creeping Grass is a situation.
-The sarea of Creeping Grass is "Plains".
+ResolveFunction of Creeping Grass is "[ResolveEvent Creeping Grass]".
+Sarea of Creeping Grass is "Plains".
 
-Instead of resolving a Creeping Grass:
+to say ResolveEvent Creeping Grass:
 	say "     As you check out a few fallen buildings, you notice that the rubble pile has already been partially covered by the dry grasses of the plains. Somehow, despite their recent collapse, the plains are already starting to cover and reclaim them. Checking more closely and prodding it with a stick, you can see that the grass roots, instead of burrowing into the soil, have climbed up the fallen beams and boards, spreading to grow fresh grass overtop of them. Putting some weight on the covered spot, it breaks and crumbles easily, showing that the grasses are breaking down and destroying the ruins they cover.";
 	increase score by 1;
 	now Creeping Grass is resolved;
@@ -28,9 +29,10 @@ Object	Name
 Ranch House	"Ranch House"
 
 Ranch House is a situation.
-The sarea of Ranch House is "Plains".
+ResolveFunction of Ranch House is "[ResolveEvent Ranch House]".
+Sarea of Ranch House is "Plains".
 
-Instead of resolving a Ranch House:
+to say ResolveEvent Ranch House:
 	say "     You come the ruins of what was probably a ranch house. You search through the broken home, but find nothing of use or value. Looking around, you see that some of the fence still stands and notice a second fallen structure. Going over, you can quickly tell that this was once a small stable from the smell of horses hanging over it. You take care where you step, avoiding the dark messes as well as the white ones from equine cum. Hoof-prints in the dirt around the stable head off into the plains where the transformed horses probably live now in some altered form.";
 	increase score by 1;
 	now Ranch House is resolved;
@@ -43,9 +45,10 @@ Object	Name
 Soaring Eagle	"Soaring Eagle"
 
 Soaring Eagle is a situation.
-The sarea of Soaring Eagle is "Plains".
+ResolveFunction of Soaring Eagle is "[ResolveEvent Soaring Eagle]".
+Sarea of Soaring Eagle is "Plains".
 
-Instead of resolving a Soaring Eagle:
+to say ResolveEvent Soaring Eagle:
 	say "     Taking a short break under one of the rare trees on the plains, you spot a shadow drift across the ground. Looking up, you spot an eagle high up in the sky. As you watch it, you notice that it is not a normal eagle, but some kind of eagle man. Deciding to take no risks, you wait in the shadow of the tree until he passes from sight.";
 	increase score by 1;
 	now Soaring Eagle is resolved;
@@ -57,13 +60,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Partial Ruin	"Partial Ruin"
 
-Partial Ruin is a situation. The level of Partial Ruin is 5.
-The sarea of Partial Ruin is "Plains".
+Partial Ruin is a situation.
+ResolveFunction of Partial Ruin is "[ResolveEvent Partial Ruin]". The level of Partial Ruin is 5.
+Sarea of Partial Ruin is "Plains".
 when play begins:
 	add Partial Ruin to badspots of HermList;
 	add Partial Ruin to BadSpots of FurryList;
 
-Instead of resolving a Partial Ruin:
+to say ResolveEvent Partial Ruin:
 	say "     You manage to find a stretch of asphalt that is only partially broken up by the grasses, most roadway here having already been split and broken through extensively by the plantlife here. This stretch has only started to succumb, but looks a couple of decades old and poorly maintained despite its probably newness. Following it, you come to a half-fallen building, the remains of a corner store. Hopeful of finding something of use, you rush over and start searching through the place. You have only started to look around when the ground starts to shake and rumble and another wall of the building collapses.";
 	let bonus be ( Dexterity of Player + Strength of Player - 20 ) divided by 2;
 	let dice be a random number from 1 to 20;
@@ -93,15 +97,16 @@ Object	Name
 Hardware Store Ruins	"Hardware Store Ruins"
 
 Hardware Store Ruins is a situation.
-The sarea of Hardware Store Ruins is "Plains".
+ResolveFunction of Hardware Store Ruins is "[ResolveEvent Hardware Store Ruins]".
+Sarea of Hardware Store Ruins is "Plains".
 
-Instead of resolving a Hardware Store Ruins:
+to say ResolveEvent Hardware Store Ruins:
 	say "     You wander across the dry plains, following the path of a worn-down road as it meanders through the rolling hills. The smell of dust still lingers in the air, likely the result of a herd of centaurs as they move through the plains. Not wanting to be caught off guard, you walk with further haste, until the dust settles, and you can once again relax. You pause for a moment to catch your breath. Taking the opportunity to survey your	surroundings, you think you spot a number of buildings up ahead. You approach to a safe distance, your eyes scanning the horizon for both peril and plunder, until eventually, they settle on the ruins of an old hardware store.";
 	say "     [bold type]Do you want to investigate the ruins? [roman type]There's a good chance you could find some useful tools, but it looks risky, and rummaging around in the debris might bring unwanted attention.";
 	LineBreak;
 	if Player consents:
 		let diceRoll be a random number from 1 to 20;
-		let bonus be ( ( the Perception of the player minus 10 ) divided by 2 );
+		let bonus be ( ( Perception of Player minus 10 ) divided by 2 );
 		let perceptionRoll be diceRoll plus bonus;
 		say "     You proceed to clamber into the ruins, moving aside fallen junk in an effort to find something of use. The rubble is difficult to move and the task quickly becomes both tiring and frustrating. More and	more as you work, you come to believe this place was picked completely clean before it collapsed. While some parts are too buried to reach and check, those you can find yield nothing of value at all. At one point, you notice a solid plank of wood buried under the rubble that looks like it might be of use. You give it a tug, but it barely moves. You pull again, getting it to budge this time, but you can see that it's a bit longer than you thought and moves much of the surrounding rubble along with it.";
 		say "     You roll 1d20([diceRoll])+[bonus] = [special-style-1][perceptionRoll][roman type] vs [special-style-2]10[roman type] (Perception Check):[line break]";
@@ -114,7 +119,7 @@ Instead of resolving a Hardware Store Ruins:
 				say "[CentaurHardwareFight]";
 			else:
 				let diceRoll be a random number from 1 to 20;
-				let bonus be ( ( the Dexterity of the player minus 10 ) divided by 2 );
+				let bonus be ( ( Dexterity of Player minus 10 ) divided by 2 );
 				let dexterityRoll be diceRoll plus bonus;
 				say "     You roll 1d20([diceRoll])+[bonus]: [special-style-1][dexterityRoll][roman type] vs [special-style-2]10[roman type] (Dexterity Check):[line break]";
 				if dexterityRoll < 10:
@@ -156,14 +161,7 @@ to say CentaurHardwareFight:
 	else:
 		say "You should not be seeing this.";
 
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"spiked club"	"A heavy board with nails you crudely pounded into it to vent your frustration."	2	spiked club
-
-spiked club is an armament. It is part of the player. It has a weapon "[one of]your spiked club[or]your pointed club[or]your improvised weapon[or]your large club[or]your spiked club with a heavy thump[or]your nail board[or]your spiked club, driving one of the nails into them[at random]". The weapon damage of spiked club is 6. The weapon type of spiked club is "Melee". It is not temporary. the objsize of spiked club is 4. the hitbonus of spiked club is -1.
-
-the scent of the spiked club is "The heavy club smells of blood, sweat and anger... so much anger.".
+[spiked club moved to Core Mechanics/Weapons.i7x]
 
 
 Section 6 - Hunting Party
@@ -172,15 +170,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Hunting Party	"Hunting Party"
 
-Hunting Party is a situation. The level of Hunting Party is 9.
-The sarea of Hunting Party is "Plains".
+Hunting Party is a situation.
+ResolveFunction of Hunting Party is "[ResolveEvent Hunting Party]". The level of Hunting Party is 9.
+Sarea of Hunting Party is "Plains".
 horsefight is a number that varies.
 when play begins:
 	add Hunting Party to BadSpots of MaleList;
 	add Hunting Party to BadSpots of FemaleList;
 	add Hunting Party to BadSpots of FurryList;
 
-Instead of resolving a Hunting Party:
+to say ResolveEvent Hunting Party:
 	project the Figure of CentaurMare_icon;
 	say "     Walking along a broken up patch of roadway, you hear loud clopping coming your way from over the small hillock beside you. Getting ready for a fight, you spot a female centaur galloping down the slope towards you, but then she charges right past you. It's then that you notice that her hooves are not the only ones you hear as several horsemen come running over the hill. They are wearing cowboy hats and a few of them have lassos at the ready. Most thankfully run past you, continuing their pursuit of the escaping centauress, but a pair stop to deal with you.";
 	WaitLineBreak;
@@ -207,13 +206,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Pit Trap	"Pit Trap"
 
-Pit Trap is a situation. The level of Pit Trap is 5.
-The sarea of Pit Trap is "Plains".
+Pit Trap is a situation.
+ResolveFunction of Pit Trap is "[ResolveEvent Pit Trap]". The level of Pit Trap is 5.
+Sarea of Pit Trap is "Plains".
 when play begins:
 	add Pit Trap to badspots of HermList;
 	add Pit Trap to BadSpots of FurryList;
 
-Instead of resolving a Pit Trap:
+to say ResolveEvent Pit Trap:
 	say "     Cresting a small hillock, you notice a large hole at the bottom of the hill and can hear a soft moan of pain coming from it. Cautiously approaching, you peek inside to find an injured soldier down at the bottom of a deep hole. The hole seems quite smoothly dug and has vertical sides, clearly dug by someone or something. Given its placement along the path between the hillocks and the pile of berries the soldier is munching on while trapped, it was clearly made as a pit trap and was successful. In the grass beside the pit is a small pack, probably dropped by the soldier when he fell.";
 	say "     Spotting you, the soldier starts calling up for you to help him. He tells you that there's some rope in the pack he lost up there and to get him out quick. Looking at the pack, you reach for it.";
 	say "     [bold type]Shall you grab it and run, leaving him to his fate?[roman type][line break]";
@@ -300,13 +300,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Watering Hole	"Watering Hole"
 
-Watering Hole is a situation. The level of Watering Hole is 8.
-The sarea of Watering Hole is "Plains".
+Watering Hole is a situation.
+ResolveFunction of Watering Hole is "[ResolveEvent Watering Hole]". The level of Watering Hole is 8.
+Sarea of Watering Hole is "Plains".
 when play begins:
 	add Watering Hole to BadSpots of MaleList;
 	add Watering Hole to BadSpots of FurryList;
 
-Instead of resolving a Watering Hole:
+to say ResolveEvent Watering Hole:
 	choose row MonsterID in Table of Random Critters;
 	setmonster "Bald Eagle";
 	say "     In a depression in the grassy plains, you find a greener spot around a small pond. However, there is an eagle man bathing himself in the water and clearly enjoying it. The avian creature strokes his hard cock, leaking precum into the water. Focused on his own fun, he hasn't spotted you yet. Shall you approach the bathing bird (Y) or take this opportunity to leave (N) while you still can?";
@@ -395,13 +396,14 @@ Object	Name
 Treasure Hunters	"Treasure Hunters"
 
 Treasure Hunters is a situation.
-The sarea of Treasure Hunters is "Plains".
+ResolveFunction of Treasure Hunters is "[ResolveEvent Treasure Hunters]".
+Sarea of Treasure Hunters is "Plains".
 when play begins:
 	add Treasure Hunters to badspots of HermList;
 	add Treasure Hunters to BadSpots of FurryList;
 
 
-Instead of resolving a Treasure Hunters:
+to say ResolveEvent Treasure Hunters:
 	say "     Taking a short break on a mound of rubble, you hear a pair of arguing voices approaching. Not really having anywhere you can hide on these dry plains, you decide to sit and wait, though you do prepare yourself in case of battle. You spot a pair of hyenas cresting the rise in front of you, arguing vehemently with each other. The pair of herms have shovels in hand and their furry coats are covered in dust and dirt.";
 	say "     'Give me that,' one says as she snatches some scrap of paper. 'It says we were supposed to go 150 paces from that last mound. And now there's no tree here at all. Just some loser,' she adds, waving dismissively in your direction.";
 	say "     'And that's what I've been trying to tell you. That last mound couldn't have been the right one. He said it was a map to the lost treasure of Black Morris the Short, pirate and plunderer. The Short?!' the second hyena emphasizes. The first looks at her companion in confusion. 'Don't you get it? We're taking too big of paces. We gotta start back over again and take smaller steps.'";

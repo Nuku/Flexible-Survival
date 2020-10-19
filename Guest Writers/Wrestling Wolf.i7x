@@ -125,8 +125,8 @@ to say wrwolfdesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -151,7 +151,7 @@ When Play begins:
 	now desc entry is "[wrwolfdesc]";
 	now face entry is "a long canine muzzle sticking out of your wolf-like head. Your mouth hangs open in a lupine grin, revealing your new sharp teeth"; [ Face description, format as "Your face is (your text)"]
 	now body entry is "lean and well muscled, your canine form standing easily on its new digitigrade legs. You're somewhat surprised that your paw-like hands are still able to do the things they could when still human"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]black furred[or]rugged furred[or]furry[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]black furred[or]rugged furred[or]furry[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a thick canine tail wagging happily behind you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]wolf[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it stretches out into a large lupine muzzle. At first you're a bit overwhelmed at the new scents you're experiencing, but soon you come to terms with it"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -179,9 +179,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 20; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 15; [ Width of female sex infection will try and give you ]
-	now libido entry is 35; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 35; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]muscly[or]chiseled[or]beefy[at random]";
 	now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -196,7 +200,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -320,7 +324,7 @@ to wwpowerslam:
 	if monsterhit is true:			[ boosted dmg, dampened by pepperspray, also small humanity loss ]
 		let boostdam be ( str entry + dex entry + ( lev entry * 2 ) - ( peppereyes * 6 ) ) * 3;
 		let dam be ( ( wdam entry times ( ( a random number from 80 to 120 ) + boostdam ) ) / 100 );
-		if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 		say "The Wrestling Wolf suddenly moves in, grabbing you to execute his signature maneuver. Hefting you high above his head with both arms, you are given a brief view of the [if daytimer is day]sunny[else]night[end if] sky as you are held aloft on your back. He howls and slams you powerfully onto the mat. You are slammed down with great force, rattling your brains so hard you swear you can feel the infection buzzing in your ringing ears. But you only have a moment to listen to this before a great shadow passes over you and the big wolf comes slamming down atop you, having jumped off the top rope to land on you. You take a massive [special-style-2][dam][roman type] damage and lose a grip on a corner of your battered mind.";
@@ -331,7 +335,7 @@ to wwpowerslam:
 			now absorb is dam;
 		if absorb > 0:
 			say "Your defenses are only able to prevent [absorb] damage from the devastating attack!";
-		decrease HP of the player by dam;
+		decrease HP of Player by dam;
 		increase HP of Player by absorb;
 		decrease humanity of Player by a random number between 8 and 12;
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 2 and 4;
@@ -341,7 +345,7 @@ to wwpowerslam:
 	else:
 		say "The Wrestling Wolf rushes in to grab you, clearly ready to unleash a crowd-pleasing maneuver, but you barely manage to squirm out of his reach and whip him into the ropes. That was a close one.";
 	now peppereyes is 0; [pepperspray wears off]
-	if HP of the player > 0:
+	if HP of Player > 0:
 		wait for any key;
 	else:
 		Lose;

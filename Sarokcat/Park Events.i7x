@@ -10,11 +10,12 @@ Object	Name
 Poppy Field	"Poppy Field"
 
 Poppy Field is a situation.
-The sarea of Poppy Field is "Park".
+ResolveFunction of Poppy Field is "[ResolveEvent Poppy Field]".
+Sarea of Poppy Field is "Park".
 when play begins:
 	add Poppy Field to badspots of HermList;
 
-Instead of Resolving a Poppy Field:
+to say ResolveEvent Poppy Field:
 	say "     Traveling through the park, you stumble into a less used area where some strange flowers appear to have taken root. Looking closer at the brilliant blooms, you feel a sense of peace and tranquility wash over you, and for some reason you feel like stopping to relax here for a while. Do you take a rest?";
 	if Player consents:
 		say "     Yawning, you stop to sit in the field of flowers for a minute, and find your eyes drifting shut, you aren't sure just how much time has passed, when all of a sudden something knocks you awake! Shaking off the damage and some plants that strangely seem to have settled on you, you begin to fight!.";
@@ -45,15 +46,17 @@ Section 4 - fallen tree
 [
 Table of GameEventIDs (continued)
 Object	Name
-fallen tree	"fallen tree"
+Fallen Tree	"fallen tree"
+Fallen Tree	"Fallen Tree"
 
-fallen tree is a situation. The level of fallen tree is 4.
-The sarea of fallen tree is "Park".
+Fallen Tree is a situation.
+ResolveFunction of Fallen Tree is "[ResolveEvent Fallen Tree]". The level of Fallen Tree is 4.
+Sarea of Fallen Tree is "Park".
 when play begins:
-	add fallen tree to BadSpots of FemaleList;
-	add fallen tree to BadSpots of FurryList;
+	add Fallen Tree to BadSpots of FemaleList;
+	add Fallen Tree to BadSpots of FurryList;
 
-Instead of Resolving a fallen tree:
+to say ResolveEvent Fallen Tree:
 	say "While traveling along one of the hiking paths in the park, you note a tree seems to have fallen across the path, it isn't in the best location for just going around either, as the thick undergrowth could conceal just about anything. You can continue onwards if you choose, but something seems slightly suspicious about this, maybe it would be safer to head back... Do you go on?";
 	if Player consents:
 		say "Moving through the thick underbrush, you find you have played right into someone's hands, or paws as the case may be, as no sooner are you entangled than the beasts attack!";
@@ -63,24 +66,26 @@ Instead of Resolving a fallen tree:
 		say "After recovering from the sudden onslaught, you manage to stumble back onto the path to continue on your way, resolving not to underestimate the dangers of the park, however cute and cuddly they might be.";
 	else:
 		say "Deciding the whole situation is far too suspicious for your liking, you heft your pack and head back down the way you came.";
-	now fallen tree is resolved;] [Chinchilla Alterations]
+	now Fallen Tree is resolved;] [Chinchilla Alterations]
 
 
 Section 5 - Felinoid lair
 
 Table of GameEventIDs (continued)
 Object	Name
-Felinoid lair	"Felinoid lair"
+Felinoid Lair	"Felinoid lair"
+Felinoid Lair	"Felinoid Lair"
 
-Felinoid lair is a situation.
-The sarea of Felinoid lair is "Park".
+Felinoid Lair is a situation.
+ResolveFunction of Felinoid Lair is "[ResolveEvent Felinoid Lair]".
+Sarea of Felinoid Lair is "Park".
 when play begins:
-	add Felinoid lair to BadSpots of FemaleList;
-	add Felinoid lair to BadSpots of FurryList;
+	add Felinoid Lair to BadSpots of FemaleList;
+	add Felinoid Lair to BadSpots of FurryList;
 
 lairconsent is a number that varies.
 
-Instead of Resolving a Felinoid lair:
+to say ResolveEvent Felinoid Lair:
 	if lairconsent is 0:
 		say "     While traveling through the park, you come across a small hollow set into one of the hillsides. From the looks of the surrounding area, something might have passed this way not too long ago, though it doesn't appear anything is nearby now. There is an intriguing scent teasing at the edges of your consciousness that seems to be coming from within the cave, and there could be something useful left inside, though you would have to almost crawl to enter the low cave. Do you decide to look inside?";
 		if Player consents:

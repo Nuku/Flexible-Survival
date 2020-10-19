@@ -9,10 +9,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Strange Serpent	"Strange Serpent"
 
-Strange Serpent is a situation. The minscore of Strange Serpent is 200.
-The sarea of Strange Serpent is "Mall".
+Strange Serpent is a situation.
+ResolveFunction of Strange Serpent is "[ResolveEvent Strange Serpent]". The minscore of Strange Serpent is 200.
+Sarea of Strange Serpent is "Mall".
 
-Instead of resolving Strange Serpent:
+to say ResolveEvent Strange Serpent:
 	if HP of Velos is 0 or HP of Velos is 1:
 		say "     As you explore the sewers, you're suddenly jolted to attention when you hear something nearby call for your attention.";
 		say "     'Psst, over here!' It remarks, compelling you - once it becomes clear there's no immediate danger - to a nearby wall. Dimly lit against a service light, you can see the silhouette of what appears to be some manner of snake. Sickly pale in its complexion and looking to be in the six foot length range, its surface appears slick as it reflects the light, its clear level of mental articulation betraying its otherwise ordinary appearance.";
@@ -130,8 +131,8 @@ AnalVirgin of Velos is true.
 PenileVirgin of Velos is true.
 SexuallyExperienced of Velos is false.
 MainInfection of Velos is "".
-The description of Velos is "[velosdesc]".
-The conversation of Velos is { "Snipe." }.
+Description of Velos is "[velosdesc]".
+Conversation of Velos is { "Snipe." }.
 velospostmusings is a list of numbers that varies. velospostmusings is usually {}.
 vpostmusenum is a number that varies.
 velosfleepenalty is a truth state that varies. velosfleepenalty is usually false.
@@ -191,8 +192,8 @@ instead of fucking the Velos:
 Section 3 - Dragging him Around + Effects
 
 Every turn while HP of Velos > 2:
-	if Velos is not in the location of the player:		[traveling w/player]
-		now Velos is in the location of the player;
+	if Velos is not in the Location of Player:		[traveling w/player]
+		now Velos is in the Location of Player;
 		say "[one of][link]Velos[as]look Velos[end link] shifts around inside you slightly.[or]You arrive here with [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link], roused by you moving about, shifts his position.[or]Your travels elicit some shifting from [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link] twitches in response to your travels.[or]You're forced to contend with [link]Velos[as]look Velos[end link][']s subtle protests in lieu of your movement.[cycling]";
 
 
@@ -508,7 +509,7 @@ to say fangmusing:
 		say "     'Huh, okay, so you're scared by me? That's... Quite reasonable, to be honest. I'd scratch you behind the ears and tell you to the contrary, but as you can tell I have none for which to do so.' Velos's attempt to put the lupine at ease does seem to work a bit, and when it's clear that the serpent isn't planning anything, he does seem to calm down a bit. 'That's better. I doubt you can offer much in terms of dialogue, I wager?'";
 		say "     Fang howls briefly in response, and the snake concedes that such is about the sum of what he's going to get out of him, saying his farewell and returning from whence he came. The wolf tilts his head at you, no doubt a little confused about what has just transpired here.";
 		now Fangvelos1 is true;
-	else if hp of Fang is 3  or hp of Fang is 4: [Alpha Fang]
+	else if HP of Fang is 3  or HP of Fang is 4: [Alpha Fang]
 		say "     [if fangvelos1 is true]Once more[else]Reluctantly[end if], you conjure up Velos from his confines, Fang snorting a little at his appearance[if fangvelos1 is false]. You find it strange that he would be so fine with his presence but decide that perhaps he already knew the snake was in there, or maybe he was just keeping his composure[end if].";
 		say "     'Oh, hello[if fangvelos1 is true] again[end if], little doggie. Who's a cute pooch? You are!' Velos's attempt at condescension is met with a low growl in discontent.";
 		say "     '[if fangvelos1 is true]Oh, what's this? You were frightened by me a while ago. Have you undergone some manner of change when I wasn't looking[else]Oh, you're just scared I might bite you when you're having your fun, is that it[end if]?'";

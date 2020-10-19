@@ -4,7 +4,7 @@ Section 1 - Main situation
 
 [Chance Meeting is a repeatable situations. It semi-randomly plays NON-REPEATABLE situations involving one or several NPCs]
 [The main goal of tis extension is to provide interaction between NPCs]
-[Please ensure that NPCs either know the player (thanks to secondary variables) or are following him as a companion with if x is companion of Player]
+[Please ensure that NPCs either know the player (thanks to secondary variables) or are following him as a companion with if x is listed in companionList of Player]
 [if no rule is met, a low-level fight is launched, in order to provide the event a default closure]
 
 Table of GameEventIDs (continued)
@@ -12,9 +12,10 @@ Object	Name
 Chance Meeting	"Chance Meeting"
 
 Chance Meeting is a situation.
-The sarea of Chance Meeting is "Outside".
+ResolveFunction of Chance Meeting is "[ResolveEvent Chance Meeting]".
+Sarea of Chance Meeting is "Outside".
 
-Instead of resolving Chance Meeting:
+to say ResolveEvent Chance Meeting:
 	say "     As you pass by [one of]a derelict[or]an abandoned[or]an uninhabited[or]a deserted[or]a ransacked[at random] [one of]bar[or]school[or]warehouse[or]book store[or]liquor store[or]supermarket[or]kindergarten[or]small house[or]arcade[or]electronics store[at random], you hear voices and rumbling coming from inside.";
 	say "     It may be someone you know. [bold type]Do you wish to investigate?[roman type][line break]";
 	say "[link]Y[as]y[end link] You should check. Who knows?";

@@ -46,7 +46,7 @@ SexuallyExperienced of Doctor Matt is true.
 TwistedCapacity of Doctor Matt is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Doctor Matt is false. [steriles can't knock people up]
 MainInfection of Doctor Matt is "Human".
-The description of Doctor Matt is "[DrMattDesc]".
+Description of Doctor Matt is "[DrMattDesc]".
 Doctor Matt is in Primary Lab.
 understand "Matt" as Doctor Matt.
 understand "Left Behind Recording of Doctor Matt " as Doctor Matt.
@@ -64,7 +64,7 @@ to say DrMattDesc:
 	else:
 		say "     A figure in a full hazmat suit is busily working at the various terminals in the lab, wandering from one to the other when he isn't sitting in one of the chairs. His name badge declares him to be [']Doctor Matt[']. From the overall shape of the man, he is still fully human, and you can see his unchanged features through the Plexiglas visor of his suit. You can't help but feel some respect for the fact that he managed to retain his original form and seems to be busy at work here while most people in the city just hump away at each other.";
 
-the Conversation of Doctor Matt is { "empty" };
+Conversation of Doctor Matt is { "empty" };
 
 MattCollection is a number that varies.
 
@@ -772,7 +772,7 @@ name	desc	weight	object
 "infection monitor"	"     Cobbled together from various items, Dr Matt's infection analyzer can be used to check your body's infection status. Type [bold type]pism[roman type] to use."	1	infection monitor
 
 infection monitor is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 monitoring is an action applying to nothing.

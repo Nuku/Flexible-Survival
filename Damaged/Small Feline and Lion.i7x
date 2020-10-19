@@ -22,7 +22,7 @@ to say feline desc:
 		setmongender 14; [creatures are female]
 		say "     You are facing off against a small pride of roving feline girls. The little lionesses look much like the other small feline girls you've encountered in the park before, but have temporarily abandoned the pretense of looking cute and innocent. Formed into a hunting party, they're out to rough up other felines and capture them, even if they already belong to another pride. As Leonard has requested, you'll have to defeat and break up these groups to help protect your pride sisters[if HP of Leonard is 10]. Thankfully this group's already a little worn down from trying to chase down the feline girl they were fighting, who you're happy to see is able to get away safely thanks to your timely intervention[end if].";
 		let levcalc be level of Hunting Prides;
-		if hardmode is true:
+		if HardMode is true:
 			if level of Player > level of Hunting Prides:
 				now levcalc is level of Player;
 				if HP of Leonard is 10:
@@ -33,7 +33,7 @@ to say feline desc:
 		now monsterHP is 20 + ( levcalc * 4 );
 		now wdam entry is 7 + ( levcalc / 4 );
 		now lev entry is levcalc;
-		now libido entry is 75;
+		now libido entry is 90;
 		now str entry is 12;
 		now dex entry is 20 + (levcalc / 5);
 		now sta entry is 12;
@@ -43,12 +43,12 @@ to say feline desc:
 	else if Feline_type is 4:	[forced male lion fight w/usurper]
 		setmongender 3; [creature is male]
 		say "     You are facing a large, strongly muscled and powerful lion/human hybrid. He has a black mane and golden fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate. Looking at him, you can feel something inside you, some buried urge, starting to push to let such a big, strong male just have his way with you.";
-		if hardmode is true and level of Player > 14, let debit be level of Player - 14;
+		if HardMode is true and level of Player > 14, let debit be level of Player - 14;
 		now HP entry is 75 + ( debit * 5 );
 		now monsterHP is 75 + ( debit * 5 );
 		now wdam entry is 20 + ( ( 4 * debit ) / 11 );
 		now lev entry is 14 + debit;
-		now libido entry is 5;
+		now libido entry is 65;
 		now str entry is 16;
 		now dex entry is 21 + (debit / 5);
 		now sta entry is 12;
@@ -68,13 +68,13 @@ to say feline desc:
 			say "     A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile. At first, you almost mistake her for a younger infected person, but soon realize that's incorrect. She is quite developed for her short size, sporting B cups and wide hips. And she seems to be eyeing you rather provocatively. She mrowls softly and licks her muzzle, coming towards you with a look of lustful hunger.";
 		else:
 			say "     You've encountered another of those feline girls. Looking like a cute lioness girl about four feet in height, she is covered in fur with round lion ears and a bright smile. She is quite developed for her size, sporting B cups and wide hips and seems to be eyeing you rather provocatively.";
-		if hardmode is true and level of Player > 3, let debit be level of Player - 3;
+		if HardMode is true and level of Player > 3, let debit be level of Player - 3;
 		now Feline_type is 1;
 		now HP entry is 20 + ( debit * 3 );
 		now monsterHP is 20 + ( debit * 3 );
 		now wdam entry is 7 + ( debit / 3 );
 		now lev entry is 3 + debit;
-		now libido entry is 25;
+		now libido entry is 90;
 		now str entry is 6;
 		now dex entry is 21 + (debit / 5);
 		now sta entry is 8;
@@ -85,13 +85,13 @@ to say feline desc:
 		if HP of Leonard >= 15 and HP of Leonard < 100:
 			setmongender 3; [creature is male]
 			say "     Before you is one of the male lions of the park. He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate. He roars as he sees you, moving in as his cock slips further from its sheath. Perhaps you're recognized as the matronly female of Leonard's pride or perhaps he simply sees a sexy lioness, but either way, it seems he wants to claim you as his own.";
-		if hardmode is true and level of Player > 14, let debit be level of Player - 14;
+		if HardMode is true and level of Player > 14, let debit be level of Player - 14;
 		now Feline_type is 2;
 		now HP entry is 75 + ( debit * 5 );
 		now monsterHP is 75 + ( debit * 5 );
 		now wdam entry is 20 + ( ( 4 * debit ) / 11 );
 		now lev entry is 14 + debit;
-		now libido entry is 5;
+		now libido entry is 65;
 		now str entry is 16;
 		now dex entry is 21 + (debit / 5);
 		now sta entry is 12;
@@ -254,13 +254,14 @@ to say finallion vict:
 to say feline cleanup: [post-battle reset of stats to catgirl values]
 	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of Player > 3, let debit be level of Player - 3;
-	if hardmode is false and Feline_type is 2 and monsterHP <= 0, increase XP of Player by 22; [XP difference for beating the male]
+	if HardMode is true and level of Player > 3, let debit be level of Player - 3;
+	if HardMode is false and Feline_type is 2 and monsterHP <= 0, increase XP of Player by 22; [XP difference for beating the male]
 	now Feline_type is 1;
 	now HP entry is 20 + ( debit * 3 );
 	now wdam entry is 7 + ( debit / 3 );
 	now lev entry is 3 + debit;
-	now libido entry is 25;
+	now SeductionImmune entry is false;
+	now libido entry is 65;
 	now str entry is 6;
 	now dex entry is 21 + (debit / 5);
 	now sta entry is 8;
@@ -272,8 +273,8 @@ to say feline cleanup: [post-battle reset of stats to catgirl values]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -298,7 +299,7 @@ When Play begins:
 	now desc entry is "[feline desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]that of a proud and beautiful lioness[else]the cute head of a small lioness[end if]"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]that of a sexy lioness woman. Being full height and full-figured, you are a matronly pride mother now. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream that runs down your body if it isn't being constantly drunk[else if Breast Size of Player > 2]a female lioness. You are only about four feet tall, though you have huge breasts for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream that runs down into your fur if it isn't being drunk constantly[else]a female lioness. You are only about four feet tall, though your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on. Despite the smaller size of your breasts, they are often leaking a stream of thick cream that runs down into your fur if it isn't being drunk constantly[end if]"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "[if looknow is 1]tawny brown fur, covering pliable[else]tawny brown fur covered[end if]"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "[if looknow is 1]tawny brown fur, covering pliable[else]tawny brown fur covered[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "You have a long, tufted lion's tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "leonine"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]your head shifts and becomes that of a lovely lioness, proud and matronly in appearance[else]your head shrinks and, as you gasp, you notice your voice has lightened, gaining you the face of a small female feline. For some reason, the scents of the groins of all around you become enticing and you can feel arousal building[end if]"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -326,9 +327,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 9; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 3; [ Width of female sex infection will try and give you ]
-	now libido entry is 30; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 90; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]petite[or]girlish[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]leonine[or]feline[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -343,7 +348,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

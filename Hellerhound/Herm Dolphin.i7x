@@ -75,7 +75,7 @@ to say dolphin fuck:
 			say "Her cock head slides into your lubricated tunnel with ease, and she prepares to pump the rest into you. ";
 		if Cunt Depth of Player < 10:[won't go in far, must extend you]
 			say "She slams her cock into you with a cry of success, but it is cut off as she realizes that she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles. 'I am going to have to lengthen your cunt, small one. It may hurt.' She begins to slam her cock into you and grunts when it smashes open your cervix. ";
-			if the humanity of Player < 60:
+			if Humanity of Player < 60:
 				say "You wince and hope that your infected body can repair the damage she, no, it, is doing so that you may have children.";
 			else:
 				say "You wince and hope that the damage can be fixed if you wish not to miscarry.";
@@ -125,8 +125,8 @@ to say dolphin fuck:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -150,10 +150,10 @@ When Play begins:
 	now attack entry is "The dolphin takes her fist and punches you with her immense strength."; [Text used when the monster makes an Attack]
 	now defeated entry is "[Dolphin loses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Dolphin wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 5]As you [if the location of the player is not Public Beach]swim along[else]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'"; [ Description of the creature when you encounter it.]
+	now desc entry is "[mongendernum 5]As you [if the Location of Player is not Public Beach]swim along[else]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'"; [ Description of the creature when you encounter it.]
 	now face entry is "long dolphin snout";
 	now body entry is "silvery with a blue back. A dorsal fin sits on top, and strong muscles contract underneath the surface"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]wet, glistening[or]smooth, silver[or]thick, blubbered[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]wet, glistening[or]smooth, silver[or]thick, blubbered[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a tail that fattens out horizontally at the end, much like a dolphin's. However, it is only half as thick, and the ends are not rounded. It is covered in [Skin of Player] flesh and sways behind you with every step."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]tentacle-like[or]prehensile[or]pink[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "blubber forms. It twists and reforms into the snout of a dolphin. Your hair retracts and disappears, leaving a hole in its place"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -181,9 +181,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 28; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 10; [ Width of female sex infection will try and give you ]
-	now libido entry is 40; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 70; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "dolphin milk";
 	now lootchance entry is 75; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]aquatic[or]strong[at random]";
 	now type entry is "[one of]cetacean[or]dolphin-like[at random]";
@@ -198,7 +202,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -373,7 +377,7 @@ name	desc	weight	object
 "dolphin milk"	"Thick and nutritious milk from a dolphinoid."	1	dolphin milk
 
 
-dolphin milk is a grab object. It is milky. Understand "milk" as dolphin milk. dolphin milk is infectious. The strain of dolphin milk is "Dolphin Herm". The purified of dolphin milk is "distilled milk".
+dolphin milk is a grab object. It is milky. Understand "milk" as dolphin milk. dolphin milk is infectious. Strain of dolphin milk is "Dolphin Herm". Purified of dolphin milk is "distilled milk".
 
 the scent of dolphin milk is "The dolphin milk smells like milk with an odd, fishy scent mixed in.".
 

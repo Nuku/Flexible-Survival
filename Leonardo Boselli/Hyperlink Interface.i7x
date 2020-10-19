@@ -259,7 +259,7 @@ Chapter - Hyperlink Types
 
 A hyperlink type is a kind of thing. object-word is a hyperlink type. direction-word is a hyperlink type. topic-word is a hyperlink type. parser-word is a hyperlink type.
 
-A hyperlink emphasis is a kind of value. The plural of hyperlink emphasis is hyperlink emphases.
+A hyperlink emphasis is a kind of value. Plural of hyperlink emphasis is hyperlink emphases.
 
 A hyperlink type has a hyperlink emphasis called style.
 
@@ -754,7 +754,7 @@ We implement an extremely simple conversation system to demonstrate emphasized t
 
 	The shack door is a closed locked undescribed door with hyperlink "door". It is north of Gnome's Garden and south of Cozy Shack. The can't go through undescribed doors rule is not listed in any rulebook. Instead of going inside in Gnome's Garden, try going north.
 
-	The drawbridge is a closed unopenable door. "[if closed]The drawbridge is raised, allowing passage by a steady stream of tiny steamboats, but preventing access to the treasure-strewn wonderland on the other side of the river[else]Wee steamboats queue impatiently behind the lowered drawbridge[end if].". It is east of Gnome's Garden and west of the Treasure-Strewn Wonderland. The description of drawbridge is "[if closed]If only you could find a way to lower it and cross the river![else]The treasure-strewn wonderland across the river awaits![end if]".
+	The drawbridge is a closed unopenable door. "[if closed]The drawbridge is raised, allowing passage by a steady stream of tiny steamboats, but preventing access to the treasure-strewn wonderland on the other side of the river[else]Wee steamboats queue impatiently behind the lowered drawbridge[end if].". It is east of Gnome's Garden and west of the Treasure-Strewn Wonderland. Description of drawbridge is "[if closed]If only you could find a way to lower it and cross the river![else]The treasure-strewn wonderland across the river awaits![end if]".
 
 	The cherry-brick path is a backdrop. It is everywhere. Understand "cherry/cherry-colored/colored" as path.
 
@@ -778,7 +778,7 @@ We implement an extremely simple conversation system to demonstrate emphasized t
 
 	The gnome carries dragon topic, Quinnabel topic, personality topic, drawbridge topic, and weather topic.
 
-	The description of Cozy Shack is "Strewn with bric-a-brac; your eyes are drawn immediately to the prominent [lever] on the riverward wall.". The exits text of Cozy Shack is "The only place to go is back [outside].". Instead of going outside in Cozy Shack, try going south. Instead of exiting in Cozy Shack, try going south.
+	Description of Cozy Shack is "Strewn with bric-a-brac; your eyes are drawn immediately to the prominent [lever] on the riverward wall.". The exits text of Cozy Shack is "The only place to go is back [outside].". Instead of going outside in Cozy Shack, try going south. Instead of exiting in Cozy Shack, try going south.
 
 	A lever is an undescribed device in Cozy Shack. Instead of pushing or pulling the lever, try switching on the lever. After switching on the lever: now drawbridge is open; say "You hear a splash and a creak from outside the shack.".
 

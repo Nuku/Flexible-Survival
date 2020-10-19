@@ -38,13 +38,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Hidden Kitty	"Hidden Kitty"
 
-Hidden Kitty is a situation. The level of Hidden Kitty is 5.
-The sarea of Hidden Kitty is "Red".
+Hidden Kitty is a situation.
+ResolveFunction of Hidden Kitty is "[ResolveEvent Hidden Kitty]". The level of Hidden Kitty is 5.
+Sarea of Hidden Kitty is "Red".
 when play begins:
 	add Hidden Kitty to BadSpots of MaleList;
 	add Hidden Kitty to BadSpots of FurryList;
 
-Instead of resolving a Hidden Kitty:
+to say ResolveEvent Hidden Kitty:
 	now lastSvendrink is turns + 8;
 	say "     While exploring in one of the older residential areas at the edge of this seedy district of town, you spot the flash of white and gray as something dashes down the steps and quickly shuts the basement door behind it. You catch sight of someone nervously glancing out from behind the curtains covering the basement window, watching you. As this is atypical behavior for someone who's succumbed, you're hopeful that this is a survivor. You wave and head cautiously to the door, trying to look non-threatening while remaining at the ready. You knock and assure them that you are still sane and want to help. It takes a while, always unsure if they're even listening as you can't risk yelling and drawing any infected to the house.";
 	say "     Eventually, it seems you are able to convince him and he opens the door to his small, basement apartment. As you look the young man over, he wrings his fluffy tail in his hands. The tail is a snowy white with gray and black leopard spots. He has a pair of feline ears poking out from his long, blond hair. For a tall, well-built fellow, he seems very timid and nervous as he shyly invites you in before quickly glancing around and then closing the door again. He speaks with a noticeable Nordic accent.";
@@ -61,7 +62,7 @@ Object	Name
 Sven's Place	"Sven's Place"
 
 Sven's Place is a room. It is fasttravel. It is private.
-The description of Sven's Place is "[SvenPlaceDesc]".
+Description of Sven's Place is "[SvenPlaceDesc]".
 
 the scent of Sven's Place is "The small basement apartment smells faintly of mold and snow leopard from its [if HP of Sven > 3]former [end if]occupant[if HP of Sven is 99]. The scent of snow leopard sex from the cum is strong[end if].".
 
@@ -106,8 +107,8 @@ PenileVirgin of Sven is false.
 SexuallyExperienced of Sven is true.
 MainInfection of Sven is "Snow Leopard".
 
-The description of Sven is "[SvenDesc]".
-The conversation of Sven is { "Mew!" }.
+Description of Sven is "[SvenDesc]".
+Conversation of Sven is { "Mew!" }.
 lastSvendrink is a number that varies. lastSvendrink is usually 555.
 SvenCandyMsg is a number that varies. SvenCandyMsg is usually 0.
 SvenStory1 is a truth state that varies. SvenStory1 is usually false.
@@ -232,12 +233,12 @@ instead of conversing the Sven:
 		else:
 			LineBreak;
 			let bonus be ( charisma of Player minus 10 ) divided by 2;
-			if hardmode is false, increase bonus by level of Player / 5;
+			if HardMode is false, increase bonus by level of Player / 5;
 			if bonus > 8, now bonus is 8;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus]= [special-style-1][dice + bonus][roman type] vs [special-style-2]12[roman type]:[line break]";
 			if bonus + dice > 11:
-				say "     You call for Sven's help in the fight, [if level of Player < 6]struggling to hold out against the powerful feline as best you can[else if level of Player > 8 and hardmode is false]keeping the feline in check fairly easily while you try to rally him[else]holding your own against the feline while you try to rally him[end if]. It takes [if bonus + dice > 15]some[else]quite a bit of[end if] coaxing, but you manage to get the young man to assist you. Once he joins in the fray, he proves to be quite the asset, using his strength and longer reach to keep the compact feline off balance. The snow leopard, suddenly at the disadvantage, gets taken down [if level of Player < 6]with less struggle, Sven managing to get in the final blow[else if level of Player > 8 and hardmode is false]quite easily, you letting Sven get in the final blow[else]easily enough when Sven strikes the final blow[end if] while you keep it at bay. Staggered, the gray spotted cat is easily pushed to the ground by the two of you.";
+				say "     You call for Sven's help in the fight, [if level of Player < 6]struggling to hold out against the powerful feline as best you can[else if level of Player > 8 and HardMode is false]keeping the feline in check fairly easily while you try to rally him[else]holding your own against the feline while you try to rally him[end if]. It takes [if bonus + dice > 15]some[else]quite a bit of[end if] coaxing, but you manage to get the young man to assist you. Once he joins in the fray, he proves to be quite the asset, using his strength and longer reach to keep the compact feline off balance. The snow leopard, suddenly at the disadvantage, gets taken down [if level of Player < 6]with less struggle, Sven managing to get in the final blow[else if level of Player > 8 and HardMode is false]quite easily, you letting Sven get in the final blow[else]easily enough when Sven strikes the final blow[end if] while you keep it at bay. Staggered, the gray spotted cat is easily pushed to the ground by the two of you.";
 				say "     Grabbing the feline's wrists, you sit upon his chest while Sven plants himself down on the cat's legs. With your foe held down, the two of you pant from the excitement. Looking over your shoulder at him, you can tell that Sven is surprised by what he's accomplished. This creature he feared, once faced, has been defeated with your help - and thus, so has his fear.";
 				WaitLineBreak;
 				say "     And with that fear gone, that arousal he had earlier returns, but now with a newfound confidence to back it up. There is but a brief hesitation before his hand moves to the snow leopard's crotch, fondling is sheath and cock with a quiet, giddy laugh of unrestrained excitement. While the gray shaft had started to go flaccid after the creature's defeat, the touch soon brings it back to full arousal.";
@@ -884,8 +885,8 @@ Table of GameCharacterIDs (continued)
 object	name
 Svetlana	"Svetlana"
 
-Svetlana is a woman. The description of Svetlana is "[SvetlanaDesc]".
-The conversation of Svetlana is { "Mew!" }.
+Svetlana is a woman. Description of Svetlana is "[SvetlanaDesc]".
+Conversation of Svetlana is { "Mew!" }.
 [uses same variables as Sven for easier saving and restoration.]
 
 the scent of the Svetlana is "Svetlana smells of aroused female snow leopard. Lisa's scent clings to her as well.".

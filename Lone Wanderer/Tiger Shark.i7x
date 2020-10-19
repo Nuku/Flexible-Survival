@@ -46,12 +46,13 @@ Object	Name
 Shark Warrior	"Shark Warrior"
 
 Shark Warrior is a situation.
-The sarea of Shark Warrior is "Beach".
+ResolveFunction of Shark Warrior is "[ResolveEvent Shark Warrior]".
+Sarea of Shark Warrior is "Beach".
 when play begins:
 	add Shark Warrior to BadSpots of MaleList;
 	add Shark Warrior to BadSpots of FurryList;
 
-Instead of resolving Shark Warrior:
+to say ResolveEvent Shark Warrior:
 	say "     As usual, you walk parallel to the open sea. The sound of a soft breeze permeates the area, keeping the sea in motion and whirling a bit of the dry sand near your feet around. It also brings the familiar, salty ocean smell to your nostrils. Enjoying the view, you take a moment to just stand there and let the sounds soothe you. Unfortunately, it doesn't last long; the silence is disturbed by a great splash in the water. A feral sea dragon surfaces with a loud and angry roar. Just a moment later you see that the dragon is flailing around, trying to hit something desperately before the struggling creature sinks back into the blue.";
 	project the Figure of TSW_icon;
 	say "     You can briefly spot an ochre humanoid on the creature's belly, wrestling with the angry monster. After a while of staring at the spot where both of them submerged into the water, a tiger shark surfaces. His naked body is pretty built and shows some scars along his hide, proof of his constant strife in this world. He's also adorned with a couple of trinkets; a selection of teeth, presumably some of the dragons['] he beat, are braided together into a ligature around his neck, and there's also a rope tied around his hips. The rope is equipped with a couple of small bags and has a bit of kelp hanging from it. He turns towards you in the banks, appraising the witness of his battle.";
@@ -132,7 +133,7 @@ to say TigerSharkDesc:
 to say Tiger Shark wins:
 	if ts_warrior is true:
 		now tsw_victory is true;
-		if hp of Player > 0:
+		if HP of Player > 0:
 			now tsw_relationship is 51;
 			say "     You cower and sink your head submissively to the sand. The shark seems stumped, as he just stares at you quizzingly. Wanting to give him the right idea, you even turn around to show him your backside. 'That is unusual. But okay. Fine by me!' The dragon-wrestler gets back to his old self in a heartbeat, showing you his toothy grin again. 'Don't worry, I'll still take good care of you!'";
 		else:
@@ -302,8 +303,8 @@ To say tsw_ride:
 Section 4 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -330,7 +331,7 @@ When Play begins:
 	now desc entry is "[TigerSharkDesc]";
 	now face entry is "triangular, streamlined face. You still breathe normally in and out of your nostrils that happen to be at the end of your snout. When you open your mouth you show several rows of razor sharp teeth, fit to bite off anything"; [ Face description, format as "You have a (your text) face."]
 	now body entry is "bulky, but still flexible enough to maneuver well in the water. Your form is a sight to behold with its chiseled and well-toned form, adorned with a large fin on your back and anal fins on your crotch. Like everything else your arms are bulging with muscles and they end in clawed hands. [if Breast Size of Player > 0]Your femininity is still accentuated with your hourglass-shape and your breasts. [end if]All is held up by two equally strong legs in a digitigrade stance. Your legs ends in elongated feet that are equipped with three clawed toes";
-	now skin entry is "[one of]striped[or]ochre[or]smooth[or]tough[or]slippery[at random]"; [ format as "You have (your text) skin"]
+	now skin entry is "[one of]striped[or]ochre[or]smooth[or]tough[or]slippery[at random]"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "From behind a large and finned tail is dragging along. It feels a little unnatural to not be using the tail to maneuver around."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]tapering[or]slick[or]pointed[or]shark[at random]"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shifts, pushing out into a triangular shape. Your mouth enlarges along with your head. Painfully, lots of sharp, pointy teeth push out of your jaw to occupy the extra space that has been created. Your tongue also becomes larger and pointed"; [ format as "Your face feels funny as (your text)." ]
@@ -358,9 +359,13 @@ When Play begins:
 	now Cunt Count entry is 1;                 [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 10;
 	now Cunt Tightness entry is 7;
-	now libido entry is 30;               [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 30;               [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "Devil's Purse";    [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;           [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]firm[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]shark-like[or]aquatic[at random]";
@@ -375,7 +380,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -498,9 +503,9 @@ name	desc	weight	object
 "Devil's Purse"	"A black casing resembling the egg capsule of a shark. It's empty but it still seems warm despite its slippery touch."	1	Devil's Purse
 "Teeth Necklace"	"It's a cord with several teeth of feral sea dragons tied to it. It's the necklace you stole from the wandering, proud tiger shark warrior."	2	Teeth Necklace
 
-Devil's Purse is a grab object. It is part of the player. Understand "dpurse" as Devil's Purse.
+Devil's Purse is a grab object. Understand "dpurse" as Devil's Purse.
 
-The usedesc of Devil's Purse is "[DevilsPurseUsing]";
+Usedesc of Devil's Purse is "[DevilsPurseUsing]";
 
 to say DevilsPurseUsing:
 	say "You take out the empty egg casing, and give it an experimental lick. Despite the smell its taste is pretty pleasant, like a mix of fish and something sweet that you cannot quite pin. You engulf it entirely in your mouth and are invested in licking and chewing along the rubbery membrane. After some time you end up swallowing the tough and slippery skin, content with the effects it may have on you.";

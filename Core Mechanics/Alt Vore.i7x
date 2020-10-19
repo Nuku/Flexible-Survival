@@ -51,8 +51,10 @@ Table of GameEventIDs (continued)
 Object	Name
 Inner Predator	"Inner Predator"
 
-Inner Predator is a scavevent. The level of Inner Predator is 4.
-The sarea of Inner Predator is "Allzones".
+Inner Predator is a scavevent.
+ResolveFunction of Inner Predator is "[ResolveEvent Inner Predator]".
+The level of Inner Predator is 4.
+Sarea of Inner Predator is "Allzones".
 when play begins:
 	add Inner Predator to BadSpots of FurryList;
 
@@ -65,7 +67,7 @@ a postimport rule: [bugfixing rules for players that import savegames]
 		else:
 			now Resolution of Inner Predator is 2;
 
-Instead of resolving a Inner Predator:
+to say ResolveEvent Inner Predator:
 	if MaleList is banned and FemaleList is banned:
 		say "     Picking your way between several immobile and abandoned cars, you spot an all to familiar sight in the road ahead. Piles of clothing, ripped and covered in various fluids, along with the personal items of whomever (or whatever) use to be in those clothes. Among the shredded clothes and scattered items, one specific thing catches your eye - a sealed briefcase. Polished and very official looking, with its clasp broken from the evident scuffle that had taken place here, it rests atop a torn lab coat. Curious, and hoping to find something you might be able to use, you crack the case open slowly. Sadly, it is empty, someone clearly having gotten here first and emptied it.";
 		say "(This event is closed if both guy and girl are banned.)";

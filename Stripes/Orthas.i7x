@@ -21,8 +21,8 @@ object	name
 Orthas	"Orthas"
 
 Orthas is a person. "A dragon person, clearly female, is watching the area. She wears a handwritten name badge that reads 'Orthas'.".
-The description of Orthas is "[OrthasNPCdesc]".
-The conversation of Orthas is { "Eggses!" }.
+Description of Orthas is "[OrthasNPCdesc]".
+Conversation of Orthas is { "Eggses!" }.
 Orthas is in Trevor Labs Lobby.
 
 the scent of Orthas is "Orthas smells like a strong, powerful dragoness[if HP of Orthas is 2 or HP of Orthas is 3]. She has a lingering scent of arousal hanging over her[else if HP of Orthas is 4]. She has a strong scent of arousal and egg-laying hanging over her[end if].".
@@ -39,13 +39,14 @@ Object	Name
 Meeting Orthas	"Meeting Orthas"
 
 Meeting Orthas is a situation.
-The sarea of Meeting Orthas is "Nowhere".
+ResolveFunction of Meeting Orthas is "[ResolveEvent Meeting Orthas]".
+Sarea of Meeting Orthas is "Nowhere".
 
 instead of going to Trevor Labs Lobby while (Meeting Orthas is not resolved and Resolution of Meeting Orthas is 0 and Orthas is in Trevor Labs Lobby):
 	move player to Trevor Labs Lobby;
 	MeetingOrthasEvent;
 
-instead of resolving Meeting Orthas:
+to say ResolveEvent Meeting Orthas:
 	MeetingOrthasEvent;
 
 to MeetingOrthasEvent:
@@ -237,10 +238,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Orthas's House	"Orthas's House"
 
-Orthas's House is a situation. The level of Orthas's House is 5. It is inactive.
-The sarea of Orthas's House is "Red".
+Orthas's House is a situation.
+ResolveFunction of Orthas's House is "[ResolveEvent Orthas's House]". The level of Orthas's House is 5. It is inactive.
+Sarea of Orthas's House is "Red".
 
-instead of resolving Orthas's House:
+to say ResolveEvent Orthas's House:
 	if HP of Orthas is not 5:
 		say "ERROR-Orthas-[HP of Orthas]E: Incorrect event activation.";
 	else if HP of Doctor Matt > 100:
@@ -253,15 +255,15 @@ instead of resolving Orthas's House:
 		challenge "Red Kangaroo";
 		if fightoutcome <= 29:
 			say "     Your encounter with the randy female over, you decide to just make your escape, having had no luck since your initial find aside from the collection of Elvis collector plates you'd been using for crossbow practice. While you suspect the noise of that was the source of your troubles, it was quite a bit of fun. Regardless, you leave the place with the footlocker in tow and your new toy slung to your pack.";
-			now carried of crossbow is 1;
+			ItemGain crossbow by 1;
 		else:
 			say "     Making your escape from the house and the randy roo, you grab the footlocker you came here for, but have to abandon the crossbow and its spent quarrels. Maybe it wasn't such a good idea to use those Elvis collector plates for target practice.";
-		now carried of footlocker is 1;
+		ItemGain footlocker by 1;
 		now HP of Orthas is 6;
 	now Orthas's House is resolved;
 
 to say Orthas_task2_done:
-	now carried of footlocker is 0;
+	ItemLoss footlocker by 1;
 	say "     Giving the footlocker to Orthas, she takes it with less eagerness than you expected. After taking a deep breath, she opens it up and reviews its contents quietly. Among the items you see are a case of medals, a plaque of commendation and a framed photo. She takes out the photo with a sad sigh. It is a picture of a happy couple in front of the house you were in earlier. The strong, handsome man has his arm around the lovely woman, her belly somewhat rounded with her oncoming pregnancy.";
 	say "     'My wife. Well, my ex-. She ended up leaving me before our baby was even two.' She pulls out another photo, showing a brown-eyed baby girl. 'She left me a month after I went back on duty. She didn't even tell me. Just up and left a note saying I was never around because of the service. By the time I got back and found out, she'd left town and shacked up with a new guy.";
 	say "     'That was all years ago,' she says setting the photos upside down. 'I resigned my commission and eventually ended up doing security here. Since this place is military affiliated, an old commander of mine put in a good word and pulled a few strings for me. Besides,' she says tapping her medals['] case, 'spec ops training looks real good when applying for this sort of job.'";
@@ -326,19 +328,19 @@ name	desc	weight	object
 "crossbow"	"A sporting crossbow. More for target practice than actual hunting, but still a fine and intimidating weapon. There's a good-sized set of quarrels to go along with it as well."	8	crossbow
 
 footlocker is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 instead of using footlocker:
 	if HP of Orthas >= 7 or HP of Doctor Matt >= 100:
 		say "     There's no point in hanging onto this bulky thing any longer, so you get rid of it.";
-		now carried of footlocker is 0;
+		ItemLoss footlocker by 1;
 	else:
 		say "     The footlocker's locked. You don't think Orthas would be pleased with you prying into her personal stuff.";
 
 the scent of the footlocker is "There's no particular scent to this.".
 
-crossbow is armament. It has a weapon "[one of]a quick shot[or]a well-aimed shot[or]your crossbow[or]a crossbow quarrel[or]a launched quarrel[at random]". It is ranged. It is not temporary. It is a part of the player. The weapon damage of crossbow is 6. The objsize of crossbow is 3.
+crossbow is armament. It has a weapon "[one of]a quick shot[or]a well-aimed shot[or]your crossbow[or]a crossbow quarrel[or]a launched quarrel[at random]". It is ranged. It is not temporary. Weapon Damage of crossbow is 6. Objsize of crossbow is 3.
 
 
 Section 4 - Sex with Orthas
@@ -514,12 +516,12 @@ to say beatOrthas:
 to say Orthasdesc:
 	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of Player > 12, let debit be level of Player - 12;
+	if HardMode is true and level of Player > 12, let debit be level of Player - 12;
 	now lev entry is 12 + debit;
 	now HP entry is 150 + ( debit * 6 );
 	now monsterHP is 150 + ( debit * 6 );
 	now wdam entry is 10;
-	if hardmode is true, now wdam entry is 12 + ( ( 2 * debit ) / 5 );
+	if HardMode is true, now wdam entry is 12 + ( ( 2 * debit ) / 5 );
 	say "[line break]     Orthas, the black dragon, steps forward to battle you. She stands about six and a half feet tall and has a very athletic body. Her bat-like wings are each about three feet long and folded onto her back at the moment. And while she may have large, F-cup breasts, they don't seem to affect her balance or ability to fight at all. Her eyes blaze with anger and thick smoke curls up from her nostrils as she moves to deal with you for your betrayal.";
 	if Susan is in Primary Lab:
 		say "     The dragoness is still rather woozy after the blow given to her by the doe. While it doesn't look like she'll be able to help you further with the fight, she has made the dragoness a little easier to deal with.";
@@ -531,8 +533,8 @@ to say Orthasdesc:
 Section 6 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -558,7 +560,7 @@ When Play begins:
 	now desc entry is "[Orthasdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "draconic head"; [ Face description, format as "You have a (your text)."]
 	now body entry is "that of a well-muscled anthro dragon"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "dark scaled"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "dark scaled"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "You have a slender, draconic tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "ridged"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shifts and reforms into a dragon's head"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -586,9 +588,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12;
 	now Cunt Tightness entry is 5;
+	now SeductionImmune entry is false;
 	now libido entry is 20; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]powerful[or]strong[or]muscular[at random]";
 	now type entry is "draconic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -603,7 +609,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

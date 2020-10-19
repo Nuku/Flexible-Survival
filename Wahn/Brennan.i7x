@@ -101,9 +101,10 @@ Object	Name
 Lone Survivor	"Lone Survivor"
 
 Lone Survivor is a situation.
-The sarea of Lone Survivor is "Outside".
+ResolveFunction of Lone Survivor is "[ResolveEvent Lone Survivor]".
+Sarea of Lone Survivor is "Outside".
 
-Instead of resolving a Lone Survivor:
+to say ResolveEvent Lone Survivor:
 	if BrennanRelationship is 0:
 		say "     The streets seem fairly empty right now - a good time to be out and about, scavenging or hunting for whatever. Skirting around a burned-out car here and there, piles of trash or even rubble from buildings destroyed in fights (or overenthusiastic lovemaking), you make good progress on your way. Soon, you arrive at a fairly big intersection of roads, dominated by a multi-car pileup. Glancing at the four directions meeting here, broad and open spaces with no real cover or concealment, you're not surprised to find numerous piles of torn and cum-stained clothing scattered about. This must be a prime hunting spot for ferals, running down people or swooping in from above to catch those exposed in the open, which means that the numerous personal vehicle wrecks - and a mangled greyhound bus on the opposite side of where you stand - have in all likelihood not been looted yet!";
 		say "     This could be a rare opportunity. [bold type]Do you risk it?[roman type][line break]";
@@ -352,7 +353,8 @@ Object	Name
 Army Convoy	"Army Convoy"
 
 Army Convoy is a situation.
-The sarea of Army Convoy is "Nowhere".
+ResolveFunction of Army Convoy is "[ResolveEvent Army Convoy]".
+Sarea of Army Convoy is "Nowhere".
 
 instead of going to Grey Abbey Library while (Army Convoy is active and Army Convoy is not resolved and BrennanRelationship is 4 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
 	move player to Grey Abbey Library;
@@ -366,7 +368,7 @@ instead of navigating Grey Abbey Library while (Army Convoy is active and Army C
 	say "     Making your way back to the entrance of the Grey Abbey Library once more, you set a first foot on the stairs leading up to the front doors and are surprised to find someone there, waiting for you. Leaning against the side-wall of the stairs is Brennan, the human survivor you've had several encounters with by now. He raises a hand to wave and calls out a greeting as he recognizes you in turn.";
 	ArmyConvoyEvent;
 
-Instead of resolving a Army Convoy:
+to say ResolveEvent Army Convoy:
 	ArmyConvoyEvent;
 
 to ArmyConvoyEvent:
@@ -410,8 +412,8 @@ name	desc	weight	object
 "signal flag"	"A little piece of red fabric, hanging from a looped string. Looks fairly unassuming, but Brennan told you that you can contact him by hanging it up at a number of prominent places. He'll come search you out at the library then."	0	signal flag
 
 signal flag is a grab object.
-the usedesc of signal flag is "[SignalFlagUse]".
-it is part of the player.
+Usedesc of signal flag is "[SignalFlagUse]".
+
 It is not temporary.
 
 instead of sniffing signal flag:
@@ -477,8 +479,9 @@ Object	Name
 Thanks & Cherries	"Thanks & Cherries"
 
 Thanks & Cherries is a situation.
+ResolveFunction of Thanks & Cherries is "[ResolveEvent Thanks & Cherries]".
 Thanks & Cherries is inactive.
-The sarea of Thanks & Cherries is "Nowhere".
+Sarea of Thanks & Cherries is "Nowhere".
 
 instead of going to Grey Abbey Library while (Thanks & Cherries is active and Thanks & Cherries is not resolved and BrennanRelationship is 6 and a random chance of 1 in 2 succeeds):
 	move player to Grey Abbey Library;
@@ -492,7 +495,7 @@ instead of navigating Grey Abbey Library while (Thanks & Cherries is active and 
 	say "     Making your way back to the entrance of the Grey Abbey Library once more, you set a first foot on the stairs leading up to the front doors and see Brennan already there, waiting for you. ";
 	ThanksAndCherriesEvent;
 
-Instead of resolving a Thanks & Cherries:
+to say ResolveEvent Thanks & Cherries:
 	ThanksAndCherriesEvent;
 
 to ThanksAndCherriesEvent:
@@ -522,10 +525,11 @@ Object	Name
 Wolf Whisperer	"Wolf Whisperer"
 
 Wolf Whisperer is a situation.
+ResolveFunction of Wolf Whisperer is "[ResolveEvent Wolf Whisperer]".
 Wolf Whisperer is inactive.
-The sarea of Wolf Whisperer is "Outside".
+Sarea of Wolf Whisperer is "Outside".
 
-instead of resolving Wolf Whisperer:
+to say ResolveEvent Wolf Whisperer:
 	if BrennanRelationship is 7:
 		project the figure of Brennan_clothed_icon;
 		say "     Exploring the inner city, you come upon a tunnel through a hill that dominates part of the area. Around the entrance to that, a whole mess of dozens of collided cars blocks most of the way forward. Cautiously following a rough path that previous passersby have cleared through the wrecks, everything seems quiet - until suddenly, a feral wolf steps out of the shadows a short distance ahead. The beast stands still as he studies you intently, seemingly unsure of what to do. You're still trying to decide the same yourself when a sharp whistle makes the canine look to something behind him, then turn around and trot out of sight. Fairly strange behavior for one of these usually so wild beasts.";
@@ -629,8 +633,9 @@ Object	Name
 Entrance Checks	"Entrance Checks"
 
 Entrance Checks is a situation.
+ResolveFunction of Entrance Checks is "".
 Entrance Checks is inactive. [blocked till BrennanRelationship reaches 8]
-The sarea of Entrance Checks is "Nowhere".
+Sarea of Entrance Checks is "Nowhere".
 
 instead of going north from Smith Haven Mall Lot South while (Entrance Checks is active and Entrance Checks is not resolved and BrennanRelationship > 7 and BrennanRelationship < 90 and a random chance of 1 in 3 succeeds):
 	if debugactive is 1:
@@ -647,15 +652,16 @@ Object	Name
 Bunny Frat Invite	"Bunny Frat Invite"
 
 Bunny Frat Invite is a situation.
+ResolveFunction of Bunny Frat Invite is "[ResolveEvent Bunny Frat Invite]".
 Bunny Frat Invite is inactive. [blocked till BrennanRelationship reaches 8]
 The level of Bunny Frat Invite is 0.
-The sarea of Bunny Frat Invite is "Campus".
+Sarea of Bunny Frat Invite is "Campus".
 
 instead of going to College Walkway East while (Bunny Frat Invite is active and Bunny Frat Invite is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway East;
 	BunnyFratInviteEvent;
 
-Instead of resolving Bunny Frat Invite:
+to say ResolveEvent Bunny Frat Invite:
 	BunnyFratInviteEvent;
 
 to BunnyFratInviteEvent:
@@ -670,14 +676,15 @@ Object	Name
 Fountain Discussion	"Fountain Discussion"
 
 Fountain Discussion is a situation.
+ResolveFunction of Fountain Discussion is "[ResolveEvent Fountain Discussion]".
 Fountain Discussion is inactive.
-The sarea of Fountain Discussion is "Campus". [Fountain]
+Sarea of Fountain Discussion is "Campus". [Fountain]
 
 instead of going to College Fountain while (Fountain Discussion is active and Fountain Discussion is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	FountainDiscussionEvent;
 
-Instead of resolving Fountain Discussion:
+to say ResolveEvent Fountain Discussion:
 	FountainDiscussionEvent;
 
 to FountainDiscussionEvent:
@@ -695,14 +702,15 @@ Object	Name
 Infernal Offer	"Infernal Offer"
 
 Infernal Offer is a situation.
+ResolveFunction of Infernal Offer is "[ResolveEvent Infernal Offer]".
 Infernal Offer is inactive.
-The sarea of Infernal Offer is "Campus". [Fountain]
+Sarea of Infernal Offer is "Campus". [Fountain]
 
 instead of going to College Fountain while (Infernal Offer is active and Infernal Offer is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	InfernalOfferEvent;
 
-Instead of resolving Infernal Offer:
+to say ResolveEvent Infernal Offer:
 	InfernalOfferEvent;
 
 to InfernalOfferEvent:
@@ -717,10 +725,11 @@ Object	Name
 Slaver Caravan	"Slaver Caravan"
 
 Slaver Caravan is a situation.
+ResolveFunction of Slaver Caravan is "[ResolveEvent Slaver Caravan]".
 Slaver Caravan is inactive.
-The sarea of Slaver Caravan is "Outside".
+Sarea of Slaver Caravan is "Outside".
 
-Instead of resolving Slaver Caravan:
+to say ResolveEvent Slaver Caravan:
 	project the figure of Brennan_clothed_icon;
 	say "     Exploring the city, you come upon an overpass over a broad flood drain channel, one of many concrete ditches running through the city to allow excessive rainfalls to flow to the sea without damage to buildings or people. Interestingly, there is someone already on the bridge - your friend Brennan, who appears to be hiding behind the concrete railing flanking the roadway. The bearded man keeps peeking over the edge in short glances, careful not to show himself. You follow his lead, moving forward in a crouch to close the distance to the man. 'Watch out! We'll be in trouble if they spot us,' he says at a quiet hiss, indicating what is beyond the railing. Glancing over the top edge, you see a group of beings below, on a trek up the dry channel. As you look at the five centaurs and see that they are herding eight persons of mixed species, their necks connected by a metal chain, Brennan confirms your immediate guess with the comment, 'Slavers. I've seen them a few times already, making expeditions into the city.'";
 	say "     Quietly talking to your friend while observing the group moving farther and farther away, you learn from him that those who do not have the temperament, physique or aggression to overpower others still do their best to make this whole situation worse - by paying slavers to do their dirty work. It is clear that he is more than opposed to the sheer concept of forced servitude. Eventually, the rear guard of the centaurs turns around to check for anyone following, so the two of you have to quickly duck completely out of sight. Head bent low to keep it behind the concrete barrier, Brennan grumbles, 'I wish there was something I could do to stop them, but they usually ride out in groups, and centaurs are not easy to take down.' You keep yourself concealed until the slaver party is barely visible in the distance, entering the start of the dry plains. Then you say your goodbyes to Brennan and get moving once more.";
@@ -731,10 +740,11 @@ Object	Name
 Slave Hunter	"Slave Hunter"
 
 Slave Hunter is a situation.
+ResolveFunction of Slave Hunter is "[ResolveEvent Slave Hunter]".
 Slave Hunter is inactive.
-The sarea of Slave Hunter is "Outside".
+Sarea of Slave Hunter is "Outside".
 
-Instead of resolving Slave Hunter:
+to say ResolveEvent Slave Hunter:
 	say "     The clatter of hooves on asphalt makes you pause and listen for where the noise is coming from. It seems to be quite close, and before you can do much more than take a little bit of cover in a somewhat deeper entrance doorframe, a gasping and wheezing anthro Dalmatian sprints past your position. He is in full flight, panic obvious in his every movement. The canine is about forty feet down the road when his pursuer appears - a centaur moving at full gallop. The human half of the hybrid is swinging a lasso as he dashes after the runaway, soon launching it and bringing the Dalmatian to the ground in a bone-rattling tumble. 'Told ya running is pointless, doggie. Got a buyer who pays premium for anything with spots. No way I was gonna let you just skip out on me.' With great sureness and speed, he trusses the captive dog up and throws him to hang over his equine back.";
 	say "     Only once the centaur turns around again do you get your first good look of him. His upper body is lean and muscular, fitting to a lower equine half that seems to be built for speed. The slaver has some saddlebags strapped to his equine back, while the human chest bears a crossed set of leather straps that he must have gotten in a fetish store. The taut material serves to accentuate his abs and muscled pecs, and a handsome bearded face completes the image of a charming rogue. You do not get any more opportunity to study him further, as the slaver gallops off a moment later, complete with his new acquisition.";
 	now Slave Hunter is resolved;
@@ -744,11 +754,12 @@ Object	Name
 Trip to the Water Tower	"Trip to the Water Tower"
 
 Trip to the Water Tower is a situation.
+ResolveFunction of Trip to the Water Tower is "[ResolveEvent Trip to the Water Tower]".
 Trip to the Water Tower is inactive. [blocked till BrennanRelationship reaches 8]
 The level of Trip to the Water Tower is 0.
-The sarea of Trip to the Water Tower is "Outside".
+Sarea of Trip to the Water Tower is "Outside".
 
-Instead of resolving Trip to the Water Tower:
+to say ResolveEvent Trip to the Water Tower:
 	project the figure of Brennan_face_icon;
 	say "     Roaming the streets of the inner city, you run into your survivor friend Brennan once more, this time without the two wolves he adopted. As you ask him about them, the man says, 'Yeah, they're good guys, but... a bit too excitable for scouting most of the time. I've found it difficult to keep them from wandering off and sniffing around, which doesn't really lend itself for stealthy approaches.' With a shrug and a smile, he adds, 'I left them at the apartment, dozing on a mattress together. Anyways - the reason I'm out here is that I wanted to check that out.' He points at a structure a few blocks in the distance, rising high above the surrounding buildings. It is a water tower, and not a small one. 'You might have noticed that the west side of the inner city still has power, so I've been wondering why the water isn't also working. Maybe the pumps at that tower have failed or been turned off by someone?'";
 	say "     [bold type]Do you want to accompany Brennan on his trip to the water tower?[roman type][line break]";
@@ -829,8 +840,8 @@ Section 3 - Enemy Definition
 [***********************************************************]
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -878,9 +889,13 @@ When Play begins:
 	now Cunt Count entry is 1;              [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 6;
 	now Cunt Tightness entry is 4;
-	now libido entry is 25;            [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is true;
+	now libido entry is 25;            [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";              [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "Human";
 	now type entry is "human";
@@ -895,7 +910,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -1011,13 +1026,13 @@ Survivor Refuge	"Survivor Refuge"
 
 Survivor Refuge is a room. Survivor Refuge is above Green Lobby.
 Survivor Refuge is sleepsafe.
-The description of Survivor Refuge is "[SurvivorRefugeDesc]".
+Description of Survivor Refuge is "[SurvivorRefugeDesc]".
 
 to say SurvivorRefugeDesc:
 	say "     The apartment that Brennan has claimed as his base of operations has a fairly nice loft setup, with one big room containing the living space, kitchen and dining area. Only the bedroom and bathroom are separated off, with the former lying towards the west, the latter to the south. The apartment has floors made out of walnut wood, shining in a rich reddish-brown, as well as simple but elegant furniture in similar earthen tones. Looks like the original owner had a fair bit of money and good taste, and so had Brennan, when he decided to move into this apartment. This place felt a welcoming and friendly, just like him. He seems to have kept the living space tidy, even now, during the height of the nanite apocalypse. This included bringing in a row of sorting boxes, now well-filled with useful salvage. Additionally, a weightlifting bench has been set up, including numerous weights which were clearly not part of the original setup.";
 
 Brennan's Microwave is an object. It is in Survivor Refuge. It is fixed in place. Understand "microwave" as Brennan's Microwave.
-The description of Brennan's Microwave is "A mid-sized white microwave stands on one of the work surfaces of the kitchen, clashing a bit with the décor. But who cares about that as long as you can [bold type]microwave[roman type] stuff with it?".
+Description of Brennan's Microwave is "A mid-sized white microwave stands on one of the work surfaces of the kitchen, clashing a bit with the décor. But who cares about that as long as you can [bold type]microwave[roman type] stuff with it?".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -1025,7 +1040,7 @@ Brennan's Bedroom	"Brennan's Bedroom"
 
 Brennan's Bedroom is a room. Brennan's Bedroom is west of Survivor Refuge.
 Brennan's Bedroom is sleepsafe.
-The description of Brennan's Bedroom is "[BrennansRoomDesc]".
+Description of Brennan's Bedroom is "[BrennansRoomDesc]".
 
 to say BrennansRoomDesc:
 	say "     Brennan's bedroom is fairly large and kept in the same style as the main part as the loft - walnut floor and elegant furniture also made from wood in rich tones of red and brown. One of those is an expansive double bed, fairly low to the ground and with a really thick mattress. This gives a lot of room for people to do all sorts of things on it. The bed is standing on a large, white and very fluffy carpet. You see in this room more signs cluing you on Brennan's practical nature: a spare baseball bat leaning against the wall just beside the bed, a telescope for scouting and observation set up near the window, as well as a writing desk in one corner, which has a cleanly organized collection of medkits, immunity boosters and all sorts of other emergency items.";
@@ -1036,7 +1051,7 @@ Brennan's Bathroom	"Brennan's Bathroom"
 
 Brennan's Bathroom is a room. Brennan's Bathroom is south of Survivor Refuge.
 Brennan's Bathroom is sleepsafe.
-The description of Brennan's Bathroom is "[BrennansBathroomDesc]".
+Description of Brennan's Bathroom is "[BrennansBathroomDesc]".
 
 to say BrennansBathroomDesc:
 	say "     The bathroom of the apartment is a fairly nice affair, decked out in gray marble and everything. Too bad the water isn't actually running. You see a number of large water canisters stacked up in one corner, with elbow-long protective gloves on lying on top and the words 'DIRTY WATER' scrawled on each one. Seems like Brennan has to fill the reservoir of the toilet by hand. A plastic bucket is standing in a large walk-in shower cabin, with a soft-looking natural sponge right next to it. Not the luxury of what the room could provide if the water was actually running, but at least it's a way to keep clean...";
@@ -1086,8 +1101,8 @@ Virgin of Brennan is false.
 AnalVirgin of Brennan is false.
 PenileVirgin of Brennan is true.
 SexuallyExperienced of Brennan is true.
-The description of Brennan is "[BrennanDesc]".
-The conversation of Brennan is { "<This is nothing but a placeholder!>" }.
+Description of Brennan is "[BrennanDesc]".
+Conversation of Brennan is { "<This is nothing but a placeholder!>" }.
 The scent of Brennan is "     Brennan smells nicely masculine, with a little hint of sweat on his muscular chest, as well as... something else, rather hard to place your finger on.".
 
 to say BrennanDesc:
@@ -1336,7 +1351,7 @@ to say BrennanSoldierTalk2:
 	say "     After a short while, Brennan turns the radio off and sets it down. 'Someone or something is doing their best to sabotage the efforts to re-establish order,' he growls. Making a throwing-away gesture, the man then pulls a red tube out of a pocket, holding it up. It is one of the 'Immunity Booster' injectors you helped him get from the army convoy. 'But they will fail. These things will eventually allow for the city to be taken back. It's just a question of time. I bet the military is stockpiling the booster shots until the big push. Until that happens though, and I mean both the production of more shots and actually getting them distributed, the soldiers inside the city are more or less in the same boat as we are. No reliable communication, limited resources and all that. I bet they couldn't get out through the blockade either, due to the chance of them having been exposed and transmitting the infection.'";
 
 to say BrennanSoldierTalk3:
-	if hp of Major Padgett is 100: [player got banned from Camp Bravo]
+	if HP of Major Padgett is 100: [player got banned from Camp Bravo]
 		say "     You quietly tell Brennan about what's been going on in Camp Bravo, relaying all the sordid details of their sexual escapades with a captured minotaur. The human survivor's face takes on a grim expression as he listens to your words. 'They do [italic type]WHAT?![roman type] That, that makes no sense at all! I - we - need to do something about this. There must be a way to convince their commander to stop this madness.'";
 		say "     Before he can get too much more into it, you stop Brennan short to say that you've already tried that, and the major in command of Camp Bravo had you roughed up and thrown out summarily. Your human friend lets out something between a sigh and a groan, followed by the words, 'Well, shit. The whole situation is worse than I thought. I'll look into it some more on my own, okay? Maybe I can figure out a way to fix it. And - thank you for trying.' He lays his hand on your shoulder, smiling as he gives it a companionable squeeze.";
 		now XP of Brennan is 50; [player can't go to the camp anymore]
@@ -1400,7 +1415,7 @@ to say BrennanTinyTalk:
 	say "     Brennan raises his eyebrows and shrugs, then adds, 'I don't think Tiny even understands why exactly he is in the camp. For him, it will likely be just that he met some extremely friendly and generous people who decided to take care of him and all his needs.' Letting out a deep breath, the human survivor walks over to the nearest window and glances out over the city for a long moment. 'Just what kind of twisted individual would do all this to innocent people? Someone put a major effort into selling the story to the commanding officer of Camp Bravo, and for what? Putting countless straight men to what must be a real ordeal for them and also negating any positive things they might have achieved if they weren't busy getting pounded one after another. So, who is responsible? Could this person also be behind the outbreak itself? Those definitively are questions we should look into!'";
 
 to say BrennanDiegoTracking:
-	if Diegotalk > 0:
+	if PlayerMet of Diego is true:
 		say "     You do have a good guess about a certain coyote having posed as the doctor and wrapped Major Padgett around his furry finger - but even if you are likely right, it would be just hearsay. ";
 	else:
 		say "     Trying to find this one person in the chaos of the nanite-infested inner city is most likely futile. He might by now have changed genders, species and not even remember anything of his former life. ";
@@ -1473,8 +1488,8 @@ name	desc	weight	object
 "cult flyer"	"A small piece of blue paper with a few small ink smudges. You'd guess it was run through a hand-cranked mimeograph. Maybe you should [bold type]read[roman type] it."	1	cult flyer
 
 cult flyer is a grab object.
-the usedesc of cult flyer is "[cultflyeruse]".
-it is part of the player.
+Usedesc of cult flyer is "[cultflyeruse]".
+
 It is not temporary.
 instead of sniffing cult flyer:
 	say "     The paper smells a bit of salt... as if it was dunked into the sea at some point.";
@@ -2076,7 +2091,8 @@ Object	Name
 Brennan Shower Walkin	"Brennan Shower Walkin"
 
 Brennan Shower Walkin is a situation.
-The sarea of Brennan Shower Walkin is "Nowhere".
+ResolveFunction of Brennan Shower Walkin is "".
+Sarea of Brennan Shower Walkin is "Nowhere".
 
 when play begins:
 	add Brennan Shower Walkin to badspots of TransList;
@@ -2092,7 +2108,8 @@ Object	Name
 Feeding Wolves	"Feeding Wolves"
 
 Feeding Wolves is a situation.
-The sarea of Feeding Wolves is "Nowhere".
+ResolveFunction of Feeding Wolves is "".
+Sarea of Feeding Wolves is "Nowhere".
 
 after going to Survivor Refuge while (Feeding Wolves is active and Feeding Wolves is not resolved and (TimekeepingVar is -2 or TimekeepingVar is -3 or TimekeepingVar is -4 or TimekeepingVar is 6 or TimekeepingVar is 5 or TimekeepingVar is 4) and a random chance of 1 in 2 succeeds): [first time, Brennan awake and in the apartment, 50% chance]
 	project the figure of Brennan_face_icon;
@@ -2105,7 +2122,8 @@ Object	Name
 Soldier Questions	"Soldier Questions"
 
 Soldier Questions is a situation.
-The sarea of Soldier Questions is "Nowhere".
+ResolveFunction of Soldier Questions is "".
+Sarea of Soldier Questions is "Nowhere".
 
 after going to Survivor Refuge while (Soldier Questions is not resolved and XP of Brennan is 0 and (TimekeepingVar is -2 or TimekeepingVar is -3 or TimekeepingVar is -4 or TimekeepingVar is 6 or TimekeepingVar is 5 or TimekeepingVar is 4) and a random chance of 1 in 2 succeeds): [first time, Brennan awake and in the apartment, 50% chance]
 	project the figure of Brennan_face_icon;

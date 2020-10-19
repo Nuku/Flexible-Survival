@@ -14,6 +14,7 @@ to say Satyress wins:
 		WaitLineBreak;
 		say "     The naked half-goat woman is a very eager partner to get fucked, vocally telling you - and everyone in earshot - that she likes it hard and grinding her crotch against you. As continues ride your shaft, the satyress teases you to tough her body and hump your hips, proving that she lives to have fun. In between loud moans, she tells you about the [one of]powerful gorilla[or]sexy incubus[or]dick-girl cheerleader[or]insanely well-hung nerd[at random] that had her behind the library and the satyr gang-bang she was in at a nearby frat-house. You just know that it had to be Phi Alpha Nu - the place where you helped spread satyr-dom to the college campus. It is with great pleasure that you enjoy the fruits of your 'hard work' over there, feeling your dick enveloped by this sexy young woman now turned into a mythological being.";
 		say "     After a long and satisfying ride, your arousal eventually can't be contained anymore and you buck upwards, filling your partner with a potent load. The sexy student with you isn't far behind - as she proceeds to finger her clit in a frantic pace to finish herself off. Mere moments later, she is squirting femcum over your crotch as well as herself, soaking her pubes and the start of her leg fur. Once she's wound down and has pulled off your softening dick, she grabs her fallen cup (crawling over to it on all fours and also stopping a few times to show her messy pussy with your creamy load [if Ball Size of Player > 5]flowing[else if Ball Size of Player > 4]running[else if Ball Size of Player > 2]leaking[else]trickling[end if] out of it. Looking over her shoulder and giving you a wink, the satyress says, 'Thanks! I really needed that. See you again soon, I hope!' And with that she stands up and dashes off, looking to find a refill of wine.";
+		CreatureSexAftermath "Satyress" receives "PussyFuck" from "Player";
 	else:
 		if Player is female:
 			say "     As you give up and raise your hands in a consoling gesture, the satyress dances closer on lithe hooves and plants a kiss on your cheek. 'I knew you'd come around! Who wouldn't want all this...' she says in a happy giggle, taking both your hands and running them up her naked chest, moving them to cup her breasts. Animating you to fondle and stoke her perky boobs, the satyress meanwhile gets busy on your clothes - quickly loosening them and pulling them off you one by one. Soon, you're bare-ass naked in front of her, your pussy slightly swollen and moist from all her groping and touching. Next, the satyress takes you by the hand to walk a few steps on the green grass between the campus buildings and directs you to lie down.";
@@ -21,6 +22,7 @@ to say Satyress wins:
 			say "     As you give up and raise your hands in a consoling gesture, the satyress dances closer on lithe hooves and plants a kiss on your cheek. 'I knew you'd come around! Who wouldn't want all this...' she says in a happy giggle, taking both your hands and running them up her naked chest, moving them to cup her breasts. Animating you to fondle and stoke her perky boobs, the satyress meanwhile gets busy on your clothes - quickly loosening them and pulling them off you one by one. Soon, you're bare-ass naked in front of her, your body all tingly from all her groping and touching. Next, the satyress takes you by the hand to walk a few steps on the green grass between the campus buildings and directs you to lie down.";
 		say "     As soon as you're stretched out on the ground, the very eager satyress steps over you and starts to crouch down, bringing her crotch into position just above face. It is clear what she wants, so you start licking over her folds and teasing the young woman's clit with your tongue. Your oral service soon expands into involving your fingers too, stroking her nether lips, then pushing one and another into her vagina, spreading and caressing her inner passage. Pleasing this attractive woman has your own libido rising to new heights, [if Player is female]your cunt dripping wet[else]your whole body tingling[end if], but you find yourself so drawn into servicing her that you don't really have time to take care of yourself.";
 		say "     After a long while of eating out your half-goat partner's pussy, as well as fingering her and rubbing her clit, the sexy student's moaning and panting eventually rises higher until culminating in an almost shouted climax. With her hands holding your head tight against her crotch, the satyress comes, squirting splashes of femcum over your face and bucking her pussy against your wiggling tongue. Once her arousal starts to wind down again slowly, she pulls away from you and grabs her fallen cup, crawling over to it on all fours and also stopping a few times to show her messy pussy, still dripping with fluids. Looking over her shoulder and giving you a wink, the satyress says, 'Thanks! I really needed that. See you again soon, I hope!' And with that, she stands up and dashes off, looking to find a refill of wine.";
+		CreatureSexAftermath "Player" receives "OralPussy" from "Satyress";
 
 To say Satyress loses:
 	say "     Having knocked the satyress onto her goat ass, you feel a rush of lust wash over you after having been teased by the lustful creature. She rubs the bruises from you fighting her off and they quickly vanish as the nanites repair her body. 'Damn, I spilled my wine,' she says next, looking down at the dropped cup with a sniffle. Contrition is painted on her face as the young woman looks up at you and adds, 'I guess I was a bit hasty, wasn't I. Didn't mean to come on so strongly.' Something tells you that she's mainly sorry about the wasted wine, not so much trying to push you into having sex with you. Oh well, that's satyrs for you - can't fault her for following her nature. Especially not after you had a hand in spreading this infection on the campus...";
@@ -130,8 +132,8 @@ to say SatyressDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -153,7 +155,7 @@ When Play begins:
 	now desc entry is "[SatyressDesc]";
 	now face entry is "beautiful and mostly human-like, though with small goat horns sticking up from your forehead. The lusty look filling your eyes betrays the thoughts of sex and arousal that have become part of you"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "short, lithe and pretty flexible. Your upper body is that of a young woman, maybe a gymnast, while your lower body rests on two slender goat-like legs, your nimble goat hooves ringing off the floor with every step";
-	now skin entry is "[one of]goat-furred[or]smooth[or]pale[at random]"; [ format as "You have (your text) skin"]
+	now skin entry is "[one of]goat-furred[or]smooth[or]pale[at random]"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a short, stubby goat tail positioned behind you, seeming to move jauntily with every step you take."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]goat-like[or]bestial[or]satyr[at random]"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "your face shifts and changes, taking on a feminine shape as horns grow out of your forehead. You can feel your mind filling up with images of wine and song, as well as all the naughty things you could do with other people that drink and dance with you"; [ format as "Your face feels funny as (your text)." ]
@@ -181,9 +183,13 @@ When Play begins:
 	now Cunt Count entry is 1;                 [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 10;
 	now Cunt Tightness entry is 7;
-	now libido entry is 30;               [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 75;               [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "Satyress Wine";    [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 30;           [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lithe"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]satyress[or]mythological[at random]";
@@ -198,7 +204,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -303,9 +309,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Satyress Wine"	"A red plastic cup with a small sample of some dark wine you found left behind by one of the sexy satyresses on the college campus. It looks like there is about enough left for a single mouthful."	1	Satyress Wine
 
-Satyress Wine is a grab object. It is part of the player. Understand "wine" as Satyress Wine. Satyress Wine is infectious. The strain of Satyress Wine is "Satyress".
+Satyress Wine is a grab object. Understand "wine" as Satyress Wine. Satyress Wine is infectious. Strain of Satyress Wine is "Satyress".
 
-The usedesc of Satyress Wine is "[SatyressWineUsing]";
+Usedesc of Satyress Wine is "[SatyressWineUsing]";
 
 to say SatyressWineUsing:
 	say "Taking out the cup with its small mouthful of dark wine, you swirl the liquid around in the cup for a second then toss it back, gasping as the heady wine burns its way down your throat and makes your head spin. That's definitely the good stuff!";

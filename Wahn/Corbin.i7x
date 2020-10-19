@@ -53,8 +53,8 @@ object	name
 Corbin	"Corbin"
 
 Corbin is a man. The HP of Corbin is normally 0. Corbin is in Worker Barracks.
-The description of Corbin is "[CorbinDesc]".
-The conversation of Corbin is { "Mew!" }.
+Description of Corbin is "[CorbinDesc]".
+Conversation of Corbin is { "Mew!" }.
 CorbinPregnancy is a number that varies. [pregnancy progress variable - after 36 turns, the pregnancy becomes visible]
 CorbinKidCounter is a number that varies.
 CorbinPregCounter is a number that varies.
@@ -107,7 +107,7 @@ after going to Worker Barracks while (Alexandra is in Worker Barracks and HP of 
 		say "     Clearing her throat, Alexandra lays a hand on Corbin's crotch and smiles at him. 'So, having one of these makes you vulnerable, but also gives you power. Any horny guy, his dog and random critters wandering around aimlessly want to get in there, breed you and whatnot. It's fun to let them too, you know. The important bit is not to be a pathetic slut about it! Don't just sit around and hope they leave you in peace, that leads to what we just went through. Nah, instead pick a good guy or three and make them yours! Make em feel special for being picked and fuck their brains out! They'll eat out of your hand afterwards if you do it right, hah!' The equine cowboy's eyes go wide as she lays out her option and you can see that he's really starting to think about it. 'But there's more! Ever thought what the aftermath of a good breeding will be like? Your kids will be fully grown, in hours or days. Hell, if you pop out half a dozen horseman studs and teach em to obey momma, you can start your own gang!'";
 		WaitLineBreak;
 		say "     Corbin appears both shocked and intrigued by Alexandra's suggestions, with his expression switching back and forth between worry, thoughtfulness and at times even a lusty smirk. 'Thinking about it? Believe me, your horsie studs won't know what hit them if you go for it! Bunch of followers, total herd-type guys! Come on, you know you want to do it. There must be a few studs that come to mind as someone who you'd like to fuck but never dared to try.' The black and white equine bites his lip and nods, with Alexandra chuckling and waving her hand to go on. 'I - I like Nelson.' 'Ooh, zebra boy! Some nice and exotic meat to fill your pussy. Who else?!' Encouraged, Corbin goes on quickly, 'Uhm, Karel and Isaac. They're just so dreamy and hot!' 'Good pick, them southern boys will treat you right when you make em your studs! Okay, now that you have your partners chosen, let's talk about how you present yourself...'";
-		say "     After that, Alexandra starts giving her equine understudy tips and ticks, which is somewhat less interesting to you. With a shrug, you duck out of the room, still making sure to securely close the door behind you so they can continue their talk in private. You can't help but feel curious about what wil be the result of this development in the end.";
+		say "     After that, Alexandra starts giving her equine understudy tips and ticks, which is somewhat less interesting to you. With a shrug, you duck out of the room, still making sure to securely close the door behind you so they can continue their talk in private. You can't help but feel curious about what will be the result of this development in the end.";
 		now Stamina of Corbin is 1; [Alexandra had a talk with Corbin after informing the player]
 	else:
 		LineBreak;
@@ -127,7 +127,7 @@ instead of going east from Central Farm Square while (HP of Corbin < 2 and dayti
 	now lastfuck of Corbin is turns;
 	now HP of Corbin is 2; [player learned Corbin's secret]
 
-instead of going to Central Farm Square while (companion of Player is Felinoid companion and HP of Corbin < 2 and daytimer is night and Dexterity of Corbin is 0):
+instead of going to Central Farm Square while (felinoid companion is listed in companionList of Player and HP of Corbin < 2 and daytimer is night and Dexterity of Corbin is 0):
 	if debugactive is 1:
 		say "DEBUG -> FELINOID + CORBIN WALKIN 1 <- DEBUG[line break]";
 	say "     As you walk onto the central farm square, Klauz gives a short rumble from his throat and stops suddenly, raising his head to sniff the air. Whatever it is that drew the feral beast's attention, he's obviously very keen on it and huffs deeply, while his tail raises almost straight up and twitches with interest. A moment later, the large cat leaves your side and pads over to the entrance of the milking shed, only giving a casual glance back at you before he vanishes inside.";
@@ -177,7 +177,7 @@ instead of going to Central Farm Square while (companion of Player is Felinoid c
 		NPCSexAftermath Corbin receives "PussyFuck" from Klauz;
 		move player to Central Farm Square;
 
-instead of going to Central Farm Square while (companion of Player is Felinoid companion and HP of Corbin > 1 and HP of Corbin < 100 and daytimer is night and a random chance of 1 in 3 succeeds):
+instead of going to Central Farm Square while (felinoid companion is listed in companionList of Player and HP of Corbin > 1 and HP of Corbin < 100 and daytimer is night and a random chance of 1 in 3 succeeds):
 	if debugactive is 1:
 		say "DEBUG -> FELINOID + CORBIN WALKIN REPEAT <- DEBUG[line break]";
 	say "     As you walk onto the central farm square, Klauz gives a short rumble from his throat and stops suddenly, raising his head to sniff the air. Whatever it is that drew the feral beast's attention, he's obviously very keen on it and huffs deeply, while his tail raises almost straight up and twitches with interest. A moment later, the large cat leaves your side and pads over to the entrance of the milking shed, only giving a casual glance back at you before he vanishes inside.";
@@ -330,7 +330,7 @@ instead of going southwest from Central Farm Square while (CorbinPregnancy is 4 
 		say "     As you enter the barracks, Corbin quickly comes up to you and gives you a hug. 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he waves over a little boy in his early teens and introduces you to his horseman child.";
 	else if Libido of Corbin is 3: [felinoid was the father]
 		say "     As you enter the barracks, Corbin quickly wanders over to you ";
-		if companion of player is felinoid companion:
+		if felinoid companion is listed in companionList of Player:
 			say "and Klauz. He crouches down before the big cat and lays his arms around him, stroking the purring feline's fur before standing back up. Addressing the both of you, he then says, 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he waves over a little horseman boy in his early teens that is standing nearby and introduces you to his horseman child. You can see that the kid has a bit of a felinoid hybrid look to him.";
 		else:
 			say "and looks around a little, as if expecting someone to be there. 'Oh, he's not here with you, is he? Your sexy felinoid I mean. I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he waves over a little horseman boy in his early teens that is standing nearby and introduces you to his horseman child. You can see that the kid has a bit of a felinoid hybrid look to him.";
@@ -347,7 +347,7 @@ instead of going east from Central Farm Square while (CorbinPregnancy is 4 and d
 	else if Libido of Corbin is 2: [a horseman was the father]
 		say "     As you enter the barracks, Corbin quickly comes up to you and gives you a hug. 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he tells you that your child is in the barracks, a sweet little horseman boy in his early teens.";
 		say "     As you enter the barracks, Corbin quickly wanders over to you ";
-		if companion of player is felinoid companion:
+		if felinoid companion is listed in companionList of Player:
 			say "and Klauz. He crouches down before the big cat and lays his arms around him, stroking the purring feline's fur before standing back up. Addressing the both of you, he then says, 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he waves over a little horseman boy in his early teens that is standing nearby and introduces you to his horseman child. You can see that the kid has a bit of a felinoid hybrid look to him.";
 		else:
 			say "and looks around a little, as if expecting someone to be there. 'Oh, he's not here with you, is he? Your sexy felinoid I mean. I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he waves over a little horseman boy in his early teens that is standing nearby and introduces you to his horseman child. You can see that the kid has a bit of a felinoid hybrid look to him.";
@@ -454,7 +454,7 @@ to say CorbinSexMenu:
 		now sortorder entry is 6;
 		now description entry is "Milk the equine cuntboy";
 	[]
-	if (HP of Corbin > 1 and companion of Player is felinoid companion and Corbin is in Milking Shed Main Room):
+	if (HP of Corbin > 1 and felinoid companion is listed in companionList of Player and Corbin is in Milking Shed Main Room):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Corbin mount Klauz";
 		now sortorder entry is 7;

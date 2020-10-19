@@ -12,13 +12,14 @@ Object	Name
 Hyena Bikers	"Hyena Bikers"
 
 Hyena Bikers is a situation.
-The sarea of Hyena Bikers is "High".
+ResolveFunction of Hyena Bikers is "[ResolveEvent Hyena Bikers]".
+Sarea of Hyena Bikers is "High".
 when play begins:
 	add Hyena Bikers to BadSpots of MaleList;
 	add Hyena Bikers to badspots of HermList;
 	add Hyena Bikers to BadSpots of FurryList;
 
-Instead of resolving a Hyena Bikers:
+to say ResolveEvent Hyena Bikers:
 	setmonster "Hyena Herm";
 	move Grant to Hyena Hideout;
 	say "     As you pass down one street, you see a lot of fresh graffiti sprayed onto the concrete high-rises around you. Looking it over, you see it proclaim the strength of the hyena gang. This puzzles you, as you thought you were well out of hyena territory.";
@@ -255,7 +256,7 @@ to say bikeattack:
 	[dodge three times - 10 dmg each]
 	say "[line break]     The hyena bikers laugh derisively as they circle around you as you try to find a way out of this mess. Suddenly one veers out and tries to charge you on hir bike.";
 	[WaitLineBreak]
-	let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
+	let the bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 12: ";
 	if dice plus bonus > 12:
@@ -409,14 +410,7 @@ to say bikerbitchsex:
 
 Section 4 - Tire Iron
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"tire iron"	"A heavy tire iron - a good, cliché makeshift weapon."	1	tire iron
-
-tire iron is an armament. It is part of the player. It has a weapon "[one of]your tire iron[or]the tire iron[or]your metal tire iron[at random]". The weapon damage of tire iron is 6. The weapon type of tire iron is "Melee". It is not temporary.
-
-instead of sniffing tire iron:
-	say "The tire iron smells of metal and motor oil.";
+[tire iron moved to Core Mechanics/Weapons.i7x]
 
 
 Section 5 - Grant
@@ -426,8 +420,8 @@ object	name
 Grant	"Grant"
 
 Grant is a man.
-The description of Grant is "[grantdesc]".
-The conversation of Grant is { "Cool!" }.
+Description of Grant is "[grantdesc]".
+Conversation of Grant is { "Cool!" }.
 granttalk is a number that varies.
 grantbitch is a number that varies.
 grantsex is a number that varies.

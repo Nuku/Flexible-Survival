@@ -5,7 +5,7 @@ Version 1 of Seraphis by Vinickus begins here.
 [   0: not met                                               ]
 [ 100: met, refused                                          ]
 
-[ hp of Seraphis                                             ]
+[ HP of Seraphis                                             ]
 [   1-15: Seraphis is dominant one.                          ]
 [   16-30: Seraphis is submissive one.                       ]
 [   50-60: Seraphis was abandoned at some point, and broken by various other horny beasts in the plains. ]
@@ -25,8 +25,8 @@ object	name
 Seraphis	"Seraphis"
 
 Seraphis is a man.
-The description of Seraphis is "[SeraphisDesc]".
-The conversation of Seraphis is { "<Hello.>"}.
+Description of Seraphis is "[SeraphisDesc]".
+Conversation of Seraphis is { "<Hello.>"}.
 The scent of Seraphis is "     He radiates a strong, equine musk."
 SeraphisRelationship is a number that varies.
 SeraphisContent is a number that varies. [Determines if Seraphis will let the Player through the gate.]
@@ -42,13 +42,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Conflict within the Plains	"Conflict within the Plains"
 
-Conflict within the Plains is a situation. The level of Conflict within the Plains is 6.
-The sarea of Conflict within the Plains is "Plains".
+Conflict within the Plains is a situation.
+ResolveFunction of Conflict within the Plains is "[ResolveEvent Conflict within the Plains]". The level of Conflict within the Plains is 6.
+Sarea of Conflict within the Plains is "Plains".
 when play begins:
 	add Conflict within the Plains to Badspots of MaleList;
 	add Conflict within the Plains to Badspots of FurryList;
 
-Instead of resolving a Conflict Within the Plains:
+to say ResolveEvent Conflict Within the Plains:
 	if HP of Seraphis is 0: [First interaction]
 		say "     Moving through the plains rarely brings much of interest to your eyes, but as you don't have much else to do during your travel through the grasses, you let your eyes wander far and wide. Surprisingly, you notice a glint of light off to the side. As you focus your gaze that way, it repeats again and again in irregular intervals, drawing your attention to what might be reflecting [if daytimer is day]sun[else]moon[end if]light out here. The source definitely seems to be on the move, and after studying another half-dozen flashes, you manage to pin down the direction and speed of your curiosity. Your drive to learn what the object is outweighs any wariness within your mind, so you set out to close the distance.";
 		say "     It takes a few minutes of running through the grass to begin making out any details at all, but eventually, you do manage to learn that it isn't one source of reflected light, but three, moving from right to left in the intermediate distance. After another minute or two more of running, you're finally close enough to make out what's before you: Three angry, gorilla-like beings in metallic armor that are chasing a centaur. Before your very eyes, they drive him into a field of crumbling ruins and pen him in against a wall, blocking any further flight. The situation looks rather risky, as the conflict of whoever they are might splash over on you.";
@@ -175,18 +176,19 @@ Table of GameEventIDs (continued)
 Object	Name
 Plant Ruins Encounters	"Plant Ruins Encounters"
 
-Plant Ruins Encounters is a situation. The level of Plant Ruins Encounters is 6.
+Plant Ruins Encounters is a situation.
+ResolveFunction of Plant Ruins Encounters is "[ResolveEvent Plant Ruins Encounters]". The level of Plant Ruins Encounters is 6.
 Plant Ruins Encounters is active.
-The sarea of Plant Ruins Encounters is "Plains".
+Sarea of Plant Ruins Encounters is "Plains".
 
-The Prereq1 of Plant Ruins Encounters is Conflict Within the Plains.
+Prereq1 of Plant Ruins Encounters is Conflict Within the Plains.
 The Prereq1Resolution of Plant Ruins Encounters is { 0 }.
 
 when play begins:
 	add Plant Ruins Encounters to Badspots of MaleList;
 	add Plant Ruins Encounters to Badspots of FurryList;
 
-instead of resolving a Plant Ruins Encounters:
+to say ResolveEvent Plant Ruins Encounters:
 	if HP of Seraphis is 1:
 		say "     With boredom setting in as you wander the plains, you spot some crumbling ruins in the distance: the stone construct slowly being reclaimed by green, red, and even purple hued vines and roots. Trees of similar colors surround the very same ruins, the limbs looking akin to arms or claws, reaching out to the stone itself. It's an image that reminds you of something from a horror movie, where a cult would gather and sacrifice a poor virgin to a tree god. Even with that image in mind though, it breaks up the monotony, drawing you to go in for a closer look. Once close enough though, the sounds of moaning and gasping stoke your curiosity ever further.";
 		say "     When you close in on the crumbling building, the noises are replaced by gurgling and gagging sounds. Within seconds, a familiar centaur rushes out of a destroyed entryway, grinning at you. 'Ah, it's so nice to see you again!' Seraphis then dashes towards you, grabbing you up with both arms as he holds you tight to his muscled pecs. Almost as soon as you take your first breath of his musk, you feel a hand grabbing at your ass, squeezing it before several fingers start rubbing up and down your crack. 'Oh, you still have such a nice...form.' He declares with another groping motion.";

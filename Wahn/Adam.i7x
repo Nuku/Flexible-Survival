@@ -76,8 +76,8 @@ AnalVirgin of Adam is true.
 PenileVirgin of Adam is true.
 SexuallyExperienced of Adam is false.
 MainInfection of Adam is "Minotaur".
-The description of Adam is "[AdamDesc]".
-The conversation of Adam is { "<This is nothing but a placeholder!>" }.
+Description of Adam is "[AdamDesc]".
+Conversation of Adam is { "<This is nothing but a placeholder!>" }.
 The scent of Adam is "     Adam has a nice scent somewhere between the pheromone-laden musk of his father and a clean human man's smell. It doesn't have you ripping your clothes off, but sure is attractive.".
 
 to say AdamDesc:
@@ -241,8 +241,9 @@ to say AdamTalkFuture: [Ask Adam about his dreams for the future]
 
 to say AdamTalkSex: [Talk to Adam about sex, after sexing him up]
 	if OralVirgin of Adam is false or PenileVirgin of Adam is false:
-		say "     You bring the subject of sex to the half-minotaur, who immediately blushes, pulling his shoulder-length hair back and scratching his head slightly. 'It surely is different now... Knowing we can do so much stuff! But we haven't done it all yet, have we?' he asks, and you assure him that there's still a lot more to try and that you'd be willing to do all of it with him. 'That's good! I mean... I can't wait! It's always a blast with you to show me around... and when you're not, my mind occasionally drifts around that subject. Gets me a boner everytime and sometimes I have to take care of it...' Adam's cheeks are so red by now, but he gives you a smile and doesn't shift his gaze from your eyes. Seems like the young soldier is slowly opening up more!";
-	say "     You bring the subject of sex to the half-minotaur, who immediately blushes, pulling his shoulder-length hair back and scratching his head slightly. 'It felt... really good. I think that was the best thing I've done in a while... you're really good with your hands.' he says, chuckling amidst every word. He's still nervous about this matter, but it's clear that he enjoyed it. 'Sometimes I... do it myself. It doesn't feel the same as when someone else is touching it, though... I wish we could do it more often...' Adam's cheeks are so red by now, and his breathing got slightly deeper, evident signs of arousal.";
+		say "     You bring the subject of sex to the half-minotaur, who immediately blushes, pulling his shoulder-length hair back and scratching his head slightly. 'It surely is different now... Knowing we can do so much stuff! But we haven't done it all yet, have we?' he asks, and you assure him that there's still a lot more to try and that you'd be willing to do all of it with him. 'That's good! I mean... I can't wait! It's always a blast with you to show me around... and when you're not, my mind occasionally drifts around that subject. Gets me a boner every time and sometimes I have to take care of it...' Adam's cheeks are so red by now, but he gives you a smile and doesn't shift his gaze from your eyes. Seems like the young soldier is slowly opening up more!";
+	else:
+		say "     You bring the subject of sex to the half-minotaur, who immediately blushes, pulling his shoulder-length hair back and scratching his head slightly. 'It felt... really good. I think that was the best thing I've done in a while... you're really good with your hands.' he says, chuckling amidst every word. He's still nervous about this matter, but it's clear that he enjoyed it. 'Sometimes I... do it myself. It doesn't feel the same as when someone else is touching it, though... I wish we could do it more often...' Adam's cheeks are so red by now, and his breathing got slightly deeper, evident signs of arousal.";
 
 [***********************************************************]
 [***********************************************************]

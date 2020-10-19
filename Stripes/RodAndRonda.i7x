@@ -8,11 +8,11 @@ object	name
 Rod Mallrat	"Rod Mallrat"
 
 Rod Mallrat is a person. "[if HP of Ronda is not 100]A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDaniels[or]one of the tables[or]the guarded bathroom area[at random][else]Rod the slut rat is [one of]stretched out on some cushions[or]curled up for a quick nap[or]wiping some stray globs of cum from her fur and then licking them from her fingers[or]tinkering with some odd and ends she's found among the slut rats['] collected junk[at random][end if].".
-The description of rod mallrat is "[roddesc]".
+Description of rod mallrat is "[roddesc]".
 The icon of Rod Mallrat is figure of Rod_icon.
 Rod is a trader.
 Rod Mallrat is in Mall FoodCourt.
-The conversation of Rod Mallrat is { "empty" };
+Conversation of Rod Mallrat is { "empty" };
 
 to say roddesc:
 	project Figure of Rod_icon;
@@ -117,8 +117,8 @@ object	name
 Ronda Mallrat	"Ronda Mallrat"
 
 Ronda Mallrat is a person. "[if HP of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note[else if HP of Ronda is 10]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random][else if HP of Ronda is 100]Ronda [one of]sits with several slut rats fawning over her[or]is stretched out across some cushions, enjoying some expensive chocolates[or]idly rubs her crotch[or]runs her paws over Rod[at random][end if].".
-The description of Ronda Mallrat is "[rondadesc]".
-The conversation of Ronda is { "empty" }.
+Description of Ronda Mallrat is "[rondadesc]".
+Conversation of Ronda is { "empty" }.
 Ronda Mallrat is in Mall Atrium.
 
 a postimport rule: [bugfixing rules for players that import savegames]
@@ -216,9 +216,9 @@ instead of going to Mall FoodCourt while ( HP of Ronda is 1 and lastfuck of rod 
 		say "     Rod comes up to you as you arrive. He seems a little more animate than he's been of late, if still rather disheveled. 'Hey, can I ask a favor? I was, like, you know, totally missing Ronda. You know about Ronda, dontcha? She was there when those infected rats popped up and swarmed the place. You must've missed it, but it was a bad scene, dude.' You keep quiet, thinking it best that Rod and the other rats not know about your part in that incident. 'But yeah, there I was, totally bummed, when I went [']Dude!['] and got this brainwave to talk to that weird dog-girl at that creepy shop. She was all spooky and stuff, but she said there might be a way to help Ronda. But that's when she told me that I'd need to get some stuff out in the city, and I'm not to keen on leaving the mall, you know. So brainwave number two comes and I'm thinking my friend can help me with it. So that's where you come in.' Feeling a little guilty about what happened, you agree to visit the shop on the west side of the Atrium and see what needs to be done.";
 
 instead of conversing the Nermine while ( HP of Ronda is 3 and nerminetalk > 0 ):
+	say "     Nermine smiles as you bring up the topic of Ronda and the slut rats. 'Ahh... the humble storekeeper was wondering who the rat boy would find to be helping him. Ironic that he should be picking the jackaless's visitor, eh?' she says, leaning across her counter. 'Well, perhaps there will be a lesson to learn, when not to play around with things outside of someone's understanding. Now, as Nermine told the rat boy, she should be needing some things to be making a cure for his love. He is bound too tightly to the mall and cannot be leaving, even for the girl he loves. But for others, that is no problem, is it?' Looking down the length of her muzzle at you, Nermine continues, 'Firstly, a number of lizards roam one of the large city parks, pretending to be artists. Maybe Nermine's guest could go find one of them and sample the juices from their womanly flower?'";
+	say "     As she says this, Nermine chuckles and raises her eyebrows. 'This should not be too hard a task. More difficult is the fruit needed. In the city, a forest has sprouted out of nowhere. In it, there are grand trees roaming the streets, moving around on their own power. These are producing fruits capable of restoring a person. Eating these fruits, they are changing to become human again, or at least appearing to be human. What Nermine requires is the best and shiniest of these fruits to counteract the corruption affecting the Ronda-rat. Other items are already in the shopkeeper's possession, from rare herbs to a blessed mixing bowl.'";
 	now HP of Ronda is 4;
-	say "     Nermine smiles as you bring up the topic of Ronda and the slut rats. 'Ahh... I was wondering who the rat boy would find to be helping him. Ironic that he should be picking you, eh?' she says, leaning across her counter. 'Well, perhaps you will be learning not to play around with things you are not understanding. Now, as I told the rat boy, I should be needing some things to be making a cure for his love. He is bound too tightly to the mall and cannot be leaving, even for the girl he loves. But you are not having this problem.";
-	say "     First, there are some lizards running around the park who are thinking they are artists. Be finding one of them and be getting a sample of the juices from their womanly flower. This should not be too hard a task. More difficult is the fruit needed. In the city, a forest has sprouted out of nowhere. In it, there are grand trees roaming the streets, moving around on their own power. These are producing fruits capable of restoring a person. Eating these fruits, they are changing to become human again, or at least appearing to be human. I am needing the best and shiniest of these fruits to be fighting the corruption affecting the Ronda-rat. Most of the other herbs and holy items I am having already.";
 
 
 before conversing the Nermine while HP of Ronda is 5:
@@ -237,7 +237,7 @@ before conversing the Nermine while HP of Ronda is 7:
 	say "[rondaitems2]" instead;
 
 to say rondaitems2:
-	say "     Nermine smiles as you hand over the items to her, examining them with a critical eye. 'You are being most helpful in this. The staff of Tiresias will be looking good in my collection,' she says, placing the seemingly ordinary stick in the case. 'It is unfortunate I am to be burning the veil, but having one is better than none.' With that, she takes it and the other items you gathered as well as a collection of other small items which probably belonged to Ronda into the back to prepare them. When she finally emerges some time later, she hands a vial of gray fluid to you. 'You are to be giving this to the Ronda-rat. It will be purging the dark power within her. Be careful, is only having one chance at this and will only work for her. I can be making no more with what is available here in the city.";
+	say "     Nermine smiles as you hand over the items to her, examining them with a critical eye. 'The delightful guest is being most helpful in this. The staff of Tiresias will be looking good in Nermine's collection,' she says, placing the seemingly ordinary stick in the case. 'It is an unfortunate requirement to be burning the veil, but having one prize is better than none.' With that, she takes it and the other items you gathered as well as a collection of other small items which probably belonged to Ronda into the back to prepare them. When she finally emerges some time later, she hands a vial of gray fluid to you. 'This is to be given to the Ronda-rat. It will be purging the dark power within her. Be careful, this being just the one chance for her, and it will not work on another. There are no further of the needed supplies to replicate it again, at least not in this city.";
 	now HP of Ronda is 8;
 
 before conversing the Nermine while ( HP of Ronda is 8 or HP of Ronda is 9 ) and a random chance of 1 in 3 succeeds:
@@ -247,7 +247,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "lizard juice"	"A small vial of the creamy, white cum from one of those lizard girls."	1	lizard juice
 
-lizard juice is a grab object. It is part of the player. It is not temporary.
+lizard juice is a grab object. It is not temporary.
 
 instead of using lizard juice:
 	say "You need to save that to help Ronda.";
@@ -261,14 +261,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Art Collector	"Art Collector"
 
-Art Collector is a situation. The level of Art Collector is 9.
+Art Collector is a situation.
+ResolveFunction of Art Collector is "[ResolveEvent Art Collector]". The level of Art Collector is 9.
 Art Collector is inactive.
-The sarea of Art Collector is "High".
+Sarea of Art Collector is "High".
 
 artleopardfight is a number that varies.
 artattempt is a number that varies.
 
-Instead of resolving a Art Collector:
+to say ResolveEvent Art Collector:
 	if artattempt is 0:
 		say "     Managing to follow Nermine's directions through the available paths through the chaotic city, you manage to circumvent other creatures and obstacles to make it to the address she's provided you. Looking up at the high rise building, your legs ache at the thought of scaling its stairs to reach the penthouse, but there is no other option. You move quietly inside and carefully make your way to the stairwell to begin your ascent. It is long and tiring, but you press on, not wanting to risk being found in such a confined space with the countless creatures which probably inhabit this building. You can see several wet splotches on the stairs, many quite fresh.";
 		say "     After an ascent which leaves you hungry, thirsty and aching, you make it to the access to the penthouse suite. Opening the door, you step into the antechamber connecting to the inoperative elevator and the large doors to the suite. Finding them unlocked, you slip quietly into the spacious foyer and living room, looking at the various pieces on display. One of them, a veil and simple staff are held in a glass case. The veil is a simple band of old, grayed cloth and the staff is little more than a wooden walking stick made from a straight branch, neither having anything remarkable about them. As you look over the case, you try to decide how best to get at the contents, but are interrupted by an angry growl behind you. Turning, you find a large leopardman stalking out of the nearby bedroom and spot several sexy leopardesses on the bed waiting for his return after dealing with the would-be thief. This creature was once likely the art collector and has since gathered a harem of horny females to add to his collection.";
@@ -327,7 +328,7 @@ to say rondarescue:
 			now MonsterID is y;
 			break;
 	say "     Looking around the room, you spot several of the rats in mid-coitus and try to check them out without looking too interested. Not that the rats would mind, per se, but you might get roped into playing with them and lose track of your actual goal.";
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus]+[level of Ronda] -- [dice + bonus + level of Ronda]: vs 17.";
 	if dice + bonus + level of ronda < 17:

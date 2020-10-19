@@ -26,13 +26,14 @@ Object	Name
 Dressing Room Crisis	"Dressing Room Crisis"
 
 Dressing Room Crisis is a situation.
-The sarea of Dressing Room Crisis is "Smith Haven".
+ResolveFunction of Dressing Room Crisis is "[ResolveEvent Dressing Room Crisis]".
+Sarea of Dressing Room Crisis is "Smith Haven".
 The PrereqTime of Dressing Room Crisis is "Day".
 
 when play begins:
 	add Dressing Room Crisis to BadSpots of FurryList;
 
-Instead of resolving a Dressing Room Crisis:
+to say ResolveEvent Dressing Room Crisis:
 	say "     Wandering the hallways of the Smith Haven Mall, you pass through crowds of all sorts of people: lots of mall rats, demi-human hybrids, and countless other species, as well as the rare pure human. You stroll in and out of various stores, some occupied by the refugees of the outbreak, others laying abandoned. But just as you pass through an empty clothing boutique, you hear something - sniffles and quiet sobs. Curiosity guides your steps deeper into the store, walking along the aisles full of skimpy garments that are less than useless in the current crisis, until you spot a series of dressing rooms against the back wall. You notice that the second little room has its curtain drawn closed, and you can see a pair of clawed feet in the little bit of empty space between it and the ground. The sobbing is clearly coming from within the cabin, and from the tone of their voice, it is a woman in some sort of distress.";
 	LineBreak;
 	say "     [bold type]How do you want to deal with this?[roman type][line break]";
@@ -130,12 +131,13 @@ Object	Name
 Mall Optician	"Mall Optician"
 
 Mall Optician is a situation.
-The Prereq1 of Mall Optician is Dressing Room Crisis.
+ResolveFunction of Mall Optician is "[ResolveEvent Mall Optician]".
+Prereq1 of Mall Optician is Dressing Room Crisis.
 The Prereq1Resolution of Mall Optician is { 1, 2 }.
 The PrereqTime of Mall Optician is "Day".
-The sarea of Mall Optician is "Smith Haven".
+Sarea of Mall Optician is "Smith Haven".
 
-Instead of resolving a Mall Optician:
+to say ResolveEvent Mall Optician:
 	say "     Strolling through the hallways of the expansive Smith Haven Mall, your way brings you to the west wing and you remember what Diana said about living in an optician store somewhere hereabouts. Checking out one of the large floor-plans of the mall standing a certain places, you figure out just where you need to go and swing by to check the place out. Soon, you see the glass front of the store a little distance ahead, its doors open and a number of people visible inside. For a second, you think you're in the wrong place after all, as the men and women inside all seem to be senior citizens in the beginning states of transformation: mostly showing some characteristics of dog- and cat-morphs, but you can also see one woman with rainbow-colored feathers lining the sides of her arms. Then suddenly, Diana comes into sight, stepping out behind a large display of sunglasses, together with an old woman who has white fur like a Siamese cat, pointy feline ears and a long tail.";
 	say "     Walking closer, you overhear the old woman say, '...hope you'll have fun at the bookstore sweetie. Maybe you'll meet some new friends too.' Leaning forward, the pats Diana's head and kisses her forehead, smiling as the young woman replies, 'Maybe I will Nana. See you later.' The happy young woman walks out of the store after that, quickly spotting you and coming up to you with a smile on her face. An eye-blink later, you find yourself embraced by the feline/human/gryphon hybrid girl, and she says, 'Hello[if Player is not defaultnamed] [name of Player][end if], what a nice surprise to see you again! Come on, let's go to the bookstore together!' Before you really know what's going on, Diana has already dragged you along with her, leaving the optician (and especially its various inhabitants that were giving you curious glances) behind.";
 	WaitLineBreak;
@@ -314,8 +316,8 @@ SexuallyExperienced of Diana is true.
 TwistedCapacity of Diana is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Diana is false. [steriles can't knock people up]
 MainInfection of Diana is "Sphinx".
-The description of Diana is "[Dianadesc]".
-The conversation of Diana is { "Meep!" }.
+Description of Diana is "[Dianadesc]".
+Conversation of Diana is { "Meep!" }.
 
 to say Dianadesc:
 	if Libido of Diana is 0: [gryphon legs, human middle, cat head]
@@ -384,7 +386,7 @@ to say Diana_TalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Find out how she ended up living with a bunch of senior citizens";
 	[]
-	if Diana is in Food Court:
+	if Diana is in Mall Foodcourt:
 		choose a blank row in table of fucking options;
 		now title entry is "Charm her and stealthily finger Diana's pussy";
 		now sortorder entry is 4;
@@ -411,7 +413,7 @@ to say Diana_TalkMenu:
 					say "[Diana_RegularTalk2]";
 				if (nam is "Ask about her friends"):
 					say "[Diana_RegularTalk3]";
-				if (nam is "Crouch down in front of her and eat her out"):
+				if (nam is "Charm her and stealthily finger Diana's pussy"):
 					say "[DianaFingering_FoodCourt]";
 				wait for any key;
 		else if calcnumber is 0:

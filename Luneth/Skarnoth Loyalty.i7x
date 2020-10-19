@@ -114,7 +114,7 @@ Part 1 - First Event
 
 after going to Grey Abbey Library while (Skarnoth is booked and Loyalty of Skarnoth is 10 and (the number of bunkered people + the number of booked people > 5) and "Unchained" is listed in Traits of Skarnoth):
 	if debugactive is 1:
-		say "     DEBUG: SKARNOTH WALK-IN - HP OF SKARNOTH: [HP of Skarnoth], Loyalty of Skarnoth: [Loyalty of Skarnoth][line break]";
+		say "     DEBUG: SKARNOTH WALK-IN - HP of SKARNOTH: [HP of Skarnoth], Loyalty of Skarnoth: [Loyalty of Skarnoth][line break]";
 	say "     As you walk into the main lobby of the library, your attention is drawn to the huge demon prince sitting on one of the torn up comfy chairs, his boisterous laughter echoing throughout the building. 'Then there was this one time that my army attacked another hell realm. Of course we won, but the best part was when it came to the spoils! My imps brought in these two captives from the enemy, a guy and a girl who apparently were the prince and princess of their realm. Well, with one look, I knew exactly what needed to be done! So I grabbed the girl and pounded her pussy right there in front of her brother, and pretty soon, the screams turned into moaning, and I shot my load into the bitch haha! Being the nice ruler that I am though, I wasn't about to let her brother feel left out, so while she was passed out, I bent him over my throne. Damn, that slut was a squealer! By the end of the day, I had both of them worshiping my cock like they were born for it.'";
 	say "     Skarnoth is apparently sharing his past conquests with your allies, some seem amused while others seem a bit disgusted. You are about to turn and leave when something else catches your ear. 'It's the same way with my new [italic type][master][roman type]. [SubjectProCap of Player] may act like [SubjectPro of Player] is in charge, but when we are alone, it's a completely different story. I mean, I can't keep the li'l subby slut off of my cock!' While Skarnoth sharing his past with the others and attempting to open up about himself isn't necessarily a bad thing, talking about you and what happens between the two of you is a completely different matter.";
 	LineBreak;
@@ -199,7 +199,7 @@ Part 2 - Second Event
 
 after going to Breakroom while (Skarnoth is booked and Loyalty of Skarnoth is 11 and (the number of bunkered people + the number of booked people > 5) and "Unchained" is listed in Traits of Skarnoth):
 	if debugactive is 1:
-		say "     DEBUG: SKARNOTH WALK-IN - HP OF SKARNOTH: [HP of Skarnoth], Loyalty of Skarnoth: [Loyalty of Skarnoth][line break]";
+		say "     DEBUG: SKARNOTH WALK-IN - HP of SKARNOTH: [HP of Skarnoth], Loyalty of Skarnoth: [Loyalty of Skarnoth][line break]";
 	say "     Walking into the breakroom, you can see Skarnoth leaning against one of the counters, chatting with several others while holding something in his clawed hands. He apparently managed to get some sort of cake, either he acquired it himself or someone brought it to him, you aren't sure which. One thing is for sure, Skarnoth definitively isn't a fan of cutlery, as he just dug a handful out of the cake and is eating it like that. The demon prince is so wrapped up in his conversation that he doesn't seem to notice that you even entered the room. Since you simply came into the breakroom to check on things in here and have no real reason to stay you are about to turn around and leave, that is until you see Skarnoth take a huge messy bite from his treat. Truth be told it's a little gross to watch, more of the cake ends up on his face than actually going in his mouth. After he finishes, he brushes the remains from his face, causing crumbs and frosting to fall to the floor...";
 	LineBreak;
 	say "     [bold type]How should you handle this situation?[roman type][line break]";
@@ -309,7 +309,7 @@ to say SecondNoPillSkarnothScene:
 
 [after going to Half-Renovated Room while (HP of Skarnoth > 1 and Loyalty of Skarnoth is 10):
 	if debugactive is 1:
-		say "     DEBUG: SKARNOTH WALK-IN - HP OF SKARNOTH: [HP of Skarnoth], Loyalty of Skarnoth: [Loyalty of Skarnoth][line break]";
+		say "     DEBUG: SKARNOTH WALK-IN - HP of SKARNOTH: [HP of Skarnoth], Loyalty of Skarnoth: [Loyalty of Skarnoth][line break]";
 	say "     As you walk into the somewhat renovated room, your eyes are drawn to the demonic slave reclining in his high-backed chair. Skarnoth's glowing eyes follow your every move while his scaled tail whips around restlessly behind him.";]
 
 Skarnoth Loyalty ends here.

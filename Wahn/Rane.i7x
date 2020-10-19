@@ -22,10 +22,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Rooftop Rumble	"Rooftop Rumble"
 
-Rooftop Rumble is a situation. The level of Rooftop Rumble is 7.
-The sarea of Rooftop Rumble is "Warehouse".
+Rooftop Rumble is a situation.
+ResolveFunction of Rooftop Rumble is "[ResolveEvent Rooftop Rumble]". The level of Rooftop Rumble is 7.
+Sarea of Rooftop Rumble is "Warehouse".
 
-Instead of resolving a Rooftop Rumble:
+to say ResolveEvent Rooftop Rumble:
 	if HP of Rane is 0:
 		say "     While walking along the currently deserted sidewalk, you suddenly hear a cacophony of various noises, which you quickly identify as the sounds of a fight. And not a small one either - it certainly sounds like a rough battle involving several people. Immediately coming to a halt, you begin listening intently, trying to determine where the noises are originating from. The sudden arrival of a leopardman impacting the ground with crunch of breaking bones the just steps ahead of you solves that question quickly, as he must have fallen - or been thrown off - the three story roof of the building. He's in a grisly state but alive, groaning in pain as the nanites inside him start rearranging his body back into its intended shape.";
 		say "     Apprehensive of getting crushed under the next thing that might be falling down from above, you quickly duck into the nearest door and slam it shut behind you. Thankfully, even though the building looks inhabited there is no one in right now, though the sounds of fighting coming from above tell you that there's clearly more going on up there... albeit the frequency of sounds is becoming less and less. Against all good judgment, you feel the curious urge to find the source of this situation and begin to, as silently as possible, search for a way up. Finding a stairwell you slowly make your way up floor by floor, listening intently for where the sounds are coming from. Time seems to come to a standstill as you reach the top of the stairwell and are facing the rooftop door access. Seeing that the door is slightly ajar, hold your breath and take a quick peek.";
@@ -182,12 +183,13 @@ Object	Name
 Wandering Blue Oni	"Wandering Blue Oni"
 
 Wandering Blue Oni is a situation.
-The Prereq1 of Wandering Blue Oni is Rooftop Rumble.
+ResolveFunction of Wandering Blue Oni is "[ResolveEvent Wandering Blue Oni]".
+Prereq1 of Wandering Blue Oni is Rooftop Rumble.
 The Prereq1Resolution of Wandering Blue Oni is { 1, 2 }.
 The level of Wandering Blue Oni is 5.
-The sarea of Wandering Blue Oni is "Park".
+Sarea of Wandering Blue Oni is "Park".
 
-Instead of resolving a Wandering Blue Oni:
+to say ResolveEvent Wandering Blue Oni:
 	say "     As you move through the overgrown park's wilderness, you have an eye out for Rane, the blue oni whom you met in the warehouse district... without much success. Lots of trees and large bushes everywhere make it easy for someone to conceal himself in the woods, and you don't think there's much chance of finding the blue devil if he doesn't want to be spotted. A bit disappointed from the fruitless search, you wander back towards the entrance of the park - only to suddenly hear a voice from somewhere to the side: 'Hey there, sexy. Been waiting for you slow ass...'";
 	say "     You find the blue devil leaning up against one of the pillars forming the Torii arch leading to the Japanese shrine in the park. From the amused gleam in his eyes, he must have spotted you when you were out looking for him, then circled around to oh so casually wait for you here. He certainly is very sure of himself. You can't help but admire his imposing presence, fit and muscular and with an enticing air of masculinity. Giving you a meaningful wink, Rane steps away from the pillar and walks into the small bamboo forest concealing the shrine.";
 	WaitLineBreak;
@@ -219,8 +221,8 @@ Instead of resolving a Wandering Blue Oni:
 	now Wandering Blue Oni is resolved;
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -266,9 +268,13 @@ When Play begins:
 	now Cunt Count entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]         [ Width in inches of female sex the infection will try to give a player. ]
+	now SeductionImmune entry is false;
 	now libido entry is 50;
 	now loot entry is "";                             [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;                   [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;                             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "lithe";
 	now type entry is "human";
@@ -283,7 +289,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -385,8 +391,8 @@ When Play begins:
 
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -435,9 +441,13 @@ When Play begins:
 	now Cunt Count entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]         [ Width in inches of female sex the infection will try to give a player. ]
+	now SeductionImmune entry is false;
 	now libido entry is 70;
 	now loot entry is "";                             [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;                   [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;                             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]meaty[or]powerful[at random]";
 	now type entry is "[one of]oni[or]demonic[at random]";
@@ -452,7 +462,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -595,8 +605,8 @@ SexuallyExperienced of Rane is true.
 TwistedCapacity of Rane is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Rane is false. [steriles can't knock people up]
 MainInfection of Rane is "Blue Oni".
-The description of Rane is "[RaneDesc]".
-The conversation of Rane is { "Oh, hello." }.
+Description of Rane is "[RaneDesc]".
+Conversation of Rane is { "Oh, hello." }.
 lastfuck of Rane is usually 555.
 
 to say RaneDesc:

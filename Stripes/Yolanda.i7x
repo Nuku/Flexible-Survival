@@ -30,22 +30,22 @@ Version 2 of Yolanda by Stripes begins here.
 
 Section 1 - Raven Nest
 
-Raven Nest is inside from the Red Apartment.		[see the Qytat a'th Lundrues.i7x file in the Hellerhound folder for this location.]
 
 Table of GameRoomIDs (continued)
 Object	Name
 Raven Nest	"Raven Nest"
 
 Raven Nest is a room. It is sleepsafe.
-The description of Raven Nest is "[ravennestdesc]";
+Raven Nest is northeast from Red Apartment 2nd Floor.		[see the Qytat a'th Lundrues.i7x file in the Hellerhound folder for this location.]
+Description of Raven Nest is "[ravennestdesc]";
 
 the scent of Raven Nest is "This place smells of birds with a tinge of sexual arousal.";
 
 to say ravennestdesc:
 	if HP of Yolanda < 6:
-		say "     Inside the apartment building are several small units - likely lower income or student tenants, you'd guess from the remains of their contents. While they've been broken into and looted of supplies, one on the second floor is still occupied. While still in disarray, some attempt has been made to organize the apartment for its occupant - a human-sized raven. Much of the furniture's been removed, though the cushions from several couches (pillaged from the neighboring units) along with several blankets form a rather comfy nest for the avian. When you come in, she's [one of]pecking at her food supplies[or]adjusting the blankets of her nest[or]reading a book[or]poking through her collection of shiny gewgaws[cycling].";
+		say "     The apartment is occupied, but in a bit of disarray, as it has been rearranged to meet the needs of a feral occupant - a human-sized raven. Much of the furniture's been removed, instead replaced by two large L-shaped sofas arranged to form a square. The interior of it is filled with a multitude of cushions and pillows, plundered from who knows where, forming a rather comfy nest for the avian. When you come in, she's [one of]pecking at her food supplies[or]adjusting the blankets of her nest[or]reading a book[or]poking through her collection of shiny gewgaws[cycling].";
 	else:
-		say "     The apartment building has several small units inside it, none inhabited now that Yolanda's gone. They've all been rather thoroughly looted by the raven and so there's nothing of import left here any longer.";
+		say "     The apartment is empty, now that Yolanda's gone. She's taken everything of any value with her, so thee's nothing left for you to loot either.";
 
 
 Section 2 - Yolanda
@@ -55,8 +55,8 @@ object	name
 Yolanda	"Yolanda"
 
 Yolanda is a woman. Yolanda is in The Raven Nest.
-The description of Yolanda is "[yolandadesc]".
-The conversation of Yolanda is { "Caw!" }.
+Description of Yolanda is "[yolandadesc]".
+Conversation of Yolanda is { "Caw!" }.
 yolandaqytat is a truth state that varies. yolandaqytat is usually false.
 yolandatreasure is a truth state that varies. yolandatreasure is usually false.
 yolandakeyfob is a truth state that varies. yolandakeyfob is usually false.
@@ -569,11 +569,12 @@ Object	Name
 Jewelry Box	"Jewelry Box"
 
 Jewelry Box is a scavevent.
+ResolveFunction of Jewelry Box is "[ResolveEvent Jewelry Box]".
 when play begins:
 	add Jewelry Box to BadSpots of FemaleList;
 	add Jewelry Box to BadSpots of FurryList;
 
-Instead of resolving a Jewelry Box:
+to say ResolveEvent Jewelry Box:
 	say "     While searching some abandoned homes in the hopes of finding something of use, you discover that this one isn't quite as abandoned as you'd assumed. Emerging from a side room, a creature appears.";
 	let T be a random number between 1 and 5;
 	if T is 1:
@@ -600,9 +601,10 @@ Object	Name
 Raven Key Fob	"Raven Key Fob"
 
 Raven Key Fob is a scavevent.
+ResolveFunction of Raven Key Fob is "[ResolveEvent Raven Key Fob]".
 Raven Key Fob is inactive.
 
-Instead of resolving a Raven Key Fob:
+to say ResolveEvent Raven Key Fob:
 	say "     Hoping to find some supplies, you check through some cars in the street. From the looks of it, the drivers either abandoned their vehicles or (in the case of a few) transformed while inside them. In the latter, you find scraps of clothes and messy, musky stains, but little of use. You start to suspect some enterprising survivor or hungry mutant has already gone through these vehicles when you get lucky and find one that still has a small backpack in the passenger's seat. Opening it up, you go through it and find an assortment of stuff you don't need, but also a bottle of water. You're about to take it and go when you notice that the keys are still in the ignition. You decide to give it a shot, but find the car completely dead. The key fob does catch your eye though, being a shiny black bird about two inches long. You grab it and stuff it away in a pocket of your backpack, thinking Yolanda the raven might like it.";
 	now yolandakeyfob is true;
 	ItemGain water bottle by 1;

@@ -152,10 +152,10 @@ bfanditesting3 is an action applying to one topic.
 understand "bfandi3" as bfanditesting3.
 
 check bfanditesting3:
-	if there is no dangerous door in the location of the player:
+	if there is no dangerous door in the Location of Player:
 		say "I don't see any good hunting grounds around here." instead;
 	else:
-		let y be a random dangerous door in the location of the player;
+		let y be a random dangerous door in the Location of Player;
 		now battleground is the marea of y;
 
 carry out bfanditesting3:
@@ -166,10 +166,10 @@ carry out bfanditesting3:
 	say "Current area: [battleground][line break]";
 	repeat with z running through situations:
 		increase totalsit by 1;
-		if ( sarea of z matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ) ):
+		if ( sarea of z matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( Sarea of z is "Allzones" or Sarea of z is "allzones" ) ):
 			increase zonesit by 1;
 			say "[z] is [if z is resolved][special-style-2]Resolved[roman type][else][special-style-1]Unresolved[roman type][end if]. Lvl [level of z]";
-			if z is a scavevent and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ):
+			if z is a scavevent and ( Sarea of z is "Allzones" or Sarea of z is "allzones" ):
 				say ". [bold type]Scavevent[roman type] (All-zones)";
 				increase scavsitnum by 1;
 			else if z is a scavevent:
@@ -206,7 +206,7 @@ carry out bfanditesting4:
 				sort tempsitlist in level order;
 	repeat with z running through tempsitlist:
 		say "[z] ([sarea of z]) is [if z is resolved][special-style-2]Resolved[roman type][else][special-style-1]Unresolved[roman type][end if]. Lvl [level of z]";
-		if z is a scavevent and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ):
+		if z is a scavevent and ( Sarea of z is "Allzones" or Sarea of z is "allzones" ):
 			say ". [bold type]Scavevent[roman type] (All-zones)";
 			increase scavsitnum by 1;
 		else if z is a scavevent:

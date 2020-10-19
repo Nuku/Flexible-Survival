@@ -14,7 +14,7 @@ to say bunnyjockdesc:
 to say losetobunnyjock:
 	now bunnyjocknosex is 0;
 	if ( player is female and a random chance of 1 in 4 succeeds ) or ( Cunt Count of Player is 0 and a random chance of 2 in 5 succeeds ) or anallevel is 1:
-		say "     '[if Player is female]That was great, baby,' he says with a grin. 'Now let's have some fun.' [else]And that's how it's done! Ain't no stoppin['] this bunny!' he says, pointing to himself with a double thumbs-up. 'Do me a solid and help me let off some steam. You worked me up real good,' he adds with a grin. [end if]With that, he reaches into his shorts and pulls out his meaty cock. Having gotten quite hard, it's a massive two and a half feet long with the balls to match. 'Practice starts soon, so can you give me a quick blow?' With a strong paw on your head, he presses his glans to your lips, drooling pre across them. [if hp of Player > 0]Despite your attempt to resist, you end up tasting the musky liquid and start to become aroused[else]You lick the musky fluid from his tip, the taste of it making you all the more aroused[end if].";
+		say "     '[if Player is female]That was great, baby,' he says with a grin. 'Now let's have some fun.' [else]And that's how it's done! Ain't no stoppin['] this bunny!' he says, pointing to himself with a double thumbs-up. 'Do me a solid and help me let off some steam. You worked me up real good,' he adds with a grin. [end if]With that, he reaches into his shorts and pulls out his meaty cock. Having gotten quite hard, it's a massive two and a half feet long with the balls to match. 'Practice starts soon, so can you give me a quick blow?' With a strong paw on your head, he presses his glans to your lips, drooling pre across them. [if HP of Player > 0]Despite your attempt to resist, you end up tasting the musky liquid and start to become aroused[else]You lick the musky fluid from his tip, the taste of it making you all the more aroused[end if].";
 		say "     With the lapine jock keeping a steady grip, he strokes his cock while you lick across his glans. As you get more into it, you open your mouth, trying to work that mighty cock of his past your lips. [if scalevalue of Player < 4]It takes some time to get started, but you somehow manage to stretch your mouth open enough to accept it with the help of the bunny's firm thrusting[else]It's a little slow going at first, but soon enough you're taking it past your lips and into your warm mouth[end if]. You lick and suck at the huge shaft as best you can while the big guy grunts and moans in growing pleasure. As his arousal builds higher, he thrusts harder and faster before eventually cumming with a loud '[one of]Awwwww yeah[or]Slam dunk[or]Suck it harder[at random]!' upon release. Once he's emptied a sloshing amount of bunny cum into your belly, he pops his drooling cock free.";
 		say "     'Damn! I'm late for practice! See ya later bud!' he shouts before quickly tucking his dick back into his basketball shorts and then dashing off towards the athletic side of campus. You however lay there, your stomach gurgling from the lapine cum that was released into you..";
 	else if Player is female:
@@ -83,8 +83,8 @@ to say bunnyjockattack:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -136,9 +136,13 @@ When Play begins:
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 40; [ Target libido the infection will rise towards. ]
+	now SeductionImmune entry is false;
+	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is "bunweiser beer"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 12; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]super-buff[or]muscular[or]hyper-muscled[at random]";
 	now type entry is "[one of]leporine[or]lapine[or]bunny[or]rabbit[as decreasingly likely outcomes]";
@@ -153,7 +157,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -258,13 +262,14 @@ name	desc	weight	object
 "bunweiser beer"	"It's a capped beer bottle with a label declaring it Bunweiser Beer. The logo is a white bunny face winking at you."	1	bunweiser beer
 
 bunweiser beer is a grab object.
-the usedesc of bunweiser beer is "[bunweiseruse]".
-it is part of the player.
+Usedesc of bunweiser beer is "[bunweiseruse]".
+
 It is temporary.
 
 to say bunweiseruse:
 	say "You open up the bottle and put it to your mouth. The drink has the taste of cheap beer, the good kind thankfully.";
 	PlayerDrink 8;
+	addAlcPoints 1;
 	infect "Bunny Jock";
 
 instead of sniffing bunweiser beer:
@@ -278,7 +283,7 @@ this is the powerplay rule:
 	choose row MonsterID from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 ); [Double-damage]
-	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	if a random chance of 1 in 2 succeeds:
@@ -291,8 +296,8 @@ this is the powerplay rule:
 		now absorb is dam;
 	if absorb is greater than 0:
 		say "You prevent [absorb] damage!";
-	decrease hp of the player by dam;
-	increase hp of Player by absorb;
+	decrease HP of Player by dam;
+	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
 

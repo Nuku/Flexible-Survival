@@ -66,8 +66,8 @@ SexuallyExperienced of Mark is true.
 TwistedCapacity of Mark is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Mark is false. [steriles can't knock people up]
 MainInfection of Mark is "Polar Bear Male".
-The description of Mark is "[MarkDesc]".
-The conversation of Mark is { "<This is nothing but a placeholder!>" }.
+Description of Mark is "[MarkDesc]".
+Conversation of Mark is { "<This is nothing but a placeholder!>" }.
 The scent of Mark is "     Mark's fur, while well-kempt, is naturally slightly musky, a trait compounded by the undertone of woodsmoke and sawdust. It's a rustic, pleasant scent with a hint of ever-present arousal.".
 
 to say MarkDesc:

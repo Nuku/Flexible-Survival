@@ -91,8 +91,8 @@ AnalVirgin of Bjorn is true.
 PenileVirgin of Bjorn is true.
 SexuallyExperienced of Bjorn is false.
 MainInfection of Bjorn is "".
-The description of Bjorn is "[BjornDesc]".
-The conversation of Bjorn is { "<This is nothing but a placeholder!>" }.
+Description of Bjorn is "[BjornDesc]".
+Conversation of Bjorn is { "<This is nothing but a placeholder!>" }.
 The scent of Bjorn is "He smells of the sea and sweat, the later proving that he does work out.".
 
 to say BjornDesc:

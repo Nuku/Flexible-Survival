@@ -10,7 +10,7 @@ name	desc	weight	object
 
 bitch breaker gel is a grab object. It is temporary.
 
-the usedesc of bitch breaker gel is "[bitch breaker gel use]".
+Usedesc of bitch breaker gel is "[bitch breaker gel use]".
 
 to say bitch breaker gel use:
 	if debugactive is 1:
@@ -35,7 +35,7 @@ name	desc	weight	object
 
 breeder serum is a grab object. It is temporary.
 
-the usedesc of breeder serum is "[breeder serum use]".
+Usedesc of breeder serum is "[breeder serum use]".
 
 to say breeder serum use:
 	if debugactive is 1:
@@ -63,7 +63,7 @@ name	desc	weight	object
 
 cock remover is a grab object. It is temporary.
 
-the usedesc of cock remover is "[cock remover use]".
+Usedesc of cock remover is "[cock remover use]".
 
 to say cock remover use:
 	if debugactive is 1:
@@ -87,7 +87,7 @@ name	desc	weight	object
 
 sissifier gel is a grab object. It is temporary.
 
-the usedesc of sissifier gel is "[sissifier gel use]".
+Usedesc of sissifier gel is "[sissifier gel use]".
 
 to say sissifier gel use:
 	if debugactive is 1:
@@ -117,7 +117,7 @@ name	desc	weight	object
 
 trap serum is a grab object. It is temporary.
 
-the usedesc of trap serum is "[trap serum use]".
+Usedesc of trap serum is "[trap serum use]".
 
 to say trap serum use:
 	if debugactive is 1:
@@ -149,7 +149,7 @@ name	desc	weight	object
 
 pussy spreader cream is a grab object. It is temporary.
 
-the usedesc of pussy spreader cream is "[pussy spreader cream use]".
+Usedesc of pussy spreader cream is "[pussy spreader cream use]".
 
 to say pussy spreader cream use:
 	if debugactive is 1:
@@ -174,7 +174,7 @@ name	desc	weight	object
 
 cock holster upgrade is a grab object. It is temporary.
 
-the usedesc of cock holster upgrade is "[cock holster upgrade use]".
+Usedesc of cock holster upgrade is "[cock holster upgrade use]".
 
 to say cock holster upgrade use:
 	if debugactive is 1:
@@ -199,7 +199,7 @@ name	desc	weight	object
 
 cunt remover is a grab object. It is temporary.
 
-the usedesc of cunt remover is "[cunt remover use]".
+Usedesc of cunt remover is "[cunt remover use]".
 
 to say cunt remover use:
 	if debugactive is 1:
@@ -223,7 +223,7 @@ name	desc	weight	object
 
 rightntight cream is a grab object. It is temporary.
 
-the usedesc of rightntight cream is "[rightntight cream use]".
+Usedesc of rightntight cream is "[rightntight cream use]".
 
 to say rightntight cream use:
 	if debugactive is 1:
@@ -251,7 +251,7 @@ name	desc	weight	object
 
 cervix smasher upgrade is a grab object. It is temporary.
 
-the usedesc of cervix smasher upgrade is "[cervix smasher upgrade use]".
+Usedesc of cervix smasher upgrade is "[cervix smasher upgrade use]".
 
 to say cervix smasher upgrade use:
 	if debugactive is 1:
@@ -279,7 +279,7 @@ name	desc	weight	object
 
 tits inflator pump is a grab object. It is temporary.
 
-the usedesc of tits inflator pump is "[tits inflator pump use]".
+Usedesc of tits inflator pump is "[tits inflator pump use]".
 
 to say tits inflator pump use:
 	if debugactive is 1:
@@ -298,7 +298,7 @@ name	desc	weight	object
 
 tits deflator pump is a grab object. It is temporary.
 
-the usedesc of tits deflator pump is "[tits deflator pump use]".
+Usedesc of tits deflator pump is "[tits deflator pump use]".
 
 to say tits deflator pump use:
 	if Breast Size of Player > 0:
@@ -313,11 +313,11 @@ Part 13 - Tits Multiplier Injection
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Tits Multiplier Injection"	"A jar of clear liquid with two syringes coming out of the sides. On the jar itself is a huge red plus sign. The label on the back says to place the jar between where you wish for more breasts to grow and then inject the chemical into the area. Once all of the clear fluid is gone, a new pair of breasts will grow in place."	0	tits multiplier injection
+"tits multiplier injection"	"A jar of clear liquid with two syringes coming out of the sides. On the jar itself is a huge red plus sign. The label on the back says to place the jar between where you wish for more breasts to grow and then inject the chemical into the area. Once all of the clear fluid is gone, a new pair of breasts will grow in place."	0	tits multiplier injection
 
 tits multiplier injection is a grab object. It is temporary.
 
-the usedesc of tits multiplier injection is "[tits multiplier injection use]".
+Usedesc of tits multiplier injection is "[tits multiplier injection use]".
 
 to say tits multiplier injection use:
 	if debugactive is 1:
@@ -338,11 +338,11 @@ Part 14 - Tits Divider Injection
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Tits Divider injection"	"A jar of clear liquid with two syringes coming out of the sides. On the jar itself is a huge blue minus sign. The label on the back says to place the jar between your breasts and then inject the chemical into your tits. Once all of the clear fluid is gone, the row of breasts that you injected will shrink until they disappear."	0	tits divider injection
+"tits divider injection"	"A jar of clear liquid with two syringes coming out of the sides. On the jar itself is a huge blue minus sign. The label on the back says to place the jar between your breasts and then inject the chemical into your tits. Once all of the clear fluid is gone, the row of breasts that you injected will shrink until they disappear."	0	tits divider injection
 
 tits divider injection is a grab object. It is temporary.
 
-the usedesc of tits divider injection is "[tits divider injection use]".
+Usedesc of tits divider injection is "[tits divider injection use]".
 
 to say tits divider injection use:
 	if debugactive is 1:
@@ -367,7 +367,7 @@ name	desc	weight	object
 
 mama milkshake is a grab object. It is temporary.
 
-the usedesc of mama milkshake is "[mama milkshake use]".
+Usedesc of mama milkshake is "[mama milkshake use]".
 
 to say mama milkshake use:
 	say "     ";
@@ -380,7 +380,7 @@ name	desc	weight	object
 
 wide receiver is a grab object. It is temporary.
 
-the usedesc of wide receiver is "[wide receiver use]".
+Usedesc of wide receiver is "[wide receiver use]".
 
 to say wide receiver use:
 	say "     ";
@@ -393,7 +393,7 @@ name	desc	weight	object
 
 tight end is a grab object. It is temporary.
 
-the usedesc of tight end is "[tight end use]".
+Usedesc of tight end is "[tight end use]".
 
 to say tight end use:
 	say "     ";]
@@ -404,38 +404,7 @@ Section 2 - Outfitters Rack
 
 Part 1 - zephyr bashing riot shield
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"zephyr bashing riot shield"	"[RiotShieldAttackDesc]"	4	zephyr bashing riot shield
-
-zephyr bashing riot shield is an armament. It is not temporary.
-It is part of the player. It has a weapon "[one of]your metal shield[or]your suppressive shield[or]your black shield[at random]".
-The weapon damage of zephyr bashing riot shield is 8.
-The weapon type of zephyr bashing riot shield is "Melee".
-The objsize of zephyr bashing riot shield is 4.
-
-to say RiotShieldAttackDesc:
-	say "     A black shield that zephyr's riot security use to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]riotshieldProtectMode[end link] though, and direct your shield to more defensive purposes instead.";
-
-the scent of the zephyr bashing riot shield is "     The zephyr protective riot shield smells faintly of suppressive authority.".
-
-riotshieldProtectMode is an action applying to one topic.
-
-understand "riotshieldProtectMode" as riotshieldProtectMode.
-
-check riotshieldProtectMode:
-	if carried of zephyr bashing riot shield < 1:
-		say "     What shield? You're not holding one right now.";
-
-carry out riotshieldProtectMode:
-	if zephyr bashing riot shield is equipped:
-		now zephyr bashing riot shield is not equipped;
-		say "     You lower your shield and look at it, contemplating how you can defend yourself instead of using it as a blunt weapon.";
-	else:
-		say "     You look at your shield, contemplating how you can defend yourself instead of using it as a blunt weapon.";
-	ItemLoss zephyr bashing riot shield by 1;
-	ItemGain zephyr protective riot shield by 1;
-
+[zephyr bashing riot shield moved to Core Mechanics/Weapons.i7x]
 
 Part 2 - zephyr protective riot shield
 
@@ -444,10 +413,10 @@ name	desc	weight	object
 "zephyr protective riot shield"	"[RiotShieldProtectDesc]"	4	zephyr protective riot shield
 
 zephyr protective riot shield is equipment. It is not temporary.
-the usedesc of zephyr protective riot shield is "[RiotShieldProtectUse]".
+Usedesc of zephyr protective riot shield is "[RiotShieldProtectUse]".
 The AC of zephyr protective riot shield is 46.
 The effectiveness of zephyr protective riot shield is 42.
-The objsize of zephyr protective riot shield is 4.
+Objsize of zephyr protective riot shield is 4.
 The placement of zephyr protective riot shield is "shield".
 The descmod of zephyr protective riot shield is "You hold the riot shield in your hands, its size is large enough to cover most of your torso. It is painted black with the zephyr trademark branded across the front, just underneath the vision slot.".
 The slot of zephyr protective riot shield is "shield".

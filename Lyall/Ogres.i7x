@@ -18,14 +18,15 @@ Object	Name
 Ogre Encounter	"Ogre Encounter"
 
 Ogre Encounter is a situation.
+ResolveFunction of Ogre Encounter is "[ResolveEvent Ogre Encounter]".
 The level of Ogre Encounter is 10. [minimum level to find the event]
-The sarea of Ogre Encounter is "Junkyard".
+Sarea of Ogre Encounter is "Junkyard".
 
 when play begins: [flags for blocking this event]
 	add Ogre Encounter to BadSpots of MaleList;
 	add Ogre Encounter to BadSpots of FurryList;
 
-Instead of resolving a Ogre Encounter:
+to say ResolveEvent Ogre Encounter:
 	setmonster "Ogre Male";
 	if Resolution of Ogre Encounter is 0: [FIRST ENCOUNTER]
 		say "     While exploring the city, you turn a corner and bump into a large creature. Startled, you quickly jump back to create some distance between the two of you and [if weapon object of Player is journal]ready your fists[else]reach for your weapon[end if]. Your resolve to fight wavers when you realize that it's not just one, but three of these beasts that stand in front of you, all easily seven feet tall and imposingly built. The gray-skinned creatures resemble orcs, but with pudgy faces and large, round bellies. Their faces are covered with wrinkles and sport pointed teeth with what look to be a small set of tusks jutting out unevenly from the bottom row. They have large, round ears and dark, dim eyes. You can see a bush of black hair covering their armpits, a light coating across their arms, and a big patch between each pec. They look to be either oiled up from head to toe or just covered in sweat - you assume the latter.";
@@ -210,7 +211,7 @@ Object	Name
 Ogre's Camp	"Ogre's Camp"
 
 Ogre's Camp is a room. It is a fasttravel. It is private.
-The description of Ogre's Camp is "     You shouldn't be seeing this, as navigating to the Ogre Camp should bring up an encounter scene with them. Please report on the FS Discord how you saw this.".
+Description of Ogre's Camp is "     You shouldn't be seeing this, as navigating to the Ogre Camp should bring up an encounter scene with them. Please report on the FS Discord how you saw this.".
 
 instead of Navigating Ogre's Camp while (Resolution of Ogre Encounter is 8): [player is their willing playmate and is visiting]
 	say "     Wandering the city you find yourself back at the Ogres impromptu camp. You can see them sitting around talking amongst each other, not a care in the world. Though it appears that they cleaned up the mess of beer cans and empty bottles from last time. You are quickly welcomed by Mogs, who shouts 'Look who came back to visit' Kogs and Gurke look your direction pleased that you came back. 'Sit down and relax with us for a little bit, ' Gurke says, patting a spot on the wood log he's sitting on. You're not sure what kind of tree the logs from Oak or something; it's a dark, almost brown color. You walk over there and take a seat on the log next to Gurke. The moment you get situated he wraps his arm around you and asks, 'What did you come here for today, you want out life stories, some fun, or something else?' He elbows your ribs playfully while asking.";
@@ -457,8 +458,8 @@ to say OgreLeaderMeet:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -505,9 +506,13 @@ When Play begins:
 	now Cunt Count entry is 0;              [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	now libido entry is 75;            [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 75;            [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";              [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "ogre";
 	now type entry is "ogre";
@@ -522,7 +527,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

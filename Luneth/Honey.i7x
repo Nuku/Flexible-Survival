@@ -27,11 +27,12 @@ Object	Name
 Smashed Hive	"Smashed Hive"
 
 Smashed Hive is a situation.
-The sarea of Smashed Hive is "Park".
+ResolveFunction of Smashed Hive is "[ResolveEvent Smashed Hive]".
+Sarea of Smashed Hive is "Park".
 when play begins:
 	add Smashed Hive to BadSpots of FemaleList;
 
-Instead of resolving a Smashed Hive:
+to say ResolveEvent Smashed Hive:
 	if HP of bee girl is 0:
 		say "     As you search through the park, you come across a giant, devastated bee hive. The hive was built around the branches of a large tree and may have been over fifteen feet tall when completed intact. Now, broken fragments of it lay scattered around the area and only some of the upper chunks cling to the top branches to give you a scope of its size. Scattered around the sticky rubble are the bodies of numerous bee girl drones, unmoving. Cautiously, you step between the sticky chunks of honeycomb to take a closer look.";
 		say "     As you follow the bear tracks all around the area, you can see that one or even several bears assaulted the hive for the sweet honey. Much of the honeycomb center has been taken away, though you may be able to retrieve some for yourself. As you look around to find a clean section to pick from, you hear a weak buzz from behind you. Turning, you see one of the bee drone's still alive, struggling to get up despite her injuries.";
@@ -80,7 +81,7 @@ Instead of resolving a Smashed Hive:
 			now HP of bee girl is 100;
 			now Resolution of Smashed Hive is 99; [left honey]
 	else if HP of bee girl is 1:
-		if companion of Player is bee girl:
+		if bee girl is listed in companionList of Player:
 			say "     Your meandering through the park takes you back to the ruins of the shattered bee hive. The sticky rubble has been picked through since you were last here, the last of the honey having been taken. Even the bodies of the fallen drones are gone - something you don't want to think about too much. Looking down at Honey, who is clutching your side tightly, she could have shared their grisly fate had you not helped her[if scalevalue of Player is 1]. As you hug her[else]. As you kneel down to hug her[end if], you notice some bear tracks and dried dribbles of honey heading off into the woods. You might be able to track down one of the bears responsible for this, if you want to.";
 			say "     [bold type]Shall you try?[roman type][line break]";
 			LineBreak;
@@ -160,7 +161,7 @@ to say beegirlsaved:
 	add "Tamed" to Traits of bee girl;
 	now HP of bee girl is 1;
 	move Honey to Grey Abbey Garden;
-	say "     (Honey the bee girl is now a possible companion! You can make her your active companion by typing [bold type][link]companion Honey[end link][roman type] or [bold type][link]companion bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Honey[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+	say "     (Honey the bee girl is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Honey[end link][roman type] or [bold type][link]ally bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Honey[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 
 
 Section 2 - Bee Girl NPC/Pet
@@ -169,21 +170,22 @@ Table of GameCharacterIDs (continued)
 object	name
 bee girl	"bee girl"
 
-bee girl is a pet. bee girl is a part of the player.
+bee girl is a pet.
+NPCObject of bee girl is Honey.
 understand "Honey" as bee girl.
+IDList of bee girl is { "Honey", "honey", "bee", "girl", "bee girl" }.
 printed name of bee girl is "Honey".
-The description of bee girl is "[HoneyDesc]".
-The weapon damage of bee girl is 3.
+Description of bee girl is "[HoneyDesc]".
+Weapon Damage of bee girl is 5.
 The level of bee girl is 1.
-The Dexterity of bee girl is 16.
+Dexterity of bee girl is 20.
 The summondesc of bee girl is "[SummonHoney]".
 The dismissdesc of bee girl is "[DismissHoney]".
 The assault of bee girl is "[one of]The bee girl buzzes around, slapping and punching at your foe from behind![or]The bee girl dive bombs the enemy, jabbing with her stinger-less abdomen repeatedly and bashing her fists on their back, buzzing wildly![or]Buzzing angrily, the bumblebee scratches and claws at your foe with her hard, chitinous fingertips![or]The bee drone tosses globs of sticky honey onto your foe, slowing them down while they get unstuck![or]The buzzing drone drops an armload of small rocks and junk onto your enemy from above![at random]".
 the fuckscene of bee girl is "[SexWithHoney]".
 
 to say SummonHoney:
-	now Honey is nowhere;
-	if Player is in Grey Abbey Garden and Honey is in Grey Abbey Garden: [summoning while standing next to her]
+	if Honey is visible: [summoning while standing next to her]
 		say "     Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
 	else: [regular summoning]
 		say "     Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
@@ -200,7 +202,8 @@ object	name
 Honey	"Honey"
 
 Honey is a woman.
-The description of Honey is "[HoneyDesc]".
+ScaleValue of Honey is 2. [human sized]
+Description of Honey is "[HoneyDesc]".
 
 instead of sniffing Honey:
 	say "[HoneyScent]";
@@ -216,7 +219,10 @@ to say HoneyDesc:
 	if Player is in Grey Abbey Garden:
 		say "     At the moment the little bee girl is busy fixing up the garden.";
 	else:
-		say "     At the moment the little bee girl is flying around, buzzing contently.";
+		if bee girl is listed in companionList of Player:
+			say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
+		else:
+			say "     At the moment the little bee girl is flying around, buzzing contently.";
 
 instead of sniffing bee girl:
 	say "[HoneyScent]";
@@ -227,7 +233,7 @@ to say HoneyScent:
 instead of conversing the Honey:
 	if Player is in Grey Abbey Garden and Honey is in Grey Abbey Garden:
 		say "[HoneyTalkMenu]";
-	else if companion of Player is bee girl:
+	else if bee girl is listed in companionList of Player:
 		say "[HoneyTalkMenu]";
 	else:
 		say "     Honey isn't here.";
@@ -238,7 +244,7 @@ instead of conversing bee girl:
 	else:
 		if Player is in Grey Abbey Garden and Honey is in Grey Abbey Garden:
 			say "[HoneyTalkMenu]";
-		else if companion of Player is bee girl:
+		else if bee girl is listed in companionList of Player:
 			say "[HoneyTalkMenu]";
 		else:
 			say "     Honey isn't here.";
@@ -409,7 +415,7 @@ to say HoneySex6: [Queen bee fun with Honey]
 Section 3 - Sexxxings
 
 An everyturn rule:
-	if companion of Player is bee girl and skipturnblocker is 0:
+	if bee girl is listed in companionList of Player and skipturnblocker is 0:
 		if Player is not neuter:
 			increase Libido of Player by 6;
 			let diceroll be a random number from 35 to 200; [lust check vs 200, player libido 35 or less auto-wins]

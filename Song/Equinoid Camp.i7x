@@ -90,11 +90,10 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 			else:
 				now equinoidstatus is 12;
 				say "     You are brought in front of the tribal leaders, with the one you've met before sitting with a youthful looking equinoid beside her. '[if Player is defaultnamed]Newcomer[else][name of Player][end if], we welcome you into the tribe and the herd. You are now one with us and welcome among us. As you have voiced intentions of continuing to travel and explore the fallen city for the time being, it has been decided that this cannot be permitted alone. Those who have been recently welcomed are still weak and vulnerable to the outside influences of the creatures of the city.'";
-				say "     'To protect and guide our newest member, we shall send one of our young warriors with you. Liliana is to accompany you, to protect you and to guide you back to us should you stray from the herd.' The equinoid rises stiffly and walks to your side[if Player is not lonely], forcing your [companion of Player] to step aside for her[end if]. Amaryllis gives her a bit of a jealous glance, but Liliana is either oblivious to it or ignores it entirely. 'We expect you to keep her with you. This is to be a journey for her as well as protection for you. We will not be pleased if you do not fulfill your duties in this regard.' You glance over at your new equinoid companion and nod to the tribal leader before heading into the compound to look around.";
+				say "     'To protect and guide our newest member, we shall send one of our young warriors with you. Liliana is to accompany you, to protect you and to guide you back to us should you stray from the herd.' The equinoid rises stiffly and walks to your side[if Player is not lonely], forcing those with you to step aside for her[end if]. Amaryllis gives her a bit of a jealous glance, but Liliana is either oblivious to it or ignores it entirely. 'We expect you to keep her with you. This is to be a journey for her as well as protection for you. We will not be pleased if you do not fulfill your duties in this regard.' You glance over at your new equinoid companion and nod to the tribal leader before heading into the compound to look around.";
 				now equinoid warrior is tamed;
 				add "Tamed" to Traits of equinoid warrior;
-				now the companion of the player is equinoid warrior;
-				say "     (Liliana the equinoid warrior is now a possible companion! You can make her your active companion by typing [bold type][link]companion Liliana[end link][roman type] or [bold type][link]companion equinoid warrior[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Liliana[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				say "     (Liliana the equinoid warrior is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Liliana[end link][roman type] or [bold type][link]ally equinoid warrior[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Liliana[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				increase score by 25;
 				wait for any key;
 				move player to Equinoid Camp;
@@ -116,7 +115,7 @@ Equinoid Camp	"Equinoid Camp"
 
 Equinoid Camp is a room. It is fasttravel. It is private. It is sleepsafe.
 The earea of Equinoid Camp is "Park".
-The description of Equinoid Camp is "[EquinoidCampDesc]".
+Description of Equinoid Camp is "[EquinoidCampDesc]".
 
 to say EquinoidCampDesc:
 	say "     You stand in a large and sprawling field of long, swaying grass. Spread out among the area are primitive wooden structures that provide enclosed spaces for rest and recreation. Although spartan in construction, these buildings seem more than sturdy enough to withstand the temperate California weather.";
@@ -131,7 +130,7 @@ Nakoma's Tent	"Nakoma's Tent"
 
 Nakoma's Tent is a room. It is private. It is sleepsafe.
 Nakoma's Tent is east of Equinoid Camp.
-The description of Nakoma's Tent is "[NakomaTentDesc]".
+Description of Nakoma's Tent is "[NakomaTentDesc]".
 
 to say NakomaTentDesc:
 	say "     A roomy and lavishly decorated enclosure, Nakoma's tent is arranged in bohemian style, replete with layered textiles and exotic patterns that lend a disarming atmosphere to her abode. The ground is covered in rugs and silky furs. Her queen-sized bed is arranged with many small, colorful pillows and surrounded by an elegant canopy. The thick tarp of her tent blocks out most the [if daytimer is day]sunlight[else]ambient light[end if], leaving only the warm, flickering glow of sconces and tiki torches to illuminate the area.";

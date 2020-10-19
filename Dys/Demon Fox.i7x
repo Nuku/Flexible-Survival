@@ -44,8 +44,8 @@ to say DemonFoxDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 when play begins:
 	Choose a blank row from Table of Random Critters;
@@ -98,9 +98,13 @@ when play begins:
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	now libido entry is 45;
+	now SeductionImmune entry is false;
+	now libido entry is 50;
 	now loot entry is "demon fox fur";
 	now lootchance entry is 50;
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;
 	now body descriptor entry is "[one of]beastly[or]fluffy[or]lithe[or]hulking[at random]";
 	now type entry is "vulpine";
@@ -115,7 +119,7 @@ when play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -227,12 +231,12 @@ demon fox fur is a grab object.
 instead of sniffing demon fox fur:
 	say "The fur has a distinct, musky smell to it, reminding you of the fox you got it from.";
 
-the usedesc of demon fox fur is "[DemonFoxFurUse]";
+Usedesc of demon fox fur is "[DemonFoxFurUse]";
 
 to say DemonFoxFurUse:
 	say "You shrug before opening your mouth and eating the fur. Oddly enough, it almost seems to heat up, before it dissolves in your mouth, a strong wave of heat rushing through your body.";
 
-demon fox fur is infectious. The strain of demon fox fur is "Demon Fox".
+demon fox fur is infectious. Strain of demon fox fur is "Demon Fox".
 
 Section 4 - Tome Specific Scenes
 
@@ -300,11 +304,7 @@ to say DemonFoxFirstLoss:
 		say "     Somehow, you can feel the knot slip further and further in, your twisted body somehow able to accept the impossibly wide mass. Soon enough, the knot has passed its widest point, and the rest is pulled into you with a loud squelch. The demon on top of you lets out a loud howl of pleasure before his knot swells even wider, locking your already tied hole even more. [if Player is male]Your own cock[smn] throb[smv] as you release your [Cum Load Size of Player] load onto the ground, the pressure on your prostate driving you over the edge. [end if]He leans down and bites into your shoulder roughly as he climaxes, rope after rope of molten cum rushes into you, quickly rounding you out. His orgasm doesn't seem like it's going to abate any time soon, however, as more and more cum spills into you. Looking down at your bloated belly, you swear you can see a faint glow through your skin, even! By the time his climax comes to an end, he lets go of your shoulder, a trickle of blood dripping from his maw before he harshly yanks his tool out of you, the knot popping out loudly.";
 	else:
 		say "     Despite his best efforts, the knot is just too big to fit. This doesn't seem to bother the fox too much, however, as he simply thrusts against you once more before howling as he reaches his climax, rope after rope of molten, glowing cum spilling into your bowels. There's so much of the stuff that your belly starts to bulge from the sheer amount of fluid filling it. Eventually, the cum has nowhere left to go, managing to find its way out of your ass around his massive shaft. By the time his climax has ended, you're thoroughly drenched in fox cum, the hot ejaculate forming a pool around the two of you.";
-	say "[mimpregchance]";
-	say "[mimpregchance]";
-	say "[mimpregchance]";
-	say "[mimpregchance]";
-	say "[mimpregchance]";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Demon Fox";
 	WaitLineBreak;
 	say "     The fox gives you a look, observing your battered form as if admiring his handiwork. 'I told you that you should've submitted, pet,' he says. 'Maybe next time this won't have to be so hard...' By the time you've recovered enough energy to glance over your shoulder, the fox is gone, apparently having decided to leave after finishing with you. After that encounter, you're not sure why you'd want to, but perhaps you could [italic type]summon the fox again sometime[roman type]?";
 	infect "Demon Fox";
@@ -320,9 +320,8 @@ to say DemonFoxFirstSubmit:
 	WaitLineBreak;
 	say "     'Get on all fours,' he commands. You hastily obey, presenting your hindquarters to him, and he rumbles in approval of what he sees. [if Player is mpreg_ok]'I'm gonna enjoy putting my pups in you,'[else]'I'm gonna enjoy taking you,'[end if] he growls. You feel his weight upon you once more as he mounts you, lining his massive cock up with your hole before thrusting nearly all the way in with one harsh movement. You gasp in pain from the sudden intrusion, but that doesn't discourage him. He pulls out of you just as roughly as he entered, the ridges along the underside of his cock wracking you with both pain and pleasure. He thrust back in once more, this time with a little less resistance. This cycle keeps repeating, growing in speed until he's rutting against you, his massive knot slapping against your ring loudly.";
 	say "     With a howl of pleasure, he shoves forward one last time, his knot spreading you painfully wide before it manages to pop in. Once it's inside, it swells even larger, firmly locking the two of you together. [if Player is male]The pressure on your prostate is enough to set you off, spilling your load onto the ground beneath you. [end if]He gives one last growl before you feel his sharp teeth on your shoulder. They dig into your flesh as he bites down. You can feel his cock releasing its burning semen inside you, rope after rope of glowing cum erupting into your bowels. By the time he's finished climaxing, your belly is decently rounded out, and you can't help but moan from the heat of the fluids inside of you. With his orgasm over, he releases his hold on you, and harshly yanks his knot out of you. 'That was fun, pet,' he says. 'I hope we're able to do this once more sometime soon.'";
-	say "[mimpregchance]";
-	say "[mimpregchance]";
-	say "[mimpregchance]";
+	CreatureSexAftermath "Player" receives "OralCock" from "Demon Fox";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Demon Fox";
 	WaitLineBreak;
 	say "     You turn to look at the fox once more, only to be greeted with empty space. It seems the fox has gone for now... [italic type]Perhaps you could summon him once more with the book, if you so desire.[roman type][line break]";
 	infect "Demon Fox";
@@ -348,8 +347,7 @@ to say DemonFoxFirstVictory:
 		WaitLineBreak;
 		say "     You can't help but whine in disappointment as his muzzle departs from your rear. That disappointment only lasts for a moment, however, as you soon feel him wrapping his forepaws around your was, mounting you. He gives you a few gentle prods with his massive cock before he pushes his head into you slowly. You can't help but let out a moan as he gently pushes more of his shaft into you, until his first ridge begins to push in. 'This might hurt a bit,' he warns you as he pushes a little harder. The ridge eventually manages to go in, albeit with a little bit of pain. Soon enough the next ridge is pressing into you. That one goes in a little easier than the first. The next two are even easier than the previous. With his knot resting against your entrance, the fox grunts before pulling back out. Each ridge leaves you with a soft squelch.";
 		say "     Now that only his tip remains inside you, he pushes back in. This thrust goes by faster, your hole getting used to his size. Pretty soon, he's built up a decent rhythm, and you can't help but push your own body back, meeting his thrusts. 'I'm going to speed up now,' he warns you. His next thrust is much more aggressive and primal, his knot bashing against your entrance. Your own thrust grow in fervor, determined to get the demon's massive knot in you. With each thrust, more and more of the knot slips inside you, until it finally passes its widest point and your own body pulls it in the rest of the way. His knot firmly buried inside you, it swells to its full size, ensuring the two of you won't be moving anytime soon. He lets out a howl of pleasure as his cock throbs and erupts inside you, rope after rope of molten, glowing cum spilling into you. [if Player is male]You own orgasm follows shortly after, your cock[smn] shooting your [Cum Load Size of Player] load onto the ground below you. [end if]More and more of his molten seed fills you, and your belly swells with its weight. By the time his orgasm abates and his knot has shrunken down, your belly is rather swollen and decently rounded out from the load. 'That was fun, kit,' he pants in your ear. 'I think you'd enjoy being my pet, if you liked that...'";
-		say "[mimpregchance]";
-		say "[mimpregchance]";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Demon Fox";
 		WaitLineBreak;
 		say "     Eventually, he pulls out of your hole, a dribble of his glowing cum flowing out. He gives a few laps at your stretched hole before walking around to face you. 'We should do this again sometime,' he growls suggestively. 'However, I think it's time for me to depart.' A blinding flash suddenly fills your vision, and once it clears, he's gone. If you'd like to see him again, you could [italic type]use the tome[roman type].";
 		infect "Demon Fox";

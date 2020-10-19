@@ -12,7 +12,7 @@ skunkfight is a number that varies.
 to say skunk_desc:
 	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of Player > 5, let debit be level of Player - 5;
+	if HardMode is true and level of Player > 5, let debit be level of Player - 5;
 	if a random number from 1 to 10 > 3 or skunkfight is 3 or skunkbeaststatus is 1: [female skunk]
 		setmongender 4; [creature is female]
 		say "A very female anthropomorphic skunk with hints of animal, its curves and breasts leave you wanting, without any reservations, to fuck it senseless.";
@@ -49,10 +49,12 @@ to say skunk vict:
 	if skunkready > 2:
 		if Cunt Depth of Player > 5:
 			say "     The large skunk snuffles at the air for something, deciding you're what he's looking for it seems. A huge, heavy paw knocks you down onto your hands and knees, and before you can get back up, the heavy weight pins you down. The large skunkbeast climbs over your [bodydesc of Player] body and makes a few attempts to line up his throbbing cock with your hot hole. The thick shaft parts your new black-furred slit, and pounds you wildly!";
-			say "     The wild beast uses you for his own pleasure. As your body betrays you, a low groan rising in your throat and you submit to his animalistic mating. You find yourself pushing back and panting, lusting to be taken by this wild creature. You wriggle your rear and ride his cock, but the thick, messy cum that floods your body comes just before you can release, leaving you almost desperate and begging for more. Your womb is plump and warm with his ample load.[impregchance]";
+			say "     The wild beast uses you for his own pleasure. As your body betrays you, a low groan rising in your throat and you submit to his animalistic mating. You find yourself pushing back and panting, lusting to be taken by this wild creature. You wriggle your rear and ride his cock, but the thick, messy cum that floods your body comes just before you can release, leaving you almost desperate and begging for more. Your womb is plump and warm with his ample load.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Skunk";
 			increase skunkready by 1;
 		else if Player is female:
 			say "     The large skunk snuffles at the air for something and nuzzles at your crotch. As if deciding you're not quite ready yet, he lets his black, gooey tongue slide over your pussy, then push into it, making you moan in pleasure. The powerful beast dives his tongue into you repeatedly, lapping up your juices and sliding his thick, gooey drool into your pussy until you cum hard. You grip his head and stroke his ears, loving the attention this beast is giving you despite yourself and find yourself longing to be ready for him someday soon.";
+			CreatureSexAftermath "Skunk" receives "OralPussy" from "Player";
 			follow the sex change rule;
 		else:
 			say "     The massive skunk sprays thick, oily musk everywhere! Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
@@ -66,7 +68,8 @@ to say skunk defeat:
 	if skunkready > 3: [been sprayed or mated a lot]
 		let tempnum be a random number between 1 and 10;
 		if Cunt Depth of Player > 5 and skunkready > tempnum: [ready to take him, chance for final fuck]
-			say "     With one last feat of strength, the beast grabs you, lifting itself onto your rear, thrusting madly. You whimper as you find yourself unable to resist as his final rutting brings you to your limit. As your world turns fuzzy, gripped in a rushing orgasm you feel the beast's heated seed spray your inner most parts one last time.[impregchance]"; [rawr final mating]
+			say "     With one last feat of strength, the beast grabs you, lifting itself onto your rear, thrusting madly. You whimper as you find yourself unable to resist as his final rutting brings you to your limit. As your world turns fuzzy, gripped in a rushing orgasm you feel the beast's heated seed spray your inner most parts one last time."; [rawr final mating]
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Skunk";
 			increase skunkready by 1;
 			infect;
 		else:
@@ -86,6 +89,7 @@ to say skunkg vict:
 		say "[sblvictorysex]";
 	else if Player is male and skunkready > 2:
 		say "     Victorious, the female skunk grabs your [cock size desc of Player] cock and starts pumping at it vigorously. With your [Cock of Player] meat hard in her paw, she sinks her muzzle down overtop of it. She licks and sucks at your shaft, drooling black goo onto it as you blast your hot load into her muzzle. She licks her lips and swallows your semen down. She grins as the stick, black goo doesn't remain on your skin for long as it smooths out in places and starts to sink into you, leaving behind a soft, almost rubbery-textured fur even as you feel a tingle in your groin.";
+		CreatureSexAftermath "Skunk" receives "OralCock" from "Player";
 		follow the sex change rule;
 	else:
 		say "The female skunk turns, spraying thick, oily musk everywhere! Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
@@ -136,11 +140,11 @@ to say sblvictorysex:
 
 to say sblsex1:		[fuck skunkgirl]
 	say "     The skunk girl positions herself on all fours, moaning in need as she raises her fluffy tail as wiggles her round bottom[if skrp is 1]. Your skunkhead body companion grins and licks her lips at the sight of that dripping muff. '[one of]Awwww yeah[or]That's what I'm talkin['] about[or]Let's go[at random]!' she says excitedly[end if]. You are atop the skunk right away, bringing you throbbing prick to her juicy cunt and pressing it deep inside her. She moans loudly and claws at the ground [if Cock Length of Player > 16]as your massive [Cock of Player] cock pushes into her, stuffing so much her tight belly is stretched out by it[else]as your cock is stuffed into her[end if]. You growl lustfully, pounding into her hard and fast before finally driving deep inside and pumping her full of your hot load.";
-
+	CreatureSexAftermath "Skunk" receives "PussyFuck" from "Player";
 
 to say sblsex2:		[fellatio]
 	say "     The skunk runs her paws over your stiff cock, licking and kissing at it before opening her muzzle wide and giving you a blow job[if skrp is 1]. Your lower head moans in pleasure. '[one of]Mmmm... open wide[or]Take it all, slut[or]Suck us good, girl[at random],' she says excitedly[end if]. The skunk's talented muzzle works over your dripping shaft, lavishing attention upon it[if Cock Length of Player > 12] and eventually managing to get the whole big thing stuffed down her throat[end if]. You moan and growl in pleasure at her expert work, eventually cumming hard and blasting your hot seed down her throat, feeding your buxom servant a heavy load of skunk cum.";
-
+	CreatureSexAftermath "Skunk" receives "OralCock" from "Player";
 
 to say sblsex3:		[skunkbeast tops player]
 	[puts Skunkbeast Lord as lead monster for possible impregnation]
@@ -149,18 +153,21 @@ to say sblsex3:		[skunkbeast tops player]
 		if Name entry is "Skunkbeast Lord":
 			now MonsterID is y;
 			break;
-	say "     As the skunk is running her paws over your body in tribute to her [if Player is purefemale]mistress[else]master[end if], you notice the scent of another in the air. A skunkbeast snuffles towards you, having been drawn by your scent[if skrp is 1]. The skunk face at your groin smiles at the sight of him. '[one of]Oh, look at how hung he is[or]Just what we need[or]Oh baby[at random]!' she moans excitedly, your shared cunt getting wet at the sight of him[end if]. You rumble happily and shift around and present your rump to him, offering your dripping cunt to the sexy beast. He growls and climbs atop your [bodydesc of Player] form, sinking his large cock into your skunkbeast body and stuffing you oh so wonderfully. As he pounds away at you, the skunk girl [if Player is male]licks and sucks at your cock until you cum down her throat[else]latches onto one of your nipples, nursing for your milk[end if]. When the skunkbeast atop you finally cums, you both growl loudly, loving the sensation of his ample load being blasted into your needy womb as he seeks to breed you.[impregchance]";
-
+	say "     As the skunk is running her paws over your body in tribute to her [if Player is purefemale]mistress[else]master[end if], you notice the scent of another in the air. A skunkbeast snuffles towards you, having been drawn by your scent[if skrp is 1]. The skunk face at your groin smiles at the sight of him. '[one of]Oh, look at how hung he is[or]Just what we need[or]Oh baby[at random]!' she moans excitedly, your shared cunt getting wet at the sight of him[end if]. You rumble happily and shift around and present your rump to him, offering your dripping cunt to the sexy beast. He growls and climbs atop your [bodydesc of Player] form, sinking his large cock into your skunkbeast body and stuffing you oh so wonderfully. As he pounds away at you, the skunk girl [if Player is male]licks and sucks at your cock until you cum down her throat[else]latches onto one of your nipples, nursing for your milk[end if]. When the skunkbeast atop you finally cums, you both growl loudly, loving the sensation of his ample load being blasted into your needy womb as he seeks to breed you.";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Skunkbeast Lord";
+	if player is male:
+		CreatureSexAftermath "Skunk" receives "OralCock" from "Player";
 
 to say sblsex4:		[cunnilingus]
 	say "     The skunk runs her paws back towards your hind legs and runs her fingers across your pussy, making it quiver and drip musky fluids. There are a few tentative licks before her muzzle is buried in your muff and her tongue is lavishing attention upon your hot cunt. You [if skrp is 1]and your extra head [end if]moan in pleasure, telling the sexy girl what a fine job she's doing for her mistress. Her tongue darts all over and even into your pussy as far as it can reach. There's the occasional nibble from those sharp teeth that send shivers along your spine while her fingers tease and pinch your clit. She eats you out through several climaxes until you're fully satisfied.";
+	CreatureSexAftermath "Skunk" receives "OralPussy" from "Player";
 
 
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -184,7 +191,7 @@ When Play begins:
 	now desc entry is "[skunk_desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a large-muzzled female skunk's"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "curvaceous and screams 'female and NEEDS it'. Men want to fuck you, women want to be you... and fuck you"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "[if looknow is 1]dark black fur contrasting with pure white down your front and a matching stripe down your back, completely covering your[else]black and white furred[end if]"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "[if looknow is 1]dark black fur contrasting with pure white down your front and a matching stripe down your back, completely covering your[else]black and white furred[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "A thick, black mass of fur blossoms from your rear, growing in size until it's reached just above your head and then bending gracefully near the tip. A pair of white stripes travel up its length, completing the effect."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human-shaped"; [- Cock Description, format as you have a "size" (your text) cock-]
 	now face change entry is "black fur moves over your head like a hood, leaving a muzzle that's white on the bottom with a head that's all black, all completed by the pair of rounded ears sitting atop it and a white stripe from the tip of your nose to your back"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -212,9 +219,13 @@ When Play begins:
 	now Cunt Count entry is 1;            [- if sex = "Female or both", indicates the number of female sexes infection will grant you.-]
 	now Cunt Depth entry is 14;     [- Length of female sex infection will attempt to give you. -]
 	now Cunt Tightness entry is 5;       [- Width of female sex infection will try and give you -]
-	now libido entry is 10;          [- Amount player Libido will go up if defeated -]
+	now SeductionImmune entry is false;
+	now libido entry is 70;          [- Amount player Libido will go up if defeated -]
 	now loot entry is "skunk goo";   [- Loot monster drops, -]
 	now lootchance entry is 70;      [- Chance of loot dropping 0-100 -]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;            [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sultry[or]slender[or]sensual[or]curvaceous[at random]";
 	now type entry is "[one of]skunk[or]mephit[at random]";
@@ -229,7 +240,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -354,7 +365,7 @@ to skspray:						[ignores defenses, requires no hit, hum/lib check instead to re
 		if CockName of Player is "Skunk" or CockName of Player is "Skunk Taur", increase tempnum by 1;
 		if TailName of Player is "Skunk" or TailName of Player is "Skunk Taur", increase tempnum by 1;
 		if skunk kit is tamed, increase tempnum by 1;
-		if companion of Player is skunk kit, increase tempnum by 1;
+		if skunk kit is listed in companionList of Player, increase tempnum by 1;
 		let randomizer be ( a random number from 67 to 80 ) + ( tempnum * tempnum * 2 ) + lev entry;
 		let dam be ( wdam entry times randomizer ) / 100;
 		let libdam be 3 + lev entry + tempnum;
@@ -419,7 +430,7 @@ name	desc	weight	object
 
 skunk goo is a grab object.
 
-skunk goo is infectious. The strain of skunk goo is "Skunk".
+skunk goo is infectious. Strain of skunk goo is "Skunk".
 
 The scent of skunk goo is "The gooey black gunk smells strongly of skunk.".
 

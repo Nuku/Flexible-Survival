@@ -22,7 +22,7 @@ Phoenix Rebirth Spa Lobby	"Phoenix Rebirth Spa Lobby"
 
 Phoenix Rebirth Spa Lobby is a room.
 Phoenix Rebirth Spa Lobby is northeast of Atlantis City Market.
-The description of Phoenix Rebirth Spa Lobby is "[PhoenixRebirthLobby]".
+Description of Phoenix Rebirth Spa Lobby is "[PhoenixRebirthLobby]".
 earea of Phoenix Rebirth Spa Lobby is "Atlantis".
 
 to say PhoenixRebirthLobby:
@@ -58,8 +58,8 @@ Virgin of Serafino is false.
 AnalVirgin of Serafino is false.
 PenileVirgin of Serafino is false.
 SexuallyExperienced of Serafino is true.
-The description of Serafino is "[SerafinoDesc]".
-The conversation of Serafino is { "<This is nothing but a placeholder!>" }.
+Description of Serafino is "[SerafinoDesc]".
+Conversation of Serafino is { "<This is nothing but a placeholder!>" }.
 The scent of Serafino is "     The phoenix gives off a smell that reminds you of a rough mixture of flames, oils and ashes.".
 Serafino is in Phoenix Rebirth Spa Lobby.
 

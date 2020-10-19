@@ -3,12 +3,20 @@ Version 224 of Story Skipper by Core Mechanics begins here.
 [ Version 223.1 - Updated w/Enhanced Chimera material ]
 [ Version 224 - Completely rewritten - Wahn]
 
+Part 0 - Variables
+
+postimport rules is a rulebook.
+
+Chapter 1 - Save Files
+
 The File of EventSave (owned by another project) is called "FSEventSave".
 The File of RoomSave (owned by another project) is called "FSRoomSave".
 The File of RoomInventorySave (owned by another project) is called "FSRoomInventorySave".
 The File of PossessionSave (owned by another project) is called "FSPossessionSave".
 The File of CharacterSave (owned by another project) is called "FSCharacterSave".
 The File of CharacterVariableSave (owned by another project) is called "FSCharacterVariableSave".
+The File of CharacterVariable2Save (owned by another project) is called "FSCharacterVariable2Save".
+The File of SexStats (owned by another project) is called "SexStats".
 The File of UnbornChildSave (owned by another project) is called "FSUnbornChildSave".
 The File of ChildrenSave (owned by another project) is called "FSChildrenSave".
 The File of ChildrenBunkerSave (owned by another project) is called "FSChildrenBunkerSave".
@@ -22,7 +30,7 @@ The File of BeastVariableSave (owned by another project) is called "FSBeastVaria
 The File of NoteSave (owned by another project) is called "FSNoteSave".
 
 PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
-PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist", "Carnivorous Plant" };
+PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder" };
 
 an everyturn rule:
 	if Player is in NPC Nexus:
@@ -158,6 +166,9 @@ to EventRestore:
 		repeat with x running from 1 to the number of filled rows in the Table of GameEvents:
 			choose row x in the Table of GameEvents;
 			let EventIdName be Name entry;
+			[bugfixes for renamed events]
+			if EventIdName is "unused tool":
+				now EventIdName is "Unused Tool";
 			if there is a name of EventIdName in the Table of GameEventIDs:
 				let EventObject be the object corresponding to a name of EventIdName in the Table of GameEventIDs;
 				if ResolveState entry is "Resolved":
@@ -251,9 +262,10 @@ to RoomRestore:
 		repeat with x running from 1 to the number of filled rows in the Table of GameRoomInventories:
 			choose row x in the Table of GameRoomInventories;
 			let RoomIdName be RoomName entry;
-			if there is a name of RoomIdName in the Table of GameRoomIDs:
+			if there is a name of RoomIdName in the Table of GameRoomIDs: [room exists]
 				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
-				add ItemName entry to Invent of RoomObject;
+				if there is a name of ItemName entry in the Table of Game Objects: [item exists]
+					add ItemName entry to Invent of RoomObject;
 			else:
 				say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
 	else:
@@ -299,6 +311,8 @@ to PossessionRestore:
 		repeat with x running from 1 to the number of filled rows in the Table of GamePossessions:
 			choose row x in the Table of GamePossessions;
 			let PossessionIdName be Name entry;
+			[some small bugfixes due to items that got renamed]
+			if PossessionIdName is "sturdy jeans", now PossessionIdName is "dark-blue jeans";
 			if there is a name of PossessionIdName in the Table of Game Objects:
 				let PossessionObject be the object corresponding to a name of PossessionIdName in the Table of Game Objects;
 				now carried of PossessionObject is CarriedNumber entry;
@@ -325,12 +339,12 @@ to PossessionRestore:
 to CharacterSave:
 	say "Saving Characters...";
 	blank out the whole of Table of GameCharacters; [empty out all old data]
-	blank out the whole of Table of GameCharacterVariables; [empty out all old data]
+	blank out the whole of Table of GameCharacterVariable2; [empty out all old data]
 	blank out the whole of Table of GameTraits; [empty out all old data]
-	if number of persons > number of rows in the table of GameCharacterVariables: [making sure we got enough room for all situations]
-		say "Error! Not enough rows to save all Characters in the table of GameCharacterVariables. Please report this on the FS Discord.";
-	repeat with x running through persons: [rebuilds the table of GameCharacters with current data]
-		choose a blank row in the Table of GameCharacterVariables;
+	if number of persons > number of rows in the table of GameCharacterVariable2: [making sure we got enough room for all situations]
+		say "Error! Not enough rows to save all Characters in the table of GameCharacterVariable2. Please report this on the FS Discord.";
+	repeat with x running through persons: [rebuilds the table of GameCharacterVariable2 with current data]
+		choose a blank row in the Table of GameCharacterVariable2;
 		if there is a object of X in the Table of GameCharacterIDs:
 			let CharacterName be the name corresponding to a object of X in the Table of GameCharacterIDs;
 			now Name entry is CharacterName;
@@ -344,6 +358,8 @@ to CharacterSave:
 			now MaxHP entry is MaxHP of x;
 			now XP entry is XP of x;
 			now Level entry is Level of x;
+			now Armor entry is Armor of x;
+			now Weapon Damage entry is Weapon Damage of x;
 			now Strength entry is Strength of x;
 			now Dexterity entry is Dexterity of x;
 			now Stamina entry is Stamina of x;
@@ -354,7 +370,7 @@ to CharacterSave:
 			now Thirst entry is Thirst of x;
 			now Morale entry is Morale of x;
 			now Lust entry is Lust of x;
-			now Libido entry is Libido of x;
+			now libido entry is Libido of x;
 			now Loyalty entry is Loyalty of x;
 			now Humanity entry is Humanity of x;
 			now Body Weight entry is Body Weight of x;
@@ -376,7 +392,6 @@ to CharacterSave:
 			now Cunt Depth entry is Cunt Depth of x;
 			now Cunt Tightness entry is Cunt Tightness of x;
 			now Clit Size entry is Clit Size of x;
-			now Armor entry is Armor of x;
 			now Capacity entry is Capacity of x;
 			now SleepRhythm entry is SleepRhythm of x;
 			now scalevalue entry is The scalevalue of x;
@@ -415,35 +430,28 @@ to CharacterSave:
 					now TraitText entry is entry y of Traits of x;
 		else:
 			say "Error! The character [x] is not listed in the Table of GameCharacterIDs and cannot be saved. Please report this on the FS Discord.";
-	write File of CharacterVariableSave from the Table of GameCharacterVariables; [freshly made table gets saved to file]
+	write File of CharacterVariable2Save from the Table of GameCharacterVariable2; [freshly made table gets saved to file]
 	write File of TraitSave from the Table of GameTraits; [freshly made table gets saved to file]
 	blank out the whole of Table of GameCharacters; [empty after saving]
 	blank out the whole of Table of GameCharacterVariables; [empty after saving]
+	blank out the whole of Table of GameCharacterVariable2; [empty after saving]
 	blank out the whole of Table of GameTraits; [empty after saving]
 	if debug is at level 10:
-		say "DEBUG -> File of CharacterVariableSave written.[line break]";
+		say "DEBUG -> File of CharacterVariable2Save written.[line break]";
 		say "DEBUG -> File of TraitSave written.[line break]";
 
 to CharacterRestore:
-	if the File of CharacterVariableSave exists: [new, expanded character variable file]
+	if the File of CharacterVariable2Save exists: [new, expanded character variable file]
 		say "Restoring Characters...";
-		read File of CharacterVariableSave into the Table of GameCharacterVariables;
-		repeat with x running from 1 to the number of filled rows in the Table of GameCharacterVariables:
-			choose row x in the Table of GameCharacterVariables;
+		read File of CharacterVariable2Save into the Table of GameCharacterVariable2;
+		repeat with x running from 1 to the number of filled rows in the Table of GameCharacterVariable2:
+			choose row x in the Table of GameCharacterVariable2;
 			let CharacterIdName be Name entry;
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
-				if CharacterIdName is listed in PetList:
-					if debug is at level 10:
-						say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
-				[
-				else if CharacterIdName is "yourself":
-					if debug is at level 10:
-						say "DEBUG -> The player doesn't get moved.[line break]";
-				]
-				else if there is a name of LocationName entry in the Table of GameRoomIDs:
+				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
-					move CharacterObject to TargetRoom;
+					move CharacterObject to TargetRoom, without printing a room description;
 				else:
 					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
@@ -453,6 +461,99 @@ to CharacterRestore:
 				now MaxHP of CharacterObject is MaxHP entry;
 				now XP of CharacterObject is XP entry;
 				now Level of CharacterObject is Level entry;
+				now Armor of CharacterObject is Armor entry;
+				now Weapon Damage of CharacterObject is Weapon Damage entry;
+				now Strength of CharacterObject is Strength entry;
+				now Dexterity of CharacterObject is Dexterity entry;
+				now Stamina of CharacterObject is Stamina entry;
+				now Charisma of CharacterObject is Charisma entry;
+				now Intelligence of CharacterObject is Intelligence entry;
+				now Perception of CharacterObject is Perception entry;
+				now Hunger of CharacterObject is Hunger entry;
+				now Thirst of CharacterObject is Thirst entry;
+				now Morale of CharacterObject is Morale entry;
+				now Lust of CharacterObject is Lust entry;
+				now Libido of CharacterObject is Libido entry;
+				now Loyalty of CharacterObject is Loyalty entry;
+				now Humanity of CharacterObject is Humanity entry;
+				now Body Weight of CharacterObject is Body Weight entry;
+				now Body Definition of CharacterObject is Body Definition entry;
+				now Androginity of CharacterObject is Androginity entry;
+				now Mouth Length of CharacterObject is Mouth Length entry;
+				now Mouth Circumference of CharacterObject is Mouth Circumference entry;
+				now Tongue Length of CharacterObject is Tongue Length entry;
+				now Breast Size of CharacterObject is Breast Size entry;
+				now Nipple Count of CharacterObject is Nipple Count entry;
+				now Asshole Depth of CharacterObject is Asshole Depth entry;
+				now Asshole Tightness of CharacterObject is Asshole Tightness entry;
+				now Cock Count of CharacterObject is Cock Count entry;
+				now Cock Girth of CharacterObject is Cock Girth entry;
+				now Cock Length of CharacterObject is Cock Length entry;
+				now Ball Count of CharacterObject is Ball Count entry;
+				now Ball Size of CharacterObject is Ball Size entry;
+				now Cunt Count of CharacterObject is Cunt Count entry;
+				now Cunt Depth of CharacterObject is Cunt Depth entry;
+				now Cunt Tightness of CharacterObject is Cunt Tightness entry;
+				now Clit Size of CharacterObject is Clit Size entry;
+				now Armor of CharacterObject is Armor entry;
+				now Capacity of CharacterObject is Capacity entry;
+				now SleepRhythm of CharacterObject is SleepRhythm entry;
+				now scalevalue of CharacterObject is The scalevalue entry;
+				now PlayerLastSize of CharacterObject is PlayerLastSize entry;
+				[Texts]
+				[now MainInfection of CharacterObject is MainInfection entry;]
+				now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
+				now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
+				now FirstOralPartner of CharacterObject is FirstOralPartner entry;
+				now FirstPenilePartner of CharacterObject is FirstPenilePartner entry;
+				now Cock Size Desc of CharacterObject is Cock Size Desc entry;
+				now Cunt Size Desc of CharacterObject is Cunt Size Desc entry;
+				now Breast Size Desc of CharacterObject is Breast Size Desc entry;
+				now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
+				now Originalgender of CharacterObject is Originalgender entry;
+				now PlayerOriginalgender of CharacterObject is PlayerOriginalGender entry;
+				now PlayerLastGender of CharacterObject is PlayerLastGender entry;
+				now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
+				[Truth States]
+				now PlayerMet of CharacterObject is PlayerMet entry;
+				now PlayerRomanced of CharacterObject is PlayerRomanced entry;
+				now PlayerFriended of CharacterObject is PlayerFriended entry;
+				now PlayerControlled of CharacterObject is PlayerControlled entry;
+				now PlayerFucked of CharacterObject is PlayerFucked entry;
+				now OralVirgin of CharacterObject is OralVirgin entry;
+				now Virgin of CharacterObject is Virgin entry;
+				now AnalVirgin of CharacterObject is AnalVirgin entry;
+				now PenileVirgin of CharacterObject is PenileVirgin entry;
+				now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
+				now TwistedCapacity of CharacterObject is TwistedCapacity entry;
+				now Sterile of CharacterObject is Sterile entry;
+				[
+				if debug is at level 10:
+					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
+				]
+			else:
+				say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs! Please report this message on the FS Discord!";
+	else if the File of CharacterVariableSave exists: [new, expanded character variable file]
+		say "Restoring Characters...";
+		read File of CharacterVariableSave into the Table of GameCharacterVariables;
+		repeat with x running from 1 to the number of filled rows in the Table of GameCharacterVariables:
+			choose row x in the Table of GameCharacterVariables;
+			let CharacterIdName be Name entry;
+			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
+				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
+				if there is a name of LocationName entry in the Table of GameRoomIDs:
+					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
+					move CharacterObject to TargetRoom, without printing a room description;
+				else:
+					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
+					move CharacterObject to NPC Nexus;
+				[Numbers]
+				now Energy of CharacterObject is Energy entry;
+				now HP of CharacterObject is HP entry;
+				now MaxHP of CharacterObject is MaxHP entry;
+				now XP of CharacterObject is XP entry;
+				now Level of CharacterObject is Level entry;
+				now Armor of CharacterObject is Armor entry;
 				now Strength of CharacterObject is Strength entry;
 				now Dexterity of CharacterObject is Dexterity entry;
 				now Stamina of CharacterObject is Stamina entry;
@@ -531,17 +632,9 @@ to CharacterRestore:
 			let CharacterIdName be Name entry;
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
-				if CharacterIdName is listed in PetList:
-					if debug is at level 10:
-						say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
-				[
-				else if CharacterIdName is "yourself":
-					if debug is at level 10:
-						say "DEBUG -> The player doesn't get moved.[line break]";
-				]
-				else if there is a name of LocationName entry in the Table of GameRoomIDs:
+				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
-					move CharacterObject to TargetRoom;
+					move CharacterObject to TargetRoom, without printing a room description;
 				else:
 					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
@@ -593,6 +686,7 @@ to CharacterRestore:
 		say "No Character Save File Found!";
 	blank out the whole of Table of GameCharacters; [empty out all old data]
 	blank out the whole of Table of GameCharacterVariables; [empty after saving]
+	blank out the whole of Table of GameCharacterVariable2; [empty after saving]
 	blank out the whole of Table of GameTraits; [empty out all old data]
 
 to TraitRestore:
@@ -613,6 +707,8 @@ to TraitRestore:
 					add TraitText entry to Traits of CharacterObject;
 					if TraitText entry is "Tamed": [pets]
 						now CharacterObject is tamed;
+					if TraitText entry is "currentCompanion":
+						add CharacterObject to companionList of Player;
 					[
 					if debug is at level 10:
 						say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
@@ -778,12 +874,46 @@ to PlayerSave:
 		now TransMaleInterest entry is TransMaleInterest of Player;
 		now FemaleInterest entry is FemaleInterest of Player;
 		now TransFemaleInterest entry is TransFemaleInterest of Player;
-		now HermInterest entry is HermInterest of Player;
+		[TODO: Incorporate these into the export when they are actually used]
+		[
+		now MaleHermInterest entry is MaleHermInterest of Player;
+		now FemaleHermInterest entry is FemaleHermInterest of Player;
+		]
 		write File of NewPlayerSave from the Table of NewPlayerData; [freshly made table gets saved to file]
 		blank out the whole of Table of NewPlayerData; [empty after saving]
 		if debug is at level 10:
 			say "DEBUG -> File of NewPlayerSave written.[line break]";
+	PlayerSexStatsSave;
 
+to PlayerSexStatsSave:
+	blank out the whole of Table of SexStats; [empty out all old data]
+	choose a blank row in the table of SexStats;
+	now OralPussyGiven entry is OralPussyGiven of Player;
+	now OralPussyTaken entry is OralPussyTaken of Player;
+	now OralCockGiven entry is OralCockGiven of Player;
+	now OralCockTaken entry is OralCockTaken of Player;
+	now AssFuckGiven entry is AssFuckGiven of Player;
+	now AssFuckTaken entry is AssFuckTaken of Player;
+	now PussyFuckGiven entry is PussyFuckGiven of Player;
+	now PussyFuckTaken entry is PussyFuckTaken of Player;
+	write File of SexStats from the Table of SexStats; [freshly made table gets saved to file]
+	blank out the whole of Table of SexStats; [empty out all old data]
+	if debug is at level 10:
+		say "DEBUG -> File of SexStats written.[line break]";
+
+to PlayerSexStatsRestore:
+	if the File of SexStats exists:
+		read File of SexStats into the Table of SexStats;
+		choose row 1 in the Table of SexStats;
+		now OralPussyGiven of Player is OralPussyGiven entry;
+		now OralPussyTaken of Player is OralPussyTaken entry;
+		now OralCockGiven of Player is OralCockGiven entry;
+		now OralCockTaken of Player is OralCockTaken entry;
+		now AssFuckGiven of Player is AssFuckGiven entry;
+		now AssFuckTaken of Player is AssFuckTaken entry;
+		now PussyFuckGiven of Player is PussyFuckGiven entry;
+		now PussyFuckTaken of Player is PussyFuckTaken entry;
+	blank out the whole of Table of SexStats; [empty out all old data]
 
 to PlayerRestore:
 	if the File of PlayerSave exists:
@@ -931,12 +1061,17 @@ to PlayerRestore:
 		now TransMaleInterest of Player is TransMaleInterest entry;
 		now FemaleInterest of Player is FemaleInterest entry;
 		now TransFemaleInterest of Player is TransFemaleInterest entry;
-		now HermInterest of Player is HermInterest entry;
+		[TODO: Incorporate these into the export when they are actually used]
+		[
+		now MaleHermInterest of Player is MaleHermInterest entry;
+		now FemaleHermInterest of Player is FemaleHermInterest entry;
+		]
 		if debug is at level 10:
 			say "DEBUG -> New Player Data restored.";
 	else if NewTypeInfectionActive is true:
 		say "No Additional Player Data Save File Found!";
 	blank out the whole of Table of NewPlayerData; [empty out all old data]
+	PlayerSexStatsRestore;
 
 to ChildrenSave:
 	say "Saving unborn children...";
@@ -1057,6 +1192,11 @@ to BeastRestore:
 			let BeastNonInfect be non-infectious entry;
 			let BeastSex be sex entry;
 			let BeastType be enemy type entry;
+			[some small bugfixes due to renamed creatures]
+			if Beastname is "Ogre", now Beastname is "Ogre Male";
+			if Beastname is "Elven Hunter", now Beastname is "Elven Male";
+			if Beastname is "Rubber tigress", now Beastname is "Rubber Tigress";
+			if Beastname is "Football Gorilla", now Beastname is "Football Gorilla Male";
 			if there is a Name of BeastName in the Table of Random Critters:
 				choose row with Name of BeastName in Table of Random Critters;
 				now Area entry is BeastArea;
@@ -1132,9 +1272,6 @@ To say ProgressionExport:
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
 		LineBreak;
-		if Player is not lonely:
-			say "     Preparing to travel to an alternate reality, you send your current companion away to await this in a safe place.";
-			try Dismissing;
 		if wrcursestatus is 5:
 			wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 		LineBreak;
@@ -1180,6 +1317,7 @@ to say ProgressionImport:
 	NoteRestore;
 	VariableLoad;
 	RunPostImportRules;
+	try looking; [start the player off in their new playthrough]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -1189,13 +1327,13 @@ Trixie is a person. Trixie is in Grey Abbey Library.
 
 The scent of Trixie is "Trixie smells of broken universes and rewritten fate. How anything can smell like that or how you can even know that smell disturbs you to your very core.".
 
-The description of Trixie is "[Trixiedesc]".
+Description of Trixie is "[Trixiedesc]".
 
 to say Trixiedesc:
 	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Support us at: https://www.patreon.com/FS'[line break]";
 	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'. Hmmm.";
 	say "     She's also found a ballcap on that says 'Using [link]Export Progress[end link] will save your progress for transfer to a new game version. [link]Import Progress[end link] should restore everything in the new version.' That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
 
-The conversation of Trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [link]Import Progress[end link]. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
+Conversation of Trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [link]Import Progress[end link]. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
 
 Story Skipper ends here.

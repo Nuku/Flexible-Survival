@@ -8,15 +8,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Gourmet Treats	"Gourmet Treats"
 
-Gourmet Treats is a situation. The level of Gourmet Treats is 8.
-The sarea of Gourmet Treats is "High".
+Gourmet Treats is a situation.
+ResolveFunction of Gourmet Treats is "[ResolveEvent Gourmet Treats]". The level of Gourmet Treats is 8.
+Sarea of Gourmet Treats is "High".
 
 when play begins:
 	add Gourmet Treats to BadSpots of MaleList;       [random encounter may involve male opponents]
 	add Gourmet Treats to BadSpots of FemaleList;     [random encounter may involve female opponents]
 	add Gourmet Treats to BadSpots of FurryList;     [random encounter will involve canine opponents]
 
-Instead of Resolving a Gourmet Treats:
+to say ResolveEvent Gourmet Treats:
 	if HP of Karen is 1:
 		say "     While traveling through the high rise district, you come across what you can only assume is the strange bakery Karen mentioned. While the boarded-up windows prevent you from seeing inside, the large sign above the door makes it clear that this is the place. The weathered sign reads Bone-Appetit and features a rather plump cartoon canine in a chef's uniform. Eager to follow through with your plan to free yourself from Rex, you reach for the door handle. Slowly pulling the door open a crack, you peer inside the building; noticing some movement and groaning near the back counter, you pause for a moment before steeling yourself and swinging the door open.";
 	else:
@@ -160,7 +161,7 @@ Object	Name
 Bone-Appetit	"Bone-Appetit"
 
 Bone-Appetit is a room. It is fasttravel. It is private.
-The description of Bone-Appetit is "[BoneAppetitdesc]".
+Description of Bone-Appetit is "[BoneAppetitdesc]".
 
 instead of sniffing Bone-Appetit:
 	say "     Despite the lack of any product on display, the small bakery still has a strangely warm, meaty aroma[if FaceName of Player is listed in infections of Caninelist] that quickly has you salivating hungrily[end if], which you can only assume is the result of the many hand made pet treats that used to line the shelves.";
@@ -215,8 +216,8 @@ AnalVirgin of Francois is true.
 PenileVirgin of Francois is true.
 SexuallyExperienced of Francois is false.
 MainInfection of Francois is "".
-The description of Francois is "[Francoisdesc]".
-The conversation of Francois is { "Numnum!" }.
+Description of Francois is "[Francoisdesc]".
+Conversation of Francois is { "Numnum!" }.
 The icon of Francois is Figure of Francois_icon.
 understand "Francis" as Francois.
 understand "Francois" as Francois.
@@ -230,7 +231,7 @@ to say Francoisdesc:
 	say "     Francois, the unusual hybrid before you, has an appearance that can only be described as a mutt. His short, stocky canine body and face are covered with a thick, mottled coat of fur made up of several different colors and patterns. There even appear to be small feathers poking out of his pelt in several places. Finally, a rather feline set of ears and tail complete the appearance. He wears a surprisingly clean white apron over his torso, which does a reasonable job of protecting his decency while still allowing his long tail to flit about unhindered.";
 
 Instead of conversing the Francois:
-	if HP of Karen is 6 and companion of Player is Retriever Girl:
+	if HP of Karen is 6 and retriever girl is listed in companionList of Player:
 		say "     Francois greets you with a smile as you approach. 'Ah, mon ami[if Player is purefemale]e[end if], good to see you again! And who is this you've brought with you?'";
 		say "     'It's me, Karen,' she responds. 'We were hoping you could help me out with-'[line break]";
 		say "     'Karen! Mon Dieu, I had feared the worst mon amie,' Francois interrupts, stepping around the counter and placing a small kiss on each side of her muzzle before pulling her into a hug. After breaking off, Francois motions towards one of the tables near the front of the store. The three of you sit and chat for a while, regaling the mutt with the tale of your escape from Rex before Karen finally asks him about her past. 'Ah, désolé mon amie, we never spoke much of our personal lives, only of our shared interest, les animaux. I recall you mentioning being a student at the college, but I am afraid that's all I know.'";
@@ -243,7 +244,7 @@ Instead of conversing the Francois:
 		say "     Without another word Francois gets to work, gathering a few supplies before starting in earnest. Soon the entire bakery is filled with the warm scents of his work, and you find your mouth watering[if BodyName of Player is not listed in the infections of Caninelist and FaceName of Player is not listed in infections of Caninelist], despite knowing they are snacks intended for dogs[end if].";
 		say "     Eventually Francois finishes his work and returns with a small paper bag filled with fresh treats. [if BodyName of Player is listed in the infections of Caninelist or FaceName of Player is listed in infections of Caninelist or hunger of Player > 60]The enticing scent wafting from the bag in your hands proves to be too much, and you eagerly fish a treat out. Francois simply grins at you as he watches you enjoy a sample of his work. Still licking the last few crumbs of your snack from your lips, you[else]You[end if] stow the bag away in your pack and give Francois your regards before deciding on your next move.";
 		now HP of Karen is 3;
-		now carried of Dog Treats is 1;
+		ItemGain Dog Treats by 1;
 	else if HP of Francois is 0:
 		say "     'I must thank you again, mon ami[if Player is purefemale]e[end if],' Francois says as he steps around the counter, 'but perhaps I could ask another favor of you? I have a desire to create, to expand my art, and there must be so many exotic and interesting new flavors out in this city now. Oh how I would love to experiment with them, but sadly, I am no fighter. I fear I cannot go out there to gather these new ingredients myself, but you, mon [if Player is purefemale]héroïne[else]héro[end if], seem more than capable of surviving out there. If you bring back any potential ingredients you find, I would love to bake something for you[if Player is male], and perhaps I could 'reward' you in other ways as well,' he says, licking his lips as his eyes stray to your groin. 'Just[else]. Just[end if] bring back anything you find and let me know you would like me to [link]bake[as]bake Francois[end link] for you.";
 		now HP of Francois is 1;
@@ -899,18 +900,16 @@ to say gingerbreadGet:
 		say "'Oh là!' Francois exclaims as he watches your changes slow to and end. 'I hope you're not still hungry,' he says with a silly grin as he eyes your altered form.";
 	else:
 		say "     Accepting the cookies from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
-		now carried of gingerbread is 2;
+		ItemGain gingerbread by 2;
 
 to say cheesecakeGet:
 	say "     Francois['] expression lights up as he spots the cheese and he plucks it eagerly out of the pile before rummaging through and selecting the pixie dust and pink gel to go with it. 'This will do wonderfully, C'est magnifique!' Francois exclaims as he places the ingredients in a large mixing bowl to carry back into his kitchen. The rich sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a delicate looking strawberry cheesecake, he cuts the cake into slices with a smile, placing a couple small wedges on a plate for you with a grin. Would you like to taste it now? (Y/N)";
 	if Player consents:
-		now carried of cheesecake is 2;
 		say "[cheesecake Use]";
-		now carried of cheesecake is 0;
 		say "'Oh là!' Francois says as he watches your changes slow to and end. 'I guess what they say is true. You really are what you eat,' he says with a silly grin.";
 	else:
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
-		now carried of cheesecake is 2;
+		ItemGain cheesecake by 2;
 
 Section 5 - Baked Goods
 
@@ -1056,7 +1055,7 @@ to say lollicock Use:
 	if hunger of Player < 0, now hunger of Player is 0;
 
 dragon moelleux is a grab object. It is not temporary. It is fast.
-The usedesc of dragon moelleux is "[dragonmoelleuxuse]".
+Usedesc of dragon moelleux is "[dragonmoelleuxuse]".
 the scent of dragon moelleux is "     The small chocolate cake smells rich and sweet, as well as a little spicy.".
 
 to say dragonmoelleuxuse:
@@ -1093,7 +1092,7 @@ to say dragonmoelleuxuse:
 		say "     That's probably not a good idea right now.";
 
 fizz-aux-pommes is a grab object. It is not temporary. It is fast.
-The usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]".
+Usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]".
 the scent of fizz-aux-pommes is "     The bubbling drink smells of overwhelmingly sweet apple.".
 
 to say fizz-aux-pommesuse:
@@ -1109,7 +1108,7 @@ to say fizz-aux-pommesuse:
 		say "That's probably not a good idea right now.";
 
 vin-coeur is a grab object. It is not temporary. It is fast.
-The usedesc of vin-coeur is "[vin-coeuruse]".
+Usedesc of vin-coeur is "[vin-coeuruse]".
 the scent of vin-coeur is "     rich and heavy (temporary desc!)".
 
 to say vin-coeuruse:

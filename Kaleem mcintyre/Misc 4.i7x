@@ -13,13 +13,14 @@ Object	Name
 Birthing Time	"Birthing Time"
 
 Birthing Time is a situation.
-The sarea of Birthing Time is "Zoo".
+ResolveFunction of Birthing Time is "[ResolveEvent Birthing Time]".
+Sarea of Birthing Time is "Zoo".
 
 when play begins:
 	add Birthing Time to BadSpots of FurryList;
 	add Birthing Time to BadSpots of FemaleList;
 
-Instead of resolving Birthing Time:
+to say ResolveEvent Birthing Time:
 	say "     You find yourself walking around the zoo and sighing at the remnants of the once majestic place that are now left dilapidated. Scanning the place almost twice over, you find that most of the cages and assortment of eateries have been utterly devastated by the mutants that have gone through the area. Hearing the sounds of someone moaning you find yourself freezing in your tracks as you try and figure out just what kind of whimpering croon you had just heard. Being in this city for so long you've actually learned how to differentiate cries of help from cries of rampant pleasure. Subsequently avoiding the latter because they usually heralded trouble, it takes you a minute to go over the vocal outcry to judge the sincerity of the now yelping groan as being something worthy of your attention. You come to the conclusion that this gasp however, was of someone sounding as though they were in pain, not in the throes of ecstasy. Feeling as though you might be able to help you take a step in the direction of the voice before stopping.";
 	say "     [bold type]Should you really go over and see about it, knowing that there could be danger waiting in the unknown?[roman type][line break]";
 	LineBreak;
@@ -44,7 +45,8 @@ Object	Name
 Girl Time	"Girl Time"
 
 Girl Time is a situation.
-The sarea of Girl Time is "Red".
+ResolveFunction of Girl Time is "[ResolveEvent Girl Time]".
+Sarea of Girl Time is "Red".
 
 when play begins:
 	add Girl Time to BadSpots of FurryList;
@@ -52,7 +54,7 @@ when play begins:
 	add Girl Time to BadSpots of MaleList;
 	add Girl Time to badspots of HermList;
 
-Instead of resolving Girl Time:
+to say ResolveEvent Girl Time:
 	say "     On your way to the red light district, you spot the sultry faces of several ladies, not to mention men of the night, all winking and posing while giving you [italic type]come-hither[roman type] glances. The fact that most, if not all of the people here are now covered with different textures and patterns of fur types only serve to make you shake your head and keep walking as you try not to become aroused by the prostrating mutants. You find it somewhat amazing that despite the epidemic rolling throughout the metropolis there are some things about people that will never change. This fact is proven to be even more true as your ears catch the sounds of giggling girls laughing at each other from the inside of a derelict clothing store that you are just now passing in front of. Curiosity has you taking a look inside of the rundown store before you can stop yourself.";
 	WaitLineBreak;
 	say "     Peeking inside of the storefront's destroyed window, you find yourself staring wide-eyed as the inviting forms of several mutant females are all standing around together inside of the clothing shop. Slightly darkened as the store is, it's a little hard to see what's going on in there, but soon you are able to figure out what's happening as you see several of the anthropomorphic females slipping out of their clothes only to pass the articles along to one or another of their companions in a semi circle-like fashion. With naked female bodies all on display for your eager attentions you find your groin growing a bit too tight as you notice multiple breasts jiggling and wiggling in time with each other as the females silly laugh while pointing and talking to each other. More than likely the troop of women are comparing each other to see what will look fashionable on them, all the while not minding that they are being a tad bit obscene with their antics as they throw the pieces of clothing they don't want off behind them while hissing/growling/huffing in displeasure. Your mouth starts to drool just as little before you shake your head and then wipe the sides of your lips off with the back of your arm. You grunt and then snort as you realize that only a true pervert would spy on the naked form of the women all collected together like a sultan's harem. You try not to mind the fact that you are one of said perverts as you continue to stare at the veritable smorgasbord of femininity on display, all the while your mind denies the fact that it is liking what's going on in there.";
@@ -76,9 +78,10 @@ Object	Name
 Snake Charmer	"Snake Charmer"
 
 Snake Charmer is a situation.
-The sarea of Snake Charmer is "Zoo".
+ResolveFunction of Snake Charmer is "[ResolveEvent Snake Charmer]".
+Sarea of Snake Charmer is "Zoo".
 
-Instead of resolving Snake Charmer:
+to say ResolveEvent Snake Charmer:
 	say "     While making your way through the zoo, you come upon a very attention-grabbing sight. At first, what you think is a man with a large snake curled around him actually turns out to be a giant naga-like creature hissing and flicking its tongue around wildly while bobbing his scaled head back and forth around the front of an entranced and unmutated pelican. The little bird seems not to mind that it is literally within the arms of danger as the naga hisses quietly at the avian before running its blunted nose along the neck of the white feathered creature held aloft into the serpent's mottled hands. Terror laces a cold trail down your spine as you watch what happens next as the snake-man pulls back from the bird and then opens its mouth wide, and then wider, before pulling the captivated bird towards it. You find yourself entrapped the same as the avian getting swallowed alive as you watch the bird slowly disappear down into the naga's throat. It only takes a few seconds for the reptile to be done, and before long the last of the bird's webbed feet are disappearing inside of the hungry serpent's maw. A happy hiss flows out from the naga's mouth as you watch the predator swallow the bulge of the bird down into his throat and, still in your slightly bewildered frame of mind, you can't help but continue to track the pelican as the feathery creature slowly vanishes into the bulge of the snake-man's body.";
 	WaitLineBreak;
 	say "     A quiet burp awakes you from your hypnotic trance just in time to see the serpent cover its mouth with a hand and then pat the lump that was the pelican settling firmly into its upper stomach. When the creature turns to look at you with a come-hither look your feet can't move fast enough to get out of there. Of all the ways you might be tempted to meet your fate in this corrupted city, being [italic type]snake food[roman type] isn't one of them.";
@@ -92,14 +95,15 @@ Object	Name
 Spiritual Love	"Spiritual Love"
 
 Spiritual Love is a situation.
-The sarea of Spiritual Love is "Park".
+ResolveFunction of Spiritual Love is "[ResolveEvent Spiritual Love]".
+Sarea of Spiritual Love is "Park".
 
 when play begins:
 	add Girl Time to BadSpots of FurryList;
 	add Girl Time to BadSpots of MaleList;
 	add Girl Time to BadSpots of FemaleList;
 
-Instead of resolving Spiritual Love:
+to say ResolveEvent Spiritual Love:
 	say "     Humming while walking through the park, you find yourself coming to a small group of standing trees with a glowing flash of light piercing through the cracks of the sentinel-like figures. Interested as to what's going on you watch as leaves shudder, but not from a breeze as the wind is quite still, while the air seems to be electrified with the kind of energy you normally only expect to feel during a storm. Looking to the sky to see that it's clear you find yourself growing more and more curious as you feel a keen sense of inquisitiveness take you over. However, before you can take a single step forward a scream of warning resounds through your head, nearly making you deaf for a moment. Grabbing your head and then falling onto your knees you take a second to gather yourself together as sensations, the likes of which you have never experience before, consume you in a white hot fire of madness. Once your head no longer feels as though it's going to crack open like an acorn in between the fangs of a chipmunk you carefully get up onto your feet and then shake yourself like a dog just getting out from under a heavy downpour of rain. Wondering what in the heck that was all about you suddenly feel as though you are making a terrible decision about continuing on your path as you notice the white glow getting brighter and brighter in between the trees.";
 	say "     [bold type]You feel retreating may be the wisest course, but shall you press on? (Y=continue, N=leave)[roman type][line break]";
 	LineBreak;
@@ -137,7 +141,7 @@ Instead of resolving Spiritual Love:
 			now bodydesc of Player is "animalistic";
 			now bodytype of Player is "lupine";
 			now SleepRhythm of Player is 0;
-			trigger ending "Spritiual Love Ending"; [Appended 'Ending' here to avoid conflicts the the event]
+			trigger ending "Spritiual Love Ending"; [Appended 'Ending' here to avoid conflicts the event]
 			end the story saying "You submitted to the spiritual wolf, becoming his loving mate.";
 			now battleground is "void";
 			wait for any key;

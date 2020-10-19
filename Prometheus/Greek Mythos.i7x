@@ -35,7 +35,8 @@ Object	Name
 Labors Introduction	"Labors Introduction"
 
 Labors Introduction is a situation.
-The sarea of Labors Introduction is "Museum".
+ResolveFunction of Labors Introduction is "[ResolveEvent Labors Introduction]".
+Sarea of Labors Introduction is "Museum".
 The Level of Labors Introduction is 30.
 
 [This can stay here, for the time when we eventually make more rooms in the museum. One thing that should be remembered is that _Navigation_ is not _Going_ - it's a completely different command that moves the player by a code command, not the act of walking that would trigger the code below]
@@ -43,7 +44,7 @@ after going to Museum Foyer while (Labors Introduction is active and Labors Intr
 	move player to Museum Foyer;
 	LaborsIntroductionEvent;
 
-Instead of resolving Labors Introduction:
+to say ResolveEvent Labors Introduction:
 	LaborsIntroductionEvent;
 
 to LaborsIntroductionEvent: [Invited to perform the Labors]
@@ -64,15 +65,16 @@ Object	Name
 Meet the Nemean Lion	"Meet the Nemean Lion"
 
 Meet the Nemean Lion is a situation.
+ResolveFunction of Meet the Nemean Lion is "[ResolveEvent Meet the Nemean Lion]".
 Prereq1 of Meet the Nemean Lion is Labors Introduction.
 The level of Meet the Nemean Lion is 30.
-The sarea of Meet the Nemean Lion is "Plains".
+Sarea of Meet the Nemean Lion is "Plains".
 
 instead of going to Dry Plains while (Meet the Nemean Lion is active and Meet the Nemean Lion is not resolved and TwelveLaborsStage is 1 and a random chance of 1 in 5 succeeds):
 	move player to Dry Plains;
 	MeettheNemeanLionEvent;
 
-Instead of resolving Meet the Nemean Lion:
+to say ResolveEvent Meet the Nemean Lion:
 	MeettheNemeanLionEvent;
 
 to MeettheNemeanLionEvent: [Fight the Nemean Lion]
@@ -118,7 +120,7 @@ to MeettheNemeanLionEvent: [Fight the Nemean Lion]
 							say "     Looking over your shoulder, you admire his toned form while you wait for him to approach and mount you. He sniffs your cunt for a moment, the wafts of air feeling cool against the sheen of fluid clinging to the lips. With a noise of eagerness, the Nemean Lion heaves himself onto your back and for a moment you wonder whether you will be able to support his weight. As he comes down on top of you, you find your concern to be unfounded. Either he isn't as heavy as he looks or there is some force ensuring your pairing goes smoothly. For a few seconds you relax at the feeling of his warm fur against your naked back before another stimuli takes precedence. With a growl of determination, the lion thrusts forward, impaling your receptive body on his barbed penis. His shaft slips into your vagina with ease, aided by the copious lubricant of saliva and secretions. The barbs around his tip rub against your clip as he thrusts and withdraws, eliciting gasps and moans from you.";
 							say "     [if Player is submissive]To your surprise, the lion softly grasps your neck in his jaws as he continues to thrust firmly. Beneath a magnificent beast as he pounds you and protectively holds you, you subconsciously feel that this is your natural position[else]To your surprise, you feel the lion's rough tongue rasping over the back of your neck as he continues to push into you. You may be beneath him, but such affection shows he doesn't think you inferior[end if]. You gradually lower your upper body to the ground as the coupling progresses, your rear being kept raised in order to receive your partner's rigid cock. From the increase in force that accompanies his thrusts, you wonder whether he is getting close to climax, each collision causing your turgid shaft to smack into your stomach. By this time he is nearly pounding you into the ground, his thrusts making his scrotum to slap against your tummy, the sound mingling with the squelches from your stretched pussy. With a magnificent roar, the Nemean Lion cums deep within you, the flood of semen filling your womb and flowing out of the joining as his balls contract against your clitoris.";
 							WaitLineBreak;
-							say "     A cross between a groan and a sigh bursts from your mouth as the pressure from the hot sperm deep within you sends you over the edge too. Around his still twitching shaft your cunt begins to repeatedly contract, further cum being squeezed from within your body to trickle over your tummy and onto the bottoms of your breasts even as your own cock erupts, spraying across the the soil beneath you. With the lion pressed firmly against your backside, you are held in position while you both recover from your orgasmic paralysis. As soon as the feline takes a step back, you collapse on your side, his shaft sliding from your gaping hole, spilling a new river of semen onto the ground. Through the haze of climax, you become concerned about your companion's approaching banishment. 'Don't worry. Banishment isn't death,' a male voice says from behind you. You rapidly turn your head, but see no-one. 'I'm not supposed to be here, so please forgive my not showing myself. But as I was saying, the lion will be fine. Echidna loves her monsters no matter how mundane or unworldly they appear. Good luck in the Labors.'";
+							say "     A cross between a groan and a sigh bursts from your mouth as the pressure from the hot sperm deep within you sends you over the edge too. Around his still twitching shaft your cunt begins to repeatedly contract, further cum being squeezed from within your body to trickle over your tummy and onto the bottoms of your breasts even as your own cock erupts, spraying across the soil beneath you. With the lion pressed firmly against your backside, you are held in position while you both recover from your orgasmic paralysis. As soon as the feline takes a step back, you collapse on your side, his shaft sliding from your gaping hole, spilling a new river of semen onto the ground. Through the haze of climax, you become concerned about your companion's approaching banishment. 'Don't worry. Banishment isn't death,' a male voice says from behind you. You rapidly turn your head, but see no-one. 'I'm not supposed to be here, so please forgive my not showing myself. But as I was saying, the lion will be fine. Echidna loves her monsters no matter how mundane or unworldly they appear. Good luck in the Labors.'";
 							say "     You gather the being is gone from the silence that follows, only broken by the feline's deep purrs and your panting. With a flash of light, the lion vanishes, leaving you alone beside a sizable pool of cum. 'Now that that's done, would you like to know your next task?' You jump slightly at the sound of Zeus's voice and resist the urge to cover yourself considering he was probably watching the whole thing. 'Well, from your lack of refusal I'll take that as a yes. You must defeat a hydra of extraordinary size. Once again, I'm not allowed to give you hints, but just in case you didn't get help for the previous labor, there are people in the city with a knowledge of myth so you could possibly ask them for advice.' As he turns to leave, he says over his shoulder, 'you'll find your quarry in the junkyard, but he's larger than the [']normal['] hydras that you'll find there.' With that, you are left alone again, the soil drinking the result of your breeding.";
 						else: [Anal]
 							say "Grinning at you with a gleam in his eye, Zeus raises his arms, the sky turning black above him. With a loud boom, a lightning bolt strikes the hill above you, the flash blinding you for a moment. When the stars clear from your vision, the lion has returned, its coat resplendent. Another noticeable feature is the erect pink cock bobbing beneath his golden stomach, a fine gleam of pre shining. His behavior, for it is definitely a he, is closer to that of a house cat, friendly without wishing to appear too much so, brushing against Zeus's leg as it walks past. 'I'm looking forward to this,' you hear the god mutter to himself, patting the lion between his ears. 'I suppose I'll leave you to it. Don't worry, he's a lot tamer now so any wounds you get shouldn't be too serious. Oh, and he'll be banished once you orgasm so try and forgive him if he's a little rough.' With that, the king of Olympus vanishes in a thunderclap.";
@@ -180,8 +182,8 @@ name	desc	weight	object
 lionskin is a grab object.
 lionskin is equipment.
 It is not temporary.
-The plural of lionskin is false.
-The taur-compatible of lionskin is true.
+Plural of lionskin is false.
+Taur-compatible of lionskin is true.
 The size of lionskin is 3.
 The AC of lionskin is 100.
 The effectiveness of lionskin is 40.

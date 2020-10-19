@@ -28,14 +28,13 @@ Object	Name
 Needy Rabbit Girl	"Needy Rabbit Girl"
 
 Needy Rabbit Girl is a situation.
+ResolveFunction of Needy Rabbit Girl is "[ResolveEvent Needy Rabbit Girl]".
 
 when play begins:
 	add Needy Rabbit Girl to BadSpots of FemaleList;
 	add Needy Rabbit Girl to BadSpots of FurryList;
 
-After resolving a Needy Rabbit Girl, try looking;
-
-Instead of Resolving a Needy Rabbit Girl:
+to say ResolveEvent Needy Rabbit Girl:
 	if ngrp is 0:
 		say "     Drifting about the city streets is a woman. She is wearing a long skirt and a jean jacket over a bright yellow blouse. Sprouting from her brown, shoulder-length hair are two long white rabbit ears. She doesn't look feral, and she is picking around through the rubble as if searching for something. One of her great ears suddenly lifts. She looks directly at you for a moment, wide eyed, then flees before you can say anything. How odd.";
 		increase ngrp by 1;
@@ -56,7 +55,7 @@ Instead of Resolving a Needy Rabbit Girl:
 			now battleground is "Outside";
 			choose row with a area of battleground in the Table of Random Critters;
 			follow cock descr rule;
-			say "     You ask her if she has been infected, and she nods. 'My rabbit bit me and I changed, but not as much as some of the people I have seen. Have you seen those [Name entry]s? Crazy, right?' She presses to your front as she talks, letting her shapely fore compress against you. You can feel she has become quite endowed, six breasts of decreasing size nudging against your body, making your [cock size desc of Player], [Cock of Player] cock stiffen lightly.";
+			say "     You ask her if she has been infected, and she nods. 'My rabbit bit me and I changed, but not as much as some of the people I have seen. Have you seen those [one of]husky bitches[or]giant wyverns[or]living robot people[or]walking dick things[at random]? Crazy, right?' She presses to your front as she talks, letting her shapely fore compress against you. You can feel she has become quite endowed, six breasts of decreasing size nudging against your body, making your [cock size desc of Player], [Cock of Player] cock stiffen lightly.";
 			say "     Do you follow your urges?";
 			if Player consents:
 				say "     As if she could detect the decision being made in your eyes, she reaches for your groin, rubbing slowly as a smile forms on her muzzle. 'Well, since you asked,' which you had not yet, 'Yes.' She grabs at a hand and guides you into a basement. 'My home,' she explains before turning to you.";
@@ -103,7 +102,7 @@ Rabbit Den	"Rabbit Den"
 Rabbit Den is a room. It is fasttravel. It is private.
 earea of Rabbit Den is "Outside".
 
-The description of Rabbit Den is "     Not a literal rabbit den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot has been set to the side. It seems whoever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky scent in the air.".
+Description of Rabbit Den is "     Not a literal rabbit den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot has been set to the side. It seems whoever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky scent in the air.".
 
 the scent of Rabbit Den is "     This basement hidey-hole has a soft, musky scent in the air. It smells of female rabbit, heather and clover."
 
@@ -141,9 +140,9 @@ SexuallyExperienced of Sandra is true.
 MainInfection of Sandra is "Anthro Rabbit".
 
 The icon of Sandra is Figure of sandy_icon.
-The description of Sandra is "     A mostly human female, if you don't count the rabbit ears, six breasts, and that cute little white tail that sways behind her. She is usually wearing a yellow blouse, jean jacket, and a long red skirt. Her feet are clad in sneakers, well worn.".
+Description of Sandra is "     A mostly human female, if you don't count the rabbit ears, six breasts, and that cute little white tail that sways behind her. She is usually wearing a yellow blouse, jean jacket, and a long red skirt. Her feet are clad in sneakers, well worn.".
 Sandra is in Rabbit Den.
-The conversation of Sandra is { "Moved!" }
+Conversation of Sandra is { "Moved!" }
 
 Instead of conversing the Sandra:
 	say "[sandtalk][line break]";

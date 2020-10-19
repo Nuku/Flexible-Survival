@@ -3,20 +3,13 @@ Version 1 of Assorted Items by Stripes begins here.
 
 "A holding file for some unassigned drop items and other such stuff."
 
-
-Section 1 - Nullo Wafers
-
-[ - Project discarded, replaced by BlueBishop's nullification powder - ]
-
-Section 2 - Libido Pill
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "libido pill"	"A sex-enhancement pill for getting you (or someone else) horny."	0	libido pill
 
 libido pill is a grab object. It is temporary.
 
-the usedesc of libido pill is "[libido pill use]".
+Usedesc of libido pill is "[libido pill use]".
 
 to say libido pill use:
 	say "[line break]     You pop the sex drug into your mouth and swallow it. There's a slight medicinal taste to it, but you forget that as it quickly gets to work. Soon you're feeling hot and aroused, your libido climbing rapidly.";
@@ -39,7 +32,7 @@ understand "libpill" as libido pill.
 
 check pillgiving someone (called x):
 	if libido pill is not owned:
-		say "It'd be easier to do that if you even had one." instead;
+		say "     It'd be easier to do that if you even had one." instead;
 	else if x is Trixie:
 		say "     'Silly, that's not going to work on me. I'm not really here at all,' she says in a wavering voice while waving her arms around mystically. 'OooOOooOOOOooo!'" instead;
 	else if x is Velos:
@@ -59,13 +52,8 @@ check pillgiving someone (called x):
 	else if x is Rod Mallrat and HP of Ronda < 100:
 		say "     Rod has no interest in taking those or trading for them." instead;
 	[character specific restrictions, such as when the <lastfuck of x> variable is used for other things, would go here.]
-	else if x is a pet:
-		if x is not tamed:
-			say "Who?" instead;
-		else if x is not companion of Player:
-			say "I don't see them around right now. You'll have to call them over first." instead;
-		else if fuckscene of x is empty:
-			say "There's little point in giving a pill to them." instead;
+	else if x is a pet and fuckscene of x is empty:
+		say "There's little point in giving a pill to them." instead;
 	else if lastfuck of the x >= 255:
 		say "They're not prepared to take one of those from you at this time." instead;
 	else if lastfuck of the x is 254 or lastfuck of the x - turns >= 24:

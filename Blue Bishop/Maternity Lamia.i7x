@@ -35,6 +35,7 @@ to say losetolamia:
 			say "     After what seems like an eternity her continued, wet-sounding efforts eventually bring her to bliss, hissing out loudly as her hold tightens to a near-crushing extent, making it difficult to breathe and more than enough to force your own out of you. Letting out a muffled, feeble cry, you pump her hole[smn] full of your [Cum Load Size of Player] load[if Ball Size of Player > 5], until she can take no more and it begins to squirt between the crevices of her tightly-gripping coils[end if].";
 			say "     Once things eventually die down and she catches her breath, she uncoils from you and set you down on a nearby bench. She seems to check and fuss over you a bit before being satisfied, the softer gesture betrayed by her prior abuse.";
 			say "     '[one of]You sure look tuckered out[or]That was fun[or]That was great[at random]! [one of]I'll be back in a bit[or]Be sure to stick around[or]I'd love to have some more fun with you later[at random]...' Making her parting remark, she wanders off - perhaps compelled by some twisted sense of duty to 'attend' to another victim. In any case, it takes you a while to recover from being left so sore, going back on your way once again.";
+		CreatureSexAftermath "Lamia" receives "PussyFuck" from "Player";
 	else:
 		say "     [if HP of Player > 0]Rather than risk you starting to struggle again[else]Not wanting to risk you getting away[end if], the white lamia coils her lower body around you, smooshing your face into her ample bosom. With your face buried in her boobs, your nose is filled with the softly alluring scent of her milk. Without even realizing it, you shift your lips to one of her many nipples and wrap them around it. You suckle softly as the maternal lamia coos softly about how you're a good [if Player is female]girl[else]boy[end if] and to drink up like a good baby.";
 		say "     Her milk flows readily, flowing across your tongue. It is warm, rich and creamy, the flavor so good that you want more. Nursing from her is soothing and you relax more fully, her snug coils around you feeling more like a hug to you than a prison. The wet nurse gently caresses your head as she rocks you gently as she hums a soothing tune.";
@@ -122,6 +123,7 @@ to say mlamiavsex01:
 		say ". Having a trio of pussies to pick from, you alternate between them early on before settling on fucking her lowermost cunny. This leaves the lamia able to play with her unoccupied cunts, the sight of which makes it all the more exciting. And while the half-serpent clearly wants more, she's still certainly enjoying herself immensely, moaning and hissing as you fuck her while she fingers her other needy cunts";
 	say ". Once you've settled into a good position and rhythm, you move your hands up to her plump breasts and start playing with a pair of them. Teasing her nipples gets them squirting milk, the rest of her cream-filled tits leaking in response.";
 	say "     The pair of you go at it like this for a while, losing yourselves in the lust of sex. When your climax comes, it is [if Cock Count of Player >= 3]a powerful one that pumps your hot seed into all of the lamia's needy holes[else]a strong one that pumps your hot seed into the lamia's squeezing cunt[smn] while she vigorously fingers her unfilled one[smv][end if]. The half-serpent woman cries out in orgasm as you fill her, her vagina[smn] clamping and rippling around you like the coils of a constrictor, squeezing every last drop she can get from you. The milky flow from her breasts increases as her orgasm overwhelms her. She's left panting with a happy smile on her face when you finally pull out of her, leaving her to slither off, leaving a trail of milk and sexual fluids as she goes.";
+	CreatureSexAftermath "Lamia" receives "PussyFuck" from "Player";
 
 to say mlamiavsex02:
 	say "***titty fuck.";
@@ -129,6 +131,7 @@ to say mlamiavsex02:
 to say mlamiavsex03:
 	say "     Feeling you deserve some relief in exchange for your troubles, you stride over to the serpent woman as she slithers away and grab her by the shoulders. She struggles momentarily in surprise, but relents easily enough rather than continue fighting you. You press the creature to the ground like the serpent she is. Getting on your knees in front of her, you press her pretty human face between your legs and against your wet puss[yfn]. '[one of]Such a naughty girl[or]Oh, you're such a willful one[or]If you really wanted to play, you should have just said so[or]Alright then, if you insist[or]Mmm... Is someone hot and bothered now? Let's see what we can do about that[at random],' she says teasingly as you grind your dripping crotch against her.";
 	say "     The lamia's tongue slithered across your wet folds with light touches at first, but she's soon eating you out with gusto[if Cunt Count of Player > 1]. Sensitive to the needs of one with multiple pussies, she makes sure to swap between them from time to time. She's neither too fast or nor too infrequent in doing so, making sure to give the current one plenty of stimulation without letting the pleasure wane too much elsewhere[end if]. She lavishes attention across your sensitive petals, delves into your hot tunnel[sfn] and licks and kisses your clit[sfn]. She shows considerable familiarity and skill with satisfying a woman, providing you with several enjoyable orgasms before you're finally sated enough to let her be on her way.";
+	CreatureSexAftermath "Lamia" receives "OralPussy" from "Player";
 
 to say mlamiavsex04:
 	say "     Feeling thirsty after the fight, you feel she should be the one the slake your thirst. You stride over to the serpent woman as she slithers away and grab her breasts from behind. She releases a moan in surprise, but doesn't resist the groping beyond her initial surprise. '[one of]Oh, so now you want them. Make up your mind[or]Such a naughty [if Player is male]boy[else if Player is female]girl[else]thing[end if][or]If you just wanted a drink, you should have just said so[or]Alright then, if you insist[or]Don't! That's for the babies... Well, I guess there's enough to go around[at random],' she says teasingly as you press her back to a wall.";
@@ -145,8 +148,8 @@ to say mlamiavsex04:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -200,9 +203,13 @@ When Play begins:
 	now Cunt Count entry is 3; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 16; [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 12; [ Width in inches of female sex the infection will try to give a player. ]
-	now libido entry is 40; [ Target libido the infection will rise towards. ]
+	now SeductionImmune entry is false;
+	now libido entry is 75; [ Target libido the infection will rise towards. ]
 	now loot entry is "fertile pill"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 30; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]flexible[or]elongated[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]reptilian[or]serpentine[or]lamia[or]snake-like[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -217,7 +224,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

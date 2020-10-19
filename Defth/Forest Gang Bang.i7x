@@ -7,12 +7,13 @@ Object	Name
 Pack Bang	"Pack Bang"
 
 Pack Bang is a situation.
-The sarea of Pack bang is "Forest".
+ResolveFunction of Pack Bang is "[ResolveEvent Pack Bang]".
+Sarea of Pack bang is "Forest".
 When play begins:
 	add Pack Bang to badspots of FeralList;
 	add Pack Bang to BadSpots of MaleList;
 
-Instead of resolving a Pack Bang:
+to say ResolveEvent Pack Bang:
 	say "     Going around what appears to be a darker path in the south part of the forest, you find a place that looks abandoned. Leaves crack under your feet, and branches that have overgrown onto the path get in your way. The only sign that something was here is the path in itself that's big enough for walks or bicycles. It looks really peaceful, but the noises in the background means that you are not alone in here. Howls permeate the place, echoing in the dark part where your eyes can't discern, but you know that you are now likely the prey of a pack of wolves.";
 	now inasituation is true;
 	now FeralWolfSpecialFightNumber is 1; [pack members]
@@ -90,7 +91,11 @@ to say FeralWolfGangBang:
 	say "     With both trying to knot you, the one fucking your face pushes his knot against your lips, forcing your maw to open, almost unhinging and snapping it. Your eyes tear with the pain, and your throat burns with the huge dick throbbing as it spill hot cum directly in your gullet. The other one turns around now that he has knotted you, and with this, another dog jumps at you, penetrating your asshole. The sudden penetration makes you get away from the one knotting your mouth, your face dripping with your attacker's cum.";
 	WaitLineBreak;
 	say "     The other wolves look angry and are fighting the one knotted in your [if Player is female]pussy[else]ass[end if]. You are pulled and pushed to your limits, and in a vain struggle to scream, your mouth is penetrated by another of the dogs who haven't had a turn yet. You feel hot cum filling your intestines as the one on your ass finally cums, but he doesn't get a chance to knot you as both dogs on your back are pushed from you. Your holes gape without a cock, especially a knotted cock, and the cold wind of the forest send chills down your spine. The dogs fighting for a turn is now just background noise, but your rest doesn't last long as other dogs finally fuck you.";
-	say "     You are always used by at least two of the horny wolves. In fact, sometimes, you feel more than two cocks penetrating your now-loose asshole[if Player is female] and another one inside of your drenched pussy[end if]. Your mouth hurts from all of the use, and all that you can taste right now is wolf's cum. Your stomach is aching with how full it is, since it was filled from both ends. But the wolves are now long gone, leaving you in a pool of cum. This finally gives you enough time to rest, until you are finally good enough to go back to your adventures.[impregchance]";
+	say "     You are always used by at least two of the horny wolves. In fact, sometimes, you feel more than two cocks penetrating your now-loose asshole[if Player is female] and another one inside of your drenched pussy[end if]. Your mouth hurts from all of the use, and all that you can taste right now is wolf's cum. Your stomach is aching with how full it is, since it was filled from both ends. But the wolves are now long gone, leaving you in a pool of cum. This finally gives you enough time to rest, until you are finally good enough to go back to your adventures.";
+	if player is female:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Wolf";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Feral Wolf";
+	CreatureSexAftermath "Player" receives "OralCock" from "Feral Wolf";
 	now Resolution of Pack Bang is 1; [gangbang]
 
 Forest Gang Bang ends here.

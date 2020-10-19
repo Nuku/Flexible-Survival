@@ -10,13 +10,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Goblin Trap	"Goblin Trap"
 
-Goblin Trap is a situation. The level of Goblin Trap is 2.
-The sarea of Goblin Trap is "Junkyard".
+Goblin Trap is a situation.
+ResolveFunction of Goblin Trap is "[ResolveEvent Goblin Trap]". The level of Goblin Trap is 2.
+Sarea of Goblin Trap is "Junkyard".
 goblinfight is a number that varies.
 when play begins:
 	add Goblin Trap to BadSpots of MaleList;
 
-Instead of resolving a Goblin Trap:
+to say ResolveEvent Goblin Trap:
 	say "     As you are traveling along, looking over the various junk piles as you go, you inadvertently set off a hidden trap. A snare closes around your ankles and pulls your feet out from under you as you hear a heavy weight strike the ground nearby, pulling the rope. This also sets off a spring trap which sends a cluster of machine parts at you, aimed to land at your location. Battered by the volley of junk, you try to extricate yourself from the snare as a giggling goblin scrambles out from his hidey-hole in the junkpile after you set off his trap. 'Hee hee! It worked! It worked! And now to claim my prize,' he cackles as he comes at you as you get your legs free. You have taken 12 damage.";
 	decrease HP of Player by 12;
 	now goblinfight is 3;
@@ -37,15 +38,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Raiding Party	"Raiding Party"
 
-Raiding Party is a situation. The level of Raiding Party is 2.
-The sarea of Raiding Party is "Junkyard".
+Raiding Party is a situation.
+ResolveFunction of Raiding Party is "[ResolveEvent Raiding Party]". The level of Raiding Party is 2.
+Sarea of Raiding Party is "Junkyard".
 junknum is a number that varies.
 when play begins:
 	add Raiding Party to BadSpots of MaleList;
 	add Raiding Party to BadSpots of FurryList;
 	add Raiding Party to badspots of HermList;
 
-Instead of resolving a Raiding Party:
+to say ResolveEvent Raiding Party:
 	say "     As you search through the junkyard, you can hear some cackling laughter coming closer as well as the sounds of an angry feline. There is a smack and the feline sounds are silenced with a whimper, but the cackling laughter gets louder. You can tell there are several people laughing and they're getting closer.";
 	say "     [bold type]Shall you stay and wait for them to see what's going on or shall you make your escape while you can?[roman type][line break]";
 	LineBreak;
@@ -103,9 +105,10 @@ Object	Name
 Stripped Car	"Stripped Car"
 
 Stripped Car is a situation.
-The sarea of Stripped Car is "Junkyard".
+ResolveFunction of Stripped Car is "[ResolveEvent Stripped Car]".
+Sarea of Stripped Car is "Junkyard".
 
-Instead of resolving a Stripped Car:
+to say ResolveEvent Stripped Car:
 	say "     You come across a stripped car that has been pulled across the pathway between the piles. Wary of an ambush, you look around, but it seems no one is here. Taking a closer look, stripped is the proper way to describe this car. It's hub caps, hood, side panels, front grill and many other parts seem to have all been recently and forcibly removed. There are deep gouges from feline claw marks and twisted metal all over it where parts where torn off. Even the stereo is gone. You will have to be careful to avoid any felines strong enough to drag around a car and tear parts off by hand.";
 	increase score by 1;
 	now Stripped Car is resolved;
@@ -118,12 +121,13 @@ Object	Name
 Scattered Trash	"Scattered Trash"
 
 Scattered Trash is a situation.
-The sarea of Scattered Trash is "Junkyard".
+ResolveFunction of Scattered Trash is "[ResolveEvent Scattered Trash]".
+Sarea of Scattered Trash is "Junkyard".
 when play begins:
 	add Scattered Trash to BadSpots of FemaleList;
 	add Scattered Trash to BadSpots of FurryList;
 
-Instead of resolving a Scattered Trash:
+to say ResolveEvent Scattered Trash:
 	say "     You come across a mess of garbage scattered here, sprawling across the path between the junk mounds here. From the looks of it, it seems this stuff has been rummaged through and possibly even rolled around in. As it is just tossed around, there are clear spots to walk while you move through it. You decide to keep your eyes open in case you spot anything of interest while making your way through the trash.";
 	WaitLineBreak;
 	let bonus be (( perception of Player + dexterity of Player minus 20 ) divided by 2 );
@@ -157,10 +161,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Stray Cat	"Stray Cat"
 
-Stray Cat is a situation. The level of Stray Cat is 7.
-The sarea of Stray Cat is "Junkyard".
+Stray Cat is a situation.
+ResolveFunction of Stray Cat is "[ResolveEvent Stray Cat]". The level of Stray Cat is 7.
+Sarea of Stray Cat is "Junkyard".
 
-Instead of resolving a Stray Cat:
+to say ResolveEvent Stray Cat:
 	say "     On a search through the scrapyard, you find your path blocked by a sweaty and panting snow leopard. It seems he wandered in here and has gotten lost. Startled to see you there, he gives a dry mrowl that cracks in his dry throat before stalking towards you quickly. ";
 	if dirty water is owned or water bottle is owned:
 		say "You have some water in your pack which may satisfy him long enough to make your escape.";

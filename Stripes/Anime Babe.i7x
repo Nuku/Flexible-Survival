@@ -159,8 +159,8 @@ to say beattheanimebabe:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -178,7 +178,7 @@ When Play begins:
 	now desc entry is "[animebabedesc]";
 	now face entry is "fairly large in proportion to your body, with long, bright blue hair, a near invisibly small nose, and gargantuan shining eyes"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "rail thin, without any visible body fat or apparent room for most of your vital organs. When at rest, no part of you seems to move at all, saving on animation. Your arms are exceptionally scrawny, almost skeletal. Your elbows are extremely angular, and your hands are quite dainty. Your legs are disproportionately lengthy, making up a full two thirds of your height. Each is extremely slender, tapering down to feet so small it's a wonder they can stand. Your body has grown a school girl's outfit to tantalizingly cover your overly sexualized body";
-	now skin entry is "smooth, pink"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "smooth, pink"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a tight little ass covered in cute panties that you can't help but flash at every opportunity.";
 	now cock entry is "[one of]idealized[or]smooth[or]veinless[or]hairless[at random]";
 	now face change entry is "your head swells as blue hair drifts down in front of your enlarged eyes. Blinking suddenly seems to take far more effort";
@@ -206,9 +206,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 9;
 	now Cunt Tightness entry is 6;
-	now libido entry is 60; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "sticky sushi";
 	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]thin[or]slim[at random]";
 	now type entry is "human"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -223,7 +227,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -333,7 +337,7 @@ this is the animehammer rule:		[double-damage]
 	choose row MonsterID from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 ); [+100% damage]
-	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "The anime babe pulls a huge hammer out of nowhere, slamming it into your head and [one of]pummeling you into the ground[or]sending you flying[at random]. This powerful blow does [special-style-2][dam][roman type] damage!";
@@ -343,7 +347,7 @@ this is the animehammer rule:		[double-damage]
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
@@ -355,9 +359,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "sticky sushi"	"A small tray of rather suspect sushi."	1	sticky sushi
 
-sticky sushi is a grab object. sticky sushi is infectious. The strain of sticky sushi is "Anime Babe".
+sticky sushi is a grab object. sticky sushi is infectious. Strain of sticky sushi is "Anime Babe".
 
-The usedesc of sticky sushi is "[eatstickysushi]";
+Usedesc of sticky sushi is "[eatstickysushi]";
 
 to say eatstickysushi:
 	say "     Deciding to risk eating the sushi despite how old it probably is, you tentatively pop a piece into your mouth. Finding it quite tasty, if having a somewhat odd flavor, you rapidly consume the rest of the tray. It feels good to eat something, though there's an odd rumbling noise in your tummy that makes you giggle cutely.";

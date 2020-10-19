@@ -14,10 +14,11 @@ Object	Name
 Marching Band	"Marching Band"
 
 Marching Band is a situation.
-The sarea of Marching Band is "Campus".
+ResolveFunction of Marching Band is "[ResolveEvent Marching Band]".
+Sarea of Marching Band is "Campus".
 
-Instead of resolving a Marching Band:
-	say "     While exploring the campus, you are suddenly surprised to hear the sound of music starting up. A welcome change from the normal sounds of sex-crazed creatures and horny mutants, you cautiously head over to investigate. You find a variety of infected creatures stuffed into ill-fitting uniforms and carrying instruments as they try to coalesce into a marching band. They start up and stop several times, distracted by one or more of them deciding to hump another, give a blow job or otherwise give in to their sexual desires. But eventually they do get going as their border collie band leader nips them back into position once everyone's gotten off one last time before they can march off the national anthem as they proceed towards one of the fields.";
+to say ResolveEvent Marching Band:
+	say "     While exploring the campus, you are suddenly surprised to hear the sound of music starting up. A welcome change from the normal sounds of sex-crazed creatures and horny mutants, you cautiously head over to investigate. You find a variety of infected creatures stuffed into ill-fitting uniforms and carrying instruments as they try to coalesce into a marching band. They start up and stop several times, distracted by one or more of them deciding to hump another, give a blow job or otherwise give in to their sexual desires. But eventually they do get going as their border collie band leader nips them back into position, once everyone's gotten off one last time. The horny group then marches off playing the national anthem as they make their way towards one of the fields.";
 	increase score by 1;
 	now Marching Band is resolved;
 
@@ -27,13 +28,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Arts Department	"Arts Department"
 
-Arts Department is a situation. The level of Arts Department is 3.
-The sarea of Arts Department is "Campus".
+Arts Department is a situation.
+ResolveFunction of Arts Department is "[ResolveEvent Arts Department]". The level of Arts Department is 3.
+Sarea of Arts Department is "Campus".
 when play begins:
 	add Arts Department to BadSpots of FemaleList;
 	add Arts Department to BadSpots of FurryList;
 
-Instead of resolving a Arts Department:
+to say ResolveEvent Arts Department:
 	say "     You find yourself in front of the school's arts department building, finding it a rather small and neglected part of the campus. Clearly used just for some easy credits, it's not given much respect here. You decide to slip inside, hoping to find something of use since the muscle-bound creatures around don't seem to have been around here. You go down the halls, finding most of the rooms locked or empty until you come to a room used for sculpting. Inside, you find a female lizard who's elated to find you, an ample subject for her special, artistic talents.";
 	challenge "Lizard Girl";
 	now Arts Department is resolved;
@@ -45,16 +47,7 @@ Section 3 - Phi Iota Gamma
 
 Section 4 - Languages Department
 
-Table of GameEventIDs (continued)
-Object	Name
-Languages Department	"Languages Department"
-
-Languages Department is a situation.
-The sarea of Languages Department is "Campus".
-
-Instead of resolving a Languages Department:
-	say "     Passing behind one building, you almost bump into a small group of creatures arguing loudly and incomprehensibly. Among the group are a French frog, a Chinese dragon, an Indian elephant, a Russian bear and several other walking stereotypes who can no longer understand each other. You suspect they've all somehow become altered by the infection into forms to suit the language course they taught or studied. You decide to give what is probably the Languages Department a wide berth before you start speaking another language as well to further compound your problems in this city gone mad.";
-	now Languages Department is resolved;
+[revised in the Misc Events file - Pandemonium]
 
 
 Section 5 - Wandering the Campus
@@ -63,14 +56,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Wandering the Campus	"Wandering the Campus"
 
-Wandering the Campus is a situation. The level of Wandering the Campus is 9.
-The sarea of Wandering the Campus is "Campus".
+Wandering the Campus is a situation.
+ResolveFunction of Wandering the Campus is "[ResolveEvent Wandering the Campus]". The level of Wandering the Campus is 9.
+Sarea of Wandering the Campus is "Campus".
 campuswander is a list of numbers that varies.
 campuswanderfight is a number that varies.
 when play begins:
 	add Wandering the Campus to BadSpots of FurryList;
 
-Instead of resolving a Wandering the Campus:
+to say ResolveEvent Wandering the Campus:
 	if MaleList is banned and 1 is not listed in campuswander, add 1 to campuswander;
 	if HermList is banned and 2 is not listed in campuswander, add 2 to campuswander;
 	if HermList is banned and 3 is not listed in campuswander, add 3 to campuswander;
@@ -135,15 +129,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Anime Club	"Anime Club"
 
-Anime Club is a situation. the level of Anime Club is 12.
-The sarea of Anime Club is "Campus".
+Anime Club is a situation.
+ResolveFunction of Anime Club is "[ResolveEvent Anime Club]". the level of Anime Club is 12.
+Sarea of Anime Club is "Campus".
 animeclubfight is a truth state that varies. animeclubfight is usually false.
 
 when play begins:
 	add Anime Club to BadSpots of FemaleList;
 	add Anime Club to BadSpots of MaleList;
 
-Instead of resolving a Anime Club:
+to say ResolveEvent Anime Club:
 	say "     As you're going through one of the many buildings on campus, you hear some knocking and a voice coming from the next floor while climbing the stairwell. Heading towards it, you quickly start to make out the female voice getting louder and more frantic about wanting to get inside. '...from the window. Please, I just need somewhere safe to hide. Please. Quick. I can hear someth... whaaaa!'";
 	say "     Just as you're turning the corner to catch up to this other survivor, you see the door in front of her open and another female grab her. The woman from inside isn't quite human, with cartoonishly sexy proportions, perfectly smooth pink skin and oversized, expressive eyes. The survivor struggles, but is pulled inside. Cautiously approaching, you can see that the door isn't quite shut. The sign on the door says it's the college's Anime Club.";
 	say "     Inside, you can hear the sounds of both a struggle and of sex.";

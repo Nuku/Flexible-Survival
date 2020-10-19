@@ -53,6 +53,7 @@ to say ebwhelpvic:
 			now mpreghijack is true;
 			now ebwhelphijack is 2;
 			now hijackgestation is 8;
+		CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Whelp";
 	else if tempnum is 1:
 		say ". Completely without restraint the lizard makes a beeline for your ass. Nipping and clawing at your hips, it's little legs flit about in a weak attempt at removing any obstruction before properly positioning itself. [if HP of Player > 0]Obliging the small dragon, you eventually help him get him properly positioned[else]You weakly try to push the small dragon off of you, but this only invites him to nip and claw at you into submission, eventually getting himself into position[end if].";
 		say "     With a tainted urgency, you immediately feel yourself [if scalevalue of Player < 4]impaled[else]stabbed[end if] by the tiny monster's instantly erect dick up[if Cunt Count of Player > 1] one of[end if] your barely ready cunt[sfn], burying it's long, tapered length down your hole until he's slapping his smooth, scaled crotch between your thighs. You feel the thing, like a searing hot poker, worm its way around your innards, sputtering its molten-hot precum[if scalevalue of Player < 4] deep[end if] inside you. Absolutely dead set on weakly pounding your hole into oblivion, you have to endure the sounds of its loud, wanton squealing filling air, hardly drowning out his increasingly wet motions.";
@@ -66,6 +67,7 @@ to say ebwhelpvic:
 			now preghijack is true;
 			now ebwhelphijack is 1;
 			now hijackgestation is 8;
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Whelp";
 	else:
 		say ". You're barely given a chance to ready yourself before he presses the base of his cock firmly against your face, flooding your senses with the tainted aroma of the creature's heady scent. He clearly wants you to suck him off, but either by some weird instinct or by a particularly sadistic tendency, he's not hard in the slightest, meaning you'd have to oblige him more than usual to suck him off.";
 		say "     [if HP of Player > 0]Conceding to this shameful relegation, you lower[else]Not wanting to be the subject of the creature's constant clawing and squealing, you eventually concede to this shameful relegation, lowering[end if] your head to engulf the pointed tip of the whelp's jet-black dick, the insistence of the tiny creature forcing you to swallow down more and more of its substantive length until your lips are flush against his coarse scales. [if scalevalue of Player > 3]Massive form sucking off this tiny beast, your taste is awash in the sting of his scalding precum, the creature starting to cling[else]Struggling to breathe as your taste is awash in the sting of his scalding precum, the creature starts clinging[end if] to you as tightly as it possibly can, dead set on making sure you never let up.";
@@ -75,6 +77,7 @@ to say ebwhelpvic:
 		if ebwhelphijack > 0:
 			say "     [italic type]Still bloated from the original whelp's violation, consuming all this burning fluid seems to have worsened your situation by accelerating your twisted offspring's growth...[roman type][line break]";
 			decrease hijackgestation by 1;
+		CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Whelp";
 
 to say ebwhelpdef:
 	if birthedwhelp is true:
@@ -97,8 +100,8 @@ to say ebwhelpdesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -156,9 +159,13 @@ When Play begins:
 	now Cunt Count entry is 1;
 	now Cunt Depth entry is 15;
 	now Cunt Tightness entry is 10;
-	now libido entry is 20;
+	now SeductionImmune entry is false;
+	now libido entry is 10;
 	now lootchance entry is 10;
 	now loot entry is "ebonflame scale";
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;
 	now body descriptor entry is "NA";
 	now type entry is "NA";
@@ -173,7 +180,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

@@ -125,8 +125,8 @@ to say chococheck:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -153,7 +153,7 @@ When Play begins:
 	now desc entry is "[choclabdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "dog's head, a smooth, rich brown and somehow made of chocolate. You have a long, slobbery tongue and drool chocolate syrup. Your eyes are a solid, dark black, as if made of dark chocolate, but still able to see. As if being constantly remolded instead of moving flesh and bone, your expression seems to shift the shape of your face"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "that of an anthropomorphic canine, strangely somehow chocolate in color and composition. Your body is covered in a confectionary imitation of [SkinName of Player] flesh. Your body has become like soft chocolate, bending and reshaping itself to move instead of having any actual bones or muscles[if labhost > 0]. Occasionally, an extra chocolaty tail, or the head of another chocolate lab pushes out of your chocolate form, barking or drooling its thick chocolate saliva as it pants happily, making the presence of your unwanted passenger clear[end if]. The scent of cocoa lingers pleasantly around you. When teased, you leak white chocolate syrup from your nipples"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "a soft layer of milk-chocolate in the place of regular"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "a soft layer of milk-chocolate in the place of regular"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a slender, canine tail made of chocolate that wags happily."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "chocolate-brown, canine"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it seems to lose all internal structure. Your nose and mouth push out to form a canine muzzle while your ears and the rest of your head change as well. Your vision blurs momentarily as your eyes change somehow. The scent of cocoa fills you, exciting you, making you hunger for it. Somehow you know your head is made of chocolate, through and through. Your tongue lolls from your mouth, drooling a chocolaty syrup as your dark chocolate eyes look around"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -181,9 +181,13 @@ When Play begins:
 	now Cunt Count entry is 2; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12;
 	now Cunt Tightness entry is 6;
-	now libido entry is 70; [ Set to zero in this monster to control elsewhere ]
+	now SeductionImmune entry is false;
+	now libido entry is 30; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is "chocolate milk"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "chocolate milk";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]chocolate[or]confectionary[or]flowing[or]malleable[at random]";
 	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -198,7 +202,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -402,7 +406,7 @@ This is the Chocolate Lab Infection rule:
 				else if labhost is 2 or labhost is 1: [succumb through standard means while carrying one or more labs]
 					say "     Subject to the constant influence of the chocolate lab[if labhost is 2]s[end if] infesting your body, your mind slowly begins to melt away, leaving it and your body to be freely reshaped by the chocolate canine[if labhost is 2]s[end if]. As the last of your resistance fades you slowly sink to the ground, melting into a gooey chocolate mess. You feel the lab[if labhost is 2]s rejoice as they set about finishing their[else] rejoice as it sets about finishing its[end if] work. Some time later, your [if labhost is 2]pack[else]companion[end if] finally separates from your body, waiting eagerly as you pull yourself together, taking the shape of another flowing, chocolate dog. You happily lick and nuzzle your [if labhost is 2]new pack[else]companion[end if] as they return the love, finally welcoming you into the pack properly before they lead you back to a chocolate maker's shop at the edge of the high rise district.";
 				else: [normal succumb ending.]
-					say "     The strain of trying to keep a cohesive hold on your body eventually becomes too much. You collapse onto all fours and melt into a more fluid, gooey chocolate Labrador. You wander the streets, drawn by your nose to seek out chocolate, which you ingest ravenously wherever found. Soon, your nose has you cross paths with one of those confectionary canines and, after a very sticky romp where you thrust and melt into one another, you follow it back to a chocolate maker's shop at the edge of the high rise district.";
+					say "     Strain of trying to keep a cohesive hold on your body eventually becomes too much. You collapse onto all fours and melt into a more fluid, gooey chocolate Labrador. You wander the streets, drawn by your nose to seek out chocolate, which you ingest ravenously wherever found. Soon, your nose has you cross paths with one of those confectionary canines and, after a very sticky romp where you thrust and melt into one another, you follow it back to a chocolate maker's shop at the edge of the high rise district.";
 				say "     You and the others live there, mating and roaming around in search of more chocolate. When you and the other canines mate, you both lose cohesion and melt in with your lover. When you separate, you lose more and more of who you used to be, though the pack grows smarter and more united as well.";
 				say "     Over time, you become more and more a creature of instincts, hungering to feed its chocolaty fluids to others. Your group, while searching for chocolate, also hunts for new playmates. Your pack snags several soldiers rather easily. Looking like a normal dog at a distance, one of you can often get close before they realize their mistake. And by then, your scent is around them and it is too late. After all, they are easy prey for a creature immune to bullets.";
 				if intelligence of Player > 16:

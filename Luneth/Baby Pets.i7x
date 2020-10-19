@@ -28,21 +28,25 @@ Table of GameCharacterIDs (continued)
 object	name
 Little fox	"Little fox"
 
-Little fox is a pet. little fox is a part of the player.
+Little fox is a pet.
+NPCObject of Little fox is Dash.
 understand "Dash" as little fox.
+IDList of little fox is { "Dash", "dash", "fox", "little fox" }.
 printed name of little fox is "Dash".
-The description of the little fox is "[DashDesc]".
-The weapon damage of little fox is 4.
+Description of the little fox is "[DashDesc]".
+Weapon Damage of little fox is 5.
 The level of little fox is 1.
-The Dexterity of little fox is 10.
+Dexterity of little fox is 20.
 The summondesc of little fox is "[SummonDash]".
 The dismissdesc of little fox is "[DismissDash]".
 The assault of little fox is "[one of]The little fox darts forward quickly and trips your opponent![or]Yipping and harassing your opponent, the little fox allows you to score a glancing blow![or]Growling ferociously, your little fox friend springs forward to attack, only to slip and knock over some junk nearby, luckily pelting your opponent with it.[or]Your opponent jumps and twists around suddenly in pain, allowing you to see your little fox friend hanging onto their rear valiantly by their teeth.[or]Taking advantage of your foe's momentary distraction, your pet fox manages to get in a few solid nips.[at random]".
 The fuckscene of little fox is "The little fox kit is both too small and too young for such shenanigans. There are plenty of fox-people running around; go find some of them if that's what you're into.".
 
+when play begins:
+	add "Feral" to Traits of little fox;
+
 to say SummonDash:
-	now Dash is nowhere;
-	if Player is in Computer Lab and Dash is in Computer Lab: [summoning while standing next to him]
+	if Dash is visible: [summoning while standing next to him]
 		say "     Going up to Dash, you crouch down and gently rub his ears. After showing your little fox kit some love, he gets super excited and begins to jump all over the place. Once he has calmed down a bit, he scrambles into your pack ready for a brand new journey!";
 	else: [regular summoning]
 		say "     Wriggling his way out of your pack, Dash looks around the area before sitting down and staring at you with its bright shining eyes, eager to explore.";
@@ -85,7 +89,7 @@ AnalVirgin of Dash is true.
 PenileVirgin of Dash is true.
 SexuallyExperienced of Dash is false.
 MainInfection of Dash is "".
-The description of Dash is "[Dashdesc]".
+Description of Dash is "[Dashdesc]".
 
 instead of sniffing the little fox:
 	say "[DashScent]";
@@ -101,11 +105,13 @@ to say DashDesc:
 		say "     DEBUG -> FangDash: [FangDashRel] <- DEBUG[line break]";
 	project Figure of Dash_icon;
 	say "     Dash is so cute and friendly! He has a cute little fox face with eyes that shine with love as they stare up at you. His lithe and quick body is almost constantly in motion as it explores the world around you. The little fox's coloring was a bit of shock at first, with it being more brown and gray than you would have figured. Then again, maybe that is just the normal coloring for fox's when they are young like yours.";
+	if little fox is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing the Dash:
 	if Player is in Computer Lab and Dash is in Computer Lab:
 		say "[DashTalkMenu]";
-	else if companion of Player is little fox:
+	else if little fox is listed in companionList of Player:
 		say "[DashTalkMenu]";
 	else:
 		say "     Dash isn't here.";
@@ -116,7 +122,7 @@ instead of conversing little fox:
 	else:
 		if Player is in Computer Lab and Dash is in Computer Lab:
 			say "[DashTalkMenu]";
-		else if companion of Player is little fox:
+		else if little fox is listed in companionList of Player:
 			say "[DashTalkMenu]";
 		else:
 			say "     Dash isn't here.";
@@ -169,9 +175,10 @@ Object	Name
 Abandoned Fox	"Abandoned Fox"
 
 Abandoned Fox is a situation.
-The sarea of Abandoned Fox is "Park".
+ResolveFunction of Abandoned Fox is "[ResolveEvent Abandoned Fox]".
+Sarea of Abandoned Fox is "Park".
 
-Instead of resolving Abandoned Fox:
+to say ResolveEvent Abandoned Fox:
 	say "     Traveling through the park, you hear a strange soft noise coming from one of the nearby bushes. It sounds almost like something small calling out. Do you investigate?";
 	if Player consents:
 		project Figure of Dash_icon;
@@ -185,7 +192,7 @@ Instead of resolving Abandoned Fox:
 				now little fox is tamed;
 				add "Tamed" to Traits of little fox;
 				move Dash to Computer Lab;
-				say "     (Dash the little fox is now a possible companion! You can make him your active companion by typing [bold type][link]companion Dash[end link][roman type] or [bold type][link]companion fox[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				say "     (Dash the little fox is now a possible ally! You can make him your active ally by typing [bold type][link]ally Dash[end link][roman type] or [bold type][link]ally fox[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now Resolution of Abandoned Fox is 1; [fed and adopted the fox]
 				now Abandoned Fox is resolved;
 			else:
@@ -246,14 +253,14 @@ Section 1.4.3 - Dash/Beta Fang
 after going to Computer Lab while ((HP of Fang is 5 ) and Dash is booked and FangDashRel is 0):
 	project Figure of Dash_icon;
 	say "     Walking into the computer lab you're surprised to find Fang inside, sniffing around the small cubicle that Dash has claimed for himself. After a few moments the large wolf lets out a soft bark at the little fox's den and Dash pokes his head out to see who is disturbing him. He is greeted by the intimidating visage of your beta and begins to retreat again, but Fang's slowly wagging tail and relaxed posture seems to sooth him enough that he remains peeking around the corner of the wall, nose twitching slightly as he takes in the wolf's scent. 'Come out little one, I shall not harm you,' Fang calls, his voice soft and raspy from disuse. Dash, looks hesitant until he sees you, at which point he charges past the startled wolf and [if legsname of player is not listed in infections of SerpentineList and legsname of player is not listed in infections of SlidingList]presses himself up against your legs[else]hides behind you[end if]. Sensing that Fang was sincere in his desire to converse with the baby fox, you approach the lupine and enquire about his sudden interest in Dash.";
-	say "     Fang's luminescent eyes seem sad as he looks up at you. 'The child needs to learn to be strong. You are a good parent, but often busy. I wish to show him that there are others who care about him[if hp of Lux > 0]. Our children view him as their brother. I want to be part of his life too[end if].' A fit of coughing interrupts his explanation, perhaps due to how much he has been talking. Nonetheless, he continues, 'He must learn to defend himself. I can do this when you cannot.' By this time, Dash has summoned the courage to approach Fang, snuffling at his paw before continuing his investigation from snout to tail, the wolf remaining still throughout so as not to frighten the fox again. To his delight, Dash gives his nose a quick lick once he has finished sniffing at him. It looks like the two of them will get on well if you let them.";
+	say "     Fang's luminescent eyes seem sad as he looks up at you. 'The child needs to learn to be strong. You are a good parent, but often busy. I wish to show him that there are others who care about him[if HP of Lux > 0]. Our children view him as their brother. I want to be part of his life too[end if].' A fit of coughing interrupts his explanation, perhaps due to how much he has been talking. Nonetheless, he continues, 'He must learn to defend himself. I can do this when you cannot.' By this time, Dash has summoned the courage to approach Fang, snuffling at his paw before continuing his investigation from snout to tail, the wolf remaining still throughout so as not to frighten the fox again. To his delight, Dash gives his nose a quick lick once he has finished sniffing at him. It looks like the two of them will get on well if you let them.";
 	LineBreak;
 	say "     [bold type]Do you want to allow Fang to work with Dash ([link]Y[as]y[end link])? Or do you want to attempt to keep Fang away from Dash. ([link]N[as]n[end link])";
 	LineBreak;
 	if Player consents:
 		LineBreak;
-		say "     You smile at how well the two of them seem to be bonding, especially after how shaky their initial meeting was. Having finished sniffing each other, Dash and Fang seem at a loss as to what to do, until the fox playfully bows to him in an attempt to initiate a game. 'I am larger than you, little one and-', the wolf begins before Dash interrupts with a pleading yap. 'Fine, but only for a minute.' The fox streaks off around one of the desks, followed by Fang who has to be a lot more careful not to cause any damage. He isn't entirely successful, as you watch several chairs tumble over as he lollops past, the restrictive space hindering his usually fairly graceful movement. You chuckle to yourself at how the small fox has, at least momentarily, made the wolf forget his duties and relax. You just hope that this won't cause too much damage[if hp of Lux is 2]. Hearing the commotion, Lux and Umbra join in too, excitedly barking as they pursue their father and adopted sibling[else if hp of Lux > 2]. Hearing the commotion, Lux and Umbra peer into the room and you are sure that you see them smile before they disappear from view again. Whether or not your children will mention this to their father, you do not know[end if].";
-		say "     Eventually, [if hp of Lux is 2]they [else]the two of them [end if]come to a stop beside you again. Dash smiling wildly[if hp of lux is 2], Lux and Umbra bearing similar expressions[end if], and Fang allowing his tongue to spill from the side of his mouth from enjoyment. Fang seems to have a good bond with Dash, especially after that, and you don't feel you have much right to deny them contact with each other, so there seems little reason not to let him teach Dash to be part of your pack. Seeing your approval, Fang gives a grateful nod and gives Dash one last lick before padding out the door[if hp of Lux is 2], followed by the twin wolves as well as their adoptive brother, the fox kit attempting to walk underneath the larger male, the wolf adapting his gait to allow him to do so[else], followed by the fox kit who attempts to walk underneath the larger male, the wolf adapting his gait to allow him to do so[end if]. Considering Fang thought bonding with Dash was more important than guard duty, you are confident that the fox is in safe paws.";
+		say "     You smile at how well the two of them seem to be bonding, especially after how shaky their initial meeting was. Having finished sniffing each other, Dash and Fang seem at a loss as to what to do, until the fox playfully bows to him in an attempt to initiate a game. 'I am larger than you, little one and-', the wolf begins before Dash interrupts with a pleading yap. 'Fine, but only for a minute.' The fox streaks off around one of the desks, followed by Fang who has to be a lot more careful not to cause any damage. He isn't entirely successful, as you watch several chairs tumble over as he lollops past, the restrictive space hindering his usually fairly graceful movement. You chuckle to yourself at how the small fox has, at least momentarily, made the wolf forget his duties and relax. You just hope that this won't cause too much damage[if HP of Lux is 2]. Hearing the commotion, Lux and Umbra join in too, excitedly barking as they pursue their father and adopted sibling[else if HP of Lux > 2]. Hearing the commotion, Lux and Umbra peer into the room and you are sure that you see them smile before they disappear from view again. Whether or not your children will mention this to their father, you do not know[end if].";
+		say "     Eventually, [if HP of Lux is 2]they [else]the two of them [end if]come to a stop beside you again. Dash smiling wildly[if HP of lux is 2], Lux and Umbra bearing similar expressions[end if], and Fang allowing his tongue to spill from the side of his mouth from enjoyment. Fang seems to have a good bond with Dash, especially after that, and you don't feel you have much right to deny them contact with each other, so there seems little reason not to let him teach Dash to be part of your pack. Seeing your approval, Fang gives a grateful nod and gives Dash one last lick before padding out the door[if HP of Lux is 2], followed by the twin wolves as well as their adoptive brother, the fox kit attempting to walk underneath the larger male, the wolf adapting his gait to allow him to do so[else], followed by the fox kit who attempts to walk underneath the larger male, the wolf adapting his gait to allow him to do so[end if]. Considering Fang thought bonding with Dash was more important than guard duty, you are confident that the fox is in safe paws.";
 	else:
 		LineBreak;
 		say "     You firmly tell Fang that you think Dash would be better just being raised by you and that you would prefer he limit his interactions with the young fox. Fang looks devastated at your order, ears flat against his head and tears forming in his eyes. 'What? But... As my Alpha commands,' Fang haltingly replies with forced civility. 'Goodbye little one. I shall be on guard outside as usual.' From the pained look he gives you, it is evident that he wishes to argue further, but equally doesn't want to challenge your authority in front of Dash. As he lopes out of the computer room, you hear him mumbling, 'Not again. Why again?' You decide to ignore this and instead focus on cuddling the baby fox who appears confused at what has happened. From the accusing look he gives you, he understands enough to know that you are the cause of Fang's misery and that he is upset that you have sent his new friend away.";
@@ -279,21 +286,25 @@ Table of GameCharacterIDs (continued)
 object	name
 skunk kit	"skunk kit"
 
-skunk kit is a pet. skunk kit is a part of the player.
+skunk kit is a pet.
+NPCObject of skunk kit is Peppy.
 understand "Peppy" as skunk kit.
+IDList of skunk kit is { "Peppy", "peppy", "skunk", "skunk kit", "kit" }.
 printed name of skunk kit is "Peppy".
-The description of the skunk kit is "[Peppydesc]".
-The weapon damage of skunk kit is 6.
+Description of the skunk kit is "[Peppydesc]".
+Weapon Damage of skunk kit is 5.
 The level of skunk kit is 1.
-The Dexterity of skunk kit is 13.
+Dexterity of skunk kit is 20.
 The summondesc of skunk kit is "[SummonPeppy]".
 The dismissdesc of skunk kit is "[DismissPeppy]".
 The assault of skunk kit is "[one of]The little skunk viciously launches itself at your attacker![or]Turning around, the skunk sprays your attacker in the face![or]Afraid of being left alone again, the little skunk goes into a frenzy of biting![or]All of a sudden the powerful scent of skunk washes over the fight from where your little skunk kit is playing nearby.[or]Taking advantage of your foes['] distraction, the skunk nips and bites at whatever part of your opponent it can reach.[or]Your adversary pauses for a minute as the little skunk growls at it, startling it enough for you to land a hit![or]The little skunk charges in to protect you, and your opponent seems so startled at its sudden appearance it falls backwards.[or]The little skunk tries to threaten your adversary from the sidelines, and spotting the skunk your adversary recoils in fear of its smell.[at random]".
 The fuckscene of skunk kit is "The little skunk kit you've rescued is too young and small for such perversions.".
 
+when play begins:
+	add "Feral" to Traits of Skunk Kit;
+
 to say SummonPeppy:
-	now Peppy is nowhere;
-	if Player is in Computer Lab and Peppy is in Computer Lab: [summoning while standing next to him]
+	if Peppy is visible: [summoning while standing next to him]
 		say "     Walking up and lightly scratching behind Peppy's ears, causing a loud churring sound from within. Giving a nod towards the door, the little skunk is quick to wobble outside. Apparently deciding that if he's going on this journey, then he is going to be the one leading it.";
 	else: [regular summoning]
 		say "     You call out for the little skunk you rescued to come help you out, and it comes trotting up from where it was following you, ready and eager to assist his friend, the smell of skunk filling the area around you.";
@@ -336,7 +347,7 @@ AnalVirgin of Peppy is true.
 PenileVirgin of Peppy is true.
 SexuallyExperienced of Peppy is false.
 MainInfection of Peppy is "Skunk".
-The description of Peppy is "[Peppydesc]".
+Description of Peppy is "[Peppydesc]".
 
 instead of sniffing the skunk kit:
 	say "[PeppyScent]";
@@ -349,9 +360,11 @@ to say PeppyScent:
 
 to say Peppydesc:
 	say "     The skunk kit you rescued is obviously the offspring of one of the larger skunk beasts roaming the forest, as even as young as it obviously is, it's already the size of an average dog or perhaps even slightly larger. Peppy stares up at you adoringly however, with love in his eyes for his savior, exploring the world around it with the innocence of youth. How long that innocence will last though as he grows is anyone's guess, but for now its happy skunk-like antics bring a smile to your face.";
+	if skunk kit is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 An everyturn rule:
-	if companion of Player is skunk kit:
+	if skunk kit is listed in companionList of Player:
 		if a random number between one and 20 < 4:
 			say "[one of]The scent from Peppy wafts over you strongly, causing your body to change![or]Peppy comes up to you and nuzzles you, and you find yourself changing.[or]Peppy calls out for his mother, and you find yourself filling in for her.[or]Peppy rubs up against you, his skunky smell teasing your nose with images of mature skunk beasts.[or]Peppy is startled by something and sprays the area, hitting you as well![at random]";
 			if skunkbeaststatus is 1:
@@ -362,7 +375,7 @@ An everyturn rule:
 instead of conversing the Peppy:
 	if Player is in Computer Lab and Peppy is in Computer Lab:
 		say "[PeppyTalkMenu]";
-	else if companion of Player is skunk kit:
+	else if skunk kit is listed in companionList of Player:
 		say "[PeppyTalkMenu]";
 	else:
 		say "     Peppy isn't here.";
@@ -373,7 +386,7 @@ instead of conversing skunk kit:
 	else:
 		if Player is in Computer Lab and Peppy is in Computer Lab:
 			say "[PeppyTalkMenu]";
-		else if companion of Player is skunk kit:
+		else if skunk kit is listed in companionList of Player:
 			say "[PeppyTalkMenu]";
 		else:
 			say "     Peppy isn't here.";
@@ -422,19 +435,21 @@ Section 2.3 - Skunk Kit Event
 
 Table of GameEventIDs (continued)
 Object	Name
-Lost skunk kit	"Lost skunk kit"
+Lost Skunk Kit	"Lost skunk kit"
+Lost Skunk Kit	"Lost Skunk Kit"
 
-Lost skunk kit is a situation.
-The sarea of Lost skunk kit is "Forest".
+Lost Skunk Kit is a situation.
+ResolveFunction of Lost Skunk Kit is "[ResolveEvent Lost Skunk Kit]".
+Sarea of Lost Skunk Kit is "Forest".
 when play begins:
-	add Lost skunk kit to BadSpots of FemaleList;
-	add Lost skunk kit to BadSpots of FurryList;
-	add Lost skunk kit to BadSpots of MaleList;
+	add Lost Skunk Kit to BadSpots of FemaleList;
+	add Lost Skunk Kit to BadSpots of FurryList;
+	add Lost Skunk Kit to BadSpots of MaleList;
 
 
 littlelostskunk is a number that varies.
 
-Instead of resolving Lost skunk kit:
+to say ResolveEvent Lost Skunk Kit:
 	if littlelostskunk is 0:
 		say "     Wandering through the woods, you come across what was obviously the remains of a recent combat, the ground torn and savaged, and spots of blood staining the ground, looking around you find it hard to tell exactly what happened here, but you know it was violent. You glance around to see if there is anything of use in the area, or if you can determine what the combatants were and why they fought, finding several strange boot prints and what you think might be a bullet casing, but that makes no sense... Sighing you prepare to go on about your business, when you hear a small whimpering noise from under a nearby bush. Considering the state of the area investigating could be dangerous, do you look anyways?";
 		if Player consents:
@@ -454,7 +469,7 @@ Instead of resolving Lost skunk kit:
 						sblinfect;
 					else:
 						infect "Skunk";
-					say "     (Peppy the skunk kit is now a possible companion! You can make him your active companion by typing [bold type][link]companion Peppy[end link][roman type] or [bold type][link]companion skunk kit[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+					say "     (Peppy the skunk kit is now a possible ally! You can make him your active ally by typing [bold type][link]ally Peppy[end link][roman type] or [bold type][link]ally skunk kit[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					now Resolution of Lost skunk kit is 1; [adopted the skunk]
 					now Lost skunk kit is resolved;
 				else:

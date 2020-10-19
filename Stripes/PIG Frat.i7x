@@ -18,13 +18,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Frat House	"Frat House"
 
-Frat House is a situation. The level of Frat House is 3.
-The sarea of Frat House is "Campus".
+Frat House is a situation.
+ResolveFunction of Frat House is "[ResolveEvent Frat House]". The level of Frat House is 3.
+Sarea of Frat House is "Campus".
 when play begins:
 	add Frat House to BadSpots of FemaleList;
 	add Frat House to BadSpots of FurryList;
 
-Instead of resolving a Frat House:
+to say ResolveEvent Frat House:
 	say "     Exploring the edge of campus, you can hear the raucous sounds of drunken partying happening nearby. Approaching cautiously, you find a large frat house with numerous boars, hogs and sows partying out on the lawn. All of them are carousing with beer in hand or lustfully fucking one another, or both. Despite the messy state of the pigs, there's something tempting about their carefree partying that draws your attention to watch. You find yourself a little too drawn to watch a well-hung hog fucking a squealing sow and fail to notice one of the messy pigs sneaking up on you. With a lustful squeal, she charges, trying to force herself onto you.";
 	challenge "Messy Pig";
 	say "     That over, you decide to leave before the others have a chance to investigate the commotion, leaving the Phi Iota Gamma fraternity behind. Things are just a little too busy there right now to consider approaching.";
@@ -41,7 +42,7 @@ Object	Name
 Phi Iota Gamma	"Phi Iota Gamma"
 
 Phi Iota Gamma is a room. It is fasttravel. It is private.
-The description of Phi Iota Gamma is "[phiiotagammadesc]".
+Description of Phi Iota Gamma is "[phiiotagammadesc]".
 
 the scent of Phi Iota Gamma is "The frat house smells strongly of stale beer, pigs and sex.".
 
@@ -188,8 +189,8 @@ object	name
 frat members	"frat members"
 
 frat members is a person.
-The description of frat members is "     There's a varied set of frat members and their sow girlfriends having fun in and around the frat house. Plump and messy pigs, some are drinking or having sex while others are simply lounging about or sleeping off their last bender. Most are nude, though a couple of them have a college jersey or frat sweater stretched over their rounded bodies. Despite, or perhaps because of, their messy and crude behavior, a part of you finds joining in on their fun quite appealing.".
-The conversation of frat members is { "Oink!" }.
+Description of frat members is "     There's a varied set of frat members and their sow girlfriends having fun in and around the frat house. Plump and messy pigs, some are drinking or having sex while others are simply lounging about or sleeping off their last bender. Most are nude, though a couple of them have a college jersey or frat sweater stretched over their rounded bodies. Despite, or perhaps because of, their messy and crude behavior, a part of you finds joining in on their fun quite appealing.".
+Conversation of frat members is { "Oink!" }.
 frat members is in Phi Iota Gamma.
 
 the scent of frat members is "The frat members all smell of pigs, beer and sex.".

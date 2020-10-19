@@ -25,16 +25,18 @@ to say ramdesc:
 		else:
 			now ramvar is 1;
 			cmbtshift;
-			say "     You're faced with a strong and rugged-looking ram, the horns on his head curling back intimidatingly while the horn between his legs juts proudly forward, ready to breed. [if Player is male]Judging by the look on his face as he approaches you, he doesn't seem too pleased to see you here. [one of]'Great. Another trespasser to deal with,' he says in irritation[or]'Looks like I've got to teach another punk a lesson,' he says with a wicked grin[or]'You thought you could make a move on my territory?!' he shouts[or]'There's only room for one ram in this flock,' he jeers[or]'You don't stand a chance. Might as well just run,' he mocks[at random] as he readies himself to charge[else if Player is female]With a confident swagger, the beast looks you up and down and smirks as he approaches you, [one of]'Look at you... How about you be my sexy ewe?' he asks, rubbing his crotch[or]'Oh, I need you in my flock,' he groans lowly, stroking his shaft[or]'Why don't you just give in and let me fuck you?' he asks cockily[or]'I think I'll enjoy claiming you,' he leers haughtily[or]'Come on, baby, just give in to me,' he coos[at random]as he readies himself to try and wrestle you into submission[else]Eyeing you critically, the ram stomps closer, looking ready to try and wrestle you into submission[end if]. It looks like you've got a fight on your hands!";
+			project the Figure of Ram_naked_icon;
+			say "     You're faced with a strong and rugged-looking ram, the horns on his head curling back intimidatingly while the horn between his legs juts proudly forward, ready to breed. [if Player is male]Judging by the look on his face as he approaches you, he doesn't seem too pleased to see you here. [one of]'Great. Another trespasser to deal with,' he says in irritation[or]'Looks like I've got to teach another punk a lesson,' he says with a wicked grin[or]'You thought you could make a move on my territory?!' he shouts[or]'There's only room for one ram in this flock,' he jeers[or]'You don't stand a chance. Might as well just run,' he mocks[at random] as he readies himself to charge[else if Player is female]With a confident swagger, the beast looks you up and down and smirks as he approaches you, [one of]'Look at you... How about you be my sexy ewe?' he asks, rubbing his crotch[or]'Oh, I need you in my flock,' he groans lowly, stroking his shaft[or]'Why don't you just give in and let me fuck you?' he asks cockily[or]'I think I'll enjoy claiming you,' he leers haughtily[or]'Come on, baby, just give in to me,' he coos[at random] as he readies himself to try and wrestle you into submission[else]Eyeing you critically, the ram stomps closer, looking ready to try and wrestle you into submission[end if]. It looks like you've got a fight on your hands!";
 	else:
 		now ramvar is 1;
 		cmbtshift;
+		project the Figure of Ram_naked_icon;
 		say "     You're faced with a strong and rugged-looking ram, the horns on his head curling back intimidatingly while the horn between his legs juts proudly forward, ready to breed. [if Player is male]Judging by the look on his face as he approaches you, he doesn't seem too pleased to see you here. [one of]'Great. Another trespasser to deal with,' he says in irritation[or]'Looks like I've got to teach another punk a lesson,' he says with a wicked grin[or]'You thought you could make a move on my territory?!' he shouts[or]'There's only room for one ram in this flock,' he jeers[or]'You don't stand a chance. Might as well just run,' he mocks[at random] as he readies himself to charge[else if Player is female]With a confident swagger, the beast looks you up and down and smirks as he approaches you, [one of]'Look at you... How about you be my sexy ewe?' he asks, rubbing his crotch[or]'Oh, I need you in my flock,' he groans lowly, stroking his shaft[or]'Why don't you just give in and let me fuck you?' he asks cockily[or]'I think I'll enjoy claiming you,' he leers haughtily[or]'Come on, baby, just give in to me,' he coos[at random]as he readies himself to try and wrestle you into submission[else]Eyeing you critically, the ram stomps closer, looking ready to try and wrestle you into submission[end if]. It looks like you've got a fight on your hands!";
 
 to cmbtshift:
 	let debit be 0;
 	choose row MonsterID from the Table of Random Critters;
-	if hardmode is true and level of Player > 6, let debit be level of Player - 6;
+	if HardMode is true and level of Player > 6, let debit be level of Player - 6;
 	now HP entry is 50 + ( debit * 4 );
 	now monsterHP is HP entry;
 	now lev entry is 6 + debit;
@@ -257,8 +259,8 @@ to say subramsex2: [Get blown]
 Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -310,9 +312,13 @@ When Play begins:
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	now libido entry is 30;
+	now SeductionImmune entry is false;
+	now libido entry is 40;
 	now loot entry is "tainted wool";
 	now lootchance entry is 40;
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscled[or]stocky[at random]";
 	now type entry is "ovine";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -327,7 +333,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -431,9 +437,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "tainted wool"	"A small bundle of rough wool you found in the city, strangely enough, it has a rather pleasant musky scent coming from it."	1	tainted wool
 
-tainted wool is a grab object. It is part of the player.
+tainted wool is a grab object.
 
-The usedesc of tainted wool is "[taintedwooleffect]";
+Usedesc of tainted wool is "[taintedwooleffect]";
 
 to say taintedwooleffect:
 	say "You take out the small bundle of wool you acquired earlier, and your head swims slightly as your nose fills with its strong musky odor. Feeling a bit aroused by the strange scent, you slowly start to rub the wool up against your cheek in order to enjoy the smell better. The feeling of the soft wool rubbing against your body, as well as the arousing aroma, make you lose track of time for a minute, until you realize you can feel your body starting to change.";
@@ -461,7 +467,7 @@ This is the Ram Infection rule:
 		if Libido of Mary > 0:
 			if humanity of Player < 10:
 				if Player is male:
-					say "     Your mind giving out under the strain of the infection, you head out into the city, Mary following along like a good little ewe. You quickly set about finding more members to convert to your flock, increasing your numbers for a time and protecting the trail of Ewes following you. Unfortunately you aren't alone in the city and are beset on all sides by different predators and infected until finally you and your small flock are captured by a group of hyenas. At first it is somewhat disconcerting to be surrounded by predators, but soon you realize it isn't all bad. As the only male you are indispensable to them, and you are kept in some comfort, your only duty is to breed the Ewes all day and relax. Eventually you don't even mind one or two of your flock disappearing every now and then, and you even come to enjoy being sheared...";
+					say "     Your mind giving out under Strain of the infection, you head out into the city, Mary following along like a good little ewe. You quickly set about finding more members to convert to your flock, increasing your numbers for a time and protecting the trail of Ewes following you. Unfortunately you aren't alone in the city and are beset on all sides by different predators and infected until finally you and your small flock are captured by a group of hyenas. At first it is somewhat disconcerting to be surrounded by predators, but soon you realize it isn't all bad. As the only male you are indispensable to them, and you are kept in some comfort, your only duty is to breed the Ewes all day and relax. Eventually you don't even mind one or two of your flock disappearing every now and then, and you even come to enjoy being sheared...";
 				else:
 					say "     Your mind beginning to fray at the edges, you head back to the store where Mary is waiting for you. Without the makings of a real ram, you aren't quite able to form a flock of your own with your friendly little ewe, fortunately though, Mary has a plan for you both. Taking advantage of your increased strength, the two of you head out into the city together, your dimly recalled familiarity with the city, as well as Mary's expertise in scavenging serving you well as you look for a safe location to set up. Eventually finding a suitable spot, the two of you set out to trap yourselves a nice ram or two for you both to share. It isn't long before you have one of those rams wandering around without a flock trussed up and protesting in your new hideout, the two of you easily able to overpower his surprised form. His protesting stops quickly however, when he realizes that the two of you need a nice male like him for your flock, and he resolves to do his duty eagerly. He is somewhat surprised to find himself relegated to the role of a breeding stud, the two of you visiting him whenever the urge strikes you, and ignoring him otherwise. Your strength protecting the small flock instead of his, while Mary's smarts helps your small group survive in the dangerous city, while he warms both of your beds at night. Your lust fogged mind is happy to have found such a lovely flock to be a part of, as you cuddle happily up against Mary the two of you spending plenty of lustful time together without your new ram, even as she makes plans for the soldiers which are sure to come soon... and you feel a smile stretching your sheep-like muzzle as you realize your flock will probably be growing larger very soon indeed.";
 			else:

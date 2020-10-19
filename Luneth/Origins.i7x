@@ -9,8 +9,8 @@ name	desc	weight	object
 "video camera"	"The video camera you found while out exploring the city. While taking a closer look at it, you can read on the side that it's a Lunon XITOH HV30 MiniDV High Definition Camcorder. This should be able to play pretty much anything you can find in your travels."	1	video camera
 
 video camera is a grab object.
-the usedesc of video camera is "[VideoCameraUse]".
-It is part of the player.
+Usedesc of video camera is "[VideoCameraUse]".
+
 It is not temporary.
 
 instead of sniffing video camera:
@@ -26,9 +26,10 @@ Object	Name
 Lost Camera	"Lost Camera"
 
 Lost Camera is a situation.
-the sarea of Lost Camera is "Outside".
+ResolveFunction of Lost Camera is "[ResolveEvent Lost Camera]".
+Sarea of Lost Camera is "Outside".
 
-instead of resolving a Lost Camera:
+to say ResolveEvent Lost Camera:
 	say "     While exploring the outskirts of the city, you spot a video camera in the middle of the trash-strewn street. It's covered in a strange, sticky juice that has a very potent smell reminding you of some of the creatures that you have encountered in heat. Grabbing a crumpled newspaper you use it to give the it a quick wipe-down. The camera itself is actually in pretty good condition all things considered, but the view-screen on the side has a slight crack in the left hand corner. Experimentally turning the camera on shows that is still in working order regardless, the screen indicating that there is a tape inside. Maybe that'll provide some clues on how the device came to lie where you found it...";
 	LineBreak;
 	say "     [bold type]Do you want to watch the tape right away?[roman type][line break]";

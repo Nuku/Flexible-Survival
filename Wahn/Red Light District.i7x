@@ -10,7 +10,7 @@ Entrance to the Red Light District	"Entrance to the Red Light District"
 
 Entrance to the Red Light District is a room. It is fasttravel.
 The earea of Entrance to the Red Light District is "Red".
-The description of Entrance to the Red Light District is "[RedLightDesc]".
+Description of Entrance to the Red Light District is "[RedLightDesc]".
 
 after looking while player is in Entrance to the Red Light District:
 	if findwires < 2 and fixedgens < 3:
@@ -36,7 +36,7 @@ Boundary Street East	"Boundary Street East"
 Boundary Street East is a room.
 Boundary Street East is east of Entrance to the Red Light District.
 The earea of Boundary Street East is "Red".
-The description of Boundary Street East is "[RedLightBoundaryEastDesc]".
+Description of Boundary Street East is "[RedLightBoundaryEastDesc]".
 
 after looking while player is in Boundary Street East:
 	if findwires < 2 and fixedgens < 3:
@@ -57,7 +57,7 @@ Dingy Alley	"Dingy Alley"
 Dingy Alley is a room.
 Dingy Alley is north of Boundary Street East.
 The earea of Dingy Alley is "Red".
-The description of Dingy Alley is "[DingyAlleyDesc]";
+Description of Dingy Alley is "[DingyAlleyDesc]";
 
 after looking while player is in Dingy Alley:
 	if findwires < 2 and fixedgens < 3:
@@ -74,7 +74,7 @@ Burned-Out Chapel	"Burned-Out Chapel"
 
 Burned-Out Chapel is a room. It is fasttravel.
 Burned-Out Chapel is east of Boundary Street East.
-The description of Burned-Out Chapel is "[chapelplacedesc]".
+Description of Burned-Out Chapel is "[chapelplacedesc]".
 earea of Burned-Out Chapel is "Red".
 
 after looking while player is in Burned-Out Chapel:
@@ -109,7 +109,7 @@ after looking while player is in Sacristy:
 	else:
 		project the Figure of Map_RedLight_1_icon;
 
-The description of Sacristy is "     This sacristy has been... redecorated recently. You're pretty sure it didn't originally have red silk drapes and a large bed, currently bathed in the light of about a hundred candles. There's a fire going in a brazier with a large stack of bibles beside it to provide additional fuel. In between various dildos and sex toys strewn about on the bed, there's a golden chalice and a few crosses, which got used for the same purpose as the rest, from their sticky state...".
+Description of Sacristy is "     This sacristy has been... redecorated recently. You're pretty sure it didn't originally have red silk drapes and a large bed, currently bathed in the light of about a hundred candles. There's a fire going in a brazier with a large stack of bibles beside it to provide additional fuel. In between various dildos and sex toys strewn about on the bed, there's a golden chalice and a few crosses, which got used for the same purpose as the rest, from their sticky state...".
 
 instead of sniffing Sacristy:
 	say "The heavy scent of burned wood hangs in the room, mixed with a trace of blood and [if HP of Elijah is 100]the all-pervading stench of [end if]demonic cum.";
@@ -120,7 +120,7 @@ Darius's Crib	"Darius's Crib"
 
 Darius's Crib is a room.
 Darius's Crib is southeast of Boundary Street East. It is sleepsafe.
-The description of Darius's Crib is "[DariusCribDesc]".
+Description of Darius's Crib is "[DariusCribDesc]".
 
 after looking while player is in Darius's Crib:
 	if findwires < 2 and fixedgens < 3:
@@ -131,7 +131,7 @@ after looking while player is in Darius's Crib:
 to say DariusCribDesc:
 	say "     Having passed through a short hallway after entering this building and walking past one door that is literally only held up by crime scene tape gluing it to its frame, you're in one of the other apartments of the building now. Or maybe two, as someone has knocked a large hole through the wall of next apartment. All in all, the place has a dingy and run-down feel to it and seems not particularly well cleaned up. Numerous mattresses lie on the floor, often stained by sexual fluids, and you can hear the barking of dog cubs from somewhere deeper in the other apartment. The kitchen counter seems to be where he lays out his stuff to sell, judging from a sign attached to it.";
 
-The Darius's Inventory is a backdrop. It is in Darius's Crib. The description of the Darius's Inventory is "[Darius's Inventory List]".
+The Darius's Inventory is a backdrop. It is in Darius's Crib. Description of the Darius's Inventory is "[Darius's Inventory List]".
 
 to say Darius's Inventory List:
 	if Darius is visible: [he's in right now]
@@ -146,7 +146,7 @@ to say Darius's Inventory List:
 	else:
 		say "     A handwritten sign on the kitchen counter tells you that you need to pay with food for anything you want, but it seems that Darius put away his stash before leaving the house. You'll have to wait till he is back if you want to buy something.";
 
-table of Darius Inventory
+Table of Darius Inventory
 name	price	object	allowed
 "bliss tablet"	1	bliss tablet	true rule
 "powerup tablet"	2	powerup tablet	true rule
@@ -161,7 +161,7 @@ Boundary Street West	"Boundary Street West"
 Boundary Street West is a room.
 Boundary Street West is west of Entrance to the Red Light District.
 The earea of Boundary Street West is "Red".
-The description of Boundary Street West is "[RedLightBoundaryWestDesc]".
+Description of Boundary Street West is "[RedLightBoundaryWestDesc]".
 
 after looking while player is in Boundary Street West:
 	if findwires < 2 and fixedgens < 3:
@@ -182,7 +182,7 @@ Northern Street 1	"Northern Street 1"
 Northern Street 1 is a room.
 Northern Street 1 is north of Entrance to the Red Light District.
 The earea of Northern Street 1 is "Red".
-The description of Northern Street 1 is "[RedLightNorthStreet1Desc]".
+Description of Northern Street 1 is "[RedLightNorthStreet1Desc]".
 
 after looking while player is in Northern Street 1:
 	if findwires < 2 and fixedgens < 3:
@@ -203,7 +203,7 @@ Northern Street 2	"Northern Street 2"
 Northern Street 2 is a room.
 Northern Street 2 is north of Northern Street 1.
 The earea of Northern Street 2 is "Red".
-The description of Northern Street 2 is "[RedLightNorthStreet2Desc]".
+Description of Northern Street 2 is "[RedLightNorthStreet2Desc]".
 
 after looking while player is in Northern Street 2:
 	if findwires < 2 and fixedgens < 3:
@@ -224,7 +224,7 @@ Crimson Street	"Crimson Street"
 Crimson Street is a room.
 Crimson Street is northeast of Northern Street 2.
 The earea of Crimson Street is "Red".
-The description of Crimson Street is "[RedLightCrimsonStreetDesc]".
+Description of Crimson Street is "[RedLightCrimsonStreetDesc]".
 
 after looking while player is in Crimson Street:
 	if findwires < 2 and fixedgens < 3:

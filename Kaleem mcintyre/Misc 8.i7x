@@ -8,12 +8,13 @@ Object	Name
 Old Tale	"Old Tale"
 
 Old Tale is a situation.
-The sarea of Old Tale is "High".
+ResolveFunction of Old Tale is "[ResolveEvent Old Tale]".
+Sarea of Old Tale is "High".
 When play begins:
 	Add Old Tale to BadSpots of FurryList;
 	Add Old Tale to BadSpots of MaleList;
 
-Instead of resolving a Old Tale:
+to say ResolveEvent Old Tale:
 	say "     As you walk through the high rises district, you come across a large black feral wolf with a cross-shaped scar across its chest sitting down and scratching at its left ear. While not very strange a thing to see with the city the way it is the sight of the black wolf's companion, a smaller auburn wolf with a bracelet wrapped around its left front paw, nuzzling and licking at the large wolf while prancing around like mad really took the cake. The large wolf doesn't seem to mind the other's antics as he wrinkles his muzzle while letting his long tail sweep behind him playfully.";
 	say "     When the smaller auburn wolf stops suddenly with its nose touching the black wolf's, you take a step back in shock as you watch the smaller lupine turn around and then present [']himself['] to the larger male. The black wolf doesn't take much time to hesitate as he sniffs the upturned tail of the smaller male and then climbs up onto the submissive wolf's backside. When the black wolf begins to thrusts into the other, the hard slaps of thighs against thighs echoing loudly in your ears, you decide that now would be a good time to leave.";
 	increase score by 1;
@@ -27,9 +28,10 @@ Object	Name
 Peace	"Peace"
 
 Peace is a situation.
-The sarea of Peace is "Plains".
+ResolveFunction of Peace is "[ResolveEvent Peace]".
+Sarea of Peace is "Plains".
 
-Instead of resolving a Peace:
+to say ResolveEvent Peace:
 	say "     Jogging across the plains, you come across a large bipedal blue and white furred wolf meditating in the middle of an orangish-yellow patch of grass. From the look of the other, with his imposing physique, strong jawline, rich azure and ivory furry and yellow belt strapped around his waist, the strange wolf seems to be oddly out of place given the normal mutants that roam the plains. Not that there was anything wrong with being odd, especially given the fact that this [']is['] a crossed legged blue and white lupine you're seeing after all.";
 	say "     Not having a reason to bother the other you simply continue to watch the wolf for several more minutes. When a sudden strong breeze causes the odd colored lupine's long and fluffy tail to start to sway behind him you find yourself chuckling at the peaceful smirk that draws itself up across the wolf's muzzle. When you feel that you've spent enough time watching the other you turn around and then head off in another direction to continue on your journey. Making your way about your business, you fail to note a golden pair of eyes looking at where you are going as the wolf cracks its eyelids open to track your movements.";
 	SanBoost 10;
@@ -44,9 +46,10 @@ Object	Name
 Champion	"Champion"
 
 Champion is a situation.
-The sarea of Champion is "High".
+ResolveFunction of Champion is "[ResolveEvent Champion]".
+Sarea of Champion is "High".
 
-Instead of resolving a Champion:
+to say ResolveEvent Champion:
 	say "     While making your way the streets of the high rise district, you find yourself pausing as you come across a shadow boxing bipedal silver wolf. The graceful form of the large and slightly shaggy furred creature makes you look on in awe as you note the way the wolf is moving around while striking out at his own darkened form mimicking him against a nearby brick wall. With a pair of black jeans strapped onto his lower end and an open orange vest clinging around his back and shoulders the other doesn't seem the least bit out of sorts, given the circumstances that have taken over the city.";
 	say "     Not quite knowing what to think about this, you are taken by surprise when a large...mole wearing a martial arts uniform and a bandana across its head pops up out of nowhere after stepping out of a large cloud of smoke. Beady black eyes watch the wolf, who hasn't so much as twitched an ear at the appearance of the other. Not sure what is supposed to happen next you turn away to go about your business. You're sudden departure causes you to miss what happens next as the silver wolf turns to regard the mole and the charges for the brown furred creature with fist raised. The mole is more than ready for the challenge and ends up clashing against the silver wolf in an epic battle of claws and fists!";
 	increase XP of Player by 10;
@@ -62,12 +65,13 @@ Object	Name
 Cosplay	"Cosplay"
 
 Cosplay is a situation.
-The sarea of Cosplay is "Red".
+ResolveFunction of Cosplay is "[ResolveEvent Cosplay]".
+Sarea of Cosplay is "Red".
 When play begins:
 	Add Cosplay to BadSpots of FurryList;
 	Add Cosplay to BadSpots of MaleList;
 
-Instead of resolving a Cosplay:
+to say ResolveEvent Cosplay:
 	say "     'No, I am not going to wear either that jacket or that tacky red scarf. So just forget about it!' You find yourself stopping as these words enter into your ears just as you pass an open store front. Peeking inside you find a large gray wolf standing on the balls of his hind feet offering up something in the way of clothing to a smaller orange and white fox. 'Come on already. It's just for today,' the wolf growls. By the tone of the other's voice you can tell that wolf is male, the same as his foxy companion. 'And besides, you'd look kinda cute with this on!' The wolf's tail is wagging a mile a minute as rumbles a murr out from his throat while looking at the sexy looking vulpine.";
 	LineBreak;
 	say "     'Forget it, I'm not getting into this fetish of yours, even if we both do look like furry cosplay characters.' From the small smile that is blooming across the other's muzzle you can tell that the vulpine is wavering ever so slightly in his conviction. When the wolf tries again to get his companion to wear the clothing he had held in between his paws the fox turns to wag his long plume of a tail at the other in playful indignation. That proves to be a mistake on the vulpine's part.";
@@ -91,12 +95,13 @@ Object	Name
 Fantasy	"Fantasy"
 
 Fantasy is a situation.
-The sarea of Fantasy is "High".
+ResolveFunction of Fantasy is "[ResolveEvent Fantasy]".
+Sarea of Fantasy is "High".
 When play begins:
 	Add Fantasy to BadSpots of FurryList;
 	Add Fantasy to BadSpots of MaleList;
 
-Instead of resolving a Fantasy:
+to say ResolveEvent Fantasy:
 	say "     When a large red wolf runs pass you on all fours with a blue furred feline that's carrying a spear across its shoulder right on its trail, you can almost swear that you've seen those two somewhere before. Not really sure where you simply shrug before going about your way. That is, right before you end up coming across a massive beast of a collie standing at about twelve feet in height. The horny shemale growls happily as it looks to you and suddenly you realize what the other pair was running away from.";
 	challenge "Smooth Collie Shemale";
 	say "     With that problem taken care of, you grunt in annoyance at as you realize that video game characters must seriously have it rough if they have to deal with things like that every day.";
@@ -110,12 +115,13 @@ Object	Name
 Controversy	"Controversy"
 
 Controversy is a situation.
+ResolveFunction of Controversy is "[ResolveEvent Controversy]".
 
-The sarea of Controversy is "High".
+Sarea of Controversy is "High".
 When play begins:
 	Add Controversy to badspots of HumorousList;
 
-Instead of resolving a Controversy:
+to say ResolveEvent Controversy:
 	say "     Walking down the street you find yourself coming across a boarded up mini mart with a fat black bear wearing a long overcoat and a skinny weasel with long dirty blonde hair draped down off the side of his head bobbing their heads in time with music playing on an old fashioned boombox in between them. From what you can see the weasel is smoking on something that looks like a cigarette, but from the smell that's lingering in the air you can tell that what he's trippin['] on isn't tobacco. Finding yourself getting slightly lightheaded you walk over to the others without really knowing why.";
 	say "     As the weasel hands off the joint he's puffin['] on to the black bear you find your head nodding in time to the music that's playing on the bulky looking jam machine. The rhythm of the music is an 80[']s remix and for some reason you find yourself really getting into it. 'Yo little homie, what's up?' The weasel asks all of a sudden and you can only shake your head at him. 'S'OK. Wanna hit this one time?'";
 	say "     [bold type]Looking at the roach the bear is taking a hit of, you wonder if you should.[roman type][line break]";
@@ -164,12 +170,13 @@ Object	Name
 Dr Feel Good	"Dr Feel Good"
 
 Dr Feel Good is a situation.
-The sarea of Dr Feel Good is "Hospital". The level of Dr Feel Good is 5.
+ResolveFunction of Dr Feel Good is "[ResolveEvent Dr Feel Good]".
+Sarea of Dr Feel Good is "Hospital". The level of Dr Feel Good is 5.
 When play begins:
 	Add Dr Feel Good to BadSpots of FurryList;
 	Add Dr Feel Good to BadSpots of FemaleList;
 
-Instead of resolving a Dr Feel Good:
+to say ResolveEvent Dr Feel Good:
 	say "     Traversing the inner sanctum of the hospital, you come across a room with a pair of vixens wearing nurse uniforms muttering over something sitting on a table in between them. Stepping into the room to take a peek at what the vulpines happen to be surveying what you see makes your mouth drop open in surprise. You blink twice just to be sure that what you are looking at is real, but upon the vision not dissipating you realize that you are indeed looking at a young fennec boy staring up to the two females with something akin to uncertainty written across his light brown muzzle. The fact that the other is naked and is trying to shyly cross his legs so that his sheath isn't clearly on display gives you a clue about what's taking place here.";
 	WaitLineBreak;
 	say "     'Maybe we should try something else since that didn't work?' One of the nurses questions to her companion while giggling naughtily. 'You could be right.' The other agrees while nodding her head. 'How about we get the new serum that the doctor was working on? That might help things along quite a bit.' The youth grows still at that and from what you can see the uncertainty on his face seems to be growing into a light panic. Bizarrely enough, the fennec doesn't look as though he's going to complain about the situation he's somewhat wrapped up in. When one of the nurses goes off to fetch something the fennec turns his head to watch the gray furred vulpine with suspicious eyes.";
@@ -196,7 +203,7 @@ Instead of resolving a Dr Feel Good:
 				say "When he comes back over to you he reveals that what he went to go retrieve was a doctor's uniform, complete with the standardized coat and white pair of pants. 'Here, you can have these. I was going to use them try and sneak around in here to look for my girlfriend, but I think that these will work out better for you.";
 				WaitLineBreak;
 				say "     Shoving the coat and pants into your [BodyName of Player] hands, the youth gives you a shaky smile and then hurries around side of you to run out of the room at top speeds. Turning to watch the other go you wonder how many more people in this city are [']missing['] like that fennec's girlfriend.";
-				now carried of doctor's uniform is 1;
+				ItemGain doctor's uniform by 1;
 				Increase score by 10;
 				now Dr Feel Good is resolved;
 				now Resolution of Dr Feel Good is 1; [fought & won]

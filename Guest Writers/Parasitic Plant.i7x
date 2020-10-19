@@ -85,7 +85,7 @@ to say PlantOrSeedRegular:
 	say "[submitcheck]";
 	let debit be 0;
 	if peachtreefight is 3:
-		if hardmode is true and level of Player > 7, let debit be level of Player - 7;
+		if HardMode is true and level of Player > 7, let debit be level of Player - 7;
 		now dex entry is 16 + ( debit + 2 / 5 );
 		now HP entry is 60 + ( debit * 5 );
 		now monsterHP is 60 + ( debit * 5 );
@@ -93,7 +93,7 @@ to say PlantOrSeedRegular:
 		now wdam entry is 7 + ( ( 2 * debit ) / 5 );
 		say "     This strange plant has spread its vines through the branches of the peach tree and bonded itself to it. You, as many others probably been before, were lured in by the temptation presented by the juicy fruit. The sweet scent of peaches accompanies the dribbling juices that leak from the tips of the vines. The tendril inside you pulses and throbs as those in the tree come down to restrain you so it may complete its tentacular assault upon you. You'll need to break free of the vine locked inside you if you are to escape.";
 	else: [regular park plant]
-		if hardmode is true and level of Player > 4, let debit be level of Player - 4;
+		if HardMode is true and level of Player > 4, let debit be level of Player - 4;
 		now dex entry is 16 + ( ( debit + 4 ) / 5 );
 		now HP entry is 40 + ( debit * 4 );
 		now monsterHP is 40 + ( debit * 4 );
@@ -126,8 +126,8 @@ to say didnotsubmit:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -149,7 +149,7 @@ When Play begins:
 	now desc entry is "[PlantOrSeed]"; [ Description of the creature when you encounter it.]
 	now face entry is "beautiful, feminine face with vine-like hair and a vertical slit, looking much like a very wet pussy, replacing your mouth"; [ Face description, format as "Your face is (your text)"]
 	now body entry is "undeniably feminine with root-like legs, your needy cunt exuding a musky substance meant to attract males"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]green plant-like[or]beautiful plant-like[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]green plant-like[or]beautiful plant-like[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "A very moist vagina replaced your anus, concealed by a dress made of long petals which extend down to the floor."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[if looknow is 1]tentacle[else][one of]vine-like[or]tentacle[or]green tendril[at random][end if]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "as long tendrils covered with leaves sprout like long green hair. A strange sensation spreads through your mouth as it seals up and your teeth disappear. A new slit forms just below your nose, ending at your chin, leaving you with a vagina for a mouth. It feels moist and fills your mind with an unending need for cum! At the same time, your face becomes rounder, and more feminine"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -177,9 +177,13 @@ When Play begins:
 	now Cunt Count entry is 3; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 15; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 5; [ Width of female sex infection will try and give you ]
-	now libido entry is 40; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "musky cock flower";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "feminine";
 	now type entry is "plant";
@@ -194,7 +198,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -310,11 +314,11 @@ this is the ppstrike rule: [possible sonic attack and sets upcoming strike]
 	else:
 		choose row MonsterID from the Table of Random Critters;
 		now ppatt is false;
-		let the defense bonus be stamina of the player + ( level of Player * 2 ) - 10;
+		let the defense bonus be Stamina of Player + ( level of Player * 2 ) - 10;
 		if gascloud > 0, decrease gascloud by 1;
 		let the attack bonus be sta entry + ( lev entry * 2 ) - 10;
 		let the combat bonus be attack bonus minus defense bonus;
-		if hardmode is true:
+		if HardMode is true:
 			if the combat bonus > 19:
 				now combat bonus is 19;
 			else if the combat bonus < -22:
@@ -338,7 +342,7 @@ this is the ppattack rule:
 		standardhit;
 	else:
 		let dam be ( ( wdam entry times a random number from 80 to ( 120 + lev entry ) ) / 100 );
-		if hardmode is true and a random chance of 1 in 10 succeeds:
+		if HardMode is true and a random chance of 1 in 10 succeeds:
 			now dam is (dam * 150) divided by 100;
 			say "The plant pulses and writhes energetically - Critical Hit!";
 		say "[didnotsubmit][one of]The bulb inside of you inflates suddenly, causing your belly to expand due to its size[or]The vine inside you wriggles and squirms in an arousing manner[or]The knot inside you pulses as the plant spurts a mind numbing fluid that makes you more aroused[at random]! You take [special-style-2][dam][roman type] damage and grow more aroused!";
@@ -349,7 +353,7 @@ this is the ppattack rule:
 			now absorb is dam;
 		if absorb > 0:
 			say "You prevent [special-style-1][absorb][roman type] damage!";
-		decrease HP of the player by dam;
+		decrease HP of Player by dam;
 		increase HP of Player by absorb;
 		let libinc be a random number between 1 and dam;
 		if "Horny Bastard" is listed in feats of Player, increase libinc by 1;
@@ -372,7 +376,7 @@ name	desc	weight	object
 
 musky cock flower is a grab object.
 musky cock flower has a usedesc "[facerape use]".
-musky cock flower is infectious. The strain of musky cock flower is "Parasitic Plant".
+musky cock flower is infectious. Strain of musky cock flower is "Parasitic Plant".
 
 instead of sniffing musky cock flower:
 	say "The strange blossom smells strongly of cum and male musk.";
@@ -498,11 +502,11 @@ to say parasiticlust:
 			decrease the score by 3;
 			if Player is kinky:
 				say "With your deep, lustful hunger sated for the moment, you massage your abused holes and lick your cum-covered lips. Now that was a good fucking session!";
-				increase the morale of the player by 5;
+				increase Morale of Player by 5;
 				now Libido of Player is (Libido of Player) / 2;
 			else:
 				say "Your deep, lustful hunger sated for the moment, you feel ashamed and depressed for what you have done.";
-				decrease the morale of the player by a random number from 5 to 10;
+				decrease Morale of Player by a random number from 5 to 10;
 				now Libido of Player is 0;
 		else if Libido of Player > 90:
 			increase timetillrampage by 1;

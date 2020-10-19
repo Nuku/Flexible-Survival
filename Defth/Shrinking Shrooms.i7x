@@ -5,14 +5,16 @@ Section 1 - Event
 
 Table of GameEventIDs (continued)
 Object	Name
-Mushroom cave	"Mushroom cave"
+Mushroom Cave	"Mushroom Cave"
+Mushroom Cave	"Mushroom cave"
 
-Mushroom cave is a situation.
-The sarea of Mushroom cave is "Outside".
+Mushroom Cave is a situation.
+ResolveFunction of Mushroom Cave is "[ResolveEvent Mushroom Cave]".
+Sarea of Mushroom Cave is "Outside".
 
 MushroomCaveVisited is a number that varies. MushroomCaveVisited is usually 0
 
-Instead of resolving a Mushroom cave:
+to say ResolveEvent Mushroom Cave:
 	if MushroomCaveVisited is 0: [first visit]
 		say "     Stepping inside the dark alley, you find yourself drawn to a green glow at the end of it, a peculiar scene, even for the place that you are in. There is an opening in the side of one of the buildings flanking the alley. Looking through the hole in the wall, you realize that the rest of the building has mostly collapsed and is nothing more but rubble, and you're standing at the entrance of a small 'cave' in the pile. Entering this 'cave', you find something like a mini-forest in there. Some, if not all, of the plants there are miniature versions of the same ones that you would find outside. Even some inanimate items like garbage dumpsters and trash cans lying outside of the cave and in the alley have shrunk. Right through the middle of this whole ecosystem, a river flows, feeding the amazing sight with life. It is but a trickle of goop to you, but it's a mighty flow to the tiny forest. Glowing with an otherworldly green color, it slowly flows from an opening in the rubble and unloads down a sewer drain a short while later. It is possible that this is some kind of radioactive leak from inside the destroyed building, and with the touch of the nanites, it was made into a shrinking concoction. Looking at the green river, you spot some mushrooms growing near the sewer that don't appear to be tiny like all of the other stuff, but they still glow faintly with that green color. The shrooms probably absorbed the features of both the radioactive stuff and the nanites.";
 		say "     [bold type]Do you pick some of the mushrooms?[roman type][line break]";
@@ -50,7 +52,7 @@ name	desc	weight	object
 
 glowing mushroom is a grab object. It is temporary.
 
-The usedesc of glowing mushroom is "[glowing mushroom use]".
+Usedesc of glowing mushroom is "[glowing mushroom use]".
 
 To say glowing mushroom use:
 	say "     You quickly shrink, your body getting smaller and smaller by the second. Meanwhile, the clothes and gear you carry stay the same size, quickly outgrowing your diminishing stature. Looking at the now giant world with awe, you wonder how you will be able to survive while being small as a mouse. And should you just leave your equipment behind? Not seeing too much hope for making it far like this, you decide to wait. Thankfully, after some time, you feel yourself growing back to normal. Looks like the effects weren't permanent - this time, at least.";
@@ -64,16 +66,18 @@ Section 3 - Events
 
 Table of GameEventIDs (continued)
 Object	Name
-Hungry dog	"Hungry dog"
+Hungry Dog	"Hungry Dog"
+Hungry Dog	"Hungry dog"
 
-Hungry dog is a situation.
-The sarea of Hungry dog is "Outside".
+Hungry Dog is a situation.
+ResolveFunction of Hungry Dog is "[ResolveEvent Hungry Dog]".
+Sarea of Hungry Dog is "Outside".
 When play begins:
 	add Hungry dog to BadSpots of FurryList;
 	add Hungry dog to BadSpots of MaleList;
 	add Hungry dog to badspots of VoreList;
 
-Instead of resolving a Hungry dog:
+to say ResolveEvent Hungry Dog:
 	if vorelevel > 2:
 		say "     While exploring the nanite-infested city you hear some noises coming from an alley beside you. You turn around, trying your best to peek stealthily into the alley. Inside, you find what appears to be a giant, anthro German shepherd gorging himself with... some kind of food. By his side, you see a pile of clothes tossed carelessly aside. Most of them look like ordinary clothes, but there are some camo pattern uniforms in the mix, and they are all stained with what appears to be blood. This is weird - none of the German shepherds you found hunting in the city were wearing anything. Why would this one have clothes, or even take them off while he eats?";
 		say "     Oh god! Your legs tremble with the sudden realization, and you almost lose your breath. It can't be! He is eating someone!? Almost as if sniffing your fear, the beast puts his muzzle to the air and starts to turn around...";
@@ -151,17 +155,19 @@ Instead of resolving a Hungry dog:
 
 Table of GameEventIDs (continued)
 Object	Name
-Little trouble	"Little trouble"
+Little Trouble	"Little trouble"
+Little Trouble	"Little Trouble"
 
-Little trouble is a situation.
-The sarea of Little trouble is "Outside".
+Little Trouble is a situation.
+ResolveFunction of Little Trouble is "[ResolveEvent Little Trouble]".
+Sarea of Little Trouble is "Outside".
 When play begins:
 	add Little trouble to BadSpots of FurryList;
 	add Little trouble to BadSpots of MaleList;
 	add Little trouble to BadSpots of FemaleList;
 	add Little trouble to badspots of VoreList;
 
-Instead of resolving Little trouble:
+to say ResolveEvent Little Trouble:
 	say "     While exploring the city and wandering through an alley, you find a small hole at the foot of one of the two walls flanking you. The building it belongs to looks oriental in decoration. There are some banners with Chinese letters hanging on poles from the upper stories, but they're hard to read since the colors are pretty faded. The rest of the wall you're standing in front of is painted with some red and gold design across it. Upon hearing some noises from inside the building, you decide to crouch down and take a peek. You can't see much of what is going on inside, but clearly, something is making rhythmic banging noises in there.";
 	WaitLineBreak;
 	say "What do you want to do?";

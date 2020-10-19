@@ -22,7 +22,7 @@ Dirty Alley	"Dirty Alley"
 
 Dirty Alley is a room.
 Dirty Alley is east of Smith Haven Mall Lot East.
-The description of Dirty Alley is "[DirtyAlleyDesc]".
+Description of Dirty Alley is "[DirtyAlleyDesc]".
 
 to say DirtyAlleyDesc:
 	say "     Dumpsters and trash bags litter the floor, with most of the back-alley next to the mattress store turned brothel being coated in a layer of grime. Corrugated metal fire escapes on both sides block most of the light that might be falling into the narrow alley otherwise, shrouding everything in half-shadow. Despite all this, it seems like someone has made the place their home. In a corner formed between a fence closing the end of the alley, a dumpster and the side wall of the Shag Shack, there is an improvised bedding arrangement. A wooden pallet forms the base, apparently piled with numerous plastic bags full of packing peanuts, bubble wrap and all sorts of other material to create a lumpy and uneven mattress. Some salvaged blankets cover the jumbled mess and a frayed, unkempt duvet cover completes the picture of homeless squalor. A crumpled plastic tarp next to it seems to be held ready for when it may rain.";
@@ -73,8 +73,8 @@ Sterile of Blake is false. [steriles can't knock people up]
 MainInfection of Blake is "Brown Rat Male".
 
 Blake is in Dirty Alley.
-The description of Blake is "[BlakeDesc]".
-The conversation of Blake is { "Mew!" }.
+Description of Blake is "[BlakeDesc]".
+Conversation of Blake is { "Mew!" }.
 
 to say BlakeDesc:
 	if debugactive is 1:
@@ -323,7 +323,7 @@ to say BlakeCounterstrike:
 				WaitLineBreak;
 				say "     You just concentrate on taking as much pleasure as you can from Blake, pumping in and out of him, then sometimes switching over to lying on top of his slender form and just grinding yourself against his ass. It's a pleasant little ride on the tied-up guy, his state as your captive leaving you all the time you want to savor using him. Eventually, you feel the familiar urge to cum rise in your balls, at which point you pull out all the way and watch his abused hole gape open for a second before pulling shut again. And that is just the moment in which you thrust into him with all your might, bottoming out in his tight ass. He writhes under you from the sudden penetration muscles twitching wildly, which pushes you over the edge a heartbeat later. Grunting, you erupt into his depths, flooding the trash rat with your seed and staking your claim of ownership on him.";
 				NPCSexAftermath Blake receives "AssFuck" from Player;
-				say "Definitively worth selling tickets for,' Juergen gives his verdict, then raises a hand to thoughtfully stroke his beard. 'Which of course means we need someone to keep an eye on him so he doesn't get stolen, and to feed the asshole too, I guess. Just a moment, I'll be right back with the guy I have in mind for this.' Walking off in the direction of the mall, the moose returns not quite ten minutes later with a male wolverine following him. [if PlayerMet of Logan is false]The tag 'Logan' on his uniform shirt tells you his name, as the mustelid doesn't bother to do so himself, only acknowledging you with a casual, [else]You recognize him as Logan, the outcast of wolverine security, permanently put on duty outside the Smith Haven Mall building. The mustelid nods to you in recognition and says, [end if]'What's up? This over here your new slut?'";
+				say "     'Definitively worth selling tickets for,' Juergen gives his verdict, then raises a hand to thoughtfully stroke his beard. 'Which of course means we need someone to keep an eye on him so he doesn't get stolen, and to feed the asshole too, I guess. Just a moment, I'll be right back with the guy I have in mind for this.' Walking off in the direction of the mall, the moose returns not quite ten minutes later with a male wolverine following him. [if PlayerMet of Logan is false]The tag 'Logan' on his uniform shirt tells you his name, as the mustelid doesn't bother to do so himself, only acknowledging you with a casual, [else]You recognize him as Logan, the outcast of wolverine security, permanently put on duty outside the Smith Haven Mall building. The mustelid nods to you in recognition and says, [end if]'What's up? This over here your new slut?'";
 				say "     As Juergen nods, Logan moves over to Blake and crouches in front of him, then pushes a finger into the rat's abused asshole and starts to finger it. Brushing against his prostate makes the street rat groan into his ball-gag and writhe on the bed a little, which draws a rough chuckle from the wolverine. 'Not bad,' he comments, then wipes his slick finger off in Blake's fur and stands up again. Glancing at Juergen and yourself, Logan clears his throat and then says, 'So, three way split of the profits?'";
 			if calcnumber is 2: [Juergen fucks]
 				LineBreak;

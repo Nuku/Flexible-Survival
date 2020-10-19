@@ -8,14 +8,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Wolfrape	"Wolfrape"
 
-Wolfrape is a situation. The level of Wolfrape is 16.
-The sarea of Wolfrape is "Capitol".
+Wolfrape is a situation.
+ResolveFunction of Wolfrape is "[ResolveEvent Wolfrape]". The level of Wolfrape is 16.
+Sarea of Wolfrape is "Capitol".
 when play begins:
 	add Wolfrape to badspots of HermList;
 	add Wolfrape to BadSpots of FemaleList;
 	add Wolfrape to BadSpots of FurryList;
 
-Instead of resolving Wolfrape:
+to say ResolveEvent Wolfrape:
 	say "     While searching the city, you hear sounds of both ecstasy and agony floating from a nearby alleyway. Cautiously, you approach and peer inside. An anthro white wolf female has been caught and pinned by one of the herm drakes. The demonic features of the reptile herm contrast the clean, pure coloration of the white wolf woman. The wolf's blouse is ripped into tatters as her captor's sharp claws digs into her shoulders to keep her restrained, leaving the wolf woman to only be able to pitifully to be spared as the dragon-creature drills into her from behind.";
 	say "     You could try to help the poor wolf, but dare you face such a formidable creature? [if level of Player < 10]It seems like a terribly vicious and dangerous beast. [end if]The lustful ebonflame drake continues thrusting, drilling its cock into her painfully, its excitement growing. If you plan to help her, you'd best do it now.";
 	say "     [bold type]Shall you intervene?[roman type][line break]";
@@ -59,7 +60,7 @@ Object	Name
 Office Den	"Office Den"
 
 Office Den is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Office Den is "[officedendesc]".
+Description of Office Den is "[officedendesc]".
 
 the scent of Office Den is "[blancheupdate]Unlike the air outside, it's mostly free of the smell of soot and ash. There is a strong, lupine smell in the air from Blanche[if HP of Blanche >= 7] and the others[end if]."
 
@@ -85,8 +86,8 @@ object	name
 Blanche	"Blanche"
 
 Blanche is a woman. Blanche is in Office Den.
-The description of Blanche is "[blanchedesc]".
-The conversation of Blanche is { "Thanks." }.
+Description of Blanche is "[blanchedesc]".
+Conversation of Blanche is { "Thanks." }.
 the fuckscene of Blanche is "[sexwithBlanche]".
 the scent of Blanche is "[blancheupdate]She smells of wolf and half-hidden arousal."
 The icon of blanche is Figure of Blanche1_icon.

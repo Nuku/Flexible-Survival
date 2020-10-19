@@ -82,8 +82,8 @@ to say BeatTheBehemoth:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -134,9 +134,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 16; [ Depth of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 10; [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 90; [ Target libido the infection will rise towards. ]
+	now SeductionImmune entry is false;
+	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is "behemoth horn"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]indomitable[or]ginormous[or]monstrous[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "bestial"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -151,7 +155,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -258,12 +262,12 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "behemoth horn"	"A large piece of a behemoth's horn that was knocked off during battle."	1	  behemoth horn
 
-behemoth horn is a grab object. It is part of the player. Understand "horn" as behemoth horn. behemoth horn is infectious. The strain of behemoth horn is "Behemoth".
+behemoth horn is a grab object. Understand "horn" as behemoth horn. behemoth horn is infectious. Strain of behemoth horn is "Behemoth".
 
 instead of sniffing behemoth horn:
 	say "     The scent coming from the behemoth horn is heavy with musk, both male and female, and some filled with pride.";
 
-The usedesc of behemoth horn is "Taking the behemoth horn and rolling it around inside of your hand you find you have the sudden strange urge to place the onyx piece of bone up against your skull. Not seeing any reason why you shouldn't, you place the horn on top of your head, right between your scalp and forehead. When nothing immediately happens you shrug and think nothing more of it, but when you remove your hand and then horn continues to stay in place realize that something is about to happen to you. The onset of a throbbing in your skull and at your backside are definitely clues towards this assumption as you find yourself grunting somewhat in discomfort as your body goes to shifting around on its own.";
+Usedesc of behemoth horn is "Taking the behemoth horn and rolling it around inside of your hand you find you have the sudden strange urge to place the onyx piece of bone up against your skull. Not seeing any reason why you shouldn't, you place the horn on top of your head, right between your scalp and forehead. When nothing immediately happens you shrug and think nothing more of it, but when you remove your hand and then horn continues to stay in place realize that something is about to happen to you. The onset of a throbbing in your skull and at your backside are definitely clues towards this assumption as you find yourself grunting somewhat in discomfort as your body goes to shifting around on its own.";
 
 
 Section 3 - Endings

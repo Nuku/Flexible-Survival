@@ -11,7 +11,7 @@ Fire Station 86	"Fire Station 86"
 Fire Station 86 is a room. It is fasttravel.
 earea of Fire Station 86 is "Outside".
 
-The description of Fire Station 86 is "At the far end of the downtown red light district area stands a red brick firehouse rising up almost virtuously in protest of the depravity that has currently taken hold of the once prominent metropolis. Immaculate as the day she had been first opened, the numbers 86 gleam almost smugly across the front side of the building. [if Kenaztalk is 0]From the way the garage doors are void of the usual sticky mess of cum, milk and other fluids it would seem as though someone has been taking especially good care of the place. Wondering if that said someone is still inside, and hoping that if they are they have kept some of their humanity intact, you walk over to the single garage door and then bang on the front to try and get somebody's attention. A minute or two later the large metal door rolls up, allowing you entrance. Entering into the cool building, you find that the firehouse is exactly as you would have imagined it to be. [else]Wondering how Kenaz is doing, you head for the door of the firehouse and then knock on the door. It takes less than a minute for the other man to come open the door for you[end if].".
+Description of Fire Station 86 is "At the far end of the downtown red light district area stands a red brick firehouse rising up almost virtuously in protest of the depravity that has currently taken hold of the once prominent metropolis. Immaculate as the day she had been first opened, the numbers 86 gleam almost smugly across the front side of the building. [if Kenaztalk is 0]From the way the garage doors are void of the usual sticky mess of cum, milk and other fluids it would seem as though someone has been taking especially good care of the place. Wondering if that said someone is still inside, and hoping that if they are they have kept some of their humanity intact, you walk over to the single garage door and then bang on the front to try and get somebody's attention. A minute or two later the large metal door rolls up, allowing you entrance. Entering into the cool building, you find that the firehouse is exactly as you would have imagined it to be. [else]Wondering how Kenaz is doing, you head for the door of the firehouse and then knock on the door. It takes less than a minute for the other man to come open the door for you[end if].".
 
 the scent of Fire Station 86 is "The station smells relatively clean. Odd considering the things happening with the city as of now.".
 
@@ -27,7 +27,7 @@ Firehouse is north of Fire Station 86.
 
 KTO is a number that varies.
 Up of Firehouse is Sleeping Quarters.
-The description of Firehouse is "[firehousedesc]".
+Description of Firehouse is "[firehousedesc]".
 
 To say firehousedesc:
 	If kto is 0:
@@ -64,8 +64,8 @@ object	name
 Kenaz	"Kenaz"
 
 Kenaz is a man. Kenaz is in FireHouse.
-The description of Kenaz is "[Kenazcurrentform]".
-The conversation of Kenaz is { "Be on alert!" }.
+Description of Kenaz is "[Kenazcurrentform]".
+Conversation of Kenaz is { "Be on alert!" }.
 
 instead of linkactioning Kenaz when rsc >= 2:
 	say "     Possible Actions: [link]talk[as]talk Kenaz[end link], [link]smell[as]smell Kenaz[end link], [link]fuck[as]fuck Kenaz[end link], [link]assist[as]assist Kenaz[end link] [line break]";
@@ -348,8 +348,7 @@ To say aidKenaz5:
 	say "     '[italic type]Wuff![roman type] Oh, sorry about that. That's been happening a lot as of late.' Kenaz rubs the back of his head before smirking at you. From what you can see, the other is taking to his new form quite well. 'Anyway, I don't think I have much for you to do for today... oh, wait a minute!' Kenaz makes a mad dash over to where the coat racks are and then pulls off a single firefighter coat and then brings it back over to you. 'Here, this may not be much, but please. I want you to have it for all of the trouble you've gone through for me and everyone else.'";
 	say "     Not seeing a reason why you shouldn't, you take the offered gift and then place it into your backpack. 'I'm sorry that I don't have much else to offer you, but...' You shush the other before he can start. Letting Kenaz know that his souvenir will be cherished regardless of its worth gets a smile from the Dalmatian. 'You're a good friend, you know that?' You can only smirk at the other at that point.";
 	LineBreak;
-	say "[bold type]You gain firefighter coat![roman type][line break]";
-	now carried of firefighter coat is 1;
+	ItemGain firefighter coat by 1;
 	now HelpKenazout is 6;
 	now Kenazdes is turns;
 
@@ -424,7 +423,7 @@ to say aidKenaz7:
 	say "     Nodding to the other, you ask if he's alright. 'Better than alright. I'm... alive in a way that I wasn't before. I don't expect that to make much sense to you, but I feel better than I could have dreamed possible. More... free in a way.' Asking Kenaz about how he feels about his new body, you find the other reaching a hand down to sweep across his new thicker chest fur and then saying, 'I may have looked to have changed, but I still feel the same. The new [']additions['] are just parts of me that were asleep before and now have gotten woken up so they don't feel out of place.'";
 	say "     Not knowing what to say at this point, you can only watch as Othala returns with the bucket she had been ordered to go find and then blink in amazement as Kenaz tells the other Dal to go and clean up the spooge dripping off of the garage doors while he cleans up his mess on the floor. When the former female does as commanded without a hint of lip, you find yourself oddly out of sorts as you notice how well Kenaz is at giving orders now... especially considering that he isn't technically the captain of this group. Yet, that's not the most odd thing to happen.";
 	WaitLineBreak;
-	say "     Over the next hour, you find yourself transfixed, taking a spectator's view on how the former slightly submissive Dalmatian works his... well, hir commandership over the other firefighters to get them to clean up the firehouse. Nobody thinks to speak back as Kenaz barks out orders like a captain taking control over his ship. By the time you think to leave, Kenaz has the fire station looking almost like a respectable building once again as he makes everyone around him, including Pertho, work at doing their part to get the edifice back up to code.";
+	say "     Over the next hour, you find yourself transfixed, taking a spectator's view on how the former slightly submissive Dalmatian works his... well, her commandership over the other firefighters to get them to clean up the firehouse. Nobody thinks to speak back as Kenaz barks out orders like a captain taking control over his ship. By the time you think to leave, Kenaz has the fire station looking almost like a respectable building once again as he makes everyone around him, including Pertho, work at doing their part to get the edifice back up to code.";
 	say "     The last you see of the other, Kenaz was talking... or rather, growling at the other Dals about drills that was normally par the course in taking up a firefighter's normal day. It would seem that the change you had felt earlier is going to hit the Dalmatians of the fire station much harder than they think. Mildly, you wonder what this means between both you and Kenaz.";
 	now kto is 2;
 	now Kenaztalk is 3;
@@ -686,7 +685,7 @@ Section 6 - LowerFirePole
 
 LowerFirePole is in FireHouse.
 
-The description of LowerFirePole is "The lower end of the firehouse's fire pole sticks out of the ground while leading up to the upper sleeping quarter area of the building. Maybe you could try to [bold type]climb up[roman type] it? Just for fun of course.".
+Description of LowerFirePole is "The lower end of the firehouse's fire pole sticks out of the ground while leading up to the upper sleeping quarter area of the building. Maybe you could try to [bold type]climb up[roman type] it? Just for fun of course.".
 
 the scent of lowerfirepole is "The fire pole smells like sweat, nervousness, excitement and above all else hardworking diligence.".
 
@@ -700,7 +699,7 @@ Check Firepolescaling:
 
 carry out Firepolescaling:
 	say "     Figuring that you could do with a light workout, you decide to climb the fire pole.";
-	let bonus be (( the strength of the player minus 10 ) divided by 2);
+	let bonus be (( Strength of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
@@ -721,7 +720,7 @@ Object	Name
 Sleeping Quarters	"Sleeping Quarters"
 
 Sleeping Quarters is a room.
-The description of Sleeping Quarters is "[SleepQuarters]".
+Description of Sleeping Quarters is "[SleepQuarters]".
 
 To say SleepQuarters:
 	if KTO is 0:
@@ -754,7 +753,7 @@ to say sleepingquartersscent:
 
 Section 8 - UpperFirePole
 
-The description of UpperFirepole is "The upper fire pole is just as spotless as its counterpart in the main area of the firehouse and glimmers with the same tantalizing shine that makes you just want to [bold type]slide down[roman type].".
+Description of UpperFirepole is "The upper fire pole is just as spotless as its counterpart in the main area of the firehouse and glimmers with the same tantalizing shine that makes you just want to [bold type]slide down[roman type].".
 
 check firepolesliding:
 	if location of Player is not Sleeping Quarters and location of Player is not Eastern Parapets and location of Player is not Western Parapets:
@@ -786,19 +785,20 @@ Object	Name
 Finding Pertho	"Finding Pertho"
 
 Finding Pertho is a situation.
+ResolveFunction of Finding Pertho is "[ResolveEvent Finding Pertho]".
 Finding Pertho is inactive.
 LOK is a number that varies.
-The sarea of Finding Pertho is "Red".
+Sarea of Finding Pertho is "Red".
 
-Instead of resolving a Finding Pertho:
+to say ResolveEvent Finding Pertho:
 	If lok is 0:
-		say "     Snooping around the red light district, you find yourself coming across a four-legged Dalmatian busily humping at the backside of a tigress hooker. From what you can see, the feral mutant is completely enthralled in fucking the herm feline, who just so happens to be moaning and arching hir rump up into the heavy, thrusting hips of the spotted canine, making this a perfect opportunity for you to try and nab the other. Better be careful though...";
+		say "     Snooping around the red light district, you find yourself coming across a four-legged Dalmatian busily humping at the backside of a tigress hooker. From what you can see, the feral mutant is completely enthralled in fucking the herm feline, who just so happens to be moaning and arching her rump up into the heavy, thrusting hips of the spotted canine, making this a perfect opportunity for you to try and nab the other. Better be careful though...";
 		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 10:
-			say "     Tentatively, you go up behind the panting and drooling four-legged Dalmatian and then, once you are sure that the other can't sense your presence, you grab it by its furry neck. Immediately, the canine stops his thrusting and then yelps as you pull it bodily off of the tigress. The tigress herm isn't sure what's happening, or why the delightful cock drilling inside of hir cunt has been taken away, but upon turning hir head to see you wrestling the feral Dalmatian down onto the ground, the tigress slips her red dress back down and then quickly, but quietly, hauls tail out of there. You barely pay the hooker any attention as you try to keep the Dalmatian from biting you, something Pertho seems very keen on doing.";
+			say "     Tentatively, you go up behind the panting and drooling four-legged Dalmatian and then, once you are sure that the other can't sense your presence, you grab it by its furry neck. Immediately, the canine stops his thrusting and then yelps as you pull it bodily off of the tigress. The tigress herm isn't sure what's happening, or why the delightful cock drilling inside of her cunt has been taken away, but upon turning her head to see you wrestling the feral Dalmatian down onto the ground, the tigress slips her red dress back down and then quickly, but quietly, hauls tail out of there. You barely pay the hooker any attention as you try to keep the Dalmatian from biting you, something Pertho seems very keen on doing.";
 			WaitLineBreak;
 			say "     When you finally end up tiring the Dalmatian out, almost ten minutes later, you snap the collar and leash you had been given by Othala onto the now whimpering mutt. Successful with the mission, you prepare yourself to go about your way back to the firehouse with contentment brimming inside your chest. Of course, these feelings don't last long as the Dalmatian behind you ends up dropping all of his weight onto the ground, forcing you to almost literally have to carry the feral back to Kenaz and the others.";
 			now Finding Pertho is resolved;
@@ -808,7 +808,7 @@ Instead of resolving a Finding Pertho:
 			increase score by 5;
 		else:
 			say "     You must have stepped on something, because just as soon as you are about to reach out for the Dalmatian, the spotted menace turns and then gives you a penetrating look no canine should be able to make. You freeze for a second and this proves to be a fatal mistake on your part because the Dalmatian quickly pulls himself out from the tigress hooker and then darts off to run away from you at top speeds. Not sure what just happened, it takes you a second to gather your wits before you curse and then charge off after the Dalmatian.";
-			say "     Back where shi had been left, the tigress hooker looks up and then blinks in confusion as a cool gust of wind whistles across her dripping folds...";
+			say "     Back where she had been left, the tigress hooker looks up and then blinks in confusion as a cool gust of wind whistles across her dripping folds...";
 			now Resolution of Finding Pertho is 2; [Pertho escaped during the last try]
 			now lok is 1;
 	else if lok is 1:
@@ -853,8 +853,8 @@ object	name
 OtherDals	"OtherDals"
 
 OtherDals is a man.
-The description of OtherDals is "[Dalboys1]".
-The conversation of OtherDals is { "Playtime!" }.
+Description of OtherDals is "[Dalboys1]".
+Conversation of OtherDals is { "Playtime!" }.
 
 To say Dalboys1:
 	say "     Having been reunited with each other and now sharing a bond of brotherhood, the likes of which they couldn't before when Othala had been a female, the Dalmatian firefighters are busy doing everything bachelors could hope to do with their freedom inside the firehouse. Most of them seem to be completely disregarding Kenaz as he tries to get them to straighten up, however between him and Othala, the rest of the pack don't get too far out of hand. And yet, that doesn't mean that all is perfect inside of the firehouse as [one of]the other guys are busy mounting one another[or]the others are playing cards and talking overly loud at the moment[or]Pertho is busy trying to hump Kenaz[or]the guys are having a water balloon fight inside of the firehouse[or]everyone is busy rolling around on the floor in a giant dog pile[or]Kenaz is trying to get the others to do some drills... without much success[or]everyone is busy goofing off at the moment[at random]. [if Kenaztalk is 2]Though not as bad as they could be... you have to wonder if there is some way to make some kind of change within the group. Since you're not a part of the firefighter's crew, you more than likely wouldn't have much say so with the group... yet maybe Kenaz could? That is... if he were to gain some more extra [']oomph['] about himself. But how to make that happen...[end if]";
@@ -865,7 +865,7 @@ Instead of conversing the OtherDals:
 	say "     Most of the firefighters spare you little more than a few passing glances as they look you over before going back to what they were doing. While not exactly rude, their mannerisms leave much to be desired. However, the others quickly grow excited when Dagaz offers you a spot at their table to play a game of poker with them. Want to play a quick game of Poker? (Y=Yes, N=No)";
 	if Player consents:
 		say "     Settling your rump into one of the wood chairs at the table, you calmly ask the guys what kind of poker they intend to play. Mannaz is the one to say [']Straight['] and you nod to him before watching as Dagaz shuffles, cuts and then deals the cards out. Sweeping the flimsy red backed cards up into your [BodyName of Player] hands, you look over the spread you have and then up to each of the other three Dalmatians present.";
-		let bonus be (( the Charisma of the player minus 5 ) divided by 2);
+		let bonus be (( Charisma of Player minus 5 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -895,8 +895,8 @@ object	name
 DalmatianTroupe	"DalmatianTroupe"
 
 DalmatianTroupe is a man.
-The description of DalmatianTroupe is "[Dalboys2]".
-The conversation of DalmatianTroupe is { "YES SIR!" }.
+Description of DalmatianTroupe is "[Dalboys2]".
+Conversation of DalmatianTroupe is { "YES SIR!" }.
 
 To say Dalboys2:
 	say "     Walking around the firehouse with both clothes on and tails swaying quietly between their legs are the other Dalmatians who cohabitate in the fire station with Kenaz. Ever since the former submissive Dalmatian's second transformation, the others have gone through a very serious change of pace around here. To say the least, the rest of the firefighters are now acting and behaving like decent canines with some sense about themselves instead of like bachelors free from responsibility. Mannaz is busy [one of]sweeping up[or]polishing off the fire trucks[or]mopping the floor[or]doing some kind of workout routine off to the side of the building[or]shadow boxing[or]wiping down the lower end of the fire pole[at random]. Birch is [one of]doing push-ups[or]listening to something Kenaz is saying to him[or]talking with some of the other guys[or]humming a tune that only he knows[or]trying to make something for the others to eat on the only grill within the firehouse[at random]. Othala is [one of]going over some paperwork[or]doing a series of handstand push-ups[or]brushing her... or rather, his fur[or]talking with Kenaz[or]waxing down the garage doors[or]quietly reading at the only table in the room[at random]. Dagaz is [one of]looking over something outside the window of the firehouse[or]talking to one of the other guys[or]sharpening his dewclaws with a file[or]taking his time wiping down the lockers set in the back[or]doing a one-armed handstand[or]fixing up his fur[at random]. Pertho is the only odd one out of the group as the feral Dalmatian is occupying his time [one of]scratching behind his left ear[or]sleeping underneath the shadow of one of the fire engines[or]yawning while looking up at Kenaz talking with one of the others[or]trying to help out by fetching whatever one of the others might need that he can get[at random]. All in all, the firefighters seem content with how things are progressing right about now and with things the way they are underneath Kenaz's banner, you have a feeling that it's going to stay that way.";
@@ -907,7 +907,7 @@ Instead of conversing the DalmatianTroupe:
 	say "     Now that Kenaz has taken over control of the fire station, the rest of the firefighters busy themselves with cleaning up the firehouse as well as working and training with one another. It's only during a moment's peace between the pack that the others offer you a chance to play poker with them. Do you feel up to it? (Y=Yes, N=No)";
 	if Player consents:
 		say "     Feeling up to a short game, you find yourself settling your rump into one of the wood chairs at the table and then quietly ask those present what kind of poker they intend to play. Kenaz is the one to say [']Straight['] and you nod to him before watching as [one of]Dagaz[or]Birch[or]Othala[or]Mannaz[at random] shuffles, cuts and then deals the cards out. Sweeping the flimsy red-backed cards up into your [BodyName of Player] hands, you look over the spread you have and then up to each of the other three Dalmatians present.";
-		let bonus be (( the Charisma of the player minus 5 ) divided by 2);
+		let bonus be (( Charisma of Player minus 5 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -936,7 +936,7 @@ NeverNeverland	"NeverNeverland"
 
 NeverNeverland is a room. It is unknown. It is private.
 
-The description of NeverNeverLand is "This place is impossible to find, but it's where happy Dalmatians go to dream in peace.".
+Description of NeverNeverLand is "This place is impossible to find, but it's where happy Dalmatians go to dream in peace.".
 
 
 Fire House ends here.

@@ -21,10 +21,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Automaton Activity	"Automaton Activity"
 
-Automaton Activity is a situation. The level of Automaton Activity is 6. It is inactive.
-The sarea of Automaton Activity is "Capitol".
+Automaton Activity is a situation.
+ResolveFunction of Automaton Activity is "[ResolveEvent Automaton Activity]". The level of Automaton Activity is 6. It is inactive.
+Sarea of Automaton Activity is "Capitol".
 
-instead of resolving Automaton Activity:
+to say ResolveEvent Automaton Activity:
 	if HP of Jimmy is 0:
 		say "ERROR-Jimmy-0E: Premature event activation.";
 		now Automaton Activity is resolved;
@@ -52,7 +53,7 @@ instead of resolving Automaton Activity:
 			now Resolution of Automaton Activity is 3; [fled]
 	else if HP of Jimmy is 2:
 		say "     Heading back to the area where you encountered the automatons digging out the corgi survivor, you begin searching around in the hopes of locating him.";
-		let bonus be ( the perception of the player minus 10 ) divided by 2;
+		let bonus be ( Perception of Player minus 10 ) divided by 2;
 		increase bonus by lust of Jimmy;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
@@ -80,8 +81,8 @@ object	name
 Jimmy	"Jimmy"
 
 Jimmy is a man.
-The description of Jimmy is "[jimmydesc]".
-The conversation of Jimmy is { "Yay!" }.
+Description of Jimmy is "[jimmydesc]".
+Conversation of Jimmy is { "Yay!" }.
 The icon of Jimmy is Figure of Jimmy_icon.
 
 the scent of the Jimmy is "Jimmy smells pleasantly of dog.".

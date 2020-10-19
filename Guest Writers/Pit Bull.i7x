@@ -298,13 +298,13 @@ to say pitbull_vsex5:		[scissoring]
 to say pitbull_vsex6:		[receive vaginal]
 	say "     Exposing the pit bull's crotch to the open air, you offer a hand in twisted affection, stroking his sheathed tool until it exposes itself before you. Whimpering moans the beast's regard for this treatment, his prior aggression melting away under the weight of your tainted endeavor. Sufficiently hard, you position your [if scalevalue of Player > 3]larger [end if]form over him before slowly lowering the knotted dick on [if Cunt Count of Player > 1]one of [end if]your cunt[sfn], [if Cunt Depth of Player < 8]strained grunts escaping your lips in the wake of this fairly sizable intrusion[else]wanton moans your regard for this intrusion[end if].";
 	say "     Organ enveloped within the folds of your [if Cunt Depth of Player < 8]tight[else]supple[end if] flesh, you build a gradually rising pace of rocking against his cock, beast [if scalevalue of Player > 3]grunting loudly with each descent as he's forced to abide your ponderous weight[else]groaning audibly in the wake of his own growing desire[end if]. [if Player is male]As you continue, you busy yourself by stroking your own, hardening dick[smn] before your captive audience[else]Gripping him firmly, you continue to writhe against the intrusion offered up by your captive audience[end if], your bliss rapidly on the approach.";
-	say "     Heady weight of your fiery need radiating against the [if daytimer is night]night [end if]air, scent heavy with sweat and musk, your fervor reaches its wanton punctuation, impaling yourself upon his knot, your [if Player is male]dick[smn] painting the canine's form with your [Cum Load Size of Player] load[else]grip tightening against the canine[end if] as your needy hole works to milk him dry with a tainted determination. Soon thereafter your endeavors are richly reward, the beast howling under the strain of your climax as he floods the depths of your womb with his thick, virile seed.";
+	say "     Heady weight of your fiery need radiating against the [if daytimer is night]night [end if]air, scent heavy with sweat and musk, your fervor reaches its wanton punctuation, impaling yourself upon his knot, your [if Player is male]dick[smn] painting the canine's form with your [Cum Load Size of Player] load[else]grip tightening against the canine[end if] as your needy hole works to milk him dry with a tainted determination. Soon thereafter your endeavors are richly reward, the beast howling under Strain of your climax as he floods the depths of your womb with his thick, virile seed.";
 	say "     It takes you awhile to recover from this ordeal, but eventually you do manage to pull the creature's softened dick from your now-leaking portal, departing from him as he lays there, a dazed and exhausted mess of a dog.";
 
 to say pitbull_vsex7:		[receive anal]
 	say "     Exposing the pit bull's crotch to the open air, you offer a hand in twisted affection, stroking his sheathed tool until it exposes itself before you. Whimpering moans the beast's regard for this treatment, his prior aggression melting away under the weight of your tainted endeavor. Sufficiently hard, you position your [if scalevalue of Player > 3]larger [end if]form over him before slowly your asshole onto the knotted dick, [if scalevalue of Player < 3 and player is not twistcapped]strained grunts escaping your lips in the wake of this fairly sizable intrusion[else]wanton moans your regard for this intrusion[end if].";
 	say "     Organ enveloped within [if scalevalue of Player < 3 and player is not twistcapped]tight[else]yielding[end if] flesh of your bowels, you build a gradually rising pace of rocking against his cock, beast [if scalevalue of Player > 3]grunting loudly with each descent as he's forced to abide your ponderous weight[else]groaning audibly in the wake of his own growing desire[end if]. [if Player is male]As you continue, you busy yourself by stroking your own, hardening dick[smn] before your captive audience[else]Gripping him firmly, you continue to writhe against the intrusion offered up by your captive audience[end if], your bliss rapidly on the approach.";
-	say "     Heady weight of your fiery need radiating against the [if daytimer is night]night [end if]air, scent heavy with sweat and musk, your fervor reaches its wanton punctuation, impaling yourself upon his knot, your [if Player is male]dick[smn] painting the canine's form with your [Cum Load Size of Player] load[else]grip tightening against the canine[end if] as your needy pucker works to milk him dry with a tainted determination. Soon thereafter your endeavors are richly reward, the beast howling under the strain of your climax as he floods the depths of your bowels with his thick, virile seed.";
+	say "     Heady weight of your fiery need radiating against the [if daytimer is night]night [end if]air, scent heavy with sweat and musk, your fervor reaches its wanton punctuation, impaling yourself upon his knot, your [if Player is male]dick[smn] painting the canine's form with your [Cum Load Size of Player] load[else]grip tightening against the canine[end if] as your needy pucker works to milk him dry with a tainted determination. Soon thereafter your endeavors are richly reward, the beast howling under Strain of your climax as he floods the depths of your bowels with his thick, virile seed.";
 	say "     It takes you awhile to recover from this ordeal, but eventually you do manage to pull the creature's softened dick from your now-leaking tailpipe, departing from him as he lays there, a dazed and exhausted mess of a dog.";
 
 to say pitbull_dom:
@@ -347,8 +347,8 @@ To say pit bull attack:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -373,7 +373,7 @@ When Play begins:
 	now desc entry is "[pitbulldesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "canine, though somewhat compacted, bears a striking resemblance to a pit bull"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "muscled to fighting form with digitigrade legs ending in paws"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "white fur over your body. You have the occasional black splotch, most notably one on your left eye. It feels soft and pleasurable against your skin"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "white fur over your body. You have the occasional black splotch, most notably one on your left eye. It feels soft and pleasurable against your skin"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a short and nubby tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "deep red, canine-knotted"; [ Cock Description, format as you have a 'size' (your text) cock.]
 	now face change entry is "it becomes more canine, your ears moving towards the top of your head. It flattens a slight bit and you can feel your teeth become sharper. You appear to have the head of a pit bull"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -401,9 +401,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 8; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 6; [ Width of female sex infection will try and give you ]
-	now libido entry is 20; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 20; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "dirty water";
 	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]tough[or]muscled[or]lean-and-mean[at random]";
 	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -418,7 +422,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -528,7 +532,7 @@ this is the balltit rule:
 	let multiplier be 0;
 	let rangenum be ( 90 - ( peppereyes * 4 ) );
 	let dam be ( wdam entry times ( a random number from rangenum to 135 ) ) / 100;
-	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	if Player is male:			[powerful ball kick]

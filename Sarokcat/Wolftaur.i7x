@@ -28,7 +28,7 @@ To say Wolftaur loss:
 	project the Figure of Wolftaur_hard_icon;
 	say "     The large gray-furred wolftaur staggers back, surprise evident on the beast's muzzle as you manage to gain the advantage. Shooting you one last incredulous glance, he turns tail and runs, moving swiftly on all four legs while his arms knock branches and bushes out of the way.";
 	LineBreak;
-	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] against 15 (Dexterity check)";
 	LineBreak;
@@ -101,8 +101,8 @@ to say WolftaurDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -127,7 +127,7 @@ When Play begins:
 	now desc entry is "[WolftaurDesc]";
 	now face entry is "a long, wolf-like muzzle, your new yellow eyes gleaming out of your lupine face, while your changed canine ears swivel to pick up the slightest new sounds. At this point, it would be hard to tell the difference between your face and a wolftaur's"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "lean and rather well built. Your lower body is that of a fully canine beast and is standing easily on its four lupine paws, while your rather humanoid torso extends upwards from where a normal wolf would have its head, your claw-tipped hands and lean form giving you a rather lean and sexy appearance"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "[one of]gray furred[or]rough furred[or]thick furred[or]Wolf furred[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]gray furred[or]rough furred[or]thick furred[or]Wolf furred[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a long, lupine tail stretching happily from just above your rear end, its presence somehow feeling so very right and natural as it lifts up to show off your ass for any other lupine that might be around."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]wolf[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it stretches out into a large lupine muzzle, your eyes blurring and the sounds of the world seeming muffled as your face shifts and changes. New scents explode through your brain as your new muzzle finishes forming, and the world seems to come into better focus and your hearing seems to sharpen considerably as your face settles into its new wolf like appearance"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -155,9 +155,13 @@ When Play begins:
 	now Cunt Count entry is 1;                  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 14;
 	now Cunt Tightness entry is 9;
-	now libido entry is 30;                [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 60;                [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";                  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;             [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;                  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]tauric[or]bestial[or]animalistic[at random]";
 	now type entry is "lupine";            [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -172,7 +176,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -283,7 +287,7 @@ this is the wtaurpounce rule:		[double-damage pouncing]
 	choose row MonsterID from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 67 );  [+50% damage]
-	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "The [one of][Name entry][or]wolf[or]lupine taur[or]wolf-creature[purely at random] growls and pounces roughly atop you, [one of]knocking[or]sending[or]slamming[purely at random] you down briefly under it. Its many paws pummel you, trying to knock the resistance out of you while you're surrounded in his strong, musky scent. This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
@@ -293,7 +297,7 @@ this is the wtaurpounce rule:		[double-damage pouncing]
 		now absorb is dam;
 	if absorb > 0:
 		say "You prevent [special-style-1][absorb][roman type] damage!";
-	decrease HP of the player by dam;
+	decrease HP of Player by dam;
 	increase HP of Player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";

@@ -3,6 +3,41 @@ Version 1 of Feats by Core Mechanics begins here.
 
 "Controls feats for Flexible Survival"
 
+Section 0 - Definitions (feat-based)
+
+A person can be submissive. A person is usually not submissive.
+
+Definition: A person (called x) is submissive:
+	if "Submissive" is listed in feats of x, yes;
+	no;
+
+A person can be dominant. A person is usually not dominant.
+
+Definition: A person (called x) is dominant:
+	if "Dominant" is listed in feats of x, yes;
+	no;
+
+A person can be kinky. A person is usually not kinky.
+
+Definition: A person (called x) is kinky:
+	if "Kinky" is listed in feats of x, yes;
+	no;
+
+A person can be twistcapped. A person is usually not twistcapped.
+
+Definition: A person (called x) is twistcapped:
+	if "Twisted Capacity" is listed in feats of x, yes;
+	no;
+
+Definition: A person is fastlearning:
+	if "Fast Learner" is listed in feats of Player, yes;
+	no;
+
+Table of gainable feats
+title	subtable	description	toggle
+"Nothing"	--	"Nothing here."	gainfeat rule
+with 100 blank rows.
+
 Section 1 - Basic Feats
 
 basic feats is a featset.
@@ -16,6 +51,17 @@ muggerison is a truth state that varies. muggerison is usually true.
 FeralBirths is a number that varies. FeralBirths is usually 0.
 vampiric is a truth state that varies. vampiric is usually false.
 The player has a number called featgained.
+
+FeatList is an action applying to nothing.
+understand "Feats List" as FeatList.
+understand "FeatsList" as FeatList.
+understand "Feat List" as FeatList.
+understand "FeatList" as FeatList.
+understand "Feats" as FeatList.
+
+carry out FeatList:
+	sort Feats of Player;
+	say "Feats: [Feats of Player]";
 
 Featgetting is an action applying to nothing.
 understand "volunteer" as featgetting.
@@ -34,18 +80,6 @@ Check featgetting:
 
 carry out featgetting:
 	featget;
-
-[
-	blank out the whole of table of gainable feats;
-	repeat with x running through functional featsets:
-		try addfeating x;
-	if there is no title in row 1 of table of gainable feats:
-		say "There are no feats to gain!";
-		wait for any key;
-	else:
-		change the current menu to table of Gainable Feats;
-		carry out the displaying activity;
-]
 
 Featqualified is a number that varies.
 Featqualified is usually 0.
@@ -222,7 +256,7 @@ instead of addfeating the basic feats:
 			if "Good Teacher" is listed in feats of Player:
 				addfeat "Ringmaster" with "You will gain full XP while training your pets.";
 		if charisma of Player > 16 and number of entries in list of tamed pets > 2:
-			addfeat "The Horde" with "Your pets will sometimes organize a full-on counterstrike.";
+			addfeat "Double Team" with "You can now take one additional ally with you.";[continue]
 		if charisma of Player > 11:
 			addfeat "Flash" with "Your skin/fur/scales will occasionally flash bright light, reducing your foe's chance to hit.";
 		if charisma of Player > 13:
@@ -248,7 +282,7 @@ instead of addfeating the basic feats:
 		addfeat "Expert Researcher" with "Your expert skills allow you a second opportunity to get an infection vial.";
 	if intelligence of Player > 14:
 		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% XP needed to level.";
-		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and a 20% chance of saving a kit when it should be lost.";
+		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and adds an additional use to medkits.";
 	if intelligence of Player > 12 and ( BodyName of Player is not "Human" or FaceName of Player is not "Human" ):
 		addfeat "Know Thyself" with "By thinking like an enemy that has infected you, you know better how to deal with them and gain a +0 to +2 bonus to hit matching enemies each round. Thinking with your other head gradually gets your infected loins more excited as well. You gain more XP from these fights as well.";
 	if intelligence of Player > 15 and level of Player > 5:
@@ -318,19 +352,22 @@ This is the gainfeat rule:
 			remove "Automatic Survival" from feats of Player;
 			say "[bold type]This ability is now controlled by Trixie. Your feat slot has been returned to you.[roman type][line break]";
 			wait for any key;
-		if nam is "More Time", extend game by 24;
-		if nam is "Hardy":
+		else if nam is "Strong Back":
+			increase capacity of Player by 50;
+		else if nam is "More Time":
+			extend game by 24;
+		else if nam is "Hardy":
 			increase maxHP of Player by 8;
 			increase HP of Player by 8;
-		if nam is "City Map":
+		else if nam is "City Map":
 			say "[BestowCityMapFeat]";
-		if nam is "Instinctive Combat":
+		else if nam is "Instinctive Combat":
 			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the 'Auto Attack' command. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
-		if nam is "Vore Predator":
+		else if nam is "Vore Predator":
 			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type]vore menu[roman type] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
-		if nam is "Mugger":
+		else if nam is "Mugger":
 			say "     You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [bold type]mugger[roman type] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
-		if nam is "Vampiric":
+		else if nam is "Vampiric":
 			say "     You will now recover a small amount of health, thirst and hunger after every victory as you get in a blood-sucking bite after your final blow or at some other point during the victory scene.";
 			now vampiric is true;
 	if autofeatloading is false, wait for any key;
@@ -359,6 +396,10 @@ to say BestowCityMapFeat:
 	now Ravaged Power Plant is resolved; [removes the random event for discovering the power plant]
 	now Reaching the College is resolved; [removes the random event for discovering the College Campus]
 
+Part 2 - Feat-Given Actions
+
+Chapter 1 - Mugging
+
 muggering is an action applying to nothing.
 understand "mugger" as muggering.
 understand "mugging" as muggering.
@@ -372,5 +413,67 @@ carry out muggering:
 	else:
 		now muggerison is false;
 	say "The 'Mugger' feat is now [bold type][if muggerison is true]ON[else]OFF[end if][roman type]. You will gain drop items [if muggerison is true]more frequently[else]as normal[end if].";
+
+Chapter 2 - Autoattack
+
+autoattackmode is a number that varies.
+[0 is normal]
+[1 is attack]
+[2 could be item? but probably not...]
+[3 is pass]
+[4 is flee]
+[5 is submit]
+
+[creates flag for automatic combat, from "Instinctive Combat" feat]
+autoattacknormal is an action applying to nothing.
+understand "auto attack normal" as autoattacknormal.
+
+autoattackberserk is an action applying to nothing.
+understand "auto attack berserk" as autoattackberserk.
+
+autoattackpass is an action applying to nothing.
+understand "auto attack pass" as autoattackpass.
+
+autoattackcoward is an action applying to nothing.
+understand "auto attack coward" as autoattackcoward.
+
+autoattacksubmit is an action applying to nothing.
+understand "auto attack submit" as autoattacksubmit.
+
+carry out autoattacknormal:
+	if "Instinctive Combat" is listed in feats of Player:
+		now autoattackmode is 0; [default combat, make choices at normal]
+		say "You calm your instincts and regain control of your actions.";
+	else:
+		say "You feel you are missing the instincts to do this.";
+
+carry out autoattackberserk:
+	if "Instinctive Combat" is listed in feats of Player:
+		now autoattackmode is 1; [autoattack, no choice, always attack]
+		say "You let your aggressive instincts take the forefront, knowing you will attack at any chance.";
+	else:
+		say "You feel you are missing the instincts to do this.";
+
+carry out autoattackpass:
+	if "Instinctive Combat" is listed in feats of Player:
+		now autoattackmode is 3; [autopass, no choice, always pass]
+		say "You feel calm. You're sure everything will work out in the end. Don't mind the monsters attacking you.";
+	else:
+		say "You feel you are missing the instincts to do this.";
+
+carry out autoattackcoward:
+	if "Instinctive Combat" is listed in feats of Player:
+		now autoattackmode is 4; [autoflee, no choice, always flee]
+		say "You focus on the need to escape the monsters, the need to run away.";
+	else:
+		say "You feel you are missing the instincts to do this.";
+
+carry out autoattacksubmit:
+	if "Instinctive Combat" is listed in feats of Player:
+		now autoattackmode is 5; [autosubmit, no choice, always submit]
+		say "Your increased libido clouds your thinking. Wouldn't it be fun to let the monsters play with you?";
+	else:
+		say "You feel you are missing the instincts to do this.";
+
 
 Feats ends here.

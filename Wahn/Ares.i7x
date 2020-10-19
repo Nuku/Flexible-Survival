@@ -42,8 +42,8 @@ Virgin of Ares is true.
 AnalVirgin of Ares is true.
 PenileVirgin of Ares is false.
 SexuallyExperienced of Ares is true.
-The description of Ares is "[AresDesc]".
-The conversation of Ares is { "Woof." }.
+Description of Ares is "[AresDesc]".
+Conversation of Ares is { "Woof." }.
 AresDannyEncounters is a number that varies.
 
 to say AresDesc:
@@ -56,6 +56,8 @@ to say AresDesc:
 		say "He sits right in front of the door to his kennel, watching you intently and hoping for another chance of getting out for a walk with you.";
 	else if HP of Ares is 3 or HP of Ares is 5:
 		say "He sits right in front of the door to his kennel, watching you intently and hoping for another chance of getting out for a walk with you. Looking down at his naked body and the raging hardon between his legs, you see that he's also thinking of mounting you again...";
+	if human dog is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 instead of conversing Ares:
 	if HP of Ares is 1:
@@ -148,10 +150,10 @@ to say AresWalk_Park:
 	else: [fight]
 		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dog. Or so you think at least, until you hear the warning growl from Ares, who spotted something coming your way from one of the side streets.";
 		LineBreak;
-		now companion of Player is human dog;
+		ForceCompanionJoin "Ares";
 		now battleground is "Outside";
 		fight;
-		now companion of Player is nullpet;
+		ForceCompanionDismiss "Ares";
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
 			say "     Looks as if Ares managed to flee when you lost the fight, but remained in the area. Now that the attacker is gone, he trots up to you, showing his own bruises from the fight. With a supportive whine to get up, the human dog rubs his head against your side, then takes a guarding position to protect you from any new threats. Not really in the mood to continue this excursion after getting a beating, you return to Mike's home soon after and bring Ares back to his kennel.";
 		else if fightoutcome >= 30:[fled]
@@ -231,10 +233,10 @@ to say AresHelenWalk:
 	else: [fight]
 		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dog. Or so you think at least, until you hear the warning growl from Ares, who spotted something coming your way from one of the side streets.";
 		LineBreak;
-		now companion of Player is human dog;
+		ForceCompanionJoin "Ares";
 		now battleground is "Outside";
 		fight;
-		now companion of Player is nullpet;
+		ForceCompanionDismiss "Ares";
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
 			say "     Looks as if Helen and Ares managed to flee when you lost the fight, but remained in the area. Now that the attacker is gone, they trot up to you, Ares showing his own bruises from the fight. With supportive whines to get up, the human dogs rub their heads against your side and Ares even takes a guarding position to protect you from any new threats. Not really in the mood to continue this excursion after getting a beating, you drop off Ares at Mike's hope and take Helen back to the library.";
 		else if fightoutcome >= 30:[fled]
@@ -415,10 +417,10 @@ to say AresXerxesWalk:
 	else: [fight]
 		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dog. Or so you think at least, until you hear the warning growl from Ares, who spotted something coming your way from one of the side streets.";
 		LineBreak;
-		now companion of Player is human dog;
+		ForceCompanionJoin "Ares";
 		now battleground is "Outside";
 		fight;
-		now companion of Player is nullpet;
+		ForceCompanionDismiss "Korvin";
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
 			say "     Looks as if Xerxes and Ares managed to flee when you lost the fight, but remained in the area. Now that the attacker is gone, they trot up to you, Ares showing his own bruises from the fight. With supportive whines to get up, the human dogs rub their heads against your side and Ares even takes a guarding position to protect you from any new threats. Not really in the mood to continue this excursion after getting a beating, you drop off Ares at Mike's hope and take Xerxes back to the library.";
 		else if fightoutcome >= 30:[fled]
@@ -721,16 +723,29 @@ Table of GameCharacterIDs (continued)
 object	name
 human dog	"human dog"
 
-human dog is a pet. human dog is a part of the player.
+human dog is a pet.
+NPCObject of human dog is Ares.
 understand "Ares" as human dog.
+IDList of human dog is { "Ares", "ares", "dog", "human", "human dog" }.
 printed name of human dog is "Ares".
-The description of human dog is "[AresPetDesc]".
-The weapon damage of human dog is 8.
-The level of human dog is 10.
-The Dexterity of human dog is 10.
-The summondesc of human dog is "     Calling out for Ares, the human dog comes to your side pretty quickly, obviously having followed you all this time not too far behind. With a satisfied bark, he takes position beside you and just a step ahead, ready to protect his bitch in any situation.".
-The assault of human dog is "[one of]Ares charges into combat, growling and snapping at your enemy.[or]Loud and insistent barking of your human dog frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your human dog claws at your enemy with his hands, leaving shallow but painful gashes.[at random]".
-the fuckscene of human dog is "[SexWithAresPet]".
+Description of human dog is "[AresPetDesc]".
+Weapon Damage of human dog is 10.
+Level of human dog is 1.
+Dexterity of human dog is 15.
+Summondesc of human dog is "[SummonHumanDog]".
+Dismissdesc of human dog is "[DismissHumanDog]".
+Assault of human dog is "[one of]Ares charges into combat, growling and snapping at your enemy.[or]Loud and insistent barking of your human dog frightens and distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your human dog claws at your enemy with his hands, leaving shallow but painful gashes.[at random]".
+Fuckscene of human dog is "[SexWithAresPet]".
+
+when play begins:
+	add "Feral" to Traits of human dog;
+
+to say SummonHumanDog:
+	say "     Calling out for Ares, the human dog comes to your side pretty quickly, obviously having followed you all this time not too far behind. With a satisfied bark, he takes position beside you and just a step ahead, ready to protect his bitch in any situation.";
+
+to say DismissHumanDog:
+	move Ares to Dog Kennels;
+	say "     Telling Ares to go back home, he gives a low whine then barks as he returns to his kennel.";
 
 to say AresPetDesc:
 	say "     Originally one of Mike's dogs, Ares now is a young human male of just about nineteen. He has closely cropped red hair and a very well-developed physique, with muscular arms and legs. All in all a very handsome guy with an aura of untamed energy - but no matter what he looks like - there's still only a dog's mind behind his eyes, so he walks on all fours and only uses barks and growls as communication.";

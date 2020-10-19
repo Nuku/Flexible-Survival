@@ -194,7 +194,7 @@ to say Zebra loses:
 				say "     You command the stallion to look at you before you slap him with the full force of your body. He falls to the ground, and you tell him that you don't have time for him now. As you turn to leave, he shouts after you, 'Next time then, [master]?' You don't answer him, but you don't need to.";
 	else if ZebraLossCount > 1:
 		say "     Thinking that it's time for this striped windbag to get taken down a peg or two, you look for a way to do that as the zebra turns to run off. Bending down, you snatch up a large stick lying on the ground, glad that no one cleans up here anymore. Pulling your arm back far, you let it fly after the zebra stallion and...";
-		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let xx be ZebraLossCount / 2;
 		if xx > 8, now xx is 8;
 		increase bonus by xx;
@@ -440,8 +440,8 @@ to say ZebraDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -464,7 +464,7 @@ When Play begins:
 	now desc entry is "[ZebraDesc]";
 	now face entry is "a long, zebra-like muzzle. Your ears have lengthened and constantly swivel above your head as they search for danger, though your eyes still stare with human emotion"; [Your face is (your text)."]
 	now body entry is "thickly built. You stand easily on your strong digitigrade legs, balancing easily on your thick hooves. Your four-fingered hands bear a strong resemblance to equine hooves, and you can't seem to manipulate objects quite as well as you could before"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]black-and-white-striped[or]coarse-furred[or]zebra-striped[or]zebra fur[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]black-and-white-striped[or]coarse-furred[or]zebra-striped[or]zebra fur[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a whip-like zebra tail hanging off of your tight, powerful ass. Long, coarse, black hairs extend from part of the sides of the tail and from the tip, extending its length almost to the ground as it swishes behind you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]equine[or]zebra[or]thick, black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "you feel it stretch forward into a proper zebra-like muzzle, your teeth flattening and your nose expanding to take in the new scents around you. With a painful stretching feeling, your ears are tugged upwards to rest on top of your head, and black hair sprouts up to form a mohawk-like zebra mane. Soon, the only difference between your face and that of a normal zebra is a slightly humanlike cast to your features, plus your strangely human eyes staring out at the world through an animal's face"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -492,9 +492,13 @@ When Play begins:
 	now Cunt Count entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 9;
 	now Cunt Tightness entry is 4;
-	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 60;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "zebra fur";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 30;  [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "zebra cum";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]thick[or]barrel-chested[at random]";
 	now type entry is "[one of]equine[or]zebrine[at random]";
@@ -509,7 +513,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -668,26 +672,25 @@ instead of sniffing zebra fur:
 	say "Smells a bit of horse - or rather zebra.";
 
 zebra fur is a grab object.
-the usedesc of zebra fur is "[zebra fur use]";
+Usedesc of zebra fur is "[zebra fur use]";
 
 to say zebra fur use:
 	say "Playing a bit with the coarse strands of hair, you stroke them over your arm. A moment later, they suddenly disintegrate into a fine powder which just seems to melt into your skin...";
 
-zebra fur is infectious. The strain of zebra fur is "Zebra Stallion".
+zebra fur is infectious. Strain of zebra fur is "Zebra Stallion".
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "zebra cum"	"A plastic water bottle almost completely filled with a milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Zebra Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	zebra cum
 
 zebra cum is a grab object. zebra cum is cum.
-the usedesc of zebra cum is "[zebra cum use]";
+zebra cum is infectious. Strain of zebra cum is "Zebra Stallion".
+Usedesc of zebra cum is "[zebra cum use]";
 
 to say zebra cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
-	if "Iron Stomach" is not listed in feats of player:
-		infect "Zebra Stallion";
 
 instead of sniffing zebra cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";

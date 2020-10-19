@@ -7,7 +7,7 @@ Version 4 of J'Reth by Prometheus begins here.
 [ Version 4.1 - Sex Scenes for Gendershifted J'Reth Added ]
 
 
-[ hp of J'Reth                                          ]
+[ HP of J'Reth                                          ]
 [ 0 - Unmet                                             ]
 [ 1 - Met in Storeroom                                  ]
 [ 2 - Asked for Peaches                                 ]
@@ -56,7 +56,7 @@ Object	Name
 J'Reth's Room	"J'Reth's Room"
 
 J'Reth's Room is a room.
-The description of J'Reth's Room is "[J'RethsRoomDesc]".
+Description of J'Reth's Room is "[J'RethsRoomDesc]".
 
 to say J'RethsRoomDesc:
 	say "     While J'Reth seems to be living in a storage closet at the back of a gaming store that is now filled with sleeping bags and mattresses, it is large enough for a bed, a desk, and several rows of shelves. The shelves are covered in tabletop models such as trolls, dragons, and wolves, rulebooks for assorted games, and small pots of paint. Considering what you know about J'Reth, the room seems to suit [ObjectPro of J'Reth] very well. On the desk pushed into the corner against the wall is a computer but it doesn't appear to be plugged in so you doubt that the draco-mantis has used it recently. The walls are covered in promotional posters for various movies and games, colorful pins holding them in place.";
@@ -68,21 +68,28 @@ object	name
 J'Reth	"J'Reth"
 
 J'Reth is a man.
-[Physical details as of game start]
 ScaleValue of J'Reth is 3. [human sized]
-SleepRhythm of J'Reth is 0. [0 = awake at all times, 1 = awake in the day, 2 = awake at night]
-Cock Count of J'Reth is 1. [cock]
-Cock Length of J'Reth is 11. [cock length]
-Ball Size of J'Reth is 5. [ball size]
-Ball Count of J'Reth is 2. [no balls]
-Cunt Count of J'Reth is 0. [no pussy]
-Cunt Depth of J'Reth is 0. []
-Cunt Tightness of J'Reth is 0. []
-Nipple Count of J'Reth is 2. [2 nipples]
-Breast Size of J'Reth is 0. [flat]
+Body Weight of J'Reth is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of J'Reth is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of J'Reth is 4. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of J'Reth is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of J'Reth is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of J'Reth is 12. [length in inches]
+Breast Size of J'Reth is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of J'Reth is 0. [count of nipples]
+Asshole Depth of J'Reth is 8. [inches deep for anal fucking]
+Asshole Tightness of J'Reth is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of J'Reth is 1. [number of cocks]
+Cock Girth of J'Reth is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of J'Reth is 11. [length in inches]
+Ball Count of J'Reth is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of J'Reth is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of J'Reth is 0. [number of cunts]
+Cunt Depth of J'Reth is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of J'Reth is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of J'Reth is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of J'Reth is false. [can not take oversized members without pain]
-Sterile of J'Reth is true.
 PlayerMet of J'Reth is false.
 PlayerRomanced of J'Reth is false.
 PlayerFriended of J'Reth is false.
@@ -91,11 +98,14 @@ PlayerFucked of J'Reth is false.
 OralVirgin of J'Reth is true.
 Virgin of J'Reth is true.
 AnalVirgin of J'Reth is true.
+PenileVirgin of J'Reth is true.
 SexuallyExperienced of J'Reth is false.
-MainInfection of J'Reth is "".
-The description of J'Reth is "[J'RethDesc]".
-The conversation of J'Reth is { "Mantis Dragon sounds." }.
-The scent of J'Reth is "     J'Reth smells of Mantis-Dragons and fairies in the woods.".
+TwistedCapacity of J'Reth is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of J'Reth is true. [steriles can't knock people up]
+MainInfection of J'Reth is "Draco-Mantis".
+Description of J'Reth is "[J'RethDesc]".
+Conversation of J'Reth is { "Mantis Dragon sounds." }.
+The scent of J'Reth is "     J'Reth smells of Mantis-Dragons and fairies in the woods."
 
 to say J'RethDesc:
 	if debugactive is 1:
@@ -134,19 +144,19 @@ to say J'RethTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Make general small talk";
 	[]
-	if hp of J'Reth is 3:
+	if HP of J'Reth is 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Discuss His Form";
 		now sortorder entry is 4;
 		now description entry is "Enquire about his draco-mantis form";
 	[]
-	if hp of J'Reth is 4 and (scenario is "Researcher" or nanite collector is equipped):
+	if HP of J'Reth is 4 and (scenario is "Researcher" or nanite collector is equipped):
 		choose a blank row in table of fucking options;
 		now title entry is "Prepare for Gender Shifting";
 		now sortorder entry is 5;
 		now description entry is "Further discuss and prepare for gender shifting the draco-mantis";
 	[]
-	if hp of J'Reth > 4 and (scenario is "Researcher" or nanite collector is equipped) and ((thirst of J'Reth < 2 and J'Reth_MVialsOwned < 14) or (thirst of J'Reth is 2 and J'Reth_HVialsOwned < 14) or (thirst of J'Reth is 3 and J'Reth_FVialsOwned < 14)):
+	if HP of J'Reth > 4 and (scenario is "Researcher" or nanite collector is equipped) and ((thirst of J'Reth < 2 and J'Reth_MVialsOwned < 14) or (thirst of J'Reth is 2 and J'Reth_HVialsOwned < 14) or (thirst of J'Reth is 3 and J'Reth_FVialsOwned < 14)):
 		choose a blank row in table of fucking options;
 		now title entry is "Extract Vial of Draco-mantis Nanites";
 		now sortorder entry is 6;
@@ -266,7 +276,7 @@ to say J'RethTalk4: [Discuss his form]
 	say "     J'Reth pauses and takes another breath, gathering his thoughts in order to continue. 'I haven't met anyone else like me, but considering my hobbies and obsession with them, I doubt that there was anyone else in the city as enthusiastic about this backpackemon as me so that isn't too much of a surprise. I don't seem to be infectious ot susceptible to casual exposure to others either. You've seen how packed the mall can be at times and I eat in the food court surrounded by so many others that if I was going to change or be changed by others that it would have happened already. As for how you can look like me, I may be able to help you with that. I've heard that some of the scientists that managed to gain entry to the city or were here from the beginning have been studying the nanites and their effects, Zephyr especially. If you impress them enough, they might give you a nanite extractor and I could give you a sample of blood for you to use to look like me. It would also give me chance of returning to this form if some infection does manage to shift me.'";
 	WaitLineBreak;
 	say "     'This brings me to my next topic. I've always had a curiosity about what it would have been like to be female, but due to the difficulty of gender reassignment surgery before the nanites and not actually being uncomfortable with being male, I didn't give it much thought beyond a passing wonder. Now though, people seem to be able to swap back and forth seemingly at a whim and my curiosity has an easy way of being assuaged. I want to stay looking the way I do now, but if you find a way that can safely give me a chance to experience being female I would be grateful.' He looks at you almost pleadingly and you automatically reassure him that you will keep it in mind but that he should be patient as you have your own safety to look out for as well. Nodding it acceptance he sits down on the edge of his bed and gives you a smile, hugging his knees gleefully as he revels in his chance to sate his curiosity even if he has to wait a while. Now you just have to come up with an idea of how to fulfil his wish.";
-	now hp of J'Reth is 4;
+	now HP of J'Reth is 4;
 
 to say J'RethTalk5: [Prepare for Gender Shifting]
 	say "     J'Reth's face lights up when you tell him that you have had a few thoughts about how he might be able to become female, or even hermaphroditic if he wants. 'I realize that you agreed to help me, but I wasn't sure whether you would be able to get the nanite extractor or have time to give it some thought with the number of other things happening in the city. What did you come up with?' he asks. You begin to tell him that there are effectively two options available to you, one easier than the other. He could take purposely designed pills that can change him into a man, woman, or herm, which will likely be difficult to obtain from creatures around the city, or if by some slim chance you did manage to find someone who would sell them to you, they would likely cost a fair few free-creds. The other option is to use some of the transformatives that you extract, claim, or otherwise pillage from creatures around the city, which while an easier option has a higher chance of having some side-effects on the draco-mantis.";
@@ -289,7 +299,7 @@ to say J'RethTalk5: [Prepare for Gender Shifting]
 	else: [Pills are fine]
 		say "     Seeing the discomfort that the idea of using creature transformatives is causing J'Reth, you quickly reassure him that you don't mind keeping an eye out for pills, you just wanted to explain the choices to him. A look of relief floods across the draco-mantis['] face and he gives you a brief hug. 'Thank you. I apologize for being difficult, but I really would be happier waiting for you to get the pills than drinking cum from who-knows-what. I can be patient, I've waited this long in my life after all, so don't take any undue risks to get them or bankrupt yourself. Becoming a woman will be more difficult if you become the property of some pimp or packmaster,' he teases you, looking at you with palpable gratitude. Smiling back, you agree to keep an eye out for testosterone, estrogen, and estosterogen pills. J'Reth pats you on the shoulder. 'Even if you don't have much success, just ask if you want to look like me. Consider it an advance reward for your help.' It sounds like J'Reth is now willing to share his draco-mantis infection with you.";
 		now hunger of J'Reth is 1;
-	now hp of J'Reth is 5;
+	now HP of J'Reth is 5;
 
 to say J'RethTalk6: [Take nanites for personal use or as a backup]
 	say "     Bringing up the offer that J'Reth had made to you about allowing you to take a sample of [PosPro of J'Reth] nanites, you ask the draco-mantis whether you would be able to extract some now. 'I don't see why not,' [SubjectPro of J'Reth] replies, 'I'm not exactly busy these days, and if I want to change my sex I'll want the vials as a backup anyway.' [SubjectProCap of J'Reth] sits on the edge of [PosPro of J'Reth] bed and exposes [PosPro of J'Reth] arm as you remove the nanite extractor from your backpack, wiping the needle with one of the seemingly limitless alcohol swabs that came with it. 'I don't know why I'm so calm about this, I'm not particularly fond of needles and I can't believe that it will be particularly easy to get through the chitin. Perhaps aim for a join so that you don't need to use as much force,' J'Reth suggests, eyeing the needle carefully as you approach. You sit down beside [ObjectPro of J'Reth]  and briefly stroke [PosPro of J'Reth] arm comfortingly before aligning the tip of the needle with a gap in [PosPro of J'Reth] protective plates that cover [PosPro of J'Reth] upper arm. Giving you a nod to continue, the draco-mantis closes [PosPro of J'Reth] eyes and waits to feel the prick of the metal going into [PosPro of J'Reth] arm.";
@@ -321,6 +331,15 @@ to say J'RethTalk7: [Use Estrogen Pill]
 		WaitLineBreak;
 		say "     As J'Reth's body ceases to shift and shudder, she collapses forward, the transition having exhausted her once again, but this time you are prepared and manage to catch her before she hits the floor. Finding her surprisingly light, you lie her on her bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' she mutters as she recovers from the wave of fatigue with the aid of the nanites. She looks over her body as excitedly as last time she was gendershifted, her smile widening and eyes sparkling with delight. 'I look so pretty, and there doesn't appear to have been any unintentional side effects!' she exclaims, running her fingers across her scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. Though being female may take some getting used to.' You decide to leave her for the moment as she returns to being entirely engrossed by her changed form. Maybe you can return later.";
 	now thirst of J'Reth is 3;
+	now Cock Count of J'Reth is 0;
+	now Cock Girth of J'Reth is 0;
+	now Cock Length of J'Reth is 0;
+	now Ball Count of J'Reth is 0;
+	now Ball Size of J'Reth is 0;
+	now Cunt Count of J'Reth is 1;
+	now Cunt Depth of J'Reth is 11;
+	now Cunt Tightness of J'Reth is 1;
+	now Clit Size of J'Reth is 2;
 	SetFemalePronouns for J'Reth;
 
 to say J'RethTalk8: [Use Glob of Goo]
@@ -389,6 +408,15 @@ to say J'RethTalk8: [Use Glob of Goo]
 		clear the screen and hyperlink list;
 		say "     Complying, you watch the chitin harden again and return to the same shade of green as before. 'Thanks. I'm glad that we planned ahead and that that didn't change me back into being male.' You decide to leave her for the moment as she returns to being entirely engrossed by her changed form. Maybe you can return later.";
 	now thirst of J'Reth is 3;
+	now Cock Count of J'Reth is 0;
+	now Cock Girth of J'Reth is 0;
+	now Cock Length of J'Reth is 0;
+	now Ball Count of J'Reth is 0;
+	now Ball Size of J'Reth is 0;
+	now Cunt Count of J'Reth is 1;
+	now Cunt Depth of J'Reth is 11;
+	now Cunt Tightness of J'Reth is 1;
+	now Clit Size of J'Reth is 2;
 	SetFemalePronouns for J'Reth;
 
 to say J'RethTalk9: [Use Testosterone Pill]
@@ -403,6 +431,15 @@ to say J'RethTalk9: [Use Testosterone Pill]
 		WaitLineBreak;
 		say "     As J'Reth's body ceases to shift and shudder, he collapses forward, the transition having exhausted him once again, but this time you are prepared and manage to catch him before he hits the floor. Finding him surprisingly light, you lie him on his bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' he mutters as he recovers from the wave of fatigue with the aid of the nanites. He looks over his body as excitedly as last time he was gendershifted, his smile widening and eyes sparkling with delight. 'I look so dashing, and there doesn't appear to have been any unintentional side effects!' he exclaims, running his fingers across his scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. I doubt that being male again will be too disconcerting, we'll wait and see.' You decide to leave him for the moment as he returns to being entirely engrossed by his changed form. Maybe you can return later.";
 	now thirst of J'Reth is 1;
+	now Cock Count of J'Reth is 1;
+	now Cock Girth of J'Reth is 2;
+	now Cock Length of J'Reth is 11;
+	now Ball Count of J'Reth is 2;
+	now Ball Size of J'Reth is 3;
+	now Cunt Count of J'Reth is 0;
+	now Cunt Depth of J'Reth is 0;
+	now Cunt Tightness of J'Reth is 0;
+	now Clit Size of J'Reth is 0;
 	SetMalePronouns for J'Reth;
 
 to say J'RethTalk10: [Use Fennec Semen]
@@ -466,6 +503,15 @@ to say J'RethTalk10: [Use Fennec Semen]
 		clear the screen and hyperlink list;
 		say "     Complying, you watch the feenec ears recede until his head is a smooth as before. 'Thanks. I'm glad that we planned ahead and that I was able to deal with the side effects.' You decide to leave him for the moment as he returns to being entirely engrossed by his changed form. Maybe you can return later.";
 	now thirst of J'Reth is 1;
+	now Cock Count of J'Reth is 1;
+	now Cock Girth of J'Reth is 2;
+	now Cock Length of J'Reth is 11;
+	now Ball Count of J'Reth is 2;
+	now Ball Size of J'Reth is 3;
+	now Cunt Count of J'Reth is 0;
+	now Cunt Depth of J'Reth is 0;
+	now Cunt Tightness of J'Reth is 0;
+	now Clit Size of J'Reth is 0;
 	SetMalePronouns for J'Reth;
 
 to say J'RethTalk11: [Use Estosterogen Pill]
@@ -485,6 +531,15 @@ to say J'RethTalk11: [Use Estosterogen Pill]
 		WaitLineBreak;
 		say "     As J'Reth's body ceases to shift and shudder, they collapses forward, the transition having exhausted them once again, but this time you are prepared and manage to catch them before they hit the floor. Finding them surprisingly light, you lie them on their bed again, earning a small, grateful smile. 'Thanks. That might have hurt. I know I said it last time, but maybe next time I won't try to kiss the concrete,' they mutter as they recover from the wave of fatigue with the aid of the nanites. They look over their body as excitedly as last time they were gendershifted, their smile widening and eyes sparkling with delight. 'I look so attractive, and there doesn't appear to have been any unintentional side effects!' they exclaim, running their fingers across their scales and chitin, feeling every dip and change more easily than your eyes seem to manage. 'Thank you. Though being a herm may take some getting used to.' You decide to leave them for the moment as they return to being entirely engrossed by their changed form. Maybe you can return later.";
 	now thirst of J'Reth is 2;
+	now Cock Count of J'Reth is 1;
+	now Cock Girth of J'Reth is 2;
+	now Cock Length of J'Reth is 11;
+	now Ball Count of J'Reth is 2;
+	now Ball Size of J'Reth is 3;
+	now Cunt Count of J'Reth is 1;
+	now Cunt Depth of J'Reth is 11;
+	now Cunt Tightness of J'Reth is 1;
+	now Clit Size of J'Reth is 2;
 	SetMalePronouns for J'Reth;
 
 to say J'RethTalk12: [Use Gryphon Milk]
@@ -553,6 +608,15 @@ to say J'RethTalk12: [Use Gryphon Milk]
 		clear the screen and hyperlink list;
 		say "     Complying, you watch their wings become thin and membranous again and their back return to being smooth and chitinous. 'Thanks. I'm glad that we planned ahead and that that didn't change me back into being male.' You decide to leave them for the moment as they return to being entirely engrossed by their changed form. Maybe you can return later.";
 	now thirst of J'Reth is 2;
+	now Cock Count of J'Reth is 1;
+	now Cock Girth of J'Reth is 2;
+	now Cock Length of J'Reth is 11;
+	now Ball Count of J'Reth is 2;
+	now Ball Size of J'Reth is 3;
+	now Cunt Count of J'Reth is 1;
+	now Cunt Depth of J'Reth is 11;
+	now Cunt Tightness of J'Reth is 1;
+	now Clit Size of J'Reth is 2;
 	SetMalePronouns for J'Reth;
 
 [to say J'RethTalk13: [Convince J'Reth to use Transformatives]
@@ -566,13 +630,13 @@ to say J'RethTalk12: [Use Gryphon Milk]
 Section 4 - Section 4 - Sex
 
 Instead of fucking J'reth:
-	if hp of J'Reth is 1:
+	if HP of J'Reth is 1:
 		say "     When you bring up having sex with him, to your surprise, he declines politely with an apologetic look. 'Sorry, I'm not feeling in the mood for it at the moment. I don't know whether it is because I've partaken of the carnal pleasures too much recently, or whether the climate within the city is getting to me. Either way, I don't feel like doing anything sexual today. I don't suppose you have any peaches, do you? Even tinned will do. They're one of my favorite snacks... Don't worry about it. It would be too much to ask of you,' the draco-mantis finishes with a sigh and turns away, his usually cheerful visage decidedly glum. Resolving to cheer him up, you decide that perhaps some fresh fruit might be what the doctor ordered. Perhaps [bold type]five[roman type] or so [bold type]peaches[roman type] from the park?";
-		now hp of J'Reth is 2;
-	else if hp of J'Reth is 2:
+		now HP of J'Reth is 2;
+	else if HP of J'Reth is 2:
 		if carried of tasty peach > 4:
 			say "     You politely cough to catch J'Reth's attention, the morose draco-mantis slowly looking up as you search through your backpack for the peaches that you got for him. After a moment you find them and present them to the surprised young man, the several small bruises on the fruit's skin doing little to diminish the obvious pleasure spreading across his face at not merely tinned, but fresh peaches. 'Wow... um, I don't know what to say other than thank you. I didn't expect anyone to be willing to devote time to cheering me up. Especially when it likely involved searching around the city. I might have to name my firstborn after you. You know... if I ever have a firstborn... Forget I said that. Please?' J'Reth blushes deeply and attempts to distract himself by taking a bite out of a peach. Letting out a sigh, he relaxes back on his bed for a moment before stirring again as his cock begins to swell from his crotch. 'I've heard of peaches being an aphrodisiac, but that was more effective than I would have expected. I haven't felt this horny in ages. Up for some intimate touching?' It looks like J'Reth is open to your advances now.";
-			now hp of J'Reth is 3;
+			now HP of J'Reth is 3;
 		else:
 			say "     'Sorry. I still feel down at the moment. I'm sure someone else would be willing if you're that desperate for sex.' Perhaps you should get [bold type]five peaches[roman type] from the park?";
 	else if (lastfuck of J'Reth - turns < 6): [he got fucked in the last 18 hours = 6 turns]
@@ -853,8 +917,9 @@ Object	Name
 Introduction By Soup	"Introduction By Soup"
 
 Introduction By Soup is a situation.
+ResolveFunction of Introduction By Soup is "[ResolveEvent Introduction By Soup]".
 The level of Introduction By Soup is 0.
-The sarea of Introduction By Soup is "Nowhere".
+Sarea of Introduction By Soup is "Nowhere".
 
 when play begins:
 	add Introduction By Soup to badspots of MaleList;
@@ -862,7 +927,7 @@ when play begins:
 after going to Mall Foodcourt while (Introduction By Soup is not resolved and a random chance of 1 in 3 succeeds):
 	IntroductionBySoupEvent;
 
-Instead of resolving Introduction By Soup:
+to say ResolveEvent Introduction By Soup:
 	IntroductionBySoupEvent;
 
 to IntroductionBySoupEvent:
@@ -881,14 +946,15 @@ Object	Name
 Mantis Meeting	"Mantis Meeting"
 
 Mantis Meeting is a situation.
+ResolveFunction of Mantis Meeting is "[ResolveEvent Mantis Meeting]".
 Mantis meeting is inactive.
 The level of Mantis Meeting is 0.
-The sarea of Mantis Meeting is "Nowhere".
+Sarea of Mantis Meeting is "Nowhere".
 
 after going to Mall Foodcourt while (Mantis Meeting is active and Introduction By Soup is resolved and Mantis Meeting is not resolved and a random chance of 1 in 3 succeeds):
 	MantisMeetingEvent;
 
-Instead of resolving Mantis Meeting:
+to say ResolveEvent Mantis Meeting:
 	MantisMeetingEvent;
 
 to MantisMeetingEvent:
@@ -905,14 +971,15 @@ Object	Name
 Soup & Sexual Gratification	"Soup & Sexual Gratification"
 
 Soup & Sexual Gratification is a situation.
+ResolveFunction of Soup & Sexual Gratification is "[ResolveEvent Soup & Sexual Gratification]".
 Soup & Sexual Gratification is inactive.
 The level of Soup & Sexual Gratification is 0.
-The sarea of Soup & Sexual Gratification is "Nowhere".
+Sarea of Soup & Sexual Gratification is "Nowhere".
 
 after going to Mall Foodcourt while (Soup & Sexual Gratification is active and Mantis Meeting is resolved and Soup & Sexual Gratification is not resolved and carried of food > 0 and a random chance of 1 in 3 succeeds):
 	Soup&SexualGratificationEvent;
 
-Instead of resolving Soup & Sexual Gratification:
+to say ResolveEvent Soup & Sexual Gratification:
 	Soup&SexualGratificationEvent;
 
 to Soup&SexualGratificationEvent:
@@ -948,20 +1015,21 @@ to Soup&SexualGratificationEvent:
 		now resolution of Soup & Sexual Gratification is 3; [Just left tin on floor]
 	now Soup & Sexual Gratification is resolved;
 	ItemLoss food by 1;
-	now hp of J'Reth is 1;
+	now HP of J'Reth is 1;
 
 Table of GameEventIDs (continued)
 Object	Name
 Reciprocal Thanks	"Reciprocal Thanks"
 
 Reciprocal Thanks is a situation.
+ResolveFunction of Reciprocal Thanks is "[ResolveEvent Reciprocal Thanks]".
 The level of Reciprocal Thanks is 0.
-The sarea of Reciprocal Thanks is "Nowhere".
+Sarea of Reciprocal Thanks is "Nowhere".
 
-after going to Mall Foodcourt while (Reciprocal Thanks is not resolved and Soup & Sexual Gratification is resolved and hp of J'Reth is 1 and a random chance of 1 in 3 succeeds):
+after going to Mall Foodcourt while (Reciprocal Thanks is not resolved and Soup & Sexual Gratification is resolved and HP of J'Reth is 1 and a random chance of 1 in 3 succeeds):
 	AReciprocalThanksEvent;
 
-Instead of resolving Reciprocal Thanks:
+to say ResolveEvent Reciprocal Thanks:
 	AReciprocalThanksEvent;
 
 to AReciprocalThanksEvent:
@@ -1038,13 +1106,14 @@ Object	Name
 Invitation to Storeroom	"Invitation to Storeroom"
 
 Invitation to Storeroom is a situation.
+ResolveFunction of Invitation to Storeroom is "[ResolveEvent Invitation to Storeroom]".
 The level of Invitation to Storeroom is 0.
-The sarea of Invitation to Storeroom is "Nowhere".
+Sarea of Invitation to Storeroom is "Nowhere".
 
-after going to Mall Foodcourt while (Reciprocal Thanks is resolved and Invitation to Storeroom is not resolved and hp of J'Reth is 1 and a random chance of 1 in 3 succeeds):
+after going to Mall Foodcourt while (Reciprocal Thanks is resolved and Invitation to Storeroom is not resolved and HP of J'Reth is 1 and a random chance of 1 in 3 succeeds):
 	InvitationtoStoreroomEvent;
 
-Instead of resolving Invitation to Storeroom:
+to say ResolveEvent Invitation to Storeroom:
 	InvitationtoStoreroomEvent;
 
 to InvitationtoStoreroomEvent:

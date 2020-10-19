@@ -24,7 +24,7 @@ Instead of examining the Pretty Kitty entrance:
 	say "Through the multiple clothing displays and stoic mannequins, the lights of [the other side of the Pretty Kitty entrance] are [if findwires is 2 and fixedgens > 2]on, displaying bright light throughout the store[else]off, not surprising considering that there is no power. Candles and the occasional lantern are providing some light in the store[end if].";
 
 [Describing the store & NPC beginning descriptions]
-The description of Pretty Kitty is "[PKDesc]".
+Description of Pretty Kitty is "[PKDesc]".
 
 to say PKDesc:
 	if thirst of Andromeda is 0:
@@ -55,9 +55,9 @@ object	name
 Andromeda	"Andromeda"
 
 Andromeda is a woman.
-The description of Andromeda is "     The bubbly owner of the store stands behind the checkout counter, looking around with a curious, innocent look in her eyes. Her tall, fuzzy ears swivel around constantly, taking in every sound echoing throughout her establishment and keeping a lookout for trouble. Wide green eyes peer out from her face, with her slightly-protruding muzzle graced by a constant bubbly smile. Night-black hair flows down to her shoulders, a dark contrast to the rest of her face. Roving your eyes down from her face, you see that her body is covered in short, dark-orange fur, with occasional splotches of gray interrupting the constant orange flow. Contrary to many of the denizens of this city, Andromeda is not at all voluptuous, the ripped shirt she's wearing barely showing her breasts while her slim stomach does nothing to dissuade her lean look. Her thin legs and hips are covered by a pair of denim jeans, faded and worn with years of use. Her long, furry tail flicks back and forth excitedly, almost knocking loose knick-knacks on the floor. Her (probably) pawed feet are currently inside a pair of tennis shoes, old and worn, with one missing a lace. Finally noting your roving eyes, she says 'Hey, eyes up here you!' all while giving you a good-natured smile and sticking her tongue out at you.";
+Description of Andromeda is "     The bubbly owner of the store stands behind the checkout counter, looking around with a curious, innocent look in her eyes. Her tall, fuzzy ears swivel around constantly, taking in every sound echoing throughout her establishment and keeping a lookout for trouble. Wide green eyes peer out from her face, with her slightly-protruding muzzle graced by a constant bubbly smile. Night-black hair flows down to her shoulders, a dark contrast to the rest of her face. Roving your eyes down from her face, you see that her body is covered in short, dark-orange fur, with occasional splotches of gray interrupting the constant orange flow. Contrary to many of the denizens of this city, Andromeda is not at all voluptuous, the ripped shirt she's wearing barely showing her breasts while her slim stomach does nothing to dissuade her lean look. Her thin legs and hips are covered by a pair of denim jeans, faded and worn with years of use. Her long, furry tail flicks back and forth excitedly, almost knocking loose knick-knacks on the floor. Her (probably) pawed feet are currently inside a pair of tennis shoes, old and worn, with one missing a lace. Finally noting your roving eyes, she says 'Hey, eyes up here you!' all while giving you a good-natured smile and sticking her tongue out at you.";
 
-The conversation of Andromeda is { "I'm a cat!" }.
+Conversation of Andromeda is { "I'm a cat!" }.
 the scent of Andromeda is "     Andromeda smells clean, obviously taking care of herself, but she has been unable to rid herself of the distinct undertones of [italic type]cat[roman type]."
 
 [Talking with NPC - Individual scenes play till done, then random talks]
@@ -75,7 +75,7 @@ instead of conversing Andromeda:
 	else if HP of Hadiya is 9 or HP of Hadiya is 59:		[Leather jacket for Hadiya's quest]
 		say "     After checking through the racks and not seeing one, you ask Andromeda if she's got a small leather jacket. 'No, my leather items were bou- Oh! Wait a sec,' she says, cutting herself off as she rushes to the back. The catgirl returns shortly with a small leather jacket with red and pink trim and a high waistline. 'I got this in with a shipment of other stuff, but didn't have a chance to send it back. Something with a bare midriff like that is too trashy for me to sell to a little girl. A larger version might look pretty sexy on the right woman though,' she adds with a soft sigh as her eyes glaze over. You wait awkwardly for a bit, but it soon becomes clear she's lost in her imagination. With a shrug, you take the unwanted jacket, hoping Gobby will be satisfied with it.";
 		increase HP of Hadiya by 1;
-		now carried of girl's jacket is 1;
+		ItemGain girl's jacket by 1;
 		now Goblin Thief is active;
 	else if HP of Andromeda is 1:
 		say "     Walking up to the lithe catgirl, you find that she's hopped up on the counter, sitting comfortably on the checkout line. Waving her feet back and forth casually, her ever-constant smile grows even wider when you approach her.";
@@ -168,7 +168,7 @@ object	name
 Clothing Shelf	"Clothing Shelf"
 
 Clothing Shelf is a man.
-The description of Clothing Shelf is "This nearby rack of clothes holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed as '1 food or 1 milk'. The outfits that stick out to you include a simple [bold type]T-shirt and Blue Jeans[roman type] combo, a lovely black [bold type]Blouse Set[roman type] that's combined with a knee-length skirt, a slim [bold type]Tuxedo set[roman type] and tie on a mannequin nearby, and a baggy, comfortable [bold type]Summer Set[roman type], consisting of a no-sleeved shirt and baggy shorts. You'd just have to have payment and ask to [bold type]procure[roman type] the outfit you want.";
+Description of Clothing Shelf is "This nearby rack of clothes holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed as '1 food or 1 milk'. The outfits that stick out to you include a simple [bold type]T-shirt and Blue Jeans[roman type] combo, a lovely black [bold type]Blouse Set[roman type] that's combined with a knee-length skirt, a slim [bold type]Tuxedo set[roman type] and tie on a mannequin nearby, and a baggy, comfortable [bold type]Summer Set[roman type], consisting of a no-sleeved shirt and baggy shorts. You'd just have to have payment and ask to [bold type]procure[roman type] the outfit you want.";
 
 the linkaction of Clothing Shelf is "Possible Actions: [link]smell[as]Smell Shelf[end link][line break]". [Add options for clothes as links?]
 the scent of Clothing Shelf is "This rack of clothes smells like fresh laundry, with a hint of finished wood.".
@@ -378,7 +378,7 @@ Collar Rack	"Collar Rack"
 
 [Defining Collar Rack]
 Collar Rack is a man.
-The description of Collar Rack is "In a more secluded part of the store, you see a few clothing mannequins standing stoically against the back wall of the store. Approaching them, you see that no clothing is displayed on them, totally bare... except for different types of collars around their necks. Wondering to yourself why Andromeda has such a selection of odd items on display, you brush those thoughts off and look at the selection she has in stock. Taking a close look at the well-made collars, you see that she has a [bold type]Black Spiked[roman type] collar, for those who wish for a more tough look; a fuzzy pink [bold type]Silk Collar[roman type] for people who want a cuter look; and a classic [bold type]Nametag Collar[roman type], for those wishing to display their name proudly. The changed price tags are still present, offering these pieces for '1 food or 1 milk'; you just have to ask to [bold type]procure[roman type] them.";
+Description of Collar Rack is "In a more secluded part of the store, you see a few clothing mannequins standing stoically against the back wall of the store. Approaching them, you see that no clothing is displayed on them, totally bare... except for different types of collars around their necks. Wondering to yourself why Andromeda has such a selection of odd items on display, you brush those thoughts off and look at the selection she has in stock. Taking a close look at the well-made collars, you see that she has a [bold type]Black Spiked[roman type] collar, for those who wish for a more tough look; a fuzzy pink [bold type]Silk Collar[roman type] for people who want a cuter look; and a classic [bold type]Nametag Collar[roman type], for those wishing to display their name proudly. The changed price tags are still present, offering these pieces for '1 food or 1 milk'; you just have to ask to [bold type]procure[roman type] them.";
 
 the linkaction of Collar Rack is "Possible Actions: [link]smell[as]Smell Rack[end link][line break]".
 the scent of Collar Rack is "These mannequins smell distinctively of plastic.".

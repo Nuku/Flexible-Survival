@@ -13,12 +13,13 @@ Object	Name
 FindingKristen	"FindingKristen"
 
 FindingKristen is a situation.
-The sarea of FindingKristen is "Outside".
+ResolveFunction of FindingKristen is "[ResolveEvent FindingKristen]".
+Sarea of FindingKristen is "Outside".
 when play begins:
 	add FindingKristen to BadSpots of FemaleList;
 	add FindingKristen to BadSpots of FurryList;
 
-Instead of resolving FindingKristen:
+to say ResolveEvent FindingKristen:
 	if HP of Kristen is not 0:
 		say "ERROR-Kristen-[HP of Kristen]E: This event should already be resolved!";
 	else:
@@ -73,7 +74,7 @@ Object	Name
 Kristen's Hideout	"Kristen's Hideout"
 
 Kristen's Hideout is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Kristen's Hideout is "[krishideoutdesc]".
+Description of Kristen's Hideout is "[krishideoutdesc]".
 
 the scent of Kristen's Hideout is "[krishideoutscent]".
 
@@ -128,8 +129,8 @@ to say krishideoutdesc:
 Section 2 - Kristen
 
 Kristen is a woman. Kristen is in Kristen's Hideout.
-The description of Kristen is "[kristendesc]".
-The conversation of Kristen is { "Thanks." }.
+Description of Kristen is "[kristendesc]".
+Conversation of Kristen is { "Thanks." }.
 kristenmsg1 is a truth state that varies. kristenmsg1 is usually false.	[K mentioned J]
 kristenmsg2 is a truth state that varies. kristenmsg2 is usually false.	[general info]
 kristenmsg3 is a truth state that varies. kristenmsg3 is usually false.	[J mentioned K]
@@ -433,7 +434,7 @@ to say kristentf_phase4_3:		[seductive]
 	if daytimer is day:		[daytime - park picnic]
 		say ". Having her gather some supplies from the cupboards, the two of you exit down the ladder. Praising her lovely appearance and reiterating that you'll protect her on the journey, you make your way towards the city park.";
 		say "     [if Park Entrance is unknown]Fortunately, your half-remembered details on how to get there turn out to be correct and you luckily avoid any significant trouble on the way[else]Fortunately, you encounter no significant trouble on the way[end if]";
-		if diegotalk > 0:	[met Diego]
+		if PlayerMet of Diego is true:	[met Diego]
 			say ". Seeing Diego waiting there as usual, you wrap your arm around the vixen protectively and give the coyote a sly wink as you pass. [if diegochanged is 0]He[else]She[end if] makes a show of growling lustfully at her, but slinks off when you advance. Kristen is impressed by your bravery and gives you a hug and a kiss while you and Diego share a thumbs up behind her back.";
 		else:			[not met Diego]
 			say ". Spotting [if Park Entrance is unknown]a[else]that[end if] coyote hanging out by the entrance, Kristen moves closer and you put your arm protectively around her. He gives her a lecherous look, but makes a show of backing off when you move between them. Kristen hugs and kisses you for being so brave. Glancing over, you spot the coyote, leaning casually against the wall again, give you a wink and a thumbs up behind her back, which you return.";

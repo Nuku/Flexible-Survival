@@ -145,6 +145,7 @@ to ItemGain (ItemObj - text) by (N - number) silence state is (Silence - a numbe
 			ItemGain object entry by N;
 		else:
 			ItemGain object entry by N silently;
+		now object entry is part of Player; [keeping the flimsy FS inventory system running]
 	else:
 		say "ERROR! Object [ItemObj] does not exist in the table of Game Objects. Please report this message on the FS Discord!";
 
@@ -156,6 +157,7 @@ to ItemGain (ItemObj - a grab object) by (N - number) silently:
 
 to ItemGain (ItemObj - a grab object) by (N - number) silence state is (Silence - a number):
 	increase carried of ItemObj by N;
+	now ItemObj is part of Player; [keeping the flimsy FS inventory system running]
 	if Silence is 0:
 		LineBreak;
 		say "[bold type]You gain [N] [printed name of ItemObj in lower case]![roman type][line break]";
@@ -170,15 +172,15 @@ to ItemLoss all (ItemObj - object):
 	if carried of ItemObj < 1:
 		if debug is at level 10:
 			say "DEBUG -> Trying to re-move [ItemObj] from player who doesn't have any.[line break]";
-		else: [found at least one item]
-			ItemLoss ItemObj by carried of ItemObj
+	else: [found at least one item]
+		ItemLoss ItemObj by carried of ItemObj
 
 to ItemLoss all (ItemObj - object) silently:
 	if carried of ItemObj < 1:
 		if debug is at level 10:
 			say "DEBUG -> Trying to re-move [ItemObj] from player who doesn't have any.[line break]";
-		else: [found at least one item]
-			ItemLoss ItemObj by carried of ItemObj silently;
+	else: [found at least one item]
+		ItemLoss ItemObj by carried of ItemObj silently;
 
 to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence - a number):
 	decrease carried of ItemObj by N;
@@ -324,6 +326,74 @@ to AddNavPoint (RoomObj - room) silence state is (Silence - a number):
 			if Silence is 0:
 				say "[bold type]['][RoomObj]['][roman type] has been added to your list of available navpoints. You will now be able to [bold type]nav[roman type]igate there from any of the fasttravel locations in the city by using the command [bold type]nav [RoomObj][roman type].";
 
+
+understand "rename" as PlayerRenaming.
+
+PlayerRenaming is an action applying to nothing.
+
+carry out PlayerRenaming:
+	playernaming; []
+
+to playernaming:
+	say "Note: You can always change your name at a later point with the 'rename NAME' command.";
+	say "[bold type]Please enter your new name: [roman type][line break]";
+	get typed command as playerinput;
+	now name of Player is playerinput;
+
+understand "SexStats" as SexStatsOverview.
+
+SexStatsOverview is an action applying to nothing.
+
+carry out SexStatsOverview:
+	say "Sex Stats:[Line Break]";
+	LineBreak;
+	if OralVirgin of Player is true:
+		say "You have a [special-style-1]virgin[roman type] mouth.";
+	else:
+		say "Your mouth has seen some use.";
+	if Player is male:
+		if PenileVirgin of Player is true:
+			say "You have a [special-style-1]virgin[roman type] cock.";
+		else:
+			say "Your cock has seen some use.";
+	if Player is female:
+		if Virgin of Player is true:
+			say "You have a [special-style-1]virgin[roman type] pussy.";
+		else:
+			say "Your pussy has seen some use.";
+	if AnalVirgin of Player is true:
+		say "You have a [special-style-1]virgin[roman type] ass.";
+	else:
+		say "Your asshole has seen some use.";
+	LineBreak;
+	say "Since the beginning of the nanite apocalypse, you have had the following sexual encounters:[Line Break]";
+	say "[OralPussyGiven of Player] times having your pussy orally pleasured, making you a [SexP OralPussyGiven of Player] at receiving pussy oral.";
+	say "[OralPussyTaken of Player] times orally pleasuring someone's pussy, making you a [SexP OralPussyTaken of Player] at giving pussy oral.";
+	say "[OralCockGiven of Player] times having your cock orally pleasured, making you a [SexP OralCockGiven of Player] at receiving cock oral.";
+	say "[OralCockTaken of Player] times orally pleasuring someone's cock, making you a [SexP OralCockTaken of Player] at giving cock oral.";
+	say "[AssFuckGiven of Player] times fucking someone in the ass, making you a [SexP AssFuckGiven of Player] at fucking asses.";
+	say "[AssFuckTaken of Player] times taking someone's cock up your ass, making you a [SexP AssFuckTaken of Player] at being ass-fucked.";
+	say "[PussyFuckGiven of Player] times fucking someone's pussy, making you a [SexP PussyFuckGiven of Player] at fucking pussies.";
+	say "[PussyFuckTaken of Player] times being fucked in the pussy by someone, making you a [SexP PussyFuckTaken of Player] at being fucked.";
+
+to say SexP (N - number):
+	if N is 0:
+		say "[special-style-1]virgin[roman type]";
+	else if N < 10:
+		say "[special-style-1]novice[roman type]";
+	else if N < 30:
+		say "[special-style-1]apprentice[roman type]";
+	else if N < 70:
+		say "[special-style-1]initiate[roman type]";
+	else if N < 150:
+		say "[special-style-1]journeyman[roman type]";
+	else if N < 300:
+		say "[special-style-1]expert[roman type]";
+	else if N < 575:
+		say "[special-style-1]master[roman type]";
+	else:
+		say "[special-style-1][one of]pornstar[or]sex machine[at random][roman type]";
+
 understand "testNPCSexAftermath" as NPCSexAftermathAction.
 
 NPCSexAftermathAction is an action applying to nothing.
@@ -369,6 +439,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now AnalVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s anal virginity![roman type][line break]";
 				add printed name of TakingChar to AnalVirginitiesTaken of Player;
+			increase AssFuckGiven of Player by 1;
 		else if SexAct is "PussyFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
@@ -377,31 +448,37 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now Virgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s virginity![roman type][line break]";
 				add printed name of TakingChar to VirginitiesTaken of Player;
+			increase PussyFuckGiven of Player by 1;
 		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
 			if Virgin of TakingChar is true:
 				now Virgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s virginity![roman type][line break]";
 				add printed name of TakingChar to VirginitiesTaken of Player;
+			increase PussyFuckGiven of Player by 1;
 		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
 			if AnalVirgin of TakingChar is true:
 				now AnalVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s anal virginity![roman type][line break]";
 				add printed name of TakingChar to AnalVirginitiesTaken of Player;
+			increase AssFuckGiven of Player by 1;
 		else if SexAct is "OralCock":
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s oral virginity![roman type][line break]";
 				add printed name of TakingChar to OralVirginitiesTaken of Player;
+			increase OralCockGiven of Player by 1;
 		else if SexAct is "OralPussy":
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s oral virginity![roman type][line break]";
 				add printed name of TakingChar to OralVirginitiesTaken of Player;
+			increase OralPussyGiven of Player by 1;
 		else if SexAct is "OralDildo": [used for dildos, fingers, tentacles - anything orally penetrative]
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s oral virginity![roman type][line break]";
 				add printed name of TakingChar to OralVirginitiesTaken of Player;
+		LibidoLoss 15;
 	else if TakingChar is player:
 		if debugactive is 1:
 			say "DEBUG -> Player is the receiving partner for '[SexAct]'[line break]";
@@ -425,6 +502,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 					if Player is mpreg_now: [player has _just_ been impregnated]
 						<set the Givingchar as father somehow>
 					]
+			increase AssFuckTaken of Player by 1;
 		else if SexAct is "PussyFuck":
 			if debug is at level 1:
 				say "DEBUG -> MainInfection of [GivingChar] is '[MainInfection of GivingChar]'[line break]";
@@ -443,26 +521,35 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 					if Player is fpreg_now: [player has _just_ been impregnated]
 						<set the Givingchar as father somehow>
 					]
+			increase PussyFuckTaken of Player by 1;
 		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
 			if AnalVirgin of Player is true:
 				now AnalVirgin of Player is false;
 				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
 				now FirstAnalPartner of Player is printed name of GivingChar;
+			increase AssFuckTaken of Player by 1;
 		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
 			if Virgin of Player is true:
 				now Virgin of Player is false;
 				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";
 				now FirstVaginalPartner of Player is printed name of GivingChar;
+			increase PussyFuckTaken of Player by 1;
 		else if SexAct is "OralCock" or SexAct is "OralPussy":
 			if OralVirgin of Player is true:
 				now OralVirgin of Player is false;
 				say "     [Bold Type]You have lost your oral virginity to [GivingChar]![roman type][line break]";
 				now FirstOralPartner of Player is printed name of GivingChar;
+			if SexAct is "OralCock":
+				increase OralCockTaken of Player by 1;
+			else:
+				increase OralPussyTaken of Player by 1;
 		else if SexAct is "OralDildo": [used for dildos, fingers, tentacles - anything orally penetrative]
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type]You have lost your oral virginity to [GivingChar]![roman type][line break]";
 				now FirstOralPartner of Player is printed name of GivingChar;
+			increase OralCockTaken of Player by 1;
+		LibidoLoss 15;
 	else:
 		if debugactive is 1:
 			say "DEBUG -> [GivingChar] is having sex with [TakingChar][line break]";
@@ -539,10 +626,20 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
+			increase AssFuckGiven of Player by 1;
 		else if SexAct is "PussyFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
+			increase PussyFuckGiven of Player by 1;
+		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
+			increase AssFuckGiven of Player by 1;
+		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
+			increase PussyFuckGiven of Player by 1;
+		else if SexAct is "OralCock":
+			increase OralCockGiven of Player by 1;
+		else if SexAct is "OralPussy":
+			increase OralPussyGiven of Player by 1;
 	else if TakingCharName is "Player" or TakingCharName is "player":
 		if debugactive is 1:
 			say "DEBUG -> Player is the receiving partner for '[SexAct]'[line break]";
@@ -556,6 +653,7 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 				movichance;
 			else:
 				mimpregchance;
+			increase AssFuckTaken of Player by 1;
 		else if SexAct is "PussyFuck":
 			if Virgin of Player is true:
 				now Virgin of Player is false;
@@ -566,21 +664,28 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 				fovichance;
 			else:
 				fimpregchance;
+			increase PussyFuckTaken of Player by 1;
 		else if SexAct is "AssDildoFuck":
 			if AnalVirgin of Player is true:
 				now AnalVirgin of Player is false;
 				say "     [Bold Type]You have lost your anal virginity to [GivingCharName]![roman type][line break]";
 				now FirstAnalPartner of Player is GivingCharName;
+			increase AssFuckTaken of Player by 1;
 		else if SexAct is "PussyDildoFuck":
 			if Virgin of Player is true:
 				now Virgin of Player is false;
 				say "     [Bold Type]You have lost your virginity to [GivingCharName]![roman type][line break]";
 				now FirstVaginalPartner of Player is GivingCharName;
+			increase PussyFuckTaken of Player by 1;
 		else if SexAct is "OralCock" or SexAct is "OralPussy":
 			if OralVirgin of Player is true:
 				now OralVirgin of Player is false;
 				say "     [Bold Type]You have lost your oral virginity to the [GivingCharName in lower case]![roman type][line break]";
 				now FirstOralPartner of Player is GivingCharName;
+			if SexAct is "OralCock":
+				increase OralCockTaken of Player by 1;
+			else:
+				increase OralPussyTaken of Player by 1;
 		now Lastfuck of Player is turns;
 	else:
 		let GivingCharIsNPC be 0;
@@ -661,6 +766,7 @@ to StatChange (Statname - a text) by (Modifier - a number) silence state is (Sil
 					increase stamina of Player by 1;
 					if remainder after dividing stamina of Player by 2 is 0:
 						increase maxHP of Player by level of Player + 1;
+						increase HP of Player by level of Player + 1;
 				else:
 					decrease stamina of Player by 1;
 					if remainder after dividing stamina of Player by 2 is 1:
@@ -694,12 +800,6 @@ carry out StatLossAction:
 to say NonCombatError:
 	say "ERROR! This is a noncombat creature that you should never see in a fight. Please report how you saw this on the FS Discord or Forum.";
 
-understand "rename [text]" as PlayerRenaming.
-
-PlayerRenaming is an action applying to one topic.
-
-carry out PlayerRenaming:
-	now name of Player is the topic understood;
 
 HighestPlayerStat is a text that varies.
 
@@ -747,20 +847,33 @@ to wield ( x - a grab object ):
 
 to wield ( x - a grab object ) silence state is (Silence - a number):
 	if x is owned and x is an armament:
-		now weapon object of Player is x;
-		now weapon of Player is weapon of x;
-		now weapon damage of Player is weapon damage of x;
-		now weapon type of Player is weapon type of x;
-		if x is ranged:
-			now weapon type of Player is "Ranged";
+		if (ScaleValue of Player - objsize of x) > -3 and (ScaleValue of Player - objsize of x) < 3:
+			now weapon object of Player is x;
+			now weapon of Player is weapon of x;
+			now weapon damage of Player is weapon damage of x;
+			now weapon type of Player is weapon type of x;
+			if x is ranged:
+				now weapon type of Player is "Ranged";
 		if Silence is 0:
-			say "You ready your [x]";
-			if x is unwieldy:
-				if scalevalue of Player > objsize of x:
-					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodyName of Player] hand dwarfs the [x], making it [if scalevalue of Player - objsize of x > 3]very[else if scalevalue of Player - objsize of x is 3]rather[else]somewhat[end if] [one of]unwieldy[or]awkward[or]difficult[at random] to use accurately";
-				else:
-					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 2]small[else]tiny[end if] [BodyName of Player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of Player > 3]very[else if objsize of x - scalevalue of Player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
-			say ".";
+			if (ScaleValue of Player - objsize of x) is:
+			-- 4: [4 size categories difference - huge player (5), size 1 weapon]
+				say "     You try to ready your [x], but there really is no way you could realistically use this in combat!";
+			-- 3: [3 categories difference]
+				say "     You try to ready your [x], but there really is no way you could realistically use this in combat!";
+			-- 2: [2 categories difference]
+				say "     Carefully taking the far too small [x] in one hand, you can't help but ask yourself if this won't hinder more than help in a fight.";
+			-- 1: [1 category difference]
+				say "     You grab the [x] with your comparatively large hand, finding it somewhat uncomfortable to wield.";
+			-- 0: [proper size for the player]
+				say "     You ready your [x].";
+			-- -1: [1 categories difference]
+				say "     You grab your [x] with your comparatively small hand, finding it somewhat uncomfortable to wield.";
+			-- -2: [2 categories difference]
+				say "     Clutching onto your [x] with both hands, you have trouble controlling its momentum. This will be intensely difficult to use.";
+			-- -3: [3 categories difference]
+				say "     Trying to use your [x] as a weapon is fairly ridiculous, given your size.";
+			-- -4: [4 size categories difference - tiny player (1), size 5 weapon]
+				say "     There is simply no way you could use your [x] as a weapon, given your small stature.";
 
 Section 2 - Stripping
 

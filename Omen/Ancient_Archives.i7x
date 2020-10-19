@@ -13,9 +13,10 @@ Object	Name
 Old Plaza	"Old Plaza"
 
 Old Plaza is a situation.
-The sarea of Old Plaza is "Red".
+ResolveFunction of Old Plaza is "[ResolveEvent Old Plaza]".
+Sarea of Old Plaza is "Red".
 
-Instead of resolving a Old Plaza:
+to say ResolveEvent Old Plaza:
 	say "     While walking down the seedy streets of the town, you enter a old run down plaza. There is a large oak tree that dominates the center of the plaza. The tree is addorned with ornaments and other trinkets that have been worn down by time. A strong breeze blows through the plaza, rattling the ornaments which culminates in a soft windchime like noise. You examine the buildings in the plaza, all of which are signifcantly older any of the buildings you've seen. Floorboards creek as you enter the buildings, which smell of old wood. As you explore one of the larger buildings, you come across a large quilt that should be placed centrally in the room, but it is instead bunched up on one side of the room. Curious, you enter the room to find a trap door in the floor. The door opens easily as you pull up on the latch, revealing a decending spiraling starcase made of stone. Do you decend down the staircase?";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yeah, it seems interesting.";
@@ -33,7 +34,7 @@ Section 2 - Visions of the past
 instead of navigating Ritualist Supply Room while (FirstTimeRitualistSupplyRoom is true):
 	say "     After opening the creaky old wooden door, you find yourself in a large supply room filled with all sorts of odds and ends. The fog permeates into this room as well, limiting your vision. Still you can see bins upon bins of dried out plants to your left. Barrels line the wall to your right, each with a tap on it for easy extraction of the liquids inside. A large table sits in the center of the room, made of some ornate stone that you have not seen before. There are some goods from around the room sprawled out on it, it looks like a place where someone would prepare some materials, but for what you are not sure. Just at the end of your vision, you see a large shelf filled with candles against the far wall. You walk over to the table, running hand softly over the cold stone countertop. Without realizing it, you start to feel very sleepy and stumble onto the tabletop as you drift into a light slumber.";
 	say "     Opening your eyes, you find yourself in another body, that of a young fit man with tan skin and a light dusting of body hair on your chest. Your arms are currently pulled behind your back by a large musucular man, who you can't see but find yourself trusting implicitly. Turning your attension to what's infront of you, you find a younger man bent over with his stomach on the table. He's fairly thin and quite pale, but his bum looks good enough to plow. You are manhandled into position by the stronger male, lining your sizable cock up with the tight puckered hole before you. Two large calloused hands run over your body appreciatively until they grab the necklace you're wearing and over you the lace to bite down on. With a cocky grin, you take the necklace into your mouth as if you were accepting a challenge. A small metal cross gently hands by your chin, suspended by the lacing of your necklace.";
-	waitlinebreak;
+	WaitLineBreak;
 	say "     You close your eyes and wait with anticipation of what's about to come. The man behind you is extremely quite, waiting for just the right moment to act. Letting your guard down for just a moment is all it takes for the man to strike. His huge footlong cock is abruptly shoved into your ass down to the hilt with so much force that your own cock is hilted in the submissive man laid out before you. The force of the blow is only amplified by his two large and abnormally heavy balls smacking into your toned cheeks a moment later. This nearly knocks you off your footing, but you manage to catch yourself and pushbackwards into the firm hips of the dominant man behind you. With your jaw still clenching down on the necklace, you give the man a triumpant grin over your shoulder. The man draws his cock out of your ass slowly and then slams all the way home again, setting a slow but brutual pace. All he manages to get out of you is a few grunts, but the slut beneath you screams and moans incoherently.";
 	say "     'I see the slut has already failed to keep his composure, but you're doing well young man. Let us see how you fair with a faster pace,' The dominant male whispers into your ear. The thrusts into your ass become faster and faster until he has you bouncing back and forth between him and the whore. He pulls your arms back so hard that they are begining to get sore, but you use the leverage to drive your ass back onto the cock with enough force to cause the man to let out a groan. You would have smiled at that success, but your currently far to busy concentrating on maintaining this brutal pace all the while keeping this necklace in your mouth. Under no circumstance will you let out a moan now, not when you are so close.";
 	WaitLineBreak;
@@ -53,13 +54,13 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Ritual Cross"	"A metal cross to some unknown diety that has suffered greatly from the passage of time. Perhaps there was once a symbol addorned upon it, but any trace of it has long since faded."	1	Ritual Cross
 Ritual Cross is a grab object. Ritual Cross is not temporary.
-the usedesc of Ritual Cross is "It's a old metal cross, with a black symbol emblazened on the surface. When you look at it, it makes you slightly horny.";
+Usedesc of Ritual Cross is "It's a old metal cross, with a black symbol emblazened on the surface. When you look at it, it makes you slightly horny.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "Ritual Candles"	"Several large bottles of glass filled with scented wax. Overall, they are quite pleasent and you think they would add nice atmosphere to a bedroom or otherworldly summoning."	1	Ritual Candles
 Ritual Candles is a grab object. Ritual Candles is not temporary.
-the usedesc of Ritual Candles is "These candles are well made and smell quite nice, someone put a lot of effort into making these.";
+Usedesc of Ritual Candles is "These candles are well made and smell quite nice, someone put a lot of effort into making these.";
 
 Section 3 - Discovering the Archives
 
@@ -80,14 +81,14 @@ Table of GameRoomIDs (continued)
 Object	Name
 Ancient Catacomb's Entrance	"Ancient Catacomb's Entrance"
 Ancient Catacomb's Entrance is a room. It is fasttravel. It is private.
-The description of Ancient Catacomb's Entrance is "     You're standing in a stone hallway with high ceilings upwards of 15 feet. The area is covered in a thick fog, limiting your visibility to about 20 feet. The only light you have to go by is whatever you brought with you down into these dark tunnels. Your breath freezes in front of you from the frigid temperatures. The stiars that you emerged from are to the south, opposite them is a closed wooden door. The hallway continues left and right beyond your eyesight, with little indication as to what lays beyond.".
+Description of Ancient Catacomb's Entrance is "     You're standing in a stone hallway with high ceilings upwards of 15 feet. The area is covered in a thick fog, limiting your visibility to about 20 feet. The only light you have to go by is whatever you brought with you down into these dark tunnels. Your breath freezes in front of you from the frigid temperatures. The stiars that you emerged from are to the south, opposite them is a closed wooden door. The hallway continues left and right beyond your eyesight, with little indication as to what lays beyond.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Ritualist Supply Room	"Ritualist Supply Room"
 Ritualist Supply Room is a room.
 Ritualist Supply Room is north of Ancient Catacomb Entrance.
-The description of Ritualist Supply Room is "     After opening the creaky old wooden door, you find yourself in a large supply room filled with all sorts of odds and ends. The fog permeates into this room as well, limiting your vision. Still you can see bins upon bins of dried out plants to your left. Barrels line the wall to your right, each with a tap on it for easy extraction of the liquids inside. A large table sits in the center of the room, made of some ornate stone that you have not seen before. There are some goods from around the room sprawled out on it, it looks like a place where someone would prepare some materials, but for what you are not sure. Just at the end of your vision, you see a large shelf filled with candles against the far wall.".
+Description of Ritualist Supply Room is "     After opening the creaky old wooden door, you find yourself in a large supply room filled with all sorts of odds and ends. The fog permeates into this room as well, limiting your vision. Still you can see bins upon bins of dried out plants to your left. Barrels line the wall to your right, each with a tap on it for easy extraction of the liquids inside. A large table sits in the center of the room, made of some ornate stone that you have not seen before. There are some goods from around the room sprawled out on it, it looks like a place where someone would prepare some materials, but for what you are not sure. Just at the end of your vision, you see a large shelf filled with candles against the far wall.".
 FirstTimeRitualistSupplyRoom is a truth state that varies. FirstTimeRitualistSupplyRoom is normally true.
 
 Table of GameRoomIDs (continued)
@@ -95,7 +96,7 @@ Object	Name
 Ancient Archives	"Ancient Archives"
 Ancient Archives is a room.
 Ancient Archives is west of Ancient Catacomb Entrance.
-The description of Ancient Archives is "     You walk through empty stone hallway for about a minute before it seems to open up into a large library. The fog is heavy here, making it hard to see clearly. The room appears to be set up as a large circle, with several rows of circular bookshelves placed around a central point. In the very center of the array of bookshelves is a pedestal with a massive tome placed on it. The circular bookshelves have a few clearings, allowing passage in cardinal directions. To the east is where you came from, the other directions must lead futher into the library. The bookshelves continue upwards past your vision, even though you can't see it you are sure it extends quite a ways. Confirming your suspicions, you see stairs to the west that lead upwards. A silent dread fills you as you stand in this room, for some reason you believe its very important to make as little noise as possible.".
+Description of Ancient Archives is "     You walk through empty stone hallway for about a minute before it seems to open up into a large library. The fog is heavy here, making it hard to see clearly. The room appears to be set up as a large circle, with several rows of circular bookshelves placed around a central point. In the very center of the array of bookshelves is a pedestal with a massive tome placed on it. The circular bookshelves have a few clearings, allowing passage in cardinal directions. To the east is where you came from, the other directions must lead futher into the library. The bookshelves continue upwards past your vision, even though you can't see it you are sure it extends quite a ways. Confirming your suspicions, you see stairs to the west that lead upwards. A silent dread fills you as you stand in this room, for some reason you believe its very important to make as little noise as possible.".
 FirstTimeAncientArchives is a truth state that varies. FirstTimeAncientArchives is normally true.
 
 Table of GameRoomIDs (continued)
@@ -103,35 +104,35 @@ Object	Name
 North wing 1st floor	"North wing 1st floor"
 North wing 1st floor is a room.
 North wing 1st floor is north of Ancient Archives.
-The description of North wing 1st floor is "     You enter a section of the archives that appears to be dominated by books on fire. Most of these tomes are in languages that you can't understand, some of them even give you a headache when you look at them.".
+Description of North wing 1st floor is "     You enter a section of the archives that appears to be dominated by books on fire. Most of these tomes are in languages that you can't understand, some of them even give you a headache when you look at them.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 South wing 1st floor	"South wing 1st floor"
 South wing 1st floor is a room.
 South wing 1st floor is south of Ancient Archives.
-The description of South wing 1st floor is "     You enter a section of the achieves that seems to pertain to ingrediants, for cooking or otherwise. Most of these tomes are in languages that you don't understand, others are depicting ingrediants that you have never seen nor heard of.".
+Description of South wing 1st floor is "     You enter a section of the achieves that seems to pertain to ingrediants, for cooking or otherwise. Most of these tomes are in languages that you don't understand, others are depicting ingrediants that you have never seen nor heard of.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Ancient Archives 2nd floor	"Ancient Archives 2nd floor"
 Ancient Archives 2nd floor is a room.
 Ancient Archives 2nd floor is up of Ancient Archives.
-The description of Ancient Archives 2nd floor is "     Walking up some stone stairs, you enter the second floor of the archives. The center of the room is left empty, with a hole in the ground that you assume would show the pedestal if not for the fog. There is a railing placed around the hole to prevent someone from falling down. The bookshelves are otherwise ortiented the same way, presenting you with four different routes once more. The stairs behind you lead down, and you would assume there are stairs in front of you that would lead further up.".
+Description of Ancient Archives 2nd floor is "     Walking up some stone stairs, you enter the second floor of the archives. The center of the room is left empty, with a hole in the ground that you assume would show the pedestal if not for the fog. There is a railing placed around the hole to prevent someone from falling down. The bookshelves are otherwise ortiented the same way, presenting you with four different routes once more. The stairs behind you lead down, and you would assume there are stairs in front of you that would lead further up.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 North wing 2nd floor	"North wing 2nd floor"
 North wing 2nd floor is a room.
 North wing 2nd floor is north of Ancient Archives 2nd floor.
-The description of North wing 2nd floor is "     This area of the archives appears to be dominated by tomes on the conjuration of creatures. There are very few tomes in here that you can understand, many of which depict horrors beyond your imagination. Some strike fear into your heart, while others arouse you.".
+Description of North wing 2nd floor is "     This area of the archives appears to be dominated by tomes on the conjuration of creatures. There are very few tomes in here that you can understand, many of which depict horrors beyond your imagination. Some strike fear into your heart, while others arouse you.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 South wing 2nd floor	"South wing 2nd floor"
 South wing 2nd floor is a room.
 South wing 2nd floor is south of Ancient Archives 2nd floor.
-The description of South wing 2nd floor is "     Grabbing a tome off the shelf yields a diagram of a living room, one with several chairs and a fire place. It looks rather cosey to be honest. You place the book back, it would appear this section of the library is dedicated to the conjuration or fabrication of buildings.".
+Description of South wing 2nd floor is "     Grabbing a tome off the shelf yields a diagram of a living room, one with several chairs and a fire place. It looks rather cosey to be honest. You place the book back, it would appear this section of the library is dedicated to the conjuration or fabrication of buildings.".
 
 [Combat triggers in the dungeon]
 after going up from Ancient Archives while random chance of 1 in 4 succeeds:
@@ -148,7 +149,7 @@ after going north from Ancient Archives 2nd floor while random chance of 1 in 4 
 Section 5 - Codex
 
 [Codex / Directory, currently doesn't do much but can be populated with neat books in the future]
-Codex is a backdrop. It is in Pretty Kitty. The description of Codex is "[Codex desc]".
+Codex is a backdrop. It is in Pretty Kitty. Description of Codex is "[Codex desc]".
 
 to say Codex desc:
 	say "     Approaching the massive tome, you see that it is finally made and seems to be in pristine condition. You realize this book is some kind of directory, but its use is difficult to comprehend. The lettering is extremely dense, you make out that each entry appears to be a title of a book. Staring at the title for long enough causes the pages to blur for a moment before a brief description and location comes up for the book in question. You blink once or twice, hardly believing your eyes as the detailed description fades back to the orignial list of books. Judging by the size of the tome, you could spend a eternity looking through books if you so desired. Curious, you flip the books cover up and read the title, 'Archives of The Brotherhood of Templars.' You can [link]browse[as]browse the codex[end link] through some of the pages if you want, though it would help to know what you're looking for.";

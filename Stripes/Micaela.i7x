@@ -10,12 +10,13 @@ Object	Name
 Easter Eggs	"Easter Eggs"
 
 Easter Eggs is a scavevent.
-The sarea of Easter Eggs is "Forest".
+ResolveFunction of Easter Eggs is "[ResolveEvent Easter Eggs]".
+Sarea of Easter Eggs is "Forest".
 when play begins:
 	add Easter Eggs to BadSpots of FurryList;
 	add Easter Eggs to badspots of HermList;
 
-Instead of resolving Easter Eggs:
+to say ResolveEvent Easter Eggs:
 	say "     Entering a small glade between the trees, you look around cautiously before crossing into it. At one edge, you spot a strange splash of color tucked under a bush. You approach and brush the leaves aside to see a mound of decorated eggs. They're colorful, some with solid colors and others striped or spotted - Easter eggs.";
 	say "     Leaning over to pick one up, you get a pair of surprises. The first come in the form of the wet film coating the eggs. The second is the [if level of Player > 5]increasingly [end if]familiar press of a large erection against your rear, lightly humping it.";
 	WaitLineBreak;
@@ -77,7 +78,7 @@ Object	Name
 Bunny House	"Bunny House"
 
 Bunny House is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Bunny House is "[bunnyhousedesc]".
+Description of Bunny House is "[bunnyhousedesc]".
 
 the scent of Bunny House is "Micaela's scents of arousal, rabbits and candy hang in the air here.";
 
@@ -92,8 +93,8 @@ object	name
 Micaela	"Micaela"
 
 Micaela is a person. Micaela is in Bunny House.
-The description of Micaela is "[micaeladesc]".
-The conversation of Micaela is { "Eggies!" }.
+Description of Micaela is "[micaeladesc]".
+Conversation of Micaela is { "Eggies!" }.
 the scent of the Micaela is "The colorful bunny smells of arousal, rabbits and candy.".
 micaelastory1 is a truth state that varies. micaelastory1 is usually false.
 micaela_bf is a number that varies.
@@ -314,9 +315,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Easter egg"	"A candy-coated chocolate egg the size of an ordinary egg."	1	Easter egg
 
-Easter egg is a grab object. Easter egg is infectious. Easter egg is temporary. The strain of Easter egg is "Easter Bunny".
+Easter egg is a grab object. Easter egg is infectious. Easter egg is temporary. Strain of Easter egg is "Easter Bunny".
 
-The usedesc of Easter egg is "[eatEasteregg]";
+Usedesc of Easter egg is "[eatEasteregg]";
 
 to say eatEasteregg:
 	say "     With the smell of candy and chocolate coming from the Easter egg, you find yourself hungry for it. Popping the treat into your mouth, you let the candy shell dissolve sweetly on your tongue before you bite into its chocolate center. Mmm... delicious. And exciting. You feel a little randier at the thought of just where these eggs come from";

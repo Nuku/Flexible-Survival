@@ -7,16 +7,17 @@ Object	Name
 Apartment 319	"Apartment 319"
 
 Apartment 319 is a situation.
+ResolveFunction of Apartment 319 is "[ResolveEvent Apartment 319]".
 Apartment 319 is inactive.
 AptAid is a number that varies.
 
-The sarea of Apartment 319 is "High".
+Sarea of Apartment 319 is "High".
 When play begins:
 	Add Apartment 319 to badspots of DemonList;
 	Add Apartment 319 to BadSpots of FurryList;
 	Add Apartment 319 to BadSpots of MaleList;
 
-Instead of resolving a Apartment 319:
+to say ResolveEvent Apartment 319:
 	if AptAid is 0:
 		say "     Briskly walking through the streets of the high rise, you come across a man jogging down the streets. Not thinking much of him you step out of his way, being that he's going in the opposite direction of you. It's only when he's shot passed you that you realize that there is something strange about the other. But not being able to place it at the moment, you simply shrug and go off about your way.";
 	If AptAid is 1 and ( MaleList is banned or DemonList is banned or FurryList is banned or HermList is banned ):

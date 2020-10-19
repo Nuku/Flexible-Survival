@@ -7,14 +7,15 @@ Object	Name
 Small Cave	"Small Cave"
 
 Small Cave is a situation.
-The sarea of Small Cave is "Forest".
+ResolveFunction of Small Cave is "[ResolveEvent Small Cave]".
+Sarea of Small Cave is "Forest".
 When play begins:
 	add Small Cave to badspots of FeralList;
 	add Small Cave to BadSpots of FurryList;
 	add Small Cave to badspots of CockvoreList;
 	add Small Cave to badspots of VoreList;
 
-Instead of resolving a Small Cave:
+to say ResolveEvent Small Cave:
 	if glowing mushroom is owned:
 		say "     Walking around the forest, you find what appears to be a hole in a rock. It does have sound coming from the other side, so it might be worth exploring. Unfortunately, the hole is too small for you size, so you would need to shrink before going in there.";
 		LineBreak;

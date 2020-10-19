@@ -9,7 +9,7 @@ object	name
 Alex	"Alex"
 
 Alex is a man. Alex is in Alex's Condo.
-The conversation of alex is { "Poing!" }.
+Conversation of alex is { "Poing!" }.
 alexbrunch is a number that varies.
 alexdiego is a number that varies.
 alexleeinfo is a number that varies.
@@ -27,14 +27,14 @@ to say alexscent:
 	else:
 		say "Alex smells of male ferret and brunchtime fun.";
 
-The description of Alex is "[if alexbrunch < 4]A mostly humanoid male with ferret-like ears and a long, sinuous tail. He has a twitchy animal nose with whiskers around it. He has a slightly rumpled suit on, still looking good despite his changes. He is a pleasant enough looking person who looks even better in those moments when he's not stressed or worried by his clients[else]Alex is a sexy ferret male, with a cute mustelid head. His twitchy animal nose has an array of whiskers around it. He has a slightly rumpled suit on, still looking good despite his changes. You find his new look quite pleasing to the eyes and he certainly seems much happier and friendlier of late. It seems the changes he's undergone are for the better[end if].".
+Description of Alex is "[if alexbrunch < 4]A mostly humanoid male with ferret-like ears and a long, sinuous tail. He has a twitchy animal nose with whiskers around it. He has a slightly rumpled suit on, still looking good despite his changes. He is a pleasant enough looking person who looks even better in those moments when he's not stressed or worried by his clients[else]Alex is a sexy ferret male, with a cute mustelid head. His twitchy animal nose has an array of whiskers around it. He has a slightly rumpled suit on, still looking good despite his changes. You find his new look quite pleasing to the eyes and he certainly seems much happier and friendlier of late. It seems the changes he's undergone are for the better[end if].".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Alex's Condo	"Alex's Condo"
 
 Alex's Condo is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Alex's Condo is "     Near the top of the high rise condo building, Alex's home has a good view of the area, if partially blocked by several of the other surrounding high rises. His place is fairly well-maintained, the mustelid tidying up occasionally. It does have the faint, tangy smell of mustelid musk, but it's not too strong. It is well-furnished, with expensive, trendy-looking furniture and décor. The big screen television and large stereo are silent, but fill a sizable portion of one wall. Several pieces of classy art adorn the others, all matching nicely with each other and the room décor as a whole. There are several legal briefs and law books open on the coffee table in the living room. Scattered around the floor are several colorful rubber objects, clearly outlets for any ferrety urges[if alexbrunch > 3]. There has been an increase in the number of rubber toys and shiny things scattered around the condo as the lawyer's gotten more ferrety[end if]. A glance in the kitchen shows that it's not as tidy, and is equally ultra-modern, if now useless. He's set up a small camper stove on his stove top and is using that for cooking. Between bouts of manic ferretness, the mustelid lawyer is sitting on his couch, focusing on his papers.".
+Description of Alex's Condo is "     Near the top of the high rise condo building, Alex's home has a good view of the area, if partially blocked by several of the other surrounding high rises. His place is fairly well-maintained, the mustelid tidying up occasionally. It does have the faint, tangy smell of mustelid musk, but it's not too strong. It is well-furnished, with expensive, trendy-looking furniture and décor. The big screen television and large stereo are silent, but fill a sizable portion of one wall. Several pieces of classy art adorn the others, all matching nicely with each other and the room décor as a whole. There are several legal briefs and law books open on the coffee table in the living room. Scattered around the floor are several colorful rubber objects, clearly outlets for any ferrety urges[if alexbrunch > 3]. There has been an increase in the number of rubber toys and shiny things scattered around the condo as the lawyer's gotten more ferrety[end if]. A glance in the kitchen shows that it's not as tidy, and is equally ultra-modern, if now useless. He's set up a small camper stove on his stove top and is using that for cooking. Between bouts of manic ferretness, the mustelid lawyer is sitting on his couch, focusing on his papers.".
 
 the scent of Alex's Condo is "[alexcondoscent]".
 
@@ -88,11 +88,12 @@ Object	Name
 Meet Alex	"Meet Alex"
 
 Meet Alex is a situation.
-The sarea of meet alex is "High".
+ResolveFunction of Meet Alex is "[ResolveEvent Meet Alex]".
+Sarea of meet alex is "High".
 AlexProgress is a number that varies.
 AlexTalk is a number that varies.
 
-Instead of resolving Meet Alex:
+to say ResolveEvent Meet Alex:
 	say "((Quest arc written by Khabi - update & post-quest by Stripes))[line break]";
 	say "     As you explore the High Rise district, you hear a voice calling out to you. Spinning quickly, you see a man walking toward you, who is holding his hands up - he is wearing a business suit, and he is unarmed. Once you lower your hackles from being so surprised - this city has taught you to stay on your toes - he approaches you.";
 	say "     'Good [short time of day], [if Breast Size of Player > 0]Ma'am[else]Sir[end if]. My name is Alex... well, I don't suppose last names are important anymore, are they?'";
@@ -118,7 +119,8 @@ Object	Name
 Find Lorenda	"Find Lorenda"
 
 Find Lorenda is a situation.
-The sarea of Find Lorenda is "Red".
+ResolveFunction of Find Lorenda is "[ResolveEvent Find Lorenda]".
+Sarea of Find Lorenda is "Red".
 Find Lorenda is inactive.
 Lisacheat is a number that varies.
 
@@ -127,7 +129,7 @@ Instead of conversing the Lisa while AlexProgress is 1 and lisacheat is 0:
 	now lisacheat is 1;
 
 
-Instead of resolving Find Lorenda:
+to say ResolveEvent Find Lorenda:
 	let found be 0;
 	if lisacheat is 1:
 		let bonus be (( perception of Player minus 10 ) divided by 2 ) + 5;
@@ -190,7 +192,7 @@ instead of entering the Confession Booth while AlexProgress is 4:
 	say "'Oh! Yes, I believe I know something that might help you. A man has barricaded himself inside one of the storage sheds to the north of the beach. There's a chance that he may be the one you're looking for.' You profusely thank the priestess, who waves off the praise. 'Thank the Goddess for your good fortune, not me. Stay safe and explore a newness of yourself through change, my child.'";
 
 
-instead of conversing the Diego while AlexProgress is 4 and alexdiego is 0 and diegotalk is 1:
+instead of conversing the Diego while AlexProgress is 4 and alexdiego is 0 and PlayerMet of Diego is true:
 	say "You ask Diego if he's happened to have seen anyone hiding out in the park that meets Lee's description. He shakes his head, saying he's not seen anyone like that, though you can never be certain if they changed too much.";
 	now alexdiego is 1;
 

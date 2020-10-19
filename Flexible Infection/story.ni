@@ -41,12 +41,12 @@ A person can be stunned. A person is usually not stunned.
 normal man is a human.
 Normal man is fearful.
 PC is a human.
-The description of human is "Just a regular human being. But for how long?[if the noun is a man] He nods in your direction.[end if][if the noun is female] She looks busy.[end if]".
+Description of human is "Just a regular human being. But for how long?[if the noun is a man] He nods in your direction.[end if][if the noun is female] She looks busy.[end if]".
 Centaur is an infection model.
 Centaur is male.
 The tf table of human is table 0.
 A thing has an infection model called ctype. The ctype of a person is usually normal man.
-The ctype of the player is usually PC.
+The ctype of Player is usually PC.
 A person has text called female name.
 A person has text called male name.
 The printed name of yourself is "you".
@@ -147,7 +147,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Your right shin changes."	"Pure human right shin."	"Your human right shin changes"
 "right foot" 	"Your right foot changes."	"Pure human right foot."	"Your human right foot changes"
 "rear" 	"Your rear changes."	"Pure human rear."	"Your human rear changes"
-"full" 	"werewolf"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female werewolf, a blend of attractive and fit human female and snarling feral wolf. Your body is just human enough to intrigue those not sent running, with wide hips and tight, B cupped breasts. Your snout hides long deadly looking teeth and slender fingers hide very capable claws for those that don't get the first hint[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1]You are a cross between a well built man and a wolf. Your large gray ears can detect any sound, and you move quietly. Heck, it seems the people around you barely even notice you're there. Your short tail wags behind you and you feel full of feral power. Now seems a good time to expand the pack[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1]You are a cross between a well built man and a wolf. Your large gray ears can detect any sound, and you move quietly. Heck, it seems the people around you barely even notice you're there. Your short tail wags behind you and you feel full of feral power. Now seems a good time to expand the pack[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
+"full" 	"werewolf"	"[if destined femininity of Player is 1 and destined masculinity of Player is 0]You are a female werewolf, a blend of attractive and fit human female and snarling feral wolf. Your body is just human enough to intrigue those not sent running, with wide hips and tight, B cupped breasts. Your snout hides long deadly looking teeth and slender fingers hide very capable claws for those that don't get the first hint[end if][if destined femininity of Player is 1 and destined masculinity of Player is 1]You are a cross between a well built man and a wolf. Your large gray ears can detect any sound, and you move quietly. Heck, it seems the people around you barely even notice you're there. Your short tail wags behind you and you feel full of feral power. Now seems a good time to expand the pack[end if][if destined femininity of Player is 0 and destined masculinity of Player is 1]You are a cross between a well built man and a wolf. Your large gray ears can detect any sound, and you move quietly. Heck, it seems the people around you barely even notice you're there. Your short tail wags behind you and you feel full of feral power. Now seems a good time to expand the pack[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
 
 Section - Were Fennec
 
@@ -503,10 +503,10 @@ Section - Minotaur
 
 table minotaur - Minotaur shifts
 Segment	Shift Text	Desc Text	Unshift Text
-"head"	"You see nothing but red for a moment as loud snaps announce the rapid growth of a broad snout and large expressive ears. Your vision begins to return as fur sweeps over you, brown and white. A large golden nose suddenly pierces your new, large, nose, a moment of pain before it rests comfortably[if the destined femininity of the player is 1]. Your hair forms into tight dreadlocks of dull rest, hanging to the back of your neck[end if]."         	"You have the broad snout of a cow, covered in brown and white fur[if the destined femininity of the player is 1]. Your head is capped with thick, pointed, horns[end if][if the destined femininity of the player is 1]. You have tightly braided dreadlocks of dull red color that run to the back of your neck[end if]."	--
-"chest"	"Your body expands with new muscles as your torso becomes more barrel like, filled with the power of a bovine[if the destined femininity of the player is 1]. The growing strength ebbs a moment, taking a detour into your suddenly very active mammaries, swelling quite large before four large teats swell on each, hanging pink and naked[end if]."           	"You have a powerful, brown and white furred, torso of a cow[if the destined femininity of the player is 1]. You have a huge set of breasts with four thick, dangling teats on each, pink and exposed[end if]."	"Your back itches as it shifts"
+"head"	"You see nothing but red for a moment as loud snaps announce the rapid growth of a broad snout and large expressive ears. Your vision begins to return as fur sweeps over you, brown and white. A large golden nose suddenly pierces your new, large, nose, a moment of pain before it rests comfortably[if destined femininity of Player is 1]. Your hair forms into tight dreadlocks of dull rest, hanging to the back of your neck[end if]."         	"You have the broad snout of a cow, covered in brown and white fur[if destined femininity of Player is 1]. Your head is capped with thick, pointed, horns[end if][if destined femininity of Player is 1]. You have tightly braided dreadlocks of dull red color that run to the back of your neck[end if]."	--
+"chest"	"Your body expands with new muscles as your torso becomes more barrel like, filled with the power of a bovine[if destined femininity of Player is 1]. The growing strength ebbs a moment, taking a detour into your suddenly very active mammaries, swelling quite large before four large teats swell on each, hanging pink and naked[end if]."           	"You have a powerful, brown and white furred, torso of a cow[if destined femininity of Player is 1]. You have a huge set of breasts with four thick, dangling teats on each, pink and exposed[end if]."	"Your back itches as it shifts"
 "gut"	"The muscles of your belly grow in powerful bands as any fat melts away before the spread of the fur."          	"You have a gut full of powerful muscles, covered in brown and white fur."	--
-"pelvis"	"A patch of white fur rapidly covers your groin, revealing a [if the destined masculinity of the player is 1]massive furry sheath, hiding a bovine member, and matching balls, hanging down to almost your knees[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1] and a [end if][if the destined femininity of the player is 1]pouting set of furry vulva, slick with readiness[end if]."          	"You have a [if the destined femininity of the player is 1]pouting set of furry vulva, slick with readiness[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1] and a [end if][if the destined masculinity of the player is 1]massive furry sheath, hiding a bovine member, and matching balls, hanging down to almost your knees[end if]."	--
+"pelvis"	"A patch of white fur rapidly covers your groin, revealing a [if destined masculinity of Player is 1]massive furry sheath, hiding a bovine member, and matching balls, hanging down to almost your knees[end if][if destined femininity of Player is 1 and destined masculinity of Player is 1] and a [end if][if destined femininity of Player is 1]pouting set of furry vulva, slick with readiness[end if]."          	"You have a [if destined femininity of Player is 1]pouting set of furry vulva, slick with readiness[end if][if destined femininity of Player is 1 and destined masculinity of Player is 1] and a [end if][if destined masculinity of Player is 1]massive furry sheath, hiding a bovine member, and matching balls, hanging down to almost your knees[end if]."	--
 "left upper arm"	"Your arm bulks out with newfound power, huge and muscly."               	"Your left arm looks strong enough to rip a metal door off the hinges."	--
 "left forearm"	"Your left arm is covered in brown fur with white spots."        	"Your left arm is covered in brown fur with white spots."	--
 "left hand"	"Your fingers slowly rearrange to make three powerful digits and a thumb, each capped with a thick hoof like nail, and covered in fur."     	"You have a mix of a hoof and a left hand, with thick hoof nails and fur."	--
@@ -520,16 +520,16 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Your right leg bulges with new muscle even as it shifts in stance to accommodate your digitigrade stance."       	"You have the powerful musculature and bone structure of a cow in your right leg."	--
 "right foot"	"Your right foot clenches as your toes flow together into a large powerful hoof, the rest raising from the ground as fur runs to cover it."            	"You have a cow's hoof instead of your right foot."	--
 "rear" 	"As brown fur runs around to your ass, a faint flash of pain signals the appearance of a long, swaying tail with a large tuft at the end."              	"You have a long, thin, cow's tail with a brown tuft at the end."	--
-"full" 	"minotaur"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female minotaur, with brown fur and white spots. Your powerful frame still has potent signs of your female charms, with wide hips and huge breasts, all eight teats exposed and long, promising of bounty[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1]You are a blend of two extreme sexualities wrapped up in a bovine package. Your huge bull's cock competes with your milk bearing breasts, leaving others unsure of which they may receive, perhaps both[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1]You are a huge and powerful bull minotaur, with bulging muscles on your everything, and a cock that could punch a hole in a door with a good thrust[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
+"full" 	"minotaur"	"[if destined femininity of Player is 1 and destined masculinity of Player is 0]You are a female minotaur, with brown fur and white spots. Your powerful frame still has potent signs of your female charms, with wide hips and huge breasts, all eight teats exposed and long, promising of bounty[end if][if destined femininity of Player is 1 and destined masculinity of Player is 1]You are a blend of two extreme sexualities wrapped up in a bovine package. Your huge bull's cock competes with your milk bearing breasts, leaving others unsure of which they may receive, perhaps both[end if][if destined femininity of Player is 0 and destined masculinity of Player is 1]You are a huge and powerful bull minotaur, with bulging muscles on your everything, and a cock that could punch a hole in a door with a good thrust[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
 
 Section - Latex Fox
 
 table latex fox - Fox Shifts
 Segment	Shift Text	Desc Text	Unshift Text
-"head"	"Red rubber pours across your head as it extends into a fox-like muzzle and two pointed ears grow from its top[if the destined femininity of the player is 1]. Long blond curls run from your scalp to half way down your back[end if]."         	"You have a rubbery fox head[if the destined femininity of the player is 1]. You have long blond hair despite otherwise rubbery appearance. It runs smoothly down to your mid back[end if]."	"Your fox like head changes"
-"chest"	"White latex moves over your chest as rubber with a more reddish hue pours over your back[if the destined femininity of the player is 1]. Your chest begins to inflate with the loud noise of an air compressor as two large D cup breasts come into bouncy existence[end if]."           	"You have the chest and back of a latex fox[if the destined femininity of the player is 1]. Your chest has two, large, D cup breasts that bounce like balloons, with just enough weight to be supple and delightful to the touch[end if]."	"Your back itches as it shifts"
+"head"	"Red rubber pours across your head as it extends into a fox-like muzzle and two pointed ears grow from its top[if destined femininity of Player is 1]. Long blond curls run from your scalp to half way down your back[end if]."         	"You have a rubbery fox head[if destined femininity of Player is 1]. You have long blond hair despite otherwise rubbery appearance. It runs smoothly down to your mid back[end if]."	"Your fox like head changes"
+"chest"	"White latex moves over your chest as rubber with a more reddish hue pours over your back[if destined femininity of Player is 1]. Your chest begins to inflate with the loud noise of an air compressor as two large D cup breasts come into bouncy existence[end if]."           	"You have the chest and back of a latex fox[if destined femininity of Player is 1]. Your chest has two, large, D cup breasts that bounce like balloons, with just enough weight to be supple and delightful to the touch[end if]."	"Your back itches as it shifts"
 "gut"	"Your gut is coated in white rubber, with thinly defined abs becoming visible through it"          	"You have a somewhat muscular fox-like gut."	"Your rubbery, yet muscular, gut shifts as it changes"
-"pelvis"	"The rubber flows over your genitals, leaving a [if the destined masculinity of the player is 1]white rubber canine shaft[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1] and a [end if][if the destined femininity of the player is 1]wet, red, set of rubbery lips[end if]."          	"You have a [if the destined femininity of the player is 1]wet, red, set of rubbery lips[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1] and a [end if][if the destined masculinity of the player is 1]white latex fox shaft[end if]."	"Your canine shaft feels as if it will explode as it starts to change"
+"pelvis"	"The rubber flows over your genitals, leaving a [if destined masculinity of Player is 1]white rubber canine shaft[end if][if destined femininity of Player is 1 and destined masculinity of Player is 1] and a [end if][if destined femininity of Player is 1]wet, red, set of rubbery lips[end if]."          	"You have a [if destined femininity of Player is 1]wet, red, set of rubbery lips[end if][if destined femininity of Player is 1 and destined masculinity of Player is 1] and a [end if][if destined masculinity of Player is 1]white latex fox shaft[end if]."	"Your canine shaft feels as if it will explode as it starts to change"
 "left upper arm"	"A river of red runs up and down your upper left arm."               	"Your upper left arm is completely covered in red rubber."	"Your red skin flows as your left upper arm reforms"
 "left forearm"	"The substance moves along your left forearm, leaving a sea of red in its wake."        	"Your left forearm is coated with red latex."	"The latex recedes as your left forearm changes"
 "left hand"	"As red latex flows along the fingers and palm of your left hand, black pads grow from the front and claws from your fingertips."     	"Your left hand is a cross between a human's and a fox's."	"Your left latex fox hand peels as it changes"
@@ -543,17 +543,17 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Your joints are reshaped by the red fluid pouring over your right shin, pulling and pushing them into the shape of a canine's leg."      	"Your right shin looks canine."	"Your red skin flows as your right shin reforms"
 "right foot" 	"The red latex runs down your right foot, leaving a paw in its place."           	"You have a latex fox paw for a right foot."	"Latex peels off your right foot as it changes"
 "rear" 	"Your rear quickly turns red from the rubber moving over it."              	"Your rear end is coated in red rubber."	"Your rear feels odd as the latex shifts"
-"full" 	"latex fox"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female latex fox, made of shiny red rubber, wielding a large squeaking tail[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1]You are a hermaphroditic latex fox. Your extreme curves are only challenged by your massive white rubber cock[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1]You are a male anthropomorphic fox made of latex rubber[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
+"full" 	"latex fox"	"[if destined femininity of Player is 1 and destined masculinity of Player is 0]You are a female latex fox, made of shiny red rubber, wielding a large squeaking tail[end if][if destined femininity of Player is 1 and destined masculinity of Player is 1]You are a hermaphroditic latex fox. Your extreme curves are only challenged by your massive white rubber cock[end if][if destined femininity of Player is 0 and destined masculinity of Player is 1]You are a male anthropomorphic fox made of latex rubber[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
 
 
 Section - Hippo Alchemist
 
 table hippo alchemist - Hippo Shifts
 Segment	Shift Text	Desc Text	Unshift Text
-"head"	"Your cheeks balloon outwards as your face curves with newly gained fat and muscle. Long curled ears of a hippo sprout from your skull, twitching softly. Your [if the destined femininity of the player is 1]eyebrows grow thicker as your lashes extend[else]facial hair grows dramatically, gaining you a styles beard and moustache[end if]."         	"You have the head of a hippo, purple and ponderous. You have [if the destined femininity of the player is 1]long lashes and thick eyebrows[else]a thick beard and long moustache[end if]."	"Your hippo like head changes"
-"chest"	"Your chest expands with muscle and fat in equal abundance as the skin turns a purple hue[if the destined femininity of the player is 1]. Your chest grows forward, allowing two great mounds to occupy it[end if]."           	"You have the chest and back of a purple hippo[if the destined femininity of the player is 1]. Your chest has two large breasts that rest heavily against your muscled chest[end if]."	"Your back itches as it shifts"
+"head"	"Your cheeks balloon outwards as your face curves with newly gained fat and muscle. Long curled ears of a hippo sprout from your skull, twitching softly. Your [if destined femininity of Player is 1]eyebrows grow thicker as your lashes extend[else]facial hair grows dramatically, gaining you a styles beard and moustache[end if]."         	"You have the head of a hippo, purple and ponderous. You have [if destined femininity of Player is 1]long lashes and thick eyebrows[else]a thick beard and long moustache[end if]."	"Your hippo like head changes"
+"chest"	"Your chest expands with muscle and fat in equal abundance as the skin turns a purple hue[if destined femininity of Player is 1]. Your chest grows forward, allowing two great mounds to occupy it[end if]."           	"You have the chest and back of a purple hippo[if destined femininity of Player is 1]. Your chest has two large breasts that rest heavily against your muscled chest[end if]."	"Your back itches as it shifts"
 "gut"	"You perhaps regret that cookie as your gut swells with what may seem to be fat before you can confirm it is equally muscle-bound."          	"You have a ponderous purple belly of a hippo, powerful and fat."	"Your huge gut shifts as it changes"
-"pelvis"	"Purple flesh turns darker the further down between your legs it goes, leaving a[if the destined masculinity of the player is 1] bloated but perfectly human penis[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1] and a [end if][if the destined femininity of the player is 1] pouting, purple-tinged vagina[end if]."          	"You have a [if the destined femininity of the player is 1]bloated but perfectly human cock [end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1] and [end if][if the destined masculinity of the player is 1]purple-tinted vagina[end if]."	"Your cock strains as it starts to change"
+"pelvis"	"Purple flesh turns darker the further down between your legs it goes, leaving a[if destined masculinity of Player is 1] bloated but perfectly human penis[end if][if destined femininity of Player is 1 and destined masculinity of Player is 1] and a [end if][if destined femininity of Player is 1] pouting, purple-tinged vagina[end if]."          	"You have a [if destined femininity of Player is 1]bloated but perfectly human cock [end if][if destined femininity of Player is 1 and destined masculinity of Player is 1] and [end if][if destined masculinity of Player is 1]purple-tinted vagina[end if]."	"Your cock strains as it starts to change"
 "left upper arm"	"Purple spreads up and down your upper left arm."               	"Your upper left arm is purple as well as being quite bulky."	"Your massive left upper arm begins to change"
 "left forearm"	"Your left forearm bulges with new muscles as the skin turns purple."        	"Your left forearm appears powerful and purple."	"The purple in your left forearm fades as things change"
 "left hand"	"Your fingers balloon into great grasping digits as purple overtakes the skin."     	"Your left hand has become big and purple."	"Your left hand begins to shrink and stops being purple"
@@ -567,7 +567,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Purple flesh runs along your right shin as your muscles compete with soft fat."       	"Your right shin looks large and purple."	"Your purple skin flows as your right shin reforms"
 "right foot"	"Your foot becomes large and purple as if injured, but there is no pain there, only strength."            	"You have a large flat purple foot with big darker purple toes."	"The purple flesh of your right foot begins to change"
 "rear" 	"Purple skin pushes outwards into a little twitchy nub of a tail."              	"Your have a naked purple nub of a tail."	"Your rear feels odd as the latex shifts"
-"full" 	"hippo alchemist"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female hippo, large and round and powerful. Your fat and muscles compete for space, leaving you curved with hidden might[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1]You are a hermaphroditic purple hippo. Your generous curves compete with your big purple human cock dangling between your legs[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1]You are a male hippo, waddling on two great purple legs with big toes. Behind you, a little nub of a tail sways wildly. Your face is adorned with a thick moustache and beard[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
+"full" 	"hippo alchemist"	"[if destined femininity of Player is 1 and destined masculinity of Player is 0]You are a female hippo, large and round and powerful. Your fat and muscles compete for space, leaving you curved with hidden might[end if][if destined femininity of Player is 1 and destined masculinity of Player is 1]You are a hermaphroditic purple hippo. Your generous curves compete with your big purple human cock dangling between your legs[end if][if destined femininity of Player is 0 and destined masculinity of Player is 1]You are a male hippo, waddling on two great purple legs with big toes. Behind you, a little nub of a tail sways wildly. Your face is adorned with a thick moustache and beard[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
 
 Section - Kangaroo
 
@@ -1318,9 +1318,9 @@ Section - Goblin
 Table Goblin - Goblin Shifts
 Segment	Shift Text	Desc Text	Unshift Text
 "head"	"Your face grows thick and rubbery as it begins to reshape. Your ears grow long and pointed and your teeth sharpen. Strange thoughts of mechanisms dance in your head."	"You have the head of a goblin, with sloppy mussed hair and a beady stare from behind thick aviator goggles. Your big green nose is quite handsome as well."	--
-"chest"	"Your flesh twitches softly as your chest becomes leathery and green. [if the destined femininity of the player is 1]Your breath catches as you grow two fair-sized breasts[else]Your chest is well muscled despite diminishing in size[end if]. You've lost about half your height, shrinking down."	"You have the short torso of a goblin, with tough green flesh[if the destined femininity of the player is 1]. You have B cup breasts that push out the chainmail you never remembered putting on[end if]."	--
+"chest"	"Your flesh twitches softly as your chest becomes leathery and green. [if destined femininity of Player is 1]Your breath catches as you grow two fair-sized breasts[else]Your chest is well muscled despite diminishing in size[end if]. You've lost about half your height, shrinking down."	"You have the short torso of a goblin, with tough green flesh[if destined femininity of Player is 1]. You have B cup breasts that push out the chainmail you never remembered putting on[end if]."	--
 "gut"	"Your body continues shrinking as your gut pulls in taught, turning off green in shade."	"You have the slim green belly of a goblin, covered in chainmail. When did you get that?"	--
-"pelvis"	"A most invasive sensation has you wriggling a bit in place as your groin warps[if the destined femininity of the player is 1]. You grow a small green lipped vagina, matching the green of the rest of you[end if][if the destined masculinity of the player is 1]. Your 'little friend' becomes green, but otherwise looks much the same[end if]."	"[if the destined femininity of the player is 1]You have a green skinned vagina of a goblin. [end if][if the destined masculinity of the player is 1]Your shaft has become green, but looks much the same otherwise. [end if]All of this is concealed with chainmail/leather pants."	--
+"pelvis"	"A most invasive sensation has you wriggling a bit in place as your groin warps[if destined femininity of Player is 1]. You grow a small green lipped vagina, matching the green of the rest of you[end if][if destined masculinity of Player is 1]. Your 'little friend' becomes green, but otherwise looks much the same[end if]."	"[if destined femininity of Player is 1]You have a green skinned vagina of a goblin. [end if][if destined masculinity of Player is 1]Your shaft has become green, but looks much the same otherwise. [end if]All of this is concealed with chainmail/leather pants."	--
 "left upper arm"	"Green hide spreads over your upper left arm as chainmail flows down along it."	"Your upper left arm is long for your torso, covered in green skin and chainmail."	--
 "left forearm"	"Your lower forearm tints green as the end of a chainmail sleeve appears and flows up towards your elbow."	"Your left forearm has green skin and the end of a chainmail sleeve."	--
 "left hand"	"My, what large hands you suddenly gain, at least the left one, not shrinking at all with the rest of you, with agile green fingers, just right for machinery."	"Your relatively large left hand is green and agile, ready to reach inside some gears and get to work."	--
@@ -1334,7 +1334,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"The skin of your right shin turns an off green shade."	"Your right leg is green and a little knobby."	--
 "right foot"	"Your foot turns green, but doesn't shrink much, leaving it relatively large compared to the rest of your body."	"Your right foot is large and green, with only [a random number from 2 to 4] warts visible!"	--
 "rear" 	"The back of some chainmail pants flows over your ass as it turns green. That felt odd."	"Your green butt is covered with suitable chainmail."	--
-"full" 	"goblin"	"You are a goblin, about three feet tall with a beady stare, big head, hands, and feet, and green skin. You are wearing a chainmail shirt and pants, with some crest on the chest that you don't recognize off hand[if the destined femininity of the player is 1]. Your B cup breasts press the chest of your new shirt out[end if][if the destined masculinity of the player is 1]. Your cock, though not visible, is green but otherwise unchanged[end if]."	--
+"full" 	"goblin"	"You are a goblin, about three feet tall with a beady stare, big head, hands, and feet, and green skin. You are wearing a chainmail shirt and pants, with some crest on the chest that you don't recognize off hand[if destined femininity of Player is 1]. Your B cup breasts press the chest of your new shirt out[end if][if destined masculinity of Player is 1]. Your cock, though not visible, is green but otherwise unchanged[end if]."	--
 
 
 Section - Male Mall Rat
@@ -1463,7 +1463,7 @@ The right shin is a body part. The tag of the right shin is "right shin".
 The right thigh is a body part. The tag of the right thigh is "right thigh".
 The right foot is a body part. The tag of the right foot is "right foot".
 
-The head is a part of the player.
+The head is a part of Player.
 
 The chest is a part of the head.
 The gut is a part of the chest.
@@ -1568,7 +1568,7 @@ To check along (subject - a thing):
 				say "The changes of [the N] are concealed by clothing.[line break]";
 			now xcheckerx is 1;
 	say "Wearing: [list of worn clothing] [line break]";
-	if pregnant of the player is not 0:
+	if pregnant of Player is not 0:
 		say "You are swollen with pregnancy.";
 
 
@@ -1614,9 +1614,9 @@ Does the player mean examining the rabbit vagina: it is very unlikely.
 
 instead of examining a person(called N):
 	if N is not spotted:
-		say "[The description of normal man][line break]Something about them seems... odd";
+		say "[Description of normal man][line break]Something about them seems... odd";
 	else:
-		say "[the description of ctype of N]";
+		say "[Description of ctype of N]";
 	if the tf table of ctype of N is not the tf table of N:
 		say "[line break]They are starting to look more and more like a [shift text in row 18 of the tf table of N]!";
 	if the pregnant of N is not 0:
@@ -1677,14 +1677,14 @@ Before printing the plural name of a person ( called subject): [used to display 
 
 
 every turn: [prevents negative stats]
-	if the willpower of ctype of the player is less than 0:
-		now the willpower of ctype of the player is 0;
-	if the reflex of ctype of the player is less than 0:
-		now the reflex of ctype of the player is 0;
-	if the willpower of ctype of the player is greater than 19:
-		now the willpower of ctype of the player is 19;
-	if the reflex of ctype of the player is greater than 19:
-		now the reflex of ctype of the player is 19;
+	if the willpower of ctype of Player is less than 0:
+		now the willpower of ctype of Player is 0;
+	if the reflex of ctype of Player is less than 0:
+		now the reflex of ctype of Player is 0;
+	if the willpower of ctype of Player is greater than 19:
+		now the willpower of ctype of Player is 19;
+	if the reflex of ctype of Player is greater than 19:
+		now the reflex of ctype of Player is 19;
 
 
 
@@ -1966,21 +1966,21 @@ Carry out submitting: [infects you and decreases willpower]
 		stop the action;
 	if the noun is male or the noun is neuter:
 		say "You bend over, presenting your [if the player is not femme]eager ass[else]wet cunt[end if] to [Noun]. He drives his cock home into you, thrusting until he climaxes inside.";
-		decrease the willpower of ctype of the player by a random number from 0 to 1;
+		decrease the willpower of ctype of Player by a random number from 0 to 1;
 		if the player is not femme:
 			infect rear with noun;
 		else:
-			if the pregnant of the player is 0 and a random chance of 1 in 3 succeeds:
-				increase the pregnant of the player by 1;
+			if the pregnant of Player is 0 and a random chance of 1 in 3 succeeds:
+				increase the pregnant of Player by 1;
 				say "Your belly swells round as the seed tingles inside of you with ominous warning.";
 			now the player is fertilized;
-			if the player is femme and the tf table of pelvis is table latex fox and ctype of noun is latex prickvixen and the destined masculinity of the player is 0:
+			if the player is femme and the tf table of pelvis is table latex fox and ctype of noun is latex prickvixen and destined masculinity of Player is 0:
 				now the prickpreg is 1;
 			infect pelvis with noun;
 		stop the action;
 	if the noun is female:
 		say "You lean back, letting your genitals become visible to the [Noun], who runs her tongue along it until you orgasm.";
-		decrease the willpower of ctype of the player by a random number from 0 to 1;
+		decrease the willpower of ctype of Player by a random number from 0 to 1;
 		infect pelvis with noun;
 
 
@@ -1988,8 +1988,8 @@ Carry out submitting: [infects you and decreases willpower]
 A thing is either a monster or not a monster.
 [A monster is a kind of person.]
 A thing has some text called attack text.
-A thing has a number called willpower. The willpower of a thing is usually 5. The willpower of the player is usually 10.
-A thing has a number called reflex. The reflex of a thing is usually 7. The reflex of the player is usually 10.
+A thing has a number called willpower. The willpower of a thing is usually 5. Willpower of Player is usually 10.
+A thing has a number called reflex. The reflex of a thing is usually 7. The reflex of Player is usually 10.
 A thing has a number called move rate. The move rate of a thing is usually 2.
 A thing has a number called attack rate. The attack rate of a thing is usually 1.
 A thing has a room called belly. The belly of a thing is usually dark belly.
@@ -2025,19 +2025,19 @@ Every turn when an on-stage monster is a hunter:
 
 Every turn:
 	if the tf table of the head is table fennec and fennec torso is a part of the rear:
-		if a random chance of 5 in the willpower of ctype of the player succeeds:
+		if a random chance of 5 in the willpower of ctype of Player succeeds:
 			let z be a random visible npc unchanged person;
 			if z is not nothing and z is not the player:
 				say "An overwhelming urge overtakes you and you approach the [z] and lick their face, then grab their hips. They squirm and struggle as you try to stuff them into yourself.";
-				now the belly of the player is dark belly;
+				now the belly of Player is dark belly;
 				slurp z with the player;
 				if z is in dark belly, say "With great satisfaction, you stuff them inside yourself, groaning as your body swells to accommodate them, pleasure radiating with every motion they make in their futile struggles.";
 	if the tf table of the pelvis is table feral dragoness:
-		if a random chance of 5 in the willpower of ctype of the player succeeds:
+		if a random chance of 5 in the willpower of ctype of Player succeeds:
 			let z be a random visible npc unchanged person;
 			if z is not nothing and z is not the player:
 				say "Your wet reptilian cunt suddenly becomes quite demanding and you approach [Printed name of Z], licking your lips. You grab at them trying to stuff them into your needy orifice.";
-				now the belly of the player is egg;
+				now the belly of Player is egg;
 				slurp z with the player;
 				if z is in egg, say "With great satisfaction, you stuff them inside yourself, groaning as your body swells to accommodate them, pleasure radiating with every motion they make in their futile struggles.";
 	repeat with N running through on-stage people that are not the player:
@@ -2062,7 +2062,7 @@ Every turn:
 			if the tf table of pelvis is not table furry deer:
 				now N is not pacified;
 			else:
-				if N is in the location of the player:
+				if N is in the Location of Player:
 					now N is not pacified;
 				else:
 					now N is pacified;
@@ -2140,7 +2140,7 @@ Every turn:
 					Let P be the location of a random on-stage stag;
 			if ctype of N is a furry doe:
 				if the tf table of pelvis is table furry deer:
-					Let P be the location of the player;
+					Let P be the Location of Player;
 			if a random chance of 1 in the move rate of ctype of N succeeds and the way is a direction and N is not immobile and N is not stuck to a rope:
 				Try N going the way;
 		else:
@@ -2149,7 +2149,7 @@ Every turn:
 			if ctype of N is an otter, now P is Lewis Pond;
 			if ctype of N is a furry doe:
 				if the tf table of pelvis is table furry deer:
-					Let P be the location of the player;
+					Let P be the Location of Player;
 			let the way be the best route from R to P, using doors;
 			if a random chance of 1 in the move rate of ctype of N succeeds and the way is a direction and N is not immobile and n is not stuck to a rope, try N going the way;
 
@@ -2236,7 +2236,7 @@ To infect (subject - a body part) with (infector - a thing):
 			if the subject is visible and there is a shift text entry, say "[shift text entry][line break]";
 			if the subject is not visible, say "Your [subject] feels strange.[line break]";
 			now the desc of the subject is the desc text entry;
-			now the description of the subject is the desc text entry;
+			now Description of the subject is the desc text entry;
 			now the TF table of the subject is the TF table of the infector;
 			repeat with N running through infection models:
 				if the tf table of n is the tf table of the infector:
@@ -2469,27 +2469,27 @@ Every turn when an infected body part is a part of something:
 	if multiswitch is "off":
 		repeat with N running through not benign infected body parts that are a part of something:
 			repeat with X running through infected body parts that are not a part of something:
-				if the body part origin of X is the tag of N and the TF table of X is the TF table of N and a random chance of 1 in the willpower of ctype of the player succeeds, grow X from N;
+				if the body part origin of X is the tag of N and the TF table of X is the TF table of N and a random chance of 1 in the willpower of ctype of Player succeeds, grow X from N;
 		repeat with N running through not infected body parts:
-			if N is a part of some not benign infected body part (called the subject) and a random chance of 1 in the willpower of ctype of the player succeeds:
+			if N is a part of some not benign infected body part (called the subject) and a random chance of 1 in the willpower of ctype of Player succeeds:
 				infect N with the subject;
-			else if some not benign infected body part (called the subject) is a part of N and a random chance of 1 in the willpower of ctype of the player succeeds:
+			else if some not benign infected body part (called the subject) is a part of N and a random chance of 1 in the willpower of ctype of Player succeeds:
 				infect N with the subject;
 	else:
 		repeat with N running through not benign infected body parts that are a part of something:
 			repeat with X running through infected body parts that are not part of something:
-				if the body part origin of X is the tag of N and the TF table of X is the TF table of N and a random chance of 1 in the willpower of ctype of the player succeeds:
+				if the body part origin of X is the tag of N and the TF table of X is the TF table of N and a random chance of 1 in the willpower of ctype of Player succeeds:
 					repeat with Z running through body parts that are a part of N:
 						if the tag of Z is the tag of X, remove Z from play;
 					grow X from N;
 		repeat with N running through body parts:
-			if N is a part of some not benign infected body part (called the subject) and a random chance of 1 in the willpower of ctype of the player succeeds:
+			if N is a part of some not benign infected body part (called the subject) and a random chance of 1 in the willpower of ctype of Player succeeds:
 				if there is a segment of the tag of N in Table 0 and the tf table of N is not the tf table of the subject:
 					infect N with the subject;
 				else if the TF table of N is not the TF table of the subject:
 					say "Your [N] shrivels away.";
 					remove N from play;
-			else if some not benign infected body part (called the subject) is a part of N and a random chance of 1 in the willpower of ctype of the player succeeds:
+			else if some not benign infected body part (called the subject) is a part of N and a random chance of 1 in the willpower of ctype of Player succeeds:
 				if there is a segment of the tag of N in Table 0 and the tf table of N is not the tf table of the subject, infect N with the subject;
 
 [behavior.infections end]
@@ -2498,7 +2498,7 @@ Every turn when an infected body part is a part of something:
 
 Section - Large Bee
 
-Large Bee is a infection model. The description of a Large Bee is "This beast resembles an average insect but it seems pretty large to be normal. It seems to bares a special kind of stinger." The TF table of a Large Bee is Table bee.
+Large Bee is a infection model. Description of a Large Bee is "This beast resembles an average insect but it seems pretty large to be normal. It seems to bares a special kind of stinger." The TF table of a Large Bee is Table bee.
 
 The move rate of a Large Bee is 1.
 The attack rate of a Large Bee is 1.
@@ -2514,7 +2514,7 @@ instead of taking a beehive:
 	let Z be a random off-stage buzzy person;
 	if z is not nothing:
 		say "You've upset the bees of the hive, and one pops out to defend it.";
-		move Z to the location of the player;
+		move Z to the Location of Player;
 		now Z is not selected;
 	else:
 		say "There don't seem to be any bees left.";
@@ -2537,15 +2537,15 @@ Does the player mean attacking the innocent not infected person: it is very unli
 Does the player mean attacking the innocent not infected person when every body part is infected: it is likely.
 Does the player mean attacking the innocent infected person: it is unlikely.
 
-instead of the player kissing a large bee:
+instead of player kissing a large bee:
 	say "You approach the bee with lust in your eyes, and it stings at you for the trouble.";
 	try noun attacking the player;
 
- Instead of a person (called the attacker) attacking a person (called the victim):
- 	now ychecker is ctype of attacker;
- 	now targetx is victim;
- 	if the attacker is engulfed, stop the action;
- 	let attack be the ctype of attacker;
+Instead of a person (called the attacker) attacking a person (called the victim):
+	now ychecker is ctype of attacker;
+	now targetx is victim;
+	if the attacker is engulfed, stop the action;
+	let attack be the ctype of attacker;
 	if the attack is stat-switched:
 		let B be the reflex of the attack;
 		now the reflex of the attack is the willpower of the attack;
@@ -2580,7 +2580,7 @@ instead of the player kissing a large bee:
 				if the TF table of ctype of N is the TF table of the attack or there is no segment of the tag of N in Table 0, let N be a random visible not same body part;
 			else:
 				let N be a random visible not same body part;
-			if a random number from 1 to 20 plus the reflex of the attack is greater than a random number from 1 to 20 plus the reflex of the player:
+			if a random number from 1 to 20 plus the reflex of the attack is greater than a random number from 1 to 20 plus the reflex of Player:
 				if N is not nothing:
 					say "[The attacker] [primary attack description of the attack] your [N]![line 	break]";
 					if the attacker is a monster, infect the N with the attack;
@@ -2604,7 +2604,7 @@ instead of the player kissing a large bee:
 			let z be 0;
 			if N is not a part of something, now Z is 1;
 			if the tf table of N is not the tf table of the attack, now z is 1;
-			if Z is 1 and a random number from 1 to 20 plus the reflex of the attack is greater than a random number from 1 to 20 plus the reflex of the player:
+			if Z is 1 and a random number from 1 to 20 plus the reflex of the attack is greater than a random number from 1 to 20 plus the reflex of Player:
 				say "[The attacker] [primary attack description of the attack][line break]";
 				repeat with W running through body parts:
 					if the tag of W is the body part origin of N, grow N from W;
@@ -2625,11 +2625,11 @@ instead of the player kissing a large bee:
 				if the TF table of N is the TF table of the attack or there is no segment of the tag of N in Table 0, let N be a random not infected body part;
 			else:
 				let N be a random not infected body part;
-			if a random number from 1 to 20 plus the reflex of the attack is greater than a random number from 1 to 20 plus the reflex of the player and N is not nothing:
+			if a random number from 1 to 20 plus the reflex of the attack is greater than a random number from 1 to 20 plus the reflex of Player and N is not nothing:
 				say "[The attacker] [primary attack description of the attack] your [N]![line break]";
 				let P be a random IC room adjacent to the victim;
 				if P is not nothing:
-					let way be the best route from the location of the player to P;
+					let way be the best route from the Location of Player to P;
 					say "You're knocked to the [way] by the force of the blow!";
 					move the player to P;
 				else:
@@ -2711,7 +2711,7 @@ Instead of attacking a person (called the victim): [handles attacks on people, i
 	if the victim is the player:
 		say "You can't attack yourself!";
 	else:
-		if the reflex of the player plus a random number from 1 to 20 is greater than the reflex of the victim plus a random number from 1 to 20:
+		if the reflex of Player plus a random number from 1 to 20 is greater than the reflex of the victim plus a random number from 1 to 20:
 			if ychecker is herder and victim is not unchanged:
 				if the player in the location of home of ychecker:
 					if victim is immobile:
@@ -2732,7 +2732,7 @@ Instead of attacking a person (called the victim): [handles attacks on people, i
 				else:
 					now targetx is victim;
 					say "Your body's urges become too great as it [primary attack description of the ychecker] [the victim]![line break]";
-				increase the reflex of the player by a random number from 0 to 1;
+				increase the reflex of Player by a random number from 0 to 1;
 				infect the victim with the right hand;
 			else:
 				say "You deliver a killing blow to [the victim]![line break]";
@@ -2753,12 +2753,12 @@ Section - Misc
 Setwilling is an action applying to one number. Understand "setwill [number]" as setwilling.
 
 Carry out setwilling a number (called the Q):
-   now the willpower of ctype of the player is Q.
+   now the willpower of ctype of Player is Q.
 
 Setreflexing is an action applying to one number. Understand "setreflex [number]" as setreflexing.
 
 Carry out setreflexing a number (called the Q):
-   now the reflex of ctype of the player is Q.
+   now the reflex of ctype of Player is Q.
 
 
 Section - Offer
@@ -2784,21 +2784,21 @@ Carry out offering a person (called the victim): [attempts to infect person]
 		if the humanity of victim is greater than 3:
 			say "[Victim] gazes at your form with some longing, but manages to resist your offer, for now.";
 			decrease the humanity of victim by 1;
-			decrease the humanity of Player by 1;
+			decrease Humanity of Player by 1;
 			stop the action;
 		if the victim is male:
 			say "[one of]You prowl towards [Victim] and purr at him in a low growl. He looks at you at first with some fear, but that emotion fades quickly. You nuzzle him along the leg, then lick across his groin, drawing a shuddering moan from him. As your teeth hook into the zipper, he reaches to assist, working off his pants. His shaft springs free, radically changed. It looks very similar to your own, pink and bestial and ready. You turn your rump towards the panting human in invitation.[line break][line break]He comes up behind you and grabs your massive furry hips, driving his alien shaft deep into your wet cunt. You howl and rock against him as he goes taught, then begins to shudder. The world is lost to him as his body locks into a steady torrent of climax, filling your body with his seed and humanity. Every spurt from his swelling balls causes his body to degrade further, until another Uber Fox rests on your back, knotted tightly to you, his humanity fled.[or]You fan your tails at [victim] and he loses it. He yanks down his pants, revealing his erect fox shaft, and practically tackles you to the ground. You yelp, but do not resist as he rolls you to your back and begins pounding into your body with desperate fury. Pleasure builds within you, cresting when his knot seals in your wet thick lips. He begins to spray and spray and spray, unable to stop, surrendering his humanity to you in a long stream of seed. He falls across you, bestial and furry, his humanity gone.[at random]";
 		else:
 			say "[one of]You rear up on your hindlegs, then settle back onto your haunches. [Victim] looks over at you and licks her lips before she approaches, shedding clothes as she goes. By the time she gets to you, she is naked. You can see that a large wet vulpine sex rests between her legs and is soon settling onto your cock as she sits in your lap and hugs you tightly. With a growl, you begin to thrust up into her, taking her in eager pushes until your knot swells and locks into the ecstatic human. [Victim] yelps as you seal with her, then begins to change rapidly, her humanity fleeing her as she becomes another fox, tied to you for a few moments longer as you lick at one another's faces.[or]You sneak up behind [Victim] and nuzzle into her ass, sniffing at her. She swats at you, but you return, sniffing again. After [a random number between 3 and 7] times she finally turns to face you, but stops, panting instead. She silently pulls down her pants, then falls to all fours, offering herself to you. Without hesitation, you leap on her and begin pounding forward into her tight fox cunt. As you explode powerfully into her, your body draws the humanity from her and she is soon covered in thick fur and muscles, another uber fox.[at random]";
 		decrease the humanity of victim by 5;
-		decrease the humanity of Player by 5;
+		decrease Humanity of Player by 5;
 		now the tf table of victim is table uber fox;
 		now the ctype of victim is uberfox;
 		now the victim is pacified;
 		stop the action;
-	if the willpower of ctype of the player plus a random number from 1 to 20 is greater than the willpower of the victim plus a random number from 1 to 20:
+	if the willpower of ctype of Player plus a random number from 1 to 20 is greater than the willpower of the victim plus a random number from 1 to 20:
 		Say "Your corner [the victim], pressing your crotch into their face. The resist at first but soon begin to eagerly lick and suck at you. They bring you to a quick climax, drinking your juices.";
-[			increase the willpower of ctype of the player by a random number from 0 to 2;]
+[			increase the willpower of ctype of Player by a random number from 0 to 2;]
 		infect the victim with pelvis;
 	else:
 		say "[The victim] manages to resist your offer![line break]";
@@ -2853,11 +2853,11 @@ Definition: A thing is femme:
 	if the tf table of the pelvis is table 0 and playerfemale is 1, yes;
 	if the rabbit vagina is touchable, yes;
 	if the feline torso is a part of the rear, yes;
-	if the tf table of the pelvis is table latex fox and the destined femininity of the player is 1, yes;
-	if the tf table of the pelvis is table hippo alchemist and the destined femininity of the player is 1, yes;
-	if the tf table of the pelvis is table minotaur and the destined femininity of the player is 1, yes;
-	if the tf table of the pelvis is table goblin and the destined femininity of the player is 1, yes;
-	if the tf table of the pelvis is table werewolf and the destined femininity of the player is 1, yes;
+	if the tf table of the pelvis is table latex fox and destined femininity of Player is 1, yes;
+	if the tf table of the pelvis is table hippo alchemist and destined femininity of Player is 1, yes;
+	if the tf table of the pelvis is table minotaur and destined femininity of Player is 1, yes;
+	if the tf table of the pelvis is table goblin and destined femininity of Player is 1, yes;
+	if the tf table of the pelvis is table werewolf and destined femininity of Player is 1, yes;
 	if the tf table of rear is table fox taur, yes;
 	no;
 
@@ -2936,11 +2936,11 @@ if the tf table of the pelvis is table tree, no;
 if the tf table of the pelvis is table demonic mouse, no;
 if the tf table of the pelvis is table feral dragoness, no;
 if the tf table of the pelvis is table otter, yes;
-if the tf table of the pelvis is table latex fox and the destined masculinity of the player is 0, no;
-if the tf table of the pelvis is table hippo alchemist and the destined masculinity of the player is 0, no;
-if the tf table of the pelvis is table minotaur and the destined masculinity of the player is 0, no;
-if the tf table of the pelvis is table goblin and the destined masculinity of the player is 0, no;
-if the tf table of the pelvis is table werewolf and the destined masculinity of the player is 0, no;
+if the tf table of the pelvis is table latex fox and destined masculinity of Player is 0, no;
+if the tf table of the pelvis is table hippo alchemist and destined masculinity of Player is 0, no;
+if the tf table of the pelvis is table minotaur and destined masculinity of Player is 0, no;
+if the tf table of the pelvis is table goblin and destined masculinity of Player is 0, no;
+if the tf table of the pelvis is table werewolf and destined masculinity of Player is 0, no;
 yes;
 
 A player has a number called nursing. The nursing of a player is usually 0.
@@ -2967,9 +2967,9 @@ Section - Sex/Husky Stud
 
 every turn:
 	if the tf table of pelvis is table husky and there is a compatible visible npc person:
-		if the pregnant of the player is 0:
+		if the pregnant of Player is 0:
 			say	"Your loins ache and burn as you stumble slightly, overwhelmed with a massive surge of pleasure and need from your new cunt, probably due to your close proximity to another husky, just like you. A whimper escapes you as one of the male huskies notices your plight, smirking mischievously as he trots seductively towards you. Even as you reach down to try to take the edge off of your need, he comes up behind you, abruptly forcing you to the ground onto all fours before you can react. As you look back, you're surprised to see that he has a huge, throbbing canine cock right next to your ass, oozing pre. [if the tf table of head is table husky]You're unable to stop from subconsciously licking at your lips as you stare at his cock, your mouth watering as you feel the urge to wrap your muzzle around it. [end if][if the tf table of gut is table husky]Your tummy growls hungrily as you continue to stare at his cock, wanting nothing more than to be filled with seed like a good little bitch. [end if][if the tf table of rear is table husky]Your cute little husky tail sways eagerly behind you as you lift it up, offering yourself to the male husky like a good little slut[else]You raise your rear up into the air, exposing your aching slit to the male husky like a good little slut[end if]. Abruptly, he rams that cock into you, pounding into you over and over again, making you cry out in pure lust as you're brutally fucked, enjoying every second of it. You shudder and whine needfully as you feel his knot bump repeatedly into your lips, wanting nothing more than to feel it inside of you, filling you, only for your wish to come true as he finally forces it into your pussy, stretching you wide as you howl in orgasm, your walls clenching tightly at his cock as he explodes too, painting your insides creamy white with his seed, the knot preventing any of it from escaping as you lay there on the ground, panting. Finally, after a few minutes he pulls out with a wet slurping noise, grinning toothily at you as you manage to force yourself to your feet, only to look down at your tummy in shock as you feel it swell, quickly growing in size until it's obvious you're very pregnant and carrying his pups as he saunters off.";
-			increase the pregnant of the player by 1;
+			increase the pregnant of Player by 1;
 
 
 
@@ -2977,19 +2977,19 @@ Section - Sex/Skunkbeast
 
 every turn:
 	if the tf table of pelvis is table 14:
-		repeat with U running through skunkie persons in the location of the player:
-			if a random chance of 1 in willpower of ctype of the player succeeds:
+		repeat with U running through skunkie persons in the Location of Player:
+			if a random chance of 1 in willpower of ctype of Player succeeds:
 				say "     The large skunk snuffles at the air for something, deciding you're what he's looking for it seems. A huge, heavy paw knocks you down onto your hands and knees, and before you can get back up, the heavy weight pins you down. The thick shaft parts your new black-furred slit, and pounds you wildly![line break]     The wild beast uses you for his own pleasure, as your body betrays you, a low groan rising in your throat. You find yourself pushing back, panting, but the thick, messy cum that floods your body comes just before you can release, leaving you almost desperate and begging for more.";
 				if the tf table of gut is table 14:
 					now the desc of gut is "Your belly seems stretched, the hot bestial cum refusing to settle inside as memories of the rutting skunkbeast flash through your mind.";
-				Increase the skunkpregnant of the player by 2;
-				decrease the reflex of the player by a random number from 0 to 0;
+				Increase the skunkpregnant of Player by 2;
+				decrease the reflex of Player by a random number from 0 to 0;
 				choose row with Segment of "full" in table 14;
 				now desc text entry is "You are a female anthro skunk. Your belly has swollen quite a bit, however, from a very rough mating that you got from a horny beast. It feels difficult to stand on two legs, and it's getting more and more tempting to drop to all fours.[if skunkpregnant of Player is greater than 0] The massive amount of goo still inside you makes you shudder, and something tells you that there's going to be a lot more four-legged giant skunks soon...[end if]";
 				choose row with Segment of "gut" in table 14;
 				now desc text entry is "Your belly sloshes a bit as you walk, and the sensations remind you of the beast that filled you with his seed. For some reason, you have a growing desire to let yourself be dragged down to all fours and join him as his pet bitch.";
 				if the tf table of gut is not table 14, infect gut with U;
-	if the skunkpregnant of the player is not 0:
+	if the skunkpregnant of Player is not 0:
 		if the tf table of gut is not table 14, infect gut with a random skunky person;
 		if a random chance of 1 in 10 succeeds, say "You feel a kick from within your large round belly.";
 
@@ -2998,16 +2998,16 @@ Section - Sex/Rabbit
 
 every turn:
 	if a rabbit vagina is touchable and number of off-stage easter eggs is greater than 0: [lays egg if you have rabbit vagina and there are available eggs]
-		if a random chance of 2 in the willpower of ctype of the player succeeds and the tf table of head is not table 22:
+		if a random chance of 2 in the willpower of ctype of Player succeeds and the tf table of head is not table 22:
 			let A be a random off-stage easter egg;
-			move A to the location of the player;
+			move A to the Location of Player;
 			say "     You get a strange sensation from your new rabbit gender, and with an urge, you squat in place. Your belly becomes hard and you grunt as you feel something sliding down through your vagina. Pleasure and mild pain makes you pant and go red in the face as the egg smoothly slips free of you to land on the ground, already brightly colored.";
-		if a random chance of 7 in the willpower of ctype of the player succeeds and the tf table of head is table 22: [higher odds of laying egg if you have rabbit head]
+		if a random chance of 7 in the willpower of ctype of Player succeeds and the tf table of head is table 22: [higher odds of laying egg if you have rabbit head]
 			let A be a random off-stage easter egg;
-			move A to the location of the player;
+			move A to the Location of Player;
 			try silently taking A;
 			say "     Coming all too naturally to your rabbit mind, you squeeze out an egg right into your waiting hands, now to find someone who wants to eat it! You carry it openly, sure that the right person will come to you on their own.";
-	if a pacified rabbit guy is touchable and rabbit vagina is touchable and a random chance of 5 in the willpower of ctype of the player succeeds:
+	if a pacified rabbit guy is touchable and rabbit vagina is touchable and a random chance of 5 in the willpower of ctype of Player succeeds:
 		say "     The rabbit guy wanders close to you from behind, taking you in his soft arms, he thrusts his huge shaft into your new rabbit cunt, rocking a few solid times until you feel an egg break inside of you and spill out over the rabbit's cock.";
 		let A be a random touchable pacified rabbit guy;
 		now A is not pacified;
@@ -3022,24 +3022,24 @@ every turn:
 Section - Sex/Alpha Lion
 
 every turn:
-	if the pregnant of the player is not 0 and ctype of pelvis is not sterile:
+	if the pregnant of Player is not 0 and ctype of pelvis is not sterile:
 		[if the tf table of gut is not table 21, infect gut with a random alpha lion;]
 		if a random chance of 1 in 10 succeeds, say "You feel a kick from within your large round belly.";
-		let u be the pregnant of the player;
-		increase the pregnant of the player by a random number from 0 to 3;
+		let u be pregnant of Player;
+		increase the pregnant of Player by a random number from 0 to 3;
 		if the pregnant of Player is greater than 29 and the ctype of pelvis is semifertile and the player is not fertilized, now the pregnant of Player is 29;
-		if the destined masculinity of the player is 0 and the tf table of pelvis is table latex fox and prickpreg is 1 and the pregnant of the player is greater than 9:
+		if destined masculinity of Player is 0 and the tf table of pelvis is table latex fox and prickpreg is 1 and the pregnant of Player is greater than 9:
 			say "Your belly grows alarmingly warm. The seed within you flares with powerful tingling all through your limbs before it focuses on your wet rubbery lips. You can do little more than groan and whimper as soft squeaks of stretching rubber greet the arrival of a large, white, canine shaft.";
-			now the destined masculinity of the player is 1;
-			now the pregnant of the player is 0;
-		else if the pregnant of the player is greater than 10 and u is not greater than 10:
+			now destined masculinity of Player is 1;
+			now the pregnant of Player is 0;
+		else if the pregnant of Player is greater than 10 and u is not greater than 10:
 			say "Your belly swells larger as the child within matures. Strange maternal thoughts drift through your mind.";
-		else if the pregnant of the player is greater than 20 and u is not greater than 20:
+		else if the pregnant of Player is greater than 20 and u is not greater than 20:
 			if the tf table of chest is not the tf table of pelvis and the player is femme, infect chest with pelvis;
 			say "Your breasts swell and become a little sore as your body prepares for eventual birth. Your belly feels large and round, so full of life. You can't help but gently rub over it once in a while, thinking of your future child.";
-		else if the pregnant of the player is greater than 30 and the player is femme and there are off-stage monster persons:
+		else if the pregnant of Player is greater than 30 and the player is femme and there are off-stage monster persons:
 			say "A sudden stab runs through your abdomen as you get the urge to crouch in place. Your senses full under powerful waves of pleasure that have you panting for breath as life emerges from within you. You are soon a mother.";
-			now the pregnant of the player is 0;
+			now the pregnant of Player is 0;
 			now the player is not fertilized;
 			if there are off-stage persons:
 				let z be a random off-stage person;
@@ -3049,9 +3049,9 @@ every turn:
 				say "[The Z] shakes off birthing fluids and begins to grow rapidly, soon full sized and ready for action.";
 				now the matron of z is the player;
 	if the tf table of pelvis is table 21:
-		let U be a random alpha npc person in the location of the player;
+		let U be a random alpha npc person in the Location of Player;
 		if U is not nothing:
-			if a random chance of 1 in willpower of ctype of the player succeeds:
+			if a random chance of 1 in willpower of ctype of Player succeeds:
 				if pelvis is secret:
 					let H be a random bottomed worn clothing;
 					try silently taking off H;
@@ -3060,8 +3060,8 @@ every turn:
 				say "     The alpha lion approaches and sets a paw on your shoulder. You consider turning him away with your human mind, but the feline one wins out and you lean against him. He bites at your shoulder and neck, moving around you and lifting you. He is soon plunging his hungry shaft deep into your small curvy body, filling you in a way you have never been filled before as a human. You roar in pleasure as his seed fills your new womb, which swells outwards with the volume of it.[line break]     As you recover from the pleasure of it, the lion man snuggles, caressing your chest with his broad paws and rocking against you a few moments longer before he rises and releases you to your feet, wobbly though they may be.";
 				if the tf table of gut is table 21:
 					now the desc of gut is "Your belly protrudes in a grand sphere, making you look like you're in the third trimester of pregnancy, so full you are. You can even fill a kick once in a while with a shudder.";
-				Increase the pregnant of the player by 1;
-				decrease the reflex of the player by a random number from 0 to 0;
+				Increase the pregnant of Player by 1;
+				decrease the reflex of Player by a random number from 0 to 0;
 				choose row with Segment of "full" in table 21;
 				now desc text entry is "You are a female lioness. You are only about four feet tall, though you have huge D cups for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream down your front[if pregnant of Player is greater than 0]. You look as if you are about eight months pregnant, with a huge furry belly that juts out in front of you proudly[end if].";
 				choose row with Segment of "gut" in table 21;
@@ -3156,7 +3156,7 @@ instead of kissing something(called noun):
 			if the player is butch and a random chance of 1 in 2 succeeds, now zeptoid is 0;
 		if the player is butch and zeptoid is 1:
 			say "[female sex of ctype of pelvis]";
-	[		increase the willpower of ctype of the player by a random number from 0 to 2;]
+	[		increase the willpower of ctype of Player by a random number from 0 to 2;]
 			if mouse cock is visible:
 				say "Your new pink cock suddenly swells inside the female. You can feel a renewed surge of fluids as she writhes and gives a sudden distressed noise. Her body begins to shift to a red/black color as the ground beneath her crumbles and she falls to the netherworlds, corrupted and prepared.";
 				remove the noun from play;
@@ -3177,10 +3177,10 @@ instead of kissing something(called noun):
 				now Z is a random not infected exposed body part;
 				if Z is not nothing and tf table of noun is not table 0 and tf table of noun is not table female human, infect Z with the noun;
 				if pregnant of noun is 0:
-					if the mother of the noun is greater than 0 and the ctype of noun is cat girl and a random chance of willpower of ctype of the player in 20  succeeds:
+					if the mother of the noun is greater than 0 and the ctype of noun is cat girl and a random chance of willpower of ctype of Player in 20  succeeds:
 						try examining the player;
 						say "[bold type]     You settle with the feline, who leans in and kisses your cheek before she begins to speak. She tells you about her life before she became a cat girl, and you tell her about yourself. With introductions exchanged, you feel the fire in your loins turning down to a low roar, and you feel more affection for her than lust. You both rise up and take hands, deciding silently to remain a couple and make your way quietly and stealthily from the city.";
-						if the nursing of the player is not 0, say "     The small feline attached to your chest becomes like a daughter to the both of you. Though you try to 'raise' her, she never grows taller or matures. She is not stupid, however, and picks up on things eagerly. She does not pick up on boundaries, however, and refuses to consider the idea that mommy and daddy may want alone time. After trying to evict her from their sex life several times, she is finally admitted in, and becomes an eager participant in all play.";
+						if nursing of Player is not 0, say "     The small feline attached to your chest becomes like a daughter to the both of you. Though you try to 'raise' her, she never grows taller or matures. She is not stupid, however, and picks up on things eagerly. She does not pick up on boundaries, however, and refuses to consider the idea that mommy and daddy may want alone time. After trying to evict her from their sex life several times, she is finally admitted in, and becomes an eager participant in all play.";
 						now altending is 1;
 						end the story saying "You escaped the infection alive but forever changed.";
 						stop the action;
@@ -3214,24 +3214,24 @@ instead of kissing something(called noun):
 		if the player is not femme, stop the action;
 [		if the tf table of noun is table 0 and not a random chance of willpower of the noun in 10 succeeds:
 			say "As if in a trance, they act against their higher will, obeying base urges instead.";]
-		if the pregnant of the player is 0 and a random chance of 1 in 3 succeeds and the player is femme and ctype of pelvis is not semifertile:
-			increase the pregnant of the player by 1;
-		if the pregnant of the player is 1, say "The seed rushes up into your body with a shuddering explosion of pleasure as your belly swells forward.";
+		if the pregnant of Player is 0 and a random chance of 1 in 3 succeeds and the player is femme and ctype of pelvis is not semifertile:
+			increase the pregnant of Player by 1;
+		if the pregnant of Player is 1, say "The seed rushes up into your body with a shuddering explosion of pleasure as your belly swells forward.";
 		now the player is fertilized;
 	else:
 		if the player is femme and a random chance of one in 3 succeeds:
 			say "[male sex of ctype of pelvis]";
 			if the TF table of pelvis is not tf table of noun and a random chance of 1 in 3 succeeds:
 				if Z is not nothing and tf table of noun is not table 0 and tf table of pelvis is table 0, infect pelvis with the noun;
-			if the pregnant of the player is 0 and the ctype of pelvis is not semifertile and the ctype of pelvis is not sterile:
-				increase the pregnant of the player by 1;
+			if the pregnant of Player is 0 and the ctype of pelvis is not semifertile and the ctype of pelvis is not sterile:
+				increase the pregnant of Player by 1;
 				say "Your belly swells round as the seed tingles inside of you with ominous warning.";
 			now the player is fertilized;
 		else:
 			say "You kneel before the [printed name of noun] and take his throbbing member into your mouth, suckling loudly and lewdly at him, stroking at him as you work your mouth back and forth along the excited pole. All too soon, they're exploding across lips and face, leaving you streaked with their salty deposit.";
 			if the TF table of head is not tf table of noun:
 				if Z is not nothing and tf table of noun is not table 0, infect head with the noun;
-		if the player is femme and the tf table of pelvis is table latex fox and ctype of noun is latex prickvixen and the destined masculinity of the player is 0:
+		if the player is femme and the tf table of pelvis is table latex fox and ctype of noun is latex prickvixen and destined masculinity of Player is 0:
 			now the prickpreg is 1;
 	if the tf table of pelvis is not table 0 and the tf table of pelvis is not table female human and the tf table of noun is table 0:
 		infect the noun with pelvis;
@@ -3258,7 +3258,7 @@ instead of kissing a catty person:
 	let Z be a pelvis;
 	if the TF table of pelvis is table 20 or lioness cock is a part of the pelvis or the tf table of pelvis is table 22:
 		say "     You start to rock against the feline, plunging your shaft deeper and deeper into her body as you grunt and gasp for air. Her claws rake over your body as she wails with delight, and you both climax loudly, powerfully.";
-	[	increase the willpower of ctype of the player by a random number from 1 to 3;]
+	[	increase the willpower of ctype of Player by a random number from 1 to 3;]
 		if the TF table of pelvis is not tf table of noun and tf table of pelvis is not table 21  and tf table of pelvis is not table 22:
 			if Z is not nothing, say "Your [Z] [secondary attack description of the noun][line break]";
 			if Z is not nothing, infect Z with the noun;
@@ -3267,17 +3267,17 @@ instead of kissing a catty person:
 			if Z is not nothing, say "Your [Z] [secondary attack description of the noun][line break]";
 			if Z is not nothing, infect Z with the noun;
 			if pregnant of noun is 0:
-				if the mother of noun is greater than 0 and a random chance of willpower of ctype of the player in 20  succeeds:
+				if the mother of noun is greater than 0 and a random chance of willpower of ctype of Player in 20  succeeds:
 					try examining the player;
 					say "[bold type]     You settle with the feline, who leans in and kisses your cheek before she begins to speak. She tells you about her life before she became a cat girl, and you tell her about yourself. With introductions exchanged, you feel the fire in your loins turning down to a low roar, and you feel more affection for her than lust. You both rise up and take hands, deciding silently to remain a couple and make your way quietly and stealthily from the city.";
-					if the nursing of the player is not 0, say "     The small feline attached to your chest becomes like a daughter to the both of you. Though you try to 'raise' her, she never grows taller or matures. She is not stupid, however, and picks up on things eagerly. She does not pick up on boundaries, however, and refuses to consider the idea that mommy and daddy may want alone time. After trying to evict her from their sex life several times, she is finally admitted in, and becomes an eager participant in all play.";
+					if nursing of Player is not 0, say "     The small feline attached to your chest becomes like a daughter to the both of you. Though you try to 'raise' her, she never grows taller or matures. She is not stupid, however, and picks up on things eagerly. She does not pick up on boundaries, however, and refuses to consider the idea that mommy and daddy may want alone time. After trying to evict her from their sex life several times, she is finally admitted in, and becomes an eager participant in all play.";
 					now altending is 1;
 					end the story saying "You escaped the infection alive but forever changed.";
 					stop the action;
 				now pregnant of noun is 1;
 				say "The cat girl purrs and settles to the ground, rubbing her belly and looking sated, for now.";
 				now the noun is pacified;
-				now The description of the noun is "This strange creature looks like a cross between a human and a feline, clearly female with huge bouncing breasts and thick exposed vaginal lips. She looks calmer than other cat girls, rubbing at her mildly swollen belly and purring in a satisfied fashion.";
+				now Description of the noun is "This strange creature looks like a cross between a human and a feline, clearly female with huge bouncing breasts and thick exposed vaginal lips. She looks calmer than other cat girls, rubbing at her mildly swollen belly and purring in a satisfied fashion.";
 	else:
 		if the TF table of pelvis is table 21:
 			say "     The cat girl starts to snuggle and lick at you, seemingly ready to mate when she notices your small furry snatch. She lifts you up and buries her larger snout into your small female sex, lapping eagerly. You squirm in place, moaning and squealing in delight.";
@@ -3290,10 +3290,10 @@ instead of kissing a catty person:
 
 every turn while corruption is 5 and mouse cock is not visible:
 	let q be a random number from 1 to 200;
-	if willpower of ctype of the player is greater than q:
+	if willpower of ctype of Player is greater than q:
 		now altending is 1;
 		end the story saying "The burning urges within you cool, then die, leaving you shaken but still... yourself. At least mentally. Though you remain a red furred mouse, you feel you have passed some divine test, and have escaped the grasp of hell's minions, for today. Hope swelling in your new chest, you begin to flee the city. You are stopped by armed forces with automated weaponry, but a flash of bright white light whisks you safely to a far remote town. There, you are taken in by a priest who has had a vision of your coming.[line break][line break]Either in proving in God's humor, or in defiance of it, you become the priest's closest companion and play thing. He never marries, but you two are close enough to consider it the same. All is well until he dies of old age, and you feel as young as ever.";
-	if an unchanged npc person is visible and a random chance of 1 in willpower of ctype of the player plus 5 succeeds:
+	if an unchanged npc person is visible and a random chance of 1 in willpower of ctype of Player plus 5 succeeds:
 		say "The urge becomes too great, and you quickly approach the closest male,";
 		try the player kissing a random visible unchanged npc person;
 
@@ -3301,16 +3301,16 @@ every turn while corruption is 5 and mouse cock is not visible:
 every turn:
 	if an ottery person is visible and the tf table of the head is table otter:
 		let n be a random visible ottery person;
-		if a random chance of 5 in the willpower of ctype of the player succeeds:
+		if a random chance of 5 in the willpower of ctype of Player succeeds:
 			say "It comes all too naturally to you. You are drawn towards your kin and begin playing with them without restraint.";
 			try kissing n;
 		else:
-			if a random chance of 5 in the willpower of ctype of the player succeeds:
+			if a random chance of 5 in the willpower of ctype of Player succeeds:
 				say "As if noticing your hesitation, one of the otters pushes you gently to the ground and raises your hips.";
 				try submitting n;
 	if a not heavy catty person is visible:
 		let n be a random visible not heavy catty person;
-		if a random chance of 1 in the willpower of ctype of the player succeeds:
+		if a random chance of 1 in the willpower of ctype of Player succeeds:
 			say "The urge becomes overwhelming and you approach [the N], overcome with an undeniable lust.";
 			try kissing n;
 
@@ -3340,7 +3340,7 @@ instead of kissing a squirrely person:
 	let Z be a pelvis;
 	if the TF table of pelvis is table 55 or lioness cock is a part of the pelvis or the tf table of pelvis is table 22:
 		say "     You start to rock against the squirrel, grinding your cock against her furry body, balls and belly. She senses your need and turns around for you, plunging your cock deeper and deeper into her hot cunt. She sits on you, wrapping your arms around her pregnant belly, your hands sinking into the soft fur and softer, expanding flesh until you both cum.";
-	[	increase the willpower of ctype of the player by a random number from 1 to 3;]
+	[	increase the willpower of ctype of Player by a random number from 1 to 3;]
 		if the TF table of pelvis is not tf table of noun and tf table of pelvis is not table 21  and tf table of pelvis is not table 55:
 			if Z is not nothing, say "Your [Z] [secondary attack description of the noun][line break]";
 			if Z is not nothing, infect Z with the noun;
@@ -3349,17 +3349,17 @@ instead of kissing a squirrely person:
 			if Z is not nothing, say "Your [Z] [secondary attack description of the noun][line break]";
 			if Z is not nothing, infect Z with the noun;
 			if pregnant of noun is 0:
-				if the printed name of the noun is "mother herm squirrel" and a random chance of willpower of ctype of the player in 20  succeeds:
+				if the printed name of the noun is "mother herm squirrel" and a random chance of willpower of ctype of Player in 20  succeeds:
 					try examining the player;
 					say "[bold type]     You settle with the feline, who leans in and kisses your cheek before she begins to speak. She tells you about her life before she became a cat girl, and you tell her about yourself. With introductions exchanged, you feel the fire in your loins turning down to a low roar, and you feel more affection for her than lust. You both rise up and take hands, deciding silently to remain a couple and make your way quietly and stealthily from the city.";
-					if the nursing of the player is not 0, say "     The small feline attached to your chest becomes like a daughter to the both of you. Though you try to 'raise' her, she never grows taller or matures. She is not stupid, however, and picks up on things eagerly. She does not pick up on boundaries, however, and refuses to consider the idea that mommy and daddy may want alone time. After trying to evict her from their sex life several times, she is finally admitted in, and becomes an eager participant in all play.";
+					if nursing of Player is not 0, say "     The small feline attached to your chest becomes like a daughter to the both of you. Though you try to 'raise' her, she never grows taller or matures. She is not stupid, however, and picks up on things eagerly. She does not pick up on boundaries, however, and refuses to consider the idea that mommy and daddy may want alone time. After trying to evict her from their sex life several times, she is finally admitted in, and becomes an eager participant in all play.";
 					now altending is 1;
 					end the story saying "You escaped the infection alive but forever changed.";
 					stop the action;
 				now pregnant of noun is 1;
 				say "The herm squirrel churrs and settles to the ground, rubbing her belly and looking sated, for now.";
 				now the noun is pacified;
-				now The description of the noun is "This strange creature looks like a cross between a human and a squirrel, clearly female with huge bouncing breasts and clearly male with a huge jutting cock, fat sheath, and bloated balls. Behind her bushy tail and heavy ass lie thick exposed vaginal lips. She looks calmer than other herm squirrels, rubbing at her mildly swollen belly and purring in a satisfied fashion.";
+				now Description of the noun is "This strange creature looks like a cross between a human and a squirrel, clearly female with huge bouncing breasts and clearly male with a huge jutting cock, fat sheath, and bloated balls. Behind her bushy tail and heavy ass lie thick exposed vaginal lips. She looks calmer than other herm squirrels, rubbing at her mildly swollen belly and purring in a satisfied fashion.";
 	else:
 		if Z is not nothing, say "Your [Z] [secondary attack description of the noun][line break]";
 		if Z is not nothing, infect Z with the noun;
@@ -3375,7 +3375,7 @@ no;
 every turn:
 	if a horny not heavy compatible person is visible:
 		repeat with n running through visible not heavy horny compatible persons:
-			if a random chance of 2 in the willpower of ctype of the player succeeds:
+			if a random chance of 2 in the willpower of ctype of Player succeeds:
 				say "You get a sudden urge to breed with [the n] and swiftly approach them with outstretched arms.";
 				try kissing n;
 
@@ -3402,9 +3402,9 @@ every turn:
 						move z to the location of n;
 						if z is visible, say "[The Z] shakes off birthing fluids and begins to grow rapidly, soon full sized and ready for action.";
 						now the matron of Z is the matron of N;
-	if a Lioness is visible and the nursing of the player is 0:
+	if a Lioness is visible and nursing of Player is 0:
 		repeat with N running through visible lionette people:
-			if a random chance of 1 in the willpower of ctype of the player succeeds and nursing of the player is 0:
+			if a random chance of 1 in the willpower of ctype of Player succeeds and nursing of player is 0:
 				if chest is secret:
 					if a random number from 1 to reflex of Player is less than a random number from 1 to reflex of N:
 						say "     The small cat lashes out with her claws, destroying your shirt!";
@@ -3422,17 +3422,17 @@ every turn:
 					else:
 						say "     The small cat's teeth chew at your own thick black teats and she begins to drink eagerly. You were not aware you were able to lactate, but she proves it in debilitating waves of delight.";
 					remove N from play;
-					now the nursing of the player is 1;
-					decrease the willpower of ctype of the player by a random number from 0 to 2;
-	if the nursing of the player is not 0:
-		if a random chance of willpower of ctype of the player in 30 succeeds or the tf table of the chest is table 22:
+					now nursing of Player is 1;
+					decrease the willpower of ctype of Player by a random number from 0 to 2;
+	if nursing of Player is not 0:
+		if a random chance of willpower of ctype of Player in 30 succeeds or the tf table of the chest is table 22:
 			say "You manage to force yourself to set the feline down. She pouts at you and puts her hands on her hips, looking quite annoyed at you.";
-			now the nursing of the player is 0;
+			now nursing of Player is 0;
 			repeat with Q running through off-stage monster persons:
 				if no monster person is selected and the TF Table of Q is table 21, now Q is selected;
 			let Q be a random selected MonsterID;
 			if Q is not nothing:
-				move Q to the location of the player;
+				move Q to the Location of Player;
 				now Q is not selected;
 			if tf table of chest is table 22:
 				now the tf table of Q is table 22;
@@ -3445,7 +3445,7 @@ every turn:
 			now desc text entry is "You are a female lioness. You are only about four feet tall, though you have huge D cups for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream down your front.";
 			choose row with Segment of "chest" in table 21;
 			now desc text entry is "You have the chest and back of a small lioness with huge D cups, black nipples aroused and displayed and leaking a thick cream that runs down into your fur if it isn't being drunk constantly.";
-			if the willpower of the player is greater than 1 and a random chance of 1 in 3 succeeds, decrease the willpower of ctype of the player by 1;
+			if Willpower of Player is greater than 1 and a random chance of 1 in 3 succeeds, decrease the willpower of ctype of Player by 1;
 			if the TF table of chest is not table 21 and the tf table of chest is not table 22:
 				infect chest with a random lionette person;
 
@@ -3783,7 +3783,7 @@ Book 4 - Creatures
 
 Section - Big Booby
 
-A big booby is a infection model. The description of a big booby is "A large humanoid version of a bird known as a blue-footed booby. Covered in black and white feathers with a blue beak and legs." The TF table of a big booby is Table 10.
+A big booby is a infection model. Description of a big booby is "A large humanoid version of a bird known as a blue-footed booby. Covered in black and white feathers with a blue beak and legs." The TF table of a big booby is Table 10.
 
 The move rate of a big booby is 2.
 The attack rate of a big booby is 2.
@@ -3797,7 +3797,7 @@ The boar tail is a kind of body part. The body part origin of the boar tail is "
 
 Section - Circe
 
-A Circe is a infection model. The description of a Circe is "The woman before you has unearthly beauty, but she views the world around her with contempt." The TF table of a Circe is Table 12. Circe is female. Circe is unique.
+A Circe is a infection model. Description of a Circe is "The woman before you has unearthly beauty, but she views the world around her with contempt." The TF table of a Circe is Table 12. Circe is female. Circe is unique.
 
 The move rate of a Circe is 4.
 The attack rate of a Circe is 6.
@@ -3808,9 +3808,9 @@ The TF description of a Circe is "cackles with sudden glee as their form shifts 
 
 Section - Boar Man
 
-A boar man is a infection model. The description of a boar man is "This man appear to be a rather fat boar creature, but closer examination reveals his stocky frame carries a good deal of muscle as well. But the stench is absolutely horrid." The TF table of a boar man is Table 12.
+A boar man is a infection model. Description of a boar man is "This man appear to be a rather fat boar creature, but closer examination reveals his stocky frame carries a good deal of muscle as well. But the stench is absolutely horrid." The TF table of a boar man is Table 12.
 
-The plural of boar man is boar men.
+Plural of boar man is boar men.
 
 The move rate of a boar man is 2.
 The attack rate of a boar man is 2.
@@ -3820,7 +3820,7 @@ The TF description of a boar man is "rolls around on the ground, their pleads fo
 
 Section - Neanderthal
 
-A neanderthal is a infection model. The description of a neanderthal is "A large, very hairy, and very muscular but primitive looking man." The TF table of a neanderthal is Table 11.
+A neanderthal is a infection model. Description of a neanderthal is "A large, very hairy, and very muscular but primitive looking man." The TF table of a neanderthal is Table 11.
 
 The move rate of a neanderthal is 1.
 The attack rate of a neanderthal is 2.
@@ -3830,7 +3830,7 @@ The TF description of a neanderthal is "hunches over, growing thick with muscle 
 
 Section - Tentacled Ooze
 
-A tentacled ooze is a infection model. The description of a tentacled ooze is "A large green slime swaying with tentacles, and a large one it uses to pull itself around." The TF table of a tentacled ooze is Table 5. A tentacled ooze is neuter.
+A tentacled ooze is a infection model. Description of a tentacled ooze is "A large green slime swaying with tentacles, and a large one it uses to pull itself around." The TF table of a tentacled ooze is Table 5. A tentacled ooze is neuter.
 
 The move rate of a tentacled ooze is 5.
 The attack rate of a tentacled ooze is 1.
@@ -3848,7 +3848,7 @@ The tentaclee is a body part. The body part origin of the tentaclee is "chest". 
 
 Section - Momma Nido
 
-A Momma Nido is a infection model. The description of Momma Nido is "What a curious looking creature. You're certain you saw it somewhere, but can't quite place it. Blue tough hide covers most of its curvaceous form, with a horn mounted on firm looking snout. She has two large and heavy breasts, a beige color that stands out against her largely blue body, with huge brown nipples. Wrapped around her right leg is a frilly band with white frills and a [one of]blue[or]green[or]yellow[or]orange[sticky random] center band. Her female sex is exposed and pouting, looking wet and ready, surrounded by the tough looking beige flesh that goes up across her belly like a plate. Covering her belly is a white apron that drapes down towards her lower belly but no further. Behind her is a pointed, thick tail, blue as the rest of her.". The TF Table of Momma Nido is table Nidoqueen. Momma Nido is female. Momma Nido is sterile. Momma Nido is semifertile.
+A Momma Nido is a infection model. Description of Momma Nido is "What a curious looking creature. You're certain you saw it somewhere, but can't quite place it. Blue tough hide covers most of its curvaceous form, with a horn mounted on firm looking snout. She has two large and heavy breasts, a beige color that stands out against her largely blue body, with huge brown nipples. Wrapped around her right leg is a frilly band with white frills and a [one of]blue[or]green[or]yellow[or]orange[sticky random] center band. Her female sex is exposed and pouting, looking wet and ready, surrounded by the tough looking beige flesh that goes up across her belly like a plate. Covering her belly is a white apron that drapes down towards her lower belly but no further. Behind her is a pointed, thick tail, blue as the rest of her.". The TF Table of Momma Nido is table Nidoqueen. Momma Nido is female. Momma Nido is sterile. Momma Nido is semifertile.
 
 The move rate of a Momma Nido is 2.
 The attack rate of a Momma Nido is 2.
@@ -3859,7 +3859,7 @@ The TF description of a Momma Nido is "groans as they swell, body curving and ar
 
 Section - Husky Stud
 
-A husky stud is a infection model. The description of husky stud is "A strong, virile male husky. Just looking at him causes your loins to burn slightly with need as you subconsciously cross your legs, trying to hide your enjoyment. Your success at this endeavor is questionable as he looks right at you, smirking provocatively.". The TF Table of husky stud is table husky. husky stud is male.
+A husky stud is a infection model. Description of husky stud is "A strong, virile male husky. Just looking at him causes your loins to burn slightly with need as you subconsciously cross your legs, trying to hide your enjoyment. Your success at this endeavor is questionable as he looks right at you, smirking provocatively.". The TF Table of husky stud is table husky. husky stud is male.
 
 The move rate of a husky stud is 2.
 The attack rate of a husky stud is 2.
@@ -3870,7 +3870,7 @@ The TF description of a husky stud is "growls ferally as snowy fur explodes all 
 
 Section - Batcubus
 
-A Batcubus is a infection model. The description of Batcubus is "She looks somehow familiar. A bat in a tight outfit that forms a pink heart over her ample bosom. Her short, white furred, tail pokes out behind her and grand ears are turned in your direction. Her eyes are shadowed a soft blue across the lids and her cream colored snout is painted a sexy shade of red, forming a pout across her lips under her cute button nose. Her wings are leathery and extend behind her, curled usually. For clothes, her forearm and hands are covered in a long white glove. Below, a pair of boots, rich in purple shades, covers feet, ending at the knees with flanges of lighter purple.". The TF Table of Batcubus is table Rogue. Batcubus is female.
+A Batcubus is a infection model. Description of Batcubus is "She looks somehow familiar. A bat in a tight outfit that forms a pink heart over her ample bosom. Her short, white furred, tail pokes out behind her and grand ears are turned in your direction. Her eyes are shadowed a soft blue across the lids and her cream colored snout is painted a sexy shade of red, forming a pout across her lips under her cute button nose. Her wings are leathery and extend behind her, curled usually. For clothes, her forearm and hands are covered in a long white glove. Below, a pair of boots, rich in purple shades, covers feet, ending at the knees with flanges of lighter purple.". The TF Table of Batcubus is table Rogue. Batcubus is female.
 
 The move rate of a Batcubus is 2.
 The attack rate of a Batcubus is 2.
@@ -3880,7 +3880,7 @@ The TF description of a Batcubus is "gasps as their face bursts into a small sno
 
 Section - Neko
 
-A Neko is a infection model. The description of Neko is "A shapely and largely naked female with tanned flesh. She has bright blue hair that cascades down her back like a flowing cape. Her ears are large and feline, twitching softly at sounds. Her ears, like other spots of her body, are covered in a soft layer of pure white fur. The fur tastefully covers her nipples from view, and forms stripes at her arms and legs. Her tail is entirely coated, curling and swaying sinuously. One private area that it does little to conceal is her erect phallus. It seems she is more of a he, a shemale, with glistening pre dripping from the ready six inch tool.". The TF Table of Neko is table Felicia. Neko is male.
+A Neko is a infection model. Description of Neko is "A shapely and largely naked female with tanned flesh. She has bright blue hair that cascades down her back like a flowing cape. Her ears are large and feline, twitching softly at sounds. Her ears, like other spots of her body, are covered in a soft layer of pure white fur. The fur tastefully covers her nipples from view, and forms stripes at her arms and legs. Her tail is entirely coated, curling and swaying sinuously. One private area that it does little to conceal is her erect phallus. It seems she is more of a he, a shemale, with glistening pre dripping from the ready six inch tool.". The TF Table of Neko is table Felicia. Neko is male.
 
 The move rate of a Neko is 2.
 The attack rate of a Neko is 2.
@@ -3891,7 +3891,7 @@ The TF description of a Neko is "thrusts their hips forward as a hard shaft tear
 
 Section - Centauress
 
-A Centauress is a infection model. The description of Centauress is "Right out of mythology, this majestic and large horse has the head of a full, female, human torso. She has four breasts, the top two a heavy D, the bottom a smaller but substantial C. She has long, flowing, straw colored hair that flutters just above her powerful lower torso.". The TF Table of Centauress is table centauress. Centauress is female.
+A Centauress is a infection model. Description of Centauress is "Right out of mythology, this majestic and large horse has the head of a full, female, human torso. She has four breasts, the top two a heavy D, the bottom a smaller but substantial C. She has long, flowing, straw colored hair that flutters just above her powerful lower torso.". The TF Table of Centauress is table centauress. Centauress is female.
 
 The move rate of a Centauress is 2.
 The attack rate of a Centauress is 2.
@@ -3908,7 +3908,7 @@ The centauress torso is a body part. The body part origin of the centauress tors
 
 Section - Tree
 
-A Tree is a infection model. The description of Tree is "A tree, tall and proud. It bears odd-looking fruits that dangle just within reach. Who would put a tree here?". The TF Table of Tree is table Tree. Tree is female.
+A Tree is a infection model. Description of Tree is "A tree, tall and proud. It bears odd-looking fruits that dangle just within reach. Who would put a tree here?". The TF Table of Tree is table Tree. Tree is female.
 
 The move rate of a Tree is 99999999.
 The attack rate of a Tree is 2.
@@ -3920,7 +3920,7 @@ The TF description of a Tree is "explodes in mass as they become rooted to the s
 
 Section - Elf
 
-A Elf is a infection model. The description of Elf is "A human, maybe? She has Asian-like facial features on lightly tanned flesh. Her ears are unusually long and tapered, but other than that, nothing impossible. She has delicious curves, with heavy G breasts swaying with every step, barely held in place with her sheer green silks. Strung over her back is a long curved wooden bow, almost as pretty as she is, if you like that kind of thing. She has long blond hair that flows down to her ass without bothering her graceful steps.". The TF Table of Elf is table Elf. Elf is female.
+A Elf is a infection model. Description of Elf is "A human, maybe? She has Asian-like facial features on lightly tanned flesh. Her ears are unusually long and tapered, but other than that, nothing impossible. She has delicious curves, with heavy G breasts swaying with every step, barely held in place with her sheer green silks. Strung over her back is a long curved wooden bow, almost as pretty as she is, if you like that kind of thing. She has long blond hair that flows down to her ass without bothering her graceful steps.". The TF Table of Elf is table Elf. Elf is female.
 
 The move rate of a Elf is 2.
 The attack rate of a Elf is 2.
@@ -3931,7 +3931,7 @@ The TF description of a Elf is "emits a low soft groan as their body and clothes
 
 Section - Harpy
 
-A Harpy is a infection model. The description of Harpy is "An athletic looking young woman with feathery wings attached to her arms like fins and great talons for hands and feet. Her legs are also covered in feathers, and she has a fan of feathers over her butt. She has light, flawless, flesh where exposed on her front and chubby, elfin, face. She would be cute if she wasn't scary.". The TF Table of Harpy is table Harpy. Harpy is female.
+A Harpy is a infection model. Description of Harpy is "An athletic looking young woman with feathery wings attached to her arms like fins and great talons for hands and feet. Her legs are also covered in feathers, and she has a fan of feathers over her butt. She has light, flawless, flesh where exposed on her front and chubby, elfin, face. She would be cute if she wasn't scary.". The TF Table of Harpy is table Harpy. Harpy is female.
 
 The move rate of a Harpy is 2.
 The attack rate of a Harpy is 2.
@@ -3942,7 +3942,7 @@ The TF description of a Harpy is "gives a sudden sharp squawk as feathers explod
 
 Section - Goblin
 
-A Male Goblin is a infection model. The description of Male Goblin is "A very short, maybe three foot tall, green skinned humanoid. He has huge long ears going out either side of his large head. His hair is [one of]swept back[or]a spiky mohawk[or]a sloppy topknot[sticky random] of [one of]blue[or]black[or]brown[sticky random] color. His grin is wide and teeth look like serrated razors. His hands and feet, like his head, seem oversized for the torso. He is dressed in finery more suitable for a medieval peasant of some kind than anything else, brightly colored at that.". The TF Table of Male Goblin is table Goblin. Male Goblin is male.
+A Male Goblin is a infection model. Description of Male Goblin is "A very short, maybe three foot tall, green skinned humanoid. He has huge long ears going out either side of his large head. His hair is [one of]swept back[or]a spiky mohawk[or]a sloppy topknot[sticky random] of [one of]blue[or]black[or]brown[sticky random] color. His grin is wide and teeth look like serrated razors. His hands and feet, like his head, seem oversized for the torso. He is dressed in finery more suitable for a medieval peasant of some kind than anything else, brightly colored at that.". The TF Table of Male Goblin is table Goblin. Male Goblin is male.
 
 The move rate of a Male Goblin is 2.
 The attack rate of a Male Goblin is 2.
@@ -3951,7 +3951,7 @@ The attack type of a Male Goblin is "strike".
 The primary attack description of a Male Goblin is "approaches [targetx] with a big toothy grin. They pull out a CD from nowhere in particular and offer it up, 'Best game you ever tried. Everyone[apostrophe]s doing it.' Once accepted, change begins to manifest in".
 The TF description of a Male Goblin is "seems quite surprised when their ears triple in size. By the time they reach to explore, their body has shrunken almost in half, skin going a green shade. With a sudden cackle, their clothing transforms with them, leaving them a".
 
-A Female Goblin is a infection model. The description of Female Goblin is "A very short, maybe three foot tall, green skinned humanoid. She has huge long ears going out either side of his large head. Her hair is [one of]swept back[or]a spiky mohawk[or]a sloppy topknot[sticky random] of [one of]blue[or]black[or]brown[sticky random] color. Her grin is wide and teeth look like serrated razors. Her hands and feet, like her head, seem oversized for the torso. She is dressed in finery more suitable for a medieval peasant of some kind than anything else, brightly colored at that. From the swells on her chest, she seems female.". The TF Table of Female Goblin is table Goblin. Female Goblin is female.
+A Female Goblin is a infection model. Description of Female Goblin is "A very short, maybe three foot tall, green skinned humanoid. She has huge long ears going out either side of his large head. Her hair is [one of]swept back[or]a spiky mohawk[or]a sloppy topknot[sticky random] of [one of]blue[or]black[or]brown[sticky random] color. Her grin is wide and teeth look like serrated razors. Her hands and feet, like her head, seem oversized for the torso. She is dressed in finery more suitable for a medieval peasant of some kind than anything else, brightly colored at that. From the swells on her chest, she seems female.". The TF Table of Female Goblin is table Goblin. Female Goblin is female.
 
 The move rate of a Female Goblin is 2.
 The attack rate of a Female Goblin is 2.
@@ -3962,7 +3962,7 @@ The TF description of a Female Goblin is "seems quite surprised when their ears 
 
 Section - Centaur
 
-[A centaur is a infection model.] The description of a centaur is "At first the thing before you appears to be a ruggedly handsome man riding a draft horse, but you soon notice it to be one being, the human torso fused at the waist to the neck of the horse part." The TF table of a centaur is Table 6. centaur is male.
+[A centaur is a infection model.] Description of a centaur is "At first the thing before you appears to be a ruggedly handsome man riding a draft horse, but you soon notice it to be one being, the human torso fused at the waist to the neck of the horse part." The TF table of a centaur is Table 6. centaur is male.
 
 The move rate of a centaur is 2.
 The attack rate of a centaur is 4.
@@ -3974,7 +3974,7 @@ The horse torso is a body part. The body part origin of the horse torso is "rear
 
 Section - Huge Dragoness
 
-A Huge Dragoness is a infection model. The description of a Huge Dragoness is "A massive beast. If you are indoors, then you might only be looking at a grasping talons, otherwise, this large beast is clearly reptilian, with the exception of the car-sized breasts on her chest, bouncing with enough force to pulp any man (un)fortunate enough to be between them. She is about four stories tall, give or take, with a cock that measures out at two stories. When that tool decides to drip, the gobs are large enough to knock people down." The TF table of a Huge Dragoness is Table huge dragoness. Huge Dragoness is neuter. Huge Dragoness is semifertile. Huge Dragoness is immune. Huge dragoness is npcimmune.
+A Huge Dragoness is a infection model. Description of a Huge Dragoness is "A massive beast. If you are indoors, then you might only be looking at a grasping talons, otherwise, this large beast is clearly reptilian, with the exception of the car-sized breasts on her chest, bouncing with enough force to pulp any man (un)fortunate enough to be between them. She is about four stories tall, give or take, with a cock that measures out at two stories. When that tool decides to drip, the gobs are large enough to knock people down." The TF table of a Huge Dragoness is Table huge dragoness. Huge Dragoness is neuter. Huge Dragoness is semifertile. Huge Dragoness is immune. Huge dragoness is npcimmune.
 
 The move rate of a Huge Dragoness is 2.
 The attack rate of a Huge Dragoness is 4.
@@ -3988,7 +3988,7 @@ The TF description of a Huge Dragoness is "shimmers with a layer of cum as they 
 
 Section - Fennec Taur
 
-A fennec taur is a infection model. The description of a fennec taur is "A humanoid torso, clearly female, with four large breasts, covered with brown fur. She has an animal lower body, walking on powerful lower paws and swaying a large puffy tail. When her hind leg is lifted, dual genders can be spotted, but there is nothing in the front. She rubs her belly lightly, regarding you with disturbing interest." The TF table of a fennec taur is Table fennec. fennec taur is neuter.
+A fennec taur is a infection model. Description of a fennec taur is "A humanoid torso, clearly female, with four large breasts, covered with brown fur. She has an animal lower body, walking on powerful lower paws and swaying a large puffy tail. When her hind leg is lifted, dual genders can be spotted, but there is nothing in the front. She rubs her belly lightly, regarding you with disturbing interest." The TF table of a fennec taur is Table fennec. fennec taur is neuter.
 
 The move rate of a fennec taur is 2.
 The attack rate of a fennec taur is 4.
@@ -4005,7 +4005,7 @@ The fennec torso is a body part. The body part origin of the fennec torso is "re
 
 Section - Feral Dragoness
 
-A Feral Dragoness is a infection model. The description of Feral Dragoness is "A heavily armored beast of dark blue scales. Each scale along its top, sides, and thighs are an individual shield against harm, flexing imposingly with every sinuous step. Her face is a reptilian mask, a teeth filled with teeth behind a knowing grin, eyes a lighter shade of sky. Smooth leathery wings perch upon her back, a deep purple hue, folded securely. Her undercarriage is light blue, covered in smooth but visible plates of hardened scales. Her roughly scaled tail terminates in a sharp, pointed spade.". The TF Table of Feral Dragoness is table Feral Dragoness. Feral Dragoness is female.
+A Feral Dragoness is a infection model. Description of Feral Dragoness is "A heavily armored beast of dark blue scales. Each scale along its top, sides, and thighs are an individual shield against harm, flexing imposingly with every sinuous step. Her face is a reptilian mask, a teeth filled with teeth behind a knowing grin, eyes a lighter shade of sky. Smooth leathery wings perch upon her back, a deep purple hue, folded securely. Her undercarriage is light blue, covered in smooth but visible plates of hardened scales. Her roughly scaled tail terminates in a sharp, pointed spade.". The TF Table of Feral Dragoness is table Feral Dragoness. Feral Dragoness is female.
 
 The move rate of a feral dragoness is 2.
 The attack rate of a feral dragoness is 4.
@@ -4020,7 +4020,7 @@ The TF description of a feral dragoness is "collapses to all fours as their body
 
 Section - Masculine Bodybuilder
 
-A masculine bodybuilder is a infection model. The description of a masculine bodybuilder is "The man before you is humongous, and hairy. You have the urge to let him take you, here and now." The TF table of a masculine bodybuilder is Table 7. masculine bodybuilder is male.
+A masculine bodybuilder is a infection model. Description of a masculine bodybuilder is "The man before you is humongous, and hairy. You have the urge to let him take you, here and now." The TF table of a masculine bodybuilder is Table 7. masculine bodybuilder is male.
 
 The move rate of a masculine bodybuilder is 3.
 The attack rate of a masculine bodybuilder is 2.
@@ -4032,7 +4032,7 @@ The TF description of a masculine bodybuilder is "shakes violently as their whol
 
 Section - Demon
 
-A demon is a infection model. The description of a demon is "The demon is monstrous. A large, four-armed, four-pec'ed, red scaled torso with bat wings and a long, spiked tail is supported by lower legs that resemble a black goat. His head is horned and tusked with shaggy black hair and a goatee." The TF table of a demon is Table 8. Demon is male.
+A demon is a infection model. Description of a demon is "The demon is monstrous. A large, four-armed, four-pec'ed, red scaled torso with bat wings and a long, spiked tail is supported by lower legs that resemble a black goat. His head is horned and tusked with shaggy black hair and a goatee." The TF table of a demon is Table 8. Demon is male.
 
 The move rate of a demon is 2.
 The attack rate of a demon is 2.
@@ -4052,7 +4052,7 @@ The left wing is a body part. The body part origin of the left wing is "chest". 
 
 Section - Horse Stud
 
-A Horse Stud is a infection model. Horse stud is unique. The description of a Horse Stud is "The large black furred beast before you has a horse's head and legs, with the torso of a muscular man." The TF table of a Horse Stud is Table horse mare. A Horse Stud is male. Horse Stud is fearful.
+A Horse Stud is a infection model. Horse stud is unique. Description of a Horse Stud is "The large black furred beast before you has a horse's head and legs, with the torso of a muscular man." The TF table of a Horse Stud is Table horse mare. A Horse Stud is male. Horse Stud is fearful.
 
 The move rate of a Horse Stud is 2.
 The attack rate of a Horse Stud is 1.
@@ -4064,7 +4064,7 @@ The horse tail is a body part. The body part origin of the horse tail is "rear".
 
 Section - Anthro Mare
 
-A Anthro Mare is a infection model. The description of a Anthro Mare is "A stunning female of black fur. Her violet eyes gaze at you with a coy expression as her generous hips sway back and forth. She may be a beast, but she has the assets of any human woman, and seems willing to share them." The TF table of a Anthro Mare is Table horse mare. A Anthro Mare is female. Anthro Mare is fearful.
+A Anthro Mare is a infection model. Description of a Anthro Mare is "A stunning female of black fur. Her violet eyes gaze at you with a coy expression as her generous hips sway back and forth. She may be a beast, but she has the assets of any human woman, and seems willing to share them." The TF table of a Anthro Mare is Table horse mare. A Anthro Mare is female. Anthro Mare is fearful.
 
 The move rate of a Anthro Mare is 2.
 The attack rate of a Anthro Mare is 1.
@@ -4078,7 +4078,7 @@ The horse cock is a[ kind of] body part. [The body part origin of the horse cock
 
 Section - Phoenix
 
-A Phoenix is a infection model. The description of a Phoenix is "A bipedal phoenix lady, with brilliant red and orange feathers, a friendly looking expression on her beaked face, and a worryingly stiff member between her legs. From behind, under her tailfeathers, a female sex can be easily seen. She has large breasts and hips, and when she moves just right, milk seems to form on her large nipples." The TF table of a Phoenix is Table Phoenix. A Phoenix is neuter.
+A Phoenix is a infection model. Description of a Phoenix is "A bipedal phoenix lady, with brilliant red and orange feathers, a friendly looking expression on her beaked face, and a worryingly stiff member between her legs. From behind, under her tailfeathers, a female sex can be easily seen. She has large breasts and hips, and when she moves just right, milk seems to form on her large nipples." The TF table of a Phoenix is Table Phoenix. A Phoenix is neuter.
 
 The move rate of a Phoenix is 3.
 The attack rate of a Phoenix is 4.
@@ -4088,7 +4088,7 @@ The TF description of a Phoenix is "begins to smolder before igniting violently 
 
 Section - Gryphon
 
-A Gryphon is a infection model. The description of a Gryphon is "Hey, a gryphon! But those aren't supposed to stand on two legs. They probably shouldn't be blue, and this one has huge breasts and a cock to match it, leaving you a little confused, or turned on, as the case may be. She licks over her black beak as she eyes you a moment. She can probably move quickly, with those large wings and those powerful long legs." The TF table of a Gryphon is Table Gryphon. A Gryphon is neuter. A gryphon is horny.
+A Gryphon is a infection model. Description of a Gryphon is "Hey, a gryphon! But those aren't supposed to stand on two legs. They probably shouldn't be blue, and this one has huge breasts and a cock to match it, leaving you a little confused, or turned on, as the case may be. She licks over her black beak as she eyes you a moment. She can probably move quickly, with those large wings and those powerful long legs." The TF table of a Gryphon is Table Gryphon. A Gryphon is neuter. A gryphon is horny.
 
 The move rate of a Gryphon is 1.
 The attack rate of a Gryphon is 3.
@@ -4098,7 +4098,7 @@ The TF description of a Gryphon is "suddenly grabs for their crotch, moaning as 
 
 Section - Skunkbeast
 
-A skunkbeast is a infection model. The description of a skunkbeast is "This skunk-like would easily pass for a normal animal, if it weren't for two things. One, the creature is the size of a small horse, and two, it's sporting the biggest erection you've ever seen as it waddles around on all fours. Which is a bit less than comforting, with the way it looks into your eyes." The TF table of a skunkbeast is Table 14. Understand "skunk" as skunkbeast. A skunkbeast is male.
+A skunkbeast is a infection model. Description of a skunkbeast is "This skunk-like would easily pass for a normal animal, if it weren't for two things. One, the creature is the size of a small horse, and two, it's sporting the biggest erection you've ever seen as it waddles around on all fours. Which is a bit less than comforting, with the way it looks into your eyes." The TF table of a skunkbeast is Table 14. Understand "skunk" as skunkbeast. A skunkbeast is male.
 
 The move rate of a skunkbeast is 3.
 The attack rate of a skunkbeast is 5.
@@ -4112,7 +4112,7 @@ The skunk tail is a body part. The body part origin of the skunk tail is "rear".
 
 Section - Irish Cat
 
-An irish cat is a infection model. The description of a irish cat is "This curvy lass has clear feline influences, covered in striped fur of brown, black, and white. She has triangular ears that twitch top her head to either side of a round green hat. A well pressed green jacket rests over a darker shaded shirt and a tartan skirt covers her hips, with her tail poking out the back end. She wields a tankard of some kind of booze that she is taking generous swigs from as she looks about eagerly for companions." The TF table of a irish cat is Table icat. Irish Cat is female.
+An irish cat is a infection model. Description of a irish cat is "This curvy lass has clear feline influences, covered in striped fur of brown, black, and white. She has triangular ears that twitch top her head to either side of a round green hat. A well pressed green jacket rests over a darker shaded shirt and a tartan skirt covers her hips, with her tail poking out the back end. She wields a tankard of some kind of booze that she is taking generous swigs from as she looks about eagerly for companions." The TF table of a irish cat is Table icat. Irish Cat is female.
 
 The move rate of a irish cat is 3.
 The attack rate of a irish cat is 5.
@@ -4123,7 +4123,7 @@ The TF description of a irish cat is "lets out a sudden cheer as their clothes t
 
 Section - Latex Skunk
 
-A latex skunk is a infection model. The description of a latex skunk is "This skunk-like creature has more than a few human features, making her almost sexy despite the fact that her skin is made of rubber and that the tail standing tall behind her makes you more than a little uneasy." The TF table of a latex skunk is Table 1. Latex Skunk is female.
+A latex skunk is a infection model. Description of a latex skunk is "This skunk-like creature has more than a few human features, making her almost sexy despite the fact that her skin is made of rubber and that the tail standing tall behind her makes you more than a little uneasy." The TF table of a latex skunk is Table 1. Latex Skunk is female.
 
 The move rate of a latex skunk is 3.
 The attack rate of a latex skunk is 5.
@@ -4138,7 +4138,7 @@ The latex skunk tail is a body part. The body part origin of the latex skunk tai
 
 Section - Minotaur
 
-A Minotaur Bull is a infection model. The description of a Minotaur Bull is "Straight from myth! Though this beast seems shaggier than some of the artwork you've seen, more like those cow people from that video game. Planet of conflictmaking or whatever. Either way, he's big, and looks strong enough to rip your arms off. That rocket between his legs doesn't look comforting either." The TF table of a Minotaur Bull is Table Minotaur. A Minotaur Bull is male.
+A Minotaur Bull is a infection model. Description of a Minotaur Bull is "Straight from myth! Though this beast seems shaggier than some of the artwork you've seen, more like those cow people from that video game. Planet of conflictmaking or whatever. Either way, he's big, and looks strong enough to rip your arms off. That rocket between his legs doesn't look comforting either." The TF table of a Minotaur Bull is Table Minotaur. A Minotaur Bull is male.
 
 The move rate of a Minotaur Bull is 3.
 The attack rate of a Minotaur Bull is 2.
@@ -4146,7 +4146,7 @@ The reflex of a Minotaur Bull is 14.
 The primary attack description of a Minotaur Bull is "bullies and pushes around confidently before landing a nip on".
 The TF description of a Minotaur Bull is "sinks to the ground, panting and mooing before they start to expand rapidly. With a loud lowing roar, and complete destruction of any worn clothes, they erupt into a".
 
-A Minotaur Cow is a infection model. The description of a Minotaur Cow is "A large cow lady. She seems gentle enough, despite her imposing build and intimidating muscle mass. She approaches things with a soft expression and spends more time sniffing or kissing at things than anything else. Harmless perhaps?" The TF table of a Minotaur Cow is Table Minotaur. A Minotaur Cow is female.
+A Minotaur Cow is a infection model. Description of a Minotaur Cow is "A large cow lady. She seems gentle enough, despite her imposing build and intimidating muscle mass. She approaches things with a soft expression and spends more time sniffing or kissing at things than anything else. Harmless perhaps?" The TF table of a Minotaur Cow is Table Minotaur. A Minotaur Cow is female.
 
 The move rate of a Minotaur Cow is 3.
 The attack rate of a Minotaur Cow is 2.
@@ -4156,7 +4156,7 @@ The TF description of a Minotaur Cow is "grabs at their chest and groans as it s
 
 Section - Were Fennec
 
-A Were Fennec is a infection model. The description of a Were Fennec is "A short, furry, female creature with huge ears and a kindly looking smile, if you can avoid being disturbed by a two legged beast. She is just as male as female, with a thick organ nestled between her thighs, plump and ready. Something about her seems... cute, as if she were entirely harmless, despite sharp teeth and exposed black claws." The TF table of a Were Fennec is Table Were Fennec. A Were Fennec is neuter. A were Fennec is fast and stealthy.
+A Were Fennec is a infection model. Description of a Were Fennec is "A short, furry, female creature with huge ears and a kindly looking smile, if you can avoid being disturbed by a two legged beast. She is just as male as female, with a thick organ nestled between her thighs, plump and ready. Something about her seems... cute, as if she were entirely harmless, despite sharp teeth and exposed black claws." The TF table of a Were Fennec is Table Were Fennec. A Were Fennec is neuter. A were Fennec is fast and stealthy.
 
 The move rate of a Were Fennec is 3.
 The attack rate of a Were Fennec is 1.
@@ -4168,7 +4168,7 @@ The TF description of a Were Fennec is "looks up suddenly, then tears off their 
 
 Section - Vixen
 
-A Vixen is a infection model. The description of a Vixen is "A small red fox with white underbelly and blackened paws. It has a short narrow snout and sharp little teeth. It's kind of cute, really." The TF table of a Vixen is Table Vixen. A Vixen is female.
+A Vixen is a infection model. Description of a Vixen is "A small red fox with white underbelly and blackened paws. It has a short narrow snout and sharp little teeth. It's kind of cute, really." The TF table of a Vixen is Table Vixen. A Vixen is female.
 
 The move rate of a Vixen is 1.
 The attack rate of a Vixen is 2.
@@ -4178,7 +4178,7 @@ The TF description of a Vixen is "falls forward suddenly, shrinking rapidly. Cla
 
 Section - Echoen Bat
 
-A Bat is a infection model. The description of a Bat is "This curvaceous beast is covered in brown fur except for the white tufts in her large ears, her naked, and huge, black cock, and thick black teats on heavy hanging breasts. She appears to be a bat hybrid, with fangs exposed from her upper lip over her bottom. She has two sets of arms, one human, the other a set of wings with hands included. Behind her, a fox like tail curls and flicks." The TF table of a Bat is Table Echoen. A Bat is neuter.
+A Bat is a infection model. Description of a Bat is "This curvaceous beast is covered in brown fur except for the white tufts in her large ears, her naked, and huge, black cock, and thick black teats on heavy hanging breasts. She appears to be a bat hybrid, with fangs exposed from her upper lip over her bottom. She has two sets of arms, one human, the other a set of wings with hands included. Behind her, a fox like tail curls and flicks." The TF table of a Bat is Table Echoen. A Bat is neuter.
 
 The move rate of a Bat is 3.
 The attack rate of a Bat is 1.
@@ -4189,7 +4189,7 @@ The TF description of a Bat is "frantically pulls at their chest and a rapidly e
 
 Section - Latex Fox
 
-A latex fox is a infection model. The description of a latex fox is "This beast looks like a cross between a man, a fox, and a pool-toy, its rubber skin catching reflections of light almost as well as its bared teeth." The TF table of a latex fox is Table latex fox. A latex fox is male.
+A latex fox is a infection model. Description of a latex fox is "This beast looks like a cross between a man, a fox, and a pool-toy, its rubber skin catching reflections of light almost as well as its bared teeth." The TF table of a latex fox is Table latex fox. A latex fox is male.
 
 The move rate of a latex fox is 3.
 The attack rate of a latex fox is 1.
@@ -4199,7 +4199,7 @@ The TF description of a latex fox is "is engulfed by the latex, screams turning 
 
 The fox tail is a body part. The body part origin of the fox tail is "rear". The shift of the fox tail is "A rounded chunk of latex grows from your back like a snake, then puffs out with a FLOOMP into a big, cartoonish fox tail." The desc of the fox tail is "A cartoonish red fox tail follows behind you." The TF table of the fox tail is Table latex fox. The tag of the fox tail is "tail".
 
-A Latex Vixen is a infection model. The description of a Latex Vixen is "This beast looks like a cross between a curvy woman, a fox, and a pool-toy, its rubber skin catching reflections of light almost as well as its bared teeth." The TF table of a Latex Vixen is Table latex fox. A Latex Vixen is female.
+A Latex Vixen is a infection model. Description of a Latex Vixen is "This beast looks like a cross between a curvy woman, a fox, and a pool-toy, its rubber skin catching reflections of light almost as well as its bared teeth." The TF table of a Latex Vixen is Table latex fox. A Latex Vixen is female.
 
 The move rate of a Latex Vixen is 3.
 The attack rate of a Latex Vixen is 1.
@@ -4207,7 +4207,7 @@ The reflex of a Latex Vixen is 18.
 The primary attack description of a Latex Vixen is "bites, leaving puncture-like marks of rubber on".
 The TF description of a Latex Vixen is "is engulfed by the latex, screams turning to snarls as she is replaced by a".
 
-A Latex Prickvixen is a infection model. Latex prickvixen is neuter. The description of a Latex Prickvixen is "This beast looks like a cross between a curvy woman, man, a fox, and a pool-toy, its rubber skin catching reflections of light almost as well as its bared teeth. Its assets are larger than any other foxes you might have seen, with grand, almost heavy (it's hard for inflatables), breasts and a huge bobbing cock." The TF table of a Latex Prickvixen is Table Latex fox. A Latex Prickvixen is neuter.
+A Latex Prickvixen is a infection model. Latex prickvixen is neuter. Description of a Latex Prickvixen is "This beast looks like a cross between a curvy woman, man, a fox, and a pool-toy, its rubber skin catching reflections of light almost as well as its bared teeth. Its assets are larger than any other foxes you might have seen, with grand, almost heavy (it's hard for inflatables), breasts and a huge bobbing cock." The TF table of a Latex Prickvixen is Table Latex fox. A Latex Prickvixen is neuter.
 
 The move rate of a Latex Prickvixen is 3.
 The attack rate of a Latex Prickvixen is 1.
@@ -4217,7 +4217,7 @@ The TF description of a Latex Prickvixen is "is engulfed by the latex, screams t
 
 Section - Latex Frog
 
-A latex frog is a infection model. The description of a latex frog is "This thing brings new meaning to the word [quotation mark]frog man[quotation mark], and its rubbery eyes have a ravenous glaze to them. You get the feeling that his distended gut could hold a hell of a lot more than it looks like it should." The TF table of a latex frog is Table 3.
+A latex frog is a infection model. Description of a latex frog is "This thing brings new meaning to the word [quotation mark]frog man[quotation mark], and its rubbery eyes have a ravenous glaze to them. You get the feeling that his distended gut could hold a hell of a lot more than it looks like it should." The TF table of a latex frog is Table 3.
 
 The move rate of a latex frog is 4.
 The attack rate of a latex frog is 5.
@@ -4232,7 +4232,7 @@ Section - Latex Wolf
 
 The wolf tail is a body part. The body part origin of the wolf tail is "rear". The shift of the wolf tail is "You feel a chunk of latex grow from your back like a snake, then puff out into a realistic looking latex wolf tail." The desc of the wolf tail is "A realistic latex wolf tail follows behind you." The TF table of the wolf tail is Table 54. The tag of the wolf tail is "tail".
 
-A latex wolf is a infection model. The description of a latex wolf is "A wolf that would be no different than one you have seen on nature shows if not for the fact is was made of latex." The TF table of a latex wolf is Table 54. a latex wolf is male.
+A latex wolf is a infection model. Description of a latex wolf is "A wolf that would be no different than one you have seen on nature shows if not for the fact is was made of latex." The TF table of a latex wolf is Table 54. a latex wolf is male.
 
 The move rate of a latex wolf is 2.
 The attack rate of a latex wolf is 3.
@@ -4244,7 +4244,7 @@ Section - Latex Cow
 
 The cow udder is a body part. The body part origin of the cow udder is "gut". The shift of the cow udder is "You feel a strange pressure at the base of your gut as a mass of flesh-like rubber expands from it, soon reaching halfway down to your knees before a set of four long teats grow from it." The desc of the udder is "There is a large, fleshy pink rubber udder hanging from your gut." The TF table of the cow udder is Table 4. The tag of the cow udder is "udder". The cow udder is soft.
 
-A latex cow is a infection model. The description of a latex cow is "This large, fat cow-like creature is at least as tall as you. It seems docile enough, mostly fondling its large udder and ignoring you, but it may be best not to spend too much time with it." The TF table of a latex cow is Table 4. Latex cow is female.
+A latex cow is a infection model. Description of a latex cow is "This large, fat cow-like creature is at least as tall as you. It seems docile enough, mostly fondling its large udder and ignoring you, but it may be best not to spend too much time with it." The TF table of a latex cow is Table 4. Latex cow is female.
 
 The move rate of a latex cow is 3.
 The attack rate of a latex cow is 2.
@@ -4259,7 +4259,7 @@ The TF description of a latex cow is "lets out a blood-curdling moo as he transf
 
 Section - Ferret
 
-A Ferret is a infection model. The description of a Ferret is "A tall creature covered in brown fur. She moves with an unparalleled grace, like water in motion. Her long tail flicks and curls behind her in counter play to her movement as she looks around with a grin, licking her lips. Above her visible pink nethers is a cock of the same color." The TF table of a Ferret is Table ferret. Ferret is neuter.
+A Ferret is a infection model. Description of a Ferret is "A tall creature covered in brown fur. She moves with an unparalleled grace, like water in motion. Her long tail flicks and curls behind her in counter play to her movement as she looks around with a grin, licking her lips. Above her visible pink nethers is a cock of the same color." The TF table of a Ferret is Table ferret. Ferret is neuter.
 
 The move rate of a Ferret is 2.
 The attack rate of a Ferret is 2.
@@ -4276,7 +4276,7 @@ The TF description of a Ferret is "moans and shivers as their body lengthens and
 
 Section - Cat Girl
 
-A cat girl is a infection model. The description of a cat girl is "This strange creature looks like a cross between a human and a feline, clearly female with huge bouncing breasts and thick exposed vaginal lips. She is on the prowl for a mate, and you might make a good candidate." The TF table of a cat girl is Table 20. Cat Girl is female.
+A cat girl is a infection model. Description of a cat girl is "This strange creature looks like a cross between a human and a feline, clearly female with huge bouncing breasts and thick exposed vaginal lips. She is on the prowl for a mate, and you might make a good candidate." The TF table of a cat girl is Table 20. Cat Girl is female.
 
 The move rate of a cat girl is 2.
 The attack rate of a cat girl is 2.
@@ -4287,7 +4287,7 @@ The TF description of a cat girl is "shudders and moans, grabbing at their chest
 
 Section - Sheep
 
-A Sheep is a infection model. The description of a Sheep is "A sheep on two legs? Weird. You presume it's female, since it has no horns. It has thick white wool and a short waggy tail. It's very cute, really." The TF table of a Sheep is Table Sheep. Sheep is female. Sheep is fearful.
+A Sheep is a infection model. Description of a Sheep is "A sheep on two legs? Weird. You presume it's female, since it has no horns. It has thick white wool and a short waggy tail. It's very cute, really." The TF table of a Sheep is Table Sheep. Sheep is female. Sheep is fearful.
 
 The move rate of a Sheep is 2.
 The attack rate of a Sheep is 5.
@@ -4298,7 +4298,7 @@ The TF description of a Sheep is "falls to all fours as wool explodes over their
 
 Section - Collie
 
-A Collie is a infection model. The description of a Collie is "A tall and, arguably, pretty collie. Like a werewolf, but clearly a dog, with half flopped ears and a grin on her face. She seems harmless enough, and even talks once in a while. Such manners compared to most of the monsters around here." The TF table of a Collie is Table Collie. Collie is female. Collie is not jealous. Collie is herder. Collie is cooperative.
+A Collie is a infection model. Description of a Collie is "A tall and, arguably, pretty collie. Like a werewolf, but clearly a dog, with half flopped ears and a grin on her face. She seems harmless enough, and even talks once in a while. Such manners compared to most of the monsters around here." The TF table of a Collie is Table Collie. Collie is female. Collie is not jealous. Collie is herder. Collie is cooperative.
 
 The move rate of a Collie is 2.
 The attack rate of a Collie is 1.
@@ -4310,7 +4310,7 @@ The TF description of a Collie is "gives a soft moan and staggers in place. Clot
 
 Section - Kangaroos
 
-A Kangaroo Boomer is a infection model. The description of a Kangaroo Boomer is "Once a person, now infused with bestial features. This kangaroo stands bipedal on powerful leaping feet and lean muscular legs. He has an expressive face, largely confused and adjusting to his new state as a kangaroo hybrid. At a distance, it would be easy to confuse this person as a normal kangaroo, it is only close that one can see the light of intelligence in their eyes, and the deft way they can move their agile fingers." The TF table of a Kangaroo Boomer is Table Kangaroo. Kangaroo Boomer is male. the kangaroo boomer is immune. the kangaroo boomer is benign. The belly of the kangaroo boomer is the birthing pouch. A kangaroo boomer is fearful.
+A Kangaroo Boomer is a infection model. Description of a Kangaroo Boomer is "Once a person, now infused with bestial features. This kangaroo stands bipedal on powerful leaping feet and lean muscular legs. He has an expressive face, largely confused and adjusting to his new state as a kangaroo hybrid. At a distance, it would be easy to confuse this person as a normal kangaroo, it is only close that one can see the light of intelligence in their eyes, and the deft way they can move their agile fingers." The TF table of a Kangaroo Boomer is Table Kangaroo. Kangaroo Boomer is male. the kangaroo boomer is immune. the kangaroo boomer is benign. The belly of the kangaroo boomer is the birthing pouch. A kangaroo boomer is fearful.
 
 The move rate of a Kangaroo Boomer is 2.
 The attack rate of a Kangaroo Boomer is 2.
@@ -4320,7 +4320,7 @@ The primary attack description of a Kangaroo Boomer is "approaches and draws clo
 The secondary attack description of a Kangaroo Boomer is "gives a soft moan as power surges over their form. With a crackle of power, they reach into their pouch and draw out a fully grown kangaroo despite the size difference, setting them to their somewhat unsteady feet. The new roo looks disoriented, but well".
 The TF description of a Kangaroo Boomer is "closes their eyes and gives a soft, wistful, sigh as their body smoothly gains fur and mass. It is a peaceful transcendence to become something new, though as the tranquility of the event passes, they become confused at how they woke up this morning to become a".
 
-A Kangaroo Flyer is a infection model. The description of a Kangaroo Flyer is "Once a person, now infused with bestial features. This kangaroo stands bipedal on powerful leaping feet and lean muscular legs. She has an expressive face, largely confused and adjusting to his new state as a kangaroo hybrid. At a distance, it would be easy to confuse this person as a normal kangaroo, it is only close that one can see the light of intelligence in their eyes, and the deft way they can move their agile fingers. Another giveaway are her breasts, perhaps a B cup, carried over from her days as a human and covered in the same soft brown fur that covers the rest of her form." The TF table of a Kangaroo Flyer is Table Kangaroo. Kangaroo Flyer is female. the kangaroo flyer is immune. the kangaroo flyer is benign. The belly of the kangaroo flyer is the birthing pouch. A kangaroo flyer is fearful.
+A Kangaroo Flyer is a infection model. Description of a Kangaroo Flyer is "Once a person, now infused with bestial features. This kangaroo stands bipedal on powerful leaping feet and lean muscular legs. She has an expressive face, largely confused and adjusting to his new state as a kangaroo hybrid. At a distance, it would be easy to confuse this person as a normal kangaroo, it is only close that one can see the light of intelligence in their eyes, and the deft way they can move their agile fingers. Another giveaway are her breasts, perhaps a B cup, carried over from her days as a human and covered in the same soft brown fur that covers the rest of her form." The TF table of a Kangaroo Flyer is Table Kangaroo. Kangaroo Flyer is female. the kangaroo flyer is immune. the kangaroo flyer is benign. The belly of the kangaroo flyer is the birthing pouch. A kangaroo flyer is fearful.
 
 The move rate of a Kangaroo Flyer is 2.
 The attack rate of a Kangaroo Flyer is 2.
@@ -4332,7 +4332,7 @@ The TF description of a Kangaroo Flyer is "closes their eyes and gives a soft, w
 
 Section - Uber Fox
 
-A UberFox is a infection model. The description of a uberfox is "A huge fox like creature, standing about six feet tall from paw to shoulders and from snout to tail base. She stands on four legs, with six breasts in pairs running down her undercarriage, large and swaying, but doing little to conceal her large pink shaft and tightly drawn balls. Viewed from behind, her many large tails are easily seen, and her large wet gash of a cunt[if the tf table of head is table 0]. A powerful scent comes from her, drawing you towards her and keeping you aroused. You've never seen such a sexy beast[end if].". The TF table of a UberFox is Table uber fox. uberfox is neuter. the uberfox is immune. the uberfox is benign. A uberfox is npcimmune. A uberfox is sanitized. A uberfox is sterile.
+A UberFox is a infection model. Description of a uberfox is "A huge fox like creature, standing about six feet tall from paw to shoulders and from snout to tail base. She stands on four legs, with six breasts in pairs running down her undercarriage, large and swaying, but doing little to conceal her large pink shaft and tightly drawn balls. Viewed from behind, her many large tails are easily seen, and her large wet gash of a cunt[if the tf table of head is table 0]. A powerful scent comes from her, drawing you towards her and keeping you aroused. You've never seen such a sexy beast[end if].". The TF table of a UberFox is Table uber fox. uberfox is neuter. the uberfox is immune. the uberfox is benign. A uberfox is npcimmune. A uberfox is sanitized. A uberfox is sterile.
 
 The move rate of a uberfox is 2.
 The attack rate of a uberfox is 2.
@@ -4344,7 +4344,7 @@ The TF description of a Uber Fox is "gives a soft mournful howl as the last of t
 
 Section - Hyena
 
-A Hyena is a infection model. The description of a Hyena is "Not far from the image of a Gnoll, this beast sports much more sexuality than any fantasy classic vermin could. This hyena has mottled brown and black fur. She has wide hips and huge, perfectly round, breasts. The areola of the breasts is quite large, much of it taken by the tapering and large teat on each, leaking faint amounts of milk. Her paws, both hand and feet, are capped with dangerous looking claws, and the teeth in her mouth look quite sharp indeed. Adding to the danger of the female is the obscenely long, but relatively slender shaft, slick looking and leaking pre fluids constantly. Under it are some plum-sized furry balls, vagina glistening just behind and under a long swaying tail." The TF table of a Hyena is Table Hyena. Hyena is neuter. the Hyena is immune. the Hyena is benign. The belly of the Hyena is the dark belly.
+A Hyena is a infection model. Description of a Hyena is "Not far from the image of a Gnoll, this beast sports much more sexuality than any fantasy classic vermin could. This hyena has mottled brown and black fur. She has wide hips and huge, perfectly round, breasts. The areola of the breasts is quite large, much of it taken by the tapering and large teat on each, leaking faint amounts of milk. Her paws, both hand and feet, are capped with dangerous looking claws, and the teeth in her mouth look quite sharp indeed. Adding to the danger of the female is the obscenely long, but relatively slender shaft, slick looking and leaking pre fluids constantly. Under it are some plum-sized furry balls, vagina glistening just behind and under a long swaying tail." The TF table of a Hyena is Table Hyena. Hyena is neuter. the Hyena is immune. the Hyena is benign. The belly of the Hyena is the dark belly.
 
 The move rate of a Hyena is 2.
 The attack rate of a Hyena is 2.
@@ -4355,7 +4355,7 @@ The TF description of a Hyena is "gives a sudden low growl, swiping at the air a
 
 Section - Feline Taur
 
-A Felitaur is a infection model. The description of a Felitaur is "A strange, four legged creature. Like centaur, but with a feline like lower and upper body. She has six breasts on her upper body, covered in tawny fur like the rest of her. Each pair is slightly larger than the one below it, topmost pair being D cup in size. At the end of her powerful looking leonine body is a long tufted tail. Under that, a huge set of pulsing orbs fuel a two liter-sized sheath that runs up along a good portion of her lower belly. Surrounding the sheath at either side, running up along her lower belly, are six more breasts. Each swells just large enough to take up all the available space and each is very firm, jiggling just a little with her powerful steps. When she raises her tail, it becomes obvious that she is female as well, with dark stained dewy lips." The TF table of a Felitaur is Table felitaur. Felitaur is neuter. Felitaur is immune. Felitaur is benign. The belly of the Felitaur is the dark belly.
+A Felitaur is a infection model. Description of a Felitaur is "A strange, four legged creature. Like centaur, but with a feline like lower and upper body. She has six breasts on her upper body, covered in tawny fur like the rest of her. Each pair is slightly larger than the one below it, topmost pair being D cup in size. At the end of her powerful looking leonine body is a long tufted tail. Under that, a huge set of pulsing orbs fuel a two liter-sized sheath that runs up along a good portion of her lower belly. Surrounding the sheath at either side, running up along her lower belly, are six more breasts. Each swells just large enough to take up all the available space and each is very firm, jiggling just a little with her powerful steps. When she raises her tail, it becomes obvious that she is female as well, with dark stained dewy lips." The TF table of a Felitaur is Table felitaur. Felitaur is neuter. Felitaur is immune. Felitaur is benign. The belly of the Felitaur is the dark belly.
 
 The move rate of a Felitaur is 2.
 The attack rate of a Felitaur is 2.
@@ -4368,7 +4368,7 @@ The feline torso is a body part. The body part origin of the feline torso is "re
 
 Section - Jackal Priest
 
-A Jackal Priest is a infection model. The description of a Jackal Priest is "Where there was once a human, not there is a strange creature of myth. A jackal, on two legs, wearing fine Egyptian fare and sporting a great deal of gold and silver religious symbols, ankhs being popular. Her body is lean, with the exception of her full breasts. Her entire form is covered in soft black fur, and behind her, a cord like tail wags excitedly." The TF table of a Jackal Priest is Table Jackal. Jackal Priest is female. the jackal priest is immune. the jackal priest is benign. The jackal priest is pacified. jackal priest is sanitized.
+A Jackal Priest is a infection model. Description of a Jackal Priest is "Where there was once a human, not there is a strange creature of myth. A jackal, on two legs, wearing fine Egyptian fare and sporting a great deal of gold and silver religious symbols, ankhs being popular. Her body is lean, with the exception of her full breasts. Her entire form is covered in soft black fur, and behind her, a cord like tail wags excitedly." The TF table of a Jackal Priest is Table Jackal. Jackal Priest is female. the jackal priest is immune. the jackal priest is benign. The jackal priest is pacified. jackal priest is sanitized.
 
 The move rate of a Jackal Priest is 999.
 The attack rate of a Jackal Priest is 2000.
@@ -4381,7 +4381,7 @@ The TF description of a Jackal Priest is "squirms and writhes as their body is c
 
 Section - Herm Squirrel
 
-A herm squirrel is a infection model. The description of a herm squirrel is "This sexual beauty is as tall as a person but has the features of a squirrel. It sports a massive pair of heaving breasts with thick nipples, and an erect cock dripping with hot seed fueled by fluffy, overloaded balls. Her soft belly is rounded in pregnancy, and when she sees you looking at her, she raises her arms and shakes herself a bit... her belly swelling a little bit larger." The TF table of a herm squirrel is Table 55. Herm Squirrel is a neuter. A herm squirrel is fearful.
+A herm squirrel is a infection model. Description of a herm squirrel is "This sexual beauty is as tall as a person but has the features of a squirrel. It sports a massive pair of heaving breasts with thick nipples, and an erect cock dripping with hot seed fueled by fluffy, overloaded balls. Her soft belly is rounded in pregnancy, and when she sees you looking at her, she raises her arms and shakes herself a bit... her belly swelling a little bit larger." The TF table of a herm squirrel is Table 55. Herm Squirrel is a neuter. A herm squirrel is fearful.
 
 The move rate of a herm squirrel is 2.
 The attack rate of a herm squirrel is 3.
@@ -4395,7 +4395,7 @@ The squirrel tail is a body part. The body part origin of the squirrel tail is "
 
 Section - Otters
 
-Otter is a infection model. The description of a otter is "Like an otter on two legs, it is slinky and brown furred, its pelt shimmering in the light. She is not very tall, but possesses smooth streamlined curves, B cupped breasts and rounded hips that sway with her movements. The only distraction to her smooth outline is the very male sheath tucked between her furry legs. Her cock is at half mast when she's not actively using it, but at a quick guess, she can probably reach ten inches of throbbing black meat. When she turns around, her pouting and available female sex glistens invitingly[if noun is heavy]. Her form is rounder than usual, heavy with a cub or two in that dome of a belly, marring her usually sleek form[end if][if noun is matronly]. Her general form is softened and she has the feeling of a mother, caring and bountiful[end if].". The TF table of a otter is Table otter. otter is neuter.
+Otter is a infection model. Description of a otter is "Like an otter on two legs, it is slinky and brown furred, its pelt shimmering in the light. She is not very tall, but possesses smooth streamlined curves, B cupped breasts and rounded hips that sway with her movements. The only distraction to her smooth outline is the very male sheath tucked between her furry legs. Her cock is at half mast when she's not actively using it, but at a quick guess, she can probably reach ten inches of throbbing black meat. When she turns around, her pouting and available female sex glistens invitingly[if noun is heavy]. Her form is rounder than usual, heavy with a cub or two in that dome of a belly, marring her usually sleek form[end if][if noun is matronly]. Her general form is softened and she has the feeling of a mother, caring and bountiful[end if].". The TF table of a otter is Table otter. otter is neuter.
 
 The move rate of a otter is 2.
 The attack rate of a otter is 3.
@@ -4410,7 +4410,7 @@ The TF description of a otter is "begins panting loudly, shrinking out of their 
 
 Section - Lioness
 
-A Lioness is a infection model. The description of a Lioness is "A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile. She is quite developed for her size, sporting B cups and wide hips and seems to be eyeing you rather provocatively." The TF table of a Lioness is Table 21. Lioness is female.
+A Lioness is a infection model. Description of a Lioness is "A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile. She is quite developed for her size, sporting B cups and wide hips and seems to be eyeing you rather provocatively." The TF table of a Lioness is Table 21. Lioness is female.
 
 The move rate of a Lioness is 1.
 The attack rate of a Lioness is 3.
@@ -4420,7 +4420,7 @@ The TF description of a Lioness is "gasps in a high tone as they begin to shrink
 
 Section - Big Hippo
 
-A Big Hippo is a infection model. The description of a Big Hippo is "They are a lumbering purple biped with smooth [one of]purple[or]brown[or]purple[or]tan[or]yellow[at random] skin. They have a moustache and beard, quite thick and stylized. They also have hair, big hippo ears popping free of it. Their gut hangs free with fat and power combined." The TF table of a Big Hippo is Table hippo alchemist. Big Hippo is male.
+A Big Hippo is a infection model. Description of a Big Hippo is "They are a lumbering purple biped with smooth [one of]purple[or]brown[or]purple[or]tan[or]yellow[at random] skin. They have a moustache and beard, quite thick and stylized. They also have hair, big hippo ears popping free of it. Their gut hangs free with fat and power combined." The TF table of a Big Hippo is Table hippo alchemist. Big Hippo is male.
 
 The move rate of a Big Hippo is 1.
 The attack rate of a Big Hippo is 3.
@@ -4432,7 +4432,7 @@ The TF description of a Big Hippo is "grunts as they begin to swell and grow, tu
 
 Section - Werewolves
 
-A Werewolf Stud is a infection model. The description of a Werewolf Stud is "It's surprisingly hard to get a look at them, but if you focus you can see that they are a large wolf person, with strong muscles, dense fur, and a wagging tail to top it all off. No one seems to notice their feral nature half the time." The TF table of a Werewolf Stud is Table werewolf. Werewolf Stud is male. Werewolf Stud is fast. Werewolf Stud is stealthy.
+A Werewolf Stud is a infection model. Description of a Werewolf Stud is "It's surprisingly hard to get a look at them, but if you focus you can see that they are a large wolf person, with strong muscles, dense fur, and a wagging tail to top it all off. No one seems to notice their feral nature half the time." The TF table of a Werewolf Stud is Table werewolf. Werewolf Stud is male. Werewolf Stud is fast. Werewolf Stud is stealthy.
 
 The move rate of a Werewolf Stud is 1.
 The attack rate of a Werewolf Stud is 2.
@@ -4440,7 +4440,7 @@ The reflex of a Werewolf Stud is 6.
 The primary attack description of a Werewolf Stud is "suddenly lashes out with great clawed paws, their form swelling large as they lash out at".
 The TF description of a Werewolf Stud is "growls and shudders as they explode in size and stature, then slowly change back to normal. They seem to be a".
 
-A Werewolf Bitch is a infection model. The description of a Werewolf Bitch is "A she wolf. Despite being covered in thick, soft, fur, she is quite humanoid, with slim breasts, wide hips and a smile that would be charming if not for the huge jagged claws that it revealed. It's odd that most don't seem to notice her." The TF table of a Werewolf Bitch is Table werewolf. Werewolf Bitch is female. Werewolf Bitch is fast. Werewolf Bitch is stealthy.
+A Werewolf Bitch is a infection model. Description of a Werewolf Bitch is "A she wolf. Despite being covered in thick, soft, fur, she is quite humanoid, with slim breasts, wide hips and a smile that would be charming if not for the huge jagged claws that it revealed. It's odd that most don't seem to notice her." The TF table of a Werewolf Bitch is Table werewolf. Werewolf Bitch is female. Werewolf Bitch is fast. Werewolf Bitch is stealthy.
 
 The move rate of a Werewolf Bitch is 1.
 The attack rate of a Werewolf Bitch is 2.
@@ -4450,7 +4450,7 @@ The TF description of a Werewolf Bitch is "growls and shudders as they explode i
 
 Section - SlutRat
 
-A SlutRat is a infection model. The description of a SlutRat is "A tall furry female. She appears a rat, with pointed snout and large round ears. Her dazzling eyes seem to be bright and piercing as she flashes bucked teeth. Her form is deliciously curvy, with wide hips, generous ass and large round breasts. At the apex of each breast is a large firm black nipple. Her tail, unlike the rest of her black furred form, is naked and pink, segmented like a wriggling worm. Viewed from behind, her cunt and pucker are visible, but so are her large dangling orbs, leading up to the powerful looking black shaft in the front. The shaft curves upwards, pointing up towards her breasts, ready for action. Her paws, both her hands and feet, are pink like her exposed tail." The TF table of a SlutRat is Table slutrat. SlutRat is neuter. Slutrat is immune.
+A SlutRat is a infection model. Description of a SlutRat is "A tall furry female. She appears a rat, with pointed snout and large round ears. Her dazzling eyes seem to be bright and piercing as she flashes bucked teeth. Her form is deliciously curvy, with wide hips, generous ass and large round breasts. At the apex of each breast is a large firm black nipple. Her tail, unlike the rest of her black furred form, is naked and pink, segmented like a wriggling worm. Viewed from behind, her cunt and pucker are visible, but so are her large dangling orbs, leading up to the powerful looking black shaft in the front. The shaft curves upwards, pointing up towards her breasts, ready for action. Her paws, both her hands and feet, are pink like her exposed tail." The TF table of a SlutRat is Table slutrat. SlutRat is neuter. Slutrat is immune.
 
 The move rate of a SlutRat is 1.
 The attack rate of a SlutRat is 3.
@@ -4461,7 +4461,7 @@ The TF description of a SlutRat is "groans, one hand grabbing at swelling chest 
 
 Section - Wyvern
 
-A Wyvern is a infection model. The description of a Wyvern is "A massive reptilian beast with wings for arms and two legs. It appears to be a female of its breed. Her massive tail whips around looking large and dangerous." The TF table of a Wyvern is Table wyvern. Wyvern is female.
+A Wyvern is a infection model. Description of a Wyvern is "A massive reptilian beast with wings for arms and two legs. It appears to be a female of its breed. Her massive tail whips around looking large and dangerous." The TF table of a Wyvern is Table wyvern. Wyvern is female.
 
 The move rate of a Wyvern is 1.
 The attack rate of a Wyvern is 3.
@@ -4471,7 +4471,7 @@ The TF description of a Wyvern is "groans and collapses to the ground as their b
 
 Section - Demon Mouse
 
-A Demonic Mouse is a infection model. A demonic mouse is a hunter. The description of a Demonic Mouse is "A bipedal rodent of only three feet in stature. She seems to have heavy human influences, with wide hips, prominent breasts and the ability to express her libidinous face. Her body is covered in soft red fur that goes deepest black at the hands and feet, which are digitigrade. Her tail flickers around behind her, raised just high enough to see her from front and back, her nether lips swollen obscenely, large enough for her to take most anything as it comes up to her lower belly and drips fell fluids to the floor, hissing softly where it strikes." The TF table of a Demonic Mouse is Table Demonic Mouse. Demonic Mouse is female.
+A Demonic Mouse is a infection model. A demonic mouse is a hunter. Description of a Demonic Mouse is "A bipedal rodent of only three feet in stature. She seems to have heavy human influences, with wide hips, prominent breasts and the ability to express her libidinous face. Her body is covered in soft red fur that goes deepest black at the hands and feet, which are digitigrade. Her tail flickers around behind her, raised just high enough to see her from front and back, her nether lips swollen obscenely, large enough for her to take most anything as it comes up to her lower belly and drips fell fluids to the floor, hissing softly where it strikes." The TF table of a Demonic Mouse is Table Demonic Mouse. Demonic Mouse is female.
 
 The move rate of a Demonic Mouse is 1.
 The attack rate of a Demonic Mouse is 999999.
@@ -4485,7 +4485,7 @@ The mouse cock is a[ kind of] body part. [The body part origin of the lioness co
 
 Section - Doe
 
-A Doe is a infection model. The description of a doe is "A tall humanoid with generous curves and aroused members. They seem to prefer the company of their own, or making more of that same company. Behind them, a short tail wags eagerly over an exposed set of vulva. The tail is brown along the top with soft white colored fur on the underside. Her feet are more like two hooves." The TF table of a Doe is Table deer. Doe is neuter. A doe is horny. A doe is fearful.
+A Doe is a infection model. Description of a doe is "A tall humanoid with generous curves and aroused members. They seem to prefer the company of their own, or making more of that same company. Behind them, a short tail wags eagerly over an exposed set of vulva. The tail is brown along the top with soft white colored fur on the underside. Her feet are more like two hooves." The TF table of a Doe is Table deer. Doe is neuter. A doe is horny. A doe is fearful.
 
 The move rate of a Doe is 1.
 The attack rate of a Doe is 3.
@@ -4495,7 +4495,7 @@ The TF description of a Doe is "puts their hands on their chest as it grows rapi
 
 Section - Furry Doe
 
-A Furry Doe is a infection model. The description of a Furry Doe is "A bipedal deer with soft brown fur and creamy off-white belly and undertail. Her nose, eartips and hands are dark hues. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large, plum-sized balls contained in a creamy colored, softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form." The TF table of a Furry Doe is Table furry deer. Furry Doe is neuter. A furry doe is horny. A furry doe is fearful.
+A Furry Doe is a infection model. Description of a Furry Doe is "A bipedal deer with soft brown fur and creamy off-white belly and undertail. Her nose, eartips and hands are dark hues. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large, plum-sized balls contained in a creamy colored, softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form." The TF table of a Furry Doe is Table furry deer. Furry Doe is neuter. A furry doe is horny. A furry doe is fearful.
 
 The move rate of a Furry Doe is 1.
 The attack rate of a Furry Doe is 3.
@@ -4510,17 +4510,17 @@ The TF description of a Furry Doe is "begins to pant loudly as brown and cream f
 
 Section - Stag
 
-A Stag is a infection model. It is a hunter. It is rare. The description of a Stag is "A tall humanoid with generous curves and aroused members. They seem to prefer the company of their own, or making more of that same company. Behind them, a short tail wags eagerly over an exposed set of vulva. The tail is brown along the top with soft white colored fur on the underside. Her feet are more like two hooves. This stag is a bit taller than other does you may see, and has a handsome rack of antlers atop of her head." The TF table of a Stag is Table deer. Stag is neuter. A stag is horny. A stag is fearful.
+A Stag is a infection model. It is a hunter. It is rare. Description of a Stag is "A tall humanoid with generous curves and aroused members. They seem to prefer the company of their own, or making more of that same company. Behind them, a short tail wags eagerly over an exposed set of vulva. The tail is brown along the top with soft white colored fur on the underside. Her feet are more like two hooves. This stag is a bit taller than other does you may see, and has a handsome rack of antlers atop of her head." The TF table of a Stag is Table deer. Stag is neuter. A stag is horny. A stag is fearful.
 
 The move rate of a Stag is 2.
 The attack rate of a Stag is 2.
 The reflex of a Stag is 12.
-The primary attack description of a Stag is "Approaches with a grin on hir face, hir thick organ splashing around as shi grabs at".
+The primary attack description of a Stag is "Approaches with a grin on her face, her thick organ splashing around as shi grabs at".
 The TF description of a Stag is "tears off their pants heedless of who is watching, jerking at their aroused member as their body grows large breasts. Huge antlers project from their head as they groan, becoming a".
 
 Section - Coyote
 
-A Coyote is a infection model. It is horny. The description of a Coyote is "An overly curvy furry female. She looks like a fox or a wolf, no wait, coyote. You've seen coyotes before, though never this pretty. She stands on two slim digitigrade paws and is covered with soft orange/brown fur, except for a stripe of white that runs from her snout down to between her legs. The white fur spreads out over her large, D cupped breasts, of which she has four, jostling and jiggling with every step she takes. Dripping from the pinkened teats is a constant thick flow of cream. [if pregnant of noun is 0]Her white furred belly is slim and fit[else if pregnant of noun is less than 10]Her soft white belly shows a pudgy bulge outwards[else]She has a rounded dome of a belly, covered in soft white fur, full of life[end if].". The TF table of a Coyote is Table coyote. Coyote is female.
+A Coyote is a infection model. It is horny. Description of a Coyote is "An overly curvy furry female. She looks like a fox or a wolf, no wait, coyote. You've seen coyotes before, though never this pretty. She stands on two slim digitigrade paws and is covered with soft orange/brown fur, except for a stripe of white that runs from her snout down to between her legs. The white fur spreads out over her large, D cupped breasts, of which she has four, jostling and jiggling with every step she takes. Dripping from the pinkened teats is a constant thick flow of cream. [if pregnant of noun is 0]Her white furred belly is slim and fit[else if pregnant of noun is less than 10]Her soft white belly shows a pudgy bulge outwards[else]She has a rounded dome of a belly, covered in soft white fur, full of life[end if].". The TF table of a Coyote is Table coyote. Coyote is female.
 
 The move rate of a Coyote is 2.
 The attack rate of a Coyote is 3.
@@ -4532,7 +4532,7 @@ The TF description of a Coyote is "grabs at their chest, moaning and grinding th
 
 Section - Alpha Lion
 
-A alpha lion is a infection model. It is unique. It is a seeker. The description of a alpha lion is "A large, strongly muscled and powerful lion/human hybrid. He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate." The TF table of a alpha lion is Table 21. alpha lion is male.
+A alpha lion is a infection model. It is unique. It is a seeker. Description of a alpha lion is "A large, strongly muscled and powerful lion/human hybrid. He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate." The TF table of a alpha lion is Table 21. alpha lion is male.
 
 The move rate of a alpha lion is 1.
 The attack rate of a alpha lion is 3.
@@ -4550,7 +4550,7 @@ Section - Male Mall Rat
 
 The male rat tail is a[ kind of] body part. The body part origin of the male rat tail is "rear". The shift of the male rat tail is "Your ass itches oddly a moment before an almost wet slithering is felt as your tail comes into being. It is sinuous and flexible and slides smoothly without disrupting anything." The desc of a male rat tail is "Behind you, a large pink hairless rat's tail twitches softly." The TF table of the male rat tail is Table 23.
 
-A rat dude is a infection model. The description of a rat dude is "Eeek! A rat! On two legs no less. Standing about five feet tall with a long pink naked tail and wearing the latest in fashion, this rat looks properly equipped for hanging out at a mall with its friends, probably other rats." The TF table of a rat dude is Table 23. a rat dude is male.
+A rat dude is a infection model. Description of a rat dude is "Eeek! A rat! On two legs no less. Standing about five feet tall with a long pink naked tail and wearing the latest in fashion, this rat looks properly equipped for hanging out at a mall with its friends, probably other rats." The TF table of a rat dude is Table 23. a rat dude is male.
 
 The move rate of a rat dude is 3.
 The attack rate of a rat dude is 2.
@@ -4567,7 +4567,7 @@ Section - Rabbit Guy
 
 The rabbit vagina is a[ kind of] body part. The rabbit vagina is soft. The body part origin of the rabbit vagina is "pelvis". The shift of the rabbit vagina is "A powerful warmth builds in your belly before pressing down. Squirming, you can only gasp as the heat finds an outlet through a new orifice, thickly lipped, your new vagina is lined with soft white fur and hides between balls and ass." The desc of a rabbit vagina is "Between your balls and ass is a plump vagina of a rabbit, surrounded with white fur." The TF table of the rabbit vagina is Table 22.
 
-A rabbit guy is a infection model. It is a seeker. The description of a rabbit guy is "This obviously male rabbit sports a very human like cock that juts a foot from its crotch. It's holding chocolates and eggs and is always smiling. His expression is a little distant, but seems to come into a bit of focus if a female rabbit is around." The TF table of a rabbit guy is Table 22. a rabbit guy is male. A rabbit guy is fearful.
+A rabbit guy is a infection model. It is a seeker. Description of a rabbit guy is "This obviously male rabbit sports a very human like cock that juts a foot from its crotch. It's holding chocolates and eggs and is always smiling. His expression is a little distant, but seems to come into a bit of focus if a female rabbit is around." The TF table of a rabbit guy is Table 22. a rabbit guy is male. A rabbit guy is fearful.
 
 The move rate of a rabbit guy is 1.
 The attack rate of a rabbit guy is 1.
@@ -4616,9 +4616,9 @@ After reading a command when the turn count is 1: [continues getting input for s
 				say "That's not a valid number. Try again.";
 		else if Startcount is 2:
 			if the number understood is greater than 0 and the number understood is less than 20:
-				now the reflex of ctype of the player is the number understood;
-				now the willpower of ctype of the player is 20 minus the number understood;
-				say "With a Reflex score of [reflex of ctype of the player], you will have a Willpower of [willpower of ctype of the player]! Enjoy the game![line break]";
+				now the reflex of ctype of Player is the number understood;
+				now the willpower of ctype of Player is 20 minus the number understood;
+				say "With a Reflex score of [reflex of ctype of Player], you will have a Willpower of [willpower of ctype of Player]! Enjoy the game![line break]";
 				say "Oh, one more question, do you want random transformation by item? If not, items will never force people to use them. Enter 1 for forced, 0 for manual.";
 				now Startcount is 3;
 			else:
@@ -4713,27 +4713,27 @@ To Infection Menu:
 		now P is off-stage;
 
 
-The destined masculinity of the player is a number that varies.[@Tag:NotSaved]
+destined masculinity of Player is a number that varies.[@Tag:NotSaved]
 
-The destined femininity of the player is a number that varies.[@Tag:NotSaved]
+destined femininity of Player is a number that varies.[@Tag:NotSaved]
 
  When play begins:
-[	now the right hand status line is "[if Player is femme]F[end if][if Player is butch]M[end if]|W:[willpower of ctype of the player]|R:[reflex of ctype of the player]|P:[number of not infected body parts]";]
+[	now the right hand status line is "[if Player is femme]F[end if][if Player is butch]M[end if]|W:[willpower of ctype of Player]|R:[reflex of ctype of Player]|P:[number of not infected body parts]";]
 	repeat with x running through infection models:
 		now x is a part of pelvis;
-	now The destined masculinity of the player is a random number from 0 to 1;
-	now The destined femininity of the player is a random number from 0 to 1;
-	if the destined femininity of the player is 1 and the destined masculinity of the player is 1:
+	now destined masculinity of Player is a random number from 0 to 1;
+	now destined femininity of Player is a random number from 0 to 1;
+	if destined femininity of Player is 1 and destined masculinity of Player is 1:
 		if a random chance of 99 in 100 succeeds:
 			if a random chance of 1 in 2 succeeds:
-				now the destined masculinity of the player is 0;
+				now destined masculinity of Player is 0;
 			else:
-				now the destined femininity of the player is 0;
-	if the destined femininity of the player is 0 and the destined masculinity of the player is 0:
+				now destined femininity of Player is 0;
+	if destined femininity of Player is 0 and destined masculinity of Player is 0:
 		if a random chance of 1 in 2 succeeds:
-			now the destined masculinity of the player is 1;
+			now destined masculinity of Player is 1;
 		else:
-			now the destined femininity of the player is 1;
+			now destined femininity of Player is 1;
 	if a random chance of 1 in 2 succeeds, now the tf table of a random stag antlers is table furry deer.
 
 
@@ -4745,7 +4745,7 @@ When play begins:
 		remove part from play;
 	let j be a random not out of play easter egg;
 	if j is not nothing:
-		now The description of J is "A brightly colored and delicious looking egg. Just perfect to start the day.";
+		now Description of J is "A brightly colored and delicious looking egg. Just perfect to start the day.";
 
 
 [Play.Start end]
@@ -4869,7 +4869,7 @@ Every turn while a mousey npc person is visible and corruption is less than 5:
 	Let z be a random visible mousey person;
 	if z is nothing, stop the action;
 	now the prey of z is the player;
-	if a random chance of corruption plus 2 in the willpower of ctype of the player succeeds:
+	if a random chance of corruption plus 2 in the willpower of ctype of Player succeeds:
 		say "Something deep inside of you smolders with unclean desire as you approach the mouse, who watches you with a dark amusement, ";
 		try the player kissing z;
 	else:
@@ -4923,7 +4923,7 @@ Every turn while a person (called victim) is stuck to a pentagram (called pentie
 		say "[The victim] struggles wildly as you lash them down to the pentagam. You get out your book of 'ancient rites and rituals' and give it a try. Stomping around, lightning incense, slitting his throat. Slitting his throat? You should have read ahead! Racked with uncertainty, you hesitate. In that moment, [the victim] screams, and is engulfed in flames, something new appearing.";
 		now the victim is not stuck to the pentie;
 		now a random visible rope is not stuck to the pentie;
-		move the victim to the location of the player;
+		move the victim to the Location of Player;
 		if a random chance of 4 in 5 succeeds:
 			now the tf table of victim is table demonic mouse;
 		else:
@@ -4988,8 +4988,8 @@ no;
 definition: A body part (Called N) is ok:
 if N is not visible, no;
 if N is not touchable, no;
-if the location of n is not the location of the player, no;
-if N is not part of the player, no;
+if the location of n is not the Location of Player, no;
+if N is not part of Player, no;
 yes;
 
 definition: A person(called N) is mare:
@@ -5307,7 +5307,7 @@ Every turn while the head is infected: [end game conditions]
 		let u be the number of on-stage same npc persons;
 		if u is greater than 0, continue the action;
 	if Loss Switch is "mind":
-		if a random chance of 1 in the willpower of ctype of the player succeeds:
+		if a random chance of 1 in the willpower of ctype of Player succeeds:
 			verify the player;
 			if xcheckerx is 0:
 				let Y be the TF table of the head;
@@ -5323,7 +5323,7 @@ Every turn while the head is infected: [end game conditions]
 		repeat with N running through body parts:
 			if the TF table of N is Table 0 or the tf table of N is table female human:
 				now xcheckerx is 1;
-		if xcheckerx is 0 and a random chance of 1 in the willpower of ctype of the player succeeds and the player is not pacified and the gut is not immune:
+		if xcheckerx is 0 and a random chance of 1 in the willpower of ctype of Player succeeds and the player is not pacified and the gut is not immune:
 			verify the player;
 			if xcheckerx is 0:
 				let N be the TF table of the head;
@@ -5337,7 +5337,7 @@ Every turn while the head is infected: [end game conditions]
 		now xcheckerx is 0;
 	else if loss switch is "full tf":
 		now xcheckerx is 0;
-		if a random chance of 1 in the willpower of ctype of the player succeeds:
+		if a random chance of 1 in the willpower of ctype of Player succeeds:
 			verify the player;
 			if xcheckerx is 0:
 				let N be the TF table of the head;
@@ -5358,8 +5358,8 @@ when play ends:
 	now totalwin is 1;
 	if altending is 0:
 		say "[bold type]";
-	if the mother of the player is greater than 0:
-		say "Your [if the mother of the player is 1]single child[else][mother of the player] children[end if] follow you faithfully. They always look up to you, even if they swiftly reach their full height and maturity. Despite acknowledging you as a mother figure, this never prevents them from approaching you in other relations over the years as needed.";
+	if the mother of player is greater than 0:
+		say "Your [if the mother of player is 1]single child[else][mother of player] children[end if] follow you faithfully. They always look up to you, even if they swiftly reach their full height and maturity. Despite acknowledging you as a mother figure, this never prevents them from approaching you in other relations over the years as needed.";
 	if the tf table of the rear is table jackal:
 		say "All other infection on your body suddenly vanishes, leaving you human, with the exception of your jackal's tail. You look around as a voice booms";
 		let u be the number of jackaly npc on-stage persons;
@@ -5372,20 +5372,20 @@ when play ends:
 		say "'You have exceeded my every expectation, mortal, you will be as an avatar to me, carrying a portion of my divine being into the living world.'[line break][line break]Power surges through your body, lifting you from the ground as it becomes more and more intense. Your arms suddenly transform with loud pops, becoming slender and black furred. Your legs are next, sleek and toned. Your tail gains a little fur mass, becoming lustrous and soft. Your face forms into a pretty female snout, all too human and expressive. Your new breasts are huge, and studded with a large gold ring on each. Across your black face grows golden lines, like hieroglyphics, declaring your loyalties.[line break][line break]Despite all the female changes, your cock remains, becoming covered with fur at the base, and swelling twice as large. Your balls suffer similar treatment, growing larger and fuzzier before your loins are covered under clean white loincloth. Your neck is adorned with gold and jewels and an ankh settles between your large breasts. You are the head priest of Anubis now and forever, his direct voice to this diseased world.";
 		stop the action;
 	if the tf table of pelvis is table 14:
-		if the skunkpregnant of the player is 0, say "     Your furry slit makes you feel eager for something, but nothing ever seems quite able to quell the heat inside you. Eventually you buy a pet skunk, the little creature making you smile, as you feel warm and happy being near him. One day, he licks at your changed sex, the pleasure slamming into you like a lightning bolt, as the little animal's body grows larger and larger. Too distracted by the tongue, you don't notice until he pins you down, rutting you constantly and forcing you to become his pet instead of the other way around. One of your final actions as a human is to buy a thick pink collar to wear, because the sight of it around your neck pleases your Master, the very skunk who now owns you.";
-		if the skunkpregnant of the player is not 0, say "     Your belly continues to grow, and finally you sink to your knees, your hands resting on the ground to steady yourself. However, before long, the skunkbeast from earlier comes by, nipping at your shoulder as he bends you forward once more. The pleasure is simply too wonderful, and you give in completely, letting your mind think of him only as Master, with you as his Pet... Each thrust of his cock forces away a little more of your humanity, until you're nothing but his horny cock-loving skunk-bitch. From all the constant mating, you eventually give birth to your first litter, a full [skunkpregnant of the player] animal kittens, nursing them as you happily await your next heat, so you can serve your Master's desire for another litter...";
+		if the skunkpregnant of Player is 0, say "     Your furry slit makes you feel eager for something, but nothing ever seems quite able to quell the heat inside you. Eventually you buy a pet skunk, the little creature making you smile, as you feel warm and happy being near him. One day, he licks at your changed sex, the pleasure slamming into you like a lightning bolt, as the little animal's body grows larger and larger. Too distracted by the tongue, you don't notice until he pins you down, rutting you constantly and forcing you to become his pet instead of the other way around. One of your final actions as a human is to buy a thick pink collar to wear, because the sight of it around your neck pleases your Master, the very skunk who now owns you.";
+		if the skunkpregnant of Player is not 0, say "     Your belly continues to grow, and finally you sink to your knees, your hands resting on the ground to steady yourself. However, before long, the skunkbeast from earlier comes by, nipping at your shoulder as he bends you forward once more. The pleasure is simply too wonderful, and you give in completely, letting your mind think of him only as Master, with you as his Pet... Each thrust of his cock forces away a little more of your humanity, until you're nothing but his horny cock-loving skunk-bitch. From all the constant mating, you eventually give birth to your first litter, a full [skunkpregnant of the player] animal kittens, nursing them as you happily await your next heat, so you can serve your Master's desire for another litter...";
 		if the tf table of pelvis is table 20, say "     You wander the land, seeking things to plunge your cock into, always hungering for the next coupling. Only a select few manage to satiate your need for very long, but you leave a large scattering of pregnant women and mysterious feline births.";
-	if lioness cock is visible and nursing of the player is not 0 and the pregnant of the player is 0:
+	if lioness cock is visible and nursing of player is not 0 and the pregnant of Player is 0:
 		say "     Your huge lioness cock does not go unnoticed by your passenger for long. She soon longs for your 'other' sort of milk, and becomes your mate. She never stops being clingy, however, and is usually seen holding to your front and riding your cock eighteen hours out of the day. Every year she grows round and large and she parts from you for a few weeks before she gives birth to a large litter of kittens. The kittens are infectious, and you two flee another city while they cause chaos behind you. Amazingly, it seems your shaft is retractable, and do so on its own when you are in the middle of mating with a female.";
 	else:
-		if pregnant of the player is greater than 0 and the tf table of the pelvis is table 21 :
-			say "     The lion man finds you as you collapse under your own weight. He lifts you into your strong arms and nuzzles your cheek before carrying you away, to make you his alpha mate and bear the strongest of his children. You never see your home city again, but bear at least [pregnant of the player], if not more cubs over the next year as you adjust to being a lioness in his pride.";
+		if pregnant of Player is greater than 0 and the tf table of the pelvis is table 21 :
+			say "     The lion man finds you as you collapse under your own weight. He lifts you into your strong arms and nuzzles your cheek before carrying you away, to make you his alpha mate and bear the strongest of his children. You never see your home city again, but bear at least [pregnant of player], if not more cubs over the next year as you adjust to being a lioness in his pride.";
 			if rabbit vagina is visible or the tf table of gut is table 22, say "     Your womb is never entirely empty of eggs and you continue to lay them in the rare moments you are not pregnant. They prove to be nutritious and delicious to your pride mates, but highly infectious to humans that eat them, who become short curvy lionesses soon after. You become a valuable source to the pride who worships your life giving belly.";
 			if lioness cock is visible, say "     Being an alpha female is made easier with your huge twitching clit shaft. When others of your pride disobey you, you work out your frustration and deepen familial bonds by fucking them until they submit in a puddle of pleasured fluids. Besides bearing children, you also sire several.";
-			if the nursing of the player is not 0, say "     The cat at your chest becomes your best female friend. She calms as you settle into the role of alpha female and helps you to enforce the rules of the pride. She never stops enjoying your thick cream however.";
+			if nursing of Player is not 0, say "     The cat at your chest becomes your best female friend. She calms as you settle into the role of alpha female and helps you to enforce the rules of the pride. She never stops enjoying your thick cream however.";
 		else:
 			if lioness cock is visible, say "     You are eventually taken in by a woman who finds the presence of your cock quite interesting on your odd body. She seems immune to any mutagenic effects and cares for you until the end of your days as your lover, giving birth to great litters of kittens every year. Amazingly, it seems your shaft is retractable, and do so on its own when you are in the middle of mating with a female.";
-			if the nursing of the player is not 0:
+			if nursing of Player is not 0:
 				if the tf table of pelvis is table 20:
 					say "     Despite the constant hunger you feel, your agony is lessened with the presence of the small feline companion. She relies on you for food and protection, often held in your arms, as often nursing from you as not. When you rest, she expresses her thanks with skilled tongue and paws, stroking your huge leonine shaft, or sometimes just riding it until you fill her with seed. When the episodes become particularly bad, she is the only one who can keep up with you, and you are both locked in one another's arms for weeks at a time, rutting wildly.";
 				else:
@@ -5553,9 +5553,9 @@ when play ends:
 				if horse cock is a part of pelvis:
 					say "Though not a stud, your cock does not go without its uses. Your stud is jealous of your breeding with 'his' mares, so most of your sisters lavish you with softly furred hands and skillful mouths. Such limitations do not apply to humans, however. You make a sizable proceeding quietly inviting furries to visit you in discreet locations. Fortunately, or not, your infectiousness has long passed, allowing you to play with the lustful human fans without harm.";
 			if tf table of head is table latex fox:
-				if the destined femininity of the player is 1 and the destined masculinity of the player is 1:
+				if destined femininity of Player is 1 and destined masculinity of Player is 1:
 					say "Your thoughts are often dragged back to lustful demands of your extreme form. Your infectiousness fades over the next few days, but your new mind does not. You look up your old friends and pay them a visit, leaving them wishing for more, but none can entirely satisfy your burgeoning needs.";
-				else if the destined femininity of the player is 1 and the destined masculinity of the player is 0:
+				else if destined femininity of Player is 1 and destined masculinity of Player is 0:
 					say "With the sound of incoming retaliation, you decide to flee. For a short time, you live in the forest. You find you don't get hungry any more, so long as you can stay inflated. You befriend a hiker who is a little swayed by your charms. He takes you home where you become a lover, and as close to a wife as a pool toy can be. You bear him several children by the time he realizes that you are still mildly infectious, not that he seems to mind his new rubbery cock, which he practices on your willing cunt often.";
 				else:
 					say "You feel so angry! You flee the city, rubber claws bouncing off the pavement, and flee up into the wilderness, surviving on wits and feral instincts alone. You come across a female hiker one day and leap upon her, fully meaning to have your way, and maybe eat her. Instead of screaming in horror, she accepts you into her arms. What should have been ravishing turns into wild love making, and she rides you until you are exhausted and sated. Tired, she carries you home and you offer no resistance. Being her toy doesn't seem like a bad fate.";
@@ -5576,7 +5576,7 @@ when play ends:
 				say "You get the urge to flee the city suddenly and launch into the night sky with your new wings. The other bees are soon following you, and you fly well into the morning when you arrive at a tall mountain not far from the city. There you oversee your drone's construction of a great hive, where you become queen and live out your days. Under your watchful gaze, two more hives are built.";
 			if tf table of head is table 54:
 				say "     You hear the sirens off in the distance and with your improved hearing can tell they are coming your way. Firetrucks arrive, sirens blaring and you run up to one, tail wagging. As you move closer to the truck you are sprayed with a strange chemical, Perhaps this the cure? You turn your head back and watch as the latex melts off of your body leaving fur underneath. You fall down and whimper as you realize that you are no longer a latex wolf, but a real one...";
-			if tf table of head is table 22 and the pregnant of the player is 0:
+			if tf table of head is table 22 and the pregnant of Player is 0:
 				say "     The sound of sirens is faint in the distance, but approaching quickly. You decide that this city has seen enough of your eggs for today and quickly flee the area. Later, you find an internet forum dedicated to people who talk about change and you begin to pay visits to their members, bringing plenty of eggs and candy with you. You eventually settle on a remote commune with some of these people and live peacefully. You seem incapable of bearing children, but do sire several with the single unmodified female of the commune.";
 			if tf table of head is table 21:
 				say "     Becoming a lioness is quite an adjustment, but your body is not unattractive, to the right sort of people. You grow accustomed to its quirks and hungers, your inhibitions largely loosening, especially when it comes to contact and sex. You never grow any taller, but you don't seem to be infectious anymore.";
@@ -5652,9 +5652,9 @@ Book 7 - The World
 
 Part - Items
 
-Dog Treat is a kind of thing. A Dog Treat is edible. Understand "treat" as Dog Treat. The description of Dog Treat is "An innocent looking brown cookie shaped in the form of a bone. It looks exactly like the type of treats you always used to feed your pet dog when you were a kid. For some reason your mouth starts to water as you stare at it and you barely resist the urge to eat it.". The tf table of Dog Treat is table husky. Dog Treat is infectitem. 1 dog treat is in apartment 1E.
+Dog Treat is a kind of thing. A Dog Treat is edible. Understand "treat" as Dog Treat. Description of Dog Treat is "An innocent looking brown cookie shaped in the form of a bone. It looks exactly like the type of treats you always used to feed your pet dog when you were a kid. For some reason your mouth starts to water as you stare at it and you barely resist the urge to eat it.". The tf table of Dog Treat is table husky. Dog Treat is infectitem. 1 dog treat is in apartment 1E.
 
-Ferret Cage is a kind of container. It is closed. Understand "Cage" as a ferret cage. The description of Ferret Cage is "A simple cage for small animals. This one appears to be the home of a ferret or two.".
+Ferret Cage is a kind of container. It is closed. Understand "Cage" as a ferret cage. Description of Ferret Cage is "A simple cage for small animals. This one appears to be the home of a ferret or two.".
 
 Instead of opening a ferret cage for the first time:
 	say "Whoa! Something small and slinky just ran right out of the cage and went scurrying out of the area in a blur of brown fur.";
@@ -5673,19 +5673,19 @@ Instead of opening a ferret cage:
 	say "There doesn't seem to be anything left in there anymore.";
 	stop the action;
 
-Sarcophagus is a closed container. The description of Sarcophagus is "An ornate sarcophagus that is inlaid with precious gems and gold, carved into an image of Anubis, an Egyptian god of Death, if you recall correctly. It rests on a sturdy pedestal and a small sign nearby asks for visitors to not bother the casket.". It is in History Wing. It is fixed in place. Understand "casket" as Sarcophagus.
+Sarcophagus is a closed container. Description of Sarcophagus is "An ornate sarcophagus that is inlaid with precious gems and gold, carved into an image of Anubis, an Egyptian god of Death, if you recall correctly. It rests on a sturdy pedestal and a small sign nearby asks for visitors to not bother the casket.". It is in History Wing. It is fixed in place. Understand "casket" as Sarcophagus.
 
-An oversized fox is a thing. "A massive fox creature stares at you from the bushes. No one else seems to notice it. Odd". It is fixed in place. It is in Johnson State Park. The description of oversized fox is "A great fox, about six feet high and long, with large breasts along its bottom and a big knotted shaft. She stares at you from the bushes, licking her snout and waiting patiently for something."
+An oversized fox is a thing. "A massive fox creature stares at you from the bushes. No one else seems to notice it. Odd". It is fixed in place. It is in Johnson State Park. Description of oversized fox is "A great fox, about six feet high and long, with large breasts along its bottom and a big knotted shaft. She stares at you from the bushes, licking her snout and waiting patiently for something."
 
 Every turn while there is a visible oversized fox:
-	decrease the humanity of the player by 1;
-	if the humanity of the player is greater than 5:
+	decrease Humanity of Player by 1;
+	if Humanity of Player is greater than 5:
 		say "[one of]A warm flash runs through your body. Something smells nice.[or]You glance around a moment, looking for something. You're not sure what.[at random]";
-	else if the humanity of the player is greater than 3:
+	else if Humanity of Player is greater than 3:
 		say "You[one of]'re starting to feel really aroused. Your groin feels a little funny, too[or] pant a little as lurid visions dance in your head[at random].";
 	else:
 		say "[one of]The fox moves at least, approaching and nuzzling your crotch. You groan, feeling something swelling. A very fox like shaft bursts free into view, throbbing anxiously. You look at the vixen, turning and raising her many tails, and grab at her, thrusting up into her tight wet cunt. You rock against her with increasing fever until your knot swells, locking you to her, and then everything goes fuzzy. You cum and cum, exploding without relent as your body begins to change and shape, falling forward over the vixen as you become a fox much like her, breasts swelling under you and shaft swelling within her[or]You can't take these feelings anymore. You approach the fox on instinct, shucking off what clothes you had on. You thrust your fox like shaft to her snout and she looks like she might bite it off a moment before she opens her snout and takes it in, sucking at you quite well for a muzzled beast. You groan and pant as she works, knot swelling and tying you to her. By the time your orgasm ebbs, you have become a beast like her, shivering and yelping as she draws off your shaft with a pop[at random].";
-		now the humanity of the player is 0;
+		now Humanity of Player is 0;
 		remove oversized fox from play;
 		repeat with u running through visible body parts:
 			now the tf table of u is table uber fox;
@@ -5729,7 +5729,7 @@ instead of opening the sarcophagus:
 	say "It seems quite sealed. You have your mission. Get unchanged people and bring them here to offer them to Anubis.";
 	stop the action;
 
-Mysterious Box is a kind of container. It is closed. Understand "Cage" as a Mysterious Box. The description of Mysterious Box is "A box imported all the way from Greece. It's said that no one can open it, and the one that can manage the feat will be blessed by the gods. That sounds great! Maybe you're the lucky one.". There is a mysterious box in Art Wing.
+Mysterious Box is a kind of container. It is closed. Understand "Cage" as a Mysterious Box. Description of Mysterious Box is "A box imported all the way from Greece. It's said that no one can open it, and the one that can manage the feat will be blessed by the gods. That sounds great! Maybe you're the lucky one.". There is a mysterious box in Art Wing.
 
 Instead of taking the mysterious box:
 	say "The guards might frown on that. Besides, you're not a thief, right?";
@@ -5748,19 +5748,19 @@ Instead of opening a Mysterious Box:
 	stop the action;
 
 
-Feather Necklace is a kind of clothing. understand "necklace" as Feather Necklace. The clothing type of Feather Necklace is "necklace". The description of Feather Necklace is "What a pretty necklace, with bright gold and red feathers all along it.". The tf table of Feather Necklace is table phoenix. Feather Necklace is infectitem.
+Feather Necklace is a kind of clothing. understand "necklace" as Feather Necklace. The clothing type of Feather Necklace is "necklace". Description of Feather Necklace is "What a pretty necklace, with bright gold and red feathers all along it.". The tf table of Feather Necklace is table phoenix. Feather Necklace is infectitem.
 
-A sturdy stump is a kind of thing. The description of sturdy stump is "A stump a few gnarled branches still stuck to it. The sturdy stump looks like a good place to tie an animal.". A sturdy stump is fixed in place. Understand "stump" as sturdy stump.
+A sturdy stump is a kind of thing. Description of sturdy stump is "A stump a few gnarled branches still stuck to it. The sturdy stump looks like a good place to tie an animal.". A sturdy stump is fixed in place. Understand "stump" as sturdy stump.
 
-There is a Wooden desk in Ranch Office. The Wooden desk is an openable container. It is closed. It is fixed in place. There is a catnip mouse in the Wooden desk. Understand "desk" as Wooden desk. The description of Wooden desk is "An old fancy desk from the 19th century and the mark of a successful businessman from days gone-by. How this desk got into this simple office is beyond you.".
+There is a Wooden desk in Ranch Office. The Wooden desk is an openable container. It is closed. It is fixed in place. There is a catnip mouse in the Wooden desk. Understand "desk" as Wooden desk. Description of Wooden desk is "An old fancy desk from the 19th century and the mark of a successful businessman from days gone-by. How this desk got into this simple office is beyond you.".
 
-A pack of nuts is a kind of thing. A pack of nuts is edible. Understand "nuts" as a pack of nuts. Understand "pack" as a pack of nuts. The TF table of a pack of nuts is table 55. The description of a pack of nuts is "This a package of all-natural, mixed tree nuts. You don't recognize the brand, but they look quite tasty nonetheless.". A pack of nuts is infectitem.
+A pack of nuts is a kind of thing. A pack of nuts is edible. Understand "nuts" as a pack of nuts. Understand "pack" as a pack of nuts. The TF table of a pack of nuts is table 55. Description of a pack of nuts is "This a package of all-natural, mixed tree nuts. You don't recognize the brand, but they look quite tasty nonetheless.". A pack of nuts is infectitem.
 
-Red T-Shirt is a kind of clothing. Understand "shirt" as a Red T-Shirt. understand "shirts" as the plural of Red T-Shirt. The printed plural name of Red T-Shirt is "Red T-Shirts". The description of Red T-Shirt is "A basic long sleeved shirt that happens to be a red color.";
+Red T-Shirt is a kind of clothing. Understand "shirt" as a Red T-Shirt. understand "shirts" as Plural of Red T-Shirt. The printed plural name of Red T-Shirt is "Red T-Shirts". Description of Red T-Shirt is "A basic long sleeved shirt that happens to be a red color.";
 
-Jeans is a kind of clothing. Understand "pants" as a jeans. The printed plural name of jeans is "pairs of jeans". The description of Jeans is "Stone washed and looking cool". The clothing type of Jeans is "pants".
+Jeans is a kind of clothing. Understand "pants" as a jeans. The printed plural name of jeans is "pairs of jeans". Description of Jeans is "Stone washed and looking cool". The clothing type of Jeans is "pants".
 
-Lucky Paw is a kind of clothing. Understand "paw" as a Lucky Paw. The printed plural name of Lucky Paw is "pairs of Lucky Paw". The description of Lucky Paw is "A lucky paw you bought off some traveling gypsy. Keeps you safe from werewolf attacks, or so she said. Oh well, you see no reason to take chances, so you keep it on.". The clothing type of Lucky Paw is "necklace". The player is wearing a lucky paw.
+Lucky Paw is a kind of clothing. Understand "paw" as a Lucky Paw. The printed plural name of Lucky Paw is "pairs of Lucky Paw". Description of Lucky Paw is "A lucky paw you bought off some traveling gypsy. Keeps you safe from werewolf attacks, or so she said. Oh well, you see no reason to take chances, so you keep it on.". The clothing type of Lucky Paw is "necklace". The player is wearing a lucky paw.
 
 after taking off the lucky paw for the first time:
 	say "You get a bad feeling as you take off the paw.";
@@ -5779,11 +5779,11 @@ after taking off the lucky paw for the first time:
 
 
 
-Stomach Pouch is a kind of clothing. Understand "pouch" as a stomach pouch. The description of stomach pouch is "A pouch designed to be worn under other clothes, to conceal money and other valuables.". The clothing type of Jeans is "pants". The tf table of stomach pouch is table kangaroo. stomach pouch is infectitem.
+Stomach Pouch is a kind of clothing. Understand "pouch" as a stomach pouch. Description of stomach pouch is "A pouch designed to be worn under other clothes, to conceal money and other valuables.". The clothing type of Jeans is "pants". The tf table of stomach pouch is table kangaroo. stomach pouch is infectitem.
 
-There is a Dresser in Apartment 1A. The Dresser is an openable container. It is closed. It is fixed in place. There is a stomach pouch and jeans and red t-shirt in it. There is a Feather Necklace in it. The description of Dresser is "A normal enough looking dresser, made of wood. You got it at Ikea a few years back. ".
+There is a Dresser in Apartment 1A. The Dresser is an openable container. It is closed. It is fixed in place. There is a stomach pouch and jeans and red t-shirt in it. There is a Feather Necklace in it. Description of Dresser is "A normal enough looking dresser, made of wood. You got it at Ikea a few years back. ".
 A Button is an object.
-There is a Button in the dresser. The description of the button is "So shiny and red, maybe you should push it? Maybe not...". It is fixed in place.
+There is a Button in the dresser. Description of the button is "So shiny and red, maybe you should push it? Maybe not...". It is fixed in place.
 
 instead of pushing the button:
 	say "You feel the world rewrite itself around you. The infection has progressed to the terminal stage, with everyone changed in radical ways! Your pentagram explodes in a wave of foul-smelling brimstone, consuming itself as evil energy flows into you, perverting your form.";
@@ -5823,57 +5823,57 @@ instead of pushing the button:
 	try examining player;
 
 
-Pair of latex wolf paws is a kind of clothing. [Pair of latex wolf paws is edible.] understand "paws" as a pair of latex wolf paws. understand "latex paws" as a pair of latex wolf paws. understand "wolf paws" as a pair of latex wolf paws. The printed plural name of pair of latex wolf paws is "pairs of latex wolf paws". The description of pair of latex wolf paws is "Slippers made out of a shiny black material. They are styled to look identical to a pair of wolf paws." The clothing type of pair of latex wolf paws is "shoes". The TF table of pair of latex wolf paws is table 54. Pair of latex wolf paws is infectitem.
+Pair of latex wolf paws is a kind of clothing. [Pair of latex wolf paws is edible.] understand "paws" as a pair of latex wolf paws. understand "latex paws" as a pair of latex wolf paws. understand "wolf paws" as a pair of latex wolf paws. The printed plural name of pair of latex wolf paws is "pairs of latex wolf paws". Description of pair of latex wolf paws is "Slippers made out of a shiny black material. They are styled to look identical to a pair of wolf paws." The clothing type of pair of latex wolf paws is "shoes". The TF table of pair of latex wolf paws is table 54. Pair of latex wolf paws is infectitem.
 
-Mephit Perfume is a kind of clothing. Understand "perfume" as 1 Mephit Perfume. The Description of Mephit Perfume is "A black can with white lettering stating it is Mephit Perfume. Claims to be the finest of scents. You wonder why you'd want to wear it.". The tf table of Mephit Perfume is table 14. The clothing type of Mephit Perfume is "headwear". Mephit Perfume is infectitem.
+Mephit Perfume is a kind of clothing. Understand "perfume" as 1 Mephit Perfume. Description of Mephit Perfume is "A black can with white lettering stating it is Mephit Perfume. Claims to be the finest of scents. You wonder why you'd want to wear it.". The tf table of Mephit Perfume is table 14. The clothing type of Mephit Perfume is "headwear". Mephit Perfume is infectitem.
 
-Longbow is a kind of clothing. The Description of Longbow is "A long and ornate longbow. Somewhat fancy looking compared to many of the others that were sitting beside it. It's designed to be worn across the back.". The tf table of Longbow is table Elf. The clothing type of Longbow is "shirt". Longbow is infectitem.
+Longbow is a kind of clothing. Description of Longbow is "A long and ornate longbow. Somewhat fancy looking compared to many of the others that were sitting beside it. It's designed to be worn across the back.". The tf table of Longbow is table Elf. The clothing type of Longbow is "shirt". Longbow is infectitem.
 
-Fennec Ear Hat is a kind of clothing. Understand "hat" as Fennec Ear Hat. The description of Fennec Ear Hat is "Morbid humor for a hunting store. These cheap looking fox ears are part of a hood you can wear over your head. Cute.". The tf table of Fennec Ear Hat is table fennec. Fennec Ear Hat is infectitem. The clothing type of fennec ear hat is "headwear".
+Fennec Ear Hat is a kind of clothing. Understand "hat" as Fennec Ear Hat. Description of Fennec Ear Hat is "Morbid humor for a hunting store. These cheap looking fox ears are part of a hood you can wear over your head. Cute.". The tf table of Fennec Ear Hat is table fennec. Fennec Ear Hat is infectitem. The clothing type of fennec ear hat is "headwear".
 
-Coyote Tail is a kind of clothing. "Wedged between two fur coats is a discarded coyote tail, odd.". Understand "tail" as Coyote Tail. The description of Coyote Tail is "What an odd thing. You didn't know this fur store actually catered to furries, but there it is, a wearable coyote tail.". The tf table of Coyote Tail is table coyote. Coyote Tail is infectitem. The clothing type of Coyote Tail is "pants".
+Coyote Tail is a kind of clothing. "Wedged between two fur coats is a discarded coyote tail, odd.". Understand "tail" as Coyote Tail. Description of Coyote Tail is "What an odd thing. You didn't know this fur store actually catered to furries, but there it is, a wearable coyote tail.". The tf table of Coyote Tail is table coyote. Coyote Tail is infectitem. The clothing type of Coyote Tail is "pants".
 
-Stag Antlers is a kind of clothing. understand "Antlers" as stag antlers. The clothing type of stag antlers is "headwear". The description of Stag Antlers is "The antlers of some deer, removed by a hunter and set out to display. Oddly, it has a strap on it. You could wear it easily.". The tf table of stag antlers is table deer. The clothing type of stag antlers is "headwear". Stag Antlers is infectitem.
+Stag Antlers is a kind of clothing. understand "Antlers" as stag antlers. The clothing type of stag antlers is "headwear". Description of Stag Antlers is "The antlers of some deer, removed by a hunter and set out to display. Oddly, it has a strap on it. You could wear it easily.". The tf table of stag antlers is table deer. The clothing type of stag antlers is "headwear". Stag Antlers is infectitem.
 
-Feathered Mask is a kind of clothing. understand "Mask" as Feathered Mask. The clothing type of Feathered Mask is "headwear". The description of Feathered Mask is "Blue feathers around a long beak. What an odd mask.". The tf table of Feathered Mask is table gryphon. The clothing type of Feathered Mask is "headwear". Feathered Mask is infectitem.
+Feathered Mask is a kind of clothing. understand "Mask" as Feathered Mask. The clothing type of Feathered Mask is "headwear". Description of Feathered Mask is "Blue feathers around a long beak. What an odd mask.". The tf table of Feathered Mask is table gryphon. The clothing type of Feathered Mask is "headwear". Feathered Mask is infectitem.
 
-Irish Cap is a kind of clothing. understand "hat" as Irish Cap. The clothing type of Irish Cap is "headwear". The description of Irish Cap is "A round cap that is bright green. It practically screams 'Irish' looking at it.". The tf table of Irish Cap is table icat. Irish Cap is infectitem. There is a Irish Cap in downtown.
+Irish Cap is a kind of clothing. understand "hat" as Irish Cap. The clothing type of Irish Cap is "headwear". Description of Irish Cap is "A round cap that is bright green. It practically screams 'Irish' looking at it.". The tf table of Irish Cap is table icat. Irish Cap is infectitem. There is a Irish Cap in downtown.
 
-Interesting Lipstick is a kind of clothing. understand "Lipstick" as Interesting Lipstick. The clothing type of Interesting Lipstick is "headwear". The description of Interesting Lipstick is "A shiny red metal cannister that can be turned to reveal silky smooth lipstick.". The tf table of Interesting Lipstick is table rogue. The clothing type of Interesting Lipstick is "headwear". Interesting Lipstick is infectitem.
+Interesting Lipstick is a kind of clothing. understand "Lipstick" as Interesting Lipstick. The clothing type of Interesting Lipstick is "headwear". Description of Interesting Lipstick is "A shiny red metal cannister that can be turned to reveal silky smooth lipstick.". The tf table of Interesting Lipstick is table rogue. The clothing type of Interesting Lipstick is "headwear". Interesting Lipstick is infectitem.
 
-Cat Ear Band is a kind of clothing. understand "Band" as Cat Ear Band. The clothing type of Cat Ear Band is "headwear". The description of Cat Ear Band is "A band of white plastic with big fake white cat ears on it. Cute.". The tf table of Cat Ear Band is table felicia. The clothing type of Cat Ear Band is "headwear". Cat Ear Band is infectitem.
+Cat Ear Band is a kind of clothing. understand "Band" as Cat Ear Band. The clothing type of Cat Ear Band is "headwear". Description of Cat Ear Band is "A band of white plastic with big fake white cat ears on it. Cute.". The tf table of Cat Ear Band is table felicia. The clothing type of Cat Ear Band is "headwear". Cat Ear Band is infectitem.
 
-Aviator Goggles is a kind of clothing. understand "Goggles" as Aviator Goggles. The clothing type of Aviator Goggles is "headwear". The description of Aviator Goggles is "Old fashioned leather and real glass? These look pretty valuable as odd clothing accessories go.". The tf table of Aviator Goggles is table Goblin. The clothing type of Aviator Goggles is "headwear". Aviator Goggles is infectitem.
+Aviator Goggles is a kind of clothing. understand "Goggles" as Aviator Goggles. The clothing type of Aviator Goggles is "headwear". Description of Aviator Goggles is "Old fashioned leather and real glass? These look pretty valuable as odd clothing accessories go.". The tf table of Aviator Goggles is table Goblin. The clothing type of Aviator Goggles is "headwear". Aviator Goggles is infectitem.
 
-An easter egg is a kind of thing. An easter egg is edible. understand "egg" as easter egg. The TF table of an easter egg is table 22. The description of a easter egg is "This a brightly colored eater egg that came from your own vagina. Odd, but it does look delightful.". An easter egg is infectitem.
+An easter egg is a kind of thing. An easter egg is edible. understand "egg" as easter egg. The TF table of an easter egg is table 22. Description of a easter egg is "This a brightly colored eater egg that came from your own vagina. Odd, but it does look delightful.". An easter egg is infectitem.
 
-A Tobasco Sauce is a kind of drink. A Tobasco Sauce is edible. understand "sauce" as Tobasco Sauce. The TF table of a Tobasco Sauce is table Feral Dragoness. The description of a Tobasco Sauce is "A bottle of tobasco sauce. Written on it is, 'Puts a fire in your belly'. Huh, a likely story!". A Tobasco Sauce is infectitem.
+A Tobasco Sauce is a kind of drink. A Tobasco Sauce is edible. understand "sauce" as Tobasco Sauce. The TF table of a Tobasco Sauce is table Feral Dragoness. Description of a Tobasco Sauce is "A bottle of tobasco sauce. Written on it is, 'Puts a fire in your belly'. Huh, a likely story!". A Tobasco Sauce is infectitem.
 
-A Hawk Milk is a kind of drink. A Hawk Milk is edible. understand "milk" as Hawk Milk. The TF table of a Hawk Milk is table Harpy. The description of a Hawk Milk is "A bottle of Hawk Milk. Written on it is, 'Gain the eyes, and spirit, of an eagle'. Man, those marketing guys will write anything these days.". A Hawk Milk is infectitem.
+A Hawk Milk is a kind of drink. A Hawk Milk is edible. understand "milk" as Hawk Milk. The TF table of a Hawk Milk is table Harpy. Description of a Hawk Milk is "A bottle of Hawk Milk. Written on it is, 'Gain the eyes, and spirit, of an eagle'. Man, those marketing guys will write anything these days.". A Hawk Milk is infectitem.
 
-A Baby Bottle is a kind of drink. A Baby Bottle is edible. understand "bottle" as Baby Bottle. The TF table of a Baby Bottle is table nidoqueen. The description of a Baby Bottle is "A baby bottle, with clear plastic containing creamy looking fluid within and a great big ole rubber teat at the end for baby satisfaction.". A Baby Bottle is infectitem.
+A Baby Bottle is a kind of drink. A Baby Bottle is edible. understand "bottle" as Baby Bottle. The TF table of a Baby Bottle is table nidoqueen. Description of a Baby Bottle is "A baby bottle, with clear plastic containing creamy looking fluid within and a great big ole rubber teat at the end for baby satisfaction.". A Baby Bottle is infectitem.
 
-An Echo'N Brand Mayonnaise is a kind of drink. An Echo'N Brand Mayonnaise is edible. understand "mayo" as Echo'N Brand Mayonnaise. The TF table of an Echo'N Brand Mayonnaise is table echoen. The description of a Echo'N Brand Mayonnaise is "A jar of Echo'N Brand Mayonnaise. What an odd brand, and no ingredient list!". An Echo'N Brand Mayonnaise is infectitem.
+An Echo'N Brand Mayonnaise is a kind of drink. An Echo'N Brand Mayonnaise is edible. understand "mayo" as Echo'N Brand Mayonnaise. The TF table of an Echo'N Brand Mayonnaise is table echoen. Description of a Echo'N Brand Mayonnaise is "A jar of Echo'N Brand Mayonnaise. What an odd brand, and no ingredient list!". An Echo'N Brand Mayonnaise is infectitem.
 
-Fox Soda can is a kind of drink. Understand "fox soda" as Fox Soda can. understand "Fox Soda" as 1 Fox Soda can. The description of a Fox Soda can is "This a red can of soda, labeled as 'Fox Soda.' You find it strange that you have never heard of that brand before.". The tf table of Fox Soda can is table latex fox. Fox soda can is infectitem.
+Fox Soda can is a kind of drink. Understand "fox soda" as Fox Soda can. understand "Fox Soda" as 1 Fox Soda can. Description of a Fox Soda can is "This a red can of soda, labeled as 'Fox Soda.' You find it strange that you have never heard of that brand before.". The tf table of Fox Soda can is table latex fox. Fox soda can is infectitem.
 
-Strange Beaker is a kind of drink. Understand "beaker" as Strange Beaker. understand "Strange Beaker" as 1 Strange Beaker. The description of a Strange Beaker is "A sciency looking flask with some off-blue fluid in it. Who left it? Smells sweet.". The tf table of Strange Beaker is table hippo alchemist. Strange Beaker is infectitem.
+Strange Beaker is a kind of drink. Understand "beaker" as Strange Beaker. understand "Strange Beaker" as 1 Strange Beaker. Description of a Strange Beaker is "A sciency looking flask with some off-blue fluid in it. Who left it? Smells sweet.". The tf table of Strange Beaker is table hippo alchemist. Strange Beaker is infectitem.
 
-Wyvern Water can is a kind of drink. Understand "wyvern water" as Wyvern Water can. understand "Wyvern Water" as 1 Wyvern Water can. The description of a Wyvern Water can is "This a purple can of soda, labeled as 'Wyvern Water.' You find it strange that you have never heard of that brand before.". The tf table of Wyvern Water can is table wyvern. Wyvern Water can is infectitem.
+Wyvern Water can is a kind of drink. Understand "wyvern water" as Wyvern Water can. understand "Wyvern Water" as 1 Wyvern Water can. Description of a Wyvern Water can is "This a purple can of soda, labeled as 'Wyvern Water.' You find it strange that you have never heard of that brand before.". The tf table of Wyvern Water can is table wyvern. Wyvern Water can is infectitem.
 
-A pentagram is a kind of thing. The description of pentagram is "A design you scrawled on your floor on a joke. What were you thinking when you did that?". A pentagram is fixed in place.
+A pentagram is a kind of thing. Description of pentagram is "A design you scrawled on your floor on a joke. What were you thinking when you did that?". A pentagram is fixed in place.
 
 There is a pentagram in apartment 1A.
 
-Bottle of milk is a kind of drink. Understand "Milk" as Bottle of Milk. Understand "Bottle" as Bottle of Milk. The description of Bottle of Milk is "A glass bottle of milk. It is cool to the touch." The tf table of Bottle of Milk is table 4. Bottle of milk is infectitem.
+Bottle of milk is a kind of drink. Understand "Milk" as Bottle of Milk. Understand "Bottle" as Bottle of Milk. Description of Bottle of Milk is "A glass bottle of milk. It is cool to the touch." The tf table of Bottle of Milk is table 4. Bottle of milk is infectitem.
 
 instead of drinking, try silently eating the noun.
 
-[Catnip Mouse is a kind of thing.] Catnip Mouse is edible. Understand "mouse" as catnip mouse. Understand "catnip" as catnip mouse. The TF table of catnip mouse is table 21. The description of Catnip Mouse is "A small toy mouse, it smells faintly of catnip.". Catnip mouse is infectitem.
+[Catnip Mouse is a kind of thing.] Catnip Mouse is edible. Understand "mouse" as catnip mouse. Understand "catnip" as catnip mouse. The TF table of catnip mouse is table 21. Description of Catnip Mouse is "A small toy mouse, it smells faintly of catnip.". Catnip mouse is infectitem.
 
-Fresh Apple is a kind of thing. Fresh Apple is edible. Understand "apple" as Fresh Apple. The TF table of Fresh Apple is table tree. The description of Fresh Apple is "A delicious apple!". Fresh Apple is infectitem.
+Fresh Apple is a kind of thing. Fresh Apple is edible. Understand "apple" as Fresh Apple. The TF table of Fresh Apple is table tree. Description of Fresh Apple is "A delicious apple!". Fresh Apple is infectitem.
 
-Interesting Lamp is a kind of thing. The description of Interesting Lamp is "An intricate and old lamp with odd runes along the bottom and little metal hyena holding the glass in place. Looks kind of dirty though, maybe you should clean it?". The TF Table of Interesting Lamp is table hyena.
+Interesting Lamp is a kind of thing. Description of Interesting Lamp is "An intricate and old lamp with odd runes along the bottom and little metal hyena holding the glass in place. Looks kind of dirty though, maybe you should clean it?". The TF Table of Interesting Lamp is table hyena.
 
 Instead of rubbing interesting lamp:
 	say "You scrub vigorously at the lamp when no one is looking, trying to get your good deed of the day done. You're rewarded for your virtue by the lamp leaping out of your hands a moment and billowing thick purple smoke. Is it a genie? You hope so! A wish or three would be awesome![line break][line break]The mist flows out and around, but no genie forms at all. What a let down...";
@@ -5887,13 +5887,13 @@ Instead of rubbing interesting lamp:
 
 
 
-Tuna Fish is a kind of thing. Tuna Fish is edible. Understand "tuna" as tuna fish. Understand "fish" as tuna fish. The TF table of tuna fish is table 20. The description of Tuna Fish is "It looks like a fish, it smells like a fish, perhaps you should see if it tastes like a fish?". Tuna Fish is infectitem.
+Tuna Fish is a kind of thing. Tuna Fish is edible. Understand "tuna" as tuna fish. Understand "fish" as tuna fish. The TF table of tuna fish is table 20. Description of Tuna Fish is "It looks like a fish, it smells like a fish, perhaps you should see if it tastes like a fish?". Tuna Fish is infectitem.
 
-Glamour Magazine is a kind of thing. Glamour Magazine is readable. Understand "magazine" as 1 Glamour Magazine. The Description of Glamour Magazine is "You've never heard of Glamour Magazine, but judging by it's cover it's full of celebrity gossip and the latest fashions. If you have the time, you could [bold type]peruse[roman type] it." The tf table of Glamour Magazine is table 23. Glamour Magazine is infectitem
+Glamour Magazine is a kind of thing. Glamour Magazine is readable. Understand "magazine" as 1 Glamour Magazine. Description of Glamour Magazine is "You've never heard of Glamour Magazine, but judging by it's cover it's full of celebrity gossip and the latest fashions. If you have the time, you could [bold type]peruse[roman type] it." The tf table of Glamour Magazine is table 23. Glamour Magazine is infectitem
 
-Chakona Tails is a kind of thing. "A suspicious magazine hangs over the back of the couch, hmmm". Chakona Tails is readable. Understand "magazine" as 1 Chakona Tails. The Description of Chakona Tails is "What kind of book is this? Ah ha, this proves it, Greg is totally a furry. You can see weird, four-legged, cat taur-like people running around on the cover." The tf table of Chakona Tails is table felitaur. Chakona Tails is infectitem. 1 Chakona Tails is in apartment 1E.
+Chakona Tails is a kind of thing. "A suspicious magazine hangs over the back of the couch, hmmm". Chakona Tails is readable. Understand "magazine" as 1 Chakona Tails. Description of Chakona Tails is "What kind of book is this? Ah ha, this proves it, Greg is totally a furry. You can see weird, four-legged, cat taur-like people running around on the cover." The tf table of Chakona Tails is table felitaur. Chakona Tails is infectitem. 1 Chakona Tails is in apartment 1E.
 
-Infection Scanner is a kind of thing. The description of the infection scanner is "There are [number of on-stage monster persons] infected people and [number of on-stage not monster people] uninfected people in the city.";
+Infection Scanner is a kind of thing. Description of the infection scanner is "There are [number of on-stage monster persons] infected people and [number of on-stage not monster people] uninfected people in the city.";
 
 
 
@@ -5910,17 +5910,17 @@ Well, have fun! And remember, there's no harm in experimenting a bit - if you sc
 Part - keys
 
 The iron key is a thing. It unlocks the stable doors. The iron key is in the Ranch Office.
-understand "key" as iron key. The description of the iron key is "An ordinary looking key, except that it has a picture of a horse on it.";
+understand "key" as iron key. Description of the iron key is "An ordinary looking key, except that it has a picture of a horse on it.";
 
 A room is either IC or not IC. A room is usually IC.
 
 Part - Places
 
 Apartment 1A is a room. "Your apartment. You've had better, you've had worse. At least this one has a window with a nice view, and you've only been mugged once all year! You got the place at a steal, and if you graduate on time, you'll be on to bigger and better soon. The pentagram you drew on a dare is still visible. Hope the land lord doesn't come and see that, oh well. Your dresser rests under your mirror, both cheap emergency buys from the local Ikea.".
-First Floor Hallway is a room. Wooden door is a door. Northwest of wooden door is Apartment 1A. Southeast of wooden door is First Floor Hallway. [Northwest of First Floor Hallway is Apartment 1A.] The description of First Floor Hallway is "Just outside your apartment on the first floor. Whoever designed this apartment building was a little paranoid. Every floor has its own key, so you can't get to the other floors, just this one. The stairs lead down to the street at the end of the hallway, or you could go up to the roof. No key is needed up there. Two other apartments are visible from here as well.".
+First Floor Hallway is a room. Wooden door is a door. Northwest of wooden door is Apartment 1A. Southeast of wooden door is First Floor Hallway. [Northwest of First Floor Hallway is Apartment 1A.] Description of First Floor Hallway is "Just outside your apartment on the first floor. Whoever designed this apartment building was a little paranoid. Every floor has its own key, so you can't get to the other floors, just this one. The stairs lead down to the street at the end of the hallway, or you could go up to the roof. No key is needed up there. Two other apartments are visible from here as well.".
 Apartment 1B is a room. "Home of Bob and Susan. You know them from school, since they go to college with you. You're pretty sure they're an item, but they admit to nothing. The most prominent feature of the room is the huge fridge they got for Christmas last year. The thing is gargantuan, chrome, and has one of those built in water/ice dispensers. You are so jealous.".
 South of Apartment 1B is First Floor Hallway.
-There is a Refrigerator in Apartment 1B. The description of the refrigerator is "A huge chrome fridge. It even has one of those ice/water dispensers. Aw man, you wish you had one of these.". The Refrigerator is an openable container. It is closed. It is fixed in place. There is an easter egg and a bottle of milk in the refrigerator. understand "fridge" as refrigerator. There is a cat ear band in Apartment 1B. "Someone left a strange hair band laying around, it has cat ears on it.".
+There is a Refrigerator in Apartment 1B. Description of the refrigerator is "A huge chrome fridge. It even has one of those ice/water dispensers. Aw man, you wish you had one of these.". The Refrigerator is an openable container. It is closed. It is fixed in place. There is an easter egg and a bottle of milk in the refrigerator. understand "fridge" as refrigerator. There is a cat ear band in Apartment 1B. "Someone left a strange hair band laying around, it has cat ears on it.".
 Apartment 1E is a room. "Home of David and Greg. You've heard Greg was a bit of a 'furry'. You know, one of those weird internet cult things, whatever. Either way, they do have a pet ferret in a cage right there on the counter of the kitchen. That has to be proof, right? I mean, really, there's even a dog treat-shaped cookie in a clear cookie jar. Total furry." East of Apartment 1E is First Floor Hallway.
 There is a ferret cage in apartment 1E.
 There is a hawk milk in apartment 1E. "Some kind of dietary supplement drink is sitting there, [apostrophe]Hawk Milk[apostrophe], odd name.".
@@ -5935,33 +5935,33 @@ Above First Floor Hallway is Apartment Roof.
 Second Street North is a room. "A major road with a lot of cars going one way or the other. This is where you got that mugging, so you tend to not stay around here for long. You're pretty sure there's a 7-11 around here somewhere but you never got the courage to go looking for it. North of here leads back to your house, and south heads further into the city.". North of Second Street North is Uptown.
 Second Street South is a room. "Nestled between Davis street to the west and Downtown to the south, this area of the city sees much use as a gas stop, or parking lot, depending on how traffic is feeling that day." North of Second Street South is Second Street North.
 Downtown is a room. "Ah, downtown, you could almost sing a song about it. It's a shame you were never much good at singing. There's plenty to do here. To the east, you can see the national museum has opened up again. They just got in that new 'wonders of Egypt' display. You had meant to go see that, hmm... Southeast of here, a long road heads out of town.". North of Downtown is Second Street South.
-East of Downtown is National Museum. The description of National Museum is "A large museum that has an art wing to the north side, history on the right, southwest, side, and a mix of rotating displays to the east.".
-North of National Museum is Art Wing. The description of Art Wing is "Not a bad assortment of various national arts here. It's separated largely by region of origin.".
+East of Downtown is National Museum. Description of National Museum is "A large museum that has an art wing to the north side, history on the right, southwest, side, and a mix of rotating displays to the east.".
+North of National Museum is Art Wing. Description of Art Wing is "Not a bad assortment of various national arts here. It's separated largely by region of origin.".
 There is an Interesting Lamp in Art Wing. "A curious lamp is on display. It looks like an old school thing with glass and a wick, but there are little metal hyena instead of the standard basic clamps that hold the glass in place. It looks a little dirty though, when's the last time someone cleaned it?"
-Southwest of National Museum is History Wing. The description of history wing is "'Wonders of Egypt' proclaims a large banner just overhead as you walk in. All kinds of things are laid out, but the big prize is the big mummy's casket right in the center there. It's kind of rare for such a small museum to actually get a loaner on one of these, might as well enjoy it while it lasts.".
+Southwest of National Museum is History Wing. Description of history wing is "'Wonders of Egypt' proclaims a large banner just overhead as you walk in. All kinds of things are laid out, but the big prize is the big mummy's casket right in the center there. It's kind of rare for such a small museum to actually get a loaner on one of these, might as well enjoy it while it lasts.".
 Sturdy Stump is a kind of supporter.
 [Outskirts (which links to Uptown).]
 Town Border is a room. "Just getting out of the city, where the suburbs start to get sparse. You can see a few cows out in the fields, as farmland starts to dominate things. You never much cared about cows, except for hamburgers and milk. Keep on, majestic cows, kinda makes you hungry... If you wanted to get closer to the cows, or just away from the city, south would be the way to go." Northwest of Town Border is Downtown.
 North of Pasture is Ranch Yard. 1 sturdy stump is in pasture.
 There is 1 fresh apple on it. "Someone left an apple on the stump. Looks delicious.".
-The description of pasture is "A nice, grassy, area. It seems the livestock is kept off most of it, with a large fenced in area just to the east. The main part of the ranch is to the north.".
-The description of ranch yard is "You're coming up one of the ranches. Why this one? It was one of the few that didn't have a huge padlock right on the road and signs about shooting trespassers on sight. You're not even sure if this ranch is in use, looks a little rundown. To the north are some stables in a barn, but there is a padlock on that. To the south, a grassy field is visible. The road awaits you back west, or perhaps you want to explore inside the house?".
+Description of pasture is "A nice, grassy, area. It seems the livestock is kept off most of it, with a large fenced in area just to the east. The main part of the ranch is to the north.".
+Description of ranch yard is "You're coming up one of the ranches. Why this one? It was one of the few that didn't have a huge padlock right on the road and signs about shooting trespassers on sight. You're not even sure if this ranch is in use, looks a little rundown. To the north are some stables in a barn, but there is a padlock on that. To the south, a grassy field is visible. The road awaits you back west, or perhaps you want to explore inside the house?".
 Pasture Door is a door.
 West of Pasture Door is Pasture.
-East of Pasture Door is Sheep Pasture. The description of Sheep Pasture is "A fine fenced in area for some small livestock, probably sheep, guessing by the wool.".
+East of Pasture Door is Sheep Pasture. Description of Sheep Pasture is "A fine fenced in area for some small livestock, probably sheep, guessing by the wool.".
 Ranch Yard is a room. West of Ranch Yard is Town Border.
 inside of ranch yard is Ranch Office.
-The description of ranch office is "This place is definitely abandoned. There's dust everywhere, except for a small patch on the counter. To the east, you see an open doorway leading to another room, or you could head out. You can feel your allergies about to kick in with all the dust.".
+Description of ranch office is "This place is definitely abandoned. There's dust everywhere, except for a small patch on the counter. To the east, you see an open doorway leading to another room, or you could head out. You can feel your allergies about to kick in with all the dust.".
 East of Ranch Office is Ranch Bedroom.
-The description of Ranch bedroom is "A fine bedroom, if you don't mind neglect and dust. There is still a bed, surprisingly soft looking if dirty. There is a window, but it was boarded up from the outside quite some time ago. To the west you see the main ranch office.".
+Description of Ranch bedroom is "A fine bedroom, if you don't mind neglect and dust. There is still a bed, surprisingly soft looking if dirty. There is a window, but it was boarded up from the outside quite some time ago. To the west you see the main ranch office.".
 The Stable Doors is a door.
 understand "door" or "gate" as the stable doors.
 North of Ranch yard is Stable Doors.
 North of Stable Doors is Stables.
-The description of stables is "Small stalls are set up for individual animals, perhaps horses or goats, something like that. You wouldn't know much about that, but at least the place smells fresh enough. No recent cow patties. Back south it the ranch yard.".
+Description of stables is "Small stalls are set up for individual animals, perhaps horses or goats, something like that. You wouldn't know much about that, but at least the place smells fresh enough. No recent cow patties. Back south it the ranch yard.".
 Stable doors is lockable and locked.
 Outskirts is a room. "Heading further out from the city, you can barely see the lights anymore. Ah, sweet nature. You can hear squirrels in the trees, and the haunting cries of the songbirds. You've also been told there are grizzlies and wild cats around here, so don't enjoy nature too much there, pal. If you're taking this warning to heart, the city is back north, or go ahead and ignore me and head south.". North of Outskirts is Town Border.
-Forest Glade is a room. "Tall forest trees at all side, blocking much of the light. You can hear buzzing insects somewhere close by, ah there it is, a beehive just eight feet off the ground, hanging from a branch. You can also see the remains of a camp that was taken down maybe a day or two ago. People are so careless when it comes to protecting the forest. Ah well, the city is north of here.". North of Forest Glade is Outskirts. There is a beehive in Forest Glade. The description of beehive is "A bee hive with unusually large bees buzzing around it. It's probably best to leave it alone.". It is fixed in place.
+Forest Glade is a room. "Tall forest trees at all side, blocking much of the light. You can hear buzzing insects somewhere close by, ah there it is, a beehive just eight feet off the ground, hanging from a branch. You can also see the remains of a camp that was taken down maybe a day or two ago. People are so careless when it comes to protecting the forest. Ah well, the city is north of here.". North of Forest Glade is Outskirts. There is a beehive in Forest Glade. Description of beehive is "A bee hive with unusually large bees buzzing around it. It's probably best to leave it alone.". It is fixed in place.
 understand "hive" as beehive.
 
 [Davis street (which links First and Second streets), and it's end.]
@@ -5973,7 +5973,7 @@ Dead End is a room. "Not much more than a short alleyway with poor lighting. The
 [First Street, including Commercial (which links to the mall and park).]
 First Street North is a room. "You're not that far from your apartment, which is Northeast of here. The street bends off to the west, narrowing into a small alley, making this part of the road somewhat unpopular, if it wasn't for that hotdog stand on the side of the road. Best dogs in the city.". Northeast of First Street North is Uptown.
 West of First Street North is a Small Alley.
-The description of Small Alley is "A narrow little road that leads south into the center of the city. Watch out, though, you hear rumors of bikers and pedestrians being walloped by cars in this place at least once a month.".
+Description of Small Alley is "A narrow little road that leads south into the center of the city. Watch out, though, you hear rumors of bikers and pedestrians being walloped by cars in this place at least once a month.".
 South of a Small Alley is First Street Center.
 First Street Center is a room. "Ah, one of the centers of the city. South of here, you can see the mall and commercial district, where you are often headed. From here, you could head west out to the pond. That's a good place to pick up chicks, or just hang out if you have no money.". East of First Street Center is Davis Street.
 First Street South is a room. "The mall draws closer here, and the density of people increases. Usually, there are a few people standing around, trying to sell useless baubles, but they're not around today, that's odd. The mall remains to the South, despite this.". North of First Street South is First Street Center.
@@ -5988,7 +5988,7 @@ Dirt Road is a room. "A dusty dirt road leads west away from the city proper, in
 Lewis Pond is a room. "A fair-sized pond, big enough to take a few minutes swimming either way across it. This place is a hotbed of activity in the summer, offering low cost relief from the heat. A dirt road leads east back towards the city.". East of Lewis Pond is Dirt Road.
 
 [First Floor Mall (which links to Commercial district and second floor mall).]
-First Floor Mall Lobby is a room. "Soft muzak plays from cleverly(not) concealed(yea, right) speakers. Welcome to consumer heaven, where all your needs are met for 19.99 each. To the north is a small Radioshack, didn't those close down already? To the south is a small hunting store, popular enough with the local rednecks. West leads to the food court, one of your favorite places. Escalators lead up to the second floor as well, and the street is back East.". East of First Floor Mall Lobby is Commercial District. Radioshack is a room. South of Radioshack is First Floor Mall Lobby. The description of radioshack is "     You have questions, we have answers.[line break][line break]    Do they have answers for a plague of infectious monsters? Maybe. There's a lot of small electronic gizmos around here, including some cell phones and GPS systems. On one wall, several LCD TVs play the discovery channel in HD.".
+First Floor Mall Lobby is a room. "Soft muzak plays from cleverly(not) concealed(yea, right) speakers. Welcome to consumer heaven, where all your needs are met for 19.99 each. To the north is a small Radioshack, didn't those close down already? To the south is a small hunting store, popular enough with the local rednecks. West leads to the food court, one of your favorite places. Escalators lead up to the second floor as well, and the street is back East.". East of First Floor Mall Lobby is Commercial District. Radioshack is a room. South of Radioshack is First Floor Mall Lobby. Description of radioshack is "     You have questions, we have answers.[line break][line break]    Do they have answers for a plague of infectious monsters? Maybe. There's a lot of small electronic gizmos around here, including some cell phones and GPS systems. On one wall, several LCD TVs play the discovery channel in HD.".
 There is 1 Aviator Goggles in Radioshack. "Someone seems to have abandoned a good looking pair of goggles here.".
 Food Court is a room. "Chinese, BBQ, even a McDaniels tucked in there. This place has it all! Well, everything but comfortable seats. These metal chairs are not ergonomic for any creature of earth, but people put up with it for cheap good eats. The main area of the mall is to the east.". East of Food Court is First Floor Mall Lobby.
 There is one baby bottle in Food Court. "Someone left their baby bottle sitting on one of the tables.".
@@ -6000,16 +6000,16 @@ Fantastic Furs is a room. "Mostly frequented by ladies trying to look fashionabl
 
 The City Mall is a region. Fantastic Furs and Radioshack and First Floor Mall Lobby and Food Court and Al's Hunting Emporium and Second Floor Mall Lobby is in The City Mall.
 
-Dark Belly is a room. The description of dark belly is "You seem to be inside someone, or somethings, stomach. While not completely dark, it is difficult to see.". [used by engulf attack for storing victims]
-Womb is a room. The description of womb is "You have been drawn into the womb of some fantastic beast. You feel snuggly held from all sides, pulsing flesh throbbing against your form as your body tingles with new possibilities.". [used by engulf attack for storing victims]
-Egg is a room. The description of egg is "You have been drawn into the egg of some fantastic beast. You feel snuggly held from all sides, pulsing flesh throbbing against your form as your body tingles with new possibilities.". [used by engulf attack for storing victims]
+Dark Belly is a room. Description of dark belly is "You seem to be inside someone, or somethings, stomach. While not completely dark, it is difficult to see.". [used by engulf attack for storing victims]
+Womb is a room. Description of womb is "You have been drawn into the womb of some fantastic beast. You feel snuggly held from all sides, pulsing flesh throbbing against your form as your body tingles with new possibilities.". [used by engulf attack for storing victims]
+Egg is a room. Description of egg is "You have been drawn into the egg of some fantastic beast. You feel snuggly held from all sides, pulsing flesh throbbing against your form as your body tingles with new possibilities.". [used by engulf attack for storing victims]
 Understand "Pouch" as birthing pouch.
-Birthing Pouch is a room. The description of Birthing Pouch is "You seem to be in a large furry pouch. The walls are warm, and a little slick despite the fur. You feel safe here, like everything is going to be alright, even as your body shivers faintly with strange new sensations.". [used by engulf attack for storing victims]
+Birthing Pouch is a room. Description of Birthing Pouch is "You seem to be in a large furry pouch. The walls are warm, and a little slick despite the fur. You feel safe here, like everything is going to be alright, even as your body shivers faintly with strange new sensations.". [used by engulf attack for storing victims]
 The holdingpen is a room. Holdingpen is dark. [used to store out of play monsters and items]
 
 Dark belly and womb and egg and holdingpen and birthing pouch are not IC.
 
-There is a vending machine in Johnson Park Entrance. The vending machine is an openable container. It is open. It is fixed in place. There is a fox soda can and a pack of nuts and a wyvern water can in the vending machine. Understand "machine" as vending machine. The description of a vending machine is "A machine full of tasty snacks for hungry park visitors.".
+There is a vending machine in Johnson Park Entrance. The vending machine is an openable container. It is open. It is fixed in place. There is a fox soda can and a pack of nuts and a wyvern water can in the vending machine. Understand "machine" as vending machine. Description of a vending machine is "A machine full of tasty snacks for hungry park visitors.".
 There is a Strange Beaker in the vending machine.
 
 The home of Collie is Sheep Pasture.
@@ -6116,11 +6116,11 @@ Placing	Body Part		Adjacent Parts		BlackStatusFigure
 
 Part - Status line
 
-Definition: a direction (called D) is valid if the room D from the location of the player is a room.
+Definition: a direction (called D) is valid if the room D from the Location of Player is a room.
 
 Table of Fancy Status
 left	central	right
-" Location: [the player's surroundings]"	"P:[number of body parts - number of infected body parts]"	"[if Player is femme]F[end if][if Player is butch]M[end if]|W:[willpower of ctype of the player]|R:[reflex of ctype of the player]"
+" Location: [the player's surroundings]"	"P:[number of body parts - number of infected body parts]"	"[if Player is femme]F[end if][if Player is butch]M[end if]|W:[willpower of ctype of Player]|R:[reflex of ctype of Player]"
 " Exits: [list of valid directions]"	""	"[time of day]"
 [" You are:[Player_Status], [Player_Gender_Status]"	""	""]
 
@@ -6180,7 +6180,7 @@ To Generate Player Status:
 		now PGS_temp is "[Player_Status], [Player_Status_Temp]% [Body_Part]";
 		now Player_Status is PGS_temp;
 	now Player_Gender_Status is "and";
-	if skunkpregnant of the player is greater than 0 or pregnant of the player is greater than 0:
+	if skunkpregnant of Player is greater than 0 or pregnant of Player is greater than 0:
 		now PGS_temp is "[Player_Gender_Status] a pregnant";
 		now Player_Gender_Status is PGS_temp;
 	if the player is femme:
@@ -6259,14 +6259,14 @@ The measurement of the side-window is 30.
 Window-drawing rule for the side-window (this is the construct inventory rule):
 	if inventory-window is g-present:
 		move focus to inventory-window, clearing the window;
-		if the number of things enclosed by the player is 0[ and available cash of the player is $0.00]:
-			say "You don[apostrophe]t seem to be carrying anything at the moment.[line break]";[(Health: [present health of the player]/[max health of the player])[line break]";]
+		if the number of things enclosed by the player is 0[ and available cash of player is $0.00]:
+			say "You don[apostrophe]t seem to be carrying anything at the moment.[line break]";[(Health: [present health of Player]/[max health of player])[line break]";]
 		else:
 			let inv_count be 0;
 			let inv_item be nothing;
 			let item_count be 0;
 			say "You are carrying: [line break]";
-			[if available cash of the player is greater than $0.00, say "  [available cash of the player] in cash[line break]";]
+			[if available cash of player is greater than $0.00, say "  [available cash of player] in cash[line break]";]
 			if the number of things enclosed by the player is not 0:
 				repeat with item running through things enclosed by the player:
 					if item is concealed or item is scenery, next;
@@ -6712,7 +6712,7 @@ Definition: something is anchored if it is fixed in place or it is scenery or it
 
 Definition: something is draggable if it is not had by the player and it is not the player and it is not anchored.
 
-The description of a rope is "A rope.". 1 rope is in Apartment 1A. 1 rope is in Ranch Office. 1 rope is in Al's Hunting Emporium.
+Description of a rope is "A rope.". 1 rope is in Apartment 1A. 1 rope is in Ranch Office. 1 rope is in Al's Hunting Emporium.
 
 [Now, we want a rope to be described in terms of the way it is tied, when it's described in a room description.]
 

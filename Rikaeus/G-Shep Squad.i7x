@@ -10,7 +10,8 @@ Object	Name
 Canine Patrol	"Canine Patrol"
 
 Canine Patrol is a situation.
-The sarea of Canine Patrol is "Red".
+ResolveFunction of Canine Patrol is "[ResolveEvent Canine Patrol]".
+Sarea of Canine Patrol is "Red".
 when play begins:
 	add Canine Patrol to BadSpots of MaleList;
 [	add Canine Patrol to BadSpots of FemaleList; ]
@@ -19,7 +20,7 @@ when play begins:
 gshepsquad is a number that varies.
 catdogstate is a number that varies.
 
-Instead of resolving a Canine Patrol:
+to say ResolveEvent Canine Patrol:
 	catdogstatecheck;
 	if gshepsquad is 1:
 		say "ERROR - Event closed.";
@@ -83,7 +84,7 @@ K9 Vans	"K9 Vans"
 
 K9 Vans is a room. It is fasttravel. It is private. It is sleepsafe.
 
-The description of K9 Vans is "[k9vansdesc]".
+Description of K9 Vans is "[k9vansdesc]".
 
 to say k9vansdesc:
 	if gshepsquad < 4:
@@ -140,8 +141,8 @@ AnalVirgin of Buster is false.
 PenileVirgin of Buster is false.
 SexuallyExperienced of Buster is true.
 MainInfection of Buster is "German Shepherd Male".
-The description of Buster is "[busterdesc]".
-The conversation of Buster is { "Dogs are awesome!" }.
+Description of Buster is "[busterdesc]".
+Conversation of Buster is { "Dogs are awesome!" }.
 the scent of Buster is "The leader of the canine squad smells of dogs and sex.".
 The icon of Buster is figure of Buster_icon.
 

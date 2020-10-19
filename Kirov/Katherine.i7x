@@ -66,12 +66,13 @@ SexuallyExperienced of Katherine is true.
 TwistedCapacity of Katherine is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Katherine is false. [steriles can't knock people up]
 MainInfection of Katherine is "German Shepherd Bitch".
-The description of Katherine is "[KatherineDescription]".
+Description of Katherine is "[KatherineDescription]".
 The scent of Katherine is "Katherine has a familiar, somewhat earthly scent common among dogs, but there is a hint of your own scent mixed in from all the times you've claimed her as yours.".
-The conversation of Katherine is { "Woof!" }.
+Conversation of Katherine is { "Woof!" }.
 The fuckscene of Katherine is "[KatherineSexCheck]".
 
 to say KatherineDescription:
+	project Figure of Katherine_icon;
 	if debugactive is 1:
 		say "     DEBUG -> Energy: [Energy of Katherine], HP: [HP of Katherine], XP: [XP of Katherine], Level: [Level of Katherine], Armor: [Armor of Katherine] <- DEBUG[line break]";
 	say "     Katherine is a tall and athletic woman with the form of an anthro German shepherd. She is covered in long, shaggy fur with the black and brown shadings typical for the breed. Despite the aura of toughness that surrounds her, she unconsciously lifts and wags her tail when she sees you looking at her, a clear sign that you've tamed the bitch.";

@@ -12,7 +12,7 @@ State Fair	"State Fair"
 State Fair is a room. It is fasttravel.
 The earea of State Fair is "Fair".
 
-The description of State Fair is "     The entrance to the state fair. Colorful banners and signs plaster the large open area. Numerous food shops and game booths are set up near the large ticket booth. The fair entrance seems relatively deserted, and the ticketing area is wide open, allowing people to come and go as they please. While most of the shops and booths are closed up, one of the nearby game booths seems to still be open for business, with an automatic prize dispensing system set up. It looks like the prizes have been somewhat mixed up though. In contrast to the eerie emptiness of the fair entry, you can see some signs of activity and hear some fair noises coming from off to the west down the midway.".
+Description of State Fair is "     The entrance to the state fair. Colorful banners and signs plaster the large open area. Numerous food shops and game booths are set up near the large ticket booth. The fair entrance seems relatively deserted, and the ticketing area is wide open, allowing people to come and go as they please. While most of the shops and booths are closed up, one of the nearby game booths seems to still be open for business, with an automatic prize dispensing system set up. It looks like the prizes have been somewhat mixed up though. In contrast to the eerie emptiness of the fair entry, you can see some signs of activity and hear some fair noises coming from off to the west down the midway.".
 
 instead of sniffing State Fair:
 	say "The scents of popcorn and cotton candy and other treats fill the air. Beneath those enticing scents lie the strange scents of arousal, as if those musky scents are trying to hide beneath them. Among those scents, you catch the whiff of [one of]several felines[or]a rubbery scent[or]plush toys[or]male arousal[or]female heat[or]manly sweat[or]lupine cum[at random]";
@@ -29,8 +29,8 @@ object	name
 Boris the lion	"Boris the lion"
 
 Boris the lion is a man.
-The description of Boris the lion is "     Standing over by the side of the deserted ticket booth is a person dressed up as a very recognizable cartoon character that is always used to promote the fair. Even you recognize that the person is dressed up as the (semi)famous Boris the lion suit. Moving closer to the familiar face, you realize as he turns to look at you that the suit is far more realistic than any suit you have ever seen before. A closer look reveals that there are no loose areas of skin on the costume and no signs of seams anywhere. You come to the conclusion that whatever it may have once been, it isn't a suit anymore, it's Boris the lion!".
-The conversation of Boris is { "Welcome!" }.
+Description of Boris the lion is "     Standing over by the side of the deserted ticket booth is a person dressed up as a very recognizable cartoon character that is always used to promote the fair. Even you recognize that the person is dressed up as the (semi)famous Boris the lion suit. Moving closer to the familiar face, you realize as he turns to look at you that the suit is far more realistic than any suit you have ever seen before. A closer look reveals that there are no loose areas of skin on the costume and no signs of seams anywhere. You come to the conclusion that whatever it may have once been, it isn't a suit anymore, it's Boris the lion!".
+Conversation of Boris is { "Welcome!" }.
 Boris the lion is in State Fair.
 
 the scent of Boris is "Boris smells faintly of funfur and lions[if borisquest is 5]. The scent of his new maleness is strong around him[end if].".
@@ -46,7 +46,7 @@ instead of conversing the Boris:
 		say "     'Hey there, and welcome to the... oh, who am I kidding,' the lion-costumed man says with a sigh before raising one of his overlarge paws to rub at his face. 'Look, I don't know who you are or what you're doing here, but trust me, you probably don't want to be here. Heck, I don't really want to be here anymore, either, but it's not like I can just leave.' Seeing your slightly confused look, he sighs and explains. 'Look, it's like this. You see me?' He gestures at his plush-furred form. 'I showed up for work early the other day, put on the costume, and now, well, this is what I am. I can't even really remember my old name anymore, and I have a strange desire to hunt down that bastard Arthur the Antelope.' He growls for a minute, staring off into space, before seeming to come back to himself.";
 		say "     'Gah, see? I know and you know that there isn't really an Arthur the Antelope out there for me to hunt down, but it still gets to me.' The lion sighs heavily. 'So yeah, you might as well just call me Boris now. Seems more appropriate than anything else these days.' He pauses for a minute in thought before shaking himself and continuing. 'So yeah, if you think this is strange, you really don't want to see what the rest of the fair is like. Things have gotten wild in there. I swear I saw some sort of latex creatures hanging out near the house of wax, the fun house was taken over by some kind of crazy, animalistic clowns,' Boris pauses for a minute to shudder at the thought of clowns, 'and to top it all off, some of the fair prizes are running around on their own attacking people. Giant stuffed animals running around and jumping on people is definitely one of the weirder things I've ever seen. [']Course, the fact that the people turned into more stuffed animals as well is pretty damn weird too if you ask me.' Boris pauses for a second before shaking his overlarge furred head. 'Just trust me on this, you really don't want to go out there.' His warning delivered, Boris the lion returns to leaning against the ticket booth and staring off into space, occasionally sighing.";
 		increase boristalk by 1;
-	else if companion of Player is rubber tigress and BorisArtemistalk is false:
+	else if rubber tigress is listed in companionList of Player and BorisArtemistalk is false:
 		say "     'Oh, you ended up bumping into her,' the lion says as he points to your feline companion. 'I spotted her poking around and felt bad for her. None of the other critters running around would show her much interest, and some of the other tigresses were downright mean about it. I [if boristalk < 3]can[else]could[end if] kind of sympathize with her situation, you know? Anyhow, I'm glad she's got a friend.' He leans down and pets the tigress's head with his oversized, plush paw, causing her to purr happily before snuggling up against you and weaving around your legs for more scritches from you.";
 		now BorisArtemistalk is true;
 	else if boristalk is 1:
@@ -162,7 +162,7 @@ object	name
 Carnival game	"Carnival game"
 
 Carnival game is a man.
-The description of Carnival game is "Standing open and apparently ready for business, one of the automated carnival games is set up here and seems to be working, although who knows what kind of prizes it will hand out in the current circumstances.".
+Description of Carnival game is "Standing open and apparently ready for business, one of the automated carnival games is set up here and seems to be working, although who knows what kind of prizes it will hand out in the current circumstances.".
 Carnival game is in State Fair.
 
 instead of sniffing Carnival game:
@@ -190,7 +190,7 @@ carry out gameplay:
 	else:
 		now lastgameplay is turns;
 		say "     Stepping up to the gaming booth, you hit the button and all sorts of targets pop up and go whizzing around the booth as happy music plays. Quickly you snatch up the fake gun attached to the booth and shoot for all your worth!";
-		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;

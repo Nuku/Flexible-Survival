@@ -82,12 +82,13 @@ Object	Name
 Captured Demon	"Captured Demon"
 
 Captured Demon is a situation.
-The sarea of Captured Demon is "Red".
+ResolveFunction of Captured Demon is "[ResolveEvent Captured Demon]".
+Sarea of Captured Demon is "Red".
 when play begins:
 	add Captured Demon to BadSpots of MaleList; [male soldier, demon brute]
 	add Captured Demon to badspots of DemonList; [demon brute]
 
-Instead of resolving a Captured Demon:
+to say ResolveEvent Captured Demon:
 	say "     Moving through an alley in the seedier part of town, you hear voices from the smashed window of a nearby bar. Careful not to step on anything and make a sound, you slowly walk closer and listen.";
 	say "     'The brute smashed our only working radio. Now we got the mission objective locked down, but can't call in the retrieval team. Anderson's dead and that claw-slash on Kowalski's leg doesn't look good.' You peek over the window-still and see a mid-sized bar, its interior devastated by a fight. In the midst of bullet-holed walls and smashed furniture, there is a demon brute slumped down on a chair, bound with leather straps and chains. Near him, there are four soldiers, one of them just being bandaged on the thigh.";
 	say "     The apparent leader watches the wounded man being patched up, then says 'It can't be helped. No way a man supporting a wounded comrade can make it through the streets alone. I'll have to go with them. Private Jackson, guard the captive until the retrieval team arrives. If need be, give him more sedatives.' He nods to a young-looking soldier, who salutes and says 'Yes sir!' You don't want to get shot by stressed out soldiers, so you have to hurry down the alley a bit to hide behind a dumpster not to get spotted as they move out.";
@@ -134,17 +135,18 @@ Table of GameEventIDs (continued)
 Object	Name
 Thankful Soldier	"Thankful Soldier"
 
-Thankful Soldier is a situation. [meeting the guy from 'Captured Demon' again - if you saved him]
-The Prereq1 of Thankful Soldier is Captured Demon.
+Thankful Soldier is a situation.
+ResolveFunction of Thankful Soldier is "[ResolveEvent Thankful Soldier]". [meeting the guy from 'Captured Demon' again - if you saved him]
+Prereq1 of Thankful Soldier is Captured Demon.
 The Prereq1Resolution of Thankful Soldier is { 1 }.
-The sarea of Thankful Soldier is "Outside".
+Sarea of Thankful Soldier is "Outside".
 when play begins:
 	add Thankful Soldier to BadSpots of MaleList; [male soldier]
 
 TSEventCounter is a number that varies. TSEventCounter is usually 0.
 LastTSEvent is a number that varies. LastTSEvent is usually 555.
 
-Instead of resolving a Thankful Soldier:
+to say ResolveEvent Thankful Soldier:
 	if (LastTSEvent - turns < 4):
 		say "     You walk through the alley where you last met David and check the surrounding area - no luck. Seems like your soldier-friend is patrolling or scouting somewhere else right now. Maybe you should try a bit later again...";
 	else:
@@ -326,8 +328,8 @@ SexuallyExperienced of David is true.
 TwistedCapacity of David is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of David is false. [steriles can't knock people up]
 MainInfection of David is "Human".
-The description of David is "[DavidDesc]".
-The conversation of David is { "Oh, hello." }.
+Description of David is "[DavidDesc]".
+Conversation of David is { "Oh, hello." }.
 The icon of David is Figure of David_clothed_icon.
 DavidBunkerEntry is a number that varies.
 BrutusEscalationTimer is a number that varies.
@@ -585,7 +587,7 @@ to say DavidTalk4: [talk about Brutus]
 	if Libido of David is 51:
 		say "     Bringing up the topic of Brutus, you explain that your demon companion thinks that the demon who attacked him did something, possibly leaving what Brutus called a 'seal of enslavement'. Continuing with the offer by Brutus to have a look for it, you see David become rather uncomfortable as he imagines stripping before the demon. Still, he might be in real danger from it, if he actually has the seal on him and it draws other demons like it seems to be affecting Brutus. You do your best to convince David to agree to Brutus examining him, and...";
 		LineBreak;
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] in a Charisma-Check.";
 		increase diceroll by bonus;
@@ -602,13 +604,13 @@ to say DavidTalk4: [talk about Brutus]
 			WaitLineBreak;
 			say "     With a loud crack of power, Brutus is thrown several feet backwards, where he crumples to the ground. The smell of burned flesh rises in the air. For a second of shocked silence, no one moves - not you, and not David, who stands where he was, not affected or hurt at all by what happened. Then both of you rush forward to kneel beside the fallen demon brute. Thankfully, he's okay - mostly. With a groan, Brutus starts moving again and opens his eyes. He lifts his head a bit so he can look at his hand as he raises it with a pained hiss, grunting at the view of blistered, burned skin. 'Mh - it will heal,' he says, his head slumping back as he takes a deep breath.";
 			say "     Next, Brutus's eyes focus on David, mostly on his face but wandering down to gaze at the young man's naked body too. 'It is done. You should be free. Do you still fear me, human?' David looks down at the demon's prone form, meeting his eyes for a moment before replying 'No', a thoughtful expression on his face. Brutus's lips form what can be called a smile, even if it looks rather frightening with all the teeth it shows. He turns his head to you, not quite suppressing a pained wince as he tries lowering his hand to rest on the ground at the same time. 'Master, may I rest?' Not wanting to see your companion suffer any longer, you immediately intone the magic words to send him back into the amulet.";
-			if companion of Player is demon brute:
-				now companion of Player is nullpet;
+			if demon brute is listed in companionList of Player:
+				remove demon brute from companionList of Player;
 			now Libido of David is 52;
 		else:
 			say "     ...get an answer of 'Sorry, I just can't. Be close to one of those things...' David shudders.";
 	else if Libido of David is 52: [Brutus helped David, got hurt - first meeting after]
-		if companion of Player is demon brute: [is the active pet]
+		if demon brute is listed in companionList of Player: [is the active pet]
 			say "     David inquires how Brutus is now and is visibly relieved when the demon shows him his fully healed hand. Turning into smoke and back regularly means that he has lots of practice in reassembling himself after all. David nods, then falls silent for a moment, thinking. He pulls you aside out of earshot of your demon companion before asking 'Did you order him to do it? Did you... know it would hurt him?' Both of those questions you truthfully say no to, recounting Brutus's shameful admission of certain... urges, then him pleading to look at David. 'So it was all him? That's... quite something. For a demon.' He rubs his side where the demonic seal once was hidden, biting his lip before he continues. 'Could I... talk to him sometime?'";
 			WaitLineBreak;
 			say "     Why wait - you call Brutus over. David walks up to him, putting a hand on his muscled arm. 'I wanted to thank you again for dealing with that evil symbol. It was... unexpected, for you to take such a risk for me.' Then he holds out his hand to Brutus, offering it to him. 'So... friends?' The demon looks down at him nonplussed for a second as he tries to come up with a response to a topic that hasn't been part of his life for eons - then he exuberantly shakes the smaller human's hand and pulls him into an embrace.";
@@ -713,7 +715,7 @@ to say DavidTalk4: [talk about Brutus]
 	else if Libido of David is 62: [Talked with Nermine about sharing Brutus with David - refused]
 		say "     As you bring your demon companion up, a mixture of love and concern spreads over David's features as the dominance issue between Brutus and him rears its head. He gets a hopeful expression as you explain that Nermine might have a solution, then presses his lips together and nods as you recount the deal the jackaless offered. 'If you go that way again and maybe visit her... I'd say let him do it. Please. It's just sex, after all. I just want [if thirst of David is 21]the three of us[else]to be with him[end if], together.'";
 	else if Libido of David is 63: [Ritual by Nermine is ready (sharing Brutus with David)]
-		if companion of Player is not demon brute:
+		if demon brute is not listed in companionList of Player:
 			say "     As you bring your demon companion up, a mixture of love and concern spreads over David's features as the dominance issue between Brutus and him rears its head. He gets a hopeful expression as you explain that you got what should be a solution from Nermine. 'So, if I - if we - do the ritual together, he'll be bound to me too? Through the amulet? I - I can't agree to that without talking to him first. Could you please call him?' After a quick intonation of the magic words with your demontooth amulet held high, Brutus appears in a cloud of purple smoke, solidifying in his usual tall and naked form. ";
 		else:
 			say "     As you bring your demon companion up, a mixture of love and concern spreads over David's features as the dominance issue between Brutus and him rears its head. He gets a hopeful expression as you explain that you got the details of a binding ritual from Nermine and that should be the solution of it all. 'So, if I - if we - do the ritual together, he'll be bound to me? Through the amulet?' ";
@@ -741,7 +743,7 @@ to say DavidTalk4: [talk about Brutus]
 	else if Libido of David is 65: [Talked with Lilith about sharing Brutus with David - freed Liam]
 		say "     As you bring your demon companion up, a mixture of love and concern spreads over David's features as the dominance issue between Brutus and him rears its head. He gets a hopeful expression as you explain that Lilith might have a solution, then presses his lips together as you recount what she demanded of him in return. David opens his mouth as if to say something about it, but falls silent as you proceed to tell him what Brutus did next. Nodding and giving a slightly forced smile, he says, 'Well, at least the succubus's victim got away. Too bad he got frightened by Brutus. Not that I acted much different, back when...'";
 	else if Libido of David is 66: [Ritual by Lilith is ready (sharing Brutus with David)]
-		if companion of Player is not demon brute:
+		if demon brute is not listed in companionList of Player:
 			say "     As you bring your demon companion up, a mixture of love and concern spreads over David's features as the dominance issue between Brutus and him rears its head. He gets a hopeful expression as you explain that you got what should be a solution from Lilith. 'So, if I - if we - do the ritual together, he'll be bound to me too? Through the amulet? I - I can't agree to that without talking to him first. Could you please call him?' After a quick intonation of the magic words with your demontooth amulet held high, Brutus appears in a cloud of purple smoke, solidifying in his usual tall and naked form. ";
 		else:
 			say "     As you bring your demon companion up, a mixture of love and concern spreads over David's features as the dominance issue between Brutus and him rears its head. He gets a hopeful expression as you explain that you got the details of a binding ritual from Lilith and that should be the solution of it all. 'So, if I - if we - do the ritual together, he'll be bound to me? Through the amulet?' ";
@@ -770,7 +772,7 @@ to say DavidTalk4: [talk about Brutus]
 		say "     As you bring your demon companion up, a happy grin spreads over David's features and he gives your shoulder a pat in camaraderie. 'I can't thank you enough for... well, you set it all up, didn't you? Rescuing me, rescuing Brutus, giving us the opportunity to meet, hah - to fuck even. And now this. I - I can feel where he is now, you know. Or at least where the amulet is. Always. And I know in my heart that he'll always be there for me.'";
 	else if Libido of David is 82: [Brutus fucked David before under his dominant urges]
 		say "     As you bring your demon companion up, a flush spreads over David's face and he says, 'I love the big brute. The sex just takes your breath away. I know he can be a bit rough at times, but I... don't mind. He makes me feel soo good.' There may be a smile on David's face and his breathing gets quicker as he gets aroused from speaking about his demon lover, but you heard the little pause he made when talking about getting fucked roughly.";
-		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		increase diceroll by bonus;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Charisma-Check)";
@@ -796,7 +798,12 @@ to say DavidTalk4: [talk about Brutus]
 		say "     As you bring your demon companion up and say that he wants to do a ritual with David, the human soldier hesitates just a second, then smiles broadly and says, 'Really? That sounds like a pretty sweet deal! I love the big brute, so being closer and connected is of course something I wanna do. The sex just takes your breath away. I know he can be a bit rough at times, but I... don't mind. He makes me feel soo good. It's all as it should be.' His breathing gets quicker as he gets aroused from speaking about his demon lover, and you can see David's hand slide under the band of his pants at the back, no doubt to finger himself. Seems he really, really got into submissive fun with Brutus.";
 
 to say DavidTalk5: [trip to the beach]
-	say "     As you suggest the destination, David nods to you and says, 'The beach? And there's a safe area there? Great idea, some nice time with sand and the sea will be good for all of us.' [if companion of Player is demon Brute]You call over Brutus[else]You pull out your demontooth amulet, speak the magic word to summon Brutus[end if] and tell your demon companion that the three of you will take a trip together, to show him what he's been missing out on all this time. 'Thank you,' the purple giant says, looking from you to the young soldier with a happy expression on his face, showing many sharp teeth in a wide smile. After David goes to his bed to grab a few things and puts them in his backpack, you're off, taking the stairs up to the library and exiting out the front doors.";
+	say "     As you suggest the destination, David nods to you and says, 'The beach? And there's a safe area there? Great idea, some nice time with sand and the sea will be good for all of us.'";
+	if demon brute is listed in companionList of Player:
+		say " You call over Brutus";
+	else:
+		say " You pull out your demontooth amulet, speak the magic word to summon Brutus ";
+	say " and tell your demon companion that the three of you will take a trip together, to show him what he's been missing out on all this time. 'Thank you,' the purple giant says, looking from you to the young soldier with a happy expression on his face, showing many sharp teeth in a wide smile. After David goes to his bed to grab a few things and puts them in his backpack, you're off, taking the stairs up to the library and exiting out the front doors.";
 	if daytimer is day: [sunshine]
 		say "     It is an oddly peaceful day out in the city, with barely anyone out on the streets or keeping to themselves if they are - almost as if fate decided to help out a bit for your trip, arranging for undisturbed passage along your chosen route. Before long, your little group arrives at the Beach Plaza. It spreads out before you, surprisingly clean and well kept as it is, in a sunny day scene that might have played out before all the crazy things happened - well, if one ignores that virtually everyone you see isn't human anymore. From the street vendor leaning against a nearby wall to the people lounging around or bathing, there is a wild mixture of fur, scale and feathers being shown, with only perhaps two or three at least still human-looking persons in the mix. The sun shines brightly down on all of it, bathing the whole area in a comfortably warm glow.";
 		WaitLineBreak;
@@ -1003,7 +1010,12 @@ to say DavidTalk5: [trip to the beach]
 				NPCSexAftermath Brutus receives "PussyFuck" from David;
 
 to say DavidTalk6: [trip to Camp Bravo]
-	say "     As you suggest the destination, David eyes widen, then he slowly nods, a thoughtful look in his eyes. 'Camp Bravo? Yes, that does make sense. Best to get the men used to seeing Brutus, because eventually this whole mess is gonna end and it'd be good if others could attest his character.' A smile sneaks over his face momentarily and he adds, 'And I do know one guy who'd surely love to... meet Brutus. Let's go right now.' [if companion of Player is demon Brute]You call over Brutus[else]You pull out your demontooth amulet, speak the magic word to summon Brutus[end if] and tell your demon companion that the three of you will take a trip together, to introduce him to other members of the military. Show them he's a good guy and all that. 'Thank you,' the purple giant says, looking from you to the young soldier with a happy expression on his face, showing many sharp teeth in a wide smile. After David goes to his bed to grab a few things and puts them in his backpack, you're off, taking the stairs up to the library and exiting out the front doors.";
+	say "     As you suggest the destination, David eyes widen, then he slowly nods, a thoughtful look in his eyes. 'Camp Bravo? Yes, that does make sense. Best to get the men used to seeing Brutus, because eventually this whole mess is gonna end and it'd be good if others could attest his character.' A smile sneaks over his face momentarily and he adds, 'And I do know one guy who'd surely love to... meet Brutus. Let's go right now.'";
+	if demon brute is listed in companionList of Player:
+		say " You call over Brutus";
+	else :
+		say " You pull out your demontooth amulet, speak the magic word to summon Brutus";
+	say " and tell your demon companion that the three of you will take a trip together, to introduce him to other members of the military. Show them he's a good guy and all that. 'Thank you,' the purple giant says, looking from you to the young soldier with a happy expression on his face, showing many sharp teeth in a wide smile. After David goes to his bed to grab a few things and puts them in his backpack, you're off, taking the stairs up to the library and exiting out the front doors.";
 	WaitLineBreak;
 	say "     The trip through the streets leads you past a number of different creatures, from [one of]needily rutting huskies[or]a small pack of latex wolves[or]a solitary gargoyle[or]a stalking panther taur[at random] to [one of]a blue gryphon in the sky[or]a harpy circling overhead[or]a German shepherd looting a building[at random] - some of them give you interested and/or hungry looks, but with Brutus towering behind David and there being three of you, they hold back from doing anything to bother you. As you come closer to the camp, the number of infected out on the street drops quickly, with finally no one at all being in sight as you pass within 300 feet of the camp and walk the path between all the wrecked cars up to its entrance. David at that point tells Brutus to stay behind him no matter what, then walks toward the camp, waving and shouting, 'Private David Jackson and company coming in, don't shoot!'";
 	say "     Some moments later, a man whom you recognize as Private Cooper calls back, 'HALT! Stop right there. You're not bringing one of those beasts in here!' What follows is a shouted discussion in which David tries to convince the guard of Brutus's harmlessness, without much success - it takes you joining in and flat out ordering the man to let you through (taking up your invented role as special agent again) until you finally hear him call, 'Fine! But I'll be watching that thing!' Some moments later, you stand at the car wreck barricade that is the entrance to Camp Bravo, with Cooper a standoffish distance away, clutching his rifle, and the far less hostile Private Orwell coming out from his guard position to greet you. 'Hey there,' he says, nodding to David and you, then looking at Brutus with wide eyes. You do notice that the man's gaze is instantly drawn to Brutus's crotch and he has to shake out of staring at Brutus's massive shaft before he can look up, and up to meet Brutus's eyes and say, '...and hello to you too.'";
@@ -1302,7 +1314,7 @@ instead of going to Bunker while HP of David is 4 and (Libido of David is 57): [
 	say "     As you enter the bunker, David is already waiting for you and waves you over. When you come closer, he says, 'I've been thinking... about Brutus, you know. He's never had a normal life, has he? Just forever as a rampaging beast like that one demon who attacked me.' The young man shudders, rubbing the healed claw-mark on his side as he thinks back to it, then catches himself and continues, 'So - how about we take Brutus out for a nice trip or two, show him what he's been missing. Come on, it'll be good for him and between the three of us, there shouldn't be too much danger in going outside. I bet you know a few nice places to visit. Just talk to me if you wanna go out...'";
 	now Libido of David is 58;
 
-instead of going to Bunker while HP of David is 4 and (Libido of David is 0 or Libido of David is 1 or Libido of David is 50 or Libido of David is 52 or Libido of David is 58 or Libido of David is 81 or Libido of David is 83) and companion of Player is demon brute: [David reacts when the player comes in with the demon brute pet]
+instead of going to Bunker while HP of David is 4 and (Libido of David is 0 or Libido of David is 1 or Libido of David is 50 or Libido of David is 52 or Libido of David is 58 or Libido of David is 81 or Libido of David is 83) and demon brute is listed in companionList of Player: [David reacts when the player comes in with the demon brute pet]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: DAVID/BRUTUS INTERACTION 1[line break]";
@@ -1386,7 +1398,7 @@ instead of going to Bunker while HP of David is 4 and (Libido of David is 0 or L
 		now Libido of David is 59; [player knows something is up with Brutus]
 		WaitLineBreak;
 		say "     Looking down at his monster of a cock, Brutus takes a deep breath and composes his face to a stoic expression. You can actually see his erection soften a bit while he gives low grunts, soon becoming as soft as he ever gets. Bowing his head to you, he then says, 'I will control myself better from now on.' With that, your powerful companion stalks down the stairs again, clearly wanting to prove to you - and himself - that he's all better now.";
-		let bonus be (( the Perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		increase diceroll by bonus;
 		if diceroll > 12:
@@ -1447,13 +1459,13 @@ instead of going to Bunker while HP of David is 4 and (Libido of David is 0 or L
 		say "     It is clear that he has genuine feelings about David and does feel very attached to the young soldier. Still, the purple giant's careful choice of words to you just now makes you think that... there might be more to this. You should think carefully if you really do want to fulfill his request.";
 		now Libido of David is 84;
 
-instead of going to Bunker while HP of David is 4 and companion of Player is demon brute and Libido of David > 52 and Libido of David < 80 and a random chance of 1 in 3 succeeds: [David reacts when the player comes in with the demon brute pet]
+instead of going to Bunker while HP of David is 4 and demon brute is listed in companionList of Player and Libido of David > 52 and Libido of David < 80 and a random chance of 1 in 3 succeeds: [David reacts when the player comes in with the demon brute pet]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: DAVID/BRUTUS INTERACTION 2[line break]";
 	if Libido of David is 53: [David thanked Brutus after he got hurt - some attraction here]
 		if a random chance of 4 in 10 succeeds: [40% chance]
-			let bonus be (( the Perception of the player minus 10 ) divided by 2);
+			let bonus be (( Perception of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			increase diceroll by bonus;
 			if a random chance of 1 in 2 succeeds: [David watches Brutus - perceptive players notice his looks linger on Brutus's naked body]
@@ -1471,7 +1483,7 @@ instead of going to Bunker while HP of David is 4 and companion of Player is dem
 		else: [Brutus is rather more obvious]
 			say "     As you walk into the bunker with Brutus in tow, the large demon makes a beeline for David, who was just [one of]reading a book[or]sorting through his supplies[or]cleaning his weapon[or]making his bed[or]folding his clothes[at random]. With a loud 'Hey there, David!' he pulls the young soldier into a tight embrace, the smaller human pressed against his muscled chest. Then he lowers his head and runs his forked tongue along his friend's neck before giving him a lust-filled kiss that is eagerly returned. Watching them make out, you notice the demon's hand cupping David's ass as he holds him, giving it an appreciative squeeze. Putting the man down some short while later, Brutus walks back to you and takes his usual place - behind your shoulder on the right side.";
 
-instead of navigating Grey Abbey Library while (HP of David is 4 and companion of Player is demon brute and Libido of David > 81 and Libido of David < 86 and a random chance of 1 in 5 succeeds):
+instead of navigating Grey Abbey Library while (HP of David is 4 and demon brute is listed in companionList of Player and Libido of David > 81 and Libido of David < 86 and a random chance of 1 in 5 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1737,7 +1749,12 @@ to say DavidSex6: [Sven's ass gets fucked by David]
 	NPCSexAftermath Sven receives "AssFuck" from David;
 
 to say DavidSex7: [Brutus & David Scene (David gives oral)]
-	say "     Stepping up close to the young soldier, you... casually mention that you won't be needing Brutus's assistance for a while. [if companion of Player is demon brute]Perking up visibly at your announcement, David's eyes immediately are drawn to the demon's muscular form, standing not too far away in all his naked glory. With a chuckle, you tell the man to just go for it and spend some time with his friend. [else]Perking up visibly at your announcement, David's eyes immediately are drawn to the demontooth amulet around your neck. With a chuckle at the mixed expression of hope and lust in his gaze, you give him a nod and intone the magic words to summon Brutus. While the cloud of purple smoke starts to swirl out of the amulet to coalescence into Brutus's form, you tell David to have fun as he spends some time with his friend. [end if]Not wasting a second, David immediately moves over to Brutus and puts a hand on his arm, giving it an affectionate squeeze, and says 'Hey there, big guy. Looks like you've got some time off, so how about we...' And that's as far as he gets, as your demon companion just leans down with a rumbling purr and gives him a hungry kiss, then bodily picks up his human friend and gently gropes his ass with a clawed hand.";
+	say "     Stepping up close to the young soldier, you... casually mention that you won't be needing Brutus's assistance for a while.";
+	if demon brute is listed in companionList of Player:
+		say " Perking up visibly at your announcement, David's eyes immediately are drawn to the demon's muscular form, standing not too far away in all his naked glory. With a chuckle, you tell the man to just go for it and spend some time with his friend.";
+	else:
+		say " Perking up visibly at your announcement, David's eyes immediately are drawn to the demontooth amulet around your neck. With a chuckle at the mixed expression of hope and lust in his gaze, you give him a nod and intone the magic words to summon Brutus. While the cloud of purple smoke starts to swirl out of the amulet to coalescence into Brutus's form, you tell David to have fun as he spends some time with his friend.";
+	say "Not wasting a second, David immediately moves over to Brutus and puts a hand on his arm, giving it an affectionate squeeze, and says 'Hey there, big guy. Looks like you've got some time off, so how about we...' And that's as far as he gets, as your demon companion just leans down with a rumbling purr and gives him a hungry kiss, then bodily picks up his human friend and gently gropes his ass with a clawed hand.";
 	say "     With David still held tight against his broad chest, Brutus walks over to the soldier's bed and sits down on it, then proceeds to make out passionately with the young man. For now, you just watch your two friends kiss and touch each other, staying far enough away to give them at least some privacy. The demon and human whisper a bit back and forth in between kisses, then after a while, David stands up from his position on Brutus's lap and starts to undress. His boots are quickly pulled off and thrown aside, followed by socks and his pants. Then the young man pulls his shirt up over his head, revealing a fit chest and nicely sculpted abs. With a wide smile on his face, he finishes up by turning around, then bending over to push down his underwear, giving Brutus a very nice and close view of his firm butt.";
 	WaitLineBreak;
 	if DemonBruteStatus is 0 or DemonBruteStatus is 1: [male+herm Brutus]
@@ -1758,7 +1775,12 @@ to say DavidSex7: [Brutus & David Scene (David gives oral)]
 		say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
 to say DavidSex8: [Brutus & David Scene (BJ by Brutus)]
-	say "     Stepping up close to the young soldier, you... casually mention that you won't be needing Brutus's assistance for a while. [if companion of Player is demon brute]Perking up visibly at your announcement, David's eyes immediately are drawn to the demon's muscular form, standing not too far away in all his naked glory. With a chuckle, you tell the man to just go for it and spend some time with his friend. [else]Perking up visibly at your announcement, David's eyes immediately are drawn to the demontooth amulet around your neck. With a chuckle at the mixed expression of hope and lust in his gaze, you give him a nod and intone the magic words to summon Brutus. While the cloud of purple smoke starts to swirl out of the amulet to coalesce in Brutus's form, you tell David to have fun as he spends some time with his friend. [end if]Not wasting a second, David immediately moves over to Brutus and puts a hand on his arm, giving it an affectionate squeeze, and says 'Hey there, big guy. Looks like you've got some time off, so how about we...' And that's as far as he gets, as your demon companion just leans down with a rumbling purr and gives him a hungry kiss, then bodily picks up his human friend and gently gropes his ass with a clawed hand.";
+	say "     Stepping up close to the young soldier, you... casually mention that you won't be needing Brutus's assistance for a while.";
+	if demon brute is listed in companionList of Player:
+		say " Perking up visibly at your announcement, David's eyes immediately are drawn to the demon's muscular form, standing not too far away in all his naked glory. With a chuckle, you tell the man to just go for it and spend some time with his friend.";
+	else:
+		say " Perking up visibly at your announcement, David's eyes immediately are drawn to the demontooth amulet around your neck. With a chuckle at the mixed expression of hope and lust in his gaze, you give him a nod and intone the magic words to summon Brutus. While the cloud of purple smoke starts to swirl out of the amulet to coalesce in Brutus's form, you tell David to have fun as he spends some time with his friend";
+	say " Not wasting a second, David immediately moves over to Brutus and puts a hand on his arm, giving it an affectionate squeeze, and says 'Hey there, big guy. Looks like you've got some time off, so how about we...' And that's as far as he gets, as your demon companion just leans down with a rumbling purr and gives him a hungry kiss, then bodily picks up his human friend and gently gropes his ass with a clawed hand.";
 	say "     With David still held tight against his broad chest, Brutus walks over to the soldier's bed and sits down on it, then proceeds to make out passionately with the young man. For now, you just watch your two friends kiss and touch each other, staying far enough away to give them at least some privacy. The demon and human whisper a bit back and forth in between kisses, then after a while, David stands up from his position on Brutus's lap and starts to undress. His boots are quickly pulled off and thrown aside, followed by socks and his pants. Then the young man pulls his shirt up over his head, revealing a fit chest and nicely sculpted abs. With a wide smile on his face, he finishes up by turning around, then bending over to push down his underwear, giving Brutus a very nice and close view of his firm butt.";
 	WaitLineBreak;
 	say "     Not being able to keep his hands to himself during such an enticing show, Brutus reaches out and caresses the young man's cheeks, then pulls him closer to himself. Reaching around David, the large demon takes hold of his human lover's cock and slowly strokes it, making him pant and moan in lust. The soldier just enjoys getting touched for a moment, then gently takes hold of Brutus's large hands and pulls them away, turning and stepping up on the bed in the progress. Coming to stand with his feet left and right of the demon's legs, David's hips now being at just about the right height for Brutus to suck his cock. The human and demon share an intense, lust-filled gaze into each other's eyes for a moment, then David takes hold of Brutus's front horns and pulls his head towards his crotch.";
@@ -1771,7 +1793,12 @@ to say DavidSex8: [Brutus & David Scene (BJ by Brutus)]
 	NPCSexAftermath Brutus receives "OralCock" from David;
 
 to say DavidSex9: [Brutus & David Scene (Brutus gets fucked)]
-	say "     Stepping up close to the young soldier, you... casually mention that you won't be needing Brutus's assistance for a while. [if companion of Player is demon brute]Perking up visibly at your announcement, David's eyes immediately are drawn to the demon's muscular form, standing not too far away in all his naked glory. With a chuckle, you tell the man to just go for it and spend some time with his friend. [else]Perking up visibly at your announcement, David's eyes immediately are drawn to the demontooth amulet around your neck. With a chuckle at the mixed expression of hope and lust in his gaze, you give him a nod and intone the magic words to summon Brutus. While the cloud of purple smoke starts to swirl out of the amulet to coalesce in Brutus's form, you tell David to have fun as he spends some time with his friend. [end if]Not wasting a second, David immediately moves over to Brutus and puts a hand on his arm, giving it an affectionate squeeze, and says 'Hey there, big guy. Looks like you've got some time off, so how about we...' And that's as far as he gets, as your demon companion just leans down with a rumbling purr and gives him a hungry kiss, then bodily picks up his human friend and gently gropes his ass with a clawed hand.";
+	say "     Stepping up close to the young soldier, you... casually mention that you won't be needing Brutus's assistance for a while.";
+	if demon brute is listed in companionList of Player:
+		say "Perking up visibly at your announcement, David's eyes immediately are drawn to the demon's muscular form, standing not too far away in all his naked glory. With a chuckle, you tell the man to just go for it and spend some time with his friend.";
+	else:
+		say " Perking up visibly at your announcement, David's eyes immediately are drawn to the demontooth amulet around your neck. With a chuckle at the mixed expression of hope and lust in his gaze, you give him a nod and intone the magic words to summon Brutus. While the cloud of purple smoke starts to swirl out of the amulet to coalesce in Brutus's form, you tell David to have fun as he spends some time with his friend.";
+	say " Not wasting a second, David immediately moves over to Brutus and puts a hand on his arm, giving it an affectionate squeeze, and says 'Hey there, big guy. Looks like you've got some time off, so how about we...' And that's as far as he gets, as your demon companion just leans down with a rumbling purr and gives him a hungry kiss, then bodily picks up his human friend and gently gropes his ass with a clawed hand.";
 	say "     With David still held tight against his broad chest, Brutus walks over to the soldier's bed and sits down on it, then proceeds to make out passionately with the young man. For now, you just watch your two friends kiss and touch each other, staying far enough away to give them at least some privacy. The demon and human whisper a bit back and forth in between kisses, then after a while, David stands up from his position on Brutus's lap and starts to undress. His boots are quickly pulled off and thrown aside, followed by socks and his pants. Then the young man pulls his shirt up over his head, revealing a fit chest and nicely sculpted abs. With a wide smile on his face, he finishes up by turning around, then bending over to push down his underwear, giving Brutus a very nice and close view of his firm butt.";
 	WaitLineBreak;
 	if DemonBruteStatus is 2 or DemonBruteStatus is 1: [female+herm Brutus]
@@ -1792,7 +1819,12 @@ to say DavidSex9: [Brutus & David Scene (Brutus gets fucked)]
 		say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
 to say DavidSex10: [Brutus & David Scene (David gets fucked)]
-	say "     Stepping up close to the young soldier, you... casually mention that you won't be needing Brutus's assistance for a while. [if companion of Player is demon brute]Perking up visibly at your announcement, David's eyes immediately are drawn to the demon's muscular form, standing not too far away in all his naked glory. With a chuckle, you tell the man to just go for it and spend some time with his friend. [else]Perking up visibly at your announcement, David's eyes immediately are drawn to the demontooth amulet around your neck. With a chuckle at the mixed expression of hope and lust in his gaze, you give him a nod and intone the magic words to summon Brutus. While the cloud of purple smoke starts to swirl out of the amulet to coalesce in Brutus's form, you tell David to have fun as he spends some time with his friend. [end if]Not wasting a second, David immediately moves over to Brutus and puts a hand on his arm, giving it an affectionate squeeze, and says 'Hey there, big guy. Looks like you've got some time off, so how about we...' And that's as far as he gets, as your demon companion just leans down with a rumbling purr and gives him a hungry kiss, then bodily picks up his human friend and gently gropes his ass with a clawed hand.";
+	say "     Stepping up close to the young soldier, you... casually mention that you won't be needing Brutus's assistance for a while.";
+	if demon brute is listed in companionList of Player:
+		say " Perking up visibly at your announcement, David's eyes immediately are drawn to the demon's muscular form, standing not too far away in all his naked glory. With a chuckle, you tell the man to just go for it and spend some time with his friend.";
+	else:
+		say " Perking up visibly at your announcement, David's eyes immediately are drawn to the demontooth amulet around your neck. With a chuckle at the mixed expression of hope and lust in his gaze, you give him a nod and intone the magic words to summon Brutus. While the cloud of purple smoke starts to swirl out of the amulet to coalesce in Brutus's form, you tell David to have fun as he spends some time with his friend.";
+	say " Not wasting a second, David immediately moves over to Brutus and puts a hand on his arm, giving it an affectionate squeeze, and says 'Hey there, big guy. Looks like you've got some time off, so how about we...' And that's as far as he gets, as your demon companion just leans down with a rumbling purr and gives him a hungry kiss, then bodily picks up his human friend and gently gropes his ass with a clawed hand.";
 	say "     With David still held tight against his broad chest, Brutus walks over to the soldier's bed and sits down on it, then proceeds to make out passionately with the young man. For now, you just watch your two friends kiss and touch each other, staying far enough away to give them at least some privacy. The demon and human whisper a bit back and forth in between kisses, then after a while, David stands up from his position on Brutus's lap and starts to undress. His boots are quickly pulled off and thrown aside, followed by socks and his pants. Then the young man pulls his shirt up over his head, revealing a fit chest and nicely sculpted abs. With a wide smile on his face, he finishes up by turning around, then bending over to push down his underwear, giving Brutus a very nice and close view of his firm butt.";
 	WaitLineBreak;
 	if a random chance of 1 in 2 succeeds: [missionary]
@@ -1817,7 +1849,12 @@ to say DavidSex10: [Brutus & David Scene (David gets fucked)]
 
 to say DavidSex11: [Brutus & David Threesome (Brutus gets DP'd)]
 	say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the material of his pants you feel his manhood already filling out, as his body reacts to your kiss and touch. As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's urgent moans, he's ready for some action.";
-	say "     Smiling, you whirl David around and wrap your arms around his chest from behind, then move a hand down to his crotch. Sliding it under the band of his pants, you fondle your soldier boy's cock and balls, making him pant and groan in lust some more, then ask him if he'd like to make this a threesome. [if companion of Player is demon brute]Following a little nod of your head with his gaze, David's eyes get wide as he sees Brutus standing not too far away, already sporting a massive erection from just watching you fondle David. With a boyish grin, the young soldier tells you 'Sure, let's have some fun together', then waves Brutus closer with an eager expression[else]Following a little nod of your head with his gaze, David's eyes get wide as he focuses on the demontooth amulet around your neck. He runs a finger along the leather band and over the blackened tooth, then tells you with a boyish grin 'Sure, let's have some fun together.' Smiling at the eagerness of the young soldier, you intone the magic words to summon Brutus, who materializes in his full naked glory moments later[end if]. The three of you end up touching, kissing and undressing each other, which is so much fun that you almost have to force yourself to stop and guide your two friends over to David's bed.";
+	say "     Smiling, you whirl David around and wrap your arms around his chest from behind, then move a hand down to his crotch. Sliding it under the band of his pants, you fondle your soldier boy's cock and balls, making him pant and groan in lust some more, then ask him if he'd like to make this a threesome.";
+	if demon brute is listed in companionList of Player:
+		say " Following a little nod of your head with his gaze, David's eyes get wide as he sees Brutus standing not too far away, already sporting a massive erection from just watching you fondle David. With a boyish grin, the young soldier tells you 'Sure, let's have some fun together', then waves Brutus closer with an eager expression.";
+	else:
+		say " Following a little nod of your head with his gaze, David's eyes get wide as he focuses on the demontooth amulet around your neck. He runs a finger along the leather band and over the blackened tooth, then tells you with a boyish grin 'Sure, let's have some fun together.' Smiling at the eagerness of the young soldier, you intone the magic words to summon Brutus, who materializes in his full naked glory moments later.";
+	say " The three of you end up touching, kissing and undressing each other, which is so much fun that you almost have to force yourself to stop and guide your two friends over to David's bed.";
 	WaitLineBreak;
 	say "     Sliding a hand down Brutus's back, you give his left buttcheek an appreciative squeeze, then playfully brush your fingers over his pucker and tell the demon that you want to fuck his ass - together with David. With a pleased rumble, he answers, 'Of course, Master,' his cock twitching a bit in anticipation. 'Anything for you - and for you, too,' he says, the last bit directed to David and immediately followed by a deep kiss with the young soldier. Leaning down, Brutus picks David up bodily, then gently lowers him on his bed and climbs on it himself, moving into position on all fours over him. Brutus slides his hips down a bit, then a bit more until he feels David's hard cock against himself. Without any hesitation, he sinks his hole down over the human's erection, groaning in pleasure as it fills his tight hole.";
 	say "     Watching your infernal companion fuck himself on David's manhood has you spellbound for a moment - such a big creature so eagerly riding a smaller male - until your throbbing erection reminds you to get involved yourself. Stepping up on the bed, you move into position behind Brutus and kneel down, taking hold of the base of his tail to get him to hold still for a moment. Then you line up your cock with his pucker and press in beside David's hard shaft. There is a groan from Brutus as you pop in and force his already stretched pucker to open even wider, though as you hold still for a moment and ask if he's okay, the demon just grunts 'Yes. Just fuck me. Hard. Now!' Obliging the urgent request, you go on and thrust in, stuffing Brutus's ass with your cock.";
@@ -1829,7 +1866,7 @@ to say DavidSex11: [Brutus & David Threesome (Brutus gets DP'd)]
 	NPCSexAftermath Brutus receives "AssFuck" from David;
 	NPCSexAftermath Brutus receives "AssFuck" from Player;
 
-instead of going down from the Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction is 0 and companion of Player is royal tiger):
+instead of going down from the Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction is 0 and royal tiger is listed in companionList of Player):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: David meets Ryousei; RyouseiDavidInteraction: [RyouseiDavidInteraction][line break]";
@@ -1844,7 +1881,7 @@ instead of going down from the Grey Abbey Library while (David is in Bunker and 
 	now RyouseiDavidInteraction is 1;
 	now lastRyouseiDavidInteraction is turns;
 
-after going down from Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction < 2 and companion of Player is royal tiger and (lastRyouseiDavidInteraction - turns > 6)):
+after going down from Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction < 2 and royal tiger is listed in companionList of Player and (lastRyouseiDavidInteraction - turns > 6)):
 	if RyouseiDavidInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: David & Ryousei Scene; RyouseiDavidInteraction: [RyouseiDavidInteraction][line break]";

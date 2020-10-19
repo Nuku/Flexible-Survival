@@ -19,14 +19,15 @@ Object	Name
 Cheetah Cheater	"Cheetah Cheater"
 
 Cheetah Cheater is a situation.
+ResolveFunction of Cheetah Cheater is "[ResolveEvent Cheetah Cheater]".
 The level of Cheetah Cheater is 0.
-The sarea of Cheetah Cheater is "Campus".
+Sarea of Cheetah Cheater is "Campus".
 
 after going to College Walkway West while (Cheetah Cheater is active and Cheetah Cheater is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
 	CheetahCheaterEvent;
 
-Instead of resolving a Cheetah Cheater:
+to say ResolveEvent Cheetah Cheater:
 	CheetahCheaterEvent;
 
 to CheetahCheaterEvent:
@@ -41,14 +42,15 @@ Object	Name
 Pregnant Friend	"Pregnant Friend"
 
 Pregnant Friend is a situation.
+ResolveFunction of Pregnant Friend is "[ResolveEvent Pregnant Friend]".
 The level of Pregnant Friend is 0.
-The sarea of Pregnant Friend is "Campus".
+Sarea of Pregnant Friend is "Campus".
 
 after going to College Walkway East while (Pregnant Friend is active and Pregnant Friend is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
 	PregnantFriendEvent;
 
-Instead of resolving a Pregnant Friend:
+to say ResolveEvent Pregnant Friend:
 	PregnantFriendEvent;
 
 to PregnantFriendEvent:
@@ -66,14 +68,15 @@ Object	Name
 Art Class	"Art Class"
 
 Art Class is a situation.
+ResolveFunction of Art Class is "[ResolveEvent Art Class]".
 The level of Art Class is 0.
-The sarea of Art Class is "Campus".
+Sarea of Art Class is "Campus".
 
 after going to Creative Street while (Art Class is active and Art Class is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
 	ArtClassEvent;
 
-Instead of resolving a Art Class:
+to say ResolveEvent Art Class:
 	ArtClassEvent;
 
 to ArtClassEvent:
@@ -93,14 +96,15 @@ Object	Name
 CatsVSDogs	"CatsVSDogs"
 
 CatsVSDogs is a situation.
+ResolveFunction of CatsVSDogs is "[ResolveEvent CatsVSDogs]".
 The level of CatsVSDogs is 0.
-The sarea of CatsVSDogs is "Campus".
+Sarea of CatsVSDogs is "Campus".
 
 after going to Athletic Street while (CatsVSDogs is active and CatsVSDogs is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
 	CatsVSDogsEvent;
 
-Instead of resolving a CatsVSDogs:
+to say ResolveEvent CatsVSDogs:
 	CatsVSDogsEvent;
 
 to CatsVSDogsEvent:
@@ -123,14 +127,15 @@ Object	Name
 SharkFountain	"SharkFountain"
 
 SharkFountain is a situation.
+ResolveFunction of SharkFountain is "[ResolveEvent SharkFountain]".
 The level of SharkFountain is 0.
-The sarea of SharkFountain is "Campus". [Fountain]
+Sarea of SharkFountain is "Campus". [Fountain]
 
 after going to College Fountain while (SharkFountain is active and SharkFountain is not resolved and LastCampusWalkin - turns > 0 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
 	try looking;
 	SharkFountainEvent;
 
-Instead of resolving a SharkFountain:
+to say ResolveEvent SharkFountain:
 	SharkFountainEvent;
 
 to SharkFountainEvent:
@@ -148,7 +153,8 @@ Object	Name
 Fountain Naiad	"Fountain Naiad"
 
 Fountain Naiad is a situation.
-The sarea of Fountain Naiad is "Campus".
+ResolveFunction of Fountain Naiad is "[ResolveEvent Fountain Naiad]".
+Sarea of Fountain Naiad is "Campus".
 
 when play begins:
 	add Fountain Naiad to BadSpots of FemaleList;
@@ -157,12 +163,12 @@ after going to College Fountain while (Fountain Naiad is active and Fountain Nai
 	try looking;
 	NaiadFountainEvent;
 
-instead of resolving a Fountain Naiad:
+to say ResolveEvent Fountain Naiad:
 	NaiadFountainEvent;
 
 to NaiadFountainEvent:
 	say "     Walking along the campus grounds you come across a large fountain still shooting streaks of water into the air before falling back down into a large pool below. Taking a moment to appreciate the sight you gaze into the waterfall of flowing liquid and see a most unusual sight. There in the fountain, naked as the day she was born is a strikingly beautiful young woman with long blond hair. She raises her arms as the water cascades over her flawless skin and perky breasts. She is seemingly content with her public bath as she catches your gaze through the flowing water.";
-	say "     Giving a wink and turning around to show her gropeable cheeks off she runs her hands over her firm buns as you feel your arousal flaring up. You're not the only to notice either, a few other campus goers have stopped what they were doing to ogle the bathing beauty. A few even start to stroke stiffening members or finger moistening lips in their trousers as they watch. You're half-tempted to do the same as your eyes are transfix on this unnaturally gorgeous woman bathing in public. Barely managing to pull your gaze away from her luscious figure you see many others entirely hypnotized by her soaking pale body, noticing a few of the onlookers inching closer to the fountain's edge. Deciding it's probably best to move on before this gets out of hand you turn around and leave the woman to her bath and adoring audience.";
+	say "     Giving a wink and turning around to show her gropeable cheeks off she runs her hands over her firm buns as you feel your arousal flaring up. You're not the only one to notice either, a few other campus goers have stopped what they were doing to ogle the bathing beauty. A few even start to stroke stiffening members or finger moistening lips in their trousers as they watch. You're half-tempted to do the same as your eyes are transfix on this unnaturally gorgeous woman bathing in public. Barely managing to pull your gaze away from her luscious figure you see many others entirely hypnotized by her soaking pale body, noticing a few of the onlookers inching closer to the fountain's edge. Deciding it's probably best to move on before this gets out of hand you turn around and leave the woman to her bath and adoring audience.";
 	now LastCampusWalkin is turns;
 	now Fountain Naiad is resolved;
 
@@ -171,13 +177,14 @@ Object	Name
 Campus Racing	"Campus Racing"
 
 Campus Racing is a situation.
-The sarea of Campus Racing is "Campus".
+ResolveFunction of Campus Racing is "[ResolveEvent Campus Racing]".
+Sarea of Campus Racing is "Campus".
 
 after going to Athletic Street while (Campus Racing is active and Campus Racing is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
 	CampusRacingEvent;
 
-instead of resolving a Campus Racing:
+to say ResolveEvent Campus Racing:
 	CampusRacingEvent;
 
 to CampusRacingEvent:
@@ -191,8 +198,9 @@ Object	Name
 Frat Party Recruiter	"Frat Party Recruiter"
 
 Frat Party Recruiter is a situation.
+ResolveFunction of Frat Party Recruiter is "[ResolveEvent Frat Party Recruiter]".
 Frat Party Recruiter is inactive.
-The sarea of Frat Party Recruiter is "Campus".
+Sarea of Frat Party Recruiter is "Campus".
 
 when play begins:
 	add Frat Party Recruiter to BadSpots of MaleList;
@@ -213,7 +221,7 @@ after going to College Walkway Northwest while (Frat Party Recruiter is active a
 	try looking;
 	FratPartyRecruiterEvent;
 
-instead of resolving a Frat Party Recruiter:
+to say ResolveEvent Frat Party Recruiter:
 	FratPartyRecruiterEvent;
 
 to FratPartyRecruiterEvent:
@@ -238,7 +246,8 @@ Object	Name
 Undie Race	"Undie Race"
 
 Undie Race is a situation.
-The sarea of Undie Race is "Campus".
+ResolveFunction of Undie Race is "[ResolveEvent Undie Race]".
+Sarea of Undie Race is "Campus".
 
 after going to College Walkway West while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
@@ -256,18 +265,18 @@ after going to College Walkway Northwest while (Undie Race is active and Undie R
 	try looking;
 	UndieRaceEvent;
 
-instead of resolving Undie Race:
+to say ResolveEvent Undie Race:
 	UndieRaceEvent;
 
 to UndieRaceEvent:
 	say "     As you trek down the walkway, you notice that the paved alley is almost deserted, and that people begin to assemble on the side. You eventually reach a gorilla, who looks busy directing people to stay away from the path, while others install a table and put water bottles on them. [if GorillasMember is 3]'Hey, nice to see you,' the ape greets you. 'A race is going to pass through here. Can you wait on the side for a few moments?'[else]'Hey, you!' the ape hailed. 'Stay out of the walkway! Racers are going to pass through here in a few moments.'[end if]";
 	say "     You follow the instructions and, as the gorilla said, a pack of sportsmen jog down the road. They do not wear the usual running garb: they are all in their undergarments and running shoes - for those who do not have pawed feet. Virile bulges and bare breasts jiggle with each stride, under the applause and the cheers of the crowd, on each side of the walkway, cheers on the runners, and some wave their hands in response. The runners pass by the table and pick a water bottle. The first to do so is a young, albinos lizard in a red speedo. He grabs the nearest bottle, then sprinkles its content over his scaly body in order to cool off. His wet scales glisten under the light [if daytimer is night]of the lamp posts[else]of the sun[end if], and several onlookers around you cheer him on even more. The reptile winks at the audience, then begins to run away.";
-	if demon brute is companion of Player:
+	if demon brute is listed in companionList of Player:
 		say "     You hear a grunt beside you, and as you glance to the side, you see Brutus's thick purple shaft standing at full erection. Clearly, the runners - and especially that lizard - have aroused the big demon. [if DBCaptureQuestVar is 5]He looks ready to snatch away one of the passing runners to satiate his lust, but your disapproving look discourages him from doing so[else]You pat his side amicably, praising him on his self-control[end if].";
-	if royal tiger is companion of Player:
+	if royal tiger is listed in companionList of Player:
 		say "     Ryousei looks at the scene, dismayed. 'Poor souls! What is their crime, for being punished like this?' he asks. Stifling a laugh, you explain to the tiger that this is a race, and they do it willingly. 'Oh, I see. I was wondering that it was a lot of criminals. But why are they barely clothed?' You smile, then shrug.";
 	say "     A few minutes later, every runner passed, and the crowd begins to disperse, and so do you.";
-	let bonus be (( the Perception of the player minus 10 ) divided by 2);
+	let bonus be (( Perception of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	if diceroll > 15:
 		say "     [bold type]Perception check successful[roman type]: As you leave, you notice that a water bottle is still on the table, unopened. This is tap water, probably infected, but it is better than nothing. You snatch it discreetly and put it in your bag.";
@@ -282,12 +291,14 @@ Object	Name
 Dog Meets Dog	"Dog Meets Dog"
 
 Dog Meets Dog is a situation.
-The sarea of Dog Meets Dog is "Campus".
+ResolveFunction of Dog Meets Dog is "[ResolveEvent Dog Meets Dog]".
+Sarea of Dog Meets Dog is "Campus".
+The PrereqCompanion of Dog Meets Dog is gshep.
 
-after going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is companion of Player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
+after going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is listed in companionList of Player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
 	DogMeetsDogEvent;
 
-instead of resolving Dog Meets Dog:
+to say ResolveEvent Dog Meets Dog:
 	DogMeetsDogEvent;
 
 to DogMeetsDogEvent:
@@ -338,7 +349,8 @@ Object	Name
 Course Advice	"Course Advice"
 
 Course Advice is a situation.
-The sarea of Course Advice is "Campus".
+ResolveFunction of Course Advice is "[ResolveEvent Course Advice]".
+Sarea of Course Advice is "Campus".
 
 when play begins:
 	add Course Advice to BadSpots of FemaleList;
@@ -356,7 +368,7 @@ after going northwest from College Walkway Northeast while (Course Advice is not
 	try looking;
 	AdminIntro;
 
-after resolving a Course Advice:
+to say ResolveEvent Course Advice:
 	try looking;
 	AdminIntro;
 
@@ -445,9 +457,9 @@ carry out browselibrary:
 	Follow the turnpass rule;
 
 to LibrarySexEvent:
-	if (demon brute is companion of Player and CollegeLibraryBrutusEncounter is 0):
+	if (demon brute is listed in companionList of Player and CollegeLibraryBrutusEncounter is 0):
 		BrutusLibraryEvent;
-	else if (royal tiger is companion of Player and CollegeLibraryRyouseiEncounter is 0):
+	else if (royal tiger is listed in companionList of Player and CollegeLibraryRyouseiEncounter is 0):
 		RyouseiLibraryEvent;
 	else:
 		let randomnumber be a random number from 1 to 5;
@@ -591,7 +603,8 @@ Object	Name
 Campus Patrol	"Campus Patrol"
 
 Campus Patrol is a situation.
-The sarea of Campus Patrol is "Campus".
+ResolveFunction of Campus Patrol is "[ResolveEvent Campus Patrol]".
+Sarea of Campus Patrol is "Campus".
 
 after going to College Walkway West while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
@@ -605,7 +618,7 @@ after going to College Campus Entrance while (Campus Patrol is active and Campus
 	try looking;
 	CampusPatrolEvent;
 
-after resolving a Campus Patrol:
+to say ResolveEvent Campus Patrol:
 	try looking;
 	CampusPatrolEvent;
 

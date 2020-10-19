@@ -63,8 +63,8 @@ AnalVirgin of Jenna is true.
 PenileVirgin of Jenna is true.
 SexuallyExperienced of Jenna is false.
 MainInfection of Jenna is "".
-The description of Jenna is "[JennaDesc]".
-The conversation of Jenna is { "<This is nothing but a placeholder!>" }.
+Description of Jenna is "[JennaDesc]".
+Conversation of Jenna is { "<This is nothing but a placeholder!>" }.
 The scent of Jenna is "     Jenna smells like hard work. No seriously, she smells very sweaty.".
 
 to say JennaDesc:

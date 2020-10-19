@@ -11,12 +11,13 @@ Object	Name
 Guard Gryphon	"Guard Gryphon"
 
 Guard Gryphon is a situation.
+ResolveFunction of Guard Gryphon is "[ResolveEvent Guard Gryphon]".
 
 when play begins:
 	add Guard Gryphon to badspots of HermList;
 	add Guard Gryphon to BadSpots of FurryList;
 
-Instead of resolving a Guard Gryphon:
+to say ResolveEvent Guard Gryphon:
 	project Figure of BlueGryphon_soft_icon;
 	say "     You come across a hermaphrodite gryphon, this one with a red banner with an 8-pointed silver star in the center. She is watching the sky from a rooftop, as if watching for others of her kind in the air. The guard seems to notice your nearing presence as you approach her position.";
 	WaitLineBreak;
@@ -25,7 +26,7 @@ Instead of resolving a Guard Gryphon:
 			say "     But soon the guard realizes that you're not just another intruder, your appearance being the same of her kind. Carefully walking towards her, you sense lack of trust and caution from the gryphoness, but she ends up lowering her guard as you come closer. 'You don't seem lost to the infection like most of my kind.' she says, but before you can explain who you are, she makes the conclusion by herself. 'You might be an outsider, but honestly... we don't really care anymore. Our kind has been lost to sex craziness after the nanites were spread among the city, so we're in dire need of sane allies.' The guard signals you to come closer, no longer in a defensive stance. 'We fear the entire species may succumb, one day... so we do our best to protect ourselves. You'll have to forgive me for my initial hostility. I'm Azure, by the way. Nice to meet you.'";
 			say "     After exchanging some words between the rather kind gryphoness guard, she lets you know about her real duty, to point the new gryphons who've strayed away from the others in the city towards the location of a great staircase, ancient and powerful. Azure says it leads to some thing or some place called Qytat a'th Lundrues. Intrigued, you ask her more about the ghostly staircase that remains hidden from the outsiders, to which she reveals the fact it moves from time to time, but which comes to rest at the same spots. She gladly offers herself to escort you there, personally. There's no reason to reject such an offer, so you follow her to the mystical place, eventually ending in the flying city safely.";
 			now findablestairs is 1;
-			change the up exit of Red Apartment to Staircase Entry; [This opens then closes the entries...]
+			change the up exit of Red Apartment Building to Staircase Entry; [This opens then closes the entries...]
 			change the up exit of Overgrown Rooftop to Staircase Entry; [...allowing them all to be listed... ]
 			change the east exit of Bright Alley to Staircase Entry; [...then swapping to the final one... ]
 			change the down exit of Staircase Entry to Bright Alley; [...and leaving it open, just in case.]
@@ -78,7 +79,7 @@ Instead of resolving a Guard Gryphon:
 			say "     'I see you came back! And got a whole entire transformation all by yourself, huh?' she comments, eyeing you from head to talon. 'You see, the only reason I asked you this is because we'd like to keep the place I'm about to tell you about untouched by anything that isn't our kind. We tolerate outside gryphons because our kind has been lost to sex craziness after the nanites were spread among the city, so we're in dire need of sane allies.' The guard signals you to come closer, no longer in a defensive stance. 'We fear the entire species may succumb, one day... so we do our best to protect ourselves. You'll have to forgive me for my initial hostility. I'm Azure, by the way. Nice to meet you.'";
 			say "     After exchanging some words between the rather kind gryphoness guard, she lets you know about her real duty, to point the new gryphons who've strayed away from the others in the city towards the location of a great staircase, ancient and powerful. Azure says it leads to some thing or some place called Qytat a'th Lundrues. Intrigued, you ask her more about the ghostly staircase that remains hidden from the outsiders, to which she reveals the fact it moves from time to time, but which comes to rest at the same spots. She gladly offers herself to escort you there, personally. There's no reason to reject such an offer, so you follow her to the mystical place, eventually ending in the flying city safely.";
 			now findablestairs is 1;
-			change the up exit of Red Apartment to Staircase Entry; [This opens then closes the entries...]
+			change the up exit of Red Apartment Building to Staircase Entry; [This opens then closes the entries...]
 			change the up exit of Overgrown Rooftop to Staircase Entry; [...allowing them all to be listed... ]
 			change the east exit of Bright Alley to Staircase Entry; [...then swapping to the final one... ]
 			change the down exit of Staircase Entry to Bright Alley; [...and leaving it open, just in case.]
@@ -108,7 +109,7 @@ to GryphonGuardMilkSolution:
 	say "     'There you go. Now you're officially one of my kind.' she says, in a rather happy tone, eyeing you from head to talon. 'You see, the only reason I asked you this is because we'd like to keep the place I'm about to tell you about untouched by anything that isn't our kind. We tolerate outside gryphons because our kind has been lost to sex craziness after the nanites were spread among the city, so we're in dire need of sane allies.' The guard signals you to come closer, no longer in a defensive stance. 'We fear the entire species may succumb, one day... so we do our best to protect ourselves. You'll have to forgive me for my initial hostility. I'm Azure, by the way. Nice to meet you.'";
 	say "     After exchanging some words between the rather kind gryphoness guard, she lets you know about her real duty, to point the new gryphons who've strayed away from the others in the city towards the location of a great staircase, ancient and powerful. Azure says it leads to some thing or some place called Qytat a'th Lundrues. Intrigued, you ask her more about the ghostly staircase that remains hidden from the outsiders, to which she reveals the fact it moves from time to time, but which comes to rest at the same spots. She gladly offers herself to escort you there, personally. There's no reason to reject such an offer, so you follow her to the mystical place, eventually ending in the flying city safely.";
 	now findablestairs is 1;
-	change the up exit of Red Apartment to Staircase Entry; [This opens then closes the entries...]
+	change the up exit of Red Apartment Building to Staircase Entry; [This opens then closes the entries...]
 	change the up exit of Overgrown Rooftop to Staircase Entry; [...allowing them all to be listed... ]
 	change the east exit of Bright Alley to Staircase Entry; [...then swapping to the final one... ]
 	change the down exit of Staircase Entry to Bright Alley; [...and leaving it open, just in case.]
@@ -132,7 +133,7 @@ to GryphonGuardFight:
 			Linebreak;
 			say "     Curious about her odd behavior, you question the gryphoness about it. At first, she is tight-beaked about it, but when you quite literally grab her by the balls, she starts to talk. 'I'm only here watching for new gryphons who've strayed away from the others of my kind. My duty is to point them towards the location that'd take them to our city.' You soon learn that place is a great staircase, ancient and powerful, and she reveals that it leads to some thing or some place called Qytat a'th Lundrues. Intrigued, you force her to develop the subject. 'T-This ghostly staircase moves from time to time, but it comes to rest at the same spots! That's my job, to tell them where to go!' She starts to describe two apartment buildings, one red and one green, as well as a bright alley which are the meeting points in this part of the city. Before you can gain more specific information on all this, she takes advantage of your interest in her tale to pull free of you. The gryphoness scrambles to the edge of the building and leaps off, taking flight to escape you and leaving her standard behind. You watch her leave, wondering if there is any truth to her tale or if the infection is actually catching up to her.";
 		now findablestairs is 1;
-		change the up exit of Red Apartment to Staircase Entry; [This opens then closes the entries...]
+		change the up exit of Red Apartment Building to Staircase Entry; [This opens then closes the entries...]
 		change the up exit of Overgrown Rooftop to Staircase Entry; [...allowing them all to be listed... ]
 		change the east exit of Bright Alley to Staircase Entry; [...then swapping to the final one... ]
 		change the down exit of Staircase Entry to Bright Alley; [...and leaving it open, just in case.]
@@ -147,19 +148,7 @@ to GryphonGuardFight:
 
 Section 2 - Entry Points
 
-Table of GameRoomIDs (continued)
-Object	Name
-Red Apartment	"Red Apartment"
-
-Red Apartment is a room. "     This tall, red building has a fire escape on this side. This four story apartment building looks much like many others in the city. [redflight]". It is fasttravel.
-The earea of Red Apartment is "Outside".
-
-to say redflight:
-	if staircaselocation is 1:
-		say "There appears to be a ghostly staircase on top of the building, almost unnoticeable unless you were searching for it. Maybe you could go up?";
-		AddNavPoint Red Apartment;
-	else:
-		say "There is nothing else interesting about it at the moment.";
+[Red Apartment Building moved to Basic Locations in Core Mechanics]
 
 [Green Apartment Building moved to Basic Locations in Core Mechanics]
 
@@ -190,8 +179,8 @@ an everyturn rule:
 			increase shadowy by 1;
 		now staircaselocation is a random number between 1 and 3;
 		if staircaselocation is 1:
-			change the up exit of Red Apartment to Staircase Entry;
-			change the down exit of Staircase Entry to Red Apartment;
+			change the up exit of Red Apartment Rooftop to Staircase Entry;
+			change the down exit of Staircase Entry to Red Apartment Rooftop;
 		else if staircaselocation is 2:
 			change the up exit of Overgrown Rooftop to Staircase Entry;
 			change the down exit of Staircase Entry to Overgrown Rooftop;
@@ -199,7 +188,7 @@ an everyturn rule:
 			change the east exit of Bright Alley to Staircase Entry;
 			change the down exit of Staircase Entry to Bright Alley;
 
-before going up from Red Apartment:
+before going up from Red Apartment Building:
 	if staircaselocation is 1:
 		say "     You head up the ghostly stairs, finding them more solid than they initially appeared.";
 	else if findablestairs is 1:

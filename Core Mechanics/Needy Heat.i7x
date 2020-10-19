@@ -89,8 +89,8 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 		say "[victory entry]";
 		infect;
 		decrease the score by 5;
-		decrease the morale of the player by 3;
-		if Player is kinky, increase the morale of the player by 6;
+		decrease Morale of Player by 3;
+		if Player is kinky, increase Morale of Player by 6;
 	else if Libido of Player > 90:
 		increase slutfucked by 1;
 		if heatlevel is 3:

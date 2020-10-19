@@ -13,13 +13,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Dog Walking	"Dog Walking"
 
-Dog Walking is a situation. The level of Dog Walking is 7.
-The sarea of Dog Walking is "Warehouse".
+Dog Walking is a situation.
+ResolveFunction of Dog Walking is "[ResolveEvent Dog Walking]". The level of Dog Walking is 7.
+Sarea of Dog Walking is "Warehouse".
 when play begins:
 	add Dog Walking to BadSpots of MaleList;
 	add Dog Walking to BadSpots of FurryList;
 
-Instead of resolving a Dog Walking:
+to say ResolveEvent Dog Walking:
 	project the Figure of Mike_face_icon;
 	if HP of Mike is 0: [first meeting]
 		say "     Around a building corner in front of you comes a young naked human woman on all fours. As she trots a bit closer and barks at you, you see she's obviously pregnant and has a collar around her neck. Before you can decide if and what to do now, a bipedal stag walks after her around the corner. He's clothed in jeans and hiking boots, with his shirtless upper body revealing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and sporting a cream-colored treasure trail that starts at his navel and leads down to his crotch. Atop his head is a large rack of antlers, proud and powerful.";
@@ -197,8 +198,8 @@ to say StagDesc:
 Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -220,7 +221,7 @@ When Play begins:
 	now desc entry is "[StagDesc]";
 	now face entry is "covered in short brown fur and has the striking angular features of a proud stag. Crowning your head are two impressive multiple-pointed antlers";
 	now body entry is "that of a humanoid male, trim and fit. You have strong arms and hands, capped with blackened fingertips, like hooves that don't compromise dexterity";
-	now skin entry is "brown furred"; [ format as "You have (your text) skin"]
+	now skin entry is "brown furred"; [ format as "Your body is covered in (your text) skin"]
 	now tail entry is "Your butt has a deer's tail over it, [Skin of Player] on the top, soft cream along the underside. The rest of your ass is quite curvy and [Skin of Player], hiding nothing."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "pitch black human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it draws out into a snout, slender with a wide nose, new scents teasing your addled senses as your ears grow long and narrow, twitching towards sounds. A tickling sensation accompanies sprouting short fur over your new contours as growths sprout from the top of your head, growing quickly into ornate multi-pointed antlers"; [ format as "Your face feels funny as (your text)." ]
@@ -235,9 +236,9 @@ When Play begins:
 	now int entry is 12;
 	now cha entry is 15;
 	now sex entry is "Male";
-	now HP entry is 75;
-	now lev entry is 10;
-	now wdam entry is 10;
+	now HP entry is 55;
+	now lev entry is 9;
+	now wdam entry is 9;
 	now area entry is "Nowhere";          [ Case sensitive]
 	now Cock Count entry is 1;                 [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 11;
@@ -248,9 +249,13 @@ When Play begins:
 	now Cunt Count entry is 0;                 [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	now libido entry is 70;               [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 30;               [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";                 [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;            [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "fit";   [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "cervine";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -265,7 +270,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -420,9 +425,8 @@ SexuallyExperienced of Mike is true.
 TwistedCapacity of Mike is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Mike is false. [steriles can't knock people up]
 MainInfection of Mike is "Blacktail Stag".
-The description of Mike is "[MikeDesc]".
-The conversation of Mike is { "Oh, hello." }.
-The icon of Mike is Figure of Mike_icon.
+Description of Mike is "[MikeDesc]".
+Conversation of Mike is { "Oh, hello." }.
 
 to say MikeDesc:
 	project the Figure of Mike_face_icon;
@@ -435,7 +439,7 @@ Object	Name
 Mike's Home	"Mike's Home"
 
 Mike's Home is a room. It is a fasttravel. It is private.
-The description of Mike's Home is "     You're at a house with a very large fenced backyard at the edge of the warehouse district. A good location for a dog breeder, as the neighbors didn't complain about noise. At the side of the house (north from you) is the back entrance. Mike has given you the hidden location of the back door's key.".
+Description of Mike's Home is "     You're at a house with a very large fenced backyard at the edge of the warehouse district. A good location for a dog breeder, as the neighbors didn't complain about noise. At the side of the house (north from you) is the back entrance. Mike has given you the hidden location of the back door's key.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -444,7 +448,7 @@ Mike's Office	"Mike's Office"
 Mike's Office is a room.
 Mike's Office is north of Mike's Home.
 Mike's Office is sleepsafe.
-The description of Mike's Office is "     You're in Mike's office, a relatively large room. A desk with a computer stands in the back, next to a filing cabinet. Lots of boxes of equipment and sacks of dog food line the walls. Seemingly a new addition to the room is a single bed in the center, its white sheets showing a few stains that are most likely dried cum[if HP of Mike < 5]. Lea, Mike's transformed dog, lies on it, whining pitifully[end if].".
+Description of Mike's Office is "     You're in Mike's office, a relatively large room. A desk with a computer stands in the back, next to a filing cabinet. Lots of boxes of equipment and sacks of dog food line the walls. Seemingly a new addition to the room is a single bed in the center, its white sheets showing a few stains that are most likely dried cum[if HP of Mike < 5]. Lea, Mike's transformed dog, lies on it, whining pitifully[end if].".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -453,7 +457,7 @@ Dog Kennels	"Dog Kennels"
 Dog Kennels	is a room.
 Dog Kennels is east of Mike's Office.
 Dog Kennels is sleepsafe.
-The description of Dog Kennels is "     This part of the building consists of a long hallway lined with quite a few large dog kennels on each side. In them are Mike's transformed dogs, many of which rest on air mattresses he added when they became human. The rest sit in front of their wire mesh kennel doors, giving you dog-eyed looks in hope of a walk or some play-time.".
+Description of Dog Kennels is "     This part of the building consists of a long hallway lined with quite a few large dog kennels on each side. In them are Mike's transformed dogs, many of which rest on air mattresses he added when they became human. The rest sit in front of their wire mesh kennel doors, giving you dog-eyed looks in hope of a walk or some play-time.".
 
 instead of sniffing Mike:
 	say "     Mike has a nice smell, strong and masculine.";
@@ -696,8 +700,8 @@ SexuallyExperienced of Lea is true.
 TwistedCapacity of Lea is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Lea is false. [steriles can't knock people up]
 MainInfection of Lea is "Human".
-The description of Lea is "     Originally one of Mike's dogs, Lea is now a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with her pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication[if HP of Mike < 5]. A deep gash from a leopardman's claw marks her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon[else if HP of Mike > 4]. A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again[end if].".
-The conversation of Lea is { "Woof." }.
+Description of Lea is "     Originally one of Mike's dogs, Lea is now a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with her pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication[if HP of Mike < 5]. A deep gash from a leopardman's claw marks her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon[else if HP of Mike > 4]. A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again[end if].".
+Conversation of Lea is { "Woof." }.
 
 instead of fucking Lea:
 	if HP of Mike < 5:
@@ -756,8 +760,8 @@ SexuallyExperienced of Xerxes is true.
 TwistedCapacity of Xerxes is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Xerxes is false. [steriles can't knock people up]
 MainInfection of Xerxes is "Human".
-The description of Xerxes is "[XerxesDesc]".
-The conversation of Xerxes is { "Woof." }.
+Description of Xerxes is "[XerxesDesc]".
+Conversation of Xerxes is { "Woof." }.
 LastXerxesTalk is a number that varies. LastXerxesTalk is usually 555.
 HP of Xerxes is usually 0.
 
@@ -1046,12 +1050,12 @@ to say XerxesSex6: [male player and felinoid + Xerxes]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Xerxes closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		else if hp of Fang is 3 or hp of Fang is 4: [Alpha Fang]
+		else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
 			if HP of Xerxes is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
-		else if hp of Fang is 5:
+		else if HP of Fang is 5:
 			if HP of Xerxes is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is bonding with Xerxes before he has had a chance to. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:
@@ -1218,13 +1222,13 @@ to say XerxesSex8: [female player and felinoid + Xerxes]
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Xerxes closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		else if hp of Fang is 3 or hp of Fang is 4: [Alpha Fang]
+		else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
 			if HP of Xerxes is 11:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
-		else if hp of Fang is 5:
-			if hp of Xerxes is 11:
+		else if HP of Fang is 5:
+			if HP of Xerxes is 11:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is bonding with Xerxes before he has had a chance to. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:
 				say "     Since they seem busy with each other, you move over to the nearby cot and lie down on it. As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Seeing the felinoid fuck someone he had counted as his packmate doesn't make him happy. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
@@ -1522,8 +1526,8 @@ PenileVirgin of Helen is true.
 SexuallyExperienced of Helen is false.
 MainInfection of Helen is "Human".
 
-The description of Helen is "[HelenDesc]".
-The conversation of Helen is { "Woof." }.
+Description of Helen is "[HelenDesc]".
+Conversation of Helen is { "Woof." }.
 LastHelenTalk is a number that varies. LastHelenTalk is usually 555.
 HP of Helen is usually 0.
 HelenPregnant is a number that varies.
@@ -1824,7 +1828,7 @@ to say HelenSex4: [Player fucks the felinoid as he shafts Helen]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if HP of Helen is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Helen closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		else if hp of Fang is 3 or hp of Fang is 4: [Alpha Fang]
+		else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
 			if HP of Helen is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Helen is 12:
@@ -1991,7 +1995,7 @@ to say HelenSex6: [female player and felinoid + Helen]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if HP of Helen is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Helen closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		else if hp of Fang is 3 or hp of Fang is 4: [Alpha Fang]
+		else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
 			if HP of Helen is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Helen is 12:

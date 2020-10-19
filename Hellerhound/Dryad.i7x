@@ -10,7 +10,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dryad cum"	"A bottle of dryad cum? Man, you will scavenge anything."	3	dryad cum
 
-dryad cum is a grab object. dryad cum is infectious. The strain of dryad cum is "Dryad". The purified of dryad cum is "distilled cum". dryad cum is cum.
+dryad cum is a grab object. dryad cum is infectious. Strain of dryad cum is "Dryad". Purified of dryad cum is "distilled cum". dryad cum is cum.
 
 the scent of dryad cum is "The dryad cum smells like a mix of semen and tree sap.".
 
@@ -77,8 +77,8 @@ To say dryad attack:
 
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -99,7 +99,7 @@ When Play begins:
 	now desc entry is "[mongendernum 5]Walking through the urban forest, you pass along a road filled with trees. You can see the signs of many having had sex nearby. One tree seems normal enough, despite the enormous amounts of cum around its base, but you note the twisted shape of its branches and the pinkish tinge to its bark. As you walk closer, the tree fades, and a dryad jumps in front of you."; [ Description of the creature when you encounter it.]
 	now face entry is "cute, with green hair and branches growing behind your ears"; [ Face description, format as "Your face is (your text)"]
 	now body entry is "vine-wrapped and very feminine, milk leaking from shapely breasts"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "unblemished"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "unblemished"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "wooden, cum-reeking"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it becomes cuter, more feminine. Your hair turns green, and branches begin to grow from behind your ears"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -127,9 +127,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 10; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 4; [ Width of female sex infection will try and give you ]
-	now libido entry is 60; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "dryad cum";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "dryad cum";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]feminine[or]sultry[or]slender[at random]";
 	now type entry is "[one of]dryad[or]plant[at random]";
@@ -144,7 +148,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -254,9 +258,9 @@ This is the Dryad Infection rule:
 	if Player has a body of "Dryad":
 		trigger ending "Dryad Infection";
 		say "     Life as a dryad is hard. Your naked stature and vines, not to mention fear of clothes, keep you separate from the normal humans. They also constantly get you in trouble with the law, who are still trying to cope with your kind's breach of public nudity. ";
-		if the humanity of Player < 10:
+		if Humanity of Player < 10:
 			say "The revival of the city does you no good, and you are soon behind bars for several acts of misconduct. You end up with a life sentence and spend the rest of your time attempting to control the impulses the nanites wired into you.";
-		else if the humanity of Player < 50:
+		else if Humanity of Player < 50:
 			say "A few days into the revival of the city, you decide to become another one of the trees on the road where you found the original. Growing bark and leaves, you form a new tree, and a new puzzle for the city council, who had not authorized the planting of new trees in their budget. You and your fellow trees take payments from those who wish your services and return to your lot at night. Altogether, it isn't a boring life, with all the odd clients that come around and the food they bring.";
 		else:
 			say "You eventually overcome your fear of clothing and become relatively normal to those who don't see you without it or your hat. You are able to resume life as normal.";

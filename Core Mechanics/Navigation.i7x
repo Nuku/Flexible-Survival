@@ -19,7 +19,7 @@ Pediatrics Lobby	"Pediatrics Lobby"	"Pediatrics Lobby"	"Central City"
 Pig Pen	"Pig Pen"	"Pig Pen"	"Central City"
 Police Station Twelve	"Police Station Twelve"	"Police Station Twelve"	"Central City"
 Rabbit Den	"Rabbit Den"	"Rabbit Den"	"Central City"
-Red Apartment	"Red Apartment"	"Red Apartment"	"Central City"
+Red Apartment Building	"Red Apartment Building"	"Red Apartment Building"	"Central City"
 Tyr's Club	"Tyr's Club"	"Tyr's Club"	"Central City"
 Park Entrance	"Park Entrance"	"Park Entrance"	"City Park"
 Equinoid Camp	"Equinoid Camp"	"Equinoid Camp"	"City Park"
@@ -218,18 +218,19 @@ carry out navigating:
 	if noun is location of Player:
 		say "You're already there.";
 		stop the action;
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	now battleground is "Outside";
 	if a random number from 1 to 20 < 10 minus bonus and battleground is not "void":
 		if there is a area of Battleground in the Table of Random Critters:
 			Fight;
-			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
+			if ( ( HardMode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
 	else:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	if HP of Velos > 2, move Velos to the noun;
-	move player to the noun;
+	now Player is in noun;
+	try looking;
 	follow the ngraphics_blank rule;
 	follow turnpass rule;
 

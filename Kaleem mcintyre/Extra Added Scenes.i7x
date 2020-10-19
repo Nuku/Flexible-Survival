@@ -16,9 +16,10 @@ Object	Name
 Wish	"Wish"
 
 Wish is a situation.
-The sarea of Wish is "High".
+ResolveFunction of Wish is "[ResolveEvent Wish]".
+Sarea of Wish is "High".
 
-Instead of resolving a Wish:
+to say ResolveEvent Wish:
 	say "     Jogging through the high rise district, you come across an interesting sight as you find yourself looking up to stare at a young, black, orange and golden furred calico cat looking mournfully up at the sky from out of an open window. Eyes seeming to be focusing on nothing and yet everything at the same time, you find yourself captivated by the other as the feline clasps their hands together, clenches their eyes tight as though trying not to cry, then bows their head. You can just make out the other's muzzle moving in a steady utterance, but from the distance between you, you can't really tell what the calico is saying. You'd guess that the other is praying, but maybe not, because as soon as the feline lifts its head up, you watch as the calico takes out a piece of paper from behind its back and then tears it into pieces. Reaching out to let the torn shreds float down onto the ground, a stray wind sweeps them away before the white paper fragments can get halfway to the concrete. You track the pieces of paper continue going overhead before they disappear completely. When you turn back to look at the calico, the other is gone and the window closed.";
 	increase score by 1;
 	now Wish is resolved;
@@ -31,9 +32,10 @@ Object	Name
 Loving Bond	"Loving Bond"
 
 Loving Bond is a situation.
-The sarea of Loving Bond is "High".
+ResolveFunction of Loving Bond is "[ResolveEvent Loving Bond]".
+Sarea of Loving Bond is "High".
 
-Instead of resolving a Loving Bond:
+to say ResolveEvent Loving Bond:
 	say "     The sounds of someone speaking making you slow down from your jogging as you try to look around for the speaker. You realize that this is a dumb thing to do as you could be possibly be putting yourself into danger by doing something like this, but a strange feeling wells up inside of your chest and suddenly you find yourself coming to a full stop in the middle of the empty road. Turning your head this way and that you finally have to look up as you notice two figures, a black canine of some variety and a white sandy brown vulpine of another other, two stories above you conversing with each other while music is playing the background. And though you can't hear what they are saying exactly you do note that the song they are playing seems awfully familiar for some reason. You try and ponder why though, and when it finally hits you as to what's going on your eyes light up like fireworks as everything clicks into place. The reason why the song being played is so familiar is because it is the melody that's usually played at weddings! Not sure how that could be right considering that the high rise area is nowhere near a church, you scratch at your head as you continue to stare as the two figures, both being male from what you can see because of the lack of any breasts, exchange rings with one another. Placing the small bands around each the middle fingers on each other's right hands you blush furiously when the two give each other passionate kiss, the likes of which could fog up a glass window, before the two newlyweds began to grope and fondle each other lustfully. The music in the background soon changes to something more of an erotic beat and flushing slightly you decide to hurry on about your way, especially when the black canine hefts his new mate up, bridal style, and then takes the giggling fox back into their loft apartment. Who knew that love could find a way to prosper in this mad town? Guess the saying is true that love conquers all.";
 	increase score by 1;
 	now Loving Bond is resolved;
@@ -45,13 +47,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Challenge of the Alphas	"Challenge of the Alphas"
 
-Challenge of the Alphas is a situation. The level of Challenge of the Alphas is 8.
+Challenge of the Alphas is a situation.
+ResolveFunction of Challenge of the Alphas is "[ResolveEvent Challenge of the Alphas]". The level of Challenge of the Alphas is 8.
 
 when play begins:
 	add Challenge of the Alphas to BadSpots of FurryList;
 	add Challenge of the Alphas to BadSpots of MaleList;
 
-Instead of resolving a Challenge of the Alphas:
+to say ResolveEvent Challenge of the Alphas:
 	say "     Finding yourself coming across an Alpha Husky and Alpha Wolf circling each other, you blink in uncertainty as you wonder what are the two males are doing together in the middle of the street. That is, right before you take a cautious step back when both mutants bare their fangs at each other after drawing up their fleshy black lips. Body postures suddenly going rigid, the two stop dead in their tracks while glaring bloody murder at you for intruding, as if they weren't already wishing death on the other. Uncertain of what to do in this situation, you can see the rage rolling off of both creatures making your spine lock up almost, you continue to watch as the two lay their ears flat against their heads while their tails snap directly up into the air in a sign that their battle will grow physical in a matter of moments. Fur bristling so much that both look like aggravated porcupines, you feel your heart hammer tightly into your chest as you watch the two canines bark and growl and drool down the sides of their muzzles as the loose themselves to their inner animals. If something's not done soon, you know that this will end bloodily with either one or both of the males dead since neither seem to be taking the better choice to flee rather than fight. Yet is this really any of your business?";
 	say "     [bold type]What do you care what two mutants do to one another? But still...[roman type][line break]";
 	LineBreak;

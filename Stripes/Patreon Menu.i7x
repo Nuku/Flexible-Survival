@@ -56,19 +56,24 @@ carry out supersponsor:
 				now ssmb is false;
 			say "     The maintenance boost improves the effectiveness of medkits and using the journal by 50%. It is now [if ssmb is true]active[else]inactive[end if]";
 		else if calcnumber is 3:
-			if companion of Player is nullpet:
+			if companionList of Player is empty:
 				say "     'How do you expect to train one of your pets if you don't have them here with you?' Trixie asks.";
-			else if level of companion of Player >= level of Player - 3:
-				say "     'The pet trainer can only train a pet until they're three levels below your own. This one's already reached that point,' Trixie explains.";
-			else:
-				say "     During your conversation with Trixie, the [companion of Player] has been confused and concerned as you talk to apparently no one. Trixie waggles here fingers in their direction and they fall into a trance. A set of VR goggles and headphones are magicked onto their head and start to play. They absorb the information from the VR session, auto-magically training them in mere minutes. Once the training session is over, the equipment disappears and your companion comes out of their trance with increased skill.";
-				let nn be ( level of Player - level of companion of Player ) - 3;
-				let XPfactor be 5;
-				if "Good Teacher" is listed in feats of Player:
-					now XPfactor is 3;
-				increase XP of companion of Player by ( ( level of companion of Player * 2 ) + ( nn - 1 ) ) * nn * XPfactor;
-				repeat with x running from 1 to nn:
-					pet level up;
+			else if number of entries in companionList of Player is greater than 1:
+				say "Choose which companion you would like to train";
+			else if number of entries in companionList of Player is 1:
+				let x be entry 1 of companionList of Player;
+				if x is not NullPet:
+					if level of x >= level of Player - 3:
+						say "     'The pet trainer can only train a pet until they're three levels below your own. This one's already reached that point,' Trixie explains.";
+					else:
+						say "     During your conversation with Trixie, the [x] has been confused and concerned as you talk to apparently no one. Trixie waggles her fingers in their direction and they fall into a trance. A set of VR goggles and headphones are magicked onto their head and start to play. They absorb the information from the VR session, auto-magically training them in mere minutes. Once the training session is over, the equipment disappears and your companion comes out of their trance with increased skill.";
+						let nn be ( level of Player - level of x ) - 3;
+						let XPfactor be 5;
+						if "Good Teacher" is listed in feats of Player:
+							now XPfactor is 3;
+						increase XP of x by ( ( level of x * 2 ) + ( nn - 1 ) ) * nn * XPfactor;
+						repeat with h running from 1 to nn:
+							pet level up x;
 		else if calcnumber is 4:
 			if ssxpa is false:
 				now ssxpa is true;
@@ -140,28 +145,28 @@ carry out supersponsor:
 		else if calcnumber is 7:
 			if ssgpd is false:
 				say "     When you ask for a weapon to help you, Trixie whispers in your ear where one is hidden. Checking there, you find a giant purple dildo. Its handle has a good grip for swinging and it has that right mix of weight, wobble and firmness to make it both an effective and amusing club.";
-				now carried of dildo club is 1;
+				ItemGain dildo club by 1;
 				now ssgpd is true;
 			else:
 				say "     You've already received this reward.";
 		else if calcnumber is 8:
 			if ssbpg is false:
 				say "     Asking Trixie if there's anything around to keep the monster of the city from getting at you, she giggles and tells you to check the 'Lost and Found' box. Digging around in it, all you find of interest is a plastic toy gun. Not quite what you were hoping for, you feel. Still, needing a little levity, you aim the toy at a 'READ!' poster on the wall. But rather than a spray of water or a foam dart, a slimy yellow banana peel splatters onto the cartoony owl's face. You decide to hang onto the odd gun. While probably not a particularly effective weapon, the peels might make your foes off balance if they get hit.";
-				now carried of banana peel gun is 1;
+				ItemGain banana peel gun by 1;
 				now ssbpg is true;
 			else:
 				say "     You've already received this reward.";
 		else if calcnumber is 9:
 			if sshh is false:
 				say "     Worried about some creature cracking your skull or a zombie munching on your brain, you ask if there's anything around to protect yourself. Trixie leads you to a janitorial closet. Among the odds and ends in there, you find a hard hat. According to her, it was forgotten by some contractors the last time some renovations were done. You put the yellow construction helmet on, glad to have something to defend your brain meats from zombies.";
-				now carried of hard hat is 1;
+				ItemGain hard hat by 1;
 				now sshh is true;
 			else:
 				say "     You've already received this reward.";
 		else if calcnumber is 10:
 			if ssos is false:
 				say "     When you say you need some protection if you're going back out there, Trixie points you towards the history section. Mounted on the wall in that disused corner of the library, you find a round shield of bronze mounted on the wall. It is emblazoned with a red-orange 'P' in a ring on its face. How did you never notice it there before now? Taking it down, you find it quite real and in very good shape. The leather straps are solid and the shield itself seems strong enough to take a beating.";
-				now carried of orange shield is 1;
+				ItemGain orange shield by 1;
 				now ssos is true;
 			else:
 				say "     You've already received this reward.";
@@ -177,7 +182,7 @@ carry out supersponsor:
 					add "Tamed" to Traits of petget;
 			say "They are all now yours! (Warning, the code for some pets may react oddly. They are all set as battle-summonable though.)[line break]";
 		else if calcnumber is 13:
-			now carried of Smug Confidence is 1;
+			ItemGain Smug Confidence by 1;
 			say "Ah, there it is. Don't forget to use it.";
 		else if calcnumber is 14:
 			turn the Player into a "Human";
@@ -224,18 +229,16 @@ Instead of smelling Smug Confidence:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"dildo club"	"A big, bright purple dildo. It's about three feet long and has a handle on it for easy swinging."	5	dildo club
 "banana peel gun"	"A colorful toy gun made of plastic. But rather than fire foam darts or shoot water, it's able to launch banana peels without ever needing to be reloaded."	2	banana peel gun
 "orange shield"	"A round shield made of burnished bronze with a red-orange 'P' emblem on it."	6	orange shield
 "hard hat"	"A yellow construction hard hat you've found to help protect your noggin."	2	hard hat
 
 [Dildo Club]
-dildo club is an armament. It is part of the player. It has a weapon "[one of]your phallic club[or]your purple latex club[or]your dildo club with a resounding 'Wubba-Wubba-Wubba-Thwack!' sound[or]the three-foot purple schlong[or]the floppy dildo club[or]your oversized dildo[at random]". The weapon damage of dildo club is 6. The weapon type of dildo club is "Melee". It is not temporary. the objsize of dildo club is 4.
+[dildo club moved to Core Mechanics/Weapons.i7x]
 
-the scent of the dildo club is "The sex toy club smells of latex and your humiliated foes."
 
 [Banana Peel Gun]
-banana peel gun is an armament. It is part of the player. It has a weapon "[one of]your[or]the[purely at random] [one of]strange gun[or]colorful gun[or]plastic gun[or]odd toy gun[or]plantain pistol[or]banana blaster[or]banana peel gun[or]banana peel launcher[at random], [one of]striking your foe in the face[or]tripping up your foe with a messy peel[or]causing your foe to slide into something[or]making your foe stumble and twist themselves painfully[or]causing a comedic pratfall[at random][bananerred]". The weapon damage of banana peel gun is 4. It is not temporary. It is ranged. The objsize of banana peel gun is 3.
+banana peel gun is an armament. It has a weapon "[one of]your[or]the[purely at random] [one of]strange gun[or]colorful gun[or]plastic gun[or]odd toy gun[or]plantain pistol[or]banana blaster[or]banana peel gun[or]banana peel launcher[at random], [one of]striking your foe in the face[or]tripping up your foe with a messy peel[or]causing your foe to slide into something[or]making your foe stumble and twist themselves painfully[or]causing a comedic pratfall[at random][bananerred]". Weapon Damage of banana peel gun is 4. It is not temporary. It is ranged. Objsize of banana peel gun is 3.
 
 the scent of the banana peel gun is "The odd toy gun smells unsurprisingly like banana pudding. Unfortunately, none can be found inside."
 

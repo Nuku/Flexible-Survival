@@ -7,11 +7,13 @@ Section 1 - Encounter
 
 Table of GameEventIDs (continued)
 Object	Name
-Electric shockers	"Electric shockers"
+Electric Shockers	"Electric shockers"
+Electric Shockers	"Electric Shockers"
 
-Electric shockers is a situation. The level of electric shockers is 10.
+Electric Shockers is a situation.
+ResolveFunction of Electric Shockers is "[ResolveEvent Electric Shockers]". The level of Electric Shockers is 10.
 [This is to restrict low-level players from unknowingly finding the superweapon.]
-The sarea of Electric shockers is "Zoo".
+Sarea of Electric Shockers is "Zoo".
 
 Electricprodstatus is a number that varies.
 eptarget is a number that varies.			[hidden number of viable charges]
@@ -19,7 +21,7 @@ eprecharge is a number that varies.			[number of times it's been recharged]
 eprodused is a truth state that varies.		[indicates whether it's been used in a fight yet or not]
 
 
-Instead of Resolving a Electric shockers:
+to say ResolveEvent Electric Shockers:
 	if Electricprodstatus is 0:
 		say "     Moving through the zoo, you come across one of the zookeeper's shacks that seems to have been left open in the confusion. Taking advantage of the situation, you move inside and start searching the place, although it really doesn't take much looking to find the locked case of what look like extendable cattle prods, obviously intended to shock dangerous animals at a small distance. Unfortunately the case is locked up tight and all your efforts to pry it open fail miserably. You do make a mental note to come back again at another time and perhaps you'll have more luck.";
 		now Electricprodstatus is 1;
@@ -52,9 +54,9 @@ to say electproddesc:
 	else:
 		say "While a powerful electric tool designed to shock and incapacitate wild animals, it is unfortunately burned out and unusable, though it may still be repaired with some replacement parts.";
 
-electric prod is a grab object. It is part of the player. It is fast. It is not temporary. The usedesc of electric prod is "[useelectricprod]".
+electric prod is a grab object. It is fast. It is not temporary. Usedesc of electric prod is "[useelectricprod]".
 
-[It has a weapon "[one of]shocking stick[or]your electric prod[at random]". The weapon damage of electric prod is 22. The weapon type of electric prod is "Melee". It is not temporary. the objsize of electric prod is 2.]
+[It has a weapon "[one of]shocking stick[or]your electric prod[at random]". Weapon Damage of electric prod is 22. Weapon Type of electric prod is "Melee". It is not temporary. Objsize of electric prod is 2.]
 
 the scent of the electric prod is "The electric stun rod smells faintly of ozone.".
 
@@ -69,7 +71,7 @@ to say useelectricprod:
 			let the attack bonus be dexterity of Player + ( level of Player * 2 ) + plhitbonus + scale entry - 10;
 			let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
 			let the combat bonus be attack bonus - defense bonus;
-			if hardmode is true:
+			if HardMode is true:
 				if the combat bonus > 16:
 					now combat bonus is 16;
 				else if the combat bonus < -25:

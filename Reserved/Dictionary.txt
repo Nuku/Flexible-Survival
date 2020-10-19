@@ -910,7 +910,7 @@
 |Hellerhound|Power Plant|Wandering Around|room|
 |Hellerhound|Power Plant|control panels|thing|
 |Hellerhound|Power Plant|catwalk door|door|
-|Hellerhound|Power Plant|yellow helmet|Equipment|
+|Hellerhound|Power Plant|yellow construction helmet|Equipment|
 |Hellerhound|Power Plant|Administration Offices|room|
 |Hellerhound|Power Plant|Cat Key|Grab Object|
 |Hellerhound|Power Plant|Power Lines|room|
@@ -958,7 +958,7 @@
 |Hellerhound|Zoo|lastcheetahturns|value|
 |Hellerhound|Qytat A'th Lundrues|20140908213124/1616:Mon 8 September 2014 21:31|indexing|
 |Hellerhound|Qytat A'th Lundrues|Guard Gryphon|situation|
-|Hellerhound|Qytat A'th Lundrues|Red Apartment|room|
+|Hellerhound|Qytat A'th Lundrues|Red Apartment Building|room|
 |Hellerhound|Qytat A'th Lundrues|Red Apt Exit|door|
 |Hellerhound|Qytat A'th Lundrues|Green Apartment|room|
 |Hellerhound|Qytat A'th Lundrues|Green Apt Exit|door|
@@ -1628,7 +1628,7 @@
 |Stripes|Assorted Events|peachtreefight|value|
 |Stripes|Assorted Events|foodvendor|value|
 |Nuku Valente|Food And Water Finding|20140908213124/2241:Mon 8 September 2014 21:31|indexing|
-|Nuku Valente|Food And Water Finding|potential resources|scavevent|
+|Nuku Valente|Food And Water Finding|Potential Resources|scavevent|
 |Stripes|Scavevents|20140908213124/9026:Mon 8 September 2014 21:31|indexing|
 |Stripes|Scavevents|Tight Fit|scavevent|
 |Stripes|Scavevents|Protected Supplies|scavevent|

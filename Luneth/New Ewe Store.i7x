@@ -23,15 +23,14 @@ Object	Name
 New Ewe Store	"New Ewe Store"
 
 New Ewe Store is a situation.
-The sarea of New Ewe Store is "Outside".
+ResolveFunction of New Ewe Store is "[ResolveEvent New Ewe Store]".
+Sarea of New Ewe Store is "Outside".
 when play begins:
 	add New Ewe Store to BadSpots of FurryList;
 
 NESProgress is a number that varies.
 
-After resolving a New Ewe Store, try looking;
-
-Instead of Resolving a New Ewe Store:
+to say ResolveEvent New Ewe Store:
 	if NESProgress is 0:
 		say "     You come across a small, locally owned grocery store, and to your surprise notice that the lights inside it are still on. There could be something of value left inside, you think to yourself as you approach, only to be halted by a voice from within telling you to stay away, and a strongly barred door. Murmuring audible after that tells you that there are several people in there.";
 		say "     [bold type]Do you try to convince them to let you in?[roman type][line break]";
@@ -40,7 +39,7 @@ Instead of Resolving a New Ewe Store:
 		say "     ([link]N[as]n[end link]) - Nah, too much effort.";
 		if Player consents:
 			LineBreak;
-			let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+			let bonus be (( Charisma of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]10[roman type] (Charisma Check):[line break]";
 			increase diceroll by bonus;
@@ -64,7 +63,7 @@ Instead of Resolving a New Ewe Store:
 	else if NESProgress is 1:
 		if a random chance of 3 in 5 succeeds:
 			say "     When passing by a collapsed subway entrance you hear the sounds of soft crying coming from inside, drawing closer you hear the sounds stop suddenly as you approach. Calling out to whoever was crying, you try to convince them that you are there to help.";
-			let bonus be (( the Charisma of the player minus 10 ) divided by 2);
+			let bonus be (( Charisma of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Charisma Check):[line break]";
 			increase diceroll by bonus;
@@ -98,13 +97,14 @@ Object	Name
 Little Lost Lamb	"Little Lost Lamb"
 
 Little Lost Lamb is a situation.
+ResolveFunction of Little Lost Lamb is "[ResolveEvent Little Lost Lamb]".
 Little Lost Lamb is inactive.
-The sarea of Little Lost Lamb is "Mall".
+Sarea of Little Lost Lamb is "Mall".
 
-Instead of resolving Little Lost Lamb:
+to say ResolveEvent Little Lost Lamb:
 	If NESProgress is 2:
 		say "     After searching through the sewers for an hour, you find an opening into the subway tunnels, remembering the person left trapped down there you attempt to find your way through the tunnels to their location.";
-		let bonus be (( the Perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -139,7 +139,7 @@ New Ewe Storeroom	"New Ewe Storeroom"
 
 New Ewe Storeroom is a room. It is fasttravel. It is private.
 
-The description of New Ewe Storeroom is "This small family grocery store is now home to a small flock of sheep, though in most other respects it seems to be a relatively normal store. The shelves are mostly empty now, or full of goods that the flock themselves are using, and some of the narrow aisles have blankets and bedding laid out for the sheep to sleep on, though they have made a place for you if you need to rest (enable rest here). There is a somewhat musky and woolen odor to the place, though the smell seems more comforting and almost arousing than anything else.".
+Description of New Ewe Storeroom is "This small family grocery store is now home to a small flock of sheep, though in most other respects it seems to be a relatively normal store. The shelves are mostly empty now, or full of goods that the flock themselves are using, and some of the narrow aisles have blankets and bedding laid out for the sheep to sleep on, though they have made a place for you if you need to rest (enable rest here). There is a somewhat musky and woolen odor to the place, though the smell seems more comforting and almost arousing than anything else.".
 
 The invent of New Ewe Storeroom is { "chips", "food", "water bottle", "soda" }.
 

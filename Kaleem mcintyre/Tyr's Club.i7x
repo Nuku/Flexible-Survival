@@ -11,7 +11,7 @@ Tyr's Club	"Tyr's Club"
 
 Tyr's Club is a room. It is private. It is fasttravel.
 
-The description of Tyr's Club is "Inside of the underground room hidden underneath an unused cabin inside of the park Tyr has made a large gym/fighting arena where several dozen mutants are busy training, exercising or else practicing some form of physical training. Over by the side you can see Tyr watching the collective with a wary eye. The Doberman is standing as strong and powerful as he usual is, but instead of being draped in his usual jeans and t-shirt he's only wearing a pair of cut-off camouflage shorts. Said shorts happen to be showing the Dobie's more than plentiful crotch off, and from the large bulge hiding within it would seem that Tyr is not lacking in the cock department."
+Description of Tyr's Club is "Inside of the underground room hidden underneath an unused cabin inside of the park Tyr has made a large gym/fighting arena where several dozen mutants are busy training, exercising or else practicing some form of physical training. Over by the side you can see Tyr watching the collective with a wary eye. The Doberman is standing as strong and powerful as he usual is, but instead of being draped in his usual jeans and t-shirt he's only wearing a pair of cut-off camouflage shorts. Said shorts happen to be showing the Dobie's more than plentiful crotch off, and from the large bulge hiding within it would seem that Tyr is not lacking in the cock department."
 Tyr is in Tyr's Club.
 FightPit is west of Tyr's Club.
 Club Lockerroom is north of Tyr's Club.
@@ -56,8 +56,8 @@ AnalVirgin of Tyr is false.
 PenileVirgin of Tyr is false.
 SexuallyExperienced of Tyr is true.
 MainInfection of Tyr is "Doberman Male".
-The description of Tyr is "Standing roughly at about seven feet, three inches tall with floppy brown ears and a long, but thin curled tail is the Doberman you met at the dog show arena back at the warehouse district. With only a pair of camouflage shorts on the black and brown furred canine's muscular frame regally stands out as he leans across an undecorated wall while watching the proceedings going on inside of his club. That is, until he turns to notice you walking up to him. The other canine doesn't seem to be specifically trying, but there is an intimidating aura coming from off of him as he stares pointedly at you with his piercing green eyes. Holding you fast into place you don't feel as if you can take a step forward or backwards as the Doberman narrows his jade orbs at you. However, this feeling soon passes when Tyr smiles and waves you over. His perfectly straight fangs give you pause for a second though as the sharpened incisors look ready to rend both flesh and bone. Why does he suddenly seem so much scarier than he had before back at the arena???".
-The conversation of Tyr is { "Battle is the Key to Success!" }.
+Description of Tyr is "Standing roughly at about seven feet, three inches tall with floppy brown ears and a long, but thin curled tail is the Doberman you met at the dog show arena back at the warehouse district. With only a pair of camouflage shorts on the black and brown furred canine's muscular frame regally stands out as he leans across an undecorated wall while watching the proceedings going on inside of his club. That is, until he turns to notice you walking up to him. The other canine doesn't seem to be specifically trying, but there is an intimidating aura coming from off of him as he stares pointedly at you with his piercing green eyes. Holding you fast into place you don't feel as if you can take a step forward or backwards as the Doberman narrows his jade orbs at you. However, this feeling soon passes when Tyr smiles and waves you over. His perfectly straight fangs give you pause for a second though as the sharpened incisors look ready to rend both flesh and bone. Why does he suddenly seem so much scarier than he had before back at the arena???".
+Conversation of Tyr is { "Battle is the Key to Success!" }.
 Tyr is in Tyr's Club.
 
 Instead of sniffing Tyr:
@@ -96,7 +96,7 @@ Instead of fucking the Tyr:
 	if TyrDefeated > 2:	[3 player wins in a row]
 		TyrSexMenu;
 	else:
-		let bonus be (( the Strength of the player minus 5 ) divided by 2);
+		let bonus be (( Strength of Player minus 5 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus][line break]";
 		increase diceroll by bonus;
@@ -459,7 +459,7 @@ to say TyrWon_Training:
 	say "     When the two of you are done, you find the Doberman taking you out of the arena and then into one of the rooms here in the club to give you a massage. 'This is to help you muscles relax so they won't be so achy later on.' Is what the Dobie says, but for some reason Tyr seems to find your crotch area the most interesting part of you to massage after he strips you out of your clothes and then begins running his hands over your sweating [BodyName of Player] form. However, you don't say anything to the other about this. Instead you simply smile and relax as the Dobie goes over your arms, chest, thighs and legs. When he dips some of his fingers into your cunt to begin rolling them around inside of you, you pass out on the table minutes afterwards as Tyr presses along your g-spot causing you to orgasm.";
 	say "     When next you return to consciousness, you find that Tyr is gone, but your [BodyName of Player] is charged with a strange kind of energy. Though oddly enough, even though you find yourself dressed, you note that your crotch has a slightly sticky feel to it. Looking down you realize that it's because your pants are half open and something warm is covering over the crux of your thighs. Reaching and hand down and then bringing it up to your nose to take a whiff, you find yourself chuckling in amusement.";
 	if TyrTraining is false:
-		increase XP of the player by 25;
+		increase XP of Player by 25;
 		now TyrTraining is true;
 
 
@@ -512,7 +512,7 @@ FightPit is a room.
 Instead of sniffing FightPit:
 	say "The fighting pit smells of blood, sweat, exertion mixed in with canine musk, spooge and female honey.";
 
-The description of FightPit is "The fighting is a giant cage area with a chain link fence surrounding it. The large arena has several different spaces where different fighter are either sparring or working out together to practice their different forms and the like. A small boy seems to be looking over the area from atop a desk off to the side of the entryway of the arena. Should he be here? Walking inside of the pit several you find several mutants looking at you with differentiating masks of emotions covering their faces. Some seem really eager to see you, others... well they look happy, but in the same way a dog does when looking at a new chew bone. Be careful, it looks like trouble may start here!".
+Description of FightPit is "The fighting is a giant cage area with a chain link fence surrounding it. The large arena has several different spaces where different fighter are either sparring or working out together to practice their different forms and the like. A small boy seems to be looking over the area from atop a desk off to the side of the entryway of the arena. Should he be here? Walking inside of the pit several you find several mutants looking at you with differentiating masks of emotions covering their faces. Some seem really eager to see you, others... well they look happy, but in the same way a dog does when looking at a new chew bone. Be careful, it looks like trouble may start here!".
 Receptionist is in FightPit.
 
 
@@ -527,8 +527,8 @@ object	name
 Receptionist	"Receptionist"
 
 Receptionist is a man.
-The description of Receptionist is "Off to the side out of the way a young boy is busy scribbling down on some documents with a feathered pen. With gray fur, wire framed lens, red ball cap on and slightly chubby puppy face looking up at you with bright golden eyes you wonder if Tyr knows the other is here. Staring somewhat transfixed by the other's cute pointed ears, button nose, and, from what you can see by peeking over the desk, a chubby black-furred body you wonder if the Doberman has lost him mind by having the other in this kind of place. That is, right before you notice the sign that says [bold type]Receptionist[roman type] hanging down from off of the side of his desk with a giant arrow pointed upwards. For real?".
-The conversation of Receptionist is { "Everyone Have Fun Today!" }.
+Description of Receptionist is "Off to the side out of the way a young boy is busy scribbling down on some documents with a feathered pen. With gray fur, wire framed lens, red ball cap on and slightly chubby puppy face looking up at you with bright golden eyes you wonder if Tyr knows the other is here. Staring somewhat transfixed by the other's cute pointed ears, button nose, and, from what you can see by peeking over the desk, a chubby black-furred body you wonder if the Doberman has lost him mind by having the other in this kind of place. That is, right before you notice the sign that says [bold type]Receptionist[roman type] hanging down from off of the side of his desk with a giant arrow pointed upwards. For real?".
+Conversation of Receptionist is { "Everyone Have Fun Today!" }.
 Receptionist is in FightPit.
 
 Instead of linkactioning Receptionist:
@@ -668,7 +668,7 @@ Club Lockerroom	"Club Lockerroom"
 
 Club Lockerroom is a room.
 
-The description of Club Lockerroom is "The room where the lockers are kept is rather comfy as the white walls surrounding the area offset the silver metal containers standing in two separate rows from one another. Inside of here you can both see and smell several different mutants all walking around. Some are conversing with each other while others are storing things inside of their respective lockers, but strangely none of them seem especially hostile or lustful towards one another. Maybe releasing some excess aggression in the pit has calmed down their raging hormones?".
+Description of Club Lockerroom is "The room where the lockers are kept is rather comfy as the white walls surrounding the area offset the silver metal containers standing in two separate rows from one another. Inside of here you can both see and smell several different mutants all walking around. Some are conversing with each other while others are storing things inside of their respective lockers, but strangely none of them seem especially hostile or lustful towards one another. Maybe releasing some excess aggression in the pit has calmed down their raging hormones?".
 
 Instead of sniffing Club Lockerroom:
 	say "The locker room smells of fresh polish, multiple mutants, sweat, testosterone, estrogen, and other varying scents. Though strangely, no trace of cum or female juice can be found within here.";

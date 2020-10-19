@@ -33,8 +33,9 @@ Table of GameEventIDs (continued)
 Object	Name
 Snared Vixen	"Snared Vixen"
 
-Snared Vixen is a situation. The level of Snared Vixen is 5.
-the sarea of Snared Vixen is "Beach".
+Snared Vixen is a situation.
+ResolveFunction of Snared Vixen is "[ResolveEvent Snared Vixen]". The level of Snared Vixen is 5.
+Sarea of Snared Vixen is "Beach".
 
 when play begins:
 	add Snared Vixen to BadSpots of FemaleList; [We may want to add an event later to allow people with 'girl' banned access to the Bouncy Castle]
@@ -47,7 +48,7 @@ when play begins:
 	now entry 9 of dolphinlist is entry 3 of tempList;
 	now entry 11 of dolphinlist is entry 4 of tempList;
 
-Instead of resolving a Snared Vixen:
+to say ResolveEvent Snared Vixen:
 	say "     As you're traveling along the beach, you can hear some giggling in the distance. As you crest the next sandy rise, you can see several bright pink dolphin girls playing with a vixen they've found. She's struggling a little, but her resistance becomes less and less as the playful inflatables tease her body while taking off what few scraps of clothes she has. As they're several hundred yards away, you'd not be able to get there in time to interfere if you wanted to. It's hard to make out all the details at this distance.";
 	say "     [bold type]Are you interested in watching or shall you just continue on your way?[roman type][line break]";
 	LineBreak;
@@ -112,13 +113,13 @@ instead of navigating Bouncy Castle:
 to say bcnavigate:
 	if location of Player is not Beach Plaza and location of Player is not Public Beach: [Skips this if the player is already in Beach Plaza or Public Beach]
 		say "     You begin by making your way back to the beach";
-		let the bonus be (( the perception of the player minus 10 ) divided by 2);
+		let the bonus be (( Perception of Player minus 10 ) divided by 2);
 		now battleground is "Outside";
 		if a random number from 1 to 20 < 10 minus bonus:
 			say ", encountering an enemy on the way there.";
 			if there is a area of Battleground in the Table of Random Critters:
 				Fight;
-				if ( ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
+				if ( ( HardMode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
 					say "As you are trying to recover from your last encounter, another roving creature finds you.";
 					Fight;
 		else:
@@ -130,7 +131,7 @@ to say bcnavigate:
 	else if boatfound is 2:		[rowboat]
 		say "     Returning to the rowboat you found, you drag it into the water and start your journey. It is hard work rowing the boat, but it certainly beats swimming the whole way. As you're making your way through the rocking outcroppings on your way to the floating castle, you watch warily for any signs of the creatures infesting these waters.";
 		now rowing is true;
-		if a random number between 1 and 20 > the perception of the player:
+		if a random number between 1 and 20 > Perception of Player:
 			swimmingfight; [details in Hellerhound\Underwater Zone.i7x]
 		now rowing is false;
 		say "     Eventually, you make it out to the buoyant castle, rowing up close to it. Your arms are sore from all the rowing, but you have managed to arrive at your destination. Worried your boat might scrape a hole in its rubbery hide, you moor your boat to one of the tethers tying the castle between the rocks. You swim the short distance to the floating castle and make your way inside.";
@@ -172,112 +173,112 @@ Object	Name
 Bouncy Castle	"Bouncy Castle"
 
 The Bouncy Castle is a room. Bouncy Castle is fasttravel. Bouncy Castle is unknown. Bouncy Castle is private.
-The description of Bouncy Castle is "[bcentrance]".
+Description of Bouncy Castle is "[bcentrance]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Fencing Room	"Fencing Room"
 
 The Fencing Room is a room. The Fencing Room is east of Bouncy Castle.
-The description of Fencing Room is "[bcfencingroom]".
+Description of Fencing Room is "[bcfencingroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Bouncing Play Room	"Bouncing Play Room"
 
 The Bouncing Play Room is a room. The Bouncing Play Room is south of Fencing Room. The Bouncing Play Room is east of Ball Pit Room.
-The description of Bouncing Play Room is "[bcplayroom]".
+Description of Bouncing Play Room is "[bcplayroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Ball Pit Room	"Ball Pit Room"
 
 The Ball Pit Room is a room. The Ball Pit Room is south of Toy Room.
-The description of Ball Pit Room is "[bcballpitroom]".
+Description of Ball Pit Room is "[bcballpitroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Toy Room	"Toy Room"
 
 The Toy Room is a room. The Toy Room is west of Bouncy Castle.
-The description of Toy Room is "[bctoyroom]".
+Description of Toy Room is "[bctoyroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Punching Pillars	"Punching Pillars"
 
 The Punching Pillars is a room. The Punching Pillars is west of Ball Pit Room.
-The description of Punching Pillars is "[bcpunchingpillars]".
+Description of Punching Pillars is "[bcpunchingpillars]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Knight's Chambers	"Knight's Chambers"
 
 The Knight's Chambers is a room. The Knight's Chambers is north of Punching Pillars.
-The description of Knight's Chambers is "[bcknightschambers]".
+Description of Knight's Chambers is "[bcknightschambers]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Great Hall	"Great Hall"
 
 The Great Hall is a room. The Great Hall is east of Bouncing Play Room.
-The description of Great Hall is "[bcgreathall]".
+Description of Great Hall is "[bcgreathall]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 King's Chambers	"King's Chambers"
 
 The King's Chambers is a room. The King's Chambers is north of Great Hall.
-The description of King's Chambers is "[bckingschamber]".
+Description of King's Chambers is "[bckingschamber]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Lower Tower	"Lower Tower"
 
 The Lower Tower is a room. The Lower Tower is southeast of Ball Pit Room.
-The description of Lower Tower is "[bclowertower]".
+Description of Lower Tower is "[bclowertower]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Upper Tower	"Upper Tower"
 
 The Upper Tower is a room. The Upper Tower is above Lower Tower.
-The description of Upper Tower is "[bcuppertower]".
+Description of Upper Tower is "[bcuppertower]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Tower Turret	"Tower Turret"
 
 The Tower Turret is a room. The Tower Turret is above Upper Tower.
-The description of Tower Turret is "[bctowerturret]".
+Description of Tower Turret is "[bctowerturret]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Upper Hall	"Upper Hall"
 
 The Upper Hall is a room. The Upper Hall is north of Upper Tower.
-The description of Upper Hall is "[bcupperhall]".
+Description of Upper Hall is "[bcupperhall]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Western Parapets	"Western Parapets"
 
 The Western Parapets is a room. The Western Parapets is west from Upper Hall.
-The description of Western Parapets is "[bcwestparapets]".
+Description of Western Parapets is "[bcwestparapets]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Eastern Parapets	"Eastern Parapets"
 
 The Eastern Parapets is a room. The Eastern Parapets is east from Upper Hall.
-The description of Eastern Parapets is "[bceastparapets]".
+Description of Eastern Parapets is "[bceastparapets]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Castle Throne Room	"Castle Throne Room"
 
 The Castle Throne Room is a room. The Castle Throne Room is northeast of Western Parapets. The Castle Throne Room is northwest of Eastern Parapets.
-The description of Castle Throne Room is "[bcthroneroom]".
+Description of Castle Throne Room is "[bcthroneroom]".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -568,7 +569,7 @@ Chapter 7 - King's Chambers
 
 to say bckingschamber:
 	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
-	if companion of Player is not nullpet, increase compnumber by 1;
+	if companionList of Player is not empty, increase compnumber by 1;
 	now bcplayroomlast is false;
 	say "     This room is designed to be the king's chambers. The wall designs have a pair of guards by the door, tapestries by the windows, a bed and treasure chest as large decals to show a childish representation of this. There's no exit from this room save the one you entered by. There's a window on the north wall and another two on the east. There's not much in this room - a few beach balls, some other assorted odds and ends, and ";
 	if flotmarked is true and a random chance of 1 in 2 succeeds:
@@ -596,7 +597,7 @@ to say bckingschamber:
 				if levbonus > 5, now levbonus is 5;
 				increase bonus by levbonus;
 				let difficulty be 10;
-				if hardmode is true, increase difficulty by 2;
+				if HardMode is true, increase difficulty by 2;
 				let dice be a random number from 1 to 20;
 				say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 				if dice + bonus >= difficulty:
@@ -611,7 +612,7 @@ to say bckingschamber:
 to say bckingchair:
 	let chairescape be false;
 	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
-	if companion of Player is not nullpet, increase compnumber by 1;
+	if companionList of Player is not empty, increase compnumber by 1;
 	say "     As you start awake, you realize that the inflatable chair has started to stick to you. You can see its armrests clinging to your arms, the material pulling them gradually in. As you try to stand, you can feel that the same is happening to your back and legs. There's something pleasant and appealing about the touch of the material upon you, but you try to shake it off. Unsure what its plans are, but suspecting that they're not good at all, you start to struggle";
 	if compnumber is 1:
 		say "[if bcseenkingknight is true]. Looking over at your companion for assistance, you can see that the knights have once again emerged from the wall and are keeping your companion occupied[else]. Hearing some struggling by the door, you can see that the knight designs have pulled themselves from the wall as two-dimensional figures. They slash with their swords, keeping your companion too occupied to assist you, despite several attempts to reach you[end if]";
@@ -624,7 +625,7 @@ to say bckingchair:
 	let playernum be a random number between 1 and strength of Player;
 	let chairnum be 15;
 	if SkinName of Player is listed in infections of Latexlist, increase chairnum by 2;
-	if hardmode is true, increase chairnum by ( level of Player / 6 );
+	if HardMode is true, increase chairnum by ( level of Player / 6 );
 	let chairnum be a random number between 1 and chairnum;
 	if Playernum >= chairnum:
 		let chairescape be true;
@@ -645,7 +646,7 @@ to say bckingchair:
 		let playernum be a random number between 1 and playernum;
 		let chairnum be 170;
 		if SkinName of Player is listed in infections of Latexlist, increase chairnum by 30;
-		if hardmode is true, increase chairnum by level of Player;
+		if HardMode is true, increase chairnum by level of Player;
 		let chairnum be a random number between 1 and chairnum;
 		if Playernum >= chairnum:
 			let chairescape be true;
@@ -663,14 +664,14 @@ to say bckingchair:
 			let playernum be a random number between 1 and strength of Player;
 			let chairnum be 18;
 			if SkinName of Player is listed in infections of Latexlist, increase chairnum by 3;
-			if hardmode is true, increase chairnum by ( level of Player / 5 );
+			if HardMode is true, increase chairnum by ( level of Player / 5 );
 			let chairnum be a random number between 1 and chairnum;
 			if Playernum >= chairnum:
 				let chairescape be true;
 			else:
 				say "     Your final attempt to break free seems to require the last of your strength and you sag back into the seat. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1]. With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. There they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]. With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. As they are flattened out, they turn into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]. Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
 				say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [BodyName of Player] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
-				Waitlinebreak;
+				WaitLineBreak;
 				now bcfinalchairform is BodyName of Player;
 				now humanity of Player is 0;
 				trigger ending "Bouncy Castle New Chair";
@@ -689,7 +690,7 @@ to say bckingchair:
 
 to say bckingchair_accept:
 	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
-	if companion of Player is not nullpet, increase compnumber by 1;
+	if companionList of Player is not empty, increase compnumber by 1;
 	say "     Choosing not to resist the chair's call this time, you drop your gear and flop down onto it. Its plastic material gives a happy squeak as it rubs against the rubbery floor. Settling into it, you rub your body against the padded seat and grip the arm rests, pressing yourself lightly against the chair's material. Sure enough, it starts to slide over you as your body starts to sink into it with a pleasant sensation";
 	if compnumber is 1:
 		say "[if bcseenkingknight is true]. Looking over at your companion, you can see that the knights have once again emerged from the wall and are keeping your companion at bay. Thus occupied, they're unable to reach you to save you, not that you want rescue from this lovely thing[else]. Hearing some struggling by the door, you can see that the knight designs have pulled themselves from the wall as two-dimensional figures. They slash with their swords, keeping your companion too occupied to come rescue you, not that you want rescue from this lovely thing[end if]";
@@ -760,7 +761,7 @@ to say bcpunchingpillars:
 to say bcpptendril:
 	let tendrilescape be false;
 	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
-	if companion of Player is not nullpet, increase compnumber by 1;
+	if companionList of Player is not empty, increase compnumber by 1;
 	sort primarycolorlist in random order;
 	now ppcolor is entry 1 in primarycolorList;
 	say "     [one of]Before you can move away, the pillar in front of you strikes you with one of the[or]As you're attempting to move away, a pillar behind you strikes you with one of its[at random] tentacles with a wet, sticky sound[if weapon object of Player is not journal]. You attempt to fight it off with your [weapon of Player], but it seems to have no effect on the flowing [ppcolor] latex[end if]. Trying to steady yourself on the unsteady floor with the slimy appendage wrapping around your leg, you attempt to pull yourself free[if compnumber is 1]. Your companion moves to assist you, but is ensnared by the tendrils of another of the pillars[else if compnumber > 1]. Your companions move to assist you, but are ensnared by the tendrils of the other pillars[end if].";
@@ -770,7 +771,7 @@ to say bcpptendril:
 	let tendrilnum be 30;
 	if SkinName of Player is listed in infections of Latexlist, increase tendrilnum by 2;
 	if BodyName of Player is "Anime Babe", increase tendrilnum by 4;
-	if hardmode is true, increase tendrilnum by ( level of Player / 4 );
+	if HardMode is true, increase tendrilnum by ( level of Player / 4 );
 	let tendrilnum be a random number between 1 and tendrilnum;
 	if Playernum >= tendrilnum:
 		let tendrilescape be true;
@@ -789,7 +790,7 @@ to say bcpptendril:
 		let tendrilnum be 170;
 		if SkinName of Player is listed in infections of Latexlist, increase tendrilnum by 15;
 		if BodyName of Player is "Anime Babe", increase tendrilnum by 25;
-		if hardmode is true, increase tendrilnum by level of Player / 2;
+		if HardMode is true, increase tendrilnum by level of Player / 2;
 		let tendrilnum be a random number between 1 and tendrilnum;
 		if Playernum >= tendrilnum:
 			let tendrilescape be true;
@@ -816,7 +817,7 @@ to say bcpptendril:
 			let tendrilnum be 18;
 			if SkinName of Player is listed in infections of Latexlist, increase tendrilnum by 2;
 			if BodyName of Player is "Anime Babe", increase tendrilnum by 3;
-			if hardmode is true, increase tendrilnum by ( level of Player / 6 );
+			if HardMode is true, increase tendrilnum by ( level of Player / 6 );
 			let tendrilnum be a random number between 1 and tendrilnum;
 			if Playernum >= tendrilnum:
 				let tendrilescape be true;
@@ -845,7 +846,7 @@ to say bcpptendril:
 
 to say bcpptendril_accept:
 	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
-	if companion of Player is not nullpet, increase compnumber by 1;
+	if companionList of Player is not empty, increase compnumber by 1;
 	say "     Choosing not to resist the pillar's attempt to ensnare you this time, you drop your gear and step towards the tentacles, allowing them to latch onto you. The wolf design on it seems to smile as you acquiesce and it rubs its gooey tentacles across your flesh, leaving trails of [ppcolor] latex[if compnumber is 1]. Your companion, also ensnared, struggles at first, but soon relents as they see you accepting the tentacles[else if compnumber > 1]. Your companions, also ensnared, struggle at first, but soon relent as they see you accepting the tentacles[end if]. Some of the tendrils slide across your arms and legs while others wrap around your chest.";
 	say "     You can't help but moan as one goes to your waist and [ppcolor] latex flows over your [if Player is neuter]barren crotch[else]loins[end if], sending a rush of arousal through you as the goo spreads across your [if Player is herm]cock[smn] and even into your puss[yfn][else if Player is male]cock[smn][else if Player is female]cunt[sfn][else]ass and pushes into your asshole[end if]";
 	if Player is female:
@@ -886,7 +887,7 @@ to say bcknightschambers:
 		if Player consents:
 			say "     Wary of some kind of trap, you cautiously reach out for the white inflatable and give it a gentle poke. When it does nothing more than flap its tiny wings all the more, you touch it again and then let your hand rest on its surface. Not seeing or feeling anything strange happening, you pick it up. The ducky toy flaps its wings excitedly and almost seems to smile. You strongly suspect that this is not another trap of the castle, but an earlier victim of it. Certainly the cute little thing seems safe enough, so you decide to take it with you. You could put it on and wear it or let its air out and store it in your pack.";
 			increase score by 5;
-			now carried of ducky swimring is 1;
+			ItemGain ducky swimring by 1;
 			now floatertaken is true;
 		else:
 			say "     Worried that this might be some new form of trap laid by the castle, you take a step back and leave the duck swim ring where it is. It seems a little sad that you've not touched it, but continues to try and get your attention by what little movement it is capable of.";
@@ -943,7 +944,7 @@ Chapter 14 - Western Parapets
 
 to say bcwestparapets:
 	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
-	if companion of Player is not nullpet, increase compnumber by 1;
+	if companionList of Player is not empty, increase compnumber by 1;
 	say "     Up at the top level of the castle, this room is designed to look like its western parapets. This section covers roughly the western third of the bouncy castle with a wall dividing the two parts and a pair of arched doorways leading to the middle section. The floor is covered in a regular pattern of large, red dots, and while springy and swaying, seems just as solid as those below despite being the inflatable ceiling to the area below. The floor and walls here are sky blue, as are the towers rising up to enclose the room between mesh netting to keep excited children from falling. The netting around the parapets extends above you as well, enclosing the space for safety. The only gap in this outer mesh allows access to the blue waterslide down into the sea below.";
 	say "     There is a constant flow of water and even some sprinklers running on the way down despite the lack of any motor or pump you could hear anywhere in the castle to keep it inflated or to send water up here.";
 	say "     Looking along the one inflated wall on the eastern side of this room, you see two arched doors. One leads east to the upper hall which connects to the tower and the other is to the northeast, heading to [if bcseenthroneroom is true]the throne room and the inflatable dolphin suits[else]another room[end if]. The other option would be to take the slide to leave the castle entirely.";
@@ -974,7 +975,7 @@ to say bcwestparapets:
 		else if lastbcchair - turns >= 4:
 			let playernum be a random number between 1 and dexterity of Player;
 			let chairnum be 15;
-			if hardmode is true, increase chairnum by ( level of Player / 4 );
+			if HardMode is true, increase chairnum by ( level of Player / 4 );
 			let chairnum be a random number between 1 and chairnum;
 			if Playernum >= chairnum:
 				say "     You take care as you navigate the room, planning to avoid the red spots in the hopes of not activating the chair again. But you are suddenly surprised as one of the spots slides across the floor, almost getting under your foot before you can hop to avoid it. You take your last few steps quickly before the floor has the chance to put another spot underfoot. Shall you head [link]northeast (1)[as]1[end link] to the [if bcseenthroneroom is true]throne room[else]next room[end if], [link]east (2)[as]2[end link] back to the upper hall or [link]take the slide (3)[end link] to leave this place?";
@@ -1012,7 +1013,7 @@ to say bcwestparapets:
 
 to chairboundstate:
 	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
-	if companion of Player is not nullpet, increase compnumber by 1;
+	if companionList of Player is not empty, increase compnumber by 1;
 	now lustatt is Libido of Player;
 	now calcnumber is -1;
 	let Trixieexit be 0;
@@ -1190,13 +1191,13 @@ to chairpassivelosses:
 
 [to say bcchairfight:
 	let compnumber be ( (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces) / 3 );
-	if companion of Player is not nullpet, increase compnumber by 1;
+	if companionList of Player is not empty, increase compnumber by 1;
 	let bcchairescape be 0;
 	let x be a random number between 1 and 3;
 	if x is 1:				[dexterity]
 		let playernum be a random number between 1 and dexterity of Player;
 		let chairnum be 15;
-		if hardmode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by ( level of Player / 4 );
 		let chairnum be a random number between 1 and chairnum;
 [		say "Dex: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1209,7 +1210,7 @@ to chairpassivelosses:
 	else if x is 2:		[strength]
 		let playernum be a random number between 1 and strength of Player;
 		let chairnum be 17;
-		if hardmode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by ( level of Player / 4 );
 		let chairnum be a random number between 1 and chairnum;
 [		say "Str: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1222,7 +1223,7 @@ to chairpassivelosses:
 	else if x is 3:
 		let playernum be a random number between 1 and perception of Player;
 		let chairnum be 18;
-		if hardmode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by ( level of Player / 4 );
 		let chairnum be a random number between 1 and chairnum;
 [		say "Per: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1237,7 +1238,7 @@ to chairpassivelosses:
 	let playernum be ( 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) );
 	let playernum be a random number between 1 and playernum;
 	let chairnum be 175;
-	if hardmode is true, increase chairnum by level of Player;
+	if HardMode is true, increase chairnum by level of Player;
 	let chairnum be a random number between 1 and chairnum;
 [	say "Libido: Playernum: [playernum] vs Chairnum: [chairnum]";]
 	if Playernum >= chairnum:
@@ -1255,7 +1256,7 @@ to chairpassivelosses:
 		if x is 1:				[intelligence]
 			let playernum be a random number between 1 and intelligence of Player;
 			let chairnum be 15;
-			if hardmode is true, increase chairnum by ( level of Player / 4 );
+			if HardMode is true, increase chairnum by ( level of Player / 4 );
 			let chairnum be a random number between 1 and chairnum;
 [			say "Int: Playernum: [playernum] vs Chairnum: [chairnum]";]
 			if Playernum >= chairnum:
@@ -1268,7 +1269,7 @@ to chairpassivelosses:
 		else if x is 2:		[dexterity]
 			let playernum be a random number between 1 and dexterity of Player;
 			let chairnum be 17;
-			if hardmode is true, increase chairnum by ( level of Player / 4 );
+			if HardMode is true, increase chairnum by ( level of Player / 4 );
 			let chairnum be a random number between 1 and chairnum;
 [			say "Dex: Playernum: [playernum] vs Chairnum: [chairnum]";]
 			if Playernum >= chairnum:
@@ -1281,7 +1282,7 @@ to chairpassivelosses:
 		else:				[strength]
 			let playernum be a random number between 1 and strength of Player;
 			let chairnum be 18;
-			if hardmode is true, increase chairnum by ( level of Player / 4 );
+			if HardMode is true, increase chairnum by ( level of Player / 4 );
 			let chairnum be a random number between 1 and chairnum;
 [			say "Str: Playernum: [playernum] vs Chairnum: [chairnum]";]
 			if Playernum >= chairnum:
@@ -1297,7 +1298,7 @@ to chairpassivelosses:
 			let playernum be ( 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) );
 			let playernum be a random number between 1 and playernum;
 			let chairnum be 175;
-			if hardmode is true, increase chairnum by level of Player;
+			if HardMode is true, increase chairnum by level of Player;
 			let chairnum be a random number between 1 and chairnum;
 [			say "Libido: Playernum: [playernum] vs Chairnum: [chairnum]";] [Threshold]
 			if Playernum >= chairnum:
@@ -1875,7 +1876,7 @@ to say dolcheckD:		[complete tf - fight]
 
 to say dolcheckE:		[vixen]
 	let compnumber be ( (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces) / 3 );
-	if companion of Player is not nullpet, increase compnumber by 1;
+	if companionList of Player is not empty, increase compnumber by 1;
 	say "     With some effort, you make your way over to one of the large dolphin inflatables and start looking for the seam to open it. It takes a little time to find it, having partially melded itself shut, but you manage to start working it open. As you begin to get it open, it starts to shift and move with the struggles of someone inside. When you get it open, you're pleased to see the orange color of the vixen you seek. Her fur has become a smooth, latex skin, but you continue on in the hope that it's not already too late. As you get her head free and pull the breathing tube from her muzzle, her struggles grow all the more fervent.";
 	say "     'Mmm... Can we play now? No! Ah! Get me out of this silly thing!' she yips with a definite squeak to her voice. You inform her that you're trying to free her, but that you want something in return. 'Oh! That'd be fun!' she giggles. 'This thing's been teasing me for so long, I could certainly go for the real thing,' she adds with a moan. After elaborating that you're actually after her stash of supplies, she nods and manages to focus enough to be more serious. 'No prob. We'll split it if you can get me out of this mess,' she says eagerly, still fighting against the suit which seems very reluctant to release her. With the both of you working at it, she's able to keep the suit from resealing her while you struggle to deflate it to the point it can no longer strive to hold her.";
 	WaitLineBreak;
@@ -1918,13 +1919,13 @@ Chapter 1 - Western Chair Escape
 
 to say bcchairfinal1: [FLOT - Check?]
 	let compnumber be ( (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces) / 3 );
-	if companion of Player is not nullpet, increase compnumber by 1;
+	if companionList of Player is not empty, increase compnumber by 1;
 	let bcchairescape be 0;
 	let bcchairstage be 1;
 	let playernum be ( 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) );
 	let playernum be a random number between 1 and playernum;
 	let chairnum be 175;
-	if hardmode is true, increase chairnum by level of Player;
+	if HardMode is true, increase chairnum by level of Player;
 	let chairnum be a random number between 1 and chairnum;
 [	say "Libido: Playernum: [playernum] vs Chairnum: [chairnum]";]
 	if Playernum >= chairnum:
@@ -1941,7 +1942,7 @@ to say bcchairfinal1: [FLOT - Check?]
 	if t is 1:		[strength]
 		let playernum be a random number between 1 and strength of Player;
 		let chairnum be 15;
-		if hardmode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by ( level of Player / 4 );
 		let chairnum be a random number between 1 and chairnum;
 [		say "Str: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1954,7 +1955,7 @@ to say bcchairfinal1: [FLOT - Check?]
 	else if t is 2:	[stamina]
 		let playernum be a random number between 1 and stamina of Player;
 		let chairnum be 17;
-		if hardmode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by ( level of Player / 4 );
 		let chairnum be a random number between 1 and chairnum;
 [		say "Sta: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1965,7 +1966,7 @@ to say bcchairfinal1: [FLOT - Check?]
 	else if t is 3:	[dexterity]
 		let playernum be a random number between 1 and dexterity of Player;
 		let chairnum be 18;
-		if hardmode is true, increase chairnum by ( level of Player / 4 );
+		if HardMode is true, increase chairnum by ( level of Player / 4 );
 		let chairnum be a random number between 1 and chairnum;
 [		say "Dex: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -1983,7 +1984,7 @@ to say bcchairfinal1: [FLOT - Check?]
 		let playernum be ( 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) );
 		let playernum be a random number between 1 and playernum;
 		let chairnum be 180;
-		if hardmode is true, increase chairnum by level of Player;
+		if HardMode is true, increase chairnum by level of Player;
 		let chairnum be a random number between 1 and chairnum;
 [		say "Libido: Playernum: [playernum] vs Chairnum: [chairnum]";]
 		if Playernum >= chairnum:
@@ -2002,7 +2003,7 @@ to say bcchairfinal1: [FLOT - Check?]
 			if x is 1:				[intelligence]
 				let playernum be a random number between 1 and intelligence of Player;
 				let chairnum be 15;
-				if hardmode is true, increase chairnum by ( level of Player / 4 );
+				if HardMode is true, increase chairnum by ( level of Player / 4 );
 				let chairnum be a random number between 1 and chairnum;
 [				say "Int: Playernum: [playernum] vs Chairnum: [chairnum]";]
 				if Playernum >= chairnum:
@@ -2015,7 +2016,7 @@ to say bcchairfinal1: [FLOT - Check?]
 			else if x is 2:		[dexterity]
 				let playernum be a random number between 1 and dexterity of Player;
 				let chairnum be 17;
-				if hardmode is true, increase chairnum by ( level of Player / 4 );
+				if HardMode is true, increase chairnum by ( level of Player / 4 );
 				let chairnum be a random number between 1 and chairnum;
 [				say "Dex: Playernum: [playernum] vs Chairnum: [chairnum]";]
 				if Playernum >= chairnum:
@@ -2028,7 +2029,7 @@ to say bcchairfinal1: [FLOT - Check?]
 			else:				[strength]
 				let playernum be a random number between 1 and strength of Player;
 				let chairnum be 18;
-				if hardmode is true, increase chairnum by ( level of Player / 4 );
+				if HardMode is true, increase chairnum by ( level of Player / 4 );
 				let chairnum be a random number between 1 and chairnum;
 [				say "Str: Playernum: [playernum] vs Chairnum: [chairnum]";]
 				if Playernum >= chairnum:
@@ -2046,7 +2047,7 @@ to say bcchairfinal1: [FLOT - Check?]
 				let playernum be ( 150 + humanity of Player - Libido of Player + ( level of Player * 2 ) );
 				let playernum be a random number between 1 and playernum;
 				let chairnum be 185;
-				if hardmode is true, increase chairnum by level of Player;
+				if HardMode is true, increase chairnum by level of Player;
 				let chairnum be a random number between 1 and chairnum;
 [				say "Libido: Playernum: [playernum] vs Chairnum: [chairnum]";]
 				if Playernum >= chairnum:
@@ -2272,14 +2273,15 @@ an everyturn rule:
 			now HP of Bubble is 100;
 
 
-
+[
 Section X - Debug - Not for release
+]
 
 dolphincastletesting is an action applying to nothing.
 understand "dolcastletest" as dolphincastletesting.
 
 carry out dolphincastletesting:
-	try resolving Snared Vixen;
+	say "[ResolveFunction of Snared Vixen]";
 	WaitLineBreak;
 	move player to Bouncy Castle;
 
@@ -2327,7 +2329,7 @@ This is the Bouncy Castle New Pool Toys rule:
 This is the Bouncy Castle New Pillar rule:
 	if ending "Bouncy Castle New Pillar" is triggered:
 		let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
-		if companion of Player is not nullpet, increase compnumber by 1;
+		if companionList of Player is not empty, increase compnumber by 1;
 		say "     An uncertain amount of time later, you flow out from the pillar which engulfed you as a mass of [ppcolor] latex. Moving across the inflated floor, your simple mind chooses an open spot for yourself and you form yourself into another pillar. Soon enough, you're rooted in place among the others of your kind in the room. On your front, you have the design of an aggressive [bcfinalpillarform] on your padded [ppcolor] surface[if compnumber is 1]. Your companion, similarly transformed, has become a green pillar with a design suiting their previous form[else if compnumber > 1]. Your companions, similarly transformed, have become colorful pillars with designs suiting their previous forms[end if].";
 		say "     Your existence is a simple one, your previous mind erased and left empty save for thoughts of lust and transforming others into joining with the bouncy castle as you have. Pleasure mostly comes in the form of dolphin girls who wander into the room to be sexually assaulted by your tendrils until you're both satiated. On other occasions, you send out tendrils to some of the other pillars and pleasure one another, forming phalli and orifices for them, spraying your latex cum onto and into each other. But sometimes, your greatest delight will come when some wanderer makes their way into your room. When this happens, you grapple them with tentacles of [ppcolor] goo, sexually pleasuring yourself and them as you draw them inexorably into you to be consumed and transformed into another punching pillar, as was done to you on that fateful day.";
 		the Player is gone;

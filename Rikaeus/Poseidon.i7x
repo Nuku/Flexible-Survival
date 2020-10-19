@@ -51,8 +51,8 @@ AnalVirgin of Poseidon is false.
 PenileVirgin of Poseidon is false.
 SexuallyExperienced of Poseidon is true.
 MainInfection of Poseidon is "".
-The description of Poseido is "[PoseidonDesc]".
-The conversation of Poseidon is { "<This is nothing but a placeholder!>" }.
+Description of Poseido is "[PoseidonDesc]".
+Conversation of Poseidon is { "<This is nothing but a placeholder!>" }.
 The scent of Poseidon is "He smells heavily of the sea and the earth. It's an odd combination but it works for him".
 
 to say PoseidonDesc:

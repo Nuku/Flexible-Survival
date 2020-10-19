@@ -20,9 +20,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Fallen Survivor	"Fallen Survivor"
 
-Fallen Survivor is a scavevent. The sarea of Fallen Survivor is "Allzones".
+Fallen Survivor is a scavevent.
+ResolveFunction of Fallen Survivor is "[ResolveEvent Fallen Survivor]".
+Sarea of Fallen Survivor is "Allzones".
 
-instead of resolving a Fallen Survivor:
+to say ResolveEvent Fallen Survivor:
 	say "     You come across a succumbed survivor slumped on the pavement with their back to a crumbling building. The motionless yet still breathing body fails to react to anything you do to try and snap them back to consciousness. Dragging the man under a nearby piece of intact roof, you place him in a way that he at least won't be quite as exposed or get rained upon. Still, his eyes do not even focus on you as you open them, just staring off into empty space. Your inability to help this person or even get any answers of what happened to him causes you to feel intensely uncomfortable, and just being close to the body seems to sap your drive and go on and struggle to survive. Maybe you should just... lay down with him. All of this is pointless, isn't it? You're never going to get out of - *CRASH, YOWL*[line break]";
 	say "     The sudden metallic noise from behind you makes you jump out of your boots almost, whirling around to see what caused it. You see the tail end of a large house-cat zip around the nearby corner, leaving behind a large disc of metal that must have fallen over as it pushed past it. Upon further examination, you see that it is a garbage can lid - one that has been used to create an improvised shield. There are loops of leather riveted to the inside to slip your forearm through, as well as a painted front. Seems like the survivor had a DIY streak before he succumbed to... whatever got to him. Looking back over to the guy, you realize that you were on the best way to join him in his mind-broken state. Getting into contact seems to have negative side effects. That cat really saved your bacon!";
 	WaitLineBreak;
@@ -42,30 +44,22 @@ instead of resolving a Fallen Survivor:
 
 Section 2 - Infected Sword
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"infected sword"	"A sword with cloudy metal found in a sea of slime. It is infectious, and keeps changing you."	10	infected sword
+[infected sword moved to Core Mechanics/Weapons.i7x]
 
-infected sword is a armament. It is a part of the player. It has a weapon "[one of]your cloudy sword[or]your sword[or]your infected sword[or]your glowing sword[at random][hydraharming]". The weapon damage of infected sword is 16. The weapon type of infected sword is "Melee". It is not temporary. The purified of infected sword is "Nothing". The objsize of infected sword is 4.
-
-the scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing. You can never seem to identify a scent before a new one appears.".
-
-instead of purifying an infected sword:
-	say "That doesn't even fit in the microwave. Also, putting metal in one is a really bad idea.";
-	stop the action;
 
 Table of GameEventIDs (continued)
 Object	Name
 Sword Nest	"Sword Nest"
 
 Sword Nest is a situation.
+ResolveFunction of Sword Nest is "[ResolveEvent Sword Nest]".
 washerenest is a number that varies.
 fellforward is a number that varies.
 
-instead of resolving Sword Nest:
+to say ResolveEvent Sword Nest:
 	say "     You come across the remains of a giant nest [if washerenest is 1]again[end if], probably belonging to gryphons. It is scattered, and sexual fluids of all kinds, not all from gryphons, cover the ground. It looks as if several gangs of different species fought here.. or maybe 'played' as well. The ground is so thoroughly coated with it that you cannot enter without touching it.";
 	now washerenest is 1;
-	if the humanity of Player < 60: [falling to the nanites]
+	if Humanity of Player < 60: [falling to the nanites]
 		say "     Your mind feels fuzzy, and you have a strange desire to roll in the muck. Do you submit?";
 		if Player consents:
 			say "     You run and jump into the slimy muck, a sick splot sounding and echoing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
@@ -114,7 +108,7 @@ instead of resolving Sword Nest:
 					repeat with T running from one to 15:
 						randominfect;
 					wait for any key;
-					now the humanity of Player is 0;
+					now Humanity of Player is 0;
 					end the story saying "Your humanity submits to the sludge nanites, and you go feral.";
 					now battleground is "void";
 					wait for any key;
@@ -126,12 +120,12 @@ instead of resolving Sword Nest:
 				say "     You wisely rein in your desires before they got away with you.";
 		else:
 			say "     You master the desire, and look around paying more attention to detail.";
-	if a random number between one and 20 < the perception of the player:
+	if a random number between one and 20 < Perception of Player:
 		say "     You spot a sword in the middle of the mess, coated so thoroughly with the juices that you suspect it was the target for the raids, and the source of the jubilation of victory. Its metal is cloudy and coated with thick slime, and the pommel is dried cum of some unknown creature, glowing white. It looks like a powerful, but dangerous weapon. Do you want to walk into the mess and take it?";
 		if Player consents:
 			say "     You slosh through the mess, leaving a trail that fill after a couple of seconds. You get to the sword, and place it in your backpack, and trudge back.";
 			now fellforward is 1;
-			if a random number between 1 and 25 > the dexterity of the player:
+			if a random number between 1 and 25 > Dexterity of Player:
 				say "     On the way, you fall headlong into the slime, and it takes a while to get up. After you emerge, you cough up slime and wipe it off your body.";
 				increase fellforward by 2;
 			else:
@@ -163,11 +157,6 @@ An everyturn rule:
 
 Section 3 - Dirty Whip
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"dirty whip"	"A whip covered with dripping horse cum. It is infectious, and was found abandoned by its owner."	3	dirty whip
-"horse whip"	"A whip you found and cleaned up. It has metal studs on the lash."	2	horse whip
-
 [
 understand "whip" as clean whip.
 Does the player mean using the dirty whip when the dirty whip is owned: it is likely.
@@ -176,26 +165,21 @@ Does the player mean littering the clean whip when the clean whip is owned: it i
 Does the player mean grabbing the dirty whip when the dirty whip is visible: it is likely.
 Does the player mean grabbing the clean whip when the clean whip is visible: it is very likely.
 ]
+[Whip moved to Core Mechanics/Weapons.i7x]
 
-dirty whip is an armament. It is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your messy whip[or]white streak[at random]". The weapon damage of dirty whip is 11. The weapon type of dirty whip is "Melee". It is not temporary.
-
-the scent of dirty whip is "The sticky whip smells of equine cum.".
-
-horse whip is an armament. It is part of the player. It has a weapon "[one of]your whip[or]your studded whip[or]your metallic whip[or]brown streak[at random]". the weapon damage of horse whip is 6. The weapon type of horse whip is "Melee". It is not temporary.
-
-the scent of horse whip is "The horse whip smells of leather and oils.".
 
 Table of GameEventIDs (continued)
 Object	Name
 Destroyed Bushes	"Destroyed Bushes"
 
 Destroyed Bushes is a situation.
-the sarea of Destroyed Bushes is "Park".
+ResolveFunction of Destroyed Bushes is "[ResolveEvent Destroyed Bushes]".
+Sarea of Destroyed Bushes is "Park".
 numwater is a number that varies.
 
-instead of resolving Destroyed Bushes:
+to say ResolveEvent Destroyed Bushes:
 	say "     You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
-	if the humanity of Player < 50:
+	if Humanity of Player < 50:
 		say "     Do you want to drink from the puddles?";
 		if Player consents:
 			infect "Black Equinoid";
@@ -208,7 +192,7 @@ instead of resolving Destroyed Bushes:
 	say "     Do you wish to look around?";
 	if Player consents:
 		say "     In a nearby bush you find a riding saddle and riding boots, both women's. It seems as if a woman went riding in the park when the infection broke out. Her horse changed, and raped her. Since the clearing is larger than if the horse just fucked her, you assume she changed and submitted as well.";
-		if the perception of the player > a random number between one and 20:
+		if Perception of Player > a random number between one and 20:
 			say "     In one of the puddles of cum you find a whip with metal bits strung throughout it. It looks as if the rider carried it, and lost it in the fray. It is currently covered with cum, but if you have enough water, you could change that. Do you wish to?";
 			if Player consents:
 				if carried of water bottle >= 3:

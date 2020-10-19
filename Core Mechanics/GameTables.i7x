@@ -1,8 +1,48 @@
 Version 1 of GameTables by Core Mechanics begins here.
 
+Part 0 - Variables
+
+MonsterID is a number that varies.[@Tag:NotSaved] [line number chosen in the table of random critters]
+JournalNotes is a list of text that varies. [player-made journal notes]
+Allobjs is a list of text that varies.[@NotSaved] [list of all objects in the game]
+
+Part 1 - Table of Game Objects (+Initial Object)
+
+[Game Objects - used to replace the default Inform7 item handling so that no objects are used for items]
+Table of Game Objects
+name(text)	desc(text)	weight(number)	object(object)	sortname (indexed text)
+"journal"	"A small, leather-clad book. Spending some time [link]writing[as]use journal[end link] in it can help clear your thoughts and recenter your troubled mind. Or if you have something especially important that you want to remember, you could just [link]write down a note[as]write a note[end link] at the back end of it. [if number of filled rows in Table of JournalNotes > 0]In fact, you remember noting down some things in it that must have been important somehow. You can [link]browse through your notes[as]browse notes[end link] if you want to. Alternatively, [link]ripping them all out[as]rip notes[end link] is also possible.[end if][line break]"	2	journal
+
+Part 2 - Table of Random Critters (+Initial Infection)
+
+Table of Random Critters
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+false	"Anthro Dragon"	"Anthro Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [Skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [Skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	False	40	""	0	"-"	""	""	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	""	0	"default"	false
+
+When Play begins:
+	add "Anthro Dragoness" to infections of ReptileList;
+	add "Anthro Dragoness" to infections of OviImpregnatorList;
+	add "Anthro Dragoness" to infections of TailweaponList;
+
+Part 3 - Table of New Infection Parts (+Expansion of the Initial Infection above)
+
+Table of New Infection Parts
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+"Anthro Dragon"	"Anthro Dragoness"	4	8	7	"your face draws forward into a reptilian snout, covered in black overlapping scales"	"a sharp-toothed anthro dragoness"	"draconic"	"scaly"	"black"	"pair of spiraling horns"	0	"straight"	"black"	"ponytail"	""	0	"crimson"	"slitted"	10	10	"broad"	"purple"	7	"your torso broadens, with overlapping black scales growing out of your skin to give it an armor-plated look"	"broad, covered in overlapping black scales"	"draconic"	"scale-covered tummy"	"scaled"	"black"	"layered"	"perky"	5	0	2	"scarlet"	"oval"	"a pair of leathery black wings sprout from your upper back, unfolding to stretch wide to your left and right"	"the pair of leathery wings growing from beneath your shoulder-blades"	"scaled"	"black"	"sharp claws sprout from the tips of your fingers and black scales form on the outside of your arms"	"long and plated in overlapping black scales, ending in clawed hands"	"scaled"	"black"	"bipedal"	"black scales garb them into overlapping armor and sharp scales form on your feet"	"long and plated in overlapping black scales, ending in clawed feet"	"scaled"	"black"	"it widens and flexible scales grow to cover its curves"	"ass, covered in flexible black scales"	"scaled"	"black"	4	"A long tail sprouts from your lower back, forming black scales and a spade at the end"	"long, black-scaled tail ending in a spade"	"scaled"	"black"	10	3	"black"	"ridges form along the underside of the shaft, leading up to a pointed tip"	"has a pointed tip and a number of ridges along the underside of the shaft"	"draconic"	"scarlet"	0	0	0	"balls in a firm sack of leathery skin"	0	0	"it takes on a triangular shape, with the clit at the lowest point"	"draconic"	"scarlet"	"triangular in shape, with its clit at the lower point"	1	14	6	3
+
+Part 4 - Journal Notes
+
+[ The player can take notes in their journal ]
 Table of JournalNotes
 Date(number)	Note (text)
 with 1000 blank rows
+
+Part 5 - ID Tables (for the Export/Import System)
+
+[All character IDs - used for export/import system]
+Table of GameCharacterIDs
+object	name
+yourself	"yourself"
 
 Table of TestTable
 Name(text)	ListOfText (list of text)
@@ -36,12 +76,20 @@ Table of GameCharacterVariables
 Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Body Weight(number)	Body Definition(number)	Androginity(number)	Mouth Length(number)	Mouth Circumference(number)	Tongue Length(number)	Breast Size(number)	Nipple Count(number)	Asshole Depth(number)	Asshole Tightness(number)	Cock Count(number)	Cock Girth(number)	Cock Length(number)	Ball Count(number)	Ball Size(number)	Cunt Count(number)	Cunt Depth(number)	Cunt Tightness(number)	Clit Size(number)	Armor(number)	Capacity(number)	SleepRhythm(number)	scalevalue(number)	PlayerLastSize(number)	MainInfection(text)	FirstAnalPartner(text)	FirstVaginalPartner(text)	FirstOralPartner(text)	FirstPenilePartner(text)	Cock Size Desc(text)	Cunt Size Desc(text)	Breast Size Desc(text)	Short Breast Size Desc(text)	Originalgender(text)	PlayerOriginalgender(text)	PlayerLastGender(text)	PlayerLastBodytype(text)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFriended(truth state)	PlayerControlled(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)	PenileVirgin(truth state)	SexuallyExperienced(truth state)	TwistedCapacity(truth state)	Sterile(truth state)
 with 1000 blank rows
 
+Table of GameCharacterVariable2
+Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Armor(number)	Weapon Damage(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Body Weight(number)	Body Definition(number)	Androginity(number)	Mouth Length(number)	Mouth Circumference(number)	Tongue Length(number)	Breast Size(number)	Nipple Count(number)	Asshole Depth(number)	Asshole Tightness(number)	Cock Count(number)	Cock Girth(number)	Cock Length(number)	Ball Count(number)	Ball Size(number)	Cunt Count(number)	Cunt Depth(number)	Cunt Tightness(number)	Clit Size(number)	Capacity(number)	SleepRhythm(number)	scalevalue(number)	PlayerLastSize(number)	MainInfection(text)	FirstAnalPartner(text)	FirstVaginalPartner(text)	FirstOralPartner(text)	FirstPenilePartner(text)	Cock Size Desc(text)	Cunt Size Desc(text)	Breast Size Desc(text)	Short Breast Size Desc(text)	Originalgender(text)	PlayerOriginalgender(text)	PlayerLastGender(text)	PlayerLastBodytype(text)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFriended(truth state)	PlayerControlled(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)	PenileVirgin(truth state)	SexuallyExperienced(truth state)	TwistedCapacity(truth state)	Sterile(truth state)
+with 1000 blank rows
+
 Table of PlayerData
 skin(text)	SkinName(text)	cock(text)	CockName(text)	face(text)	FaceName(text)	tail(text)	TailName(text)	body(text)	BodyName(text)	scent(text)	Cock Size Desc(text)	Cunt Size Desc(text)	Breast Size Desc(text)	Short Breast Size Desc(text)	bodydesc(text)	bodytype(text)
 with 1 blank row
 
 Table of NewPlayerData
 bodySpeciesName(text)	faceSpeciesName(text)	skinSpeciesName(text)	HeadName(text)	HeadSpeciesName(text)	Head Description(text)	Head Adjective(text)	Head Skin Adjective(text)	Head Color(text)	Head Adornments(text)	Hair Length(number)	Body Hair Length(number)	Hair Shape(text)	Hair Color(text)	Hair Style(text)	Beard Style(text)	Eye Color(text)	Eye Adjective(text)	Tongue Adjective(text)	Tongue Color(text)	TorsoName(text)	TorsoSpeciesName(text)	Torso Description(text)	Torso Adjective(text)	Torso Skin Adjective(text)	Torso Color(text)	Torso Pattern(text)	Breast Adjective(text)	Torso Adornments(text)	Nipple Color(text)	Nipple Shape(text)	BackName(text)	BackSpeciesName(text)	Back Adornments(text)	Back Skin Adjective(text)	Back Color(text)	ArmsName(text)	ArmsSpeciesName(text)	Arms Description(text)	Arms Skin Adjective(text)	Arms Color(text)	Locomotion(text)	LegsName(text)	LegsSpeciesName(text)	Legs Description(text)	Legs Skin Adjective(text)	Legs Color(text)	AssName(text)	AssSpeciesName(text)	Ass Description(text)	Ass Skin Adjective(text)	Ass Color(text)	Ass Width(number)	TailName(text)	TailSpeciesName(text)	Tail Description(text)	Tail Skin Adjective(text)	Tail Color(text)	Asshole Color(text)	CockName(text)	CockSpeciesName(text)	Cock Description(text)	Cock Adjective(text)	Cock Color(text)	Ball Description(text)	CuntName(text)	CuntSpeciesName(text)	Cunt Description(text)	Cunt Adjective(text)	Cunt Color(text)	MaleInterest(truth state)	TransMaleInterest(truth state)	FemaleInterest(truth state)	TransFemaleInterest(truth state)	HermInterest(truth state)
+with 1 blank row
+
+Table of SexStats
+OralPussyGiven(number)	OralPussyTaken(number)	OralCockGiven(number)	OralCockTaken(number)	AssFuckGiven(number)	AssFuckTaken(number)	PussyFuckGiven(number)	PussyFuckTaken(number)
 with 1 blank row
 
 Table of ChildData
@@ -135,6 +183,7 @@ Name(text)	Type(text)
 "AlexandraKarelPups"	"number"
 "AlexandraIsaacPups"	"number"
 "AlexandraFarmhandPups"	"number"
+"AlexandraNelsonPups"	"number"
 "AlexandraCarlInteraction"	"number"
 "AlexandraCarlPups"	"number"
 "AlexandraCreampieCount"	"number"
@@ -358,7 +407,6 @@ Name(text)	Type(text)
 "DiegoButtSlut"	"number"
 "DiegoChanged"	"number"
 "DiegoFucked"	"number"
-"Diegotalk"	"number"
 "dinonest"	"number"
 "dnfightresult"	"number"
 "dobielibido"	"number"
@@ -508,7 +556,6 @@ Name(text)	Type(text)
 "FratPartyRecruiterProgression"	"number"
 "frbatbeaten"	"number"
 "freecred"	"number"
-"Freefeats"	"number"
 "FriesianRelationship"	"number"
 "fsdbias"	"number"
 "fsddom"	"number"
@@ -543,8 +590,6 @@ Name(text)	Type(text)
 "Ginatalk"	"number"
 "givingupton"	"number"
 "GloryFate"	"number"
-"glshiftstart"	"number"
-"glstart"	"number"
 "gobgender"	"number"
 "goblinfight"	"number"
 "GooColossusProgress"	"number"
@@ -565,9 +610,7 @@ Name(text)	Type(text)
 "gsd_encounters"	"number"
 "gsd_pet"	"number"
 "gsd_var"	"number"
-"gsexit"	"number"
-"gsgl"	"number"
-"gsgt"	"number"
+"GenderLock"	"number"
 "gshep_bed_scene"	"number"
 "gshep_fights"	"number"
 "gshep_inactive"	"number"
@@ -575,8 +618,6 @@ Name(text)	Type(text)
 "gshep_sexscene"	"number"
 "GShepLastScene"	"number"
 "gshepsquad"	"number"
-"gsms"	"number"
-"gspg"	"number"
 "GusTalkProgress"	"number"
 "hadiyafucked"	"number"
 "hagfeat"	"number"
@@ -714,6 +755,16 @@ Name(text)	Type(text)
 "KyrverthQuestGiven"	"number"
 "KyrverthStage"	"number"
 "KyrverthTimer"	"number"
+"Kyrverthitemget"	"number"
+"KyrverthItemReturned"	"number"
+"KyrverthNutGrowth"	"number"
+"KyrverthSpikeGrowth"	"number"
+"KyrverthWingType"	"number"
+"KyrverthCockType"	"number"
+"KyrverthLockoutTimer"	"number"
+"KyrverthEndingTimer"	"number"
+"KyrverthBodyChanged"	"number"
+"KyrverthPanicWitnessed"	"number"
 "labhost"	"number"
 "labtimerA"	"number"
 "labtimerB"	"number"
@@ -758,7 +809,6 @@ Name(text)	Type(text)
 "lastDavidSarahInteraction"	"number"
 "Lastdelaymilitary"	"number"
 "lastdenevent"	"number"
-"LastDiegoTricked"	"number"
 "lastdobiemess"	"number"
 "LastDrinkserved"	"number"
 "lastDrMousefucked"	"number"
@@ -866,9 +916,9 @@ Name(text)	Type(text)
 "LoganCommand"	"number"
 "LOK"	"number"
 "longboatfind"	"number"
-"looknow"	"number"
 "Lost"	"number"
 "losttoalphahusky"	"number"
+"lostToHorseman"	"number"
 "LostToZebra"	"number"
 "loversbench"	"number"
 "lustadjust"	"number"
@@ -914,7 +964,6 @@ Name(text)	Type(text)
 "MMC"	"number"
 "MMP"	"number"
 "mondodgebonus"	"number"
-"monhitbonus"	"number"
 "monmindbonus"	"number"
 "monstercom"	"number"
 "monsterHP"	"number"
@@ -1105,7 +1154,6 @@ Name(text)	Type(text)
 "PowerUpDrugTrip"	"number"
 "pquest"	"number"
 "pr_completion"	"number"
-"prankevent"	"number"
 "pregtype"	"number"
 "provingstallionhood"	"number"
 "psycheadjust"	"number"
@@ -1167,6 +1215,7 @@ Name(text)	Type(text)
 "ScottyRelationship"	"number"
 "scufflecount"	"number"
 "sdbook"	"number"
+"searchesUtSit"	"number"
 "SeraphisContent"	"number"
 "SeraphisNeedy"	"number"
 "SeraphisRelationship"	"number"
@@ -1246,8 +1295,6 @@ Name(text)	Type(text)
 "StewartRelationship"	"number"
 "stiffedpayment"	"number"
 "strangebottledrink"	"number"
-"stripbarcounter"	"number"
-"strongbacked"	"number"
 "struggleatt"	"number"
 "sugarferretfight"	"number"
 "supermarketcount"	"number"
@@ -1609,7 +1656,7 @@ Name(text)	Type(text)
 "blanchetalk1"	"truth state"
 "blanchetalk2"	"truth state"
 "blanchetalk3"	"truth state"
-"blindmode"	"truth state"
+"BlindMode"	"truth state"
 "bloblost"	"truth state"
 "bopseen"	"truth state"
 "BorisArtemistalk"	"truth state"
@@ -1683,18 +1730,14 @@ Name(text)	Type(text)
 "gobdem"	"truth state"
 "graphics"	"truth state"
 "grhouse"	"truth state"
-"gsbm"	"truth state"
 "gsd_attack"	"truth state"
 "gsd_fled"	"truth state"
 "gsd_male"	"truth state"
 "gsd_slut"	"truth state"
 "gsd_special"	"truth state"
-"gshep_scarscene"	"truth state"
-"gshm"	"truth state"
-"gsnhm"	"truth state"
 "HadGusBackgroundTalk"	"truth state"
 "hadiyahyg"	"truth state"
-"Hardmode"	"truth state"
+"HardMode"	"truth state"
 "heat enabled"	"truth state"
 "heatturnskipper"	"truth state"
 "hobo-food-gift"	"truth state"
@@ -1725,6 +1768,10 @@ Name(text)	Type(text)
 "kristenmsg5"	"truth state"
 "kristentf3fuck"	"truth state"
 "ktcockmatch"	"truth state"
+"KyrverthItemStealable"	"truth state"
+"KyrverthItemTaken"	"truth state"
+"KyrverthQuestHairGiven"	"truth state"
+"KyrverthUsedArtifact"	"truth state"
 "LarissaTailed"	"truth state"
 "LarissaWinged"	"truth state"
 "LastTurnDay"	"truth state"
@@ -1770,7 +1817,7 @@ Name(text)	Type(text)
 "NewGraphicsDebugMode"	"truth state"
 "NewGraphicsOpened"	"truth state"
 "nmformswitch"	"truth state"
-"nohealmode"	"truth state"
+"NoHealMode"	"truth state"
 "nosquirrelanal"	"truth state"
 "obliging"	"truth state"
 "onyxhappytalk"	"truth state"
@@ -1805,7 +1852,6 @@ Name(text)	Type(text)
 "SarahTehuantl"	"truth state"
 "sblzephyr"	"truth state"
 "SerenityVore"	"truth state"
-"showlocale"	"truth state"
 "sidneyanal"	"truth state"
 "sidneyformtalk"	"truth state"
 "sidneytalk1"	"truth state"

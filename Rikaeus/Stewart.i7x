@@ -30,7 +30,7 @@ Object	Name
 The Clouds	"The Clouds"
 
 The Clouds is a room. It is private.
-The description of The Clouds is "[CloudDesc]"
+Description of The Clouds is "[CloudDesc]"
 
 to say CloudDesc:
 	say "     Taking a good look around, you notice that all you can really see is clouds for miles. However, it isn't completely empty. No, rather you see groups of flight-capable people hanging out up where you are. Most of them appear to be college students, which is to be expected as this area [italic type]is[roman type] above the belltower. Just like below, you also catch the occasional group having sex out in the open, something that draws your attention before you quickly look away.";
@@ -63,7 +63,7 @@ Object	Name
 Stewart's Room	"Stewart's Room"
 
 Stewart's Room is a room. It is private.
-The description of Stewart's Room is "[StewartRoomDesc]"
+Description of Stewart's Room is "[StewartRoomDesc]"
 
 to say StewartRoomDesc:
 	say "     The first thing you notice about the harpy-boy's room are the bookshelves that line the walls to the brim. If you hadn't already studied with the guy, you'd think he was a book nut. Instead you know that he's just enthusiastic about his grades. Thankfully, at least for your horny mind, Stewart's bed isn't covered in literary tomes of knowledge. Otherwise that'd make it really difficult to have sex.";
@@ -117,8 +117,8 @@ AnalVirgin of Stewart is true.
 PenileVirgin of Stewart is true.
 SexuallyExperienced of Stewart is false.
 MainInfection of Stewart is "".
-The description of Stewart is "[StewartDesc]".
-The conversation of Stewart is { "<this is nothing but a placeholder!>" }.
+Description of Stewart is "[StewartDesc]".
+Conversation of Stewart is { "<this is nothing but a placeholder!>" }.
 The scent of Stewart is "The harpy-boy smells of that new book scent as well as an undertone of green apples.".
 
 to say StewartDesc:

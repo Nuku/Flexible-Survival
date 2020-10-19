@@ -1,11 +1,11 @@
 Version 1 of Genevieve by Prometheus begins here.
 
-[   hp of Genevieve                                    ]
+[   HP of Genevieve                                    ]
 [   0: not met                                         ]
 [   1: met and moved into Green Apartment Building     ]
 
 an everyturn rule:
-	if hp of Otto > 3:
+	if HP of Otto > 3:
 		if a random chance of 1 in 2 succeeds:
 			move Genevieve to Otto's Apartment;
 		else:
@@ -17,14 +17,49 @@ Table of GameCharacterIDs (continued)
 object	name
 Genevieve	"Genevieve"
 
-Genevieve is a woman. The hp of Genevieve is usually 0.
-The description of Genevieve is "[GenevieveDesc]".
-The conversation of Genevieve is { "Interesting" }.
-The scent of Genevieve is "     Genevieve smells of a floral perfume, though there are traces coffee behind it.".
+Genevieve is a woman.
+ScaleValue of Genevieve is 3. [human sized]
+Body Weight of Genevieve is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Genevieve is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Genevieve is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Genevieve is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Genevieve is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Genevieve is 5. [length in inches]
+Breast Size of Genevieve is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Genevieve is 2. [count of nipples]
+Asshole Depth of Genevieve is 8. [inches deep for anal fucking]
+Asshole Tightness of Genevieve is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Genevieve is 0. [number of cocks]
+Cock Girth of Genevieve is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Genevieve is 0. [length in inches]
+Ball Count of Genevieve is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Genevieve is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Genevieve is 1. [number of cunts]
+Cunt Depth of Genevieve is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Genevieve is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Genevieve is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Genevieve is false.
+PlayerRomanced of Genevieve is false.
+PlayerFriended of Genevieve is false.
+PlayerControlled of Genevieve is false.
+PlayerFucked of Genevieve is false.
+OralVirgin of Genevieve is false.
+Virgin of Genevieve is true.
+AnalVirgin of Genevieve is true.
+PenileVirgin of Genevieve is true.
+SexuallyExperienced of Genevieve is true.
+TwistedCapacity of Genevieve is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Genevieve is true. [steriles can't knock people up]
+MainInfection of Genevieve is "".
+Description of Genevieve is "[GenevieveDesc]".
+Conversation of Genevieve is { "Interesting" }.
+The scent of Genevieve is "     Genevieve smells of a floral perfume, though there are traces coffee behind it."
 
 to say GenevieveDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Genevieve] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Genevieve] <- DEBUG[line break]";
 	say "     The petite anthro fox might be considered pretty if it weren't for the horrible scarring up one side of her face. Despite this blemish, she seems to have a cheerful disposition, joking about her scar to show that you no one needs to be awkward about it. She is covered in black fur that appears to be well groomed and cared for. Two forest-green eyes twinkle as you study her, gazing leisurely around the room. She is dressed in a navy-blue skirt and a white short-sleeved shirt with a red cross above her left breast. You note that her claws are well maintained as she folds her arms, unintentionally accentuating her bust. From a cursory look, you would say they are B maybe C cup, but a raised eyebrow from her interrupts your judgment.";
 
 Section 2 - Talking

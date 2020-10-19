@@ -9,7 +9,8 @@ Object	Name
 Curious Pearl	"Curious Pearl"
 
 Curious Pearl is a situation.
-The sarea of Curious Pearl is "Beach".
+ResolveFunction of Curious Pearl is "[ResolveEvent Curious Pearl]".
+Sarea of Curious Pearl is "Beach".
 The level of Curious Pearl is 5. [minimum level to find the event]
 Curious Pearl is inactive.
 
@@ -18,7 +19,7 @@ when play begins:
 	add Curious Pearl to BadSpots of FurryList;
 	add Curious Pearl to BadSpots of FeralList;
 
-Instead of resolving Curious Pearl:
+to say ResolveEvent Curious Pearl:
 	if KyrverthStage is 3:
 		say "     Remembering Kyrverth's desire for treasure, you look around whether you can find anything. Somehow you know that something is under one of those rocks; it's hidden within the sand in plain sight. What you pull out has your mouth agape - a large sphere that lacks any color. In fact, this orb even seems to absorb most of light that hits its smooth, pitch black surface. Some of the light is still reflected, leaving a brilliant shimmer. Turning it with your hands, this thing does really seem to be perfect with its spherical shape. At some point you blink rapidly as some reflected [if daytimer is day]sunlight[else]moonlight[end if] directly shines into your eyes. You feel a bit confused and spaced out, as if everything you were doing before is gone. Judging by the [if daytimer is day]sun[else]moon[end if], you do seem to have been standing around here for a while. This pearl seems to have an influence over you, and you don't know whether carrying it around is a good idea...";
 		say "     [bold type]Will you take it?[roman type][line break]";
@@ -44,8 +45,8 @@ name	desc	weight	object
 "Black Pearl"	"It's a sphere with a smooth, reflective surface lacking in any color. It's slightly smaller than a soccer ball, which leaves you wondering how large the oyster containing this must have been, yet you have a feeling that the origin of this pearl is something different"	3	Black Pearl
 
 Black Pearl is a grab object.
-the usedesc of Black Pearl is "[blackpearlusing]".
-it is part of the player.
+Usedesc of Black Pearl is "[blackpearlusing]".
+
 It is temporary.
 
 instead of sniffing the Black Pearl:

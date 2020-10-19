@@ -45,7 +45,7 @@ to say Tigertaur Loses:
 		If thirst of Player > 30:
 			say "     Defeated, the tigertaur growls in disbelief before turning tail to flee. Feeling your thirst start to overcome you, you think about how the tigertaur's rich and thick milk would satisfy you and you wonder if maybe you could try and stop the creature from leaving so you can get a quick drink. Is it worth the chance of infection though?";
 			if Player consents:
-				say "     Feeling bold, you quickly grab the stripped feline by the tail, halting hir from running off. Muscle tensing in aggravation, you watch nervously as the other swivels hir head around to glare at you warningly. Not wanting to get into another fight with the predatory feline, you reach a hand up to paw at the tigertaur's full breast to show hir your intention. Slowly the feline's glare shifts into a mask of [one of]confusion[or]bemusement[or]understanding[or]concern[at random] before it slips its tail from your grasp and turns it's tauric form towards you giving you complete access to her upper torso. [one of]Gently you[or]Cautiously you[or]Eagerly you[at random] continue to palm the same breast you had been playing with before, tugging at the nipple hidden beneath the tawny fur to help the feline's milk within flow outward, before you reach out to nuzzle your [FaceName of Player] nose into the tiger herm's [one of]firm[or]muscular[or]deceptively soft[at random] abdomen.";
+				say "     Feeling bold, you quickly grab the stripped feline by the tail, halting her from running off. Muscle tensing in aggravation, you watch nervously as the other swivels her head around to glare at you warningly. Not wanting to get into another fight with the predatory feline, you reach a hand up to paw at the tigertaur's full breast to show her your intention. Slowly the feline's glare shifts into a mask of [one of]confusion[or]bemusement[or]understanding[or]concern[at random] before it slips its tail from your grasp and turns it's tauric form towards you giving you complete access to her upper torso. [one of]Gently you[or]Cautiously you[or]Eagerly you[at random] continue to palm the same breast you had been playing with before, tugging at the nipple hidden beneath the tawny fur to help the feline's milk within flow outward, before you reach out to nuzzle your [FaceName of Player] nose into the tiger herm's [one of]firm[or]muscular[or]deceptively soft[at random] abdomen.";
 				WaitLineBreak;
 				say "     A calm, yet demanding paw reaches out to grab the back of your head, forcing your face to ride up into the tigertaur's buxom chest. Without hesitation you latch your lips around her firm teat to begin nursing from the feline, your [FaceName of Player] tongue stroking along the length of the firm mound of flesh to help the milk flow deep into your throat. A rumbling growl rents the air as the tigertaur pulls your head closer into her chest as the sensations of having her milk filled breast empty out into your mouth makes her tail lash wildly behind her. Stroking the feline's tit while at the same time nuzzling into her chest, you make a soft hum into the back of your throat which cause the muscles of the tigertaur's breast to dribble more and more creamy tiger milk down into your belly.";
 				WaitLineBreak;
@@ -70,8 +70,8 @@ to say TigertaurDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -94,7 +94,7 @@ When Play begins:
 	now desc entry is "[TigertaurDesc]";
 	now face entry is "sleek tiger-like head, your muzzle and feline countenance almost completely unrecognizable from that of a regular tiger's"; [You have a (your text) face."]
 	now body entry is "lean and strong, with a relatively humanlike torso resting atop your strong furred tiger lower body, your four tiger paws easily gripping the ground as you prowl along"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a long, tiger-like tail extending from just above your rear, lashing back and forth in excitement and need with every step you take."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feline[or]Tiger[or]barbed[or]tigertaur[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "a pleasurable stretching sensation comes over your face, as your teeth begin to sharpen and length, and your jaw extends outward the muscles rearranging themselves into the powerful configuration of a tiger. Your nose twitches as it merges with your muzzle, new scents of sex and prey exploding into your head, as your eyes shift and become those of a great hunting cat. Finally your ears finishing shifting to their new place on top of your head having pulled and shaped themselves into proper tiger ears, as your face finishes up its changes into a proper tiger face"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -122,9 +122,13 @@ When Play begins:
 	now Cunt Count entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12;
 	now Cunt Tightness entry is 4;
-	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 70;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "lucky horseshoe";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]exotic[or]tauric[at random]";
 	now type entry is "[one of]feline[or]tigrine[or]tigertaur[at random]";
@@ -139,7 +143,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

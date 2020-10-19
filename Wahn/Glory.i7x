@@ -21,13 +21,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Refugee Mare	"Refugee Mare"
 
-Refugee Mare is a situation. Refugee Mare is inactive.
-The sarea of Refugee Mare is "Smith Haven".
+Refugee Mare is a situation.
+ResolveFunction of Refugee Mare is "[ResolveEvent Refugee Mare]". Refugee Mare is inactive.
+Sarea of Refugee Mare is "Smith Haven".
 
 when play begins:
 	add Refugee Mare to BadSpots of FurryList;
 
-Instead of resolving a Refugee Mare:
+to say ResolveEvent Refugee Mare:
 	if GloryFate is 0:
 		say "     As you make your way through the hallways of the mall, checking out what goes on in the expansive building, you eventually do a circuit through the food court. The typical thick crowd of people is milling around inside, with countless species and hybrids in appearance, busy eating or just hanging out together. Letting your gaze sweep over the crowd, your attention is soon drawn to a somewhat bedraggled-looking human-horsewoman hybrid just outside the glass entry doors to the mall. From what you can see at a distance, she has fully equine legs, hooves and a tail, while her upper body is still overwhelmingly human. She is talking to [if LoganCommand > 0]Logan, the bad apple of a wolverine guard banished outside to guard the exterior approaches[else]a wolverine guard[end if]. He quickly waves her through, but as she pulls the door open for herself, the guy steps up and slaps her ass with a lecherous grin on his face.";
 		say "     The slap has quite an effect on the young woman, as she yelps in shock and bolts away from him, running forwards into the building. She dashes through the gaps between people, brushing right past you in her haste, until her path makes her collide headlong with the back of a tall man, bringing her to a full stop. The towering guy she ran into (a Clydesdale stud horseman, dressed in nothing more than a pair of somewhat threadbare jeans) turns around and grumbles in annoyance, which provokes an extreme reaction from the frightened woman. She screams and backs away from him, stumbling as she does so and falling to the ground. The horseman gives a puzzled look to the distraught hybrid woman, then shrugs and continues on his way. This leaves the young woman behind all alone, huddled up on the floor and sobbing.";
@@ -166,6 +167,7 @@ to say GloryChoice1: [player charm]
 	now Refugee Mare is resolved;
 
 to say GloryChoice2: [Christmas Village]
+	project the Figure of SantaClaws_face_icon;
 	say "     As you tell Glory that you know just the place for her, the young woman is rather suspicious at first, but after a little talking to, she lets you lead her deeper into the mall. Soon arriving in the east wing, the hybrid mare looks up in wonder as you near the wall of falling snowflakes that marks the entrance of the Christmas Village and she literally squeals in joy as she sees what lies beyond. Santa Claws awaits the two of you on his large throne and he gives a friendly 'Ho ho ho' as he waves the two of you closer. Introducing Glory to him and explaining that she needs a place to stay where she can feel safe and protected once more, you earn a knowing nod from Santa, who smiles and then stands up to give his visitor a welcoming hug, saying that she can stay as long as she wants.";
 	say "     With some quickly summoned elves guiding Glory away to her new home in one of the block-houses, the bear clears his throat and watches her go, then turns back to you. 'Thank you for taking care of her and guiding Glory here. She will be safe, that I can promise you. At the same time, those who have been hit as hard as her rarely want to leave the Christmas Village again, instead preferring to stay as new elves in my domain. We will see how things turn out with her, but I wanted to tell you what you can expect.'";
 	now GloryFate is 10; [brought to Christmas Village]
@@ -178,7 +180,7 @@ to say GloryChoice3:
 	WaitLineBreak;
 	say "     Noticing your interest from the corner of his eye, Moreau gives a little wave to a nearby mannequin and says casually, 'This will take a little while. Why don't you sit down.' And with that, he gives his full attention to Glory again, while a mannequin showing off a minotaur's stature guides you over to a bench some distance away, eerily silent in its insistence that you sit and wait there. Some time later, Moreau clears his throat and guides Glory's hand to his lips to kiss it. 'Such a pleasure to meet you, miss. Has anyone ever told you that you have quite beautiful eyes?' The equine hybrid's eyes flutter as if she is just awaking from a deep sleep, with Glory then smiling and rubbing the back of her neck. 'Oh, thank you, mister Moreau. That is very nice of you to say. And what an interesting store you have. Er, why was I here again?'";
 	say "     The naga smiles and waves over to you as he says, 'Your friend over there brought you, remember? As a newcomer to the mall, you do still need a place to stay after all. I can offer you that, as well as a job. You see, my assistants are obedient, but just a bit empty-headed.' Slithering to the side, Moreau lightly taps the head of the nearest mannequin, creating a hollow sound. 'I could use someone to count the profits. If you work well, I'm sure you'll be able to afford a... different body than that part-equine one soon. My dear, you'd look lovely as a nymph.' You join the two of them and talk a bit with Glory, who seems enormously more stable than just a little while ago, and quite eager for her new job in the Body Shop. Smiling and thanking you for bringing her there, the young woman gives you a quick hug, then moves into the back of the store, where she starts to take stock of Moreau's goods.";
-	WaitlineBreak;
+	WaitLineBreak;
 	say "     Glancing over to Glory, Moreau follows her eager activity for a few seconds, then half-turns his head to you. 'I didn't change too much, if you're worried about that. Just softened the raw and jagged bits to make her whole again. It was good of you to bring the lovely girl to me, you have no idea what she was ready to do if this hadn't worked out. You won't have to worry about that anymore now.' With that said, the naga shopkeeper changes topics and directs your attention to his newer mannequins instead, happily offering you to buy what parts interest you.";
 	now GloryFate is 20; [brought to Moreau]
 	now Resolution of Refugee Mare is 5; [Glory brought to Moreau]

@@ -34,14 +34,15 @@ Object	Name
 HypnoGeeks	"HypnoGeeks"
 
 HypnoGeeks is a situation.
+ResolveFunction of HypnoGeeks is "[ResolveEvent HypnoGeeks]".
 The level of HypnoGeeks is 5. [minimum level to find the event]
-The sarea of HypnoGeeks is "Campus".
+Sarea of HypnoGeeks is "Campus".
 
 when play begins: [flags for blocking this event]
 	add HypnoGeeks to BadSpots of MaleList;
 	add HypnoGeeks to BadSpots of FurryList;
 
-Instead of resolving a HypnoGeeks:
+to say ResolveEvent HypnoGeeks:
 	say "     Making your way through the campus grounds isn't as difficult as the rest of the city, but you make sure to keep your guard up. A couple of half-dressed stags stumble out of a nearby building, antlers locking together as they wrestle for dominance and move onto the front lawn. It's a situation that isn't exactly strange these days, but two bucks in rut is still something that you'd rather avoid. Crossing the street, you plan to keep moving forward, but you pause when you hear a loud yelp and a short scuffle. Something's going on around the back side of the building, and unless the collectively sixteen points of buck back there lose interest in each other long enough to hear what's going on, you're the only one that might be able to help.";
 	LineBreak;
 	say "     [bold type]Someone could be in serious danger. Do you want to investigate?[roman type][line break]";
@@ -218,7 +219,7 @@ name	desc	weight	object
 the scent of defective device is "The device smells like burnt metal.".
 
 defective device is a grab object. defective device is not temporary.
-the usedesc of defective device is "[DefectiveDeviceUse]";
+Usedesc of defective device is "[DefectiveDeviceUse]";
 
 to say DefectiveDeviceUse:
 		say "     You attempt to make use of the device, pushing some buttons. Sadly, the only result is a bit of a burned smell and a strange sound from inside the box.";

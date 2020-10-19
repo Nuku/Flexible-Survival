@@ -9,12 +9,13 @@ Object	Name
 Gryphon Milkman	"Gryphon Milkman"
 
 Gryphon Milkman is a scavevent.
-The sarea of Gryphon Milkman is "Outside".
+ResolveFunction of Gryphon Milkman is "[ResolveEvent Gryphon Milkman]".
+Sarea of Gryphon Milkman is "Outside".
 when play begins:
 	add Gryphon Milkman to BadSpots of FurryList;
 	add Gryphon Milkman to badspots of HermList;
 
-Instead of resolving a Gryphon Milkman:
+to say ResolveEvent Gryphon Milkman:
 	project the figure of Garrett_icon;
 	say "     As you're out and about looking for supplies, you hear the flapping of wings overhead. Before you can do much more than look up, a gryphon lands in front of you. This specimen looks like a pure male, judging from the flat manly chest and the half-hard cock between his legs. He's wearing only a white peaked cap and a wire carrier with several bottles.";
 	say "     'Here, have some milk - it's good for you,' he tells you cheerfully, pushing a milk bottle into your hand and tipping his hat to you. Then he jumps in the air and flies away, leaving you standing there alone.";
@@ -27,12 +28,13 @@ Object	Name
 Free Milk	"Free Milk"
 
 Free Milk is a scavevent.
-The sarea of Free Milk is "Outside".
+ResolveFunction of Free Milk is "[ResolveEvent Free Milk]".
+Sarea of Free Milk is "Outside".
 when play begins:
 	add Free Milk to BadSpots of FurryList;
 	add Free Milk to badspots of HermList;
 
-Instead of resolving a Free Milk:
+to say ResolveEvent Free Milk:
 	say "     Your search for edible items leads you into a residential area. As you stand in the middle of the local street, trying to decide which house might contain something useful, you suddenly realize something - there's a milk bottle standing in front of the door of the house over there - and it's full. Walking over to the house, you take the bottle. It has a blue and silver label with the text [']QaL Dairy[']. The milk is rather cold and smells delicious, but there is a faint smell of something almost otherworldly. You can't help but wonder where it came from. You'd have thought that with the apocalypse and all, deliveries by the milkman would stop, and are there even any cows left with these changing infections?";
 	ItemGain gryphon milk by 1;
 	now Free Milk is resolved;
@@ -42,12 +44,13 @@ Object	Name
 Abandoned Milk	"Abandoned Milk"
 
 Abandoned Milk is a scavevent.
-The sarea of Abandoned Milk is "Outside".
+ResolveFunction of Abandoned Milk is "[ResolveEvent Abandoned Milk]".
+Sarea of Abandoned Milk is "Outside".
 when play begins:
 	add Abandoned Milk to BadSpots of FurryList;
 	add Abandoned Milk to badspots of HermList;
 
-Instead of resolving a Abandoned Milk:
+to say ResolveEvent Abandoned Milk:
 	say "     Your search for edible items leads you into a playground and you see near a bench some men's clothing partially torn, as is the wearer had ripped out of them as they changed form. The back of the shirt is badly shredded, almost as if wings or similar had erupted out their back.";
 	say "     On the bench you see an empty milk bottle lying on its side. You also see an intact a milk bottle standing there - and it's full! Walking over to the bench, you take the bottle, it has a blue silver label with the text [']QaL Dairy[']. The milk is rather cold and smells delicious but there is a faint smell of something almost otherworldly. You wonder what became of the person who drank the other bottle, and hope they are happy however they look now!";
 	ItemGain gryphon milk by 1;
@@ -61,8 +64,8 @@ object	name
 Garrett	"Garrett"
 
 Garrett is a man. Garrett is in Qytat Plaza.
-The description of Garrett is "[garrettdesc]".
-The conversation of Garrett is { "Milk!" }.
+Description of Garrett is "[garrettdesc]".
+Conversation of Garrett is { "Milk!" }.
 the scent of the Garrett is "This blue gryphon's scent is quite manly, though there's also the alluring scent of the [']milk['] he delivers as well.".
 The icon of Garrett is Figure of Garrett_icon.
 garrettinfo1 is a truth state that varies. garrettinfo1 is usually false.
@@ -363,10 +366,10 @@ name	desc	weight	object
 
 gryphon cum is a grab object. gryphon cum is temporary. gryphon cum is cum.
 
-The usedesc of gryphon cum is "[drinkgryphoncum]";
+Usedesc of gryphon cum is "[drinkgryphoncum]";
 
 to say drinkgryphoncum:
-	say "[line break]     Popping the top off the bottle, you catch the heady and arousing scent of masculine gryphon cum. It makes your mouth water and you quickly start guzzling it down. The refined semen drink has a strong, exciting flavor that is also refreshing and satisfying.";
+	say "     Popping the top off the bottle, you catch the heady and arousing scent of masculine gryphon cum. It makes your mouth water and you quickly start guzzling it down. The refined semen drink has a strong, exciting flavor that is also refreshing and satisfying.";
 	increase Libido of Player by 5;
 	PlayerDrink 6;
 	PlayerEat 3;

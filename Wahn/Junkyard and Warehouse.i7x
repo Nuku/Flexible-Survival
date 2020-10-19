@@ -18,7 +18,7 @@ Abandoned Lot	"Abandoned Lot"
 Abandoned Lot is a room.
 Abandoned Lot is fasttravel.
 The earea of Abandoned Lot is "Outside".
-the description of Abandoned Lot is "[LotDesc]".
+Description of Abandoned Lot is "[LotDesc]".
 
 to say LotDesc:
 	say "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the nanite outbreak, this place clearly off the beaten path and ill-used. Bordering the lot are a series of broken-down, graffiti-colored warehouses. Old 'Authorized Personnel Only' signs lay on the ground.";
@@ -117,7 +117,7 @@ Instead of entering the Storage Room:
 	try going south;
 
 Instead of going through the Warehouse Door:
-	if location of the player is the Abandoned Lot:
+	if Location of Player is the Abandoned Lot:
 		try going south;
 	else:
 		move player to the Abandoned Lot;
@@ -144,7 +144,7 @@ Instead of going south from the Abandoned Lot:
 				let changed be false;
 				if the player is not skintone human:
 					now changed is true;
-				if the tail of the player is not "":
+				if the tail of Player is not "":
 					now changed is true;
 				if the player is not bodily human:
 					now changed is true;
@@ -195,7 +195,7 @@ Junkyard Alley	"Junkyard Alley"
 
 Junkyard Alley is a room.
 The earea of Junkyard Alley is "Outside".
-the description of Junkyard Alley is "[JunkAlleyDesc]"
+Description of Junkyard Alley is "[JunkAlleyDesc]"
 
 Junkyard Alley is southeast of Abandoned Lot.
 
@@ -249,8 +249,8 @@ SexuallyExperienced of Steven is true.
 TwistedCapacity of Steven is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Steven is false. [steriles can't knock people up]
 MainInfection of Steven is "Morgan Horse Stallion".
-The description of Steven is "[StevenDesc]".
-The conversation of Steven is { "<This is nothing but a placeholder!>" }.
+Description of Steven is "[StevenDesc]".
+Conversation of Steven is { "<This is nothing but a placeholder!>" }.
 The fuckscene of Steven is "[sexwithSteven]".
 
 to say StevenDesc:
@@ -661,7 +661,8 @@ Object	Name
 Old Stallion Friendship	"Old Stallion Friendship"
 
 Old Stallion Friendship is a situation.
-The sarea of Old Stallion Friendship is "Nowhere".
+ResolveFunction of Old Stallion Friendship is "".
+Sarea of Old Stallion Friendship is "Nowhere".
 
 instead of going southeast from Abandoned Lot while (Resolution of Old Stallion Friendship is 0 and Steven is in Steven's Home):
 	say "     Scrounging around you find scratches along the ground nearest a wall, coincidentally it's the wall of the inhabited warehouse. The scratches form a sort of semicircle of chipped granite and whitened pavement. Looking a bit closer you can see a loose bit of aluminum siding, and as you pull at it you can hear the sounds of people on the other side. You even peak around the edge to see the people meandering around inside. [bold type]Maybe this would help Steven get back.[roman type][line break]";
@@ -715,8 +716,8 @@ instead of going southeast from Abandoned Lot while (Resolution of Old Stallion 
 		stop the action;
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When play begins:
 	Choose a blank row from Table of Random Critters;
@@ -767,9 +768,13 @@ When play begins:
 	now Cunt Count entry is 1;
 	now Cunt Depth entry is 15;
 	now Cunt Tightness entry is 7;
-	now libido entry is 40;
+	now SeductionImmune entry is false;
+	now libido entry is 60;
 	now loot entry is "";
 	now lootchance entry is 0;
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]powerful[or]muscled[or]muscular[at random]";
 	now type entry is "equine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -784,7 +789,7 @@ When play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -917,13 +922,16 @@ Section 2 - Junkyard Digups
 
 Table of GameEventIDs (continued)
 Object	Name
-Junkyard digups	"A pile of garbage"
+Junkyard Digups	"A pile of garbage"
+Junkyard Digups	"Junkyard Digups"
 
-Junkyard digups is a situation. The printed name of Junkyard digups is "A pile of garbage".
-The sarea of junkyard digups is "Junkyard".
+Junkyard Digups is a situation.
+ResolveFunction of Junkyard Digups is "[ResolveEvent Junkyard Digups]".
+The printed name of Junkyard Digups is "A pile of garbage".
+Sarea of Junkyard Digups is "Junkyard".
 jdigup is a number that varies.
 
-Instead of resolving junkyard digups:
+to say ResolveEvent Junkyard Digups:
 	increase jdigup by 1;
 	say "There are plenty of piles in the junkyard to look through. You pick one and search it.";
 	if a random chance of 1 in 3 succeeds:
@@ -935,7 +943,7 @@ Instead of resolving junkyard digups:
 			increment carried of dirty water;
 	else:
 		say "Alas, you do not find anything in this pile. You should try again.";
-	if jdigup is 3, now junkyard digups is resolved;
+	if jdigup is 3, now Junkyard Digups is resolved;
 
 
 Section 3 - Steven's Home
@@ -952,7 +960,7 @@ Junkyard Entrance	"Junkyard Entrance"
 
 Junkyard Entrance is a room.
 Junkyard Entrance is outside of Steven's Home. Nowhere is inside of Junkyard Entrance.
-[The sarea of Steven's Home is "Junkyard."]
+[Sarea of Steven's Home is "Junkyard."]
 
 instead of sniffing Steven's Home:
 	say "This spot in the junkyard smells of Steven and his manly, equine scent. It only partially blocks the pervasive scent of the junkyard though.";
@@ -962,9 +970,10 @@ Object	Name
 Junkyard Home	"Junkyard Home"
 
 Junkyard Home is a situation.
-The sarea of Junkyard Home is "Junkyard".
+ResolveFunction of Junkyard Home is "[ResolveEvent Junkyard Home]".
+Sarea of Junkyard Home is "Junkyard".
 
-Instead of resolving Junkyard Home:
+to say ResolveEvent Junkyard Home:
 	if Stevenremoved is 0:
 		say "You come across what looks like an abandoned habitation, filled with old nesting material and various shiny objects. Is it some kind of bird's nest? You decide to leave it alone... for now.";
 	else:
@@ -980,57 +989,38 @@ Section 4 - Finding a tool
 
 Table of GameEventIDs (continued)
 Object	Name
-unused tool	"unused tool"
+Unused Tool	"Unused Tool"
 
-an unused tool is a situation.
-The sarea of an unused tool is "Junkyard".
+Unused Tool is a situation.
+ResolveFunction of Unused Tool is "[ResolveEvent Unused Tool]".
+Sarea of Unused Tool is "Junkyard".
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"crowbar"	"A big, heavy crowbar. It's not sharp, but it's heavy enough to strike a good blow."	3	crowbar
-"mallet"	"A heavy mallet. If you swung it hard enough, you could easily crack someone's head open."	5	mallet
-"iron pipe"	"A piece of iron pipe. It might make an adequate blunt weapon."	3	iron pipe
-
-crowbar is a armament. It is a part of the player. It has a weapon "your crowbar". The weapon damage of crowbar is 6. The weapon type of crowbar is "Melee". It is not temporary.
-mallet is a armament. It is a part of the player. It has a weapon "your mallet". The weapon damage of mallet is 7. The weapon type of mallet is "Melee". It is not temporary.
-iron pipe is a armament. It is a part of the player. It has a weapon "your iron pipe". The weapon damage of iron pipe is 5. The weapon type of iron pipe is "Melee". It is not temporary. the objsize of mallet is 2.
-
-instead of sniffing the crowbar:
-	say "The crowbar smells of metal and motor oil.";
-
-instead of sniffing the mallet:
-	say "The mallet smells faintly of the junkyard where you found it.";
-
-instead of sniffing the iron pipe:
-	say "The iron pipe smells like old rust and whatever that hard, dry gunk inside was.";
-
-
-Instead of resolving an unused tool:
+to say ResolveEvent Unused Tool:
 	say "As you explore the junkyard, you come across a pile of discarded tools. You search through the pile for something interesting.";
 	let result be a random number from 1 to 3;
 	if result is 1:
-		say "Huzzah! You found a crowbar!";
-		increment carried of crowbar;
-	if result is 2:
-		say "Success! You found a mallet!";
-		increment carried of mallet;
-	if result is 3:
-		say "Yay! You found an iron pipe!";
-		increment carried of iron pipe;
-	now an unused tool is resolved;
+		ItemGain crowbar by 1;
+	else if result is 2:
+		ItemGain mallet by 1;
+	else if result is 3:
+		ItemGain iron pipe by 1;
+	now Unused Tool is resolved;
 
+[Weapons moved to Core Mechanics/Weapons.i7x]
 
 Section 5 - Find a random infected object
 
 Table of GameEventIDs (continued)
 Object	Name
-signs of a scuffle	"signs of a scuffle"
+Signs of a Scuffle	"signs of a scuffle"
+Signs of a Scuffle	"Signs of a Scuffle"
 
-signs of a scuffle is a situation.
-The sarea of signs of a scuffle is "Junkyard".
+Signs of a Scuffle is a situation.
+ResolveFunction of Signs of a Scuffle is "[ResolveEvent Signs of a Scuffle]".
+Sarea of Signs of a Scuffle is "Junkyard".
 scufflecount is a number that varies.
 
-Instead of resolving signs of a scuffle:
+to say ResolveEvent Signs of a Scuffle:
 	increase scufflecount by 1;
 	say "It looks like two infected creatures were fighting each other out here. You search the area for any fallen loot:[line break]";
 	let opportunity be 0;
@@ -1048,6 +1038,6 @@ Instead of resolving signs of a scuffle:
 			now opportunity is 1;
 	if opportunity is 0:
 		say "Alas, you found nothing but dirt, dust, and junk.";
-	if scufflecount is 3, now signs of a scuffle is resolved;
+	if scufflecount is 3, now Signs of a Scuffle is resolved;
 
 Junkyard and Warehouse ends here.

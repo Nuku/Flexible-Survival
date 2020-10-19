@@ -22,13 +22,12 @@ Version 2 of Diego by Wahn begins here.
 
 Section 1 - Diego
 
-Diegotalk is a number that varies.
 CoyoteTricks is a number that varies.
 DiegoChanged is a number that varies.
 DiegoBitched is a number that varies.
 DiegoFucked is a number that varies.
 DiegoButtSlut is a number that varies.
-LastDiegoTricked is a number that varies. LastDiegoTricked is usually 250.
+LastDiegoTricked is a number that varies. [@Tag:NotSaved] LastDiegoTricked is usually 250.
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -70,8 +69,8 @@ SexuallyExperienced of Diego is true.
 TwistedCapacity of Diego is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Diego is false. [steriles can't knock people up]
 MainInfection of Diego is "Coyote".
-The description of Diego is "[DiegoDesc]".
-The conversation of Diego is { "Fooled you!" }.
+Description of Diego is "[DiegoDesc]".
+Conversation of Diego is { "Fooled you!" }.
 Diego is in Park Entrance.
 The icon of Diego is Figure of Diego_icon.
 
@@ -91,7 +90,7 @@ a postimport rule: [bugfixing rules for players that import savegames]
 		SetMalePronouns for Diego;
 
 to say diegolinkaction:
-	if DiegoTalk is 0:
+	if PlayerMet of Diego is false:
 		say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link][line break]";
 	else:
 		say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link], [link]trick[as]trick Diego[end link][line break]";
@@ -100,7 +99,7 @@ the scent of Diego is "Diego smells like a [if DiegoChanged is 0]male[else if Di
 
 To say DiegoDesc:
 	if debugactive is 1:
-		say "DEBUG -> Diegotalk: [Diegotalk], CoyoteTricks: [CoyoteTricks], LastDiegoTricked: [LastDiegoTricked], DiegoChanged: [DiegoChanged], DiegoBitched: [DiegoBitched], DiegoFucked: [DiegoFucked], DiegoButtSlut: [DiegoButtSlut] <- DEBUG[line break]";
+		say "DEBUG -> CoyoteTricks: [CoyoteTricks], LastDiegoTricked: [LastDiegoTricked], DiegoChanged: [DiegoChanged], DiegoBitched: [DiegoBitched], DiegoFucked: [DiegoFucked], DiegoButtSlut: [DiegoButtSlut] <- DEBUG[line break]";
 		say "DEBUG -> (Traits of Diego) [traits of Diego][line break]";
 	if DiegoChanged is 2:
 		say "     The former coyote man is now a pretty tan furred coyote bitch instead, and is eyeing you eagerly as [SubjectPro of Diego] leans up against the wall dividing the park from the rest of the city. You can see one of her paws slowly straying down to her furred pussy as you approach, a smile playing across her muzzle as [SubjectPro of Diego] rubs herself teasingly.";
@@ -114,11 +113,11 @@ To say DiegoDesc:
 Section 2 - Conversation
 
 Instead of conversing the Diego:
-	if Diegotalk is 0:
+	if PlayerMet of Diego is false:
 		project the figure of Diego_face_icon;
 		say "     'Hey there,' the coyote-like man says with a grin. 'The name is Diego, my friend, and I have to say this is an unexpected surprise. Haven't seen too many people in these parts that haven't completely given into the pleasure,' Diego says as [SubjectPro of Diego] readjusts [PosAdj of Diego] position against the wall to get a better look at you. 'Can't say how long that will last, of course. You look like you like to enjoy yourself as much as anyone else around here. And well, I'd be lying if I said this wasn't the most fun I've had in my life,' [SubjectPro of Diego] says with a grin playing across [PosAdj of Diego] muzzle. 'Never been so glad to have a coyote nip me in my backyard. Course, everything seems much more amusing to me now also. Must be that whole trickster thing, eh?' The coyote man chuckles as [SubjectPro of Diego] leans back against the wall happily.";
 		say "     'Guess we will see how long you last here. Course, if ya need any advice about the creatures in the park feel, free to talk to me as much as you want. Of course I can't guarantee it will be GOOD advice - that whole trickster thing and all, ya ken?' [SubjectPro of Diego] adds with a sly wink. 'Course, ya could always just wait here until the military finally gets itself together and comes to visit. Course, if I felt like it, I could always pull out a few more coyote tricks on them. That would be sure to slow them down a bit, if ya know what I mean. I'd only do something like that as a favor to a fellow trickster,' Diego snickers at the thought of the poor, tricked military fools.";
-		increase Diegotalk by 1;
+		now PlayerMet of Diego is true;
 	else:
 		say "[DiegoTalkMenu]";
 
@@ -193,9 +192,9 @@ to say DiegoTalkMenu:
 					say "[DiegoTalk4]";
 				if (nam is "Trick Diego into drinking orc cum"):
 					say "[DiegoTalk5]";
-				if (nam is "Taking part in Diego secret plans after all"):
+				if (nam is "Taking part in Diego's secret plans after all"):
 					say "[DiegoCollarQuest1]";
-				if (nam is "Cancelling your involvement in Diego special plan"):
+				if (nam is "Cancelling your involvement in Diego's special plan"):
 					say "[DiegoCollarQuestRefuse]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -356,7 +355,7 @@ carry out Diegotricking:
 	now LastDiegoTricked is turns;
 	say "     Diego gives an impish grin as you approach [ObjectPro of Diego] and say that you got an idea, then says, 'Oh? So you think a new little trickster like you can pull one out of their hat that beats my tricks? Let's see what you got!'";
 	LineBreak;
-	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+	let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Intelligence Check):[line break]";
@@ -369,9 +368,8 @@ carry out Diegotricking:
 			LineBreak;
 			say "     Turning [PosAdj of Diego] attention back to you, the anthro canine licks [PosAdj of Diego] lips and then says, 'Damn, playing so many tricks on the man is making a dishonest coyote mighty thirsty. You wouldn't happen to have anything to help a fellow out now would you?' [SubjectProCap of Diego] gives you a hopeful look, glancing over to your gear.";
 			say "     ([bold type]Diego trusts you enough to accept something to drink from you now. Maybe give [ObjectPro of Diego] some water, or other liquids that could have fun effects on the guy.[roman type])[line break]";
-		if CoyoteTricks > 3 and PrankEvent is 0:
+		if CoyoteTricks > 3 and Prank Aftermath is inactive:
 			now Prank Aftermath is active;
-			now PrankEvent is 1;
 	else if diceroll > 12:
 		say "     As you lay out the plan you've come up with, Diego gives a happy grin and says, 'Dang that's a good one! Not quite up to my usual standards of course, but pretty damn good!' The coyote nods to you with [PosAdj of Diego] canine head, then lets [PosAdj of Diego] eyes roam over the city stretching out around you. 'I think I'll try your idea on some of the army scouts - might just earn ya a bit of time, and create fun for me.'";
 		extend game by 6;
@@ -380,9 +378,8 @@ carry out Diegotricking:
 			LineBreak;
 			say "     Turning [PosAdj of Diego] attention back to you, the anthro canine licks [PosAdj of Diego] lips and then says, 'Damn, playing so many tricks on the man is making a dishonest coyote mighty thirsty. You wouldn't happen to have anything to help a fellow out now would you?' [SubjectProCap of Diego] gives you a hopeful look, glancing over to your gear.";
 			say "     ([bold type]Diego trusts you enough to accept something to drink from you now. Maybe give [ObjectPro of Diego] some water, or other liquids that could have fun effects on the guy.[roman type])[line break]";
-		if CoyoteTricks > 3 and PrankEvent is 0:
+		if CoyoteTricks > 3 and Prank Aftermath is inactive:
 			now Prank Aftermath is active;
-			now PrankEvent is 1;
 	else:
 		say "     As you lay out the (admittedly pretty lame) plan you've come up with, Diego says derisively, 'You call that a trick?' Snickering at your pathetic attempt, the coyote waves you closer in a conspiratory way and adds, 'Now listen well - THIS is how a master trickster does things!' [SubjectProCap of Diego] whips out a trick that almost makes you stagger back in shock from the sheer nerve and lewdness that Diego possesses in spades. Even just imagining the chaos he'll create makes you feel a bit less human and more used to the new reality of this city...";
 		SanLoss 10;
@@ -840,7 +837,7 @@ to say MaleDiegoSuccumbEnding:
 
 Section 5 - Events
 
-instead of navigating Park Entrance while (XP of Diego is 0 and DiegoTalk > 0 and player is not dominant and NonconList is not banned and NonconList is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
+instead of navigating Park Entrance while (XP of Diego is 0 and PlayerMet of Diego is true and player is not dominant and NonconList is not banned and NonconList is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Park Entrance]";
 	if NavCheckReturn is false, stop the action;
 	move player to Park Entrance;
@@ -887,10 +884,11 @@ Object	Name
 Hunting down Hunter	"Hunting down Hunter"
 
 Hunting down Hunter is a situation.
+ResolveFunction of Hunting down Hunter is "[ResolveEvent Hunting down Hunter]".
 Hunting down Hunter is inactive. [turned on by taking Diego's quest]
-The sarea of Hunting down Hunter is "Outside".
+Sarea of Hunting down Hunter is "Outside".
 
-Instead of resolving a Hunting down Hunter:
+to say ResolveEvent Hunting down Hunter:
 	say "     Following Diego's waypoints through the city, you skip around several dens of dangerous creatures and eventually arrive in a high-class neighborhood that holds the homes of the rich and famous. Of course, that doesn't mean the people here were immune to the nanite apocalypse either, as demonstrated by Diego's warning that a whole roost of horny hawkmen is occupying one place down the road from where you're going. Good thing you knew the right direction to approach from. Coming to the right address, you see a tall brick wall enclosing its grounds, the only opening in it held shut by a sturdy wrought-iron gate. A chain holds both wings of the gate shut, connected on the inside by a shiny new padlock. Besides this, numerous empty cans have been tied to the gate, so that if someone wanted to climb the decorative metalwork, they'd make a whole lot of noise. Past the gate, you see a long driveway winding its way through a sprawling green lawn and leading up to a white-painted villa.";
 	say "     Recognizing that the front door isn't any place you'd care to try, you're thankful that Diego accounted for this too. Following the wall to the left, you duck around its corner and walk into the brush filling a narrow section of no man's land between this property and the next one over. And right where Diego described is the final help from your coyote buddy: a ladder, hidden from sight by a covering of branches. With it, you have a fairly easy time to climb on top of the wall, then pull the ladder up and set it on the other side to get safely down into the villa's garden. Quietly walking towards the building across its green lawn in the [if daytimer is day]bright sunlight[else]dim light of the moon[end if], you soon reach the decorative bushes planted along its walls. Beyond those, a large window is open all the way, most likely to allow some of the seaside breeze in, now that the power is out and aircon isn't a thing anymore.";
 	WaitLineBreak;
@@ -966,7 +964,7 @@ to ResetAlphaHuskyStats:
 	now wdam entry is 10;
 
 [
-		if hardmode is true and level of Player > 9, let debit be level of Player - 9;
+		if HardMode is true and level of Player > 9, let debit be level of Player - 9;
 		now HP entry is 69 + ( debit * 5 ); [- How many HP has the monster got? -]
 		now monsterHP is 69 + ( debit * 5 );
 		now wdam entry is 15 + ( debit / 3 ); [-Amount of Damage monster Does when attacking.-]
@@ -1210,7 +1208,7 @@ name	desc	weight	object
 "diego's heirloom collar"	"[DCollarDesc]"	1	diego's heirloom collar
 
 diego's heirloom collar is a grab object.
-the usedesc of diego's heirloom collar is "[DCollarUse]".
+Usedesc of diego's heirloom collar is "[DCollarUse]".
 It is not temporary.
 
 diego's heirloom collar is a grab object.
@@ -1218,8 +1216,8 @@ diego's heirloom collar is equipment.
 diego's heirloom collar is cursed.
 It is not temporary.
 The printed name of diego's heirloom collar is "Diego's heirloom collar".
-The plural of diego's heirloom collar is false.
-The taur-compatible of diego's heirloom collar is true.
+Plural of diego's heirloom collar is false.
+Taur-compatible of diego's heirloom collar is true.
 The size of diego's heirloom collar is 0.
 The AC of diego's heirloom collar is 0.
 The effectiveness of diego's heirloom collar is 0.
@@ -1374,7 +1372,7 @@ to say DiegoCollarDeliveryAftermath:
 	else:
 		LineBreak;
 		say "     In a friendly but firm tone, you turn the coyote down. [SubjectProCap of Diego] takes your rejection well enough with little more than a slight dip of [PosAdj of Diego] tail, followed by a shrug. 'Oh well, guess I'll find someone else to help me with this specific plan then. Doesn't mean we can't enjoy hatching some other fun plans together though, alright?'";
-		now carried of diego's heirloom collar is 0;
+		ItemLoss diego's heirloom collar by 1;
 		now XP of Diego is 50; [collar delivered]
 
 

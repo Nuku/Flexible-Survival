@@ -12,7 +12,7 @@ Museum Foyer	"Museum Foyer"
 Museum Foyer is a room. It is fasttravel.
 The earea of Museum Foyer is "Museum".
 
-The description of Museum Foyer is "[museumdesc]".
+Description of Museum Foyer is "[museumdesc]".
 
 to say museumdesc:
 	if HP of Solstice is 0 and FemaleList is not banned and HermList is not banned and FurryList is not banned, now Adventurer is active;  [Solstice's quest available after visiting the Museum]
@@ -39,8 +39,8 @@ object	name
 Valerie	"Valerie"
 
 Valerie is a woman.
-The description of Valerie is "[ValerieDesc]".
-The conversation of Valerie is { "Riddle me this!" }.
+Description of Valerie is "[ValerieDesc]".
+Conversation of Valerie is { "Riddle me this!" }.
 The icon of Valerie is Figure of Valerie_icon.
 Valerie is in Museum Foyer.
 
@@ -91,7 +91,7 @@ carry out riddlesphinxing:
 		stop the action;
 	now lastriddlesphinx is turns;
 	say "     'Ooooh, you think you can beat me in a riddle contest? Let's find out, shall we? I might even have a prize for you if you win. Of course, if you lose...'";
-	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+	let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
 	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";

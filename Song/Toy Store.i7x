@@ -7,7 +7,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Toy Store	"Toy Store"
 
-Toy Store is a situation. The level of Toy Store is 1.
+Toy Store is a situation.
+ResolveFunction of Toy Store is "[ResolveEvent Toy Store]". The level of Toy Store is 1.
 when play begins:
 	add Toy Store to BadSpots of MaleList;
 	add Toy Store to BadSpots of FurryList;
@@ -15,7 +16,7 @@ when play begins:
 toystoreseen is a truth state that varies. toystoreseen is usually false.
 toystoreoverride is a truth state that varies. toystoreoverride is usually false.
 
-instead of resolving a toy store:
+to say ResolveEvent toy store:
 	setmonster "Latex Fox";
 	choose row MonsterID from the Table of Random Critters;
 	now non-infectious entry is true;

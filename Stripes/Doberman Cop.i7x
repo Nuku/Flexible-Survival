@@ -17,6 +17,25 @@ an everyturn rule: [bugfixing rules for players that import savegames]
 				break;
 		now AlexandraInfectionArea is 1;
 
+to say GenerateTrophyList_Doberman_Cop:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if "Whistle_Taken" is not listed in Traits of Alexandra: [special whistle]
+		add "police whistle" to CombatTrophyList;
+	if "Pills_Taken" is not listed in Traits of Alexandra: [special bag of pills]
+		add "confiscated pills" to CombatTrophyList;
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "doberman bitch fur" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "food" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "water bottle" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "medkit" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "pepperspray" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
+
 Section 1 - Creature Responses		[Note: Combat related portions deal with the Doberwoman Cop.]
 
 dobieresist is a number that varies.
@@ -26,7 +45,7 @@ to say Dobermandesc:
 	setmongender 4; [creature is female]
 	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of Player > 7, let debit be level of Player - 7;
+	if HardMode is true and level of Player > 7, let debit be level of Player - 7;
 	now dobieresist is 0;
 	now str entry is 14;
 	now HP entry is 60 + ( debit * 4 );
@@ -39,18 +58,20 @@ to say Dobermandesc:
 	else if dobielibido < 50:
 		project the figure of Alexandra_clothed0_frown_icon;
 		say "     A female Doberman in a cop's uniform charges at you, growling firmly for you to halt and be searched. In the brief moment before she's upon you, you can see that she's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle, and her short fur has the two-tone black and tan markings of the breed. She is wearing a light blue shirt, darker pants and a policeman's hat. She has an average-sized rack under her shirt.";
-		if the player is bodily human and the player is facially human and the player is skintone human and the tail of the player is "":
+		if the player is bodily human and the player is facially human and the player is skintone human and the tail of Player is "":
 			say "     '[one of]Halt, citizen[or]Freeze! Police[or]Stand down, citizen[at random]!' she calls out one last time, pulling out her nightstick.";
 		else:
 			say "     '[one of]Halt, mutant[or]Freeze! Police[or]Surrender, creature[or]Come quietly[or]I order you to stand down, mutant[at random]!' she calls out one last time, pulling out her nightstick.";
 	else if dobielibido < 100 or inasituation is true:
 		project the figure of Alexandra_clothed1_frown_icon;
 		say "     The female Doberman cop has found you again and growls angrily, pulling out her nightstick. She's looking more disheveled and wild-eyed than before, her lusts starting to take hold of her. She still has her uniform on, but her shirt's half unbuttoned to show off her breasts better and you can see moist juices soaking her thighs. Despite her attempts to restrain it, her tail wags excitedly at having found you again, regardless of her apparent anger at you.";
+		increase monsterLibido by 25; [she's riled up now, easier to seduce]
 	else:
 		project the figure of Alexandra_clothed2_frown_icon;
 		say "     The female Doberman cop has found you again and snarls at you. She's looking rather rougher now, with her shirt hanging open to expose her bare breasts and the crotch of her pants soaked and stained with her fluids. From the wild look in her eyes and the way she slaps her palm with her nightstick, it looks like she's through being the good cop and intends to come down on you hard. Her tail wags and you catch the scent of fresh arousal coming from her, clearly her body wanting to play some more - one way or another.";
+		increase monsterLibido by 50; [she's very riled up now, easier to seduce]
 		increase str entry by 2;
-		if hardmode is false, now lev entry is 9;
+		if HardMode is false, now lev entry is 9;
 		increase HP entry by lev entry;
 		increase monsterHP by lev entry;
 		increase wdam entry by ( wdam entry / 7 );
@@ -527,13 +548,15 @@ to say beatthedobie3:			[high-lust cop player victory]
 	say "     ([link]Y[as]y[end link]) - Take her to be your bad dog bitch.";
 	say "     ([link]N[as]n[end link]) - No, drive her off.";
 	if Player consents:
-		say "     Excited at the prospect of having the Doberman cop as your personal slutty bitch, you run your hand over her head and scritch her ears, telling her that she can come with you if she accepts her proper place as your slutty bad dog bitch. She nods and licks at your hand. 'Oh yes, that's what I want. It was foolish of a bad bitch like me to ever try being a cop, boss.' Grinning, you help her up and lead her back to the library.";
+		say "     Excited at the prospect of having the Doberman cop as your personal slutty bitch, you run your hand over her head and scritch her ears, telling her that she can come with you if she accepts her proper place as your slutty bad dog bitch. She nods and licks at your hand. 'Oh yes, that's what I want. It was foolish of a bad bitch like me to ever try being a cop, boss.' Grinning, you lean down and un-pin the police badge she is wearing, putting the metal shield into your pocket. The anthro dog doesn't resist as you do so, showing how completely you've corrupted the woman she once was. With a whistle, you call for her to get up and follow you, smiling in victory all the way to the library.";
+		ItemGain alexandra's badge by 1;
 		now HP of Alexandra is 1;
 		now battleground is "void";
 		move Alexandra to Grey Abbey Library;
 		move player to Grey Abbey Library;
 	else:
-		say "     Not wanting to waste any more of your time on the policewoman, you kick her to the ground. 'Why would anyone want to keep a bad bitch like you? Get out of here, you slut. I don't want to see you again.' She slinks away and you can't help but chuckle, darkly pleased at having broken the cop so fully and then just discarding her like trash. You doubt she'll be troubling you any more.";
+		say "     Not wanting to waste any more of your time on the policewoman, you kick her to the ground. Then you call her a slut and tell the bitch that you don't want a lousy street dog like her, fucked by who knows whom. She's just a fucktoy now, not even a real policewoman anymore. To drive this home, you lean down and un-pin the police badge she is wearing, putting the metal shield into your pocket. The anthro dog doesn't resist as you do so, showing how completely you've destroyed the woman she once was. With a cruel snort you wave her away, telling the canine to fuck off. She slinks away in shame and you can't help but chuckle, darkly pleased at having broken the cop and then just discarding her like trash. You doubt she'll be troubling you any more.";
+		ItemGain alexandra's badge by 1;
 		now HP of Alexandra is 100;
 	now area entry is "Nowhere";
 
@@ -541,8 +564,8 @@ to say beatthedobie3:			[high-lust cop player victory]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -595,9 +618,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 10; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 2; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 50; [ Target libido the infection will rise towards. ]
+	now SeductionImmune entry is false;
+	now libido entry is 25; [ Target libido the infection will rise towards. ]
 	now loot entry is "doberman bitch fur"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "[GenerateTrophyList_Doberman_Cop]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]unrepentantly strong[or]dashing[or]sexy[at random]";
 	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -612,7 +639,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -716,12 +743,11 @@ name	desc	weight	object
 "doberman bitch fur"	"A tuft of dark brown fur that looks like it has been pulled out of the coat of a doberman. It's nicely soft."	0	doberman bitch fur
 
 doberman bitch fur is a grab object.
-the usedesc of doberman bitch fur is "[DobermanBitchFurUse]".
-it is part of the player.
+Usedesc of doberman bitch fur is "[DobermanBitchFurUse]".
 It is temporary.
 
 to say DobermanBitchFurUse:
-	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	setmonster "Doberman Bitch";
 	choose row MonsterID from the Table of Random Critters;
 	now non-infectious entry is false;
@@ -729,7 +755,77 @@ to say DobermanBitchFurUse:
 	now non-infectious entry is true;
 
 instead of sniffing doberman bitch fur:
-	say "The fur has a pleasing, not too strong, animal-like scent.";
+	say "     The fur has a pleasing, not too strong, animal-like scent.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"confiscated pills"	"A plastic baggie containing countless nondescript pills in all sorts of shapes and colors. It is labeled in neat handwriting, declaring the contents to have been confiscated some days ago. With the nanite apocalypse in full swing, it seems the dobie cop didn't have time to turn them in yet."	0	confiscated pills
+
+confiscated pills is a grab object. it is not temporary.
+Usedesc of confiscated pills is "[RandomPillsUse]".
+
+to say RandomPillsUse:
+	say "     Opening the baggie and picking one of the pills, you look at it for a second or two, then throw it into your mouth and swallow. What could go wrong when taking some unidentified pills, right?";
+	let RandomPillEffect be a random number from 1 to 10;
+	if RandomPillEffect is 1:
+		say "     God, what was in that pill? A few minutes after taking it, you start feeling very woozy and your stomach rebels! Stumbling a few steps, you can't hold back the vomit and chuck up the half-dissolved thing, as well as anything else you had in your stomach!";
+		PlayerWounded 25;
+		PlayerHunger 15;
+		PlayerThirst 15;
+	else if RandomPillEffect is 2:
+		say "     A few minutes after taking the pill, you become aware of the fact that you have seven fingers on one of your hands. Raising it to check out all these digits in detail, your hand leaves a wavy, rainbow-colored after-shadow in your area of sight. Whoo - trippy! After the shadow catches up with your hand eventually, you stare at your hand and try to count just how many fingers you have. It is difficult since they kinda wiggle on their own, and even bringing in your other hand to count them one by one is a challenge, as you kinda keep missing and have to start all over again.";
+		SanLoss 25;
+	else if RandomPillEffect > 2 and RandomPillEffect < 6:
+		say "     You actually feel pretty good after taking the pill. Energized, one could almost say.";
+		PlayerHealed 25;
+	else if RandomPillEffect > 5 and RandomPillEffect < 9:
+		say "     Waiting several minutes, it doesn't seem like anything is happening. Was that thing a dud?";
+	else if RandomPillEffect is 9:
+		say "     A few minutes after taking the pill, you start feeling quite randy. Time to find a fuck, an inner voice seems to say.";
+		LibidoBoost 25;
+	else if RandomPillEffect is 10:
+		say "     Minutes pass after taking the pill, but you don't feel anything special happening. Though then the realization strikes you that any lustful urges you have felt since this whole mess started are quiet for the moment. Whatever was in that things, it cleared your mind exceptionally well!";
+		LibidoReset;
+
+instead of sniffing confiscated pills:
+	say "     You pull open the plastic baggie and sniff at it. Smells fairly chemical, this stuff.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"police whistle"	"A cylindrical police whistle made of metal, complete with a few links of chain and a belt clip. It is well-worn and must be fairly old, as police don't regularly carry whistles of any kind these days. Looking more closely, you can barely make out some letters that were stamped into the metal at one end of it. Hard to make out because the metal has rubbed smooth from frequent touch, but you think you can see 'C.H.' on there."	0	police whistle
+
+police whistle is a grab object.
+
+Usedesc of police whistle is "[PoliceWhistleUse]".
+It is not temporary.
+
+to say PoliceWhistleUse:
+	say "     Bringing the whistle up to your mouth, you blow into it and are rewarded by a sharp, shrill sound. This certainly can be heard quite far and might just bring people or creatures to investigate the noise!";
+	if location of player is not sleepsafe and earea of location of Player is not "void" and a random chance of 3 in 10 succeeds:
+		now battleground is earea of location of Player;
+		fight;
+	else:
+		say "     Thankfully, nothing happens (this time).";
+
+instead of sniffing police whistle:
+	say "     The whistle smells like metal.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"alexandra's badge"	"A shining police badge, bearing the number 214 at the lower edge. You took it from Alexandra when you finally broke her will completely. As such, it's a nice little trophy to have. Maybe you could add it to a collection of similar items."	0	alexandra's badge
+
+alexandra's badge is a grab object.
+
+Usedesc of alexandra's badge is "[AlexandraBadgeUse]".
+It is not temporary.
+
+to say AlexandraBadgeUse:
+	say "     You play a little with the police badge, tracing its patterns with a fingertip and staring at the shining metal. As a symbol of everything you have done to Alexandra, it makes you feel powerful, aggressive, and just a bit less constrained by concepts of human morality.";
+	SanLoss 10;
+
+instead of sniffing alexandra's badge:
+	say "     The badge smells like metal.";
 
 Section 3 - Alt Combat Rules
 

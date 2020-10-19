@@ -40,12 +40,13 @@ Table of GameEventIDs (continued)
 Object	Name
 Paratrooper	"Paratrooper"
 
-Paratrooper is a situation. Paratrooper is inactive.		[unlocked after 3rd stage of 'Military presence']
-The sarea of Paratrooper is "Plains".
+Paratrooper is a situation.
+ResolveFunction of Paratrooper is "[ResolveEvent Paratrooper]". Paratrooper is inactive. [unlocked after 3rd stage of 'Military presence']
+Sarea of Paratrooper is "Plains".
 when play begins:
 	add Paratrooper to BadSpots of FemaleList;
 
-Instead of resolving a Paratrooper:
+to say ResolveEvent Paratrooper:
 	say "     After checking through the crumbling ruins of a building, you notice a figure approaching in the distance. Seeing as they're humanoid and not rushing wildly towards you, you head cautiously in their direction. As you draw closer, you make out additional details - she's female, is wearing a camo jacket and is nude below the waist. This last gives you pause, but she doesn't seem aggressive or lust-crazed, though she does seem to be quite dazed or in shock. Once you reach her, you can notice further details - ears growing pointed, the start of an equine tail and the strong scent of centaur musk coming from the semen staining her bare thighs. Given she's still got her heavy boots on, you surmise her pants were torn clean off her by the randy stallion. Her tummy's still a little rounded, probably with the centaur's load, and possibly even with a bun in the oven.";
 	say "     Keeping a little distance, you ask if she's alright. She blinks a few times, finally noticing you there. Scratching an itch on her lower belly, she looks you over. 'I... I guess... Blown off course... Was just trying to regroup... got interrupted.' She smiles, still a little dazed, but getting a bit more clearheaded. 'Sorry, I'm Sgt Vanessa Harris. I was with a paratrooper team, but the drop went bad and we were scattered away from the objective. I've been trying to make my way back since then. Had a little run in a while ago. Bit of a rough ride at first, but at least he was hung like a horse,' she says with a laugh and a wry smile, tugging at her jacket as a fresh rivulet of cum and juices run down her leg as she recalling the event excites her.";
 	say "     Feeling her equine tail flick upwards, she seems to just notice her changes now and touches them cautiously. 'Oh no, my immunity boosters must've worn off. Fuck! They're not going to let me cross the lines now. Look, have you got somewhere safe I can hole up until the main force moves in?' she asks.";
@@ -100,8 +101,8 @@ object	name
 Vanessa	"Vanessa"
 
 Vanessa is a woman.
-The description of Vanessa is "[Vanessadesc]".
-The conversation of Vanessa is { "Neigh!" }.
+Description of Vanessa is "[Vanessadesc]".
+Conversation of Vanessa is { "Neigh!" }.
 
 the scent of the Vanessa is "Vanessa smells softly of horses[if HP of Vanessa > 3] and arousal[end if].".
 

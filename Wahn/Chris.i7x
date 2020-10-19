@@ -33,6 +33,8 @@ Version 1 of Chris by Wahn begins here.
 [  22: breeder Chris and Urik got into talking     ]
 [  99: Urik warned away from breeder Chris         ]
 
+[TODO: Add cross-content if the player starts a tribe with Urik ]
+
 Table of GameCharacterIDs (continued)
 object	name
 Chris	"Chris"
@@ -61,8 +63,8 @@ AnalVirgin of Chris is true.
 PenileVirgin of Chris is true.
 SexuallyExperienced of Chris is false.
 The MainInfection of Chris is "Orc Warrior".
-The description of Chris is "[ChrisDesc]".
-The conversation of Chris is { "Mew!" }.
+Description of Chris is "[ChrisDesc]".
+Conversation of Chris is { "Mew!" }.
 The icon of Chris is Figure of Chris_clothed_icon.
 WarriorChrisPlayerFucked is a number that varies. [number of times the player has been fucked by warrior Chris]
 WarriorChrisDominance is a number that varies.
@@ -344,6 +346,7 @@ to say ChrisSex2: [player gives Chris a BJ]
 		say "     Starting to bob up and down on the young orc's erection, you trace the veins on his shaft with your tongue and hungrily gobble up every drop of pre he leaks into your mouth. 'Damn, I love having a needy little breeder servicing my cock! Faster, slut!' the orc warrior calls out, his loud voice carrying throughout the library. You're only to happy to follow the request, accelerating your movements to service his erection even as he himself starts to hump his hips forward to meet you. This frequently buries your nose deep in the bush of his pubes, huffing the aroma of a young orc in his prime - and of course, his heavy balls slap against your chin every time you take all of his dick. Guided by strong hands that soon take hold of your head, you find yourself face-fucked hard by Chris. Already half drunk on the orc's pre-cum alone, you hunger for the chance to be his cum-dump... and your wish is fulfilled not long after.";
 		say "     'Fuuuckkkk! Take it, cum-slut!' Chris suddenly bellows and forces his whole cock down your throat, then lets out a deep grunt as the first spurt of cum is pumped directly into your stomach. Heavy throbs of his cock deliver the orc's rich, creamy cum into your body, which eagerly absorbs the potent mixture. You can't help but gurgle giddily as its effects make you drunk almost out of your mind, your body twitching with suddenly spiking lust and arousal. [if Player is male]Your own cock immediately starts to spew forth its own load, creaming the inside of your pants[else if Player is female]Your pussy immediately starts to tingle, leaking sticky femcum and soaking the inside of your pants[else]Your sexless crotch tingles as the sensation becomes too much to bear and you orgasm[end if]. And that is pretty much the last thing you consciously sense for a while, as the overload of fresh orc cum puts you into a sexual haze, feeling nothing but pleasure and knowing you are exactly where you belong - on your knees, serving an orc master.";
 	NPCSexAftermath Player receives "OralCock" from Chris;
+	addAlcPoints 2;
 
 to say ChrisSex3: [the player fucks Chris]
 	if Libido of Chris is 0: [base state]
@@ -415,6 +418,7 @@ to say ChrisSex4: [Chris fucks the player]
 			say "     You feel something change deep inside you, as all the cum Chris blasted into you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex.";
 			FeatGain "MPreg";
 		NPCSexAftermath Player receives "AssFuck" from Chris;
+		addAlcPoints 2;
 	else if Libido of Chris is 1:
 		setmonster "Orc Breeder";
 		say "     <placeholder for sub Chris on player anal>";
@@ -442,6 +446,7 @@ to say ChrisSex4: [Chris fucks the player]
 				FeatGain "Chris's Breeder Slut"; [orc baby, no matter what]
 		else:
 			NPCSexAftermath Player receives "AssFuck" from Chris;
+		addAlcPoints 2;
 		increase WarriorChrisPlayerFucked by 1;
 
 to say ChrisSex5: [milk cum out of Chris]
@@ -571,6 +576,7 @@ instead of going up from Grey Abbey Library while (Chris is in Sitting Area and 
 				FeatGain "Chris's Breeder Slut"; [orc baby, no matter what]
 		else:
 			NPCSexAftermath Player receives "AssFuck" from Chris;
+		addAlcPoints 2;
 		increase WarriorChrisPlayerFucked by 1;
 		now WarriorChrisDominance is 1; [player got pushed to be Chris's breeder slut]
 	else: [refuse]
@@ -628,6 +634,7 @@ instead of going up from Grey Abbey Library while (Chris is in Sitting Area and 
 		say "     You feel something change deep inside you, as all the cum Chris blasted into your stomach completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex.";
 		FeatGain "MPreg";
 	NPCSexAftermath Player receives "OralCock" from Chris;
+	addAlcPoints 2;
 	increase WarriorChrisPlayerFucked by 1;
 	now WarriorChrisDominance is 3; [player got pushed to be Chris's breeder slut - three times]
 
@@ -656,6 +663,7 @@ instead of going up from Grey Abbey Library while (Chris is in Sitting Area and 
 				FeatGain "Chris's Breeder Slut"; [orc baby, no matter what]
 		else:
 			NPCSexAftermath Player receives "AssFuck" from Chris;
+		addAlcPoints 2;
 		say "     You remember being carried and held, and when you eventually come to again fully, you find yourself in an interesting and fairly pleasant position - lying against Chris's broad chest as he lounges on the couch he claimed has his own. Looking down, you see the orc's half hard cock between your legs. Chris is slowly stroking you with one hand between your legs, the other one resting on your belly. He keeps brushing his finger over your pucker again and again, taking pleasure in feeling up his devoted breeder slut. 'Back awake, eh? You did good, breeder! Can't wait to see your belly bulge with my orcling.' The orc chuckles and leans his head forward to lick your cheek, then keeps you against his chest for a while longer, arms wrapped around your midriff. Eventually, he dozes off, giving you the opportunity of extracting yourself from his grasp and starting to collect the strewn about pieces of your gear.";
 	else if Player is mpreg_now: [already mpregnant]
 		say "     Breathing in your scent, the orc gives a satisfied growl and licks the side of your neck, then pulls you back a little from himself to look you up and down. Placing one large green hand on your belly, he gives it an almost gentle caress as he says, 'Oh yeah, you're one fine slut. Can't wait till you bear the little tyke in there. I wanna put an orcling in you soon after!' Shifting his hands to your buttocks, the young orc squeezes and kneads them under his fingers, clearly enjoying himself quite a bit. His cocks seems to get even harder than before and pokes you a little as he leans in against you. Then Chris says, 'You know what - I really can't wait. Gonna fuck you now! And it'll be good for the kid too - orc cum makes [']em grow extra fast, and strong!'";
@@ -698,6 +706,7 @@ instead of going up from Grey Abbey Library while (Chris is in Sitting Area and 
 				FeatGain "Chris's Breeder Slut"; [orc baby, no matter what]
 		else:
 			NPCSexAftermath Player receives "AssFuck" from Chris;
+		addAlcPoints 2;
 		increase WarriorChrisPlayerFucked by 1;
 		now lastfuck of Chris is turns;
 

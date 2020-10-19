@@ -1,23 +1,34 @@
 Version 3 of Korvin by Wahn begins here.
-[ Original written by Stripes                ]
-[ Version 2.1 - Korvin training/collaring    ]
-[ Version 3 - Expanded by Wahn & moved       ]
+[ Original written by Stripes                                             ]
+[ Version 2.1 - Korvin training/collaring                                 ]
+[ Version 3 - Expanded by Wahn & moved                                    ]
 
-[ GSD_pet                                    ]
-[   0 = not met                              ]
-[   1 = met him                              ]
-[   2 = player lost                          ]
-[   3 = lost again                           ]
-[   4 = player locked                        ]
-[  10 = player won                           ]
-[  11 = won again                            ]
-[  12 = recruited                            ]
-[  13 = sexed up                             ]
-[  14 = sexed up again                       ]
-[  15 = pending collar                       ]
-[  20-59 - subby                             ]
-[  60-99 - confident                         ]
-[ 100 = banished                             ]
+[ GSD_pet                                                                 ]
+[   0 = not met                                                           ]
+[   1 = met him                                                           ]
+[   2 = player lost                                                       ]
+[   3 = lost again                                                        ]
+[   4 = player locked                                                     ]
+[  10 = player won                                                        ]
+[  11 = won again                                                         ]
+[  12 = recruited                                                         ]
+[  13 = sexed up                                                          ]
+[  14 = sexed up again                                                    ]
+[  15 = pending collar                                                    ]
+[  20-59 - subby                                                          ]
+[  60-99 - confident                                                      ]
+[ 100 = banished                                                          ]
+
+[ Memory Traits                                                           ]
+[ Dominant_Roleplay_Fuck - Korvin fucked the player in dom roleplay       ]
+[ Dominant_Roleplay_Oral - Korvin face-fucked the player in dom roleplay  ]
+
+[ Key Character points                                                    ]
+[ Family man/dog, desires offspring with the player (if female/mpreg)     ]
+[ Has lots of offspring in the city                                       ]
+[ Moderate Pregnancy fetish                                               ]
+[ Job before transformation: Mechanic                                     ]
+
 
 "Adds character specific info for Korvin the GSD pet."
 
@@ -37,13 +48,16 @@ Table of GameCharacterIDs (continued)
 object	name
 gshep	"gshep"
 
-gshep is a pet. gshep is a part of the player.
+gshep is a pet.
 understand "Korvin" as gshep.
-The description of gshep is "[Korvindesc]".
-The conversation of gshep is { "Bark!" }.
-The weapon damage of gshep is 5.
-The level of gshep is 3.
-The Dexterity of gshep is 13.
+NPCObject of gshep is Korvin.
+IDList of gshep is { "Korvin", "korvin", "dog", "gshep", "shepherd", "german shepherd", "German shepherd" }.
+printed name of gshep is "Korvin".
+Description of gshep is "[Korvindesc]".
+Conversation of gshep is { "Bark!" }.
+Weapon Damage of gshep is 15.
+The level of gshep is 1.
+Dexterity of gshep is 10.
 The summondesc of gshep is "[SummonKorvin]".
 The dismissdesc of gshep is "[DismissKorvin]".
 The assault of gshep is "[gshep_attack]".
@@ -75,8 +89,7 @@ MainInfection of gshep is "German Shepherd Male".
 
 
 to say SummonKorvin:
-	now Korvin is nowhere;
-	if Player is in Makeshift Rec Room and Korvin is in Makeshift Rec Room: [summoning while standing next to him]
+	if Korvin is visible: [summoning while standing next to him]
 		say "     Calling for Korvin, the German shepherd joins you at your side. He seems excited at the prospect of busting some heads.";
 	else: [regular summoning]
 		say "     Calling for Korvin, the German shepherd joins you at your side. He seems excited at the prospect of busting some heads.";
@@ -93,7 +106,6 @@ gshep_postfight is a number that varies. [post-fight argument]
 gshep_sexscene is a number that varies. [sex-role argument]
 gshep_bed_scene is a number that varies. [discipline argument]
 gshep_inactive is a number that varies. [inactivity argument]
-gshep_scarscene is a truth state that varies. gshep_scarscene is usually false. [scar dialog]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -135,8 +147,8 @@ SexuallyExperienced of Korvin is true.
 TwistedCapacity of Korvin is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Korvin is false. [steriles can't knock people up]
 MainInfection of Korvin is "German Shepherd Male".
-The description of Korvin is "[KorvinDesc]".
-The conversation of Korvin is { "Woof." }.
+Description of Korvin is "[KorvinDesc]".
+Conversation of Korvin is { "Woof." }.
 
 
 instead of fucking Korvin:
@@ -145,7 +157,7 @@ instead of fucking Korvin:
 instead of conversing the Korvin:
 	if Player is in Makeshift Rec Room and Korvin is in Makeshift Rec Room:
 		say "[KorvinTalk]";
-	else if companion of Player is gshep:
+	else if gshep is listed in companionList of Player:
 		say "[KorvinTalk]";
 	else:
 		say "     Korvin isn't here.";
@@ -156,7 +168,7 @@ instead of conversing gshep:
 	else:
 		if Player is in Makeshift Rec Room and Korvin is in Makeshift Rec Room:
 			say "[KorvinTalk]";
-		else if companion of Player is gshep:
+		else if gshep is listed in companionList of Player:
 			say "[KorvinTalk]";
 		else:
 			say "     Korvin isn't here.";
@@ -178,6 +190,8 @@ to say Korvindesc:
 			project the figure of Korvin_blackcollar_icon;
 		say "     Korvin, the anthro German shepherd you've trained to be your dog, stands nearby with his arms crossed and a stern look on his canine face. He's got the typical brown and black coat of the breed. He's buff and well-built, though not overly so. His most distinguishing feature is the ragged scar that runs along his cheek and muzzle. Such marks are rare, even with the amount of fighting between mutants in the city. He's also nude, wearing nothing save for the black studded collar you've given him, adding to his air of menace.";
 		say "     Despite being tamed, his mind is definitely more corrupted than human, clearly only retaining shreds of his past life. You've been able to help him better cope with that, letting him recover a little self-control. He still retains some of that independent streak of his, but he accepts you as his friend and master and will follow your orders fairly loyally.";
+	if gshep is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 to say gshep_attack:
 	choose row MonsterID from the Table of Random Critters;
@@ -187,7 +201,7 @@ Section 1 - Dialog
 
 to say KorvinTalk:
 	if gsd_pet < 16:
-		say "     [one of]'What do you want?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, oh wise and powerful Alpha?' he asks, rolling his eyes. A glare from you gets him to stop and hang his head.[or]'I can't wait for our next scrap, [if Player is female]Mistress[else]Master[end if]. It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[at random]";
+		say "     [one of]'What do you want?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, oh wise and powerful Alpha?' he asks, rolling his eyes. A glare from you gets him to stop and hang his head.[or]'I can't wait for our next scrap, [K_Boss]. It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[at random]";
 	else if gsd_pet is 16:
 		if Player is neuter:
 			say "     You consider giving Korvin his new collar, but without a gender of your own, you won't really be able to [']enjoy['] the moment.";
@@ -196,27 +210,211 @@ to say KorvinTalk:
 	else if gsd_pet >= 20 and gsd_pet < 60: [subby Korvin]
 		if graphics is true:
 			project the figure of Korvin_pinkcollar_face_icon;
-		say "     [one of][if lastfuck of gshep - turns < 6]'What do you need, [masterormistress]?' he asks obediently[else]'Did you need anything of me, [masterormistress]?' he asks with a hint of longing in his tone[end if].[or]You give Korvin some scritching that turn into a tummy rub before ending in some playful groping of your subby puppy.[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, Alpha?' he asks, cracking his knuckles.[or]'I can't wait for our next scrap, [masterormistress]. It'll feel good to smack some fools around for you.'[or]The G-Shep pants happily as you pet and scritch him. From the way his tail wags, you can tell that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[or]'May we go out to beat up some mutants to... uhh... keep them from making trouble around here?'[or]'How can I help you, boss?'[or]'Just point me at someone and I'll make sure they regret giving you any trouble, my alpha.'[or]'It's not so bad being beta, long as it's to you.'[or]'I could sure go for a good fight[if lastfuck of gshep - turns >= 6]... or fuck,' he adds, posing as to offer himself to you.[else].'[end if][or]Taking his squeaky toy, you throw the pink bone for him to fetch a few times. It's amusing to watch the big, buff canine chase after it, much to his embarrassment and enjoyment.[at random]";
+		say "     [one of][if lastfuck of gshep - turns < 6]'What do you need, [K_Boss]?' he asks obediently[else]'Did you need anything of me, [K_Boss]?' he asks with a hint of longing in his tone[end if].[or]You give Korvin some scritching that turn into a tummy rub before ending in some playful groping of your subby puppy.[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, Alpha?' he asks, cracking his knuckles.[or]'I can't wait for our next scrap, [K_Boss]. It'll feel good to smack some fools around for you.'[or]The G-Shep pants happily as you pet and scritch him. From the way his tail wags, you can tell that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[or]'May we go out to beat up some mutants to... uhh... keep them from making trouble around here?'[or]'How can I help you, boss?'[or]'Just point me at someone and I'll make sure they regret giving you any trouble, my alpha.'[or]'It's not so bad being beta, long as it's to you.'[or]'I could sure go for a good fight[if lastfuck of gshep - turns >= 6]... or fuck,' he adds, posing as to offer himself to you.[else].'[end if][or]Taking his squeaky toy, you throw the pink bone for him to fetch a few times. It's amusing to watch the big, buff canine chase after it, much to his embarrassment and enjoyment.[at random]";
 	else: [confident Korvin, gsd_pet >= 60]
-		if graphics is true:
-			project the figure of Korvin_blackcollar_face_icon;
-		if gshep_scarscene is false and a random chance of 1 in 3 succeeds:
-			say "     Leaning against a wall, Korvin rubs a finger along his muzzle scar. Given the rapid nanite healing, it's rare to see lasting damage, even from how intense some creatures may fight. You decide to ask him about it.";
-			say "     'Oh, I've had this bad boy for a long time; long before this whole fun mess. I...' he pauses for a bit, '...don't quite remember all the details, but I was out at a bar with my buds and some ass was really pissing us off. Stupid prick really needed to be put in his place. Well, during the fight, he got me with a bottle and left me with this. But don't worry, I gave him far worse than this in return,' he adds proudly.";
-			now gshep_scarscene is true;
+		if Resolution of Trucker Bar is 3 and "KorvinPast_Convinced" is not listed in Traits of Korvin: [the player talked Korvin into staying with them]
+			say "     As you approach Korvin in order to talk with him, the German shepherd suddenly looks at you with an intense expression on his face. 'Listen, [K_Boss]. I wanted to talk to you about what happened when we went to track down Eddie's place. Going through that picture album with her was... brutal, but I still felt like I owed it to Eddie, Wyatt, them both, them, to try to make it work. Damn, some of those pics just made me [italic type]itch[roman type] in my mind, with no chance to scratch it because I just couldn't remember. And yet, I was really fucking close to go in there with her. So... tempting, to be someone [italic type]real[roman type].' He blows out his breath, scratching the back of his neck. 'But you were right. That idea was doomed to fail. I'd have joined her, tried, but at some point she'd have learned that she invited a street dog inside. Most likely when I pinned her down to fuck her like any other random bitch.'";
+			say "     Reaching out to put a paw-hand on your shoulder, Korvin squeezes it and continues, 'So, thanks for talking sense into me. And helping me BE me. Damn, while I was out there, feral in all but name, I didn't have a name. No one cared, including me. Eddie was already gone, but you MADE me Korvin.' Reaching up to touch his collar, the German shepherd looks you in the eyes, then leans in and licks you affectionately, his tongue brushing over your jaw, cheek and the side of your neck. He continues to do that for a few heartbeats, before pulling back and snorting in amusement about himself. 'Enough of that soppy stuff, eh? How about we make trouble somewhere instead?'";
+			LineBreak;
+			say "     [bold type]With his new confidence to guide him, and trust in you absolute, Korvin will now deal more damage in combat. His attack damage has increased by 3![roman type][line break]";
+			increase weapon damage of gshep by 3;
+			add "KorvinPast_Convinced" to Traits of Korvin;
+		else if Resolution of Trucker Bar is 2 and "KorvinPast_OwnChoice" is not listed in Traits of Korvin: [the player let Korvin make the decision himself]
+			say "     As you approach Korvin in order to talk with him, the German shepherd suddenly looks at you with an intense expression on his face. 'Listen, [K_Boss]. I wanted to talk to you about what happened when we went to track down Eddie's place. Going through that picture album with her was... brutal, but I still felt like I owed it to Eddie, Wyatt, them both, to try to make it work. Damn, some of those pics just made me [italic type]itch[roman type] in my mind, with no chance to scratch it because I just couldn't remember. And yet, I was really fucking close to go in there with her. So... tempting, to be someone [italic type]real[roman type].' He blows out his breath, scratching the back of his neck. 'But no, that idea was doomed to fail. I'd have joined her, tried, but at some point she'd have learned that she invited a street dog inside. Most likely when I pinned her down to fuck her like any other random bitch.'";
+			say "     Reaching out to put a paw-hand on your shoulder, Korvin squeezes it and continues, 'So, thanks for helping me BE me. Damn, while I was out there, feral in all but name, I didn't have a name. No one cared, including me. Eddie was already gone, but you MADE me Korvin.' Reaching up to touch his collar, the German shepherd looks you in the eyes, then leans in and licks you affectionately, his tongue brushing over your jaw, cheek and the side of your neck. He continues to do that for a few heartbeats, ";
+			if Player is female or Player is mpreg_ok:
+				say "then leans his head against the crook of your neck, holding on to you for a little while. With him continuing this close contact between the two of you, there is a feel of something... more being offered, without him just outright saying anything, or pushing it on you. [bold type]Something to think about later, maybe. You gotta let the idea settle and see if it sprouts.[roman type][line break]";
+				add "KorvinPast_Something_More" to Traits of Korvin;
+			else:
+				say "before pulling back and snorting in amusement about himself. 'Enough of that soppy stuff, eh? How about we make trouble somewhere instead?'";
+			LineBreak;
+			say "     [bold type]With his new confidence to guide him, and trust in you absolute, Korvin will now deal more damage in combat. His attack damage has increased by 3![roman type][line break]";
+			increase weapon damage of gshep by 3;
+			add "KorvinPast_OwnChoice" to Traits of Korvin;
 		else:
-			say "     [one of]'What do you need, [masterormistress]?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, Alpha?' he asks, cracking his knuckles.[or]'I can't wait for our next scrap, [masterormistress]. It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[or]'How about we go beat up some mutants to... uhh... keep them from making trouble around here?'[or]'What're you planning next, boss?'[or]'Just point me at someone and I'll make sure they regret giving you any trouble, chief.'[or]'It's not so bad being beta, long as it's to you.'[or]'I could sure go for a good fight[if lastfuck of gshep - turns >= 6] or fuck[end if].'[or]Taking his tug rope toy, [if FaceName of Player is listed in infections of caninelist]the two of you enjoy a good, canine tug-o-war over it, using your jaws to pull on each end[else]he enjoys a good, canine tug-o-war with you, pulling on it with his muzzle while you hold and yank on the other end[end if].[at random]";
+			say "     [bold type]What exactly do you want to talk about with Korvin?[roman type][line break]";
+			say "[conf_Korvin_talkmenu]";
 
-to say masterormistress:
-	say "[if Player is female]Mistress[else]Master[end if]";
+to say K_Boss:
+	say "[one of]boss[or]alpha[or][master][at random]";
 
+to say conf_Korvin_talkmenu:
+	let TalkDone be false;
+	project the figure of Korvin_blackcollar_face_icon;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Just chat a little";
+	now sortorder entry is 1;
+	now description entry is "Talk about nothing in particular";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Bring up his muzzle scar";
+	now sortorder entry is 2;
+	now description entry is "Ask where he got the scar";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Bring up his transformation";
+	now sortorder entry is 3;
+	now description entry is "Ask him how he became a German shepherd";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Bring up your relationship";
+	now sortorder entry is 4;
+	now description entry is "Talk about how things stand, between him and you";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Bring up his sexual preferences";
+	now sortorder entry is 5;
+	now description entry is "Talk about what gets him off";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Bring up the situation in the city as a whole";
+	now sortorder entry is 6;
+	now description entry is "Talk about how he sees things right now";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Wonder about what you should do next";
+	now sortorder entry is 7;
+	now description entry is "Talk about things to do";
+	[
+	if Intelligence of Carl is 54: [Korvin invited Carl to jump some passersby, and they had a moderate falling out]
+		choose a blank row in table of fucking options;
+		now title entry is "Bring up Carl";
+		now sortorder entry is 20;
+		now description entry is "Talk with him about his falling-out with the soldier";
+	]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Just chat a little":
+					say "[conf_Korvin_Talk01]";
+				else if nam is "Bring up his muzzle scar":
+					say "[conf_Korvin_Talk02]";
+				else if nam is "Bring up his transformation":
+					say "[conf_Korvin_Talk03]";
+				else if nam is "Bring up your relationship":
+					say "[conf_Korvin_Talk04]";
+				else if nam is "Bring up his sexual preferences":
+					say "[conf_Korvin_Talk05]";
+				else if nam is "Bring up the situation in the city as a whole":
+					say "[conf_Korvin_Talk06]";
+				else if nam is "Wonder about what you should do next":
+					say "[conf_Korvin_Talk07]";
+				[
+				else if nam is "Bring up Carl":
+					say "[conf_Korvin_Talk_CarlDisagreement]";
+				]
+				if TalkDone is false: [didn't to any option that ends the conversation]
+					say "     [bold type]What else do you want to talk about with Korvin?[roman type][line break]";
+					say "[conf_Korvin_talkmenu]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the German shepherd, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say conf_Korvin_Talk01: [unspecific chatterbox]
+	say "     [one of]'What do you need, [K_Boss]?'[or]The muzzle-scarred G-Shep scratches himself behind the ear with a foot. Noticing you watching him, he stops and tries to look more dignified.[or]'Where to now, Alpha?' he asks, cracking his knuckles.[or]'I can't wait for our next scrap, [K_Boss]. It'll feel good to smack some fools around with you.'[or]The G-Shep consents to let you pet and scritch him, he grumbles a little, but you can tell from the way his tail wags that he enjoys the attention from his alpha.[or]'You're my alpha now, so I'll follow you.'[or]'How about we go beat up some mutants to... uhh... keep them from making trouble around here?'[or]'What're you planning next, boss?'[or]'Just point me at someone and I'll make sure they regret giving you any trouble, chief.'[or]'It's not so bad being beta, long as it's to you.'[or]'I could sure go for a good fight[if lastfuck of gshep - turns >= 6] or fuck[end if].'[or]Taking his tug rope toy, [if FaceName of Player is listed in infections of caninelist]the two of you enjoy a good, canine tug-o-war over it, using your jaws to pull on each end[else]he enjoys a good, canine tug-o-war with you, pulling on it with his muzzle while you hold and yank on the other end[end if].[at random]";
+
+to say conf_Korvin_Talk02: [scar talk]
+	say "     As you bring up the mark on his muzzle, Korvin reaches up and rubs a finger along the scar. Given the rapid nanite healing, it's rare to see lasting damage, even from how intense some creatures may fight. 'Oh, I've had this bad boy for a long time; long before this whole fun mess. I...' he pauses for a bit, '...don't quite remember all the details, but I was out at a bar with my buds and some ass was really pissing us off. Stupid prick really needed to be put in his place. Well, during the fight, he got me with a bottle and left me with this. But don't worry, I gave him far worse than this in return,' he adds proudly.";
+	if Trucker Bar is not active:
+		say "     With your curiosity awakened, you follow up and ask if he remembers the name of the bar, or even just how it looked. 'Hm, no it was - just the bar we usually went to, you know. None of that pretentious crap there - just cheap drinks, pool table, TV with the newest game running on it. A trucker bar, you see? It was... err, somewhere a little off from the center of town, I think?' Hmm, with that description, you'd guess the bar could be in the outskirts of the downtown area, or maybe the warehouse district? [bold type]Maybe you should take Korvin there sometime and see if you can find it together?[roman type][line break]";
+		now Trucker Bar is active;
+	else if Trucker Bar is not resolved:
+		say "     You remember that Korvin told you about the bar he was in. From his description you'd guess the bar could be in the outskirts of the downtown area, or maybe the warehouse district? [bold type]Maybe you should take Korvin there sometime and see if you can find it together?[roman type][line break]";
+
+to say conf_Korvin_Talk03: [transformation talk]
+	say "     As you mention an interest in how he got turned into a German shepherd, Korvin clears his throat and says, 'Story like any other, I guess. Everything's a bit fuzzy, ya'know. So, I was in that bar, ... err, somewhere a little off from the center of town, I think?' Not sure what kicked things off, but we were fighting. Good, honest barfight in one moment, the next I'm ducking a chair and see on the ground next to me a waitress scuffling with a trucker. Only it's not the burly dude trying to force her, but she's the one going for him! Tried to pull her off, to have her raise her head and give me a death-glare with those freaky, yellow, slitted eyes. She hissed at me, and I kid you not, she had scales and shit, trying to bite me with fangs as long as my little finger! Trucker Dude klonked her out with a beer mug to the side of the head and we ran. Made it out the back door, but that's where the luck ran out...'";
+	say "     Lips peeling back from his teeth as he goes back to the memory in his mind, Korvin grimaces and lets out a grunt. Then he starts to gesture to illustrate his tale and continues, 'There were three, maybe four dog-dudes out there, waiting or butt-sniffing or something. Fuck, I'm just remembering bits of pieces of what happened next - must have ran smack-dab into the bunch I guess, and we kinda all went down in a heap. Didn't see Trucker Dude in the mix so maybe he got away, while I got held down for all the dogs to have a go, and another, and some thirds. If you think a normal hangover is bad, try waking up with dried cum sticking you to the dirty ground in an alley! And making your fur spiky and gross, fur you didn't even remember having before! Bastards fucked me and just left. Must have stolen my keys, wallet and whatnot too. Certainly didn't have any when I woke.' Holding up a paw-hand to look at it, furred skin and pads and blunt canine nails, Korvin taps the side of his muzzle and shrugs. 'Kinda stumbled out of there and never looked back, then lived on the streets until a certain someone rang my clock and put a collar on me.'";
+	if Trucker Bar is not active:
+		say "     With your curiosity awakened, you wonder if you might be able to find the bar where things went down for Korvin. Might provide some clues about his past. Given the description, you'd guess the bar could be in the outskirts of the downtown area, or maybe the warehouse district? [bold type]Maybe you should take Korvin there sometime and see if you can find it together?[roman type][line break]";
+		now Trucker Bar is active;
+	else if Trucker Bar is not resolved:
+		say "     You remember that Korvin told you about the bar he was in. From his description you'd guess the bar could be in the outskirts of the downtown area, or maybe the warehouse district? [bold type]Maybe you should take Korvin there sometime and see if you can find it together?[roman type][line break]";
+
+to say conf_Korvin_Talk04: [relationship talk]
+	if Resolution of Trucker Bar is 0:
+		say "     As you say that you want to talk about your relationship, Korvin looks at you in a mixture of confusion and wariness. 'Did I do something wrong, [K_Boss]?' he asks, with you telling him to calm down and stressing that you just wanted to get his view on things. There still is caution in his voice as he says, 'O-kay then. Well, I'm your dog all the way, you don't have to worry about that. I mean, yeah you kicked my ass, hard, more than once. But in the end, you didn't just... leave me, instead giving me this. Makes a guy feel appreciated, and all that.' Raising a paw-hand to his neck and running his fingertips over the studs of the collar there, his tail starts up a slow wag.";
+		say "     Seeing the intensity of Korvin's conviction in his eyes, you recognize that he has a deep [italic type]need[roman type] to belong with someone (or maybe to someone?). You guess he must have had a tough time out on the streets, or maybe even before the nanite apocalypse. Taking him in and treating him as more than just a cum-dump has given you a immense status in his mind, and you don't think there's much of anything that he wouldn't do for you. The path you took has earned you an intensely loyal companion, and you can't help but feel good about how things turned out.";
+	else if Resolution of Trucker Bar is 2: [player let Korvin make the decision himself]
+		say "     As you say that you want to talk about your relationship, Korvin perks up immediately, a grin spreading over his muzzle. 'I'm your dog all the way, [K_Boss]!' Reaching up to proudly stroke along the studded outside of his collar, he goes on to say,  'Really happy you gave me this. Makes a guy feel appreciated, and all that. Then afterwards, when we went to track down Eddie's story, you were there for me. Let me think it through, make up my own mind. Yeah, really glad I'm with you.' His tail is wagging steadily behind his back, a clear indicator of the positive view the German shepherd holds for you.";
+		if "KorvinPast_Something_More" is listed in Traits of Korvin:
+			say "     Korvin lets his gaze stay focused on you for a little while longer after his last words have been spoken. You think you see his nostrils flare a little as he breathes in your scent, accompanied by an increase of his tail movements. He opens his mouth, as if to say something, then thinks better of it and just licks the sides of his muzzle before giving you a respectful nod. When the German shepherd then turns away, you see from the corner of your eye that he's half-hard, his cock having partly pushed out of his sheath. [bold type]Seems like the things you went through together have given Korvin some ideas beyond just being your trusted guard dog and battle companion. Still, it doesn't seem the right time yet to act on this, one way or another. Better let the matter germinate some more.[roman type][line break]";
+	else if Resolution of Trucker Bar is 3: [player told Korvin to stay with them]
+		say "     As you say that you want to talk about your relationship, Korvin perks up immediately, a grin spreading over his muzzle. 'I'm your dog all the way, [K_Boss]!' Reaching up to proudly stroke along the studded outside of his collar, he goes on to say,  'Really happy you gave me this. Makes a guy feel appreciated, and all that. Then afterwards, when we went to track down Eddie's story, you were there for me. Prevented me from almost making a mistake of trying to be him, instead of myself.' His tail is wagging steadily behind his back, a clear indicator of the positive view the German shepherd holds for you.";
+	SanBoost 3;
+
+to say conf_Korvin_Talk05: [gender preference talk]
+	say "     As you ask Korvin what he prefers sexually, the German shepherd looks at you with a raised eyebrow, then lets out an amused bark? 'Why're you asking, [K_Boss]? Is this for [italic type]personal[roman type] use or are we maybe gonna go out and hunt down some fun?' Exuberant wagging of his tail tells you that he's eager for either option, but he feels a special desire for some one-on-one time with yourself. Reaching out to grip his muscled shoulder and give the anthro a squeeze, you chuckle and tell him that you'll decide what'll go down when the mood strikes you. 'Fair enough,' Korvin replies with a grin. 'Well, I gotta say I love me some boobs. Big, round, and swaying back and forth as I hammer into the bitch's pussy. That's really, really hot!' To underline his point, he grips the base of his cock suggestively. 'And the more bitches the better! God, I wanna pound them all and put puppies inside them!'";
+	say "     Raising an arm to scratch the back of his neck, your canine bodyguard glances aside, looking at you from the corner of his eye and putting on a sly grin. 'As for... other options, I'd say a hole is a hole, ya see? I mean, I'm no fag, but when you're out on the streets, and you've got a boy-bitch on his knees, tail up and just begging for it, of course you drain your balls in that!' Looking down at his crotch, you see the canine's half-hard cock slide another inch from his sheath. 'And a few of em are different too. I mean, I caught a dude one time that had a full-on pussy down below, so you never know what you're gonna get. Fucked that sexy slit so hard and saw him the next day with a swollen belly! And another guy that was all dude, I could smell there was something different there. Almost like a bitch in heat, hah! He was some sort of breeding fag, and I'm pretty sure I put some butt-babies in there, that was sweet!'";
+	LineBreak;
+	say "     Korvin doesn't bring up any pairing in which he wasn't the top, so you can conclude that he prefers that role above others. Still, given the immense status you've got in his mind, you don't think that he'd hesitate even a second to submit to it if it was you who wanted to make use of him that way. For all of his bluster and throwing around the word 'fag' regularly, the canine appears well-used to homosexual pairings too, so the way one might describe him is a 'no homo' bisexual - ready to go for it, but seeking to keep his manly reputation intact.";
+
+to say conf_Korvin_Talk06: [talk about the city/situation]
+	say "     As you ask Korvin about his view of the city and the nanite apocalypse in general, the German shepherd lets out a chuckle and shrugs. 'We're fucked, that's the truth of it. I mean, I know that my marbles are a little scrambled, what with most memories being blurry as shit, but what I can recall of the before-time... that stuff isn't gonna fly anymore in the new world. Hell, imagine someone trying to do a nine to five job these days. Before he'd be out of his garden and at the car, I bet the postwoman or some other needy slut would have him sprawled on the grass, slamming her pussy down on his shaft!' Adding some hip-thrusts and gestures with his hands that mime guiding a broad-hipped woman against his crotch, Korvin seems to fall for his imaginary fuck for a little while, before shaking off the image and focusing back on you.";
+	say "     'Nah, the old days are gone, I tell you. Now it's all survival of the fittest here, and if I may say it, you've got that down well, [K_Boss]! Looking forward to everything we'll do together, you and me by your side, yeah!' A wide grin spreads over his muzzle and he holds out a bunched paw-hand for a fistbump that you return, nodding knowingly as your eyes meet. 'I've seen some army guys in the streets at times, so I guess they're trying to move in and take over, but really - half the time those dudes were getting their asses handed to them. Might have - ehem, face-fucked one myself that was knotted and ass-to-ass with a feral wolf. So, not putting too much stock in them getting their shit together, and I think they should better keep out of the way and not interfere with any plans you got, [K_Boss]!'";
+
+to say conf_Korvin_Talk07: [immediate plans talk]
+	say "     As you wonder aloud about what you should do next, Korvin steps closer and scratches his furry chin. 'Well, how about getting some more supplies? Not sure how stocked with food and water we are. You don't have to worry about me for that calculation by the way. I've learned how to make it on the streets, and this sniffer here is a great tool for that.' Patting the side of his muzzle and wiggling his nose at you, the German shepherd smiles. 'I'll find something to sate me on my own, just let me scavenge a little when you don't need me right that minute. As for other needs-' He grips his crotch while saying this, 'I think we should find some sexy bitches to fuck. Regularly! Got a whole city to choose from, so there's lots of opportunities!";
+
+[
+to say conf_Korvin_Talk_CarlDisagreement: [TODO: Add more DEPTH]
+	if "Carl_Disagreement_Might" is not listed in Traits of Korvin and "Carl_Disagreement_Rules" is not listed in Traits of Korvin: [neither decision made]
+		say "     As you mention Carl, the German shepherd grimaces, one hand-paw balling to a fist. 'Saw that, eh? Bah! What's there left to say? One moment we're watching a sexy lizard chick get boned, the next we're arguing. Damn, if we're strong and can take what we want, why shouldn't we? That's what you do. To make them give in!' The muscular canine turns his head to you, eyes seeing to meet yours. 'Isn't it, [one of]alpha[or]boss[or][K_Boss][at random]?'";
+		say "     [bold type]What do you reply?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Yeah, he's right. You picked a tough street dog as your companion and don't want him to change!";
+		say "     [link](2)[as]2[end link] - No. He's part of a pack now, your pack, and that has rules.";
+		say "     [link](3)[as]3[end link] - No comment. Shrug it off for now.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to agree with him, [link]2[end link] to tell Korvin there are rules to follow or [link]3[end link] to shrug it off.";
+		if calcnumber is 1:
+			say "     Nodding and stroking over Korvin's head, then gripping him by the nape of the neck, you tell the anthro that might makes right. Just like you bested him and made him yours. Carl might have some other ideas, but Korvin doesn't have to let that stop him. You might just take him along out into the city and have fun sometime, like in the old days.";
+			add "Carl_Disagreement_Might" to Traits of Korvin;
+		else if calcnumber is 2:
+			say "     Shaking your head as you reach out to grasp Korvin's upper arm, you tell the German shepherd that he isn't on his own anymore. Being part of your pack comes with rules, and you decide what goes and what doesn't. Snatching people from just outside the library isn't on the list, so Carl was right. Nervously reaching up to hook a finger under his collar, Korvin says, 'Well, fuck. So I was planning to go against the [one of]alpha[or]boss[or][K_Boss][at random]'s wishes, and on top of that Carl thinks I'm a bastard now.' Telling him that the question isn't what happened, but what he's planning to do about it, you watch the wheels behind Korvin's eyes start turning. Finally, he grimaces and says, 'I'm gonna have to apologize to Carl, I guess. Can I have some time to go out into the city, to find something for him? Not when you need me, just... in between, you know.' As you agree, he looks down at his paws and adds, 'Thanks, [one of]alpha[or]boss[or][K_Boss][at random].'";
+			add "Carl_Disagreement_Rules" to Traits of Korvin;
+			now lastCarlKorvinInteraction is turns; [timer for him finding an apology item counts from now on]
+		else:
+			say "     With a noncommittal grunt and a shrug of your shoulders, you postpone answering that question for now.";
+	else if "Carl_Disagreement_Might" is listed in Traits of Korvin: [player chose to support Korvin's position]
+		say "     As you mention Carl, the German shepherd just shrugs. 'What about him? I see now that he's a bit of a tame lapdog. No wonder he's always hanging out in the library instead out with you in the city. You need the stones to take what you want out there!'";
+	else if "Carl_Disagreement_Rules" is listed in Traits of Korvin: [player told Korvin that there are rules]
+		if lastCarlKorvinInteraction - turns < 16:
+			say "     As you mention Carl, the German shepherd scratches the back of his neck. 'Still searching for something to give him as an apology. Gotta be the right thing, and come from me, you know.' Hearing that last sentence, you put the thought of just supplying Korvin with something fitting out of your mind. Seems he just needs some time.";
+		else:
+			say "     As you mention Carl, the German shepherd reaches up to rub his scar distractedly. 'I think I found something he'll like. Just gotta have some free time in the library to have a talk with him now.'";
+]
 
 Section 2 - Sexy Times
 
 to say korvinsexmenu:
 	if Player is neuter:
 		say "     Given your lack of gender, you don't see much point in that.";
-	else if lastfuck of gshep - turns < 6:
+	else if lastfuck of Korvin - turns < 6:
 		say "     You fooled around not too long ago with the German shepherd. Perhaps you should give him a bit of a break before having sex with him again.";
 	else if gsd_pet is 12:
 		say "     Your gaze shifts to the German shepherd and you feel a growing arousal. You run your eyes up and down the buff male. Deciding he should provide some relief for the state of arousal he's put you in, you call him over and tell him to put his muzzle to work [if Player is male]sucking you off[else]eating you out[end if].";
@@ -417,9 +615,7 @@ to say gshep_inactive_scene:
 	else:
 		LineBreak;
 		say "     Seeing the way his paws are clenching into fists and how he's fidgeting from foot to foot, you decide he could use a chance to blow off some steam. You pause a bit to remind him that it's your decision before nodding and telling him to get ready. He gives a growl of anticipation and smacks a fist into his palm a few times. 'I've been ready all day.' You add that you'll agree this one time, but that he'll have to be more self-controlled in the future - he's not a wild dog anymore. He nods and takes a breath, settling down a little before fist-pumping. 'Come on! Let's do this thing!'";
-		if the player is not lonely and companion of Player is not gshep:
-			say "     Your current companion backs off at a glare from Korvin, leaving him to accompany you instead. The German shepherd clearly wants to go out and fight alongside his alpha - just the two of you against the city.";
-		now companion of Player is gshep;
+		ForceCompanionJoin "Korvin";
 		now battleground is "Outside";
 		say "     Once outside, the dog goes sniffing for a fight, chasing after the first interesting trail he comes across. You follow him as he soon leads you to an encounter with a roaming denizen of the city.";
 		WaitLineBreak;
@@ -434,7 +630,7 @@ to say gshep_inactive_scene:
 			decrease morale of Player by 5;
 		say "     When the two of you return to the library, he goes to find somewhere to curl up. You know he won't always do so patiently, but you're confident he'll wait until called upon from now on. You continue on into the bunker, getting back to what you were doing before.";
 		now gshep_inactive is 1;
-		now companion of Player is nullpet;
+		ForceCompanionDismiss "Korvin";
 	if ( gshep_postfight > 0 and gshep_sexscene > 0 and gshep_bed_scene > 0 and gshep_inactive > 0 ):
 		say "[gshep_collar_prompt]";
 
@@ -516,12 +712,12 @@ to say conf_Korvin_sexmenu:
 		now title entry is "Fuck him doggy style";
 		now sortorder entry is 1;
 		now description entry is "Get the buff dog on all fours and mount that tight ass of his";
-	[
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him on his back";
 		now sortorder entry is 2;
 		now description entry is "Get the buff dog to roll over and take it";
-	]
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride that doggy pole (vaginal)";
@@ -532,13 +728,13 @@ to say conf_Korvin_sexmenu:
 	now title entry is "Ride that doggy pole (anal)";
 	now sortorder entry is 4;
 	now description entry is "Stuff that canine cock of his into your ass";
-	[
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Tell him to take you (vaginal)";
 		now sortorder entry is 5;
 		now description entry is "Give the buff dog the freedom to make use of your body";
-	]
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Tell him to take you (anal)";
 	now sortorder entry is 6;
@@ -549,15 +745,17 @@ to say conf_Korvin_sexmenu:
 		now title entry is "Blow job (receiving)";
 		now sortorder entry is 7;
 		now description entry is "Have him put that muzzle of his to use on your cock";
-	[
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Blow job (giving)";
 	now sortorder entry is 8;
-	now description entry is "Reward your loyal dog by sucking his canine cock";
-	]
+	now description entry is "Reward your loyal dog by allowing him to face-fuck you";
+	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -584,30 +782,37 @@ to say conf_Korvin_sexmenu:
 					say "[conf_Korvin_sex07]";
 				else if nam is "Blow job (giving)":
 					say "[conf_Korvin_sex08]";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the German shepherd, shaking your head slightly as he gives a questioning look.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	now lastfuck of gshep is turns;
 	wait for any key;
 	clear the screen and hyperlink list;
 
-
 to say conf_Korvin_sex01: [fuck Korvin's ass doggystyle]
-	say "     Wanting a go at the hot ass of the strong, confident canine, you move a hand to his butt and give it a squeeze. Korvin's ass is firm and muscular, with soft fur that feels quite nice under your fingers. Clipping his leash on with your other hand, you tell the tall anthro to get on all fours[one of]. His ears dip a bit, knowing what's coming, but his tail raises and he moves obediently enough into position[or]. 'Alright, ya big fag,' he grumbles as he moves into position with his tail already up and swaying[or]. 'Alpha's privilege,' he says with a nod and a sigh, though he's certainly speedy getting down onto the ground[at random]. You tease a finger across his pucker in a slow circle, teasing the tight ring a little. Korvin's up-turned tail starts to wag slowly as he reaches back to spread his cheeks, ass rising a little further in response to his [master]'s touch.";
-	say "     Smiling at the thought what a good dog he former street thug has become, you gather a gob of spit, letting it drip onto your fingers to smear over Korvin's hole and lube him up at least a little bit. Then you move into position behind him, lining your [Cock of Player] cock up with the target of his quivering tail-star. With a lusty grunt, you ease your [cock size desc of Player] meat into him. Korvin replies with a [if Cock Length of Player > 24]moaning whimper at your great size, but his ass accepts you anyway[else if Cock Length of Player > 16]moaning whimper at your impressive size as you push into his ass[else if Cock Length of Player > 8]long moan as you push inch after inch into his ass[else]soft moan as your shaft slides into his ass[end if]. The anthro German shepherd's insides are hot and tight, but yield to his alpha's cock readily enough. At the same time, you reach around to fondle your companion's manhood and praise him about how great he feels around your cock. Korvin's ass gives your meat a squeeze in response and his hips push back a little. Knowing he's ready for more, you smile and start thrusting. His inner walls clench warmly around your dick at the end of every thrust.";
+	say "     Wanting a go at the hot ass of the strong, confident canine, you move a hand to his butt and give it a squeeze. Korvin's ass is firm and muscular, with soft fur that feels quite nice under your fingers. Clipping his leash on with your other hand, you tell the tall anthro to get on all fours[one of]. His ears dip a bit, knowing what's coming, but his tail raises and he moves obediently enough into position[or]. 'Alright, ya big fag,' he grumbles as he moves into position with his tail already up and swaying[or]. 'Alpha's privilege,' he says with a nod and a sigh, though he's certainly speedy getting down onto the ground[at random]. You tease a finger across his pucker in a slow circle, teasing the tight ring a little. Korvin's up-turned tail starts to wag slowly as he reaches back to spread his cheeks, ass rising a little further in response to his [K_Boss]'s touch.";
+	say "     Smiling at the thought what a good dog the former street thug has become, you gather a gob of spit, letting it drip onto your fingers to smear over Korvin's hole and lube him up at least a little bit. Then you move into position behind him, lining your [Cock of Player] cock up with the target of his quivering tail-star. With a lusty grunt, you ease your [cock size desc of Player] meat into him. Korvin replies with a [if Cock Length of Player > 24]moaning whimper at your great size, but his ass accepts you anyway[else if Cock Length of Player > 16]moaning whimper at your impressive size as you push into his ass[else if Cock Length of Player > 8]long moan as you push inch after inch into his ass[else]soft moan as your shaft slides into his ass[end if]. The anthro German shepherd's insides are hot and tight, but yield to his alpha's cock readily enough. At the same time, you reach around to fondle your companion's manhood and praise him about how great he feels around your cock. Korvin's ass gives your meat a squeeze in response and his hips push back a little. Knowing he's ready for more, you smile and start thrusting. His inner walls clench warmly around your dick at the end of every thrust.";
 	WaitLineBreak;
 	say "     While fucking your muscled doggie, you work your hand over that canine rod of his, enjoying the warmth of it lying in your grasp. In his arousal, Korvin's manhood throbs, starting to leak pre-cum and showing his pleasure at being fucked. You brush your fingertips across his pointed glans, getting them wet with the slick fluid before gliding them along his shaft and squeezing Korvin's knot. As the lustful romp progresses, his rod dribbles and more and more pre, which you smear over his red pole. You can tell he's really enjoying it, and more than just the hand job from the way his dick pulses at every prod across his prostate. [one of]'Damn, pound me alpha!' [or]'God, feels fucking great!' [or]'Master, ram my hole!' [at random]the German shepherd gasps, his tail by now swishing left and right in a clear show of pleasure.";
-	say "     Feeling your own release coming, you hasten your pace and thrust energetically into the canine's rear. Up till now, he mostly managed to stifle his moans and panting, but with you driving your meat hard and fast into him, he can no longer fully restrain himself and starts panting through his open muzzle. Still, even at this point, he manages to hold back his own orgasm until your own. As your hot cum begins to flood into his ass, thick throbs of your erection delivering a creamy load to paint his insides, Korvin responds by cumming right along with you. His ass practically milks at your cock with every hard spurt of canine seed he shoots out onto the floor. You end up leaving your studly dog [if Ball Size of Player > 6]with a bloated belly of your cum by the time you're done and pull out[else if Ball Size of Player > 5]with a visible tummy bump because of all your cum by the time you pull out[else if Ball Size of Player > 3]stuffed and leaking your hot cum by the you're done and pull out[else]panting and sticky by the time you pull out[end if]. Making especially sure to pet the anthro dog, you praise him for being such a good pet and sweet fuck. He can't help but smile and give a happy tail wag. [one of]'Sure thing, master!' [or]'Anything for the alpha!' [or]'For you, I'd do anything!' [at random]";
+	say "     Feeling your own release coming, you hasten your pace and thrust energetically into the canine's rear. Up till now, he mostly managed to stifle his moans and panting, but with you driving your meat hard and fast into him, he can no longer fully restrain himself and starts panting through his open muzzle. Still, even at this point, he manages to hold back his own orgasm until your own. As your hot cum begins to flood into his ass, thick throbs of your erection delivering a creamy load to paint his insides, Korvin responds by cumming right along with you. His ass practically milks at your cock with every hard spurt of canine seed he shoots out onto the floor. You end up leaving your studly dog [if Ball Size of Player > 6]with a bloated belly of your cum by the time you're done and pull out[else if Ball Size of Player > 5]with a visible tummy bump because of all your cum by the time you pull out[else if Ball Size of Player > 3]stuffed and leaking your hot cum by the you're done and pull out[else]panting and sticky by the time you pull out[end if]. Making especially sure to pet the anthro dog, you praise him for being such a good pet and sweet fuck. He can't help but smile and give a happy tail wag. [one of]'Sure thing, master!' [or]'Anything for the alpha!' [or]'For you, I'd do anything!' [at random][line break]";
 	NPCSexAftermath Korvin receives "AssFuck" from Player;
 
 to say conf_Korvin_sex02:
-	say "***Fuck him on his back";
+	say "     Wanting a go at the hot ass of the strong, confident canine, you move a hand to his butt and give it a squeeze. Korvin's ass is firm and muscular, with soft fur that feels quite nice under your fingers. Clipping his leash on with your other hand, you tell the tall anthro to get on his back and spread those legs for you[one of]. His ears dip a bit, knowing what's coming, but a wagging tail betrays that he's actually fairly excited as he moves into position[or]. 'Alright, ya big fag,' he grumbles, mostly for show, as a wagging tail betrays that he's fairly excited as he moves into position[or]. 'Alpha's privilege,' he says with a nod and a sigh, though he's certainly speedy getting down onto the ground and his tail is wagging[at random]. You kneel between the muscular canine's legs and brush a finger across his pucker in a slow circle, teasing the tight ring a little. Korvin's tail starts to thump against the ground as he responds to his [K_Boss]'s touch and raises his hips invitingly.";
+	say "     Smiling at the thought what a good dog the former street thug has become, you take hold of his red rocket of a canine cock, stroking up and down along its length. Korvin grunts as he starts getting jerked off, tongue lolling out of his muzzle as his arousal mounts rapidly. This brings with it a steady trickle of pre-cum welling up at the slit of his erection, which you wipe up with two fingers of your free hand and smear over his quivering tailstar. 'Man, that is super gay! Using me own pre to lube me up.' the though dog grumbles quietly, voice a little breathless and lust-filled. He hurriedly shakes his head as you ask if he'd prefer no lube instead, so you continue milking his dick for a little while and pushing your slick fingers against his back door, dipping inside more than a few times and teasing little spurts of pre from him as you lightly press his prostate.";
+	WaitLineBreak;
+	say "     After a long while of playing with your dog, you finally line your [Cock of Player] cock up with the target of his slick, relaxed hole. With a lusty grunt, you ease your [cock size desc of Player] meat into him, watching an expression of wanton need appear on his face. Korvin lets out a [if Cock Length of Player > 24]moaning whimper at your great size, but his ass accepts you anyway[else if Cock Length of Player > 16]moaning whimper at your impressive size as you push into his ass[else if Cock Length of Player > 8]long moan as you push inch after inch into his ass[else]soft moan as your shaft slides into his ass[end if]. The anthro German shepherd's insides are hot and tight, but yield to his alpha's cock readily enough. At the same time, you wrap your companion's manhood in a tight grasp and praise him about how great he feels around your cock. Korvin's ass gives your erection a squeeze in response and his lips curl up in a satisfied grin. Knowing he's ready for more, you smile and start thrusting. His inner walls clench warmly around your dick at the end of every thrust.";
+	say "     While fucking your muscled doggie, you work your hand over that canine rod of his, enjoying the warmth of it lying in your grasp. In his arousal, Korvin's manhood throbs rhythmically and the additional pre-cum trickles over your fingers now that you're no longer wiping it off. You spread the slick fluids along his length, getting him lubed up with nothing more than his own fluids, all the way down to the base where you squeeze Korvin's knot. As the lustful romp progresses, his rod continues to dribble and more and more pre, telling you that he's really enjoying it, dick pulsing hard at every prod across his prostate. [one of]'Damn, pound me alpha!' [or]'God, feels fucking great!' [or]'Master, ram my hole!' [at random]the German shepherd gasps, his tail by now swishing left and right in a clear show of pleasure.";
+	WaitLineBreak;
+	say "     Feeling your own release coming, you hasten your pace and thrust energetically into the canine's rear. Up till now, he mostly managed to stifle his moans and panting, but with you driving your meat hard and fast into him, he can no longer fully restrain himself and starts panting through his open muzzle. Still, even at this point, he manages to hold back his own orgasm until your own. As your hot cum begins to flood into his ass, thick throbs of your erection delivering a creamy load to paint his insides, Korvin responds by cumming right along with you. His ass practically milks at your cock with every hard spurt of canine seed he shoots up over his chest, making a sticky mess out of his ab- and pec-fur. You end up leaving your studly dog [if Ball Size of Player > 6]with a bloated belly of your cum by the time you're done and pull out[else if Ball Size of Player > 5]with a visible tummy bump because of all your cum by the time you pull out[else if Ball Size of Player > 3]stuffed and leaking your hot cum by the you're done and pull out[else]panting and sticky by the time you pull out[end if]. Making especially sure to pet the anthro dog, you praise him for being such a good pet and sweet fuck. He can't help but smile and give a happy tail wag. [one of]'Sure thing, master!' [or]'Anything for the alpha!' [or]'For you, I'd do anything!' [at random][line break]";
 	NPCSexAftermath Korvin receives "AssFuck" from Player;
 
 to say conf_Korvin_sex03: [riding Korvin's cock (vaginal)]
 	say "     Wanting to feel that big cock of your strong, muscular bodyguard in your snatch, you tell him to lay down while fingering your pussy. 'Your alpha wants to bury that hard bone of yours in her hot cunny, pup,' you say, petting his head and tugging on his neck-fur a little in a show of playful dominance. 'Hot damn!' Korvin exclaims in reply, and picking up on your challenging words and gesure, he meets your gaze and replies with some push-back. 'But I'm no pup, as your soon-to-be-wrecked pussy is going to find out,' he says, a broad grin on his face as he starts to work a paw over his rapidly hardening canine pole. With him being the confident dog you've encouraged him to be, a little play-talk is just the thing to get your doggy going! His arousal makes for a very appealing sight and you see no reason in waiting any further.";
 	say "     Eagerly swatting Korvin's ass, you order him to get into position, [if Player is not naked]stripping down [else]touching yourself a little [end if]while he does so. Then you step forward over the canine, sinking down to straddle him and run your hands over his strong chest. Korvin strokes the side of your arm with one hand while his free hand wraps around the base of his dick, aiming it up towards your dripping cunt. You [if Cunt Depth of Player > 16]slam down onto it, your roomy vagina engulfing it[else if Cunt Depth of Player > 8]slam down onto it, pushing it into your hot vagina[else]lower yourself down onto it, working to take the whole of it into your vagina[end if] with an extended moan of ecstasy.";
 	WaitLineBreak;
-	say "     You ride the German shepherd's long, pointy cock, sliding up and down its length in a very pleasurable grind. Then suddenly, Korvin begins to buck his hips up in counterpoint, forcing the already a little enlarged knot-bulge at the base of his cock into you. [one of]'That feel like a pup's, [master]? I don't think so!' [or]'Yeah, moan my name! I know you like this bad boy all the way in there!' [or]'Ready to give it all to you, alpha!' [at random]His movements push him hard into you each time, often forcing moans or whimpers of sexual delight past your lips, as the virile male makes your lust soar. His canine penis feels great inside you, rubbing against so many sensitive spots as you wriggle and grind atop it.";
+	say "     You ride the German shepherd's long, pointy cock, sliding up and down its length in a very pleasurable grind. Then suddenly, Korvin begins to buck his hips up in counterpoint, forcing the already a little enlarged knot-bulge at the base of his cock into you. [one of]'That feel like a pup's, [K_Boss]? I don't think so!' [or]'Yeah, moan my name! I know you like this bad boy all the way in there!' [or]'Ready to give it all to you, alpha!' [at random]His movements push him hard into you each time, often forcing moans or whimpers of sexual delight past your lips, as the virile male makes your lust soar. His canine penis feels great inside you, rubbing against so many sensitive spots as you wriggle and grind atop it.";
 	say "     The two of you go at it hot and heavy, complete with him stroking and fondling your chest and [if player is male]erection[else]clit[end if]. With the flame of your lust burning in a sizzling inferno, it is only a question of time before Korvin finally groans out loud, blasting shot after shot of puppy batter into your clenching cunt while you cry out in orgasmic release. His knot swells up all the way, locking the two of you together and prolonging his orgasm from the tight squeeze of your hole around it. You do your best to push him even further, flexing your inner muscles around his cock and milking him for all he'll give before finally relaxing and sinking down over the panting male. After a moderately long while of just lying there with your trusty canine, his bulge eventually does down far enough for you to pull off his spend shaft. Making especially sure to pet the anthro dog, you praise him for being such a good pet and sweet fuck. He can't help but smile and give a happy tail wag.";
 	NPCSexAftermath Player receives "PussyFuck" from Korvin;
 
@@ -620,17 +825,45 @@ to say conf_Korvin_sex04: [riding Korvin's cock (anal)]
 	say "     'Er, I don't have any, and... oh!' the canine starts to say, then groans. 'You know, being able to suck yourself is great and all, but I'd still rather have a bitch or fag do it rather than smoke my own dick!' Despite a little eyeroll and protest, Korvin pushes himself up on his elbows, then further and further, curling his upper body forward. Showing an easy flexibility that proves he's far from human, the German shepherd brings his muzzle to his crotch and starts to lap at his erection, slathering it with spit. You watch him obediently prepare himself for a little while, then tell him that he's a good puppy and his alpha wants to ride the red rocket now. 'You and every bitch out there, hah!' Korvin exclaims in reply, meeting your gaze as he adds with a broad grin, 'But I'm no pup! Better watch out or you'll wreck your hole on his bad boy!'";
 	WaitLineBreak;
 	say "     Stretching back out on the floor, Korvin humps his hips up demonstratively and starts to work one paw over his slick canine pole. With him being the confident dog you've encouraged him to be, a little play-talk is just the thing to get your doggy going! His arousal makes for a very appealing sight and you see no reason in waiting any further. Eagerly moving to stand over him, you sink down to straddle your faithful dog and run your hands over his strong chest. Korvin strokes the side of your arm with one hand while his free hand wraps around the base of his dick, aiming it up towards your waiting hole. Lowering yourself just a little more, you feel the tip brush against your buttocks and be guided in, touching your pucker a second later. The pointy tip of his nonhuman cock serves very well to open up your hole, sliding past your pucker accompanied by a moan in both of your voices.";
-	say "     You ride the German shepherd's long, pointy cock, sliding up and down its length in a very pleasurable grind[if player is male] that makes his shaft rub your prostate so very good[end if]. Then suddenly, Korvin begins to buck his hips up in counterpoint, forcing the already a little enlarged knot-bulge at the base of his cock into you. [one of]'That feel like a pup's, [master]? I don't think so!' [or]'Yeah, moan my name! I know you like this bad boy all the way in there!' [or]'Ready to give it all to you, alpha!' [at random]His movements push him hard into you each time, often forcing moans or whimpers of sexual delight past your lips, as the virile male makes your lust soar. His canine penis feels great inside you, rubbing against so many sensitive spots as you wriggle and grind atop it.";
+	say "     You ride the German shepherd's long, pointy cock, sliding up and down its length in a very pleasurable grind[if player is male] that makes his shaft rub your prostate so very good[end if]. Then suddenly, Korvin begins to buck his hips up in counterpoint, forcing the already a little enlarged knot-bulge at the base of his cock into you. [one of]'That feel like a pup's, [K_Boss]? I don't think so!' [or]'Yeah, moan my name! I know you like this bad boy all the way in there!' [or]'Ready to give it all to you, alpha!' [at random]His movements push him hard into you each time, often forcing moans or whimpers of sexual delight past your lips, as the virile male makes your lust soar. His canine penis feels great inside you, rubbing against so many sensitive spots as you wriggle and grind atop it.";
 	WaitLineBreak;
-	say "     Going at it hot and heavy, Korvin proceeds to stroke and fondle your chest and [if player is male]erection[else]clit[end if]. With the flame of your shared lust burning in a sizzling inferno, it is only a question of time before Korvin finally groans out loud, blasting shot after shot of puppy batter into your trembling hole while you cry out in orgasmic release only a few heartbeats later. [if player is male]Your [cock of player] erection throbs with cum shooting up from your balls, painting white streaks across Korvin's heaving chest. [end if]At the same time, his knot swells up all the way, locking the two of you together and prolonging his orgasm from the tight squeeze of your hole around it. You do your best to push him even further, flexing your inner muscles around his cock and milking him for all he'll give before finally relaxing and sinking down over the panting male. After a moderately long while of just lying there with your trusty canine, his bulge eventually does down far enough for you to pull off his spend shaft. Making especially sure to pet the anthro dog, you praise him for being such a good pet and sweet fuck. He can't help but smile and give a happy tail wag. 'Anytime, [one of]alpha[or]boss[or][master][at random]'";
+	say "     Going at it hot and heavy, Korvin proceeds to stroke and fondle your chest and [if player is male]erection[else]clit[end if]. With the flame of your shared lust burning in a sizzling inferno, it is only a question of time before Korvin finally groans out loud, blasting shot after shot of puppy batter into your trembling hole while you cry out in orgasmic release only a few heartbeats later. [if player is male]Your [cock of player] erection throbs with cum shooting up from your balls, painting white streaks across Korvin's heaving chest. [end if]At the same time, his knot swells up all the way, locking the two of you together and prolonging his orgasm from the tight squeeze of your hole around it. You do your best to push him even further, flexing your inner muscles around his cock and milking him for all he'll give before finally relaxing and sinking down over the panting male. After a moderately long while of just lying there with your trusty canine, his bulge eventually does down far enough for you to pull off his spend shaft. Making especially sure to pet the anthro dog, you praise him for being such a good pet and sweet fuck. He can't help but smile and give a happy tail wag. 'Anytime, [one of]alpha[or]boss[or][K_Boss][at random]!'";
 	NPCSexAftermath Player receives "AssFuck" from Korvin;
 
 to say conf_Korvin_sex05: [be fucked by Korvin (vaginal)]
-	say "     ";
-	NPCSexAftermath Player receives "PussyFuck" from Korvin;
+	say "     In the mood for something a little wilder than just making use of the stud of a German shepherd you broke in to be your attack dog, you reach down and cup Korvin's balls. Fondling the anthro, you praise him for his virility and strength, which draws a chuckle from Korvin. 'What'cha doing, [one of]alpha[or]boss[or][K_Boss][at random]? You don't have to charm the pants off me, not wearing any!' With a smirk, you reply that you were wondering about his days out on the streets, with him going after whoever he liked. Sniffing a receptive bitch on the wind and hunting her down, then using those firm muscles you're feeling up right now to push his newest conquest onto the ground. 'Yeah, that's what it was like. Most of the time. Right up until a certain someone wiped the floor with me and, you know, put a collar on this doggo...' Meeting his gaze, you tell him that you'd kinda like to get the full experience of the old Korvin, just for a little while.";
+	say "     Korvin lets out a puzzled grunt, 'Err, what? Are you messing with me now? Did I do something wrong?' In response, you run your hand along his shoulder and neck, saying that you actually want to reward him for being such a good bodyguard. Let him run wild to have fun. Looking at you, still hesitating, the canine replies, 'But things will still be the same between us afterward, right? Alpha and pack bro forever?' As you smile and nod, giving Korvin a comforting squeeze of the shoulder, he immediately relaxes and you feel his balls twitch under your fingers as his cock throbs in arousal. 'Man, life with you sure doesn't get boring! You sure you can handle me? I'm gonna go all out!' Visibly excited, tail wagging and cock standing proudly erect with a bead of pre-cum forming at the tip, the German shepherd's expression gains an undertone of lust and hunger as he looks you up and down.";
+	say "     [bold type]Do you really want to do this?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Reach up and take the collar off him.";
+	say "     ([link]N[as]n[end link]) - Change your mind and tell him you were just teasing him.";
+	if Player consents:
+		LineBreak;
+		say "     After putting all of your gear into a little pile to the side, you return to Korvin, lean in and start to feel for the collar's clasp up behind his neck. While doing so, you wonder aloud just how many litters he put into all of his conquests, betting that there must have been a lot from such a virile dog as him. The German shepherd chuckles and nods his head, saying with a smirk, 'Oh yeah, always gave me a kick to see one of them girls a day later, carrying a swollen belly in front of them! Pounced on the bitch right then and there, because what's she gonna go? Waddle away? And a week or so later, there'd be all new little sluts in the neighborhood, ripe for the picking!' With the German shepherd licking his chops at the mere thought, you loosen the studded band around his neck, allowing Korvin to reach up and pull it off. The dog's grin widens and starts to show of his canine-like teeth while his eyes focus a hungry gaze at you.";
+		say "     Korvin does take a few seconds to buckle the leather band again and goes to carefully set the symbol of both his own status, as well as submission, down on top of your gear. Then suddenly, the muscular dog whirls around, letting out a sharp bark that makes you twitch in surprise. 'What? Did you think I wouldn't smell what's between your legs as you stroll through my turf? [if Breast Size of Player is 0]Might almost look like a dude, with that flat chest and all, but you can't fool the nose! [end if]Damn, I love how needy and stupid you bitches get when you're in heat! Just strolling around and drawing the attention of every horny dude with a nose worth anything!' With that, the anthro dog struts up to you, clamping his paw-hand around your jaw and forcing you to look him in the eyes. 'Can't believe someone else hasn't snatched you up before, and filled that box with his pups! At least you were smart enough to not try to fight, so I [']might['] even let you go after we have some fun!'";
+		WaitLineBreak;
+		say "     [if player is not naked]Huffing out a breath, the German shepherd says, 'Let's see what we got!' he forcefully strips you down to the buff in a few moments, casually flinging your clothes to land somewhere close to your other gear. [else]'Huffing out a breath, the German shepherd says, 'Like to bare it all, eh? I like that in a slut, makes em['] so readily fuckable!' [end if]Korvin's hands wander over your body, his paw-pads a little rough on your skin as he feels you up. [if player is purefemale]'Not bad, street-bait! And already wet too! Knew you were just asking for it!' [else if Cock Length of Player < Cock Length of Korvin]'Not bad, street-bait! And already wet too! Admit it, on the inside you're just asking to be made a proper bitch. I'll make you forget that you even have that puny little dick!' [else]'Big bitch, eh? Well, that counts for shit if you're a needy slut on the inside. Damn, I can feel how wet you are, just asking to be fucked! I'll make you whimper my name!' [end if]Nodding down to his crotch where a well-sized, red, canine shaft is standing proudly erect, pointy tip down to the still fairly small bulge of what will become his knot, Korvin watches your reaction to the sight closely, a slight sneer on his face. 'On all fours... now! It's time to fuck!' he adds, giving you a little shove to get you moving.";
+		say "     Dropping to your knees and lowering your front to assume the position, you hear the German shepherd chuckling behind you. 'Love me an obedient fucktoy!' Korvin adds, then gives your raised ass a moderately strong slap. A second later, you feel the hot length of his erection brush against your buns, followed by the muscular dog's shaft being bent down to the opening between your legs. With his pointy dickhead brushing over your wet folds and making you shiver in arousal, a needy moan passes your lips, drawing a chuckle from the male anthro. 'You know you want it!' he comments in a husky tone, followed by pushing his shaft into your body. 'Gonna spread that pussy wide!' he growls, sliding himself deep and making you gasp at the sudden invasion of your sex. 'Moan for me, [if Breast Size of Player is 0]cuntboy[else if player is male]boy-bitch[else]bitch[end if], and squeeze those muscles around my cock!' he growls in a lusty tone, blunt claws digging into the sides of your hips as he grinds his crotch against you. The weighty pair of nuts in his furry sack rub against your skin, promising a virile load soon to come.";
+		WaitLineBreak;
+		say "     In and out, Korvin starts to hump your rear with rapid thrusts, making use of his newest conquest to his heart's content. While he may be only focused in his own pleasure, having our pussy filled can't help but excite you, with that thick, warm shaft pounding in and our hard and hitting [if player is male]your prostate again and again[else if player is female]your clit with his swinging balls, stimulating you[end if]. 'They all fall into line, you know. Even the uppity bitches that try to resist!' Korvin says with audible amusement as he hears the rising pitch of your moans, followed by some especially deep thrusts to really push you. Without ever being touched, since you have to brace yourself against the ground to withstand the hammering you're receiving, [if player is male]your [cock of player] shaft goes as hard as it can down between your legs, drooling pre-cum from its cum-slit[else if player is female]you feel your clit tingle and femcum literally dripping from your moist folds[end if].";
+		say "     The fact that you're giving in to him sexually all the way seems to motivate Korvin further, and where he was just thrusting his hips against you before, now the German shepherd lowers his whole anthro body on top of you. Arms wrapping around your chest from behind, [if Nipple Count of Player is 0]he [else if Breast Size of player is 0]he gropes your flat chest and pinches your nipples, then [else]he massages your [Breast Size Description of Player] [one of]breasts[or]boobs[or]tits[at random], then [end if]hooks both hands over your shoulders to get a good grip for a whole series of balls-deep thrusts. The soft fur of his toned chest rubs against your back and you can feel his breath warmly on your neck. Panting of the dominant canine fills your ears as he fucks you hard and oh so very deep, and his wet nose bumps into your skin more than a few times, so close is he pressing against you as he mounts his new bitch. Then suddenly, you feel his thrusts pause for a second and hear him take a deep, huffed breath.";
+		WaitLineBreak;
+		say "     [if player is mpreg_ok and player is not purefemale]'Mmmh! I can smell it on you, can't believe I didn't realize before! You're one of them breeding fags! One puppy-hole not enough for you, eh? Had to get an ass-pussy too, hah! Man, forget what I said before, you're staying right with me from now on. I'm gonna love breeding litters in you! I wonder if you can get knocked up front and back at the same time' A paw-hand slides down to your belly, feeling it possessively. 'Soon this will swell with my sons!' [else]'Hah, you smell like a needy little bitch! Maybe I should keep you after all! Make you pop out a whole harem of little sluts for me!' [end if]Korvin proceeds to lick your neck and behind your ear, as if to add another claim on top of the fact that he's balls-deep inside you. Then the pause is over and he jumps right back into power-fucking your vagina hard and deep, all the while keeping his muzzle right next to your head and filling your ears with grunts or gasped exclamations of 'Good bitch', 'Take it', 'Love that hot snatch' and the like. His relentless pace quickly builds up to an almost nonstop assault of your quivering opening, all leading up to the climactic moment in which he suddenly clamps his predator's teeth around the nape of your neck, the ultimate sign of canine dominance.";
+		say "     A loud, lusty growl fills Korvin's throat and you can feel it vibrate through his chest, just as you can feel his erection pulse inside you as virile cum paints your insides white. With every twitch of his shaft, your hole stretches a little, pushing your arousal along. His furry balls rub your skin with every hard throb that goes through them, and the bulge at the base of his cock starts to fill out rapidly. With a frantic thrust, he forces it inside your hole, just in time for it to lock your bodies together and [if player is sterile]futilely [end if]trying to guarantee conception. The German shepherd keeps a very tight grip around your chest and his teeth on your neck hold you in place while he grinds his crotch against your rear. While in the process of breeding you, it seems that his instincts rule the man completely, and only animalistic growls of arousal pass his lips. Feeling yourself be claimed like this, with more of his seed filling second by second, you feel strongly submissive urges bubble up inside you[if player is not submissive] that you didn't know you had[end if].";
+		WaitLineBreak;
+		say "     Moments later, you tremble in the grasp of your new master and orgasm right along with him, [if player is male]your cock spewing long strings of cum to cover the ground beneath you[else if player is female]your pussy quivering and flexing as if wishing his cock was inside your other hole, and femcum gushing out, spattering the ground beneath[end if]. While you're still riding out the sensations of your climax, Korvin finds his words again and says, 'Yeah, that's right! Give in my little slut! Only I can make you cum like that! You, I'll not leave wandering the streets like those other casual bitches I've had. Gonna stay right with me from now on, because I want more of his!' followed by a series of licks over your neck and the side of your face. He keeps doing that for a long while, holding you, licking you and murmuring words into your ears, mostly about you belonging to him now and how good of a fuck you were.";
+		say "     Eventually, when your individual orgasms have long died down and the blissful high of sex has made way for just the comfort of being held, you feel Korvin soften his grip and raise himself from laying on your back. While his knot has shrunk far enough to allow for an easy withdrawal, the dog still pulls out slowly, almost gently, accompanied by a gush of cum dripping from between your nether lips. Then suddenly, you can feel a warm, wet tongue brush over your folds and dip in between them. The sensations of being licked clean draw pleased pants from your lips and you push back against him, enjoying this very different finish to a wild romp with the muscular anthro. You can't help but sigh as he pulls back once satisfied that he licked you well, then stands up and walks over to the pile of your gear. You get to your feet just in time for Korvin to return, holding his collar in his hands as he sinks into a crouch before you.";
+		WaitLineBreak;
+		say "     'Was I a good dog?' he asks, looking up at you and offering the leather band with both hands, almost looking a little afraid that you might not put it back on him. The sight puts a warm smile on your face and you stroke Korvin's head, then firmly grab the back of his neck as you lean down to tell him that he was a [italic type]very[roman type] good dog. Taking the collar, you unclasp it and lay the band around his neck. Tightening it to snugly lie around your trusted bodyguard's neck, you stroke a finger along his jawline to make him look up and into your eyes, then squeeze his shoulder and nod for him to help you collect your gear from there it lies. With the studded collar again around his neck, Korvin's cocky attitude is back in a heartbeat, and he jumps up to follow your command with a grin and the words, 'Sure thing, [one of]alpha[or]boss[or][K_Boss][at random]!'";
+		if "Dominant_Roleplay_Fuck" is not listed in Traits of Korvin: [memory of having fucked a willing player]
+			add "Dominant_Roleplay_Fuck" to Traits of Korvin;
+		NPCSexAftermath Player receives "PussyFuck" from Korvin;
+	else:
+		LineBreak;
+		say "     With an annoyed groan, Korvin throws his hands up, then sighs. 'Man, you sure had me going there for a moment. Cruel thing to do to a guy, but then again, guess that's your right [one of]alpha[or]boss[or][K_Boss][at random].' Blowing out a deep breath, he wanders off for a little while, returning once he's taken care of his hardon.";
 
 to say conf_Korvin_sex06: [be fucked by Korvin (anal)]
-	say "     In the mood for something a little wilder than just making use of the stud of a German shepherd you broke in to be your attack dog, you reach down and cup Korvin's balls. Fondling the anthro, you praise him for his virility and strength, which draws a chuckle from Korvin. 'What'cha doing, [one of]alpha[or]boss[or][master][at random]? You don't have to charm the pants off me, not wearing any!' With a smirk, you reply that you were wondering about his days out on the streets, with him going after whoever he liked. Taking them down and using those firm muscles you're feeling up right now to push his newest conquest onto the ground. 'Yeah, that's what it was like. Most of the time. Right up until a certain someone wiped the floor with me and, you know, put a collar on this doggo...' Meeting his gaze, you tell him that you'd kinda like to get the full experience of the old Korvin, just for a little while.";
+	say "     In the mood for something a little wilder than just making use of the stud of a German shepherd you broke in to be your attack dog, you reach down and cup Korvin's balls. Fondling the anthro, you praise him for his virility and strength, which draws a chuckle from Korvin. 'What'cha doing, [one of]alpha[or]boss[or][K_Boss][at random]? You don't have to charm the pants off me, not wearing any!' With a smirk, you reply that you were wondering about his days out on the streets, with him going after whoever he liked. Taking them down and using those firm muscles you're feeling up right now to push his newest conquest onto the ground. 'Yeah, that's what it was like. Most of the time. Right up until a certain someone wiped the floor with me and, you know, put a collar on this doggo...' Meeting his gaze, you tell him that you'd kinda like to get the full experience of the old Korvin, just for a little while.";
 	say "     Korvin lets out a puzzled grunt, 'Err, what? Are you messing with me now? Did I do something wrong?' In response, you run your hand along his shoulder and neck, saying that you actually want to reward him for being such a good bodyguard. Let him run wild to have fun. Looking at you, still hesitating, the canine replies, 'But things will still be the same between us afterward, right? Alpha and pack bro forever?' As you smile and nod, giving Korvin a comforting squeeze of the shoulder, he immediately relaxes and you feel his balls twitch under your fingers as his cock throbs in arousal. 'Man, life with you sure doesn't get boring! You sure you can handle me? I'm gonna go all out!' Visibly excited, tail wagging and cock standing proudly erect with a bead of pre-cum forming at the tip, the German shepherd's expression gains an undertone of lust and hunger as he looks you up and down.";
 	say "     [bold type]Do you really want to do this?[roman type][line break]";
 	LineBreak;
@@ -651,11 +884,13 @@ to say conf_Korvin_sex06: [be fucked by Korvin (anal)]
 		say "     Moments later, you tremble in the grasp of your new master and orgasm right along with him, [if player is male]your cock spewing long strings of cum to cover the ground beneath you[else if player is female]your pussy quivering and flexing as if wishing his cock was inside your other hole, and femcum gushing out, spattering the ground beneath[else]sensations of pleasure pulsing through your body[end if]. While you're still riding out the sensations of your climax, Korvin finds his words again and says, 'Yeah, that's right! Give in my little slut! Only I can make you cum like that!' followed by a series of licks over your neck and the side of your face. He keeps doing that for a long while, holding you, licking you and murmuring words into your ears, mostly about you belonging to him now and how good of a fuck you were.";
 		WaitLineBreak;
 		say "     Eventually, when your individual orgasms have long died down and the blissful high of sex has made way for just the comfort of being held, you feel Korvin soften his grip and raise himself from laying on your back. While his knot has shrunk far enough to allow for an easy withdrawal, the dog still pulls out slowly, almost gently, with a small popping sound. Then suddenly, you can feel a warm, wet tongue brush over your skin and run along your crack. The sensations of being licked clean draw pleased pants from your lips and you push back against him, enjoying this very different finish to a wild romp with the muscular anthro. You can't help but sigh as he pulls back once satisfied that he licked you well, then stands up and walks over to the pile of your gear. You get to your feet just in time for Korvin to return, holding his collar in his hands as he sinks into a crouch before you.";
-		say "     'Was I a good dog?' he asks, looking up at you and offering the leather band with both hands, almost looking a little afraid that you might not put it back on him. The sight puts a warm smile on your face and you stroke Korvin's head, then firmly grab the back of his neck as you lean down to tell him that he was a [italic type]very[roman type] good dog. Taking the collar, you unclasp it and lay the band around his neck. Tightening it to snugly lie around your trusted bodyguard's neck, you stroke a finger along his jawline to make him look up and into your eyes, then squeeze his shoulder and nod for him to help you collect your gear from there it lies. With the studded collar again around his neck, Korvin's cocky attitude is back in a heartbeat, and he jumps up to follow your command with a grin and the words, 'Sure thing, [one of]alpha[or]boss[or][master][at random]!'";
+		say "     'Was I a good dog?' he asks, looking up at you and offering the leather band with both hands, almost looking a little afraid that you might not put it back on him. The sight puts a warm smile on your face and you stroke Korvin's head, then firmly grab the back of his neck as you lean down to tell him that he was a [italic type]very[roman type] good dog. Taking the collar, you unclasp it and lay the band around his neck. Tightening it to snugly lie around your trusted bodyguard's neck, you stroke a finger along his jawline to make him look up and into your eyes, then squeeze his shoulder and nod for him to help you collect your gear from there it lies. With the studded collar again around his neck, Korvin's cocky attitude is back in a heartbeat, and he jumps up to follow your command with a grin and the words, 'Sure thing, [one of]alpha[or]boss[or][K_Boss][at random]!'";
+		if "Dominant_Roleplay_Fuck" is not listed in Traits of Korvin: [memory of having fucked a willing player]
+			add "Dominant_Roleplay_Fuck" to Traits of Korvin;
 		NPCSexAftermath Player receives "AssFuck" from Korvin;
 	else:
 		LineBreak;
-		say "     With an annoyed groan, Korvin throws his hands up, then sighs. 'Man, you sure had me going there for a moment. Cruel thing to do to a guy, but then again, guess that's your right [one of]alpha[or]boss[or][master][at random].' Blowing out a deep breath, he wanders off for a little while, returning once he's taken care of his hardon.";
+		say "     With an annoyed groan, Korvin throws his hands up, then sighs. 'Man, you sure had me going there for a moment. Cruel thing to do to a guy, but then again, guess that's your right [one of]alpha[or]boss[or][K_Boss][at random].' Blowing out a deep breath, he wanders off for a little while, returning once he's taken care of his hardon.";
 
 to say conf_Korvin_sex07: [receive BJ from Korvin]
 	say "     Taking hold of your dick with one hand, you clip his leash on with the other and tell him to 'sit.' He does so [one of]readily[or]obediently[or]after arching his brow and giving you a look[or]with a little grumble[or]with a hungry look in his eyes[or]while licking his muzzle[at random] and gives your cock a nuzzle. Placing your hand on his head, you scritch his ear as he starts to lick your shaft. His doggy tongue slides along your hard pole, slathering it up and down.";
@@ -667,9 +902,22 @@ to say conf_Korvin_sex07: [receive BJ from Korvin]
 	else:
 		say ". After the first few shots of semen go down his throat, he pulls his muzzle off your [cock size desc of Player] cock and pumps your shaft with his paw[if Cock Length of Player > 16]s[end if]. Your penis[esmn] fire[smv] your remaining cum across his face and muzzle, [if Ball Size of Player > 6]plastering him in a coating[else if Ball Size of Player > 5]plastering him with wads[else if Ball Size of Player > 3]streaking him with large ribbons[else]streaking him with several more strands[end if] of sticky white goo.";
 	say "     Once done, he licks his chops and grins up at you. '[one of]I hope that was good enough for you, ya big fag,' he teases[or]Not bad, alpha, but next time you should try mine,' he says[or][if Ball Size of Player > 5]Hmmph! Pretty impressive[else]Tasty[end if],' he says[or]My Alpha,' he states with a nod[or]That better be all. I got stuff to do,' he states, trying to recover some dignity[at random]. You let him get on his way while you take a moment to enjoy the blissful afterglow.";
+	NPCSexAftermath Korvin receives "OralCock" from Player;
 
-to say conf_Korvin_sex08:
-	say "***Blow job (giving)";
+to say conf_Korvin_sex08: [receive facefuck from Korvin]
+	say "     In the mood for something a little wilder than just making use of the stud of a German shepherd you broke in to be your attack dog, you reach down and cup Korvin's balls. Fondling the anthro, you praise him for his virility and strength, which draws a chuckle from Korvin. 'What'cha doing, [one of]alpha[or]boss[or][K_Boss][at random]? You don't have to charm the pants off me, not wearing any!' With a smirk, you reply that you like having him as your companion, a strong, though dog whom you can depend on. Clearly, he's a man to be reckoned with, having spent his days out on the streets, going after whoever he liked. Taking them down and using those firm muscles you're feeling up right now to push his newest conquest onto the ground. 'Yeah, that's what it was like. Most of the time. Right up until a certain someone wiped the floor with me and, you know, put a collar on this doggo...' Meeting his gaze, you tell him that even though you enjoy being his master now, you don't want him to change too much - become too tame.";
+	say "     Korvin lets out a puzzled grunt, 'Err, what? Are you messing with me now? Did I do something wrong?' In response, you run your hand along his shoulder and neck, saying that you actually want to reward him for being such a good bodyguard. Give him a taste of his wild days. Looking at you, still hesitating, the canine replies, 'But things will still be the same between us afterward, right? Alpha and pack bro forever?' As you smile and nod, giving Korvin a comforting squeeze of the shoulder, he immediately relaxes and you feel his balls twitch under your fingers as his cock throbs in arousal. 'Man, life with you sure doesn't get boring! You sure you can handle me?' Visibly excited, tail wagging and cock standing proudly erect with a bead of pre-cum forming at the tip, the German shepherd's expression gains an undertone of lust and hunger as he looks you up and down.";
+	WaitLineBreak;
+	say "     With a smirk on your lips, you crouch down before the muscular German shepherd, stroking your hands over the soft fur covering his thighs. Reaching the right height for putting his erection at eye level, you stick out your tongue and run it up the underside of the red rocket, in the process raising your viewpoint to glance up at him submissively. As your eyes meet, Korvin's cock throbs noticably, a thick droplet of pre-cum welling up from its slit. With a grin, you tell the anthro canine to face-fuck you. His hand rising almost by its own volition, the dog touches his collar, as if to remind himself of his position of belonging and trust, then allows himself the freedom of following your roleplaying prompt. Both of his paw-hands sink down to the level of your head, with one taking hold of your head by the hair in a somewhat rough fashion, while the other grips your jaw. 'Yeah, I'm gonna enjoy face-fucking you,' Korvin grunts, pushing his thumb between your lips and prompting you to suck on it.";
+	say "     The shepherd's paw-pad feels a little coarse as it presses down on your tongue, establishing dominance along with his iron grip of your head. 'I love fucking [if player is purefemale]street-bait! Making bitches take my cock as deep as I want!' [else if player is neuter]street-meat!' [else if Cock Length of Player < Cock Length of Korvin]street-meat! Let's see how you take a [italic type]real[roman type] cock!' [else]street-meat! Showing em that you don't just need a big cock, you gotta know how to use it!' [end if] With that, he withdraws his thumb from your mouth suddenly, creating a popping sound, and replaces it with his erection a heartbeat later. Now shifting his grip to clamp your head between his paws, he pushes you down on his shaft with a lusty grunt. Slipping further and further in between your lips in a demanding pace just slow enough that you don't choke on it, the muscled canine has your nose pressed into his crotch-fur in no time at all. Huffing the male dog's pubes and filling your mind with his scent, you're held firm in that position while he enjoys the tightness of your throat around his cock.";
+	WaitLineBreak;
+	say "     At some point reflexively swallowing around the big invader in your mouth, you draw the comment of, 'Nice! Squeeze my dick with those muscles!' from Korvin. A moment later, he begins to slide in and out, face-fucking you in a rapid tempo. You won't be able to tell afterwards that was the deciding factor - his masculine scent, the satisfaction of giving your bodyguard a well-deserved reward, those full balls swinging back and forth to slap your chin, the feeling of helpless submission as he just manhandles you, maybe just seeing stars a little when he keeps himself down your throat a little long, or all of the above - but in the moment, you sure enjoy the experience. Meanwhile, Korvin's also having a total blast, his grunts, pants and barks becoming louder and more urgent by the moment. Then suddenly, the extent of his endurance is reached and he humps your face hard, basically trying to cram every last inch he got down your throat as he begins to unload with thick, creamy spurts right into your stomach.";
+	say "     You can feel Korvin's erection throb against your tongue with each new burst of semen shooting up from his balls, giving you a filling of pure protein. 'Take my load bitch!' he bellows, grinning down at you and showing his teeth in a very dominant, powerful pose, given that he's also holding your head in both hands, so you can't move it once inch. In the end, you have to pat out against his thigh to get him to withdraw, finally allowing you to gasp in a breath of fresh air, which is immediately followed by more spurts of his load to make a cum-spattered mess of your face. 'That's a good look for you,' he says with a chuckle, aiming his cock to cover you as much as he can with the ebbing shots, though taking care to avoid hitting you in the eyes. As Korvin's orgasm dies down eventually, he softens his grip on your head, allowing you to stand up once more.";
+	WaitLineBreak;
+	say "     Now that he no longer is looking down on you, a little bit of anxiousness seems to rise in Korvin. Hooking a finger over the edge of the collar around his neck, he looks down and asks tensely, 'Was I a good dog?' The sight puts a warm smile on your face and you stroke Korvin's head, then firmly grab the back of his neck as you tell him that he was a [italic type]very[roman type] good dog. You stroke a finger along his jawline to make him meet your gaze, then squeeze his shoulder and say that you could use a little help cleaning up though. Korvin's cocky attitude is back in a heartbeat, and he [if player is male]lets out a groan of 'That's so gay!' [else]grins at you [end if]before leaning in to lick his own load off your face without any further complaint. 'Anything for you, [one of]alpha[or]boss[or][K_Boss][at random]!'";
+	if "Dominant_Roleplay_Oral" is not listed in Traits of Korvin: [memory of having fucked a willing player]
+		add "Dominant_Roleplay_Oral" to Traits of Korvin;
+	NPCSexAftermath Player receives "OralCock" from Korvin;
 
 Section 5 - Subby Korvin Sex
 
@@ -690,6 +938,165 @@ Section 6 - Events
 [ Korvin antagonizes Tehuantl -> see file Wahn/Tehuantl.i7x]
 [ Korvin put in his place by Alpha Fang -> see file Prometheus/Fang.i7x]
 [ Alpha Fang solidifies his position over Korvin sexually -> see file Prometheus/Fang.i7x]
+
+Table of GameEventIDs (continued)
+Object	Name
+Trucker Bar	"Trucker Bar"
+
+Trucker Bar is a situation.
+ResolveFunction of Trucker Bar is "[ResolveEvent Trucker Bar]". Trucker Bar is inactive.
+Sarea of Trucker Bar is "High".
+The PrereqCompanion of Trucker Bar is gshep.
+
+to say ResolveEvent Trucker Bar:
+	if Resolution of Trucker Bar is 0: [first time]
+		say "     Wandering through the outskirts of the downtown area, you reach a section of town that's just at the edge of the warehouse district. It is clearly more of a working class neighborhood over here, as there are 'regular' businesses instead of boutiques dominating the streetfront. Of course, most of the shops are closed with heavy iron shutters, and those that are not have already been looted. Turning a corner into another very similar-looking road, you realize that suddenly, a familiar presence is missing from your side. Looking around, you see that Korvin wandered off a few steps and is looking at his surroundings with a thoughtful expression. 'Wait a moment, [K_Boss]. I think this feels familiar! Can we go that way?'";
+		say "     [bold type]What's your reply?[roman type][line break]";
+		LineBreak;
+		say "     [link](1)[as]1[end link] - Sure, let's see where his instinct takes you.";
+		say "     [link](2)[as]2[end link] - Not right now. You've got places to be.";
+		say "     [link](3)[as]3[end link] - No, and you don't care about that. He should forget it.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to follow Korvin, [link]2[end link] to postpone investigating or [link]3[end link] to refuse for good.";
+		if calcnumber is 1:
+			LineBreak;
+			say "[InvestigateTruckerBar]";
+		else if calcnumber is 2:
+			LineBreak;
+			say "     Taking some steps after Korvin, you pat him on the shoulder and say that you don't have time for this right this moment. He's got to have some patience, maybe you can come back and investigate further in the future. The muscular anthro glances down the street hesitantly, then nods and says, 'As you say, [K_Boss].'";
+			now Resolution of Trucker Bar is 99; [postponed]
+		else if calcnumber is 3:
+			LineBreak;
+			say "     With a shake of your head, you put two fingers in your mouth and whistle for Korvin, making the German shepherd trot back over to you and take his usual space. Then you tell him that you don't care to investigate this further, so he should just put it out of his mind. The muscular anthro glances down the street hesitantly, then nods and says, 'As you say, [K_Boss].'";
+			now Resolution of Trucker Bar is 100; [refused]
+			now Trucker Bar is resolved;
+	else if Resolution of Trucker Bar is 99: [postponed before]
+		say "     Wandering through the outskirts of the downtown area, you again reach the street that seemed familiar to Korvin when you passed this way before. 'Wait a moment, [K_Boss]. Can we maybe check this way? I think I remember the way somewhere!'";
+		say "     [bold type]What's your reply?[roman type][line break]";
+		LineBreak;
+		say "     [link](1)[as]1[end link] - Sure, let's see where his instinct takes you.";
+		say "     [link](2)[as]2[end link] - Not right now. You've got places to be.";
+		say "     [link](3)[as]3[end link] - No, and you don't care about that. He should forget it.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to follow Korvin, [link]2[end link] to postpone investigating or [link]3[end link] to refuse for good.";
+		if calcnumber is 1:
+			LineBreak;
+			say "[InvestigateTruckerBar]";
+		else if calcnumber is 2:
+			LineBreak;
+			say "     Taking some steps after Korvin, you pat him on the shoulder and say that you don't have time for this right this moment. He's got to have some patience, maybe you can come back and investigate further in the future. The muscular anthro glances down the street hesitantly, then nods and says, 'As you say, [K_Boss].'";
+			now Resolution of Trucker Bar is 99; [postponed]
+		else if calcnumber is 3:
+			LineBreak;
+			say "     With a shake of your head, you put two fingers in your mouth and whistle for Korvin, making the German shepherd trot back over to you and take his usual space. Then you tell him that you don't care to investigate this further, so he should just put it out of his mind. The muscular anthro glances down the street hesitantly, then nods and says, 'As you say, [K_Boss].'";
+			now Resolution of Trucker Bar is 100; [refused]
+			now Trucker Bar is resolved;
+
+to say InvestigateTruckerBar:
+	say "     'Thank you,' the German shepherd says, smiling at you and wagging his tail. 'It's just that I feel like I walked past that building over there a bunch of times before, you know. Can't remember when or where I was going exactly, but it's something at least.' You reach out and give Korvin's upper arm a squeeze, telling him you want to know more about him too and are willing to spend a while exploring. With the decision made, you follow the anthro on a slow trek through the area, consisting of slowly walking where he leads, interspersed with Korvin stopping to look around, sniffing the air, sometimes even backtracking a little when he takes what he feels like a wrong turn. About three city blocks later, you cross diagonally through an abandoned lot, and the canine's pace becomes quicker, as he gets ever more sure that he's got the way down correctly now. You walk down another block at a right angle, then turn a corner and see... something:";
+	say "     About 200 feet down the broad street ahead of you is a dead end, being formed by long-haul truck having been manouvered to stretch from the buildings left to right, not quite touching them. The remaining few feet of space beside the truck and underneath it have been closed off with wooden barricades, effectively cutting off this approach to what lies beyond. 'Hm, that's new,' Korvin says as he looks at the truck, then nods towards the next road at the crossing you just passed. 'Let's go around the block and see if we can get in from the other side. Following that plan, you do a bit more walking and eventually reach another barricade, this one consisting of two delivery trucks parked end to end, with a little bit of space in between them. A large board put up beside that passage has been spray-painted to read 'TRUCKTOWN' in large and bold letters, with a list of rules beneath: 'No begging. No stealing. Keep it in your pants!'";
+	WaitLineBreak;
+	say "     Two burly men stand guard at the entrance, one human and armed with a baseball bat, the other partially ursine, sporting immense, shaggy bear arms, complete with dangerous-looking claws. The two of them look at you suspiciously as you approach, calling out, 'Stop right there. Who are you?' The conversation that follows tells you that they're called Thomaz and Mikailovic and they're on post to make sure no out of control feral gets in. Past them, you can see a large paved lot full of trucks, RV's and even a yellow school-bus that somehow found its way into this industrial zone. A bunch of people in various states of infection are around, and there is a bar on the far end, just a little past the truck barricade that you and Korvin ran into before. Finally, after you convince the guards that you're not about to molest anyone if they let you in, and a quick stop at the 'pre-owned clothing' pile makes sure that neither you nor Korvin are letting your genitals dangle freely, you enter the protected settlement.'";
+	say "     'Macey's Bar and Grill,' Korvin reads the sign of the bar out loud as you approach it. 'Yeah, I hung out in there for years, I think. Fuck, I remember the thursday special - fries and a whole plate of wings, perfect for watching the game. The steps of his paws on the asphalt quicken and you have to hurry to keep up. When Korvin pulls open the entrance door, someone is right beyond it, on his way out, a trucker with plenty of gray in his beard. The two men pass each other, but a heartbeat or two, the older man pauses and turns back, calling out, 'Hey! Is that you Eddie?' Korvin freezes on the spot, half a step inside the bar, then whirls around. 'Wait, I remember you being there for the fight! But my name is Korvin.' The trucker nods, 'That's what I'm saying, dude! Eddie Korvin, man if you didn't have that telltale scar on your mug, I'd never have recognized you!'";
+	WaitLineBreak;
+	say "     'Wait, so - we, we know each other? I - I don't remember your name,' Korvin says, his usual cocky attitude replaced by uncertainty. The trucker replies, 'I'm Cantrell Devine, that ring any bells?' As Korvin shakes his head, the man frowns and blows out his breath. 'Man, guess being transformed really rattled loose some things up in there, eh? Well, nice to meet you - again.' He holds out a hand to give both Korvin as well as yourself a very firm handshake, then nods over to the parking lot. 'Come on, let's not block the entrance while we talk.' A short walk later, the three of you are sitting in camping chairs around a fire pit made from a sawed-in-half oil barrel. 'So, let me update you about what happened here after we last saw each other. As humans and all that,' Cantrell says, waving a hand to indicate Korvin/Eddie's canine form.";
+	say "     'It was total chaos, people getting jumped left and right and turning too. But we weren't ready to just give in. Can't claim that it was my idea or anything, but when I arrived back over here, the guys and I armed ourselves and formed a self-defense group. You know how rough it can be out on the roads, so everyone had some sort of weapon available to use. Not a second too soon, as some of the infected went for us fast! We learned quick that guns are a bad idea these days - first, because most people don't want to blow out the brains of their transformed neighbors and second because them ferals don't really fear the bullets anyways, or stay down all that long. And on top of that, when Mikailovic was using his shotgun to block a paw-strike, it just somehow... melted in his grip, and he grew those bear arms!'";
+	WaitLineBreak;
+	say "     Shaking his head in disbelief, Cantrell runs a hand over his salt-and-pepper beard. 'Just like Mika, not everyone got away without some shifts about their persons, but working as a group, we managed to fight the ferals off. They're almost all individuals and pretty focused on sex, you know. So if a feral grabbed one of us and wrestled him down, they straight away tried to fuck, to be clonked out by the next trucker or three. Those were some crazy hours and days. Fighting to clear the lot and streets around, blocking the approaches and all of that. But we managed, thank god, and with everything folks were hauling in their rigs, we plan to outlast this shit until the army moves in. Heard some talk of that on the radio.' Letting his gaze sweep over the community of people having found refuge away from the chaos outside this little enclave, Cantrell's bearded features pull into a satisfied smile. Then he looks at Korvin and asks, 'How about yourself and Wyatt? Figured you had gone home to last out this shit.'";
+	say "     Korvin looks at the man in an almost stunned fashion, mumbling the name Wyatt to himself as he wracks his brain. You decide to jump in and tell Cantrell a little of what is going on, namely that Korvin can barely remember anything at all from when he was a human, and had been living on the streets for a while before you found him and the two of you joined up. By the time you finish, Korvin has found his words again, and he bursts out with, 'Tell me about Wyatt, and Eddie, please! All I got are some vague, blurry memories!' 'Sure. Wyatt is your girlfriend, Eddie. Talked to her once or twice when she came to the bar with ya. She's a tough cookie, totally hustled a few guys for money on the pool table. Hah, she shook those boobs just in time to distract them. But back to you now: Your name is Eddie Korvin, you're twenty-six and work as a mechanic at a garage downtown. Man, can you really not remember? Known you since you were about knee-high and you accompanied your dad in his truck the first time.'";
+	WaitLineBreak;
+	say "     The next twenty minutes or so are filled with a question and answer session between Cantrell and Korvin, by the end of which you've learned several facts and anecdotes about the German shepherd's human past, among which is his home adress, which Cantrell notes down on a notebook, ripping out the page and handing it to Korvin. The anthro dog thanks him, clutching the paper tightly in his paw-hand, saying his goodbyes and getting out of Trucktown with a new haste to his steps. As you hurry after him, you notice that he slows down after turning the next street corner and getting out of sight of the settlement. Seems like he mostly just wanted to get [italic type]away[roman type] from there, and now he's bracing with one hand against a wall and almost hyperventilating. 'Fuck! I don't really remember ANYTHING that Cantrell was so happy to recount! That... Eddie guy he knew, I don't know him! That's not me!'";
+	say "     There's pain and fear in Korvin's voice, as he feels betrayed by his own memory upon learning that he's supposed to be someone else. His paw-hand is clutching the paper with the address in a death-grip and he seems to turn his head away from looking at it. Maybe he doesn't want to face what it represents and is regretting ever learning about his past?";
+	say "     [bold type]It is clear that Korvin is in crisis, and you should say something. But what?[roman type][line break]";
+	LineBreak;
+	say "     [link](1)[as]1[end link] - Tell him that he needs to face Eddie, find Wyatt and learn more. Otherwise he'll wonder forever what else there was.";
+	say "     [link](2)[as]2[end link] - Tell him that he's Korvin. That's enough. He should put Eddie out of his mind.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to investigate further or [link]2[end link] to suggest he forget about Eddie and Wyatt.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Reaching out to stroke the head-fur of your bodyguard in his moment of weakness, you tell him in a calm tone that he must investigate further. If he doesn't learn more about Eddie and Wyatt, it'll eat him up inside over time. Hearing your voice to guide him, the muscular canine relaxes a little. 'Thanks, [K_Boss]. I wouldn't know what I'd do without you!' he says in relief, then unfolds the crumpled paper to read it. 'I remember something about this. It's an apartment block, red bricks, fairly tall.'";
+		if Red Apartment Building is known:
+			say "     Having a look at the address yourself and hearing Korvin's description, you realize that you've actually been there before. It's the [link]red apartment building[as]nav red apartment building[end link]!";
+		else:
+			AddNavPoint Red Apartment Building;
+		now Resolution of Trucker Bar is 1; [further investigation]
+	else:
+		LineBreak;
+		say "     Reaching out to stroke the head-fur of your bodyguard in his moment of weakness, you tell him in a calm tone that Korvin is all you need. He said himself that he's not Eddie, so why chase after that ghost? He should put the guy out of his mind. Hearing your voice to guide him, the muscular canine relaxes a little. 'Thanks, [K_Boss]. I wouldn't know what I'd do without you!' he says in relief, slowly loosening the grip on the crumplied piece of paper, letting it fall to the ground. It seems like a great weight has been lifted off his shoulders, and the canine immediately starts to walk away from where he stood. 'Let's get out of here, alright?' he asks, and you assent, walking back the way you came to get here.";
+		now Resolution of Trucker Bar is 101; [made Korvin give up further poking into his past]
+	now Trucker Bar is resolved;
+
+instead of navigating Red Apartment Building while (gshep is listed in companionList of Player and Resolution of Trucker Bar is 1):
+	say "[NavCheck Red Apartment Building]";
+	if NavCheckReturn is false, stop the action;
+	move player to Red Apartment Building;
+	if debugactive is 1:
+		say "     DEBUG: Korvin finds his past[line break]";
+	say "     Making your way through the city, you eventually arrive at a fairly modern apartment building block, four stories tall and painted in a light, friendly reddish tone. Looking up at it, your German shepherd companion scrunches up his features in a thoughtful expression, then shakes his head slowly. 'It's not ringing any bells in my mind. At all,' he says morosely, taking out the note with the address once more to look at it. 'This is the place, though. It says Eddie's apartment is on the fourth floor.' You give Korvin's shoulder a squeeze to lend your support, then allow him to lead on towards the building. Passing a few groups of partially infected people, the anthro dog gives them suspicious looks and hastens his steps, soon arriving at the entrance doors of the red apartment building. Stepping through the glass door, the two of you walk into what appears either to be the site of a large orgy, or the result of frequent sexual encounters in the building lobby, as clothes are scattered on the ground and the scent of cum hangs in the air.";
+	say "     Noticing that all of the apartment doors around you have been either wrenched out of their frames or at least been broken into, your canine companion starts to become a little frantic. 'Man, look at this! I - I just had a thought. What if Eddie - err, I - had a picture of her in his wallet? You know, his girlfriend Wyatt? Or worse, those fucking dogs might even have known him! Then they'd know where to find themselves a pretty little bitch, and they wouldn't even need to break in either! Maybe they came here and r- fucked her. They might [italic type]still[roman type] be up there, taking turns!' Adam's apple bobbing visibly as he swallows, Korvin then breaks out into a run, sprinting up the stairway to the next floor. A sofa pushed into the way to block the upper end of the steps does little to slow his progress as the German shepherds leads you on a chase up three flights of stairs before finally coming to a stop on the top floor, panting.";
+	WaitLineBreak;
+	say "     Glancing once more at the note from Cantrell, your companion points at one door specifically. 'That one, 4F. I - damn, I can't even tell you how many of them there were, exactly. Three dog-dudes at least, or four, with one after another taking a turn on me. So... how about I go left, you go right if there's more than one of the fuckers in the first room, and we hit them in parallel? That sound good to you?' You nod to him, having already gone this far in the investigation of Korvin's past and wanting to see it through yourself. Giving you a grim, respectful nod, the German shepherd hurries over to the door, taking position against the wall beside it and leaving you to go to the other side, wieh neither standing right in front. Then he makes a fist and hits the door several times, the insistent knock surely heard in the whole apartment beyond.";
+	say "     For several long, tense moments, there is no noticable reaction, then you can hear the very faint scrape of the peephole cover being pulled aside by someone. Korvin smacks the door again and shouts, 'Open up already!' It is a woman's voice that replies, 'Who is this? Go away and leave me alone!' Your canine companion seems to freeze in shock and surprise as he hears that voice, so you quickly jump in and say that you aren't here to hurt her, calling out your name and saying that Eddie is here with you. 'What?!' the woman bursts out in response, followed by a short but loud scraping noise - furniture on the floor, you guess. Then the door opens, just a crack before it bumps against the heavy object that Wyatt must have placed on the inside to brace it. On top of that, it is secured by a chain. Through the narrow door slit, you can see a beautiful human woman with blond hair and blue eyes, looking out at you with a suspicious expression. A little lower, you see her hand, clutching a black and orange striped can of pepper spray.";
+	WaitLineBreak;
+	say "     'W-wyatt, you're okay!' Korvin says, stepping into her zone of vision. 'It's me, Korv- err, Eddie! Are you alone? No dogs in there with you? I - I was worried they might have come for you next.' 'Eddie? No, you can't be! You're - you're a dog!' Turning his head to show off the scar that marks him, your companion points at it and adds, 'It's me, look here!' The young woman's eyes go wide and she gasps, followed by the door being slammed shut. Not to shut you out though, but instead for her to undo the chain. There is more scraping of furniture, followed by the door opening a little further, allowing Wyatt to slip out. You notice that she's still got the can of pepper spray clutched tightly in her hand and is keeping two steps of distance to Korvin. Not exactly an exuberant welcome, but then, she's actually is still completely human too.";
+	say "     'I thought you were dead, or... worse!' Wyatt bursts out, looking at Korvin with moisture welling up in the corners of her eyes even though she does her best to keep her composure. 'You were gone so long, Eddie! Why didn't you come back to me before?' The words are almost an accusation, making Korvin twitch as if he had been whipped, his tail dipping down between his legs. 'I - I didn't remember! I don't really recall much of him - me - Eddie! Or you. Cantrell gave us the address of this place just a little while ago, after we ran into him,' the anthro shoots back, getting quieter with each sentence. 'God, that's... horrific. So this infection, or whatever it is, messed up your mind?! What do you remember still?' 'Nothing much, it's all very blurry.' Going pale, Wyatt bites her lip and raises her hand, 'Wait, I got an idea!' She slips back inside the apartment, having go to side-on to fit through the crack as the door still is mostly blocked, leaving Korvin and yourself alone outside.";
+	WaitLineBreak;
+	say "     Clearing his throat and looking over to you, Korvin says quietly, 'She's pretty hot, but I could never have picked her out of a crowd. What does that say about me that I can't remember someone so important?' It's not an easy question to answer, leaving you scrambling for a reply. Before you manage to find it, Wyatt comes back, now holding an album in one hand, the pepper-spray in the other. 'Here, look at this,' she says, holding the book out to Korvin at the end of a stretched-out arm. Flipping the photo album open, he looks at it with a grim, fatalistic expression, flipping through a few pages. 'Wait, that one! Who's he? I swear I've seen that face before,' he says suddenly, pointing at an older man with white hair.' Wyatt's eyes widen as he shows her, and she says, 'That's your dad, Eddy. He died two years ago.' 'Or, er - her, the woman in this picture. Seems pretty friendly?'";
+	say "     Pressing her lips together, the blonde woman explains, 'Inga, she's in my study group. You met her during a get-together last christmas.' Paging through the collected memories of Eddie, Korvin's gaze flicks quickly over most pictures fairly quickly, without a hint of recognition. There are a few more back and forths between him and Wyatt, but other than telling him a few names, there are only one or two situations he fully recalls. Overall, this leaves everyone rather tense, as Wyatt must have hoped for more, and Korvin gets frustrated as he draws one blank after another. Finally, as Korvin reaches the last page and shuts the album again, the young woman seeks to escape the uncomfortable quiet that is left by directing a question to you instead. 'How do you fit into all of this by the way?'";
+	WaitLineBreak;
+	say "     In order not to complicate things, you give her a somewhat edited version of the events, with you 'meeting' Korvin and joining up with him for security as you make your way through the city. You're not completely sure that she buys it, as Wyatt's eyes flick over to Korvin - and his collar - more than a few times. As you finish your explanation, she nods slowly, then turns back to Korvin. 'So, Eddie. How about you come back home, into the guest room for now? There must be some way to make you remember your life! Maybe it'll just take time?' The German shepherd looks at her, opens his muzzle, then closes it again, looking back and forth between the girlfriend of his former self, and you. His hand comes up to touch the studded collar around his neck.";
+	say "     [bold type]The muscled canine seems to be stuck, trying to come to a decision. Do you want to try to influence him?[roman type][line break]";
+	LineBreak;
+	say "     [link](1)[as]1[end link] - Tell him to go to her. He'll remember being Eddie eventually, you're sure about that.";
+	say "     [link](2)[as]2[end link] - Say nothing, and accept what comes of it. This is a decision that the anthro has to make for himself.";
+	say "     [link](3)[as]3[end link] - Reason with them and explain why Korvin cannot stay. He isn't Eddie, that's for sure.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to encourage Eddie to stay, [link]2[end link] to wait for his decision, or [link]3[end link] to suggest he forgets Eddie.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Reaching out to touch Korvin's arm, you nod to him, then go on to put your hands on his collar. With a few quick movements, the band slackens from its tight fit around his neck. Pulling it away and feeling the open ends brush against your palm has a feeling of finality, especially as he meets your gaze and says, 'Thanks[if Player is not defaultnamed]b- no, [name of Player][end if]! I never thought that running into you would lead here. We'll make it work, somehow.' With that said, he turns to Wyatt, tail wagging behind his back. The young woman lifts her gaze from the collar in your hand, pressing her lips together and pointedly not commenting, then smiles at the anthro dog and says, 'Come in Eddie, we've got so much to talk about. It's good to have you back!' She leads the way into the apartment, slipping through the crack before moving the blocking furniture further and allowing Eddie to walk inside without having to squeeze.";
+		say "     With the words, 'Goodbye, be safe out there,' Wyatt shuts the door before you a moment later, and you hear her put the chain back on, locking it, and pushing whatever it is that blocked the door back into place. You're left standing by yourself on the 4th floor of the apartment building, feeling the conspicuous absence of your trusted bodyguard as you idly glance over to the giant stick insect sharing the room with you. It doesn't comment, or move even an inch, deepening your feeling of being all alone. With a shrug, you tell yourself that you did the right thing, and feel a bit more human for it.";
+		SanBoost 30;
+		now gshep is not tamed;
+		remove gshep from companionList of Player;
+		now Resolution of Trucker Bar is 50; [Korvin/Eddie stayed with Wyatt]
+	else if calcnumber is 2:
+		LineBreak;
+		say "     Carefully holding your composure to show a neutral expression even while you watch Korvin closely, you see him meet your gaze, then look back over to Wyatt. Taking a deep breath, the anthro canine steps towards her, swallows visibly, and says, 'I - I'm sorry, but I'm not Eddy. I don't know him, or you, or anything you have gone through together. How long do you think it would take before you caught what made me this way, and lost yourself too? No, I must go.' He starts to hold out the album, then thinks better of it and instead props it against the wall, next to the apartment door. 'Maybe just... put that into a plastic bag or something, if you're gonna keep it.' Wyatt sniffles at his words, a single tear running down her pale, beautiful face as she holds her distance to the anthro.";
+		say "     'I'm sorry too, Ed- no, you call yourself Korvin, right?' she replies, letting out a halting breath as Korvin nods. 'B-be safe out there, both of you.' With those words still in the air, the human woman slips through the door into her apartment and pushes the door shut.' The sound of a lock being turned, a chain rattling, then whatever it is that blocks the door thumping against it, gives the moment an air of finality. You're left standing on the 4th floor of the apartment building, with the comforting presence of your trusted bodyguard by your side. The giant stick insect sharing the room with you doesn't comment, or even move an inch, serving as a quiet witness of what happened. 'So, let's get going then?' Korvin asks you, consciously choosing to make his tail give a hopeful swish.";
+		now Resolution of Trucker Bar is 2; [Korvin himself decided to stay with the player]
+	else if calcnumber is 3:
+		LineBreak;
+		say "     Clearing your throat, you draw everyone's attention to yourself. Pointing at the album, you explain that it is the best proof they could have gotten that Eddie doesn't really exist anymore. Korvin recognized almost none of it, and that's not a good sign for inviting him into her place, you tell Wyatt. He's wild, almost feral, and has lived out on the streets for weeks. Without you to temper his instincts, he'd never have come here in the first place, and before long, there'd just be two canines in this apartment, neither of them being the persons they once were. Korvin is frozen as he listens, while Wyatt sniffles at your words, a single tear running down her pale, beautiful face. The two of them look at you, neither finding any words to refute the facts that you are laying out. Silence stretches out for a few heartbeats when you finish, then Korvin bends down to place the album on the floor. 'Maybe just... put that into a plastic bag or something, if you're gonna keep it.'";
+		say "     'I'm sorry too, Ed- no, you call yourself Korvin, right?' she replies, letting out a halting breath as Korvin nods. 'B-be safe out there, both of you.' With those words still in the air, the human woman slips through the door into her apartment and pushes the door shut.' The sound of a lock being turned, a chain rattling, then whatever it is that blocks the door thumping against it, gives the moment an air of finality. You're left standing on the 4th floor of the apartment building, with the comforting presence of your trusted bodyguard by your side. The giant stick insect sharing the room with you doesn't comment, or even move an inch, serving as a quiet witness of what happened. 'So, let's get going then?' Korvin asks you, his tail hanging limply behind his back.";
+		now Resolution of Trucker Bar is 3; [the player talked Korvin into staying with them]
+	wait for any key;
+	now Player is in Red Apartment 4th Floor;
 
 [ *** notes ]
 [

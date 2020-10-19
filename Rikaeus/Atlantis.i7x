@@ -64,14 +64,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Lost Trident	"Lost Trident"
 
-Lost Trident is a situation. The level of Lost Trident is 9.
+Lost Trident is a situation.
+ResolveFunction of Lost Trident is "[ResolveEvent Lost Trident]". The level of Lost Trident is 9.
 
-The sarea of Lost Trident is "Beach".
+Sarea of Lost Trident is "Beach".
 When play begins:
 	Add Lost Trident to BadSpots of FurryList;
 	Add Lost Trident to BadSpots of MaleList;
 
-Instead of resolving a Lost Trident:
+to say ResolveEvent Lost Trident:
 	say "     Walking along the beach you watch as the crashing waves of the sea bounce across the shore as the [if daytimer is day]sun rides along the sky[else]moon dances along the night skyline[end if] while listening to the soft intelligible sounds of marine life reverberate all around you. As the minutes pass by, the soothing sounds of the water lapping along the sands makes a sense of nostalgia surge up throughout you, mind lulling you almost to sleep. However, before you can become too lost in the all-encompassing feelings of sleep about to overtake you, you find your gaze drifting over to what looks like a bronze colored trident free-floating like an abandoned surfboard along the waterline.";
 	say "     Curious as to where this strange thing came from, you shrug your backpack off and then walk into the sea to grab the weapon before it can drift further out into the [if daytimer is day]blue[else]black[end if] wonder of the ocean. Testing its weight you find that the trident is fairly light and has a well-worn grip around its smooth handle that fits your hand almost perfectly. Not sure, but not questioning the proverbial gift horse you begin to turn about your way to head back to the shore, but before you can get too far you hear the roar of a sea dragon behind you. Whipping your head around you find several sea dragons glaring at you as they raise themselves up out of the waters, the menacing looks on their faces makes you swallow thickly in turn.";
 	WaitLineBreak;
@@ -96,7 +97,7 @@ Instead of resolving a Lost Trident:
 					Challenge "Feral Sea Dragon";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "     Having beaten back the pack of feral dragons you experience a sense of well deserve pride overcome you as you watch the group of feral reptiles scampering away back into the sea. Despite you turning your attention to your prize you catch something out of the corner of your eyes. It is a half naked man with shoulder length black hair and stormy blue eyes. He appears to be looking at you inquisitively before he dives back down into the water. To your shock, a mermaid, or merman?, tail flops out of the water for a split second. From the direction of the ripples he swam towards the arc of rocks in the distance, though you believe he probably went further than that.";
-						now carried of bronze trident is 1;
+						ItemGain bronze trident by 1;
 						increase score by 10;
 						now PoseidonRelationship is 1;
 						change west exit of Sunken Ship to Atlantis City Entrance;
@@ -109,14 +110,8 @@ Instead of resolving a Lost Trident:
 
 Section 1a - Trident (Weapon)
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"bronze trident"	"A large, bronze three-pronged spear that is as lightweight as it is deadly."	5	bronze trident
+[bronze trident moved to Core Mechanics/Weapons.i7x]
 
-bronze trident is an armament. It is part of the player. It has a weapon "[one of]your three-pronged spear[or]your deadly trident[or]your bronze spear[or]your majestic weapon of doom[at random]". The weapon damage of bronze trident is 10. The weapon type of bronze trident is "Melee". It is not temporary. the objsize of trident is 4.
-
-instead of sniffing bronze trident:
-	say "The trident smells like the sea, the moon, the stars and... a strong merman? Weird.";
 
 Section 2 - Areas of Atlantis
 
@@ -130,7 +125,7 @@ Object	Name
 Atlantis City Center	"Atlantis City Center"
 
 Atlantis City Center is a room.
-The description of Atlantis City Center is "[AtlantisCenter]".
+Description of Atlantis City Center is "[AtlantisCenter]".
 earea of Atlantis City Center is "Atlantis".
 
 to say AtlantisCenter:
@@ -143,7 +138,7 @@ Object	Name
 Atlantis City Market	"Atlantis City Market"
 
 Atlantis City Market is a room.
-The description of Atlantis City Market is "[AtlantisMarket]".
+Description of Atlantis City Market is "[AtlantisMarket]".
 earea of Atlantis City Market is "Atlantis".
 
 to say AtlantisMarket:
@@ -156,7 +151,7 @@ Object	Name
 Atlantis City Residential	"Atlantis City Residential"
 
 Atlantis City Residential is a room.
-The description of Atlantis City Residential is "[AtlantisResidential]".
+Description of Atlantis City Residential is "[AtlantisResidential]".
 earea of Atlantis City Residential is "Atlantis".
 
 to say AtlantisResidential:
@@ -167,7 +162,7 @@ Object	Name
 Kurt's Abode	"Kurt's Abode"
 
 Kurt's Abode is a room.
-The description of Kurt's Abode is "[KurtsAbode]".
+Description of Kurt's Abode is "[KurtsAbode]".
 
 to say KurtsAbode:
 	say "     The living room of the shark-musician is rather quaint, though from what you know of the man it's to be expected. The area is decorated with simple paintings of the city as well as various types of guitars, which you're sure he can play. To your right is a doorway that leads to his kitchen which from where you're standing you can see it is rather spick and span. Wandering around a bit more you muse that your friend is a very clean person but you guess that's not exactly a bad thing in any situation really. Though you do have a thought to tell the shark-morph that he needs more furniture or something to spruce up the place.";
@@ -180,7 +175,7 @@ Object	Name
 Royal Palace Entrance	"Royal Palace Entrance"
 
 Royal Palace Entrance is a room.
-The description of Royal Palace Entrance is "[RoyalPalace]".
+Description of Royal Palace Entrance is "[RoyalPalace]".
 earea of Royal Palace Entrance is "Atlantis".
 
 to say RoyalPalace:
@@ -193,7 +188,7 @@ Object	Name
 Royal Throne Room	"Royal Throne Room"
 
 Royal Throne Room is a room.
-The description of Royal Throne Room is "[ThroneRoom]".
+Description of Royal Throne Room is "[ThroneRoom]".
 earea of Royal Throne Room is "Atlantis".
 
 to say ThroneRoom:
@@ -205,7 +200,7 @@ Royal Bed Chambers	"Royal Bed Chambers"
 
 Royal Bed Chambers is a room.
 Royal Bed Chambers is north of Royal Throne Room.
-The description of Royal Bed Chambers is "[PoseidonBedroom]".
+Description of Royal Bed Chambers is "[PoseidonBedroom]".
 earea of Royal Bed Chambers is "Atlantis".
 
 to say PoseidonBedroom:
@@ -217,7 +212,7 @@ Atlantis City Park	"Atlantis City Park"
 
 Atlantis City Park is a room.
 Atlantis City Residential is east of Atlantis City Park.
-The description of Atlantis City Park is "[AtlantisPark]".
+Description of Atlantis City Park is "[AtlantisPark]".
 earea of Atlantis City Park is "Atlantis".
 
 to say AtlantisPark:
@@ -342,8 +337,8 @@ AnalVirgin of Triton is true.
 PenileVirgin of Triton is true.
 SexuallyExperienced of Triton is false.
 MainInfection of Triton is "".
-The description of Triton is "[TritonDesc]".
-The conversation of Triton is { "<This is nothing but a placeholder!>" }.
+Description of Triton is "[TritonDesc]".
+Conversation of Triton is { "<This is nothing but a placeholder!>" }.
 The scent of Triton is "He smells of the ocean and a bit of musk. Though he has an underlying smell of spice.".
 
 to say TritonDesc:
@@ -450,8 +445,8 @@ AnalVirgin of Alana is true.
 PenileVirgin of Alana is true.
 SexuallyExperienced of Alana is false.
 MainInfection of Alana is "".
-The description of Alana is "[AlanaDesc]".
-The conversation of Alana is { "<This is nothing but a placeholder!>" }.
+Description of Alana is "[AlanaDesc]".
+Conversation of Alana is { "<This is nothing but a placeholder!>" }.
 The scent of Alana is "     Alana smells like sweat and lavender oddly enough.".
 
 to say AlanaDesc:

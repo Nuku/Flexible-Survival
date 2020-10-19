@@ -42,7 +42,8 @@ Object	Name
 To The Unknown	"To The Unknown"
 
 To The Unknown is a situation.
-The sarea of To The Unknown is "Red".
+ResolveFunction of To The Unknown is "[ResolveEvent To The Unknown]".
+Sarea of To The Unknown is "Red".
 
 [RESOLUTION STAGES]
 [0: Never found anything]
@@ -57,7 +58,8 @@ Object	Name
 Gift From Abyss	"Gift From Abyss"
 
 Gift From Abyss is a situation.
-The sarea of Gift From Abyss is "Nowhere".
+ResolveFunction of Gift From Abyss is "".
+Sarea of Gift From Abyss is "Nowhere".
 
 [RESOLUTION STAGES]
 [0: Never found the sword]
@@ -73,7 +75,8 @@ Object	Name
 AbyssEdgeEnchantLevel	"AbyssEdgeEnchantLevel"
 
 AbyssEdgeEnchantLevel is a situation.
-The sarea of AbyssEdgeEnchantLevel is "Nowhere".
+ResolveFunction of AbyssEdgeEnchantLevel is "".
+Sarea of AbyssEdgeEnchantLevel is "Nowhere".
 
 [----------------------------------------]
 
@@ -84,7 +87,8 @@ Object	Name
 Friend Of The Darkness	"Friend Of The Darkness"
 
 Friend Of The Darkness is a situation.
-The sarea of Friend Of The Darkness is "Nowhere".
+ResolveFunction of Friend Of The Darkness is "".
+Sarea of Friend Of The Darkness is "Nowhere".
 
 [RESOLUTION STAGES]
 [0: Dark Tyrant remains natively hostile, nothing happened]
@@ -101,7 +105,8 @@ Object	Name
 Luminous Harem	"Luminous Harem"
 
 Luminous Harem is a situation.
-The sarea of Luminous Harem is "Nowhere".
+ResolveFunction of Luminous Harem is "".
+Sarea of Luminous Harem is "Nowhere".
 
 [RESOLUTION STAGES]
 [0: Never communicated with the void fireflies]
@@ -116,7 +121,8 @@ Object	Name
 Odd Treasure	"Odd Treasure"
 
 Odd Treasure is a situation.
-The sarea of Odd Treasure is "Nowhere".
+ResolveFunction of Odd Treasure is "".
+Sarea of Odd Treasure is "Nowhere".
 
 [RESOLUTION STAGES]
 [0: Nothing happened so far]
@@ -129,12 +135,43 @@ Object	Name
 ElkHeadReaperGender	"ElkHeadReaperGender"
 
 ElkHeadReaperGender is a situation.
-The sarea of ElkHeadReaperGender is "Nowhere".
+ResolveFunction of ElkHeadReaperGender is "".
+Sarea of ElkHeadReaperGender is "Nowhere".
 
 [RESOLUTION STAGES]
 [0: Gender undecided]
 [10: Male]
 [20: Female]
+
+to say EHRSubjectPro:
+	if Resolution of ElkHeadReaperGender is 10:
+		say "he";
+	else:
+		say "she";
+
+to say EHRObjectPro:
+	if Resolution of ElkHeadReaperGender is 10:
+		say "him";
+	else:
+		say "her";
+
+to say EHRPosAdj:
+	if Resolution of ElkHeadReaperGender is 10:
+		say "his";
+	else:
+		say "her";
+
+to say EHRPosPro:
+	if Resolution of ElkHeadReaperGender is 10:
+		say "his";
+	else:
+		say "hers";
+
+to say EHRReflexPro:
+	if Resolution of ElkHeadReaperGender is 10:
+		say "himself";
+	else:
+		say "herself";
 
 [----------------------------------------]
 
@@ -143,7 +180,8 @@ Object	Name
 MirrorsKey	"MirrorsKey"
 
 MirrorsKey is a situation.
-The sarea of MirrorsKey is "Nowhere".
+ResolveFunction of MirrorsKey is "".
+Sarea of MirrorsKey is "Nowhere".
 
 [RESOLUTION STAGES]
 [0: Nothing happened so far]
@@ -152,7 +190,7 @@ The sarea of MirrorsKey is "Nowhere".
 
 [----------------------------------------]
 
-instead of resolving To The Unknown:
+to say ResolveEvent To The Unknown:
 	if Resolution of To The Unknown is 0: [Pre-Event]
 		say "     You go past one of the many buildings in the District and turn to your right. It is another ransacked shop with nothing left, only broken glass scattered around the windows and a complete absence of sound, which worsens the more you proceed forward. There is nothing else around but destruction and abandonment, consequences brought by the apocalypse, but besides this, something seems to be really disturbing you, and you find yourself helplessly unable to explain what it is, exactly. It's just something you feel... A shiver, sudden loss of thoughts, an instant discomfort rapidly growing inside as if a nightmare was chasing after you. The sense of danger, maybe there is a creature approaching...?! Though there is nothing. Paranoia slowly begins to take over your mind, and a cold drop of sweat follows after.";
 		say "     Reality seems pointless, the air around you is heavy, your body refuses to move, and then you can't breathe. But at the same time, there you are, alive, your heart beating, your senses in overdrive, but your brain seems incapable of understanding its surroundings. There is a hiss echoing through, and that is when you see a gigantic scaly body of a snake, passing right by you and through the buildings like a slowly moving train, seemingly endless. Your heart stops at that moment, facing the imminent danger, and it is a feeling you cannot control. You feel powerless, disarmed and tiny, as the serpent makes its way unhindered by any obstacles that prove to be nothing for its titanic dimensions.";
@@ -161,7 +199,7 @@ instead of resolving To The Unknown:
 		ItemGain null essence by 1 silently;
 		say "     You have obtained a [bold type]Null Essence[roman type] and placed it in your inventory.";
 		WaitLineBreak;
-		if companion of player is demonologist or Xaedihr is in Grey Abbey Library:
+		if demonologist is listed in companionList of Player or Xaedihr is in Grey Abbey Library:
 			say "     'Ah... That is the void, alright. Such openings are obviously traces of clumsy dimensional traveling.' You hear a voice speaking behind you, and notice that Xaedihr was tagging along right after you. 'Do not enter this place if you don't have to. It will consume your mind the more time you spend in there. This was just a glimpse of what it can do... Even experienced sorcerers choose to stay away.' He explains, walking to your side in the process. 'But if you must, then I recommend that you take me with you. This [italic type]Null Essence[roman type] that you've got has tremendously useful properties, and I find myself helplessly drawn to it.' Indeed, it might be a good idea to have someone as powerful as your half-demon friend accompanying you through perilous realms like this.";
 			say "     'Though do be wary of that serpent, it seems to be the gatekeeper and it will, most certainly, attempt to eat you. Whole. Literally. Very ill-advised, even if you happen to be a vore enthusiast, in which case I will feed you to it myself.' He finishes speaking with a tone of sarcasm, so remarkable that you're actually not quite sure if he is serious or not. Regardless, you thank him for the explanation. It would be far worse going in blind.";
 		else:
@@ -334,7 +372,7 @@ to say VRMoveOptions:
 					increase VRTentacleAbominationTracker by 1;
 			if VRDarkTyrantTracker is 3: [Will always attack first]
 				say "     That was a bad decision. With the Dark Tyrant on your tail, not attempting to move through the dimensional line of this realm only earns you a direct confrontation with his great and menacing shadow. Your immediate surroundings darken as the gigantic abomination of dark slime grows before you, licking his own black gooey face with a hungry toothy grin. Solid liquid drips from each of his extremities, including from the monstrous shape of a cock permanently erect between his massive legs, its slit gaping as the pitch black goo keeps leaking.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     [italic type]It doesn't seem like Xaedihr can help you here, either. You've gotten separated from him.[roman type][line break]";
 				WaitLineBreak;
 				say "[VRDarkTyrantPreBattle]";
@@ -373,7 +411,7 @@ to say VRMoveOptions:
 					increase VRTentacleAbominationTracker by 1;
 			if VRDarkTyrantTracker is 3:
 				say "     That was a bad decision. With the Dark Tyrant on your tail, not attempting to move through the dimensional line of this realm only earns you a direct confrontation with his great and menacing shadow. Your immediate surroundings darken as the gigantic abomination of dark slime grows before you, licking his own black gooey face with a hungry toothy grin. Solid liquid drips from each of his extremities, including from the monstrous shape of a cock permanently erect between his massive legs, its slit gaping as the pitch black goo keeps leaking.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     [italic type]It doesn't seem like Xaedihr can help you here, either. You've gotten separated from him.[roman type][line break]";
 				WaitLineBreak;
 				say "[VRDarkTyrantPreBattle]";
@@ -422,32 +460,32 @@ to VREncounterTrackerCheck:
 			if a random chance of 1 in 2 succeeds:
 				now VRVoidSerpentTracker is 3; [shape]
 				say "     There is a long shape slowly wiggling by your side, visible beyond the veil. If you were to move an inch, it would probably see you.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     [italic type]Whispering, Xaedihr tells you 'Hold your position, or it will see you.'[roman type][line break]";
 			else:
 				now VRVoidSerpentTracker is 4; [hissing]
 				say "     An ominous hissing disturbs you for a moment, and it is coming from further ahead. There seems to be a giant serpent right in the middle of your path, but it is not advancing. It seems you are not standing where it wants you to be.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     [italic type]Whispering, Xaedihr tells you 'If it behaves like any normal snake, it doesn't like to be challenged. Don't make any sudden movements, but most importantly, back away, carefully.'[roman type][line break]";
 		else if VRVoidSerpentTracker is 4: [in case they don't stop hissing]
 			say "     An ominous hissing disturbs you for a moment, and it is coming from further ahead. There seems to be a giant serpent right in the middle of your path, but it is not advancing. It seems you are not standing where it wants you to be.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				say "     [italic type]Whispering, Xaedihr tells you 'If it behaves like any normal snake, it doesn't like to be challenged. Don't make any sudden movements, but most importantly, back away, carefully.'[roman type][line break]";
 		if a random chance of 3 in 5 succeeds and VRPeculiarSummonerTracker < 3:
 			increase VRPeculiarSummonerTracker by 1;
 		if VRPeculiarSummonerTracker is 3:
 			say "     You feel like you are being observed by someone of a great power, and that they are very close. It is impossible to tell from which direction you are sensing this, but it seems to be from within the core line. Perhaps there is a chance you could lose them if you were to not be in their line of sight?";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				say "     [italic type]Whispering, Xaedihr tells you 'Lose them beyond the veil, they won't be able to follow. But if you can't, I doubt they will attack carelessly.'[roman type][line break]";
 		if VRTentacleAbominationLinger is 3:
 			say "     The sluggish, ominous presence that used to threaten you from above seems to be gone, for now.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				say "     [italic type]'Tentacle Abomination gone. That's a relief.' says Xaedihr as he turns to you.[roman type][line break]";
 			now VRTentacleAbominationTracker is 1;
 			now VRTentacleAbominationLinger is 0;
 		if VRTentacleAbominationTracker is 3:
 			say "     There is an ominous presence hovering above you, with a sort of sluggish and slimey sounds echoing through. Looking up, there seems to be nothing, but there is this imminent sensation that something, or someone, might be about to fall right on top of you.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				say "     [italic type]Whispering, Xaedihr tells you 'Look out for those tentacle abominations. They are everywhere, so don't linger around in the exact same spot for too long, unless you want one of them to find you. Although I don't think it likes snakes... but even so, it will stay in the veil, too, so beware.'[roman type][line break]";
 			if a random chance of 3 in 4 succeeds:
 				increase VRTentacleAbominationLinger by 1;
@@ -455,7 +493,7 @@ to VREncounterTrackerCheck:
 			increase VRDarkTyrantTracker by 1;
 		if VRDarkTyrantTracker is 3:
 			say "     [bold type]The air freezes around you. Not physically or in any realistic meaning of the word, but in the form of a menacing presence hovering over you. Its great shadow surges, ready to catch you in a moment of distraction...[roman type][line break]";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				say "     [italic type]Whispering, Xaedihr tells you 'Well, you see that black thing you summoned when you pulled the sword? Don't stop running now, or you will get eaten by it. And stick to the core line. The other monsters won't be a problem with its presence.'[roman type][line break]";
 	else: [Dark Tyrant is an imminent threat]
 		say "     [bold type]You are still in imminent danger of being caught by the Dark Tyrant.[roman type][line break]";
@@ -516,7 +554,7 @@ to VREvents: [Events that can happen]
 		else:
 			if VRTentacleAbominationTracker is 4:
 				say "     Although as you make your way across the veil, you notice a disturbance in the walls when you attempt to proceed, as if something was waiting for you... The air around you stops, and there is no sound but just one comparable to a giant slimey slug crawling over the surface. Then, it's not just one, but many, many of them, and their shapes seem to be appearing in the form of shadows, all while something in the middle starts poking at the wall of darkness from the other side.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     [italic type]'I would strongly recommend a hasty retreat. Else you want to have a date with an especially... tentacular being.' says Xaedihr, as he urges you to leave.[roman type][line break]";
 				if carried of ancient tome > 0 and TentacleInteractions > 0:
 					say "     [bold type]Something seems to be going terribly wrong with your Ancient Tome... It seems to be pounding at your mind like an angry ram,[roman type] for the lack of a better description, as all it gives you is a throbbing headache.";
@@ -599,7 +637,7 @@ to say AbyssalEdgeEvent:
 	WaitLineBreak;
 	say "     These trickeries of the mind continue for what seems to be an eternity, testing your patience and resilence to their extremes. Even if you wanted to head back, you would have to cross all the illusionary walls again, which seem to be ever shifting. In fact, whenever you walk, the opening that is your obstacle changes its position as if it was a reflex of light, and at the same time, it becomes your obstacle. You learn how to use your head to figure out your way forward, but it takes a heavy toll on you. It is expected from a place that attempts to bring you to desperation all the time, one that is unforgiving for the weak wills.";
 	say "     An idea about the apocalypse and the nanites sprouts in your mind, planting a suggestion about how much better it is than this wretched place. Your thoughts dwell in the many sex-crazed creatures who would offer, or sometimes just forcingly give you, a long time of ecstacy and pleasure that is much more preferred than this darkness. You even find yourself mumbling about it out loud...";
-	if companion of player is demonologist:
+	if demonologist is listed in companionList of Player:
 		say "     [italic type]...But you're very quickly brought to reality once you feel a powerful smack on the back of your head. 'Really? Are you broken so easily? It's just a simple illusion, no need to wish to get raped out of despair.' Xaedihr is paying attention to your condition and watching after you... in his own way.'[roman type][line break]";
 	else:
 		say "     ...But you need to shake away from it. You can't give up here just now, this is simply a mind trick. You can still press on and hopefully find what this place is hiding from you, though not without suffering from the struggle.";
@@ -607,7 +645,7 @@ to say AbyssalEdgeEvent:
 	say "     It doesn't take long, now. Walking just a bit more eventually pays off, and you're free of those sick walls attempting to drive you crazy. And what you see in front of you now is... peculiar, to say the least.";
 	WaitLineBreak;
 	say "     In a large area of only what seems to be comparable to a castle's chamber, a single light ray shines upon the handle of an upside down sword stuck into a pedestal that seems to be bleeding, but this [']blood['] is pitch black, dripping into another pool of darkness surrounding it. Something about this sends shivers down your spine, because of how much it resembles a living being with an open wound.";
-	if companion of player is demonologist:
+	if demonologist is listed in companionList of Player:
 		say "     [italic type]'I would not pull that sword if I were you. It seems to be sealing something. The moment that you remove it from the pedestal will probably release something into this realm. Something that I am not quite sure it is defeatable without some sort of extravagant ritual. But I won't stop you. Damned be this dimension, for all I care.' Xaedihr gives you important information and a personal opinion.";
 	say "     It seems like you [italic type]could[roman type] pull the sword off and claim it, but you don't know what consequences it could bring...";
 	say "     [bold type]Will you do it?[roman type]";
@@ -618,7 +656,7 @@ to say AbyssalEdgeEvent:
 		LineBreak;
 		say "     Well, this is an artifact, which might very well be a valuable treasure. Perhaps the most valuable that you will find in here, not to mention it looks like a powerful weapon. With your decision made, you step towards the pedestal, careful to not step on the puddle of dark liquid, and with one hand, you begin to pull the blade. It needs some strength to come off, but other than that, it seems to actually slide off as if it was rubbing against a slippery and soft surface. Slowly, you pull it more... and more... Until you feel the grasp of whatever it was stuck on release completely. With the sword in your hands, you pull it to you completely, admiring its shape and handiwork. It somehow has a flowing darkness around it...";
 		say "     You have acquired the [bold type]Abyssal Edge[roman type] weapon.";
-		now carried of abyssal remnant is 1;
+		ItemGain abyssal remnant by 1;
 		say "     But... something's wrong. The blade is emptying itself, the dark liquid pouring out through the tip, and the sword is starting to look nothing more than a rusted, useless piece of garbage that can't even cut through paper. Did you actually recover something incredibly weak?! And about the puddle, it is... moving, somehow. You back away in that instant, towards where you came from, as you carefully observe what is happening...";
 		WaitLineBreak;
 		say "     There is an enormous quantity of black liquid surging through the pedestal, and the puddle begins to look less and less like one, taking shape in what seems to be a living blob of something. Then you realize it is making a pair of feet, slowly building into legs, and the whole area around you becomes surrounded by pitch black liquid running towards its core. More and more of it connects, and very quickly, what started with being a displaced pair of dark legs became a monstrous bipedal creature, easily overshadowing you by tripling your height (and still going), absurdly massive in size with a pair of powerful arms of endless strength. Its face is a ghastly visage of perilous eyes, a mouth covered in razor-sharp teeth, and a very, very long drooling tongue that unquietly wiggles around as if craving for something. However, most peculiar of all, your eyes cannot ignore what would be the shape of a human cock, throbbing and pulsing more black liquid as it stands erect, and impossibly gigantic.";
@@ -626,7 +664,7 @@ to say AbyssalEdgeEvent:
 		WaitLineBreak;
 		say "     You have released the [bold type]Dark Tyrant[roman type] into this realm, and it will chase you around from now on. If it lurks close, do not stop moving, or it won't hesitate to consume you. This is a battle you cannot win.";
 		say "     Also your [bold type]Abyssal Edge[roman type] became an [bold type]Abyssal Remnant[roman type].";
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			say "     [italic type]Your half-demon friend turns to you, looking at the broken sword hilt in your hands still. 'Do not throw it away. Let me have a look at it once we leave.' he says, before he allows you to keep going. Interestingly enough, he doesn't seem fazed by what just happened.[roman type][line break]";
 		now Resolution of Gift From Abyss is 2; [Dark Tyrant has been released]
 		now VRDarkTyrantTracker is 0;
@@ -680,7 +718,7 @@ to say VRGatewayToFreedom:
 	say "     [bold type]Gateway To Freedom[roman type][line break]";
 	say "     Amidst your steps towards the unknown, the dimensional walls around you shift and take shape into a tunnel right before you can perceive it completely, looking like you just walked into a pathway to an entirely different place. As the obscurity unveils itself, a dimming luminosity strikes your eyes, making you reflexively cover your face to avoid the dazzle. In fact, you feel yourself lighter as your body begins to warm, a heat of familiarity so noticeable in contrast beginning to cover you and wash the fear away. It welcomes you with an inviting embrace, as if it wanted your presence to merge with its own.";
 	say "     However, you do not feel compelled to press on, having the chance to head back into the darkness of the Void if you so desire. Having this chance, nonetheless, fills you with the hope that you're inevitably deprived of while roaming the depths of such an undesirable place.";
-	if companion of player is demonologist:
+	if demonologist is listed in companionList of Player:
 		say "     [italic type]Xaedihr, who still remains in your shadow, finds it pertinent to assure you that this is safe. 'We found a way out. No danger here. Press on if you want to leave, go back if you don't. I'll follow you regardless.'[roman type][line break]";
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Allow the light to take you in.";
@@ -785,7 +823,7 @@ to say VRUnfortunatePrey:
 	WaitLineBreak;
 	if player is kinky:
 		say "     The way the serpent seemed to feed on someone who was walking by, taking its sweet time to taste and feel its prey before swallowing them down entirely, it just seemed to turn you on, somehow... You are not quite sure why, or maybe you are? Nonetheless, this place definitely does something to you, and you can't help but be thinking about it for a while...";
-		if companion of player is demonologist and "Invoke Dream - Void Serpent I" is not listed in traits of Xaedihr:
+		if demonologist is listed in companionList of Player and "Invoke Dream - Void Serpent I" is not listed in traits of Xaedihr:
 			say "     [italic type]'Really? That turned you on? Oh, please, do remind me to kick your ass into its mouth the second it appears to fight us, then let me know how it feels! Don't worry about gruesome and slow death as your body melts in digestive acid, I will summon your spirit or something.' Ah, your snarky and sarcastic [']friend['] wishing you the best, as expected from Xaedihr. 'No, I don't wish you death, I was just being an ass. Though if you want to safely experience that, I might... be able to reproduce something nice during your sleep. Just don't... go on a suicide streak, okay? No need for that.' Oh, is he actually worrying about you? You're not quite sure what to think of that either, but it seems he can actually do something new for you.[roman type][line break]";
 			say "     Xaedihr has learned a new spell, [bold type]Invoke Dream - Void Serpent I[roman type], which can be used anytime when talking to him. It will reproduce a scene with the Void Serpent at the safety of your familiar world, or even home.";
 			say "     This will happen sometimes when facing certain events for kinky fellows. One could guess this is the half-demon's desperate attempt to protect those who are especially kinky from making dangerous decisions, or perhaps he's just kinky himself. We will never know.";
@@ -811,7 +849,7 @@ to say VRUnfortunatePrey:
 
 to say VRCreepyVisage: [Oh no.]
 	say "     ... Though as you make your way beyond the veil, you find only darkness. It is worse than finding nothing at all, since the way behind you blocks everytime you manage to make it across. With no other option but to continue, you thread carefully in hopes of this being just tough luck and nothing special, or just a tiny little drawback. Have to remain positive in one if to make it through this place safely, but the atmosphere is so dense... There is only lifeless silence, nothing else at all. It is as if you went somewhere you should not be walking into... Your mind is immediately thrown into disarray.";
-	if companion of player is demonologist:
+	if demonologist is listed in companionList of Player:
 		say "     [italic type]Then you look back, looking for your companion. He's gone. Between you and your surroundings, there is nothing but darkness.[roman type][line break]";
 	WaitLineBreak;
 	Linebreak;
@@ -920,7 +958,7 @@ to say VRTendrilPlants:
 		say "[VRMoveOptions]";
 
 to VRTPKinkyLoss:
-	if companion of player is demonologist: [Xaedihr is there]
+	if demonologist is listed in companionList of Player: [Xaedihr is there]
 		say "     [italic type]Noticing your state of uncontrollable arousal, Xaedihr intervenes immediately.[roman type][line break]";
 		say "     'Okay, insult me however you want, decide to not bring me along next time, but right now, I won't let you touch these no matter how hard you try.' What?! Xaedihr is keeping you away from the fun! He is just pushing you forward without letting you have a tiny little whiff of those sweet fragrances, or just a brief touch of that floral warmth... or a taste of that oozing thick sap... 'There is enough dick and pussy to play with outside, you don't need these. Jeez, what are you, a sex addict? Must I save you from making dumb decisions all the time?' You struggle, even though the half-demon's strength is incomparably significant against yours, but you are in no real condition to think for yourself right now. For some reason. What were you doing, again? Right now, you are just feeling Xaedihr's considerable bulge rubbing against your buttocks, and his muscular arms holding yours still very tightly...";
 		say "     'Ah, crap... This place goes on and on... What a nuisance.' He's starting to pant, having to almost drag you forward as you mindlessly fight against his efforts. 'How about covering your nose next time you're in here?! Ugh, and stop... thrashing about! I swear I'll knock you out!' Although no matter how much the half-demon attempts to stop you, he too begins to feel affected by the continuous rubbing you're providing him with, a hard-on starting to appear obvious underneath his dark pants. 'Fuck fuck fuck... Not now... You horny, fucking... Argh! T-this is not the place for that!' Now he is seriously panting from arousal, and when out of ideas, he attempts to cover your nose and mouth from breathing in any of those arousing spores. The other hand, however... heads towards your sex, as he begins to caress you between the legs.";
@@ -1030,7 +1068,7 @@ to say VRQuestionableStuff:
 	WaitLineBreak;
 	say "     During one of your pauses to catch up your breath, you begin to hear some odd sounds. Something squishy, reminding you of air trying to escape some thick liquid, then a slimey stretch... It's coming from above you, so you immediately lift your gaze... only to find out that the ceiling is occupied by tons of phalic tentacles and thin-pointed tendrils slowly wiggling their way down, and an enormous [one of]veiny penis-shaped creature[or]plump pussy-shaped creature[at random] hovering over your head as their central mass, approaching you at an alarming rate. When you realize this, a drop of some thick liquid falls right on your face, and it persists no matter how much you attempt to rub it off, making your skin incredibly soft and slippery!";
 	say "     Might be the thing that allows them to feed on and swallow struggling prey like you with little effort, and it does seem to do something else to you! Your entire body feels a little tingly...";
-	if companion of player is demonologist:
+	if demonologist is listed in companionList of Player:
 		say "     [italic type]Behind you, Xaedihr makes a recommendation 'Ignore that thought and proceed further. If anything happens, I can push them away. Go!'[roman type][line break]";
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - You could actually use this to slip your way through more easily...";
@@ -1038,7 +1076,7 @@ to say VRQuestionableStuff:
 	if Player consents: [covering themselves in the juice is a bad idea, its arousing properties with the rubbing against the walls makes it more difficult... the beast catches up and swallows the player. Xaedihr is unable to save them, his only option being leaving on his own.]
 		Linebreak;
 		say "     Yes! You could just keep rubbing that slimey and slippery stuff all over your body and stuff, and that will help you feel better while grinding and rubbing yourself against the walls to... Wait, it does feel good... So good...! The more you cover yourself with it, the better it feels. You can't stop... You cannot help yourself but to continue to do it... What is it? Why is it so hot...? Why can't you think anymore? There is just ecstacy taking over your mind, now, and you're unable to move an inch. It's not like you want to, even, it feels so damn good that you don't care about anything else. Is there someone calling for you? Was there any goal you had in mind? None of it matters now. You want to feel all of these hot tendrils that were to come to get you caress every inch of you, as they do so well...";
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			say "     [italic type]You see a flash of red before your eyes... You don't remember what it could mean... But it is gone, now.[roman type][line break]";
 		WaitLineBreak;
 		VRTPBadEnd2;
@@ -1047,7 +1085,7 @@ to say VRQuestionableStuff:
 		say "     Well, you cannot stay here! Those things will catch up to you if you don't move! Making haste, you try your best to squeeze through the walls the fastest you can. It actually starts to hurt, the friction between your skin and its hard surface will surely leave cuts and stratches on your whole body, but it is a matter of survival, so you cannot be picky about it. Trying your very best, you try to create enough momentum to slide through between the walls by pushing yourself with both your hands, knees and feet. It hurts, badly, and your back feels like it's burning hot, but you don't let that discourage you. Just a little hesitation would have you covered in that thick stuff, and gave any of its extensions enough time to catch you.";
 		say "     Your hasty movements provoke the tendrils even further, and them seem to be moving faster thanks to that... Which is bad. Some of them graze at your arms as you shake them off, and one wraps around your leg as you try to kick it away. You are so close...";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			say "     [italic type]'Away with you, filthy stuff.' says Xaedihr in a contemptuous tone, as flames as black as the void burn through the tentacles that are threatening you. Surprisingly, it doesn't harm you in any way, but it surely relieves you. Besides that, the tendrils are still small enough to kick, shove away and smash against the wall as they retreat in pain, or something similar. Adrenaline surges through you as you fight for your life, until you're finally able to pull off and escape through the exit of this wretched area!";
 			say "     You breathe in relief, for being back in the relative familiarity of the core line. 'Now we know where those demons got the tentacle beasts from. It appears they have easy access to the void... This is bad.' comments your half-demon companion, contemplating the abominations from just now. They appear to be of the same ones you faced in the Hell Realm.[roman type][line break]";
 			if "Strong Psyche" is listed in feats of Player:
@@ -1255,7 +1293,7 @@ to VROddTreasurePathChoice:
 			say "     There is another sound that you hear, one much more subtle than the thuds, within the intervals of the triple hits. Something metallic and heavy being dragged across the ground, nearing your position from above, but you don't quite see it. Must be at a higher level... but then you hear it from your right. Both directions, forward and backward, are completely dark, and you're remaining there with only your torch in hand, with no other choice but to continue. You do so, walking towards the darkness once more, daring the dangers of the void to come and get you, because nothing else can be done about it. It rings louder in your ears, the thuds, the metal, and suddenly...";
 			WaitLineBreak;
 			say "     Your torch goes off.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				say "     [italic type]And you find yourself alone, realizing you had lost Xaedihr in the middle of these ruins.[roman type][line break]";
 			say "     Blinded in darkness as you are, you no longer have any control over the situation, if you ever had in the first place, and at the same time, you are sinking in silence. Still, there is no other way but forward, and despite your inability to see, you continue to walk. Step after step, the only thing that begins to change is an ominous light slowly appearing at the end of the tunnel. You cannot help it, your movements quicken as you see yourself approaching the light, like a faint hope that has emerged from within the darkest of times. But... it, too, goes off, sooner than you would have liked. The thuds happen again, and the metallic sound being dragged right towards you.";
 			WaitLineBreak;
@@ -1265,7 +1303,7 @@ to VROddTreasurePathChoice:
 			say "     ([link]N[as]n[end link]) - Keep walking forward.";
 			if Player consents: [Encounter with the Elk Head Reaper]
 				Linebreak;
-				say "     The mistake of many, and for you... that remains to be seen.";
+				say "     The mistake of many... and for you, it remains to be seen.";
 				say "     As you are about to turn your face to the back, in order to see what was just breathing behind you, suddenly... you are not seeing anything at all. A large arm pulls you from around your neck as you feel your head being covered by some sort of cloth bag, tied tight below your jaw, making it very difficult for you to breathe, as you are dragged through the floor by whatever captured you, along with that metallic object you've heard before. No matter how much you kick around or struggle against this, your captor has a tight grip on you, the ropes around your neck threatening to end your life here. You barely manage to stay awake until the end of this frightening trip...";
 				WaitLineBreak;
 				say "     But indeed, it finally ends, as you're pushed against a wall and left there. You realize that your hands have been tied, and only brief seconds after, the bag is removed. Then, in front of you, there it stands. Your captor reveals itself...";
@@ -1287,23 +1325,96 @@ to VROddTreasurePathChoice:
 				say "     This seems to have been the best call, as you are delivered across the veil and back to the core line.";
 				if player is kinky:
 					say "     However... how bad would it be to be the Elk Head Reaper's slave for a day...? Perhaps if you reencountered this creature, there would be a chance you could... volunteer for punishment.";
-				if companion of player is demonologist:
+				if demonologist is listed in companionList of Player:
 					say "     [italic type]'Huh, I was getting worried. Where have you been?' asks Xaedihr, as he sees you returning to his side. 'We should be more careful, getting separated like this could be bad.'[roman type][line break]";
 				now Resolution of Odd Treasure is 1;
 				WaitLineBreak;
 				say "[VRMoveOptions]";
 			else: [escapes]
 				Linebreak;
-				say "     You know how this will end, and you want to avoid it. Without hesitation, you simply continue to walk forward. The steps behind you, they keep close... but do nothing other than following you. There is no way of knowing what is in there, right on your tail. In fact, you never find out, even at the end, when the light returns and you cease to hear those cursed steps and dragging sounds. That is when you look behind, and see nothing.";
+				say "     You know how this will end, and you want to avoid it. Without hesitation, you simply continue to walk forward. The steps behind you, they keep close... but do nothing other than following you. There is no way of knowing what is in there, right on your tail. In fact, you never find out, even at the end, when the light returns and you cease to hear those cursed steps and dragging sounds. That is when you look behind, and see nothing. However, you can't shake away the feeling that perhaps you might have missed something...";
 				say "     It seems the way has led you out of the catacombs, and into something that is nothing anymore. What is in front of you are hints of a path back to the core line, so it seems there is nothing left for your current run at this place. For sure, you won't be going back through the same place, and even if you wanted, you know better than to trust the void.";
 				VRNormalSanityLoss;
 				WaitLineBreak;
 				say "[VRMoveOptions]";
-		else if Resolution of Odd Treasure is 1: [Knows Elk Head Reaper]
-			say "     You feel a compelling urge to stay where you are. It seems the path ahead is still forming itself. Void is complicated, and things take time to decide the best ways to trick you, or something like that.";
-			say "     <<Author's note: A new encounter, the Elk Head Reaper (who can be male or female), will be added in the future.>>";
-			WaitLineBreak;
-			VROddTreasurePathChoice;
+		else if Resolution of Odd Treasure > 0: [Knows Elk Head Reaper]
+			say "     You know this path to be the one you took before which led you to a humanoid creature with a terrifying and intimidating presence, that you have decided to identify as the Elk Head Reaper. This intriguing creature seemed extremely territorial and dominant, with a vast assorted kit of torture tools in the dungeon [EHRSubjectPro] calls [']home[']. Knowing this, [bold type]do you still wish to proceed[roman type]? You might end up having to fight your way out, [italic type]unless, and only if, your intentions involve extreme submission[roman type]. But, if you are lucky, you might be able to sneak by, if you intend to explore without being caught... Although that will be extremely difficult.";
+			Linebreak;
+			say "     ([link]Y[as]y[end link]) - Yes, go on ahead.";
+			say "     ([link]N[as]n[end link]) - No, stay where you are.";
+			if player consents:
+				Linebreak;
+				say "     After taking all your options into consideration, you decide to keep walking forward, into the ever darkening path ahead where you will meet the Elk Head Reaper.  Everything still looks the same as before, with nothing new that's worth of notice. The sound from before stopped as well, now leaving a deafening silence in which the only thing you can hear is your own steps on the dirty ground.";
+				if demonologist is listed in companionList of Player:
+					say "     [italic type]Xaedihr sticks close to you, this time ready to defend you in case something bad happens.[roman type][line break]";
+				WaitLineBreak;
+				say "     As you make your way ahead, you begin to hear the three consecutive thuds echoing through the dusty dark tunnels. You know this to be the warning [EHRSubjectPro] does to announce [EHRPosAdj] presence in order to keep intruders away, or perhaps it is simply to instigate a feeling of fright as you venture into [EHRPosAdj] territory. It is not long until your steps are heard, the silence resuming its concerning hum as a sense of vulnerability strikes you like a thunder. Then, the sound of metal being dragged across the dirty floor reaches your ears, a constant wave that tickles your ears and provoking utmost discomfort in you. It seems to announce that the Elk Head Reaper is going further away from your position, but the sense of uncertainty fills you with doubt.";
+				say "     You do not know of [EHRPosAdj] immediate position...";
+				Linebreak;
+				say "     ([link]Y[as]y[end link]) - Take a stealthy approach through the tunnels (Dexterity Roll).";
+				say "     ([link]N[as]n[end link]) - Confront the Elk Head Reaper.";
+				if player consents:
+					Linebreak;
+					say "     This might mean that the Elk Head Reaper does not know of your presence either, so you are still able to use this possibility at your advantage. With that said, you thread gingerly, as that metallic sound seems to fade away in the dark distance...";
+					Linebreak;
+					let bonus be (( dexterity of player minus 10 ) divided by 2);
+					let diceroll be a random number from 1 to 20;
+					say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Dexterity Check):[line break]";
+					if diceroll + bonus >= 18:
+						Linebreak;
+						say "     Fortunately, you have played smart. Choosing the pathways that led to no trouble and making your presence unknown has proven to be fruitful in crossing this area. You can no longer hear the reaper and that disturbing sound of [EHRPosAdj] scythe being dragged, finding yourself in a much safer location... Or at least one without an immediate threat.";
+						VRObtainUnknownVoidRelicOne;
+					else:
+						Linebreak;
+						say "     You proceed through the pathways in hopes of evading the reaper, walking through the dark corridors of this strange labyrinth...";
+						say "     For moments, you think you are being successful... The sound has disappeared, and you are pretty much clear of any immediate threat...";
+						WaitLineBreak;
+						say "     But you start to hear that sound again. The triple thud, then ceasing, resumed by the metallic sound of [EHRPosAdj] scythe being dragged, ringing louder and louder, coming right behind you...";
+						say "     You freeze, cold sweat dropping down your forehead, a sense of fear and danger striking you as if an ice cold bucket of water was dropped right on top of you, and you stand there... Facing the Elk Head Reaper as [EHRSubjectPro] raises [EHRPosAdj] scythe over [EHRPosAdj] broad shoulder, looking down on you through the elk skull, a deep demonic voice speaking to you...";
+						WaitLineBreak;
+						say "     'I warned you. If I ever saw you again, I would destroy you.' [EHRSubjectPro] says, approaching you with mere inches of distance, but remaining still, as if awaiting an answer from you.";
+						say "     'Do you accept your fate?'";
+						if demonologist is listed in companionList of Player:
+							WaitLineBreak;
+							say "     [italic type]You hear Xaedihr whispering behind you, the creature seemingly ignoring his presence. You don't know how, but he tells you something... 'I can help you fight [EHRObjectPro], but it's going to be tough... If you think you can't take [EHRObjectPro], just submit to [EHRPosAdj] will. Knowing [if player is submissive]you, you might even enjoy it[else]things, [EHRSubjectPro] will simply take what [EHRSubjectPro] wants from you and leave you be[end if]...[roman type][line break]'";
+						Linebreak;
+						say "     ([link]Y[as]y[end link]) - Accept your fate.";
+						say "     ([link]N[as]n[end link]) - Fight!";
+						if player consents:
+							Linebreak;
+							say "     You nod, accepting your terms with the Elk Head Reaper, and [EHRSubjectPro] offers no additional hostility. Instead, you are ordered to follow after [EHRObjectPro] alone, without any of your weapons or gear. 'They shall be delivered back to you once you are done attoning for your deeds, mortal.' [EHRSubjectPro] says, as you follow after [EHRSubjectPro] as obediently as you can...";
+							WaitLineBreak;
+							OTElkHeadReaperSubmit;
+						else:
+							Linebreak;
+							say "     You will have none of [EHRPosAdj] threats! Readying your weapons, you decide to confront the reaper. 'Unfortunate. You could have walked away with your soul...' [EHRSubjectPro] says, before reading [EHRReflexPro] for battle.";
+							OTElkHeadReaperFight;
+				else:
+					Linebreak;
+					say "     Instead of trying to sneak by, you head directly for the source of the noise. If it is by bravery or recklessness remains to be seen...";
+					say "     Hearing the sounds of metal arriving louder and louder ahead of you, as your steps echo unchallenged through the dark corridors of this strange labyrinth, you continue to traverse its pathways until a tall shape, barely illuminated by a torch on the wall, reaches your vision in a fading manner. The Elk Head Reaper, as you call [EHRObjectPro], is standing right in front of you, scythe ready, eyeing your every movement as you approach [EHRObjectPro]. [EHRSubjectPro] speaks, in an unenthusiastic tone...";
+					WaitLineBreak;
+					say "     'Such is the audacity of a mortal whose soul is so within my reach. Either you desire punishment, or you do not know what is good for you...' the demonic voice haunts your ears as the reaper eyes you through the elk skull, awaiting your reply after asking one last question.";
+					say "     'Do you accept your fate?'";
+					if demonologist is listed in companionList of Player:
+						WaitLineBreak;
+						say "     [italic type]You hear Xaedihr whispering behind you, the creature seemingly ignoring his presence. You don't know how, but he tells you something... 'I can help you fight [EHRObjectPro], but it's going to be tough... If you think you can't take [EHRObjectPro], just submit to [EHRPosAdj] will. Knowing [if player is submissive]you, you might even enjoy it[else]things, [EHRSubjectPro] will simply take what [EHRSubjectPro] wants from you and leave you be[end if]...[roman type][line break]'";
+					Linebreak;
+					say "     ([link]Y[as]y[end link]) - Accept your fate.";
+					say "     ([link]N[as]n[end link]) - Fight!";
+					if player consents:
+						Linebreak;
+						say "     You nod, accepting your terms with the Elk Head Reaper, and [EHRSubjectPro] offers no additional hostility. Instead, you are ordered to follow after [EHRObjectPro] alone, without any of your weapons or gear. 'They shall be delivered back to you once you are done attoning for your deeds, mortal.' [EHRSubjectPro] says, as you follow after [EHRSubjectPro] as obediently as you can...";
+						WaitLineBreak;
+						OTElkHeadReaperSubmit;
+					else:
+						Linebreak;
+						say "     You will have none of [EHRPosAdj] threats! Readying your weapons, you decide to confront the reaper. 'Unfortunate. You could have walked away with your soul...' [EHRSubjectPro] says, before reading [EHRReflexPro] for battle.";
+						OTElkHeadReaperFight;
+			else:
+				say "     You have decided to stay back and consider other options.";
+				WaitLineBreak;
+				VROddTreasurePathChoice;
 	else if calcnumber is 2: [Right]
 		say "     Having decided to turn right, you immediately do so, leaving the catacombs behind. The path has you returning to the darkness of the void, and at some point, a fake certainty of solid ground has you walking right into an abyssal fall.";
 		say "     Gravity takes you as you begin to descend at a great speed into nothing but more darkness, until it subsides and has you floating in a steady suspension for several moments. It seems that eventually, gravity disappears, giving you the ability to levitate through this area, completely devoid of light. It takes you a while to realize that you are just about to cross the veil back to the core line...";
@@ -1325,7 +1436,7 @@ to VROddTreasurePathChoice:
 			say "     A few more inches and you are kicked right back to the relative familiarity of the main void pathway. Now that was some trip...";
 			if a random chance of 1 in 3 succeeds:
 				say "     And it looks like [bold type]a black rock of null essence[roman type] fell just by your feet, rolling several inches towards your position after having fallen from the ceiling. What a strange event, but you suppose this is better than nothing.";
-				increase carried of null essence by 1;
+				ItemGain null essence by 1 silently;
 			WaitLineBreak;
 			say "[VRMoveOptions]";
 	else if calcnumber is 3: [Left]
@@ -1343,6 +1454,175 @@ to VROddTreasurePathChoice:
 		else if Resolution of MirrorsKey is 3: [event after door is unlocked]
 			say "     You feel a compelling urge to stay where you are. It seems the path ahead is still forming itself. Void is complicated, and things take time to decide the best ways to trick you, or something like that.";
 			say "     <<Author's note: This is everything, for now. More content will be added to this path. As you have already unlocked it, once it comes out, you may access it immediately. There will be a new encounter related to treasure chests, as a hint for what is about to come.>>";
+			WaitLineBreak;
+			VROddTreasurePathChoice;
+
+to OTElkHeadReaperFight:
+	WaitLineBreak;
+	Challenge "Elk Head Reaper";
+	if fightoutcome < 20: [player won]
+		Linebreak;
+		say "     With one last strike, after a long and intense battle against one of the most formidable opponents you have ever faced in your life, the elk head reaper kneels to the floor, defeated and finished. As you feel [EHRPosAdj] eyes, hidden behind the elk skull, locking gaze with yours, you also gain a surge of power flowing through you, an urge to show this creature who is in charge, who actually deserves to own the other [if player is submissive]despite your natural submissive tendencies[else if player is dominant], emphasized by your own natural dominant aura[end if]...";
+		Linebreak;
+		say "     ([link]Y[as]y[end link]) - Dominate the loser.";
+		say "     ([link]N[as]n[end link]) - Ignore this and just proceed further ahead.";
+		if player consents:
+			OTElkHeadReaperDominate;
+			WaitLineBreak;
+			VRObtainUnknownVoidRelicOne;
+		else:
+			say "     The reaper lets out a grunt, unable to offer any further resistance, as you simply take your steps around [EHRObjectPro], walking past the defeated humanoid without looking back. When you do, however, the Elk Head Reaper can no longer be seen or heard, having seemingly vanished from existence. All that remains is a way heading deeper into the darkness as the labyrinth also lost its tricky paths.";
+			WaitLineBreak;
+			VRObtainUnknownVoidRelicOne;
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "     There was nothing you could do against the reaper's much superior strength. With one last strikes, it manages to pin you down as your attempts to resist come off as futile. Your body is exhausted, and while the creature has the upper hand, nothing remains for you but to accept your fate as [EHRPosAdj] new slave...";
+		WaitLineBreak;
+		if demonologist is listed in companionList of Player:
+			Linebreak;
+			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
+			let diceroll be a random number from 1 to 20;
+			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Xaedihr's Weapon Damage Check):[line break]";
+			if diceroll + bonus >= 14:
+				say "     [italic type]But what is this? The reaper cowers as if hit by something incredibly powerful! It seems it was Xaedihr, who managed to charge up a spell strong enough to knock the creature away for a while! 'Quick! Into the veil!' he shouts, as he grabs to you attempt an escape out of the core line. Fortunately, the reaper is not able to follow after taking such a surprising hit.[roman type][line break]";
+				WaitLineBreak;
+				VREventsRoll;
+			else:
+				say "     [italic type]Not even Xaedihr can save you. He doesn't manage to cast a spell powerful enough to force the reaper's hold out of you. He has no other choice but to escape by himself, leaving you to your fate...[roman type][line break]";
+				WaitLineBreak;
+				say "[VRElkHeadReaperWins]";
+		else:
+			WaitLineBreak;
+			say "[VRElkHeadReaperWins]";
+	else if fightoutcome is 30: [fled]
+		say "     Flee? There is no escape from the monsters of the Void once you engage in battle with one of them. All you managed to do was to give the reaper enough time to catch you in [EHRPosAdj] grasp...";
+		WaitLineBreak;
+		if demonologist is listed in companionList of Player:
+			Linebreak;
+			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
+			let diceroll be a random number from 1 to 20;
+			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Xaedihr's Weapon Damage Check):[line break]";
+			if diceroll + bonus >= 14:
+				say "     [italic type]But what is this? The reaper cowers as if hit by something incredibly powerful! It seems it was Xaedihr, who managed to charge up a spell strong enough to knock the creature away for a while! 'Quick! Into the veil!' he shouts, as he grabs to you attempt an escape out of the core line. Fortunately, the reaper is not able to follow after taking such a surprising hit.[roman type][line break]";
+				WaitLineBreak;
+				VREventsRoll;
+			else:
+				say "     [italic type]Not even Xaedihr can save you. He doesn't manage to cast a spell powerful enough to force the reaper's hold out of you. He has no other choice but to escape by himself, leaving you to your fate...[roman type][line break]";
+				WaitLineBreak;
+				say "[VRElkHeadReaperWins]";
+		else:
+			say "[VRElkHeadReaperWins]";
+
+to OTElkHeadReaperSubmit:
+	say "     As you arrive at the all too familiar dungeon room, with all the tools and racks, the reaper orders you to stand still as [EHRSubjectPro] prepares the set. However, [EHRSubjectPro] stops amidst something, looking back at you with a fierce look - not that you could see [EHRPosAdj] eyes, but you could definitely sense it - 'Hm... I don't think you're ready for any of this, yet. We might have to start with something more physical...' [EHRSubjectPro] says, walking over towards you. Still intimidating, the reaper does not look as hostile as before. Instead, [EHRSubjectPro] drops that ragged cloak to the ground, [EHRPosAdj] full body on display before your eyes. Your captor is completely naked, from neck to toe, only that frightening elk skull remains covering [EHRPosAdj] head.";
+	say "     'Get on your knees, now.' The order arrives your ears in such an imperative tone that you nearly feel compelled to comply.";
+	WaitLineBreak;
+	if Resolution of ElkHeadReaperGender is 10: [facefuck punishment]
+		say "     One thing you cannot deny, is that this disturbing humanoid creature is actually sporting an decently human-looking body. Well, decent is an understatement, the reaper is jacked, muscles so big and toned that you can even see muscles you didn't know they existed, which look even bigger given how tall he is. You kneel, following his demands, and your head barely reaches his monstrous quads in height level. You're still fairly close to the wall, and the space between you shortens as he slowly walks towards you. 'Head on the floor.' he says, giving you just enough space to bend over and lay your head on the dirty ground, cheek turned downwards as you are facing the tools adorned wall.";
+		say "     He bashes the scythe with the pommel against the ground to his side with tremendous force, and then you feel what seems to be his large bare foot pressing against your cheek to a point that it is almost painful, but not quite. The surface of his sole is interestingly soft, you would expect a much rougher skin, especially since he walks without any sort of foot protection. He rubs it across your face for a bit, then, his deep voice booms out to you. 'You might keep your soul if your obedience is total.' The reaper presses his foot just a bit more, and it really is scratching the pain level now. Your face recoils in a reflex, but you keep still in order to not enrage your new master.";
+		say "     'You shall do anything I say... Anything I want... Anything you are told. No limits.' he says, and he awaits your consent. You better mind your words...";
+		Linebreak;
+		say "     ([link]Y[as]y[end link]) - You will do anything he says.";
+		say "     ([link]N[as]n[end link]) - This is too much, run away!";
+		if player consents:
+			Linebreak;
+			say "     A hint of satisfaction pours out of the reaper's mouth in the form of a 'Hmpf...' followed by a 'I like when mortals know their place.' Happy with your response, he lifts his foot off your face and puts it on the ground right next to your head. Then, he orders you to stand, keeping your head low, and before you can even blink, he walks towards you, grabbing you by the jaw and pushing you against the wall. Suddenly, you find yourself with his massive cock, bigger than your face, splatted across your cheek and throbbing as it ever was. His long and thick shaft feels warm, it is almost too fascinating... As for the rest of the scenery, you are effectively pinned against the wall, locked nearly between his astoundingly muscular legs.";
+			say "     He looks down at you, and you can even sense the grin it would have been painted in his face, were it not for the elk skull helmet. He says 'Open.' and you open - your mouth, that is - and within a second, you find it full with his dick, stretching your lips wide and nearly dislocating your jaw as he keeps pushing further. You have got no choice here but to take it as deep as he wants to push it, and obviously, you struggle with the size. Not that he cares much, since you are here to be [']punished[']. He simply pushes it in to his heart's content - if he actually has one - and you find yourself being facefucked by a reaper from the void, in his own dungeon, balls swinging heavily back and forth against your chin, cock going deep down your throat until your neck bulges and putting your deepthroating skills to a serious test.";
+			WaitLineBreak;
+			say "     You don't get a pause, nor a moment to breathe... Your throat is ravaged hard and rough until your tears spill and your body begins to gasp for air. He completely owns you for as long as he wants, pushing his meat in and out fast and deep, and only at the brink of your collapse, he pulls out to let you catch a breath... For long enough. Soon, he's ballsdeep in your throat again, fucking the hell out of you mouth as hard as, or even harder than, before. Your hands feel absolutely worthless rubbing along his thighs and pushing them away tentatively in a reflex, since your body is [italic type]begging[roman type] for air, but it does nothing for the reaper. You know he is looking down at you, enjoying the view of you choking on his enormous manhood, knowing he has absolute control over you, and enjoying your pulsing warm throat wrapped around his hard cock like he owns you.";
+			say "     His stamina seems painfully long... You barely given room to breathe before he rams his dick inside yet again. In the last time he pulls out, he guides your eyes to his balls and orders you to touch them, so you could feel how heavy and full they are. There are only a few additional words escaping his mouth as he shoves his cock back in you again. 'Swallow it all... to the last drop.' You swear you didn't know he could go [italic type]even harder[roman type] on you, but there he is, drilling your throat so hard that you feel your skull getting nearly smashed against the wall, his balls almost painfully slapping you in the chin as he fucks your mouth. But even here, he takes his sweet time to hit the point of no return...";
+			WaitLineBreak;
+			say "     Then, with a grunt, he shoves it all inside you, all the way in, your throat completely stretched wide around that huge cock... You even think it is poking against your stomach, unlike anything you ever felt, and a few throbs later, a hard gush of warmth begins to fill you up. There's so much cum leaving him and being forced inside you that you feel your belly swell, a torrent of spunk that keeps on going for at least a full minute... You don't know how you held that long with his dick like that, but he finally pulls out and lets you take in the very much welcome air as you gasp for all that is dear to you.";
+			CreatureSexAftermath "Player" receives "OralCock" from "Elk Head Reaper";
+			WaitLineBreak;
+			say "     The reaper looks down at you, crouches down, lifts you head by the chin, and you could exchange looks for a while... For moments, you take a glimpse of what is left of his humanity in this short moment as he strokes your cheek... guiding a drop of cum that missed your mouth back to your lips. Instinctively, you suck on his finger to swallow it up, then he pets your under jaw in a seemingly affectionate way. He leans his head lower, almost to match yours in level, and to your surprise, he begins to lift his helmet to the point you are able to see his lips. They are shockingly human in appearance, and appear to belong to a very handsome man...";
+			say "     'You... could save me...' he says, his words striking you with surprise as you blink with obvious confusion, his voice sounding much smoother and clearer... like a person's. 'I hunger for souls... but you made me feel... satiated...' The moment is abruptly interrupted as he returns to silence, enclosing his face once more and avoiding looking at you. Then, a few words are said, and nothing else as he turns his gaze away. '... Go.'";
+			WaitLineBreak;
+			say "     There are a myriad of questions you could ask, but by instinct, you feel like it is not the time. Instead, you decide to walk away as he has ordered. He does not chase you, nor looks at you... And you can definitely feel the weight of his cum in your belly sloshing around inside you as you move. This is all very confusing...";
+			say "     With nothing else to do, you decide to follow through an extra exit that formed in the vicinity. It ends up taking you back to the Core Line, leaving the reaper's territory behind.";
+			if demonologist is listed in companionList of Player:
+				WaitLineBreak;
+				say "     [italic type]Xaedihr catches up to you soon, looking at your... quaint shape. 'I see you got a filling from the elk boy reaper... Cute.' he comments, in an almost sarcastic way, as he pokes at your belly. 'You would cry if I told you what these void reapers are... Or maybe not, but it is a sad story. Either way, as long as you fulfill their desires, they won't hurt you. Think of them like a sincere version of a demon. They're not tricksters, just lost souls that hunger for others... But they can't actually take yours if you don't defy them.' he explains, as he lets go of you. 'Most do. Most people don't want to die... That is why the Grim Reaper is the most successful. This one... This one is very peculiar, though. Do keep me updated if you intend to continue to submit to him. Oh, and I'd appreciate if I could watch... For scientific purposes, obviously...' His last words seemed like a joke, but you really can expect anything from your half-demon companion...[roman type]";
+			WaitLineBreak;
+			say "[VRMoveOptions]";
+		else:
+			say "     With a glimpse of hope, you think you found the perfect opportunity to escape the reaper as he thinks he has the upper hand, so you roll to the side, get up and start running... That was the plan, but before you can take a single step forward, the creature stabs you with a painful and accurate strike with his scythe. It does not cut you in half, but you feel something leaving you. Your hands and feet... arms and legs... then, your whole self... everything becomes dormant, out of your control, cold and dropped... as you simply stand there without any strength left. The last thing you see is the reaper taking your soul, your eyes soon to be enclosed by darkness as your former physical shell collapses on the floor, lifeless.";
+			say "     'What a shameful departure. I shall find a greater use for your existence.' he says, as he makes preparations to dispose of your empty body...";
+			WaitLineBreak;
+			now battleground is "Void";
+			the Player was ended by "Elk Head Reaper";
+			trigger ending "Player has died";
+			end the story saying "You have perished in the Void, your soul taken by a reaper.";
+	else: [pussy worship]
+		say "     One thing you cannot deny, is that this disturbing humanoid creature is actually sporting an decently human-looking body. Well, decent is an understatement, the reaper is jacked, muscles like a true mythical amazonian woman, which look even more intimidating given how tall she is. You kneel, following her demands, and your head barely reaches her thick and strong thighs in height level. You're still fairly close to the wall, and the space between you shortens as she slowly walks towards you. 'Head on the floor.' she says, giving you just enough space to bend over and lay your head on the dirty ground, cheek turned downwards as you are facing the tools adorned wall.";
+		say "     She bashes the scythe with the pommel against the ground to her side with tremendous force, and then you feel what seems to be her bare foot pressing against your cheek to a point that it is almost painful, but not quite. The surface of her sole is interestingly soft, you would expect a much rougher skin, especially since she walks without any sort of foot protection. She rubs it across your face for a bit, then, her deep demonic voice booms out to you. 'You might keep your soul if your obedience is total.' The reaper presses her foot just a bit more, and it really is scratching the pain level now. Your face recoils in a reflex, but you keep still in order to not enrage your new mistress.";
+		say "     'You shall do anything I say... Anything I want... Anything you are told. No limits.' she says, and she awaits your consent. You better mind your words...";
+		Linebreak;
+		say "     ([link]Y[as]y[end link]) - You will do anything she says.";
+		say "     ([link]N[as]n[end link]) - This is too much, run away!";
+		if player consents:
+			Linebreak;
+			say "     A hint of satisfaction pours out of the reaper's mouth in the form of a 'Hmpf...' followed by a 'I like when mortals know their place.' Happy with your response, she lifts her foot off your face and puts it on the ground right next to your head. Then, she orders you to stand, keeping your head low, and before you can even blink, she walks towards you, grabbing you by the jaw and pushing you against the wall. Suddenly, you find yourself locked between her astoundingly muscular legs, helplessly under her control, as she slides a finger down to her womanhood, engorged and moist, mere inches away from your face.";
+			say "     She looks down at you, and you can even sense the grin it would have been painted in her face, were it not for the elk skull helmet. She says 'Open. Tongue out.' and you open - your mouth, that is - and within a second, you find it full with her vulva, stretching your lips wide and sticking your tongue out. 'Lick. Properly.' she demands, and you comply, slipping it inside her pussy and wiggling as good as you could. You have got no choice here but to take her cooch as deep as she wants to, and obviously, she makes sure you don't interrupt your job, since you are here to be [']punished[']. She simply grinds it against your face to her heart's content - if she actually has one - as your cunnilingus skills are put to a serious test.";
+			WaitLineBreak;
+			say "     You don't get a pause, nor a moment to breathe... It is your mouth and face that is being ravaged hard and rough until your body begins to gasp for air. She completely owns you for as long as she wants, pushing her labia against your lips as hard as she deems appropriate, and only at the brink of your collapse, she pulls out to let you catch a breath... For long enough. Soon, she slams her pussy right back at your mouth, pushing your head against it, ordering you to lick deeper and deeper... Your hands feel absolutely worthless rubbing along her thighs and pushing them away tentatively in a reflex, since your body is [italic type]begging[roman type] for air, but it does nothing for the reaper. You know she is looking down at you, enjoying the view of you choking on her greedy cunt, knowing she has absolute control over you, and enjoying your nimble tongue licking at her womanhood like she owns you.";
+			say "     Her stamina seems painfully long... You are barely given room to breathe before she pushes your head against her sex yet again. Between demands to lick deeper and harder, your are almost asphyxiated by her strong thighs around your neck, and your whole face is wet with her juices by now. She grinds harder... intensely... more and more as time goes by, as she takes her sweet time to hit the point of no return...";
+			WaitLineBreak;
+			say "     Then, with a moan, she hits her climax, a whole wave of pleasure surging through her that you can clearly feel, as her grip on you tightens to an almost painful level. With your face buried in her cooch, throbbing as she feels the orgasm she longed so much for, you continue to wiggle your tongue to further satisfy the greedy reaper, despite your near collapse. But before the worst happens, she pulls out and lets you take in the very much welcome air as you gasp for all that is dear to you.";
+			CreatureSexAftermath "Player" receives "OralPussy" from "Elk Head Reaper";
+			WaitLineBreak;
+			say "     The reaper looks down at you, crouches down, lifts you head by the chin, and you could exchange looks for a while... For moments, you take a glimpse of what is left of her humanity in this short moment as she strokes your cheek... wiping out some of her cunt juice that got splattered on your face. Instinctively, you suck on her finger to lick it up, then she pets your under jaw in a seemingly affectionate way. She leans her head lower, almost to match yours in level, and to your surprise, she begins to lift her helmet to the point you are able to see her soft lips. They are shockingly human in appearance, and appear to belong to a very gorgeous woman...";
+			say "     'You... could save me...' she says, her words striking you with surprise as you blink with obvious confusion, her voice sounding much smoother and clearer... like a person's. 'I hunger for souls... but you made me feel... satiated...' The moment is abruptly interrupted as she returns to silence, enclosing her face once more and avoiding looking at you. Then, a few words are said, and nothing else as she turns her gaze away. '... Go.'";
+			WaitLineBreak;
+			say "     There are a myriad of questions you could ask, but by instinct, you feel like it is not the time. Instead, you decide to walk away as she has ordered. She does not chase you, nor looks at you... And you can still feel the smell and taste of her pussy in your mouth. This is all very confusing...";
+			say "     With nothing else to do, you decide to follow through an extra exit that formed in the vicinity. It ends up taking you back to the Core Line, leaving the reaper's territory behind.";
+			if demonologist is listed in companionList of Player:
+				WaitLineBreak;
+				say "     [italic type]Xaedihr catches up to you soon. 'I see you got a... private session with the elk girl reaper... Cute.' he comments, in an almost sarcastic way, as he points at your still glistening cheeks, probably still wet from the ordeal. 'You would cry if I told you what these void reapers are... Or maybe not, but it is a sad story. Either way, as long as you fulfill their desires, they won't hurt you. Think of them like a sincere version of a demon. They're not tricksters, just lost souls that hunger for others... But they can't actually take yours if you don't defy them.' he explains, as he lets go of you. 'Most do. Most people don't want to die... That is why the Grim Reaper is the most successful. This one... This one is very peculiar, though. Do keep me updated if you intend to continue to submit to her. Oh, and I'd appreciate if I could watch... For scientific purposes, obviously...' His last words seemed like a joke, but you really can expect anything from your half-demon companion...[roman type]";
+		else:
+			say "     With a glimpse of hope, you think you found the perfect opportunity to escape the reaper as she thinks she has the upper hand, so you roll to the side, get up and start running... That was the plan, but before you can take a single step forward, the creature stabs you with a painful and accurate strike with his scythe. It does not cut you in half, but you feel something leaving you. Your hands and feet... arms and legs... then, your whole self... everything becomes dormant, out of your control, cold and dropped... as you simply stand there without any strength left. The last thing you see is the reaper taking your soul, your eyes soon to be enclosed by darkness as your former physical shell collapses on the floor, lifeless.";
+			say "     'What a shameful departure. I shall find a greater use for your existence.' she says, as she makes preparations to dispose of your empty body...";
+			WaitLineBreak;
+			now battleground is "Void";
+			the Player was ended by "Elk Head Reaper";
+			trigger ending "Player has died";
+			end the story saying "You have perished in the Void, your soul taken by a reaper.";
+
+to OTElkHeadReaperDominate:
+	say "     You think about the many ways you could do this, but right now, you have more important things to care about.";
+	say "     <<Author's Note: There will be a Dom Route for the Elk Head Reaper in the future.>>";
+	WaitLineBreak;
+	say "     The reaper lets out a grunt, unable to offer any further resistance, as you simply take your steps around [EHRObjectPro], walking past the defeated humanoid without looking back. When you do, however, the Elk Head Reaper can no longer be seen or heard, having seemingly vanished from existence. All that remains is a way heading deeper into the darkness as the labyrinth also lost its tricky paths.";
+	WaitLineBreak;
+	VRObtainUnknownVoidRelicOne;
+
+to VRObtainUnknownVoidRelicOne:
+	say "     For the remainder of your adventure in the reaper's territory, you continue down the unexplored path ahead, traversing the tunnel unhindered. The bare light that exists comes from the faint amount of torches scattered along the walls, which dim just enough light so you don't trip over any of the loose rocks in the way. For some reason, the your surroundings seem fragile and easily shattered, so you thread carefully until you finally encounter a point of interest.";
+	say "     In front of you, there is a sort of an altar, far away from being of a religious nature. It looks demonic, even, with some odd symbols engraved in the stone that you cannot quite understand...";
+	if demonologist is listed in companionList of Player:
+		WaitLineBreak;
+		say "     [italic type]Fortunately, you do happen to have a demonologist companion with you. He inspects the altar with care, taking a few quiet minutes... 'Interesting how this realm seems to have connections to Hell. One would think it would stand as neutral as it could, but the fact that this dimension keeps throwing more darkness than angels at us is quite concerning. Anyway, the altar speaks of [']blood of the puregivers['] in a very... ancient manner, which I presume it would correspond to a Purifier Rank type of angel's blood, perhaps. Out of all the heavenly winged seraphs that are taking a vacation out there, who knows... One might be useful for us at some point.' he says, scratching his red beard with peculiar interest. 'Perhaps we should take note of this for future reference. It looks important...'[roman type][line break]";
+	else:
+		say "     Perhaps a demonology expert could help here, if you ever get to know one.";
+	WaitLineBreak;
+	if Resolution of Odd Treasure > 1:
+		say "     You found nothing else besides the relic that you took from this place the other time.";
+	else:
+		say "     There is an intriguing artifact that you could take with you. You would call it a relic, which seems to also have some symbols in it, not to mention a very odd shape unlike anything you have seen before. It might be useful in the future, so you wonder if you should take it with you. Looks a bit heavy, though.";
+		say "     [bold type]Do you want to take the void relic with you?[roman type][line break]";
+		Linebreak;
+		say "     ([link]Y[as]y[end link]) - Take the relic.";
+		say "     ([link]N[as]n[end link]) - Leave it.";
+		if player consents:
+			say "     You decided to take the relic with you. It is a bit heavy... You might want to drop it in a safe place, losing it would be unfortunate.";
+			ItemGain unknown void relic one by 1;
+			now Resolution of Odd Treasure is 2; [found the relic]
+		else:
+			say "     You decided to leave the relic behind. It won't disappear, so you can come for it at any given time, provided you have a way to deal with the Elk Head Reaper...";
+	WaitLineBreak;
+	say "     With nothing else to do, you decide to follow through an extra exit that formed in the vicinity. It ends up taking you back to the Core Line, leaving the reaper's territory behind.";
+	SanBoost 25;
+	WaitLineBreak;
+	say "[VRMoveOptions]";
 
 to say VRMirrors:
 	say "     [bold type]Mirrors[roman type][line break]";
@@ -1391,7 +1671,7 @@ to say VRMirrors:
 	else:
 		say "     This is the place where you have destroyed the mirrors that haunted you. Looking at it now, shards of mirrors are all over the place, floating in the eternal abyss. Perhaps in the future, this area will change, but for now, it remains only as a reminder of what you have experienced in here. Who know what the void has kept for you...";
 		say "     You have managed to collect a [bold type]single piece of null essence[roman type] that you found lying around.";
-		increase carried of null essence by 1;
+		ItemGain null essence by 1 silently;
 		WaitLineBreak;
 		say "[VRMoveOptions]";
 
@@ -1622,7 +1902,7 @@ to say VRVoidSerpentPreBattle:
 			VREventsRoll;
 		else:
 			say "     With such a risky move in mind, you have to make sure you can get it right. By letting the serpent have the first strike and being prepared for it, you go for the dodge as the enraged creature lunged at you.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				Linebreak;
 				let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
@@ -1654,7 +1934,7 @@ to say VRVoidSerpentPreBattle:
 			VREventsRoll;
 		else:
 			say "     With such a risky move in mind, you have to make sure you can get it right. By letting the serpent have the first strike and being prepared for it, you go for the dodge as the enraged creature lunged at you.";
-			if companion of player is demonologist:
+			if demonologist is listed in companionList of Player:
 				Linebreak;
 				let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
@@ -1756,8 +2036,8 @@ to VRDarkTyrantPreBattleFight:
 		say "     Fortunately, he seems to have been weakened severely, maybe even providing you a chance to defeat him...";
 		wait for any key;
 		choose a row with name of "Dark Tyrant" in the Table of Random Critters;
-		now HP entry is 300;
-		now wdam entry is 25;
+		now HP entry is 499;
+		now wdam entry is 49;
 		now inasituation is true;
 		challenge "Dark Tyrant";
 		now HP entry is 900;
@@ -1818,6 +2098,12 @@ to say PeculiarSummonerDesc:
 
 to say TentacleAbominationDesc:
 	say "     A massive abomination with a multitude of tentacles, this beast always has a central mass resembling one of the human's reproductive organs, which seems to shift between a gigantic penis and an enormous vulva whenever it wants, always covered in numerous fleshy extensions that reach and pull anything towards it in an attempt to feed itself. Hunger is evident in the way these monsters trick and feed on their prey, and it clearly intends on taking you, too. Crawling towards your position, the abomination flaunts its genitalia of titanic proportions and the seemingly endless number of tentacles at you, leaving you unsure as if it is trying to turn you on or to plainly scare you away.";
+
+to say ElkHeadReaperDesc:
+	if Resolution of ElkHeadReaperGender is 10: [male]
+		say "     An enormously tall and muscular, statuesque even, and manly looking creature, wearing a large elk's skull, with two moderate sized horns pointing towards each side, made into a helmet, as a dark ragged cloak coming from underneath it extends itself downwards, past his shoulders and reaching the ground right next to his bare feet. On his right hand, he carries a scythe, constantly dripping a black liquid from the tip of its curved blade. While looking like a visage of the grim reaper himself, you can't help but notice an additional feature that further emphasizes him as a male, right on the crotch. A large, thick and uncut human shaft, perpetually hard, throbbing every once in a while, as he looks down on you intimidatingly.";
+	else: [female]
+		say "     An enormously tall and muscular, statuesque even, and womanly looking creature, wearing a large elk's skull, with two moderate sized horns pointing towards each side, made into a helmet, as a dark ragged cloak coming from underneath it extends itself downwards, past her shoulders and reaching the ground right next to her bare feet. On her right hand, she carries a scythe, constantly dripping a black liquid from the tip of its curved blade. While looking like a visage of the grim reaper herself, you can't help but notice a few additional features that further emphasizes her as a female, which are a pair of round and volumptous tits accompanying her powerful body, and a pussy where you would find one, as she looks down on you intimidatingly.";
 
 Section 2-6 - Fight Conclusions and Win/Loss Scenes
 
@@ -1955,6 +2241,27 @@ to say TentacleAbominationLoses:
 	else:
 		say "Nothing written yet.";
 
+to say ElkHeadReaperWins:
+	if inasituation is true:
+		say ""; [dealt with at the source]
+	else:
+		say "Nothing written yet.";
+
+to say VRElkHeadReaperWins:
+	say "     The reaper has taken victory over you, and [EHRSubjectPro] intends to claim your soul as [EHRPosAdj] code demands. As you lie defeated and helpless, you feel a cold sharp blade slashing through your body. Surprisingly, it does not hurt, nor cuts you in half, but you feel something leaving you. Your hands and feet... arms and legs... then, your whole self... everything becomes dormant, out of your control, cold and dropped... as you simply stand there without any strength left. The last thing you see is the reaper taking your soul, your eyes soon to be enclosed by darkness as your former physical shell collapses on the floor, lifeless.";
+	say "     'I shall find a greater use for your existence.' [EHRSubjectPro] says, fading away into the depths of the labyrinth...";
+	WaitLineBreak;
+	now battleground is "Void";
+	the Player was ended by "Elk Head Reaper";
+	trigger ending "Player has died";
+	end the story saying "You have perished in the Void, your soul taken by a reaper.";
+
+to say ElkHeadReaperLoses:
+	if inasituation is true:
+		say ""; [dealt with at the source]
+	else:
+		say "Nothing written yet.";
+
 to VRVoidSerpentFightConclusion:
 	if fightoutcome < 20: [player won]
 		say "     It was a tough fight, but you managed to emerge victorious by dealing the final blow to the Void Serpent, who collapses on the dark floor seemingly lifeless before you. With nothing else to do but to admire your prowess, you look around for some spoils.";
@@ -1966,7 +2273,7 @@ to VRVoidSerpentFightConclusion:
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     There was nothing you could do against the serpent's much superior strength. With one last body slam, it manages to pin you down as your attempts to resist come off as futile. Your body is exhausted, its venom running within you and your movements become sluggish, nothing remains for you but to accept your fate as its prey...";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			Linebreak;
 			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -1986,7 +2293,7 @@ to VRVoidSerpentFightConclusion:
 	else if fightoutcome is 30: [fled]
 		say "     Flee? There is no escape from the monsters of the Void once you engage in battle with one of them. All you managed to do was to give the serpent enough time to catch you in its grasp...";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			Linebreak;
 			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -2034,7 +2341,7 @@ to VRPeculiarSummonerFightConclusion: [The peculiar summoner is one of the few '
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     The way they move, their expertise at combat, you feel yourself overwhelmed by so much efficiency and technical experience. You are no match for the peculiar summoner, as they trap you in a hand made of some sort of rock that grips around you tightly. You are held helpless, and left at the robed figure's mercy...";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			Linebreak;
 			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -2064,10 +2371,14 @@ to VRTentacleAbominationFightConclusion:
 		if a random chance of 2 in 3 succeeds:
 			say "     It looks like the Tentacle Abomination dropped a single [bold type]Null Essence[roman type], so you pick it up and stash it in your inventory.";
 			ItemGain null essence by 1 silently;
+		now VRTentacleAbominationTracker is 0;
+		now VRTentacleAbominationLinger is 0;
+		WaitLineBreak;
+		say "[VRMoveOptions]";
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     No matter how much you struggle against the massive cluster of tentacles, it only grows stronger by the second you are fighting it, providing you with quite the challenge. Although, a few more strikes are you're barely capable of moving, having the tentacles finally reach you and immobilize you in place. All you see now is yourself being dragged through the floor as more of the abomination's extensions wrap themselves around your body...";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			Linebreak;
 			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -2093,7 +2404,7 @@ to VRTentacleAbominationFightConclusion:
 	else if fightoutcome is 30: [fled]
 		say "     Flee? There is no escape from the monsters of the Void once you engage in battle with one of them. All you managed to do was to give the abomination enough time to stretch its tentacles towards your legs, making you trip, then fall... and become a vulnerable target for the rest of them.";
 		WaitLineBreak;
-		if companion of player is demonologist:
+		if demonologist is listed in companionList of Player:
 			Linebreak;
 			let bonus be (( weapon damage of demonologist minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
@@ -2124,7 +2435,7 @@ name	desc	weight	object
 "null essence"	"It's pretty much a simple pitch black rock. You have acquired these from your last visits to the Void Realm."	1	null essence
 
 null essence is a grab object.
-the usedesc of null essence is "[null essence use]";
+Usedesc of null essence is "[null essence use]";
 
 to say null essence use:
 	say "     You attempt to eat the rock, and surprisingly, it completely dissolves in your mouth. It tastes terribly, though, like burnt coal, and it stings in your tongue like fire. If this was to be swallowed, you would probably have trouble breathing with so much pain down your throat, so you immediately spit it out. Well, that was a waste, maybe you're not supposed to ingest it?";
@@ -2134,43 +2445,15 @@ instead of sniffing null essence:
 
 []
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"abyssal remnant"	"A very underwhelming weapon that used to be a sword, consisting of only its hilt and a broken base of a rusted blade. It is in terrible conditions, and you doubt it has any use in battle."	2	abyssal remnant
-
-abyssal remnant is an armament.
-It is part of the player.
-It has a weapon "[one of]your broken hilt[or]your broken sword[or]your excuse of a weapon[or]your shattered half-blade[at random]". The weapon damage of abyssal remnant is 1. The weapon type of abyssal remnant is "Melee". It is not temporary. The objsize of abyssal remnant is 2.
-
-the scent of the abyssal remnant is "The broken hilt oozes off an overwhelming, and even unthinkable, scent of absolutely... nothing. It is as odorless as the Void, where it came from. It is very similar to the null essences, perhaps they are related?".
+[abyssal remnant moved to Core Mechanics/Weapons.i7x]
 
 []
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"abyssal edge"	"The enhanced version of what used to be a completely useless hilt. The abyssal edge is now a respectable sword with a dark blade, so sharp it can cut through almost anything."	4	abyssal edge
-
-abyssal edge is an armament.
-It is part of the player.
-It has a weapon "[one of]your dark sword[or]your void blade[or]your respectable black sword[or]your Abyssal Edge[at random]". The weapon damage of abyssal edge is 19. The weapon type of abyssal edge is "Melee". It is not temporary. The objsize of abyssal edge is 2.
-
-the scent of the abyssal edge is "This powerful sword still smells like absolutely nothing, but it does give you a sense of power. You have to be careful not to cut your nose trying to sniff it, though. It would be pointless, as well.".
-
-a postimport rule: [bugfixing rules for players that import savegames]
-	if Resolution of AbyssEdgeEnchantLevel > 19:
-		now weapon damage of abyssal edge is Resolution of AbyssEdgeEnchantLevel;
+[abyssal edge moved to Core Mechanics/Weapons.i7x]
 
 []
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"sharp black tusk"	"One of the tusks of the Void Serpent. It is so sharp that can be used as a quite good weapon, but it's very big and easily throws you off balance."	10	sharp black tusk
-
-sharp black tusk is an armament.
-It is part of the player.
-It has a weapon "[one of]your very sharp tusk[or]your void monster's tusk[or]your sharp black tusk[at random]". The weapon damage of sharp black tusk is 12. The weapon type of sharp black tusk is "Melee". It is not temporary. The objsize of sharp black tusk is 4. The hitbonus of sharp black tusk is -2.
-
-the scent of the sharp black tusk is "The void serpent's tusk actually manages to have a scent, despite coming from the void, and you do not like it. It's undescribably bad, something between rotten and death, even with the apparent good condition of the tusk.".
+[sharp black tusk moved to Core Mechanics/Weapons.i7x]
 
 []
 
@@ -2179,7 +2462,7 @@ name	desc	weight	object
 "loose tentacle"	"A remnant of one of the Tentacle Abomination's many tendrils, which sometimes starts moving on its own."	1	loose tentacle
 
 loose tentacle is a grab object.
-the usedesc of loose tentacle is "[loose tentacle use]";
+Usedesc of loose tentacle is "[loose tentacle use]";
 
 to say loose tentacle use:
 	say "     You try to think of a way to use it, but honestly, you really can't figure out any. Perhaps someone else would?";
@@ -2194,23 +2477,37 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "strange-colored bean"	"It is a bean with a strange color. The texture is similar to a gum."	1	strange-colored bean
 
-strange-colored bean is a grab object.
-the usedesc of strange-colored bean is "[strange-colored bean use]";
+strange-colored bean is a grab object. it is not temporary.
+Usedesc of strange-colored bean is "[strange-colored bean use]";
 
 to say strange-colored bean use:
 	say "     It's just a bean, right? And it kind of looks like it tastes good... But you're wrong! Once you push it past your lips and into your mouth, it starts to burn intensely, and tastes like death. You immediately spit it out, and since you lacked the courage to bite it, it still looks intact. Best not do that again.";
-	increase carried of strange-colored bean by 1;
 
 instead of sniffing strange-colored bean:
 	say "The bean is odorless, much like everything else in the void.";
+
+[]
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"unknown void relic one"	"Something you found in the Void. It has a shape like you have never seen before, with strange symbols engraved along its flat surface. "	3	unknown void relic one
+
+unknown void relic one is a grab object. it is not temporary.
+Usedesc of unknown void relic one is "[UVRone use]";
+
+to say UVRone use:
+	say "     You try your best to decipher what is written in the relic, but these symbols are unlike anything you have seen before. After trying for a while, you decide to just put it away, unable to make anything out of it.";
+
+instead of sniffing unknown void relic one:
+	say "The relic is odorless, much like everything else in the void. However, you can sense something powerful within...";
 
 Section 4 - Creatures
 
 Section 4-1 - Void Serpent
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -2254,9 +2551,13 @@ When Play begins:
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0;
-	now libido entry is 0; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is true;
+	now libido entry is 0; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "sharp black tusk";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]elongated[or]serpentine[or]long[or]scaled[at random]";
 	now type entry is "[one of]serpentine[at random]";
@@ -2271,7 +2572,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -2373,8 +2674,8 @@ When Play begins:
 Section 4-2 - Dark Tyrant
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -2418,9 +2719,13 @@ When Play begins:
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0;
-	now libido entry is 0; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is true;
+	now libido entry is 0; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]gooey[or]slimey[or]towering[or]huge[at random]";
 	now type entry is "[one of]gooey[or]slimey[at random]";
@@ -2435,7 +2740,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -2537,8 +2842,8 @@ When Play begins:
 Section 4-3 - Peculiar Summoner
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -2582,9 +2887,13 @@ When Play begins:
 	now Cunt Count entry is 99; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 99;
 	now Cunt Tightness entry is 99;
-	now libido entry is 0; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is true;
+	now libido entry is 0; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "strange-colored bean";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]unknown[or]questionable[or]cloaked[or]robed[at random]";
 	now type entry is "[one of]slender[or]unknown[at random]";
@@ -2599,7 +2908,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -2701,8 +3010,8 @@ When Play begins:
 Section 4-4 - Tentacle Abomination
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -2746,9 +3055,13 @@ When Play begins:
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0;
-	now libido entry is 0; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is true;
+	now libido entry is 0; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "loose tentacle";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]abominable[or]monstrous[or]obscene[or]disturbing[at random]";
 	now type entry is "[one of]abominable[at random]";
@@ -2763,7 +3076,175 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
+
+Section 4-5 - Elk Head Reaper
+
+Table of Random Critters (continued)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now NewTypeInfection entry is false;
+	now Species Name entry is "Void Fallen"; [name of the overall species of the infection, used for children, ...]
+	now Name entry is "Elk Head Reaper"; [Name of your new Monster]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now attack entry is "The [one of]towering figure[or]cloaked giant[or]reaper[or][if Resolution of ElkHeadReaperGender is 10]musclebound dom[else]amazonian domme[end if][at random] [one of]swings [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe at you with life-threatening speed[or]hits you with the pommel of [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe, which hurts a lot[or]whirls [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe at your legs, shoving you back with a laceration[or]kicks you with great force, violently knocking you back[or][at random]!";
+	now defeated entry is "[ElkHeadReaperLoses]";
+	now victory entry is "[ElkHeadReaperWins]";
+	now desc entry is "[ElkHeadReaperDesc]";
+	now face entry is "";
+	now body entry is "";
+	now skin entry is "";
+	now tail entry is "";
+	now cock entry is "";
+	now face change entry is "";
+	now body change entry is "";
+	now skin change entry is "";
+	now ass change entry is "";
+	now cock change entry is "";
+	now str entry is 41;
+	now dex entry is 28;
+	now sta entry is 35;
+	now per entry is 22;
+	now int entry is 20;
+	now cha entry is 19;
+	now sex entry is ""; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 423; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 22; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 40; [Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is ""; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
+	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 24; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 4; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 4; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 24;
+	now Cunt Tightness entry is 3;
+	now SeductionImmune entry is true;
+	now libido entry is 0; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
+	now loot entry is "";
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]towering[or]muscular[or]ripped[or]cloaked[at random]";
+	now type entry is "[one of][if Resolution of ElkHeadReaperGender is 10]musclebound[else]amazonian[end if][at random]";
+	now magic entry is true;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
+
+[
+Table of New Infection Parts (continued)
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

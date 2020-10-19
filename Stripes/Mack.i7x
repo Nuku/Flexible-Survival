@@ -23,14 +23,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Finding Mack	"Finding Mack"
 
-Finding Mack is a situation. The level of Finding Mack is 8.
-The sarea of Finding Mack is "Forest".
+Finding Mack is a situation.
+ResolveFunction of Finding Mack is "[ResolveEvent Finding Mack]". The level of Finding Mack is 8.
+Sarea of Finding Mack is "Forest".
 
 when play begins:
 	add Finding Mack to BadSpots of MaleList;
 	add Finding Mack to BadSpots of FurryList;
 
-Instead of resolving Finding Mack:
+to say ResolveEvent Finding Mack:
 	if HP of Macadamia is 0:
 		say "     As you're enjoying a peaceful walk through the woods, all that is broken up as a fluffy burst of gray fur bursts out of the wood. 'Come'n through!' it says as you're pushed aside. Suddenly expecting to be in a fight with the gray fluff, you turn to face it to see it already disappearing into the bushes on the other side. As you regather your wits, you turn in time to see a man in green stepping silently from the woods behind you. 'I had thought to give chase to that troublesome rodent, but you look like much better sport,' he says with a musical cadence to his voice. Taking in his smooth and beautiful features, you notice his pointed ears and realize it is an elf before you and not a man at all. And he's now advancing on you with the lust for the hunt flashing in his eyes.";
 		challenge "Elven Hunter";
@@ -132,7 +133,7 @@ Object	Name
 Nutso Factory	"Nutso Factory"
 
 Nutso Factory is a room. It is fasttravel. It is private.
-The description of Nutso Factory is "[nutsofactorydesc]".
+Description of Nutso Factory is "[nutsofactorydesc]".
 
 the scent of Nutso Factory is "The air here smells of oil, machinery and nuts (roasted and unroasted).".
 
@@ -147,8 +148,8 @@ object	name
 Macadamia	"Macadamia"
 
 Macadamia is a man. Macadamia is in Nutso Factory.
-The description of Macadamia is "[macadamiadesc]".
-The conversation of Macadamia is { "Chitr!" }.
+Description of Macadamia is "[macadamiadesc]".
+Conversation of Macadamia is { "Chitr!" }.
 understand "Mack" as Macadamia.
 
 the scent of Macadamia is "Macadamia smells of nuts, predominantly of the macadamias he loves the most.".
@@ -268,9 +269,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "roasted nuts"	"A jar of Macadamia's special salted and roasted nuts. It has a label with a cartoonish drawing of the grinning squirrel with one paw on his heavy sac holding up a large unshelled walnut."	1	roasted nuts
 
-roasted nuts is a grab object. roasted nuts is infectious. The strain of roasted nuts is "Gray Squirrel".
+roasted nuts is a grab object. roasted nuts is infectious. Strain of roasted nuts is "Gray Squirrel".
 
-The usedesc of roasted nuts is "[eatroastednuts]";
+Usedesc of roasted nuts is "[eatroastednuts]";
 
 to say eatroastednuts:
 	let jfj be 0;

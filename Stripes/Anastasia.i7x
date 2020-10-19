@@ -47,6 +47,7 @@ Object	Name
 Captured Bird	"Captured Bird"
 
 Captured Bird is a situation.
+ResolveFunction of Captured Bird is "[ResolveEvent Captured Bird]".
 The level of Captured Bird is 3.
 
 when play begins:
@@ -54,7 +55,7 @@ when play begins:
 	add Captured Bird to badspots of HermList;
 	add Captured Bird to BadSpots of FurryList;
 
-Instead of resolving a Captured Bird:
+to say ResolveEvent Captured Bird:
 	say "     Your exploration of the city is interrupted by a loud, avian shriek, soon followed by several feline growls. There is quite a commotion coming from somewhere off to your left. You consider moving away, but the noise seems to be remaining in the same spot, so you decide at least risking a quick peek to see what's going on. Passing between some building, you take cover behind a short fence and gaze out at the small vacant lot across the street.";
 	say "     There are several of those panther taurs in the lot surrounding another creature. The other, a large, red and yellow bird of some kind, is caught in a net trap the panthers probably set up. The bird, nearly as big as a person but completely avian in form, shrieks again and struggles frantically against the net, which oddly enough seems to be on fire. There is some yelling among the panthers that you can't make out through all the commotion and several of them run off, leaving four securing the corners of the net to hold the struggling bird down. Unsure of the felines['] motive aside from possibly cooking their prey while still in the trap, you realize that if you're going to do anything, it will have to be now if there is to be any chance of saving the bird.";
 	say "     [bold type]Will you save the bird?[roman type][line break]";
@@ -93,10 +94,11 @@ Object	Name
 Familiar Feather	"Familiar Feather"
 
 Familiar Feather is a situation.
+ResolveFunction of Familiar Feather is "[ResolveEvent Familiar Feather]".
 It is inactive.
 The level of Familiar Feather is 4.
 
-instead of resolving Familiar Feather:
+to say ResolveEvent Familiar Feather:
 	say "     As you wander, something catches your eye. A single, scarlet feather with a yellow trimmed edge lays on the ground before you. It seems familiar, bringing up memories of the firebird you rescued some time ago. Picking it up, you turn the feather over a few times between your fingers before a hauntingly beautiful and feminine voice shakes you from your memories.";
 	say "     'Our paths cross again,' you hear before turning to see the massive bird from before, but this time you get a good look at it. Roughly as tall as a human, the red and gold, hawk-like avian is perching a few paces from you. Her tail feathers were long, trailing behind her, their edges wreathed in a soft glowing flame as she looks towards you with piercing, golden eyes.";
 	WaitLineBreak;
@@ -111,10 +113,11 @@ Object	Name
 FireAndIce	"FireAndIce"
 
 FireAndIce is a situation.
+ResolveFunction of FireAndIce is "[ResolveEvent FireAndIce]".
 It is inactive.
 The level of FireAndIce is 6.
 
-instead of resolving FireAndIce:
+to say ResolveEvent FireAndIce:
 	say "     As you walk the empty streets, a crumpled up newspaper rolls past you like some pathetic urban tumbleweed, but the breeze that carried it is surprisingly chilly. You look back, cautiously, but see nothing out of place. You turn back, beginning your trek once again, only for the air around you to suddenly drop in temperature. Your muscles tense up as the frost starts to form on the asphalt.";
 	say "     A deep bestial growl echoes off the pavement filling you with dread. You try to prepare to fight but your reflexes are slowed by the cold, and before you can react, a massive lizard-like creature lands in front of you, opening its toothy maw and letting out a blast of cold directly into you, knocking you to the ground. You try to get up only to find that the frost has started creep over your body, freezing it in place in a compromising position. Unable to move, you look to the creature who now stalks towards you.";
 	WaitLineBreak;
@@ -140,7 +143,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "phoenix egg"	"     It has a golden shell and is roughly the size of a man's head."	10	phoenix egg
 
-phoenix egg is a grab object. It is part of the player. It is not temporary.
+phoenix egg is a grab object. It is not temporary.
 
 instead of using phoenix egg:
 	say "     You look over the egg, trying to think of a hot place for it to hatch.";
@@ -218,8 +221,8 @@ object	name
 Anastasia	"Anastasia"
 
 Anastasia is a woman.
-The description of Anastasia is "[Anastasiadesc]".
-The conversation of Anastasia is { "Burninate!" }.
+Description of Anastasia is "[Anastasiadesc]".
+Conversation of Anastasia is { "Burninate!" }.
 The icon of Anastasia is Figure of Anastasia_icon.
 
 the scent of the Anastasia is "The phoenix has a pleasent scent of woodsmoke.".

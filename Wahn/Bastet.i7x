@@ -88,13 +88,14 @@ Table of GameEventIDs (continued)
 Object	Name
 Restaurateur's Office	"Restaurateur's Office"
 
-Restaurateur's Office is a situation. Restaurateur's Office is inactive.
-The sarea of Restaurateur's Office is "Museum".
+Restaurateur's Office is a situation.
+ResolveFunction of Restaurateur's Office is "[ResolveEvent Restaurateur's Office]". Restaurateur's Office is inactive.
+Sarea of Restaurateur's Office is "Museum".
 when play begins:
 	add Restaurateur's Office to BadSpots of MaleList;       [monkey king]
 	add Restaurateur's Office to BadSpots of FurryList;     [monkey king]
 
-Instead of resolving a Restaurateur's Office:
+to say ResolveEvent Restaurateur's Office:
 	say "     After walking through the labyrinthine passages of the museum for quite a while, it becomes more and more obvious that something strange and unusual happened to this place when all the craziness started. It's a bit hard to say with hallways seemingly looping around and suddenly having developed new forks when you get to a portion that you went through before, but your guess is that you're about half a mile deep in here. At least the glowing 'EXIT' signs that every room and hallway holds give you confidence that you'll find your way back out, as every time you tried, the museum foyer was just two or three rooms back - if one follows the green arrows...";
 	say "     Almost ready to call of the search after stumbling into the Asian wing - again - for the third time, your eyes suddenly notice a doorway that wasn't there the last few times you came through here. On it, a sign says 'Restaurateur'. Eager to finally get what you are here for, you dig the small paper with the vault combination Nermine gave you out of your pocket, then take quick steps towards the door. Yet before you're more than halfway across the room, you realize that you're not alone in here...";
 	LineBreak;
@@ -291,8 +292,8 @@ Virgin of Bastet is false.
 AnalVirgin of Bastet is true.
 PenileVirgin of Bastet is true.
 SexuallyExperienced of Bastet is true.
-The description of Bastet is "[BastetDesc]".
-The conversation of Bastet is { "Mew!" }.
+Description of Bastet is "[BastetDesc]".
+Conversation of Bastet is { "Mew!" }.
 
 instead of sniffing Bastet:
 	say "     Bastet has an interesting, spicy scent in her fur that speaks of ancient mysteries and the potential of great power.";

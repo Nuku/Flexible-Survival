@@ -7,7 +7,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "old boombox"	"An old jam machine that somehow or another works without power."	10	old boombox
 
-old boombox is a grab object. It is part of the player. It is not temporary.
+old boombox is a grab object. It is not temporary.
 
 instead of sniffing old boombox:
 	say "     The faint scent of good old times seems to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";
@@ -16,7 +16,9 @@ Instead of using the old boombox:
 	say "     Looking over the old styled machine you find yourself wondering what flavor of music would be good to listen to right now. There are several switches, all with certain types of music on them, so you have options.";
 	say "[musicsession][line break]"; 	]
 
-
+a postimport rule:
+	if Old Record Store is resolved and Resolution of Old Record Store is 1:
+		now BoomBox is in the Bunker;
 
 Section 1 - Old BoomBox
 
@@ -25,9 +27,10 @@ Object	Name
 Old Record Store	"Old Record Store"
 
 Old Record Store is a situation.
-The sarea of Old Record Store is "Outside".
+ResolveFunction of Old Record Store is "[ResolveEvent Old Record Store]".
+Sarea of Old Record Store is "Outside".
 
-Instead of Resolving a Old Record Store:
+to say ResolveEvent Old Record Store:
 	say "     Walking along and scouting for danger around every other turn, you find your steps taking you to someplace that you aren't particularly familiar with. Surprised by the fact that your body has suddenly gained an awareness all its own, you don't think to stop yourself as you follow an unseen path to an old music store that looks as though it has seen much, much better days. Even before the so-called apocalypse, you don't actually remember having seen a music shop in the neighborhood where you lived, not even in the big city really.";
 	say "     After iPods, cell phones and the likes started to come out and the internet became a hospice for people pirating bootleg music via unsecure web links, music stores like this one had become a relic of a past no one remembered or cared about.";
 	WaitLineBreak;
@@ -81,14 +84,12 @@ Instead of Resolving a Old Record Store:
 		now Resolution of Old Record Store is 99; [disinterest]
 		now Old Record Store is resolved;
 
-
-
 Section 4 - Playing Music
 
 Boombox is a object.
 It is fixed in place.
 
-The description of BoomBox is "An old jam machine that looks as though it had once been something very popular. Strangely enough, and despite the age of the machine, there is little wear and tear on the outside covering of the device. Perhaps whoever owned it kept the machine in a secure place so as to make sure that it wouldn't get damaged? Even more strange, the music player works... without power. Maybe if you pressed [bold type]play[roman type] the machine might start to work?".
+Description of BoomBox is "An old jam machine that looks as though it had once been something very popular. Strangely enough, and despite the age of the machine, there is little wear and tear on the outside covering of the device. Perhaps whoever owned it kept the machine in a secure place so as to make sure that it wouldn't get damaged? Even more strange, the music player works... without power. Maybe if you pressed [bold type]play[roman type] the machine might start to work?".
 
 instead of sniffing BoomBox:
 	say "     The faint scent of good old times seem to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";

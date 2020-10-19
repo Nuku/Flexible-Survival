@@ -27,9 +27,10 @@ Object	Name
 Free Handouts	"Free Handouts"
 
 Free Handouts is a situation.
-The sarea of Free Handouts is "Smith Haven".
+ResolveFunction of Free Handouts is "[ResolveEvent Free Handouts]".
+Sarea of Free Handouts is "Smith Haven".
 
-Instead of resolving a Free Handouts:
+to say ResolveEvent Free Handouts:
 	FreeHandoutsEvent;
 
 after going to Mall West Wing while (Free Handouts is active and Free Handouts is not resolved):
@@ -53,7 +54,7 @@ Haven Community Center	"Haven Community Center"
 
 Haven Community Center is a room.
 Haven Community Center is west of Mall West Wing.
-The description of Haven Community Center is "[HavenCCRoomDesc]".
+Description of Haven Community Center is "[HavenCCRoomDesc]".
 Haven Community Center is sleepsafe.
 
 to say HavenCCRoomDesc:
@@ -66,8 +67,8 @@ object	name
 Florence	"Florence"
 
 Florence is a woman. Florence is in Haven Community Center.
-The description of Florence is "[FlorenceDesc]".
-The conversation of Florence is { "<This is nothing but a placeholder!>" }.
+Description of Florence is "[FlorenceDesc]".
+Conversation of Florence is { "<This is nothing but a placeholder!>" }.
 The scent of Florence is "     Florence smells of clean fur, with undertones that make you think of the endless expanse of the Savannah, grass swaying in the wind as it blows over the land.".
 
 to say FlorenceDesc:

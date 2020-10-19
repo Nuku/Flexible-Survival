@@ -11,8 +11,8 @@ object	name
 Matriarch	"Matriarch"
 
 Matriarch is a person.
-The description of Matriarch is "[matriarchdesc]".
-The conversation of Matriarch is { "Good girl!" }.
+Description of Matriarch is "[matriarchdesc]".
+Conversation of Matriarch is { "Good girl!" }.
 
 the scent of the Matriarch is "[matriarchscent]".
 

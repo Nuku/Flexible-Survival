@@ -11,7 +11,7 @@ after going to Smith Haven Mall Lot East while HP of Tobias is 0 and a random ch
 	say "     'Pleasure to meet you, I'm Tobias Black.' While you tell him your own name, he pulls a business card out of a breast pocket and hands it to you. It reads, 'Tobias Black - Animal Handler, Trainer, Breeder' and has a stylized paw-print in the upper left corner. 'Sorry that I didn't acknowledge you earlier. You know how it is with dogs in training, one has to address any disobedience immediately to avoid any bad habits forming. Dane here is about fully trained by now, but Cara still needs work. But don't you worry, she'll be an excellently obedient bitch in no time at all.' The man's behavior towards you is markedly different from the side his pets experience, and he seems very friendly, even jovial. He seems to want to chat a bit with you, and is clearly waiting for you to say something.";
 	WaitLineBreak;
 	say "[TobiasTalkMenu]";
-	now hp of Tobias is 1; [initial event done]
+	now HP of Tobias is 1; [initial event done]
 	now Refugee Mare is active;
 
 to say TobiasTalkMenu:
@@ -208,8 +208,8 @@ SexuallyExperienced of Tobias is true.
 TwistedCapacity of Tobias is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Tobias is false. [steriles can't knock people up]
 MainInfection of Tobias is "Doberman Male".
-The description of Tobias is "[TobiasDesc]".
-The conversation of Tobias is { "<This is nothing but a placeholder!>" }.
+Description of Tobias is "[TobiasDesc]".
+Conversation of Tobias is { "<This is nothing but a placeholder!>" }.
 The scent of Tobias is "     Tobias smells nicely masculine, in a furry, earthy way with a little bit of honest sweat in the mix too.".
 
 to say TobiasDesc:

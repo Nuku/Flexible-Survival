@@ -10,10 +10,11 @@ Object	Name
 WomanFruitTree	"WomanFruitTree"
 
 WomanFruitTree is a situation.
-The sarea of WomanFruitTree is "Park".
+ResolveFunction of WomanFruitTree is "[ResolveEvent WomanFruitTree]".
+Sarea of WomanFruitTree is "Park".
 ColleenDeclined is a number that varies.
 
-Instead of resolving a WomanFruitTree:
+to say ResolveEvent WomanFruitTree:
 	if ColleenDeclined is 1:
 		say "     Wandering back through the park, you spot the large tree in the distance, and decide to wander over to see what became of the stranded military woman. Upon reaching the tree you find that ";
 		if a random chance of 1 in 2 succeeds:
@@ -106,8 +107,8 @@ AnalVirgin of Colleen is true.
 PenileVirgin of Colleen is true.
 SexuallyExperienced of Colleen is false.
 MainInfection of Colleen is "human".
-The description of Colleen is "[CollenStatus]".
-The conversation of Colleen is { "Woof!" }.
+Description of Colleen is "[CollenStatus]".
+Conversation of Colleen is { "Woof!" }.
 the linkaction of Colleen is "[ColleenLinkAction]".
 
 to say ColleenLinkAction:

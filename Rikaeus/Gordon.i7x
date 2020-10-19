@@ -49,8 +49,8 @@ AnalVirgin of Gordon is true.
 PenileVirgin of Gordon is true.
 SexuallyExperienced of Gordon is false.
 MainInfection of Gordon is "".
-The description of Gordon is "[GordonDesc]".
-The conversation of Gordon is { "<this is a placeholder!>" }.
+Description of Gordon is "[GordonDesc]".
+Conversation of Gordon is { "<this is a placeholder!>" }.
 The scent of Gordon is "The monkey smells like cologne, bananas and musk. An odd combination of scents but you guess it works for him."
 
 to say GordonDesc:

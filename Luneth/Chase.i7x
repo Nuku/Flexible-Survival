@@ -111,8 +111,8 @@ AnalVirgin of Chase is true.
 SexuallyExperienced of Chase is true.
 MainInfection of Chase is "Tiger".
 
-The description of Chase is "[ChaseDesc]".
-The conversation of Chase is { "mew" }.
+Description of Chase is "[ChaseDesc]".
+Conversation of Chase is { "mew" }.
 Chase is in Tiger Den.
 
 The scent of Chase is "[ChaseScent]";
@@ -198,7 +198,7 @@ to say RegularChaseTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Offer to help the tiger";
 	[]
-	if companion of Player is royal tiger and 1 > 2: [disabled for now]
+	if royal tiger is listed in companionList of Player and 1 > 2: [disabled for now]
 		choose a blank row in table of fucking options;
 		now title entry is "Chat with Ryousei and Chase";
 		now sortorder entry is 4;
@@ -289,7 +289,7 @@ to say DomChaseTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Find out more about his life before the infection";
 	[]
-	if companion of Player is royal tiger and 1 > 2: [disabled for now]
+	if royal tiger is listed in companionList of Player and 1 > 2: [disabled for now]
 		choose a blank row in table of fucking options;
 		now title entry is "Chat with Ryousei and Chase";
 		now sortorder entry is 5;

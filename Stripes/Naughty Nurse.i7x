@@ -183,7 +183,7 @@ to say VixenNurseDesc:
 	if vixgender is 0:
 		setmongender 4; [creature is female]
 		say "     You find yourself face to face with a sensually curved vixen in a tight, little nurse's outfit. She has a short cut, white apron with a black top under it. There's even a traditional, white nurse's cap with a red cross on it on the vixen's head. She has lustrous, gray fur, indicating that her infection originated from a silver fox. Glancing down those long, slender legs you see they end in digitigrade paws. To her ample chest, she holds a large clipboard. You can still see the bumps that the perky nipples on her four breasts make in the fabric, unblocked by the clipboard. She looks you over quickly and tut-tuts, saying '[one of]It looks like one patient's gotten out of bed[or]Bend over, sweetie. It's time to take your temperature[or]You look like you need a little TLC[or]Please return to the waiting area. The doctor will see you shortly. Until then, let me take care of you[at random].' She raises her clipboard, seemingly intent on clubbing you with it.";
-		if hardmode is true and level of Player > 4, let debit be level of Player - 4;
+		if HardMode is true and level of Player > 4, let debit be level of Player - 4;
 		now HP entry is 36 + ( debit * 4 );
 		now monsterHP is 36 + ( debit * 4 );
 		now lev entry is 4 + debit;
@@ -193,7 +193,7 @@ to say VixenNurseDesc:
 		setmongender 5; [creature is herm]
 		say "     You find yourself face to face with one of those sensually curved vixen in the tight, little nurse's outfit. She has lustrous, gray fur, indicating that her infection originated from a silver fox. She has a traditional, white nurse's cap with a red cross on it on the vixen's head. She is wearing a short cut, white apron with a black top under it.";
 		say "     And there your eyes stop, finding that something is amiss with this naughty nurse. Her tight dress has a rather sizable bulge in it and it is growing larger as you watch. It's a trap! Grinning, she rubs the firm lump and says, '[one of]It looks like one patient's gotten out of bed. I'll tuck you in good and tight[or]Bend over, sweetie. Mmm... I want to take your temperature[or]You look like you need a dose of my medicine[or]Let me give you a thorough examination, my pretty patient[at random].' She rubs her four breasts and moans lustfully before charging at you.";
-		if hardmode is true and level of Player > 7, now debit is level of Player - 7;
+		if HardMode is true and level of Player > 7, now debit is level of Player - 7;
 		now HP entry is 72 + ( debit * 4 );
 		now monsterHP is 72 + ( debit * 4 );
 		now lev entry is 7 + debit;
@@ -203,8 +203,8 @@ to say VixenNurseDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -229,7 +229,7 @@ When Play begins:
 	now desc entry is "[VixenNurseDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "a vulpine head with a long muzzle and teeth. You have steely-gray eyes and silver fur covers your face"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "seductively curved, with a tight, bubble butt. Your hands have hard, black claws at their fingertips and your feet are digitigrade paws now"; [ Body Description, format as "Your body is (your text)."]
-	now skin entry is "smooth, silver-colored fur over your"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "smooth, silver-colored fur over your"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "From the base of your spine, you have a silver fox's luxurious tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "steely-gray vulpine"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shifts and stretches, gaining a long, slender muzzle which ends in a black nose and whiskers. Silvery fur covers his muzzle as your ears move upwards and grow into pointed, vulpine ears"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -257,9 +257,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12;
 	now Cunt Tightness entry is 5;
+	now SeductionImmune entry is false;
 	now libido entry is 60; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is "healing booster"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "vixen milk";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]curvaceous[or]sexy[or]effeminate[at random]";
 	now type entry is "vulpine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -274,7 +278,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -402,6 +406,27 @@ name	desc	weight	object
 healing booster is a grab object. It is fast. It is not temporary.
 
 the scent of the healing booster is "The healing booster smells of chemicals and medicine.".
+
+usedesc of healing booster is "[healing booster use]".
+
+to say healing booster use:
+	let healed be 20;
+	if "Expert Medic" is listed in the feats of Player:
+		now healed is 25;
+	else if carried of First Aid Manual > 0:
+		increase healed by 2;
+	if "Rapid Healing" is listed in the feats of Player:
+		increase healed by 2;
+	if "Regeneration" is listed in the feats of Player:
+		increase healed by 3;
+	if NoHealMode is true:
+		now healed is ( healed * 125 ) / 100;
+	increase HP of Player by healed;
+	if HP of Player > maxHP of Player:
+		decrease healed by HP of Player minus maxHP of Player;
+		now HP of Player is maxHP of Player;
+	say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate. You regain [special-style-1][healed][roman type] HP.";
+	ItemLoss healing booster by 1;
 
 
 Section 3 - Endings

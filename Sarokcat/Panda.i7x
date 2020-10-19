@@ -16,7 +16,7 @@ to say panda appears:
 		if Player is male:
 			say ". The panda-like woman's eyes fix on you, and then drop down to your [Cock of Player] cock. 'Ooooh a male!' she exclaims. [one of]'Please fuck me now!' [or]'Did you know pandas are an endangered species?' she asks slyly. 'Want to help me repopulate?' [or]'Yes! Take me now!' [or]'Finally I can get laid!' [or]'You're mine!' [or]'Finally I found a man!' [or]'You would make a handsome panda!' [at random]the pandawoman says lustily. Not waiting to see your response, she charges forward clearly intent on getting laid.";
 		else:
-			say ". The panda-like woman's eyes fix on you, scanning over your female form, and seeming disappointed at what they find. 'Another woman?' the panda cries out in exasperation. [one of]'We don't need any more competition for mates around here!' [or]'You won't get the men while I'm around!' [or]'Maybe we can MAKE you a man!' [or]'You must have hidden the men for yourself! I'll beat their location out of you!' [or]I needed someone to vent my frustration on anyways,' [at random]she says with a growl of pure frustration. Not bothering to let you respond, she charges forward, fire in her eyes.";
+			say ". The panda-like woman's eyes fix on you, scanning over your female form, and seeming disappointed at what they find. 'Another woman?' the panda cries out in exasperation. [one of]'We don't need any more competition for mates around here!' [or]'You won't get the men while I'm around!' [or]'Maybe we can MAKE you a man!' [or]'You must have hidden the men for yourself! I'll beat their location out of you!' [or]'I needed someone to vent my frustration on anyways,' [at random]she says with a growl of pure frustration. Not bothering to let you respond, she charges forward, fire in her eyes.";
 
 to say panda attack:
 	choose row MonsterID from the Table of Random Critters;
@@ -45,8 +45,8 @@ To say panda loss:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -69,7 +69,7 @@ When Play begins:
 	now desc entry is "[panda appears].";
 	now face entry is "a blend of panda and human features, with large dark eyes surrounded by black rings, your short round ears swivel around nimbly"; ["You have a (your text) face."]
 	now body entry is "Stocky and somewhat rounded, you have a slightly ursine body, though obviously still with some human influences, your legs are however slightly shorter, as are your arms, giving you a rather rounded, appearance. Though your hands are tipped with panda-like claws, they are still easily able to grip and manipulate objects"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]black and white patterned[or]panda furred[or]soft furred[or]short panda furred[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[one of]black and white patterned[or]panda furred[or]soft furred[or]short panda furred[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a small, fluffy panda tail hanging down your ample backside."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]bearlike[or]panda[or]thick black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your mouth pushes forward slightly until it resembles a short muzzle, new scents exploding into your nose as it changes slightly, and your vision blurs as your eyes widen, and become better able to see in the dark, and you can feel black circles forming around them. Finally your face itself begins to take on a more rounded shape, with the ears moving to the top of your head"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -97,9 +97,13 @@ When Play begins:
 	now Cunt Count entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	now libido entry is 40;  [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 85;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "lucky horseshoe";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]rounded[or]padded[or]stocky[or]chubby[at random]";
 	now type entry is "[one of]panda[or]ursine[at random]";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -114,7 +118,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

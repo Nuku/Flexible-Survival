@@ -21,15 +21,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Skunkbeast Battle	"Skunkbeast Battle"
 
-Skunkbeast Battle is a situation. The level of Skunkbeast Battle is 15.
-The sarea of Skunkbeast Battle is "Forest".
+Skunkbeast Battle is a situation.
+ResolveFunction of Skunkbeast Battle is "[ResolveEvent Skunkbeast Battle]". The level of Skunkbeast Battle is 15.
+Sarea of Skunkbeast Battle is "Forest".
 skunkbeaststatus is a number that varies.
 when play begins:
 	add Skunkbeast Battle to BadSpots of MaleList;
 	add Skunkbeast Battle to BadSpots of FemaleList;
 	add Skunkbeast Battle to BadSpots of FurryList;
 
-Instead of resolving a Skunkbeast Battle:
+to say ResolveEvent Skunkbeast Battle:
 	say "     You can hear a great deal of commotion coming from up ahead. You take notice that there's a considerable number of black, gooey patches spread around the area as well as torn remnants of camouflaged clothes. When gunfire breaks out briefly, you duck down and creep forward into the bushes, looking to find out what's happening. Parting some branches at the edge of the next clearing, you can see a raging battle involving numerous of those sexy skunks you've seen around as well as several larger skunk beasts. Looking more carefully, you can see that some of the skunks are actually mostly transformed soldiers, their clothes torn and their bodies being ravaged (much to their increasing delight) by skunkbeasts or teams of the other females. The one still firing the rifle you heard has it torn from her hands by a skunk girl, who tosses it in the nearby creek as two more hold her down to be mounted.";
 	say "     But it is the last soldier standing who is the most successful. While still partially a skunk, he (though well on his way to becoming a she now) has a strange, futuristic gun that fires a stream of green energy at the skunks. The blast from this seems to stun the skunkbeasts and, if held on them long enough, causes them to melt away into goo. She turns towards the largest of the skunkbeasts, more than twice the size of the others as it turns to deal with her. That's when you realize her jacket's not military issue, but instead emblazoned with a stylized Z in a circle: Zephyr. She yells incoherently as she's tackled by several of the skunk girls, including some of her former teammates and the gun is sent flying, landing only a few yards away from your hiding spot.";
 	say "     You eye the strange weapon and the big beast charging towards it. You have but a moment to decide if you'll face the beast so you can turn the gun on it. It is clearly the one in charge and probably the source of all the others. If you could take it down, you may even permanently solve the skunk problem in the forest. Given how well the trained mercenaries fared and all the other skunks around, this could go very badly for you.";
@@ -115,7 +116,7 @@ Instead of resolving a Skunkbeast Battle:
 				if Ball Size of Player < Cock Length entry, now Ball Size of Player is Ball Size entry;
 			if "Herm Preferred" is listed in feats of Player:
 				now sex entry is "Both";
-			now the strain of skunk goo is "Skunkbeast Lord";
+			now Strain of skunk goo is "Skunkbeast Lord";
 			WaitLineBreak;
 			if Libido of Player < 75, now Libido of Player is 75;
 			if skrp is 1:
@@ -154,7 +155,7 @@ to say sbldesc:
 	setmongender 3; [creature is male]
 	choose row MonsterID from Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of Player > 15, let debit be level of Player - 15;
+	if HardMode is true and level of Player > 15, let debit be level of Player - 15;
 	say "     This skunkbeast is much larger than the others you've seen in the forest. While it mostly resembles a normal skunk, it is massive and almost the size of a small elephant. It has large paws with elongated claws and large, pointed teeth filling its giant muzzle. Under its belly, you can see its huge, black cock which leaks precum that is rich with the arousing scent of the skunk creatures. Several of the other skunks and skunkbeasts move in around you both but don't interfere as this battle begins. The skunkbeast lord's dark eyes are fixed on you with an animalistic intent, though it is cunning enough to keep you from reaching the gun. You will have to try your best to fight off the creature in the hopes of reaching the weapon if you want any hope of winning this battle.";
 	now HP entry is 120 + ( debit * 6 ); [- How many HP has the monster got? -]
 	now monsterHP is 120 + ( debit * 6 );
@@ -175,8 +176,8 @@ to say losetosbl:
 Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -228,9 +229,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 24; [ Depth of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 8; [ Width of female sex the infection will try to give a player. ]
+	now SeductionImmune entry is false;
 	now libido entry is 75; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if skrp is 1][one of]tauric[or]bestial[at random][else][one of]bestial[or]animalistic[or]feral[at random][end if]";
 	now type entry is "[one of][if skrp is 1]skunktaur[else]skunk[end if][or]mephit[or]skunkbeast[at random]";
@@ -245,7 +250,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;

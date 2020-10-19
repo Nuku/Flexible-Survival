@@ -40,14 +40,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Gryphon's Plot	"Gryphon's Plot"
 
-Gryphon's Plot is a situation. The level of Gryphon's Plot is 2.
-the sarea of Gryphon's Plot is "Outside".
+Gryphon's Plot is a situation.
+ResolveFunction of Gryphon's Plot is "[ResolveEvent Gryphon's Plot]". The level of Gryphon's Plot is 2.
+Sarea of Gryphon's Plot is "Outside".
 
 when play begins:
 	add Gryphon's Plot to badspots of HermList;
 	add Gryphon's Plot to BadSpots of FurryList;
 
-instead of resolving a Gryphon's Plot:
+to say ResolveEvent Gryphon's Plot:
 	if Resolution of Gryphon's Plot is 0 or Resolution of Gryphon's Plot is 1: [first time or repeat after failing to find them]
 		say "     As you make your way through the city, a loud screeching noise catches your attention. Your eyes quickly survey the immediate area, the noise sounding awfully close to one a gryphon would make. As another screech joins the first, you realize that not just one gryphon is involved. As the gryphon's calls transform from warning to aggressive, you find yourself wondering what is going on, and if you should take a risk in order to find out. The area being filled with many buildings, it is likely the sound may be bouncing off of them, which could lead to you being misled. Despite this, you conclude that finding the source would be difficult, but not impossible.";
 		say "     Of course, the question is, do you want to?[line break]";

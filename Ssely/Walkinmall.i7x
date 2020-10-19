@@ -5,9 +5,10 @@ Object	Name
 Mall Wandering	"Mall Wandering"
 
 Mall Wandering is a situation.
-The sarea of Mall Wandering is "Smith Haven".
+ResolveFunction of Mall Wandering is "[ResolveEvent Mall Wandering]".
+Sarea of Mall Wandering is "Smith Haven".
 
-instead of resolving Mall Wandering:
+to say ResolveEvent Mall Wandering:
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event around the mall - Misc atmosphere setting.[line break]";
 	say "     You aimlessly spend hours wandering the halls of the mall, seeing the various mall-rats and creatures using the location as a way to escape the chaotic state of the city outside. Charmingly, various pieces of litter lie strewn across the floor, the inhabitants of the mall having taken little action against living in their own trash. Despite having little amounts of sexual fluids on the floor, your surroundings seem to give off a very strong sexual smell, much like the rest of the city. In fact - you are rather getting used to it now that you've spent some time around, the scent of sex having been deeply engraved into your mind (and lungs) by now. It seems normal for everyone else, too, judging by the lack of concern on the residents['] faces.";
@@ -21,14 +22,15 @@ Object	Name
 Mall Orgy	"Mall Orgy"
 
 Mall Orgy is a situation.
-The sarea of Mall Orgy is "Smith Haven".
+ResolveFunction of Mall Orgy is "[ResolveEvent Mall Orgy]".
+Sarea of Mall Orgy is "Smith Haven".
 
 when play begins:
 	add Mall Orgy to BadSpots of FurryList;
 	add Mall Orgy to BadSpots of MaleList;
 	add Mall Orgy to BadSpots of FemaleList;
 
-instead of resolving Mall Orgy:
+to say ResolveEvent Mall Orgy:
 	if debugactive is 1:
 		say "     DEBUG: Walk in event for an orgy between friends with different infections.[line break]";
 	say "     Walking through the corridors of the mall, you find yourself wandering for a while, seized by a sudden desire to just unwind a little in a halfway peaceful place. Walking along, you see many interesting members of the people living here and pass a variety of places in the sprawling safe haven - windows upon empty shops - doors leading to mysteriously musky changing rooms - security rooms, miscellaneous booths for selling supplies and aid to survivors. For now though, you decide to go on a stroll northwards, coming past a service corridor leading off to the side - and inside that, there are five friends chatting with one another. You overhear a little of their conversation and curiosity demands that you listen in for even more...";
@@ -78,10 +80,11 @@ Table of GameEventIDs (continued)
 Object	Name
 OtterBoi Meeting	"OtterBoi Meeting"
 
-OtterBoi Meeting is a situation. OtterBoi Meeting is inactive.
-The sarea of OtterBoi Meeting is "Smith Haven".
+OtterBoi Meeting is a situation.
+ResolveFunction of OtterBoi Meeting is "[ResolveEvent OtterBoi Meeting]". OtterBoi Meeting is inactive.
+Sarea of OtterBoi Meeting is "Smith Haven".
 
-instead of resolving OtterBoi Meeting:
+to say ResolveEvent OtterBoi Meeting:
 	if debugactive is 1:
 		say "     DEBUG: Meeting the otterboi from the previous scene in this file.";
 	say "     You push forward through the mall, the walls oh-so familiar at this point - seeming to be memorized in the palm of your hand. Weirdly, during your time exploring the mall you come back to thinking about the cute otter you got off to - his blushing cheeks burnt into your mind, the sight of those webbed paws, that awkwardly grinning face... God... Wait, no! Did the nanites put those thoughts in your head? That must be it, right? You can't get your thoughts straight, so much so that you don't realize where you are going... Then suddenly, you bump into an unknown creature, the lightly furred form of his skin rubbing up against yours while you recoup your senses. As soon as you look up, you spot light brown, slightly oily fur - it is the very otter that you were just thinking about!";

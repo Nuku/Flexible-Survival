@@ -13,10 +13,11 @@ Tight Fit	"Tight Fit"
 Section 1 - Tight Fit
 
 Tight Fit is a scavevent.
-The sarea of Tight Fit is "Allzones".
+ResolveFunction of Tight Fit is "[ResolveEvent Tight Fit]".
+Sarea of Tight Fit is "Allzones".
 tightfitcount is a number that varies.
 
-Instead of resolving a Tight Fit:
+to say ResolveEvent Tight Fit:
 	let y be "food";
 	let x be a random number from 1 to 8;
 	if x is 1 or x is 2:
@@ -51,13 +52,13 @@ Instead of resolving a Tight Fit:
 					now y is "soda";
 				say "Your specific hunting leads you towards your target.";
 	say "Always on the lookout for more supplies, you spot a tight [one of]crawlspace[or]hole[or]drainage pipe[at random] that looks like it's recently been disturbed. Heading over to check it out, your suspicions were correct and you spot a [y] that someone has stashed at the far end of the dark tunnel.";
-	if companion of Player is bee girl:
+	if bee girl is listed in companionList of Player:
 		say "Honey buzzes up to you and grabs your hand as you're pondering going in after it. 'I can get it for you, honeybunch.' And with that, the small bee girl folds in her wings and wriggles into the tunnel and back out, used to negotiating the narrow tunnels of the hive. She hands the [y] to you with a smile.";
 		ItemGain y by 1;
-	else if companion of Player is helper dog:
+	else if helper dog is listed in companionList of Player:
 		say "Even as you're pondering your chances of getting in there to reach it, Hobo moves around you crawls into the tunnel. The clever dog comes back out with the [y] in his teeth, dropping it at your feet. Surprised at the dog's cleverness, you scritch his ears.";
 		ItemGain y by 1;
-	else if companion of Player is mouse girl:
+	else if mouse girl is listed in companionList of Player:
 		say "While pondering your chances of being able to squeeze in there to get it, Rachel gives you a peck on the cheek. 'Let me take care of this for you, sexy,' she says before scurrying into and out of the hole. She passes you the [y] with a grin. 'Just another reason why it's better to be a mousy like me.'";
 		ItemGain y by 1;
 	else if scalevalue of Player is 1:
@@ -65,7 +66,7 @@ Instead of resolving a Tight Fit:
 		ItemGain y by 1;
 	else if scalevalue of Player is 3 or scalevalue of Player is 2:
 		let difficulty be a random number from 6 to 16;
-		if hardmode is true, increase difficulty by a random number between 0 and 3;
+		if HardMode is true, increase difficulty by a random number between 0 and 3;
 		say "The tunnel looks like it would be ";
 		if difficulty < 8:
 			say "easy";
@@ -78,8 +79,8 @@ Instead of resolving a Tight Fit:
 		else:
 			say "extremely difficult";
 		say " [if scalevalue of Player is 3]to squirm in and out of[else if scalevalue of Player is 2] for a normal person to squirm in and out of. Being smaller, you've got a better shot at making it[end if].";
-		let bonus be ( the dexterity of the player minus 10 ) divided by 2;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		let bonus be ( Dexterity of Player minus 10 ) divided by 2;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		if scalevalue of Player is 2, increase bonus by 5;
 		let dice be a random number from 1 to 20;
@@ -103,9 +104,10 @@ Object	Name
 Protected Supplies	"Protected Supplies"
 
 Protected Supplies is a scavevent.
-The sarea of Protected Supplies is "Allzones".
+ResolveFunction of Protected Supplies is "[ResolveEvent Protected Supplies]".
+Sarea of Protected Supplies is "Allzones".
 
-Instead of resolving a Protected Supplies:
+to say ResolveEvent Protected Supplies:
 	let y be "food";
 	let x be a random number from 1 to 8;
 	if x is 1 or x is 2:
@@ -144,7 +146,7 @@ Instead of resolving a Protected Supplies:
 	repeat with tt running from 1 to number of filled rows in Table of Random Critters:
 		choose row tt from the Table of Random Critters;
 		if there is a lev entry:
-			if lev entry > level of Player and hardmode is false:
+			if lev entry > level of Player and HardMode is false:
 				next;
 		else:
 			next;
@@ -166,8 +168,8 @@ Instead of resolving a Protected Supplies:
 			now MonsterID is Z;
 			break;
 		choose row MonsterID from the Table of Random Critters;
-		if lev entry < level of Player and hardmode is true:
-			hardmodeboost;
+		if lev entry < level of Player and HardMode is true:
+			HardModeboost;
 		say "In your searching through the city, you come across some [y] and move to get it.";
 		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
 		wait for any key;
@@ -211,9 +213,10 @@ Object	Name
 Dropped Handbag	"Dropped Handbag"
 
 Dropped Handbag is a scavevent.
-the sarea of Dropped Handbag is "Allzones".
+ResolveFunction of Dropped Handbag is "[ResolveEvent Dropped Handbag]".
+Sarea of Dropped Handbag is "Allzones".
 
-Instead of resolving a Dropped Handbag:
+to say ResolveEvent Dropped Handbag:
 	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it. Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.";
 	say "     [bold type] Do you want to search it? It doesn't seem like they'll be needing it anymore.[roman type][line break]";
 	LineBreak;
@@ -258,13 +261,14 @@ Object	Name
 Dented Bike	"Dented Bike"
 
 Dented Bike is a scavevent.
-The sarea of Dented Bike is "Allzones".
+ResolveFunction of Dented Bike is "[ResolveEvent Dented Bike]".
+Sarea of Dented Bike is "Allzones".
 dentedbikecount is a number that varies.
 
-Instead of resolving a Dented Bike:
+to say ResolveEvent Dented Bike:
 	say "You find a dented bicycle, lying abandoned on the road. The shreds of its former owner's clothing are hanging from it and a few small tufts of fur are scattered around, leaving you to wonder what happened to him or her.";
 	let difficulty be a random number from 8 to 16;
-	if hardmode is true, increase difficulty by a random number between 0 and 2;
+	if HardMode is true, increase difficulty by a random number between 0 and 2;
 	let bonus be ( perception of Player + level of Player minus 10 ) divided by 2;
 	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	let dice be a random number from 1 to 20;
@@ -292,15 +296,16 @@ Object	Name
 Looted Supermarket	"Looted Supermarket"
 
 Looted Supermarket is a scavevent.
-The sarea of Looted Supermarket is "Allzones".
+ResolveFunction of Looted Supermarket is "[ResolveEvent Looted Supermarket]".
+Sarea of Looted Supermarket is "Allzones".
 supermarketcount is a number that varies.
 
-Instead of resolving a Looted Supermarket:
+to say ResolveEvent Looted Supermarket:
 	say "You decide to check out a small supermarket on your search for foodstuffs. Sadly, lots of other people had the same idea when this whole chaos started. The shelves are completely empty, with even absolutely useless stuff during an apocalypse looted to the last item.";
 	let t be a random number between 1 and 4;
 	if t is 1:
 		let difficulty be a random number from 6 to 16;
-		if hardmode is true, increase difficulty by a random number between 0 and 2;
+		if HardMode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( perception of Player + level of Player minus 10 ) divided by 2;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
@@ -311,7 +316,7 @@ Instead of resolving a Looted Supermarket:
 			say "You continue looking elsewhere for supplies, but aren't able to find any on this trip.";
 	else if t is 2:
 		let difficulty be 12;
-		if hardmode is true, increase difficulty by a random number between 0 and 2;
+		if HardMode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( intelligence of Player + level of Player minus 10 ) divided by 2;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
@@ -323,7 +328,7 @@ Instead of resolving a Looted Supermarket:
 			say "You wander elsewhere to look for supplies, but aren't able to find any on this trip.";
 	else if t is 3:
 		let difficulty be 12;
-		if hardmode is true, increase difficulty by a random number between 0 and 2;
+		if HardMode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( intelligence of Player + level of Player minus 10 ) divided by 2;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
@@ -336,7 +341,7 @@ Instead of resolving a Looted Supermarket:
 	else if t is 4:
 		let x be 0;
 		let difficulty be a random number from 10 to 18;
-		if hardmode is true, increase difficulty by a random number between 0 and 2;
+		if HardMode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( strength of Player + level of Player minus 10 ) divided by 2;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		if crowbar is owned:
@@ -360,13 +365,14 @@ Object	Name
 Abandoned Cars	"Abandoned Cars"
 
 Abandoned Cars is a scavevent.
-The sarea of Abandoned Cars is "Allzones".
+ResolveFunction of Abandoned Cars is "[ResolveEvent Abandoned Cars]".
+Sarea of Abandoned Cars is "Allzones".
 
-Instead of resolving a Abandoned Cars:
+to say ResolveEvent Abandoned Cars:
 	say "You check out a few abandoned cars - looks like they were in a mid-size accident when the infection hit. They've all been looted - or just shredded inside and out by their changing owners. The trunk of one of them is still closed, and you soon learn why - it's been warped by the impact of another car and won't open.";
 	let x be 0;
 	let difficulty be a random number from 8 to 15;
-	if hardmode is true, increase difficulty by a random number between 0 and 2;
+	if HardMode is true, increase difficulty by a random number between 0 and 2;
 	let bonus be ( strength of Player minus 10 ) divided by 2;
 	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	if crowbar is owned:
@@ -400,9 +406,10 @@ Object	Name
 Manna from Heaven	"Manna from Heaven"
 
 Manna from Heaven is a scavevent.
-The sarea of Manna from Heaven is "Outside".
+ResolveFunction of Manna from Heaven is "[ResolveEvent Manna from Heaven]".
+Sarea of Manna from Heaven is "Outside".
 
-Instead of resolving a Manna from Heaven:
+to say ResolveEvent Manna from Heaven:
 	say "Moving through the city, you suddenly hear cawing and shouting from somewhere above. It's a harpy flying in your direction, clutching something in her claws - closely followed by another who keeps insulting her. Sounds like they're having a disagreement of the ownership of the can of peaches the first one has in her talons. Before long, that dissolves into a furious mid-flight clawing match during which the fought-over can is knocked out of the claw holding it - and literally falls into your hands. You quickly dash off with it before the harpies team up and attack you.";
 	ItemGain food by 1;
 	now Manna from Heaven is resolved;
@@ -415,9 +422,10 @@ Object	Name
 Plains Scavenging	"Plains Scavenging"
 
 Plains Scavenging is a scavevent.
-The sarea of Plains Scavenging is "Plains"
+ResolveFunction of Plains Scavenging is "[ResolveEvent Plains Scavenging]".
+Sarea of Plains Scavenging is "Plains"
 
-Instead of resolving a Plains Scavenging:
+to say ResolveEvent Plains Scavenging:
 	let y be "food";
 	let x be a random number from 1 to 12;
 	if x is 1 or x is 2:
@@ -464,7 +472,7 @@ Instead of resolving a Plains Scavenging:
 		ItemGain y by 1;
 	else if x is 2:
 		let difficulty be a random number from 6 to 16;
-		if hardmode is true, increase difficulty by a random number between 0 and 3;
+		if HardMode is true, increase difficulty by a random number between 0 and 3;
 		say "Sighing in annoyance you notice that there are some mutants lording over a few items, the [y] among them. Seeming peaceful enough folks, you head on over. The one in charge looks up at you with a grunt of annoyance at the interruption. From the looks of the creature, he should be ";
 		if difficulty < 8:
 			say "easy";
@@ -478,11 +486,11 @@ Instead of resolving a Plains Scavenging:
 			say "extremely difficult";
 		say " to contend with.";
 		let petbonus be false;
-		let bonus be ( the charisma of the player plus level of the player minus 10 ) divided by 2;
-		if companion of Player is equinoid warrior or companion of Player is felinoid companion or companion of Player is demon brute or companion of Player is royal tiger:
+		let bonus be ( Charisma of Player plus Level of Player minus 10 ) divided by 2;
+		if equinoid warrior is listed in companionList of Player or felinoid companion is listed in companionList of Player or demon brute is listed in companionList of Player or royal tiger is listed in companionList of Player:
 			increase bonus by 2;
 			now petbonus is true;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
@@ -494,7 +502,7 @@ Instead of resolving a Plains Scavenging:
 			ItemGain y by 1;
 	else if x is 3:
 		let difficulty be a random number from 6 to 16;
-		if hardmode is true, increase difficulty by a random number between 0 and 3;
+		if HardMode is true, increase difficulty by a random number between 0 and 3;
 		say "It is perched precariously among some rubble of a collapsing building. It looks ";
 		if difficulty < 8:
 			say "easy";
@@ -507,19 +515,19 @@ Instead of resolving a Plains Scavenging:
 		else:
 			say "extremely difficult";
 		say " to traverse.";
-		if companion of Player is bee girl:
+		if bee girl is listed in companionList of Player:
 			say "As you prepare to make the treacherous crossing through the rubble, Honey grabs your hand and pulls you back. 'Don't risk it. I can get it for you, honeybunch.' And with that, her translucent wings start to buzz, carrying her into the air enough to hover up to grab the [y] for you and return with a happy smile.";
 			ItemGain y by 1;
-		else if companion of Player is Exotic Bird:
+		else if Exotic Bird is listed in companionList of Player:
 			say "As you prepare to make the dangerous crossing, your bird pet calls out sharply and takes the air. It swoops over to the [y], grabs it in its talons and returns it to you, saving you from climbing across the broken ruins.";
 			ItemGain y by 1;
-		else if companion of Player is Gryphoness:
+		else if Gryphoness is listed in companionList of Player:
 			let gryphlets be Libido of gryphoness / 4;
 			say "As you prepare to make the dangerous crossing, Denise pulls you back and flaps her wings. 'I can get that for you easily, sweetie,' she says as she takes to the air. The gryphoness flaps over to grab the [y] and brings it back to you, earning a warm hug[if gryphlets is 1] from you and your gryphlet child[else if gryphlets is 2] from you and your gryphlet children[end if].";
 			ItemGain y by 1;
 		else:
-			let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
-			if hardmode is true and bonus > 10, now bonus is 10;
+			let bonus be ( Dexterity of Player plus Level of Player minus 10 ) divided by 2;
+			if HardMode is true and bonus > 10, now bonus is 10;
 			if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
@@ -539,7 +547,8 @@ Object	Name
 Garden Veggies	"Garden Veggies"
 
 Garden Veggies is a scavevent.
-The sarea of Garden Veggies is "Outside".
+ResolveFunction of Garden Veggies is "[ResolveEvent Garden Veggies]".
+Sarea of Garden Veggies is "Outside".
 veggiegardenfight is a number that varies.
 gardenveg is a number that varies.
 lastgardenveg is a number that varies. lastgardenveg is usually 255.
@@ -547,7 +556,7 @@ when play begins:
 	add Garden Veggies to BadSpots of FurryList;
 
 
-Instead of resolving a Garden Veggies:
+to say ResolveEvent Garden Veggies:
 	if FemaleList is banned and MaleList is banned:
 		say "     During your search for more supplies, you find a small backyard garden, but the plants are shriveled and dying in the parched soil. Between the heat wave and the dry weather, the plants are withering away. You gather up what feeble veggies you can, having to strip the garden bare to get even get enough for a single meal.";
 		ItemGain food by 1;
@@ -590,11 +599,12 @@ Object	Name
 Free Drink	"Free Drink"
 
 Free Drink is a scavevent.
-The sarea of Free Drink is "Campus".
+ResolveFunction of Free Drink is "[ResolveEvent Free Drink]".
+Sarea of Free Drink is "Campus".
 when play begins:
 	add Free Drink to BadSpots of MaleList;
 
-Instead of resolving a Free Drink:
+to say ResolveEvent Free Drink:
 	project the figure of Talov_Kerr_Barrel_icon;
 	say "     As you're searching around the campus for some supplies, you spot a team of Satyr's rolling a heavy cask towards one of the dorm buildings. They seem in rather good spirits, if a little tired, and wave at you in a friendly manner. Deciding to risk it, you approach cautiously. They tell you they're bringing the wine in for an awesome party and are about to grab a quick drink for themselves before they get back to work. You're offered a swig as well.";
 	say "     [bold type]Would you like to take a drink to quench your thirst?[roman type][line break]";
@@ -652,9 +662,10 @@ Object	Name
 DbLD	"DbLD"
 
 DbLD is a scavevent.
-The sarea of DbLD is "Allzones".
+ResolveFunction of DbLD is "[ResolveEvent DbLD]".
+Sarea of DbLD is "Allzones".
 
-Instead of resolving a DbLD:
+to say ResolveEvent DbLD:
 	say "     While searching through the city for supplies, you come across the corpse of an excessively muscled man with a grizzled face. It seems that some creature took rather violent exception to him from the signs of destruction all around. The nearby walls are littered with bullet holes, though you don't spot any blood from his whatever his enemy was. Whatever strange infection this unlucky person had, it really left him unable to fight. Given his lack of actual wrists and ankles, it's clear he'd have trouble standing and fighting, let alone supporting his own top-heavy weight on his small, misshapen feet. Given the hundreds of bullet holes, it seems he had trouble aiming that giant gun of his (now shattered into pieces) thanks to his perpetually squinting eyes.";
 	say "     And while it doesn't seem to have done its previous owner much good, you unbuckle the single, oversized shoulderpad from his malproportioned body and take it with you. You know it's not really going to help much, but it's better than nothing and isn't doing that guy any good now.";
 	ItemGain shoulder pad by 1;
@@ -671,10 +682,11 @@ Object	Name
 Patient Rooms	"Patient Rooms"
 
 Patient Rooms is a scavevent.
-The sarea of Patient Rooms is "Hospital".
+ResolveFunction of Patient Rooms is "[ResolveEvent Patient Rooms]".
+Sarea of Patient Rooms is "Hospital".
 patrooms is a number that varies.
 
-Instead of resolving a Patient Rooms:
+to say ResolveEvent Patient Rooms:
 	let y be "food";
 	let x be a random number from 1 to 12;
 	if x is 1 or x is 2:
@@ -724,8 +736,8 @@ Instead of resolving a Patient Rooms:
 				say "Your specific hunting leads you towards your target.";
 	if patrooms is 0 and a random chance of 1 in 3 succeeds:	[blocked room]
 		say "     Deciding to search through some of the hospital rooms for items left behind during the outbreak, you go through several rooms and find nothing before reaching one that's been barricaded from the inside. Checking carefully, it doesn't appear that anyone is inside there now. A little puzzled, you risk asking if anyone's there, but get no response. But peering through the window, you also see a bottle of water sitting out on the small dresser inside.";
-		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		let bonus be ( Strength of Player plus Level of Player minus 10 ) divided by 2;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
@@ -753,9 +765,10 @@ Object	Name
 Shattered House	"Shattered House"
 
 Shattered House is a scavevent.
-The sarea of Shattered House is "Allzones".
+ResolveFunction of Shattered House is "[ResolveEvent Shattered House]".
+Sarea of Shattered House is "Allzones".
 
-Instead of resolving a Shattered House:
+to say ResolveEvent Shattered House:
 	say "     As you travel along, you are forced to cut down a side street to avoid a small cluster of creatures lustfully fucking in the road up ahead. Down this street, you pass a few houses, including one that seems to have been partially blown out from the inside. Given the lack of fire damage and excessive amounts of sticky fluids, you'd guess that whoever once lived in there became very large very quickly";
 	let x be a random number from 1 to 5;
 	if x is 1 or x is 2:
@@ -763,8 +776,8 @@ Instead of resolving a Shattered House:
 		ItemGain food by 1;
 	else if x is 3:
 		say ".";
-		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		let bonus be ( Strength of Player plus Level of Player minus 10 ) divided by 2;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
@@ -776,8 +789,8 @@ Instead of resolving a Shattered House:
 			say "     Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down. Seeing more underneath, you try to lift up the rubble to search for more, but it's too heavy to move before an ominous creaking sound ends you back before more of the house collapses.";
 	else if x is 4:
 		say ".";
-		let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		let bonus be ( Dexterity of Player plus Level of Player minus 10 ) divided by 2;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 16:[line break]";
@@ -791,8 +804,8 @@ Instead of resolving a Shattered House:
 			ItemGain food by 1;
 	else if x is 5:
 		say ".";
-		let bonus be ( the perception of the player plus level of the player minus 10 ) divided by 2;
-		if hardmode is true and bonus > 10, now bonus is 10;
+		let bonus be ( Perception of Player plus Level of Player minus 10 ) divided by 2;
+		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
@@ -821,9 +834,10 @@ Object	Name
 Scattered Clothing	"Scattered Clothing"
 
 Scattered Clothing is a scavevent.
-The sarea of Scattered Clothing is "Allzones".
+ResolveFunction of Scattered Clothing is "[ResolveEvent Scattered Clothing]".
+Sarea of Scattered Clothing is "Allzones".
 
-Instead of resolving a Scattered Clothing:
+to say ResolveEvent Scattered Clothing:
 	say "     Searching [one of]a small store[or]a convenience store[or]a gas station[or]a motel[or]a coffee shop[or]a newsstand[or]a taco truck[at random], you find that another scavenger has already been there before you. Poking around a little on the odd chance that something may have been missed, it sadly turns out that the place has been quite thoroughly ransacked. You're well out of luck for any food or drink to be found here. But then, just as you are about to give up on the location, your gaze falls upon an article of clothing that (for once) isn't torn, shredded, encrusted in dried cum or stained in some other horrible way. Given how hard it is to observe even the most basic levels of cleanliness in a situation like the nanite apocalypse, clean secondhand clothing is actually a quite lucky find, so you quickly add it to your pack.";
 	LineBreak;
 	let randomnumber be a random number from 1 to 4;

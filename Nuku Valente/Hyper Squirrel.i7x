@@ -10,6 +10,7 @@ Object	Name
 Hyper Squirrel Girl	"Hyper Squirrel Girl"
 
 Hyper Squirrel Girl is a situation.
+ResolveFunction of Hyper Squirrel Girl is "[ResolveEvent Hyper Squirrel Girl]".
 hsrp is a number that varies.
 squirrelfucked is a number that varies. squirrelfucked is usually 0.
 nosquirrelanal is a truth state that varies. nosquirrelanal is usually false.
@@ -19,16 +20,14 @@ when play begins:
 	add Hyper Squirrel Girl to BadSpots of FurryList;
 	add Hyper Squirrel Girl to badspots of HermList;
 
-After resolving a Hyper Squirrel Girl, try looking;
-
-Instead of Resolving a Hyper Squirrel Girl:
+to say ResolveEvent Hyper Squirrel Girl:
 	project the figure of Snow_icon;
 	if hsrp is 0:
 		say "     As you wander around, you get the feeling that you're being watched. Catching a few brief glances of red fur, you realize your pursuer is playing with you. Growing tired of this, you sit down, and wait. A few minutes pass, when you hear a giggle to you left. You whip your head around, and there stands a squirrel girl, wearing the tattered remains of a buttoned shirt, buttons long gone. Squirrel herm, you correct yourself, as you notice the large bulge in her pants. Before you can call out to her, she takes off... but you have a feeling she'll be back.";
 		increase hsrp by 1;
 	else if hsrp is 1:
 		say "     You once again feel someone's eyes on you, probably that squirrel herm again. Attempting to catch her off guard, you bolt to the nearest building, trying catch her before she runs again.";
-		let bonus be (( the Perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -38,7 +37,7 @@ Instead of Resolving a Hyper Squirrel Girl:
 			say "You spot an acceptable hiding place and creep towards it.";
 		else:
 			say "You don't see any good hiding places, so you just try to quietly duck down.";
-		now bonus is ( ( diceroll minus 12 ) divided by 2 ) plus (( the Dexterity of the player minus 10 ) divided by 2);
+		now bonus is ( ( diceroll minus 12 ) divided by 2 ) plus (( Dexterity of Player minus 10 ) divided by 2);
 		now diceroll is a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -82,7 +81,7 @@ Squirrel Den	"Squirrel Den"
 
 Squirrel Den is a room. It is private.	[This is just a holding spot and not a real room]
 
-The description of Squirrel Den is "Not a literal squirrel den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.".
+Description of Squirrel Den is "Not a literal squirrel den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.".
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -112,14 +111,14 @@ PenileVirgin of Snow is true.
 SexuallyExperienced of Snow is false.
 MainInfection of Snow is "Hyper Squirrel".
 
-The description of Snow is "[SnowDesc]";
+Description of Snow is "[SnowDesc]";
 
 to say SnowDesc:
 	project the figure of Snow_icon;
 	say "     This sexual beauty is about six feet tall, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armor. Type [bold type]upgrade (weapon/armor)[roman type] and she'll give it a working over.";
 
 Snow is in Squirrel Den.
-The conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" }.
+Conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" }.
 the fuckscene of Snow is "[sexwithsnow00]".
 the scent of snow is "[snowscent]".
 
@@ -154,7 +153,7 @@ Check smithing:
 Carry out smithing:
 	project the figure of Snow_icon;
 	say "     You offer up [the noun] to Snow. Snow smiles and blows you a kiss before moving off with it and tinkering it with a while before offering it back to you, mildly improved.";
-	if the noun is armament, increase the weapon damage of the noun by 1;
+	if the noun is armament, increase Weapon Damage of the noun by 1;
 	if the noun is nanite collector:
 		if nanitemeter is 0:
 			say "     Where did you get one of these? Did you swipe it? Hey, I'm not going to get myself into trouble modifying stuff you've stolen.";
@@ -429,11 +428,12 @@ Object	Name
 Wild Squirrels	"Wild Squirrels"
 
 Wild Squirrels is a situation.
+ResolveFunction of Wild Squirrels is "[ResolveEvent Wild Squirrels]".
 Wild Squirrels is inactive.
 
-Instead of resolving a Wild Squirrels:
+to say ResolveEvent Wild Squirrels:
 	say "     As you wander, you get the feeling that you are being watched somehow...";
-	let bonus be (( the Perception of the player minus 10 ) divided by 2);
+	let bonus be (( Perception of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
@@ -446,7 +446,7 @@ Instead of resolving a Wild Squirrels:
 	say "A crushing weight descends on you from behind as a beast tackles you. Its teeth nip at your ear as great soft paws grab at your front and belly, rubbing you quite affectionately. It feels very curvy, with the exception of a very stiff erection that shoves rudely against your backside as it molests you eagerly. Just as you start to struggle against the beast, another grabs you at the face, paws at your cheeks as it guides you up to look at it. It looks like Snow, but isn't, no intelligence in those eyes as it chitters soothingly and leans in to kiss you firmly, bestial lips to yours.";
 	say "     Resist?";
 	if Player consents:
-		let bonus be (( the Strength of the player minus 10 ) divided by 2);
+		let bonus be (( Strength of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -455,14 +455,14 @@ Instead of resolving a Wild Squirrels:
 			stop the action;
 		else:
 			say "Despite your protests and struggles, you find your mouth being guided to a large, pink dick. The squirrel presses it into you as pre splashes across your tongue, and resistance seems to melt from you. As you start to nurse, she fills your mouth with that salty fluid, each gulp draining the will from you as you gulp down a few mouthfuls, now pliant and ready to play with the squirrels.";
-			decrease the humanity of Player by 10 + HP of Snow;
+			decrease Humanity of Player by 10 + HP of Snow;
 	if HP of Snow is even:
 		if Player is female and Cunt Depth of Player > 8:
 			say "     One of the squirrels grabs you at the hips and rubs across your sides and backs with those, oh so soft, paws as she eases up into you. Her thick, pink, shaft buries warmly into your waiting snatch as she pulls you back into her lap, slowly settling to the ground with you, bouncing you up and down in her lap as she grunts and coos with pleasure. Your body tingles with growing delight as her infectious seed already works at your insides, weakening your desire to resist her and filling you with an urge to be filled with her.";
 		else:
 			say "     One of the squirrels makes a sad sort of noise, almost apologetic, before she shoves you forward, grabs your hips, and plunges her thick cock into your back door, rocking easily into your ass as the thick sprays of her pre lubricate you, both in body and mind. Her rough attentions feel better by the moment as you find yourself moaning with desire, pressing back against her as she claims you.";
 		say "     The other squirrel approaches from the front. She reaches for your [Skin of Player] [if Breast Size of Player > 0][breast size desc of Player][else]flat[end if] chest and rubs slowly as she presses slowly to your front, her stiff erection rubbing against your belly as she guides you to a large white furred breast. You are soon nursing at her, filling your belly with the intoxicating and warming fluids she can offer. Part of you wonders how Snow got away from these two at all as you feel your will to do so crumbling with time, your body aroused as never before even as she pulls you from her teat and pushes her cock to your lips, slowly easing the thick pink length into your mouth and rocking slowly against you.";
-		decrease the humanity of Player by 10 + ( HP of Snow * 3 );
+		decrease Humanity of Player by 10 + ( HP of Snow * 3 );
 	else:
 		if Player is male:
 			say "     After thrusting her tasty cock into your mouth a few times to make sure that you're nice and compliant, she withdraws and pulls you into her welcoming arms. Guided onto the ground atop her, she kisses you lustfully while her partner lines up your cock with the squirrel's pussy even as she lines up her own cock with your [if Player is female and Cunt Depth of Player > 8]wet snatch[else]tight asshole[end if]. They chitter softly between themselves for a moment, holding you in place before the one behind you pushes forward, easing her throbbing cock into you and making you moan as you are made to thrust into her partner at the same time. As you are sandwiched between them while they fuck you, your body tingles with growing delight as her infectious pre leaks into you, arousing you further and making you long to be filled by her.";
@@ -476,9 +476,9 @@ Instead of resolving a Wild Squirrels:
 		else:
 			say "     After thrusting into your mouth a few more times to make sure that you're nice and compliant, she withdraws and pulls you into her welcoming arms. Guided onto the ground atop her, she kisses you lustfully while her partner lines up your snug asshole with the cock of the lower squirrel even as she grinds her own cock with your tight asshole. They chitter softly between themselves for a moment, dripping precum onto your back entrance to prepare you, before the one atop you grinds down on your ass, pushing you down onto her partner's cock at the same time. You are made to ride in her lap until you're nicely stretched by the herm's cock. Once your hole is relaxed and you feel only pleasure because of their arousing precum, you are made to slide off her cock to allow the one atop you to have a turn. They take turns with you like this, sharing you between them back and forth. Having the well-endowed herm swapping between you is very arousing, especially as their infectious and arousing precum affects you more and more. You are fucked wildly by the both of them, making you moan and climax several times.";
 			say "     Your strongest climax comes of course as the pair orgasm with loud chitters, blasting their seed into you. First one shoots her load into your bowels, then the next has her cock quickly stuffed into you to keep her partner's load inside as she fills you as well. Their hot semen fills you with warmth and arousal. With their intoxicating fluids inside you, you can feel a growing longing to stay them. The same longing that Snow must have felt. Your will to resist them crumbles further as you orgasm loudly before passing into a hazy afterglow.";
-		decrease the humanity of Player by 10 + ( HP of Snow * 4 );
+		decrease Humanity of Player by 10 + ( HP of Snow * 4 );
 	increase HP of Snow by 1;
-	if the humanity of Player < 10:
+	if Humanity of Player < 10:
 		now BodyName of Player is "Hyper Squirrel";
 		if "Male Preferred" is not listed in feats of Player:
 			if Nipple Count of Player < 2, now Nipple Count of Player is 2;
@@ -519,8 +519,8 @@ Instead of resolving a Wild Squirrels:
 
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -573,9 +573,13 @@ When Play begins:
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
+	now SeductionImmune entry is false;
+	now libido entry is 80; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]athletic[or]curvy[or]agile[at random]";
 	now type entry is "[one of]rodent[or]squirrel-like[at random]";
@@ -590,7 +594,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -698,7 +702,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 
 This is the Snow's Epilogue rule:
 	if Snow is in Grey Abbey Library:
-		if HP of the player > 0:
+		if HP of Player > 0:
 			trigger ending "Snow's Epilogue"; [Here it states, that the ending has been played.]
 			if humanity of Player < 10:
 				say "     Snow abandons the idea of being saved when you go feral and she joins you in the city, remaining close at your side and becoming like a pack member to you, adoring and loving. Your life with her as a wild squirrel is one of bestial lust as you spend much of your day fucking one another in the squirrel's den they've set up in a small home near a cluster of acorn trees. From time to time, you and the others will snag a poor, unprepared person and fuck them into submission, adding another squirrel to your numbers. When there gets to be too many for your small home, a group breaks off to find a new home to claim as a nest. But you and Snow always remain there along with your first pair of wild lovers";

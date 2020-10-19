@@ -2,91 +2,106 @@ Version 2 of Spike by Wahn begins here.
 [Version 1 - New Character - Wahn]
 [Version 2 - New Naming Rules, Anal Scenes - Wahn]
 
-[ HP of Spike                                                                  ]
-[   0: not met yet                                                             ]
-[   1: recruited                                                               ]
-[  99: sent into the city                                                      ]
-[ 100: sent back to Alexandra                                                  ]
+[ HP of Spike                                                                        ]
+[   0: not met yet                                                                   ]
+[   1: recruited                                                                     ]
+[  99: sent into the city                                                            ]
+[ 100: sent back to Alexandra                                                        ]
 
-[ MaxHP of Spike - who is his daddy?                                           ]
-[   1: Player                                                                  ]
-[   2: Fang                                                                    ]
-[   3: Korvin                                                                  ]
-[   4: Carl                                                                    ]
-[   5: Brutus                                                                  ]
-[   6: Karel                                                                   ]
-[   7: Isaac                                                                   ]
-[   8: Random farmhand horsemen                                                ]
+[ MaxHP of Spike - who is his daddy?                                                 ]
+[   1: Player                                                                        ]
+[   2: Fang                                                                          ]
+[   3: Korvin                                                                        ]
+[   4: Carl                                                                          ]
+[   5: Brutus                                                                        ]
+[   6: Karel                                                                         ]
+[   7: Isaac                                                                         ]
+[   8: Random farmhand horsemen                                                      ]
+[   9: Nelson                                                                        ]
 
-[ thirst of Spike - what does he call the player?                              ]
-[  0: <name of Player>                                                         ]
-[  1: standard setting - Boss                                                  ]
-[  2: Don                                                                      ]
-[  3: Capo                                                                     ]
-[  4: Kingpin                                                                  ]
-[  5: Oyabun                                                                   ]
-[  6: Chief                                                                    ]
-[ 11: Daddy                                                                    ]
-[ 12: Dad                                                                      ]
-[ 13: Stepdaddy                                                                ]
-[ 14: Stepdad                                                                  ]
-[ 15: Master                                                                   ]
-[ 21: Mommy                                                                    ]
-[ 22: Mom                                                                      ]
-[ 23: Stepmommy                                                                ]
-[ 24: Stepmom                                                                  ]
-[ 25: Mistress                                                                 ]
+[ thirst of Spike - what does he call the player?                                    ]
+[  0: <name of Player>                                                               ]
+[  1: standard setting - Boss                                                        ]
+[  2: Don                                                                            ]
+[  3: Capo                                                                           ]
+[  4: Kingpin                                                                        ]
+[  5: Oyabun                                                                         ]
+[  6: Chief                                                                          ]
+[ 11: Daddy                                                                          ]
+[ 12: Dad                                                                            ]
+[ 13: Stepdaddy                                                                      ]
+[ 14: Stepdad                                                                        ]
+[ 15: Master                                                                         ]
+[ 21: Mommy                                                                          ]
+[ 22: Mom                                                                            ]
+[ 23: Stepmommy                                                                      ]
+[ 24: Stepmom                                                                        ]
+[ 25: Mistress                                                                       ]
 
-[ Libido of Spike - Spike in subby position                                    ]
-[  0: nothing yet                                                              ]
-[  1: talked into oral service / BJ                                            ]
-[  2: anal virginity taken (nicely)                                            ]
-[  3: repeat anal sex (nicely)                                                 ]
-[  4: nothing yet                                                              ]
-[ 21: pressured into oral service / BJ                                         ]
-[ 22: anal virginity taken (strict)                                            ]
-[ 23: repeat anal sex (strict)                                                 ]
-[ 24: nothing yet                                                              ]
-[ 41: forced into oral service / BJ                                            ]
-[ 42: anal virginity taken (forcefully)                                        ]
-[ 43: repeat anal sex (forceful)                                               ]
-[ 44: nothing yet                                                              ]
+[ Libido of Spike - Spike in subby position                                          ]
+[  0: nothing yet                                                                    ]
+[  1: talked into oral service / BJ                                                  ]
+[  2: anal virginity taken (nicely)                                                  ]
+[  3: repeat anal sex (nicely)                                                       ]
+[  4: nothing yet                                                                    ]
+[ 21: pressured into oral service / BJ                                               ]
+[ 22: anal virginity taken (strict)                                                  ]
+[ 23: repeat anal sex (strict)                                                       ]
+[ 24: nothing yet                                                                    ]
+[ 41: forced into oral service / BJ                                                  ]
+[ 42: anal virginity taken (forcefully)                                              ]
+[ 43: repeat anal sex (forceful)                                                     ]
+[ 44: nothing yet                                                                    ]
 
-[ lust of Spike - sex tracking                                                 ]
-[  0: never had sex with the player                                            ]
-[  1: got blown by the player                                                  ]
-[  2: fucked the player's pussy                                                ]
-[  3: fucked the player's ass                                                  ]
-[  4: fucked the player's pussy + ass                                          ]
+[ lust of Spike - sex tracking                                                       ]
+[  0: never had sex with the player                                                  ]
+[  1: got blown by the player                                                        ]
+[  2: fucked the player's pussy                                                      ]
+[  3: fucked the player's ass                                                        ]
+[  4: fucked the player's pussy + ass                                                ]
 
-[ Intelligence - transformation knowledge                                      ]
-[  0: never discussed anything                                                 ]
-[  0: never discussed anything                                                 ]
-[  0: never discussed anything                                                 ]
+[ Intelligence - transformation knowledge                                            ]
+[  0: never discussed anything                                                       ]
+[  0: never discussed anything                                                       ]
+[  0: never discussed anything                                                       ]
 
-[ Energy - Relationship with Tehuantl                                          ]
-[   0: never met                                                               ]
-[   1: they're training                                                        ]
-[   2: Spike got a BJ, player watched                                          ]
-[   3: Spike got a BJ, player didn't watch                                     ]
-[   4: shared jerking, player watched                                          ]
-[   5: shared jerking, player did not watch                                    ]
-[   6: Tehuantl has permission t get fucked by Spike                           ]
-[  50: Player commanded T to just have oral from now on                        ]
-[ 100: Player stopped things cold between them                                 ]
+[ Energy - Relationship with Tehuantl                                                ]
+[   0: never met                                                                     ]
+[   1: they're training                                                              ]
+[   2: Spike got a BJ, player watched                                                ]
+[   3: Spike got a BJ, player didn't watch                                           ]
+[   4: shared jerking, player watched                                                ]
+[   5: shared jerking, player did not watch                                          ]
+[   6: Tehuantl has permission t get fucked by Spike                                 ]
+[  50: Player commanded T to just have oral from now on                              ]
+[ 100: Player stopped things cold between them                                       ]
 
-[ Stamina - Relationship with Urik                                             ]
-[   0: never interacted                                                        ]
-[   1: Spike got goaded into training                                          ]
-[   2: Spike got his first 'protein shake'                                     ]
-[   3: Spike got his second 'protein shake'                                    ]
-[   4: new weights for Spike, future trainings always with shakes              ]
-[   5: shake + shirtless pushups done                                          ]
-[   6: Spike got a jockstrap now                                               ]
-[  50: Spike won't accept any drinks from Urik from now on                     ]
-[  51: Urik knows that Spike won't accept any drinks from now on               ]
-[  52: training without shakes from now on                                     ]
-[  53: training without shakes - shirtless pushups done                        ]
+[ Stamina - Relationship with Urik (controlled Urik, not friends with the player)    ]
+[   0: never interacted                                                              ]
+[   1: Spike got goaded into training                                                ]
+[   2: Spike got his first 'protein shake'                                           ]
+[   3: Spike got his second 'protein shake'                                          ]
+[   4: new weights for Spike, future trainings always with shakes                    ]
+[   5: shake + shirtless pushups done                                                ]
+[   6: Spike got a jockstrap now                                                     ]
+[  50: Spike won't accept any drinks from Urik from now on                           ]
+[  51: Urik knows that Spike won't accept any drinks from now on                     ]
+[  52: training without shakes from now on                                           ]
+[  53: training without shakes - shirtless pushups done                              ]
+
+[ Dexterity - Relationship with Urik (warrior/friend Urik)                           ]
+[   0: never interacted                                                              ]
+[   1: Spike got goaded into training                                                ]
+[   2: Spike got his first 'protein shake'                                           ]
+[   3: Spike got his second 'protein shake'                                          ]
+[   4: new weights for Spike, future trainings always with shakes                    ]
+[   5: shake + shirtless pushups done                                                ]
+[   6: Spike got a jockstrap now                                                     ]
+[  50: Spike won't accept any drinks from Urik from now on                           ]
+[  51: Urik knows that Spike won't accept any drinks from now on                     ]
+[  52: training without shakes from now on                                           ]
+[  53: training without shakes - shirtless pushups done                              ]
+
 
 thirst of Spike is usually 1. [standard setting change]
 MaxHP of Spike is usually 1. [for now the player is always the father as the default]
@@ -98,7 +113,7 @@ an everyturn rule:
 		add "Tamed" to Traits of doberman companion;
 		now doberman companion is tamed;
 		now thirst of Spike is 1; [default "Boss" name]
-	if doberman companion is tamed and companion of Player is not doberman companion and (Spike is in NPC Nexus or Spike is nowhere): [if the player had him as companion as they exported, he won't be in his room]
+	if doberman companion is tamed and doberman companion is not listed in companionList of Player and (Spike is in NPC Nexus or Spike is nowhere): [if the player had him as companion as they exported, he won't be in his room]
 		move Spike to Sitting Area;
 	if MaxHP of Spike is 0:
 		now MaxHP of Spike is 1;
@@ -108,6 +123,7 @@ Section 1 - Introduction
 instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Library and Libido of Alexandra > 2 and a random chance of 1 in 4 succeeds and HP of Spike is 0):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
+	now Spike is in Grey Abbey Library;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Meeting Spike[line break]";
@@ -148,20 +164,22 @@ instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Libra
 			LineBreak;
 			say "     Telling the young man that no, you [italic type]actually[roman type] just want him to go back to his mother hand help her keep on top of the unruly bunch of his siblings, Spike growls under his breath. Flinging the cigarette away with an angry flick of his wrist, the anthro canine grumbles, 'This is fucking stupid,' and looks to the ground sulkily. For a moment, it seems like he'll just reject your decision, but then he suddenly looks up at you and barks out, 'I thought that you'd be different. Like a real leader or something!' And with that, he turns his back to you, shuffling off to get back into the library.";
 			now HP of Spike is 100;
+			now Spike is nowhere;
 	else: [send him away - you monster!]
 		LineBreak;
 		say "     As you tell the young dog that he should go off on his own, he freezes in motion for a second, not sure what to reply. Clearly, this is one option that he hadn't even considered when he played through things in his mind. You see him swallow nervously, glancing to the library entrance for a second before he shakes his head to himself. 'Okay then, I'll do it,' Spike says, his firm tone sounding just a little bit brittle to your ears as he pushes himself off from the wall. 'I'm gonna go make my own way, out there. Alone in the city,' he adds, taking a few slow steps down the road as if waiting to hear you say that he passed the test and that you'll keep him now. But no, all you give him is a wish for good luck, which leaves Spike standing there for a moment longer, his back turned to you, before he runs away, not stopping for one second before he is out of sight.";
 		decrease Libido of Alexandra by 1; [one less teen following Alexandra around]
 		now HP of Spike is 99;
+		now Spike is nowhere;
 	now PlayerMet of Spike is true;
 
 to say SpikeAccepted:
 	say "     As you agree to take Spike along as your companion, his tail starts wagging up a storm and the young man says excitedly, 'Right on! We'll make this city ours! Let's have some fun!' With his hand lowering to rub the crotch of his jeans, you have little doubt what sort of 'fun' he expects to soon have. Taking another drag from his smoke, the anthro canine then flicks it aside and takes position by your side, steeling his expression to be properly tough and just a bit overbearing, as he expects the right-hand man of 'The Boss' would need to be.";
-	say "     (Spike the doberman is now a possible companion! You can make him your active companion by typing [bold type][link]companion Spike[end link][roman type] or [bold type][link]companion doberman[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Spike[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+	say "     (Spike the doberman is now a possible ally! You can make him your active ally by typing [bold type][link]ally Spike[end link][roman type] or [bold type][link]ally doberman[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Spike[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 	now HP of Spike is 1;
 	add "Tamed" to Traits of doberman companion;
 	now doberman companion is tamed;
-	now companion of Player is doberman companion;
+	AddCompanionFunction "doberman companion";
 
 Section 2 - Combat Pet
 
@@ -169,14 +187,16 @@ Table of GameCharacterIDs (continued)
 object	name
 doberman companion	"doberman companion"
 
-doberman companion is a pet. doberman companion is a part of the player.
+doberman companion is a pet.
+NPCObject of doberman companion is Spike.
 understand "Spike" as doberman companion.
 understand "Doberman" as doberman companion.
+IDList of doberman companion is { "Spike", "spike", "dog", "Dobie", "dobie", "Doberman", "doberman", "Doberman Companion", "doberman companion" }.
 printed name of doberman companion is "Spike".
-The description of doberman companion is "[SpikeDesc]".
-The weapon damage of doberman companion is 7.
-The level of doberman companion is 5.
-The Dexterity of doberman companion is 16.
+Description of doberman companion is "[SpikeDesc]".
+Weapon Damage of doberman companion is 15.
+The level of doberman companion is 1.
+Dexterity of doberman companion is 10.
 The summondesc of doberman companion is "[SummonSpike]".
 The dismissdesc of doberman companion is "[DismissSpike]".
 The assault of doberman companion is "[one of]Spike pounces your opponent, landing some good hits.[or]The anthro doberman by your side lands a kick on the leg of your opponent, hurting and distracting them.[or]An aggressive bark by Spike distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, Spike snaps for your enemy with his teeth, leaving a gash as he is fought off.[at random]".
@@ -190,10 +210,9 @@ to say SummonSpike:
 			now Sleeping of Spike is false;
 		else:
 			say "     You give a sharp whistle and wave to Spike, directing him to follow you. The young canine quickly rushes to your side and takes his spot to support you.";
-		now Spike is nowhere;
 	else: [regular summoning]
 		say "     And how do you want to do that? Cell phone reception kinda went downhill with the start of the nanite apocalypse and it's not like you can just magic up Spike to appear next to you. Go pick him up yourself.";
-		now companion of Player is nullpet;
+		now SummonFailure is true;
 
 to say DismissSpike:
 	project the figure of Spike_face_icon;
@@ -247,8 +266,8 @@ SexuallyExperienced of Spike is true.
 TwistedCapacity of Spike is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Spike is false. [steriles can't knock people up]
 MainInfection of Spike is "Doberman Male".
-The description of Spike is "[SpikeDesc]".
-The conversation of Spike is { "<This is nothing but a placeholder!>" }.
+Description of Spike is "[SpikeDesc]".
+Conversation of Spike is { "<This is nothing but a placeholder!>" }.
 The scent of Spike is "     Spike's scent of dog is almost drowned out by some sort of after-shave he's found out in the city. It's a good, masculine scent, you only wish he wouldn't be using quite as much of it.".
 
 to say SpikeDesc:
@@ -263,6 +282,8 @@ to say SpikeDesc:
 		say "     Having claimed a corner of the upper library floor as his, Spike has made a little man-cave for himself, dragging a mattress up from the bunker and setting the desk that had occupied the corner as a little reading nook on its side, to block a passage between two bookshelves. Posters of scantily dressed human women, as well as one or two with anthro furry erotic art have been pinned to the back wall so that he can look at them when lying down. Which Spikes does quite a bit, day-dreaming about things while stroking himself[if Spike is asleep]. Right now though, the slender doberman is [bold type]asleep[roman type], stretched out naked on his mattress with his usual outfit in a pile next to it[end if].";
 	else:
 		say "     Accompanying you on your travel throughout the city, he is never far away, usually just a step behind and a little to the side, serving as muscle and glowering at anyone who might dream of crossing you. As he notices your attention on himself, the doberman strokes a hand through his green-dyed hair and gives you a [if Libido of Spike > 40]slightly frightened[else]respectful[end if] nod.";
+	if doberman companion is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 everyturn rule:
 	if doberman companion is tamed and Spike is in Sitting Area:
@@ -285,7 +306,7 @@ everyturn rule:
 		[else if TimekeepingVar is 3 or TimekeepingVar is -5:] [evening]
 		[else if TimekeepingVar is 2 or TimekeepingVar is -6:] [early night]
 
-Section 3 - Conversation
+Section 4 - Conversation
 
 instead of conversing the Spike:
 	say "[SpikeTalkCheck]";
@@ -312,7 +333,7 @@ to say SpikeTalkCheck:
 				say "     Seeing that your companion is resting, you decide to wait and talk to him later.";
 		else:
 			say "[SpikeTalkMenu]";
-	else if companion of Player is doberman companion:
+	else if doberman companion is listed in companionList of Player:
 		say "[SpikeTalkMenu]";
 	else:
 		say "     Spike isn't here.";
@@ -327,7 +348,7 @@ to say SpikeTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "The name he should address you by";
 	now sortorder entry is 1;
-	now description entry is "Ask about the name or title Spike should use for you";
+	now description entry is "Tell Spike the name or title he should use for you";
 	[]
 	if Spike is visible:
 		choose a blank row in table of fucking options;
@@ -384,6 +405,12 @@ to say SpikeTalkMenu:
 		now sortorder entry is 11;
 		now description entry is "Ask him about the huge orc";
 	[]
+	if Dexterity of Spike > 0: [he knows Urik]
+		choose a blank row in table of fucking options;
+		now title entry is "Talk about your orc warrior Urik";
+		now sortorder entry is 12;
+		now description entry is "Ask him about the huge orc";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -420,6 +447,8 @@ to say SpikeTalkMenu:
 					say "[SpikeTalk10]";
 				else if (nam is "Talk about Urik"):
 					say "[SpikeTalk11]";
+				else if (nam is "Talk about your orc warrior Urik"):
+					say "[SpikeTalk11]";
 				wait for any key;
 				say "[SpikeTalkMenu]";
 		else if calcnumber is 0:
@@ -433,7 +462,7 @@ to say SpikeTalkMenu:
 to say SpikePickup:
 	say "     You give a sharp whistle and wave to Spike, directing him to follow you. The young canine quickly rushes to your side and takes his spot to support you.";
 	now Spike is nowhere;
-	now companion of Player is doberman companion;
+	AddCompanionFunction "doberman companion";
 
 to say SpikeTalk3: [himself]
 	say "     Lifting his arms and putting both hands behind his head, Spike looks at you and shrugs. 'You know most of it anyways. After all, you were the one who tamed the tough bitch that is my mom and brought her to the library. She had me and the others not much later. Living with all of them as a pack wasn't half-bad at first either. You should have seen the things that we did together! There are some corners in the library that... ah, but that's old news. Anyways, mom kept treating me like a pup even when I grew up. Hell, I was fully grown for days and she still lumped me in with the others. Got pretty annoyed with that shit, fast, so I started exploring the surrounding city blocks on my own. Anything to get out from under her paw a bit, you know?' Patting the leg of his ripped jeans and tugging on his skin-tight mesh shirt, the anthro doberman proudly explains that he found them scavenging.";
@@ -480,7 +509,7 @@ to say SpikeTalk9: [cum request]
 			if Player consents:
 				LineBreak;
 				say "     Leaning forward and running your hand up behind Spike's head, you pull him in to kiss his muzzle softly. Caressing his sensitive ears, you go on to say that he's your very special dobie companion and you of course want more from him than cum - but you do want that too, right at the moment. Pulling out one of the empty plastic bottles that you collected sometime during your travels, you hand it to the young man, then casually step around him and wrap your arms around his chest from behind. 'Oh? Oooh,' the slender canine pants as your hands move to touch his chest, stroking and caressing his nipples through the thinly stretched material of his mesh shirt. Nuzzling the side of his neck, you take a whiff of his fresh but still masculine scent. You can feel his tail twitch a little where it is pinned between both of your bodies, and the young man would no doubt wag happily if that wasn't the case.";
-				say "     'Mmmmh, [SpikePlayerAddress]. That feels nice!' he says, his free hand stretching back to rub your side in return. You continue to caress and fondle the dobie for a little while, often stroking the straight edge of his ears and whispering in them what a good boy and good dog he is for you. Given the stimulation, there's little wonder that the front of his pants are soon tented, and you eventually move on to obtaining what you want, popping the button and then pulling down the ziiper of Spike's jeans. Craning your neck to look around him, your gaze falls on the pointy head of his red knotted cock, sticking out straight from his crotch. Your canine companion's tongue lolls out of his mouth as he pants in lust and his body tenses when you reach for his erection, wrapping your fingers around its hot shaft.";
+				say "     'Mmmmh, [SpikePlayerAddress]. That feels nice!' he says, his free hand stretching back to rub your side in return. You continue to caress and fondle the dobie for a little while, often stroking the straight edge of his ears and whispering in them what a good boy and good dog he is for you. Given the stimulation, there's little wonder that the front of his pants are soon tented, and you eventually move on to obtaining what you want, popping the button and then pulling down the zipper of Spike's jeans. Craning your neck to look around him, your gaze falls on the pointy head of his red knotted cock, sticking out straight from his crotch. Your canine companion's tongue lolls out of his mouth as he pants in lust and his body tenses when you reach for his erection, wrapping your fingers around its hot shaft.";
 				WaitLineBreak;
 				say "     The young man is happily obedient and content with you taking care of him, leaning into your touch and being quite receptive for each little touch and caress. His hand on your side is simply holding on now, though it gives you a squeeze or two at times when your strokes really hit the mark. Wanting to make this more than just milking him for some seed as quickly as possible, you keep caressing Spike, at times slowing down to squeeze his pre-knot bulge and tracing your fingertips along the outside of his tapering dickhead. With him breathing harder and harder, starting to hump into your grasp subconsciously, you know that he's getting close and remind the young doberman that he must be ready to catch his load. 'Yeah, totally,' he grunts, not really registering your words.";
 				say "     Trying again, you gently nibble on the base of his ear and stop moving your hand, which allows the horny dobie to calm down a little and actually understand what you're saying. 'Oh! Yeah, sure thing, [SpikePlayerAddress],' he replies a little sheepishly, taking off the cap of the bottle you gave him and holding it ready to catch his impending spurts of canine seed. Giving his shaft a slow stroke up and down, you tell him that you're very proud of him, turning into such a strong and reliable companion for you, ready to do anything you ask of him. The praise makes Spike stand a bit straighter as he soaks it up, and that is the moment you start going all out, really jerking his manhood with no holds barred. Between getting the approval that he craves and the build-up of physical pleasure you've been giving him so far, it isn't hard at all to push the young male over the edge.";
@@ -494,7 +523,7 @@ to say SpikeTalk9: [cum request]
 			say "     As you step up and ask Spike straight out to give you some cum, you notice his Adam's Apple bounce a little as he swallows. 'Er, of course [SpikePlayerAddress]. Just give me a moment alone, alright?' With that said, he quietly takes the empty plastic bottle you dig out of your pack and vanishes into a quiet corner, getting busy stroking himself. It doesn't take all that long before he returns, with the bottle capped and containing his 'donation' as per your request. Pulling out a pen, you scribble on the label of the bottle what is in there, then add it to your pack.";
 		else if Libido of Spike < 60: [forced into subby sex]
 			say "     As you step up and command that Spike give you some cum, milked into a plastic bottle, you notice his Adam's Apple bounce a little as he swallows. 'Er, of course [SpikePlayerAddress]. Just give me a moment alone, alright?' As he reaches out for the bottle, you smack his muzzle with it and in a harsh tone demand to know if you ordered him to go into a corner to do his business. 'No, I - I thought...' the young man starts, but seeing the unimpressed sneer that this brings to your face, he falls silent again. Without another word, he quietly undoes the button and zipper of his pants, pushing them down to start rubbing his sheath and tease out the length of his manhood. Nervously glancing up at you from having his head lowered, he gets himself fully hard before much longer.";
-			say "     You step up to the slender, toned body of your dobie companion and bump his hand aside to stroke he red shaft of his canine cock a few times, then grab bim by the balls and nod for him to proceed. Rolling the furry cum-factories between your fingers and giving them firm, but not actually painful squeezes, you keep Spike literally well in hand while he jerks himself off, holding the empty bottle ready. You can't help but smile at the control you have over the young man, revelling in your power while he milks himself dutifully. The strokes along his knotted length come faster and faster before long, and he lets out a grunt, then starts to blast his seed into the bottle. Throb after throb of rich canine spunk lands in the plastic container, filling about the lower third of the small bottle before his orgasm ebbs off. Pulling it from his grasp with a casual command to clean himself up, you turn your back on Spike and label the bottle, then add it to your pack.";
+			say "     You step up to the slender, toned body of your dobie companion and bump his hand aside to stroke he red shaft of his canine cock a few times, then grab him by the balls and nod for him to proceed. Rolling the furry cum-factories between your fingers and giving them firm, but not actually painful squeezes, you keep Spike literally well in hand while he jerks himself off, holding the empty bottle ready. You can't help but smile at the control you have over the young man, revelling in your power while he milks himself dutifully. The strokes along his knotted length come faster and faster before long, and he lets out a grunt, then starts to blast his seed into the bottle. Throb after throb of rich canine spunk lands in the plastic container, filling about the lower third of the small bottle before his orgasm ebbs off. Pulling it from his grasp with a casual command to clean himself up, you turn your back on Spike and label the bottle, then add it to your pack.";
 		ItemGain doberman male cum by 1;
 		now lastfuck of Spike is turns;
 
@@ -841,6 +870,10 @@ to say SpikePlayerAddress:
 			say "Oyabun";
 		-- 6:
 			say "Chief";
+		-- 7:
+			say "Sir";
+		-- 8:
+			say "Hoss";
 		-- 11:
 			say "Daddy";
 		-- 12:
@@ -862,10 +895,7 @@ to say SpikePlayerAddress:
 		-- 25:
 			say "Mistress";
 
-
-
-
-Section 4 - Fucking
+Section 5 - Fucking
 
 instead of fucking the Spike:
 	say "[SexWithSpike]";
@@ -1446,6 +1476,8 @@ to say SpikeSleepSex4:
 to say SpikeSleepSex5:
 	say "WIP";
 
+Section 6 - NPC Interaction (Tehuantl)
+
 instead of going up from Grey Abbey Library while (LastTehuantlSpikeScene - turns > 6 and Tehuantl is in Grey Abbey 2F and doberman companion is tamed and Energy of Spike < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100):
 	move player to Grey Abbey 2F;
 	if debugactive is 1:
@@ -1588,21 +1620,23 @@ after navigating Grey Abbey Library while (LastTehuantlSpikeScene - turns > 6 an
 	say "     You arrive at the library and climb the steps to the front door, then slip inside, happy to have made it back to your refuge. Yet almost as soon as the door swings shut behind you, fighting noises reach your ears, coming from somewhere upstairs. Concerned about the people you've brought here, you quickly rush up the stairs, almost stumbling once or twice as you jump over a few of them in your haste. What awaits you upstairs is a fight, but surely not what you expected it to be: One of the two opponents is Tehuantl, carrying nothing but his shield and using it to deflect blows rained onto him by Spike, and with a mop of all things. 'Faster! Try to switch up your moves, some low, some high!' the jaguar warrior calls out to the young dobie with a grin on his muzzle, then easily parries another swipe of the improvised weapon. ";
 ]
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and Stamina of Spike is 0):
+Section 7 - NPC Interaction (Urik, controlled)
+
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and PlayerControlled of Urik is true and Stamina of Spike is 0):
 	if debugactive is 1:
 		say "     DEBUG: Spike MEETS URIK - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
 	say "     Walking along the upper floor of the library, you see Urik ahead of you, leaning against one of the walls and appearing a little bored. 'Hey boss,' he says, giving you a nod as he notices your presence. Just a short moment later, Spike appears from the back of the room where he's made his camp, attempting to walk past the orc. 'So, you keep a dobie, eh?' Urik comments, holding out a thick arm to block the way for your companion. 'Had a few of such puppies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!";
-	say "[SpikeMeetsUrik]";
+	say "[SpikeMeetsUrik_Control]";
 
-after going to Sitting Area while (Urik is in Sitting Area and companion of Player is doberman companion and Stamina of Spike is 0):
+after going to Sitting Area while (Urik is in Sitting Area and doberman companion is listed in companionList of Player and PlayerControlled of Urik is true and Stamina of Spike is 0):
 	if debugactive is 1:
 		say "     DEBUG: Spike MEETS URIK - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
 	say "     Walking along the upper floor of the library, you come up to Urik, who's standing at the railing overlooking the lower floor of the library, appearing a little bored. As you come near, the large orc stands up straight and nods to you. 'Hey boss,' he says, then glances past you and a smile starts to spread across his face. 'Got a new pet, eh? Had a few dobies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the back of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!";
-	say "[SpikeMeetsUrik]";
+	say "[SpikeMeetsUrik_Control]";
 
-to say SpikeMeetsUrik:
+to say SpikeMeetsUrik_Control:
 	say "     'A little help, [SpikePlayerAddress]?' the doberman shouts, seeing himself confronted with the towering orc snarling at him and cracking his knuckles in preparation of a beatdown. To prevent the situation from escalating any further, you put two fingers in your mouth and give them a sharp whistle that draws all attention to you. Clearing your throat, you introduce them to each other, explaining that Urik is an orc warrior you won for use as your personal breeder. Meanwhile, you accepted Spike as your companion to help you out during your travels through the city, which you stress to Urik means that he can't just grab and pound him. 'So, more than a fuckpuppy then, eh?' Urik huffs, clearly disappointed that he can't just establish dominance as he would have if Spike was another slave. Looking the anthro canine up and down, he snorts. 'He might be quick, but that won't help much if someone gets a grip on him. Hear that boy? You need some more strength in the arms!'";
 	WaitLineBreak;
 	say "     Proudly demonstrating what he means by flexing a bicep thicker than Spike's thigh, Urik grins down at the young dobie. 'This is what a proper man looks like! But if the boss is dead set on dragging you along, we'll have to bulk you up. You brave enough to try, puppy?' Looking at the orc, you notice him smirking a little as he goads Spike like this. 'Hey!' Spike replies, 'I'm plenty strong. Just not maybe quite as big as you. And I'm brave enough for anything!' Stepping up, Urik grins down at him, then holds out his bear-paw of a hand. 'Fine then, you're gonna join me for some strength training every day! Or are you gonna wimp out after all?'";
@@ -1619,7 +1653,7 @@ to say SpikeMeetsUrik:
 		now Stamina of Spike is 100; [Player shut down Urik's plan]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and Stamina of Spike is 1 and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and Stamina of Spike is 1 and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -1648,7 +1682,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		now Stamina of Spike is 100; [Player shut down Urik's plan]
 	now SpikeEventCooldown is turns;
 
-after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and Stamina of Spike is 2 and a random chance of 1 in 2 succeeds):
+after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and Stamina of Spike is 2 and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -1665,7 +1699,7 @@ after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike 
 		if Player consents:
 			LineBreak;
 			say "     Curious but not too concerned, you observe as Spike takes a first swallow, followed by licking the sides of his muzzle with his floppy tongue. 'Mmmh, tasty!' he gives his verdict, followed by a longer pull on the drink. 'See, I knew you'd like it. That stuff will give you new energy and we'll continue the workouts soon.' Grinning in obvious satisfaction, the orc gives Spike's back a friendly slap. 'We'll have you made into a proper br- err, stud soon. Just imagine having muscles like this!' With that, he goes into a full-on series of poses, showing off his orcish, ripped physique. Spike looks at him somewhat enviously, staring at what the green-skinned brute flexes and shakes in front of him. 'Go on, touch it!' Urik prods him along, lowering his bulging bicep towards the doberman, who reaches out to lay his hand on it.";
-			say "     There's a short whole of what might be called muscle worship, with Spike rubbing and squeezing the orc, his tail wagging. Looking down a little, you see that he's hard and erect within his pants. The anthro dobie notices this himself scant moments later, freezing in motion. 'Uhm,' he starts to say, looking down over himself, only to be interrupted by Urik right away. 'Don't feel bad, kid. Of course you react to being so close to a real man. Perfectly natural.' He continues to flex a little bit more, but Spike doesn't let himself get drawn into touching him again, instead making excuses and hurrying off towards his camp and bedding. As the dobie leaves, Urik looks after him with a grin, then says under his breath, too quiet for Spike to hear, 'Have fun jerking off, little doggie. Think of my cock as you do so.'";
+			say "     There's a short while of what might be called muscle worship, with Spike rubbing and squeezing the orc, his tail wagging. Looking down a little, you see that he's hard and erect within his pants. The anthro dobie notices this himself scant moments later, freezing in motion. 'Uhm,' he starts to say, looking down over himself, only to be interrupted by Urik right away. 'Don't feel bad, kid. Of course you react to being so close to a real man. Perfectly natural.' He continues to flex a little bit more, but Spike doesn't let himself get drawn into touching him again, instead making excuses and hurrying off towards his camp and bedding. As the dobie leaves, Urik looks after him with a grin, then says under his breath, too quiet for Spike to hear, 'Have fun jerking off, little doggie. Think of my cock as you do so.'";
 			increase the XP of doberman companion by level of doberman companion times six;
 			say "     [bold type]Spike has gained [level of doberman companion times six] XP![roman type][line break]";
 			now Stamina of Spike is 3; [Spike got his second shake]
@@ -1684,7 +1718,7 @@ after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike 
 		say "     Quietly chuckling to yourself about how much Urik seems to enjoy the drill instructor role, you busy yourself with some other things, like having a look out the windows to ovserve the approaches to the library for example. While you do that, the two men continue running without pause, with Spike panting louder every time he passes. Eventually, the young man can't help but stumble to a stop, bracing his upper body with his arms on both thighs as he gasps for breath. Stepping up close to tower over him, Urik gruffly remarks, 'That's it? Already winded, boy? With this little stamina, you might just outrun a street dog. A three-legged one, with fleas!' Not really ready to give any sort of verbal reply, Spike shows the orc his middle finger, which makes Urik laugh. 'Fun aside, I'm impressed. Ya didn't whine or beg, just kept running. Good doggie!' He gives the dobie a 'friendly' slap on the back that's still hard enough to send the anthro dog stumbling forward, then chuckles as he moves away.";
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and (Stamina of Spike is 3 or Stamina of Spike is 50 or Stamina of Spike is 51) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 3 or Stamina of Spike is 50 or Stamina of Spike is 51) and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -1725,7 +1759,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		now Stamina of Spike is 52; [new weights for Spike, future trainings without shakes]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and (Stamina of Spike is 4 or Stamina of Spike is 52) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 4 or Stamina of Spike is 52) and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -1755,7 +1789,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		now Stamina of Spike is 53; [training without shakes, shirtless pushups done]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and (Stamina of Spike is 5) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 5) and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -1767,21 +1801,21 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	say "     Still a bit leery about Urik picking out underwear for him, Spike looks back and forth between the piece of cloth to Urik's face. There's a moment of hesitation before he finally gives a little shrug and admits, 'Yeah, you're right. Kinda. I tried briefs a little while back and they were rubbing me the wrong way.' Urik's grin only gets broader, with the orc nodding back towards the sitting area. 'Go on then, let's see if it fits. Gotta be snug and not hang loose, we'll do another run next.' Spike looks at the much taller orc and says, 'Fine, but no peeking!' 'Wouldn't dream about it,' the orc replies, one hand casually behind his back with crossed fingers. Nodding, Spike walks past him, over to the sofa in the sitting area, where he strips down and starts to put on the jockstrap, taking a few seconds to figure out which way all the straps go. Meanwhile, Urik is watching over his shoulder, his gaze taking in the curve of the dobie's ass in detail.";
 	say "     Soon, Spike's coming back, with Urik just in time stopping to peek not to be caught. 'It's certainly not loose. Might be a little tight even,' the doberman says thoughtfully, looking down at his own crotch as he walks over slowly. 'And the back feels weird. Being dressed at the front and bare there.' Urik replies, 'Let me see,' and reaches out to cup Spike's crotch, which the young man quickly deflects. 'Hey, keep your fingers to yourself. You can look, but no touching.' Grunting in amusement, the orc takes Spike by the shoulders and turns him around, looking at his hips. 'Seems alright to me, you won't have to worry about losing it as we run! Now finish off your shake and then we can get to some laps.' Spike does as requested, grabbing his bottle and chugging more of the rich mixture inside. He looks down at himself a few times as Urik chats with him for a few minutes, then finally finishes off the drink and Urik takes the empty bottle to put it away.";
 	WaitLineBreak;
-	say "     When Urik returns soon after, Spike has visibly relaxed about wearing the jockstrap, not fussing as much as in the beginning. At the same time, his nether regions seem to have gotten a bit excited, as he shows a little bit of a tent in the new underwear. 'Time for you to show some of that speed and endurance you need to make it in the city. We're gonna run laps, clockwise around the middle! You go first and I play one of the horny monsters out to get ya in the streets!' With a laugh, he gives Spike's bare buttocks a slap, prompting the young man to start running. The orc gives his trainee a head-start, eyes never leaving the young man's rear, then sets out after him, chasing Spike through the library in a (for him) comfortable pace. Seeing that they're just starting, you decide to turn to other things. You're fairly sure that Spike'll get a thorough workout today though.";
+	say "     When Urik returns soon after, Spike has visibly relaxed about wearing the jockstrap, not fussing as much as in the beginning. At the same time, his nether regions seem to have gotten a bit excited, as he shows a little bit of a tent in the new underwear. 'Time for you to show some of that speed and endurance you need to make it in the city. We're gonna run laps, clockwise around the middle! You go first and I play one of the horny monsters out to get ya in the streets!' With a laugh, he gives Spike's bare buttocks a slap, prompting the young man to start running. The orc gives his trainee a head-start, eyes never leaving the young man's rear, then sets out after him, chasing Spike through the library in a (for him) comfortable pace. Seeing that they're just starting, you decide to turn to other things. You're fairly sure that Spike will get a thorough workout today though.";
 	increase the XP of doberman companion by level of doberman companion times six;
 	say "     [bold type]Spike has gained [level of doberman companion times six] XP![roman type][line break]";
 	now Stamina of Spike is 6; [Spike got a jockstrap now]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and (Stamina of Spike is 6 or Stamina of Spike is 53) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 6 or Stamina of Spike is 53) and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Story Time - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
 	project the Figure of Spike_shirtless_icon;
 	say "     Walking along the upper floor of the library, you glance around and see Urik and Spike sitting next to each other on the sofa further in the back. Seems they're just hanging out with each other right now, not doing any training for a change. Your doberman companion is currently telling a story, gesturing wildly as he does so. '...so when we got to the alley, she wanted me to follow her into it. At first I did for a few steps, hell, that husky had offered me her pussy, but then I heard a noise from behind one of the dumpsters in there. When she noticed that I knew something was up, the bitch shouted, 'Get him, Bill!' and this dude jumped out from his hiding spot. Half human, half husky guy, with a long metal rod he was hefting like a spear!' Spike pauses for effect, miming a guy attacking him, then goes on to say, 'But I was too quick for the dude. Dodged his thrust and shoved his girlfriend at him and the two of them went down in a tangle. Gave me the time to high-tail it out of there.'";
-	say "     Urik chuckles at the story and comments, 'Yeah, you don't trust a streetwalking hooker further than you can spit. That's why you bring a buddy to double-team her. Your two were amateurs, but a woman and her pimp working together almost did my buddy Declan in once. Thought they could roll him, take everything he owned or whatever. That didn't work out so well, as me and some other biker buds were passing by on our way to a bar, and we gave em a good thrashing. But yeah, gotta watch out for yourself.' He nods to Spike, who was listening intently to his tale, then glances down at his forearm, making a fist and stroking over the tattoo covering his skin there. 'I miss Dec, he was a swell dude. Good tattoo artist too, he gave me these back in [']82,' Urik says, then pauses for a moment before he adds, 'Too bad he got shot a few years back by some little punk with a souped-up ride and inflated ego. Could have used him in the orc tribe.'";
+	say "     Urik chuckles at the story and comments, 'Yeah, you don't trust a streetwalking hooker further than you can spit. That's why you bring a buddy to double-team her. Those two you met were amateurs, but a woman and her pimp working together almost did my buddy Declan in once. Thought they could roll him, take everything he owned or whatever. That didn't work out so well, as me and a bunch of other soldiers were passing by on our way to a bar, and we gave em a good thrashing. But yeah, gotta watch out for yourself.' He nods to Spike, who was listening intently to his tale, then glances down at his forearm, making a fist and stroking over the tattoo covering his skin there. 'I miss Dec, he was a swell dude. Good tattoo artist too, he gave me these back in [']84,' Urik says, then pauses for a moment before he adds, 'Not even a year later, he got shot in the back by some little punk with a souped-up ride and inflated ego. Fuck, I'm still mad when thinking back to it. But the little murderous pissant got what was coming to him afterwards. Only wish we could have made it last longer.'";
 	WaitLineBreak;
-	say "     Silence stretches out for a few moments between the two of them, with Urik still reminiscing about his friend, until Spike clears his throat. 'Err, wait a minute - do you mean 1982? Just how old are you, Urik?' he blurts out, looking rather wide-eyed at the large man. Laughing out loud and slapping the side of his thigh, the orc grins at his trainee as he replies, 'I'm fifty-four years old, puppyboy! Don't look like it, do I, eh? If you ask me, this transformation business is the best thing that could have happened! Feel like I'm twenty again, and I'll take honest street-fighting over that rotten society from before any day. No more pigs who harass you just because you ride a bike. We sorted them out good, I can tell you that!' To underline his point, the green-skinned brute rubs the bulge in his pants, then begins a new tale with the words, 'Let me tell you how I got to be an orc...'";
+	say "     Silence stretches out for a few moments between the two of them, with Urik still reminiscing about his friend, until Spike clears his throat. 'Err, wait a minute - do you mean 1984? Just how old are you, Urik?' he blurts out, looking rather wide-eyed at the large man. Laughing out loud and slapping the side of his thigh, the orc grins at his trainee as he replies, 'I'm fifty-four years old, puppyboy! Don't look like it, do I, eh? If you ask me, this transformation business is the best thing that could have happened! Feel like I'm twenty again, and I'll take honest street-fighting over that rotten society from before any day. No more pigs who harass you just because you ride a bike. We sorted them out good, I can tell you that!' To underline his point, the green-skinned brute rubs the bulge in his pants, then begins a new tale with the words, 'Let me tell you how I got to be an orc...'";
 	LineBreak;
 	say "     [bold type]Do you want to listen to Urik's lewd tale?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure, it's bout to be hot!";
@@ -1808,7 +1842,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	increase Stamina of Spike by 1; [either it's 7 or 54 now - storytime with Urik]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and (Stamina of Spike is 7 or Stamina of Spike is 54) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 7 or Stamina of Spike is 54) and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -1816,16 +1850,16 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	say "     Walking along the upper floor of the library, you glance around and see Spike stand in the sitting area, [if Stamina of Spike is 7]holding a half-full protein shake [else]holding a water bottle[end if] in his hand. Taking a deep swig of it, the young doberman then walks over to Urik, who's busy unrolling two fitness mats in front of the back wall. 'So, what are we going to do today? More strength training?' Spike asks his green-skinned taskmaster, who snorts and shakes his head. 'Not quite, puppyboy. We're gonna do Yoga!' As the slender anthro canine looks at him, visibly perplexed, Urik lets out a deep laugh and lightly slaps him on the back. 'Didn't think I was the type, eh? Well, you gotta blame my nephew for it. The little shit kept going 'Uncle, it's good for you!' and he eventually talked me into trying it out. And it worked, gotta admit that.' Shrugging his very wide, muscled shoulders, the orc adds, 'Thank god I'm no longer an old fart with aching joints, but Yoga's still good stuff.'";
 	say "     'If you say so,' Spike comments, then raises one eyebrow and adds, 'Just to be sure, though - I'm not calling you Sensei or Master, or anything like that!' 'That's Karate, you little punk. And do I look like a little white-bearded man to you? Nah, just use my name, this isn't some mystic mountain martial arts training!' Stepping over to place his broad green feet on the end of an extra large excercise mat, Urik nods over to the second one beside his and says, 'Okay, take your place. And you wanna strip down, this stuff may look soft, but you'll get sweaty, that's for sure!' ";
 	if Stamina of Spike is 7: [jock / shake path]
-		say "Finishing off his protein shake, Spike quickly pulls his mesh shirt off over his head, throwing it in the direction of his man-cave to land in a wadded-up heap just a few steps short. As as he then starts to walk past the large orc, Urik holds out his hand in front of the young man and clears his throat with a nod down to his hips.";
+		say "Finishing off his protein shake, Spike quickly pulls his mesh shirt off over his head, throwing it in the direction of his man-cave to land in a wadded-up heap just a few steps short. As he then starts to walk past the large orc, Urik holds out his hand in front of the young man and clears his throat with a nod down to his hips.";
 		WaitLineBreak;
 		project the Figure of Spike_jockstrap_icon;
 		say "     The next thing that can be heard is a zipper being lowered as Spike takes the hint, followed by him pushing down his jeans and kicking them off. 'Good boy!' Urik tells his trainee, both for obeying as well as the fact that he's wearing the orc's earlier gift, a black jockstrap with red borders. In response to the praise, Spike's tail starts to wag and the dobie shares a smile with Urik before continuing on to the mat. ";
 	else if Stamina of Spike is 54: [just training]
-		say "Finishing off his water, Spike quickly pulls his mesh shirt off over his head, throwing it in the direction of his man-cave to land in a wadded-up heap just a few steps short. As as he then starts to walk past the large orc, Urik holds out his hand in front of the young man and clears his throat with a nod down to his hips.";
+		say "Finishing off his water, Spike quickly pulls his mesh shirt off over his head, throwing it in the direction of his man-cave to land in a wadded-up heap just a few steps short. As he then starts to walk past the large orc, Urik holds out his hand in front of the young man and clears his throat with a nod down to his hips.";
 		WaitLineBreak;
 		project the Figure of Spike_shirtless_icon;
 		say "     'You can forget about that. The pants stay on!' Spike throws back to Urik, meeting and holding his gaze stubbornly until the orc allows him to move on and step on his own mat. ";
-	say "'Okay, now stand like this and take a deep breath, then...' the orc begins his instructions of Spike, taking him through basic breathing and pose excercises before demonstrating several poses himself and then watching the anthro doberman attempt them. He keeps up his usual banter and teasing throughout the training set, but at the same time seems genuinely pleased in working out with his canine companion, throwing in praise and a few touches and squeezes of Spike's shoulder.";
+	say "'Okay, now stand like this and take a deep breath, then...' the orc begins his instructions of Spike, taking him through basic breathing and pose exercises before demonstrating several poses himself and then watching the anthro doberman attempt them. He keeps up his usual banter and teasing throughout the training set, but at the same time seems genuinely pleased in working out with his canine companion, throwing in praise and a few touches and squeezes of Spike's shoulder.";
 	say "     Urik's earlier announcement proves to be nothing but the truth, as the two of them do work up some sweat from the relatively slow but often repeated and held movements. The orc's large, green-skinned body glistens in the light, making watching him move quite a nice show. Beside him, Spike's panting a lot more than usual, his tongue dangling halfway out of his mouth and you can see that the short fur all over his body is matted against his skin. 'Feels good to work out all them muscles, eh boy?' the orc asks with a grin on his face, letting his eyes roam up and down over the young man's slender form. 'Guess you really do know what you're talking about. Thank you for teaching me,' Spike replies in a somewhat breathy tone, tail wagging as he does so. Being thanked brings a satisfied smile to Urik's face and you can't help but feel that his opinion of the dobie just went up a notch.";
 	WaitLineBreak;
 	say "     The two men continue their workout for a little while longer, before Urik eventually clears his throat and says, 'Okay, got one more thing to show you for this set. Don't worry, it'll come naturally to you! As a puppyboy, you'll have no problem with downward dog!' Not going into any more detail before, Urik takes Spike through the steps of setting his paws on the mat in their proper places, breathing in and out, followed by the words, 'And now you bend forward, putting your hands on the ground and lower your head between them.' He proceeds to demonstrate the pose with practiced ease, followed by standing up and watching Spike attempt the same with somewhat less than optimal results. ";
@@ -1833,18 +1867,20 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		say "'You're close boy, but there's some things you got to adjust,' Urik comments, taking a step closer and reaching out to touch Spike. 'Okay, first you bend your legs a bit more to allow you to get into position and push your hands further to the front. Let your head hang between the arms and keep the back straight.'";
 		say "     The orc's large hands stroke over his trainee's body to help him along, with Urik smiling in satisfaction as the dobie follows his instructions and posture adjustments. 'Good boy! Now raise your ass higher and start to straighten those legs!' is said next by the big man as he grips the side of Spike's hips, fingers covering the furred curve of his buttock while Urik's thumb points at his crotch. Doing as he is told, your canine companion reaches a good beginner's approximation of the downward dog pose, which clearly pleases his instructor. 'Now hold like this, feel how you're stretching your ankles, hamstrings, back and shoulders. Breathe in, and let it out slowly.' Meanwhile, the orc's hand is still halfway covering Spike's ass, but Urik doesn't do anything except giving him a light squeeze or two before pulling it away again. Sliding an arm under the doberman's chest, Urik helps Spike stand up straight after that.";
 		WaitLineBreak;
-		say "     Smiling and tousling the young man's green hair, Urik gives him a nod of appreciation. 'Good workout! Feels nice, doesn't it?' the orc asks, and Spike replies, 'Yeah, it does. I'm sweaty and a bit exhausted, but that was pretty good.' Urik grins broadly at him as he says, 'We'll have to keep doing it then, eh?! Good, sweaty fun. Get's one's blood pumping too!' With that said, the orc lowers his hand to adjust the half-hard cock visible in his tight stretch-fabric trunks and glances down to Spike's crotch, which is showing a bulge too. 'Oh! I -' the doberman starts to say, moving to cover himself, only to have Urik bat his hand away lightly. 'Relax, boy! When you get worked up with a buddy, that's just bout to happen. Just another part of your body to take care of. Come on, let's let off some steam!' Before Spike can reply, the orc takes hold of his pants and pushes them down in a quick move, kicking them off a second later. He wraps his hand around the large pole of his cock and starts stroking slowly, nodding to Spike to do the same.";
+		say "     Smiling and tousling the young man's green hair, Urik gives him a nod of appreciation. 'Good workout! Feels nice, doesn't it?' the orc asks, and Spike replies, 'Yeah, it does. I'm sweaty and a bit exhausted, but that was pretty good.' Urik grins broadly at him as he says, 'We'll have to keep doing it then, eh?! Good, sweaty fun. Get's one's blood pumping too!' With that said, the orc lowers his hand to adjust the half-hard cock visible in his tight stretch-fabric trunks and glances down to Spike's crotch, which is showing a bulge too. 'Oh! I -' the doberman starts to say, moving to cover himself, only to have Urik bat his hand away lightly. 'Relax, boy! When you get worked up with a buddy, that's just gonna happen. Just another part of your body to take care of. Come on, let's let off some steam!' Before Spike can reply, the orc takes hold of his pants and pushes them down in a quick move, kicking them off a second later. He wraps his hand around the large pole of his cock and starts stroking slowly, nodding to Spike to do the same.";
 		say "     There is a moment of hesitation as the slender doberman seems torn between walking away and joining in for a side-by-side jerk-off session, before Spike's libido wins out and he pulls the front of his jockstrap aside to free the red rocket of his canine shaft. Seems like Urik hit the right tone with him, leaving Spike to choose and not reaching for his crotch himself. The two men beat off together, with Spike keeping his eyes closed and imagining something, while the orc feasts his eyes on the doberman instead. Eager to get his rocks off, the anthro's rapid jerking brings him close to the edge fairly quickly, as is obvious by his loud panting and the his whole body tensing up. This is just what Urik was waiting for, reaching over to cup his hand over the pointy dickhead of his trainee. As the tip of a finger brushes against the edge of Spike's head, the young man opens his eyes and pants out, 'What are you doing?'";
 		WaitLineBreak;
 		say "     'Would be a shame to let it go to waste - and a mess to clean up,' Urik replies, now bringing his hand even closer, so the dobie's cock is grinding against his palm while he caresses the tip of Spike's cock. The added stimulation is enough to drive the young man over the edge, letting out a lusty bark as he stiffens, balls throbbing as they send forth a thick spurt of cum to paint Urik's green skin white. Grinning broadly, the orc catches Spike's load, then brings his hand up to lick the sperm off it, watched by a wide-eyed Spike. 'Tasty!' he quips at the anthro dog, finishing off his snack with one last lick before moving on to jerking his own load into the same hand, with the sheer volume of his output threatening to overflow the cupped palm. 'It's good stuff, I love it!' the orc casually comments to his companion while his erection is still pulsing out more cum. 'You want some too?' comes the next question, with him raising the hand to offer it to Spike.";
 		say "     The slender doberman quickly takes a step back and shakes his head, replying, 'No thanks, I think I'm good.' At the same time, his nostrils are flaring as he sniffs the air and takes in the scent of Urik's seed - apparently enjoying it, as the tail behind his back wags a little. His face has a bit of an odd expression on it, as if he can't believe that he likes the aroma of orc cum. Meanwhile, Urik proceeds to eat his own load, hungrily gulping it down and sucking on his fingers to get the very last drops, then smacking his lips in satisfaction. 'I look forward to our next session. You go along now, I'll clean up here,' the orc tells Spike, who tucks his jockstrap back in place and then wanders off into his little man-cave.";
 	else if Stamina of Spike is 54: [just training]
 		say "The young man attempts the stretch, but quickly shows a pinched expression on his face and drops the tension in his body to stand up straight afterwards and tuck at the fabric covering his crotch. 'Not the best outfit to do this one in I guess,' Urik comments with a grin before adding, 'Told ya you should have stripped down.'";
-		say "     Spike glances up to meet the orc's eyes, his hands twitching towards the zipper of his tight jeans for a second before freezing halfway there. 'Wait a moment - no! I'm not gonna go bare-ass naked next to you! Hell, I can see your dick in those pants and it's already half-hard!' Looking down, Urik puts a hand on the long bulge of his rather tight stretch-fabric trunks, adusting himself with a broad grin on his face. 'What? Feeling anxious puppyboy? Think you couldn't take it in your tiny hole? Not that I was planning anything anyways! I'm not supposed to 'force myself on anyone', remember?' The orc makes air-quotes as he says the words, complete with a little eye-roll. 'So, you got nothing to fear. Come on, do it! It's the proper capstone of the set and a great workout for the whole body!' Spike doesn't seem convinced by his words, instead shaking his head. 'I think not. Rather gonna call it a day now.' Blowing out his breath, Urik says, 'Your loss,' then goes back to his stretch and ignores Spike as he walks off.";
+		say "     Spike glances up to meet the orc's eyes, his hands twitching towards the zipper of his tight jeans for a second before freezing halfway there. 'Wait a moment - no! I'm not gonna go bare-ass naked next to you! Hell, I can see your dick in those pants and it's already half-hard!' Looking down, Urik puts a hand on the long bulge of his rather tight stretch-fabric trunks, adjusting himself with a broad grin on his face. 'What? Feeling anxious puppyboy? Think you couldn't take it in your tiny hole? Not that I was planning anything anyways! I'm not supposed to 'force myself on anyone', remember?' The orc makes air-quotes as he says the words, complete with a little eye-roll. 'So, you got nothing to fear. Come on, do it! It's the proper capstone of the set and a great workout for the whole body!' Spike doesn't seem convinced by his words, instead shaking his head. 'I think not. Rather gonna call it a day now.' Blowing out his breath, Urik says, 'Your loss,' then goes back to his stretch and ignores Spike as he walks off.";
+		increase the XP of doberman companion by level of doberman companion times four;
+		say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 	increase Stamina of Spike by 1; [8 on the shake path, 55 otherwise]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and (Stamina of Spike is 8 or Stamina of Spike is 55) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 8 or Stamina of Spike is 55) and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -1859,16 +1895,24 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		say "     Tail wagging happily behind his back, Spike pulls his mesh shirt over his head in a swift move, throwing it aside, then proceeds to undo the button and zipper of his jeans. An eye-blink later, he's pushing them down and bending over to free his paws from the bunched-up fabric, quite oblivious to the fact that he's giving Urik a show with his bare ass. You can see the bulge in the orc's stretchy trunks grow visibly as his dick hardens partially, with Urik quickly adjusting it to keep his cock mostly tucked away. Meanwhile Spike lays down on the mat and lay his paws against the bar of the weights, waiting patiently for Urik to step over him to be his spotter. The orc stands ready to catch the weights just in case, and gives his trainee numerous bits of good advice as he goes through training. It is clear that he enjoys teaching Spike quite a bit.";
 		WaitLineBreak;
 		say "     As some time passes and Spike works up a good sweat, you as well as Urik notice something - the young dobie's jockstap is bulged out strongly, its tent betraying the fact that Spike has got an erection. Thinking to yourself that this must be a side effect of Urik's 'new formula', you watch a smile cross the orc's face, who helps Spike put the weight bar on its rack right after, then hands his trainee some lighter dumbbells that he can hold on one hand each. 'Give me at least fifty lifts with each arm!' Urik grunts as a challenge to the anthro doberman and counts the first five aloud with Spike's movements before he starts to walk around him. Soon arriving next to the stretched-out form of Spike, Urik then crouches down and says loudly, 'Keep going, no matter what! I don't want to see you put down those weights until you're done with your set!' Between his pants, Spike's reply isn't so much words but rather a compliant grunt, and he puts in a new burst of energy to his lifting.";
-		say "     ";
+		say "     'Good boy,' Urik comments with a smile, then adds, 'But we got to fix your pose a little too. Here, bend your knees and brace those paws against the mat.' As he says this, the large orc puts a big green hand on Spike's thigh, squeezing it before sliding his fingers underneath and guiding Spike into a new position with his legs. The dobie is very focused on lifting the weights again and again, so he doesn't really register that Urik touches him quite a bit more than needed, running his fingers up and down the young man's furred thighs and feeling them up. Only when the orc then lays a hand on his bare chest does Spike look over to meet his gaze, panting between lifts, 'What - are you - doing?' 'Just checking your progress. Feels like you've already built a little muscle mass here,' Urik says nonchalantly, covering Spike's left pec with his hand and brushing the side of his thumb over the dobie's nipple.";
+		WaitLineBreak;
+		say "     'Just keep lifting,' the orc tells his trainee, meanwhile letting his fingers wander down over Spike's naked chest. Soon, he reaches the quite visible tent in the jockstrap covering Spike's crotch and bumps it with the side of his hand, just as the dumbbells are at their highest. 'But what do we have here? Someone's getting excited for their workouts, eh?' Spike glances down, his eyes widening, yet he can't say anything, panting from holding heavy weights lifted in the air right now. Then Urik's other hand is laid on his chest, holding him down with a gentle but firm push as the orc says, 'Don't fret, that happens to many who get really pumped by their training. Actually, why don't we add it to the workout?' With that said, he pulls the fabric of the jockstrap down, hooking it underneath Spike's erection. With the red rocket of his canine cock now standing proud and erect in full view, Urik wraps his fingers around it and starts to stroke him. Slowly, one stroke for each push with the weights.";
+		say "     With his big, green-skinned personal trainer to motivate him, both with words as well as a very personal touch, the doberman actually manages to complete the workout, even though he's more than a little tired, and very aroused by the end. As the dumbbells land on the ground with a thud, Urik says with a broad grin, 'And now you'll get your reward!' Taking out all the stops to really jerk Spike off with rapid hand movements, it takes just a few moments before the panting and exhausted canine gasps and thrusts his hips reflexively against the orc's hand. With a quick move, Urik cups his hand over the top of the throbbing shaft, stopping Spike's blasts of cum from making a mess of anything more than his palm. Grinning broadly, the orc then brings his hand up to lick the sperm off it, watched by a wide-eyed Spike. 'Tasty!' he quips at the anthro dog, finishing off his snack with one last lick.";
+		WaitLineBreak;
+		say "     'I look forward to our next session, now that we know how to motivate you properly. You go along now, I'll clean up here,' the orc tells Spike, who tucks his jockstrap back in place and gets up to collect his clothes before wandering off into his little man-cave. Meanwhile, Urik packs away the weights and the training mat, whistling under his breath and apparently in quite a good mood.";
+		increase the XP of doberman companion by level of doberman companion times six;
+		say "     [bold type]Spike has gained [level of doberman companion times six] XP![roman type][line break]";
 	else if Stamina of Spike is 55: [just training]
-		say "Finishing off his water, Spike quickly pulls his mesh shirt off over his head, throwing it in the direction of his man-cave to land in a wadded-up heap just a few steps short. As he then starts to walk past the large orc, Urik holds out his hand in front of the young man and clears his throat with a nod down to his hips.";
+		say "Finishing off his water, Spike quickly pulls his mesh shirt off over his head, throwing it in the direction of his man-cave to land in a wadded-up heap just a few steps short. As he then starts to walk past the large orc, Urik holds out his hand in front of the young man and clears his throat with a nod down to his hips. 'Ya really should strip down all the way, puppyboy! You don't wanna get those all sweaty and dirty, do ya?' Spike snorts and shakes his head, 'Dream on, green man. I'm here to train, not give you a strip show.'";
 		WaitLineBreak;
 		project the Figure of Spike_shirtless_icon;
-		say "     ";
+		say "     'Fine then, - get on the mat!' Urik replies with only a little grumble, watching Spike's ass quite closely as the young doberman walks past to get to the training area. You can see the bulge in the orc's stretchy trunks  twitch a little, with Urik quickly adjusting it before walking after his trainee. Meanwhile Spike has already gotten down on the mat, his hands resting against the bar of the weights, waiting patiently for Urik to step over him to be his spotter. The orc stands ready to catch the weights just in case, and gives his trainee numerous bits of good advice as he goes through training. It is clear that he enjoys teaching Spike quite a bit. After some time passes and Spike works up a good sweat, the orc helps Spike put the weight bar on its rack, then hands the dobie some lighter dumbbells that he can hold on one hand each.";
+		say "     'Give me at least fifty lifts with each arm!' Urik grunts as a challenge to the anthro doberman and counts the first five aloud with Spike's movements before he starts to walk around him. Soon arriving next to the stretched-out form of Spike, Urik then crouches down and says loudly, 'Keep going, no matter what! I don't want to see you put down those weights until you're done with your set!' Between his pants, Spike's reply isn't so much words but rather a compliant grunt, and he puts in a new burst of energy to his lifting. 'Bend your knees and brace on the ground with those paws, yeah just like that.' With his big, green-skinned personal trainer to motivate him, the doberman actually manages to complete the workout, even though he's more than a little tired by the end. Urik holds out his hand to pull the canine to his feet, congratulating him and giving his back - and lower back - a pat. 'Good puppy, might just make something out of you yet.'";
+		increase the XP of doberman companion by level of doberman companion times four;
+		say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 	increase Stamina of Spike by 1; [8 on the shake path, 55 otherwise]
 	now SpikeEventCooldown is turns;
-
-
 
 
 
@@ -1957,6 +2001,350 @@ to say SpikeTalk11: [talk about Urik]
 	else if Stamina of Spike is 100: [training ended]
 		say "     As you bring up Urik, the doberman bristles a little and crosses his arms in front of his chest. 'That dude? What an asshole - a wyvern can eat him for all I care. Gonna keep my distance from now on, that's for sure!' With a throwing-away gesture, Spike blows the topic off, and you talk a little about other matters instead.";
 
+
+Section 8 - NPC Interaction (Urik, befriended)
+
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and PlayerFriended of Urik is true and Dexterity of Spike is 0 and Libido of Spike < 40):
+	if debugactive is 1:
+		say "     DEBUG: Spike MEETS URIK - Dexterity of Spike: [Dexterity of Spike][line break]";
+	try looking;
+	if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to sex up anyone]
+		say "     Walking along the upper floor of the library, you see Urik ahead of you, leaning against one of the walls and appearing a little bored. 'Hey boss,' he says, giving you a nod as he notices your presence. Just a short moment later, Spike appears from the back of the room where he's made his camp, attempting to walk past the orc. 'So, you keep a dobie, eh?' Urik comments, holding out a thick arm to block the way for your companion. 'Ran into a few such puppies during my hunting trips in the city. Tight little fuckers, really twitching on your dick and they start wagging their short tails when they're well-filled up with cum, hah!' Ears drawing back in annoyance, Spike says, 'Hey! I'm not a sex toy, asshole!' He puts both of his hands on Urik's forearm and tries to push it out of the way, without much success. Instead, the orc grunts, 'Wanna start something, puppyboy?' and easily shoves Spike back a few steps with a swipe of his arm. Then the orc reaches out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!'";
+	else:
+		say "     Walking along the upper floor of the library, you see Urik ahead of you, leaning against one of the walls and appearing a little bored. 'Hey boss,' he says, giving you a nod as he notices your presence. Just a short moment later, Spike appears from the back of the room where he's made his camp, attempting to walk past the orc. 'So, you keep a dobie, eh?' Urik comments, holding out a thick arm to block the way for your companion. 'Had a few of such puppies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their short tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!'";
+	say "[SpikeMeetsUrik_Friend]";
+
+after going to Sitting Area while (Urik is in Sitting Area and doberman companion is listed in companionList of Player and PlayerFriended of Urik is true and Dexterity of Spike is 0 and Libido of Spike < 40): [excludes forcefully broken in Spike]
+	if debugactive is 1:
+		say "     DEBUG: Spike MEETS URIK - Dexterity of Spike: [Dexterity of Spike][line break]";
+	try looking;
+	if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to sex up anyone]
+		say "     Walking along the upper floor of the library, you come up to Urik, who's standing at the railing overlooking the lower floor of the library, appearing a little bored. As you come near, the large orc stands up straight and nods to you. 'Hey boss,' he says, then glances past you and a smile starts to spread across his face. 'Got a new pet, eh? Ran into a few such puppies during my hunting trips in the city. Tight little fuckers, really twitching on your dick and they start wagging their short tails when they're well-filled up with cum, hah! Urik comments, holding out a thick arm to block the way for your companion. Ears drawing back in annoyance, Spike says, 'Hey! I'm not a sex toy, asshole!' He puts both of his hands on Urik's forearm and tries to push it out of the way, without much success. Instead, the orc grunts, 'Wanna start something, puppyboy?' and easily shoves Spike back a few steps with a swipe of his arm. Then the orc reaches out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!'";
+	else:
+		say "     Walking along the upper floor of the library, you come up to Urik, who's standing at the railing overlooking the lower floor of the library, appearing a little bored. As you come near, the large orc stands up straight and nods to you. 'Hey boss,' he says, then glances past you and a smile starts to spread across his face. 'Got a new pet, eh? Had a few dobies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their short tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the back of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!";
+	say "[SpikeMeetsUrik_Friend]";
+
+to say SpikeMeetsUrik_Friend:
+	say "     'A little help, [SpikePlayerAddress]?' the doberman shouts, seeing himself confronted with the towering orc snarling at him and cracking his knuckles in preparation of a beatdown. To prevent the situation from escalating any further, you put two fingers in your mouth and give them a sharp whistle that draws all attention to you. Clearing your throat, you introduce them to each other, explaining that Urik is a strong orc warrior that joined you and that he will be living in the library from now on. 'Huh? But you've got me, why did you bring him in?!' Spike comments, still in a defensive position next to the green-skinned brute, and apparently also a bit competitive for your attention. Reaching out to pat his shoulder, you tell him to calm down, explaining that if you're going to take on the rest of the city. It's just that you need everyone you can get on your side. After a little pause, the young man takes a deep breath and replies, 'Fine, I guess.' He still doesn't seem completely onboard with having such a big brute as a neighbor.";
+	if "Selective Breeding" is listed in Traits of Urik: [player decides whom he can fuck]
+		say "     Turning to Urik, you give him a stern look and express your disappointment at him so easily forgetting that you'll be the one who decides if and whom he gets to fuck. So he has no right to try to molest anyone, least of all [if MaxHP of Spike is 1]your [italic type]son[roman type], [end if]or even just someone whom you've invited to be your companion! 'Yeah, right!' Spike barks at the orc from the side, with you having to wave him down to stop the canine from interfering. ";
+	else if "Molestation Detox" is listed in Traits of Urik: [gave Urik a time-out for forcing himself on others]
+		say "     Turning to Urik, you give him a stern look and express your disappointment at him so easily forgetting what you talked about in regards to becoming physical with others. He was trying to molest someone, then get into a fight at the drop of a hat when that didn't work. On top of that, Spike is [if MaxHP of Spike is 1]your [italic type]son[roman type], and [end if]someone whom you've invited to be your companion! So they should work together, not have infighting right here in their home! 'Yeah, right!' Spike barks at the orc from the side, and you give him a small wave to stop the canine from interfering. ";
+	else if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to touch anyone] [TODO: adjust if the player has a romantic relationship with Spike]
+		say "     Turning to Urik, you give him a stern look and express your disappointment at him going on about his previous fucks, offending Spike and beginning a scuffle with him. You don't really want to hear about others he bedded, now that the orc is with you. On top of that, he should think before getting into a fight with someone [if MaxHP of Spike is 1]your [italic type]son[roman type], [end if]or even just someone whom you've invited to be your companion!' They should work together, not have infighting right here in their home! 'Yeah, right!' Spike barks at the orc from the side, and you give him a small wave to stop the canine from interfering. ";
+	else if "Stud" is listed in Traits of Urik or "Everything Goes" is listed in Traits of Urik: [he may fuck others]
+		say "     Turning to Urik, you give him a stern look and express your disappointment at him so easily making assumptions and becoming aggressive towards another who is living in your home. He should have thought before he acted, trying to molest [if MaxHP of Spike is 1]your [italic type]son[roman type], [end if]or even just someone whom you've invited to be your companion!' ";
+	else: [default, before Urik's behavior is set]
+		say "     Turning to Urik, you tell him in no uncertain terms that Spike is [if MaxHP of Spike is 1]your [italic type]son[roman type], and [end if]someone you've invited to be your companion for exploration of the city! Or course he can't just grab and pound him! ";
+	say "Eyes widening as he hears your words, Urik [if MaxHP of Spike is 1]bursts out with, 'Oh, shit! This is [italic type]your[roman type] boy? I'm sorry [UrikPlayerAddress]!' clearly admitting he was wrong. [else]pulls a face and begrudgingly says, 'I'm sorry [UrikPlayerAddress].' [end if]Holding his gaze for a few seconds to make your meaning settle in, you add that he needs to control himself better in the future, with Urik nodding to show that he heard you. The doberman by your side lets out a huff through his nose as he sees Urik give in, with a bit of a smirk appearing on his muzzle.";
+	WaitLineBreak;
+	say "     For a second, you think the matter is dealt with now, but the orc goes on to looking the Spike up and down and snorts. 'He might be quick, but that won't help much if someone gets a grip on him. Hear that boy? You need some more strength in the arms!' Proudly demonstrating what he means by flexing a bicep thicker than Spike's thigh, Urik grins down at the young dobie. 'This is what a proper man looks like! Not a stick-figure like yourself!' Laughing as he points at Spike, Urik shakes his head, 'Think you'd be able to fight off a wyvern or anything actually dangerous, not that piddly little chickenshit street fighting? You'd be in a heap on the ground in a moment! What are you gonna do? Run back to mommy and hide?' 'Hey!' Spike replies, 'I'm plenty strong, you asshole!' Snorting as he goads further, Urik reaches out to pat Spike's head, with the canine batting away his hand angrily.";
+	say "     'If you don't want to stay a lapdog and be actually useful, we'll bulk you up. You brave enough to try, puppy?' His hackles raised in defiance, Spike barks back 'Sure I am! Bring it on, you bastard!' Stepping up, Urik grins down at him, then holds out his bear-paw of a hand. 'Fine then, you're gonna join me for some strength training every day! Or are you gonna wimp out after all?'";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Let them shake on it. Gaining some strength will do Spike good.";
+	say "     ([link]N[as]n[end link]) - Command Urik to stop it. Enough of his teasing, he should just leave Spike alone.";
+	if Player consents:
+		LineBreak;
+		say "     You stand back and simply watch as Spike shakes Urik's hand, sealing the deal between the two men. 'Not as stupid as you look, hah!' the orc says with a grin, placing a hand on the doberman's shoulder and pulling him closer. 'Gonna work your puppy over till he's a proper man, [UrikPlayerAddress]!' he adds with a nod to you, ";
+		if "Private Breeder" is not listed in Traits of Urik:
+			say "after which he lets his hand wander further down, groping Spike's ass and drawing a defiant bark from the young man as he jumps back from his reach. ";
+		else:
+			say "after which he gives Spike's ass a challenging little slap, drawing a surprised bark from the young man. ";
+		say "Giving the orc a sharp reminder not to go too far, you have him promise to be at his best behavior. After giving a grunt in assent, Urik walks off, chuckling to himself as he leaves. 'Hope I didn't make a mistake agreeing to this,' Spike says in a wary tone, then shrugs to himself. 'I did wanna get stronger anyways though.'";
+		now Dexterity of Spike is 1; [they met and Urik goaded Spike into training]
+	else:
+		LineBreak;
+		say "     Calling the orc's name in a sharp tone of voice, you tell Urik to cut it out and leave Spike in peace. 'Fine [UrikPlayerAddress], if you say so. But how much use will he be for you if he just hides behind you in a fight? Not strong enough to stand on his own, bah!' the large green male grumbles under his breath and stomps off. '[if MaxHP of Spike is 1]Bitchy little daddy's boy[else]Bet you'd have been too weak a bitch anyways[end if],' he not quite whispers to the doberman before leaving. Watching him go, Spike shakes his head, 'Not a good day for him or what? That sure is one grumpy orc, [SpikePlayerAddress].' With a shrug, you explain that Urik still has to adapt to his new role in some ways. He's still quite used to being the biggest and baddest out there.";
+		if MaxHP of Spike is 1:
+			say "     Then you recount what Urik went through in the orc lair, and the incident that put him into that position, down to the breaking of Toven's arm. The big brute has it in him to overreact badly if pushed. ";
+			if "Molestation Detox" is listed in Traits of Urik:
+				say "You're trying to get him better, but it's a long process, and all that. ";
+			say "'Oh,' Spike replies, looking after Urik's receding form. 'I'll keep my distance then.'";
+		now Dexterity of Spike is 100; [Player shut down the workout path]
+	if MaxHP of Spike is 1:
+		add "Spike_Player_Son" to Traits of Urik; [he knows]
+	now SpikeEventCooldown is turns;
+
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and Dexterity of Spike is 1 and a random chance of 1 in 2 succeeds):
+	if debugactive is 1:
+		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
+	try looking;
+	project the Figure of Spike_shirtless_icon;
+	say "     Walking along the upper floor of the library, you see Urik standing over Spike lying on the ground, stretched out on a training mat wearing nothing but his jeans. He's got his big green feet planted to the left and right of the doberman's head, bending a little forward to keep his hands on the set of weights that Spike is visibly struggling with. Given their relative positions, this means that the dobie can't help but stare up at Urik's crotch and ass, which the orc seems well aware of, crouching fairly low every time he assists with the lifting. The dobie makes a smart-ass comment of, 'Man, can't you get some proper pants? Got half your ass hanging out back there!' ";
+	if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to touch anyone]
+		say "Urik laughs in reply, then says, 'What, you jealous? Gotta look the best for the [UrikPlayerAddress]!' ";
+	else: [default]
+		say "Urik laughs in reply, then says, 'You can look, but that's it! This ass isn't for you, puppy! Just gotta look the best for the [UrikPlayerAddress]!' ";
+	say "Glancing at the weights, you see that they're of the self-made variety, consisting of a road-sign pole, with both ends punched through the centers of several manhole covers. The weighty piece of equipment is clearly sized for the massive orc and far too heavy for Spike, with Urik doing most of the lifting in a very visible fashion as your [if MaxHP of Spike is 1]son[else]dobie companion[end if] tries to push upwards.";
+	say "     To rub it in a bit more the towering orc goads his trainee with the words, 'Too much for you, little dog boy? Should I go and see if I can loot some baby weights somewhere?' A defiant growl rolls up from the depth of Spike's throat and he grunts, 'No! I can do this!' The orc lets out an amused snort at Spike's insistence, followed by the words, 'At least you have some spunk, boy! The will to keep going is what you need most! Now give me another twenty reps!' Swallowing the words of a reply as he gulps at the added challenge, Spike strains his muscles to push the pole up again and again, sweat matting his fur as he continues with the exercise Urik demands. By the time the orc's deep voice says, '..., nineteen, twenty!' your dobie companion is panting loudly, letting his rubbery arms drop down to the mat in exhaustion. He groans tiredly as Urik carries his weight to the side, setting it down in some deep grooves in the floor that must have been made by dropping the thing a bit too quickly.";
+	WaitLineBreak;
+	say "     Strolling back to the young doberman, Urik grins down at him and grabs hold of Spike's arm, effortlessly pulling the other man up to stand next to him. 'Just gotta do workouts like this two or three times a day for some time and we might make something out of you yet, boyo!' the orc says in a cheerful tone with a broad smile, while Spike gulps and looks wide-eyed at him. 'Err - three times a day?!' he gasps out, wavering a little on weak legs until Urik slips an arm around his side, his large hand gripping the doberman's chest under the armpit. 'Sure! You don't wanna stay a little stick-figure of a guy, do you?! I'll teach ya what you need to know.' 'I - I don't even know if I'm strong enough to pick my pants back up from over there. My arms are just done for now,' Spike says somewhat defeatedly, leading to Urik patting his slender chest. 'Now, now, you don't wanna give up that quick, eh? You've got it in you. Just might need to have some help. Can't build some muscle out of nothing.'";
+	say "     With that said, the towering orc leads his trainee over to one of the still-standing bookshelves, grabbing a plastic bottle with the logo of a popular energy drink from it. It looks fairly tiny between his fingers and you can mostly just see the bright plastic cap on its wide neck. The orc must have gone out of his way to find the stuff somewhere, preparing for his training with Spike. As the dobie opens the bottle, you can faintly hear its freshness seal pop, followed by him taking a deep swig of clear, lime-green liquid. 'Mhh, not as bad as I thought, but it still tastes like they cooked it up on a lab. What's this supposed to be, even?' he gives as a verdict, looking down at the bottle. 'Eh? I guess people can't complain about the taste if they didn't even model it after anything real and just say 'Taste the Unbridled Spirit!' on here. Oh well.' Urik puts a large hand on Spike's shoulder and squeezes it, 'You'll get used to it. That stuff will give you new energy and we'll continue the workouts soon.' With that said, Urik strolls over to the spot he usually leans against the railing overlooking the lower floor. Left behind, Spike decides to sit on the nearby sofa for a little while, casually finishing off his drink.";
+	increase the XP of doberman companion by level of doberman companion times four;
+	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
+	now Dexterity of Spike is 2; [Spike got his first (normal energy) drink]
+	now SpikeEventCooldown is turns;
+
+after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and Dexterity of Spike is 2 and a random chance of 1 in 2 succeeds):
+	if debugactive is 1:
+		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
+	try looking;
+	project the Figure of Spike_shirtless_icon;
+	say "     Coming up the stairs to the upper floor of the library, you see a shirtless, sweaty Spike flashing past the upper end of the steps. He's closely followed by Urik whose longer legs and wider strides make it fairly easy for him to chase the dobie, all the while shouting things at his trainee. 'You'll wanna run faster boy when a horny dude runs after you. Unless you wanna be caught and bent over the railing, eh puppy?' Making a lunge and giving the young man's back a push with his large hand, Urik drives Spike to a sprint, following after him in yet another circuit of the upper library floor. When they soon come around from the other direction, Spike starts to slow down a little as he sees you, calling out the words, 'Hey, [SpikePlayerAddress]!' But before he can say anything more, Urik's close up behind him and shouts, 'DID I SAY STOP, PUPPY?' driving his trainee in front of himself like a drill sergeant. He gives you a little wink to the side, showing that he saw you.";
+	say "     Quietly chuckling to yourself about how much Urik seems to enjoy the drill instructor role, you busy yourself with some other things, like having a look out the windows to observe the approaches to the library for example. While you do that, the two men continue running without pause, with Spike panting louder every time he passes. Eventually, the young man can't help but stumble to a stop, bracing his upper body with his arms on both thighs as he gasps for breath. Stepping up close to tower over him, Urik gruffly remarks, 'That's it? Already winded, boy? With this little stamina, you might just outrun a street dog. A three-legged one, with fleas!' Not really ready to give any sort of verbal reply, Spike shows the orc his middle finger, which makes Urik laugh. 'Fun aside, I'm impressed. Ya didn't whine or beg, just kept running. Good doggie! That deserves a reward. Here, have another energy drink!'";
+	WaitLineBreak;
+	say "     With that said, the towering orc walks a few steps and grabs a plastic bottle out of one of the bookshelves. It bears the logo of a popular energy drink from it, looking fairly tiny between his fingers and you can mostly just see the bright plastic cap on its wide neck. With a broad grin on his face, Urik holds the bottle out to Spike. 'Drink up, it'll be good for you!' As the dobie opens the bottle, you can faintly hear its freshness seal pop, followed by him taking a deep swig of clear, lime-green liquid. 'Bleh, all that tastes of is sweetness and chemicals,' the dobie says with a sigh, but he keeps drinking. 'Then concentrate on drinking it quicker instead! You need to refill your energy and we'll continue the workouts soon.' Grinning in obvious satisfaction, the orc gives Spike's back a friendly slap. 'Just imagine having muscles like this!' With that, he goes into a full-on series of poses, showing off his orcish, ripped physique. Spike looks at him somewhat enviously, staring at what the green-skinned brute flexes and shakes in front of him.";
+	say "     'Go on, touch it!' Urik prods him along, lowering his bulging bicep towards the doberman, who reaches out to lay his hand on it. There's a short while of what might be called muscle worship, with Spike rubbing and squeezing the orc, his tail wagging. 'That's quite something, your muscles I mean,' the anthro says admiringly. ";
+	if "Private Breeder" is not listed in Traits of Urik:
+		say "'I could show you some other parts of me that'd blow your socks off puppyboy,' Urik replies, grinning broadly as he makes the offer. Spike freezes in motion as he hears this, staring straight ahead with his muzzle almost touching Urik's chest before he shakes out of it and takes a step back. 'Just offering, eh?' the orc tells him with a wink and starts another set of flexes, but Spike doesn't let himself get drawn into touching him again, instead making excuses and hurrying off towards his camp and bedding. As the dobie leaves, Urik looks after him with a grin.";
+	else:
+		say "'I got another muscle down here, really thick and strong. Not that you could handle it, even if it was yours to take, puppyboy,' Urik replies, grinning broadly as he teases his trainee. Spike freezes in motion as he hears this, staring straight ahead with his muzzle almost touching Urik's chest before he shakes out of it and takes a step back. 'Um, I - I think I'm good,' the young man stammers, suppressing the reflexive urge to throw back that he can take anything, given the topic of conversation. Urik grins broadly and starts another set of flexes, explaining the names of each part and how best to work them out. The two of them spend some time like that, until the orc eventually finishes his posturing and they walk over to their usual hangout spots.";
+	increase the XP of doberman companion by level of doberman companion times four;
+	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
+	now Dexterity of Spike is 3; [Spike got his second (normal) drink]
+	now SpikeEventCooldown is turns;
+
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 3 or Dexterity of Spike is 50 or Dexterity of Spike is 51) and a random chance of 1 in 2 succeeds):
+	if debugactive is 1:
+		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
+	try looking;
+	project the Figure of Spike_clothed_icon;
+	say "     Walking along the upper floor of the library, you glance around and see Spike sitting on a chair nearby, slowly paging through a magazine. For a second, you wonder what he's reading, until the question answers itself as he turns it ninety degrees and spreads out the centerfold. Must be a porn mag he looted somewhere. The dobie's tail is wagging behind his back and moves one hand down to his pants, either to adjust his bulge or to flat out unzip and start stroking. Sadly (for him) Spike's fun-time ends before it can begin, as Urik strides towards the anthro canine a moment later, carrying two weighty sports bags. The grinning orc drops his burden on the ground directly behind his trainee, creating a loud crash of clinking metal and creaking wood that you can literally feel through the floorboards.";
+	say "     Spike's completely surprised by the appearance of Urik and the accompanying noise, jumping out of his chair in shock and whirling around, with the magazine going flying out over the upper floor railing and vanishing from sight as it drops. 'What the fuck?!' the young man shouts in shock, gaping wide-eyed at Urik. The orc snorts in amusement, his nostrils flaring as he takes in the scent of pre-cum in the air around Spike. Urik gets a far-away look in his eyes for a second, then shakes out of it and crosses his arms in front of his wide, muscular chest. 'Heya slut-puppy, I got some presents for ya! Cool your jets and have a look. You should be thankful when I go out of my way and grab equipment just for you!' Spike is still fairly shaken up by the surprise, but does react to the prompting from the orc by crouching down and pulling open the zipper on one of the bags. He raises his eyebrows at what he finds, then reaches in to lift a metal disc with a hole in the middle from it. Looks like part of an adjustable weightlifting set. Urik must have decided that the self-made orc gear he has was just too much for the dobie.";
+	WaitLineBreak;
+	say "     After retrieving several more metal discs and starting to stack them by weight, Spike glances up at the orc and opens his mouth, hesitating a second or two before he finds his words. 'Uhm - Thank you, Urik. This stuff will actually be useful for my training.' The green-skinned brute smiles down at him and replies gruffly, 'It's fine. Gotta get you in shape somehow so you can properly help [if MaxHP of Spike is 1]your daddy[else]the [UrikPlayerAddress][end if] in a fight. Even if it means collecting some baby weights that even a newborn orcling could throw around.' Spike rolls his eyes at the ribbing he gets, but still wags his tail a little bit as he nods to the orc, then turns back to organizing what appears to have been randomly stuffed into the sports bags. Meanwhile, Urik wanders over towards one of the still-standing shelves, reaching up to grab another of his energy drink bottles from all the way on top of it, too high to reach without a ladder for most people but him.";
+	say "     Then he walks back towards his trainee, calling Spike's name and holding out the drink to him. 'Thanks,' the dobie tells him, looking down at the bottle in his hand, 'Man, I guess I really should stop complaining about the funky taste of this stuff. I mean, you found a supply of the stuff in the midst of all this chaos, just for me.' That said, he reaches out to pat Urik's arm, with the orc covering his hand with a much larger one. 'Ah, that was nothing, pup. Gotta keep my little fighter hydrated and all that good shit!' Soon after setting the bottle down on the ground and finally digging out the lifting bar from the second sports bag, the doberman lays it out with all the weight discs and continues to sort the rest of the gear, helped by Urik crouching down next to him. Once they have arranged the whole weightlifting set in neat and tidy stacks, the orc helps Spike assemble the set of weights.";
+	WaitLineBreak;
+	say "     'Come on, let's get you started. And take off that shirt, you'll just get it sweaty otherwise,' Urik then tells the dobie, his eyes ";
+	if "Private Breeder" is not listed in Traits of Urik:
+		say "unashamedly checking out the other male's chest as he does so. ";
+	else:
+		say "reflexively focusing on the other male's chest as he does so, but Urik looking away quickly as he seems to remember you wanting to be exclusive with him. "; [TODO: Adjust if the player starts a relationship with Spike]
+	say "Coming to a broad-legged stance, the orc then instructs Spike to stretch out on the ground under him, allowing Urik to spot for him and give advice as the young man starts his lifting. Working out keeps the two of them busy for quite a while, with some pauses in between as Urik explains something or Spike needs to take a drink.";
+	increase the XP of doberman companion by level of doberman companion times four;
+	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
+	now Dexterity of Spike is 4; [new weights for Spike]
+	now SpikeEventCooldown is turns;
+
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 4 or Dexterity of Spike is 52) and a random chance of 1 in 2 succeeds):
+	if debugactive is 1:
+		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
+	try looking;
+	project the Figure of Spike_clothed_icon;
+	say "     Walking along the upper floor of the library, you glance around and see Spike and Urik standing together in the sitting area, talking to one another. Your doberman companion is holding a bottle of water, taking another swig from it as you watch and apparently finishing off the bottle. As the young man puts down the empty container, his tail wagging behind his back, he touches Urik's arm and says, 'Thanks again for training me. I feel stronger already.' The orc chuckles at the words, reaching out to tousle the doberman's green hair. 'You're still a twig of a guy, but it's good you're enthusiastic. Still got a long way to go, boy! And now, down you go and give me thirty push-ups for a start!' Stiffening at the command barked at him, Spike starts to step towards a training mat laid out nearby, only to be held back by Urik's large green hand on his chest. 'Better take that off, you don't wanna get it sweaty, eh?' the orc adds, tugging at the mesh shirt on his trainee's chest.";
+	say "     'Oh, uhm... yeah,' Spike replies, pulling off the article of clothing and throwing it in the direction of his little camp between the shelves. Then he gets down on the training mat and begins to do push-ups. Urik joins him a few seconds later, crouching down and looking at Spike closely. 'Gotta straighten your back more, puppy-boy! And really get on tip-toe with those paws, then go down till your muzzle is right over the ground!' He observes the doberman's efforts with a critical eye for a little while, even reaching out to push down on his naked back to make him go lower. 'That's a little better, but you still don't have quite the right form. Here, tense up a bit back here!' Urik goes on to say, smacking his hand lightly on Spike's ass";
+	if "Private Breeder" is not listed in Traits of Urik:
+		say "and giving it a quick grope. ";
+	else:
+		say ". ";
+	say "Besides a quick, 'Hey!' at Urik touching his ass, the doberman takes his instruction without complaint and does his best to obey. After a few more repetitions, Urik gives him a grudging, 'Now keep that pose as you go up and down.'";
+	WaitLineBreak;
+	project the Figure of Urik_clothed_icon;
+	say "     The orc gets into position for push-ups himself, right next to the anthro canine, adding in a gruff voice, 'Gonna join you in the workout, and if you have any questions, just look at how I'm doing it!' With that said, he starts pumping his broad-shouldered body up and down with almost effortless ease. From time to time, he even does a few with just one arm as he reaches out to correct Spike again, his hand often staying to keep touching the doberman for a few seconds. The two of them keep working out for some time, with Spike having to take breaks to catch his breath while Urik just powers through. By the time the orc calls it quits, Spike's lying on the mat, panting rapidly as he tries to catch his breath.";
+	say "     Sweat glistening on his muscled chest, Urik sits up and glances over to his trainee. 'What, already exhausted? I could keep going for another hour. But I guess a delicate thing like you needs to go slow,' he comments, then grabs Spike by the arm and just flips him over, flopping down on the mat. Still panting, Spike yips at suddenly being man-handled, glancing up at Urik. 'At least you've got the spunk to keep at it, boy. No complaining from you, or are you just to weak to get it out right now?' Groaning, Spike shakes his head left and right, then gasps, 'No! I - I'm good.' The orc smirks at him, then offers a hand to help him get up from the ground, after which Spike stumbles over to his mattress on somewhat wobbly legs.";
+	increase the XP of doberman companion by level of doberman companion times four;
+	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
+	now Dexterity of Spike is 5; [training without shakes, shirtless pushups done]
+	now SpikeEventCooldown is turns;
+
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 5) and a random chance of 1 in 2 succeeds):
+	if debugactive is 1:
+		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
+	try looking;
+	project the Figure of Spike_clothed_icon;
+	say "     Walking along the upper floor of the library, you glance around and see Spike stand at the railing overlooking the lower floor, apparently deep in thought as he just stares ahead. Just as you start to contemplate if you should walk up and talk to him, a deep voice calls out, 'Hey, puppyboy!' It's Urik, and as Spike turns around to look at him, you notice a little wag of his tail. 'Hi Urik, what's up? Is it already time for our next training session?' The orc grins at him and nods. 'Yup, time to put you through your paces!' Urik adds, then throws a bottle of his energy drink for Spike to catch. He waits for the young man to take a first swallow of the liquid, then brings forward his other hand, which had been balled to a loose fist by his side. 'Skinny jeans aren't really the proper thing to do any sort of running in, I got you this. Should fit, I'm sure,' the orc adds, opening his fingers to reveal a black piece of cloth with red borders.";
+	say "     'Huh?' Spike says in a somewhat surprised tone, setting down his bottle on the ground after recapping it. Then he reaches out to take Urik's gift from the green-skinned brute's hand and inspecting it. It's a piece of underwear, shiny and stretchy from the looks of it. 'Err, thanks. But... eh, did you find this on the street or something? Looks like the back half is missing.' Turning the garment around, Spike tugs at a pair of elastic bands as if to demonstrate what he means. 'Naw, that's how it's supposed to look. It's a sports thing, and this'll be good especially for you!' Urik replies with a smile and pats Spike's head. 'Hey! What's that supposed to mean?!' the young man replies somewhat annoyedly, patting away the large hand. 'Your tail, boy! With a jockstrap you don't have to tug yer undies down at the back to make room for it. Not wearing any right now because of the chafing at the tail, ain't that right?'";
+	WaitLineBreak;
+	project the Figure of Spike_jockstrap_icon;
+	say "     Still a bit leery about Urik picking out underwear for him, Spike looks back and forth between the piece of cloth to Urik's face. There's a moment of hesitation before he finally gives a little shrug and admits, 'Yeah, you're right. Kinda. I tried boxer briefs a little while back and they were rubbing me the wrong way.' Urik's grin only gets broader, with the orc nodding back towards the sitting area. 'Go on then, let's see if it fits. Gotta be snug and not hang loose. Once you're ready, we'll do another run.' Spike looks at the much taller orc and says, 'Fine, but no peeking!' 'Wouldn't dream about it,' the orc replies";
+	if "Private Breeder" is listed in Traits of Urik:
+		say " with a roll of his eyes. 'Shush now, go already!' he tells Spike, crossing his arms and demonstratively staring at the walls and ceiling. Nodding, the doberman walks past him, over to the sofa in the sitting area, where he strips down and starts to put on the jockstrap, taking a few seconds to figure out which way all the straps go. Urik blows out his breath as he waits, but controls his desire to have a peek.";
+	else:
+		say ", one hand casually behind his back with crossed fingers. Nodding, Spike walks past him, over to the sofa in the sitting area, where he strips down and starts to put on the jockstrap, taking a few seconds to figure out which way all the straps go. Meanwhile, Urik is watching over his shoulder, his gaze taking in the curve of the dobie's ass in detail.";
+	say "     Soon, Spike's coming back. 'It's certainly not loose. Might be a little tight even,' the doberman says thoughtfully, looking down at his own crotch as he walks over slowly. 'And the back feels weird. Being dressed at the front and bare there.' Urik replies, 'Let me see,' and reaches out to cup Spike's crotch, which the young man quickly deflects. 'Hey, keep your fingers to yourself. You can look, but no touching.' Grunting in amusement, the orc takes Spike by the shoulders and turns him around, looking at his hips. 'Seems alright to me, you won't have to worry about losing it as we run! Now finish off your energy drink and then we can get to some laps.' Spike does as requested, grabbing his bottle and chugging more of the artificially flavored liquid. He looks down at himself a few times as Urik chats with him for a few minutes, then finally finishes off the bottle and hands it to Urik so he hand put it away.";
+	WaitLineBreak;
+	say "     When Urik returns soon after, Spike has relaxed at least a little about wearing the jockstrap, though he's still fussing about it some, tugging at the material. 'Time for you to show some of that speed and endurance you need to make it in the city. We're gonna run laps, clockwise around the middle! You go first and I play one of the horny monsters out to get ya in the streets!' With a laugh, he gives Spike's bare buttocks a slap, prompting the young man to start running. The orc gives his trainee a head-start, then sets out after him, chasing Spike through the library in a (for him) comfortable pace.";
+	LineBreak;
+	say "     [bold type]Do you want to join them?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Sure, let's jog!";
+	say "     ([link]N[as]n[end link]) - Nah, not really.";
+	if Player consents:
+		LineBreak;
+		say "     Calling out to the two of them, you put in a little sprint and catch up, then join them in their workout routine. It feels nice to just hang out and do something simple and physical with the orc and doberman for a while.";
+		XPGain 15;
+		SanBoost 10;
+	else:
+		LineBreak;
+		say "     You decide to turn to other things while Spike gets a thorough workout with Urik.";
+	increase the XP of doberman companion by level of doberman companion times four;
+	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
+	now Dexterity of Spike is 6; [Spike got a jockstrap now]
+	now SpikeEventCooldown is turns;
+
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 6) and a random chance of 1 in 2 succeeds):
+	if debugactive is 1:
+		say "     DEBUG: Spike and Urik Story Time - Dexterity of Spike: [Dexterity of Spike][line break]";
+	try looking;
+	project the Figure of Spike_shirtless_icon;
+	say "     Walking along the upper floor of the library, you glance around and see Urik and Spike sitting next to each other on the sofa further in the back. Seems they're just hanging out with each other right now, not doing any training for a change. Your doberman companion is currently telling a story, gesturing wildly as he does so. '...so when we got to the alley, she wanted me to follow her into it. At first I did for a few steps, hell, that husky had offered me her pussy, but then I heard a noise from behind one of the dumpsters in there. When she noticed that I knew something was up, the bitch shouted, 'Get him, Bill!' and this dude jumped out from his hiding spot. Half human, half husky guy, with a long metal rod he was hefting like a spear!' Spike pauses for effect, miming a guy attacking him, then goes on to say, 'But I was too quick for the dude. Dodged his thrust and shoved his girlfriend at him and the two of them went down in a tangle. Gave me the time to high-tail it out of there.'";
+	say "     Urik chuckles at the story and comments, 'Yeah, you don't trust a streetwalking hooker further than you can spit. That's why you bring a buddy to double-team her. If they're into that with women, you know. Those two you met were amateurs, but a woman and her pimp working together almost did my buddy Declan in once. Thought they could roll him, take everything he owned or whatever. That didn't work out so well, as me and a bunch of other soldiers were passing by on our way to a bar, and we gave em a good thrashing. But yeah, gotta watch out for yourself.' He nods to Spike, who was listening intently to his tale, then glances down at his forearm, making a fist and stroking over the tattoo covering his skin there. 'I miss Dec, he was a swell dude. Good tattoo artist too, he gave me these back in [']84,' Urik says, then pauses for a moment before he adds, 'Not even a year later, he got shot in the back by some little punk with a souped-up ride and inflated ego. Fuck, I'm still mad when thinking back to it. But the little murderous pissant got what was coming to him afterwards. Only wish we could have made it last longer.'";
+	WaitLineBreak;
+	say "     Silence stretches out for a few moments between the two of them, with Urik still reminiscing about his friend and Spike half-raising a hand towards the orc, then letting it drop. Finally, Spike clears his throat. 'Err, wait a minute - do you mean 1984? Just how old are you, Urik?' he blurts out, looking rather wide-eyed at the large man. Laughing out loud and slapping the side of his thigh, the orc grins at his trainee as he replies, 'I'm fifty-four years old, puppyboy! Don't look like it, do I, eh? If you ask me, this transformation business is the best thing that could have happened! Feel like I'm twenty again, and I'll take honest street-fighting over that rotten society from before any day. No more pigs who harass you just because you ride a bike. We sorted them out good, I can tell you that!' To underline his point, the green-skinned brute rubs the bulge in his pants, then begins a new tale with the words, 'Let me tell you how I got to be an orc...'";
+	LineBreak;
+	say "     [bold type]Do you want to listen to Urik's lewd tale?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Sure, it's bout to be hot!";
+	say "     ([link]N[as]n[end link]) - Nah, not really.";
+	if Player consents:
+		LineBreak;
+		say "     With a grin that shows his sharp tusks on his face as he recalls the day that he got transformed, Urik clears his throat and gives Spike's shoulder a friendly slap. 'So, as you might know, things were going to hell in a handbasket when this whole crazy shit started. I mean, one day things are normal, kinda slow. Bike's in the shop - don't think I'm still regretting that decision - and I'm out with some buds drinking, go home, sleep the buzz off. Next morning, I'm woken up by some asshole screaming and banging on my door. Literally, as I stumbled out of the bedroom and what did I see? My mailwoman, face pressed against the window of the door, with a big-boobed fucking gryphon shafting her from behind! Kind of a shocker, early in the morning, and I wondered if I was still drunk and not just hung over, I can tell you that! Then she looked at me and called my name, and I knew it was real. I turn away for a moment to grab the shotgun and load it, but by the time I get back, it's two dick-swinging bird-babes on my porch, one of them in she shreds of a mail uniform. Hot, but freaky, so I booked it out the back door quick after that.'";
+		say "     Shrugging, Urik waves his hand in the air and adds, 'It was a big free-for-all in the streets, but critters did kinda avoid me since I was armed. Thought I'd make it to our watering hole, see if I could link up with some of the guys, get out of dodge. That plan went overboard quick when suddenly a frightened piggy peeled around the street corner in front of me at a dead run, to bounce right off me when we collided. I stumbled back a few steps, he went down on the ground. Oh, what a sight he was - pretty blue uniform shirt ripped, with the dude's pecs hanging out, and he had a wild expression on his face, calling out to help him.' The orc chuckles at that, miming himself holding a shotgun and an exaggeratedly frightened expression for the cop. 'What came after him a second later was a beast! More or less human, but big enough to have burst the clothes he had on, broad-shouldered and muscular, with protruding tusks and green skin!'";
+		WaitLineBreak;
+		say "     'I was halfway there to raise the gun and blast that motherfucker, humans holding together and all that shit, even if the runner was a dirty pig. And then, the greenskin grinned and laughed, saying, 'Don't recognize me, do you?!' Made me hesitate and really look at him, that - and you know who he was? My buddy Pete, with about three times the muscle that fat bastard had ever had before! The scared pig shouted for me to take him out, only to receive a bump on the head from Pete, who went on to tell me that being an orc is great. I was still doubtful for a while, but he knew shit, you know? Reminded me of the trip to Mexico we had the year before, and some shit no one else could have known. When I lowered the gun, he went ahead to casually rip the clothes of the stunned cop. Showed off his muscles and new body as he did, and a moment later rammed into him deep!' Pulling down his pants to let a fully erect, huge orc cock free from its constraints, Urik wraps his fingers around the girth of his shaft, stroking up and down. 'It was a hot show, with that thick rod going into the little punk!'";
+		say "     'When he was done seeding the police bitch and pulled out of the moaning slut, Pete was all, 'Wanna have a turn?' Course I said yes!' Slapping his girthy piece of man-meat into the open palm of his other hand, Urik grins at Spike and the bulge visible in his pants. 'Oooh, does someone like the thought of shafting a squirming punk's ass? Let me tell you, he was tight! Snug around my dick even after taking that orc beer-can! I pounded the little bitch, hard and deep, churning up his cum-filled boipussy! And as I was doing so, I got to thinking 'Is he getting tighter?' But that wasn't it - my dick was growing, at the same time as my skin was going green! Man, I was so horny that I didn't even care! Just kept enjoying the snug hole around my prick, right until the point that I added some spunk to the bitch's chute! Then Pete went for him again, followed by another round for me!'";
+		WaitLineBreak;
+		say "     Swiping up a thick drop of pre from his cum-slit, Urik rubs it over the mushroom head of his thick orc cock, then proudly holds his shaft up. Spike turns his gaze to the side, as not to stare at it, but can't help looking from the corner of his eye after all. The doberman's nostrils flare a little as he takes a deeper whiff of Urik's scent. Clearing his throat, Urik continues, 'By the time we were done, we didn't have a piggy there anymore. Nah, the dude had become a proper little orc breeder! Pretty but muscular, with teeny tiny tusks";
+		if "Private Breeder" is not listed in Traits of Urik:
+			say ". Not unlike those canines you have there.' With that said, the orc uses his finger to tap Spike's muzzle, [if PlayerRomanced of Spike is false]drawing a 'Hey!' from the canine and resulting Spike pulling back a little[else]<TODO: Add Romance Text here>[end if]. 'Anyways, I felt as good as ever, and decided to just throw in with the orcs. Hah, going back to that cop station and joining the gangbangs around returning pigs was fun!'";
+		else:
+			say ". Anyways, I felt as good as ever, and decided to just throw in with the orcs. Hah, going back to that cop station and joining the gangbangs around returning pigs was fun!'";
+		say "     Bringing his tale to a conclusion, Urik leans back on the sofa and focuses more on the slow stroke of his dick for a moment. Then he gives Spike a light poke with his elbow. 'If you liked the story, feel free to rub out a nut too. It's just us guys, no need to be shy!' Spike looks at Urik with wide eyes, speechless for a second before saying, 'Err... thanks?' The orc just smiles and pats his arm, 'Anytime, boy!' Spike focuses on the orc, his nostrils widening as he takes in a deep breath, eyes wandering down to the large man's cum-splattered chest. 'Thanks for the story, I'll go clean up now,' the young man hastily says and walks away, leaving a broadly grinning Urik behind.";
+	else:
+		LineBreak;
+		say "     With a shrug, you tune the two of them out and turn your attention to other things.";
+	now Dexterity of Spike is 7; [storytime with Urik done]
+	now SpikeEventCooldown is turns;
+
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 7) and a random chance of 1 in 2 succeeds):
+	if debugactive is 1:
+		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
+	try looking;
+	project the Figure of Spike_clothed_icon;
+	say "     Walking along the upper floor of the library, you glance around and see Spike stand in the sitting area, holding a half-full energy drink in his hand. Taking a deep swig of it, the young doberman then walks over to Urik, who's busy unrolling two fitness mats in front of the back wall. 'So, what are we going to do today? More strength training?' Spike asks his green-skinned taskmaster, who snorts and shakes his head. 'Not quite, puppyboy. We're gonna do Yoga!' As the slender anthro canine looks at him, visibly perplexed, Urik lets out a deep laugh and lightly slaps him on the back. 'Didn't think I was the type, eh? Well, you gotta blame my nephew Troy for it. The little shit kept going 'Uncle, it's good for you!' and he eventually talked me into trying it out. And it worked, gotta admit that.' Shrugging his very wide, muscled shoulders, the orc adds, 'Thank god I'm no longer an old fart with aching joints, but Yoga's still good stuff.'";
+	say "     'If you say so,' Spike comments, then raises one eyebrow and adds, 'Just to be sure, though - I'm not calling you Sensei or Master, or anything like that!' 'That's Karate, you little punk. And do I look like a little white-bearded man to you?' Putting on a challenging smirk on his muzzle, the dobie replies, 'Well, weren't you, old man? Half a century more white hair than I have!' Their eyes meet in a stare-down, with a silly grin growing on Spike's face before too long, then a chuckle bursting out of him. Urik raises an eyebrow at that, then snorts and adds while patting Spike's head, 'Got a point at that I guess, puppy-boy. Nah, just use my name, this isn't some mystic mountain martial arts training!' Stepping over to place his broad green feet on the end of an extra large exercise mat, Urik nods over to the second one beside his and says, 'Okay, take your place. And you wanna strip down, this stuff may look soft, but you'll get sweaty, that's for sure!' Finishing off his energy drink, Spike peels the tight mesh shirt off his body, throwing it in the direction of his man-cave to land in a wadded-up heap just a few steps short. As he then starts to walk past the large orc, Urik holds out his hand in front of the young man and clears his throat with a nod down to his hips.";
+	WaitLineBreak;
+	say "     The next thing that can be heard is a zipper being lowered as Spike takes the hint, followed by him pushing down his jeans and kicking them off. 'Good boy!' Urik tells his trainee, both for obeying as well as the fact that he's wearing the orc's earlier gift, a black jockstrap with red borders. In response to the praise, Spike's tail starts to wag. The dobie realizes this and pushes the appendage down with one hand, clamping it down as he throws Urik a look of youthful rebelliousness. 'I'm a badass, not a puppy! Remember that! And no staring at my ass!' Urik doesn't reward him with a reply, simply snorting and then going on to say, 'Okay, now stand like this and take a deep breath. Then...' the orc begins his instructions of Spike, taking him through basic breathing and pose exercises before demonstrating several poses himself and then watching the anthro doberman attempt them. He keeps up his usual banter and teasing throughout the training set, but at the same time seems genuinely pleased in working out with his canine friend, throwing in praise and a few touches and squeezes of Spike's shoulder.";
+	say "     Urik's earlier announcement proves to be nothing but the truth, as the two of them do work up some sweat from the relatively slow but often repeated and held movements. The orc's large, green-skinned body glistens in the light, making watching him move quite a nice show. Beside him, Spike's panting a lot more than usual, his tongue dangling halfway out of his mouth and you can see that the short fur all over his body is matted against his skin. His anthro heritage shows through that, as you're fairly sure that real dogs don't have any sweat glands on their body. 'Feels good to work out all them muscles, eh mister badass?' the orc asks with a grin on his face, letting his eyes roam up and down over the young man's slender form. ";
+	if "Private Breeder" is not listed in Traits of Urik:
+		say "His cock throbs visibly inside his pants as the orc does so. ";
+	say "'Yeah! Guess you're not just full of hot air! Um... thank you for teaching me,' Spike replies in a somewhat breathy tone, tail wagging as he does so. Being thanked brings a satisfied smile to Urik's face and you can't help but feel that his opinion of the dobie just went up a notch.";
+	WaitLineBreak;
+	project the Figure of Spike_jockstrap_icon;
+	say "     The two men continue their workout for a little while longer, before Urik eventually clears his throat and says, 'Okay, got one more thing to show you for this set.' With that said, the orc chuckles heartily and winks at Spike. 'Don't worry, it'll come naturally to you! As a puppyboy, you'll have no problem with downward dog!' Not going into any more detail before, Urik takes Spike through the steps of setting his paws on the mat in their proper places, breathing in and out, followed by the words, 'And now you bend forward, putting your hands on the ground and lower your head between them.' He proceeds to demonstrate the pose with practiced ease, followed by standing up and watching Spike attempt the same with somewhat less than optimal results. 'You're close boy, but there's some things you got to adjust,' Urik comments, taking a step closer and reaching out to touch Spike. 'Okay, first you bend your legs a bit more to allow you to get into position and push your hands further to the front. Let your head hang between the arms and keep the back straight.'";
+	say "     The orc's large hands stroke over his trainee's body to help him along, with Urik smiling in satisfaction as the dobie follows his instructions and posture adjustments. 'Good boy! Now raise your ass higher and start to straighten those legs!' is said next by the big man as he grips the side of Spike's hips, fingers covering the furred curve of his buttock while Urik's thumb points at his crotch. Spike tenses for a second at the touch, but he lightens the mood by quipping, 'I knew you just wanted to get your hands on my ass, old man! Help, I'm being assaulted by a pervert!' Urik snorts, 'Smartass, just stick your rear out properly for the pose!' Doing as he is told, Spike reaches a good beginner's approximation of the downward dog pose, which clearly pleases his instructor. 'Now hold like this, feel how you're stretching your ankles, hamstrings, back and shoulders. Breathe in, and let it out slowly.' ";
+	if "Private Breeder" is not listed in Traits of Urik:
+		say "Meanwhile, the orc's hand is still halfway covering Spike's ass, but Urik doesn't do anything except giving him a light squeeze or two before pulling it away again. [if PlayerRomanced of Spike is true]<TODO: Add romance mention here>. [end if]Sliding an arm under the doberman's chest, Urik helps Spike stand up straight afterwards.";
+	else:
+		say "Having taken away the hand from Spike's ass, Urik watches Spike hold the pose for a moment, then helps the dobie stand up straight afterwards.";
+	WaitLineBreak;
+	say "     Smiling and tousling the young man's green hair, Urik gives him a nod of appreciation, then pushes the long strands aside with his finger again in an almost paternal gesture. 'Good workout! Feels nice, doesn't it?' the orc asks, and Spike replies, 'Yeah, it does. I'm sweaty and a bit exhausted, but that was pretty good.' Urik grins broadly at him as he says, 'We'll have to keep doing it then, eh?! Good, sweaty fun! Before long, you'll be a real badass and able to have any bitch on the streets that you want, eh?! Just imagine it - you walking down a street, showing your bulging pecs and arms to all of them. Weaker men running off in fear and bitches begging you to breed them!' As he follows Urik's words, Spike closes his eyes, forming a mental image of the scene - which clearly has quite an effect, judging from a quick look at his crotch. The orc's watching the growing bulge there with interest, adjusting his own cock as he gets somewhat hot and bothered himself.";
+	say "     As Urik has stopped saying more to guide his fantasy along, Spike opens his eyes before too long and realizes the orc is checking out the hardon in his pants. 'Oh! I -' the doberman starts to say, moving to cover himself, only to have Urik tap his arm lightly. 'Relax, boy! Sorry about revving your engines. Didn't mean to do that actually, hah! Still, no need to be ashamed of it! ";
+	if "Private Breeder" is not listed in Traits of Urik:
+		if PlayerRomanced of Spike is true:
+			say "<TODO: write romance variant>";
+		else:
+			say "Just another part of your body to take care of. Come on, let's let off some steam!' Before Spike can reply, the orc takes hold of his own pants and pushes them down in a quick move, kicking them off a second later. He wraps his hand around the large pole of his cock and starts stroking slowly, nodding to Spike to do the same. There is a moment of hesitation as the slender doberman seems torn between walking away and joining in for a jerk-off session with the orc present, before Spike's libido wins out and he pulls the front of his jockstrap aside to free the red rocket of his canine shaft. He does keep several steps distance to Urik though.";
+			say "     Seems like the green-skinned brute hit just the right tone with him, leaving Spike to choose and not reaching for his crotch himself. The two men beat off together, with Spike keeping his eyes closed and going back into an imaginary scene, while the orc feasts his eyes on the doberman instead. Eager to get his rocks off, the anthro's rapid jerking brings him close to the edge fairly quickly, as is obvious by his loud panting and the his whole body tensing up. Reacting almost on instinct, Urik reaches over to cup his hand over the pointy dickhead of his canine buddy. As the tip of a finger brushes against the edge of Spike's head, the young man opens his eyes and barks in a sharp tone, 'What are you doing?!' Pulling his fingers away from Spike's cock as if he touched hot coals, Urik bursts out in frustration, 'Uh, shit! Didn't mean to - er, damn. It's hard to explain. Fuck these breeder urges!'";
+			WaitLineBreak;
+			say "     The expression of anger and annoyance that darkened Spike's face for a moment is replaced by surprise instead as he hears Urik's words. 'Huh?! What do you mean? You told me that breeders are smaller, weaker orcs! You're a warrior, aren't you?' The orc seems to shrink in on himself despite his towering stature, opening his mouth, then closing it again. Finally, he draws a shame-filled grimace as he meets Spike's gaze. 'I - uhm... not exactly.' Silence stretches out for a second or two, with a little bit of concern rising in the dobie's expression. He reaches out to touch the orc's arm lightly, then asks, 'You okay? Wanna talk about it?' Urik nods silently, and the two of them walk over to the nearby sofa to sit down on it. Both of them have gone soft by now, with the atmosphere changing away from sexual to emotional. It is an odd image to see the two of them there, now with Spike almost appearing to be the more mature person, simply laying his paw-hand on Urik's shoulder and waiting for him to speak.";
+			say "     Taking a deep breath, Urik finally says, 'I - I fucked up. In the orc lair. Badly.' He waves a hand in the air in a vague movement, then sets it down in his lap defeatedly. 'I lost it all. Being a proud warrior, with even Boghrim respecting me. I took my punishment, that's what a man does, but my life was over at that point.' The shrunken form of the orc straightens a little as he adds, 'Or so I thought, until [if Player is not defaultnamed][Name of Player][else][SubjectPro of Player][end if] came and got me out of there. Brought me here, to this place.' Spike looks at him, nodding to acknowledge his words, but also asks, 'What's got that to do with the whole warrior or breeder thing?' Blowing out his breath, Urik replies, 'I'm both, now. Yeah, still got the muscles and all that, but on the inside... I, I crave cum now. Orc cum mainly, but... also from others. And I can have orclings. Kinda want orclings.' He touches his abs as he says this, looking a bit shameful as he admits to it.";
+			WaitLineBreak;
+			say "     'Wow,' Spike says, a bit lost for words. 'That's... heavy stuff.' He glances at his hand, still resting on the orc's shoulder, then gives Urik a firm squeeze with it. 'So, I think... no hard feelings then, okay? I understand now why you went for my dick. Guess I was right about you being a dirty old pervert!' His last words are added in a joking tone, as the young man tries to escape the glum mood by throwing a bit of their previous banter into the room. Urik grunts as he hears this, putting on a little bit of a smile. 'So, how does the cum thing work exactly? Are you just, er, hungry for it? Wanna chug it down? Or does it have to go in the other end? And what's so special about orc cum?' the dobie asks next, curiosity audible in his voice. Urik nods down at his own cock, hanging limply on top of his large balls. A smirk grows on his face as he cups his balls and says, 'Okay, grasshopper - let's teach you the 101 of orc cum. You see, orcs don't need weapons. We got all we need down here!'";
+			say "     'Orc cum is potent stuff. Addictive, in large enough doses. And you can imagine just how much cum these things put out, hah! Just gotta give a dude we pick up out on the streets a taste, and more often than not they'll beg to be taken along and fed more of it all the time. Feels amazing in either end, just so you know.' Spike raises an eyebrow and throws in a comment of, 'If you say so. Don't think it's for me. Tasted my own, but it was nothing that made me go crazy for it. Or is it different for an orc breeder?' Urik lets out a breath through his nose in a huff, looking over to meet the dobie's eyes. 'There's nothing better than a dude's cum! Man, that taste on your tongue is just... something else. Wouldn't have believed it before I became, you know, half n['] half, but yeah! It's amazing stuff!";
+			WaitLineBreak;
+			say "     Clearing his throat, Urik continues, 'As for the orc cum and other cum thing... kinda like different flavors of candy. Orc cum is the good stuff, but who wants to eat nothing but chocolate all day, every day? Another dude's cum can be... a treat, you know. Different taste and all that, especially if it's coming from a hot dude.' As he says this, the orc's gaze drops to Spike's crotch and an almost longing expression crosses his face. The doberman is surprised by the attention, unaccustomed to the feeling of someone desiring just that part of him. Apparently he can't help but react to the compliment, as his dick gives a little twitch in its sheath. 'Uhm, if you wanna... taste me, I could, ...' he starts, with Urik not even waiting before he says a breathy, 'Yeah!' Spike adds, 'But no touching!' and then starts to stroke himself, first playing a little with his balls, then taking hold of his red rocket as it emerges from the sheath.";
+			say "     The young doberman closes his eyes and begins to jerk off in earnest, no doubt imagining a sexy bitch or so. At the same time, Urik watches him, taking in the naked canine, one hand resting on his own green leg, ready to catch Spike's cum when the time comes. As the dobie goes at it with full speed, not holding back and just wanting to get off, he fills the room with moans and grunts, as well as panted out words to go with his fantasy, like, 'Take it, slut! Yeah, you bitch, feel my dick!' It doesn't take all that long before he humps his hips reflexively and stiffens, moaning as the first spurt shoots out, right into Urik's quickly interposed palm, with the orc's fingers barely an inch above Spike's abs. Catching the cum as white streaks on the orc's green palm, Urik waits just long enough for Spike's orgasm to start to flag before he leans over and starts to lap his friend's cum off.";
+			WaitLineBreak;
+			say "     At just that moment, Spike opens his eyes, seeing the orc so very close to himself, eagerly slurping up his seed. This seems to make his libido flare up for a second, and his climax puts in an encore, sending more thick, creamy spurt flying to hit Urik in the face. 'Ooops, sorry!' Spike sputters out, looking wide-eyed at Urik, who turns his white-streaked face to look at him. As their eyes meet, both of them burst out into laughter, followed by a grinning Urik wiping the cum off his face and sucking it off his fingers. 'Tasty!' he quips at the anthro dog after finishing off his snack, then smacking his lips in satisfaction. 'You go along now, I'll clean up here,' the orc tells Spike, who tucks his jockstrap back in place and then wanders off into his little man-cave.";
+	else:
+		say "Just another part of your body to take care of. You can jerk it out right here!' Urik's gaze is firmly on Spike's bulge at this point, which the doberman comments with the words, 'What's going on now? You seem oddly keen on my jerking off?!' Urik looks up, pressing his lips together, then bursts out in frustration, 'Uh, er, damn. It's hard to explain. Fuck these breeder urges!'";
+		WaitLineBreak;
+		say "     The wariness that was on Spike's face for a moment is replaced by surprise instead as he hears Urik's words. 'Huh?! What do you mean? You told me that breeders are smaller, weaker orcs! You're a warrior, aren't you?' The orc seems to shrink in on himself despite his towering stature, opening his mouth, then closing it again. Finally, he draws a shame-filled grimace as he meets Spike's gaze. 'I - uhm... not exactly.' Silence stretches out for a second or two, with a little bit of concern rising in the dobie's expression. He reaches out to touch the orc's arm lightly, then asks, 'You okay? Wanna talk about it?' Urik nods silently, and the two of them walk over to the nearby sofa to sit down on it. Both of them have gone soft by now, with the atmosphere changing away from sexual to emotional. It is an odd image to see the two of them there, now with Spike almost appearing to be the more mature person, simply laying his paw-hand on Urik's shoulder and waiting for him to speak.";
+		say "     Taking a deep breath, Urik finally says, 'I - I fucked up. In the orc lair. Badly.' He waves a hand in the air in a vague movement, then sets it down in his lap defeatedly. 'I lost it all. Being a proud warrior, with even Boghrim respecting me. I took my punishment, that's what a man does, but my life was over at that point.' The shrunken form of the orc straightens a little as he adds, 'Or so I thought, until [if Player is not defaultnamed][Name of Player][else][SubjectPro of Player][end if] came and got me out of there. Brought me here, to this place.' Spike looks at him, nodding to acknowledge his words, but also asks, 'What's got that to do with the whole warrior or breeder thing?' Blowing out his breath, Urik replies, 'I'm both, now. Yeah, still got the muscles and all that, but on the inside... I, I crave cum now. Orc cum mainly, but... also from others. And I can have orclings. Kinda want orclings.' He touches his abs as he says this, looking a bit shameful as he admits to it.";
+		WaitLineBreak;
+		say "     'Wow,' Spike says, a bit lost for words. 'That's... heavy stuff.' He glances at his hand, still resting on the orc's shoulder, then gives Urik a firm squeeze with it. 'So, I think... no hard feelings then, okay? I understand now why you went for my dick. Guess I was right about you being a dirty old pervert!' His last words are added in a joking tone, as the young man tries to escape the glum mood by throwing a bit of their previous banter into the room. Urik grunts as he hears this, putting on a little bit of a smile. 'So, how does the cum thing work exactly? Are you just, er, hungry for it? Wanna chug it down? Or does it have to go in the other end? And what's so special about orc cum?' the dobie asks next, curiosity audible in his voice. Urik nods down at his own cock, hanging limply on top of his large balls. A smirk grows on his face as he cups his balls and says, 'Okay, grasshopper - let's teach you the 101 of orc cum. You see, orcs don't need weapons. We got all we need down here!'";
+		say "     'Orc cum is potent stuff. Addictive, in large enough doses. And you can imagine just how much cum these things put out, hah! Just gotta give a dude we pick up out on the streets a taste, and more often than not they'll beg to be taken along and fed more of it all the time. Feels amazing in either end, just so you know.' Spike raises an eyebrow and throws in a comment of, 'If you say so. Don't think it's for me. Tasted my own, but it was nothing that made me go crazy for it. Or is it different for an orc breeder?' Urik lets out a breath through his nose in a huff, looking over to meet the dobie's eyes. 'There's nothing better than a dude's cum! Man, that taste on your tongue is just... something else. Wouldn't have believed it before I became, you know, half n['] half, but yeah! It's amazing stuff!";
+		WaitLineBreak;
+		say "     Clearing his throat, Urik continues, 'As for the orc cum and other cum thing... kinda like different flavors of candy. Orc cum is the good stuff. But really, [if Player is not defaultnamed]only [Name of Player]'s is the stuff for me these days! [else]I know I got a special someone here who takes care of all my needs! [end if] You go along now, I'll clean up here,' the orc tells Spike, [if PlayerRomanced of Spike is true]<TODO: Add short mention of Spike also being into the player.>[else]who tucks his jockstrap back in place and then wanders off into his little man-cave. [end if][line break]";
+	increase the XP of doberman companion by level of doberman companion times four;
+	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
+	now Dexterity of Spike is 8; [Urik and Spike did Yoga]
+	now SpikeEventCooldown is turns;
+
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 8 or Dexterity of Spike is 55) and a random chance of 1 in 2 succeeds):
+	if debugactive is 1:
+		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
+	try looking;
+	project the Figure of Urik_clothed_icon;
+	say "     Walking along the upper floor of the library, you glance around and see Urik standing against the railing overlooking the lower floor. The big orc is busy playing a little game with himself, which is bouncing tennis balls off the top of the shelves below, timed just right so they bounce across several of the tall stacks. While you're still forming possible comments in your head, like where he got a shopping bag full of tennis balls and if Urik will clean up afterwards, a voice calls out from the side and interrupts your train of thought. Glancing over, you see that it's Spike who shouted, 'Hey Urik!' and the young doberman is now approaching on his lithe paws. 'What? Did you feel an irresistible urge to run after these?' the orc replies with a grin on his face, throwing one of the yellow balls in the air and catching it, then casually tossing it at Spike's chest, who catches it and gives the orc an eyeroll and smirk.";
+	say "     Spike raises the ball in his hand, shaking his head. 'Err... no. Out of the two of us, I think you're the one chasing balls all the time, old man! I'm just here for some more training!' A broad smile appears on Urik's face and he reaches out to tousle the young anthro's green hair, with Spike batting at his hand to get him to stop. 'Always nice to see such an eager puppy, hah! Looks like the training is working too! Your body's building mass now! Come on, let's get to it then!' Cheerfully, the orc gives Spike's arm a 'light' slap that has him stumbling sideways for a second, then walks towards the back of the sitting area and retrieves a plastic bottle from the top of a quite tall shelf. Having followed his trainer, Spike accepts the drink from Urik, immediately opening it and taking a deep swig of the lime-green fluid.";
+	WaitLineBreak;
+	project the Figure of Spike_jockstrap_icon;
+	say "     Urik goes to collect the weightlifting set he got for Spike, effortlessly picking the push-bar and its stand up from the corner where it standing. Weights and all, the orc carries it over to Spike, placing the whole thing down over a training mat spread on the floor. 'Okay then, puppyboy - get on the mat!' Tail wagging happily behind his back, Spike peels the mesh shirt off his chest, throwing it aside, then proceeds to undo the button and zipper of his jeans. An eye-blink later, he's pushing them down and bending over to free his paws from the bunched-up fabric, quite oblivious to the fact that he's giving Urik a show with his bare ass. You can see the bulge in the orc's stretchy trunks grow visibly as his dick hardens partially, with Urik ";
+	if "Private Breeder" is not listed in Traits of Urik:
+		say "quickly adjusting it, giving his cock a squeeze but still keeping it tucked away. ";
+	else:
+		say "giving a chuckle at the dobie's naivety of exposing himself, followed by a smile about the trust Spike his showing. ";
+	say "Meanwhile Spike lays down on the mat and lay his paws against the bar of the weights, waiting patiently for Urik to step over him to be his spotter. The orc stands ready to catch the weights just in case, and gives his trainee numerous bits of good advice as he goes through training. It is clear that he enjoys teaching Spike quite a bit.";
+	say "     As some time passes and Spike works up a good sweat, Urik helps Spike put the weight bar on its rack, then hands his trainee some lighter dumbbells that he can hold on one hand each. 'Give me at least fifty lifts with each arm!' Urik grunts as a challenge to the anthro doberman and counts the first five aloud with Spike's movements before he starts to walk around him. Soon arriving next to the stretched-out form of Spike, Urik then crouches down and says loudly, 'Keep going, no matter what! I don't want to see you put down those weights until you're done with your set! Think of why you're doing this! Imagine being in a fight, out there on the streets, with one dude trying to keep you pinned while his two friends rough up [if Player is not defaultnamed][Name of Player][else]the boss[end if]! You [italic type]have[roman type] to get out of that bind to help [ObjectPro of Player]!' Between his pants, Spike's reply isn't so much words but rather a [if PlayerRomanced of Spike is true or MaxHP of Spike is 1]sharp bark[else]compliant grunt[end if], and he puts in a new burst of energy to his lifting. 'Good boy,' Urik comments with a smile, then adds, 'But we got to fix your pose a little too. Here, bend your knees and brace those paws against the mat.'";
+	WaitLineBreak;
+	say "     As he says this, the large orc puts a big green hand on Spike's thigh, guiding Spike into a new position with his legs. The dobie is very focused on lifting the weights again and again, making him almost putty in Urik's hands. 'Just keep lifting,' the orc tells his trainee, patting Spike's naked chest with a satisfied smile and adding, 'doing good! With his big, green-skinned personal trainer to motivate him, the doberman actually manages to complete the workout, even though he's more than a little tired by the end. Urik holds out his hand to pull the canine to his feet, congratulating him and giving his back - and lower back - a pat. 'Good puppy, might just make something out of you yet.'";
+	increase the XP of doberman companion by level of doberman companion times four;
+	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
+	now Dexterity of Spike is 9; [Urik and Spike did weightlifting]
+	now SpikeEventCooldown is turns;
+
+to say SpikeTalk12: [talk about Urik]
+	if Dexterity of Spike is 1:
+		say "     As you bring up Urik, the doberman bristles a little and crosses his arms in front of his chest. 'What about him? The guy's an asshole, that's for sure. Pfft, trying to say that I'm not strong enough for his stupid training. But I'll show him what's what!' Apparently his need to prove himself translates into the young man starting to flex and pose for you too, showing off some nice muscle tone on his lean body. It doesn't really compare to the shredded beast that Urik is, but the dobie is fit and active enough to be a help in combat for you.";
+		LineBreak;
+		say "     [link](1)[as]1[end link] - Wish him good luck in training with the orc. He's sure to learn a lot.";
+		say "     [link](2)[as]2[end link] - Tell Spike that he doesn't need to be a muscle hunk. You like him the way he is.";
+		say "     [link](3)[as]3[end link] - Explain that Urik just likes goading people and he shouldn't waste his time reacting to it.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to encourage training, [link]2[end link] to discourage training or [link]3[end link] to turn Spike against Urik.";
+		if calcnumber is 1:
+			LineBreak;
+			say "     Reaching out and giving Spike's shoulder a pat and a little squeeze, you tell the young man that he should train with Urik. It'll be good for him and all that. 'Okay then, [SpikePlayerAddress]! I'm gonna show that green-skinned brute what I'm made of!'";
+		else if calcnumber is 2:
+			LineBreak;
+			say "     Stepping up and throwing an arm around Spike's shoulders, you pat his chest and tell him that maybe he shouldn't train with the orc. Being lithe and quick on his paws is quite something already, and in trying to be a muscle hunk, he could very well trade down. Spike almost soaks up each word of praise you give him, his chest swelling a little and the tail behind his back starting to wag. 'Really? I mean, yeah totally! I'll focus on getting quicker instead! I wanna be my best for you, [SpikePlayerAddress]!'";
+			now Dexterity of Spike is 100; [training ended]
+		else if calcnumber is 3:
+			LineBreak;
+			say "     Stepping up and putting a hand on Spike's shoulder, you look into his eyes and tell him that he really shouldn't pay any mind to what Urik's saying. The orc just likes to goad and push people, and reacting to it just makes things worse. He'll just find new things to rib him with. 'But I wanna show that asshole that...' Spike starts to reply angrily, only to stop and say, 'Oh! Uhm, I'm doing exactly what he wanted, aren't I? Damn, you're right [SpikePlayerAddress]! Enough of this then. I'll keep my distance and won't pay him no mind anymore.'";
+			now Dexterity of Spike is 100; [training ended]
+	else if Dexterity of Spike is 2 or Dexterity of Spike is 3:
+		say "     As you bring up Urik, the doberman stiffens a little, putting his hands on his hips and letting out a breath. 'What can I say about him? The guy's an asshole, that's for sure. Kept calling me weak and 'puppy-boy', just because I can't lift that monster set of weights he's got from the get-go!' Apparently he feels the need to convince himself of his own strength, as the doberman raises one arm and starts to flex his bicep, stroking over it with the free hand. 'I feel ready for a fight already, but I'll be an even better companion for you once I'm through that ridiculous training routine of his. Hope the energy drinks will help too. Good stuff!' Spike adds next, putting on a determined expression and subconsciously licking his muzzle.";
+		LineBreak;
+		say "     [link](1)[as]1[end link] - Wish him good luck in training with the orc. He's sure to learn a lot.";
+		say "     [link](2)[as]2[end link] - Tell Spike that he doesn't need to be a muscle hunk. You like him the way he is.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 2:
+			say "Choice? (1-2)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to encourage training or [link]2[end link] to discourage training.";
+		if calcnumber is 1:
+			LineBreak;
+			say "     Reaching out and giving Spike's shoulder a pat and a little squeeze, you tell the young man that he should train with Urik. It'll be good for him and all that. 'Okay then, [SpikePlayerAddress]! I'm gonna show that green-skinned brute what I'm made of!'";
+		else if calcnumber is 2:
+			LineBreak;
+			say "     Stepping up and throwing an arm around Spike's shoulders, you pat his chest and tell him that maybe he shouldn't train with the orc. Being lithe and quick on his paws is quite something already, and in trying to be a muscle hunk, he could very well trade down. Spike almost soaks up each word of praise you give him, his chest swelling a little and the tail behind his back starting to wag. 'Really? I mean, yeah totally! I'll focus on getting quicker instead! I wanna be my best for you, [SpikePlayerAddress]!'";
+			now Dexterity of Spike is 100; [training ended]
+	else if Dexterity of Spike is 4 or Dexterity of Spike is 5 or Dexterity of Spike is 6: [training always with (normal) shakes]
+		say "     As you bring up Urik, the doberman stiffens a little, putting his hands on his hips and letting out a breath. 'What can I say about him? The guy's an asshole, that's for sure. But he's been fairly civil lately. Seems he really does want to train me. Even went so far to get new equipment just for me, and he's going out to get those drinks for me too. They taste awfully sweet and chemical, but if he says they're good stuff, but it's okay.' A moment later, he adds with a shrug, 'Don't think we'll be the best of friends anytime soon, but I can stand him, more often than not. Also, look - I think it's working!' With that said, the dobie peels off his shirt and does a little posing. From what you can see, there's a little more tone to his muscles, and he smiles happily as you say so.";
+	else if Dexterity of Spike > 6 and Dexterity of Urik < 100: [Urik told his tale]
+		say "     As you bring up Urik, the doberman stiffens a little, putting his hands on his hips and letting out a breath. 'What can I say about him? The guy's a character, that's for sure. Did he ever tell you how he became an orc? Quite a tale. Other than his usual 'puppyboy' bullshit, he's been fairly civil lately. Seems he really does want to train me. Even went so far to get new equipment just for me, and he's going out getting those drinks for me too.' A moment later, he adds with a shrug, 'I can stand him, more often than not. Also, look - I think it's working!' With that said, the dobie peels off his shirt and does a little posing. From what you can see, there's a little more tone to his muscles, and he smiles happily as you say so.";
+	else if Dexterity of Spike is 100: [training ended]
+		say "     As you bring up Urik, the doberman bristles a little and crosses his arms in front of his chest. 'That dude? What an asshole - a wyvern can eat him for all I care. Gonna keep my distance from now on, that's for sure!' With a throwing-away gesture, Spike blows the topic off, and you talk a little about other matters instead.";
 
 
 Spike ends here.

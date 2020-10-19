@@ -5,7 +5,8 @@ Object	Name
 Female Dorm One	"Female Dorm One"
 
 Female Dorm One is a situation.
-The sarea of Female Dorm One is "Nowhere".
+ResolveFunction of Female Dorm One is "".
+Sarea of Female Dorm One is "Nowhere".
 
 when play begins:
 	add Female Dorm One to BadSpots of FemaleList;
@@ -15,7 +16,7 @@ instead of going north from Dorm Street while (Female Dorm One is active and Fem
 	move player to Tenvale College Female Dorms;
 	FemaleDormOneEvent;
 
-instead of resolving Female Dorm One:
+to say ResolveEvent Female Dorm One:
 	FemaleDormOneEvent;
 
 to FemaleDormOneEvent: [Showers. F solo]
@@ -40,13 +41,14 @@ Object	Name
 Female Dorm Two	"Female Dorm Two"
 
 Female Dorm Two is a situation.
-The sarea of Female Dorm Two is "Nowhere".
+ResolveFunction of Female Dorm Two is "".
+Sarea of Female Dorm Two is "Nowhere".
 
 instead of going north from Dorm Street while (Female Dorm Two is active and Female Dorm Two is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	FemaleDormTwoEvent;
 
-instead of resolving Female Dorm Two:
+to say ResolveEvent Female Dorm Two:
 	FemaleDormTwoEvent;
 
 to FemaleDormTwoEvent: [Study in room]
@@ -60,7 +62,8 @@ Object	Name
 Female Dorm Three	"Female Dorm Three"
 
 Female Dorm Three is a situation.
-The sarea of Female Dorm Three is "Nowhere".
+ResolveFunction of Female Dorm Three is "".
+Sarea of Female Dorm Three is "Nowhere".
 
 when play begins:
 	add Female Dorm Three to BadSpots of FemaleList;
@@ -70,7 +73,7 @@ instead of going north from Dorm Street while (Female Dorm Three is active and F
 	move player to Tenvale College Female Dorms;
 	FemaleDormThreeEvent;
 
-instead of resolving Female Dorm Three:
+to say ResolveEvent Female Dorm Three:
 	FemaleDormThreeEvent;
 
 to FemaleDormThreeEvent: [Study in room with benefits. FF]
@@ -95,7 +98,8 @@ Object	Name
 Female Dorm Four	"Female Dorm Four"
 
 Female Dorm Four is a situation.
-The sarea of Female Dorm Four is "Nowhere".
+ResolveFunction of Female Dorm Four is "".
+Sarea of Female Dorm Four is "Nowhere".
 
 when play begins:
 	add Female Dorm Four to BadSpots of FemaleList;
@@ -105,7 +109,7 @@ instead of going north from Dorm Street while (Female Dorm Four is active and Fe
 	move player to Tenvale College Female Dorms;
 	FemaleDormFourEvent;
 
-instead of resolving Female Dorm Four:
+to say ResolveEvent Female Dorm Four:
 	FemaleDormFourEvent;
 
 to FemaleDormFourEvent: [Study in room with benefits. MF]
@@ -130,7 +134,8 @@ Object	Name
 Female Dorm Five	"Female Dorm Five"
 
 Female Dorm Five is a situation.
-The sarea of Female Dorm Five is "Nowhere".
+ResolveFunction of Female Dorm Five is "".
+Sarea of Female Dorm Five is "Nowhere".
 
 when play begins:
 	add Female Dorm Five to BadSpots of FemaleList;
@@ -140,7 +145,7 @@ instead of going north from Dorm Street while (Female Dorm Five is active and Fe
 	move player to Tenvale College Female Dorms;
 	FemaleDormFiveEvent;
 
-instead of resolving Female Dorm Five:
+to say ResolveEvent Female Dorm Five:
 	FemaleDormFiveEvent;
 
 to FemaleDormFiveEvent: [Male transform in showers]
@@ -158,7 +163,8 @@ Object	Name
 Female Dorm Six	"Female Dorm Six"
 
 Female Dorm Six is a situation.
-The sarea of Female Dorm Six is "Nowhere".
+ResolveFunction of Female Dorm Six is "".
+Sarea of Female Dorm Six is "Nowhere".
 
 when play begins:
 	add Female Dorm Six to BadSpots of FemaleList;
@@ -167,7 +173,7 @@ instead of going north from Dorm Street while (Female Dorm Six is active and Fem
 	move player to Tenvale College Female Dorms;
 	FemaleDormSixEvent;
 
-instead of resolving Female Dorm Six:
+to say ResolveEvent Female Dorm Six:
 	FemaleDormsixEvent;
 
 to FemaleDormSixEvent: [New Vixen shown around]

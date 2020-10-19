@@ -5,9 +5,10 @@ Object	Name
 Tidepool Treasure	"Tidepool Treasure"
 
 Tidepool Treasure is a scavevent.
-The sarea of Tidepool Treasure is "Beach".
+ResolveFunction of Tidepool Treasure is "[ResolveEvent Tidepool Treasure]".
+Sarea of Tidepool Treasure is "Beach".
 
-Instead of resolving a Tidepool Treasure:
+to say ResolveEvent Tidepool Treasure:
 	say "     You come across a large tide-pool, easily several feet across and probably about a foot deep in the center. It's full of small coral and shellfish, with starfish latched onto the half-buried rocks and kelp curling under the shallow surface. In the middle of it rests a small object covered in some sort of undersea moss, but it doesn't look natural. Circling the pool for a better view, it's clear that it's a bottle of some kind, perhaps soda or water, and maybe even unopened!";
 	say "     [bold type]Do you want to try and take the bottle?[roman type][line break]";
 	LineBreak;
@@ -31,7 +32,7 @@ Instead of resolving a Tidepool Treasure:
 				say "Invalid choice. Type [link]1[end link] to try and steal the bottle, [link]2[end link] to run for it or [link]3[end link] to submit to the trap.";
 		if calcnumber is 1:
 			LineBreak;
-			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+			let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]21[roman type] (Dexterity Check):[line break]";
 			increase diceroll by bonus;
@@ -70,5 +71,9 @@ to say tidepoolfail:
 		WaitLineBreak;
 		say "     The creatures release your head long enough for you to notice another odd sea-creature emerging from the pool and latching onto your cock. It slides itself down onto your member, tiny suckers grabbing your crotch around the base and sticking the hot, convulsing mollusk firmly in place. The inside of it squirms and slides over it, and it feels like tiny tendrils are licking at the head of it. It's all too much at this point, and you cum into the small, latched-on sea creature, clenching down around the triple-threat of tentacles inside you. The limb in your mouth jerks back, shooting a final load over your back and sliding back down into the water. Finally, the creatures cum into your ass and pull free while the ones grabbing your body slip away, leaving you in the filthy pool with a hungry sea creature stuck to you.";
 	say "     The action stirred up so much silt and goop in the pool that you'd never mistake it for the serene, glassy spot it once was. Dragging yourself onto drier sand, you start to work at removing the shellfish latched to you. You manage to get it off, but only after [if Player is male]it teases your uncomfortably sensitive cock longer than you'd have liked[else]forcing you to cum into your palm as you try to pull it off your clit[end if]. Exhausted but wary, you decide to put some distance between yourself and the pool before sleeping this one off.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Tentacle Horror";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Tentacle Horror";
+	if player is female:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Tentacle Horror";
 
 Tidepool Event ends here.

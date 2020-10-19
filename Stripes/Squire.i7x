@@ -277,8 +277,8 @@ to say beatthesquire:
 Section 4 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -326,9 +326,13 @@ When Play begins:
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	now libido entry is 45; [ Target libido the infection will rise towards. ]
+	now SeductionImmune entry is false;
+	now libido entry is 25; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "erudite"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "conceptual"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -343,7 +347,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -472,25 +476,27 @@ Section 5 - Squire services
 
 Table of GameEventIDs (continued)
 Object	Name
-Serving your knight	"Serving your knight"
+Serving Your Knight	"Serving your knight"
+Serving Your Knight	"Serving Your Knight"
 
-Serving your knight is a situation.
-The sarea of Serving your knight is "Forest".
+Serving Your Knight is a situation.
+ResolveFunction of Serving Your Knight is "[ResolveEvent Serving Your Knight]".
+Sarea of Serving Your Knight is "Forest".
 PCN is a number that varies. PCN is usually -1. [tracks the player crest]
 
-instead of resolving Serving your knight:
+to say ResolveEvent Serving Your Knight:
 	if BodyName of player is "Squire": [player services]
 		if PCN is -1: [first time being a squire in the event]
 			now PCN is playercrestnum;
-			now Resolution of Serving your knight is 0;
+			now Resolution of Serving Your Knight is 0;
 		else if PCN is not playercrestnum: [player has obtained a new / different crest -> serves a new knight]
 			now PCN is playercrestnum;
-			now Resolution of Serving your knight is 0;
+			now Resolution of Serving Your Knight is 0;
 		if Resolution of Serving your knight is 0 and daytimer is night:
 			say "[SquireServiceScene1]";
-		else if Resolution of Serving your knight is 1:
+		else if Resolution of Serving Your Knight is 1:
 			say "[SquireServiceScene2]";
-		else if Resolution of Serving your knight is 2:
+		else if Resolution of Serving Your Knight is 2:
 			say "[SquireServiceScene3]";
 	else: [player sees squire service]
 		say "[PlayerObservedSquireServices]";
@@ -521,7 +527,7 @@ to say SquireServiceScene1:
 		if WSlevel is 3:
 			say "     'Excellent work boy, I'm going to get used to that throat of yours. Now if you want a body like mine, you're going to have to train like I did. A nutritious meal is important, but you must stay hydrated as well.' You give him a confused look as you suckle his cock absentmindedly, but it all becomes clear as  the first trickle of his acrid piss darts across your tongue. You moan submissively, the strong taste of his urine is as intoxicating as his semen. He slows down the speed of his piss, allowing you to both savor and collect all of his gift without spilling a drop.";
 		say "     With a full belly full of his juices, you begin to feel a bit sleepy. The older man pulls you up and kisses you deeply, 'Ah such an eager lad, you remind me of myself when I was younger. Come let us rest for a while.' He picks you up and holds you tightly against his hard-muscled body as you catch a bit of sleep. You wake up next to the hunk sometime later and decide to leave and continue your journey.";
-		now Resolution of Serving your knight is 1;
+		now Resolution of Serving Your Knight is 1;
 	else:
 		say "     You leave the area for now, maybe you will gather the courage to speak with him next time.";
 
@@ -540,7 +546,7 @@ to say SquireServiceScene2:
 		say "     You try your best to coax and climax out of the wolf, deep throating the cock to the best of your ability. You never manage to take the whole length of his shaft like your knight did, but that doesn't appear to matter much to the wolf. The thick cock is rapidly leaking precum to the point where it connects your chin to the beast's crotch in a slimily liquid. It is not long after that the beast explodes inside your throat, dumping his thick load into your stomach. You dutifully swallow it, though some of the thick jizz spills out the corners of your mouth. Once the beast has finally stopped cumming, you pull off with a gasping breath.";
 		say "     Your knight holds you tightly as you regain your composure. He wipes the cum off your chin with his thumb and sucks it off until your face is clean of the salty fluid. 'Well done squire, I'm confident that you can tame a beast if that performance was your first time. Your determination was the most important aspect, as long as you have that you can always adapt to your mounts needs.' The knight helps you up to your feet and pats you on the back, 'You're progressing quickly young man, I'd go so far to say we can begin combat training next we meet.'";
 		say "     You give him a frown, disappointed at the abrupt end to your meeting. He gives you a weak smile, 'I'm sorry boy, I'm afraid I have important matters to attend to.' He walks up to you and pulls you into a hug. A few moments later, you feel him reach a hand down to fondle your ass and whisper into your ear, 'but don't fret, there is much I can show you about sword fighting. Now I really must be on my way, take care now and come back soon.' Your knight gets to work with dismantling the last of his tent while you head off to continue your own journey.";
-		now Resolution of Serving your knight is 2;
+		now Resolution of Serving Your Knight is 2;
 	else:
 		say "     You decide to give your knight some privacy and will try to see him another time.";
 

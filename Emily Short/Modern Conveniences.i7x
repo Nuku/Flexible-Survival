@@ -105,13 +105,13 @@ One slight challenge lies in giving these assembled pieces separate descriptions
 
 If we only have one instance of each item in our game, we may simply say something like
 
-	The description of a stove is "Scrupulously polished."
+	Description of a stove is "Scrupulously polished."
 
 applying the description to the class as a whole since there will only be one instance of it.
 
 In a game that features multiple bathrooms and kitchens, this won't be enough; we might instead give the items descriptions that check their location (if there are only a couple of each):
 
-	The description of a stove is "[if in Industrial Kitchen]A massive stainless steel stove-top with six burners[else]Your standard four-burner item[end if]."
+	Description of a stove is "[if in Industrial Kitchen]A massive stainless steel stove-top with six burners[else]Your standard four-burner item[end if]."
 
 or create an
 
@@ -122,7 +122,7 @@ sort of rule for those objects we want to describe specially; or, as the most ex
 	When play begins:
 		let N be a random stove in the Industrial Kitchen;
 		move the boiling pot to N;
-		change the description of N to...
+		change Description of N to...
 
 We can also, of course, use the appliances individually. In the end, the "kitchen" and "bathroom" room types are likely to be most useful when we want to include the standard props but not actually make them a critical part of the game; if stoves and sinks have more of a starring role in the production, we may be better off coding them or at the very least placing them by hand, as in
 
@@ -139,8 +139,8 @@ Example: * Our House - A minimalist house consisting of two rooms.
 
 	The Tiny Bathroom is a bathroom. It is west of Our Household Kitchen.
 
-	The description of a stove is "Scrupulously polished."
+	Description of a stove is "Scrupulously polished."
 
-	The description of a refrigerator is "It is baby blue and has the contours of a 50's chevy. One of these days it really will break down, but it's been serving your family faithfully since your grandmother's honeymoon."
+	Description of a refrigerator is "It is baby blue and has the contours of a 50's chevy. One of these days it really will break down, but it's been serving your family faithfully since your grandmother's honeymoon."
 
 	Test me with "x refrigerator / open fridge / x freezer / look in freezer / open freezer / turn on stove / turn on oven / x oven switch / turn off oven switch / turn off stove switch / turn on taps / x sink / w / x sink / turn on sink / take bath / use toilet".

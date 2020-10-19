@@ -27,6 +27,8 @@ Version 2 of Hunting by Core Mechanics begins here.
 [   5. Simple Situation Match                               ]
 [   6. Simple Creature Match                                ]
 
+[ TODO: Check if Sealed and Sewer are exempt from allzones events ]
+
 battleground is a text that varies.
 ishunting is a truth state that varies. ishunting is usually false.
 
@@ -37,8 +39,8 @@ understand "hunt [text]" as HuntAction.
 check HuntAction:
 	if blindmode is true:
 		say "You're playing in blind-mode, so hunting is not allowed. You'll have to try exploring to find what you seek." instead;
-	else if there is a dangerous door in the location of the player: [danger door]
-		let y be a random dangerous door in the location of the player;
+	else if there is a dangerous door in the Location of Player: [danger door]
+		let y be a random dangerous door in the Location of Player;
 		now battleground is the marea of y;
 	else if earea of location of Player is not "void": [explore/hunt anywhere]
 		now battleground is earea of location of Player;
@@ -54,7 +56,7 @@ carry out HuntAction:
 		say "DEBUG -> Battleground: [battleground]; Target: [HuntId][line break]";
 	[extra encounter chances]
 	if "Unerring Hunter" is not listed in feats of Player: [only adds random monsters if the player isn't an unerring hunter]
-		if ( BodyName of Player is "Mental Mouse" or mousecurse is 1 ) and companion of Player is not mouse girl:	[hunted by the mouse collective]
+		if ( BodyName of Player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not listed in companionList of Player:	[hunted by the mouse collective]
 			if there is a name of "Mental Mouse" in the Table of Random Critters:
 				add "Mental Mouse" to PossibleEncounters;
 				if humanity of Player < 75:
@@ -85,7 +87,7 @@ carry out HuntAction:
 		else:
 			say "It should be somewhere...";
 			if "Unerring Hunter" is not listed in feats of Player:
-				let bonus be (( the Perception of the player minus 10 ) divided by 2);
+				let bonus be (( Perception of Player minus 10 ) divided by 2);
 				if "Curious" is listed in feats of Player, increase bonus by 2;
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
@@ -135,15 +137,15 @@ carry out HuntAction:
 			now Found is 30; [event found]
 			say "It should be somewhere...";
 			if "Unerring Hunter" is not listed in feats of Player:
-				let bonus be (( the Perception of the player minus 10 ) divided by 2);
+				let bonus be (( Perception of Player minus 10 ) divided by 2);
 				if "Curious" is listed in feats of Player, increase bonus by 2;
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
 				increase diceroll by bonus;
 				if diceroll >= 15:
 					now inasituation is true;
-					say "You manage to find your way to [Name entry]!";
-					try resolving object entry;
+					say "You manage to find your way to [bold type][Name entry][roman type]!";
+					say "[ResolveFunction of object entry]";
 					now inasituation is false;
 				else:
 					now inasituation is false;
@@ -151,8 +153,8 @@ carry out HuntAction:
 					huntingfightchance;
 			else:
 				now inasituation is true;
-				say "You manage to find your way to [Name entry]!";
-				try resolving object entry;
+				say "You manage to find your way to [bold type][Name entry][roman type]!";
+				say "[ResolveFunction of object entry]";
 				now inasituation is false;
 	else if there is a name of HuntId in the Table of Random Critters: [exact creature match]
 		choose a row with name of HuntId in the Table of Random Critters;
@@ -213,7 +215,7 @@ carry out HuntAction:
 			if printed name of z matches the text HuntId, case insensitively:
 				say "It should be somewhere...";
 				if "Unerring Hunter" is not listed in feats of Player:
-					let bonus be (( the Perception of the player minus 10 ) divided by 2);
+					let bonus be (( Perception of Player minus 10 ) divided by 2);
 					if "Curious" is listed in feats of Player, increase bonus by 2;
 					let diceroll be a random number from 1 to 20;
 					say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
@@ -339,15 +341,15 @@ carry out HuntAction:
 						now Found is 30; [event found]
 						say "It should be somewhere...";
 						if "Unerring Hunter" is not listed in feats of Player:
-							let bonus be (( the Perception of the player minus 10 ) divided by 2);
+							let bonus be (( Perception of Player minus 10 ) divided by 2);
 							if "Curious" is listed in feats of Player, increase bonus by 2;
 							let diceroll be a random number from 1 to 20;
 							say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
 							increase diceroll by bonus;
 							if diceroll >= 15:
 								now inasituation is true;
-								say "You manage to find your way to [z]!";
-								try resolving z;
+								say "You manage to find your way to [bold type][z][roman type]!";
+								say "[ResolveFunction of z]";
 								now inasituation is false;
 							else:
 								now inasituation is false;
@@ -358,8 +360,8 @@ carry out HuntAction:
 									say "DEBUG -> Found: [Found], perception check fail.[line break]";
 						else:
 							now inasituation is true;
-							say "You manage to find your way to [z]!";
-							try resolving z;
+							say "You manage to find your way to [bold type][z][roman type]!";
+							say "[ResolveFunction of z]";
 							now inasituation is false;
 						break;
 	if the number of entries in PossibleEncounters is not 0 and Found is 10: [got list of creatures in the area & found the target creature]

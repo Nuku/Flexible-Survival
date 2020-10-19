@@ -61,8 +61,8 @@ to say beatthexeno:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -86,7 +86,7 @@ When Play begins:
 	now desc entry is "[xenodesc]";
 	now face entry is "a thin elongated skull that curves backwards towards the top. Your eyes are large black orbs encased in sunken sockets. You have no gums, and your teeth are silvery, long, straight, and densely packed in several rows. Behind your first mouth is a second smaller mouth able to extend out atop your black tongue. This smaller mouth has smaller, but equally fearsome, razor-sharp teeth";
 	now body entry is "large, but oddly enough you can see your [skin] fold around your ribs and bones as it all forms into an exoskeleton[if the player is not xenoskinned] just beneath your taut skin[end if]. Your animal-like body has hints of feminine curves and wide, bony hips[if Nipple Count of Player > 0 and Breast Size of Player > 5]. Your breasts, heavy with milk, leak a green acid with each bounce[end if][if Player is xenoskinned and Nipple Count of Player > 0]. You easily notice green blood vessels and veins running along your breasts and converging on your nipples[end if]. Your long, thin arms and legs bend in odd places, and you're able to walk both upright and on all fours, moving surprisingly silently despite your hard claws. From your back grow breathing tubes that take in air for you[if Player is herm and the player is xenococked]. Your cock extends out like a hard, phallic probe with squirming, inch-long tendrils at its tip. Encircled by these is a wet, vaginal opening to complete your ovipositor. You thankfully have a normal, [cunt size desc of Player] pussy beneath your cock as well, allowing you to enjoy a good fucking as well[else if Player is female and the player is xenococked]. Your [cunt size desc of Player] juicy pussy has a quartet of inch-long, squirming tendrils around it that rub constantly against your folds, feeling wonderfully stimulating and making you crave a good fucking to fill it[else if Player is male and the player is xenococked]. Your cock extends out like a hard, phallic probe with squirming, inch-long tendrils at its tip. These rub against your glans and cumslit, keeping you aroused and eager to find a wet hole to fill[end if]";
-	now skin entry is "hard, black exoskeleton"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "hard, black exoskeleton"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a long tail consisting of many vertebrae but completely absent of any muscle. It hovers behind you, snaking this way and that, slashing its pointed, razor-sharp end through the air as if eager to find something to sink into.";
 	now cock entry is "[one of][if Player is female]ovipositor[else]probing[end if][or]black[or]ebon[or]tendrilled[at random]";
 	now face change entry is "you suddenly get a massive headache as your skull reshapes and stretches itself as any hair you have falls from it. Your skull changes, becoming completely smooth and elongated. As your headache subsides, you feel a sharp pain in your mouth as your gums pull away your teeth elongate and gather in several pointed rows. Your tongue erupts in pain as you feel it thicken and lengthen, splitting off to form a second, smaller mouth filled with more sharp teeth";
@@ -114,9 +114,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 50; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 35; [ Width of female sex infection will try and give you ]
-	now libido entry is 80; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 30; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "acid milk";
 	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]bony[or]twisted[or]unnatural[or]hardened[at random]";
 	now type entry is "[one of]xeno[or]alien[or]monstrous[at random]";
@@ -131,7 +135,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -237,9 +241,9 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "acid milk"	"The green, acidic milk of a xeno slowly eating away at its container."	1	acid milk
 
-acid milk is a grab object. It is milky. It is temporary. acid milk is infectious. The strain of acid milk is "Xeno Drone".
+acid milk is a grab object. It is milky. It is temporary. acid milk is infectious. Strain of acid milk is "Xeno Drone".
 
-The usedesc of acid milk is "[drinkacidmilk]";
+Usedesc of acid milk is "[drinkacidmilk]";
 
 to say drinkacidmilk:
 	say "     Foolishly, you take a gulp of the acid milk. ";

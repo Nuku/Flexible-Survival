@@ -11,10 +11,12 @@ Table of GameEventIDs (continued)
 Object	Name
 Egyptian Wing	"Egyptian Wing"
 
-Egyptian Wing is a situation. The level of Egyptian Wing is 10.
-The sarea of Egyptian Wing is "Museum".
+Egyptian Wing is a situation.
+ResolveFunction of Egyptian Wing is "[ResolveEvent Egyptian Wing]".
+The level of Egyptian Wing is 10.
+Sarea of Egyptian Wing is "Museum".
 
-Instead of Resolving a Egyptian Wing:
+to say ResolveEvent Egyptian Wing:
 	say "     Exploring the halls of the city's museum, you're amazed at the sheer amount of archaic objects on display; artifacts and relics from across the globe are here, objects from different times in humanity's lifetime proudly presented throughout the hallways of the Museum. Haphazardly choosing a corridor to follow, you continue to be astounded by the insane amount of history and knowledge present, learning so much in your brief jaunts through the labyrinthine passages. So enraptured by the exhibits within, you almost barge straight into an information sigh standing in the middle of the corridor, barely preventing yourself from bashing yourself against it. Glaring irritatedly at the offending signpost, you take a second to read the notice, wondering what's so important that someone left it in the middle of the hallway. Displayed in bold lettering across the paper tacked to the signpost is:";
 	LineBreak;
 	say "     [bold type]   The Egyptian Wing[roman type][line break]";
@@ -34,14 +36,15 @@ Object	Name
 Finding Winged Orb	"Finding Winged Orb"
 
 Finding Winged Orb is a situation.
+ResolveFunction of Finding Winged Orb is "[ResolveEvent Finding Winged Orb]".
 Finding Winged Orb is inactive. [activated by accepting Amuran's quest]
-The sarea of Finding Winged Orb is "Park".
+Sarea of Finding Winged Orb is "Park".
 
 an everyturn rule:
 	if Finding Winged Orb is inactive and (AmuranAwoken is 2 or AmuranAwoken > 3):
 		now Finding Winged Orb is active;
 
-instead of resolving Finding Winged Orb:
+to say ResolveEvent Finding Winged Orb:
 	say "     Walking through what used to be the city park, you're struck by how much the park has changed. The trees haven't been trimmed in forever, grass is now overrunning the sidewalks; the park is not in a good state. An unfamiliar glint catches your eye as you contemplate the park, however, glimmering out from a nearby tree. Carefully looking around, you check to make sure no one is nearby; seeing no creatures present, you carefully approach the tree, wondering what could be shining so brightly.";
 	say "     You eventually come to the tree that's so brightly shining, still on the lookout for any sex-crazed creatures. Finally glimpsing the object stuck in the tree, surprise soon overwhelms you at what lies buried within it. An elegant, ornate emblem protrudes from the majestic tree, somehow partially buried in the trunk. From the glances you can see, it looks as if the emblem resembles the carving on Amuran's sarcophagus; a circle with two majestic wings protruding from its sides. This has to be one of Amuran's sigils, somehow buried partially within the tree. Taking a large breath and steeling yourself for what you have to do, you grab onto a thick branch and begin to climb the tree; the artifact is only a few feet up.";
 	let bonus be ((dexterity of Player minus 10) divided by 2);
@@ -100,7 +103,7 @@ Sanctum of Horus	"Sanctum of Horus"
 Sanctum of Horus is a room.
 
 [Egypt Wing Entrance]
-The description of Egypt Wing Entrance is "[EgyptWingEntrDesc]".
+Description of Egypt Wing Entrance is "[EgyptWingEntrDesc]".
 
 to say EgyptWingEntrDesc:
 	say "     Stretching out before your gaze is the Egyptian exhibit of the city's museum. While much of this exhibit is crumbling or destroyed as a result of recent events, the areas that are unscathed provide an incredible amount of awe and wonder. The unbroken glass cases ahead of you hold gold jewelry and ancient tablets, while displays of archaic pottery contend to the craftsmanship of the ancient Egyptians. Looking forward, you see that a large foyer is ahead, providing access to the rest of the intact wing.";
@@ -110,7 +113,7 @@ instead of sniffing Egypt Wing Entrance:
 Egyptian Wing Foyer is north of Egypt Wing Entrance.
 
 [Egyptian Wing Foyer]
-The description of Egyptian Wing Foyer is "[EgyptWingFoyerDesc]".
+Description of Egyptian Wing Foyer is "[EgyptWingFoyerDesc]".
 
 to say EgyptWingFoyerDesc: [East passage left for possible further expansions]
 	say "     This section of the museum wing serves as the foyer of the Egyptian exhibits. Paintings and tapestries hang along the wall, depicting stories, gods and peoples long forgotten. A few glass cases still remain unbroken, displaying simple artifacts with little seeable value. Pieces of broken glass and pottery line the floor, the current occupants of the Museum obviously not concerned with historical preservation. To the east lied a passage further into the Egyptian Wing, but a recent collapse has blocked off that hallway. Further ahead, what looks to be some sort of large artifact lies in the passage ahead, heavily peaking your curiosity. Lastly, westward lies a very plain room, bare of glass displays or other artifacts.";
@@ -123,7 +126,7 @@ Egypt Wing Entrance is south of Egyptian Wing Foyer.
 Mythical Murals is east of Egyptian Wing Foyer.
 
 [Mythical Mural]
-The description of Mythical Murals is "[MythicalMuralDesc]".
+Description of Mythical Murals is "[MythicalMuralDesc]".
 
 to say MythicalMuralDesc:
 	say "     Thinking that this room was barren, you're astounded as you enter this place; your previous observation was entirely mistaken. Lining the walls of this room are gargantuan murals, preserved almost perfectly in thick glass cases. Scenes and people unknown to you are depicted beautifully on the hardy papyrus rolls, spelling out some of the myths and beliefs of the long-dead Egyptians. Looking across them, you're able to see that there are three separate canvases present, one on each wall. You consider trying to [bold type]analyze[roman type] the large [bold type]murals[roman type], to see if you're able to decipher what they are portraying.";
@@ -158,7 +161,7 @@ carry out EgyptMuralExamine:
 		say "     Putting your mind to the task of deciphering these paintings, you use all of your knowledge to try and figure out what these walls say. However, despite all of your thought, you are unable to make any progress on finding what these murals say. Sighing to yourself, you decide that it may be best to come back later, when you've learned more.";
 
 [Golden Doors]
-The description of Golden Doors is "[GoldenDoorsDesc]".
+Description of Golden Doors is "[GoldenDoorsDesc]".
 
 EgyptianRiddle is a number that varies.
 MenuRiddleNumber is a number that varies.
@@ -291,7 +294,7 @@ instead of going west from Golden Doors while SethTempleNumber is 1:
 	say "     A large stone door blocks your path forward; the temple has been sealed by a force unknown.";
 
 [Temple of Set]
-The description of Temple of Set is "[TempleOfSetDesc]".
+Description of Temple of Set is "[TempleOfSetDesc]".
 
 to say TempleOfSetDesc:
 	say "     Walking into the inky shadow of this room, you squint your eyes as you examine the room, trying your best to work out what's in here. The only light you have are from lit torches along the wall, shining low light throughout the strange alcove. As your eyes slowly adjust to the darkness, a large statue exposes itself to you, standing watchfully in the back of the room. [if intelligence of Player > 15]You immediately recognize this as a statue of Set, Egyptian lord of chaos[else]You don't know the significance of the statue, but you feel very intimidated by it[end if]. Build in front of the imposing statue is a simple stone altar, a few lines of hieroglyphics lining the sides of the table. On each side of the altar lie sizable stone statues. Jackal-headed guards watch over the shrine, holding deadly metal blades.";
@@ -320,7 +323,7 @@ carry out SwordOfSeth:
 		challenge "Jackal Guard";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     Having vanquished the stone guardians and claimed the ancient sword, you leave the temple as a massive stone door seals it behind you. You're shocked at the sudden thump of the closing door, and you can only wonder if you've earned the ire of a powerful being...";
-			now carried of ancient blade is 1;
+			ItemGain ancient blade by 1;
 			now SethTempleNumber is 1;
 			move player to Golden Doors;
 	if fightoutcome >= 20 and fightoutcome <= 29:
@@ -334,7 +337,7 @@ carry out SwordOfSeth:
 	now inasituation is false;
 
 [Sanctum of Horus]
-The description of Sanctum of Horus is "[SanctumOfHorusDesc]";
+Description of Sanctum of Horus is "[SanctumOfHorusDesc]";
 
 AmuranAwoken is a number that varies.
 
@@ -475,9 +478,9 @@ object	name
 Amuran	"Amuran"
 
 Amuran is a man.
-The description of Amuran is "[AmuranDescription]";
+Description of Amuran is "[AmuranDescription]";
 
-The conversation of Amuran is { "Spooky Scary Scarab Beetle." }.
+Conversation of Amuran is { "Spooky Scary Scarab Beetle." }.
 The scent of Amuran is "     The insectoid man smells of magic and sand, evoking memories of places long-forgotten.";
 
 instead of fucking Amuran:
@@ -696,17 +699,8 @@ to say AmuranCuntStuffed:
 
 Section X - Items
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"ancient blade"	"An ancient sword of Egyptian make, the blade looks as if it was forged yesterday. Hieroglyphics are carved into the blade, telling stories that are long forgotten."	6	ancient blade
+[Ancient Blade moved to Core Mechanics/Weapons.i7x]
 
-ancient blade is an armament.
-It is part of the player.
-It has a weapon "[one of]the ancient blade[or]the Egyptian blade[or]the warrior's blade[at random]".
-The weapon damage of ancient blade is 15.
-The weapon type of ancient blade is "Melee".
-It is not temporary.
-the scent of ancient blade is "The weapon smells of forged metal, with a hint of dirt and dust.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -714,9 +708,9 @@ name	desc	weight	object
 
 jade scarab is a grab object.
 it is not temporary.
-it is part of the player.
+
 the scent of jade scarab is "The metal scarab smells of metal, with a faint hint of something you can't recall...".
-the usedesc of jade scarab is "[JadeScarabUse]".
+Usedesc of jade scarab is "[JadeScarabUse]".
 
 to say JadeScarabUse:
 	LineBreak;
@@ -729,9 +723,9 @@ name	desc	weight	object
 
 winged sun is a grab object.
 it is not temporary.
-it is part of the player.
+
 the scent of winged sun is "You're overwhelmed with the scent of hot, dry air; it's almost like you're standing on the surface of the sun.".
-the usedesc of winged sun is "[WingedSunUse]".
+Usedesc of winged sun is "[WingedSunUse]".
 
 to say WingedSunUse:
 	LineBreak;

@@ -1,7 +1,7 @@
 Version 1 of Zeke by Qazarar begins here.
 [Version 1 - new NPC]
 
-[ hp of Zeke                                                 ]
+[ HP of Zeke                                                 ]
 [	0: Not met                                                 ]
 [	1: Met                                                     ]
 
@@ -13,7 +13,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Zeke	"Zeke"
 
-Zeke is a man. The hp of Zeke is usually 0.
+Zeke is a man. The HP of Zeke is usually 0.
 [Physical details as of game start]
 ScaleValue of Zeke is 3. [human sized]
 SleepRhythm of Zeke is 0. [0 - awake at all times, 1 - day active, 2 - night active]
@@ -40,14 +40,14 @@ AnalVirgin of Zeke is true.
 PenileVirgin of Zeke is true.
 SexuallyExperienced of Zeke is false.
 MainInfection of Zeke is "Red Fox".
-The description of Zeke is "[ZekeDesc]".
-The conversation of Zeke is { "<This is nothing but a placeholder!>" }.
+Description of Zeke is "[ZekeDesc]".
+Conversation of Zeke is { "<This is nothing but a placeholder!>" }.
 The scent of Zeke is "     Zeke smells like a little bit musky and furry, kinda like a humanoid fox is always bound to be.".
 Zeke is in Gaming Den.
 
 to say ZekeDesc:
 	if debugactive is 1:
-		say "DEBUG -> ZekeRelationship: [ZekeRelationship], HP: [hp of Zeke] <- DEBUG[line break]";
+		say "DEBUG -> ZekeRelationship: [ZekeRelationship], HP: [HP of Zeke] <- DEBUG[line break]";
 	say "     Zeke is a fox man, with fluffy ears and a tail. In addition he is wearing a pair of jeans, and a t-shirt that says <SHIRT REDACTED>.";
 
 Section 2 - Talk
@@ -120,7 +120,7 @@ to say ZekeTalk1: [talk about him]
 
 to say ZekeTalk2: [playing games]
 	say "     Zeke takes very little time to setup a game for the two of you to play. This time his pick is a fighting game, though not one you're overly familiar with. He gives you a brief while to practice before taking you right into a longer tournament mode, where he immediately gets very focused every time the gameplay starts.";
-	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+	let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Intelligence Check):[line break]";
 	increase diceroll by bonus;
@@ -157,7 +157,7 @@ instead of fucking the Zeke:
 			say "     ([link]N[as]n[end link]) - Lose and get dominated.";
 			LineBreak;
 			if Player consents:
-				let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+				let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Intelligence Check):[line break]";
 				increase diceroll by bonus;
@@ -384,7 +384,7 @@ Object	Name
 Gaming Den	"Gaming Den"
 
 Gaming Den is a room. It is a fasttravel. It is private.
-The description of Gaming Den is "     The basement is surprisingly spacious, with a large entertainment center set up on one wall. Other walls feature shelves, packed with games, movies, books, and miscellaneous paraphernalia. The center space around the room is taken up by several couches, chairs, and beanbags, set up facing the television.".
+Description of Gaming Den is "     The basement is surprisingly spacious, with a large entertainment center set up on one wall. Other walls feature shelves, packed with games, movies, books, and miscellaneous paraphernalia. The center space around the room is taken up by several couches, chairs, and beanbags, set up facing the television.".
 The scent of Gaming Den is "<text>".
 
 Table of GameRoomIDs (continued)
@@ -392,7 +392,7 @@ Object	Name
 Game Store	"Game Store"
 
 Game Store is a room.
-The description of Game Store is "     The store is almost nothing but shelves and shelves full of games and game accessories. There are plenty of places that have been cleaned out on the shelves, but for the most part it all still seems to be there. It seems there have been other priorities to collecting video games.".
+Description of Game Store is "     The store is almost nothing but shelves and shelves full of games and game accessories. There are plenty of places that have been cleaned out on the shelves, but for the most part it all still seems to be there. It seems there have been other priorities to collecting video games.".
 Mall East Wing is north of Game Store.
 
 Zeke ends here.

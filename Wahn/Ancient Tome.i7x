@@ -96,7 +96,7 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 		say "     [bold type]Uh-oh! Quick - What do you do?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Watch in shock (or arousal?) as Eric is penetrated by the creature.";
-		say "     ([link]N[as]n[end link]) - Stop it!";
+		say "     ([link]N[as]n[end link]) - Stop it[if EricVirginityTaken is 0]! This thing might just knock him up[end if]!";
 		if Player consents: [watch]
 			LineBreak;
 			say "     In the blink of an eye, the tentacle cock strikes, plunging in between Eric's nether lips and making the transgendered teen buck and moan on the bed - still asleep though, with not even being fucked able to wake him from the clearly unnatural slumber. [if EricVirginityTaken is 0]A groan leaves his mouth as the relentless plunge breaks through Eric's hymen, losing his virginity to this black-tentacled beast - and that without Eric even consciously realizing it. [end if]The creature worms into him deeper and deeper while its other tentacles seem to hold the college student in a firm but gentle embrace, making sure he isn't pushed back or accidentally falls out of the bed while thrashing and moaning in helpless lust. You can't help but gape as his belly starts to bulge out a little, showing the shape of the tentacle cock's head - the creature pushed all the way into Eric's womb!";

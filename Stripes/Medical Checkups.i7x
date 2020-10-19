@@ -59,13 +59,13 @@ ovipregMedeatalk is a truth state that varies. ovipregMedeatalk is usually false
 Medeapanda is a truth state that varies. Medeapanda is usually false.
 Medeapill is a truth state that varies. Medeapill is usually false.
 
-The description of Doctor Medea is "[MedeaDesc]".
+Description of Doctor Medea is "[MedeaDesc]".
 
 to say MedeaDesc:
 	project the figure of Medea_face_icon;
 	say "     Doctor Medea is a relatively human lizard, with her scaly skin having shades of ochre and yellow. Two spiky ridges run along the sides of her head and down her back, starting at the eyes and vanishing beneath the collar of a professional-looking light green blouse and skirt combo with a doctor's white coat overtop[if Park Entrance is known]. She looks like she had a run-in with one of those lizards at the park[end if][if HP of doctor Medea >= 5 and lust of doctor Medea >= 3]. The doctor's had to loosen her blouse and skirt to make room for the rounded bulge in her belly from an advancing pregnancy of her own[else if Medeaget > 0]. There is now a darker line running down her skirt to where some whitish cum is dripping. It almost looks like she came in herself, since the door was dust covered except for your recent marks[end if].";
 
-The conversation of Doctor Medea is { "Babies!" }.
+Conversation of Doctor Medea is { "Babies!" }.
 
 instead of conversing the Doctor Medea:
 	project the figure of Medea_face_icon;
@@ -801,9 +801,10 @@ Object	Name
 Abandoned Truck	"Abandoned Truck"
 
 Abandoned Truck is a situation.
-the sarea of Abandoned Truck is "Outside".
+ResolveFunction of Abandoned Truck is "[ResolveEvent Abandoned Truck]".
+Sarea of Abandoned Truck is "Outside".
 
-instead of resolving an Abandoned Truck:
+to say ResolveEvent Abandoned Truck:
 	say "     You come across an abandoned truck, filled with medical supplies. The drivers cab is filled with some sort of goo that covers all the entrances. Maybe some of the supplies can be of use?";
 	if Medeaget is 1:
 		say "     This must be the truck Medea sent you after! Ruffling through it, you gather up the things that she requested.";
@@ -833,10 +834,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Obstetrics Department	"Obstetrics Department"
 
-Obstetrics Department is a situation. Obstetrics Department is inactive.
-the sarea of Obstetrics Department is "Hospital".
+Obstetrics Department is a situation.
+ResolveFunction of Obstetrics Department is "[ResolveEvent Obstetrics Department]". Obstetrics Department is inactive.
+Sarea of Obstetrics Department is "Hospital".
 
-instead of resolving Obstetrics Department:
+to say ResolveEvent Obstetrics Department:
 	say "     Making your way through the darkened hospital, you manage to reach the Obstetrics Department and slip inside, searching for the items that Dr. Medea mentioned needing. This area seems to have been particularly [']active['] during the outbreak, with a lot of sticky fluids of all kinds over everything. Aside from pools of what must be semen and feminine juices, there's a variety of placentae and egg shells scattered around as well. The scent of lust, fertility and virility is very strong in here, making you somewhat dizzy with growing excitement.";
 	let playernum be a random number between 0 and ( 200 + humanity of Player - Libido of Player );
 	say "     [special-style-1][playernum][roman type] vs [special-style-2]120[roman type]: ";
@@ -894,7 +896,7 @@ cunt pill is a grab object. It is temporary.
 instead of sniffing cunt pill:
 	say "The pill's scent is a faint mix of female arousal and antiseptic.";
 
-the usedesc of cunt pill is "[cunt pill use]";
+Usedesc of cunt pill is "[cunt pill use]";
 
 to say cunt pill use:
 	say "You pop the pill into your mouth and swallow it without any trouble.";

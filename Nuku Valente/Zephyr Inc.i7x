@@ -122,7 +122,7 @@ Carry out vialselling:
 
 Section 4 - Purchasing from Zephyr
 
-The price sign is a backdrop. It is in Zephyr Lobby. The description of the price sign is "[price list]".
+The price sign is a backdrop. It is in Zephyr Lobby. Description of the price sign is "[price list]".
 
 Instead of smelling the price sign:
 	say "The price sign has little in the way of scent of its own.";
@@ -141,7 +141,7 @@ name	desc	weight	object
 "nanite collector"	"[nanitecolldesc]"	25	nanite collector
 "pistol"	"A small, but serviceable, hand gun. It has a stylized Z on the grip. It never seems to run out of bullets, and gets oddly warm when you fire it."	2	pistol
 
-pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[or]your pistol[at random]". It is ranged. It is not temporary. It is a part of the player. The weapon damage of pistol is 7. The objsize of pistol is 2.
+pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[or]your pistol[at random]". It is ranged. It is not temporary. Weapon Damage of pistol is 7. Objsize of pistol is 2.
 
 
 nanite collector is equipment. It is not temporary.
@@ -156,7 +156,7 @@ to say nanitecolldesc:
 Table of Zephyr Goods
 name	price	object	allowed
 "nanite collector"	360	nanite collector	noresearch rule
-"Zephyr Personal Communicator"	350	zpc	true rule
+"zephyr personal communicator"	350	zpc	true rule
 "medkit"	275	medkit	true rule
 "pistol"	550	pistol	true rule
 "pepperspray"	320	pepperspray	pepper rule
@@ -242,10 +242,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Beach Detector Site	"Beach Detector Site"
 
-Beach Detector Site is a situation. It is inactive.
-The sarea of Beach Detector Site is "Beach".
+Beach Detector Site is a situation.
+ResolveFunction of Beach Detector Site is "[ResolveEvent Beach Detector Site]". It is inactive.
+Sarea of Beach Detector Site is "Beach".
 
-Instead of resolving a Beach Detector Site:
+to say ResolveEvent Beach Detector Site:
 	say "     Keeping an eye out for an appropriate spot to place the device for Zephyr, you notice a tall outcropping of rock out in the water that you might be able to scale. It is certainly closer closer than most of the other rocks as well, so you should be able to swim out to it";
 	if nanite density monitor is not owned:
 		say ". You should return here with the device so you can install it. Hopefully it's waterproof.";
@@ -283,10 +284,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Red Light Detector Site	"Red Light Detector Site"
 
-Red Light Detector Site is a situation. It is inactive.
-The sarea of Red Light Detector Site is "Red".
+Red Light Detector Site is a situation.
+ResolveFunction of Red Light Detector Site is "[ResolveEvent Red Light Detector Site]". It is inactive.
+Sarea of Red Light Detector Site is "Red".
 
-Instead of resolving a Red Light Detector Site:
+to say ResolveEvent Red Light Detector Site:
 	say "     While scouting around in the fancier parts of this neighborhood, you spot a large nightclub and sex show with a huge neon sign. Somehow the neon outline of a twenty-five feet tall, big breasted woman is still lit, flashing along with the name of the club. It certainly seems to the be the tallest spot around, the sign rising high above the three story building, dwarfing all around it";
 	if nanite density monitor is not owned:
 		say ". Clearly the best spot around, you'll have to come back here with the device so you can install it.";
@@ -315,11 +317,12 @@ Table of GameEventIDs (continued)
 Object	Name
 High Rise Detector Site	"High Rise Detector Site"
 
-High Rise Detector Site is a situation. It is inactive.
-The sarea of High Rise Detector Site is "High".
+High Rise Detector Site is a situation.
+ResolveFunction of High Rise Detector Site is "[ResolveEvent High Rise Detector Site]". It is inactive.
+Sarea of High Rise Detector Site is "High".
 ndmhigh is a number that varies.
 
-Instead of resolving a High Rise Detector Site:
+to say ResolveEvent High Rise Detector Site:
 	say "     While this part of the city has no shortage of tall buildings where the detector could be placed, other issues make most of them unsuitable. Many of the buildings have been damaged by the aerial battles of some large creatures or have had their upper floors turned into the aeries. Even those that aren't destroyed in this manner often show clear signs of habitation from large groups of infected creatures. You do eventually come across one office building that seems less populated and sufficiently intact up to the top";
 	if nanite density monitor is not owned:
 		say ". Clearly the best spot around, you'll have to come back here with the device so you can install it.";
@@ -365,10 +368,11 @@ Table of GameEventIDs (continued)
 Object	Name
 Park Detector Site	"Park Detector Site"
 
-Park Detector Site is a situation. It is inactive.
-The sarea of Park Detector Site is "Park".
+Park Detector Site is a situation.
+ResolveFunction of Park Detector Site is "[ResolveEvent Park Detector Site]". It is inactive.
+Sarea of Park Detector Site is "Park".
 
-Instead of resolving a Park Detector Site:
+to say ResolveEvent Park Detector Site:
 	say "     You're unsure where in the park you could place the device which would be suitable for Zephyr's requirements. You somehow doubt sticking it in a tree will quite be enough to satisfy them. As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park. Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area";
 	if nanite density monitor is not owned:
 		say ". Clearly the best spot around, you'll have to come back here with the device so you can install it.";
@@ -444,7 +448,7 @@ to say ndmdesc:
 		say "     With [the number of entries in ndmlist] remaining to be placed, you recall that Larissa said Zephyr wanted the others placed at the [ndmlist] areas. You should make your way there and [bold type]hunt[roman type] for a suitable ['][bold type]detector site[roman type]['] in those locations.";
 
 nanite density monitor is a grab object.
-it is part of the player.
+
 It is not temporary.
 
 to say onelessndm:
@@ -459,7 +463,7 @@ to say onelessndm:
 	if weight entry is 0:
 		say "     With the last device in place, you discard the empty carrying case. You should report back to Zephyr now that your task is completed.";
 		increase score by 40;
-		now carried of nanite density monitor is 0;
+		ItemGain nanite density monitor by 0;
 
 
 Zephyr Inc ends here.

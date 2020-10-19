@@ -38,12 +38,13 @@ Object	Name
 Poor Kitty	"Poor Kitty"
 
 Poor Kitty is a situation.
-The sarea of Poor Kitty is "Fair".
+ResolveFunction of Poor Kitty is "[ResolveEvent Poor Kitty]".
+Sarea of Poor Kitty is "Fair".
 when play begins:
 	add Poor Kitty to BadSpots of FemaleList;
 	add Poor Kitty to BadSpots of FurryList;
 
-Instead of resolving a Poor Kitty:
+to say ResolveEvent Poor Kitty:
 	if HP of rubber tigress is 0:
 		say "     As you're cautiously poking into some of the abandoned booths around the fair, you end up startling one of those rubbery tigresses from her hiding spot. She runs out of the cupboard on all fours with a squeaking mrowl of surprise, sending a pile of red plastic drinking cups spilling out around you. As you watch her run towards the exit, you notice two strange things about her. First, despite her feminine curves and rounded bottom, she seems to be stuck on all fours unlike the others of her kind. The second, and even more surprising, is the lack of any gender or genitals to her.";
 		say "     Intrigued, you look down at your feet and pick up one of the red cups at your feet. Turning it around, you notice the cup in your hand has a large bite taken out of it, as if this feline's been slowly dining on them. Cup still in hand, you head to the exit and look around. You spot her hiding around the corner of a nearby booth. She releases a soft, cautious mewl, eyeing the cup. She pads out slowly towards you and mewls again.";
@@ -80,7 +81,7 @@ Instead of resolving a Poor Kitty:
 			now HP of rubber tigress is 3;
 			now Resolution of Poor Kitty is 2;		[Artemis recruited]
 			now Libido of rubber tigress is 30;
-			say "     (Artemis the rubber tigress is now a possible companion! You can make her your active companion by typing [bold type][link]companion Artemis[end link][roman type] or [bold type][link]companion rubber tigress[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Artemis[end link][roman type]. You can see all the companions you have with the [bold type][link]companion[end link][roman type] command. Companions will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a companion? Use [bold type][link]companion dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+			say "     (Artemis the rubber tigress is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Artemis[end link][roman type] or [bold type][link]ally rubber tigress[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Artemis[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			now Poor Kitty is resolved;
 		else:
 			say "     Continuing to walk along, you turn around the next corner, and once out of sight, run around the stand. You move quietly as you sneak back onto the main thoroughfare, finding the strange tigress poking her head around the corner[if weapon object of Player is not journal]. You pull out your weapon and charge at her[else]. You raise your fists and charge at her[end if]. She gives a shrill shriek of surprise and scrambles away. You don't expect that thing will be bothering you again.";
@@ -106,13 +107,15 @@ Table of GameCharacterIDs (continued)
 object	name
 rubber tigress	"rubber tigress"
 
-rubber tigress is a pet. rubber tigress is a part of the player.
+rubber tigress is a pet.
+NPCObject of rubber tigress is Artemis.
 understand "Artemis" as rubber tigress.
+IDList of rubber tigress is { "Artemis", "artemis", "rubber tiger", "tigress", "rubber tigress" }.
 printed name of rubber tigress is "Artemis".
-The description of rubber tigress is "[ArtemisDesc]".
-The weapon damage of rubber tigress is 5.
-The level of rubber tigress is 3.
-The Dexterity of rubber tigress is 16.
+Description of rubber tigress is "[ArtemisDesc]".
+Weapon Damage of rubber tigress is 10.
+The level of rubber tigress is 1.
+Dexterity of rubber tigress is 15.
 The summondesc of rubber tigress is "[SummonArtemis]".
 The dismissdesc of rubber tigress is "[DismissArtemis]".
 The assault of rubber tigress is "[ArtemisAttack]".
@@ -121,8 +124,7 @@ templust is a number that varies.
 tempthirst is a number that varies.
 
 to say SummonArtemis:
-	now Artemis is nowhere;
-	if Player is in Courtyard and Artemis is in Courtyard: [summoning while standing next to her]
+	if Artemis is visible: [summoning while standing next to her]
 		say "     With a sharp whistle you call Artemis over to you, rubbing her head gently the two of you begin to make your way back out into the city.";
 	else: [regular summoning]
 		say "     The rubber tigress gives a soft mew and nuzzles at your thigh as you call her over. She purrs happily when you scritch her ears.";
@@ -139,7 +141,7 @@ object	name
 Artemis	"Artemis"
 
 Artemis is a woman.
-The description of Artemis is "[ArtemisDesc]".
+Description of Artemis is "[ArtemisDesc]".
 
 instead of sniffing Artemis:
 	say "[ArtemisScent]";
@@ -185,6 +187,8 @@ to say ArtemisDesc:
 		say "     While your companion, the loyal rubber tigress can keep an ear perked for trouble if you're sleeping outside, keeping you safe from unwanted interruption.";
 	else:
 		say "     While your companion, the loyal rubber tigress borrows your body while you rest. This will keep you safe from interruption and put you in a sleepwalking state full of kinky dreams while you rest and enjoy the pleasure of the fun she's having as she gets her much-needed relief.";
+	if rubber tigress is listed in companionList of Player:
+		say "     [bold type]She is currently following you as your battle companion.[roman type][line break]";
 	if HP of rubber tigress >= 10 and ( lust of rubber tigress is 0 or thirst of rubber tigress is 0 ):
 		LineBreak;
 		say "     Having obtained the set of rubber toys for Artemis, you can now use them to modify her. You have [if lust of rubber tigress is 0 and thirst of rubber tigress is 0]both the feline cock dildo and the vagina toy[else if lust of rubber tigress is 0]the feline cock dildo[else]the vagina toy[end if] available. Shall you use [if lust of rubber tigress + thirst of rubber tigress is 0]them[else]it[end if] to alter your rubber tigress pet?";
@@ -217,7 +221,7 @@ to say ArtemisAttack:
 instead of conversing the Artemis:
 	if Player is in Courtyard and Artemis is in Courtyard:
 		say "[ArtemisTalkMenu]";
-	else if companion of Player is rubber tigress:
+	else if rubber tigress is listed in companionList of Player:
 		say "[ArtemisTalkMenu]";
 	else:
 		say "     Artemis isn't here.";
@@ -228,7 +232,7 @@ instead of conversing rubber tigress:
 	else:
 		if Player is in Courtyard and Artemis is in Courtyard:
 			say "[ArtemisTalkMenu]";
-		else if companion of Player is rubber tigress:
+		else if rubber tigress is listed in companionList of Player:
 			say "[ArtemisTalkMenu]";
 		else:
 			say "     Artemis isn't here.";
@@ -405,7 +409,7 @@ lastArtemisplay is a number that varies. lastArtemisplay is usually 255.
 artemisstatefairrt is a truth state that varies. artemisstatefairrt is usually false.
 
 An everyturn rule:
-	if companion of Player is rubber tigress and skipturnblocker is 0:
+	if rubber tigress is listed in companionList of Player and skipturnblocker is 0:
 		increase Libido of Player by 3;
 		increase Libido of rubber tigress by 5;
 		if lastfuck of rubber tigress - turns >= 4 and player is not neuter:
@@ -799,12 +803,12 @@ name	desc	weight	object
 "cup stack"	"A big stack of red, plastic cups you grabbed as treats for Artemis."	1	cup stack
 
 cup stack is a grab object.
-it is part of the player.
+
 It is not temporary.
 cuptrick is a truth state that varies. cuptrick is usually false.
 
 instead of using cup stack:
-	if companion of Player is rubber tigress:
+	if rubber tigress is listed in companionList of Player:
 		if HP of rubber tigress >= 7 and a random chance of 1 in 2 succeeds and cuptrick is false:	[cup training]
 			say "     Deciding the cups might make a good means to train Artemis, given her fondness for them. You take one out, which quickly draws the kitty's attention. Almost immediately, she's at your side, purring and nuzzling around your legs. You hold the cup up and tell her to sit. She eyes the cup and mrowls needfully. You keep it out of reach and tell her again to sit.";
 			say "     When you ask her a third time, she lowers and down obediently. Or so you think at first. A moment later you notice her continue to sink down past her normal sitting position, her hindquarters being pressed down and deforming. Just as you're taking this in, she springs upward, her reinflating hindquarters propelling her up so she may swat the cup out of your surprised hand. As it skitters across the ground, she walks over to it slowly, tail and ass swishing. She gulps it down in one extra wide, very deliberate bite[if lust of rubber tigress is 2], stretching her vaginal maw open surprisingly wide as she does[end if].";
@@ -828,13 +832,13 @@ instead of sniffing cup stack:
 
 Section 5 - Food/Drink
 
-after using water bottle while companion of Player is rubber tigress:
+after using water bottle while rubber tigress is listed in companionList of Player:
 	say "     After finishing off your drink, you notice Artemis looking up at you... or, more appropriately, at your empty bottle. You toss it to her and she [one of][if lust of rubber tigress is 2]drools her pussy juices onto it[else]chomps onto it[end if], melting the plastic into clear goo and swallowing it down[or]pounces atop it, flattening it down before licking up one end and [if lust of rubber tigress is 2]slurping it into her vaginal muzzle as her pussy juices liquefy the plastic[else]sliding it into her mouth whole to melt and slide down her throat[end if][or]bats it around for a bit before eating it[at random].";
 
-after using dirty water while companion of Player is rubber tigress:
+after using dirty water while rubber tigress is listed in companionList of Player:
 	say "     After finishing off your drink, you notice Artemis looking up at you... or, more appropriately, at your empty bottle. You toss it to her and she [one of][if lust of rubber tigress is 2]drools her pussy juices onto it[else]chomps onto it[end if], melting the plastic into clear goo and swallowing it down[or]pounces atop it, flattening it down before licking up one end and [if lust of rubber tigress is 2]slurping it into her vaginal muzzle as her pussy juices liquefy the plastic[else]sliding it into her mouth whole to melt and slide down her throat[end if][or]bats it around for a bit before eating it[at random].";
 
-after using chips while companion of Player is rubber tigress:
+after using chips while rubber tigress is listed in companionList of Player:
 	say "     From the time you first started opening your snack, [one of]Artemis's eyes have been watching you intently[or]Artemis has been lying down and acting nonchalant, but you can see the corner of her eye watching, waiting[or]Artemis's ears have perked up and she's been purring around your legs, mewling excitedly[at random]. Finished with the snack, you roll the wrapper into a ball and toss it to her. She bats it out of the air and chases it for a bit before licking it up with her tongue. It melts in her mouth and flows down her throat with a soft gulp.";
 
 
@@ -932,7 +936,7 @@ to artemisnap:
 		wait for any key;
 	now skipturnblocker is 1;
 
-after resting while companion of Player is rubber tigress:
+after resting while rubber tigress is listed in companionList of Player:
 	now skipturnblocker is 0;
 	if HP of rubber tigress is 4:
 		say "     You wake up from your nap feeling refreshed[if Libido of Player > 40] and even somewhat less wildly aroused[end if]. As you stretch, you rouse the tigress at your side, who yawns her rubbery mouth wide and comes up to nuzzle you[if Player is not neuter], picking up the faint scent of sex from her[end if]. You feel a little closer to the pretty kitty and snug her in your arms as thanks for keeping watch while you slept.";
@@ -945,7 +949,7 @@ after resting while companion of Player is rubber tigress:
 		say "     Looking yourself and her both over carefully, it seems you're both unchanged from these somnolescent escapades. Since everything seems fine and intact, you can't really get upset with the kitty for wanting in on the fun, given her circumstances. To show you're not upset, you give her a big, tight hug that briefly distorts her rubbery body and makes her head bulge comically. She releases a long, squeaking mew to rebalance the air inside her before nuzzling and licking you again, a less sticky one this time.";
 		now Libido of Player is Libido of Player / 2;
 	else:
-		say "     When you awaken from slumber, you find yourself well rested and a little less aroused (at least for the moment). Artemis is just starting to wake up as you shift about. After a yawn and a stretch, she's nuzzling you and purring happily, looking to get some [']morning['] scritches from you. Having shared so much with the rubbery feline, you can't but feel closer to her.";
+		say "     When you awaken from slumber, you find yourself well rested and a little less aroused (at least for the moment). Artemis is just starting to wake up as you shift about. After a yawn and a stretch, she's nuzzling you and purring happily, looking to get some [']morning['] scritches from you. Having shared so much with the rubbery feline, you can't help but feel closer to her.";
 		now Libido of Player is ( Libido of Player * 3 ) / 4;
 	now lastfuck of rubber tigress is turns;
 	now lastArtemisglomp is turns;

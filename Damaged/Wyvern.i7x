@@ -87,7 +87,7 @@ to say WYVDESC:
 			say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. [if scalevalue of Player < 4]You feel that same crazed compulsion to take on the creature so much larger than you. [end if]You raise your [if weapon object of Player is journal]fists[else]weapon in the air[end if] and give a wild battle cry before rushing at it.";
 		if level of Player >= 20:
 			let debit be 0;
-			if hardmode is true and level of Player > 25:
+			if HardMode is true and level of Player > 25:
 				now debit is level of Player - 25;
 			now WYVLEV is 1;
 			now HP entry is ( a random number between 200 and 275 ) + ( debit * 5 );
@@ -98,7 +98,8 @@ to say WYVDESC:
 			now dex entry is 28 + ( debit / 4 );
 			now sta entry is 20;
 			now per entry is 18;
-			now libido entry is 60;
+			now SeductionImmune entry is false;
+	now libido entry is 60;
 
 to say WYVATK:
 	if WYVLEV is 0:
@@ -162,7 +163,7 @@ to say WYVVIC:
 			say "     [if HP of Player < 1 and player is not submissive]Instinctively, you struggle against your bindings and the weight of your massive reptile, to no avail,[else]Thick, slimy tongue caressing your helpless frame, the massive reptile offers you his crude affection[end if] before he shows no restraint in trying to force his organ past the folds of your flesh. Tainted cries of harsh lust firmly squeezed from your lips, the brute lacks any regard for your well being in favor of his need.";
 			say "     Thick, coarse scales abrasively grinding against your bound, [bodytype of Player] form, he's quite intent on getting the massive thing all the way in there, inch after successive inch reaming itself into your overwhelmingly strained hole. It's not long before he gets what he wants, scaled crotch firmly against your ass, slicked by errant spurts of pre sputtering from you[if scalevalue of Player < 4], body visibly bulging with the dick's outline[end if] before he spares you a moment of slight reprieve when it's inched out, only to be pounded back in.";
 			say "     Utterly wrecked by the behemoth tool[if Cunt Depth of Player < 21], tears streaming from your eyes[end if], ";
-			if lust of Player > 30:
+			if Libido of Player > 30:
 				say "it's not long before you cry out in orgasm, [if Cock Count of Player > 1]cocks smearing their [Cum Load Size of Player] load against both your torsos[else if Player is male]cock smearing its [Cum Load Size of Player] load across both your torsos[else]strained hole throbbing against its invading organ[end if]. He barely seems to even notice this, relentlessly eager to rail for a seemingly endless length of time before the wyvern finally lets out ear-splitting screech. At first, the initial gouts of the beast's thick, virile seed are slow, but they very quickly intensify until it feels like you're being utterly hosed by them, [if scalevalue of Player < 4]forced to watch each gout balloons out your stomach even further[else if scalevalue of Player is 4]visibly swelling with each gout[else]wholly filling you[end if] until it sputters from your hole.";
 			else:
 				say "you're railed by the relentlessly eager wyvern for what seems like forever, finally letting out an ear-splitting screech in bliss. At first, the initial gouts of the beast's thick, virile seed are slow, but they very quickly intensify until it feels like you're being utterly hosed by them, [if scalevalue of Player < 4]forced to watch each gout balloons out your stomach even further[else if scalevalue of Player is 4]visibly swelling with each gout[else]wholly filling you[end if] until it sputters from your hole. The sensation is intense enough that you're driven to cry out in your own orgasm, [if Cock Count of Player > 1]cocks smearing their [Cum Load Size of Player] load against both your torsos[else if Player is male]cock smearing its [Cum Load Size of Player] load across both your torsos[else]strained hole milking its invading organ[end if], not that the beast even seems to notice.";
@@ -192,7 +193,7 @@ to say WYVVIC:
 			say "     [if HP of Player < 1 and player is not submissive]Instinctively, you struggle against your bindings and the weight of your massive reptile, to no avail,[else]Thick, slimy tongue caressing your helpless frame, the massive reptile offers you his crude affection[end if] before he shows no restraint in trying to force his organ past the folds of your flesh. Tainted cries of harsh lust firmly squeezed from your lips, the brute lacks any regard for your well being in favor of his need.";
 			say "     Thick, coarse scales abrasively grinding against your bound, [bodytype of Player] form, he's quite intent on getting the massive thing all the way in there, inch after successive inch reaming itself into your overwhelmingly strained hole. It's not long before he gets what he wants, scaled crotch firmly against your ass, slicked by errant spurts of pre sputtering from you[if scalevalue of Player < 4], body visibly bulging with the dick's outline[end if] before he spares you a moment of slight reprieve when it's inched out, only to be pounded back in.";
 			say "     Utterly wrecked by the behemoth tool[if scalevalue of Player < 4], tears streaming from your eyes[end if], ";
-			if lust of Player > 30 and player is not neuter:
+			if Libido of Player > 30 and player is not neuter:
 				say "it's not long before you cry out in orgasm, [if Cock Count of Player > 1]cocks smearing their [Cum Load Size of Player] load against both your torsos[else if Player is male]cock smearing its [Cum Load Size of Player] load across both your torsos[else]neglected cunt[sfn] oozing down onto the invading organ[end if]. He doesn't seem to even notice this, relentlessly eager to rail for a seemingly endless length of time before the wyvern finally lets out ear-splitting screech. At first, the initial gouts of the beast's thick, virile seed are slow, but they very quickly intensify until it feels like you're being utterly hosed by them, [if scalevalue of Player < 4]forced to watch each gout balloons out your stomach even further[else if scalevalue of Player is 4]visibly swelling with each gout[else]wholly filling you[end if] until it sputters from your hole.";
 			else:
 				say "you're railed by the relentlessly eager wyvern for what seems like forever, finally letting out an ear-splitting screech in bliss. At first, the initial gouts of the beast's thick, virile seed are slow, but they very quickly intensify until it feels like you're being utterly hosed by them, [if scalevalue of Player < 4]forced to watch each gout balloons out your stomach even further[else if scalevalue of Player is 4]visibly swelling with each gout[else]wholly filling you[end if] until it sputters from your hole";
@@ -669,8 +670,8 @@ to say wyvfem_2: [Oral Giving Cunt]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -700,7 +701,7 @@ When Play begins:
 	now desc entry is "[WYVDESC]"; [ Description of the creature when you encounter it.]
 	now face entry is "elongated, draconic in shape with a set of fierce teeth, and completely devoid of other features like ears or hair"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "large and muscular. Feral in build, you find it difficult to stand on your hind legs for very long, relegated to supporting the remainder of your weight with your winged forelimbs"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "hard, substantively scaled and mute brown"; [ skin Description, format as "You have (your text) skin."]
+	now skin entry is "hard, substantively scaled and mute brown"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "You have a somewhat long and heavy tail, fierce, spiked adornments at its prehensile tip."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "feral, somewhat blunt-shaped"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "as you're forced to abide the audible sound of bones shifting in shape, head drawn out into a long, draconic muzzle with a sharp row of feral teeth";  [ face change text. format as "Your face feels funny as (your text)." ]
@@ -728,9 +729,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 25; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 16; [ Width of female sex infection will try and give you ]
-	now libido entry is 25; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 50; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "wyvern goop"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 60; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]bulky[or]draconic[or]winged[at random]";
 	now type entry is "[one of]wyvern[or]draconic[or]reptilian[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -745,7 +750,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -2101,7 +2106,7 @@ To say wyvern goop use:
 	SanLoss 4;
 	increase Libido of Player by 1;
 
-wyvern goop is a grab object. wyvern goop is infectious. The strain of wyvern goop is "Wyvern".
+wyvern goop is a grab object. wyvern goop is infectious. Strain of wyvern goop is "Wyvern".
 wyvern goop has a usedesc "[wyvern goop use]".
 
 Wyvern ends here.

@@ -29,7 +29,7 @@ Reservoir "Reservoir"
 
 Reservoir is a room. It is fasttravel.
 
-The description of Reservoir is "[reservoirdesc]".
+Description of Reservoir is "[reservoirdesc]".
 
 To say reservoirdesc:
 	if waterworks is 0:
@@ -53,12 +53,12 @@ Reservoir Main Pathway  "Reservoir Main Pathway"
 Reservoir Main Pathway is a room.
 Reservoir Main Pathway entry is a door. It is dangerous.
 
-The description of Reservoir Main Pathway entry is "There's something you may need important over here!" It is dangerous.
+Description of Reservoir Main Pathway entry is "There's something you may need important over here!" It is dangerous.
 
 Reservoir Main Pathway is west of Reservoir Main Pathway entry.
 Reservoir Main Pathway entry is north of Reservoir.
 
-The description of Reservoir Main Pathway is "[pathwaydesc]".
+Description of Reservoir Main Pathway is "[pathwaydesc]".
 
 to say pathwaydesc:
 	if waterworks is 0:
@@ -82,60 +82,69 @@ Table of GameEventIDs (continued)
 Object	Name
 For Purity's Sake "For Purity's Sake"
 
-For Purity's Sake is a situation. The Level of For Purity's Sake is 18.
+For Purity's Sake is a situation.
+ResolveFunction of For Purity's Sake is "[ResolveEvent For Purity's Sake]". The Level of For Purity's Sake is 18.
 
 Table of GameEventIDs (continued)
 Object	Name
 Technical Assistance  "Technical Assistance"
 
-Technical Assistance is a situation. Technical Assistance is inactive.
+Technical Assistance is a situation.
+ResolveFunction of Technical Assistance is "[ResolveEvent Technical Assistance]". Technical Assistance is inactive.
 
 Table of GameEventIDs (continued)
 Object	Name
 Slightly Sidetracked  "Slightly Sidetracked"
 
-Slightly Sidetracked is a situation. Slightly Sidetracked is inactive.
+Slightly Sidetracked is a situation.
+ResolveFunction of Slightly Sidetracked is "[ResolveEvent Slightly Sidetracked]". Slightly Sidetracked is inactive.
 
 Table of GameEventIDs (continued)
 Object	Name
 Flight of stairs  "Flight of stairs"
 
-Flight of stairs is a situation. Flight of stairs is inactive.
+Flight of stairs is a situation.
+ResolveFunction of Flight of stairs is "[ResolveEvent Flight of stairs]". Flight of stairs is inactive.
 
 Table of GameEventIDs (continued)
 Object	Name
 ThreeDoors  "ThreeDoors"
 
-ThreeDoors is a situation. ThreeDoors is inactive.
+ThreeDoors is a situation.
+ResolveFunction of ThreeDoors is "[ResolveEvent ThreeDoors]". ThreeDoors is inactive.
 
 Table of GameEventIDs (continued)
 Object	Name
 The beast of the tainted waters "The beast of the tainted waters"
 
-The beast of the tainted waters is a situation. The beast of the tainted waters is inactive.
+The beast of the tainted waters is a situation.
+ResolveFunction of The beast of the tainted waters is "[ResolveEvent The beast of the tainted waters]". The beast of the tainted waters is inactive.
 
 Table of GameEventIDs (continued)
 Object	Name
 Fight to remember "Fight to remember"
 
-Fight to remember is a situation. Fight to remember is inactive.
+Fight to remember is a situation.
+ResolveFunction of Fight to remember is "[ResolveEvent Fight to remember]". Fight to remember is inactive.
 
 Table of GameEventIDs (continued)
 Object	Name
 PassionAfterTheBattle "PassionAfterTheBattle"
 
-PassionAfterTheBattle is a situation. PassionAfterTheBattle is inactive.
+PassionAfterTheBattle is a situation.
+ResolveFunction of PassionAfterTheBattle is "[ResolveEvent PassionAfterTheBattle]". PassionAfterTheBattle is inactive.
 
 Table of GameEventIDs (continued)
 Object	Name
 Sanctuary "Sanctuary"
 
-Sanctuary is a situation. Sanctuary is inactive.
+Sanctuary is a situation.
+ResolveFunction of Sanctuary is "[ResolveEvent Sanctuary]". Sanctuary is inactive.
 
 
-The sarea of For Purity's Sake is "Reservoir".
+Sarea of For Purity's Sake is "Reservoir".
 
-Instead of resolving For Purity's Sake:
+to say ResolveEvent For Purity's Sake:
 	If resevquest is 0:
 		say "You come across a room filled with mechanical equipment as well more of the sickly viscous slime that seems to have pervaded the entire area. Trying to fight off a wave of nausea that threatens to make you swoon, you muster up the will to look around while fighting off the onset of a headache. All around the room you can see much of what would be needed to restore the city's water supply into good standing order, however you're not exactly sure what still works verses what doesn't and what you should do or shouldn't touch.";
 		say "This small dilemma frustrates you for a moment before you calm yourself down and realize that if there is something that you can do then you'll just have to do it to the best of your own natural ability. Come what may you can't make the situation any worse than it already is.";
@@ -149,9 +158,10 @@ Object	Name
 Technical Assistance  "Technical Assistance"
 
 Technical Assistance is a situation.
-The sarea of Technical Assistance is a "Reservoir".
+ResolveFunction of Technical Assistance is "[ResolveEvent Technical Assistance]".
+Sarea of Technical Assistance is a "Reservoir".
 
-Instead of resolving a Technical Assistance:
+to say ResolveEvent Technical Assistance:
 	If resevquest is 1:
 		say "Looking around you manage to find a door way with the stamp of [']Technician['] placed securely onto the front of the metal barrier. Slightly stained with what appears to be male sexual fluids you toughen your resolve and enter into the room. The room is darkened; most probably because the lights are switched off and yet you recall the facilities personal backup generators should still be supplying the place power. Hesitant, but knowing that you'll need light to see by, you reach out to search the wall to flip on a light. Finding the small nub, you then flip the switch. With a telltale 'click' the room in suddenly brightened for all the world to see.";
 		say "And sadly all of the world does see...you. Or rather to say the large creature that's standing before you see you as it blinks in confusion at having someone interrupt its nap. Frantically you hope that civil conversation will stop any possible altercation you might have with the creature, but too late, it's already ambling towards you with eyes filled with intent on nothing good.";
@@ -159,7 +169,7 @@ Instead of resolving a Technical Assistance:
 		say "After dealing with the creature in question you shake your head in pity. A small part of you wonders if the thing you just beat was once one of the technicians you so desperately need right now. Finding that it doesn't matter you go ahead and search around the room for something that will help you clean up the city's water supply.";
 		now bookfind is 0;
 		while bookfind is 0:
-			let bonus be (( the Perception of the player minus 15 ) divided by 3);
+			let bonus be (( Perception of Player minus 15 ) divided by 3);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
@@ -209,9 +219,10 @@ Object	Name
 Slightly Sidetracked  "Slightly Sidetracked"
 
 Slightly Sidetracked is a situation.
-The sarea of Slightly Sidetracked is "Reservoir".
+ResolveFunction of Slightly Sidetracked is "[ResolveEvent Slightly Sidetracked]".
+Sarea of Slightly Sidetracked is "Reservoir".
 
-Instead of resolving Slightly Sidetracked:
+to say ResolveEvent Slightly Sidetracked:
 	If resevquest is 2:
 		say "Making your way from technical assistance room you find yourself cautiously listening to various noises that seem to be coming from all around you. Instantly you put yourself on guard as your pervasive sense of danger starts to ring through your spirit like a church bell of on Sunday. When a somewhat familiar sound comes from behind you, your feet are running without you having to tell them to move as you find yourself moving throughout the reservoir at top speeds. The raw need to [italic type]be away[roman type] taking hold of you until soon your mind is all but screaming at you to flee.";
 		say "Sadly this leads you on a merry little romp throughout through the reservoir and directly into the arms of danger. Several forms all look at you with various smirks, scowls, leers and grins and instantaneously you're preparing yourself to fight as your feet skid to a halt roughly five yards between you and the creatures ahead of you.";
@@ -243,9 +254,10 @@ Object	Name
 Flight of stairs  "Flight of stairs"
 
 Flight of stairs is a situation.
-The sarea of Flight of stairs is "Reservoir".
+ResolveFunction of Flight of stairs is "[ResolveEvent Flight of stairs]".
+Sarea of Flight of stairs is "Reservoir".
 
-Instead of resolving a Flight of stairs:
+to say ResolveEvent Flight of stairs:
 	If resevquest is 3:
 		say "Upon getting away from the horde that you just had to deal with you find yourself panting slightly as a sweat dribbles down onto your [FaceName of Player] face. Reaching an [BodyName of Player] arm up to rub at your forehead only realize that you've gotten some goop onto your scalp. Quickly you rub the sticky substance off before moving more hurriedly up the stairwell. Once you are at the top of the stairs you turn and look up to see what it was that dropped onto you... and then wished you hadn't. Trailing across the ceiling in small lines of multicolored slime is - what you're almost positive it could only be - a mishmash of mutant cum lining the walls.";
 		say "By the looks of all of the gunk it appears as though the creatures here were having some kind of contest to see who, or rather what, could inseminate the top of the building the most. You're almost frightened by your curiosity to know what won as more and more sticky trails dribble down onto the concrete of the stairs you just walked up. A fleeting sense of gratefulness overcomes you that you are not found by any more mutants right now as the smell of the musk and cum is making you somewhat lightheaded. Turning back and walking onwards you focus your thoughts on looking for the main computer terminal to the reservoir.";
@@ -262,9 +274,9 @@ ThreeDoors  "ThreeDoors"
 
 ThreeDoors is a situation;
 
-The sarea of ThreeDoors is "Reservoir".
+Sarea of ThreeDoors is "Reservoir".
 
-Instead of Resolving ThreeDoors:
+to say ResolveEvent ThreeDoors:
 	If resevquest is 4:
 		say "Before you stands three doors, each of them lined together perfectly in a row. Suspicion wells within you as all three are covered in slimy mucous like substance, yet you are sure that one of the doors must be the main terminal room for the Reservoir. The problem is if 'one' of them is the main room... then just what's behind the other two? A small bud of fear wells inside of your belly as you try not to imagine just what could be waiting in store for you behind the other two false doorways. The terror at what might be waiting on the other side of the correct entryway already making you nervous enough as is.";
 		say "However, you have to pick one to move forward. But which one? Trying to recall your memories of the Technical manual you glanced through before coming up this way, you find yourself coming to a blank as to which path to take. Aside from knowing that you need whichever leads down, you're uncertain which door lead that way. It's not like you can you really go back and ask one of the creatures here for help. Well, not and expect to get a useful answer anyway. You have something of a dilemma on your hands.";
@@ -297,7 +309,7 @@ This is the doorcheck rule:
 			if Player consents:
 				now doorsearch is 0;
 				while doorsearch is 0:
-					let bonus be (( the Strength of the player minus 10 ) divided by 2);
+					let bonus be (( Strength of Player minus 10 ) divided by 2);
 					let diceroll be a random number from 1 to 20;
 					say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 					increase diceroll by bonus;
@@ -343,7 +355,7 @@ This is the doorcheck rule:
 	else if title entry is "Right Door":
 		if rdoor is 0:
 			say "Taking hold of the door's handle you are mildly astonished when the door opens without any protest. That elation doesn't last long because soon said door is taking from your hand and then you are grabbed bodily!";
-			let bonus be (( the Strength of the player minus 10 ) divided by 2);
+			let bonus be (( Strength of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
@@ -371,9 +383,10 @@ Object	Name
 The beast of the tainted waters "The beast of the tainted waters"
 
 The beast of the tainted waters is a situation.
-The sarea of The beast of the tainted waters is "Reservoir".
+ResolveFunction of The beast of the tainted waters is "[ResolveEvent The beast of the tainted waters]".
+Sarea of The beast of the tainted waters is "Reservoir".
 
-Instead of Resolving a The beast of the tainted waters:
+to say ResolveEvent The beast of the tainted waters:
 	if resevquest is 5:
 		If lastResevoirfix - turns > 10:
 			say "Having let the beast of ooze do what it wishes you have let the main terminal become destroyed beyond repair, at least from what your limited skills with working with machines tells you. Sighing and shaking your head you realize that there is little you can do as the Blob monster has disappeared, probably haven sunken back into its watery home, and there is now no way to currently fix the area. Defeated by this all you can do is turn your head and walk away out of the reservoir.";
@@ -397,16 +410,17 @@ Object	Name
 Fight to remember "Fight to remember"
 
 Fight to remember is a situation.
-The sarea of Fight to remember is "Reservoir".
+ResolveFunction of Fight to remember is "[ResolveEvent Fight to remember]".
+Sarea of Fight to remember is "Reservoir".
 
-Instead of resolving a A Fight to remember:
+to say ResolveEvent A Fight to remember:
 	if resevquest is 6:
 		If lastResevoirfix - turns > 10:
 			say "Having spent too much time preparing, or else becoming occupied, you've allowed the beast of ooze to destroy the main terminal beyond repair. At least destroyed beyond what your limited skills with working with machines can handle. Sighing and shaking your head you realize that there is little you can do as the Blob monster has disappeared, probably haven sunken back into its watery home, and there is now no way to currently fix the area. Defeated by this all you can do is turn your head and walk away out of the reservoir.";
 			now a Fight to remember is resolved;
 		else:
 			say "Geared up and ready to roll you head out of the room and then down back the way you came to the main area of the reservoir. Once there you find yourself wincing a little bit in disbelief as you note that the Blob monster is somewhat... bigger... than what you had first thought it should have been.";
-			let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+			let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
@@ -443,7 +457,7 @@ Instead of resolving a A Fight to remember:
 					now lastResevoirfix is turns;
 			else:
 				say "You feel a throng of nervousness come over you as you watch the monster [italic type]burble[roman type] and then turn your way, as if sensing that you were the cause of its current distress. Not feeling the courage that you know you possess your body locks up just as your eyes see massive tentacles surge their way towards you.";
-				let bonus be (( the dexterity of the player minus 8 ) divided by 2);
+				let bonus be (( Dexterity of Player minus 8 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 				increase diceroll by bonus;
@@ -518,9 +532,10 @@ Object	Name
 PassionAfterTheBattle "PassionAfterTheBattle"
 
 PassionAfterTheBattle is a situation.
-The sarea of PassionAfterTheBattle is "Reservoir".
+ResolveFunction of PassionAfterTheBattle is "[ResolveEvent PassionAfterTheBattle]".
+Sarea of PassionAfterTheBattle is "Reservoir".
 
-Instead of resolving a PassionAfterTheBattle:
+to say ResolveEvent PassionAfterTheBattle:
 	If resevquest is 7:
 		say "Having rested up and finished unthawing the reservoir you go about treating and filtering the water, after cleaning up the facility of the frozen Blob monster, and then proceed to set the system to run on automatic just as it had been done before. While there might be a strong possibility that more mutants could show up later you make a plan to inform the local soldiers in this area in hopes that they will send a unit here to protect the place. After all, you've basically done their job for them with cleaning up the mutants and the facility.";
 		say "Taking no mind about the possibilities to come in the near future, you go ahead and prepare to leave out of the facility with pride burning deep inside of your chest. Holding yourself up just a little bit more proudly you realize that you've done something that no one else probably could have done, singlehandedly, as you had. Congratulations.";
@@ -529,7 +544,7 @@ Instead of resolving a PassionAfterTheBattle:
 		say "Cold as a winter's morning, blue as the sky during a clear afternoon, sharp with twin lethal edges that beckons to be used against any who stand before you, you see a pair of curved knives gleaming at you somewhat in an otherworldly manner. Not understanding this strange happening you aren't prepared for the twin weapons to float over to you and then stand in front of you. However, a sense of awe makes you reach out for the hilts of the knives before you can stop yourself. A shudder racks throughout your body as a pervasive chill runs down along your spine. When the daggers rest gently into your hand you can feel a sorrowful weight to them as you recall all of those who got trapped inside of the Blob and then frozen with the creature.";
 		say "There are no words that can help you to understand what is going on here, but you have a good feeling that you just received a kind gift that comes around only once in a lifetime. Taking the knives firmly into hand you clutch the twin blades close to your chest before turning to head out of the reservoir.";
 		wait for any key;
-		now carried of icicle knives is 1;
+		ItemGain icicle knives by 1;
 		now waterworks is 1;
 		now PassionAfterTheBattle is resolved;
 		now Sanctuary is resolved;
@@ -541,8 +556,9 @@ Object	Name
 Sanctuary "Sanctuary"
 
 Sanctuary is a situation.
+ResolveFunction of Sanctuary is "[ResolveEvent Sanctuary]".
 
-Instead of resolving a Sanctuary:
+to say ResolveEvent Sanctuary:
 	if waterworks is 1:
 		say "Because of your efforts the military is able to work at speeding up the process of trying to restore some form of order to the city, now that they have an infinite supply of water on their hands. Though they're not too sure how to act around you, given your [FaceName of Player] face and [BodyName of Player] form, despite you being the one to help make the improbable here possible, they do give you a few nods and words of congratulations. Speaking with some of them you come to find out that the military men and women aren't as bad as you would have first believed, and though they don't offer you any provisions and the likes, you do end up chatting many of them up and learning about their thoughts and feelings about dealing with the [italic type]problems[roman type] here in the metropolis. Maybe you can offer to help them out sometime? [bold type](There's nothing left to do here, but if you come back to talk to the military you will get a chance to work with them to speed up their efforts to help out in the city via time loss... wait... is that a good thing or no? This event is repeatable.)[roman type][line break]";
 		Extend game by -16;
@@ -554,8 +570,8 @@ name	desc	weight	object
 "icicle knives"	"Twin pair of daggers made from the thoughts and feelings of those who were devoured by a monster and then frozen in an icy tomb of flesh and slime. Carry a chilly sharp edge to them that can pierce as well as cut."	5	icicle knives
 
 icicle knives is an armament.
-It is part of the player.
-It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and ice[or]thin, but sharp blades[at random]". The weapon damage of icicle knives is 16. The weapon type of icicle knives is "Melee". It is not temporary. the objsize of icicle knives is 2.
+
+It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and ice[or]thin, but sharp blades[at random]". Weapon Damage of icicle knives is 16. Weapon Type of icicle knives is "Melee". It is not temporary. Objsize of icicle knives is 2.
 
 Instead of sniffing icicle knives:
 	say "These frozen blades both breathe and smell of a perpetual frost made of the forgotten thoughts and chilled promises left abandoned in a watery reservoir.";

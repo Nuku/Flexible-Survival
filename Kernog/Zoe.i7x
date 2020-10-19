@@ -68,11 +68,11 @@ AnalVirgin of Zoe is true.
 PenileVirgin of Zoe is true.
 SexuallyExperienced of Zoe is false.
 MainInfection of Zoe is "".
-The Loyalty of Zoe is normally 0.
-The XP of Zoe is normally 0.
+Loyalty of Zoe is usually 0.
+XP of Zoe is usually 0.
 
-The description of Zoe is "[ZoeDesc]".
-The conversation of Zoe is {"Placeholder"}.
+Description of Zoe is "[ZoeDesc]".
+Conversation of Zoe is {"Placeholder"}.
 instead of sniffing Zoe:
 	say "Zoe's fur retains the smell of the paint she uses during her getaways.";
 
@@ -556,7 +556,7 @@ Part B - Suspicious Van
 Suspicious Van is a closed container. It is openable.
 Suspicious Van is locked.
 Suspicious Van is in Smith Haven Mall Lot West.
-The description of Suspicious Van is "[suspiciousVanDesc]".
+Description of Suspicious Van is "[suspiciousVanDesc]".
 
 instead of sniffing Suspicious Van:
 	say "It smells of oil[if Resolution of Rabbit Tagger is 1], and there is a lingering smell of male sweat and cum in the vicinity[end if].";
@@ -600,8 +600,8 @@ Wolverine Pimp is a man.
 Wolverine Pimp is in Nowhere.
 Understand "van guard" as Wolverine Pimp.
 
-The description of Wolverine Pimp is "You gauge the anthro wolverine sitting in a chair, next to the van. He wears a tattered security guard outfit, which he seems to have [']upgraded['] by ripping out the sleeves. His clothes are tattered with stains, which you suspect may not be water or grape juice. The guard raises an eyebrow at you. 'What are you looking at?'".
-The conversation of Wolverine Pimp is { "[one of]'Looking for fun times? [bold type]Trade me[roman type] some food or beverage, and you'll get a turn.'[or]'The girl's here of her own will, I swear. Not that you can disprove anything... Heh heh!'[or]'Watch out if you want a pass with the bunny: she bites. Don't forget to use the ring gag.'[or]'I wonder when the boss will let her go. Hell, I'd rather wonder [italic type]if[roman type] the boss will let her go. Ha ha ha...'[at random]" }.
+Description of Wolverine Pimp is "You gauge the anthro wolverine sitting in a chair, next to the van. He wears a tattered security guard outfit, which he seems to have [']upgraded['] by ripping out the sleeves. His clothes are tattered with stains, which you suspect may not be water or grape juice. The guard raises an eyebrow at you. 'What are you looking at?'".
+Conversation of Wolverine Pimp is { "[one of]'Looking for fun times? [bold type]Trade me[roman type] some food or beverage, and you'll get a turn.'[or]'The girl's here of her own will, I swear. Not that you can disprove anything... Heh heh!'[or]'Watch out if you want a pass with the bunny: she bites. Don't forget to use the ring gag.'[or]'I wonder when the boss will let her go. Hell, I'd rather wonder [italic type]if[roman type] the boss will let her go. Ha ha ha...'[at random]" }.
 
 instead of sniffing Wolverine Pimp:
 	say "The wolverine gives off an intimidating, bestial smell.";
@@ -677,7 +677,8 @@ Object	Name
 Rabbit Tagger	"Rabbit Tagger"
 
 Rabbit Tagger is a situation.
-The sarea of Rabbit Tagger is "Nowhere".
+ResolveFunction of Rabbit Tagger is "".
+Sarea of Rabbit Tagger is "Nowhere".
 
 [Event trigger]
 instead of going to Smith Haven Mall Lot West while (a random chance of 1 in 3 succeeds and Rabbit Tagger is not resolved):
@@ -700,6 +701,7 @@ to ZoeTheTaggerRabbitEvents:
 		LineBreak;
 		say "     'No no no! Please I'm sor- ahhh!' Zoe starts to say, then lets out a shocked yell as the wolverine thrusts into her from behind, burying half his length into her pussy and claiming the bunny's cherry. 'Best to get it over quick, you see?' he tells her in a satisfied tone, then licks her cheek again before taking the fur at the back of her neck between his teeth and driving the rest of the way into her trembling pussy. With a deep grunt at bottoming out in a virgin girl, the wolverine holds her tight to his chest and starts to grope her chest, feeling the bunny's small boobs hiding under the fabric of her hoodie. 'Nice and tight,' the big man adds a moment later, grinding his hips against her rear a little.";
 		say "     The wolverine slowly pulls out of his captive and rubs the slick length of his shaft against her furry buttocks, then sinks it back into Zoe's pussy with a harsh thrust, followed by another and another. Certainly looks like a demanding introduction to womanhood and fucking for the anthro girl. Zoe gets pounded from behind for a little while, biting her lip as she tries to suppress any noise from her throat and with tears welling up at the realization that this will always stay with her as her first time being fucked. When she finally can't help but let out a mixture of a whimper and moan on one of his deep thrusts, the mall guard pauses and pulls her up, leaning around to look her in the eye.";
+		NPCSexAftermath Zoe receives "PussyFuck" from Logan;
 		WaitLineBreak;
 		say "     'Not such a good idea to piss of Officer Logan, eh girl? Wait - I wanna see your face as I pound the lesson home!' the wolverine grunts in a cruel mixture of lust and amusement. He reaches down to grab the pants from around her lower legs, impatiently tugging them off her legs to free the bunny's slender limbs. Now that Zoe is naked from the hips down, Logan withdraws his cock from her with a wet slurp, then rolls her over on her back. Before she knows it, he has her legs spread and raised while leaning over her. 'Bad girls like you need to be taught a lesson,' he grunts and licks her face, then thrusts his manhood home into her body. 'Ah, you bastard!' Zoe replies as he nudges her cervix and presses against it, his big shaft reaching deep into her petite body.";
 		say "     Pinning his captive bunny to the asphalt with one hand, the wolverine fucks her hard, pistoning his dick in and out of her snatch. Given the typical little alterations the nanites make to people's minds, Zoe soon can't help but moan and tremble under him, her traitor body enjoying being dicked and machine whispers in her head telling her to just go along with it, despite everything wrong with this pairing. It doesn't take much longer before Logan lets out a satisfied growl and positions his cock so that just the head is inside her, his balls and shaft throbbing hard with spurt after spurt of cum shooting up the bunny's pussy. 'This is what little sluts like you were made for,' he says harshly while still coming into her, grinning down at the shocked girl.";

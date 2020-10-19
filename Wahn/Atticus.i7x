@@ -80,7 +80,8 @@ Object	Name
 Incubus Offspring Meeting	"Incubus Offspring Meeting"
 
 Incubus Offspring Meeting is a situation.
-The sarea of Incubus Offspring Meeting is "Nowhere".
+ResolveFunction of Incubus Offspring Meeting is "".
+Sarea of Incubus Offspring Meeting is "Nowhere".
 
 when play begins:
 	add Incubus Offspring Meeting to BadSpots of MaleList;
@@ -90,7 +91,6 @@ after going to Burned-Out Chapel while (Incubus Offspring Meeting is not resolve
 	move Atticus to Burned-Out Chapel;
 	if player is not male:
 		say "     (Note: Even though you might not have a dick right now, you're still the person who fathered Atticus. That's why he'll continue to call you dad throughout all content.)";
-	project the Figure of YamatoDragoness_red_NSFW_icon;
 	project the Figure of Atticus_hard_neutral_arm_raised_icon;
 	say "     As you enter the nave of the ruined chapel, with its soot-blackened walls and columns rising high above you, you become aware that someone else is already inside the room. A series of candles has been set up in the apse behind the altar, their flickering glow playing over the naked skin of a handsome young man standing against the wall there. Casually naked and clearly quite comfortable in his skin, he is pinching his nipples one by one while jerking his meaty shaft in fluid movements. Two small horns bend upwards from his forehead, dark red in color just like the bat-like wings on his back and the spaded tail swinging through the air behind his back. Clearly, this is an incubus - but there's more to him than just that... something about his features and the sexual energy lying thick in the air around him reminds you of Lilith, and it isn't too hard to guess that this is a son of the powerful succubus. You can't help but feel that you've seen someone looking kinda like him before, but you can't put your finger on it right away.";
 	say "     Amber eyes flicker towards you as the incubus registers your presence, and with a grin, he speeds his masturbation into a rapid flurry of movement, accompanied by lewd moans spilling easily past his lips. You can do little more than stare as he quickly pushes himself past the point of no return, letting out a satisfied grunt as his body stiffens and a thick spurt of cum erupts from his manhood, followed by another and another. Second by second, the glow of the candles around the naked man seem to diminish and it takes you a second to figure out why: He's literally shooting out the candles with his cum! One, two, three, then four flames are extinguished as their wicks are engulfed by the demon's seed but he aimed a little high for the fifth, so it is only grazed, spreading the scent of burning and cum in the air instead.";
@@ -227,13 +227,14 @@ Object	Name
 Atticus_Payback	"Atticus_Payback"
 
 Atticus_Payback is a situation.
-The sarea of Atticus_Payback is "Nowhere".
+ResolveFunction of Atticus_Payback is "".
+Sarea of Atticus_Payback is "Nowhere".
 
 when play begins:
 	add Atticus_Payback to BadSpots of MaleList;
 	add Atticus_Payback to badspots of IncestList;
 
-after going to Burned-Out Chapel while (Atticus_Payback is not resolved and Atticus is in Burned-Out Chapel and PlayerMet of Atticus is true and Loyalty of Atticus is 2 and AtticusEventCooldown - turns > 6): [Atticus in the room, has met the player, player showed that he cares about him]
+after going to Burned-Out Chapel while (Atticus_Payback is not resolved and Atticus_Payback is active and Atticus is in Burned-Out Chapel and PlayerMet of Atticus is true and Loyalty of Atticus is 2 and AtticusEventCooldown - turns > 6): [Atticus in the room, has met the player, player showed that he cares about him]
 	project the Figure of Atticus_jeans_neutral_arms_crossed_icon;
 	say "     As you're about to enter the nave of the ruined chapel, you hear the crunching sound of breaking glass and sounds of splinters raining down after. Curious but also wary, you glance around the corner and see Atticus, standing beside one of the pews which has been pushed to stand lengthwise near the side wall of the building. On it, several empty beer bottles have been lined up and the handsome incubus is holding a baseball bat. His face is a picture of grumpy aggression as he swings back the bat once more, winding up to smash another bottle and send its remains to impact the soot-blackened wall. After he destroys his newest target, you step into the room and call out to him, at which point the young incubus turns around to look at you. His sullen glare smoothes out a bit as he recognizes you, greeting you with a wave of his hand and the words, 'Hey dad.'";
 	say "     Walking over to your incubus son, you ask him what's got him in such a funk, and he grumbles under his breath. For a second, it looks like he'll just continue with his vandalism and not answer, but then he seems to change his mind and throws the bat at the wall instead, uncaring where it falls after bouncing off. Crossing his arms in front of his chest, the young man looks at you and grimaces. 'It's this dude I ran into. 'Corpegh the Devourer'. Bleh! The guy's a damned bastard. All he cares about is impressing his master Mogdraz, and fuck on everyone else. I was out looking for something new to wear yesterday, something sexy,' the young incubus says, winking at you before he continues, 'and there he was, just strolling out of the kicked-open door of a sex shop with a huge sack of stuff. He just looted [italic type]everything[roman type]. I approached the dude and asked if I could just have a thing or two too, and you know what he said? 'Suck my dick and I might think about it.'";
@@ -511,8 +512,8 @@ AnalVirgin of Atticus is false.
 PenileVirgin of Atticus is false.
 SexuallyExperienced of Atticus is true.
 MainInfection of Atticus is "Incubus".
-The description of Atticus is "[AtticusDesc]".
-The conversation of Atticus is { "<This is nothing but a placeholder!>" }.
+Description of Atticus is "[AtticusDesc]".
+Conversation of Atticus is { "<This is nothing but a placeholder!>" }.
 The scent of Atticus is "     Atticus smells nicely masculine, with just the smallest amount of sexy sweat to his body, complete with lots of pheromones that can drive almost anyone wild in lust.".
 
 to say AtticusDesc:
@@ -579,7 +580,7 @@ Atticus's Bedroom	"Atticus's Bedroom"
 
 Atticus's Bedroom is a room.
 Atticus's Bedroom is sleepsafe.
-The description of Atticus's Bedroom is "[AtticusRoomDesc]".
+Description of Atticus's Bedroom is "[AtticusRoomDesc]".
 
 after looking while player is in Atticus's Bedroom:
 	if findwires < 2 and fixedgens < 3:

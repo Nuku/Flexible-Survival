@@ -9,6 +9,7 @@ Section 1 - Creature Responses
 incubusnosex is a number that varies.
 
 to say incubusdesc:
+	project Figure of Incubus_clothed_icon;
 	setmongender 3; [creature is male]
 	say "     You are confronted by a person who moves to block your path. At first, you could almost mistake him for a handsome man, were it not for some extra features which confirm a more sinister nature. Atop his lovely face are a pair of small, red horns and his amber eyes have a hint of an unearthly glow to them. On his back, there is a pair of large bat-like wings in a dark red color. Finally, from the end of his spine extends a long, slender tail ending in a spaded tip. His physique is well-toned and his [one of]cream[or]pink[or]tan[or]chocolate[at random] skin is smooth and without blemish despite the mess of the surrounding city. The man's body is beautifully muscled, but not massively so, looking like a statue of Adonis come to life.";
 	say "     His tail gives a swish as he looks you over with a lustful grin. '[one of]Now, you may be able to provide some amusement[or]Give in to your urges and enjoy physical pleasure[or]I'm looking forward to filling you properly[or][if Player is female]Spread your legs[else]Bend over[end if] for me, my lovely. You know you want me in you[or]I know what you desire. Let me give it to you[or]Join me in delicious, sinful pleasure[at random],' he says with a silky, seductive voice and a sinister smile on his full, red lips. His hands run across his shapely body, showing it off for you before moving down to slide over the bulge his erect cock makes in the supple leather pants that are his only article of clothing.";
@@ -17,6 +18,7 @@ to say losetoincubus:
 	if inasituation is true:
 		say ""; [dealt with at the source]
 	else:
+		project Figure of Incubus_naked_icon;
 		now incubusnosex is 0;
 		if BodyName of Player is "Incubus" or BodyName of Player is "Succubus":
 			if Player is female:
@@ -70,6 +72,7 @@ to say beattheincubus:
 	if inasituation is true:
 		say ""; [dealt with at the source]
 	else:
+		project Figure of Incubus_naked_icon;
 		if BodyName of Player is "Incubus" or BodyName of Player is "Succubus":
 			if Player is male:
 				say "     'Well done, my infernal sibling,' the incubus says with a smile as he bows in submission to you. 'You are definitely the more powerful seducer,' he acknowledges with another, lower bow and you can't help but smile, feeling strangely at ease now that the combat is over. 'Shall you claim your prize?' he says with a grin, turning around and getting onto all fours. His tail arches up and his shapely, bubble butt is offered to you. You are quite tempted by the sight, eager to give him the good, hard fucking he would have given you.";
@@ -131,8 +134,8 @@ to say incubus fight:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -181,9 +184,13 @@ When Play begins:
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex the infection will try to give a player. ]
+	now SeductionImmune entry is false;
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
 	now loot entry is "libido pill"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 30; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if Player is male]handsome[else]sultry[end if][at random]";
 	now type entry is "demonic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -198,7 +205,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -304,8 +311,6 @@ Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Incubus Infection"	"Infection"	""	Incubus Infection rule	1000	false
 
-[A sample structure for succumbing/surviving messages at the end of the game.]
-[Numerous other examples can be found in existing creature files.]
 This is the Incubus Infection rule:
 	if Player has a body of "Incubus":
 		trigger ending "Incubus Infection"; [Here it states, that the ending has been played.]

@@ -61,6 +61,8 @@ to say zpcdesc:
 
 
 zpc is a grab object. zpc is not temporary.
+understand "Zephyr Personal Communicator" as zpc.
+understand "zephyr personal communicator" as zpc.
 
 zpcturnon is an action applying to nothing.
 Understand "turn on the zpc" as zpcturnon.
@@ -70,7 +72,7 @@ Carry out zpcturnon:
 
 Section 4 - Handling (Internal)
 
-the usedesc of zpc is "[zpc_use]";
+Usedesc of zpc is "[zpc_use]";
 
 to say zpc_use:
 	if emap is 0:
@@ -143,7 +145,7 @@ cheat_zpc_give is an action applying to nothing.
 understand "zpc_cheat" as cheat_zpc_give.
 carry out cheat_zpc_give:
 	say "CHEAT: ZPC added to inventory";
-	now carried of zpc is 1;
+	ItemGain zpc by 1;
 
 [Cheat that gives freecred]
 cheat_freecred_give is an action applying to nothing.

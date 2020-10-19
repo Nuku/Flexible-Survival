@@ -73,15 +73,15 @@ to say peacockvictory:
 		else: [STANDARD]
 			say "     Once drained, the peacock's shaft withdraws, and he gently tilts your head up to look at him and his colorful tail. He gives it a mesmerizing wave, and your mind rapidly drifts away. 'It will be better for both of us if you don't remember this... Forget... Forget...' he says softly. You start to feel sleepy as you stare into the swaying spots, and you soon slump over, passing out. When you awaken, you find yourself in an alleyway with no memories of how you got there, the encounter completely forgotten.";
 		decrease XP of Player by lev entry / 2; [no XP from forgotten encounter]
-		if ktspeciesbonus > 0, decrease the XP of the player by 1;
-		if Player is submissive and HP of Player > 0, decrease the XP of the player by ( ( 2 + lev entry ) / 5 );
+		if ktspeciesbonus > 0, decrease XP of Player by 1;
+		if Player is submissive and HP of Player > 0, decrease XP of Player by ( ( 2 + lev entry ) / 5 );
 
 
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -106,7 +106,7 @@ When Play begins:
 	now desc entry is "[peacockdesc]";
 	now face entry is "bird-like. You pass quite a bit of your time admiring it"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "tall and slender; your legs are double-jointed and bird-like, while your arms have been mutated into feathered wings, ending with five extra-thick feathers, flexible and mobile as fingers"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[peacockskin]"; [ skin Description, format as "You have (your text) skin"]
+	now skin entry is "[peacockskin]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "[peacocktail]."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]thin red[or]undulated[or]avian-like[at random]";
 	now face change entry is "your entire head gets reshaped in the shape of a bird head"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -134,9 +134,13 @@ When Play begins:
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 7; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 3; [ Width of female sex infection will try and give you ]
-	now libido entry is 20; [ Amount player Libido will go up if defeated ]
+	now SeductionImmune entry is false;
+	now libido entry is 20; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "peacock feather";
 	now lootchance entry is 35; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]winged[as decreasingly likely outcomes]";
 	now type entry is "avian"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -151,7 +155,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -267,7 +271,7 @@ this is the peacockhypno rule:
 	else:
 		say "The peacock tries to distract you with his plumage, but is forced to dodge away!";
 	now peppereyes is 0;
-	if HP of the player > 0 and Libido of Player < 110:
+	if HP of Player > 0 and Libido of Player < 110:
 		wait for any key;
 	else:
 		if HP of Player <= 0, now fightoutcome is 20;
@@ -297,21 +301,21 @@ When Play begins:
 
 to say peacockheattrigger:
 	say "You can feel an increasing dampness in your loins. As you find yourself growing increasingly aroused, something hidden at the back of your mind makes you ";
-	if there are no dangerous doors in the location of the player:
+	if there are no dangerous doors in the Location of Player:
 		say "want to leave this place and go... somewhere else...";
 	else:
-		let y be a random dangerous door in the location of the player;
+		let y be a random dangerous door in the Location of Player;
 		if marea of Y is "High":
 			say "want to head out exploring.";
 		else:
 			say "want to leave this place and go... somewhere else...";
 
 to say peacockinheat:
-	if there are no dangerous doors in the location of the player:
+	if there are no dangerous doors in the Location of Player:
 		if a random chance of 3 in 5 succeeds:
 			say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat... but not here...[or]A fresh flow of juices trickles down your thighs as your pussy leaks with need. A corner of your mind keeps calling you to satisfy those urges... but not here.[or]You are forced to pause and finger yourself as your dripping cunt demands satisfaction. The idea of heading back to the high rise district of town to satisfy your need pops into your head.[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier. Thoughts of finding a sexy peacock to fill you sound very satisfying.[or]The waves of hot lust filling your cunt make you moan as you try to focus, but your thoughts keep wandering back to the high rise district of town.[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where. You grow tired of being here, wanting to go somewhere else now.[purely at random]";
 	else:
-		let y be a random dangerous door in the location of the player;
+		let y be a random dangerous door in the Location of Player;
 		if marea of Y is "High":
 			say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat[or]A fresh flow of juices trickles down your thighs as your pussy leaks with need[or]You are forced to pause and finger yourself as your dripping cunt demands satisfaction[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier[or]The waves of hot lust filling your cunt make you moan as you try to focus[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where[purely at random][one of]. You feel a compulsion to go out and look for a male right away[or]. Your thoughts keep wandering back to the peacock you encountered before[or]. Thoughts of finding a sexy peacock to fill you sound very satisfying[or]. The urge to go looking around the neighborhood is foremost in your mind[or]. The idea of going exploring, and maybe finding someone to mate with you, is very appealing[or]. A corner of your mind keeps calling you to go out and satisfy those urges[or]. You feel a strong use to venture out in search of a sexy peacock to slake your need[or]. You hear the soft chirping of birdsong and you want to go out to find it[purely at random].";
 		else:
@@ -330,13 +334,13 @@ to say peacockheatend:
 
 Section 5 - Peacock Feather
 
-peacock feather is a grab object. It is temporary. peacock feather is infectious. The strain of peacock feather is "Peacock".
+peacock feather is a grab object. It is temporary. peacock feather is infectious. Strain of peacock feather is "Peacock".
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "peacock feather"	"A peacock feather. It looks pretty."	1	peacock feather
 
-the usedesc of peacock feather is "[peacock feather use]";
+Usedesc of peacock feather is "[peacock feather use]";
 
 to say peacock feather use:
 	say "You remember that many were infected and mutated by contaminated food. It seems... no, it's stupid, but you bite down the feather anyway.";

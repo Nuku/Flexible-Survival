@@ -109,7 +109,7 @@ instead of going east from Mall Atrium while (VentFoxEncounterCount < 2 and a ra
 Section 2 - Location
 
 ventcover is an object. It is in Smith Haven Mall Lot West. It is fixed in place. Understand "cover" as ventcover.
-The description of ventcover is "[VentCoverDescription]".
+Description of ventcover is "[VentCoverDescription]".
 
 KnockOnVent is an action applying to nothing.
 Understand "knock on it" as KnockOnVent.
@@ -192,8 +192,8 @@ AnalVirgin of Vent is true.
 PenileVirgin of Vent is true.
 SexuallyExperienced of Vent is false.
 MainInfection of Vent is "Latex Fox".
-The description of Vent is "[VentDescription]".
-The conversation of Vent is { "blah blah blarg" }.
+Description of Vent is "[VentDescription]".
+Conversation of Vent is { "blah blah blarg" }.
 The scent of Vent is "[VentScent]".
 Vent is in Maintenance Garage.
 The linkaction of Vent is "Possible Actions: [link]talk[as]talk vent[end link], [link]smell[as]smell vent[end link], [link]fuck[as]fuck vent[end link], [link]request[as]request vent[end link][line break]".
@@ -224,7 +224,7 @@ Object	Name
 Maintenance Garage	"Maintenance Garage"
 
 Maintenance Garage is a room.
-The description of Maintenance Garage is "[MaintenanceGarageDescription]".
+Description of Maintenance Garage is "[MaintenanceGarageDescription]".
 
 to say MaintenanceGarageDescription:
 	say "     Vent's new home is sparsely decorated. A few workbenches line the rear wall, and a hydraulic lift is off to one side of the room. Aside from that, there's not much to see. Off to one corner, you can see Vent. He gives you a toothy grin as he sees you, eager to spend time with you.";
@@ -721,9 +721,10 @@ to say VentShedEatScene:
 
 to say VentLoganDoNothing: [the player is a butt head.]
 	say "     Not wanting to provoke the wolverine, you instead opt to slip around the corner of the SUV, pressing yourself up against it to make sure you're as hidden as possible. Peeking your head around the corner, you watch Logan unzip his pants with his free hand, before he gives the rubber vulpine a long lick across his tailhole. Vent lets out a shuddering whimper, clearly not wanting any part of this. The guard doesn't seem to notice or care, however, as he continues his assault until the fox's hole is dripping with his saliva.";
-	say "     Bringing his now-erect cock to Vent's prone form, he shoves it all in with one harsh thrust. The fox lets out a pained yelp as he's stretched suddenly. Logan pays no heed to the vulpine's cries, however, as he just starts to thrust his length in and out of Vent, using him purely for his own pleasure. He continues to fuck Vent roughly, picking up the pace all the while. He lets out a pleasured grunt as he bottoms out one last time before him cums, his load spilling into Vent's insides, distinctly bloating him with the heady fluid.";
+	say "     Bringing his now-erect cock to Vent's prone form, he shoves it all in with one harsh thrust. The fox lets out a pained yelp as he's stretched suddenly. Logan pays no heed to the vulpine's cries, however, as he just starts to thrust his length in and out of Vent, using him purely for his own pleasure. He continues to fuck Vent roughly, picking up the pace all the while. He lets out a pleasured grunt as he bottoms out one last time before he cums, his load spilling into Vent's insides, distinctly bloating him with the heady fluid.";
 	WaitLineBreak;
 	say "     With his orgasm winding down, Logan pulls his softening cock out of the fox, before kicking the fox harshly. 'Get out of here, ya piece of trash! And don't come back!' Vent quickly obliges, running off into the city, probably never to be seen again. Finished with his business, Logan begins to turn around to head back to his patrol. You quietly slip away as soon as you get the chance, a distinct feeling of remorse coming over you for not intervening.";
+	NPCSexAftermath Vent receives "AssFuck" from Logan;
 	now VentFoxRelationship is 101;
 
 to say VentLoganStopByCommand: [the player helps!]
@@ -742,6 +743,9 @@ to say VentLoganCommandSex:
 	say "     You quickly lose yourself in the pleasure of thrusting in and out of the wolverine's hole, mentally thinking that he deserves it, thinking back to when you had first seen him. Those thoughts fuel your fucking, making you slam into his entrance a lot rougher. If the yelps from Vent and the growing feeling in your balls tell you anything, the both of you are getting closer to your peaks. Not long after that, you feel your balls tighten and you let out a roar as you thrust in one last time before releasing your load into his ass. Looking over his back you see that the latex fox is cumming as well, as he is currently locked with Logan's mouth, spilling his sperm down the male's throat. This appears to set him off, the wolverine spilling his own seed onto the floor.";
 	WaitLineBreak;
 	say "     The three of you ride out your bliss and wait for Vent's knot to shrink down. When it does you realize that if you leave Logan like this he'll slowly realize what's happening. So instead you order him to clean up his mess with his tongue while you clean his ass. The wolverine nods and puts his face to the ground and slurps up his own cum. You look for something to clean with before finding a towel that you use to wipe his butt. About a few minutes later you're finally done. You then order the male to forget what happened here and to go on his own way before uttering the end command phrase. When you do, the glazed eyes go away and he walks away from the two of you. Once gone you look to Vent and see him staring at you in both what appears to be admiration and lust.";
+	NPCSexAftermath Logan receives "OralCock" from Player;
+	NPCSexAftermath Logan receives "OralCock" from Vent;
+	NPCSexAftermath Logan receives "AssFuck" from Player;
 	say "[VentFoxLastScavScene]";
 
 to say VentFoxLastScavScene:
@@ -840,6 +844,7 @@ to say FuckVentFoxAss:[Player fucks the fox's ass.]
 		else:
 			say "     As he climaxes, his passage clenches and ripples around your shaft, sending intense waves of pleasure through you. The pulsing latex sheath around your cock almost make you reach orgasm, but you fight that urge, determined to last just a little longer. You pound into his tight hole with increasing fervor, your balls slapping against his with every thrust. Vent lets out a pleasured whine and continues to meet your thrusts, an action that brings you closer and closer to the edge. You thrust all the way in one last time before you orgasm, spilling your cum into his insides.";
 		say "     Rope after rope of cum fills his bowels, and he climaxes again from the feeling of being filled. Eventually, your orgasm abates[if Player is knotted] and your knot shrinks[end if]. You pull out of your foxy friend, giving him a friendly pat before redressing and moving on.";
+	NPCSexAftermath Vent receives "AssFuck" from Player;
 
 to say VentFoxRimsPlayerNormal:[Player gets rimmed by the fox.]
 	say "     Placeholder.";
@@ -979,7 +984,6 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 				say "     Vent penetrates the player, stretching the barely.";
 				say "     Vent knots the player, stretching them a little more.";
 		WaitLineBreak;
-		say "[mimpregchance]";
 		say "[VentAnalWS]";
 		say "     His knot eventually shrinks enough that he can pull out of your hole, his rubbery tool slipping out with a gentle pop. A trickle of his fluids flow out of your stretched hole, and you can't help but let out a small shudder from the feeling of emptiness you've suddenly been subjected to. Vent gives you a lick on the cheek with his latex tongue before he dismounts you.";
 		WaitLineBreak;
@@ -1055,7 +1059,6 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 				say "     Vent penetrates the player, stretching the barely.";
 				say "     Vent knots the player, stretching them a little more.";
 		WaitLineBreak;
-		say "[mimpregchance]";
 		say "[VentAnalWS]";
 		say "     Vent pulls out of you.";
 		WaitLineBreak;
@@ -1131,7 +1134,6 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 				say "     Vent penetrates the player, stretching the barely.";
 				say "     Vent knots the player, stretching them a little more.";
 		WaitLineBreak;
-		say "[mimpregchance]";
 		say "[VentAnalWS]";
 		say "     Vent pulls out of you.";
 		WaitLineBreak;
@@ -1207,12 +1209,12 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 				say "     Vent penetrates the player, stretching the barely.";
 				say "     Vent knots the player, stretching them a little more.";
 		WaitLineBreak;
-		say "[mimpregchance]";
 		say "[VentAnalWS]";
 		say "     Vent pulls out of you.";
 		WaitLineBreak;
 		say "[VentPostSexWS]";
 		say "     Post sex shit.";
+	NPCSexAftermath Player receives "AssFuck" from Vent;
 
 to say SuckVentFoxCock:[Player gives Vent a blowjob.]
 	say "     Placeholder.";

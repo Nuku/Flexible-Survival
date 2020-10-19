@@ -10,9 +10,10 @@ Object	Name
 Strange Fox	"Strange Fox"
 
 Strange Fox is a situation.
+ResolveFunction of Strange Fox is "[ResolveEvent Strange Fox]".
 KitsuneEventStage is a number that varies.
 
-Instead of Resolving a Strange Fox:
+to say ResolveEvent Strange Fox:
 	If KitsuneEventStage is 0:
 		say "     While walking along the streets, trying to find somewhere that might be useful to your survival, you come across a rather strange sight. What you think you see is something that can't be quite right as you find yourself looking over the sight of an exotic, bipedal silver fox with eight tails draped behind its backside. Curiosity makes you move closer just to see if the vision is real, the allure of the other just too great for you to run away. Getting up closer to the thing you find that - yes - you weren't exactly seeing things as you gaze upon what can only be a silver fox-man. A thick furry pelt covers the creature's body from head down to toe, save for a pure white midsection that frames the fox's neck down to his belly.";
 		say "     All the standard markings that makes the fox creature vulpine in characteristics are present. Two fluffy and pointed ears stand erect up onto the creature's head. A normal fox face stares forward at you with deep and unblinking blue eyes. The neck of the other is thick, but slim as it leads you down to the lithe form of the fox's chest and torso. The creature's arms are somewhat thin, but not so much that the other looks as though he can't fight as you note a defensive tightening of muscles despite the fluff of fur trying to hide the other's biceps. Going down even further with your analysis you see that the silver vulpine has a loin cloth covering its groin, yet in spite of that you can see that there is a small bulge pushing out from the cured animal hide so obviously the other is a male. How much so, well that you can't see at the moment.";
@@ -29,7 +30,7 @@ Instead of Resolving a Strange Fox:
 		say "     Jogging down the sidewalk, your eyes scanning left and right for any signs of danger, you falter in your movements slightly as a silvery glint shines out of your peripheral just as someone passes you on the other side of the street. Bringing yourself to a sudden halt, you find yourself blinking as you watch a silver vulpine walking merrily down the street. It takes you a second to remember that this [italic type]person[roman type] is the fox-man you met earlier whose name was... Kitsune. Idle curiosity makes you wonder what the other has been up to since you last left the creature's company. Without dwelling on your next decision for long, you find yourself calling out to the vulpine. At the sound of your voice, Kitsune stops dead in his tracks, flips one silver furred ear around in your direction and then turns to look at you. It takes less than a second before the fox-man is grinning at you and then making his way over to your direction. However, before he can do this, you find your eyes catching the glint of something else coming your way.";
 		say "     You twist your head around just in time to see a messy form make its way for you, and you instantly put your guard up when you realize that it's a wide-eyed and salivating mutant! This situation would not be so bad if it weren't for the fact that the disheveled creature is on a collision course with Kitsune. You have to stop it before it can get to the other man as you don't think the vulpine realizes the danger yet.";
 		WaitLineBreak;
-		let bonus be (( the Strength of the player minus 10 ) divided by 2);
+		let bonus be (( Strength of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -59,7 +60,7 @@ Instead of Resolving a Strange Fox:
 		say "     'Isn't it strange?' the fox-man asks all of a sudden and you can only give him a quizzical look as you wonder what he's talking about. The silver vulpine gives you a rueful chuckle. 'I mean, just two years ago such depravity would have been seen as one of the highest offenses to the [italic type]civility[roman type] of your mortal society. But now it has become almost normal to observe such things happening, despite the uncouthness of it occurring in the middle of an alleyway.' A dark smile crosses Kitsune's muzzle and you suddenly feel as though you are one step too close to an untamed animal as a shiver goes throughout your spine. 'Back when you mortals lived much closer to nature than you do now you enjoyed such passion to its halfway full extent, though sometimes at the expense of your innocence. But after you threw away that kinship to your wild-self you made such things both obscene and deplorable. How ironic that circumstances have all but come full circle because of your reliance of the magic known as science.'";
 		say "     'Science,' the other seems to scoff at the mere mention of the word. 'The very same thing that you tried to grasp hold of so hard in days past, which most understood so little about even then in actuality, has now turned on you and become a force that even fewer can control. And look at where it's currently gotten you. Ironic, don't you think?' Kitsune turns to look at you with calculating smile on his face.";
 		WaitLineBreak;
-		let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+		let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -74,7 +75,7 @@ Instead of Resolving a Strange Fox:
 		now KitsuneEventStage is 4;
 	else if KitsuneEventStage is 4:
 		say "     Letting your thoughts idle as you walk through the nearly silent city, you wonder to yourself just what a certain fox-man you know is up to. Oddly enough, or maybe not, your answer comes as you notice Kitsune running in your direction. This in itself is quite odd because you don't think you've ever seen the other move that fast before. However, before you can be bothered with trying to understand why the silver vulpine is moving as he is, you spy several forms chasing the other. For some reason, you sense that this situation will not end so well as your feet get to moving before you can reason with them.";
-		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
@@ -112,7 +113,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "star bell"	"A strange 'bell' with stars on it. Just holding it close to you makes you remember fond dreams you had as a child."	1	star bell
 
-star bell is a grab object. It is part of the player. It is not temporary.
+star bell is a grab object. It is not temporary.
 
 instead of sniffing star bell:
 	say "The smell of sweet dreams fills the bell and you as well as you hold it close to your nose.";
@@ -122,10 +123,11 @@ Object	Name
 Strange Bell	"Strange Bell"
 
 Strange Bell is a situation.
+ResolveFunction of Strange Bell is "[ResolveEvent Strange Bell]".
 Strange Bell is inactive.
-the sarea of Strange Bell is "Park".
+Sarea of Strange Bell is "Park".
 
-instead of resolving a strange bell:
+to say ResolveEvent Strange Bell:
 	if KitsuneEventStage is 6:
 		say "     You come across a star bell glowing dimly along the bushes of the ground. A feeling of both elation and wonder comes across you as you kneel next to the softly tinkling item. Shall you take it?";
 		if Player consents:

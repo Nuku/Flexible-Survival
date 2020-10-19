@@ -32,8 +32,8 @@ AnalVirgin of Bryony is false.
 PenileVirgin of Bryony is false.
 SexuallyExperienced of Bryony is true.
 MainInfection of Bryony is "Black Equinoid".
-The description of Bryony is "[BryonyDesc]".
-The conversation of Bryony is { "Watch yourself." }.
+Description of Bryony is "[BryonyDesc]".
+Conversation of Bryony is { "Watch yourself." }.
 The scent of Bryony is "     Bryony smells distinctly masculine, a strong equine musk wafting from her body. Hints of soap and floral perfume barely mask the scent of her virility.".
 
 The HP of Bryony is usually 0.

@@ -137,7 +137,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "mayflower" as supersponsor.
+understand "fireworks" as supersponsor.
 
 when play ends:
 	clear the screen;
@@ -176,13 +176,13 @@ when play ends:
 	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
 
 to ratetheplayer:
-	if gsgl is 1 and score > 0:
+	if GenderLock is 1 and score > 0:
 		now tempnum is (score / 20);
 		increase score by tempnum;
 	if "Ultimatum" is listed in feats of Player and score > 0:
 		now tempnum2 is (score / 10);
 	say "In Scenario: [bold type][scenario][roman type], you have achieved a score of [bold type][score][roman type].";
-	if gsgl is 1 and score > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
+	if GenderLock is 1 and score > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
 	if "Ultimatum" is listed in feats of Player and score > 0, say "Your Ultimatum perk grants you a bonus of [tempnum2] points.";
 	say "You've achieve the rank of: [bold type]";
 	if score < 0:
@@ -242,7 +242,7 @@ This is the Player has died rule:
 		the Player is dead;
 
 This is the Epilogue Intro rule: [The player didn't die or bad ended]
-	if humanity of Player < 10 and HP of the player > 0:
+	if humanity of Player < 10 and HP of Player > 0:
 		if BodyName of Player is "Anthro Dragoness" and HP of Doctor Matt <= 100:
 			trigger ending "Epilogue Intro";
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";

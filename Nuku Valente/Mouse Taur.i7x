@@ -13,14 +13,13 @@ Object	Name
 Mouse Taur Encounter	"Mouse Taur Encounter"
 
 Mouse Taur Encounter is a situation.
-The sarea of Mouse Taur Encounter is "Red".
+ResolveFunction of Mouse Taur Encounter is "[ResolveEvent Mouse Taur Encounter]".
+Sarea of Mouse Taur Encounter is "Red".
 When play begins:
 	add Mouse Taur Encounter to BadSpots of FurryList;
 	add Mouse Taur Encounter to BadSpots of FemaleList;
 
-After resolving a Mouse Taur Encounter, try looking;
-
-Instead of Resolving a Mouse Taur Encounter:
+to say ResolveEvent Mouse Taur Encounter:
 	if mtrp is 0:
 		say "     A voice suddenly rises, startling you. Spinning about in alarm, you see a creature approaching you. She has a body that reminds you of a basic house variety mouse, if expanded until it were six feet long. Where its head should be is the belly and upper torso of a humanoid. As she approaches, her two C or D cup breasts sway in counterpoint to her two hips. Her face is mostly human, with fine whiskers, large round rodent ears and just enough snout to know it's there. She smiles at you, showing off bucked teeth. 'Hello,' she says. 'I was watching you roam around and thought you might like some company.' ";
 		if Player is herm:
@@ -42,14 +41,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Find Porn Store	"Find Porn Store"
 
-Find Porn Store is a situation. The level of Find Porn Store is 5.
-The sarea of Find Porn Store is "Red".
+Find Porn Store is a situation.
+ResolveFunction of Find Porn Store is "[ResolveEvent Find Porn Store]". The level of Find Porn Store is 5.
+Sarea of Find Porn Store is "Red".
 When play begins:
 	add Find Porn Store to BadSpots of FurryList;
 	add Find Porn Store to BadSpots of FemaleList;
 	add Find Porn Store to badspots of HermList;
 
-Instead of Resolving a Find Porn Store:
+to say ResolveEvent Find Porn Store:
 	FindPornStore;
 
 instead of going northwest from Boundary Street West while mtrp < 2:
@@ -134,7 +134,7 @@ Restrained Desire	"Porn Store"
 [^^ mapping the old name of the room to the new room object]
 
 Restrained Desire is a room. It is fasttravel. It is sleepsafe. It is private.
-The description of Restrained Desire is "[pornstoredesc]".
+Description of Restrained Desire is "[pornstoredesc]".
 
 after looking while player is in Restrained Desire:
 	if findwires < 2 and fixedgens < 3:
@@ -149,8 +149,8 @@ object	name
 Lisa	"Lisa"
 
 Lisa is a person. Lisa is in Restrained Desire.
-The description of Lisa is "     A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well-built, mostly human female. Her hands are somewhat pawlike and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse gray fur, except for the end of the faint snout she has, twitching pinkly.".
-The conversation of Lisa is { "Squeak!" }.
+Description of Lisa is "     A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well-built, mostly human female. Her hands are somewhat pawlike and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse gray fur, except for the end of the faint snout she has, twitching pinkly.".
+Conversation of Lisa is { "Squeak!" }.
 
 mousefucked is a number that varies. mousefucked is usually 0.
 mousespot is a number that varies. mousespot is usually 0.
@@ -171,7 +171,7 @@ to say pornstoredesc:
 		say "[line break]     Upon your return to Restrained Desire, you find a new feline here. This female snow leopard has pink markings on her white fur and is wearing a red bathing suit that struggles to hold in her ample bosom of six breasts. You smile to her and ask if she's a friend of Sven's. The snowmeow blushes and hides her face behind her fluffy tail. Your brain roughly switches gears as you realize that this buxom kitty IS Sven. Fortunately, Lisa returns from the back, having heard the door and greets you. 'Ah! I see you've been getting reacquainted with my dear Svetlana,' she says, running a paw playfully up the feline's side.";
 		say "     Sven, or Svetlana as she is now, mews softly at the pleasant touch and watches you nervously to see your reaction to her change. You smile politely and she relaxes a little, purring as the mouse's paws move over her body. Her swimsuit, being quite tight over her large rack, has a perceptible camel toe showing between her legs, which is where Lisa has let one of her paws wander. She brushes over the snowmeow's covered pussy, rubbing and teasing her until there's a growing wet patch in her swimwear. 'She's so much more fun now that my pet kitty's got a nice, wet pussy. You should give her a try sometime.' She teases the snowmeow like this for a little while before eventually tiring of the game for now to tend to the store.";
 		now HP of Sven is 53;
-	if HP of rubber tigress is 8 and companion of Player is rubber tigress:
+	if HP of rubber tigress is 8 and rubber tigress is listed in companionList of Player:
 		if T is 1, WaitLineBreak;
 		say "[line break]     [if T is 1]While you're distracted by Svetlana[else if Sven is in Restrained Desire]As you're greeting Lisa and Sven[else if Svetlana is in Restrained Desire]As you're greeting Lisa and Svetlana[else]As you're greeting Lisa[end if], Artemis pads around the store in idle feline curiosity. That is, until her attention is caught by the glass display case under the counter. Looking inside it, she mewls plaintively, leaning in closer and closer for a better look until the front of her rubbery face is mooshed up against it and flattened out. Drawn by her unusual behavior, you nudge her aside and look into the cabinet.";
 		say "     Behind the glass, among the selection of DVDs and magazines stored there are a pair of sex toys. The first is an exotically shapely dildo, having a definite feline shape and 'rubbery pleasure barbs' as the box calls them. The second is a clear, flexible sleeve and purports itself to be a 'realistic vagina toy' according to its packaging. Artemis nuzzles your face and gives another plaintive mewl before flattening her muzzle against the glass again. Given her proclivity for eating plastics, perhaps she wants to eat them as well.";
@@ -191,7 +191,13 @@ to say pornstoredesc:
 instead of conversing the Lisa:
 	if lisaartemiscount1 is 5 or lisaartemiscount2 is 5:
 		say "     Having helped deal with her [if DemonList is not banned]demoness[else][']roo[end if] problem, you tell Lisa that you've driven off several of them. She smiles at the news and heads towards the counter. 'I thought that might be the case. There's been a lot less trouble from them lately. It's looking like the word's getting around among them not to harass my place. I hate to resort to such tactics, but until they become more civil about it, I can't have them bugging me and my few customers just because it's a sex shop.'";
-		say "     As she's been talking to you, she's opened up the cabinet and taken out the toys reserved for Artemis[if companion of Player is rubber tigress], much to the feline's mewling delight. She nuzzles at your hip and winds around your legs, threatening to topple you over in her eagerness[end if]. You take the two boxes from Lisa, grumbling a little that it's a lot to do just so she can have a tasty treat. The mousetaur giggles at this and leans over the counter. 'I couldn't help noticing that your feline friend's a little lacking under the tail. Maybe your rubber kitty's wants a little more out of them than you think.' [if companion of Player is rubber tigress]As Artemis mrowls all the louder, [end if]Lisa slides a tube of rubber cement across the counter with a playful grin on her murine face. Hmm... Maybe you'd best take a closer [bold type]look[roman type] at the rubber tigress.";
+		say "     As she's been talking to you, she's opened up the cabinet and taken out the toys reserved for Artemis";
+		if rubber tigress is listed in companionList of Player:
+			say ", much to the feline's mewling delight. She nuzzles at your hip and winds around your legs, threatening to topple you over in her eagerness";
+		say ". You take the two boxes from Lisa, grumbling a little that it's a lot to do just so she can have a tasty treat. The mousetaur giggles at this and leans over the counter. 'I couldn't help noticing that your feline friend's a little lacking under the tail. Maybe your rubber kitty's wants a little more out of them than you think.' ";
+		if rubber tigress is listed in companionList of Player:
+			say "As Artemis mrowls all the louder, ";
+		say "Lisa slides a tube of rubber cement across the counter with a playful grin on her murine face. Hmm... Maybe you'd best take a closer [bold type]look[roman type] at the rubber tigress.";
 		now HP of rubber tigress is 10;
 		now lisaartemiscount1 is 0;
 		now lisaartemiscount2 is 0;

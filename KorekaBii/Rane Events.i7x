@@ -7,10 +7,11 @@ Object	Name
 Rane's Good Deed	"Rane's Good Deed"
 
 Rane's Good Deed is a situation.
+ResolveFunction of Rane's Good Deed is "[ResolveEvent Rane's Good Deed]".
 Rane's Good Deed is inactive.
-the sarea of Rane's Good Deed is "Outside".
+Sarea of Rane's Good Deed is "Outside".
 
-instead of resolving Rane's Good Deed:
+to say ResolveEvent Rane's Good Deed:
 	if RaneDeedsTracker is 0: [first time]
 		say "     As you wander through the city, in the distance you sight what appears to be a young woman. On first glance she looks human, but there's something unusual about her... maybe it is the way she moves or the strange green dress covering her body, you're not quite sure. Moving swiftly through the ruins, she appears to be looking for something. Behind her, you can catch short glimpses of a large demonic figure ducking in and out of sight as it seems to be stalking her - quietly and maintaining a set distance. The female apparently hasn't spotted her pursuer yet, though she must have heard something after a few moments longer, because she glances backwards and looks rather frightened, but still seems determined to continue her motions.";
 		say "     Attacking her search with fresh vigor by fully concentrating on a half-collapsed store entrance, the girl doesn't notice as the demonic creature slowly inches closer. It isn't until he is very near to where she stands that the young woman catches sight of him. She lets out a frightened scream as she backs up from the towering figure, but one glance at the object the figure is holding causes her to pause and fall quiet. Her fear seems to diminish, turning into a cautious, but hopeful, curiosity instead.";

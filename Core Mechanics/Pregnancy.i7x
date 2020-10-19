@@ -1,6 +1,28 @@
 Version 1 of Pregnancy by Core Mechanics begins here.
 [Version 1.3 - Fix attempt for Mpreg + NPC issues - Stripes]
 
+Chapter 0 - Impregnation Stand-in Character Shells
+
+[For objects/tables and functions of player offspring, see Offspring.i7x]
+
+Table of GameCharacterIDs (continued)
+object	name
+Impregnator	"Impregnator"
+Impregnatee	"Impregnatee"
+child	"child"
+
+Impregnator is a creature.
+The printed name of Impregnator is "Impregnator".
+
+Impregnatee is a creature.
+The printed name of Impregnatee is "Impregnatee".
+
+Child is a creature.
+The printed name of Child is "Child".
+Child has a number called Gestation.
+Child can be born. Child is not born.
+
+
 Chapter 1 - Definitions and Variables
 
 A person can be impreg_ok. A person is usually not impreg_ok.
@@ -16,6 +38,16 @@ A person can be fpreg_able. A person is usually not fpreg_able.
 A person can be fpreg_now. A person is usually not fpreg_now.
 A person can be partial_vacant. A person is usually partial_vacant.
 A person can be total_vacant. A person is usually total_vacant.
+
+[Lists of Child Body Parts - remnants of the previous system of tracking offspring (vs the current tables) - kept for backwards compatibility]
+Childrenfaces is a list of text that varies.
+Childrenskins is a list of text that varies.
+Childrenbodies is a list of text that varies.
+
+ovipregnant is a truth state that varies. ovipregnant is usually false.		[marks if ovi-pregnant now]
+ovipregalways is a truth state that varies. ovipregalways is usually false.	[marks if allowed to pick always ovi]
+
+mpregcount is a number that varies. [mpreg experience]
 
 [Male and/or Female]
 
@@ -482,8 +514,8 @@ To Birth:
 			WaitLineBreak;
 			say "     You rest there together for several hours, content to idly watch your children breathe and twitch in their sleep while you stroke Fang's side. Eventually they wake though, crawling around on the ground, letting out pitiful whines and squeaks as they blindly explore their surroundings. They seem to be staying together, though as they stray slightly further from you, it is Umbra in the lead, his sister determinedly staying near him but slightly behind. Feeling that they have strayed far enough, Fang walks over to them and lightly grasps them by their scruffs and carries them back to you, placing them on your lap again. You give your children a quick kiss before standing up, deciding that you should get back to doing something. The puppies seem sad, but Fang snuffles at them, settling them down easily. Telling your family that you'll see them soon, Fang escorts Lux and Umbra away. He'll likely keep them near to him in the library, but you should still visit them from time to time as they grow so that you can be part of their lives. They are both your children after all. Dusting yourself off and arranging yourself, you are ready to continue exploring the city.";
 		increase hunger of Fang by 1;
-		now hp of Lux is 1;
-		now hp of Umbra is 1;
+		now HP of Lux is 1;
+		now HP of Umbra is 1;
 		now LuxUmbraMaturityCounter is 120;
 	else if "Wild Womb" is listed in feats of Player:
 		if Player is female and pregtype < 2:

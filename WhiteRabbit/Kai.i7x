@@ -48,8 +48,8 @@ SexuallyExperienced of Kai is true.
 TwistedCapacity of Kai is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Kai is false. [steriles can't knock people up]
 MainInfection of Kai is "Tiger Shark Male".
-The description of Kai is "[KaiDesc]".
-The conversation of Kai is { "mew" }.
+Description of Kai is "[KaiDesc]".
+Conversation of Kai is { "mew" }.
 The scent of Kai is "[KaiScent]".
 Kai is in Kai's Campsite.
 
@@ -98,7 +98,7 @@ Object	Name
 Kai's Campsite	"Kai's Campsite"
 
 Kai's Campsite is a room. It is a fasttravel. It is private.
-The description of Kai's Campsite is "     Kai has a blue, 2-person dome tent that's setup on the beach. Inside the tent is a queen-sized inflatable mattress, pillows, and blankets. A large gym bag filled with clothes and other accouterments sits on the mattress, along with various surfer magazines to read. There's an area in the sand not too far from the tent that has been dug out several inches for a makeshift fire pit. The wood is stacked in a log cabin kind of arrangement with small twigs and seaweed built up in the middle to help start the fire. If you sit by the firepit, you get an amazing view of the ocean and rocky cliffs that aren't too far from the area. The sounds of the waves in the distance create a sense of calmness here and put you in a meditative state. The little setup is away from the busier parts of the beach, so you have more privacy and solitude to relax. Simple, just the way Kai seems to prefer it.".
+Description of Kai's Campsite is "     Kai has a blue, 2-person dome tent that's setup on the beach. Inside the tent is a queen-sized inflatable mattress, pillows, and blankets. A large gym bag filled with clothes and other accouterments sits on the mattress, along with various surfer magazines to read. There's an area in the sand not too far from the tent that has been dug out several inches for a makeshift fire pit. The wood is stacked in a log cabin kind of arrangement with small twigs and seaweed built up in the middle to help start the fire. If you sit by the firepit, you get an amazing view of the ocean and rocky cliffs that aren't too far from the area. The sounds of the waves in the distance create a sense of calmness here and put you in a meditative state. The little setup is away from the busier parts of the beach, so you have more privacy and solitude to relax. Simple, just the way Kai seems to prefer it.".
 earea of Kai's Campsite is "Beach".
 
 Instead of sniffing Kai's Campsite:

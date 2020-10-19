@@ -30,14 +30,20 @@ name	desc	weight	object
 "manufactured milk"	"A bottle of milk manufactured at the milking factory"	1	manufactured milk
 
 ESPP bunker keycard is a grab object. It is not temporary.
-manufactured milk is a grab object. Understand "milk" as manufactured milk. manufactured milk is infectious. The strain of manufactured milk is "Bottlenose Toy". The trade of manufactured milk is "distilled milk". The purified of manufactured milk is "distilled milk". manufactured milk is milky.
+manufactured milk is a grab object. Understand "milk" as manufactured milk. manufactured milk is infectious. Strain of manufactured milk is "Bottlenose Toy". The trade of manufactured milk is "distilled milk". Purified of manufactured milk is "distilled milk". manufactured milk is milky.
+
+Usedesc of manufactured milk is "[manufactured milk use]";
+
+to say manufactured milk use:
+	say "The milk is thick, like a shake, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
+	PlayerDrink 15;
 
 
 Section 2 - Entrance
 
 Milking Facility Entrance is a room. It is fasttravel.
 earea of Milking Facility Entrance is "Outside".
-The description of Milking Facility Entrance is "[milkingFacilityEntranceDesc]".
+Description of Milking Facility Entrance is "[milkingFacilityEntranceDesc]".
 
 to say milkingFacilityEntranceDesc:
 	if Milking Facility Entrance is unvisited:
@@ -60,9 +66,10 @@ Table of GameEventIDs (continued)
 Object	Name
 Milking Facility Keycard	"Milking Facility Keycard"
 
-Milking Facility Keycard is a situation. The sarea of Milking Facility Keycard is "Sealed".
+Milking Facility Keycard is a situation.
+ResolveFunction of Milking Facility Keycard is "[ResolveEvent Milking Facility Keycard]". Sarea of Milking Facility Keycard is "Sealed".
 
-Instead of resolving a Milking Facility Keycard:
+to say ResolveEvent Milking Facility Keycard:
 	if Milking Facility Entrance is unvisited:
 		say "     You stumble upon an abandoned office. A metallic plaque is nailed next to the door, and reads [italic type]Emergency Supplies Production Project[roman type]. The only object remaining in the room is a heavy, metallic desk. Inside the drawer, you find a keycard labelled [italic type]Facility 14 -  Dairy Products[roman type]. You take it, in case you find said facility in the city.";
 	else:
@@ -74,7 +81,7 @@ Instead of resolving a Milking Facility Keycard:
 Section 3 - Factory
 
 Milking Facility Factory is a room. It is inside of Milking Facility Entrance.
-The description of Milking Facility Factory is "[milkingFacilityFactoryDesc]".
+Description of Milking Facility Factory is "[milkingFacilityFactoryDesc]".
 The scent of Milking Facility Factory is "     The room is filled with an odd mix of smells: strong scent of vinyl with hints of sweat coming from the vinyl cows.".
 
 vinyl cows is scenery in Milking Facility Factory. "[vinylCowsScene]".
@@ -93,7 +100,7 @@ to say vinylCowsScene:
 Section 4 - Control Room
 
 Milking Facility Operations Room is a room. It is north of Milking Facility Factory.
-The description of Milking Facility Operations Room is "[milkingFacilityControlDesc]".
+Description of Milking Facility Operations Room is "[milkingFacilityControlDesc]".
 
 to say milkingFacilityControlDesc:
 	if Milking Facility Operations Room is unvisited:
@@ -104,7 +111,7 @@ to say milkingFacilityControlDesc:
 Section 4-1 - The diary
 
 abandoned operator diary is scenery in Milking Facility Operations Room.
-The description of abandoned operator diary is "An abandoned diary, waiting to be read."
+Description of abandoned operator diary is "An abandoned diary, waiting to be read."
 The scent of abandoned operator diary is "The diary has a faint smell of leather, mixed with vinyl."
 
 readingOperatorDiary is an action applying to nothing.
@@ -135,7 +142,7 @@ carry out readingOperatorDiary:
 Section 5 - The Computer
 
 milking facility console is a thing. It is in Milking Facility Operations Room.
-The description of milking facility console is "[milkingFacilityConsoleDesc]".
+Description of milking facility console is "[milkingFacilityConsoleDesc]".
 
 to say milkingFacilityConsoleDesc:
 	say "     A large computer screen and its console awaits your input. You do not see the tower unit anywhere, which means that it must be somewhere deeper within the complex or somewhere else entirely, out of your reach. A webcam follows your movements constantly. Whenever you come within a couple of meters from the screen, it displays a series of reports:[line break]";

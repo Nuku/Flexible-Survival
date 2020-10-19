@@ -11,7 +11,7 @@ Pirate Island	"Pirate Island"
 
 Pirate Island is a room. It is fasttravel. It is private.
 
-The description of Pirate Island is "     Finally, the island with the treasure marked on the map! The small island seems to be a rather nice island not far off the coast, seeming just like many other similar islands in the area. This one, however, happens to be riddled with what seems to be a rather large amount of caves and tunnels, just waiting to be explored.".
+Description of Pirate Island is "     Finally, the island with the treasure marked on the map! The small island seems to be a rather nice island not far off the coast, seeming just like many other similar islands in the area. This one, however, happens to be riddled with what seems to be a rather large amount of caves and tunnels, just waiting to be explored.".
 
 instead of sniffing Pirate Island:
 	say "The island smells of the ocean and fetid sea caves.";
@@ -21,7 +21,7 @@ object	name
 Treasure cave	"Treasure cave"
 
 Treasure cave is a man.
-The description of Treasure cave is "     Not just one cave, but a large series of caves that dot the shores of the island. They look like the perfect place for some suspicious pirate to have hidden some treasure. Still, the dark openings look ominous, and you can hear water sloshing within some of them occasionally. It will take a lot of bravery to explore these caves. You will have to [']hunt for treasure['] in them.".
+Description of Treasure cave is "     Not just one cave, but a large series of caves that dot the shores of the island. They look like the perfect place for some suspicious pirate to have hidden some treasure. Still, the dark openings look ominous, and you can hear water sloshing within some of them occasionally. It will take a lot of bravery to explore these caves. You will have to [']hunt for treasure['] in them.".
 Treasure cave is in Pirate Island.
 
 instead of linkactioning Treasure Cave when treasurefound is 0:
@@ -136,7 +136,7 @@ carry out treasurehunt:
 					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
 					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
-						if loot entry is not " " and loot entry is not "journal":
+						if loot entry is not " " and loot entry is not "" and loot entry is not "journal":
 							ItemGain loot entry by 1;
 							ItemGain dirty water by 1;
 						else:
@@ -181,11 +181,12 @@ Object	Name
 Noteinbottle	"Noteinbottle"
 
 Noteinbottle is a situation.
-The sarea of Noteinbottle is "Beach".
+ResolveFunction of Noteinbottle is "[ResolveEvent Noteinbottle]".
+Sarea of Noteinbottle is "Beach".
 
 tmapfound is a number that varies.
 
-Instead of resolving a Noteinbottle:
+to say ResolveEvent Noteinbottle:
 	say "     Walking along the beach and enjoying the view of the surf, you notice something bobbing on the waves just out of reach of shore. Do you dive in to try to get it?";
 	if Player consents:
 		now fightoutcome is 100;
@@ -216,15 +217,16 @@ Table of GameEventIDs (continued)
 Object	Name
 Findingboat	"Findingboat"
 
-Findingboat is a situation. The level of Findingboat is 7.
-the sarea of Findingboat is "Beach".
+Findingboat is a situation.
+ResolveFunction of Findingboat is "[ResolveEvent Findingboat]". The level of Findingboat is 7.
+Sarea of Findingboat is "Beach".
 boatfound is a number that varies.	[tracks need for a boat for Bouncy Castle quest]
 [0 = not looking, 1 = looking, 2 = dingy, 3 = boat]
 
-Instead of resolving Findingboat:
+to say ResolveEvent Findingboat:
 	if tmapfound is 2:
 		say "     Wandering along the beach, you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, even though they wouldn't go too far, they might be able to get you to the island shown on the map[if boatfound is 2]! While your little dingy won't make to the island, one of these might be able to do the job[else if boatfound is 1]. After you get back, you could probably use this to get to that bouncy castle the dolphins have set up, you think, though the thoughts of gold are in the foremost of your mind right now[else if boatfound is 4]. After you get back, you could probably use this to get to Vohr Island, following the tip of the rat twins, though the thoughts of gold are in the foremost of your mind right now[end if]. Deciding to take a look, you spend some time searching through the boats to find one that could get you where you need to go.";
-		let bonus be (( the Perception of the player minus 10 ) divided by 2);
+		let bonus be (( Perception of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;

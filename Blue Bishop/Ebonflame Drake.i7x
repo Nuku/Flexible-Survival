@@ -31,6 +31,7 @@ to say ebdrakevic:
 		else:
 			say ". You're half afraid she'll continue assaulting you, but it seems she finally gets bored and goes off to harass something else.";
 			say "     Thankfully, as you finally find a place to catch your breath, the ordeal doesn't leave you with any lasting damage, but you imagine you're going to have some trouble walking for a couple hours...";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Drake";
 	else if Player is female and a random chance of 2 in 3 succeeds:
 		say "     Her plans become clear when you feel the tip one of her talons caress along the crevice of your sore behind, teasing you before the razor sharp thing forces its way through[if Cunt Count of Player > 1] one of[end if] your cunt[sfn]. She cackles as you tremble against her digit so casually shaming you.";
 		say "     '[one of]Such a soft hole, I'm going to take great joy in ravaging it[or]I'm going to love tearing you in half[or]Oh, don't worry, you're not going to feel a thing... After I'm done with you[at random]!' Finally pulling the talon free, it's apparent she wanted to humiliate you more than prepare, [if scalevalue of Player > 3]climbing on top of[else]positioning herself behind[end if] you before the pointed tip of the reptile's savage dick briefly presses against you supple lips. Immediately, she plunges the massive thing as far in as she can, grunting as she forces what remains with successive thrusts. Not only is it apparent that she doesn't care to prepare you, but she actively enjoys hearing you howl in pain as her sharp barbs dig into your tender flesh, laughing and mocking you all along the way.";
@@ -43,6 +44,7 @@ to say ebdrakevic:
 		else:
 			say ". You're half afraid she'll continue assaulting you, but it seems she finally gets bored and goes off to harass something else.";
 			say "     Thankfully, as you finally find a place to catch your breath, the ordeal doesn't leave you with any lasting damage, but you imagine you're going to have some trouble walking for a couple hours...";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Drake";
 	else:
 		say "     The dragoness circles around your[if scalevalue of Player > 3] larger,[end if] [bodytype of Player] form, she wraps [if scalevalue of Player > 3]both[else]one[end if] of her scaled hands around your neck, pulling your head forward until you're forced to stare down her glowing eyes.";
 		say "     '[one of]Ha[or]Hmm[or]Hmpf[at random], [one of]like what you see[or]don't you find me pretty[or]are you arrogant, or just plain stupid[at random]? [one of]How about a kiss for the lady[or]Would you like to feel this lady's tongue[at random]?' She doesn't seem to care for your response, because immediately she presses her coarse, scaled lip against yours, her powerful tendril-like tongue piercing your maw's depths.";
@@ -55,6 +57,7 @@ to say ebdrakevic:
 			say "     You feel like you briefly black out from the intense sensation. You quickly regain consciousness, however, as the cackling monster kicks at you, having left you slumped on the ground...";
 		else:
 			say "     You feel like you briefly black out from the intense sensation. When you regain you thoughts, it seems she had push you off of her and left you abandoned, a faint memory of her mocking laughter and the intense pain of being full with her molten seed all she's left you with. Once the discomfort subsides and your head clears, you're able to scramble off someplace safe.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Drake";
 
 to say ebdrakedef:
 	say "     The drake reels backward, panting for breath as she falls to her knees, gouts of smoke spouting from her lips and nostrils.";
@@ -78,8 +81,8 @@ to say ebdrakedesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -136,9 +139,13 @@ When Play begins:
 	now Cunt Count entry is 1;
 	now Cunt Depth entry is 10;
 	now Cunt Tightness entry is 10;
+	now SeductionImmune entry is false;
 	now libido entry is 60;
 	now loot entry is "ebonflame scale";
 	now lootchance entry is 75;
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 3;
 	now body descriptor entry is "[one of]well-toned[or]draconic[or]powerful[or]fearsome[at random]";
 	now type entry is "[one of]draconic[or]reptilian[at random]";
@@ -153,7 +160,7 @@ When Play begins:
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
@@ -287,8 +294,8 @@ name	desc	weight	object
 "ebonflame scale"	"Coarse and dense, the scale still feels warm in your hand."	1	ebonflame scale
 
 ebonflame scale is a grab object.
-ebonflame scale is infectious. The strain of ebonflame scale is "Ebonflame Drake".
-the usedesc of ebonflame scale is "You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.".
+ebonflame scale is infectious. Strain of ebonflame scale is "Ebonflame Drake".
+Usedesc of ebonflame scale is "You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.".
 
 instead of sniffing ebonflame scale:
 	say "It smells of something burnt to a crisp.";

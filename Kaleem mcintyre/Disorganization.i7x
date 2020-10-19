@@ -9,14 +9,15 @@ Table of GameEventIDs (continued)
 Object	Name
 Disorganization	"Disorganization"
 
-Disorganization is a situation. The level of Disorganization is 9.
+Disorganization is a situation.
+ResolveFunction of Disorganization is "[ResolveEvent Disorganization]". The level of Disorganization is 9.
 DRS is a number that varies.[@Tag:NotSaved]
 when play begins:
 	add Disorganization to BadSpots of FurryList;
 	add Disorganization to BadSpots of MaleList;
 	add Disorganization to badspots of HermList;
 
-Instead of resolving Disorganization:
+to say ResolveEvent Disorganization:
 	If drs is 0:
 		say "     Walking through the dimly lit alleyways of the city, you manage to come across a lump of a figure lying prone on the trash strewn ground. Cautious as to who or rather what this might be, you carefully pad your way over to the thing, ready to run away at a moment's notice. Hoping vehemently that the thing is not some lust drunk mutant taking a nap, you pad closer and closer until the rotting scent of decay actually starts to cloy against your sinuses. When the figure doesn't immediately wake after you poke at it several times, you find yourself calming down slightly as you realize that it's you're dealing with the dead body of a soldier instead of some other kind of freak.";
 		say "     It's sad that sights like this are becoming normal. Idle curiosity makes you wonder how the armed forces member died out here like this. The spatter of blood around the other's head has you guessing that it must have been a head wound, but you aren't going to flip the person over to find out, the soldier was lying face down so you can only see his/her backside. Pulling backwards and then saying a quiet utterance of a prayer, you somberly turn from the dead figure to leave, however, before you can do so a voice suddenly calls out making you jumping almost a foot into the air.";
@@ -53,7 +54,7 @@ Instead of resolving Disorganization:
 			say "     Reaching out and pulling at the other man's arm you fight with him to stop the changing mutant from killing himself, a flashback to the other dead soldier making you somewhat frantic as you don't want to see a repeat of this past happening played out in full detail! The struggle lasts for several seconds, the transforming mutant putting up a really good fight despite your resolve, but eventually his superior skills at hand-to-hand end up with you being pushed back against away from him. 'Why in the hell are you trying to stop me!' The other shouts and you can't help but shout back that this isn't the way to go out.";
 			WaitLineBreak;
 			say "     That he's a soldier and that soldiers are made of harder stuff than this! 'Heheh, soldier? Are you kidding? Look at me!?' The other man points down, and though you don't want to look, knowing what's happening down there already, you find your gaze taking you to the sight of the man's penis shrinking while dribbles of milky white hot female honey oozed down underneath his balls, no doubt from the opening of his new cunt. 'I'll barely be a man in a couple of hours! You really think I want to live like this for the rest of my life? As some bitch to a fucking freak?!";
-			let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+			let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus]:[line break]";
 			increase diceroll by bonus;
@@ -67,7 +68,7 @@ Instead of resolving Disorganization:
 				say "     You shake your head and then remember the walkie-talkie you have and pull it out to give it to the man. The soldier looks at it and then you and then does something very peculiar. Reaching up to take off his dog tags, the shemale places them into your palm, after taking your other hand and forcing it open, and then smiles in defeat.";
 				say "     Wondering why the other is doing this, you blink at the man in confusion before watching him strip out of his clothing to reveal a furry pelt growing steadily across both his chest on down to his thighs. The six breasts he has aren't leaking milk just quite yet, but you can see that it won't be long as the fleshy nubs of the nipples began to harden as the mounds continue to swell outwards. 'You said that I can retain my manhood, but not my humanity. While I thank you for telling me that I don't want my friends or family knowing that I've become some he-bitch here in this godforsaken city.'";
 				WaitLineBreak;
-				say "     The husky herm soon gets onto hir hands and knees and then crawls over to the still unconscious Alpha Husky with the inflated bump standing erect on its head. 'If you see any of the other guys,' the soldier, whose name you hadn't been told, says all of a sudden. 'Tell them that I died trying to get a piece of these assholes. Hehe, it would be partially true anyway.' You watch as the shemale reaches out for the prone Alpha Husky and then lifts the other's legs up. Not having to guess what's going to happen next you are up and moving just in time to hear the Alpha Husky come awake as his former bitch spears him deeper with hir cock. A silent tear falls from your eye as you let your head hang down low. You may not be fighting a war likes these soldiers, but one thing you are sure of... this is hell.";
+				say "     The husky herm soon gets onto her hands and knees and then crawls over to the still unconscious Alpha Husky with the inflated bump standing erect on its head. 'If you see any of the other guys,' the soldier, whose name you hadn't been told, says all of a sudden. 'Tell them that I died trying to get a piece of these assholes. Hehe, it would be partially true anyway.' You watch as the shemale reaches out for the prone Alpha Husky and then lifts the other's legs up. Not having to guess what's going to happen next you are up and moving just in time to hear the Alpha Husky come awake as his former bitch spears him deeper with her cock. A silent tear falls from your eye as you let your head hang down low. You may not be fighting a war likes these soldiers, but one thing you are sure of... this is hell.";
 				increase score by 10;
 				SanBoost 10;
 				now drs is 2;
@@ -93,7 +94,7 @@ Instead of resolving Disorganization:
 			LineBreak;
 			say "     Common sense fails you as you walk over to the other, warily though, to see if you can offer aid. When you speak out to draw the other's you find yourself flustering however, as the face of a rubbery latex fox looks back at you with a happy smile on its shiny orangish-red muzzle. The moan from before seems to have come from the creature trying to get itself off. You groan as you shake your head and then back away, really you think to yourself, you should have known better than that in this creepy place. However, before you pull away completely you find your eyes catching the sight of something glinting around the vulpine's neck.";
 			say "     A thick gulp makes and a shudder later you nervously you take a few steps closer to the creature. What you see, as you again had feared is that around the critter's throat there are silver dog tags hanging limply down onto the mutant's chest. Looking to the thing and then seeing that it is staring at you with confused, yet intelligent eyes you chance going over to try and grab the things from off of the other's neck. A part of you hoping desperately that the mutant doesn't try to attack you.";
-			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+			let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;

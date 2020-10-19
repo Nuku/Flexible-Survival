@@ -1,6 +1,6 @@
 Version 1 of Cynthia by Prometheus begins here.
 
-[ hp of Cynthia - relationship variable with the player      ]
+[ HP of Cynthia - relationship variable with the player      ]
 [   0: not met                                               ]
 [   1: Met Cynthia while fetching meds with Julian           ]
 [   2:                                                       ]
@@ -19,7 +19,7 @@ else: [Away on patrol]
 
 Section 1 - Room Declaration
 [Cynthia's Room is a room.
-The description of Cynthia's Room is "[CynthiasRoomDesc]".
+Description of Cynthia's Room is "[CynthiasRoomDesc]".
 
 to say CynthiasRoomDesc:
 	say "     ";]
@@ -30,22 +30,29 @@ Table of GameCharacterIDs (continued)
 object	name
 Cynthia	"Cynthia"
 
-Cynthia is a woman. The hp of Cynthia is usually 0.
-[Physical details as of game start]
+Cynthia is a woman.
 ScaleValue of Cynthia is 3. [human sized]
-SleepRhythm of Cynthia is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Cynthia is 0. [no cock]
-Cock Length of Cynthia is 0. [no cock length]
-Ball Size of Cynthia is 0. [no ball size]
-Ball Count of Cynthia is 0. [no balls]
-Cunt Count of Cynthia is 1. [1 pussy]
-Cunt Depth of Cynthia is 8. [gets stretched a bit by an alpha husky]
-Cunt Tightness of Cynthia is 3. [gets stretched a bit by an alpha husky]
-Nipple Count of Cynthia is 2. [2 nipples]
-Breast Size of Cynthia is 2. [B cup at the start]
+Body Weight of Cynthia is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Cynthia is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Cynthia is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Cynthia is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Cynthia is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Cynthia is 5. [length in inches]
+Breast Size of Cynthia is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Cynthia is 2. [count of nipples]
+Asshole Depth of Cynthia is 8. [inches deep for anal fucking]
+Asshole Tightness of Cynthia is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Cynthia is 0. [number of cocks]
+Cock Girth of Cynthia is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Cynthia is 0. [Length in Inches]
+Ball Count of Cynthia is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Cynthia is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Cynthia is 1. [number of cunts]
+Cunt Depth of Cynthia is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Cynthia is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Cynthia is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Cynthia is false. [can not take oversized members without pain]
-Sterile of Cynthia is true.
 PlayerMet of Cynthia is false.
 PlayerRomanced of Cynthia is false.
 PlayerFriended of Cynthia is false.
@@ -56,16 +63,18 @@ Virgin of Cynthia is false.
 AnalVirgin of Cynthia is false.
 PenileVirgin of Cynthia is true.
 SexuallyExperienced of Cynthia is true.
-MainInfection of Cynthia is "Human".
-The description of Cynthia is "[CynthiaDesc]".
-The conversation of Cynthia is { "Interesting" }.
+TwistedCapacity of Cynthia is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Cynthia is true. [steriles can't knock people up]
+MainInfection of Cynthia is "".
+Description of Cynthia is "[CynthiaDesc]".
+Conversation of Cynthia is { "Interesting" }.
 The scent of Cynthia is "     Cynthia smells very strongly of wolves, which is not surprising considering how much time she spends around them".
 
 to say CynthiaDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [hp of Cynthia] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Cynthia] <- DEBUG[line break]";
 	else:
-		say "     The sniper's face looks human, her neck-length, pale blonde hair hiding her ears from view. It is a pretty face, though not overly beautiful, the strain of constant vigilance showing. She is dressed in a form fitting, but not overly tight, gray uniform, a black beret on her head, black leather gloves on her hands, and has a modified rifle on her back. Deep-blue eyes glance cautiously around, making sure that little surprises her.";
+		say "     The sniper's face looks human, her neck-length, pale blonde hair hiding her ears from view. It is a pretty face, though not overly beautiful, Strain of constant vigilance showing. She is dressed in a form fitting, but not overly tight, gray uniform, a black beret on her head, black leather gloves on her hands, and has a modified rifle on her back. Deep-blue eyes glance cautiously around, making sure that little surprises her.";
 		say "     Though she seems relatively cheerful, there is a darkness behind her eyes, a remnant of her actions in the past. She seems to genuinely care about the infected in the city, but equally dislike the governmental forces attempting to quarantine everyone. Her usual unwillingness to kill seems strange for a mercenary, but who are you to judge. She sees you studying her and starts to fiddle shyly with a half gas mask that is hooked on her belt, not meeting your eyes.";
 
 Section 3 - Talking
@@ -83,15 +92,16 @@ Object	Name
 Den of the Pack	"Den of the Pack"
 
 Den of the Pack is a situation.
+ResolveFunction of Den of the Pack is "[ResolveEvent Den of the Pack]".
 Prereq1 of Den of the Pack is Suppressant Supply Run.
 Prereq1Resolution of Den of the Pack is { 1 }.
 The level of Den of the Pack is 0.
-The sarea of Den of the Pack is "Outside".
+Sarea of Den of the Pack is "Outside".
 
-after going to Bright Alley while (Den of the Pack is active and Den of the Pack is not resolved and hp of Cynthia is 1 and a random chance of 1 in 2 succeeds):
+after going to Bright Alley while (Den of the Pack is active and Den of the Pack is not resolved and HP of Cynthia is 1 and a random chance of 1 in 2 succeeds):
 	DenofthePackEvent;
 
-Instead of resolving Den of the Pack:
+to say ResolveEvent Den of the Pack:
 	DenofthePackEvent;
 
 to DenofthePackEvent:
@@ -115,7 +125,7 @@ to DenofthePackEvent:
 	WaitLineBreak;
 	say "     You and Cynthia stand up and return the kitsune's goodbye, the vulpine woman bowing in acknowledgment. The door opens, and Sirius enters, the large wolf giving you a nod in passing as you leave. Perhaps the two leaders have important matters to discuss, though the concerned look he gives Cadmea suggest that there is more to it than the hotel's everyday management. 'So what did you think of the Den Mother?' Cynthia asks you as you approach the stairs down again. She continues without waiting for your response, 'She and the Pack Alpha try and protect those that they can, but many don't want to put their trust in otherworldly beings. Having people that are from Earth, or native agents as she calls us, like myself and Argos's pack helps to convince people to give her a chance. Though it does seem strange that a talking fox from another world would be trusted less than a talking wolf that used to be a sight at the zoo. Humans are weird. My employer would have so liked to meet her.'";
 	say "     You follow her back to the side door with its grizzled doorman, the mercenary giving the feline a smile as he lets you leave again. From the filth and griminess of the alleyway you exit into, you wouldn't know how decadent the inside of the hotel was. Cynthia beckons for you to come with her, and you walk together in silence until you are back where she greeted you earlier. 'Sorry that I have to leave you here, but I need to get back to spying on people in the city from the rooftops, and you should be getting back to that library you love so much. I'll have to come and visit you at some point and withdraw a book now that there are unlikely to be late fees,' she jokes. 'I might even test your security just so you know how lucky you are that no one has attacked you there. Be well, and I'll be seeing you, even if you don't see me.' The sniper fastens her gas mask on again and climbs up the ladder, leaving you to decide what to do next.";
-	now hp of Cadmea is 1;
+	now HP of Cadmea is 1;
 	now resolution of Den of the Pack is 1;
 	now Den of the Pack is resolved;
 	AddNavPoint Sanctuary Alleyway;
@@ -125,15 +135,16 @@ Object	Name
 ArcheTech Warehouse	"ArcheTech Warehouse"
 
 ArcheTech Warehouse is a situation.
+ResolveFunction of ArcheTech Warehouse is "[ResolveEvent ArcheTech Warehouse]".
 ArcheTech Warehouse is inactive.
 Prereq1 of ArcheTech Warehouse is Dual Leadership.
 The level of ArcheTech Warehouse is 0.
-The sarea of ArcheTech Warehouse is "Nowhere".
+Sarea of ArcheTech Warehouse is "Nowhere".
 
-after going to Sanctuary Hotel Lobby while (ArcheTech Warehouse is active and ArcheTech Warehouse is not resolved and ArcheTech Warehouse is PrereqComplete and hp of Cadmea is 2 and a random chance of 1 in 2 succeeds):
+after going to Sanctuary Hotel Lobby while (ArcheTech Warehouse is active and ArcheTech Warehouse is not resolved and ArcheTech Warehouse is PrereqComplete and HP of Cadmea is 2 and a random chance of 1 in 2 succeeds):
 	ArcheTechWarehouseEvent;
 
-Instead of resolving ArcheTech Warehouse:
+to say ResolveEvent ArcheTech Warehouse:
 	ArcheTechWarehouseEvent;
 
 to ArcheTechWarehouseEvent:
@@ -160,7 +171,7 @@ to ArcheTechWarehouseEvent:
 		say "     The walk back is equally uneventful, giving you time to talk to Cynthia about Blackpaw. 'I haven't had much contact with him,' she responds. 'Mostly just Cadmea complaining about him interfering in the [']affairs of this world[']. To be honest, I think that she is envious of his willingness to wander the city doing as he wishes, whether it is watching events unfurl, helping someone in a moment of vulnerability, hindering the military patrols, or sating his lusts. He may act on his impulses more than she does, but I think the two of them aren't too different. The Den Mother represses her instincts because she doesn't wish to cause further arm to the city, Blackpaw isn't afraid to show his disdain for those who justify their actions by claiming to just be [']following orders['], but beneath that I think that he is just as kind-hearted as his sister towards those who he feels are deserving of it.'";
 		say "     'Sirius is more accepting of Blackpaw's whims, but he too gets to leave the hotel more often than Cadmea. I can't imagine staying in the same building for weeks on end, especially while many of those around you get to come and go as they please. I think that she is terrified of displeasing whoever allowed her to come here and so protects the hotel and nothing more. I feel sorry for her, but I wouldn't want to be impertinent enough to tell her to be more like her brother and partake in some hedonism for a bit. She would probably slap me with her tail or something if I did. But here I am rambling and I sort of feel like I'm talking behind her back. If you want to know more, perhaps you should discuss it with her yourself. If you'll excuse me, I wish to discuss some things with Argos before we get back.' You bid her farewell as he jogs ahead to talk with the lead wolf in hushed tones, the two of them giving quick glances at Blackpaws back. You walk in silence for the rest of the way back to the hotel, thinking on what Cynthia has said.";
 		WaitLineBreak;
-		say "     When your scout group trudges back into the lobby, Cadmea greets you all with a relieved smile, Sirius giving a nod to you over her shoulder. Though she seems momentarily shocked to see the black-furred kitsune, she beams even more brightly and rushes over, embracing him tightly before kissing him on the cheek. 'I haven't seen you for some time, dear brother. I assume that there were complications at the seafront and that Sirius asked you to be there to ensure their safety?' she asks, her paw resting lightly on the side of his face. 'He might have, but I came back with them so that I we could be together again for a bit. Playing in the city becomes boring after a while and I thought that you might like a turn too,' Blackpaw replies, his thumb brushing the the back of her paw. 'Tempting, but I don't want to get in trouble.' Despite Cadmea's teasing tone, from what Cynthia told you, this is a real concern for her, a fact that doesn't escape her twin's notice. 'You and I both know that 'He' would tell you if we were interfering too much and your instincts haven't led you astray before. I won't push it, but at least consider it. For me?' Blackpaw punctuates this question with a waggle of his ears, making the white-furred kitsune giggle as she replies, 'Okay. I'll think about it. For you.'";
+		say "     When your scout group trudges back into the lobby, Cadmea greets you all with a relieved smile, Sirius giving a nod to you over her shoulder. Though she seems momentarily shocked to see the black-furred kitsune, she beams even more brightly and rushes over, embracing him tightly before kissing him on the cheek. 'I haven't seen you for some time, dear brother. I assume that there were complications at the seafront and that Sirius asked you to be there to ensure their safety?' she asks, her paw resting lightly on the side of his face. 'He might have, but I came back with them so that I we could be together again for a bit. Playing in the city becomes boring after a while and I thought that you might like a turn too,' Blackpaw replies, his thumb brushing the back of her paw. 'Tempting, but I don't want to get in trouble.' Despite Cadmea's teasing tone, from what Cynthia told you, this is a real concern for her, a fact that doesn't escape her twin's notice. 'You and I both know that 'He' would tell you if we were interfering too much and your instincts haven't led you astray before. I won't push it, but at least consider it. For me?' Blackpaw punctuates this question with a waggle of his ears, making the white-furred kitsune giggle as she replies, 'Okay. I'll think about it. For you.'";
 		say "     After a few more whispered words with her brother, Cadmea turns to the rest of you. 'I apologize for keeping you waiting. Despite not being able to get into the warehouse, we should now be able to plan more effectively for a proper attempt to get inside. Sirius and I will discuss whether we wing it again, or whether we approach this with more sense than a novice adventuring group.' Turning to you she continues, 'Once we have a better idea, we may ask for your opinion on the matter. However this isn't a priority, so it may be some time. Until then, we carry on as normal, providing shelter and sustenance for those who need it. If you keep on helping us, there might be a reward in it for you,' she adds sultrily. With that to consider, you excuse yourself and find a comfy couch to slump into, exhausted from your recent excursion.";
 		Now Archetech Warehouse is resolved;
 
@@ -172,7 +183,7 @@ Sanctuary Alleyway	"Sanctuary Alleyway"
 
 Sanctuary Alleyway is a room. It is fasttravel.
 Sanctuary Alleyway is private.
-The description of Sanctuary Alleyway is "[SanctuaryAlleywayDesc]".
+Description of Sanctuary Alleyway is "[SanctuaryAlleywayDesc]".
 The earea of Sanctuary Alleyway is "Outside".
 
 to say SanctuaryAlleywayDesc:
@@ -183,7 +194,7 @@ Object	Name
 Sanctuary Hotel Lobby	"Sanctuary Hotel Lobby"
 
 Sanctuary Hotel Lobby is a room. Sanctuary Hotel Lobby is inside from Sanctuary Alleyway.
-The description of Sanctuary Hotel Lobby is "[SanctuaryHotelLobbyDesc]";
+Description of Sanctuary Hotel Lobby is "[SanctuaryHotelLobbyDesc]";
 
 to say SanctuaryHotelLobbyDesc:
 	say "     In contrast to the appearance of being deserted that the outside of the Sanctuary Hotel instills, the lobby is decorated luxuriously. Thick carpets, gold leaf, and marble adorn the spacious room, and a wide staircase arcs around the far wall. Unfortunately the front door is obscured behind rubble, detracting from the majesty of the room with how out of place the concrete looks against the rest of the décor. Looking at the structural integrity, the rubble came from elsewhere, how, you do not know. Beside the front desk, the lights of a glass elevator shine, showing a private source of power for the building, likely generators. Around the room are at least eight wolves acting as security, eyes gazing about constantly. A few refugees from the horrors outside sit in the plush armchairs beside some of the marble columns, huddled with family or idly reading magazines from coffee tables. There are likely more of them occupying the rooms above you.";
@@ -193,7 +204,7 @@ Object	Name
 Sanctuary Conference Room	"Sanctuary Conference Room"
 
 Sanctuary Conference Room is a room.
-The description of Sanctuary Conference Room is "[SanctuaryConferenceRoomDesc]".
+Description of Sanctuary Conference Room is "[SanctuaryConferenceRoomDesc]".
 
 to say SanctuaryConferenceRoomDesc:
 	say "     The conference room is dominated by a large walnut table in the center, surrounded by cushioned chairs. A ceiling height window gives a view over the remains of what was probably once an impressive boulevard but is now cluttered with abandoned cars and rubbish. Along one edge of the room are several cabinets with cups and saucers visible through the glass to be neatly stacked and clean. The opposite wall has two paintings and a locked door. It seems to be where the Den Mother and Pack Alpha run the day to day operations of the Pack and as such, they have made sure that it is comfortable for them.";]

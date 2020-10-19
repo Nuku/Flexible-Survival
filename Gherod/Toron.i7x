@@ -1,9 +1,10 @@
-Version 2 of Toron by Gherod begins here.
+Version 3 of Toron by Gherod begins here.
 
 "Adds Toron, the bartender of the Hellfire Club, to the game."
 
 [Version 1 - Moved Toron to his own file, as it was getting cramped in Mogdraz's file]
 [Version 2 - Added Tentacular Slushie as a drink. Buffed some drink effects, adjusting negatives accordingly.]
+[Version 3 . Added the Tonics.]
 
 [***********************************************************]
 Section 1 - Toron NPC
@@ -38,8 +39,8 @@ AnalVirgin of Toron is false.
 PenileVirgin of Toron is false.
 SexuallyExperienced of Toron is true.
 MainInfection of Toron is "".
-The description of Toron is "[ToronDesc]".
-The conversation of Toron is { "<This is nothing but a placeholder!>" }.
+Description of Toron is "[ToronDesc]".
+Conversation of Toron is { "<This is nothing but a placeholder!>" }.
 The scent of Toron is "     Toron smells... like nothing. He's completely odorless. You can't help but think there's something quite odd about this fellow.".
 
 to say ToronDesc:
@@ -66,6 +67,11 @@ to say ToronTalkMenu:
 	now title entry is "Order a drink";
 	now sortorder entry is 1;
 	now description entry is "Order a drink at the bar";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Order a tonic";
+	now sortorder entry is 1;
+	now description entry is "Have Toron craft a special tonic for you";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Recent events";
@@ -135,6 +141,8 @@ to say ToronTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Order a drink"):
 					say "[ToronTalkDrinks]";
+				if (nam is "Order a tonic"):
+					say "[ToronTalkTonic]";
 					now ToronDoneTalking is true;
 				if (nam is "Recent events"):
 					say "[ToronTalkNews]";
@@ -189,6 +197,12 @@ to say ToronTalkDrinks:
 	else:
 		say "     Since drinks are on the house, you might as well get one. 'Very well, though I must remind you that only the special selection is available for you, exclusively. Its effects last [bold type]24 hours[roman type] and you cannot consume any other until it leaves your system. In return, you get a physical or mental boost, depending on which drink you order. Sounds useful, doesn't it?'";
 		say "[HellfireClubDrinksMenu]";
+
+to say ToronTalkTonic:
+	say "     Given Toron's expertise on drink making and strange artifacts, you ask him if he can craft you something to take and drink on the god. 'Well, it isn't usually my style, but I suppose. However, they are more of an utility drink, and come in small quantities. Perhaps you would find them useful, even so? I can give you a list of what I can make, right now.'";
+	say "     Before he does that, however, he still adds something. 'Keep in mind that [bold type]you will have to hand over the items each time[roman type] you want a tonic. I must use them at higher concentration values, and Mogdraz is not too keen on giving these out for free. If you acquire the ingredients on your own, it's enough as payment.'";
+	WaitLineBreak;
+	say "[HellfireClubTonicCraft]";
 
 to say ToronTalkNews:
 	say "     You ask Toron to share some gossip, and also update you on recent events happening around the area. He leans over the counter and speaks low.";
@@ -248,6 +262,7 @@ to say ToronTalkAE:
 			say "     But soon enough, Toron returns, with a weapon in hand. A pretty normal sized sword, black in color and a very sharp blade, which also looks light enough to be handled well by anyone that doesn't have a lot of training with swords. 'What a formidable weapon... This will surely keep you safe in the Void. Well, everywhere, actually! It is a really, really good sword...' Toron compliments the now restored Abyssal Edge, as he handles it to you. 'Use it responsibly.'";
 			say "     You are now in possession of the legendary [bold type]Abyssal Edge[roman type].";
 			ItemGain abyssal edge by 1 silently;
+			now Resolution of AbyssEdgeEnchantLevel is 19;
 		else:
 			Linebreak;
 			say "     You tell Toron that you would like to postpone this, and he doesn't question you. 'Do what you think it is best.' he says, before returning to his duties.";
@@ -262,6 +277,8 @@ HellfireBlackAleTimer is a number that varies. HellfireBlackAleTimer is usually 
 HellfireSparklingWaterTimer is a number that varies. HellfireSparklingWaterTimer is usually 20000. [@Tag:NotSaved]
 HellfireTentacularSlushieTimer is a number that varies. HellfireTentacularSlushieTimer is usually 20000. [@Tag:NotSaved]
 HellfirePeculiarLiqueurTimer is a number that varies. HellfirePeculiarLiqueurTimer is usually 20000. [@Tag:NotSaved]
+
+HellfireMSTonicTimer is a number that varies. HellfireMSTonicTimer is usually 20000. [@Tag:NotSaved]
 
 to say HellfireClubDrinksMenu:
 	say "     [bold type]Toron hands you a list with the drinks he has on stock[roman type]. 'This is what I have right now.'";
@@ -438,6 +455,8 @@ to say DrinkTentacularSlushie:
 	statchange "Dexterity" by 4 silently;
 	statchange "Intelligence" by -2 silently;
 	statchange "Charisma" by -2 silently;
+	now HellfireDrinkTimer is 8;
+	decrease thirst of player by 3;
 
 to say DrinkPeculiarLiqueur:
 	say "     You make a request for a Peculiar Liqueur, a strong beverage with condensed extract from one of the strange colored beans you've found among the Peculiar Summoner's stash. Somehow, Toron managed to acquire more of those and build up a mechanism to extract their juice in order to fabricate the drink. 'Right on.' he says, while heading to prepare the mix. He grabs a bottle a pours some of it in a small, short glass, handling it over to you. 'The taste will vary, but the effects should be about the same. It is a strange ingredient, but also very popular around here... And people seem to become suddenly more intelligent. Odd.' explains Toron, waiting for you to accept the drink. It smells [one of]sweet[or]bitter[or]slightly acidic[or]marvelously perfumed[or]like nothing[or]awfully[or]terribly[or]interestingly[or]very sexual, for some odd reason you cannot quite explain[at random], and the color shines differently depending on the light's angle.";
@@ -447,6 +466,8 @@ to say DrinkPeculiarLiqueur:
 	statchange "Intelligence" by 4 silently;
 	statchange "Strength" by -2 silently;
 	statchange "Stamina" by -2 silently;
+	now HellfireDrinkTimer is 8;
+	decrease thirst of player by 1;
 
 to say DrinkSparklingWater:
 	say "     You make a request for a Sparkling Water, a very plain drink that consists of water with sparkles. Tasteless, but refreshing and at room temperature, it quenches your thirst and cleanses your body. 'Right on' say Toron, as he prepares the mix. Adding the water to the glass and a single piece of null essence into it, he then shakes the drink just enough so that the bubbles cover the entire liquid, then adds a drop of some essence he has available. 'This is something I developed to counter the sickening effect of the null essences. Hope you enjoy this one.' he says, sliding the glass towards you. The drink has no smell either, and it stings your nose if you breathe it in too close, just like sparkling water. Well, time to drink it.";
@@ -507,6 +528,13 @@ an everyturn rule:
 			statchange "Intelligence" by -4 silently;
 			statchange "Strength" by 2 silently;
 			statchange "Stamina" by 2 silently;
+		else:
+			decrease HellfireDrinkTimer by 1;
+	if "Mountainous Strength" is listed in feats of player:
+		if HellfireDrinkTimer <= 0:
+			FeatLoss "Mountainous Strength";
+			say "     It has been a while since you've had that tonic, and the effect has been flushed out of the system by now. As a result, you've lost the boost from the tonic, but are able to have another one.";
+			statchange "Strength" by -10 silently;
 		else:
 			decrease HellfireDrinkTimer by 1;
 	if "Created Orcish Bomber" is not listed in traits of Toron:
@@ -571,7 +599,7 @@ to say GiveToronNullEssence:
 to say GiveToronLooseTentacle:
 	say "     Now, you have this quite odd and slippery tentacle, which might be of interest to Toron. You know, he finds use for strange things, so this one particular item must be as good as any. You call him and show him what you have, and his eyes widen. 'A tentacle?! What do you expect me to do with it?! Cook it, cut it and grind it until it becomes powder, then make a drink with it?!' he answers, to which sounds like an absolutely crazy idea... 'I could actually just make that work. Hand it over.' he asks, and without questioning his undeniable reasoning, you give him the loose tentacle.";
 	say "     Immediately after, he tells you to just come back later, as he will have to experiment with the mixture until he can achieve [']just the right tone of taste[']. His words.";
-	decrease carried of loose tentacle by 1;
+	ItemLoss loose tentacle by 1;
 	now HellfireTentacularSlushieTimer is turns;
 	wait for any key;
 	say "[HellfireClubDrinksMenu]";
@@ -579,10 +607,79 @@ to say GiveToronLooseTentacle:
 to say GiveToronStrangeBean:
 	say "     You almost feel silly by even suggesting this, but you call Toron to give him an odd colored bean that he could probably use for drinks. He doesn't blink, actually treating it with all the naturality in the world. 'A bean you say? Funny... They look like mystery beans. I think I've seen a stash of these in the void,  somewhere. Perhaps...' He looks at you, at the bean, then retreats to the back room. 'Give me a few moments, I will arrange preparations and order someone to get more for me! Oh, what a great drink this one will make...!'";
 	say "     It appears he is actually happy with this ingredient. How peculiar...";
-	decrease carried of strange-colored bean by 1;
+	ItemLoss strange-colored bean by 1;
 	now HellfirePeculiarLiqueurTimer is turns;
 	wait for any key;
 	say "[HellfireClubDrinksMenu]";
+
+[TONICS]
+
+to say HellfireClubTonicCraft:
+	say "     Here you can see what Toron is able to craft for you.";
+	say "     [bold type]By selecting each option, you will learn of the requirements and how to acquire them in order to craft the tonic you desire, and if you have all the items with you, there will be a prompt for you to craft them. Tonics last for 12 hours, and cannot be stacked with any other tonics or drinks.[roman type][line break]";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Tonic of Mountainous Strength";
+	now sortorder entry is 1;
+	now description entry is "A very mighty tonic that tremendously increases your strength, at the cost of dexterity (+10 strength, -5 dexterity)";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Tonic of Mountainous Strength"):
+					say "[HellfireClubMSTonic]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You excuse yourself as the bartender continues his tasks.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say HellfireClubMSTonic:
+	if giant essence is owned and orc brew is owned and testosterone pill is owned:
+		say "     Having all the items in your inventory, you proceed to present them to Toron. 'Ah, you have gathered them all? I can proceed with the mixing at any time you want.'";
+		say "     [bold type]Do you wish to craft a Tonic of Mountainous Strength?";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
+		if player consents:
+			Linebreak;
+			say "     You answer positively, letting Toron bring all the items over to the backroom. 'I won't be long.'";
+			WaitLineBreak;
+			say "     He is true to his word. A little while after, he comes with a small flask filled a yellow-green liquid, not too different from the orc brew you gave him. 'The ingredients don't change the appearance of the brew much, but I assure you, this will give your muscles a huge temporary boost with all safety.'";
+			ItemLoss giant essence by 1 silently;
+			ItemLoss orc brew by 1 silently;
+			ItemLoss testosterone pill by 1 silently;
+			ItemGain tonic of mountainous strength by 1 silently;
+			say "     [bold type]You have acquired a Tonic Of Mountainous Strength in exchange for 1 giant essence, 1 orc brew and 1 testosterone pill.[roman type][line break]";
+		else:
+			Linebreak;
+			say "     You let Toron know that you do not wish to craft the tonic yet, to which he nods understandingly.";
+	else:
+		say "     You look over the Tonic of Mountainous Strength, and pay attention to its requirements. Toron explains everything as necessary.";
+		WaitLineBreak;
+		say "     [bold type]One bottle of Giant Essence[roman type], gathered from the precum of a male giant-sized creature's penis during its maximum arousal state, preferably as human-looking a possible. 'The zookeeper would be your best chance, here.'";
+		say "     [bold type]One Orc Brew[roman type] for the main composition of the tonic. 'Orcs are good at making these, hence the name. It has valuable strength properties that, if properly mixed, are not infectious while still providing all the desired effects. I've heard about a bunch of orc warriors roaming around the Warehouse District looking for slaves. Who knows if you would be lucky enough to snatch one of these from them.'";
+		say "     [bold type]A single pill of Testosterone[roman type] in fairly pristine conditions, to bring out the fortifying properties. 'Without this, the tonic won't do much. Zephyr stores have a collection of these, one for 100 freecreds. There might be some still left at the hospital or some other place, but Zephyr is your best bet.'";
+		WaitLineBreak;
+		say "     Taking notes of everything you need, you then thank Toron and move onto something else.";
 
 [***********************************************************]
 Section 3 - Toron Sex Menu
@@ -673,5 +770,29 @@ to say ToronDayAssFuck:
 	WaitLineBreak;
 	say "     When it's time to pull out, only a single drop follows as you remove your shaft from his hole, and it feels like his butt just slurped up everything that you've given him. 'That... that was a good feeding... my ass is pleased, and so am I... W-were we too noisy?' he asks, looking over you, then over to Mogdraz, who's still sitting by his sofa in his usual corner, who looks back at you for a few seconds, with something bulging and rather large between his legs. Then he gives a chuckle and continues on talking to one of his servants. 'Oh... Looks like he really was watching us... Well, me, getting... you know... Fuck, That was hot.' says Toron to you, while he gets set on cleaning the mess that he made all over the counter. 'I'm down to do this again, if you are... When I... uh, have time.'";
 	NPCSexAftermath Toron receives "Assfuck" from Player;
+
+Section 4 - Items
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"tonic of mountainous strength"	"A tiny flask with a small cork stopper that keeps its contents from sloshing out. The yellow-green fluid inside does look kinda like orc brew, still, and pretty much like beer."	1	tonic of mountainous strength
+
+instead of sniffing tonic of mountainous strength:
+say "You open the flask for a moment and take a sniff. Then, you are wishing you wouldn't have done that, because the smell is so strong and concentrated in an alcohol-like scent that you begin to cough immediately, in much pain. And you are supposed to drink this?";
+
+tonic of mountainous strength is a grab object.
+Usedesc of tonic of mountainous strength is "[tonic of mountainous strength use]";
+
+to say tonic of mountainous strength use:
+	if HellfireDrinkTimer > 0:
+		say "     You can't have a tonic while the effects of a previous drink persist. Try again later.";
+		ItemGain tonic of mountainous strength by 1 silently;
+	else:
+		say "Lifting the flask in one hand, you push the cork sopper off and take a shot drink of the liquid within. It burns through your throat like lava, and you feel like you drank something that you shouldn't. It is so so bad, that you are unable to breathe for a few seconds! Then, suddenly, your arms, legs, and muscles in general feel... hard and pumped! You feel like you could take on a giant!";
+		FeatGain "Mountainous Strength";
+		say "     Your [bold type]Strength has increased by 10[roman type] for the next 12 hours.";
+		statchange "Strength" by 10 silently;
+		now HellfireDrinkTimer is 4;
+		decrease thirst of player by 1;
 
 Toron ends here.
