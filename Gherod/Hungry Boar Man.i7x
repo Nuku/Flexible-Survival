@@ -732,67 +732,68 @@ to say sexwithphilip:
 	say "     ([link]Y[as]y[end link]) - Let Philip take charge.";
 	say "     ([link]N[as]n[end link]) - Back away.";
 	if player consents:
-		continue the action;
+		Linebreak;
+		let piggymalefun be 8;
+		if Player is submissive, increase piggymalefun by 2;
+		if Player is mpreg_ok, increase piggymalefun by 2;
+		increase piggymalefun by anallevel;
+		if Player is female:
+			say "     Philip takes you by the hand and gently lays you down on the ground. He massages your tits as he positions his bulk on top of you. His huge gut rests on top of you, pinning you down. When he finally has his huge boar cock in position, he takes a moment to rub the tip against the puffy and moist lips of your pussy. Then, without warning, he thrusts his tool past your [cunt size desc of Player] nether lips and deep into your pussy. You gasp in surprise and pleasure as he begins to gyrate his chubby hips, sending his cock in and out of you. You can feel his huge balls slapping against your inner thighs with each thrust. Philip oinks and squeals as he ruts you and soon you join in. Finally you experience a thundering orgasm and Philip lets out one loud, long squeal then thrusts his cock as far into you as he can, as he spews his hot pig seed into you.";
+			NPCSexAftermath Player receives "PussyFuck" from Philip;
+			if Nipple Count of Player < 8:
+				if "Male Preferred" is not listed in feats of Player and "One Pair" is not listed in feats of Player and (BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy"):
+					say "     As soon as Philip's pig cum floods into you, your chest begins to feel strange. Within moments, six new breasts form in rows of twos beneath your original breasts. You have sow tits!";
+					now Nipple Count of Player is 8;
+		else if pigfucked is 3:
+			say "     Philip smiles at you as you start to kneel before him without his prompting. He rubs his piggish hand over your ears and strokes your flabby cheek. 'Now, I've noticed you keep coming back to the big boar. You must be looking for somethin['] special, my eager sow,' he oinks. He pushes you down into the mud and squeals loudly as he jumps atop you, pressing you into it and pinning you beneath him. His throbbing shaft finds its way under your curly tail and probes at your tailhole. He smears some of the slick mud onto it like lube, then pushes his thick meat into you as you're pulling your face free of the muck. The cool mud and hot shaft pushing into you make you squeal loudly and press back against him, ending any possible objections to the boar's desires. He oinks and grunts loudly as he pounds away at you, slapping his flabby body against your wide bottom again and again. When his cock throbs inside you and his hot seed rushes into your bottom, you moan in delight. As he pulls out of you, he gives your fat rump a soft slap. 'Mmm... that wasn't none too bad. Not my usual preference, but you make such a fine sow, you deserved a treat.' His piggish fingers stroke your rear and tease your messy tailhole, slick and leaking his semen.";
+			if Nipple Count of Player < 8:
+				if "Male Preferred" is not listed in feats of Player and "One Pair" is not listed in feats of Player and (BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy"):
+					say "     As you pull your body from the mud, you find that you've once again gained a full set of eight piggish nipples down your front.";
+					now Nipple Count of Player is 8;
+			NPCSexAftermath Player receives "AssFuck" from Philip;
+		else if pigfucked < 3 or a random chance of 5 in piggymalefun succeeds:
+			say "     Philip takes you by the hand and gently encourages you to kneel before him. Then he takes his shaft into one of his hands and says, 'Open wide.'";
+			say "     You stare at his rod hesitantly for a moment until the thick, musky scent of his boar cock makes you crave his seed. You hold his rod in your hands and you lick the tip of it a few times until it becomes hard. Then you gently guide it into your mouth. His shaft is so long that it reaches the back of your mouth and even a little bit into the top of your throat. You run your tongue up and down the length of his rod, causing Philip to moan happily. Finally, his boar cock dumps its load into your mouth and you swallow every last drop. Mmm... his seed tastes like bacon grease.";
+			if Nipple Count of Player < 8:
+				if "Male Preferred" is not listed in feats of Player and "One Pair" is not listed in feats of Player and (BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy"):
+					say "     As soon as you swallow Philip's pig cum, your chest begins to feel strange. Within moments, six new breasts form in rows of twos beneath your original breasts. You have sow tits!";
+					now Nipple Count of Player is 8;
+			NPCSexAftermath Player receives "OralCock" from Philip;
+		else if Player is submissive and a random chance of piggymalefun in 25 succeeds and pigfucked >= 3:
+			say "     Philip grabs you in his meaty arms and pulls you into a big kiss, rubbing his piggish body against yours, grabbing your ass as he does. 'You're nothing but my squealing piggy, aren't you?' he oinks as he teases a meaty finger under your tail and against your tight pucker. Your submissive tendencies kick in and you moan and nod, wanting the big pig to take you more than ever. Grinning, he pushes you down onto all fours in the mud and leaps atop you. His throbbing porcine cock rubs between your ass cheeks, dribbling its greasy precum to act as lube.";
+			say "     'I'm going to enjoy making you squeal like a sow,' he oinks, sinking the first few inches of his cock into you. You moan and press back onto him, pushing more of his thick shaft into you as he chuckles. He gives your plump, piggy bottom a slap, drawing a squeal out of you. 'Oh, how I love that sound,' he says as he grips your cheeks firmly and starts pounding into you hard and fast. This gets you squealing all the more, in part to further excite your lover and partially because you just can't control yourself. The heavy hog nibbles at your floppy pig ear, snorting and oinking as his excitement builds. He drives hard into you one last time and cums inside you, filling your rectum with his greasy load[if Player is male]. You can't help but cum as you feel his hot semen filling you as he fucks you like a pig[end if].";
+			WaitLineBreak;
+			say "     But he doesn't stop there. After a brief pause during which he snuffles at your neck and tells you what a fine sow you make, he starts thrusting again, intent on claiming you a second time. Already filled with a load of slick boar cum, his thrusts make the semen slosh around inside you. Some of it leaks out around his thrusting cock, but much of it gets pushed deeper. Soon you're squealing again beneath Philip with the wet, stick sounds of him stuffing your reused hole a delightful chorus to your cries.";
+			say "     He pounds into you even harder than before, but pulls out before he's done. You try to push yourself back onto him, but he rolls you over onto your back. You land in the mud with the boar kneeling over you, pumping at his slick cock frantically, drawing a loud oink out of him as he cums hard, blasting his greasy load all across your body, basting you in his juices[if Cock Count of Player > 1]. With your hands on your own cocks, you pump them hard, cumming a second time and adding your seed to his[else]. With your hands on your own cock, you pump it hard, cumming a second time and adding your seed to his[end if].";
+			say "     He runs a piggish hand all over your body as he blasts the last few shots across your face. 'That's my good sow,' he says as he runs his fingers over your sticky body";
+			if Nipple Count of Player < 8:
+				if "Male Preferred" is not listed in feats of Player and "One Pair" is not listed in feats of Player and (BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy"):
+					say ", smiling as you find that you've once again gained a full set of eight piggish nipples down your front";
+					now Nipple Count of Player is 8;
+			say ". He gets you to suck the messy cum from his spent shaft before rolling over in the muck and taking a nap.";
+			NPCSexAftermath Player receives "AssFuck" from Philip;
+		else:
+			say "     Philip pushes you down into the mud again and squeals that he's going to make you his sow again. He grabs your fat ass and grinds his cock against it, moaning softly as his greasy pre leaks down between your cheeks. He spreads the pre against your tailhole, then thrusts into you, making you squeal. You groan as he presses his heavy body down over yours, forcing you down into the mud as he fucks you hard and fast. His throbbing meat pounds away at you and the shed is filled with the squeals and oinks of a rutting pair of hogs. When his cum floods into your bowels, it feels so good, you can't help but cum also. He gets off you slowly, teasingly calling you his sow as he fondles your messy bottom.";
+			if Nipple Count of Player < 8:
+				if "Male Preferred" is not listed in feats of Player and "One Pair" is not listed in feats of Player and (BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy"):
+					say "     As you pull your body from the mud, you find that you've once again gained a full set of eight piggish nipples down your front.";
+					now Nipple Count of Player is 8;
+			NPCSexAftermath Player receives "AssFuck" from Philip;
+		if pigfucked > 0 and player is male and CockName of Player is not "Piggy" and (BodyName of Player is "Piggy" or BodyName of Player is "Messy Pig"):
+			say "     As the heat of Philip's strong cum warms your insides, you feel a tingle in your cock as it throbs and spurts its seed onto the messy floor. Your shaft changes, becoming humanlike, but pinker. It is musky and has a thick scent, much like your piggy lover's.";
+		now Cock of Player is cock entry;
+		now CockName of Player is "Piggy";
+		if pigfucked > 1:
+			say "     After finishing his fun with you, Philip rolls in the mud with you, snuggling and snuffling at your ears. His piggish hands fondle your nipples, making you squeal like a pig, much to his delight";
+			if SkinName of Player is not "Piggy" and (BodyName of Player is "Piggy" or BodyName of Player is "Messy Pig"):
+				now SkinName of Player is "Piggy";
+				now Skin of Player is skin entry;
+				say ". The roll in the mud after sex seems to change you further as your skin changes and becomes a bright, fleshy pink with short, pale hairs. The cool mud feels increasingly good against your skin as you pick up Philip's scent from it";
+			say ".";
+		increase pigfucked by 1;
 	else:
 		stop the action;
-	let piggymalefun be 8;
-	if Player is submissive, increase piggymalefun by 2;
-	if Player is mpreg_ok, increase piggymalefun by 2;
-	increase piggymalefun by anallevel;
-	if Player is female:
-		say "     Philip takes you by the hand and gently lays you down on the ground. He massages your tits as he positions his bulk on top of you. His huge gut rests on top of you, pinning you down. When he finally has his huge boar cock in position, he takes a moment to rub the tip against the puffy and moist lips of your pussy. Then, without warning, he thrusts his tool past your [cunt size desc of Player] nether lips and deep into your pussy. You gasp in surprise and pleasure as he begins to gyrate his chubby hips, sending his cock in and out of you. You can feel his huge balls slapping against your inner thighs with each thrust. Philip oinks and squeals as he ruts you and soon you join in. Finally you experience a thundering orgasm and Philip lets out one loud, long squeal then thrusts his cock as far into you as he can, as he spews his hot pig seed into you.";
-		NPCSexAftermath Player receives "PussyFuck" from Philip;
-		if Nipple Count of Player < 8:
-			if "Male Preferred" is not listed in feats of Player and "One Pair" is not listed in feats of Player and (BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy"):
-				say "     As soon as Philip's pig cum floods into you, your chest begins to feel strange. Within moments, six new breasts form in rows of twos beneath your original breasts. You have sow tits!";
-				now Nipple Count of Player is 8;
-	else if pigfucked is 3:
-		say "     Philip smiles at you as you start to kneel before him without his prompting. He rubs his piggish hand over your ears and strokes your flabby cheek. 'Now, I've noticed you keep coming back to the big boar. You must be looking for somethin['] special, my eager sow,' he oinks. He pushes you down into the mud and squeals loudly as he jumps atop you, pressing you into it and pinning you beneath him. His throbbing shaft finds its way under your curly tail and probes at your tailhole. He smears some of the slick mud onto it like lube, then pushes his thick meat into you as you're pulling your face free of the muck. The cool mud and hot shaft pushing into you make you squeal loudly and press back against him, ending any possible objections to the boar's desires. He oinks and grunts loudly as he pounds away at you, slapping his flabby body against your wide bottom again and again. When his cock throbs inside you and his hot seed rushes into your bottom, you moan in delight. As he pulls out of you, he gives your fat rump a soft slap. 'Mmm... that wasn't none too bad. Not my usual preference, but you make such a fine sow, you deserved a treat.' His piggish fingers stroke your rear and tease your messy tailhole, slick and leaking his semen.";
-		if Nipple Count of Player < 8:
-			if "Male Preferred" is not listed in feats of Player and "One Pair" is not listed in feats of Player and (BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy"):
-				say "     As you pull your body from the mud, you find that you've once again gained a full set of eight piggish nipples down your front.";
-				now Nipple Count of Player is 8;
-		NPCSexAftermath Player receives "AssFuck" from Philip;
-	else if pigfucked < 3 or a random chance of 5 in piggymalefun succeeds:
-		say "     Philip takes you by the hand and gently encourages you to kneel before him. Then he takes his shaft into one of his hands and says, 'Open wide.'";
-		say "     You stare at his rod hesitantly for a moment until the thick, musky scent of his boar cock makes you crave his seed. You hold his rod in your hands and you lick the tip of it a few times until it becomes hard. Then you gently guide it into your mouth. His shaft is so long that it reaches the back of your mouth and even a little bit into the top of your throat. You run your tongue up and down the length of his rod, causing Philip to moan happily. Finally, his boar cock dumps its load into your mouth and you swallow every last drop. Mmm... his seed tastes like bacon grease.";
-		if Nipple Count of Player < 8:
-			if "Male Preferred" is not listed in feats of Player and "One Pair" is not listed in feats of Player and (BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy"):
-				say "     As soon as you swallow Philip's pig cum, your chest begins to feel strange. Within moments, six new breasts form in rows of twos beneath your original breasts. You have sow tits!";
-				now Nipple Count of Player is 8;
-		NPCSexAftermath Player receives "OralCock" from Philip;
-	else if Player is submissive and a random chance of piggymalefun in 25 succeeds and pigfucked >= 3:
-		say "     Philip grabs you in his meaty arms and pulls you into a big kiss, rubbing his piggish body against yours, grabbing your ass as he does. 'You're nothing but my squealing piggy, aren't you?' he oinks as he teases a meaty finger under your tail and against your tight pucker. Your submissive tendencies kick in and you moan and nod, wanting the big pig to take you more than ever. Grinning, he pushes you down onto all fours in the mud and leaps atop you. His throbbing porcine cock rubs between your ass cheeks, dribbling its greasy precum to act as lube.";
-		say "     'I'm going to enjoy making you squeal like a sow,' he oinks, sinking the first few inches of his cock into you. You moan and press back onto him, pushing more of his thick shaft into you as he chuckles. He gives your plump, piggy bottom a slap, drawing a squeal out of you. 'Oh, how I love that sound,' he says as he grips your cheeks firmly and starts pounding into you hard and fast. This gets you squealing all the more, in part to further excite your lover and partially because you just can't control yourself. The heavy hog nibbles at your floppy pig ear, snorting and oinking as his excitement builds. He drives hard into you one last time and cums inside you, filling your rectum with his greasy load[if Player is male]. You can't help but cum as you feel his hot semen filling you as he fucks you like a pig[end if].";
-		WaitLineBreak;
-		say "     But he doesn't stop there. After a brief pause during which he snuffles at your neck and tells you what a fine sow you make, he starts thrusting again, intent on claiming you a second time. Already filled with a load of slick boar cum, his thrusts make the semen slosh around inside you. Some of it leaks out around his thrusting cock, but much of it gets pushed deeper. Soon you're squealing again beneath Philip with the wet, stick sounds of him stuffing your reused hole a delightful chorus to your cries.";
-		say "     He pounds into you even harder than before, but pulls out before he's done. You try to push yourself back onto him, but he rolls you over onto your back. You land in the mud with the boar kneeling over you, pumping at his slick cock frantically, drawing a loud oink out of him as he cums hard, blasting his greasy load all across your body, basting you in his juices[if Cock Count of Player > 1]. With your hands on your own cocks, you pump them hard, cumming a second time and adding your seed to his[else]. With your hands on your own cock, you pump it hard, cumming a second time and adding your seed to his[end if].";
-		say "     He runs a piggish hand all over your body as he blasts the last few shots across your face. 'That's my good sow,' he says as he runs his fingers over your sticky body";
-		if Nipple Count of Player < 8:
-			if "Male Preferred" is not listed in feats of Player and "One Pair" is not listed in feats of Player and (BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy"):
-				say ", smiling as you find that you've once again gained a full set of eight piggish nipples down your front";
-				now Nipple Count of Player is 8;
-		say ". He gets you to suck the messy cum from his spent shaft before rolling over in the muck and taking a nap.";
-		NPCSexAftermath Player receives "AssFuck" from Philip;
-	else:
-		say "     Philip pushes you down into the mud again and squeals that he's going to make you his sow again. He grabs your fat ass and grinds his cock against it, moaning softly as his greasy pre leaks down between your cheeks. He spreads the pre against your tailhole, then thrusts into you, making you squeal. You groan as he presses his heavy body down over yours, forcing you down into the mud as he fucks you hard and fast. His throbbing meat pounds away at you and the shed is filled with the squeals and oinks of a rutting pair of hogs. When his cum floods into your bowels, it feels so good, you can't help but cum also. He gets off you slowly, teasingly calling you his sow as he fondles your messy bottom.";
-		if Nipple Count of Player < 8:
-			if "Male Preferred" is not listed in feats of Player and "One Pair" is not listed in feats of Player and (BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy"):
-				say "     As you pull your body from the mud, you find that you've once again gained a full set of eight piggish nipples down your front.";
-				now Nipple Count of Player is 8;
-		NPCSexAftermath Player receives "AssFuck" from Philip;
-	if pigfucked > 0 and player is male and CockName of Player is not "Piggy" and (BodyName of Player is "Piggy" or BodyName of Player is "Messy Pig"):
-		say "     As the heat of Philip's strong cum warms your insides, you feel a tingle in your cock as it throbs and spurts its seed onto the messy floor. Your shaft changes, becoming humanlike, but pinker. It is musky and has a thick scent, much like your piggy lover's.";
-	now Cock of Player is cock entry;
-	now CockName of Player is "Piggy";
-	if pigfucked > 1:
-		say "     After finishing his fun with you, Philip rolls in the mud with you, snuggling and snuffling at your ears. His piggish hands fondle your nipples, making you squeal like a pig, much to his delight";
-		if SkinName of Player is not "Piggy" and (BodyName of Player is "Piggy" or BodyName of Player is "Messy Pig"):
-			now SkinName of Player is "Piggy";
-			now Skin of Player is skin entry;
-			say ". The roll in the mud after sex seems to change you further as your skin changes and becomes a bright, fleshy pink with short, pale hairs. The cool mud feels increasingly good against your skin as you pick up Philip's scent from it";
-		say ".";
-	increase pigfucked by 1;
+
 
 [REMOVED FORCED MUTATION
 if pigfed > 0 and TailName of Player is not "Piggy":
