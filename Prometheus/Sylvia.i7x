@@ -66,7 +66,7 @@ to SylviaQuestLog:
 		-- 2:
 			say "[bold type]Sylvia Quest: [roman type]The border collie I watched give her friend a blowjob told me her room number. She lives in room 059 in the female dormitory. Perhaps I should visit her at some point.";
 		-- 3:
-			say "[bold type]Sylvia Quest: [roman type]I met Sylvia in her room. She was bus at the time, but invited me to come back later to talk.";
+			say "[bold type]Sylvia Quest: [roman type]I met Sylvia in her room. She was busy at the time, but invited me to come back later to talk.";
 		-- 4:
 			say "[bold type]Sylvia Quest: [roman type]I helped Sylvia overcome a heat that was induced by her time in the city. Perhaps I should get to know the wolf more if I want to continue spending time with them.";
 		-- 5:
@@ -79,7 +79,7 @@ to SylviaQuestLog:
 		-- 1:
 			say "[bold type]Sylvia Quest: [roman type]The border collie you met told me her room number. She lives in room 059 in the female dormitory. Perhaps I should visit her at some point.";
 		-- 2:
-			say "[bold type]Sylvia Quest: [roman type]I met Sylvia in her room. She was bus at the time, but invited me to come back later to talk.";
+			say "[bold type]Sylvia Quest: [roman type]I met Sylvia in her room. She was busy at the time, but invited me to come back later to talk.";
 		-- 3:
 			say "[bold type]Sylvia Quest: [roman type]I left Julian to help Sylvia overcome a heat that was induced by her time in the city. Perhaps I should get to know the wolf more if I want to continue spending time with them.";
 		-- 4:
@@ -90,7 +90,7 @@ to SylviaQuestLog:
 		-- 1:
 			say "[bold type]Sylvia Quest: [roman type]The border collie you met told me her room number. She lives in room 059 in the female dormitory. Perhaps I should visit her at some point.";
 		-- 2:
-			say "[bold type]Sylvia Quest: [roman type]I met Sylvia in her room. She was bus at the time, but invited me to come back later to talk.";
+			say "[bold type]Sylvia Quest: [roman type]I met Sylvia in her room. She was busy at the time, but invited me to come back later to talk.";
 		-- 3:
 			say "[bold type]Sylvia Quest: [roman type]I helped Sylvia overcome a heat that was induced by her time in the city. Perhaps I should get to know the wolf more if I want to continue spending time with them.";
 		-- 4:
@@ -130,7 +130,7 @@ Sylvia's Room is a room.
 Description of Sylvia's Room is "[SylviasRoomDesc]".
 
 to say SylviasRoomDesc:
-	say "     The floor of Sylvia's room is clean. The walls, however, are covered in pictures of various canines. Wolves, foxes, corgis, border collies, the list goes on. If she didn't have a window, you would think that side would be plastered with them too. On a bookshelf, there are hundreds of books on various subjects, including biology and mythology. A desk is pushed against the wall in one corner with a dead laptop, a photo frame, a vase with some flowers, and two well-thumbed books. One is Charles Darwin's [']On the Origin of Species['], and the other is a children's book with dogs and a smiling family. Beside the window is a small armchair with a cushion depicting a border collie. Her bed is well made, but there are strands of fur on it, not all of it looks like hers...";
+	say "     The floor of Sylvia's room is clean. The walls, however, are covered in pictures of various canines. Wolves, foxes, corgis, border collies, the list goes on. If she didn't have a window, you would think that side would be plastered with them too. On a bookshelf, there are hundreds of books on various subjects, including biology and mythology. A desk is pushed against the wall in one corner with a dead laptop, a photo frame, a vase with some flowers, and two well-thumbed books. One is Charles Darwin's [']On the Origin of Species['], and the other is a children's book with dogs and a smiling family. Beside the window is a small armchair with a cushion depicting a border collie. Her bed is well made, but there are strands of fur on it and not all of it looks like hers...";
 
 Section 2 - NPC Declaration
 
@@ -255,6 +255,12 @@ to say SylviaTalkMenu:
 		now sortorder entry is 7;
 		now description entry is "Ask her how she knows how to make such effective traps";
 	[]
+	If (TwelveLaborsStage > 0 and TwelveLaborsStage < 99):
+		choose a blank row in table of fucking options;
+		now title entry is "Knowledge of Greek Mythology";
+		now sortorder entry is 8;
+		now description entry is "Ask her whether she can give you any help with the Twelve Labours";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -294,6 +300,8 @@ to say SylviaTalkMenu:
 					say "[SylviaTalk6]";
 				if (nam is "Trap Expertise"):
 					say "[SylviaTalk7]";
+				if (nam is "Knowledge of Greek Mythology"):
+					say "[SylviaTalk8]";
 				WaitLineBreak;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -456,6 +464,69 @@ to say DeniseSample: [Take sample from Denise. Sylvia X Gryphoness]
 to say SylviaTalk7: [Traps]
 	say "     'I had wondered if this question would come up. I didn't tell you when you asked about my interests because it isn't a socially acceptable pastime. It tends to cause people to drift away from me, and I enjoy your company. But you asked, so I shall answer. You may have noticed that I'm not as physically capable as many of the other people in the city, and I wasn't any stronger or tough as a human. What I do have is my mind, a platitude my father was fond of telling me, though he gave me a solution as well. He told me that indirectly fighting someone reduces the chances of coming to harm and that a trap may give me some deniability if I planned it well. A sort of incentive for excellence in its own way. He started off by teaching me some of the tricks he learned in the military, but it didn't take me long to start experimenting and improvising beyond bear traps and tripwires. The trick was to make it look like someone was careless, unlucky, or that you couldn't have been involved. I'm proud to say that I never got caught and any accusations came to nothing.'";
 	say "     'Now I tend to play to my strengths, using all of the sciences, rather than just physics, and the changes in the city give me a large variety of materials to work with. I can use bodily fluids, fur, or use the infected against each other. That time it activated my heat was an outlier, I assure you. I'd misplaced my backup muscle relaxants and paralyzers, but I'm usually much better prepared than that. Obviously, I don't use my traps on other students very often. They're more for establishing safe points for me within the city, especially if I find somewhere that might make a good base of operations for extended research trips. Though the soldiers have stumbled into some of them unfortunately, and when the traps are potent enough to repel and incapacitate the transformed, humans tend to get a bit more than they can handle without changing. Luckily, they seem to blame a coyote that's in the city rather than me, or I may face consequences if the soldiers succeed in [']taming['] the city.' She goes silent after that and you take it as the end of the conversation.";
+
+to say SylviaTalk8: [Twelve Labours]
+	if TwelveLaborsStage is 1:
+		if "Twelve Labours Explained" is listed in Traits of Sylvia:
+			say "     'Have you forgotten what I told you last time? You should be able to just hit it with a sword, club, or your head if you're lacking weapons and sense. Just like any other creature that attacks you the city. Try and remember this time. Yes? Good luck.'";
+		else:
+			say "     'You seem to have got yourself into something interesting, haven't you?' Sylvia laughs. 'I suppose that I shouldn't be surprised that the gods are making an appearance in the city, but I know someone who will be disappointed that he isn't here for this. He literally worships them. If I'm correct, the first labor is the Nemean Lion, yes? I shouldn't even need to consult my books. Though Herakles was forced to use his bare hands to pummel it to death, you should be fine with just using brute force like any other creature in the city. I doubt that seducing it will have any effect in this case, just in case you were wondering. It will likely be fairly tough, but given your improved healing ability, you should be able to fight it toe-to-toe as long as you've been practicing enough around the city on foolish assailants. I don't think that there's anything else that I need mention. Good luck.'";
+			add "Twelve Labours Explained" to Traits of Sylvia;
+	[else if TwelveLaborsStage is 2:
+		if "Twelve Labours Explained" is listed in traits of Sylvia:
+			say "     ";
+		else:
+			say "     ";
+	else if TwelveLaborsStage is 3:
+		if "Twelve Labours Explained" is listed in traits of Sylvia:
+			say "     ";
+		else:
+			say "     ";
+	else if TwelveLaborsStage is 4:
+		if "Twelve Labours Explained" is listed in traits of Sylvia:
+			say "     ";
+		else:
+			say "     ";
+	else if TwelveLaborsStage is 5:
+		if "Twelve Labours Explained" is listed in traits of Sylvia:
+			say "     ";
+		else:
+			say "     ";
+	else if TwelveLaborsStage is 6:
+		if "Twelve Labours Explained" is listed in traits of Sylvia:
+			say "     ";
+		else:
+			say "     ";
+	else if TwelveLaborsStage is 7:
+		if "Twelve Labours Explained" is listed in traits of Sylvia:
+			say "     ";
+		else:
+			say "     ";
+	else if TwelveLaborsStage is 8:
+		if "Twelve Labours Explained" is listed in traits of Sylvia:
+			say "     ";
+		else:
+			say "     ";
+	else if TwelveLaborsStage is 9:
+		if "Twelve Labours Explained" is listed in traits of Sylvia:
+			say "     ";
+		else:
+			say "     ";
+	else if TwelveLaborsStage is 10:
+		if "Twelve Labours Explained" is listed in traits of Sylvia:
+			say "     ";
+		else:
+			say "     ";
+	else if TwelveLaborsStage is 11:
+		if "Twelve Labours Explained" is listed in traits of Sylvia:
+			say "     ";
+		else:
+			say "     ";
+	else if TwelveLaborsStage is 12:
+		if "Twelve Labours Explained" is listed in traits of Sylvia:
+			say "     ";
+		else:
+			say "     ";]
 
 
 Section 4 - Sex

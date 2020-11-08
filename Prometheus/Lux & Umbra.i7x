@@ -8,6 +8,7 @@ Version 1 of Lux & Umbra by Prometheus begins here.
 [ 2 - Child                           ]
 [ 3 - Teen                            ]
 [ 4 - Adult - Grown                   ]
+[ 5 - Adult - Had Sex                 ]
 
 [ HP of Umbra                         ]
 [ 0 - Not yet born                    ]
@@ -15,6 +16,21 @@ Version 1 of Lux & Umbra by Prometheus begins here.
 [ 2 - Child                           ]
 [ 3 - Teen                            ]
 [ 4 - Adult - Grown                   ]
+[ 5 - Adult - Had Sex                 ]
+
+[ hunger of Lux                       ]
+[ 0 - No Sex Yet                      ]
+[ 1 - Virginity taken by Umbra        ]
+[ 2 - Virginity taken by Fang         ]
+[ 3 - Virginity taken by Player       ]
+[ 4 - Virginity taken by Carl         ]
+
+[ hunger of Umbra                     ]
+[ 0 - No Sex Yet                      ]
+[ 1 - Virginity taken by Lux          ]
+[ 2 - Virginity taken by Fang         ]
+[ 3 - Virginity taken by Player       ]
+[ 4 - Virginity taken by Amy          ]
 
 [ loyalty of Lux                      ]
 [ 0 - Not fully grown                 ]
@@ -29,6 +45,14 @@ Version 1 of Lux & Umbra by Prometheus begins here.
 [ 40 - Teen                           ]
 [ 80 - Child                          ]
 [ 120 - Pup                           ]
+
+[ thirst of Lux                       ]
+[ 0 - No potential sexual partners    ]
+[ 1+ - # of potential sexual partners ]
+
+[ thirst of Umbra                     ]
+[ 0 - No potential sexual partners    ]
+[ 1+ - # of potential sexual partners ]
 
 an everyturn rule:
 	if HP of Lux > 3:
@@ -310,6 +334,53 @@ Instead of conversing the Umbra:
 			say "[UmbraTalkMenu]";
 
 to say UmbraTalkMenu:
+	say "[line break]";
+	say "What do you wish to discuss with Umbra?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Scavenging";
+	now sortorder entry is 1;
+	now description entry is "Ask whether he has found anything of interest while out in the city";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Small Talk";
+	now sortorder entry is 2;
+	now description entry is "Make idle conversation";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Scavenging"):
+					say "[UmbraTalk1]";
+				if (nam is "Small Talk"):
+					say "[UmbraTalk2]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You shake your head, indicating an end to the conversation. Umbra lets out a disappointed whine before returning to what he was doing before.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say UmbraTalk1: [An easy way of getting food and water (or soda and chips if the player has Junkfood feat)]
+	say "     WIP.";
+
+to say UmbraTalk2:
 	say "     You crouch down and scratch him behind the ears as you tell him about your exploits in the city.(WIP)"; [Will likely be the player telling him about various specific adventures]
 
 Section 2 - Sex
@@ -415,6 +486,635 @@ instead of going to Computer Lab while HP of Lux > 3 and HP of Umbra > 3 and Lux
 		say "     You continue to watch the three of them sleep, leaning against the doorframe so as not to risk waking them. Sensing movement behind you and feeling a form against your side, you look to find Fang silently joining you in watching over the members of his pack. They look so sweet and vulnerable at the moment, and you can sense the love that the large wolf bears for them radiating from him, [if HP of Fang is 3 or HP of Fang is 4]undiminished by the authority that he bears[else]a feeling that you share[end if]. However, he doesn't remain there for long, giving you an affectionate lick before returning to his post by the front door to continue watch, satisfied with the safety of his children. With a contented sigh, you too leave, reducing the risk that you will inadvertently rouse the three of them unnecessarily, following Fang back to the main entrance.";
 	else: [ Lux & Umbra curled up together ]
 		say "     As you enter the computer room, turned den-of-children, the sight before you causes you to halt in your tracks. In front of you, your children, Lux and Umbra, are curled up together, fast asleep. You can hear the larger male wolf snoring softly as his chest expands and shrinks in time with his sister's. Even while resting, they are in sync, bringing a smile to your mouth. They seem to be fast asleep, the occasional movement in response to dreams failing to stir either to wakefulness, and you imagine that their trust in Fang guarding the door to the library allows them to display such vulnerability. For a moment, you admire their fluffiness and the contrast in the shades of gray of their fur as it mingles where they are pressed together. Were it not for the risk of disturbing them, you might consider giving them a loving pat, but you restrain yourself and merely imagine the feel of their fur against your palm.";
-		say "     You continue to watch them sleep, leaning against the doorframe so as not to risk waking them. Sensing movement behind you and feeling a form against your side, you look to find Fang silently joining you in watching over your children. They look so sweet and vulnerable at the moment, and you can sense the love that the large wolf bears for them radiating from him, [if HP of Fang is 3 or HP of Fang is 4]undiminished by the authority that he bears[else]a feeling that you share[end if]. However, he doesn't remain there for long, giving you an affectionate lick before returning to his post by the front door to continue watch, satisfied with the safety of his children. With a contented sigh, you too leave, reducing the risk that you will inadvertently rouse them unnecessarily, following Fang back to the main entrance.";
+		say "     You continue to watch them sleep, leaning against the doorframe so as not to risk waking them. Sensing movement behind you and feeling a form against your side, you look to find Fang silently joining you in watching over your children. They look so sweet and vulnerable at the moment, and you can sense the love that the large wolf bears for them radiating from him, [if hp of Fang is 3 or hp of Fang is 4]undiminished by the authority that he bears[else]a feeling that you share[end if]. However, he doesn't remain there for long, giving you an affectionate lick before returning to his post by the front door to continue watch, satisfied with the safety of his children. With a contented sigh, you too leave, reducing the risk that you will inadvertently rouse them unnecessarily, following Fang back to the main entrance.";
+
+
+Table of GameEventIDs (continued)
+Object	Name
+Lux & Umbra Sexual Interest	"Lux & Umbra Sexual Interest"
+
+Lux & Umbra Sexual Interest is a situation.
+The level of Lux & Umbra Sexual Interest is 0.
+The sarea of Lux & Umbra Sexual Interest is "Nowhere".
+
+instead of going to Computer Lab while hp of Lux is 4 and hp of Umbra is 4 and Lux is in Computer Lab and Umbra is in Computer Lab and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in feats of player and Lux & Umbra Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+	Lux&UmbraSexualInterestEvent;
+
+to Lux&UmbraSexualInterestEvent: [Lux and Umbra express interest in each other] [Early Morning-Noon] [May be subject to change/improvement]
+	say "     As you enter the computer lab, you are surprised to see Lux and Umbra talking to each other in hushed tones. While it is not unusual for them to be in here, they are usually asleep at this time, huddled together as they dream. Not wanting to interrupt whatever they are discussing but nonetheless curious, you sneak closer, your presence remaining unnoticed due to their concentration on each other, until you are behind a desk barely a meter from them. You have no idea how they are failing to catch your scent, but you are now able to hear what is being said. 'You probably think that I'm a freak. Attraction to family is considered disgusting if the books I read are to be believed, but I can't deny who I am. Maybe I won't be judged as much considering the state of the city, but I don't want to lose you as a brother just because I can't control my libido. If I have to-' Lux whispers before Umbra cuts her off.";
+	say "     'I love you too. You are pretty. You are smarter but make time for me. How could I not love you? But what will [if player is female]Mother and Father [else]our fathers [end if]think?' The two of them are momentarily quiet as they contemplate that. 'I don't think I could bear for Daddy to be hurt by this if we couldn't convince him, and [if player is female]Mother [else]Father [end if]may be difficult to convince if [if player is female]she [else]he [end if]doesn't approve...' your daughter sighs. 'We can't go behind their backs. It might break them,' your son adds before pausing, his nose twitching and his eyes widening. '[if player is female]Mother's [else]Father's [end if]behind that desk.' Embarrassed at being caught, you crawl out and sit beside them and wait for them to complain about you eavesdropping. Instead, they stare at you and await your verdict on their forbidden love for each other.";
+	say "     [bold type]Do you wish to allow them to express their attraction to one another in future?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
+	if Player consents:
+		LineBreak;
+		say "     Seeing how much they care for each other, you give them a warm smile and tell them that as long as they genuinely love each other, and aren't just being driven by lust, that you don't see any problem with them getting more intimate with each other. You see the fear disappear from their faces and they rush towards you, pressing their sides against you as they enthusiastically lick you to express their gratitude and relief. It will hardly be the most perverse thing to happen in the city, and to be honest there is a slight feeling of arousal at the thought, so who are you to interfere with what their hearts seem to want? 'Thank you,' both of your pups say at the same time, gray and green eyes meeting your own to show you their sincerity. After a few minutes of bonding with them, you decide to give them some privacy before they go to sleep. Despite the intensity of their mutual attraction, you doubt that they'll be having sex just yet.";
+		now Resolution of Lux & Umbra Sexual Interest is 1;
+		increase thirst of Lux by 1;
+		increase thirst of Umbra by 1;
+	else:
+		LineBreak;
+		say "     You look at your children and a wave of unease washes over you as you think of them having sex with each other. You can't bring yourself to allow this and so it is with a heavy heart that you let out a sigh and shake your head. Their ears and tails droop as you sternly inform them that you do not wish for them to engage in any form of sexual contact with each other. You can't stop their mutual attraction, but they will have to accept that they won't be able to act upon it beyond what they already do. They look disappointed but considering their considerable affection towards you as their parent, there is no hint of rebellion in their posture. After a quick pat, you leave the two of them to accept your position on the matter before they go to sleep. You don't doubt that they will be affectionate with each other, but it will never develop into anything more in the foreseeable future.";
+		now Resolution of Lux & Umbra Sexual Interest is 2;
+	move player to Grey Abbey Library;
+	now Lux & Umbra Sexual Interest is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Lux & Fang Sexual Interest	"Lux & Fang Sexual Interest"
+
+Lux & Fang Sexual Interest is a situation.
+The level of Lux & Fang Sexual Interest is 0.
+The sarea of Lux & Fang Sexual Interest is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and Fang is in Grey Abbey Library and hp of Fang > 1 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in feats of player and Lux & Fang Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+	Lux&FangSexualInterestEvent;
+
+to Lux&FangSexualInterestEvent: [Lux and Fang express interest in each other] [Noon-Early Night] [May be subject to change/improvement]
+	if hp of Fang is 2: [Omega]
+		say "     Looking around as you enter the library, you are concerned to see that Fang isn't in his usual position watching the door. Readying yourself for having to reprimand him for this dereliction of duty, you briskly begin walking around the library until as you pass the open door to the courtyard, you hear Lux's familiar voice. Your need to find Fang less pressing than finding out who your daughter is conversing with, you stealthily approach until you can clearly see that she is talking to your missing guard, Fang, and pacing back and forth ceaselessly as she speaks with her father. '...but I didn't didn't need privacy to talk about such mundane topics such as your night. I have something a little more sensitive to discuss and I'm concerned that it might affect your fondness of me,' the pale-furred wolf worriedly says. 'Not likely. You haven't hurt your brother. If you prefer females, I will support you. Why are you scared?' Fang replies, the variety of his questions suggesting that he has no idea what is troubling his daughter.";
+		say "     'Thank you for the support Daddy. While male or female makes little difference to me, that isn't what I was worried about,' Lux half laughs between deep breaths. 'You may think that I'm disgusting, but I'm attracted to you.' The two of them stand in silence for a few moments as the female wolf's words sink in until Fang breaks the silence. 'I know what I'm meant to do. You're my daughter. I don't want to take advantage of you. You're not meant to feel like this about me. I'm not meant to feel this way about you. But you do. And I do.' The two wolves look at each other differently with this revelation, nervousness struggling with excitement that they feel the same attraction towards each other. 'Your [if player is female]mother [else]father [end if]mightn't like it. I made a mistake before. My freedom is limited by their will,' Fang rumbles, pressing his ears back at disappointing his daughter. It looks like you have a decision to make.";
+		say "     [bold type]Do you wish to allow them to express their attraction to each other in future?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
+		if Player consents:
+			LineBreak;
+			say "     You may have authority over Fang, but your daughter has a little more freedom and this seems to be something that she wants. Your guard wolf has been doing a good job too, so you don't see why you can't allow him a closer relationship with his daughter. Your mind made up, you openly approach the two of them, their heads snapping up as one upon noticing you. Before they have a chance to speak or make excuses, you kindly inform them that you were listening to their exchange and that you are willing to allow them to explore their attraction to one another as long as they continue to make you proud. Lux is speechless, while Fang narrows his eyes slightly, perhaps expecting there to be further conditions, a suspicion that you quickly allay, promising that you won't come between him and his daughter. As you begin to leave, Lux calls after you, 'Thank you. This means a lot to me.' With a smile, you return to the library, pleased that you could grant them at least a moment of happiness.";
+			now Resolution of Lux & Fang Sexual Interest is 1;
+			increase thirst of Lux by 1;
+		else:
+			LineBreak;
+			say "     Considering your direct authority over Fang and that Lux is your daughter, you feel confident that they will accept your decision to forbid such a relationship to develop between them. Your mind made up, you openly approach the two of them, their heads snapping up as one upon noticing you. Before they have a chance to speak or make excuses, you firmly explain that you will not abide your Omega and daughter having sex with each other. Your daughter could do so much better than mating with the bottom member of the pack when there are so many other better males in the city to choose from, and you tell her as much. While Fang looks dejected at your justification, Lux looks unsure whether to be ashamed at disappointing you, or angry that you so easily turn to degrading her father. Your decision clear to them, you turn and leave, returning to the library confident that the two of them won't act upon their attraction for the foreseeable future.";
+			now Resolution of Lux & Fang Sexual Interest is 2;
+	else if (hp of Fang is 3 or hp of Fang is 4): [Alpha]
+		say "     Looking around as you enter the library, you are surprised that your Alpha isn't in his usual position guarding his pack. Curious as to where he may have gone, you casually wander around the library until you eventually pass the door out to the courtyard and hear Lux's familiar voice. Wondering who she is speaking with, you go outside and move towards the sound of talking until you can clearly see that she is conversing with Fang, and pacing back and forth ceaselessly as she speaks with her father. '...but I apologize for taking up so much of your time Daddy. I had something a little more sensitive to discuss with you and I'm worried that it may affect your fondness for me,' the pale-furred wolf worriedly says. 'I doubt that, Lux. I care deeply for my children. I am your father first, your Alpha second. You do not need to fear me,' Fang comforts her, willing to show a softer side while talking to his daughter.";
+		say "     'It is because you are my father that I am afraid to tell you this,' Lux replies. She pauses for a moment to gather her nerve before almost spitting out, 'I am attracted to you and want to be more intimate with you.' There is silence for several long seconds at this confession, a look of shock on Fang's face, while his daughter gradually looks more and more dejected as the lack of response drags on. 'You think I'm disgusting don't-' Lux starts but her father cuts her off. 'No. Never that. Speech is difficult. Give me time.' His forceful response surprises both you and his daughter, allowing him some time to decide what to say. 'I think you are beautiful. I think you are intelligent. I think you are kind. I did not want to take advantage of you. Love should be given. Not taken just because I am Alpha. I love you too. As my daughter and more.' The two wolves look at each other differently with this revelation, nervousness struggling with excitement that they feel the same attraction towards each other.";
+		WaitLineBreak;
+		say "     When they both seem to share this attraction, you doubt that you could forbid it happening even if you wanted to, especially when Fang is your Alpha. You're not sure that you should interrupt this moment either, so you remain at a distance, merely watching. Her difficult confession of forbidden love rewarded, Lux tentatively rubs up against her father's side, her tail softly wagging, a response mirrored by the larger wolf. As they begin to lick the other's muzzle, you decide to leave and allow them some privacy to develop their intimacy under the light of the moon, returning back into the library. You doubt that they'll be having sex any time soon, considering that their relationship is developing beyond being just familial.";
+		now Resolution of Lux & Fang Sexual Interest is 1;
+		increase thirst of Lux by 1;
+	else if hp of Fang is 5: [Beta]
+		say "     Looking around as you enter the library, you are surprised to find Fang absent from his usual position guarding the front door. Wondering as to where he may have gone, you begin to search around the library until you eventually pass the door out to the courtyard and hear Lux's familiar voice. Wondering who she is speaking with, you go outside and move towards the sound of talking until you can clearly see that she is conversing with her father, and pacing back and forth ceaselessly while she speaks. '...but I didn't ask you to come out here just to socialize Daddy, as much as I enjoy spending time with you. I had something a little more sensitive to discuss with you and I'm worried that it may affect your fondness for me,' the pale-furred wolf worriedly says. 'I doubt that, Lux. I love you and your brother no matter what. My children come before anyone else in the pack. What could change that?' Fang reassures her before licking her nose.";
+		say "     'You might not be so unconditional with your love if you knew what I had to say,' Lux replies, returning his gesture of affection. 'I am in love with you and wish for our bond to go beyond just being family,' she finally reveals, her voice barely more than a whisper. It takes a moment for Fang to process this confession before leaning down and pressing his lips against his daughter's in what looks like his best attempt at a kiss, causing her eyes to go wide. 'I love you too. Your beauty. Your intellect. Your kindness. All of you. I will gladly be your mate and your father.' The two wolves look at each other differently with this revelation, nervousness struggling with excitement that they feel the same attraction towards each other. '[if player is female]Mother [else]Father [end if]may not like it, but who knows? They may be as accepting of who I am as you are Daddy,' Lux muses, earning a supportive rumble from the larger wolf as he nuzzles against her. It looks like you have a decision to make.";
+		say "     [bold type]Do you wish to allow them to express their attraction to each other in future?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
+		if Player consents:
+			LineBreak;
+			say "     When they both seem to share this attraction, you don't see anything wrong with allowing them to develop this bond further. They both definitely deserve good things in life and it would be a shame to ruin the happiness that this conversation has brought them. Your mind made up, you openly approach the two of them, their heads snapping up as one upon noticing you. Before they have a chance to speak, you apologize for listening in but inform them that you don't see any problems with them exploring their attraction to each other when they so obviously love each other. Lux is speechless, while Fang looks at you with gratitude plain on his stupidly grinning face. As you begin to leave, Lux calls after you, 'Thank you. This means a lot to me.' With a smile, you return to the library, pleased that love can still blossom in a city so willing to turn to rape.";
+			now Resolution of Lux & Fang Sexual Interest is 1;
+			increase thirst of Lux by 1;
+		else:
+			LineBreak;
+			say "     Despite their mutual attraction to each other, you come to the decision that you don't wish to allow them to continue such a relationship. Your mind made up, you openly approach the two of them, their heads snapping up as one upon noticing you. Before they have a chance to speak, you firmly declare that you forbid them from being anything other than father and daughter. 'But... but I love him,' Lux pleads, ears flat against her head and tail tucked between her hind legs. Letting out an exasperated sigh that she didn't just accept your ruling on the matter, you explain that as her parent and authority figure in the library that she should obey. She looks ready to answer back, but to your surprise, Fang interrupts, 'No. She is my daughter too. She is an adult. She can make her own decisions. You are Alpha, but she is not your bitch.' The tone of his voice is as though he is stating facts, but you wouldn't be surprised if you nearly crossed a line here. 'However, I will discuss this with her. You shall not have to worry about catching us mating.' With that, the two wolves stalk off, leaving you to return to the library alone.";
+			now Resolution of Lux & Fang Sexual Interest is 2;
+	move player to Grey Abbey Library;
+	now Lux & Fang Sexual Interest is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Umbra & Fang Sexual Interest	"Umbra & Fang Sexual Interest"
+
+Umbra & Fang Sexual Interest is a situation.
+The level of Umbra & Fang Sexual Interest is 0.
+The sarea of Umbra & Fang Sexual Interest is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Umbra is 4 and Umbra is in Grey Abbey Library and Fang is in Grey Abbey Library and MaleList is not warded and MaleList is not banned and "LuxUmbra Incest Enabled" is listed in feats of player and Umbra & Fang Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+	Umbra&FangSexualInterestEvent;
+
+to Umbra&FangSexualInterestEvent: [Umbra and Fang express interest in each other] [Noon-Early Night] [May be subject to change/improvement]
+	if hp of Fang is 2: [Omega]
+		say "     Upon entering the library, you are concerned to find that Fang isn't in his usual position by the door. With a sigh of disappointment, you begin to search for the wolf, readying yourself to reprimand him for this dereliction of duty. You briskly walk around the library until you catch sight of a tail disappearing out of the door to the courtyard. Assuming that it is Fang, you quickly follow after him only to discover that he is not alone. It would seem that your son, Umbra, has something that he wishes to discuss with his father, and judging by the nervous pacing that he is doing, it may be something awkward so you decide to remain watching from a distance rather than interrupting now and making it more difficult for him. 'I need to tell you something. It might upset you,' Umbra hesitantly says, struggling to meet his father's eyes despite his greater size. 'Not likely. You haven't hurt your sister. Females or males, I'll support you with either. What are you scared of?' Fang replies, the variety of his questions suggesting that he has no idea what is troubling his son.";
+		say "     'I like both. That is not the problem,' Umbra bluntly replies, despite his lack of sexual experience. His father stands and waits for him to elaborate, patiently waving his tail back and forth in the hopes of appearing reassuring to his conflicted child. 'I am attracted to you. Despite us being family,' Umbra finally confesses, lowering his head in shame at how he expects his father to react. The silence returns again as the younger wolf's revelation sinks in, until Fang speaks. 'You are my son. Do not feel ashamed of who you are. I have these feelings too. You are not alone.' The two wolves look at each other in a new light, surprised that such a taboo attraction is shared and unsure how to proceed next. 'Your [if player is female]mother [else]father [end if]may disapprove. They may deny me this. I made mistakes in the past. By their will I am bound,' Fang rumbles, pressing his ears back at disappointing his son. It looks like you have a decision to make.";
+		say "     [bold type]Do you wish to allow them to express their attraction to each other in future?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
+		if Player consents:
+			LineBreak;
+			say "     Accepting that both of them are old enough to make their own decisions and willing to let Fang have this modicum of autonomy, you decide to let them explore this mutual attraction. Your mind made up, you openly approach the two of them, their heads snapping up as one upon noticing you. Before they can speak or make excuses, you calmly inform them that you will allow them to get to know each other on a more intimate level for as long as they both wish to, expressing your gratitude for the effort that they put into defending the library from the creatures of the city. They are both speechless, an unsurprising response given their usual limited vocalisation, but after a few seconds Umbra manages to say thank you in what is barely more than a whisper, his father nodding in agreement, his eyes expressing the depth of his gratitude. Pleased with yourself at such a display of magnanimity, you return into the library to continue with your day.";
+			now Resolution of Umbra & Fang Sexual Interest is 1;
+			increase thirst of Umbra by 1;
+		else:
+			LineBreak;
+			say "     Considering your direct authority over Fang and that Umbra is your son, you feel confident that they will accept your decision to forbid such a relationship to develop between them. Your mind made up, you openly approach the two of them, their heads snapping up as one upon noticing you. Before they have a chance to speak or make excuses, you firmly explain that you will not abide your Omega and son having sex with each other. Your son could do so much better than mating with the bottom member of the pack when there are so many other better males in the city to choose from, and you tell him as much. While Fang looks dejected at your justification, Umbra begins to growl at your derision and contempt for his father, only falling quiet when you give him a stern glare. Your decision clear to them, you turn and leave, returning to the library confident that the two of them won't act upon their attraction for the foreseeable future.";
+			now Resolution of Umbra & Fang Sexual Interest is 2;
+	else if (hp of Fang is 3 or hp of Fang is 4): [Alpha]
+		say "     Upon entering the library, you are concerned to find that your Alpha isn't in his usual position guarding his pack. Curious as to where he may have gone, you casually wander around the library until you catch sight of a tail disappearing out of the door to the courtyard. Assuming that it is Fang, you quickly follow after him only to discover that he is not alone. It would seem that your son, Umbra, has something that he wishes to discuss with his father, and judging by the nervous pacing that he is doing, it may be something awkward so you decide to remain watching from a distance rather than interrupting now and making it more difficult for him. 'I have something I must tell you, Alpha. It may displease you,' Umbra hesitantly says, not meeting his father's eyes. 'I doubt that, Umbra. I care deeply for my children. I am your father first, your Alpha second. You do not need to fear me,' Fang comforts him, willing to show his softer side when talking to his son.";
+		say "     'I worry because you are my father,' Umbra replies. The older wolf stands and waits patiently for him to continue, sensing the turmoil from his son's still tail and constantly shifting gaze. 'I am attracted to you. Despite you being my father. Despite me being subordinate,' Umbra struggles to say, lowering his head in shame at how he expects his father to react. The silence returns again as the younger wolf's confession sinks in, Umbra looking increasingly terrified as waits for a response. Finally, Fang replies, 'I think you are handsome. I think you are quick. I think you are kind. I did not wish to take advantage of you. Love should be given. Not taken just because I am Alpha. I love you too. As my son and more.' The two wolves look at each other differently with this revelation, both having talked much more than usual in order to express their attraction towards each other.";
+		WaitLineBreak;
+		say "     When they both seem to share this attraction, you doubt that you could forbid it happening even if you wanted to, especially when Fang is your Alpha. You're not sure that you should interrupt this moment either, so you remain at a distance, merely watching. Umbra tentatively rubs against his father's side, his confidence growing as the older wolf returns this display of affection, both of them softly wagging their tails. As they begin to lick the other's muzzle, you decide to leave and allow them some privacy to develop their intimacy under the light of the moon, returning back into the library. You doubt that they'll be having sex quite yet, considering that their relationship is developing beyond being just familial.";
+		now Resolution of Umbra & Fang Sexual Interest is 1;
+		increase thirst of Umbra by 1;
+	else: [Beta]
+		say "     Upon entering the library, you are surprised to find that Fang is absent from his usual position guarding the front door. Wondering as to where he may have gone, you begin to search around the library until you catch sight of a tail disappearing out of the door to the courtyard. Assuming that it is Fang, you quickly follow after him only to discover that he is not alone. It would seem that your son, Umbra, has something that he wishes to discuss with his father, and judging by the nervous pacing that he is doing, it may be something awkward so you decide to remain watching from a distance rather than interrupting now and making it more difficult for him. 'I have something I must tell you, Father. It may displease you,' Umbra hesitantly says, not quite catching the older wolf's gaze. 'I doubt that, Umbra. I will love you no matter what. My children come before anyone else in the pack. What could change that?' Fang reassures him before licking his nose.";
+		say "     'You have not heard my secret. Your love is appreciated though,' Umbra replies, returning the gesture of affection. 'I love you. Romantically. I want to be more than your son. I want to be your mate too,' he finally reveals, his voice an intense whisper. It takes a moment for Fang to process his son's confession before leaning forward and pressing his lips against his son's in what looks like his best attempt at a kiss, causing the younger wolf's eyes to go wide. 'I love you too. Your attractive body. Your quick mind. Your kind soul. I will gladly be your mate as well as your father.' The two wolves look at each other differently with this revelation, relieved that they feel the same way about each other, but unsure how to proceed. '[if player is female]Mother [else]Father [end if]may not like it. I hope they understand like you did,' Umbra muses, the older wolf letting out a supportive rumble as he nuzzles against him. It looks like you have a decision to make.";
+		say "     [bold type]Do you wish to allow them to express their attraction to each other in future?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
+		if Player consents:
+			LineBreak;
+			say "     When they both seem to share this attraction, you don't see anything wrong with allowing them to develop this bond further. They both definitely deserve good things in life and it would be a shame to ruin the happiness that this conversation has brought them. Your mind made up, you openly approach the two of them, their heads snapping up as one upon noticing you. Before they have a chance to speak, you apologize for listening in but inform them that you don't see any problems with them exploring their attraction to each other when they so obviously love each other. Both of them are, unsurprisingly, speechless, but Fang's gratitude is plain on his stupidly grinning face. As you begin to leave, Umbra calls after you, 'Thank you.' With a smile, you return to the library, your son's few words meaning as much to you as Fang's toothy smile.";
+			now Resolution of Umbra & Fang Sexual Interest is 1;
+			increase thirst of Umbra by 1;
+		else:
+			LineBreak;
+			say "     Despite their mutual attraction to each other, you come to the decision that you don't wish to allow them to continue such a relationship. Your mind made up, you openly approach the two of them, their heads snapping up as one upon noticing you. Before they have a chance to speak, you firmly declare that you forbid them from being anything other than father and son. 'But I love him,' Umbra dejectedly replies, ears flat against his head and tail tucked beneath him. Letting out an exasperated sigh that he chose to answer back, you explain that as his parent and authority figure in the library that he should obey. He looks confused and scared, struggling between compliance and dissent until, to your surprise, Fang interrupts, 'No. He is my son too. He is an adult. He can make his own decisions. You are Alpha, but he is not your bitch.' The tone of his voice is as though he is stating facts, but you wouldn't be surprised if you nearly crossed a line here. 'However, I will discuss this with him. You shall not have to worry about catching us mating.' With that, the two wolves stalk off, leaving you to return to the library alone.";
+			now Resolution of Umbra & Fang Sexual Interest is 2;
+	move Player to Grey Abbey Library;
+	now Umbra & Fang Sexual Interest is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Lux & Player Sexual Interest	"Lux & Player Sexual Interest"
+
+Lux & Player Sexual Interest is a situation.
+The level of Lux & Player Sexual Interest is 0.
+The sarea of Lux & Player Sexual Interest is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and FemaleList is not warded and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in feats of player and Lux & Player Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+	Lux&PlayerSexualInterestEvent;
+
+to Lux&PlayerSexualInterestEvent: [Lux expresses interest in the player] [Noon-Early Night]
+	say "     You are surprised to find Lux waiting for you as you enter the library, her pleasure at seeing you obvious from the way her tail begins to wag. 'Hello [if player is female]Mother[else]Father[end if]. I hope that you aren't having too much trouble in the city. You could always spend more time with my brother and me. I know we'd both appreciate it,' she greets you, the last sentence delivered in an almost sensual manner. The surprise on your face must be plainly visible because your daughter suddenly looks embarrassed. 'I meant that to be subtle. Instead I seem to have shouted, [']Look at me I'm a deviant who loves her parents in ways that she shouldn't[']. I'm sorry. I seem to have made you uncomfortable. Had I not made my feelings known before?' You admit that you might recall such a thing, but you didn't know she was this serious about you.";
+	say "     'Why wouldn't I be?' she replies, looking you in the eye. 'Other than the social expectations, questions of morality, and fear of being rejected by my family, why wouldn't I have been serious when I told you that I was more than fond of you? I know the potential consequences of letting my feelings be known but it is important enough to me that I'm telling you anyway. So either I find out that you are willing to explore these feelings with me, or you don't and I'll attempt to work from there. I'm not going to avoid you just because you rebuff my advances, nor will it damage our bond, but I will definitely be happier if you reciprocate my attraction.' Part of you wonders what Fang will think of this, but almost as if predicting your thoughts, Lux adds, 'Don't worry about Daddy. I'll talk to him about it too, and there is very little that he wouldn't do to make my brother and me happy.' It would seem that she has had plenty of time to think this through and is now only waiting on your response.";
+	say "     [bold type]Do you wish to explore this sort of relationship with Lux?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
+	if Player consents:
+		LineBreak;
+		say "     Crouching down beside her, you place a hand against the side of the face before leaning in and kissing her on the nose. Of course you'd be happy to further your relationship with her beyond its current level and you tell her so, stroking her soft, pale fur much to her delight. 'Thank you [if player is female]Mother[else]Father[end if]. I was very afraid of being rejected, so knowing that you feel this way about me too is a relief. It's like some of the books that I've been reading, true love conquering all boundaries.' You stifle a laugh at her outburst, but the sentiment is the same despite her girlish enthusiasm. She snuggles close to you, content to just be in your presence and touching you. However, this must eventually come to an end as you have other things to do today and you should probably give her time before you start having sex with her, a thought that you probably wouldn't have had before the nanite apocalypse you chuckle to yourself as the two of you part with another affectionate kiss.";
+		now Resolution of Lux & Player Sexual Interest is 1;
+		increase thirst of Lux by 1;
+	else:
+		LineBreak;
+		say "     Not sharing her attraction, you have a difficult task ahead of you. She can see your expression and can instantly tell that you have a reluctant reply to her confession. Kneeling beside her, you stroke her head as you haltingly explain that your affection towards her is no more than that of any parent towards their child and that you're sorry that you don't feel the same attraction as her. She takes this surprisingly well, only a few tears before she snuggles against you. 'But you still love me, right?' Lux asks, desperately looking at you. You ruffle the fur on her head and say that of course you do, just because you aren't romantically attracted to her, doesn't mean that you love her any less. Revealing to you the way that she feels must have taken quite a bit of courage after all. 'Thank you [if player is female]Mother[else]Father[end if]. I think I would like to be alone for a while, or at least only Umbra for company.' After one last affectionate lick on your cheek, she bounds off, leaving you to decide what to do next.";
+		now Resolution of Lux & Player Sexual Interest is 2;
+	move Player to Grey Abbey Library;
+	now Lux & Player Sexual Interest is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Umbra & Player Sexual Interest	"Umbra & Player Sexual Interest"
+
+Umbra & Player Sexual Interest is a situation.
+The level of Umbra & Player Sexual Interest is 0.
+The sarea of Umbra & Player Sexual Interest is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Umbra is 4 and Umbra is in Grey Abbey Library and MaleList is not warded and MaleList is not banned and "LuxUmbra Incest Enabled" is listed in feats of player and Umbra & Player Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+	Umbra&PlayerSexualInterestEvent;
+
+to Umbra&PlayerSexualInterestEvent: [Umbra expresses interest in the player] [Noon-Early Night]
+	say "     Finding Umbra waiting for you as soon as you enter the library, you give him a pat on the head before [if scalevalue of Player < 3]standing [else]crouching down [end if]in front of him to see if he had anything in mind to talk to you about. He seems to appreciate your attention, his tail wagging and letting out cheerful huffs as he presses his head against your palm. 'Hello [if player is female]Mother[else]Father[end if]. You smell nice. Very unique scent. I like it. I miss you when you are not here. So does Lux. Spend more time with us,' he asks as he begins to lick your hand. Ruffling the fur on top of his head, you reply that you miss him too while you are away. 'Then stay here. With Umbra. With Lux. With Fang. We all love you. As [if player is female]mother[else]father[end if] as well as mate. All of us.' He notices your look of surprise at this revelation of attraction and backs away, tucking his tail between his legs and flattening his ears. 'Lux warned me of this. I have said too much. I have upset you.' Seeing that he is about to flee in response to your less than enthusiastic reaction, you quickly call him to explain further and ask why he hadn't told you before, an order which he haltingly complies with.";
+	say "     'Lux said she had told you. I've seen you in the city.[if Player is submissive] Letting others mount you. Pleasing them. Am I worth less than them? Is there another reason why you don't want to mate with me?[else if Player is dominant]Making others submit to you. Such dominance. I want to be like you. I want to be [italic type]with[roman type] you. Am I not worthy?[else]Pleasing others. Having them please you. You allow both and I admire you for it. I want to experience such feelings with you. Do I not deserve this?[end if].  Lux says we are not normal. Is she right? She said to follow my heart. She said not to feel shame for who I love. But accept that they may not feel same way. I asked Father and he gave same answer. To keep those we love close. Even we cannot love them as much as we want. I love you. I will love you even if you do not feel the same. Do you?' Despite his limited language, Umbra has obviously spent the time to think through his confession. Now the only question is do you feel the same?";
+	say "     [bold type]Do you wish to explore this sort of relationship with Umbra?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
+	if Player consents:
+		LineBreak;
+		say "     Smiling at his earnest, if a little blunt, delivery, you crouch down beside your son and hug his head against your chest before planting a kiss between his ears. In an almost conspiratorial whisper, you tell him that you love him too, especially his desire for your approval and his direct manner of speech. He dips his ears in embarrassment, but nonetheless nuzzles against you, eager to feel your touch. Amusingly, his excitement soon overwhelms him and he bounces back and begins leaping around you, his tail wagging wildly and every now and then licking you in the face in an overt display of gratitude and joy. Eventually he stops for long enough to string a few words together again, 'I really do love you [if player is female]mother[else]father[end if]. Nearly as much as Lux.' You decide to take this as he intended, rather than taking offence or be upset, reasoning that it is a very definite way of knowing how important you are to him. Before you can properly return the sentiment, Umbra rushes off, likely to tell his sister all about it, leaving you to shout your affection after his retreating tail.";
+		now Resolution of Umbra & Player Sexual Interest is 1;
+		increase thirst of Umbra by 1;
+	else:
+		LineBreak;
+		say "     Not sharing his attraction, you have a difficult task ahead of you. He can see your expression and can instantly tell that you have a reluctant reply to his earnest confession of love. Kneeling beside him, you stroke his head as you haltingly explain that your affection towards him is no more than that of any parent towards their child and that you're sorry that you don't feel the same attraction as him. He manages to put on a brave face, the slump in his posture the only outward sign of his disappointment. 'But you do still love me?' Umbra asks, desperately looking at you. You ruffle the fur on his head and say that of course you do, just because you aren't romantically attracted to him, doesn't mean that you love him any less. Revealing to you the way that he feels must have taken quite a bit of courage after all. 'I want to be alone with Lux. Love you.' After one last affectionate lick on your cheek, he dashes off to find his sister for comfort, leaving you to decide what to do next.";
+		now Resolution of Umbra & Player Sexual Interest is 2;
+	move Player to Grey Abbey Library;
+	now Umbra & Player Sexual Interest is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Lux & Carl Sexual Interest	"Lux & Carl Sexual Interest"
+
+Lux & Carl Sexual Interest is a situation.
+The level of Lux & Carl Sexual Interest is 0.
+The sarea of Lux & Carl Sexual Interest is "Nowhere".
+
+instead of going up from Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and hp of Carl is 10 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and Lux & Carl Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+	Lux&CarlSexualInterestEvent;
+
+to Lux&CarlSexualInterestEvent: [Lux and Carl express interest in each other] [Noon-Early Night]
+	say "     Reaching the top of the stairs, you are surprised to find Lux keeping Carl company as he keeps watch over the approach to the library. They currently have their back to you, both sitting on one of the couches that the husky has pulled around so that he can have some comfort while he's on duty. Carl doesn't seem too perturbed, idly stroking the wolf's side while looking out the window, occasionally even bringing a pair of binoculars to his face when something in the distance seems to catch his eye. Your daughter seems content with this at first but gradually becomes increasingly restless, nudging up against him and whining more frequently. 'I told you that this would be boring, didn't I? There's not much reason that you need to keep me company when you could be playing with your brother. I'm used to it anyway,' Carl chides her, not diverting his attention from outside.";
+	say "     'But I want to play with yooouuu. Daddy's watching the door, so you can at least take a few minutes away from bird-watching to run around with me, Please?' Lux pleads, looking at the soldier with wide eyes. He lets out a sigh and shakes his head before replying, 'One, you're an adult, I would have thought you would've grown out of this by now. Two, in case you hadn't noticed I'm not four-legged like you so I would likely be at a disadvantage. Three, and this is the most important of all, you're sending mixed messages by asking me to play in an innocent manner while staring at my crotch. Your father would be ashamed.' You realize that you've zoned out and that Lux's focus has definitely shifted downwards. 'Why would he be ashamed? I'm not giving myself to a stranger, I find you attractive, and I trust your decision to be your own. If you don't want to, I'll still keep you company. I'm not that selfish. Also, how dare you imply that I should grow out of playing. It's fun. Maybe you should connect more with your youthful side?' Lux retorts, forcing her eyes to meet his.";
+	WaitLineBreak;
+	say "     'It's not so much that I don't want to, rather that I don't want to piss off your parents. You know what your [if player is female]mother [else]father [end if]is capable of, and I do not want to be bound, gagged, and sent back to Allen just because I let my dick control me,' Carl says, though you can see how much he is tempted on his face, something that you doubt that Lux will miss. To your surprise, she seems embarrassed, tucking her ears back and averting her gaze. 'They wouldn't do that to you,' she says, her voice barely more than a whisper. 'I'll give you some more time to think. I'm sorry that I've made you uncomfortable, but I hope that you'll at least consider what I've said.' With that, she clambers off the couch and walks past you to go downstairs, too deep in thought to do more than briefly nuzzle your hand as she passes by. Carl looks back at you and lets out a sigh. 'You heard that then. She's definitely prettier than Fang, but I get the impression that she's starved for a fuck, if you'll excuse my bluntness. I just didn't want to go behind your back on it, given that she's your daughter, but I also didn't want to give her the impression that I needed to ask permission. So, do you mind if your daughter and I get to know each other more intimately?";
+	say "     [bold type]Do you give Carl permission to have sex with Lux in future?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
+	if Player consents:
+		LineBreak;
+		say "     It doesn't take you long to consider his proposition before consenting. You do however make it clear that you are trusting him to make her feel special and make his first time with her memorable. 'I wasn't considering having a quickie in an alley, but I get what you mean. She's really special and I'll treat her as such,' Carl replies, looking you squarely in the eyes to ensure that you can see his sincerity. 'I'll talk to her later about it. I'm sure she'll be thrilled. Fang's view on it may be less friendly if Lux is wrong, but I trust her to convince him of her way of thinking. [if hp of Fang is 3 or hp of Fang is 5]Despite his position as Alpha, his kids seem to be able to wrap him around their paws, in a manner of speaking[else if hp of Fang is 5]His kids are the most important things in the world to him, so I'm sure he'll do whatever is necessary to make them happy[else]He may lack authority, but if I did anything to hurt Lux, you'd be second in line to punish me and I don't think I would survive to give you the chance[end if].' You nod, satisfied with his reply before bidding him farewell and returning to the top of the stairs trying to remember what you were doing before.";
+		now Resolution of Lux & Carl Sexual Interest is 1;
+		increase thirst of Lux by 1;
+	else:
+		LineBreak;
+		say "     With a sigh, you place a hand on the husky's shoulder and hesitantly explain that you would prefer it if he didn't start a sexual relationship with Lux. Being friends with her is fine and something that you encourage given her curiosity and the integral role he plays in protecting the library, but should the two of them fall out with each other then it could cause difficulties for you as well as anyone else you allow to take shelter here. He nods sadly, understanding the logic behind your decision but disappointed that he and your daughter won't get to explore their feelings for each other. 'Gotcha. Well I suppose I'll return to my watch and think of how I can tactfully rebuff her advances,' Carl says, slumping further onto the couch. You decide to leave him to his job and apologize once more before returning to the top of the stairs to decide what to do next.";
+		now Resolution of Lux & Carl Sexual Interest is 2;
+	move player to Grey Abbey 2F;
+	now Lux & Carl Sexual Interest is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Umbra & Carl Sexual Interest	"Umbra & Carl Sexual Interest"
+
+Umbra & Carl Sexual Interest is a situation.
+The level of Umbra & Carl Sexual Interest is 0.
+The sarea of Umbra & Carl Sexual Interest is "Nowhere".
+
+instead of going up from Grey Abbey Library while hp of Umbra is 4 and Umbra is in Grey Abbey Library and hp of Carl is 10 and MaleList is not warded and MaleList is not banned and Umbra & Carl Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+	Umbra&CarlSexualInterestEvent;
+
+to Umbra&CarlSexualInterestEvent: [Umbra and Carl express interest in each other] [Noon-Early Night]
+	say "     Climbing the stairs to the next floor, you find Carl and Umbra keeping watch over the city through one of the windows, though you are unsure how much help the wolf is providing. While the husky is scanning the surrounding area through some binoculars, he is sitting beside him on the couch and wildly wagging his tail. Despite this, Carl seems to appreciate the company, taking the occasional break to ruffle the fur on Umbra's head or stroke a paw through his thick fur. They both turn as you step up behind them, Carl giving you a nod while your son's tail waves even more rapidly as he leaps off to greet you, bumping up against your leg and licking your hand as you affectionately pat him. 'I'd be glad to have him beside me if I were in the city, but his help is limited up here when he can't use binoculars,' the husky comments, earning a reproachful look from the dark-furred wolf. 'Hey, don't look at me like that. I said limited, not non-existent. You're good company and you demand less attention than your sister, especially with how often she asks me to play with her. I usually only get distracted by you when you stretch after getting up.'";
+	say "     The contented look on Umbra's face suggests that he is enjoying the praise as well as one-upping Lux. He noses Carl's paw until he begins to stroke the large wolf, scritching between his ears every now and then. You hear the husky mumble, 'Who's a good boy...' to himself, though you get the impression that there is something beyond affection from the way that his eyes stray across the wolf's form from nose to tail. Perhaps feeling you watching him, Carl snatches his hand back and looks embarrassed. 'Your sister is probably missing you, Umbra. You've helped me enough for today and if you're not careful she'll find someone else to play with,' he gruffly tells the wolf. You find it doubtful considering how close Lux and Umbra are, but your son gives a nod and leisurely slides off the couch before stretching in a manner that suggests that he is as interested in Carl as the husky is in him. As he extends his hind legs, his tail raises up behind him more than one might normally expect, revealing his virginal tail-star and full sheath and balls, his scrotum twitching slightly before his tail descends and obscures yours and Carl's view of 'the goods'. As your son disappears downstairs, you turn back to the husky, a silent communication passing between you that this needs to be discussed.";
+	say "     [bold type]It would seem that both Carl and Umbra are attracted to each other. Do you wish to allow them to further this relationship?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
+	if Player consents:
+		LineBreak;
+		say "     Not seeing any problem with this, given that they are both consenting adults, you cheerily inform Carl that, should he want to, he may pursue a relationship with Umbra on the condition that no-one gets hurt by it. With how much teasing the wolf has put him through, you doubt that it will take too long for the two of them to take it further than enticing stretching and wistful glances. 'Thanks. I wasn't sure whether it might upset you with him being your son and all, but I'm pleased that you don't mind. If he'd flashed his ass at me like that again I'm not sure whether I would have jumped him to get some release or to beat him for distracting me so blatantly. I guess I know what my answer is now though,' he says with a grin. Now that that is out of the way and considering how much Carl seems to have been distracted recently, you clap him on the shoulder before returning to the top of the stairs to remember what you were on your way to do before you got side-tracked.";
+		now Resolution of Umbra & Carl Sexual Interest is 1;
+		increase thirst of Umbra by 1;
+	else:
+		LineBreak;
+		say "     From the look on your face, Carl can tell that you aren't going to be supportive of him starting a more intimate relationship with your son but patiently waits for you to justify your decision. Sighing as you think through what you want to say, you then explain that despite Umbra's maturity, he is still relatively young and may not have the experience to understand and properly express his attraction to others. Given the potential danger of the city and the importance of maintaining the safety of everyone in the library, should a relationship between them turn sour, it wouldn't only be them that suffered the consequences. Carl looks like he is ready to argue, but bites back whatever he was about to say, reluctantly accepting this rationalising of the factors behind your decision. 'I'll try and control myself and ignore his teasing then. I hope Umbra finds someone that he can be happy with. The kid deserves it,' the husky eventually says before turning back to the window. Recognizing that the conversation is over, you return to the top of the stairs and decide what to do next.";
+		now Resolution of Umbra & Carl Sexual Interest is 2;
+	move player to Grey Abbey 2F;
+	now Umbra & Carl Sexual Interest is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Lux & Amy Sexual Interest	"Lux & Amy Sexual Interest"
+
+Lux & Amy Sexual Interest is a situation.
+The level of Lux & Amy Sexual Interest is 0.
+The sarea of Lux & Amy Sexual Interest is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and (hp of Amy > 10 and hp of Amy < 13) and FemaleList is not warded and FemaleList is not banned and Lux & Amy Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+	Lux&AmySexualInterestEvent;
+
+to Lux&AmySexualInterestEvent: [Lux and Amy express interest in each other] [Noon-Early Night] [Tummy Rubs]
+	say "     You enter the library and find only Fang and Umbra by the door. As you approach the two of them, Fang looks at you, 'Lux reading books. Do not disturb her. Difficult to get peace at times,' he says, with a particularly pointed look at his son. You briefly give the two of them a pat, their tails waving on the floor contentedly at your display of affection, before walking between the shelves and deeper into the library. You should be able to check on your daughter without interrupting the tranquility that seems to currently exist in the library. However, as you are about to round a corner, you see that Amy is currently kneeling beside her on the ground, patting and stroking the pale-furred wolf as the two of them chat.'... doubt that I'm the only child, but I haven't been back to see my mother and I have no plans to do so,' the husky shares. 'It must be nice having a brother that you are so close with and can rely on.' Lux releases a happy whine and rolls on her side as Amy's fingers continue to work through her fur and massage the skin beneath.";
+	say "     'I don't have much comparison, but Umbra's always been there for me and I don't see that changing. He's the best,' the wolf replies, rolling on her back and peddling her legs in the air as the husky leans over the top of her and continues massaging her undercarriage. 'Ooooh... What it is to have thumbs. I don't remember the last time I had a tummy rub like this.' 'Tell you what, I'll give you and your brother tummy rubs like this everyday if you want. It's almost therapeutic and I'd love to get to know the two of you better,' Amy laughs. 'Pet a little lower and I'll let you get to know me better now,' Lux shoots back, causing the husky to redouble her chuckling. 'Someone's been reading the adult books again. If you had been serious, I might have taken you up on it.' 'What if I was being serious? I don't mind that you're female. I like you and you're fun to spend time with,' Lux haltingly replies, keen and nervous at the same time. Amy stops and looks deeply into her eyes. 'I won't deny that I'm not tempted, but are you sure? I wouldn't want to rush you into it.'";
+	say "     [bold type]The two of them seem to be growing closer. Do you wish to allow the two of them to explore this relationship further in future?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
+	if Player consents:
+		LineBreak;
+		say "     Considering that they are both interested in each other and adults, you see little reason why you should interfere and instead remain hidden from view as Amy continues to almost sensually massage Lux's underside, their eyes locked with one another as the world experiences what may be her most intimate tummy rub so far in her life. However, this eventually comes to an end as the two of them burst out in a fit of giggles. 'How am I meant to keep a straight face if you're whispering [']who's a good girl['] under your breath,' your daughter complains to the husky. 'Sorry. Force of habit from my [']alone time['],' Amy replies with a bashful smile. 'To answer your question, it's me. I'm a good girl. At the moment I would say you are too. Pet me for a few more minutes, then I need to get back to reading. I was getting to a good bit,' Lux responds, waving her legs in the air again to encourage the husky to continue. 'As the good girl wishes.' You decide to leave the two of them to bond further and return to the entrance of the library, Fang staring at you carefully, as if he knew what you had just witnessed, before giving you a nod and resuming his guard alongside Umbra.";
+		now Resolution of Lux & Amy Sexual Interest is 1;
+		increase thirst of Lux by 1;
+	else:
+		LineBreak;
+		say "     Pretending that you weren't just watching them, you quickly select a book from the shelf and round the corner in time to catch the two of them as their faces close in on the other's. Letting out a gasp, you drop the book as Lux sharply turns to you, a look of shock and embarrassment spreading across her face. This has the side effect of causing her muzzle to collide with Amy's, the two of them releasing a pained squeak before the wolf quickly apologizes. 'I'm so sorry Amy. [if player is female]Mum[else]Dad[end if] startled me. Maybe I'm not ready for this yet...' The husky rubs her jaw with one paw while nodding her acceptance and scooching back a bit. 'Fair enough. I wouldn't want to cause any problems between you and your family,' she replies, though she does glance at you disappointedly. Confident that they have both read your feelings on the matter, you return to the entrance of the library, Fang staring at you carefully, as if he knew what you had just witnessed, before turning away and resuming his guard alongside Umbra.";
+		now Resolution of Lux & Amy Sexual Interest is 2;
+	move player to Grey Abbey Library;
+	now Lux & Amy Sexual Interest is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Umbra & Amy Sexual Interest	"Umbra & Amy Sexual Interest"
+
+Umbra & Amy Sexual Interest is a situation.
+The level of Umbra & Amy Sexual Interest is 0.
+The sarea of Umbra & Amy Sexual Interest is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Umbra is 4 and Umbra is in Grey Abbey Library and (hp of Amy > 10 and hp of Amy < 13) and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and Umbra & Amy Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+	Umbra&AmySexualInterestEvent;
+
+to Umbra&AmySexualInterestEvent: [Umbra and Amy express interest in each other] [Noon-Early Night] [Asks Amy to read him some adult literature as Lux is busy]
+	say "     You meet Fang and Lux by the door as they are on their way out. 'I asked Daddy for some extra combat practice,' your daughter explains, butting your hand with her nose to encourage you to pat her. 'I'm worried that I rely too much on Umbra so I wanted to see what I am capable of while Daddy watches to make sure I'm not in too much danger.' Fang nods in confirmation before escorting the young wolf outside, presumably to find a lone husky or latex fox. Curious as to what the other wolf twin will be getting up to while he is separated from his sister, you wander through the library until you eventually come across him nudging Amy with a book in his mouth. 'Hello there Umbra. What can I do for you?' the husky cheerfully asks, running her hand through the thick fur on the back of the wolf's neck. 'Would you like me to read that to you? I would have thought that you would ask your sister.' Umbra allows Amy to take the book from his grip before answering. 'She's training. I should learn more too.'";
+	say "     '... um, this is rather smutty. Are you sure this is what you want me to read to you?' the husky asks with a smirk, an eyebrow raised. 'Yes. Lux suggested it. She said to only read it with someone I like,' he replies, sitting upright and waiting patiently. 'With someone you like, eh... Does that mean you like me?' Umbra doesn't shrink under her teasing gaze, merely nodding. 'Such a compliment from a big, strong wolf,' Amy flirts, kneeling beside him and running a paw down his chest until it drifts beneath him to lightly grasp his sheath. She barely holds it for a second before she notices you watching them, quickly letting go and beginning to stutter out an apology. 'I didn't mean to flirt with your son so blatantly in front of you, but with how handsome he is how could I resist?' Umbra just sits there panting, the tip of his shaft peeking from its sheath. It would seem that the feeling is mutual.";
+	say "     [bold type]The two of them seem interested in exploring this relationship. Do you wish to allow them to do so?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
+	if Player consents:
+		LineBreak;
+		say "     You quickly reassure Amy that she hasn't done anything wrong. Umbra didn't seem to mind, in fact he seemed to be encouraging it. She lets out a sigh of relief. 'Phew. That's a relief. I was sure you were about to scold me and lock me in a chastity belt or something,' the husky says, on hand unconsciously drifting to protect her crotch. 'I'll stick to reading to him for now, but I'll keep it in mind that there shouldn't be any problems if I want to take things further.' Perhaps feeling left out, Umbra presses himself up against your side and licks at your hand while gazing up at you almost worshipfully. 'Do you want to hear book too?' he asks, but you shake your head and tell him that you don't want to interrupt this chance to bond with Amy. He gives a nod in much the same way as Fang would, making both you and the husky-girl smile. 'Well. I should get to reading to him or we'll only reach the fifth sex scene before he has to go to sleep. See you round.' With a wave goodbye, you return to the entrance and wait for Fang and Lux to return from her training.";
+		now Resolution of Umbra & Amy Sexual Interest is 1;
+		increase thirst of Umbra by 1;
+	else:
+		LineBreak;
+		say "     You cough politely and calmly explain that you would have preferred to have been consulted before she started flirting with your son, especially when you would prefer that she didn't. Umbra's ears droop and his tail that had been wagging when he saw you becomes motionless. 'I would ask for a reason, but I'm not sure that I would want to know what fault you find with me so I'll just have to accept your decision,' she mumbles, her earlier cheer gone. 'In that case, I should probably find something different to read. I wouldn't want to give him the wrong idea. Come on Umbra. Let's look for something suited for promoting platonic friendship.' Your son follows Amy with barely a look back as the husky walks off between the shelves and leaves you to return to the entrance of the library to await Fang and Lux's return alone, your feelings mixed from their unfavorable response to having their budding relationship ended by you. Despite their disappointment, you trust them not to betray your trust in them.";
+		now Resolution of Umbra & Amy Sexual Interest is 2;
+	move player to Grey Abbey Library;
+	now Umbra & Amy Sexual Interest is resolved;
+
+
+[Table of GameEventIDs (continued)
+Object	Name
+Lux & Umbra First Mating	"Lux & Umbra First Mating"
+
+Lux & Umbra First Mating is a situation.
+Prereq1 of Lux & Umbra First Mating is Lux & Umbra Sexual Interest.
+Prereq1Resolution of Lux & Umbra First Mating is { 1 }.
+The level of Lux & Umbra First Mating is 0.
+The sarea of Lux & Umbra First Mating is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Lux > 3 and hp of Umbra > 3 and (TimekeepingVar is 4 or TimekeepingVar is -4) and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and Resolution of Lux & Umbra Sexual Interest is 1 and ((hp of Lux < 5 and hp of Umbra < 5) or (hp of Lux is 5 and hp of Umbra < 5) or (hp of Lux < 5 and hp of Umbra is 5)) and Lux & Fang Sexual Interest is resolved and Lux & Player Sexual Interest is resolved and Lux & Umbra First Mating is not resolved and a random chance of 1 in 2 succeeds:
+	Lux&UmbraFirstMatingEvent;
+
+to Lux&UmbraFirstMatingEvent: [Lux is mounted and bred by Umbra] [Mid Afternoon] [Near Entrance to Library]
+	if hp of Lux is 5: [Lux has sexual experience]
+		say "     [See Lost Directions Suggestion]";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+	else if hp of Umbra is 5: [Umbra has sexual experience]
+		say "     [See Lost Directions Suggestion]";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+	else: [Neither has sexual experience]
+		say "     [See Lost Directions Suggestion]";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+	if hp of Lux < 5:
+		now hp of Lux is 5;
+		now hunger of Lux is 1;
+	if hp of Umbra < 5:
+		now hp of Umbra is 5;
+		now hunger of Umbra is 1;
+	now Lux & Umbra First Mating is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Lux & Fang First Mating	"Lux & Fang First Mating"
+
+Lux & Fang First Mating is a situation.
+Prereq1 of Lux & Fang First Mating is Lux & Fang Sexual Interest.
+Prereq1Resolution of Lux & Fang First Mating is { 1 }.
+The level of Lux & Fang First Mating is 0.
+The sarea of Lux & Fang First Mating is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Lux is 4 and (TimekeepingVar is 1 or TimekeepingVar is -7) and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and Resolution of Lux & Fang Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Lux & Player Sexual Interest is resolved and Lux & Fang First Mating is not resolved and a random chance of 1 in 2 succeeds:
+	Lux&FangFirstMatingEvent;
+
+to say Lux&FangFirstMatingEvent: [Lux is mounted and bred by Fang] [Midnight] [In courtyard beneath Full Moon]
+	if hp of Fang is 2: [Omega]
+		say "     ";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+	else if (hp of Fang is 3 or hp of Fang is 4): [Alpha]
+		say "     ";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+	else: [Beta]
+		say "     ";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+	now hp of Lux is 5;
+	now hunger of Lux is 2;
+	now Lux & Fang First Mating is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Umbra & Fang First Mating	"Umbra & Fang First Mating"
+
+Umbra & Fang First Mating is a situation.
+Prereq1 of Umbra & Fang First Mating is Umbra & Fang Sexual Interest.
+Prereq1Resolution of Umbra & Fang First Mating is { 1 }.
+The level of Umbra & Fang First Mating is 0.
+The sarea of Umbra & Fang First Mating is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Umbra is 4 and (TimekeepingVar is 1 or TimekeepingVar is -7) and MaleList is not warded and MaleList is not banned and Resolution of Umbra & Fang Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Umbra & Player Sexual Interest is resolved and Umbra & Fang First Mating is not resolved and a random chance of 1 in 2 succeeds:
+	Umbra&FangFirstMatingEvent;
+
+to say Umbra&FangFirstMatingEvent: [Umbra is mounted and bred by Fang] [Midnight] [In courtyard beneath Full Moon]
+	if hp of Fang is 2: [Omega]
+		say "     ";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+	else if (hp of Fang is 3 or hp of Fang is 4): [Alpha]
+		say "     ";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+	else: [Beta]
+		say "     ";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+	now hp of Umbra is 5;
+	now hunger of Umbra is 2;
+	now Umbra & Fang First Mating is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Lux & Player First Mating	"Lux & Player First Mating"
+
+Lux & Player First Mating is a situation.
+Prereq1 of Lux & Player First Mating is Lux & Player Sexual Interest.
+Prereq1Resolution of Lux & Player First Mating is { 1 }.
+The level of Lux & Player First Mating is 0.
+The sarea of Lux & Player First Mating is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Lux is 4 and (TimekeepingVar is 3 or TimekeepingVar is -5) and player is not neuter and FemaleList is not warded and FemaleList is not banned and Resolution of Lux & Player Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Lux & Fang Sexual Interest is resolved and Lux & Player First Mating is not resolved and a random chance of 1 in 2 succeeds:
+	Lux&PlayerFirstMatingEvent;
+
+to say Lux&PlayerFirstMatingEvent: [Lux has sex with player] [Evening] [Near Entrance to Library]
+	if player is male: [Male or Herm]
+		if player is pure and (bodyname of player is "Feral Wolf" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
+			say "     ";
+			say "     ";
+			WaitLineBreak;
+			say "     ";
+			say "     ";
+		else: [Non-Wolf Scene]
+			say "     ";
+			say "     ";
+			WaitLineBreak;
+			say "     ";
+			say "     ";
+	else: [Female]
+		if player is pure and (bodyname of player is "Feral Wolf" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
+			say "     ";
+			say "     ";
+			WaitLineBreak;
+			say "     ";
+			say "     ";
+		else: [Non-Wolf Scene]
+			say "     ";
+			say "     ";
+			WaitLineBreak;
+			say "     ";
+			say "     ";
+	now hp of Lux is 5;
+	now hunger of Lux is 3;
+	now Lux & Player First Mating is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Umbra & Player First Mating	"Umbra & Player First Mating"
+
+Umbra & Player First Mating is a situation.
+Prereq1 of Umbra & Player First Mating is Umbra & Player Sexual Interest.
+Prereq1Resolution of Umbra & Player First Mating is { 1 }.
+The level of Umbra & Player First Mating is 0.
+The sarea of Umbra & Player First Mating is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Umbra is 4 and (TimekeepingVar is 3 or TimekeepingVar is -5) and player is not neuter and MaleList is not warded and MaleList is not banned and Resolution of Umbra & Player Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Umbra & Fang Sexual Interest is resolved and Umbra & Player First Mating is not resolved and a random chance of 1 in 2 succeeds:
+	Umbra&PlayerFirstMatingEvent;
+
+to say Umbra&PlayerFirstMatingEvent: [Umbra has sex with player] [Evening] [Near Entrance to Library]
+	if player is male: [Male or Herm]
+		if player is pure and (bodyname of player is "Feral Wolf" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
+			if player is submissive: [Player is Penetrated]
+				say "     ";
+				say "     ";
+				WaitLineBreak;
+				say "     ";
+				say "     ";
+			else: [Umbra is Penetrated]
+				say "     ";
+				say "     ";
+				WaitLineBreak;
+				say "     ";
+				say "     ";
+		else: [Non-wolf scene]
+			if player is submissive: [Player is penetrated]
+				say "     ";
+				say "     ";
+				WaitLineBreak;
+				say "     ";
+				say "     ";
+			else: [Umbra is penetrated]
+				say "     ";
+				say "     ";
+				WaitLineBreak;
+				say "     ";
+				say "     ";
+	else: [female]
+		if player is pure and (bodyname of player is "Feral Wolf" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
+			say "     ";
+			say "     ";
+			WaitLineBreak;
+			say "     ";
+			say "     ";
+		else: [Non-wolf scene]
+			say "     ";
+			say "     ";
+			WaitLineBreak;
+			say "     ";
+			say "     ";
+	now hp of Umbra is 5;
+	now hunger of Umbra is 3;
+	now Umbra & Player First Mating is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Lux & Carl First Mating	"Lux & Carl First Mating"
+
+Lux & Carl First Mating is a situation.
+Prereq1 of Lux & Carl First Mating is Lux & Carl Sexual Interest.
+Prereq1Resolution of Lux & Carl First Mating is { 1 }.
+The level of Lux & Carl First Mating is 0.
+The sarea of Lux & Carl First Mating is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Lux is 4 and hp of Carl is 10 and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and resolution of Lux & Carl Sexual Interest is 1 and (Lux & Carl First Mating is not resolved and Lux & Amy is not resolved) and a random chance of 1 in 2 succeeds:
+	Lux&CarlFirstMatingEvent;
+
+to say Lux&CarlFirstMatingEvent: [Lux is mounted and bred by Carl] [Pre Dawn] [Upstairs where Carl keeps watch]
+	say "     ";
+	say "     ";
+	WaitLineBreak;
+	say "     ";
+	say "     ";
+	now hp of Lux is 5;
+	now hunger of Lux is 4;
+	now Lux & Carl First Mating is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Umbra & Carl First Mating	"Umbra & Carl First Mating"
+
+Umbra & Carl First Mating is a situation.
+Prereq1 of Umbra & Carl First Mating is Umbra & Carl Sexual Interest.
+Prereq1Resolution of Umbra & Carl First Mating is { 1 }.
+The level of Umbra & Carl First Mating is 0.
+The sarea of Umbra & Carl First Mating is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Umbra is 4 and hp of Carl is 10 and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and resolution of Umbra & Carl Sexual Interest is 1 and (Umbra & Carl First Mating is not resolved and Umbra & Amy is not resolved) and a random chance of 1 in 2 succeeds:
+	Umbra&CarlFirstMatingEvent;
+
+to say Umbra&CarlFirstMatingEvent: [Umbra is mounted and bred by Carl] [Pre Dawn] [Upstairs where Carl keeps watch]
+	say "     ";
+	say "     ";
+	WaitLineBreak;
+	say "     ";
+	say "     ";
+	now hp of Umbra is 5;
+	now hunger of Umbra is 4;
+	now Umbra & Carl First Mating is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Lux & Amy First Mating	"Lux & Amy First Mating"
+
+Lux & Amy First Mating is a situation.
+Prereq1 of Lux & Amy First Mating is Lux & Amy Sexual Interest.
+Prereq1Resolution of Lux & Amy First Mating is { 1 }.
+The level of Lux & Amy First Mating is 0.
+The sarea of Lux & Amy First Mating is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Lux is 4 and (hp of Amy > 10 and hp of Amy < 13) and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and resolution of Lux & Amy Sexual Interest is 1 and (Lux & Carl First Mating is not resolved and Lux & Amy First Mating is not resolved) and a random chance of 1 in 2 succeeds:
+	Lux&AmyFirstMatingEvent;
+
+to say Lux&AmyFirstMatingEvent: [Amy is mounted and bred by Lux] [Pre Dawn] [Quiet (or not) corner of the library]
+	say "     ";
+	say "     ";
+	WaitLineBreak;
+	say "     ";
+	say "     ";
+	now hp of Lux is 5;
+	now hunger of Lux is 4;
+	now Lux & Amy First Mating is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Umbra & Amy First Mating	"Umbra & Amy First Mating"
+
+Umbra & Amy First Mating is a situation.
+Prereq1 of Umbra & Amy First Mating is Umbra & Amy Sexual Interest.
+Prereq1Resolution of Umbra & Amy First Mating is { 1 }.
+The level of Umbra & Amy First Mating is 0.
+The sarea of Umbra & Amy First Mating is "Nowhere".
+
+instead of going to Grey Abbey Library while hp of Umbra is 4 and (hp of Amy > 10 and hp of Amy < 13) and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and resolution of Umbra & Amy Sexual Interest is 1 and (Umbra & Carl First Mating is not resolved and Umbra & Amy First Mating is not resolved) and a random chance of 1 in 2 succeeds:
+	Umbra&AmyFirstMatingEvent;
+
+to say Umbra&AmyFirstMatingEvent: [Amy is mounted and bred by Umbra] [Pre Dawn] [Quiet (or not) corner of the library]
+	say "     ";
+	say "     ";
+	WaitLineBreak;
+	say "     ";
+	say "     ";
+	now hp of Umbra is 5;
+	now hunger of Umbra is 4;
+	now Umbra & Amy First Mating is resolved;]
 
 Lux & Umbra ends here.
