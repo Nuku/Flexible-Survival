@@ -333,7 +333,7 @@ This is the self examine rule:
 		if tail of Player is empty:
 			say "";
 		else:
-			say "[tail of Player]";
+			say "[tail of Player] ";
 	[Pregnancy Descriptions below]
 	if child is not born and gestation of child > 0:
 		if gestation of child < 10:

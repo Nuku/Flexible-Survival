@@ -234,11 +234,10 @@ to say Pet MuttSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is purefemale:
-		choose a blank row in table of fucking options;
-		now title entry is "Be bred like a bitch";
-		now sortorder entry is 1;
-		now description entry is "Submit to breeding by [PetMuttName]";
+	choose a blank row in table of fucking options;
+	now title entry is "Be bred like a bitch";
+	now sortorder entry is 1;
+	now description entry is "Submit to breeding by [PetMuttName]";
 	[]
 	if player is not neuter:
 		choose a blank row in table of fucking options;

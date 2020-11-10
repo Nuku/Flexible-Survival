@@ -1016,13 +1016,14 @@ to say ResolveEvent Dog Chase:
 
 an everyturn rule:
 	if HP of Joanna is 0 or HP of Joanna >= 90:
-		if daytimer is night and Joanna is not in PALOMINO:
-			now Joanna is in PALOMINO;
-		else:
-			now Joanna is nowhere;
-	else:
-		if Joanna is not in Flower Garden:
-			now Joanna is in Flower Garden;
+		if daytimer is night: [non-plant Joanna is partying]
+			if Joanna is not in PALOMINO: [she's not in her party spot]
+				now Joanna is in PALOMINO; [let's move her there]
+		else: [during the day, she's out sleeping or scavenging]
+			now Joanna is nowhere; [off to the void]
+	else: [plant Joanna]
+		if Joanna is not in Flower Garden: [she really should be there]
+			now Joanna is in Flower Garden; [planting]
 
 [  - moved to Harold's conversation tree -
 instead of conversing the Harold while level of Player >= 9 and HP of Joanna is 92 and joannaharoldtalk is 0:

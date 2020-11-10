@@ -309,9 +309,6 @@ instead of going to Zoo Restrooms while Becoming the Wolftaur's Beta is unresolv
 	move player to Zoo Restrooms;
 	BecomingtheWolftaur'sBetaEvent;
 
-Instead of resolving Becoming the Wolftaur's Beta:
-	BecomingtheWolftaur'sBetaEvent;
-
 to BecomingtheWolftaur'sBetaEvent:
 	say "     Entering the restrooms, you are surprised to find Lindsey not in his usual position admiring himself in the mirror. You are about to turn around when a deep voice growls, 'Stay where you are and show me your [if player is female]holes[else]hole[end if].' You are mildly concerned for a moment that some stranger has ambushed you until they start chuckling. 'You should have seen how your body tensed up, you looked like you were about to shitting yourself,' Lindsey laughs, reverting to their usual voice. Turning around to [if player is dominant]give the wolftaur a piece of your mind[else]express your relief[end if], you are halted by a firm hand to the side of the head. 'I gave you an order bitch, get to it.' The authority in his voice sends shivers through your body and you obediently take a few steps backwards before [if player is not naked]undressing and[end if]leaning over one of the basins and spreading your ass for your superior to gaze upon your behind. 'That's a good bitch. Good behavior gets rewarded, something my other bitch sometimes forgets at times. I'm going to shoot my load in you. then, as if that wasn't reward enough in itself, we'll discuss some further perks to being such a well-behaved slut for me,' Lindsey roughly croons in your ear as he shuffles up behind you and aligns himself with your anus for penetration.";
 	if BodyName of Player is "Wolftaur" and player is pure:

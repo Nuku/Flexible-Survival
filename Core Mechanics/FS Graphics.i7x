@@ -166,6 +166,9 @@ Figure of VixenNurse_icon is the file "VixenNurse_ig.jpg".
 Figure of Vixentaur_icon is the file "vixentaur_ig.jpg".
 Figure of Wolftaur_hard_icon is the file "Wolftaur_hard.jpg".
 Figure of Wolftaur_soft_icon is the file "Wolftaur_soft.jpg".
+Figure of Wereraptor_female_icon is the file "Wereraptor_female.jpg".
+Figure of Wereraptor_male_hard_icon is the file "Wereraptor_male_hard.jpg".
+Figure of Wereraptor_male_soft_icon is the file "Wereraptor_male_soft.jpg".
 Figure of Werewolf_female_icon is the file "Werewolf.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
 Figure of Wood_Elf_icon is the file "Wood Elf.jpg".
@@ -1130,6 +1133,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Warrior Chris_clothed"	Figure of Warrior Chris_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Warrior Chris_naked"	Figure of Warrior Chris_naked_icon	"Kupo Klein"	g-white	"normal"
 "Werewolf (female)"	Figure of Werewolf_female_icon	"Watsup"	g-white	"normal"
+"Wereraptor female"	Figure of Wereraptor_female_icon	"Vashaa"	g-white	"normal"
+"Wereraptor male hard"	Figure of Wereraptor_male_hard_icon	"Vashaa"	g-white	"normal"
+"Wereraptor male soft"	Figure of Wereraptor_male_soft_icon	"Vashaa"	g-white	"normal"
 "Wildcat"	Figure of Wildcat_icon	"Strype"	g-white	"normal"
 "Wolftaur_hard"	Figure of Wolftaur_hard_icon	"Vashaa"	g-white	"normal"
 "Wolftaur_soft"	Figure of Wolftaur_soft_icon	"Vashaa"	g-white	"normal"
@@ -1355,6 +1361,7 @@ carry out artistcredits:
 	say "     Vixentaur by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Vixen Nurse by KV1NN4 @ furaffinity.net[line break]";
 	say "     Voodoo Gecko by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Wereraptor by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Werewolf (female) by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
 	say "     Wolftaur by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
