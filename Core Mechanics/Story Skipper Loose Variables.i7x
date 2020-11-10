@@ -3723,11 +3723,8 @@ to VariableTextLoad:
 		say "Restoring Texts...";
 		read File of TextSave into the Table of GameTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTexts:
-			[
 			if there is no TextVarValue in row x of the Table of GameTexts:
-				debug at level 4 say "Skipping empty text [TextVarName in row x of the Table of GameTexts].[line break]";
 				next;
-			]
 			choose row x in the Table of GameTexts;
 			[
 			if debug is at level 10:
