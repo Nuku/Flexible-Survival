@@ -15,6 +15,7 @@ Section 1 - Creature Responses
 
 to say sirendesc:
 	setmongender 3; [creature is male]
+	project Figure of Siren_clothed_icon;
 	choose row MonsterID from the Table of Random Critters;
 	if "Female Preferred" is listed in feats of Player:
 		now sex entry is "Female";
@@ -50,6 +51,7 @@ to say sirendesc:
 
 
 to say losetosiren:
+	project Figure of Siren_naked_icon;
 	let tempnum be 0;
 	say "     With the siren's song filling your mind, you become enraptured and stop resisting the beautiful creature. He grins down at you with his sharp teeth and you smile back up at him happily. He pushes you down onto all fours and spreads your legs, still singing softly as he gets his twin meat logs lined up with [if Cunt Count of Player is 1]your pussy and asshole[else if Cunt Count of Player > 1]your pussies[else]your asshole[end if].";
 	if Player is female:

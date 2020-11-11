@@ -52,6 +52,18 @@ Version 1 of Chris by Wahn begins here.
 
 [TODO: Add cross-content if the player starts a tribe with Urik ]
 
+TestChris is an action applying to nothing.
+understand "TestChris" as TestChris.
+
+check TestChris:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out TestChris:
+	now Chris is in Sitting Area;
+	now HP of Chris is 1;
+
 Table of GameCharacterIDs (continued)
 object	name
 Chris	"Chris"
@@ -82,7 +94,6 @@ SexuallyExperienced of Chris is false.
 The MainInfection of Chris is "Orc Warrior".
 Description of Chris is "[ChrisDesc]".
 Conversation of Chris is { "Mew!" }.
-The icon of Chris is Figure of Chris_clothed_icon.
 WarriorChrisPlayerFucked is a number that varies. [number of times the player has been fucked by warrior Chris]
 WarriorChrisDominance is a number that varies.
 ChrisPlayerOffspring is a number that varies.
@@ -96,14 +107,21 @@ a postimport rule: [bugfixing rules for players that import savegames]
 	else if Libido of Chris is 1:
 		now the icon of Chris is Figure of OrcBreeder_random_icon;
 
+
+[ lust of Chris                                            ]
+[ 0 = not pregnant                                         ]
+[ 1-12 = lightly pregnant                                  ]
+[ 13-24 = full visibly pregnant                            ]
+
 to say ChrisDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [HP of Chris]; Strength of Chris: [Strength of Chris]; Intelligence of Malik: [Intelligence of Malik]; Libido of Malik: [Libido of Malik]<- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Chris]; Strength of Chris: [Strength of Chris]; Libido of Chris: [libido of Chris]; Intelligence of Malik: [Intelligence of Malik]; Libido of Malik: [Libido of Malik]<- DEBUG[line break]";
 	if Libido of Chris is 0: [half-orc Chris]
 		project the Figure of Chris_clothed_icon;
 		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. Still, the sleeveless shirt he found to wear is stretched tight over his hard pecs and abs, providing quite a nice sight. His other articles of clothing are a pair of shorts and some designer undies (known to be 'roomy' at the front), both of which ride pretty low, letting you glimpse the trimmed bush of his pubes. Something tells you that he'd be ready to push them off completely in a heartbeat, letting free the cock showing in a respectively sized bulge at the front. Chris's features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Mid-length dark brown hair completes the picture of a very handsome man. As Chris notices your intense gaze upon him, he smiles back at you, giving a little wave with his hand.";
 	else if Libido of Chris is 1: [breeder Chris]
-		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of an average-sized cock in them. His features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two small tusks protrude from his lower mandible, looking rather cute, compared to a real orc's. Long, silky black hair hanging down over his shoulders completes the picture of a very handsome man. As Chris notices your intense gaze upon him, he presents himself for your viewing pleasure, turning to show off his well-rounded ass. He really takes after his father, now that he's become an orc breeder.";
+		project Figure of OrcBreeder_random_icon;
+		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of an average-sized cock in them. His features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two small tusks protrude from his lower mandible, looking rather cute, compared to a real orc's. Long, silky black hair hanging down over his shoulders completes the picture of a very handsome man. As Chris notices your intense gaze upon him, he presents himself for your viewing pleasure, turning to show off his well-rounded ass. He really takes after his father, now that he's become an orc breeder. [if Lust of Chris > 12]His belly bulges hugely, showing the life-giving baby bump of a pregnant orc. Most likely he'll give birth in the next day or two. [else if Lust of Chris > 0]His belly shows a slight curve, allowing you to guess that he's gotten pregnant recently. Sometime in the next few days, there'll be a new orcling born. [end if][line break]";
 		if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
 			if Stamina of Chris > 4:
 				say "     As a result of the many virile loads you pumped into Chris, the library has become the haven of a population of orcs. Your orc breeder sons usually hang out with their breeder-dad, reading books, talking and often brushing or braiding each other's hair, with the odd playful wrestling match coming up then and when. Or maybe not so playful, as both participants usually end up with erections and they find themselves in a tangle of naked limbs, making out as they grind against one another.";
@@ -479,6 +497,7 @@ to say ChrisSex3: [the player fucks Chris]
 					WaitLineBreak;
 					say "     You go all out, reveling in the domination of the young man underneath you, then finally thrust balls-deep and erupt into his hole yet again, adding a second load of fresh cum to the first. Feeling himself be bred by his [if thirst of Val is 2]father[else][master][end if] is enough to send the breeder over the edge without him ever touching his own dick, simply digging his hands into the material of the mattress as he comes all over it. By the time your spurts of cum eventually ebb off, the orc is completely overtaxed with the effects of two loads churned up inside him. Chris sinks down on the stained mattress unconscious, smeared with seed and having cum-drunk dreams of his [if thirst of Val is 2]daddy[else][master][end if] breeding him. You simply leave him there, glancing back over your shoulder with a smirk as you wander off afterwards.";
 					add "Breeder_Slut" to Traits of Chris;
+				impregChrisChance with "Player";
 				now Libido of Chris is 1;
 		else: [regular finish with cum]
 			say "     Given the wild ride you're giving Chris, it's no big wonder that he soon moans 'Almost ready *pant* to cum'. Reaching between his legs to grab his hard cock, you stroke it a few times, aiming it at Chris's head with a grin. Just a second later, the orc gives a satisfied grunt and starts to tremble and twitch with each shot of his cum that blasts from his cock... to splatter his face. The orc's anal muscles flex around your cock at the same time, which gives you the rest too in short order. As you feel the orgasm rapidly approaching, you drive into your partner's deliciously tight asshole one last time, grinding your hips against his as you fill him with your seed.";
@@ -502,6 +521,7 @@ to say ChrisSex3: [the player fucks Chris]
 		else:
 			say "!' ";
 		say "the orc moans, content to just lie with you like that for a while.";
+		impregChrisChance with "Player";
 	else if Libido of Chris is 2:
 		say "     Walking up to Chris, you tell him that you'd love to have some fun with him, giving a little nod to your crotch and staring at his ass as you do. The young orc grins as he looks down and sees the bulge in your pants, saying 'So? If you wanna have fun, just let ME fuck YOU. I'll show you a good time alright!' Changing your approach, you playfully insinuate that it's okay and you won't hold it against him that he's afraid of taking your whole shaft. 'What? No! I'm not afraid of anything. I'll show you!' he grunts, then undoes his shorts and lets them drop before stomping over towards his mattress. The muscular orc gives you a determined look, then lies down and proceeds to pull up his legs, holding them spread open for you to present his asshole. 'Well then - get going! I'm waiting!' he growls.";
 		say "     Eager to join Chris between (or rather on top of) the sheets, you hurriedly throw off your gear and clothing and get down on the mattress yourself. Leaning forward, you grab the young man's already fully hard cock, licking the hot and hard pole slowly before moving lower as you jerk him with your hands. The orc gives an aroused gasp as you lap over his balls, then encircle one of them with your lips and suck on it, before finally arriving at his invitingly quivering hole. You bury your nose between his firm cheeks, breathing in Chris's own masculine scent, and lap along his crack, then seek out the pucker with the tip of your tongue and stick it in. There is something very gratifying about the way you can make this gruff man quiver and pant by just wiggling your tongue a little bit as you eat out his ass.";

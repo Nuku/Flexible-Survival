@@ -146,6 +146,8 @@ Figure of Sabretooth_hard_icon is the file "Sabretooth_hard.jpg".
 Figure of SeaDragon_hard_icon is the file "Sea Dragon hard.jpg".
 Figure of SeaDragon_soft_icon is the file "Sea Dragon soft.jpg".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
+Figure of Siren_clothed_icon is the file "Siren_clothed.jpg".
+Figure of Siren_naked_icon is the file "Siren_naked.jpg".
 Figure of SnowBat_icon is the file "SnowBat_ig.jpg".
 Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
 Figure of SpartanHelot_icon is the file "Spartan_Helot.jpg".
@@ -1064,6 +1066,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sidney_wusky"	Figure of Sidney_wusky_Icon	"Anymouse1968"	g-white	"normal"
 "Sidney_vixen"	Figure of Sidney_vixen_Icon	"Anymouse1968"	g-white	"normal"
 "Sidney_clothed"	Figure of Sidney_clothed_Icon	"Anymouse1968"	g-white	"normal"
+"Siren_clothed"	Figure of Siren_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Siren_naked"	Figure of Siren_naked_icon	"SteppeCrow"	g-white	"normal"
 "Skunkbeast Lord"	Figure of SkunkbeastLord_icon	"MoT"	g-black	"normal"
 "Snow"	Figure of Snow_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Snow Bat"	Figure of SnowBat_icon	"Rosali"	g-black	"normal"
@@ -1507,6 +1511,7 @@ carry out artistcredits:
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";
 	say "     Stella by Furball @ furaffinity.net[line break]";
 	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Siren by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Skarnoth by Kien-Biu @ http://nsfwbetitngoan.tumblr.com/[line break]";
 	say "     Snow by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
