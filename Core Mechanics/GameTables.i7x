@@ -1566,6 +1566,7 @@ Name(text)	Type(text)
 "pfphair"	"text"
 "pfpskin"	"text"
 "PlayerClass"	"text"
+"PlayerName"	"text"
 "ppcolor"	"text"
 "PronounChoice"	"text"
 "sangr"	"text"

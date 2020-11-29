@@ -59,54 +59,7 @@ RestoreMode is a truth state that varies. RestoreMode is usually false. [for res
 
 Part 1 - Game Start Autofires
 
-When play begins:
-	adjustdefaulthelp; [adjusts help menu]
-	let tempname be indexed text;
-	repeat with q running from 1 to the number of rows in the table of game objects:
-		add name in row Q of table of game objects to allobjs;
-		choose row q in the table of game objects;
-		now tempname is Name entry in lower case;
-		now sortName entry is tempname;
-	sort the table of game objects in sortname order;
-	now the right hand status line is "[list of valid directions]";
-	say "Before the game begins..."; [warn the player what to expect next]
-	say "Do you want hyperlinks? (Y/N)[line break]";
-	if Player consents:
-		now hypernull is 0;
-	else:
-		now hypernull is 1;
-	repeat with x running through featsets:
-		now x is a part of Player; [TODO: Investigate if this is actually needed]
-	if ScenarioChosen is 1: [sets name of scenario for menu based on preset]
-		now scenario is "Bunker";
-	else if ScenarioChosen is 2:
-		now scenario is "Caught Outside";
-	else if ScenarioChosen is 3:
-		now scenario is "Rescuer Stranded";
-	else if ScenarioChosen is 4:
-		now scenario is "Forgotten";
-	else if ScenarioChosen is 5:
-		now scenario is "Researcher";
-	else:
-		now ScenarioChosen is 1;
-		now scenario is "Bunker";
-	if AnalLevel < 1 or AnalLevel > 3, now AnalLevel is 2;
-	if WSLevel < 1 or WSLevel > 3, now WSLevel is 2;
-	if OvipregLevel is not 1, now OvipregLevel is 2;
-	increase the score by 10;
-	let pointlessbump be 0;
-	now MonsterID is a random number from 1 to number of filled rows in the Table of Random Critters;
-	choose row MonsterID in Table of Random Critters;
-	regularstart; [original start method. easier to move everything then leave here]
-
-When play begins (this is the graphics window construction rule):
-	if NewGraphics is true: [Build window regardless in case player decides to turn it on later]
-		now the graphics window proportion is NewGraphicsRatio;
-		build graphics window;
-		[now the graphics window pixel count is 1;]
-		follow the ngraphics_blank rule;
-		follow the current graphics drawing rule;
-		now NewGraphicsOpened is true;
+[moved to the end of the story.ni so the other when play begins come first]
 
 Part 2 - Start Menu Functions
 
@@ -261,10 +214,10 @@ to say gsopt_start:
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	sort Table of Random Critters in lev order;
 	if scenario is "Caught Outside":	[processes infection data first, then clears so intro text can remain intact]
-		randominfect;
-		randominfect;
-		randominfect;
-		randominfect;
+		weakrandominfect;
+		weakrandominfect;
+		weakrandominfect;
+		weakrandominfect;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	[Code for letting player select graphics window size]
 	if NewGraphics is true:
@@ -396,10 +349,10 @@ to say silent_start:
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	sort Table of Random Critters in lev order;
 	if scenario is "Caught Outside": [processes infection data first, then clears so intro text can remain intact]
-		randominfect;
-		randominfect;
-		randominfect;
-		randominfect;
+		weakrandominfect;
+		weakrandominfect;
+		weakrandominfect;
+		weakrandominfect;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	[Code for letting player select graphics window size]
 	say "[bold type]Graphic Settings[roman type][line break]";

@@ -1005,11 +1005,6 @@ to say badAlexandraFang1: [let Fang fuck her]
 	now lastdobiemess is 99; [last used by Fang]
 	impregAlexandraChance with "Fang";
 	NPCSexAftermath Alexandra receives "PussyFuck" from Fang;
-	now HP of Fang is 3; [Fang becomes alpha]
-	increase Cock Length of Fang by 2;
-	increase Ball Size of Fang by 1;
-	now XP of Alexandra is 0;
-	now vmusedone of Fang is false; [Open for fresh musings]
 	now Libido of Player is Libido of Player / 2;
 	WaitLineBreak;
 

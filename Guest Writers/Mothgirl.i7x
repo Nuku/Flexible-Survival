@@ -10,7 +10,7 @@ Section 1 - Creature Responses
 mothgirlnosex is a number that varies.
 Mothdefeat is a number that varies.
 
-to say Moth attack:
+to say Mothgirl wins:
 	now mothgirlnosex is 0;
 	if Mothdefeat is 0: [ first time losing to a moth ]
 		say "     The Mothgirl, grinning at its newfound victim, rubs her hands together, conjuring a mote of light blue dust into her palms before she blows it over your exposed face. Inhaling the dust you feel tipsy and aroused, the girl exploiting your vulnerable state to grind her breasts against your [if Nipple Count of Player > 0]own [breast size desc of Player] curvature[else][bodydesc of Player] torso[end if] before sharing a light kiss on your lips, immediately departing thereafter. She leaves you only with the soft whisper of 'enjoy', and as you regain your senses it becomes clear that her ill-meaning affection has had some influence upon you, clouding your mind and leaving you more aroused.";
@@ -42,7 +42,7 @@ to say Moth attack:
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
 
 
-to say mothgirl defeat:
+to say Mothgirl loses:
 	if mothgirlnosex > 2:
 		say "     Defeated, the mothgirl stumbles onto the sandy ground with a soft moan. Her wings hang low and she looks up at you defiantly despite having lost. As you have with her kind before, you decide to let her go. Slowly, she scrambles to her feet and flies off, no doubt to recover from her loss.";
 	else:
@@ -88,8 +88,8 @@ When Play begins:
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She hits you on the cheek with her hand[or]A kick lands upside your face as the moth girl turns in midair[or]The mothgirl punches you in the gut with her fist[or]The mothgirl rams her butt into your face[at random]."; [Text used when the monster makes an Attack]
-	now defeated entry is "The mothgirl slumps onto the ground with a sigh and tries to protect herself with her fragile wings."; [ Text or say command used when Monster is defeated.]
-	now victory entry is "[Moth attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now defeated entry is "[Mothgirl loses]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is "[Mothgirl wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 4]     In your travels, you are suddenly accosted by a diminutive girl adorned in only a pair of moth wings and similarly moth-like fur around her neck. [one of]Blue[or]Gray[or]Hazel[or]Green[or]Lavender[or]Brown[at random] eyes agleam like jewels, the gray-skinned creature advances upon you, intent on attacking you, though you imagine she'd be a bit more intimidating if she wasn't stark naked."; [ Description of the creature when you encounter it.]
 	now face entry is "a feminine visage looking with bright eyes"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "has been reduced down to about five feet tall and has a light, curvy form. You have moth that, wings with each flap, leave a trail of small dust behind you"; [ Body Description, format as "Your Body is (your text)"]

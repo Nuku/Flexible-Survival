@@ -69,7 +69,7 @@ The slot of hellhound collar is "neck".
 
 to say HCollarDesc:
 	say "     A sturdy leather collar, complete with very solid buckle and an inverted pentagram branded into the material, right where the throat of the wearer would be.";
-		now hellhound collar is equipped;
+	now hellhound collar is equipped;
 
 instead of sniffing hellhound collar:
 	say "     The collar smells like leather, and a hint of sulfur too.";

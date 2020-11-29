@@ -230,7 +230,6 @@ carry out navigating:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	if HP of Velos > 2, move Velos to the noun;
 	now Player is in noun;
-	try looking;
 	follow the ngraphics_blank rule;
 	follow turnpass rule;
 

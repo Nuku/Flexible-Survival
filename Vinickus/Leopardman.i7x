@@ -9,22 +9,14 @@ Section 1 - Creature Responses
 to say leopardman desc:
 	project Figure of Leopardman_soft_icon;
 	setmongender 3;  [creature is male]
-	if artleopardfight is 3:	[Description for Art Collector event]
-		say "     As the leopardman growls again and stalks towards you, you get a good look at the powerful feline male. His strong body is covered with leopard-like fur, and as he rises up to two feet and flexes his claw-tipped hands, you get a very good look at his rather erect feline cock. Looking around quickly, you realize the leopardman has moved to block your exit. As you prepare to fight, you can see a playful grin cross the muzzle of the obviously aroused feline. '[one of]You'll pay for this interruption[or]I don't have time, you wretched thief[or]Let's get this over with quick. I have more important matters to deal with[or]I'm going to turn you in a scratching post[in random order],' he says as he leaps forward after his prey. Already weakened from your long climb, you hope you're still up for a fight.";
-	else if inasituation is true:
+	if inasituation is true:
 		say ""; [dealt with at the event source]
 	else:
 		say "     As you wander the deserted streets of the city, all of a sudden a large form jumps down into the street in front of you. As it stalks towards you, you get a good look at the powerful feline man. His strong body is covered with leopard-like fur, and as he rises up to two feet and flexes his claw-tipped hands, you get a very good look at his rather erect feline cock. Looking around quickly, you realize the leopardman waited until it was far too late for you to run before he leaped down from his hiding spot. As you prepare to fight, you can see a playful grin cross the muzzle of the obviously aroused feline. [one of]'This should be fun,' [or]'Let's play leopard and mouse, shall we?' [or]'I like it when they struggle a bit,' [or]'You look like you will make a fine Leopardess...' [or]'Let's see how long you can resist me, little prey...' [at random]he says as he leaps forward after his prey.";
 
-to say Leopardman attack:
+to say Leopardman wins:
 	project Figure of Leopardman_hard_icon;
-	if artleopardfight is 3:
-		now artleopardfight is 2;
-		if HP of Player > 0:
-			say "     You surrender yourself to the powerful feline, begging for his mercy but finding none in his cold, steely eyes.";
-		else:
-			say "     You are beaten by the powerful feline, knocked to the ground and pushed away from the prize you sought.";
-	else if inasituation is true:
+	if inasituation is true:
 		say ""; [dealt with at the event source]
 	else if Player is female:
 		say "     'That's it, I knew you couldn't resist a sexy cat like me for much longer, and now we can have some real fun with that lusty little pussy of yours...' the leopardman says with amusement as you abandon any further attempt at resistance and lie there helplessly sprawled out in front of the male beast. You find your heart beating faster as he stalks closer to you, his powerful male scent filling your mind with lust even as he moves his spotted feline form over you. You gasp as one of his clawed hands trails up the inside of your thighs teasingly, the feel of his soft hands tracing up your [bodydesc of Player] body making you moan with arousal, and causes the leopard to grin as he reaches your already damp female mound and rubs it teasingly.";
@@ -54,16 +46,12 @@ to say Leopardman attack:
 		infect "Leopardman";
 
 
-To say Leopardman loss:
+To say Leopardman loses:
 	project Figure of Leopardman_hard_icon;
 	if inasituation is true:
 		say ""; [dealt with at the event source]
 	else:
-		if artleopardfight is 3:
-			now artleopardfight is 1;
-			say "     The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. You are quick to act after that, jumping at him and pinning him to a nearby office wall. With a grin, you think up some things you could do with this virile man.";
-		else:
-			say "     The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. You don't give him a chance to react. With quick reflexes, you soon have him pinned to a nearby brick wall. It's got holes galore, and frankly isn't that stable, but you have the advantage, and you doubt he can topple anything in his weekend state.";
+		say "     The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. You don't give him a chance to react. With quick reflexes, you soon have him pinned to a nearby brick wall. It's got holes galore, and frankly isn't that stable, but you have the advantage, and you doubt he can topple anything in his weekend state.";
 		LineBreak;
 		say "What do you want to do with the Leopardman?";
 		now sextablerun is 0;
@@ -181,8 +169,8 @@ When Play begins:
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The leopardman swipes at you with his sharp claws![or]The leopardman pounces you playfully![or]He darts forward quickly and lashes out with a closed fist![or]The leopardman pauses for a second to watch you carefully, before darting forward and swiping at your legs, knocking you down![or]The leopardman grabs your arms with his hands, and leans forward to give you a teasing kiss before releasing you.[or]He charges forward and knocks you into a wall, pinning you for a second while he rubs his soft fur against you.[at random]";
-	now defeated entry is "[Leopardman loss]";
-	now victory entry is "[Leopardman attack]";
+	now defeated entry is "[Leopardman loses]";
+	now victory entry is "[Leopardman wins]";
 	now desc entry is "[leopardman desc]";
 	now face entry is "broad, sexy feline muzzle, with golden, slit-pupiled eyes and rounded feline ears sitting atop your new leopard-like face"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "powerful and lean, your well-muscled form carried easily on your powerful legs, their muscles designed for leaping and climbing, which rest easily on your rather paw-like feet. Your hands are tipped with sharp claws, easily suited for both combat and climbing"; [ Body Description, format as "Your Body is (your text)"]

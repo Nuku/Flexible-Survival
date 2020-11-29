@@ -266,7 +266,9 @@ after going to Burned-Out Chapel while (Atticus_Payback is not resolved and Atti
 		wait for any key;
 		choose a row with name of "Hellfire Demon" in the Table of Random Critters;
 		decrease wdam entry by 7; [he's fighting one-armed]
+		now inasituation is true;
 		challenge "Hellfire Demon";
+		now inasituation is false;
 		increase wdam entry by 7; [reset]
 		if fightoutcome < 20: [player won]
 			say "     One more hit sends the hellfire demon stumbling backwards, then falling over onto his ass. With a growl, Corpegh raises his hand and you see a red glow start to grow in the middle of his palm, only to vanish again as a (thankfully only slightly singed) Atticus steps up from behind the demon, tapping his arm with the baseball bat and distracting him. 'I wouldn't do that if I were you,' your son tells the other demon with a grin on his face. 'Between daddy and me, you've got no chance!' he adds, nodding your way. The red-skinned demon grimaces at the indignity, then chokes out the words, 'Fine. You beat me, fuckers! So what do you want now?! You can't be here just because you were in a particularly violent mood this morning.' Stepping in front of him, Atticus looks down at Corpegh and says, 'We want what you made me trade a blowjob for and then thought you could cheat me out of. Plus maybe a little compensation for having to track you down and beat your ass to get you to listen!'";
@@ -592,18 +594,16 @@ to say AtticusRoomDesc:
 	say "     You're in a mid-sized bedroom on the top floor of an apartment building at the very edge of the red light district. The former owners seem to have done their best to keep the place clean, and it is filled with simple, but sturdy furniture. Since taking over the apartment, Atticus has added in some nice flourishes and creature comforts, as you can see a range of clothes, sex toys and black silk sheets on the bed that surely weren't part of the inventory before. Overall, the place has a fairly nice feel to it, and something tells you that you're one of the few people he's ever taken up here. Being an incubus, the young man has no qualms about fucking his partners wherever, and he keeps is home as a special place.";
 
 to connect Atticus's Bedroom:
-	now Atticus's Bedroom is above Boundary Street East ;
-	now Boundary Street East is below Atticus's Bedroom;
+	change the down exit of Atticus's Bedroom to Boundary Street East;
+	change the up exit of Boundary Street East to Atticus's Bedroom;
 
 instead of going up from Boundary Street East:
 	say "     You make a beeline over to the apartment building Atticus lives in, taking hold of the thin fishing line barely visible dangling beneath the fire escape. Giving it a slow pull, the metal stairway swings down, allowing you to climb up and reach the entrance to the young incubus's bedroom on the top floor. Pulling the window open, you slip into the room.";
 	now Player is in Atticus's Bedroom;
-	try looking;
 
 instead of going down from Atticus's Bedroom:
 	say "     You climb out of the window, stepping onto the metal grating of the fire escape. From there, it's just a question of walking down several sets of metal stairs to reach the street level. As you step off the last step, the stairs swing up, out of reach of casual passersby. Of course, you know that there's actually a barely visible fishing line dangling off the swinging stairs, so you can return to Atticus's home anytime you want.";
 	now Player is in Boundary Street East;
-	try looking;
 
 [***********************************************************]
 [***********************************************************]

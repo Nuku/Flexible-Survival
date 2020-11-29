@@ -981,21 +981,31 @@ to randominfect: [bypasses researcher protection]
 	weakrandominfect;
 	now researchbypass is 0;
 
+[
+to randomInfect:
+	let RandomRow be a random number from 1 to the number of rows in the Table of Random Critters;
+	choose row RandomRow from the Table of Random Critters;
+	while area entry is "Nowhere": [runs circles until it finds an available creature]
+		now RandomRow is a random number from 1 to the number of rows in the Table of Random Critters;
+		choose row RandomRow from the Table of Random Critters;
+	infect Name entry;
+]
+
 to weakrandominfect: [does not bypass researcher protection]
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
-	if BannedStatus entry is true: [banned creatures can't be challenged]
-		if debugactive is 1:
-			say "DEBUG -> Can't infect with creature [Name entry] because it has Banned: [BannedStatus entry][line break]";
-	else:
-		while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true or area entry is "Nowhere":
-			increase MonsterID by 1;
-			choose row MonsterID from Table of Random Critters;
-			if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true or area entry is "Nowhere":
-				next;
-			break;
-		infect;
+	while there is a non-infectious in row MonsterID of Table of Random Critters and (non-infectious entry is true or area entry is "Nowhere"):
+		increase MonsterID by 1;
+		choose row MonsterID from Table of Random Critters;
+		if there is a non-infectious in row MonsterID of Table of Random Critters and (non-infectious entry is true or area entry is "Nowhere"):
+			next;
+		if BannedStatus entry is true: [banned creatures can't be used to infect]
+			if debugactive is 1:
+				say "DEBUG -> Can't infect with creature [Name entry] because it has Banned: [BannedStatus entry][line break]";
+			next;
+		break;
+	infect;
 
 Part 5 - SetMonster Function
 

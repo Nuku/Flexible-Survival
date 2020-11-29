@@ -223,20 +223,24 @@ to say wereraptordesc:
 	say "     You find yourself faced with a lizard-human hybrid which you quickly realize is some kind of velociraptor creature. Its torso and arms are much like that of a human, but with the muscled legs, tail and head of a velociraptor";
 	if wrmode is 1:
 		setmongender 4; [creature is female]
+		project Figure of Wereraptor_female_icon;
 		say ". And a female one at that. Leaning over in a stance typical for raptors, her breasts can clearly be seen at her chest. While her hands have smaller claws on them, those on her feet seem quite large, especially the long sickle-like one. Both have only three digits on them. Her scales are a deep blue over most of her body, shifting almost to black over her head, back and the top of her tail. She stares at you with a feral wildness to her yellow eyes and takes a step forward. She hisses at you before charging forward in a rush.";
 	else:
 		setmongender 3; [creature is male]
+		project Figure of Wereraptor_male_soft_icon;
 		say ". And a male one at that. Leaning over in a stance typical for raptors, his dripping maleness can clearly be seen between his muscular legs. While his hands have smaller claws on them, those on his feet seem quite large, especially the long sickle-like one. His scales are a deep blue over most of his body, shifting to a dark green across his head, back and the top of his tail. He stares at you with a feral wildness to his yellow eyes and takes a step forward. He hisses at you before charging forward in a rush.";
 
 
 to say losetowereraptor:
 	if BodyName of Player is "Wereraptor":
 		if wrmode is 1:
+			project Figure of Wereraptor_female_icon;
 			if Player is male:
 				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath her. You are momentarily worried that she might maul you with those sharp claws of hers, but she instead releases a triumphant roar and grinds her hips down onto yours. Catching the scent of her lust, your excitement grows and your feral nature takes over. You grind your cock up against her, roaring as one as you penetrate her. She rides you rough and hard, her claws digging into you as she rides your stiff cock. The feel of your [Cock of Player] shaft sliding into her is just what your wereraptor body needs to satisfy its lustful desires. You nip and lick at one another while in the throes of wild, primitive lust until you cry out again, cumming hard to fill her womb with your saurian seed.";
 			else:
 				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath her. You are momentarily worried that she might maul you with those sharp claws of hers, but she instead releases a triumphant roar and turns around, pressing her hindquarters, and more specifically her dripping snatch, into your face. With the scent of the lustful wereraptor right in front of you, your excitement grows and your feral nature takes over. You bury your nose between her legs and start licking wildly at her pussy, lapping up her heated juices and getting a roar of pleasure from her[if Player is female]. You roar in return as she sets to licking at your juicy cunt in return[end if]. In the throes of her lust, her claws dig into you but you hardly notice, your wild and primitive lust driving you to lick until [if Player is female]you both cum loudly with another hissing roar[else]she cums with another loud, hissing roar[end if].";
 		else:
+			project Figure of Wereraptor_male_hard_icon;
 			if Player is female and a random chance of 3 in 4 succeeds:
 				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath him. You are momentarily worried that he might maul you with those sharp claws of his, but he instead releases as triumphant road and grinds his hard cock against your rear. Catching the scent of his lust, your excitement grows and your feral nature takes over. You spread your legs and raise your tail, hissing your need for the strong male to mount you. Grabbing your shoulders with his clawed hands, he climbs atop you and drives his pulsing rod into you, making you both roar in pleasure. He pounds into you rough and hard, his claws digging into you as he thrusts into your juicy cunt like the primitive beast he is. He nips and licks along your neck, his hot breath sliding along your neck as he mates you. The feel of his saurian shaft sliding into you is just what your wereraptor body needs to satisfy its lustful desires. When your pleasures peak, he drives hard into you one last time and unleashes his hot seed, filling your womb with his saurian seed. You both roar loudly in ecstasy at the triumphant climax of the wild mating.[ovichance]";
 			else if anallevel > 1 and a random chance of 2 in 3 succeeds and Cunt Count of Player is 0:
@@ -246,8 +250,10 @@ to say losetowereraptor:
 		decrease humanity of Player by 2;
 		decrease Libido of Player by 4;
 	else if wrmode is 1:
+		project Figure of Wereraptor_female_icon;
 		say "     Defeated by the wereraptor, the creature hisses triumphantly and grabs your head in her clawed hands, pressing your head between her legs. Feeling her sharp claws digging into your shoulders, you have no choice but to start licking at her wet pussy. The flavor is strong but exciting, quickly building your lust until you're eagerly lapping at her dripping slit for more of her hot juices. When she finally cums, she sinks her sharp claws into you and hisses loudly in pleasure. Now done with you, she shoves you aside roughly and sniffs the air. She flicks her tongue across her muzzle and rushes off after her new prey with a more mundane hunger to be sated. You feel relieved that this wild beast chose not to make a meal out of you instead.";
 	else:
+		project Figure of Wereraptor_male_hard_icon;
 		say "     Defeated by the wereraptor, the creature hisses triumphantly and grabs your head in his clawed hands, pressing your head between his legs. Feeling the sharp claws digging into your shoulders, you have no choice but to start licking and eventually sucking at that reptilian cock. The flavor is strong but exciting, quickly building your lust until you're eagerly lapping along its length and working your mouth over it. When he finally cums, he sinks his sharp claws into you and hisses loudly in pleasure while pumping his hot load down your throat. Now done with you, he shoves you aside roughly and sniffs the air. He flicks his tongue across his muzzle and rushes off after his new prey with a more mundane hunger to be sated. You feel relieved that this wild beast chose not to make a meal out of you instead.";
 	if wrcursestatus is 0 or wrcursestatus is 1:
 		say "     The claw marks at your back sting with a burning heat. As the pain fades, you check back, finding the wounds already closed, but still scarred.";
@@ -259,6 +265,10 @@ to say beatthewereraptor:
 	if wrcurseNermine is 9:
 		say "     You manage to defeat and drive off Dr. Utah, the first wereraptor.";
 	else if BodyName of Player is "Wereraptor" and player is not neuter:
+		if wrmode is 1:
+			project Figure of Wereraptor_female_icon;
+		else:
+			project Figure of Wereraptor_male_hard_icon;
 		say "     As the wereraptor stumbles back, weak and beaten, your primitive urges drive you to pounce upon [if wrmode is 1]her[else]him[end if] instinctively. You bear [if wrmode is 1]her[else]him[end if] to the ground and pin them.";
 		say "     [bold type]Shall you give in to your primitive, lustful instincts and mate with your fallen foe?[roman type][line break]";
 		LineBreak;
