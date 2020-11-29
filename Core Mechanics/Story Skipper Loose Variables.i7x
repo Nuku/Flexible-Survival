@@ -284,6 +284,10 @@ to TextVariableSave:
 			now TextVarValue entry is pfpskin;
 		-- "ppcolor":
 			now TextVarValue entry is ppcolor;
+		-- "PlayerClass":
+			now TextVarValue entry is PlayerClass;
+		-- "PlayerName":
+			now TextVarValue entry is Name of Player;
 		-- "sangr":
 			now TextVarValue entry is sangr;
 		-- "Scenario":
@@ -439,8 +443,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is AresDannyEncounters;
 		-- "artattempt":
 			now NumberVarValue entry is artattempt;
-		-- "artleopardfight":
-			now NumberVarValue entry is artleopardfight;
 		-- "auto2entry":
 			now NumberVarValue entry is auto2entry;
 		-- "autoattackmode":
@@ -3721,11 +3723,8 @@ to VariableTextLoad:
 		say "Restoring Texts...";
 		read File of TextSave into the Table of GameTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTexts:
-			[
 			if there is no TextVarValue in row x of the Table of GameTexts:
-				debug at level 4 say "Skipping empty text [TextVarName in row x of the Table of GameTexts].[line break]";
 				next;
-			]
 			choose row x in the Table of GameTexts;
 			[
 			if debug is at level 10:
@@ -3914,6 +3913,10 @@ to VariableTextLoad:
 					now pfpskin is TextVarValue entry;
 				-- "ppcolor":
 					now ppcolor is TextVarValue entry;
+				-- "PlayerClass":
+					now PlayerClass is TextVarValue entry;
+				-- "PlayerName":
+					now Name of Player is TextVarValue entry;
 				-- "sangr":
 					now sangr is TextVarValue entry;
 				-- "Scenario":
@@ -4087,8 +4090,6 @@ to VariableNumberLoad:
 					now AresDannyEncounters is numberVarValue entry;
 				-- "artattempt":
 					now artattempt is numberVarValue entry;
-				-- "artleopardfight":
-					now artleopardfight is numberVarValue entry;
 				-- "auto2entry":
 					now auto2entry is numberVarValue entry;
 				-- "autoattackmode":

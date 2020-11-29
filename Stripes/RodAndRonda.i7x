@@ -266,7 +266,6 @@ ResolveFunction of Art Collector is "[ResolveEvent Art Collector]". The level of
 Art Collector is inactive.
 Sarea of Art Collector is "High".
 
-artleopardfight is a number that varies.
 artattempt is a number that varies.
 
 to say ResolveEvent Art Collector:
@@ -279,13 +278,17 @@ to say ResolveEvent Art Collector:
 	increase thirst of Player by 12;
 	increase hunger of Player by 6;
 	decrease HP of Player by ( HP of Player divided by 6 );
-	now artleopardfight is 3;
+	say "     As the leopardman growls again and stalks towards you, you get a good look at the powerful feline male. His strong body is covered with leopard-like fur, and as he rises up to two feet and flexes his claw-tipped hands, you get a very good look at his rather erect feline cock. Looking around quickly, you realize the leopardman has moved to block your exit. As you prepare to fight, you can see a playful grin cross the muzzle of the obviously aroused feline. '[one of]You'll pay for this interruption[or]I don't have time, you wretched thief[or]Let's get this over with quick. I have more important matters to deal with[or]I'm going to turn you in a scratching post[in random order],' he says as he leaps forward after his prey. Already weakened from your long climb, you hope you're still up for a fight.";
+	now inasituation is true;
 	challenge "Leopardman";
-	if artleopardfight is 3:		[fled]
-		say "     You manage to feint past the enraged, aroused feline and charge out of the suite. You rush for the stairs with him in hot pursuit, but the lustful moans of the heat-ridden females draw him back inside, letting you escape. You run down as quick as you can for the first several flights, just in case, then slow to a more reasonable pace for your long defeated descent. You'll have to recover and try coming back another time.";
-		now artattempt is 1;
-		now Resolution of Art Collector is 3; [fled]
-	else if artleopardfight is 2:	[lost]
+	now inasituation is false;
+	if fightoutcome < 20: [player won]
+		say "     With the leopardman driven off, you can hear the lustful yowls of the felines get louder as they start to climb off the bed. Unwilling to face down a pack of heat-ridden females, you quickly smash the case, grab the items and make a run for it. You dash to the antechamber and into the stairwell, rushing down the first couple of flights. When you don't hear any pursuit, you relax a little and cautiously slow down, hoping they decided to coax the defeated male from the other room to satisfy them. You look over the strange, unassuming items and hope they are worth the effort as you stow them away carefully and make your way back outside.";
+		increase score by 20;
+		now HP of Ronda is 7;
+		now Resolution of Art Collector is 1; [won]
+		now Art Collector is resolved;
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     The powerful leopard grabs you and runs his paws over you, as if trying to decide what to do with the thief he's caught. But before he can come to a decision, the heat-ridden females on his bed start to yowl in lustful need, longing for the strong male to rejoin them. The muscled feline grabs you roughly and drags you out onto his large patio. While the impressive view of the skyline would normally draw your attention, it is the ground that soon fills your view as he hurls you over the side of the building. You scream as you plummet quickly, spreading yourself out as best you can to slow your fall, but with little effect as the pavement seems to rush up at you. As you are about to strike the ground, everything mercifully goes black.";
 		now artattempt is 1;
 		wait for any key;
@@ -309,12 +312,10 @@ to say ResolveEvent Art Collector:
 		SanLoss 8;
 		say "     When you finally awaken, sore and aching all over but somehow alive, you give thanks to the powerful healing abilities of the infection. You slowly struggle to rise, the healing process having taken much out of you. You have left a noticeable dent and several cracks in the pavement where you landed, as well as a sizable red stain. Looking at it as you struggle to get up, you notice that something else is off - the lighting very different now. Looking up, you see that it's [short time of day] now, many hours since your ill-fated fight with the leopardman. After what feels like a Herculean effort, you make it to your feet and stagger off to find someplace to heal in peace.";
 		now Resolution of Art Collector is 2; [lost]
-	else if artleopardfight is 1:	[victory]
-		say "     With the leopardman driven off, you can hear the lustful yowls of the felines get louder as they start to climb off the bed. Unwilling to face down a pack of heat-ridden females, you quickly smash the case, grab the items and make a run for it. You dash to the antechamber and into the stairwell, rushing down the first couple of flights. When you don't hear any pursuit, you relax a little and cautiously slow down, hoping they decided to coax the defeated male from the other room to satisfy them. You look over the strange, unassuming items and hope they are worth the effort as you stow them away carefully and make your way back outside.";
-		increase score by 20;
-		now HP of Ronda is 7;
-		now Resolution of Art Collector is 1; [won]
-		now Art Collector is resolved;
+	else if fightoutcome is 30: [fled]
+		say "     You manage to feint past the enraged, aroused feline and charge out of the suite. You rush for the stairs with him in hot pursuit, but the lustful moans of the heat-ridden females draw him back inside, letting you escape. You run down as quick as you can for the first several flights, just in case, then slow to a more reasonable pace for your long defeated descent. You'll have to recover and try coming back another time.";
+		now artattempt is 1;
+		now Resolution of Art Collector is 3; [fled]
 
 Chapter 3 - The Rescue Attempt
 

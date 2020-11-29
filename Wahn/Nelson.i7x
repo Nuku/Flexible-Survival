@@ -18,6 +18,7 @@ Section 1 - Meeting Nelson
 
 [First Encounter - Alexandra introduces]
 after going to Worker Barracks while (Alexandra is in Worker Barracks and PlayerMet of Nelson is false and a random chance of 1 in 2 succeeds):
+	project Figure of Nelson_clothed_icon;
 	say "     As you enter the worker barracks and look around, you see Alexandra leaning against the wall in the back of the large room. She gives you a small wave of her hand, indicating that she wants to talk about something. Strolling over to your dobie bitch, you pull her close and give her a demanding kiss, keeping her bared breasts pressing into your side as you ask what's up. 'Hey boss, with you parking me here in the fuck-farm and all, I gotta say I've been having a nice time so far. Got a few favorites among the guys too. Karel and Isaac of course, but there's also that zebra guy, Nelson, who's really packing a monster dick! Thought you might want to meet him too, and right now is a really good time for it!' The ex-cop grins at you, her tail wagging behind her back, then nods over to the doorway leading deeper into the building, where the communal shower room is situated.";
 	say "     You've got to wait for a moment, but then a six-foot tall equine walks into the room, his zebra-striped, muscular body covered in nothing more than a towel around the hips. Alexandra quickly slips from your grasp, sauntering over to the man, greeting him with a smile and a lick over his firm pecs, followed by a lusty kiss as he bends his neck down to her. Your breeding bitch then takes him by the hand, leading the man over to you. 'Nelson, I want you to meet my boss. And boss - this is Nelson!' she says in introduction, then gives his towel a sharp pull after the last words, making it drop to the floor and baring the naked, wet body of the zebra stallion to you. He's very well hung with a black-skinned shaft, already half-hard due to Alexandra's earlier approach. Reflexively, he starts to move both large hands to cover himself, but the dobie stops him with a gentle tug on his arm and the words, 'It'd be a shame to hide that thing, big boy!'";
 	WaitLineBreak;
@@ -116,6 +117,7 @@ instead of sniffing Nelson:
 	say "Nelson has a pleasant animalistic smell, masculine and strong.";
 
 to say NelsonDesc:
+	project Figure of Nelson_clothed_icon;
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Nelson] <- DEBUG[line break]";
 	if Nelson is not asleep:
@@ -155,6 +157,7 @@ an everyturn rule:
 Section 3 - Talk Options
 
 instead of conversing the Nelson:
+	project Figure of Nelson_clothed_icon;
 	if Nelson is asleep:
 		say "     The muscular zebra is deep asleep, splayed out nakedly under a thin blanket. [bold type]Do you want to wake him?[roman type][line break]";
 		LineBreak;
@@ -171,6 +174,7 @@ instead of conversing the Nelson:
 		say "[NelsonTalkMenu]";
 
 to say NelsonTalkMenu:
+	project Figure of Nelson_clothed_icon;
 	say "     [bold type]What do you want to talk with Nelson about?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -230,6 +234,7 @@ to say NelsonTalk2: [backstory]
 Section 5 - Sex Options
 
 instead of fucking the Nelson:
+	project Figure of Nelson_naked_icon;
 	if Nelson is asleep:
 		say "     The muscular zebra is deep asleep, splayed out nakedly under a thin blanket. [bold type]Do you want to wake him?[roman type][line break]";
 		LineBreak;

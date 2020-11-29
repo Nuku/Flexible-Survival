@@ -461,7 +461,6 @@ to say SpikeTalkMenu:
 
 to say SpikePickup:
 	say "     You give a sharp whistle and wave to Spike, directing him to follow you. The young canine quickly rushes to your side and takes his spot to support you.";
-	now Spike is nowhere;
 	AddCompanionFunction "doberman companion";
 
 to say SpikeTalk3: [himself]

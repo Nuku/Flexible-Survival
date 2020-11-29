@@ -1,6 +1,7 @@
-Version 2 of Diego Events by Vinickus begins here.
+Version 3 of Diego Events by Vinickus begins here.
 [Version 1 - Transplanted two old events (originally written by Stripes) into a new file]
 [Version 2 - Added College Flakes event]
+[Version 3 - Added Spartan Usurpation event]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -271,5 +272,137 @@ to say ResolveEvent College Flakes:
 		now resolution of College Flakes is 3; [Player left the area before anything happened]
 	now College Flakes is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Spartan Usurpation	"Spartan Usurpation"
+
+Spartan Usurpation is a situation.
+ResolveFunction of Spartan Usurpation is "[ResolveEvent Spartan Usurpation]". Spartan Usurpation is inactive. The level of Spartan Usurpation is 7.
+The sarea of Spartan Usurpation is "Outside".
+when play begins:
+	add Spartan Usurpation to Badspots of MaleList;
+
+to say ResolveEvent Spartan Usurpation:
+	say "     The city is never short of the sound of moans, rubble clattering from buildings, or fiery combat. However, the sounds of metal clanging off metal is quite unusual, it's a sound that makes you feel as if you were thrown near a medieval battlefield. You are still surrounded by the ruins of a modern city, so curiosity drives you to check out the ruckus, and even though you're quick to check it all out, you're all too aware of the potential dangers. Your feet move carefully, and your legs, while fast, swivel about to avoid knocking anything over in the alleys you've chosen to run along. There's no telling what you'll come upon, and unwanted attention would spoil any chance of discovery. So you move with dedicated speed, and silent swiftness, until you find yourself coming upon an open street. There's nowhere to hide along it, and so you rush back to the alley you just ran from, peaking around the corner as you peer upon the battle before you.";
+	say "     You can see the back of a squad of half-a-dozen camouflage donned men. They seem to be squaring off against unknown assailants, ones hard to make out with the soldiers between you. All you can easily tell is a splash of red here and there, as if capes are flapping about. However, that seems a big garish for this environment, so you settle on waiting to see what's really going on. It's clear there's a stalemate, and neither side is making a move. The soldiers are holding what look like large knives, each one almost the length of your forearm. No tarnishes are visible along the shiny blades, so they've no doubt been on the defensive. Though, their tattered clothing could've told you that. All of the camoed sleeves and pants are torn to shreads, revealing pretty much every inch of the soldiers' legs, thighs and arms. Thanks to the shredded clothing, you can easily tell that they're all wearing jockstraps, but even more surprising are the buttplugs.";
+	WaitLineBreak;
+	say "     Each man in the squad has a bejeweled plug sticking out of their holes. They're clearly wedged in thoroughly, because even with all of the sweat and movement, the buttplugs don't look to have moved even an inch out of those perfectly smooth, firm asses. This is no doubt causing the men no shortage of distractions, as several seem to reach back halfway before stopping themselves, as if they can't help but want to fiddle with the plug. The movement could be from a desire to ensure they're still in, or something more... lustful. In either case, this distraction is no doubt what leads to the next burst of motion. Whoever they're going against, this was their opportunity. Within moments, half the soldiers are disarmed, pinned to the ground by... red cape donned men. These aren't ordinary men either, as your mind can only conjure up images of ancient spartans, adonises of high renown. The soldiers never stood a chance, and as the rest of the squad is taken down, you can't even muster an iota of shock.";
+	say "     You can see the glee in the body language of the red cape donned men, and this glee grows as they straddle the soldiers. Each spartan takes a soldier, and each one has a grin that'd rival a big bad wolf. Even then, however, it's clear who will take, and who will give. The spartans stand up and yank the soldiers to their feet, guiding the exhausted, dazed men to a nearby wall. The men in tattered camo clothing are then forced against the brick surface, hands and legs spread as their palms rest against the wall before them. It's clear what's going to happen, especially when the spartans begin to poke and grip at the anal plugs.";
+	say "     [bold type]Do you stick around to see exactly what the spartans do? For research purposes, obviously.[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Watch the sexy hunk squad get taken by the equally sexy spartans.";
+	say "     ([link]N[as]n[end link]) - Take your leave while you can.";
+	if player consents:
+		LineBreak;
+		say "     You settle in, leaning further out from the alley so as to get the perfect angle. From where you are, you can see the backs of the soldiers and spartans, which gives you a good glimpse of those bejeweled buttplugs. They're twitching off and on as the soldiers appear to grow more receptive of their captures. This draws quite a hearty chuckle from the adonises of old, and they poke and prod at those delightful anal spreaders. They even begin to tug at the plugs, giving short efforts before releasing the solid ends. These efforts draw languid moans from the soldiers, and you can even see light flickering off the fluids dribbling down from between their legs. The soldiers are leaking like faucets. For the first time since this all began, you hear clear words from the spartans. They appear to be making denigrating remarks, but it's hard to make out anything exact. You manage to catch a [']sluts['] and a couple of [']bitch['] remarks.";
+		say "     Beyond that, it's hard to discern exactly what's being said, but given the fact that the spartans are pulling out their cocks, their goals are pretty clear. Their leather briefs are soon around their knees; the soldiers are coaxed to hunch over even further. Before long, you see the spartans grip at the buttplugs, yanking them out with little care for their bottoms. In response, the military men release pained moans. Those pained sounds then turn to loud shouts of pleasure as each spartan shoves balls deep into the men. It seems the spartans have once more declared superiority over this city, and you think you can see even more of them further away, watching the rutting before them. However, there does seem to be something different about the observers, something in their hunched forms that strikes you as decidedly unspartan.";
+		WaitLineBreak;
+		if player is male:
+			say "     You could go and see who they are, while the rutting continues, or you could try to get some spartan ass. One would decidedly require more effort, however.";
+			LineBreak;
+			say "     [bold type]What do you want to do?[roman type][line break]";
+			say "     [link](1)[as]1[end link] - Go and see what those other men are up to.";
+			say "     [link](2)[as]2[end link] - Try and take on the half-dozen spartans.";
+			say "     [link](3)[as]3[end link] - You're quite decided on leaving, actually.";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					break;
+				else:
+					say "Invalid choice. Type [link]1[end link] to check on the other men, [link]2[end link] to try to fight the weakened spartans or [link]3[end link] to simply leave.";
+			if calcnumber is 1:
+				LineBreak;
+				say "     You sneak back down your alley, and head along other alleyways as you try and remember exactly how far away those men were. After a few minutes of wandering, you do find what looks like an alley that'd lead to where they were, and so you quickly head down it. Thankfully, you were right, and in fact it has given you the chance to sneak up behind the observers. They are decidedly different than the spartans. Not only are they more lithe and less muscled, but their demeanors are far more submissive. This gives you quite the idea as you grab one from behind, covering his mouth and pulling him from the group. You take him a good dozen or so feet away, and then press his back into the alley wall. As soon as your hand comes off his mouth, your lips go to his, pressing desperately against this sexy man. Your cock is soon pressing against his, your hips frotting the two of your lengths as your tongue jabs into his mouth. There's little resistance from him, and as you pull back, and as the saliva strands between you break, his eyes stare in utter adoration. This man is desperate.";
+				say "     Under normal circumstances, you'd take your time with someone this needy, but there are far too many risks here, and so you quickly spin him around and press his chest against the wall. You spit onto your length, quickly rubbing the saliva and precum all up and down your cock. It is soon pressed against that twitching mass of muscles, that eager hole, and with just one thrust, you sink half of your cock into your temporary bitch. There's nothing between you and savagery, and so you begin to ravage this man. Your cock pulls at his hole everytime you yank out, and slams the hole forward as you go balls deep. His muscles are so tight around your cock that you feel his anus may come with you, but the pleasure from the tigthness is too insane to complain about. The slapping noises get louder, and you can only hope that it's covered up by the spartans['] use of those soldiers. In either case, your balls begin to pull up, and your cock throbs. Seconds later, you're balls deep, holding this man's hips to yours as you press as hard as you can into his ass. His cheeks are flat against your crotch, and your cock is as deep as it can get. That is the position that you choose to let yourself go over the edge in, filling the bitch up.";
+				WaitLineBreak;
+				say "     Your cum almost feels like it's burning you as you fire your first volley into the male before you. Each shot after that feels just as hot, and it only serves to heat that ass up even more. Soon your entire cock is getting lathered in your hot seed, tightly compressed by that eager hole. It's almost maddening how good it feels, and how long it lasts. You could swear you've cum a gallon, at least, but there's no telling, because that hole holds onto every ounce. It's not until your orgasm begins to subside, that even a trickle leaks out, and that only gets worse once you yank free from that tight ass. You then give a quick kiss to the back of the man's neck before slapping his ass, sprinting off now that you've drained your balls.";
+				CreatureSexAftermath "Helot Manservant" receives "AssFuck" from "Player";
+				now resolution of Spartan Usurpation is 2; [Player fucked a Helot]
+			else if calcnumber is 2:
+				LineBreak;
+				say "     You sneak up behind the madly humping spartans, their minds stuck in their dicks as they plow the now eager soldiers. There's still some ratty camo clothing draped across the now ex-military men, and dog tags rattling aroud their necks, but there's little left in military attitude. You then clear your throat, getting the spartans to turn around and stare at you in annoyance. They yanks their cocks from the mewling bottoms, turning to face you with erect, precum slathered dicks. It's clear they're not as prepared as usual, giving you at least some chance to succeed.";
+				SUSpartanSquadFight;
+			else:
+				LineBreak;
+				say "     You back down the alley you came from, sure to be quick and yet quiet. Soon you're back on a street far from those adonises, huffing it along to explore some more.";
+				now resolution of Spartan Usurpation is 1; [Player ran]
+		else if player is female:
+			Linebreak;
+			say "     It is clear that this group prefers males, and looking the way you do, you would be spotted immediately and not in a very warm welcome manner. Without many options left, you simply retreat.";
+			now resolution of Spartan Usurpation is 1; [Player ran]
+		else:
+			LineBreak;
+			say "     You back your way down the alley you came from, quick to sprint off when you're out of earshot. Hopefully no one saw you.";
+			now resolution of Spartan Usurpation is 1; [Player ran]
+	now Spartan Usurpation is resolved;
+
+to SUSpartanSquadFight:
+	let GroupFightCounter be 0;
+	now fightoutcome is 0; [reset]
+	while fightoutcome < 20 and GroupFightCounter < 6: [runs for 6 times or until the player loses or flees]
+		choose a row with name of "Spartan" in the Table of Random Critters;
+		now HP entry is 23;
+		now wdam entry is 6;
+		challenge "Spartan";
+		now HP entry is 95;
+		now wdam entry is 15;
+		increase GroupFightCounter by 1;
+	if fightoutcome < 20: [won]
+		say "     You somehow managed to take out all six spartans, exceeding even the squad of soldiers before you. However, you did it for one very specific reason, and you walk over to one spartan in particular, gripping him by his hair as you whip out your dick.";
+		WaitLineBreak;
+		SUSpartanSquadWin;
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "     You fall on your ass, the soldiers all turning and looking at you with glassy eyes. You're not going to get another chance at this, and you have a sneaking feeling of what'll be next. It excites a part of you, but also fills you with an uncertainty that you haven't felt before.";
+		WaitLineBreak;
+		SUSpartanSquadLoss;
+	else if fightoutcome is 30: [fled]
+		say "     You turn and flee from the spartans coming for you. There's little need for them to leave their bounties, right?";
+		WaitLineBreak;
+		SUSpartanSquadRun;
+
+to SUSpartanSquadWin:
+	say "     You quickly press your length against this great man's lips, sliding your precum all around his mouth as he reluctently opens up. As soon as it's open, you shove your cock balls deep into his throat. He gags and lightly pushes against your thighs with his free hands, but you hold him steady. There is no doubt who he belongs to, and you're going to thoroughly prove it. The other five spartans simply watch uncertainly, waiting for something. You give them that something, ordering them to come over to you and help get the one you're holding against your groin more receptive. They hesitate, but they fall in line, like the organized men they are. Soon the man sucking you off, sheathed around your dick, is getting stroked up and down by his spartan allies. Their hands eventually find their ways to his ass and cock, stroking and rubbing over his waist and lower body. Of course, his length stands at attention, like the rest of them. So it's even easier for the others to make him all the more receptive to your uses. There is no need to just stand there with him swallowing around your cock, however, and so you begin to move your hips. You begin to thrust in and out of his throat, stirring up spit and mucous with your increasingly vigorous facefucking of a former enemy.";
+	say "     With his gagging around your cock, the pleasure going through your body spikes even more, drawing you to almost cum on the spot. However, you stop yourself just on the edge, leaving yourself once more sheathed down his throat. He manages to breathe enough while you're shoving him in your crotch, so there's no concern for losing your new toy. Though, given his heavy breathing as his brethren begin to finger his ass and tweak his nipples, he may be a bit light headed soon. You care very little as you keep him swallowing around your cock, leaking your copious precum down his throat. There's really no reason to let him have a break, right? And so you keep things up, keeping using his mouth as a fleshlight, and his head a handle for such. Even when his spartan allies begin to finger-fuck him, you can't care about more than your own pleasure. So you keep using his mouth to stay on the edge of absolute ecstasy. Hell, the other spartans are soon positioning themselves behind him, forming a line as he shows weakness under you. They're just about to run a train on him, and you know it'll only drive his throat to be even tighter.";
+	WaitLineBreak;
+	say "     The first spartan in the line spits downward, no doubt onto his own dick, and then probes at the hole of your fleshlight. You can feel the now ex-spartan offering meek struggles, but he's more than willing, and you can tell as soon as he's penetrated from behind. He begins to drool around your cock, his eyes roll back, and he becomes nothing more than a doll for you to get off with. Given what you've started, you do decide to move things along, however, and so you begin to eagerly face-fuck him once more. Your hips slap against his face as you fuck his throat, as you drag your cock out across his tongue before shoving it back down his gullet. You know he loves this, you know he can breathe just fine, and you know that the spartans behind him are going to break him in. So you simply watch the muscles of the topping spartan flex as he fucks your toy. They're all nothing to you, but the one you're balls deep inside of, is even less than the others.";
+	say "     So you watch as these men flex and show their power as they revel in their base needs, either of submission, or dominance. You've given the other five a new toy, and now they're look of defeat has changed to a look of eager demand. You look down at your fleshlight as you feel yourself right on the edge, and you then slam fully down his throat once more, unloading what feels like pints of cum. Shot after shot fires into his stomach, and you see his face light up with utter glee at getting his reward. You hold him there too, keeping him gagging around you even as you soften, and only when you're almost completely flaccid, do you slip out of him. 'Thank you, master,' he says in a breathy tone. You simply pat him on the head as the spartan behind him tenses up, releasing his own load inside the new bitch.";
+	WaitLineBreak;
+	say "     Having finished up with breaking in the toy, you gather your things and head off with a raised head.";
+	CreatureSexAftermath "Spartan Warrior" receives "OralCock" from "Player";
+	now resolution of Spartan Usurpation is 4;
+
+to SUSpartanSquadLoss:
+	say "     The spartans all descend upon your fallen form. Six adonises surround you as grins dust their faces. There's nothing you can do but get up on your knees and prove your worth. The spartan that got the last hit on you steps forward. He presses his cock to your lips without even the slightest hesitation, easily slipping it into your mouth. The man sighs out in approval, his cock lurching in your maw as he pushes even more into you, eventually guiding the length down your throat. It's not that long before his balls press against your chin. Everything he's doing, is clear and methodical. He's taking all that he wants in a calm and collected fashion, with little real rush. All of the spartans here know you're theirs now, and that this is the only true place for you. This spartan, the one sheathed down your throat, begins to move his hips more rigorously, humping at your throat and maw. The humping grows more intense as the seconds tick by, and soon he's all out skullfucking you, hands gripping your head as he pounds his crotch into your face. There's nothing for you to do but relax and take it, find what enjoyment you can in your new position.";
+	say "     The other spartans soon step forward as well, two wrapping your hands around the dicks, and another stepping up behind you. The one behind gets on his knees and presses his chest against you, leveling his cock with your ass. From this angle it'd be hard for him to spear you, but he finds a solution. You feel hands gripping at your thighs, lifting you up and pressing your mouth even harder into the crotch before you. After that, you feel a cock poking at your entrance, the head slick with fluids as he slides in with ease. They know what they're doing and what they want. Warm fluids splatter all over your head and upper body; you choke around the cock down your throat in surprise. You realize that the two cocks in your hands are firing off their loads, and at the same time, the one down your gullet throbs out its own warning. You're then filled with warmth and cum from one of your betters. Without any hesitation, you happily gobble each shot of cum down, letting the prodigious amount of fluid head straight into your stomach. It'll keep you warm and content to have so much cum inside you, and you know it'll only get better the more cum there is.";
+	WaitLineBreak;
+	say "     Your ass is still kept grinding down into the lap of the spartan behind you, his hips only giving light thrusts as you're fed and coated in spartan cum. Each one of these adonises that cums then turns back to the soldiers, going back to pounding their holes. The military men hadn't even tried to move away, to escape while you distracted their captors. So they were rewarded with the vigorous fucking they had coming since they were beaten. There was no longer anything between them and subservience. The spartans even yanked the tattered camoed clothing off the men they were pounding, leaving their sweat glistened bodies entirely exposed to the world. So you are treated to quite the show of gay sex, all while you yourself are taken from behind. The two spartans that haven't used you yet get into position, one getting on his knees in-front of you and lifting your hips up, angling his own cock against his compatriot already inside you, and another simply stands there, jacking off right next to your face.";
+	say "     Soon there's an intense pressure against your anus, the second cock pressing forcefully against your hole as the man already inside you waits patiently. That pressure builds up and up and up, and up, until a sharp pain fills you and the second cock slips inside. The dagger of pain is short lived, however, as pleasure shoots through your body, originating from those two glorious lengths within you. They haven't even started moving yet, and so when one begins to pull out, you see stars. There's no conscious thought left for you, not as the first cock slips almost entirely out and slams back in, not when the second cock repeats the same action, and most definitely not when they begin to seesaw back and forth. You're lost in mind and body, everything now taken by these adonises of old. You barely even notice when they each fill you with cum, when the third splatters your face in his own, and you care little when the two inside you start back up again, using you again and again...";
+	WaitLineBreak;
+	CreatureSexAftermath "Player" receives "AssFuck" from "Spartan Warrior";
+	CreatureSexAftermath "Player" receives "OralCock" from "Spartan Warrior";
+	follow the turnpass rule;
+	follow the turnpass rule;
+	infect "Spartan Warrior";
+	infect "Spartan Warrior";
+	say "     Hours have passed. You don't know how many, but you find yourself someplace else, sore and covered in dry layers of cum, which at this point you're not even sure whose it is. One thing is certain, perhaps you shouldn't underestimate a group of ancient greek horny men, as distracted as they may seem...";
+	now resolution of Spartan Usurpation is 3;
+
+to SUSpartanSquadRun:
+	say "     You hear footfalls behind you, sandaled feet slapping along the concrete as you rush away. There's little reason to stop, and you have no desire to be broken like those soldiers. Still, the sounds behind you get louder and louder, the feeling of breath on the back of your neck almost overbearing. You then trip and catch yourself on a nearby wall. That's exactly what your pursuers were waiting for too. A heavy weight slams into your back, pressing you against the brick before you. You feel the pursuer pressing into you as he[if player is not naked] grabs at your clothing and yanks it off[else] runs his hands up and down your nude form[end if]. Those smooth hands are not calloused in the slightest, no scratches, roughness or even the slightest imperfection can be felt along those palms and fingers. These can't be the same spartans from before, can they? You then feel more hands grab at you, yanking your arms back as you're pulled into the body behind you. The body then moves, causing you to fall back and almost slam into the concrete. Luckily, the hands gripping you keep anything like that from happening, lowering you carefully to the ground as you look up at your captors.";
+	say "     These men above you are not spartans, not in the least. They are donned only in a loincloth and sandals. They're also notably more lithe and twink-y than the spartans from before. You must have been chased down by the men you had seen observing the fight from the far side of the battle. As the loincloths are pulled to the side, you realize these men are very needy, and are going to take what they can from you. That's confirmed in the next instant, when one of them places his feet on each side of your head, glaring down at you with a grin dripping with lust. He then lowers himself towards your face,[if anallevel > 2] but instead of his dick being shoved down your throat, his ass is forced against your face. You nose is met with the scent of a musky and needy male, one who is clean of all scents other than sweat and sex. There's even a hint of a taste of cum as your tongue instinctively jabs out to lick at that hole. He grinds down into you as you eat him out with a vengence. His hole soon clamps down on your tongue, and you can hear moans sound out seconds later. The telltale sounds of cum splattering across concrete rings out[else] shoving his cock right into your maw. It's then fed right down your throat as he begins to thrust his hips back and forth, taking your face as a hole to breed. His movements are quick, savage and needy. He goes and goes with greater effort after just a scant few second, his cock lurching and jerking about in your throat as you feel his length thicken. The balls resting against your chin begin to pull up as well, leaving no guessing to how close he is. That knowledge is then confirmed as warmth fills your throat and stomach, several shots of cum firing from the length in your mouth. He even begins to pull out halfway through, leaving a nice deposit of seed right on your tongue. You're then slapped with the man's dick; this sudden impact forces you to swallow what he left in your maw seconds earlier[end if].";
+	WaitLineBreak;
+	say "     You're not done serving anyone, yet. The others soon grab at your legs and spread you wide, letting another memeber slide between them and press against your hole. He's unceremonious in his efforts, rubbing his precum into your hole for just a few seconds before the main event. That main event is him spearing you on his rod, a rod that spreads you wide and leaves you gasping. Your gasps only encourage him, and he's soon pounding at your ass with all the gusto of a feral dog. There's nothing left for you to hide, and so you let out wanton moans of desperate desire. The rest of the men take this as their cue. Two grab your hands, another places his cock at your mouth, and another one saddles your waist. Soon your hands and mouth are filled with cock, and your own length is spearing into the depths of another male.";
+	say "     That man on top of you is tight as hell, and warm too. There's not much keeping you in the land of the reasonable and conscious, and you begin to drift in and out. Your hands automatically milking cocks, your throat undulating around another, while your ass and dick throb. You can feel the edge coming, your cock lurching as you leak more and more, warming up that hole. Soon you're planting your own seed deep inside that ass, and you feel the very same thing happen to you. While filling another man, you yourself are filled to the brim as well. Seed goes flying all over you in the next instant too, your hands and arms getting caked in it as the man riding your cock unloads on you torso. Finally, the male down your throat also unloads his pent up need, filling you with what feels like pints of cum. You don't remember much after that, and your body quickly takes you down with its exhausted state.";
+	WaitLineBreak;
+	CreatureSexAftermath "Player" receives "AssFuck" from "Helot Manservant";
+	CreatureSexAftermath "Player" receives "OralCock" from "Helot Manservant";
+	follow the turnpass rule;
+	follow the turnpass rule;
+	infect "Helot Manservant";
+	infect "Helot Manservant";
+	say "     You soon wake covered in dry cum. It seems like there's only as much cum as you recall those men coating you with, but who knows. Some of it does feel oddly fresh, so you quickly gather your things and move on with haste.";
+	now resolution of Spartan Usurpation is 5; [Player got used by Helots]
 
 Diego Events ends here.

@@ -62,7 +62,6 @@ to say OrcVictorious:
 		addAlcPoints 2;
 		WaitLineBreak;
 		infect "Orc Breeder";
-		infect "Orc Breeder";
 		if BodyName of Player is "Orc Breeder" and player is pure and player is not mpreg_ok:
 			LineBreak;
 			say "     You feel something change deep inside you, as all the cum the orc filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex.";
@@ -240,7 +239,6 @@ to say BeatenOrcSex2:
 	say "     With both your hands on his thick pole while you bob your head up and down and tease him with your tongue, you push your orc to higher and higher arousal. Before that much longer, his grunts and moans betray a growing urgency as they rise in volume, and you can feel him getting pretty close. Eager to taste what he has to offer, you proceed to go down on him with even greater relish and just moments later, a shudder runs through the muscular brute's supine body and he orgasms. Accompanied by loud lust-filled grunts, blast after blast of his creamy orc cum fills your mouth, flooding your taste-buds with a delightfully good flavor and giving you a giddy rush and pleasant buzz as you swallow it all down. By the time you pull off his cock with a slurp, you even feel pretty full and even a bit drunk. Giving the orc an affectionate pat on the hip, you stand up and walk away, leaving the panting brute to pick himself up later.";
 	SanLoss 10;
 	MoraleBoost 5;
-	infect "Orc Breeder";
 	addAlcPoints 2;
 	CreatureSexAftermath "Player" receives "OralCock" from "Orc Warrior";
 
@@ -253,7 +251,6 @@ to say BeatenOrcSex3: [ride him]
 	WaitLineBreak;
 	say "     Having your hole tremble and twitch around his orcish member while you come gives your partner the last little push he needed to reach his own climax, and with a loud and very satisfied grunt, the orc starts blasting a massive load of cum into your innermost depths. He bucks up against you as he comes, clearly reveling in the feeling of his seed squishing around his thrusting shaft inside your body. With the amount of cum he pumps into you, quite a bit squirts out around his cock as he does so, to drip down onto his own crotch and the ground below.";
 	say "     Exhausted but happy, you pull off your toy orc's still pretty hard shaft, then stand up on somewhat weak knees. After collecting your clothes and gear, you give the orc an affectionate pat on the chest, then walk away, leaving the panting brute to pick himself up later.";
-	infect "Orc Breeder";
 	SanLoss 5;
 	increase morale of Player by 5;
 	CreatureSexAftermath "Player" receives "AssFuck" from "Orc Warrior";
@@ -376,7 +373,7 @@ When Play begins:
 	now type entry is "[one of]orc[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
-	now non-infectious entry is true;
+	now non-infectious entry is false;
 	now Cross-Infection entry is "Orc Breeder"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";

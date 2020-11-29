@@ -96,8 +96,7 @@ Carry out PlayerBreastMilking:
 			say "You milk your own breasts, providing relief from their fullness.";
 
 PlayerCockmilking is an action applying to nothing.
-understand "jerkoff" as PlayerCockmilking.
-understand "jerk off" as PlayerCockmilking.
+understand "jerkoff","jerk off","beatoff","beat off","whackoff","whack off","wankoff","wank off","wank","pawoff","paw off","fap","beat my meat","choke the chicken" as PlayerCockmilking.
 lastCockMilking is a number that varies. [@Tag:NotSaved] lastCockMilking is usually 500.
 
 check PlayerCockmilking:

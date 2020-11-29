@@ -64,6 +64,7 @@ to say utahdesc:
 			if daytimer is day:
 				say "     Dr. Utah looks much like you do during the day, taking on an appearance closer to a saurian human than the more feral beast form of the night. Her scales are green and black and her claws and teeth are less prominent during daylight hours. She has a put on a woman's blazer and pants to keep the illusion of still being human inside to fool others, but you know better. Your own feral instincts sense her wild nature as a wereraptor like yourself.";
 			else:
+				project Figure of Wereraptor_female_icon;
 				say "     Dr. Utah is in her full wereraptor form, a cross between human and saurian that has her bend forwards and her arms folded up against her chest when not in use. She seems a little larger and more powerful than the other wereraptors you've seen running around. She's discarded her clothes and struts around nude, giving you ample opportunity to look over her sexy nocturnal form. With her raptor head, green and black scales and sharp talons, she's an impressive (and attractive) beast that gets your own feral urges excited.";
 		else:		[egg-laden]
 			if daytimer is day:
@@ -74,6 +75,7 @@ to say utahdesc:
 		if daytimer is day:
 			say "     Dr. Utah looks much like you do during the day, taking on an appearance closer to a saurian human than the more feral beast form of the night. His scales are blue and green and his claws and teeth are less prominent during daylight hours. He has a put on a blazer and pants to keep the illusion of still being human inside to fool others, but you know better. Your own feral instincts sense his wild nature as a wereraptor like yourself.";
 		else:
+			project Figure of Wereraptor_male_soft_icon;
 			say "     Dr. Utah is in his full wereraptor form, a cross between human and saurian that has him bend forwards and his arms folded up against his chest when not in use. He seems a little larger and more powerful than the other wereraptors you've seen running around. He's discarded his clothes and struts around nude, giving you ample opportunity to look over his sexy nocturnal form. With his raptor head, blue and green scales and sharp talons, he's an impressive (and attractive) beast that gets your own feral urges excited.";
 
 
@@ -115,6 +117,7 @@ to say sexwithDrUtah:
 		say "[drutah_femalesex]";
 
 to say drutah_femalesex:
+	project Figure of Wereraptor_female_icon;
 	say "     The other wereraptor grins at your offer and slides her tongue along her muzzle before leaning in to nip at your neck. She runs her taloned hands over your [bodydesc of Player] body";
 	if BodyName of Player is not "Wereraptor" or the player is not pure:
 		say " and hisses in disappointment. 'It seems your body has not had an opportunity to revert to its proper, saurian form. It looks like we'll need to help it along.' She presses you against the wall and kisses you while rubbing her palm between her legs, getting it soaked in her hot juices. She then starts rubbing them over your body while nibbling along your neck and shoulder. She smears her feminine juices anywhere you're not a sexy wereraptor.";
@@ -147,6 +150,7 @@ to say drutah_femalesex:
 		NPCSexAftermath Doctor Utah receives "OralPussy" from Player;
 
 to say drutah_malesex:
+	project Figure of Wereraptor_male_hard_icon;
 	say "     The other wereraptor grins at your offer and slides his tongue along his muzzle before leaning in to nip at your neck. He runs his taloned hands over your [bodydesc of Player] body";
 	if BodyName of Player is not "Wereraptor" or the player is not pure:
 		say " and hisses in disappointment. 'It seems your body has not had an opportunity to revert to its proper, saurian form. It looks like we'll need to help it along.' He presses you against the wall and kisses you while rubbing his hand across his cock and gathering up his leaking precum. He then rubs his musky pre across your body while nibbling along your neck and shoulder. He smears his preseminal fluids anywhere you're not a sexy wereraptor.";

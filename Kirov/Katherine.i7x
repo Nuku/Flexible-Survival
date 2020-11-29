@@ -86,6 +86,10 @@ XP of Katherine is 0.
 Level of Katherine is 0.
 Armor of Katherine is 0.
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if HP of Katherine < 2 and Katherine is in Makeshift Rec Room:
+		now HP of Katherine is 2;
+
 Section 1 - Discussion
 
 to say KatherineTalkMenu:
