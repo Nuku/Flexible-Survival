@@ -83,6 +83,8 @@ carry out tapeing:
 			say "[DemonicRitualTape]"; [Source: Gherod/Demonologist.i7x]
 		-- "Hyena Breakout Video":
 			say "[Hyena Breakout Video]";
+		-- "Canine Hazing Vid":
+			say "[CanineHazingVid]";
 [ Template to fill for new tapes ]
 [
 		-- "TAPE NAME":
