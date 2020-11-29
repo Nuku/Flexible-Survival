@@ -144,7 +144,7 @@ to say AsterTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Ask Aster about the museum";
 	[]
-	if Loyalty of Aster > 4:
+	if Loyalty of Aster > 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Valerie";
 		now sortorder entry is 3;
