@@ -53,5 +53,16 @@ Carry out BuyingAction:
 		say "You purchase [Name entry] for [price entry] food.";
 		ItemGain Name entry by 1 silently;
 		ItemLoss food by price entry silently;
+	else if Player is in Hellfire Storage and Drenraya is visible: [Drenraya's shop in Hellfire Club]
+		if SoughtItem is a name listed in the Table of Drenraya Inventory:
+			say "";
+		else:
+			say "That doesn't seem to be sold here.";
+		if price entry > carried of obsidian coin:
+			say "You can't afford the [Name entry], it costs [price entry] obsidian coin.";
+			continue the action;
+		say "You purchase [Name entry] for [price entry] obsidian coin.";
+		ItemGain Name entry by 1 silently;
+		ItemLoss obsidian coin by price entry silently;
 
 Basic Shops ends here.

@@ -32,6 +32,7 @@ Version 3 of Void Realm by Gherod begins here.
 [        . Null Essence;                            ]
 [        . sharp black tusk;                        ]
 [        . loose tentacle;                          ]
+[        - strange-colored bean;                    ]
 
 Section 1 - Pre-Event
 
@@ -42,10 +43,14 @@ Object	Name
 To The Unknown	"To The Unknown"
 
 To The Unknown is a situation.
-ResolveFunction of To The Unknown is "[ResolveEvent To The Unknown]".
-Sarea of To The Unknown is "Red".
+ResolveFunction of To The Unknown is "".
+Sarea of To The Unknown is "Nowhere".
 
-[RESOLUTION STAGES]
+a postimport rule:
+	if Resolution of To The Unknown is 1:
+		now Resolution of To The Unknown is 0; [resets the resolution stages for the updated location]
+
+[RESOLUTION STAGES - NO LONGER APPLICABLE]
 [0: Never found anything]
 [1: Void Realm unlocked]
 
@@ -190,8 +195,29 @@ Sarea of MirrorsKey is "Nowhere".
 
 [----------------------------------------]
 
-to say ResolveEvent To The Unknown:
-	if Resolution of To The Unknown is 0: [Pre-Event]
+instead of going north from Hellfire Unknown:
+	say "[VRToTheUnknown]";
+
+to say VRToTheUnknown:
+	say "     In front of you, there is a gate to the unknown... The Void Realm.";
+	WaitLineBreak;
+	say "     Before you decide to go in, keep in mind that this is an [bold type]extremely dangerous area[roman type] that can potentially end your life, and you cannot simply abandon it whenever you please, as many obstacles will provide a challenge and may potentially halt your progress. Only go in if you know what you are doing.";
+	say "     Having a [bold type]strong psyche[roman type] may be advantageous, but if the contrary is true and you possess a [bold type]weak psyche[roman type] instead, you're most certainly doomed, as you will lose your mind to the void at an alarming rate. Additionally, if you are a particularly [bold type]kinky[roman type] individual, the Void Realm may provide you with a [italic type]vastly different[roman type] experience, but nonetheless, this place will use that against you in the most effective ways.";
+	say "     You may also find certain companions to be very helpful, such as [if Strange Sorcerer is resolved]the demonologist Xaedihr[else]an expert in demonology and dimensional traveling[end if], and they may even have a chance of saving you from an unavoidable danger.";
+	say "     In order to escape once you enter, just keep walking through the dimensional line in either direction without looking back, but that doesn't mean you should not explore its boundaries, as long as you are aware of the risks.";
+	say "     [bold type]Do you wish to proceed?[roman type][line break]";
+	Linebreak;
+	say "     ([link]Y[as]y[end link]) - Yes, enter the Void Realm.";
+	say "     ([link]N[as]n[end link]) - No, turn around and leave.";
+	if player consents:
+		LineBreak;
+		say "[ToTheVoid]";
+	else:
+		LineBreak;
+		say "     You decide to back away, for now, and perhaps that is for the best. You even feel some of your sanity being returned to you with this decision.";
+		SanBoost 5;
+		move player to Hellfire Unknown;
+	[if Resolution of To The Unknown is 0: [Pre-Event]
 		say "     You go past one of the many buildings in the District and turn to your right. It is another ransacked shop with nothing left, only broken glass scattered around the windows and a complete absence of sound, which worsens the more you proceed forward. There is nothing else around but destruction and abandonment, consequences brought by the apocalypse, but besides this, something seems to be really disturbing you, and you find yourself helplessly unable to explain what it is, exactly. It's just something you feel... A shiver, sudden loss of thoughts, an instant discomfort rapidly growing inside as if a nightmare was chasing after you. The sense of danger, maybe there is a creature approaching...?! Though there is nothing. Paranoia slowly begins to take over your mind, and a cold drop of sweat follows after.";
 		say "     Reality seems pointless, the air around you is heavy, your body refuses to move, and then you can't breathe. But at the same time, there you are, alive, your heart beating, your senses in overdrive, but your brain seems incapable of understanding its surroundings. There is a hiss echoing through, and that is when you see a gigantic scaly body of a snake, passing right by you and through the buildings like a slowly moving train, seemingly endless. Your heart stops at that moment, facing the imminent danger, and it is a feeling you cannot control. You feel powerless, disarmed and tiny, as the serpent makes its way unhindered by any obstacles that prove to be nothing for its titanic dimensions.";
 		WaitLineBreak;
@@ -206,25 +232,8 @@ to say ResolveEvent To The Unknown:
 			say "     As of regarding what just happened, perhaps you will have to find that out by yourself. Still, there might be an expert about supernatural things around somewhere if you find yourself in dire need of someone to aid you, though. You do have a nagging feeling that pursuing this quest, however, would be [bold type]very dangerous[roman type], especially for your psyche, after the hit it just took.";
 		say "     If you do intend to search for this mysterious force again, simply walk [bold type]To The Unknown[roman type] and you may find it.";
 		now Resolution of To The Unknown is 1;
-		SanLoss 10;
-	else if Resolution of To The Unknown is 1: [Void Realm]
-		say "     After walking around the streets of Red Light District, you manage to retrace your steps towards the spot where you had that unreal experience. What you find at the moment is an actual gateway, very well hidden from view, replacing what seems to be an actual gate to an underground level of an abandoned storage house. Inside, it is pitch black, but there is an ominous sound coming out of it, like a low frequency rum that makes your insides reverberate. It's almost as if it was breaking your perception of reality right at where you stand. There is no mistaking it, this is the place you were seeking.";
-		WaitLineBreak;
-		say "     Before you decide to go in, keep in mind that this is an [bold type]extremely dangerous area[roman type] that can potentially end your life, and you cannot simply abandon it whenever you please, as many obstacles will provide a challenge and may potentially halt your progress. Only go in if you know what you are doing.";
-		say "     Having a [bold type]strong psyche[roman type] may be advantageous, but if the contrary is true and you possess a [bold type]weak psyche[roman type] instead, you're most certainly doomed, as you will lose your mind to the void at an alarming rate. Additionally, if you are a particularly [bold type]kinky[roman type] individual, the Void Realm may provide you with a [italic type]vastly different[roman type] experience, but nonetheless, this place will use that against you in the most effective ways.";
-		say "     You may also find certain companions to be very helpful, such as [if Strange Sorcerer is resolved]the demonologist Xaedihr[else]an expert in demonology and dimensional traveling[end if], and they may even have a chance of saving you from an unavoidable danger.";
-		say "     In order to escape once you enter, just keep walking through the dimensional line in either direction without looking back, but that doesn't mean you should not explore its boundaries, as long as you are aware of the risks.";
-		say "     [bold type]Do you wish to proceed?[roman type][line break]";
-		Linebreak;
-		say "     ([link]Y[as]y[end link]) - Yes, enter the Void Realm.";
-		say "     ([link]N[as]n[end link]) - No, turn around and leave.";
-		if player consents:
-			LineBreak;
-			say "[ToTheVoid]";
-		else:
-			LineBreak;
-			say "     You decide to back away, for now, and perhaps that is for the best. You even feel some of your sanity being returned to you with this decision.";
-			SanBoost 5;
+		SanLoss 10;]
+
 
 Section 2 - The Void Realm
 
@@ -537,6 +546,7 @@ to say VRLeave:
 		say "     A single piece of pitch black rock falls to your feet once you regain control of your senses. You have obtained a [bold type]null essence[roman type] and placed it in your inventory.";
 		ItemGain null essence by 1 silently;
 	now inasituation is false;
+	move player to Hellfire Unknown;
 	stop the action;
 
 Section 2-2 - Beyond the Veil

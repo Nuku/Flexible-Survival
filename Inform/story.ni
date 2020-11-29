@@ -207,6 +207,7 @@ Include Down Under Pub by Stripes.
 Include Equinoid Camp by Song.
 Include Farm by Wahn.
 Include Gloryhole by SgtPepper234.
+Include Hellfire Club by Gherod.
 Include High Rise District by Guest Writers.
 Include Hitching Post by SgtPepper234.
 Include Hospital by Stripes.
@@ -778,6 +779,7 @@ Include Hadiya by Stripes.
 Include Hanu by Kernog.
 Include Harold by Sarokcat.
 Include Hayato by Stripes.
+Include Hellfire Workers by Gherod.
 Include Help Book by Prometheus.
 Include HornyHorsey by femtoAmpere.
 [Include Horus by Rikaeus.]
