@@ -50,7 +50,7 @@ to say sirendesc:
 		say "     He has a mostly-human body with lovely, feminine features and beautiful, smooth skin. His eyes are sharp and menacing, as are his pointed teeth. Attached to his back are a pair of white, feathered wings and his feet end in bird-like talons. This well-endowed male has a pair of giant cocks and a large ballsack to go with them. From the way those pricks are growing hard, it's clear he intends to use them on you.";
 
 
-to say losetosiren:
+to say Siren wins:
 	project Figure of Siren_naked_icon;
 	let tempnum be 0;
 	say "     With the siren's song filling your mind, you become enraptured and stop resisting the beautiful creature. He grins down at you with his sharp teeth and you smile back up at him happily. He pushes you down onto all fours and spreads your legs, still singing softly as he gets his twin meat logs lined up with [if Cunt Count of Player is 1]your pussy and asshole[else if Cunt Count of Player > 1]your pussies[else]your asshole[end if].";
@@ -75,12 +75,12 @@ to say losetosiren:
 	if sirenfight > 1, decrease sirenfight by 1; [losing decreases resistance to the song]
 
 
-to say beatthesiren:
+to say Siren loses:
 	say "     The defeated siren shrieks angrily and flies off erratically to seek refuge among the sharp rocks out in the choppy waters. With the creature silenced, your head starts to clear and you are ready to continue on your journey soon enough. Having successfully resisted the siren, you feel a little more confident you could do so again.";
 	increase sirenfight by 1; [Victory makes you more resistant to the song]
 
 
-to say sirenattack:
+to say Siren Attack:
 	choose row MonsterID from the Table of Random Critters;
 	if cha entry > charisma of Player - 10:
 		let bonus be ( Charisma of Player - 10 ) / 2;
@@ -125,9 +125,9 @@ When Play begins:
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
-	now attack entry is "[sirenattack]";
-	now defeated entry is "[beatthesiren]";
-	now victory entry is "[losetosiren]";
+	now attack entry is "[Siren Attack]";
+	now defeated entry is "[Siren loses]";
+	now victory entry is "[Siren wins]";
 	now desc entry is "[sirendesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "beautifully human, with lovely, feminine features and long, flowing hair. Hidden behind your luscious lips are a set of sharp, pointed teeth. Your voice has a musical quality to it whenever you speak";
 	now body entry is "nearly human and quite lovely to behold. You have a pair white wings sprouting from the shoulder blades. Your wings are large and powerful, but not quite enough to allow you to fly. The entire appearance of your body is actually strangely attractive. Your arms and legs are slender and shapely human limbs, until you get to your feet. They like that of a bird of prey, with golden-brown scales and sharp talons";
