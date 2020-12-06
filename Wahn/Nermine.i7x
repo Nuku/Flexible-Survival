@@ -374,7 +374,7 @@ to say NermineTalk2:
 		say "     Nermine gives you an appraising look and shakes her head sadly. You know there's no point in asking her for more assistance with your curse. You will have to find another means to deal with it before it consumes you.";
 		now wrcurseNermine is 13;  [Quest closed - fail]
 	else if wrcurseNermine is 11:
-		say "     Nermine smiles as she looks you over. 'Nermine does see that the dear visitor is doing much better now. She was being hopeful that [SubjectPro of Player]] would be succeeding. Now perhaps that Nermine has helped, the curse-free guest might consider to help Nermine in turn?' she says with a wink and a swish of her tail as she places the silver knife into her display case for rare items with delicate care. 'Resilience as [SubjectPro of Player] has proven is valuable indeed.";
+		say "     Nermine smiles as she looks you over. 'Nermine does see that the dear visitor is doing much better now. She was being hopeful that [SubjectPro of Player] would be succeeding. Now perhaps that Nermine has helped, the curse-free guest might consider to help Nermine in turn?' she says with a wink and a swish of her tail as she places the silver knife into her display case for rare items with delicate care. 'Resilience as [SubjectPro of Player] has proven is valuable indeed.";
 		now wrcurseNermine is 13;  [Quest closed - succeed]
 	else if wrcurseNermine is 12:
 		say "     Nermine looks you over. 'Nermine see that the visitor has decided to keeping their raptor nature. Nermine hopes that this is the right decision for them.'";

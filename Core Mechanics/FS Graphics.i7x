@@ -35,6 +35,7 @@ Figure of Bobcat1_icon is the file "FS-Bobcat.jpg".
 Figure of Bobcat2_icon is the file "FS-bobbibob2rs.jpg".
 Figure of Bottlenose_icon is the file "FS_BottlenoseToy.jpg".
 Figure of Bovine_F_icon is the file "FS_Bovine_F.jpg".
+Figure of Bubble_icon is the file "Bubble.jpg".
 Figure of BunnyJock_icon is the file "Bunny Jock.jpg".
 Figure of Cerberus_icon is the file "Cerberus.jpg".
 Figure of ChocoLab_icon is the file "ChocoLab_ig.jpg".
@@ -124,7 +125,7 @@ Figure of Minotaur_naked_icon is the file "Minotaur_naked.jpg".
 Figure of Naga_icon is the file "Naga.jpg".
 Figure of Nightmare_hard_icon is the file "Nightmare_hard.jpg".
 Figure of Nightmare_soft_icon is the file "Nightmare_soft.jpg".
-Figure of Slutslave_icon is the file "Slutslave.jpg"
+Figure of Slutslave_icon is the file "Slutslave.jpg".
 Figure of NinjaCat_F_icon is the file "CatNinja_F_ig.jpg".
 Figure of NinjaCat_M_icon is the file "NinjaCat_M_ig.jpg".
 Figure of Orca_hard_icon is the file "Orca_hard.jpg".

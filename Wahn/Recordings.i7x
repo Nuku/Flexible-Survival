@@ -421,7 +421,7 @@ Sarea of Demolished School is "Outside".
 when play begins:
 	add Demolished School to BadSpots of FemaleList;
 	add Demolished School to BadSpots of MaleList;
-]
+
 to say ResolveEvent Demolished School:
 	say "     Checking out a new area of the city, you come upon a high school building, much worse for wear now that the nanite apocalypse is in full swing. Half of it seems to have burned down, with the rest showing clear signs of vandalism, with few if any windows being intact. Still, there might yet be something useful left inside, so you make a cautious approach, observing the surroundings for a little while and seeing absolutely no sign of activity. Seems abandoned, so you follow up by stepping through a side entrance. The long hallway stretching out in front of you is a show of devastation, as someone or something smashed the lockers lining the walls. Not to search or even open them, just in a show off mindlessly applied force. Moving closer to one, you try to pull the door open, without too much success. The twisted piece of metal is wedged tight in its frame, too distorted to ever open again, even if you had the key.";
 	say "     You continue onwards, poking at this locker or that, but most of them are similarly bent and damaged, with the remaining containing little but books and clothes. The only piece of food you come across looks disturbingly furry for a ham sandwich, so you drop it in disgust and turn to exploring one of the rooms instead. It is locked, interestingly enough, and quite solid in its construction. This must have been a school that had enough money for security upgrades after the bouts of violence in the recent years. What didn't get replaced though is the wall the door is set in, and the unknown vandal that demolished the hallway seems to have punched it in frustration when he couldn't easily kick in the door. A palm-sized indention in it seems to be hanging on by a thread, making it easy for you to just push a little and sending that piece of broken wall it tumbling into the classroom beyond. Looking through the hole to make sure it is safe first, this allows you to simply reach in and unlock the door.";
@@ -436,6 +436,7 @@ to say ResolveEvent Demolished School:
 
 to say MrReynoldsVid:
 	say "     ";
+]
 
 Table of GameEventIDs (continued)
 Object	Name
