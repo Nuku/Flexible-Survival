@@ -562,26 +562,12 @@ to say HellfireClubEscortNormal: [A roll on various possible encounters]
 					say "[HellfireClubEscortNormal1LustDemon]"; [Incubus or Succubus]
 				else: [one in the dominant clientele is picked instead]
 					say "[HellfireClubEscortNormal1HellDemon]"; [Hellfire Demon or Demoness]
-		-- 2: [same thing as 1, for chance calculation. TO BE ADJUSTED WITH LATER ADDITIONS]
-			if player is dominant:
-				if a random chance of 4 in 6 succeeds: [more chance to get a submissive client]
-					say "[HellfireClubEscortNormal1LustDemon]"; [Incubus or Succubus]
-				else: [one in the dominant clientele is picked instead]
-					say "[HellfireClubEscortNormal1HellDemon]"; [Hellfire Demon or Demoness]
-			else if player is submissive:
-				if a random chance of 4 in 6 succeeds: [more chance to get a dominant client]
-					say "[HellfireClubEscortNormal1HellDemon]"; [Hellfire Demon or Demoness]
-				else: [one in the submissive clientele is picked, instead]
-					say "[HellfireClubEscortNormal1LustDemon]"; [Incubus or Succubus]
-			else: [player is versatile (neither submissive nor dominant)]
-				if a random chance of 1 in 2 succeeds: [Equal chance of either]
-					say "[HellfireClubEscortNormal1LustDemon]"; [Incubus or Succubus]
-				else: [one in the dominant clientele is picked instead]
-					say "[HellfireClubEscortNormal1HellDemon]"; [Hellfire Demon or Demoness]
-		-- 3:
+		-- 2:
 			say "[HellfireClubEscortNormal2]"; [a dark goo demon (genderless, special)]
-		-- 4:
+		-- 3:
 			say "[HellfireClubEscortNormal3NightmareHorse]"; [A Nightmare Stallion or Herm Mare (always a top and dominant)]
+		-- 4:
+			say "[HellfireClubEscortNormal4Lizard]"; [A lizardman or lizardwoman who are oral enthusiasts]
 
 to say HellfireClubEscortNormal1LustDemon:
 	if HP of Mogdraz is 1: [player prefers males...]
@@ -615,6 +601,17 @@ to say HellfireClubEscortNormal3NightmareHorse:
 			say "[HellfireClubEscortNormal3a]"; [a dominant nightmare stallion]
 		else:
 			say "[HellfireClubEscortNormal3b]"; [a dominant nightmare herm mare]
+
+to say HellfireClubEscortNormal4Lizard:
+	if HP of Mogdraz is 1: [player prefers males]
+		say "[HellfireClubEscortNormal4a]"; [a lizardman]
+	else if HP of Mogdraz is 2: [player prefers females]
+		say "[HellfireClubEscortNormal4b]"; [a lizardwoman]
+	else: [no gender preference]
+		if a random chance of 1 in 2 succeeds:
+			say "[HellfireClubEscortNormal4a]"; [a lizardman]
+		else:
+			say "[HellfireClubEscortNormal4b]"; [a lizardwoman]
 
 
 [***********************************************************]
@@ -1087,8 +1084,8 @@ to say HellfireClubEscortNormal1c:
 					say "(+3)[line break]";
 				else:
 					now HCEClientSatisfaction is 2;
-					HellfireClubEscortNormal1cCockSuck;
 					say "(+2)[line break]";
+				HellfireClubEscortNormal1cCockSuck;
 			else:
 				Linebreak;
 				say "     Well, you have to know what you will be doing before you are actually doing it, so you question him before doing anything he says. He is not happy. 'For starters, you are supposed to do what I say. Then, you do whatever the fuck I tell you to do. Do I need to repeat myself a third time, or is it clear enough?'";
@@ -1351,7 +1348,7 @@ to say HellfireClubEscortNormal1d:
 				else:
 					now HCEClientSatisfaction is 2;
 					say "(+2)[line break]";
-					HellfireClubEscortNormal1dFaceSit;
+				HellfireClubEscortNormal1dFaceSit;
 			else:
 				Linebreak;
 				say "     Well, you have to know what you will be doing before you are actually doing it, so you question her before doing anything she says. She is not happy. 'For starters, you are supposed to do what I say. Then, you do whatever the fuck I tell you to do. Do I need to repeat myself a third time, or is it clear enough?'";
@@ -1535,10 +1532,9 @@ to HellfireClubEscortNormal1dPegging:
 
 to say HellfireClubEscortNormal2:
 	say "     Once you are fully ready, you wait for your client...";
-	if a random chance of 1 in 3 succeeds: [player has to wait or not... Just some variation on the introduction.]
+	if a random chance of 1 in 5 succeeds: [player has to wait or not... Just some variation on the introduction.]
 		WaitLineBreak;
-		say "     And you still seem to be waiting, after a couple of minutes. Someone will have to arrive through that door, eventually, but this time it seems to be taking longer than normal. That is okay, you get the time to look around your room and study some of the possibilities for your attire, as well as contemplating the vast assorted variety of sex toys and tools to assist you in an especially hot session. Wow, there is a very massive dildo in a box underneath the bed, like about two feet and something long and very flexible... Oh, it seems to be shaped like a dick on the other end, as well! A double-dildo, this seems to be. There is also something else here... Like... Some... weird-looking googles. They have got spirals on the lenses, reminding you of one of those swirly lollipops. Just looking at them makes your eyes feel... uneasy.";
-		say "     Enough lollygagging, though. You hear noise outside. It seems your client is here, so you return to the bed and wait for their arrival.";
+		HellfireClubEscortNormalWaiting;
 		WaitLineBreak;
 	say "     And before you is a purple hued, almost transparent being. It gurgles and bubbles out what you can only guess are comments on you, but there is little to nothing discernable about any of what it says. It looks and behaves like a wild void beast, and it seems to be moving towards you.";
 	Linebreak;
@@ -1825,7 +1821,7 @@ to HellfireClubEscortNormal3aFuck:
 		increase HCEClientSatisfaction by 1;
 		say "(+1)[line break]";
 	WaitLineBreak;
-	say "     You wake up later, a huge mess all over the sheets and the floor as you are simply lying down on top of it all, the horseman having disappeared. You are left confused and wondering if part of you is still you, or if you are a whole right now... Upon checking yourself, you seem to be okay, unharmed and still in control of your decisions, but [bold type]something strange definitely happened here[roman type]...[line break]";
+	say "     You wake up later, a huge mess all over the sheets and the floor as you are simply lying down on top of it all, the horseman having disappeared. You are left confused and wondering if part of you is still you, or if you are a whole right now... Upon checking yourself, you seem to be okay, unharmed and still in control of your decisions, but something strange definitely happened here...";
 	now HCEscort3NightmareHorseSexRounds is 0;
 	HCEFinalSatisfactionBonus;
 
@@ -2070,9 +2066,262 @@ to HellfireClubEscortNormal3bFuck:
 		increase HCEClientSatisfaction by 1;
 		say "(+1)[line break]";
 	WaitLineBreak;
-	say "     You wake up later, a huge mess all over the sheets and the floor as you are simply lying down on top of it all, the herm horse having disappeared. You are left confused and wondering if part of you is still you, or if you are a whole right now... Upon checking yourself, you seem to be okay, unharmed and still in control of your decisions, but [bold type]something strange definitely happened here[roman type]...[line break]";
+	say "     You wake up later, a huge mess all over the sheets and the floor as you are simply lying down on top of it all, the herm horse having disappeared. You are left confused and wondering if part of you is still you, or if you are a whole right now... Upon checking yourself, you seem to be okay, unharmed and still in control of your decisions, but something strange definitely happened here...";
 	now HCEscort3NightmareHorseSexRounds is 0;
 	HCEFinalSatisfactionBonus;
+
+to say HellfireClubEscortNormal4a: [Male Lizardman]
+	say "     Once you are fully ready, you wait for your client...";
+	if a random chance of 1 in 5 succeeds: [player has to wait or not... Just some variation on the introduction.]
+		WaitLineBreak;
+		HellfireClubEscortNormalWaiting;
+		WaitLineBreak;
+	say "     You hear a triple knock on the door to your room. Even with it being left ajar, your client seems not to dare entering without your consent. A polite one, you wonder?";
+	say "     They do not enter just yet. It seems you really are expected to do something. Maybe give them permission to come to you? Or... just... stay silent?";
+	Linebreak;
+	say "     [bold type]What will you do?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Tell your client to enter.";
+	say "     ([link]N[as]n[end link]) - Keep your eyes peeled.";
+	if player consents:
+		Linebreak;
+		say "     You tell your client to just come in as soon as you hear the knocking. Now, you hear some movement, as you hear a quite ominous voice speaking...";
+		WaitLineBreak;
+		say "     'May I come in?' a red lizard face comes peeking through the door, his tongue waving like a snake's as he hisses. Is he some kind of demonic lizardman mixed with a snake of some sort? His eyes are, indeed, reptile in appearance, with a fiery yellow tone, and the rest of his body is tall and fit, covered in dark red scales and shaped into an anthropomorphic form of a lizardman. He stands completely naked as he walks in, with only a slit resting between his legs, where you would expect something dandling. Not the case for the lizard people. 'Ssss... Oh, this is most pleasant. I like a discrete encounter in a cozy establishment. Are you to be my escort for tonight?'";
+	else:
+		Linebreak;
+		say "     You keep sitting on the bed. Your eyes are fixated on the door. Nothing else moves nor makes a noise, except... the three knocks, again, at the exact same pace as before.";
+		Linebreak;
+		say "     [bold type]What will you do?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Just tell your client to enter.";
+		say "     ([link]N[as]n[end link]) - Keep your eyes peeled, yet again.";
+		if player consents:
+			Linebreak;
+			say "     You tell your client to just come in as soon as you hear the knocking. Now, you hear some movement, as you hear a quite ominous voice speaking...";
+			WaitLineBreak;
+			say "     'May I come in?' a red lizard face comes peeking through the door, his tongue waving like a snake's as he hisses. Is he some kind of demonic lizardman mixed with a snake of some sort? His eyes are, indeed, reptile in appearance, with a fiery yellow tone, and the rest of his body is tall and fit, covered in dark red scales and shaped into an anthropomorphic form of a lizardman. He stands completely naked as he walks in, with only a slit resting between his legs, where you would expect something dandling. Not the case for the lizard people. 'Ssss... I apologize for taking so long to enter. I prefer a safe entry rather than being seen as impolite. Are you to be my escort for tonight?'";
+		else:
+			Linebreak;
+			say "     And once more, you await. Your eyes are still fixated on the door, and there is absolutely nothing going on...";
+			say "     Until...";
+			WaitLineBreak;
+			say "     'May I come in?' a red lizard face comes peeking through the door, his tongue waving like a snake's as he hisses. Is he some kind of demonic lizardman mixed with a snake of some sort? His eyes are, indeed, reptile in appearance, with a fiery yellow tone, and the rest of his body is tall and fit, covered in dark red scales and shaped into an anthropomorphic form of a lizardman. He stands completely naked as he walks in, with only a slit resting between his legs, where you would expect something dandling. Not the case for the lizard people. 'Ssss... I apologize for taking so long to enter. I prefer a safe entry rather than being seen as impolite. Are you to be my escort for tonight?'";
+	WaitLineBreak;
+	say "     Certainly, his most prevalent feature is the constant hissing through his words, which gives him an even more ominous feeling. But as the situation stands, you are to be, indeed, his escort, so you let him know that he is correct. 'I see... Sss...! I do have a few requests... regarding what we should be doing together... I'm a big fan of the oral activities, as they are the most pleasurable while simultaneously relaxing, a fine way to enjoy the luxuries of good company.' - he says, pausing with another hiss - 'Would it be appropriate if we shared a long time indulging ourselves in the art that makes most use of our mouths and tongues? I would be delighted... And would make sure your superior gets a fair payment for your s-ssservice...'";
+	say "     Either you are going to be putting your mouth on him, or he will want to put that long tongue of his to work on your privates, most likely. It is not a choice that will fall on your shoulders, but you are expected to perform stellarly and respect his wishes.";
+	Linebreak;
+	say "     [bold type]Do you accept these terms?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Sure thing, you are here to please.";
+	say "     ([link]N[as]n[end link]) - His hissing creeps you out. Send him away and call it a day.";
+	if player consents:
+		Linebreak;
+		now HCEClientSatisfaction is 2;
+		say "(+2)[line break]";
+		say "     Of course, he is the one whose whims you must satisfy, and so, you tell him you are ready for anything he desires. 'Perfect. Then I would like to get started on something...'";
+		WaitLineBreak;
+		let randomnumber be a random number from 1 to 2; [adjust the latter number for the number of options]
+		if randomnumber is:
+			-- 1: [he wants the player to blow him]
+				HellfireEscortNormal4aSuckCock;
+			-- 2: [he wants to blow the player if male, or lick the player's pussy if female]
+				HellfireEscortNormal4aGetOral;
+		HCEFinalSatisfactionBonus;
+	else:
+		Linebreak;
+		say "     Just why does he keep doing it?! It sounds ominous and sends you chills down your spine. You do not want to work with this client, and so, you send him away in the most polite manner possible. 'Oh, I... I do apologize, I thought I asked for a professional... What kind of people does Master Mogdraz employ, these days-sss...? This is such a big disappointment! Hopefully he will have another much more compliant servant to sate my needs, or he won't see any coin from me ever again. Ssss!!'";
+		say "     After his aggressive hissing at you, he leaves the room without looking behind. At least you got rid of him, but Mogdraz certainly is not going to hand you any payment. Someone else will have the coins you could have.";
+		now HCEClientSatisfaction is 0;
+
+to HellfireEscortNormal4aSuckCock:
+	say "     He comes to you, slowly and gently, sitting next to you by the bed as he puts a hand over your thigh. 'I find myself in need of a warm mouth. A skilled one, though...' he says, exposing his slit to you, which seems to show the pointy tip of his lizard cock beginning to emerge. One of his fingers slip underneath your chin, and he makes you look into his eyes, very tenderly. For moments, you feel lost in his gaze, as if your whole being just sank within a bright orange sea, enveloping you in a warm embrace as your mind becomes lighter, free of worries and needless thoughts. It's as if a strange influence took over you, which you really cannot find the will to fight. In fact, it feels like an eternity of joyful bliss... 'Yesss... Let it all go... focus on me...'";
+	say "     Before you notice, you are already kneeling before him and between his scaly legs, your lips kissing the entirety of his slick shaft as his pointy manhood fully reveals itself, hard and pulsing with need that only you can sate. The sensitive surface of his member feels like the sweetest thing you have ever tasted, and it makes you want more. You are quick to wrap your lips around its whole girth, to then slide it into your mouth as your tongue wiggles all over it, taking his cock inside you with all the enthusiasm he deserves. 'Sss... That's it... Take it all in...' the lizardman says to you, passing his hand over your head and praising you like you were his pet, with no resistance whatsoever from you. In fact, it just leaves you more excited.";
+	WaitLineBreak;
+	say "     Servicing him with your best efforts, he makes you look at him again as you take his cock deep into your throat. He tells you to hold it a few times, the whole thing throbbing in your mouth, filling it and blocking your breathing, but only his eyes matter to you... It is just impossible to look away. 'My... so talented...' the lizardman comments, and then has you let go, returning to the tip of his dick in order for your to catch your breath, keeping your tongue wiggling around its pointy head. 'Again... Come here...' he orders, and you immediately obey, letting his member sink into your mouth and deep down your throat once more, holding it inside as you lock your gaze on his. 'Yesss... You know how to please me properly...'";
+	say "     This happens a few times more, with each being faster and slightly harder, but never losing its tenderness. Eventually, however, it comes to an end, as the demon lizardman nears the point of no return. 'Ready to swallow my seed, good servant? It shall be your reward...' he asks, and you nod instinctively, not being able to help yourself but to feel excited for his offering. And so, you continue your motions around his cock, sucking him eagerly as you bring him closer and closer... And then, finally, he bursts into your mouth, rich and creamy cum filling your senses just by its sweet flavor as the lizardman hisses in pleasure, finishing his entire load past your lips and down into your throat. You swallow every single drop, and still feel like you are craving for more...";
+	WaitLineBreak;
+	clear the screen;
+	say "     You suddenly hear a snap of fingers and shake your head, only finding yourself in confusion as nobody is in the room with you. There is this... strange taste in your mouth, somewhat sweet and quite intriguing, and you are naked. The sheets over your bed are wrinkled, and the door was left ajar. You try to remember what happened, but you are not able to. It is as if someone was here and then left... and with them, they took your memories. Well, it does look like you have done your job, but you have no idea how your performance was.";
+	if player is submissive:
+		WaitLineBreak;
+		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, and that it was a very praised aspect of your behavior...[roman type][line break]";
+		increase HCEClientSatisfaction by 1;
+		say "(+1)[line break]";
+	if player is dominant:
+		WaitLineBreak;
+		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, which... seems odd, given how dominant you are. Something broke in your mind, and you cannot tell what... But there is a certainty that your client thoroughly enjoyed this.[roman type][line break]";
+		increase HCEClientSatisfaction by 3;
+		say "(+3)[line break]";
+	if player is kinky:
+		WaitLineBreak;
+		say "     [italic type]The way you were so receptive to the charms of his strange client was also noted, thanks to your kinkiness. Something tells you that it could only be beneficial.[roman type][line break]";
+		increase HCEClientSatisfaction by 1;
+		say "(+1)[line break]";
+
+to HellfireEscortNormal4aGetOral:
+	say "     He comes to you, slowly and gently, sitting next to you by the bed as he puts a hand over your thigh. 'I find myself wanting to provide someone a great deal of pleasure...' he says, sliding it closer and closer to your crotch, but without touching it, still. 'Might you allow me to do it for you? I promise, it will feel very, very good...' One of his fingers slip underneath your chin, and he makes you look into his eyes, very tenderly. For moments, you feel lost in his gaze, as if your whole being just sank within a bright orange sea, enveloping you in a warm embrace as your mind becomes lighter, free of worries and needless thoughts. It's as if a strange influence took over you, which you really cannot find the will to fight. In fact, it feels like an eternity of joyful bliss... 'Let me show you... It will leave you craving for more...'";
+	if player is male:
+		say "     Before you notice, he is already kneeling before you and between your legs, his lips kissing the entirety of your shaft as it only grows harder under his care, throbbing impossibly hard as he keeps his gaze locked on yours. There is a feeling of intense pleasure in every movement he makes with his long tongue, wrapped around your member with such nimbleness that it blows your mind. It then sinks into his mouth, so warm and hot that it only makes your manhood more sensitive, together with the sensation of his entire tongue stroking it with the same dexterity as a hand. Feels like you are being given a blowjob and a handjob simultaneously, combined into much a stronger and pleasant stimulation...";
+		WaitLineBreak;
+		if cock length of player < 12:
+			say "     He takes it all in, deep into his throat even,";
+		else:
+			say "     He takes all he can inside, working with your big size without hesitation, ";
+		say "simply doing his best at providing you the highest amount pleasure he possibly can. Nothing really is a challenge for him, as you are kept in a highroad of blissful joy under the whole entirety of his care, every inch, corner and sensitive spot of your cock, lavished in good sensations. It only leaves you wanting more and more... and even more when you are soon to hit the point of no return. He keeps you there, however... Around the edge, circling around your tip, until you are on the verge of begging him... Right there... almost to the brink of exploding right in his mouth, but he does not let you. The lizardman says 'Beg me for it...' and you mutter the words he wants to hear. Then, a bit louder... And even louder...!";
+		say "     He makes you repeat them until he is satisfied, and then he gives is all, making you burst in absolute orgasm inside his mouth as he swallows your offering, shooting hard against the back of his mouth so eagerly that the whole world around you disappears for a moment. This good feeling of cumming continues to cycle for a long, long time, never subsiding, melting your mind with each passing second...";
+	else if player is female:
+		say "     Before you notice, he is already kneeling before you and between your legs, his lips kissing your wet curls and his tongue being slowly pushed inside, a wiggling you really appreciate as your depths are thoroughly stimulated. He shows such nimbleness that it blows your mind, the way he reaches so far inside you with only his slick organ slipping deeper, really making use of his lizard-like nature. The blissful sensations are tremendous, shaking your mind with more and more pleasure as he feasts on your feminine juices, continuing to pleasure you in your womanhood until you are squirming and moaning with each tongue movement he makes.";
+		WaitLineBreak;
+		say "     As he wiggles his tongue inside you, his hands begin to feel your body, complementing his oral efforts with a lot of tender touching, giving your breasts a nice lovely squeeze. Not only your sex is overwhelmed with stimulation, the rest of you falls in the same direction, and none of it takes too long to bring you closer to the edge as he continues to eat your pussy so masterfully, with length no human nor any ordinary creature could reach, stimulating you from the inside... and soon, a surge of massive pleasure takes you as your bottom quivers in ecstasy, a feeling that continues on for a long, long time, never subsiding, melting your mind with each passing second...";
+	WaitLineBreak;
+	clear the screen;
+	say "     You suddenly hear a snap of fingers and shake your head, only finding yourself in confusion as nobody is in the room with you. There is this... odd warm sensation down your groin... and you are naked. The sheets over your bed are wrinkled, and the door was left ajar. You try to remember what happened, but you are not able to. It is as if someone was here and then left... and with them, they took your memories. Well, it does look like you have done your job, but you have no idea how your performance was.";
+	if player is submissive:
+		WaitLineBreak;
+		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, and that it was a very praised aspect of your behavior...[roman type][line break]";
+		increase HCEClientSatisfaction by 1;
+		say "(+1)[line break]";
+	if player is dominant:
+		WaitLineBreak;
+		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, which... seems odd, given how dominant you are. Something broke in your mind, and you cannot tell what... But there is a certainty that your client thoroughly enjoyed this.[roman type][line break]";
+		increase HCEClientSatisfaction by 3;
+		say "(+3)[line break]";
+	if player is kinky:
+		WaitLineBreak;
+		say "     [italic type]The way you were so receptive to the charms of his strange client was also noted, thanks to your kinkiness. Something tells you that it could only be beneficial.[roman type][line break]";
+		increase HCEClientSatisfaction by 1;
+		say "(+1)[line break]";
+
+[ --- ]
+
+to say HellfireClubEscortNormal4b: [Female Lizardman]
+	say "     Once you are fully ready, you wait for your client...";
+	if a random chance of 1 in 5 succeeds: [player has to wait or not... Just some variation on the introduction.]
+		WaitLineBreak;
+		HellfireClubEscortNormalWaiting;
+		WaitLineBreak;
+	say "     You hear a triple knock on the door to your room. Even with it being left ajar, your client seems not to dare entering without your consent. A polite one, you wonder?";
+	say "     They do not enter just yet. It seems you really are expected to do something. Maybe give them permission to come to you? Or... just... stay silent?";
+	Linebreak;
+	say "     [bold type]What will you do?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Tell your client to enter.";
+	say "     ([link]N[as]n[end link]) - Keep your eyes peeled.";
+	if player consents:
+		Linebreak;
+		say "     You tell your client to just come in as soon as you hear the knocking. Now, you hear some movement, as you hear a quite ominous voice speaking...";
+		WaitLineBreak;
+		say "     'May I come in?' a red lizard face comes peeking through the door, her tongue waving like a snake's as she hisses. Is she some kind of demonic lizardwoman mixed with a snake of some sort? Her eyes are, indeed, reptile in appearance, with a bright purple tone, and the rest of her body is tall and fit, covered in dark red scales and shaped into an anthropomorphic form of a lizardwoman. She stands completely naked as she walks in, swaying her long scaly tail sensually as she approaches you. 'Ssss... Oh, this is most pleasant. I like a discrete encounter in a cozy establishment. Are you to be my escort for tonight?'";
+	else:
+		Linebreak;
+		say "     You keep sitting on the bed. Your eyes are fixated on the door. Nothing else moves nor makes a noise, except... the three knocks, again, at the exact same pace as before.";
+		Linebreak;
+		say "     [bold type]What will you do?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Just tell your client to enter.";
+		say "     ([link]N[as]n[end link]) - Keep your eyes peeled, yet again.";
+		if player consents:
+			Linebreak;
+			say "     You tell your client to just come in as soon as you hear the knocking. Now, you hear some movement, as you hear a quite ominous voice speaking...";
+			WaitLineBreak;
+			say "     'May I come in?' a red lizard face comes peeking through the door, her tongue waving like a snake's as she hisses. Is she some kind of demonic lizardwoman mixed with a snake of some sort? Her eyes are, indeed, reptile in appearance, with a bright purple tone, and the rest of her body is tall and fit, covered in dark red scales and shaped into an anthropomorphic form of a lizardwoman. She stands completely naked as she walks in, swaying her long scaly tail sensually as she approaches you. 'Ssss... I apologize for taking so long to enter. I prefer a safe entry rather than being seen as impolite. Are you to be my escort for tonight?'";
+		else:
+			Linebreak;
+			say "     And once more, you await. Your eyes are still fixated on the door, and there is absolutely nothing going on...";
+			say "     Until...";
+			WaitLineBreak;
+			say "     'May I come in?' a red lizard face comes peeking through the door, her tongue waving like a snake's as she hisses. Is she some kind of demonic lizardwoman mixed with a snake of some sort? Her eyes are, indeed, reptile in appearance, with a bright purple tone, and the rest of her body is tall and fit, covered in dark red scales and shaped into an anthropomorphic form of a lizardwoman. She stands completely naked as she walks in, swaying her long scaly tail sensually as she approaches you. 'Ssss... I apologize for taking so long to enter. I prefer a safe entry rather than being seen as impolite. Are you to be my escort for tonight?'";
+	WaitLineBreak;
+	say "     Certainly, her most prevalent feature is the constant hissing through her words, which gives her an even more ominous feeling. But as the situation stands, you are to be, indeed, her escort, so you let her know that she is correct. 'I see... Sss...! I do have a few requests... regarding what we should be doing together... I'm a big fan of the oral activities, as they are the most pleasurable while simultaneously relaxing, a fine way to enjoy the luxuries of good company.' - she says, pausing with another hiss - 'Would it be appropriate if we shared a long time indulging ourselves in the art that makes most use of our mouths and tongues? I would be delighted... And would make sure your superior gets a fair payment for your s-ssservice...'";
+	say "     Either you are going to be putting your mouth on her, or she will want to put that long tongue of his to work on your privates, most likely. It is not a choice that will fall on your shoulders, but you are expected to perform stellarly and respect her wishes.";
+	Linebreak;
+	say "     [bold type]Do you accept these terms?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Sure thing, you are here to please.";
+	say "     ([link]N[as]n[end link]) - Her hissing creeps you out. Send her away and call it a day.";
+	if player consents:
+		Linebreak;
+		now HCEClientSatisfaction is 2;
+		say "(+2)[line break]";
+		say "     Of course, she is the one whose whims you must satisfy, and so, you tell her you are ready for anything she desires. 'Perfect. Then I would like to get started on something...'";
+		WaitLineBreak;
+		let randomnumber be a random number from 1 to 2; [adjust the latter number for the number of options]
+		if randomnumber is:
+			-- 1: [she wants the player to lick her pussy]
+				HellfireEscortNormal4bLickPussy;
+			-- 2: [she wants to blow the player if male, or lick the player's pussy if female]
+				HellfireEscortNormal4bGetOral;
+		HCEFinalSatisfactionBonus;
+	else:
+		Linebreak;
+		say "     Just why does she keep doing it?! It sounds ominous and sends you chills down your spine. You do not want to work with this client, and so, you send her away in the most polite manner possible. 'Oh, I... I do apologize, I thought I asked for a professional... What kind of people does Master Mogdraz employ, these days-sss...? This is such a big disappointment! Hopefully he will have another much more compliant servant to sate my needs, or he won't see any coin from me ever again. Ssss!!'";
+		say "     After her aggressive hissing at you, she leaves the room without looking behind. At least you got rid of her, but Mogdraz certainly is not going to hand you any payment. Someone else will have the coins you could have.";
+		now HCEClientSatisfaction is 0;
+
+to HellfireEscortNormal4bLickPussy:
+	say "     She comes to you, slowly and gently, sitting next to you by the bed as she puts a hand over your thigh. 'I find myself in need of a warm mouth. A skilled one, though...' she says, exposing her womanhood to you, which seems to show a drop of her juices just emerging from the slit. One of her fingers slip underneath your chin, and she makes you look into her eyes, very tenderly. For moments, you feel lost in her gaze, as if your whole being just sank within a bright purple sea, enveloping you in a warm embrace as your mind becomes lighter, free of worries and needless thoughts. It's as if a strange influence took over you, which you really cannot find the will to fight. In fact, it feels like an eternity of joyful bliss... 'Yesss... Let it all go... focus on me...'";
+	say "     Before you notice, you are already kneeling before her and between her scaly legs, your lips kissing her womanly entrance as your tongue beings to slip inside, feeling like the sweetest thing you have ever tasted, and it only makes you want more. You are quick to practically make out with her vulva before you slide your tongue fully inside, just past her soaked labia, wiggling it frantically with all the enthusiasm she deserves. 'Sss... That's it... deeper...' the lizardwoman moans to you, passing her hand over your head and praising you like you were her pet, with no resistance whatsoever from you. In fact, it just leaves you more excited.";
+	WaitLineBreak;
+	say "     Servicing her with your best efforts, she makes you look at her again, taking a short break before sinking your mouth once more in her womanhood. She tells you to keep licking her very deep, her whole bottom nearly grinding against your face, covering it and blocking your breathing, but only her words matter to you... It is just impossible to shove her voice away. 'My... so talented...' the lizardwoman comments, and then has you let go, only keeping the very tip of your tongue around her moist cunt as you attempt to catch your breath, keeping it wiggling around her clit. 'Again... Come here...' she orders, and you immediately obey, sinking into her pussy once more, holding your tongue inside as you lose yourself in her sweet juices. 'Yesss... You know how to please me properly...'";
+	say "     This happens a few times more, with each being faster and slightly harder, but never losing its tenderness. Eventually, however, it comes to an end, as the demon lizardwoman nears the point of no return. 'Ready to bring me to my orgasm, good servant? Licking more of my juices shall be your reward...' she asks, and you nod instinctively, not being able to help yourself but to feel excited for her offering. And so, you continue your motions against her sex, eating her out eagerly as you bring her closer and closer... And then, finally, she squirts into your mouth, quivering and squirming around, her taste filling your senses just by its sweet flavor as the lizardwoman hisses in ecstasy. You swallow every single drop of her lady liquids, and still feel like you are craving for more...";
+	WaitLineBreak;
+	clear the screen;
+	say "     You suddenly hear a snap of fingers and shake your head, only finding yourself in confusion as nobody is in the room with you. There is this... strange taste in your mouth, somewhat sweet and quite intriguing, and you are naked. The sheets over your bed are wrinkled, and the door was left ajar. You try to remember what happened, but you are not able to. It is as if someone was here and then left... and with them, they took your memories. Well, it does look like you have done your job, but you have no idea how your performance was.";
+	if player is submissive:
+		WaitLineBreak;
+		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, and that it was a very praised aspect of your behavior...[roman type][line break]";
+		increase HCEClientSatisfaction by 1;
+		say "(+1)[line break]";
+	if player is dominant:
+		WaitLineBreak;
+		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, which... seems odd, given how dominant you are. Something broke in your mind, and you cannot tell what... But there is a certainty that your client thoroughly enjoyed this.[roman type][line break]";
+		increase HCEClientSatisfaction by 3;
+		say "(+3)[line break]";
+	if player is kinky:
+		WaitLineBreak;
+		say "     [italic type]The way you were so receptive to the charms of his strange client was also noted, thanks to your kinkiness. Something tells you that it could only be beneficial.[roman type][line break]";
+		increase HCEClientSatisfaction by 1;
+		say "(+1)[line break]";
+
+to HellfireEscortNormal4bGetOral:
+	say "     She comes to you, slowly and gently, sitting next to you by the bed as she puts a hand over your thigh. 'I find myself wanting to provide someone a great deal of pleasure...' she says, sliding it closer and closer to your crotch, but without touching it, still. 'Might you allow me to do it for you? I promise, it will feel very, very good...' One of her fingers slip underneath your chin, and she makes you look into her eyes, very tenderly. For moments, you feel lost in her gaze, as if your whole being just sank within a bright purple sea, enveloping you in a warm embrace as your mind becomes lighter, free of worries and needless thoughts. It's as if a strange influence took over you, which you really cannot find the will to fight. In fact, it feels like an eternity of joyful bliss... 'Let me show you... It will leave you craving for more...'";
+	if player is male:
+		say "     Before you notice, she is already kneeling before you and between your legs, her lips kissing the entirety of your shaft as it only grows harder under her care, throbbing impossibly hard as she keeps her gaze locked on yours. There is a feeling of intense pleasure in every movement she makes with her long tongue, wrapped around your member with such nimbleness that it blows your mind. It then sinks into her mouth, so warm and hot that it only makes your manhood more sensitive, together with the sensation of her entire tongue stroking it with the same dexterity as a hand. Feels like you are being given a blowjob and a handjob simultaneously, combined into much a stronger and pleasant stimulation...";
+		WaitLineBreak;
+		if cock length of player < 12:
+			say "     She takes it all in, deep into her throat even,";
+		else:
+			say "     She takes all she can inside, working with your big size without hesitation, ";
+		say "simply doing her best at providing you the highest amount pleasure she possibly can. Nothing really is a challenge for her, as you are kept in a highroad of blissful joy under the whole entirety of her care, every inch, corner and sensitive spot of your cock, lavished in good sensations. It only leaves you wanting more and more... and even more when you are soon to hit the point of no return. She keeps you there, however... Around the edge, circling around your tip, until you are on the verge of begging her... Right there... almost to the brink of exploding right in her mouth, but she does not let you. The lizardwoman says 'Beg me for it...' and you mutter the words she wants to hear. Then, a bit louder... And even louder...!";
+		say "     She makes you repeat them until she is satisfied, and then she gives is all, making you burst in absolute orgasm inside her mouth as she swallows your offering, shooting hard against the back of her mouth so eagerly that the whole world around you disappears for a moment. This good feeling of cumming continues to cycle for a long, long time, never subsiding, melting your mind with each passing second...";
+	else if player is female:
+		say "     Before you notice, she is already kneeling before you and between your legs, her lips kissing your wet curls and her tongue being slowly pushed inside, a wiggling you really appreciate as your depths are thoroughly stimulated. She shows such nimbleness that it blows your mind, the way she reaches so far inside you with only her slick organ slipping deeper, really making use of her lizard-like nature. The blissful sensations are tremendous, shaking your mind with more and more pleasure as she feasts on your feminine juices, continuing to pleasure you in your womanhood until you are squirming and moaning with each tongue movement she makes.";
+		WaitLineBreak;
+		say "     As she wiggles her tongue inside you, her hands begin to feel your body, complementing her oral efforts with a lot of tender touching, giving your breasts a nice lovely squeeze. Not only your sex is overwhelmed with stimulation, the rest of you falls in the same direction, and none of it takes too long to bring you closer to the edge as she continues to eat your pussy so masterfully, with length no human nor any ordinary creature could reach, stimulating you from the inside... and soon, a surge of massive pleasure takes you as your bottom quivers in ecstasy, a feeling that continues on for a long, long time, never subsiding, melting your mind with each passing second...";
+	WaitLineBreak;
+	clear the screen;
+	say "     You suddenly hear a snap of fingers and shake your head, only finding yourself in confusion as nobody is in the room with you. There is this... odd warm sensation down your groin... and you are naked. The sheets over your bed are wrinkled, and the door was left ajar. You try to remember what happened, but you are not able to. It is as if someone was here and then left... and with them, they took your memories. Well, it does look like you have done your job, but you have no idea how your performance was.";
+	if player is submissive:
+		WaitLineBreak;
+		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, and that it was a very praised aspect of your behavior...[roman type][line break]";
+		increase HCEClientSatisfaction by 1;
+		say "(+1)[line break]";
+	if player is dominant:
+		WaitLineBreak;
+		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, which... seems odd, given how dominant you are. Something broke in your mind, and you cannot tell what... But there is a certainty that your client thoroughly enjoyed this.[roman type][line break]";
+		increase HCEClientSatisfaction by 3;
+		say "(+3)[line break]";
+	if player is kinky:
+		WaitLineBreak;
+		say "     [italic type]The way you were so receptive to the charms of his strange client was also noted, thanks to your kinkiness. Something tells you that it could only be beneficial.[roman type][line break]";
+		increase HCEClientSatisfaction by 1;
+		say "(+1)[line break]";
+
+[ ESCORT WAITING SCENES ]
+
+to HellfireClubEscortNormalWaiting:
+	let randomnumber be a random number from 1 to 2; [adjust the latter number for the number of options]
+	if randomnumber is:
+		-- 1:
+			say "     And you still seem to be waiting, after a couple of minutes. Someone will have to arrive through that door, eventually, but this time it seems to be taking longer than normal. That is okay, you get the time to look around your room and study some of the possibilities for your attire, as well as contemplating the vast assorted variety of sex toys and tools to assist you in an especially hot session. Wow, there is a very massive dildo in a box underneath the bed, like about two feet and something long and very flexible... Oh, it seems to be shaped like a dick on the other end, as well! A double-dildo, this seems to be. There is also something else here... Like... Some... weird-looking googles. They have got spirals on the lenses, reminding you of one of those swirly lollipops. Just looking at them makes your eyes feel... uneasy.";
+			say "     Enough lollygagging, though. You hear noise outside. It seems your client is here, so you return to the bed and wait for their arrival.";
+		-- 2:
+			say "     You continue on waiting for a while now, and your client seems to be taking some time.";
 
 [ ESCORT FINAL BONUS ]
 

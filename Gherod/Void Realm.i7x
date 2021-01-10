@@ -1458,6 +1458,8 @@ to VROddTreasurePathChoice:
 			say "     Turning to your left and towards the large locked door, you realize you had picked a key when you destroyed the mirror somewhere in another place within this realm. Perhaps this is it? There is only one way to know the answer to that question, and it is by trying it out. Stepping towards the enormous stone door, you take the key into one hand, grabbing the large lock with the other, and proceed to shove it carefully inside the keyhole. It doesn't quite fit, at first, which makes you think that you are probably having wishful thinking, but eventually, you manage to push it in. Trying each side to see which one would the key rotate towards, you find yourself turning it several degrees to the right until you hear a loud tick. The lock comes open, and it nearly smothers your feet as it falls heavily on the ground.";
 			say "     After you successfully managed to unlock the door, it starts reacting on its own and moving in your direction. Slowly, each stone made structure, with its deep and heavy creaking echoing through, swings open and forces you to take a few steps back. After the passage is finally unobstructed, it reveals an extension of the catacombs, but without any coffins. You can see an urn or two from here, and it gives you a feeling that it might seem like some sort of treasury vault. Who knows, perhaps you might find something useful in there?";
 			say "     [bold type]The door to the left path has now been unlocked.[roman type][line break]";
+			WaitLineBreak;
+			say "     <<Author's note: This is everything, for now. More content will be added to this path. As you have already unlocked it, once it comes out, you may access it immediately. There will be a new encounter related to treasure chests, as a hint for what is about to come. For now, you shall be returned to the previous choices.>>";
 			now Resolution of MirrorsKey is 2; [unlocked the door]
 			WaitLineBreak;
 			VROddTreasurePathChoice;
@@ -2168,6 +2170,7 @@ to say VRDarkTyrantWins:
 			say "     After your head, your shoulders follow as he slowly continues to push, moaning and grunting as he feels more and more of you being sucked in by his gooey manhood, down to your waist, and with each throb, a little more of your legs... until your feet are the only thing poking out of his dong. With a finger, he presses against your soles, and completely shoves you inside his rod, having achieved so much hardness that you thought it would be impossible to reach for something made of slime as he is. Inside, however, it feels like wobbly flesh, constricting and pulsing all around you like a living heartbeat, warm goo throbbing all over your body as you keep sinking, deeper and deeper, until you are finally dropped in what seems to be his balls, or rather, a huge sack of more goo.";
 			say "     There is some liquid inside, which is that very thick slime he keeps leaking, except this one is much hotter, almost burning through you, yet you get used to it. It envelops you and stimulates your body, providing you with a lot of pleasurable sensations as you are invited to lay down and close your eyes... You feel the Tyrant caress his sack with you inside, everything rumbling and bouncing around you as you are kept sealed tightly inside his nuts. There is no longer a need in you to breathe, as you as you know yourself, your body as you controlled it and your mind all start to become irrelevant. All that belongs to you is taken away, melting away in his slime and becoming part of a much greater being.";
 	say "     You are able to feel the Dark Tyrant's body, see his thoughts, feel his emotions... He is glad to have you become part of him.";
+	WaitLineBreak;
 	now battleground is "Void";
 	the Player was ended by "Dark Tyrant";
 	trigger ending "Player has died";
@@ -2194,6 +2197,7 @@ to say VRPeculiarSummonerWins:
 	WaitLineBreak;
 	say "     With this, the peculiar summoner steps back, analyzing their creation. 'Not perfect, but not bad either. You will do a good host for my tiny Cthulhu-like thingie. Well, I haven't named it yet, perhaps you get to have a special one if you do well.' Your body immediately bows to your creator, and you cannot even stop it. Even thinking is hard, with other thoughts taking priority over yours. It is difficult to stay like your own self... You no longer control your actions nor your will...";
 	say "     It is as if your body was taken from you, and you remained trapped in it.";
+	WaitLineBreak;
 	now battleground is "Void";
 	the Player was ended by "Peculiar Summoner";
 	trigger ending "Player has died";

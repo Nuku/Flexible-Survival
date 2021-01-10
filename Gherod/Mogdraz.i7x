@@ -28,6 +28,20 @@ Version 4 of Mogdraz by Gherod begins here.
 [ Lust ]
 [ Measures how much Mogdraz is interested in the player. The higher, the better... ]
 
+[ Hunger ]
+[ Measures how much of your soul belongs to Mogdraz. The higher, the more influence he has on the player]
+[ 25 - 1/4 of the player's soul]
+[ 50 - 2/4 of the player's soul]
+[ 75 - 3/4 of the player's soul]
+[ 100 - Player's entire soul belongs to Mogdraz]
+
+[ Loyalty ]
+[ Measures how much Mogdraz respects the player. The higher it is, the more Mogdraz will consider the player an ally, rather than just an asset, or worse...]
+[ Less than 0 - Mogdraz considers the player a liability, only a tool to be used in his favor. Total soul acquisition results in player's anihilation, their essence consumed by the Demon Lord.]
+[ 0 to 2 - Mogdraz thinks of the player as an interesting asset, or sometimes a fun diversion, nothing more.  Total soul acquisition results in player's eternal enslavement]
+[ 3 to 4 - Mogdraz perceives the player as an ally, and would rather keep them alive and healthy (prevents bad ends on total soul acquisition)]
+[ 5 and higher - Player is a true friend to the Demon Lord. They are offered a place alongside Mogdraz in leading the Hellfires.]
+
 
 [***********************************************************]
 [***********************************************************]
@@ -155,6 +169,12 @@ to say MogdrazTalkMenu:
 		now sortorder entry is 99;
 		now description entry is "Try to know more about their most recent capture";
 	[]
+	if Resolution of YokLairMogdraz is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask for his help in finding the onis";
+		now sortorder entry is 99;
+		now description entry is "Mogdraz would surely be able to help you, so ask him about it";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -172,22 +192,24 @@ to say MogdrazTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Jobs"):
 					say "[MogdrazTalkJobs]";
-				if (nam is "Himself"):
+				else if (nam is "Himself"):
 					say "[MogdrazTalkHimself]";
-				if (nam is "His demon lackeys"):
+				else if (nam is "His demon lackeys"):
 					say "[MogdrazTalkHisDemons]";
-				if (nam is "Information on nanites"):
+				else if (nam is "Information on nanites"):
 					say "[MogdrazTalkNanites]";
-				if (nam is "His business"):
+				else if (nam is "His business"):
 					say "[MogdrazTalkBusiness]";
-				if (nam is "Sex"):
+				else if (nam is "Sex"):
 					say "[MogdrazTalkSex]";
-				if (nam is "His situation with Xaedihr"):
+				else if (nam is "His situation with Xaedihr"):
 					say "[MogdrazTalkXaedihr]";
-				if (nam is "His story with Araqiel"):
+				else if (nam is "His story with Araqiel"):
 					say "[MogdrazTalkAraqiel]";
-				if (nam is "Ask about the Purifier"):
+				else if (nam is "Ask about the Purifier"):
 					say "[MogdrazTalkPurifier]"; [in Araqiel file]
+				else if (nam is "Ask for his help in finding the onis"):
+					say "[MogdrazTalkYokLair]"; [in Hayato file]
 				wait for any key;
 				if MogdrazDoneTalking is false:
 					say "[MogdrazTalkMenu]"; [looping back to keep talking with him]

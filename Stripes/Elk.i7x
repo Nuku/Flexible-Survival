@@ -1,5 +1,6 @@
-Version 1 of Elk by Stripes begins here.
+Version 2 of Elk by Stripes begins here.
 [Version 1.2 - Relocated to Urban Forest area]
+[Version 2 - Added a 4th victory scene with possible WS - Vinickus]
 
 "Adds an Elk creature to Flexible Survival's Wandering Monsters table"
 
@@ -16,7 +17,7 @@ to say elkdesc:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Female";
-	say "     Facing off against you is a large male creature in the form of an elk. While he stands well over six feet tall, his wide rack makes him seem even larger. He has a strong build to his body, with a powerful chest and broad shoulders. His fur is brown in color, darkening over his head and neck where it is also shaggier. He has a strong, musky scent to him and his cock protrudes several inches from his plump package, showing the male to be in rut. He looks you over briefly, as if sizing you up while waving his rack [if Player is female]in a display to show off its impressiveness[else]menacingly at you[end if]. He releases a bugling call and stomps a hoof before charging forward.";
+	say "     Facing off against you is a large male creature in the form of an elk. While he stands well over six feet tall, his wide rack makes him seem even larger. He has a strong build to his body, with a powerful chest and broad shoulders. His fur is brown in color, darkening over his head and neck where it grows shaggier. He has a strong, musky scent to him, and his cock protrudes several inches from his plump package, showing the male to be in rut. He looks you over briefly, as if sizing you up, all while waving his rack [if Player is female]in an attempt to impress you[else]menacingly at you[end if]. He releases a bugling call, and stomps a hoof, before charging forward.";
 
 to say losetoelk:
 	now noelksex is 0;
@@ -28,66 +29,80 @@ to say losetoelk:
 		say "Standing overtop of you, he grabs your head roughly and presses your face to his strong chest, forcing you to breathe in his powerful scent. The musky odor of the elk fills your senses, making you lose focus and grow increasingly aroused. You become eager to submit to the rutting male's needs.";
 		increase Libido of Player by 5;
 	if Player is female and a random chance of 3 in 4 succeeds:
-		say "     In a daze, you don't resist as the strong male pushes you onto all fours and hikes up your ass. With a firm thrust, he drives his thick rod into your [if Cunt Tightness of Player < 4]tight [end if]pussy[if Cunt Depth of Player < 12]. It is difficult to take his enlarged shaft at first, but you press back onto it regardless[else]. Your [cunt size desc of Player] cunt has little difficulty taking the cervine's shaft and you push back into his thrusts[end if], your body lusting for the musky elk. His hands grope and fondle you roughly as he fucks you, focused on his own satisfaction rather than your own, but even that turns you on all the more in your present state. Anything to get the virile male off so you can be seeded and bred by him, your horny body demands.";
-		say "     And eventually you get just that as he drives hard into you and unleashes his hot seed[if Cunt Depth of Player < 16]. With his animalistic cock pressed as deep into you as it can go, his seed splashes against your cervix, fluid pressure quickly building until it pushes past that final barrier and pours thickly into your womb[else]. With his animalistic cock buried fully inside you, his seed sprays into you, pooling against your cervix to be drawn into your womb[end if] [if the player is impreg_able]in an attempt to breed you[else]in a failed attempt to breed you[end if]. You moan and cry out, cumming as you feel the rutting male staking his claim on your uterus. Once his balls are drained, he pulls out, [one of]wipes his sticky cock across your ass[or]has you lick it clean[or]smears his sticky cock across your face[at random] and then drives you off before looking for another female to mate.[fimpregchance]";
+		say "     In a daze, you don't resist as the strong male pushes you onto all fours and hikes up your ass. With a firm thrust, he drives his thick rod into your [if Cunt Tightness of Player < 4]tight [end if]pussy[if Cunt Depth of Player < 12]. It is difficult to take his enlarged shaft at first, but you press back against it regardless[else]. Your [cunt size desc of Player] cunt has little difficulty taking the cervine's shaft, and so you push back into his thrusts[end if], your body lusting for the musky elk. His hands grope and fondle you roughly as he fucks you, focused on his own satisfaction rather than your own, but that just turns you on even more: knowing you're just a tool for his pleasure. Nothing is too degrading when you have such a burning need for his seed.";
+		say "     Eventually, you get just that, as he drives hard into you and unleashes his hot seed[if Cunt Depth of Player < 16]. With his animalistic cock pressed as deep into you as possible, his seed splashes against your cervix, fluid pressure building up and up and up. The pressure is nonstop until it pushes right past that final barrier and pours thickly into your womb[else]. With his animalistic cock buried fully inside you, his seed sprays into you, pooling against your cervix before trickling into your womb[end if] [if the player is impreg_able]in an attempt to breed you[else]in a failed attempt to breed you[end if]. You moan and cry out, cumming as you feel the rutting male stake his claim on your uterus. Once his balls are drained, he pulls out, [one of]wipes his sticky cock across your ass[or]has you lick it clean[or]smears his sticky cock across your face[at random] and then drives you off before looking for another female to mate.";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Elk";
 	else if Player is not female and anallevel > 1 and a random chance of anallevel in 5 succeeds:
 		say "     In a daze, you don't resist as the strong male pushes you onto all fours and hikes up your ass. Lacking a pussy for him to breed, the victorious male will be claiming your ass of his would-be rival. With a firm thrust, he drives his thick rod into your [if scalevalue of Player < 3]smaller [end if]body, forcing your puckered hole to spread open for him. In your lustful daze, you press back onto it despite the initial difficulty in taking the cervine shaft. Your body, lusting for the musky elk, submits to the stronger, and therefore more virile, male. His hands grope and fondle you roughly as he fucks you, focused on his own satisfaction rather than your own, but even that turns you on all the more in your present state. Anything to get the virile male off so you can be rutted and seeded by him, your horny body demands.";
-		say "     And eventually you get just that as he drives hard into you and unleashes his hot seed. With his animalistic cock buried fully inside your clenching ass, his seed sprays into you, pooling inside your bowels and filling your rear with the heat of his rut[if the player is mpreg_able]. Your fecund ass milks the stud's cock for all it can give, your sex-addled body and mind longing to be bred[end if][if Player is male]. You moan and cry out, cumming as you feel the rutting male staking his claim in your rump with his virile load. Once his balls are drained, he pulls out, [one of]wipes his sticky cock across your ass[or]has you lick it clean[or]smears his sticky cock across your face[at random] and then drives off his defeated rival before looking for a proper female to mate.[mimpregchance]";
+		say "     And eventually you get just that as he drives hard into you and unleashes his hot seed. With his animalistic cock buried fully inside your clenching ass, his seed sprays into you, pooling inside your bowels and filling your rear with the heat of his rut[if the player is mpreg_able]. Your fecund ass milks the stud's cock for all it can give, your sex-addled body and mind longing to be bred[end if][if Player is male]. You moan and cry out, cumming as you feel the rutting male staking his claim in your rump with his virile load. Once his balls are drained, he pulls out, [one of]wipes his sticky cock across your ass[or]has you lick it clean[or]smears his sticky cock across your face[at random] and then drives off his defeated rival before looking for a proper female to mate.";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Elk";
 	else:
 		say "     In a daze, you don't resist as the strong male guides your head down to his throbbing erection. In your present state, the sight and scent of that musky pillar of meat makes your mouth water. You plunge your mouth overtop of it without further prompting and start sucking him off eagerly. The taste of it is strong and arousing, full of virility and strength. You play your tongue along its smooth surface, swallowing down the precum that dribbles from it while the elk thrusts into your mouth with increasing speed. His hands keep a firm grip on your [if Player is male and the player is elkfaced]antlers[else]head[end if] as his fifteen inch cock pushes into your mouth and down your throat.";
 		say "     With a loud groan of relief, his penis throbs in your mouth and unleashes blast after blast of cum. His seed, strong and musky like his scent, is thick and plentiful. You gulp it all down, rubbing his ballsack as you do, eager for all he'll give. By the time he's done, your belly is full of his heated load and you are left aroused and unsatisfied. When he drives you off after his own fun is over, your lustful daze continues for some time before your head begins to clear.";
 		if Libido of Player < 80, now Libido of Player is ( ( 3 * Libido of Player ) + 80 ) / 4;
+		CreatureSexAftermath "Player" receives "OralCock" from "Elk";
 
+[if noelksex > 2:
+	say "     Grabbing the elk by the antlers, you press twist your weight to the side, pulling him face first to the ground. As you have done with the other elk, you keep him pinned to the ground for a little while until he gives up and concedes that you've won. Wanting nothing more from him, you send him off to look for a means to slake his lust elsewhere.";]
 
 to say beattheelk:
-	if noelksex > 2:
-		say "     Grabbing the elk by the antlers, you press twist your weight to the side, pulling him face first to the ground. As you have done with the other elk, you keep him pinned to the ground for a little while until he gives up and concedes that you've won. Wanting nothing more from him, you send him off to look for a means to slake his lust elsewhere.";
-	else:
-		say "     Grabbing the elk by the antlers, you press twist your weight to the side, pulling him face first to the ground. After pinning him to the ground for a little while, he gives up and concedes that you've won. Having forced him to submit to you, you consider your options on what to do with the horny male.";
-		now sextablerun is 0;
-		blank out the whole of table of fucking options;
+	say "     Grabbing the elk by the antlers, you press twist your weight to the side, pulling him face first to the ground. After pinning him to the ground for a little while, he gives up and concedes that you've won. Having forced him to submit to you, you consider your options on what to do with the horny male.";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Release him";
+	now sortorder entry is 99;
+	now description entry is "let him go";
+	[]
+	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Release him";
-		now sortorder entry is 99;
-		now description entry is "let him go";
-		if Player is male:
-			choose a blank row in table of fucking options;
-			now title entry is "Fuck him";
-			now sortorder entry is 1;
-			now description entry is "screw him instead";
-		if Player is female:
-			choose a blank row in table of fucking options;
-			now title entry is "Ride him (vaginal)";
-			now sortorder entry is 2;
-			now description entry is "help him with his rut";
+		now title entry is "Fuck him";
+		now sortorder entry is 1;
+		now description entry is "screw him instead";
+	[]
+	if Player is female:
+		choose a blank row in table of fucking options;
+		now title entry is "Ride him (vaginal)";
+		now sortorder entry is 2;
+		now description entry is "help him with his rut";
+	[]
+	else:
+		choose a blank row in table of fucking options;
+		now title entry is "Ride him (anal)";
+		now sortorder entry is 2;
+		now description entry is "help him with his rut";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Drink his nectar";
+	now sortorder entry is 3;
+	now description entry is "Work to satisfy this man, and get a treat while doing it";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> ";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: Shall you [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Fuck him":
+					say "[beattheelk_1]";
+				else if nam is "Ride him (vaginal)":
+					say "[beattheelk_2]";
+				else if nam is "Ride him (anal)":
+					say "[beattheelk_3]";
+				else if nam is "Drink his nectar":
+					say "[beattheelk_4]";
+				else if nam is "Release him":
+					say "[beattheelk_6]";
 		else:
-			choose a blank row in table of fucking options;
-			now title entry is "Ride him (anal)";
-			now sortorder entry is 2;
-			now description entry is "help him with his rut";
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		while sextablerun is 0:
-			say "Pick the corresponding number> ";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
-				say "[title entry]: Shall you [description entry]?";
-				if Player consents:
-					let nam be title entry;
-					now sextablerun is 1;
-					if nam is "Fuck him":
-						say "[beattheelk_1]";
-					if nam is "Ride him (vaginal)":
-						say "[beattheelk_2]";
-					if nam is "Ride him (anal)":
-						say "[beattheelk_3]";
-					if nam is "Release him":
-						say "[beattheelk_4]";
-			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 
 
 to say beattheelk_1:	[fuck him]
@@ -95,6 +110,7 @@ to say beattheelk_1:	[fuck him]
 	say "     Keeping the defeated elk pinned down, you grab that raised ass of his with one hand and kick his legs apart. He gives a soft bleating sound but does not resist, even flagging his tail up for you. Unsurprised given the circumstances, you grin and give his rump a firm swat as you grind your manhood against it. Feeling that soft pelt squeezed around you by his firm rear gets you even harder. You line yourself up with that pucker and thrust into him, enjoying the lustful low he gives as he's mounted.";
 	say "     His big cock sways beneath him as you pound away at his ass, drooling precum onto the ground as you rut with him. His anal walls slide smoothly across your cock, clenching and squeezing around you. It's clear that he's done this before, probably after having lost against other males of the rutting elk herd. Feeling there's little point in keeping him pinned, you release his antlers, leaving your hands free to wander across his sexy body before eventually settling on his groin. The scent of rut hangs heavy in the air as you stroke his fifteen inch cock and those bulging balls of his.";
 	say "     When your climax comes, you drive your [cock size desc of Player] [Cock of Player] penis deep inside him and unleash your [Cum Load Size of Player] load into him. He gives a lustful cry as he's rutted and cums as well, splattering large gobs of musky semen onto the ground. You keep going until your balls are drained, at least for the moment[if anallevel is 3 and thirst of Player < 30 and a random chance of 2 in 5 succeeds]. Suddenly feeling the urge to drain something else, you pull out but keep your cock aimed at his creamy asshole. With a chuckle, you piss over the ass you've just finished claiming, adding your musky scent to his. His short tail wags excitedly at this treatment and he makes no attempt to move away even though you're not even touching him anymore[else]. You pull your spent shaft from his creamy ass and then wipe the last traces of your semen onto his rump, adding your musky scent to his[end if]. That done, you give his messy rump a swat and send him on his way.";
+	CreatureSexAftermath "Elk" receives "AssFuck" from "Player";
 
 
 to say beattheelk_2:	[ride him - vaginal]
@@ -102,6 +118,7 @@ to say beattheelk_2:	[ride him - vaginal]
 	say "     With a firm grip on his antlers, you twist him back around, forcing him over onto his back. He gives a soft bleating sound but does not resist, his erection still hard and dribbling as you eye it with obvious hunger. Taking it in hand, you climb overtop the defeated cervine and aim his enlarged manhood at your cunt. You grind your pussy against it a few times to tantalize yourself before lowering down onto it, enjoying the lustful low he gives as you start to ride him.";
 	say "     His big cock pulses and throbs inside you[if Cunt Tightness of Player < 4]. Being a tight fit, you have to take it slow at first, but your body soon adapts enough to cope[end if][if Cunt Depth of Player < 12]. While you can't get it all in despite your best efforts, you have a great time ride as much of it as you can force into your needy cunt[else]. Your [cunt size desc of Player] cunt has little difficulty taking his cervine shaft into you, allowing you to glide up and down its considerable length[end if]. You both end up moaning in pleasure as your vaginal walls squeeze and milk at his impressive rod. The scent of rut hangs heavy in the air and you run your fingers through the thick fur of his chest.";
 	say "     When your climax comes, you push yourself down until his animalistic cock [if Cunt Depth of Player < 16]presses as deep into you as it can go. Milked by your cunt to orgasm, his seed splashes against your cervix, fluid pressure building until it pushes past that final barrier and splatters up into your womb[else]is buried fully inside you. Milked by your cunt to orgasm, his seed sprays up and splashes against your cervix to be drawn into your womb[end if] [if the player is impreg_able]in an attempt to breed you[else]in a failed attempt to breed you[end if]. You moan and cry out as the rutting male releases a bugling call, riding him for all he's worth. Once his balls are drained and your own orgasm ends, you pull off his cock and send him on his way, having taken what you need from him.";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Elk";
 
 
 to say beattheelk_3:	[ride him - anal]
@@ -109,12 +126,40 @@ to say beattheelk_3:	[ride him - anal]
 	say "     With a firm grip on his antlers, you twist him back around, forcing him over onto his back. He gives a soft bleating sound but does not resist, his erection still hard and dribbling as you eye it with obvious hunger. Taking it in hand, you climb overtop the defeated cervine and aim his enlarged manhood at your back entrance. You grind your ass against it a few times to tantalize yourself before lowering down onto it, enjoying the lustful low he gives as you start to ride him.";
 	say "     His big cock pulses and throbs inside your [if scalevalue of Player < 3]smaller [end if]body as you work your puckered hold to spread open for it. As more and more of it is pushed into you, you become increasingly aroused despite the initial difficulty in taking the cervine shaft. You both end up moaning in pleasure as your anal walls squeeze and milk at his impressive rod[if Cock Count of Player > 1]. Your cocks are stiff and erect, dripping precum onto his fur as he strokes them with his clumsy, hooved hands[else if Cock Count of Player is 1]. Your own cock is stiff and erect, dripping precum onto his fur as he strokes it with his clumsy, hooved hands[end if]. The scent of rut hangs heavy in the air and you run your fingers through the thick fur of his chest.";
 	if Player is male:
-		say "     When your climax comes, you push yourself down until his animalistic cock is buried fully inside you. Milked by your anus to orgasm, his seed sprays up and pools inside you while his cock pulses against your prostate[if the player is mpreg_able] in an unwitting attempt to breed you[end if]. You moan and cry out as the rutting male releases a bugling call, riding him for all he's worth. Once his balls are drained and your own orgasm ends, you pull off his cock and send him on his way, having taken what you need from him.[mimpregchance]";
+		say "     When your climax comes, you push yourself down until his animalistic cock is buried fully inside you. Milked by your anus to orgasm, his seed sprays up and pools inside you while his cock pulses against your prostate[if the player is mpreg_able] in an unwitting attempt to breed you[end if]. You moan and cry out as the rutting male releases a bugling call, riding him for all he's worth. Once his balls are drained and your own orgasm ends, you pull off his cock and send him on his way, having taken what you need from him.";
 	else:
-		say "     When his climax comes, you push yourself down until his animalistic cock is buried fully inside you. Milked by your anus as he cums, his seed sprays up and pools inside you, filling you with his heat[if the player is mpreg_able] in an unwitting attempt to breed you[end if]. You moan and cry out as the rutting male releases a bugling call, riding him for all he's worth. Lacking a gender of your own, you still feel some unfocused pleasure as your [bodydesc of Player] body is rutted by the elk stud. Once his balls are drained, you pull off his cock and send him on his way, having taken what you need from him.[mimpregchance]";
-
+		say "     When his climax comes, you push yourself down until his animalistic cock is buried fully inside you. Milked by your anus as he cums, his seed sprays up and pools inside you, filling you with his heat[if the player is mpreg_able] in an unwitting attempt to breed you[end if]. You moan and cry out as the rutting male releases a bugling call, riding him for all he's worth. Lacking a gender of your own, you still feel some unfocused pleasure as your [bodydesc of Player] body is rutted by the elk stud. Once his balls are drained, you pull off his cock and send him on his way, having taken what you need from him.";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Elk";
 
 to say beattheelk_4:
+	now noelksex is 0;
+	if WSlevel is 3 and a random chance of 1 in 2 succeeds:
+		say "     Even though the male before you has fully submitted to your will, you can't help but find his cock mesmerizing. The first thought on your mind is what his cum, what his piss, would feel like going down your throat. What would it feel like to have that rod bulge out as it empties so much into your gut. It would truly cement your submission to this male, to be just a hole, an outlet for his needs, but why should you care? Pleasure is the end result for both of you, and it's so hard to turn down a chance to satisfy such an immaculate male. His antlers, massive as they are, truly show how impressive he is, so why not just give yourself over to him, even after a victory?";
+		say "     Releasing your grip on the male, you flip him over and sit him up. His eyes dart over your form, lids narrowing as he gives you a glare. When you start to spread his legs, he resists a bit, but when you give him another threatening look, he glances away and fully spreads them on his own. With your prey fully revealed, and that growing erection before you, you can't resist huffing in a breath, then two, then three. Your eyes roll up, and you lick your lips. There's a soft bugle from the elk, but he does nothing as your face gets closer and closer to his crotch. Eventually, your face is rubbing right against his erection as you shove your nose into his groin, huffing in the musk where it's most pungent.";
+		WaitLineBreak;
+		say "     The elk seems to get the hint, but it's hard to tell as his hands merely rest on his thighs. He doesn't put his hands on your head, or try to encourage you beyond giving a few light moans. The muscles along his stomach and thighs start to uncoil, relaxing as he lets out a deep, slow breath through his teeth. His fingers tap along his legs, twitching as he looks like he's going to grab you, but he then reins himself in. There's not much reason to deny him his more dominant urges. You are wanting his sweet nectar, afterall. So you grip one of his hands and lay it on your head, patting it lightly to signal him. He takes the hint, getting into a more active role of pushing you into his crotch. His other hand soon gets active too, gripping the side of your head.";
+		say "     With both of his hands now controlling you, he decides to take what he'd want if he had won. He rotates your head to shove your face against his erection, dragging your mouth up the side. Taking the hint, you open your maw, lapping at the side of the rod as he drags you up. Once you're at the tip, he rubs your lips in circles over it, your tongue instinctively trying to lap at the nectar dribbling out. There's such a massive quantity of it, and he gives you little time to lap much up as it comes out, leaving your mouth caked in precum as he teases you.";
+		WaitLineBreak;
+		say "     That teasing gets an abrubt end, however, as he sheaths his entire cock down your throat in less than a second, forcing you to gag and choke around the musky rod. 'You may have won, but I'm taking what I want now.' And then you feel it, the bulging of his rod, and on the back of your tongue, you catch the acrid taste of piss. The elk then gives a long, low sigh as he empties his bladder down your throat. 'I usually prefer to mark the outside, but I'll take a bathroom of convenience too.' There is then a light chuckle as the flow slows, and his cock jerks in your throat. He is no doubt trying to milk out the last bits of his  piss, aiming to empty himself entirely into your gut.";
+		say "     Then his next plan comes into action. His hands lift you up to the tip of his cock before slamming your face right back down. He then repeats this, again, and again, and again, soon fully fucking your throat with his long, needy rod. The speed gets faster and faster, building up with each second, you even feel the rod begin to pulse and throb once more. Everytime your chin touches his balls, they feel a little bit closer to his body, pulling up more and more. You know what's coming, and your body get jittery for the meal heading your way. A burst of protein will do you good, and as the balls fully pull up, and as that cock throbs uncontrollably, you taste the first traces of that elk's seed.";
+		WaitLineBreak;
+		say "     At first, you can barely taste any of it, and you only feel the cum flowing out of the length and down your throat. But as the facefucking slows, and as the elk holds your head to his groin, groaning out his pleasure, you catch traces of his earthy flavor. The orgasm doesn't seem to slow, however, and as you begin to get lightheaded from being so thoroughy crammed into his crotch, he lets you back a few inches. The tip of that rod is  now resting on your tongue, letting you get a more complete taste of that man's seed. Earthy, salty, strong, and virile: all of that describes the flavors streaking across your tongue. There's so much of it in your mouth now, and it's so hard not to touch yourself as his seed fills your maw.";
+		say "     Your attention should be all on him, and you are glad for anything he gives. Still, eventually even his load has to slow to a stop, and as the last bits of the virile fluids dribble out of his cock, he gives you a pat on the head. Moments later, he withdraws himself from your mouth and wipes the length along your cheek. You're then pushed back a bit, just enough for him to stand and dust himself off. 'Good bitch. I'll be back for more,' he then winks and trots off. This leaves you with just one option, and so you take it, getting up and dusting yourself off as well. You're things are soon gathered up, and you're once more back to exploring.";
+	else:
+		say "     Even though the male before you has fully submitted to your will, you can't help but find his cock mesmerizing. The first thought on your mind is what his cum would feel like going down your throat. What would it feel like to have that rod bulge out as it empties into your gut. It would truly cement your submission to this male, to be just a hole, an outlet for his needs, but why should you care? Pleasure is the end result for both of you, and it's so hard to turn down a chance to satisfy such an immaculate male. His antlers, massive as they are, truly show how impressive he is, so why not just give yourself over to him, even after a victory?";
+		say "     Releasing your grip on the male, you flip him over and sit him up. His eyes dart over your form, lids narrowing as he gives you a glare. When you start to spread his legs, he resists a bit, but when you give him another threatening look, he glances away and fully spreads them on his own. With your prey fully revealed, and that growing erection before you, you can't resist huffing in a breath, then two, then three. Your eyes roll up, and you lick your lips. There's a soft bugle from the elk, but he does nothing as your face gets closer and closer to his crotch. Eventually, your face is rubbing right against his erection as you shove your nose into his groin, huffing in the musk where it's most pungent.";
+		WaitLineBreak;
+		say "     The elk seems to get the hint, but it's hard to tell as his hands merely rest on his thighs. He doesn't put his hands on your head or try to encourage you beyond giving a few light moans. The muscles along his stomach and thighs start to uncoil, relaxing as he lets out a deep, slow breath through his teeth. His fingers tap along his legs, twitching as he looks like he's going to grab you, but he then reins himself in. There's not much reason to deny him his more dominant urges. You are wanting his sweet nectar, afterall. So you grip one of his hands and lay it on your head, patting it lightly to signal him. He takes the hint, getting into a more active role of pushing you into his crotch. His other hand soon gets active too, gripping the side of your head.";
+		say "     With both of his hands now controlling you, he decides to do what he would have normally done if he had actually won. He rotates your head to shove your face against his erection, dragging your mouth up the side. Taking the hint, you open your maw, lapping at the side of the rod as he drags you up. Once you're at the tip, he rubs your lips in circles over it, your tongue instinctively trying to lap at the nectar dribbling out. There's such a massive quantity of it, and he gives you little time to lap much up as it comes out, leaving your mouth caked in precum as he teases you.";
+		WaitLineBreak;
+		say "     That teasing gets an abrubt end, however, as he sheaths his entire cock down your throat in less than a second, forcing you to gag and choke around the musky rod. 'You may have won, but I'm taking what I want now.' His hands lift you up to the tip of his cock before slamming your face right back down. He then repeats this, again, and again, and again. Soon he's fully fucking your throat with his long, needy rod. The speed gets faster and faster, building up with each second, and you even feel the rod begin to pulse and throb. Everytime your chin touches his balls, they feel a little bit closer to his body, pulling up more and more. You know what's coming, and your body gets jittery for the meal heading your way. A burst of protein will do you good, and as the balls fully pull up, and as that cock throbs uncontrollably, you taste the first traces of that elk's seed.";
+		say "     At first, you can barely taste any of it, and you only feel the cum flowing out of the length and down your throat. But as the facefucking slows, and as the elk holds your head to his groin, groaning out his pleasure, you catch traces of his earthy flavor. The orgasm doesn't seem to slow, however, and as you begin to get lightheaded from being so thoroughy crammed into his crotch, he lets you back a few inches. The tip of that rod is  now resting on your tongue, letting you get a more complete taste of that man's seed. Earthy, salty, strong, and virile: all of that describes the flavors streaking across your tongue. There's so much of it in your mouth now, and it's so hard not to touch yourself as his seed fills your maw.";
+		WaitLineBreak;
+		say "     Your attention should be all on him, and you are glad for anything he gives. Still, eventually even his load has to slow to a stop, and as the last bits of the virile fluids dribble out of his cock, he gives you a pat on the head. Moments later, he withdraws his cock from your mouth and wipes the length along your cheek. You're then pushed back a bit, just enough for him to stand and dust himself off. 'Good bitch. I'll be back for more,' he then winks and trots off. This leaves you with just one option, and so you take it, getting up and dusting yourself off as well. You're things are soon gathered up, and you're once more back to exploring.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Elk";
+	increase Libido of Player by 8;
+
+to say beattheelk_6:
 	say "     Having beaten the elk and forced him to submit, he is easily driven off. He heads off, looking elsewhere for a means to slake his lust.";
 	increase noelksex by 1;
 

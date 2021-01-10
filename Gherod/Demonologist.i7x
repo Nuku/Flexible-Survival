@@ -1,4 +1,4 @@
-Version 6 of Demonologist by Gherod begins here.
+Version 7 of Demonologist by Gherod begins here.
 
 "Adds Xaedihr, the demonologist, as a NPC and Companion to the game."
 
@@ -8,6 +8,7 @@ Version 6 of Demonologist by Gherod begins here.
 [Version 4 - Added Dominant Xaedihr route w/ 1st scene - Gherod]
 [Version 5 - Added hints at end of tape and Hell Realm. Additionally, added enchantment and spell system to complement the Void Realm addition]
 [Version 6 - Art added. New way to acquire Ancient Tome]
+[Version 7 - Xaedihr has new interactions with Hayato, also participates in the Youkai Lair Quest]
 
 [***********************************************************]
 [***********************************************************]
@@ -815,6 +816,18 @@ to say XaedihrTalkMenu:
 	now title entry is "His opinion on you";
 	now sortorder entry is 9;
 	now description entry is "Request that he tells what he thinks of you";
+	[]
+	if "Met Hayato" is not listed in traits of Xaedihr:
+		choose a blank row in table of fucking options;
+		now title entry is "Introduce Hayato";
+		now sortorder entry is 99;
+		now description entry is "You probably should, right";
+	[]
+	if "Met Hayato" is listed in traits of Xaedihr and Resolution of YokLairXaedihr is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask Xaedihr for his help in finding the onis";
+		now sortorder entry is 99;
+		now description entry is "He is one of your best options, so just try asking him";
 	[
 	If loyalty of Xaedihr > 29;
 	choose a blank row in table of fucking options;
@@ -839,24 +852,28 @@ to say XaedihrTalkMenu:
 				now sextablerun is 1;
 				if (nam is "SPELLS"):
 					say "[XaedihrTalkSpells]";
-				if (nam is "ENCHANTING"):
+				else if (nam is "ENCHANTING"):
 					say "[XaedihrTalkEnchanting]";
-				if (nam is "Himself"):
+				else if (nam is "Himself"):
 					say "[XaedihrTalkHimself]";
-				if (nam is "How did he get here"):
+				else if (nam is "How did he get here"):
 					say "[XaedihrTalkReason]";
-				if (nam is "His affinity with magic"):
+				else if (nam is "His affinity with magic"):
 					say "[XaedihrTalkMagic]";
-				if (nam is "His goals"):
+				else if (nam is "His goals"):
 					say "[XaedihrTalkGoals]";
-				if (nam is "The Crimson Ruby"):
+				else if (nam is "The Crimson Ruby"):
 					say "[XaedihrTalkRuby]";
-				if (nam is "The Ancient Tome"):
+				else if (nam is "The Ancient Tome"):
 					say "[XaedihrTalkTome]";
-				if (nam is "Sex Talk"):
+				else if (nam is "Sex Talk"):
 					say "[XaedihrTalkSex]";
-				if (nam is "His opinion on you"):
+				else if (nam is "His opinion on you"):
 					say "[XaedihrTalkOpinion]";
+				else if (nam is "Introduce Hayato"):
+					say "[XaedihrTalkHayato]";
+				else if (nam is "Ask Xaedihr for his help in finding the onis"):
+					say "[XaedihrTalkYokLair]"; [On Hayato's file]
 				wait for any key;
 				say "[XaedihrTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
@@ -1136,7 +1153,7 @@ to say XaedihrEnchantMenu:
 				now sextablerun is 1;
 				if (nam is "Enchant Xaedihr's Tome"):
 					say "[XaedihrEnchantTome]";
-				if (nam is "Enchant Abyssal Edge"):
+				else if (nam is "Enchant Abyssal Edge"):
 					say "[XaedihrEnchantAE]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -1715,6 +1732,32 @@ to say XaedihrMeetsRane:
 		if loyalty of Xaedihr < 30:
 			decrease loyalty of Xaedihr by 5;
 		now resolution of XaedihrRane is 99; [you chose to have them not speak to each other]
+
+[***********************************************************]
+Section 6-2-H - Xaedihr & Hayato
+[***********************************************************]
+
+instead of going up from Grey Abbey Library while ((demonologist is listed in companionList of Player or Xaedihr is in Grey Abbey Library) and Hayato is in Darkened Alcove and "Met Hayato" is not listed in traits of Xaedihr):
+	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: XAEDIHR / HAYATO MEETING[line break]";
+	say "[XaedihrMeetsHayato]";
+
+to say XaedihrMeetsHayato:
+	say "     Immediately as you arrive at the library, Xaedihr comes rushing at you with a sense of urgency, tome in hand and dark particles surrounding his fingers. 'Careful! We've got an intruder. Some savage oni managed to slip inside our shelter. The kind that eats people! I'll need backup in case it goes on a rampage.' You cannot help but be confused at this sudden act, as the half-demon urges you to stay behind him while you approach the darkened alcove. 'Red onis are extremely dangerous. One wrong step and your skull will serve as a mug of blood. These savages cannot be allowed to walk freely.' Oh, so he means Hayato. Well, you are much more relieved now. All you need to do is explain Xaedihr who Hayato is and, possibly, introduce them.";
+	say "     ... But before you manage to do that, he storms inside, running towards the red oni with the pages of his tome flickering frantically. 'Stay right where you are, creature!' he shouts, and suddenly, a myriad of purple tendrils emerge from the ground, wrapping themselves around Hayato's legs and arms. The huge oni looks at you both, his eyes wide open in surprise, confused, as Xaedihr just caught him off guard. However, not even the supernatural strength of his magic tendrils is enough to hinder a mighty demon ogre such as the mighty Hayato, who breaks free from his binds without too much of a trouble. He then shouts 'I'm not a savage! No need for any of this!' as he waves his arms towards you.";
+	WaitLineBreak;
+	say "     'Preposterous! I can see how you look! I can sense your...! Wait... No, I cannot sense your demonic essence. What trickery is this?! Reveal your secrets to me, now!' the sorcerer demands, this time charging a dark fire ball in his hand which grows by the second. You figure that you should probably intervene before things go very wrong, so you step in front of Xaedihr and beckon him to stop and listen. Then, you tell everything about his background, his story, how he came to be... Every single detail, within the time you have available before he bursts out of impatience. The half-demon looks convinced enough, fortunately. 'That explains it... he doesn't stink like a demon... Definitely doesn't behave like one... If he was an actual red oni, I don't think anyone around here would still be living. He would have just eaten everyone right about now.'";
+	say "     Misunderstandings solved, Xaedihr lowers his guard and approaches Hayato in a much different manner. 'Apologies, mister. We can never be too careful in this wretched land. The name's Xaedihr.' he says, extending his hand towards the oni. 'I'm Hayato, but you can call me [']Hal[']. You're a... sorcerer?' he asks, while retributing the mage's gesture. 'Indeed, I am. An expert demonologist, as well. I've seen many things, including an all-out attack of savage red onis into villages of poor and innocent people during my travels. That was ugly... I have seen many aggressive demons, but none like those... They looked like the embodiment of gluttony and wrath combined. That explains why I was so quick to subdue you once I realized you were here. But since you are not a real red oni, I suppose we could have a chat, once in a while.'";
+	WaitLineBreak;
+	say "     Well, it seems they ended up conversing rather peacefully, so it is best to just leave them at it as they get to know each other. You really cannot tell Xaedihr what to do, either way, you know he will just have his way regardless of what you have to say added with the most snarky remarks, but perhaps this friendship between both him and Hayato will prove to be fruitful, one day...";
+	add "Met Hayato" to traits of Xaedihr;
+
+to say XaedihrTalkHayato:
+	say "     Seeing that Hayato is, in one way, a demonic creature, you figured Xaedihr would take an interest in him... Or that, at least, you should warn the sorcerer you have befriended a demon he should not mind, as he is not an enemy. Calling the redhead over, you do just that, introducing the red oni to the half-demon. 'Now, that's... peculiar. Seeing one of your kind so calm and contained... Definitely not a true red oni, I must assure you. My name's Xaedihr.' he says, extending his hand towards the oni. 'I'm Hayato, but you can call me [']Hal[']. You're a... sorcerer?' he asks, while retributing the mage's gesture. 'Indeed, I am. An expert demonologist, as well. I've seen many things, including an all-out attack of savage red onis into villages of poor and innocent people during my travels. That was ugly... I have seen many aggressive demons, but none like those... They looked like the embodiment of gluttony and wrath combined. If you hadn't been introduced to me right now, I would most certainly have attempted to subdue you at first sight.'";
+	say "     Looks like you did the right thing. It seems they ended up conversing rather peacefully, so it is best to just leave them at it as they get to know each other. You really cannot tell Xaedihr what to do, either way, you know he will just have his way regardless of what you have to say added with the most snarky remarks, but perhaps this friendship between both him and Hayato will prove to be fruitful, one day...";
+	add "Met Hayato" to traits of Xaedihr;
+
 
 [***********************************************************]
 Section 7 - Demonic Summoning

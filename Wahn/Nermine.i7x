@@ -245,6 +245,12 @@ instead of conversing the Nermine:
 		now sortorder entry is 40;
 		now description entry is "Ask Nermine about dealing with the Stablemaster";
 	[]
+	if Resolution of YokLairNermine is 1 or Resolution of YokLairNermine is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask Nermine for her help in finding the onis";
+		now sortorder entry is 99;
+		now description entry is "She may be one of your best options, so just try asking her";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -283,6 +289,8 @@ instead of conversing the Nermine:
 					say "[NermineCouraSpell]";
 				else if (nam is "The Stablemaster"):
 					say "[NermineTalk6]";
+				else if (nam is "Ask Nermine for her help in finding the onis"):
+					say "[NermineTalkYokLair]"; [in Hayato file]
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -393,6 +401,7 @@ to say NermineTalk3:
 		say "     You take the noh mask out of your pack. You carefully unwrap it and pass it to Nermine. 'Ah, yes. Quite old, very lovely.' She runs a furry finger along it. 'And a long, sordid history. Excellent. Just as Nermine had been told.' With care, she places it on a shelf behind the counter where it can smile alluringly at customers.";
 		say "     'Now, here is key you are wanting. Oni is to be yours for your amusement,' she says with a coy playfulness. Despite her canine muzzle, she has an expression not unlike that on the porcelain mask.";
 		now HP of Hayato is 15;
+		now Energy of Hayato is 4;
 
 to say NermineTalk4:
 	if debugactive is 1:

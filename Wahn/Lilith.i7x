@@ -169,6 +169,12 @@ to say LilithTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Ask Lilith about what's been going on with Brutus";
 	[]
+	if Resolution of YokLairLilith is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask her for help in finding the onis";
+		now sortorder entry is 99;
+		now description entry is "She must have ways to help you, try asking her";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -195,6 +201,8 @@ to say LilithTalkMenu:
 					say "[LilithTalk4]";
 				if (nam is "Brutus and David"):
 					say "[LilithTalk5]";
+				if (nam is "Ask her for help in finding the onis"):
+					say "[LilithTalkYokLair]"; [on Hayato file]
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
