@@ -199,10 +199,10 @@ check towerfixing:
 	if the player is not in power lines:
 		say "Fix what?";
 		stop the action;
-	else if findwires is 0:
+	else if findwires is 0: [haven't tried to turn on the power]
 		say "Why? There is no power anywhere else, so the power station must be busted too. You should start there first.";
 		stop the action;
-	else if findwires is 2:
+	else if findwires is 2: [cables already reconnected]
 		say "The power lines are already fixed.";
 		stop the action;
 
@@ -212,10 +212,10 @@ carry out towerfixing:
 		say "The tower top slips, and falls. Maybe you could try to fix it again?";
 	else:
 		say "The tower top slides into place, and the stress on the wires is released.";
+		now findwires is 2; [cables reconnected]
 		if fixedgens > 1:
 			say "A red light on the uppermost tip of the tower blinks a few times, then stays on continuously, indicating power is up and running. Hooray!";
 			increase score by 200;
-			now findwires is 2;
 			activatecomputers;
 
 Section X - Library Computer

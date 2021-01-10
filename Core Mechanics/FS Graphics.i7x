@@ -91,6 +91,9 @@ Figure of Herm_Hyena_clothed_icon is the file "Hyena_clothed.jpg".
 Figure of Herm_Hyena_naked_icon is the file "Hyena_naked.jpg".
 Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
 Figure of HornyDoctor_M_icon is the file "HornyDoctor_M_ig.jpg".
+Figure of Horseman_clothed_icon is the file "Horseman_clothed.jpg".
+Figure of Horseman_hard_icon is the file "Horseman_hard.jpg".
+Figure of Horseman_soft_icon is the file "Horseman_soft.jpg".
 Figure of Hulking_Cheerleader_icon is the file "Hulking_Cheerleader.jpg".
 Figure of HuskyAlpha_hard_icon is the file "HuskyAlpha_hard.jpg".
 Figure of HuskyAlpha_soft_icon is the file "HuskyAlpha_soft.jpg".
@@ -916,6 +919,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Homo Sapiens"	Figure of HomoSapiens_icon	"Astro"	g-black	"normal"
 "Honey"	Figure of Honey_icon	"SandySchreiber"	g-white	"normal"
 "Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-white	"normal"	[only shown for males]
+"Horseman clothed"	Figure of Horseman_clothed_icon	"Vashaa"	g-white	"normal"
+"Horseman hard"	Figure of Horseman_hard_icon	"Vashaa"	g-white	"normal"
+"Horseman soft"	Figure of Horseman_soft_icon	"Vashaa"	g-white	"normal"
 "Human Survivor"	Figure of Brennan_clothed_icon	"SineAlas"	g-black	"normal"
 "Hulking Cheerleader"	Figure of Hulking_Cheerleader_icon	"Seija"	g-white	"normal"
 "Husky Alpha Hard"	Figure of HuskyAlpha_hard_icon	"Vashaa"	g-white	"normal"
@@ -1325,6 +1331,7 @@ carry out artistcredits:
 	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Homo Sapiens by Astro @ y-gallery.net[line break]";
 	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
+	say "     Horseman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Hulking Cheerleader by Seija @ ?[line break]";
 	say "     Husky Alpha by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Husky Female by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";

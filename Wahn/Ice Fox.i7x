@@ -738,6 +738,7 @@ to say MiyukiSex1: [BJ for Miyuki]
 	say "     Pulling back on the throbbing shaft when you eventually can't help but need to take a breath, you nevertheless keep its tip between your lips, catching all of her spurting cum on your tongue while breathing hard through your nose. While you concentrate on not losing out on any of her load, your gaze wanders up the slick shaft that was in your throat until a second ago, right to the thick knot under your grasping fingers. Fuck, that's a big one! If she ties that with someone, Miyuki is certainly gonna stay bound to them for a long while. You caress and squeeze the bulge of flesh while her orgasm slowly ebbs off, swallowing more than one mouthful of her tasty load before she is done.";
 	WaitLineBreak;
 	say "     Eventually, you are pulled back to your feet by the surprisingly strong ice fox, with her planting a hungry kiss on your lips. Miyuki's tongue explores your mouth, wrestling with your own and stealing a taste of her own load before she pulls back to smile broadly at you. 'Now THAT was fun! You're one great cocksucker sweetie.'";
+	NPCSexAftermath Player receives "OralCock" from Miyuki;
 	PlayerEat 10;
 	if MiyukiRelationship < 5:
 		now MiyukiRelationship is 5; [player gave a BJ]
@@ -758,7 +759,7 @@ to say MiyukiSex2: [Miyuki fucks player pussy]
 	say "     For a little while, Miyuki is totally occupied with her own orgasm, unable to concentrate on anything but the height of male arousal at the time of climax, but she quickly catches herself again. Her canine shaft is still spurting more into you, but the fox now is focusing on your pleasure too, sliding her hand down to [if Player is male]jerk your own cock[else]rub your clit[end if] with eager attention, pushing your already sky-high arousal even further. It doesn't take long at all before she manages to push you over the edge to join her in bliss, [if Player is male]your shaft spurting long strings of cum to make a mess of your whole front[else]your pussy leaking copious amounts of femcum, soaking your pressed-together crotches[end if].";
 	WaitLineBreak;
 	say "     Lying under your sexy fox partner, you shiver and pant as you ride out your orgasm, thoroughly enjoying the feelings she gives you - of a very full pussy, with the large knotted cock inside, and an even fuller womb, simply sloshing with Miyuki's potent load. 'I hope it takes,' she tells you, putting her paw-hand on your belly, 'You'd surely give me some very cute little fox kits. Mmmm, I love breeding people. It is so sexy to know someone is carrying your kits!' With that said, the ice fox gets back to playfully making out with you, stroking and caressing your body while she waits for her knot to go down. The cuddling with your soft-furred partner goes on another quite comfortable forty minutes or so before that eventually happens, more than enough time for your womb to thoroughly soak in the load that has been put inside it...";
-	fimpregchance;
+	NPCSexAftermath Player receives "PussyFuck" from Miyuki;
 	if MiyukiRelationship < 10:
 		now MiyukiRelationship is 10; [player got fucked]
 
@@ -786,6 +787,7 @@ to say MiyukiSex3: [Miyuki fucks player pussy - doggy style and ovi]
 	say "'Damn - putting an egg in such a nice and tight hole feels great. Too bad I can't tie with you like this though... I like having my knot stuck in someone too. Oh well, maybe next time...' Miyuki says in a well-satisfied tone, then wraps her arms around you from behind, seeking out your crotch. Wound up as getting eaten, fucked and egged has made you, it doesn't take her long in stroking your [if Player is female]clit[else if Player is male]cock[else]crotch[end if] till you reach your own orgasm, trembling hard in her grasp as a breathtaking climax rocks your body.";
 	WaitLineBreak;
 	say "     'That - was very, very good,' Miyuki tells you in a pleased tone, licking behind your ear playfully. Then she slowly pulls her ovipositor out of you, allowing it to retract fully into her scaled slit. The snow-white fox follows up by laying down next to you, her arms holding and caressing your body and especially your slightly swollen belly. Exhausted from the sex, you stay cuddled up with her for quite a while before eventually getting back up and collecting your clothes and gear from where it lies strewn about on the ground.";
+	NPCSexAftermath Player receives "PussyDildoFuck" from Miyuki;
 	ovichance;
 	if MiyukiRelationship < 10:
 		now MiyukiRelationship is 10; [player got fucked]

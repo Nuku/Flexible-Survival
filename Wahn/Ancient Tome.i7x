@@ -106,6 +106,7 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 			say "     The thing seems to wink at you, closing and opening in quick secession, then splurts out a last gob of off-white cum and sinks out of sight behind the bed. Maybe a message - but it's anyone's guess what that was supposed to mean. Crouching down, you look under the bed... and there's nothing there, just empty air. With a shrug, you turn your attention back to Eric - who is still out for the count, despite everything that has happened to him just now! The steady trickle of monster cum from between his legs has the potential to make a hell of a mess of the bed, so you quickly snatch up the t-shirt he took off before going to bed and position the bunched-up fabric under his crotch to soak up what it can. Snatching up another piece of usable fabric, you then start working on cleaning him up from all the other goop that came off the tentacles, and Eric's own sweat from being fucked.";
 			WaitLineBreak;
 			say "     It'll be better if he doesn't wake up all slimed up - since the college student slept through the whole situation, he otherwise would be in for quite a shock. You'll have to see what he will or will not remember when he wakes up. By the time you're done cleaning up everything that made his naked body wet and sticky, Eric's belly has gone down to normal once more, no longer showing the slight bulge all the cum gave it. The t-shirt between his legs is a soppy mess as you pull it away and do a final wipe over Eric's pussy with your other cum-rag. Well, that's about as good as this will get - from looking at him now, you couldn't tell he was fucked by a tentacle monster ten minutes ago. With a concerned look at the young guy's now peaceful face, you cover him with a blanket again and go pick up the tome. It clearly has something to do with all this. Better to confiscate it and keep it out of Eric's hands for now unless you want to see a repeat of this...";
+			CreatureSexAftermath "Eric" receives "PussyFuck" from "Tentacle Horror";
 			if HP of Eric is 10: [virgin cboy]
 				now HP of Eric is 14; [tentacles took his virginity]
 				now EricVirginityTaken is 7; [impregnated with tentacle spawn]
@@ -145,6 +146,7 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 	else: [don't do anything]
 		LineBreak;
 		say "     With a shrug, you leave Eric in peace and turn to other things. When you glance over to him again some while later, he has indeed calmed down and is again sleeping peacefully.";
+		CreatureSexAftermath "Eric" receives "PussyFuck" from "Tentacle Horror";
 		now TomeFound is 3; [Eric is was tentacle-fucked, player saw nothing]
 		if HP of Eric is 10: [virgin cboy]
 			now HP of Eric is 14; [tentacles took his virginity]

@@ -28,10 +28,6 @@ Carry out fucking:
 	else:
 		say "[fuckscene of noun]";
 
-[No sex responses for some NPCs]
-instead of fucking Doctor Matt:
-	say "Doctor Matt recognizes the glint of arousal in your eyes as you imagine peeling him out of the suit. He takes a few steps towards the back wall of the room, hovering his hand over the intercom. 'You're not going feral on me, are you? Control yourself, or I'll have to call Orthas!'";
-
 [Fucking v2.0 table]
 
 Table of fucking options

@@ -165,6 +165,7 @@ to say Farmhand HorsemenSex1: [Gangbang - Oral and Cum Shower]
 	WaitLineBreak;
 	say "     Being bathed in warm, creamy seed is definitively an interesting experience - you kinda like being the center of all this attention, and the fact that half a dozen strapping hunks got off just because of you. In mere moments, you're literally drenched in their cum, with more and more splattering you by the second. You can't help but be curious about the different guys and wipe up some dollops of sperm to taste - or capture a spurt directly with your mouth. The different workers actually have their own taste, similar but with slight differences. Seems like someone's diet truly adjusts the taste - and no matter what they might prefer to eat, it certainly is all grown right here on the farm, healthy and fresh... which results in tasty cum too.";
 	say "     By the time the last of the guys has gotten his rocks off, the circle around you has mostly disbanded, most guys peeling off in singles or twos. Your original horseman stud nevertheless stays with you until the end, giving you a hand to help you stand up before guiding you to the communal showers. 'That was amazing! I think you may just be our new favorite visitor in the barracks,' he says and gives you a playful swat on the ass, then leaves you to clean up under the spray of clean water. A few minutes later, he returns with a large towel and the small pile of your clothes and gear, setting it all down on a dressing bench. The horseman then takes position against a nearby wall, casually watching you dry off and get dressed, clearly enjoying the show.";
+	NPCSexAftermath Player receives "OralCock" from Farmhand Horsemen;
 	PlayerDrink 30;
 	PlayerEat 30;
 
@@ -188,12 +189,14 @@ to say Farmhand HorsemenSex2: [Gangbang - Ass and Mouth]
 	say "     'Next!' the horseman calls out with a grin, drawing chuckles from the horny dudes all around him. Then he slides himself out of you with a smooth pull, creating a slurping sound as his load starts to gush from your gaping hole. But not for long, as the next farmhand steps up and plugs you with his prick. There is a squelch of cum around his shaft as he sinks into your sloppy hole, driving deep into the pre-stretched passage. He proceeds to pound into you hard right from the get-go, driving your already sky-high libido right past any hope of keeping your composure. With a whorish moan around the dickhead in your mouth, you come hard, [if Player is male]splattering the floor between your feet with blasts of cum[else if Player is female]gushing femcum to spatter the floor between your feet and run down the inside of your legs[else]making tingles of pleasure run though your whole body[end if]. Your knees go weak from the sheer force of your orgasm, so much so that you're basically just being held up by the two cocks at the front and back, a true horseman spit-roast now.";
 	WaitLineBreak;
 	say "     What happens next is kind of a blur in your mind afterwards, but you can remember that the gangbang continued until every last one of the little group of horny farmhands came - in or on you. It definitively was a breathtaking experience during which you came two... maybe three more times as they took turns. One thing is clear in your mind even through all that - being bathed in warm, creamy seed is definitively an interesting experience - you really liked being the center of all their attention and the fact that half a dozen strapping hunks got off just because of you. Drenched and dripping you are eventually carried into the communal showers by your original partner.";
-	setmonster "Horseman";
-	say "[mimpregchance]";
-	setmonster "Zebra Stallion";
-	say "[mimpregchance]";
-	setmonster "Horseman";
-	say "[mimpregchance]";
+	NPCSexAftermath Player receives "OralCock" from Farmhand Horsemen;
+	NPCSexAftermath Player receives "AssFuck" from Farmhand Horsemen;
+	NPCSexAftermath Player receives "OralCock" from Nelson;
+	NPCSexAftermath Player receives "AssFuck" from Nelson;
+	NPCSexAftermath Player receives "OralCock" from Karel;
+	NPCSexAftermath Player receives "AssFuck" from Karel;
+	NPCSexAftermath Player receives "OralCock" from Isaac;
+	NPCSexAftermath Player receives "AssFuck" from Isaac;
 	say "     'That was amazing! I think you may just be our new favorite visitor in the barracks,' he says and gives you a playful swat on the ass, then holds you upright under the spray of clean water and washes you. His hands do a thorough job of soaping you up, half the time holding you up as he does so too, as your knees are still weak. He clearly appreciates touching you and rubbing your naked form, though even with a horny stud like him, there are limits to sexual stamina, so things stay at cleaning and washing off. Helping you sit down on a dressing bench afterwards, he leaves for a short while before returning with a large towel and the small pile off your clothes and gear, setting it all down beside you. The horseman keeps you company as you dress, joining you in a short conversation until you eventually stumble back into the main barracks room, welcomed by quite a few friendly smiles.";
 	infect "Horseman";
 	infect "Zebra Stallion";
@@ -222,12 +225,14 @@ to say Farmhand HorsemenSex3: [Gangbang - Pussy and Mouth]
 	say "     'Next!' the horseman calls out with a grin, drawing chuckles from the horny dudes all around him. Then he slides himself out of you with a smooth pull, creating a slurping sound as his load starts to gush from your gaping hole. But not for long, as the next farmhand steps up and plugs you with his prick. There is a squelch of cum around his shaft as he sinks into your sloppy hole, driving deep into the pre-stretched passage. He proceeds to pound into you hard right from the get-go, driving your already sky-high libido right past any hope of keeping your composure. With a whorish moan around the dickhead in your mouth, you come hard, [if Player is male]splattering the floor between your feet with blasts of cum[else if Player is female]gushing femcum to spatter the floor between your feet and run down the inside of your legs[else]making tingles of pleasure run though your whole body[end if]. Your knees go weak from the sheer force of your orgasm, so much so that you're basically just being held up by the two cocks at the front and back, a true horseman spit-roast now.";
 	WaitLineBreak;
 	say "     What happens next is kind of a blur in your mind afterwards, but you can remember that the gangbang continued until every last one of the little group of horny farmhands came - in or on you. It definitively was a breathtaking experience during which you came two... maybe three more times as they took turns. One thing is clear in your mind even through all that - being bathed in warm, creamy seed is definitively an interesting experience - you really liked being the center of all their attention and the fact that half a dozen strapping hunks got off just because of you. Drenched and dripping you are eventually carried into the communal showers by your original partner.";
-	setmonster "Horseman";
-	say "[fimpregchance]";
-	setmonster "Zebra Stallion";
-	say "[fimpregchance]";
-	setmonster "Horseman";
-	say "[fimpregchance]";
+	NPCSexAftermath Player receives "OralCock" from Farmhand Horsemen;
+	NPCSexAftermath Player receives "PussyFuck" from Farmhand Horsemen;
+	NPCSexAftermath Player receives "OralCock" from Nelson;
+	NPCSexAftermath Player receives "PussyFuck" from Nelson;
+	NPCSexAftermath Player receives "OralCock" from Karel;
+	NPCSexAftermath Player receives "PussyFuck" from Karel;
+	NPCSexAftermath Player receives "OralCock" from Isaac;
+	NPCSexAftermath Player receives "PussyFuck" from Isaac;
 	say "     'That was amazing! I think you may just be our new favorite visitor in the barracks,' he says and gives you a playful swat on the ass, then holds you upright under the spray of clean water and washes you. His hands do a thorough job of soaping you up, half the time holding you up as he does so too, as your knees are still weak. He clearly appreciates touching you and rubbing your naked form, though even with a horny stud like him, there are limits to sexual stamina, so things stay at cleaning and washing off. Helping you sit down on a dressing bench afterwards, he leaves for a short while before returning with a large towel and the small pile off your clothes and gear, setting it all down beside you. The horseman keeps you company as you dress, joining you in a short conversation until you eventually stumble back into the main barracks room, welcomed by quite a few friendly smiles.";
 	infect "Horseman";
 	infect "Zebra Stallion";
@@ -246,7 +251,7 @@ to say Farmhand HorsemenSex4: [Shower Fuck]
 		WaitLineBreak;
 		say "     All good things must come to an end however and as his cock falls out of your pussy, accompanied by a rush of cum, the kiss ends too. Carlos helps you wash up, once more with a gentleness you find surprising from his large, calloused hands. As you're toweling off, Carlos says, 'This concludes our time together, we hope you enjoyed your time with Carlos['] Shower Tours and hope to see you again soon!' You laugh and thank him for his professional service. Dressed again, you follow Carlos out, once more taking in the view, one last distraction before getting back to the struggle to survive in this new world.";
 		infect "Horseman";
-		fimpregchance;
+		NPCSexAftermath Player receives "PussyFuck" from Farmhand Horsemen;
 		now Dexterity of Farmhand Horsemen is 11; [you now know his name]
 	else: [ass fuck]
 		say "     You open your mouth to receive Carlos['] tongue and he wraps his strong arms around you, holding you close. As the water cascades down your bodies, you feel his massive rod grinding between you, pulsing with need. He pulls away suddenly and turns you around, directing you to brace yourself against the tiled wall. As you lean into position, Carlos grabs your hips and begins to thrust his cock between your thighs, spreading your legs and making you gasp slightly as he rubs against your [if Player is male]own cock[else]sensitive smoothness[end if]. After a minute or so of thigh-fucking, your mouth dry and your [if Player is male]dick dripping[else]body tingling[end if], you feel his left hand leave your side and as you look back, you see him holding his horsecock, lining it up with your asshole. He spends some time rubbing his head over your entrance, slicking it with his precum before he enters you slowly and you hear him hiss as your tight hole grips him snugly. You let out a grunt as his medial ring stretches you even more and Carlos pauses, letting you get used to being filled. As your breathing normalizes, he pushes further into you until he's all inside. Carlos pauses again, letting you get to used being stuffed to the brim.";
@@ -254,11 +259,13 @@ to say Farmhand HorsemenSex4: [Shower Fuck]
 		WaitLineBreak;
 		say "     All good things must come to an end however and as his cock falls out of your butt, accompanied by a rush of cum, the kiss ends too. Carlos helps you wash up, once more with a gentleness you find surprising from his large, calloused hands. As you're toweling off, Carlos says, 'This concludes our time together, we hope you enjoyed your time with Carlos['] Shower Tours and hope to see you again soon!' You laugh and thank him for his professional service. Dressed again, you follow Carlos out, once more taking in the view, one last distraction before getting back to the struggle to survive in this new world.";
 		infect "Horseman";
-		mimpregchance;
+		NPCSexAftermath Player receives "AssFuck" from Farmhand Horsemen;
 		now Dexterity of Farmhand Horsemen is 11; [you now know his name]
 
 to say Farmhand HorsemenSex5: [Twin Double-Team Fuck]
 	say "     A";
+	NPCSexAftermath Player receives "AssFuck" from Karel;
+	NPCSexAftermath Player receives "AssFuck" from Isaac;
 
 Section 4 - Events
 
@@ -333,6 +340,7 @@ instead of going west from Central Farm Square while ((daytimer is night) and (a
 		LineBreak;
 		say "     'That's not really what I wanted, but I can't say no to a free BJ.' The zebra unfurls himself with a groan, stretching a bit to relieve some cramps before placing his arms behind his head and leaning against the wall. 'It's all you now,' he says with a grin as he kicks off his jeans fully, clearly not too put out about the change of plans. You kneel between the zebra's legs and grip the tower of horseflesh (zebraflesh?) with both hands. He bites his lip as you nuzzle the head before taking it into your mouth, drawing a hiss as you do. Saliva runs down his dick as you let his flared cockhead keep your mouth agape. You pump his dick until it's well lubricated with your spit and his precum and then begin bobbing up and down, going a little further down each time.";
 		say "     The zebra can't resist the talented combination of your hands and mouth and you feel his head pop into your throat as he lets out a whinny. This is quickly followed by your throat filling even more as his cock swells and pumps cum directly into your stomach. You wait until his rod frees you and falls from your lips, surprisingly little cum following its descent. The zebra lies panting as you pull yourself to your feet and as you turn to leave he says, 'Any time you want to talk me out of sucking my own dick, let me know.' He gives you a little wave as you walk away.";
+		NPCSexAftermath Player receives "OralCock" from Nelson;
 		now PlayerFucked of Nelson is true;
 	else:
 		LineBreak;
@@ -375,14 +383,16 @@ instead of going southwest from Central Farm Square while ((daytimer is day) and
 					say "Karel stops his constant rubbing and steps back for a moment. You feel his head nudge against your moist lips as he finds your slit before he too slides right into you. You move your hands to Isaac's ass, more to support yourself than for anything playful. Your body is awash with sensations; the water running down your back, Isaac's cock stretching your throat, Karel's rod hammering into your pussy, their calloused hands holding you in place. The fucking only gets more intense as the twins slowly push themselves deeper into you until they hilt you. Their pace changes from the slow, long strokes that had opened you up to quick, short pulses where their crotches barely break contact with your body. You hear them kissing above you, unable to see anything but Isaac's abs and the base of his dick.";
 					WaitLineBreak;
 					say "     Suddenly, you get slammed at both ends and feel both horse-cocks throb inside you. You hear, 'Ah yeah, drink my cum you dirty slut,' and, 'Gonna breed me a fine colt in that cunt,' as the brothers ride out their orgasms, your womb and stomach filling with their seed. They hold you there as their cocks soften, the sounds of kissing audible once more. Isaac's softening cock slips out of you first, a few stray strings of cum drooling from your lips. He steps back and you hear Karel say, 'Now brother, don't think you got off scot-free. You have to help clean up.' Isaac groans but he doesn't offer any real resistance as he makes his way behind you. You turn around, curious to see what will happen.";
-					fimpregchance;
+					NPCSexAftermath Player receives "PussyFuck" from Karel;
 					say "     You feel what happens next as Karel steps back, his soft dick finally sliding out of you. Your pussy is empty for only seconds before something replaces Karel's cock, something equally warm but much softer. Isaac reaches around to your clit while he eats you out, gently rubbing around it. After being spit-roasted by the two equine studs, this personal attention drives you right over the edge and Isaac eagerly slurps down your femcum as it mixes with his brother's semen. Isaac continues to delve your depths for any last traces of cum before he withdraws. Thinking the party's over, you stand up and stretch before turning around to thank the brothers for their excellent hospitality. Isaac is sucking Karel's dick, gently, as he continues his cleaning. 'Sorry Isaac, but I just can't get over how hot you look with your muzzle on my cock.' Karel turns to you as his brother dutifully bobs on his rod, 'Thanks for joining us. A sexy gal like you is welcome back anytime.' Knowing when you're dismissed, you rinse yourself off and get dressed to head out.";
+					NPCSexAftermath Player receives "PussyFuck" from Isaac;
 				else: [ass fuck]
 					say "You feel Karel step away for a moment, warm water now running down your backside unimpeded. His return is marked by a slurp and then a large, lubed finger brushing against your pucker. Karel slowly pumps his finger in and out of you a few times before adding a second. As you're getting your hole stretched to accommodate Karel's pole, Isaac continues his measured fucking into your mouth, getting your lips a little closer to his groin each time. You move your hands to Isaac's ass, more to support yourself than for anything playful. Just in time too, as Karel decides your ass is primed. He rips his fingers out of your hole and you hear another slurp as more lube is applied... somewhere. 'Here it comes, the moment you've been waiting for,' Karel says with a chuckle. His head presses against your pucker for a second before popping in. Your body is awash with sensations; the water running down your back, Isaac's cock stretching your throat, Karel's rod hammering into your ass, their calloused hands holding you in place.";
 					say "     The fucking only gets more intense as the twins slowly push themselves deeper into you until they hilt you. Their pace changes from the slow, long strokes that had opened you up to quick, short pulses where their crotches barely break contact with your body. You hear them kissing above you, unable to see anything but Isaac's abs and the base of his dick. Suddenly, you get slammed at both ends and feel both horse-cocks throb inside you. You hear, 'Ah yeah, drink my cum you dirty slut,' and, 'Gonna breed me a fine colt in that ass' as the brothers ride out their orgasms, your hole and stomach filling with their seed. They hold you there as their cocks soften, the sounds of kissing audible once more. Isaac falls out of you first, a few stray strings of cum drooling from your lips. He steps back and you hear Karel say, 'Now brother, don't think you got off scot-free. You have to help clean up.' Isaac groans, but he doesn't offer any real resistance as he makes his way behind you. You turn around, curious to see what will happen.";
-					mimpregchance;
+					NPCSexAftermath Player receives "AssFuck" from Karel;
 					WaitLineBreak;
 					say "     You feel what happens next as Karel steps back, his soft dick finally sliding out of you. Your ass is empty for only seconds before something replaces Karel's cock, something equally warm but much softer. [if Player is male]Isaac reaches around to your cock while he eats you out, gently jacking you off[else]Isaac rubs your smooth front with no real plan or focus, but his large hands cover a lot of ground[end if]. After being spit-roasted by the two equine studs, this personal attention drives you right over the edge and Isaac eagerly slurps his brother's cum as [if Cock Count of Player > 1]you cry out, spurting your seed onto the shower floor[else]pleasure jolts through your body in waves[end if]. Isaac continues to delve your depths for any last traces of cum before he withdraws.";
+					NPCSexAftermath Player receives "AssFuck" from Isaac;
 					say "     Thinking the party's over, you stand up and stretch before turning around to thank the brothers for their excellent hospitality. You're surprised to see Isaac sucking Karel's dick, gently, as he continues his cleaning. 'Sorry Isaac, but I just can't get over how hot you look with your muzzle on my cock.' Karel turns to you as his brother dutifully bobs on his brother's rod, 'Thanks for joining us. You're welcome back anytime, but keep this on the down low, right?' Knowing when you're dismissed, you give them a nod in confirmation, then rinse yourself off and get dressed to head out.";
 			else:
 				LineBreak;

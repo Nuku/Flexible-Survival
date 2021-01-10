@@ -35,7 +35,7 @@ Carry out BuyingAction:
 			say "You can't afford the [Name entry], it costs [price entry] freecred.";
 			continue the action;
 		say "You purchase [Name entry] for [price entry] creds.";
-		if Name entry is "Zephyr Personal Communicator" or Name entry is "zephyr personal communicator":
+		if Name entry is "Zephyr Personal Communicator" or Name entry is "zephyr personal communicator" or Name entry is "zpc":
 			ItemGain zpc by 1 silently;
 		else:
 			ItemGain Name entry by 1 silently;

@@ -296,9 +296,64 @@ to say alexandradesc_bg:
 	if Alexandra is in Grey Abbey Library:
 		say "     Speaking of her duty, she's stationed herself by the library entrance, acting as your rough and tough guard to the safe haven inside[if HP of Alexandra is 3 or HP of Alexandra is 5], not letting her current state hold her back[end if][if Fang is booked]. She shares this duty with Fang, alternating with the wolf[end if]. Having kept her nightstick, it hangs at the ready for those who would disturb the safety of your hideout.";
 	else if Alexandra is in Worker Barracks:
-		say "     Speaking of her duty, she's mostly hanging around in the back of the main barracks room, leaning against a wall as she ogles the many horseman studs living in the building. She seems happy with her current task of serving as a breeding bitch, most of the time even leaving the top button of her pants undone and all too often sliding a hand inside to play with herself a litte. Still, that doesn't mean she isn't a tough bitch either, as she still keeps her nightstick fairly close, ready to be picked up in case the Farm is attacked or something like that.";
+		say "     Speaking of her duty, she's mostly hanging around in the back of the main barracks room, leaning against a wall as she ogles the many horseman studs living in the building. She seems happy with her current task of serving as a breeding bitch, most of the time even leaving the top button of her pants undone and all too often sliding a hand inside to play with herself a little. Still, that doesn't mean she isn't a tough bitch either, as she still keeps her nightstick fairly close, ready to be picked up in case the Farm is attacked or something like that.";
 	if HP of Alexandra > 3 and Alexandra is in Grey Abbey Library:
-		say "     Alexandra's [Libido of Alexandra] pups are younger Dobermans, having matured quickly to be roughly in their teens[if Libido of Alexandra > 4]. They are a mix of boys and girls among the litters[end if]. They are a rough and rambunctious lot who hang out in one of the side rooms most of the time. They do go outside on occasion to find some trouble to get into. They do seem fairly self-sufficient though.";
+		say "     Alexandra's [Libido of Alexandra] pups are younger Dobermans, having matured quickly to be roughly in their teens[if Libido of Alexandra > 4]. They are a mix of boys and girls among the litters[end if]. ";
+		if AlexandraPlayerPups is Libido of Alexandra: [all are the players offspring]
+			say "You can recognize a bit of yourself in the group of them, as do the young dogs themselves with you. They happily rush over to you and come to talk and play with their father.";
+		else if AlexandraPlayerPups is 1:
+			say "In the group, one is recognizably your offspring, and the young dog knows it and happily rushes over to you from the side of his mother, to come to talk and play.";
+		else if AlexandraPlayerPups > 1: [some are the players offspring]
+			say "In the group, [AlexandraPlayerPups] are recognizably your offspring, and the young dogs know it. They happily rush over to you and come to talk and play with their father.";
+		if AlexandraFangPups is Libido of Alexandra: [all are the Fang's offspring]
+			say "You can recognize a bit of Fang in the group of them, as the young dogs look fairly rough and feral, with longer fur inherited from their wolf father. They keep straying off to who knows where in a small pack, exploring and testing out their strength. Before returning to the side of their mother, they often make a beeline close to Fang, tails wagging happily as they pass by.";
+		else if AlexandraFangPups is 1:
+			say "In the group, one is recognizably Fang's offspring, as the young dog looks fairly rough and feral, with longer fur inherited from the wolf father. The canine keeps straying off from the side of Alexandra before returning to her eventually, exploring and testing out things.";
+		else if AlexandraFangPups > 1: [some are Fang's offspring]
+			say "In the group, [AlexandraFangPups] are recognizably Fang's offspring, as the young dogs look fairly rough and feral, with longer fur inherited from their wolf father. They keep straying off to who knows where in a small pack, exploring and testing out their strength. Before returning to the side of their mother, they often make a beeline close to Fang, tails wagging happily as they pass by.";
+		if AlexandraKorvinPups is Libido of Alexandra: [all are the Korvin's offspring]
+			say "You can recognize a bit of Korvin in the group of them, as the young dogs show some German shepherd fur color mixed in. They keep straying off individually or in pairs, almost as if competing with each other as they test out their strength. From time to time, they keep looking over to the Makeshift Rec Room, apparently hoping to catch their dad leaving or entering.";
+		else if AlexandraKorvinPups is 1:
+			say "In the group, one is recognizably Korvin's offspring, as the young dog shows some German shepherd fur color mixed in. The canine keeps straying off and bringing back all sorts of stuff, almost as if competing for the affection of his mother.";
+		else if AlexandraKorvinPups > 1: [some are Korvin's offspring]
+			say "In the group, [AlexandraKorvinPups] are recognizably Korvin's offspring, as the young dogs show some German shepherd fur color mixed in. They keep straying off individually or in pairs, almost as if competing with each other as they test out their strength. From time to time, they keep looking over to the Makeshift Rec Room, apparently hoping to catch their dad leaving or entering.";
+		if AlexandraCarlPups is Libido of Alexandra: [all are the Carl's offspring]
+			if HP of Carl is 10: [sane Carl]
+				say "You can recognize a bit of Carl in the group of them, as the young dogs show the longer, thicker fur of having a husky father, with fluffy tails instead of the slender ones of a regular dobie. They keep close together, almost moving as a unit in whatever they do, combining their strength and depending on each other in a close-knit team. From time to time, they keep raising their heads to glance at the railing to the upper floor, apparently hoping to catch their dad looking down at them.";
+			else if HP of Carl is 30:
+				say "You can recognize a bit of Carl in the group of them, as the young dogs show the longer, thicker fur of having a husky father, with fluffy tails instead of the slender ones of a regular dobie. They hang around fairly close to each other, moving as a small pack in whatever they do, going at whatever stands in their way together even as they play around and explore. From time to time, they keep raising their heads to glance at the railing to the upper floor, apparently hoping to catch their dad looking down at them.";
+		else if AlexandraCarlPups is 1: [one is Carl's offspring]
+			say "In the group, one is recognizably Carl's offspring, as the young dog show the longer, thicker fur of having a husky father, with a fluffy tail instead of the slender one of a regular dobie. ";
+			if HP of Carl is 10: [sane Carl]
+				say "The canine keeps close to Alexandra, standing ready by her side and wanting to provide support.";
+			else if HP of Carl is 30:
+				say "The canine keeps close to Alexandra, circling around her in an unruly fashion and often asking for attention.";
+		else if AlexandraCarlPups > 1: [some are Carl's offspring]
+			say "In the group, [AlexandraCarlPups] are recognizably Carl's offspring, as the young dogs show the longer, thicker fur of having a husky father, with fluffy tails instead of the slender ones of a regular dobie. ";
+			if HP of Carl is 10: [sane Carl]
+				say "They keep close together, almost moving as a unit in whatever they do, combining their strength and depending on each other in a close-knit team. From time to time, they keep raising their heads to glance at the railing to the upper floor, apparently hoping to catch their dad looking down at them.";
+			else if HP of Carl is 30:
+				say "They hang around fairly close to each other, moving as a small pack in whatever they do, going at whatever stands in their way together even as they play around and explore. From time to time, they keep raising their heads to glance at the railing to the upper floor, apparently hoping to catch their dad looking down at them.";
+		if AlexandraBrutusPups is Libido of Alexandra: [all are the Brutus's offspring]
+			say "...";
+		else if AlexandraBrutusPups > 0: [some are Brutus's offspring]
+			say "...";
+		if AlexandraKarelPups is Libido of Alexandra: [all are the Karel's offspring]
+			say "...";
+		else if AlexandraKarelPups > 0: [some are Karel's offspring]
+			say "...";
+		if AlexandraIsaacPups is Libido of Alexandra: [all are the Isaac's offspring]
+			say "...";
+		else if AlexandraIsaacPups > 0: [some are Isaac's offspring]
+			say "...";
+		if AlexandraFarmhandPups is Libido of Alexandra: [all are the farmhands offspring]
+			say "...";
+		else if AlexandraFarmhandPups > 0: [some are farmhands offspring]
+			say "...";
+		if AlexandraNelsonPups is Libido of Alexandra: [all are the Nelson's offspring]
+			say "...";
+		else if AlexandraNelsonPups > 0: [some are Nelson's offspring]
+			say "...";
 
 to say alexandratalk_bg:
 	if debugactive is 1:
@@ -1271,7 +1326,7 @@ an everyturn rule:
 					else if AlexandraPupDaddy is 8: [random farmhand horseman]
 						say "     Now that the little dogs have grown a little, you do recognize a bit of the farmhand horsemen in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the one of the towering and muscle-packed studs fathered them. Maybe it's something about their slightly broader build or the surprisingly strong leg muscles of the little ones - it's hard to say. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited a bold outlook from whoever turned out to be the father, with one or another bravely pushing to the front to sniff you before he is supplanted by another.";
 						increase AlexandraFarmhandPups by AlexandraGrowingPups;
-					else if AlexandraPupDaddy is 7: [Karel's pups]
+					else if AlexandraPupDaddy is 9: [Nelson's pups]
 						say "     Now that the little dogs have grown a little, you do recognize a bit of Nelson in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the huge zebra stud fathered them. Maybe it's something about the shape of their ears and muzzles, or maybe it's a faint hint of a stripe pattern in their shiny brown coats - it's hard to say. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited some of the strength and stoicness of their father, neither of them giving up before they've pushed forward and sniffed you before being is supplanted by another.";
 						increase AlexandraNelsonPups by AlexandraGrowingPups;
 				if Libido of Alexandra is 0: [Spike's dad]

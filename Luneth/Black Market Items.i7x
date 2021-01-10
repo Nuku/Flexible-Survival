@@ -70,7 +70,7 @@ to say cock remover use:
 		say "DEBUG -> Pre-Use: Cock Count of Player: [Cock Count of Player][line break]";
 	say "You take the pill and pop it into your mouth... ";
 	if Player is male:
-		say "At first, you don't feel any different, that is until the head of your cock[smn] starts to tingle. You [SelfStripCrotch], inspecting yourself and seeing your dick[smn] begin to shrink and shrivel away until there is no evidence that [if Cock Count of Player > 1]they were[else]it was[end if]it was even there in the first place.";
+		say "At first, you don't feel any different, that is until the head of your cock[smn] starts to tingle. You [SelfStripCrotch], inspecting yourself and seeing your dick[smn] begin to shrink and shrivel away until there is no evidence that [if Cock Count of Player > 1]they were[else]it was[end if] even there in the first place.";
 		now Cock Count of Player is 0;
 		LibidoLoss 10;
 		if debugactive is 1:

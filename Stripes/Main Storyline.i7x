@@ -49,7 +49,7 @@ MainInfection of Doctor Matt is "Human".
 Description of Doctor Matt is "[DrMattDesc]".
 Doctor Matt is in Primary Lab.
 understand "Matt" as Doctor Matt.
-understand "Left Behind Recording of Doctor Matt " as Doctor Matt.
+understand "Left Behind Recording of Doctor Matt" as Doctor Matt.
 the icon of Doctor Matt is figure of DrMatt_face_icon.
 
 a postimport rule: [bugfixing rules for players that import savegames]
@@ -67,6 +67,12 @@ to say DrMattDesc:
 Conversation of Doctor Matt is { "empty" };
 
 MattCollection is a number that varies.
+
+instead of fucking Doctor Matt:
+	if printed name of Doctor Matt is "Left Behind Recording of Doctor Matt":
+		say "There's literally no one there. It's a recording!";
+	else:
+		say "Doctor Matt recognizes the glint of arousal in your eyes as you imagine peeling him out of the suit. He takes a few steps towards the back wall of the room, hovering his hand over the intercom. 'You're not going feral on me, are you? Control yourself, or I'll have to call Orthas!'";
 
 Section 1 - Talking w/Dr Matt (this drives the Main Storyline quests)
 
