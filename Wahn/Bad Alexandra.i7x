@@ -323,7 +323,7 @@ to say alexandradesc_bg:
 			else if HP of Carl is 30:
 				say "You can recognize a bit of Carl in the group of them, as the young dogs show the longer, thicker fur of having a husky father, with fluffy tails instead of the slender ones of a regular dobie. They hang around fairly close to each other, moving as a small pack in whatever they do, going at whatever stands in their way together even as they play around and explore. From time to time, they keep raising their heads to glance at the railing to the upper floor, apparently hoping to catch their dad looking down at them.";
 		else if AlexandraCarlPups is 1: [one is Carl's offspring]
-			say "In the group, one is recognizably Carl's offspring, as the young dog show the longer, thicker fur of having a husky father, with a fluffy tail instead of the slender one of a regular dobie. ";
+			say "In the group, one is recognizably Carl's offspring, as the young dog shows the longer, thicker fur of having a husky father, with a fluffy tail instead of the slender one of a regular dobie. ";
 			if HP of Carl is 10: [sane Carl]
 				say "The canine keeps close to Alexandra, standing ready by her side and wanting to provide support.";
 			else if HP of Carl is 30:
@@ -335,25 +335,35 @@ to say alexandradesc_bg:
 			else if HP of Carl is 30:
 				say "They hang around fairly close to each other, moving as a small pack in whatever they do, going at whatever stands in their way together even as they play around and explore. From time to time, they keep raising their heads to glance at the railing to the upper floor, apparently hoping to catch their dad looking down at them.";
 		if AlexandraBrutusPups is Libido of Alexandra: [all are the Brutus's offspring]
-			say "...";
-		else if AlexandraBrutusPups > 0: [some are Brutus's offspring]
-			say "...";
+			say "You can recognize a bit of Brutus in the group of them, as the young dogs have a purple shimmer to the black of their fur when the light hits it just right. On top of that, they seem fairly big and muscular, extraordinarily so for anthro doberman, as the breed usually is more slender. The canines seem to have an independent streak, usually staying a bit apart from each other as they explore the world around them.";
+		else if AlexandraBrutusPups is 1: [one is Brutus's offspring]
+			say "In the group, one is recognizably Brutus's offspring, as the young dog shows a purple shimmer to the black of his fur when the light hits it just right. On top of that, he seems fairly big and muscular, extraordinarily so for an anthro doberman, as the breed usually is more slender. The canine seems to have an independent streak too, usually staying a bit apart from others he explores the world around him.";
+		else if AlexandraBrutusPups > 1: [some are Brutus's offspring]
+			say "In the group, [AlexandraBrutusPups] are recognizably Brutus's offspring, as the young dogs have a purple shimmer to the black of their fur when the light hits it just right. On top of that, they seem fairly big and muscular, extraordinarily so for anthro doberman, as the breed usually is more slender. The canines seem to have an independent streak, usually staying a bit apart from each other as they explore the world around them.";
 		if AlexandraKarelPups is Libido of Alexandra: [all are the Karel's offspring]
-			say "...";
-		else if AlexandraKarelPups > 0: [some are Karel's offspring]
-			say "...";
+			say "You can recognize a bit of Karel in the group of them, as the young dogs['] fur is almost entirely black. The temperament of the group seems different from canines too, as they appear to move as a tight-knit group, or herd, a lot. Strength in numbers and all that.";
+		else if AlexandraKarelPups is 1: [one is Karel's offspring]
+			say "In the group, one is recognizably Karel's offspring, as the young dog's fur is almost entirely black. The temperament of him seems different from other canines too, as he appears to want to be a hangers-on to others, seeing security in numbers.";
+		else if AlexandraKarelPups > 1: [some are Karel's offspring]
+			say "In the group, [AlexandraKarelPups] are recognizably Karel's offspring, as the young dogs['] fur is almost entirely black. The temperament of the group seems different from canines too, as they appear to move as a tight-knit group, or herd, a lot. Strength in numbers and all that.";
 		if AlexandraIsaacPups is Libido of Alexandra: [all are the Isaac's offspring]
-			say "...";
-		else if AlexandraIsaacPups > 0: [some are Isaac's offspring]
-			say "...";
+			say "You can recognize a bit of Isaac in the group of them, as the young dogs['] fur is almost entirely black. The temperament of the group seems different from canines too, as they appear to move as a tight-knit group, or herd, a lot. Strength in numbers and all that.";
+		else if AlexandraIsaacPups is 1: [one is Isaac's offspring]
+			say "In the group, one is recognizably Isaac's offspring, as the young dog's fur is almost entirely black. The temperament of him seems different from other canines too, as he appears to want to be a hangers-on to others, seeing security in numbers.";
+		else if AlexandraIsaacPups > 1: [some are Isaac's offspring]
+			say "In the group, [AlexandraIsaacPups] are recognizably Isaac's offspring, as the young dogs['] fur is almost entirely black. The temperament of the group seems different from canines too, as they appear to move as a tight-knit group, or herd, a lot. Strength in numbers and all that.";
 		if AlexandraFarmhandPups is Libido of Alexandra: [all are the farmhands offspring]
-			say "...";
-		else if AlexandraFarmhandPups > 0: [some are farmhands offspring]
-			say "...";
+			say "You can recognize a bit of the farmhands in the group of them, as the young dogs have a broader, more powerful build than you'd expect from normal dobies. Seems like that's what one expect from crossing heavy duty work horses with a dog. The temperament of the group seems different from canines too, as they appear to move as a tight-knit group, or herd, a lot. Strength in numbers and all that.";
+		else if AlexandraFarmhandPups is 1: [one is farmhand's offspring]
+			say "In the group, one is recognizably the offspring of one of the farmhands, as the young dog has a broader, more powerful build than you'd expect from a normal dobie. Seems like that's what one expect from crossing heavy duty work horses with a dog. The temperament of him seems different from other canines too, as he appears to want to be a hangers-on to others, seeing security in numbers.";
+		else if AlexandraFarmhandPups > 1: [some are farmhand's offspring]
+			say "In the group, [AlexandraFarmhandPups] are recognizably the offspring of one of the farmhands, as the young dogs have a broader, more powerful build than you'd expect from normal dobies. Seems like that's what one expect from crossing heavy duty work horses with a dog. The temperament of the group seems different from canines too, as they appear to move as a tight-knit group, or herd, a lot. Strength in numbers and all that.";
 		if AlexandraNelsonPups is Libido of Alexandra: [all are the Nelson's offspring]
-			say "...";
-		else if AlexandraNelsonPups > 0: [some are Nelson's offspring]
-			say "...";
+			say "You can recognize a bit of Nelson in the group of them, as the young dogs have a faint, but recognizable stripe pattern underlying their normal fur color. The temperament of the group seems different to normal dobermen too, and seems to be more protective of those they consider part of their group, like sheepdogs.";
+		else if AlexandraNelsonPups is 1: [one is Nelson's offspring]
+			say "In the group, one is recognizably Nelson's offspring, as the young dog has a faint, but recognizable stripe pattern underlying his normal fur color. The temperament of the youngster seems different to normal dobermen too, and seems to be more protective of those he considers his, like a sheepdog.";
+		else if AlexandraNelsonPups > 1: [some are Nelson's offspring]
+			say "In the group, [AlexandraNelsonPups] are recognizably Nelson's offspring, as the young dogs have a faint, but recognizable stripe pattern underlying their normal fur color. The temperament of the group seems different to normal dobermen too, and seems to be more protective of those they consider part of their group, like sheepdogs.";
 
 to say alexandratalk_bg:
 	if debugactive is 1:
