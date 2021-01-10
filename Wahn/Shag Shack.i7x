@@ -120,11 +120,10 @@ to say JeromeTalkMenu:
 		now sortorder entry is 7;
 		now description entry is "Get frisky with one of Jerome's 'entertainers'";
 	[]
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Ask about whoring yourself out";
-		now sortorder entry is 8;
-		now description entry is "Whore yourself in the Shag Shack and get paid";
+	choose a blank row in table of fucking options;
+	now title entry is "Ask about whoring yourself out";
+	now sortorder entry is 8;
+	now description entry is "Whore yourself in the Shag Shack and get paid";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
