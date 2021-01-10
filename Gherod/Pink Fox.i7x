@@ -257,7 +257,7 @@ pink fox milk is milky.
 Purified of pink fox milk is "distilled milk".
 Usedesc of pink fox milk is "[pink fox milk use]";
 
-to say hpink fox milk use:
+to say pink fox milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the pink fox milk run over your tongue and down your throat. Tastes rich and oddly sweet. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 	if "Iron Stomach" is not listed in Feats of Player:
