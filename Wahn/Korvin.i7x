@@ -1370,6 +1370,7 @@ instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	wait for any key;
+	add "Relationship_Talk_Done" to Traits of Korvin;
 	clear the screen and hyperlink list;
 
 [First Choice]
