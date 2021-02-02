@@ -467,7 +467,8 @@ Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
 Include Feral Shaft Beast by Guest Writers.
 Include Feral Unicorn by Taelyn.
-Include Feral Wolf by Stripes.
+Include Feral Wolf Bitch by Prometheus.
+Include Feral Wolf Male by Stripes.
 Include Ferret Infection by Luneth.
 Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
