@@ -2841,10 +2841,10 @@ to NumberVariableSave:
 			now NumberVarValue entry is WhoringExperience;
 		-- "WineFound":
 			now NumberVarValue entry is WineFound;
-		-- "WolfMaleFight":
-			now NumberVarValue entry is WolfMaleFight;
-		-- "WolfBitchFight":
-			now NumberVarValue entry is WolfBitchFight;
+		-- "FeralWolfMaleFight":
+			now NumberVarValue entry is FeralWolfMaleFight;
+		-- "FeralWolfBitchFight":
+			now NumberVarValue entry is FeralWolfBitchFight;
 		-- "wolfhermdefeat":
 			now NumberVarValue entry is wolfhermdefeat;
 		-- "wolfhermvictory":
@@ -6496,10 +6496,10 @@ to VariableNumberLoad:
 					now WhoringExperience is numberVarValue entry;
 				-- "WineFound":
 					now WineFound is numberVarValue entry;
-				-- "WolfMaleFight":
-					now WolfMaleFight is numberVarValue entry;
-				-- "WolfBitchFight":
-					now WolfBitchFight is numberVarValue entry;
+				-- "FeralWolfMaleFight":
+					now FeralWolfMaleFight is numberVarValue entry;
+				-- "FeralWolfBitchFight":
+					now FeralWolfBitchFight is numberVarValue entry;
 				-- "wolfhermdefeat":
 					now wolfhermdefeat is numberVarValue entry;
 				-- "wolfhermvictory":

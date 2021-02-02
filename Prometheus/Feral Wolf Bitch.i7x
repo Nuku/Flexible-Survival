@@ -8,7 +8,7 @@ Version 1 of Feral Wolf Bitch by Prometheus begins here.
 Section 1 - Creature Responses
 
 FemFangCount is a number that varies.
-
+FeralWolfBitchFight is a number that varies.
 FeralWolfBitchDefeat is a number that varies.
 
 to say Feral Wolf Bitch attack:

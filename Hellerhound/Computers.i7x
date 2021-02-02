@@ -766,7 +766,7 @@ Example: * USB Drive - A very simple implementation of a laptop that can search 
 
 Example: ** Operations - A desktop computer running an operating system that in turn allows the player to select and run either the browser or the email program.
 
-We're going to use a multiple-choice program to implement our operating system, and also implement "type quit" and "select quit" to let the player quit out of other programs when he wishes to return to the OS. (By default, the player is not allowed to quit running programs; this makes it easier to implement single-use computers that are good for only one function, which is quite a common arrangement in IF if not in life.)
+We're going to use a multiple-choice program to implement our operating system, and also implement "type quit" and "select quit" to let the player quit out of other programs when he wishes to return to the OS. (By default, the player is not allowed to quit running programs; this makes it easier to implement single-use computers that are good for only one function, which is quite a common arrangement in IF, if not in life.)
 
 We also want the computer to revert back to the operating system if switched off while running some other program.
 

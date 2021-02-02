@@ -1114,10 +1114,14 @@ to say RyouseiSparring:
 	else if HP of Player < (MaxHP of Player / 2):
 		say "Ryousei looks you up and down and raises one eyebrow. 'Are you sure that is the best idea right now? You seem like you're at less than your best, and I wouldn't want to take advantage of having you in a weakened state. Better if you rest a bit first, don't you think?'";
 	else:
-		Setmonster "Royal Tiger";
-		now lev entry is (13 + Level of Royal Tiger);
-		now wdam entry is (Weapon Damage of Royal Tiger);
-		now HP entry is (95 + (Level of Royal Tiger * 10));
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
+			if Name entry is "Royal Tiger":
+				now MonsterID is y;
+				now lev entry is (13 + Level of Royal Tiger);
+				now wdam entry is (Weapon Damage of Royal Tiger);
+				now HP entry is (95 + (Level of Royal Tiger * 10));
+				break;
 		say "Ryousei chuckles and nods eagerly. 'What a great idea. I'm ready if you are!'";
 		if Royal Tiger is listed in CompanionList of Player: [temporary dismissal since he can't fight with you against himself]
 			ForceCompanionDismiss "Royal Tiger";

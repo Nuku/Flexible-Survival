@@ -253,4 +253,4 @@ to say AlphaOneSex3: [ass-fucking by AlphaOne]
 	say "     ...";
 	NPCSexAftermath Player receives "AssFuck" from AlphaOne;
 
-AlphaOne ends here.
+Alpha ends here.

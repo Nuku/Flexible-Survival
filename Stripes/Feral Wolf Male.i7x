@@ -9,11 +9,11 @@ Version 1 of Feral Wolf Male by Stripes begins here.
 Section 1 - Creature Responses
 
 FangCount is a number that varies.
-
+FeralWolfMaleFight is a number that varies.
 FeralWolfMaleDefeat is a number that varies.
 
 to say Feral Wolf Male attack:
-	now WolfMaleFight is 2; [lost]
+	now FeralWolfMaleFight is 2; [lost]
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
 	else: [regular scene]
@@ -67,11 +67,11 @@ to say Feral Wolf Male attack:
 				CreatureSexAftermath "Feral Wolf Male" receives "OralCock" from "Player";
 
 to say BeatFeralWolfMale:
-	now WolfMaleFight is 1; [victory]
+	now FeralWolfMaleFight is 1; [victory]
 	increase FangCount by 40;
 	if inasituation is true:
 		say ""; [dealt with in the file where the event is described]
-	else if inasituation is false and WolfMaleFight is not 3 and (HP of Fang is 0 or hp of Fang is 99):		[Checking to add Fang before running the regular wolf scenes]
+	else if inasituation is false and FeralWolfMaleFight is not 3 and (HP of Fang is 0 or hp of Fang is 99):		[Checking to add Fang before running the regular wolf scenes]
 		if a random number between 1 and 100 < ( FangCount - 95 ) and (player is not neuter ):	[3rd to 5th wolf]
 			project the Figure of Fang_face_icon;
 			say "     You watch the feral wolf drop low to the ground as he whimpers and cowers before you. He even pisses a little to show his submission to you. From the scars on his muzzle and sides, you can see that he's been beaten roughly by several of the other wolves. This wolf, clearly a lowly member of his pack, might make an obedient, if still somewhat feral, pet. You could take him off with you, if you're willing to risk bringing such a beast back with you.";
@@ -251,7 +251,7 @@ When Play begins:
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He slams into you and bites down.[or]He roars and swipes at you with his claws.[or]He pounces you and pins you down, tearing into you with his claws.[at random]";
-	now defeated entry is "[beatferalwolf]";
+	now defeated entry is "[BeatFeralWolfMale]";
 	now victory entry is "[Feral Wolf Male attack]";
 	now desc entry is "[FeralWolfDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "feral wolf face, with a long canine snout filled with the sharp teeth of a predator"; [ Face description, format as "Your face is (your text)."]

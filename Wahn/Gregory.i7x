@@ -175,19 +175,19 @@ to say GregoryUnconsciousTalk1: [check on him]
 	say "     Sitting down next to Gregory, you remember that people in a coma might possibly be able to perceive the outside world, so you address him by his name - 'Gregory Russlan Jr.' as shown on the dog tags that survived him being stashed in a goop-filled wyvern egg. Then you explain that you're just wanting to check on him as you watch his chest rise and fall with his steady breathing, followed by taking his pulse and feeling his forehead for temperature. He's almost absurdly normal in everything you can tell, despite being a human-wyvern hybrid now, and still unconsciousness ever since you and Urik rescued him from that wyvern egg.";
 	say "     Sadly, there isn't any recognizable reaction from Gregory, just his calm, steady breathing as before. Still, maybe he heard at least some of what you said and it'll have a positive effect in some way...";
 	if "UnconsciousTalk_Checkup" is not listed in Traits of Gregory:
-		add "UnconsciousTalk_Checkup" to Traits of Gregory:
+		add "UnconsciousTalk_Checkup" to Traits of Gregory;
 
 to say GregoryUnconsciousTalk2: [talk about him]
 	say "     Remembering that people in a coma might possibly be able to perceive the outside world, you decide to give it a shot and sit down next to the demi-human male. Clearing your throat, you put a hand on his shoulder and address him by his name - 'Gregory Russlan Jr.' as shown on the dog tags that survived him being stashed in a goop-filled wyvern egg. Then you go over the facts of finding him, up in the wyvern nest/tree, and the fact that he was chosen to become the offspring of a wyvern, and put into its egg. As you explain in calm tones that he's still recognizably human, although with some changes, you lightly touch changed areas of his physiology. Finally, you wrap your tale up by going into detail about Urik and yourself interrupting his transformation, you explain that he's in the library now, and you're just waiting for him to wake up. Just in case that happens when you're not here, you also warn him to expect Urik being an orc.";
 	say "     Sadly, there isn't any recognizable reaction from Gregory, just his calm, steady breathing as before. Still, maybe he heard at least some of what you said and it'll have a positive effect in some way...";
 	if "UnconsciousTalk_Situation" is not listed in Traits of Gregory:
-		add "UnconsciousTalk_Situation" to Traits of Gregory:
+		add "UnconsciousTalk_Situation" to Traits of Gregory;
 
 to say GregoryUnconsciousTalk3: [indoctrination]
 	say "     Remembering that people in a coma might possibly be able to perceive the outside world, you decide to give it a shot and sit down next to the demi-human male. Clearing your throat, you put a hand on his shoulder and address him by his name - 'Gregory Russlan Jr.' as shown on the dog tags that survived him being stashed in a goop-filled wyvern egg. Then you brush your fingers over his chest, stroking it as you lean your head next to his ear and whisper into it about him being yours now, an eager and available fucktoy to sate your needs with. You go into quite a bit of detail as you do so, all the while stroking and stimulating his naked body.";
 	say "     Sadly, there isn't any recognizable reaction from Gregory, just his calm, steady breathing as before. Still, maybe he heard at least some of what you said and it'll serve to reprogram him a bit in the way you have in mind...";
 	if "UnconsciousTalk_Indoctrination" is not listed in Traits of Gregory:
-		add "UnconsciousTalk_Indoctrination" to Traits of Gregory:
+		add "UnconsciousTalk_Indoctrination" to Traits of Gregory;
 
 to say GregoryTalk2: [talk about his plans]
 	say "     ...";

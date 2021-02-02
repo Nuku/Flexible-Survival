@@ -156,8 +156,8 @@ to ItemGain (ItemObj - a grab object) by (N - number) silently:
 	ItemGain ItemObj by N silence state is 1;
 
 to ItemGain (ItemObj - a grab object) by (N - number) silence state is (Silence - a number):
-	increase carried of ItemObj by N;
 	now ItemObj is part of Player; [keeping the flimsy FS inventory system running]
+	increase carried of ItemObj by N;
 	if Silence is 0:
 		LineBreak;
 		say "[bold type]You gain [N] [printed name of ItemObj in lower case]![roman type][line break]";

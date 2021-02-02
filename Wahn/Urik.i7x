@@ -273,7 +273,7 @@ to say UrikTalkMenu:
 		now sortorder entry is 70;
 		now description entry is "Offer Urik the chance to be your combat companion";
 	[]
-	if Perception of Urik is 1[ or Perception of Urik is 2]:
+	if Perception of Urik is 1 or Perception of Urik is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Take him up on the looting trip he suggested";
 		now sortorder entry is 71;
