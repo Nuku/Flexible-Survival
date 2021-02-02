@@ -196,10 +196,10 @@ to say CollieDesc:
 	else:
 		choose a row with name of "Smooth Collie Shemale" in the Table of Random Critters;
 		if enemy type entry is 1: [unique enemy, player does not know the name]
-			say "     An enormously big figure comes walking down the street and looks at you with a grin on her muzzle. The canine beast looks quite a bit like Lassie, if Lassie were twelve feet tall, walked upright and had the general shape of an attractive woman. Plus eight rather large breasts and a dick that would probably cause a stallion some envy... oh, and much shorter fur. On second thought, she doesn't look much like Lassie after all. 'Hello darling,' the giant anthro says in a surprisingly high-pitched voice, her eyes roaming over your form as she hungrily takes you in. 'I'm Sharlene, and you look like just what I need to relieve some of the pressure in my balls.' And with that, she steps forward and reaches for you. Not so much to fight, but rather to just make use of your body for her pleasure.";
+			say "     An enormously big figure comes walking down the street and looks at you with a grin on her muzzle. The canine beast looks quite a bit like Lassie, if Lassie were nine feet tall, walked upright and had the general shape of an attractive woman. Plus six breasts starting at a large top pair and getting progressively smaller down her front side, and a dick that would probably cause a stallion some envy... oh, and much shorter fur. On second thought, she doesn't look much like Lassie after all. 'Hello darling,' the giant anthro says in a surprisingly high-pitched voice, her eyes roaming over your form as she hungrily takes you in. 'I'm Sharlene, and you look like just what I need to relieve some of the pressure in my balls.' And with that, she steps forward and reaches for you. Not so much to fight, but rather to just make use of your body for her pleasure.";
 			now enemy type entry is 2; [player knows her name]
 		else:
-			say "     Once more, you run into Sharlene, the twelve feet tall anthro collie. Her eight breasts wiggle with every step the enormous anthro takes and the long shaft dangling between her legs twitches as she sees you. 'You again,' the shemale dog says in a surprisingly high-pitched voice, her eyes roaming over your form as she hungrily takes you in. 'Come on, let's have some fun together, eh?!' And with that, she steps forward and reaches for you. Not so much to fight, but rather to just make use of your body for her pleasure.";
+			say "     Once more, you run into Sharlene, the nine feet tall anthro collie. Her eight breasts wiggle with every step the enormous anthro takes and the long shaft dangling between her legs twitches as she sees you. 'You again,' the shemale dog says in a surprisingly high-pitched voice, her eyes roaming over your form as she hungrily takes you in. 'Come on, let's have some fun together, eh?!' And with that, she steps forward and reaches for you. Not so much to fight, but rather to just make use of your body for her pleasure.";
 
 Section 2 - Creature Insertion
 
@@ -256,8 +256,8 @@ When Play begins:
 	now Cock Length entry is 22; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 5; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	now Nipple Count entry is 6; [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 10; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 8; [ Breast size for if Sex="Male", usually zero. ]
+	now Breast Size entry is 8; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 6; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity] [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex infection will try and give you ]

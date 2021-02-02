@@ -546,9 +546,9 @@ Definition: A person (called x) is SupervisedBreeder:
 	if "Supervised Breeding" is listed in Traits of x, yes;
 	no;
 
-after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is 4 and "Barracks Slut" is listed in Traits of Alexandra and AlexandraFarmhandEventCooldown - turns > 3 and a random chance of 3 in 4 succeeds): [Alexandra is NOT pregnant, has been made the barracks slut, hasn't been fucked in 3 turns, 20% chance]
+after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is 4 and "Barracks Slut" is listed in Traits of Alexandra and AlexandraFarmhandEventCooldown - turns > 3 and a random chance of 3 in 4 succeeds): [Alexandra is NOT pregnant, has been made the barracks slut, hasn't been fucked in 3 turns, 75% chance]
 	try looking;
-	let randomnumber be a random number from 1 to 5;
+	let randomnumber be a random number from 1 to 6;
 	if randomnumber is:
 		-- 1:
 			say "     As you enter the building, your attention is immediately drawn to the other end of the main room, where you can see the towering form of an anthro Clydesdale stud outlined against the back wall. The large horseman is completely naked, allowing you to see the muscles moving under his slightly sweat-matted coat as he pumps his hips back and forth, accompanied by moans and barks in a familiar voice. Looking a bit closer, you see Alexandra's long, slender legs wrapped around his hips, while her leather-clad arms are pinned against the wall by his strong hands. 'Harder, you bastard! Yeah, just like that!' the former cop calls out between her gasps of pleasure, making it clear that she's enjoying herself quite a bit. For a moment you just stare at the action going on right in the open, before registering the rest of your surroundings, which is filled with several further equines - sitting at the table, leaning against walls or just standing around, all of whom are watching the pair fucking in front of them.";
@@ -562,9 +562,11 @@ after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is
 			say "[AlexandraFarmhandDripping]";
 		-- 5:
 			say "[AlexandraFarmhandJerking]";
+		-- 6:
+			say "[AlexandraFarmhandCumStuffed]";
 	now AlexandraFarmhandEventCooldown is turns;
 
-after going to Worker Barracks while (HP of Alexandra is 3 or HP of Alexandra is 5 and "Barracks Slut" is listed in Traits of Alexandra and AlexandraFarmhandEventCooldown - turns > 3 and a random chance of 3 in 4 succeeds): [Alexandra IS pregnant, has been made the barracks slut, hasn't been fucked in 3 turns, 20% chance]
+after going to Worker Barracks while (HP of Alexandra is 3 or HP of Alexandra is 5 and "Barracks Slut" is listed in Traits of Alexandra and AlexandraFarmhandEventCooldown - turns > 3 and a random chance of 3 in 4 succeeds): [Alexandra IS pregnant, has been made the barracks slut, hasn't been fucked in 3 turns, 75% chance]
 	try looking;
 	let randomnumber be a random number from 1 to 3; [so far there is only one walk-in option]
 	if randomnumber is:
@@ -576,7 +578,7 @@ after going to Worker Barracks while (HP of Alexandra is 3 or HP of Alexandra is
 			say "[AlexandraFarmhandJerking]";
 	now AlexandraFarmhandEventCooldown is turns;
 
-after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is 4 and "Supervised Breeding" is listed in Traits of Alexandra and AlexandraFarmhandEventCooldown - turns > 3 and a random chance of 1 in 2 succeeds): [Alexandra is NOT pregnant, has been told you'll supervise breeding, hasn't been fucked in 3 turns, 20% chance]
+after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is 4 and "Supervised Breeding" is listed in Traits of Alexandra and AlexandraFarmhandEventCooldown - turns > 3 and a random chance of 1 in 2 succeeds): [Alexandra is NOT pregnant, has been told you'll supervise breeding, hasn't been fucked in 3 turns, 50% chance]
 	try looking;
 	let randomnumber be a random number from 1 to 3; [so far there is only one walk-in option]
 	if randomnumber is:
@@ -588,7 +590,7 @@ after going to Worker Barracks while (HP of Alexandra is 2 or HP of Alexandra is
 			say "[AlexandraFarmhandJerking]";
 	now AlexandraFarmhandEventCooldown is turns;
 
-after going to Worker Barracks while (HP of Alexandra is 3 or HP of Alexandra is 5 and "Supervised Breeding" is listed in Traits of Alexandra and AlexandraFarmhandEventCooldown - turns > 3 and a random chance of 1 in 2 succeeds): [Alexandra IS pregnant, has been told you'll supervise breeding, hasn't been fucked in 3 turns, 20% chance]
+after going to Worker Barracks while (HP of Alexandra is 3 or HP of Alexandra is 5 and "Supervised Breeding" is listed in Traits of Alexandra and AlexandraFarmhandEventCooldown - turns > 3 and a random chance of 1 in 2 succeeds): [Alexandra IS pregnant, has been told you'll supervise breeding, hasn't been fucked in 3 turns, 50% chance]
 	try looking;
 	let randomnumber be a random number from 1 to 3; [so far there is only one walk-in option]
 	if randomnumber is:
@@ -599,6 +601,95 @@ after going to Worker Barracks while (HP of Alexandra is 3 or HP of Alexandra is
 		-- 3:
 			say "[AlexandraFarmhandJerking]";
 	now AlexandraFarmhandEventCooldown is turns;
+
+
+to say AlexandraFarmhandCumStuffed: [player just walks in on a sleeping Alexandra, and she's a cummy mess]
+	[she's been fucked by Nelson, the twins and multiple horsemen even before the scene]
+	impregAlexandraChance with "Nelson";
+	impregAlexandraChance with "Karel";
+	impregAlexandraChance with "Isaac";
+	impregAlexandraChance with "Farmhand Horseman";
+	impregAlexandraChance with "Farmhand Horseman";
+	say "     As you enter the building, you pass a Clydesdale Stud with a well-satisfied smile on his face, touching his hat as he gives you a respectful nod. There are more horsemen inside, hanging around with some playing cards, and others are just wandering out from the shower room in the back, towels wrapped around their hips and coats all shiny with moisture. Then one of the men notices that you came in and gives a cheer, which is quickly joined by pretty much everyone else present. The source of their good spirits becomes quickly apparent as you let your gaze sweep over the room: a familiar brown and black furred form lies stretched out on a nearby bunk bed, and she's quite a sight! Alexandra is completely naked and dozing in what appears to be content exhaustion, her fur plastered to the sexy bitch's skin from all the cum she's drenched in!";
+	say "     Your breeding bitch's legs are spread, showing the still gaping opening of her pussy, with strings of cum connecting her nether lips and more of the creamy fluid leaking out slowly at the bottom. Looks like the guys really gave her a workout, and it's almost guaranteed that some of that sperm put a litter in her! You can't help but smile at this result of your plans for the woman, thinking back to the prim and proper police officer you encountered in the streets of the city not all that long ago. Now she's your bad-ass bitch... and puppy mill, putting out for the whole barracks for horny farmhands! Feasting your eyes on Alexandra and imagining her belly swelling soon with the results of the gangbang she was just in, you can year some of the guys chat about how good she felt, and what they'll do next time.";
+	say "[AlexandraFarmhandCumStuffedMenu]";
+
+to say AlexandraFarmhandCumStuffedMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	say "     [bold type]Seeing that Alexandra is right there before you, naked and available, do you want to do anything yourself?[roman type][line break]";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Eat her out";
+	now sortorder entry is 1;
+	now description entry is "Sample the potent mixture leaking from the bitch, and give her one more orgasm";
+	[]
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Get some sloppy seconds";
+		now sortorder entry is 2;
+		now description entry is "Churn the cum in her snatch up with your own contribution";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Just let her rest";
+	now sortorder entry is 3;
+	now description entry is "She's had enough of a workout for now";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Eat her out"):
+					say "[AlexandraFarmhandCumStuffed_EatOut]";
+				else if (nam is "Get some sloppy seconds"):
+					say "[AlexandraFarmhandCumStuffed_Fuck]";
+				else if (nam is "Just let her rest"):
+					say "[AlexandraFarmhandCumStuffed_Rest]";
+				wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say AlexandraFarmhandCumStuffed_EatOut:
+	say "     Feeling a little kinky yourself right now, you [if player is not naked]slip out of your clothing and gear, [else]take off your gear [end if]and pile it up on the neighboring bed so it doesn't get dirty, then step up to here Alexandra is lying. You can see from the corner of your eyes that this is drawing some attention from the gathered farmhands, several of which casually move to better positions for watching you. Climbing onto the bed, you feel some wet spots from where stray shots of cum landed not too long ago, another proof if the virility of the many horny men you've sent your bitch here to serve. As you lower yourself on all fours between Alexandra's legs, the scent of sex suffuses your nostrils: lots and lots of cum, with some clean sweat to go with it. Brushing your hands along the mostly matted fur of the doberwoman's thighs, you spread them some more, making room for you to go down on her.";
+	say "     Lowering your head to Alexandra's crotch, you stick out your tongue and play its tip over the nub of her clit, tasting her and the horseman cum sticking to your bitch. The anthro starts to stir a little at the touch, then more when you continue to lap at the pleasure-button, drawing her out of the depths of fucked-out stupor. Escalating to planting your lips over the dobie's clit and sucking on it hard, you can hear a groggy, 'Nnnhh? Fuuck, you guys... are... insatiable!' One of her paw-hands moves to feel around, coming to rest on your head as the bitch slurs the words, 'Yyeah, that-that's good!' You're only to happy to keep going, mixing things up a little by adding some long licks up from the base of her pussy, tongue scooping up some of the fertile sperm leaking from her and pushing it back in as you trace your tongue over her open folds, then return to the clit and service it some more.";
+	WaitLineBreak;
+	say "     Alexandra lets out needy moans and whines as she writhes on the mattress, acting like the sexy bitch you always wanted to call your own. Some might call this nanite plague an apocalypse, but you can't help but think that it's also a fucking good time! Eating out the freshly bred ex-cop and slurping the mixed loads of at least a dozen men that are churned up inside her, you can only imagine how much more of that potent, creamy cum is in her womb - millions of sperm hunting down eggs to burrow into. Over the sounds of yourself and Alexandra, you distantly register some of the men cheering you on, a reminder that you're giving them a show too. Only spurred on by this, you intensify your attention for the anthro's canine pussy, now going back to suckling on her clit full time and using your fingers to delve between her nether lips, wiggling them around in her slick insides.";
+	say "     With your relentless stimulation, it doesn't take all that much longer before you push Alexandra into another orgasm, with her letting out a long, high-pitched whine as she bucks her hips up against your face. You can feel her insides spasm and flex around your fingers, sending a fresh gush of horseman cum to splurge over your hand and forearm. Continuing to go at it while the bitch rides out the height of her pleasure, you draw more moans and some almost animalistic sounds from her before the end, making it a fun little time for the both of you. When Alexandra eventually winds down, you then move forward into a position half beside her, coming into full view for the panting bitch for the first time since you started going down on her. 'Oh, hey boss! Y-you just did that?! T'was so good!' She smiles in exhausted satisfaction, and you can see that her energy is flagging, now that she got off. 'Gotta say, staying here with all these guys sure is... iss a workout...' are the last words she manages to say before dozing off again.";
+	NPCSexAftermath Player receives "OralPussy" from Alexandra;
+
+to say AlexandraFarmhandCumStuffed_Fuck:
+	say "     Feeling a little kinky yourself right now, you [if player is not naked]slip out of your clothing and gear, [else]take off your gear [end if]and pile it up on the neighboring bed so it doesn't get dirty, then step up to here Alexandra is lying. You can see from the corner of your eyes that this is drawing some attention from the gathered farmhands, several of which casually move to better positions for watching you. Climbing onto the bed, you feel some wet spots from where stray shots of cum landed not too long ago, another proof if the virility of the many horny men you've sent your bitch here to serve. As you kneel between Alexandra's legs, the scent of sex suffuses your nostrils: lots and lots of cum, with some clean sweat to go with it. Brushing your hands along the mostly matted fur of the doberwoman's thighs, you spread them some more, making room for you to move up close and tight to her crotch and gaping pussy. Leading the way is your [cock of Player] shaft, hard and ready to get your fuck on!";
+	say "     Wrapping your hand around the base of your cock, you bend it down a little and trace its head over the nub of her clit, wiping off some of the horseman cum sticking to your bitch. You stroke up and down along your length, spreading the farmhand's seed as improvised lube, then rub yourself against her pleasure-button some more. The anthro starts to stir at being touched, drawing her out of the depths of fucked-out stupor. Escalating to dipping your dickhead down from her clit, you hook it into the spread opening of her pussy and sink yourself into her warm, wet depth with a smooth push that just feels amazing! Everything around your shaft is slick and creamy, and you can't help but chuckle at the knowledge that you're churning up the loads of at least a dozen farmhands that bred her. Looking up as you hear a groggy, 'Nnnhh? Fuuck, you guys... are... insatiable!' you see Alexandra waking up fully, opening her eyes and blinking once or twice before focusing on you. Then her eyes go wide and she barks, 'Fuck! It's you boss!'";
+	WaitLineBreak;
+	say "     Savoring the ex-cop's realization that it isn't just another farmhand plunging into her squelching depths but actually the person who claimed her in the streets, wearing her resistance down until she became your very own bad dog bitch, you grin broadly and then hammer into her at full force. ";
+	if Cunt Depth of Alexandra + 2 < Cock Length of Player: [standard values: 10 (+2 stretching allowance) vs 15]
+		say "The doberwoman bucks under you wildly and [if TwistedCapacity of Alexandra is false]lets out almost feral sounds as your enormous dick batters past her cervix, right into her womb. 'Fucking hell that's big!' she shouts, holding back a whimper at the pain. Yet at the same time, she's into it too, [else]then lets out a almost gleeful laugh as her altered body somehow accommodates to let your enormous dick slip right into her womb. 'Fuck yeah, that's one big dick!' she barks, [end if]gushing more female juices in her arousal. Fully sheathed inside Alexandra, [if Sterile of Alexandra is false]right where she'll likely have a litter of pups growing soon and [end if]with her sex squeezing all around your cock, you can't help but go a little wild. Grunting lustfully, you go on to fuck her hard and deep, really pummeling the dobie's insides with your hard shaft. 'Damn, I love all of these monster dicks in me! Blast some puppies up that pussy, boss!'";
+		say "     Alexandra lets out needy moans and whines as she writhes on the mattress, acting like the sexy bitch you always wanted to call your own. Some might call this nanite plague an apocalypse, but you can't help but think that it's also a fucking good time! Ravaging her canine snatch and churning up the mixed loads of at least a dozen men with your own prick, you thoroughly enjoy making use of your slut. Over the sounds of yourself and Alexandra, you distantly register some of the men cheering you on, a reminder that you're giving them a show too. Only spurred on by this, you intensify your attention for the anthro's canine pussy, now going all out in your deep penetrations, until finally ramming home one last time and starting to flood her womb with everything your balls have to give. Thus your own seed joins the throng of millions of sperm, hunting for any eggs they might burrow into and knock the bitch up!";
+		if TwistedCapacity of Alexandra is false:
+			increase Cunt Depth of Alexandra by 1; [oversized fucks stretch characters bit by bit]
+	else: [Player actually fits into her]
+		say "The doberwoman bucks under you at the sudden deep penetration, letting out a needy moan. [Cock Length of Player > 11]You can see the vague outline of your shaft and how far it reaches inside her, which brings with it the realization that a dick this big wouldn't have fit in the bitch when you first took her as yours. Seems like continued deep fucks stretched her out, with her nanite-infused body adapting to take the cocks she has taken. [end if]'Fuck yeah, give me that dick!' she barks, gushing more female juices in her arousal. Fully sheathed inside Alexandra, pushing the cum already inside her deeper[if Sterile of Alexandra is false] and increasing the chance that she'll have a litter of pups growing soon[end if], you can feel her sex squeezing all around your cock. It feels so good that you can't help but go a little wild. Grunting lustfully, you go on to fuck her hard and deep, really pummeling the dobie's insides with your hard shaft. 'Damn, I love being bred! Blast some puppies up that pussy, boss!'";
+		say "     Alexandra lets out needy moans and whines as she writhes on the mattress, acting like the sexy bitch you always wanted to call your own. Some might call this nanite plague an apocalypse, but you can't help but think that it's also a fucking good time! Ravaging her canine snatch and churning up the mixed loads of at least a dozen men with your own prick, you thoroughly enjoy making use of your slut. Over the sounds of yourself and Alexandra, you distantly register some of the men cheering you on, a reminder that you're giving them a show too. Only spurred on by this, you intensify your attention for the anthro's canine pussy, now going all out in your deep penetrations, until finally ramming home one last time and starting to flood her pussy with everything your balls have to give. The blasts of cum spurt deep into the throng of millions of sperm already there, joining the hunt for any eggs they might burrow into and knock the bitch up!";
+	WaitLineBreak;
+	say "     Feeling yet another cock throb against her insides as she is bred for the upteenth time today, Alexandra herself climaxes right along with you, finding fulfillment from her assigned role. When your shared orgasms eventually wind down and you sink over Alexandra with your dick resting inside her, the bitch loosely wraps her arms around you and strokes your sides. 'T'was so good! I'm totally stuffed!' she says with a chuckle, slurring her satisfied words in exhaustion. You can see that her energy is flagging fast, now that she got off. 'Gotta say, staying here with all these guys sure is... iss a workout...' are the last words she manages to say before dozing off again. Well-pleased with your breeding bitch, you wait a little while longer to catch your breath, then pull out of her, your dick white and dripping with frothy cum. Leaving Alexandra to rest on the bed, you move over into the showers to clean yourself up, then return to grab your [if player is not naked]clothes and [end if]gear again.";
+	impregAlexandraChance with "Player";
+	NPCSexAftermath Alexandra receives "PussyFuck" from Player;
+
+to say AlexandraFarmhandCumStuffed_Rest:
+	say "     You decide to let Alexandra get her well-deserved rest, as she's already totally stuffed with cum[if Alexandra is not sterile] and more than likely already knocked up[end if]. Instead, you make a little circuit through the room, chatting with the happy and quite thankful horsemen all around, who praise Alexandra's sexy body and receptive nature, and you for bringing her here for them to enjoy. It really feels good to bask in their adoration for a while.";
+	SanBoost 5;
 
 to say AlexandraFarmhandJerking: [farmhand being jerked by Alexandra]
 	say "     As you enter the building, you immediately notice a pair of horsemen standing near the entrance, talking to one another and chuckling. 'Think he'll make it? It's one tall order with a bitch like her working him over!' one of them says, with the second replying, 'Fuck, no! Not in a million years. But who cares if the training sessions with Alexandra are so much fun anyways.' Following their gazes over to one of the beds lined up throughout the large room, you can see what they're talking about. Another farmhand is stretched out on his bed, bare-ass naked and panting with a pit of a pinched expression on his face. Alexandra is sitting next to him on the corner of the bed, both her hands wrapped around the muscular male's erect shaft. She is stroking up and down along its length, then leans in to run her tongue over his head in a slow tease before pulling back again.";
@@ -1294,7 +1385,7 @@ to say AlexandraBreeding_BarracksMove:
 		say "     Leaving the archway marking the entrance to the farm behind, you guide Alexandra over to the worker quarters and step inside of the open barracks building. This long structure is mostly one large room, a kind of living area at the front with a table, sofas, and a TV, the back half filled with quite a few bunk beds spaced a bit apart, with tall lockers in between. Several farm-workers are always present, for the main part anthro horsemen, and you have little trouble spotting the ones you're here for. [one of]Back in front of the lockers [or]Sitting at a table and playing cards with one another [or]Just walking out from the showers out back [or] Dozing on their bunk beds [at random]are Karel and Isaac, the two black-coated Friesians looking totally identical from the distance. Patting Alexandra's arm, you point the two of them out to her, which makes her tail wag even harder than before. Some of the other horsemen in here approach and try to chat your dobie bitch up, only to have her saunter past them and straight to the twins.";
 		WaitLineBreak;
 		say "     'Welcome back,' the two brothers say almost in unison, with Karel stepping forward to shake your hand while Isaac focuses mainly on Alexandra, even having to adjust his trouser-snake as it throbs and seems to grow in his pants. Your dobie bitch chuckles as she sees the effect she is having on the tall stallion and saunters over to him, then opens her jacket and exposes her full breasts for him to see, even going so far as to press them against his abs when she lays her arm around him. 'Someone's eager to get in me I see!' she calls out over her shoulder, making Karel grin. 'I guess we don't have to ask why you're here again. Your woman likes horses, hm?' Replying that Alexandra does indeed like them, but that it is you who chose Karel and Isaac again, you whistle for the bitch, calling her over to stand by your side. Raising your hand and groping her breasts demonstratively, you explain that you want her to actually stay for a while in the barracks and ask for the two Friesians to look out for her while she does so.";
-		say "     As a crowd is already gathering around the four of you, the twins once again lead your little group over to the laundry room, securely closing the door to keep the others out. 'So, what's this about her staying here you said?' Karel asks with one raised eyebrow, then looks over to ogle Alexandra's breasts. 'Isaac and me can watch her some of the time, but you do know we've got work to do too, so she'd be alone here with the others fairly regularly.' Alexandra snorts at his words and crosses her arms, 'What? You worried I'm some weak bitch that'll get taken advantage of? I can knock heads with the best of em, made it out on the streets for a long time, you know?! Not that I particularly mind riding nice thick studmeat now, hah!' Isaac leans closer to her and gives her ear a playful nuzzle while groping the dobie's breasts.";
+		say "     As a crowd is already gathering around the four of you, the twins once again lead your little group over to the laundry room, securely closing the door to keep the others out. 'So, what's this about her staying here you said?' Karel asks with one raised eyebrow, then looks over to ogle Alexandra's breasts. 'Isaac and me can watch her some of the time, but you do know we've got work to do too, so she'd be alone here with the others fairly regularly.' Alexandra snorts at his words and crosses her arms, 'What? You worried I'm some weak bitch that'll get taken advantage of? I can knock heads with the best of em, made it out on the streets for a long time, you know?! Not that I particularly mind riding nice thick stud-meat now, hah!' Isaac leans closer to her and gives her ear a playful nuzzle while groping the dobie's breasts.";
 		LineBreak;
 		say "     [bold type]Seems like having Alexandra stay in the barracks shouldn't be too much of a problem then. But what orders do you give her for her stay?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - You want her bred by anyone able to fill that juicy pussy with cum!";

@@ -975,7 +975,8 @@ instead of going up from Grey Abbey Library while (Chris is in Sitting Area and 
 		increase WarriorChrisPlayerFucked by 1;
 		now lastfuck of Chris is turns;
 
-after going to Sitting Area while (Chris is in Sitting Area and Urik is in Sitting Area and Hunger of Chris is 0): [first interaction between Urik and Chris]
+after going to Sitting Area while (Chris is in Sitting Area and Urik is in Sitting Area and Hunger of Chris is 0 and (PlayerControlled of Urik is true or PlayerFriended of Urik is true)): [first interaction between Urik and Chris]
+	project the Figure of Urik_clothed_icon;
 	say "     As you enter the area, your gaze falls upon an interesting sight: Urik is stretched out on the ground near the back wall, doing lifting exercises with an obviously self-built weightlifting set. The long steel pole in his hands seems to have been a traffic sign at some point, with two manhole covers speared onto each end. Urik is pumping his training tool up and down in a steady rhythm, not quite effortlessly but easily enough and with only a light sheen of sweat covering his green-skinned bulk. Between some grunts as he pushes the weight an arm's length up again and again, you can hear the orc counting his reps, which currently are at fifty-two. ";
 	if Libido of Chris is 0: [half orc/normal]
 		say "You're not the only one watching Urik's exercise regime apparently, as Chris moves up to the other orc before much longer, his gaze captivated by the play of Urik's straining muscles. 'Hey there! Nice to see another orc here,' the young man says with a hopeful smile and friendly expression. 'Couldn't help but notice your workout here. That's quite a lift.'";

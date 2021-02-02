@@ -492,7 +492,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
 				now FirstAnalPartner of Player is printed name of GivingChar;
 			if Player is mpreg_able: [fertile]
-				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None":
+				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None" and Sterile of GivingChar is false:
 					setmonster MainInfection of GivingChar;
 					if MainInfection of GivingChar is listed in infections of OviImpregnatorList:
 						movichance;
@@ -511,7 +511,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";
 				now FirstVaginalPartner of Player is printed name of GivingChar;
 			if Player is fpreg_able: [can get pregnant RIGHT NOW]
-				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None":
+				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None" and Sterile of GivingChar is false:
 					setmonster MainInfection of GivingChar;
 					if MainInfection of GivingChar is listed in infections of OviImpregnatorList:
 						fovichance;

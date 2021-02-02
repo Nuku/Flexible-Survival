@@ -110,7 +110,7 @@ an everyturn rule:
 				say "     Your orcish son Malik comes strolling up the street from the west, right in the middle of the road and strutting as if he owns the place. With a grin and a wink at you as he passes by, Malik then continues to the east, entering the library.";
 			else if Player is in Sitting Area:
 				say "     Malik comes walking in, giving you a grin and Chris a respectful nod. 'I'm back dads! Had a nice little time outside.'";
-			now Malik is in NPC Nexus; [stashed in another dimension]
+			now Malik is in Sitting Area; [stashed in another dimension]
 		[else if TimekeepingVar is 2 or TimekeepingVar is -6:] [early night]
 
 instead of conversing the Malik:
@@ -324,6 +324,7 @@ after going to Sitting Area while (Chris is in Sitting Area and Libido of Chris 
 	say "     As you enter the area, your gaze falls upon Chris and your firstborn son with the orc warrior, the two of them standing at the railing overlooking the open interior of the library as they guzzle orc brew and talk with each other. '...real nice snug fit around my cock, definitely. And I can't complain about the result, eh?' He pats his son's shoulder and gives him a squeeze, then notices you standing nearby. 'Ah, speak of the devil. Say hello to your breeder-dad, boy.' The younger orc turns around to look at you, taking another swig to finish off his brew before setting the empty mug on the broad railing. Walking up to you, he wraps you in a muscle-packed embrace that almost takes your breath away, then grins broadly, showing off his tusks. In a proud voice, he tells you, 'Dad and me have chosen a name! I'm Malik, firstborn of your new tribe together!' That said, he slaps his broad chest with his large hand, giving a masculine grunt.";
 	say "     'This boy will make us proud,' Chris boasts as he joins the two of you, laying his arms around you both. 'Almost as strong as his dad, and you should have seen him take out that German shepherd we ran into not too far from here. That doggy sure didn't make any boasts about being an Alpha anymore when we left him in a puddle of cum on the street!' 'Yeah! Pounded and bred that little bitch good! He was a bit too whiny to keep, but not bad as a casual cumdump,' Malik tells you with a smirk as he lets a hand casually wander down your backside to grope your ass. 'Better watch out boy, that's your chieftain's breeder!' Chris tells him and punches the other orc's shoulder. For a second, a challenging expression crosses Malik's face, then he gives in and pulls his hand away. Your three-way family hug breaks up after that, with Chris suggesting the three of you hang around together on a nearby sofa, you on his lap and his son next to him as you chat for a while.";
 	now Strength of Chris is 1; [introduced]
+	now Malik is in Sitting Area;
 
 after going to Sitting Area while (Chris is in Sitting Area and Libido of Chris is 2 and Daytimer is day and Intelligence of Malik is 0 and Strength of Chris > 0 and (Loyalty of Malik > 0 or Loyalty of Malik < 0)):
 	if debugactive is 1:

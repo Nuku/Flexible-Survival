@@ -575,8 +575,6 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 	else if RareQuesting is 5: [pirate gold stage active]
 		if TreasureFound is 1:
 			say "     'Ah, the brave adventurer found [hisher] treasure!' Nermine says with a large smile on her muzzle as she eagerly takes the small handful of golden coins you are holding out from you, leaving you feeling vaguely sad as those precious golden circles disappear behind the counter. When you point out that that was all there was in the pirate stash, she blinks at you in surprise. 'Only so few coins left? Well, then it is especially fortunate that Nermine's helper managed to find them! This makes them far more precious and she will have to adjust the price accordingly,' the jackal-woman says, a smile tugging at the corners of her muzzle. Then she pulls out the small golden ankh she promised you earlier and hands it to you. 'Nermine thinks this was more than earned then, though she also believes there might still be further coins left out there if one were to go and look again,' she says with a grin. As you weigh the warm golden ankh in your hands and wonder whether it was worth the handful of treasure you just traded for it...";
-			LineBreak;
-			say "[bold type]You gain a strange ankh![roman type][line break]";
 			ItemGain strange ankh by 1;
 			now TreasureFound is 0;
 			now RareQuesting is 6; [gold coins delivered]
