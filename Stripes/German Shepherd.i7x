@@ -635,11 +635,13 @@ to say gsd_special_vsex_00:
 		now sortorder entry is 3;
 		now description entry is "Pin him down and use his pole as your toy";
 	[]
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fellatio";
 		now sortorder entry is 4;
 		now description entry is "make the defeated cur suck you off";
 	[]
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now sortorder entry is 5;
