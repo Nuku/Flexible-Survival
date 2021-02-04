@@ -562,9 +562,9 @@ instead of sniffing Suspicious Van:
 	say "It smells of oil[if Resolution of Rabbit Tagger is 1], and there is a lingering smell of male sweat and cum in the vicinity[end if].";
 
 to say suspiciousVanDesc:
-	if Rabbit Tagger is not resolved:
+	if Rabbit Tagger is not resolved or Resolution of Rabbit Tagger is 2: [either never seen Zoe, or saved her]
 		say "     You take a look at the van. It is large, white, and in a rather good state compared to the other vehicles, as if someone has been regularly taking care of it after the start of the nanite plague. A quick test tells you that the doors are locked.";
-	else if "Used" is listed in the Traits of Zoe:
+	else if "Used" is listed in the Traits of Zoe: [Zoe is in the van]
 		say "     You take a look at the van. It is constantly shaking and squeaking. After you take a few steps closer, you hear loud grunts coming from inside the vehicle, as well as Zoe's cries.";
 	else:
 		say "     You take a look at the van. It sits, immobile, in the middle of the parking lot. Since you know what is used for, the vehicle leaves you uneasy.";

@@ -848,7 +848,7 @@ Size of tactical gloves is 3.
 AC of tactical gloves is 20.
 Effectiveness of tactical gloves is 15.
 GA of tactical gloves is 0.
-Traits of tactical gloves is {"autorotative"}.
+Traits of tactical gloves is {"authoritative "}.
 Placement of tactical gloves is "body".
 Descmod of tactical gloves is "A pair of fingerless black gloves are fitted over your hands.".
 Slot of tactical gloves is "hands".

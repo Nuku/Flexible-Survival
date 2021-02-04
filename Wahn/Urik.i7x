@@ -299,7 +299,7 @@ to say UrikTalkMenu:
 	[]
 	[
 	choose a blank row in table of fucking options;
-	now title entry is "Ask him about what orc cum"; [TODO: write this scene (rut/heat for Urik, orc cum effects - drunk + bulking up breeders + ...)]
+	now title entry is "Ask him about what orc cum does for him"; [TODO: write this scene (rut/heat for Urik, orc cum effects - drunk + bulking up breeders + ...)]
 	now sortorder entry is 102;
 	now description entry is "Inquire about effects of orc cum on Urik";
 	]

@@ -4515,7 +4515,7 @@ A Stag is a infection model. It is a hunter. It is rare. Description of a Stag i
 The move rate of a Stag is 2.
 The attack rate of a Stag is 2.
 The reflex of a Stag is 12.
-The primary attack description of a Stag is "Approaches with a grin on her face, her thick organ splashing around as shi grabs at".
+The primary attack description of a Stag is "Approaches with a grin on her face, her thick organ splashing around as she grabs at".
 The TF description of a Stag is "tears off their pants heedless of who is watching, jerking at their aroused member as their body grows large breasts. Huge antlers project from their head as they groan, becoming a".
 
 Section - Coyote
@@ -5563,7 +5563,7 @@ when play ends:
 				say "Your collect up [number of on-stage mare npc person] of your herd and guide them from town. You delight in breeding your faithful mares when you're not busy protecting them, and they savor your attention before any other consideration. You never want for company, and live quite happily ever after.";
 			if tf table of head is table deer:
 				if there is an on-stage stag:
-					say "The stag collects all [number of on-stage doe] of you and guides you to an abandoned bus. With amazing skill, shi hotwires it and you're all rolling right up out of town past an unawares military reacting all too slowly. Giddy with relief, you fall into one another's arms, kissing, hugging, stroking and breeding as the stag dutifully drives the new hard North into Canada.[line break][line break]In Canada, your family blossoms and grows together, until, many years later, a new stag is born. This new alpha eventually rounds up her siblings and they set off to start a new herd, and so it continues, the does spreading through the chill wilderness. With strong buck influences, actual breeding is usually limited to the stag, with sex between does only rarely resulting in child, and the rest resulting from the stag breeding each doe in turn when in heat.";
+					say "The stag collects all [number of on-stage doe] of you and guides you to an abandoned bus. With amazing skill, she hotwires it and you're all rolling right up out of town past an unawares military reacting all too slowly. Giddy with relief, you fall into one another's arms, kissing, hugging, stroking and breeding as the stag dutifully drives the new hard North into Canada.[line break][line break]In Canada, your family blossoms and grows together, until, many years later, a new stag is born. This new alpha eventually rounds up her siblings and they set off to start a new herd, and so it continues, the does spreading through the chill wilderness. With strong buck influences, actual breeding is usually limited to the stag, with sex between does only rarely resulting in child, and the rest resulting from the stag breeding each doe in turn when in heat.";
 				else:
 					say "With no authority figure, the [number of on-stage doe] gather together and flee the city just ahead of the incoming sirens and armed forces. They stay together with a sense of family and fear, but as the event passes, they stay together out of love, breeding freely. Humans are absorbed into the herd somewhat haphazardly as any man or woman that catches a doe's eye is brought in to be shown new heights of delight before becoming another of the herd.";
 			if tf table of head is table feral dragoness:

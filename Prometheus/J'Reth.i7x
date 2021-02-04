@@ -102,7 +102,7 @@ PenileVirgin of J'Reth is true.
 SexuallyExperienced of J'Reth is false.
 TwistedCapacity of J'Reth is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of J'Reth is true. [steriles can't knock people up]
-MainInfection of J'Reth is "Draco-Mantis".
+MainInfection of J'Reth is "Draco-Mantis Male".
 Description of J'Reth is "[J'RethDesc]".
 Conversation of J'Reth is { "Mantis Dragon sounds." }.
 The scent of J'Reth is "     J'Reth smells of Mantis-Dragons and fairies in the woods."

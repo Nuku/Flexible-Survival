@@ -1129,7 +1129,13 @@ to say RyouseiSparring:
 			ForceCompanionJoin "Royal Tiger";
 		else:
 			challenge "Royal Tiger";
-
+		if fightoutcome < 30: [won  or lost]
+			increase the XP of Royal Tiger by level of Player;
+			now needed is ( level of Royal Tiger ) times 10;
+			if "Good Teacher" is listed in feats of Player:
+				now needed is ( level of Royal Tiger ) times 6;
+			if XP of Royal Tiger >= needed and level of Royal Tiger < level of Player and humanity of Player > 0:
+				pet level up Royal Tiger;
 
 Section 6 - Endings
 

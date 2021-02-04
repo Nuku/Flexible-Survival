@@ -703,8 +703,8 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 		if GivingCharIsNPC is 0 and TakingCharIsNPC is 0:
 			say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
 		if debugactive is 1:
-			say "GivingCharName: [GivingCharName], GivingCharIsNPC: [GivingCharIsNPC]";
-			say "TakingCharName: [TakingCharName], TakingCharIsNPC: [TakingCharIsNPC]";
+			say "DEBUG: GivingCharName: [GivingCharName], GivingCharIsNPC: [GivingCharIsNPC][line break]";
+			say "DEBUG: TakingCharName: [TakingCharName], TakingCharIsNPC: [TakingCharIsNPC][line break]";
 		if GivingCharIsNPC is 1:
 			if SexAct is "AssFuck":
 				if PenileVirgin of GivingChar is true:

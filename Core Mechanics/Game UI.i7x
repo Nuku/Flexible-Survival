@@ -450,13 +450,14 @@ This is the self examine rule:
 				break;
 			else:
 				say "[descmod of x] ";
+	let CrotchVisible be true;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "legs":
+			now CrotchVisible is false;
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
-	let CrotchVisible be true;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "waist":
 			now CrotchVisible is false;
