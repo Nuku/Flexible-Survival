@@ -924,7 +924,7 @@ An everyturn rule:
 				now NPCintCounter is turns;
 		else if Player is in Grey Abbey Library:
 			if Fang is in Grey Abbey Library and (ElijahChar-I is "0" or ElijahChar-I is "1"):
-				say "     Elijah steps out of the bunker and into the library, passing through the stacks before finally selecting a book. With book in hand, he heads over to Fang and pets him lightly on the head. 'I thank and commend you for your vigilance. Your protection of this safe haven will not go unrewarded,' he states before turning and heading back into the bunker.";
+				say "     Elijah steps out of the bunker and into the library, passing through the stacks before finally selecting a book. With book in hand, he heads over to Fang and pets [ObjectPro of Fang] lightly on the head. 'I thank and commend you for your vigilance. Your protection of this safe haven will not go unrewarded,' he states before turning and heading back into the bunker.";
 				now ElijahChar-I is "2";
 				now NPCintCounter is turns;
 	else if (HP of Elijah is 4) and (NPCintCounter - turns > 2): [more human-like, nice guy]
@@ -984,7 +984,7 @@ An everyturn rule:
 				now ElijahChar-J is "3";
 				now NPCintCounter is turns;
 		else if Player is in Grey Abbey Library:
-			if Fang is in Grey Abbey Library and (ElijahChar-I is "0" or ElijahChar-I is "1" or ElijahChar-I is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
+			if Fang is in Grey Abbey Library and Fang is Male and (ElijahChar-I is "0" or ElijahChar-I is "1" or ElijahChar-I is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
 				say "     Looking around, you notice Fang stretched out on the floor with Elijah beside him, stroking the wolf's fur with one hand while the other is wrapped around the wolf's stiff cock. 'I hope you don't mind. Our guardian here seemed like he needed some attention, so I thought I'd show him how much we appreciate his continued vigilance,' the angelic figure says with a smile as he continues stroking the wolf's erection. Fang pants softly, clearly enjoying the soft touch of the angel's fingers along his rod, soon getting the wolf to cum with a howl of release.";
 				NPCSexAftermath Fang receives "Stroking" from Elijah;
 				now ElijahChar-I is "3";
@@ -1065,7 +1065,7 @@ An everyturn rule:
 				now ElijahChar-J is "4";
 				now NPCintCounter is turns;
 		if Player is in Grey Abbey Library:
-			if Fang is in Grey Abbey Library and (HP of Fang < 5) and (ElijahChar-I is "0" or ElijahChar-I is "1" or ElijahChar-I is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
+			if Fang is in Grey Abbey Library and Fang is Male and (HP of Fang < 5) and (ElijahChar-I is "0" or ElijahChar-I is "1" or ElijahChar-I is "2") and ( lastfuck of Fang - turns >= 8 ) and ( lastfuck of Elijah - turns >= 8 ):
 				say "     There is some commotion outside the door and you notice the Fang's already slipped outside. Elijah, who had been wandering the stacks looking among the books on Renaissance art for 'nudey pics' as he put it, heads over to see what it is as well. Looking outside, you see that Fang's captured a [if FemaleList is not banned]husky girl that's wandered too close to your safe haven. He's pinned the husky beneath him and mounts the interloper, much to the dark angel's delight. 'Good boy,' he says with excitement. 'Fuck that bitch.' He doesn't limit himself to just cheering, but unzips his pants and gets in front of her, forcing her to suck him off even as Fang pounds her wet pussy. After they've both drained their balls, they drive the nosey creature away[else]latex fox that's wandered too close to your safe haven. The wolf pins the fox beneath him and mounts the interloper, much to the fallen angel's delight. 'Good boy,' he says with excitement. 'Fuck that slut.' He doesn't limit himself to just cheering, but unzips his pants and gets in front of him, forcing the fox to suck him off even as Fang pounds his tight ass. After they've both drained their balls, they drive the nosey creature away[end if].";
 				if FemaleList is not banned:
 					CreatureSexAftermath "Husky Bitch" receives "PussyFuck" from "Fang";
@@ -1497,7 +1497,7 @@ to say ElijahSexMenu:
 		now sortorder entry is 10;
 		now description entry is "Elijah fucks your pussy while Candy fucks his ass";
 	[]
-	if (( ElijahChar-I is "3") or (ElijahChar-I is "4")) and Fang is booked:
+	if (( ElijahChar-I is "3") or (ElijahChar-I is "4")) and Fang is booked and Fang is Male:
 		if ( HP of Fang is 3 or HP of Fang is 4 ) and player is submissive: [Alpha Fang + Submissive feat]
 			choose a blank row in table of fucking options;
 			if Cunt Count of Player >= 2:

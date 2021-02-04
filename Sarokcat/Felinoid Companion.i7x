@@ -449,7 +449,7 @@ This is the Klauz' Epilogue rule:
 [				else if HP of Sven >= 30 and HP of Sven < 50:
 					say "***confident Sven succumb ending add-on."; ]
 			else:
-				if HP of Fang is 3 or HP of Fang is 4:	[felinoid player w/companion and Fang]
+				if HP of Fang is 3 or HP of Fang is 4 and Fang is Male:	[felinoid player w/companion and Fang]
 					if Player is female:
 						say "     Rescued from the city with your mind mostly intact, the soldiers are worried about your changed form at first, but you eventually manage to talk them down. They seem even more worried about Klauz, but after all you went through to save him before, you aren't about to let them hurt your handsome male friend now. The soldiers seem somewhat bemused at your verbal tongue lashing, before escorting the two of you back to the military camp for the few survivors.";
 						say "     At the military's camp, Fang and Klauz are given a quick examination, but you all manage to avoid serious scrutiny. Several of the scientists try to check you to make sure none of you are infectious, but you manage to keep them from looking too closely at any of you, the doctors finding both you and your mate to be very persuasive once they have a good whiff of your musk, accepting your word that they're loyal guardians and nothing more. Released from the camp as soon as possible back into the outside world, you sigh as you try to figure out what to do now, your new feline form not terribly suited to modern life.";
@@ -478,7 +478,7 @@ This is the Klauz' Epilogue rule:
 			if humanity of Player < 10:
 				say "     When you finally surrender completely to the infection, the felinoid you saved tries to guide you back to the park and his den, but you are having none of it. Growling, you manage to drive the pushy felinoid off, his injuries still hampering him enough that you can drive him away easily, and while you think you spot him hanging around several times over the next few days, he doesn't try approaching you again, letting you settle into your new more feral life without his interference.";
 			else if Player has a non-shifting body of "Feral Wolf" and HP of Fang is listed in { 3, 4 }:
-				[ see Feral Wolf file for this ending ]
+				[ see Feral Wolf Male file for this ending ]
 				make no decision;
 			else:
 				if Player is female and HP of Fang is listed in { 3, 4 }:

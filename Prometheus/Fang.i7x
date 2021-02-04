@@ -33,10 +33,6 @@ Version 7 of Fang by Prometheus begins here.
 [ 2 - Lux born                                   ]
 [ 3 - Umbra Born                                 ]
 
-[ Thirst of Fang - Male or Female                ]
-[ 0 - Male                                       ]
-[ 1 - Female                                     ]
-
 [ Lust of Fang                                   ]
 [ Used for variations with Sandra                ]
 
@@ -149,7 +145,7 @@ the scent of the Fang is "[if HP of Fang is 3 or HP of Fang is 4]The scent of yo
 to say fangdesc:
 	project the Figure of Fang_face_icon;
 	if debugactive is 1:
-		say "     DEBUG -> HP: [HP of Fang], Libido: [Libido of Fang], Lust: [Lust of Fang], FangWS: [FangWS], FangToy: [FangToy], FangBetaCounter: [FangBetaCounter], Hunger: [Hunger of Fang], Thirst: [Thirst of Fang], Perception: [Perception of Fang], Charisma: [Charisma of Fang] <- DEBUG[line break]";
+		say "     DEBUG -> HP: [HP of Fang], Libido: [Libido of Fang], Lust: [Lust of Fang], FangWS: [FangWS], FangToy: [FangToy], FangBetaCounter: [FangBetaCounter], Hunger: [Hunger of Fang], Perception: [Perception of Fang], Charisma: [Charisma of Fang] <- DEBUG[line break]";
 	if HP of Fang is 2: [Omega Fang]
 		if Fang is in Grey Abbey Library:
 			say "     The feral wolf meekly sits by the door into the library, every now and then loping off to [if Lux is in Grey Abbey Library]see what trouble [PosPro of Fang] children are making[else]patrol between the shelves[end if]. While you would imagine that [SubjectPro of Fang] is still capable of protecting the library, [PosPro of Fang] confidence has been diminished from what it used to be since becoming the Omega of the pack. [PosProCap of Fang] well-groomed fur is a mix of black and dark gray fur that blends into the shadows as [SubjectPro of Fang] watches the door with [PosPro of Fang] bright, yellow eyes. You are pleased with how [SubjectPro of Fang] is turning out so far and how [SubjectPro of Fang] has accepted [PosPro of Fang] role as the bottom-bitch. [SubjectProCap of Fang] has not made a mess around the Library and remains on [PosPro of Fang] long, rope leash. The fact that [SubjectPro of Fang] cleverly unties and reties its anchoring point to get around doesn't bother you very much, as the fact [SubjectPro of Fang] still wears it shows [SubjectPro of Fang] recognizes your absolute authority as [PosPro of Fang] [if Player is male]master[else]mistress[end if][if FangToy is true and a random chance of 1 in 3 succeeds][one of]. Fang has [PosPro of Fang] doggy dick toy stuffed in [PosPro of Fang] muzzle, happily working [PosPro of Fang] tongue over it[or]. Fang has the playtoy Sandra gave [ObjectPro of Fang] on the ground between [PosPro of Fang] paws and is giving it a few casual licks[or]. Fang's red dildo toy is on the floor beneath [ObjectPro of Fang]. [SubjectProCap of Fang] is idly rubbing [PosPro of Fang] own hard cock against it, dribbling getting it slick with wolf pre[at random][end if][if Perception of Fang > 12]. There is a kind of special glow to her, and she seems to be very happy and fulfilled right now[else if Perception of Fang > 0]. Her belly bulges in obvious pregnancy, making her a very content and happy wolf[end if].";
@@ -196,7 +192,7 @@ to say sexwithFang:
 			break;
 	if lastfuck of Fang - turns < ( 9 - HP of Fang ):
 		say "     Fang got off fairly recently, so you'd probably have a better time with [ObjectPro of Fang] if you give [ObjectPro of Fang] a little longer to recover.";
-	else if thirst of Fang is 0: [Male Fang]
+	else if Fang is Male: [Male Fang]
 		say "     What kind of fun were you looking to have with your big, bad wolf?";
 		wait for any key;
 		if HP of Fang is 2:
@@ -238,7 +234,7 @@ to say sexwithFang:
 			say "[MaleFangSexMenu]";
 		else:
 			say "     Lacking any sexual organs of your own, you content yourself with snuggling the wolf and scritching his ears. He nuzzles you in return and licks your face.";
-	else if thirst of Fang is 1: [Female Fang]
+	else if Fang is Female: [Female Fang]
 		say "     What kind of fun were you looking to have with your big, bad wolfess?";
 		wait for any key;
 		if HP of Fang is 2:
@@ -291,8 +287,8 @@ to say sexwithFang:
 			else:
 				infect "Feral Wolf Male";
 
-to say FemaleFangAlphaSexMenu:
-	say "-----This is a placeholder-----";
+[to say FemaleFangAlphaSexMenu:
+	say "-----This is a placeholder-----";]
 
 Section 2.1.1 - Male Omega Fang Sexxxings [Sort of Placeholders]
 
@@ -698,7 +694,7 @@ to say MaleFangWSContent:
 
 Section 2.2.2 - Female Alpha Fang Sexxxings [Sort of Placeholders]
 
-to say FemaleFangAlphaSex:
+to say FemaleFangAlphaSexMenu:
 	if debugactive is 1:
 		say "     DEBUG -> Female Alpha Fang Sex";
 	if lust of Fang is even:
@@ -896,7 +892,7 @@ to say FemaleFangBetaSexMenu:
 		now description entry is "Finger Fang vaginally";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Anilingus";
+	now title entry is "Analingus";
 	now sortorder entry is 3;
 	now description entry is "Get Fang to give you an Anilingus";
 	[]
@@ -931,7 +927,7 @@ to say FemaleFangBetaSexMenu:
 					say "[FemaleFangBetaSex1]";
 				else if nam is "Wolf Fingering":
 					say "[FemaleFangBetaSex2]";
-				else if nam is "Anilingus":
+				else if nam is "Analingus":
 					say "[FemaleFangBetaSex3]";
 				else if nam is "Wolf Tongue":
 					say "[FemaleFangBetaSex4]";
@@ -960,7 +956,7 @@ to say FemaleFangBetaSex2: [Give vaginal Fingering to Fang]
 	increase Libido of Player by 10;
 	if Libido of Player > 100, now Libido of Player is 100;
 
-to say FemaleFangBetaSex3: [Receive Anilingus from Fang]
+to say FemaleFangBetaSex3: [Receive Analingus from Fang]
 	if debugactive is 1:
 		say "     DEBUG -> Receive Anilingus from Fang";
 	say "     Finding yourself in the library with an itch you could used scratched, you wistle to get ahold of your guard wolf's attention, taking off your clothes when you do so that you will be ready. Fang pads up next to you just in time to watch you get undressed, you look back at Fang, sit down, then move until you are lying on your back, you stick your tongue out at Fang and lift your legs up, giving Fang a general idea of what you want. Fang gets the gist and looks a little disgusted, but she still moves her head into your opening and tongues the edges, slathering them with her saliva as she rims you at first, making sure to get an even coating of saliva with dutiful persistance before making her way inwards, causing you to moan slightly from the raw sensations created by Fang's tongue and muzzle. Time creeps by in a foggy haze as she continues on with her duty, adding to the sensations bit-by-bit, building up the suspense lick-by-lick. While she may have started out unhappy with the duty presented to her, it seems that somewhere along the way Fang got into it quite a bit as she slowly tunnels inwards on the quest to find your sweet spot. Eventually her persistence is rewarded as you let out a massive gasp as your orgasm explodes all over your upper body as the feeling of Fang finally striking it rich hits home. You pat Fang to let her know she can stop, and pull her into a post-coital embrace of sorts, before cleaning up, getting dressed and getting back on track.";
@@ -1291,7 +1287,7 @@ to say FemaleFangSex6: [assfuck Fang as Skunkbeast]
 Section 3 - Male Fang and Sandra
 [Currently most are for Omega Fang, but some are for Vanilla Fang.]
 
-instead of going up from Bunker while ( lastfuck of Sandra - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and Libido of Fang < 2 and ( HP of Fang is 1 and thirst of Fang is 0) ):
+instead of going up from Bunker while ( lastfuck of Sandra - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and Libido of Fang < 2 and ( HP of Fang is 1 and Fang is Male) ):
 	move player to Grey Abbey Library;
 	project the Figure of Fang_face_icon;
 	say "     As you're preparing to head back out, you catch sight of Sandra slipping through the door to the Library[if Libido of Fang is 1] again. Once again, there's[else]. There's[end if] something furtive about her actions and so you remain quiet and follow out shortly after her. Outside in the library, you stay hidden among the stacks, watching her move towards the big wolf on guard[if the number of booked people > 1]. They are alone in here right now, or at least so they think[end if][if Libido of Fang is 1]. With a few quiet whispers,[else]. It becomes clear what she's after when[end if] she puts her arms around him and starts stroking his cock, getting the big, feral wolf hard. After a little teasing and some slobbery kisses from the lupine's tongue, she moves onto all fours and waves her rump for him.";
@@ -1575,7 +1571,7 @@ to say MaleFangDomRide:
 
 Section 4.2.1 - Male Alpha/Omega without Sandra
 
-instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and thirst of Fang is 0) and (FangBetaCounter < 6) and (player is not neuter)):	[ignored for 3+ days]
+instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and Fang is Male) and (FangBetaCounter < 6) and (player is not neuter)):	[ignored for 3+ days]
 	project the Figure of Fang_face_icon;
 	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something. As you start to struggle, you are surprised to find that it's Fang atop you. From his growls and the hard cock rubbing against you, you surmise that the wolf's not playing around. It's been some time since you've given the beast some attention and it looks like he's intent on satisfying his lusts with you whether you like it or not. As his throbbing shaft grinds against you while he tries to get a better grip on you, the scent from the powerful beast is quite enticing. It could be fun to just give in and let the big wolf have his way with you.";
 	say "     [bold type]Shall you let him or reassert your dominance?[roman type][line break]";
@@ -1665,7 +1661,7 @@ to say MaleFangDomRide2:
 
 Section 4.2.2 - Female Alpha/Omega without Sandra
 
-instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and thirst of Fang is 1) and (FangBetaCounter < 6) and (player is not neuter)):	[ignored for 3+ days]
+instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and Fang is Female) and (FangBetaCounter < 6) and (player is not neuter)):	[ignored for 3+ days]
 	project the Figure of Fang_face_icon;
 	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something. As you start to struggle, you are surprised to find that it's Fang atop you. From her growls and the slick pussy rubbing against you, you surmise that the wolf's not playing around. It's been some time since you've given the beast some attention and it looks like she's intent on satisfying her lusts with you whether you like it or not. As her twitching cunt grinds against you while she tries to get a better grip on you, the scent from the powerful beast is quite enticing. It could be fun to just give in and let the big wolf have her way with you.";
 	say "     [bold type]Shall you let her or reassert your dominance?[roman type][line break]";
@@ -1678,7 +1674,7 @@ instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP o
 		increase Cunt Depth of Fang by 2;
 		increase Clit Size of Fang by 1;
 		now XP of Alexandra is 0;
-		now vmusedone of Fang is false; [Open for fresh musings]
+		[now vmusedone of Fang is false; [Open for fresh musings]]
 		now Libido of Player is Libido of Player / 2;
 		infect "Feral Wolf";
 	else:
@@ -1743,7 +1739,7 @@ to say FemaleFangDomRide3:
 
 Section 4.3.1 - Male Beta Fang
 
-instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 and HP of Fang is 1 and thirst of Fang is 0) and (FangBetaCounter > 5) and (player is not neuter)):	[ignored for 2+ days]
+instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 and HP of Fang is 1 and Fang is Male) and (FangBetaCounter > 5) and (player is not neuter)):	[ignored for 2+ days]
 	project the Figure of Fang_face_icon;
 	say "     As you enter the library, you feel the familiar warmth of Fang up against your thigh. With a smile, you ruffle the fur on his back in a show of affection before attempting to continue on your way. To your surprise, the wolf continues to impede you before lightly grasping your hand in his mouth and guiding you to a secluded corner. Expecting to have to reprimand him for overstepping his place, you clear your throat only to be shocked when he does the same. 'I am sorry. I wanted to talk. Away from others,' Fang apologizes, his voice soft, raspy, and a little stilted from disuse. You decide to let him continue, especially when you consider how seldom he speaks. 'You have shown concern for me. I am grateful. You treat me as person. Not mindless beast. When we met, you called me your beta but I have not earned this place. Allow me to do so now. As long as you treat me as a person, I will be your beta. Protect you. Love you. Please you. But I will be your beta, not your bitch. I have own desires too. I may not always agree with you, but I will still respect you as Alpha.'";
 	say "     [bold type]Do you wish to allow him to properly assume his position as your [']Beta['], your second in command, and mate even though it will grant him a little more freedom?[roman type][line break]";
@@ -2006,7 +2002,7 @@ instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 a
 
 Section 4.3.2 - Female Beta Fang
 
-instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 and HP of Fang is 1 and thirst of Fang is 1) and (FangBetaCounter > 5) and (player is not neuter)):	[ignored for 2+ days]
+instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 and HP of Fang is 1 and Fang is Female) and (FangBetaCounter > 5) and (player is not neuter)):	[ignored for 2+ days]
 	project the Figure of Fang_face_icon;
 	say "     As you enter the library, you feel the familiar warmth of Fang up against your thigh. With a smile, you ruffle the fur on her back in a show of affection before attempting to continue on your way. To your surprise, the wolf continues to impede you before lightly grasping your hand in her mouth and guiding you to a secluded corner. Expecting to have to reprimand her for overstepping her place, you clear your throat only to be shocked when she does the same. 'I am sorry. I wanted to talk. Away from others,' Fang apologizes, her voice soft, raspy, and a little stilted from disuse. You decide to let her continue, especially when you consider how seldom she speaks. 'You have shown concern for me. I am grateful. You treat me as person. Not mindless beast. When we met, you called me your beta but I have not earned this place. Allow me to do so now. As long as you treat me as a person, I will be your beta. Support you. Love you. Please you. I wish be your beta and mate, not an onahole to dump your lust into. I have own desires too. I may not always agree with you, but I will still respect you as Alpha.'";
 	say "     [bold type]Do you wish to allow her to properly assume her position as your [']Beta['], your second in command, and mate even though it will grant her a little more freedom?[roman type][line break]";
@@ -2260,7 +2256,7 @@ instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 a
 			LineBreak;
 			say "     While you are happy for Fang to be your Beta, you don't feel that having sex with her is necessary to cement her position, nor do you have any interest in fornicating with her at the moment. Therefore, you gently refuse her request, the wolf disappointed but accepting of your decision. 'As my Alpha wishes,' Fang replies before loping off, likely to resume guarding the front door. Overall, you are pleased with the outcome of this exchange and return to the entrance hall too so as to continue what you were doing before Fang took you aside.";
 		now HP of Fang is 5; [Beta Female Fang]
-		now vmusedone of Fang is false; [Open for fresh musings]
+		[now vmusedone of Fang is false; [Open for fresh musings]]
 	else:
 		LineBreak;
 		say "     You begin to shake your head, earning a quizzical look from the wolf before you begin to explain that while you may have called her your beta then, it was more of a spur of the moment offer in order to convince her to go with you than a proper understanding of roles within a wolf pack. Considering how many people you meet in the city, who would be to say that you wouldn't find someone that you thought would fulfil the role better? 'I understand. You wish for strong pack. Focused on physical strength, not pack bonds. We shall await the result,' she rumbles, taking the refusal surprisingly well. You let out a sigh and thank her, relieved that the situation didn't turn ugly. Even if she can't be your beta, she is still a valuable resident of the library guarding the door. After giving her a pat, she lopes off again, leaving you to decide what to do next.";
@@ -2284,7 +2280,7 @@ Section 6 - Alpha Fang's Interactions with Others
 Section 6.1 - Candy
 
 an everyturn rule:
-	if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and FemaleList is banned ) ) and lust of Candy is 0 and coonstatus is 2:
+	if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and Fang is Male and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and FemaleList is banned ) ) and lust of Candy is 0 and coonstatus is 2:
 		now lust of Candy is 1;
 		say "     As you're adjusting your gear, you hear the door to the bunker open. Glancing over, you spot Candy sashaying out. He smiles and waves at you, giving his tail a playful flick. 'I'm going to borrow your big, bad wolf, sweetie[if HP of Fang is 3]. Sandra spilled the beans to me about how much fun she's been having, so I thought I'd give the big boy a test drive[else]. You mentioned how much fun you'd been having with him, so I thought I'd give the big boy a test drive[end if]. I hope you don't mind.' And with that said, he continues over to Fang. He seems hesitant to approach the big wolf for only a moment before moving up to offer himself to the wolf.";
 		say "     [bold type]It seems like things are about to get started here. Do you want to stick around?[roman type][line break]";
@@ -2310,7 +2306,7 @@ an everyturn rule:
 		else:
 			say "     Grabbing your pack, you toss the rest of the stuff back into it and head into the bunker to give the two some privacy. You putter around in there for a while, Candy eventually returning. His fur is rather scruffy and his dress has got a tear in it. He's got a wild look in his eyes that you haven't seen since his time at the hospital and snarls a little[if the number of bunkered people > 3]. The others seem a little concerned at this and you[else]. You[end if] get up slowly, concerned the girly coon may have regressed further and shift into a fighting stance.";
 			say "     'Aieee! My dress!' Candy shrieks, spotting the torn shoulder. He immediately slides it off, pausing only a moment to tease his nipples and straighten his fur. He runs over to grab his little sewing kit and gets to work repairing his outfit, clearly making a show of grumbling about [']such brutish behavior['] and the like between commenting about how the wolf was [']at least a good fuck['] and [']quite the beast in the sack[']. As this goes on, Candy recounts his romp in increasingly graphic detail and you slip back into the library.";
-	else if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and FemaleList is banned ) ) and lust of Candy is 2 and coonstatus is 2:
+	else if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and Fang is Male and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and FemaleList is banned ) ) and lust of Candy is 2 and coonstatus is 2:
 		now lust of Candy is 3;
 		project the Figure of Fang_face_icon;
 		say "     As you're taking a break, you hear the door to the bunker open. Glancing over, you spot Candy sashaying out again. He smiles and waves to you, giving his tail a big swish. 'I'll be borrowing your big, bad wolf again, hon. I've decided the best way he can repay me for nearly ruining my outfit is with another fucking. I hope you don't mind.' And with that said, he continues over to Fang. This time, he pulls off his dress and tosses it across the librarian's desk.";
@@ -2330,7 +2326,7 @@ Section 6.2 - Klauz
 ffrivalry is a number that varies.
 
 an everyturn rule:
-	if the player is in the Grey Abbey Library and ( HP of Fang is 3 or HP of Fang is 4 ) and felinoid companion is tamed:
+	if the player is in the Grey Abbey Library and ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is Male and felinoid companion is tamed:
 		increase ffrivalry by 1;
 		let num be a random number between 5 and 20;
 		if num >= ffrivalry and Felinoid companion is listed in companionList of Player:
@@ -2353,7 +2349,7 @@ ResolveFunction of Alpha's Shepherd Watcher is "".
 The level of Alpha's Shepherd Watcher is 0.
 Sarea of Alpha's Shepherd Watcher is "Nowhere".
 
-instead of going to Grey Abbey Library while (HP of Fang is 3 or HP of Fang is 4) and Fang is in Grey Abbey Library and (gsd_pet >= 20 and Korvin is in Makeshift Rec Room) and MaleList is not warded and MaleList is not banned and Alpha's Shepherd Watcher is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while (HP of Fang is 3 or HP of Fang is 4) and Fang is in Grey Abbey Library and Fang is Male and (gsd_pet >= 20 and Korvin is in Makeshift Rec Room) and MaleList is not warded and MaleList is not banned and Alpha's Shepherd Watcher is not resolved and a random chance of 1 in 2 succeeds:
 	say "     Entering the library, you are met by your Alpha who brushes against your side possessively. You are pleased that he has seen fit to greet you this way and give him a friendly pat in return, the large wolf letting out a contented groan as you scratch him under the chin. It would seem that he is in a more affectionate mood than usual and decide to make the most of it as he rolls on his side with you atop him, rubbing the thick fur of his tummy with your hand occasionally straying to brush against his full sheath, feeling the heat radiating from it. Unfortunately, the moment is soon ruined by a snicker behind a bookshelf and you manage to look up in time to see a flicker of tan and black disappear from view. You aren't the only one to have noticed them as Fang leaps to his feet, sending you sprawling, and darts after the voyeur, his mood distinctly soured and irritation likely to be taken out on whoever dared sound mocking.";
 	say "     'Oh fuck.' As you clamber to your feet, you hear a voice that sounds suspiciously like Korvin's before the noise of a chase begins, the clatter of claws on the floor, books being knocked from shelves, angry growls from Fang, and the [if gsd_pet < 60]scared yelping [else]desperate panting [end if]from the German shepherd as he attempts to flee the much larger male. You would have thought that Korvin would have had a little more respect for Fang given that you are subservient to the wolf and that you in turn have authority over the canine, but it would seem that [if gsd_pet < 60]some of his old rebellious spirit returned for long enough [else]he was overconfident enough in his position [end if]for him to laugh at Fang relaxing and behaving more like a dog. Your musings are cut short by a very loud crash and you run towards the noise to confirm that no one is (too badly) harmed and that they haven't broken any of the furniture. While nothing is destroyed, a table seems to have been knocked over and Fang is atop Korvin, teeth millimeters from his throat and a low growl rumbling from his chest.";
 	WaitLineBreak;
@@ -2436,6 +2432,7 @@ to say FemaleFangLux&UmbraBirth:
 	now LuxUmbraMaturityCounter is 120;
 	increase score by a random number between 5 and 10;
 	now Charisma of Fang is 0;
+	remove "Fang's Mate" from feats of player;
 
 Section 19 - Endings
 
@@ -2492,6 +2489,6 @@ This is the Fang's Epilogue rule:
 			say "     Sandra, thankful to the big wolf for helping to keep everyone safe in the bunker, is always very kind to the big wolf when she comes to visit. Often, during visits or get-togethers at your place, you'll find that the bunny's quietly slipped away. Always knowing where you'll find her, you'll check and see her safely beneath your alpha, getting his large, red cock stuffed into her cunt. The bunny's tummy grows large after one of these visits and she eventually gives birth to a pair of wolf cubs with bunny ears and a tail. These quiet, taciturn boys are never lacking in companionship, always having numerous lovers drawn in by the strong bodies and brooding nature, eager to bend over for them.";
 
 [Connection summary: Fang's endings have ties to: Feral Wolf, Sandra, Felinoid companion]
-[Other files with Fang Content - Stag, Mul, Elijah, Bad Alexandra, Amy, Solstice, Feral Wolf, Candy Striper, Desperate Bunny, Baby Pets, Lux & Umbra, Velos, Eric]
+[Other files with Fang Content - Stag, Mul, Elijah, Bad Alexandra, Amy, Solstice, Feral Wolf Male, Feral Wolf Bitch, Candy Striper, Desperate Bunny, Baby Pets, Lux & Umbra, Velos, Eric, Basic Locations, Game Start, Pregnancy, Old Boombox, Alpha Fang Scenes, Felinoid Companion, Sidney, Solstice, Catgirl, David]
 
 Fang ends here.

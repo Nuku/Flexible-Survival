@@ -249,7 +249,7 @@ to pregprotocol:
 						remove "Chase's Breeder" from feats of Player;
 					if "Chris's Breeder Slut" is listed in feats of Player:
 						remove "Chris's Breeder Slut" from feats of Player;
-					if "Fang's Mate" is listed in feats of Player:
+					if "Fang's Mate" is listed in feats of Player and Fang is Male:
 						remove "Fang's Mate" from feats of Player;
 				else: [routine for various hijacks]
 					repeat with y running from 1 to snakeocc:
@@ -291,7 +291,7 @@ to say detailbirth:
 
 to detailbirth:
 	LineBreak;
-	if thirst of Fang is 0 and "Fang's Mate" is listed in feats of Player:
+	if Fang is Male and "Fang's Mate" is listed in feats of Player:
 		if Player is female and pregtype < 2:
 			say "     With a sudden pouring of fluids, the time of [if ovipregnant is true]egg laying[else]birth[end if] arrives. You settle down without much choice, breathing quickly as your body spasms in readiness. As if he had sensed the imminent [if ovipregnant is true]egg laying[else]birth[end if], Fang appears beside you, his warm fur comforting in your grasp. You have no idea how he got here so quickly, but now isn't the time to question it.";
 		else: [mpreg]
@@ -509,7 +509,7 @@ To Birth:
 			say "     The young buck of an orc warrior looks at you with a broad grin as he continues to show off a bit more, stroking his large hands over the muscle-packed form of his body, then finally gravitating to his crotch. Experimentally wrapping his fingers around the thick shaft, he gives it a few strokes and grunts in pleasure as it fills out to an impressive length of green-skinned man-meat. Winking at you as he lets go and the huge cock swings down between his legs, he says, [if Player is booked or player is bunkered]'I'll go say hello to dad now. See ya later!' [else]'I'll go say hello to dad now. Maybe fuck a guy or two on the way too. See ya later!'[end if] With that said, he wanders off, naked as a jaybird and erect, in an open challenge to anyone who might see him.";
 		increase Stamina of Chris by 1;
 		increase ChrisPlayerOffspring by 1;
-	else if thirst of Fang is 0 and "Fang's Mate" is listed in feats of Player: [Special Pregnancy from Fang]
+	else if Fang is Male and "Fang's Mate" is listed in feats of Player: [Special Pregnancy from Fang]
 		if hunger of Fang is 1:
 			if "All-Mother's Blessing" is listed in feats of Player: [Appeared in arms]
 				say "You and Fang watch in wonder as [if ovipregnant is true]the egg disintegrates, revealing a pair of wolf pups huddled together, [else]the pair of wolf pups disentangle themselves from each other in your arms, [end if]the two of you sharing a loving glance with each other. [if scalevalue of Player > 1]You hold them against your chest, their mouths eagerly searching for a nipple. [else]They appear to still be growing, and you are forced to place them on the ground as they reach a size similar to your own, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
@@ -708,7 +708,7 @@ To impregnate with (x - text):
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
 		SetInfectionsOf Child to "Tiger";
-	else if "Fang's Mate" is listed in feats of Player:
+	else if "Fang's Mate" is listed in feats of Player and Fang is Male:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with Fang's child?";
 			if Player consents:

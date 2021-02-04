@@ -176,7 +176,7 @@ To say jazzfriends:
 				say "     Sarah's pups all come around to bark and yip before making a circle to surround you and Sarah, almost as if they are trying to contain the feelings that both you and her are sharing right now.";
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
-			say "     Fang seems quite interested in the music as he comes over to lay by your leg while listening to it. Grumbling softly into the back of his throat, the wolf nuzzles close to you while curling up into a large ball of fur and muscle. You do happen to notice, however, that the wolf's ears are ever tuned towards the door of the bunker. The lupine, no matter how relaxed, is ever vigilant towards his duty to protect his new home.";
+			say "     Fang seems quite interested in the music as [SubjectPro of Fang] comes over to lay by your leg while listening to it. Grumbling softly into the back of [PosPro of Fang] throat, the wolf nuzzles close to you while curling up into a large ball of fur and muscle. You do happen to notice, however, that the wolf's ears are ever tuned towards the door of the bunker. The lupine, no matter how relaxed, is ever vigilant towards [PosPro of Fang] duty to protect [PosPro of Fang] new home.";
 		else:
 			say "     Fang, not use to hearing music too often, seems a little intrigued by the noise coming from the boombox. Slowly, the feral wolf comes over and then lays down beside your cot to listen to the soft sounds coming from the unfamiliar machine.";
 	if skunk kit is tamed:
@@ -217,9 +217,9 @@ to say tangofriends:
 to say R&Bfriends:
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
-			say "     Fang pads over to you and then lays his head down onto your lap. The music seems to have gotten to the other in a strange way as you could almost swear that tears are in his eyes. Maybe this canine has more soul than you think as you lay a hand down to stroke him across his rugged mane of fur. Neither of you speak as you just listen to the tunes. You find that words have no place here now.";
+			say "     Fang pads over to you and then lays [PosPro of Fang] head down onto your lap. The music seems to have gotten to the other in a strange way as you could almost swear that tears are in [PosPro of Fang] eyes. Maybe this canine has more soul than you think as you lay a hand down to stroke [ObjectPro of Fang] across [PosPro of Fang] rugged mane of fur. Neither of you speak as you just listen to the tunes. You find that words have no place here now.";
 		else:
-			say "     Fang moves over towards you before plopping himself down to listen to the R&B melody wafting from out of the speakers of the boombox. By the slow wag of his tail, you can see that the feral creature likes the music very much.";
+			say "     Fang moves over towards you before plopping [ObjectPro of Fang]self down to listen to the R&B melody wafting from out of the speakers of the boombox. By the slow wag of [PosPro of Fang] tail, you can see that the feral creature likes the music very much.";
 	If Colleen is in the bunker:
 		say "     The rhythm of the melody playing on the boombox puts Colleen to sleep.";
 	if Sarah is in the bunker:
@@ -261,9 +261,9 @@ to say RockandRollfriends:
 		say "     At hearing the music playing on the boombox, Colleen proceeds to rock the house as she howls and swivels her body while dancing with the beat of the drumset and electric guitars being played.";
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
-			say "     Fang seems to have woken up from his inopportune nap as the wolf rises onto his feet and then pads over into your direction. Seeing that he's not quite happy about being so rudely interrupted by the annoying sounds, you have to block the other off from the boom box as you can clearly see the other wanting to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this. After all, a win is a win in your book by any accounts.";
+			say "     Fang seems to have woken up from [PosPro of Fang] inopportune nap as the wolf rises onto [PosPro of Fang] feet and then pads over into your direction. Seeing that [SubjectPro of Fang] is not quite happy about being so rudely interrupted by the annoying sounds, you have to block the [ObjectPro of Fang] off from the boom box as you can clearly see that [SubjectPro of Fang] wants to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this. After all, a win is a win in your book by any accounts.";
 		else:
-			say "     Fang doesn't seem to care for this particular type of music as he pops his head into the Bunker and then pops himself back out to return to his post.";
+			say "     Fang doesn't seem to care for this particular type of music as [SubjectPro of Fang] pops [PosPro of Fang] head into the Bunker and then pops [ObjectPro of Fang]self back out to return to [PosPro of Fang] post.";
 	if Alexandra is booked:
 		say "     Coming in to investigate the noise[if fang is booked] when Fang exists the bunker angrily[end if], Alexandra pokes her head inside. Hearing the energetic, frenetic rock and roll music, she throws herself into dancing. Clearly not much of a dancer, she makes up for it with energy and wild abandon, throwing herself most of all into the songs about wild youth, sex and rebellion. It seems to get her quite worked up and she's got a hungry look in her eyes by the end of it.";
 		now lastfuck of Alexandra is turns + 8;
@@ -291,9 +291,9 @@ to say Oceanfriends:
 				say "     Sarah's pups encircle both you and their mother as they sleepily start to drift off together, one after another.";
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
-			say "     Fang slowly comes over to where you are and then curls himself up at your head. Panting softly, the big male has no problem whimpering at the sounds of the music and then drifting off to sleep as he listens to the music with you.";
+			say "     Fang slowly comes over to where you are and then curls [ObjectPro of Fang]self up at your head. Panting softly, the big [if thirst of player is 0]male [else]female [end if]has no problem whimpering at the sounds of the music and then drifting off to sleep as [SubjectPro of Fang] listens to the music with you.";
 		else:
-			say "     Fang sleepy pads himself over to you and then curls up to go to sleep. No muss, no fuss. Just a large bundle of sleepy wolf curling himself up next to your head.";
+			say "     Fang sleepy pads [ObjectPro of Fang]self over to you and then curls up to go to sleep. No muss, no fuss. Just a large bundle of sleepy wolf curling [ObjectPro of Fang]self up next to your head.";
 	If Colleen is in the bunker:
 		say "     Colleen makes her way over to [if sarah is bunkered]where Sarah is and then proceeds to snuggle up with the other husky woman[else]the bunk and sits on the floor beside you, leaning back against the cot[end if].";
 	if house cat is tamed:
@@ -312,7 +312,7 @@ to say Oceanfriends:
 [		else:
 			say "     ***confident Sven.";]
 	if little fox is tamed:
-		say "     The cute little vulpine swiftly bounds over to you and then curls himself up at the underside of your chin[if Fang is in the Grey Abbey Library]. Fang moves the fox over to lay it next to him however, the other growling somewhat fatherly at the little kit when the vulpine tries to move away[end if].";
+		say "     The cute little vulpine swiftly bounds over to you and then curls himself up at the underside of your chin[if Fang is in the Grey Abbey Library]. Fang moves the fox over to lay it next to [ObjectPro of Fang] however, the wolf firmly curling around the fox kit when the vulpine tries to move away[end if].";
 	if skunk kit is tamed:
 		say "     Peppy goes to rest on top of your stomach and you can only laugh as you reach up to scratch at the other's black and white furred body.";
 	if helper dog is tamed:

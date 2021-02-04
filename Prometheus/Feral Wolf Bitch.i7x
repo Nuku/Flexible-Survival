@@ -106,7 +106,7 @@ to say BeatFeralWolfBitch:
 					else:
 						say "[FeralWolfBitchNonsexTame]";
 				now HP of Fang is 1;
-				now thirst of Fang is 1;
+				now Fang is Female;
 				now Androginity of Fang is 6;
 				now Cock Count of Fang is 0;
 				now Cock Girth of Fang is 0;
@@ -398,7 +398,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Feral Wolf Bitch Infection rule:
 	if HP of Fang is listed in { 3, 4 }:
 		make no decision; [Moved to FemaleFang's Beta]
-	if Player has a body of "Feral Wolf Bitch":
+	if BodySpeciesName of Player is "Feral Wolf":
 		trigger ending "Feral Wolf Bitch Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is  female:
@@ -409,7 +409,7 @@ This is the Feral Wolf Bitch Infection rule:
 			say "Returning to modern society proves to be hard for you. Your feral tendencies make it hard for you to be accepted in large urban areas, so you move out to a more secluded area in the mountains. You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a gray muzzle.";
 
 This is the FemaleFang's Beta rule:
-	if HP of Fang is listed in { 3, 4 } and Player has a body of "Feral Wolfess":
+	if HP of Fang is listed in { 3, 4 } and Fang is Female and BodySpeciesName of Player is "Feral Wolf":
 		trigger ending "FemaleFang's Beta";
 		if humanity of Player < 10:
 			say "     Giving in to your feral nature, you return to the Library and submit yourself to Fang again, letting her take you as she pleases. After a wild fucking, she leads you off into the city to form a pack of her own with you as her [if Player is female]slutty beta bitch[else]slutty beta stud[end if].";

@@ -3593,7 +3593,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and HP of 
 
 [ Fang Interactions                    ]
 
-instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and (HP of Eric > 9 and HP of Eric < 20) and (lastfuck of Eric - turns) > 12):
+instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and Fang is Male and (HP of Eric > 9 and HP of Eric < 20) and (lastfuck of Eric - turns) > 12):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
