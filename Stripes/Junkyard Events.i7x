@@ -66,7 +66,7 @@ to say ResolveEvent Raiding Party:
 				challenge "Goblin";
 				if goblinfight is 1:
 					say "     With the last goblin fled, you move over to check on the tigress woman. Using the fight as a distraction, she managed to bite through some of the ropes and pulls herself free as you come up. As she stands, you get a better look at her. She is wearing a short, red top and an even shorter, black skirt. This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes. She has snowy, white fur that covers her bosom and the front of her shapely waist. As she brushes her red hair back into order, you catch sight of the gold earrings in her feline ears and bracelets on her wrists. She growls as she stomps down hard onto the net launcher, smashing it with her feline paw before sending it flying off into the scrapyard.";
-					say "     Looking at you, she grins and runs her paws over her body. 'Well, sweetie, that was mighty nice of you. How about I give you a little reward for your help?' she purrs, motioning to a discarded mattress at the edge of a nearby pile. From the looks of it, it's been used a few times before. As her paws run over her skirt, you can see the bulge there of her poorly concealed maleness. 'No charge this time, sweetie,' the feline whore adds, running hir paws over your chest. 'I can show you a real good time. Anything you like,' shi rumbles with a grin, rubbing hir breasts and sheath against you. Shall you accept hir tempting offer?";
+					say "     Looking at you, she grins and runs her paws over her body. 'Well, sweetie, that was mighty nice of you. How about I give you a little reward for your help?' she purrs, motioning to a discarded mattress at the edge of a nearby pile. From the looks of it, it's been used a few times before. As her paws run over her skirt, you can see the bulge there of her poorly concealed maleness. 'No charge this time, sweetie,' the feline whore adds, running her paws over your chest. 'I can show you a real good time. Anything you like,' she rumbles with a grin, rubbing her breasts and sheath against you. Shall you accept her tempting offer?";
 					if Player consents:
 						now junknum is 1;
 						[puts Tigress Hooker as lead monster in case of impregnation]
@@ -77,12 +77,12 @@ to say ResolveEvent Raiding Party:
 								break;
 						say "[losetotigress]";
 						now junknum is 0;
-						say "     Your romp with the feline over, shi gives you one last kiss before telling you shi needs to get back to work. Shi points off towards the seedier part of town and tells you of a route leading you there, should you want to find hir and hir sisters for more fun.";
+						say "     Your romp with the feline over, she gives you one last kiss before telling you she needs to get back to work. She points off towards the seedier part of town and tells you of a route leading you there, should you want to find her and her sisters for more fun.";
 						AddNavPoint Entrance to the Red Light District;
 						increase score by 10;
 						now Resolution of Raiding Party is 1; [won, fucked Tigress Hooker]
 					else:
-						say "     The tigress hooker hisses and pushes you away. 'You don't know a good thing when you see it,' shi growls and turns away, heading back the way the goblins came.";
+						say "     The tigress hooker hisses and pushes you away. 'You don't know a good thing when you see it,' she growls and turns away, heading back the way the goblins came.";
 						increase score by 1;
 						now Resolution of Raiding Party is 2; [won, refused Tigress Hooker]
 		else if goblinfight is 2:

@@ -69,7 +69,7 @@ to say FangRapePlayer:
 		say "     He raises his slick red shaft to nudge against your tight pucker, then eases it in. His lust is too powerful to be overly concerned for your comfort, and he slams home into your bowels. When you yelp, he bites into the back of your neck lightly in admonishment, growling at you as he picks up tempo and intensity, pounding your [TailName of Player] rump with a maddening zeal. The room seems full of the sound of your bodies striking one another, swaying balls slapping against you at the end of each rapid motion into your ass. His oversized knot swells powerfully, and he bumps it against you twice before he draws out to the tip, then lunges forward, tying you to him as his seed begins to spray out wildly, filling you with his essence. [if Player is male]With dizzying force, you suddenly spray your own cum across the desk, splattering its smooth surface with your spunk as you groan in pleasure alongside Fang. His paws support you as you go weak-kneed from the stimulation, and his[else]His[end if] teeth find purchase on the back of your neck, holding you still as he finishes.[mimpregchance]";
 	infect "Feral Wolf";
 	say "     Satisfied, Fang pants lightly as he relaxes on top of you for a few quiet minutes, gently nuzzling your back and sides with his muzzle. He gives a soft chuff in your ear, then pulls free of you with a wet pop, allowing some of the seed to run free as he goes to clean up while you sag to the floor, enjoying the feeling of his semen inside you.";
-	say "[Fangwscontent]";
+	say "[MaleFangWSContent]";
 	now lastfuck of Fang is turns;
 	decrease Libido of Player by 20;
 	if Libido of Player < 0, now Libido of Player is 0;
@@ -93,7 +93,7 @@ to say FangMutualLust:
 		say "     Your [bodydesc of Player] body locks as climax arrives powerfully, trembling atop Fang as his skilled tongue works and cleans you even as you release. His knot swells, bumping against your lips before it starts to spray his creamy wolven spunk across your tongue. You eagerly swallow the contents of your alpha's swollen, virile balls, the rich taste pouring smoothly down your throat. Even after his shaft stops twitching, a thin trickle continues to drip onto your palate. You draw back, letting the shaft pops free of your mouth, and you kiss the tip before reaching to caress his swollen knot. You are rewarded with a loud yip as the sensitive organ is jostled and a final spurt of seed across your lips.";
 	infect "Feral Wolf";
 	say "     Both satisfied, Fang squirms out from under you and licks your face before moving back towards the door to resume his watch.";
-	say "[Fangwscontent]";
+	say "[MaleFangWSContent]";
 	now lastfuck of Fang is turns;
 	now Libido of Player is Libido of Player / 2;
 

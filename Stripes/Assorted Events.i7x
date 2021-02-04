@@ -943,17 +943,6 @@ to say ResolveEvent My Own Zoo Playset:
 
 Section 9 - Sealed Events
 
-Table of GameEventIDs (continued)
-Object	Name
-Destroyed Records	"Destroyed Records"
 
-Destroyed Records is a situation.
-ResolveFunction of Destroyed Records is "[ResolveEvent Destroyed Records]".
-Sarea of Destroyed Records is "Sealed".
-
-to say ResolveEvent Destroyed Records:
-	say "     Wandering through the darkened halls of the underground lab complex, your attention is drawn towards the stale smell of smoke and ashes. Following your nose, you find your way into records room that's been purposefully destroyed. There is a large char mark and a pile of ashes on the middle of the floor. It seems someone, probably when things started to go downhill, decided to burn all the records of what was really going on down here. You sift through the mess, finding the charred remains of what were probably once data CDs and DVDs among the mess. You search through it carefully, but they were quite thorough and you're unable to find anything scraps of unburnt paper with more than a few legible letters on them.";
-	increase score by 1;
-	now Destroyed Records is resolved;
 
 Assorted Events ends here.

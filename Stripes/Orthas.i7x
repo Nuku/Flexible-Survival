@@ -212,7 +212,7 @@ after going down from 2F Trevor Labs when the HP of Doctor Matt > 2 and HP of Or
 						say "     As you shake your head and tell her you're out for that, Orthas shows a disappointed expression and sighs. 'Ah. Okay. Well, I'll be off for a bit now then. See you later I guess,' she says, then walks up the stairs to talk to Dr. Matt.";
 						now HP of Orthas is 2;
 			else:
-				say "     As you shake your head and take a careful step back from her, towards the entrance door, Orthas looks at you in a state of surprise and extreme disappointment. 'What?! But I need - oh, wait. I'm coming on to you like a crazy person, aren't I? She shakes her head to clear it and blinks several times, trying hard to get herself under control. Blowing out a breath, she sighs as she looks at you. 'Well, alright. Don't worry, I'm not as far gone as the beasts on the streets. But since somehow doubt that this crazy lust will leave me anytime soon, I still wouldn't mind to have a romp once in a while, you know. Standing offer, if you change your mind.'";
+				say "     As you shake your head and take a careful step back from her, towards the entrance door, Orthas looks at you in a state of surprise and extreme disappointment. 'What?! But I need - oh, wait. I'm coming on to you like a crazy person, aren't I? She shakes her head to clear it and blinks several times, trying hard to get herself under control. Blowing out a breath, she sighs as she looks at you. 'Well, alright. Don't worry, I'm not as far gone as the beasts on the streets. But since I somehow doubt that this crazy lust will leave me anytime soon, I still wouldn't mind to have a romp once in a while, you know. Standing offer, if you change your mind.'";
 				now HP of Orthas is 1;
 		else:
 			LineBreak;

@@ -197,12 +197,13 @@ to say SylviaDesc:
 Species: Canine (Border Collie)
 Gender: Female
 Relationships: Polyamorous (Open Relationship with Julian)
-Sexuality: Switch (prefers bottoming)
+Sexuality: Bisexual
 
 Associated Fetishes:
 -
 -
--]
+-
+]
 
 Section 3 - Talking
 

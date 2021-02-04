@@ -169,6 +169,8 @@ to EventRestore:
 			[bugfixes for renamed events]
 			if EventIdName is "unused tool":
 				now EventIdName is "Unused Tool";
+			if EventIdName is "Destroyed Records":
+				now EventIdName is "Burned Secrets";
 			if there is a name of EventIdName in the Table of GameEventIDs:
 				let EventObject be the object corresponding to a name of EventIdName in the Table of GameEventIDs;
 				if ResolveState entry is "Resolved":
@@ -1198,6 +1200,7 @@ to BeastRestore:
 			if Beastname is "Elven Hunter", now Beastname is "Elven Male";
 			if Beastname is "Rubber tigress", now Beastname is "Rubber Tigress";
 			if Beastname is "Football Gorilla", now Beastname is "Football Gorilla Male";
+			if Beastname is "Feral Wolf", now Beastname is "Feral Wolf Male";
 			if there is a Name of BeastName in the Table of Random Critters:
 				choose row with Name of BeastName in Table of Random Critters;
 				now Area entry is BeastArea;

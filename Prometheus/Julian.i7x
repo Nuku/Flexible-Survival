@@ -103,6 +103,18 @@ to say JulianDesc:
 		say "     Julian is a young male wolf with pitch-black fur covering his entire body. While he usually walks on two legs, you get the impression that if he wanted to, he could drop to all fours for greater speed or balance. He looks at you with curious, dark-brown eyes, feeling self-conscious as you observe him. He wears black trousers and a white shirt, hiding his body from view, though the impressive bulge in his trousers suggests an impressive organ.";
 		say "     From what Sylvia has said and the times you have met him, he seems to be a quiet student, though you have seen him being more boisterous and active. Very loyal to his friends, you seemed to have piqued his interest with your willingness to aid Sylvia. Realizing that you have been almost studying him for a while, you bring your gaze back to meet his, a smile cresting his lips.";
 
+[Character Notes - Julian:
+
+Species: Canine (Wolf)
+Gender: Male
+Relationships: Polyamorous (Open Relationship with Sylvia)
+Sexuality: Bisexual
+
+Associated Fetishes:
+-
+-
+-]
+
 Section 3 - Talking
 
 instead of conversing the Julian:
