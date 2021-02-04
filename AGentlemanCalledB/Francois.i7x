@@ -2,7 +2,6 @@ Version 2 of Francois by AGentlemanCalledB begins here.
 [Version 2.1 - More baking items, alternate bakery loss scene by Ecroose]
 "Adds a Male mutt NPC named Francois to the Flexible Survival game"
 
-[This is an example message ]
 
 Section 1 - Event
 
