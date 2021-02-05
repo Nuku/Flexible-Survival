@@ -2,7 +2,31 @@ Version 2 of Blanche by Stripes begins here.
 [Version 2.2 - Cowgirl scene added + mechanics tweaks + debug data]
 "Adds a White Wolf named Blanche to the Flexible Survival game."
 
-Section 1 - Event
+[	HP of Blanche		]
+[ 0 - not saved			]
+[ 1 - saved				][sleeping mat]
+[ 2 - talked to her		]
+[ 3 - sex (F/F)			]
+[ 4 - sex (M/F)			]
+[ 5 - knocked up		]
+[ 6 - advanced preg		]
+[ 7 - first litter		][mattress]
+[ 8 - talked post-pups	]
+[ 9 - knocked up again	]
+[10 - advanced preg		]
+[11 - another litter	][small bed]
+[12 - cycling knocked up	][silk sheets]
+[13 - cycling adv preg	]
+[14 - cycling litters	]
+
+[	Libido of Blanche = turn knocked up		]
+
+[	lust of Blanche = last time knocked up	]
+
+[	thirst of Blanche = pup count	]
+
+
+Section 1 - Events
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -52,6 +76,32 @@ to say ResolveEvent Wolfrape:
 	now blanchefight is false;
 	now wolfrape is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Blanche's Brood	"Blanche's Brood"
+
+Blanche's Brood is a situation.
+ResolveFunction of Blanche's Brood is "[ResolveEvent Blanche's Brood]".
+Sarea of Blanche's Brood is "Nowhere".
+when play begins:
+	add Blanche's Brood to badspots of MaleList;
+
+instead of navigating Office Den while (hp of Blanche > 7 and Blanche's Brood is unresolved):
+	say "[NavCheck Office Den]";
+	if NavCheckReturn is false, stop the action;
+	move player to Office Den;
+	if debugactive is 1:
+		say "     DEBUG: Blanche organizes scavenging trips[line break]";
+	say "     As you enter Blanche's den you are met once again by the Sturm's appraising gaze, the large white wolf giving you little more than a nod in greeting before returning his full attention to watching over the scorched city surrounding the nondescript building. Given that this is one of the harshest areas in the city, you can imagine the strain that he puts himself under to ensure that his mother and the rest of his family remain safe, though you are sure that the others occasionally take their turn at guard duty to allow him some time to rest or relax. The door opens before your hand can reach it and the naked frame of Blanche appears in the doorway, your proximity causing her to let out a pleased gasp. '[if player is male]My two favorite men side by side[else if player is female]My favorite woman come to see me[else]My rescuer come to see me[end if]!' the wolfess MILF exclaims, giving you a warm hug. 'Come inside. Yes, you too Sturm, we were just about to organize an excursion into the city for food, water, and building materials, and your joint expertise would come in handy.'";
+	say "     Sturm looks reluctant to leave the door unguarded, but the constant harrying and reassurance from his mother eventually convinces him that he can spare a few minutes to take part in the discussion and he follows behind you as you enter the office building. You come to a stop in what you assume is the living area where [if HP of Blanche < 11]three [else]nine [end if]other wolves are standing around a table with a heavily-edited city map spread across it. They give you a friendly wag before returning their attention to their mother who takes the prime position to see the map, Sturm shouldering past you to stand beside her and leaving you to stand opposite them with everything upside-down and wondering why he treats you with what feels like passive hostility.";
+	WaitLineBreak;
+	say "     Your musings are cut short by discussion of where to scavenge beginning, voices being raised and opinions loudly stated. One of the younger wolves seems to believe that they can make do with scavenging only in the Capitol District in order to save their energy and to remain close by should they need help from the rest of their siblings. You reply that while they might spend less time traveling, the creatures around here are more ruthless than many in other areas of the city, Sturm, surprisingly, echoing agreement, adding that doing so risks not everyone coming back, his appraisal causing the younger wolf to nod his head in acceptance of the logic. Further suggestions of varying plausibility are put forth over time, most of them being countered for one reason or another by Sturm, who seems zealously protective of all of his siblings, garnering your respect for his loyalty and insight despite his usually surly demeanor towards you.";
+	say "     As a lull in the conversation occurs, you suggest that they could try the park. There's clean water, fresh fruit, and not too many areas where creatures might be able to suprise them. On top of that, the infected there are less dangerous than the dragotaurs and orc slavers that roam the hellscape aroun d their home. Sturm pulls a face as you mention the danger of where they live but grudgingly agrees that the park is likely to be a decent place to scavenge. 'Didn't I tell you that [if player is herm]they [else if player is male]he [else if player is female]she [else]they [end if]would have something to add?' Blanche teasingly asks her eldest son, earning a scowl form the large white wolf. He does however give you a nod of recognition and for the rest of the discussion you don't see him glowering at you at all.";
+	WaitLineBreak;
+	say "     Eventually, the meeting comes to an end with the decision having been made to scavenge in the park, though when it will happen has yet to be decided. Blanche's various children return to their various duties such as tidying bedrolls, checking medical supplies, and keeping watch outside, a few of them coming over to talk to you as they pass by. To your surprise, Sturm does so too. 'You know the city better than I do,' he grudgingly greets you, skipping any pleasantries. You agree, but reply that he seems quite knowledgable himself and he seems to be doing well protecting his mother. 'Someone should, and you seem to feel that you have better things to do,' he snarls. The white-furred wolf pauses to take a breath before continuing in a more civil tone. 'Mamma has so much love in her. We would do anything for her. We all would,' he quickly adds upon noticing one of your eyebrows rise. 'Just make more time to be with her. I may be her favorite son, but she misses you when you are gone.' With that, he stomps away muttering under his breath, leaving you to shake your head and watch the activity around you.";
+	now Resolution of Blanche's Brood is 1;
+	now Blanche's Brood is resolved;
+
 
 Section 2 - Office Den
 
@@ -86,6 +136,41 @@ object	name
 Blanche	"Blanche"
 
 Blanche is a woman. Blanche is in Office Den.
+ScaleValue of Blanche is 3. [human sized]
+Body Weight of Blanche is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Blanche is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Blanche is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Blanche is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Blanche is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Blanche is 6. [length in inches]
+Breast Size of Blanche is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Blanche is 2. [count of nipples]
+Asshole Depth of Blanche is 8. [inches deep for anal fucking]
+Asshole Tightness of Blanche is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Blanche is 0. [number of cocks]
+Cock Girth of Blanche is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Blanche is 0. [10 Inches]
+Ball Count of Blanche is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Blanche is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
+Cunt Count of Blanche is 1. [number of cunts]
+Cunt Depth of Blanche is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Blanche is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Blanche is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Blanche is false.
+PlayerRomanced of Blanche is false.
+PlayerFriended of Blanche is false.
+PlayerControlled of Blanche is false.
+PlayerFucked of Blanche is false.
+OralVirgin of Blanche is false.
+Virgin of Blanche is false.
+AnalVirgin of Blanche is true.
+PenileVirgin of Blanche is true.
+SexuallyExperienced of Blanche is true.
+TwistedCapacity of Blanche is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Blanche is true. [steriles can't knock people up]
+MainInfection of Blanche is "".
 Description of Blanche is "[blanchedesc]".
 Conversation of Blanche is { "Thanks." }.
 the fuckscene of Blanche is "[sexwithBlanche]".
@@ -120,6 +205,18 @@ to say blanchedesc:
 	else:
 		say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While gained a little weight after having had a few litters, she's still quite hot and has become quite the MILF of a wolf. And with another litter [if HP of Blanche is 13]well [end if]on its way, as can be seen from the [if HP of Blanche is 13]large [end if]swell to her tummy, she couldn't be happier to add to the loyal pack keeping her company and protecting her. These days, the white-furred wolf usually lounges on her bed while teaching the younger pups about hunting and supply gathering.";
 
+[Character Notes - Blanche:
+
+Species: Canine (Wolf)
+Gender: Female
+Relationships:
+Sexuality: Bisexual
+
+Associated Fetishes:
+- Pregnancy
+-
+-
+]
 
 Instead of conversing the Blanche:
 	say "[blancheupdate]";
@@ -147,7 +244,7 @@ Instead of conversing the Blanche:
 	else if HP of Blanche is 8:
 		say "     [one of]'I was starting to get really lonely hiding here all alone. I'm glad I've got you and my lovely pups to keep me company.'[or]'With my cubs here, there's a lot more to do. Thankfully, they're strong and willing to help their mommy out. This place should be much more livable in no time.'[or]'Since we've got extra mouths to feed, my pups are working hard to hunt and scavenge for our little pack.'[or]'I feel much safer now that I've got my big, strong pups here to help.'[or]She slides up beside you. 'Being pregnant was such a thrill. Having pups growing inside me just felt right. You should breed me again soon,' she moans with longing in her voice.[or]'The power's gone out around here, but thankfully the lights have stayed on down here.'[or]'Being a mother makes me feel so fulfilled.'[or]'You gave me such brave, strong pups. I hope you'll help me make a few more,' she says coyly.[at random]";
 	else if HP of Blanche >= 8 and blanchetalk1 is false and a random chance of 1 in 3 succeeds:
-		say "     'I feel so much safer with my pups here to protect me,' Blanche says, reaching over to give a nearby on a scritch on the ears. He pants happily, telling his mother he's very happy to help her out.";
+		say "     'I feel so much safer with my pups here to protect me,' Blanche says, reaching over to give a nearby son a scritch on the ears. He pants happily, telling his mother he's very happy to help her out.";
 		now blanchetalk1 is true;
 	else if HP of Blanche >= 9 and blanchetalk2 is false and a random chance of 1 in 3 succeeds:
 		say "     One of the other wolves comes down the stairs with additional supplies in a cardboard box. After dutifully storing them on the shelf, he's given a loving hug from his [if HP of Blanche > 10]pack [end if]mother.";
@@ -155,9 +252,9 @@ Instead of conversing the Blanche:
 	else if HP of Blanche is 9 or HP of Blanche is 10:
 		say "     [one of]'I was starting to get really lonely hiding here all alone. I'm glad I've got you and my lovely pups to keep me company.'[or]'With my cubs here, there's a lot more to do - especially since I've got more pups on the way,' she adds, caressing her [if Blanche is gravid]rounded [end if]belly. 'Thankfully, they're strong and willing to help their mommy out. This place should be much more livable in no time.'[or]'Since there will be extra mouths to feed, my pups are working hard to hunt and scavenge for our little pack.'[or]'I feel much safer now that I've got my big, strong pups here to help.'[or]'Being pregnant is such a thrill. Just knowing those pups are growing inside me just feels right.'[or]She runs a paw sensually along her body. 'Look at what you've done, you sexy stud. Knocked up the poor wolf girl again,' she teases.[or]'The power's gone out around here, but thankfully the lights have stayed on down here.'[or]'Being a mother makes me feel so fulfilled.'[or]'I'm so proud of these brave, strong pups you gave me.'[at random]";
 	else if HP of Blanche is 11:
-		say "     [one of]'I have plenty of lovely cubs now to help keep me company. Now I won't be lonely ever again.'[or]'Things are looking much better hew now that I've got all these willing pups to help their mommy by fixing it up. This place is getting much more livable for all of us now.'[or]'Since we've got extra mouths to feed, several of my pups are out hunting and scavenging for our little pack.'[or]'I feel much safer now that I've got my big, strong pups here to help.'[or]She slides up beside you. 'It felt so good to be pregnant again. Just knowing I've got more lovely cubs growing in me felt good. You should breed me again soon so I can enjoy that feeling again,' she moans with longing in her voice.[or]'Being a mother for so many lovely pups is really fulfilling.'[or]'You gave me such brave, strong pups. I hope you'll help me make a lots more,' she says coyly.[at random]";
+		say "     [one of]'I have plenty of lovely cubs now to help keep me company. Now I won't be lonely ever again.'[or]'Things are looking much better here now that I've got all these willing pups to help their mommy by fixing it up. This place is getting much more livable for all of us now.'[or]'Since we've got extra mouths to feed, several of my pups are out hunting and scavenging for our little pack.'[or]'I feel much safer now that I've got my big, strong pups here to help.'[or]She slides up beside you. 'It felt so good to be pregnant again. Just knowing I've got more lovely cubs growing in me felt good. You should breed me again soon so I can enjoy that feeling again,' she moans with longing in her voice.[or]'Being a mother for so many lovely pups is really fulfilling.'[or]'You gave me such brave, strong pups. I hope you'll help me make a lots more,' she says coyly.[at random]";
 	else if HP of Blanche >= 12 and blanchetalk3 is false and blanchetalk1 is true and blanchetalk2 is true and a random chance of 1 in 3 succeeds:
-		say "     You comment to Blanche about the number of different wolves you've been seeing around the place lately and how you've been having trouble keeping track of them all. 'Oh, they're not _all_ mind. Just most of them. My pups have come across a few other survivors while out on patrol or on scavenging runs. Since it's much safer here with us, they've come and joined us as members of the pack. We lose a few pups when they go out, so it all balances out.'";
+		say "     You comment to Blanche about the number of different wolves you've been seeing around the place lately and how you've been having trouble keeping track of them all. 'Oh, they're not [italic type]all[roman type] mine. Just most of them. My pups have come across a few other survivors while out on patrol or on scavenging runs. Since it's much safer here with us, they've come and joined us as members of the pack. We lose a few pups when they go out, so it all balances out.'";
 		now blanchetalk3 is true;
 	else if HP of Blanche is 12 or HP of Blanche is 13:
 		say "     [one of]'I have plenty of lovely cubs now to help keep me company. Now I won't be lonely ever again.'[or]'With my cubs here, there's always a lot to do - especially with more pups on the way,' she adds, caressing her [if Blanche is gravid]rounded [end if]belly. 'Thankfully, they're strong and willing to help their mommy by fixing it up. This place is getting much more livable for all of us now.'[or]'Some of the wolves are working on cleaning things upstairs to make sure there's plenty of room for everyone in our growing pack.'[or]'Since we've got extra mouths to feed, several of my pups are out hunting and scavenging for our little pack.'[or]'I feel much safer now that I've got my big, strong pups here to help.'[or]'Being pregnant is such a thrill. Just knowing those pups were growing inside me just feels right.'[or]'Being a mother for so many lovely pups is really fulfilling.'[or]'I'm so proud of these brave, strong pups. Thanks for helping me start this pack-family of mine.'[at random]";
@@ -166,9 +263,8 @@ Instead of conversing the Blanche:
 
 
 to say blanche_pups_intro:
-	say "     You are met by a large, intimidating white wolf standing inside the rear foyer to the office building, standing just inside the back door. He stands with his thick arms crossed and gives you a cold glare as he blocks the entrance briefly before stepping aside and letting you enter. Concerned for Blanche, you rush down the stairs.";
-	say "     You find three more new white wolves in the basement office area, though not as big and burly as the one upstairs in the basement office area. Blanche is there as well and seems safe and sound. If anything, she's happier and more relaxed than ever. She busy directing the other wolves around, getting them to reorganize some of the furniture to make more space, when she notices you.";
-	say "     'My darling. You're back! Come meet my lovely pups. You met Sturm already. He's the one on guard duty. Such a big, brave boy. Mamma's favorite.' Blanche is quite cheerful and introduces the three other pups to you. They nod respectfully to you, but they clearly defer to their mother.";
+	say "     You are met by a large, intimidating white wolf standing inside the rear foyer to the office building, standing just inside the back door. He stands with his thick arms crossed and gives you a stern glare as he blocks the entrance. Given his similarity to Blanche, you assume that the two must know each other somehow and begin to wonder whether he will let you pass until you watch as his nose twitchs upon inhaling your scent followed by his eyes widening. He hastily steps aside to let you enter, though the look he gives you isn't entirely warm, almost reproachful. Eager to see Blanche again, you rush down the stairs.";
+	say "     You find three more new white wolves in the basement office area, though not as big and burly as the one upstairs in the basement office area. Blanche is there as well and seems safe and sound. If anything, she's happier and more relaxed than ever. She busy directing the other wolves around, getting them to reorganize some of the furniture to make more space, when she notices you. 'My darling. You're back! Come meet my lovely pups. You met Sturm already. He's the one on guard duty. Such a big, brave boy. Mamma's favorite.' Blanche is quite cheerful and introduces the three other pups to you. They nod respectfully to you, but they clearly defer to their mother.";
 	now HP of Blanche is 8;
 	if debugactive is 1:
 		say "DEBUG| Post-intro values:[line break]";
@@ -419,30 +515,6 @@ Definition: Blanche is pregnant:
 Definition: Blanche is gravid:
 	if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13, yes;
 	no;
-
-[	HP of Blanche		]
-[ 0 - not saved			]
-[ 1 - saved				][sleeping mat]
-[ 2 - talked to her		]
-[ 3 - sex (F/F)			]
-[ 4 - sex (M/F)			]
-[ 5 - knocked up		]
-[ 6 - advanced preg		]
-[ 7 - first litter		][mattress]
-[ 8 - talked post-pups	]
-[ 9 - knocked up again	]
-[10 - advanced preg		]
-[11 - another litter	][small bed]
-[12 - cycling knocked up	][silk sheets]
-[13 - cycling adv preg	]
-[14 - cycling litters	]
-
-[	Libido of Blanche = turn knocked up		]
-
-[	lust of Blanche = last time knocked up	]
-
-[	thirst of Blanche = pup count	]
-
 
 Section 3 - Endings
 [to come later]
