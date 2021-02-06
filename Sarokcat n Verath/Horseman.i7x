@@ -10,6 +10,7 @@ Section 1 - Creature Responses
 
 to say HorsemanDesc:
 	setmongender 3; [creature is male]
+	project Figure of Horseman_clothed_icon;
 	if horsefight is 0:			[normal]
 		say "     Coming around a corner you slam into what feels like a solid wall - looking up you see you have run into one of the horsemen. He looks down at you with confusion as you take a step back. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso. On his right bicep is the same intricate interlocking horseshoe tattoo that the guards at the front door have. An impressive equine package bulges his ripped khaki shorts. His heavy three fingered hands are capped with hooflet-like nails. His short tail flicks behind him in annoyance. Still looking at you with confusion written all over his fully equine head and face you begin to wonder if these men were chosen more for their body mass than their brains. 'You don't look like you're supposed to be here,' he grumbles. 'I better take you back to processing so they can make a proper horsey fucktoy out of ya.'";
 	else if horsefight is 1:		[fight on Dry Plains]
@@ -21,6 +22,7 @@ to say Horseman wins:
 	if inasituation is true:
 		say ""; [dealt with in the event]
 	else:
+		project Figure of Horseman_hard_icon;
 		increase lostToHorseman by 1;
 		if horsefight is 0:			[normal]
 			if Player is female:
@@ -51,6 +53,7 @@ To say Horseman loses:
 	if inasituation is true: [the fight was called for from an event]
 		say ""; [dealt with in the event]
 	else: [normal fights]
+		project Figure of Horseman_soft_icon;
 		say "     [if horsefight is not 2]The powerful horseman[else]The muscled equine farmhand[end if] shakes his head slightly to clear it before [if horsefight is not 2]trying to punch [else]charging right at [end if]you again, obviously not knowing when he's beat. His attack is clumsy and easily avoided, and it's easy enough to sidestep and [if horsefight is 0]guide him right into a wall[else]send him crashing to the ground[end if]. You hear a solid thud [if horsefight is 0]on impact[else]when his head hits a rock[end if]. The powerful beast groans and collapses [if horsefight is 0]up against the wall. [else if horsefight is 1]in the grass. [else if horsefight is 2]. [end if]When he turns [if horsefight is not 0]himself over[else]to rest his head on the wall[end if], you see the stupefied look on his face. He's clearly stunned.";
 		say "[beatTheHorseman]";
 
@@ -97,11 +100,14 @@ to say beatTheHorseman:
 				now sextablerun is 1;
 				if (nam is "Take your aggression out on him"):
 					say "[HorsemanBeating]";
-				if (nam is "Milk him for some horsey cum"):
+				else if (nam is "Milk him for some horsey cum"):
+					project Figure of Horseman_hard_icon;
 					say "[HorsemanMilking]";
-				if (nam is "Mount him"):
+				else if (nam is "Mount him"):
+					project Figure of Horseman_hard_icon;
 					say "[HorsemanFucked]";
-				if (nam is "Ride his cock"):
+				else if (nam is "Ride his cock"):
+					project Figure of Horseman_hard_icon;
 					say "[HorsemanRidden]";
 				wait for any key;
 		else if calcnumber is 0:

@@ -85,18 +85,21 @@ to say TESlaveSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Put the Asian dude's shaft in your mouth";
 	now toggle entry is TESlaveSex rule;
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
 		now description entry is "Put the herm slave's mouth to good use";
 		now toggle entry is TESlaveSex rule;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 4;
 		now description entry is "Fill the herm slave's pussy with your cock";
 		now toggle entry is TESlaveSex rule;
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
@@ -109,16 +112,19 @@ to say TESlaveSexMenu:
 		now sortorder entry is 6;
 		now description entry is "Fill the herm slave's ass with your cock";
 		now toggle entry is TESlaveSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Let him fuck your ass";
 	now sortorder entry is 7;
 	now description entry is "Ride the Asian dude's cock";
 	now toggle entry is TESlaveSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Nothing";
 	now sortorder entry is 8;
 	now description entry is "Don't have sex with the herm slave after all";
 	now toggle entry is TESlaveSex rule;
+	[]
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
 	carry out the displaying activity;

@@ -463,20 +463,21 @@ to say FelixSex1: [cock sucked by Felix]
 	say "     Walking up to Felix, you run your hands over his muscular chest, then stroke his cheek and lean close to him. You whisper, 'You know what would be hot?' and pull Felix hands down to your crotch. 'You sucking off my cock.' Smiling, Felix pulls out your hard [Cock of Player] cock, pumping it in his hand. 'Anything for you, man. You saved me and brought Andre and me together.'";
 	LineBreak;
 	say "     With that, he leans over and takes your shaft in his mouth, bobbing up and down on it. Being a man, he knows how to handle a cock and what you need, so the blowjob that follows is pretty amazing. Bringing you to the edge of cumming several times, then allowing you to catch your breath to prolong the experience, he has you highly wound up and aching to cum when he finally goes all out. You're deep in Felix throat with his nose pressed against your crotch when you finally cum, squirting cum right into his stomach. The young centaur pulls back a bit before you're completely done so he can taste your seed, then shows it to you on his tongue and swallows it too.";
-	infect "Centaur Stallion";
+	NPCSexAftermath Felix receives "OralCock" from Player;
 
 to say FelixSex2: [sucking Felix cock]
 	say "     Walking up to Felix, you run your hands over his muscular chest, then stroke his cheek and lean close to him. You whisper, 'How about a blowjob, big boy?' He grins, then steps back a bit and turns his equine body to show you his long horsecock standing ready and erect for you. Kneeling down, you reach out for it, stroking the warm shaft in a hand while your other one fondles the young centaur's balls.";
 	LineBreak;
 	say "     In no time at all your taur friend is moaning, then gasping in pleasure as you speed up your stroking him and bring your tongue into play, running it up the side of his cock. Arriving at the tip, you lick over the cock's flared head. Doing your best to fit his cockhead into your mouth, you stroke Felix long cock with both hands. Under your skillful stimulation, it doesn't take long until you hear the centaur shout, 'Ah - I'm gonna cummMM!' quickly followed by his horsecock pulsing in your hand. The first two huge squirts of his cum are enough to fill your mouth, and while you swallow all that, he continues blasting away, further cumshots painting your face and chest in white.";
 	say "     As you stand up again and Felix sees you, he grins and helps you wipe the wipe goo off your chest, bringing his hand to his mouth to taste his own sperm. 'Sorry for the mess.'";
+	NPCSexAftermath Player receives "OralCock" from Felix;
 	infect "Centaur Stallion";
 
 to say FelixSex3: [cunt licked by Felix]
 	say "     Walking up to Felix, you run your hands over his muscular chest, then stroke his cheek. Leaning close, you whisper, 'You know you only fuck Andre, but...' and pull Felix hands down to your crotch, '...could you maybe at least help me out with this?' Smiling, Felix peels off your clothes and starts stroking over your nether lips. 'Sure can do. How about we lie down over there.'";
 	LineBreak;
 	say "     As you lie down, Felix gets into position in front of you, then kneels so he can reach you when leaning forward with his upper body. He fondles you for a moment with his fingers, then spreads your pussy lips and starts to lick. Wow, he's got quite a long and talented tongue, your young centaur friend. Licking leads to soft sucking on your clit, then him pushing his tongue into your vagina. Then he goes back to pushing his fingers inside you, massaging your sensitive inner walls. With Felix masturbating your pussy with enthusiasm, he brings you to the brink of orgasm quickly, then pulls back a bit until you've calmed down before starting up again. Then after you don't know how long in a lustful haze, he takes out all the stops and just keeps going till you come, shouting in satisfaction as your whole body trembles in orgasm.";
-	infect "Centaur Mare";
+	NPCSexAftermath Felix receives "OralPussy" from Player;
 
 to say FelixSex4: [fingering Felix ass]
 	say "     You go and give Felix a kiss on the cheek, then whisper in his ear, 'How about you let me play with your ass a bit? I know you only want your boyfriend to fuck you, but we can still have some fun, can't we? Come on, you'll like it.' After a moment's hesitation, he smiles and gives you a nod. Running your hands down over the Felix muscled chest, then along his flank as you walk around his equine body to his read end. Groping the muscled flesh of his ass, you make him moan in anticipation, then raise his reddish tail to reveal his asshole. You lean forward and lick over the young centaur's pucker, reveling in his initial 'Oh? Oh!' and the gasps that follow. Running your tongue up and down his crack, then poking his hole with it, you make Felix pant and moan and soon you hear him say, 'This feels amazing!'";
@@ -491,6 +492,7 @@ to say FelixSex5: [Andre fucks Felix]
 	say "     Watching your two friends interspecies coupling, you can't help yourself from drifting closer and closer to get a better look. Soon you're standing right next to them, close enough to feel the heat of their bodies. Felix gives you a smile, unashamedly moaning and panting as his boyfriend thrusts into him from behind. His fully erect horsecock dangles under him, showing his arousal with a string of precum dribbling down onto the ground. One thing to be said for people born after the nanite infection spread - they certainly don't have any sexual hangups.";
 	say "     From your ringside position, you observe the arousal of your two friends mount quickly, Andre's thrusts getting faster and so urgent that he pushes the centaur a few steps forward before Felix puts down his hooves the right way to hold fast against him. Before much longer, the big lizard hisses, 'I'm really close, baby. Where do you...' and Felix reaches back to stroke his face and neck, interrupting with a moaned, 'Just come inside me, I want to feel you.' With nothing more holding Andre back, he really goes to town on Felix ass, slamming forward against his muscled equine rump. The stimulation of the pointy and ridged reptilian shaft rubbing against his insides finally drives the young centaur over the edge, giving a lustful shout as he starts cumming, long blasts of his seed squirting out of the head of his cock and onto the dry ground. With his boyfriend's muscles flexing and quivering around his thrusting shaft, Andre isn't far behind. He roars and buries his cock all the way inside Felix ass as he orgasms, shooting string after string of his seed inside the centaur.";
 	say "     Still on top and inside his friend, Andre licks Felix sweaty back, then stretches his neck a bit so he can reach the centaur's nipples with his long tongue. Felix gives a fresh moan at the sudden stimulation, then pulls his reptilian lover's head up to his, kissing him deeply. They make out a bit and tell each other how much they love another before the big lizard dismounts, pulling his softening shaft out of Felix cum-dripping hole. You leave the two boys to clean up and spend some more time together, returning your thoughts to matters of everyday survival.";
+	NPCSexAftermath Felix receives "AssFuck" from Andre;
 
 to say FelixSex6: [Felix fucks Andre]
 	say "     You go and give Felix a kiss on the cheek, then whisper in his ear, 'How about you give Andre a good time? Just imagine sliding into his tight ass, feeling your cock inside him... I'd love watching the two of you together.' Felix smiles as his looks move over to his reptilian boyfriend, and you see his horsecock slide out of its sheath and harden in anticipation. With a little grin and a nod to you, the young centaur trots over to Andre, pulling him in for a hungry kiss.";
@@ -498,6 +500,7 @@ to say FelixSex6: [Felix fucks Andre]
 	WaitLineBreak;
 	say "     Watching your two friends interspecies coupling, you can't help yourself from drifting closer and closer to get a better look. Soon you're standing right next to them, close enough to feel the heat of their bodies. Felix gives you a smile from up on top of Andre, unashamedly fucking his friend and even doing some demonstrative deep thrusts to show off a bit. That's one thing to be said for people born after the nanite infection spread - they certainly don't have any sexual hangups.";
 	say "     From your ringside position, you observe the arousal of your two friends mount quickly, Felix thrusts getting faster and more urgent and a string of precum dribbling from Andre's rock hard cock. Before much longer, the young centaur moans, 'I'm close, I'm gonna...' as he slams forward one last time, burying his whole horsecock inside the big lizard's ass. As his balls start twitching and pulsing with burst after burst of cum they're unloading in the ass of his boyfriend, Andre is driven over the edge too. With a lust-filled croon, his whole body tenses as long strings of his seed splash all over the ground under him. Still on top and inside his friend, Felix leans forward to stroke and hug Andre. The big lizard's neck is long and flexible enough that they can even kiss and say the love each other before the centaur dismounts. You leave the two boys to catch their breath and spend some more time together, returning your thoughts to matters of everyday survival.";
+	NPCSexAftermath Andre receives "AssFuck" from Felix;
 
 Section 4 - Andre, the lizard
 
@@ -833,34 +836,38 @@ to say AndreSexMenu:
 		now sortorder entry is 1;
 		now description entry is "Let the lizard blow you.";
 		now toggle entry is AndreSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Andre's cock";
 	now sortorder entry is 2;
 	now description entry is "Put Andre's cock in your mouth.";
 	now toggle entry is AndreSex rule;
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
 		now description entry is "Put the lizard's mouth to good use.";
 		now toggle entry is AndreSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Finger Andre's ass";
 	now sortorder entry is 4;
 	now description entry is "Stimulate the lizard guy's ass.";
 	now toggle entry is AndreSex rule;
-[
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Watch Andre fuck Felix";
 	now sortorder entry is 5;
 	now description entry is "See the big lizard mount his boyfriend.";
 	now toggle entry is AndreSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Watch Felix fuck Andre";
 	now sortorder entry is 6;
 	now description entry is "See the big lizard being fucked by his boyfriend.";
 	now toggle entry is AndreSex rule;
-]
+	[]
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
 	carry out the displaying activity;
@@ -883,41 +890,36 @@ This is the AndreSex rule:
 		if (nam is "Finger Andre's ass"):
 			say "[AndreSex4]";
 		if (nam is "Watch Andre fuck Felix"):
-			say "[AndreSex5]";
+			say "[FelixSex5]";
 		if (nam is "Watch Felix fuck Andre"):
-			say "[AndreSex6]";
+			say "[FelixSex6]";
 		wait for any key;
 	now lastfuck of Andre is turns;
 
-to say AndreSex1: [cock sucked by Felix]
+to say AndreSex1: [cock sucked by Andre]
 	say "     Walking up to Andre, you run a hand over his long scaled neck, pulling his head towards you a bit so you can whisper in his ear. 'I'm really horny right now. Could you do me a favor and blow me off?' Looking at you, then your crotch, the big lizard replies, 'S-sure. I totally owe you for bringing Felix and me together.'";
 	LineBreak;
 	say "     With that, he uses his clawed hands to carefully peel off any clothes you might be wearing, then moves his elongated reptilian snout to your crotch. As he opens his mouth and all those sharp teeth inside come into view, the thought that this was a bad idea shoots through your head for a moment, then quickly is pushes aside as Andre wraps his very long forked tongue around your cock. With him tonguing your shaft, simultaneously licking and squeezing it, you're treated to a pretty unique oral sex experience. Andre's talented stimulation drives your arousal through the roof quickly, and before too long, you orgasm, shooting long strings of cum into the big lizard's mouth.";
-	infect "Plains Lizard Male";
+	NPCSexAftermath Andre receives "OralCock" from Player;
 
-to say AndreSex2: [sucking Felix cock]
+to say AndreSex2: [sucking Andre cock]
 	say "     Walking up to Andre, you run a hand over his long scaled neck, then along his body until you come to his hind legs. Smiling at the big lizard as he cranes his neck to see what you're doing, you move your hand lower towards his crotch and find the slit-like opening of his internal sheath. Rubbing it and then the quickly hardening cock emerging from it, you say, 'Just relax, I want a taste of this.' He just moans as an answer.";
 	LineBreak;
 	say "     Getting down on the ground under the horse-sized lizard, you stoke his pointy and ridged erection, then lick over its underside, making Andre give a lustful hiss. You put your lips to the tip of his shaft and take it in your mouth, moving on to bobbing up and down on it after a while. There's quite a bit of cock your reptilian friend has, and when you reach the end of what you can take in, you put your hands to the rest of his shaft and stroke it in rhythm with your sucking. Getting expertly blown and jerked at the same time, it doesn't take too long until Andre's pants and hisses come quicker and more urgently, building up to a shouted 'I'm cumming!' A spicy taste fills your mouth as the first blast of his load paints your tonsils white and you quickly swallow it all to be ready for the next shot. Taking spurt after spurt of the tasty cum, you just keep suckling on Andre's cock until you got the very last bit of his load.";
+	NPCSexAftermath Player receives "OralCock" from Andre;
 	infect "Plains Lizard Male";
 
 to say AndreSex3: [cunt licked by Andre]
 	say "     Walking up to Andre, you run a hand over his long scaled neck, pulling his head towards you a bit so you can whisper in his ear. 'I'm really horny right now. Could you do me a favor and eat me out?' Looking at you, then your crotch, the big lizard replies, 'S-sure. I totally owe you for bringing Felix and me together.'";
 	LineBreak;
 	say "     With that, he uses his clawed hands to carefully peel off any clothes you might be wearing, then moves his elongated reptilian snout to your crotch. As he opens his mouth and all those sharp teeth inside come into view, the thought that this was a bad idea shoots through your head for a moment, then quickly is pushes aside as Andre's long forked tongue starts licking your cunt. He's got an amazing dexterity with it, making you moan as he concentrates on your clit, then pushes it in between your pussy lips, wiggling around inside your vagina. With the two ends of his tongue rubbing different spots, it's almost as if two people are giving you attention simultaneously, resulting in a rather unique oral sex experience. Andre's talented stimulation drives your arousal through the roof quickly, and before too long, you orgasm, femcum dripping out of your pussy to be licked up by the big lizard.";
-	infect "Plains Lizard Male";
+	NPCSexAftermath Andre receives "OralPussy" from Player;
 
 to say AndreSex4: [fingering Andre ass]
 	say "     Walking up to Andre, you run a hand over his long scaled neck, then along his body until you come to his hind legs. Smiling at the big lizard as he cranes his neck to see what you're doing, you move your hand further back under his tail and find the his pucker. Rubbing it and hearing the surprised hiss he makes, you say, 'Relax, I just want to play a bit with your ass. You'll like it - and you want to train your muscles back here for Felix, don't you?' 'Err - of course,' he answers, and you can see his opening relax a bit.";
 	LineBreak;
 	say "     You bring your hand to his hole and start to massage it, rubbing it and the surprisingly sensitive underside of his long tail. Starting slow, you push one, then two fingers inside his ass, working them in and out a bit until he relaxes his muscles even more and you can add another finger. After a while, you got him loosened up enough that you can slip four fingers in - followed by your whole hand. Pushing deeper into the big lizard's body, you stroke his inner passage, grinning at the lust-filled hisses and moaning you create with that. Feeling around a bit, you find a spot that seems especially sensitive judging from the joyful gasps it makes Andre do every time you stroke over it. Concentrating on that, it doesn't take much longer until the big lizard orgasms, his sphincter gripping your arm tightly as spurt after spurt of cum blasts from his ridged cock and hits the ground.";
-	infect "Plains Lizard Male";
-
-to say AndreSex5: [Andre fucks Andre]
-	say "     <Andre fucks Andre>";
-
-to say AndreSex6: [Andre fucks Andre]
-	say "     <Andre fucks Andre>";
+	NPCSexAftermath Andre receives "Stroking" from Player;
 
 Section 6 - Endings
 

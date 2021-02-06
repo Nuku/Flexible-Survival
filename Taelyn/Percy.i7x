@@ -524,7 +524,7 @@ to say PercyCrafting3: [Con 2]
 			wait for any key;
 			say "[PercyCraftingMenu]";
 	else:
-		say "     'If you have five suitable pieces of scrap cloth, I can make you a kind of cloth chest armor called a Gambeson for 75 Freecred.'";
+		say "     'If you have ten suitable pieces of scrap cloth, I can make you a kind of cloth chest armor called a Gambeson for 75 Freecred.'";
 		wait for any key;
 		say "[PercyCraftingMenu]";
 

@@ -996,8 +996,8 @@ to weakrandominfect: [does not bypass researcher protection]
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
 	while there is a non-infectious in row MonsterID of Table of Random Critters and (non-infectious entry is true or area entry is "Nowhere"):
-		increase MonsterID by 1;
-		choose row MonsterID from Table of Random Critters;
+		increase MonsterID by 1; [checking the next creature]
+		choose row MonsterID from Table of Random Critters; [selecting the next row]
 		if there is a non-infectious in row MonsterID of Table of Random Critters and (non-infectious entry is true or area entry is "Nowhere"):
 			next;
 		if BannedStatus entry is true: [banned creatures can't be used to infect]
@@ -1005,7 +1005,9 @@ to weakrandominfect: [does not bypass researcher protection]
 				say "DEBUG -> Can't infect with creature [Name entry] because it has Banned: [BannedStatus entry][line break]";
 			next;
 		break;
-	infect;
+	choose row MonsterID from Table of Random Critters;
+	if non-infectious entry is false and area entry is not "Nowhere": [last check that it selected something fitting]
+		infect;
 
 Part 5 - SetMonster Function
 

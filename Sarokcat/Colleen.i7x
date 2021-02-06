@@ -135,16 +135,16 @@ to say ColleenScent:
 
 to say CollenStatus:
 	if ColleenAlpha > 0:
-		project the Figure of Colleen_face_icon;
+		project the Figure of Colleen_naked_icon;
 		say "     The nervous military woman you rescued from the tree is completely gone now, and in her place is a happy little husky bitch. The new bitch doesn't seem to mind the changes a bit however, reveling in the lovely feel of her new hyper-sexualized body, her damp slit still showing signs of her latest mating as she prances happily around the bunker in just her bare fur. She seems to have acquired a small pile of trophies and toys stacked up in her corner of the bunker, evidence of her many trips outside to hunt and fuck, although you never can actually manage to catch her outside of the bunker when you come back. Still she seems to be the happiest husky bitch you have ever come across, and her teasing glances and the way she wiggles her ass at you with abandon makes you wonder what it would be like to just give in and become a happy little bitch yourself...";
 	else if ColleenSlut is 1:
-		project the Figure of Colleen_face_icon;
+		project the Figure of Colleen_naked_icon;
 		say "     The nervous military woman you rescued from the tree is completely gone now, and in her place is a happy little husky bitch. This new bitch doesn't seem to mind the changes a bit however, reveling in the lovely feel of her new hyper-sexualized body, her damp slit still showing signs of her latest mating as she prances happily around the bunker in just her bare fur. She seems to have acquired a small pile of trophies and toys stacked up in her corner of the bunker, evidence of her many trips outside to hunt and fuck, although you never can actually manage to catch her outside of the bunker when you come back. Still she seems to be the happiest stray slut you have ever come across, and the thought of your part in helping her become that way makes you smile.";
 	else if ColleenCollared is 1:
-		project the Figure of Colleen_face_icon;
+		project the Figure of Colleen_naked_icon;
 		say "     The nervous military woman you rescued before is completely unrecognizable now, in her place is a happily collared husky bitch, her damp slit leaking slowly onto the floor as she crawls around the bunker on all fours. She seems to be especially submissive, and seems to really be getting into her new role as your happily collared pet. Her soft golden fur is perfect for petting and the tag hanging off her collar proudly proclaims her to be 'Bitch'. The sight of the tag she picked out and how much it suits her new form and attitude brings a smile to your face.";
 	else if SarahSlut is 4:
-		project the Figure of Colleen_face_icon;
+		project the Figure of Colleen_clothed_icon;
 		if SarahPregnant > 0:
 			if SarahPups > 0:
 				say "     The nervous military woman you rescued from the tree seems to be doing massively better now, although you can hardly recognize her as the same woman anymore. The close proximity to your happy bitch seems to have affected her profoundly, even after such a short time together, and it certainly shows, especially since she has recently abandoned any attempt at wearing clothing. Looking her over you smile to see that Colleen's face now resembles that of a husky far more than that of a human, and her nice coat of soft white fur has fully grown in now, the most amusing part is how eagerly her fully husky tail lifts whenever you glance at her, as she exposes her dripping slit to you without even thinking about it.";
@@ -459,7 +459,7 @@ to say SexWithColleen:
 			say "     'We should... probably take a break for a while. I don't want to end up overdoing it. I mean, I should still be careful,' Colleen says.";
 	else if Sarah is in the bunker:
 		if ColleenCollared is 1:
-			project the Figure of Colleen_face_icon;
+			project the Figure of Colleen_naked_icon;
 			if Player is male:
 				say "     'Master wants to play with his bitch?' the bitch formerly known as Colleen asks eagerly, as she quickly spreads herself before you, panting as she stretches her legs apart to show you her damp and needy pussy, just waiting for you to fill it up with your cock. You grin at the sight as you stalk forward slowly, enjoying how wantonly this formerly strong willed woman submits herself to your every desire, happily becoming just another pet for you to use whenever you want. You decide to enjoy this situation to the fullest, as you gesture for your other pet to join the two of you as you slowly begin to crawl between the spread legs of your 'Bitch', as her collar proudly proclaims.";
 				say "     Your Slut crawls over to join the two of you eagerly, moving up behind Colleen even as you lift one of her legs up onto your shoulders, holding her slightly off the floor as your [Cock of Player] begins to rub up against her soft passage. The newly collared husky bitch moans in pleasure, her head rolling back as she lets out a long lustful cry, as Sarah reaches around her body and begins playing with her soft breasts, pulling her back until Colleen is resting her back on Sarah's chest and soft full breasts. The sight of one of your pets teasing and massaging the others breasts, even as she licks and nibbles at the back of her neck, makes your cock even harder than before. Unable to wait any longer, you shift your position slightly, and then slide your cock forward and into her warm welcoming passage, her body parting before your cock eagerly making you both moan in sheer carnal bliss.";
@@ -485,7 +485,7 @@ to say SexWithColleen:
 				now lastfuck of Colleen is turns;
 				infect "Husky Alpha";
 		else if ColleenSlut is 1: [stray Colleen, fucked by the player]
-			project the Figure of Colleen_face_icon;
+			project the Figure of Colleen_naked_icon;
 			if Player is male:
 				say "     'You want to play too?' the slutty little husky asks as you approach her, her eyes wandering over your male body with interest as her tail wags eagerly behind her, as she begins to crawl towards you on all fours. Her position makes her breasts seem even more prominent as they hang straight down from her chest, as she slowly stalks forward, her eyes fixed on your [Cock of Player] shaft. You can feel a grin tugging at your face as you watch the formerly strong military woman reduced to a panting bitch, begging and whining for a cock to fill her up. As she rubs her softly furred side up against you, you decide to take her up on her offer, and push her down to the ground as you move around behind her, deciding that if she really wants to play the role of a slutty little beast, you might as well take her like one. You can hear her groan eagerly as you position yourself above her, her rear wagging at you eagerly as you ram your cock into her in one swift movement, making her howl out in pleasure.";
 				say "     You grin and groan in pleasure as you reach forward and grip and massage her soft breasts where they hang down from her chest, using them as handholds as you lean forward over her back. Her tail wags against the side of your chest as she pushes herself back to meet your every thrust, obviously as eager and wanton a bitch now, as any you have ever seen. You enjoy the changes in her personality almost as much as you are enjoying the changes to her body, loving the way she yips and whines and begs underneath you as she submits just as willingly to you as you know she now would to anything with a cock, her mind truly matching her body now, a slutty bitch both inside and outside.";
@@ -511,7 +511,7 @@ to say SexWithColleen:
 					infect "Husky Bitch";
 					now lastfuck of Colleen is turns;
 		else if ColleenAlpha > 0: [stray Colleen that the player agreed to join as a husky]
-			project the Figure of Colleen_face_icon;
+			project the Figure of Colleen_naked_icon;
 			if Player is male:
 				say "     'You will never become a happy, slutty husky bitch like us with that!' Colleen says as she stares at your manhood, 'Though it does look very nice on you... Maybe I should help you out with your problems, and get a little treat at the same time...' the stray husky says as she grins at you for a minute, before dropping to all fours and burying her face in your crotch. You groan in pleasure as the slutty husky takes charge of your body and wraps her muzzle around your new cock, licking and sucking eagerly even as she rubs your balls with her paws.";
 				say "     The pleasure builds quickly as her expert mouth works your shaft, and soon you are panting in pleasure as you shoot your seed into her eager mouth, her muzzle locking tight around your shaft as she suckles on it happily. All too soon your powerful orgasm is spent, and while she massages your balls for minute longer as if trying to coax every drop of male seed out of you, she soon releases your shaft and sits back on her haunches happily, licking her lips. As you recover from your orgasm, you realize your shaft almost seems to be shorter, and you shudder as your body starts to change.";
@@ -533,7 +533,7 @@ to say SexWithColleen:
 				now lastfuck of Colleen is turns;
 				now ColleenFound is 2; [husky Colleen fucked]
 		else if SarahSlut is 4: [transformed Colleen, first time sex]
-			project the Figure of Colleen_face_icon;
+			project the Figure of Colleen_naked_icon;
 			say "     'Sorry but... no, I just can't lie, I want it so badly,' she says, her tongue hanging out of her mouth as she pants eagerly, before glancing at Sarah, 'Please! I just can't stop thinking about sex, and about how wonderful it would be to be just like her,' she says her changed body shuddering in desire, her tail lifting up instinctively. 'I know it will change me, and make me just another horny little husky just like your pet,' she says as she nods eagerly at Sarah. 'Just the very idea of being a horny husky bitch, spreading my legs for dogs or beasts, being mounted like an animal, maybe even bearing them puppies... God it makes me so hot,' Colleen moans as she rubs her naked fur covered body, her slit obviously wet and needy even as her soft heat scent fills the room.";
 			say "     'Please, I just have one request, just one thing I want you to do for me first...' she says pleadingly as she looks up at you with her husky eyes. 'Please make me your pet too, just like you did Sarah, take me and make me yours instead of just another stray bitch in the city,' Colleen says with a blush as she reaches over into a pile of books she has been reading and pulls out a soft leather dog collar, a silver tag saying 'Bitch' in the shape of a dog bone hanging from the collar. 'I was feeling good enough to go out for a bit a little while ago... and I found one of those machines that let you make your own tag in a pet store on 7th street,' she says as she lowers her head, blushing beneath the fur of her cheeks. 'And I just couldn't resist... Please won't you keep me?' she says as she looks up at you hopefully, the little husky you brought home earlier asking if she can stay with you forever... Do you keep her?";
 			if Player consents:

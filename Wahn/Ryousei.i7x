@@ -554,9 +554,15 @@ to say RyouseiSexMenu:
 		now sortorder entry is 2;
 		now description entry is "Feel the big cat's tongue lap over your crotch";
 	[]
+	if Player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Frot with Ryousei";
+		now sortorder entry is 3;
+		now description entry is "Rub your cocks against each other until you both come";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "69 with Ryousei";
-	now sortorder entry is 3;
+	now sortorder entry is 4;
 	now description entry is "Share mutual oral pleasure";
 	[]
 	choose a blank row in table of fucking options;
@@ -600,6 +606,8 @@ to say RyouseiSexMenu:
 					say "[PlayerSucksRyousei]";
 				else if (nam is "Let Ryousei eat your pussy"):
 					say "[RyouseiLicksPlayerPussy]";
+				else if (nam is "Frot with Ryousei"):
+					say "[RyouseiPlayerFrot]";
 				else if (nam is "69 with Ryousei"):
 					say "[RyouseiPlayer69]";
 				else if (nam is "Get fucked in the ass by Ryousei"):
@@ -674,6 +682,25 @@ to say RyouseiPlayer69: [player 69 with Ryo]
 	else:
 		NPCSexAftermath Ryousei receives "Other" from Player;
 	NPCSexAftermath Player receives "OralCock" from Ryousei;
+
+
+to say RyouseiPlayerFrot: [frot with Ryo]
+	if "KnowsFrot" is not listed in Traits of Ryousei:
+		say "     Smiling eagerly, you tell the tiger that you want to frot, which draws a curious expression from the otherworldly feline. It becomes apparent that he's not quite following what you mean, so you stroke a hand down the front of his broad, muscular chest and say that you could explain, but it might be a lot more fun if you just show him. Chuckling warm-heartedly, the anthro tiger purrs as he replies, 'How could I resist such a charming offer? Lead on, I'll follow where you take me.' ";
+		add "KnowsFrot" to Traits of Ryousei;
+	else:
+		say "     Smiling eagerly, you tell the tiger that you want to frot, with him again, which draws a lusty purr from Ryousei. Eagerness vibrates in his voice as he replies, 'How could I resist such a charming offer? I'll gladly lay down with you.' ";
+	say "That said, the tall and trained warrior relaxes and lets you take point, rubbing his muscles through the fabric of his kimono. Stretching your neck to kiss Ryousei, you make out with him while your hands wander, soon finding the belt of his kimono and undoing the knot holding it closed. Pulling aside the garment no longer bound around him, the tiger's fur-covered chest is laid bare, allowing you to run your fingers over his warm coat, feeling its softness and the hard muscles underneath.";
+	say "     'I like where this is going,' Ryousei says eagerly before pulling you into another long kiss, his tongue wrestling pleasurably with your own. His continuing purr vibrates throughout your body while your feline friend moves his hands and [if Player is not naked]starts to pull off your own clothing[else]makes use of your nakedness to caress you[end if]. The two of you share pleasurable moments of simply touching and snogging with each other, and before long both of you are hard and ready for more. [if Player is not naked]By now having been stripped of everything you were wearing, [else]Hungry to have the tiger join you in your nakedness, [end if] you slowly disentangle yourself from the embrace of his arms, then reach out to push the cloth of the kimono off his shoulders. Lowering his arms, Ryousei proceeds to let the garment completely slip off his body, falling down to pool behind him on the floor.";
+	WaitLineBreak;
+	say "     Now dressed in nothing more but a traditional fundoshi around his hips and crotch, the proud tiger lets out a pleased purr as you bid him to lay on the ground. He leans forward to lick your cheek one last time, then lowers himself to sit on the cloth of his kimono before leaning back and stretching himself out before you. Moving to straddle Ryousei's thighs, you run your hands over the tented white cloth of his fundoshi, feeling the firm tip of his erection and cupping the full orbs of his balls easily apparent through the thin fabric. The next thing to do is to find the ends of the fundoshi's cloth to und-wrap your sexy feline, allowing you to pull the last piece of cloth off him in short notice. Now he is as naked as you are, leaning back and braced on his elbows as he looks up to your face with an almost boyish smirk on his muzzle.";
+	say "     Moving a little further up along his body, with the insides of your legs brushing against the soft fur of Ryousei's legs, your cock is soon right next to his own. You take hold of it by the base and begin a little bit of a playful 'sword-fight' with the big cat, creating pleasant tingles up and down your spine as you feel the warmth of his erection against your own, with the nubby spines of his cock rubbing your hard shaft lightly. Lining both erections up side by side, you then reaching out for one of the tiger's arms and pull Ryousei's hand down to his crotch. The otherworldly visitor takes the hint immediately and wraps his paw-hand around both of your cocks, pressing them together gently and starting to jerk up and down along the shafts. 'This is nice,' Ryousei tells you with a purr, his free hand moving up to stroke your side.";
+	WaitLineBreak;
+	say "     Feeling very good as you grind your cock lightly against the tiger's grasping hand, you proceed to lean over your feline friend, bracing yourself on his firm pecs as you return to making out with each other. The two of you share your breath and moan into each other's mouths while rubbing front to front, dick to dick and tongue to tongue. You revel in the warm feeling of his fur against your skin, never getting enough of stroking and rubbing it, while Ryousei keeps up an amazing, slow burn of masturbation for the two of you, cupping your balls with the other hand and giving them very satisfying squeezes. Grinding against each other like that for a long, pleasant while, you react to each little gasp and moan, building the shared pleasure ever higher. Then finally, when it is made more than apparent that you're close to orgasm by your labored breathing, the tiger asks, 'Ready?'";
+	say "     The breathless nod that you give him is the only signal that Ryousei needs, and he goes full out right away after that, stroking your twin cocks in a rapid beat, up and down along the pressed-together shafts. You couldn't have held back even if you wanted to, throwing your head back and moaning out loud as you start to erupt only a heartbeat or two before Ryousei himself, the first spurt of your cum landing in his chest-fur and making it lay flat and stick to his muscles. Then the throb of his cock pulses against your own, and it almost seems like your bodies compete about who can shoot the most cum, as you make a proper mess of Ryousei's front, plastering his usually so well-groomed fur against the tiger's skin.";
+	WaitLineBreak;
+	say "     When your shared arousal finally winds down, Ryousei loosens his previous death-grip on your cocks and brings his paw-hand up to his face, looking at the cum clinging to its edge before licking it off. Then he focuses on you, meeting your gaze and saying, 'It was amazing to share pleasure with you!' You chuckle and kiss his muzzle, responding that you had a great time too. This leads to a little bit more time of caresses and further cat-washing by the muscular tiger, until you eventually sink down to lie together, now side by side. Ryousei puts an arm around you, a thoughtful expression on his face.";
+	say "     Then, after taking in your naked form for a long moment, he says, 'Being your companion makes the time on this wretched world bearable, even... pleasant, at times. Which makes me wonder about the time when I will eventually find my way back home. Would you like to accompany me, leave this place? My army needs people like you - strong and dependable. There will be hardship, but also rewards...' Ryousei caresses your cheek gently, then puts a finger on your lips. 'Do not answer now, it is moot until I can open a portal anyways. Just... think about it,' he says, then gets up to groom his fur into its usual impeccable state and get dressed.";
 
 to say RyouseiFucksPlayer: [player gets fucked in the ass]
 	say "     Letting Ryousei take the lead, you lean into his touch as he puts his arms around you, drawing you close against his furred body. He feels warm and soft against your skin, yet with a rock-solid firmness underneath, speaking of many years of hard martial training. Towards you, he's showing his gentler side right now, caressing your shoulders and back with strong hands, while at the same time lowering his head to yours. Meeting his muzzle, you're drawn into a long kiss, with his tongue wrestling pleasurably with your own. A rumbling purr from his broad chest vibrates throughout your body, putting you into a very relaxed, open state. 'I want to be inside you,' Ryousei grunts lustily as he draws back for a breather, then starts to slide his hands under your clothes and pulls them off.";

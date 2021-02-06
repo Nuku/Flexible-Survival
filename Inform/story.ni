@@ -207,6 +207,7 @@ Include Down Under Pub by Stripes.
 Include Equinoid Camp by Song.
 Include Farm by Wahn.
 Include Gloryhole by SgtPepper234.
+Include Hellfire Club by Gherod.
 Include High Rise District by Guest Writers.
 Include Hitching Post by SgtPepper234.
 Include Hospital by Stripes.
@@ -590,6 +591,7 @@ Include Parasitic Plant by Guest Writers.
 Include Pegasus by Kaleem mcintyre.
 Include Pewter Consort By Blue Bishop.
 Include Piggy by Stripes.
+Include Pink Fox by Gherod.
 Include Pink Poodle by AGentlemanCalledB.
 Include Pirate Shark by Sarokcat.
 Include Pit Bull by Guest Writers.
@@ -632,6 +634,7 @@ Include Skunkbeast Lord by Stripes.
 Include Slime Cube by Kernog.
 Include Slutrat by Nuku Valente.
 Include Small Feline And Lion by Damaged.
+Include Smilodon Male by Gherod.
 Include Snake by Stripes.
 Include Snow Bat by Stripes.
 Include Snow Leopard by Stripes.
@@ -725,6 +728,7 @@ Include Cynthia by Prometheus.
 Include Campus Gym by UrsaOmega.
 Include Cadmea by Prometheus.
 Include Carl by Wahn.
+Include Cherry by Gherod.
 Include Chris by Wahn.
 Include Cindy by Stripes.
 Include College Guards by Rikaeus.
@@ -777,7 +781,8 @@ Include Gwen by Stripes.
 Include Hadiya by Stripes.
 Include Hanu by Kernog.
 Include Harold by Sarokcat.
-Include Hayato by Stripes.
+Include Hayato by Gherod.
+Include Hellfire Workers by Gherod.
 Include Help Book by Prometheus.
 Include HornyHorsey by femtoAmpere.
 [Include Horus by Rikaeus.]

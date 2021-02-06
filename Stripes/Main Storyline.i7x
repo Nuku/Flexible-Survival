@@ -49,7 +49,7 @@ MainInfection of Doctor Matt is "Human".
 Description of Doctor Matt is "[DrMattDesc]".
 Doctor Matt is in Primary Lab.
 understand "Matt" as Doctor Matt.
-understand "Left Behind Recording of Doctor Matt " as Doctor Matt.
+understand "Left Behind Recording of Doctor Matt" as Doctor Matt.
 the icon of Doctor Matt is figure of DrMatt_face_icon.
 
 a postimport rule: [bugfixing rules for players that import savegames]
@@ -67,6 +67,12 @@ to say DrMattDesc:
 Conversation of Doctor Matt is { "empty" };
 
 MattCollection is a number that varies.
+
+instead of fucking Doctor Matt:
+	if printed name of Doctor Matt is "Left Behind Recording of Doctor Matt":
+		say "There's literally no one there. It's a recording!";
+	else:
+		say "Doctor Matt recognizes the glint of arousal in your eyes as you imagine peeling him out of the suit. He takes a few steps towards the back wall of the room, hovering his hand over the intercom. 'You're not going feral on me, are you? Control yourself, or I'll have to call Orthas!'";
 
 Section 1 - Talking w/Dr Matt (this drives the Main Storyline quests)
 
@@ -233,7 +239,7 @@ to DrMattSampleQuestStart:
 			DrMattGryphonExam;
 			now Strength of Doctor Matt is 1; [Gryphon Samples Delivered]
 		else: [non-grpyhons must get the milk]
-			say "     After a double-click, you see the image of a flying creature with blue wings and blue fur appear on the screen. Clearing his throat and falling back into an almost lecture-like tone, Dr. Matt points out details of the gryphon depicted. 'As you can see, this being has characteristics of members in the Accipitridae family, namely this beak, wings and the typical curved claws. Yet at the same time, it also is quite similar to a feline of the Panthera genus.' This time the suited man taps the overall leonine body, paws and tail with tail tuft. 'Most creatures that roam the streets are anthropomorphized versions of specific animals, but this appears to be some sort of hybrid. I must have samples to find out how this is possible. Bodily fluids like milk or cum should serve well in that regard, please see if you can acquire a suitably large sample.' That said, he turns back to his workstation.";
+			say "     After a double-click, you see the image of a flying creature with blue wings and blue fur appear on the screen. Clearing his throat and falling back into an almost lecture-like tone, Dr. Matt points out details of the gryphon depicted. 'As you can see, this being has characteristics of members in the Accipitridae family, namely this beak, wings and the typical curved claws. Yet at the same time, it also is quite similar to a feline of the Panthera genus.' This time the suited man taps the overall leonine body, paws and tail with tail tuft. 'Most creatures that roam the streets are anthropomorphized versions of specific animals, but this appears to be some sort of hybrid. I must have samples to find out how this is possible. Bodily fluids like milk or semen should serve well in that regard, please see if you can acquire a suitably large sample.' That said, he turns back to his workstation.";
 	else:
 		say "     After a double-click, you see the image of a flying creature with blue wings and blue fur appear on the screen. Clearing his throat and falling back into an almost lecture-like tone, Dr. Matt points out details of the gryphon depicted. 'As you can see, this type of creature seems to be a hybrid of two distinct species, as well as being blue, and dual gendered. Sadly, it appears that they're quite rare, as no specimens have appeared on any of the tapes since those early examples. A pity, as it would have been fascinating to study them.'";
 		say "     (Note: This quest stage was skipped due to your ban settings)[line break]";

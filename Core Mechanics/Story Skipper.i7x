@@ -948,6 +948,7 @@ to PlayerRestore:
 		say "No Player Save File Found!";
 	blank out the whole of Table of PlayerData; [empty out all old data]
 	if the File of PlayerListsSave exists:
+		truncate Vials of Player to 0 entries; [cleaning out the old data]
 		say "Restoring Player Lists...";
 		read File of PlayerListsSave into the Table of PlayerLists;
 		repeat with y running from 1 to the number of filled rows in the Table of PlayerLists:

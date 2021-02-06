@@ -261,6 +261,7 @@ to say KatyaBeatenSex2: [fuck her mouth]
 	WaitLineBreak;
 	say "     With both your hands buried in Katya's mane of hair, you hold her firmly as you thrust deep one last time, balls slapping against her chin. Then your balls start to throb as they send forth a deluge of cum, squirt after squirt filling the sexy orc that you've chosen to face-fuck. Katya doesn't have much choice but to swallow your load, and the movement of her muscles around your erection enhances your orgasm quite nicely, giving you a little bit extra fun. For a moment, only your dick and the warm cave it is in matters as you ride out your orgasm, but soon an urgent pat against your thighs brings you back to reality.";
 	say "     Groaning around your dick, the orc is tapping out against your legs - oops, you totally forgot she has to breathe. Hastily withdrawing from her mouth, you watch as she gulps in a deep breath of air, panting loudly to replenish her reserves of oxygen. 'You! Damned! Fucker!' she gasps out word by word, not at all amused about being choked by your cock. This seems like a good moment to go - you're spent and she's still to weak to do more than flop around - so you quickly grab your clothes and gear and high-tail it out of Katya's camp. Running through the dry plains buck-naked, you gain some good distance before you stop and get dressed.";
+	NPCSexAftermath Katya receives "OralCock" from Player;
 
 to say KatyaBeatenSex3: [lick her pussy]
 	say "     After quickly stripping off your gear and clothes, you kneel down between the legs of the female orc and check her out. Her pussy is green like the rest of her skin, if a bit lighter in shade, and has a little bush of pubic hair above it. The nether lips of the sexy woman are slightly swollen and parted, glistening with wetness. Putting a hand on her crotch, you rub over the folds of the orc's sex, drawing a lustful groan from the dazed woman. Fuck yeah - such a sexy and strong amazon laid out before you helplessly. You've beaten her in a fair fight, so now is the time to savor the spoils of your victory!";
@@ -273,6 +274,7 @@ to say KatyaBeatenSex3: [lick her pussy]
 	say "     It doesn't take that much longer of this treatment before her soaring arousal eventually reaches a stretched-out climax, with the female orc shouting in completion as she trembles and twitches under your tongue. A full, rich squirt of femcum splashes your face before you can get your lips over her clit and opening. The next and any further splashes are caught directly on your tongue, covering it with a delicious treat that you eagerly gobble down. If her juices before were tasty, this stuff now is pure ambrosia, making you feel lightheaded and very, very good indeed. You do lose track of time a little about how long you lay there and suck on Katya's pussy, receiving the bounty of her orgasm and doing your very best to prolong it further.";
 	WaitLineBreak;
 	say "     At some point - with your tongue still buried in her snatch and wiggling to maybe get a tiny bit more femcum from the woman - Katya eventually catches her breath a little and growls, 'It's good that you're so skillful with your tongue, otherwise I'd squash your head like a melon with my thighs. You got what you came for, so fuck off now. This is my camp and you're not invited!' Given that you're under the effects of her orc femcum now, risking another struggle with Katya at the moment seems chancy at best, so you quickly comply, snatching up your gear and clothes before you duck outside of the orc's hideout and dash out into the plain of grass, bare-ass naked.";
+	NPCSexAftermath Player receives "OralPussy" from Katya;
 
 to say KatyaBeatenSex4: [fuck her pussy]
 	say "     After quickly stripping off your gear and clothes, you kneel down between the legs of the female orc and check her out. Her pussy is green like the rest of her skin, if a bit lighter in shade, and has a little bush of pubic hair above it. The nether lips of the sexy woman are slightly swollen and parted, glistening with wetness. Putting a hand on her crotch, you rub over the folds of the orc's sex, drawing a lustful groan from the dazed woman. Fuck yeah - such a sexy and strong amazon laid out before you helplessly. You've beaten her in a fair fight, so now is the time to savor the spoils of your victory!";
@@ -286,6 +288,7 @@ to say KatyaBeatenSex4: [fuck her pussy]
 	WaitLineBreak;
 	say "     With your reluctant orc beauty's inner muscles trembling around the girth of your cock, squeezing it in quite enjoyable fashions, it doesn't take long before you yourself reach the point of no return. Giving a last deep thrust that draws a breathless gasp from Katya, you start to unload into her depths, claiming her body as your own by painting its insides white with your potent load. Throb after heavy throb, you fill the muscular orc woman with your seed and stay balls deep inside her until the spurts eventually ebb off. Now lying spent on top of your freshly bred orc amazon, you rest your head against the twin bulges of her breasts a moment, then push the fabric of her chest-wrap aside to take in the bounty of her chest.";
 	say "     Sated and exhausted from the fuck-session, you almost let yourself be drawn in too much by the beauty of the orc's shapely boobs. The temptation is there to feel and caress them, take a nipple between your lips and suckle - but the orc would likely punch you if you remained much longer. She's still riding out her orgasm right now, but give her a few minutes and she'll be back to her full strength and try to kick your ass. For the moment, you decide to be content with fucking her this once and quickly pull out, then snatch up your gear and clothes and rush to the exit out of the camp.";
+	NPCSexAftermath Katya receives "PussyFuck" from Player;
 
 to say KatyaBeatenSex5: [fuck her ass]
 	say "     After quickly stripping off your gear and clothes, you kneel down between the legs of the female orc and check her out. Her pussy is green like the rest of her skin, if a bit lighter in shade, and has a little bush of pubic hair above it. The nether lips of the sexy woman are slightly swollen and parted, glistening with wetness. But then, your intended target right now is a little lower and similarly accessible. Putting a hand on her crotch, you rub over the folds of the orc's sex, drawing a lustful groan from the dazed woman, then move your somewhat wet and slick fingers over to her pucker and stroke over it. She trembles under that touch, showing an intense sensitivity to anal stimulation. Fuck yeah - such a sexy and strong amazon laid out before you helplessly. You've beaten her in a fair fight, so now is the time to savor the spoils of your victory!";
@@ -304,6 +307,7 @@ to say KatyaBeatenSex5: [fuck her ass]
 	say "     With your reluctant orc beauty's anal muscles trembling around the girth of your cock, squeezing it in quite enjoyable fashions, it doesn't take long before you yourself reach the point of no return. Giving a last deep thrust that draws a breathless gasp from Katya, you start to unload into her depths, claiming her body as your own by painting its insides white with your potent load. Throb after heavy throb, you fill the muscular orc woman with your seed and stay balls deep inside her until the spurts eventually ebb off. Pulling out and sinking forward to lie spent on top of your freshly bred orc amazon, you rest your head against the twin bulges of her breasts a moment, then push the fabric of her chest-wrap aside to take in the bounty of her chest.";
 	WaitLineBreak;
 	say "     Sated and exhausted from the fuck-session, you almost let yourself be drawn in too much by the beauty of the orc's shapely boobs. The temptation is there to feel and caress them, take a nipple between your lips and suckle - but the orc would likely punch you if you remained much longer. She's still riding out her orgasm right now, but give her a few minutes and she'll be back to her full strength and try to kick your ass. For the moment, you decide to be content with fucking her this once and quickly pull out, then snatch up your gear and clothes and rush to the exit out of the camp.";
+	NPCSexAftermath Katya receives "AssFuck" from Player;
 
 to say OrcFemVictorious:
 	if HP of Player > 0: [player submits]
@@ -348,6 +352,7 @@ to say KatyaVictoryPussyEating:
 	WaitLineBreak;
 	say "     Before you can get back to licking on your own, the female orc pushes herself off from the ground and stands over you - providing a truly impressive view. With your head on the ground between her feet, your gaze wanders over her long, muscular legs, the tasty pussy and her bush of pubic hair, then above that Katya's ripped abs and shapely breasts. Quite a sexy amazon! She is content to just stand over you for a little while, breathing a bit hard from getting off just now, then eventually blows out her breath and looks down.";
 	say "     'Well, that was fun. You have some skill at pussy eating,' the female orc says in a tone of grudging recognition. There might even have been a little twitch of her mouth indicating a smile, but it is hard to say because her features harden almost immediately afterwards. 'Still, this is MY camp. So fuck off, will you? And you know what awaits you if you come back!' That said, she makes a fist and cracks her knuckles with the other hand, watching you as you get back to your feet and slip out of the camp. Wandering away from your encounter with the sexy orc, you commit the path to her hidden camp to memory. Might be fun to visit her sometime - even if you're unlikely to get a friendly welcome.";
+	NPCSexAftermath Player receives "OralPussy" from Katya;
 
 to say KatyaVictoryAssEating:
 	say "Crouching down, the powerful woman grabs your arms and pushes them up over your head, pinning them to the ground. She holds you like that in a tight and uncomfortable grip, completely unmoved by your tries to pull your arms aside at least a little to stop them from aching in their current position.";
@@ -373,6 +378,7 @@ to say KatyaVictoryAssEating:
 	WaitLineBreak;
 	say "     At some point - with your tongue still buried in her snatch and wiggling to maybe get a tiny bit more femcum from the woman - Katya eventually gives a pleased sigh and pushes herself up from the ground. Almost drunk on the potency of her fluids, you can do little more than lie back and gape at the truly impressive view this gives you. With your head on the ground between her feet, your gaze wanders over her long, muscular legs, the tasty pussy and her bush of pubic hair, then above that Katya's ripped abs and shapely breasts. Quite a sexy amazon! She is content to just stand over you for a little while, breathing a bit hard from getting off just now, then eventually blows out her breath and looks down.";
 	say "     'Well, that was fun. You have some skill at ass eating - and pussy too,' the female orc says in a tone of grudging recognition. There might even have been a little twitch of her mouth indicating a smile, but it is hard to say because her features harden almost immediately afterwards. 'Still, this is MY camp. So fuck off, will you? And you know what awaits you if you come back!' That said, she makes a fist and cracks her knuckles with the other hand, watching you as you get back to your feet and slip out of the camp. Wandering away from your encounter with the sexy orc, you commit the path to her hidden camp to memory. Might be fun to visit her sometime - even if you're unlikely to get a friendly welcome.";
+	NPCSexAftermath Player receives "OralPussy" from Katya;
 
 to say OrcFemDesc:
 	say "     Katya definitively is an orc to be reckoned with. About seven feet tall, her build is broad-shouldered and packed with muscles. She has the typical features that define an orc - green skin, a pair of sharp tusks poking up from her lower mandible, slightly oversized hands and feet, black somewhat bristly hair (which she wears as a mane that hangs down behind her back) - yet there are some differences too. For example the full orbs of her breasts proudly bulging out the fabric of a chest-wrap improvised from ragged cloth, as well as the fact that her loincloth is NOT bulging with a heavy cock dangling between her legs.";
@@ -848,7 +854,43 @@ Table of GameCharacterIDs (continued)
 object	name
 Katya	"Katya"
 
-Katya is a woman. Katya is in Hidden Camp.
+Katya is a woman.
+ScaleValue of Katya is 4. [human+ sized]
+Body Weight of Katya is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Katya is 9. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Katya is 6. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Katya is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Katya is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Katya is 5. [length in inches]
+Breast Size of Katya is 5. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Katya is 2. [count of nipples]
+Asshole Depth of Katya is 8. [inches deep for anal fucking]
+Asshole Tightness of Katya is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Katya is 0. [number of cocks]
+Cock Girth of Katya is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Katya is 0. [length in inches]
+Ball Count of Katya is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Katya is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Katya is 1. [number of cunts]
+Cunt Depth of Katya is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Katya is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Katya is 4. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Katya is false.
+PlayerRomanced of Katya is false.
+PlayerFriended of Katya is false.
+PlayerControlled of Katya is false.
+PlayerFucked of Katya is false.
+OralVirgin of Katya is false.
+Virgin of Katya is false.
+AnalVirgin of Katya is true.
+PenileVirgin of Katya is true.
+SexuallyExperienced of Katya is true.
+TwistedCapacity of Katya is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Katya is false. [steriles can't knock people up]
+MainInfection of Katya is "Orc Female".
+Katya is in Hidden Camp.
 Description of Katya is "[KatyaDesc]".
 Conversation of Katya is { "placeholder" }.
 
@@ -1100,6 +1142,7 @@ to say KatyaSex2: [fuck her mouth]
 		say "     Groaning around your dick, Katya is tapping out - oops, you kinda forgot she has to breathe, lost in arousal as you were. Hastily withdrawing from her mouth, you watch as she gulps in a deep breath of air, panting loudly to replenish her reserves of oxygen. 'Damn! You like fucking my face too much,' she gasps out in between breaths, yet the grin on her face shows that she isn't actually cross with you. 'Good thing I like you back,' she adds right after, then stands up and pulls you into a demanding kiss, tongue-wrestling and all. You make out with her like that for quite a while, oblivious to the rest of the world as you can barely stop kissing the sexy orc, but eventually it is time to get back to dealing with the realities of living in a post-apocalyptic city.";
 		if KatyaRelationship is 5:
 			now KatyaRelationship is 6; [had sexy times with her]
+	NPCSexAftermath Katya receives "OralCock" from Player;
 
 to say KatyaSex3: [lick her pussy]
 	if KatyaResistance is 0: [tamed slut]
@@ -1131,6 +1174,7 @@ to say KatyaSex3: [lick her pussy]
 		say "     At some point - with your tongue still buried in her snatch and wiggling to maybe get a tiny bit more femcum from the woman - Katya eventually catches her breath a little and says, 'Man, you're good with that tongue. I just might to have to keep you here permanently - ready for my pleasure, hah!' With a pleased sigh, she sits up and pulls your head to hers, giving you a kiss on the lips before letting herself fall back again, ready to take a nap to restore her energies. You follow suit, crawling up next to her and laying down, soon finding yourself embraced by her muscular arm and pulled close to cuddle. Staying like that for quite a while, sharing little touches and caresses with your sexy orc, you enjoy yourself quite a bit before eventually getting up to deal with other urgent matters once more.";
 		if KatyaRelationship is 5:
 			now KatyaRelationship is 6; [had sexy times with her]
+	NPCSexAftermath Player receives "OralPussy" from Katya;
 
 to say KatyaSex4: [fuck her pussy]
 	if KatyaResistance is 0: [tamed slut]
@@ -1163,6 +1207,7 @@ to say KatyaSex4: [fuck her pussy]
 		say "     Throb after heavy throb, you fill the muscular orc woman with your seed and stay balls-deep inside her until the spurts eventually ebb off. Now lying spent on top of your freshly bred orc amazon, you rest your head against the twin bulges of her breasts a moment, rubbing your right cheek against the warm curves. Sated and exhausted from the fuck-session, you let yourself be drawn in by the beauty of the orc's shapely boobs. Following the temptation to feel and caress them, you soon take a nipple between your lips and suckle once more. This results in her putting a hand on your shoulder, grasping it, then moving up a little more to stroke your back and share the pleasure you are giving her. 'Suck them harder!' she groans out urgently, panting a little. Your sexy orc likes her nipples being played with! After indulging her with a short while of boob worship, you eventually pull your softening dick out of her snatch, then simply lie with her for a while, entwined on the sleeping bag in your nakedness.";
 		if KatyaRelationship is 5:
 			now KatyaRelationship is 6; [had sexy times with her]
+	NPCSexAftermath Katya receives "PussyFuck" from Player;
 
 to say KatyaSex5: [fuck her ass]
 	if KatyaResistance is 0: [tamed slut]
@@ -1201,6 +1246,7 @@ to say KatyaSex5: [fuck her ass]
 		say "     Throb after heavy throb, you fill the muscular orc woman with your seed and stay balls deep inside her until the spurts eventually ebb off. Pulling out and sinking forward to lie spent on top of your freshly bred orc amazon, you rest your head against the twin bulges of her breasts a moment. Sated and exhausted from the fuck-session, you let yourself be drawn in by the beauty of the orc's shapely boobs. Following the temptation to feel and caress them, you soon take a nipple between your lips and suckle once more. This results in her putting a hand on your shoulder, grasping it, then moving up a little more to stroke your back and share the pleasure you are giving her. 'Suck them harder!' she groans out urgently, panting a little. Your sexy orc likes her nipples being played with! After indulging her with a short while of boob worship, you eventually pull your softening dick out of her snatch, then simply lie with her for a while, entwined on the sleeping bag in your nakedness.";
 		if KatyaRelationship is 5:
 			now KatyaRelationship is 6; [had sexy times with her]
+	NPCSexAftermath Katya receives "AssFuck" from Player;
 
 to say KatyaSex6: [69 and scissoring]
 	if KatyaResistance is 0: [tamed slut]
@@ -1225,6 +1271,11 @@ to say KatyaSex6: [69 and scissoring]
 		say "     For a long moment, you just stay like that, enjoying the warmth and closeness of the woman under you, then tiredly raise your head from its resting place against her chest. The orc notices you move and glances down to you, her face drawing into an expression of well-sated desire. 'That. Was. Amazing.' Katya pants out and smiles at you, clearly no less exhausted than you yourself are after your quite vigorous coupling. She raises her head to share another peck on the lips with you, then sinks back again and just caresses your back for a little while before soon dozing off - as do you yourself.";
 		if KatyaRelationship is 5:
 			now KatyaRelationship is 6; [had sexy times with her]
+		if Player is male:
+			NPCSexAftermath Katya receives "OralCock" from Player;
+		if Player is female:
+			NPCSexAftermath Katya receives "OralPussy" from Player;
+		NPCSexAftermath Player receives "OralPussy" from Katya;
 
 to say KatyaSex7: [Katya straddles the player's face]
 	if KatyaResistance is 0: [tamed slut]
@@ -1254,5 +1305,6 @@ to say KatyaSex7: [Katya straddles the player's face]
 		WaitLineBreak;
 		say "     Eating out and fingering your lover while she returns the favor, the two rapidly barrel past any hope of holding back on the breathtaking orgasms you have building, instead pushing one another along to greater and greater heights of lust. It does not take all that much longer before you reach the finish-line together, bucking against each other hard as you orgasm. Katya squirts femcum and gives a climactic shout, with it trickling over the skin between her legs and right into your mouth, letting you taste the ambrosia that is orc (fem)cum. Meanwhile [if Player is male]your cock throbs hard in her grasp, sending long spurts of cum flying to splat against Katya's breasts, as well as her chest and your own[else if Player is female]your own pussy throbs under her caresses, soaking Katya's stroking fingers[else]you buck hard against her stroking fingers, trembling in orgasm yourself[end if].";
 		say "     By the time both of you have wound down from your respective orgasms, Katya pulls you up into a sitting position and strokes your cheek lovingly. 'That was fun!' she gushes out, a pleased gleam in her eyes. 'I'm so glad I met you, hope you know that.' With a satisfied sigh, she lies down to rest for a while afterwards, and you snuggle up against her side to do the same.";
+	NPCSexAftermath Player receives "OralPussy" from Katya;
 
 Orc Female ends here.

@@ -516,7 +516,7 @@ This is the player attack rule:
 	else:
 		say "You miss!";
 	if Player is not lonely:
-		[if a random chance of petchance in 4000 succeeds and ]
+		[if a random chance of petchance in 4000 succeeds and ] [TODO: Rebuild this section]
 		if "Double Team" is listed in feats of Player:[The Horde]
 			LineBreak;
 			say "Your pets, always close by, aid you in attacking the enemy, synchronizing both their attacks against the [EnemyNameOrTitle]!";

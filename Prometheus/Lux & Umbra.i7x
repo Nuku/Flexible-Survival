@@ -117,6 +117,7 @@ object	name
 Umbra	"Umbra"
 
 LuxUmbraMaturityCounter is a number that varies. LuxUmbraMaturityCounter is usually 0.
+Lux&UmbraResidentOpinionCount is a number that varies. Lux&UmbraResidentOpinionCount is usually 0. [Does not need to be saved..]
 
 Lux is a woman.
 ScaleValue of Lux is 3. [human sized]
@@ -174,7 +175,7 @@ to say Luxdesc:
 				say "     Lux patiently sits beside the door [if Fang is in Grey Abbey Library]between her brother and father, the three [else]with her brother, the two [end if]of them snuggling together companionably. Lux is a little smaller than her sibling and her fluffy paler gray fur contrasts with his, helping her to camouflage in the city when she explores. Given that she was born before Umbra, it is little surprise that she is more senior in the pack hierarchy, though the two of them don't often express this.";
 				say "     Noticing you watching her, she meets your gaze, her dark-gray eyes inquisitive, expressive, and rarely missing any movement, a trait that helps while she helps Fang keep guard. She demonstrates an intelligence higher than the feral wolves that you have encountered, possibly even her father, and has used this mental capability to develop capabilities such as fluent speech and the ability to walk on her hind legs for extended periods. As her brother doesn't speak as often as her, she often translates his body language and other non-vocal attempts at communication. Her tail thumps against the floor as she wags at your continued attention.";
 			else if Lux is in Courtyard:
-				say "     Lux bounces and plays with her brother around the fountain and trees[if Fang is in Courtyard], Fang occasionally joining in when invited, the three of them enjoying this moment of family time[else], enjoying this time bonding with Umbra though the two of them seem inseperable anyway[end if]. Lux is a little smaller than her sibling and her fluffy paler gray fur contrasts with his, helping her to camouflage in the city when she explores. Given that she was born before Umbra, it is little surprise that she is more senior in the pack hierarchy, though the two of them don't often express this.";
+				say "     Lux bounces and plays with her brother around the fountain and trees[if Fang is in Courtyard], Fang occasionally joining in when invited, the three of them enjoying this moment of family time[else], enjoying this time bonding with Umbra though the two of them seem inseparable anyway[end if]. Lux is a little smaller than her sibling and her fluffy paler gray fur contrasts with his, helping her to camouflage in the city when she explores. Given that she was born before Umbra, it is little surprise that she is more senior in the pack hierarchy, though the two of them don't often express this.";
 				say "     Noticing you watching her, she halts her play and meets your gaze, her dark-gray eyes inquisitive, expressive, and rarely missing any movement, a trait that helps while she helps Fang keep guard. She demonstrates an intelligence higher than the feral wolves that you have encountered, possibly even her father, and has used this mental capability to develop capabilities such as fluent speech and the ability to walk on her hind legs for extended periods. As her brother doesn't speak as often as her, she often translates his body language and other non-vocal attempts at communication. She gives you a friendly wag before resuming trying to grab her brother by the [one of]back leg[or]neck[or]tail[at random].";
 			else if Lux is in Computer Lab:
 				say "     Lux is curled up beside one of the desks with her brother[if Fang is in Computer Lab]and father, the three [else], the pair [end if]of them snuggled together as they sleep[if Dash is in Computer Lab]along with Dash who is almost buried beneath a cloud of warm and soft wolf fur between them all[end if]. Lux is a little smaller than her sibling and her fluffy paler gray fur contrasts with his, helping her to camouflage in the city when she explores. Given that she was born before Umbra, it is little surprise that she is more senior in the pack hierarchy, though the two of them don't often express this.";
@@ -211,6 +212,11 @@ to say LuxTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Ask about her thoughts on Fang and Umbra";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Other Library Residents";
+	now sortorder entry is 3;
+	now description entry is "Ask her and her brother about their opinions of others in the library";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -230,6 +236,8 @@ to say LuxTalkMenu:
 					say "[LuxTalk1]";
 				if (nam is "Family"):
 					say "[LuxTalk2]";
+				if (nam is "Other Library Residents"):
+					say "[Lux&UmbraResidentOpinion]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -256,6 +264,173 @@ to say LuxTalk2:
 		say "     You are curious about Lux's opinions on Fang and Umbra and so ask her, receiving a bright smile in response. 'Daddy might have difficulty expressing it, but he is very grateful to you for giving him a family again. While he hasn't told me much about his personal life before the crisis, I know that he had a wife and daughter who left him, and he had difficulty coping. Now he gets another chance to be with people that love him, an important part of being human or wolf. I doubt that he would be against expanding the pack a bit more, if you understand what I'm saying. While he may not have the same grasp of human language as me, don't discount his intelligence. He's a lot more cunning and crafty than he appears, a trait that he has cultivated to increase his chances of survival, though his previous pack didn't seem to value it. What else is there to say about him? I think that I'm his favorite, though don't tell Umbra I said that. He might disagree, and I wouldn't want to have to shatter that hope. What male doesn't like having a daughter to pamper and impress?'";
 		say "     'Where should I start on Umbra? My brother isn't as literarily gifted as me, but, like my father, he isn't stupid as his combat capabilities show. He just has difficulty expressing his feelings in words. You may have noticed how affectionate he is to his family, you included. That is him showing how much he cares when your grasp of wolf communication isn't as fluent as our own. I'm so glad that he expresses his emotions so easily compared to some of the men in the books I read. Why is a lack of emotion considered an attractive trait in males so often? I think that Umbra may be more than a little in awe of you, and he is impressed by how capable you are, seeing as how you have survived so well in the current situation between the roaming creatures and the invading army. He may want to learn to be more like you. When you have always been there for us, I share similar admiration towards you.' She seems to be squirming slightly and you raise an eyebrow in question. She flushes deeply and hurriedly responds, 'Please excuse me, I'm getting certain feelings that should be dealt with away from family.' With that, she scurries away, leaving you mildly confused at the abrupt end to the conversation.";
 		add "LuxUmbra Incest Disabled" to feats of Player;
+
+to say Lux&UmbraResidentOpinion:
+	say "     You ask the two of them whether there are any other residents of note that they wish to discuss with you. The twins think for a moment before eventually replying.";
+	if Lux&UmbraResidentOpinionCount is 3:
+		say "     'I can't think of anything to say at the moment. What about you Umbra?' Lux responds before asking her brother to see whether he has anything to add. He shakes his head and you accept that this avenue of conversation isn't going anywhere for now. Perhaps ask again later. The more people you allow to live here, the more likely there will be something of interest to learn about them.";
+		now Lux&UmbraResidentOpinionCount is 0;
+	else:
+		if a random number between 1 and 2 is:
+			-- 1: [Amy]
+				if Resolution of Lux & Amy Sexual Interest is 1 and Resolution of Umbra & Amy Sexual Interest is 1:
+					say "     'I think that my brother and I can definitely agree that Amy is one of our favorite people in the library,' Lux cheerfully informs you, Umbra quickly nodding in agreement. 'She's pretty and nice,' he adds, dipping his head slightly almost in embarrassment. 'I have to agree,' Lux continues, 'She has a way of making you feel at ease and her fur is so well cared for. I think Daddy likes her too from the way he looks at her, [if XP of Amy is 1]not to mention how often the two of them seem to be mating. We watch the two of them sometimes and they haven't seemed to mind[else if HP of Fang is 2]but he seems reluctant to discuss it with us[else if HP of Fang is 3 or HP of Fang is 4] and as Alpha he could make advances on her if he wished[else if HP of Fang is 5]and we occasionally sit around and discuss what we like about her, not unlike what we are doing now[end if]. She helps me with my speech from time to time and we read books together.' 'She reads to me and has a warm lap,' Umbra says wagging his tail at the thought. 'I don't talk well but understand. She help teach me.' It sounds like the two of them like Amy for multiple reasons and that she is an important part of their lives. You ruffle the fur on their heads and thank them for their opinion as they wait to see whether there was anything else that you wanted.";
+				else if Resolution of Lux & Amy Sexual Interest is 1:
+					say "     'I can definitely say that Amy is one of my favorite people in the library,' Lux cheerfully informs you, [if Resolution of Umbra & Amy Sexual Interest is 2]Umbra flattening his ears and looking away with a pained expression. Noticing her brother's reaction, the pale-furred wolf quickly apologizes to him. 'Oh. Sorry. That was tactless of me. But even though the two of you can't be together, you have to agree with me when I say that she [else]Umbra quickly nodding in agreement. 'She's nice,' he adds. 'I have to agree,' Lux continues, 'She [end if]has a way of making you feel at ease and her fur is so well cared for. I think Daddy likes her too from the way he looks at her, [if XP of Amy is 1]not to mention how often the two of them seem to be mating. We watch the two of them sometimes and they haven't seemed to mind[else if HP of Fang is 2]but he seems reluctant to discuss it with us[else if HP of Fang is 3 or HP of Fang is 4] and as Alpha he could make advances on her if he wished[else if HP of Fang is 5]and we occasionally sit around and discuss what we like about her, not unlike what we are doing now[end if]. She helps me with my speech from time to time and we read books together.' 'She reads to me,' Umbra says rejoining the conversation. 'I don't talk well but understand. She help teach me.' It sounds like Amy plays an important part in their lives, especially in their language development. You ruffle the fur on their heads and thank them for their opinion as they wait to see whether there was anything else that you wanted.";
+				else if Resolution of Umbra & Amy Sexual Interest is 1:
+					say "     '[if Resolution of Lux & Amy Sexual Interest is 2]I'm not sure how deep my feelings are for Amy. I really like her, but I'm not sure if I [']like like['] her,' Lux hesitantly says. 'I [']like like['] her,' Umbra adds, earning a snort of laughter from his sister. 'Good for you. I wish that I had you confidence.[else]I'm rather fond of Amy, perhaps more, but either way she's one of the better people in the library,' Lux cheerfully informs you, Umbra quickly nodding in agreement. 'She's pretty and nice and one of the best,' he adds, dipping his head slightly almost in embarrassment. 'One of the best you say? That's high praise coming from you. This wouldn't have anything to do with her attraction to you would it? I wonder if there might be room for me in that relationship too,' Lux teases him. You cough to bring the conversation back on track. Continuing smirking at her brother, Lux continues, '[end if]She has a way of making you feel at ease and her fur is so well cared for. I think Daddy likes her too from the way he looks at her, [if XP of Amy is 1]not to mention how often the two of them seem to be mating. We watch the two of them sometimes and they haven't seemed to mind[else if HP of Fang is 2]but he seems reluctant to discuss it with us[else if HP of Fang is 3 or HP of Fang is 4] and as Alpha he could make advances on her if he wished[else if HP of Fang is 5]and we occasionally sit around and discuss what we like about her, not unlike what we are doing now[end if]. She helps me with my speech from time to time and we read books together.' 'She reads to me and has a warm lap,' Umbra says wagging his tail at the thought. 'I don't talk well but understand. She help teach me.' It sounds like Amy plays an important part in their lives, especially in their language development. You ruffle the fur on their heads and thank them for their opinion as they wait to see whether there was anything else that you wanted.";
+				else if (HP of Amy > 9 and HP of Amy < 13):
+					say "     [if Resolution of Lux & Amy Sexual Interest is 2]I'm not sure how deep my feelings are for Amy. I really like her, but I'm not sure if I [']like like['] her,' Lux hesitantly says[else]I'm rather fond of Amy, perhaps more, but either way she's one of the better people in the library,' Lux cheerfully informs you[end if]. [if Resolution of Umbra & Amy Sexual Interest is 2]Umbra flattening his ears and looking away with a pained expression. Noticing her brother's reaction, the pale-furred wolf quickly apologizes to him. 'Oh. Sorry. That was tactless of me. But even though the two of you can't be together, you have to agree with me when I say that she [else]Umbra quickly nodding in agreement. 'She's nice,' he adds. 'I have to agree,' Lux continues, 'She [end if]has a way of making you feel at ease and her fur is so well cared for. I think Daddy likes her too from the way he looks at her, [if XP of Amy is 1]not to mention how often the two of them seem to be mating. We watch the two of them sometimes and they haven't seemed to mind[else if HP of Fang is 2]but he seems reluctant to discuss it with us[else if HP of Fang is 3 or HP of Fang is 4] and as Alpha he could make advances on her if he wished[else if HP of Fang is 5]and we occasionally sit around and discuss what we like about her, not unlike what we are doing now[end if]. She helps me with my speech from time to time and we read books together.' 'She reads to me,' Umbra says rejoining the conversation. 'I don't talk well but understand. She help teach me.' It sounds like Amy plays an important part in their lives, especially in their language development. You ruffle the fur on their heads and thank them for their opinion as they wait to see whether there was anything else that you wanted.";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 2: [Carl]
+				if Resolution of Lux & Carl Sexual Interest is 1 and Resolution of Umbra & Carl Sexual Interest is 1:
+					say "     'Carl's hot,' Umbra states, earning a roll of his sister's eyes. 'I mean, I agree, but did you have to say it so bluntly?' she asks him with exasperation. Umbra meerly shrugs and gives her a toothy grin. Lux sighs before continuing discussing the husky soldier with you. 'Carl may be attractive, with a toned body and large in all the right places, but it isn't just physical attraction, his vigilance rivals Daddy's. Carl's dedication is admirable as is how friendly and approachable he seems to be, a trait that our father could probably learn from. Not that I have a problem with Daddy. If everyone was the same it would be dull[if HP of Fang is 5], a belief that I believe that he shares too[end if].' 'I help,' Umbra firmly adds. 'Yes. Umbra likes to help Carl keep watch from time to time and I suppose I occasionally do too, but I'm not sure how much help we are. He greets us with a smile either way,' Lux elaborates. You ruffle the fur on their heads and thank them for their opinion as they wait to see whether there was anything else that you wanted.";
+				else if Resolution of Lux & Carl Sexual Interest is 1:
+					say "     'Carl and I have been getting to know each other a little better, [if Resolution of Umbra & Carl Sexual Interest is 2]but that's sort of a sore point for Umbra as Carl doesn't seem to be interested in him,' Lux informs you, her brother letting out a grouchy snort and nosing at your hand to get you to pat him[else]but I think that Umbra is jealous,' Lux informs you, her brother all but confirming the statement with a sour grumble before nosing at your hand to pet him[end if]. You idly do so as your daughter continues. 'If my brother will excuse me continuing to answer your question, Carl is quite the example of masculine desirability with a toned body and large in all the right places, but it isn't just physical attraction, his vigilance rivals Daddy's. Carl's dedication is admirable as is how friendly and approachable he seems to be, a trait that our father could probably learn from. Not that I have a problem with Daddy. If everyone was the same it would be dull[if HP of Fang is 5], a belief that I believe that he shares too[end if].' 'I help,' Umbra firmly adds. 'Yes. Umbra likes to help Carl keep watch from time to time and I suppose I occasionally do too, but I'm not sure how much help we are. He greets us with a smile either way,' Lux elaborates. You ruffle the fur on their heads and thank them for their opinion as they wait to see whether there was anything else that you wanted.";
+				else if Resolution of Umbra & Carl Sexual Interest is 1:
+					say "     'Carl's hot,' Umbra states, [if Resolution of Lux & Carl Sexual Interest is 2]earning a sour look from his sister. 'Rub it in why don't you... I mean, I agree, but he rejected me,' she mutters causing Umbra's ears to flatten at the hurt in her voice. Lux sighs sadly before putting on a brave face to continue discussing the husky soldier with you[else]earning a roll of his sister's eyes. 'I mean, I agree, but he doesn't know that yet and you never know who is listening?' she almost hisses at him exasperatedly. Umbra merely shrugs and gives her a toothy grin. Lux sighs before continuing discussing the husky soldier with you[end if]. 'Carl may be attractive, with a toned body and large in all the right places, so you understand [if Resolution of Lux & Carl Sexual Interest is 2]my pain at rejection[else] my attraction[end if], but his vigilance rivals Daddy's. Carl's dedication is admirable as is how friendly and approachable he seems to be, a trait that our father could probably learn from. Not that I have a problem with Daddy. If everyone was the same it would be dull[if HP of Fang is 5], a belief that I believe that he shares too[end if].' 'I help,' Umbra firmly adds. 'Yes. Umbra likes to help Carl keep watch from time to time and I suppose I occasionally do too, but I'm not sure how much help we are. He greets us with a smile either way,' Lux elaborates. You ruffle the fur on their heads and thank them for their opinion as they wait to see whether there was anything else that you wanted.";
+				else if HP of Carl is 10: [Confident Carl]
+					say "     'Carl's hot,' Umbra states before his sister shushes him. 'I agree, but he doesn't know that yet and you don't have to say it so bluntly,' she hisses at him, fixing him with a stern glare. Umbra rolls his eyes but holds his tongue from further comment anyway. Lux sighs before continuing discussing the husky soldier with you. 'Carl may be attractive, with a toned body and large in all the right places, so you understand our attraction, but his vigilance rivals Daddy's. Carl's dedication is admirable as is how friendly and approachable he seems to be, a trait that our father could probably learn from. Not that I have a problem with Daddy. If everyone was the same it would be dull[if HP of Fang is 5], a belief that I believe that he shares too[end if].' 'I help,' Umbra firmly adds. 'Yes. Umbra likes to help Carl keep watch from time to time and I suppose I occasionally do too, but I'm not sure how much help we are. He greets us with a smile either way,' Lux elaborates. You ruffle the fur on their heads and thank them for their opinion as they wait to see whether there was anything else that you wanted.";
+				else if HP of Carl is 30: [Subby Carl]
+					say "     'Carl is broken,' Umbra states sadly before his sister shushes him. 'Not so loud. I agree, but it seems a hurtful thing to say, especially if he overhears you saying it,' she whispers. Umbra hangs his head ashamedly until, feeling sorry for him, you scritch the fur on the back of his neck to cheer him up again. 'It's sad. I don't know what happened to him before he came here, but Carl seems to be a shell of who he should be. He lacks confidence and seems submissive to everyone despite the drive and confidence that one would expect from a soldier,' Lux continues in a hushed tone, eyes darting around to make sure that the husky doesn't overhear. 'He is upstairs. By the window. Relax,' Umbra reassures her, demonstrating the capability of his animalistic senses. Your daughter lets out a relieved breath before resuming speaking. 'Despite this, he seems remarkably vigilant, almost as much as Daddy is, which suggests that he still uses some of his old training.' 'I help,' Umbra firmly adds. 'Yes. Umbra likes to help Carl keep watch from time to time and I suppose I occasionally do too. He greets us as he does anyone, with a smile, but I'm not sure how much help we actually are,' Lux elaborates. You ruffle the fur on their heads and thank them for their opinion as they wait to see whether there was anything else that you wanted.";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			[-- 3: [Sarah]
+				if SarahCured > 1: [In Control]
+					say "     ";
+				else if SarahSlut > 1: [Horny]
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 4: [Colleen]
+				if ColleenAlpha > 0: [Dominant]
+					say "     ";
+				else if ColleenSlut is 1: [Slutty, No Collar]
+					say "     ";
+				else if ColleenCollared is 1: [Slutty, Collar]
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 5: [Sidney]
+				if level of Sidney is 21: [Fox]
+					say "     ";
+				else if level of Sidney is 22 or level of Sidney is 23: [Otter]
+					say "     ";
+				else if level of Sidney is 71: [Wusky]
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 6: [Sven]
+				if hp of Sven > 3 and hp of Sven < 11: [Subby]
+					say "     ";
+				else if hp of Sven > 29 and hp of Sven < 50: [Confident]
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 7: [Klauz]
+				if Klauz is Tamed:
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 8: [Sandra]
+				if hp of Sandra > 0: [At Library]
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+				say "     ";
+			-- 9: [Alexandra]
+				if hunger of Alexandra is 1: [Good Alexandra]
+					say "     ";
+				else if hp of Alexandra > 0 and hp of Alexandra < 50: [Bad Alexandra]
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 10: [Korvin]
+				if GSD_pet > 19 and GSD_pet < 60: [Subby Korvin]
+					say "     ";
+				else if GSD_pet > 59 and GSD_pet < 100: [Cinfident Korvin]
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 11: [Xerxes]
+				if hp of Xerxes > 0:
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 12: [Helen]
+				if hp of Helen > 0:
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 13: [Candy]
+				if coonstatus is 2:
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 14: [Elijah]
+				if hp of Elijah is 3 or hp of Elijah is 4:
+					say "     ";
+				else if hp of Elijah is 99:
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 15: [Eric]
+				if hp of Eric > 9 and hp of Eric < 16: [Cuntboy]
+					say "     ";
+				else if hp of Eric > 20 and hp of Eric < 43: [Male]
+					say "     ";
+				else if hp of Eric is 99:
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 16: [Dash]
+				if dash is tamed:
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 17: [Jimmy]
+				if hunger of Jimmy is 1:
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 18: [Ryousei]
+				if Ryousei is tamed:
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 19: [Tehuantl]
+				if hp of Tehuantl > 9 and hp of Tehuantl < 50: [Female]
+					say "     ";
+				else if hp of Tehuantl > 49 and hp of Tehuantl < 100: [Male]
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";
+			-- 20: [Paula]
+				if hunger of Paula is 1:
+					say "     ";
+				else:
+					increase Lux&UmbraResidentOpinionCount by 1;
+					say "[Lux&UmbraResidentOpinion]";]
 
 Umbra is a man.
 ScaleValue of Umbra is 3. [human sized]
@@ -344,10 +519,10 @@ to say UmbraTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Ask whether he has found anything of interest while out in the city";
 	[]
-	choose a blank row in table of fucking options;
+	[choose a blank row in table of fucking options;
 	now title entry is "Small Talk";
 	now sortorder entry is 2;
-	now description entry is "Make idle conversation";
+	now description entry is "Make idle conversation";]
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -366,8 +541,8 @@ to say UmbraTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Scavenging"):
 					say "[UmbraTalk1]";
-				if (nam is "Small Talk"):
-					say "[UmbraTalk2]";
+				[if (nam is "Small Talk"):
+					say "[UmbraTalk2]";]
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -378,10 +553,38 @@ to say UmbraTalkMenu:
 	clear the screen and hyperlink list;
 
 to say UmbraTalk1: [An easy way of getting food and water (or soda and chips if the player has Junkfood feat)]
-	say "     WIP.";
+	say "     Somehow doubting that Lux and Umbra spend all of their time in the library while you are absent and exploring the city, you crouch in front of your son and stroke his head as you ask whether he has found anything of use in one of their excursions. He perks his ears up at this before [if player is in Computer Lab]scrabbling under the arrangement of desks that he and his sister use for a den[else]rushing off towards the computer lab[end if], eventually returning with ";
+	if a random number between 1 and 4 is:
+		-- 1: [Food or Chips]
+			if "Junk Food Junkie" is listed in feats of player:
+				say "a bag of chips. It seems to be in good condition and well within the expiration date so you find a space in your packpack to put it for if you need a snack while exploring the city. Umbra seems very pleased with himself for finding something of use to you and his tail wags even faster when you start to scratch his chin and coo what a good boy he is. Lux looks over at the attention that her brother is getting and almost shyly approaches as if to hint that she too would like to be petted, a desire that you readily fulfil, feeling the thickness of her coat of fur as you ruffle the fur on the back of her neck. Unfortunately, you must eventually stop but you reassure your children that you will continue lavishing them with love soon.";
+				ItemGain chips by 1;
+			else:
+				say "a can of soup. It is in surprisingly good condition and nowhere near its expiration date so you don't see any problem with putting it in your backpack for later. Umbra seems very pleased with himself for finding something of use to you and his tail wags even faster when you start to scratch his chin and coo what a good boy he is. Lux looks over at the attention that her brother is getting and almost shyly approaches as if to hint that she too would like to be petted, a desire that you readily fulfil, feeling the thickness of her coat of fur as you run your hands through it as you stroke her. Unfortunately, you must eventually stop but you reassure your children that you will continue lavishing them with love soon.";
+				ItemGain food by 1;
+		-- 2: [Water or Soda]
+			if "Junk Food Junkie" is listed in feats of player:
+				say "can of soda. The metal is unblemished making you wonder where your son even found it not to mention how he managed to carry it without crushing it at all. Impressed by his find, you slide it into your backpack then begin scratching the thick fur of Umbra's chest, eliciting a low whine of pleasure from the wolf. Lux looks up from where she was lying and approaches you, slowly wagging her tail and licking around her mouth before snuggling up next to you as well. With a wolf on each arm, you relax between them, gently petting them and enjoying some quiet time with your children. Eventually, you decide that you should be getting back to your other responsibilities, giving the twins a kiss on the nose as you leave.";
+				ItemGain soda by 1;
+			else:
+				say "bottle of water. Surprisingly, the liquid is completely clear and the seal is unbroken meaning that in all likelihood, the water is still safe to drink. Impressed by his find, you slide it into your backpack then begin scratching the thick fur of Umbra's chest, eliciting a low whine of pleasure from the wolf. Lux looks up from where she was lying and approaches you, slowly wagging her tail and licking around her mouth before snuggling up next to you as well. With a wolf on each arm, you relax between them, gently petting them and enjoying some quiet time with your children. Eventually, you decide that you should be getting back to your other responsibilities, giving the twins a kiss on the nose as you stand up to leave.";
+				ItemGain water bottle by 1;
+		-- 3: [A Tennis Ball]
+			say "a tennis ball. It looks like any other tennis ball that you've seen, but from the way Umbra is enthusiastically squeezing it between his teeth suggests that he thinks that it is a contender for the best thing since sliced bread. You can't help but find it endearing, scratching him between the ears while making a few mock attempts to take the ball from his mouth, though each time your hand approaches it he twists away with a smug expression. The obsession with the ball doesn't seem exclusive to Umbra as soon Lux pads over and stares intently at the fuzzy yellowy-green sphere in his mouth. You roll your eyes at your children's antics, but smile as you bring them both in for a group hug, your daughter making a tentative (unsuccessful) attempt to coax the ball out of her brother's mouth as he softly growls at her. As you release them, Umbra drops the ball into your hand, giving you the prized object, both wolves watching as you stash it in your backpack for should you ever need it. With one last pat, you stand up and decide what to do next.";
+			ItemGain tennis ball by 1;
+		-- 4: [Panties]
+			say "a pair of frilly pink panties. You take a second longer look to make sure that you have seen correctly, that the wolf has indeed got a pair of ladies underwear in his mouth, but come to the same conclusion that you did before. He has. He seems rather proud of himself, enthusiastically wagging and bouncing from one paw to the other as he deposits the garment in your hand then sitting back and smiling widely as best as he can. His excitement causes, Lux to trot over, your daughter curiously sniffing the panties before giving them a single lick and pressing herself against your side to encourage you to stroke her. With a sigh, you thank Umbra for bringing them to you and stuff them into your backpack then devote you attention to cuddling the two of them at the same time, receiving lots of licks and smooches in return. Eventually, face sodden with wolf saliva, you are able to leave again, conscious of the fact that you have an unknown person's underwear in your backpack.";
+			ItemGain pink panties by 1;
 
-to say UmbraTalk2:
-	say "     You crouch down and scratch him behind the ears as you tell him about your exploits in the city.(WIP)"; [Will likely be the player telling him about various specific adventures]
+[to say UmbraTalk2: [Will be expanded upon further in future]
+	say "     You crouch down and scratch Umbra behind the ears as you begin to tell him about "; [Will likely be the player telling him about various specific adventures]
+	if a random number between 1 and 3 is:
+		-- 1: [Urban Forest]
+			say "the Urban Forest, where you first met Fang. He is captivated as you describe some of the creatures that now live there such as the skunks, elves, and, of course the wolves.";
+		-- 2: [Zephyr]
+			say "";
+		-- 3: [Military Presence]
+			say "";]
 
 Section 2 - Sex
 
@@ -486,7 +689,7 @@ instead of going to Computer Lab while HP of Lux > 3 and HP of Umbra > 3 and Lux
 		say "     You continue to watch the three of them sleep, leaning against the doorframe so as not to risk waking them. Sensing movement behind you and feeling a form against your side, you look to find Fang silently joining you in watching over the members of his pack. They look so sweet and vulnerable at the moment, and you can sense the love that the large wolf bears for them radiating from him, [if HP of Fang is 3 or HP of Fang is 4]undiminished by the authority that he bears[else]a feeling that you share[end if]. However, he doesn't remain there for long, giving you an affectionate lick before returning to his post by the front door to continue watch, satisfied with the safety of his children. With a contented sigh, you too leave, reducing the risk that you will inadvertently rouse the three of them unnecessarily, following Fang back to the main entrance.";
 	else: [ Lux & Umbra curled up together ]
 		say "     As you enter the computer room, turned den-of-children, the sight before you causes you to halt in your tracks. In front of you, your children, Lux and Umbra, are curled up together, fast asleep. You can hear the larger male wolf snoring softly as his chest expands and shrinks in time with his sister's. Even while resting, they are in sync, bringing a smile to your mouth. They seem to be fast asleep, the occasional movement in response to dreams failing to stir either to wakefulness, and you imagine that their trust in Fang guarding the door to the library allows them to display such vulnerability. For a moment, you admire their fluffiness and the contrast in the shades of gray of their fur as it mingles where they are pressed together. Were it not for the risk of disturbing them, you might consider giving them a loving pat, but you restrain yourself and merely imagine the feel of their fur against your palm.";
-		say "     You continue to watch them sleep, leaning against the doorframe so as not to risk waking them. Sensing movement behind you and feeling a form against your side, you look to find Fang silently joining you in watching over your children. They look so sweet and vulnerable at the moment, and you can sense the love that the large wolf bears for them radiating from him, [if hp of Fang is 3 or hp of Fang is 4]undiminished by the authority that he bears[else]a feeling that you share[end if]. However, he doesn't remain there for long, giving you an affectionate lick before returning to his post by the front door to continue watch, satisfied with the safety of his children. With a contented sigh, you too leave, reducing the risk that you will inadvertently rouse them unnecessarily, following Fang back to the main entrance.";
+		say "     You continue to watch them sleep, leaning against the doorframe so as not to risk waking them. Sensing movement behind you and feeling a form against your side, you look to find Fang silently joining you in watching over your children. They look so sweet and vulnerable at the moment, and you can sense the love that the large wolf bears for them radiating from him, [if HP of Fang is 3 or HP of Fang is 4]undiminished by the authority that he bears[else]a feeling that you share[end if]. However, he doesn't remain there for long, giving you an affectionate lick before returning to his post by the front door to continue watch, satisfied with the safety of his children. With a contented sigh, you too leave, reducing the risk that you will inadvertently rouse them unnecessarily, following Fang back to the main entrance.";
 
 
 Table of GameEventIDs (continued)
@@ -528,11 +731,11 @@ Lux & Fang Sexual Interest is a situation.
 The level of Lux & Fang Sexual Interest is 0.
 The sarea of Lux & Fang Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and Fang is in Grey Abbey Library and hp of Fang > 1 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in feats of player and Lux & Fang Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and Fang is in Grey Abbey Library and HP of Fang > 1 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in feats of player and Lux & Fang Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
 	Lux&FangSexualInterestEvent;
 
 to Lux&FangSexualInterestEvent: [Lux and Fang express interest in each other] [Noon-Early Night] [May be subject to change/improvement]
-	if hp of Fang is 2: [Omega]
+	if HP of Fang is 2: [Omega]
 		say "     Looking around as you enter the library, you are concerned to see that Fang isn't in his usual position watching the door. Readying yourself for having to reprimand him for this dereliction of duty, you briskly begin walking around the library until as you pass the open door to the courtyard, you hear Lux's familiar voice. Your need to find Fang less pressing than finding out who your daughter is conversing with, you stealthily approach until you can clearly see that she is talking to your missing guard, Fang, and pacing back and forth ceaselessly as she speaks with her father. '...but I didn't didn't need privacy to talk about such mundane topics such as your night. I have something a little more sensitive to discuss and I'm concerned that it might affect your fondness of me,' the pale-furred wolf worriedly says. 'Not likely. You haven't hurt your brother. If you prefer females, I will support you. Why are you scared?' Fang replies, the variety of his questions suggesting that he has no idea what is troubling his daughter.";
 		say "     'Thank you for the support Daddy. While male or female makes little difference to me, that isn't what I was worried about,' Lux half laughs between deep breaths. 'You may think that I'm disgusting, but I'm attracted to you.' The two of them stand in silence for a few moments as the female wolf's words sink in until Fang breaks the silence. 'I know what I'm meant to do. You're my daughter. I don't want to take advantage of you. You're not meant to feel like this about me. I'm not meant to feel this way about you. But you do. And I do.' The two wolves look at each other differently with this revelation, nervousness struggling with excitement that they feel the same attraction towards each other. 'Your [if player is female]mother [else]father [end if]mightn't like it. I made a mistake before. My freedom is limited by their will,' Fang rumbles, pressing his ears back at disappointing his daughter. It looks like you have a decision to make.";
 		say "     [bold type]Do you wish to allow them to express their attraction to each other in future?[roman type][line break]";
@@ -548,14 +751,14 @@ to Lux&FangSexualInterestEvent: [Lux and Fang express interest in each other] [N
 			LineBreak;
 			say "     Considering your direct authority over Fang and that Lux is your daughter, you feel confident that they will accept your decision to forbid such a relationship to develop between them. Your mind made up, you openly approach the two of them, their heads snapping up as one upon noticing you. Before they have a chance to speak or make excuses, you firmly explain that you will not abide your Omega and daughter having sex with each other. Your daughter could do so much better than mating with the bottom member of the pack when there are so many other better males in the city to choose from, and you tell her as much. While Fang looks dejected at your justification, Lux looks unsure whether to be ashamed at disappointing you, or angry that you so easily turn to degrading her father. Your decision clear to them, you turn and leave, returning to the library confident that the two of them won't act upon their attraction for the foreseeable future.";
 			now Resolution of Lux & Fang Sexual Interest is 2;
-	else if (hp of Fang is 3 or hp of Fang is 4): [Alpha]
+	else if (HP of Fang is 3 or HP of Fang is 4): [Alpha]
 		say "     Looking around as you enter the library, you are surprised that your Alpha isn't in his usual position guarding his pack. Curious as to where he may have gone, you casually wander around the library until you eventually pass the door out to the courtyard and hear Lux's familiar voice. Wondering who she is speaking with, you go outside and move towards the sound of talking until you can clearly see that she is conversing with Fang, and pacing back and forth ceaselessly as she speaks with her father. '...but I apologize for taking up so much of your time Daddy. I had something a little more sensitive to discuss with you and I'm worried that it may affect your fondness for me,' the pale-furred wolf worriedly says. 'I doubt that, Lux. I care deeply for my children. I am your father first, your Alpha second. You do not need to fear me,' Fang comforts her, willing to show a softer side while talking to his daughter.";
 		say "     'It is because you are my father that I am afraid to tell you this,' Lux replies. She pauses for a moment to gather her nerve before almost spitting out, 'I am attracted to you and want to be more intimate with you.' There is silence for several long seconds at this confession, a look of shock on Fang's face, while his daughter gradually looks more and more dejected as the lack of response drags on. 'You think I'm disgusting don't-' Lux starts but her father cuts her off. 'No. Never that. Speech is difficult. Give me time.' His forceful response surprises both you and his daughter, allowing him some time to decide what to say. 'I think you are beautiful. I think you are intelligent. I think you are kind. I did not want to take advantage of you. Love should be given. Not taken just because I am Alpha. I love you too. As my daughter and more.' The two wolves look at each other differently with this revelation, nervousness struggling with excitement that they feel the same attraction towards each other.";
 		WaitLineBreak;
 		say "     When they both seem to share this attraction, you doubt that you could forbid it happening even if you wanted to, especially when Fang is your Alpha. You're not sure that you should interrupt this moment either, so you remain at a distance, merely watching. Her difficult confession of forbidden love rewarded, Lux tentatively rubs up against her father's side, her tail softly wagging, a response mirrored by the larger wolf. As they begin to lick the other's muzzle, you decide to leave and allow them some privacy to develop their intimacy under the light of the moon, returning back into the library. You doubt that they'll be having sex any time soon, considering that their relationship is developing beyond being just familial.";
 		now Resolution of Lux & Fang Sexual Interest is 1;
 		increase thirst of Lux by 1;
-	else if hp of Fang is 5: [Beta]
+	else if HP of Fang is 5: [Beta]
 		say "     Looking around as you enter the library, you are surprised to find Fang absent from his usual position guarding the front door. Wondering as to where he may have gone, you begin to search around the library until you eventually pass the door out to the courtyard and hear Lux's familiar voice. Wondering who she is speaking with, you go outside and move towards the sound of talking until you can clearly see that she is conversing with her father, and pacing back and forth ceaselessly while she speaks. '...but I didn't ask you to come out here just to socialize Daddy, as much as I enjoy spending time with you. I had something a little more sensitive to discuss with you and I'm worried that it may affect your fondness for me,' the pale-furred wolf worriedly says. 'I doubt that, Lux. I love you and your brother no matter what. My children come before anyone else in the pack. What could change that?' Fang reassures her before licking her nose.";
 		say "     'You might not be so unconditional with your love if you knew what I had to say,' Lux replies, returning his gesture of affection. 'I am in love with you and wish for our bond to go beyond just being family,' she finally reveals, her voice barely more than a whisper. It takes a moment for Fang to process this confession before leaning down and pressing his lips against his daughter's in what looks like his best attempt at a kiss, causing her eyes to go wide. 'I love you too. Your beauty. Your intellect. Your kindness. All of you. I will gladly be your mate and your father.' The two wolves look at each other differently with this revelation, nervousness struggling with excitement that they feel the same attraction towards each other. '[if player is female]Mother [else]Father [end if]may not like it, but who knows? They may be as accepting of who I am as you are Daddy,' Lux muses, earning a supportive rumble from the larger wolf as he nuzzles against her. It looks like you have a decision to make.";
 		say "     [bold type]Do you wish to allow them to express their attraction to each other in future?[roman type][line break]";
@@ -586,7 +789,7 @@ instead of going to Grey Abbey Library while hp of Umbra is 4 and Umbra is in Gr
 	Umbra&FangSexualInterestEvent;
 
 to Umbra&FangSexualInterestEvent: [Umbra and Fang express interest in each other] [Noon-Early Night] [May be subject to change/improvement]
-	if hp of Fang is 2: [Omega]
+	if HP of Fang is 2: [Omega]
 		say "     Upon entering the library, you are concerned to find that Fang isn't in his usual position by the door. With a sigh of disappointment, you begin to search for the wolf, readying yourself to reprimand him for this dereliction of duty. You briskly walk around the library until you catch sight of a tail disappearing out of the door to the courtyard. Assuming that it is Fang, you quickly follow after him only to discover that he is not alone. It would seem that your son, Umbra, has something that he wishes to discuss with his father, and judging by the nervous pacing that he is doing, it may be something awkward so you decide to remain watching from a distance rather than interrupting now and making it more difficult for him. 'I need to tell you something. It might upset you,' Umbra hesitantly says, struggling to meet his father's eyes despite his greater size. 'Not likely. You haven't hurt your sister. Females or males, I'll support you with either. What are you scared of?' Fang replies, the variety of his questions suggesting that he has no idea what is troubling his son.";
 		say "     'I like both. That is not the problem,' Umbra bluntly replies, despite his lack of sexual experience. His father stands and waits for him to elaborate, patiently waving his tail back and forth in the hopes of appearing reassuring to his conflicted child. 'I am attracted to you. Despite us being family,' Umbra finally confesses, lowering his head in shame at how he expects his father to react. The silence returns again as the younger wolf's revelation sinks in, until Fang speaks. 'You are my son. Do not feel ashamed of who you are. I have these feelings too. You are not alone.' The two wolves look at each other in a new light, surprised that such a taboo attraction is shared and unsure how to proceed next. 'Your [if player is female]mother [else]father [end if]may disapprove. They may deny me this. I made mistakes in the past. By their will I am bound,' Fang rumbles, pressing his ears back at disappointing his son. It looks like you have a decision to make.";
 		say "     [bold type]Do you wish to allow them to express their attraction to each other in future?[roman type][line break]";
@@ -602,7 +805,7 @@ to Umbra&FangSexualInterestEvent: [Umbra and Fang express interest in each other
 			LineBreak;
 			say "     Considering your direct authority over Fang and that Umbra is your son, you feel confident that they will accept your decision to forbid such a relationship to develop between them. Your mind made up, you openly approach the two of them, their heads snapping up as one upon noticing you. Before they have a chance to speak or make excuses, you firmly explain that you will not abide your Omega and son having sex with each other. Your son could do so much better than mating with the bottom member of the pack when there are so many other better males in the city to choose from, and you tell him as much. While Fang looks dejected at your justification, Umbra begins to growl at your derision and contempt for his father, only falling quiet when you give him a stern glare. Your decision clear to them, you turn and leave, returning to the library confident that the two of them won't act upon their attraction for the foreseeable future.";
 			now Resolution of Umbra & Fang Sexual Interest is 2;
-	else if (hp of Fang is 3 or hp of Fang is 4): [Alpha]
+	else if (HP of Fang is 3 or HP of Fang is 4): [Alpha]
 		say "     Upon entering the library, you are concerned to find that your Alpha isn't in his usual position guarding his pack. Curious as to where he may have gone, you casually wander around the library until you catch sight of a tail disappearing out of the door to the courtyard. Assuming that it is Fang, you quickly follow after him only to discover that he is not alone. It would seem that your son, Umbra, has something that he wishes to discuss with his father, and judging by the nervous pacing that he is doing, it may be something awkward so you decide to remain watching from a distance rather than interrupting now and making it more difficult for him. 'I have something I must tell you, Alpha. It may displease you,' Umbra hesitantly says, not meeting his father's eyes. 'I doubt that, Umbra. I care deeply for my children. I am your father first, your Alpha second. You do not need to fear me,' Fang comforts him, willing to show his softer side when talking to his son.";
 		say "     'I worry because you are my father,' Umbra replies. The older wolf stands and waits patiently for him to continue, sensing the turmoil from his son's still tail and constantly shifting gaze. 'I am attracted to you. Despite you being my father. Despite me being subordinate,' Umbra struggles to say, lowering his head in shame at how he expects his father to react. The silence returns again as the younger wolf's confession sinks in, Umbra looking increasingly terrified as waits for a response. Finally, Fang replies, 'I think you are handsome. I think you are quick. I think you are kind. I did not wish to take advantage of you. Love should be given. Not taken just because I am Alpha. I love you too. As my son and more.' The two wolves look at each other differently with this revelation, both having talked much more than usual in order to express their attraction towards each other.";
 		WaitLineBreak;
@@ -710,7 +913,7 @@ to Lux&CarlSexualInterestEvent: [Lux and Carl express interest in each other] [N
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
-		say "     It doesn't take you long to consider his proposition before consenting. You do however make it clear that you are trusting him to make her feel special and make his first time with her memorable. 'I wasn't considering having a quickie in an alley, but I get what you mean. She's really special and I'll treat her as such,' Carl replies, looking you squarely in the eyes to ensure that you can see his sincerity. 'I'll talk to her later about it. I'm sure she'll be thrilled. Fang's view on it may be less friendly if Lux is wrong, but I trust her to convince him of her way of thinking. [if hp of Fang is 3 or hp of Fang is 5]Despite his position as Alpha, his kids seem to be able to wrap him around their paws, in a manner of speaking[else if hp of Fang is 5]His kids are the most important things in the world to him, so I'm sure he'll do whatever is necessary to make them happy[else]He may lack authority, but if I did anything to hurt Lux, you'd be second in line to punish me and I don't think I would survive to give you the chance[end if].' You nod, satisfied with his reply before bidding him farewell and returning to the top of the stairs trying to remember what you were doing before.";
+		say "     It doesn't take you long to consider his proposition before consenting. You do however make it clear that you are trusting him to make her feel special and make his first time with her memorable. 'I wasn't considering having a quickie in an alley, but I get what you mean. She's really special and I'll treat her as such,' Carl replies, looking you squarely in the eyes to ensure that you can see his sincerity. 'I'll talk to her later about it. I'm sure she'll be thrilled. Fang's view on it may be less friendly if Lux is wrong, but I trust her to convince him of her way of thinking. [if HP of Fang is 3 or HP of Fang is 5]Despite his position as Alpha, his kids seem to be able to wrap him around their paws, in a manner of speaking[else if HP of Fang is 5]His kids are the most important things in the world to him, so I'm sure he'll do whatever is necessary to make them happy[else]He may lack authority, but if I did anything to hurt Lux, you'd be second in line to punish me and I don't think I would survive to give you the chance[end if].' You nod, satisfied with his reply before bidding him farewell and returning to the top of the stairs trying to remember what you were doing before.";
 		now Resolution of Lux & Carl Sexual Interest is 1;
 		increase thirst of Lux by 1;
 	else:
@@ -865,13 +1068,13 @@ instead of going to Grey Abbey Library while hp of Lux is 4 and (TimekeepingVar 
 	Lux&FangFirstMatingEvent;
 
 to say Lux&FangFirstMatingEvent: [Lux is mounted and bred by Fang] [Midnight] [In courtyard beneath Full Moon]
-	if hp of Fang is 2: [Omega]
+	if HP of Fang is 2: [Omega]
 		say "     ";
 		say "     ";
 		WaitLineBreak;
 		say "     ";
 		say "     ";
-	else if (hp of Fang is 3 or hp of Fang is 4): [Alpha]
+	else if (HP of Fang is 3 or HP of Fang is 4): [Alpha]
 		say "     ";
 		say "     ";
 		WaitLineBreak;
@@ -901,13 +1104,13 @@ instead of going to Grey Abbey Library while hp of Umbra is 4 and (TimekeepingVa
 	Umbra&FangFirstMatingEvent;
 
 to say Umbra&FangFirstMatingEvent: [Umbra is mounted and bred by Fang] [Midnight] [In courtyard beneath Full Moon]
-	if hp of Fang is 2: [Omega]
+	if HP of Fang is 2: [Omega]
 		say "     ";
 		say "     ";
 		WaitLineBreak;
 		say "     ";
 		say "     ";
-	else if (hp of Fang is 3 or hp of Fang is 4): [Alpha]
+	else if (HP of Fang is 3 or HP of Fang is 4): [Alpha]
 		say "     ";
 		say "     ";
 		WaitLineBreak;

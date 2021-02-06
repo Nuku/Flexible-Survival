@@ -20,6 +20,7 @@ the scent of Bubble is "Bubble smells of warm latex with a hint of vulpine arous
 Section 1 - Description
 
 to say bubbledesc:
+	project Figure of Bubble_icon;
 	say "     Having become an inflatable creature after her stint at the strange bouncy castle, Bubble (as she's now called) is a latex-skinned vixen with an air-filled body. Her transformation has also deeply affected her mind, making her a bubbly airhead most of the time. Occasionally, she'll remember enough of her old self to be able to focus on a task or keep herself from doing anything too foolish, but generally she's a happy-go-lucky girl who's eager to have some fun.";
 	if Libido of Bubble is 0:
 		say "     She's got a very sexy figure that's been improved if anything by her transformation. She's got lovely, smooth curves, a narrow waist and a super-flexible body that's always light on its feet. Her inflatable skin is made of smooth latex. It is predominantly orange, though there's some black sections starting at her wrists and ankles and white ones at her chest and thighs. These are all joined by seams between the various sections. Her vulpine face has a happy expression and big, blue eyes that are more like living decals than real ones. Not bothering to dress beyond a pair of brightly colored sneakers she's found, she goes around nude. Her breasts are buoyant and have ever-perky nipples. Her delectable pussy is always wet with a slick sheen of her lube-like juices. She's got a puffed out, balloony fox tail with a nozzle tip on the end of it above her (quite literally) bubble butt.";
@@ -30,6 +31,7 @@ to say bubbledesc:
 Section 2 - Conversation
 
 Instead of conversing the Bubble:
+	project Figure of Bubble_icon;
 	if HP of Bubble < 4 or HP of Bubble is 99 or HP of Bubble is 100: [Formerly just < 4, but expanded to include other possible errors]
 		say "ERROR-Bubble-[HP of Bubble]C: Something funky's going on here. Please report this error on the forums or on the official FS Discord in sp-bug-reports";
 	else if HP of Bubble is 4:
@@ -51,6 +53,7 @@ Section 3 - Sexytimes
 the fuckscene of Bubble is "[sexwithBubble]";
 
 to say sexwithBubble:
+	project Figure of Bubble_icon;
 	if lastfuck of Bubble - turns < 4:
 		say "     You try to entice the bubble-headed vixen into more sex, but her attention keeps wandering. It looks like you'll have to wait a little while and try again later.";
 	else if HP of Bubble is 4: [Previously 1, which was a mistake. See Section 9 below for full list of HP values and their meanings]

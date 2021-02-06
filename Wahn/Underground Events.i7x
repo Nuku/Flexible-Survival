@@ -419,8 +419,8 @@ to say Inside Cell Four:
 	LineBreak;
 	say "     'Have you seen the master? Will he come soon? I've been waiting for his return, as ordered,' you hear the lightly bearded man say, a somewhat dazed look in his eyes. Letting your looks wander lower, you see that he's not... just a man anymore. Under a half-hard erection, there's an additional pussy between his legs - and a fully functional one, judging from the noticeable bulge of the hermaphrodite man's stomach. He's been impregnated with... something. Coming to stand before you, oblivious to his own nakedness, the man stares blankly, waiting for your answer.";
 	say "     Err - what now?";
-	wait for any key;
-	say "     [CellFourSex]";
+	LineBreak;
+	say "[CellFourSex]";
 
 to say CellFourSex:
 	setmonster "Herm Human";
@@ -430,40 +430,40 @@ to say CellFourSex:
 	choose a blank row in table of fucking options;
 	now title entry is "Ask what's going on here";
 	now sortorder entry is 1;
-	now description entry is "Get some info.";
+	now description entry is "Get some info";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Search the room";
 	now sortorder entry is 2;
-	now description entry is "Have a look at all the stuff on the ground.";
+	now description entry is "Have a look at all the stuff on the ground";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Get the man out of there";
 	now sortorder entry is 3;
-	now description entry is "Take the herm up to the surface.";
+	now description entry is "Take the herm up to the surface";
 	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Get his cock in your pussy";
 		now sortorder entry is 4;
-		now description entry is "Order him to fuck you.";
+		now description entry is "Order him to fuck you";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Get his cock in your ass";
 	now sortorder entry is 5;
-	now description entry is "Order him to fuck you anally.";
+	now description entry is "Order him to fuck you anally";
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 6;
-		now description entry is "Fuck the herm guy's pussy.";
+		now description entry is "Fuck the herm guy's pussy";
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
 		now sortorder entry is 7;
-		now description entry is "Fuck the herm guy's ass.";
+		now description entry is "Fuck the herm guy's ass";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -494,13 +494,12 @@ to say CellFourSex:
 					say "[CellFour6]";
 				else if nam is "Fuck his ass":
 					say "[CellFour7]";
-				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     Deciding that you'd better get out of there fast, you quietly slip through the door again. The mind-controlled herm inside cell four looks after you with puzzlement, then sits back down on the bed to wait.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 To say CellFour1:
