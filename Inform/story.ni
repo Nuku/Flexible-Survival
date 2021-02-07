@@ -667,6 +667,7 @@ Include Triceratops by Stripes.
 Include Twisted Pimp by Sarokcat.
 Include Tyrannosaurus Male by Gherod.
 Include Unicorn by Sarokcat.
+Include Valkyrie by Qazarar.
 Include Viking Man by Wahn.
 Include Viking Woman by Wahn.
 Include Vixentaur by Stripes.

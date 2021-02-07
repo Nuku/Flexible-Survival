@@ -240,13 +240,13 @@ Section 3 - Random Encounters
 
 An everyturn rule:
 	if (player is in Virgin's Pass or player is in Avalon-Crossroads) and a random chance of 1 in 3 succeeds:
-		let randomnumber be a random number from 1 to 1;
+		let randomnumber be a random number from 1 to 2;
 		if randomnumber is:
 			-- 1:
 				challenge "Feral Unicorn";
-[			-- 2:
-				[]
-			-- 3:
+			-- 2:
+				challenge "Valkyrie";
+			[-- 3:
 				[]
 			-- 4:
 				[]
