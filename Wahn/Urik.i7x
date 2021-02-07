@@ -346,6 +346,7 @@ to say UrikTalkMenu:
 					say "[UrikTalk5]";
 				else if nam is "Take him up on the looting trip he suggested":
 					say "[UrikTalk_Looting]";
+					now DoneTalking is true;
 				else if nam is "Ask if he'd like to accompany you out into the city":
 					say "[UrikTalk_Companion]";
 				else if nam is "Send him to the library":
@@ -710,7 +711,10 @@ to UrikSecondLootingTrip:
 		say "     The lower bits of the car are smeared with goop, making it appear to meld with the rest of the nest in an organic fashion. This doesn't give Urik any pause though, as he simply steps up and grabs the door-handle, exerting enough force to break the resin that was holding the door trapped. Throwing it open for you to check out the interior, he climbs up on the hood to reach the other side of the car. As you get to checking out the inside of the car, you find a mess, to say it mildly. The air-lift by a giant flying reptile jostled everything that was in the car around quite a bit, and the left back window is completely shattered, so a bunch of stuff must have fallen out through that. Still, lifting a dented jerry-can out of the way, you feel around under the seat and pull a fresh medkit into view. Score! Continuing your exploration, a bunch of the stuff you find is sadly broken, dented or shredded in some degree or other. The glove compartment however is another win however, as it is stuffed with half a box of energy bars - and the tasty kind with chocolate too!";
 		ItemGain medkit by 1;
 		ItemGain food by 4;
-		say "     By the time you've added the food to your backpack, Urik has wrenched up the slanted back hatch of the armored car, picking some stuff from back there to add to his own bag. Ducking down so he can meet your gaze, the orc then says, 'Climb over the car, you'll wanna see this one!' Following his suggestion, you move to join Urik behind the car, immediately seeing what he's referring to. A cocoon is protruding from the floor just beyond, looking more 'wet' than the material all around it. Your companion gives it a poke, showing you that it is actually still soft and squishy, with long strings of slime stretching away from the skin to Urik's hand before he wipes it off on the ground. 'Hasn't set fully yet. I think this might be one of the guys who was in the Humvee. So, what do you think? [bold type]Wanna open that thing up?[roman type]'";
+		say "     By the time you've added the food to your backpack, Urik has wrenched up the slanted back hatch of the armored car, picking some stuff from back there to add to his own bag. Ducking down so he can meet your gaze, the orc then says, 'Climb over the car, you'll wanna see this one!' Following his suggestion, you move to join Urik behind the car, immediately seeing what he's referring to. A cocoon is protruding from the floor just beyond, looking more 'wet' than the material all around it. Your companion gives it a poke, showing you that it is actually still soft and squishy, with long strings of slime stretching away from the skin to Urik's hand before he wipes it off on the ground. 'Hasn't set fully yet. I think this might be one of the guys who was in the Humvee. So, what do you think? [bold type]Wanna open that thing up?[roman type]'[line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yeah, why not!";
+		say "     ([link]N[as]n[end link]) - Better not...";
 		if player consents:
 			LineBreak;
 			if "Saber Urik" is listed in Traits of Urik:
@@ -809,7 +813,6 @@ to say GregoryEggMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -1580,8 +1583,11 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Play
 	if debugactive is 1:
 		say "     DEBUG: Urik catches a hawkman[line break]";
 	project the Figure of Urik_clothed_icon;
-	say "     After a trip through the wild streets of the city, you walk up the stairs to the entrance of the Grey Abbey Library. Stepping inside, you take a deep breath, happy to be back in your home for the apocalypse, a safe and peacef-";
-	say "     *CRASH*, *SCREECH*, *THUD*";
+	say "     After a trip through the wild streets of the city, you walk up the stairs to the entrance of the Grey Abbey Library. Stepping inside, you take a deep breath, happy to be back in your home for the apocalypse, a safe and peacef-[line break]";
+	say "     *CRASH*[line break]";
+	say "     *SCREECH*[line break]";
+	say "     *THUD*[line break]";
+	say "     ...";
 	say "     Blinking away your shock at the sudden noise ringing through the building, you orient yourself. It's coming from upstairs! Sprinting up the stairway, you see movement at the eastern end of the wide open library interior. A fight is underway there, with at least one of the participants having large wings, beating them wildly. It's a hawkman, who lets out another loud screech as a large green hand grabs him by the leg and he's wrenched out of the air to impact one of the bookshelves. As the anthro bird goes down in a shower of falling books and the second combatant stumbles back to avoid being hit, you recognize your orc warrior/breeder Urik. The towering green-skinned man wades back into the fray as you arrive at the fight, stepping over untidy piles of fallen books to get to the avian before he can dig himself out of the literary avalanche. 'Oh no you don't!' Urik bellows, delivering a sharp punch that knocks the hawkman unconscious.'";
 	say "     'Hey [UrikPlayerAddress]!' the orc greets you, then nods to the pile of books and feathered intruder at his feet. 'Look whom I spotted making an entrance though our broken window over here.' Reaching down, he grips the hawkman by the back of the neck and under one arm, pulling him up from the ground and out from beneath about fifty fallen books. 'Man, crazy light the little fucker. Guess he'd have to be, to fly,' he comments, turning the avian in his grasp to have a look at him. The orc lifts one wing, pulling relatively gently to see it unfold then lets it drop again. 'Oh hey, he's got a bag on him,' Urik adds next, pulling the sling of a carrier bag from over the captured hawkman's neck. Weighing it in his hand for a second, he throws it to you with an underhanded swing, and you catch it easily. There's a large bag of peanuts inside, as well as two water bottles.";
 	ItemGain food by 1;
@@ -1594,7 +1600,7 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Play
 	say "     [link](3)[as]3[end link] - Deny Urik's request and just let the hawkman go.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-3)>[run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 			break;
@@ -1783,7 +1789,7 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loya
 			say "     After Urik gives you a respectful nod and then stomps up the stairs, you hear someone clearing his throat behind you. It is Candy, striking a sexy but also exasperated pose with one hand on his hip. 'Way to kill the mood,' he complains, throwing a look filled with longing after the orc. With that said, the pink raccoon turns on his heel and stalks off to find something else to amuse himself with.";
 			now CandyUrikInteraction is 100; [further interaction forbidden]
 
-after going to Sitting Area while (Urik is in Sitting Area and Loyalty of Urik > 5 and ("Braiding_Ignored" is not listed in Traits of Urik and "Braiding_Watched" is not listed in Traits of Urik and "Braiding_Helped" is not listed in Traits of Urik)):
+after going to Sitting Area while (Urik is in Sitting Area and Loyalty of Urik > 5 and ("Braiding_Ignored" is not listed in Traits of Urik and "Braiding_Watched" is not listed in Traits of Urik and "Braiding_Helped" is not listed in Traits of Urik) and a random chance of 1 in 3 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Urik braids his hair: [Loyalty of Urik], current turn: [turns][line break]";
 	try looking;

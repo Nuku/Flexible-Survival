@@ -21,7 +21,10 @@ to say ResolveEvent Captive Breeding:
 		say "     Moving closer, you try talking to her, but the only answers you're getting are more gasps and moans. Judging from some clear goop smeared around her mouth, you'd guess something's been... feeding her, to keep her alive in captivity. Most likely whatever that is is laden with drugs and aphrodisiacs too, with as unfocused her eyes are right now. Your examination is interrupted by a sudden splashing noise and a gasp from the human woman. Looking down, you see a puddle of slime spread between her legs and the skin of her belly ripple with movement under it.";
 		LineBreak;
 		now CaptiveBreederEncounter is 1;
-		say "     Uh oh - seems like what's in her wants out - now! What do you do? Stay with the woman [link](1)[as]1[end link], observe what's happening - but from a distance [link](2)[as]2[end link] or get the hell out of there [link](3)[as]3[end link]?";
+		say "     [bold type]Uh oh - seems like what's in her wants out - now! What do you do?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Stay with the woman.";
+		say "     [link](2)[as]2[end link] - Observe what's happening - but from a distance.";
+		say "     [link](3)[as]3[end link] - Get the hell out of here!";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)>[run paragraph on]";
@@ -56,7 +59,10 @@ to say ResolveEvent Captive Breeding:
 		say "     Moving closer, you try talking to the man, but the only answers you're getting are more gasps and moans. Judging from some clear goop smeared around his mouth, you'd guess something's been... feeding him, to keep him alive in captivity. Most likely whatever that is is laden with drugs and aphrodisiacs too, with as unfocused his eyes are right now. Your examination is interrupted by a sudden splashing noise and a gasp from the human man. Looking down, you see a puddle of slime on the ground and more of it running down the side of the crate as well as dripping out of the man's asshole. The skin of his belly ripples with movement under it.";
 		LineBreak;
 		now CaptiveBreederEncounter is 1;
-		say "     Uh oh - seems like what's in him wants out - now! What do you do? Stay with the man [link](1)[as]1[end link], observe what's happening - but from a distance [link](2)[as]2[end link] or get the hell out of there [link](3)[as]3[end link]?";
+		say "     [bold type]Uh oh - seems like what's in her wants out - now! What do you do?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Stay with the man.";
+		say "     [link](2)[as]2[end link] - Observe what's happening - but from a distance.";
+		say "     [link](3)[as]3[end link] - Get the hell out of here!";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)>[run paragraph on]";
@@ -391,7 +397,7 @@ to say ResolveEvent Burned Secrets:
 		say "     Pulling the door open, a new gush of scent-laden air washes over you, making your head go a little fuzzy for a moment. Without power, the ventilation of this underground complex really isn't all that good, and bad air lingers. Looking inside, you see a mid-sized room, with rows of filing cabinets flanking the walls left and right, as well as towering racks for hard drives, and DVD cases. The at one time orderly storage-setup looks like it has been ransacked, with drawers being ripped out and dumped into a pile in the middle of the floor, same as all of the computer components and the discs. It was then set aflame, consuming most of the paper and melting plastic until eventually suffocating due to running out of oxygen. Stepping up to the cold bonfire to see if maybe anything survived, your gaze then falls upon a leg ending in a heavy combat boot, visible beyond the pile of destroyed documents.";
 		say "     Stepping around, you see the corpse of a man, lying on his back on the ground. He is dressed in black tactical gear bearing the Trevor Labs logo, and has the look of a veteran soldier to him. In death, he has one hand loosely lying next to his throat, trying to stop the blood that must have gushed from the claw-slash across his throat and formed a puddle beneath. Decomposition has degraded his features quite a bit, and the sight and smell make your stomach heave, forcing you to rush outside for a moment to get fresh air. When you eventually return, so see that next to the dead man, there is a large metal briefcase, splattered with the brownish traces of the man's blood on the outside. The inside, empty as it is, is clean, so it looks like that was dumped out after the man expired.";
 		WaitLineBreak;
-		say "     From what you can reconstruct of the scene, with all of the papers that weren't burned having soaked up blood and mostly being unreadable because of that, you'd say this guy was in the process of retrieving important records to evacuate, when something caught up to him, made an end of his life and set all the results of their research ablaze. You really can only make out a few snippets and words on the documents that remain, those being: '...third quarter experiments have yielded...', '...subject expired after 41 hours...', '...an alternative to indoctrination was proposed by Dr. Fuller, and we're going to...', and 'De...... of ..fense. TOP SECRET'";
+		say "     From what you can reconstruct of the scene, with all of the papers that weren't burned having soaked up blood and mostly being unreadable because of that, you'd say this guy was in the process of retrieving important records to evacuate, when something caught up to him, made an end of his life and set all the results of their research ablaze. You really can only make out a few snippets and words on the documents that remain, those being: '...third quarter experiments have yielded...', '...subject expired after 41 hours...', '...an alternative to indoctrination was proposed by Dr. Fuller, and we're going to...', and 'De...... of ..fense. TOP SECRET!'[line break]";
 	else:
 		LineBreak;
 		say "     Silently turning around, you retrace your steps towards the surface, making a mental note never to step into that specific hallway again. Even if you should get turned around sometime, the smell is unforgettable, and you're sure you can avoid coming to the door again. Even as you leave the place behind you though, you can't help but wonder what lies beyond that door, and it stays with you for a long while to come.";

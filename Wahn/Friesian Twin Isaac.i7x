@@ -67,9 +67,6 @@ to say Isaacdesc:
 	project Figure of Isaac_clothed_icon;
 	say "     A";
 
-instead of conversing Isaac:
-	say "     A";
-
 [
 an everyturn rule:
 	if IsaacRelationship > 10 and IsaacRelationship < 90:
