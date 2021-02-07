@@ -149,7 +149,7 @@ When Play begins:
 	now desc entry is "[PlantOrSeed]"; [ Description of the creature when you encounter it.]
 	now face entry is "beautiful, feminine face with vine-like hair and a vertical slit, looking much like a very wet pussy, replacing your mouth"; [ Face description, format as "Your face is (your text)"]
 	now body entry is "undeniably feminine with root-like legs, your needy cunt exuding a musky substance meant to attract males"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]green plant-like[or]beautiful plant-like[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
+	now skin entry is "[one of]green plant-like[or]beautiful plant-like[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
 	now tail entry is "A very moist vagina replaced your anus, concealed by a dress made of long petals which extend down to the floor."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[if looknow is 1]tentacle[else][one of]vine-like[or]tentacle[or]green tendril[at random][end if]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "as long tendrils covered with leaves sprout like long green hair. A strange sensation spreads through your mouth as it seals up and your teeth disappear. A new slit forms just below your nose, ending at your chin, leaving you with a vagina for a mouth. It feels moist and fills your mind with an unending need for cum! At the same time, your face becomes rounder, and more feminine"; [ face change text. format as "Your face feels funny as (your text)." ]

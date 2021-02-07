@@ -403,6 +403,8 @@ to say ResolveEvent Burned Secrets:
 Holding Cell Four is a situation.
 ResolveFunction of Holding Cell Four is "[ResolveEvent Holding Cell Four]".
 Prereq1 of Holding Cell Four is Hidden Sublevel.
+Prereq2 of Holding Cell Four is Burned Secrets.
+Prereq3 of Holding Cell Four is Failed Experiments.
 Sarea of Holding Cell Four is "Sealed".
 CellFourVisits is a number that varies.
 
@@ -443,7 +445,7 @@ to say ResolveEvent Holding Cell Four:[repeatable event]
 			else:
 				LineBreak;
 				say "     Better safe than sorry... who knows what might be lurking in that cell and what made that noise. Leaving it behind you, you rush through the dark and creepy corridors, making your way back to the surface.";
-	if CellFourVisits is 3: [the thought eater checks out who's been visiting his slave]
+	else if CellFourVisits is 3: [the thought eater checks out who's been visiting his slave]
 		say "     As you make your way towards holding cell four again, seeing the red warning light at its door down the hallway in front of you, you suddenly hear a hissing voice say 'Do you enjoy visiting my favorite pet? I can make you just like him...'";
 		LineBreak;
 		setmonster "Thought Eater";
@@ -754,6 +756,7 @@ to say AlphaBirthConclusion:
 		add "Herm_Rescued" to Traits of AlphaOne;
 		now AlphaOne is in Darkened Alcove;
 		now Player is in Darkened Alcove;
+		now Cell Four is resolved;
 		now HP of AlphaOne is 1; [brought into the library]
 	else if calcnumber is 3:
 		LineBreak;

@@ -108,10 +108,8 @@ Section 3 - Conversation
 [***********************************************************]
 [***********************************************************]
 
-[
 instead of conversing the Gregory:
 	say "[GregoryTalkMenu]";
-]
 
 to say GregoryTalkMenu:
 	say "     [bold type]What do you want to talk to Gregory about?[roman type][line break]";
@@ -202,7 +200,7 @@ Section 4 - Sex
 
 instead of fucking the Gregory:
 	if HP of Gregory is 1: [unconscious]
-		say "     He's totally limp and unconscious right now. Your choice if that's an upside or a downside...";
+		say "     He's totally limp and unconscious right now. Best to wait for the future when this might be more fun...";
 [
 	if (lastfuck of Gregory - turns < 2): [he got fucked in the last 6 hours = 2 turns]
 		say "     ...";

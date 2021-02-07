@@ -299,7 +299,7 @@ to say icarussex_dom:
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 2;
 		[humanity loss instead of infection]
 	else if formcheck is 2:	[feline]
-		if HP of Icarus is 55:
+		if HP of Icarus is 55 or ( HP of Icarus >= 57 and a random chance of 2 in 5 succeeds ):
 			say "[icarussex6_dom_fel]"; [extra-rough]
 		else if anallevel is 3 and ( (HP of Icarus is 54 and icarusrim is false) or (icarusrim is true and a random chance of 1 in 4 succeeds)):
 			say "[icarussex5_dom_fel]"; [rimming]

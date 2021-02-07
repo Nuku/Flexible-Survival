@@ -310,6 +310,12 @@ to PossessionRestore:
 	if the File of PossessionSave exists:
 		say "Restoring Possessions...";
 		read File of PossessionSave into the Table of GamePossessions;
+		[wiping out all items from before the import]
+		repeat with x running from 1 to number of filled rows in table of game objects:
+			choose row x from the table of game objects;
+			now carried of object entry is 0;
+			now stashed of object entry is 0;
+		[applying the imported items]
 		repeat with x running from 1 to the number of filled rows in the Table of GamePossessions:
 			choose row x in the Table of GamePossessions;
 			let PossessionIdName be Name entry;

@@ -693,6 +693,7 @@ Include Ace by Aureas Gigas.
 Include Adam by Wahn.
 Include Aeca by Wahn.
 Include Alex by Stripes.
+Include Alpha by Wahn.
 Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
 Include Allen by Wahn.

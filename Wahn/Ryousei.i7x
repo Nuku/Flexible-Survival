@@ -1130,6 +1130,7 @@ to say RyouseiSparring:
 		else:
 			challenge "Royal Tiger";
 		if fightoutcome < 30: [won  or lost]
+			let needed be 0;
 			increase the XP of Royal Tiger by level of Player;
 			now needed is ( level of Royal Tiger ) times 10;
 			if "Good Teacher" is listed in feats of Player:

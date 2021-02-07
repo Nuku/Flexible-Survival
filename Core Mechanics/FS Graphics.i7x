@@ -338,6 +338,10 @@ Figure of Harold_naked_icon is the file "Harold_naked.jpg".
 Figure of Helen_naked_icon is the file "Helen.png".
 Figure of Hobo_icon is the file "Hobo.jpg".
 Figure of Honey_icon is the file "Honey_ig.jpg".
+Figure of Isaac_clothed_icon is the file "Isaac_clothed.jpg".
+Figure of Isaac_hard_icon is the file "Isaac_hard.jpg".
+Figure of Isaac_soft_icon is the file "Isaac_soft.jpg".
+Figure of Isaac_face_icon is the file "Isaac_face.jpg".
 Figure of James_icon is the file "james_ig.jpg".
 Figure of Janice_icon is the file "FS_Janice_ig.jpg".
 Figure of Jason_clothed_icon is the file "Jason_clothed.jpg".
@@ -345,6 +349,12 @@ Figure of Jason_naked_icon is the file "Jason_naked.jpg".
 Figure of Jill_icon is the file "Jill.jpg".
 Figure of Jimmy_icon is the file "Jimmy_ig.jpg".
 Figure of Katherine_icon is the file "Katherine.jpg".
+Figure of Karel&Isaac_clothed_icon is the file "Karel & Isaac_clothed.jpg".
+Figure of Karel&Isaac_naked_icon is the file "Karel & Isaac_naked.jpg".
+Figure of Karel_clothed_icon is the file "Karel_clothed.jpg".
+Figure of Karel_hard_icon is the file "Karel_hard.jpg".
+Figure of Karel_soft_icon is the file "Karel_soft.jpg".
+Figure of Karel_face_icon is the file "Karel_face.jpg".
 Figure of Katya_clothed_icon is the file "Katya.png".
 Figure of Klauz_face_icon is the file "Klauz_face.jpg".
 Figure of Koghh_clothed_icon is the file "Koghh_clothed.jpg".
@@ -932,6 +942,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Imp_face"	Figure of Imp_face_icon	"Kupo Klein"	g-white	"normal"
 "Incubus"	Figure of Incubus_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Incubus_naked"	Figure of Incubus_naked_icon	"Kupo Klein"	g-white	"normal"
+"Isaac_clothed"	Figure of Isaac_clothed_icon	"Reaper3d"	g-white	"normal"
+"Isaac_hard"	Figure of Isaac_hard_icon	"Reaper3d"	g-white	"normal"
+"Isaac_soft"	Figure of Isaac_soft_icon	"Reaper3d"	g-white	"normal"
+"Isaac_face"	Figure of Isaac_face_icon	"Reaper3d"	g-white	"normal"
 "James"	Figure of James_icon	"Anyare"	g-white	"normal"
 "Janice"	Figure of Janice_icon	"Anymouse1968"	g-white	"normal"
 "Jason_clothed"	Figure of Jason_clothed_icon	"Kupo Klein"	g-white	"normal"
@@ -945,6 +959,12 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Jennifer"	Figure of Jennifer_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Jill"	Figure of Jill_icon	"Sususmiles"	g-white	"normal"
 "Jimmy"	Figure of Jimmy_icon	"Redragon"	g-white	"normal"
+"Karel&Isaac_clothed"	Figure of Karel&Isaac_clothed_icon	"Reaper3d"	g-white	"normal"
+"Karel&Isaac_naked"	Figure of Karel&Isaac_naked_icon	"Reaper3d"	g-white	"normal"
+"Karel_clothed"	Figure of Karel_clothed_icon	"Reaper3d"	g-white	"normal"
+"Karel_hard"	Figure of Karel_hard_icon	"Reaper3d"	g-white	"normal"
+"Karel_soft"	Figure of Karel_soft_icon	"Reaper3d"	g-white	"normal"
+"Karel_face"	Figure of Karel_face_icon	"Reaper3d"	g-white	"normal"
 "Katherine"	Figure of Katherine_icon	"Vashaa"	g-white	"normal"
 "Katya"	Figure of Katya_clothed_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Klauz_face"	Figure of Klauz_face_icon	"SineAlas"	g-black	"normal"
@@ -1479,6 +1499,7 @@ carry out artistcredits:
 	say "     Harold by Hufnaar @ furaffinity.net[line break]";
 	say "     Hobo by Conchi @ https://artisticconch.tumblr.com/[line break]";
 	say "     Honey by SandySchreiber @ furaffinity.net[line break]";
+	say "     Isaac by Reaper3d @ https://www.furaffinity.net/user/reaper3d/[line break]";
 	say "     James by Anyare @ furaffinity.net[line break]";
 	say "     Janice by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Jason by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
@@ -1486,6 +1507,7 @@ carry out artistcredits:
 	say "     Jill by Sususmiles @ furaffinity.net[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Katherine by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Karel by Reaper3d @ https://www.furaffinity.net/user/reaper3d/[line break]";
 	say "     Katya by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Klauz by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
@@ -1611,7 +1633,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Wahn", "Watsup", "Wemd", "Xenotropos"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Wahn", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;

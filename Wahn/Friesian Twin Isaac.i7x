@@ -64,6 +64,7 @@ instead of sniffing Isaac:
 	say "     A";
 
 to say Isaacdesc:
+	project Figure of Isaac_clothed_icon;
 	say "     A";
 
 instead of conversing Isaac:
@@ -101,6 +102,7 @@ instead of conversing the Isaac:
 	say "[IsaacTalkMenu]";
 
 to say IsaacTalkMenu:
+	project Figure of Isaac_face_icon;
 	say "     [bold type]What do you want to talk to Isaac about?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;
@@ -168,6 +170,7 @@ instead of fucking the Isaac:
 		say "[IsaacSexMenu]";
 
 to say IsaacSexMenu:
+	project Figure of Isaac_hard_icon;
 	say "     [bold type]What exactly do you plan on doing with Isaac?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;

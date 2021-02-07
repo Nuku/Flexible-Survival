@@ -200,6 +200,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	now fightoutcome is 100;
 	let nam be Name entry;
 	let found be 0;
+	follow the ngraphics_blank rule;
 	repeat through the table of game art:
 		if title entry is nam:
 			now found is 1;
@@ -795,7 +796,8 @@ This is the flee rule:
 			if there is a continuous in row monstercom of the table of Critter Combat:
 				follow the continuous entry;
 			if combat abort is 0, follow the combat entry;
-	follow the ngraphics_blank rule;
+	if combat abort is 1:
+		follow the ngraphics_blank rule;
 
 Chapter 7 - Throw the Fight
 
@@ -1425,8 +1427,8 @@ To lose:
 	decrease the score by 1;
 	decrease Morale of Player by 3;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
+	wait for any key;
 	follow the ngraphics_blank rule;
-
 
 to RefreshLootBonus:
 	now LootBonus is 0; [reset]

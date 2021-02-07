@@ -316,6 +316,7 @@ instead of going north from McDermott Farm Entrance while ((daytimer is day) and
 
 instead of going northeast from Central Farm Square while ((daytimer is day) and (FriesianRelationship is 2) and (a random chance of 1 in 10 succeeds)):
 	move player to Farm Pathway;
+	project Figure of Karel&Isaac_clothed_icon;
 	say "     Walking up the pathway towards the meadow, you see two familiar figures walking towards you, leading a small herd of seemingly normal sheep. It's the Friesian twins, Karel and Isaac, who greet you with a wave and a nod. Karel says, 'Hello there pardner, how's life in the big city?' You tell the twins about your more recent travels and they give you some well placed chuckles and groans of sympathy in return (as well as some loud baa-ing from the sheep). 'Sadly, we have to get these sheep milked before Duke comes looking for us, otherwise I could listen to your stories all day. You get up to some interesting things out there, that's for sure!' With a final wave, you pass the twins and their wooly flock as they head to the milking shed.";
 
 instead of going west from Central Farm Square while ((daytimer is night) and (a random chance of 1 in 4 succeeds)):
@@ -366,6 +367,7 @@ instead of going southwest from Central Farm Square while ((daytimer is day) and
 			say "     ([link]N[as]n[end link]) - Head for the door, enough time of horsing around!";
 			if Player consents:
 				LineBreak;
+				project Figure of Karel&Isaac_naked_icon;
 				say "     While the other farmhands start cleaning up the back of the barracks, you decide you want a more hands-on experience with the twins. You try to make your way as quickly as you can to the showers but are temporarily blocked as the farmhands move the unwieldy logs outside. By the time you reach the showers, there's a sizable cloud of steam emanating from the far end of the room. As you strip off your gear and outer wear, you hear some interesting noises; it almost sounds like kissing. When you approach the source of the steam and the twins come into view once more, you're rewarded with an equally steamy sight. The two midnight black horsemen are lip locked as their big hands explore each other's muscled forms. Lower down, the brothers are grinding their generous horse-cocks against each other. As you watch, their cocks continue to fill out and harden with occasional groans breaking their make-out. Before you can decide what to do, the Friesians break their kiss and turn to look at you. ";
 				if FriesianRelationship is 0: [never interacted before]
 					say "'There's only two things you need to know,' ";

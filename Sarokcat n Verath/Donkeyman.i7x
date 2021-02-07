@@ -100,7 +100,7 @@ When Play begins:
 	now defeated entry is "[Donkeyman loses]";
 	now victory entry is "[Donkeyman wins]";
 	now desc entry is "[DonkeymanDesc]";
-	now face entry is "that of a narrow donkey-like face, with a crudely made leather mask covering most of your muzzle, which only emphasizes your striking donkey-like eyes and expressive large equine ears which sit on top of your new face"; [You have a (your text) face."]
+	now face entry is "that of a narrow donkey-like face, with a crudely made leather mask covering most of your muzzle, which only emphasizes your striking donkey-like eyes and expressive large equine ears which sit on top of your new face"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "powerful and muscular, built much like a beast of burdens, you have broad shoulders and powerfully built legs, you have managed to find some boots somewhere to cover your rough, mostly human feet and have made a rough harness out of strips of leather and rope to help make you feel more comfortable";
 	now skin entry is "[one of]gray furred[or]coarse furred[or]rough gray[at random]";
 	now tail entry is "You have a long, silken furred donkey tail emerging from above your tight ass. A small strip of leather has been tied at the base to help keep it together and pulled up to give a proper view of your rear to anyone who might be interested in looking."; [ Tail description, write a whole Sentence or leave blank. ]

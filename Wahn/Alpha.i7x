@@ -23,6 +23,8 @@ AlphaOne	"AlphaOne"
 AlphaOne	"Alpha"
 
 AlphaOne is a man.
+Printed Name of AlphaOne is "Alpha".
+understand "Alpha" as AlphaOne.
 ScaleValue of AlphaOne is 3. [human sized]
 Body Weight of AlphaOne is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of AlphaOne is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -177,7 +179,7 @@ Section 4 - Sex
 [***********************************************************]
 
 instead of fucking the AlphaOne:
-	say "     This part of the character is a work in progress. Please have patience for future expansion.";
+	say "     <NOTE: This part of the character is a work in progress. Please have patience for future expansions. If you want to see him >";
 [
 	if (lastfuck of AlphaOne - turns < 2): [he got fucked in the last 6 hours = 2 turns]
 		say "     ...";
