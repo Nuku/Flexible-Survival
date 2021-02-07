@@ -106,7 +106,7 @@ to say BeatFeralWolfBitch:
 					else:
 						say "[FeralWolfBitchNonsexTame]";
 				now HP of Fang is 1;
-				now thirst of Fang is 1;
+				now Fang is Female;
 				now Androginity of Fang is 6;
 				now Cock Count of Fang is 0;
 				now Cock Girth of Fang is 0;
@@ -129,7 +129,7 @@ to say BeatFeralWolfBitch:
 				if hp of Fang is 98:
 					now HP of Fang is 100; [Fang refused completely]
 				else:
-					now hp of Fang is 98; [Fang refused as Female]
+					now hp of Fang is 99; [Fang refused as Female]
 		else:
 			say "[FeralWolfBitchVictorySex]";
 	else:
@@ -240,7 +240,7 @@ When Play begins:
 	now desc entry is "[FeralWolfBitchDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "feral wolf face, with a long canine snout filled with the sharp teeth of a predator"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "that of an average-sized and well-muscled wolf, with large canine features that give you a wild and deadly appearance"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
 	now tail entry is "You have a long black tail that trails behind you, your lupine tail displaying your emotions quite clearly."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feral canine[or]wolf[or]pitch black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -398,7 +398,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Feral Wolf Bitch Infection rule:
 	if HP of Fang is listed in { 3, 4 }:
 		make no decision; [Moved to FemaleFang's Beta]
-	if Player has a body of "Feral Wolf Bitch":
+	if BodySpeciesName of Player is "Feral Wolf":
 		trigger ending "Feral Wolf Bitch Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is  female:
@@ -409,7 +409,7 @@ This is the Feral Wolf Bitch Infection rule:
 			say "Returning to modern society proves to be hard for you. Your feral tendencies make it hard for you to be accepted in large urban areas, so you move out to a more secluded area in the mountains. You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you're a gray muzzle.";
 
 This is the FemaleFang's Beta rule:
-	if HP of Fang is listed in { 3, 4 } and Player has a body of "Feral Wolfess":
+	if HP of Fang is listed in { 3, 4 } and Fang is Female and BodySpeciesName of Player is "Feral Wolf":
 		trigger ending "FemaleFang's Beta";
 		if humanity of Player < 10:
 			say "     Giving in to your feral nature, you return to the Library and submit yourself to Fang again, letting her take you as she pleases. After a wild fucking, she leads you off into the city to form a pack of her own with you as her [if Player is female]slutty beta bitch[else]slutty beta stud[end if].";
