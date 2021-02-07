@@ -576,6 +576,7 @@ Include Mutated Islanders by Kernog.
 Include Naga by Nuku Valente.
 Include Naiad by Wahn.
 Include Naughty Nurse by Stripes.
+Include Nekomimi Boy by Prometheus.
 Include Nerdy Mouse by McRabid.
 Include Nightmare by Sarokcat.
 Include Ocelot by Stripes.
