@@ -22,7 +22,9 @@ This is the sex change rule:
 			now Cock Count entry is 1;
 		if Cunt Count entry > 1:
 			now Cunt Count entry is 1;
+	[COCK GROWTH/SHRINKAGE]
 	if ( the sex entry is "Male" or the sex entry is "Both" ) and Cock Length of Player < Cock Length entry and Cock Count of Player is not 0 and "Female Preferred" is not listed in feats of Player:
+		[Grows existing cock, unless "Female Preferred" is selected]
 		let prevcock be Cock Length of Player;
 		increase Cock Length of Player by 1;
 		increase Cock Length of Player by ( Cock Length entry minus Cock Length of Player ) divided by 3;
@@ -32,6 +34,7 @@ This is the sex change rule:
 			follow the cock descr rule;
 			say "You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
 	else if ( the sex entry is "Male" or the sex entry is "Both" ) and Cock Length of Player > ( ( Cock Length entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
+		[Shrinks existing cock, unless "One Way" is selected]
 		let prevcock be Cock Length of Player;
 		decrease Cock Length of Player by 1;
 		decrease Cock Length of Player by ( Cock Length of Player - ( ( Cock Length entry times 150 ) / 100 ) ) divided by 3;
@@ -42,7 +45,9 @@ This is the sex change rule:
 		if prevcock > Cock Length of Player:		[did cock actually shrink?]
 			follow the cock descr rule;
 			say "Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your impressive [CockName of Player in lower case] [if Cock Count of Player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[else][one of]cock[or]penis[or]shaft[or]pole[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if Cock Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr].";
+	[BALL GROWTH/SHRINKAGE]
 	if ( the sex entry is "Male" or the sex entry is "Both" ) and Ball Size of Player < Ball Size entry and Cock Count of Player is not 0 and "Female Preferred" is not listed in feats of Player:
+		[Grows existing balls, unless "Female Preferred" is selected]
 		let prevcock be Ball Size of Player;
 		increase Ball Size of Player by 1;
 		if "Modest Organs" is listed in feats of Player and Ball Size of Player > 4:
@@ -51,6 +56,7 @@ This is the sex change rule:
 			follow the cock descr rule;
 			say "You can [if Player is internal]feel your internal[else]see your[end if] [one of]testicles[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if Player is internal]body straining to abide this[else]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [Ball Size Adjective of Player] balls!";
 	else if ( the sex entry is "Male" or the sex entry is "Both" ) and Ball Size of Player > ( ( Ball Size entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
+		[Shrinks existing balls, unless "Female Preferred" is selected]
 		let prevcock be Ball Size of Player;
 		decrease Ball Size of Player by 1;
 		if "Male Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
@@ -60,9 +66,11 @@ This is the sex change rule:
 		if prevcock > Ball Size of Player:		[did cock actually shrink?]
 			follow the cock descr rule;
 			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if Player is internal]internal[else]impressive[end if] [CockName of Player in lower case] [one of]balls[or]testicles[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection. You cum hard to drain their seed as they dwindle in size, becoming [Ball Size Adjective of Player] balls.";
-	if Cock Count of Player < Cock Count entry and ( the sex entry is "Male" or the sex entry is "Both" ) and "Female Preferred" is not listed in feats of Player:
+	[COCK ADDITIONS/SUBSTRACTIONS]
+	if Cock Count of Player < Cock Count entry and ( the sex entry is "Male" or the sex entry is "Both" ) and "Female Preferred" is not listed in feats of Player and singlesexadjust is not 3: [player currently female, single sexed]
+		[Adds extra cocks if the player has less than the infection, unless "Female Preferred" is selected or a single sexed player is female]
 		let prevcock be Cock Count of Player;
-		if Player is not male:
+		if Player is not male: [adds a cock if the player has none]
 			increase Cock Count of Player by 1;
 			now Cock Length of Player is 1;
 			now the Ball Size of Player is 1;
@@ -81,7 +89,8 @@ This is the sex change rule:
 		if prevcock < Cock Count of Player:		[did new cock appear?]
 			follow the cock descr rule;
 			say "Your groin throbs with intense sensations as a [descr] [cock entry] [one of]cock[or]penis[or]shaft[or]maleness[at random] erupts from you, spurting a few excited streams of fluid as it settles into place.";
-	if Cock Count of Player is not 0 and ( the sex entry is "Female" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of Player:
+	if Cock Count of Player is not 0 and ( the sex entry is "Female" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of Player and singlesexadjust is not 2: [player currently male, single sexed]
+		[shrinks & removes cocks if the player has one, infection is female/neuter and "One Way" is not listed]
 		let prevcock be Cock Length of Player;
 		let prevcock2 be Ball Size of Player;
 		decrease Cock Length of Player by 1;
@@ -104,8 +113,10 @@ This is the sex change rule:
 			say "Sudden pleasure runs through one of your doomed [Cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 			decrease Cock Count of Player by 1;
 	else if Cock Count of Player > Cock Count entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of Player and (sex entry is "Male" or sex entry is "Both" ) and "All The Things" is not listed in feats of Player:
+		[removes cock if the player has more than the male/herm infection, no "One Way", no "All the Things"]
 		say "Sudden pleasure runs through one of your doomed [Cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember it by.";
 		decrease Cock Count of Player by 1;
+	[CUNT GROWTH/SHRINKAGE]
 	if ( the sex entry is "Female" or the sex entry is "Both" ) and Cunt Depth of Player < Cunt Depth entry and Cunt Count of Player is not 0 and "Male Preferred" is not listed in feats of Player:
 		let prevcunt be Cunt Depth of Player;
 		increase Cunt Depth of Player by 1;
@@ -126,6 +137,7 @@ This is the sex change rule:
 		if prevcunt > Cunt Depth of Player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
 			say "Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] flow into your ample [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if Cunt Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr].";
+	[CUNT TIGHTNESS GROWTH/SHRINKAGE]
 	if ( the sex entry is "Female" or the sex entry is "Both" ) and Cunt Tightness of Player < Cunt Tightness entry and Cunt Count of Player is not 0 and "Male Preferred" is not listed in feats of Player:
 		let prevcunt2 be Cunt Tightness of Player;
 		increase Cunt Tightness of Player by 1;
@@ -146,7 +158,9 @@ This is the sex change rule:
 		if prevcunt > Cunt Tightness of Player:		[did cock actually shrink?]
 			follow the cunt descr rule;
 			say "You can feel a [one of]tightening[or]snugness[or]clenching[at random] from your accommodating [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random][else][one of]cunt[or]pussy[or]vagina[or]cleft[at random][end if] as you are hit by an unexpected orgasm. The squeezing does not release fully as your wet hole[sfn] shrink[sfv] somewhat to better suit your new infection by becoming tighter.";
-	if Cunt Count of Player < Cunt Count entry and ( the sex entry is "Female" or the sex entry is "Both" ) and "Male Preferred" is not listed in feats of Player:
+	[CUNT ADDITION/SUBSTRACTION]
+	if Cunt Count of Player < Cunt Count entry and ( the sex entry is "Female" or the sex entry is "Both" ) and "Male Preferred" is not listed in feats of Player and singlesexadjust is not 2: [player currently male, single sexed]
+		[adds cunt if player has less than the infection, no "Male Preferred" and no single sexed males]
 		let prevcunt be Cunt Count of Player;
 		if Player is not female or Cunt Depth of Player is 0 or Cunt Tightness of Player is 0:
 			increase Cunt Count of Player by 1;
@@ -167,7 +181,8 @@ This is the sex change rule:
 		if prevcunt < Cunt Count of Player:		[did new cunt appear?]
 			follow the cunt descr rule;
 			say "Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, leaking along a thigh as you quiver.";
-	if Cunt Count of Player is not 0 and ( the sex entry is "Male" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of Player:
+	if Cunt Count of Player is not 0 and ( the sex entry is "Male" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of Player and singlesexadjust is not 3: [player currently female, single sexed]
+		[removes cunt if player has 1+, no "One Way" and no single sexed females]
 		let prevcunt be Cunt Depth of Player;
 		let prevcunt2 be Cunt Tightness of Player;
 		decrease Cunt Depth of Player by 1;
@@ -195,6 +210,7 @@ This is the sex change rule:
 			follow the cock descr rule;
 			follow the cunt descr rule;
 	else if Cunt Count of Player > Cunt Count entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of Player and (sex entry is "Female" or sex entry is "Both" ) and "All The Things" is not listed in feats of Player:
+		[removes additional cunts if the player has more than the infection, no "One Way" and no "All the things"]
 		say "An odd, wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] has vanished!";
 		decrease Cunt Count of Player by 1;
 	follow the cock descr rule;
@@ -300,6 +316,7 @@ This is the breast change rule:
 			increase score by 0; [do nothing]
 		else if the sex entry is "Female" or the sex entry is "Both":
 			if Breast Size of Player < Breast Size entry and ( ( "Male Preferred" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player ) or "Breasts" is listed in feats of Player ):
+				[breast growth if smaller than infection size, and "Breasts" and NOT either "Male Preferred" or "Flat Chested"]
 				follow the breast descr rule;
 				let oldbreast be descr;
 				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts ";
@@ -308,6 +325,7 @@ This is the breast change rule:
 				follow the breast descr rule;
 				say "become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
 			else if Breast Size of Player > Breast Size entry and "One Way" is not listed in feats of Player:
+				[breast shrinkage if bigger than infection size, and "One Way" not selected]
 				follow the breast descr rule;
 				let oldbreast be descr;
 				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts ";
@@ -317,7 +335,7 @@ This is the breast change rule:
 				say "become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
 		else if the sex entry is "Male":
 			let breasttarget be male breast size entry;
-			if "Breasts" is listed in feats of Player:
+			if "Breasts" is listed in feats of Player: [pulls the female breast size if this feat is selected]
 				if Male Breast Size entry is 0, now breasttarget is breast size entry;
 			else if "Male Preferred" is listed in feats of Player or "Flat Chested" is listed in feats of Player:
 				now breasttarget is 0;

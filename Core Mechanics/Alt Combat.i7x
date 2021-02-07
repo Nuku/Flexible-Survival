@@ -239,6 +239,7 @@ To Combat Menu:
 			[wait for any key;
 			clear the screen and hyperlink list;]
 			AttemptToWaitAndClearHyper;
+			follow the ngraphics_blank rule;
 			continue the action;
 		if weakwilled is true and a random chance of ( ( Libido of Player + 20 ) / 4 ) in 1000 succeeds:
 			[chance to submit in combat if you have the Weak-Willed flaw, feel free to adjust odds]
@@ -1427,8 +1428,6 @@ To lose:
 	decrease the score by 1;
 	decrease Morale of Player by 3;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
-	wait for any key;
-	follow the ngraphics_blank rule;
 
 to RefreshLootBonus:
 	now LootBonus is 0; [reset]
