@@ -64,9 +64,7 @@ instead of sniffing Karel:
 	say "     A";
 
 to say Kareldesc:
-	say "     A";
-
-instead of conversing Karel:
+	project Figure of Karel_clothed_icon;
 	say "     A";
 
 [
@@ -98,6 +96,7 @@ Section 3 - Conversation
 [***********************************************************]
 
 instead of conversing the Karel:
+	project Figure of Karel_face_icon;
 	say "[KarelTalkMenu]";
 
 to say KarelTalkMenu:
@@ -168,6 +167,7 @@ instead of fucking the Karel:
 		say "[KarelSexMenu]";
 
 to say KarelSexMenu:
+	project Figure of Karel_hard_icon;
 	say "     [bold type]What exactly do you plan on doing with Karel?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;

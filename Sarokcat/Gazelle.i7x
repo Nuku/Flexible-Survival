@@ -101,9 +101,9 @@ When Play begins:
 	now defeated entry is "[gazelle loss]";
 	now victory entry is "[gazelle attack]";
 	now desc entry is "[GazelleDesc]";
-	now face entry is "a short gazelle-like muzzle, it being a blend of gazelle and human features, with large bright eyes and sharp backwards pointing horns rising above your head"; [You have a (your text) face."]
+	now face entry is "a short gazelle-like muzzle, it being a blend of gazelle and human features, with large bright eyes and sharp backwards pointing horns rising above your head"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "lean and lithe, your legs are well built for leaping and jumping as you balance on your hoof-like feet, your arms narrow and slender and the tips of your fingers covered in hoof-like nails"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]brown and white patterned[or]spotted[or]soft furred[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
+	now skin entry is "[one of]brown and white patterned[or]spotted[or]soft furred[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
 	now tail entry is "You have a small, fluffy tail sticking out from your backside, its shape helping to pull your ass up slightly, giving your backside a happy, perky appearance."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]gazelle[or]sheathed[or]bovine[as decreasingly likely outcomes]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it pushes forward into a short narrow muzzle, filling up with thick herbivore teeth. Sharp pressure shoots through your skull as two new gazelle like horns slowly press out of your skull, adding some weight to your head"; [ face change text. format as "Your face feels funny as (your text)." ]

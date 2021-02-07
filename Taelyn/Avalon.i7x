@@ -187,6 +187,7 @@ Object	Name
 Virgin's Pass	"Virgin's Pass"
 
 Virgin's Pass is a room.
+The earea of Virgin's Pass is "Avalon".
 Description of Virgin's Pass is "[VirginsPass desc]".
 
 to say VirginsPass desc:
@@ -206,6 +207,7 @@ Avalon-Crossroads is a room.
 Avalon-Crossroads is fasttravel.
 Avalon-Crossroads is private.
 Avalon-Crossroads is south of Virgin's Pass.
+The earea of Avalon-Crossroads is "Avalon".
 Description of Avalon-Crossroads is "[AvCrossroads desc]".
 
 to say AvCrossroads desc:
@@ -238,13 +240,13 @@ Section 3 - Random Encounters
 
 An everyturn rule:
 	if (player is in Virgin's Pass or player is in Avalon-Crossroads) and a random chance of 1 in 3 succeeds:
-		let randomnumber be a random number from 1 to 1;
+		let randomnumber be a random number from 1 to 2;
 		if randomnumber is:
 			-- 1:
 				challenge "Feral Unicorn";
-[			-- 2:
-				[]
-			-- 3:
+			-- 2:
+				challenge "Valkyrie";
+			[-- 3:
 				[]
 			-- 4:
 				[]

@@ -7,6 +7,7 @@ Section 1 - Creature Responses
 nosnowmeowsex is a number that varies.
 
 to say snowmeowdesc:
+	project Figure of SnowLeopard_soft_icon;
 	setmongender 3; [creature is male]
 	choose row MonsterID from Table of Random Critters;
 	if "Female Preferred" is listed in feats of Player:
@@ -19,6 +20,7 @@ to say snowmeowdesc:
 
 
 to say losetosnowmeow:
+	project Figure of SnowLeopard_hard_icon;
 	now nosnowmeowsex is 0;
 	say "     The snow leopard gives a throaty purr as your struggles cease. He presses you down to the ground and runs his eyes over you while a paw strokes his stiff shaft. The fight over, you can see it is steely gray with a slightly feline-shaped glans and a pair of ample balls below it. Between the feel of the snowmeow's lovely fur and the heavy scent of his arousal, you find yourself subconsciously licking your lips as a few beads of precum leak down that hard meat.";
 	if Player is male:
@@ -57,6 +59,7 @@ to say losetosnowmeow:
 
 
 to say beatthesnowmeow:
+	project Figure of SnowLeopard_hard_icon;
 	if ( Libido of Player > 40 or player is dominant ) and ( nosnowmeowsex < 3 or ( nosnowmeowsex > 0 and the remainder after dividing nosnowmeowsex by 5 is 0 ) ):
 		say "     The thickly furred feline pants in the heat and staggers back, overheated and unwilling to continue to fight you. He staggers a little as he walks, starting to stumble back into the city. As you watch his alluring, feline body, you debate taking advantage of the poor feline. He certainly looks in no shape to resist you taking advantage of him instead. Tempted, you consider pouncing the kitty before he can get away.";
 		now sextablerun is 0;

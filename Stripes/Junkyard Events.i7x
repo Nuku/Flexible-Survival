@@ -166,6 +166,7 @@ ResolveFunction of Stray Cat is "[ResolveEvent Stray Cat]". The level of Stray C
 Sarea of Stray Cat is "Junkyard".
 
 to say ResolveEvent Stray Cat:
+	project Figure of SnowLeopard_soft_icon;
 	say "     On a search through the scrapyard, you find your path blocked by a sweaty and panting snow leopard. It seems he wandered in here and has gotten lost. Startled to see you there, he gives a dry mrowl that cracks in his dry throat before stalking towards you quickly. ";
 	if dirty water is owned or water bottle is owned:
 		say "You have some water in your pack which may satisfy him long enough to make your escape.";

@@ -117,8 +117,6 @@ to say beatthehyena:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
-
-
 to say beatthehyena01:	[player tops]
 	say "     Allowing the temptation of your arousal to decide, you approach the incapacitated herm cautiously. You open her jeans and expose her crotch, taking in the sight of her hard cock, hefty balls and more to the point, her wet pussy under those furry balls. Your [cock size desc of Player] cock aches for relief and the hyena will do fine for sating those needs. You stroke your stiff erection as you kneel atop her, raising her balls and fully exposing her pussy before thrusting into her.";
 	if Cock Length of Player > 17 or Ball Size of Player > 9:

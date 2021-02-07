@@ -230,7 +230,7 @@ When Play begins:
 	now desc entry is "[cheetahdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "feline, with an actively twitching nose"; [ Face description, format as "Your face is (your text)"]
 	now body entry is "lithe and strong, with a shape for speed and muscles for true strength"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "smooth spotted fur over your"; [ skin Description, format as "Your body is covered in (your text) skin"]
+	now skin entry is "smooth spotted fur over your"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
 	now tail entry is "Your tail is decently sized, spotted, and whipping back and forth."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "tan spined, and sheathed cheetah "; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it grows longer, the front narrowing, and both eyes looking ahead. Your pupils dilate oddly, and you realize they have become slitted"; [ face change text. format as "Your face feels funny as (your text)." ]

@@ -244,7 +244,6 @@ instead of going up from Grey Abbey Library while (Denise is in Garden View and 
 		say "     DEBUG: DENISE POST-BIRTH WALKIN [line break]";
 	now tempnum is the remainder after dividing Libido of gryphoness by 4;
 	let T be ( Libido of gryphoness / 4 );
-	increase Libido of gryphoness by 1;
 	if T is 0: [first kid]
 		increase weapon damage of gryphoness by 1;
 		if GryphonessKnowpreg is 1:

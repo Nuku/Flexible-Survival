@@ -1030,7 +1030,7 @@ to say badAlexandraSex11: [mostly micro play with soft-vore scene]
 
 Part 3 - Event Scenes w/Fang
 
-to say badAlexandraFang0:
+to say badAlexandraFang0: [TODO: Add scene for Dominant Players]
 	say "     You catch sight of Alexandra and Fang over by the door to the library. While she's on guard, he's sniffing around her with obvious interest. She acts like she's unaware of his attention, but you can see her tail wagging excitedly as he noses between her legs. When his teeth catch onto the seat of her jeans and start tugging on them, she unzips them and starts squirming out of them, moving onto all fours. 'That's right, you big, bad wolf. You've found yourself a juicy bitch,' she barks.";
 	say "     Shall you [link]enjoy the show (Y)[as]y[end link] as your two guards become better acquainted or do you object and [link]break them up (N)[as]n[end link], preferring to keep the doberwoman all for yourself?";
 	if Player consents:
