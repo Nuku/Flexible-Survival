@@ -156,7 +156,8 @@ Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
 Figure of Siren_clothed_icon is the file "Siren_clothed.jpg".
 Figure of Siren_hard_icon is the file "Siren_hard.jpg".
 Figure of SnowBat_icon is the file "SnowBat_ig.jpg".
-Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
+Figure of SnowLeopard_hard_icon is the file "SnowLeopard_hard.jpg".
+Figure of SnowLeopard_soft_icon is the file "SnowLeopard_soft.jpg".
 Figure of SpartanHelot_icon is the file "Spartan_Helot.jpg".
 Figure of Spartan_face_icon is the file "Spartan_face.jpg".
 Figure of SpartanHelot_dressed_icon is the file "SpartanHelot_dressed.jpg".
@@ -1113,7 +1114,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Slutslave"	Figure of Slutslave_icon	"Vashaa"	g-white	"normal"
 "Snow"	Figure of Snow_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Snow Bat"	Figure of SnowBat_icon	"Rosali"	g-black	"normal"
-"Snow Leopard"	Figure of SnowLeopard_icon	"Anymouse1968"	g-black	"normal"
+"Snow Leopard hard"	Figure of SnowLeopard_hard_icon	"Vashaa"	g-white	"normal"
+"Snow Leopard soft"	Figure of SnowLeopard_soft_icon	"Vashaa"	g-white	"normal"
 "Sonny_halfwool_jeans"	Figure of Sonny_halfwool_jeans_icon	"The_Negative"	g-black	"normal"
 "Sonny_halfwool_nude"	Figure of Sonny_halfwool_nude_icon	"The_Negative"	g-black	"normal"
 "Sonny_shaved_jeans"	Figure of Sonny_shaved_jeans_icon	"The_Negative"	g-black	"normal"
@@ -1396,7 +1398,7 @@ carry out artistcredits:
 	say "     Shemale Smooth Collie by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Siamese Cats by RedCoatCat @ furaffinity.net[line break]";
 	say "     Snow Bat by Rosali @ Furaffinity.net[line break]";
-	say "     Snow Leopard by Anymouse1968 @ Furaffinity.net[line break]";
+	say "     Snow Leopard by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Spartan by Obieblu @ tumblr.com[line break]";
 	say "     Spartan & Helot by Obieblu @ tumblr.com[line break]";
 	say "     Stallionboi by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
