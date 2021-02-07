@@ -665,6 +665,7 @@ Include Toven by Wahn.
 Include Trash Coon by Stripes.
 Include Triceratops by Stripes.
 Include Twisted Pimp by Sarokcat.
+Include Tyrannosaurus Male by Gherod.
 Include Unicorn by Sarokcat.
 Include Viking Man by Wahn.
 Include Viking Woman by Wahn.
