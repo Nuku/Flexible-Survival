@@ -129,7 +129,7 @@ to say BeatFeralWolfBitch:
 				if hp of Fang is 98:
 					now HP of Fang is 100; [Fang refused completely]
 				else:
-					now hp of Fang is 98; [Fang refused as Female]
+					now hp of Fang is 99; [Fang refused as Female]
 		else:
 			say "[FeralWolfBitchVictorySex]";
 	else:

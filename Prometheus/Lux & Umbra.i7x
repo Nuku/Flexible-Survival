@@ -847,7 +847,7 @@ Lux & Player Sexual Interest is a situation.
 The level of Lux & Player Sexual Interest is 0.
 The sarea of Lux & Player Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and Fang is Male and and FemaleList is not warded and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Player Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and Fang is Male and FemaleList is not warded and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Player Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
 	Lux&PlayerSexualInterestEvent;
 
 to Lux&PlayerSexualInterestEvent: [Lux expresses interest in the player] [Noon-Early Night]
