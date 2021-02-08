@@ -27,7 +27,7 @@ to say Alpha Wolf attack:
 		CreatureSexAftermath "Player" receives "OralCock" from "Alpha Wolf";
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if Name entry is "Feral Wolf":
+			if Name entry is "Feral Wolf Male":
 				now MonsterID is y;
 				break;
 	else if Alpha Wolfdefeat is 0: [ first time losing to a wolf ]

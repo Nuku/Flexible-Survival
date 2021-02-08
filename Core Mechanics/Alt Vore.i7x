@@ -353,7 +353,7 @@ to say hvorebyplayer00:	[master list to decide scenes]
 		say "[hvbp_ram]";
 	else if Name entry is "Ewe" and a random chance of 3 in 5 succeeds:
 		say "[hvbp_ewe]";
-	else if Name entry is "Feral Wolf" and a random chance of 3 in 5 succeeds:
+	else if Name entry is "Feral Wolf Male" and a random chance of 3 in 5 succeeds:
 		say "[hvbp_feralwolf]";
 	else if Name entry is "Succubus" and a random chance of 3 in 5 succeeds:
 		say "[hvbp_succubus]";

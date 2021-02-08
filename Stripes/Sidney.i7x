@@ -289,7 +289,7 @@ Part 3 - Feral Wusky
 to say sidney_wusky_cap:
 	say "     Suggesting you try freeing the wusky, you have him lead you to the lair of the wolf holding her captive. Looking over the ruined shop, take a moment to ready yourself before entering. Inside you find the female wolf-dog chained to a water pipe and the large wolf creature between you and her. He snarls at you and approaches with teeth bared.";
 	now showlocale is false;
-	challenge "Feral Wolf";
+	challenge "Feral Wolf Male";
 	now showlocale is true;
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Defeating and driving off the large wolf, you're free to approach the wusky. Sidney takes out the nanite copying device and jabs the short needle into her side. With a pull of the trigger, a whirring sound and a flutter of indicator lights, it is done. Confirming with Sidney that he's gotten the sample, the two of you then free the wolf-husky hybrid. With a barking thanks and a few licks, she dashes out the door and off into the city.";
@@ -509,7 +509,7 @@ to say sexwithSidney_04:
 
 Section 6 - Interactions
 
-after navigating Grey Abbey Library while ( HP of Sidney >= 6 and Sidney is booked and lastfuck of Sidney > turns ) and ( Fang is booked and lastfuck of Fang > turns ) and fangsidney is false:
+after navigating Grey Abbey Library while ( HP of Sidney >= 6 and Sidney is booked and lastfuck of Sidney > turns ) and ( Fang is booked and (hp of Fang is 2 or hp of Fang is 3 or hp of Fang is 4) and Fang is Male and lastfuck of Fang > turns ) and fangsidney is false:
 	say "     You arrive back to find Sidney's come out of the breakroom. At first you think she might be mentioning something she spotted to Fang, your lupine guard, but it's rapidly clear that it's more than that. The wolf goes from nuzzling the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] to sniff along her side and then under her tail. Sidney [if level of Sidney <= 23]raises that tail and pushes aside her obstructing garments[else]raises that fluffy tail of hers[end if], allowing Fang to smell and then lick across her pussy. She shivers with pleasure and releases a happy moan.";
 	say "     Shall you continue watching?";
 	if Player consents:
