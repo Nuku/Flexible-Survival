@@ -1155,7 +1155,7 @@ instead of going to Grey Abbey Library while hp of Lux is 4 and (TimekeepingVar 
 
 to say Lux&PlayerFirstMatingEvent: [Lux has sex with player] [Evening] [Near Entrance to Library]
 	if player is male: [Male or Herm]
-		if player is pure and (bodyname of player is "Feral Wolf" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
+		if player is pure and (bodyname of player is "Feral Wolf Male" or bodyname of player is "Feral Wolf Bitch" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
 			say "     ";
 			say "     ";
 			WaitLineBreak;
@@ -1168,7 +1168,7 @@ to say Lux&PlayerFirstMatingEvent: [Lux has sex with player] [Evening] [Near Ent
 			say "     ";
 			say "     ";
 	else: [Female]
-		if player is pure and (bodyname of player is "Feral Wolf" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
+		if player is pure and (bodyname of player is "Feral Wolf Male" or bodyname of player is "Feral Wolf Bitch" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
 			say "     ";
 			say "     ";
 			WaitLineBreak;
@@ -1199,7 +1199,7 @@ instead of going to Grey Abbey Library while hp of Umbra is 4 and (TimekeepingVa
 
 to say Umbra&PlayerFirstMatingEvent: [Umbra has sex with player] [Evening] [Near Entrance to Library]
 	if player is male: [Male or Herm]
-		if player is pure and (bodyname of player is "Feral Wolf" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
+		if player is pure and (bodyname of player is "Feral Wolf Male" or bodyname of player is "Feral Wolf Bitch" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
 			if player is submissive: [Player is Penetrated]
 				say "     ";
 				say "     ";
@@ -1226,7 +1226,7 @@ to say Umbra&PlayerFirstMatingEvent: [Umbra has sex with player] [Evening] [Near
 				say "     ";
 				say "     ";
 	else: [female]
-		if player is pure and (bodyname of player is "Feral Wolf" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
+		if player is pure and (bodyname of player is "Feral Wolf Male" or bodyname of player is "Feral Wolf Bitch" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
 			say "     ";
 			say "     ";
 			WaitLineBreak;

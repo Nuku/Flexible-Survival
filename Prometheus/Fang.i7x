@@ -2455,7 +2455,7 @@ This is the Fang's Epilogue rule:
 			if Sandra is in the bunker:
 				say "     Sandra, thankful to the big wolf for helping to keep everyone safe in the bunker, is always very kind to the big wolf when she comes to visit. Often, during visits or get-togethers at your place, you'll find that the bunny's quietly slipped away. Always knowing where you'll find her, you'll check and see her safely beneath the big wolf, getting his large, red cock stuffed into her cunt. The bunny's tummy grows large after one of these visits and she eventually gives birth to a pair of wolf cubs with bunny ears and a tail. These quiet, taciturn boys are never lacking in companionship, always having numerous lovers drawn in by the strong bodies and brooding nature, eager to bend over for them.";
 	else if HP of Fang is 3 or HP of Fang is 4:				[ alpha Fang ]
-		if Player has a non-shifting body of "Feral Wolf":
+		if Player has a non-shifting body of "Feral Wolf Male":
 			[ see Feral Wolf file for this ending ]
 			make no decision;
 		trigger ending "Fang's Epilogue";
