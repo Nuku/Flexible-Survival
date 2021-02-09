@@ -102,7 +102,7 @@ When Play begins:
 	now defeated entry is "[Donkeywoman loses]";
 	now victory entry is "[Donkeywoman wins]";
 	now desc entry is "[DonkeywomanDesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "long, asinine muzzle, with two large equine ears and a short close cropped mane of hair, and a plain leather collar which complements your rather sexy donkey-like face"; [You have a (your text) face."]
+	now face entry is "long, asinine muzzle, with two large equine ears and a short close cropped mane of hair, and a plain leather collar which complements your rather sexy donkey-like face"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "both strong and slender, your well-muscled form and powerful limbs easily suited for both work and sex, and you balance easily on the balls of your slightly hoof-like feet, even as you run your slender hands over your extremely sensitive and aroused body happily";
 	now skin entry is "[one of]gray furred[or]silken gray[or]gray hide covered[at random]";
 	now tail entry is "A long, sexy black donkey tail stretches out from above your surprisingly muscular ass, its tip trailing just above the ground as you swish it this way and that, finding yourself feeling surprisingly happy at how sexy your new donkey-like tail makes you feel."; [ Tail description, write a whole Sentence or leave blank. ]

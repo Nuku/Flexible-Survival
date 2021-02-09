@@ -156,8 +156,8 @@ to ItemGain (ItemObj - a grab object) by (N - number) silently:
 	ItemGain ItemObj by N silence state is 1;
 
 to ItemGain (ItemObj - a grab object) by (N - number) silence state is (Silence - a number):
-	increase carried of ItemObj by N;
 	now ItemObj is part of Player; [keeping the flimsy FS inventory system running]
+	increase carried of ItemObj by N;
 	if Silence is 0:
 		LineBreak;
 		say "[bold type]You gain [N] [printed name of ItemObj in lower case]![roman type][line break]";
@@ -492,7 +492,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
 				now FirstAnalPartner of Player is printed name of GivingChar;
 			if Player is mpreg_able: [fertile]
-				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None":
+				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None" and Sterile of GivingChar is false:
 					setmonster MainInfection of GivingChar;
 					if MainInfection of GivingChar is listed in infections of OviImpregnatorList:
 						movichance;
@@ -511,7 +511,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";
 				now FirstVaginalPartner of Player is printed name of GivingChar;
 			if Player is fpreg_able: [can get pregnant RIGHT NOW]
-				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None":
+				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None" and Sterile of GivingChar is false:
 					setmonster MainInfection of GivingChar;
 					if MainInfection of GivingChar is listed in infections of OviImpregnatorList:
 						fovichance;
@@ -703,8 +703,8 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 		if GivingCharIsNPC is 0 and TakingCharIsNPC is 0:
 			say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
 		if debugactive is 1:
-			say "GivingCharName: [GivingCharName], GivingCharIsNPC: [GivingCharIsNPC]";
-			say "TakingCharName: [TakingCharName], TakingCharIsNPC: [TakingCharIsNPC]";
+			say "DEBUG: GivingCharName: [GivingCharName], GivingCharIsNPC: [GivingCharIsNPC][line break]";
+			say "DEBUG: TakingCharName: [TakingCharName], TakingCharIsNPC: [TakingCharIsNPC][line break]";
 		if GivingCharIsNPC is 1:
 			if SexAct is "AssFuck":
 				if PenileVirgin of GivingChar is true:
@@ -1154,14 +1154,6 @@ To MultiInfect (x - text) repeats (repeatCount - number):
 			if reset is 1:
 				now non-infectious entry is true;
 			break;
-
-to randomInfect:
-	let RandomRow be a random number from 1 to the number of rows in the Table of Random Critters;
-	choose row RandomRow from the Table of Random Critters;
-	while area entry is "Nowhere": [runs circles until it finds an available creature]
-		now RandomRow is a random number from 1 to the number of rows in the Table of Random Critters;
-		choose row RandomRow from the Table of Random Critters;
-	infect Name entry;
 
 to say nameOrDefault:
 	if Player is defaultnamed:

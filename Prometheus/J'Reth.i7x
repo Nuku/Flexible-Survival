@@ -67,7 +67,7 @@ Table of GameCharacterIDs (continued)
 object	name
 J'Reth	"J'Reth"
 
-J'Reth is a man.
+J'Reth is a person.
 ScaleValue of J'Reth is 3. [human sized]
 Body Weight of J'Reth is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of J'Reth is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -102,7 +102,7 @@ PenileVirgin of J'Reth is true.
 SexuallyExperienced of J'Reth is false.
 TwistedCapacity of J'Reth is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of J'Reth is true. [steriles can't knock people up]
-MainInfection of J'Reth is "Draco-Mantis".
+MainInfection of J'Reth is "Draco-Mantis Male".
 Description of J'Reth is "[J'RethDesc]".
 Conversation of J'Reth is { "Mantis Dragon sounds." }.
 The scent of J'Reth is "     J'Reth smells of Mantis-Dragons and fairies in the woods."

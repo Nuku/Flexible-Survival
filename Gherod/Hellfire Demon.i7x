@@ -1,9 +1,25 @@
-Version 2 of Hellfire Demon by Gherod begins here.
+Version 3 of Hellfire Demon by Gherod begins here.
 
 "Adds the kinky Hellfire Demons to be roaming around Red Light District in service of an unknown entity."
 
 [Version 1 - File created - Gherod]
 [Version 2 - New Victory Scene w/ Xaedihr and Male player]
+[Version 3 - Updated Infection with lootlists and infection items. Leather Jockstrap moved to Hellfire Workers file.]
+
+Section 1 - Lootlist
+
+to say GenerateTrophyList_Hellfire_Demon:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "hellfire demon horn shard" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "soda" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "obsidian coin" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "libido pill" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
 
 Section 2 - Creature Responses
 
@@ -12,33 +28,21 @@ to say HellDemon wins:
 		say ""; [dealt with at the source]
 	else:
 		if HP of Player > 0: [player submits]
-			if (gimp mask is equipped) and Hellfire Club is not known:
-				say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction as you kneel down in front of him. 'That easy, huh... Master Mogdraz will indeed love you. Now be a good [boygirl] and stay still.' Following his words, you suddenly feel some kind of clothed bag covering your head before you're lifted from the ground into what seems to be the demon's shoulder. You can't see anything, but you know he's carrying you to some place. Each large step he takes only makes you [if player is submissive]more eager[else]more nervous[end if] to know what your next destination will be. But one thing you're certain, is that you're going to meet this Mogdraz person, whoever they might be.";
-				if demonologist is listed in companionList of Player:
-					say "     You're also wondering why Xaedihr hasn't done anything to rescue you... Is that why you bring powerful companions with you? To see you being carried around - or worse! - by some random demonic creature?! He better be following you...";
-				say "[MogdrazIntro]";
-			else:
-				say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction, as you kneel down in front of him. 'Finally someone who knows their place. That's a good start, but let's see how much you can handle.' With that said, the hellish creature prepares to use you as he sees fit...";
-				if a random chance of 1 in 2 succeeds:
-					HellDemonBJForced;
-				else if player is male or player is neuter:
-					HellDemonAnalForced;
-				else if player is female:
-					HellDemonPussyForced;
+			say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction, as you kneel down in front of him. 'Finally someone who knows their place. That's a good start, but let's see how much you can handle.' With that said, the hellish creature prepares to use you as he sees fit...";
+			if a random chance of 1 in 2 succeeds:
+				HellDemonBJForced;
+			else if player is male or player is neuter:
+				HellDemonAnalForced;
+			else if player is female:
+				HellDemonPussyForced;
 		else: [player loses]
-			if gimp mask is equipped and Hellfire Club is not known:
-				say "     Unable to keep fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'Still putting up a fight, huh... Master Mogdraz will indeed love your spirit. Now be a good [boygirl] and stay still.' Following his words, you suddenly feel some kind of clothed bag covering your head before you're lifted from the ground into what seems to be the demon's shoulder. You can't see anything, but you know he's carrying you to some place. Each large step he takes only makes you [if player is submissive]more eager[else]more nervous[end if] to know what your next destination will be. But one thing you're certain, is that you're going to meet this Mogdraz person, whoever they might be.";
-				if demonologist is listed in companionList of Player:
-					say "     You're also wondering why Xaedihr hasn't done anything to rescue you... Is that why you bring powerful companions with you? To see you being carried around - or worse! - by some random demonic creature?! He better be following you...";
-				say "[MogdrazIntro]";
-			else:
-				say "     Unable to continue fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'You know how to put up a fight! That left me all boned up... Perfect, I was just thinking about testing your holes.' With that said, the hellish creature prepares to use you as he sees fit...";
-				if a random chance of 1 in 2 succeeds:
-					HellDemonBJForced;
-				else if player is male or player is neuter:
-					HellDemonAnalForced;
-				else if player is female:
-					HellDemonPussyForced;
+			say "     Unable to continue fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'You know how to put up a fight! That left me all boned up... Perfect, I was just thinking about testing your holes.' With that said, the hellish creature prepares to use you as he sees fit...";
+			if a random chance of 1 in 2 succeeds:
+				HellDemonBJForced;
+			else if player is male or player is neuter:
+				HellDemonAnalForced;
+			else if player is female:
+				HellDemonPussyForced;
 
 to HellDemonBJForced:
 	project Figure of HellfireDemon_hard_icon;
@@ -333,12 +337,12 @@ to say HellDemon Desc:
 	else: [standard scene]
 		project Figure of HellfireDemon_clothed_icon;
 		say "     Standing in front of you is yet another intimidating creature of Hell. A deep crimson, tall and powerful demon, with large tauric horns on the top of his head, approaches you from the darkness. Your eyes inevitably land on the massive bulge barely contained by a leather jockstrap, jiggling slightly at each step that he takes. On top of that, his athletic body is covered in muscle, with a simple harness around his hairy pectorals, and while he generally looks more human in appearance than the brutish of demons, his dark sharp claws still prove a threat to you. With a grin on his face, he speaks to you:[line break]";
-		if gimp mask is equipped and Hellfire Club is not known:
-			say "     'A gimp mask? Such depravity... so delicious! [bold type]You'll make a great slave candidate for Master Mogdraz[roman type]! Be a good [boygirl] and I'll take you there. Or don't, and I'll drag you with me anyway! He will be very... very pleased to meet you.' With this, the demon lunges himself at you.";
+		if Hellfire Club is known:
+			say "     'Look who it is! Master's special guest taking a walk during the night! How about we spar... And fuck right after?' You swear you can already see his bulge growing with the antecipation of having it with you, be it just fighting or more than that. He also doesn't waste any time, lunging himself at you with a grin on his face.";
 		else if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
-			say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. Now be a good lad and do what you're told, or I'll make you.' With this, the demon lunges himself at you.";
+			say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. A small price for an eternity of fun, if you ask me... Speaking of fun, wanna have a go?' With this, the demon lunges himself at you.";
 		else:
-			say "     'Oh... Are you lost? Wrong time to be walking this side of the streets... Master needs more slave candidates, I just deliver. Though I'll enjoy testing you first.' With this, the demon lunges himself at you.";
+			say "     'Oh... Are you lost? What a cutie! And I definitely could use someone to unload my balls into... Master makes us work so much...! Alright, do as you're told and I might let you suck me off! How does that sound?' Without expecting any answer, the demon lunges himself at you.";
 
 Section 3 - Creature Insertion
 
@@ -395,11 +399,11 @@ When Play begins:
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 80;             [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "hellfire seed";               [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "hellfire demon horn shard";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50;          [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is "hellfire demon man-milk";
+	now CumItem entry is "hellfire seed";
+	now TrophyFunction entry is "[GenerateTrophyList_Hellfire_Demon]";
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]muscular[or]powerful[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "demonic";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -517,16 +521,63 @@ Section 4-1 - Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"hellfire seed"	"The white, gooey seed of one of your past demonic lovers. It smells very sweet, a little like burnt cream, and feels really hot."	1	hellfire seed
+"hellfire demon horn shard"	"A fragment of one of the Hellfire Demon's obsidian horns. It seems to have been chipped off during a fight."	0	hellfire demon horn shard
+
+hellfire demon horn shard is a grab object.
+It is temporary.
+Usedesc of hellfire demon horn shard is "[hellfire demon horn shard use]";
+
+to say hellfire demon horn shard use:
+	say "Holding the shard between your palms, you stroke over it, carefully. Strangely, the obsidian disintegrates after a while, becoming a cloud of fine crystallic particles that are absorbed into your skin. It seems to cause some sort of reaction with the nanites in your system...";
+	HellfireDemonInfect;
+
+instead of sniffing hellfire demon horn shard:
+	say "The shard doesn't smell like anything in particular.";
+
+[---]
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"hellfire seed"	"The white, gooey seed of one of your past demonic lovers. It smells very sweet, a little like burnt cream, and feels really hot. Comes inside a plastic water bottle that could be mistaken for some sort of buttermilk, if someone hadn't written 'Hellfire Demon' across the label. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	hellfire seed
 
 hellfire seed is a grab object.
+hellfire seed is cum.
 Usedesc of hellfire seed is "[hellfire seed use]";
 
 to say hellfire seed use:
-	say "     The warm, sticky liquid tastes almost too hot, but very sweet, as you drink it. You feel the warm seed going down your throat, leaving the delightful sensation of a tasty and hot beverage.";
-	PlayerDrink 2;
+	say "     The warm, sticky liquid tastes almost too hot, but very sweet, as you drink it. You feel the warm seed going down your throat, leaving the delightful sensation of a tasty and hot beverage. It leaves a lingering lust for sex...";
+	PlayerDrink 5;
+	SanLoss 10;
+	increase Libido of Player by 15;
 	if "Iron Stomach" is not listed in Feats of Player:
+		say "     It seems to cause a reaction with the nanites in your system...";
 		HellfireDemonInfect;
+
+instead of sniffing hellfire seed:
+	say "The demonic semen smells sweet, a little like burnt cream.";
+
+[---]
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"hellfire demon man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Hellfire Demon Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	hellfire demon man-milk
+
+hellfire demon man-milk is a grab object.
+hellfire demon man-milk is milky.
+Purified of hellfire demon man-milk is "distilled milk".
+Usedesc of hellfire demon man-milk is "[hellfire demon man-milk use]";
+
+to say hellfire demon man-milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the demonic man-milk run over your tongue and down your throat. Tastes rich and oddly sweet. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+	if "Iron Stomach" is not listed in Feats of Player:
+		say "     It seems to cause a raction with the nanites in your system...";
+		HellfireDemonInfect;
+
+instead of sniffing hellfire demon man-milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
+[---]
 
 to HellfireDemonInfect:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -538,27 +589,9 @@ to HellfireDemonInfect:
 	infect "Hellfire Demon";
 	now non-infectious entry is true;
 
-instead of sniffing hellfire seed:
-	say "The demonic semen smells sweet, a little like burnt cream.";
-
 Section 4-2 - Equipment
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"leather jockstrap"	"A black leather jockstrap that barely provides any frontal cover and none at all behind, leaving your ass exposed."	0	leather jockstrap
 
-leather jockstrap is a grab object.
-leather jockstrap is equipment.
-It is not temporary.
-Plural of leather jockstrap is false.
-Taur-compatible of leather jockstrap is false.
-The size of leather jockstrap is 3.
-The AC of leather jockstrap is 0.
-The effectiveness of leather jockstrap is 0.
-The placement of leather jockstrap is "crotch".
-The descmod of leather jockstrap is "A kinky leather jockstrap holds tightly against your privates.".
-The slot of leather jockstrap is "crotch".
-the scent of leather jockstrap is "Smells like sweet musk... It was worn before, but is fairly clean.".
 
 Section 5 - Endings
 

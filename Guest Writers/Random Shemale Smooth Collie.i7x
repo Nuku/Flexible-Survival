@@ -196,10 +196,10 @@ to say CollieDesc:
 	else:
 		choose a row with name of "Smooth Collie Shemale" in the Table of Random Critters;
 		if enemy type entry is 1: [unique enemy, player does not know the name]
-			say "     An enormously big figure comes walking down the street and looks at you with a grin on her muzzle. The canine beast looks quite a bit like Lassie, if Lassie were twelve feet tall, walked upright and had the general shape of an attractive woman. Plus eight rather large breasts and a dick that would probably cause a stallion some envy... oh, and much shorter fur. On second thought, she doesn't look much like Lassie after all. 'Hello darling,' the giant anthro says in a surprisingly high-pitched voice, her eyes roaming over your form as she hungrily takes you in. 'I'm Sharlene, and you look like just what I need to relieve some of the pressure in my balls.' And with that, she steps forward and reaches for you. Not so much to fight, but rather to just make use of your body for her pleasure.";
+			say "     An enormously big figure comes walking down the street and looks at you with a grin on her muzzle. The canine beast looks quite a bit like Lassie, if Lassie were nine feet tall, walked upright and had the general shape of an attractive woman. Plus six breasts starting at a large top pair and getting progressively smaller down her front side, and a dick that would probably cause a stallion some envy... oh, and much shorter fur. On second thought, she doesn't look much like Lassie after all. 'Hello darling,' the giant anthro says in a surprisingly high-pitched voice, her eyes roaming over your form as she hungrily takes you in. 'I'm Sharlene, and you look like just what I need to relieve some of the pressure in my balls.' And with that, she steps forward and reaches for you. Not so much to fight, but rather to just make use of your body for her pleasure.";
 			now enemy type entry is 2; [player knows her name]
 		else:
-			say "     Once more, you run into Sharlene, the twelve feet tall anthro collie. Her eight breasts wiggle with every step the enormous anthro takes and the long shaft dangling between her legs twitches as she sees you. 'You again,' the shemale dog says in a surprisingly high-pitched voice, her eyes roaming over your form as she hungrily takes you in. 'Come on, let's have some fun together, eh?!' And with that, she steps forward and reaches for you. Not so much to fight, but rather to just make use of your body for her pleasure.";
+			say "     Once more, you run into Sharlene, the nine feet tall anthro collie. Her eight breasts wiggle with every step the enormous anthro takes and the long shaft dangling between her legs twitches as she sees you. 'You again,' the shemale dog says in a surprisingly high-pitched voice, her eyes roaming over your form as she hungrily takes you in. 'Come on, let's have some fun together, eh?!' And with that, she steps forward and reaches for you. Not so much to fight, but rather to just make use of your body for her pleasure.";
 
 Section 2 - Creature Insertion
 
@@ -230,7 +230,7 @@ When Play begins:
 	now desc entry is "[CollieDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "drawn forward into a long muzzle that leads back into a flat canine skull. Your ears now stick straight up from your head most of the time, only shifting when you hear a particularly loud noise. New muscles easily change which way they"; [ Face description, format as "Your face is (your text)"]
 	now body entry is "[rsscbodyentry]";
-	now skin entry is "[if looknow is 1]short, soft, dense fur in the sable pattern of a collie, completely covering your[else]short furred, sable patterned[end if]"; [ skin Description, format as "Your body is covered in (your text) skin"]
+	now skin entry is "[if looknow is 1]short, soft, dense fur in the sable pattern of a collie, completely covering your[else]short furred, sable patterned[end if]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
 	now tail entry is "Your tail is covered in short, soft, golden fur from your ass right up to the last inch or so, where it abruptly turns white."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[if looknow is 1]bright red canine/human hybrid in shape, complete with a knot and sheath,[else]canine hybrid[end if]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "as your skull begins to alter in shape as if made of clay. A sense of pressure here and a bit of stretching there, followed by a burning sensation in your mouth as your teeth are reshaped. You end up with the long, slender muzzle leading into a flat head of a collie"; [ face change text. format as "Your face feels funny as (your text)." ]
@@ -256,8 +256,8 @@ When Play begins:
 	now Cock Length entry is 22; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 5; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	now Nipple Count entry is 6; [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 10; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 8; [ Breast size for if Sex="Male", usually zero. ]
+	now Breast Size entry is 8; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 6; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity] [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex infection will try and give you ]

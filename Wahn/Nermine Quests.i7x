@@ -220,12 +220,24 @@ to say ResolveEvent Hyena Challenge:
 						challenge "Hyena Matriarch";
 						if fightoutcome < 20: [player won]
 							say "     Lying there proudly as you enjoy your victory over the formerly proud matriarch, you grin as the hyenas party around you, celebrating your victory as they make you honorary matriarch for a time. You are treated to your pick of everything the gang has, and the hyenas definitely throw one hell of a party. Eventually though, it is time for you to go, the former matriarch handing over the items you wanted easily enough, while the rest of the gang begins to settle down to the rough task of deciding who gets to be the next matriarch. As you walk away down the city streets, you find yourself almost wishing you could go back and claim the matriarch's throne from them on a more permanent basis...";
+							CreatureSexAftermath "Hyena Herm" receives "OralCock" from "Player";
+							CreatureSexAftermath "Hyena Herm" receives "PussyFuck" from "Player";
+							if anallevel is not 1:
+								CreatureSexAftermath "Hyena Herm" receives "AssFuck" from "Player";
+							if player is female:
+								CreatureSexAftermath "Hyena Herm" receives "OralPussy" from "Player";
 							now matriarchowned is 0;
 							now RareQuesting is 9;
 							now Resolution of Hyena Challenge is 1; [won]
 							now Hyena Challenge is resolved;
 						else if fightoutcome > 19: [lost or fled]
 							say "     After several hours of being passed around by the numerous gang members, all eager to get a shot at the person who thought they could challenge the matriarch, you are left alone to recover while the orgy continues without you. Eventually you manage to recover enough from the matriarch's dominant use of your all too willing body, and slowly drag yourself away from the gang's territory. As you stagger down the streets of the city, the cum of many different hyenas matting your thick black fur, you groan as you realize that you certainly don't have a chance of recovering the items Nermine wants from the hyena stronghold now... even as the part of you that the hyena matriarch brought out is wondering if maybe you shouldn't just give up on your silly quest and go back and become a nice little submissive hyena for the much more powerful gang of hyenas...";
+							CreatureSexAftermath "Player" receives "OralCock" from "Hyena Herm";
+							CreatureSexAftermath "Player" receives "OralPussy" from "Hyena Herm";
+							if Player is female:
+								CreatureSexAftermath "Player" receives "PussyFuck" from "Hyena Herm";
+							if anallevel is not 1:
+								CreatureSexAftermath "Hyena Herm" receives "AssFuck" from "Player";
 							now matriarchdefeated is 0;
 							now Resolution of Hyena Challenge is 2; [lost/fled against Matriarch]
 							now Hyena Challenge is resolved;
@@ -236,6 +248,7 @@ to say ResolveEvent Hyena Challenge:
 						if fightoutcome < 20: [player won]
 							say "     Lying there proudly as you enjoy your victory over the formerly proud matriarch, you grin as the hyenas party around you, celebrating your victory as they make you honorary matriarch for a time. And you get to put your new temporary cock to good use several more times, before one of the hyenas shows you how to take it off, your body feeling kind of empty at the loss of your new member, though when you ask about maybe keeping the strap on around, the hyenas warn you that prolonged use of the item makes it permanent, which while it doesn't sound too bad to you right now, is probably something to consider for later, as you turn your attention back to the forming party.";
 							say "     You are treated to your pick of everything the gang has, and the hyenas definitely throw one hell of a party. Eventually though, it is time for you to go, the former matriarch handing over the items you wanted easily enough, while the rest of the gang begins to settle down to the rough task of deciding who gets to be the next matriarch. As you walk away down the city streets, you find yourself almost wishing you could go back and claim the matriarch's throne from them on a more permanent basis...";
+							CreatureSexAftermath "Hyena Herm" receives "OralPussy" from "Player";
 							now matriarchowned is 0;
 							now RareQuesting is 9;
 							now Resolution of Hyena Challenge is 1; [won]
@@ -243,6 +256,11 @@ to say ResolveEvent Hyena Challenge:
 						else if fightoutcome > 19: [lost or fled]
 							say "     After several hours of being passed around by the numerous gang members, you lose track of time as new cocks penetrate your [if Player is female]pussy[else]body[end if], everyone being eager to get a shot at the person who thought they could challenge the matriarch and dump a load or two in you. At some point you lose the strapon they gave you, as one of the hyenas rips it off you making you cry out, while the rest laugh at you, since now they know why you came to the fight so ill prepared with a cock of your own. Obviously you are such a submissive slut you don't need one after all!";
 							say "     After even more sex in form of a prolonged gangbang, you are finally left alone to recover while the orgy continues without you, and eventually you manage to recover enough from the matriarch's dominant use of your all too willing body, and slowly drag yourself away from the gang's territory. As you stagger down the streets of the city, the cum of many different hyenas matting your thick black fur, you groan as you realize that you certainly don't have a chance of recovering the items Nermine wants from the hyena stronghold now... even as the part of you that the hyena matriarch brought out is wondering if maybe you shouldn't just give up on your silly quest and go back and become a nice little submissive hyena for the much more powerful gang of hyenas...";
+							CreatureSexAftermath "Player" receives "OralCock" from "Hyena Herm";
+							CreatureSexAftermath "Player" receives "OralPussy" from "Hyena Herm";
+							CreatureSexAftermath "Player" receives "PussyFuck" from "Hyena Herm";
+							if anallevel is not 1:
+								CreatureSexAftermath "Hyena Herm" receives "AssFuck" from "Player";
 							now matriarchdefeated is 0;
 							now Resolution of Hyena Challenge is 2; [lost/fled against Matriarch]
 							now Hyena Challenge is resolved;
@@ -514,6 +532,19 @@ RareQuesting is a number that varies.
 instead of conversing the rare counter:
 	say "     Crouching down in front of the wooden counter with its glass plates that protect precious treasures, you try your best to strike up a conversation with it. Sadly, the piece of furniture is not responsive, so all this does is earn you a strange look from Nermine. Maybe you should talk to her instead if you want to know something about the rare items.";
 
+
+NermineTest1 is an action applying to nothing.
+understand "NermineTest1" as NermineTest1.
+
+check NermineTest1:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out NermineTest1:
+	now RareQuesting is 2; [fruit gained]
+	now TreasureFound is 1; [treasure found]
+
 to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk menu now]
 	if JackalBoyTF > 0: [already locked into Jackalboy shape]
 		say "     'Ah, Nermine sees her little helper is interested in her rare item counter!' The jackal shopkeeper beams happily at your interest, but then shakes her head slowly as you step closer to inspect it in detail. 'Sadly Nermine isn't needing [hisher] help with anything in the counter right now, she has other things waiting for the little jackal to do...' she says with a teasing smile on her dark muzzle.";
@@ -557,11 +588,9 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 	else if RareQuesting is 5: [pirate gold stage active]
 		if TreasureFound is 1:
 			say "     'Ah, the brave adventurer found [hisher] treasure!' Nermine says with a large smile on her muzzle as she eagerly takes the small handful of golden coins you are holding out from you, leaving you feeling vaguely sad as those precious golden circles disappear behind the counter. When you point out that that was all there was in the pirate stash, she blinks at you in surprise. 'Only so few coins left? Well, then it is especially fortunate that Nermine's helper managed to find them! This makes them far more precious and she will have to adjust the price accordingly,' the jackal-woman says, a smile tugging at the corners of her muzzle. Then she pulls out the small golden ankh she promised you earlier and hands it to you. 'Nermine thinks this was more than earned then, though she also believes there might still be further coins left out there if one were to go and look again,' she says with a grin. As you weigh the warm golden ankh in your hands and wonder whether it was worth the handful of treasure you just traded for it...";
-			LineBreak;
-			say "[bold type]You gain a strange ankh![roman type][line break]";
-			ItemGain strange ankh by 1;
 			now TreasureFound is 0;
 			now RareQuesting is 6; [gold coins delivered]
+			ItemGain strange ankh by 1;
 		else:
 			say "     'Back again so soon? And with empty hands, disappointing the poor jackal shopkeeper?' Nermine says in a teasing voice as you address her over the rare item counter again. 'If Nermine knew where to find the coins, she would not be needing her helper to look for them... but one would think that the beach might be a good place to start looking. After all, where else would one find the way to pirate treasure?' she says with an amused grin as she turns back to her work, her tail waving teasingly at you as she leaves.";
 	else if RareQuesting is 6: [second ankh not yet used]
@@ -631,28 +660,25 @@ name	desc	weight	object
 
 strange ankh is a grab object. Understand "ankh" and "strange" as strange ankh.
 
-Usedesc of strange ankh is "[jackalankhmagic].";
+Usedesc of strange ankh is "[jackalankhmagic]";
 
 the scent of strange ankh is "The golden ankh smells faintly of desert sand and masculine musk.".
 
 To say jackalankhmagic:
 	if Nightmaretf > 0:
 		say "     You rub the small golden ankh curiously, only to feel a strange burning sensation in your body as if two great forces were warring within. Letting out a gasp of surprise as the ankh seems to heat up - enough to sear flesh - you drop the item instinctively. Waving your hand and looking down at it, you realize that there is no trace of any damage after all, not even any reddening. Could it be that you've just imagined the feeling? But no, glancing down at the ankh, you see that it has melted into a small puddle of molten gold, sizzling a bit on the ground. Somehow you don't think that was what was supposed to happen...";
-		ItemLoss all strange ankh;
 		now JackalManTF is 5;
 		now NermineTalk is 1;
 		stop the action;
 	if wrcursestatus >= 7 and wrcursestatus < 100:
 		say "     You rub the small, golden ankh curiously and hiss in pain as it starts to heat up, scalding your hand. You toss it aside. Something about you seems to be incompatible with it.";
 		now NermineTalk is 1;
-		ItemLoss all strange ankh;
 		stop the action;
 	if JackalManTF is 0:
 		say "     You smile as you rub the small golden ankh between your hands, the warm metal feeling nice and almost soft as you rub at it. Suddenly the small ankh almost seems to melt into your hands, leaving a soft tingling dusting of gold where the small trinket was before. As you stare at your palms, you feel a strange shifting sensation in your body, seeming to center on your rear. Glancing over your shoulder, you are surprised to see your ass starting to stretch and change, your rear flattening out as a long predatory black jackal-like tail forms behind you. In a strangely pleasant stretching sensation, your new tail grows until its tip is hanging just below your knees. You stare down at the appendage and can't help but try it out - moving the tail from side to side a little a few times, with it reacting with surprising dexterity. Next, you take a few steps and are pleased to note that it helps your balance greatly. Thinking to yourself, the though of how hot and sexy the jackal tail looks comes unbidden to your mind...";
 		now TailName of Player is "Jackalman";
 		now TailSpeciesName of Player is "Jackal";
 		now Tail of Player is "You have a long sleek jackal's tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
-		ItemLoss strange ankh by 0;
 		StatChange "Dexterity" by 4;
 		now RareQuesting is 4;
 		now JackalManTF is 1;
@@ -663,7 +689,6 @@ To say jackalankhmagic:
 		now SkinName of Player is "Jackalman";
 		now SkinSpeciesName of Player is "Jackal";
 		now Skin of Player is "[one of]dark black[or]sleek black furred[or]jackal-furred[at random]";
-		ItemLoss strange ankh by 0;
 		StatChange "Charisma" by 3;
 		StatChange "Stamina" by 3;
 		now RareQuesting is 7;
@@ -677,7 +702,6 @@ To say jackalankhmagic:
 		now Face of Player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seems both predatory and strangely sexy at the same time.";
 		now RareQuesting is 11;
 		now statuequest is 1;
-		ItemLoss strange ankh by 0;
 		StatChange "Charisma" by 4;
 		StatChange "Perception" by 4;
 		now JackalManTF is 3;
@@ -695,13 +719,11 @@ To say jackalankhmagic:
 		now CockName of Player is "Jackalman";
 		now CockSpeciesName of Player is "Jackal";
 		now Cock of Player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
-		ItemLoss strange ankh by 0;
 		StatChange "Strength" by 4;
 		StatChange "Dexterity" by 2;
 		now JackalManTF is 4;
 	if JackalManTF is 5:
 		say "     You examine the strange ankh in your hand, but it seems to slip out of your fingers. When you look for it, you can't seem to find it. Oh well, you'd already asked Nermine to reverse its effects, so that's probably for the best.";
-		ItemLoss all strange ankh;
 
 An everyturn rule:
 	if JackalManTF is 5:

@@ -19,11 +19,13 @@ LastCandyWalkin is a number that varies.
 
 to say candycoondesc:
 	setmongender 3; [creature is male]
+	project Figure of Candy_clothed_icon;
 	say "     You have encountered a cute raccoon in a pink, candy striper outfit. The raccoon has a slender, feminine build. The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears. The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body. That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt. The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
 
 to say losetocandycoon:
 	choose row MonsterID from the Table of Random Critters;
 	now nocandycoonsex is 0;
+	project Figure of Candy_naked_icon;
 	if Player is male:
 		say "     Victorious, the girlish coon giggles happily and pushes you to the ground. Working off your remaining clothes with nimble fingers, the candy striper raises his skirt, exposing his hot-pink erection.[line break]";
 		say "     [bold type]Knowing you'll be taking his six inch cock one way or the other, you have a brief opportunity to try to distract him or simply let him take your ass as he clearly intends.[roman type][line break]";
@@ -57,6 +59,7 @@ to say losetocandycoon:
 
 
 to say beatthecandycoon:
+	project Figure of Candy_naked_icon;
 	if nocandycoonsex > 2 and ( the remainder after dividing nocandycoonsex by 5 is not 0 ):
 		say "     You manage to knock the fight out of the coon boytoy. He moans and plays with himself, rolling over to expose his bottom to you, but you leave him to deal with his own lusts as you have in the past.";
 		increase nocandycoonsex by 1;
@@ -454,7 +457,6 @@ MainInfection of Candy is "Candy Striper".
 
 Description of Candy is "[coondesc]".
 Conversation of Candy is { "Cock!" }.
-The icon of Candy is figure of Candy_icon.
 candytalk is a number that varies.
 lastCandyfucked is a number that varies. lastCandyfucked is usually 555.
 coonsex is a number that varies.
@@ -463,12 +465,18 @@ coonsex is a number that varies.
 the scent of the Candy is "The candy coon smell of cotton candy, male arousal and sex."
 
 to say coondesc:
+	project Figure of Candy_clothed_icon;
 	say "     The pink raccoon, now going by the name of Candy, is staying peaceably in the bunker. His fur is a light gray with pink highlights. His raccoon mask is pink, as are the stripes on his body and tail. The raccoon has an effeminate body with a tight ass and slender figure. He's sewed his candy striper uniform and is happily prancing around in it, looking quite cute. Watching him, you do notice that he's found some lace-trimmed panties to add to his ensemble, keeping him from completely showing when he sashays around. He's largely keeping himself out of trouble, though occasionally seems to revert to more primal needs and [if HP of Sven >= 10 and HP of Sven < 30]coaxes your feline pet into some more playtime[else]masturbates furiously until the room smells of cotton candy from his sweet cum[end if]. You find yourself unsure if he's succumbed to the nanites or not, though the fact that he hasn't molested anybody yet instills hope, and you'll just hope for the best for now.";
 
-after going to Bunker while coonstatus is 1:
-	now the player is in the Bunker;
+instead of navigating Grey Abbey Library while (coonstatus is 1):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: Meeting Candy at the library[line break]";
 	now coonstatus is 2;
-	say "     As you arrive at the bunker, you can see that the pink coon has arrived there as per your directions. He prances over to you with a grin on his face. 'Thanks for getting me out of there, hon,' he churrs. 'Doc's been going extra-crazy lately. I mean, I think he was a little odd before the whole mouse thing, but since then, he's been doing more and more experiments on everyone at the hospital.' He hugs his arms around himself and shudders a little. 'I think there used to be more doctors... I think... but, well, if there were, there obviously aren't anymore, right?' he asks, looking a bit perturbed by the gap in his memory.'";
+	project Figure of Candy_clothed_icon;
+	say "     As you arrive at the library, you can see the pink coon waiting for you near the entrance, having made the trip here per your directions. He prances over to you with a grin on his face. 'Thanks for getting me out of there, hon. I checked out our place and picked a bunk down in the bunker if that's alright,' he churrs. 'Doc's been going extra-crazy lately. I mean, I think he was a little odd before the whole mouse thing, but since then, he's been doing more and more experiments on everyone at the hospital.' He hugs his arms around himself and shudders a little. 'I think there used to be more doctors... I think... but, well, if there were, there obviously aren't anymore, right?' he asks, looking a bit perturbed by the gap in his memory.'";
 	say "     'I don't really remember who I am anymore. I'm pretty sure I was volunteering at the hospital and that I was gay before the change... which, admittedly, hasn't really changed much... But aside from that, it's all rather hazy. Since I don't remember my name, how about you call me Candy, hon?' He reaches into his pocket and pulls out a small needle, another of the healing boosters. 'I don't really have much to give you to say thanks, but you should probably take this. With the way things are, you might need it out there if you're going to keep running around. Better safe than sorry, right?'";
 	ItemGain healing booster by 1;
 	if Player is male:
@@ -476,9 +484,11 @@ after going to Bunker while coonstatus is 1:
 		if BodyName of Player is "Raccoon":
 			say ". 'I'm so glad you decided to keep the new look, sweetie,' he adds, rubbing his slender, coon body against yours with a sexy smile";
 		say ".";
+	say "     With that said, the pink raccoon saunters into the building on his paw-pads, swaying his hips and tail a little before throwing you a look over the shoulder and vanishing inside.";
 
 
 instead of conversing the Candy: [MIGHT ACTUALLY BE A HUGE MESS, I DID MY BEST.]
+	project Figure of Candy_clothed_icon;
 	if HP of Candy < 2 and HP of Sven < 10 or HP of Sven >= 50:
 		say "     [one of]'I'm glad I'm away from there. I mean, the orderlies were fun if you could catch them when they weren't busy, but lately they're always doing something. And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there, books only go so far!' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so I have some proper company, sweetie,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital. I was a little... ah... worked up. I'm doing better now, really,' he says, giving you a big smile, trying to look sincere. At least he's apologizing?[or]'You know, being cooped up in a library reminded me of one thing, at least. Turns out I loved romance novels! And this place is the motherlode!' he says, a sparkle briefly visible in the coon's eyes.[or]'Y'know what I really don't miss? The Chimeras. Sure, they were hung, but... I've got some standards. And the walking dead just don't do it for me.'[or]'You know, sometimes I remember the silliest things. Like my grandmother's recipe for chicken kiev. I don't remember anything else about her, but I remember the chicken. Weird, huh?'[at random]";
 	else if HP of Candy > 2 and HP of Candy < 100 and HP of Sven < 10 or HP of Sven >= 50:
@@ -507,6 +517,7 @@ to say sexwithCandy:
 	if lastCandyfucked - turns < 8:
 		say "     The coon smiles and kisses your cheek. 'I'm sorry, sweetie. I need a little time to recover. I want to make the most of our playtime.'";
 	else:
+		project Figure of Candy_naked_icon;
 		[puts Raccoon as lead monster in case of impregnation]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;

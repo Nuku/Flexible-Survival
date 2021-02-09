@@ -1,6 +1,13 @@
 Version 1 of Gregory by Wahn begins here.
 [Version 1 - Put into its own file]
 
+[ HP of Gregory                                             ]
+[   0: still in his cocoon                                  ]
+[   1: brought into the library                             ]
+[  98: player fucked Gregory, then left him                 ]
+[  99: player rode Gregory, then left him                   ]
+[ 100: left in the opened cocoon                            ]
+
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
@@ -69,7 +76,9 @@ instead of sniffing Gregory:
 	say "     The wyvern hybrid has a nice, masculine scent, with an underlying spicy aroma. That must be coming from his wyvern side, as it's definitely not human.";
 
 instead of conversing Gregory:
-	say "     He's unconscious, so don't expect too much response from him...";
+	if HP of Gregory is 1: [unconscious in the library]
+		say "     He's unconscious, so don't expect too much response from him...";
+	say "[GregoryTalkMenu]";
 
 [
 an everyturn rule:
@@ -99,10 +108,8 @@ Section 3 - Conversation
 [***********************************************************]
 [***********************************************************]
 
-[
 instead of conversing the Gregory:
 	say "[GregoryTalkMenu]";
-]
 
 to say GregoryTalkMenu:
 	say "     [bold type]What do you want to talk to Gregory about?[roman type][line break]";
@@ -110,15 +117,23 @@ to say GregoryTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Himself";
-	now sortorder entry is 1;
-	now description entry is "Ask Gregory to tell you about himself";
+	if HP of Gregory is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Just talk a little while you check on him";
+		now sortorder entry is 1;
+		now description entry is "Check if he's okay and try to stimulate his mind";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "His plans";
-	now sortorder entry is 2;
-	now description entry is "Ask Gregory what he's got in mind for the future";
+	if HP of Gregory is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Explain what happened to him";
+		now sortorder entry is 2;
+		now description entry is "Tell Gregory where he is and how he got here";
+	[]
+	if HP of Gregory is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Whisper in is ear that he's your fucktoy";
+		now sortorder entry is 3;
+		now description entry is "Try to indoctrinate the unconscious Gregory";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -135,22 +150,42 @@ to say GregoryTalkMenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[GregoryTalk1]";
-				else if (nam is "His plans"):
-					say "[GregoryTalk2]";
+				if (nam is "Just talk a little while you check on him"):
+					say "[GregoryUnconsciousTalk1]";
+				else if (nam is "Explain what happened to him"):
+					say "[GregoryUnconsciousTalk2]";
+				else if (nam is "Whisper in is ear that he's your fucktoy"):
+					say "[GregoryUnconsciousTalk3]";
 				wait for any key;
 				say "[GregoryTalkMenu]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You step back from the wyvern hybrid, shaking your head slightly as he gives a questioning look.";
+			if HP of Gregory is 1: [unconscious]
+				say "     You step back from the wyvern hybrid, leaving him to his sleep.";
+			else:
+				say "     You step back from the wyvern hybrid, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
-to say GregoryTalk1: [talk about him]
-	say "     ...";
+to say GregoryUnconsciousTalk1: [check on him]
+	say "     Sitting down next to Gregory, you remember that people in a coma might possibly be able to perceive the outside world, so you address him by his name - 'Gregory Russlan Jr.' as shown on the dog tags that survived him being stashed in a goop-filled wyvern egg. Then you explain that you're just wanting to check on him as you watch his chest rise and fall with his steady breathing, followed by taking his pulse and feeling his forehead for temperature. He's almost absurdly normal in everything you can tell, despite being a human-wyvern hybrid now, and still unconsciousness ever since you and Urik rescued him from that wyvern egg.";
+	say "     Sadly, there isn't any recognizable reaction from Gregory, just his calm, steady breathing as before. Still, maybe he heard at least some of what you said and it'll have a positive effect in some way...";
+	if "UnconsciousTalk_Checkup" is not listed in Traits of Gregory:
+		add "UnconsciousTalk_Checkup" to Traits of Gregory;
+
+to say GregoryUnconsciousTalk2: [talk about him]
+	say "     Remembering that people in a coma might possibly be able to perceive the outside world, you decide to give it a shot and sit down next to the demi-human male. Clearing your throat, you put a hand on his shoulder and address him by his name - 'Gregory Russlan Jr.' as shown on the dog tags that survived him being stashed in a goop-filled wyvern egg. Then you go over the facts of finding him, up in the wyvern nest/tree, and the fact that he was chosen to become the offspring of a wyvern, and put into its egg. As you explain in calm tones that he's still recognizably human, although with some changes, you lightly touch changed areas of his physiology. Finally, you wrap your tale up by going into detail about Urik and yourself interrupting his transformation, you explain that he's in the library now, and you're just waiting for him to wake up. Just in case that happens when you're not here, you also warn him to expect Urik being an orc.";
+	say "     Sadly, there isn't any recognizable reaction from Gregory, just his calm, steady breathing as before. Still, maybe he heard at least some of what you said and it'll have a positive effect in some way...";
+	if "UnconsciousTalk_Situation" is not listed in Traits of Gregory:
+		add "UnconsciousTalk_Situation" to Traits of Gregory;
+
+to say GregoryUnconsciousTalk3: [indoctrination]
+	say "     Remembering that people in a coma might possibly be able to perceive the outside world, you decide to give it a shot and sit down next to the demi-human male. Clearing your throat, you put a hand on his shoulder and address him by his name - 'Gregory Russlan Jr.' as shown on the dog tags that survived him being stashed in a goop-filled wyvern egg. Then you brush your fingers over his chest, stroking it as you lean your head next to his ear and whisper into it about him being yours now, an eager and available fucktoy to sate your needs with. You go into quite a bit of detail as you do so, all the while stroking and stimulating his naked body.";
+	say "     Sadly, there isn't any recognizable reaction from Gregory, just his calm, steady breathing as before. Still, maybe he heard at least some of what you said and it'll serve to reprogram him a bit in the way you have in mind...";
+	if "UnconsciousTalk_Indoctrination" is not listed in Traits of Gregory:
+		add "UnconsciousTalk_Indoctrination" to Traits of Gregory;
 
 to say GregoryTalk2: [talk about his plans]
 	say "     ...";
@@ -164,7 +199,8 @@ Section 4 - Sex
 [***********************************************************]
 
 instead of fucking the Gregory:
-	say "     He's totally limp and unconscious. Doesn't seem like this would be any fun right now.";
+	if HP of Gregory is 1: [unconscious]
+		say "     He's totally limp and unconscious right now. Best to wait for the future when this might be more fun...";
 [
 	if (lastfuck of Gregory - turns < 2): [he got fucked in the last 6 hours = 2 turns]
 		say "     ...";
@@ -179,6 +215,12 @@ to say GregorySexMenu:
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
+	if HP of Gregory is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Jerk him off";
+		now sortorder entry is 1;
+		now description entry is "Give your sleeping beauty a handjob";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Get on your knees and give him a blowjob";
@@ -211,8 +253,8 @@ to say GregorySexMenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Get on your knees and give him a blowjob"):
-					say "[GregorySex1]";
+				if (nam is "Jerk him off"):
+					say "[GregoryUnconsciousSex1]";
 				else if (nam is "Take Gregory's cock in your pussy"):
 					say "[GregorySex2]";
 				else if (nam is "Take Gregory's cock in your ass"):
@@ -220,15 +262,18 @@ to say GregorySexMenu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You step back from the wyvern hybrid, shaking your head slightly as he gives a questioning look.";
+			if HP of Gregory is 1: [unconscious]
+				say "     You step back from the wyvern hybrid, leaving him to his sleep.";
+			else:
+				say "     You step back from the wyvern hybrid, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
-to say GregorySex1: [BJ on Gregory]
-	say "     ...";
-	NPCSexAftermath Player receives "OralCock" from Gregory;
+to say GregoryUnconsciousSex1: [handjob on Gregory]
+	say "     Sitting down next to the unconscious man, you ...";
+	NPCSexAftermath Gregory receives "Stroking" from Player;
 
 to say GregorySex2: [pussy fuck by Gregory]
 	say "     ...";

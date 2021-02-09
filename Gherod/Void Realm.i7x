@@ -32,6 +32,7 @@ Version 3 of Void Realm by Gherod begins here.
 [        . Null Essence;                            ]
 [        . sharp black tusk;                        ]
 [        . loose tentacle;                          ]
+[        - strange-colored bean;                    ]
 
 Section 1 - Pre-Event
 
@@ -42,10 +43,14 @@ Object	Name
 To The Unknown	"To The Unknown"
 
 To The Unknown is a situation.
-ResolveFunction of To The Unknown is "[ResolveEvent To The Unknown]".
-Sarea of To The Unknown is "Red".
+ResolveFunction of To The Unknown is "".
+Sarea of To The Unknown is "Nowhere".
 
-[RESOLUTION STAGES]
+a postimport rule:
+	if Resolution of To The Unknown is 1:
+		now Resolution of To The Unknown is 0; [resets the resolution stages for the updated location]
+
+[RESOLUTION STAGES - NO LONGER APPLICABLE]
 [0: Never found anything]
 [1: Void Realm unlocked]
 
@@ -190,8 +195,29 @@ Sarea of MirrorsKey is "Nowhere".
 
 [----------------------------------------]
 
-to say ResolveEvent To The Unknown:
-	if Resolution of To The Unknown is 0: [Pre-Event]
+instead of going north from Hellfire Unknown:
+	say "[VRToTheUnknown]";
+
+to say VRToTheUnknown:
+	say "     In front of you, there is a gate to the unknown... The Void Realm.";
+	WaitLineBreak;
+	say "     Before you decide to go in, keep in mind that this is an [bold type]extremely dangerous area[roman type] that can potentially end your life, and you cannot simply abandon it whenever you please, as many obstacles will provide a challenge and may potentially halt your progress. Only go in if you know what you are doing.";
+	say "     Having a [bold type]strong psyche[roman type] may be advantageous, but if the contrary is true and you possess a [bold type]weak psyche[roman type] instead, you're most certainly doomed, as you will lose your mind to the void at an alarming rate. Additionally, if you are a particularly [bold type]kinky[roman type] individual, the Void Realm may provide you with a [italic type]vastly different[roman type] experience, but nonetheless, this place will use that against you in the most effective ways.";
+	say "     You may also find certain companions to be very helpful, such as [if Strange Sorcerer is resolved]the demonologist Xaedihr[else]an expert in demonology and dimensional traveling[end if], and they may even have a chance of saving you from an unavoidable danger.";
+	say "     In order to escape once you enter, just keep walking through the dimensional line in either direction without looking back, but that doesn't mean you should not explore its boundaries, as long as you are aware of the risks.";
+	say "     [bold type]Do you wish to proceed?[roman type][line break]";
+	Linebreak;
+	say "     ([link]Y[as]y[end link]) - Yes, enter the Void Realm.";
+	say "     ([link]N[as]n[end link]) - No, turn around and leave.";
+	if player consents:
+		LineBreak;
+		say "[ToTheVoid]";
+	else:
+		LineBreak;
+		say "     You decide to back away, for now, and perhaps that is for the best. You even feel some of your sanity being returned to you with this decision.";
+		SanBoost 5;
+		move player to Hellfire Unknown;
+	[if Resolution of To The Unknown is 0: [Pre-Event]
 		say "     You go past one of the many buildings in the District and turn to your right. It is another ransacked shop with nothing left, only broken glass scattered around the windows and a complete absence of sound, which worsens the more you proceed forward. There is nothing else around but destruction and abandonment, consequences brought by the apocalypse, but besides this, something seems to be really disturbing you, and you find yourself helplessly unable to explain what it is, exactly. It's just something you feel... A shiver, sudden loss of thoughts, an instant discomfort rapidly growing inside as if a nightmare was chasing after you. The sense of danger, maybe there is a creature approaching...?! Though there is nothing. Paranoia slowly begins to take over your mind, and a cold drop of sweat follows after.";
 		say "     Reality seems pointless, the air around you is heavy, your body refuses to move, and then you can't breathe. But at the same time, there you are, alive, your heart beating, your senses in overdrive, but your brain seems incapable of understanding its surroundings. There is a hiss echoing through, and that is when you see a gigantic scaly body of a snake, passing right by you and through the buildings like a slowly moving train, seemingly endless. Your heart stops at that moment, facing the imminent danger, and it is a feeling you cannot control. You feel powerless, disarmed and tiny, as the serpent makes its way unhindered by any obstacles that prove to be nothing for its titanic dimensions.";
 		WaitLineBreak;
@@ -206,25 +232,8 @@ to say ResolveEvent To The Unknown:
 			say "     As of regarding what just happened, perhaps you will have to find that out by yourself. Still, there might be an expert about supernatural things around somewhere if you find yourself in dire need of someone to aid you, though. You do have a nagging feeling that pursuing this quest, however, would be [bold type]very dangerous[roman type], especially for your psyche, after the hit it just took.";
 		say "     If you do intend to search for this mysterious force again, simply walk [bold type]To The Unknown[roman type] and you may find it.";
 		now Resolution of To The Unknown is 1;
-		SanLoss 10;
-	else if Resolution of To The Unknown is 1: [Void Realm]
-		say "     After walking around the streets of Red Light District, you manage to retrace your steps towards the spot where you had that unreal experience. What you find at the moment is an actual gateway, very well hidden from view, replacing what seems to be an actual gate to an underground level of an abandoned storage house. Inside, it is pitch black, but there is an ominous sound coming out of it, like a low frequency rum that makes your insides reverberate. It's almost as if it was breaking your perception of reality right at where you stand. There is no mistaking it, this is the place you were seeking.";
-		WaitLineBreak;
-		say "     Before you decide to go in, keep in mind that this is an [bold type]extremely dangerous area[roman type] that can potentially end your life, and you cannot simply abandon it whenever you please, as many obstacles will provide a challenge and may potentially halt your progress. Only go in if you know what you are doing.";
-		say "     Having a [bold type]strong psyche[roman type] may be advantageous, but if the contrary is true and you possess a [bold type]weak psyche[roman type] instead, you're most certainly doomed, as you will lose your mind to the void at an alarming rate. Additionally, if you are a particularly [bold type]kinky[roman type] individual, the Void Realm may provide you with a [italic type]vastly different[roman type] experience, but nonetheless, this place will use that against you in the most effective ways.";
-		say "     You may also find certain companions to be very helpful, such as [if Strange Sorcerer is resolved]the demonologist Xaedihr[else]an expert in demonology and dimensional traveling[end if], and they may even have a chance of saving you from an unavoidable danger.";
-		say "     In order to escape once you enter, just keep walking through the dimensional line in either direction without looking back, but that doesn't mean you should not explore its boundaries, as long as you are aware of the risks.";
-		say "     [bold type]Do you wish to proceed?[roman type][line break]";
-		Linebreak;
-		say "     ([link]Y[as]y[end link]) - Yes, enter the Void Realm.";
-		say "     ([link]N[as]n[end link]) - No, turn around and leave.";
-		if player consents:
-			LineBreak;
-			say "[ToTheVoid]";
-		else:
-			LineBreak;
-			say "     You decide to back away, for now, and perhaps that is for the best. You even feel some of your sanity being returned to you with this decision.";
-			SanBoost 5;
+		SanLoss 10;]
+
 
 Section 2 - The Void Realm
 
@@ -537,6 +546,7 @@ to say VRLeave:
 		say "     A single piece of pitch black rock falls to your feet once you regain control of your senses. You have obtained a [bold type]null essence[roman type] and placed it in your inventory.";
 		ItemGain null essence by 1 silently;
 	now inasituation is false;
+	move player to Hellfire Unknown;
 	stop the action;
 
 Section 2-2 - Beyond the Veil
@@ -1448,6 +1458,8 @@ to VROddTreasurePathChoice:
 			say "     Turning to your left and towards the large locked door, you realize you had picked a key when you destroyed the mirror somewhere in another place within this realm. Perhaps this is it? There is only one way to know the answer to that question, and it is by trying it out. Stepping towards the enormous stone door, you take the key into one hand, grabbing the large lock with the other, and proceed to shove it carefully inside the keyhole. It doesn't quite fit, at first, which makes you think that you are probably having wishful thinking, but eventually, you manage to push it in. Trying each side to see which one would the key rotate towards, you find yourself turning it several degrees to the right until you hear a loud tick. The lock comes open, and it nearly smothers your feet as it falls heavily on the ground.";
 			say "     After you successfully managed to unlock the door, it starts reacting on its own and moving in your direction. Slowly, each stone made structure, with its deep and heavy creaking echoing through, swings open and forces you to take a few steps back. After the passage is finally unobstructed, it reveals an extension of the catacombs, but without any coffins. You can see an urn or two from here, and it gives you a feeling that it might seem like some sort of treasury vault. Who knows, perhaps you might find something useful in there?";
 			say "     [bold type]The door to the left path has now been unlocked.[roman type][line break]";
+			WaitLineBreak;
+			say "     <<Author's note: This is everything, for now. More content will be added to this path. As you have already unlocked it, once it comes out, you may access it immediately. There will be a new encounter related to treasure chests, as a hint for what is about to come. For now, you shall be returned to the previous choices.>>";
 			now Resolution of MirrorsKey is 2; [unlocked the door]
 			WaitLineBreak;
 			VROddTreasurePathChoice;
@@ -2158,6 +2170,7 @@ to say VRDarkTyrantWins:
 			say "     After your head, your shoulders follow as he slowly continues to push, moaning and grunting as he feels more and more of you being sucked in by his gooey manhood, down to your waist, and with each throb, a little more of your legs... until your feet are the only thing poking out of his dong. With a finger, he presses against your soles, and completely shoves you inside his rod, having achieved so much hardness that you thought it would be impossible to reach for something made of slime as he is. Inside, however, it feels like wobbly flesh, constricting and pulsing all around you like a living heartbeat, warm goo throbbing all over your body as you keep sinking, deeper and deeper, until you are finally dropped in what seems to be his balls, or rather, a huge sack of more goo.";
 			say "     There is some liquid inside, which is that very thick slime he keeps leaking, except this one is much hotter, almost burning through you, yet you get used to it. It envelops you and stimulates your body, providing you with a lot of pleasurable sensations as you are invited to lay down and close your eyes... You feel the Tyrant caress his sack with you inside, everything rumbling and bouncing around you as you are kept sealed tightly inside his nuts. There is no longer a need in you to breathe, as you as you know yourself, your body as you controlled it and your mind all start to become irrelevant. All that belongs to you is taken away, melting away in his slime and becoming part of a much greater being.";
 	say "     You are able to feel the Dark Tyrant's body, see his thoughts, feel his emotions... He is glad to have you become part of him.";
+	WaitLineBreak;
 	now battleground is "Void";
 	the Player was ended by "Dark Tyrant";
 	trigger ending "Player has died";
@@ -2184,6 +2197,7 @@ to say VRPeculiarSummonerWins:
 	WaitLineBreak;
 	say "     With this, the peculiar summoner steps back, analyzing their creation. 'Not perfect, but not bad either. You will do a good host for my tiny Cthulhu-like thingie. Well, I haven't named it yet, perhaps you get to have a special one if you do well.' Your body immediately bows to your creator, and you cannot even stop it. Even thinking is hard, with other thoughts taking priority over yours. It is difficult to stay like your own self... You no longer control your actions nor your will...";
 	say "     It is as if your body was taken from you, and you remained trapped in it.";
+	WaitLineBreak;
 	now battleground is "Void";
 	the Player was ended by "Peculiar Summoner";
 	trigger ending "Player has died";
@@ -2541,7 +2555,7 @@ When Play begins:
 	now HP entry is 450; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 21; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 42; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is ""; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now Cock Count entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
@@ -2705,11 +2719,11 @@ When Play begins:
 	now per entry is 50;
 	now int entry is 7;
 	now cha entry is 5;
-	now sex entry is ""; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is ""; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 900; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 50; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 74; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is ""; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 99; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 99; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
@@ -2877,7 +2891,7 @@ When Play begins:
 	now HP entry is 325; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 19; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 32; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is ""; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now Cock Count entry is 99; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 99; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 99; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
@@ -3045,7 +3059,7 @@ When Play begins:
 	now HP entry is 469; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 20; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 29; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is ""; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now Cock Count entry is 99; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 99; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 99; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
@@ -3213,7 +3227,7 @@ When Play begins:
 	now HP entry is 423; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 22; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 40; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is ""; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
+	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 24; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 4; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]

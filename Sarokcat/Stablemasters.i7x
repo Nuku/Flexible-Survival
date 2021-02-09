@@ -69,11 +69,15 @@ AnalVirgin of Slutslave is true.
 PenileVirgin of Slutslave is false.
 SexuallyExperienced of Slutslave is true.
 MainInfection of Slutslave is "Nightmare".
-Description of Slutslave is "     Your sexy black mare slave is kneeling meekly in the corner, her blazing red hair and tail shifting slightly with her every movement as she watches you coyly with obvious arousal. The slave collar you put on her has seemingly bonded with her skin, and now can only be seen as a thin line of gold with some strange patterns around her neck, though your new tag fits on it nicely, hanging down between her new ample breasts and proudly proclaiming her to be your [']slut[']. Her tight, well formed body is made specifically for pleasure, as you know all too well, and you can see her naked pussy is already damp with anticipation as you look your new slave over with some amusement. She certainly makes a better slave after all than a master... and she seems to enjoy her new lot in life quite a bit as well. Looking at her closely however you can still see a glimmer of dark intelligence within her eyes, showing that while she has become a submissive pet like she always should have been, there is still quite a bit of knowledge there to be acquired. Perhaps you should take time out to [bold type]learn from slut[roman type] sometime, or maybe just spend some time enjoying [bold type]training[roman type] your slave.".
+Description of Slutslave is "[SlutslaveDesc]".
 Conversation of Slutslave is { "Fuck me!" }.
 
+to say SlutslaveDesc:
+	project Figure of Slutslave_icon;
+	say "     Your sexy black mare slave is kneeling meekly in the corner, her blazing red hair and tail shifting slightly with her every movement as she watches you coyly with obvious arousal. The slave collar you put on her has seemingly bonded with her skin, and now can only be seen as a thin line of gold with some strange patterns around her neck, though your new tag fits on it nicely, hanging down between her new ample breasts and proudly proclaiming her to be your [']slut[']. Her tight, well formed body is made specifically for pleasure, as you know all too well, and you can see her naked pussy is already damp with anticipation as you look your new slave over with some amusement. She certainly makes a better slave after all than a master... and she seems to enjoy her new lot in life quite a bit as well. Looking at her closely however you can still see a glimmer of dark intelligence within her eyes, showing that while she has become a submissive pet like she always should have been, there is still quite a bit of knowledge there to be acquired. Perhaps you should take time out to [bold type]learn from slut[roman type] sometime, or maybe just spend some time enjoying [bold type]training[roman type] your slave.".
 
 instead of conversing the Slutslave:
+	project Figure of Slutslave_icon;
 	if Slutslavetalk is 0: [Normal short messages the NPC will say each time you talk to them]
 		say "     [one of]'Welcome back master!'[or]'You make such a handsome owner.'[or]'I don't know how a little slut like me could have ever thought to challenge someone as masterful as you...'[or]'Has master decided on a name for his slut yet?'[or]'Your slave never knew how wonderful being a pet could be before, thank you so much for showing me!'[or]'I love my new collar so much...' she moans happily.[or]Your slave just stares up at you adoringly from her kneeling position.[or]'Would master like to hear about some of the things there slave has learned when she was free?'[at random]";
 
@@ -81,6 +85,7 @@ instead of conversing the Slutslave:
 the fuckscene of Slutslave is "[sexwithslutslave]";
 
 to say sexwithslutslave:
+	project Figure of Slutslave_icon;
 	if lastSlutslavefucked - turns < 2:
 		say "     'Sorry, master,' your new slave pants out breathlessly as she kneels helplessly in front of you, 'but your new slave just can't keep up with your incredible stamina.' She has an apologetic, almost disappointed tone as she prostrates herself before you. 'Perhaps master should come back soon and train their new slave again?' she says with a rather lustful tone in her voice, which causes you to grin at how far the formerly dominant stallion has fallen.";
 	else:
@@ -114,6 +119,7 @@ Check Slavelearning:
 	If Slutslave is not visible, say "huh?" instead;
 
 Carry out Slavelearning:
+	project Figure of Slutslave_icon;
 	[puts Nightmare as lead monster for comparison]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;

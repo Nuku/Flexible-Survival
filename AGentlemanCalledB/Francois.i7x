@@ -2,6 +2,16 @@ Version 2 of Francois by AGentlemanCalledB begins here.
 [Version 2.1 - More baking items, alternate bakery loss scene by Ecroose]
 "Adds a Male mutt NPC named Francois to the Flexible Survival game"
 
+[This is an example message ]
+
+[This is an example message ]
+
+[This is an example message ]
+
+[This is an example message ]
+
+[This is an example message ]
+
 Section 1 - Event
 
 Table of GameEventIDs (continued)
@@ -111,12 +121,12 @@ to say BakeryGShep:
 		if escape < 2:
 			say "     Too tired to continue fighting against your captor, the three canines quickly begin having some fun with you. One canine begins [if Player is herm]sucking and licking at your rising cock and moistening pussy[else if Player is male]sucking and licking at your rising cock[else if Player is female]sucking and licking at your moistening cunt[else]licking at your groin[end if], while the second brings his muzzle to your lips, pulling you into a deep kiss. Meanwhile the shepherd 	binding your arms continues playing at your neck and ears while grinding his stiffening rod into your back. Eventually this sexual assault slowly abates, as the Shepherd kissing you pulls away with a grin, growling to his companion at your groin before pushing him aside roughly. As the shepherd before you pulls back his sheath with a smirk, you feel the grip of the one binding your arms loosen slightly. If you're going to escape, now would be the time.";
 			if player is herm:
-				CreatureSexAftermath "German Shepherd" receives "OralCock" from "Player";
-				CreatureSexAftermath "German Shepherd" receives "OralPussy" from "Player";
+				CreatureSexAftermath "German Shepherd Male" receives "OralCock" from "Player";
+				CreatureSexAftermath "German Shepherd Male" receives "OralPussy" from "Player";
 			if player is male:
-				CreatureSexAftermath "German Shepherd" receives "OralCock" from "Player";
+				CreatureSexAftermath "German Shepherd Male" receives "OralCock" from "Player";
 			if player is female:
-				CreatureSexAftermath "german Shepherd" receives "OralPussy" from "Player";
+				CreatureSexAftermath "German Shepherd Male" receives "OralPussy" from "Player";
 			let playernum be a random number between 1 and (100 - Libido of Player);
 			let shepnum be a random number between 30 and 100;
 			if Playernum > shepnum:

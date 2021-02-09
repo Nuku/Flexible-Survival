@@ -184,17 +184,27 @@ Darius	"Darius"
 
 Darius is a man.
 Darius is in Darius's Crib.
-[physical details as of game start]
 ScaleValue of Darius is 3. [human sized]
-Cock Count of Darius is 1. [1 cock]
-Cock Length of Darius is 11. [11 incher]
-Ball Size of Darius is 4. [number of player balls: 1, 2 or 4]
-Ball Count of Darius is 2. [2 balls]
-Cunt Count of Darius is 0. [no pussy]
-Cunt Depth of Darius is 0. [no pussy]
-Cunt Tightness of Darius is 0. [no pussy]
-Nipple Count of Darius is 2. [2 nipples]
-Breast Size of Darius is 0. [flat chest]
+Body Weight of Darius is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Darius is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Darius is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Darius is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Darius is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Darius is 5. [length in inches]
+Breast Size of Darius is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Darius is 2. [count of nipples]
+Asshole Depth of Darius is 8. [inches deep for anal fucking]
+Asshole Tightness of Darius is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Darius is 1. [number of cocks]
+Cock Girth of Darius is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Darius is 11. [length in inches]
+Ball Count of Darius is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Darius is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Darius is 0. [number of cunts]
+Cunt Depth of Darius is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Darius is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Darius is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Darius is false.
 PlayerRomanced of Darius is false.
@@ -202,13 +212,13 @@ PlayerFriended of Darius is false.
 PlayerControlled of Darius is false.
 PlayerFucked of Darius is false.
 OralVirgin of Darius is false.
-Virgin of Darius is true. [doesn't have a pussy, so he'd be virgin if he got one]
+Virgin of Darius is true.
 AnalVirgin of Darius is true.
 PenileVirgin of Darius is false.
 SexuallyExperienced of Darius is true.
-
-
-
+TwistedCapacity of Darius is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Darius is false. [steriles can't knock people up]
+MainInfection of Darius is "Dalmatian Male".
 Description of Darius is "[DariusDesc]".
 Conversation of Darius is { "<This is nothing but a placeholder!>" }.
 The scent of Darius is "[DariusScent]";

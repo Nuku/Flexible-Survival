@@ -640,16 +640,16 @@ to say TatiHyenaFuck:
 		say "     Being mated by this horn-dog of a hyena is a fairly straightforward affair of being deep-dicked with long and hard thrusts and him slapping your ass a few times. It doesn't take all that long before he builds up to a final quick push all the way into your pussy, unloading his seed right against the trembling ring of your cervix. You can feel his cock throb hard with spurt after spurt being deposited into your body. Yet before he even has the time to finish completely, another hyena pulls the guy away from your ass, making his dick slip out and splatter your back with a few splashes of cum. 'I wanna try out the new slut too,' the newcomer grunts, and before you know what, he's already thrust into you and starts pounding away. This is pretty much how the next hour or so goes for you, with one hyena after the other making use of your increasingly sloppy pussy and dumping their loads into it.";
 		infect "Hyena Herm";
 		infect "Hyena Herm";
-		fimpregchance;
-		fimpregchance;
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Hyena Herm";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Hyena Herm";
 		WaitLineBreak;
 	else:
 		say "Proceeding to brush the dickhead up and down your crack, your hyena moans in pleasure as he touches the wrinkled ring of your pucker. Thankfully, his dickhead is slick with pre-cum, as he pushes into your ass without delay, grunting in satisfaction as he sheathes himself in a warm and tight hole. 'The newbie has a sweet ass,' your fucker casually calls out to his friends as he begins to pound you from behind in a rapid tempo.";
 		say "     Being mated by this horn-dog of a hyena is a fairly straightforward affair of being deep-dicked with long and hard thrusts and him slapping your ass a few times. It doesn't take all that long before he builds up to a final quick push all the way into your asshole, unloading his seed right and painting your inner passage white. You can feel his cock throb hard with spurt after spurt being deposited into your body. Yet before he even has the time to finish completely, another hyena pulls the guy away from your ass, making his dick slip out and splatter your back with a few splashes of cum. 'I wanna try out the new slut too,' the newcomer grunts, and before you know what, he's already thrust into you and starts pounding away. This is pretty much how the next hour or so goes for you, with one hyena after the other making use of your increasingly sloppy asshole and dumping their loads into it.";
 		infect "Hyena Herm";
 		infect "Hyena Herm";
-		mimpregchance;
-		mimpregchance;
+		CreatureSexAftermath "Player" receives "AssFuck" from "Hyena Herm";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Hyena Herm";
 		WaitLineBreak;
 	say "     When the gang-bang eventually winds down, you're left bent over the table, your thighs covered in cum leaking out of your sore hole and with most of the hyenas having gone off to rest or drink. Then suddenly, Mark is by your side and helps you clean yourself up with a lot of paper towels and napkins, followed by the two of you quickly moving to get the supplies you came here for. After quickly stuffing Mark's pack full of all the cutlery, dishes and whatnot, he lifts its heavy weight on his back. Then the two of you make your way out of the restaurant and leave the hyenas to continue with their partying. 'Thank you. I - um, hadn't expected you'd go this far to help me out. But let's get back to the mall now.'";
 	WaitLineBreak;
@@ -735,8 +735,10 @@ to say MarkSexMenu:
 
 to say MarkSex1: [oral on the player]
 	say "     A";
+	NPCSexAftermath Mark receives "OralCock" from Player;
 
 to say MarkSex2: [oral on Mark]
 	say "     A";
+	NPCSexAftermath Player receives "OralCock" from Mark;
 
 Mark ends here.

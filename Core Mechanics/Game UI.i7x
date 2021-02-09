@@ -333,7 +333,7 @@ This is the self examine rule:
 		if tail of Player is empty:
 			say "";
 		else:
-			say "[tail of Player]";
+			say "[tail of Player] ";
 	[Pregnancy Descriptions below]
 	if child is not born and gestation of child > 0:
 		if gestation of child < 10:
@@ -450,13 +450,14 @@ This is the self examine rule:
 				break;
 			else:
 				say "[descmod of x] ";
+	let CrotchVisible be true;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "legs":
+			now CrotchVisible is false;
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
-	let CrotchVisible be true;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "waist":
 			now CrotchVisible is false;

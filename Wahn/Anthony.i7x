@@ -69,17 +69,29 @@ Table of GameCharacterIDs (continued)
 object	name
 Anthony	"Anthony"
 
-Anthony is a man. The HP of Anthony is normally 0. Anthony is in Farmhouse Main Room.
+Anthony is a man.
+Anthony is in Farmhouse Main Room.
 ScaleValue of Anthony is 3. [human sized]
-Cock Count of Anthony is 1.
-Cock Length of Anthony is 10.
-Ball Size of Anthony is 2.
-Ball Count of Anthony is 2.
-Cunt Count of Anthony is 0.
-Cunt Depth of Anthony is 10.
-Cunt Tightness of Anthony is 2.
-Nipple Count of Anthony is 2. [2 nipples]
-Breast Size of Anthony is 0.
+Body Weight of Anthony is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Anthony is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Anthony is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Anthony is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Anthony is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Anthony is 5. [length in inches]
+Breast Size of Anthony is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Anthony is 2. [count of nipples]
+Asshole Depth of Anthony is 8. [inches deep for anal fucking]
+Asshole Tightness of Anthony is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Anthony is 1. [number of cocks]
+Cock Girth of Anthony is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Anthony is 10. [length in inches]
+Ball Count of Anthony is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Anthony is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Anthony is 0. [number of cunts]
+Cunt Depth of Anthony is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Anthony is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Anthony is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Anthony is false.
 PlayerRomanced of Anthony is false.
@@ -91,6 +103,7 @@ Virgin of Anthony is true.
 AnalVirgin of Anthony is true.
 PenileVirgin of Anthony is false.
 SexuallyExperienced of Anthony is true.
+MainInfection of Anthony is "Giant Anteater Male".
 Description of Anthony is "[AnthonyDesc]".
 Conversation of Anthony is { "Mew!" }.
 The icon of Anthony is Figure of Anthony_clothed_icon.
@@ -101,7 +114,7 @@ instead of sniffing Anthony:
 to say AnthonyDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Anthony], FinnTrackingProgress: [FinnTrackingProgress]<- DEBUG[line break]";
-	say "     Anthony McDermott is a tall anthro anteater in a kilt, with a light and slender build and the characteristic elongated head and narrow snout of a giant anteater. He has large brown eyes and expressive, flexible ears on top of his head, plus a beautiful mane of brown hair down to the midst of his back. One lock of his mane hangs down over his brow, giving him a somewhat dashing appearance.";
+	say "     Anthony McDermott is a tall anthro  in a kilt, with a light and slender build and the characteristic elongated head and narrow snout of a giant anteater. He has large brown eyes and expressive, flexible ears on top of his head, plus a beautiful mane of brown hair down to the midst of his back. One lock of his mane hangs down over his brow, giving him a somewhat dashing appearance.";
 	say "     The young man's body is covered in lustrous and silky fur, with most of it light brown to blond and pretty short, showing off the fit shape and light muscles of his upper body, abs, legs and (you assume) crotch. Meanwhile, his forearms and lower legs have longer, almost purely blond hair covering them, and the very long prehensile tail behind him looks pretty big with the thick and darker brown fur along its length.";
 	say "     Another thing of note are the long and curved claws on his hands and feet, longer than the fingers themselves. Looking at them makes you recall something you once read about a regular giant anteater being able to kill a jaguar in a stand-up fight...";
 
@@ -308,15 +321,18 @@ to say AnthonyRewardSex:
 			say "     After a while of just licking and squeezing your manhood, Anthony moves on to giving you a more regular blowjob and slides his lips over your pole, taking it into his tight and narrow muzzle. It's good that anteaters have no teeth, otherwise you doubt that your cock would even have fit, as tightly as he's got his lips stretched around your shaft. Bobbing up and down in the pretty amazing blowjob he's giving you, Anthony meanwhile also strokes one of his arms over your chest, rubbing the long and very soft fetlock-hair of his forearms over your skin.";
 			WaitLineBreak;
 			say "     Arousal quickly mounting higher and higher from Anthony's oral attention and his gentle touch, it doesn't take all that much longer until your pants get quicker and the need to cum rises in your bells. You moan that you're close, which only has the giant anteater speed up more, lips still tightly wrapped around your shaft as you blow your load. He eagerly swallows spurt after spurt of your cum, even milking the very last drops from your soon softening cock, then sits down on the couch next to you and moans 'Hmm, you're tasty' while licking his lips. After leaning in for a kiss, he continues 'I wish I had time to do this more often...'";
+			NPCSexAftermath Anthony receives "OralCock" from Player;
 		else if Player is female:
 			say "     Anthony is very careful as he caresses your crotch with his clawed hands, gently pulling apart your nether lips while his tongue plays over its folds with a feathery light touch. He spends some time just licking your outermost lips, [if anallevel > 1]even snakes it down between your legs to brush against your back door, [end if]then moves his attention to your clit and inner labia. It's a strange but very pleasant feeling to have him play his long but thin tongue over your privates, then dip into your vagina and explore inside. Overwhelmed by the novel sensations of having this anthro anteater tease and lick the inner walls of your pussy, you moan and lean your head backwards, savoring the pleasure he gives you.";
 			say "     After a while of gentle licking and soft poking, Anthony pulls back a bit, then puts his lips to your clitoris and really concentrates on that, nibbling on it and brushing over it with the tip of his tongue. Head against your crotch in the pretty amazing cunnilingus he's giving you, Anthony meanwhile also strokes one of his arms over your chest, rubbing the long and very soft fetlock-hair of his forearms over your skin.";
 			WaitLineBreak;
 			say "     Arousal quickly mounting higher and higher from Anthony's oral attention and his gentle touch, it doesn't take all that much longer until your pants get quicker and the need to come becomes almost unbearable. You moan that you're close, which only has the giant anteater speed up more, pushing his long tongue even deeper into your vagina than before and finding all new spots to caress and tease. Moments later, you moan loudly, orgasming from the continued stimulation, femcum squirting from your pussy and hitting Anthony right on his long muzzle. He eagerly puts his lips to your sex, catching and swallowing it all after the first splash, then licks his muzzle clean with his long tongue and sits down on the couch next to you. 'Hmm, you're tasty,' he moans and leans in for a kiss before continuing 'I wish I had time to do this more often...'";
+			NPCSexAftermath Anthony receives "OralPussy" from Player;
 		else:
 			say "     Anthony is very careful as he caresses your crotch with his clawed hands, gently stroking your genderless but still sensitive skin and playing over it with a feathery light touch with his tongue. He spends some time just licking your pubic area, then snakes his tongue down between your legs to brush against your back door and tease it a bit before returning to your crotch. Dealing with your sexless state without any hesitation, he's creative in the ways he tickles, licks and strokes you, giving you a very pleasant feeling. While his head is against your crotch in the pretty amazing oral attention he's giving you, Anthony meanwhile also strokes one of his arms over your chest, rubbing the long and very soft fetlock-hair of his forearms over your skin.";
 			WaitLineBreak;
 			say "     Arousal quickly mounting higher and higher from Anthony's gentle touch, it doesn't take all that much longer until your pants get quicker and the need to come becomes almost unbearable. You moan that you're close, which only has the giant anteater speed up more, and moments later a feeling of bliss floods your body and you shake in orgasm. He continues pleasing you until your climax abates, then sits down on the couch next to you. 'Hmm, you're tasty,' he moans and leans in for a kiss before continuing 'I wish I had time to do this more often...'";
+			NPCSexAftermath Player receives "Stroking" from Anthony;
 		if Libido of Anthony is 0:
 			now Libido of Anthony is 1; [had reward sex before]
 	else:
@@ -400,22 +416,24 @@ to say AnthonySex1: [oral on the player]
 		say "     After a while of just licking and squeezing your manhood, Anthony moves on to giving you a more regular blowjob and slides his lips over your pole, taking it into his tight and narrow muzzle. It's good that anteaters have no teeth, otherwise you doubt that your cock would even have fit, as tightly as he's got his lips stretched around your shaft. Bobbing up and down in the pretty amazing blowjob he's giving you, Anthony meanwhile also strokes one of his arms over your chest, rubbing the long and very soft fetlock-hair of his forearms over your skin.";
 		WaitLineBreak;
 		say "     Arousal quickly mounting higher and higher from Anthony's oral attention and his gentle touch, it doesn't take all that much longer until your pants get quicker and the need to cum rises in your bells. You moan that you're close, which only has the giant anteater speed up more, lips still tightly wrapped around your shaft as you blow your load. He eagerly swallows spurt after spurt of your cum, even milking the very last drops from your soon softening cock, then sits down on the couch next to you and moans 'Hmm, you're tasty' while licking his lips. After leaning in for a kiss, he continues 'I wish I had time to do this more often...'";
+		NPCSexAftermath Anthony receives "OralCock" from Player;
 	else if Player is female:
 		say "     Anthony is very careful as he caresses your crotch with his clawed hands, gently pulling apart your nether lips while his tongue plays over its folds with a feathery light touch. He spends some time just licking your outermost lips, [if anallevel > 1]even snakes it down between your legs to brush against your back door, [end if]then moves his attention to your clit and inner labia. It's a strange but very pleasant feeling to have him play his long but thin tongue over your privates, then dip into your vagina and explore inside. Overwhelmed by the novel sensations of having this anthro anteater tease and lick the inner walls of your pussy, you moan and lean your head backwards, savoring the pleasure he gives you.";
 		say "     After a while of gentle licking and soft poking, Anthony pulls back a bit, then puts his lips to your clitoris and really concentrates on that, nibbling on it and brushing over it with the tip of his tongue. Head against your crotch in the pretty amazing cunnilingus he's giving you, Anthony meanwhile also strokes one of his arms over your chest, rubbing the long and very soft fetlock-hair of his forearms over your skin.";
 		WaitLineBreak;
 		say "     Arousal quickly mounting higher and higher from Anthony's oral attention and his gentle touch, it doesn't take all that much longer until your pants get quicker and the need to come becomes almost unbearable. You moan that you're close, which only has the giant anteater speed up more, pushing his long tongue even deeper into your vagina than before and finding all new spots to caress and tease. Moments later, you moan loudly, orgasming from the continued stimulation, femcum squirting from your pussy and hitting Anthony right on his long muzzle. He eagerly puts his lips to your sex, catching and swallowing it all after the first splash, then licks his muzzle clean with his long tongue and sits down on the couch next to you. 'Hmm, you're tasty,' he moans and leans in for a kiss before continuing 'I wish I had time to do this more often...'";
+		NPCSexAftermath Anthony receives "OralPussy" from Player;
 	else:
 		say "     Anthony is very careful as he caresses your crotch with his clawed hands, gently stroking your genderless but still sensitive skin and playing over it with a feathery light touch with his tongue. He spends some time just licking your pubic area, then snakes his tongue down between your legs to brush against your back door and tease it a bit before returning to your crotch. Dealing with your sexless state without any hesitation, he's creative in the ways he tickles, licks and strokes you, giving you a very pleasant feeling. While his head is against your crotch in the pretty amazing oral attention he's giving you, Anthony meanwhile also strokes one of his arms over your chest, rubbing the long and very soft fetlock-hair of his forearms over your skin.";
 		WaitLineBreak;
 		say "     Arousal quickly mounting higher and higher from Anthony's gentle touch, it doesn't take all that much longer until your pants get quicker and the need to come becomes almost unbearable. You moan that you're close, which only has the giant anteater speed up more, and moments later a feeling of bliss floods your body and you shake in orgasm. He continues pleasing you until your climax abates, then sits down on the couch next to you. 'Hmm, you're tasty,' he moans and leans in for a kiss before continuing 'I wish I had time to do this more often...'";
+		NPCSexAftermath Player receives "Stroking" from Anthony;
 
 to say AnthonySex2: [oral on Anthony]
 	say "     A";
+	NPCSexAftermath Player receives "OralCock" from Anthony;
 
 to say AnthonySex3: [player ass fucked]
-	setmonster "Giant Anteater Male";
-	choose row MonsterID from the Table of Random Critters;
 	say "     Smiling at your eagerness to be taken care of by him, Anthony brings his long muzzle to your mouth and kisses you, sliding his tongue inside for a playful bit of tongue-wrestling. Then the giant anteater starts to strip you naked in a swift but gentle manner. While he slides his long claws under the fabric to pull each piece of clothing off, he guides you step by step towards the nearest couch. Soon, you're completely naked and find yourself softly pushed to sit down and lean back, with the slender male crouching down between your legs. 'Just relax and enjoy,' he says in a seductive voice, winking at you as he sticks out his long, long tongue and leans forward.";
 	say "     The soft, luscious fur on Anthony's forearms brushes the insides of your legs as the anteater moves to hook his claws under your thighs, then lifts them up, baring your ass with spread buttocks. Then he lowers his head and rubs the long curve of his muzzle up and down between your cheeks, giving your pucker a playful lick each time he passes it. The teasing touches and stroking have you moaning in no time, prompting the young man to look up at you and give a beaming smile, followed by, 'You like that, don't you? Wait till you see what's next...' With that said, Anthony moves to kneel and lowers his upper body some more, bringing his muzzle against your back door in an all new angle.";
 	WaitLineBreak;
@@ -427,13 +445,11 @@ to say AnthonySex3: [player ass fucked]
 	WaitLineBreak;
 	say "     Anthony gives you an impressive demonstration that he's got experience with more than just oral pleasure and also really knows what to do with that long cock of his. While making out with you, the anteater fucks you with long strokes, pumping his manhood into your eager hole. Meanwhile, he strokes your body, letting his hands and long claws brush softly over your skin and teasing you with gentle strokes of the fluffy fur covering his forearms. All in all, you're putty in his hands, very well taken care of by the soft-spoken, skillful lover. The young man who inherited this farm fucks you with relish on a sofa in his living-room, not even registering a horseman coming to the door at some point, looking in on the two of you and giving an amused snort. The man leaves after watching for a short while, his issue seemingly not important enough to disturb the boss.";
 	say "     Being fucked by the thin yet surprisingly strong anteater, moaning in lust with every solid thrust of his large cock, you're once again pushed to higher and higher levels of arousal, filling the farmhouse with the lewd sounds of loud sex. Soon, you're wrapping your legs around his hips and pull your anthro partner deeper inside you to scratch the steadily rising itch only he can fill, then shout in completion as a sharp thrust against your prostate makes you see stars and cum! With your balls churning, yet another load of fresh cum splatters all over your chest, soaking your skin in wet streaks. As your inner muscles twitch with each further spurt, tightening around your partner's rock-hard manhood, Anthony follows you into sweet oblivion just a few heart-beats later, grunting as his load is deposited deep in your stretched passage.";
-	say "     [mimpregchance]";
+	NPCSexAftermath Player receives "AssFuck" from Anthony;
 	WaitLineBreak;
 	say "     The thin and lanky anteater sinks down on top of you, exhaustion reducing him to just holding on to you and panting for a few moments as the build-up of sexual energy abates with his orgasm. When he catches his breath a short while later and pushes himself up on bony elbows, the young man gives you a pleased smile, then rubs the side of his elongated muzzle against your neck in an affectionate gesture. 'I trust that this was a proper reward for such a selfless hero as yourself,' he quips good-heartedly, then kisses your mouth before slowly withdrawing from your cum-filled asshole. With a last caress over your stretched-out body, so very gentle despite the long claws on his hands, Anthony then stands up and goes to grab his kilt. Fixing it up around his hips, the anteater says, 'That was a lot of fun! How I wish we could just keep going, but... duty calls.'";
 
 to say AnthonySex4: [player pussy fucked]
-	setmonster "Giant Anteater Male";
-	choose row MonsterID from the Table of Random Critters;
 	say "     Smiling at your eagerness to be taken care of by him, Anthony brings his long muzzle to your mouth and kisses you, sliding his tongue inside for a playful bit of tongue-wrestling. Then the giant anteater starts to strip you naked in a swift but gentle manner. While he slides his long claws under the fabric to pull each piece of clothing off, he guides you step by step towards the nearest couch. Soon, you're completely naked and find yourself softly pushed to sit down and lean back, with the slender male crouching down between your legs. 'Just relax and enjoy,' he says in a seductive voice, winking at you as he sticks out his long, long tongue and leans forward.";
 	say "     The soft, luscious fur on Anthony's forearms brushes the insides of your legs as the anteater moves to hook his claws under your thighs, then spreads and lifts them, baring your wet pussy. Then he lowers his head and rubs the long curve of his muzzle up and down between your nether lips, giving your sensitive clit a playful lick each time he passes it. The teasing touches and stroking have you moaning in no time, prompting the young man to look up at you and give a beaming smile, followed by, 'You like that, don't you? Wait till you see what's next...' With that said, Anthony moves to kneel on the ground and lowers his upper body some more, bringing his muzzle against your pussy in an all new angle.";
 	WaitLineBreak;
@@ -445,12 +461,13 @@ to say AnthonySex4: [player pussy fucked]
 	WaitLineBreak;
 	say "     Anthony gives you an impressive demonstration that he's got experience with more than just oral pleasure and also really knows what to do with that long cock of his. While making out with you, the anteater fucks you with long strokes, pumping his manhood into your eager hole. Meanwhile, he strokes your body, letting his hands and long claws brush softly over your skin and teasing you with gentle strokes of the fluffy fur covering his forearms. All in all, you're putty in his hands, very well taken care of by the soft-spoken, skillful lover. The young man who inherited this farm fucks you with relish on a sofa in his living-room, not even registering a horseman coming to the door at some point, looking in on the two of you and giving an amused snort. The man leaves after watching for a short while, his issue seemingly not important enough to disturb the boss.";
 	say "     Being fucked by the thin yet surprisingly strong anteater, moaning in lust with every solid thrust of his large cock, you're once again pushed to higher and higher levels of arousal, filling the farmhouse with the lewd sounds of loud sex. Soon, you're wrapping your legs around his hips and pull your anthro partner deeper inside you to scratch the steadily rising itch only he can fill, then shout in completion as a sharp thrust nudges your cervix, making you see stars and cum explosively! [if Player is male]With your balls churning, yet another load of fresh cum splatters all over your chest, soaking your skin in wet streaks[else]With your whole body trembling, another load of femcum covers Anthony's shaft in slick wetness[end if]. As your inner muscles twitch with each further moment of joy, tightening around your partner's rock-hard manhood, Anthony follows you into sweet oblivion just a few heart-beats later, grunting as his load is deposited deep in your stretched passage, splashing directly on the opening of your womb.";
-	say "     [fimpregchance]";
+	NPCSexAftermath Player receives "PussyFuck" from Anthony;
 	WaitLineBreak;
 	say "     The thin and lanky anteater sinks down on top of you, exhaustion reducing him to just holding on to you and panting for a few moments as the build-up of sexual energy abates with his orgasm. When he catches his breath a short while later and pushes himself up on bony elbows, the young man gives you a pleased smile, then rubs the side of his elongated muzzle against your neck in an affectionate gesture. 'I trust that this was a proper reward for such a selfless hero as yourself,' he quips good-heartedly, then kisses your mouth before slowly withdrawing from your cum-filled pussy. With a last caress over your stretched-out body, so very gentle despite the long claws on his hands, Anthony then stands up and goes to grab his kilt. Fixing it up around his hips, the anteater says, 'That was a lot of fun! How I wish we could just keep going, but... duty calls.'";
 
 to say AnthonySex5: [fuck Anthony]
 	say "     A";
+	NPCSexAftermath Anthony receives "AssFuck" from Player;
 
 Section 3 - Creature Insertion
 

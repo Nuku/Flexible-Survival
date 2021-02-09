@@ -1,7 +1,8 @@
-Version 2 of Vent Fox by Dys begins here.
+Version 3 of Vent Fox by Dys begins here.
 [VERSION 2:                                                          ]
 [v2.0 Adds Dominant Vent scenes                                      ]
 [v2.1 He's an actual NPC now. No need to the quotes in the desc      ]
+[v3 Normal Rim and Extended Rim scenes added - Vinickus]
 
 "Adds a random encounter in the mall, and an NPC that can be interacted with."
 
@@ -386,7 +387,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			now title entry is "Get fucked by Vent";
 			now sortorder entry is 2;
 			now description entry is "Have the fox take your hole";
-		[[]
+		[]
 		if anallevel > 2 and VentFoxContentLevel > 0:
 			choose a blank row from table of fucking options;
 			now title entry is "Get rimmed by Vent";
@@ -398,7 +399,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			now title entry is "Get Vent to rim you with his tongue extended";
 			now sortorder entry is 6;
 			now description entry is "Have Vent use his more dexterous organ to thoroughly rim you";
-		[]
+		[][
 		if anallevel > 2 and VentFoxContentLevel > 2 and player is kinky:
 			choose a blank row from table of fucking options;
 			now title entry is "Get tongue-fucked by Vent";
@@ -846,11 +847,25 @@ to say FuckVentFoxAss:[Player fucks the fox's ass.]
 		say "     Rope after rope of cum fills his bowels, and he climaxes again from the feeling of being filled. Eventually, your orgasm abates[if Player is knotted] and your knot shrinks[end if]. You pull out of your foxy friend, giving him a friendly pat before redressing and moving on.";
 	NPCSexAftermath Vent receives "AssFuck" from Player;
 
-to say VentFoxRimsPlayerNormal:[Player gets rimmed by the fox.]
-	say "     Placeholder.";
+to say VentFoxRimsPlayerNormal: [Player gets rimmed by the fox]
+	say "     Deciding on getting the squeaky fox to eat you out, you [if player is naked]bend over and slap your ass[else]quickly strip off whatever may be blocking your fun with the fox, then bend over and slap your ass[end if]. A high pitched squeak rings throughout the garage, the fox clearly excited by what you're offering. There's little wait, for either of you, as you feel his nose bump against your rear cheeks. You ask him to just eat you out for now, and he gives a yip before his tongue laps along one of your glutes. The fox seems hellbent on teasing you, as his tongue ever so slightly moves to the side on each swipe, lapping closer and closer to your hole. However, there seems to be little in his mind other than driving you to push him there yourself: to cram his muzzle between your cheeks.";
+	say "     And that is exactly what you do, reaching behind and grabbing his rubbery head as you spread your ass. You then easily shift his lapping muzzle right between your glutes, and right over your hole. At that point, he doesn't even hesitate, and laps in earnest at your winking star. There's little there for him to be perturbed by either, as it no doubt smells of pure musk, and nothing else. That gets the fox to go even heavier in his efforts to please you. You're a dear friend, so he's no doubt further encouraged to make you happy. This drives him to focus his lapping towards the center of your hole, the wet appendage slipping ever so slightly inside you. This forces a quite carnal moan from your throat, sounding almost like a bellow. As the tongue drills into you, twisting back and forth as it wiggles about, you feel yourself approaching the edge.";
+	WaitLineBreak;
+	say "     The rubbery male appears to sense this, as Vent pulls back and slows his rimming. His tongue then just lightly swipes along your saliva drenched hole. Gone is the eager tonguing of your ass, and now he seems deadset on teasing you. The feeling of being on edge is gone, replaced by a low, pleasant buzz throughout your body. Your position of leaning over, hands on your knees, makes it a bit hard to please yourself, but moving is clearly not an option either, because then you'd lose the amazing feeling of that rubbery tongue on your ass. You are stuck in the middle of quite the conundrum, but you know that tongue will be perfect if you just wait. So that's exactly what you do, and simply let the latex fox drench your hole in rubbery spit.";
+	say "     That dexterous tongue soon returns to probing your hole, flicking and slurping at your anus as the male yips out. There's nothing stopping you from quickly reaching your edge once more, but unlike before, there's no sign of the fox slowing down. In fact, the fox seems to be speeding up, drilling his tongue into your hole, stretching you around that oh-so-talented appendage. You aren't stretched by much, but it's enough to let that muscle slip in and jab your prostate. Your mind goes blank, little white dots float in your view, and your cock lurches as your balls pull up. The splatter of your cum on the floor is more than audible, but you don't care. The only thing you really care for, take notice of, is that slippery appendage jabbing your prostate. It lengthens your orgasm and leaves you begging for more, and less. By the time that tongue is out of your ass, you're face down in your own pool of cum, Vent snuggling up next to you as you get some rest.";
+	WaitLineBreak;
+	say "     You wake up to Vent watching you, his eyes soft as he observes you in a very human manner. When you get up to leave, however, he goes back to his usual spot.";
+	NPCSexAftermath Player receives "Other" from Vent;
 
-to say VentFoxRimsPlayerExtend:[Player gets rimmed by the fox w/ extended tongue]
-	say "     Placeholder.";
+to say VentFoxRimsPlayerExtend: [Player gets rimmed by the fox w/ extended tongue]
+	say "     Deciding on getting the squeaky fox to eat you out with his long, almost serpantine tongue, you [if player is naked]bend over and slap your ass[else]quickly strip off whatever may be blocking the fun, then bend over and slap your ass[end if]. A high pitched squeak rings throughout the garage, the fox clearly excited by what you're offering. There's little there for him to be perturbed by either, as it no doubt smells of pure musk, and nothing else. You can't lie to yourself in that moment, you've wanted this ever since you saw his new tongue, and you just know it's going to be ama– your mind flatlines as that tongue immediately swipes from your genitals to lower back. Its progress was slowed by your anus, but that did nothing to stop it.";
+	say "     Your ass is already dripping with rubbery saliva, but that isn't the end of it, and neither of you would want it to be. The next thing you feel is that long tongue dripping saliva right on your star. Then, before you know it, that slippery length rams at your hole, slipping back and forth as it tries to spread you around it. You lose even more control after that, moaning encoherently as that muscle really works your hole. Each new effort by Vent allows that tongue to push just a bit further into your hole. He's barely a hair in, but after several more efforts, he's twice that, and then three times, four, five, and eventually his tongue breaks through your hole and rams your prostate.";
+	WaitLineBreak;
+	say "     Your cock slaps against your stomach as Vent pounds his tongue into you. There's nothing to hold in your guttural moans, and so you sound out like a beast in heat. At this point, in this city, that's not unusual, but what gets you is the feeling of pure pleasure radiating just from your ass. Even the sparks of ecstasy through your cock are merely from that eager tongue inside you. There's nothing to do but beg that deific fox to keep going. Your words are barely intelligable, dribbling from your mouth as you drool all over yourself in a dull-minded state. The fox has no intent to stop, or even slow, and that is made ever more clear as more of his tongue coils up inside you, putting more and more pressure on your g-spot.";
+	say "     There's nothing else needed for you to finally crescendo, firing your seed out onto the floor, your chest, and even stomach. The force of your ejaculation easily bounces your cock upwards, so with each shot, it smears more seed across your form. Eventually, your dick is angled just right to blast your face, forcing a sputtering noise from you as you finally fall to all fours, and then onto your chest. The cum pooled across the floor now joins that which was splattered all over the rest of your upper body, leaving your entire front caked in sperm. Vent wiggles his tongue some more, but even he seems drained, so he soon pulls from your ass with a wet squelch, moving to curl up next to you as you drift off.";
+	WaitLineBreak;
+	say "     You wake up to Vent watching you, his eyes soft as he observes you in a very human manner. When you get up to leave, however, he goes back to his usual spot.";
+	NPCSexAftermath Player receives "Other" from Vent;
 
 to say VentFoxTongueFucksPlayer:[Player gets fucked by fox's cock-tongue]
 	say "     Placeholder.";
@@ -1138,7 +1153,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 		say "     Vent pulls out of you.";
 		WaitLineBreak;
 		say "[VentPostSexWS]";
-		say "     Post sex shit.";
+		say "     Post sex fun.";
 	if VentFluidAmount is 3: [Extreme Fluid]
 		if anallevel is 3:
 			if VentDomSize is 3:

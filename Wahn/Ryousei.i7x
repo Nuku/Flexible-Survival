@@ -42,35 +42,47 @@ instead of going northwest from Park Trail while (level of Player > 10 and RTWin
 Section 2 - Creature Responses
 
 to say RTiger wins:
-	say "     As you collapse at his feet, the muscled tiger looks down upon you with a sigh. 'A pity that you lost so easily, even though I held back quite a bit. I really thought you had more potential. Maybe it is just not your day today, hm? Let us try this again when you have had time to recuperate and... train a bit.' Ryousei folds his hands and gives a little bow to you, then calmly walks off along the forest path.";
+	if Royal Tiger is not tamed: [normal fight]
+		say "     As you collapse at his feet, the muscled tiger looks down upon you with a sigh. 'A pity that you lost so easily, even though I held back quite a bit. I really thought you had more potential. Maybe it is just not your day today, hm? Let us try this again when you have had time to recuperate and... train a bit.' Ryousei folds his hands and gives a little bow to you, then calmly walks off along the forest path.";
+	else: [sparring with Ryo]
+		if HP of Player < 5: [beaten]
+			say "     As you sway back and forth and are just about to fall on your ass, the muscled tiger quickly steps up and slides an arm around your back. It feels warm and soft against your skin as he holds you with a firm grasp, bracing your body so you stay on your feet. With a friendly chuckle, the tiger adds, 'A good fight, my friend, but this round goes to me. Come, let me help you to somewhere where you can sit down, and catch your breath.'";
+		else: [surrendered]
+			say "     As you pull back and tell him that you concede, Ryousei relaxes from his combat-ready stance and straightens himself. Bringing his hand-paws together before his chest, he grasps his right fist with the left hand, the muscular tiger gives you a small bow, not too deep but still showing respect. 'A good fight, my friend. I have missed sparring with my compatriots ever since coming to this world. It feels good to get a proper workout without having to battle for life and death.'";
 
 to say RTiger loses: [TODO: Add option for asshole players]
-	if RTWinCounter < 6:
-		increase RTWinCounter by 1;
-	if RTWinCounter is:
-		-- 2:
-			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'Well done, stranger. You are a promising fighter and it was a pleasure to trade blows with you. Far better than all those weaklings out and about who just throw themselves at me, ruled by their primitive urges.' Smiling, he adds, 'The workout has made me hungry, so I am off to find something to eat, but... let us do this again sometime. I will be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
-		-- 3:
-			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'You have beaten me a second time. Well done, stranger - it is always a pleasure to trade blows with such a promising fighter. You are far better than all those weaklings out and about who just throw themselves at me, ruled by their primitive urges.' Smiling, he adds, 'The workout has made me hungry, so I am off to find something to eat, but... let us do this again sometime. I will be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
-		-- 4:
-			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'Third time is the charm, my friend. I have to say I am really enjoying our little clashes. I knew from the start you would be a better opponent than those mindlessly ravishing beasts your world seems to be populated with.' Smiling, he adds, 'The workout has made me hungry, so I am off to find something to eat, but... let us do this again sometime. I will be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
-		-- 5:
-			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'And again you have won our little sparring duel, my friend. I find myself impressed, truly. I knew from the start you would be a better opponent than those mindlessly ravishing beasts your world seems to be populated with - but now you have really proven yourself.' Smiling, he adds, 'The workout has made me hungry, so I am off to find something to eat, but... let us do this again sometime. I will be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
-		-- 6:
-			say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'You know what... since I am having so much fun with you - how about we travel together for a while? With the prowess you have proven to me time and again, I am sure you are having grand adventures that I would love to take part in!' Smiling, he adds, 'I will leave you to think about it for a while - but if you accept, you can just use a little magic to reach me. Just focus your mind on my image, then intone 'Watashi wa anata ni yonde, Ryousei'. I will meet you as soon as I am able.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
-			say "     (Ryousei the royal tiger is now a possible ally! You can make him your active ally by typing [bold type][link]ally Ryousei[end link][roman type] or [bold type][link]ally tiger[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Ryousei[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Royal Tiger":
-					now MonsterID is y;
-					now area entry is "Nowhere";
-					break;
-			now royal tiger is tamed;
-			add "Tamed" to Traits of royal tiger;
-			move Ryousei to Grey Abbey Library;
+	if Royal Tiger is not tamed: [normal fight]
+		if RTWinCounter < 6:
+			increase RTWinCounter by 1;
+		if RTWinCounter is:
+			-- 2:
+				say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'Well done, stranger. You are a promising fighter and it was a pleasure to trade blows with you. Far better than all those weaklings out and about who just throw themselves at me, ruled by their primitive urges.' Smiling, he adds, 'The workout has made me hungry, so I am off to find something to eat, but... let us do this again sometime. I will be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
+			-- 3:
+				say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'You have beaten me a second time. Well done, stranger - it is always a pleasure to trade blows with such a promising fighter. You are far better than all those weaklings out and about who just throw themselves at me, ruled by their primitive urges.' Smiling, he adds, 'The workout has made me hungry, so I am off to find something to eat, but... let us do this again sometime. I will be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
+			-- 4:
+				say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'Third time is the charm, my friend. I have to say I am really enjoying our little clashes. I knew from the start you would be a better opponent than those mindlessly ravishing beasts your world seems to be populated with.' Smiling, he adds, 'The workout has made me hungry, so I am off to find something to eat, but... let us do this again sometime. I will be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
+			-- 5:
+				say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'And again you have won our little sparring duel, my friend. I find myself impressed, truly. I knew from the start you would be a better opponent than those mindlessly ravishing beasts your world seems to be populated with - but now you have really proven yourself.' Smiling, he adds, 'The workout has made me hungry, so I am off to find something to eat, but... let us do this again sometime. I will be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
+			-- 6:
+				say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'You know what... since I am having so much fun with you - how about we travel together for a while? With the prowess you have proven to me time and again, I am sure you are having grand adventures that I would love to take part in!' Smiling, he adds, 'I will leave you to think about it for a while - but if you accept, you can just use a little magic to reach me. Just focus your mind on my image, then intone 'Watashi wa anata ni yonde, Ryousei'. I will meet you as soon as I am able.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
+				say "     (Ryousei the royal tiger is now a possible ally! You can make him your active ally by typing [bold type][link]ally Ryousei[end link][roman type] or [bold type][link]ally tiger[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Ryousei[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
+					if Name entry is "Royal Tiger":
+						now MonsterID is y;
+						now area entry is "Nowhere";
+						break;
+				now royal tiger is tamed;
+				add "Tamed" to Traits of royal tiger;
+				move Ryousei to Grey Abbey Library;
+	else:
+		say "     As you wind yourself up for the next attack, the muscled tiger suddenly takes a step back from you. 'That will be enough for now. I concede to you, my friend. Well fought, it was a pleasure to spar with you.' Bringing his hand-paws together before his chest, he grasps his right fist with the left hand, the muscular tiger gives you a half-bow, showing the respect you earned for your prowess. He gives your shoulder a friendly tap and squeezes it, then adds with a smile, 'Ever since coming to this world, I have really been missing just being able to measure up against a companion, without it having to be a life or death fight. So thank you, for this.'";
 
 to say RTigerDesc:
-	say "     Walking along one of the overgrown paths of the park, you meet Ryousei the tiger general, coming the other way. The muscled being gives you a nod in greeting, then says, 'You again. Good, good - I have been getting bored with the pretty lacking challenge of the creatures roaming this forest.' He unsheathes his claws and makes a ritualistic-seeming gesture, then relaxes his fingers again to let the pointy sickles slide into resting positions. 'There - a friendly duel has been declared. But no worries - I will just knock you around a bit - no claws, see!' Giving a wiggle of his fingers in front of his confidently smiling face, the tiger then rushes at you to attack.";
+	if Royal Tiger is not tamed: [normal fight]
+		say "     Walking along one of the overgrown paths of the park, you meet Ryousei the tiger general, coming the other way. The muscled being gives you a nod in greeting, then says, 'You again. Good, good - I have been getting bored with the pretty lacking challenge of the creatures roaming this forest.' He unsheathes his claws and makes a ritualistic-seeming gesture, then relaxes his fingers again to let the pointy sickles slide into resting positions. 'There - a friendly duel has been declared. But no worries - I will just knock you around a bit - no claws, see!' Giving a wiggle of his fingers in front of his confidently smiling face, the tiger then rushes at you to attack.";
+	else:
+		say "     Smiling as he gets into a combat-ready posture, the muscular anthro tiger looks quite eager for some action. 'Let us measure our strength against one another then! Are you ready?' As soon as you nod, he wades into combat against you - claws sheathed though, as it is just a friendly clash.";
 
 Section 3 - Creature Insertion
 
@@ -86,7 +98,6 @@ When Play begins:
 	add "Royal Tiger" to infections of FurryList;
 	add "Royal Tiger" to infections of OtherworldlyList;
 	add "Royal Tiger" to infections of MaleList;
-	add "Royal Tiger" to infections of BarbedCockList;
 	add "Royal Tiger" to infections of BarbedCockList;
 	add "Royal Tiger" to infections of BipedalList;
 	add "Royal Tiger" to infections of TailList;
@@ -119,16 +130,16 @@ When Play begins:
 	now lev entry is 13;
 	now wdam entry is 10;
 	now area entry is "Nowhere";             [ Case sensitive]
-	now Cock Count entry is 1;                    [ number of cocks if sex is 'Male' or 'Both' ]
+	now Cock Count entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 12;
-	now Ball Size entry is 3;               [ Size of balls ]
-	now Nipple Count entry is 2;                  [ Number of nipples. ]
+	now Ball Size entry is 3;                [ Size of balls ]
+	now Nipple Count entry is 2;             [ Number of nipples. ]
 	now Breast Size entry is 0;              [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0;         [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 0;                    [ number of pussies if sex is 'Female' or 'Both' ]
+	now Cunt Count entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	now SeductionImmune entry is false;
+	now Cunt Tightness entry is 0;           [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	now SeductionImmune entry is true;
 	now libido entry is 10;                  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";                    [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;               [ Percentage chance of dropping loot, from 0-100. ]
@@ -307,7 +318,7 @@ Cock Length of Ryousei is 12. [length in inches]
 Ball Count of Ryousei is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Ryousei is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Ryousei is 0. [number of cunts]
-Cunt Depth of Ryousei is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Ryousei is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Ryousei is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Ryousei is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -392,6 +403,17 @@ to say RyouseiTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Suggest grooming the proud tiger";
 	[]
+	if "TaiChi_Seen" is listed in Traits of Ryousei or "TaiChi_Joined" is listed in Traits of Ryousei:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask if he wants to do some Tai Chi";
+		now sortorder entry is 4;
+		now description entry is "Suggest that the two of you perform some exercises together";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Suggest a sparring match";
+	now sortorder entry is 5;
+	now description entry is "Spar against the muscular tiger";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -408,10 +430,14 @@ to say RyouseiTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Ask him about becoming a tiger"):
 					say "[RyouseiTalk1]";
-				if (nam is "Talk about the place he is from"):
+				else if (nam is "Talk about the place he is from"):
 					say "[RyouseiTalk2]";
-				if (nam is "Offer to brush his fur"):
+				else if (nam is "Offer to brush his fur"):
 					say "[RyouseiBrushing]";
+				else if (nam is "Ask if he wants to do some Tai Chi"):
+					say "[RyouseiTaiChi]";
+				else if (nam is "Suggest a sparring match"):
+					say "[RyouseiSparring]";
 				wait for any key;
 				say "[RyouseiTalkMenu]";
 		else if calcnumber is 0:
@@ -554,9 +580,15 @@ to say RyouseiSexMenu:
 		now sortorder entry is 2;
 		now description entry is "Feel the big cat's tongue lap over your crotch";
 	[]
+	if Player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Frot with Ryousei";
+		now sortorder entry is 3;
+		now description entry is "Rub your cocks against each other until you both come";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "69 with Ryousei";
-	now sortorder entry is 3;
+	now sortorder entry is 4;
 	now description entry is "Share mutual oral pleasure";
 	[]
 	choose a blank row in table of fucking options;
@@ -600,6 +632,8 @@ to say RyouseiSexMenu:
 					say "[PlayerSucksRyousei]";
 				else if (nam is "Let Ryousei eat your pussy"):
 					say "[RyouseiLicksPlayerPussy]";
+				else if (nam is "Frot with Ryousei"):
+					say "[RyouseiPlayerFrot]";
 				else if (nam is "69 with Ryousei"):
 					say "[RyouseiPlayer69]";
 				else if (nam is "Get fucked in the ass by Ryousei"):
@@ -674,6 +708,25 @@ to say RyouseiPlayer69: [player 69 with Ryo]
 	else:
 		NPCSexAftermath Ryousei receives "Other" from Player;
 	NPCSexAftermath Player receives "OralCock" from Ryousei;
+
+
+to say RyouseiPlayerFrot: [frot with Ryo]
+	if "KnowsFrot" is not listed in Traits of Ryousei:
+		say "     Smiling eagerly, you tell the tiger that you want to frot, which draws a curious expression from the otherworldly feline. It becomes apparent that he's not quite following what you mean, so you stroke a hand down the front of his broad, muscular chest and say that you could explain, but it might be a lot more fun if you just show him. Chuckling warm-heartedly, the anthro tiger purrs as he replies, 'How could I resist such a charming offer? Lead on, I'll follow where you take me.' ";
+		add "KnowsFrot" to Traits of Ryousei;
+	else:
+		say "     Smiling eagerly, you tell the tiger that you want to frot, with him again, which draws a lusty purr from Ryousei. Eagerness vibrates in his voice as he replies, 'How could I resist such a charming offer? I'll gladly lay down with you.' ";
+	say "That said, the tall and trained warrior relaxes and lets you take point, rubbing his muscles through the fabric of his kimono. Stretching your neck to kiss Ryousei, you make out with him while your hands wander, soon finding the belt of his kimono and undoing the knot holding it closed. Pulling aside the garment no longer bound around him, the tiger's fur-covered chest is laid bare, allowing you to run your fingers over his warm coat, feeling its softness and the hard muscles underneath.";
+	say "     'I like where this is going,' Ryousei says eagerly before pulling you into another long kiss, his tongue wrestling pleasurably with your own. His continuing purr vibrates throughout your body while your feline friend moves his hands and [if Player is not naked]starts to pull off your own clothing[else]makes use of your nakedness to caress you[end if]. The two of you share pleasurable moments of simply touching and snogging with each other, and before long both of you are hard and ready for more. [if Player is not naked]By now having been stripped of everything you were wearing, [else]Hungry to have the tiger join you in your nakedness, [end if] you slowly disentangle yourself from the embrace of his arms, then reach out to push the cloth of the kimono off his shoulders. Lowering his arms, Ryousei proceeds to let the garment completely slip off his body, falling down to pool behind him on the floor.";
+	WaitLineBreak;
+	say "     Now dressed in nothing more but a traditional fundoshi around his hips and crotch, the proud tiger lets out a pleased purr as you bid him to lay on the ground. He leans forward to lick your cheek one last time, then lowers himself to sit on the cloth of his kimono before leaning back and stretching himself out before you. Moving to straddle Ryousei's thighs, you run your hands over the tented white cloth of his fundoshi, feeling the firm tip of his erection and cupping the full orbs of his balls easily apparent through the thin fabric. The next thing to do is to find the ends of the fundoshi's cloth to und-wrap your sexy feline, allowing you to pull the last piece of cloth off him in short notice. Now he is as naked as you are, leaning back and braced on his elbows as he looks up to your face with an almost boyish smirk on his muzzle.";
+	say "     Moving a little further up along his body, with the insides of your legs brushing against the soft fur of Ryousei's legs, your cock is soon right next to his own. You take hold of it by the base and begin a little bit of a playful 'sword-fight' with the big cat, creating pleasant tingles up and down your spine as you feel the warmth of his erection against your own, with the nubby spines of his cock rubbing your hard shaft lightly. Lining both erections up side by side, you then reaching out for one of the tiger's arms and pull Ryousei's hand down to his crotch. The otherworldly visitor takes the hint immediately and wraps his paw-hand around both of your cocks, pressing them together gently and starting to jerk up and down along the shafts. 'This is nice,' Ryousei tells you with a purr, his free hand moving up to stroke your side.";
+	WaitLineBreak;
+	say "     Feeling very good as you grind your cock lightly against the tiger's grasping hand, you proceed to lean over your feline friend, bracing yourself on his firm pecs as you return to making out with each other. The two of you share your breath and moan into each other's mouths while rubbing front to front, dick to dick and tongue to tongue. You revel in the warm feeling of his fur against your skin, never getting enough of stroking and rubbing it, while Ryousei keeps up an amazing, slow burn of masturbation for the two of you, cupping your balls with the other hand and giving them very satisfying squeezes. Grinding against each other like that for a long, pleasant while, you react to each little gasp and moan, building the shared pleasure ever higher. Then finally, when it is made more than apparent that you're close to orgasm by your labored breathing, the tiger asks, 'Ready?'";
+	say "     The breathless nod that you give him is the only signal that Ryousei needs, and he goes full out right away after that, stroking your twin cocks in a rapid beat, up and down along the pressed-together shafts. You couldn't have held back even if you wanted to, throwing your head back and moaning out loud as you start to erupt only a heartbeat or two before Ryousei himself, the first spurt of your cum landing in his chest-fur and making it lay flat and stick to his muscles. Then the throb of his cock pulses against your own, and it almost seems like your bodies compete about who can shoot the most cum, as you make a proper mess of Ryousei's front, plastering his usually so well-groomed fur against the tiger's skin.";
+	WaitLineBreak;
+	say "     When your shared arousal finally winds down, Ryousei loosens his previous death-grip on your cocks and brings his paw-hand up to his face, looking at the cum clinging to its edge before licking it off. Then he focuses on you, meeting your gaze and saying, 'It was amazing to share pleasure with you!' You chuckle and kiss his muzzle, responding that you had a great time too. This leads to a little bit more time of caresses and further cat-washing by the muscular tiger, until you eventually sink down to lie together, now side by side. Ryousei puts an arm around you, a thoughtful expression on his face.";
+	say "     Then, after taking in your naked form for a long moment, he says, 'Being your companion makes the time on this wretched world bearable, even... pleasant, at times. Which makes me wonder about the time when I will eventually find my way back home. Would you like to accompany me, leave this place? My army needs people like you - strong and dependable. There will be hardship, but also rewards...' Ryousei caresses your cheek gently, then puts a finger on your lips. 'Do not answer now, it is moot until I can open a portal anyways. Just... think about it,' he says, then gets up to groom his fur into its usual impeccable state and get dressed.";
 
 to say RyouseiFucksPlayer: [player gets fucked in the ass]
 	say "     Letting Ryousei take the lead, you lean into his touch as he puts his arms around you, drawing you close against his furred body. He feels warm and soft against your skin, yet with a rock-solid firmness underneath, speaking of many years of hard martial training. Towards you, he's showing his gentler side right now, caressing your shoulders and back with strong hands, while at the same time lowering his head to yours. Meeting his muzzle, you're drawn into a long kiss, with his tongue wrestling pleasurably with your own. A rumbling purr from his broad chest vibrates throughout your body, putting you into a very relaxed, open state. 'I want to be inside you,' Ryousei grunts lustily as he draws back for a breather, then starts to slide his hands under your clothes and pulls them off.";
@@ -971,9 +1024,119 @@ to say RyoSpoonsRane:
 		say "     'Uhhm...' Ryousei says, finding himself hugging Rane's stretched-out form - then he realizes he himself also doesn't have anything on and sits up. Turning his head to check on his surprise bedfellow, Ryousei gives a surprised mrowl from his throat and says, 'So - we're both naked. And were curled up together - but I can't remember a thing otherwise. Clearly, that was too much sake for either of us.' Ryousei shifts his position a little bit away from the blue oni and rubs his temples. Meanwhile, Rane inspects himself and sees that he's bare-ass naked too. His brows draw together as he tries to recall what happened during their drinking binge, but doesn't have much success apparently. A moment later, Ryousei looks back over at the blue oni and asks, 'How about you, friend? I know I am not really used to lots of drinking because I never do when on campaign, but from what I remember, you seemed to put away the sake quite well. Surprisingly so, I have to say. It was my belief your people didn't... indulge like that.'";
 		say "     A look of friendly curiosity shows on the anthro tiger's face, prompting Rane to scratch the back of his neck and look away for a moment before giving a shrug and admitting, 'I am not the oni you think I am! That whole stupid wise master stuff. Being all high-minded and cultured. Yeah, right. That's not me!' The tiger's brows draw together in even greater puzzlement and he says, 'What are you talking about?! Everyone knows that...' Ryousei's brows stitch together as a new realization dawns upon him, 'Oh! Now I see. The blue oni from my plane of origin follow a certain... mold - and you clearly are not one of them, aside from the looks.' Ryousei lays his hands on one another and gives a little bow to Rane, then adds, 'My apologies for assuming things about yourself, honored oni. Having been thrust into this realm by enemy machinations to remove me from my shogun's side, I was too glad to find someone seemingly familiar in this strange world.'";
 		WaitLineBreak;
-		say "     In response, Rane just gives the tiger a companionable slap on the shoulder, then says, 'Aw, don't worry about it buddy. I totally went with it too because I wanted to see what you'd do. No harm no foul, eh? I'll gladly have you as a drinking buddy.' The two of them smile at each other for a moment, with a bit of embarrassment on Ryousei's face while Rane nonchalantly checks out his body. Then the oni reaches out and runs his hand down tiger's muscled flank. 'Just so you know... sake or no sake, I'd be interested in getting together with you again. One thing this oni definitively isn't is monk-ish and celibate, if you get my drift.' With a wink at Ryousei, Rane then gets up and bends over to grab his loincloth - not at all accidentally flashing the tiger his dick and firmly muscled blue butt. He adds, 'It's a standing offer for such a sexy cat as yourself. But now, I am off to re-stock on sake. Something tells me I need more in the future.' Then the blue oni casually vaults over the railing and light-footedly bounces off the tops of one, two, three sturdy bookshelves before jumping onto the floor of the library. With a grin over his shoulder, he puts his loincloth back on, then vanishes through the main doors soon after.";
+		say "     In response, Rane just gives the tiger a companionable slap on the shoulder, then says, 'Aw, don't worry about it buddy. I totally went with it too because I wanted to see what you'd do. No harm no foul, eh? I'll gladly have you as a drinking buddy.' The two of them smile at each other for a moment, with a bit of embarrassment on Ryousei's face while Rane nonchalantly checks out his body. Then the oni reaches out and runs his hand down tiger's muscled flank. 'Just so you know... sake or no sake, I'd be interested in getting together with you again. One thing this oni definitively isn't is monk-ish and celibate, if you get my drift.' With a wink at Ryousei, Rane then gets up and bends over to grab his loincloth - not at all accidentally flashing the tiger his dick and firmly muscled blue butt. He adds, 'It is a standing offer for such a sexy cat as yourself. But now, I am off to re-stock on sake. Something tells me I need more in the future.' Then the blue oni casually vaults over the railing and light-footedly bounces off the tops of one, two, three sturdy bookshelves before jumping onto the floor of the library. With a grin over his shoulder, he puts his loincloth back on, then vanishes through the main doors soon after.";
 		say "     After sorting out his appearance and donning his kimono again, Ryousei comes back over to your side a moment later. The tiger looks over to Rane's camp with a raised eyebrow, his tail twitching a bit through the air in an unruly fashion. 'Quite an unusual being,' he remarks, to which you smile and nod while he continues, '...but definitely interesting to know. I never knew a blue oni could be like that. I suppose everything truly is different in this realm...' There is a thoughtful shimmer in his eyes as Ryousei says this, and you notice that he casually tugs the front of his kimono a bit, having to adjust his crotch. Looks like he wouldn't be opposed to some action with the blue demon.";
 
+
+instead of navigating Grey Abbey Library while (Ryousei is in Grey Abbey Library and a random chance of 1 in 3 succeeds and "TaiChi_Seen" is not listed in Traits of Ryousei and "TaiChi_Joined" is not listed in Traits of Ryousei and "TaiChi_Ignored" is not listed in Traits of Ryousei):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: Ryousei does Tai Chi - current turn: [turns][line break]";
+	say "     As you enter the library, [RyouseiDoesTaiChi]";
+
+after going to Grey Abbey Library while (Ryousei is in Grey Abbey Library and a random chance of 1 in 3 succeeds and "TaiChi_Seen" is not listed in Traits of Ryousei and "TaiChi_Joined" is not listed in Traits of Ryousei and "TaiChi_Ignored" is not listed in Traits of Ryousei):
+	if debugactive is 1:
+		say "     DEBUG: Ryousei does Tai Chi - current turn: [turns][line break]";
+	try looking;
+	project the Figure of Ryousei_face_icon;
+	say "     Going to the front section of the library, [RyouseiDoesTaiChi]";
+
+to say RyouseiDoesTaiChi:
+	say "you spot your anthro tiger companion Ryousei moving along between the bookshelves towards the back of the room, then leave through the back door. He is moving with a determined stride, and curiosity about where he is going draws you to follow after the feline. Hustling along to catch up, you catch the door before it swings fully shut and open it again, looking outside. Your otherworldly guest doesn't appear to have gone all that far, just to the nearest stretch of grass, next to the fountain. Bringing his hands together, he stands straight and bends his head with closed eyes for a second, then begins to move, slow but smoothly, taking a peculiar pose with one arm stretched down, the other slightly raised. Holding this for a few seconds, another pose follows easily, now with the tiger's hands furled in towards his body. Ah, now you recognize what this is - Ryousei is doing something that seems similar to Tai Chi! Looks pretty neat and relaxing, how he moves in the shine of the [if daytimer is day]sunlight[else]moonlight[end if].";
+	say "     [bold type]Do you want to do something?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Walk up and sit on the edge of the fountain. You can keep him some company.";
+	say "     [link](2)[as]2[end link] - Walk up and ask to join him.";
+	say "     [link](3)[as]3[end link] - Nah, just leave him to it. He's already started and you don't want to interrupt.";
+	say "     [link](4)[as]4[end link] - You don't have any interest in this. Not your thing.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to watch, [link]2[end link] to join in, [link]3[end link] to give Ryousei his peace or [link]4[end link] to ignore him.";
+	if calcnumber is 1:
+		say "     Stepping outside yourself, you stroll up the footpath towards the fountain. Ryousei notices you before you're more than halfway, with a smile spreading on his face. 'Hello, my friend. Would you like to join me?' the feline offers gracefully, indicating a free spot of grass by his side. You thank him and say that you're fine just watching, with his reply being, 'Of course. I am glad for your company no matter what.' As he starts his next set of poses, you continue on to the fountain and sit on the rim, just relaxing and watching, with some casual conversation thrown in for good measure. Ryousei tells you some stories about life in the world he comes from - everyday tales from his youth, and living in a village, with you detailing how things were here - before the nanite apocalypse. All in all, you have a pretty nice time, letting go of the worries of survival for a little while, and you feel better for it as you eventually go back inside the library.";
+		SanBoost 10;
+		follow the turnpass rule;
+		add "TaiChi_Seen" to Traits of Ryousei;
+	else if calcnumber is 2:
+		say "     Stepping outside yourself, you stroll up the footpath towards the fountain. Ryousei notices you before you're more than halfway, with a smile spreading on his face. 'Hello, my friend. Would you like to join me?' the feline offers gracefully, indicating a free spot of grass by his side. You thank him for the offer and add that you were just about to ask him, which draws a little chuckle from the strong tiger. 'No matter what, I am glad for your company. Do you have experience in the Way of the Mantis, or do you want me to guide you?' Explaining that there is something quite similar on Earth, called 'Tai Chi', you accept and follow along as he demonstrates pose after pose, slowly taking you through them. While you work out your bodies, some casual conversation also stimulates your minds, with Ryousei telling some stories about life in the world he came from - everyday tales from his youth, and living in a village, with you detailing how things were here - before the nanite apocalypse. All in all, you have a pretty nice time, letting go of the worries of survival for a little while, and you feel better for it in body and mind as you eventually go back inside the library.";
+		PlayerHealed 10;
+		SanBoost 15;
+		follow the turnpass rule;
+		add "TaiChi_Joined" to Traits of Ryousei;
+	else if calcnumber is 3:
+		say "     Deciding that you do not want to intrude, you keep looking for a little while, watching the anthro tiger go through several poses in a smooth, well-experienced way. He clearly has been doing exercises like that for years. It looks like it's a fairly nice and relaxing thing to do. Maybe you should ask him about joining in sometime. When you eventually close the door quietly and walk back to the front of the library, you can't help but feel a little better and less stressed out.";
+		SanBoost 5;
+		add "TaiChi_Seen" to Traits of Ryousei;
+	else:
+		say "     With a shrug, you close the door and walk back to the front of the library. You have better things to do than watching some glorified stretching exercises.";
+		add "TaiChi_Ignored" to Traits of Ryousei;
+	add "TaiChi_DoneForToday" to Traits of Ryousei; [filter for only one session a day]
+
+to say RyouseiTaiChi:
+	if "TaiChi_DoneForToday" is listed in Traits of Ryousei: [already had some today]
+		say "     As you propose to do another set of 'Way of the Mantis' exercises, the anthro tiger lets out a hearty chuckle, rumbling in his broad, furred chest. 'Patience, my friend. The training helps you get centered for what you want to do, but you can't keep at it all day. Let's start again tomorrow.'";
+	else if Ryousei is not booked: [not in the library/bunker]
+		say "     As you propose to do another set of 'Way of the Mantis' exercises, the anthro tiger glances around, then slowly shakes his head. 'I don't think this is the right place for it, sorry. We don't want to get interrupted after all. How about going back to the Grey Abbey Library instead?'";
+	else if Energy of Player > 3: [drunk]
+		say "     As you propose to do another set of 'Way of the Mantis' exercises, the anthro tiger looks at you with raised eyebrows and shakes his head. 'I don't think that there's much sense in even trying that, given your state right now. We can gladly do it when you sober up and still feel like it, okay?'";
+	else:
+		say "     Walking back to the stretch of grass next to the fountain behind the library with Ryousei, you take positions side by side there. Then Ryousei starts the two of you out in your 'Way of the Mantis' exercises, slowly going through stretches and various poses. While you work out your bodies, some casual conversation also stimulates your minds, with Ryousei telling some stories about life in the world he came from - everyday tales from his youth, and living in a village, with you detailing how things were here - before the nanite apocalypse. All in all, you have a pretty nice time, letting go of the worries of survival for a little while, and you feel better for it in body and mind as you eventually go back inside the library.";
+		PlayerHealed 10;
+		SanBoost 15;
+		follow the turnpass rule;
+		if "TaiChi_Joined" is not listed in Traits of Ryousei:
+			add "TaiChi_Joined" to Traits of Ryousei;
+		add "TaiChi_DoneForToday" to Traits of Ryousei; [filter for only one session a day]
+
+an everyturn rule:
+	if Royal Tiger is tamed:
+		if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
+			if "TaiChi_DoneForToday" is listed in Traits of Ryousei: [filter for only one session a day]
+				remove "TaiChi_DoneForToday" from Traits of Ryousei;
+		[else if TimekeepingVar is 0 or TimekeepingVar is -8:] [pre-dawn]
+		[else if TimekeepingVar is 7 or TimekeepingVar is -1:] [early morning]
+		[else if TimekeepingVar is 6 or TimekeepingVar is -2:] [mid-morning]
+		[else if TimekeepingVar is 5 or TimekeepingVar is -3:] [noon]
+		[else if TimekeepingVar is 4 or TimekeepingVar is -4:] [mid afternoon]
+		[else if TimekeepingVar is 3 or TimekeepingVar is -5:] [evening]
+		[else if TimekeepingVar is 2 or TimekeepingVar is -6:] [early night]
+
+to say RyouseiSparring:
+	say "     When you suggest a friendly match between the two of you, ";
+	if Ryousei is not booked: [outside of the home base]
+		say "Ryousei glances around, taking in your surroundings. 'I don't think this is the appropriate place for that. We wouldn't want to be surprised by roaming beasts, or disturb innocent bystanders. How about we take this up again, back at the Grey Abbey?'";
+	else if HP of Player < (MaxHP of Player / 2):
+		say "Ryousei looks you up and down and raises one eyebrow. 'Are you sure that is the best idea right now? You seem like you're at less than your best, and I wouldn't want to take advantage of having you in a weakened state. Better if you rest a bit first, don't you think?'";
+	else:
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
+			if Name entry is "Royal Tiger":
+				now MonsterID is y;
+				now lev entry is (13 + Level of Royal Tiger);
+				now wdam entry is (Weapon Damage of Royal Tiger);
+				now HP entry is (95 + (Level of Royal Tiger * 10));
+				break;
+		say "Ryousei chuckles and nods eagerly. 'What a great idea. I'm ready if you are!'";
+		if Royal Tiger is listed in CompanionList of Player: [temporary dismissal since he can't fight with you against himself]
+			ForceCompanionDismiss "Royal Tiger";
+			challenge "Royal Tiger";
+			ForceCompanionJoin "Royal Tiger";
+		else:
+			challenge "Royal Tiger";
+		if fightoutcome < 30: [won  or lost]
+			let needed be 0;
+			increase the XP of Royal Tiger by level of Player;
+			now needed is ( level of Royal Tiger ) times 10;
+			if "Good Teacher" is listed in feats of Player:
+				now needed is ( level of Royal Tiger ) times 6;
+			if XP of Royal Tiger >= needed and level of Royal Tiger < level of Player and humanity of Player > 0:
+				pet level up Royal Tiger;
 
 Section 6 - Endings
 

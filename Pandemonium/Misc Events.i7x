@@ -85,10 +85,10 @@ to say ResolveEvent Lingua Franca:
 	say "     ([link]N[as]n[end link]) - Leave them to their bickering.";
 	if player consents:
 		LineBreak;
-		let bonus be (( Intelligence of Player minus 20 ) divided by 2);
+		let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]30[roman type] (Intelligence Check):[line break]";
-		if diceroll + bonus >= 30:
+		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Intelligence Check):[line break]";
+		if diceroll + bonus >= 18:
 			LineBreak;
 			say "     You approach the group of bickering language students and get their attention with some shouts. They look at you, each just as angry as the next. Maybe this wasn't such a great idea... But then the frog clears his throat, or merely croaks you can't tell. He's wearing just a pair of boxers. When he speaks, it's clearly French. You stiffle a laugh, but that only enflames him more. Given his intensity and the gestures he's making towards his classmates, he's probably angry that he isn't a more appropriate animal, like a Gallic cock. Even though you don't speak French, you think you understand his point, so you ask him to speak more quietly. While he doesn't seem to understand English, he certainly can understand what you mean when you lower your own voice when talking to him. He then nods with a sigh.";
 			say "     The green pheasant boy chirps up something that sounds Japanese and you motion for everyone to relax. You try to console the frog, putting your hands on his shoulders and telling him, 'Viva la vida.' He laughs and clearly says 'C'est espagnol,' to which you shrug and say 'C'est la vie.' He laughs some more, and the group seems to calm down after that.";

@@ -25,7 +25,7 @@ to say ResolveEvent Pack Bang:
 		say "     You turn tail and run as fast as you can, but the wolves notice and hunt you down. Your muscles burn and scream as branches hit your face, making small cuts on it, but you don't dare to slow down. Your hunters are left behind except for one, probably the leader of the pack. He stays close to you, his bestial stamina gaining on you, and a root in your way gives him the chance he needs to catch you, tackling you as you stumble over it. Sprawled on the ground, the wolf overtakes you easily and positions himself in the direction you had been running into, intent on driving you back towards his pack. You will need to deal with him quick, or the rest of them will catch up.";
 		wait for any key;
 		now FeralWolfSpecialFightNumber is 2; [fighting the pack leader]
-		challenge "Feral Wolf";
+		challenge "Feral Wolf Male";
 		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 			say "     You are thrown to the ground by the pack-leader, defeated. Your only chance of escaping is now gone. You can hear the others closing in on you two. Looks like they will have a nice prey.";
 			say "[FeralWolfGangBang]"; [pack gangbang scene]
@@ -40,28 +40,28 @@ to say ResolveEvent Pack Bang:
 		LineBreak;
 		say "     You turn around, facing the pack of wolves that were hunting you. There are probably five feral wolves in different stages of the infection, with some looking almost like true wolves, while the smallest one still has some ripped clothes attached to his body as well as what looks like a normal teenager hairstyle. But they all look hungry, with their red cocks pointing out of their sheaths and right at you, almost as if saying they are going to use you for release, if you want it or not.";
 		wait for any key;
-		challenge "Feral Wolf";
+		challenge "Feral Wolf Male";
 		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 			say "[FeralWolfGangBang]";
 		else if fightoutcome >= 30: [fled]
 			say "You finally run away from the wolves, leaving this part of the forest for good this time.";
 			now Resolution of Pack Bang is 2; [fled]
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-			challenge "Feral Wolf";
+			challenge "Feral Wolf Male";
 			if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 				say "[FeralWolfGangBang]";
 			else if fightoutcome >= 30: [fled]
 				say "You finally run away from the wolves, leaving this part of the forest for good this time.";
 				now Resolution of Pack Bang is 2; [fled]
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-				challenge "Feral Wolf";
+				challenge "Feral Wolf Male";
 				if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 					say "[FeralWolfGangBang]";
 				else if fightoutcome >= 30: [fled]
 					say "You finally run away from the wolves, leaving this part of the forest for good this time.";
 					now Resolution of Pack Bang is 2; [fled]
 				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-					challenge "Feral Wolf";
+					challenge "Feral Wolf Male";
 					if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 						say "[FeralWolfGangBang]";
 					else if fightoutcome >= 30: [fled]
@@ -69,7 +69,7 @@ to say ResolveEvent Pack Bang:
 						now Resolution of Pack Bang is 2; [fled]
 					else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 						now FeralWolfSpecialFightNumber is 2; [fighting the pack leader]
-						challenge "Feral Wolf";
+						challenge "Feral Wolf Male";
 						if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 							say "[FeralWolfGangBang]";
 						else if fightoutcome >= 30: [fled]
@@ -86,16 +86,16 @@ to say ResolveEvent Pack Bang:
 
 to say FeralWolfGangBang:
 	now Resolution of Pack Bang is 1; [gangbang]
-	setmonster "Feral Wolf";
+	setmonster "Feral Wolf Male";
 	say "     The wolves attack your exhausted body, every single one of them wanting to satisfy their lust with your body. The first one jumps on your back, penetrating your [if Player is female]cunt[else]ass[end if]. The others growl and bark at their companion's greed, and your moans are soon silenced by another as he jumps on your face, forcing your lips on his red spear. You gag on his cock as the wolf doesn't care about you, and your tongue is squished inside of your mouth to make space for his mad humping. His balls hit your chin while his paws are hugging tight against the back of your head, his growing knot presenting you what is to come.";
 	say "     With both trying to knot you, the one fucking your face pushes his knot against your lips, forcing your maw to open, almost unhinging and snapping it. Your eyes tear with the pain, and your throat burns with the huge dick throbbing as it spill hot cum directly in your gullet. The other one turns around now that he has knotted you, and with this, another dog jumps at you, penetrating your asshole. The sudden penetration makes you get away from the one knotting your mouth, your face dripping with your attacker's cum.";
 	WaitLineBreak;
 	say "     The other wolves look angry and are fighting the one knotted in your [if Player is female]pussy[else]ass[end if]. You are pulled and pushed to your limits, and in a vain struggle to scream, your mouth is penetrated by another of the dogs who haven't had a turn yet. You feel hot cum filling your intestines as the one on your ass finally cums, but he doesn't get a chance to knot you as both dogs on your back are pushed from you. Your holes gape without a cock, especially a knotted cock, and the cold wind of the forest send chills down your spine. The dogs fighting for a turn is now just background noise, but your rest doesn't last long as other dogs finally fuck you.";
 	say "     You are always used by at least two of the horny wolves. In fact, sometimes, you feel more than two cocks penetrating your now-loose asshole[if Player is female] and another one inside of your drenched pussy[end if]. Your mouth hurts from all of the use, and all that you can taste right now is wolf's cum. Your stomach is aching with how full it is, since it was filled from both ends. But the wolves are now long gone, leaving you in a pool of cum. This finally gives you enough time to rest, until you are finally good enough to go back to your adventures.";
 	if player is female:
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Wolf";
-	CreatureSexAftermath "Player" receives "AssFuck" from "Feral Wolf";
-	CreatureSexAftermath "Player" receives "OralCock" from "Feral Wolf";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Wolf Male";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Feral Wolf Male";
+	CreatureSexAftermath "Player" receives "OralCock" from "Feral Wolf Male";
 	now Resolution of Pack Bang is 1; [gangbang]
 
 Forest Gang Bang ends here.

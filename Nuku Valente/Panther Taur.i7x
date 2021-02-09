@@ -217,7 +217,7 @@ When Play begins:
 	now attack entry is "She [one of]leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had[or]strikes at you with her clawed hands[or]lashes out with a powerful set of sharp claws[or]rushes right at you, forcing you to back against a wall[at random].";
 	now defeated entry is "[defeated_panthertaur]";
 	now victory entry is "[panthertaur rape]";
-	now desc entry is "[mongendernum 5]An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her slitted, pretty [one of]blue[or]brown[or]green[at random] eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more heavy bumps, swaying with every powerful step of those large paws of hers. Behind her, tucked between her hindlegs, is a thick sheath, large as a can of chips, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.";
+	now desc entry is "[mongendernum 5]An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her slitted, pretty [one of]blue[or]brown[or]green[at random] eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more bumps with nipples, swaying slightly with every powerful step of those large paws of hers. Behind her, tucked between her hindlegs, is a thick sheath, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.";
 	now face entry is "feline, with a blunt snout, wet black nose and pointed ears above your head"; [ Face. Format as Your face is [Face of Player]. ]
 	now body entry is "bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws[if Nipple Count of Player > 2]. All your breasts except the first two rest on the chest of that lower torso, swaying with each step[end if]"; [ Body. Format as "Your body is [Body of Player]." ]
 	now skin entry is "[one of]furry[or]black furred[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -240,10 +240,10 @@ When Play begins:
 	now wdam entry is 6; [ Monster's average damage when attacking. ]
 	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 14; [ Length in inches infection will make cock grow to if cocks. ]
+	now Cock Length entry is 16; [ Length in inches infection will make cock grow to if cocks. ]
 	now Ball Size entry is 4; [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 6; [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 8; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now Breast Size entry is 6; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 14; [ Depth in inches of female sex the infection will attempt to give a player. ]

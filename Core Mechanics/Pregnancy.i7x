@@ -140,7 +140,7 @@ to decide which text is random child gender:
 	decide on "[entry ChildGenderRoll of GenderList]";
 
 to decide which text is random child personality:
-	let PersonalityList be { "friendly", "playful", "mean", "curious", "stubborn", "independent", "sassy", "assertive", "meek", "extroverted", "introverted", "mischievious" };
+	let PersonalityList be { "friendly", "playful", "mean", "curious", "stubborn", "independent", "sassy", "assertive", "meek", "extroverted", "introverted", "mischievous" };
 	let ChildPersonalityRoll be a random number from 1 to the number of entries in PersonalityList;
 	decide on "[entry ChildPersonalityRoll of PersonalityList]";
 
@@ -212,7 +212,21 @@ to pregprotocol:
 					if "Chase's Breeder" is listed in feats of Player and ChaseOffspring is 0: [override for Chase's first kids]
 						now z is 2;
 					if "Fang's Mate" is listed in feats of Player and hunger of Fang is 0:
-						now z is 2;
+						if hunger of Fang is 0:
+							now z is 2;
+						else:
+							if a random chance of 1 in 8 succeeds:
+								now z is 4;
+								now FangNewPuppies is 4;
+							else if a random chance of 1 in 4 succeeds:
+								now z is 3;
+								now FangNewPuppies is 3;
+							else if a random chance of 1 in 2 succeeds:
+								now z is 2;
+								now FangNewPuppies is 2;
+							else:
+								now z is 1;
+								now FangNewPuppies is 1;
 					if z is 2:
 						say "[line break][Bold Type]It's twins![Roman Type][line break][line break]";
 						if pregtype is 2, increase mpregcount by 1; [more mpreg practice]
@@ -235,7 +249,7 @@ to pregprotocol:
 						remove "Chase's Breeder" from feats of Player;
 					if "Chris's Breeder Slut" is listed in feats of Player:
 						remove "Chris's Breeder Slut" from feats of Player;
-					if "Fang's Mate" is listed in feats of Player:
+					if "Fang's Mate" is listed in feats of Player and Fang is Male:
 						remove "Fang's Mate" from feats of Player;
 				else: [routine for various hijacks]
 					repeat with y running from 1 to snakeocc:
@@ -277,7 +291,7 @@ to say detailbirth:
 
 to detailbirth:
 	LineBreak;
-	if "Fang's Mate" is listed in feats of Player:
+	if Fang is Male and "Fang's Mate" is listed in feats of Player:
 		if Player is female and pregtype < 2:
 			say "     With a sudden pouring of fluids, the time of [if ovipregnant is true]egg laying[else]birth[end if] arrives. You settle down without much choice, breathing quickly as your body spasms in readiness. As if he had sensed the imminent [if ovipregnant is true]egg laying[else]birth[end if], Fang appears beside you, his warm fur comforting in your grasp. You have no idea how he got here so quickly, but now isn't the time to question it.";
 		else: [mpreg]
@@ -495,7 +509,7 @@ To Birth:
 			say "     The young buck of an orc warrior looks at you with a broad grin as he continues to show off a bit more, stroking his large hands over the muscle-packed form of his body, then finally gravitating to his crotch. Experimentally wrapping his fingers around the thick shaft, he gives it a few strokes and grunts in pleasure as it fills out to an impressive length of green-skinned man-meat. Winking at you as he lets go and the huge cock swings down between his legs, he says, [if Player is booked or player is bunkered]'I'll go say hello to dad now. See ya later!' [else]'I'll go say hello to dad now. Maybe fuck a guy or two on the way too. See ya later!'[end if] With that said, he wanders off, naked as a jaybird and erect, in an open challenge to anyone who might see him.";
 		increase Stamina of Chris by 1;
 		increase ChrisPlayerOffspring by 1;
-	else if "Fang's Mate" is listed in feats of Player: [Special Pregnancy from Fang]
+	else if Fang is Male and "Fang's Mate" is listed in feats of Player: [Special Pregnancy from Fang]
 		if hunger of Fang is 1:
 			if "All-Mother's Blessing" is listed in feats of Player: [Appeared in arms]
 				say "You and Fang watch in wonder as [if ovipregnant is true]the egg disintegrates, revealing a pair of wolf pups huddled together, [else]the pair of wolf pups disentangle themselves from each other in your arms, [end if]the two of you sharing a loving glance with each other. [if scalevalue of Player > 1]You hold them against your chest, their mouths eagerly searching for a nipple. [else]They appear to still be growing, and you are forced to place them on the ground as they reach a size similar to your own, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
@@ -513,10 +527,14 @@ To Birth:
 			say "     You look up from gazing over your sleeping children to meet the yellow eyes of Fang, staring intently at you over the top of his pups. You can see the struggle he is facing to express everything he wants to say in just a look, not wanting to say anything that might disturb the children, and you're not sure whether he would have the vocabulary anyway. To your surprise, he gently eases his head from between your knee and Lux's face and stands up before approaching you. He tenderly licks your face, showing his appreciation and adoration for bearing his puppies and being his mate. He sits down beside you before speaking, 'Ours.' You earnestly agree with him. They are as much his as yours, two children that you both love, for both of you to raise, though you wonder whether you will have to stay at the library to do so, looking to Fang to see his opinion. He seems to know what you are thinking and shakes his head. 'I feed. I father.' You understand that as him saying that he will look after them while you are away, feeding and protecting them.";
 			WaitLineBreak;
 			say "     You rest there together for several hours, content to idly watch your children breathe and twitch in their sleep while you stroke Fang's side. Eventually they wake though, crawling around on the ground, letting out pitiful whines and squeaks as they blindly explore their surroundings. They seem to be staying together, though as they stray slightly further from you, it is Umbra in the lead, his sister determinedly staying near him but slightly behind. Feeling that they have strayed far enough, Fang walks over to them and lightly grasps them by their scruffs and carries them back to you, placing them on your lap again. You give your children a quick kiss before standing up, deciding that you should get back to doing something. The puppies seem sad, but Fang snuffles at them, settling them down easily. Telling your family that you'll see them soon, Fang escorts Lux and Umbra away. He'll likely keep them near to him in the library, but you should still visit them from time to time as they grow so that you can be part of their lives. They are both your children after all. Dusting yourself off and arranging yourself, you are ready to continue exploring the city.";
-		increase hunger of Fang by 1;
-		now HP of Lux is 1;
-		now HP of Umbra is 1;
-		now LuxUmbraMaturityCounter is 120;
+			increase hunger of Fang by 1;
+			increase Charisma of Fang by 2;
+			now HP of Lux is 1;
+			now HP of Umbra is 1;
+			now LuxUmbraMaturityCounter is 120;
+		else if hunger of Fang is 3:
+			increase Charisma of Fang by FangNewPuppies;
+			now FangNewPuppies is 0;
 	else if "Wild Womb" is listed in feats of Player:
 		if Player is female and pregtype < 2:
 			if Nipple Count of Player > 0:
@@ -690,7 +708,7 @@ To impregnate with (x - text):
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
 		SetInfectionsOf Child to "Tiger";
-	else if "Fang's Mate" is listed in feats of Player:
+	else if "Fang's Mate" is listed in feats of Player and Fang is Male:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with Fang's child?";
 			if Player consents:
@@ -698,10 +716,11 @@ To impregnate with (x - text):
 			else:
 				say "You choose not to accept the seed.";
 				remove "Fang's Mate" from feats of Player;
-				now hunger of Fang is 0;
+				if hunger of Fang < 3:
+					now hunger of Fang is 0;
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
-		SetInfectionsOf Child to "Feral Wolf";
+		SetInfectionsOf Child to "Feral Wolf Male";
 	else if "Chris's Breeder Slut" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with an Orc Warrior child?";

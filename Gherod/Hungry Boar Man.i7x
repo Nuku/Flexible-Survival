@@ -61,6 +61,7 @@ PhilipDoneTalking is a truth state that varies.[@Tag:NotSaved]
 Table of GameCharacterIDs (continued)
 object	name
 Philip	"Philip"
+Philip	"philip"
 
 Philip is a man.
 [Physical details as of game start]

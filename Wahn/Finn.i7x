@@ -129,6 +129,7 @@ to say FinnTracked:
 							WaitLineBreak;
 							say "     While the further spurts of cum from both your cocks slowly ebb off, you just stay in position, half-bent over Finn and holding on to him. Breathing heavily after the exertion of sex, the two of you are happy to keep in a companionable silence for a while, re-building your energy before you eventually push yourself up from Finn's back. As you pull out your softening cock, only a little trickle of cum escapes with it, then his pucker contracts tightly, trapping your load inside the muscular male. Turning around and gingerly sitting on the trampled grass, the horseman looks at you and gives an amused smirk. 'Hey there and... thanks for the rescue. Can't believe I'm saying this, but that last bit has actually been quite a bit of fun,' he says, then gets up and proceeds to gather his clothes, same as you are.";
 							say "     Soon, the two of you are on the way back to the farm, leaving behind the three horsemen with their arms tightly tied behind their backs. Legs free, they should be able to make their way back to the streets of the city - or not, maybe falling prey to one creature or another. No matter which - they're not your problem anymore. On the way back to the farm, you chat a bit with Finn and he explains how the raiders came from a place called the 'stables' in the city and wanted to recruit him. Seems like he didn't want to become another servant of their master, so they decided to 'convince' him another way. Eventually, you arrive back at the farm and with a thanks to you, he leaves to go join his buddies in the barracks. The only thing that's left to do now is telling Anthony what happened.";
+							NPCSexAftermath Finn receives "AssFuck" from Player;
 							now FinnTrackingProgress is 4; [Finn rescued, player fucked him]
 							now Resolution of Missing Farm Hand is 4; [Finn rescued, player fucked him]
 							move player to McDermott Farm Entrance;
@@ -179,9 +180,11 @@ to say FinnCentauressCaring:
 					say "     Not wasting any further second, you bring your rock hard [Cock of Player] cock to her wet, winking pussy and thrust deep in one go. Her pussy is very large, taking everything you've got easily. Though clearly equipped for bigger cocks, the centauress is nevertheless pleasantly tight, her virgin pussy only having had one other man inside for a few short moments. With lots of still novel sensations rocking her body, the centauress's vaginal muscles twitch and flex around your invading member, allowing the two of you enjoy this rushed coupling more than a little bit. Fucking the blond woman with abandon, you soon feel a familiar tingle in your balls and plunge in deep one last time before you start cumming. Spurt after spurt of your fertile seed jet out of your hard shaft and vanish in the depths of her vagina.";
 				else:
 					say "     Not wasting any further second, you bring your rock hard [Cock of Player] cock to her wet, winking pussy and thrust deep in one go. Her pussy is very large, but your shaft fills it out quite nicely, evoking a whole new level of moans from the young woman. Hitting all the sensitive spots deep inside her, the blond centaur gasps, then shouts for you to fuck her harder. Eagerly complying, you take her with abandon, thrusting in and out of his equine body. Soon, the wild ride you're giving her pushes the centauress over the edge and she orgasms, her pussy becoming even slicker with lots of femcum. Making the former virgin have her first orgasm gives your own arousal a big push, so you're not far behind, sinking your hard shaft deep inside her body one last time as a familiar tingle awakens in your balls. Then you come, spurt after spurt of your fertile seed jetting into the female centaur's vagina and flooding her womb with cum.";
+				CreatureSexAftermath "Centaur Mare" receives "PussyFuck" from "Player";
 				WaitLineBreak;
 				say "     You start to lean forward against her muscled hindquarters, wanting to catch your breath, but at just that moment, a shouted climax rings out from the camp you left behind. Uh-oh, the brother of this little filly will be here in moments! With haste, you pull your spent cock out of her depths and stuff it into your pants, then jump down from your position and move to the front of the female centaur. Quickly sliding her hand into yours, you give her a firm gaze and tell her that the two of you just talked, nothing more. She looks a bit puzzled at that statement, then nods slowly, clearly still not thinking clearly from the hormones and sensations bubbling around in her.";
 				say "     A short moment later, the male centaur trots around the corner to find you and his sister, his softening manhood still dripping cum. 'There you are,' he says with relief as he sees his sibling, now only concern on his young face instead of the anger and lust you last saw there. 'Thank you for watching out for her,' he says, none the wiser at what else you did. Coming up and brushing a stand the hair out of the young woman's face. 'Come on sweetie, let's find a safe place until your heat wears off. Maybe a cool bath in one of the springs will help.' The centauress gives you a look and thankfully seems to accept the 'don't say anything' you mime out of sight of her brother, then lets herself be led off to the side. Before the two of them gallop off, the young man gives a throwing-away gesture towards the camp he came from, scowling a little as he says, 'I left the bastard you stood in for back there. Do with him what you want.'";
+				CreatureSexAftermath "Finn" receives "AssFuck" from "Centaur Stallion";
 			else:
 				say "[FinnCentauressStroking]";
 		else:
@@ -196,6 +199,7 @@ to say FinnCentauressCaring:
 to say FinnCentauressStroking:
 	say "     Leaning forward, you bring your tongue to her pussy and lick over it, drawing a gasp from the young centauress. You bring your hand to her pussy and start to massage it, switching up licking and suckling on her folds with gentle strokes before soon moving on to penetrating her. Slipping Three, then four fingers, then your whole hand into the centauress's body, you stroke her inner passage, wet with Finn's pre and her own female juices. Feeling around a bit, you find a spot that seems especially sensitive judging from the joyful gasps any touch makes her do. Concentrating on that, it doesn't take much longer until the centaur orgasms, femcum gushing out of her opening and dripping off your arm. As if he had waited for your signal, the shouted climax of this beautiful filly's brother rings out from the camp you left behind. Uh-oh, he'll no doubt be here in moments! With haste, you pull your hand out of her depths and do your best to wipe off its wetness on her coat, then rush to the front of the female centaur. Quickly sliding her hand into yours, you give her a firm gaze and tell her that the two of you just talked, nothing more. She looks a bit puzzled at that statement, then nods slowly, clearly still not thinking clearly from the hormones and sensations bubbling around in her.";
 	say "     A short moment later, the male centaur trots around the corner to find you and his sister, his softening manhood still dripping cum. 'There you are,' he says with relief as he sees his sibling, now only concern on his young face instead of the anger and lust you last saw there. 'Thank you for watching out for her,' he says, none the wiser at what else you did. Coming up and brushing a stand the hair out of the young woman's face. 'Come on sweetie, let's find a safe place until your heat wears off. Maybe a cool bath in one of the springs will help.' The centauress gives you a look and thankfully seems to accept the 'don't say anything' you mime out of sight of her brother, then lets herself be led off to the side. Before the two of them gallop off, the young man gives a throwing-away gesture towards the camp he came from, scowling a little as he says, 'I left the bastard you stood in for back there. Do with him what you want.'";
+	CreatureSexAftermath "Centaur Mare" receives "Stroking" from "Player";
 
 Section 2 - NPC
 
@@ -361,21 +365,27 @@ to say FinnSexMenu:
 
 to say FinnSex1: [oral on the player]
 	say "     A";
+	NPCSexAftermath Finn receives "OralCock" from Player;
 
 to say FinnSex2: [oral on Finn]
 	say "     A";
+	NPCSexAftermath Player receives "OralCock" from Finn;
 
 to say FinnSex3: [virgin Finn fucked]
 	say "     A";
+	NPCSexAftermath Finn receives "AssFuck" from Player;
 
 to say FinnSex4: [non-virgin Finn fucked]
 	say "     A";
+	NPCSexAftermath Finn receives "AssFuck" from Player;
 
 to say FinnSex5: [Finn fucks player pussy]
 	say "     A";
+	NPCSexAftermath Player receives "PussyFuck" from Finn;
 
 to say FinnSex6: [Finn fucks player ass]
 	say "     A";
+	NPCSexAftermath Player receives "AssFuck" from Finn;
 
 
 Finn ends here.

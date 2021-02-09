@@ -47,6 +47,7 @@ Alex's Condo	"Alex's Condo"	"Alex's Condo"	"High Rise District"
 Argos Antiques	"Argos Antiques"	"Argos Antiques"	"High Rise District"
 Bone-Appetit	"Bone-Appetit"	"Bone-Appetit"	"High Rise District"
 Butterfly Grove	"Butterfly Grove"	"Butterfly Grove"	"High Rise District"
+Cherry's Apartment	"Cherry's Apartment"	"Cherry's Apartment"	"High Rise District"
 Flower Garden	"Flower Garden"	"Flower Garden"	"High Rise District"
 Lizard Parlor	"Lizard Parlor"	"Lizard Parlor"	"High Rise District"
 Rex's Place	"Rex's Place"	"Rex's Place"	"High Rise District"
@@ -230,7 +231,6 @@ carry out navigating:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	if HP of Velos > 2, move Velos to the noun;
 	now Player is in noun;
-	try looking;
 	follow the ngraphics_blank rule;
 	follow turnpass rule;
 

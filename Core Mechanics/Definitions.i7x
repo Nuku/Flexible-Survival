@@ -27,4 +27,9 @@ Definition: A person (called x) is FeralBodied:
 	if BodyName of x is listed in { "test" }, yes;
 	no;
 
+Definition: A person (called x) is PrivateBreeder:
+	if "Private Breeder" is listed in Traits of x, yes;
+	no;
+
+
 Definitions ends here.

@@ -58,7 +58,7 @@ When Play begins:
 	now defeated entry is "[Stallionboi loses]";
 	now victory entry is "[Stallionboi wins]";
 	now desc entry is "[Stallionboi_Desc]"; [ Description of the creature when you encounter it.]
-	now face entry is "slight equine muzzle, its slender stretched out look is strangely sexy as your stare out of it with your sensuous equine eyes. Your mostly equine ears sticking up jauntily out of your long sexy mane of dark brown hair with sea green highlights, giving a rather sexy and teasing look overall to your new face"; [You have a (your text) face."]
+	now face entry is "slight equine muzzle, its slender stretched out look is strangely sexy as your stare out of it with your sensuous equine eyes. Your mostly equine ears sticking up jauntily out of your long sexy mane of dark brown hair with sea green highlights, giving a rather sexy and teasing look overall to your new face"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "slender and feminine, clothed in some sexy slutty clothes you found near where you finished changing, your sexy silk stalkings and gloves, do nothing to hide your slightly equine changes, though the feel of their dark purple silk against your [Skin of Player] skin makes you feel increasingly aroused and sexy with every step";
 	now skin entry is "[one of]soft feminine[or]lightly furred[or]sexy chocolate furred[at random]";
 	now tail entry is "You have a long, sexy equine tail swishing behind you eagerly, swaying side to side with every step as if inviting some sexy beast to hold you down and fuck you."; [ Tail description, write a whole Sentence or leave blank. ]

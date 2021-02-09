@@ -118,6 +118,28 @@ an everyturn rule:
 	if MaxHP of Spike is 0:
 		now MaxHP of Spike is 1;
 
+a postimport rule:
+	if "FatherCount_Correct" is not listed in Traits of Spike:
+		if MaxHP of Spike is:
+			-- 1:
+				decrease AlexandraPlayerPups by 1; [player Spike]
+			-- 2:
+				decrease AlexandraFangPups by 1; [Fang Spike]
+			-- 3:
+				decrease AlexandraKorvinPups by 1; [Korvin Spike]
+			-- 4:
+				decrease AlexandraCarlPups by 1; [Carl Spike]
+			-- 5:
+				decrease AlexandraBrutusPups by 1; [Brutus Spike]
+			-- 6:
+				decrease AlexandraKarelPups by 1; [Karel Spike]
+			-- 7:
+				decrease AlexandraIsaacPups by 1; [Isaac Spike]
+			-- 8:
+				decrease AlexandraFarmhandPups by 1; [Random Farmhand Horseman]
+			-- 9:
+				decrease AlexandraNelsonPups by 1; [Nelson]
+
 Section 1 - Introduction
 
 instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Library and Libido of Alexandra > 2 and a random chance of 1 in 4 succeeds and HP of Spike is 0):
@@ -150,6 +172,26 @@ instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Libra
 		LineBreak;
 		say "[SpikeAccepted]";
 		decrease Libido of Alexandra by 1; [one less teen following Alexandra around]
+		if MaxHP of Spike is:
+			-- 1:
+				decrease AlexandraPlayerPups by 1; [player Spike]
+			-- 2:
+				decrease AlexandraFangPups by 1; [Fang Spike]
+			-- 3:
+				decrease AlexandraKorvinPups by 1; [Korvin Spike]
+			-- 4:
+				decrease AlexandraCarlPups by 1; [Carl Spike]
+			-- 5:
+				decrease AlexandraBrutusPups by 1; [Brutus Spike]
+			-- 6:
+				decrease AlexandraKarelPups by 1; [Karel Spike]
+			-- 7:
+				decrease AlexandraIsaacPups by 1; [Isaac Spike]
+			-- 8:
+				decrease AlexandraFarmhandPups by 1; [Random Farmhand Horseman]
+			-- 9:
+				decrease AlexandraNelsonPups by 1; [Nelson]
+		add "FatherCount_Correct" to Traits of Spike; [check for imports]
 	else if calcnumber is 2: [send him back to Alexandra]
 		LineBreak;
 		say "     As you tell the young dog that he should go back to his mother, Spike's expression just gets more determined and he pushes himself off from the wall to step closer and persuade you. 'Come on! You know that I can be very useful for you. I could keep your back protected when you fight a group of people, or be a lookout, and I have a [italic type]really[roman type] good nose too. I could sniff it out if someone wants to hide themselves or some nice stuff from you. Or all sorts of other things. You'd regret not having me along!' He's really putting everything he has into this plea, trying to show his toughness, but at the same time a bit of the typical 'puppy dog eyes' creeps into his expression too.";
@@ -461,7 +503,6 @@ to say SpikeTalkMenu:
 
 to say SpikePickup:
 	say "     You give a sharp whistle and wave to Spike, directing him to follow you. The young canine quickly rushes to your side and takes his spot to support you.";
-	now Spike is nowhere;
 	AddCompanionFunction "doberman companion";
 
 to say SpikeTalk3: [himself]
@@ -523,7 +564,7 @@ to say SpikeTalk9: [cum request]
 			say "     As you step up and ask Spike straight out to give you some cum, you notice his Adam's Apple bounce a little as he swallows. 'Er, of course [SpikePlayerAddress]. Just give me a moment alone, alright?' With that said, he quietly takes the empty plastic bottle you dig out of your pack and vanishes into a quiet corner, getting busy stroking himself. It doesn't take all that long before he returns, with the bottle capped and containing his 'donation' as per your request. Pulling out a pen, you scribble on the label of the bottle what is in there, then add it to your pack.";
 		else if Libido of Spike < 60: [forced into subby sex]
 			say "     As you step up and command that Spike give you some cum, milked into a plastic bottle, you notice his Adam's Apple bounce a little as he swallows. 'Er, of course [SpikePlayerAddress]. Just give me a moment alone, alright?' As he reaches out for the bottle, you smack his muzzle with it and in a harsh tone demand to know if you ordered him to go into a corner to do his business. 'No, I - I thought...' the young man starts, but seeing the unimpressed sneer that this brings to your face, he falls silent again. Without another word, he quietly undoes the button and zipper of his pants, pushing them down to start rubbing his sheath and tease out the length of his manhood. Nervously glancing up at you from having his head lowered, he gets himself fully hard before much longer.";
-			say "     You step up to the slender, toned body of your dobie companion and bump his hand aside to stroke he red shaft of his canine cock a few times, then grab him by the balls and nod for him to proceed. Rolling the furry cum-factories between your fingers and giving them firm, but not actually painful squeezes, you keep Spike literally well in hand while he jerks himself off, holding the empty bottle ready. You can't help but smile at the control you have over the young man, revelling in your power while he milks himself dutifully. The strokes along his knotted length come faster and faster before long, and he lets out a grunt, then starts to blast his seed into the bottle. Throb after throb of rich canine spunk lands in the plastic container, filling about the lower third of the small bottle before his orgasm ebbs off. Pulling it from his grasp with a casual command to clean himself up, you turn your back on Spike and label the bottle, then add it to your pack.";
+			say "     You step up to the slender, toned body of your dobie companion and bump his hand aside to stroke he red shaft of his canine cock a few times, then grab him by the balls and nod for him to proceed. Rolling the furry cum-factories between your fingers and giving them firm, but not actually painful squeezes, you keep Spike literally well in hand while he jerks himself off, holding the empty bottle ready. You can't help but smile at the control you have over the young man, reveling in your power while he milks himself dutifully. The strokes along his knotted length come faster and faster before long, and he lets out a grunt, then starts to blast his seed into the bottle. Throb after throb of rich canine spunk lands in the plastic container, filling about the lower third of the small bottle before his orgasm ebbs off. Pulling it from his grasp with a casual command to clean himself up, you turn your back on Spike and label the bottle, then add it to your pack.";
 		ItemGain doberman male cum by 1;
 		now lastfuck of Spike is turns;
 

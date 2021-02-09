@@ -207,6 +207,7 @@ Include Down Under Pub by Stripes.
 Include Equinoid Camp by Song.
 Include Farm by Wahn.
 Include Gloryhole by SgtPepper234.
+Include Hellfire Club by Gherod.
 Include High Rise District by Guest Writers.
 Include Hitching Post by SgtPepper234.
 Include Hospital by Stripes.
@@ -466,7 +467,8 @@ Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
 Include Feral Shaft Beast by Guest Writers.
 Include Feral Unicorn by Taelyn.
-Include Feral Wolf by Stripes.
+Include Feral Wolf Bitch by Prometheus.
+Include Feral Wolf Male by Stripes.
 Include Ferret Infection by Luneth.
 Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
@@ -574,6 +576,7 @@ Include Mutated Islanders by Kernog.
 Include Naga by Nuku Valente.
 Include Naiad by Wahn.
 Include Naughty Nurse by Stripes.
+Include Nekomimi Boy by Prometheus.
 Include Nerdy Mouse by McRabid.
 Include Nightmare by Sarokcat.
 Include Ocelot by Stripes.
@@ -590,6 +593,7 @@ Include Parasitic Plant by Guest Writers.
 Include Pegasus by Kaleem mcintyre.
 Include Pewter Consort By Blue Bishop.
 Include Piggy by Stripes.
+Include Pink Fox by Gherod.
 Include Pink Poodle by AGentlemanCalledB.
 Include Pirate Shark by Sarokcat.
 Include Pit Bull by Guest Writers.
@@ -632,6 +636,7 @@ Include Skunkbeast Lord by Stripes.
 Include Slime Cube by Kernog.
 Include Slutrat by Nuku Valente.
 Include Small Feline And Lion by Damaged.
+Include Smilodon Male by Gherod.
 Include Snake by Stripes.
 Include Snow Bat by Stripes.
 Include Snow Leopard by Stripes.
@@ -660,7 +665,9 @@ Include Toven by Wahn.
 Include Trash Coon by Stripes.
 Include Triceratops by Stripes.
 Include Twisted Pimp by Sarokcat.
+Include Tyrannosaurus Male by Gherod.
 Include Unicorn by Sarokcat.
+Include Valkyrie by Qazarar.
 Include Viking Man by Wahn.
 Include Viking Woman by Wahn.
 Include Vixentaur by Stripes.
@@ -689,6 +696,7 @@ Include Ace by Aureas Gigas.
 Include Adam by Wahn.
 Include Aeca by Wahn.
 Include Alex by Stripes.
+Include Alpha by Wahn.
 Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
 Include Allen by Wahn.
@@ -725,6 +733,7 @@ Include Cynthia by Prometheus.
 Include Campus Gym by UrsaOmega.
 Include Cadmea by Prometheus.
 Include Carl by Wahn.
+Include Cherry by Gherod.
 Include Chris by Wahn.
 Include Cindy by Stripes.
 Include College Guards by Rikaeus.
@@ -777,7 +786,8 @@ Include Gwen by Stripes.
 Include Hadiya by Stripes.
 Include Hanu by Kernog.
 Include Harold by Sarokcat.
-Include Hayato by Stripes.
+Include Hayato by Gherod.
+Include Hellfire Workers by Gherod.
 Include Help Book by Prometheus.
 Include HornyHorsey by femtoAmpere.
 [Include Horus by Rikaeus.]
@@ -928,3 +938,54 @@ Include Honey by Luneth.
 Include Korvin by Wahn.
 Include Rachel Mouse by Stripes.
 Include Ryousei by Wahn.
+
+[Game start autofires]
+
+When play begins:
+	adjustdefaulthelp; [adjusts help menu]
+	let tempname be indexed text;
+	repeat with q running from 1 to the number of rows in the table of game objects:
+		add name in row Q of table of game objects to allobjs;
+		choose row q in the table of game objects;
+		now tempname is Name entry in lower case;
+		now sortName entry is tempname;
+	sort the table of game objects in sortname order;
+	now the right hand status line is "[list of valid directions]";
+	say "Before the game begins..."; [warn the player what to expect next]
+	say "Do you want hyperlinks? (Y/N)[line break]";
+	if Player consents:
+		now hypernull is 0;
+	else:
+		now hypernull is 1;
+	repeat with x running through featsets:
+		now x is a part of Player; [TODO: Investigate if this is actually needed]
+	if ScenarioChosen is 1: [sets name of scenario for menu based on preset]
+		now scenario is "Bunker";
+	else if ScenarioChosen is 2:
+		now scenario is "Caught Outside";
+	else if ScenarioChosen is 3:
+		now scenario is "Rescuer Stranded";
+	else if ScenarioChosen is 4:
+		now scenario is "Forgotten";
+	else if ScenarioChosen is 5:
+		now scenario is "Researcher";
+	else:
+		now ScenarioChosen is 1;
+		now scenario is "Bunker";
+	if AnalLevel < 1 or AnalLevel > 3, now AnalLevel is 2;
+	if WSLevel < 1 or WSLevel > 3, now WSLevel is 2;
+	if OvipregLevel is not 1, now OvipregLevel is 2;
+	increase the score by 10;
+	let pointlessbump be 0;
+	now MonsterID is a random number from 1 to number of filled rows in the Table of Random Critters;
+	choose row MonsterID in Table of Random Critters;
+	regularstart; [original start method. easier to move everything then leave here]
+
+When play begins (this is the graphics window construction rule):
+	if NewGraphics is true: [Build window regardless in case player decides to turn it on later]
+		now the graphics window proportion is NewGraphicsRatio;
+		build graphics window;
+		[now the graphics window pixel count is 1;]
+		follow the ngraphics_blank rule;
+		follow the current graphics drawing rule;
+		now NewGraphicsOpened is true;

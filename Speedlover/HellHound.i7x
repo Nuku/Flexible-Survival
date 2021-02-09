@@ -69,7 +69,7 @@ The slot of hellhound collar is "neck".
 
 to say HCollarDesc:
 	say "     A sturdy leather collar, complete with very solid buckle and an inverted pentagram branded into the material, right where the throat of the wearer would be.";
-		now hellhound collar is equipped;
+	now hellhound collar is equipped;
 
 instead of sniffing hellhound collar:
 	say "     The collar smells like leather, and a hint of sulfur too.";
@@ -160,7 +160,7 @@ to Hellhound infect female:
 	now Skin of Player is "smooth";
 	now Face of Player is "charmingly human";
 	now tail of Player is "";
-	now Cock of Player is "";
+	now Cock of Player is "[if looknow is 1]encased in a dirty furred sheath, with dried up seed peeling off, rests your slimy, foul, Hellhound[else]foul, Hellhound[end if]";
 	now Body of Player is "appears perfectly human at first glance";
 	now BodyName of Player is "Hellhound";
 	now FaceName of Player is "Hellhound";
@@ -200,7 +200,7 @@ to Hellhound infect male:
 	now Skin of Player is "smooth";
 	now Face of Player is "charmingly human";
 	now tail of Player is "";
-	now Cock of Player is "";
+	now Cock of Player is "[if looknow is 1]encased in a dirty furred sheath, with dried up seed peeling off, rests your slimy, foul, Hellhound[else]foul, Hellhound[end if]";
 	now Body of Player is "appears perfectly human at first glance";
 	now BodyName of Player is "Hellhound";
 	now FaceName of Player is "Hellhound";

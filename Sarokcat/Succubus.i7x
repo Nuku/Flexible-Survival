@@ -116,9 +116,9 @@ When Play begins:
 	now defeated entry is "[Succubus loss]";
 	now victory entry is "[Succubus attack]";
 	now desc entry is "[SuccubusDesc]";
-	now face entry is "that of a beautiful human's, your strange slit pupiled eyes and the small horns poking out of your hair, the only clue that your almost perfect features hide the lusty desires of a succubus behind your innocent"; [You have a (your text) face."]
+	now face entry is "that of a beautiful human's, your strange slit pupiled eyes and the small horns poking out of your hair, the only clue that your almost perfect features hide the lusty desires of a succubus behind your innocent"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "surprisingly perfect, your muscles and curves nicely defined, your long eye-catching legs perfect for showing off, and your soft hands with their long nails are just made for stroking and petting the opposite sex. The only true sign of your unusual nature, are the two large bat-like wings, folded up against your back, and while they are not quite powerful enough to lift you aloft yet, though you think that might change sometime soon"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]soft, human[or]pale[or]perfect[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
+	now skin entry is "[one of]soft, human[or]pale[or]perfect[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
 	now tail entry is "You have a perfect sexy ass with a long, slender tail attached. It is a classic devil tail: thin, red and ending in a spaded tip."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]amazing[or]incubus[or]perfect[or]human-like[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into a softer more sexual appearance, soft horns pushing out of your lovely new waterfall of long silken hair"; [ face change text. format as "Your face feels funny as (your text)." ]

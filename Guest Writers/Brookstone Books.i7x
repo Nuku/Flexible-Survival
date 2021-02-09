@@ -108,20 +108,21 @@ carry out browsebooks:
 	Let X be a random number between 1 and 10;
 	If X is 1:
 		If bevtalk > 1:
-			say "     Not finding anything of interest right now in the bookstore, you walk over to Beverly to see what she is reading. When you approach, she looks up and smiles at you. 'How's it going?' When you ask what she is reading, she giggles softly. 'Just doing a crossword in this magazine of puzzles I found. Want to help?' Nodding, you help her out with the current crossword she is working on. When it's completed you realize, as you yawn and stretch, that the time just flew by. 'Thanks for your help. Some of those clues were pretty tough, weren't they?' ";
+			say "     Not finding anything of interest right now in the bookstore, you walk over to Beverly to see what she is reading. When you approach, she looks up and smiles at you. 'How's it going?' When you ask what she is reading, she giggles softly. 'Just doing a crossword in this magazine of puzzles I found. Want to help?' Nodding, you help her out with the current crossword she is working on. When it's completed you realize, as you yawn and stretch, that the time just flew by. 'Thanks for your help. Some of those clues were pretty tough, weren't they?'";
 			If intelligence of Player < 20:
 				Let bonus be ((Intelligence of Player minus 10) divided by 2);
 				Let diceroll be a random number from 1 to 20;
 				Increase diceroll by bonus;
+				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Intelligence Check):[line break]";
 				If diceroll >= 12:
-					say "With a chuckle, you nod in agreement. After helping complete the complex crossword, you feel a little bit more intelligent.";
+					say "     With a chuckle, you nod in agreement. After helping complete the complex crossword, you feel a little bit more intelligent.";
 					StatChange "intelligence" by 1;
 					Follow the turnpass rule;
 				else:
-					say "You nod and chuckle in agreement. Some of the clues seemed to sail right over your head.";
+					say "     You nod and chuckle in agreement. Some of the clues seemed to sail right over your head.";
 					Follow the turnpass rule;
 			else:
-				say "You admit that there were some tough clues, but nothing the two of you couldn't handle.";
+				say "     You admit that there were some tough clues, but nothing the two of you couldn't handle.";
 				Follow the turnpass rule;
 		else:
 			say "     Walking around the bookstore and browsing the books, nothing is really grabbing your attention right now. But not one to give up, you continue searching the store a little while longer.";

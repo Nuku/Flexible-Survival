@@ -220,7 +220,7 @@ to say ResolveEvent Stray Catboy:
 		LineBreak;
 		now inasituation is true;
 		now fightoutcome is 0; [reset]
-		challenge "Feral Wolf";
+		challenge "Feral Wolf Male";
 		if fightoutcome < 20: [Winning the fight]
 			say "     With the feral wolf defeated, you turn your attention to the feline on the ground, who is only just starting to climb to their feet. No longer occupied in battling the mutant, you notice much more detail about the cat before you. They are a little shorter than most you see around the city, and their overall features seem somewhat feminine, though the completely flat chest makes it more difficult to say for certain. That, combined with the slight bulge visible around his crotch, leads you to assume the feline is male. Finally the feline seems to gather his wits, and looks at you. 'Can you teach me?' You're thrown off slightly by the sudden statement, but before you can respond, he speaks again. 'Okay, let me try that again. I'm Joey, and I'm sick of getting beaten up by everything in this city. You really seem to know what you're doing, can you train me, please?' The catboy looks at you pleadingly.";
 			say "     [bold type]Do you want to train Joey?[roman type][line break]";

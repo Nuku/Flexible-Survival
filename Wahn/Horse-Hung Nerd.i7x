@@ -49,6 +49,7 @@ to say HHNerd Sucking:
 		say "     Having no choice but to do this, you try to get it over with quickly at least and start to use your hands to jerk and fondle Clyde's cock and balls while you suck him. It's quite clear that he likes your lips and tongue working on his shaft - a lot - judging from all the moans and grunts he's making. In fact, you seem to have such a strong effect on his arousal that it doesn't take all that long to drive him over the edge. Grabbing your head in a hasty and sudden movement, he pulls you down on his shaft as far as you can take, grunting deeply as the first blast of cum is pumped directly into your stomach. Another and another thick pulse of his seed follows, giving you a pretty full feeling. Soon you feel that you just can't take much more and push against Clyde's hips to show him to pull out. As he does so, one last big spurt of cum shoots directly into your mouth and covers your tonsils, with everything afterwards just splattering your face and chest with horse-cum.";
 		WaitLineBreak;
 		say "     When Clyde's orgasm finally starts to ebb and the amount of cum in each new spurt diminishes until they cease, the young man looks down on your cum-splattered form with a grin. He says 'Rub it in, all over your face and chest.' - which you do after a little shrug. He's fed you quite a bit of his cum, so what's a bit rubbed into your skin after that. 'Remember this for next time, so you know what to do and how to please me,' Clyde says while pushing his still cum-dripping horsecock down the [one of]left[or]right[at random] leg of his pants, then he zips up and struts off with a spring in is step.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Horseman";
 
 to say HHNerd Fucking:
 	if Player is submissive: [sub players]
@@ -57,7 +58,8 @@ to say HHNerd Fucking:
 		say "     After loosening you up with his fingers, adding first one more, then another, Clyde groans 'Time for you to feel me inside you. Get ready.' With that, he nudges your back door with the flared tip of his equine cock, then steadily presses in, stretching your insides around his invading member. You can see on the slender young man's face how he savors every moment, not just because of the sensations being inside you gives him, but also because of having power over another being and seeing his demands fulfilled. He gives sudden little thrusts in between the slow and smooth push into you, enjoying the gasps and pants he can draw out of you with that.";
 		say "     When he's finally all the way in some time later, his big balls resting against your ass, Clyde pants 'Now beg me to fuck you. Beg to be fucked by a nerd!' Incredibly turned on by the horse-hung student's demands, you plead for him to take you, dominate you completely and fill you with his seed. He listens a moment with a superior grin on his face, then coos, 'As you wish.' Pulling back out until only the very tip of his flared member is inside of you, he then rams it all back in with a deep thrust that can't help but make you wince. The pounding your ass gets after that really shows all the stored-up anger in this young man, stemming from always having been pushed around by more athletic men and never respected for what he was. It's a wild ride, rough and hard, though you actually have a pretty amazing time, getting off from just being used as his fucktoy as well as him hitting your prostate again and again.";
 		WaitLineBreak;
-		say "     Finally, the limits of Clyde's stamina are reached and he thrusts in all the way one last time and floods your insides with his cum. You can feel his shaft pulse with blast after blast of equine seed exploding into you and the great satisfaction of having made your master come runs through your innermost depths. In fact, it's even enough to drive you over the edge yourself, wound-up as you are. Long squirts of cum arc up from your erect cock to splash down on your chest and face.[mimpregchance]";
+		say "     Finally, the limits of Clyde's stamina are reached and he thrusts in all the way one last time and floods your insides with his cum. You can feel his shaft pulse with blast after blast of equine seed exploding into you and the great satisfaction of having made your master come runs through your innermost depths. In fact, it's even enough to drive you over the edge yourself, wound-up as you are. Long squirts of cum arc up from your erect cock to splash down on your chest and face.";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Horseman";
 		say "     'Remember this for next time, so you know what to do and how to please me,' Clyde says after catching his breath, then pulls out and stands up. Pushing his still cum-dripping horsecock down the [one of]left[or]right[at random] leg of his pants, he zips up, then struts off with a spring in is step.";
 	else:
 		say "     Reluctantly, but unwilling to face another beating by the randy nerd, you strip and layer your clothes on the ground as an improvised pad to lie on. Then you get down on the ground, just as per Clyde demanded, spreading and holding your legs open to present your asshole to him. Grinning widely at your unhappy expression, Clyde kneels and rubs his horsecock against your ass before aligning it with your pucker. You feel wetness against your skin as the horse-hung nerd milks a copious amount of pre-cum out of his cock, smearing it over your hole and pushing it in with two fingers of his other hand. At first it's not easy for him, as you're pretty tense back there, but you force yourself to relax after getting a stinging slap on the butt from the impatient nerd.";
@@ -65,7 +67,8 @@ to say HHNerd Fucking:
 		say "     After loosening you up with his fingers, adding first one more, then another, Clyde groans 'Time for you to feel me inside you. Get ready.' With that, he nudges your back door with the flared tip of his equine cock, then steadily presses in, stretching your insides around his invading member. You can see on the slender young man's face how he savors every moment, not just because of the sensations being inside you gives him, but also because of having power over another being and seeing his demands fulfilled. He gives sudden little thrusts in between the slow and smooth push into you, enjoying the gasps and pants he can draw out of you with that.";
 		say "     When he's finally all the way in some time later, his big balls resting against your ass, Clyde pants 'Now beg me to fuck you. Beg to be fucked by a nerd!' Forced to comply with the horse-hung student's demands, you plead for him to take you, doing your best to sound as if you really want him. He listens a moment with a superior grin on his face, then coos, 'As you wish.' Pulling back out until only the very tip of his flared member is inside of you, he then rams it all back in with a deep thrust that can't help but make you wince. The pounding your ass gets after that really shows all the stored-up anger in this young man, stemming from always having been pushed around by more athletic men and never respected for what he was. It's a wild ride, rough and hard, though you just can't help but feel lust boil up inside you as he hits your prostate again and again.";
 		WaitLineBreak;
-		say "     Finally, the limits of Clyde's stamina are reached and he thrusts in all the way one last time and floods your insides with his cum. You can feel his shaft pulse with blast after blast of equine seed exploding into you and giving you a nice and full feeling. Momentarily pacified by getting his rocks off, the panting young student even grabs hold of your own cock and jerks it a few times, quickly pushing you over the edge too. Long squirts of cum arc up from your erect cock to splash down on your chest and face.[mimpregchance]";
+		say "     Finally, the limits of Clyde's stamina are reached and he thrusts in all the way one last time and floods your insides with his cum. You can feel his shaft pulse with blast after blast of equine seed exploding into you and giving you a nice and full feeling. Momentarily pacified by getting his rocks off, the panting young student even grabs hold of your own cock and jerks it a few times, quickly pushing you over the edge too. Long squirts of cum arc up from your erect cock to splash down on your chest and face.";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Horseman";
 		say "     'Remember this for next time, so you know what to do and how to please me,' Clyde says after catching his breath, then pulls out and stands up. Pushing his still cum-dripping horsecock down the [one of]left[or]right[at random] leg of his pants, he zips up, then struts off with a spring in is step.";
 
 to say HHNerd loses:
@@ -79,22 +82,26 @@ to say HHNerd loses:
 
 to say HHNerdSexMenu:
 	blank out the whole of table of fucking options;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
 		now sortorder entry is 1;
 		now description entry is "Pound Clyde's butt.";
 		now toggle entry is HHNerdSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Blow him off";
 	now sortorder entry is 2;
 	now description entry is "Suck the nerd's horsecock.";
 	now toggle entry is HHNerdSex rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Give him a kick and leave";
 	now sortorder entry is 10;
 	now description entry is "Just walk away from the nerdy bastard.";
 	now toggle entry is HHNerdSex rule;
+	[]
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
 	carry out the displaying activity;
@@ -122,10 +129,12 @@ to say HHNerdSex1:
 	WaitLineBreak;
 	say "     Yielding, but tight - Clyde really does have a very nice bottom, though you'd wish it was attached to a nicer person. It doesn't take long before the horse-hung nerd gets over the feelings of being penetrated and starts getting bossy again, calling over his shoulder 'Fuck me already, you stupid brute!' Well, he asked for it, so you pull out most of the way and slam your manhood back in quickly until your hips meet Clyde's cheeks with a meaty slap. He winces a little under is breath, but mostly just moans and pushes back against you, obviously enjoying getting a rough fuck. Clyde even pants 'Yeah, just like that. Keep going!' in between all the groans and gasps.";
 	say "     He keeps riling you up with snotty comments and grumbling, making you fuck him in a rapid pace and with pretty hard strokes, just as he likes it. You can feel yourself getting closer to orgasm by the second - and you're not the only one. Suddenly Clyde gives a shout 'I'm coming!' and starts trembling under you, his whole body twitching as cum blasts from his equine shaft and hits the ground. His anal muscles tighten around your manhood with each spurt, driving you over the edge just moments later. Breathing heavily, you thrust into him all the way and unload your big load deep inside him. After staying balls-deep in Clyde's hole until your last spurts of cum ebb away, you pull out of him with a wet slurp then just grab your clothes and go, leaving the panting student to pick himself up later.";
+	CreatureSexAftermath "Horseman" receives "AssFuck" from "Player";
 
 to say HHNerdSex2:
 	say "     Kneeling down beside the downed student, you take hold of his meaty, equine shaft. Fingers around the long member, you start jerking on it, causing the guy to pant and moan as you stroke him. True to his contrary character, Clyde opens his mouth to say something (very likely demeaning), but you quickly get him to shut up with the threat of just stopping what you're doing. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority organ. Setting down your other hand on the full, weighty globes of his balls, you stroke and fondle your horse-hung nerd boy a bit, grinning as he gives aroused grunts at your touch. Leaning forward, you lick up the glistening bead of precum forming at the tip of his hard cock, and finding it nicely tasty, you immediately slide your lips over his cockhead and start blowing him off.";
 	say "     With both your hands on his long pole while you bob your head up and down and tease him with your tongue, you quickly push the young man to higher and higher arousal. Before that much longer, his grunts and moans betray a growing urgency as they rise in volume, and you can feel him getting pretty close. Eager to taste what he has to offer, you proceed to go down on him with even greater relish and just moments later, a shudder runs through the slender man's supine body and he orgasms. Accompanied by loud lust-filled grunts, blast after blast of his creamy horse-cum fills your mouth. You do your best to swallow it all, though with the sheer volume he puts out, you soon can't keep up. Forced to pull off his cock, you're sprayed with several big blasts of his cum, covering your face and chest with the horsey nerd's seed. Demanding he take his shirt off, you use it to wipe yourself clean again afterwards, then drop it on his chest afterwards and walk away, leaving the panting student to pick himself up later.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Horseman";
 
 to say HHNerdDesc:
 	setmongender 3;

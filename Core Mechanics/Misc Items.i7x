@@ -40,7 +40,7 @@ to say food use:
 chips is a grab object.
 the scent of chips is "The chips smell [one of]good[or]appetizing[or]tasty[or]edible[at random].".
 
-Usedesc of chips is "[food use]";
+Usedesc of chips is "[chips use]";
 
 to say chips use:
 	if labhost > 0 and BodyName of Player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
@@ -76,7 +76,7 @@ name	desc	weight	object
 dirty water is a grab object. The trade of dirty water is "chips".
 the scent of dirty water is "The water smells a little off, but is still potable.".
 
-Usedesc of dirty water is "[water bottle use]";
+Usedesc of dirty water is "[dirty water use]";
 
 to say dirty water use:
 	if "Junk Food Junky" is listed in feats of Player:
@@ -102,12 +102,7 @@ to say dirty water use:
 			if morale of Player > 0, now morale of Player is 0;
 			say "After drinking something, you feel better.";
 	if "Iron Stomach" is not listed in feats of Player:
-		let RandomRow be a random number from 1 to the number of rows in the Table of Random Critters;
-		choose row RandomRow from the Table of Random Critters;
-		while area entry is "Nowhere": [runs circles until it finds an available creature]
-			now RandomRow is a random number from 1 to the number of rows in the Table of Random Critters;
-			choose row RandomRow from the Table of Random Critters;
-		infect Name entry;
+		weakrandominfect;
 
 water bottle is a grab object. The trade of water bottle is "chips".
 the scent of water bottle is "The water bottle smells like plastic.".

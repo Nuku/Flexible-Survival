@@ -360,9 +360,11 @@ to say JaySexMenu:
 
 to say JaySex1: [oral on the player]
 	say "     A";
+	NPCSexAftermath Jay receives "OralCock" from Player;
 
 to say JaySex2: [oral on Jay]
 	say "     A";
+	NPCSexAftermath Player receives "OralCock" from Jay;
 
 [ Collected Comments and ideas ]
 

@@ -27,7 +27,7 @@ to say Alpha Wolf attack:
 		CreatureSexAftermath "Player" receives "OralCock" from "Alpha Wolf";
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if Name entry is "Feral Wolf":
+			if Name entry is "Feral Wolf Male":
 				now MonsterID is y;
 				break;
 	else if Alpha Wolfdefeat is 0: [ first time losing to a wolf ]
@@ -209,7 +209,7 @@ When Play begins:
 	now desc entry is "[AlphaWolfdesc]";
 	now face entry is "a long canine muzzle sticking out of your feral lupine countenance. Your mouth hangs open in a lupine grin, revealing your sharp teeth. If it weren't for the intelligence sparking in your eyes and the slightly bigger forehead, it would be hard to tell your face from a regular wolf's"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "lean and equally well-suited to life in the wild or the streets, your canine form stands easily on its new digitigrade legs. Your paw-like hands are still as dexterous as ever, though you know that you could drop to all fours in an instant if the situation called for it or your alpha came along to mount you"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]black[or]roughly[or]thickly[at random]-furred"; [ skin Description, format as "Your body is covered in (your text) skin"]
+	now skin entry is "[one of]black[or]roughly[or]thickly[at random]-furred"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
 	now tail entry is "You have a thick canine tail wagging happily behind you, its presence somehow feeling so very right."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]wolf[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it stretches out into a large lupine muzzle, new scents filling your mind as nose works overtime, especially hoping to catch the scent of the strong alpha who changed you"; [ face change text. format as "Your face feels funny as (your text)." ]

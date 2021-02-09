@@ -162,11 +162,13 @@ to say ec_sex:
 		decrease humanity of Player by a random number between 1 and 4;
 	else:
 		weakrandominfect;
+		[
 		increase MonsterID by 1;
 		choose row MonsterID from Table of Random Critters;
 		while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
 			increase MonsterID by 1;
 			choose row MonsterID from Table of Random Critters;
+		]
 
 to say beattheenhancedchimera:
 	say "[ec_reset]";

@@ -73,7 +73,7 @@ AC of ripped jeans is 0.
 Effectiveness of ripped jeans is 0.
 Placement of ripped jeans is "waist".
 Descmod of ripped jeans is "A pair of ripped and torn jeans cover your hips and legs. Even though they have holes, wearing them gives you a somewhat protected feeling.".
-Slot of ripped jeans is "waist".
+Slot of ripped jeans is "legs".
 Scent of ripped jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 black jeans is a grab object.
@@ -87,7 +87,7 @@ AC of black jeans is 0.
 Effectiveness of black jeans is 0.
 Placement of black jeans is "waist".
 Descmod of black jeans is "A pair of solid black jeans cover your hips and legs. The sturdy fabric gives you a well-protected feeling.".
-Slot of black jeans is "waist".
+Slot of black jeans is "legs".
 Scent of black jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 sturdy jeans is a grab object.
@@ -101,7 +101,7 @@ AC of sturdy jeans is 0.
 Effectiveness of sturdy jeans is 0.
 Placement of sturdy jeans is "waist".
 Descmod of sturdy jeans is "A pair of dark blue jeans cover your hips and legs. The sturdy fabric gives you a well-protected feeling.".
-Slot of sturdy jeans is "waist".
+Slot of sturdy jeans is "legs".
 Scent of sturdy jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 skinny jeans is a grab object.
@@ -115,7 +115,7 @@ AC of skinny jeans is 0.
 Effectiveness of skinny jeans is 0.
 Placement of skinny jeans is "waist".
 Descmod of skinny jeans is "A pair of dark blue jeans cover your hips and legs. They look almost painted onto you, with stretchy fabric that follows every last curve of your legs and hips.".
-Slot of skinny jeans is "waist".
+Slot of skinny jeans is "legs".
 Scent of skinny jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 hot pants is a grab object.
@@ -129,7 +129,7 @@ AC of hot pants is 0.
 Effectiveness of hot pants is 0.
 Placement of hot pants is "waist".
 Descmod of hot pants is "A pair of red hot pants cover your hips and legs. They are really skimpy, barely covering a third of your thighs. If they were any tighter, you could call them underwear.".
-Slot of hot pants is "waist".
+Slot of hot pants is "legs".
 Scent of hot pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 gray pants is a grab object.
@@ -143,7 +143,7 @@ AC of gray pants is 0.
 Effectiveness of gray pants is 0.
 Placement of gray pants is "waist".
 Descmod of gray pants is "A pair of gray pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
-Slot of gray pants is "waist".
+Slot of gray pants is "legs".
 Scent of gray pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 camo pants is a grab object.
@@ -157,7 +157,7 @@ AC of camo pants is 0.
 Effectiveness of camo pants is 0.
 Placement of camo pants is "waist".
 Descmod of camo pants is "A pair of camo pants covers your hips and legs. The sturdy fabric gives you a well-protected feeling.".
-Slot of camo pants is "waist".
+Slot of camo pants is "legs".
 Scent of camo pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 jogging pants is a grab object.
@@ -171,7 +171,7 @@ AC of jogging pants is 0.
 Effectiveness of jogging pants is 0.
 Placement of jogging pants is "waist".
 Descmod of jogging pants is "A pair of jogging pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
-Slot of jogging pants is "waist".
+Slot of jogging pants is "legs".
 Scent of jogging pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 bermuda shorts is a grab object.
