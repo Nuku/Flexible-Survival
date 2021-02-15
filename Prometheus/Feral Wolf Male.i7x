@@ -1,7 +1,7 @@
-Version 1 of Feral Wolf Male by Stripes begins here.
+Version 1 of Feral Wolf Male by Prometheus begins here.
 [ Version 4.5 - Relocated to Urban Forest area. ]
 [ Version 4.6 - Renamed to Feral Wolf Male from Feral Wolf]
-[- Originally Authored By: Shadowwolf94 -]
+[- Originally Authored By: Shadowwolf94 - Stripes]
 
 "Adds a Feral Wolf Male to Flexible Survival's Wandering Monsters table, with impreg chance"
 

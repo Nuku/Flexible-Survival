@@ -468,7 +468,7 @@ Include Feral Sea Dragoness by Blue Bishop.
 Include Feral Shaft Beast by Guest Writers.
 Include Feral Unicorn by Taelyn.
 Include Feral Wolf Bitch by Prometheus.
-Include Feral Wolf Male by Stripes.
+Include Feral Wolf Male by Prometheus.
 Include Ferret Infection by Luneth.
 Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
@@ -702,7 +702,7 @@ Include Bad Alexandra by Wahn.
 Include Allen by Wahn.
 Include Alexandra Breeding by Wahn.
 Include Alexandra Cuckolding by Wahn.
-Include Alpha Fang Scenes by Nuku Valente.
+Include Alpha Fang Scenes by Prometheus.
 Include Amaryllis by Song.
 Include Amy by Wahn.
 Include Andrew by Gherod.
