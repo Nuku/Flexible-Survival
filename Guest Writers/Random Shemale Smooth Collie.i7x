@@ -1,4 +1,5 @@
 Version 3 of Random Shemale Smooth Collie by Guest Writers begins here.
+[Version 3.5 - Added extra text for submitting - Soggi]
 [Version 3.4 - Player loss oral and player victory vaginal/anal ride added - Stripes]
 [- Originally Authored By: Voldine -]
 
@@ -12,8 +13,8 @@ to say Shemale Smooth Collie attack:
 	if inasituation is true:
 		say ""; [dealt with at the event source]
 	else if colliedefeat is 0:
-		say "     The bitch quickly bowls you over as your body begins to go limp from the pain and battle weariness. She sniffs eagerly at your crotch while flipping you onto your hands and knees, her tongue slipping out to lap gently before she yanks your clothes off with disturbing ease. She wastes no time at all in foreplay beyond that, her massive cock already hard and dripping as she shoves it up against your [if Player is female]sensitive folds[else]tense sphincter[end if] and applies a little pressure while her precum serves to make this easier on both of you... if only slightly.";
-		say "     She only manages to squeeze a few inches into your tense body at first, but with each stroke the pleasure grows and your body responds by loosening up a bit. You find yourself moaning after only a minute of her slow fucking, the pleasure quickly building to a peak that has your hips bucking and jerking, your spread muscles clenching down on the thickness within, putting even more pressure on her sensitive glans. She arches her back and howls as her balls tighten up, that lengthy prick swelling slightly just before she unloads within you. In only a few seconds she pulls out and moans as her ongoing orgasm paints your back white. 'You're such a good lay. I can't wait to see how you turn out.'[impregchance]";
+		say "     The bitch quickly bowls you over as [if HP of Player > 0]you surrender to the towering collie, a satisfied smirk crossing her face[else]your body begins to go limp from the pain and battle weariness[end if]. She sniffs eagerly at your crotch while flipping you onto your hands and knees, her tongue slipping out to lap gently before she yanks your clothes off with disturbing ease. She wastes no time at all in foreplay beyond that, her massive cock already hard and dripping as she shoves it up against your [if Player is female]sensitive folds[else]tense sphincter[end if] and applies a little pressure while her precum serves to make this easier on both of you... if only slightly.";
+		say "     She only manages to squeeze a few inches into your tense body at first, but with each stroke the pleasure grows and your body responds by loosening up a bit. You find yourself moaning after only a minute of her slow fucking, the pleasure quickly building to a peak that has your hips bucking and jerking, your spread muscles clenching down on the thickness within, putting even more pressure on her sensitive glans. She arches her back and howls as her balls tighten up, that lengthy prick swelling slightly just before she unloads within you, thick jets of creamy cum pumping you full. In only a few seconds she pulls out and moans, her ongoing orgasm painting your back white. 'You're such a good lay. I can't wait to see how you turn out.'[impregchance]";
 		now colliedefeat is 1;
 	else if gestation of child > 0:	[player is preggers]
 		if Player is female:
