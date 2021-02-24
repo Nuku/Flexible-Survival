@@ -346,7 +346,6 @@ to say gsopt_start:
 		say "     ([link]Y[as]y[end link]) - Male.";
 		say "     ([link]N[as]n[end link]) - Female.";
 		if Player consents: [Male Fang]
-			now Fang is Male;
 			if hp of Fang is 4: [Alpha]
 				increase Cock Length of Fang by 2;
 				increase Ball Size of Fang by 1;
@@ -354,7 +353,6 @@ to say gsopt_start:
 				decrease Cock Length of Fang by 2;
 				decrease Ball Size of Fang by 1;
 		else: [Female Fang]
-			now Fang is Female;
 			if hp of Fang is 4: [Alpha]
 				now Androginity of Fang is 6;
 				now Cock Count of Fang is 0;
@@ -482,35 +480,16 @@ to say gsopt_start:
 			WaitLineBreak;
 			say "     You wake up to your omega sitting on the floor next to your cot, with [PosPro of Fang] paws holding onto one of your paws, [PosPro of Fang] bright yellow eyes filled with worry. Once you open your eyes, [PosPro of Fang] tail starts to wag, as [PosPro of Fang] awaits your eventual morning greeting. Despite being half asleep you still acknowledge Fang with a yawn filled greeting as you try and rub the previous day's exhaustion from your eyes. Fang seeing you now awake, tells you 'things quieted down outside.', after a short silence [PosPro of Fang] continues with 'if you happen to find any survivors while out and about, it would be a good idea to let them know this place is safe.' having made sure you were all right and said [PosPro of Fang] piece, Fang pads [PosPro of Fang] way back to the entrance.";
 		if MaleList is warded or MaleList is banned:
-			infect "Feral Wolf Bitch";
-			infect "Feral Wolf Bitch";
-			infect "Feral Wolf Bitch";
-			infect "Feral Wolf Bitch";
-			infect "Feral Wolf Bitch";
+			turn Player into "Feral Wolf Bitch" silently;
 		else if FemaleList is warded or FemaleList is banned:
-			infect "Feral Wolf Male";
-			infect "Feral Wolf Male";
-			infect "Feral Wolf Male";
-			infect "Feral Wolf Male";
-			infect "Feral Wolf Male";
+			turn Player into "Feral Wolf Male" silently;
 		else if player is herm:
-			infect "Feral Wolf Male";
-			infect "Feral Wolf Male";
-			infect "Feral Wolf Male";
-			infect "Feral Wolf Male";
-			infect "Feral Wolf Male";
+			turn Player into "Feral Wolf Male" silently;
+			now Cunt Count of Player is 1;
 		else if player is male:
-			infect "Feral Wolf Male";
-			infect "Feral Wolf Male";
-			infect "Feral Wolf Male";
-			infect "Feral Wolf Male";
-			infect "Feral Wolf Male";
+			turn Player into "Feral Wolf Male" silently;
 		else if player is female:
-			infect "Feral Wolf Bitch";
-			infect "Feral Wolf Bitch";
-			infect "Feral Wolf Bitch";
-			infect "Feral Wolf Bitch";
-			infect "Feral Wolf Bitch";
+			turn Player into "Feral Wolf Bitch" silently;
 		move Fang to the Grey Abbey Library;
 	else:
 		say "     No one else ever arrived, so you're on your own out here. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what you have, you break the seal and prepare to set out.";
