@@ -102,7 +102,7 @@ When play begins:
 	Add Fantasy to BadSpots of MaleList;
 
 to say ResolveEvent Fantasy:
-	say "     When a large red wolf runs pass you on all fours with a blue furred feline that's carrying a spear across its shoulder right on its trail, you can almost swear that you've seen those two somewhere before. Not really sure where you simply shrug before going about your way. That is, right before you end up coming across a massive beast of a collie standing at about twelve feet in height. The horny shemale growls happily as it looks to you and suddenly you realize what the other pair was running away from.";
+	say "     When a large red wolf runs past you on all fours with a blue furred feline that's carrying a spear across its shoulder right on its trail, you can almost swear that you've seen those two somewhere before. Not really sure where you simply shrug before going about your way. That is, right before you end up coming across a massive beast of a collie standing at about twelve feet in height. The horny shemale growls happily as it looks to you and suddenly you realize what the other pair was running away from.";
 	challenge "Smooth Collie Shemale";
 	say "     With that problem taken care of, you grunt in annoyance at as you realize that video game characters must seriously have it rough if they have to deal with things like that every day.";
 	now Fantasy is resolved;
