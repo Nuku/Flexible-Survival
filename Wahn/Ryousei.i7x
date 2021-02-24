@@ -1124,9 +1124,9 @@ to say RyouseiSparring:
 				break;
 		say "Ryousei chuckles and nods eagerly. 'What a great idea. I'm ready if you are!'";
 		if Royal Tiger is listed in CompanionList of Player: [temporary dismissal since he can't fight with you against himself]
-			ForceCompanionDismiss "Royal Tiger";
+			ForceCompanionDismiss "Ryousei";
 			challenge "Royal Tiger";
-			ForceCompanionJoin "Royal Tiger";
+			ForceCompanionJoin "Ryousei";
 		else:
 			challenge "Royal Tiger";
 		if fightoutcome < 30: [won  or lost]

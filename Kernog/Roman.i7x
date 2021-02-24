@@ -1,7 +1,7 @@
 Roman by Kernog begins here.
 [Some minor edits and the inclusion of the new TF helmet - Luneth]
 
-"Adds the Team Captain Roman NPC, who hangs around Astroslide Football Field and is tied to the Tenvale Gorillas Football Team Quest."
+"Adds the Team Captain Roman NPC, who hangs around Astroslide Football Field and is tied to the Tenvale Silverbacks Football Team Quest."
 
 [Character Variables]
 [HP :
@@ -29,11 +29,11 @@ to FootballTeamAdditionsQuestLog:
 	if HP of Roman is 6:
 		say "[bold type]Football team additions[roman type]: Roman asked me to keep an eye open for potential talent to recruit into the team. He heard a rumor about an [bold type]orca volleyball player[roman type], and would like me to investigate[roman type].";
 	if HP of Roman is 7:
-		say "[bold type]Football team additions[roman type]: Willy the Orca accepted to join the Tenvale Gorillas. I should report back to Roman.";
+		say "[bold type]Football team additions[roman type]: Willy the Orca accepted to join the Tenvale Silverbacks. I should report back to Roman.";
 	if HP of Roman is 8:
 		say "[bold type]Football team additions[roman type]: Roman asked me to keep an eye open for potential talent to recruit into the team. He heard a rumor about a [bold type]ruthless horse hermaphrodite roaming the park[roman type], and would like me to investigate[roman type].";
 	if HP of Roman is 9:
-		say "[bold type]Football team additions[roman type]: The Black Equinoid accepted to join the Tenvale Gorillas. I should report back to Roman.";
+		say "[bold type]Football team additions[roman type]: The Black Equinoid accepted to join the Tenvale Silverbacks. I should report back to Roman.";
 	if HP of Roman is 10:
 		say "[bold type]Football team additions[roman type]: Roman asked me to keep an eye open for potential talent to recruit into the team. He would like to recruit some female cheerleaders, this time. He told about a [bold type]Husky Gang[roman type], with whom he has some history.";
 	if HP of Roman is 11:
@@ -79,7 +79,7 @@ to say RomanDesc:
 		say "You look at the former team captain. Roman is tied on his back to one of the benches. Old jerseys are pinning his arms under the bench, and pulling his legs up against his chest, exposing his pussy to everyone. Someone has covered his entire body in writings with a red marker. Dirty names, like [']bitch['], [']whore['], or [']team pet['], an arrow pointing down to his crotch, with the mention [']For public use['], and another on his head, pointing at his mouth, saying [']Feed the monkey[']. Roman's eyes meet yours, but he looks absent. He tries to mumble something, but his mouth has been filled with socks, and only a muffled whisper escapes his lips.";
 	else:
 		if HP of Roman is 0:
-			say "[first time]This is the captain of the Tenvale Gorillas. You hear some of the apes address him as 'captain Roman'. [only]Roman stands out from the rest of the players. He looks more mature, and in opposition to his teammates, who strut on the field with only a helmet and a shoulder-pad, he wears a tank-top and a pair of shorts, who outline his strong body and the large bulge of his crotch. Damn, he must be hung!";
+			say "[first time]This is the captain of the Tenvale Silverbacks. You hear some of the apes address him as 'captain Roman'. [only]Roman stands out from the rest of the players. He looks more mature, and in opposition to his teammates, who strut on the field with only a helmet and a shoulder-pad, he wears a tank-top and a pair of shorts, who outline his strong body and the large bulge of his crotch. Damn, he must be hung!";
 		else if HP of Roman is not 5:
 			say "Roman stands out from the rest of the players. He looks more mature, and in opposition to his teammates, who strut on the field with only a helmet and a shoulder-pad, he wears a tank-top and a pair of shorts, which are simply padded with cotton in order to hide his gynomorphism, as you now know.";
 		else:
@@ -91,7 +91,7 @@ Team Captain Roman is in Astroslide Football Field.
 instead of sniffing Team Captain Roman:
 	say "     The scent of Roman's slightly sweaty fur reaches your nose. It's definitely a male smell, albeit not as strong as the other, more active gorillas. Roman raises an eyebrow as he notices you smelling him. 'I'm working here. If you want more of that smell, you should just go to the locker-room, or take care of our laundry.";
 
-[Team scenes are in Tenvale Gorillas Football Team Quest]
+[Team scenes are in Tenvale Silverbacks Football Team Quest]
 instead of conversing the Team Captain Roman:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -248,7 +248,7 @@ to say JoiningTheTeam:
 	else:
 		say "[FootballTryouts]";
 
-[TryoutScore is in Tenvale Gorillas Football Team extension]
+[TryoutScore is in Tenvale Silverbacks Football Team extension]
 to say FootballTryoutsResults:
 	say "     'Just in time. I was just done with the results.' The team captain shouts some instructions to the unruly throng of football players all around, sending some of them to train on the field while cheering on those who're currently involved in a gangbang on near the door to the locker-room. After calling out, 'I'll be over in a moment, hold me a place in the line to fuck her!' he [if HP of Roman is 0]asserts[else]lies[end if], as he walks over and turns his attention to you. 'Okay. Let's see...'";
 	WaitLineBreak;
@@ -288,7 +288,7 @@ to say RomanConvince:
 		say "     The large primate wipes a tear which was beginning to form in the corner of his left eye. 'So, now we're on the same page. You know, it feels kinda good to let it out, to someone you can trust.' Roman gives you a warm smile. 'And, who knows. When there is enough women and herms on the team, their looks may change, and I'll be able to loose the shorts. But for now, I trust you with this. Don't let me down, buddy.'";
 		say "     Roman parts from you, and you feel that you are at a crossroad. You could try to talk more to Roman, and [bold type]encourage him to come out[roman type] on his own terms, helping him find closure. You could let your inner sadist loose, go to the locker-room, [bold type]divulge the captain's secret with the team[roman type], and enjoy the ensuing torment. The choice is yours.";
 		now HP of Roman is 3;
-		add "tenvale gorillas football helmet" to invent of Astroslide Field Locker-Room;
+		add "tenvale silverbacks football helmet" to invent of Astroslide Field Locker-Room;
 	else:
 		say "     'We already talked about it: I don't trust you enough to tell you about it. Please let it go,' Roman replies to your query.";
 

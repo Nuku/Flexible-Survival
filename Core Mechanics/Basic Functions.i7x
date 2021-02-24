@@ -417,9 +417,43 @@ carry out NPCSexAftermathAction:
 	say "Testing: Player fucks Carl:[line break]";
 	NPCSexAftermath Carl receives "AssFuck" from Player;
 	say "Tehuantl: AnalVirgin: [AnalVirgin of Carl]; PenileVirgin: [PenileVirgin of Carl]";
-	[Options for SexAct are: AssFuck, PussyFuck, AssDildoFuck, PussyDildoFuck, OralCock, OralPussy]
+	[Options for SexAct are: AssFuck, PussyFuck, AssDildoFuck, PussyDildoFuck, OralCock, OralPussy, Stroking]
 
-[ Note: Add Handjob, PussyFingering, AssFingering, Rimming to SexActs]
+	[ Note: Add Handjob, PussyFingering, AssFingering, Rimming to SexActs]
+
+[
+	Function for two NPC, or Player + NPC
+	[receiver's ass is fucked or rides the cock of the giver, includes mpreg chance]
+	NPCSexAftermath RECEIVER_OBJ receives "AssFuck" from GIVER_OBJ;
+	[receiver's pussy is fucked or rides the cock of the giver, includes fpreg chance]
+	NPCSexAftermath RECEIVER_OBJ receives "PussyFuck" from GIVER_OBJ;
+	[receiver's ass is fucked by dildo/finger/tentacle/... of the giver, no impreg chance]
+	NPCSexAftermath RECEIVER_OBJ receives "AssDildoFuck" from GIVER_OBJ;
+	[receiver's pussy is fucked by dildo/finger/tentacle/... of the giver, no impreg chance]
+	NPCSexAftermath RECEIVER_OBJ receives "PussyDildoFuck" from GIVER_OBJ;
+	[receiver is the one with a cock in their mouth, even if they are "giving a blowjob"]
+	NPCSexAftermath RECEIVER_OBJ receives "OralCock" from GIVER_OBJ;
+	[receiver is the one with a pussy in their face, even if they are "giving oral"]
+	NPCSexAftermath RECEIVER_OBJ receives "OralPussy" from GIVER_OBJ;
+	[any other sex that's mostly touching - might be jerking off, might be erotic tickling, etc., no virginities lost"]
+	NPCSexAftermath RECEIVER_OBJ receives "Stroking" from GIVER_OBJ;
+
+	Function for Infection + NPC/Player
+	[receiver's ass is fucked or rides the cock of the giver, includes mpreg chance]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "AssFuck" from "GIVER INFECTION/NPC NAME";
+	[receiver's pussy is fucked or rides the cock of the giver, includes fpreg chance]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "PussyFuck" from "GIVER INFECTION/NPC NAME";
+	[receiver's ass is fucked by dildo/finger/tentacle/... of the giver, no impreg chance]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "AssDildoFuck" from "GIVER INFECTION/NPC NAME";
+	[receiver's pussy is fucked by dildo/finger/tentacle/... of the giver, no impreg chance]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "PussyDildoFuck" from "GIVER INFECTION/NPC NAME";
+	[receiver is the one with a cock in their mouth, even if they are "giving a blowjob"]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "OralCock" from "GIVER INFECTION/NPC NAME";
+	[receiver is the one with a pussy in their face, even if they are "giving oral"]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "OralPussy" from "GIVER INFECTION/NPC NAME";
+	[any other sex that's mostly touching - might be jerking off, might be erotic tickling, etc., no virginities lost"]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "Stroking" from "GIVER INFECTION/NPC NAME";
+]
 
 to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (GivingChar - a person):
 	if debugactive is 1:

@@ -468,7 +468,7 @@ Include Feral Sea Dragoness by Blue Bishop.
 Include Feral Shaft Beast by Guest Writers.
 Include Feral Unicorn by Taelyn.
 Include Feral Wolf Bitch by Prometheus.
-Include Feral Wolf Male by Stripes.
+Include Feral Wolf Male by Prometheus.
 Include Ferret Infection by Luneth.
 Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
@@ -902,7 +902,7 @@ Include Sven by Stripes.
 Include Sylvia by Prometheus.
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
-Include Tenvale Gorillas Football Team by Kernog.
+Include Tenvale Silverbacks Football Team by Kernog.
 Include The-Voice by Luneth.
 Include Thomas by Wahn.
 Include Thunderbolt by CrimsonAsh.

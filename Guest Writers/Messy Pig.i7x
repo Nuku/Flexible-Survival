@@ -18,28 +18,31 @@ to say messypigdesc:
 	now alt1chance entry is 12; [reset likelihood of alt attack]
 	say "     You hear a strange snorting sound, and looking around, you see a bizarre creature. It rests on all fours, but its body seems human enough to stand on two legs. It appears to be a large, pinkish humanoid. She's quite fat and has a large pig snout for a face. Floppy pig ears also adorn her head and peak through her oddly human hair. Six breasts in two rows line her underside, and over her large bottom, there is a cute and curly pig's tail. Her hands end in cloven hooves, as do her feet. She spots you and looks up at you with hungry eyes! Uh oh!";
 
-to say messypigattack:
-	if anallevel is 3 or (anallevel is 2 and a random chance of 1 in 2 succeeds):
+to say messypigattack:[Fight loss scenes]
+	if anallevel is 3 or (anallevel is 2 and a random chance of 1 in 2 succeeds):[Pig gets her ass tongued by player]
 		say "     The pig girl charges at you, and in your weakened state, you fall backwards, landing painfully on your butt. Before you can get up, the pig turns around and launches her fat ass right into your face, knocking you onto your back as her buttcheeks envelop your senses. Thick rolls of piggy fat squish into your face as she uses her heavy weight to keep you pinned down underneath her. You try to push the porker off, but your struggles are absorbed by the layers of meat, your captor oinking happily as she enjoys your struggles and the unintended rubbing. The repugnant aroma of the pig's sloppy living and her musk is all that you can smell, and the scent only grows stronger when the female swine grinds on your face. After a few moments of the pig mashing her sphincter into your mouth, you figure out what she wants, and with you unable to push the hefty animal away, you slowly stick your tongue into the puckered hole.";
 		say "     The horny female squeals in delight from your penetration, and she soon starts bouncing her thick butt to try and drive your tongue deeper into her. Your face is battered by her plump posterior, but thankfully, her fat ass hardly inflicts any pain and instead feels like being smothered by soft, but smelly, pillows. The unpleasant fragrance of the pig continues to permeate your senses, and although the stench remains unpleasant, her musk grows stronger and stokes your libido. It's hard to tell if her odor is making you horny or if you're getting desperate for fresh air, but you end up grabbing her flabby buttcheeks as you thrust your tongue as far as you can into her rear to try and hasten her release. Eventually, your rimjob brings the sow to her climax, and with a loud squeal, her backdoor squeezes your tongue as she splatters her femcum over your body.";
-	else if Player is female:
+		CreatureSexAftermath "Messy Pig" receives "Stroking" from "Player";
+	else if Player is female:[Pig eats player's pussy]
 		say "     The pig girl charges at you one last time, and in your weakened state you fall backwards, landing painfully on your butt. The pig quickly pins you down with her heavy body. She turns, and your vision is filled with large, fat pig butt. Perhaps due to being lazy, she lies down, drowning your face in her behind, as she hungrily goes about eating you out! Clearly, this creature has an appetite for your sex! She digs her snout deep as she laps at it greedily. You can do nothing but struggle weakly as she pins your head with her huge butt, grinding her ass down onto your face. Her strong scent makes you dizzy and strangely aroused, but you are too heavily pinned under her plump behind to get at that enticing pussy smell. After some time, the pleasure of the pig girl's meal becomes impossible to ignore, and you find your body quivering as you cum.";
-	else if Player is male:
+		CreatureSexAftermath "Messy Pig" receives "OralPussy" from "Player";
+	else if Player is male:[Pig sucks player's cock]
 		say "     The pig girl charges at you one last time, and in your weakened state you fall backwards, landing painfully on your butt. The pig quickly pins you down with her heavy body. She turns, and your vision is filled with large, fat pig butt. Perhaps due to being lazy, she lies down, drowning your face in her behind, as she hungrily goes about sucking your [Cock of Player] cock! Clearly, this creature has an appetite for your sex! She bobs her snout over your throbbing meat as she laps at it greedily. You can do nothing but struggle weakly as she pins your head with her huge butt, grinding her ass down onto your face. Her strong scent makes you dizzy and strangely aroused, but you are too heavily pinned under her plump behind to get at that enticing pussy smell. After some time, the pleasure of the pig girl's meal becomes impossible to ignore, and you find your body quivering as you cum.";
+		CreatureSexAftermath "Messy Pig" receives "OralCock" from "Player";
 	else:
 		say "     The pig girl looks you over and huffs angrily at your bare groin. She gives you a hard bite on the hip and a kick with one of her cloven hooves. Apparently, you're not quite what she wants! She turns around, giving you an ample view of her large behind before she kicks some dirt and mud into your face. You cough and sneeze, only to be body-slammed by the hefty sow, crushing the air from your lungs and filling your vision with spots.";
-	if vorelevel is 3 and a random chance of 1 in 2 succeeds:
+	if vorelevel is 3 and a random chance of 1 in 2 succeeds: [Vored by pig]
 		say "     By the time the big porker's rising off of you, you've been badly flattened by her weight, and you don't have the energy to move. Exhausted by the fight and the subsequent session underneath the swine's posterior, you barely notice what's happening until you feel something clamp down on your legs. You look up to see that the pig is eating you, your legs quickly disappearing down her gluttonous throat. With most of your lower half already eaten, you cannot do much as the fat hog continues to swallow you at an alarming rate[if scalevalue of Player > 3], her body somehow stretching enough to accommodate your larger size[end if]. Her stinking breath washes over you, and it only gets stronger when your head enters her mouth. The full porker oinks in both delight and victory as you are dumped into her stomach. An assortment of foul odors assault you from within your tight confines, and yet, they also kindle your libido.";
 		WaitLineBreak;
 		MessyPigBind;
-	else if wslevel is 3 and a random chance of 2 in 5 succeeds:
+	else if wslevel is 3 and a random chance of 2 in 5 succeeds:[WS: Pig pees on you]
 		say "     By the time the big porker's rising off of you, you've been badly flattened by her weight. Left sore and weak after the pleasurable abuse, you can only squirm feebly as she starts pissing with a sigh. You can't help but taste it as a stream of her urine sprays onto your face and more drips down from her crotch. When she's done and has waddled off, you're left very messy by the dirty sow.";
 		infect;
 	else:
 		say "     The pig finally stands up and waddles off. You cough, finally having fresh air as you climb to your knees shakily.";
 
 
-to say beatthepig:
+to say beatthepig:[Victory Scene]
 	if ( CockName of Player is "Messy Pig" or CockName of Player is "Piggy" ) and player is male:
 		say "     The pig, when realizing that the encounter is not going well, turns to make a run for it, but as you catch a glimpse of her wet pussy as she turns away, your porcine cock throbs with need.";
 		say "     [bold type]Do you have your way with the female swine?[roman type][line break]";
@@ -49,6 +52,7 @@ to say beatthepig:
 		if Player consents:
 			LineBreak;
 			say "     You leap atop her, making her squeal loudly. She struggles to pull away, but you manage to keep a grip on the sow and pull out your throbbing pig sticker. With a loud, piggish oink, you thrust your stiff penis into her cunt. She continues to squirm and struggle, but it soon becomes less a matter of her trying to get away as more part of the game of fucking the sow. She squeals and paws at the ground with her hoof-like hands as you thrust into her again and again with your [bodytype of Player] form atop her. Your cock throbs inside of her as you drive it in one last time, [if Cock Length of Player > 19]making her belly bulge with your overgrown meat, [end if]pumping your hot cum deep inside of her as your porcine cock seeks to breed this plump sow. When you're finished with her, you give her ass a swat, sending her squealing again as she waddles away quickly, dripping your semen from her well-used pussy as she goes.";
+			CreatureSexAftermath "Messy Pig" receives "PussyFuck" from "Player";
 		else:
 			say "     The pig turns tail and waddles away faster than you thought possible. You hear its squeals of terror die down as it leaves your range of hearing. Looks like you win!";
 	else:

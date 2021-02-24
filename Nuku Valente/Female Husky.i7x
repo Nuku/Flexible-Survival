@@ -35,11 +35,11 @@ to say femalehuskydesc:
 		project Figure of Husky_Bitch_icon;
 		let RandomizedHuskyBitch be a random number from 1 to 5;
 		if RandomizedHuskyBitch is:
-			-- 1:
+			-- 1: [mindless whore]
 				say "     You run into a beautiful anthro canine covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears, along with a large, fluffy husky tail. Her chest bears two firm and grope-able C cup breasts along with two B cup pairs of breasts underneath them, all of them oozing small droplets of milk. The female dog's cream-colored tummy is slightly swollen as if she is barely pregnant, though that will probably change soon if the aching need oozing from her swollen slit is anything to judge by. It's obvious that she's become nothing more than a needy whore, happy to be full of pups and eager to be bred again and again.";
-			-- 2:
+			-- 2: [flirty]
 				say "     You run into a beautiful anthro canine covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears, along with a large, fluffy husky tail. Her chest bears two firm and grope-able C cup breasts along with two B cup pairs of breasts underneath them. Your gaze is drawn down to her flat, white-furred tummy as she sways her hips, then even lower as the bitch spreads her pussy with two fingers. 'See something you like?' she asks in a teasing tone, followed by the words, 'We'll have so much fun together!' With that said, she starts walking towards you.";
-			-- 3:
+			-- 3: [somewhat more pushy]
 				say "     As you walk along the street, you suddenly hear a sharp whistle from somewhere to the side and turn that way. Not too far off, you see a beautiful anthro canine with soft, grey and white fur, smiling as she allows you to take in all of her naked, shapely form. Shaking her chest a little in an enticing way, she laughs as your gaze is drawn to the two firm and grope-able C cup breasts along with two B cup breasts underneath them. 'I need someone to take care of this pussy, and you'll do very nicely!' she calls out in a lusty tone, not asking but telling you what she expects next.";
 			-- 4:
 				say "     You're walking along the street when you become aware of needy moans and sighs coming from somewhere nearby. Trying to locate the source out of sheer curiosity, you peek around the corner of a nearby alleyway and find yourself face to face with a beautiful anthro canine covered in soft, snowy fur. She's naked except her fur and leans against the wall of the right-hand building, one hand cupping one of her four breasts, the other buried between her legs and frigging the dripping canine pussy down there. 'The heat's too much - I NEED something inside me. A cock, or even a tongue!' Apparently half-crazed with unfulfilled cravings, she wants you to take that role, if you want to or not!";

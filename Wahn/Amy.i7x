@@ -14,6 +14,7 @@ Version 2 of Amy by Wahn begins here.
 [  90: in the abandoned house, virgin                                   ]
 [  91: in the abandoned house, player fucked her for the first time     ]
 [ 100: removed from the game (lost somewhere)                           ]
+[ 101: no interest of the player to fuck her                            ]
 [                                                                       ]
 [ Lust of Amy (pregnancy timer)                                         ]
 [     0: not pregnant                                                   ]
@@ -290,9 +291,32 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 		say "     DEBUG: AMY/OTHER SEX WALKIN [line break]";
 	now lastfuck of Amy is turns + 4;
 	if HP of Amy is 2:[mature virgin]
-		say "     As you enter the library, Amy walks up to you, something clearly on her mind. She says 'I've been feeling some... urges lately, and read up a bit about that. There were some novels over in that section -' At that, she points to a large bookcase over on a nearby wall, bearing a sign with 'Romance' on it. As she does so, Amy's arm brushes against her breast, causing the young husky to moan before she can stop herself. Biting her lip, she continues 'I-I... would you be my first? It's supposed to be with someone you care for and - you saved me from those ferals out on the streets, brought me here, allowed me to learn so much.'";
-		say "     The young husky woman is clearly aching to be fucked - but before you can say anything about it, she turns her head a bit and says 'Oh, but you were just going somewhere, weren't you? I don't want to distract you, so I'll just... be here and if you ever want to spend some time with me.'";
-		now HP of Amy is 10;
+		say "     As you enter the library, Amy walks up to you, something clearly on her mind. She says 'I've been feeling some... urges lately, and read up a bit about that. There were some novels over in that section -' At that, she points to a large bookcase over on a nearby wall, bearing a sign with 'Romance' on it. As she does so, Amy's arm brushes against her breast, causing the young husky to moan before she can stop herself. Biting her lip, she continues 'I-I... would you be my first? It's supposed to be with someone you care for and - you saved me from those ferals out on the streets, brought me here, allowed me to learn so much.' The young husky woman is clearly aching to be fucked - but before you can say anything about it, she turns her head a bit and says 'Oh, but you were just going somewhere, weren't you? I don't want to distract you, so I'll just... be here and if you ever want to spend some time with me.'";
+		say "     Intro Description";
+		say "     [bold type]How do you want to deal with this?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Have sex with her right now.";
+		say "     [link](2)[as]2[end link] - Tell her to wait just a little longer.";
+		say "     [link](3)[as]3[end link] - Tell her (tactfully) that you don't want to fuck her.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to have sex, [link]2[end link] to postpone or [link]3[end link] to tell her you won't do it.";
+		if calcnumber is 1:
+			LineBreak;
+			say "[AmyFirstFuck]";
+			now HP of Amy is 11;
+		else if calcnumber is 2:
+			LineBreak;
+			say "     Clearing your throat, you catch Amy by the arm and tell her that you don't have time for her right now. She looks a little disappointed for a moment, but then nods to you and says she'll wait for you. With that, she skips off to distract herself with a good book.";
+			now HP of Amy is 10;
+		else if calcnumber is 3:
+			LineBreak;
+			say "     Clearing your throat, you catch Amy by the arm and calmly have a word with her, explaining that not everyone has the same sexual interests. She looks a little disappointed for a moment, but then seems to accept your decision. With a shy little nod, she then skips off to distract herself with a good book.";
+			now HP of Amy is 101;
 	else if HP of Amy is 10:[mature virgin, told the player she's horny]
 		say "     As you enter the library, you see Amy sitting on her mattress, reading one of those romance novels with a pirate and a half-dressed woman on the front. She's slowly rubbing her breasts, moaning silently - which makes you remember her coming to talk to you about losing her virginity. The young husky woman is clearly aching to be fucked - you should probably just follow her invitation and take care of her - sometime soon.";
 	else if HP of Amy > 10 and CuckList is not banned:
@@ -1167,12 +1191,12 @@ Instead of fucking the Amy:
 		say "     With her being not even a week old and rather child-like in temperament, it doesn't seem right to just fuck Amy. You decide you'd rather not do that right now.";
 	else if HP of Amy is 2: [matured]
 		say "     Deciding that you'll just be straightforward about things, you walk up to Amy and tell her you'd like to have sex with her. 'Oh,' the young husky says, looking to the side for a moment to a bookcase a sign above denounces to be filled with romance novels. 'I've read a bit about that when I started getting some funny feelings. So you want to... be my first? It's supposed to be someone special, a prince or a pirate or... a hero.' With that, she smiles at you. 'You saved me when we were out in the streets, brought me here and have been pretty nice, so sure - let's do it.' She takes you by the hand, leading you over to her mattress and sitting down on it.";
-		say "     [AmyFirstFuck]";
+		say "[AmyFirstFuck]";
 		now lastfuck of Amy is turns;
 		now HP of Amy is 11;
 	else if (HP of Amy is 10): [she told the player she wanted them to fuck her]
 		say "     Deciding that you'll just be straightforward about things, you walk up to Amy and tell her you'd like to have sex with her. The young husky happily embraces you, moaning a bit as her four breasts rub against your chest. 'Thank you for making me the happiest girl in the world. It'll be just like in the books, with you my hero.' She takes you by the hand, leading you over to her mattress and sitting down on it.";
-		say "     [AmyFirstFuck]";
+		say "[AmyFirstFuck]";
 		now lastfuck of Amy is turns;
 		now HP of Amy is 11;
 	else: [repeat sex]

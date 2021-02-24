@@ -155,16 +155,22 @@ to say DiegoTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Arrange for Diego to chug your bottle of orc cum";
 	[]
+	if carried of food > 0 and CoyoteTricks > 4:
+		choose a blank row in table of fucking options;
+		now title entry is "Offer Diego some food to eat";
+		now sortorder entry is 6;
+		now description entry is "Hand a packet of food to Diego";
+	[]
 	if XP of Diego is 99:
 		choose a blank row in table of fucking options;
 		now title entry is "Taking part in Diego's secret plans after all";
-		now sortorder entry is 6;
+		now sortorder entry is 7;
 		now description entry is "Tell the coyote you want to join [ObjectPro of Diego] in a closer partnership";
 	[]
 	if XP of Diego is 1 or XP of Diego is 2: [got the quest, didn't finish getting the collar yet]
 		choose a blank row in table of fucking options;
 		now title entry is "Cancelling your involvement in Diego's special plan";
-		now sortorder entry is 7;
+		now sortorder entry is 8;
 		now description entry is "Tell the coyote you don't want to participate after all";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -184,17 +190,19 @@ to say DiegoTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Just chat a bit"):
 					say "[DiegoTalk1]";
-				if (nam is "Share some ideas about tricks to play on people with him"):
+				else if (nam is "Share some ideas about tricks to play on people with him"):
 					say "[DiegoTalk2]";
-				if (nam is "Offer Diego a bottle of water to drink"):
+				else if (nam is "Offer Diego a bottle of water to drink"):
 					say "[DiegoTalk3]";
-				if (nam is "Trick Diego into drinking dog milk"):
+				else if (nam is "Trick Diego into drinking dog milk"):
 					say "[DiegoTalk4]";
-				if (nam is "Trick Diego into drinking orc cum"):
+				else if (nam is "Trick Diego into drinking orc cum"):
 					say "[DiegoTalk5]";
-				if (nam is "Taking part in Diego's secret plans after all"):
+				else if (nam is "Trick Diego into drinking orc cum"):
+					say "[DiegoTalk6]";
+				else if (nam is "Taking part in Diego's secret plans after all"):
 					say "[DiegoCollarQuest1]";
-				if (nam is "Cancelling your involvement in Diego's special plan"):
+				else if (nam is "Cancelling your involvement in Diego's special plan"):
 					say "[DiegoCollarQuestRefuse]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -220,7 +228,7 @@ to say DiegoTalk1:
 to say DiegoTalk2:
 	try Diegotricking;
 
-to say DiegoTalk3:
+to say DiegoTalk3: [hand over water]
 	if DiegoChanged > 0:
 		project the figure of DiegoFem_face_icon;
 	else:
@@ -332,6 +340,15 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 			LineBreak;
 			say "     'Damn - what a tease,' Diego remarks as you close up your pack and shift it back to hang over one shoulder. Licking [PosAdj of Diego] lips thirstily, [SubjectPro of Diego] flicks an ear in amusement as [SubjectPro of Diego] adds, 'I taught you too damn well it seems.'";
 
+to say DiegoTalk6: [hand over food]
+	if DiegoChanged > 0:
+		project the figure of DiegoFem_face_icon;
+	else:
+		project the figure of Diego_face_icon;
+	say "     Happily accepting the meal you have brought [ObjectPro of Diego], Diego responds by giving you a wide grin and saying, 'Thank you very much friend, this looks delicious!' followed by unwrapping the packet of food and slowly eating its contents, taking the time to savor and appreciate the meal you brought [ObjectPro of Diego]. Upon finishing the last bite [SubjectPro of Diego] licks [PosAdj of Diego] lips and muzzle for any bits of food that might have gotten stuck on them. 'That tasted quite good. I think I'll be able to play plenty of new tricks with this much extra energy,' [SubjectPro of Diego] says while rubbing [PosAdj of Diego] belly, [PosAdj of Diego] tail wagging side to side happily.";
+	ItemLoss food by 1;
+	extend game by 4;
+
 Section 3 - Tricking
 
 Diegotricking is an action applying to nothing
@@ -366,8 +383,8 @@ carry out Diegotricking:
 		extend game by 18;
 		if CoyoteTricks > 4 and DiegoChanged is 0 and DiegoButtSlut is 0:
 			LineBreak;
-			say "     Turning [PosAdj of Diego] attention back to you, the anthro canine licks [PosAdj of Diego] lips and then says, 'Damn, playing so many tricks on the man is making a dishonest coyote mighty thirsty. You wouldn't happen to have anything to help a fellow out now would you?' [SubjectProCap of Diego] gives you a hopeful look, glancing over to your gear.";
-			say "     ([bold type]Diego trusts you enough to accept something to drink from you now. Maybe give [ObjectPro of Diego] some water, or other liquids that could have fun effects on the guy.[roman type])[line break]";
+			say "     Turning [PosAdj of Diego] attention back to you, the anthro canine licks [PosAdj of Diego] lips and then says, 'Damn, playing so many tricks on the man is making a dishonest coyote mighty hungry and thirsty. You wouldn't happen to have anything to help a fellow out now would you?' [SubjectProCap of Diego] gives you a hopeful look, glancing over to your gear.";
+			say "     ([bold type]Diego trusts you enough to accept something to drink or eat from you now. Maybe give [ObjectPro of Diego] some food, water, or other liquids that could have fun effects on the guy. [roman type])[line break]";
 		if CoyoteTricks > 3:
 			if Prank Aftermath is inactive:
 				now Prank Aftermath is active;
