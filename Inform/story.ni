@@ -667,7 +667,6 @@ Include Triceratops by Stripes.
 Include Twisted Pimp by Sarokcat.
 Include Tyrannosaurus Male by Gherod.
 Include Unicorn by Sarokcat.
-Include Valkyrie by Qazarar.
 Include Viking Man by Wahn.
 Include Viking Woman by Wahn.
 Include Vixentaur by Stripes.
@@ -702,7 +701,7 @@ Include Bad Alexandra by Wahn.
 Include Allen by Wahn.
 Include Alexandra Breeding by Wahn.
 Include Alexandra Cuckolding by Wahn.
-Include Alpha Fang Scenes by Prometheus.
+Include Alpha Fang Scenes by Nuku Valente.
 Include Amaryllis by Song.
 Include Amy by Wahn.
 Include Andrew by Gherod.

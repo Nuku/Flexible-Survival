@@ -247,7 +247,13 @@ to say UrikTalkMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk with him about men";
 		now sortorder entry is 5;
-		now description entry is "Let Urik tell you what he prefers";
+		now description entry is "Have a chat about what he's looking for in a man";
+	[]
+	if "UrikTalk_Preferences" is listed in Traits of Urik:
+		choose a blank row in table of fucking options;
+		now title entry is "Talk with him about other genders";
+		now sortorder entry is 6;
+		now description entry is "Discuss his views on trans-people";
 	[]
 	if NonconList is not banned and PlayerFucked of Urik is true and "First Time Gentle" is listed in Traits of Urik or "First Time Rough" is listed in Traits of Urik:
 		choose a blank row in table of fucking options;
@@ -361,6 +367,8 @@ to say UrikTalkMenu:
 					say "[UrikTalk_Preferences]";
 				else if nam is "Talk with him about men":
 					say "[UrikTalk_Guys]";
+				else if nam is "Talk with him about women":
+					say "[UrikTalk_Gals]";
 				else if nam is "Let him tell you the full story of that biker cop":
 					say "[UrikTalk_BikerCop]";
 				else if nam is "Ask him about his past":
@@ -450,8 +458,13 @@ to say UrikTalk_Guys: [chat with Urik about men]
 	if "Daddy Training Interest" is not listed in Traits of Urik:
 		add "Daddy Training Interest" to Traits of Urik;
 
-to say UrikTalk_Gals: [chat with Urik about women/other]
-	say "     ...girl preferences... he'd still be quite doubtful, but... (muscles, doesn't like boobs or bitchiness, fine with pussy (only needs to be tight), likes moans (not shrieks), ... )";
+to say UrikTalk_Trans: [chat with Urik about women/other]
+	if "Trans Appreciation" is not listed in Traits of Urik: [he's got no real interest male herms and FTM yet]
+		say "     Asking Urik about his views on trans-people and hermaphrodites, the orc shrugs. 'Well, I can tell you that I don't really see a point in boobs and stuff. They're just some wobbly bumps on women's chests, shaken about like that's something special. Now a proper pec - that you gotta work for!' Demonstratively slapping his hand on his firmly muscled chest, he gives the muscle a squeeze and flicks his fingertip over his own nipple. 'Nips are nice, but other than that, I'd take a hard body any time over saggy milkbags.' Seeing the orc's expression, you don't think he could be brought to see breasts in another way anytime soon. Wanting to redirect the discussion a little after that, you ask Urik about male-herms and trans-men instead. The disapproving expression from before is still on his face, if somewhat less pronounced - at least until you bring up that he should imagine a nice, manly body first, then think of the somewhat unconventional arrangements at the crotch.";
+		say "     'Mh - actually, that would be... fine. A hunky stud, with a self-lubing bonus hole I guess,' the orc says, scratching his chin thoughtfully. Tapping a finger on his jawline, he seems to mull the image over for a little while, before he finally adds, 'Or, yeah - why not just a slit either. Not like a bottom needs a big dick anyways, eh? I think I could work with a breeder boy like that. Self-lubing and convenient too, hah! As long as he's tight and all.' The seed your little discussion has planted in the orc's head seems so sprout at that point, as he has to adjust his cock a little, with the huge dick filling out a bit. 'Pushing into a nice muscleboy breeder like that, hearing him moan for more of my dick... yeah, that'd be something! But, you know, proper moans, no high-pitched harpy shrieks or anything like that!' You and Urik talk a little more about male-herms and FTM trans-people. After your little thought-experiment, it appears that the orc has gained some new interest there, at least in theory.";
+		add "Trans Appreciation" to Traits of Urik;
+	else:
+		say "     Bringing up herms and trans-people again, you see a smirk appear on Urik's face. 'As long as they're properly manly, I don't think I'd have a problem with [']em. I mean, it's a bonus hole to try, and if all fails, there's always ass.' Tracing the shape of a man in the air and wiggling his fingers as if he was groping the guy's ass, the orc winks a you and nods. 'The things that annoy me about women really are the bitchyness, shrill voices and trying to wave boobs in my face, as if that's supposed to hypnotize me or some shit.' You and Urik talk a little more about male-herms and FTM trans-people, with the orc clearly being open to interactions on that front, much more than with regular females at least.";
 
 [TODO: add talk about cuntboy sex]
 
