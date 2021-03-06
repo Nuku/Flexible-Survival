@@ -12,9 +12,9 @@ Section 1 - Creature Responses
 wolfhermvictory is a number that varies.
 wolfhermdefeat is a number that varies.
 
-to say wolfherm attack:
+to say wolfherm wins:
 	if Player is neuter:
-		say "She looks you over, and upon seeing nothing that peaks her interest she walks away and leaves you lying on the ground.";
+		say "     She looks you over, and upon seeing nothing that peaks her interest she walks away and leaves you lying on the ground.";
 	else:
 		if wolfhermdefeat is 0: [first time losing to wolf herm]
 			if Player is herm:
@@ -28,7 +28,7 @@ to say wolfherm attack:
 			else:
 				say "     The Painted Wolf Herm chuckles, the creature rolling her hips as she strolls forward, showing the graceful curves of her figure and the huge throbbing dick between her legs. With a pleasant chuckle, her hands tear into your clothing, stripping you nude before holding you upside down. After looking at your [bodydesc of Player] form over, she spins around over you and gets onto all fours. Burying her nose in your snatch, the Painted Wolf Herm drags her tongue along your damp, painfully moist slit until, with a cry of pleasure, your mouth opens wide. The motion presents the Painted Wolf Herm with an undeniable opportunity, the creature thrusting her cock forward into your open maw. With a loud, lewd moan, the Painted Wolf Herm thrusts over and over again, penetrating your open mouth as she cries out in pleasure, slowly stretching your lips wide with her nose. With a final violent shudder, the Painted Wolf Herm cries out in pleasure, dumping a thick, rich splattering of semen inside your maw as you cry out and drench the creature's muzzle in juice.";
 			now wolfhermdefeat is 1;
-		CreatureSexAftermath "Player" receives "OralCock" from "Painted Wolf Herm";
+			CreatureSexAftermath "Player" receives "OralCock" from "Painted Wolf Herm";
 		else:
 			if a random chance of 1 in 5 succeeds: [Chance for a submissive footjob!]
 				if Player is male:
@@ -43,7 +43,7 @@ to say wolfherm attack:
 				CreatureSexAftermath "Player" receives "Stroking" from "Painted Wolf Herm";
 
 
-to say beatpwh:
+to say wolfherm loses:
 	if equinoidstatus >= 6 and equinoidstatus < 9, increase equinoidstatus by 1;
 	let diceroll be a random number between 33 and 125;
 	if diceroll < Libido of Player:
@@ -109,8 +109,8 @@ When Play begins:
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The painted wolf herm [one of]gouges you with her claws, leaving streaks of blood across your skin[or]leaps at you, catching your arm in her mouth. She bites down hard, leaving a muzzle-shaped wound[or]howls, causing you to tremble in fear for a moment before you regain your resolve[at random]."; [Text used when the monster makes an Attack]
-	now defeated entry is "[beatpwh]"; [Text used when player wins, can be directly entered like combat text or description. If it is more complex it can be linked with a 'To say' block as the demonstration text shows.]
-	now victory entry is "[wolfherm attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To say' block as the demonstration text shows.]
+	now defeated entry is "[wolfherm loses]"; [Text used when player wins, can be directly entered like combat text or description. If it is more complex it can be linked with a 'To say' block as the demonstration text shows.]
+	now victory entry is "[wolfherm wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 5]     Looking over the Painted Wolf Herm, her body is covered in thick, fluffy patchwork of gold, gray, and black fur. her head is mostly canine, with rare smatterings of human and harsh, triangular ears. her body is coated in layers of powerful, flexing muscles that are made readily apparent with the slightest twist. She has four heavy breasts, the first row the size of basketballs and the second row slightly smaller. her arms are still human, with the exception of tiny claws on the tips of the fingers. her legs are digitigrade, with powerful haunches and graceful calves. She has a large, fluffy tail that, although similar to a husky, is lacking any curve or curl in it. As she stands unabashed in the open, you see that she has a thick, knotted, ten-inch canine shaft. Two heavy balls rest above her dripping female sex, the aroma of which lays thick and heady in the air around you."; [ Description of the creature when you encounter it.]
 	now face entry is "mostly canine, with rare smatterings of human and harsh, triangular ears"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "coated in layers of powerful, flexing muscles that are made readily apparent with the slightest twist. Your arms are still human, with the exception of tiny claws on the tips of the fingers. Your legs are digitigrade, with powerful haunches and graceful calves"; [ Body Description, format as "Your Body is (your text)."]

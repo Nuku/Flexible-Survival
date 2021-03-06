@@ -247,7 +247,9 @@ to say ResolveEvent Chocolate Treat:
 			stop the action;
 		else:
 			say "     You manage to keep your mind together enough to pull yourself into a somewhat more solid and bipedal form. Still deeply infected and weakened, you manage to hold onto enough of your humanity to continue your quest for survival. You do feel a strong longing for more sex or more chocolate. Or best of all, more chocolate sex. You stumble away, trying to pull yourself into enough cohesion to walk as you rub your cream-filled tummy.";
-			say "[impregchance][impregchance]";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Chocolate Lab";
+			CreatureSexAftermath "Player" receives "AssFuck" from "Chocolate Lab";
+			CreatureSexAftermath "Player" receives "OralCock" from "Chocolate Lab";
 			now Resolution of Chocolate Treat is 1; [went through, stayed sane]
 	else:
 		LineBreak;

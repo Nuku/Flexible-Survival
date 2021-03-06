@@ -89,19 +89,19 @@ Version 2 of Spike by Wahn begins here.
 [  52: training without shakes from now on                                           ]
 [  53: training without shakes - shirtless pushups done                              ]
 
+
 [ Dexterity - Relationship with Urik (warrior/friend Urik)                           ]
 [   0: never interacted                                                              ]
 [   1: Spike got goaded into training                                                ]
-[   2: Spike got his first 'protein shake'                                           ]
-[   3: Spike got his second 'protein shake'                                          ]
-[   4: new weights for Spike, future trainings always with shakes                    ]
-[   5: shake + shirtless pushups done                                                ]
+[   2: Spike got his first (normal energy) drink                                     ]
+[   3: Spike got his second (normal) drink                                           ]
+[   4: new weights for Spike                                                         ]
+[   5: training without shakes, shirtless pushups done                               ]
 [   6: Spike got a jockstrap now                                                     ]
-[  50: Spike won't accept any drinks from Urik from now on                           ]
-[  51: Urik knows that Spike won't accept any drinks from now on                     ]
-[  52: training without shakes from now on                                           ]
-[  53: training without shakes - shirtless pushups done                              ]
-
+[   7: storytime with Urik done                                                      ]
+[   8: Urik and Spike did Yoga                                                       ]
+[   9: Urik and Spike did weightlifting                                              ]
+[ 100: Player shut down the workout path                                             ]
 
 thirst of Spike is usually 1. [standard setting change]
 MaxHP of Spike is usually 1. [for now the player is always the father as the default]
@@ -452,6 +452,8 @@ to say SpikeTalkMenu:
 		now title entry is "Talk about your orc warrior Urik";
 		now sortorder entry is 12;
 		now description entry is "Ask him about the huge orc";
+	[]
+	[TODO: Add rules talk - fucking around, breeding, etc.]
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

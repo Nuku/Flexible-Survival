@@ -296,6 +296,10 @@ to FeatGain (Featname - text):
 	else if debugactive is 1:
 		say "ERROR: Trying to add '[Featname]', which the player already has.";
 
+to TraitGain (TraitName - a text) for (TraitChar - a person):
+	if TraitName is not listed in Traits of TraitChar:
+		add TraitName to Traits of TraitChar;
+
 to MoraleLoss (N - number):
 	LineBreak;
 	say "     [bold type]Your morale has decreased by [N]![roman type][line break]";

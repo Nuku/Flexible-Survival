@@ -98,7 +98,7 @@ To say kangaroo loses:
 				say "     You move between those spread legs, taking her thighs in each hand. Your [Cock of Player] shaft presses into that moist tunnel, a moan rising from both of you, punctuated with a hard thrust by you that makes her gasp. Her breasts jiggle about with each thrust, her body rocking on her tail, and your hands press her legs farther apart, allowing you to drive deeper into her needy pussy. Your balls slap against her rump and tail with every thrust into her wet, squeezing tunnel.";
 				WaitLineBreak;
 				say "     Grunting deeply, you lean over her upper body, rocking her harder with your thrusts. With a particularly rough thrust, you knock her off her tail, the two of you falling to the ground and grunting. The jolt of the fall sends her into climax, and her tight, spasming cunt around your [Cock of Player] cock sends you over the edge, firing your thick seed into her. Once you have finished, you climb off of her limp, panting body and get your clothes back on, leaving her there as you head off.";
-				CreatureSexAftermath "Red Kangaroo" receives "PussyFuck" from "Player"
+				CreatureSexAftermath "Red Kangaroo" receives "PussyFuck" from "Player";
 		else:
 			say "     Quickly scrabbling to her feet, she bounds off in a hurry, not wanting to be hurt any further.";
 	else:
