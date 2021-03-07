@@ -198,7 +198,7 @@ to say DiegoTalkMenu:
 					say "[DiegoTalk4]";
 				else if (nam is "Trick Diego into drinking orc cum"):
 					say "[DiegoTalk5]";
-				else if (nam is "Trick Diego into drinking orc cum"):
+				else if (nam is "Offer Diego some food to eat"):
 					say "[DiegoTalk6]";
 				else if (nam is "Taking part in Diego's secret plans after all"):
 					say "[DiegoCollarQuest1]";

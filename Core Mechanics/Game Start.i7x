@@ -730,9 +730,9 @@ to PlayerStartingGenderSetting:
 		say "[bold type]Select a starting gender: (exact sizes for all parts are randomized in human ranges)[roman type][line break]";
 		say "(1) [link]Male[as]1[end link] - You have a penis and flat chest.";
 		say "(2) [link]Female[as]2[end link] - You have a vagina and breasts.";
-		say "(3) [link]Trans-Woman[as]3[end link] - You have a penis and breasts chest.";
+		say "(3) [link]Trans-Woman[as]3[end link] - You have a penis and breasts.";
 		say "(4) [link]Trans-Man[as]4[end link] - You have a vagina and flat chest.";
-		say "(5) [link]Male Herm[as]5[end link] - You have both a vagina and penis, flat chest.";
+		say "(5) [link]Male Herm[as]5[end link] - You have both a vagina and penis, but a flat chest.";
 		say "(6) [link]Female Herm[as]6[end link] - You have a vagina, penis and breasts.";
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
@@ -919,7 +919,6 @@ to startgenderlockget:
 			now StartingGender is 1;
 		else if GenderLock is 4:
 			say "Locked to female body configuration (breasts, single sexed with a pussy, no cock).";
-			add "Always Cocky" to feats of Player;
 			add "Always A Pussy" to feats of Player;
 			add "Single Sexed" to feats of Player;
 			add "Breasts" to feats of Player;

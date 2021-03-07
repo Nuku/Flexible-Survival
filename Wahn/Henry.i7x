@@ -69,6 +69,7 @@ Description of Henry is "[Henrydesc]".
 Conversation of Henry is { "Meep!" }.
 
 to say Henrydesc:
+	project Figure of Henry_soft_icon;
 	say "     Henry is a nine foot tall anthro Hercules beetle, complete with six limbs (two legs, as well as a smaller and bigger pair of arms). As the animal that his infection mimics, there is a large horn on top of his head, with an even larger counterpart growing out of the carapace over his neck, creating what looks like a huge claw. The friendly guy doesn't really have a need to wear clothes, although he does put on an apron when at work, as he is mostly covered by in shiny black armor plates, with only the insides of his arms and legs, palms and the well-developed chest area showing soft skin in a light, earthen brown shade. Having observed him at some point without the apron, you know that some hair/fuzz in a fiery red shade covers his crotch and forms a little treasure trail, with a patch between his pecs. A little red mane surrounds his face, running up along the inside of his horns. A pair of wing-casings on his back, covering delicate chitinous wings, rounds out the image of an impressively large and strong anthro insect.";
 	say "     Despite everything he's been through recently, and his transformation into a giant, anthro bug before that, Henry is almost constantly upbeat and talkative. The man just seems to have a very friendly personality, and he easily makes connections with others.";
 
@@ -76,6 +77,7 @@ instead of sniffing Henry:
 	say "     The Hercules beetle smells a bit like hops and malt. Must be because he's always busy tinkering with his beer.";
 
 instead of conversing Henry:
+	project Figure of Henry_soft_icon;
 	say "     'Hey there, how are you?' Henry immediately greets you as you come close, and the two of you have a nice little chat before he excuses himself to get back to work.";
 
 [
@@ -159,6 +161,7 @@ Section 4 - Sex
 [***********************************************************]
 
 instead of fucking the Henry:
+	project Figure of Henry_soft_icon;
 	say "     As you offer him sex, Henry looks a little surprised, then apologizes and says, 'I'm still busy setting everything up here, my friend. Can't let myself be distracted before the beer I'm making right no is at least as good as my last batches before!'";
 
 [

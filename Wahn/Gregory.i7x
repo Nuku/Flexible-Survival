@@ -267,7 +267,7 @@ to say GregorySexMenu:
 					say "[GregoryUnconsciousSex_Explore]";
 				else if (nam is "Jerk him off"):
 					say "[GregoryUnconsciousSex_Jerking]";
-				else if (nam is "Jerk him off"):
+				else if (nam is "Finger his ass"):
 					say "[GregoryUnconsciousSex_Fingering]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -322,7 +322,7 @@ to say GregoryUnconsciousSex_Jerking: [jerking him off]
 	if calcnumber is 1:
 		LineBreak;
 		say "     It only takes you a moment to rustle up a suitable piece of fabric that you can use as a cum-rag, brushing it over Gregory's chest to soak up his load. He's a big shooter, so you have quite a bit to mop up, but you manage to get him all spic and span eventually. Besides a faint odor of cum hanging in the air around him, there is no trace left of your previous activities by the time you're done and leave Gregory to continue his extended rest on the sofa.";
-	else if calcnumber is 3:
+	else if calcnumber is 2:
 		LineBreak;
 		say "     Bending down to bring your face to Gregory's chest, you stick out your tongue and brush it over his abs, pushing a little flood of milky fluid ahead of it. You quickly have to put your lips down against the partially transformed human's skin to suck the cum off him without it running down his side and soaking the sofa. It tastes fairly nice, with a little bit of spice to it, and you swish it over your tongue for a second before swallowing and going back for more. Licking and slurping up his load, you eventually get Gregory spic and span again. Besides a faint odor of cum hanging in the air around him, there is no trace left of your previous activities by the time you're done and leave Gregory to continue his extended rest on the sofa.";
 	else if calcnumber is 3:
@@ -359,7 +359,7 @@ to say GregoryUnconsciousSex_Fingering:
 	if calcnumber is 1:
 		LineBreak;
 		say "     It only takes you a moment to rustle up a suitable piece of fabric that you can use as a rag, brushing it over Gregory's crack to dry him there. Besides a very faint odor of pre-cum hanging in the air around him, there is no trace left of your previous activities by the time you're done. At that point, you pull the pillows out from under him and fling them aside, then roll the still unconscious man over again, to rest on his back once more.";
-	else if calcnumber is 3:
+	else if calcnumber is 2:
 		LineBreak;
 		say "     Bending down to bring your face between Gregory's buttocks, you stick out your tongue and brush it over his wrinkled pucker, tasting the pre-cum on your lips as you lick him. It tastes fairly nice, with a tiny bit of spice to it, and you swish your tongue over your lips before swallowing and going back for more. It only takes you a moment to rustle up a suitable piece of fabric that you can use as a rag afterwards, brushing it over Gregory's crack to dry him there. Besides a very faint odor of pre-cum hanging in the air around him, there is no trace left of your previous activities by the time you're done. At that point, you pull the pillows out from under him and fling them aside, then roll the still unconscious man over again, to rest on his back once more.";
 	else if calcnumber is 3:

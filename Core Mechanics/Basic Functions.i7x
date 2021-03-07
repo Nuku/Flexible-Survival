@@ -160,7 +160,7 @@ to ItemGain (ItemObj - a grab object) by (N - number) silence state is (Silence 
 	increase carried of ItemObj by N;
 	if Silence is 0:
 		LineBreak;
-		say "[bold type]You gain [N] [printed name of ItemObj in lower case]![roman type][line break]";
+		say "     [bold type]You gain [N] [printed name of ItemObj in lower case]![roman type][line break]";
 
 to ItemLoss (ItemObj - a grab object) by (N - number):
 	ItemLoss ItemObj by N silence state is 0;
@@ -188,14 +188,14 @@ to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence 
 		LineBreak;
 		if N is 1:
 			if carried of ItemObj is 1:
-				say "[bold type]You lose your [printed name of ItemObj in lower case]![roman type][line break]";
+				say "     [bold type]You lose your [printed name of ItemObj in lower case]![roman type][line break]";
 			else:
-				say "[bold type]You lose 1 [printed name of ItemObj in lower case]![roman type][line break]";
+				say "     [bold type]You lose 1 [printed name of ItemObj in lower case]![roman type][line break]";
 		else:
 			if carried of ItemObj is N:
-				say "[bold type]You lose all your [printed name of ItemObj in lower case]![roman type][line break]";
+				say "     [bold type]You lose all your [printed name of ItemObj in lower case]![roman type][line break]";
 			else:
-				say "[bold type]You lose [N] [printed name of ItemObj in lower case]![roman type][line break]";
+				say "     [bold type]You lose [N] [printed name of ItemObj in lower case]![roman type][line break]";
 
 to PlayerMaxHeal:
 	LineBreak;
@@ -344,7 +344,7 @@ carry out PlayerRenaming:
 
 to playernaming:
 	say "Note: You can always change your name at a later point with the 'rename NAME' command.";
-	say "[bold type]Please enter your new name: [roman type][line break]";
+	say "     [bold type]Please enter your new name: [roman type][line break]";
 	get typed command as playerinput;
 	now name of Player is playerinput;
 

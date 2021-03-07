@@ -86,24 +86,24 @@ To say Alpha Wolf loss:
 			choose a blank row in table of fucking options;
 			now title entry is "Ride the wolf";
 			now sortorder entry is 2;
-			now description entry is "Get that knot in you.";
+			now description entry is "Get that knot in you";
 			[]
 			choose a blank row in table of fucking options;
 			now title entry is "Let him go";
 			now sortorder entry is 99;
-			now description entry is "Release the wolf.";
+			now description entry is "Release the wolf";
 			[]
 			if Player is male:
 				choose a blank row in table of fucking options;
 				now title entry is "Fuck the wolf";
 				now sortorder entry is 1;
-				now description entry is "Mount the alpha wolf.";
+				now description entry is "Mount the alpha wolf";
 			[]
 			if Player is not neuter:
 				choose a blank row in table of fucking options;
 				now title entry is "Force oral";
 				now sortorder entry is 3;
-				now description entry is "Make the alpha orally pleasure you.";
+				now description entry is "Make the alpha orally pleasure you";
 			[]
 			sort the table of fucking options in sortorder order;
 			while sextablerun is 0:
@@ -237,7 +237,7 @@ When Play begins:
 	now SeductionImmune entry is false;
 	now libido entry is 30;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "alpha wolf fur";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
+	now lootchance entry is 70;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
 	now TrophyFunction entry is "-";
