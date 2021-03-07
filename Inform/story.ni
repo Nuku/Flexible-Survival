@@ -703,7 +703,7 @@ Include Bad Alexandra by Wahn.
 Include Allen by Wahn.
 Include Alexandra Breeding by Wahn.
 Include Alexandra Cuckolding by Wahn.
-Include Alpha Fang Scenes by Nuku Valente.
+Include Alpha Fang Scenes by Prometheus.
 Include Amaryllis by Song.
 Include Amy by Wahn.
 Include Andrew by Gherod.
@@ -790,6 +790,7 @@ Include Harold by Sarokcat.
 Include Hayato by Gherod.
 Include Hellfire Workers by Gherod.
 Include Help Book by Prometheus.
+Include Henry by Wahn.
 Include HornyHorsey by femtoAmpere.
 [Include Horus by Rikaeus.]
 Include Hungry Boar Man by Gherod.

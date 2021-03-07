@@ -45,7 +45,7 @@ to say Smilodon Male Wins:
 		WaitLineBreak;
 		say "     It takes you some time to recover from that big cat's pounding, and once you do, you stand up and manage to grab your things to get ready to leave.";
 		if player is female:
-			CreatureSexAftermath "Player" receives "Pussyfuck" from "Smilodon Male";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Smilodon Male";
 		else:
 			CreatureSexAftermath "Player" receives "AssFuck" from "Smilodon Male";
 

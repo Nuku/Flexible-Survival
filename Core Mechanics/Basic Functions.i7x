@@ -282,6 +282,8 @@ to FeatLoss (Featname - text):
 	if Featname is listed in feats of Player:
 		say "     [bold type]'[Featname]' has been removed from your feats![roman type][line break]";
 		remove Featname from feats of Player;
+		if Featname is "Sterile":
+			now Sterile of Player is false;
 	else if debugactive is 1:
 		say "ERROR: Trying to remove '[Featname]', which the player does not have.";
 
@@ -293,6 +295,8 @@ to FeatGain (Featname - text):
 		sort feats of Player;
 		if Featname is "City Map":
 			say "[BestowCityMapFeat]";
+		if Featname is "Sterile":
+			now Sterile of Player is true;
 	else if debugactive is 1:
 		say "ERROR: Trying to add '[Featname]', which the player already has.";
 
@@ -660,16 +664,42 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 	if GivingCharName is "Player" or GivingCharName is "player":
 		if debugactive is 1:
 			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";
+		if there is a name of TakingCharName in the Table of Random Critters: [security in case someone made a typo - avoids Runtime Errors]
+			choose a row with name of TakingCharName in the Table of Random Critters;
+		else: [lets tell people to report this too]
+			say "     < ERROR: [TakingCharName] not found in Table of Random Critters. Please report the situation you saw this in on the Flexible Survival Discord Bug Report Channel! >";
 		if SexAct is "AssFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
 			increase AssFuckGiven of Player by 1;
+			if Libido of Impregnated Feral is 0 and TakingCharName is listed in infections of MpregList and Enemy Type entry is 0: [standin NPC ready for another pregnancy, enemy fucked has basic capability of mpreg, only non-unique enemies can get impregnated]
+				if debugactive is 1:
+					say "DEBUG -> NPC Standin ready, fucked enemy on MpregList and non-unique[line break]";
+				let Basechance be 2;
+				if "Fertile" is listed in Feats of Player:
+					increase Basechance by 1;
+				if Sterile of Player is false and a random chance of (Basechance + Ball Size of Player) in 10 succeeds: [fertile player, 30-90% chance depending on ball size and output]
+					now Libido of Impregnated Feral is a random number between 8 and 24; [1-3 day carrying period]
+					now MainInfection of Impregnated Feral is TakingCharName; [saving the infection name]
+					if debugactive is 1:
+						say "DEBUG -> Non-Sterile Player succeeded in their [2 + Ball Size of Player] in 10 impregnation check. [Libido of Impregnated Feral] turns to birth of a [MainInfection of Impregnated Feral] offspring.[line break]";
 		else if SexAct is "PussyFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
 			increase PussyFuckGiven of Player by 1;
+			if Libido of Impregnated Feral is 0 and Enemy Type entry is 0: [standin NPC ready for another pregnancy, only non-unique enemies can get impregnated]
+				if debugactive is 1:
+					say "DEBUG -> NPC Standin ready and non-unique[line break]";
+				let Basechance be 2;
+				if "Fertile" is listed in Feats of Player:
+					increase Basechance by 1;
+				if Sterile of Player is false and a random chance of (Basechance + Ball Size of Player) in 10 succeeds: [fertile player, 30-90% chance depending on ball size and output]
+					now Libido of Impregnated Feral is a random number between 8 and 24; [1-3 day carrying period]
+					now MainInfection of Impregnated Feral is TakingCharName; [saving the infection name]
+					if debugactive is 1:
+						say "DEBUG -> Non-Sterile Player succeeded in their [2 + Ball Size of Player] in 10 impregnation check. [Libido of Impregnated Feral] Turns to birth of a [MainInfection of Impregnated Feral] offspring.[line break]";
 		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
 			increase AssFuckGiven of Player by 1;
 		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]

@@ -100,11 +100,11 @@ to say losetopitbull_f:[Female Pit Bull Defeat Scenes]
 		else:
 			say ". It feels like hours before she finally relents, yourself exhausted by this physical assault and that of your unabated lust, the canine appears satisfied in her endeavors to humiliate you.";
 		say "     Pulling her fist free of you with an audible, wet sound, she adds further insult to injury by cleaning it against your [if scalevalue of Player > 3]large and [end if]beleaguered frame before she inevitably starts forcing your exhausted and embarrassed form to flee from her territory[if scalevalue of Player < 4 and player is twistcapped], no doubt relegated to walking funny for the while that follows[end if].";
-	CreatureSexAftermath "Player" receives "AssDildoFuck" from "Pit Bull";
+		CreatureSexAftermath "Player" receives "AssDildoFuck" from "Pit Bull";
 	else:[Player gets pussy in face from female Pit]
 		say "     Exposed before the pit bull, she - in turn - relinquishes herself of her pants, revealing her already-dripping cunt before you. Her intent further elucidated when she pulls your [if scalevalue of Player > 3]head[else]form[end if] closer, demanding that offer up tribute for your trespass. [if HP of Player > 0 or player is submissive]Implicitly complying[else]After a fair amount of coaxing[end if], your [if scalevalue of Player > 3]large maw engulfs the entirety of her slick portal almost immediately. The aggressive canine taking great joy in demeaning someone as large as you[else]lips caress her slick portal, her strong grip forcing you more firmly against her crotch, relegating you to contend with her hungry pussy more than any better restraint might have compelled you to[end if].";
 		say "     It's not long before your mandated affections show their effect, [if scalevalue of Player > 3]thick [end if]tongue penetrating her needy snatch, tasting her rising, lascivious fervor. You must contend with the canine's tight grip and belligerent grinding before you're forced to deal with a sudden flood of her sexual fluids, throbbing hole tightening around your slick organ. Pulling herself free of you she sends you off, booting you from her territory now that she is satisfied.";
-	CreatureSexAftermath "Player" receives "OralPussy" from "Pit Bull";
+		CreatureSexAftermath "Player" receives "OralPussy" from "Pit Bull";
 
 
 to say losetopitbull_m:[Male Pit Bull Defeat Scenes]

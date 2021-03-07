@@ -403,7 +403,7 @@ to say Medeaadjustments:
 					FeatGain "Selective Mother";
 					say "     Dr. Medea performs the procedure, altering your womb to only accept a male's seed when you desire it. 'I hope you have an enjoyable and productive time,' she says, tidying up her instruments.";
 				else if nam is "Remove sterility":
-					remove "Sterile" from feats of Player;
+					FeatLoss "Sterile";
 					say "     Dr. Medea performs the procedure with pleasure, removing the change that made you sterile. 'There we go. Much better,' she says. 'I hope you'll have an enjoyable and productive time now,' she adds, tidying up her instruments.";
 				else if nam is "Gain increased fertility":
 					FeatGain "Fertile";

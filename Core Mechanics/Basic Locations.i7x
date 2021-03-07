@@ -225,7 +225,7 @@ George's Animal Emporium	"George's Animal Emporium"
 George's Animal Emporium is southwest of Looted Shops.
 Description of George's Animal Emporium is "[PetShopDesc]".
 
-to say PetShopDesc:
+to say PetShopDesc: [TODO: Eventually move Roxana and her girlfriend in here]
 	say "     You're in a mid-sized pet store that has been recently looted. Judging from the tracks in the dust and grime blown in through the open front door, numerous people and creatures came and went before you. Almost all of the shelves have been rifled through and some even knocked over, creating quite a mess in here. Empty bags of all sorts of pet food are scattered everywhere, sometimes lying in sticky pools of what is clearly cum. With the food gone and the sheer scale of the mess in here, there could be some interesting and useful items to find if one were to spend some time to [link]sort[as]sort chaotic mess[end link] through the chaotic mess. Since digging up anything of worth will be rather work intensive, this would probably not be worth the time unless you had a use for it.";
 
 instead of sniffing George's Animal Emporium:

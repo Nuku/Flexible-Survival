@@ -826,7 +826,7 @@ to say ToronDayAssFuck:
 	if a random chance of 1 in 3 succeeds:
 		if Libido of Mogdraz > 0 and Libido of Mogdraz < 99:
 			increase Lust of Mogdraz by 1; [Mogdraz approves when the player cares for his crew, especially Toron, whom he holds in high regard]
-	NPCSexAftermath Toron receives "Assfuck" from Player;
+	NPCSexAftermath Toron receives "AssFuck" from Player;
 
 Section 4 - Items
 
