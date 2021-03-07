@@ -547,6 +547,7 @@ Include Latex Fox by Nuku Valente.
 Include Latex Mistress by Stripes.
 Include Latex Wolf by Stripes.
 Include Leopardman by Vinickus.
+Include Lernean Hydra by Prometheus.
 Include Liquidshifter by Ssely.
 Include Lizard Girl by Damaged.
 Include Lusty Skunk by Nuku Valente.
@@ -667,6 +668,7 @@ Include Triceratops by Stripes.
 Include Twisted Pimp by Sarokcat.
 Include Tyrannosaurus Male by Gherod.
 Include Unicorn by Sarokcat.
+Include Valkyrie by Qazarar.
 Include Viking Man by Wahn.
 Include Viking Woman by Wahn.
 Include Vixentaur by Stripes.
