@@ -160,7 +160,7 @@ to ItemGain (ItemObj - a grab object) by (N - number) silence state is (Silence 
 	increase carried of ItemObj by N;
 	if Silence is 0:
 		LineBreak;
-		say "[bold type]You gain [N] [printed name of ItemObj in lower case]![roman type][line break]";
+		say "     [bold type]You gain [N] [printed name of ItemObj in lower case]![roman type][line break]";
 
 to ItemLoss (ItemObj - a grab object) by (N - number):
 	ItemLoss ItemObj by N silence state is 0;
@@ -188,14 +188,14 @@ to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence 
 		LineBreak;
 		if N is 1:
 			if carried of ItemObj is 1:
-				say "[bold type]You lose your [printed name of ItemObj in lower case]![roman type][line break]";
+				say "     [bold type]You lose your [printed name of ItemObj in lower case]![roman type][line break]";
 			else:
-				say "[bold type]You lose 1 [printed name of ItemObj in lower case]![roman type][line break]";
+				say "     [bold type]You lose 1 [printed name of ItemObj in lower case]![roman type][line break]";
 		else:
 			if carried of ItemObj is N:
-				say "[bold type]You lose all your [printed name of ItemObj in lower case]![roman type][line break]";
+				say "     [bold type]You lose all your [printed name of ItemObj in lower case]![roman type][line break]";
 			else:
-				say "[bold type]You lose [N] [printed name of ItemObj in lower case]![roman type][line break]";
+				say "     [bold type]You lose [N] [printed name of ItemObj in lower case]![roman type][line break]";
 
 to PlayerMaxHeal:
 	LineBreak;
@@ -282,6 +282,8 @@ to FeatLoss (Featname - text):
 	if Featname is listed in feats of Player:
 		say "     [bold type]'[Featname]' has been removed from your feats![roman type][line break]";
 		remove Featname from feats of Player;
+		if Featname is "Sterile":
+			now Sterile of Player is false;
 	else if debugactive is 1:
 		say "ERROR: Trying to remove '[Featname]', which the player does not have.";
 
@@ -293,8 +295,14 @@ to FeatGain (Featname - text):
 		sort feats of Player;
 		if Featname is "City Map":
 			say "[BestowCityMapFeat]";
+		if Featname is "Sterile":
+			now Sterile of Player is true;
 	else if debugactive is 1:
 		say "ERROR: Trying to add '[Featname]', which the player already has.";
+
+to TraitGain (TraitName - a text) for (TraitChar - a person):
+	if TraitName is not listed in Traits of TraitChar:
+		add TraitName to Traits of TraitChar;
 
 to MoraleLoss (N - number):
 	LineBreak;
@@ -336,7 +344,7 @@ carry out PlayerRenaming:
 
 to playernaming:
 	say "Note: You can always change your name at a later point with the 'rename NAME' command.";
-	say "[bold type]Please enter your new name: [roman type][line break]";
+	say "     [bold type]Please enter your new name: [roman type][line break]";
 	get typed command as playerinput;
 	now name of Player is playerinput;
 
@@ -417,9 +425,43 @@ carry out NPCSexAftermathAction:
 	say "Testing: Player fucks Carl:[line break]";
 	NPCSexAftermath Carl receives "AssFuck" from Player;
 	say "Tehuantl: AnalVirgin: [AnalVirgin of Carl]; PenileVirgin: [PenileVirgin of Carl]";
-	[Options for SexAct are: AssFuck, PussyFuck, AssDildoFuck, PussyDildoFuck, OralCock, OralPussy]
+	[Options for SexAct are: AssFuck, PussyFuck, AssDildoFuck, PussyDildoFuck, OralCock, OralPussy, Stroking]
 
-[ Note: Add Handjob, PussyFingering, AssFingering, Rimming to SexActs]
+	[ Note: Add Handjob, PussyFingering, AssFingering, Rimming to SexActs]
+
+[
+	Function for two NPC, or Player + NPC
+	[receiver's ass is fucked or rides the cock of the giver, includes mpreg chance]
+	NPCSexAftermath RECEIVER_OBJ receives "AssFuck" from GIVER_OBJ;
+	[receiver's pussy is fucked or rides the cock of the giver, includes fpreg chance]
+	NPCSexAftermath RECEIVER_OBJ receives "PussyFuck" from GIVER_OBJ;
+	[receiver's ass is fucked by dildo/finger/tentacle/... of the giver, no impreg chance]
+	NPCSexAftermath RECEIVER_OBJ receives "AssDildoFuck" from GIVER_OBJ;
+	[receiver's pussy is fucked by dildo/finger/tentacle/... of the giver, no impreg chance]
+	NPCSexAftermath RECEIVER_OBJ receives "PussyDildoFuck" from GIVER_OBJ;
+	[receiver is the one with a cock in their mouth, even if they are "giving a blowjob"]
+	NPCSexAftermath RECEIVER_OBJ receives "OralCock" from GIVER_OBJ;
+	[receiver is the one with a pussy in their face, even if they are "giving oral"]
+	NPCSexAftermath RECEIVER_OBJ receives "OralPussy" from GIVER_OBJ;
+	[any other sex that's mostly touching - might be jerking off, might be erotic tickling, etc., no virginities lost"]
+	NPCSexAftermath RECEIVER_OBJ receives "Stroking" from GIVER_OBJ;
+
+	Function for Infection + NPC/Player
+	[receiver's ass is fucked or rides the cock of the giver, includes mpreg chance]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "AssFuck" from "GIVER INFECTION/NPC NAME";
+	[receiver's pussy is fucked or rides the cock of the giver, includes fpreg chance]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "PussyFuck" from "GIVER INFECTION/NPC NAME";
+	[receiver's ass is fucked by dildo/finger/tentacle/... of the giver, no impreg chance]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "AssDildoFuck" from "GIVER INFECTION/NPC NAME";
+	[receiver's pussy is fucked by dildo/finger/tentacle/... of the giver, no impreg chance]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "PussyDildoFuck" from "GIVER INFECTION/NPC NAME";
+	[receiver is the one with a cock in their mouth, even if they are "giving a blowjob"]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "OralCock" from "GIVER INFECTION/NPC NAME";
+	[receiver is the one with a pussy in their face, even if they are "giving oral"]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "OralPussy" from "GIVER INFECTION/NPC NAME";
+	[any other sex that's mostly touching - might be jerking off, might be erotic tickling, etc., no virginities lost"]
+	CreatureSexAftermath "RECEIVER INFECTION/NPC NAME" receives "Stroking" from "GIVER INFECTION/NPC NAME";
+]
 
 to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (GivingChar - a person):
 	if debugactive is 1:
@@ -622,16 +664,42 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 	if GivingCharName is "Player" or GivingCharName is "player":
 		if debugactive is 1:
 			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";
+		if there is a name of TakingCharName in the Table of Random Critters: [security in case someone made a typo - avoids Runtime Errors]
+			choose a row with name of TakingCharName in the Table of Random Critters;
+		else: [lets tell people to report this too]
+			say "     < ERROR: [TakingCharName] not found in Table of Random Critters. Please report the situation you saw this in on the Flexible Survival Discord Bug Report Channel! >";
 		if SexAct is "AssFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
 			increase AssFuckGiven of Player by 1;
+			if Libido of Impregnated Feral is 0 and TakingCharName is listed in infections of MpregList and Enemy Type entry is 0: [standin NPC ready for another pregnancy, enemy fucked has basic capability of mpreg, only non-unique enemies can get impregnated]
+				if debugactive is 1:
+					say "DEBUG -> NPC Standin ready, fucked enemy on MpregList and non-unique[line break]";
+				let Basechance be 2;
+				if "Fertile" is listed in Feats of Player:
+					increase Basechance by 1;
+				if Sterile of Player is false and a random chance of (Basechance + Ball Size of Player) in 10 succeeds: [fertile player, 30-90% chance depending on ball size and output]
+					now Libido of Impregnated Feral is a random number between 8 and 24; [1-3 day carrying period]
+					now MainInfection of Impregnated Feral is TakingCharName; [saving the infection name]
+					if debugactive is 1:
+						say "DEBUG -> Non-Sterile Player succeeded in their [2 + Ball Size of Player] in 10 impregnation check. [Libido of Impregnated Feral] turns to birth of a [MainInfection of Impregnated Feral] offspring.[line break]";
 		else if SexAct is "PussyFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
 			increase PussyFuckGiven of Player by 1;
+			if Libido of Impregnated Feral is 0 and Enemy Type entry is 0: [standin NPC ready for another pregnancy, only non-unique enemies can get impregnated]
+				if debugactive is 1:
+					say "DEBUG -> NPC Standin ready and non-unique[line break]";
+				let Basechance be 2;
+				if "Fertile" is listed in Feats of Player:
+					increase Basechance by 1;
+				if Sterile of Player is false and a random chance of (Basechance + Ball Size of Player) in 10 succeeds: [fertile player, 30-90% chance depending on ball size and output]
+					now Libido of Impregnated Feral is a random number between 8 and 24; [1-3 day carrying period]
+					now MainInfection of Impregnated Feral is TakingCharName; [saving the infection name]
+					if debugactive is 1:
+						say "DEBUG -> Non-Sterile Player succeeded in their [2 + Ball Size of Player] in 10 impregnation check. [Libido of Impregnated Feral] Turns to birth of a [MainInfection of Impregnated Feral] offspring.[line break]";
 		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
 			increase AssFuckGiven of Player by 1;
 		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]

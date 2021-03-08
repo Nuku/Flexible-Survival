@@ -3361,6 +3361,8 @@ to say EricUrikHangOut:
 			say "     With a smile on your lips, you watch the orc carry his smaller friend off. Not too long after they vanish up to the first floor, you can hear pleased moans and pants, intermixed with lusty grunts echo through the library. Sounds like Eric's getting the ride of his life!";
 			now UrikEricInteraction is 6; [Urik bred Eric's pussy]
 		NPCSexAftermath Eric receives "PussyFuck" from Urik;
+		if "Dominance Returned_Player" is not listed in Traits of Urik and "Dominance Returned_Other" is not listed in Traits of Urik: [hasn't been on top for fucking since he was made a breeder]
+			add "Dominance Returned_Other" to Traits of Urik; [he got to be on top again - with someone who's not the Player]
 	else: [no sex]
 		LineBreak;
 		say "     Clearing your throat, you step into the way of the orc and order him to put down Eric immediately. 'Hey boss,' Urik says with a little grumble as he sets Eric on his feet again, then continues, 'I was just gonna give the li'l guy what he needs. He's just too shy to ask and...' The orc falls silent as he sees your look of disapproval. Making it clear in no uncertain terms that he can't just grab Eric and carry him off to be fucked - even if the young athlete is rather easy to talk into things. Meanwhile, Eric stands next to the two of you, an intense blush on his face as he listens. The college student bites his lips in indecision, but despite his desire to speak up, he just can't get out of his shell enough to do so. In the end, he silently looks after Urik as you send the orc off upstairs alone. With a quiet sigh of unresolved arousal, the redhead then hurries away, vanishing between the bookshelves for the moment.";
@@ -3401,6 +3403,8 @@ to say EricUrikLibraryFuck:
 		LineBreak;
 		say "     Shrugging your shoulders, you turn your attention to other matters. It doesn't take long before lust-filled grunts and moaning echo through the large hall of the library, indicating that someone is making the orc very happy indeed.";
 	NPCSexAftermath Eric receives "AssFuck" from Urik;
+	if "Dominance Returned_Player" is not listed in Traits of Urik and "Dominance Returned_Other" is not listed in Traits of Urik: [hasn't been on top for fucking since he was made a breeder]
+		add "Dominance Returned_Other" to Traits of Urik; [he got to be on top again - with someone who's not the Player]
 	now UrikEricInteraction is 7; [Urik bred Eric's ass]
 	now lastUrikEricInteraction is turns;
 

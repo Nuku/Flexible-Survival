@@ -78,9 +78,10 @@ instead of sniffing Zoe:
 
 to say ZoeDesc:
 	if Resolution of Rabbit Tagger is 2: [saved]
-		project the figure of Zoe_face_icon;
+		project Figure of Zoe_clothed_icon;
 		say "     Zoe looks as lively as ever. The small bunny's short, white fur is dirtied here and there by paint stains of many colors. She wears her usual clothes: a short-sleeved T-shirt and a pair of shorts. [if Loyalty of Zoe < 5]Zoe gives you a polite smile, but you notice that she keeps her guard around you[else]Zoe's smile beams at you, and the young girl seems completely relaxed in your presence[end if].";
 	else if Resolution of Rabbit Tagger is 1: [tied up]
+		project Figure of Zoe_naked_icon;
 		say "     You look at Zoe's hogtied body inside the van. Her fur is ruffled in many places and glued together around her crotch. The ropes force her to stay on her knees, face to the ground and arms to the back. Zoe returns you a broken look[if XP of Zoe is 1], which instantly turns into a mix of resignation and contained anger when she recognizes you from earlier[end if].";
 	else:
 		say "WARN: This description should not appear.";
@@ -129,7 +130,7 @@ instead of conversing the Zoe:
 
 instead of fucking Zoe:
 	if Resolution of Rabbit Tagger is 2: [saved]
-		project the figure of Zoe_face_icon;
+		project the figure of Zoe_naked_icon;
 		if Loyalty of Zoe < 5:
 			if "Propositioned" is not listed in the Traits of Zoe:
 				say "     Zoe tenses up when you proposition her for sex. 'I... Um...' She looks away, her mouth contorting with anxiety. 'I don't... I don't feel like it. Is it okay, if...' You give Zoe an understanding. She looks visibly relieved, although she still acts wary. 'Thanks. Sorry, I'm just... Not in the mood for that kind of thing.'";
@@ -151,6 +152,7 @@ instead of fucking Zoe:
 			else:
 				say "[ZoeGoodFuckMenu]";
 	else:
+		project the figure of Zoe_naked_icon;
 		say "[ZoeMolest]";
 
 [First time of Zoe with the Player, if she is still a virgin]

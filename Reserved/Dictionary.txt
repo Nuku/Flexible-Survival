@@ -497,7 +497,6 @@
 |Nuku Valente|Fs Graphics|Figure of PinkGel_icon|value|
 |Nuku Valente|Fs Graphics|Figure of PlushLion_icon|value|
 |Nuku Valente|Fs Graphics|Figure of QueenBee_icon|value|
-|Nuku Valente|Fs Graphics|Figure of Ram_icon|value|
 |Nuku Valente|Fs Graphics|Figure of Reindeer_icon|value|
 |Nuku Valente|Fs Graphics|Figure of ShadowBeast_icon|value|
 |Nuku Valente|Fs Graphics|Figure of SiameseCat_icon|value|

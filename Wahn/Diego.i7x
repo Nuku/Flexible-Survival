@@ -155,16 +155,22 @@ to say DiegoTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Arrange for Diego to chug your bottle of orc cum";
 	[]
+	if carried of food > 0 and CoyoteTricks > 4:
+		choose a blank row in table of fucking options;
+		now title entry is "Offer Diego some food to eat";
+		now sortorder entry is 6;
+		now description entry is "Hand a packet of food to Diego";
+	[]
 	if XP of Diego is 99:
 		choose a blank row in table of fucking options;
 		now title entry is "Taking part in Diego's secret plans after all";
-		now sortorder entry is 6;
+		now sortorder entry is 7;
 		now description entry is "Tell the coyote you want to join [ObjectPro of Diego] in a closer partnership";
 	[]
 	if XP of Diego is 1 or XP of Diego is 2: [got the quest, didn't finish getting the collar yet]
 		choose a blank row in table of fucking options;
 		now title entry is "Cancelling your involvement in Diego's special plan";
-		now sortorder entry is 7;
+		now sortorder entry is 8;
 		now description entry is "Tell the coyote you don't want to participate after all";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -184,17 +190,19 @@ to say DiegoTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Just chat a bit"):
 					say "[DiegoTalk1]";
-				if (nam is "Share some ideas about tricks to play on people with him"):
+				else if (nam is "Share some ideas about tricks to play on people with him"):
 					say "[DiegoTalk2]";
-				if (nam is "Offer Diego a bottle of water to drink"):
+				else if (nam is "Offer Diego a bottle of water to drink"):
 					say "[DiegoTalk3]";
-				if (nam is "Trick Diego into drinking dog milk"):
+				else if (nam is "Trick Diego into drinking dog milk"):
 					say "[DiegoTalk4]";
-				if (nam is "Trick Diego into drinking orc cum"):
+				else if (nam is "Trick Diego into drinking orc cum"):
 					say "[DiegoTalk5]";
-				if (nam is "Taking part in Diego's secret plans after all"):
+				else if (nam is "Offer Diego some food to eat"):
+					say "[DiegoTalk6]";
+				else if (nam is "Taking part in Diego's secret plans after all"):
 					say "[DiegoCollarQuest1]";
-				if (nam is "Cancelling your involvement in Diego's special plan"):
+				else if (nam is "Cancelling your involvement in Diego's special plan"):
 					say "[DiegoCollarQuestRefuse]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -220,7 +228,7 @@ to say DiegoTalk1:
 to say DiegoTalk2:
 	try Diegotricking;
 
-to say DiegoTalk3:
+to say DiegoTalk3: [hand over water]
 	if DiegoChanged > 0:
 		project the figure of DiegoFem_face_icon;
 	else:
@@ -332,6 +340,15 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 			LineBreak;
 			say "     'Damn - what a tease,' Diego remarks as you close up your pack and shift it back to hang over one shoulder. Licking [PosAdj of Diego] lips thirstily, [SubjectPro of Diego] flicks an ear in amusement as [SubjectPro of Diego] adds, 'I taught you too damn well it seems.'";
 
+to say DiegoTalk6: [hand over food]
+	if DiegoChanged > 0:
+		project the figure of DiegoFem_face_icon;
+	else:
+		project the figure of Diego_face_icon;
+	say "     Happily accepting the meal you have brought [ObjectPro of Diego], Diego responds by giving you a wide grin and saying, 'Thank you very much friend, this looks delicious!' followed by unwrapping the packet of food and slowly eating its contents, taking the time to savor and appreciate the meal you brought [ObjectPro of Diego]. Upon finishing the last bite [SubjectPro of Diego] licks [PosAdj of Diego] lips and muzzle for any bits of food that might have gotten stuck on them. 'That tasted quite good. I think I'll be able to play plenty of new tricks with this much extra energy,' [SubjectPro of Diego] says while rubbing [PosAdj of Diego] belly, [PosAdj of Diego] tail wagging side to side happily.";
+	ItemLoss food by 1;
+	extend game by 4;
+
 Section 3 - Tricking
 
 Diegotricking is an action applying to nothing
@@ -366,8 +383,8 @@ carry out Diegotricking:
 		extend game by 18;
 		if CoyoteTricks > 4 and DiegoChanged is 0 and DiegoButtSlut is 0:
 			LineBreak;
-			say "     Turning [PosAdj of Diego] attention back to you, the anthro canine licks [PosAdj of Diego] lips and then says, 'Damn, playing so many tricks on the man is making a dishonest coyote mighty thirsty. You wouldn't happen to have anything to help a fellow out now would you?' [SubjectProCap of Diego] gives you a hopeful look, glancing over to your gear.";
-			say "     ([bold type]Diego trusts you enough to accept something to drink from you now. Maybe give [ObjectPro of Diego] some water, or other liquids that could have fun effects on the guy.[roman type])[line break]";
+			say "     Turning [PosAdj of Diego] attention back to you, the anthro canine licks [PosAdj of Diego] lips and then says, 'Damn, playing so many tricks on the man is making a dishonest coyote mighty hungry and thirsty. You wouldn't happen to have anything to help a fellow out now would you?' [SubjectProCap of Diego] gives you a hopeful look, glancing over to your gear.";
+			say "     ([bold type]Diego trusts you enough to accept something to drink or eat from you now. Maybe give [ObjectPro of Diego] some food, water, or other liquids that could have fun effects on the guy. [roman type])[line break]";
 		if CoyoteTricks > 3:
 			if Prank Aftermath is inactive:
 				now Prank Aftermath is active;
@@ -557,7 +574,7 @@ to say DiegoSex3: [player pussy fucked by Diego's dick]
 		say "     The coyote herm laughs at the look of arousal on your face, and when you open your mouth to say something [SubjectPro of Diego] locks her soft muzzle over your mouth, silencing you as her tongue darts around in your mouth teasingly. Thoughts of protest are soon the last thing on your mind as her soft hands roam your body, the coyote on top of you still knowing just how to tease and arouse a woman. Giving in to the pleasure, you are soon rubbing up against her soft-furred breasts, while her cock is brushing against your damp needy feminine opening. The teasing of the tricky coyote soon has you lifting your body up to meet her cock, trying to get the tricky herm to fill you up properly. You're panting eagerly as each teasing pass brings you closer to the wonderful pleasure you know is coming.";
 		WaitLineBreak;
 		say "     Finally you lift yourself up in just the right moment and her cock slips right inside you, making you gasp as the burning emptiness inside you is filled with Diego's coyote rod. [SubjectProCap of Diego] wastes no time with any more teasing once [SubjectPro of Diego] has her cock in your slick pussy, and Diego begins thrusting eagerly into your body, her eyes closed tight in pleasure as [SubjectPro of Diego] lets out short yipping noises with every thrust. The feel of her knot pressing up into your body is simply amazing. At first it was small, just some little bulges at the base of her rod, but now it is spreading you wider with each thrust at it seeks to lock the two of you together. You can tell as you stare up at Diego with lust clouded eyes that the coyote above you is panting with just as much lust as you are.";
-		say "     Soon her knot swells up fully while the coyote's shaft is lodged all the way inside you, making you groan as it ties the two of you together. As her thrusts speed up, your hands clench her fur tightly in rapidly building arousal. Then all too soon, [SubjectPro of Diego] begins to shoot her seed into your needy body. The feel of that wonderful canine cock spurting into you is more than you can stand, and you find yourself crying out as well as your body spasms around Diego's thick meat. The two of you collapse together on the grass, her cock still buried deep in your body as you both pant and try to recover from the intense experience.[fimpregchance]";
+		say "     Soon her knot swells up fully while the coyote's shaft is lodged all the way inside you, making you groan as it ties the two of you together. As her thrusts speed up, your hands clench her fur tightly in rapidly building arousal. Then all too soon, [SubjectPro of Diego] begins to shoot her seed into your needy body. The feel of that wonderful canine cock spurting into you is more than you can stand, and you find yourself crying out as well as your body spasms around Diego's thick meat. The two of you collapse together on the grass, her cock still buried deep in your body as you both pant and try to recover from the intense experience.";
 		say "     Eventually her knot goes down far enough that [SubjectPro of Diego] can pull it out of you with a soft popping noise, leaving you feeling strangely empty, even though you are still nice and full of her wonderful coyote seed... The coyote herm slowly crawls back over to the wall, leaning her back against it as [SubjectPro of Diego] pants in exhaustion and pleasure, a teasing grin on her muzzle as [SubjectPro of Diego] winks at you. Without another word, you slowly haul yourself back up to your feet, and begin to retrieve your equipment, keeping a careful eye on the tricky coyote just in case.";
 		if DiegoBitched < 1:
 			now DiegoBitched is 1;
@@ -565,7 +582,7 @@ to say DiegoSex3: [player pussy fucked by Diego's dick]
 		say "     'Well after all that tricking and flirting, how could I say no?' Diego says with an amused grin, [PosAdj of Diego] paw-like hand reaching out and pulling you closer to him. 'What say we have a go right here then?' the coyote trickster adds with a grin as [SubjectPro of Diego] moves around you until [SubjectPro of Diego] is pressing your body up against the wall [SubjectPro of Diego] was leaning on. 'Hmm, I like what I see,' [SubjectPro of Diego] says with a grin as [PosAdj of Diego] hands roam down your body. You open your mouth to say something, only for the tricky coyote to take advantage of this fact - [PosAdj of Diego] long muzzle presses up against your face and [SubjectPro of Diego] pushes [PosAdj of Diego] tongue inside your mouth, tangling with your own in a pleasant little wrestling match. Meanwhile, the coyote's paw-hands settle on your ass, rubbing it softly.";
 		say "     'Now now,' Diego pants out as [SubjectPro of Diego] breaks the deep kiss, 'No more tricks for today, now it's time for you to get your treat.' The male coyote grins widely as [PosAdj of Diego] stiff cock rubs up against your crotch. Wasting no more time, [SubjectPro of Diego] lifts your ass lightly with both [PosAdj of Diego] paw-hands slid under your thighs, giving himself a better angle as [PosAdj of Diego] cock-tip probes at your hot passage. You find yourself moaning as your back is pressed up against the cool wall, your legs automatically wrapping around the hot coyote stud as [SubjectPro of Diego] sinks [PosAdj of Diego] thick rod into your needy body. 'God you feel so good!' Diego moans as [SubjectPro of Diego] begins to thrust into you in short powerful thrusts, each one pressing you into the wall as you find your hands gripping [PosAdj of Diego] shoulders tightly, encouraging the strong coyote to fuck you even harder.";
 		WaitLineBreak;
-		say "     Soon you feel the base of [PosAdj of Diego] cock swelling up inside you, making you moan as [SubjectPro of Diego] continues to pound you against the park wall. The rough texture of the wall against your back, combined with your sexy coyote's soft fur against your [Skin of Player] skin, creates an interesting sensation that melds together in the sexual haze you're in. Diego's breath comes out in harsh panting as [PosAdj of Diego] thrusts speed up, [PosAdj of Diego] knot reaching its full extent and locking the two of you together. Then suddenly, [SubjectPro of Diego] grunts deeply and starts filling your body with [PosAdj of Diego] thick, rich seed.[fimpregchance]";
+		say "     Soon you feel the base of [PosAdj of Diego] cock swelling up inside you, making you moan as [SubjectPro of Diego] continues to pound you against the park wall. The rough texture of the wall against your back, combined with your sexy coyote's soft fur against your [Skin of Player] skin, creates an interesting sensation that melds together in the sexual haze you're in. Diego's breath comes out in harsh panting as [PosAdj of Diego] thrusts speed up, [PosAdj of Diego] knot reaching its full extent and locking the two of you together. Then suddenly, [SubjectPro of Diego] grunts deeply and starts filling your body with [PosAdj of Diego] thick, rich seed.";
 		say "     Feeling the coyote's cum erupting into you, with the throb of [PosAdj of Diego] cock sending little tingles of pleasure up your spine, your own powerful orgasm is triggered just moments later. You find yourself throwing your head back and panting as your body shakes with pleasure. 'Oh yeah, now that was a sweet treat,' Diego mutters as the two of you stay there, your bodies still locked together against the wall by [PosAdj of Diego] knot. You find yourself enjoying some moments of silence with him, just holding and stroking each other while Diego's knot slowly deflates until eventually, [SubjectPro of Diego] is able to pull out with a soft pop. Planting a kiss on your lips, the coyote then sets you back down on your own feet. 'Come back again anytime,' the canine stud says as [SubjectPro of Diego] leans up against the wall again, seeming to need its support to keep himself stable after all the exertion.";
 	NPCSexAftermath Player receives "PussyFuck" from Diego;
 	coyotify;
@@ -585,11 +602,11 @@ to say DiegoSex4: [player ass fucked]
 		say "     At first it was small, just some little bulges at the base of [PosAdj of Diego] rod, but now it is spreading you wider with each thrust at it seeks to lock the two of you together. You can tell from the intensity of Diego's humping and [PosAdj of Diego] breathless panting that the coyote is feeling just as much arousal and lust as you are. Soon [PosAdj of Diego] knot swells up fully while the coyote's shaft is lodged all the way inside you, making you groan as it ties the two of you together. As [PosAdj of Diego] thrusts speed up ever more, Diego's paw-hands clench around your hips tightly and with a loud howl, [SubjectPro of Diego] begins to shoot [PosAdj of Diego] seed deep into your receptive body. The feel of that wonderful canine cock spurting into you is more than you can stand, and you find yourself crying out as well as your body spasms around Diego's thick meat.";
 		WaitLineBreak;
 		if Player is male:
-			say "     Your own cock swings up and down from the intensity of the coyote still humping against you, throbbing with the rapid beat of your heart and the pulse of cum blasting through it, spraying the wall with your load. It almost seems like your orgasms are linked up, as each spurt of Diego's cock inside you is immediately answered by another of your own. Pressed closely together as you ride out your shared orgasms, the two of you lean against the wall, with Diego soon sliding [PosAdj of Diego] arms around you from behind, embracing your chest in a gesture of affection. Even when new spurts of cum eventually taper off, [PosAdj of Diego] cock is still buried deep in your body and tied to it, giving both of you the time to enjoy some shared moments of togetherness.[mimpregchance]";
+			say "     Your own cock swings up and down from the intensity of the coyote still humping against you, throbbing with the rapid beat of your heart and the pulse of cum blasting through it, spraying the wall with your load. It almost seems like your orgasms are linked up, as each spurt of Diego's cock inside you is immediately answered by another of your own. Pressed closely together as you ride out your shared orgasms, the two of you lean against the wall, with Diego soon sliding [PosAdj of Diego] arms around you from behind, embracing your chest in a gesture of affection. Even when new spurts of cum eventually taper off, [PosAdj of Diego] cock is still buried deep in your body and tied to it, giving both of you the time to enjoy some shared moments of togetherness.";
 		else if Player is female:
-			say "     Your pussy feels really hot and tingly from the sheer intensity of the coyote still humping against your rear and femcum squirts out of it, dripping copiously onto the grass below. It almost seems like your orgasms are linked up, as each spurt of Diego's cock inside you is immediately answered by a spike of arousal from your own body. Pressed closely together as you ride out your shared orgasms, the two of you lean against the wall, with Diego soon sliding [PosAdj of Diego] arms around you from behind, embracing your chest in a gesture of affection. Even when new spurts of cum eventually taper off, [PosAdj of Diego] cock is still buried deep in your body and tied to it, giving both of you the time to enjoy some shared moments of togetherness.[mimpregchance]";
+			say "     Your pussy feels really hot and tingly from the sheer intensity of the coyote still humping against your rear and femcum squirts out of it, dripping copiously onto the grass below. It almost seems like your orgasms are linked up, as each spurt of Diego's cock inside you is immediately answered by a spike of arousal from your own body. Pressed closely together as you ride out your shared orgasms, the two of you lean against the wall, with Diego soon sliding [PosAdj of Diego] arms around you from behind, embracing your chest in a gesture of affection. Even when new spurts of cum eventually taper off, [PosAdj of Diego] cock is still buried deep in your body and tied to it, giving both of you the time to enjoy some shared moments of togetherness.";
 		else:
-			say "     Your whole body feels really hot and tingly from the sheer intensity of the coyote still humping against your rear. It almost seems like your orgasms are linked up, as each spurt of Diego's cock inside you is immediately answered by a spike of arousal from your own body. Pressed closely together as you ride out your shared orgasms, the two of you lean against the wall, with Diego soon sliding [PosAdj of Diego] arms around you from behind, embracing your chest in a gesture of affection. Even when new spurts of cum eventually taper off, [PosAdj of Diego] cock is still buried deep in your body and tied to it, giving both of you the time to enjoy some shared moments of silence with the other.[mimpregchance]";
+			say "     Your whole body feels really hot and tingly from the sheer intensity of the coyote still humping against your rear. It almost seems like your orgasms are linked up, as each spurt of Diego's cock inside you is immediately answered by a spike of arousal from your own body. Pressed closely together as you ride out your shared orgasms, the two of you lean against the wall, with Diego soon sliding [PosAdj of Diego] arms around you from behind, embracing your chest in a gesture of affection. Even when new spurts of cum eventually taper off, [PosAdj of Diego] cock is still buried deep in your body and tied to it, giving both of you the time to enjoy some shared moments of silence with the other.";
 		say "     After a little while of just holding and stroking each other, Diego's knot slowly deflates until eventually, [SubjectPro of Diego] is able to pull out with a soft pop. Turning you around and planting a kiss on your lips, the coyote then gives you a broad grin and wags [PosAdj of Diego] tail wildly. 'Come back again anytime,' the canine stud says as [SubjectPro of Diego] leans up against the wall again, seeming to need its support to keep himself stable after all the exertion.";
 	NPCSexAftermath Player receives "AssFuck" from Diego;
 	coyotify;

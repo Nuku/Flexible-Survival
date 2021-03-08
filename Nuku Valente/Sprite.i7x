@@ -24,16 +24,19 @@ to say Sprite attack:
 		now Spriteconsent is 1;
 		wait for any key;
 	if a random chance of 1 in 2 succeeds and player is female:
-		say "You look down to see [(Cunt Depth of Player divided by 4) plus one] sprites working their way into you, one after the other. Despite their forms, they slip in smoothly, wings buzzing inside of you, exciting your tunnel and clit and sensing pleasure pulsing through your form as they slowly penetrate with their tiny forms, making their way towards your waiting womb.[impregchance]";
+		say "You look down to see [(Cunt Depth of Player divided by 4) plus one] sprites working their way into you, one after the other. Despite their forms, they slip in smoothly, wings buzzing inside of you, exciting your tunnel and clit and sensing pleasure pulsing through your form as they slowly penetrate with their tiny forms, making their way towards your waiting womb.";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "City Sprite";
 		wait for any key;
 	else if Player is mpreg_ok and Cunt Count of Player is 0 and a random chance of 1 in 2 succeeds:
-		say "One of the sprites caresses your rear, nuzzling and kissing at it. 'Mmm... there's something special about this spritely boy, girls. There's a nice, warm womb in him,' she giggles. That said, she starts rubbing at your back passage, working your anus open. You moan softly as she starts squirming her way inside. She's followed by [if scalevalue of Player is 1]another[else][scalevalue of Player]others[end if]. They slip in smoothly, wings buzzing[if Player is male] and fluttering against your prostate[end if] as they slowly penetrate with their tiny forms, making their way towards your waiting womb.[mimpregchance]";
+		say "One of the sprites caresses your rear, nuzzling and kissing at it. 'Mmm... there's something special about this spritely boy, girls. There's a nice, warm womb in him,' she giggles. That said, she starts rubbing at your back passage, working your anus open. You moan softly as she starts squirming her way inside. She's followed by [if scalevalue of Player is 1]another[else][scalevalue of Player]others[end if]. They slip in smoothly, wings buzzing[if Player is male] and fluttering against your prostate[end if] as they slowly penetrate with their tiny forms, making their way towards your waiting womb.";
+		CreatureSexAftermath "Player" receives "AssFuck" from "City Sprite";
 	if a random chance of 1 in 2 succeeds:
 		say "Your body is swarmed with the cloud, lifted up into the air and caressed from all sides. It's like sleeping on a cloud as they hold you up with hundreds of tiny hands while another hundred work on rubbing your every erogenous zone in alternating waves that has you paralyzed with pleasure.";
 		wait for any key;
 	if a random chance of 1 in 2 succeeds and player is male:
 		if Cock Length of Player > 12:
 			say "Your mammoth cock draws the interest of the cloud as they swarm over it, coating its length in buzzing, rubbing, forms. At the very end of it, they rub their cunts across your head and cum slit, moaning loudly as they work as if eager to somehow bare your child despite the wild size difference.";
+			CreatureSexAftermath "City Sprite" receives "PussyFuck" from "Player";
 			if Cock Count of Player > 1:
 				say "Your other male meat gets assaulted in kind, each becoming lost under a blanket of excited sprites. Your [Ball Size Adjective of Player] balls are tingling with the need to cum, and you cannot muster the urge to hold back anymore, spraying down, and filling up, dozens of the sprites at a time.";
 		else:
@@ -44,6 +47,7 @@ to say Sprite attack:
 				say "Your extra manliness gets trapped between her and you, her small hands grabbing and jerking at them in wanton abandon as she rocks her hips up and down along your thick, virile, pole. It all becomes too much with all of them being stimulated and you make her swell powerfully with your climax, the excess seed gushing out between her thighs even as you spray wildly over her and the rest of the swarm.";
 			wait for any key;
 		say "The swarm stays close to you, tickling, rubbing, and sucking at you until you are ready to collapse in a nerveless pile of sated flesh. Sensing your fatigue, they heft you up and carry you back to a safe place, setting you down carefully before flittering off on the breeze in a mass of giggles.";
+		CreatureSexAftermath "City Sprite" receives "PussyFuck" from "Player";
 		wait for any key;
 
 [ [Sprite loss] ]
@@ -55,6 +59,7 @@ To say Sprite loss:
 		say "You strip off your clothes, revealing your throbbing [cock size desc of Player] [Cock of Player] dick. You peer back into your pack, and catch three of the fairy-like creatures, putting the fearful women in a separate pouch. You address the rest, 'Now I'm going to let you out, but your friends don't go free until you finish the job.'";
 		say "With the bag opened, the captured sprites fly out and circle around you. They coax you to sit on a nearby crate, spreading your legs for easier access to your [Cock of Player] shaft. Their wings tease your erect phallus as they flit around, examining your groin before getting to work. They start licking at you as they dart around your cock, leaving thin trails of saliva up and down your shaft. The largest one licks at your tip and giggles as you twitch and start to moan from their attentions. She manages to take your whole tip into her mouth and begins massaging your glans with rolling movements of her tongue. Others hold on to your shaft and start flapping their wings rapidly. It feels like your cock is covered in a bunch of vibrators. [if Ball Size of Player > 0]The last two tend to your [Ball Size Adjective of Player] balls, licking and buzzing until you are lost in a haze of pleasure. [end if]After what feels like an hour, but was really only a few minutes, you can't take any more. You climax, covering the largest sprite from head to toe in your seed.";
 		say "After you recover, you open your pack and release the still-trapped sprites. One of the smaller fairies flies up to your ear as the rest fly away. 'If that was all you wanted, why didn't you just ask?' She circles your head once more before flying off.";
+		CreatureSexAftermath "City Sprite" receives "OralCock" from "Player";
 	else if (Libido of Player > 50 or humanity of Player < 30) and player is female:
 		say "The horde of sprites scatters, all trying to flee. Not wanting to waste such an opportunity, you grab some of the slower or more disoriented ones and trap them in your backpack. After finding a nice quiet alley where no one will walk in on you, you crack the zipper on your backpack and peer inside. You managed to catch several of the winged women, and can think of quite a few things to do with them.";
 		say "You strip off your clothes, revealing your [breast size desc of Player] chest and aching pussy. You peer back into your pack, and catch three of the fairy-like creatures, putting the fearful women in a separate pouch. You address the rest, 'Now I'm going to let you out, but your friends don't go free until you finish the job.'";
@@ -62,6 +67,7 @@ To say Sprite loss:
 		say "They pass it by without pause, leaving you hot and breathing heavily in anticipation. They start down at your feet, tickling and massaging them in turn. The work their way up your calves, and stop at your thighs. The sprites squeeze and caress and tickle your inner thighs, getting maddeningly close to the aching need between your legs.";
 		say "Finally, they turn their attention to your sopping wet pussy. They lick and stroke and tickle at you. One takes your clit into her mouth and sucks on it rigorously, driving you to your peak. Just as you are about to climax they stop once again. You look down at them questioningly through your lusty haze just in time to see one fly headfirst into your pussy. Stars explode into your vision as you finally climax with the sprite wiggling inside you. The other sprites start licking and stroking your cunt and massaging your breasts with their friend still squirming inside you. They make you cum and again and again in quick succession until your vision soon goes dark.";
 		say "You wake up some time later in a puddle of your own sweet love juices. The sprites are nowhere to be seen. You look for your backpack and see it lies open. Free sprites must have released the others after you passed out. You look around for your clothes and get dressed, still a bit dazed from your incredible time with the little fairies.";
+		CreatureSexAftermath "City Sprite" receives "OralPussy" from "Player";
 
 
 Section 2 - Creature Insertion

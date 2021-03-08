@@ -107,7 +107,10 @@ to say ResolveEvent Orcish Slave Raid:
 								say "     [bold type]Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
 								if Player consents:
 									LineBreak;
+									choose a row with name of "Orc Warrior" in the Table of Random Critters;
+									now enemy type entry is 1; [unique orc, not for impregnation]
 									say "     [BeatenOrcSexMenu]";
+									now enemy type entry is 0; [reset to non-unique]
 								else:
 									LineBreak;
 									say "     You walk away after checking them over for loot.";
@@ -138,7 +141,9 @@ to say ResolveEvent Orcish Slave Raid:
 						say "     [bold type]Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
 						if Player consents:
 							LineBreak;
+							now enemy type entry is 1; [unique orc, not for impregnation]
 							say "     [BeatenOrcSexMenu]";
+							now enemy type entry is 0; [reset to non-unique]
 						else:
 							LineBreak;
 							say "     You walk away after checking them over for loot.";
@@ -147,7 +152,7 @@ to say ResolveEvent Orcish Slave Raid:
 		say "     Walking along a street between some warehouses, you suddenly hear deep voices talking to each other somewhere nearby. You overhear 'Where are all those little weaklings? I wanna fuck!', followed by another voice answering 'Don't shout, brother. You'll drive [']em off. I'm sure we'll find someone soon.' And with that, a trio of very muscular men step out of an alley just ahead of you - tall and green as they are, dressed only in loincloths, there's no doubt that they're orcs. [if OrcSlaverStatus is 3]And orcs you know at that - Mul, Yatur and Koghh, the orc slavers that you had a run-in with before[else]From the relatively similar looks, they might be brothers[end if]. One of them gives you an appraising look, then smiles around his sharp tusks. [if OrcSlaverStatus is 0]'See, told ya!' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 2]'Look, it's the little bitch that escaped from the lair. What nice coincidence,' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 3]'Look, it's our runaway breeder. Come on little bitch, we'll bring you back home and give you what you really need,' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 50]'Oh, that bastard again. This time, you're going down. We'll make a breeder out of you yet,' he grunts, prompting his siblings to rush at you. [end if]They're quick for such big and muscular brutes, barely giving you time to taking on a combat stance before they're upon you...";
 		LineBreak;
 		now inasituation is true;
-		now OrcSpecialFightNumber is 6; [fighting Yatur]
+		now OrcSpecialFightNumber is 4; [fighting Yatur]
 		challenge "Orc Warrior";
 		if fightoutcome is 22:
 			say "[SubmitToOrcSlavers]";
@@ -184,7 +189,9 @@ to say ResolveEvent Orcish Slave Raid:
 					say "     [bold type]Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
 					if Player consents:
 						LineBreak;
+						now enemy type entry is 1; [unique orc, not for impregnation]
 						say "     [BeatenOrcSexMenu]";
+						now enemy type entry is 0; [reset to non-unique]
 					else:
 						LineBreak;
 						say "     You walk away after checking them over for loot.";

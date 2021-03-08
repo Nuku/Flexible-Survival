@@ -473,12 +473,12 @@ to say SylviaTalk8: [Twelve Labours]
 		else:
 			say "     'You seem to have got yourself into something interesting, haven't you?' Sylvia laughs. 'I suppose that I shouldn't be surprised that the gods are making an appearance in the city, but I know someone who will be disappointed that he isn't here for this. He literally worships them. If I'm correct, the first labor is the Nemean Lion, yes? I shouldn't even need to consult my books. Though Herakles was forced to use his bare hands to pummel it to death, you should be fine with just using brute force like any other creature in the city. I doubt that seducing it will have any effect in this case, just in case you were wondering. It will likely be fairly tough, but given your improved healing ability, you should be able to fight it toe-to-toe as long as you've been practicing enough around the city on foolish assailants. I don't think that there's anything else that I need mention. Good luck.'";
 			add "Twelve Labours Explained" to Traits of Sylvia;
-	[else if TwelveLaborsStage is 2:
+	else if TwelveLaborsStage is 2:
 		if "Twelve Labours Explained" is listed in traits of Sylvia:
-			say "     ";
+			say "     You would have thought my words would have sunk in the first time, but I suppose you are rather distracted at times. Take a companion with you when you fight it or you will likely find it a lot tougher to defeat. If you forget again, feel free to ask. It doesn't really take me much time to repeat myself. I wish you luck.";
 		else:
-			say "     ";
-	else if TwelveLaborsStage is 3:
+			say "     'Still going with those? I'm impressed. Just don;t take after herakles too closely. Killing your family in a fit of madness is not something you want to copy. But to give you a little more help, the second labor is the Lernean Hydra. Herakles initially tried to defeat it through brute force but it just continued to get stronger and grow more heads. It wasn't until Iolaos aided him by cauterising the wounds as each head was cut off that he was finally able to slay it. I doubt that you will need to be burning any neck-stumps, but I would advise taking a friend or pet with you or you are going to find it a lot harder to overcome. That is as long as it is symbolic, otherwise your survival is in the hands of the gods. Oh, and stay away from the blood. Really nasty stuff. I'm sure that you'll be fine. Don't forget to enjoy yourself as you risk your life.'";
+	[else if TwelveLaborsStage is 3:
 		if "Twelve Labours Explained" is listed in traits of Sylvia:
 			say "     ";
 		else:

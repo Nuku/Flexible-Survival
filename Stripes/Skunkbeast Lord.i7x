@@ -485,7 +485,7 @@ This is the Peppy's Epilogue rule:
 	if ending "Skunk with Frank" is triggered:
 		make no decision;
 	if skunk kit is tamed:
-		trigger ending "Peppy's Epilogue rule";
+		trigger ending "Peppy's Epilogue";
 		if Player has a non-shifting body of "Skunk":
 			if humanity of Player < 10:
 				if Player is female:
