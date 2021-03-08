@@ -1,4 +1,4 @@
-Version 1 of Feral Wolf Bitch by Prometheus begins here.
+Feral Wolf Bitch by Prometheus begins here.
 [Based off of Feral Wolf Male by Stripes]
 [Primarily written by Lost Directions]
 
@@ -253,20 +253,20 @@ When Play begins:
 	now per entry is 17;
 	now int entry is 12;
 	now cha entry is 10;
-	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 45;
 	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 10; [Amount of Damage monster Does when attacking.]
 	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now Cock Length entry is 15; [ Length infection will make cock grow to if cocks]
-	now Ball Size entry is 5; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	now Nipple Count entry is 6; [ Number of nipples infection will give you (males have nipples too) ]
+	now Cock Count entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 0; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	now Nipple Count entry is 8; [ Number of nipples infection will give you (males have nipples too) ]
 	now Breast Size entry is 9; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Depth entry is 15;
-	now Cunt Tightness entry is 15;
+	now Cunt Depth entry is 12;
+	now Cunt Tightness entry is 6;
 	now SeductionImmune entry is false;
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "wolf fem-cum";
