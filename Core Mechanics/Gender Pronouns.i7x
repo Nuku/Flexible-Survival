@@ -529,7 +529,7 @@ A person has a text called PosAdjCap. PosAdjCap is usually "Their".
 A person has a text called PosProCap. PosProCap is usually "Theirs".
 A person has a text called ReflexProCap. ReflexProCap is usually "Themselves".
 The player has a text called PronounChoice. PronounChoice is usually "Auto". [Player chosen option on how the game handles pronouns]
-A person has a text called PronounSet. PronounSet is usually "Neutral". [Current pronoun set in use for the player]
+A person has a text called PronounSet. PronounSet is usually "Neutral". [Current pronoun set in use]
 
 to SetMalePronouns for (x - a person):
 	now SubjectPro of x is "he";

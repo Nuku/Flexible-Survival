@@ -1465,6 +1465,7 @@ to say CheerleaderPractice:
 				CreatureSexAftermath "Player" receives "PussyFuck" from "FootBall Wolfman";
 			if "Sterile" is listed in feats of Player:
 				remove "Sterile" from feats of Player;
+				now Sterile of Player is false;
 				say "     After having bathed your reproductive organs in such an incredible amount of virile wolfman cum, your sterility is a thing of the past. Seems like even though the wolfmen normally aren't infective, the nanites in them and their fluids refuse to have their further breeding denied and simply fix you up.";
 			LineBreak;
 			say "     You feel something changing deep inside you as your body prepares itself to birth wolfmen - and only wolfmen - in the future.";

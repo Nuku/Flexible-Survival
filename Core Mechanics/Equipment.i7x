@@ -219,24 +219,24 @@ Part 4 - Football Helmets
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"tenvale gorillas football helmet"	"A black football helmet with the logo of the Tenvale Gorillas on both sides in silver. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sporty[']."	3	tenvale gorillas football helmet
-"Roman's gifted football helmet"	"Roman's black football helmet with the logo of the Tenvale Gorillas on both sides in silver. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sporty[']. Holding this helmet brings back memories of helping Roman come to terms with his new gender and showing him that his team still supports him."	3	Roman's gifted football helmet
-"Roman's stolen football helmet"	"Roman's black football helmet with the logo of the Tenvale Gorillas on both sides in silver. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sporty[']. Holding this helmet brings back memories of betraying Roman's trust and then watching as he became a mindless cocksleeve for his former teammates."	3	Roman's stolen football helmet
+"tenvale silverbacks football helmet"	"A black football helmet with the logo of the Tenvale Silverbacks on both sides in silver. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sporty[']."	3	tenvale silverbacks football helmet
+"Roman's gifted football helmet"	"Roman's black football helmet with the logo of the Tenvale Silverbacks on both sides in silver. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sporty[']. Holding this helmet brings back memories of helping Roman come to terms with his new gender and showing him that his team still supports him."	3	Roman's gifted football helmet
+"Roman's stolen football helmet"	"Roman's black football helmet with the logo of the Tenvale Silverbacks on both sides in silver. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sporty[']. Holding this helmet brings back memories of betraying Roman's trust and then watching as he became a mindless cocksleeve for his former teammates."	3	Roman's stolen football helmet
 
-tenvale gorillas football helmet is a grab object.
-tenvale gorillas football helmet is equipment.
+tenvale silverbacks football helmet is a grab object.
+tenvale silverbacks football helmet is equipment.
 It is not temporary.
-Plural of tenvale gorillas football helmet is false.
-Taur-compatible of tenvale gorillas football helmet is true.
-Size of tenvale gorillas football helmet is 3.
-AC of tenvale gorillas football helmet is 40.
-Effectiveness of tenvale gorillas football helmet is 80.
-GA of tenvale gorillas football helmet is 1.
-Traits of tenvale gorillas football helmet is {"sporty"}.
-Placement of tenvale gorillas football helmet is "head".
-Descmod of tenvale gorillas football helmet is "Your head is encased in the thick shell of a black and silver tenvale gorillas football helmet.".
-Slot of tenvale gorillas football helmet is "head".
-Scent of tenvale gorillas football helmet is "The helmet smells of plastic and fabric.".
+Plural of tenvale silverbacks football helmet is false.
+Taur-compatible of tenvale silverbacks football helmet is true.
+Size of tenvale silverbacks football helmet is 3.
+AC of tenvale silverbacks football helmet is 40.
+Effectiveness of tenvale silverbacks football helmet is 80.
+GA of tenvale silverbacks football helmet is 1.
+Traits of tenvale silverbacks football helmet is {"sporty"}.
+Placement of tenvale silverbacks football helmet is "head".
+Descmod of tenvale silverbacks football helmet is "Your head is encased in the thick shell of a black and silver tenvale silverbacks football helmet.".
+Slot of tenvale silverbacks football helmet is "head".
+Scent of tenvale silverbacks football helmet is "The helmet smells of plastic and fabric.".
 
 Roman's gifted football helmet is a grab object.
 Roman's gifted football helmet is equipment.
@@ -656,7 +656,7 @@ Part 4 - Pads
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"tenvale football pads"	"Tough polymer football pads, sized to cover the shoulders and upper chest of a human player. There even is an extra plate attached to the front in order to cover the abdominal area of the wearer. You can see the logo of the Tenvale Gorillas emblazoned on the left pec. Judging by the pads appearance, it's [']masculine['] and pretty [']sporty['] looking."	9	tenvale football pads
+"tenvale football pads"	"Tough polymer football pads, sized to cover the shoulders and upper chest of a human player. There even is an extra plate attached to the front in order to cover the abdominal area of the wearer. You can see the logo of the Tenvale Silverbacks emblazoned on the left pec. Judging by the pads appearance, it's [']masculine['] and pretty [']sporty['] looking."	9	tenvale football pads
 "shoulder pad"	"An oversized, padded shoulder pad that juts out to the side too much. It won't cover much, but it might help. Judging by the pads appearance, it's [']unisex['] and pretty [']basic['] looking."	1	shoulder pad
 
 tenvale football pads is a grab object.
@@ -1204,7 +1204,7 @@ Part 3 - Baseball Caps
 Table of Game Objects (continued)
 name	desc	weight	object
 "tenvale vulpines baseball cap"	"A red and white baseball cap with the logo of the Tenvale Vulpines baseball team on its front. Judging by the caps appearance, it's [']unisex['] and pretty [']sporty[']."	0	tenvale vulpines baseball cap
-"tenvale gorillas baseball cap"	"A black and silver baseball cap with the logo of the Tenvale Gorillas football team on its front. Judging by the caps appearance, it's [']unisex['] and pretty [']sporty[']."	0	tenvale gorillas baseball cap
+"tenvale silverbacks baseball cap"	"A black and silver baseball cap with the logo of the Tenvale Silverbacks football team on its front. Judging by the caps appearance, it's [']unisex['] and pretty [']sporty[']."	0	tenvale silverbacks baseball cap
 
 tenvale vulpines baseball cap is a grab object.
 tenvale vulpines baseball cap is equipment.
@@ -1221,20 +1221,20 @@ Descmod of tenvale vulpines baseball cap is "A red and white Tenvale Vulpines ba
 Slot of tenvale vulpines baseball cap is "head".
 Scent of tenvale vulpines baseball cap is "The cap smells like fabric and plastic".
 
-tenvale gorillas baseball cap is a grab object.
-tenvale gorillas baseball cap is equipment.
+tenvale silverbacks baseball cap is a grab object.
+tenvale silverbacks baseball cap is equipment.
 It is not temporary.
-Plural of tenvale gorillas baseball cap is false.
-Taur-compatible of tenvale gorillas baseball cap is true.
-Size of tenvale gorillas baseball cap is 3.
-AC of tenvale gorillas baseball cap is 0.
-Effectiveness of tenvale gorillas baseball cap is 0.
-GA of tenvale gorillas baseball cap is 0.
-Traits of tenvale gorillas baseball cap is {"sporty"}.
-Placement of tenvale gorillas baseball cap is "head".
-Descmod of tenvale gorillas baseball cap is "A black and silver Tenvale Gorillas baseball cap covers your head, providing some protection from the sun with its visor.".
-Slot of tenvale gorillas baseball cap is "head".
-Scent of tenvale gorillas baseball cap is "The cap smells like fabric and plastic".
+Plural of tenvale silverbacks baseball cap is false.
+Taur-compatible of tenvale silverbacks baseball cap is true.
+Size of tenvale silverbacks baseball cap is 3.
+AC of tenvale silverbacks baseball cap is 0.
+Effectiveness of tenvale silverbacks baseball cap is 0.
+GA of tenvale silverbacks baseball cap is 0.
+Traits of tenvale silverbacks baseball cap is {"sporty"}.
+Placement of tenvale silverbacks baseball cap is "head".
+Descmod of tenvale silverbacks baseball cap is "A black and silver Tenvale Silverbacks baseball cap covers your head, providing some protection from the sun with its visor.".
+Slot of tenvale silverbacks baseball cap is "head".
+Scent of tenvale silverbacks baseball cap is "The cap smells like fabric and plastic".
 
 Part 4 - Specialty Hats
 

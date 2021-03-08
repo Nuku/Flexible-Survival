@@ -65,6 +65,19 @@ Version 2 of Urik by Wahn begins here.
 [ 1992 (38) - He and his nephew Troy (19) kidnapped a bike cop                      ]
 [ 2008 (54) - Willingly transformed into an orc warrior in the Nanite Apocalypse    ]
 
+[ Traits for Urik in the Lair                                                       ]
+[ "Slut": free fuckhole                                                             ]
+[ "Oral Only Slut": free mouth fuckhole                                             ]
+[ "Breeder Only Slut": only the player and orc breeders may use/eat his ass         ]
+[ "Private_Breeder": only the player may use his ass                                ]
+
+[ Traits for Urik in the Library                                                    ]
+[ "Everything Goes": he may fuck or be fucked by other people                       ]
+[ "Stud": he may fuck other people                                                  ]
+[ "Private Breeder": he may not touch others                                        ]
+[ "Selective Breeding": discouraged from all sex that you don't plan for him        ]
+[ "Molestation Detox": discouraged from fight-sex                                   ]
+
 [ TODO: Add event where Urik finds the remains of a friend, who melted at the outbreak ]
 
 
@@ -163,7 +176,7 @@ AnalVirgin of Urik is false.
 PenileVirgin of Urik is false.
 SexuallyExperienced of Urik is true.
 TwistedCapacity of Urik is false. [Twisted Characters can take any penetration, no matter the size]
-Sterile of Urik is false. [steriles can't knock people up]
+Sterile of Urik is true. [for now - until there's proper tribe development coded]
 MainInfection of Urik is "Orc Warrior".
 Description of Urik is "[UrikDesc]".
 The icon of Urik is Figure of Urik_clothed_icon.
@@ -207,12 +220,15 @@ to say UrikTalkMenu:
 	say "     [bold type]What do you want to talk with Urik about?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Just chat";
-	now sortorder entry is 1;
-	now description entry is "Chat a bit with Urik";
-	[]
+	[
+	[TODO: write this scene]
+	[Scene: Urik got info about someone making bootleg beer; he wants to go loot them - but as the player and him arrive there, some creature is rampaging the beermaker's building, Urik and player can save them and get free beer in the future]
+	if "Bootleg Beer" is listed in Traits of Urik:
+		choose a blank row in table of fucking options;
+		now title entry is "Share a drink with him";
+		now sortorder entry is 1;
+		now description entry is "Hang out a bit with Urik";
+	]
 	choose a blank row in table of fucking options;
 	now title entry is "Your relationship";
 	now sortorder entry is 2;
@@ -224,35 +240,59 @@ to say UrikTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Let Urik tell you his story";
 	[]
+	if Loyalty of Urik > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him about his sexual preferences";
+		now sortorder entry is 4;
+		now description entry is "Let Urik tell you what he prefers";
+	[]
+	if "UrikTalk_Preferences" is listed in Traits of Urik:
+		choose a blank row in table of fucking options;
+		now title entry is "Talk with him about men";
+		now sortorder entry is 5;
+		now description entry is "Have a chat about what he's looking for in a man";
+	[]
+	if "UrikTalk_Preferences" is listed in Traits of Urik:
+		choose a blank row in table of fucking options;
+		now title entry is "Talk with him about other genders";
+		now sortorder entry is 6;
+		now description entry is "Discuss his views on trans-people";
+	[]
+	if "Breeding Interest" is listed in Traits of Urik: [TODO: Write this scene]
+		choose a blank row in table of fucking options;
+		now title entry is "Talk with him about breeding and impregnation";
+		now sortorder entry is 7;
+		now description entry is "Discuss his views on having offspring";
+	[]
 	if NonconList is not banned and PlayerFucked of Urik is true and "First Time Gentle" is listed in Traits of Urik or "First Time Rough" is listed in Traits of Urik:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him tell you the full story of that biker cop";
-		now sortorder entry is 5;
+		now sortorder entry is 8;
 		now description entry is "Ask Urik about a tale he mentioned before";
 	[]
 	if "Transformation Story" is listed in Traits of Urik:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask him about his past";
-		now sortorder entry is 6;
+		now sortorder entry is 9;
 		now description entry is "Let Urik tell you about himself before the nanite apocalypse";
 	[]
 	if "Bike Cop Story" is listed in Traits of Urik or "Urik's Past" is listed in Traits of Urik:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask him about his sister";
-		now sortorder entry is 7;
+		now sortorder entry is 10;
 		now description entry is "Let Urik tell you about his sister, and what went on with her";
 	[]
 	if "Urik's Past" is listed in Traits of Urik:
 		choose a blank row in table of fucking options;
-		now title entry is "Ask him about Declan"; [TODO: write this scene]
-		now sortorder entry is 8;
+		now title entry is "Ask him about Declan";
+		now sortorder entry is 11;
 		now description entry is "Carefully ask him about his old friend";
 	[]
 	[
 	if "Yoga" is listed in Traits of Urik:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask him about doing yoga"; [TODO: write this scene]
-		now sortorder entry is 9;
+		now sortorder entry is 12;
 		now description entry is "Bring up that he seems an odd person to be doing yoga";
 	[]
 	if UrikEricInteraction > 0 and Urik is booked:
@@ -261,11 +301,17 @@ to say UrikTalkMenu:
 		now sortorder entry is 20;
 		now description entry is "Chat with your orc about Eric";
 	]
-	if Stamina of Spike > 0 and Urik is booked:
+	if (Stamina of Spike > 0 or Dexterity of Spike > 0): [Stamina of Spike = Interaction with Controlled Urik; Dexterity = Interaction with Friend Urik]
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about Spike";
 		now sortorder entry is 21;
 		now description entry is "Chat with your orc about Spike";
+	[]
+	if HP of Gregory > 0 and HP of Gregory < 90 and Urik is booked:
+		choose a blank row in table of fucking options;
+		now title entry is "Talk about Gregory";
+		now sortorder entry is 22;
+		now description entry is "Chat with your orc about Gregory";
 	[]
 	if orc supersized breeder is not tamed and Urik is booked and PlayerFriended of Urik is true and Loyalty of Urik > 5 and Loyalty of Urik < 80:
 		choose a blank row in table of fucking options;
@@ -273,7 +319,7 @@ to say UrikTalkMenu:
 		now sortorder entry is 70;
 		now description entry is "Offer Urik the chance to be your combat companion";
 	[]
-	if Perception of Urik is 1 or Perception of Urik is 2:
+	if Perception of Urik is 1 or Perception of Urik is 2 or Perception of Urik is 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Take him up on the looting trip he suggested";
 		now sortorder entry is 71;
@@ -332,6 +378,12 @@ to say UrikTalkMenu:
 					say "[UrikTalk2]";
 				else if nam is "Ask how he became an orc":
 					say "[UrikTalk6]";
+				else if nam is "Ask him about his sexual preferences":
+					say "[UrikTalk_Preferences]";
+				else if nam is "Talk with him about men":
+					say "[UrikTalk_Guys]";
+				else if nam is "Talk with him about women":
+					say "[UrikTalk_Trans]";
 				else if nam is "Let him tell you the full story of that biker cop":
 					say "[UrikTalk_BikerCop]";
 				else if nam is "Ask him about his past":
@@ -344,6 +396,10 @@ to say UrikTalkMenu:
 					say "[UrikTalk4]";
 				else if nam is "Talk about Spike":
 					say "[UrikTalk5]";
+				else if nam is "Talk about Gregory":
+					say "[UrikTalk_Gregory]";
+					if "GregoryPlans_Offlimits" is not listed in Traits of Urik and "GregoryPlans_Recruit" is not listed in Traits of Urik and "GregoryPlans_Private Slut" is not listed in Traits of Urik and "GregoryPlans_Couple Slut" is not listed in Traits of Urik: [no choice made yet]
+						now DoneTalking is true;
 				else if nam is "Take him up on the looting trip he suggested":
 					say "[UrikTalk_Looting]";
 					now DoneTalking is true;
@@ -371,7 +427,7 @@ to say UrikTalkMenu:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
-to say UrikTalk1: [chatting]
+to say UrikTalk1: [chatting over a drink]
 	say "     Urik says, '[one of]I still can't believe Boghrim did this to me. And all over that stupid little breeder...'[or]I'd never have believed how good it feels to be fucked before.'[at random]"; [more to be added]
 
 to say UrikTalk2: [Relationship]
@@ -400,6 +456,33 @@ to say UrikTalk6: [how he transformed]
 	if "Transformation Story" is not listed in Traits of Urik:
 		add "Transformation Story" to Traits of Urik;
 	now lastfuck of Urik is turns + 10;
+
+to say UrikTalk_Preferences:
+	say "     As you ask him about his sexual interests, Urik lets out a grunt and focuses his gaze on you. 'Well, shit. That'd have been a much easier answer just a little while ago. Been a dom and top for the last thirty years! Hell, even when Dec and me tried experimenting a bit once or twice, we kinda just drifted back to him under me. Fuuuck, I can't even put into words just how amazing he felt around my cock, clutching onto me and making out while I pounded his brains out.' Blowing out his breath and running both hands through his long hair, Urik closes his eyes for a few seconds, seemingly recalling a precious memory of his past life. When he finally shakes off the thought and pays attention to you once more, he scratches his bearded chin. 'As for now, I can't deny that I fuckin['] love taking dicks myself too. It's kinda like Toven flipped a switch or something, when Boghrim awarded him that revenge-fuck. Maybe it's the whole being an orc thing, or karma winding up to give me a good kicking.'";
+	say "     Shrugging, the green-skinned brute adds, 'Not that I don't still like railing an attractive hunk's tight behind myself. So, guess that makes me a vers, eh?' Nodding, you direct the discussion a little bit towards the orc's thoughts on other genders. Urik grunts and waves a hand in the air, 'Um, okay... well, I don't hate women or anything. Just never had much interest in boobs, I guess. Shit, who knows why, eh? For all I know, it could be because mom went all 'modern mother of the 50's' and bottle fed me. Pfft. Besides, I really can't stand the bitchyness and self-important arrogance of some of em, acting like men should just fall to their knees and worship them when they show some skin[if Player is not female or PlayerControlled of Urik is true].' [else]Thankfully, you're not one of those, of course.' [end if]He lets out a snort and shrugs. 'I did have my dick in a pussy or two, way back when I was in the army. In the eighties, when you were out with your squad-mates and a drunken night ended in a brothel, you didn't just say 'no thanks' and not take your turn - that make you look gay, eh?' The way Urik says the word in a serious tone tells you clearly that this wasn't a category one wanted to be openly classified in, not in that time, and especially not in the army.";
+	WaitLineBreak;
+	say "     Waving a hand in the air as if to clear away the bygone past and its implied homophobia, the orc goes on to say, 'Didn't feel that bad, I guess. Just... kinda loose, you know, compared to a sweet tight asshole. Maybe that was because it was a fucked-out whore, who am I to say. I can tell you that I did have my eye on the naked bodies of my mates when I dropped loads in the bitches though. And that was okay, because I was clearly 'no homo', not with my dick wet with pussy juice.' Saying the last sentence with a roll of his eyes, Urik adds, 'Hell, I don't think any of them realized that most of the goop clinging to my cock was their own cum, hah! Never went first, you see - watching their asses pump up and down was a much nicer thing to watch for a start.' The two of you chat about a few more anecdotes about Urik's sexual encounters in the army - which apparently were plentiful and overwhelmingly gay, just with all of them on the down low.";
+	say "     As your discussion is slowly petering off a little while later, you think of one more thing to ask Urik, which is what he thinks of the 'other' genders now out and about in the city. There's a lot more than just men and women around after all. He looks at you with his eyebrows scrunching together in thought and replies, 'Er... Hmh. Man, things really got complicated fast when all this weird shit kicked off, eh? Fuck, I don't know. Guess it depends on the person. Though slapping a cock on some annoying bitch won't make her any easier to stand, that I'm sure of!'";
+	if "Preferences Talk" is not listed in Traits of Urik:
+		add "Preferences Talk" to Traits of Urik;
+
+to say UrikTalk_Guys: [chat with Urik about men]
+	say "     Asking Urik about his preferences in men, the orc let's out a chuckle and grins, rubbing his large hands together. 'Well, I love proper, manly men. You know, broad shoulders, muscles, square jaw - and maybe with a nice beard on em.' Almost demonstratively, he brushes his own facial hair with his thumb, then smiles broadly, baring his tusks. 'Most guys like that think they're tops, hah! Those are the absolute best to butt heads with, and then make your bitch after showing them the error of their ways! Some of those guys might be ready to hand out punches if you tell them to spread their cheeks like good little boys, but that's just what you gotta tough out when taking them down. God, hearing a formerly virgin muscle-stud whimper and beg for me to fuck him harder is always worth some bruises in my book!'";
+	say "     The orc gets a far-away expression on his face at that point, holding out his right arm in front of his broad, muscular chest and looking down at it as he makes a fist, then relaxes it again. 'You know, that was one of the things that most annoyed me about it. Getting old, bah! Trained bitches like ";
+	if "Bike Cop Story" is not listed in Traits of Urik:
+		say "this one dude I know ";
+	else:
+		say "Pat ";
+	say "are great and all, but sometimes I really itched to try breaking in a new one. But there's only so far you can go with experience and guile before a punk of a young buck is faster than you, stronger, or trained in some kung-fu shit.' Chuckling and shaking his head, Urik makes a throwing-away gesture and shrugs, before turning a bit more serious with the next thing he adds. 'Turned 54 in January, you know. Damn, I was just about ready to try out what my buddy Quentin kept suggesting. Picking up a spunky jock with daddy issues and molding him into a proper muscleboy. QT always praised his boytoy and I gotta say the kid has a sweet ass. Hah, his [']daddy['] dropped him off in front of my door as a present for a day on my birthday, wearing just a leather jock and a leash!' Scratching his neck, Urik shrugs. 'Wonder if I'd have ended up with a boy like him at my beck and call, if this whole nanite thing hadn't kicked off...'";
+	TraitGain "Daddy Training Interest" for Urik;
+
+to say UrikTalk_Trans: [chat with Urik about women/other]
+	if "Trans Appreciation" is not listed in Traits of Urik: [he's got no real interest male herms and FTM yet]
+		say "     Asking Urik about his views on trans-people and hermaphrodites, the orc shrugs. 'Well, I can tell you that I don't really see a point in boobs and stuff. They're just some wobbly bumps on women's chests, shaken about like that's something special. Now a proper pec - that you gotta work for!' Demonstratively slapping his hand on his firmly muscled chest, he gives the muscle a squeeze and flicks his fingertip over his own nipple. 'Nips are nice, but other than that, I'd take a hard body any time over saggy milkbags.' Seeing the orc's expression, you don't think he could be brought to see breasts in another way anytime soon. Wanting to redirect the discussion a little after that, you ask Urik about male-herms and trans-men instead. The disapproving expression from before is still on his face, if somewhat less pronounced - at least until you bring up that he should imagine a nice, manly body first, then think of the somewhat unconventional arrangements at the crotch.";
+		say "     'Mh - actually, that would be... fine. A hunky stud, with a self-lubing bonus hole I guess,' the orc says, scratching his chin thoughtfully. Tapping a finger on his jawline, he seems to mull the image over for a little while, before he finally adds, 'Or, yeah - why not just a slit either. Not like a bottom needs a big dick anyways, eh? I think I could work with a breeder boy like that. Self-lubing and convenient too, hah! As long as he's tight and all.' The seed your little discussion has planted in the orc's head seems so sprout at that point, as he has to adjust his cock a little, with the huge dick filling out a bit. 'Pushing into a nice muscleboy breeder like that, hearing him moan for more of my dick... yeah, that'd be something! But, you know, proper moans, no high-pitched harpy shrieks or anything like that!' You and Urik talk a little more about male-herms and FTM trans-people. After your little thought-experiment, it appears that the orc has gained some new interest there, at least in theory.";
+		TraitGain "Trans Appreciation" for Urik;
+	else:
+		say "     Bringing up herms and trans-people again, you see a smirk appear on Urik's face. 'As long as they're properly manly, I don't think I'd have a problem with [']em. I mean, it's a bonus hole to try, and if all fails, there's always ass.' Tracing the shape of a man in the air and wiggling his fingers as if he was groping the guy's ass, the orc winks a you and nods. 'The things that annoy me about women really are the bitchyness, shrill voices and trying to wave boobs in my face, as if that's supposed to hypnotize me or some shit.' You and Urik talk a little more about male-herms and FTM trans-people, with the orc clearly being open to interactions on that front, much more than with regular females at least.";
 
 to say UrikTalk_BikerCop: [storytime with Urik]
 	if "Bike Cop Story" is not listed in Traits of Urik:
@@ -443,7 +526,7 @@ to say UrikTalk_Past:
 	say "Then Urik follows up with a serious look, 'No fucking jokes about the name, alright? Heard em all, and I was named for my gramps, not some stupid tea! Anyways, had a mom, dad, little sister, all that good shit. Dad took on a job in Detroit in [']58, welding cars. Wasn't too bad a place for growing up in those days, I guess. Before the rot set in.'";
 	say "     Grimacing, Urik continues, 'Things went downhill slowly, bit by bit. Kinda obvious in hindsight, not so much if you're living though the shit. It's like that story with the idiot frog sitting in a pot of water until it boils. The start I guess was when mom left when I was seven. The early seventies were when crap hit the fan eventually. Hanging out with some assholes, my stupid sister got herself hung on crack, and pregnant at sixteen. Meanwhile, I finished high school and took on an apprenticeship in dad's factory in [']73 - with the fucking place being shut down in [']74! Bah!' Making a throwing-away gesture, Urik growls at the memory, then shakes his head to clear it. 'Joined the army in [']75, as a way out. Engineering corps. Ups and downs there, going through boot camp and all, but then getting in a good company, you know. Stayed on for a bunch of years, even through a war. Not that anyone remembers that one these days, as it was a 'small' one. Sure didn't feel like that small, being shot at while storming the beach.'";
 	WaitLineBreak;
-	say "     Your orcish companion falls silent for a little while, mulling things over with a bittersweet smile on his lips. 'Hit things off with a guy right there, actually. On the island I mean, him being a marine - but I didn't hold that against him. Hah, had to save Declan from being shanked by a hooker and her pimp in an alley. In the days after the fighting, all of us didn't have too much to do, so the local [']talent['] were making a killing - but instead of getting his dick wet, they tried to do in Dec and just roll him for everything he had.' With a grunt, shaking his head about the situation, Urik continues, 'Dragging a guy from an alley with his arm over your shoulders in such a situation sure makes fast friends. Started hanging out together, shared drinks, girls, then a bed.' Grunting and letting his hand stroke over the tattoo on his right forearm, Urik's eyes are filled with a far-away look for a good minute or so before he focuses back on you. 'Gotta understand how different the time was, back in 1983. I mean, you didn't just let it all hang out like people do these days, especially in this city here on the west coast. So, no kissy-kissy in public, but god, I boned Dec every chance I got! On the down low, of course.'";
+	say "     Your orcish companion falls silent for a little while, mulling things over with a bittersweet smile on his lips. 'Hit things off with a guy right there, actually. On the island I mean, him being a marine - but I didn't hold that against him. Hah, had to save Declan from being shanked by a hooker and her pimp in an alley. In the days after the fighting, all of us didn't have too much to do, so the local [']talent['] were making a killing - but instead of getting his dick wet, they tried to do in Dec and just roll him for everything he had.' With a grunt, shaking his head about the situation, Urik continues, 'Dragging a guy from an alley with his arm over your shoulders in such a situation sure makes fast friends. Started hanging out together, shared drinks, girls, everything. God, he and I just clicked. I could talk about anything with Dec.' Grunting and letting his hand stroke over the tattoo on his right forearm, Urik's eyes are filled with a far-away look for a good minute or so before he focuses back on you. 'Gotta understand how different the time was, back in 1983. I mean, you didn't just let it all hang out like people do these days, especially in this city here on the west coast. So, no kissy-kissy in public, but god, I boned Dec every chance I got! On the down low, of course.'";
 	say "     Holding out his arms side by side to show you the detailed pattern tattooed on both, Urik says, 'He actually gave me these in [']84 while he was on leave. By that time I'd gotten out of the army, finally having had enough after that war, and I moved to the west coast to be close to Dec's base. Took on a job in an auto shop, had my man close by, good year that was - 1984. Met his bro Isaiah, a tough as nails biker dude known on the streets as Buffalo. He knew what was going on, you know, but was okay with it. Sure, he teased Dec about it when it was just us, but overall, [']Saiah was on our side, and his gang-buddies followed along. Heck, had some bar fights with some of them in support even without Dec's bro there to rouse em, when this idiot or that was throwing gay slurs.' Taking a breath deep breath, Urik continues, 'Hung out some with the bikers, socially and soon a bunch of [']em coming in to the shop to have some serious talk about their machines. Rode the highways myself quite a bit that summer, up and down the Mother Road. Hell of a shame they took it off the highway map the next year.'";
 	WaitLineBreak;
 	say "     At that point, Urik's demeanor becomes stony and hard, with his next words having a broken and rough tone to them. '11th of February, 1985. 11:04 PM. That's when Declan was shot, in the back, while taking a leak in the alley beside the bar we were in. Punk who did it thought he was [']Saiah, wanted to make a name for himself gunning him down. Guess one dude looks like another in the dark, eh? Even if one is a lean marine, and the other built like a brick house!' Looking to the side, as if to direct the hatred in his gaze to the past instead of at you, Urik adds in a cold tone, 'Took us three days, and crippling two of his buds for life, to run him down. In the end, the pissant fled. Made it almost to the state line of Arizona, but with me, [']Saiah, and all the rest of the gang covering the routes he could take, that didn't work out so well for him. Left quite a long red streak along Route 66, before the last pieces of him fell of the chain.'";
@@ -477,76 +560,228 @@ to say UrikTalk4: [talk about Eric]
 		say "     After being lost in his thoughts for a few seconds, Urik focuses back on you a moment later, then says, 'Oh, and there's another funny thing... I kinda end up hanging out with Eric quite often, even without having sex. Weird, eh? It's really fun, even if he just wants to read books together or... do some other shit together.'";
 
 to say UrikTalk5: [talk about Spike]
-	if Stamina of Spike is 1: [Urik goaded Spike intro training]
-		say "     As you bring up Spike, Urik chuckles under his breath. 'Your little slut-puppy? What about him?' Looking at him with a raised eyebrow prompts the orc to roll his pear-green eyes and waves a large hand, then adds, 'I mean your 'companion'. Don't you worry, I won't just grab him and bend him over to show him his inner bitch. Wouldn't do to have a breeder pound your pet, yadda yadda.' With a shrug of his broad, muscular shoulders, Urik lets that part of the topic drop, moving on to saying, 'If you're serious about using the boy for something more than a bedwarmer, I'll have to train him a bit though. You don't wanna be embarrassed by a weak-ass puppy following you around, do you? What is he supposed to do? Yap at people to distract them?'";
-		LineBreak;
-		say "     [bold type]What do you reply to the orc?[roman type][line break]";
-		LineBreak;
-		say "     [link](1)[as]1[end link] - You like having Spike as your companion, though he could use some more training. Urik should go ahead with the workouts.";
-		say "     [link](2)[as]2[end link] - Not everyone needs massive muscles to be a good fighter. Spike's quick, that's something too. Urik should stop prodding him to be something he's not.";
-		say "     [link](3)[as]3[end link] - Order Urik to leave the young man in peace. The orc's here as your fucktoy and should act like it.";
-		now calcnumber is 0;
-		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
-			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
+	if PlayerControlled of Urik is true:
+		if Stamina of Spike is 1: [Urik goaded Spike intro training]
+			say "     As you bring up Spike, Urik chuckles under his breath. 'Your little slut-puppy? What about him?' Looking at him with a raised eyebrow prompts the orc to roll his pear-green eyes and waves a large hand, then adds, 'I mean your 'companion'. Don't you worry, I won't just grab him and bend him over to show him his inner bitch. Wouldn't do to have a breeder pound your pet, yadda yadda.' With a shrug of his broad, muscular shoulders, Urik lets that part of the topic drop, moving on to saying, 'If you're serious about using the boy for something more than a bedwarmer, I'll have to train him a bit though. You don't wanna be embarrassed by a weak-ass puppy following you around, do you? What is he supposed to do? Yap at people to distract them?'";
+			LineBreak;
+			say "     [bold type]What do you reply to the orc?[roman type][line break]";
+			LineBreak;
+			say "     [link](1)[as]1[end link] - You like having Spike as your companion, though he could use some more training. Urik should go ahead with the workouts.";
+			say "     [link](2)[as]2[end link] - Not everyone needs massive muscles to be a good fighter. Spike's quick, that's something too. Urik should stop prodding him to be something he's not.";
+			say "     [link](3)[as]3[end link] - Order Urik to leave the young man in peace. The orc's here as your fucktoy and should act like it.";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					break;
+				else:
+					say "Invalid choice. Type [link]1[end link] to encourage training, [link]2[end link] to discourage training or [link]3[end link] to put the orc in his place.";
+			if calcnumber is 1:
+				LineBreak;
+				say "     As you tell Urik that he may proceed with working out together with Spike, the big male grins broadly and replies, 'Knew you'd see it my way, [UrikPlayerAddress]! Just you wait, I'll help the little bitch reach his full potential!'";
+			else if calcnumber is 2:
+				LineBreak;
+				say "     Urik snorts at your mention of other combat tactics. 'You mean dodging and shit? Yeah, that'll last right until he's smacked aside by the one hit he can't dodge? And where will you be then, huh?' Clearing your throat to remind him that you're the master and Urik himself now has the role of pleasing you, the orc makes a throwing-away gesture and replies, 'Bah, fine. I'll tell the little bitch that training's cancelled next time I see him. Would probably have been too weak in the end anyways.'";
+				now Stamina of Spike is 100; [training stopped - and Urik won't be nice about giving the news ]
+			else if calcnumber is 3:
+				LineBreak;
+				say "     Stepping up to the big orc, you take his jaw in your hand and keep his head in a firm grip as you look him into the pear-green eyes. Doing your best to project dominance, you then ask the orc who and what he is. After a little grumble, Urik replies, 'I'm an orc breeder. Your breeder, [UrikPlayerAddress]. But still, the - umnph!' The further words he wanted to say after his admission are cut short as you push two fingers into his mouth and tell him to suck on them, like a good little cumslut. He obeys immediately, with the usual built-in sexual submissiveness to authority figures that is typical of an orc breeder. Planting your other hand on his crotch and giving the orc's balls a tight squeeze, you tell him in no uncertain terms that he should keep his hands off Spike and not bother him again. When you let go of Urik eventually, he blows out his breath and finally says, 'I'll tell the little bitch that training's cancelled next time I see him. Would probably have been too weak in the end anyways.'";
+				now Stamina of Spike is 100; [training stopped - and Urik won't be nice about giving the news ]
+		else if Stamina of Spike is 2 or Stamina of Spike is 3: [Spike got a 'protein shake']
+			say "     As you bring up Spike, Urik chuckles under his breath. 'Your little slut-puppy? What about him?' Looking at him with a raised eyebrow prompts the orc to roll his pear-green eyes and waves a large hand, then adds, 'I mean your 'companion'. Don't you worry, I won't just grab him and bend him over to show him his inner bitch. Wouldn't do to have a breeder pound your pet, yadda yadda.' With a shrug of his broad, muscular shoulders, Urik lets that part of the topic drop, moving on to saying, 'At least the boy's trying in our training sessions. He's still far too weak, maybe as strong as a half-grown orcling, but there's some determination in that puppy. I think given time, we can make something out of him!'";
+			LineBreak;
+			say "     [bold type]What do you reply to the orc?[roman type][line break]";
+			LineBreak;
+			say "     [link](1)[as]1[end link] - Commend him about his service in training Spike.";
+			say "     [link](2)[as]2[end link] - Ask about what exactly is in that 'protein shake' he gave Spike.";
+			say "     [link](3)[as]3[end link] - Order Urik to leave the young man in peace. The orc's here as your fucktoy and should act like it.";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					break;
+				else:
+					say "Invalid choice. Type [link]1[end link] to encourage training, [link]2[end link] to ask about the shake or [link]3[end link] to put the orc in his place.";
+			if calcnumber is 1:
+				LineBreak;
+				say "     As you tell Urik that he may proceed with working out together with Spike, the big male grins broadly and replies, 'Knew you'd see it my way, [UrikPlayerAddress]! Just you wait, I'll help the little bitch reach his full potential!'";
+			else if calcnumber is 2:
+				LineBreak;
+				say "     As you pose a question about what exactly he did feed Spike, Urik clears his throat and says, 'It's all good stuff in there, just what the boy needs. Protein powder, clean water and so on, you know.' Raising an eyebrow and giving him a pointed look, you wait for him to continue, at which point Urik rubs the back of his neck. '...and maybe just, er, half a load of my cum. Thereabouts,' he adds in a casual tone of voice. 'Hey, why are you looking at me like that?! It's good for him, you know. What do you think makes orclings strong and grow so much right away once they're 'out of the pouch'?' As a reminder that his all-male species has a peculiar way of reproduction, the orc gives his own buttock a slap, drawing your attention to it. 'It didn't look like he's turning green or getting tusks, so you don't have to worry about Spike becoming an orc. It'll just make him build some mass quicker, alright? And maybe become a little bit horny.'";
+				say "     The last sentence Urik said fairly quietly, and you read between the lines to realize that being dosed with Urik's cum will make Spike grow muscle mass, but also push the doberman's arousal, with the possibility of making him quite plyable and hungry for more. Enough of it will likely put him in a blissed-out state of drunken lust. [bold type]Given this realization, what do you want to do about the matter?[roman type][line break]";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Let Urik continue to hand out his special shakes.";
+				say "     ([link]N[as]n[end link]) - Enough of this. Forbid the orc to dose Spike!";
+				if Player consents:
+					LineBreak;
+					say "     Seeing that you're cool about what he's been doing with Spike, Urik puts on a rather relieves smile. 'I looted the powder from a top fitness studio not to far away. With that stuff and a little orc oomph, your puppyboy will be a tough guy for sure! I'll make something out of him.";
+				else:
+					LineBreak;
+					say "     As you categorically forbid the orc to feed Spike any more of those 'special' shakes, the orc grumbles and sullenly looks to the side. 'Well, that'll shoot the progress for training him in the foot for sure, [UrikPlayerAddress]. I can keep training him, but without the support, that'll take ages! You really don't wanna have a puppy-boy that's worth something in a fight? Your call, I guess.'";
+					now Stamina of Spike is 51;
+		else if Stamina of Spike is 4 or Stamina of Spike is 5 or Stamina of Spike is 6:
+			say "     As you bring up Spike, Urik chuckles under his breath. 'Your little slut-puppy? What about him?' Looking at him with a raised eyebrow prompts the orc to roll his pear-green eyes and waves a large hand, then adds, 'I mean your 'companion'. Don't you worry, I won't just grab him and bend him over to show him his inner bitch. Wouldn't do to have a breeder pound your pet, yadda yadda.' With a shrug of his broad, muscular shoulders, Urik lets that part of the topic drop, moving on to saying, 'At least the boy's trying in our training sessions. He's still far too weak, maybe as strong as a half-grown orcling, but there's some determination in that puppy. I think given time, we can make something out of him! You should see him chug down the protein shakes, they'll help a bunch too.'";
+		else if Stamina of Spike is 50: [Spike won't accept any more drinks]
+			say "     As you bring up Spike, Urik chuckles under his breath. 'Your little slut-puppy? What about him?' Looking at him with a raised eyebrow prompts the orc to roll his pear-green eyes and waves a large hand, then adds, 'I mean your 'companion'. Don't you worry, I won't just grab him and bend him over to show him his inner bitch. Wouldn't do to have a breeder pound your pet, yadda yadda.' With a shrug of his broad, muscular shoulders, Urik lets that part of the topic drop, moving on to saying, 'At least the boy's trying in our training sessions. He's still far too weak, maybe as strong as a half-grown orcling, but there's some determination in that puppy. I think given time, we can make something out of him!'";
+			say "     Informing the orc that you've told Spike about the possibility of there being cum in his shakes, the orc looks at you somewhat sullenly. 'Aw, what did you do that for? He needs his things, err - nutrients! So what if I put half a load of my cum into it? What do you think makes orclings strong and grow so much right away once they're 'out of the pouch'?' As a reminder that his all-male species has a peculiar way of reproduction, the orc gives his own buttock a slap, drawing your attention to it. 'The squeamish little bitch won't take no shakes no more, I bet! I can keep training him, but without the support, that'll take ages! You really don't wanna have a puppy-boy that's worth something in a fight? Your call, I guess.'";
+			now Stamina of Spike is 51;
+		else if Stamina of Spike > 50 and Stamina of Spike < 100: [Urik won't offer any more shakes]
+			say "     As you bring up Spike, Urik sighs. 'I'm still training your little slut-puppy, but the progress is really slow. Should have let me keep giving him shakes. They were good for him!' With an annoyed grunt, he waves off the topic, not wanting to say any more about it.";
+		else if Stamina of Spike is 100: [training ended]
+			say "     As you bring up Spike, Urik looks at you sullenly and grumbles. 'I won't do anything with your little slut-puppy, fine?! Leave me alone about him.'";
+	else if PlayerFriended of Urik is true:
+		if Dexterity of Spike < 100:
+			say "     As you bring up Spike, Urik lets out a chuckle [if Spike is visible]and glances over to the dobie[end if]. 'He's got spunk, I gotta give [if MaxHP of Spike is 1]your little doggie son that[else]that to the dog-boy[end if]. Of course, that'll get him into a bunch of trouble, if he's not ready to back up his big words.' [if Spike is visible]As he hears this, Spike lets out a bark, then calls out in a joking tone, 'Up yours, old man!' Urik chuckles and flips him the bird. [end if]Bringing his hand up to stroke the hair of his beard, the orc continues, 'But don't you worry, I'm gonna make something out of that kid! He'll be shredded in no time, hah! ";
+			if "Spike_Player_Son" is listed in Traits of Urik: [Urik knows Spike is the player's son]
+				say "Become a proper heir to the tribe and all!' [if Spike is visible]As he hears this, Spike comes wandering over, tail wagging behind his back. Seems like he likes where Urik is going with what he's saying, and the young man soon joins in with you two, talking a little about training and getting more muscular. [end if][line break]";
 			else:
-				say "Invalid choice. Type [link]1[end link] to encourage training, [link]2[end link] to discourage training or [link]3[end link] to put the orc in his place.";
-		if calcnumber is 1:
-			LineBreak;
-			say "     As you tell Urik that he may proceed with working out together with Spike, the big male grins broadly and replies, 'Knew you'd see it my way, [UrikPlayerAddress]! Just you wait, I'll help the little bitch reach his full potential!'";
-		else if calcnumber is 2:
-			LineBreak;
-			say "     Urik snorts at your mention of other combat tactics. 'You mean dodging and shit? Yeah, that'll last right until he's smacked aside by the one hit he can't dodge? And where will you be then, huh?' Clearing your throat to remind him that you're the master and Urik himself now has the role of pleasing you, the orc makes a throwing-away gesture and replies, 'Bah, fine. I'll tell the little bitch that training's cancelled next time I see him. Would probably have been too weak in the end anyways.'";
-			now Stamina of Spike is 100; [training stopped - and Urik won't be nice about giving the news ]
-		else if calcnumber is 3:
-			LineBreak;
-			say "     Stepping up to the big orc, you take his jaw in your hand and keep his head in a firm grip as you look him into the pear-green eyes. Doing your best to project dominance, you then ask the orc who and what he is. After a little grumble, Urik replies, 'I'm an orc breeder. Your breeder, [UrikPlayerAddress]. But still, the - umnph!' The further words he wanted to say after his admission are cut short as you push two fingers into his mouth and tell him to suck on them, like a good little cumslut. He obeys immediately, with the usual built-in sexual submissiveness to authority figures that is typical of an orc breeder. Planting your other hand on his crotch and giving the orc's balls a tight squeeze, you tell him in no uncertain terms that he should keep his hands off Spike and not bother him again. When you let go of Urik eventually, he blows out his breath and finally says, 'I'll tell the little bitch that training's cancelled next time I see him. Would probably have been too weak in the end anyways.'";
-			now Stamina of Spike is 100; [training stopped - and Urik won't be nice about giving the news ]
-	else if Stamina of Spike is 2 or Stamina of Spike is 3: [Spike got a 'protein shake']
-		say "     As you bring up Spike, Urik chuckles under his breath. 'Your little slut-puppy? What about him?' Looking at him with a raised eyebrow prompts the orc to roll his pear-green eyes and waves a large hand, then adds, 'I mean your 'companion'. Don't you worry, I won't just grab him and bend him over to show him his inner bitch. Wouldn't do to have a breeder pound your pet, yadda yadda.' With a shrug of his broad, muscular shoulders, Urik lets that part of the topic drop, moving on to saying, 'At least the boy's trying in our training sessions. He's still far too weak, maybe as strong as a half-grown orcling, but there's some determination in that puppy. I think given time, we can make something out of him!'";
-		LineBreak;
-		say "     [bold type]What do you reply to the orc?[roman type][line break]";
-		LineBreak;
-		say "     [link](1)[as]1[end link] - Commend him about his service in training Spike.";
-		say "     [link](2)[as]2[end link] - Ask about what exactly is in that 'protein shake' he gave Spike.";
-		say "     [link](3)[as]3[end link] - Order Urik to leave the young man in peace. The orc's here as your fucktoy and should act like it.";
-		now calcnumber is 0;
-		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
-			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
-				say "Invalid choice. Type [link]1[end link] to encourage training, [link]2[end link] to ask about the shake or [link]3[end link] to put the orc in his place.";
-		if calcnumber is 1:
-			LineBreak;
-			say "     As you tell Urik that he may proceed with working out together with Spike, the big male grins broadly and replies, 'Knew you'd see it my way, [UrikPlayerAddress]! Just you wait, I'll help the little bitch reach his full potential!'";
-		else if calcnumber is 2:
-			LineBreak;
-			say "     As you pose a question about what exactly he did feed Spike, Urik clears his throat and says, 'It's all good stuff in there, just what the boy needs. Protein powder, clean water and so on, you know.' Raising an eyebrow and giving him a pointed look, you wait for him to continue, at which point Urik rubs the back of his neck. '...and maybe just, er, half a load of my cum. Thereabouts,' he adds in a casual tone of voice. 'Hey, why are you looking at me like that?! It's good for him, you know. What do you think makes orclings strong and grow so much right away once they're 'out of the pouch'?' As a reminder that his all-male species has a peculiar way of reproduction, the orc gives his own buttock a slap, drawing your attention to it. 'It didn't look like he's turning green or getting tusks, so you don't have to worry about Spike becoming an orc. It'll just make him build some mass quicker, alright? And maybe become a little bit horny.'";
-			say "     The last sentence Urik said fairly quietly, and you read between the lines to realize that being dosed with Urik's cum will make Spike grow muscle mass, but also push the doberman's arousal, with the possibility of making him quite plyable and hungry for more. Enough of it will likely put him in a blissed-out state of drunken lust. [bold type]Given this realization, what do you want to do about the matter?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Let Urik continue to hand out his special shakes.";
-			say "     ([link]N[as]n[end link]) - Enough of this. Forbid the orc to dose Spike!";
+				say "Just imagine what a hot little package he'll be then!' [if Spike is visible]'I'm already hotter than you can handle!' Spike calls over and gives a raspberry at the towering orc. [end if]";
+				if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to touch anyone]
+					say "After a momentary pause, as if remembering that his words might be misinterpreted, Urik steps up and places one of his large hands on your shoulder. He meets your gaze with his eyes, holding it for a second before he adds quietly, 'I'm not planning on doing anything but train him though, you understand? Unless you want to bring him into a three-way[if MaxHP of Spike is 1]. Some family fun-time, if you know what I mean!' [else].'[end if] His honesty is clearly apparent in the orc's words and you put your hand on his, smiling and nodding.";
+				else if "Selective Breeding" is listed in Traits of Urik: [player decides whom he can fuck]
+					say "After a momentary pause, Urik clears his throat, then scratches the back of his neck before saying quietly, 'Just saying, I like the pupper. He's a very good boy.' Raising his eyebrow, he adds, 'If he's into it, or you gave him the same deal as me, picking who can breed whom... let me just say that you've got a volunteer to make some half-orc doggos. Your decision, of course. I'm not planning on doing anything but train him without your say, you understand?' His honesty is clearly apparent in the orc's words and you smile and nod as you register his opinion on the matter.";
+				else if "Molestation Detox" is listed in Traits of Urik: [gave Urik a time-out for forcing himself on others]
+					say "After a momentary pause, Urik suddenly blushes, apparently remembering the rules you gave him and how his words might be misinterpreted. He raises his hands in a pacifying gesture and quickly adds in a somewhat quiet tone, 'Not that I'm planning to do anything! Learned that lesson the hard way, didn't I?! I'm not planning on doing anything but train him, unless he asks me to[if MaxHP of Spike is 1] and you're fine with that[end if], alright [UrikPlayerAddress]?' His honesty is clearly apparent in the orc's words and you smile and nod as you register his pledge of good behavior.";
+				else if "Stud" is listed in Traits of Urik or "Everything Goes" is listed in Traits of Urik: [he may fuck others]
+					if "Spike_Player_Son" is listed in Traits of Urik: [Urik knows Spike is the player's son]
+						say "After a momentary pause, during which you can see a somewhat lewd smirk cross Urik's face, the orc clears his throat and adds in a somewhat quiet tone, 'Though getting him ready for fighting really is the main priority. We need some more strong men to support the tribe! If he becomes a proper muscleboy, I'd be fine with carrying his half-orc doggos. I like the pupper, he's a very good boy.' Raising his eyebrow, Urik adds, 'Really love that in this tribe, a guy can be a warrior and a breeder! Opens up all new possibilities, hah!' Content about the fact that Urik is accepting that there needs to be consent between tribesmembers, even if you're fine with him sleeping around, you nod and pat his arm.";
+					else:
+						say "After a momentary pause, during which you can see a somewhat lewd smirk cross Urik's face, the orc clears his throat and adds in a somewhat quiet tone, 'Though getting him ready for fighting really is the main priority. We need some more strong men to support the tribe! Not that knocking him up with some half-orc doggos wouldn't be a way to do that too. Maybe he'll be open for it after we put some more muscle on those bones. Really love that in this tribe, a guy can be a warrior and a breeder! Opens up all new possibilities, hah!' Content about the fact that Urik is accepting that there needs to be consent between tribesmembers, even if you're fine with him sleeping around, you nod and pat his arm.";
+		else if Dexterity of Spike is 100: [Player shut down the workout path]
+			say "     As you bring up Spike, Urik bristles a little, remembering that you told him to stay away from the dobie. 'Mh? What about that [if MaxHP of Spike is 1]little daddy's boy[else]noodle-armed poodle[end if]? Kept my distance from him, as you instructed. Wish you'd have let me put him through his paces - I'm telling you, the boy won't be of much use if he doesn't bulk up at least a little.' Grumbling under his breath the orc doesn't say anything further about Spike after that, redirecting the conversation elsewhere.";
+			[
+			TODO: Add additional talk here to discuss this further
+			if "Workout Blocked & Discussed" is listed in Traits of Urik:
+				TraitGain "Workout Blocked & Discussed" for Urik;
+			]
+
+to say UrikTalk_Gregory:
+	if HP of Gregory is 1: [asleep in the library]
+		if "GregoryPlans_Offlimits" is not listed in Traits of Urik and "GregoryPlans_Recruit" is not listed in Traits of Urik and "GregoryPlans_Private Slut" is not listed in Traits of Urik and "GregoryPlans_Couple Slut" is not listed in Traits of Urik: [no choice made yet]
+			say "     As you bring up Gregory, the orc ";
+			if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to touch anyone]
+				say "raises an eyebrow and looks pretty interested. 'I'd been wondering what you'd want to do with him.' He appears to want to say something more, but thinks better of it, simply waiting for your verdict. Knowing the orc and his interests, you can imagine what he's thinking, namely that the two of you are an item, but that just maybe you could want to use Gregory together...";
+			else if "Selective Breeding" is listed in Traits of Urik: [player decides whom he can fuck]
+				say "licks his lips and looks quite interested. 'I'd been wondering what you'd want to do with him. Any chance you decided to let me pump some loads in there? Before long, we'll have a fertile little breeding hole on our stud!'";
+			else if "Molestation Detox" is listed in Traits of Urik or "Stud" is listed in Traits of Urik or "Everything Goes" is listed in Traits of Urik: [he may fuck others]
+				say "shows you a lewd smile. 'I'd been wondering what you'd want to do with him. Just let me drop a few loads in there and he'll be a receptive little breeder in no time!'";
+			say "[GregoryPlansMenu]"; [time to make a choice]
+		else if "GregoryPlans_Offlimits" is listed in Traits of Urik: [no one is supposed to mess with Gregory]
+			say "     'Don't worry, I'll keep my hands off him. I know you've got other plans for him, [UrikPlayerAddress]!'";
+		else if "GregoryPlans_Recruit" is listed in Traits of Urik: [you want Gregory to join your tribe]
+			say "     'This tribe really is something different entirely, isn't it? With all sorts of members, really. Hope Greg will appreciate the chance he's given when he wakes up and will join us!'";
+		else if "GregoryPlans_Private Slut" is listed in Traits of Urik: [the half-wyvern soldier is yours alone]
+			say "     'Don't worry, I'll keep my hands off him. I know he's your fuckpet, [UrikPlayerAddress]!'";
+		else if "GregoryPlans_Couple Slut" is listed in Traits of Urik: [you want to make Gregory the special pet of both Urik and yourself]
+			if PlayerFucked of Gregory is false: [no sex between Urik/Gregory/Player yet]
+				say "     'Really looking forward to breaking him in together! You and me, together!' With that said, the orc leans in to slide an arm around you, pulling you close and giving you an enthusiastic kiss. Looks like he's pretty aroused and eager for action!'";
+			else: [after sex between Urik/Gregory/Player]
+				say "     'Man, I really didn't think something like this was in the cards for me anymore! Having a proper partner with whom you share everything - including your own private breeder! This tribe - and you - are just a dream!' With that said, the orc leans in to slide an arm around you, pulling you close and giving you an enthusiastic kiss. 'I love having threesomes with you! Let's do him again, soon!'";
+		else if "GregoryPlans_Tribe Breeder" is listed in Traits of Urik: [anyone can have a go with the man, he'll be the communal sex toy of your tribe]
+			say "     'Man, if we can find more studs like Greg, your tribe will be the best in the city! Both from guys flocking to us to have a share of great breeders like this, and all the orclings that'll come out of pounding him nonstop, hah!' Urik grins broadly at you as he says this, lowering a hand to stroke over his bulge.";
+
+to say GregoryPlansMenu: [TODO: add Menu]
+	project the figure of Urik_clothed_icon;
+	say "     [bold type]What do you tell Urik you want to do with Gregory? (choose wisely, this will determine your future relationships)[roman type][line break]";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "He's off-limits sexually and should be treated well";
+	now sortorder entry is 1;
+	now description entry is "You really just wanted to save the guy from the fate of total transformation into another wyvern. Decide that he'll be off-limits to anyone (including yourself) - at a minimum until he wakes up";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "He's in your plans as a potential warrior recruit";
+	now sortorder entry is 2;
+	now description entry is "You want to turn the handsome hunk of a guy into a warrior tribesmember. Hopefully he'll be open for that";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "He's to be your private slut";
+	now sortorder entry is 3;
+	now description entry is "You'll lay claim to all of Gregory and want no one else to touch him";
+	[]
+	if "Private Breeder" is listed in Traits of Urik:
+		choose a blank row in table of fucking options;
+		now title entry is "He's to be your private slut (as a couple)";
+		now sortorder entry is 4;
+		now description entry is "You and Urik together will lay claim to Gregory";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "He's to be a fucktoy and breeder for all the tribe";
+	now sortorder entry is 5;
+	now description entry is "You want Gregory to be available to anyone who needs to dump a load - or ride a cock";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
 			if Player consents:
-				LineBreak;
-				say "     Seeing that you're cool about what he's been doing with Spike, Urik puts on a rather relieves smile. 'I looted the powder from a top fitness studio not to far away. With that stuff and a little orc oomph, your puppyboy will be a tough guy for sure! I'll make something out of him.";
-			else:
-				LineBreak;
-				say "     As you categorically forbid the orc to feed Spike any more of those 'special' shakes, the orc grumbles and sullenly looks to the side. 'Well, that'll shoot the progress for training him in the foot for sure, [UrikPlayerAddress]. I can keep training him, but without the support, that'll take ages! You really don't wanna have a puppy-boy that's worth something in a fight? Your call, I guess.'";
-				now Stamina of Spike is 51;
-	else if Stamina of Spike is 4 or Stamina of Spike is 5 or Stamina of Spike is 6:
-		say "     As you bring up Spike, Urik chuckles under his breath. 'Your little slut-puppy? What about him?' Looking at him with a raised eyebrow prompts the orc to roll his pear-green eyes and waves a large hand, then adds, 'I mean your 'companion'. Don't you worry, I won't just grab him and bend him over to show him his inner bitch. Wouldn't do to have a breeder pound your pet, yadda yadda.' With a shrug of his broad, muscular shoulders, Urik lets that part of the topic drop, moving on to saying, 'At least the boy's trying in our training sessions. He's still far too weak, maybe as strong as a half-grown orcling, but there's some determination in that puppy. I think given time, we can make something out of him! You should see him chug down the protein shakes, they'll help a bunch too.'";
-	else if Stamina of Spike is 50: [Spike won't accept any more drinks]
-		say "     As you bring up Spike, Urik chuckles under his breath. 'Your little slut-puppy? What about him?' Looking at him with a raised eyebrow prompts the orc to roll his pear-green eyes and waves a large hand, then adds, 'I mean your 'companion'. Don't you worry, I won't just grab him and bend him over to show him his inner bitch. Wouldn't do to have a breeder pound your pet, yadda yadda.' With a shrug of his broad, muscular shoulders, Urik lets that part of the topic drop, moving on to saying, 'At least the boy's trying in our training sessions. He's still far too weak, maybe as strong as a half-grown orcling, but there's some determination in that puppy. I think given time, we can make something out of him!'";
-		say "     Informing the orc that you've told Spike about the possibility of there being cum in his shakes, the orc looks at you somewhat sullenly. 'Aw, what did you do that for? He needs his things, err - nutrients! So what if I put half a load of my cum into it? What do you think makes orclings strong and grow so much right away once they're 'out of the pouch'?' As a reminder that his all-male species has a peculiar way of reproduction, the orc gives his own buttock a slap, drawing your attention to it. 'The squeamish little bitch won't take no shakes no more, I bet! I can keep training him, but without the support, that'll take ages! You really don't wanna have a puppy-boy that's worth something in a fight? Your call, I guess.'";
-		now Stamina of Spike is 51;
-	else if Stamina of Spike > 50 and Stamina of Spike < 100: [Urik won't offer any more shakes]
-		say "     As you bring up Spike, Urik sighs. 'I'm still training your little slut-puppy, but the progress is really slow. Should have let me keep giving him shakes. They were good for him!' With an annoyed grunt, he waves off the topic, not wanting to say any more about it.";
-	else if Stamina of Spike is 100: [training ended]
-		say "     As you bring up Spike, Urik looks at you sullenly and grumbles. 'I won't do anything with your little slut-puppy, fine?! Leave me alone about him.'";
+				let nam be title entry;
+				let DoneTalking be false;
+				now sextablerun is 1;
+				if nam is "He's off-limits sexually and should be treated well":
+					say "[GregoryPlan_Offlimits]";
+				else if nam is "He's in your plans as a potential warrior recruit":
+					say "[GregoryPlans_Recruit]";
+				else if nam is "He's to be your private slut":
+					say "[GregoryPlans_Private Slut]";
+				else if nam is "He's to be your private slut (as a couple)":
+					say "[GregoryPlans_Couple Slut]";
+				else if nam is "He's to be a fucktoy and breeder for all the tribe":
+					say "[GregoryPlans_Tribe Breeder]";
+				wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+
+to say GregoryPlan_Offlimits:
+	say "     Telling Urik that Gregory is off-limits in 'that' regard, you draw a little bit of a frown and a disappointed grunt from Urik. The orc waits for a few seconds, studying your face as he does so, then says, 'Oh man, you're not kidding, are you? Damn! ";
+	if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to touch anyone]
+		say "I really thought you'd make our sleeping beauty a breeder for the tribe. Not that I'd have used him, with you and me being an item, but... would have been nice just to see folks breed him, or watch you take a turn too. And sharing a dude can be a great source of camaraderie, you know. A tribe that fucks together stays together, eh?' ";
+	else if "Selective Breeding" is listed in Traits of Urik: [player decides whom he can fuck]
+		say "And here I was, thinking you'd tell me to have a go at him, start the dude popping out orclings as a breeder for the tribe. Build up our numbers, and sharing a dude can be a great source of camaraderie, you know. A tribe that fucks together stays together, eh?' ";
+	else if "Molestation Detox" is listed in Traits of Urik or "Stud" is listed in Traits of Urik or "Everything Goes" is listed in Traits of Urik: [he may fuck others]
+		say "I really thought you'd make our sleeping beauty a breeder for the tribe. Kinda been itching to give him a go ever since we brought him back. And yes, I'd be nice, and have shared him proper with everyone else - learned that lesson the hard way, didn't I?' ";
+	say "Making a long face, the orc scratches his neck, then does his best to shake the glum mood off. 'Oh well, nothing much more to be said about it then. You're the boss and what you say goes. Might turn out for the best in the end, I guess. It could be useful to have an only 'lightly used' soldier around for when the army finally makes a big push to retake the city. Could put in a good word for us, and all that jazz.'";
+	add "GregoryPlans_Offlimits" to Traits of Urik; [no one is supposed to mess with Gregory]
+
+to say GregoryPlans_Recruit:
+	say "     Telling Urik that you do plan to recruit Gregory for your tribe, the orc's eyebrows rise, followed by thoughtful expression crossing his face. 'Mh - makes sense, now that you say it. Seems I'm a little too stuck in the 'orcs rule' mindset of the old tribe. With your setup being much more open for people's roles, and species I guess too, getting a hunk like Greg on the rolls will help us along nicely.' Scratching his bearded chin, Urik adds, 'I can have a word with him, once he wakes up. You know, soldier to soldier, with me having been in the army way back when. With his new looks, there's no way he can fit back into the fold, that's for sure, so joining an up and coming tribe like ours really will be the best for him.'";
+	add "GregoryPlans_Recruit" to Traits of Urik; [you want Gregory to join your tribe]
+
+to say GregoryPlans_Private Slut:
+	say "     Telling Urik that Gregory is off-limits in 'that' regard because you're claiming him as your private fucktoy, you draw a little bit of a frown and a disappointed grunt from Urik. 'Mhh - can't say I blame you, [UrikPlayerAddress]. He's a sweet piece of tail, no doubt about it. ";
+	if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to touch anyone]
+		say "Not that I had designs to do anything with him anyways, with you and me being an item. Though would it be alright if I watched you have him? ";
+	else if "Selective Breeding" is listed in Traits of Urik: [player decides whom he can fuck]
+		say "Not that I'd have bred him without your say-so, of course. ";
+	else if "Molestation Detox" is listed in Traits of Urik or "Stud" is listed in Traits of Urik or "Everything Goes" is listed in Traits of Urik: [he may fuck others]
+		say "Kinda been itching to give him a go ever since we brought him back. ";
+	say "Once we get some more tribesmembers, they'll watch with envy as you enjoy Greg. But that's the perks to being the boss, hah!'";
+	add "GregoryPlans_Private Slut" to Traits of Urik; [the half-wyvern soldier is yours alone]
+
+to say GregoryPlans_Couple Slut:
+	say "     Telling Urik that Gregory is off-limits for the tribe in 'that' regard, you draw a little bit of a frown and a disappointed grunt from Urik. But then, you hook your hand behind his neck and draw the orc into a deep kiss before you add that he isn't a 'regular' tribesmember after all. The orc's eyes widen as you tell him that Gregory will be your private slut - and by 'you' you mean yourself, and your bug, muscly hunk of an orc partner. 'God, ending up with you is the best thing that could have happened to me!' Urik says excitedly, wrapping his arms around you to give you a close hug. You can feel his cock throbbing in anticipation, pressed together as you are right now.";
+	add "GregoryPlans_Couple Slut" to Traits of Urik; [you want to make Gregory the special pet of both Urik and yourself]
+
+to say GregoryPlans_Tribe Breeder:
+	say "     Telling Urik that Gregory is going to be a breeder for the whole tribe, you draw a chuckle and a lewd smile from the orc. 'Yeah, he'll be one nice stud to breed! Just imagine those abs swelling with orcings. And sharing a dude can be a great source of camaraderie too, you know. A tribe that fucks together stays together, eh? ";
+	if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to touch anyone]
+		say "Not that I had designs to do anything to him, with you and me being an item. But a guy can look, can't he?'";
+	else if "Selective Breeding" is listed in Traits of Urik: [player decides whom he can fuck]
+		say "Really hope you'll tell me to take a turn sometime too! I'll put some nice orclings in him for you! Real warriors to fill the ranks of the tribe!'";
+	else if "Molestation Detox" is listed in Traits of Urik or "Stud" is listed in Traits of Urik or "Everything Goes" is listed in Traits of Urik: [he may fuck others]
+		say "Kinda been itching to give him a go ever since we brought him back. And no, I'd have shared him proper with everyone else - learned that lesson the hard way, didn't I?'";
+	add "GregoryPlans_Tribe Breeder" to Traits of Urik; [anyone can have a go with the man, he'll be the communal sex toy of your tribe]
 
 to say UrikTalk_Companion: [companion Urik]
 	say "     As you offer Urik the chance to go out into the city with you, the orc livens up immediately, a grin instantly appearing on his face as he bellows, 'FUCK YEAH! Finally some action!' He flexes his arms in an impressive gun-show, then brings a balled-up fist into the palm of his other hand with a loud smack. 'Really hope you weren't kidding about that, [UrikPlayerAddress]! I'm ready to go, just say the word!' Smiling, you step closer to the orc, laying a hand on his arm and squeezing it in camaraderie. Reminding him that he's a powerful warrior that you want by your side makes the orc stand tall and proud. You've definitely earned a lot of respect from him with this.";
@@ -555,12 +790,17 @@ to say UrikTalk_Companion: [companion Urik]
 
 to say UrikTalk_Looting:
 	if Player is not booked:
-		say "     You think about taking Urik up for a looting excursion, but then remember that the place he wants to go to is fairly close to the library. Also, he doesn't have his bag with him right now. Maybe take it up again when you're actually in the Grey Abbey Library.";
+		if Perception of Urik < 3:
+			say "     You think about taking Urik up for a looting excursion, but then remember that the place he wants to go to is fairly close to the library. Also, he doesn't have his bag with him right now. Maybe take it up again when you're actually in the Grey Abbey Library.";
+		else if Perception of Urik is 3:
+			say "     You think about taking Urik up for a looting excursion, but then remember that he doesn't have his bag with him right now. Maybe take it up again when you're in the Grey Abbey Library to set out properly prepared.";
 	else:
 		if Perception of Urik is 1:
 			UrikFirstLootingTrip;
 		else if Perception of Urik is 2:
 			UrikSecondLootingTrip;
+		else if Perception of Urik is 3:
+			UrikThirdLootingTrip; [BEER!]
 
 to UrikFirstLootingTrip:
 	say "     As you speak to Urik about his suggestion of a place that might be good for looting, a grin instantly appears on his face. 'Yeah! Let's go grab ourselves something nice!' Clearly eager to have some adventure with you, the orc rushes off to grab his big sports bag so he can be ready to lug anything you find back with you. 'Let's get going!' comes his shout from the front door moments later, showing his desire to be on the move. Walking up to join Urik, you grab his bicep and give it a squeeze, then meet the orc's gaze and tell him to lead on. The two of you set out down the middle of the street, with Urik strutting forward confidently by your side, taking care to never step ahead of you even as he points out which way to go and what corner to take. Along the way, you pass by various buildings and vehicles, a fair number in fairly abysmal conditions as they have been ransacked already. Yet there are also those that look mostly untouched, and others are fortified in a self-made fashion, indicating that someone or something is living there.";
@@ -894,6 +1134,168 @@ to say Gregory_Leave: [just leaving him behind]
 	say "     As you tell Urik that you've seen enough and to just leave the wyvern hybrid behind, the orc looks at you with a nonplussed expression. 'But - but he's prime breeding material! Don't you want that stud for your new tribe?' Telling him not to argue with you, you wave Urik towards the way you came from, and he finally turns his gaze away from the unconscious man and climbs back over the Humvee. You follow him without a glance back, and soon after the two of you have climbed back down to the base of the towering wyvern nest. Then you continue to walk towards the nearby neighborhood. With a tree-flanked riverbed bending around the back side of it, there isn't any way to reach it besides the direction you're coming from. 'Let's get looting then! Those little bitches we ran into last time surely would have barely made a dent in such rich pickings!'";
 	now HP of Gregory is 100; [left behind in the cocoon]
 
+to UrikThirdLootingTrip:
+	say "     As you speak to Urik about another trip to go looting, a grin instantly appears on his face. 'Yeah! Let's go grab ourselves some good beer!' Clearly eager to have some adventure with you, the orc rushes off to grab his big sports bag so he can be ready to lug anything you find back with you. 'Let's get going!' comes his shout from the front door moments later, showing his desire to be on the move. Walking up to join Urik, you grab his bicep and give it a squeeze, then meet the orc's gaze and tell him to lead on. The two of you set out down the middle of the street, with Urik strutting forward confidently by your side. Pulling out a yellow piece of paper and unfolding it as you reach a big intersection, he looks down on it and says, 'So, which way first? 'Mallon Sap Brews' is that way, towards the capitol. 'Henry's Hammer Brewery' to the north. Must be close to the grassland then.'";
+	say "     [bold type]Which way do you want to go?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Travel to the capitol district to check out 'Mallon Sap Brews'.";
+	say "     [link](2)[as]2[end link] - Travel towards the dry plains to check out 'Henry's Hammer Brewery'.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to go to 'Mallon Sap Brews', or [link]2[end link] to go to 'Henry's Hammer Brewery'.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     After making the decision, the two of you set out through the streets of the inner city, having to follow a winding path as some areas are too overrun with infected and dangerous in other ways. For example, neither of you is willing to come anywhere near the seemingly placid pool of silvery liquid taking the place where a section of road and three buildings once were. Better to make a big circle around weird stuff like that. Thankfully, individual infected or even small groups that you run into on the way avoid people traveling together, especially if there is an orc involved, so you do not actually have to fight anyone on the way. When the capitol building comes into view in the distance, along with the columns of rising smoke from the volcano, Urik clears his throat. 'We're getting close, I think. Do you see any street signs?'";
+		say "     Weirdly enough, something seems to have removed pretty much all of the signposts along the roads. A closer inspection of the remaining stumps shows that they were... gnawed off, with deep gashes in the metal from sharp teeth. After spending some time in a fruitless search, Urik gets frustrated and eventually starts going door to door, hammering against them with his large green fist. The third door he tries is opened after a moment, with a somewhat bedraggled-looking young woman half-hiding behind the wood. She's mostly human, but with tiny, shimmering scales covering half her neck and continuing down past the neckline of her clothes. 'P-please don't break in, Mr. orc-ssir! Without the door, I'd be helpless against anyone coming over to - to...' She gulps instead of saying the words, teary-eyed as she waves down the narrow hallway behind her. 'I-I don't have much to take. And... I know that it's better to submit. Do you want me to... p-please you and your friend?'";
+		WaitLineBreak;
+		say "     Urik grunts in what almost appears to be embarrassment at the terrified young woman's stuttered words, then barks out, 'STOP! Shut up for a moment!' The woman twitches as if he had struck her, looking wide-eyed at the orc. 'What's your name, girl?' Gulping, she replies, 'A-abigail. Sir.' Urik nods at her to acknowledge her words, then clears his throat and goes on to say, 'We don't actually want any of your shit, and you can keep your knickers on! Now, be a good girl and tell me where the fuck the brewery is that is supposed to be somewhere around here!' She gapes at him, blinks, then blinks again before finding her voice, 'I - um, err... down the street to the end, then left, then second on your right.' 'That's all we need from you. Shoo, lock yourself in again. Oh, and you might want to know that orcs have no real interest in pussy.' With that, Urik turns away from her and starts to follow her directions, with the building's door being hastily closed a second later.";
+		say "     Now that you know the way, it doesn't take long to reach the brewery you've been searching for, which occupies an old brick building, complete with a quite artistic door-sign showing a large tree and the words 'Mallon Sap Brews'. 'Finally!' Urik grunts as he strides up to the entrance, trying the handle and finding it locked. 'Hasn't been broken into yet. Good sign,' the orc adds, then twists the handle with sudden, overwhelming force, creating a mixed sound of squealing metal and breaking wood. Striding into the building, he jovially exclaims, 'Let's see about those microbrews now!' You follow him into an abandoned reception area, where Urik immediately goes to check out a display vitrine that holds several bottles of beer. Casually smashing the glass, he reaches inside and grabs two of them, flicking the bottlecaps off with his thumb and handing you one. Taking a thirsty swig, the orc grins broadly and lets out a satisfied belch. 'Yeah, that's good stuff!'";
+		WaitLineBreak;
+		PlayerDrink 6;
+		addAlcPoints 1;
+		ItemGain TodtGrains Beer by 3;
+		say "     While you collect the remaining three bottles and are busy packing them away, Urik steps up to the 'Staff Only' door that leads deeper into the building, pushing it open easily despite a lock trying to resist. Just as you are zipping the backpack a moment later, the angry shout of 'Motherfuckers!' comes from the other room. You quickly follow Urik, finding yourself in a moderate to large room, with some interestingly-shaped copper vats taking up half of the available space. There are stacks of boxes with empty bottles, a bottling line, the open door to an office, and another open door, mostly blocked by Urik's broad-shouldered frame. Past him, you can barely make out the word 'storeroom' on a sign. Walking up behind the orc, you join him at the door to the storeroom, who's staring angrily at the empty room, complete with a large, gaping hole in the middle of its ground. Looks like someone cleaned the place out!";
+		say "     Unwilling to give up this easily, Urik moves to the hole and looks into it, then jumps in - which still leaves him visible, as it's only about as deep as his nipples. He's got to crouch and duck his head to be able to look into the tunnel leading off into the dark, far too small for someone as large as him to fit into comfortably, unless he crawls on all fours. A moment later, when his eyes get somewhat used to the darkness in the hole, Urik reaches out and grabs something, then stands up again. He's holding a pick-axe, complete with a half-broken wooden handle. It looks pretty ancient, and has some etched patterns along the metal head. 'The fuck?! I think this place was raided by dwarves or some shit!' In the aftermath of the disappointing find, you confirm that there is no drop of beer left in the building besides what you already grabbed. Cursing under his breath, Urik says, 'Let's hope we've got more luck at the other place!' And with that said, trace your steps back to the intersection where you were before.";
+		WaitLineBreak;
+		TraitGain "Abigail_Met" for Urik;
+		TraitGain "Dwarven Beerstealers" for Urik;
+		say "[Henry_Brewery]";
+	else:
+		LineBreak;
+		say "[Henry_Brewery]";
+
+to say Henry_Brewery:
+	let SecondBrewery be false;
+	if "Dwarven Beerstealers" is listed in Traits of Urik:
+		now SecondBrewery is true;
+	say "     Setting out through the streets and moving away from the inner city, your route leads you to crest a small-ish hill, from which you can already see the expanse of the dry plains in the distance, flat grassland having displaced most of the buildings that once lay in that direction. It's still a fair bit off to the beginning of the grass though, with blocks and blocks of buildings ahead. 'Really hope our brewery wasn't eaten by the grassland. [if SecondBrewery is true]Or raided by some assholes like those fucking dwarves! [end if]Damn waste of time if it was!' Urik says, trying to suppress his apprehension at the possibility of failure. The trip moving towards your destination is thankfully relatively quiet, with few creatures out and about right now. Who knows why, but you're certain not to complain about having an easy time traveling.";
+	say "     'Should be getting close now,' Urik says, glancing up at the street-signs on a pole as he is taking a turn around the corner of a block. This almost leads to him running someone down, as a man coming the other way is right in his path and has to jump aside so he doesn't face-plant against Urik's muscular chest. Studying the person that almost collided with your orc companion, you see that he's a somewhat scruffy and lanky canine, maybe an anthro dingo or so? The guy is dressed in shorts and a t-shirt, with an open beer-bottle in his hand, bearing a label depicting a large black man with a mighty hammer and the word's 'John Henry's Finest'. Urik spots the latter at just about the same time as yourself, at which point he pounces and grabs a large handful of the dog-person's shirt, preventing him from running away and half-lifting him into the air. 'Seems we've got competition! Where did you loot that beer?!' the orc starts to interrogate the man, who stares in fright at the towering muscle-hunk before him. 'I didn't!? Let go of me, I traded for this!'";
+	WaitLineBreak;
+	say "     Urik blinks in surprise, lowering the dingo back onto his own feet. 'Wait, what? Are you saying the brewery is still open? Where is it?!' The canine replies, 'Yeah, duh! Down the street and left. Now let go, that's my last clean shirt!' Urik releases the dog and watches him run off, then shrugs and moves forward, following the directions given. Some minutes later, you round another corner, at which point you see a mid-sized building just a few doors down the road, complete with a stylish sign that reads 'Henry's Hammer Brewery'. A small line of people is standing before its entrance, most of which are holding some sort of trade goods in their hands. They give you apprehensive looks as Urik's towering shape walks towards them, with one or two deciding to give up their spots in line and dashing off with their possessions clutched tight.";
+	say "     Getting closer to the building, you can see a handwritten sign next to the door, listing trade-in prices for various items, given in bottles of beer. Besides that, one other thing you notice is that there are some strands of yellow-ish grass swaying in the wind in a few spots of the road, apparently having grown in spots where it was damaged - or possibly burst through the paving - one of those two options. Further along the road, and actually fairly close (you'd guess less than 100 feet ahead) lies the start of dense grassland, with only a few ruins sticking up from it to bear witness that all that was once part of the city. Urik steps up behind the last person in line and clears his throat loudly, with the anthro toad in question turning around to look at him with large, globular eyes and a sour expression. 'I was here first, you got to wait,' the squat being says to Urik. With their clothing being stitched together from different pieces to fit a rather broad frame, you can't tell at all what gender they might be. Either way, the toad lets out an unimpressed huff as Urik makes a fist and flexes his muscles dominantly.";
+	WaitLineBreak;
+	say "     'If you try anything, I'll mess you up! I'm poisonous, you know!' the toad says defiantly, wagging a gloved hand at the orc. Urik opens his mouth to reply - at which point a pandemonium of noise crashes over everyone, coming from within the building. Some sort of heavy impact starts the racked, followed by the sounds of falling and shattering bricks, screams, pained shrieks, grunts and shouts of multiple people, all mixed together so one can't understand any single thing. Everyone in line is still getting over their shock when the scream of tortured metal is added to the ongoing noise, then suddenly is interrupted just as someone lets out a deep, strained grunt. Before anyone can really think better of it, the group standing in line - including you and Urik - rushes through the door of the building, gaping at what awaits all of you inside:";
+	say "     The brewery is a mid-sized building with open floor-plan, brick walls and concrete roof held up by steel girders, with a long I-bar set as a column to support the center of the roof. The most obvious issue before you is that the back wall barely exists anymore, having a behemoth-sized hole in it. Which isn't surprising, as said behemoth is currently getting up from the crumpled pile of metal that remains of a brewing vat he landed on. An aggressively bellowing, enormously giant bull is about to step through the hole to follow his opponent and continue the battle that launched the beast through the wall. More to the foreground of the scene are several people of various infections who must have been here to trade, all more or less injured by flying bricks, with some even unconscious on the ground, leaking blood. And to cap it all off - the support column for the roof has a severe buckle in its previously straight, load-bearing shape and looks ready to snap under the stress. Seems like the behemoth impacted it with an arm or leg during its flight. The roof is sagging alarmingly, and might already have collapsed if there wasn't a quite big anthro Hercules beetle holding onto the brace, visibly straining to keep it standing with two large arms. He calls out, 'Some help, please!' waving at the injured with a smaller, second pair of arms.";
+	project Figure of Henry_soft_icon;
+	WaitLineBreak;
+	say "     The people ahead of you rush forward, but while the toad actually grasps one of the unconscious people under their armpits and starts to drag them outside (being careful to only touch with their gloved hands), several others literally step over wounded to rush to a pile of trade goods and filled bottles. 'Hey, leave that alone! And help the wounded!' the beetle shouts in obvious shock at what he sees, yet unable to stop holding up the roof himself. A pained shriek from the back of the room tells the tale of the behemoth attempting to claw its taurus opponent's eyes out, which prompts two of the opportunistic looters to peel off and rush an emergency exit in the side wall, arms full of their ill-gotten goods. Urik wades into the room and hefts two people up under his arms, rushing them outside.";
+	say "     [bold type]Meanwhile, you...[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Take more wounded to safety!";
+	say "     [link](2)[as]2[end link] - Holler and shout as you run towards the fighting creatures in the back!";
+	say "     [link](3)[as]3[end link] - Help brace the roof!";
+	say "     [link](4)[as]4[end link] - Get out of there. This is a lost cause!";
+	say "     [link](5)[as]5[end link] - Call Urik to your side and loot what you can!";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 5:
+		say "Choice? (1-5)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to evacuate, [link]2[end link] to rush the creatures, [link]3[end link] to help brace the roof, [link]4[end link] to flee in panic or [link]5[end link] to loot.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Rushing to grab one of the unconscious buyers, you drag them outside, then go in again to evacuate of another. Between the toad, Urik and yourself, you manage to rescue everyone in short notice, until only the Hercules beetle is left inside, still bracing the roof. Even the two fighting beasts have left, making the hole in the wall even larger in doing so. You dash over to the beetle, asking why he's not gotten to safety himself yet. 'I can't! Not easily. I kinda... locked my joints to keep this up, it's hard to let go. And if I do, everything I have will be squished! Could you... help me save at least some of the gear?! That smaller still over there is empty right now, so your friend should be able to lift it. And those gallon jugs of malt extract! And...'";
+		say "[Henry_Choice]";
+	else if calcnumber is 2:
+		LineBreak;
+		say "     Running at the two fighting beasts and waving your arms wildly as you shout... doesn't really seem to impress them much, as they only have eyes for one another. Despite the fact that they almost completely ignore you, the behemoth and taurus actually do leave the building, as the former grabs the latter by the horns and throws him, making the hole in the back wall even larger. Than the towering creature rushes after its opponent, intent to do him further harm. You stare at the fighting beasts for a moment longer, then remember about the things going on in the front part of the brewery and rush back there. You help the last of the wounded out through the front door, then return to the beetle still bracing the roof, asking why he's not gotten to safety himself yet. 'I can't! Not easily. I kinda... locked my joints to keep this up, it's hard to let go. And if I do, everything I have will be squished! Could you... help me save at least some of the gear?! That smaller still over there is empty right now, so your friend should be able to lift it. And those gallon jugs of malt extract! And...'";
+		say "[Henry_Choice]";
+	else if calcnumber is 3:
+		LineBreak;
+		say "     Rushing over to grab onto the bent steel column yourself, you do as much you can to support the Hercules beetle, who looks at you ";
+		if ScaleValue of Player is 5:
+			say "in relief as you take a fair bit of pressure off him. 'Thank you so much!' ";
+		else if ScaleValue of Player is 4:
+			say "in relief as you take some of the pressure off him. 'Thank you so much!' ";
+		else:
+			say "with surprise, as he doesn't expect you to be able to do all that much to relieve him. 'Thanks, but I think I got this...' ";
+		say "he pants out, then concentrates back on keeping the building from collapsing. Meanwhile, the remaining knocked-out people and wounded are evacuated, and even the fighting beasts shift their fight outside, making the gaping hole in the back wall even larger. With only the two of you now left inside, you ask the beetle he's not gotten to safety himself yet. 'I can't! Not easily. I kinda... locked my joints to keep this up, it's hard to let go. And if I do, everything I have will be squished! Could you... help me save at least some of the gear?! That smaller still over there is empty right now, so your friend should be able to lift it. And those gallon jugs of malt extract! And...'";
+		say "[Henry_Choice]";
+	else if calcnumber is 4:
+		LineBreak;
+		say "     Deciding that a building on the verge of collapse is not the best place to be, especially not with two enormous creatures inside that are fighting one another, you turn tail and run outside. Dashing past Urik and calling to him that it isn't safe to stay a moment longer, you keep running, not stopping to look back. Only when you are at least a block distant do you slow down a little, checking and being relieved that Urik is close behind you. The orc steps up beside you, and gives you a sidelong glance. 'Couldn't we have stayed to save some of those folks?' comes a somewhat sharp question from him, but he accepts your decision when you say that you did what was best. He takes a deep breath, then blows it out, putting his disappointment in you aside before saying, 'Man, that was a bust! And still no beer... ";
+		if "Dwarven Beerstealers" is listed in Traits of Urik:
+			say "Bah, and that was the last chance.' The trip back is fairly quiet, with the orc not in the mood to talk as you trot along.";
+		else:
+			say "Man, I think someone just doesn't want us to have a good time. I bet if we went to the other place, that'd be a catastrophe too. Let's just go back to the library.' The trip back is fairly quiet, with the orc not in the mood to talk as you trot along.";
+		TraitGain "Henry Abandoned" for Urik;
+	else if calcnumber is 5:
+		LineBreak;
+		say "     Shouting for Urik to help, you rush to the pile of trade goods that the brewer amassed, snatching a bag from among the stuff and stuffing what you can into it before it can't hold anything more. As the orc approaches, you shove the overloaded sack of loot at him, then clutch what you can to your chest and both make a run for it. As you hurry away, leaving the building and fighting creatures behind, you hear metal shriek and several loud crashes moments later. That must have been the roof finally collapsing in on itself, most likely taking some part of the walls down with it. You do not stop running, or even look back. When you are several blocks distant and slow down a little, Urik gives you a sidelong glance. 'Couldn't we have stayed to at least save some of those folks? Yeah, we got a bunch of stuff from that, but...' the orc says, then adds in a mumble, 'It felt like the low thing to do.' He lets out a huff, followed by the words, ";
+		if "Dwarven Beerstealers" is listed in Traits of Urik:
+			say "'Bah, and that was the last chance.' The trip back is fairly quiet, with the orc not in the mood to talk as you trot along.";
+		else:
+			say "'Man, I think someone just doesn't want us to have a good time. I bet if we went to the other place, that'd be a catastrophe too. Let's just go back to the library.' The trip back is fairly quiet, with the orc not in the mood to talk as you trot along.";
+		ItemGain water bottle by 7;
+		ItemGain food by 12;
+		ItemGain nightstick by 1;
+		ItemGain aviator goggles by 1;
+		TraitGain "Henry Looted" for Urik;
+	now Perception of Urik is 4; [after the brewery]
+
+to say Henry_Choice:
+	say "     [bold type]What do you reply?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Save the brewing equipment first! Follow Henry's wishes!";
+	say "     [link](2)[as]2[end link] - It's too risky! Ignore what the beetle wants and tell Urik to grab Henry and run!";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to save the gear first, or [link]2[end link] to have Urik carry the beetle outside.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Giving in to the urgent requests by the beetle, you, Urik and even the toad snatch up the things he points out, going as quick as you can to carry it all outside and adding it to a large pile of stuff growing out in the street. Speed is more important than orderliness, in this instance, and you manage to rescue a fair bit of stuff before there is another loud crash from the back of the room. The fighting opponents are still at it outside, behind the building, and a tail-slap of the behemoth that missed his enemy just took out one of the corners of the brewery! A groan starts to build in the roof girders as they lose support from one of their four anchor points. 'Help!' the Hercules beetle shouts, and Urik rushes in to grab hold of the man, wrenching him off the steel column and running from the building. The anthro insect wasn't kidding about locking his joints - he's stiff as a statue, at least in his larger arms and legs.";
+		say "     Behind the two of them, the column finally snaps with a tortured shriek, followed by all of the bracing of the roof giving way and the whole ceiling coming down, including some part of the walls too! It is an almost shockingly loud racket that leaves everyone close by with a ringing in their ears and has you coughing from the large dust cloud washing over everything. By the time you can see something again, there is little left of the building but some stumps of the walls, and a mountain of rubble between them, with everything smelling distinctly like beer. Having managed to get his limbs moving again, the Hercules beetle stares glumly at the devastation, then turns around and takes in the pile of stuff you were able to save. Some varied expressions cross his face, from disappointment to relief, until he finally gives a shrug and says to himself, 'Well, it's more than I started this business with at least. And I still got all my recipes.'";
+		WaitLineBreak;
+		say "     The anthro toad is the first to speak, coming closer to the beetle and laying a gloved hand on the brewer's shoulder. 'I'm so sorry, Henry!' Nodding to show his acceptance of the sentiment, the Hercules beetle lets a tired gaze sweep over everyone here, and he says, 'At least no one died. Thanks Marlowe, and you two strangers too. Couldn't have done without you.' Having addressed the toad, Urik and yourself, Henry then starts to sort through his remaining belongings, bundling it together as good as he can for transport. 'Hm, I don't even know where to go now. Definitely can't stay here, not with those neighbors - and the grass of doom out to destroy it all!' As he says this, the beetle pulls a wrench from where it was lying on the road, untangling it from the yellow grass that had wrapped around it tightly. You can see scratches and fine grooves on the metal, as if someone had taken a very fine rasp to the surface.";
+		say "     Overhearing Henry, Urik turns to you and raises his eyebrows to get your attention, then unobtrusively points at you, himself and the beetle, miming walking with his fingers afterwards. Looks like he wants to invite Henry to come with you.";
+		say "     [link](1)[as]1[end link] - Nod.";
+		say "     [link](2)[as]2[end link] - Shake your head.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 2:
+			say "Choice? (1-2)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to agree, or [link]2[end link] to refuse.";
+		if calcnumber is 1:
+			LineBreak;
+			say "     Giving Urik the sign to go ahead, you watch the orc approach the Hercules beetle and start talking to him in a quiet tone. Walking over to join the conversation, you hear, '...so yeah, there's a bunch of empty stores that you could set up, just across the road. And you'd have no problems with anyone trying to mess with ya, if I make it known you're protected.' Henry glances from the orc to you, and back, tilts his head a little as he seems to think, then finally replies, 'Well, I don't know either of you, but... you seem like good people. And hell, what do I have left to lose? Fine, it's a deal! I'll really need some help to lug all this stuff there though!' The next little while after that is spent sorting and packing stuff, with some items being given away by Henry to his acquaintances and former customers, given that even the three of you can't carry everything, with Urik's sports bag already stuffed enough to almost burst.";
+			say "     Finally, the Hercules beetle asks for your help to load him up, and it is an awe-inspiring sight just how much weight he can lift. The limiting factor really mostly is bulk, not weight, as Henry lets you load him up so far that he can barely see where he's going, with a giant stack of items carried on his person. Urik for one lugs the brewing apparatus, a huge chunk of metal, while you carry several bags of what remains. After saying goodbye to the gathered people and getting well-wishes from them Henry finally lets you lead him away, trekking through the city to reach the library after an exhausting bit of travel. Afterwards Urik guides him to the looted row of stores directly west of the library, of which the beetle picks one with a large storeroom in the back, moving all of his gear in there and starting to set it up. 'Thank you so much,' he says, a little hope for the future growing in his tone.";
+			TraitGain "Henry Recruited" for Urik;
+[			now Henry is in Henry's Brewery;
+			connect Henry's Brewery;]
+		else:
+			LineBreak;
+			say "     Shaking your head quietly, you watch the orc deflate a little as you shoot his idea down. Standing a little out of the way, the two of you watch Henry sort through his remaining possessions, packing some items and giving away others to his acquaintances and former customers, given that he can't carry everything with him. Finally, he asks some of them to help pile everything that remains onto him. It is an awe-inspiring sight just how much weight he can lift. The limiting factor really mostly is bulk, not weight, as Henry lets them load him up so far that he can barely see where he's going, with a giant stack of items carried on his person. After saying goodbye to the gathered people and getting well-wishes from them Henry finally starts out down the road, into an uncertain future. Urik and yourself also begin to leave, and the orc says, 'Man, that was a bust! And still no beer... ";
+			if "Dwarven Beerstealers" is listed in Traits of Urik:
+				say "Bah, and that was the last chance.' The trip back is fairly quiet, with the orc not in the mood to talk as you trot along.";
+			else:
+				say "Man, I think someone just doesn't want us to have a good time. I bet if we went to the other place, that'd be a catastrophe too. Let's just go back to the library.' The trip back is fairly quiet, with the orc not in the mood to talk as you trot along.";
+		TraitGain "Henry Saved" for Urik;
+	else if calcnumber is 2:
+		LineBreak;
+		say "     Telling Urik what to do, over the protests of the anthro insect, you watch the large orc grab hold of the man, then wrench him off the steel column and run from the building. The Hercules beetle wasn't kidding about locking his joints - he's stiff as a statue, at least in his larger set of arms and the legs. Behind the two of them, the column finally snaps with a tortured shriek, followed by all of the bracing of the roof giving way and the whole ceiling coming down, including some part of the walls too! It is an almost shockingly loud racket that leaves everyone close by with a ringing in their ears and has you coughing from the large dust cloud washing over everything. By the time you can see something again, there is little left of the building but some stumps of the walls, and a mountain of rubble between them, with everything smelling distinctly like beer.";
+		say "     Having managed to get his limbs moving again, the Hercules beetle collapses to his knees, looking in desperation at the devastation before him. The anthro toad is the first to speak, laying a gloved hand on the brewer's shoulder and saying, 'I'm so sorry, Henry!' Shaking his head in disbelief, the Hercules beetle opens his mouth, then closes it again, then says, 'I - it's all gone. There's literally nothing left! Not even myself!' Shell-shocked, he gets to his feet again, letting a hollow-eyed gaze sweep over everyone here, then says quietly, 'At least no one died. Thanks Marlowe, and you two strangers too.' Having addressed the toad, Urik and yourself, the Hercules beetle looks around aimlessly afterwards, then shakes himself and finally says, 'I - I need to be alone.' With that, the covers of his wings fold up and he rises up with a loud drone of chitinous wings beating quickly, flying off into the distance.";
+		WaitLineBreak;
+		say "     The survivors of the catastrophe slowly disperse as their wounds knit together and they feel well enough to walk off, eventually only leaving Urik, yourself and Marlowe the toad. 'Not such a bad dude after all, I guess,' he or she says to Urik after another intense stare of those huge eyes, then holds out a gloved hand to shake with him, and you afterwards. 'Best of luck surviving this mess,' the amphibian tells you, then leaves in a somewhat awkward, squat walk. Urik and yourself also begin to leave, and the orc says, 'Man, that was a bust! And still no beer... ";
+		if "Dwarven Beerstealers" is listed in Traits of Urik:
+			say "Bah, and that was the last chance.' The trip back is fairly quiet, with the orc not in the mood to talk as you trot along.";
+		else:
+			say "Man, I think someone just doesn't want us to have a good time. I bet if we went to the other place, that'd be a catastrophe too. Let's just go back to the library.' The trip back is fairly quiet, with the orc not in the mood to talk as you trot along.";
+		TraitGain "Henry Survived" for Urik;
+
+
+
 to say UrikTalk_LibraryTransfer: [send him to the library]
 	say "     Urik listens to your instructions with a quiet intensity that makes it clear he commits the directions to the library to his memory. 'Okay [UrikPlayerAddress], I'll go there straight away.' With a playful slap at his muscled buttocks, you send him off into the city.";
 	move Urik to Sitting Area;
@@ -1125,7 +1527,7 @@ to say UrikSexMenu:
 			if PlayerFriended of Urik is true: [tribesman Urik gets the loving into to sex, the harsher tone of the other option doesn't fit too well]
 				say "[UrikFirstFuck_Library_Missionary]";
 			else:
-				say "     This being your first time with the orc, you've got a choice to make. Yes, you won him as a prize and you can do what you will with him, but Urik is - almost - an anal virgin, with as far as you know only Toven having fucked him before as part of Boghrim's punishment for the demoted warrior. So, you better choose well on how you want to start things out with the big, green male you've now brought home with you.";
+				say "     This being your first time with the orc, you've got a choice to make. Yes, you won him as a prize and you can do what you will with him, but you better choose well on how you want to start things out with the big, green male you've now brought home with you.";
 				say "     [bold type]How do you plan to fuck Urik?[roman type][line break]";
 				LineBreak;
 				say "     [link](1)[as]1[end link] - Get him on his back, missionary style, and look him in the eyes as you make him yours. Go slow and show him the pleasure of being your breeder.";
@@ -1151,35 +1553,41 @@ to say UrikSexMenu:
 		say "     [bold type]What do you want to do with Urik?[roman type][line break]";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
-		[
-		choose a blank row in table of fucking options;
-		now title entry is "Suck Urik's cock";
-		now sortorder entry is 1;
-		now description entry is "Give him a blow-job";
 		[]
-		if (lust of Urik > 0 and player is male):
+		if Urik is not in Main Hall and (PlayerFriended of Urik is true): [blocked for the center of the orc lair, and only for friends]
 			choose a blank row in table of fucking options;
-			now title entry is "Have him suck your cock";
-			now sortorder entry is 2;
-			now description entry is "Get a blow-job";
+			now title entry is "Jerk Urik off";
+			now sortorder entry is 1;
+			now description entry is "Get your hands on the orc's huge cock and milk a load out of him";
 		[]
-		if Player is female:
-			choose a blank row in table of fucking options;
-			now title entry is "Mount Urik's cock with your pussy";
-			now sortorder entry is 3;
-			now description entry is "Let the orc warrior breed you";
-		[]
-		if (lust of Urik > 0):
-			choose a blank row in table of fucking options;
-			now title entry is "Let Urik fuck your ass";
-			now sortorder entry is 4;
-			now description entry is "Let the orc warrior fill your ass with his seed";
-		]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Urik's ass";
-			now sortorder entry is 5;
-			now description entry is "Fill the orc slave's ass with your cock";
+			now sortorder entry is 2;
+			now description entry is "Fill the orc's ass with your cock";
+		[
+		choose a blank row in table of fucking options;
+		now title entry is "Ride Urik's cock and take him in your ass";
+		now sortorder entry is 6;
+		now description entry is "Take what pleasure you want from his thick orc cock";
+		[]
+		if Player is female: [female + herm]
+			choose a blank row in table of fucking options;
+			now title entry is "Ride Urik's cock and take him in your pussy";
+			now sortorder entry is 7;
+			now description entry is "Take what pleasure you want from his thick orc cock";
+		]
+		if Urik is not in Main Hall and Player is not dominant and (ScaleValue of Player is 1 and PlayerFriended of Urik is true or PlayerControlled of Urik is true): [normal/sub player; small Player; must have chosen one route for Urik]
+			choose a blank row in table of fucking options;
+			now title entry is "Submit to Urik for a pounding";
+			now sortorder entry is 8;
+			now description entry is "Lay back and present yourself for him to take";
+		[]
+		if Urik is not in Main Hall and Player is not dominant and (PlayerFriended of Urik is true or PlayerControlled of Urik is true): [normal/sub player; must have chosen one route for Urik]
+			choose a blank row in table of fucking options;
+			now title entry is "Submit to Urik for a pounding";
+			now sortorder entry is 9;
+			now description entry is "Lay back and present yourself for him to take";
 		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -1196,16 +1604,16 @@ to say UrikSexMenu:
 				if Player consents:
 					let nam be title entry;
 					now sextablerun is 1;
-					if nam is "Suck Urik's cock":
-						say "[UrikSex1]";
-					else if (nam is "Have him suck your cock"):
-						say "[UrikSex2]";
-					else if (nam is "Let Urik fuck your pussy"):
-						say "[UrikSex3]";
-					else if (nam is "Let Urik fuck your ass"):
-						say "[UrikSex4]";
+					if (nam is "Jerk Urik off"):
+						say "[UrikSex_Jerking]";
 					else if (nam is "Take Urik's ass"):
-						say "[UrikSex5]";
+						say "[UrikSex_Assfuck]";
+					else if (nam is "Ride Urik's cock and take him in your ass"):
+						say "[UrikSex_RideAnal]";
+					else if (nam is "Ride Urik's cock and take him in your pussy"):
+						say "[UrikSex_RideVaginal]";
+					else if (nam is "Submit to Urik for a pounding"):
+						say "[UrikSex_Submission]";
 					wait for any key;
 					now lastfuck of Urik is turns;
 			else if calcnumber is 0:
@@ -1320,23 +1728,65 @@ to say UrikFirstFuck_Library_Doggystyle:
 	add "First Time Rough" to Traits of Urik;
 	NPCSexAftermath Urik receives "AssFuck" from Player;
 
-to say UrikSex1: [suck the orc]
+to say UrikSexXX1: [suck the orc]
 	say "     <WIP>";
 	NPCSexAftermath Player receives "OralCock" from Urik;
 
-to say UrikSex2: [get a BJ from Urik]
+to say UrikSexXX2: [get a BJ from Urik]
 	say "     <WIP>";
 	NPCSexAftermath Urik receives "OralCock" from Player;
 
-to say UrikSex3: [Urik fucks player pussy]
-	say "     <WIP>";
-	NPCSexAftermath Player receives "PussyFuck" from Urik;
+to say UrikSex_Jerking: [player strokes Urik until he comes]
+	say "     Moving closer to Urik, you let your gaze roam over his impressive physique, with firm muscles under green, somewhat hairy skin. The orc notices your attention and a broad grin spreads over his face as he sees the lusty glint in your eyes. 'See something you like, [UrikPlayerAddress]?' His tusks are in full display as the smiling man begins to bend forward a little, flexing his bicep for your viewing pleasure, really making those thick cords of muscle bulge and dance. You stroke his pride a little by watching the gun-show with open interest, even reaching out to feel his presented bicep ";
+	if "Private Breeder" is listed in Traits of Urik:
+		say "and then leaning in to plant a kiss on his bulging muscle, followed by smiling at the big man. ";
+	else:
+		say "and praising him for his impressive physique. ";
+	say "Yet for all his strength, there is one part of the hunk of an orc that you're especially interested in right now. Running your hands down his front, only stopping for a moment to rub and lightly pinch his nipples. You let your fingertips go through the dips and rises of his abs, then finally follow the treasure-trail of hair down to his crotch. Urik grunts in a lust-filled, throaty chuckle as you start to caress his bulge, with the enormous cock rapidly hardening in your grasp.";
+	say "     It takes a matter of mere moments to free the orc's erection, allowing it to swing up to stand proudly erect and pointing right at you. The thick, meaty shaft is a little darker in shade as the rest of his body, with a broad mushroom head at the end. [if ScaleValue of Player is 5]Even given your huge size, it's still a handful[else if ScaleValue of Player is 5]Even being as large as Urik himself, it's still more than a handful[else if ScaleValue of Player is 3]You have to use both hands to reach all the way around the girth[else if ScaleValue of Player is 2]You can barely manage to handle its great girth[else]It takes both of your arms to span around it[end if], already leaking a steady trickle of pre-cum from the mushroom-shaped head. Eagerly squeezing and stroking along his piece of man-meat, in between cupping the orc's balls and playing with them, you find yourself being touched in turn by his large hands, returning caresses. 'Man, ending up with you sure is great! Gotta admit that I never even thought of doing this, with the breeders. Sure, they came from having the cum fucked out of them and being bred - but the idea of simply touching one of the little muscleboys and giving him a wank without thinking of my own next nut? Nope!' Shaking his head ";
+	if "Stud" is not listed in Traits of Urik and "Everything Goes" is not listed in Traits of Urik:
+		say "with a somewhat guilty expression, Urik adds, 'Sure puts things in perspective, to be on the other end for a change. And have someone care for you like this.'";
+	else:
+		say "and then giving a shrug, Urik adds, 'They sure loved being shafted hard and deep, so everyone got what they wanted, though!'";
+	WaitLineBreak;
+	say "     Looking the orc in the eyes, you waggle your eyebrows and slide your thumb over his dickhead, rubbing his cum-slit as a fresh throb of pre wells up from it. As good as a little introspection is for Urik, you also want to see him cum! The big man's reaction to your stimulation is immediate, as he lets out a horny grunt and reflexively thrusts his hips forward a little, grinding his erection against your hand. Chuckling, you begin to jerk his piece of man-meat in earnest, enjoying winding the powerful male up more and more. His thick cock is hot under your fingers, and it feels amazing to control the big muscle hunk with just this part of him in your grasp. Every squeeze is answered by a lustful grunt from the orc, and he starts to pant hot and heavy as you run a fingertip around the sensitive rim of Urik's swollen dickhead. Playfully, you slow down the jerking movements along his erection and instead just caress his glans - squeezing its base, then moving to the tip and pulling a little with two fingers to stretch open his cum-slit and watch pre leak from it.";
+	say "     Edging the orc with a broad grin on your face, fondle his balls with one hand while tracing your fingers over the veins on his shaft, and can even feel the beat of his heart through your fingertips. 'NNnnghh!' Urik lets out an urgent grunt, which draws you to look up at his lust-blushed face and watch the orc's nostrils flare as his arousal flares. At that point, he tries reaching out to grab his own dick and take over, but you refuse to let go and instead push his hand aside. Instead, you run both of yours over his pre-cum slick dickhead, then spread the slick goo all the way down the thick shaft of your horny, wound-up orc. Before you're more than halfway down his length, you can feel a heavy throb go through the rock-hard pole, heralding a spurt of pre that has enough force to literally shoot out his dick and splash you. Both of you can't help but chuckle as your eyes meet a moment afterwards, and you scoop up as much as you can of the patch of wetness, then reach up to offer your fingers to Urik, who readily licks his pre off and sucks a little on them. Returning to double-fisting his big, slick cock, you decide that this is about enough teasing for your green-skinned friend. His balls must be getting quite tight by now, so it's about time to give him his sweet release.";
+	LineBreak;
+	say "     [bold type]How do you want to finish the orc off?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Aim his big dick at his chest and hose him down with his own load!";
+	say "     [link](2)[as]2[end link] - Slip your lips over his dickhead and swallow his load!";
+	say "     [link](3)[as]3[end link] - Get a mouthful of cum, then make out with Urik and feed him some of his own load!";
+	say "     [link](4)[as]4[end link] - Get a bottle to catch his cum!";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to make Urik cum on his chest, [link]2[end link] to get a mouthful of orc cum, [link]3[end link] to kiss and feed him his own cum, or [link]4[end link] to bottle Urik's load.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Hefting the mighty tool of the orc's shaft in both hands, you squeeze and stroke up and down on it, listening for the rising urgency in his grunts of lust. It does take but a moment to push him over the edge after that. Seeing his weighty balls pull up a little as they ready their first shot, you quickly push the orc's cock up, slapping against Urik's muscular abs right as his cock erupts like a volcano of cum. The first heavy blast actually hits the towering male on the underside of his jaw, creating a white splotch in his beard and sending globs of cum splattering from collarbone to collarbone, and also dripping down onto you. A heartbeat or two later, the next shot of orcish seed is ready, splurging up in a white streak across Urik's chest. Moment by moment, the mess steadily worse as you aim Urik's cock to parts of his chest not yet drenched in his own load. It's great fun to paint your orc friend white, though you're far from clean yourself by the time his orgasm eventually ebbs off.";
+		say "     'Man, that felt great!' Urik says with a broad grin on his face, at which point you reply that you're not quite done with him yet. This is when you start scooping up the first glob of the creamy load slowly trickling down his front, then push your fingers between his lips, to be eagerly sucked clean. You spend the next little while feeding the orc his own cum, which Urik swallows down hungrily.";
+		NPCSexAftermath Urik receives "Stroking" from Player;
+	else if calcnumber is 2:
+		LineBreak;
+		say "     Hefting the mighty tool of the orc's shaft in both hands, you squeeze and stroke up and down on it, listening for the rising urgency in his grunts of lust. It does take but a moment to push him over the edge after that. Seeing his weighty balls pull up a little as they ready their first shot, you quickly open your mouth and slip your lips over his dickhead, just in time to feel his first heavy blast of cum hit the back of your throat with some force. You sputter and choke a little bit, swallowing to clear your throat, by which time the next gush of potent orc cum already washes over your tongue. Being on the receiving end of Urik's huge cock, and the quite vigorous production of his balls, you have little choice but to keep gulping down every bit of cum he shoots into your mouth. Moment by moment, you guzzle down more of his sperm, and before long, you feel a bit light-headed and giggly from the potent stuff. Nevertheless, you cannot get enough of it, with your lips tightly wrapped around his dickhead all the time until his orgasm eventually ebbs off. 'Man, that felt great!' Urik says with a broad grin on his face, then slides his hands under your armpits to make sure you don't fall over in your current inebriated state.";
+		NPCSexAftermath Player receives "OralCock" from Urik;
+	else if calcnumber is 3:
+		LineBreak;
+		say "     Hefting the mighty tool of the orc's shaft in both hands, you squeeze and stroke up and down on it, listening for the rising urgency in his grunts of lust. It does take but a moment to push him over the edge after that. Seeing his weighty balls pull up a little as they ready their first shot, you quickly open your mouth and slip your lips over his dickhead, just in time to feel his first heavy blast of cum hit the back of your throat with some force. You sputter and choke a little bit, swallowing to clear your throat, by which time the next gush of potent orc cum already washes over your tongue. Being on the receiving end of Urik's huge cock, and the quite vigorous production of his balls, hold your breath and let him fill your mouth with his load, then eventually pull away from his erection, letting it shoot its next spurts wherever they will land while you pull Urik's head closer and plant a big kiss on his lips, shoving your cum-drenched tongue against his own.";
+		say "     This kicks off a wild bit of making out between the two of you, both getting a little drunk on Urik's potent cum and having a lot of fun passing the mix of cum and spit back and forth as you tongue-wrestle. When you eventually pull back and your eyes meet, Urik says in a somewhat slurred tone, 'Man, t'was great!'";
+		NPCSexAftermath Player receives "OralCock" from Urik;
+	else if calcnumber is 4:
+		LineBreak;
+		say "     After quickly collecting an empty bottle from your gear, you heft the mighty tool of the orc's shaft in both hands, squeezing and stroking up and down on it while you listen for the rising urgency in his grunts of lust. It does take but a moment to push him over the edge after that. Seeing his weighty balls pull up a little as they ready their first shot, you quickly press the opening of the small plastic bottle over his cum-slit. The first heavy blast hits the end of the bottle with an audible thud, splattering the inside of the bottle with white globs from the force of its impact. A heartbeat or two later, the next shot of orcish seed is ready, splurging up from his balls to erupt into the bottle. Moment by moment, the bottle is filled by his spurts, almost getting ready to overflow by the time his orgasm eventually ebbs off. 'Man, that felt great!' Urik says with a broad grin on his face, then looks at your bottle of collected orc cum and raises his eyebrow.";
+		say "     'What exactly do you plan on doing with that?' he asks in a casual tone. The fact that he licks his lips hungrily right after that betrays easily that the orc is more than a little interested in chugging it all down himself.";
+		NPCSexAftermath Urik receives "Stroking" from Player;
+		[TODO: ItemGain Urik's Cum]
 
-to say UrikSex4: [Urik fucks player ass]
-	say "     <WIP>";
-	NPCSexAftermath Player receives "AssFuck" from Urik;
-
-to say UrikSex5: [player fucks Urik]
+to say UrikSex_Assfuck: [player fucks Urik]
 	if Urik is in Main Hall: [slut mode in the orc lair]
 		say "     Walking up to Urik, you stroke your hand over his muscle-packed chest, giving his nipples a few pinches and flicking them lightly, which draws a moan from the big breeding slut. Then you tell him that you want to make use of him. 'Yes [UrikPlayerAddress],' he replies submissively, putting a grin on your face at the fact that he seems to have internalized the role you've given him. It only takes a light tap on the orc's shoulders to make him kneel at your feet, obedient and ready as you [if player is not barecrotch]bare your crotch and [end if]take hold of your rapidly hardening manhood and brush it over his lips. This doesn't go unnoticed by several other orc warriors, who laugh and joke about seeing Urik act this way, pulling out their own cocks as they enjoy the spectacle. Meanwhile, Urik grunts in a lusty tone, his tongue flicking outside to lick your dickhead, followed by him basically inhaling your erection, not stopping until his nose is pressing against your pubic mound.";
 		say "     Breathlessly telling the orc warrior that he's a good little cumslut, you look down upon Urik as he bobs his head over your dick, working that tongue of his along your hard length while giving you an expert blow-job. You can't help but feel that he was wasted as just another orc warrior before, if he adapted to this new role so readily and became a lustful fucktoy for you. The orc goes down on your dick with a cum-hungry slut's enthusiasm, so much so that you're almost tempted to face-fuck him instead, but you keep a hold of your libido and pull out before much longer. Grabbing a handful of his shoulder-length, soft black hair, you pull Urik's head back to make him look at you, then tell him you want to fuck his ass from behind. '[UrikPlayerAddress], I need it bad!' the big orc grunts readily enough, standing up from the ground right away. The mesh pouch at the front of his skin-tight stripper underwear bulges out quite a bit from the hard and erect monster of his cock, underlining the depth of his submission.";
@@ -1409,6 +1859,65 @@ to say UrikSex5: [player fucks Urik]
 	[TODO: Add Impregnation chances, plus self-impregnation chance]
 	NPCSexAftermath Urik receives "AssFuck" from Player;
 	now Stamina of Urik is turns; [last time he got some cum]
+
+to say UrikSex_RideVaginal: [Urik fucks player pussy]
+	say "     <WIP>";
+	NPCSexAftermath Player receives "PussyFuck" from Urik;
+
+to say UrikSex_RideAnal: [Urik fucks player ass]
+	say "     <WIP>";
+	NPCSexAftermath Player receives "AssFuck" from Urik;
+
+to say UrikSex_Submission: [player submits to Urik - bad end if the player treated him badly]
+	if PlayerControlled of Urik is true: [slut scene - bad end]
+		say "     Walking up to Urik, you stroke your hand over his muscle-packed chest, letting your fingers trace over his rock-hard abs as they follow a trail of hair to his crotch. Fingertips going through his curly pubic hair, you cup the large bulge of his crotch, squeezing it in anticipation. 'You like handling a big one, eh [UrikPlayerAddress]?' the orc comments, a grin spreading over his face as pride brings a little bit of his old self back to the forefront - the boisterous, dominant orc you originally saw in the orc lair. Not bothering to deny it, or even remind the orc that you're the boss, you glance down and stroke his bulge some more, feeling it fill out under your fingers. Soon, your eager fingers work to bare the rapidly hardening shaft, allowing you to feast your eyes on it. The orc really has a massive, thick prick, with a weighty pair of balls to go with it. Stroking up and down, you're rewarded with a thick droplet of pre-cum welling up at his cum-slit, bringing with it an enticing aroma of manliness.";
+		say "     You find yourself tempted to taste Urik's pre, quickly wiping up the glistening bead of fluid and bringing it to your tongue. It's musky, manly and tastes great! As you suckle the essence of the big orc from your fingertip, a moan of pleasure rises from the depth of your throat, which Urik himself comments with a hearty chuckle. Feeling your libido spike as the potent fluid affects your body, you feel ever more convinced of what you planned to do: Taking the humongous cock and feeling it stretch your insides around Urik's girth! After a last appreciative squeeze of the orc's big balls, you pull your hands away from his muscular body and [if Player is not naked]quickly strip, piling all your clothes and gear[else]quickly take off your gear, piling it[end if] on the ground before taking a position on your back, legs braced slightly spread. Breathily, you call out for Urik to take you, now!";
+		WaitLineBreak;
+		say "     Eyes widening at the request, [if Player is not male]the orc looks down at your dickless crotch and lets out a grunt of disapproval. 'Not even a dude anymore. Stupid entitled bitch. Hope the ass is at least tight,' the orc says under his breath, then gives himself a push to get to work. Resigned to service you, he sinks to his knees between your legs, towering over your stretched-out body. [else]he grunts, 'Yeah! Now we're talking!' With temperance being far from one of Urik's virtues, the orc's quick to react, lowering himself onto his knees between your legs and towering over you. [end if]His big, green hands grab your thighs firmly, spreading them further to allow his broad form to scooch right up to your crotch. Then he gathers a gob of spit, letting it drip off his tongue to land between your buttocks as he pulls your hips up in preparation. The next thing you feel is the warmth of his dickhead brushing up and down along your crack, spreading the improvised lube and mixing it with the pre-cum he's leaking steadily by now. Some pleasant tingles run through you as he rubs his shaft [if player is herm]over your nether lips, then along your own manhood's length[else if player is female]over your nether lips and clit[else if player is male]along your own manhood's length[else]over the sensitive skin of your sexless crotch[end if], before moving on to lining his erection up with your asshole.";
+		say "     Urik spends a few more scant moments rubbing his cock over your pucker, pushing in a little and backing off to stretch it some and allow the mixture of his spit and pre to soak into you. Looking down as you prepare yourself for what is to come, you see his shaft throb a little, heralding more pre-cum being brought forth to slick you up. Then, all too soon for your helpless hole - or maybe not soon enough for your cock-hungry self, the orc pushes into you with unrelenting force and grunts, 'Take it, [if Player is not female]whore[else]cunt[end if]!' You cannot do anything but gasp and writhe under him as Urik's monster of a cock penetrates into you, spreading your inner walls around its girth. The mixture of eager lust and breathlessly endured discomfort as you adjust to having him inside you clearly excites the big male, and you can hear Urik grunt, 'So much for being the big boss, hah. Whines like a needy breeder!'";
+		WaitLineBreak;
+		say "     Trying to think of a reply, you open your mouth and... all that comes out is a shocked shout as Urik rams several more inches of his dick up your ass, spreading the ring of your muscles even further! Pain and pleasure mix and combine as his dick rubs [if player is male]your prostate[else]sensitive spots inside you[end if], followed by a slight withdraw and then another forceful thrust! 'Gonna break you, [if Player is not male]cunt! You're not the boss of me! Gonna turn your ass into a proper breeding hole, I won't even need to stick it into that loose, flabby pussy you have!' [else]fucker! This hole'll be my new cock-sleeve!'[end if] One or two more of those moves to jack-hammer into you later, you can feel some new pressure against your crotch. It takes a second or two before your foggy mind can understand what it is - Urik's huge balls, pressing against your skin. He's literally balls-deep inside you! [if Cock Length of Urik > Asshole Depth of Player + 2]It's almost inconceivable how he could have fit[else]You can take cocks this big, but it's still quite a lot[end if] - not that you have time to mull over it more than a second or two before the orc starts to hammer your hole in a wild fuck!";
+		say "     Being reduced to little more than a cock-sheath for a huge, horny orc, your gasps and moans mix with Urik's satisfied grunts and the slap of his balls to create the unmistakable sound of a bitch being used hard, deep, and loving every minute of it. You chose to submit to him after all, and with the resulting pleasure and all the potent fluids Urik's been leaking into you, there is little doubt in your hazy mind that this is the best you've ever felt! Whimpering and asking for more, you wrap your legs around his hips and push him with your heels, literally begging for the next harsh thrust. 'Fucking [if Player is not male]entitled bitch! You think you can just make a guy bow down and obey you? Look at yourself now, pushing back against my prick as it reams you a proper breeding hole!' [else]weakling - and you thought you could control me?! Look at you now, pushing yourself on my prick as it destroys your puny hole!' [end if]Moments of pleasure flow into each other and you couldn't even tell how long he's been fucking you by the time Urik's grunts build to a shouted crescendo, with him burying his whole length deep inside you as it starts to flood your hole with his rich seed! The sensation of him pulsing his sperm into your depths pushes you over the edge right along with Urik, and you [if Player is herm]spray strings of cum over your chest and leak femcum[else if player is male]spray strings of cum over your chest[else if Player is female]leak a lot of femcum[else]shudder in pleasure[end if] while panting loudly.";
+		NPCSexAftermath Player receives "AssFuck" from Urik;
+		WaitLineBreak;
+		say "     The deluge of aphrodisiac-laden orc cum combines with your own orgasm, leaving you blissed out, cum-drunk and giggly. Riding the pleasure-high, you writhe weakly under Urik, squeezing your hole around his shaft as if to milk more cum out of him, or coax him into an encore. It takes a moment before you register a contemptuous scoff reaching your ears for what it is, at which point you open your eyes to look up at the orc in confusion. 'So much for the big bad 'you're nothing but a slut to me' boss! Who's the whore now, eh? Almost let myself slump into following along with you like a weak little breeder. Thanks for reminding me how good it feels to be the one on top, bitch!' As a look of shock at the sudden turn-around crosses your face, Urik clamps one hand over your mouth to prevent you from speaking (not that you'd have managed more than some slurred words right now). [if Player is not male]'Just shut up! No one's interested in what you have to say, whore! You're just a breeding hole to me, understand?!'[else]'Just shut up and moan like the punk-ass slut you are!'[end if]";
+		say "     With that said, the big male begins to fuck you again, his cock quickly regaining what little hardness it lost as the orc establishes dominance over you. Exhausted from the fuck and thoroughly drunk on the orc's cum, you have no chance to resist him at all as Urik fucks you again right away, dumping another, and another load inside you. Or maybe more, you can't be sure as you pass out after the third. ";
+		if "Microwaved" is not listed in Feats of Player and scenario is not "Researcher": [player is able to transform]
+			say "Being subjected to massive amounts of Urik's transformative sperm being pumped into your body, you find yourself being molded to the orc's preferred body shape in short order. Green-skinned, muscular and male, with a juicy ass to fuck and sate his relentless lusts. Before long, your stomach begins to swell not just from the cum, but also the first of many orclings he knocked you up with!";
+		else:
+			LineBreak;
+		trigger ending "Urik's Breeder";
+		end the story saying "You treated Urik as a slut, then gave him power over you - and he used the chance to turn the tables!";
+	else if PlayerFriended of Urik is true: [bro scene]
+		say "     Walking up to Urik, you stroke your hand over his muscle-packed chest, admiring your strong warrior's physique and telling him you're proud to have someone like him in your tribe. 'Thanks [UrikPlayerAddress],' he replies with a tusk-bearing grin, flexing demonstratively for you. Letting your fingers trace over his rock-hard abs as they follow a trail of hair to his crotch, you run your finger through his curly pubic hair, then cup the large bulge of his crotch, squeezing it in anticipation. 'You like handling a big one, eh [UrikPlayerAddress]?' the orc comments, a grin spreading over his face as pride brings a little bit of his old self back to the forefront - the boisterous, dominant orc you originally saw in the orc lair. Not bothering to deny it, you meet his eyes and smile yourself, then add that you were interested in him for more than just a hole to fuck. 'Is that so?' Urik replies, his thick dick throbbing under your fingers.";
+		say "     'I bet I know what you're about to say next. You want a big, orc daddy to show you what he can do with his prick!?' Urik states, with you nodding [if Player is submissive]eagerly and saying that you want his daddy dick inside you [else]and telling him you want to try out being submissive for a little bit [end if]as you grasp his weighty pair of balls and massage them. Chuckling, he bares his rapidly hardening shaft, allowing you to feast your eyes on it. It is long, thick and meaty, with a droplet of pre-cum welling already up at his cum-slit, bringing with it an enticing aroma of manliness. You find yourself tempted to taste Urik's pre, quickly wiping up the glistening bead of fluid and bringing it to your tongue. It's musky, manly and tastes great! As you suckle the essence of the big orc from your fingertip, a moan of pleasure rises from the depth of your throat, which Urik himself comments with a hearty chuckle. 'Man, this really is quite a different tribe. I like it!' he adds, stroking over the back of your head and giving your shoulder a squeeze.";
+		WaitLineBreak;
+		if Player is submissive:
+			say "     Feeling your libido spike as the two of you touch each other and give in to your desire for submission, with the potent fluid of his pre affecting your body on top of that, you feel ever more convinced of what you planned to do: Taking the humongous cock and feeling Urik's girth stretch your insides! After a last appreciative squeeze of the orc's big balls, you pull your hands away from his muscular body and [if Player is not naked]start to quickly strip, only to feel the orc's hand on your arm. 'No, no. Give me a show!' he says with a grin, and you oblige, swaying your hips as you slide off piece by piece, finally ending up with a pile of clothing and gear that you bend over to place the last item on, wiggling your ass at your green-skinned partner [else]quickly take off your gear, piling it on the ground [end if]before stepping up to the large orc, looking up to him and waiting for him to take you. 'Trying to be so good for daddy!? Good little breeder!' he says in a mix of amusement and lust, with you giving a submissive whimper and nodding to him. The orc's cock visibly throbs in excitement, with Urik immediately snatching you up in his arms, your naked bodies closely pressed together as he lowers you to the ground. Looking down at your stretched-out form, he grunts in satisfaction, 'Now we're talking!' With temperance being far from one of Urik's virtues, his big, green hands grab your thighs firmly, spreading them further to allow his broad form to scooch right up to your crotch.";
+		else: [switch scene]
+			say "     Feeling your libido spike as the two of you touch each other and give in to the new roles of your fun little game, with the potent fluid of his pre affecting your body on top of that, you feel ever more convinced of what you planned to do: Taking the humongous cock and feeling Urik's girth stretch your insides! After a last appreciative squeeze of the orc's big balls, you pull your hands away from his muscular body and [if Player is not naked]start to quickly strip, only to feel the orc's hand on your arm. 'No, no. Give me a show!' he says with a grin, and you oblige, swaying your hips as you slide off piece by piece, finally ending up with a pile of clothing and gear that you bend over to place the last item on, wiggling your ass at your green-skinned partner [else]quickly take off your gear, piling it on the ground [end if]before taking a position on your back, legs braced slightly spread. With a smile and one eyebrow raised suggestively, you ask Urik to take you. Licking his lips in anticipation, he grunts, 'Yeah! Now we're talking!' With temperance being far from one of Urik's virtues, the orc's quick to react, lowering himself onto his knees between your legs and towering over you. His big, green hands grab your thighs firmly, spreading them further to allow his broad form to scooch right up to your crotch.";
+		say "     Then he gathers a gob of spit, letting it drip off his tongue to land between your buttocks as he pulls your hips up in preparation. The next thing you feel is the warmth of his dickhead brushing up and down along your crack, spreading the improvised lube and mixing it with the pre-cum he's leaking steadily by now. Some pleasant tingles run through you as he rubs his shaft [if player is herm]over your nether lips, then along your own manhood's length[else if player is female]over your nether lips and clit[else if player is male]along your own manhood's length[else]over the sensitive skin of your sexless crotch[end if], before moving on to lining his erection up with your asshole. [if Player is submissive]'I'm gonna fuck you so hard, my little breeder!' he grunts dominantly. [else]'You think you can handle this?' he asks somewhat provocatively, wiggling his thick eyebrows, with shooting back a grin and saying to bring it on! [end if]Urik begins to stroke along his cock with one hand, methodically milking more of his slippery pre onto your pucker and massaging it inside with the fingers of his other hand. Knowing full well just how big he is, Urik takes his time to prepare you, working his digits in and out and getting you pre-stretched.";
+		WaitLineBreak;
+		if Player is submissive:
+			say "     Finally, the orc rubs his large mushroom head up and down over your opening, teasing you until you cannot control your desire for his thick piece of man-meat anymore. With a breathless pant on your lips, you push yourself down against him, shivering in pleasure as his dickhead enters your body. 'Greedy for this dick, aren't you? Well, you're gonna get it - but at my pace!' the orc calls out, chastising you with a grin on his face. Clamping his hands on your hips, the orc pins you down so you can't move, then watches you squirm a little, wanting more of his girth to fill you. Laughing, the big green-skinned man then continues to sink himself into your body with a steady push. Even as eager and well-prepped as you are, his girth is quite a lot to take, but you welcome every inch of it! Giving yourself to the orc daddy, you gasp and writhe under him as Urik's monster of a cock penetrates into you, spreading your inner walls wide.";
+			say "     The mixture of eager lust and stoically endured discomfort as you adjust to having him inside you clearly excites the big male, and you can hear Urik grunt, 'Hell yeah, little breeder! Gonna fuck some orclings into you!' There's plenty of lust in his voice, but without any trace of the callous, arrogant dominance of 'regular orcs'. Instead, he moves a large hand to lay on your chest, another point of connection as he meets your gaze and pushes his cock deeper inch by inch.";
+		else:
+			say "     Finally, the orc says, 'I think you're as ready as you're gonna get!' Curling a broad finger inside your hole to give [if player is male]your prostate[else]a sensitive spot[end if] a rub, he then withdraws his hand and guides his throbbing erection to your opening. With a slow, steady push, he sinks himself into your body, making you thankful that he prepped you as well as he did, because his girth is quite a lot to take even so. You cannot do anything but gasp and writhe under him as Urik's monster of a cock penetrates into you, spreading your inner walls wide. The mixture of eager lust and breathlessly endured discomfort as you adjust to having him inside you clearly excites the big male, and you can hear Urik grunt, 'Hell yeah, fucking the [UrikPlayerAddress]!' There's plenty of lust in his voice, but without any trace of the callous, arrogant dominance of 'regular orcs'. Instead, he moves a large hand to lay on your chest, another point of connection as he meets your gaze and pushes his cock deeper inch by inch.";
+		say "     Happily moaning for him to take you, the next thing that comes out of your mouth afterwards is a gasp as Urik becomes bolder, giving a shallow thrust of his hips that sinks several more inches of his dick up your ass all at once and spreads the ring of your muscles even further! Pain and pleasure mix and combine as his dick rubs [if player is male]your prostate[else]sensitive spots inside you[end if], followed by a slight withdraw and then another quick jab of his cock! It seems that you've properly awoken his primal urges by now, so the slow start is clearly at an end. One or two more of those moves to jack-hammer into you later, you can feel some new pressure against your crotch. It takes a second or two before your foggy mind can understand what it is - Urik's huge balls, pressing against your skin.";
+		WaitLineBreak;
+		say "     He's literally balls-deep inside you! [if Cock Length of Urik > Asshole Depth of Player + 2]It's almost inconceivable how he could have fit[else]You can take cocks this big, but it's still quite a lot[end if] - not that you have time to mull over it more than a second or two before the orc starts to hammer your hole in a wild fuck! Being reduced to little more than a cock-sheath for a huge, horny orc, your gasps and moans mix with Urik's satisfied grunts and the slap of his balls to create the unmistakable sound of a bitch being used hard, deep, and loving every minute of it. You chose to submit to him after all, and with the resulting pleasure and all the potent fluids Urik's been leaking into you, there is little doubt in your hazy mind that this is the best you've ever felt! Whimpering and asking for more, you wrap your legs around his hips and push him with your heels, literally begging for the next harsh thrust.";
+		say "     Moments of pleasure flow into each other and you couldn't even tell how long he's been fucking you by the time Urik's grunts build to a shouted crescendo, with him burying his whole length deep inside you as it starts to flood your hole with his rich seed! The sensation of his shaft pulsing against your inner walls, with thick spurts of cum painting your depths pushes you over the edge right along with Urik, and you [if Player is herm]spray strings of cum over your chest and leak femcum[else if player is male]spray strings of cum over your chest[else if Player is female]leak a lot of femcum[else]shudder in pleasure[end if] while panting loudly. Himself breathing quickly, the orc sinks down on top of you while his shaft continues to throb inside your body, taking care to brace himself on his elbows so he doesn't crush you with his bulk.";
+		NPCSexAftermath Player receives "AssFuck" from Urik;
+		WaitLineBreak;
+		if Player is submissive:
+			say "     Slowly starting to come down from your respective orgasms, and with you feeling somewhat drunk and bubbly from the deluge of aphrodisiac-laden orc cum filling your ass, you and Urik grin at each other, faces close together. 'Gotta say, you make one fine little breeder[if Player is not defaultnamed], [Name of Player][end if]! Not gonna try to push you around outside of sex, but this was just great! Made me feel like myself again!' The throb of his erection as he adds yet another spurt of cum to your squelching insides covers his meaning wordlessly, and Urik simply chuckles in a satisfied tone. ";
+		else:
+			say "     Slowly starting to come down from your respective orgasms, and with you feeling somewhat drunk and bubbly from the deluge of aphrodisiac-laden orc cum filling your ass, you and Urik grin at each other, faces close together. 'Gotta say, I'm really starting to love that it's not just 'do this and that's all you're good for' with you, [UrikPlayerAddress]! I mean, sure I can admit that it feels fucking great to be fucked, but...' The throb of his erection as he adds yet another spurt of cum to your squelching insides covers his meaning wordlessly, and Urik simply chuckles in a satisfied tone. ";
+		if "Private Breeder" is listed in Traits of Urik:
+			say "As he continues to hold you, the orc's eyes meet yours and he gets a serious look on his face for a second. 'This meant a lot to me,' Urik says to you, then leans in and kisses you deeply. His lips brush against yours with surprising softness, followed by a little nip of tusks poking against your skin. The orc is very careful with them while making out, showing that even with him being a big brute of an orc, there is a gentle side to this man. You somehow feel certain that he's not showing it to anyone but those he is closest to. ";
+		say "The two of you stay like that for a little while, closely entwined and with him inside you, then eventually pull apart and clean yourselves up.";
+	if "Dominance Returned_Player" is not listed in Traits of Urik and "Dominance Returned_Other" is not listed in Traits of Urik: [hasn't been on top for fucking since he was made a breeder]
+		add "Dominance Returned_Player" to Traits of Urik; [he got to be on top again - deepening his connection to the player]
 
 Section 5 - Events
 
@@ -1626,6 +2135,8 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Play
 		try looking;
 		now Charisma of Urik is 2; [fucked the bird]
 		NPCSexAftermath Aeca receives "AssFuck" from Urik;
+		if "Dominance Returned_Player" is not listed in Traits of Urik and "Dominance Returned_Other" is not listed in Traits of Urik: [hasn't been on top for fucking since he was made a breeder]
+			add "Dominance Returned_Other" to Traits of Urik; [he got to be on top again - with someone who's not the Player]
 		now Loyalty of Urik is 7; [hawkman dealt with, Urik's happy about the outcome]
 	else if calcnumber is 2:
 		LineBreak;
@@ -1714,7 +2225,7 @@ after going to Sitting Area while (Urik is in Sitting Area and (Loyalty of Urik 
 			add "Molestation Detox" to Traits of Urik; [discouraged from fight-sex]
 		else if calcnumber is 3:
 			LineBreak;
-			say "     Putting a hand on the orc's thigh, you explain how you feel about him, stroking up and down the inside of his leg a little bit as you say this. 'Oh? Oooooohhhh!' Urik replies, his pear-green eyes going wide as he looks into yours. 'Um, I -' he stammers, about as shell-shocked as if you had pulled out a two-by-four and clocked him in the head with it. '[if PlayerFucked of Urik is false]But, you - we - didn't even fuck yet?' [else]But that's not how things went in the old tribe? You just take whom you want and fuck?' [end if]the orc adds, noncomprehension written on his face. You can't help but shake your head and sigh a little at the both endearing as well as somewhat aggravating lack of knowledge of actual relationships in the orc, so you go to plan B: Hooking a hand behind his head and pulling him into a kiss. Your lips meet for that first peck, followed by you playfully licking over his tusks, then going for an in-depth snog with the big green brute.";
+			say "     Putting a hand on the orc's thigh, you explain how you feel about him, stroking up and down the inside of his leg a little bit as you say this. 'Oh? Oooooohhhh!' Urik replies, his pear-green eyes going wide as he looks into yours. 'Um, I -' he stammers, about as shell-shocked as if you had pulled out a two-by-four and clocked him in the head with it. '[if PlayerFucked of Urik is false]But, you - we - didn't even fuck yet?' [else]But that's not how things went in the old tribe? You just take whom you want and fuck?' [end if]the orc adds, non-comprehension written on his face. You can't help but shake your head and sigh a little at the both endearing as well as somewhat aggravating lack of knowledge of actual relationships in the orc, so you go to plan B: Hooking a hand behind his head and pulling him into a kiss. Your lips meet for that first peck, followed by you playfully licking over his tusks, then going for an in-depth snog with the big green brute.";
 			say "     By the time you pull back from making out to catch your breath, Urik's confusion has made way to wanting more of what you just did with him. Stroking his bearded face, you explain that he's [italic type]your[roman type] special orc, and you don't want to see him with others. You can do stuff together, as a couple, but you don't want anything going on behind your back. Laying your arms around his chest and giving him a squeeze, you tell him that he'll get all the loving he needs from you personally. 'Oh, so that's why I had to let the birdie go? Guess this really is a whole other type of tribe, eh?' the orc replies, still trying to catch up but apparently more than willing to try this 'relationship' thing you're on about. Clearly, being the leader has its upsides, so you decide to continue with some more kissing next, advancing his education of simple affectionate gestures and having a good time while doing it.";
 			now PlayerRomanced of Urik is true; [1:1 relationship - well, at least for Urik's end of the deal]
 			add "Private Breeder" to Traits of Urik; [he may not touch others]
@@ -1733,6 +2244,46 @@ instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true a
 		say "     As you arrive at the library and enter, Urik reaches out and taps your shoulder. 'Hey [UrikPlayerAddress]. I wanted to talk to you about something,' he says, coming to a stand before you and meeting your gaze. 'Remember that I checked out the neighborhood a bit on the way here? Well, there actually were a few places nearby that looked like they might have great loot. So... how about we have a little trip? Didn't want to bring it up before, since the location is actually fairly close to here, and I needed to get something from here anyways.' With a hopeful expression, the orc wiggles his eyebrows at you, then walks over to the front desk, leaning over it to grab a large sports bag stashed behind. Demonstratively holding it up, the orc shows you just how much room for loot is in it, then hangs it over one shoulder by a solid-looking strap. 'I'm ready anytime, just talk to me and say the word!'";
 	now Loyalty of Urik is 10; [he offered looting trips]
 	now Perception of Urik is 1; [enabled the talk option]
+
+instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true and Perception of Urik is 2 and a random chance of 1 in 3 succeeds): [Urik wants beer]
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: Urik wants beer[line break]";
+	project the Figure of Urik_clothed_icon;
+	if Urik is in Sitting Area:
+		say "     As you arrive at the library and go inside, you see Urik off to one side, sitting at one of the desks near the walls, where he is flipping through a motorcycle magazine. ";
+	else if orc supersized breeder is listed in companionList of Player:
+		say "     As you arrive at the library and go inside, Urik clears his throat and tells you that he'll take a break for a little while. As you nod and tell him that is fine, the orc strolls off to one side, sitting down at one of the desks near the walls, starting to flip through a motorcycle magazine he had picked out earlier. ";
+	say "While casually reading the articles, the orc grabs the bottle of soda standing on the table in front of him and takes a swig of it, only to grimace and plunk the plastic bottle back down. Curiosity drives you to walk closer and ask what's wrong, with the orc turning his upper body partly around to greet you. 'Oh, hey [UrikPlayerAddress]! It's just... I hate how this stuff tastes. Sickly sweet and chemical. What kind of name is 'Ocean Breeze' for something to drink anyways?!' Snatching up the bottle and showing you the flashy label and the neon blue contents, the orc puts the lid back on before flinging it aside in disgust, to hit the ground near the corner of the room.";
+	say "     Grumbling, Urik stands up and leans against the wall, crossing his arms with a sour expression on his face. 'I know the whole city's gone to shit, but I could really use a drink! A good drink, not just any swill in a bottle. That I can find without too much trouble. No wonder kinds these days are such rotten punks, if they drink that shit all the time!' He waves over to the discarded soda bottle, then looks back at you. 'Ah, before you ask - I'm not talking about orc brew either. Sure, that stuff has the proper amount of alcohol to pack some punch, but... if you ask me, it kinda tastes like ass. And not in a good way!' Rolling his eyes, he continues, 'Fuck! You can bet that most of the good stuff that was in the city has been chugged by now, or is in the hands of someone who'll not part with it easy. And it's not like there'll be any deliveries anytime soon, not with that military blockade.'";
+	WaitLineBreak;
+	say "     Urik continues to complain some more, clearly annoyed by the situation. Yet when he begins to tell you about his favorite, imported brands, this shakes loose a fact in your head that you vaguely remember. You can't tell where you heard it anymore, if it was some news, radio or a newspaper, but you recall hearing that local microbreweries were rising in popularity these last few years and apparently produce top quality beers. As you mention this to Urik, the orc's eyes go wide. 'That's actually a great idea!' he bursts out with a grin, slapping his hand on your shoulder and giving it a squeeze before rushing over to the front desk and digging around in the drawers until triumphantly holding up the yellow booklet of the city's business register. Flipping through the book, he finds something, then comes rushing back to you.";
+	say "     'You were right - there's three right here in the city! No, wait - by the address, I think that one might have been flattened when the quarantine ring was blasted clear of buildings to provide firing zones for the army. Either that or it's behind the line. Which leaves these two. 'Mallon Sap Brews' in the business district near the capitol, and 'Henry's Hammer Brewery' out on the north side!' Eager and animated, the large man nods towards the library entrance and says, 'Come on, let's take a trip! Imagine what we could loot from those places!'";
+	say "     [bold type]What is your reply?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Sure, you'll set out right now.";
+	say "     [link](2)[as]2[end link] - You'll go, in a little while, when you're ready.";
+	say "     [link](3)[as]3[end link] - You're not gonna trek halfway through the city just to get him some booze.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to set out right now, [link]2[end link] to postpone, or [link]3[end link] to blow off the trip.";
+	if calcnumber is 1:
+		LineBreak;
+		UrikThirdLootingTrip;
+	else if calcnumber is 2:
+		LineBreak;
+		say "     Clearing your throat, you tell the orc that right now isn't the best of time for this trip. He'll have to wait a while until you're ready. Thankfully, this does little to break Urik's elevated spirit, and he just nods and says, 'Sure thing, [UrikPlayerAddress]. Just tell me when you wanna go looting and I'll be ready to set out right away!'";
+		now Perception of Urik is 3; [ready for trip #3]
+	else if calcnumber is 3:
+		LineBreak;
+		say "     Shaking your head, you tell the orc that you don't plan on trekking through half the city in the middle of the nanite apocalypse, just to find something to drink for him. Urik grumbles a little and is visibly deflated, but soon replies, 'Fine, [UrikPlayerAddress]. Would have been fun, but I know what you say goes. Forget about it then.'";
+		now Perception of Urik is 4; [after the beer trip - completed or skipped]
 
 instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loyalty of Urik > 8 and Loyalty of Urik < 80 and PlayerFriended of Urik is true and "Selective Breeding" is not listed in Traits of Urik and Loyalty of Urik > 8 and Candy is in Bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
 	say "[NavCheck Grey Abbey Library]";
@@ -1778,11 +2329,15 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loya
 			say "     Holding the freshly-bred raccoon upside-down now, Urik puts his face between the furry globes of Candy's buttocks, pushing his tongue against the gay man's cum-slick pucker and eating him out. Hungrily slurping cum from his sex toy, Urik joins Candy in blissful delirium, with the two of them writhing against each other while riding their high. As most of the action seems to be over by now, you leave them at it and return to other matters, walking down the stairs to the library ground floor.";
 			now CandyUrikInteraction is 1; [initial scene done]
 			NPCSexAftermath Candy receives "AssFuck" from Urik;
+			if "Dominance Returned_Player" is not listed in Traits of Urik and "Dominance Returned_Other" is not listed in Traits of Urik: [hasn't been on top for fucking since he was made a breeder]
+				add "Dominance Returned_Other" to Traits of Urik; [he got to be on top again - with someone who's not the Player]
 		else if calcnumber is 2:
 			LineBreak;
 			say "     Urik vanishes upstairs with Candy and before long, you can hear ecstatic moaning coming from up there, combined with the heavy slaps of a certain orc's full balls against Candy's ass. Sounds like the girly-boy is having the time of his life!";
 			now CandyUrikInteraction is 1; [initial scene done]
 			NPCSexAftermath Candy receives "AssFuck" from Urik;
+			if "Dominance Returned_Player" is not listed in Traits of Urik and "Dominance Returned_Other" is not listed in Traits of Urik: [hasn't been on top for fucking since he was made a breeder]
+				add "Dominance Returned_Other" to Traits of Urik; [he got to be on top again - with someone who's not the Player]
 		else:
 			LineBreak;
 			say "     Stopping the orc cold with a firm-voiced command, you stand with crossed arms waiting for Urik to turn around. 'Aw, come on!' he groans out between his tusks, pointing at Candy. 'The slut was just asking for it, and you weren't using him, so I -' Urik falls silent as you wave him off, and command that he put the raccoon down. With a sigh, he obeys, setting the candy striper down on his slender paws. You nod at the show of submission and step up to the orc brute. Touching his side just above the hips, you give him a little squeeze and say that this is your lair, and you just don't want him fucking Candy. 'As you command, [UrikPlayerAddress],' he replies, not particularly happy about the decision, but ready enough to obey.";
@@ -1851,7 +2406,13 @@ after going to Sitting Area while (Urik is in Sitting Area and Gregory is in Sit
 
 Section 6 - Endings
 
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Urik's Breeder"	"BadEnd"	"Sex Slave"	Urik's Breeder rule	20	false
 
-
+This is the Urik's Breeder rule:
+	if ending "Urik's Breeder" is triggered: [TODO: Add variants where people in the library are also taken by Urik]
+		say "     Days flow into each other afterwards, with not a clear-headed moment for you between being used for the orc's pleasure, and having another load being delivered orally or anally to swell your stomach. It doesn't take all that long before this treatment leaves you addicted to the pleasure your orc master can give you, and you docilely serve him, even begging for a fuck when you feel the rush of his seed's effects abate. Having lost his status among Boghrim's orc tribe, Urik never goes back to them, instead preferring to remain independent and away from the other green-skinned brutes. This way he can have a harem of little sluts just to himself - although he allows his other breeders [if IncestList is not banned]including your own sons[end if] to use and abuse your ass too, making you the bottom of the group and resulting in almost constant pregnancies as you pop out more orclings for your master. The strong self you were when you won the competition for Urik's ownership is long forgotten by this point, replaced by a slavishly obedient breeder who can think of little more than their next fuck and the dose of orc cum you crave.";
+		the Player is enslaved;
 
 Urik ends here.

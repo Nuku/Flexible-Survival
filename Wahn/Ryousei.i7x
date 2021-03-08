@@ -22,6 +22,10 @@ RyouseiRane is a number that varies.
 
 RTWinCounter is a number that varies.
 
+a postimport rule:
+	choose a row with name of "Royal Tiger" in the Table of Random Critters;
+	now enemy type entry is 2; [bugfix to skip the old values imported from previous playthroughs]
+
 Section 1 - Meeting Event
 
 instead of going northwest from Park Trail while (level of Player > 10 and RTWinCounter is 0):
@@ -104,7 +108,7 @@ When Play begins:
 	now Name entry is "Royal Tiger";
 	now enemy title entry is "Tiger Warrior";
 	now enemy Name entry is "Ryousei";
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy type entry is 2; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]Ryousei gives you a lightning-quick side kick with his clawed foot - leaving you bruised but taking care not to slash you.[or]The muscled tiger punches you in the face with his open palm, stunning you for a second.[or]A hard chop of Ryousei's hand has you holding a hurting forearm a moment later.[at random]";
 	now defeated entry is "[RTiger loses]";
 	now victory entry is "[RTiger wins]";
@@ -1124,9 +1128,9 @@ to say RyouseiSparring:
 				break;
 		say "Ryousei chuckles and nods eagerly. 'What a great idea. I'm ready if you are!'";
 		if Royal Tiger is listed in CompanionList of Player: [temporary dismissal since he can't fight with you against himself]
-			ForceCompanionDismiss "Royal Tiger";
+			ForceCompanionDismiss "Ryousei";
 			challenge "Royal Tiger";
-			ForceCompanionJoin "Royal Tiger";
+			ForceCompanionJoin "Ryousei";
 		else:
 			challenge "Royal Tiger";
 		if fightoutcome < 30: [won  or lost]

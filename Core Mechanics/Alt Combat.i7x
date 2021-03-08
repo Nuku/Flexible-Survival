@@ -180,6 +180,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		if "Ringmaster" is listed in feats of Player, increase petchance by 50;
 		increase petchance by square root of ( 30 * charisma of Player );
 		if petchance > 750, now petchance is 750;
+		if "Hero's Aura" is listed in feats of Player, increase petchance by 150;
 	if "Toughened" is listed in feats of Player:		[boosting natural protection]
 		now plnatarmor is 625; [25^2]
 		now plweaknatarmor is 156; [ (25/2)^2 ]

@@ -61,6 +61,8 @@ to LaborsIntroductionEvent: [Invited to perform the Labors]
 	add "Twelve Labors Quest" to OpenQuests of Player;
 	now Labors Introduction is resolved;
 
+Section 1.1 - Nemean Lion
+
 Table of GameEventIDs (continued)
 Object	Name
 Meet the Nemean Lion	"Meet the Nemean Lion"
@@ -165,6 +167,8 @@ to MeettheNemeanLionEvent: [Fight the Nemean Lion]
 			now Resolution of Meet the Nemean Lion is 2; [won, not interested in sex]
 		now TwelveLaborsStage is 2;
 		ItemGain lionskin by 1;
+		if "Twelve Labours Explained" is listed in Traits of Sylvia:
+			remove "Twelve Labours Explained" from Traits of Sylvia;
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     You come round to a landscape devoid of life. The wounds that previously covered your body have mended and, more importantly, you are alive. With a thunderclap, you are no longer alone. A grim faced Zeus looks down at your prone body before speaking, 'You have failed the first Labor. We seemed to have judged you poorly, you are weak and lucky to be alive. In future think properly and make sure you are ready before attempting to overcome challenges that you face. We are unlikely to meet with you again. Farewell.' He disappears in another clap of thunder, leaving you alone as rain begins to pelt from the skies. As you sit up, the realization sinks in that while you may have failed, someone made sure you survived your defeat. Who could be mighty enough to defeat the lion when you couldn't?";
 		now Resolution of Meet the Nemean Lion is 3; [lost]
@@ -175,6 +179,242 @@ to MeettheNemeanLionEvent: [Fight the Nemean Lion]
 		now Resolution of Meet the Nemean Lion is 4; [fled]
 		now TwelveLaborsStage is 99;
 	now Meet the Nemean Lion is resolved;
+
+Section 1.2 - Lernean Hydra
+
+Table of GameEventIDs (continued)
+Object	Name
+Too Many Heads	"Too Many Heads"
+
+Too Many Heads is a situation.
+ResolveFunction of Too Many Heads is "[ResolveEvent Too Many Heads]".
+Prereq1 of Too Many Heads is Meet the Nemean Lion.
+Prereq1Resolution of Too Many Heads is { 1, 2 }.
+The level of Too Many Heads is 30.
+Sarea of Too Many Heads is "Junkyard".
+
+instead of going to Junkyard while (Too Many Heads is active and Too Many Heads is not resolved and TwelveLaborsStage is 2 and a random chance of 1 in 5 succeeds):
+	move player to Junkyard;
+	TooManyHeadsEvent;
+
+to say ResolveEvent Too Many Heads:
+	TooManyHeadsEvent;
+
+to TooManyHeadsEvent: [Fight the Lernean Hydra]
+	say "     The junkyard is its usual cacophanous place, metal crashing and creatures roaring, but you have yet to see the supposedly larger hydra that Zeus told you about, or anything else worthy of being described as mythical, at least by nanite-apocalypse standards. Thoughts of how dull and fruitless this is distract you enough that it takes you a minute to realize that the ground is shaking and that the hub bub seems to be becoming increasingly muffled as though you are being submerged underwater. As the mound of rusting cars and defunct washing machines explodes outward, you watch as one of the largest monsters that you have seen charge through what was likely tons of scrap to glare downward at you before unleashing a roar that you can feel reverberate through your bones. Surprisingly, it only has one head, though this seems to be the only feature different from the other draconic hydras roaming the junkyard other than its vast size difference. It barely gives you a chance to run your eyes over its glistening scales, pearly fangs, and thrashing tail before its head lunges toward you, leaving you scrambling to defend yourself.";
+	challenge "Lernean Hydra Stage One";
+	if fightoutcome < 20: [player won]
+		if player is lonely: [Enemy Recovers and strengthens]
+			say "     Breathing a sigh of relief, you wait for one of the Olympians to come and reward you for your mighty deed. Instead, to your horror, the hydra begins to stir and you watch as one of its necks divides in two, each with a fully formed head with vengeance glowing in its beady eyes. Releasing an ear-shattering roar, the Lernean hydra charges at you once more. It would seem that your fight is not yet over...";
+			challenge "Lernean Hydra Stage Two";
+			if fightoutcome < 20: [player won]
+				say "     On edge from the hydra's recovery from last time, you wait cautiosly to make sure that it is defeated. Your fear is well-founded as barely later, the beast staggers to its feet again with a new neck growing from its shoulders with a draconic head with a maw full of massive fangs. You're beginning to think that you've made a mistake fighting this thing, especially alone. However, your regrets are soon cut short by the hydra charging at you once more with murderous intent.";
+				challenge "Lernean Hydra Stage Three";
+				if fightoutcome < 20: [player won]
+					say "     Not forgetting what has happened the last two times that the Lernean Hydra seemed defeated, you only drop your stance sufficiently to allow yourself to take a few deep breaths for when it inevitably gets back up again. Once again, your caution is proved justified as the beast recovers once more a new head growing and joining the cacophany of snarls that it is emitting. As it readies to charge, your conflict is interrupted by a thunderclap and the arrival of a figure wearing a helmet and armor and wielding a spear between the two of you. 'Stop! This labor is completed,' they command, their voice strong but feminine, slamming the butt of her spear into the ground. The hydra snaps and snarls at the warrior but she doesn't flinch even as its teeth click within inches of her face. 'Sleep. By the time that you wake, your rage will be soothed,' she responds, softly stroking the side of its head as it begins to calm until eventually it falls into slumber.";
+					say "     Turning towards you, the woman introduces herself. 'I am Athena, goddess of wisdom, crafts, and those who undertake heroic endeavours. While you have demonstrated your courage and prowess and thus succeeded in this labor, you did so through brute force rather than making the wise decision to have help in overcoming the hydra. Even Herakles didn't do so alone and surely there would have been someone in this city who could have provided you with some guidance. Nonetheless, allow me to grant you a boon to help you survive long enough to complete the other labors.' You are too surprised to move when Athena banishes her spear and steps up to you, placing a hand on your chest while you stand still and look at her with a confused expression. A feeling of warmth radiates from where her palm rests and spreads through your body until it suffuses through your body completely.";
+					WaitLineBreak;
+					say "     'You and your allies should be more in sync with one another now and hopefully this will mean that while they are with you they will be more active in your defense. This is slightly ironic considering your recklessness today, but hopefully you are wise enough to learn from this. Having friends is not a weakness,' the goddess says, looking at you with concern. 'If you only rely on yourself then there is no-one to help you when you inevitably miscalculate or make a mistake. Reason leads us to believe that those who are alone are likely to perish earlier than those with friends and allies. And don't abandon them in a home base, keep your friends close and your enemies at a spears-length,' she adds pointedly. She is momentarily distracted by a rumble of thunder even though the sky is clear.";
+					say "     'I apologize, but that is my cue to leave. I wouldn't want the Aesir to think that I was interfering too deeply. Some of them have tempers, shall we say,' Athena informs you with a knowing glance. 'Your cunning will serve you better than your physical strength, now more than ever, and bravado is a poor substitute for wisdom. Choose your path in life carefully and remember that you do not need to walk it alone. When you are ready to continue with the next labor, look for the nymph in the forest. She will guide you as to what you must do next.' With that said, you watch as the goddess transforms into an owl and flies away, leaving you to consider her words as well as what you should be doing next, the blessing of the gods still making you feel warm.";
+					add "Hero's Aura" to feats of Player;
+					now Resolution of Too Many Heads is 3; [Brute Force Win]
+					now TwelveLaborsStage is 3;
+					if "Twelve Labours Explained" is listed in Traits of Sylvia:
+						remove "Twelve Labours Explained" from Traits of Sylvia;
+				else if fightoutcome > 19 and fightoutcome < 30: [lost]
+					say "     You hear the whoosh of air as the hydra's head lunges towards you, but instead of feeling its fangs sink into your flesh there is a loud clang and an angrily frustrated roar, causing you to open your eyes again to see what has caused your stay of execution. You find yourself lying at the feet of a woman dressed for battle in sandals, bronze breastplate, and plumed helmet, and wielding a spear and shield. She stands above you protectively, though the hydra doesn't seem eager to strike again, snapping and snarling at the air as it glares at your saviour. 'Be gone. They are beaten. You need not be here any longer,' the warrior-woman declares, pointing her spear at your foe. Strangely, the beast seems to comply with her command, stomping away into the junkyard with one last growl at you. When it has disappeared from sight, the woman removes her helmet and turns to face you, placing it, her weapon, and shield on the ground as she kneels down and props you up against the husk of a car.";
+					say "     'I think that you already know that you've failed the Second Labour of Herakles, but you can consider this a confirmation,' she tells you with a look of disappointment. 'I am Athena, goddess of wisdom, crafts, and those who undertake heroic endeavours. I can't fault you for your courage, but your recklessness shows a lack of common sense. Even Ares wouldn't have been so rash. As such, you may consider your trials over. Some of us had high hopes for you but shall try not to let it color any future interactions with you. Be more careful in future conflicts in which you are involved as you aren't as capable as you seem to think that you are. You might even contemplate taking up a safer hobby such as weaving.' Athena collects her armor and weapon as she straightens up again and turns away. 'We wish you the best in your chosen path, but take care with where you place your feet in future.' With that, she disappears in a thunderclap, a stark contrast to her silent arrival. Gritting your teeth, you struggle to your feet and decide where to go to recover from this sound defeat.";
+					now Resolution of Too Many Heads is 4; [lost]
+					now TwelveLaborsStage is 99;
+				else if fightoutcome is 30: [fled]
+					say "     Deciding that your chances of surviving the onslaught from this massive hydra are too slim to want to continue the fight, you turn to run, and make the fatal mistake of taking your eye off the threat and leaving yourself open to be struck from behind as you flee. You end up being sent skidding through the detritus with a gushing bite wound to your side, the nanites struggling to repair the damage and allow you to save yourself. As you struggle to your feet, you wait for the monster to strike again and end you but the rush of air that you hear as it lunges at you again is interrupted by a loud clang. As you roll over, you find yourself lying at the feet of a woman dressed for battle in sandals, bronze breastplate, and plumed helmet, and wielding a spear and shield. She stands above you protectively, though the hydra doesn't seem eager to strike again, snapping and snarling at the air as it glares at your saviour. 'Be gone. They are beaten. You need not be here any longer,' the warrior-woman declares, pointing her spear at your foe.";
+					say "     She stands above you protectively, though the hydra doesn't seem eager to strike again, snapping and snarling at the air as it glares at your saviour. 'Be gone. They are beaten. You need not be here any longer,' the warrior-woman declares, pointing her spear at your foe. Strangely, the beast seems to comply with her command, stomping away into the junkyard with one last growl at you. When it has disappeared from sight, the woman removes her helmet and turns to face you, placing it, her weapon, and shield on the ground as she kneels down and props you up against the husk of a car. 'That was rather pathetic and it should go without saying that you have failed the Second Labour of Herakles,' she tells you with marked disappointment. 'I am Athena, goddess of wisdom, crafts, and those who undertake heroic endeavours. I agree that discretion is the better part of valor, but considering that you decided to seek the hydra out, one could hardly describe you as being valorous even by this standard.'";
+					WaitLineBreak;
+					say "     'As such, you may consider your trials over. Some of us had high hopes for you but shall try not to let it color any future interactions with you. Be more careful in future conflicts in which you are involved as you aren't as capable as you seem to think that you are. You might even want to be cautious should you take up a comparatively safer hobby such as weaving. You wouldn't want to get your fingers caught in the loom.' Athena collects her armor and weapon as she straightens up again and turns away. 'We wish you the best in your chosen path, but take care with where you place your feet in future.' With that, she disappears in a thunderclap, a stark contrast to her silent arrival. Gritting your teeth, you struggle to your feet and decide where to go to recover from this sound defeat.";
+					now Resolution of Too Many Heads is 5; [fled]
+					now TwelveLaborsStage is 99;
+				now Too Many Heads is resolved;
+			else if fightoutcome > 19 and fightoutcome < 30: [lost]
+				say "     You hear the whoosh of air as the hydra's head lunges towards you, but instead of feeling its fangs sink into your flesh there is a loud clang and an angrily frustrated roar, causing you to open your eyes again to see what has caused your stay of execution. You find yourself lying at the feet of a woman dressed for battle in sandals, bronze breastplate, and plumed helmet, and wielding a spear and shield. She stands above you protectively, though the hydra doesn't seem eager to strike again, snapping and snarling at the air as it glares at your saviour. 'Be gone. They are beaten. You need not be here any longer,' the warrior-woman declares, pointing her spear at your foe. Strangely, the beast seems to comply with her command, stomping away into the junkyard with one last growl at you. When it has disappeared from sight, the woman removes her helmet and turns to face you, placing it, her weapon, and shield on the ground as she kneels down and props you up against the husk of a car.";
+				say "     'I think that you already know that you've failed the Second Labour of Herakles, but you can consider this a confirmation,' she tells you with a look of disappointment. 'I am Athena, goddess of wisdom, crafts, and those who undertake heroic endeavours. I can't fault you for your courage, but your recklessness shows a lack of common sense. Even Ares wouldn't have been so rash. As such, you may consider your trials over. Some of us had high hopes for you but shall try not to let it color any future interactions with you. Be more careful in future conflicts in which you are involved as you aren't as capable as you seem to think that you are. You might even contemplate taking up a safer hobby such as weaving.' Athena collects her armor and weapon as she straightens up again and turns away. 'We wish you the best in your chosen path, but take care with where you place your feet in future.' With that, she disappears in a thunderclap, a stark contrast to her silent arrival. Gritting your teeth, you struggle to your feet and decide where to go to recover from this sound defeat.";
+				now Resolution of Too Many Heads is 4; [lost]
+				now TwelveLaborsStage is 99;
+			else if fightoutcome is 30: [fled]
+				say "     Deciding that your chances of surviving the onslaught from this massive hydra are too slim to want to continue the fight, you turn to run, and make the fatal mistake of taking your eye off the threat and leaving yourself open to be struck from behind as you flee. You end up being sent skidding through the detritus with a gushing bite wound to your side, the nanites struggling to repair the damage and allow you to save yourself. As you struggle to your feet, you wait for the monster to strike again and end you but the rush of air that you hear as it lunges at you again is interrupted by a loud clang. As you roll over, you find yourself lying at the feet of a woman dressed for battle in sandals, bronze breastplate, and plumed helmet, and wielding a spear and shield. She stands above you protectively, though the hydra doesn't seem eager to strike again, snapping and snarling at the air as it glares at your saviour. 'Be gone. They are beaten. You need not be here any longer,' the warrior-woman declares, pointing her spear at your foe.";
+				say "     She stands above you protectively, though the hydra doesn't seem eager to strike again, snapping and snarling at the air as it glares at your saviour. 'Be gone. They are beaten. You need not be here any longer,' the warrior-woman declares, pointing her spear at your foe. Strangely, the beast seems to comply with her command, stomping away into the junkyard with one last growl at you. When it has disappeared from sight, the woman removes her helmet and turns to face you, placing it, her weapon, and shield on the ground as she kneels down and props you up against the husk of a car. 'That was rather pathetic and it should go without saying that you have failed the Second Labour of Herakles,' she tells you with marked disappointment. 'I am Athena, goddess of wisdom, crafts, and those who undertake heroic endeavours. I agree that discretion is the better part of valor, but considering that you decided to seek the hydra out, one could hardly describe you as being valorous even by this standard.'";
+				WaitLineBreak;
+				say "     'As such, you may consider your trials over. Some of us had high hopes for you but shall try not to let it color any future interactions with you. Be more careful in future conflicts in which you are involved as you aren't as capable as you seem to think that you are. You might even want to be cautious should you take up a comparatively safer hobby such as weaving. You wouldn't want to get your fingers caught in the loom.' Athena collects her armor and weapon as she straightens up again and turns away. 'We wish you the best in your chosen path, but take care with where you place your feet in future.' With that, she disappears in a thunderclap, a stark contrast to her silent arrival. Gritting your teeth, you struggle to your feet and decide where to go to recover from this sound defeat.";
+				now Resolution of Too Many Heads is 5; [fled]
+				now TwelveLaborsStage is 99;
+			now Too Many Heads is resolved;
+		else: [Won]
+			say "     Breathing a sigh of relief, you wait for one of the Olympians to come and reward you for your mighty deed. Instead, to your horror, the hydra begins to stir and you watch as one of its necks divides in two, each with a fully formed head with vengeance glowing in its beady eyes. As it readies to charge, your conflict is interrupted by a thunderclap and the arrival of a woman in armor and wielding a spear between the two of you. 'Stop! This labor is completed,' she commands, slamming the butt of her spear into the ground. The hydra snaps and snarls at the warrior but she doesn't flinch even as its teeth click within inches of her face. 'Sleep. By the time that you wake, your rage will be soothed and you might be able to be rewarded too,' she responds, softly stroking the side of its head as it begins to calm until eventually it falls into slumber.";
+			say "     Turning towards you, the woman introduces herself. 'I am Athena, goddess of wisdom, crafts, and those who undertake heroic endeavours. You have demonstrated your courage and prowess and thus succeeded in this labor, but do not forget that you did not do so alone. You had the help of an ally, and hopefully a friend, just as Herakles before you did. In recognition of the bond between you, allow me to grant you a boon to help you survive long enough to complete the other labors.' You are too surprised to move when Athena banishes her spear and steps up to you, placing a hand on your chest while you stand still and look at her with a confused expression. A feeling of warmth radiates from where her palm rests and spreads through your body until it suffuses through your body completely.";
+			WaitLineBreak;
+			say "     'You and your allies should be more in sync with one another now and hopefully this will mean that while they are with you they will be more active in your defense. You were wise enough today to recognize that having friends is not a weakness, and that with their help that you can overcome adversaries that might normally be beyond your capabilities alone,' the goddess says, looking at you with pride. 'If you only rely on yourself then there is no-one to help you when you inevitably miscalculate or make a mistake. Reason leads us to believe that those who are alone are likely to perish earlier than those with friends and allies, something which you have demonstrated by overcoming the hydra with their help' she adds. She is momentarily distracted by a rumble of thunder even though the sky is clear.";
+			say "     'I apologize, but that is my cue to leave. I wouldn't want the Aesir to think that I was interfering too deeply. Some of them have tempers, shall we say,' Athena informs you with a knowing glance. 'Your cunning will serve you better than your physical strength, now more than ever, and bravado is a poor substitute for wisdom. Choose your path in life carefully and remember that you do not need to walk it alone. When you are ready to continue with the next labor, look for the nymph in the forest. She will guide you as to what you must do next.' With that said, you watch as the goddess transforms into an owl and flies away, leaving you to consider her words as well as what you should be doing next, the blessing of the gods still making you feel warm.";
+			add "Hero's Aura" to feats of Player;
+			now resolution of Too Many Heads is 6; [Placeholder. If resolved before sex added, will have a way to repeat and finish properly.]
+			now TwelveLaborsStage is 2;
+			if "Twelve Labours Explained" is listed in Traits of Sylvia:
+				remove "Twelve Labours Explained" from Traits of Sylvia;
+			[say "     ";
+			say "     [bold type]Do you have sex with the hydra?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Yes.";
+			say "     ([link]N[as]n[end link]) - No.";
+			if Player consents: [Sex with Hydra]
+				if player is herm: [herm choices]
+					say "     [bold type]Is the Hydra male or female?[roman type][line break]";
+					LineBreak;
+					say "     ([link]Y[as]y[end link]) - Male.";
+					say "     ([link]N[as]n[end link]) - Female.";
+					if Player consents: [Hydra is Male]
+						if "Less Anal" is listed in feats of Player: [Vaginal]
+							say "     ";
+							say "     ";
+							WaitLineBreak;
+							say "     ";
+							say "     ";
+							WaitLineBreak;
+							say "     ";
+							say "     ";
+							WaitLineBreak;
+							say "     ";
+							say "     ";
+						else: [Anal]
+							say "     ";
+							say "     ";
+							WaitLineBreak;
+							say "     ";
+							say "     ";
+							WaitLineBreak;
+							say "     ";
+							say "     ";
+							WaitLineBreak;
+							say "     ";
+							say "     ";
+						now Resolution of Too Many Heads is 1; [Won. Hydra was male]
+					else: [Hydra is female]
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						now Resolution of Too Many Heads is 2; [Won. Hydra was female]
+				else if Player is male: [ Male Choices]
+					say "     [bold type]Is the Hydra male or female?[roman type][line break]";
+					LineBreak;
+					say "     ([link]Y[as]y[end link]) - Male.";
+					say "     ([link]N[as]n[end link]) - Female.";
+					if Player consents: [Hydra is Male. Player mounted anally]
+						if "Less Anal" is listed in feats of Player: [Cock Worship?]
+							say "     ";
+							say "     ";
+							WaitLineBreak;
+							say "     ";
+							say "     ";
+							WaitLineBreak;
+							say "     ";
+							say "     ";
+							WaitLineBreak;
+							say "     ";
+							say "     ";
+						else: [Anal]
+							say "     ";
+							say "     ";
+							WaitLineBreak;
+							say "     ";
+							say "     ";
+							WaitLineBreak;
+							say "     ";
+							say "     ";
+							WaitLineBreak;
+							say "     ";
+							say "     ";
+						now Resolution of Too Many Heads is 1; [Won. Hydra was male]
+					else: [Hydra is female]
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						now Resolution of Too Many Heads is 2; [Won. Hydra was female]
+				else if Player is female: [ Male Choices]
+					say "     [bold type]Is the Hydra male or female?[roman type][line break]";
+					LineBreak;
+					say "     ([link]Y[as]y[end link]) - Male.";
+					say "     ([link]N[as]n[end link]) - Female.";
+					if Player consents: [Hydra is Male. Player mounted vaginally]
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						now Resolution of Too Many Heads is 1; [Won. Hydra was male]
+					else: [Hydra is female]
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						now Resolution of Too Many Heads is 2; [Won. Hydra was female]
+				else: [Neuter]
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						WaitLineBreak;
+						say "     ";
+						say "     ";
+						now Resolution of Too Many Heads is 1; [Won. Hydra was male]
+			else: [No Sex]
+				say "     ";
+				say "     ";
+				WaitLineBreak;
+				say "     ";
+				say "     ";]
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "     You hear the whoosh of air as the hydra's head lunges towards you, but instead of feeling its fangs sink into your flesh there is a loud clang and an angrily frustrated roar, causing you to open your eyes again to see what has caused your stay of execution. You find yourself lying at the feet of a woman dressed for battle in sandals, bronze breastplate, and plumed helmet, and wielding a spear and shield. She stands above you protectively, though the hydra doesn't seem eager to strike again, snapping and snarling at the air as it glares at your saviour. 'Be gone. They are beaten. You need not be here any longer,' the warrior-woman declares, pointing her spear at your foe. Strangely, the beast seems to comply with her command, stomping away into the junkyard with one last growl at you. When it has disappeared from sight, the woman removes her helmet and turns to face you, placing it, her weapon, and shield on the ground as she kneels down and props you up against the husk of a car.";
+		say "     'I think that you already know that you've failed the Second Labour of Herakles, but you can consider this a confirmation,' she tells you with a look of disappointment. 'I am Athena, goddess of wisdom, crafts, and those who undertake heroic endeavours. I can't fault you for your courage, but your recklessness shows a lack of common sense. Even Ares wouldn't have been so rash. As such, you may consider your trials over. Some of us had high hopes for you but shall try not to let it color any future interactions with you. Be more careful in future conflicts in which you are involved as you aren't as capable as you seem to think that you are. You might even contemplate taking up a safer hobby such as weaving.' Athena collects her armor and weapon as she straightens up again and turns away. 'We wish you the best in your chosen path, but take care with where you place your feet in future.' With that, she disappears in a thunderclap, a stark contrast to her silent arrival. Gritting your teeth, you struggle to your feet and decide where to go to recover from this sound defeat.";
+		now Resolution of Too Many Heads is 4; [lost]
+		now TwelveLaborsStage is 99;
+	else if fightoutcome is 30: [fled]
+		say "     Deciding that your chances of surviving the onslaught from this massive hydra are too slim to want to continue the fight, you turn to run, and make the fatal mistake of taking your eye off the threat and leaving yourself open to be struck from behind as you flee. You end up being sent skidding through the detritus with a gushing bite wound to your side, the nanites struggling to repair the damage and allow you to save yourself. As you struggle to your feet, you wait for the monster to strike again and end you but the rush of air that you hear as it lunges at you again is interrupted by a loud clang. As you roll over, you find yourself lying at the feet of a woman dressed for battle in sandals, bronze breastplate, and plumed helmet, and wielding a spear and shield. She stands above you protectively, though the hydra doesn't seem eager to strike again, snapping and snarling at the air as it glares at your saviour. 'Be gone. They are beaten. You need not be here any longer,' the warrior-woman declares, pointing her spear at your foe.";
+		say "     She stands above you protectively, though the hydra doesn't seem eager to strike again, snapping and snarling at the air as it glares at your saviour. 'Be gone. They are beaten. You need not be here any longer,' the warrior-woman declares, pointing her spear at your foe. Strangely, the beast seems to comply with her command, stomping away into the junkyard with one last growl at you. When it has disappeared from sight, the woman removes her helmet and turns to face you, placing it, her weapon, and shield on the ground as she kneels down and props you up against the husk of a car. 'That was rather pathetic and it should go without saying that you have failed the Second Labour of Herakles,' she tells you with marked disappointment. 'I am Athena, goddess of wisdom, crafts, and those who undertake heroic endeavours. I agree that discretion is the better part of valor, but considering that you decided to seek the hydra out, one could hardly describe you as being valorous even by this standard.'";
+		WaitLineBreak;
+		say "     'As such, you may consider your trials over. Some of us had high hopes for you but shall try not to let it color any future interactions with you. Be more careful in future conflicts in which you are involved as you aren't as capable as you seem to think that you are. You might even want to be cautious should you take up a comparatively safer hobby such as weaving. You wouldn't want to get your fingers caught in the loom.' Athena collects her armor and weapon as she straightens up again and turns away. 'We wish you the best in your chosen path, but take care with where you place your feet in future.' With that, she disappears in a thunderclap, a stark contrast to her silent arrival. Gritting your teeth, you struggle to your feet and decide where to go to recover from this sound defeat.";
+		now Resolution of Too Many Heads is 5; [fled]
+		now TwelveLaborsStage is 99;
+	now Too Many Heads is resolved;
 
 Section 2 - Table of Game Objects
 

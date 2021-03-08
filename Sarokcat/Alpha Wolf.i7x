@@ -39,22 +39,19 @@ to say Alpha Wolf attack:
 			say "     The feeling of the alpha once more sheathing himself within you causes you to whine and writhe in pleasure underneath him until he takes control of you again by gripping the scruff of your neck with his teeth. His grip on your neck causes you to relax submissively underneath him, your mind going blank as you find yourself surrendering control of your body to the strong lupine alpha's dominance. Pleased with the total submission he has gone to such efforts to instill in you, the alpha rewards your surrender by beginning to thrust his canine meat into you again and again, the strangely shaped cock stimulating your insides in all the right places to make you pant with mindless need. Soon his knot slips inside you again, its passage even easier as your body instinctively relaxes to let it in, and then grips it tight as it expands fully inside you, locking you together for the bliss you know is coming. Once again the alpha begins to pound into you with short, hard thrusts, grunting and growling above you in pleasure, and you find yourself mimicking his bestial noises as he brings you ever closer to orgasm.";
 			say "     Soon you are little more than an animal grunting and begging under him, a receptacle for his hot canine sperm, and you can't help but beg for him to fill you up with that warm seed. And it's not long before your begging is answered, the wolf releasing your neck and letting out a low howl of pleasure as his cock twitches and coats your womb with its hot puppy-making batter, his knot insuring that not a single drop of his seed is wasted as you twitch in your own orgasm underneath him. You remain there for a long time, tied together by the alpha's powerful knot, lost in the happy sensations of a stomach pumped full of your alpha's seed, your mind picturing your breasts full with milk and your belly full of his strong alpha pups soon instead of just their father's seed. Eventually the alpha's knot shrinks enough that he can finally pull it out of your exhausted body with a soft slurping noise. You shudder in pleasure as you realize that not a drop of the alpha's seed rolls out of your well-used sex, all of it still sealed inside you waiting for its chance at making little alpha wolves. By the time you have recovered your wits enough to move however, the alpha has long gone about his own business, leaving you behind to gather your scattered thoughts and clean yourself up. You find yourself shuddering in reaction to your wanton and submissive thoughts under the strong wolf, and yet somehow it seemed so very natural.";
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Alpha Wolf";
-			alphwolfy;
 		else if Player is mpreg_ok:
 			say "     As the alpha once more approaches his conquest, you find yourself going down on all fours for him before he can even gesture for you to do so, causing a lupine grin to spread across his face. A thrill of joy shoots through you at having pleased the alpha with your submissive actions. You brace yourself on all fours as the magnificent wolf moves around behind you, his nose inspecting your nether regions and getting a good sniff of unusual breeding hole. Smelling your readiness for him, the alpha wastes no time settling his weight on your back, his rough, paw-like hands gripping your midsection firmly as he rests his muzzle on your shoulder and positions himself to take you like the beast he resembles. You shudder in anticipation as his knotted cock once more finds your back opening, pressing itself into you.";
 			say "     The feeling of the alpha once more sheathing himself within you causes you to whine and writhe in pleasure underneath him until he takes control of you again by gripping the scruff of your neck with his teeth. His grip on your neck causes you to relax submissively underneath him, your mind going blank as you find yourself surrendering control of your body to the strong lupine alpha's dominance. Pleased with the total submission he has gone to such efforts to instill in you, the alpha rewards your surrender by beginning to thrust his canine meat into you again and again, the strangely shaped cock stimulating your insides in all the right places to make you pant with mindless need. Soon his knot slips inside you again, its passage even easier as your body instinctively relaxes to let it in, and then grips it tight as it expands fully inside you, locking you together for the bliss you know is coming. Once again the alpha begins to pound into you with short, hard thrusts, grunting and growling above you in pleasure, and you find yourself mimicking his bestial noises as he brings you ever closer to orgasm.";
 			say "     Soon you are little more than an animal grunting and begging under him, a receptacle for his hot canine sperm, and you can't help but beg for him to fill you up with that warm seed. And it's not long before your begging is answered, the wolf releasing your neck and letting out a low howl of pleasure as his cock twitches. You can feel his hot puppy-making batter shooting into your bowels and being siphoned into your hidden womb, his knot ensuring that not a single drop of his seed is wasted[if Player is male] as you twitch in your own orgasm underneath him, spraying your unneeded seed across the ground[end if]. You remain there for a long time, tied together by the alpha's powerful knot, lost in the happy sensations of a stomach pumped full of your alpha's seed, your mind picturing your belly full of his strong alpha pups soon instead of just their father's seed. Eventually the alpha's knot shrinks enough that he can finally pull it out of your exhausted body with a soft slurping noise. You shudder in pleasure as you realize that not a drop of the alpha's seed rolls out of your well-used hole, all of it still sealed inside you waiting for its chance at making little alpha wolves. By the time you have recovered your wits enough to move however, the alpha has long gone about his own business, leaving you behind to gather up your scattered thoughts and clean yourself up. You find yourself shuddering in reaction to your wanton and submissive thoughts under the strong wolf, and yet somehow it seemed so very natural.";
 			CreatureSexAftermath "Player" receives "AssFuck" from "Alpha Wolf";
-			alphwolfy;
 		else if anallevel > 1:
 			say "     The wolf grabs you and pins you to the ground again, his rough, paw-like hand exploring your crotch and causing you to moan. The beast growls, seemingly unhappy with what he finds, before snarling and snapping over your prone body. 'What is this?' The alpha demands, 'A weakling like you without the proper equipment to submit to your alpha? Unacceptable!' The beast growls, causing you to shudder as his displeasure washes over you. The alpha gives your [if Player is male]junk[else]bare groin[end if] a firm squeeze and forces you to present to him. 'It looks like I'm just going to have to try a lot harder to teach you how to be a proper bitch for your alpha,' his words turn to a rumbling growl as he speaks.";
 			say "     When you feel his throbbing cock at your back entrance, you squirm a little, but the dominant wolf nips firmly at your shoulder and keeps you in place with a firm paw on your [if Player is male]groin[else]ass[end if]. You submit to the alpha, your alpha, and moan in painful pleasure as he drives his throbbing, leaking cock into you. His red canine missile spears into you hard, pushing his knot hard against your anus as he holds you down. As he thrusts, he continues to growl about how he's the alpha and you're nothing but another bitch for him. As the excitement in you grows, you can't help but nod in agreement, moaning for him to make you his. He grins at your submission to him and drives into you hard, forcing your tight ring open so he can tie with you.";
 			say "     With his trapped knot swelling larger now that it's in you, he howls in pleasure and unleashes his hot seed into you. You can feel his large penis throbbing inside you, pulsing with every gooey spurt you receive from him as he does his best to keep fucking you after the tie. You are reduced to little more than animalistic pleasure as more and more of his virile sperm pools inside you while his knot ensures it all remains there to infect you and, he hopes, turn you into a bitch for him to breed[if Player is male]. With the steady pounding your getting from your alpha and the stimulation to your prostate, you end up spraying your [Cum Load Size of Player] load onto the ground, but that matters little as you're the alpha's bitch now, male or female[end if]. You remain there for a long time, tied together by the alpha's powerful knot until finally it shrinks enough that he can pull out of your exhausted body with a messy slurping noise and you're allowed to flop to the ground. Some of your alpha's seed leaks out of you and you try your best to close your stretched hole to keep it in. By the time you have recovered enough to move however, the alpha has long gone about his own business, leaving you behind to gather up your scattered wits and clean yourself up.";
 			CreatureSexAftermath "Player" receives "AssFuck" from "Alpha Wolf";
-			alphwolfy;
 		else:
 			say "'Bad little wolf, not being ready for the packleader,' the large canine beast says, baring his teeth at your defeated form, causing you to cringe in submission. 'Next time I'm sure you will do better, won't you?' the large Alpha asks you, and you find yourself nodding submissively in agreement. 'Good, you had better,' the large beast mutters as it stalks away, leaving you lying there submissively in the road, worried about his last statement.";
-			alphwolfy;
+		infect "Alpha Wolf";
 	else:
 		if Player is female:
 			say "     The wolf grabs you and throws you down onto the ground again, his rough, paw-like hand keeping a strong steady pressure up as it grips the back of your neck, while his other moves between your legs, seemingly satisfied with what he finds there, the lupine beast lets out a pleased grunt. Gripping your neck tighter, the beast forces your face down into the ground. As he positions himself behind you, you can hear his harsh panting breath while he moves his hard lupine cock up between your thighs. Your body shudders as his pointed tip probes the entrance to your feminine passage, before thrusting himself into you in one hard, swift thrust.";
@@ -89,24 +86,24 @@ To say Alpha Wolf loss:
 			choose a blank row in table of fucking options;
 			now title entry is "Ride the wolf";
 			now sortorder entry is 2;
-			now description entry is "Get that knot in you.";
+			now description entry is "Get that knot in you";
 			[]
 			choose a blank row in table of fucking options;
 			now title entry is "Let him go";
 			now sortorder entry is 99;
-			now description entry is "Release the wolf.";
+			now description entry is "Release the wolf";
 			[]
 			if Player is male:
 				choose a blank row in table of fucking options;
 				now title entry is "Fuck the wolf";
 				now sortorder entry is 1;
-				now description entry is "Mount the alpha wolf.";
+				now description entry is "Mount the alpha wolf";
 			[]
 			if Player is not neuter:
 				choose a blank row in table of fucking options;
 				now title entry is "Force oral";
 				now sortorder entry is 3;
-				now description entry is "Make the alpha orally pleasure you.";
+				now description entry is "Make the alpha orally pleasure you";
 			[]
 			sort the table of fucking options in sortorder order;
 			while sextablerun is 0:
@@ -208,14 +205,14 @@ When Play begins:
 	now victory entry is "[Alpha Wolf attack]";
 	now desc entry is "[AlphaWolfdesc]";
 	now face entry is "a long canine muzzle sticking out of your feral lupine countenance. Your mouth hangs open in a lupine grin, revealing your sharp teeth. If it weren't for the intelligence sparking in your eyes and the slightly bigger forehead, it would be hard to tell your face from a regular wolf's"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "lean and equally well-suited to life in the wild or the streets, your canine form stands easily on its new digitigrade legs. Your paw-like hands are still as dexterous as ever, though you know that you could drop to all fours in an instant if the situation called for it or your alpha came along to mount you"; [ Body Description, format as "Your Body is (your text)"]
+	now body entry is "lean and equally well-suited to life in the wild or the streets, your canine form stands easily on its new digitigrade legs. Your paw-like hands are still as dexterous as ever, though you know that you could drop to all fours in an instant if the situation called for it"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[one of]black[or]roughly[or]thickly[at random]-furred"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
 	now tail entry is "You have a thick canine tail wagging happily behind you, its presence somehow feeling so very right."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]wolf[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it stretches out into a large lupine muzzle, new scents filling your mind as nose works overtime, especially hoping to catch the scent of the strong alpha who changed you"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it shifts and changes, your spine snapping and your legs shifting. You feel yourself becoming more comfortable now on your newly-formed canine feet and handpaws"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "thick black fur begins to grow all over your body, its rough, shaggy presence making you much more suitable for nights spent outside, running underneath the moon with the pack"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "a large lupine tail pushes its way out of your backside. Once it finishes growing, you find yourself wagging it slightly in pleasure at the new canine appendage marking you as a more suitable mate for the alpha"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now ass change entry is "a large lupine tail pushes its way out of your backside. Once it finishes growing, you find yourself wagging it slightly in pleasure at the new canine appendage"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "your aching member grows thicker and tapers to a sharp point, a large canine knot forming at the base of your new lupine sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 18;
 	now dex entry is 14;
@@ -239,8 +236,8 @@ When Play begins:
 	now Cunt Tightness entry is 8;
 	now SeductionImmune entry is false;
 	now libido entry is 30;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "lucky horseshoe";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
+	now loot entry is "alpha wolf fur";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
+	now lootchance entry is 70;  [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
 	now TrophyFunction entry is "-";
@@ -358,6 +355,59 @@ When Play begins:
 ]
 
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"alpha wolf fur"	"A tuft of black fur that looks like it has been pulled out of the coat of a wolf. It's nicely soft."	0	alpha wolf fur
+
+alpha wolf fur is a grab object.
+It is temporary.
+alpha wolf fur is infectious.
+Strain of alpha wolf fur is "Alpha Wolf".
+Usedesc of alpha wolf fur is "[AlphaWolfFurUse]";
+
+to say AlphaWolfFurUse:
+	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+
+instead of sniffing alpha wolf fur:
+	say "The fur has a pleasing, not too strong, animal-like scent.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"alpha wolf cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Alpha Wolf Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	alpha wolf cum
+
+alpha wolf cum is a grab object.
+alpha wolf cum is cum.
+alpha wolf cum is infectious.
+Strain of alpha wolf cum is "Alpha Wolf".
+Usedesc of alpha wolf cum is "[alpha wolf cum use]";
+
+to say alpha wolf cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing alpha wolf cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"alpha wolf man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Alpha Wolf Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	alpha wolf man-milk
+
+alpha wolf man-milk is a grab object.
+alpha wolf man-milk is milky.
+Purified of alpha wolf man-milk is "distilled milk".
+alpha wolf man-milk is infectious.
+Strain of alpha wolf man-milk is "Alpha Wolf".
+Usedesc of alpha wolf man-milk is "[alpha wolf man-milk use]";
+
+to say alpha wolf man-milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing alpha wolf man-milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
+
 Section 3 - Endings
 
 Table of GameEndings (continued)
@@ -374,8 +424,5 @@ This is the Alpha Wolf Infection rule:
 				say "Your mind overwhelmed with your body's new instincts, you drop to all fours as you run through the city, abandoning any pretense of humanity as you give in to your lupine instincts. Hunting through the city for more like yourself, you find much of the territory is already claimed by the Alpha who turned you, and he brutally defends his pack and his territory from other males. Feeling the need for a pack of your own and not just the lifestyle of a lone wolf, you seek new locations in which to start a pack, as well as properly submissive converts to fill it out. Eventually you give up trying to find a good territory in the city, with all the competing factions, and start trying to find a way out of the city. Watching the military blockade, you realize they function much like a wolf pack themselves in how they handle things, and taking advantage of this realization, you manage to trick one of the more isolated groups into thinking you are wounded and need help. When they approach you waste no time in converting them into more suitable forms to be your pack-mates, forms they come to embrace quickly as you impress your dominance on them. With your new pack-mates in tow, you manage to slip through the military cordon, gaining a few new pack-members as you do. Soon you and your new pack are free and searching for a new territory to set up in. Eventually settling in a forest to the north, where amusingly enough the humans had been trying to reintroduce the wolf for a while, as several of the park rangers you dominate will tell you. Out of amusement you allow several of the wolf biologists who come by once your pack is well established a chance to help reintroduce the wolf to the area personally, as they breed many fine pups for you, the new alpha wolf of the pack.";
 		else:
 			say "You leave the city with the military personnel when they finally show up, pretending to be cured and submissive until they let you go. Afterwards you roam around, never feeling truly content as a lone wolf. Most people treat you like they would one of the changed dogs, and you let them live with their petty misconceptions, for even though you are not an alpha wolf yourself like the one who changed you, you are still a wolf at heart, and no one's pet. Eventually you manage to find a biker in a bar with a similar attitude and soul under his human exterior, and with a bit of effort you entice him to join you for the night. During the long night of lovemaking, you convert the biker into a fellow wolf. He takes to the change extremely well, and soon you are celebrating the formation of your new pack long into the next day. Taking to traveling together, you slowly add more pack members as you wander wherever the road and your bikes take you, a true roaming pack of wolves, with the wind in your fur and the smells of the wild filling your nose. Finally you found your pack, and you couldn't be happier.";
-
-to alphwolfy:
-	infect "Alpha Wolf";
 
 Alpha Wolf ends here.

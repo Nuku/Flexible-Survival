@@ -468,7 +468,7 @@ Include Feral Sea Dragoness by Blue Bishop.
 Include Feral Shaft Beast by Guest Writers.
 Include Feral Unicorn by Taelyn.
 Include Feral Wolf Bitch by Prometheus.
-Include Feral Wolf Male by Stripes.
+Include Feral Wolf Male by Prometheus.
 Include Ferret Infection by Luneth.
 Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
@@ -547,6 +547,7 @@ Include Latex Fox by Nuku Valente.
 Include Latex Mistress by Stripes.
 Include Latex Wolf by Stripes.
 Include Leopardman by Vinickus.
+Include Lernean Hydra by Prometheus.
 Include Liquidshifter by Ssely.
 Include Lizard Girl by Damaged.
 Include Lusty Skunk by Nuku Valente.
@@ -789,6 +790,7 @@ Include Harold by Sarokcat.
 Include Hayato by Gherod.
 Include Hellfire Workers by Gherod.
 Include Help Book by Prometheus.
+Include Henry by Wahn.
 Include HornyHorsey by femtoAmpere.
 [Include Horus by Rikaeus.]
 Include Hungry Boar Man by Gherod.
@@ -902,7 +904,7 @@ Include Sven by Stripes.
 Include Sylvia by Prometheus.
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
-Include Tenvale Gorillas Football Team by Kernog.
+Include Tenvale Silverbacks Football Team by Kernog.
 Include The-Voice by Luneth.
 Include Thomas by Wahn.
 Include Thunderbolt by CrimsonAsh.

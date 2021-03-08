@@ -202,9 +202,21 @@ Description of Looted Shops is "[LootedShopsDesc]".
 
 to say LootedShopsDesc:
 	say "     You wander down the center of the empty 7th Street to stay away from the piles of trash and shards from shattered shop windows that dominate the sidewalk on both sides. There are barely any windows that haven't been vandalized, and many of the doors were torn out of their frames or clawed to pieces. You can't say if the destruction stemmed from pure malice or just some overly large creature making an entrance; it doesn't matter which really, as the result is the same. In the southwest, a thin path has been cleared through the trash and debris, leading to a shop that seems to have been of continuing interest of someone - or alternatively the target of some scavengers. The sign above the door declares it to be [']George's Animal Emporium['].";
+	if "Henry Recruited" is listed in Traits of Urik:
+		say "     Someone appears to have cleared away a patch of trash and rubble recently, making the entrance of a store to the north accessible. While the sign above the door declares it to be some sort of flower shop, the plywood board used to cover a broken window next to a newly hung door bears the words 'Henry's Brewery', above a spray-painted depiction of a muscular black man with a large hammer. The stylized image of a snarling orc face in the lower left corner lets you guess that Urik put this here.";
 
 instead of sniffing Looted Shops:
 	say "     The cans and sacks of trash that have been rotting out on the curb for more than two weeks fill your nose with many scents, none of them particularly pleasant.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Henry's Brewery	"Henry's Brewery"
+
+Henry's Brewery is a room.
+Description of Henry's Brewery is "[BreweryDesc]".
+
+to say BreweryDesc:
+	say "     After you and Urik saved him and brought him here, Henry the Hercules beetle appears to have set right to rebuilding. The wrecked interior of the flower shop has been cleaned out, with the display tables now surrounded by a mixed selection of chairs and barstools scrounged up somewhere. A sign on the wall declares his prices for beer, and there are even [one of]two[or]three[or]four[at random] customers sitting around. The door the back room stands open, as Henry often ducks in there to check his brewing setup and supplies.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -213,7 +225,7 @@ George's Animal Emporium	"George's Animal Emporium"
 George's Animal Emporium is southwest of Looted Shops.
 Description of George's Animal Emporium is "[PetShopDesc]".
 
-to say PetShopDesc:
+to say PetShopDesc: [TODO: Eventually move Roxana and her girlfriend in here]
 	say "     You're in a mid-sized pet store that has been recently looted. Judging from the tracks in the dust and grime blown in through the open front door, numerous people and creatures came and went before you. Almost all of the shelves have been rifled through and some even knocked over, creating quite a mess in here. Empty bags of all sorts of pet food are scattered everywhere, sometimes lying in sticky pools of what is clearly cum. With the food gone and the sheer scale of the mess in here, there could be some interesting and useful items to find if one were to spend some time to [link]sort[as]sort chaotic mess[end link] through the chaotic mess. Since digging up anything of worth will be rather work intensive, this would probably not be worth the time unless you had a use for it.";
 
 instead of sniffing George's Animal Emporium:

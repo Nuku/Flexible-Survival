@@ -712,9 +712,9 @@ name	desc	weight	object
 "protective helmet"	"A white protection helmet as might be worn by industrial workers. That should certainly ward off some bumps to the wearer's head."	2	protective helmet
 "tin-foil hat"	"A bunch of tin foil, bent into shape to cover a human's head. It might protect its wearer from alien mind control rays, or could possibly ensure that the head is still juicy and not burned on the outside when baked..."	0	tin-foil hat
 "gray fedora"	"A gray fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, or a hipster."	0	gray fedora
-"baseball cap"	"A blue baseball cap with the logo of the Tenvale Gorillas on its front."	0	baseball cap
+"baseball cap"	"A blue baseball cap with the logo of the Tenvale Silverbacks on its front."	0	baseball cap
 "knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull."	0	knitted skullcap
-"football helmet"	"A white football helmet with the logo of the Tenvale Gorillas on both sides. Heavy, but protective."	3	football helmet
+"football helmet"	"A white football helmet with the logo of the Tenvale Silverbacks on both sides. Heavy, but protective."	3	football helmet
 "urban explorer helmet"	"A protective helmet with flashy crimson-red finish. It should certainly ward off some bumps to someone's head. A compact camera is attached to the front, to capture everything the wearer sees, but sadly its batteries seem to be empty and it doesn't turn on."	2	urban explorer helmet
 
 motorcycle helmet is a grab object.
@@ -849,7 +849,7 @@ name	desc	weight	object
 "bulletproof vest"	"A heavy-duty bulletproof vest, complete with metal plates for extra protection."	14	bulletproof vest
 "medieval breastplate"	"A shiny medieval breastplate. It is either a historical artifact or a quite good reproduction - either way, this should allow for some serious protection for someone who wants to survive the nanite apocalypse."	20	medieval breastplate
 "roadsign breastplate"	"A breastplate that someone fairly large seems to have crafted from things that were available - namely roadsigns. The front is formed by a STOP sign that has been hammered into a slight curve, with further signs bolted to its edges to curve around the sides of the body. Heavy leather straps for over the shoulders hold another stop sign forming the back plate."	30	roadsign breastplate
-"football pads"	"Tough polymer football pads, sized to cover the shoulders and upper chest of a human player. There even is an extra plate attached to the front in order to cover the abdominal area of the wearer. You can see the logo of the Tenvale Gorillas emblazoned on the left pec."	9	football pads
+"football pads"	"Tough polymer football pads, sized to cover the shoulders and upper chest of a human player. There even is an extra plate attached to the front in order to cover the abdominal area of the wearer. You can see the logo of the Tenvale Silverbacks emblazoned on the left pec."	9	football pads
 "life jacket"	"A bright orange life jacket. It'll help normal humans stay afloat and comes with an attached whistle and light."	2	life jacket
 "shoulder pad"	"An oversized, padded shoulderpad that juts out to the side too much. It won't cover much, but it might help."	1	shoulder pad
 

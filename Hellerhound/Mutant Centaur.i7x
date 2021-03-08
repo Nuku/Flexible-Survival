@@ -87,15 +87,21 @@ To say Mutant Centaur Loses:
 			if Player is female:
 				say "     The tentacles circle your cock, and one rubs by your clit on its way. Almost immediately, they abandon your moving cock for the wetness of your pussy, stroking in and out in coils as they work to bring you to climax.";
 				say "     You lose the battle to hold the climax back as you let out a scream of pleasure, your semen filling the bowels of the centaur while its tentacles are washed out of your pussy by the flow of fluids.";
+				CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Mutant Centaur";
 			else:
 				say "     The tentacles wrap around your cock, and then enter your ass with a slight poke of pain, driving you over the edge. The combined scream of rage from the centaur, along with the one of pleasure from you, mixes horribly and seems to shatter the air. The tentacles retract, and the centaur curls up, pulling your [Cock of Player] cock out of its dripping ass.";
+				CreatureSexAftermath "Player" receives "AssDildoFuck" from "Mutant Centaur";
 			say "     Dazed by the sex, you wander off.";
+			CreatureSexAftermath "Mutant centaur" receives "AssFuck" from "Player";
 			now Libido of Player is 0;
 			SanLoss 4;
 	if Libido of Player > 50 and Cock Count of Player is 0 and player is female:
 		say "     The centaur groans and falls to the ground, his legs crumpling and shoving him onto his side. You get a good view of a massive, green cock with vine-like bumps on the shaft. Its sheath is a darker green, and a matching ball sack hangs down half a foot from the powerful member, two giant round forms stretching the skin. What really gets to you is the two tentacles, like growths, that sprout from stump-like protrusions of the base of its sheath.";
 		if humanity of Player < 40:
 			say "     The sight of those tentacles drives you insane with lust. You grab them and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain that when mixed with your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock could fuck, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then you hear a moan, and the centaur climaxes, spraying thick green seed all over the dusty ground and its underside. The tendrils retract from your body, and you leave the centaur, accepting an apple that it offers you.";
+			CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Mutant Centaur";
+			CreatureSexAftermath "Player" receives "AssDildoFuck" from "Mutant Centaur";
+			CreatureSexAftermath "Player" receives "OralCock" from "Mutant Centaur";
 			ItemGain fresh apple by 1;
 			now Libido of Player is 0;
 		else if humanity of Player < 90:
@@ -106,13 +112,15 @@ To say Mutant Centaur Loses:
 				say "     You open your mouth wide and fit as much of it in as you can, which means only the soft head. You start to lick it and suck at the hole, drinking in the juices, until it climaxes.";
 				say "     The spray of fluid begins slowly, but increases in flow rapidly until you cannot swallow it all, and it shoves your face back, and sprays of hot green cum soak your whole body in a few seconds.";
 				say "     After cleaning up the centaur as well as yourself, you go on your way, with an apple as payment.";
+				CreatureSexAftermath "Player" receives "OralCock" from "Mutant Centaur";
 				ItemGain fresh apple by 1;
 				now Libido of Player is 0;
 			else: [cock will fit]
 				say "     After pulling at it for a moment, the head goes in. Your walls contract, bringing more of it inside you, and you closer to the monstrous testicles. All of a sudden, the two tentacles that had been lying limp on the ground dart into your ass, causing you to gasp from addictive pleasure.";
 				say "     At the noise, the centaur seems to wake up, and begins to bend its powerful muscles. You feel the giant cock pumping in and out of your cunt, soaking your insides in precum and bottoming out at each thrust.";
-				say "     You drift off into a haze of pleasure, filled with slapping noises of the centaur's balls. You come out of the haze into your orgasm, pleasure flooding your senses and hot cum flooding your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and its shaft, covering what is in the way with green seed.[impregchance][impregchance][line break]";
+				say "     You drift off into a haze of pleasure, filled with slapping noises of the centaur's balls. You come out of the haze into your orgasm, pleasure flooding your senses and hot cum flooding your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and its shaft, covering what is in the way with green seed.[line break]";
 				say "     The centaur pulls out of you with a splotchy noise, green cum running like a small stream from your abused lips, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Mutant Centaur";
 				if a random chance of one in two succeeds:
 					ItemGain fresh apple by 1;
 				ItemGain fresh apple by 1;
@@ -129,8 +137,9 @@ To say Mutant Centaur Loses:
 to say centaur fuck female:
 	say "     You turn and place the twisted, equine shaft at your waiting entrance, smearing your vagina with precum as you try and force it in. After pulling on it for awhile, and pulling some more, the head finally goes in. Your inner walls shiver and convulse, dragging more of it inside you, and you closer to the monstrous testicles. All of a sudden, the two tentacles that had been lying limp on the ground dart into your ass, causing you to gasp from the sudden penetration. Being double teamed by one being brings a sort of addictive need, something you can't get enough of, drawing you to slam down as hard as you can.";
 	say "     Your sudden movement wakes the centaur fully, and he begins to bend the powerful muscles all over his body. You feel the giant cock pumping in and out of your cunt, filling you with precum as it bottoms out with each thrust. You simply stay crouched where you are, letting the beast defile you as fully as it desires.";
-	say "     You drift off into a haze of pleasure, mind filled with the slapping of the centaur's balls. You only come out of the haze when your orgasm rips through your body, pleasure flooding your senses as hot cum floods your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and the twisted shaft, covering both your lower bodies with green seed.[impregchance][impregchance][line break]";
+	say "     You drift off into a haze of pleasure, mind filled with the slapping of the centaur's balls. You only come out of the haze when your orgasm rips through your body, pleasure flooding your senses as hot cum floods your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and the twisted shaft, covering both your lower bodies with green seed.[line break]";
 	say "     The centaur pulls out of you with a sickeningly arousing squelch, green cum running like a small stream from your abused lips. He then saunters off, leaving you to clean up and be on your way, an apple or two in your bag.";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Mutant Centaur";
 	if a random chance of 1 in 2 succeeds:
 		ItemGain fresh apple by 1;
 	ItemGain fresh apple by 1;

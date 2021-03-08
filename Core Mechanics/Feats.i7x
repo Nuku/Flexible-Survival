@@ -168,7 +168,7 @@ To addfeat (x - text) with (y - text):
 
 instead of addfeating the fun feats:
 	[TODO: Investigate why this is commented out]
-	[if "Male Preferred" is not listed in feats of Player and "Female Preferred" is not listed in feats of Player and "Herm Preferred" is not listed in feats of Player and "Single Sexed" is not listed in feats of Player and "Always Cocky" is not listed in feats of Player and "Always A Pussy" is not listed in feats of Player:
+	if "Male Preferred" is not listed in feats of Player and "Female Preferred" is not listed in feats of Player and "Herm Preferred" is not listed in feats of Player and "Single Sexed" is not listed in feats of Player and "Always Cocky" is not listed in feats of Player and "Always A Pussy" is not listed in feats of Player:
 		if isHellhound is false or ( isHellhound is true and maleHound is true ):
 			addfeat "Male Preferred" with "Outside of special circumstances, you'll remain a guy.";
 		if isHellhound is false or ( isHellhound is true and maleHound is false ):
@@ -182,7 +182,7 @@ instead of addfeating the fun feats:
 	if "Male Preferred" is listed in feats of Player:
 		if "Flat Chested" is not listed in feats of Player, addfeat "Breasts" with "Despite being all male, you still grow breasts - curious.";
 	else:
-		if "Breasts" is not listed in feats of Player, addfeat "Flat Chested" with "Your chest tends to remain flat.";]
+		if "Breasts" is not listed in feats of Player, addfeat "Flat Chested" with "Your chest tends to remain flat.";
 	if "Modest Organs" is not listed in feats of Player or "Passing Grade Chest" is not listed in feats of Player:
 		addfeat "One Way" with "You can only grow larger, not smaller, sexually - barring specific effects.";
 	if "One Way" is not listed in feats of Player or "Passing Grade Chest" is not listed in feats of Player:
