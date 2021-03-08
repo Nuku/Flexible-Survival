@@ -415,7 +415,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Feral Wolf Infection rule:
 	if HP of Fang is listed in { 3, 4 }:
 		make no decision; [Moved to Fang's Beta]
-	if Player has a body of "Feral Wolf Male":
+	if BodySpeciesName of Player is "Feral Wolf":
 		trigger ending "Feral Wolf Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:
