@@ -1,4 +1,4 @@
-Version 1 of Feral Wolf Bitch by Prometheus begins here.
+Feral Wolf Bitch by Prometheus begins here.
 [Based off of Feral Wolf Male by Stripes]
 [Primarily written by Lost Directions]
 
