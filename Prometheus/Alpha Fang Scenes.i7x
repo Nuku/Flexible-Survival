@@ -69,7 +69,7 @@ to say MaleFangPlayerLust:
 		say "     His expanding lupine knot rams against your ass, demanding entrance as Fang emits a low growl. He locks his teeth at your throat and gives a powerful push, forcing the fat bulb past your ring and securing it. Though his movement is much more limited, he resumes his thrusting with short, sharp motions back and forth between sheath and knot. Soon, he reaches the point of no return and explodes into your [bodytype of Player] form, filling your bowels with his thick, virile essence as he howls out in ecstasy.";
 		NPCSexAftermath Player receives "AssFuck" from Fang;
 	say "     You relax with Fang for a while as his climax ebbs, enjoying the feeling of warmth and fullness that suffuses your body while his tongue sweeps over your nape. When he draws from you, you unsteadily rise to your feet and collect your belongings, feeling much more ready to tackle the wastelands.";
-	infect "Feral Wolf Bitch";
+	FangInfect;
 
 to say FemaleFangPlayerLust:
 	say "     Aching with need, you look around for Fang. She's laying by the door, watching the room with her usual alertness. As you walk towards her, she sits up on her haunches. When you reach for her, she lightly nips at your hand and chuffs disapproval. She remains seated, watching you penetratingly as you consider how to approach. A second reach to pat her earns another nip before she suddenly rears up and knocks you over backwards. The oversized wolf presses her paw up on top of you, her springy pads pressing against your belly as she assumes the superior position. She licks your throat twice as she parts your legs and aligns her muzzle with your nethers.";
@@ -86,7 +86,7 @@ to say FemaleFangPlayerLust:
 		NPCSexAftermath Fang receives "OralCock" from Player;
 	else: [neuter]
 		say "     <NOTE: Sorry, the neuter version of this scene is WIP>";
-	infect "Feral Wolf Male";
+	FangInfect;
 
 to say MaleFangRapePlayer:
 	say "     'Late,' says Fang as he approaches you. His scent is intoxicatingly strong and his [one of]puppy pecker[or]doggy dong[at random] is jutting from his sheath, heavy and ready. Any word of complaint you may have had is lost as the wolf gives you a penetrating look, brokering no argument. There is a punishment to be had and a service to be rendered, and that is all there is to it.";
@@ -107,7 +107,7 @@ to say MaleFangRapePlayer:
 	else:
 		say "     He raises his slick red shaft to nudge against your tight pucker, then eases it in. His lust is too powerful to be overly concerned for your comfort, and he slams home into your bowels. When you yelp, he bites into the back of your neck lightly in admonishment, growling at you as he picks up tempo and intensity, pounding your [TailName of Player] rump with a maddening zeal. The room seems full of the sound of your bodies striking one another, swaying balls slapping against you at the end of each rapid motion into your ass. His oversized knot swells powerfully, and he bumps it against you twice before he draws out to the tip, then lunges forward, tying you to him as his seed begins to spray out wildly, filling you with his essence. [if Player is male]With dizzying force, you suddenly spray your own cum across the desk, splattering its smooth surface with your spunk as you groan in pleasure alongside Fang. His paws support you as you go weak-kneed from the stimulation, and his[else]His[end if] teeth find purchase on the back of your neck, holding you still as he finishes.";
 		NPCSexAftermath Player receives "AssFuck" from Fang;
-	infect "Feral Wolf Bitch";
+	FangInfect;
 	say "     Satisfied, Fang pants lightly as he relaxes on top of you for a few quiet minutes, gently nuzzling your back and sides with his muzzle. He gives a soft chuff in your ear, then pulls free of you with a wet pop, allowing some of the seed to run free as he goes to clean up while you sag to the floor, enjoying the feeling of his semen inside you.";
 	say "[MaleFangWSContent]";
 
@@ -139,7 +139,7 @@ to say FemaleFangRapePlayer:
 		say "     With  the steady dripping of her vaginal juices clueing you in on just how much she needs to get off, You feel that somehow mercy will not be included in the list of upcoming activities. Perhaps because of the knowledge that Fang is going to take you for a wild ride, you feel yourself growing wetter by the second. Noticing this, Fangs tail starts to wag as she moves herself until her hindquarters are right above your head, giving you a full view of the fate that awaits you. Thinking to yourself that she might forget to let you up for air, even as a part of you is weirdly ok with going out that way. Tired of the waiting and horniness, Fang does the obvious and lowers herself into a no-nonsense hump and grind. Moving her hips as she clamps down on your nose while she moves in a primitive yet effective fashion that causes sounds of her giving you a hot and violent snu snu session to fill the library.";
 		say "     Continuing to use you as a masturbatory aid, time seems to get lost in the shuffle as your pussy leaks even more juices while Fang slathers her own all over your face. Knowing that you wont be allowed to breath until Fang gets off, you begin to lick her inner walls, adding saliva and attacking her sweet spot as you move your head in a steady nod, attempting to hasten her progress while using your nose as a makeshift dildo. Considering the added stimulation that Fang must be feeling, it comes as no surprise that her body begins to shake from the telltale signs of orgasm. However she doesn't just let it end there, she squats and aims her pussy as her climax hits, covering your body with glistening femcum, marking you as being hers with the scent of her pussy. Momentarily admiring her handy work, she settles down and recovers while laying on you.";
 		NPCSexAftermath Player receives "OralPussy" from Fang;
-	infect "Feral Wolf Male";
+	FangInfect;
 	say "     Satisfied, Fang pants lightly as she relaxes on top of you for a few quiet minutes, gently nuzzling your neck and chest with her muzzle. She gives a soft chuff in your ear, then pulls free of you, allowing some of the juices to run free as she goes to clean up while you sag to the floor, enjoying the feeling of having served your alpha.";
 
 to say MaleFangMutualLust:
@@ -164,7 +164,7 @@ to say MaleFangMutualLust:
 		say "     Your [bodydesc of Player] body locks as climax arrives powerfully, trembling atop Fang as his skilled tongue works and cleans you even as you release. His knot swells, bumping against your lips before it starts to spray his creamy wolven spunk across your tongue. You eagerly swallow the contents of your alpha's swollen, virile balls, the rich taste pouring smoothly down your throat. Even after his shaft stops twitching, a thin trickle continues to drip onto your palate. You draw back, letting the shaft pops free of your mouth, and you kiss the tip before reaching to caress his swollen knot. You are rewarded with a loud yip as the sensitive organ is jostled and a final spurt of seed across your lips.";
 		NPCSexAftermath Fang receives "OralCock" from Player;
 		NPCSexAftermath Player receives "OralCock" from Fang;
-	infect "Feral Wolf Bitch";
+	FangInfect;
 	say "     Both satisfied, Fang squirms out from under you and licks your face before moving back towards the door to resume his watch.";
 	say "[MaleFangWSContent]";
 
@@ -195,7 +195,7 @@ to say FemaleFangMutualLust:
 				if HP of Lux is 0:
 					add "Fang's Mate" to feats of Player;
 				now Perception of Fang is 24;
-	infect "Feral Wolf Male";
+	FangInfect;
 	say "     Both satisfied, Fang squirms out from under you and licks your face before moving back towards the door to resume her watch.";
 
 Alpha Fang Scenes ends here.

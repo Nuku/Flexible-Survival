@@ -217,37 +217,13 @@ to say sexwithFang:
 			say "[MaleFangOmegaSexMenu]";
 		else if HP of Fang is 3:
 			say "[MaleFangAlphaSex1]";
-			if FemaleList is warded or FemaleList is banned:
-				infect "Feral Wolf Male";
-			else if MaleList is warded or MaleList is banned:
-				infect "Feral Wolf Bitch";
-			else:
-				if a random chance of 1 in 4 succeeds:
-					infect "Feral Wolf Bitch";
-				else:
-					infect "Feral Wolf Male";
+			FangInfect;
 		else if HP of Fang is 4:
 			say "[MaleFangAlphaSex2]";
-			if FemaleList is warded or FemaleList is banned:
-				infect "Feral Wolf Male";
-			else if MaleList is warded or MaleList is banned:
-				infect "Feral Wolf Bitch";
-			else:
-				if a random chance of 1 in 4 succeeds:
-					infect "Feral Wolf Bitch";
-				else:
-					infect "Feral Wolf Male";
+			FangInfect;
 		else if HP of Fang is 5:
 			say "[MaleFangBetaSexMenu]";
-			if FemaleList is warded or FemaleList is banned:
-				infect "Feral Wolf Male";
-			else if MaleList is warded or MaleList is banned:
-				infect "Feral Wolf Bitch";
-			else:
-				if a random chance of 1 in 4 succeeds:
-					infect "Feral Wolf Bitch";
-				else:
-					infect "Feral Wolf Male";
+			FangInfect;
 		else if Player is not neuter:
 			say "[MaleFangSexMenu]";
 		else:
@@ -259,51 +235,29 @@ to say sexwithFang:
 			say "[FemaleFangOmegaSexMenu]";
 		else if HP of Fang is 3:
 			say "[FemaleFangAlphaSexMenu]";
-			if FemaleList is warded or FemaleList is banned:
-				infect "Feral Wolf Male";
-			else if MaleList is warded or MaleList is banned:
-				infect "Feral Wolf Bitch";
-			else:
-				if a random chance of 1 in 4 succeeds:
-					infect "Feral Wolf Bitch";
-				else:
-					infect "Feral Wolf Male";
+			FangInfect;
 		else if HP of Fang is 4: [Shouldn't currently be possible, but just in case]
 			say "[FemaleFangAlphaSexMenu]";
-			if FemaleList is warded or FemaleList is banned:
-				infect "Feral Wolf Male";
-			else if MaleList is warded or MaleList is banned:
-				infect "Feral Wolf Bitch";
-			else:
-				if a random chance of 1 in 4 succeeds:
-					infect "Feral Wolf Bitch";
-				else:
-					infect "Feral Wolf Male";
+			FangInfect;
 		else if HP of Fang is 5:
 			say "[FemaleFangBetaSexMenu]";
-			if FemaleList is warded or FemaleList is banned:
-				infect "Feral Wolf Male";
-			else if MaleList is warded or MaleList is banned:
-				infect "Feral Wolf Bitch";
-			else:
-				if a random chance of 1 in 4 succeeds:
-					infect "Feral Wolf Bitch";
-				else:
-					infect "Feral Wolf Male";
+			FangInfect;
 		else if Player is not neuter:
 			say "[FemaleFangSexMenu]";
 		else:
 			say "     Lacking any sexual organs of your own, you content yourself with snuggling the wolf and scritching her ears. She nuzzles you in return and lick your face.";
 	if HP of Fang is 3 or HP of Fang is 4:
-		if FemaleList is warded or FemaleList is banned:
-			infect "Feral Wolf Male";
-		else if MaleList is warded or MaleList is banned:
-			infect "Feral Wolf Bitch";
-		else:
-			if a random chance of 1 in 4 succeeds:
-				infect "Feral Wolf Bitch";
-			else:
-				infect "Feral Wolf Male";
+		FangInfect;
+
+to say FangInfect:
+	if FemaleList is warded or FemaleList is banned:
+		infect "Feral Wolf Male";
+	else if MaleList is warded or MaleList is banned:
+		infect "Feral Wolf Bitch";
+	else if Fang is male:
+		infect "Feral Wolf Bitch";
+	else if Fang is female:
+		infect "Feral Wolf Male";
 
 [to say FemaleFangAlphaSexMenu:
 	say "-----This is a placeholder-----";]
@@ -684,7 +638,7 @@ to say MaleFangAlphaFuckedSBL:
 		NPCSexAftermath Player receives "PussyFuck" from Fang;
 	else:
 		NPCSexAftermath Player receives "AssFuck" from Fang;
-	infect "Feral Wolf Male";
+	FangInfect;
 
 to say MaleFangWSContent:
 	if FangWS is 0:
@@ -762,7 +716,7 @@ to say FemaleFangAlphaFuckedSBL:
 	say "     When her orgasm subsides, she removes herself from you only to shove it back onto you and start fucking you again. She ends up taking you several times, relishing asserting her dominance over you. By the time she's finally done, your belly is soaked with her lupine dew[if Player is male] and you've drained your balls until you are dry[else if Player is female] and your crotchfur is soaked and sticky with her girlcum and your female juices[end if]. When she does dismount, you can barely roll onto your side to recover. You release a sated moan while her glistening girlcum drips off of your outstretched body. Its scent lingers upon you for some time, overpowering even that of your mighty skunkbeast form.";
 	now Libido of Player is ( ( Libido of Player * 2 ) / 3 );
 	SanLoss 5;
-	infect "Feral Wolf Bitch";
+	FangInfect;
 
 
 Section 2.3.1 - Male Beta Fang Sexxxings [Sort of Placeholders]
@@ -1385,7 +1339,7 @@ to say MaleFangSandraSex:
 			now XP of Alexandra is 0;
 			now vmusedone of Fang is false; [Open for fresh musings]
 			now Libido of Player is Libido of Player / 2;
-			infect "Feral Wolf Male";
+			FangInfect;
 		else: [ Fang becomes Omega. See Section 4.1]
 			say "     Momentarily tempted by sexy bunny's offer, you manage to shake it off and grab the wolf roughly by the neck. 'No Fang, I'm the alpha and that's the way it stays,' you growl, forcing him to the floor. He growls a little in frustration, but you hold him firm. 'Don't you get uppity because Sandra lets you fuck her. I'm still the one on top here,' you add grabbing his balls firmly, making him whine and dip his ears. 'I merely let you because she enjoys it, not because you deserve to be anything more. In fact, consider yourself omega now. If someone deserving wants to breed you, you are their bitch and do whatever they say unless I command otherwise. Understand?'";
 			if Player is herm:
@@ -1607,7 +1561,7 @@ instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP o
 		now XP of Alexandra is 0;
 		now vmusedone of Fang is false; [Open for fresh musings]
 		now Libido of Player is Libido of Player / 2;
-		infect "Feral Wolf Male";
+		FangInfect;
 	else:
 		say "     Momentarily tempted by idea of submitting to the wolf, you manage to shake it off and grab the wolf roughly by the neck. 'No Fang, I'm the alpha and that's the way it stays,' you growl, forcing him to the floor. He growls a little in frustration, but you hold him firm. 'Don't you get uppity because I made you wait. I'm still the one on top here,' you add grabbing his balls firmly, making him whine and dip his ears. 'I have more important things to deal with than you. Just because you're guarding the place doesn't mean you're in charge. Consider yourself omega from now on. If someone wants to mate with you, you are their bitch and do whatever they say unless I command otherwise. Understand?'";
 		if Player is herm:
@@ -1697,7 +1651,7 @@ instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP o
 		now XP of Alexandra is 0;
 		[now vmusedone of Fang is false; [Open for fresh musings]]
 		now Libido of Player is Libido of Player / 2;
-		infect "Feral Wolf Bitch";
+		FangInfect;
 	else:
 		say "     Momentarily tempted by idea of submitting to the wolf, you manage to shake it off and grab the wolf roughly by the neck. 'No Fang, I'm the alpha and that's the way it stays,' you growl, forcing her to the floor. She growls a little in frustration, but you hold her firm. 'Don't you get uppity because I made you wait. I'm still the one on top here,' you add by grabbing her tail firmly, making her whine and dip her ears. 'I have more important things to deal with than you. Just because you're guarding the place doesn't mean you're in charge. Consider yourself omega from now on. If someone wants to mate with you, you are their bitch and do whatever they say unless I command otherwise. Understand?'";
 		if Player is herm:
@@ -2009,7 +1963,7 @@ instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 a
 			else:
 				say "     Something has gone wrong here. Please report this on the Flexible Survival Discord Channel in Bug Reports.";
 			now Libido of Player is Libido of Player / 2;
-			infect "Feral Wolf Male";
+			FangInfect;
 		else:
 			LineBreak;
 			say "     While you are happy for Fang to be your Beta, you don't feel that having sex with him is necessary to cement his position, nor do you have any interest in fornicating with him at the moment. Therefore, you gently refuse his request, the wolf disappointed but accepting of your decision. 'As my Alpha wishes,' Fang replies before loping off, likely to resume guarding the front door. Overall, you are pleased with the outcome of this exchange and return to the entrance hall too so as to continue what you were doing before Fang took you aside.";
@@ -2272,7 +2226,7 @@ instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 a
 			else:
 				say "     Something has gone wrong here. Please report this on the Flexible Survival Discord Channel in Bug Reports.";
 			now Libido of Player is Libido of Player / 2;
-			infect "Feral Wolf Male";
+			FangInfect;
 		else:
 			LineBreak;
 			say "     While you are happy for Fang to be your Beta, you don't feel that having sex with her is necessary to cement her position, nor do you have any interest in fornicating with her at the moment. Therefore, you gently refuse her request, the wolf disappointed but accepting of your decision. 'As my Alpha wishes,' Fang replies before loping off, likely to resume guarding the front door. Overall, you are pleased with the outcome of this exchange and return to the entrance hall too so as to continue what you were doing before Fang took you aside.";
