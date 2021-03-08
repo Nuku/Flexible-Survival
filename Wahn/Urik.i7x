@@ -319,7 +319,7 @@ to say UrikTalkMenu:
 		now sortorder entry is 70;
 		now description entry is "Offer Urik the chance to be your combat companion";
 	[]
-	if Perception of Urik is 1 or Perception of Urik is 2 or Perception of Urik is 3:
+	if Perception of Urik is 1 or Perception of Urik is 2 or Perception of Urik is 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Take him up on the looting trip he suggested";
 		now sortorder entry is 71;
@@ -792,14 +792,14 @@ to say UrikTalk_Looting:
 	if Player is not booked:
 		if Perception of Urik < 3:
 			say "     You think about taking Urik up for a looting excursion, but then remember that the place he wants to go to is fairly close to the library. Also, he doesn't have his bag with him right now. Maybe take it up again when you're actually in the Grey Abbey Library.";
-		else if Perception of Urik is 3:
+		else if Perception of Urik is 4:
 			say "     You think about taking Urik up for a looting excursion, but then remember that he doesn't have his bag with him right now. Maybe take it up again when you're in the Grey Abbey Library to set out properly prepared.";
 	else:
 		if Perception of Urik is 1:
 			UrikFirstLootingTrip;
 		else if Perception of Urik is 2:
 			UrikSecondLootingTrip;
-		else if Perception of Urik is 3:
+		else if Perception of Urik is 4:
 			UrikThirdLootingTrip; [BEER!]
 
 to UrikFirstLootingTrip:
@@ -1236,7 +1236,7 @@ to say Henry_Brewery:
 		ItemGain nightstick by 1;
 		ItemGain aviator goggles by 1;
 		TraitGain "Henry Looted" for Urik;
-	now Perception of Urik is 4; [after the brewery]
+	now Perception of Urik is 5; [after the brewery]
 
 to say Henry_Choice:
 	say "     [bold type]What do you reply?[roman type][line break]";
@@ -2245,7 +2245,7 @@ instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true a
 	now Loyalty of Urik is 10; [he offered looting trips]
 	now Perception of Urik is 1; [enabled the talk option]
 
-instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true and Perception of Urik is 2 and a random chance of 1 in 3 succeeds): [Urik wants beer]
+instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true and Perception of Urik is 3 and a random chance of 1 in 3 succeeds): [Urik wants beer]
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2279,11 +2279,11 @@ instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true a
 	else if calcnumber is 2:
 		LineBreak;
 		say "     Clearing your throat, you tell the orc that right now isn't the best of time for this trip. He'll have to wait a while until you're ready. Thankfully, this does little to break Urik's elevated spirit, and he just nods and says, 'Sure thing, [UrikPlayerAddress]. Just tell me when you wanna go looting and I'll be ready to set out right away!'";
-		now Perception of Urik is 3; [ready for trip #3]
+		now Perception of Urik is 4; [ready for trip #3]
 	else if calcnumber is 3:
 		LineBreak;
 		say "     Shaking your head, you tell the orc that you don't plan on trekking through half the city in the middle of the nanite apocalypse, just to find something to drink for him. Urik grumbles a little and is visibly deflated, but soon replies, 'Fine, [UrikPlayerAddress]. Would have been fun, but I know what you say goes. Forget about it then.'";
-		now Perception of Urik is 4; [after the beer trip - completed or skipped]
+		now Perception of Urik is 5; [after the beer trip - completed or skipped]
 
 instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loyalty of Urik > 8 and Loyalty of Urik < 80 and PlayerFriended of Urik is true and "Selective Breeding" is not listed in Traits of Urik and Loyalty of Urik > 8 and Candy is in Bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
 	say "[NavCheck Grey Abbey Library]";
