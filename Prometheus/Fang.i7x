@@ -249,7 +249,7 @@ to say sexwithFang:
 	if HP of Fang is 3 or HP of Fang is 4:
 		FangInfect;
 
-to say FangInfect:
+to FangInfect:
 	if FemaleList is warded or FemaleList is banned:
 		infect "Feral Wolf Male";
 	else if MaleList is warded or MaleList is banned:
