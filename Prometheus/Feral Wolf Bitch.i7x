@@ -113,7 +113,7 @@ to say BeatFeralWolfBitch:
 				now Ball Count of Fang is 0;
 				now Ball Size of Fang is 0;
 				now Cunt Count of Fang is 1;
-				now Cunt Depth of Fang is 10;
+				now Cunt Depth of Fang is 12;
 				now Cunt Tightness of Fang is 2;
 				now Clit Size of Fang is 3;
 				now Virgin of Fang is false;
@@ -266,7 +266,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12;
-	now Cunt Tightness entry is 6;
+	now Cunt Tightness entry is 2;
 	now SeductionImmune entry is false;
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "wolf fem-cum";
