@@ -18,6 +18,8 @@ Version 2 of Diego by Wahn begins here.
 [  99: player didn't show any interest so far                               ]
 [ 100: blocked/failed                                                       ]
 
+[ Lust of Diego - Counter for collar forced scenes                          ]
+
 "Adds a coyote named Diego to Flexible Survival."
 
 Section 1 - Diego
@@ -1314,6 +1316,11 @@ instead of navigating Park Entrance while (XP of Diego is 98 or (XP of Diego > 2
 to say DiegoCollarWearingAftermath:
 	say "     Sauntering around you with [PosAdj of Diego] tail exuberantly wagging left and right, Diego strokes a fingertip along the outside of the band of leather around your neck. 'You see, that's a very special collar indeed. It's tradition to trick the wearer into putting it on, but other ways work too of course. But I won't let you guess any longer what it does now. Let me demonstrate: Bark for me!' Without a thought to do so, you find yourself barking on command, with some of them being a bit strangled-sounding as you try to talk, but nothing except more canine noises escape your throat. 'That's enough, quiet now,' Diego adds with a grin, instantly shutting you up. 'The collar makes the wearer obey, completely. Not anyone of course, only the one they know 'owns' it, and them. And thanks to your help my friend, that's me again!' Tracing [PosAdj of Diego] hand down your front, [SubjectPro of Diego] adds, 'This'll be so much fun! Oh, don't worry, I'll leave you be yourself mostly. But you'll help me when I need you, no questions asked! The tricks we'll be able to play, hah!'";
 	say "     'But first, there's something else you can do for me[if player is not naked]! Strip!' Instantly obeying the command, you quickly peel all clothing and gear off your body, then come to stand naked in front of him. [else]! Let's have a look at you!' [end if]Diego lets [PosAdj of Diego] gaze wander over your body, smiling as [SubjectPro of Diego] moves forward to stroke you here and there. 'Oh yeah, you'll be a really fun sidekick to have!' ";
+	if DiegoChanged > 0; [Diego got transformed away from male - let's fix that now]
+		say "Chuckling, the coyote pulls out a little vial from somewhere and adds, 'But before that, let's end the little bit of playing around we've been doing and set things as they should again!' With that, he downs the off-white liquid inside, grinning broadly as his previous male form is restored in but a moment or two. ";
+		SetMalePronouns for Diego;
+		now DiegoChanged is 0; [back to male]
+		now DiegoBitched is 0; [reset the fem sex variable]
 	if player is male:
 		say "Then [PosAdj of Diego] hand moves down to cup your crotch, giving your manhood a testing squeeze. 'That'll have to go though, I'm afraid. I much prefer a nice bitch to figuring out what to do with two dicks in the mix! Now be a good puppy and make this thing vanish, will you?' A paw-hand pressing down lightly on your shoulder indicates that both of the things [SubjectPro of Diego] said were a command, and you sink down on all fours, presenting yourself in doggy-style position while a strange tingle starts to spread over your crotch. Kneeling behind you and resting a hand on your ass as [SubjectPro of Diego] leans down to watch the transformation, Diego chuckles amusedly.";
 		WaitLineBreak;
@@ -1338,6 +1345,7 @@ to say DiegoCollarWearingAftermath:
 			FeatLoss "Herm Preferred";
 		FeatGain "Female Preferred";
 		FeatGain "Always A Pussy";
+		TraitGain "Male_Player_Collared" for Diego; [memory point to let him remember that the player was a male before]
 	else if player is female:
 		say "Then [PosAdj of Diego] hand moves down to your crotch, stroking over your nether lips. 'Very nice. Now be a good puppy and get into position, will you?' A paw-hand pressing down lightly on your shoulder guides you to sink down on all fours, presenting yourself in doggy-style position. Kneeling behind you and resting a hand on your ass as [SubjectPro of Diego] leans down to sniff your crotch, Diego chuckles amusedly.";
 		WaitLineBreak;
@@ -1351,6 +1359,7 @@ to say DiegoCollarWearingAftermath:
 			FeatLoss "Herm Preferred";
 		FeatGain "Female Preferred";
 		FeatGain "Always A Pussy";
+		TraitGain "Female_Player_Collared" for Diego; [memory point to let him remember that the player was a female before]
 	else: [neuter]
 		say "Then [PosAdj of Diego] hand moves down to stroke over your crotch, not finding much there. 'No, this won't do, I'm afraid. Some would just make do with the ass, but I'd much rather you have a nice and ready pussy! Now be a good puppy and get into position, will you?' A paw-hand pressing down lightly on your shoulder indicates that both of the things [SubjectPro of Diego] said were a command, and you sink down on all fours, presenting yourself in doggy-style position while a strange tingle starts to spread over your crotch. Kneeling behind you and resting a hand on your ass as [SubjectPro of Diego] leans down to watch the transformation, Diego chuckles amusedly.";
 		WaitLineBreak;
@@ -1367,6 +1376,7 @@ to say DiegoCollarWearingAftermath:
 			FeatLoss "Herm Preferred";
 		FeatGain "Female Preferred";
 		FeatGain "Always A Pussy";
+		TraitGain "Neuter_Player_Collared" for Diego; [memory point to let him remember that the player was a neuter before]
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Coyote";
 	now XP of Diego is 7; [player has the collar on, got fucked]
 
@@ -1398,5 +1408,110 @@ to say DiegoCollarDeliveryAftermath:
 		ItemLoss diego's heirloom collar by 1;
 		now XP of Diego is 50; [collar delivered]
 
+an everyturn rule:
+	if diego's heirloom collar is equipped and XP of Diego > 6 and XP of Diego < 50: [collar on and Diego fucked the player]
+		project Figure of Diego_icon;
+		if Diego is not visible:
+			if lastFuck of Diego - turns is 8: [one day after fucking around with Diego the last time]
+				say "     [bold type]All of a sudden, you feel somewhat warm and flushed, with your lips going dry. At first, you can't tell where the sensation is coming from, but when you try to adjust the collar around your neck a moment later, you realize that it feels rather... warm. Touching the tight band of leather, it seems to be pulsing with inner energy, ramping up whatever it is doing and making your head swim a little.[roman type][line break]";
+				say "     Without anyone there to touch you, the ghostly feeling of someone's paw-hand stroking along your jaw-line overcomes you, followed by the impression of a lick across your cheek. Hot breath seems to wash over the side of your neck, followed by Diego's voice in your ear, 'Come to me, you know you want it. Need it!' The warmth of the collar ebbs off after that, together with the... delusion? Projection? Whatever it was. Still, you're left breathless, feeling slightly sweaty and aroused, with the coyote at the front of your mind for the next little while. The desire to return to him frequently interrupts other thoughts, popping up no matter how often you push it down.";
+				SanLoss 10;
+				if Intelligence of Player > 20:
+					StatChange "Intelligence" by -1;
+			else if lastFuck of Diego - turns is 16: [two days after fucking around with Diego the last time]
+				say "     [bold type]All of a sudden, you feel somewhat warm and flushed, with your lips going dry. At first, you can't tell where the sensation is coming from, but when you try to adjust the collar around your neck a moment later, you realize that it feels rather... warm. Touching the tight band of leather, it seems to be pulsing with inner energy, ramping up whatever it is doing and making your head swim.[roman type][line break]";
+				if Cunt Count of Player is 0:
+					now Cunt Count of Player is 1;
+					now Cunt Depth of Player is 5;
+					now Cunt Tightness of Player is 3;
+					say "     You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy. This dripping cunny is sopping with feminine juices from its orgasmic formation.";
+				say "     Unbidden, a loud, almost shouted moan bursts from your lips as the sensation of a wet tongue brushing over your clit overcomes you, followed by that same ghostly appendage slipping between your nether lips. Looking down, there is no one there, but then you blink and seem to see Diego between your legs in the fleeing second that your eyes are closed. Now intentionally closing them, you see the coyote before your mind's eye, his muzzle rising from your sodden folds with him licking this sides of it and grinning broadly. 'I know what you need, little bitch!' Diego says and pushes two fingers into your body with the confident knowledge of a master making use of what is his. While he wiggles and bends his digits inside you, the trickster's thumb rests on your clit, rubbing it slowly. This continues for about a minute, getting you all hot and ready, before he stands up, presenting his rock-hard coyote cock.";
+				say "     The glorious shaft is rubbed over your folds, teased at the opening and - almost - enters you before he pulls back. You're panting, eager for him to enter you, but Diego seems to fade after that moment, his toothy grin being the last to vanish after the words, 'Come find me to feel it for real inside you!' Blinking open your eyes, now that the... delusion? Projection? Whatever is was is over, you're left horny and panting, with little but phantasies of Diego and hard cock dominating your mind. It is hard to have other thoughts besides just that, and you feel the urgent need to go find the coyote for a fuck.";
+				SanLoss 15;
+				if Intelligence of Player > 15:
+					StatChange "Intelligence" by -1;
+			else if lastFuck of Diego - turns is 24: [three days after fucking around with Diego the last time]
+				say "     [bold type]All of a sudden, you feel a flush of heat rise inside you, with your throat feeling bone-dry and parched. Moistening your lips with your tongue, you swallow to dispel the weird feeling, which makes your throat bob and flex against the collar resting tightly around it - at which point you realize that the leather is rather... warm. You raise a hand to the collar and hook your finger under the it, trying to pull the firm band away from your skin without having much success. Instead it seems to pulse with inner energy, ramping up whatever it is doing and making your head swim dizzily.[roman type][line break]";
+				if Cunt Count of Player is 0:
+					now Cunt Count of Player is 1;
+					now Cunt Depth of Player is 5;
+					now Cunt Tightness of Player is 3;
+					say "     You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy. This dripping cunny is sopping with feminine juices from its orgasmic formation.";
+				say "     Closing your eyes to keep the room from spinning, you can hear Diego's voice in your mind, getting stronger by the second. ";
+				if "Male_Player_Collared" is listed in Traits of Diego: [player was male when originally collared]
+					if Player is not male:
+						say "'Yes, you'll be a good little slut for me, won't you boy? Having a dick was such a waste of your potential - when we both know your true purpose always was to be a nice, little, obedient bitch instead! MY little bitch!' ";
+					else:
+						say "'Yes, you'll be a good little slut for me, won't you boy? No need to try fighting it - that tiny little prick of yours isn't even worth mentioning!' As he says this, your heart starts racing and you quickly grab for your [cock of Player] manhood, feeling its [if Cock Length of Player > 15]mighty [else if Cock Length of Player > 10]sizable [else if Cock Length of Player > 6]above-average [else if Cock Length of Player > 3]admittedly average [else]diminutive [end if]length, only to find it shrinking out of your grasp and pulling closer to your body. Without being able to do anything about it, your cock transforms into the nub of a clit! 'We both know your true purpose always was to be a nice, little, obedient bitch instead! MY little bitch!' ";
+						now Cock Count of Player is 0;
+						now Cock Length of Player is 0;
+						now Ball Size of Player is 0;
+				else if "Female_Player_Collared" is listed in Traits of Diego: [player was female when originally collared]
+					say "'Yes, you'll be a good little slut for me! Accept it, this always was your true purpose: being a nice, little, obedient bitch! MY little bitch!' ";
+				else if "Neuter_Player_Collared" is listed in Traits of Diego: [player was neuter when originally collared]
+					say "'Yes, you'll be a good little slut for me! I saved you from being a sexless freak, so accept your true purpose: Being a nice, little, obedient bitch! MY little bitch!' ";
+				say "An image of your grinning coyote master flashes before your mind's eye, with him leaning in closely and licking his lips. Then he reaches casually between your legs with his paw-hand, self-confident in his freedom to do with you whatever he decides. Fingers brush over the sensitive nub of your clit before sliding lower, tracing your nether lips and spreading them apart. You can't help but feel intensely aroused and wet as two digits slide into you - by which time you realize they're your own fingers by the wetness on your skin! Is this more of Diego messing with you, or did you just start masturbating on your own while thinking of him?!";
+				say "     No matter which, this feels too good to just stop with suddenly, so you keep going, sinking more of your fingers into the sopping pussy between your legs and curling them to brush just the right spots. At the same time, you move your other hand in to rub at your clit, frigging it hard as you think of the trickster doing this to you himself. Touching your sex, licking it, bringing the big canine shaft of his up against your opening! You shove your digits deeper into your body, which sadly is a weak comparison to Diego's glorious cock spearing your sex. Even as you finger-fuck yourself with ever more frantic movements, all this does is keep your arousal going, without hitting the true goal of sating your need. Panting and fingering yourself while imagining the coyote, you can almost feel his fur brushing against the side of your neck as a voice seems to whisper into your ear, 'You know where to find me, little bitch! Be a good girl and I'll give you what you need!'";
+				WaitLineBreak;
+				say "     Knowing that you won't get off like this, you open your eyes and pull your hands away from your sex. Looking at the slick, sexual fluids sticking to your fingers, you feel very, very tempted to rush back to Diego and get your sweet reward. For the next little while, little else fills your mind.";
+				say "     [bold type]This is getting out of hand! You don't know what'll happen if you don't go back to Diego for a good fucking soon![roman type][line break]";
+				SanLoss 20;
+				if Intelligence of Player > 10:
+					StatChange "Intelligence" by -1;
+			else if lastFuck of Diego - turns is 32: [four days after fucking around with Diego the last time]
+				say "     [bold type]All of a sudden, you feel a flush of heat rise inside you, with your throat feeling bone-dry and parched. Moistening your lips with your tongue, you swallow to dispel the weird feeling, which makes your throat bob and flex against the collar resting tightly around it - at which point you realize that the leather is almost uncomfortably hot against your skin. You raise a hand to the collar and hook your finger under the it, trying to pull the firm band away from your skin without having much success. Instead it seems to increase the strength of inner energy that pulses into you, ramping up whatever it is doing and making your head swim dizzily.[roman type][line break]";
+				if Cunt Count of Player is 0:
+					now Cunt Count of Player is 1;
+					now Cunt Depth of Player is 5;
+					now Cunt Tightness of Player is 3;
+					say "     You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy. This dripping cunny is sopping with feminine juices from its orgasmic formation.";
+				say "     Closing your eyes to keep the room from spinning, you can hear Diego's voice in your mind, getting stronger by the second. ";
+				if "Male_Player_Collared" is listed in Traits of Diego: [player was male when originally collared]
+					if Player is not male:
+						say "'You're a needy bitch now, boy! So why are you acting like a bad little girl and keep yourself from me? You know your true purpose is to be an obedient cock-sheath for my dick!' ";
+					else:
+						say "'Remember that you're a bitch now, boy - MY little bitch! Yet you continue your attempts to resist and keep yourself from me. But there is no sense in fighting your true purpose - and especially nit if that tiny little prick of yours isn't even worth mentioning!' As he says this, your heart starts racing and you quickly grab for your [cock of Player] manhood, feeling its [if Cock Length of Player > 15]mighty [else if Cock Length of Player > 10]sizable [else if Cock Length of Player > 6]above-average [else if Cock Length of Player > 3]admittedly average [else]diminutive [end if]length, only to find it shrinking out of your grasp and pulling closer to your body. Without being able to do anything about it, your cock transforms into the nub of a clit! 'You'll learn your place before long!' ";
+						now Cock Count of Player is 0;
+						now Cock Length of Player is 0;
+						now Ball Size of Player is 0;
+				else if "Female_Player_Collared" is listed in Traits of Diego: [player was female when originally collared]
+					say "'Why are you acting like a bad little girl and keep yourself from me? Accept it, this always was your true purpose: being a nice, little, obedient bitch! MY little bitch!' ";
+				else if "Neuter_Player_Collared" is listed in Traits of Diego: [player was neuter when originally collared]
+					say "'Why are you acting like a bad little girl and keep yourself from me? I saved you from being a sexless freak, so accept your true purpose: Being a nice, little, obedient bitch! MY little bitch!' ";
+				say "An image of your grinning coyote master flashes before your mind's eye, with him leaning in closely and licking his lips. Then he reaches casually between your legs with his paw-hand, self-confident in his freedom to do with you whatever he decides. Fingers brush over the sensitive nub of your clit before sliding lower, tracing your nether lips and spreading them apart. You can't help but feel intensely aroused and wet as two digits slide into you - by which time you realize they're your own fingers by the wetness on your skin! Is this more of Diego messing with you, or did you just start masturbating on your own while thinking of him?!";
+				say "     No matter which, this feels too good to just stop with suddenly, so you keep going, sinking more of your fingers into the sopping pussy between your legs and curling them to brush just the right spots. At the same time, you move your other hand in to rub at your clit, frigging it hard as you think of the trickster doing this to you himself. Touching your sex, licking it, bringing the big canine shaft of his up against your opening! You shove your digits deeper into your body, which sadly is a weak comparison to Diego's glorious cock spearing your sex. Even as you finger-fuck yourself with ever more frantic movements, all this does is keep your arousal going, without hitting the true goal of sating your need. Panting and fingering yourself while imagining the coyote, you can almost feel his fur brushing against the side of your neck as a voice seems to whisper into your ear, 'Such a needy, slutty bitch! Whimpering and moaning my name as she craves a cock inside her!'";
+				WaitLineBreak;
+				say "     At that point, you realize that there's something more going on than just your phantasies running wild, as a paw-hand slides over your shoulder from behind and pulls you back, against the furred front of someone. At the same time, a second paw pulls your head to the side, with a wet tongue lapping over your lips, then worming its way into your mouth. Eyes flicking open in shocked surprise, you find yourself face to face with your coyote master Diego, who makes out with you in a firm, dominant fashion that leaves you helpless to resist. His fingers move over you, groping and stroking what is his, each new touch driving shivers of lust up and down your spine. He keeps going for some time, long tongue exploring your mouth and wrestling against your own, before finally pulling back, licking his chops and giving you the trademark trickster grin. 'Now, now [if Player is not defaultnamed][Name of Player] [end if]- why are you trying to be a bad little girl? We're connected and yet you wander off and make me find you!'";
+				if "Male_Player_Collared" is listed in Traits of Diego: [player was male when originally collared]
+					say "     'Are you still confused about having been a guy? Put that out of your head, sweet little bitch! You're meant to take cock, MY cock!' ";
+				else if "Female_Player_Collared" is listed in Traits of Diego: [player was female when originally collared]
+					say "     'Still trying to be 'your own woman'? Forget that, you're meant to take MY cock, and obey! You know you need this!' ";
+				else if "Neuter_Player_Collared" is listed in Traits of Diego: [player was neuter when originally collared]
+					say "     'Are you still confused about having been sexless? Put that out of your head, sweet little bitch! You're meant to take cock, MY cock!' ";
+				say "With that said, he suddenly reaches down and pulls your hand aside from where it is covering your crotch, snorting in amusement as he sees that your fingers are drippingly wet, as are the insides of your thighs. As his questing fingers find your clit and pinch lightly it, then roll the sensitive nub between the coyote's fingertips, your built-up arousal is released all at once in an orgasm that makes your knees go weak like jelly! Shouting out uncontrolled moans while femcum squirts from your pussy, you can't even keep standing, with Diego thankfully keeping a grip on your body and lowering you to the ground. Panting breathlessly and shivering in lust as you ride out the wave of pleasure, you find yourself lying on your side by the time you can form proper thoughts again.";
+				WaitLineBreak;
+				say "     Two tan-furred paws steps into your line of sight next, with your gaze following them up along Diego's toned legs to his thighs, then his crotch. The coyote's balls are full and round, promising all the virile loads you can handle when he fucks you with the red rocket of a canine cock sticking out from his sheath. Just thinking of having him breeding you, with Diego's cubs soon to grow in your belly, makes your arousal soar again despite just having gotten off. With a chuckle, the dominant coyote says, 'Let me show you what you've been missing!' With that, he lifts one paw and places it against your raised hip, pushing it to the side to roll you fully on your back. Not wasting any time, he gets between your legs, and lines his glorious shaft up with your sopping wet slit. The mere act of his erection rubbing over your nether lips makes you tremble and whimper while reflexively humping your crotch against his cock.";
+				say "     'Shh - it's all good now, daddy's here,' Diego tells you in a surprisingly warm tone, then slides his cock into your welcoming pussy. The sensation of his warm, firm shaft spreading your insides around its perfect width, fitting just right as if your sex was literally made for him, gives you a mini-orgasm all on its own! Waves of lust washing over you, you see stars dancing in front of your eyes and writhe under your beloved master. In this moment, you can barely even comprehend how you managed to last for days without feeling him inside you. He slides all the way in, until the orbs of his furry balls press against your crotch, then leans forward to kiss you full on the mouth once more. Entwined like that, Diego begins to fuck you without restraint, really hammering your needy pussy deep with the dick it was meant to take!";
+				WaitLineBreak;
+				say "     The coyote feels so very right and incredibly good inside you that he easily pushes you past the point of no return of two orgasms in quick succession, pacing himself and simply resting balls-deep while your inner muscles squeeze his shaft from all sides. All the while he keeps stroking and kissing you, intermixed with telling you that you're meant to be his bitch, his little fucktoy and soon will be the mother of his cubs. As you writhe in pleasure from everything that the canine man does to you, thoughts of continuing your normal life - or however 'normal' it was while doing what you had to in surviving in this city - seem to lose focus and importance to you. After you come down from your newest orgasm, Diego tells you to say lewd things to him, begging for his cock and calling him master, then pleading to be knocked up - and you do it all eagerly in the lusty haze you are in.";
+				say "     This time, Diego really goes all out, no longer slowing down to keep himself from cumming. While the bulge near the base of his shaft provided some nice stretching before, it grows further now, really straining your nether lips as he pops the growing knot in and out, until finally forcing it in a final time as it inflates the rest of the way, locking your bodies together while he begins to unload a deluge of virile coyote seed into your depths. You can feel his cock throb against your stretched insides as spurt after spurt fills you, soaking your womb in Diego's cum and cementing his claim on your body. While he is still filling you, the anthro canine kisses you on the mouth and puts on a very satisfied grin, followed by a little bit of pillow-talk. 'I think I'll keep you close for the next little while until you've internalized that you're mine. And at least until after the first litter - having cubs will help you settle down more easily!'";
+				trigger ending "Diego's Runaway Bitch";
+				end the story saying "You tried to keep your distance from Diego, but he finally took you as his full-time bitch!";
+
+a postimport rule:
+	if diego's heirloom collar is equipped:
+		if "Male_Player_Collared" is not listed in Traits of Diego and "Female_Player_Collared" is not listed in Traits of Diego and "Neuter_Player_Collared" is not listed in Traits of Diego:
+			add "Male_Player_Collared" to Traits of Diego; [default value for people importing from old versions]
+
+Section 6 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Diego's Runaway Bitch"	"BadEnd"	"Sex Slave"	Diego's Runaway Bitch rule	20	false
+
+This is the Diego's Runaway Bitch rule:
+	if ending "Diego's Runaway Bitch" is triggered:
+		say "     True to his word, Diego keeps you with him for several days, with most of your waking moments spent receiving his canine cock. This treatment drives his desires for your future home in your mind, and you become the obedient little bitch what he wants you to be. Before long, you wake up one morning and realize that your tummy is starting to swell, with the coyote's seed having taken hold in your receptive womb. Diego is more than satisfied when you reveal your pregnancy to him, kissing you deeply and then showing you breathtaking pleasure as he rewards his 'good girl' for being just what he always wanted in a mate. Now that he is more sure about you, the coyote goes back to his old tricks, often leaving for hours or most of a day to set up some hilarious 'incidents' throughout the city - but he always comes back to you, and even has you play the part of a willing accomplice in some of his plans.";
+		the Player is enslaved;
 
 Diego ends here.

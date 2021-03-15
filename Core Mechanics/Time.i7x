@@ -99,7 +99,7 @@ This is the turnpass rule:
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 5;
 		now Cunt Tightness of Player is 3;
-		say "You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy. This dripping cunny with sopping with feminine juices from its orgasmic formation.";
+		say "You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy. This dripping cunny is sopping with feminine juices from its orgasmic formation.";
 	if balloversize is 0:
 		if ( scalevalue of Player is 1 or scalevalue of Player is 2 ) and Ball Size of Player >= 4:
 			if CockName of Player is not "Tanuki" and player is not internal:

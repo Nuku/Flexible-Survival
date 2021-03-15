@@ -246,13 +246,13 @@ to say UrikTalkMenu:
 		now sortorder entry is 4;
 		now description entry is "Let Urik tell you what he prefers";
 	[]
-	if "UrikTalk_Preferences" is listed in Traits of Urik:
+	if "Preferences Talk" is listed in Traits of Urik:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk with him about men";
 		now sortorder entry is 5;
 		now description entry is "Have a chat about what he's looking for in a man";
 	[]
-	if "UrikTalk_Preferences" is listed in Traits of Urik:
+	if "Preferences Talk" is listed in Traits of Urik:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk with him about other genders";
 		now sortorder entry is 6;
@@ -463,8 +463,7 @@ to say UrikTalk_Preferences:
 	WaitLineBreak;
 	say "     Waving a hand in the air as if to clear away the bygone past and its implied homophobia, the orc goes on to say, 'Didn't feel that bad, I guess. Just... kinda loose, you know, compared to a sweet tight asshole. Maybe that was because it was a fucked-out whore, who am I to say. I can tell you that I did have my eye on the naked bodies of my mates when I dropped loads in the bitches though. And that was okay, because I was clearly 'no homo', not with my dick wet with pussy juice.' Saying the last sentence with a roll of his eyes, Urik adds, 'Hell, I don't think any of them realized that most of the goop clinging to my cock was their own cum, hah! Never went first, you see - watching their asses pump up and down was a much nicer thing to watch for a start.' The two of you chat about a few more anecdotes about Urik's sexual encounters in the army - which apparently were plentiful and overwhelmingly gay, just with all of them on the down low.";
 	say "     As your discussion is slowly petering off a little while later, you think of one more thing to ask Urik, which is what he thinks of the 'other' genders now out and about in the city. There's a lot more than just men and women around after all. He looks at you with his eyebrows scrunching together in thought and replies, 'Er... Hmh. Man, things really got complicated fast when all this weird shit kicked off, eh? Fuck, I don't know. Guess it depends on the person. Though slapping a cock on some annoying bitch won't make her any easier to stand, that I'm sure of!'";
-	if "Preferences Talk" is not listed in Traits of Urik:
-		add "Preferences Talk" to Traits of Urik;
+	TraitGain "Preferences Talk" for Urik;
 
 to say UrikTalk_Guys: [chat with Urik about men]
 	say "     Asking Urik about his preferences in men, the orc let's out a chuckle and grins, rubbing his large hands together. 'Well, I love proper, manly men. You know, broad shoulders, muscles, square jaw - and maybe with a nice beard on em.' Almost demonstratively, he brushes his own facial hair with his thumb, then smiles broadly, baring his tusks. 'Most guys like that think they're tops, hah! Those are the absolute best to butt heads with, and then make your bitch after showing them the error of their ways! Some of those guys might be ready to hand out punches if you tell them to spread their cheeks like good little boys, but that's just what you gotta tough out when taking them down. God, hearing a formerly virgin muscle-stud whimper and beg for me to fuck him harder is always worth some bruises in my book!'";
