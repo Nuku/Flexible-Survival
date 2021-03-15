@@ -355,9 +355,9 @@ to DullahanSummon1Choice1:
 	say "     [link](4)[as]4[end link] - He looks too strong to face in a battle. Run away!";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-4)>[run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] to stay put and calm, [link]2[end link] to rise your guard, [link]3[end link] to initiate the fight yourself and charge ahead, or [link]4[end link] to attempt an escape.";

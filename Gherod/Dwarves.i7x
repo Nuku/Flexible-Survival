@@ -902,7 +902,7 @@ to say Dwarf Desc:
 				say "     [one of]While wandering around the urban forest, you encounter Yogdrak simply enjoying his usualy ale under a tree's shadow. 'Heyo! You found me just taking some time to relax. How have you been?' he asks, standing up and approaching you.[or]While wandering around the urban forest, you encounter Yogdrak on some hunting. He's being very sneaky, so you wait... Though, he notices you, and instead chooses to approach you. 'Damn rabbits, they're too quick. I just wanted a fancy lunch, for once!' He now stands in front of you with a friendly smile. 'Anyway, came to see me?'[or]While wandering around the urban forest, you encounter Yogdrak cutting some logs with a wood axe. Maybe he's trying to make a campfire. He sees you, and greets you as you approach him. Wiping a sweat drop off his forehead, he says 'Good to see you. Just trying to get myself some wood for the night.'[at random]";
 			else: [night]
 				say "     [one of]While wandering around the urban forest at night, you manage to find Yogdrak's campfire. He's sitting next to it, fiddling with something. At first, he thinks you're an enemy, and goes for his stonehammer, but as soon as he sees it's just you, he drops his guard and invites you to come closer. 'Come over, friend! Was thinking you were a foe... Came to see me?'[or]While wandering around the urban forest at night, you manage to find Yogdrak's campfire. He's sitting next to it, roasting something. Probably a rabbit, by the looks of it. At first, he thinks you're an enemy, and goes for his stonehammer, but as soon as he sees it's just you, he drops his guard and invites you to come closer. 'Come over, friend! Was thinking you were a foe... Came to see me?'[at random]";
-				say "[YogdrakRoamingTalk]";
+			say "[YogdrakRoamingTalk]";
 		else: [as normal]
 			say "     In front of you is a short middle-aged man, burly and muscular, wearing some kind of leather armor and armed with a stone hammer. Scratching his long full beard, which contrasts with his short dark brown hair adorning the top of his head, he gives you a snarky look before throwing a taunt at you:[line break]";
 			if BodyName of Player is "Dwarf" and FaceName of Player is "Dwarf": [player looks like a dwarf]
@@ -917,6 +917,9 @@ to say YogdrakRoamingTalk:
 	if player consents:
 		LineBreak;
 		say "     You share some words with each other for a while, in all what is a pretty nice conversation. Speaking with a former enemy whom you've just befriended fills you with hope and boosts your sanity by a little.";
+		if a random chance of 1 in 2 succeeds:
+			say "     'Thanks for coming by. Here's some ale for you! Drink it while you think of me, yeah?' he says, as he hands you a filled canteen bottle with something very strong inside.";
+			ItemGain dwarven ale by 1;
 		SanBoost 10;
 		now combat abort is 1;
 	else:

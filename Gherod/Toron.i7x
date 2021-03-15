@@ -240,7 +240,7 @@ to say ToronTalkWork:
 
 to say ToronTalkVR:
 	say "     Given the fact this Club ends up being the destination of many void travelers in the dimensional vicinity (or whatever they come from), you ask Toron a bit more about that. He does not seem too eager to inform you of anything specific, but he does start to speak. 'They come from the void, indeed. It was our point of arrival when we traveled from our former dimension. If you are curious about it, however...' - he makes a pause and eyes you with a very serious look - 'While I don't recommend it... You may find the entrance to the Void Realm past the door behind me. If anyone asks, say Toron let you in. But do be careful out there, that place is not for the faint of mind. Bring me any secrets you find.'";
-	say "     It is a good thing you asked about the Void, or you would not have gained access to the Staff area of the Hellfire Club... Just head [bold type]east of the Hellfire Lounge[roman type] then proceed [bold type]north[roman type] to find the entrance to this mysterious realm.";
+	say "     It is a good thing you asked about the Void, or you would not have gained access to the Staff area of the Hellfire Club... Just head [bold type]west of the Hellfire Lounge[roman type] then proceed [bold type]north[roman type] to find the entrance to this mysterious realm.";
 	connect Hellfire Corridor;
 
 to say ToronTalkSex:
