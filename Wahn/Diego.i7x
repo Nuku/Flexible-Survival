@@ -30,6 +30,7 @@ DiegoBitched is a number that varies.
 DiegoFucked is a number that varies.
 DiegoButtSlut is a number that varies.
 LastDiegoTricked is a number that varies. [@Tag:NotSaved] LastDiegoTricked is usually 250.
+Diego_PlayerSceneStartingGender is a text that varies. [@Tag:NotSaved]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -145,13 +146,13 @@ to say DiegoTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Hand a bottle of clean water to Diego";
 	[]
-	if carried of dog milk > 0 and CoyoteTricks > 4 and DiegoButtSlut is 0 and DiegoChanged < 2: [Diego hasn't been opened for anal play and isn't fully feminine]
+	if carried of dog milk > 0 and CoyoteTricks > 4 and DiegoButtSlut is 0 and DiegoChanged < 2 and diego's heirloom collar is not equipped: [Diego hasn't been opened for anal play and isn't fully feminine]
 		choose a blank row in table of fucking options;
 		now title entry is "Trick Diego into drinking dog milk";
 		now sortorder entry is 4;
 		now description entry is "Arrange for Diego to chug your bottle of transforming canine milk";
 	[]
-	if carried of orc cum > 0 and CoyoteTricks > 4 and DiegoChanged is 0 and DiegoButtSlut < 3: [Diego hasn't been transformed towards being female and isn't fully mpreg-able]
+	if carried of orc cum > 0 and CoyoteTricks > 4 and DiegoChanged is 0 and DiegoButtSlut < 3 and diego's heirloom collar is not equipped: [Diego hasn't been transformed towards being female and isn't fully mpreg-able]
 		choose a blank row in table of fucking options;
 		now title entry is "Trick Diego into drinking orc cum";
 		now sortorder entry is 5;
@@ -235,7 +236,10 @@ to say DiegoTalk3: [hand over water]
 		project the figure of DiegoFem_face_icon;
 	else:
 		project the figure of Diego_face_icon;
-	say "     Accepting your water bottle with eager paw-hands, Diego gives you a wide grin and says, 'That's downright neighborly of you my friend. Thanks!' With that said, the coyote unscrews the lid, giving an almost imperceptible nod at the fact that it was still properly sealed. Leaning back [PosAdj of Diego] head, the anthro canine pours the water into [PosAdj of Diego] open muzzle, chugging it down thirstily. 'Aaah, now that hit the spot! Makes me feel more ready for playing tricks right away,' [SubjectPro of Diego] says with a grin, tail wagging left to right.";
+	if diego's heirloom collar is not equipped:
+		say "     Accepting your water bottle with eager paw-hands, Diego gives you a wide grin and says, 'That's downright neighborly of you my friend. Thanks!' With that said, the coyote unscrews the lid, giving an almost imperceptible nod at the fact that it was still properly sealed. Leaning back [PosAdj of Diego] head, the anthro canine pours the water into [PosAdj of Diego] open muzzle, chugging it down thirstily. 'Aaah, now that hit the spot! Makes me feel more ready for playing tricks right away,' [SubjectPro of Diego] says with a grin, tail wagging left to right.";
+	else: [variant for collared player]
+		say "     Accepting your water bottle with eager paw-hands, Diego gives you a wide grin and says, 'Good little bitch, caring for your man!' With that said, the coyote unscrews the lid, giving an almost imperceptible nod at the fact that it was still properly sealed. Leaning back [PosAdj of Diego] head, the anthro canine pours the water into [PosAdj of Diego] open muzzle, chugging it down thirstily. 'Aaah, now that hit the spot! Makes me feel more ready for playing tricks right away,' [SubjectPro of Diego] says with a grin, tail wagging left to right.";
 	ItemLoss water bottle by 1;
 	extend game by 4;
 
@@ -347,7 +351,10 @@ to say DiegoTalk6: [hand over food]
 		project the figure of DiegoFem_face_icon;
 	else:
 		project the figure of Diego_face_icon;
-	say "     Happily accepting the meal you have brought [ObjectPro of Diego], Diego responds by giving you a wide grin and saying, 'Thank you very much friend, this looks delicious!' followed by unwrapping the packet of food and slowly eating its contents, taking the time to savor and appreciate the meal you brought [ObjectPro of Diego]. Upon finishing the last bite [SubjectPro of Diego] licks [PosAdj of Diego] lips and muzzle for any bits of food that might have gotten stuck on them. 'That tasted quite good. I think I'll be able to play plenty of new tricks with this much extra energy,' [SubjectPro of Diego] says while rubbing [PosAdj of Diego] belly, [PosAdj of Diego] tail wagging side to side happily.";
+	if diego's heirloom collar is not equipped:
+		say "     Happily accepting the meal you have brought [ObjectPro of Diego], Diego responds by giving you a wide grin and saying, 'Thank you very much friend, this looks delicious!' followed by unwrapping the packet of food and slowly eating its contents, taking the time to savor and appreciate the meal you brought [ObjectPro of Diego]. Upon finishing the last bite [SubjectPro of Diego] licks [PosAdj of Diego] lips and muzzle for any bits of food that might have gotten stuck on them. 'That tasted quite good. I think I'll be able to play plenty of new tricks with this much extra energy,' [SubjectPro of Diego] says while rubbing [PosAdj of Diego] belly, [PosAdj of Diego] tail wagging side to side happily.";
+	else: [variant for collared player]
+		say "     Happily accepting the meal you have brought [ObjectPro of Diego], Diego responds by giving you a wide grin and saying, 'That's a good little bitch, caring for your man. This looks delicious!' followed by unwrapping the packet of food and slowly eating its contents, taking the time to savor and appreciate the meal you brought [ObjectPro of Diego]. Upon finishing the last bite [SubjectPro of Diego] licks [PosAdj of Diego] lips and muzzle for any bits of food that might have gotten stuck on them. 'That tasted quite good. I think I'll be able to have plenty of fun with this much extra energy,' [SubjectPro of Diego] says while rubbing [PosAdj of Diego] belly, [PosAdj of Diego] tail wagging side to side happily. You notice his hand straying fairly far down several times, giving his sheathed cock a squeeze as he looks at you.";
 	ItemLoss food by 1;
 	extend game by 4;
 
@@ -418,6 +425,8 @@ to say SexWithDiego:
 		say "     As you step up to Diego and start making lusty suggestions, the coyote leans back against the wall and lets [PosAdj of Diego] eyes wander over your form. 'Hmm... maybe. I'll really have to think about your offer for a while,' [SubjectPro of Diego] says, reaching down to adjust [PosAdj of Diego] furry balls a little. 'There's lots of gals in this city here who want some of this, so I don't just hump anyone. And since you aren't much of a trickster, I don't know if you're worth my while...' [SubjectPro of Diego] goes on to say, finishing up with a grin and a wink.";
 		say "     [bold type]Sounds like [SubjectPro of Diego] wants you to join in for [PosAdj of Diego] pastime of playing tricks on people.[roman type][line break]";
 		stop the action;
+	else if diego's heirloom collar is equipped: [collared, submissive players]
+		say "[DiegoMasterSex]";
 	else if Player is male and DiegoChanged is 0 and DiegoButtSlut is 0: [male+herm player and regular male Diego]
 		if Player is female: [herms]
 			say "     As you step up to Diego and start making lusty suggestions, the coyote leans back against the wall and lets [PosAdj of Diego] eyes wander over your form. 'Hmm you look pretty good there,' Diego says with some interest. 'Sadly though, I can already tell you have a trick hidden away next to your lovely treat,' the coyote says as [SubjectPro of Diego] gestures to your cock. 'Nice try there - but this coyote is just here for the ladies. Better luck next time, eh? Be sure to come back to me if you happen to become a full woman though.'";
@@ -559,7 +568,7 @@ to say DiegoSex1: [face-fuck Diego]
 	else:
 		say "     ";
 	NPCSexAftermath Diego receives "OralCock" from Player;
-	coyotify;
+	Coyotify;
 
 to say DiegoSex2: [BJ for Diego]
 	if DiegoChanged is 1: [herm]
@@ -587,7 +596,7 @@ to say DiegoSex3: [player pussy fucked by Diego's dick]
 		say "     Soon you feel the base of [PosAdj of Diego] cock swelling up inside you, making you moan as [SubjectPro of Diego] continues to pound you against the park wall. The rough texture of the wall against your back, combined with your sexy coyote's soft fur against your [Skin of Player] skin, creates an interesting sensation that melds together in the sexual haze you're in. Diego's breath comes out in harsh panting as [PosAdj of Diego] thrusts speed up, [PosAdj of Diego] knot reaching its full extent and locking the two of you together. Then suddenly, [SubjectPro of Diego] grunts deeply and starts filling your body with [PosAdj of Diego] thick, rich seed.";
 		say "     Feeling the coyote's cum erupting into you, with the throb of [PosAdj of Diego] cock sending little tingles of pleasure up your spine, your own powerful orgasm is triggered just moments later. You find yourself throwing your head back and panting as your body shakes with pleasure. 'Oh yeah, now that was a sweet treat,' Diego mutters as the two of you stay there, your bodies still locked together against the wall by [PosAdj of Diego] knot. You find yourself enjoying some moments of silence with him, just holding and stroking each other while Diego's knot slowly deflates until eventually, [SubjectPro of Diego] is able to pull out with a soft pop. Planting a kiss on your lips, the coyote then sets you back down on your own feet. 'Come back again anytime,' the canine stud says as [SubjectPro of Diego] leans up against the wall again, seeming to need its support to keep himself stable after all the exertion.";
 	NPCSexAftermath Player receives "PussyFuck" from Diego;
-	coyotify;
+	Coyotify;
 
 to say DiegoSex4: [player ass fucked]
 	if Player is female and DiegoButtSlut is 0: [player has a pussy and Diego isn't ready for anal himself]
@@ -611,7 +620,7 @@ to say DiegoSex4: [player ass fucked]
 			say "     Your whole body feels really hot and tingly from the sheer intensity of the coyote still humping against your rear. It almost seems like your orgasms are linked up, as each spurt of Diego's cock inside you is immediately answered by a spike of arousal from your own body. Pressed closely together as you ride out your shared orgasms, the two of you lean against the wall, with Diego soon sliding [PosAdj of Diego] arms around you from behind, embracing your chest in a gesture of affection. Even when new spurts of cum eventually taper off, [PosAdj of Diego] cock is still buried deep in your body and tied to it, giving both of you the time to enjoy some shared moments of silence with the other.";
 		say "     After a little while of just holding and stroking each other, Diego's knot slowly deflates until eventually, [SubjectPro of Diego] is able to pull out with a soft pop. Turning you around and planting a kiss on your lips, the coyote then gives you a broad grin and wags [PosAdj of Diego] tail wildly. 'Come back again anytime,' the canine stud says as [SubjectPro of Diego] leans up against the wall again, seeming to need its support to keep himself stable after all the exertion.";
 	NPCSexAftermath Player receives "AssFuck" from Diego;
-	coyotify;
+	Coyotify;
 
 to say DiegoSex5: [Diego's pussy fucked - lift her and fuck against the wall]
 	if DiegoChanged is 2: [full FemDiego]
@@ -639,7 +648,7 @@ to say DiegoSex5: [Diego's pussy fucked - lift her and fuck against the wall]
 		if DiegoBitched < 1:
 			now DiegoBitched is 1;
 	NPCSexAftermath Diego receives "PussyFuck" from Player;
-	coyotify;
+	Coyotify;
 
 to say DiegoSex6: [Diego's pussy fucked - doggy style]
 	if DiegoChanged is 2: [full FemDiego]
@@ -666,7 +675,7 @@ to say DiegoSex6: [Diego's pussy fucked - doggy style]
 		if DiegoBitched < 1:
 			now DiegoBitched is 1;
 	NPCSexAftermath Diego receives "PussyFuck" from Player;
-	coyotify;
+	Coyotify;
 
 to say DiegoSex7: [Diego's pussy fucked - take him/her against the wall]
 	if DiegoChanged is 2: [full FemDiego]
@@ -691,7 +700,7 @@ to say DiegoSex7: [Diego's pussy fucked - take him/her against the wall]
 		if DiegoBitched < 1:
 			now DiegoBitched is 1;
 	NPCSexAftermath Diego receives "PussyFuck" from Player;
-	coyotify;
+	Coyotify;
 
 to say DiegoSex8: [Diego's ass fucked - lift him and fuck against the wall]
 	if DiegoButtSlut > 2: [mpreg-able Diego]
@@ -721,7 +730,7 @@ to say DiegoSex8: [Diego's ass fucked - lift him and fuck against the wall]
 			add "ButtSlut" to Traits of Diego;
 			now DiegoButtSlut is 2; [Diego fucked anally by the player]
 	NPCSexAftermath Diego receives "AssFuck" from Player;
-	coyotify;
+	Coyotify;
 
 to say DiegoSex9: [Diego's ass fucked - Doggy style]
 	if DiegoButtSlut > 2: [mpreg-able Diego]
@@ -755,7 +764,7 @@ to say DiegoSex9: [Diego's ass fucked - Doggy style]
 			add "ButtSlut" to Traits of Diego;
 			now DiegoButtSlut is 2; [Diego fucked anally by the player]
 	NPCSexAftermath Diego receives "AssFuck" from Player;
-	coyotify;
+	Coyotify;
 
 to say DiegoSex10: [Diego's ass fucked - against the wall, police style]
 	if DiegoButtSlut > 2: [mpreg-able Diego]
@@ -781,84 +790,7 @@ to say DiegoSex10: [Diego's ass fucked - against the wall, police style]
 			add "ButtSlut" to Traits of Diego;
 			now DiegoButtSlut is 2; [Diego fucked anally by the player]
 	NPCSexAftermath Diego receives "AssFuck" from Player;
-	coyotify;
-
-Table of GameEndings (continued)
-Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Hunter's Bitch"	"BadEnd"	"Sex Slave"	Hunter's Bitch rule	20	false
-"Player fucked Diego"	"NPC"	""	Player fucked Diego rule	900	false
-
-This is the Player fucked Diego rule:
-	if DiegoBitched is 2: [player fucked FemDiego]
-		trigger ending "Player fucked Diego";
-		if humanity of Player < 10:
-			if Player is male:
-				say "     Not long after you surrender to your new instincts, Diego begins to hunt you down, worried that you haven't come by to claim your bitch in a while. Seeing the coyote bitch looking for you, you remember some of the tricks the two of you played before, and your instinct-driven mind comes up with a cunning plan. With a bit of work, you manage to trap yourself an unsuspecting coyote, and are more than happy to show [PosAdj of Diego] just how happy you are to 'play' with [PosAdj of Diego] still malleable body. Soon the tricky coyote is changing again into a more suitable form to be your mate, as you coat [PosAdj of Diego] with your seed, coaxing [PosAdj of Diego] into begging and moaning for the changes you work on [PosAdj of Diego] body. Eventually you let your new pet loose, properly trained, and with [PosAdj of Diego] belly already swelling with your offspring, the two of you head out into the city and to embrace your new life together.";
-			else:
-				say "     Not long after you surrender to your new instincts, Diego does as well, unable to resist the strong needs of a coyote bitch in heat as [SubjectPro of Diego] hunts you down. The bitch seems happy to see you too have given in to the pleasures of a purely female form, and eagerly joins you in your new life, even though [PosAdj of Diego] form is slightly different than your own, [SubjectPro of Diego] seems strongly attached to you. Eventually the results of your mating with [PosAdj of Diego] begin to show though, and [SubjectPro of Diego] retreats into the city to bear your coyote pups. You only see [PosAdj of Diego] occasionally after that, the needs of your pups distracting her, as well as [PosAdj of Diego] driving instincts to find a new coyote mate keeping [PosAdj of Diego] busy, just as your own instincts do for yourself...";
-		else:
-			if Player is male:
-				say "     Rescued from the city with your mind intact, you meet Diego again in the military camp, the coyote bitch being picked on by several of the soldiers for all the tricks [SubjectPro of Diego] pulled on them. Unable to just let it happen, you stand up for your bitch and shame the soldiers into leaving [PosAdj of Diego] alone. Diego is extremely relieved to see you, and is glad to let you know that [SubjectPro of Diego] has been the model of a good coyote bitch while [SubjectPro of Diego] waited for you to return and claim her. The military is more than eager to release the two of you together, practically shoving you out of the camp in an attempt to get the tricky coyote as far away from them as possible.";
-				say "     The situation makes you grin as you head out with Diego to try to figure out how to fit into the world after your experiences in the city. Though soon it is obvious that some of your playing around in the city bore fruit, as Diego starts to show evidence of being pregnant with a litter of pups. [SubjectProCap of Diego] eagerly moves in with you when you eventually find a place to stay, and quickly begins devoting that crafty mind of hers to find way to better increase your standing in your new life. Soon though, your strange little family is enlarged by a quartet of coyote pups, and Diego's attention is diverted to [PosAdj of Diego] new role as a happy mother, although [SubjectPro of Diego] does start dropping hints about wanting to be 'claimed' again sometime soon...";
-			else:
-				let randomnumber be a random number from 1 to 2;
-				if randomnumber is:
-					-- 1:
-						say "     Rescued from the city with your mind intact, you meet Diego again in the military camp. The coyote bitch is happy and eager to see you there, if somewhat disappointed in the fact that you are lacking your glorious cock. Still [SubjectPro of Diego] is more than happy to point out that your claiming of [PosAdj of Diego] body has borne fruit, as evidenced by [PosAdj of Diego] softly swelling belly. When the military finally let you go, the tricky coyote bitch manages to get herself released as well, following you out into the world and staying as near you as possible as you both try to fit back in with society.";
-						say "     You come to enjoy [PosAdj of Diego] amusing company enough that you hardly protest when [SubjectPro of Diego] moves in with you, taking care of most of the chores even as [PosAdj of Diego] belly grows larger. Soon your strange little family is enlarged by the addition of several cute little coyote pups around the place, getting into things and making you both smile. You settle into your life outside the city even easier with a new companion like Diego to keep you company and amused, although you start to worry when the coyote starts talking about finding a nice stud to claim you both...";
-					-- 2:
-						say "     Rescued from the city with your mind intact, you meet Diego again in the military camp. The coyote bitch is happy and eager to see you there. [SubjectProCap of Diego] seems amused at the fact that you too have ended up changed into a proper female, and [SubjectPro of Diego] is more than happy to rub and tease your new body even as [SubjectPro of Diego] tells you how happy [SubjectPro of Diego] is with [PosAdj of Diego] own change. When the military finally release the two of you, Diego stays in close contact with you, often sending you teasing letters about how happily [PosAdj of Diego] belly is swelling from your mating in the city, and how much more fun [SubjectPro of Diego] is having as a proper bitch.";
-						say "     [PosAdjCap of Diego] happy acceptance of [PosAdj of Diego] new female status perks you up as you try to settle into your new life, and the pictures [SubjectPro of Diego] sends you of your little coyote pups can't help but make you smile. Although [PosAdj of Diego] latest teasing letter about finally finding a lovely coyote stud to play with, and the invitation to come join [PosAdj of Diego] sometime so [PosAdj of Diego] new stud can return the favor you did for [PosAdj of Diego] in the city and give you some pups in your own belly, is strangely attractive...";
-	else if DiegoBitched is 1 or DiegoChanged is 2 or DiegoChanged is 1: [player fucked HermDiego, or femDiego]
-		trigger ending "Player fucked Diego";
-		if humanity of Player < 10:
-			say "     Not long after you give in to your new instincts, Diego gives into hers as well, the powerful instincts of both a male and female coyote finally overcoming the trickster's resistance. Soon the new coyote herm is prowling the streets, setting traps and tricks for both infected and military alike, and eagerly enjoying the bodies of anyone [SubjectPro of Diego] can manage to trap. [PosAdjCap of Diego] very presence on the streets makes things more dangerous for many of its inhabitants, but somewhere in your new more instinct driven mind, you know that if you ever were to encounter the coyote again, you could have such fun turning the tricks on [PosAdj of Diego] once more...";
-		else:
-			say "     When the rescue comes, the coyote you tricked is still waiting at the park for the military to arrive, several of whom are less than pleased to see the trickster that was plaguing their advance waiting there so casually. A few hours later, in one of the advance camps around the city, Diego finds [PosAdj of Diego] new body put to great use by the military men - with them taking out their pent-up sexual frustration on her. Distracted in the heat of the moment by arousal and the need to pay Diego back for every taunting comment about how easy their buddies were to trick, the soldiers gang-bang the coyote all night long - totally forgetting that [SubjectPro of Diego] is still very much infectious.";
-			say "     The next morning a lovely new group of coyotes spreads out throughout the military camp, reveling in their canine bodies as they trick the rest of the soldiers into surrendering, as well as sabotaging most of the machines and weaponry. The advance into the city grinds into a halt not long after you are released back out into the world, and from what you hear, it is unlikely to start again anytime soon with many of these devious tricksters loose in and around the city...";
-	else if DiegoChanged is 0 and DiegoButtSlut is 0 and CoyoteTricks > 1: [not feminized, not OK with anal and gay sex]
-		trigger ending "Player fucked Diego"; [The player might not have had sex with Diego, but still the same scenario. No need for extra complexity I guess. (@Stadler#3007)]
-		if humanity of Player < 10:
-			say "[MaleDiegoSuccumbEnding]";
-		else:
-			say "     When the military finally sends more soldiers to evacuate all those not actively resisting from the city, Diego the coyote meets them on [PosAdj of Diego] own terms - meaning that the crafty trickster only ever gets 'caught' by squads of female soldiers. Despite [PosAdj of Diego] rising infamy in official military circles, the smooth-talking canine always manages to convince the women to let [ObjectPro of Diego] go after a few hours in [PosAdj of Diego] company. What might have something to do with that are the whispered barracks-rumors about [PosAdj of Diego] skills with a long tongue and knotted cock, leaving [PosAdj of Diego] human captors more than curious to experience it themselves - and willing to free Diego in their post-coital bliss.";
-			say "     Thanks to the more and more widespread use of transformation immunity booster shots, none of the women sprout fur or tails afterwards, but what usually gets forgotten in all the chaos is that laying with a highly potent male bears other risks... and after a week or two, the number of pregnancies with coyote cubs spikes to all-time heights. Meanwhile, Diego enjoys doing [PosAdj of Diego] tricks on everything and everyone in the city, often playing one group of transformed beings against another or causing all sorts of mishaps for the advancing troops from outside the city. [PosAdjCap of Diego] exploits become legendary before much longer when communication with advance camp Bravo in the city is re-established, revealing [PosAdj of Diego] masterpiece of trickery - a whole camp of army men and women talked into servicing a horny minotaur...";
-	else if DiegoButtSlut is 1: [OK with anal]
-		trigger ending "Player fucked Diego";
-		if humanity of Player < 10:
-			say "[MaleDiegoSuccumbEnding]";
-		else:
-			say "     When the military finally sends more soldiers to evacuate all those not actively resisting from the city, Diego the coyote meets them on [PosAdj of Diego] own terms - meaning that the crafty trickster only ever gets 'caught' by rather small squads of soldiers in more out of the way places of the city. Despite [PosAdj of Diego] rising infamy in official military circles, the smooth-talking canine always manages to convince the men and women involved to let [ObjectPro of Diego] go after a few hours in [PosAdj of Diego] company. What might have something to do with that are the whispered barracks-rumors about [PosAdj of Diego] skills with a long tongue and knotted cock, as well as a grippingly tight ass, leaving [PosAdj of Diego] human captors more than curious to experience it themselves - and willing to free Diego in their post-coital bliss.";
-			say "     Thanks to the more and more widespread use of transformation immunity booster shots, none of Diego's bed-mates sprout fur or tails afterwards, but what usually gets forgotten in all the chaos is that laying with a highly potent male bears other risks... and after a week or two, the number of pregnancies with coyote cubs spikes to all-time heights. Meanwhile, Diego enjoys doing [PosAdj of Diego] tricks on everything and everyone in the city, often playing one group of transformed beings against another or causing all sorts of mishaps for the advancing troops from outside the city. [PosAdjCap of Diego] exploits become legendary before much longer when communication with advance camp Bravo in the city is re-established, revealing [PosAdj of Diego] masterpiece of trickery - a whole camp of army men and women talked into servicing a horny minotaur...";
-	else if DiegoButtSlut is 2: [had anal with the player]
-		trigger ending "Player fucked Diego";
-		if humanity of Player < 10:
-			say "[MaleDiegoSuccumbEnding]";
-		else:
-			say "     Rescued from the city with your mind intact, you meet Diego again in the military camp, the coyote being picked on by several of the soldiers for all the tricks [SubjectPro of Diego] pulled on them. As it turns out, [SubjectPro of Diego] was finally captured since [SubjectPro of Diego] kept returning to your usual spot outside the park entrance, hoping to meet up with you again. After getting some hints from questioning people they were rescuing, these soldiers set a trap for your sexy coyote friend, out of which even the crafty trickster couldn't escape. Unwilling to leave your fuck-buddy canine to their mercy - especially after some comments about 'showing that mutt how it feels to be fucked over' start to come up from one or two guys rubbing their crotches - you stand up for Diego and shame the soldiers into leaving [ObjectPro of Diego] alone.";
-			say "     Diego is very relieved to see you and strokes a paw-hand down your side as [SubjectPro of Diego] leans in to give a doggy kiss in greeting. With a wink, [SubjectPro of Diego] whispers that [SubjectPro of Diego] did have a foolproof plan to trick the guys and get of dodge after enjoying being dicked, and that [SubjectPro of Diego] nevertheless is quite happy for you to have come to [PosAdj of Diego] 'rescue'. As eventually an officer comes to investigate what's going on with the prisoner having a visitor and all the whispering, Diego lets him know that [SubjectPro of Diego] promises to from now on be a poster boy of a good coyote citizen (standing beside him, you see the crossed fingers behind [PosAdj of Diego] back). With all the other troubles they have, the military is more than eager to release the two of you together, practically shoving you out of the camp in an attempt to get the tricky coyote as far away from them as possible.";
-			say "     The situation makes you grin as you head out with Diego to try to figure out how to fit into the world after your experiences in the city. Though [SubjectPro of Diego] gets [PosAdj of Diego] own place - rent-free, thanks to some clever tricks that leave the landlord mightily confused - the coyote usually hangs out with you, always happy to share details about [PosAdj of Diego] newest plans - and your bed. Thanks to that crafty mind of [PosAdj of Diego], your shared lot in the somewhat chaotic society emerging after the advent of the nanite age is usually on the rise, allowing for some very nice time to be had. All in all, the coyote is a really nice friend, wing-man and fuck-buddy to have.";
-	else if DiegoButtSlut is 3: [Diego mpreg-able]
-		trigger ending "Player fucked Diego";
-		if humanity of Player < 10:
-			say "[MaleDiegoSuccumbEnding]";
-		else:
-			say "     When the military finally sends more soldiers to evacuate all those not actively resisting from the city, Diego the coyote meets them on [PosAdj of Diego] own terms - meaning that the crafty trickster only ever gets 'caught' by rather small squads of soldiers in more out of the way places of the city. Despite [PosAdj of Diego] rising infamy in official military circles, the smooth-talking canine always manages to convince the men and women involved to let [ObjectPro of Diego] go after a few hours in [PosAdj of Diego] company. What might have something to do with that are the whispered barracks-rumors about [PosAdj of Diego] skills with a long tongue and knotted cock, as well as a grippingly tight ass, leaving [PosAdj of Diego] human captors more than curious to experience it themselves - and willing to free Diego in their post-coital bliss.";
-			say "     Thanks to the more and more widespread use of transformation immunity booster shots, none of Diego's bed-mates sprout fur or tails afterwards, but what usually gets forgotten in all the chaos is that laying with a highly potent male bears other risks... and after a week or two, the number of pregnancies with coyote cubs spikes to all-time heights. Meanwhile, Diego's own altered physiology (thanks to your little trick with bottles of orc cum) leaves the trickster to a surprising discovery too - as [PosAdj of Diego] trained abs eventually swell with the child of one of the hunky soldiers [SubjectPro of Diego] took up [PosAdj of Diego] ass and unknowingly let breed him. The coyote chuckles at the realization, leaving [ObjectPro of Diego] to remember you fondly for a very nice trick indeed. Soon [SubjectPro of Diego] is joined by a teenage son in [PosAdj of Diego] efforts to play tricks on everything and everyone in the city. They often play one group of transformed beings against another or cause all sorts of mishaps for the advancing troops from outside the city. Diego's exploits become legendary before much longer when communication with advance camp Bravo in the city is re-established, revealing [PosAdj of Diego] masterpiece of trickery - a whole camp of army men and women talked into servicing a horny minotaur...";
-	else if DiegoButtSlut is 4: [Diego mpregged]
-		trigger ending "Player fucked Diego";
-		if humanity of Player < 10:
-			say "     While you give in to your new instincts, Diego proves resistant to [PosAdj of Diego] more basic urges and keeps being the crafty trickster that you knew. Soon after, [SubjectPro of Diego] spots you out in the streets and starts to think up an all new trick to involve [PosAdj of Diego] former associate in. It doesn't take all that long for [ObjectPro of Diego] to arrange things, and before the next sunrise the trickster successfully lures you to a blind alley, at the end of which two rather worse-for-wear soldiers hide, a man and a woman. Disarmed, with ripped uniforms, and quite exhausted from fleeing the immensely dangerous - but relatively slow - hydra that Diego goaded into attacking them, the two of them aren't in any shape to fight back against anything at that moment.";
-			say "     As you pick up and devour the last piece of candy that the coyote laid down to lure you in, you hear a little bit of noise from the alley (an old can, casually dropped from an overlooking window by a familiar paw-hand) and move to investigate, soon finding the people Diego chose to put at your mercy. The coyote watches what happens next with a grin from up high, grinning all the while, then eventually gives a mock salute and quietly says, 'So long buddy, and have fun. I certainly will, while looking out for you.' With a gentle pat on the bulge of [PosAdj of Diego] stomach holding your child, the coyote murmurs, 'It's the least I can do for what might have been a trickster as good as myself.' Then, [SubjectPro of Diego] steps back into the darkness, already thinking up a new trick to play on someone...";
-		else:
-			say "     Rescued from the city with your mind intact, you meet Diego again in the military camp, the coyote being picked on by several of the soldiers for all the tricks [SubjectPro of Diego] pulled on them. As it turns out, [SubjectPro of Diego] was finally captured since [SubjectPro of Diego] kept returning to your usual spot outside the park entrance, hoping to meet up with you again. After getting some hints from questioning people they were rescuing, these soldiers set a trap for your sexy coyote friend, out of which even the crafty trickster couldn't escape. Unwilling to leave your fuck-buddy canine to their mercy - especially after some comments about 'showing that mutt how it feels to be fucked over' start to come up from one or two guys rubbing their crotches - you stand up for Diego and shame the soldiers into leaving [ObjectPro of Diego] alone.";
-			say "     Diego is very relieved to see you and strokes a paw-hand down your side as [SubjectPro of Diego] leans in to give a doggy kiss in greeting. With a wink, [SubjectPro of Diego] whispers that [SubjectPro of Diego] did have a foolproof plan to trick the guys and get of dodge after enjoying being dicked, and that [SubjectPro of Diego] nevertheless is quite happy for you to have come to [PosAdj of Diego] 'rescue'. As eventually an officer comes to investigate what's going on with the prisoner having a visitor and all the whispering, Diego lets him know that [SubjectPro of Diego] promises to from now on be a poster boy of a good coyote citizen (standing beside him, you see the crossed fingers behind [PosAdj of Diego] back). With all the other troubles they have, the military is more than eager to release the two of you together, practically shoving you out of the camp in an attempt to get the tricky coyote as far away from them as possible.";
-			say "     The situation makes you grin as you head out with Diego to try to figure out how to fit into the world after your experiences in the city. While still working on getting new jobs and places to stay at, your coyote buddy seems to develop some sort of stomach bug all of a sudden - chucking up [PosAdj of Diego] breakfast one morning. A quick trip to a doctor soon after that does reveal that it isn't anything bad but rather the opposite - turns out that your little trick with the orc cum created another interesting result - Diego is pregnant with a small litter of coyote pups, fathered by yourself. Finding himself a soon-to-be parent, Diego reacts with tail-wagging joy and pulls you close for a deep kiss.";
-			say "     Soon after, the two of you find a new place together - rent-free, thanks to some clever tricks that leave the landlord mightily confused - with the coyote sharing your life and bed, happily awaiting the birth of your children. Thanks to that crafty mind of [PosAdj of Diego], your shared lot in the somewhat chaotic society emerging after the advent of the nanite age is usually on the rise. All in all, the coyote is a really nice friend and partner to have, and the trio of little pups [SubjectPro of Diego] gives birth to are the joy of your lives. Diego's attention is somewhat diverted to [PosAdj of Diego] new role as a happy father, although [SubjectPro of Diego] does start dropping hints about wanting to be bred again sometime soon...";
-
-to say MaleDiegoSuccumbEnding:
-	say "     While you give in to your new instincts, Diego proves resistant to [PosAdj of Diego] more basic urges and keeps being the crafty trickster that you knew. Soon after, [SubjectPro of Diego] spots you out in the streets and starts to think up an all new trick to involve [PosAdj of Diego] former associate in. It doesn't take all that long for [ObjectPro of Diego] to arrange things, and before the next sunrise the trickster successfully lures you to a blind alley, at the end of which two rather worse-for-wear soldiers hide, a man and a woman. Disarmed, with ripped uniforms, and quite exhausted from fleeing the immensely dangerous - but relatively slow - hydra that Diego goaded into attacking them, the two of them aren't in any shape to fight back against anything at that moment.";
-	say "     As you pick up and devour the last piece of candy that the coyote laid down to lure you in, you hear a little bit of noise from the alley (an old can, casually dropped from an overlooking window by a familiar paw-hand) and move to investigate, soon finding the people Diego chose to put at your mercy. The coyote watches what happens next with a grin from up high, grinning all the while, then eventually gives a mock salute and quietly says, 'So long buddy, and have fun. I certainly will.' With that, [SubjectPro of Diego] steps back into the darkness, already thinking up a new trick to play on someone...";
+	Coyotify;
 
 Section 5 - Events
 
@@ -892,17 +824,6 @@ to say DiegoCollarQuestRefuse:
 	now Hunting down Hunter is inactive;
 
 
-
-This is the Hunter's Bitch rule:
-	if ending "Hunter's Bitch" is triggered:
-		if Player is female:
-			say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, until you are nothing but another husky bitch in Hunter's pack. Still, you only ever play second fiddle to Garnet, whom he is absolutely obsessed by, having gone so far as to search out the movie starlet to take for himself and make her a bitch. Therefore, most of your alpha's time is spent having sex with her. You're drawn into his play with the transformed movie star too, often being ordered to lick cum from her pussy or make out with the woman, with Hunter watching or fucking you as you do so.";
-		else: [male & neuter]
-			if "Male Preferred" is not listed in feats of Player: [can transform to female]
-				say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, with the dominant canine gleefully commenting about[if Player is male] your cock shrinking more and more, until [end if]the moment when the flesh of your crotch forms the first folds of a new and virgin pussy. Not that you keep your cherry more than a few minutes, as he takes great pleasure to [']claim['] you fully by humping a heavy load into the virginal womb of yours. Still, you only ever play second fiddle to Garnet, whom he is absolutely obsessed by, spending most of the day having sex with her. You're drawn into his play with the transformed movie star too, often being ordered to lick cum from her pussy or make out with the woman, with Hunter watching or fucking you as you do so.";
-			else: [player can't become female]
-				say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, with the dominant canine growling a little about the fact that your gender doesn't seem to want to change at all. Still, he breaks you in good as his bitch-boy, used to taking that thick shaft all the time and serving as his guard for when the dominant male goes all out fucking Garnet. Having gone so far as to search out the movie starlet in the middle of the nanite apocalypse, just to take her for himself and make her a bitch, the man is absolutely obsessed with her. You're drawn into his play with the transformed movie star too, often being ordered to lick his cum from her pussy, with Hunter watching or fucking your ass as you do so.";
-		the Player is enslaved;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -1411,6 +1332,8 @@ to say DiegoCollarDeliveryAftermath:
 an everyturn rule:
 	if diego's heirloom collar is equipped and XP of Diego > 6 and XP of Diego < 50: [collar on and Diego fucked the player]
 		project Figure of Diego_icon;
+		if a random chance of 1 in 5 succeeds: [20% chance to move towards being a coyote]
+			Coyotify;
 		if Diego is not visible:
 			if lastFuck of Diego - turns is 8: [one day after fucking around with Diego the last time]
 				say "     [bold type]All of a sudden, you feel somewhat warm and flushed, with your lips going dry. At first, you can't tell where the sensation is coming from, but when you try to adjust the collar around your neck a moment later, you realize that it feels rather... warm. Touching the tight band of leather, it seems to be pulsing with inner energy, ramping up whatever it is doing and making your head swim a little.[roman type][line break]";
@@ -1503,15 +1426,173 @@ a postimport rule:
 		if "Male_Player_Collared" is not listed in Traits of Diego and "Female_Player_Collared" is not listed in Traits of Diego and "Neuter_Player_Collared" is not listed in Traits of Diego:
 			add "Male_Player_Collared" to Traits of Diego; [default value for people importing from old versions]
 
+
+to say DiegoMasterSex: [kicked off by the player coming to him for sex]
+	say "     As you approach your canine master with lust on your mind, the coyote chuckles and says, 'That's a good girl, coming to her man to get what she needs!'";
+	DiegoMasterSex_Intro; [intro and transformation (if needed)]
+	DiegoMasterSex_Choosing; [picking what he wants to do]
+
+instead of resting while (diego's heirloom collar is equipped and Diego is visible and lastFuck of Diego - turns > 3 and a random chance of 1 in 2 succeeds): [kicked off by the player wanting to rest within sight of Diego]
+	say "     As you get ready to lay down and sleep, Diego saunters closer and lets out a wolf whistle, making you turn towards him and look at your canine master. 'Ready to lay down and get comfortable? How about I join you for some fun time first? You'll sleep nice and deep afterwards, I'm sure of that!'";
+	DiegoMasterSex_Intro; [intro and transformation (if needed)]
+	DiegoRestFuck; [Diego fucks the player and they rest afterwards]
+
+an everyturn rule: [kicked off by the player waiting within sight of Diego]
+	if diego's heirloom collar is equipped and Diego is visible and lastFuck of Diego - turns > 3 and a random chance of 1 in 2 succeeds:
+		say "     As you stand around, waiting, Diego saunters closer and lets out a wolf whistle, making you turn towards him and look at your canine master. 'Since you don't have anything to do right now, I know a little something that we can use to while away the time...'";
+		DiegoMasterSex_Intro; [intro and transformation (if needed)]
+		DiegoMasterSex_Choosing; [picking what he wants to do]
+
+to DiegoMasterSex_Intro: [& transform, if needed]
+	say "He steps forward and [if Player is not naked]commands you to strip, enjoying the slow, drawn-out show that he makes you do before he [end if]lets his eyes roam up and down over your body. Reaching out to let his paw-hand slide between your legs, the canine trickster is ";
+	if Player is male: [cock present - so male or herm]
+		now Diego_PlayerSceneStartingGender is "Male";
+		say "somewhat annoyed to bump against your cock. 'Now what's this? No proper bitch of mine should have one of those dangling around! Especially not such a puny little prick that isn't even worth mentioning!' As he says this, your heart starts racing and you look down at your [cock of Player] manhood, seeing its [if Cock Length of Player > 15]mighty [else if Cock Length of Player > 10]sizable [else if Cock Length of Player > 6]above-average [else if Cock Length of Player > 3]admittedly average [else]diminutive [end if]length shrink and shrivel second by second, as your body molds itself in reaction to Diego's comment. Without being able to do anything about it, your cock transforms into the nub of a clit some scant moments later! At the same time, your balls get smaller and smaller, then merge into the smoothness of your crotch, leaving nothing behind. 'Looks much better this way, more natural for a needy little bitch! MY little bitch!'";
+		now Cock Count of Player is 0;
+		now Cock Length of Player is 0;
+		now Ball Size of Player is 0;
+		if Player is not female: [no pussy]
+			say "     Then Diego goes on to rub over your crotch, which splits readily before his questing finger, forming a brand new pussy that allows his digit to dip into your body. Right away after coming into existence, your cunny is already dripping with feminine juices, being slick and ready for anything that your master might want to do with you. He dips two fingers in between your nether lips, pumping them in and out a little and spreading your folds around them. ";
+		else:
+			say "     Then Diego goes on to rub over your crotch, dipping two fingers in between your nether lips. He pumps them in and out a little and spreads your folds with his digits them. ";
+	else if Player is female:
+		now Diego_PlayerSceneStartingGender is "Female";
+		say "grinning as he dips two fingers in between your nether lips, pumping them in and out a little and spreading your folds around them. ";
+	else if Player is neuter:
+		now Diego_PlayerSceneStartingGender is "Neuter";
+		say "somewhat surprised to find a complete absence of genitals. 'Now what's this? Lost something, little bitch? I'll help you out with that!' Then Diego goes on to rub over your crotch, which splits readily before his questing finger, forming a brand new pussy that allows his digit to dip into your body. Right away after coming into existence, your cunny is already dripping with feminine juices, being slick and ready for anything that your master might want to do with you. He dips two fingers in between your nether lips, pumping them in and out a little and spreading your folds around them. ";
+	say "Being fingered like this, you can't help but whimper and moan lustfully, pushing your crotch against his touch. Diego eventually withdraws and holds his hand out in front of your face, a toothy smile spreading over his muzzle. You can't really if it is the collar's influence, or your own growing submission to the coyote, but you immediately suck his fingers clean, swallowing your own juices in ecstasy.";
+	if Cunt Count of Player is 0: [if the player was male or neuter, they got a free pussy above]
+		now Cunt Count of Player is 1;
+		now Cunt Depth of Player is 5;
+		now Cunt Tightness of Player is 3;
+	[the player should now be returned to a proper female configuration, with no dick and a pussy]
+	if "Male_Player_Collared" is listed in Traits of Diego: [player was male when originally collared]
+		if Diego_PlayerSceneStartingGender is "Male":
+			say "     'Why are you even still trying to cling to your old, male life? Getting yourself a cock somewhere - pfft! I got you moaning like a needy bitch in just a moment or two, with nothing more but my fingers in that sweet little cunt! Just forget being a guy, you got a proper future ahead of you as my cock-sheath and the mother of my cubs!'";
+		else if Diego_PlayerSceneStartingGender is "Female":
+			say "     'Good to see that being a bitch is taking properly. Had you moaning like a needy bitch in just a moment or two, with nothing more but my fingers in that sweet little cunt! Just forget being a guy, you got a proper future ahead of you as my cock-sheath and the mother of my cubs!'";
+		else:
+			say "     'Hope you only ended up without genitals because of some accident with the nanites, not you trying to get back to your old male self, because you can forget about that! Had you moaning like a needy bitch in just a moment or two, with nothing more but my fingers in that sweet little cunt! Just forget being a guy, you got a proper future ahead of you as my cock-sheath and the mother of my cubs!'";
+	else if "Female_Player_Collared" is listed in Traits of Diego: [player was female when originally collared]
+		if Diego_PlayerSceneStartingGender is "Male":
+			say "     'You were a proper female when that collar went on, so where the hell did you pick up a dick? No matter, it's gone again and I want you to watch out for whatever gave it to you and avoid that! Hell, you sure don't need it - had you moaning like a needy bitch in just a moment or two, with nothing more but my fingers in that sweet little cunt! You got a proper future ahead of you as my cock-sheath and the mother of my cubs!'";
+		else if Diego_PlayerSceneStartingGender is "Female":
+			say "     'That's how I like my bitches - sweet and receptive! Had you moaning like a needy slut in just a moment or two, with nothing more but my fingers in that sweet little cunt! You got a proper future ahead of you as my cock-sheath and the mother of my cubs!'";
+		else:
+			say "     'You were a proper female when that collar went on, so where the hell did you lose your pussy? No matter, it's back again and I want you to watch out for whatever took it from you and avoid that! I mean it - just think of the fun I just gave you - had you moaning like a needy bitch in just a moment or two, with nothing more but my fingers in that sweet little cunt! You got a proper future ahead of you as my cock-sheath and the mother of my cubs!'";
+	else if "Neuter_Player_Collared" is listed in Traits of Diego: [player was neuter when originally collared]
+		if Diego_PlayerSceneStartingGender is "Male":
+			say "     'Still confused about what proper gender you should have, eh? Poor little slut. You might think that anything is better than being neuter, but not for me - and not for my bitch! Just stay having a pussy and avoid whatever slapped that dick on you! Hell, you sure don't need one - had you moaning like a needy bitch in just a moment or two, with nothing more but my fingers in that sweet little cunt! You got a proper future ahead of you as my cock-sheath and the mother of my cubs!'";
+		else if Diego_PlayerSceneStartingGender is "Female":
+			say "     'Good to see that being a bitch is taking properly. Had you moaning like a needy bitch in just a moment or two, with nothing more but my fingers in that sweet little cunt! Just forget being a guy, you got a proper future ahead of you as my cock-sheath and the mother of my cubs!'";
+		else:
+			say "     'Still confused about what proper gender you should have, eh? Poor little slut. You might think that anything is better than being neuter, but not for me - and not for my bitch! Just stay having a pussy and avoid whatever slapped that dick on you! Hell, you sure don't need one - had you moaning like a needy bitch in just a moment or two, with nothing more but my fingers in that sweet little cunt! You got a proper future ahead of you as my cock-sheath and the mother of my cubs!'";
+	say "With that said, Diego leans in close and licks your cheek in a gesture that combines possessive dominance and affection, then gropes you some more while he decides what exactly he wants to do with you right now.";
+
+to DiegoMasterSex_Choosing:
+	say "...Random Picking, depending on Diego's moods";
+
+to DiegoRestFuck:
+	say "....Diego Fucks the player and they take a rest afterwards";
+
+
 Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Hunter's Bitch"	"BadEnd"	"Sex Slave"	Hunter's Bitch rule	20	false
+"Player fucked Diego"	"NPC"	""	Player fucked Diego rule	900	false
 "Diego's Runaway Bitch"	"BadEnd"	"Sex Slave"	Diego's Runaway Bitch rule	20	false
+
+This is the Player fucked Diego rule:
+	if DiegoBitched is 2: [player fucked FemDiego]
+		trigger ending "Player fucked Diego";
+		if humanity of Player < 10:
+			if Player is male:
+				say "     Not long after you surrender to your new instincts, Diego begins to hunt you down, worried that you haven't come by to claim your bitch in a while. Seeing the coyote bitch looking for you, you remember some of the tricks the two of you played before, and your instinct-driven mind comes up with a cunning plan. With a bit of work, you manage to trap yourself an unsuspecting coyote, and are more than happy to show [PosAdj of Diego] just how happy you are to 'play' with [PosAdj of Diego] still malleable body. Soon the tricky coyote is changing again into a more suitable form to be your mate, as you coat [PosAdj of Diego] with your seed, coaxing [PosAdj of Diego] into begging and moaning for the changes you work on [PosAdj of Diego] body. Eventually you let your new pet loose, properly trained, and with [PosAdj of Diego] belly already swelling with your offspring, the two of you head out into the city and to embrace your new life together.";
+			else:
+				say "     Not long after you surrender to your new instincts, Diego does as well, unable to resist the strong needs of a coyote bitch in heat as [SubjectPro of Diego] hunts you down. The bitch seems happy to see you too have given in to the pleasures of a purely female form, and eagerly joins you in your new life, even though [PosAdj of Diego] form is slightly different than your own, [SubjectPro of Diego] seems strongly attached to you. Eventually the results of your mating with [PosAdj of Diego] begin to show though, and [SubjectPro of Diego] retreats into the city to bear your coyote pups. You only see [PosAdj of Diego] occasionally after that, the needs of your pups distracting her, as well as [PosAdj of Diego] driving instincts to find a new coyote mate keeping [PosAdj of Diego] busy, just as your own instincts do for yourself...";
+		else:
+			if Player is male:
+				say "     Rescued from the city with your mind intact, you meet Diego again in the military camp, the coyote bitch being picked on by several of the soldiers for all the tricks [SubjectPro of Diego] pulled on them. Unable to just let it happen, you stand up for your bitch and shame the soldiers into leaving [PosAdj of Diego] alone. Diego is extremely relieved to see you, and is glad to let you know that [SubjectPro of Diego] has been the model of a good coyote bitch while [SubjectPro of Diego] waited for you to return and claim her. The military is more than eager to release the two of you together, practically shoving you out of the camp in an attempt to get the tricky coyote as far away from them as possible.";
+				say "     The situation makes you grin as you head out with Diego to try to figure out how to fit into the world after your experiences in the city. Though soon it is obvious that some of your playing around in the city bore fruit, as Diego starts to show evidence of being pregnant with a litter of pups. [SubjectProCap of Diego] eagerly moves in with you when you eventually find a place to stay, and quickly begins devoting that crafty mind of hers to find way to better increase your standing in your new life. Soon though, your strange little family is enlarged by a quartet of coyote pups, and Diego's attention is diverted to [PosAdj of Diego] new role as a happy mother, although [SubjectPro of Diego] does start dropping hints about wanting to be 'claimed' again sometime soon...";
+			else:
+				let randomnumber be a random number from 1 to 2;
+				if randomnumber is:
+					-- 1:
+						say "     Rescued from the city with your mind intact, you meet Diego again in the military camp. The coyote bitch is happy and eager to see you there, if somewhat disappointed in the fact that you are lacking your glorious cock. Still [SubjectPro of Diego] is more than happy to point out that your claiming of [PosAdj of Diego] body has borne fruit, as evidenced by [PosAdj of Diego] softly swelling belly. When the military finally let you go, the tricky coyote bitch manages to get herself released as well, following you out into the world and staying as near you as possible as you both try to fit back in with society.";
+						say "     You come to enjoy [PosAdj of Diego] amusing company enough that you hardly protest when [SubjectPro of Diego] moves in with you, taking care of most of the chores even as [PosAdj of Diego] belly grows larger. Soon your strange little family is enlarged by the addition of several cute little coyote pups around the place, getting into things and making you both smile. You settle into your life outside the city even easier with a new companion like Diego to keep you company and amused, although you start to worry when the coyote starts talking about finding a nice stud to claim you both...";
+					-- 2:
+						say "     Rescued from the city with your mind intact, you meet Diego again in the military camp. The coyote bitch is happy and eager to see you there. [SubjectProCap of Diego] seems amused at the fact that you too have ended up changed into a proper female, and [SubjectPro of Diego] is more than happy to rub and tease your new body even as [SubjectPro of Diego] tells you how happy [SubjectPro of Diego] is with [PosAdj of Diego] own change. When the military finally release the two of you, Diego stays in close contact with you, often sending you teasing letters about how happily [PosAdj of Diego] belly is swelling from your mating in the city, and how much more fun [SubjectPro of Diego] is having as a proper bitch.";
+						say "     [PosAdjCap of Diego] happy acceptance of [PosAdj of Diego] new female status perks you up as you try to settle into your new life, and the pictures [SubjectPro of Diego] sends you of your little coyote pups can't help but make you smile. Although [PosAdj of Diego] latest teasing letter about finally finding a lovely coyote stud to play with, and the invitation to come join [PosAdj of Diego] sometime so [PosAdj of Diego] new stud can return the favor you did for [PosAdj of Diego] in the city and give you some pups in your own belly, is strangely attractive...";
+	else if DiegoBitched is 1 or DiegoChanged is 2 or DiegoChanged is 1: [player fucked HermDiego, or femDiego]
+		trigger ending "Player fucked Diego";
+		if humanity of Player < 10:
+			say "     Not long after you give in to your new instincts, Diego gives into hers as well, the powerful instincts of both a male and female coyote finally overcoming the trickster's resistance. Soon the new coyote herm is prowling the streets, setting traps and tricks for both infected and military alike, and eagerly enjoying the bodies of anyone [SubjectPro of Diego] can manage to trap. [PosAdjCap of Diego] very presence on the streets makes things more dangerous for many of its inhabitants, but somewhere in your new more instinct driven mind, you know that if you ever were to encounter the coyote again, you could have such fun turning the tricks on [PosAdj of Diego] once more...";
+		else:
+			say "     When the rescue comes, the coyote you tricked is still waiting at the park for the military to arrive, several of whom are less than pleased to see the trickster that was plaguing their advance waiting there so casually. A few hours later, in one of the advance camps around the city, Diego finds [PosAdj of Diego] new body put to great use by the military men - with them taking out their pent-up sexual frustration on her. Distracted in the heat of the moment by arousal and the need to pay Diego back for every taunting comment about how easy their buddies were to trick, the soldiers gang-bang the coyote all night long - totally forgetting that [SubjectPro of Diego] is still very much infectious.";
+			say "     The next morning a lovely new group of coyotes spreads out throughout the military camp, reveling in their canine bodies as they trick the rest of the soldiers into surrendering, as well as sabotaging most of the machines and weaponry. The advance into the city grinds into a halt not long after you are released back out into the world, and from what you hear, it is unlikely to start again anytime soon with many of these devious tricksters loose in and around the city...";
+	else if DiegoChanged is 0 and DiegoButtSlut is 0 and CoyoteTricks > 1: [not feminized, not OK with anal and gay sex]
+		trigger ending "Player fucked Diego"; [The player might not have had sex with Diego, but still the same scenario. No need for extra complexity I guess. (@Stadler#3007)]
+		if humanity of Player < 10:
+			say "[MaleDiegoSuccumbEnding]";
+		else:
+			say "     When the military finally sends more soldiers to evacuate all those not actively resisting from the city, Diego the coyote meets them on [PosAdj of Diego] own terms - meaning that the crafty trickster only ever gets 'caught' by squads of female soldiers. Despite [PosAdj of Diego] rising infamy in official military circles, the smooth-talking canine always manages to convince the women to let [ObjectPro of Diego] go after a few hours in [PosAdj of Diego] company. What might have something to do with that are the whispered barracks-rumors about [PosAdj of Diego] skills with a long tongue and knotted cock, leaving [PosAdj of Diego] human captors more than curious to experience it themselves - and willing to free Diego in their post-coital bliss.";
+			say "     Thanks to the more and more widespread use of transformation immunity booster shots, none of the women sprout fur or tails afterwards, but what usually gets forgotten in all the chaos is that laying with a highly potent male bears other risks... and after a week or two, the number of pregnancies with coyote cubs spikes to all-time heights. Meanwhile, Diego enjoys doing [PosAdj of Diego] tricks on everything and everyone in the city, often playing one group of transformed beings against another or causing all sorts of mishaps for the advancing troops from outside the city. [PosAdjCap of Diego] exploits become legendary before much longer when communication with advance camp Bravo in the city is re-established, revealing [PosAdj of Diego] masterpiece of trickery - a whole camp of army men and women talked into servicing a horny minotaur...";
+	else if DiegoButtSlut is 1: [OK with anal]
+		trigger ending "Player fucked Diego";
+		if humanity of Player < 10:
+			say "[MaleDiegoSuccumbEnding]";
+		else:
+			say "     When the military finally sends more soldiers to evacuate all those not actively resisting from the city, Diego the coyote meets them on [PosAdj of Diego] own terms - meaning that the crafty trickster only ever gets 'caught' by rather small squads of soldiers in more out of the way places of the city. Despite [PosAdj of Diego] rising infamy in official military circles, the smooth-talking canine always manages to convince the men and women involved to let [ObjectPro of Diego] go after a few hours in [PosAdj of Diego] company. What might have something to do with that are the whispered barracks-rumors about [PosAdj of Diego] skills with a long tongue and knotted cock, as well as a grippingly tight ass, leaving [PosAdj of Diego] human captors more than curious to experience it themselves - and willing to free Diego in their post-coital bliss.";
+			say "     Thanks to the more and more widespread use of transformation immunity booster shots, none of Diego's bed-mates sprout fur or tails afterwards, but what usually gets forgotten in all the chaos is that laying with a highly potent male bears other risks... and after a week or two, the number of pregnancies with coyote cubs spikes to all-time heights. Meanwhile, Diego enjoys doing [PosAdj of Diego] tricks on everything and everyone in the city, often playing one group of transformed beings against another or causing all sorts of mishaps for the advancing troops from outside the city. [PosAdjCap of Diego] exploits become legendary before much longer when communication with advance camp Bravo in the city is re-established, revealing [PosAdj of Diego] masterpiece of trickery - a whole camp of army men and women talked into servicing a horny minotaur...";
+	else if DiegoButtSlut is 2: [had anal with the player]
+		trigger ending "Player fucked Diego";
+		if humanity of Player < 10:
+			say "[MaleDiegoSuccumbEnding]";
+		else:
+			say "     Rescued from the city with your mind intact, you meet Diego again in the military camp, the coyote being picked on by several of the soldiers for all the tricks [SubjectPro of Diego] pulled on them. As it turns out, [SubjectPro of Diego] was finally captured since [SubjectPro of Diego] kept returning to your usual spot outside the park entrance, hoping to meet up with you again. After getting some hints from questioning people they were rescuing, these soldiers set a trap for your sexy coyote friend, out of which even the crafty trickster couldn't escape. Unwilling to leave your fuck-buddy canine to their mercy - especially after some comments about 'showing that mutt how it feels to be fucked over' start to come up from one or two guys rubbing their crotches - you stand up for Diego and shame the soldiers into leaving [ObjectPro of Diego] alone.";
+			say "     Diego is very relieved to see you and strokes a paw-hand down your side as [SubjectPro of Diego] leans in to give a doggy kiss in greeting. With a wink, [SubjectPro of Diego] whispers that [SubjectPro of Diego] did have a foolproof plan to trick the guys and get of dodge after enjoying being dicked, and that [SubjectPro of Diego] nevertheless is quite happy for you to have come to [PosAdj of Diego] 'rescue'. As eventually an officer comes to investigate what's going on with the prisoner having a visitor and all the whispering, Diego lets him know that [SubjectPro of Diego] promises to from now on be a poster boy of a good coyote citizen (standing beside him, you see the crossed fingers behind [PosAdj of Diego] back). With all the other troubles they have, the military is more than eager to release the two of you together, practically shoving you out of the camp in an attempt to get the tricky coyote as far away from them as possible.";
+			say "     The situation makes you grin as you head out with Diego to try to figure out how to fit into the world after your experiences in the city. Though [SubjectPro of Diego] gets [PosAdj of Diego] own place - rent-free, thanks to some clever tricks that leave the landlord mightily confused - the coyote usually hangs out with you, always happy to share details about [PosAdj of Diego] newest plans - and your bed. Thanks to that crafty mind of [PosAdj of Diego], your shared lot in the somewhat chaotic society emerging after the advent of the nanite age is usually on the rise, allowing for some very nice time to be had. All in all, the coyote is a really nice friend, wing-man and fuck-buddy to have.";
+	else if DiegoButtSlut is 3: [Diego mpreg-able]
+		trigger ending "Player fucked Diego";
+		if humanity of Player < 10:
+			say "[MaleDiegoSuccumbEnding]";
+		else:
+			say "     When the military finally sends more soldiers to evacuate all those not actively resisting from the city, Diego the coyote meets them on [PosAdj of Diego] own terms - meaning that the crafty trickster only ever gets 'caught' by rather small squads of soldiers in more out of the way places of the city. Despite [PosAdj of Diego] rising infamy in official military circles, the smooth-talking canine always manages to convince the men and women involved to let [ObjectPro of Diego] go after a few hours in [PosAdj of Diego] company. What might have something to do with that are the whispered barracks-rumors about [PosAdj of Diego] skills with a long tongue and knotted cock, as well as a grippingly tight ass, leaving [PosAdj of Diego] human captors more than curious to experience it themselves - and willing to free Diego in their post-coital bliss.";
+			say "     Thanks to the more and more widespread use of transformation immunity booster shots, none of Diego's bed-mates sprout fur or tails afterwards, but what usually gets forgotten in all the chaos is that laying with a highly potent male bears other risks... and after a week or two, the number of pregnancies with coyote cubs spikes to all-time heights. Meanwhile, Diego's own altered physiology (thanks to your little trick with bottles of orc cum) leaves the trickster to a surprising discovery too - as [PosAdj of Diego] trained abs eventually swell with the child of one of the hunky soldiers [SubjectPro of Diego] took up [PosAdj of Diego] ass and unknowingly let breed him. The coyote chuckles at the realization, leaving [ObjectPro of Diego] to remember you fondly for a very nice trick indeed. Soon [SubjectPro of Diego] is joined by a teenage son in [PosAdj of Diego] efforts to play tricks on everything and everyone in the city. They often play one group of transformed beings against another or cause all sorts of mishaps for the advancing troops from outside the city. Diego's exploits become legendary before much longer when communication with advance camp Bravo in the city is re-established, revealing [PosAdj of Diego] masterpiece of trickery - a whole camp of army men and women talked into servicing a horny minotaur...";
+	else if DiegoButtSlut is 4: [Diego mpregged]
+		trigger ending "Player fucked Diego";
+		if humanity of Player < 10:
+			say "     While you give in to your new instincts, Diego proves resistant to [PosAdj of Diego] more basic urges and keeps being the crafty trickster that you knew. Soon after, [SubjectPro of Diego] spots you out in the streets and starts to think up an all new trick to involve [PosAdj of Diego] former associate in. It doesn't take all that long for [ObjectPro of Diego] to arrange things, and before the next sunrise the trickster successfully lures you to a blind alley, at the end of which two rather worse-for-wear soldiers hide, a man and a woman. Disarmed, with ripped uniforms, and quite exhausted from fleeing the immensely dangerous - but relatively slow - hydra that Diego goaded into attacking them, the two of them aren't in any shape to fight back against anything at that moment.";
+			say "     As you pick up and devour the last piece of candy that the coyote laid down to lure you in, you hear a little bit of noise from the alley (an old can, casually dropped from an overlooking window by a familiar paw-hand) and move to investigate, soon finding the people Diego chose to put at your mercy. The coyote watches what happens next with a grin from up high, grinning all the while, then eventually gives a mock salute and quietly says, 'So long buddy, and have fun. I certainly will, while looking out for you.' With a gentle pat on the bulge of [PosAdj of Diego] stomach holding your child, the coyote murmurs, 'It's the least I can do for what might have been a trickster as good as myself.' Then, [SubjectPro of Diego] steps back into the darkness, already thinking up a new trick to play on someone...";
+		else:
+			say "     Rescued from the city with your mind intact, you meet Diego again in the military camp, the coyote being picked on by several of the soldiers for all the tricks [SubjectPro of Diego] pulled on them. As it turns out, [SubjectPro of Diego] was finally captured since [SubjectPro of Diego] kept returning to your usual spot outside the park entrance, hoping to meet up with you again. After getting some hints from questioning people they were rescuing, these soldiers set a trap for your sexy coyote friend, out of which even the crafty trickster couldn't escape. Unwilling to leave your fuck-buddy canine to their mercy - especially after some comments about 'showing that mutt how it feels to be fucked over' start to come up from one or two guys rubbing their crotches - you stand up for Diego and shame the soldiers into leaving [ObjectPro of Diego] alone.";
+			say "     Diego is very relieved to see you and strokes a paw-hand down your side as [SubjectPro of Diego] leans in to give a doggy kiss in greeting. With a wink, [SubjectPro of Diego] whispers that [SubjectPro of Diego] did have a foolproof plan to trick the guys and get of dodge after enjoying being dicked, and that [SubjectPro of Diego] nevertheless is quite happy for you to have come to [PosAdj of Diego] 'rescue'. As eventually an officer comes to investigate what's going on with the prisoner having a visitor and all the whispering, Diego lets him know that [SubjectPro of Diego] promises to from now on be a poster boy of a good coyote citizen (standing beside him, you see the crossed fingers behind [PosAdj of Diego] back). With all the other troubles they have, the military is more than eager to release the two of you together, practically shoving you out of the camp in an attempt to get the tricky coyote as far away from them as possible.";
+			say "     The situation makes you grin as you head out with Diego to try to figure out how to fit into the world after your experiences in the city. While still working on getting new jobs and places to stay at, your coyote buddy seems to develop some sort of stomach bug all of a sudden - chucking up [PosAdj of Diego] breakfast one morning. A quick trip to a doctor soon after that does reveal that it isn't anything bad but rather the opposite - turns out that your little trick with the orc cum created another interesting result - Diego is pregnant with a small litter of coyote pups, fathered by yourself. Finding himself a soon-to-be parent, Diego reacts with tail-wagging joy and pulls you close for a deep kiss.";
+			say "     Soon after, the two of you find a new place together - rent-free, thanks to some clever tricks that leave the landlord mightily confused - with the coyote sharing your life and bed, happily awaiting the birth of your children. Thanks to that crafty mind of [PosAdj of Diego], your shared lot in the somewhat chaotic society emerging after the advent of the nanite age is usually on the rise. All in all, the coyote is a really nice friend and partner to have, and the trio of little pups [SubjectPro of Diego] gives birth to are the joy of your lives. Diego's attention is somewhat diverted to [PosAdj of Diego] new role as a happy father, although [SubjectPro of Diego] does start dropping hints about wanting to be bred again sometime soon...";
+
+to say MaleDiegoSuccumbEnding:
+	say "     While you give in to your new instincts, Diego proves resistant to [PosAdj of Diego] more basic urges and keeps being the crafty trickster that you knew. Soon after, [SubjectPro of Diego] spots you out in the streets and starts to think up an all new trick to involve [PosAdj of Diego] former associate in. It doesn't take all that long for [ObjectPro of Diego] to arrange things, and before the next sunrise the trickster successfully lures you to a blind alley, at the end of which two rather worse-for-wear soldiers hide, a man and a woman. Disarmed, with ripped uniforms, and quite exhausted from fleeing the immensely dangerous - but relatively slow - hydra that Diego goaded into attacking them, the two of them aren't in any shape to fight back against anything at that moment.";
+	say "     As you pick up and devour the last piece of candy that the coyote laid down to lure you in, you hear a little bit of noise from the alley (an old can, casually dropped from an overlooking window by a familiar paw-hand) and move to investigate, soon finding the people Diego chose to put at your mercy. The coyote watches what happens next with a grin from up high, grinning all the while, then eventually gives a mock salute and quietly says, 'So long buddy, and have fun. I certainly will.' With that, [SubjectPro of Diego] steps back into the darkness, already thinking up a new trick to play on someone...";
+
+
+This is the Hunter's Bitch rule:
+	if ending "Hunter's Bitch" is triggered:
+		if Player is female:
+			say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, until you are nothing but another husky bitch in Hunter's pack. Still, you only ever play second fiddle to Garnet, whom he is absolutely obsessed by, having gone so far as to search out the movie starlet to take for himself and make her a bitch. Therefore, most of your alpha's time is spent having sex with her. You're drawn into his play with the transformed movie star too, often being ordered to lick cum from her pussy or make out with the woman, with Hunter watching or fucking you as you do so.";
+		else: [male & neuter]
+			if "Male Preferred" is not listed in feats of Player: [can transform to female]
+				say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, with the dominant canine gleefully commenting about[if Player is male] your cock shrinking more and more, until [end if]the moment when the flesh of your crotch forms the first folds of a new and virgin pussy. Not that you keep your cherry more than a few minutes, as he takes great pleasure to [']claim['] you fully by humping a heavy load into the virginal womb of yours. Still, you only ever play second fiddle to Garnet, whom he is absolutely obsessed by, spending most of the day having sex with her. You're drawn into his play with the transformed movie star too, often being ordered to lick cum from her pussy or make out with the woman, with Hunter watching or fucking you as you do so.";
+			else: [player can't become female]
+				say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, with the dominant canine growling a little about the fact that your gender doesn't seem to want to change at all. Still, he breaks you in good as his bitch-boy, used to taking that thick shaft all the time and serving as his guard for when the dominant male goes all out fucking Garnet. Having gone so far as to search out the movie starlet in the middle of the nanite apocalypse, just to take her for himself and make her a bitch, the man is absolutely obsessed with her. You're drawn into his play with the transformed movie star too, often being ordered to lick his cum from her pussy, with Hunter watching or fucking your ass as you do so.";
+		the Player is enslaved;
 
 This is the Diego's Runaway Bitch rule:
 	if ending "Diego's Runaway Bitch" is triggered:
 		say "     True to his word, Diego keeps you with him for several days, with most of your waking moments spent receiving his canine cock. This treatment drives his desires for your future home in your mind, and you become the obedient little bitch what he wants you to be. Before long, you wake up one morning and realize that your tummy is starting to swell, with the coyote's seed having taken hold in your receptive womb. Diego is more than satisfied when you reveal your pregnancy to him, kissing you deeply and then showing you breathtaking pleasure as he rewards his 'good girl' for being just what he always wanted in a mate. Now that he is more sure about you, the coyote goes back to his old tricks, often leaving for hours or most of a day to set up some hilarious 'incidents' throughout the city - but he always comes back to you, and even has you play the part of a willing accomplice in some of his plans.";
 		the Player is enslaved;
+
 
 Diego ends here.

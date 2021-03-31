@@ -33,6 +33,10 @@ IDEA: Scene with James
 ]
 
 
+[ Collection of ideas                                                 ]
+[ - Pay Bastian to fuck Zoe and watch                                 ]
+[ - Pay to let one of the player companions fuck Zoe                  ]
+
 Section 1 - Person Definitions
 
 Part A - Zoe
@@ -515,7 +519,7 @@ to say ZoeMolestVag:
 	if Zoe is PlayerCumLoadInflates:
 		say "     The bunny girl's belly slowly fills with your cum with obscene [italic type]glug, glug[roman type] sounds. Zoe is left gasping as her womb is filled to full capacity and beyond, the overfill flowing out of her cunt. When you finally lift your body off her, more of your fluids squirt on the floor as the spasms of her body eject it. Meanwhile, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and appraises the situation. 'Clean your mess before you get out, will ya. The mop's on your left.'";
 	else:
-		say "     Your cock squirt their load inside Zoe's womb, joining the many others before you. Letting Zoe recover on the floor of the van, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and lets you out. 'Don't worry about [']accidents['], we're keeping her on the pill,' he says nonchalantly while munching on the supplies you gave him. 'Come again soon, and all that.'";
+		say "     Your cock squirt their load inside Zoe's womb, joining the many others before you. Letting Zoe recover on the floor of the van, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and lets you out. 'Don't worry about [']accidents['], we're keeping her on some special contraceptives an associate of Logan's cooked up,' he says nonchalantly while munching on the supplies you gave him. 'Come again soon, and all that.'";
 
 to say ZoeMolestAnal:
 	say "     You force Zoe to give you access to her ass and push your fingers in. The bunny girl winces, but when you pull out your fingers, they are wet with the cum of previous visitors. You point this out to Zoe while swiping your fingers off her fur. The bunny's only response is a heartbroken sob. You lean over and make a show of frotting your [cock size desc of Player] cock over her butt-cheeks.";
@@ -603,12 +607,103 @@ Wolverine Pimp is in Nowhere.
 Understand "van guard" as Wolverine Pimp.
 
 Description of Wolverine Pimp is "You gauge the anthro wolverine sitting in a chair, next to the van. He wears a tattered security guard outfit, which he seems to have [']upgraded['] by ripping out the sleeves. His clothes are tattered with stains, which you suspect may not be water or grape juice. The guard raises an eyebrow at you. 'What are you looking at?'".
-Conversation of Wolverine Pimp is { "[one of]'Looking for fun times? [bold type]Trade me[roman type] some food or beverage, and you'll get a turn.'[or]'The girl's here of her own will, I swear. Not that you can disprove anything... Heh heh!'[or]'Watch out if you want a pass with the bunny: she bites. Don't forget to use the ring gag.'[or]'I wonder when the boss will let her go. Hell, I'd rather wonder [italic type]if[roman type] the boss will let her go. Ha ha ha...'[at random]" }.
+Conversation of Wolverine Pimp is { "..." }.
+
+instead of conversing Wolverine Pimp:
+	say "[WolverinePimpTalkMenu]";
+
+to say WolverinePimpTalkMenu:
+	now sextablerun is 0;
+	say "     As you approach the shady-looking wolverine, he says, [one of]'Looking for fun times? [bold type]Trade me[roman type] some food or beverage, and you'll get a turn.'[or]'Watch out if you want a pass with the bunny: she bites. Don't forget to use the ring gag.'[or]'I wonder when the boss will let her go. Hell, I'd rather wonder [italic type]if[roman type] the boss will let her go. Ha ha ha...'[at random]";
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ask what he'll take in trade";
+	now sortorder entry is 1;
+	now description entry is "Ask with what items you can pay";
+	[]
+	if carried of food > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Trade him some food for a turn with Zoe";
+		now sortorder entry is 2;
+		now description entry is "Pay the pimp to have fun with the bunny";
+	[]
+	if carried of water bottle > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Trade him some clean water for a turn with Zoe";
+		now sortorder entry is 3;
+		now description entry is "Pay the pimp to have fun with the bunny";
+	[]
+	if carried of chips > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Trade him some chips for a turn with Zoe";
+		now sortorder entry is 4;
+		now description entry is "Pay the pimp to have fun with the bunny";
+	[]
+	if carried of soda > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Trade him some soda for a turn with Zoe";
+		now sortorder entry is 5;
+		now description entry is "Pay the pimp to have fun with the bunny";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let DoneTalking be false;
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Ask what he'll take in trade":
+					say "[WPimp_TradeOptions]";
+				else if nam is "Trade him some food for a turn with Zoe":
+					say "[WPimp_TradeFood]";
+					now DoneTalking is true;
+				else if nam is "Trade him some clean water for a turn with Zoe":
+					say "[WPimp_TradeWater]";
+					now DoneTalking is true;
+				else if nam is "Trade him some chips for a turn with Zoe":
+					say "[WPimp_TradeChips]";
+					now DoneTalking is true;
+				else if nam is "Trade him some soda for a turn with Zoe":
+					say "[WPimp_TradeSoda]";
+					now DoneTalking is true;
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the shady wolverine, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say WPimp_Introduction:
+	if "NameKnown" is not listed in Traits of Wolverine Pimp:
+		say "     'Why? You trying to go buddy buddy with me? Just so we're clear, that's not gonna get you a freebie or any such thing.' He crosses his arms in front of his chest, giving you a firm look, then eventually says, 'Ya can call me Bastian.' ";
+		TraitGain "NameKnown" for Wolverine Pimp;
+	else:
+		say "     The wolverine looks at you with one raised eyebrow, then replies, 'Eh? What happened, you get clonked in the head or something? Transformations liquified your brains and it crawled out? It's Bastian, remember?'";
+	[TODO: Add more info - customer from the mall? other friends of Logan? etc.]
+
+to say WPimp_TradeOptions:
+	say "     As you ask the wolverine what exactly he'll take in trade for some time with Zoe, he lets out a mildly annoyed snort. 'Come on, it's not that that difficult to understand. Give me some trade goods - the good stuff, you know. Any kind of food, as long as it's in an unopened package, from before this whole mess kicked off. Water bottles, chips, soda. All that good shit is fine by me. So, got some stuff you wanna give me?' He makes a hand gesture, inviting you to hand something over, followed by a glance left and right, maybe a reflex from when he had to worry about actual police who'd be down on prostitution. Then the wolverine adds in a loud tone, 'Just don't waste my time with some cloudy piss-water in a bottle! The next guy who tries to trick me with such crap is gonna get a proper beating!'";
+	say "     Curious about the sudden outburst, you follow the pimp's gaze to the nearest edge of the large parking lot, where two shady figures stand in the shadows of the abandoned buildings, apparently talking to each other in low tones while throwing glances to the van. Looks like his comment was meant more for them than yourself. 'Fucking moochers,' the anthro grumbles under his breath, then turns his attention back to you.";
 
 instead of sniffing Wolverine Pimp:
 	say "The wolverine gives off an intimidating, bestial smell.";
 
 instead of trading the food when the current action involves the Wolverine Pimp:
+	say "[WPimp_TradeFood]";
+
+to say WPimp_TradeFood:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
@@ -616,6 +711,9 @@ instead of trading the food when the current action involves the Wolverine Pimp:
 		ItemLoss food by 1;
 
 instead of trading the water bottle when the current action involves the Wolverine Pimp:
+	say "[WPimp_TradeWater]";
+
+to say WPimp_TradeWater:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
@@ -623,6 +721,9 @@ instead of trading the water bottle when the current action involves the Wolveri
 		ItemLoss water bottle by 1;
 
 instead of trading the chips when the current action involves the Wolverine Pimp:
+	say "[WPimp_TradeChips]";
+
+to say WPimp_TradeChips:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
@@ -630,6 +731,9 @@ instead of trading the chips when the current action involves the Wolverine Pimp
 		ItemLoss chips by 1;
 
 instead of trading the soda when the current action involves the Wolverine Pimp:
+	say "[WPimp_TradeSoda]";
+
+to say WPimp_TradeSoda:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:

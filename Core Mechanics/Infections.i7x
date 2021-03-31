@@ -248,6 +248,14 @@ Part 2 - Breast Change
 
 This is the breast change rule:
 	choose row MonsterID from the Table of Random Critters;
+	let singlesexadjust be 0;
+	if "Single Sexed" is listed in feats of Player:
+		if Player is herm:
+			let singlesexadjust be 1; [currently herm]
+		else if Player is male:
+			let singlesexadjust be 2; [currently male]
+		else if Player is female:
+			let singlesexadjust be 3; [currently female]
 	if Player is FullyNewTypeInfected: [new parts]
 		if Nipple Count of Player is not Nipple Count entry:
 			decrease Breast Size of Player by 2;
@@ -262,14 +270,14 @@ This is the breast change rule:
 		if Nipple Count of Player is 0:
 			increase score by 0; [do nothing]
 		else if the sex entry is "Female" or the sex entry is "Both":
-			if Breast Size of Player < Breast Size entry and ( ( "Male Preferred" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player ) or "Breasts" is listed in feats of Player ):
+			if Breast Size of Player < Breast Size entry and ( ( "Male Preferred" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player and singlesexadjust is not 2) or "Breasts" is listed in feats of Player ):
 				follow the breast descr rule;
 				let oldbreast be descr;
 				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts ";
 				increase Breast Size of Player by 1;
 				increase Breast Size of Player by ( Breast Size entry minus Breast Size of Player ) divided by 3;
 				follow the breast descr rule;
-				say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
 			else if Breast Size of Player > Breast Size entry and "One Way" is not listed in feats of Player:
 				follow the breast descr rule;
 				let oldbreast be descr;
@@ -282,7 +290,7 @@ This is the breast change rule:
 			let breasttarget be male breast size entry;
 			if "Breasts" is listed in feats of Player:
 				if Male Breast Size entry is 0, now breasttarget is breast size entry;
-			else if "Male Preferred" is listed in feats of Player or "Flat Chested" is listed in feats of Player:
+			else if "Male Preferred" is listed in feats of Player or "Flat Chested" is listed in feats of Player or singlesexadjust is 2:
 				now breasttarget is 0;
 			if Breast Size of Player < breasttarget:
 				follow the breast descr rule;

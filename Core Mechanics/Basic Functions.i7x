@@ -301,8 +301,12 @@ to FeatGain (Featname - text):
 		say "ERROR: Trying to add '[Featname]', which the player already has.";
 
 to TraitGain (TraitName - a text) for (TraitChar - a person):
-	if TraitName is not listed in Traits of TraitChar:
+	if TraitName is not listed in Traits of TraitChar: [no duplicates]
 		add TraitName to Traits of TraitChar;
+
+to TraitLoss (TraitName - a text) for (TraitChar - a person):
+	if TraitName is listed in Traits of TraitChar: [avoids runtime errors for traits that do not exist]
+		remove TraitName from Traits of TraitChar;
 
 to MoraleLoss (N - number):
 	LineBreak;
@@ -1231,5 +1235,14 @@ to say nameOrDefault:
 			say "[one of]girl[or]babe[or]sweetie[at random]";
 	else:
 		say "[name of Player]";
+
+
+[Used to break up large blocks of introduction reactions when a new npc is introduced in the library, etc.]
+IntroReactionCounter is a number that varies. [@Tag:NotSaved]
+
+to WaitBreakReactions:
+	increase IntroReactionCounter by 1;
+	if remainder after dividing IntroReactionCounter by 5 is 0: [break every 5 reaction texts]
+		WaitLineBreak;
 
 Basic Functions ends here.

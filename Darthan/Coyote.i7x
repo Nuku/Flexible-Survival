@@ -203,13 +203,15 @@ When Play begins:
 ]
 
 
-to coyotify: [Used for infection purposes.]
+to Coyotify: [Used for infection purposes.]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
 		if Name entry is "Coyote":
 			now MonsterID is y;
 			break;
-	if "Male Preferred" is listed in feats of Player:
+	if diego's heirloom collar is equipped:
+		now sex entry is "Female";
+	else if "Male Preferred" is listed in feats of Player:
 		now sex entry is "Male";
 	else if "Female Preferred" is listed in feats of Player:
 		now sex entry is "Female";
@@ -225,7 +227,7 @@ to coyotify: [Used for infection purposes.]
 	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	infect;
 	now non-infectious entry is true;
-	if ( diegochanged is 0 and sex entry is not "Female" ) or ( diegochanged is 2 and sex entry is "Female" ):
+	if Diego is visible and (( diegochanged is 0 and sex entry is not "Female" ) or ( diegochanged is 2 and sex entry is "Female" )):
 		say "Diego gets a puzzled look on [if diegochanged is 0]his[else]her[end if] face then suddenly breaks out into a fit of laughter. 'Guess the trick really was on me.' You can't help but wonder what [if diegochanged is 0]he[else]she[end if] meant by that.";
 
 

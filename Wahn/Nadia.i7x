@@ -574,6 +574,48 @@ to say NadiaSex5: [flying and fucking]
 
 Section 3 - Events
 
+
+[
+
+	say "     As you walk into the area where the abbey's garden lies you notice Nadia and the children happily tending to the various flowers, fruits and vegetables in the area, busily maintaining them and even transplanting some new plants into pots the older children have been bringing in from the city. You approach Nadia who's currently singing happily as she tends to a patch of flowers that you remember her mentioning were called Birds of Paradise, just like her current self. After noticing you walk in she smiles and gives you a quick kiss on your cheek. She cleans some dirt off her talons while saying, 'It was such a beautiful day today that I thought it would be a good time for the kids and I to go spend some time together outside instead of being inside most of the day when I noticed the garden had begun blooming. I had been avoiding it at first since the faded and dead flowers reminded me of... how I almost ended up.'";
+	say "     You think you notice her shaking a bit under the feathers but she relaxes after lifting up her head and noticing all her many children working joyously next to the many colorful flowers. 'I never could come to this area much cause of what it reminded me of, but after Honey worked so hard and brought so many of the plants back I couldn't help but start feeling that perhaps I could start looking at it differently. Instead of thinking of all the horrible moments I have been through, like my family ignoring my dreams of being a mother and... what I went through back at that lab, that I can look ahead and think about all the new beautiful things life can bring, this garden, all of our beautiful kids, and of course...' She turns to your face, giving a grateful smile 'you'. She gives you a tight hug and rests her head on your [bodytype of Player] chest for a bit after she finishes speaking, the both of you staying together for a bit before she lets go.";
+	LineBreak;
+	say "     'I want to care for all these flowers as a reminder to myself of this, and to also give them a chance to hopefully help others as they did me. I'm hoping to maybe open a flower shop if we manage to leave this place, it would give me and the kids something to do once we leave the library, and we all really love working with the flowers so I'm sure they would be very happy working there.' You simply smile as she finishes, the happiness she radiates spreading to you as it does to all her kids.";
+		LineBreak;
+		say "     [bold type]What do you want to do now?[roman type][line break]";
+		LineBreak;
+		say "     [link](1)[as]1[end link] - Stay a while and help them.";
+		say "     [link](2)[as]2[end link] - Sit down nearby and hang out a little.";
+		say "     [link](3)[as]3[end link] - Tell them that planting crops would be a better use of the area.";
+		say "     [link](4)[as]4[end link] - Shrug and get back to what you were doing.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 4:
+			say "Choice? (1-4)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to stay and help, [link]2[end link] to sit and hang out, [link]3[end link] to suggest planting crops or [link]4[end link] to leave.";
+		if calcnumber is 1:
+			LineBreak;
+			say "Seeing how hard she and the children are working and the joy they get from working here, you ask her if you could help around a bit. Nadia happily points to some of the bigger pots the kids could use some help moving, mentioning that they found these big heavy pots near the storage shed and were barely able to move them here. You go and help them set up the pots, carrying them where needed or lifting smaller yet still heavy pots stuffed inside others and prepare to transplant some of the plants that had gotten too big for their containers into these bigger ones. The kids are delighted to see their father here helping them and they run around you, bringing with them some of the plants they have been taking care of to show you. It seems Nadia was correct in that pretty much all the kids got their mother's love for fragrant and elegant flowers, seemingly bringing just as many of these as they do fruit and vegetable plants. You spend a few hours helping them out, tending to the plants, watering them, removing weeds and preparing new ones that are being brought by the older kids that go out scouting. By the end you feel tired yet very satisfied with the work you and the kids did, knowing that you all managed to create a magnificent garden that is quite serene to be in yet able to provide enough food for both the kids and their mother.";
+			say "Before you leave, Nadia comes to give you a loving kiss and thanks you for spending some time with your children, then gives you some of her favorite fruits from the garden so that you may stay well fed and have something from your family with you.";
+			[
+			(Gain food and Sanity, tending the garden could be a repeatable scene)
+			]
+		else if calcnumber is 2:
+			LineBreak;
+			say "     B";
+		else if calcnumber is 3:
+			LineBreak;
+			say "     C";
+		else if calcnumber is 2:
+			LineBreak;
+			say "     D";
+]
+
+
+
 Table of GameEventIDs (continued)
 Object	Name
 Bird Troubles	"Bird Troubles"

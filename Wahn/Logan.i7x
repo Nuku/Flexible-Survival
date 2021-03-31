@@ -7,6 +7,10 @@ Version 1 of Logan by Wahn begins here.
 
 [ 95: player rejected being whored out (only wants Logan)   ]
 
+[ Collection of Ideas                                       ]
+[ - talk option about the contraceptives used on Zoe        ]
+[ - talk option about Zoe                                   ]
+
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
