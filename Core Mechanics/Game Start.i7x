@@ -346,6 +346,7 @@ to say gsopt_start:
 		say "     ([link]Y[as]y[end link]) - Male.";
 		say "     ([link]N[as]n[end link]) - Female.";
 		if Player consents: [Male Fang]
+			now Fang is Male;
 			if hp of Fang is 4: [Alpha]
 				increase Cock Length of Fang by 2;
 				increase Ball Size of Fang by 1;
@@ -353,6 +354,7 @@ to say gsopt_start:
 				decrease Cock Length of Fang by 2;
 				decrease Ball Size of Fang by 1;
 		else: [Female Fang]
+			now Fang is Female;
 			if hp of Fang is 4: [Alpha]
 				now Androginity of Fang is 6;
 				now Cock Count of Fang is 0;
