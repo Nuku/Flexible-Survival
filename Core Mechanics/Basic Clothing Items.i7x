@@ -344,9 +344,8 @@ Scent of mesh shirt is "The fabric has the typical faintly musky scent clothing 
 
 When Play begins:
 	[
-	add { "combat boots", "brown loafers", "leather sandals", "high heels", "stiletto heels", "jogging shoes", "cowboy boots" } to invent of Grey Abbey Library;
+	add { "brown loafers", "leather sandals", "high heels", "stiletto heels", "jogging shoes", "cowboy boots" } to invent of Grey Abbey Library;
 	]
-	now plural of combat boots is true;
 	now plural of brown loafers is true;
 	now plural of leather sandals is true;
 	now plural of high heels is true;
@@ -356,26 +355,12 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"combat boots"	"A pair of black combat boots. They are quite sturdy and fairly heavy because of the steel caps in them."	3	combat boots
 "brown loafers"	"A pair of brown loafers. They look comfortable and one can just slide right in without having to worry about tying them."	1	brown loafers
 "leather sandals"	"A pair of leather sandals. They have a number of straps that can be used to fasten them to your foot."	1	leather sandals
 "high heels"	"A pair of bright red woman's shoes, with moderately high heels. Not exactly the best thing to run around with at speed."	1	high heels
 "stiletto heels"	"A pair of black woman's shoes, with very high heels. Not exactly the best thing to run around with at speed."	1	stiletto heels
 "jogging shoes"	"A pair of athlete's jogging shoes. They look new and are still bright and shiny."	1	jogging shoes
 "cowboy boots"	"A pair of cowboy boots made from dark brown leather, complete with high heels and a relatively narrow toe. They are sure to make using stirrups easier, and can protect against rattlesnake bites."	1	cowboy boots
-
-combat boots is a grab object.
-combat boots is equipment.
-It is not temporary.
-Plural of combat boots is true.
-Taur-compatible of combat boots is false.
-Size of combat boots is 3.
-AC of combat boots is 0.
-Effectiveness of combat boots is 0.
-Placement of combat boots is "feet".
-Descmod of combat boots is "You are wearing sturdy black combat boots. They even have steel caps that protect your toes.".
-Slot of combat boots is "feet".
-Scent of combat boots is "The boots smell like leather and rubber.".
 
 brown loafers is a grab object.
 brown loafers is equipment.

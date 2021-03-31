@@ -927,7 +927,7 @@ name	price	object	allowed
 "black silk corset"	5	black silk corset	true rule
 "leather jockstrap"	5	leather jockstrap	true rule
 "black silk thong"	5	black silk thong	true rule
-"combat boots"	5	combat boots	true rule
+"black combat boots"	5	black combat boots	true rule
 "black stiletto heels"	5	black stiletto heels	true rule
 "null essence"	10	null essence	true rule
 

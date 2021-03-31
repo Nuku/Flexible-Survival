@@ -425,8 +425,10 @@ to say SexWithDiego:
 		say "     As you step up to Diego and start making lusty suggestions, the coyote leans back against the wall and lets [PosAdj of Diego] eyes wander over your form. 'Hmm... maybe. I'll really have to think about your offer for a while,' [SubjectPro of Diego] says, reaching down to adjust [PosAdj of Diego] furry balls a little. 'There's lots of gals in this city here who want some of this, so I don't just hump anyone. And since you aren't much of a trickster, I don't know if you're worth my while...' [SubjectPro of Diego] goes on to say, finishing up with a grin and a wink.";
 		say "     [bold type]Sounds like [SubjectPro of Diego] wants you to join in for [PosAdj of Diego] pastime of playing tricks on people.[roman type][line break]";
 		stop the action;
+	[
 	else if diego's heirloom collar is equipped: [collared, submissive players]
 		say "[DiegoMasterSex]";
+	]
 	else if Player is male and DiegoChanged is 0 and DiegoButtSlut is 0: [male+herm player and regular male Diego]
 		if Player is female: [herms]
 			say "     As you step up to Diego and start making lusty suggestions, the coyote leans back against the wall and lets [PosAdj of Diego] eyes wander over your form. 'Hmm you look pretty good there,' Diego says with some interest. 'Sadly though, I can already tell you have a trick hidden away next to your lovely treat,' the coyote says as [SubjectPro of Diego] gestures to your cock. 'Nice try there - but this coyote is just here for the ladies. Better luck next time, eh? Be sure to come back to me if you happen to become a full woman though.'";
