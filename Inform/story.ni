@@ -627,6 +627,7 @@ Include Sand Man by Wahn.
 Include Satyr by Sarokcat.
 Include Satyress by Wahn.
 Include Scarab Beetle by Xenophiliac.
+Include Scorched Mole by Prometheus.
 Include Seraphim by Wahn.
 Include Shadow Beast by UrsaOmega.
 Include Siamese Cats by Stripes.

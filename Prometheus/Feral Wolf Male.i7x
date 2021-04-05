@@ -126,7 +126,9 @@ to say BeatFeralWolfMale:
 						say "[FeralWolfFemaleSex]";
 					else:
 						say "[FeralWolfNonSexTame]";
+				now Fang is Male;
 				now HP of Fang is 1;
+				SetMalePronouns for Fang;
 				move Fang to the Grey Abbey Library;
 				move player to the Grey Abbey Library;
 				now lastfuck of Fang is turns;
