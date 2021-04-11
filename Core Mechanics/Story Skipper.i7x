@@ -367,7 +367,7 @@ to CharacterSave:
 			let LocationDesignation be "NPC Nexus"; [standard value = stash room]
 			if location of x is not nothing:
 				let LocationRoomObject be location of x;
-				if RoomID of x is "Room": [no specific differing RoomID set -> default to printed name]
+				if RoomID of LocationRoomObject is "Room": [no specific differing RoomID set -> default to printed name]
 					now LocationDesignation is printed name of LocationRoomObject;
 				else: [room has a specific unique ID set]
 					now LocationDesignation is RoomID of LocationRoomObject;
