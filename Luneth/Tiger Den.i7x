@@ -150,6 +150,7 @@ Chapter 4 - Bathroom [TDen_Bathroom]
 Table of GameRoomIDs (continued)
 Object	Name
 TDen_Bathroom	"TDen_Bathroom"
+TDen_Bathroom	"Washroom"
 
 TDen_Bathroom is a room. Description of TDen_Bathroom is "[TDen_Bathroom desc]".
 RoomID of TDen_Bathroom is "TDen_Bathroom".

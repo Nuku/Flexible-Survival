@@ -799,8 +799,8 @@ Tunnel Underground	"Tunnel Underground"
 Tunnel Underground is a room.
 Description of Tunnel Underground is "[TunnelUndergroundDesc]";
 
-to say SanctuaryHotelLobbyDesc:
-	say "     The tunnel is relatively featureless and in good shape given that there are no supports or any othger safety features. Moles are apparently good at digging. (Placeholder for now)";
+to say TunnelUndergroundDesc:
+	say "     The tunnel is relatively featureless and in good shape given that there are no supports or any other safety features. Moles are apparently good at digging. (Placeholder for now)";
 
 Section 7 - Endings
 
