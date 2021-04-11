@@ -297,6 +297,8 @@ to say alexandradesc_bg:
 		say "     Speaking of her duty, she's stationed herself by the library entrance, acting as your rough and tough guard to the safe haven inside[if HP of Alexandra is 3 or HP of Alexandra is 5], not letting her current state hold her back[end if][if Fang is booked]. She shares this duty with Fang, alternating with the wolf[end if]. Having kept her nightstick, it hangs at the ready for those who would disturb the safety of your hideout.";
 	else if Alexandra is in Worker Barracks:
 		say "     Speaking of her duty, she's mostly hanging around in the back of the main barracks room, leaning against a wall as she ogles the many horseman studs living in the building. She seems happy with her current task of serving as a breeding bitch, most of the time even leaving the top button of her pants undone and all too often sliding a hand inside to play with herself a little. Still, that doesn't mean she isn't a tough bitch either, as she still keeps her nightstick fairly close, ready to be picked up in case the Farm is attacked or something like that.";
+	if "Spike_returned" is listed in Traits of Alexandra:
+		say "     Spike hangs around close to her, with him mostly being a sulky presence in the background, who gives you grumpy glances. Seems he's still cross about being told to go back.";
 	if HP of Alexandra > 3 and Alexandra is in Grey Abbey Library:
 		say "     Alexandra's [Libido of Alexandra] pups are younger Dobermans, having matured quickly to be roughly in their teens[if Libido of Alexandra > 4]. They are a mix of boys and girls among the litters[end if]. ";
 		if AlexandraPlayerPups is Libido of Alexandra: [all are the players offspring]
@@ -463,6 +465,18 @@ to say BadAlexandraTalkMenu:
 		now sortorder entry is 21;
 		now description entry is "Chat about the other anthro canine";
 	[]
+	if "Missing Puppy" is listed in Traits of Alexandra and HP of Spike is 0: [missing puppy, before Spike comes back]
+		choose a blank row in table of fucking options;
+		now title entry is "The missing puppy";
+		now sortorder entry is 22;
+		now description entry is "Talk about her runaway son";
+	[]
+	if HP of Spike > 0: [met Spike]
+		choose a blank row in table of fucking options;
+		now title entry is "Spike";
+		now sortorder entry is 23;
+		now description entry is "Talk about her rebellious son";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -494,6 +508,10 @@ to say BadAlexandraTalkMenu:
 					say "[AlexandraNPCChat]";
 				else if (nam is "Sarah the husky"):
 					say "[A_SarahTalk]";
+				else if (nam is "The missing puppy"):
+					say "[A_PreSpikeTalk]";
+				else if (nam is "Spike"):
+					say "[A_SpikeTalk]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -620,7 +638,7 @@ to say AlexandraFertilityTrip: [taking her to Medea for fertility treatments]
 
 to say AlexandraBackstory1: [family]
 	say "     Alexandra takes a seat in one of the chairs, rocking on its back legs and lighting up a smoke. 'My folks were crooks. Did drugs and petty crimes to pay for the habit. It was a pretty shitty home to grow up in, so I was taken away by Child Services when they finally got caught. Not that that was much better, but I tried to convince myself I was better than them. I decided to become a cop and tried my best to be [']a moral and upright person['],' she says with obvious scorn for her previous self.";
-	say "     'I tried to tell myself that my parents being crooks didn't matter, tried to act like stuff like that doesn't breed true. But I always knew deep down I was lying and there's no use pretending otherwise,' she says with a growl, flicking away her cigarette. 'I'm a bad dog and am much better off just admitting it. I certainly am enjoying myself a whole lot more as a slutty bitch, that's for damn sure. Shit, I'm sick of talking about this crap,' the anthro doberman says with a growl and hops out of the chair, moving over to the entrance door to check for something to fight and take her aggressions out on..";
+	say "     'I tried to tell myself that my parents being crooks didn't matter, tried to act like stuff like that doesn't breed true. But I always knew deep down I was lying and there's no use pretending otherwise,' she says with a growl, flicking away her cigarette. 'I'm a bad dog and am much better off just admitting it. I certainly am enjoying myself a whole lot more as a slutty bitch, that's for damn sure. Shit, I'm sick of talking about this crap,' the anthro doberman says with a growl and hops out of the chair, moving over to the entrance door to check for something to fight and take her aggressions out on.";
 	if AlexandraBackstory is 0:
 		now AlexandraBackstory is 1;
 	wait for any key;
@@ -685,13 +703,37 @@ to say A_SarahTalk:	[Sarah]
 	else if SarahCured is 4: [Sarah is on a libido suppessant regimen now]
 		say "     As you bring up Sarah, Alexandra's muzzle draws into a frown. 'What about that little whore? She doesn't submit to me as the top bitch and isn't even putting out for you, yet you still give her special treatment?! Did I miss something and she's a rich heiress you want to get a reward for or something?' The former cop is clearly quite miffed about how things stand right now, given that you literally forced her to be your bitch while Sarah is having a fairly pleasant and safe time down in the bunker. [if AlexandraSarahInteraction > 0]Their recent clash clearly doesn't help improve her opinion of Sarah either. [end if]As you struggle to find a resonable reply to her, the anthro dobie lets out a frustrated bark, then storms off out into the open street to find someone she can give a beating to. She'll be back once she has blown off some steam.";
 	else if SarahCured is 5: [Sarah is okay with oral on her]
-		say "     As you bring up Sarah, Alexandra's muzzle draws into a frown. 'What about that little whore? Has she got some sort of magic pussy or what, with you giving her special treatment even if she only wants to be on the receiving end of oral sex?' The former cop is clearly quite miffed about how things stand right now, given that you literally forced her to be your bitch while Sarah is having a fairly pleasant and safe time down in the bunker. [if AlexandraSarahInteraction > 0]Their recent clash clearly doesn't help improve her opinion of Sarah either. [end if]As you struggle to find a resonable reply to her, the anthro dobie lets out a frustrated bark, then storms off out into the open street to find someone she can give a beating to. She'll be back once she has blown off some steam.";
+		say "     As you bring up Sarah, Alexandra's muzzle draws into a frown. 'What about that little whore? Has she got some sort of magic pussy or what, with you giving her special treatment even if she only wants to be on the receiving end of oral sex?' The former cop is clearly quite miffed about how things stand right now, given that you literally forced her to be your bitch while Sarah is having a fairly pleasant and safe time down in the bunker. [if AlexandraSarahInteraction > 0]Their recent clash clearly doesn't help improve her opinion of Sarah either. [end if]As you struggle to find a reasonable reply to her, the anthro dobie lets out a frustrated bark, then storms off out into the open street to find someone she can give a beating to. She'll be back once she has blown off some steam.";
 	else if SarahCured is 6: [Sarah is okay with player dominant oral]
-		say "     As you bring up Sarah, Alexandra's muzzle draws into a frown. 'What about that little whore? She must have got a really nice tongue, with you giving her special treatment even if she only wants to have oral sex!' The former cop is clearly quite miffed about how things stand right now, given that you literally forced her to be your bitch while Sarah is having a fairly pleasant and safe time down in the bunker. [if AlexandraSarahInteraction > 0]Their recent clash clearly doesn't help improve her opinion of Sarah either. [end if]As you struggle to find a resonable reply to her, the anthro dobie lets out a frustrated bark, then storms off out into the open street to find someone she can give a beating to. She'll be back once she has blown off some steam.";
+		say "     As you bring up Sarah, Alexandra's muzzle draws into a frown. 'What about that little whore? She must have got a really nice tongue, with you giving her special treatment even if she only wants to have oral sex!' The former cop is clearly quite miffed about how things stand right now, given that you literally forced her to be your bitch while Sarah is having a fairly pleasant and safe time down in the bunker. [if AlexandraSarahInteraction > 0]Their recent clash clearly doesn't help improve her opinion of Sarah either. [end if]As you struggle to find a reasonable reply to her, the anthro dobie lets out a frustrated bark, then storms off out into the open street to find someone she can give a beating to. She'll be back once she has blown off some steam.";
 	else if SarahCured is 8: [Sarah is okay with anal sex]
-		say "     As you bring up Sarah, Alexandra's muzzle draws into a frown. 'What about that little whore? She doesn't submit to me as the top bitch, or allow anyone to fuck her pussy, yet you still give her special treatment! What the flying fuck?!' The former cop is clearly quite miffed about how things stand right now, given that you literally forced her to be your bitch while Sarah is having a fairly pleasant and safe time down in the bunker. [if AlexandraSarahInteraction > 0]Their recent clash clearly doesn't help improve her opinion of Sarah either. [end if]As you struggle to find a resonable reply to her, the anthro dobie lets out a frustrated bark, then storms off out into the open street to find someone she can give a beating to. She'll be back once she has blown off some steam.";
+		say "     As you bring up Sarah, Alexandra's muzzle draws into a frown. 'What about that little whore? She doesn't submit to me as the top bitch, or allow anyone to fuck her pussy, yet you still give her special treatment! What the flying fuck?!' The former cop is clearly quite miffed about how things stand right now, given that you literally forced her to be your bitch while Sarah is having a fairly pleasant and safe time down in the bunker. [if AlexandraSarahInteraction > 0]Their recent clash clearly doesn't help improve her opinion of Sarah either. [end if]As you struggle to find a reasonable reply to her, the anthro dobie lets out a frustrated bark, then storms off out into the open street to find someone she can give a beating to. She'll be back once she has blown off some steam.";
 	wait for any key;
 	say "[BadAlexandraTalkMenu]"; [looping back for more talk]
+
+to say A_PreSpikeTalk: [before Spike comes back]
+	say "     As you bring up her missing puppy, Alexandra instantly becomes tense and asks, 'Is he outside? Did you see him?! Or... do you have bad news?' Genuine worry is clearly written in her voice, overwriting any of the usual posturing as a badass bitch. ";
+	if "Missing Pup_search reaction" is listed in Traits of Alexandra:
+		say "You explain that you didn't find him when you went out to search, with the only dobie you saw being a female doberman out on the street, ";
+	else:
+		say "Having to tell her that you don't have news about her son, ";
+	say "the ex-cop sighs in a mix of disappointment and relief. 'That foolish little punk, what was he thinking?! Leaving me that shitty note on a piece of paper and running off, god knows where! Will I ever see him again?' As you don't have any answers for her, all you can do is give Alexandra's arm a consoling squeeze.";
+
+to say A_SpikeTalk: [Spike]
+	if Spike is visible or HP of Spike is 100: [he's _right there_, close to her - either because the player brought him along, or he's permanently back in the kid group, and she doesn't let him out of her sight again]
+		say "     As you bring up Spike, Alexandra lets out a bit of a huff, crossing her arms in front of her chest as she barks out, 'Ungrateful, that's what he is! I carried him inside me and brought him into this world, then was a fucking good mother to him - and what do I get for it? He leaves me a shitty note on a piece of paper and runs off, god knows where! I didn't even know if I'd ever see him again!' As she tells you this, Alexandra's gaze flicks aside once or twice, watching from the corner of her eyes for her son's reaction to the scorn she's expressing, loud enough for him to get a good earful. The young dobie appears more sulky than anything else, not really listening and doing his best to tune her out. Meanwhile, you yourself can pick up on the undertone of genuine worry in her voice, though mostly hidden under the anger. [if HP of Spike is 100]You idly wonder if she might open up more if Spike wasn't present. [end if][line break]";
+	else if HP of Spike is 1: [player accepted him to join]
+		if "Cuckold" is not listed in Feats of Player: [she wouldn't respect a cuck player enough to open up]
+			say "     As you bring up Spike, Alexandra gets into a huff, crossing her arms in front of her chest as she barks out, 'Ungrateful punk! After I carried him inside me and brought him into this world, and being a fucking good mother to him - what do I get for it? A shitty note on a piece of paper before he runs off, god knows where! I didn't even know if I'd ever see him again!' Clenching her eyes shut, she runs a hand through her shock of red-tinted hair, taking deep breaths as she tries to calm herself down. Seeing her do this, you're suddenly struck by the thought of just how similar Spike styled himself to the bad-ass bitch that is his mother, haircut and all, almost as if he wanted to impress her in his own way. Alexandra flicks open her eyes and focuses on you a moment later, then says in a quieter, tired tone, 'I didn't really sleep that day, or the next, not wanting to miss the chance to be awake when he came back.'";
+			say "     'Then on the third day, I just... couldn't last any longer, and passed out. Felt like shit when I woke up after, like I had failed as a mother. Sleeping while my boy's out there!' Alexandra's eyes narrow as she says this, and you can feel anger starting to flare up again. 'Then suddenly, he shows up here again, proud grin on his smug face and saying that he's a 'real man' now. As if roaming the streets for a few days, picking a 'cool' name for himself, like Tomas wasn't good enough! And that that damn collar! I could smell it on him, that he rutted some slut or two - as if that makes a damn difference in the real world! Told him as much and he got sulky because I wasn't impressed! He'd been loitering outside for hours before you came back.' She stares into the distance for a moment, shaking her head to clear it, then continues, 'Thank you, by the way. Doesn't matter what you did to me before, I owe you big for taking him under your wing. Now he's not out there alone. Seems like[if MaxHP of Spike is 1], as his dad, [else], as his uncle, [end if] you're at least someone he's willing to listen to.'";
+			WaitLineBreak;
+			say "     That said, Alexandra wanders off, clearly in no mood to dwell on this topic further right now. As you watch her approach her other children and start taking care of them, you go through what she said in your mind again. It is clear that the ex-cop cares deeply for all of her children, maybe Spike especially as her firstborn, and she seems to want to shield and protect them. In the case of Spike, this led to teenage rebellion and him running off. When he came back, the two stubborn dobies butted heads again, creating anger and frustration on both sides. You start thinking if there might be some way to reconcile them, but don't have any great ideas for right now. Maybe you can think of something in the future, but until then it'd sure be best not to try any half-baked plans...";
+			TraitGain "Spike Reconciliation Idea" for Alexandra;
+			TraitGain "Birthname Known" for Spike; [Tomas]
+		else:
+			say "     As you bring up Spike, Alexandra lets out a bit of a huff, crossing her arms in front of her chest as she barks out, 'Ungrateful, that's what he is! I carried him inside me and brought him into this world, then was a fucking good mother to him - and what do I get for it? He leaves me a shitty note on a piece of paper and runs off, god knows where! I didn't even know if I'd ever see him again!'";
+	else if HP of Spike is 99: [he's out in the city somewhere]
+		say "     As you bring up Spike, Alexandra lets out a low growl, crossing her arms in front of her chest as she barks out, 'That stupid, ungrateful, little boy! I carried him inside me and brought him into this world, then was a fucking good mother to him - and what do I get for it? He leaves me a shitty note on a piece of paper and runs off, god knows where! I didn't even know if I'd ever see him again!' You can see her hands ball into fists, with the ex-cop's hope body tensing. 'Then he shows up here again, saying that he's a 'real man' now. As if roaming the streets for a few days, picking a 'cool' name for himself and getting that damn collar means a single thing in the real world! Told him as much and he got sulky because I wasn't impressed!' Pacing back and forth, she adds, 'And now he's gone off again!' It isn't hard to see that her anger is fueled by deep, genuine worry, as Alexandra loves her child despite all their differences. You decide to leave this topic be at this point, not mentioning that you pushed Spike to go.";
 
 Section 2 - Bad Girl Sexxxings
 
@@ -1412,10 +1454,10 @@ ResolveFunction of AlexandraHornyTrait is "".
 AlexandraHornyTrait is inactive.
 Sarea of AlexandraHornyTrait is "Nowhere".
 
-after going to Grey Abbey Library while (AlexandraHornyTrait is active and AlexandraHornyTrait is not resolved and a random chance of 1 in 2 succeeds):
+after going to Grey Abbey Library while (AlexandraHornyTrait is active and AlexandraHornyTrait is not resolved and a random chance of 1 in 2 succeeds and ("Missing Puppy" is not listed in Traits of Alexandra or "Missing Puppy" is listed in Traits of Alexandra and HP of Spike > 0)): [either Spike must not have run off yet, or he'll have to be back]
 	AlexandraHornyTrait_Event;
 
-instead of navigating Grey Abbey Library while (AlexandraHornyTrait is active and AlexandraHornyTrait is not resolved and a random chance of 1 in 2 succeeds):
+instead of navigating Grey Abbey Library while (AlexandraHornyTrait is active and AlexandraHornyTrait is not resolved and a random chance of 1 in 2 succeeds and ("Missing Puppy" is not listed in Traits of Alexandra or "Missing Puppy" is listed in Traits of Alexandra and HP of Spike > 0)): [either Spike must not have run off yet, or he'll have to be back]
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1446,10 +1488,10 @@ ResolveFunction of AlexandraBroodmTrait is "".
 AlexandraBroodmTrait is inactive.
 Sarea of AlexandraBroodmTrait is "Nowhere".
 
-after going to Grey Abbey Library while (AlexandraBroodmTrait is active and AlexandraBroodmTrait is not resolved and a random chance of 1 in 2 succeeds):
+after going to Grey Abbey Library while (AlexandraBroodmTrait is active and AlexandraBroodmTrait is not resolved and a random chance of 1 in 2 succeeds and ("Missing Puppy" is not listed in Traits of Alexandra or "Missing Puppy" is listed in Traits of Alexandra and HP of Spike > 0)):
 	AlexandraBroodmTrait_Event;
 
-instead of navigating Grey Abbey Library while (AlexandraBroodmTrait is active and AlexandraBroodmTrait is not resolved and a random chance of 1 in 2 succeeds):
+instead of navigating Grey Abbey Library while (AlexandraBroodmTrait is active and AlexandraBroodmTrait is not resolved and a random chance of 1 in 2 succeeds and ("Missing Puppy" is not listed in Traits of Alexandra or "Missing Puppy" is listed in Traits of Alexandra and HP of Spike > 0)):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1489,10 +1531,10 @@ ResolveFunction of AlexandraPlayersBitch is "".
 AlexandraPlayersBitch is inactive.
 Sarea of AlexandraPlayersBitch is "Nowhere".
 
-after going to Grey Abbey Library while (AlexandraPlayersBitch is active and AlexandraPlayersBitch is not resolved and a random chance of 1 in 2 succeeds):
+after going to Grey Abbey Library while (AlexandraPlayersBitch is active and AlexandraPlayersBitch is not resolved and a random chance of 1 in 2 succeeds and ("Missing Puppy" is not listed in Traits of Alexandra or "Missing Puppy" is listed in Traits of Alexandra and HP of Spike > 0)):
 	AlexandraPlayersBitch_Scene;
 
-instead of navigating Grey Abbey Library while (AlexandraPlayersBitch is active and AlexandraPlayersBitch is not resolved and a random chance of 1 in 2 succeeds):
+instead of navigating Grey Abbey Library while (AlexandraPlayersBitch is active and AlexandraPlayersBitch is not resolved and a random chance of 1 in 2 succeeds and ("Missing Puppy" is not listed in Traits of Alexandra or "Missing Puppy" is listed in Traits of Alexandra and HP of Spike > 0)):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

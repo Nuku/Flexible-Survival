@@ -320,24 +320,6 @@ to MoraleBoost (N - number):
 	if morale of Player > 100:
 		now morale of Player is 100;
 
-to AddNavPoint (RoomObj - room):
-	AddNavPoint RoomObj silence state is 0;
-
-to AddNavPoint (RoomObj - room) silently:
-	AddNavPoint RoomObj silence state is 1;
-
-to AddNavPoint (RoomObj - room) silence state is (Silence - a number):
-	if RoomObj is not fasttravel: [programming error, to be reported]
-		say "DEBUG: Trying to add [RoomObj] as a nav point, but it is not a fasttravel point. Please report this message on the FS Discord!";
-	else: [the room is at least a valid nav point]
-		if RoomObj is known:
-			if debug is at level 10:
-				say "DEBUG: Trying to add [RoomObj] as a nav point, but the player knows it already.";
-		else: [player doesn't know the room]
-			now RoomObj is known;
-			if Silence is 0:
-				say "[bold type]['][RoomObj]['][roman type] has been added to your list of available navpoints. You will now be able to [bold type]nav[roman type]igate there from any of the fasttravel locations in the city by using the command [bold type]nav [RoomObj][roman type].";
-
 
 understand "rename" as PlayerRenaming.
 
@@ -351,6 +333,18 @@ to playernaming:
 	say "     [bold type]Please enter your new name: [roman type][line break]";
 	get typed command as playerinput;
 	now name of Player is playerinput;
+
+understand "observe" as ObserveRoom.
+understand "observe room" as ObserveRoom.
+understand "observe surroundings" as ObserveRoom.
+
+ObserveRoom is an action applying to nothing.
+
+check ObserveRoom:
+	if ObserveAvailable of Location of Player is false, say "     Somehow, you feel that there's nothing interesting to observe in this location (yet)." instead;
+
+carry out ObserveRoom:
+	say "[ObserveString of Location of Player]";
 
 understand "SexStats" as SexStatsOverview.
 
@@ -786,7 +780,7 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 				if PenileVirgin of GivingChar is true:
 					now PenileVirgin of GivingChar is false;
 					say "     [Bold Type][GivingCharName] has lost their penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
-		else: [NPC takes]
+		else if TakingCharIsNPC is 1: [NPC takes]
 			if SexAct is "AssFuck":
 				if AnalVirgin of TakingChar is true:
 					now AnalVirgin of TakingChar is false;
@@ -812,6 +806,8 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 					now OralVirgin of TakingChar is false;
 					say "     [Bold Type][TakingCharName] has lost their oral virginity to [GivingCharName in lower case]![roman type][line break]";
 					now FirstOralPartner of TakingChar is GivingCharName;
+		else:
+			say "Error: The CreatureSexAftermath function should include at least one infection if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
 
 to StatChange (Statname - a text) by (Modifier - a number):
 	StatChange Statname by Modifier silence state is 0;
@@ -1242,7 +1238,9 @@ IntroReactionCounter is a number that varies. [@Tag:NotSaved]
 
 to WaitBreakReactions:
 	increase IntroReactionCounter by 1;
-	if remainder after dividing IntroReactionCounter by 5 is 0: [break every 5 reaction texts]
+	if remainder after dividing IntroReactionCounter by 2 is 0: [break every 2 reaction texts]
 		WaitLineBreak;
+	else:
+		LineBreak;
 
 Basic Functions ends here.

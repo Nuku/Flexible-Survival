@@ -212,8 +212,8 @@ instead of conversing the Susan:
 					now Loyalty of Susan is 99; [player refused to be her mate, Susan ran off]
 					FeralizeSusan; [making her an enemy in the park]
 					now HP of Doctor Matt is 8; [post-Susan]
-		else if Loyalty of Susan > 0:
-			say "     'You should go talk to the doctor first. I will wait for you.'";
+			else if Loyalty of Susan > 0:
+				say "     'You should go talk to the doctor first. I will wait for you.'";
 	else if HP of Susan is 2:
 		say "     Susan smiles and lays her arms around you, giving you a peck on the cheek and nodding to the bed. 'So, time to go for it then, my mate!' The eagerness to spend some intimate moments with you is audible in her voice, and the lithe herm is half-hard already from her excitement.";
 	else if HP of Susan is 3:

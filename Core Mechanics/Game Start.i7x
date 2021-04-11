@@ -863,11 +863,11 @@ to genderlockmenu:
 	while gsexit is 0:
 		say "[bold type]Select a body configuration lock:[roman type][line break]";
 		say "(1) [link]None[as]1[end link] - There is no restriction to your gender-transformation. You receive a 5% point bonus from this selection at game end.";
-		say "(2) [link]Random[as]2[end link] - Fond of Excitement? A random lock is chosen for you at game start!";
+		say "(2) [link]Random[as]2[end link] - Enjoy a loss of control? A random lock (4-8) is chosen for you at game start!";
 		say "[line break]";
 		say "(3) [link]Unchanging[as]3[end link] - Preserve selected starting gender.";
-		say "(4) [link]Always Cocky[as]4[end link] - Regardless of mutation, you always retain some male anatomy.";
-		say "(5) [link]Always a Pussy[as]5[end link] - Regardless of mutation, you always retain some female anatomy.";
+		say "(4) [link]Always Cocky[as]4[end link] - Your body will never give up its cock (if it has one, or gains one).";
+		say "(5) [link]Always a Pussy[as]5[end link] - Your body will never give up its pussy (if it has one, or gains one).";
 		say "(6) [link]Single Sexed[as]6[end link] - Regardless of mutation, you will never be a herm but remain male or female, with the right chest to match.";
 		say "(7) [link]Flat Chested[as]7[end link] - Regardless of mutation, you never gain breasts.";
 		say "(8) [link]Simplified Masculine[as]8[end link] - Flat Chested + Single-Sexed.";

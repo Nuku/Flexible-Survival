@@ -7,6 +7,7 @@ Section 1 - Creature Responses
 
 to say latexfoxdesc:
 	setmongender 3; [creature is male]
+	project Figure of LatexFox_soft_icon;
 	choose row MonsterID from Table of Random Critters;
 	if "Female Preferred" is listed in feats of Player:
 		now sex entry is "Female";
@@ -17,6 +18,7 @@ to say latexfoxdesc:
 	say "     You run into [one of]what appears to be a fox made entirely of latex[or]a latex fox[stopping]. Humanoid in build, its distinctly reddish and white, rubbery skin glistens in the [if daytimer is day]day[else]dim[end if] light. Loudly squeaking and creaking as the creature approaches, he appears very eager to see you, his blatant arousal exposed against the open air.";
 
 to say latexfoxvictory:
+	project Figure of LatexFox_hard_icon;
 	if HP of Player > 0:
 		say "     Choosing to surrender to the monster, he immediately pounces";
 	else:
@@ -46,6 +48,7 @@ to say latexfoxvictory:
 		CreatureSexAftermath "Player" receives "OralCock" from "Latex Fox";
 
 to say latexfoxdefeat:
+	project Figure of LatexFox_hard_icon;
 	if (Libido of Player > 30 or "Dominant" is listed in feats of Player) and (player is female or (player is male and anallevel > 1)):
 		say "     Having subdued to the fox, perhaps you should use him to sate your need?";
 		if Player consents:

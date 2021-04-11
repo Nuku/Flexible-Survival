@@ -626,7 +626,7 @@ instead of going up from Grey Abbey Library while ((LastTehuantlCarlScene - turn
 	now LastTehuantlCarlScene is turns;
 
 instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - turns > 6 and (Tehuantl is in Grey Abbey 2F and TehuantlKorvinRelationship is 0 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (gsd_pet >= 60 and gshep is tamed)):
-	move player to Grey Abbey 2F;
+	move player to Grey Abbey 2F; [TODO: Rebuild this scene to match the more complex relationships with Korvin]
 	if debugactive is 1:
 		say "     DEBUG: TEHUANTL/Korvin TALK WALKIN; Libido of TEHUANTL: [Libido of Tehuantl][line break]";
 	if Libido of Tehuantl is 0: [first time]

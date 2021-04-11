@@ -106,8 +106,26 @@ Spider's Web	"Spider's Web"	"Spider's Web"	"Warehouse District"
 Wolfman Lair	"Wolfman Lair"	"Wolfman Lair"	"Warehouse District"
 Zoo Entrance	"Zoo Entrance"	"Zoo Entrance"	"Zoo"
 Gator Den	"Gator Den"	"Gator Den"	"Zoo"
-Tiger Den	"Tiger Den"	"Tiger Den"	"Zoo"
+TDen_Entrance	"Tiger Den"	"TDen_Entrance"	"Zoo"
 [ Note: The city areas and locations above are sorted alphabetically. Please put new rooms in the right spots as you add them ]
+
+to AddNavPoint (RoomObj - room):
+	AddNavPoint RoomObj silence state is 0;
+
+to AddNavPoint (RoomObj - room) silently:
+	AddNavPoint RoomObj silence state is 1;
+
+to AddNavPoint (RoomObj - room) silence state is (Silence - a number):
+	if RoomObj is not fasttravel: [programming error, to be reported]
+		say "DEBUG: Trying to add [RoomObj] as a nav point, but it is not a fasttravel point. Please report this message on the FS Discord!";
+	else: [the room is at least a valid nav point]
+		if RoomObj is known:
+			if debug is at level 10:
+				say "DEBUG: Trying to add [RoomObj] as a nav point, but the player knows it already.";
+		else: [player doesn't know the room]
+			now RoomObj is known;
+			if Silence is 0:
+				say "[bold type]['][printed name of RoomObj]['][roman type] has been added to your list of available navpoints. You will now be able to [bold type]nav[roman type]igate there from any of the fasttravel locations in the city by using the command [bold type]nav [printed name of RoomObj][roman type].";
 
 destinationcheck is an action applying to nothing.
 

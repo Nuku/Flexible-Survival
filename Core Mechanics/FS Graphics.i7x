@@ -92,6 +92,8 @@ Figure of Herm_Hyena_clothed_icon is the file "Hyena_clothed.jpg".
 Figure of Herm_Hyena_naked_icon is the file "Hyena_naked.jpg".
 Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
 Figure of HornyDoctor_M_icon is the file "HornyDoctor_M_ig.jpg".
+Figure of Horsemazon_clothed_icon is the file "Horsemazon_clothed.jpg".
+Figure of Horsemazon_naked_icon is the file "Horsemazon_naked.jpg".
 Figure of Horseman_clothed_icon is the file "Horseman_clothed.jpg".
 Figure of Horseman_hard_icon is the file "Horseman_hard.jpg".
 Figure of Horseman_soft_icon is the file "Horseman_soft.jpg".
@@ -114,6 +116,8 @@ Figure of LatexErmineIndigo_icon is the file "FSTF_LatexErmineIndigo_ig.jpg".
 Figure of LatexErminePink_icon is the file "FSTF_LatexErminePink_ig.jpg".
 Figure of LatexErmineRed_icon is the file "FSTF_LatexErmineRed_ig.jpg".
 Figure of LatexErmineTeal_icon is the file "FSTF_LatexErmineTeal_ig.jpg".
+Figure of LatexFox_hard_icon is the file "LatexFox_hard.jpg".
+Figure of LatexFox_soft_icon is the file "LatexFox_soft.jpg".
 Figure of LatexVixen_icon is the file "FS_LatexVixen.jpg".
 Figure of Leopardman_hard_icon is the file "Leopardman_hard.jpg".
 Figure of Leopardman_soft_icon is the file "Leopardman_soft.jpg".
@@ -302,7 +306,8 @@ Figure of Doran_face_icon is the file "Doran_face.jpg".
 Figure of DrMatt_face_icon is the file "Dr.Matt_face.jpg".
 Figure of DrMoffatt1_icon is the file "drmoffatt_ig1.jpg".
 Figure of DrMoffatt2_icon is the file "drmoffatt_ig2.jpg".
-Figure of DrMouse_icon is the file "drmouse_ig.jpg".
+Figure of DrMouse_clothed_icon is the file "Dr.Mouse_clothed.jpg".
+Figure of DrMouse_naked_icon is the file "Dr.Mouse_naked.jpg".
 Figure of Elijah_evil_icon is the file "Elijah_evil.jpg".
 Figure of Elijah_evil_naked_icon is the file "Elijah_evil_naked.jpg".
 Figure of Elijah_evil_face_icon is the file "Elijah_evil_face.jpg".
@@ -791,7 +796,6 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Blanche2"	Figure of Blanche2_icon	"Xenotropos"	g-white	"normal"
 "Blot"	Figure of Blot_icon	"Anymouse1968"	g-white	"normal"
 "Blue Gel"	Figure of BlueGel_icon	"Rastear"	g-black	"normal"
-"Latex Bobcat"	Figure of Bobcat1_icon	"Uniformvixen"	g-white	"normal"
 "Boghrim_clothed"	Figure of Boghrim_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Boghrim_naked"	Figure of Boghrim_naked_icon	"Kupo Klein"	g-white	"normal"
 "Boghrim_face"	Figure of Boghrim_face_icon	"Kupo Klein"	g-black	"normal"
@@ -874,7 +878,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "DrMatt_face"	Figure of DrMatt_face_icon	"SineAlas"	g-white	"normal"
 "DrMoffatt1"	Figure of DrMoffatt1_icon	"The_Negative"	g-black	"normal"
 "DrMoffatt2"	Figure of DrMoffatt2_icon	"MadTurtle"	g-white	"normal"
-"DrMouse"	Figure of DrMouse_icon	"JaxxBlackFox"	g-white	"normal"
+"DrMouse_clothed"	Figure of DrMouse_clothed_icon	"SteppeCrow"	g-white	"normal"
+"DrMouse_naked"	Figure of DrMouse_naked_icon	"SteppeCrow"	g-white	"normal"
 "Ebonflame Drake"	Figure of Ebonflame_Drake_icon	"Anonymous"	g-white	"normal"
 "Elijah_evil"	Figure of Elijah_evil_icon	"Banni"	g-black	"normal"
 "Elijah_evil_naked"	Figure of Elijah_evil_naked_icon	"Banni"	g-black	"normal"
@@ -951,7 +956,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Homo Sapiens"	Figure of HomoSapiens_icon	"Astro"	g-black	"normal"
 "Honey"	Figure of Honey_icon	"SandySchreiber"	g-white	"normal"
 "Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-white	"normal"	[only shown for males]
+"Horsemazon_clothed"	Figure of Horsemazon_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Horseman clothed"	Figure of Horseman_clothed_icon	"Vashaa"	g-white	"normal"
+"Horsemazon_naked"	Figure of Horsemazon_naked_icon	"SteppeCrow"	g-white	"normal"
 "Horseman hard"	Figure of Horseman_hard_icon	"Vashaa"	g-white	"normal"
 "Horseman soft"	Figure of Horseman_soft_icon	"Vashaa"	g-white	"normal"
 "Human Survivor"	Figure of Brennan_clothed_icon	"SineAlas"	g-black	"normal"
@@ -1001,6 +1008,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Krampus_hard"	Figure of Krampus_hard_icon	"Lytta"	g-black	"normal"
 "Krampus_soft"	Figure of Krampus_soft_icon	"Lytta"	g-black	"normal"
 "Lamia"	Figure of Lamia_icon	"Anymouse1968"	g-white	"normal"
+"Latex Bobcat"	Figure of Bobcat1_icon	"Uniformvixen"	g-white	"normal"
 "Latex Ermine_Defeat"	Figure of LatexErmine_icon	"Anymouse1968"	g-white	"normal"	[only used in defeat]
 "Latex Ermine_Blue"	Figure of LatexErmineBlue_icon	"Anymouse1968"	g-white	"normal"
 "Latex Ermine_Green"	Figure of LatexErmineGreen_icon	"Anymouse1968"	g-white	"normal"
@@ -1008,6 +1016,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Latex Ermine_Pink"	Figure of LatexErminePink_icon	"Anymouse1968"	g-white	"normal"
 "Latex Ermine_Red"	Figure of LatexErmineRed_icon	"Anymouse1968"	g-white	"normal"
 "Latex Ermine_Teal"	Figure of LatexErmineTeal_icon	"Anymouse1968"	g-white	"normal"
+"Latex Fox_hard"	Figure of LatexFox_hard_icon	"SteppeCrow"	g-black	"normal"
+"Latex Fox_soft"	Figure of LatexFox_soft_icon	"SteppeCrow"	g-black	"normal"
 "LeonardViolin"	Figure of LeonardViolin_icon	"SandySchreiber"	g-white	"normal"
 "Leopardman hard"	Figure of Leopardman_hard_icon	"Vashaa"	g-white	"normal"
 "Leopardman soft"	Figure of Leopardman_soft_icon	"Vashaa"	g-white	"normal"
@@ -1393,6 +1403,7 @@ carry out artistcredits:
 	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Homo Sapiens by Astro @ y-gallery.net[line break]";
 	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
+	say "     Horsemazon by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Horseman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Hulking Cheerleader by Seija @ ?[line break]";
 	say "     Husky Alpha by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
@@ -1404,6 +1415,7 @@ carry out artistcredits:
 	say "     Lamia by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Latex Ermine (color variants) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Latex Ermine (creature loss) by Halcy0n @ furaffinity.net[line break]";
+	say "     Latex Fox by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Leopardman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Magic Drake by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Mammoth by Boo3 @ furaffinity.net[line break]";
@@ -1509,7 +1521,7 @@ carry out artistcredits:
 	say "     Dr. Matt by The_Negative @ furaffinity.net[line break]";
 	say "     Dr. Moffatt (color) by The_Negative @ furaffinity.net[line break]";
 	say "     Dr. Moffatt (bw) by MadTurtle @ furaffinity.net[line break]";
-	say "     Dr. Mouse by JaxxBlackFox @ furaffinity.net[line break]";
+	say "     Dr. Mouse by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Doran by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Elijah by Banni @ https://www.furaffinity.net/user/banniart/[line break]";
 	say "     Eric (depressed) Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";

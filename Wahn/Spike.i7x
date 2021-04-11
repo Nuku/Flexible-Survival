@@ -142,7 +142,119 @@ a postimport rule:
 
 Section 1 - Introduction
 
-instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Library and Libido of Alexandra > 2 and HP of Spike is 0):
+instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Library and "Missing Puppy" is not listed in Traits of Alexandra and Libido of Alexandra > 2 and HP of Spike is 0):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: Missing puppy[line break]";
+	if HP of Alexandra < 3 or HP of Alexandra is 4: [bad Alexandra, never been pregnant or post-pregnancy]
+		project the figure of Alexandra_clothed_icon;
+	else if HP of Alexandra is 3 or HP of Alexandra is 5: [bad Alexandra, pregnant]
+		if lust of Alexandra < 13: [slightly pregnant]
+			project the figure of Alexandra_clothed_preg_icon;
+	else:
+		project the figure of Alexandra_face_icon;
+	say "     As you arrive at the library, you find Alexandra leaned against the edge of the front desk, pushing herself to a stand immediately as she hears the door open. The ex-cop seems tense and actually worried, but clearly not about yourself, as she slumps back once she realizes it is you. She puts her guard back up a second later, showing the typical bad-bitch expression, but you can't miss the fact that she's focused on the front door and appears to be waiting for someone. ";
+	if MaxHP of Spike is 2: [Fang is the dad for Spike]
+		say "Curiosity starts to build further in your mind as you catch sight of Fang sitting fairly close to the doberwoman, and similarly attentive to anyone entering. The wolf looks back and forth between you and Alexandra, then settles down again. ";
+	else if MaxHP of Spike is 3 and gshep is not listed in companionList of Player: [Korvin is the dad for Spike, not accompanying the player]
+		say "Curiosity starts to build further in your mind as you catch sight of Korvin standing nearby too, being similarly attentive to anyone entering. The German shepherd is pacing slowly, his gaze fairly focused on the door, nodding hello to you but then looking back past you at who might come in next. ";
+	else if MaxHP of Spike is 4 : [Carl is the dad for Spike]
+		say "Curiosity starts to build further in your mind as you catch sight of Carl standing nearby too, being similarly attentive to anyone entering. The husky soldier did stand ready for action when the door opened, but now makes himself relax again, coming down into a 'standing guard' posture, glancing at Alexandra for a moment when he does so. ";
+	else if MaxHP of Spike is 5 and demon brute is not listed in companionList of Player and DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [Brutus is the dad for Spike, Brutus not out and is cleansed]
+		say "Curiosity starts to build further in your mind as you catch sight of Brutus standing nearby too, being similarly attentive to anyone entering. The demon brute is a towering figure of wound-up anger, glaring intensely at the door. When he sees it is 'just' you coming in, a snarl crosses the face of the light-purple brute and he punches the side of the stairway, leaving a fist-sized dent in it. Bleeding some of his tension off that way, he then glances at Alexandra for a moment before going back to watch the door.";
+	else:
+		say "Curiosity starts to build further in your mind as you catch sight of Alexandra's children peeking over the edge of the desk, then ducking out of sight again.";
+	say "Stepping up to Alexandra, you ask her what's up. 'It's [if MaxHP of Spike is 1]our [else]my [end if]son! We had a fight yesterday! He came to me with some stupid ideas about 'being his own man' and so on! Then earlier today, I found this!' She angrily snatches a piece of paper up from the desk behind her, crumpling it together as she waves her paw-hand. 'That stupid boy, he's run off! Already went looking for him, [if MaxHP of Spike is 2]so did Fang, [else if MaxHP of Spike is 3]so did Korvin, [else if MaxHP of Spike is 4]so did Carl, [else if MaxHP of Spike is 5]so did Brutus, [end if]but there's been no sign of my missing pup! He's the oldest, and I thought he'd be more mature, but he's acting like a stupid kid! I was hoping he might just come back when he'd had time to blow off some steam.' She bares her teeth and barks in frustration and worry, then tears the note to shreds. 'He should have stayed here, where I can watch out for him!'";
+	LineBreak;
+	say "     [bold type]How do you react?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Hug her and say that things will be okay.";
+	say "     [link](2)[as]2[end link] - Immediately go outside and search for the boy.";
+	say "     [link](3)[as]3[end link] - Keep Alexandra [if MaxHp of Spike > 1 and MaxHp of Spike < 5]and her son's father [end if]company as all of you wait together.";
+	say "     [link](4)[as]4[end link] - Try to console her by saying that the son of a tough bitch like her should have no problems in this neighborhood.";
+	say "     [link](5)[as]5[end link] - Shrug and say that she can always have another kid.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 5:
+		say "Choice? (1-5)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to hug her, [link]2[end link] to search for the dobie, [link]3[end link] to join in for the waiting, [link]4[end link] to try to console her or [link]5[end link] to shrug and suggest having a 'replacement'.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Knowing that you couldn't say anything to take away her worry, you walk up to Alexandra and pull her into a comforting embrace, just holding her in quiet support. ";
+		if MaxHP of Spike is 2: [Fang is the dad for Spike]
+			say "Looking to the side, you wave Fang closer and scritch his neck-fur as the wolf trots up to you. ";
+		else if MaxHP of Spike is 3 and gshep is not listed in companionList of Player: [Korvin is the dad for Spike, not accompanying the player]
+			say "Looking to the side, you wave Korvin closer and lay an arm around him too, keeping the German shepherd close. ";
+		else if MaxHP of Spike is 4 : [Carl is the dad for Spike]
+			say "Looking to the side, you wave Carl closer and lay an arm around him too, giving his shoulder a squeeze. He accepts your touch, but still keeps his gaze focused on the door, keeping up the guard. ";
+		else if MaxHP of Spike is 5 and demon brute is not listed in companionList of Player and DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [Brutus is the dad for Spike, Brutus not out and is cleansed]
+			say "Looking to the side, you wave Brutus closer and take his hand in yours, giving it a comforting squeeze that makes him relax from digging his sharp claws into the palm of his hand, where they were drawing a slow trickle of blood before. ";
+		say "You hold onto each other for a long while, waiting for the return of the lost pup. With minute after minute stretching endlessly, everyone's worry builds despite everything you can do, until Alexandra eventually leans hear head against you and says, 'What if he doesn't come back?' As she does so, a frightened whine can be heard from behind the desk, and turning half around, you see several pairs of small-ish, pointy doberman ears peek up there, as the owners didn't duck far enough to be fully out of sight. Alexandra sighs and goes to take care of her remaining children.";
+		TraitGain "Missing Pup_affectionate reaction" for Alexandra;
+	else if calcnumber is 2:
+		LineBreak;
+		say "     Asking Alexandra to tell you what to look for, you get a description of a slender and lanky young dobie, then step outside and do your own search of the area for [if MaxHP of Spike is 1]your[else]her[end if] son. After a long while of searching, you actually spot a canine ducking into an alley some distance ahead of you and run to catch up. Searching the nooks and crannies of that blind alley, you find them hiding behind a dumpster - only to see that it's a scrawny female dobie, who doesn't want anything to do with you. Frustrated, you leave the homeless dog to scramble away and continue the hunt for Alexandra's son. Yet even as you extend your search radius for another and another block range, there is no sign of him, so you return empty handed a few hours later.";
+		TraitGain "Missing Pup_search reaction" for Alexandra;
+		follow the turnpass rule;
+	else if calcnumber is 3:
+		LineBreak;
+		say "     Knowing that you couldn't say anything to take away her worry, you walk up to Alexandra and sit on the edge of the desk with her, one arm loosely around her shoulders to lend support. ";
+		if MaxHP of Spike is 2: [Fang is the dad for Spike]
+			say "Looking to the side, you wave Fang closer and place your hand on his head. ";
+		else if MaxHP of Spike is 3 and gshep is not listed in companionList of Player: [Korvin is the dad for Spike, not accompanying the player]
+			say "Looking to the side, you wave Korvin closer and pat the desk beside you, then lay an arm around him too as he sits down, keeping the German shepherd close. ";
+		else if MaxHP of Spike is 4 : [Carl is the dad for Spike]
+			say "Looking to the side, you wave Carl closer and pat the desk beside you, then lay an arm around him too, giving his shoulder a squeeze. He accepts your touch, but still keeps his gaze focused on the door, keeping up the guard. ";
+		else if MaxHP of Spike is 5 and demon brute is not listed in companionList of Player and DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [Brutus is the dad for Spike, Brutus not out and is cleansed]
+			say "Looking to the side, you wave Brutus closer and take his hand in yours, giving it a comforting squeeze that makes him relax from digging his sharp claws into the palm of his hand, where they were drawing a slow trickle of blood before. ";
+		say "Together, you hold a silent watch, waiting for the return of the lost pup. With minute after minute stretching endlessly, everyone's worry builds despite everything you can do, until Alexandra eventually leans hear head against you and says, 'What if he doesn't come back?' As she does so, a frightened whine can be heard from behind the desk, and turning half around, you see several pairs of small-ish, pointy doberman ears peek up there, as the owners didn't duck far enough to be fully out of sight. Alexandra sighs and goes to take care of her remaining children.";
+		TraitGain "Missing Pup_affectionate reaction" for Alexandra;
+	else if calcnumber is 4:
+		LineBreak;
+		say "     Clearing your throat and saying in a consoling tone that any child of a tough as nails bitch like her ";
+		if MaxHP of Spike is 2: [Fang is the dad for Spike]
+			say "and a wild, powerful wolf ";
+		else if MaxHP of Spike is 3 and gshep is not listed in companionList of Player: [Korvin is the dad for Spike, not accompanying the player]
+			say "and a badass street dog ";
+		else if MaxHP of Spike is 4 : [Carl is the dad for Spike]
+			say "and a trained soldier ";
+		else if MaxHP of Spike is 5 and demon brute is not listed in companionList of Player and DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [Brutus is the dad for Spike, Brutus not out and is cleansed]
+			say "and the demonic powerhouse that Brutus is ";
+		say "should have no problem outside in the vicinity of the library, you see Alexandra pull a grimace, then say, 'Maybe. If he stays close and doesn't wander into the path of something really nasty, like a wyvern, or...' She stops herself from painting more dark pictures in her mind, shouting in frustration, 'He should just have stayed here! My stupid, little boy!' and making fists with both hands, hitting the front of the desk. As she does so, a frightened whine can be heard from behind it, where you see several pairs of small-ish, pointy doberman ears peek up, as the owners didn't duck far enough to be fully out of sight. Alexandra sighs and goes to take care of her remaining children hiding there.";
+		TraitGain "Missing Pup_tough reaction" for Alexandra;
+	else if calcnumber is 5:
+		LineBreak;
+		say "     The words have barely left your mouth before Alexandra bares her teeth, with a furious growl building in her throat. [if Libido of Alexandra > 5]Even though she has numerous children, saying this about her firstborn seems to have been a bad idea. [end if]The fingers of her paw-hands curl as she almost seems ready to tear you limb from limb, only to stop herself as a frightened whine can be heard from behind the front desk. Glancing aside, you see several pairs of small-ish, pointy doberman ears peek up behind it, as the owners didn't duck far enough to be fully out of sight. 'Sometimes, you really are a FUCKING BASTARD!' Alexandra barks at you loud enough to echo throughout the whole interior of the library, then she makes herself turn away from you and goes to take care of her remaining children hiding behind the front desk.";
+		TraitGain "Missing Pup_bastard reaction" for Alexandra;
+	TraitGain "Missing Puppy" for Alexandra;
+	decrease Libido of Alexandra by 1; [one less teen following Alexandra around]
+	now LastFuck of Spike is turns; [using this to track the turn in which the player learns of his absence - but yeah, he got himself laid out there too :P ]
+	if MaxHP of Spike is:
+		-- 1:
+			decrease AlexandraPlayerPups by 1; [player Spike]
+		-- 2:
+			decrease AlexandraFangPups by 1; [Fang Spike]
+		-- 3:
+			decrease AlexandraKorvinPups by 1; [Korvin Spike]
+		-- 4:
+			decrease AlexandraCarlPups by 1; [Carl Spike]
+		-- 5:
+			decrease AlexandraBrutusPups by 1; [Brutus Spike]
+		-- 6:
+			decrease AlexandraKarelPups by 1; [Karel Spike]
+		-- 7:
+			decrease AlexandraIsaacPups by 1; [Isaac Spike]
+		-- 8:
+			decrease AlexandraFarmhandPups by 1; [Random Farmhand Horseman]
+		-- 9:
+			decrease AlexandraNelsonPups by 1; [Nelson]
+	add "FatherCount_Correct" to Traits of Spike; [check for imports]
+
+instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Library and "Missing Puppy" is listed in Traits of Alexandra and HP of Spike is 0 and LastFuck of Spike - turns > 24):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	now Spike is in Grey Abbey Library;
@@ -151,48 +263,64 @@ instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Libra
 		say "     DEBUG: Meeting Spike[line break]";
 	project the figure of Spike_face_icon;
 	say "     Arriving back at the library, you are greeted by the sight of a male anthro doberman, leaning against the building's exterior wall close to the front entrance. He is casually smoking a cigarette, blowing out smoke as he watches you come closer. The doberman is a young adult, eighteen or nineteen from the looks of it, not that it means much anymore these days. He is dressed in a pair of ripped jeans, a white mesh shirt showing off his toned chest, as well as a tight-fitting collar around his neck, studded with spikes. With half of his head hair shaved off and the other half dyed neon-green, he certainly has a memorable look. 'Hey there, I'm Spike,' the canine says to you in a firm tone, clearly taking care not to sound too eager. 'With you being the boss around here, I got a proposition,' he adds and takes a pull from his cigarette, blowing a puff of smoke into the air after a short moment.";
-	say "     'I've had enough of being just one of the pack, and I was thinking that you need a right-hand man. I'm plenty tough and wanna see some action out there in the city, not just a few blocks around the lair. Come on, if you agree, the queen bitch in the library can't tell me off no more.' His last comment, combined with the young man's physical appearance finally makes something click in your mind, and you realize with a start who and what he is. You are talking with one of Alexandra's offspring, who clearly had a bit of a growth spurt recently, turning into this young man. From the looks of it, he's inherited a lot of the 'bad dog' attitude of his mother, and has decided to make a name for himself in a typical 'young tough guy' fashion - by becoming a hanger-on for the biggest, baddest person he knows: You. After all, you did make Alexandra your bitch.";
+	say "     'I've had enough of being just one of the pack, and I was thinking that you need a right-hand man. I'm plenty tough and wanna see some action out there in the city, not just a few blocks around the lair. Come on, if you agree, the queen bitch in the library can't tell me off no more.' His last comment, combined with the young man's physical appearance finally makes something click in your mind, and you realize with a start who and what he is. You are talking with Alexandra's missing puppy, who clearly had a bit of a growth spurt since running off recently, turning into this young man. From the looks of it, he's inherited a lot of the 'bad dog' attitude of his mother, and has decided to make a name for himself in a typical 'young tough guy' fashion - by becoming a hanger-on for the biggest, baddest person he knows: You. After all, you did make Alexandra your bitch.";
 	WaitLineBreak;
 	project the Figure of Spike_clothed_icon;
 	say "     With this new realization in mind, you take another look at Spike: this young canine looks about 18 years old and clearly has been working out a bit, giving him a toned but not too bulky physique that should serve him well in a fight. He shows a stoic and tough expression that you think must have been practiced and perfected in front of a mirror, yet he can't quite hide the excitement betrayed by his slowly wagging tail. When he realizes what you are looking at, Spike concentrates to stop the movement behind his back. The tension in his whole being is palpable, with the young dog waiting for you to reply to his offer.";
 	LineBreak;
 	say "     [bold type]What do you tell Spike as your answer?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Take him on as your companion. He'll learn a lot.";
-	say "     [link](2)[as]2[end link] - Tell him to be a good doggie and go back to Alexandra.";
-	say "     [link](3)[as]3[end link] - If he's so tough, he can just set out alone. (Send him away)[line break]";
+	say "     [link](2)[as]2[end link] - Hug him and say that you and Alexandra were worried about him.";
+	say "     [link](3)[as]3[end link] - Tell him to be a good doggie and go back to Alexandra.";
+	say "     [link](4)[as]4[end link] - Say that you'll need to see some more of him to decide. (Make him strip)[line break]";
+	say "     [link](5)[as]5[end link] - If he's so tough, he can just set out alone. (Send him away)[line break]";
 	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+	while calcnumber < 1 or calcnumber > 5:
+		say "Choice? (1-5)>[run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
 			break;
 		else:
-			say "Invalid choice. Type [link]1[end link] to accept him, [link]2[end link] to send him back to Alexandra or [link]3[end link] to send him away.";
+			say "Invalid choice. Type [link]1[end link] to accept him, [link]2[end link] to hug him, [link]3[end link] to send him back to Alexandra, [link]4[end link] to make him strip down or [link]5[end link] to send him away.";
 	if calcnumber is 1:
 		LineBreak;
-		say "[SpikeAccepted]";
-		decrease Libido of Alexandra by 1; [one less teen following Alexandra around]
-		if MaxHP of Spike is:
-			-- 1:
-				decrease AlexandraPlayerPups by 1; [player Spike]
-			-- 2:
-				decrease AlexandraFangPups by 1; [Fang Spike]
-			-- 3:
-				decrease AlexandraKorvinPups by 1; [Korvin Spike]
-			-- 4:
-				decrease AlexandraCarlPups by 1; [Carl Spike]
-			-- 5:
-				decrease AlexandraBrutusPups by 1; [Brutus Spike]
-			-- 6:
-				decrease AlexandraKarelPups by 1; [Karel Spike]
-			-- 7:
-				decrease AlexandraIsaacPups by 1; [Isaac Spike]
-			-- 8:
-				decrease AlexandraFarmhandPups by 1; [Random Farmhand Horseman]
-			-- 9:
-				decrease AlexandraNelsonPups by 1; [Nelson]
-		add "FatherCount_Correct" to Traits of Spike; [check for imports]
-	else if calcnumber is 2: [send him back to Alexandra]
+		say "     [SpikeAccepted]";
+	else if calcnumber is 2: [hug him]
+		say "     Stepping up to Spike, you wrap your arms around him and give the young doberman a hug, then say that Alexandra [if MaxHP of Spike is 1]and yourself[else], his father and yourself[end if] were worried about where he got off to. As you do so, the anthro stiffens his back, clearly uncomfortable at the sudden closeness, and quickly ducks out of the embrace, stepping to the side. 'Hey! Don't! Don't do that! I'm a real man and don't need to be babied!' For a second, a sulky tone creeps into his voice, before he shakes that off and does his best to sound mature. 'I've been doing great out in the city! I don't just wanna go back to obey my bitch of a mom! Come on! You know that I can be very useful for you. I could keep your back protected when you fight a group of people, or be a lookout, and I have a [italic type]really[roman type] good nose too. I could sniff it out if someone wants to hide themselves or some nice stuff from you. Or all sorts of other things. You'd regret not having me along!' He's really putting everything he has into this plea, trying to show his toughness, but at the same time a bit of the typical 'puppy dog eyes' appear in his expression too.";
+		say "     [bold type]How do you react to this?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Accept him as your companion. He doesn't have to go back to Alexandra.";
+		say "     ([link]N[as]n[end link]) - Nope. This dog is gonna go straight back to mommy.";
+		if Player consents:
+			LineBreak;
+			say "     [SpikeAccepted]";
+		else:
+			LineBreak;
+			say "     Telling the young man that no, you [italic type]actually[roman type] just want him to go back to his mother and help her keep on top of the unruly bunch of his siblings, Spike growls under his breath. Flinging the cigarette away with an angry flick of his wrist, the anthro canine grumbles, 'This is fucking stupid,' and looks to the ground sulkily. For a moment, it seems like he'll just reject your decision, but then he suddenly looks up at you and barks out, 'I thought that you'd be different. Like [if MaxHP of Spike is 1]a proper dad [else]a real leader[end if] or something!' And with that, he turns his back to you, shuffling off to get back into the library.";
+			increase Libido of Alexandra by 1; [one more teen following Alexandra around]
+			if MaxHP of Spike is:
+				-- 1:
+					increase AlexandraPlayerPups by 1; [player Spike]
+				-- 2:
+					increase AlexandraFangPups by 1; [Fang Spike]
+				-- 3:
+					increase AlexandraKorvinPups by 1; [Korvin Spike]
+				-- 4:
+					increase AlexandraCarlPups by 1; [Carl Spike]
+				-- 5:
+					increase AlexandraBrutusPups by 1; [Brutus Spike]
+				-- 6:
+					increase AlexandraKarelPups by 1; [Karel Spike]
+				-- 7:
+					increase AlexandraIsaacPups by 1; [Isaac Spike]
+				-- 8:
+					increase AlexandraFarmhandPups by 1; [Random Farmhand Horseman]
+				-- 9:
+					increase AlexandraNelsonPups by 1; [Nelson]
+			TraitGain "Spike_returned" for Alexandra;
+			now HP of Spike is 100;
+			now Spike is nowhere;
+	else if calcnumber is 3: [send him back to Alexandra]
 		LineBreak;
 		say "     As you tell the young dog that he should go back to his mother, Spike's expression just gets more determined and he pushes himself off from the wall to step closer and persuade you. 'Come on! You know that I can be very useful for you. I could keep your back protected when you fight a group of people, or be a lookout, and I have a [italic type]really[roman type] good nose too. I could sniff it out if someone wants to hide themselves or some nice stuff from you. Or all sorts of other things. You'd regret not having me along!' He's really putting everything he has into this plea, trying to show his toughness, but at the same time a bit of the typical 'puppy dog eyes' creeps into his expression too.";
 		say "     [bold type]Will you change your mind?[roman type][line break]";
@@ -201,22 +329,234 @@ instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Libra
 		say "     ([link]N[as]n[end link]) - Nope. This dog is gonna go straight back to mommy.";
 		if Player consents:
 			LineBreak;
-			say "[SpikeAccepted]";
+			say "     [SpikeAccepted]";
 		else:
 			LineBreak;
-			say "     Telling the young man that no, you [italic type]actually[roman type] just want him to go back to his mother hand help her keep on top of the unruly bunch of his siblings, Spike growls under his breath. Flinging the cigarette away with an angry flick of his wrist, the anthro canine grumbles, 'This is fucking stupid,' and looks to the ground sulkily. For a moment, it seems like he'll just reject your decision, but then he suddenly looks up at you and barks out, 'I thought that you'd be different. Like a real leader or something!' And with that, he turns his back to you, shuffling off to get back into the library.";
+			say "     Telling the young man that no, you [italic type]actually[roman type] just want him to go back to his mother and help her keep on top of the unruly bunch of his siblings, Spike growls under his breath. Flinging the cigarette away with an angry flick of his wrist, the anthro canine grumbles, 'This is fucking stupid,' and looks to the ground sulkily. For a moment, it seems like he'll just reject your decision, but then he suddenly looks up at you and barks out, 'I thought that you'd be different. Like a real leader or something!' And with that, he turns his back to you, shuffling off to get back into the library.";
+			increase Libido of Alexandra by 1; [one more teen following Alexandra around]
+			if MaxHP of Spike is:
+				-- 1:
+					increase AlexandraPlayerPups by 1; [player Spike]
+				-- 2:
+					increase AlexandraFangPups by 1; [Fang Spike]
+				-- 3:
+					increase AlexandraKorvinPups by 1; [Korvin Spike]
+				-- 4:
+					increase AlexandraCarlPups by 1; [Carl Spike]
+				-- 5:
+					increase AlexandraBrutusPups by 1; [Brutus Spike]
+				-- 6:
+					increase AlexandraKarelPups by 1; [Karel Spike]
+				-- 7:
+					increase AlexandraIsaacPups by 1; [Isaac Spike]
+				-- 8:
+					increase AlexandraFarmhandPups by 1; [Random Farmhand Horseman]
+				-- 9:
+					increase AlexandraNelsonPups by 1; [Nelson]
 			now HP of Spike is 100;
+			now Spike is nowhere;
+	else if calcnumber is 4: [make him strip]
+		LineBreak;
+		project Figure of Spike_naked_soft_icon;
+		say "     Crossing your arms, you look Spike up and down and let out a noncommittal grunt, knowing that he'll not just give up this easily. Spike's expression indeed just gets more determined and he pushes himself off from the wall to step closer and persuade you. 'Come on! You know that I can be very useful for you. I could keep your back protected when you fight a group of people, or be a lookout, and I have a [italic type]really[roman type] good nose too. I could sniff it out if someone wants to hide themselves or some nice stuff from you. Or all sorts of other things!' This is where you jump in again, raising one eyebrow and telling him that you'd need to see more of him to decide on that. Like his muscles, and... everything else, you add with a casual wave at his body. Getting nervous about potentially losing his chance, the young man opens his mouth, then closes it and swallows before quickly barking out, 'I'll show you!'";
+		say "     A grin creeps over your face as you watch the dobie hastily pull his mesh shirt over his head and throwing it aside, then tries to impress you by flexing his abs, pecs and arms. You watch his posturing for a moment, then ask about his [']other['] muscles, with the young man seeming surprised as you mention thighs, calves and whatnot. Spike's fingers fly to the beltline, followed by popping the button of his jeans and wrenching them down, then kicking the pants off. His gloves quickly follow until the only thing he's still wearing his the collar around his neck. For a moment after turning to face you, the young man covers his crotch with both hands, before giving himself a push and pulling them away to reveal his sheath and balls. Looking at you anxiously, Spike does his best to flex and pose, showing that he does have some nice muscle tone on an overall fairly thin and wiry body.";
+		say "     You watch him for a moment, then make a spinning motion with your hand. Spike does as instructed, allowing your hungry gaze to take in all of his body, from the tips of his ears, over nicely perky buns down to the paws. As he finishes his rotation, the anthro almost trembles with tension and gives you a hopeful look. He seems really anxious to please you.";
+		say "     [bold type]What's your verdict now?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yeah, you think you can make room for someone like him being your companion. He's convinced you.";
+		say "     ([link]N[as]n[end link]) - Nope, looking at him, Spike just doesn't have what you need.";
+		if Player consents:
+			LineBreak;
+			say "     Nodding to the dobie that you've seen enough, you wait for him to dress again. [SpikeAccepted]";
+			TraitGain "Stripping Demanded" for Spike; [TODO: reference this in the rape scene]
+		else:
+			LineBreak;
+			say "     Standing naked before you, Spike visibly deflates, then flat out growls under his breath a second later, throwing you a hostile stare. 'This is fucking stupid!' he barks in frustration, snatching up the armful of his clothes and just running away, turning his back on you, the library and Alexandra.";
+			now HP of Spike is 99;
 			now Spike is nowhere;
 	else: [send him away - you monster!]
 		LineBreak;
 		say "     As you tell the young dog that he should go off on his own, he freezes in motion for a second, not sure what to reply. Clearly, this is one option that he hadn't even considered when he played through things in his mind. You see him swallow nervously, glancing to the library entrance for a second before he shakes his head to himself. 'Okay then, I'll do it,' Spike says, his firm tone sounding just a little bit brittle to your ears as he pushes himself off from the wall. 'I'm gonna go make my own way, out there. Alone in the city,' he adds, taking a few slow steps down the road as if waiting to hear you say that he passed the test and that you'll keep him now. But no, all you give him is a wish for good luck, which leaves Spike standing there for a moment longer, his back turned to you, before he runs away, not stopping for one second before he is out of sight.";
-		decrease Libido of Alexandra by 1; [one less teen following Alexandra around]
 		now HP of Spike is 99;
 		now Spike is nowhere;
 	now PlayerMet of Spike is true;
 
 to say SpikeAccepted:
-	say "     As you agree to take Spike along as your companion, his tail starts wagging up a storm and the young man says excitedly, 'Right on! We'll make this city ours! Let's have some fun!' With his hand lowering to rub the crotch of his jeans, you have little doubt what sort of 'fun' he expects to soon have. Taking another drag from his smoke, the anthro canine then flicks it aside and takes position by your side, steeling his expression to be properly tough and just a bit overbearing, as he expects the right-hand man of 'The Boss' would need to be.";
+	say "As you agree to take Spike along as your companion, his tail starts wagging up a storm and the young man says excitedly, 'Right on! We'll make this city ours! Let's have some fun!' With his hand lowering to rub the crotch of his jeans, you have little doubt what sort of 'fun' he expects to soon have. Taking another drag from his smoke, the anthro canine then flicks it aside and takes position by your side, steeling his expression to be properly tough and just a bit overbearing, as he expects the right-hand man of 'The Boss' would need to be. ";
+	if (number of bunkered people + number of booked people > 1): [anyone there besides just Spike?]
+		if (number of bunkered people + number of booked people > 2):
+			say "Seeing some of the other people in the library as you walk around with your new companion following, you decide it might be best to call everyone in the building together and explain what's going on between [if MaxHP of Spike is 1]your son [end if]Spike and you. [bold type]Within a few minutes, everyone is gathered and you lay things out, to the following reactions:[roman type][line break]";
+		else if (number of bunkered people + number of booked people is 2):
+			say "Seeing some movement of the other inhabitant of the library, you decide it might be best to explain what's going on between [if MaxHP of Spike is 1]your son [end if]Spike and you. Calling everyone together, you lay things out, to the following reactions:";
+		else:
+			say "The two of you talk a little more about what's going on around the library, then Spike goes upstairs to hang out in a corner he claimed as his own.";
+		LineBreak;
+		if Alexandra is booked or Alexandra is bunkered:
+			say "     Alexandra crosses her arms and looks Spike up and down, her gaze lingering on the collar around his neck before meeting his gaze. 'Think you're ready to play with the big boys now, eh? Well, I won't stop you - gotta learn to stand on your own feet, and make what mistakes you must.' Glancing at you, she ";
+			if MaxHP of Spike is 1: [player spike]
+				if "Cuckold" is listed in Feats of Player:
+					say "adds with a bit of a smirk, 'Went straight to daddy, eh? Who knows, you might be getting laid more often than you think, boy!' She doesn't lay out the fact that she's been cuckolding you any more clearly than that, but with the three of you knowing what she means, you feel the burn. A little seed of doubt sprouts in the back of your mind, as you can't help but wonder if you might end up submissive to your son too, or if he could show you up with future conquests by taking what is yours. Finally, Alexandra adds, 'You'll be able to learn a lot, pup. Just be sure to keep on the sidelines of any fight.' ";
+				else:
+					say "adds, 'Went straight to daddy, eh? Well, at least you picked someone strong who knows what's what and can dish it out. Hell, [SubjectPro of Player] took me down and knocked me up! You'll be able to learn a lot, pup. Watch the way that [SubjectPro of Player] fights, be aware of your surroundings. Just be sure to keep on the sidelines of any fight.' ";
+			else:
+				if "Cuckold" is listed in Feats of Player:
+					say "adds with a bit of a smirk, 'At least you picked someone strong as a boss, in regards to fighting. Who knows, you might be getting laid more often than you think, boy!' She doesn't lay out the fact that she's been cuckolding you any more clearly than that, but with three of you knowing what she means, you feel the burn. A little seed of doubt sprouts in the back of your mind, as you can't help but wonder if you might end up submissive to Alexandra's son too, or if he could show you up with future conquests by taking what is yours. Finally, Alexandra adds, 'You'll be able to learn a lot, pup. Just be sure to keep on the sidelines of any fight.' ";
+				else:
+					say "adds, 'At least you picked someone strong as a boss who knows what's what and can dish it out. Hell, [SubjectPro of Player] took me down! You'll be able to learn a lot, pup. Watch the way that [SubjectPro of Player] fights, be aware of your surroundings. Just be sure to keep on the sidelines of any fight.' ";
+			say "Scrunching up his muzzle at her still not treating him as his own man, Spike barks back, 'I'll show you! Just wait and see!' Alexandra just lets out a snort and a roll of her eyes, then walks away.";
+			WaitBreakReactions;
+		if Amy is booked or Amy is bunkered:
+			say "     Amy strolls right up to young doberman, standing very close and sniffing him, their noses almost touching. 'Hello there, I - I saw you in the library before, as a pup, but never knew if you wanted to talk, or play...' A lusty smirk crosses Spike's features and he replies, 'Oh, I wanna play with you alright! You're one really pretty little bitch! If you want, I can show you some tricks I learned out in the city...' He's halfway to taking the husky by the hand and leading her off, most likely wanting to introduce her back to his mattress as he tries out her holes, but then the dobie remembers that he's not alone and instead just pats her arm. Glancing over his shoulder to you, slightly embarrassed at letting his libido almost get away from him, he tells her, 'Maybe later, eh?' 'Awesome, I'll look forward to it!' Amy replies in [if Virgin of Amy is true]an innocent [else]a slightly flirtatious [end if]tone, then leaves with her tail wagging behind her back."; [TODO: add Alexandra interrupting if she interacted with Amy]
+			WaitBreakReactions;
+		if Brutus is booked or Brutus is bunkered:
+			if DBCaptureQuestVar is 5: [controlled]
+				[
+				if "Master's Bite" is listed in Traits of demon brute:
+					say "     <ask Luneth>";
+				else
+				]
+				if Resolution of Demonic Redemption is 7: [somewhat pacified]
+					say "     Brutus steps up, towering over Spike. He gives the dobie a stare, as if measuring his strength and worth. Then suddenly the demon reaches out to poke him in the chest with a clawed finger, making Spike bark 'Hey!' as he stumbles back. While the dobie is still rubbing his pec and looking down to see if it's bleeding, Brutus says, [if MaxHP of Spike is 5]'He looks weak! And this is my offspring?! Pathetic!' The words make Spike's hackles rise and he aggressively barks back, 'Well, I didn't choose an asshole purple monster as my father either, so I guess we'll both have to be fucking disappointed! No wonder mom kept me and the others from getting anywhere close to you! You're nothing but a brutish freak!' [else]'He looks weak! I am worth more than four of him!' The words make Spike's hackles rise and he aggressively barks back, 'Fuck you too, asshole! I'll show everyone!' [end if]Brutus simply snorts and walks away without even looking at the dobie.";
+				else: [standard hateful captive]
+					say "     Brutus steps up, towering over Spike. He gives the dobie a stare, as if measuring his strength and worth. Then suddenly the demon reaches out to poke him in the chest with a clawed finger, making Spike bark 'Hey!' as he stumbles back. While the dobie is still rubbing his pec and looking down to see if it is bleeding, Brutus grumbles, [if MaxHP of Spike is 5]'Weak! My seed, but still just rapebait! Pathetic!' The words make Spike's hackles rise and he aggressively barks back, 'You think that I'm weak?! Last time I checked [']dad['] you were the one who's nothing but a prison bitch for the boss! I'm not gonna be talked down to by someone who's nothing but a sperm donor for mom! Fuck you too - hell, I wouldn't care if you got reamed-out with a cactus, dadslut!' [else]'Weak! Let me have him instead master! Some nice rapebait to drain my balls in!' The words make Spike's hackles rise and he aggressively barks back, 'Fuck you too, asshole! I'll show everyone!' [end if]Brutus bares his teeth and seems ready to attack him, but you command him to stop and walk away.";
+			else if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [cleansed]
+				say "     Brutus steps up, absolutely towering over Spike, then lays a large, clawed hand on his shoulder and bares a smile filled with a worrying number of razor-sharp teeth. The dobie has to stop himself from shrinking back from that, at least until Brutus says, 'Welcome, little one. We will serve the [master] together.' Then the demon glances over to you, looking somewhat unsure of himself and if he did this right. His usually rather stony face twitches and trembles as he struggles to express emotion, but you do recognize something like [if MaxHP of Spike is 5]fatherly pride in the demon. As you nod, Brutus seems relieved and adds,  'This is new. Never met any child I fathered. They don't survive long, in hell, and don't return as the others do. You seemed similar, only to return now. But I feel anger, maybe worry, about you leaving.' Eyes widening, it takes a moment for Spike to gulp and find his words, 'Uhm, sorry? I - guess we'll learn together... dad?' [else]an attempt at being open and welcoming to the dobie. Finding his words, 'Spike replies, 'I guess I know whom the boss brings along for big fights and brute strength, eh?' [end if]He reaches out to pat the bulging pec of the much larger male, giving him a smile before Brutus walks away.";
+			WaitBreakReactions;
+		if Candy is booked or Candy is bunkered:
+			say "     'Hey babe - wanna have a good time?' Candy calls out in a teasing tone, shaking his hips and tail as he saunters up to Spike. As the candy coon trap starts to run a hand down the dobie's chest and soon hones in on his crotch, Spike puts on a broad smile. 'Getting out of here and spending some time in the city was the best thing I ever did, hah! People don't treat you like a kid once you show you can take care of yourself!' The comment makes Candy pause for a second, eyebrows rising a little, 'Oh yeah! Now I recognize you! You're one of our [']queen bitch's['] pups, all grown up into a strapping young man! Wanna show me some of those skills you learned out there?' the raccoon says in a teasing tone, then walks his fingers up Spike's chest again before feeling the spikes on the young doberman's collar, doing his best to look impressed. 'I'm sure we can find time for that later!' Spike replies, which results in Candy letting out a flirty giggle and then sauntering away.";
+			WaitBreakReactions;
+		if Pink Raccoon is booked or Pink Raccoon is bunkered: [mindless Candy]
+			say "     Your pink raccoon pet comes up to Spike, looking at him with lustful eyes and going right in to squeeze the dobie's bulge. The next thing after that is him dropping to all fours, ass raised high and presenting his asshole to the young man. Spike snorts and grins, then says, 'Getting out of here and spending some time in the city was the best thing I ever did, hah! Sluts just throw themselves at real men, haha! I like it!' You shoo away the mostly mindless pet you allowed Dr. Mouse to create, as not to tempt Spike too much.";
+			WaitBreakReactions;
+		if Carl is booked or Carl is bunkered:
+			if MaxHP of Spike is 4: [Carl Spike]
+				if HP of Carl is 30: [beta carl]
+					say "     Carl walks up to Spike and sniffs him, then smiles. 'Hey son, taking your proper place in the pack, eh? Welcome on board!' he says to the young doberman, his tail wagging behind his back. Spike accepts the greeting and smiles back, but then hesitates, not quite sure about what to do next. Seems like he hasn't had too much to do with Carl before, as Alexandra kept her children fairly close and away from others. 'So, uhm... wanna go for a run around the block sometime? Bet you're one hell of a fast runner, sure got the build for it!' Carl then says, holding out one paw-hand to his child and giving Spike a forearm shake as he takes it. Patting the slender dobie's shoulder, Carl then adds, 'Looking forward to it, son!' After that, he turns to leave, with Spike telling him, 'Thanks, dad! So do I!'";
+				else:
+					say "     Carl walks up to Spike and offers him a hand to shake. 'So, uhm... you grew up quick, son. That's definitively something to get used to, but I'm glad to have you on board!' he says to the young doberman, his tail wagging behind his back. Spike accepts the greeting and smiles back, but then hesitates, not quite sure about what to do next. Seems like he hasn't had too much to do with Carl before, as Alexandra kept her children fairly close and away from others. The soldier husky meanwhile isn't used to being the father of a young man either, that being something that people before the nanite apocalypse had years of getting the hang of. 'I - I think we should hang out, you and me. Hell, wish I'd had that idea quicker, before your whole childhood was over in a flash! So, what do you say, son?' That said, Carl holds out one paw-hand to his child, who wags his tail and replies, 'Yeah, I'd like that!' As Spike takes the husky's hand, he's drawn into manly hug, with Carl's free arm wrapped around his back and patting the dobie before they pull apart a moment later and Carl says goodbye for now.";
+			else:
+				if HP of Carl is 30: [beta carl]
+					say "     Carl walks up to Spike and sniffs him, then smiles. 'New pack member, eh? Welcome on board!' he says to the young doberman, his tail wagging behind his back. Spike accepts the greeting, then puts on a broad smile. 'Getting out of here and spending some time in the city was the best thing I ever did, hah! People don't treat you like a kid once you show you can take care of yourself!' he says to you, then turns back to Carl. 'Hope we can hang out sometime, eh?' The soldier husky gives your new companion a nod, then gets back to his post.";
+				else:
+					say "     Carl walks up to Spike and offers him a hand to shake. 'Glad to have you on board!' he says to the young doberman, his tail wagging behind his back. Spike accepts the greeting, then puts on a broad smile. 'Getting out of here and spending some time in the city was the best thing I ever did, hah! People don't treat you like a kid once you show you can take care of yourself!' he says to you, then turns back to Carl. 'Hope we can hang out sometime, eh?' The soldier husky gives your new companion a nod, then gets back to his post.";
+			WaitBreakReactions;
+		if Chris is booked or Chris is bunkered: [TODO: add special stuff if they're brothers]
+			if Libido of Chris is 0: [half-orc]
+				say "     Chris strolls right up to Spike, looking at the other young man and offering him a hand to shake. 'Hey there! Glad to see another dude to hang out with!' Accepting the greeting, Spike chats a little with the orc and it turns out they look pretty eye to eye. When it gets time to go a little while later, Chris pats Spike on the arm and says, 'Later, dude!' with the dobie's tail wagging as he watches him go. 'Glad everyone doesn't think me a kid anymore now!' he comments to you.";
+			else if Libido of Chris is 1: [orc breeder]
+				if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
+					say "     Chris strolls right up to Spike, looking at the other young man and offering him a hand to shake. 'Hey there! Glad to see another dude to hang out with!' Accepting the greeting, Spike chats a little with the orc, until the dobie eventually asks, 'Dude, are you checking me out? My eyes are up here, hah!' Chris bites his lip and nods, then adds, 'Been thinking of blowing you. Like, a lot!' This puts a grin on the doberman's face and Spike replies, 'Might just take you up on that sometime, hah!' Chris seems relieved at the acceptance and pats Spike on the arm, then says, 'Later, dude!' The dobie's tail wags as he watches him go. 'Glad everyone doesn't think me a kid anymore now! Once you show that you're a real man, the sluts just throw themselves at you!' he comments to you.";
+				else: [happy breeder]
+					say "     Chris strolls right up to Spike, looking at the other young man and offering him a hand to shake. 'Hey there! Glad to see another dude to hang out with!' Accepting the greeting, Spike chats a little with the orc, until the dobie eventually asks, 'Dude, are you checking me out? My eyes are up here, hah!' Having been caught with his gaze flicking down to Spike's crotch for a little too long, Chris blushes and nods, which puts a grin on the doberman's face. 'I don't mind, you seem like a cool dude. Might be down to let you blow me sometime too, eh?' Chris seems relieved at the acceptance and pats Spike on the arm, then says, 'Later, dude!' The dobie's tail wags as he watches him go. 'Glad everyone doesn't think me a kid anymore now!' he comments to you.";
+			else if Libido of Chris is 2: [orc warrior]
+				if "Bro" is listed in Traits of Chris or "Bro with Benefits" is listed in Traits of Chris or "Dad with Benefits" is listed in Traits of Chris:
+					say "     Chris strides up to Spike, coming fairly close before the two of them size each other up. The orc is clearly bigger and more muscular, which translates in him lording that over Spike a little bit. 'Sup?' Chris asks the dobie, and the two of them chat a little, but things just don't seem to click between them. When Chris eventually leaves, Spike comments, 'Thinks a bit much of himself, eh?'";
+				else: [dominant, rapy warrior Chris]
+					say "     Chris strides up to Spike, sizing the anthro up as he approaches. Then says in a voice full of cocky arrogance, 'Man, even with the fur and all that dog stuff, you kinda look like you were born to be a breeder. Wanna ride my dick to make that a reality?' Blustering at someone talking to him like that, Spike replies, 'Hey, what the-?! I'm a fighter, you know!' Chris simply snorts, slapping a large hand against the muscled pec on his chest. 'Yeah, right - haha! This is how a warrior looks like!' With that said, he walks off ignoring the annoyed Spike's further complaints.";
+			WaitBreakReactions;
+		if Colleen is booked or Colleen is bunkered:
+			if SarahSlut < 2: [not transformed, or only a little]
+				say "     Walking closer, Colleen stops several feet away from Spike and gives him a friendly nod. 'Hello there, young man. God, you grew up quickly!' The young doberman grins at her, his tail wagging as he demonstratively flexes his arm and chest - despite being fairly thin and wiry, he does have muscle tone to show off. 'Yeah, I'm more than just a puppy now!' he proudly says, then slides a hand down his front and cups his bulge, adding in his best macho tone, 'I can show you how much of a man I am too, if you're down.' The paratrooper's eyes widen, then she bursts out with a laugh and replies, 'I think I'm good for now, thank you. No, don't feel bad about it! I'm sure you'll find a lovely young lady sometime soon that you can impress with your... manliness.' As she gives him a wave and walks off, Spike looks after her with a bit of a sulky expression.";
+			else if ColleenAlpha is 0:
+				say "     Walking closer, Colleen gets right up close with Spike, whose eyes are immediately drawn to wander over her naked body, lingering hungrily at her breasts and sex. 'Hello Spike. God, you grew up quickly!' The young doberman grins at her, his tail wagging as he demonstratively flexes his arm and chest - despite being fairly thin and wiry, he does have muscle tone to show off. 'Yeah, I'm more than just a puppy now!' he proudly says, then slides a hand down his front and cups his bulge, adding in his best macho tone, 'I can show you how much of a man I am too, if you're down.' The former paratrooper's eyes widen and she crosses her legs, her thighs rubbing against each other sensually, at just the thought of being fucked. There is a possibility the bitch might just be ready to do it right here and now, so you clear your throat and interrupt, shooing Colleen away for now.";
+			[
+			else if ColleenAlpha > 0:
+				say "..."; [TODO: write this]
+			]
+			WaitBreakReactions;
+		if David is booked or David is bunkered:
+			say "     Coming right up and offering his hand in an open, friendly way, David welcomes Spike with the words, 'I'm Private David Jackson, but just call me David, will you?' The young doberman grins broadly and replies, 'Yeah, totally! And we can hang out now, too!' David nods and pats Spike's arm, then says, 'Good! It'd feel really odd for me to be formal with someone whom I've seen as a puppy, just... god, it's really not been long, has it? Still getting used to all this craziness.' The two young guys chat with each other some more and appear to be quite a good match personality wise. If you didn't know better, you might think they're the same age from physical development. Eventually, David says his goodbyes and gets back to what he was doing.";
+			WaitBreakReactions;
+		if Denise is booked or Denise is bunkered:
+			say "     With a flutter of her wings, Denise lands before Spike and gives him a smile. 'Hello there!' she greets him, and Spike's tail immediately starts wagging up a storm. 'Hey Denise,' he says eagerly, holding out a paw-hand to her. As she takes it and shakes, the young man quickly adds, 'I just wanted to say, I really love your voice. Heard you singing ever since I was a little pup, and... it's beautiful!' The gryphoness is more than happy to hear his praise, giving an overjoyed squeak from her beak as she places one hand on her chest. 'Oh thank you! I'll be sure to sing for you some more then!' The two of them talk for a little while before Denise gets back to a more lofty position.";
+			WaitBreakReactions;
+		if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
+			if HP of Elijah is 99: [evil]
+				say "     Studying Spike for a moment with a smirk on his face, Elijah asks, 'So, new boytoy? I can see why you take him along - easy access for a lay, am I right?' Spike barks in annoyance, 'Hey! I can fight!' Hackles raised, he looks ready to throw down with the dark angel, who suddenly spreads his large wings and gives a strong beat with them, creating a gush of wind that makes the dobie rock back momentarily. 'Keep it in your pants, puppyboy! I'm sure you'd like to whip it out and show how much of a man you are, but adults are talking!' Clearing your throat to interrupt Elijah's teasing, the fallen angel shrugs and wanders off, with Spike throwing him some dark glances as he goes.";
+			else: [good]
+				say "     Walking up to Spike, Elijah gives the dobie a friendly smile and spreads his arms invitingly as he says, 'How big you have gotten, and so quickly!' Spike hesitates for a second, giving you a quick side-glance but then just going for it, wrapping his arms around the angel's midriff and squeezing him. 'Hey uncle Elijah! I kinda missed you while I was out in the city. You always came to play with us when I was a puppy!' Holding the doberman close and stroking his back in a vaguely fatherly way, Elijah replies, 'Of course, little man. Children are god's most special creation, and should be given all the love in the world!' As he hears the last few words, Spike extracts himself from Elijah's grasp, in a friendly enough way, giving the angel a serious look. 'Just remember that I'm a man now, alright?!' There is a determined edge in his voice, but you can see his tail still wagging, as he isn't really cross with Elijah. 'Of course!' the angel replies, then soon makes his exit and gets back to what he was doing.";
+			WaitBreakReactions;
+		if Eric is booked or Eric is bunkered:
+			if HP of Eric > 0 and HP of Eric < 21:
+				say "     Walking up to Spike, Eric gives a friendly smile and shakes the dobie's paw-hand. 'Hi dude, wanna hang out sometime?' he asks, somewhat shy as he does so, with Spike patting him on the shoulder as he says, 'Totally, it'll be fun!' Looking at the two of them, they seem like a pair of normal young men of the same rough age on the surface - but of course, you know better, with Spike's life still being able to be counted in days, and Eric being not a male at all, down below. Still, the two of them seem to hit it off nicely, and you can see the start of a friendship develop by the time Eric eventually excuses himself and wanders off.";
+			else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]
+				say "     Walking up to Spike, Eric gives a friendly smile and shakes the dobie's paw-hand. 'Hi dude, wanna hang out sometime?' he asks confidently, with Spike patting him on the shoulder as he says, 'Totally, it'll be fun!' Looking at the two of them, they seem like a pair of normal young men of the same rough age on the surface - but of course, you know better, with Spike's life still being able to be counted in days, and Eric being somewhat less than fully human, down below. Still, the two of them seem to hit it off nicely, and you can see the start of a friendship develop by the time Eric eventually excuses himself and wanders off.";
+			else if HP of Eric is 99:
+				say "     After looking over with a moderately frightened look on his face, your little sex slave Eric ducks out of sight. You can't quite tell if he was looking at Spike or yourself. Maybe both, as he could be expecting this new male to join you in demanding sex from him. Spike glances after the fleeing human, then looks aside to you and asks, 'What's up with him? He always kept to himself even when I was a puppy.' You wave the question away, not in the mood right now to lay out the way you're abusing Eric.";
+			WaitBreakReactions;
+		[-----------------------------------------------]
+		if Fang is booked or Fang is bunkered:
+			if MaxHP of Spike is 2: [Fang Spike]
+				say "     Fang pads closer, sniffing the air and looking at Spike, with [PosAdj of Fang] tail rising and wagging. Approaching the young doberman, the feral wolf then then jumps up at him, forepaws bracing against Spike's chest as [SubjectPro of Fang] licks [PosAdj of Fang] offspring's face. The anthro dobie endures the licking for a moment and even gives Fang's neck and back-fur a rub, before extracting himself from the wolf's reach and saying, 'That's enough dad, you gotta remember I'm not a puppy anymore!' Fang looks at him, head turned at an angle and just replies with a friendly bark, then pads off with wagging tail.";
+			else:
+				say "     Fang pads closer, sniffing the air and looking at Spike, with [PosAdj of Fang] tail raised at attention. Approaching the young doberman, the feral wolf pushes [PosAdj of Fang] muzzle right between Spike's legs, sniffing his crotch, then soon his rear end after circling around. The anthro dobie endures the inspection for a moment, until Fang comes back to the front, looking up and giving a satisfied bark, tail starting to wag. At that point, Spike crouches down and strokes the feral's fur, with the two of them exchanging wordless communication, just by their movements and body posture. From what you can make out, Fang likes Spike, but [if hp of Fang is 3 or hp of Fang is 4]as Alpha, considers Spike below [ReflexPro of Fang] in the library hierarchy, especially as [else]sees [ReflexPro of Fang] as a higher rank since [end if]the dobie has only been born recently. Eventually, the wolf pads off with wagging tail.";
+			WaitBreakReactions;
+		if HP of Fiona > 4:
+			say "     Seemingly appearing from a dark corner in which she was hiding, Fiona stalks closer on all fours, then brushes up against Spike's legs and purrs. He smiles and bends down to pet her while saying, 'Hey babe, are you - ouch!' In typical feline fashion, she's bitten him (lightly) after he barely touched her, followed by dashing away a little, then looking over her shoulder and purring more to draw him closer again. Spike's leg muscles tense as he seems to get ready for chasing her, and he adjusts the bulge in his pants a little as he gets excited by the feline's raised rear and clearly visible pussy. Fiona's plan appears to be working, and only by clearing your throat and putting a hand on his shoulder can you break Spike out of the intent of catching and fucking her right here and now.";
+			WaitBreakReactions;
+		if Gabriel is booked or Gabriel is bunkered:
+			say "     Curious about the dobie, Gabriel comes closer and says hello. At the same time, Spike takes in the angel's naked body, collar and the wrist- and ankle-cuffs, his body stiffening a little at the sexy presentation. He has to adjust himself a little in the front of his pants too, then greets Gabriel in a friendly tone. Well-trained as you have him, the captive seraphim readily accepts the dog's hungry gaze wandering over his body. 'Wow, that's quite a look,' Spike comments, lust audible in his voice. Reaching up to touch his collar, Gabriel lowers his head submissively and says, '[Master] showed me what I was made for.' He stands there, with Spike soon reaching out to stroke a paw-hand over his chest. Then the dobie asks, 'Could I... have a turn sometime?' You chuckle, but postpone that decision to another time, then wave the angel away.";
+			WaitBreakReactions;
+		if Hayato is booked or Hayato is bunkered:
+			say "     Walking up to Spike and showing a friendly expression, Hayato reaches out to place a large hand on his shoulder. 'Sure grew up quick, didn't you? I'm sorry your childhood was cut short like this,' he says in a somewhat sad tone. Spike just lets out a kind of noncommittal grunt and shrugs off the hand. 'Can't stay a pup forever. I want to see some of the action in the city too!' The large red oni starts to say, 'I don' think that's safe, or a good id-' but then catches himself as he sees Spike rolling his eyes. 'Just try to stay safe, okay? And if you simply want to talk sometime, you know where I am.' With that said, Hayato waves and wanders off.";
+			WaitBreakReactions;
+		if Helen is booked or Helen is bunkered:
+			say "     Dashing towards Spike on all fours, Helen goes in to sniff him, then licks his hand as he leans down to reach for her. 'Eager little bitch, aren't you?' the young dobie comments, then slides a hand under her, cupping a breast and groping it. The human dog accepts this quite happily, even leaning into his touch. [if Lust of Helen > 3]'New friend?' she suddenly asks, followed by a happy bark as Spike says, 'Sure, and sometime I can show you just how much of a friend I can be.' Him grabbing the bulge in his pants and adjusting it shows exactly what he means. [end if]Afterwards, Helen happily runs off.";
+			WaitBreakReactions;
+		if Hobo is booked or Hobo is bunkered:
+			say "     Hobo rushes up to greet Spike with his tongue hanging out of the side of his mouth. Leaning down, the young dobie lets him sniff his hand, then proceeds to give the dog's ears a good scratch while saying, 'Who's a good boy? You are!' releasing a warm chuckle. Having received his pets, Hobo eventually trots off again, then lies down to doze in a comfortable spot.";
+			WaitBreakReactions;
+		if Honey is booked or Honey is bunkered:
+			say "     Honey buzzes through the air stopping just inches away from Spike's face and inspecting him before quickly saying, 'Hi Spike! I'd wondered where you'd gotten off to! Looking good as a big boy!' before giggling into her hands and flying away.";
+			WaitBreakReactions;
+		if Korvin is booked or Korvin is bunkered:
+			if MaxHP of Spike is 3: [Korvin is Spike's father]
+				say "     Walking up to Spike with a confident stride, Korvin puffs out his muscular chest a little and gives his son a gruff nod. 'Good to see you're making something out of yourself, boy! Like the collar, even if it's not quite as good as mine.' He smirks at Spike while brushing a paw-hand along his studded band of leather, then taps the dog-tag bearing his name with one blunt claw. Accepting the ribbing from his father as a friendly challenge, Spike chuckles and nods to the German shepherd. 'We'll see who's the better dog soon!' The two of them spend the next minute or so in a kind of dick-measuring contest, flexing some muscles and giving each other looks. Eventually, Korvin quips, 'I'll leave you to work on your stuff a bit more. One of us needs it, son. You better keep up with your old man, hah!' then walks off, tail wagging behind his back.";
+			else:
+				if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
+					say "     Leaning against the end of a bookshelf and keeping his distance, you see Korvin raising a hand as if to hide his pink collar, his gaze fairly focused on Spike's own studded strap of leather. Clearing your throat and shooting him a look, the canine drops the attempt at hiding his shame, revealing his submissiveness to you fully. Spike notices the girly collar right away and lets out a laughing bark, which drives Korvin to slip out of sight with his tail hanging down limply.";
+				else:
+					say "     Walking up to Spike with a confident stride, Korvin puffs out his muscular chest a little and gives the dobie a gruff nod. 'New dog, eh? Like the collar, even if it's not quite as good as mine.' He smirks at Spike while brushing a paw-hand along his studded band of leather, then taps the dog-tag bearing his name with one blunt claw. Accepting the ribbing as a friendly challenge, Spike chuckles and nods to the German shepherd. 'We'll see who's the better dog soon!' The two of them spend the next minute or so in a kind of dick-measuring contest, flexing some muscles and giving each other looks. Eventually, Korvin quips, 'I'll leave you to work on your stuff a bit more. One of us needs it,' then walks off, tail wagging behind his back.";
+			WaitBreakReactions;
+		if Klauz is booked or Klauz is bunkered:
+			say "     Klauz stays sitting on a nearby sofa for a long while, casually licking a paw and stroking it over his head-fur while throwing a sidelong glance or two in the direction of the young doberman. Then eventually, he gets up and saunters closer, sniffing the air as he draws circles around Spike, which end up with him brushing up against the anthro dog's legs. As he rubs his fur against Spike, busily spreading his scent all over the man, the felinoid purrs like an idling motor, drawing Spike to crouch down and pet him. 'What's that scent?' the anthro says, taking another deep sniff of the air, only to forget what he was thinking about and fully focusing on stroking the white-furred feline. Klauz seems content to leave it at just that for now, enjoying the petting before letting out an amused churr and stalking away. Spike remains crouched for a little while, then shakes his head as if getting out of a trance and stands up again.";
+			WaitBreakReactions;
+		if Malik is booked or Malik is bunkered:
+			say "     Malik struts up to Spike, nodding at the anthro and saying, 'Sup, dog-dude? Seen anything fun out in the city? Maybe we could do a circuit around the block sometime, eh?' As Spike grins and begins to tell the orc about the gaggle of husky bitches he saw just a little while ago, in a side alley, the orc lets out a huff. 'Yeah - no, not my scene. But if there's bitches, there must be a dude somewhere nearby. How about we go splits - take [']em down and you can have all the sluts while I introduce the guy to my big orc cock!' Before the two of them get any further into planning out trips with each other, you clear your throat as a reminder that Spike is supposed to be [italic type]your[roman type] companion. Coming to attention, Spike straightens himself after giving Malik a quick whisper of 'Maybe later, eh?'";
+			WaitBreakReactions;
+		if Nadia is booked or Nadia is bunkered:
+			say "     Nadia gives Spike a friendly smile and comes right up to him, then actually reaches up to pinch his cheek! Surprised, he bats away her hand with a little bluster and says, 'Hey, what the-?!' only to have her interrupt with the words, 'It's so nice to see you all grown up! I'm almost jealous of Alexandra for having such a cute little puppy, and now a strapping young man! I played with you when you were just a tiny little doggie!' Spike appears to be embarrassed by the attention of the broody bird-woman, as she keeps touching him, patting his chest and arms, completely ignoring his comfort zone. 'I - I actually have to do something with the boss now, so could you maybe stop, eh -' the dobie says while trying his best to deflect her hands, throwing you a pleading glance. Only when you interject yourself between Nadia and the young man does she relent, leaving Spike with a promise to 'catch up later'.";
+			WaitBreakReactions;
+		if Rane is booked or Rane is bunkered:
+			say "     Sauntering up to the anthro dobie with a smirk on his face, Rane nods to Spike and says, 'Hey there, my dude. Name's Rane. What brings a cool dog like you to this place? Love the collar by the way.' Spike turns out to be quite receptive to the blue oni's flattery, proudly showing off his wiry, but toned body and explaining that he found the collar himself and picked it, 'Because it looks awesome!' The oni nods attentively, smiling and appropriately admiring the spiked band of leather, making a good first expression with Spike and leaving it at that. Patting the dobie's shoulder and giving it a squeeze, the oni eventually makes his exit, walking past the two of you. As you glance over your shoulder, you see the blue-skinned demon stand not too far away, shamelessly checking out Spike's rear with hungry looks.";
+			WaitBreakReactions;
+		if Ryousei is booked or Ryousei is bunkered:
+			say "     Ryousei walks up to Spike with measured steps, then gives the young doberman a cordial nod, respectful but fairly shallow. 'Welcome, young man. It is good to see you choose a [master] like this on your way to becoming a true warrior. My name is Ryousei.' Turning and giving yourself a friendly bow, the tiger adds, 'Please do let me know if you would like me to instruct your pupil too. It always is nice to see promising new students mature.' Spike glances back and forth between Ryousei and yourself, looking slightly stressed out as he wracks his brain about how to react to this otherworldly feline's customs, given that Ryousei seems to be your friend. Finally he barks out, 'Thank you, sensei!' and bows quite low to the tiger, almost to a 90 degree angle. A benign smile crosses Ryousei's muzzle, then is quickly suppressed before Spike can notice. With a firm but gentle paw on the dobie's shoulder, he adjusts him to just about 40 degrees, 'I'm not an emperor or king, young warrior, but I thank you for the gesture. I'll look forward to our next encounter.' With that, he excuses himself and strides away.";
+			WaitBreakReactions;
+		if Tehuantl is booked or Tehuantl is bunkered:
+			if Tehuantl is male:
+				say "     Tehuantl steps into view from between the bookshelves, bearing his shield and Aztec sword as he walks up to the anthro dobie. The jaguar warrior comes to stand before him, sizing up Spike for a long moment before giving him a smile that bares the feline's fangs. 'A novice warrior, I see. And one with potential. You can call me Tehuantl. If the [master] wishes it so, this warslave will instruct you in combat.' Having said what he wanted, the anthro feline turns and strides away, leaving Spike looking after him with a curious expression. 'Is he for real? Who talks like that?' You quickly explain where and how you met Tehuantl, and that he genuinely believes to be an authentic Aztec warrior. 'He certainly looks badass with that gear of his, and those are nice muscles!'";
+			else:
+				say "     Tehuantl steps into view from between the bookshelves, walking up to the dobie with her hips swaying side to side. She smiles at Spike, holding her upper body in a pose that exposes her breasts quite nicely. 'Hello young warrior,' the feline says in an enticing tone, and she is clearly amused as he simply stares at her tits, tongue hanging out the side of his muzzle without him even noticing. 'Hope you'll stay for a while and we'll see each other,' she says finally, stroking a finger along the side of his cheek before making her exit soon after.";
+			WaitBreakReactions;
+		if (Sarah is booked or Sarah is bunkered) and SarahCured > 3:
+			say "     Sarah confidently strides up to Spike and offers her hand in greeting. 'It's always good to see more sane people come here. I'm sure if we hold together we'll make it out of this too!' The dobie wags his tail eagerly as he shakes her hand-paw, eyes casually flicking down to check out her breasts without being too obvious. 'That, or take over the city, hah! The boss has big plans, I'm sure!' Sarah blinks at him and responds, 'Excuse me?! What do you mean?' Spike looks somewhat embarrassed as he quickly adds in an embarrassed tone, 'Err... just kidding.' Sarah gives him a raised eyebrow, then says, 'People are suffering out there, and losing everything! I'd hoped you'd have more sense than to joke about that!' Scrunching up her muzzle, the husky then storms off.";
+			WaitBreakReactions;
+		if Sven is booked or Sven is bunkered:
+			if HP of Sven >= 30 and HP of Sven < 50:	[self-confident Sven]
+				say "     Coming up to the young doberman, Sven smiles at Spike and says, 'Hello there, I hope we can be friends, despite the cat-dog thing, eh?' Bravely sticking out his hand in greeting, he shakes with Spike, who chuckles at the quip. Easily picking up on the snow leopard's obvious accent, Spike asks, 'So, where are you from? Don't think I've heard anyone talk like that before.' 'I'm from Norway and an exchange student,' Sven replies, followed by a little bit of chatting before he makes an exit, going back to what he was doing before.";
+			else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
+				say "     Stepping out from behind a tall bookshelf, Sven saunters over towards Spike and yourself, swinging his hips a little as he does so. 'Hey doggo,' he says in a somewhat flirtatious tone as he reaches Spike, letting his gaze wander down to the dobie's bulge. 'Oh? Wanna be my pussycat?' Spike shoots back to him, gripping his crotch demonstratively with one hand as he grins broadly. Sven nods and starts to run his tongue along the edge of his muzzle, a purr starting in his chest.' Before the two of them can wind each other any further, you clear your throat and tell Sven to get back to his place, for now. Spike looks a little disappointed as the flirty sub does as ordered, but he readily accepts that you're the boss.";
+			else:
+				say "     Shily stepping out from behind a tall bookshelf, Sven keeps his extra long and thick tail raised before himself, partly hiding behind it. 'Hello there. You're cute,' he says in quietly, smiling at Spike. The dobie blusters a little at those words, making Sven slink back a tiny bit, only for Spike to grab his arm and prevent him from running away. Then the young man raises an arm to flex it - showing the marked muscle tone on the relatively slender limb. 'That look cute to you? I'm a proper man, remember that!' Sven nods hastily, clearly sorry for having picked the wrong words. Then Spike asks, 'So, where are you from? Don't think I've heard anyone talk like that before.' 'I'm from Norway and an exchange student,' Sven replies, followed by a little bit of chatting before he makes an exit, going back to what he was doing before.";
+			WaitBreakReactions;
+		if Urik is booked or Urik is bunkered:
+			say "     Strolling up casually, Urik comes to tower over Spike and looks down at the anthro's sleek body, making him a sliver of a man before the orc's great bulk. 'So, you got a dog, eh? What for, travel entertainment? These beanpoles are little use in a fight. Fucked a few pooches like him before though, and they were nicely tight,' Urik says to you, never really addressing Spike at all. Offended at not being taken seriously, Spike barks, 'Hey! I hold my own!' As Urik flat out starts laughing, the dobie looks aside sulkily and you wave the orc away.";
+			WaitBreakReactions;
+		if Xerxes is booked or Xerxes is bunkered:
+			say "     Dashing towards Spike on all fours, Xerxes goes in to sniff him, then licks his hand as he leans down to reach for him. 'Not exactly a shy dude, eh?' the young dobie comments at the human dog's nakedness, then slides a hand over the transformed canine's muscular back. Xerxes accepts this quite happily, even leaning into his touch. [if Lust of Xerxes > 3]'New friend?' he suddenly asks, followed by a happy bark as Spike says, 'Sure, and sometime I can show you just how much of a friend I can be.' Him grabbing the bulge in his pants and adjusting it shows exactly what he means. [end if]Afterwards, Xerxes happily runs off.";
+			WaitBreakReactions;
+		now IntroReactionCounter is 0; [reset]
 	say "     (Spike the doberman is now a possible ally! You can make him your active ally by typing [bold type][link]ally Spike[end link][roman type] or [bold type][link]ally doberman[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Spike[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 	now HP of Spike is 1;
 	add "Tamed" to Traits of doberman companion;
@@ -492,7 +832,7 @@ to say SpikeTalkMenu:
 				else if (nam is "Talk about Urik"):
 					say "[SpikeTalk11]";
 				else if (nam is "Talk about your orc warrior Urik"):
-					say "[SpikeTalk11]";
+					say "[SpikeTalk12]";
 				wait for any key;
 				say "[SpikeTalkMenu]";
 		else if calcnumber is 0:

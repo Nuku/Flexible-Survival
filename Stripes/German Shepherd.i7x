@@ -863,15 +863,6 @@ to say gsd_special_final_06:
 	say "[gsd_recruited]";
 	now gsd_pet is 12;
 
-to say gsd_recruited:
-	increase score by 20;
-	now gshep is tamed;
-	add "Tamed" to Traits of gshep;
-	move Korvin to Makeshift Rec Room;
-	now HP of gshep is 1;
-	now GShepLastScene is turns;
-	say "     Looking around, you find some heavy rope and use that to make a temporary leash for the muzzle-scarred German shepherd. He tugs at it a few times, but leaves it alone when you tell him to stop pawing at it. You ask him if he's got a name he can remember, which throws him for a loop. 'What a stupid question? Of course I remember... my... name...' He ends up bemused for a time, scratching his ear with one paw as he tries to think. 'K-... Ka-? Ko-? Korvin? I think it was, I mean, it is Korvin.' He seems a little more self-assured again now that he's got a name.";
-	say "     (Korvin the German shepherd is now a possible ally! You can make him your active ally by typing [bold type][link]ally Korvin[end link][roman type] or [bold type][link]ally gshep[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Korvin[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 
 
 to say attk gsd:

@@ -19,7 +19,7 @@ Version 5 of Onyx by Sarokcat n Verath begins here.
 [ cock length ~ 20? ]
 [ 10 = gave oral again (random - stallion locked) ]
 [ ... ]
-[ 10-29 = Freed stallion - Sub]
+[ 20-29 = Freed stallion - Sub]
 [ cock length ~ 16? ]
 [ 20 = made to give oral (stallion sub locked) ]
 [ 21 = sex w/sub stallion (vag or anal) ]

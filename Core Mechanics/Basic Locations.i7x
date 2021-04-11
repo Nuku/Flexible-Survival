@@ -8,7 +8,9 @@ A room can be fasttravel. A room is usually not fasttravel. [reachable through t
 A room can be private. A room is usually not private. [private rooms cannot be found randomly or through hunting]
 A room can be sleepsafe. A room is usually not sleepsafe. [no encounter chance when sleeping there]
 A room has a text called earea. earea is usually "void". [exploration area]
+A room has a text called RoomID. RoomID is usually "Room". [unique room identifier]
 A room has a text called ObserveString. ObserveString is usually " ".
+A room has a truth state called ObserveAvailable. ObserveAvailable is usually false.
 Rooms has a list of text called invent. [room inventory]
 Rooms have a text called scent.
 
@@ -149,6 +151,7 @@ Grey Abbey Library is fasttravel.
 Grey Abbey Library is sleepsafe.
 Description of Grey Abbey Library is "[abbey desc]".
 earea of Grey Abbey Library is "Outside".
+ObserveAvailable of Grey Abbey Library is true.
 ObserveString of Grey Abbey Library is "[GreyAbbeyLibrary_ObserveMenu]".
 
 after looking while player is in Grey Abbey Library:
@@ -178,16 +181,20 @@ instead of sniffing Grey Abbey Library:
 		say "     Recently, the strong scent of your doberwoman bitch Alexandra has joined the rest of the aromas in here. With the whiff of her femcum ever-present in your nose now, you're seriously tempted not to go over to her and strip the sexy canine naked for some fun-time.";
 
 to say GreyAbbeyLibrary_ObserveMenu:
-	LineBreak;
 	say "     Glancing around, you spot several locations in which you could easily hang out without being obvious to anyone. This allows you the opportunity to just wait for a while and see what might happen.";
 	say "     [bold type]Whom do you want to observe?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "General"; [move these into their own menu]
+	now sortorder entry is 1;
+	now description entry is "Watch things happening in the room";
+	[]
 	if Urik is booked or Urik is bunkered and orc supersized breeder is not listed in companionList of Player:
 		choose a blank row in table of fucking options;
 		now title entry is "Urik";
-		now sortorder entry is 1;
+		now sortorder entry is 2;
 		now description entry is "Watch what the orc is up to";
 	[]
 	sort the table of fucking options in title order;
@@ -205,6 +212,45 @@ to say GreyAbbeyLibrary_ObserveMenu:
 			now sextablerun is 1;
 			if (nam is "Urik"):
 				say "[GreyAbbeyLibraryObservation_Urik]"; [see file Wahn/Urik.i7x]
+			if (nam is "General"):
+				say "[GreyAbbeyLibraryObservation_General]";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say GreyAbbeyLibraryObservation_General:
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Entrance Door"; [move these into their own menu]
+	now sortorder entry is 1;
+	now description entry is "Watch the front door";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Zoomba #1"; [move these into their own menu]
+	now sortorder entry is 2;
+	now description entry is "Watch a little machine vacuum the library";
+	[]
+	sort the table of fucking options in title order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			let nam be title entry;
+			now sextablerun is 1;
+			if (nam is "Entrance Door"):
+				say "     You decide to take a seat at the front desk, watching the entrance door of the library. Minutes pass, then some more minutes, with no one even trying to open the unlocked door from outside. Seems like the mere fact that this is a library is discouraging people from coming anywhere close to it. Somehow, you're no longer surprised by the three inch tall stack of crossword puzzle magazines in one of the drawers of the desk...";
+			else if (nam is "Zoomba #1"):
+				say "     Waiting for a few minutes, you see a small vacuum robot, shaped like an oversized hockey puck, emerge from behind the front desk. The little device is colored black and silver, with the red letter [']1['] emblazoned on the front half. Glancing where it is coming from, you see a charging port there. Someone must have hooked it up to the emergency power supply that is also responsible for the lights in the bunker. Having nothing much better to do, you follow Zoomba #1 around, watching it patrol with a quiet hum and effectively wipe out any dust-bunnies that dare appear in these hallowed halls.";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 		else:
