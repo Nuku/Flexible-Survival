@@ -218,7 +218,7 @@ Chapter 2 - Basic Quick Pulls
 
 Description of Chase is "[ChaseDesc]".
 Conversation of Chase is { "mew" }.
-Chase is in TDen_Entrance.
+Chase is in TDen_FFMainArea.
 
 The scent of Chase is "[ChaseScent]";
 
