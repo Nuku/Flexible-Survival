@@ -281,7 +281,7 @@ Chapter 3 - Conversation Options
 
 Section 1 - Intro Conversation
 
-instead of conversing the Chase while HP of Chase > 3:
+instead of conversing the Chase:
 	if HP of Chase is 0: [not rescued yet]
 		say "     ERROR: Chase shouldn't be where a Player can see him yet! Please report to Wahn on the FS Discord and quote this tracking number for easier bugfixing: [HP of Chase]";
 	else if HP of Chase is 1: [initial talk with regular Chase] [TODO: this needs to be altered depending on the type of player that he is interacting with]
