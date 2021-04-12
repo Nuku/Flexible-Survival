@@ -565,7 +565,7 @@ Weapon Damage of sharp black tusk is 10.
 Weapon Type of sharp black tusk is "Melee".
 Objsize of sharp black tusk is 4.
 Hitbonus of sharp black tusk is -1. [not a weapon]
-Scent of the sharp black tusk is "The void serpent's tusk actually manages to have a scent, despite coming from the void, and you do not like it. It's undescribably bad, something between rotten and death, even with the apparent good condition of the tusk.".
+Scent of the sharp black tusk is "The void serpent's tusk actually manages to have a scent, despite coming from the void, and you do not like it. It's indescribably bad, something between rotten and death, even with the apparent good condition of the tusk.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
