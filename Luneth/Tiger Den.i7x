@@ -325,6 +325,10 @@ Sarea of TigerVSTaur is "Zoo".
 
 Section 1 - Event
 
+a postimport rule:
+	if PlayerMet of Chase is true:
+		now TDen_Entrance is known;
+
 to say ResolveEvent TigerVSTaur:
 	if ScaleValue of Player > 3:
 		say "     Looking at some of the seriously overgrown paths of the zoo ahead of you, it looks like that would be a bit of a hard fit for someone of your size. Maybe you'll want to come back if you get a bit smaller...";

@@ -4,6 +4,13 @@ Version 4 of Colleen by Sarokcat begins here.
 [Version 4 - Husky-fication for Colleen while Sarah is Sane by Prometheus ]
 "Adds a military NPC to Flexible Survival with a variety of responses and goals."
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Strike From the Deep is resolved:
+		change the up exit of Bunker to Grey Abbey Library;
+		change the down exit of Grey Abbey Library to Bunker;
+		change the up exit of Tunnel Underground to Bunker;
+		change the down exit of Bunker to Tunnel Underground;
+
 Section 1 - Colleen Events
 
 Table of GameEventIDs (continued)
@@ -100,8 +107,8 @@ to StrikeFromtheDeepEvent: [Colleen is attacked by a creature that has burrowed 
 		now Resolution of Strike From the Deep is 1; [Stayed. Colleen is a Husky]
 		now hp of Colleen is 1; [Colleen Transformed while Sarah is Sane]
 		move player to Bunker;
-		now Tunnel Underground is below Bunker;
-		now Bunker is above Tunnel Underground;
+		change the up exit of Tunnel Underground to Bunker;
+		change the down exit of Bunker to Tunnel Underground;
 			[say "     [bold type]Sarah doesn't look convinced and with Colleen unconscious again, she can't stop you if you want to use the last of her spray on her. Do you want to use it?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes. (Colleen Stays Human)";
@@ -144,8 +151,8 @@ to StrikeFromtheDeepEvent: [Colleen is attacked by a creature that has burrowed 
 			now Resolution of Strike From the Deep is 2; [Sought Vengeance. Won. Colleen is a Husky]
 			now hp of Colleen is 1; [Colleen Transformed while Sarah is Sane]
 			move player to Bunker;
-			now Tunnel Underground is below Bunker;
-			now Bunker is above Tunnel Underground;
+			change the up exit of Tunnel Underground to Bunker;
+			change the down exit of Bunker to Tunnel Underground;
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			LineBreak;
 			say "     As the beast charges at you, you desperately try to will your exhausted muscles to move but they don't obey, leaving you to watch as the mole barrels towards you, it's long claws digging effortlessly into the ground as it runs. A flicker of movement alerts you to the figure as it drops from the roof and lands beside you surprisingly lightly. Looking at them with half-closed eyes, you see that they have eight limbs and realize that they are a spider-morph of some kind, and there is a momentary worry that they may be about to claim you for a meal themselves as they effortlessly begin to pull you towards one of the tunnels. Between your exhaustion at fighting the mole and fear that you are about to be bound in silk to be eaten later, you pass out, your final thoughts before you lose consciousness being of Colleen and Sarah, ashamed that you have let them down.";
@@ -157,8 +164,8 @@ to StrikeFromtheDeepEvent: [Colleen is attacked by a creature that has burrowed 
 			now Resolution of Strike From the Deep is 3; [Sought Vengeance. Lost. Colleen is a Husky]
 			now hp of Colleen is 1; [Colleen Transformed while Sarah is Sane]
 			move player to Bunker;
-			now Tunnel Underground is below Bunker;
-			now Bunker is above Tunnel Underground;
+			change the up exit of Tunnel Underground to Bunker;
+			change the down exit of Bunker to Tunnel Underground;
 		else if fightoutcome is 30: [fled]
 			LineBreak;
 			say "     Deciding that the mole might be a bit more than you can handle at the moment, you turn tail and run, hiding behind boulders and large glowing mushrooms as it attempts to pursue you. Eventually it gives up and you hear it shuffle away. When there has been silence for a few minutes and you are sure that it is gone properly, you creep out and make your way back towards the tunnel to the bunker. As you reach the middle of the cavern you hear noise from one of the other caves, causing you to turn off your flashlight and make a desperate dash into the tunnel before carefully peering around the corner again. From the northern tunnel emerges a dwarf with an impressive beard, wearing an impressive suit of armor with an axe firmly gripped in one hand and a pickaxe strapped to his back. He bows solemnly as someone scuttles from the western tunnel, the dim light from the glowing fungi eventually revealing the eight limbs of a spider as tall as a man who, upon reaching the center of the room, bows in return. The arrival of a third person is barely recognized by either of them beyond turning to watch as a man decorated in luminescent patterns emerges from the southern tunnel and strides towards them.";
@@ -170,8 +177,8 @@ to StrikeFromtheDeepEvent: [Colleen is attacked by a creature that has burrowed 
 			now Resolution of Strike From the Deep is 4; [Sought Vengeance. Fled. Colleen is a Husky]
 			now hp of Colleen is 1; [Colleen Transformed while Sarah is Sane]
 			move player to Bunker;
-			now Tunnel Underground is below Bunker;
-			now Bunker is above Tunnel Underground;
+			change the up exit of Tunnel Underground to Bunker;
+			change the down exit of Bunker to Tunnel Underground;
 
 Section 2 - Colleen the Husky Paratrooper
 

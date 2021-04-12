@@ -1313,10 +1313,10 @@ to say Henry_Choice:
 			say "Man, I think someone just doesn't want us to have a good time. I bet if we went to the other place, that'd be a catastrophe too. Let's just go back to the library.' The trip back is fairly quiet, with the orc not in the mood to talk as you trot along.";
 		TraitGain "Henry Survived" for Urik;
 
-
-
 to say UrikTalk_LibraryTransfer: [send him to the library]
 	say "     Urik listens to your instructions with a quiet intensity that makes it clear he commits the directions to the library to his memory. 'Okay [UrikPlayerAddress], I'll go there straight away.' With a playful slap at his muscled buttocks, you send him off into the city.";
+	now Urik is nowhere;
+	TraitGain "Library Move Underway" for Urik;
 
 to say UrikRenameMenu:
 	say "     [bold type]What should Urik use to address you in the future?[roman type][line break]";
@@ -1940,7 +1940,7 @@ to say UrikSex_Submission: [player submits to Urik - bad end if the player treat
 
 Section 5 - Events
 
-instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loyalty of Urik is 1):
+instead of navigating Grey Abbey Library while ("Library Move Underway" is listed in Traits of Urik and Loyalty of Urik is 1):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2087,6 +2087,7 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loya
 			WaitBreakReactions;
 		now IntroReactionCounter is 0; [reset]
 		TraitGain "Introduced" for Urik;
+	remove "Library Move Underway" from Traits of Urik;
 	move Urik to Sitting Area;
 	now Loyalty of Urik is 2; [arrived safely and had a talk with the player]
 

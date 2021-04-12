@@ -101,7 +101,6 @@ When Play begins:
 	now Species Name entry is "Latex Fox"; [name of the overall species of the infection, used for children, ...]
 	add "Latex Fox" to infections of VulpineList;
 	add "Latex Fox" to infections of FurryList;
-	add "Latex Fox" to infections of FeralList;
 	add "Latex Fox" to infections of LatexList;
 	add "Latex Fox" to infections of MaleList;
 	add "Latex Fox" to infections of TaperedCockList;
