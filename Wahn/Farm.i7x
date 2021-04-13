@@ -23,6 +23,9 @@ Description of McDermott Farm Entrance is "     You're standing at entrance of a
 Instead of sniffing McDermott Farm Entrance:
 	say "     The scent of freshly cut grass hangs in the air.";
 
+after looking while player is in McDermott Farm Entrance:
+	project the Figure of Map_Farm_6_icon;
+
 Open Grassland is a door. "Beyond the archway forming the entrance of the McDermott Farm, wide open grassland stretches out into the distance. Not as far as the eye can see, but nevertheless covering a significant area of what once was part of the city. The creeping grass sure was relentless in destroying buildings wherever it could spread.".
 Open Grassland is south of McDermott Farm Entrance and north of Wandering the Plains.
 Open Grassland is dangerous.
@@ -35,6 +38,9 @@ Central Farm Square	"Central Farm Square"
 Central Farm Square is a room.
 Central Farm Square is north of McDermott Farm Entrance.
 Description of Central Farm Square is "     You're on the central square between the different parts of the farm. Around you to the northwest is a big, pretty old farm house. Then to the west a large barn and beside that in the southwest another building that looks like it's the worker barracks. To the north you can see a fenced paddock, to the east a fairly large milking shed and between them a path that leads to the northeast. Finally, to the south is the archway that marks the entrance to the farm and through which you could leave again.".
+
+after looking while player is in Central Farm Square:
+	project the Figure of Map_Farm_5_icon;
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -50,6 +56,9 @@ to say MShedDesc:
 	else:
 		say "     You're in a big room that stretches for the full length of this building, making out at least half of its size all on its own. There is a whole row of milking stalls in here, all of them equipped with tubes and suction apparatuses. At night, they sit silent and unused, empty until the cows get back in them the next day.";
 
+after looking while player is in Milking Shed Main Room:
+	project the Figure of Map_Farm_2_icon;
+
 Table of GameRoomIDs (continued)
 Object	Name
 Farmhouse Main Room	"Farmhouse Main Room"
@@ -60,6 +69,9 @@ Description of Farmhouse Main Room is "     You're in the main room on the groun
 
 Instead of sniffing Farmhouse Main Room:
 	say "     The comfortable scents of wood and the leather couches hang in the air.";
+
+after looking while player is in Farmhouse Main Room:
+	project the Figure of Map_Farm_4_icon;
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -76,6 +88,9 @@ to say BarracksDesc:
 	else if CorbinKidCounter > 1:
 		say "     Corbin's son Dale is in here too, and the strapping teenager watches out for his kid siblings, with the little tykes being pretty active and curious about everything. Strangely, he seems to be the only one that did grow especially fast, with all the other little horses still small children. Thankfully, the workers treat the little ones well, even playing with them or teaching them all kinds of stuff.";
 
+after looking while player is in Worker Barracks:
+	project the Figure of Map_Farm_1_icon;
+
 Table of GameRoomIDs (continued)
 Object	Name
 Farm Pathway	"Farm Pathway"
@@ -83,6 +98,9 @@ Farm Pathway	"Farm Pathway"
 Farm Pathway is a room.
 Farm Pathway is northeast of Central Farm Square.
 Description of Farm Pathway is "     Between the long milking shed in the south and the fenced paddock in the west, northwest and north, this pathway leads from the central farm square in the southwest to a rather large green meadow in the east.".
+
+after looking while player is in Farm Pathway:
+	project the Figure of Map_Farm_7_icon;
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -99,6 +117,9 @@ to say MeadowSWDesc:
 	else:
 		say "     At night, everything is still and quiet out here.";
 
+after looking while player is in Sheep Meadow SW:
+	project the Figure of Map_Farm_9_icon;
+
 Table of GameRoomIDs (continued)
 Object	Name
 Sheep Meadow SE	"Sheep Meadow SE"
@@ -113,6 +134,9 @@ to say MeadowSEDesc:
 		say "     White shapes of sheep trot around in the distance, peacefully grazing.";
 	else:
 		say "     Looks like all the sheep came together here as a herd to rest for the night. They're standing in a big bunch close to the wall of the milking shed.";
+
+after looking while player is in Sheep Meadow SE:
+	project the Figure of Map_Farm_12_icon;
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -129,6 +153,9 @@ to say MeadowNEDesc:
 	else:
 		say "     At night, everything is still and quiet out here.";
 
+after looking while player is in Sheep Meadow NE:
+	project the Figure of Map_Farm_11_icon;
+
 Table of GameRoomIDs (continued)
 Object	Name
 Sheep Meadow NW	"Sheep Meadow NW"
@@ -143,6 +170,9 @@ to say MeadowNWDesc:
 		say "     White shapes of sheep trot around in the distance, peacefully grazing.";
 	else:
 		say "     At night, everything is still and quiet out here.";
+
+after looking while player is in Sheep Meadow NW:
+	project the Figure of Map_Farm_10_icon;
 
 Sheep Meadow NE is northeast of Sheep Meadow SW.
 Sheep Meadow SE is southeast of Sheep Meadow NW.
@@ -167,6 +197,9 @@ to say BarnDesc:
 	else:
 		say "     You're in a large barn with many stalls for animals along the walls. They hold mostly cows, but also a few horses, all of them just standing there, sleeping. In the back of the room, there is a ladder leading up to a large hayloft.";
 
+after looking while player is in McDermott Barn:
+	project the Figure of Map_Farm_3_icon;
+
 Table of GameRoomIDs (continued)
 Object	Name
 Barn Hayloft	"Barn Hayloft"
@@ -175,12 +208,18 @@ Barn Hayloft is a room.
 Barn Hayloft is above McDermott Barn.
 Description of Barn Hayloft is "     The hayloft is pretty big and... filled with hay. Lots and lots of hay, piled up nearly to the ceiling. From time to time, something rustles somewhere inside. Who knows what's hiding here...".
 
+after looking while player is in Barn Hayloft:
+	project the Figure of Map_Farm_3_icon;
+
 Table of GameRoomIDs (continued)
 Object	Name
 Mustang Paddock	"Mustang Paddock"
 
 Mustang Paddock is a room.
 Description of Mustang Paddock is "     This large fenced area is the paddock of the wild mustang the farm got just before the nanite catastrophe. Now it is fully his domain, with any who trespass being in danger of becoming one of his new mares, several of whom you can see further back in the paddock. In the front bit, where you are, there is no one except the mustang himself, who is already galloping towards you.".
+
+after looking while player is in Mustang Paddock:
+	project the Figure of Map_Farm_8_icon;
 
 The Mustang Paddock Gate is a door.
 Description of Mustang Paddock Gate is "     The large gate leading to the paddock with the mustang and his harem looks pretty sturdy - and it and the adjoining fence have had an electrified wire running strung over their top added not too long ago from the looks of it. Finally, there is a padlock holding the gate closed. Its key hangs from a short chain beside it, but still... seems like someone really doesn't want those horses to get out.".

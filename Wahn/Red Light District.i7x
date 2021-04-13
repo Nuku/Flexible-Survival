@@ -233,9 +233,43 @@ after looking while player is in Crimson Street:
 		project the Figure of Map_RedLight_11_icon;
 
 to say RedLightCrimsonStreetDesc:
-	say "     You have arrived at the entrance of the Crimson Street, in which a strange and ominous red light dims through with no logical explanation. It seems pretty empty and oddly silent, without anything of interest at the first glance. All the buildings here look either abandoned or looted, although everything looks mysteriously clean, unlike the other streets. Staying here gives you an offsetting feeling you can't quite specify, but besides that, it seems you cannot proceed any further from here, unless any of these buildings are of any interest to you at some point.";
+	say "     You have arrived at the entrance of the Crimson Street, in which a strange and ominous red light dims through with no logical explanation. It seems pretty empty and oddly silent, without anything of interest at the first glance. All the buildings here look either abandoned or looted, although everything looks mysteriously clean, unlike the other streets. Staying here gives you an offsetting feeling you can't quite specify, but besides that, it seems you cannot proceed any further from here if you want to stay on the main paths, unless any of these buildings are of any interest to you at some point. Southeast of you is a dark alley you can pass through, however.";
+	if Hellfire Club is known:
+		say "     The Hellfire Club stands at a visible range from your position, to the north, and you could enter it at any point.";
 
 instead of smelling Crimson Street:
 	say "     There's an unsettling sweet smell around here, rather captivating the more you try to feel it. It's not perfume, nor anything of the sort, but it strikes you as something seductively demonic in nature.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Dark Alley	"Dark Alley"
+
+Dark Alley is a room.
+Dark Alley is southeast of Crimson Street.
+The earea of Dark Alley is "Red".
+Description of Dark Alley is "[RedLightDarkAlleyDesc]".
+
+to say RedLightDarkAlleyDesc:
+	say "     You arrive at an oddly dark alleyway, in which you can see a few garbage containers and plenty of trash scattered all along the path. One of the very first few things you notice is that it does not smell particularly good, and that is quite understandable given the amount of junk within your proximity. You can head deeper inside and turn southwest to arrive at an extension of the alleyway, or make your way towards the Crimson Street, to the northwest.";
+
+instead of smelling Dark Alley:
+	say "     The smell is bad, like piles of garbage that remained here for a long time.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Narrow Alley	"Narrow Alley"
+
+Narrow Alley is a room.
+Narrow Alley is southwest of Dark Alley.
+Narrow Alley is northeast of Northern Street 1.
+Narrow Alley is southeast of Northern Street 2.
+The earea of Narrow Alley is "Red".
+Description of Narrow Alley is "[RedLightNarrowAlleyDesc]".
+
+to say RedLightNarrowAlleyDesc:
+	say "     This is one particularly narrow alley, with nothing out of the ordinary despite its low width. It is quite silent in here, as well, and the path seems relatively clean, with only a few useless objects lying around the walls, some damaged beyond recognition. If you walk deeper ahead, you can make a turn into another alleyway, to the northeast. This area also connects back to the Northern Street, if you wish to return to a broader area.";
+
+instead of smelling Narrow Alley:
+	say "     You cannot pick any specific scent in here... other than a very strong musky scent. This must be one of those frequent sex encounter spots.";
 
 Red Light District ends here.

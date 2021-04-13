@@ -1027,8 +1027,10 @@ to NumberVariableSave:
 			now NumberVarValue entry is FeralMuttDominance;
 		-- "FeralMuttFurColorNumber":
 			now NumberVarValue entry is FeralMuttFurColorNumber;
-		-- "FeralWolfdefeat":
-			now NumberVarValue entry is FeralWolfdefeat;
+		-- "FeralWolfBitchDefeat":
+			now NumberVarValue entry is FeralWolfBitchDefeat;
+		-- "FeralWolfMaleDefeat":
+			now NumberVarValue entry is FeralWolfMaleDefeat;
 		-- "FeralWolfSpecialFightNumber":
 			now NumberVarValue entry is FeralWolfSpecialFightNumber;
 		-- "ferretvisit":
@@ -2839,8 +2841,10 @@ to NumberVariableSave:
 			now NumberVarValue entry is WhoringExperience;
 		-- "WineFound":
 			now NumberVarValue entry is WineFound;
-		-- "wolffight":
-			now NumberVarValue entry is wolffight;
+		-- "FeralWolfMaleFight":
+			now NumberVarValue entry is FeralWolfMaleFight;
+		-- "FeralWolfBitchFight":
+			now NumberVarValue entry is FeralWolfBitchFight;
 		-- "wolfhermdefeat":
 			now NumberVarValue entry is wolfhermdefeat;
 		-- "wolfhermvictory":
@@ -4676,8 +4680,10 @@ to VariableNumberLoad:
 					now FeralMuttDominance is numberVarValue entry;
 				-- "FeralMuttFurColorNumber":
 					now FeralMuttFurColorNumber is numberVarValue entry;
-				-- "FeralWolfdefeat":
-					now FeralWolfdefeat is numberVarValue entry;
+				-- "FeralWolfMaleDefeat":
+					now FeralWolfMaleDefeat is numberVarValue entry;
+				-- "FeralWolfBitchDefeat":
+					now FeralWolfBitchDefeat is numberVarValue entry;
 				-- "FeralWolfSpecialFightNumber":
 					now FeralWolfSpecialFightNumber is numberVarValue entry;
 				-- "ferretvisit":
@@ -6490,8 +6496,10 @@ to VariableNumberLoad:
 					now WhoringExperience is numberVarValue entry;
 				-- "WineFound":
 					now WineFound is numberVarValue entry;
-				-- "wolffight":
-					now wolffight is numberVarValue entry;
+				-- "FeralWolfMaleFight":
+					now FeralWolfMaleFight is numberVarValue entry;
+				-- "FeralWolfBitchFight":
+					now FeralWolfBitchFight is numberVarValue entry;
 				-- "wolfhermdefeat":
 					now wolfhermdefeat is numberVarValue entry;
 				-- "wolfhermvictory":

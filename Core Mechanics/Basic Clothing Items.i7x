@@ -73,7 +73,7 @@ AC of ripped jeans is 0.
 Effectiveness of ripped jeans is 0.
 Placement of ripped jeans is "waist".
 Descmod of ripped jeans is "A pair of ripped and torn jeans cover your hips and legs. Even though they have holes, wearing them gives you a somewhat protected feeling.".
-Slot of ripped jeans is "waist".
+Slot of ripped jeans is "legs".
 Scent of ripped jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 black jeans is a grab object.
@@ -87,7 +87,7 @@ AC of black jeans is 0.
 Effectiveness of black jeans is 0.
 Placement of black jeans is "waist".
 Descmod of black jeans is "A pair of solid black jeans cover your hips and legs. The sturdy fabric gives you a well-protected feeling.".
-Slot of black jeans is "waist".
+Slot of black jeans is "legs".
 Scent of black jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 sturdy jeans is a grab object.
@@ -101,7 +101,7 @@ AC of sturdy jeans is 0.
 Effectiveness of sturdy jeans is 0.
 Placement of sturdy jeans is "waist".
 Descmod of sturdy jeans is "A pair of dark blue jeans cover your hips and legs. The sturdy fabric gives you a well-protected feeling.".
-Slot of sturdy jeans is "waist".
+Slot of sturdy jeans is "legs".
 Scent of sturdy jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 skinny jeans is a grab object.
@@ -115,7 +115,7 @@ AC of skinny jeans is 0.
 Effectiveness of skinny jeans is 0.
 Placement of skinny jeans is "waist".
 Descmod of skinny jeans is "A pair of dark blue jeans cover your hips and legs. They look almost painted onto you, with stretchy fabric that follows every last curve of your legs and hips.".
-Slot of skinny jeans is "waist".
+Slot of skinny jeans is "legs".
 Scent of skinny jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 hot pants is a grab object.
@@ -129,7 +129,7 @@ AC of hot pants is 0.
 Effectiveness of hot pants is 0.
 Placement of hot pants is "waist".
 Descmod of hot pants is "A pair of red hot pants cover your hips and legs. They are really skimpy, barely covering a third of your thighs. If they were any tighter, you could call them underwear.".
-Slot of hot pants is "waist".
+Slot of hot pants is "legs".
 Scent of hot pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 gray pants is a grab object.
@@ -143,7 +143,7 @@ AC of gray pants is 0.
 Effectiveness of gray pants is 0.
 Placement of gray pants is "waist".
 Descmod of gray pants is "A pair of gray pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
-Slot of gray pants is "waist".
+Slot of gray pants is "legs".
 Scent of gray pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 camo pants is a grab object.
@@ -157,7 +157,7 @@ AC of camo pants is 0.
 Effectiveness of camo pants is 0.
 Placement of camo pants is "waist".
 Descmod of camo pants is "A pair of camo pants covers your hips and legs. The sturdy fabric gives you a well-protected feeling.".
-Slot of camo pants is "waist".
+Slot of camo pants is "legs".
 Scent of camo pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 jogging pants is a grab object.
@@ -171,7 +171,7 @@ AC of jogging pants is 0.
 Effectiveness of jogging pants is 0.
 Placement of jogging pants is "waist".
 Descmod of jogging pants is "A pair of jogging pants cover your hips and legs. They are fairly light and soft, but you worry how long they'll last given the regular fights you can get into.".
-Slot of jogging pants is "waist".
+Slot of jogging pants is "legs".
 Scent of jogging pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 bermuda shorts is a grab object.
@@ -344,9 +344,8 @@ Scent of mesh shirt is "The fabric has the typical faintly musky scent clothing 
 
 When Play begins:
 	[
-	add { "combat boots", "brown loafers", "leather sandals", "high heels", "stiletto heels", "jogging shoes", "cowboy boots" } to invent of Grey Abbey Library;
+	add { "brown loafers", "leather sandals", "high heels", "stiletto heels", "jogging shoes", "cowboy boots" } to invent of Grey Abbey Library;
 	]
-	now plural of combat boots is true;
 	now plural of brown loafers is true;
 	now plural of leather sandals is true;
 	now plural of high heels is true;
@@ -356,26 +355,12 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"combat boots"	"A pair of black combat boots. They are quite sturdy and fairly heavy because of the steel caps in them."	3	combat boots
 "brown loafers"	"A pair of brown loafers. They look comfortable and one can just slide right in without having to worry about tying them."	1	brown loafers
 "leather sandals"	"A pair of leather sandals. They have a number of straps that can be used to fasten them to your foot."	1	leather sandals
 "high heels"	"A pair of bright red woman's shoes, with moderately high heels. Not exactly the best thing to run around with at speed."	1	high heels
 "stiletto heels"	"A pair of black woman's shoes, with very high heels. Not exactly the best thing to run around with at speed."	1	stiletto heels
 "jogging shoes"	"A pair of athlete's jogging shoes. They look new and are still bright and shiny."	1	jogging shoes
 "cowboy boots"	"A pair of cowboy boots made from dark brown leather, complete with high heels and a relatively narrow toe. They are sure to make using stirrups easier, and can protect against rattlesnake bites."	1	cowboy boots
-
-combat boots is a grab object.
-combat boots is equipment.
-It is not temporary.
-Plural of combat boots is true.
-Taur-compatible of combat boots is false.
-Size of combat boots is 3.
-AC of combat boots is 0.
-Effectiveness of combat boots is 0.
-Placement of combat boots is "feet".
-Descmod of combat boots is "You are wearing sturdy black combat boots. They even have steel caps that protect your toes.".
-Slot of combat boots is "feet".
-Scent of combat boots is "The boots smell like leather and rubber.".
 
 brown loafers is a grab object.
 brown loafers is equipment.
@@ -712,9 +697,9 @@ name	desc	weight	object
 "protective helmet"	"A white protection helmet as might be worn by industrial workers. That should certainly ward off some bumps to the wearer's head."	2	protective helmet
 "tin-foil hat"	"A bunch of tin foil, bent into shape to cover a human's head. It might protect its wearer from alien mind control rays, or could possibly ensure that the head is still juicy and not burned on the outside when baked..."	0	tin-foil hat
 "gray fedora"	"A gray fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, or a hipster."	0	gray fedora
-"baseball cap"	"A blue baseball cap with the logo of the Tenvale Gorillas on its front."	0	baseball cap
+"baseball cap"	"A blue baseball cap with the logo of the Tenvale Silverbacks on its front."	0	baseball cap
 "knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull."	0	knitted skullcap
-"football helmet"	"A white football helmet with the logo of the Tenvale Gorillas on both sides. Heavy, but protective."	3	football helmet
+"football helmet"	"A white football helmet with the logo of the Tenvale Silverbacks on both sides. Heavy, but protective."	3	football helmet
 "urban explorer helmet"	"A protective helmet with flashy crimson-red finish. It should certainly ward off some bumps to someone's head. A compact camera is attached to the front, to capture everything the wearer sees, but sadly its batteries seem to be empty and it doesn't turn on."	2	urban explorer helmet
 
 motorcycle helmet is a grab object.
@@ -849,7 +834,7 @@ name	desc	weight	object
 "bulletproof vest"	"A heavy-duty bulletproof vest, complete with metal plates for extra protection."	14	bulletproof vest
 "medieval breastplate"	"A shiny medieval breastplate. It is either a historical artifact or a quite good reproduction - either way, this should allow for some serious protection for someone who wants to survive the nanite apocalypse."	20	medieval breastplate
 "roadsign breastplate"	"A breastplate that someone fairly large seems to have crafted from things that were available - namely roadsigns. The front is formed by a STOP sign that has been hammered into a slight curve, with further signs bolted to its edges to curve around the sides of the body. Heavy leather straps for over the shoulders hold another stop sign forming the back plate."	30	roadsign breastplate
-"football pads"	"Tough polymer football pads, sized to cover the shoulders and upper chest of a human player. There even is an extra plate attached to the front in order to cover the abdominal area of the wearer. You can see the logo of the Tenvale Gorillas emblazoned on the left pec."	9	football pads
+"football pads"	"Tough polymer football pads, sized to cover the shoulders and upper chest of a human player. There even is an extra plate attached to the front in order to cover the abdominal area of the wearer. You can see the logo of the Tenvale Silverbacks emblazoned on the left pec."	9	football pads
 "life jacket"	"A bright orange life jacket. It'll help normal humans stay afloat and comes with an attached whistle and light."	2	life jacket
 "shoulder pad"	"An oversized, padded shoulderpad that juts out to the side too much. It won't cover much, but it might help."	1	shoulder pad
 

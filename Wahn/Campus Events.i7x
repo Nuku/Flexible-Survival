@@ -106,7 +106,7 @@ to say ResolveEvent Wandering the Campus:
 		challenge "Red Kangaroo";
 		add 4 to campuswander;
 	else if T is 5:
-		say "     A large wolf creature leaps out from a broken window on one of the buildings. Shi growls toothily at you as shi rises up from all fours to stand upright, showing off hir herm body to you. Shi looks you over with a hunger that is wholly carnal in nature.";
+		say "     A large wolf creature leaps out from a broken window on one of the buildings. She growls toothily at you as she rises up from all fours to stand upright, showing off her herm body to you. She looks you over with a hunger that is wholly carnal in nature.";
 		challenge "Painted Wolf Herm";
 		add 5 to campuswander;
 	else if T is 6:

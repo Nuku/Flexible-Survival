@@ -33,6 +33,10 @@ IDEA: Scene with James
 ]
 
 
+[ Collection of ideas                                                 ]
+[ - Pay Bastian to fuck Zoe and watch                                 ]
+[ - Pay to let one of the player companions fuck Zoe                  ]
+
 Section 1 - Person Definitions
 
 Part A - Zoe
@@ -78,9 +82,10 @@ instead of sniffing Zoe:
 
 to say ZoeDesc:
 	if Resolution of Rabbit Tagger is 2: [saved]
-		project the figure of Zoe_face_icon;
+		project Figure of Zoe_clothed_icon;
 		say "     Zoe looks as lively as ever. The small bunny's short, white fur is dirtied here and there by paint stains of many colors. She wears her usual clothes: a short-sleeved T-shirt and a pair of shorts. [if Loyalty of Zoe < 5]Zoe gives you a polite smile, but you notice that she keeps her guard around you[else]Zoe's smile beams at you, and the young girl seems completely relaxed in your presence[end if].";
 	else if Resolution of Rabbit Tagger is 1: [tied up]
+		project Figure of Zoe_naked_icon;
 		say "     You look at Zoe's hogtied body inside the van. Her fur is ruffled in many places and glued together around her crotch. The ropes force her to stay on her knees, face to the ground and arms to the back. Zoe returns you a broken look[if XP of Zoe is 1], which instantly turns into a mix of resignation and contained anger when she recognizes you from earlier[end if].";
 	else:
 		say "WARN: This description should not appear.";
@@ -129,7 +134,7 @@ instead of conversing the Zoe:
 
 instead of fucking Zoe:
 	if Resolution of Rabbit Tagger is 2: [saved]
-		project the figure of Zoe_face_icon;
+		project the figure of Zoe_naked_icon;
 		if Loyalty of Zoe < 5:
 			if "Propositioned" is not listed in the Traits of Zoe:
 				say "     Zoe tenses up when you proposition her for sex. 'I... Um...' She looks away, her mouth contorting with anxiety. 'I don't... I don't feel like it. Is it okay, if...' You give Zoe an understanding. She looks visibly relieved, although she still acts wary. 'Thanks. Sorry, I'm just... Not in the mood for that kind of thing.'";
@@ -151,6 +156,7 @@ instead of fucking Zoe:
 			else:
 				say "[ZoeGoodFuckMenu]";
 	else:
+		project the figure of Zoe_naked_icon;
 		say "[ZoeMolest]";
 
 [First time of Zoe with the Player, if she is still a virgin]
@@ -513,7 +519,7 @@ to say ZoeMolestVag:
 	if Zoe is PlayerCumLoadInflates:
 		say "     The bunny girl's belly slowly fills with your cum with obscene [italic type]glug, glug[roman type] sounds. Zoe is left gasping as her womb is filled to full capacity and beyond, the overfill flowing out of her cunt. When you finally lift your body off her, more of your fluids squirt on the floor as the spasms of her body eject it. Meanwhile, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and appraises the situation. 'Clean your mess before you get out, will ya. The mop's on your left.'";
 	else:
-		say "     Your cock squirt their load inside Zoe's womb, joining the many others before you. Letting Zoe recover on the floor of the van, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and lets you out. 'Don't worry about [']accidents['], we're keeping her on the pill,' he says nonchalantly while munching on the supplies you gave him. 'Come again soon, and all that.'";
+		say "     Your cock squirt their load inside Zoe's womb, joining the many others before you. Letting Zoe recover on the floor of the van, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and lets you out. 'Don't worry about [']accidents['], we're keeping her on some special contraceptives an associate of Logan's cooked up,' he says nonchalantly while munching on the supplies you gave him. 'Come again soon, and all that.'";
 
 to say ZoeMolestAnal:
 	say "     You force Zoe to give you access to her ass and push your fingers in. The bunny girl winces, but when you pull out your fingers, they are wet with the cum of previous visitors. You point this out to Zoe while swiping your fingers off her fur. The bunny's only response is a heartbroken sob. You lean over and make a show of frotting your [cock size desc of Player] cock over her butt-cheeks.";
@@ -562,9 +568,9 @@ instead of sniffing Suspicious Van:
 	say "It smells of oil[if Resolution of Rabbit Tagger is 1], and there is a lingering smell of male sweat and cum in the vicinity[end if].";
 
 to say suspiciousVanDesc:
-	if Rabbit Tagger is not resolved:
+	if Rabbit Tagger is not resolved or Resolution of Rabbit Tagger is 2: [either never seen Zoe, or saved her]
 		say "     You take a look at the van. It is large, white, and in a rather good state compared to the other vehicles, as if someone has been regularly taking care of it after the start of the nanite plague. A quick test tells you that the doors are locked.";
-	else if "Used" is listed in the Traits of Zoe:
+	else if "Used" is listed in the Traits of Zoe: [Zoe is in the van]
 		say "     You take a look at the van. It is constantly shaking and squeaking. After you take a few steps closer, you hear loud grunts coming from inside the vehicle, as well as Zoe's cries.";
 	else:
 		say "     You take a look at the van. It sits, immobile, in the middle of the parking lot. Since you know what is used for, the vehicle leaves you uneasy.";
@@ -601,12 +607,103 @@ Wolverine Pimp is in Nowhere.
 Understand "van guard" as Wolverine Pimp.
 
 Description of Wolverine Pimp is "You gauge the anthro wolverine sitting in a chair, next to the van. He wears a tattered security guard outfit, which he seems to have [']upgraded['] by ripping out the sleeves. His clothes are tattered with stains, which you suspect may not be water or grape juice. The guard raises an eyebrow at you. 'What are you looking at?'".
-Conversation of Wolverine Pimp is { "[one of]'Looking for fun times? [bold type]Trade me[roman type] some food or beverage, and you'll get a turn.'[or]'The girl's here of her own will, I swear. Not that you can disprove anything... Heh heh!'[or]'Watch out if you want a pass with the bunny: she bites. Don't forget to use the ring gag.'[or]'I wonder when the boss will let her go. Hell, I'd rather wonder [italic type]if[roman type] the boss will let her go. Ha ha ha...'[at random]" }.
+Conversation of Wolverine Pimp is { "..." }.
+
+instead of conversing Wolverine Pimp:
+	say "[WolverinePimpTalkMenu]";
+
+to say WolverinePimpTalkMenu:
+	now sextablerun is 0;
+	say "     As you approach the shady-looking wolverine, he says, [one of]'Looking for fun times? [bold type]Trade me[roman type] some food or beverage, and you'll get a turn.'[or]'Watch out if you want a pass with the bunny: she bites. Don't forget to use the ring gag.'[or]'I wonder when the boss will let her go. Hell, I'd rather wonder [italic type]if[roman type] the boss will let her go. Ha ha ha...'[at random]";
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ask what he'll take in trade";
+	now sortorder entry is 1;
+	now description entry is "Ask with what items you can pay";
+	[]
+	if carried of food > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Trade him some food for a turn with Zoe";
+		now sortorder entry is 2;
+		now description entry is "Pay the pimp to have fun with the bunny";
+	[]
+	if carried of water bottle > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Trade him some clean water for a turn with Zoe";
+		now sortorder entry is 3;
+		now description entry is "Pay the pimp to have fun with the bunny";
+	[]
+	if carried of chips > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Trade him some chips for a turn with Zoe";
+		now sortorder entry is 4;
+		now description entry is "Pay the pimp to have fun with the bunny";
+	[]
+	if carried of soda > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Trade him some soda for a turn with Zoe";
+		now sortorder entry is 5;
+		now description entry is "Pay the pimp to have fun with the bunny";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let DoneTalking be false;
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Ask what he'll take in trade":
+					say "[WPimp_TradeOptions]";
+				else if nam is "Trade him some food for a turn with Zoe":
+					say "[WPimp_TradeFood]";
+					now DoneTalking is true;
+				else if nam is "Trade him some clean water for a turn with Zoe":
+					say "[WPimp_TradeWater]";
+					now DoneTalking is true;
+				else if nam is "Trade him some chips for a turn with Zoe":
+					say "[WPimp_TradeChips]";
+					now DoneTalking is true;
+				else if nam is "Trade him some soda for a turn with Zoe":
+					say "[WPimp_TradeSoda]";
+					now DoneTalking is true;
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the shady wolverine, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say WPimp_Introduction:
+	if "NameKnown" is not listed in Traits of Wolverine Pimp:
+		say "     'Why? You trying to go buddy buddy with me? Just so we're clear, that's not gonna get you a freebie or any such thing.' He crosses his arms in front of his chest, giving you a firm look, then eventually says, 'Ya can call me Bastian.' ";
+		TraitGain "NameKnown" for Wolverine Pimp;
+	else:
+		say "     The wolverine looks at you with one raised eyebrow, then replies, 'Eh? What happened, you get clonked in the head or something? Transformations liquified your brains and it crawled out? It's Bastian, remember?'";
+	[TODO: Add more info - customer from the mall? other friends of Logan? etc.]
+
+to say WPimp_TradeOptions:
+	say "     As you ask the wolverine what exactly he'll take in trade for some time with Zoe, he lets out a mildly annoyed snort. 'Come on, it's not that that difficult to understand. Give me some trade goods - the good stuff, you know. Any kind of food, as long as it's in an unopened package, from before this whole mess kicked off. Water bottles, chips, soda. All that good shit is fine by me. So, got some stuff you wanna give me?' He makes a hand gesture, inviting you to hand something over, followed by a glance left and right, maybe a reflex from when he had to worry about actual police who'd be down on prostitution. Then the wolverine adds in a loud tone, 'Just don't waste my time with some cloudy piss-water in a bottle! The next guy who tries to trick me with such crap is gonna get a proper beating!'";
+	say "     Curious about the sudden outburst, you follow the pimp's gaze to the nearest edge of the large parking lot, where two shady figures stand in the shadows of the abandoned buildings, apparently talking to each other in low tones while throwing glances to the van. Looks like his comment was meant more for them than yourself. 'Fucking moochers,' the anthro grumbles under his breath, then turns his attention back to you.";
 
 instead of sniffing Wolverine Pimp:
 	say "The wolverine gives off an intimidating, bestial smell.";
 
 instead of trading the food when the current action involves the Wolverine Pimp:
+	say "[WPimp_TradeFood]";
+
+to say WPimp_TradeFood:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
@@ -614,6 +711,9 @@ instead of trading the food when the current action involves the Wolverine Pimp:
 		ItemLoss food by 1;
 
 instead of trading the water bottle when the current action involves the Wolverine Pimp:
+	say "[WPimp_TradeWater]";
+
+to say WPimp_TradeWater:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
@@ -621,6 +721,9 @@ instead of trading the water bottle when the current action involves the Wolveri
 		ItemLoss water bottle by 1;
 
 instead of trading the chips when the current action involves the Wolverine Pimp:
+	say "[WPimp_TradeChips]";
+
+to say WPimp_TradeChips:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
@@ -628,6 +731,9 @@ instead of trading the chips when the current action involves the Wolverine Pimp
 		ItemLoss chips by 1;
 
 instead of trading the soda when the current action involves the Wolverine Pimp:
+	say "[WPimp_TradeSoda]";
+
+to say WPimp_TradeSoda:
 	if "Used" is listed in the traits of Zoe or Player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
@@ -687,10 +793,10 @@ instead of going to Smith Haven Mall Lot West while (a random chance of 1 in 3 s
 	now Rabbit Tagger is resolved;
 
 to ZoeTheTaggerRabbitEvents:
+	project the figure of Zoe_clothed_icon;
 	say "     As you make your way through the chaos of parked, crashed and often cum-smeared cars, a sudden clicking noise makes you listen up. Sounds like some marbles being shaken in a metal can... Then a hissing noise follows, drawing your attention to the side of the Mall, where a small-ish figure is spray-painting the anarchy symbol on the wall. Dressed in baggy camo pants and a black hoodie, it is hard to make out who or what it is exactly - though the snow-white fur covering the slender hand with the can hints at it being an anthro furry. The spray-painter shakes the can in their hand once more, preparing to add some more writing next to the symbol - and in their eagerness of thinking up something fitting, the furry concentrates on the wall itself just a little too much... totally missing the wolverine guard coming around the outside corner of the mall on his patrol.";
 	say "     With a growl, the guardsman storms up to the hapless spray-painter, who tries to escape in fright. Futilely, in this case, as the muscular wolverine runs them down with little effort, capitalizing well on the first few seconds of surprise. Getting a hold of the black hoodie, he stops the fleeing furry cold with a harsh wrench backwards, making them sprawl on the asphalt of the parking lot. Wandering closer in a relatively casual pace (as not to appear as an accomplice and drawing the ire of the wolverine yourself), you can make out that the spray-painter is a young bunny girl with snow-white fur, except the dark brown mop of her head hair. She looks up at the predator standing over her with fright-widened blue eyes and tries to pull away, only to be stopped once more by his unrelenting grip on her clothes.";
 	WaitLineBreak;
-	project the figure of Zoe_face_icon;
 	say "     'What do we have here?! A dirty little punk in the midst of vandalism. You're going straight in the lockup!' the guardsman growls out with determination and pulls her up to stand, putting his other hand on her shoulder and ready to lead her to the mall entrance. 'No please! Let me go,' the bunny girl wails, then suddenly ducks low and wrenches her hoodie from the wolverine's grip. She half-falls down to the ground, but manages to push herself up in a mad scramble, the blunt claws on her slender paws scraping over the asphalt as she starts to run away. 'Fuck!' the guardsman barks and pounces on his would-be escapee, this time only barely fast enough to snatch her, hooking his strong fingers behind the belt-line of the girl's camo pants. Loose as the pants are, this pulls them down over her slender hips and thighs, tangling her lower legs up in fabric. The wolverine makes use of this opportunity, grabbing the hoodie and really wrapping it around his fist to avoid further escape attempts.";
 	say "     'Okay, that's it! No more mister nice-guy. Gonna punish you myself, punk! What's your name anyways?' the mall guardsman growls aggressively, giving her a slap on the snowy-white buttocks. 'Ouch! I - I'm Zoe. Please don't hit me anymore,' the spray-painter sobs, turning her big blue eyes to him beseechingly. 'Oh, I'm not gonna hit you,' her captor replies, a domineering grin spreading over his muzzle as he goes on to say, 'But there will be a fair bit of pounding in your future.' After that, he lowers a hand to undo the button of his uniform pants, then pulls down the zipper to reveal his rapidly hardening cock. As it flops out to rest against the curve of Zoe's buttocks, the wolverine runs his thumb over the folds of her exposed pussy, then dips the fingertip in to feel her insides. 'Virgin too, eh? Nice - gonna enjoy breaking you in!' he barks lustily and leans forward to lick the cheek of the trembling bunny girl.";
 	say "     [bold type]Well, that escalated quickly. What do you want to do now?[roman type][line break]";
@@ -699,6 +805,7 @@ to ZoeTheTaggerRabbitEvents:
 	say "     ([link]N[as]n[end link]) - Speak up, this isn't right!";
 	if Player consents:
 		LineBreak;
+		project Figure of Zoe_naked_icon;
 		say "     'No no no! Please I'm sor- ahhh!' Zoe starts to say, then lets out a shocked yell as the wolverine thrusts into her from behind, burying half his length into her pussy and claiming the bunny's cherry. 'Best to get it over quick, you see?' he tells her in a satisfied tone, then licks her cheek again before taking the fur at the back of her neck between his teeth and driving the rest of the way into her trembling pussy. With a deep grunt at bottoming out in a virgin girl, the wolverine holds her tight to his chest and starts to grope her chest, feeling the bunny's small boobs hiding under the fabric of her hoodie. 'Nice and tight,' the big man adds a moment later, grinding his hips against her rear a little.";
 		say "     The wolverine slowly pulls out of his captive and rubs the slick length of his shaft against her furry buttocks, then sinks it back into Zoe's pussy with a harsh thrust, followed by another and another. Certainly looks like a demanding introduction to womanhood and fucking for the anthro girl. Zoe gets pounded from behind for a little while, biting her lip as she tries to suppress any noise from her throat and with tears welling up at the realization that this will always stay with her as her first time being fucked. When she finally can't help but let out a mixture of a whimper and moan on one of his deep thrusts, the mall guard pauses and pulls her up, leaning around to look her in the eye.";
 		NPCSexAftermath Zoe receives "PussyFuck" from Logan;

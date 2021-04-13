@@ -26,6 +26,13 @@ DemonBruteStatus is a number that varies. DemonBruteStatus is usually 0.
 [  1: herm demon brute                                  ]
 [  2: female demon brute                                ]
 
+
+[ Lore Note:                                                       ]
+[ Children: Brutus saw any child he fathered in hell quickly die,  ]
+[      at which point they were reborn in limbo - where demons can ]
+[      not go (never had a relationship with a child, not that he  ]
+[      would have been nice, as a standard demon brute)            ]
+
 Section 1 - Fighting and Capturing the Brute
 
 to say demonbrutedesc:

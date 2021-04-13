@@ -13,6 +13,7 @@ Section 1 - Monster Description
 
 to say horsemazonDescription:
 	setmongender 4; [creature is female]
+	project Figure of Horsemazon_clothed_icon;
 	if inasituation is true:
 		say "";
 	else:
@@ -27,6 +28,7 @@ to say horsemazonVictory:          [Scene for when the Horsemazon defeats the pl
 	if inasituation is true:
 		say "";
 	else:
+		project Figure of Horsemazon_clothed_icon;
 		if HP of player > 0:	[ Submitted ]
 			say "     Raising your hands in a friendly gesture of peace, you try to deescalate the situation. So focused on winning the fight, she doesn't seem to notice at first, and for a moment, you think you've made a terrible mistake as she swings her lasso around to strike at you. But just before she throws, she notices your gesture and hesitates. You take the opportunity to speak, putting on a friendly smile. 'I'm not here to fight,' you try to calmly explain. 'And I'm not some crazy mutant.' It appears you were convincing, as she lowers her lasso and crop, bringing her hands to her hips with a disapproving glare.";
 			say "     'Well, you ought to not be wandering the streets like one. Otherwise you might get into trouble with a strong woman like me,' she says a bit jokingly. She stows away her 'weapons' on her belt before striding over to you and holding out her hand in greeting. Seeing as she was so quick to start a fight, you're taken by surprise at the sudden shift in the tone of the situation. She seems to have taken you for your word about being friendly. You reach out and shake her hand, finding her grip unsurprisingly strong and firm. 'I'm Jana, by the way,' she lets you know. The two of you exchange names and pleasantries, and after a little while of chatting, you feel like you've gotten to know Jana a bit. 'Well,' she says. 'It's been nice, but I really ought to head off. Now that I know who you are, you won't have to worry about being jumped. Just make sure you don't go wild on me,' she says with a teasing smile. As she turns to depart, she looks over her shoulder and adds, 'I'd love if you came to stop by and visit me sometime. I've got a room in the Mare's Quarters, down at the Stables Hotel.' Realizing how much time has passed, you wave goodbye and collect yourself before returning to your own explorations.";
@@ -56,6 +58,7 @@ to say horsemazonDefeat:           [Scene for when the player defeats the Horsem
 	if inasituation is true:
 		say "";
 	else:
+		project Figure of Horsemazon_naked_icon;
 		say "     The horsemazon stumbles from your final blow, toppling to the ground in exhaustion. Her crop noisily clatters on the ground as she falls onto all fours. Worn down from the tough fight the Amazon has put up, you can't help but take the opportunity to catch your breath. After a moment of recovery, you ready yourself to fight again, but looking down, you see she's finally given up. It looks like you've finally managed to tire her out.";
 		say "     The smell of arousal makes it clear that the fight has you both a bit excited. If you wanted to, you're certain she would be up for some mutual fun. You might even be able to turn the tables on this usually dominant mare. [bold type]Do you take advantage of the fallen horsemazon?[roman type][line break]";
 		now sextablerun is 0;

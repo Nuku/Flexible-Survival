@@ -264,7 +264,7 @@ to say BoghrimTalk3: [go hunting]
 				say "gasp and the large orc appears a moment later, carrying a weakly struggling orangutan by the scruff of his neck. Dropping his captive behind you, Boghrim orders in a gruff tone, 'Clean him up, monkey.'";
 				WaitLineBreak;
 				say "     There is a short protest of, 'I'm an ape, you stupid - umph,' ending when Boghrim pushes the primate's head between your asscheeks. The orangutan can't help but get a taste of the of the potent orc cum leaking out of your hole, causing him to stop struggling almost instantly, then start giving tentative and later increasingly vigorous licks at your well-bred hole. It doesn't take long for the ape's questing tongue to scoop up every last bit of Boghrim's cum that leaked out of you and all he can reach inside your ass. The big orc even has to pull him off you since the orangutan just won't stop lapping your crack, drunk with lust as he gets in short notice. With all the evidence of your activities now safely taken care of, Boghrim nudges you with his arm and says, 'Come on buddy, let's go home.' You quickly put your clothes back in order and follow the orc out of the alley, leaving the ape behind, now lying on the ground in his drunken buzz and furiously jerking himself off.";
-		NPCSexAftermath Player receives "Assfuck" from Boghrim;
+		NPCSexAftermath Player receives "AssFuck" from Boghrim;
 		addAlcPoints 2;
 	else: [nope, let's hunt]
 		LineBreak;
@@ -487,7 +487,7 @@ to say BoghrimFirstFuck:
 		say "     Waiting some time longer till the last little spurt of his load is deposited deep inside your hole, the orc pulls out with a wet slurp and moves to kneel beside you on the bed. Giving you a little poke in the side with his elbow and a wide grin, he add with a chuckle, 'Watch this.' Then Boghrim bellows, 'Clean us up, slave!', which results in Jason almost jumping off the bed... or well, at least instantly coming to stand on his feet from the sudden fright. The panting young man then kneels down immediately and goes down on his master, slurping the remnants of his load up from the orc's shaft and lapping at his pubes. After Boghrim has been cleaned of cum, Jason moves on to you, licking up your own load before getting in position to eat his master's cum out of your hole.";
 		WaitLineBreak;
 		say "     Eventually, as Jason finishes with you two and joins Boghrim in a post-coital nap cuddled up against his master's side, you get back up from the bed and gather up your belongings. While doing so, you notice that the sting of the teethmarks on your shoulder has already faded completely, and by craning your neck a bit, you see that the nanites have already healed them over - though not without leaving two spots of distinctive scarring. Something to remember your first time with Boghrim by, it seems. Putting on your clothes and gear, you then make your way back down into the drinking hall.";
-		NPCSexAftermath Jason receives "Assfuck" from Player;
+		NPCSexAftermath Jason receives "AssFuck" from Player;
 	else:
 		LineBreak;
 		say "     Climbing on the bed to join Jason, you snake an arm around his back and pull him against your chest, then give him a deep and hungry kiss that goes on and on. After exploring the willing slave's mouth with your tongue a bit and letting your hands wander over his smooth-skinned muscular form, you give the young man a sudden shove that has him fall backwards onto the soft sheets. Pouncing the human before he can react in any way, you hold him down as he is with a hand on his broad chest, pressing him into the soft sheets, then move into position to kneel over him on all fours - with your crotch above his face and his in front of yours. Being such a well-trained butt-slut, the young man immediately takes hold of your shaft and starts to lap at it, loudly moaning, 'Mmmmh! Tasty!' before he takes your cockhead into his mouth and can only mumble around it anymore.";
@@ -505,7 +505,7 @@ to say BoghrimFirstFuck:
 		say "     Eventually, as Jason finishes with you two and joins Boghrim in a post-coital nap cuddled up against his master's side, you get back up from the bed and gather up your belongings. While doing so, you notice that the sting of the teethmarks on your shoulder has already faded completely, and by craning your neck a bit, you see that the nanites have already healed them over - though not without leaving two spots of distinctive scarring. Something to remember your first time with Boghrim by, it seems. Putting on your clothes and gear, you then make your way back down into the drinking hall.";
 		NPCSexAftermath Jason receives "OralCock" from Player;
 		NPCSexAftermath Player receives "OralCock" from Jason;
-	NPCSexAftermath Player receives "Assfuck" from Boghrim;
+	NPCSexAftermath Player receives "AssFuck" from Boghrim;
 	addAlcPoints 2;
 	FeatGain "Boghrim's Mark";
 	now HP of Boghrim is 1;
@@ -570,7 +570,7 @@ to say BoghrimSex1: [get fucked]
 			say "     Waiting some time longer till the last little spurt of his load is deposited deep inside your hole, the orc pulls out with a wet slurp and moves to kneel beside you on the bed. Giving you a little poke in the side with his elbow and a wide grin, he add with a chuckle, 'Watch this.' Then Boghrim bellows, 'Clean us up, slave!', which results in Jason almost jumping off the bed... or well, at least instantly coming to stand on his feet from the sudden fright. The panting young man then kneels down immediately and goes down on his master, slurping the remnants of his load up from the orc's shaft and lapping at his pubes. After Boghrim has been cleaned of cum, Jason moves on to you, licking up your own load before getting in position to eat his master's cum out of your hole.";
 			WaitLineBreak;
 			say "     Eventually, as Jason finishes with you two and joins Boghrim in a post-coital nap cuddled up against his master's side, you get back up from the bed and gather up your belongings. While doing so, you notice the distinct scars made by Boghrim's tusks on your shoulder again from the corner of your eye. Somehow, you can't help but feel good about having them, knowing that the mighty orc has accepted you as the only free man he has sex with. Putting on your clothes and gear, you then make your way back down into the drinking hall.";
-			NPCSexAftermath Jason receives "Assfuck" from Player;
+			NPCSexAftermath Jason receives "AssFuck" from Player;
 		else:
 			LineBreak;
 			say "     Climbing on the bed to join Jason, you snake an arm around his back and pull him against your chest, then give him a deep and hungry kiss that goes on and on. After exploring the willing slave's mouth with your tongue a bit and letting your hands wander over his smooth-skinned muscular form, you give the young man a sudden shove that has him fall backwards onto the soft sheets. Pouncing the human before he can react in any way, you hold him down as he is with a hand on his broad chest, pressing him into the soft sheets, then move into position to kneel over him on all fours - with your crotch above his face and his in front of yours. Being such a well-trained butt-slut, the young man immediately takes hold of your shaft and starts to lap at it, loudly moaning, 'Mmmmh! Tasty!' before he takes your cockhead into his mouth and can only mumble around it anymore.";
@@ -588,7 +588,7 @@ to say BoghrimSex1: [get fucked]
 			say "     Eventually, as Jason finishes with you two and joins Boghrim in a post-coital nap cuddled up against his master's side, you get back up from the bed and gather up your belongings. While doing so, you notice the distinct scars made by Boghrim's tusks on your shoulder again from the corner of your eye. Somehow, you can't help but feel good about having them, knowing that the mighty orc has accepted you as the only free man he has sex with. Putting on your clothes and gear, you then make your way back down into the drinking hall.";
 			NPCSexAftermath Jason receives "OralCock" from Player;
 			NPCSexAftermath Player receives "OralCock" from Jason;
-		NPCSexAftermath Player receives "Assfuck" from Boghrim;
+		NPCSexAftermath Player receives "AssFuck" from Boghrim;
 		addAlcPoints 2;
 
 to say BoghrimSex2: [get fucked]
@@ -609,7 +609,7 @@ to say BoghrimSex2: [get fucked]
 	WaitLineBreak;
 	say "     Waiting some time longer till the last little spurt of his load is deposited deep inside your hole, the orc pulls out with a wet slurp and moves to lie beside you on the bed, with his upper body partly raised. Giving you a little poke in the side with his elbow and a wide grin, he add with a chuckle, 'Watch this.' Then Boghrim bellows, 'Clean us up, slave!', which results in Jason instantly jumping up from his chair and hurrying to the bed. The panting young man then kneels down immediately and goes down on his master, slurping the remnants of his load up from the orc's shaft and lapping at his pubes. After Boghrim has been cleaned of cum, Jason moves on to you, getting in position to eat his master's cum out of your hole.";
 	say "     Eventually, as Jason finishes with you two and joins Boghrim in a post-coital nap cuddled up against his master's side, you get back up from the bed and gather up your belongings. While doing so, you notice the distinct scars made by Boghrim's tusks on your shoulder again from the corner of your eye. Somehow, you can't help but feel good about having them, knowing that the mighty orc has accepted you as the only free man he has sex with. Putting on your clothes and gear, you then make your way back down into the drinking hall.";
-	NPCSexAftermath Player receives "Assfuck" from Boghrim;
+	NPCSexAftermath Player receives "AssFuck" from Boghrim;
 	addAlcPoints 2;
 
 to say BoghrimSex3: [fuck him]
@@ -640,7 +640,7 @@ to say BoghrimSex3: [fuck him]
 			say "     Waiting some time longer till the last little spurt of his load is deposited deep inside your hole, the orc pulls out with a wet slurp and moves to lie beside you on the bed, with his upper body partly raised. Giving you a little poke in the side with his elbow and a wide grin, he add with a chuckle, 'Watch this.' Then Boghrim bellows, 'Clean us up, slave!', which results in Jason instantly jumping up from his chair and hurrying to the bed. The panting young man then kneels down immediately and goes down on his master, slurping the remnants of his load up from the orc's shaft and lapping at his pubes. After Boghrim has been cleaned of cum, Jason moves on to you, getting in position to eat his master's cum out of your hole.";
 			WaitLineBreak;
 			say "     Eventually, as Jason finishes with you two and joins Boghrim in a post-coital nap cuddled up against his master's side, you get back up from the bed and gather up your belongings. While doing so, you notice the distinct scars made by Boghrim's tusks on your shoulder again from the corner of your eye. Somehow, you can't help but feel good about having them, knowing that the mighty orc has accepted you as the only free man he has sex with. Putting on your clothes and gear, you then make your way back down into the drinking hall.";
-			NPCSexAftermath Player receives "Assfuck" from Boghrim;
+			NPCSexAftermath Player receives "AssFuck" from Boghrim;
 			addAlcPoints 2;
 		else if fightoutcome >= 30:[fled]
 			say "     As you rush out of the room, clutching your hastily snatched up gear, you hear Boghrim say, 'Bah - he gets me in the mood and then just runs off. Guess another little slut is gonna get fucked hard then.' The immediate answer of, 'Yes master,' by Jason shows in its eager tone how completely the young man has become Boghrim's obedient slave. Soon after, the breathless gasps and pants, as well as satisfied grunts and slapping noises of a tight butt being pounded echo out of Boghrim's lair.";
@@ -661,7 +661,7 @@ to say BoghrimSex3: [fuck him]
 			[TODO: Add douching for him to explain why he doesn't get knocked up]
 			if HP of Boghrim < 3:
 				now HP of Boghrim is 3;
-			NPCSexAftermath Boghrim receives "Assfuck" from Player;
+			NPCSexAftermath Boghrim receives "AssFuck" from Player;
 
 to say BoghrimSex4: [sex party with Boghrim, Mul and Jason]
 	if Libido of Mul is 0: [first time]
@@ -718,9 +718,9 @@ to say BoghrimSex4: [sex party with Boghrim, Mul and Jason]
 					say "     Soon, Jason's got it all licked off, prompting him to smack his lips hungrily and asks in a pleading tone, 'May I -' And that is as far as he gets before Boghrim presents him with his half-hard cock, letting him slurp up the sperm still clinging to it. 'You can get the rest right from the source. Be a good slut and clean me up,' Boghrim grunts to his slave, then chuckles loudly as Jason laps at his balls and shaft. As you raise off the stained mattress with a sigh, you start putting your clothes back on, then stop as you remember that there is something important to be done yet - unless you want to expose your green slut to the full orc mob downstairs and possibly lose him to them. Meeting Boghrim's gaze, you nod towards Jason, then Mul and get a knowing grin in reply. With his permission given, you tell Jason in a commanding tone that just rolls down your orcish tongue that he should get to work between Mul's buns - and take care of all the evidence.";
 					WaitLineBreak;
 					say "     Boghrim meanwhile quietly catches your own cum leaking out of his hole and lubes himself up with it, making no attempts to hide that the show of Mul's ass getting eaten turns him on quite a bit. So by the time Jason raises his head from Mul's butt again and smacks his lips satedly, Boghrim is sporting another full-on erection - and he sinks it into the human without warning, making him gasp at the sudden penetration. But then, that's what the slave's been used to by now, as he quickly overcomes his discomfort and moans loudly as his master pounds him into the mattress. While you wish you could have another round, it seems clear that this time, the big orc wants to spend some private time with his favorite slut, so you hit Mul in the arm to get his attention and tell him that you're going. After collecting your gear and clothes, you and your orc companion leave the upper floor, casually wandering down into the main drinking hall of the orc lair. Mul peels off your side without another word and quickly goes to pick up a drink, then starts chugging away orc brew and sits down to challenge another at arm wrestling.";
-					NPCSexAftermath Jason receives "Assfuck" from Mul;
-					NPCSexAftermath Mul receives "Assfuck" from Boghrim;
-					NPCSexAftermath Boghrim receives "Assfuck" from Player;
+					NPCSexAftermath Jason receives "AssFuck" from Mul;
+					NPCSexAftermath Mul receives "AssFuck" from Boghrim;
+					NPCSexAftermath Boghrim receives "AssFuck" from Player;
 				else:
 					LineBreak;
 					say "[PlayerJasonMulBoghrimFuck]";
@@ -742,9 +742,9 @@ to say BoghrimSex4: [sex party with Boghrim, Mul and Jason]
 			WaitLineBreak;
 			say "     Having Mul eating your ass is quite pleasant... and distracting, but you nevertheless remember that there is something else to be done - unless you want to expose your green slut to the full orc mob downstairs and possibly lose him to them. In a commanding tone that just rolls down your orcish tongue, you tell Jason to get to work between Mul's buns in turn - and take care of all the evidence. Boghrim meanwhile watches your little ass-eating chain, making no attempts to hide that the show turns him on quite a bit. So by the time Mul raises his head from your butt again and smacks his lips satedly, Boghrim is sporting another full-on erection - and he calls on Jason to take care of it. Soon, the submissive human is again kneeling between his master's legs, lapping away at his shaft in adoration.";
 			say "     While you wish you could have another round, it seems clear that this time, the big orc wants to spend some private time with his favorite slut, so you hit Mul in the arm to get his attention and tell him that you're going. After collecting your gear and clothes, you and your orc companion leave the upper floor, casually wandering down into the main drinking hall of the orc lair. Mul peels off your side without another word and quickly goes to pick up a drink, then starts chugging away orc brew and sits down to challenge another at arm wrestling.";
-			NPCSexAftermath Jason receives "Assfuck" from Mul;
-			NPCSexAftermath Mul receives "Assfuck" from Player;
-			NPCSexAftermath Player receives "Assfuck" from Boghrim;
+			NPCSexAftermath Jason receives "AssFuck" from Mul;
+			NPCSexAftermath Mul receives "AssFuck" from Player;
+			NPCSexAftermath Player receives "AssFuck" from Boghrim;
 			addAlcPoints 2;
 	else: [Mul's shafted by Jason]
 		say "     Stepping up to Mul, you grab him by the back of his neck and pull the orc into a bout of making out with you. Initially reluctant, the muscled green brute's resistance soon falters as your tongues wrestle with each other, and not much later, he does little more than grunt once as you tear off his loincloth and casually fling it aside. Pulling back from a deep kiss that had your tusks rub against each other, you look down at his by now fully erect shaft, standing proudly erect to prod you in the abs. With a dominant growl, you command your orc butt-slut to get on the bed - on all fours and ready to be mounted. Clearly, your 'training sessions' with Mul paid off quite nicely, as the orc obeys without much complaint, pulling his loincloth off in clear eagerness to feel your manhood inside him again. Not that he'll be getting it - at least not right now, with you having other plans...";
@@ -773,9 +773,9 @@ to say BoghrimSex4: [sex party with Boghrim, Mul and Jason]
 			WaitLineBreak;
 			say "     Having Mul eating your ass is quite pleasant... and distracting, but you nevertheless remember that there is something else to be done - unless you want to expose your green slut to the full orc mob downstairs and possibly lose him to them. In a commanding tone that just rolls down your orcish tongue, you tell Jason to get to work between Mul's buns in turn - and take care of all the evidence. Boghrim meanwhile watches your little ass-eating chain, making no attempts to hide that the show turns him on quite a bit. So by the time Mul raises his head from your butt again and smacks his lips satedly, Boghrim is sporting another full-on erection - and he calls on Jason to take care of it. Soon, the submissive human is again kneeling between his master's legs, lapping away at his shaft in adoration.";
 			say "     While you wish you could have another round, it seems clear that this time, the big orc wants to spend some private time with his favorite slut, so you hit Mul in the arm to get his attention and tell him that you're going. After collecting your gear and clothes, you and your orc companion leave the upper floor, casually wandering down into the main drinking hall of the orc lair. Mul peels off your side without another word and quickly goes to pick up a drink, then starts chugging away orc brew and sits down to challenge another at arm wrestling.";
-			NPCSexAftermath Mul receives "Assfuck" from Jason;
+			NPCSexAftermath Mul receives "AssFuck" from Jason;
 			NPCSexAftermath Mul receives "OralCock" from Player;
-			NPCSexAftermath Player receives "Assfuck" from Boghrim;
+			NPCSexAftermath Player receives "AssFuck" from Boghrim;
 			addAlcPoints 2;
 		else: [fuck chain]
 			LineBreak;
@@ -795,9 +795,9 @@ to say BoghrimSex4: [sex party with Boghrim, Mul and Jason]
 			WaitLineBreak;
 			say "     Having Mul eating your ass is quite pleasant... and distracting, but you nevertheless remember that there is something else to be done - unless you want to expose your green slut to the full orc mob downstairs and possibly lose him to them. In a commanding tone that just rolls down your orcish tongue, you tell Jason to get to work between Mul's buns in turn - and take care of all the evidence. Boghrim meanwhile watches your little ass-eating chain, making no attempts to hide that the show turns him on quite a bit. So by the time Mul raises his head from your butt again and smacks his lips satedly, Boghrim is sporting another full-on erection - and he calls on Jason to take care of it. Soon, the submissive human is again kneeling between his master's legs, lapping away at his shaft in adoration.";
 			say "     While you wish you could have another round, it seems clear that this time, the big orc wants to spend some private time with his favorite slut, so you hit Mul in the arm to get his attention and tell him that you're going. After collecting your gear and clothes, you and your orc companion leave the upper floor, casually wandering down into the main drinking hall of the orc lair. Mul peels off your side without another word and quickly goes to pick up a drink, then starts chugging away orc brew and sits down to challenge another at arm wrestling.";
-			NPCSexAftermath Mul receives "Assfuck" from Jason;
-			NPCSexAftermath Jason receives "Assfuck" from Player;
-			NPCSexAftermath Player receives "Assfuck" from Boghrim;
+			NPCSexAftermath Mul receives "AssFuck" from Jason;
+			NPCSexAftermath Jason receives "AssFuck" from Player;
+			NPCSexAftermath Player receives "AssFuck" from Boghrim;
 			addAlcPoints 2;
 
 to say PlayerJasonMulBoghrimFuck:
@@ -811,8 +811,8 @@ to say PlayerJasonMulBoghrimFuck:
 	WaitLineBreak;
 	say "     After resting a bit with Jason's arms around you, and the satisfied slave nuzzling your abs with his face, you eventually slip out of his embrace, and raise off the stained mattress. With a sigh, you get off the bed and start putting your clothes back on, then stop as you remember that there is something important to be done yet - unless you want to expose your green slut to the full orc mob downstairs and possibly lose him to them. In a commanding tone that just rolls down your orcish tongue, you tell Jason to get to work between Mul's buns - and take care of all the evidence. Boghrim meanwhile just raises himself on an elbow and watches the bout of ass-eating going on, making no attempts to hide that the show turns him on quite a bit. So by the time Jason raises his head from Mul's butt again and smacks his lips satedly, Boghrim is sporting another full-on erection - and he calls on Jason to take care of it too. Soon, the submissive human is again kneeling between his master's legs, lapping away at his shaft in adoration.";
 	say "     While you wish you could have another round, it seems clear that this time, the big orc wants to spend some private time with his favorite slut, so you hit Mul in the arm to get his attention and tell him that you're going. After collecting your gear and clothes, you and your orc companion leave the upper floor, casually wandering down into the main drinking hall of the orc lair. Mul peels off your side without another word and quickly goes to pick up a drink, then starts chugging away orc brew and sits down to challenge another at arm wrestling.";
-	NPCSexAftermath Jason receives "Assfuck" from Mul;
-	NPCSexAftermath Mul receives "Assfuck" from Boghrim;
+	NPCSexAftermath Jason receives "AssFuck" from Mul;
+	NPCSexAftermath Mul receives "AssFuck" from Boghrim;
 	NPCSexAftermath Jason receives "OralCock" from Player;
 
 to say BoghrimSex5: [Threesome + fuck him]
@@ -842,9 +842,9 @@ to say BoghrimSex5: [Threesome + fuck him]
 		WaitLineBreak;
 		say "     Boghrim rubbing your cum between his fingers quickly draws the attention of Jason, who raises his head and stares at the orc's hand in undisguised lust. He licks his lips and asks in a pleading tone, 'May I -' And that is as far as he gets before Boghrim pushes his fingers into his mouth, letting him slurp up your sperm. 'You can get the rest right from the source. Be a good slut and clean me up,' Boghrim grunts to his slave, then chuckles loudly as Jason shimmies down over him and brings his head to the orc's crotch, licking up what cum sticks to his cock and pubes, hands working on fingering his master's ass and pulling out more tasty seed from its depth.";
 		say "     By the time you put the last piece of your clothes and gear on, the noise from the bed has moved on to, 'Oooh yeah, stick your tongue in there deep,' with the orc boss on all fours while his favorite slave eats him out. He even raises his hips in an obvious 'fuck me' pose, all to allow little bit more access to Jason. As the human is busy lapping your seed from Boghrim's well-bred hole, you slowly walk towards the door. Giving the two of them one last look and seeing Jason busy pleasing his master - as well as licking up and swallowing the 'evidence' of your activities you left behind, you then close the door properly behind you and make your way back down into the drinking hall.";
-		NPCSexAftermath Jason receives "Assfuck" from Boghrim;
+		NPCSexAftermath Jason receives "AssFuck" from Boghrim;
 		NPCSexAftermath Jason receives "OralCock" from Player;
-		NPCSexAftermath Boghrim receives "Assfuck" from Player;
+		NPCSexAftermath Boghrim receives "AssFuck" from Player;
 
 to say BoghrimSex6: [Hunting trip with Mul]
 	if Libido of Mul is 0: [first time]
@@ -884,7 +884,7 @@ to say BoghrimSex6: [Hunting trip with Mul]
 		say "     With both topping orcs (Boghrim and you) deep in the grip of their orgasms, the two of you lean over Mul from either end - and Boghrim puts his arm over your shoulder so you can brace against one another. 'Quite a fun 'hunting trip' my friend,' the orc boss pants a moment later, giving you a broad grin showing his tusks. Then he addresses Mul, 'Wouldn't you say so too, bitch?' and gives him a slap on his ass. A mumble and slurp is the only answer, as your tame orc still suckles on Boghrim's prick, eager to get even the last drops of cum. 'What a cum-slut! Hey breeder, there's something else for you to clean up,' comes the reaction from Boghrim, followed by the orc motioning you to pull your slick and still half-hard shaft out of Mul's well-bred hole. As you do so and hold it out, the orc boss pulls his dick out of the totally cum-drunk Mul's mouth, freeing the orc to twist around and inhale your erection with a loud slurp. Accompanied by your laughter at his antics, Mul hungrily suckles your own shaft clean, then pushes his hands between his legs to wipe up what cum ran out of his ass, eating that too. Finally, the orc goes on to fingering his own ass, sucking your creamy deposit from his thick fingers, then going back for more. Between the exhaustion his own orgasm and two loads of orc cum in his system, eventually Mul winds down in his drunken state, slumping down in the sticky puddle of his own cum and dozing off.";
 		WaitLineBreak;
 		say "     'Hah, guess we wore him out,' Boghrim tells you with a chuckle, then proceeds to dress in his loincloth and walks out of the garage. You quickly follow, still adjusting your own clothes and gear as you catch up with the orc boss. He throws a casual glance back at Mul lying on the floor, then shrugs, 'Leave him, he can sleep off his buzz on his own. And if someone finds him like this... well, lucky them. That bitch won't complain about anyone adding a load or two in his state.' And with that, the two of you make your way back to the orc lair, chatting as you go along. You're drinking your third orc brew with Boghrim in the main hall by the time Mul Mul quietly slips into the room again some while later.";
-		NPCSexAftermath Mul receives "Assfuck" from Player;
+		NPCSexAftermath Mul receives "AssFuck" from Player;
 		NPCSexAftermath Mul receives "OralCock" from Boghrim;
 	else:
 		LineBreak;
@@ -899,7 +899,7 @@ to say BoghrimSex6: [Hunting trip with Mul]
 		WaitLineBreak;
 		say "     'Hah, guess we wore him out,' Boghrim tells you with a chuckle, then proceeds to dress in his loincloth and walks out of the garage. You quickly follow, still adjusting your own clothes and gear as you catch up with the orc boss. He throws a casual glance back at Mul lying on the floor, then shrugs, 'Leave him, he can sleep off his buzz on his own. And if someone finds him like this... well, lucky them. That bitch won't complain about anyone adding a load or two in his state.' And with that, the two of you make your way back to the orc lair, chatting as you go along. You're drinking your third orc brew with Boghrim in the main hall by the time Mul Mul quietly slips into the room again some while later.";
 		NPCSexAftermath Mul receives "OralCock" from Player;
-		NPCSexAftermath Mul receives "Assfuck" from Boghrim;
+		NPCSexAftermath Mul receives "AssFuck" from Boghrim;
 	if MulAnalAcceptance < 10:
 		increase MulAnalAcceptance by 2;
 

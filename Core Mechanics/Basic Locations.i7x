@@ -8,6 +8,9 @@ A room can be fasttravel. A room is usually not fasttravel. [reachable through t
 A room can be private. A room is usually not private. [private rooms cannot be found randomly or through hunting]
 A room can be sleepsafe. A room is usually not sleepsafe. [no encounter chance when sleeping there]
 A room has a text called earea. earea is usually "void". [exploration area]
+A room has a text called RoomID. RoomID is usually "Room". [unique room identifier]
+A room has a text called ObserveString. ObserveString is usually " ".
+A room has a truth state called ObserveAvailable. ObserveAvailable is usually false.
 Rooms has a list of text called invent. [room inventory]
 Rooms have a text called scent.
 
@@ -147,7 +150,9 @@ Grey Abbey Library is a room.
 Grey Abbey Library is fasttravel.
 Grey Abbey Library is sleepsafe.
 Description of Grey Abbey Library is "[abbey desc]".
-The earea of Grey Abbey Library is "Outside".
+earea of Grey Abbey Library is "Outside".
+ObserveAvailable of Grey Abbey Library is true.
+ObserveString of Grey Abbey Library is "[GreyAbbeyLibrary_ObserveMenu]".
 
 after looking while player is in Grey Abbey Library:
 	project the Figure of Map_Library_Front_icon;
@@ -174,6 +179,83 @@ instead of sniffing Grey Abbey Library:
 	say "     The Grey Abbey Library has a complex scent with numerous layers upon layers. Wood, or maybe rather furniture polish, is definitively one of them, probably stemming from some dutiful librarians doing their best to keep up the historic building properly.";
 	if Alexandra is present and "Horny" is listed in Traits of Alexandra:
 		say "     Recently, the strong scent of your doberwoman bitch Alexandra has joined the rest of the aromas in here. With the whiff of her femcum ever-present in your nose now, you're seriously tempted not to go over to her and strip the sexy canine naked for some fun-time.";
+
+to say GreyAbbeyLibrary_ObserveMenu:
+	say "     Glancing around, you spot several locations in which you could easily hang out without being obvious to anyone. This allows you the opportunity to just wait for a while and see what might happen.";
+	say "     [bold type]Whom do you want to observe?[roman type][line break]";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "General"; [move these into their own menu]
+	now sortorder entry is 1;
+	now description entry is "Watch things happening in the room";
+	[]
+	if Urik is booked or Urik is bunkered and orc supersized breeder is not listed in companionList of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Urik";
+		now sortorder entry is 2;
+		now description entry is "Watch what the orc is up to";
+	[]
+	sort the table of fucking options in title order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			let nam be title entry;
+			now sextablerun is 1;
+			if (nam is "Urik"):
+				say "[GreyAbbeyLibraryObservation_Urik]"; [see file Wahn/Urik.i7x]
+			if (nam is "General"):
+				say "[GreyAbbeyLibraryObservation_General]";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say GreyAbbeyLibraryObservation_General:
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Entrance Door"; [move these into their own menu]
+	now sortorder entry is 1;
+	now description entry is "Watch the front door";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Zoomba #1"; [move these into their own menu]
+	now sortorder entry is 2;
+	now description entry is "Watch a little machine vacuum the library";
+	[]
+	sort the table of fucking options in title order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			let nam be title entry;
+			now sextablerun is 1;
+			if (nam is "Entrance Door"):
+				say "     You decide to take a seat at the front desk, watching the entrance door of the library. Minutes pass, then some more minutes, with no one even trying to open the unlocked door from outside. Seems like the mere fact that this is a library is discouraging people from coming anywhere close to it. Somehow, you're no longer surprised by the three inch tall stack of crossword puzzle magazines in one of the drawers of the desk...";
+			else if (nam is "Zoomba #1"):
+				say "     Waiting for a few minutes, you see a small vacuum robot, shaped like an oversized hockey puck, emerge from behind the front desk. The little device is colored black and silver, with the red letter [']1['] emblazoned on the front half. Glancing where it is coming from, you see a charging port there. Someone must have hooked it up to the emergency power supply that is also responsible for the lights in the bunker. Having nothing much better to do, you follow Zoomba #1 around, watching it patrol with a quiet hum and effectively wipe out any dust-bunnies that dare appear in these hallowed halls.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -202,9 +284,21 @@ Description of Looted Shops is "[LootedShopsDesc]".
 
 to say LootedShopsDesc:
 	say "     You wander down the center of the empty 7th Street to stay away from the piles of trash and shards from shattered shop windows that dominate the sidewalk on both sides. There are barely any windows that haven't been vandalized, and many of the doors were torn out of their frames or clawed to pieces. You can't say if the destruction stemmed from pure malice or just some overly large creature making an entrance; it doesn't matter which really, as the result is the same. In the southwest, a thin path has been cleared through the trash and debris, leading to a shop that seems to have been of continuing interest of someone - or alternatively the target of some scavengers. The sign above the door declares it to be [']George's Animal Emporium['].";
+	if "Henry Recruited" is listed in Traits of Urik:
+		say "     Someone appears to have cleared away a patch of trash and rubble recently, making the entrance of a store to the north accessible. While the sign above the door declares it to be some sort of flower shop, the plywood board used to cover a broken window next to a newly hung door bears the words 'Henry's Brewery', above a spray-painted depiction of a muscular black man with a large hammer. The stylized image of a snarling orc face in the lower left corner lets you guess that Urik put this here.";
 
 instead of sniffing Looted Shops:
 	say "     The cans and sacks of trash that have been rotting out on the curb for more than two weeks fill your nose with many scents, none of them particularly pleasant.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Henry's Brewery	"Henry's Brewery"
+
+Henry's Brewery is a room.
+Description of Henry's Brewery is "[BreweryDesc]".
+
+to say BreweryDesc:
+	say "     After you and Urik saved him and brought him here, Henry the Hercules beetle appears to have set right to rebuilding. The wrecked interior of the flower shop has been cleaned out, with the display tables now surrounded by a mixed selection of chairs and barstools scrounged up somewhere. A sign on the wall declares his prices for beer, and there are even [one of]two[or]three[or]four[at random] customers sitting around. The door the back room stands open, as Henry often ducks in there to check his brewing setup and supplies.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -213,7 +307,7 @@ George's Animal Emporium	"George's Animal Emporium"
 George's Animal Emporium is southwest of Looted Shops.
 Description of George's Animal Emporium is "[PetShopDesc]".
 
-to say PetShopDesc:
+to say PetShopDesc: [TODO: Eventually move Roxana and her girlfriend in here]
 	say "     You're in a mid-sized pet store that has been recently looted. Judging from the tracks in the dust and grime blown in through the open front door, numerous people and creatures came and went before you. Almost all of the shelves have been rifled through and some even knocked over, creating quite a mess in here. Empty bags of all sorts of pet food are scattered everywhere, sometimes lying in sticky pools of what is clearly cum. With the food gone and the sheer scale of the mess in here, there could be some interesting and useful items to find if one were to spend some time to [link]sort[as]sort chaotic mess[end link] through the chaotic mess. Since digging up anything of worth will be rather work intensive, this would probably not be worth the time unless you had a use for it.";
 
 instead of sniffing George's Animal Emporium:

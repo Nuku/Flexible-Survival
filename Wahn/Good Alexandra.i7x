@@ -1285,10 +1285,10 @@ to say ResolveEvent Survivor Group:
 		say "     Once inside, your greeting by the trio there is a happy but brief one. One of them had managed to escape the wolves with only some mild lupine features and the other two are long-awaited scavengers showing more significant symptoms of other strains. Between the note and the news from the one unable to complete the original journey, they've remained packed and ready to go at a moment's notice, especially with the wolves drawing nearer.";
 		WaitLineBreak;
 		say "     And it seems they can't wait to depart any longer. From the howls outside, it is clear your arrival has been reported and the wolves are on the move. Again, you take the lead, running interference for the others as the wolves on watch charge the door.";
-		challenge "Feral Wolf";
+		challenge "Feral Wolf Male";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     With one wolf dispatched, there's hesitation from the others. Raising your [if weapon object of Player is journal]fists[else]weapon[end if], they are kept at bay until a voice among them spurs them on. 'It's just one guard, you foolish pups, and [if Player is female]she's[else]he's[end if] already worn down. Get [if Player is female]her[else]him[end if] and those inside will be yours,' she says. This prompts them to draw closer, an emboldened one moving in to get you.";
-			challenge "Feral Wolf";
+			challenge "Feral Wolf Male";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     As the fight turns in your favor, the remaining wolves slink back until they flee when you're victorious over a second packmate. All except one, that is. A pudgy wolf-hamster hybrid pushes past you in the confusion with a wild laugh. But rather than go after the others, she rushes the stage. Grabbing the bingo mixer, she giggles madly. 'Yes! Yes! I've got you back, my pretty. Yes, I've missed you, too,' the maddened William babbles to the shiny wire globe, spinning it with glee. Seeing you watching her, she growls and withdraws. 'I won't let you break us up again! Come, my love,' she says, kissing the object before heading for a back door.";
 				say "     Rather than deal with the obviously insane hybrid, you rally the others into motion, wanting to be long gone before more of the pack can arrive. With speed essential, they grab the bare minimum and follow you out. You rush through the trees, pushing aside clinging branches as you go in a different direction than either William or the wolves took. Only after you've put some distance between your group and the bingo hall do you switch to more covert movement. While you doubt the wolves are still in pursuit, attracting the notice of some other monsters wouldn't be any better. Eventually, you're able to find a path leading out of the woods and return to the city proper. As a small band, it is harder to move about in secret than you on your own, but it's far easier a trek than when you were moving the main body of their group. When you arrive at the [if Resolution of Overmind's Retaliation > 10 and Resolution of Overmind's Retaliation < 20]Sanctuary Hotel[else if Resolution of Overmind's Retaliation > 20 and Resolution of Overmind's Retaliation < 30]Mall[else]police station[end if], the others are overjoyed to see some members they'd thought lost for good able to rejoin them thanks to your efforts. They even throw a little party to celebrate, passing around some of the rarer treats among their rations as snacks. [if Resolution of Overmind's Retaliation > 10 and Resolution of Overmind's Retaliation < 30]You are sure that Jimmy will be happy to give you his personal [']thanks['] as well, if you'd like[else]Jimmy even nudges your thigh and gives you a wink, letting you know he'd be happy to give you his personal [']thanks['] as well, if you'd like[end if].";
@@ -1315,15 +1315,15 @@ to say survivorgrouptrek:
 	say "     From that point, things progress fairly quickly and smoothly. Someone suggests that everyone buddy up and, to make it easier to handle a group of this size, you agree and call for everyone to partner up. You go around, checking up on the various groups of people, encouraging them to pack light. A brief chat with the wolf-eared guard gets you a roster of the guards and the scavengers with experience out in the woods, making sure one of them is assigned to each larger group to help keep care of them while on the move. It does take some effort to get William to leave behind her bingo mixer, but that's the only major holdup before things get on the rolling.";
 	say "     Leading the bands of survivors, you take the lead, leapfrogging them between any hiding spots or any cover you can find. For this, you've got to scout ahead, quickly making sure the path is clear and checking ruins for hidden creatures before moving the next bunch forward. With them split up into these smaller clusters, it's easier to move them discretely and between temporary shelters. It makes for slow going and, at first, things go well. But partway through the excursion, there comes the howl of a wolf, soon followed by more. Getting the people to cover, you go to check it out, finding a small pack closing in. Seeing no other way around it, you move in to deal with them before they can find the others.";
 	let wolffightcount be 4;
-	challenge "Feral Wolf";
+	challenge "Feral Wolf Male";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		decrease wolffightcount by 1;
 		say "     Fighting the pack's scout has drawn the attention of the nearby wolves, for good or ill, and you can hear them closing in. Not wanting to be surrounded, you advance on the closest one, wanting to deal with it before the others can arrive.";
-		challenge "Feral Wolf";
+		challenge "Feral Wolf Male";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			decrease wolffightcount by 1;
 			say "     That wolf is soon followed by another, who you turn to face without a moment to catch your breath.";
-			challenge "Feral Wolf";
+			challenge "Feral Wolf Male";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				decrease wolffightcount by 1;
 				say "     Having defeated three of the wolves, the others move back, leaving their larger, werewolf-like alpha to face you. He gives an angry growl and charges at you.";

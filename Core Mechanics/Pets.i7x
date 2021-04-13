@@ -241,18 +241,15 @@ carry out PetOverview:
 Chapter 6 - Leveling Up Companions
 
 to Pet level up (companion - a pet):
-	if companionList of Player is empty:
-		increase score by 0;
-	else:
-		increase level of companion by 1;
-		decrease XP of companion by ( level of companion minus 1 ) times 10;
-		if "Good Teacher" is listed in feats of Player:
-			increase XP of companion by ( level of companion minus 1 ) times 4;
-		say "[companion] has gained level [level of companion]! Congratulations!";
-		if remainder after dividing level of companion by 3 is 0:
-			increase weapon damage of companion by 1;
-		if remainder after dividing level of companion by 5 is 0:
-			increase dexterity of companion by 1;
+	increase level of companion by 1;
+	decrease XP of companion by ( level of companion minus 1 ) times 10;
+	if "Good Teacher" is listed in feats of Player:
+		increase XP of companion by ( level of companion minus 1 ) times 4;
+	say "[companion] has gained level [level of companion]! Congratulations!";
+	if remainder after dividing level of companion by 3 is 0:
+		increase weapon damage of companion by 1;
+	if remainder after dividing level of companion by 5 is 0:
+		increase dexterity of companion by 1;
 
 Part 2 - Example Companion
 

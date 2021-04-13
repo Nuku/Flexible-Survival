@@ -97,6 +97,8 @@ to say promptsay:
 	if scenario is "Researcher" or nanitemeter > 0:
 		say "[link][bracket]Vial[close bracket][as]Vial Inventory[end link] ";
 	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
+	if ObserveAvailable of x is true:
+		say "[link][bracket]Observe[close bracket][as]observe[end link] ";
 	say "[link][bracket]Save[close bracket][as]save[end link] ";
 	say "[link][bracket]Restore[close bracket][as]restore[end link] ";
 	say "[link][bracket]Export Progress[close bracket][as]export progress[end link] ";
@@ -450,13 +452,14 @@ This is the self examine rule:
 				break;
 			else:
 				say "[descmod of x] ";
+	let CrotchVisible be true;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "legs":
+			now CrotchVisible is false;
 			if descmod of x is "":
 				break;
 			else:
 				say "[descmod of x] ";
-	let CrotchVisible be true;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "waist":
 			now CrotchVisible is false;

@@ -188,7 +188,6 @@ to CheckAbandonedTruck:
 Section 3 - Medical Adjustments
 
 to say Medeaadjustments:
-	project the figure of Medea_face_icon;
 	now sextablerun is 0;
 	if Medeaget is 0:
 		say "     'I could determine if you are pregnant. For anything past that, I'm going to need your assistance in obtaining the necessary supplies. With those, I could make you more fertile, or sterilize you. With even more equipment, I might be able to do even more than that,' she says with an odd eagerness in her tone.";
@@ -403,7 +402,7 @@ to say Medeaadjustments:
 					FeatGain "Selective Mother";
 					say "     Dr. Medea performs the procedure, altering your womb to only accept a male's seed when you desire it. 'I hope you have an enjoyable and productive time,' she says, tidying up her instruments.";
 				else if nam is "Remove sterility":
-					remove "Sterile" from feats of Player;
+					FeatLoss "Sterile";
 					say "     Dr. Medea performs the procedure with pleasure, removing the change that made you sterile. 'There we go. Much better,' she says. 'I hope you'll have an enjoyable and productive time now,' she adds, tidying up her instruments.";
 				else if nam is "Gain increased fertility":
 					FeatGain "Fertile";

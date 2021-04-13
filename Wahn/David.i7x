@@ -71,6 +71,9 @@ Version 1 of David by Wahn begins here.
 [   0: nothing yet                                                      ]
 [   1: Had sexy fun with Marc                                           ]
 
+[ Lore Bits                                                             ]
+[ Was a member of the Osprey Scouts                                     ]
+
 
 RyouseiDavidInteraction is a number that varies.
 lastRyouseiDavidInteraction is a number that varies. lastRyouseiDavidInteraction is usually 10000.

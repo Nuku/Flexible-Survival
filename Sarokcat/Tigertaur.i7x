@@ -49,7 +49,7 @@ to say Tigertaur Loses:
 				WaitLineBreak;
 				say "     A calm, yet demanding paw reaches out to grab the back of your head, forcing your face to ride up into the tigertaur's buxom chest. Without hesitation you latch your lips around her firm teat to begin nursing from the feline, your [FaceName of Player] tongue stroking along the length of the firm mound of flesh to help the milk flow deep into your throat. A rumbling growl rents the air as the tigertaur pulls your head closer into her chest as the sensations of having her milk filled breast empty out into your mouth makes her tail lash wildly behind her. Stroking the feline's tit while at the same time nuzzling into her chest, you make a soft hum into the back of your throat which cause the muscles of the tigertaur's breast to dribble more and more creamy tiger milk down into your belly.";
 				WaitLineBreak;
-				say "     It doesn't take long for you to get your fill, the fatty fluids filling you up in a [one of]relaxing[or]disarming[or]mind numbing[at random] sort of way, and you have to force yourself to step away from the other before you can get [italic type]too[roman type] comfortable. Pulling away from the tigertaur, you watch as the herm gives you a pleased chuff-like growl before shi turns to bound off deeper into the zoo.";
+				say "     It doesn't take long for you to get your fill, the fatty fluids filling you up in a [one of]relaxing[or]disarming[or]mind numbing[at random] sort of way, and you have to force yourself to step away from the other before you can get [italic type]too[roman type] comfortable. Pulling away from the tigertaur, you watch as the herm gives you a pleased chuff-like growl before she turns to bound off deeper into the zoo.";
 				PlayerDrink 12;
 				PlayerEat 3;
 				SanLoss 5;
@@ -92,9 +92,9 @@ When Play begins:
 	now defeated entry is "[Tigertaur Loses]";
 	now victory entry is "[Tigertaur Wins]";
 	now desc entry is "[TigertaurDesc]";
-	now face entry is "sleek tiger-like head, your muzzle and feline countenance almost completely unrecognizable from that of a regular tiger's"; [You have a (your text) face."]
+	now face entry is "sleek tiger-like head, your muzzle and feline countenance almost completely unrecognizable from that of a regular tiger's"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "lean and strong, with a relatively humanlike torso resting atop your strong furred tiger lower body, your four tiger paws easily gripping the ground as you prowl along"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]"; [ skin Description, format as "Your body is covered in (your text) skin"]
+	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
 	now tail entry is "You have a long, tiger-like tail extending from just above your rear, lashing back and forth in excitement and need with every step you take."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feline[or]Tiger[or]barbed[or]tigertaur[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "a pleasurable stretching sensation comes over your face, as your teeth begin to sharpen and length, and your jaw extends outward the muscles rearranging themselves into the powerful configuration of a tiger. Your nose twitches as it merges with your muzzle, new scents of sex and prey exploding into your head, as your eyes shift and become those of a great hunting cat. Finally your ears finishing shifting to their new place on top of your head having pulled and shaped themselves into proper tiger ears, as your face finishes up its changes into a proper tiger face"; [ face change text. format as "Your face feels funny as (your text)." ]

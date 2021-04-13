@@ -33,7 +33,7 @@ to say rabpackvictory:
 	if BodyName of Player is "Rabbit":
 		say "The rabbit creatures take all of you into a nearby abandoned building. They... no, it has plans for you, and it doesn't want unwanted guests.[line break]After laying you to the ground, they step back, sitting or crouching around you. Instinctively, you group together all of your copies, for how your injures can afford. One of them slowly creeps closer, making a noise, an attempt to tranquilize you. [one of]He[or]She[at random] hugs you, kissing tenderly your forehead until you calm down. The other part soon join in...";
 		WaitLineBreak;
-		say "It's so slow... not lazy or sluggish, but constantly building up your pleasure, a tiny bit at a time. Couples and groups changes constantly, without a pattern, and you weakly realize that a few of your own copies are making out with each other. Even your thoughts are interweaving with... well... hir, and you find your consciousness passing from male to female in a pinkish blur... either by you or to you, cocks are [one of]jerked[or]sucked[or]inserted[at random], breasts [one of]massaged[or]milked[at random], asses [one of]groped[or]prodded[at random], cunts [one of]licked[or]fingered[or]filled[at random]... every so often a [one of]sweet[or]warm[or]lovely[at random] kiss...";
+		say "It's so slow... not lazy or sluggish, but constantly building up your pleasure, a tiny bit at a time. Couples and groups changes constantly, without a pattern, and you weakly realize that a few of your own copies are making out with each other. Even your thoughts are interweaving with... well... them, and you find your consciousness passing from male to female in a pinkish blur... either by you or to you, cocks are [one of]jerked[or]sucked[or]inserted[at random], breasts [one of]massaged[or]milked[at random], asses [one of]groped[or]prodded[at random], cunts [one of]licked[or]fingered[or]filled[at random]... every so often a [one of]sweet[or]warm[or]lovely[at random] kiss...";
 		say "After at least hours, it finally ends. After a little rest, they escort you back to where they ambushed you, worn-out but satisfied.[impregchance]";
 		decrease Libido of Player by 50;
 	else:
@@ -84,7 +84,7 @@ When Play begins:
 	now desc entry is "[rabpackdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a rabit, with distinctive ears sprouting from the top of your head and flopping downwards"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "short but agile"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "short fur covering almost every inch of your body"; [ skin Description, format as "Your body is covered in (your text) skin"]
+	now skin entry is "short fur covering almost every inch of your body"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
 	now tail entry is "You have a [one of]short[or]fluffy[or]twitchy[at random] rabbit tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human-like"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "floppy bunny ears sprout from the top of your head and hang on the sides of your face"; [ face change text. format as "Your face feels funny as (your text)." ]

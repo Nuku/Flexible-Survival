@@ -230,7 +230,7 @@ Include Stablemasters by Sarokcat.
 Include Stables Hotel by Sarokcat.
 Include State Fair by Sarokcat.
 Include Tattoo Parlor by Sarokcat.
-Include Tiger Den by Sarokcat.
+Include Tiger Den by Luneth.
 Include Tyr's Club by Kaleem mcintyre.
 Include Underwater Zone by Hellerhound.
 Include Urban Forest by Stripes.
@@ -467,7 +467,8 @@ Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
 Include Feral Shaft Beast by Guest Writers.
 Include Feral Unicorn by Taelyn.
-Include Feral Wolf by Stripes.
+Include Feral Wolf Bitch by Prometheus.
+Include Feral Wolf Male by Prometheus.
 Include Ferret Infection by Luneth.
 Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
@@ -546,6 +547,7 @@ Include Latex Fox by Nuku Valente.
 Include Latex Mistress by Stripes.
 Include Latex Wolf by Stripes.
 Include Leopardman by Vinickus.
+Include Lernean Hydra by Prometheus.
 Include Liquidshifter by Ssely.
 Include Lizard Girl by Damaged.
 Include Lusty Skunk by Nuku Valente.
@@ -575,6 +577,7 @@ Include Mutated Islanders by Kernog.
 Include Naga by Nuku Valente.
 Include Naiad by Wahn.
 Include Naughty Nurse by Stripes.
+Include Nekomimi Boy by Prometheus.
 Include Nerdy Mouse by McRabid.
 Include Nightmare by Sarokcat.
 Include Ocelot by Stripes.
@@ -624,6 +627,7 @@ Include Sand Man by Wahn.
 Include Satyr by Sarokcat.
 Include Satyress by Wahn.
 Include Scarab Beetle by Xenophiliac.
+Include Scorched Mole by Prometheus.
 Include Seraphim by Wahn.
 Include Shadow Beast by UrsaOmega.
 Include Siamese Cats by Stripes.
@@ -663,6 +667,7 @@ Include Toven by Wahn.
 Include Trash Coon by Stripes.
 Include Triceratops by Stripes.
 Include Twisted Pimp by Sarokcat.
+Include Tyrannosaurus Male by Gherod.
 Include Unicorn by Sarokcat.
 Include Valkyrie by Qazarar.
 Include Viking Man by Wahn.
@@ -693,12 +698,13 @@ Include Ace by Aureas Gigas.
 Include Adam by Wahn.
 Include Aeca by Wahn.
 Include Alex by Stripes.
+Include Alpha by Wahn.
 Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
 Include Allen by Wahn.
 Include Alexandra Breeding by Wahn.
 Include Alexandra Cuckolding by Wahn.
-Include Alpha Fang Scenes by Nuku Valente.
+Include Alpha Fang Scenes by Prometheus.
 Include Amaryllis by Song.
 Include Amy by Wahn.
 Include Andrew by Gherod.
@@ -737,6 +743,7 @@ Include Colleen by Sarokcat.
 Include Corbin by Wahn.
 Include Coura by Wahn.
 Include Daisy by Sarokcat n Verath.
+Include Damien by Gherod.
 Include Danny by Wahn.
 Include Darius by Wahn.
 Include David by Wahn.
@@ -785,6 +792,7 @@ Include Harold by Sarokcat.
 Include Hayato by Gherod.
 Include Hellfire Workers by Gherod.
 Include Help Book by Prometheus.
+Include Henry by Wahn.
 Include HornyHorsey by femtoAmpere.
 [Include Horus by Rikaeus.]
 Include Hungry Boar Man by Gherod.
@@ -898,7 +906,7 @@ Include Sven by Stripes.
 Include Sylvia by Prometheus.
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
-Include Tenvale Gorillas Football Team by Kernog.
+Include Tenvale Silverbacks Football Team by Kernog.
 Include The-Voice by Luneth.
 Include Thomas by Wahn.
 Include Thunderbolt by CrimsonAsh.
@@ -916,6 +924,7 @@ Include Wally by Rikaeus.
 Include Wendy by Wahn.
 Include Wild Mustang by Wahn.
 Include Yolanda by Stripes.
+Include Zdravko by Gherod.
 Include Zeke by Qazarar.
 Include Zephias by Wahn.
 Include Zigor by Stripes.

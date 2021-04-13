@@ -9,6 +9,9 @@ Section 1 - Bargain Bin
 when play begins:
 	now bargainbinusagetotal is 0;
 
+a postimport rule:
+	now Bargain Bin is in The Mysterious Shop;
+
 Table of GameCharacterIDs (continued)
 object	name
 Bargain Bin	"Bargain Bin"
@@ -450,9 +453,7 @@ carry out bargainhunting:
 				ItemGain dirty water by 1;
 	else:
 		say "     Sorting through your pack, you are ashamed to realize you can't afford to draw something out of the bargain bin right now. You blush under Nermine's curious gaze, as you casually move off to look through the rest of the store instead.";
-	if bargainbinusagetotal > 41: [i.e. 42 or greater, arbitrary number chosen to limit bin usage. should allow most (possible all) things to be found.]
-		say "With the removal of your latest findings, the Bargain Bin appears oddly empty. The few things left in it are ones you have rejected already. Won't be any more bargains from this bin."; [feel free to replace this text with anything that makes more sense]
-		now Bargain Bin is nowhere;
+
 
 [ Plush Lion / rubber tigress / chocolate lab in bin ]
 to say plrtcl:

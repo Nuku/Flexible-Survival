@@ -169,6 +169,8 @@ to EventRestore:
 			[bugfixes for renamed events]
 			if EventIdName is "unused tool":
 				now EventIdName is "Unused Tool";
+			if EventIdName is "Destroyed Records":
+				now EventIdName is "Burned Secrets";
 			if there is a name of EventIdName in the Table of GameEventIDs:
 				let EventObject be the object corresponding to a name of EventIdName in the Table of GameEventIDs;
 				if ResolveState entry is "Resolved":
@@ -202,7 +204,10 @@ to RoomSave:
 		say "Error! Not enough rows to save all rooms in the table of GameRooms. Please report this on the FS Discord.";
 	repeat with x running through rooms: [rebuilds the table of GameRooms with current data]
 		choose a blank row in the table of GameRooms;
-		now Name entry is printed name of x;
+		if RoomID of x is "Room": [no specific differing RoomID set -> default to printed name]
+			now Name entry is printed name of x;
+		else: [room has a specific unique ID set]
+			now Name entry is RoomID of x;
 		if x is private:
 			now Reachability entry is "Private";
 		else:
@@ -218,7 +223,10 @@ to RoomSave:
 		if the number of entries in Invent of x is not 0:
 			repeat with y running from 1 to the number of entries in Invent of x: [rebuilds the table of RoomInventory with current data]
 				choose a blank row in the table of GameRoomInventories;
-				now RoomName entry is printed name of x;
+				if RoomID of x is "Room": [no specific differing RoomID set -> default to printed name]
+					now RoomName entry is printed name of x;
+				else: [room has a specific unique ID set]
+					now RoomName entry is RoomID of x;
 				now ItemName entry is entry y in Invent of x;
 	write File of RoomSave from the Table of GameRooms; [freshly made table gets saved to file]
 	write File of RoomInventorySave from the Table of GameRoomInventories; [freshly made table gets saved to file]
@@ -308,11 +316,19 @@ to PossessionRestore:
 	if the File of PossessionSave exists:
 		say "Restoring Possessions...";
 		read File of PossessionSave into the Table of GamePossessions;
+		[wiping out all items from before the import]
+		repeat with x running from 1 to number of filled rows in table of game objects:
+			choose row x from the table of game objects;
+			now carried of object entry is 0;
+			now stashed of object entry is 0;
+		[applying the imported items]
 		repeat with x running from 1 to the number of filled rows in the Table of GamePossessions:
 			choose row x in the Table of GamePossessions;
 			let PossessionIdName be Name entry;
 			[some small bugfixes due to items that got renamed]
 			if PossessionIdName is "sturdy jeans", now PossessionIdName is "dark-blue jeans";
+			if PossessionIdName is "tenvale gorillas football helmet", now PossessionIdName is "tenvale silverbacks football helmet";
+			if PossessionIdName is "tenvale gorillas baseball cap", now PossessionIdName is "tenvale silverbacks baseball cap";
 			if there is a name of PossessionIdName in the Table of Game Objects:
 				let PossessionObject be the object corresponding to a name of PossessionIdName in the Table of Game Objects;
 				now carried of PossessionObject is CarriedNumber entry;
@@ -350,7 +366,11 @@ to CharacterSave:
 			now Name entry is CharacterName;
 			let LocationDesignation be "NPC Nexus"; [standard value = stash room]
 			if location of x is not nothing:
-				let LocationDesignation be printed name of location of x;
+				let LocationRoomObject be location of x;
+				if RoomID of LocationRoomObject is "Room": [no specific differing RoomID set -> default to printed name]
+					now LocationDesignation is printed name of LocationRoomObject;
+				else: [room has a specific unique ID set]
+					now LocationDesignation is RoomID of LocationRoomObject;
 			now LocationName entry is LocationDesignation;
 			[Numbers]
 			now Energy entry is Energy of x;
@@ -1198,6 +1218,7 @@ to BeastRestore:
 			if Beastname is "Elven Hunter", now Beastname is "Elven Male";
 			if Beastname is "Rubber tigress", now Beastname is "Rubber Tigress";
 			if Beastname is "Football Gorilla", now Beastname is "Football Gorilla Male";
+			if Beastname is "Feral Wolf", now Beastname is "Feral Wolf Male";
 			if there is a Name of BeastName in the Table of Random Critters:
 				choose row with Name of BeastName in Table of Random Critters;
 				now Area entry is BeastArea;

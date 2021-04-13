@@ -765,7 +765,7 @@ to say leoparkscene5:
 		say "     You hear a plaintive yowl in the distance and your matronly instincts kick in before you even know what's happening. You move as quickly as you can towards the sound. You soon arrive at a pair of wolves who have one of the feline girls pinned and are getting ready to ravage her. Hearing you charging, one remains to deal with their prisoner while the other turns to confront you with a growl.";
 		challenge "Painted Wolf Herm";
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			say "     Having dealt with the first of them, you approach the second. Shi's managed to get the feline girl partially tied up in the time you've been occupied and turns to deal with you so shi can enjoy hir prize.";
+			say "     Having dealt with the first of them, you approach the second. She's managed to get the feline girl partially tied up in the time you've been occupied and turns to deal with you so she can enjoy her prize.";
 			challenge "Painted Wolf Herm";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     Having defeated the second of the wolves, you head over to the kitty girl and free her from her bondage. She hugs herself tightly to you and kisses you repeatedly as she thanks you for saving her";

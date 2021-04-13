@@ -316,10 +316,22 @@ to say ResolveEvent Soldiers & Snowmeows:
 		say "     DEBUG -> SNOWMEOWSOLDIERSTATUS [SnowmeowSoldierStatus] <- DEBUG[line break]";
 	if SnowmeowSoldierStatus is 0:
 		now SnowmeowSoldierStatus is 1;
+		project Figure of SnowLeopard_hard_icon;
 		say "     You come across a sight that has become quite common in this infection-riddled city. A man, a stray soldier by the looks of him, on his hands and knees, with his pants around his ankles, panting hard as he gets a hard cock thrust into his ass. Hunched over him, one of the large snow leopards roaming this district pants and purrs as he thrusts noisily into the man's body. The cat's captive has already started to change - you can see tufts of fur erupt from his bare arms and a long tail sprouting from his spine as it twines about his rapist's body. His moans are clearly more of pleasure than of pain or fear, with a few meows as the soldier loses himself more and more to his lust. A small jet of cum spurts from the transforming man's jerking, shrinking penis as the cat thrusts into him.";
 		LineBreak;
-		say "     Do you want to step in and stop the snow leopard?";
-		if Player consents:
+		say "     [bold type]What do you do now?[roman type][line break]";
+		say "     ([link]1[as]1[end link]) - Step in and stop the snow leopard.";
+		say "     ([link]2[as]2[end link]) - Watch the action.";
+		say "     ([link]3[as]3[end link]) - Leave. You don't need to see this.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to stop the snow leopard, [link]2[end link] to watch or [link]3[end link] to leave.";
+		if calcnumber is 1:
 			LineBreak;
 			say "     Despite the fact that it may already be too late, you dash forward. Tackling the anthro leopard, you manage to knock the beast off the soldier's body and send him rolling. Shaking your head, you stand, preparing for a fight. A moment later, the snow leopard, his cock still wet and raging hard, stands and jumps to attack you.";
 			challenge "Snow Leopard";
@@ -334,7 +346,8 @@ to say ResolveEvent Soldiers & Snowmeows:
 				if BodyName of Player is "Snow Leopard" and player is pure and player is male:
 					say "     Glancing up at you with a panicked expression, the newly female snow feline dashes off down the street. She's pretty fast and almost manages to get away, but as you run after her you surprise yourself with a sudden rush of energy and catch up, getting a paw-hold on her arm. Bringing the both of you to a standstill, two felines panting together after a moment of exhaustion and breathing in each other's scent, you realize what it was that pushed you past your usual limits. Chasing an aroused female smelling of heat and sex must really have pushed all the buttons of your body's primal urges, just like being close to her now made your cock go rock-hard. And she's starting to feel it too, her eyes wide as she stares at you, breathing getting faster and faster with each sniff of your masculine pheromones.";
 					LineBreak;
-					say "     Do you want to give in and do what comes naturally ([link]Y[as]y[end link]), or will you let her go, resisting the instincts to mate that threaten to overwhelm you ([link]N[as]n[end link])?";
+					say "     ([link]Y[as]y[end link]) - Give in to your instincts and fuck her.";
+					say "     ([link]N[as]n[end link]) - Resist the instincs.";
 					if Player consents:
 						LineBreak;
 						say "     Just dropping your gear and quickly stripping off your clothes, you lay them down on the ground and direct the transformed soldier to do likewise and lie down on the improvised bedding. She does so without hesitation, then mews in need and lust as you kneel between her legs and your cock brushes her swollen pussy lips for the first time. Moaning from the incredible arousal of being so close to a female of your own species and breathing in pheromones literally designed to rile up snow leopards, you aim your spined cock at her opening and thrust in, taking her virginity. It just feels amazing to thrust into her warm and wet depths, giving in to the primal urges inside yourself.";
@@ -352,22 +365,21 @@ to say ResolveEvent Soldiers & Snowmeows:
 				else:
 					say "     Glancing up at you, the newly female snow feline panics and dashes off, quickly losing you in the winding alleys of the city. With a sigh, you let her go.";
 					now Resolution of Soldiers & Snowmeows is 3; [she ran off]
+		else if calcnumber is 2:
+			LineBreak;
+			say "     You just stand back, observing as the snow leopard pounds his captive's ass with rapid thrusts. Leaning forward, he wraps his arms around the soldier's chest and feels him up, purring loudly as twin mounts of breasts form under his paw-hands. With a lust-filled growl, the male feline then pulls out and turns the newly female soldier over, then plunges his hard shaft into her pussy, unconcerned about the pained mewl as he takes her virginity. What follows is a totally uncontrolled animalistic mating, both of them panting and moaning loudly as they grind their hips against each other. Eventually, the snow leopard gives a satisfied grunt and starts purring, his whole body shivering slightly with spurt after spurt of feline seed he's depositing in the female's womb.";
+			say "     With the show over, you silently walk away, not wanting to get noticed by the leopard as a possible second round.";
+			now Resolution of Soldiers & Snowmeows is 6; [just watched]
 		else:
-			say "     Do you want to watch instead ([link]Y[as]y[end link]), or just leave ([link]N[as]n[end link])?";
-			if Player consents:
-				LineBreak;
-				say "     You just stand back, observing as the snow leopard pounds his captive's ass with rapid thrusts. Leaning forward, he wraps his arms around the soldier's chest and feels him up, purring loudly as twin mounts of breasts form under his paw-hands. With a lust-filled growl, the male feline then pulls out and turns the newly female soldier over, then plunges his hard shaft into her pussy, unconcerned about the pained mewl as he takes her virginity. What follows is a totally uncontrolled animalistic mating, both of them panting and moaning loudly as they grind their hips against each other. Eventually, the snow leopard gives a satisfied grunt and starts purring, his whole body shivering slightly with spurt after spurt of feline seed he's depositing in the female's womb.";
-				say "     With the show over, you silently walk away, not wanting to get noticed by the leopard as a possible second round.";
-				now Resolution of Soldiers & Snowmeows is 6; [just watched]
-			else:
-				LineBreak;
-				say "     Leaving the two to their mating, you manage to sneak away without being seen.";
-				now Resolution of Soldiers & Snowmeows is 7; [left them]
+			LineBreak;
+			say "     Leaving the two to their mating, you manage to sneak away without being seen.";
+			now Resolution of Soldiers & Snowmeows is 7; [left them]
 	else if SnowmeowSoldierStatus is 1 or SnowmeowSoldierStatus is 2:
 		say "     You're a bit surprised when you spot a lone soldier making his way through the streets. Don't they teach basic safety in military schools anymore? Safety in numbers! Curious as to what he's doing out here alone, you trail the guy as he nears a storefront, one of the few that still has most of the windows intact. Following him inside, you realize you've stepped into a small clothing store. Clothes racks and a few (thankfully) unmoving mannequins decorate the floor, while mirrors and shelves filled with perfumes and small trinkets define the walls, making the store feel much larger inside.";
 		say "     The soldier calls out as he moves cautiously towards the back of the store. 'Bob? Is that you?' 'Hi Lee', answers a soft, very feminine voice. Quietly sneaking around the racks, you spot the snowmeow soldier you encountered [if SnowmeowSoldierStatus is 2]and fucked [end if]earlier. Seems like she's retained at least some of her humanity. Standing upright, she's bound her long white-gray hair up into a ponytail atop her head and has picked out a matching set of bra and panties to wear, yellow satin and lace, with a matching pair of nylons that she's somehow managed to slide up her legs.";
 		LineBreak;
-		say "     Do you want to stay and observe how their reunion turns out?";
+		say "     ([link]Y[as]y[end link]) - Stay and observe their reunion.";
+		say "     ([link]N[as]n[end link]) - Quietly step away.";
 		if Player consents:
 			LineBreak;
 			say "     Shyly, the snow leopard woman sniffs at a glass spritz perfume bottle as Lee approaches and says 'So this is what happened to you. We were worried when you disappeared.' You listen as Bob (or maybe Bobbie now?) explains how she got separated from her squad, and how she found herself confronted by a snow leopard. Both you and the feline Bob notice Lee shifting uncomfortably as she describes getting fucked in the ass, then later her pussy after she turned, the front of the soldier's pants tenting out as he looks at his transformed squad mate. Idly, she spritzes herself, and then sends a scented cloud over to Lee.";

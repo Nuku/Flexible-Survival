@@ -64,6 +64,41 @@ object	name
 Kenaz	"Kenaz"
 
 Kenaz is a man. Kenaz is in FireHouse.
+ScaleValue of Kenaz is 3. [human sized]
+Body Weight of Kenaz is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Kenaz is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Kenaz is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Kenaz is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Kenaz is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Kenaz is 5. [length in inches]
+Breast Size of Kenaz is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Kenaz is 2. [count of nipples]
+Asshole Depth of Kenaz is 8. [inches deep for anal fucking]
+Asshole Tightness of Kenaz is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Kenaz is 1. [number of cocks]
+Cock Girth of Kenaz is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Kenaz is 11. [length in inches]
+Ball Count of Kenaz is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Kenaz is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Kenaz is 0. [number of cunts]
+Cunt Depth of Kenaz is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Kenaz is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Kenaz is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Kenaz is false.
+PlayerRomanced of Kenaz is false.
+PlayerFriended of Kenaz is false.
+PlayerControlled of Kenaz is false.
+PlayerFucked of Kenaz is false.
+OralVirgin of Kenaz is false.
+Virgin of Kenaz is true.
+AnalVirgin of Kenaz is true.
+PenileVirgin of Kenaz is false.
+SexuallyExperienced of Kenaz is true.
+TwistedCapacity of Kenaz is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Kenaz is false. [steriles can't knock people up]
+MainInfection of Kenaz is "Dalmatian Male".
 Description of Kenaz is "[Kenazcurrentform]".
 Conversation of Kenaz is { "Be on alert!" }.
 
@@ -547,6 +582,7 @@ Instead of fucking Kenaz:
 					say "     Panting and gasping while sighing in euphoric bliss, you hug Kenaz closer into you before kissing the firefighter across his spotted neck. 'T-That... was real good.' Kenaz whispers and you can only nod before telling the other man how warm and comfortable his tailhole feels still gripped around you. A blush covers Kenaz's muzzle but you can't see it as the Dal boy buries his face into his sticky covers, however, you do note that the firefighter's tail is wagging happily across your chest again.";
 					infect "Dalmatian Male";
 					infect "Dalmatian Male";
+					NPCSexAftermath Kenaz receives "AssFuck" from Player;
 					now lastfuck of Kenaz is turns;
 				else:
 					say "     Telling Kenaz that you want him to breed you, you find yourself mildly surprised when the Dal boy barks into your face and then flips you over like a ragdoll[if strength of Player < 17]. This is somewhat startling to you, given the disparity between your weight and the Dalmatian's, but then again, Kenaz is a firefighter so he probably knows a few tricks about how to handle prone bodies[else]. The strength of the other man is somewhat of a comfort to you and you don't have any problem being [']manhandled['] by your eager lover[end if]. When Kenaz sets himself up so that he is sitting down on his bed with his legs folded together, you have only a second to try and figure out what's going to happen next before you are treated to the Dalmatian lifting you up and then setting you back down on his lap.";
@@ -560,9 +596,10 @@ Instead of fucking Kenaz:
 					WaitLineBreak;
 					say "     When a furry hand comes around to grip at [if Cock Count of Player > 1]one of your cocks[else]your cock[end if], you freeze and then hiss as Kenaz pumps you in an effort to get you to orgasm in time with him. Arching up and then crying out to the ceiling, you spill your load into the Dal boy's furry hand after Kenaz sneaks a hand down to palm at your overly full nuts. A minute or so after both you and the firefighter have come down from off of the twin peaks of ecstasy, both you and Kenaz collapse back against the bed. Well, you on Kenaz and him on the bed.";
 					WaitLineBreak;
-					say "     'T-that was real good! Want to go again?' The happy Dalmatian asks and you can only chuckle before telling Kenaz to give you a minute. When a happy bark rings out into your ears, you smile tiredly as you think of how good it feels to have the other man as your lover. The pulsing throb of Kenaz's cock inside of your body has you humming almost wantonly and reaching down to rub a hand across your belly, you take note that you can actually feel some of the Dalmatian's cum rolling around inside the lower area of your guts. Times like these, you come to really love how complete Kenaz makes you feel. However, in about another ten minutes, you come to really love having the firefighter once again riding your ass for all you're worth.[mimpregchance][mimpregchance][line break]";
+					say "     'T-that was real good! Want to go again?' The happy Dalmatian asks and you can only chuckle before telling Kenaz to give you a minute. When a happy bark rings out into your ears, you smile tiredly as you think of how good it feels to have the other man as your lover. The pulsing throb of Kenaz's cock inside of your body has you humming almost wantonly and reaching down to rub a hand across your belly, you take note that you can actually feel some of the Dalmatian's cum rolling around inside the lower area of your guts. Times like these, you come to really love how complete Kenaz makes you feel. However, in about another ten minutes, you come to really love having the firefighter once again riding your ass for all you're worth.[line break]";
 					infect "Dalmatian Male";
 					infect "Dalmatian Male";
+					NPCSexAftermath Player receives "AssFuck" from Kenaz;
 					now lastfuck of Kenaz is turns;
 	else if KTO is 2:
 		if lastfuck of Kenaz - turns < 6:
@@ -594,7 +631,8 @@ Instead of fucking Kenaz:
 					WaitLineBreak;
 					say "     When your rectum suddenly starts to squeeze at the Dal's sixteen inch cock, Kenaz throws back his head to howl to the ceiling as his cock hoses down your tender insides. The force of his orgasm is so great that your [BodyName of Player] belly expands to an almost disproportional size as gallon after gallon of hot Dalmatian cum gushes inside of you. Thanks to his gargantuan knot plugging up your insides, none of his semen can come back out. When you suddenly cough and taste his salty cream on your tongue, you blush and then swallow vehemently to keep the spooge from leaking down the side of your lips. 'Hope I wasn't too rough on you,' Kenaz whispers after he pulls his hands away from your thoroughly soaked cunt and dribbling cock.";
 					WaitLineBreak;
-					say "     Chuckling up at your lover, you nuzzle your head back against the Dalmatian while humming pleasantly up at Kenaz to let him know about how well you enjoyed his efforts just now. The firefighter chuckles in return as he wraps his arms around you tightly while licking you across the back of the head. Your belly sloshing with the dregs of the herm Dal's load, you can only sigh and rest your head back against Kenaz as you soak up the minutes of afterglow after such a powerful experience. The warm and pleasantly full feeling coming from your ass takes you off to sleep a few minutes later.[mimpregchance][mimpregchance][line break]";
+					say "     Chuckling up at your lover, you nuzzle your head back against the Dalmatian while humming pleasantly up at Kenaz to let him know about how well you enjoyed his efforts just now. The firefighter chuckles in return as he wraps his arms around you tightly while licking you across the back of the head. Your belly sloshing with the dregs of the herm Dal's load, you can only sigh and rest your head back against Kenaz as you soak up the minutes of afterglow after such a powerful experience. The warm and pleasantly full feeling coming from your ass takes you off to sleep a few minutes later.[line break]";
+					NPCSexAftermath Player receives "AssFuck" from Kenaz;
 					infect "Dalmatian Male";
 					infect "Dalmatian Male";
 					now lastfuck of Kenaz is turns;
@@ -624,9 +662,10 @@ Instead of fucking Kenaz:
 							WaitLineBreak;
 							say "     Panting from the feel of being stuffed so completely full, you find yourself blinking in surprise as you feel the warmth trickling down your thighs. Tilting your head down, you realize that Kenaz didn't knot you so there's no plug to keep his load inside you. Minutes after everything is over and the Dalmatian is pulling out of you, you can only dip your head into the side of your lover's neck in embarrassment as you see your firefighter's cum literally spill out of your body. Kenaz simply chuckles and licks you across the back of your neck up to the side of your head before whispering something unintelligible into your ears.";
 							WaitLineBreak;
-							say "     The two of you are slow to clean up afterwards as Kenaz seems to want to dote over you. He makes a special show of things by licking his cum up off of your body before handing you a towel. Once you both are ready to leave, the two of you head out of the sleeping area and then back downstairs together. As expected, half of the station is either snickering or nodding to you in respect.[impregchance][impregchance]";
+							say "     The two of you are slow to clean up afterwards as Kenaz seems to want to dote over you. He makes a special show of things by licking his cum up off of your body before handing you a towel. Once you both are ready to leave, the two of you head out of the sleeping area and then back downstairs together. As expected, half of the station is either snickering or nodding to you in respect.";
 							infect "Dalmatian Male";
 							infect "Dalmatian Male";
+							NPCSexAftermath Player receives "PussyFuck" from Kenaz;
 							now lastfuck of Kenaz is turns;
 						else:
 							say "     Whimpering to the firefighter to let the other know of your feelings, Kenaz slowly pulls himself back out of you. Just as you think the moment is over with, you get a big surprise when a cool, moist nose buries itself in between your legs. While your Dalmatian lover might not have been able to fuck you the way he might have liked, Kenaz is not to let you go unsatisfied. Raising your legs up and then burying his face into your snatch, Kenaz hungrily rolls his tongue through your pussy. The former subby firefighter shows no hesitation as he slides his tongue through folds only to pull out to lay tender kisses along your labia seconds later. When familiar digits return back inside your tailstar to begin fingering your prostate, you find yourself smiling lovingly back at Kenaz.";
@@ -636,6 +675,7 @@ Instead of fucking Kenaz:
 							WaitLineBreak;
 							say "     It takes about a minute for you to calm down from your spectacular climax, but when you do, you find that Kenaz is pulling his head up to look at you. His muzzle is dripping with your [Cock of Player] cum while his neck fur is matted down with your honey. 'Next time, maybe I'll get to bury my bone inside you all the way,' Kenaz says optimistically after pulling his fingers out of you to stand by the side of his bed. You try and tell him that you'll return the favor, but he just shakes his head at you. 'Nah. Besides, I've been itchin['] to bury my bone under [one of]Birch's tail[or]Dagaz's tail[or]one of the other guys['] tails[at random].'";
 							say "     Chuckling at that, you shakily get up off of the bed to go and get your clothes. A tender caress along the end of your rump has you turning to look back at Kenaz just as you are about to put on your shirt. The other smirks playfully at you before going off about his way.";
+							NPCSexAftermath Kenaz receives "OralPussy" from Player;
 							infect "Dalmatian Male";
 							infect "Dalmatian Male";
 							now lastfuck of Kenaz is turns;
@@ -649,9 +689,10 @@ Instead of fucking Kenaz:
 						say "     Bucking and moaning while rocking the bed back against the wall, both you and Kenaz fuck for almost half an hour before the Dalmatian throws up his head to howl out his orgasm. Like a torrent, the firefighter's cum literally pours into your depths as Kenaz grinds his hips into your crotch to get out every drop of cum his balls have to offer. Likewise, the heat of your lover's sticky male sap makes you shiver and then moan as your climax sneaks up on you almost without warning. Between your cock[smn] and your cunt[sfn], you shed more than a liter's worth of juice as you drench both yourself and Kenaz down in the wash of your orgasm.";
 						WaitLineBreak;
 						say "     Pulling back and then driving his knot into you one more time, Kenaz plugs you up fully and then does a very canine-like thing; lifting one leg up and then turning around, Kenaz gives you his back as the Dalmatian simulates a true canine mating tie. Chuckling at the act, you find yourself reaching out a hand to rub along the Dalmatian's gaping slit, which looks somewhat unfulfilled. A hiss and shudder follows a groan as Kenaz lets you touch him this way. Turning his head back to look at you, the other has a funny look in his eye, but you're not sure what it means.";
-						say "     It doesn't matter though because when the last of his cum has trailed out of his cock Kenaz pops himself out of your cunt and then goes about looking for a towel or something to clean off with. Leaving you as you are, you rub a hand down onto your overly full belly as your snatch leaks with the sticky trails of the Dalmatian's cum.[impregchance][line break]";
+						say "     It doesn't matter though because when the last of his cum has trailed out of his cock Kenaz pops himself out of your cunt and then goes about looking for a towel or something to clean off with. Leaving you as you are, you rub a hand down onto your overly full belly as your snatch leaks with the sticky trails of the Dalmatian's cum.[line break]";
 						infect "Dalmatian Male";
 						infect "Dalmatian Male";
+						NPCSexAftermath Player receives "PussyFuck" from Kenaz;
 						now lastfuck of Kenaz is turns;
 			else if Player is female:		[female]
 				say "     Kenaz sniffs over your form and then chuffs slightly while looking down at your [BodyName of Player] form. 'Well, it seems we're more like [']sisters['] than what I would have preferred.' The Dal doesn't say much after that, but by the penetrating look in his eyes, you get the feeling that he's thinking over something. 'Want to try sixty-nining each other?' The out of the blue question makes you blink and then smile before nodding to your lover. Kenaz whuffs in front of your face and then proceeds to get himself into position to fuck you.";
@@ -666,6 +707,8 @@ Instead of fucking Kenaz:
 				WaitLineBreak;
 				say "     When you cum, you don't just orgasm, instead you shoot your honeyed juices with the kind of force that nearly drowns Kenaz as you flood the Dalmatian's snout with your honey. White hot sparks of bliss trail throughout your body, turning you into a livewire as you thrust and yowl and pump yourself against the firefighter like a bull fighting to unsaddle a rider. Consequently this causes your fingers to tense and your tongue to dig on up inside of Kenaz which forces the Dal's climax and sends the herm canine right off the edge of the map. Lifting his head slightly to let out a ferocious bark, Kenaz rains his cum down onto your face, drenching you the same as you did to him.";
 				say "     The both of your climaxes have to last for almost five or so minutes, however, like all good things they finally do end and quickly, you and Kenaz end up slumping down onto the bed while panting like freight trains. Of course, being so much heavier, not to mention on top, Kenaz is forced to roll off of you after you tap the side of his thighs in desperation for air. 'Well,' Kenaz begins while panting hotly next to you. 'That was fun. Want to go again in about twenty minutes?' And at that point, all you can do is laugh at your lover.";
+				NPCSexAftermath Player receives "OralPussy" from Kenaz;
+				NPCSexAftermath Kenaz receives "OralPussy" from Player;
 				infect "Dalmatian Male";
 				infect "Dalmatian Male";
 				now lastfuck of Kenaz is turns;
@@ -676,6 +719,7 @@ Instead of fucking Kenaz:
 				WaitLineBreak;
 				say "     Whuffing and panting while growling and moaning to the ceiling, both you and Kenaz end up cumming minutes later after the other takes you by the neck and then buries his fangs into your [SkinName of Player] skin. His climax, in turn, triggers your own and before long both you and the herm Dal are coating each other's chests in cum as you lose yourself to each other. It only takes ten minutes before the two of you are ready to come down from your respective zeniths, but once you do, Kenaz refuses to release the side of your neck. Not sure why, you look up at the other and then see the reason glowing hot inside of the Dalmatian's shining green orbs.";
 				say "     You both don't make it back downstairs for another hour or two after that.";
+				NPCSexAftermath Player receives "Stroking" from Kenaz;
 				infect "Dalmatian Male";
 				infect "Dalmatian Male";
 				now lastfuck of Kenaz is turns;

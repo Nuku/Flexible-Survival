@@ -1,4 +1,4 @@
-Tenvale Gorillas Football Team by Kernog begins here.
+Tenvale Silverbacks Football Team by Kernog begins here.
 
 [Quest Steps]
 [ 0: not started]
@@ -25,11 +25,11 @@ laundryProgress is a number that varies.
 to FootballTeamQuestLog:
 	if GorillasMember is:
 		-- 1:
-			say "[bold type]The Tenvale Gorillas[roman type]: I talked to Roman about joining the football team. He regularly organize tryout sessions, so [bold type]I should come back later and talk to him again.[roman type].";
+			say "[bold type]The Tenvale Silverbacks[roman type]: I talked to Roman about joining the football team. He regularly organize tryout sessions, so [bold type]I should come back later and talk to him again.[roman type].";
 		-- 2:
-			say "[bold type]The Tenvale Gorillas[roman type]: Roman does not want to talk with me about it. [bold type]I should insist, or improve my charms, and try again[roman type].";
+			say "[bold type]The Tenvale Silverbacks[roman type]: Roman does not want to talk with me about it. [bold type]I should insist, or improve my charms, and try again[roman type].";
 		-- 3:
-			say "[bold type]The Tenvale Gorillas (COMPLETED)[roman type]: I am part of the team now! [if GorillasRep < 3]I am only a helper for now, but if I work enough times for the team, they may let me train with them[else if GorillasRep < 8]The team captain accepted me among the players. I may train with the team anytime[else]I managed to rise to the top. I wonder when the next match is[end if].";
+			say "[bold type]The Tenvale Silverbacks (COMPLETED)[roman type]: I am part of the team now! [if GorillasRep < 3]I am only a helper for now, but if I work enough times for the team, they may let me train with them[else if GorillasRep < 8]The team captain accepted me among the players. I may train with the team anytime[else]I managed to rise to the top. I wonder when the next match is[end if].";
 
 to say FootballTryouts:
 	say "     'Hey, you arrive just in time,' Roman tells you, a smile on his face. [bold type]So, ready to start the tryouts? Be careful, since we only got so much candidacies, you can only pass them once.[roman type][line break]";
@@ -493,4 +493,4 @@ to say FootballMatchEnd:
 		ItemGain football pads by 1;
 
 
-Tenvale Gorillas Football Team ends here.
+Tenvale Silverbacks Football Team ends here.

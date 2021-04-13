@@ -14,6 +14,7 @@ Version 2 of Amy by Wahn begins here.
 [  90: in the abandoned house, virgin                                   ]
 [  91: in the abandoned house, player fucked her for the first time     ]
 [ 100: removed from the game (lost somewhere)                           ]
+[ 101: no interest of the player to fuck her                            ]
 [                                                                       ]
 [ Lust of Amy (pregnancy timer)                                         ]
 [     0: not pregnant                                                   ]
@@ -127,9 +128,9 @@ instead of conversing the Amy:
 	else if HP of Amy is 2 or HP of Amy is 10: [matured]
 		say "     Amy says [one of]'Thanks for bringing me here. I realize now how dangerous our trip through the city was.'[or]'I wonder how mother is doing. I wasn't with her all that long, but now that I think back, she didn't have anything on her mind except... well, sex.'[or]'Woof! Woof!' Then she laughs and adds 'Just kidding.'[or]'So much interesting stuff to read in here...'[or]'How were things before the nanites spread? The stories in the books seem... more peaceful, mostly.'[at random]";
 	else if (HP of Amy is 11):[fucked]
-		say "     Amy says [one of]'Thanks for bringing me here. I realize now how dangerous our trip through the city was.'[or]'I wonder how mother is doing. I wasn't with her all that long, but now that I think back, she didn't have anything on her mind except... well, sex.'[or]'Woof! Woof!' Then she laughs and adds 'Just kidding.'[or]'So much interesting stuff to read in here...'[or]'How were things before the nanites spread? The stories in the books seem... more peaceful, mostly.'[or]I can't stop thinking about the last time with you. Could we do that again?[or]I sometimes get all wet just thinking about sex. I guess that's something I inherited from mom, hm?[at random]";
+		say "     Amy says [one of]'Thanks for bringing me here. I realize now how dangerous our trip through the city was.'[or]'I wonder how mother is doing. I wasn't with her all that long, but now that I think back, she didn't have anything on her mind except... well, sex.'[or]'Woof! Woof!' Then she laughs and adds 'Just kidding.'[or]'So much interesting stuff to read in here...'[or]'How were things before the nanites spread? The stories in the books seem... more peaceful, mostly.'[or]'I sometimes get all wet just thinking about sex. I guess that's something I inherited from mom, hm?[at random]";
 	else if (HP of Amy is 12):[has puppies]
-		say "     Amy says [one of]'Thanks for bringing me here. I realize now how dangerous our trip through the city was.'[or]'I wonder how mother is doing. I wasn't with her all that long, but now that I think back, she didn't have anything on her mind except... well, sex.'[or]'Woof! Woof!' Then she laughs and adds 'Just kidding.'[or]'So much interesting stuff to read in here...'[or]'How were things before the nanites spread? The stories in the books seem... more peaceful, mostly.'[or]'I can't stop thinking about the last time with you. Could we do that again?'[or]'I sometimes get all wet just thinking about sex. I guess that's something I inherited from mom, hm?'[or]'One of the pups shredded a book - I hope that's not too bad.'[or]'Aren't the little ones cute?'[or]'I can't wait to do it again with you.'[or]'One of the pups shredded a book - I hope that's not too bad.'[or]'Aren't the little ones cute?'[or]'Thanks for knocking me up - I love having your puppies.'[at random]";
+		say "     Amy says [one of]'Thanks for bringing me here. I realize now how dangerous our trip through the city was.'[or]'I wonder how mother is doing. I wasn't with her all that long, but now that I think back, she didn't have anything on her mind except... well, sex.'[or]'Woof! Woof!' Then she laughs and adds 'Just kidding.'[or]'So much interesting stuff to read in here...'[or]'How were things before the nanites spread? The stories in the books seem... more peaceful, mostly.'[or]'I sometimes get all wet just thinking about sex. I guess that's something I inherited from mom, hm?'[or]'One of the pups shredded a book - I hope that's not too bad.'[or]'Aren't the little ones cute?'[or]'One of the pups shredded a book - I hope that's not too bad.'[or]'Aren't the little ones cute?'[at random]";
 	else:
 		say "ERROR-Amy-[HP of Amy]C: She isn't in one of the states she should be in! Please report how you got to this message.";
 
@@ -290,9 +291,32 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 		say "     DEBUG: AMY/OTHER SEX WALKIN [line break]";
 	now lastfuck of Amy is turns + 4;
 	if HP of Amy is 2:[mature virgin]
-		say "     As you enter the library, Amy walks up to you, something clearly on her mind. She says 'I've been feeling some... urges lately, and read up a bit about that. There were some novels over in that section -' At that, she points to a large bookcase over on a nearby wall, bearing a sign with 'Romance' on it. As she does so, Amy's arm brushes against her breast, causing the young husky to moan before she can stop herself. Biting her lip, she continues 'I-I... would you be my first? It's supposed to be with someone you care for and - you saved me from those ferals out on the streets, brought me here, allowed me to learn so much.'";
-		say "     The young husky woman is clearly aching to be fucked - but before you can say anything about it, she turns her head a bit and says 'Oh, but you were just going somewhere, weren't you? I don't want to distract you, so I'll just... be here and if you ever want to spend some time with me.'";
-		now HP of Amy is 10;
+		say "     As you enter the library, Amy walks up to you, something clearly on her mind. She says 'I've been feeling some... urges lately, and read up a bit about that. There were some novels over in that section -' At that, she points to a large bookcase over on a nearby wall, bearing a sign with 'Romance' on it. As she does so, Amy's arm brushes against her breast, causing the young husky to moan before she can stop herself. Biting her lip, she continues 'I-I... would you be my first? It's supposed to be with someone you care for and - you saved me from those ferals out on the streets, brought me here, allowed me to learn so much.' The young husky woman is clearly aching to be fucked - but before you can say anything about it, she turns her head a bit and says 'Oh, but you were just going somewhere, weren't you? I don't want to distract you, so I'll just... be here and if you ever want to spend some time with me.'";
+		say "     Intro Description";
+		say "     [bold type]How do you want to deal with this?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Have sex with her right now.";
+		say "     [link](2)[as]2[end link] - Tell her to wait just a little longer.";
+		say "     [link](3)[as]3[end link] - Tell her (tactfully) that you don't want to fuck her.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to have sex, [link]2[end link] to postpone or [link]3[end link] to tell her you won't do it.";
+		if calcnumber is 1:
+			LineBreak;
+			say "[AmyFirstFuck]";
+			now HP of Amy is 11;
+		else if calcnumber is 2:
+			LineBreak;
+			say "     Clearing your throat, you catch Amy by the arm and tell her that you don't have time for her right now. She looks a little disappointed for a moment, but then nods to you and says she'll wait for you. With that, she skips off to distract herself with a good book.";
+			now HP of Amy is 10;
+		else if calcnumber is 3:
+			LineBreak;
+			say "     Clearing your throat, you catch Amy by the arm and calmly have a word with her, explaining that not everyone has the same sexual interests. She looks a little disappointed for a moment, but then seems to accept your decision. With a shy little nod, she then skips off to distract herself with a good book.";
+			now HP of Amy is 101;
 	else if HP of Amy is 10:[mature virgin, told the player she's horny]
 		say "     As you enter the library, you see Amy sitting on her mattress, reading one of those romance novels with a pirate and a half-dressed woman on the front. She's slowly rubbing her breasts, moaning silently - which makes you remember her coming to talk to you about losing her virginity. The young husky woman is clearly aching to be fucked - you should probably just follow her invitation and take care of her - sometime soon.";
 	else if HP of Amy > 10 and CuckList is not banned:
@@ -319,10 +343,10 @@ to say AmyNPCSexTable:
 						else:[basic Xerxes]
 							say "     Almost before you're finished telling him to 'Go for it', Xerxes is on top of Amy, his muscular chest against her back as he hugs her tightly and grinds his crotch against her body. Being a natural in the typical 'doggie-style', his shaft quickly finds her dripping opening and plunges deep into the husky's body. Xerxes fucks Amy with a relentless wild energy, his hard thrusts hitting very sensitive spots again and again, making her pant and yip in pleasure. This soon drives Amy's arousal to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed.";
 						say "     As his cock and balls keep twitching with blast after blast of cum into his sexual partner, Xerxes just keeps holding on to Amy, panting with his head over her shoulder. Exhausted, the husky lowers herself to lie on her bedding, taking your human dog with her so they end up cuddled together on the mattress[if lust of Xerxes >= 4]. Raising his head to look at you for a moment, Xerxes mumbles 'Mmm... Master-Friend Amy nice' to you, then snuggles up to her with his arms around the young woman's chest[end if].";
-						if Lust of Amy is 0:
+						if Lust of Amy is 0: [not pregnant]
 							let AmyPregchance be a random number from 1 to 20;
-							if AmyPregchance > 13:
-								now Lust of Amy is 24;
+							if AmyPregchance > 13: [30% chance]
+								now Lust of Amy is 24; [24 turns till birth]
 						now thirst of Amy is 1;
 						NPCSexAftermath Amy receives "PussyFuck" from Xerxes;
 					else:[Xerxes forbidden]
@@ -923,7 +947,7 @@ to say AmyNPCSexTable:
 						say "     ([link]N[as]n[end link]) - Turn away.";
 						if Player consents: [Amy+dom Icarus Sex]
 							LineBreak;
-							say "     With Amy totally concentrated on her fantasy and her eyes closed, she doesn't notice the anthro bird coming up to her and then kneel on the mattress. With little preamble, he gets his stiff cock lined up with her pussy and pulls the young husky's hand out of the way. His taloned hangs grip her hips tightly as she opens her eyes in surprise, then he thrusts into her with his avian rod. The slick, tapered cock pushes into Amy easily, causing her first shocked yelp to run over into a moan of pleasure at getting fucked. Soon the feathered fellow is drilling her hard, chirping occasionally as he does.";
+							say "     With Amy totally concentrated on her fantasy and her eyes closed, she doesn't notice the anthro bird coming up to her and then kneel on the mattress. With little preamble, he gets his stiff cock lined up with her pussy and pulls the young husky's hand out of the way. His taloned hands grip her hips tightly as she opens her eyes in surprise, then he thrusts into her with his avian rod. The slick, tapered cock pushes into Amy easily, causing her first shocked yelp to run over into a moan of pleasure at getting fucked. Soon the feathered fellow is drilling her hard, chirping occasionally as he does.";
 							say "     Amy grows increasingly aroused as the mating continues, with Icarus soft feathers rubbing against her thighs, crotch and pussy lips as he thrusts into her. With her not resisting his advances, just gripping the sheets with her paw-hands as waves of lust run through her body, Icarus is free to let his taloned hands roam over Amy's soft-furred body. Between the soft feathers rubbing against her and the hard cock pumping inside her needy pussy, it's not much longer until both of them finally climax loudly, his chirping and moaning joining her lust-filled barks. Icarus spreads his feathers a bit and gives you a smug nod as his hot seed pumps into Amy's cunt and flows into her womb.";
 							say "     When he's done, Icarus dismounts and gives Amy's breasts a grope before flying off with a chuckle. She's left lying there with his cum leaking from her stuffed pussy, exhausted and somewhat dazed by the avian male's sudden appearance and actions.";
 							if Lust of Amy is 0:
@@ -953,7 +977,7 @@ to say AmyNPCSexTable:
 						if Player consents:[Amy+sub Icarus Sex]
 							LineBreak;
 							say "     You tell Icarus Amy's name and give him your permission to fuck her - if she lets him. The horny chaffinch thanks you and hurries over to the husky before you can change your mind. Kneeling before her, he ruffles his feathers to look as impressive as possible, then chirps a nice and short little song at her. Until now totally concentrated on her fantasy, Amy opens her eyes with a surprised expression on her face, seeing the blue chaffinch in all his feathered glory kneeling between her legs. Before she can say anything, Icarus continues with 'Hello there, beautiful. Why dream about things when you can have me in reality?' while leaning over her to run his hands along her curves and cup her breasts. And it works - seems like her nipples were just the right buttons to caress, as the thoroughly aroused Amy just pants and lets her head sink back down, giving herself over to the anthro bird.";
-							say "     With a satisfied chirp, Icarus smoothly moves forward on top of Amy, lining his stiff cock up with her pussy. His taloned hangs grip her hips tightly, then he thrusts into her with his avian rod. The slick, tapered cock pushes into Amy easily, causing her to moan loudly at being filled by his manhood. Soon the feathered fellow is drilling her hard, chirping occasionally as he does.";
+							say "     With a satisfied chirp, Icarus smoothly moves forward on top of Amy, lining his stiff cock up with her pussy. His taloned hands grip her hips tightly, then he thrusts into her with his avian rod. The slick, tapered cock pushes into Amy easily, causing her to moan loudly at being filled by his manhood. Soon the feathered fellow is drilling her hard, chirping occasionally as he does.";
 							WaitLineBreak;
 							if Player is male:
 								say "     Watching your little birdy fuck Amy, his tight butt moving up and down as he pounds her, your own member gets quite hard and ready for some action too. Maybe you should... join them, taking Icarus ass to remind him of his place.";
@@ -1167,12 +1191,12 @@ Instead of fucking the Amy:
 		say "     With her being not even a week old and rather child-like in temperament, it doesn't seem right to just fuck Amy. You decide you'd rather not do that right now.";
 	else if HP of Amy is 2: [matured]
 		say "     Deciding that you'll just be straightforward about things, you walk up to Amy and tell her you'd like to have sex with her. 'Oh,' the young husky says, looking to the side for a moment to a bookcase a sign above denounces to be filled with romance novels. 'I've read a bit about that when I started getting some funny feelings. So you want to... be my first? It's supposed to be someone special, a prince or a pirate or... a hero.' With that, she smiles at you. 'You saved me when we were out in the streets, brought me here and have been pretty nice, so sure - let's do it.' She takes you by the hand, leading you over to her mattress and sitting down on it.";
-		say "     [AmyFirstFuck]";
+		say "[AmyFirstFuck]";
 		now lastfuck of Amy is turns;
 		now HP of Amy is 11;
 	else if (HP of Amy is 10): [she told the player she wanted them to fuck her]
 		say "     Deciding that you'll just be straightforward about things, you walk up to Amy and tell her you'd like to have sex with her. The young husky happily embraces you, moaning a bit as her four breasts rub against your chest. 'Thank you for making me the happiest girl in the world. It'll be just like in the books, with you my hero.' She takes you by the hand, leading you over to her mattress and sitting down on it.";
-		say "     [AmyFirstFuck]";
+		say "[AmyFirstFuck]";
 		now lastfuck of Amy is turns;
 		now HP of Amy is 11;
 	else: [repeat sex]
@@ -1202,6 +1226,7 @@ to say AmyFirstFuck:
 		say "     Wanting to distract her from the pain of losing her virginity, you give her another deep kiss, move a hand to cup one of her upper breasts - and then make a quick downward thrust with the dildo, only stopping as the rubber balls at its base touch her crotch. There is only a short yip from Amy as her hymen is broken by the invading member, the moment of pain drowned out almost instantly by the pleasurable sensations of being kissed, touched and fucked. She starts moaning again as you move the toy inside her, rubbing her inner walls with the hard rubber shaft. Fucking the husky woman is a lot of fun, though you ache for some release of your own, so you get on top of her in 69 position. Without any prompting, Amy starts licking you again, driving you to higher and higher arousal. Being her first time having sex, and you already aroused from taking care of Amy, it's not too much longer until your coupling culminates in two pretty noisy orgasms. Amy is the first to reach her goal, giving a lust-filled howl as she comes, her femcum glistening wetly on the rubber shaft of the dildo you're fucking her with. Just moments later, you experience your own climax, the young husky's talented tongue driving you over the edge.";
 		WaitLineBreak;
 		say "     Satisfied, you stay like that with Amy for a while, listening to her comparing what you just did to the books she read, mostly in terms of '...soo much better than I had imagined, even after reading about Lady Catherine and Lord Malcomb...' Running your hands through her soft belly fur, circling a nipple with your finger, you soon start making out with your canine mate, telling her she doesn't need those books now as there's lots more interesting stuff to do with you in reality.";
+		NPCSexAftermath Amy receives "PussyDildoFuck" from Player;
 		NPCSexAftermath Amy receives "OralPussy" from Player;
 		NPCSexAftermath Player receives "OralPussy" from Amy;
 	else: [neuter]

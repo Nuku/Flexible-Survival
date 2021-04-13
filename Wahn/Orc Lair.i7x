@@ -107,7 +107,10 @@ to say ResolveEvent Orcish Slave Raid:
 								say "     [bold type]Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
 								if Player consents:
 									LineBreak;
+									choose a row with name of "Orc Warrior" in the Table of Random Critters;
+									now enemy type entry is 1; [unique orc, not for impregnation]
 									say "     [BeatenOrcSexMenu]";
+									now enemy type entry is 0; [reset to non-unique]
 								else:
 									LineBreak;
 									say "     You walk away after checking them over for loot.";
@@ -138,7 +141,9 @@ to say ResolveEvent Orcish Slave Raid:
 						say "     [bold type]Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
 						if Player consents:
 							LineBreak;
+							now enemy type entry is 1; [unique orc, not for impregnation]
 							say "     [BeatenOrcSexMenu]";
+							now enemy type entry is 0; [reset to non-unique]
 						else:
 							LineBreak;
 							say "     You walk away after checking them over for loot.";
@@ -147,7 +152,7 @@ to say ResolveEvent Orcish Slave Raid:
 		say "     Walking along a street between some warehouses, you suddenly hear deep voices talking to each other somewhere nearby. You overhear 'Where are all those little weaklings? I wanna fuck!', followed by another voice answering 'Don't shout, brother. You'll drive [']em off. I'm sure we'll find someone soon.' And with that, a trio of very muscular men step out of an alley just ahead of you - tall and green as they are, dressed only in loincloths, there's no doubt that they're orcs. [if OrcSlaverStatus is 3]And orcs you know at that - Mul, Yatur and Koghh, the orc slavers that you had a run-in with before[else]From the relatively similar looks, they might be brothers[end if]. One of them gives you an appraising look, then smiles around his sharp tusks. [if OrcSlaverStatus is 0]'See, told ya!' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 2]'Look, it's the little bitch that escaped from the lair. What nice coincidence,' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 3]'Look, it's our runaway breeder. Come on little bitch, we'll bring you back home and give you what you really need,' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 50]'Oh, that bastard again. This time, you're going down. We'll make a breeder out of you yet,' he grunts, prompting his siblings to rush at you. [end if]They're quick for such big and muscular brutes, barely giving you time to taking on a combat stance before they're upon you...";
 		LineBreak;
 		now inasituation is true;
-		now OrcSpecialFightNumber is 6; [fighting Yatur]
+		now OrcSpecialFightNumber is 4; [fighting Yatur]
 		challenge "Orc Warrior";
 		if fightoutcome is 22:
 			say "[SubmitToOrcSlavers]";
@@ -184,7 +189,9 @@ to say ResolveEvent Orcish Slave Raid:
 					say "     [bold type]Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
 					if Player consents:
 						LineBreak;
+						now enemy type entry is 1; [unique orc, not for impregnation]
 						say "     [BeatenOrcSexMenu]";
+						now enemy type entry is 0; [reset to non-unique]
 					else:
 						LineBreak;
 						say "     You walk away after checking them over for loot.";
@@ -1440,7 +1447,7 @@ instead of conversing the Orc Mob:
 				say "     Boghrim chuckles, seemingly having only waited for the question. 'What you get,' he calls loudly, 'is an extra special breeder. A super-sized one.' And with that, he grabs the still prone Urik by the hair, pulling him up for everyone to see. The warrior's face and teeth have already mostly healed, though he still looks a bit roughed up. 'N-no please,' Urik weakly groans, only to be silenced by Boghrim shaking him. 'Quiet, you made your bed, now lie in it,' the orc boss snarls, then addresses the breeder Urik hurt - who seems to have grown half a foot in the last few minutes, and is fully healthy again. Boghrim asks, 'Hey, what's your name boy?' and the slightly confused newly-minted young orc warrior replies, 'Toven, master.' The orc boss drops his captive, letting him collapse on the floor and grips Toven's shoulder in a friendly manner. 'No more of that master business, you're an orc warrior now. So then, you get the honor of initiating this bitch to his new role in life!'";
 				WaitLineBreak;
 				say "     Now being taller and a bit more buff than an orc breeder, Toven still seems a bit befuddled by his sudden change of circumstance and visibly swallows as he looks down at the orc that no doubt fucked him many, many times. 'I- erm...' he stammers, only to moan as Boghrim just reaches for his freely swinging cock and strokes it. 'Go on, line this beauty up with his fuckhole. Everything else will come naturally - for both of you.'";
-				say "     [bold type]Do you watch Urik losing his anal virginity and Toven's first fuck as an orc warrior (though he seems more like a half-and-half orc right now)?[roman type][line break]";
+				say "     [bold type]Do you watch Toven's first fuck as an orc warrior (though he seems more like a half-and-half orc right now)?[roman type][line break]";
 				if Player consents: [fuck scene]
 					LineBreak;
 					say "     In between elbowing a few orcs that try to shove past you and take your prime spot in the first row of watching the action, you put a hand on your own crotch and rub the growing bulge there. Toven really has quite a sexy body - a neat combination of a breeder's attractiveness and now the greater height and muscle of a warrior. And fitting to his transformation and re-birth, he is in his birthday suit - giving you a perfect opportunity to ogle the guy... his thick swinging shaft, heavy balls and all. The young orc's prick starts to dribble pre-cum as Toven feasts his eyes on Urik's form, with the dominant orc now forced into a submissive position on all fours. Still not used to taking the initiative, he hesitates a moment longer, then Boghrim gives Toven a shove, sending him to stumble against the tensely waiting orc and fall half on top of him.";
@@ -1454,9 +1461,7 @@ instead of conversing the Orc Mob:
 					WaitLineBreak;
 					say "     Grunting with each new splash of his cum being emptied into Urik, Boghrim stays like that for several long moments - enough for the still-sucking orc to actually go a bit emerald-green in the face, from lack of air. Then Boghrim suddenly pulls his whole shaft out with a single move, freeing Urik's airways. The former orc warrior collapses on the ground as he isn't held up anymore, his upper body slumped forward as he gasps for air, drooling cum on the floorboards. Far from done with his orgasm, Boghrim aims his still spurting cock at his subordinate, painting his face, hair and upper back with white streaks. Moving your eyes to check on the teen orc still fucking Urik's hole, you catch a glimpse of him licking his lips hungrily as he pointedly stares at the splashes of tasty orc cum on the muscled back in front of him. An eye-blink later, Toven is leaning over Urik and wrapping his arms around the bigger orc holding him tight as he thrusts especially hard - and what he also is doing is lapping up Boghrim's seed like the cum-hungry breeder he was until just a short while ago.";
 					say "     The potent taste of Boghrim's cum is enough to send the already quite close young orc over the edge with a lusty roar and he bucks into Urik hard, driving himself in all the way. The first heavy throb of his load into his former master is accompanied by a needy whimper from Urik, prompting Toven to stretch his neck a little bit more and give Urik a light bite on the shoulder, his tusks digging in to mark the other orc as his first fuck. A stomach-full of cum and now being flooded from the other end too is more than enough to push Urik to his own orgasm - the big brute moans like a bitch in heat as his cock starts to twitch, blasting a big load of cum all over the floor under his body without anyone even touching it. A cheer goes through the gathered crowd, rapidly overtaken by grunts and the growing noise of urgent fapping. You yourself are among the first few who jerk themselves to completion, groaning out loudly as your thick prick blasts cum into the air - hitting Toven's chest as you aim a bit high in your excitement. While all eyes are on the kneeling orc being baptized in cum as a newly-made breeder, the young orc warrior still balls-deep inside him meets your eyes and smiles. Then he raises a hand and wipes off your sperm from a muscled pec, bringing his fingers to his mouth to lick it off.";
-					if graphics is true:
-						WaitLineBreak;
-						project the figure of Toven_naked_icon;
+					project the figure of Toven_naked_icon;
 					WaitLineBreak;
 					say "     The little 'moment' between Toven and yourself is cut short as the orcs behind you push forward, everyone wanting to join in too. Exhausted as you are from just having come, you let them pass and don't try to keep your spot - but you do catch a wink from the young orc warrior before you lose sight of him. Casually wiping your cockhead clean on the dangling end of a loincloth belonging to one orc at the back of the crowd (who is far too busy shoving his neighbor to even notice), you set your clothing and gear in order and walk out of the drinking hall.";
 					say "     [bold type]Might be worth coming back here sometime soon and joining in for the 'hunt'. Best talk to the orc crowd when you're ready.[roman type][line break]";
@@ -1749,10 +1754,7 @@ instead of conversing the Orc Mob:
 				say "     The room explodes in cheers at the announcement and several of the strongest orcs step forward a little, posing with their impressive muscles and looking casually at their rivals for the honor of being the winner. 'As promised, this bitch here is the prize,' Boghrim calls out while pulling Urik closer and jamming to fingers into his mouth to be lewdly sucked upon. 'He's proven quite a cum-slut. As for the rear end - it still only has felt Toven's shaft, so you'll have all the fun of breaking him in for good.' Many an orc cock in the hall starts hardening at that shout, and the orc chief pulls the enslaved warrior around to show off his muscular rump, giving it a slap that leaves an emerald hand-print on Urik's green skin for several seconds.";
 				WaitLineBreak;
 				say "     The orc leader grins at the lusty stares everyone gives Urik, then calls out, 'But there is more - I went out to get a proper uniform to decorate your new fucktoy with.' Raising his hand to his mouth and giving a sharp whistle, the mighty orc's breeder slaves jump up from their spots immediately and start decking Urik out with a brand new leather harness to go around his broad chest, all glistening buckles and studded straps. Then Jason brings forward what looks to be a pair of underwear - shiny and black, which he holds up for Urik to step into, then pulls up the orc's muscular legs. The human can't help himself and fondles the large orc's shaft admiringly as he tucks it into the pouch of a very interesting piece of clothing - quite tight-fitting trunks with a mesh pouch at the front, decorative slits on the sides... and a completely open backside. There isn't much there on the back but the straps at the top and bottom, meaning that these undies allow unrestricted access to Urik's ass.";
-				if graphics is true:
-					WaitLineBreak;
-					project the Figure of Urik_ass_icon;
-					WaitLineBreak;
+				project the Figure of Urik_ass_icon;
 				say "     'You like that, don't you?' the orc leader barks into the room and gets a full-throated cheer from all of the gathered orcs. This man (or orc now) really knows how to play a crowd, that is sure. Tension rises in the room for a moment as Boghrim lets his gaze wander over the gathered warriors, with several of the big brutes deflating a little as he passes them without calling out that they've won. Then finally, he focuses on someone and gives a wide tusk-baring grin. ";
 				if Libido of Orc Mob > 2: [player won - brought in 3-4 slaves]
 					say "It's you! 'Congratulations!' the orc chief calls out and waves you forward. With a wide grin on your face, you walk past the orcs who had prematurely pushed forward earlier, showing them your tusks in satisfaction. As you come close to the platform, Boghrim gives Urik a shove, making the orc literally stumble into your arms. Standing in the drinking hall of the orc lair with the super-sized breeder slave in your arms and the whole tribe cheering at your victory, you can't help but feel very proud of yourself. Despite the way you got introduced to the orcs living in this city, now you're an orc warrior yourself and do feel pretty good as a member of this tribe. The hunt was good fun and you remember the slaves you brought in fondly and with some arousal - making you look forward in anticipation to making use of your newly acquired orc slave too.";
