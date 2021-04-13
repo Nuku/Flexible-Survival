@@ -255,6 +255,7 @@ to say GreyAbbeyLibraryObservation_General:
 			now sextablerun is 1;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 Table of GameRoomIDs (continued)
