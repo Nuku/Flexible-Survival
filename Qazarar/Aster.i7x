@@ -153,7 +153,7 @@ to say AsterTalkMenu:
 	if Loyalty of Aster is 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Amulet";
-		now sortorder entry is 3;
+		now sortorder entry is 4;
 		now description entry is "Give Aster the amulet.";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -300,18 +300,18 @@ to say AsterDom1: [oral]
 	WaitLineBreak;
 	say "     Aster releases his hold on you, allowing you to go at your own pace now that you've gotten going. You keep it up, bobbing up and down his dick in long strokes, savoring the sensation of the rod passing through your lips. However, you the feeling of the shaft straining tells you that soon the minotaur will come to a climax, and your job will be done. You barely have time to process that thought before the action comes to a peak, and the cock in your mouth starts throbbing intensely, flooding you with his release. You spend some time swallowing down his load, gasping for air in between spurts, until at last his orgasm abates. He pulls away from the desk just enough to allow you out, and gives a confident grin at you when you climb to your feet. 'Good work down there. Feel free to come back whenever.'";
 	PlayerDrink 3;
-	now lastfuck of Aster is turns;
+	NPCSexAftermath Player receives "OralCock" from Aster;
 
 to say AsterDom2: [ask to be fucked]
 	say "     You tell Aster you want him to fuck you, and he responds with a broad grin. 'Alright, then, I'll give you what you want. But first I want you to get up on the desk, so I can do this properly.' You waste no time in listening to the confident minotaur, and in moments you're lying on your stomach across his desk, with papers and books strewn about you. Being so exposed, out in the open museum atrium, adds a thrill to what's about to happen. He doesn't leave you waiting, and in almost no time at all you feel a very sizable shaft drop down onto your rear, allowing you to feel all the weight of his package resting on you.";
 	say "     There is only a moment of peace, savoring the touch of the minotaur cock, before he begins to pull it back. The tip drags its way across your back, tracing a line directly towards your opening. For a scant few seconds, he is motionless, poised to take you without actually doing so. Then the seconds pass, and without warning the broad head of his shaft is resting deep within you as you gasp for breath. From there Aster begins to hammer in and out, plowing you right in the open. The thrusting of his member starts to build a well of pleasure within you, growing significantly alongside the force of his thrusts. Finally it rises to a peak, and with one final slam he hilts his dick in you, flooding you with his bovine essence.";
 	say "     For a time you feel adrift in the pleasure you were given by the incredible plowing from the once-shy minotaur. Afterwards, however, you start to come down from the sensation when Aster pulls out of you, leaving you simply lying on his desk, with minotaur spunk dripping from you. 'Hey, you were a pretty excellent fuck, I've gotta say. I'd love to stick around, but I have some more work to get to. Go ahead and take five to get yourself together, though. If you need to get properly railed again later, you know who to call.' With that, the studious minotaur leaves you, presumably to perform some menial task. Eventually you do gather yourself, despite your embarrassment, and you follow suit.";
-	now lastfuck of Aster is turns;
+	NPCSexAftermath Player receives "AssFuck" from Aster;
 
 to say AsterDom3: [ask to fuck him]
 	say "     'Hmm, is that so? Well, I'll let you enjoy my ass, but it will be on my own terms.' He gets up from his desk, and gestures at his chair. 'How about you take a seat and let me work?' With no need to refuse his request, you comply, setting yourself down in his desk chair. In expectation of what is about to happen, your [CockName of Player in lower case] member begins to harden. The minotaur grins at the sight, already stripping off his slacks, exposing his own hardening shaft at the same time. For a moment you simple look at his impressive physique, until he steps forward and climbs up onto the seat[if strength of Player > 17]. You can comfortably support his weight as he adjusts himself until his rear is hovering just above the tip of your rod[else]. His full weight is more than you can easily handle, leaving you pinned under him as he maneuvers his rear into place above your rod[end if]. Finally, he lowers himself down with much more speed than you were expecting, impaling himself on your cock.";
 	say "     The minotaur begins to ride you with far more fervor than you expected, and with a skill that can only be born of the amulet you gave him. The up and down motion combined with the way his hole grips your cock bring you incredible pleasure, enough that you can do nothing except wait and allow him to have his way with you. The only thing you can focus on is the feeling on your dick and the sound of his voice. 'Ha, even when I let you use your cock, it's still me in charge, and it always will be. Isn't that right?' You can only nod in response, as your helpless state more than proves him right. 'Well, I only need you to do one more thing. Cum for me, now!' Driven on by his words, you find yourself climaxing, faster than you expected, unloading your cream directly into the bull. As you do so, he comes a stop, allowing it to fill him, before he smiles. 'Well done, just like I asked. Now, I'm going to get up, and then you'll need to get up as well. I still need that chair.' After the experience he just gave you, there's really nothing to do but what he requests.";
-	now lastfuck of Aster is turns;
+	NPCSexAftermath Aster receives "AssFuck" from Player;
 
 
 to say AsterSubMenu:
@@ -367,14 +367,14 @@ to say AsterSubMenu:
 
 to say AsterSub1: [oral]
 	say "     <suck off Aster under his desk";
-	now lastfuck of Aster is turns;
+	NPCSexAftermath Player receives "OralCock" from Aster;
 
 to say AsterSub2: [ask to be fucked]
 	say "     <scene>";
-	now lastfuck of Aster is turns;
+	NPCSexAftermath Player receives "AssFuck" from Aster;
 
 to say AsterSub3: [ask to fuck him]
 	say "     <scene>";
-	now lastfuck of Aster is turns;
+	NPCSexAftermath Aster receives "AssFuck" from Player;
 
 Aster ends here.
