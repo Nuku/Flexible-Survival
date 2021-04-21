@@ -377,7 +377,7 @@ to say gsopt_start:
 				now Ball Count of Fang is 0;
 				now Ball Size of Fang is 0;
 				now Cunt Count of Fang is 1;
-				now Cunt Depth of Fang is 10;
+				now Cunt Depth of Fang is 12;
 				now Cunt Tightness of Fang is 2;
 				now Clit Size of Fang is 3;
 				now Virgin of Fang is false;
@@ -391,7 +391,7 @@ to say gsopt_start:
 				now Ball Count of Fang is 0;
 				now Ball Size of Fang is 0;
 				now Cunt Count of Fang is 1;
-				now Cunt Depth of Fang is 10;
+				now Cunt Depth of Fang is 12;
 				now Cunt Tightness of Fang is 3;
 				now Clit Size of Fang is 2;
 				now Virgin of Fang is false;
