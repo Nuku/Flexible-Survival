@@ -105,12 +105,12 @@ to say artemislinkaction:
 
 Table of GameCharacterIDs (continued)
 object	name
-rubber tigress	"rubber tigress"
+rubber tigress	"Rubber Tigress"
 
 rubber tigress is a pet.
 NPCObject of rubber tigress is Artemis.
 understand "Artemis" as rubber tigress.
-IDList of rubber tigress is { "Artemis", "artemis", "rubber tiger", "tigress", "rubber tigress" }.
+IDList of rubber tigress is { "Artemis", "artemis", "rubber tiger", "tigress", "Rubber Tigress" }.
 printed name of rubber tigress is "Artemis".
 Description of rubber tigress is "[ArtemisDesc]".
 Weapon Damage of rubber tigress is 10.

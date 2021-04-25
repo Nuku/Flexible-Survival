@@ -34,6 +34,10 @@ A person has a number called Lust. [ currently unused for the player; stash vari
 A person has a number called Libido.
 A person has a number called Loyalty.
 A person has a number called Humanity.
+[
+A person has a number called Affection.
+A person has a number called Corruption.
+]
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a number called Armor.
 A person has a number called Capacity.
@@ -50,6 +54,9 @@ A person has a number called Tongue Length. Tongue Length is usually 3.
 A person has a number called Breast Size. Breast Size is usually 0.
 A person has a number called Nipple Count. Nipple Count is usually 2.
 A person has a number called PlayerLastSize. PlayerLastSize is usually 3. [size of the player during the last meeting]
+[
+A person has a number called lastDrug. lastDrug is usually 2500.[@Tag:NotSaved][last drug use of the character - combined variable for all drugs (alcohol, nicotine, bliss, ...)]
+]
 A person has a number called SleepRhythm. [day/night bias]
 
 [ genital variables for all persons ]
