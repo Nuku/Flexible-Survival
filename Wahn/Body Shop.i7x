@@ -1370,6 +1370,7 @@ to BodyPopularityEvent:
 
 [ Hypno Event Stuff ]
 
+
 Table of GameEventIDs (continued)
 Object	Name
 Anton's Intro	"Anton's Intro"
@@ -1378,8 +1379,11 @@ Anton's Intro is a situation.
 ResolveFunction of Anton's Intro is "[ResolveEvent Anton's Intro]".
 Sarea of Anton's Intro is "Nowhere".
 
+[TODO: Turn on once the time for the May update comes]
+[
 after going to Smith Haven Mall Lot South while (Anton's Intro is not resolved and Daytimer is day and Player is male and PlayerMet of Anton is false and PlayerMet of Moreau is true):
 	say "[ResolveEvent Anton's Intro]";
+]
 
 to say ResolveEvent Anton's Intro:
 	say "     As you direct your steps towards the southern parking lot of the mall, you have to follow a sometimes circuitous route past countless abandoned cars, many of them clumped together in pileups from when people were fleeing - or arriving - in total panic during the first hours of the nanite apocalypse. Shopping carts are scattered all over the place too, often thrown on their sides, which isn't a big surprise now that there is no one left to collect them. Just as you step past a massive, crusty patch of dried cum and the associated scraps of clothing from maybe half a dozen people, you notice a really bright spot of color from the corner of your eyes. Looking over that way, you see someone standing near the roadside entrance of the lot, a fairly tall and colorful anthro bird that looks surprisingly muscular for an avian. His broad-shouldered chest is covered in a tight, lime-green muscle shirt, with arm-holes large enough to allow his feathered forearms through. Deep blue plumage covers the visible bits of his chest and his neck and head.";
