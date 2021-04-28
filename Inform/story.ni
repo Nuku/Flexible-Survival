@@ -675,6 +675,7 @@ Include Viking Woman by Wahn.
 Include Vixentaur by Stripes.
 Include Voodoo Gecko by Stripes.
 Include Vulpogryph by Stripes.
+Include Werewolf Brute by Gherod.
 Include Werewolf Costume by Stripes.
 Include Whiptail by Vervaine.
 Include Wildcat by Stripes.
@@ -697,6 +698,7 @@ Include Absinthe by Bigfish15079.
 Include Ace by Aureas Gigas.
 Include Adam by Wahn.
 Include Aeca by Wahn.
+Include Aerana by Gherod.
 Include Alex by Stripes.
 Include Alpha by Wahn.
 Include Arcanologist by Taelyn.
@@ -766,6 +768,7 @@ Include Elijah by Wahn.
 Include Eric by Wahn.
 Include Eric Loyalty by Luneth.
 Include Erica by Wahn.
+Include Fallen King by Gherod.
 Include Fancy by Sarokcat n Verath.
 Include Fang by Prometheus.
 Include Farmhands by Wahn.
