@@ -1390,7 +1390,7 @@ to say ResolveEvent Anton's Intro:
 		say "Thinking back to that other friendly peacock you met in the high rise district, you remember the amazing and pretty displays he did show you with his feathers, and how nice that made you feel. Somehow you can't help but wonder if this guy will be the same. Here in the open, with sunlight playing over the feathers, it'll surely be an amazing show! ";
 	else if Peacocked > 1 and Peacocked < 99: [met and was open to Dmitri before]
 		say "Thinking back to your peacock friend Dmitri, you remember the amazing and pretty displays he could always show you with his feathers, and how nice that made you feel. Somehow you can't help but wonder if this guy will be the same. Here in the open, with sunlight playing over the feathers, it'll surely be an amazing show! ";
-	else if is 99: [rejected Dmitri before]
+	else if Peacocked is 99: [rejected Dmitri before]
 		say "Thinking back to meeting that one somehow sketchy peacock guy in the high rise district, you remember him flashing his feathers at you, making you feel all funny. Here and now, with the bright sunlight dancing over his plumage, that effect will likely be greatly enhanced! ";
 	say "'Hello there, I'm Anton! Got a moment to talk?' the bird calls out to you in a full, charming voice, tail-feathers twitching a little behind his back.";
 	LineBreak;

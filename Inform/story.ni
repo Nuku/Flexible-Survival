@@ -677,7 +677,7 @@ Include Voodoo Gecko by Stripes.
 Include Vulpogryph by Stripes.
 Include Werewolf Brute by Gherod.
 Include Werewolf Costume by Stripes.
-Include Whiptail by Vervaine.
+Include Whiptail by Guest Writers.
 Include Wildcat by Stripes.
 Include Wolfman by Wahn.
 Include Wolftaur by Sarokcat.
@@ -712,6 +712,7 @@ Include Amy by Wahn.
 Include Andrew by Gherod.
 Include Angie by Luneth.
 Include Anthony by Wahn.
+Include Anton by Wahn.
 Include Araqiel by Gherod.
 Include Ares by Wahn.
 Include Arthur by Luneth.
