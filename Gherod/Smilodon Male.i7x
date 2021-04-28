@@ -120,7 +120,7 @@ to say Smilodon Male Loses:
 			say "     With how turned on he is with all of this, it is not so surprising that he ends up blasting his load on top of you with a loud grunt, coating your waist and chest in warm feline spunk as you continue to stimulate his nipples. 'Hnng... Fuck...! I... Oh, that really got me horny, didn't it?' he comments, looking down at the mess he just made on top of you as he lifts himself away from your body. A fresh breeze comes brushing against your face as your sober senses return to you. It feels like the smilodon took this chance to dominate you in a sexual approach, as he so much loves. 'I figured you were going to want to have fun with me, either way, so... I took the freedom to apply some of my pheromones on you. And you did a great job.' he adds with the boldest of smiles as he flexes his arms, still sitting on top of you.";
 			WaitLineBreak;
 			say "     'Anyway, you're great company. I hope next time we can just enjoy each other.' The male smilodon starts to get up, and actually helps you stand up, as well, like the proper gentlecatman he is. 'See you around. I'm gonna train so I can pin you down quicker, the next time we meet.' he lets you know with a wink and a grin as you prepare to leave, simply watching you go as you grab your gear to return to your own affairs.";
-			CreatureSexAftermath "Male Smilodon" receives "Other" from "Player";
+			CreatureSexAftermath "Smilodon Male" receives "Other" from "Player";
 			if Lust of Ranfer < 4:
 				increase Lust of Ranfer by 1;
 		else if calcnumber is 3:
@@ -201,7 +201,7 @@ PenileVirgin of Ranfer is false.
 SexuallyExperienced of Ranfer is false.
 TwistedCapacity of Ranfer is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Ranfer is true. [steriles can't knock people up]
-MainInfection of Ranfer is "Male Smilodon".
+MainInfection of Ranfer is "Smilodon Male".
 Description of Ranfer is "[Ranferdesc]".
 Conversation of Ranfer is { "<This is nothing but a placeholder!>" }.
 The scent of Ranfer is "     He smells like one big cat man, masculine with an animalistic scent.".
@@ -328,7 +328,7 @@ to say RanferSexWorshipTorso:
 	say "     With how turned on he is with all of this, it is not so surprising that he ends up blasting his load on top of you with a loud grunt, coating your waist and chest in warm feline spunk as you continue to stimulate his nipples. 'Hnng... Fuck...! I... Oh, that really got me horny, didn't it?' he comments, looking down at the mess he just made on top of you as he lifts himself away from your body. A fresh breeze comes brushing against your face as your sober senses return to you. It feels like the smilodon took this chance to dominate you in a sexual approach, as he so much loves. 'Every time you want to worship me, I'm just gonna do this. It's so much more fun.' he adds with the boldest of smiles as he flexes his arms, still sitting on top of you.";
 	WaitLineBreak;
 	say "     'Anyway, you're great company. I hope next time we can enjoy each other just as much.' The male smilodon starts to get up, and actually helps you stand up, as well, like the proper gentlecatman he is. 'See you around. I hope, soon.' he lets you know with a wink and a grin as you prepare to leave, simply watching you go as you grab your gear to return to your own affairs.";
-	CreatureSexAftermath "Male Smilodon" receives "Other" from "Player";
+	CreatureSexAftermath "Smilodon Male" receives "Other" from "Player";
 
 Section X - Creature Insertion
 

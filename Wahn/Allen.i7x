@@ -4,6 +4,12 @@ Version 1 of Allen by Wahn begins here.
 
 [ Allen, the husky                                                                      ]
 
+
+[ History                                                                               ]
+[ Laika - had a bitch as a teen (18) and fucked her                                     ]
+[ Allen was the first to fuck Davies, but Carl knocked her up                           ]
+[ TODO: Include talk option with him about Amy                                          ]
+
 Section 1 - Description
 
 Table of GameCharacterIDs (continued)

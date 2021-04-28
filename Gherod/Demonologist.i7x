@@ -817,7 +817,7 @@ to say XaedihrTalkMenu:
 	now sortorder entry is 9;
 	now description entry is "Request that he tells what he thinks of you";
 	[]
-	if "Met Hayato" is not listed in traits of Xaedihr:
+	if "Met Hayato" is not listed in traits of Xaedihr and Hayato is in Darkened Alcove:
 		choose a blank row in table of fucking options;
 		now title entry is "Introduce Hayato";
 		now sortorder entry is 99;

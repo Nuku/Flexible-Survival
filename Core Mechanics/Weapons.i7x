@@ -508,11 +508,11 @@ Hitbonus of zephyr bashing riot shield is 0. [nothing special]
 Scent of the zephyr bashing riot shield is "The zephyr protective riot shield smells faintly of suppressive authority.".
 
 to say RiotShieldAttackDesc:
-	say "     A black shield that zephyr's riot security use to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]riotshieldProtectMode[end link] though, and direct your shield to more defensive purposes instead.";
+	say "     A black shield that zephyr's riot security use to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]RSProtectMode[end link] though, and direct your shield to more defensive purposes instead.";
 
 riotshieldProtectMode is an action applying to one topic.
 
-understand "riotshieldProtectMode" as riotshieldProtectMode.
+understand "RSProtectMode" as riotshieldProtectMode.
 
 check riotshieldProtectMode:
 	if carried of zephyr bashing riot shield < 1:
@@ -565,7 +565,7 @@ Weapon Damage of sharp black tusk is 10.
 Weapon Type of sharp black tusk is "Melee".
 Objsize of sharp black tusk is 4.
 Hitbonus of sharp black tusk is -1. [not a weapon]
-Scent of the sharp black tusk is "The void serpent's tusk actually manages to have a scent, despite coming from the void, and you do not like it. It's indescribably bad, something between rotten and death, even with the apparent good condition of the tusk.".
+Scent of the sharp black tusk is "The void serpent's tusk actually manages to have a scent, despite coming from the void, and you do not like it. It's undescribably bad, something between rotten and death, even with the apparent good condition of the tusk.".
 
 Table of Game Objects (continued)
 name	desc	weight	object

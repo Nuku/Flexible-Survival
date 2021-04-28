@@ -4,7 +4,7 @@ Version 4 of Fucking by Core Mechanics begins here.
 
 Section 1 - Fucking action and table
 
-A person has a number called lastfuck. lastfuck is usually 255.
+A person has a number called lastfuck. lastfuck is usually 2500.
 A person has a text called fuckscene. fuckscene is usually "".
 
 Fucking is an action applying to one thing.

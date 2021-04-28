@@ -2,6 +2,8 @@ Version 3 of Elijah by Wahn begins here.
 [Version 3.2 - Offer for Evil Elijah made at any point cure does not go ahead]
 "Adds an NPC named Elijah to the Flexible Survival game"
 
+[ TODO: Needs updating for evil Elijah, more manipulative ]
+
 [ HP states of Elijah                                                  ]
 [   0: Chained up in the Chapel                                        ]
 [   1: At Bunker, unconscious                                          ]

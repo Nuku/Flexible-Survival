@@ -295,8 +295,24 @@ to FeatGain (Featname - text):
 		sort feats of Player;
 		if Featname is "City Map":
 			say "[BestowCityMapFeat]";
-		if Featname is "Sterile":
+		else if Featname is "Sterile":
 			now Sterile of Player is true;
+		else if Featname is "Strong Back":
+			increase capacity of Player by 50;
+		else if Featname is "More Time":
+			extend game by 24;
+		else if Featname is "Hardy":
+			increase maxHP of Player by 8;
+			increase HP of Player by 8;
+		else if Featname is "Instinctive Combat":
+			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the 'Auto Attack' command. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
+		else if Featname is "Vore Predator":
+			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type]vore menu[roman type] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
+		else if Featname is "Mugger":
+			say "     You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [bold type]mugger[roman type] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
+		else if Featname is "Vampiric":
+			say "     You will now recover a small amount of health, thirst and hunger after every victory as you get in a blood-sucking bite after your final blow or at some other point during the victory scene.";
+			now vampiric is true;
 	else if debugactive is 1:
 		say "ERROR: Trying to add '[Featname]', which the player already has.";
 

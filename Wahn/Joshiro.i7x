@@ -293,7 +293,7 @@ Prereq2 of Sloppy Seconds is Jumping The Dobie.
 The Prereq2Resolution of Sloppy Seconds is { 1, 2 }.
 Sarea of Sloppy Seconds is "Red".
 
-when play begins:
+when play begins: [TODO: potentially remove cuck flag if a choice point is added into the scene]
 	add Sloppy Seconds to Badspots of CuckList;
 
 to say ResolveEvent Sloppy Seconds:

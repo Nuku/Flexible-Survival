@@ -8,7 +8,7 @@ Section 1 - Creature Responses
 
 [ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks.. ]
 fsddom is a number that varies.
-lastfsdfeeding is a number that varies. lastfsdfeeding is usually 255.
+lastfsdfeeding is a number that varies. lastfsdfeeding is usually 2500.
 fsdfeedmemory is a number that varies.
 FFSDUBM is a truth state that varies. FFSDUBM is usually false.
 FSDOPEN is a number that varies. FSDOPEN is usually 0.

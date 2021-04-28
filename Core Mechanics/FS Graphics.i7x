@@ -287,6 +287,7 @@ Figure of Danny_naked_icon is the file "Danny_naked.jpg".
 Figure of Danny_clothed_icon is the file "Danny_clothed.jpg".
 Figure of Danny_face_icon is the file "Danny_face.jpg".
 Figure of Darius_face_icon is the file "Darius_face.jpg".
+Figure of DarkTyrant_icon is the file "DarkTyrant.jpg".
 Figure of Dash_icon is the file "Dash.jpg".
 Figure of David_naked_icon is the file "David_naked.jpg".
 Figure of David_clothed_icon is the file "David_clothed.jpg".
@@ -864,6 +865,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "David_face_casualclothed"	Figure of David_face_casualclothed_icon	"Keitaro87"	g-white	"normal"
 "Demon Brute"	Figure of DemonBrute_icon	"Lay"	g-black	"normal"
 "Dark Elf"	Figure of DarkElf_icon	"Nokturnalkittie"	g-black	"normal"
+"DarkTyrant"	Figure of DarkTyrant_icon	"Gherod"	g-black	"normal"
 "Diego"	Figure of Diego_icon	"valdericblackstag"	g-black	"normal"
 "Diego_face"	Figure of Diego_face_icon	"valdericblackstag"	g-black	"normal"
 "DiegoFem"	Figure of DiegoFem_icon	"Damdidoo"	g-black	"normal"
@@ -1514,6 +1516,7 @@ carry out artistcredits:
 	say "     Danny (naked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
 	say "     Danny (design + dressed) by Dragonpunk @ furaffinity.net[line break]";
 	say "     Darius by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
+	say "     Dark Tyrant (Fallen King) by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
 	say "     Diego by valdericblackstag @ furaffinity.net[line break]";
 	say "     Diego by Anonymous/Damdidoo[line break]";

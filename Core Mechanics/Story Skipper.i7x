@@ -30,7 +30,7 @@ The File of BeastVariableSave (owned by another project) is called "FSBeastVaria
 The File of NoteSave (owned by another project) is called "FSNoteSave".
 
 PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
-PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder" };
+PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "Rubber Tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder" };
 
 an everyturn rule:
 	if Player is in NPC Nexus:
@@ -531,7 +531,7 @@ to CharacterRestore:
 				now Breast Size Desc of CharacterObject is Breast Size Desc entry;
 				now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
 				now Originalgender of CharacterObject is Originalgender entry;
-				now PlayerOriginalgender of CharacterObject is PlayerOriginalGender entry;
+				now PlayerOriginalGender of CharacterObject is PlayerOriginalGender entry;
 				now PlayerLastGender of CharacterObject is PlayerLastGender entry;
 				now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
 				[Truth States]
@@ -1216,7 +1216,8 @@ to BeastRestore:
 			[some small bugfixes due to renamed creatures]
 			if Beastname is "Ogre", now Beastname is "Ogre Male";
 			if Beastname is "Elven Hunter", now Beastname is "Elven Male";
-			if Beastname is "Rubber tigress", now Beastname is "Rubber Tigress";
+			if Beastname is "rubber tigress", now Beastname is "Rubber Tigress";
+			if Beastname is "Rubber Tigress", now Beastname is "Rubber Tigress";
 			if Beastname is "Football Gorilla", now Beastname is "Football Gorilla Male";
 			if Beastname is "Feral Wolf", now Beastname is "Feral Wolf Male";
 			if there is a Name of BeastName in the Table of Random Critters:
