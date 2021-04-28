@@ -137,7 +137,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "fireworks" as supersponsor.
+understand "flowers" as supersponsor.
 
 when play ends:
 	clear the screen;
