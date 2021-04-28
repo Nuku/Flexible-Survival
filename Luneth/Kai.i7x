@@ -1,4 +1,4 @@
-Version 1 of Kai by WhiteRabbit begins here.
+Version 1 of Kai by Luneth begins here.
 [Original by WhiteRabbit]
 [Version 1 - Adopted by Luneth for expansion]
 

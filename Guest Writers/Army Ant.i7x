@@ -1,4 +1,4 @@
-Version 1 of Army Ant by Glitch begins here.
+Version 1 of Army Ant by Guest Writers begins here.
 [Original by Glitch]
 [ Version 1 - Transformations and descriptions - Glitch]
 [Version 1.1 - Moved to Guest Writers]

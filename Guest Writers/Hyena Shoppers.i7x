@@ -1,4 +1,4 @@
-Version 1 of Hyena Shoppers by Doots begins here.
+Version 1 of Hyena Shoppers by Guest Writers begins here.
 [Original by Doots]
 [Version 1 - Moved to Guest Writers]
 

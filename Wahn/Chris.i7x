@@ -1138,7 +1138,7 @@ after going to Sitting Area while (Chris is in Sitting Area and Urik is in Sitti
 	TraitGain "Chris - Second Meeting" for Urik;
 
 after going to Sitting Area while (Chris is in Sitting Area and Urik is in Sitting Area and "Chris - Second Meeting" is listed in Traits of Urik and "Chris - Knows Half-Orc" is listed in Traits of Urik and Libido of Chris is not 0 and "Chris - Tranformation Acknowledged" is not listed in Traits of Urik and (PlayerControlled of Urik is true or PlayerFriended of Urik is true)): [Urik knew half-orc Chris before he transformed into breeder Chris]
-	if Urik is listed in companionlist of Player: [he's along with the player right now]
+	if orc supersized breeder is listed in companionList of Player: [he's along with the player right now]
 		say "     As you walk along the railing overlooking the open interior of the library and come to the Sitting Area, your gaze falls upon Chris, standing at a nearby bookshelf and browsing. Walking by your side, Urik also notices the other orc, his eyes focusing on the young man and ";
 	else: [Urik is already there]
 		say "     As you walk along the railing overlooking the open interior of the library, Urik steps up and walks along, apparently coming back from taking a walk. When the two of you arrive in the Sitting Area, your gaze falls upon Chris, standing at a nearby bookshelf and browsing. Urik also notices the other orc, his eyes focusing on the young man and ";

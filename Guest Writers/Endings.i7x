@@ -1,4 +1,4 @@
-Version 1 of Endings by Darthan begins here.
+Version 1 of Endings by Guest Writers begins here.
 [Original by Darthan]
 [Version 1.1 - Moved to Guest Writers]
 

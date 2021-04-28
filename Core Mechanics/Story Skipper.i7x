@@ -531,7 +531,7 @@ to CharacterRestore:
 				now Breast Size Desc of CharacterObject is Breast Size Desc entry;
 				now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
 				now Originalgender of CharacterObject is Originalgender entry;
-				now PlayerOriginalgender of CharacterObject is PlayerOriginalGender entry;
+				now PlayerOriginalGender of CharacterObject is PlayerOriginalGender entry;
 				now PlayerLastGender of CharacterObject is PlayerLastGender entry;
 				now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
 				[Truth States]

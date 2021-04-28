@@ -1,4 +1,4 @@
-Version 1 of Gels by Darthan begins here.
+Version 1 of Gels by Guest Writers begins here.
 [Original by Darthan]
 [Version 1.1 - Moved to Guest Writers]
 
