@@ -105,9 +105,9 @@ instead of sniffing Chris:
 
 a postimport rule: [bugfixing rules for players that import savegames]
 	if Libido of Chris is 2:
-		now the icon of Chris is Figure of OrcWarrior_random_icon;
+		now the icon of Chris is Figure of Chris_warrior_clothed_icon;
 	else if Libido of Chris is 1:
-		now the icon of Chris is Figure of OrcBreeder_random_icon;
+		now the icon of Chris is Figure of Chris_breeder_clothed_icon;
 
 
 [ lust of Chris                                            ]
@@ -122,7 +122,7 @@ to say ChrisDesc:
 		project the Figure of Chris_clothed_icon;
 		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. Still, the sleeveless shirt he found to wear is stretched tight over his hard pecs and abs, providing quite a nice sight. His other articles of clothing are a pair of shorts and some designer undies (known to be 'roomy' at the front), both of which ride pretty low, letting you glimpse the trimmed bush of his pubes. Something tells you that he'd be ready to push them off completely in a heartbeat, exposing his cock proudly if you just asked. Chris's features roguishly handsome, with somewhat pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Mid-length dark brown hair completes the picture of a very handsome man. As Chris notices your intense gaze upon him, he smiles back at you, giving a little wave with his hand.";
 	else if Libido of Chris is 1: [breeder Chris]
-		project Figure of OrcBreeder_random_icon;
+		project Figure of Chris_breeder_clothed_icon;
 		say "     Chris is a young orc, with a lithe and muscled physique that lacks the sheer bulk and mass of an orc warrior. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of an average-sized cock in them. His features are almost pretty but still masculine, with somewhat pronounced brow, a square jaw and yellow eyes. Two small tusks protrude from his lower mandible, looking rather cute, compared to a real orc's. Long, silky black hair hanging down over his shoulders completes the picture of a very handsome man. As Chris notices your intense gaze upon him, he presents himself for your viewing pleasure, turning to show off his well-rounded ass. He really takes after his father, now that he's become an orc breeder. [if Lust of Chris > 12]His belly bulges hugely, showing the life-giving baby bump of a pregnant orc. Most likely he'll give birth in the next day or two. [else if Lust of Chris > 0]His belly shows a slight curve, allowing you to guess that he's gotten pregnant recently. Sometime in the next few days, there'll be a new orcling born. [end if][line break]";
 		if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
 			if Stamina of Chris > 4:
@@ -144,7 +144,7 @@ to say ChrisDesc:
 			else if Stamina of Chris > 0:
 				say "     The result of [if Chris is PrivateBreeder]the virile load you pumped into Chris, your [else]a virile load pumped into Chris, his [end if]firstborn orc warrior son is never all that far from his breeder-dad. The two of them hang out together, talking with each other and the young warrior is always eager to make his father proud, seeking his acknowledgment for things he did or presenting interesting items he looted in the neighborhood to Chris. You yourself hold the position of highest respect for the young man, and he acknowledges you immediately if you join them. Yet as you watch him for a while, it becomes clear that the focus of his private world is the one person that has been there for him his whole life: Chris, whose calming presence and quiet support makes your son strive to be at his best always.";
 	else if Libido of Chris is 2: [warrior Chris]
-		project the Figure of Warrior Chris_clothed_icon;
+		project the Figure of Chris_warrior_clothed_icon;
 		say "     Chris is a young orc, but he already has the tall and powerful stature of an orc warrior, with rippling muscles on his big arms, strong pecs and washboard abs. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of a very respectable cock in them. His features are almost a bit brutish, in a 'handsome caveman' kind of way, with a strongly pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Short and bristly dark brown hair on his head completes the picture of an untamed orcish warrior. As Chris notices your intense gaze upon him, he gives you a leering smile, as if to say 'I can take you when I want to'.";
 		if Dexterity of Chris > 0 and Dexterity of Chris < 100:
 			say "     Proof of his aggressively dominant nature is never far away from the young orc warrior, in the form of Kai, the male zebra he took captive in the zoo. You're not too sure that you can strictly call the guy a zebra anymore though, with his green and black striped fur and the set of orcish tusks he sports now. Seems like he's more of an equine orc breeder now.";
@@ -179,7 +179,7 @@ instead of trading the orc brew when the current action involves the Chris:
 			say "     You play up the effects of orc brew making people stronger and more powerful, enticing the young man into taking his first deep pull, which opens the floodgates. Before long, he's chugging away the alcoholic beverage like a true orc warrior - which is just what he's becoming right before your eyes. A bit tipsy from his first contact with alcohol, the young man grunts the words, 'Hmm... I want more!' while at the same time his body changes, getting bigger, wider and more muscular. 'Oh yeah, look at those guns now!' he comments with a broad grin, raising both arms and flexing proudly. Meanwhile, the previously pretty, if masculine, features of his face take on a harder, gruff look, with a square jaw, protruding tusks and thickly pronounced brow. Meanwhile, the flowing black hair that gave Chris much of his handsome aura just disintegrates into a small shower of dust, leaving behind bristly short hair on his head. As all those bodily changes stabilize and set into place, you can almost see the shift of his thought processes in the depth of his eyes, the need and desire to dominate others and turn them into breeders he can pound hard and knock up.";
 			WarriorChrisIntro;
 			now Libido of Chris is 2;
-			now the icon of Chris is Figure of OrcWarrior_random_icon;
+			now the icon of Chris is Figure of Chris_breeder_clothed_icon;
 			now Cock Length of Chris is 14;
 			now Ball Size of Chris is 8;
 			ItemLoss orc brew by 1;
@@ -188,7 +188,7 @@ instead of trading the orc brew when the current action involves the Chris:
 			say "     Teasing Chris about being a daddy's boy and not being brave enough to even taste the orc brew, you talking the young orc into taking 'just a sip' - and then another, and another. Before long, he's chugging away the alcoholic beverage like a true orc warrior - which is just what he's becoming right before your eyes. A bit tipsy from his first contact with alcohol, the young man grunts the words, 'Told you I wasn't afraid, see?!' while at the same time his body changes, getting bigger, wider and more muscular. The previously pretty, if masculine, features of his face take on a harder, gruff look, with a square jaw, protruding tusks and thickly pronounced brow. Meanwhile, the flowing black hair that gave Chris much of his handsome aura just disintegrates into a small shower of dust, leaving behind bristly short hair on his head. As all those bodily changes stabilize and set into place, you can almost see the shift of his thought processes in the depth of his eyes, the need and desire to dominate others and turn them into breeders he can pound hard and knock up.";
 			WarriorChrisIntro;
 			now Libido of Chris is 2;
-			now the icon of Chris is Figure of OrcWarrior_random_icon;
+			now the icon of Chris is Figure of Chris_warrior_clothed_icon;
 			now Cock Length of Chris is 14;
 			now Ball Size of Chris is 8;
 			ItemLoss orc brew by 1;
@@ -206,7 +206,7 @@ to WarriorChrisIntro: [setting down the relationship with Chris]
 	say "     [bold type]How do you want to interact with him?[roman type][line break]";
 	now sextablerun is 0;
 	if Libido of Chris is 2:
-		project the Figure of Warrior Chris_naked_icon;
+		project the Figure of Chris_warrior_naked_icon;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
@@ -325,7 +325,7 @@ instead of trading the orc cum when the current action involves the Chris:
 					say "     Before long, you overwhelm the system of the cum-drunk orc, and soon you feel him tremble and hear a needy gasp, with Chris's cock starting to spurt out strings of cum to splat on the ground before the two of you. You keep him in your grasp a moment longer, then tell Chris to clean up, shoving him down. He takes his queue from you obediently, sinking down on all fours and starts to lick up the creamy seed. [if player is male]Seeing him on the ground like this pushes your excitement beyond all bounds, and you jerk off on him, quickly adding more spurts of cum to paint his naked body and make his job of licking up the floor even harder. [end if]Eventually, the overtaxed orc sinks down on the ground, smeared with seed and having cum-drunk dreams of his [if thirst of Val is 2]daddy[else][master][end if] breeding him.";
 					add "Breeder_Slut" to Traits of Chris;
 				now Libido of Chris is 1;
-				now the icon of Chris is Figure of OrcBreeder_random_icon;
+				now the icon of Chris is Figure of Chris_breeder_clothed_icon;
 				ItemLoss orc cum by 1;
 			else:
 				say "     As you try to convince Chris that a little swig of orc cum won't be too bad, the young man licks his lips subconsciously, raising his hand towards the bottle you are holding out. But then, he pulls it back and quickly shakes his head. 'No, wait! Dad said it's really important to stay away from that stuff. I - I think I'll pass.'";
@@ -343,9 +343,9 @@ to say ChrisTalkMenu:
 	if Libido of Chris is 0:
 		project the figure of Chris_face_icon;
 	else if Libido of Chris is 1:
-		project the figure of Orcbreeder_random_icon;
+		project the figure of Chris_breeder_clothed_icon;
 	else if Libido of Chris is 2:
-		project the Figure of Warrior Chris_clothed_icon;
+		project the Figure of Chris_warrior_clothed_icon;
 	say "What do you want to talk with Chris about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -434,9 +434,9 @@ Instead of fucking the Chris:
 		if Libido of Chris is 0:
 			project the figure of Chris_naked_icon;
 		else if Libido of Chris is 1:
-			project the figure of Orcbreeder_random_icon;
+			project the figure of Chris_breeder_clothed_icon;
 		else if Libido of Chris is 2:
-			project the Figure of Warrior Chris_naked_icon;
+			project the Figure of Chris_warrior_naked_icon;
 		blank out the whole of table of fucking options;
 		[]
 		if Player is male:
