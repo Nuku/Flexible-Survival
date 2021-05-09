@@ -515,8 +515,7 @@ riotshieldProtectMode is an action applying to one topic.
 understand "RSProtectMode" as riotshieldProtectMode.
 
 check riotshieldProtectMode:
-	if carried of zephyr bashing riot shield < 1:
-		say "     What shield? You're not holding one right now.";
+	if carried of zephyr bashing riot shield < 1, say "     What shield? You're not holding one right now." instead;
 
 carry out riotshieldProtectMode:
 	if zephyr bashing riot shield is equipped:

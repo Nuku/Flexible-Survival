@@ -63,7 +63,7 @@ When Play begins:
 	add "Lernean Hydra Stage One" to infections of OviImpregnatorList;
 	now Name entry is "Lernean Hydra Stage One";      [The creature's name as displayed and used in naming descriptions]
 	now enemy title entry is "Lernean Hydra";
-	now enemy Name entry is "Lernean Hydra";
+	now enemy Name entry is "The Lernean Hydra";
 	now enemy type entry is 2; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Lernean Hydra slashes at you with its claws![or]The Lernean Hydra attempts to bite you![or]The Lernean Hydra bludgeons you with its heads![or]The Lernean Hydra attempts to mangle you with its teeth and claws![at random]";   [Text used when the monster succeeds on an attack]
 	now defeated entry is "[beattheLerneanHydraOne]";            [ Text when monster loses. Change 'template' as above. ]
@@ -140,7 +140,7 @@ When Play begins:
 	add "Lernean Hydra Stage Two" to infections of OviImpregnatorList;
 	now Name entry is "Lernean Hydra Stage Two";      [The creature's name as displayed and used in naming descriptions]
 	now enemy title entry is "Lernean Hydra";
-	now enemy Name entry is "Lernean Hydra";
+	now enemy Name entry is "The Lernean Hydra";
 	now enemy type entry is 2; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Lernean Hydra slashes at you with its claws![or]The Lernean Hydra attempts to bite you![or]The Lernean Hydra bludgeons you with its heads![or]The Lernean Hydra attempts to mangle you with its teeth and claws![at random]";   [Text used when the monster succeeds on an attack]
 	now defeated entry is "[beattheLerneanHydraTwo]";            [ Text when monster loses. Change 'template' as above. ]
@@ -217,7 +217,7 @@ When Play begins:
 	add "Lernean Hydra Stage Three" to infections of OviImpregnatorList;
 	now Name entry is "Lernean Hydra Stage Three";      [The creature's name as displayed and used in naming descriptions]
 	now enemy title entry is "Lernean Hydra";
-	now enemy Name entry is "Lernean Hydra";
+	now enemy Name entry is "The Lernean Hydra";
 	now enemy type entry is 2; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Lernean Hydra slashes at you with its claws![or]The Lernean Hydra attempts to bite you![or]The Lernean Hydra bludgeons you with its heads![or]The Lernean Hydra attempts to mangle you with its teeth and claws![at random]";   [Text used when the monster succeeds on an attack]
 	now defeated entry is "[beattheLerneanHydraThree]";            [ Text when monster loses. Change 'template' as above. ]

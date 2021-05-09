@@ -446,8 +446,7 @@ riotshieldAttackMode is an action applying to one topic.
 understand "RSAttackMode" as riotshieldAttackMode.
 
 check riotshieldAttackMode:
-	if carried of zephyr protective riot shield < 1:
-		say "     What shield? You're not holding one right now.";
+	if carried of zephyr protective riot shield < 1, say "     What shield? You're not holding one right now." instead;
 
 carry out riotshieldAttackMode:
 	if zephyr protective riot shield is equipped:
