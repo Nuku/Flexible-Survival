@@ -6,23 +6,31 @@ Version 2 of Mannequin by Wahn begins here.
 Section 1 - Creature Responses
 
 to say mannequin wins:
-	say "     The living doll grips you tightly and a strange sensation washes over you, as if part of your being is drained away. Before your eyes, its features change, making it look a bit more like yourself. You take your chance while it's distracted with checking out its new body and run away.";
+	if inasituation is true:
+		say "";
+	else:
+		say "     The living doll grips you tightly and a strange sensation washes over you, as if part of your being is drained away. Before your eyes, its features change, making it look a bit more like yourself. You take your chance while it's distracted with checking out its new body and run away.";
 
 to say mannequin loses:
-	say "     The mannequin silently collapses at your feet. Even though it's thoroughly beaten, it still weakly reaches for you, its face showing a desperate expression. You quickly get some road between it and you before it stands up again.";
+	if inasituation is true:
+		say "";
+	else:
+		say "     The mannequin silently collapses at your feet. Even though it's thoroughly beaten, it still weakly reaches for you, its face showing a desperate expression. You quickly get some road between it and you before it stands up again.";
 
 to say mannequinDesc:
 	setmongender 0;
-	if "Mannequin" is not listed in EncounteredEnemies of Player: [first encounter]
-		say "     Passing by a loading-dock in the warehouse district, you spot two humanoid dogs cutting a hole in the fence and slip through. Curious what the bulldog and German shepherd are doing in there, you inconspicuously follow them between the long rows and stacks of shipping containers.";
-		WaitLineBreak;
-		say "     'Which one did the coyote say the food was in?' the shepherd asks gruffly, to which the bulldog replies 'A red one, with Transglobal on the side.' Looking up and down the lines of containers, the shepherd wails 'But almost all of them are red!' The bulldog shrugs and walks over to the nearest container and opens it up. 'Oh hey, seventy flatsceen TVs - how... useless, without electricity. Let's check the next one.'";
-		say "     The two of them open up several more containers, but find nothing of use in this post-apocalyptic city. 'I'm beginning to think Diego sent us on a wild goose chase,' the shepherd growls. 'OK, OK... let's just open up this last one, then go back to the park and have some words with that coyote...' his buddy replies, then pulls open another container and yelps in surprise. 'Now that's freaky - for a moment I thought this container was full of people.'";
-		WaitLineBreak;
-		say "     The German shepherd steps in front of the door and looks in too. 'Nah, those are just those dress dummies they use in stores. Normal lifeless puppets, see...' and pokes the first mannequin in the container in the chest - which promptly grabs him by the arm. Within moments, dozens of mannequins pour out of the container and wrestle both dogs to the ground. They jostle against each other with a desperate tenacity, each trying to touch one of their captives. Then you see them change, taking on characteristics of the dogs - one growing out a muzzle, another suddenly sprouting fur, etc.";
-		say "     After the changes stabilize, all of the mannequins lose interest in their captives and start to disperse, each striking out on its own. Left behind on the ground are two more mannequins - those must be the two former dogs, their essence drained away. As they start to get up too, you decide it's time to leave and make your way back to the hole in the fence. One of the mannequins got there before you, though. It might have absorbed the knowledge of its location from the dogs, or just have been lucky. Now it turns to you, eager to make your shape its own.";
+	if inasituation is true:
+		say "";
 	else:
-		say "     You cross paths with an animated mannequin which looks like an idealized male in his mid-twenties, with muscled arms, legs and chest and a featureless crotch. It has a pale flesh-colored skin-tone and a chiseled-looking face including sculpted wavy hair. As the mannequin notices you, an almost desperate, needful look crosses its face and it rushes at you.";
+		if "Mannequin" is not listed in EncounteredEnemies of Player: [first encounter]
+			say "     Passing by a loading-dock in the warehouse district, you spot two humanoid dogs cutting a hole in the fence and slip through. Curious what the bulldog and German shepherd are doing in there, you inconspicuously follow them between the long rows and stacks of shipping containers. 'Which one did the coyote say the food was in?' the shepherd asks gruffly, to which the bulldog replies 'A red one, with Transglobal on the side.' Looking up and down the lines of containers, the shepherd wails 'But almost all of them are red!' The bulldog shrugs and walks over to the nearest container and opens it up. 'Oh hey, seventy flatsceen TVs - how... useless, without electricity. Let's check the next one.' The two of them open up several more containers, but find nothing of use in this post-apocalyptic city.";
+			say "     'I'm beginning to think Diego sent us on a wild goose chase,' the shepherd growls. 'OK, OK... let's just open up this last one, then go back to the park and have some words with that coyote...' his buddy replies, then pulls open another container and yelps in surprise. 'Now that's freaky - for a moment I thought this container was full of people.' The German shepherd steps in front of the door and looks in too. 'Nah, those are just those dress dummies they use in stores. Normal lifeless puppets, see...' and pokes the first mannequin in the container in the chest - which promptly grabs him by the arm. Within moments, dozens of mannequins pour out of the container and wrestle both dogs to the ground. They jostle against each other with a desperate tenacity, each trying to touch one of their captives. Then you see them change, taking on characteristics of the dogs - one growing out a muzzle, another suddenly sprouting fur, with all of them jostling against each other, in a frantic way.";
+			WaitLineBreak;
+			say "     After the changes stabilize, all of the mannequins lose interest in their captives and start to disperse, each striking out on its own. Left behind on the ground are two more mannequins - those must be the two former dogs, their essence drained away. As they start to get up too, you decide it's time to leave and make your way back to the hole in the fence. One of the mannequins got there before you, though. It might have absorbed the knowledge of its location from the dogs, or just have been lucky. Now it turns to you, eager to make your shape its own.";
+		else:
+			say "     You cross paths with an animated mannequin which looks like an idealized male in his mid-twenties, with muscled arms, legs and chest and a featureless crotch. It has a pale flesh-colored skin-tone and a chiseled-looking face including sculpted wavy hair. As the mannequin notices you, an almost desperate, needful look crosses its face and it rushes at you.";
+		if Stolen Lives is not resolved:
+			now Stolen Lives is active;
 
 Section 2 - Creature Insertion
 
@@ -205,12 +213,11 @@ This is the Mannequin Infection rule:
 	if Player has a body of "Mannequin":
 		trigger ending "Mannequin Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
-			say "     As you succumb to the infection, you drift aimlessly through the city and go for anyone crossing your path, overpowering them and absorbing how they look. Being in the form for an unfortunate soldier whose shape you stole earlier almost gets you out of the city when the military finally moves in, but following your unrestrained urges you try assimilating a medic who wants to check you out. Tasered till you collapse, you end up in a small cell and later get shipped to a research lab, where scientists study how you constantly shift and change. As a quite valuable asset for espionage developments, you never leave that facility again...";
+			say "     As you succumb to the infection, the feeling of being empty inside overwhelms you. Being a nondescript, almost faceless husk, without even a heartbeat or needing to breathe, desperation grips your mind. You hunger to be someone - anyone really, and start drifting aimlessly through the city, searching for others. The first few people and creatures you encounter run away or fight you off, but eventually you manage to overpower someone, wrestling them down. Hands tightly grasping your victim, you steal what makes them someone, makes them real. For a few fleeting moments, you feel hope as your skin ripples and shifts, taking on the lifelike guise of your captive while the poor soul you caught becomes more and more nondescript. By the end, you look alive, look real, yet as the drained shape of your victim stumbles away, the realization strikes that you are still empty, on the inside. All you did was pass this cursed existence to someone else, and your attempts to act naturally in your stolen shape fail again and again. Eventually, you give up completely, becoming numb to the world and acting the part of a mannequin. Just standing around, enduring your fate. Forever.";
 			stop the action; [no other endings - player removed from the city]
 		else:
-			say "     Remaining in control of the urges to acquire the shapes of others and become them, you experiment a bit and learn that with some concentration you can shift without leaving others as identity-less infected mannequins. When the military finally moves in, you're taken to a holding facility, where doctors poke and prod you for days on end. Overhearing two doctors talk, you catch '...ites active and in constant flux. The subject wasn't exposed to a one-time change, but something else. That makes [if Player is male]him[else if Player is female]her[else]it[end if] far too dangerous to be released. I recommend perm...' Since you don't think you'd get out of there alive - if at all, you use the next chance you get with an orderly and overpower him to flee the facility after absorbing his shape.";
-			say "     There's quite a bit of panic when people realize you're gone and soldiers swarm out to create roadblocks and hunt for you. It's touch and go for a while, but you manage to avoid capture. A week later and several hundred miles distant, with you laying low in a small town, you think you're home free - until you walk into your motel room and find a man in a suit waiting for you. 'Quite impressive, your escape. We need people like you. A bit of training and you'd make a fine addition to the agency...'";
-			say "     Recognizing a deal you can't decline, you let yourself be recruited and end up a spy, traveling all over the world. Your ability to become anyone you want to be creates a rumor, then a legend of the super-spy 'The Chameleon'. Eventually movie-directors get a hold of the story and bring out an award-winning series of films about you. You make a game out of appearing as a minor role in every last one of them - never in the same shape twice though.";
+			say "     Remaining in control of the urges to acquire the shapes of others and become them, you experiment a bit and perfect this ability by taking some parts of creatures you need, without leaving them completely drained. When the military finally moves in, you're taken to a holding facility, where doctors poke and prod you for days on end. Overhearing two doctors talk, you catch '...ites active and in constant flux. The subject wasn't exposed to a one-time change, but something else. That makes [if Player is male]him[else if Player is female]her[else]it[end if] far too dangerous to be released. I recommend perm...' Since you don't think you'd get out of there alive - if at all, you use the next chance you get with an orderly and overpower him to flee the facility after absorbing his shape. There's quite a bit of panic when people find the mindless mannequin this leaves behind, which instantly attacks the next person opening the door to the storeroom you locked it in. By the time the chaos is quelled and they realize that you're gone, it's far too late to stop you with roadblocks, as you have already gained a new identity, mixed and matched from people you encounter and partially drain. It's touch and go for a while, but you manage to avoid capture.";
+			say "     A week later and several hundred miles distant, having switched shapes several times along the way, you're lying low in a small town. You think you're home free - until you walk into your motel room and find a man in a suit waiting for you. 'Quite impressive, your escape. You should not have left a trail of witnesses though - those you drained were quite noticeable, since you did not dispose of them.' A shrug follows, with him taking a drag from a cigarette, then blowing out the smoke. 'Guess you'll learn. We need people with abilities like yours...' Recognizing a deal you can't decline, you let yourself be recruited and end up a spy, traveling all over the world. Your ability to become anyone you want to be creates a rumor, then a legend of the super-spy 'The Chameleon'. Eventually movie-directors get a hold of the story and bring out an award-winning series of films about you. You make a game out of appearing as a minor role in every last one of them - never in the same shape twice though, draining criminals and pimps that no one will miss to go to auditions. Rumors abound years later, as fans spot that someone winks at the camera in a specific way, in every single movie.";
 
 Section 4 - Item drop
 
@@ -426,5 +433,771 @@ to say nullpowderuse:
 			say "     You decide against using the item right now and stow it away.";
 			now Trixieexit is 1;
 			ItemGain nullifying powder by 1;
+
+Section 5 - Events
+
+
+Table of GameEventIDs (continued)
+Object	Name
+Stolen Lives	"Stolen Lives"
+
+Stolen Lives is a situation.
+Stolen Lives is inactive.
+ResolveFunction of Stolen Lives is "[ResolveEvent Stolen Lives]".
+Sarea of Stolen Lives is "Warehouse".
+
+to say ResolveEvent Stolen Lives:
+	say "     Wandering through the streets at the very edge of the warehouse district, you explore an area with long rows of smaller brick buildings instead of the massive metal warehouses further in. Looks like it's mostly small commercial enterprises and production places, judging by the fairly utilitarian signs some buildings bear. The whole area seems pretty empty, with few beings visible in the grid-patterned streets. Not too surprising, as it's far from any residential area, and few people would pick their workplace to weather the nanite apocalypse in. Some places look vandalized, one or two even burned out, but most of them are simply locked tight and abandoned. Doesn't even seem worth the effort to break in anywhere, as it's quite unlikely that you'd find anything of worth in these kinds of places. You glance up at the last building in the current row you're checking, seeing a sign that proclaims them to be the maker of custom car hubcaps. A few examples of various types are fanned out, high on the wall - shiny chrome, varied colors, even a bedazzled one.";
+	say "     In short, this is [italic type]absolutely[roman type] what you need to survive in a city with aggressive infected roaming the streets. Blowing out your breath in disappointment over another bust, you decide to continue on into the next row, ducking into the alleyway next to the building. It's grimy and dark, complete with an overflowing dumpster whose aroma tells you it was filled and ready for collection, so you hurry, not wanting to spend much time here. That is when you hear a pain-filled scream from somewhere ahead, followed by the rapid clopping of hooves on pavement. A second later, the shape of a black anthro Clydesdale in full, desperate flight dashes past the open end of the alley, very closely followed by a chasing mannequin that is clawing for the horseman and trying to bring him down. They're out of sight in a heartbeat, but you can hear the hoof-clops falter suddenly, followed by sounds of a struggle.";
+	LineBreak;
+	say "     [bold type]What do you want to do?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Run after them at full speed to catch up!";
+	say "     [link](2)[as]2[end link] - Hurry after them, but be cautious about it.";
+	say "     [link](3)[as]3[end link] - Turn around and run. Don't get involved.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to join the fight, [link]2[end link] to watch what happens, or [link]3[end link] to leave.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Sprinting as fast as you can, you reach the end of the alley quickly, barreling onto the other street and seeing what goes on there. About twenty feet away from you, two humanoid shapes are wrestling with one another. The left-hand one shouts, 'Get your hands off me, you freak! I'll stomp your head between my hoof and the pavement!' With that, he gut-punches the other one, without much effect though. You know there was a Clydesdale horseman and a mannequin, but seeing them as they are right now, you're having serious difficulty differentiating between the two. They seem to be in some sort of flux, both half-horseman, half-mannequin and the only article of clothing the horseman had, a pair of shorts, appears to have gotten ripped off in the fight, so that doesn't provide any help either. As you approach them, one of the two becomes more and more complete in equine shape, while the other melts into the vague shape of a mannequin, with even the shock and horror on his face losing definition as a neutral, mannequin-face takes shape on his head.";
+		say "     Letting go of the empty husk, the newly formed [']horseman['] pats his new body, almost as if wanting to make sure it's all there, followed by some hesitant steps on unfamiliar hooves. Meanwhile, the mannequin stumbles around, seemingly shell-shocked about its new state. It looks at the one who took its shape, but seems to recognize that they are the same and there is no way back. Then its gaze falls upon you, and the creature rushes at you, to steal someone else's self to replace what it lost.";
+		now inasituation is true;
+		challenge "Mannequin";
+		now inasituation is false;
+		if fightoutcome < 20: [player won]
+			say "     After beating down the mannequin, you realize that the [']horseman['] has just been standing a little distance away all this time, quietly observing with a neutral expression on his face. Feeling your attention rest upon itself, the anthro equine is startled into movement, raising one arm to... you don't know what exactly he wants to do. Seems like some mix of reaching for you, or waving, maybe part salute? You get the feeling that the horseman-shaped creature before you doesn't really know himself, and that maybe just gaining a shape doesn't fix something more fundamental that it is missing. What happens next only strengthens that impression, as the Clydesdale opens his muzzle to speak, with literally nothing coming out. Looking down in confusion, he touches his chest and feels around over it. Then realization strikes you: It isn't moving, not rising and falling in breathing, so this former mannequin wouldn't have air to talk with.";
+			say "     Moving on to opening his mouth and hooking a finger inside, the [']horseman['] feels around to see if anything is wrong with it, then tries to speak again, with similarly underwhelming results. Something akin to panic flickers over his face, followed by throwing his head back in a hopeless scream - which also does not materialize. Seeing its attempts at being someone, or something, more than just an empty husk fail, the creature seems struck by utter despair. He shies away from you, almost appearing ashamed that you watched what happened, then whirls around and runs, fleeing as far as his hooves can carry him. Left behind in the street, you see the Clydesdale's ripped shorts lying on the ground a few feet away and walk over to check it out. Just a normal piece of clothing, but there's a piece of paper hanging out of the pocket. You pick it up, but before you can read it, there is a sound behind you.";
+			WaitLineBreak;
+			say "     Looking over your shoulder, you see the original horseman turned mannequin getting up, no doubt to doubt attack you again. Not interested in another round of fighting against the creature, you run away before it can reach you, making sure you've shaken the tail before you pause and look at the crumpled piece of paper in your grasp. It has a crudely drawn map with the warehouse district circled, and beneath that the words, 'Get me one of those mannequin things. I need it in prime condition, so DO NOT FUCK AROUND WITH IT! Delivery will get you half a pound of Bliss.' Interesting, seems like the horseman was kind of a bounty hunter, or slave catcher. Filing that fact away, you eventually circle back to where you started your exploration from.";
+			now Resolution of Stolen Lives is 1; [saw the horseman's despair]
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "     The living doll grips you tightly and a strange sensation washes over you, as if part of your being is drained away. Before your eyes, its features change, making it look a bit more like yourself. You take your chance while it's distracted with checking out its new body and run away.";
+			infect "Mannequin";
+			now Resolution of Stolen Lives is 99; [fled, not watched]
+		else if fightoutcome is 30: [fled]
+			say "     Abandoning the fight, you run and do not stop until you are far away, with no sign of the mannequin behind you.";
+			now Resolution of Stolen Lives is 99; [fled, not watched]
+	else if calcnumber is 2:
+		LineBreak;
+		say "     Hastening your steps, you reach the end of the alley quickly, where you slow down and cautiously peek around the corner. About twenty feet away from you, two humanoid shapes are wrestling with one another. The left-hand one shouts, 'Get your hands off me, you freak! I'll stomp your head between my hoof and the pavement!' With that, he gut-punches the other one, without much effect though. You know there was a horseman and a mannequin, but seeing them right now, you're having serious difficulty differentiating between the two. They seem to be in some sort of flux, both half-horseman, half-mannequin and the only article of clothing the horseman had, a pair of shorts, appears to have gotten ripped off in the fight, so that doesn't provide any help either. As some more time progresses, one of the two becomes more and more complete in equine shape, while the other melts into the vague shape of a mannequin, with even the shock and horror on his face losing definition as a neutral, mannequin-face takes shape on his head. Letting go of the empty husk, the newly formed [']horseman['] pats his new body, almost as if wanting to make sure it is all there, followed by some hesitant steps on unfamiliar hooves.";
+		say "     Meanwhile, the mannequin stumbles around, seemingly shell-shocked about its new state. It looks at the one who took its shape, but seems to recognize that they are the same and there is no way back, even if it could overwhelm the one who just beat it. Looking forlorn, the human-sized doll then stumbles off down the street, seeking someone it might steal a form from to replace what it lost. Before long, it has walked out of sight. Looking back to the [']horseman['], you see him standing still, completely motionless, then seemingly pushing himself to try something, walking a few steps and attempting to be less... stiff and puppet-like. The anthro equine raises one arm to... you don't know what exactly he wants to do. Seems like some mix of reaching for someone, or waving, maybe part salute? You get the feeling that the horseman-shaped creature before you doesn't really know himself, and that maybe just gaining a shape doesn't fix something more fundamental that it is missing.";
+		WaitLineBreak;
+		say "     What happens next only strengthens the impression of an unfinished, empty being, as the Clydesdale opens his muzzle to speak, with literally nothing coming out. Looking down in confusion, he touches his chest and feels around over it. Then realization strikes you: It isn't moving, not rising and falling in breathing, so this former mannequin wouldn't have air to talk with. Moving on to opening his mouth and hooking a finger inside, the [']horseman['] feels around to see if anything is wrong with it, then tries to speak again, with similarly underwhelming results. Something akin to panic flickers over his face, followed by throwing his head back in a hopeless scream - which also does not materialize. Seeing its attempts at being someone, or something, more than just an empty husk fail, the creature seems struck by utter despair. He looks around suddenly, as if frightened that anyone witnessed his failure, and catches sight of you.";
+		say "     Shame is written large on the horseman-shaped creature's face as it then whirls around and runs, fleeing as far as his hooves can carry him. Left behind at the mouth of the alley, you wonder where the transformed mannequin will go, and how it will fare if it tries again. A few steps to the side, you see the Clydesdale's ripped shorts lying on the ground and walk over to check it out. Just a normal piece of clothing, but there's a piece of paper hanging out of the pocket. You pick it up, and see a crudely drawn map with the warehouse district circled, and beneath that the words, 'Get me one of those mannequin things. I need it in prime condition, so DO NOT FUCK AROUND WITH IT! Delivery will get you half a pound of Bliss.' Interesting, seems like the horseman was kind of a bounty hunter, or slave catcher. Filing that fact away, you eventually circle back to where you started your exploration from.";
+		now Resolution of Stolen Lives is 1; [saw the horseman's despair]
+	else if calcnumber is 3:
+		LineBreak;
+		say "     Making the decision not to get involved, you turn around and hurry back the way you came. You don't need this, right now. By the time you're at the front of the alley again, you don't hear noises from them anymore either, so whatever happened is most likely over. Still, you continue walking the other way for a while, eventually circling back to where you started your exploration from.";
+		now Resolution of Stolen Lives is 99; [fled, not watched]
+	now Stolen Lives is resolved;
+
+
+[
+
+Table of GameEventIDs (continued)
+Object	Name
+Lost Souls	"Lost Souls"
+
+Lost Souls is a situation.
+ResolveFunction of Lost Souls is "[ResolveEvent Lost Souls]".
+Sarea of Lost Souls is "Warehouse".
+Prereq1 of Lost Souls is Stolen Lives.
+PrereqTime of Lost Souls is "Night".
+The Prereq1Resolution of Lost Souls is { 1 }.
+
+to say ResolveEvent Lost Souls:
+	if Resolution of Lost Souls is not 98: [first encounter]
+		say "     Exploring the warehouse district at night is really creepy, [if CityPowerOn is false]especially since there is no power [else]even with the few and far in-between light poles [end if]to illuminate the long, empty streets, and the bands of windows higher up on the buildings seem to stare down upon you like black, square eyes. [if CityPowerOn is false]Individual buildings don't seem to have gotten their power back either. [end if]The area you're in is further away from the waterline in the harbor than most, but even so, it's oddly empty. Usually there are at least some people and creatures around, even at night, but this place seems abandoned and deathly quiet. Maybe there's some reason that everyone avoids it, you wonder, only to suddenly hear a clattering thud, from somewhere ahead behind the warehouse to your right. Steeling your nerves, you slowly walk that way and glance around the corner, seeing that a side door of the warehouse is standing open a crack. Did a gust of wind make it swing and cause that noise? You sure didn't feel any up till now, but that might just be because you were in the shadow of the buildings.";
+		say "     Waiting for a moment, watching the door, you see no indication of movement, making things appear safe enough to approach. Moving along the side of the building, you reach the door and pull it open slowly, doing your best to avoid making the rusty hinge creak too loudly. Then you peer inside the dark interior of the warehouse, seeing dozens of headless, impaled shapes lined up close by. Your heart skips a beat, followed by a rapid flutter as fight or flight instincts prepare to kick in, then... you blink, and recognize that you did not just find a charnel-house full of mutilated corpses. Those are a mannequins, headless ones, and without hands and feet, set on display poles! Peering into the further darkness beyond, you can see there are more, many more, and not just of this type. Judging by the size of the building, there could be thousands inside! [if CityPowerOn is true]You reach inside and try to flip the light switch next to the door, but nothing seems to happen. [end if][line break]";
+		Mannequin_Warehouse_ChoicePoint;
+	else: [returning once again]
+		say "     You find your way back through the empty streets, arriving once more at the side door of that creepy mannequin warehouse you found before. Even knowing that what is waiting behind its side door are just display mannequins, you still have an ice-cold feeling running down your spine as you pull the door open with a creak and see the row of headless, impaled shapes bunched up beyond. Judging by the size of the building, there could be thousands of mannequins inside too!";
+		Mannequin_Warehouse_ChoicePoint;
+
+to Mannequin_Warehouse_ChoicePoint:
+	LineBreak;
+	say "     [bold type]Do you want to explore the warehouse?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Sure, you might find something interesting.";
+	say "     [link](2)[as]2[end link] - Not right now. Maybe later.";
+	say "     [link](3)[as]3[end link] - Nope. No. Definitively not! You're out of here";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to enter the building, [link]2[end link] to leave (for now), or [link]3[end link] to leave (for good).";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Of course you will explore a large warehouse filled with mannequins, in the middle of the night. With a snort, you roll your eyes at worrying about nothing. It's not like any of them will come alive and attack you, right!? Oh, wait... You shake your head to dispel the thought and just step inside, passing the first bunch of mannequins, standing in a closely packed bunch near the side door. Gazing at the next one beyond that, you jump as it seems to move its head, only to you realize you're staring at your own distorted face reflected back at you. This thing has a golden-metallic oval for a head, polished up to mirror shine! The arms are also mirrored and golden, fading to black plastic halfway up to the elbow. Creepy! The mannequin doesn't move as you step past it, into the midst of the hundreds of silent shapes standing throughout the part of the warehouse you can make out right now. Whoever sorted this place must have had an odd way of organization, as the humanoid dolls in here are sometimes standing in straight lines, others bunched up, and others again as singletons. Before coming here, you don't think you ever knew just how many different types of mannequins there are. So many different poses, materials, apparent ages, head shapes or absences thereof.";
+		say "     Losing track of time a little bit as you explore, checking out the various mannequins that you encounter, you take in their poses, mentally cataloging the different design choices and rating them by how realistic they look. Somehow, concentrating on the individuals makes you feel a little bit better about being in this large, dark place, surrounded by thousands of these things. You even try out moving articulated arms if they have them, getting the relieved confirmation that they're inanimate objects. Exploring further, you weave in and out between the silent rows. Then suddenly, a realization strikes you and you freeze mid-motion. That over there, in the edge of your vision, that's not a mannequin, is it?! Slowly turning your head, you see that there is a slender anthro deer standing in the mass of puppets, unmoving and silent, wearing a tight white tank-top that seems almost painted onto his flat chest. He looks like a young buck, with somewhat unruly brown hair out of which two-pointed antlers stick up.";
+		WaitLineBreak;
+		say "     Stepping closer, you catch a glimpse of skinny jeans covering his digitigrade legs, and at the same time see that the deer is [italic type]completely[roman type] motionless. He isn't breathing, or blinking, just stands there on his slender hooves and looks neutrally into the distance. In fact, you've seen his exact pose and posture countless times during your exploration of the warehouse - standing man #4, by your own count of the various mannequin shapes. Driven by curiosity, you hesitantly reach out and touch the buck's upper arm, then brush your fingers up to the edge of the shirt on his chest, feeling soft fur and actual warmth to him, but no other signs of life. His eyes don't focus on you when you look into them, yet the anthro isn't stiff like the mannequins all around. His arms move when you pull on them, even hold a position, but there doesn't seem to be any will that drives the buck to do anything on his own. Experimenting some more, you take the deer by the hand and walk a few steps, finding him walking along silently as you look over your shoulder.";
+		say "     Perhaps you let yourself get a bit too distracted by this odd being you found, because while still looking back the next thing that happens is that you bump into someone ahead of you. Someone tall, with firm muscle covered in short fur. Whipping your head around, you are shocked to see a horseman, and one you recognize. Standing amidst the mannequins in what you registered as herculean pose #2, one arm lifted and flexing, is a naked and impressively built Clydesdale. Remembering the last time you saw this being, you recall [']his['] original being hunted down by a mannequin, absorbing the shape and appearance of an anthro equine who was sent to capture it. Yet when the transformed mannequin then tried to act the part, be more than a hollow puppet, it failed spectacularly. As a newly formed horseman, it was unfamiliar to normal movements and apparently not even realized that he'd need to breathe to speak. Now he's standing here, motionless and posed, not reacting to being touched or spoken to any more than the young buck.";
+		WaitLineBreak;
+		say "     Looking over your shoulder, you see the deer standing just a step or two behind you, arm outstretched as it was when you were pulling him. Given their similarities, and just where you found these two, you are fairly certain that the deer is another mannequin that must have absorbed this shape. If you had to guess, they both likely tried to fit in and become their new selves, yet despaired after however many tries. Maybe they then gave up and returned to 'their people' in this warehouse? Or did someone bring them here? Arrange these two like this? Who would do this, and why? Whatever may be the truth, here they are now, as incredibly lifelike dolls with apparently no will of their own. Wondering if there might be more of these transformed mannequins, you glance around and let your gaze sweep over the mass of shapes. There are so many of them in the darkness, yet you don't spot anything but the plastic-y, wooden or metallic shapes of normal mannequins. Who knows, more might arrive or be brought here in the future and be found through a more thorough search. Best not to step away from your two current finds right now, as you might lose your way in the crowd and not find them again.";
+		say "     Turning back to the deer and horseman, you contemplate what to do now. While doing so, are struck by the thought that the buck's skinny jeans seem a little [italic type]too[roman type] skinny in the crotch area. Stepping closer, you say more to yourself than him that you got to check for his wallet, maybe find out his name, and slip your hand into the tight pockets of the jeans. There is still no reaction from the buck, so you feel comfortable enough to go ahead and opening the jeans up at the front, allowing you to find out that this deer has one single part that is more doe than buck, as he has a pussy between his legs. Raising your eyebrows at that revelation, you zip him back up and push the lower edge of the tank top back down. While you're exploring, you find yourself pulling open his mouth, and look inside, seeing it perfectly realistic shape, down to a throat going down at the back, and having a moist, soft tongue. The thought of if they need to eat arises in you, and if these beings might just starve if they continue standing here all on their own. Finally, you gently pull down an eyelid, which stays as you place it, then push it up again.";
+		say "     [bold type]On a whim, you give the two of them the names Bucky and Hercules, then prepare yourself to make a decision of your next step.[roman type][line break]";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Grab Bucky's hand and bring him to the library";
+		now sortorder entry is 1;
+		now description entry is "He might learn to be a person, over time";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Pick Bucky to be a sex doll and take him to the library";
+		now sortorder entry is 2;
+		now description entry is "Grab the deer as a readily available fucktoy";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Grab Hercules's hand and bring him to the library";
+		now sortorder entry is 1;
+		now description entry is "He might learn to be a person, over time";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Pick Hercules to be a sex doll and take him to the library";
+		now sortorder entry is 2;
+		now description entry is "Grab the horseman as a readily available fucktoy";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Leave them both here";
+		now sortorder entry is 5;
+		now description entry is "It's where they belong";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if nam is "Grab Bucky's hand and bring him to the library":
+						say "[Bucky_Person]";
+					else if nam is "Pick Bucky to be a sex doll and take him to the library":
+						say "[Bucky_Toy]";
+					else if nam is "Grab Hercules's hand and bring him to the library":
+						say "[Hercules_Person]";
+					else if nam is "Pick Hercules to be a sex doll and take him to the library":
+						say "[Hercules_Toy]";
+					else if nam is "Leave them both here":
+						say "[Leaving Limbo]";
+					wait for any key;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
+		now Lost Souls is resolved;
+	else if calcnumber is 2:
+		LineBreak;
+		say "     ";
+		now Resolution of Lost Souls is 98;
+	else: [leave]
+		LineBreak;
+		say "     This doesn't look like a place you want to be in, much less at night! You're out of here, now!";
+		now Resolution of Lost Souls is 99;
+		now Lost Souls is resolved;
+
+to say Bucky_Person:
+	say "...";
+	if Alexandra is booked or Alexandra is bunkered:
+		say "     <snarky comment about the player having odd projects - beating her down and taking her as their bitch, and having this one coddled>";
+		TraitGain "Bucky - Seen him" for Alexandra;
+		WaitBreakReactions;
+	if Amy is booked or Amy is bunkered:
+		say "     <initially scared, player says he'd like having her talk to Bucky>";
+		TraitGain "Bucky - Seen him" for Amy;
+		WaitBreakReactions;
+	[--------------]
+	if Brutus is booked or Brutus is bunkered:
+		if DBCaptureQuestVar is 5: [controlled]
+			[
+			if "Master's Bite" is listed in Traits of demon brute:
+				say "     <ask Luneth>";
+			else
+			]
+			if Resolution of Demonic Redemption is 7: [somewhat pacified]
+				say "     <should'a just make it rape-bait - let me have a turn, even the quietest ones start screaming at some point>";
+			else: [standard hateful captive]
+				say "     <should'a just make it rape-bait - let me have a turn, even the quietest ones start screaming at some point>";
+			TraitGain "Bucky - Seen him" for Brutus;
+		else if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [cleansed]
+			say "     <I can talk to him if you want me to? (socializing sessions)>";
+			TraitGain "Bucky - Seen him" for Brutus;
+		WaitBreakReactions;
+	if Candy is booked or Candy is bunkered:
+		say "     <got some experience from the hospital, would talk to him, maybe dress up>";
+		TraitGain "Bucky - Seen him" for Candy;
+		WaitBreakReactions;
+	if Pink Raccoon is booked or Pink Raccoon is bunkered: [mindless Candy]
+		say "     <paws at Bucky, has to be batted away>";
+		TraitGain "Bucky - Seen him" for Candy;
+		WaitBreakReactions;
+	if Carl is booked or Carl is bunkered:
+		if HP of Carl is 30: [beta carl]
+			say "     <I'll watch over him for you>";
+		else:
+			say "     <reminds of Davies, would keep safe, come to sit and talk>";
+		TraitGain "Bucky - Seen him" for Carl;
+		WaitBreakReactions;
+	if Chris is booked or Chris is bunkered: [TODO: add special stuff if they're brothers]
+		if Libido of Chris is 0: [half-orc]
+			say "     <would help chat>";
+			TraitGain "Bucky - Seen him" for Chris;
+		else if Libido of Chris is 1: [orc breeder]
+			if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
+				say "     <sad, would help out talk to him>";
+				TraitGain "Bucky - Seen him" for Chris;
+			else: [happy breeder]
+				say "     <would help out talk to him, make him better, teach life as a big bro!>";
+				TraitGain "Bucky - Seen him" for Chris;
+		else if Libido of Chris is 2: [orc warrior]
+			if "Bro" is listed in Traits of Chris or "Bro with Benefits" is listed in Traits of Chris or "Dad with Benefits" is listed in Traits of Chris:
+				say "     <would help out talk to him, make him better, teach life as a big bro!>";
+				TraitGain "Bucky - Seen him" for Chris;
+			else: [dominant warrior Chris]
+				say "     <not interested>";
+				TraitGain "Bucky - Seen him" for Chris;
+		WaitBreakReactions;
+	if Colleen is booked or Colleen is bunkered:
+		if SarahSlut < 2: [not transformed, or only a little]
+			say "     <that poor little guy, creepy, but she gets herself to do it (talking)>";
+			TraitGain "Bucky - Seen him" for Colleen;
+		else if ColleenAlpha is 0:
+			say "     <if you fail, can we fuck it?>";
+		[
+		else if ColleenAlpha > 0:
+			say "..."; [TODO: write this]
+		]
+		WaitBreakReactions;
+	if David is booked or David is bunkered:
+		say "     <ready to help>";
+		TraitGain "Bucky - Seen him" for David;
+		WaitBreakReactions;
+	if Denise is booked or Denise is bunkered:
+		say "     <will sing to him>";
+		TraitGain "Bucky - Seen him" for Denise;
+		WaitBreakReactions;
+	if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
+		if HP of Elijah is 99: [evil] [TODO: add manipulation?]
+			say "     <let's fuck it instead>";
+			TraitGain "Bucky - Seen him" for Elijah;
+		else: [good]
+			say "     <will hang out and talk, god's work>";
+			TraitGain "Bucky - Seen him" for Elijah;
+		WaitBreakReactions;
+	if Eric is booked or Eric is bunkered:
+		if HP of Eric > 0 and HP of Eric < 21:
+			say "     <talk to him, sharing>";
+			TraitGain "Bucky - Seen him" for Eric;
+		else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]
+			say "     <talk to him>";
+			TraitGain "Bucky - Seen him" for Eric;
+		else if HP of Eric is 99:
+			say "     <unburden himself to the doll, crying>";
+			TraitGain "Bucky - Seen him" for Eric;
+		WaitBreakReactions;
+	if Fang is booked or Fang is bunkered:
+		say "     <stick nose between the legs, dickhead sticking out of sheath, tail wags>";
+		TraitGain "Bucky - Seen him" for Fang;
+		WaitBreakReactions;
+	if HP of Fiona > 4:
+		say "     <tries to get reaction, claws, still no reaction, pissed>";
+		TraitGain "Bucky - Seen him" for Fiona;
+		WaitBreakReactions;
+	if Gabriel is booked or Gabriel is bunkered:
+		say "     <would care for, talk about obeying the master>";
+		TraitGain "Bucky - Seen him" for Gabriel;
+		WaitBreakReactions;
+	if Hayato is booked or Hayato is bunkered:
+		say "     <poor guy, I'll keep him company>";
+		TraitGain "Bucky - Seen him" for Hayato;
+		WaitBreakReactions;
+	if Helen is booked or Helen is bunkered:
+		say "     <comes up, sniffs crotch, licks, wags butt, barks, disappointed in no reaction>";
+		TraitGain "Bucky - Seen him" for Helen;
+		WaitBreakReactions;
+	if Hobo is booked or Hobo is bunkered:
+		say "     <comes up, sniffs, sits down as if to keep company>";
+		TraitGain "Bucky - Seen him" for Hobo;
+		WaitBreakReactions;
+	if Honey is booked or Honey is bunkered:
+		say "     <likes the fur - can I pet it? would talk to him, hopes he gets better>";
+		TraitGain "Bucky - Seen him" for Honey;
+		WaitBreakReactions;
+	if Korvin is booked or Korvin is bunkered:
+		if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
+			say "     <would talk, therapy session, would grope>";
+			TraitGain "Bucky - Seen him" for Korvin;
+		else:
+			say "     <would talk, would say 'you can pay me back with a fuck if you get fixed through this' (jokingly)>";
+			TraitGain "Bucky - Seen him" for Korvin;
+		WaitBreakReactions;
+	if Klauz is booked or Klauz is bunkered:
+		say "     <rubs up, no reaction? confused>";
+		TraitGain "Bucky - Seen him" for Klauz;
+		WaitBreakReactions;
+	if Malik is booked or Malik is bunkered:
+		say "     <not his scene>";
+		TraitGain "Bucky - Seen him" for Malik;
+		WaitBreakReactions;
+	if Nadia is booked or Nadia is bunkered:
+		say "     <would care for him, bringing her kids to see him>";
+		TraitGain "Bucky - Seen him" for Nadia;
+		WaitBreakReactions;
+	if Rane is booked or Rane is bunkered:
+		say "     <a bit helpless, not really his scene>";
+		TraitGain "Bucky - Seen him" for Rane;
+		WaitBreakReactions;
+	if Ryousei is booked or Ryousei is bunkered:
+		say "     <centering the mind can help - recount some mention of victims of a nightmare monster>";
+		TraitGain "Bucky - Seen him" for Ryousei;
+		WaitBreakReactions;
+	if Tehuantl is booked or Tehuantl is bunkered:
+		if Tehuantl is male:
+			say "     <must protect, would indoctrinate>";
+			TraitGain "Bucky - Seen him" for Tehuantl;
+		else:
+			say "     <must protect, would indoctrinate>";
+			TraitGain "Bucky - Seen him" for Tehuantl;
+		WaitBreakReactions;
+	if (Sarah is booked or Sarah is bunkered) and SarahCured > 3:
+		say "     <she'd try therapy>";
+		TraitGain "Bucky - Seen him" for Sarah;
+		WaitBreakReactions;
+	if Sven is booked or Sven is bunkered:
+		if HP of Sven >= 30 and HP of Sven < 50:	[self-confident Sven]
+			say "     <would talk to him>";
+			TraitGain "Bucky - Seen him" for Sven;
+		else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
+			say "     <would talk, would grope>";
+			TraitGain "Bucky - Seen him" for Sven;
+		else:
+			say "     <would talk>";
+			TraitGain "Bucky - Seen him" for Sven;
+		WaitBreakReactions;
+	if Urik is booked or Urik is bunkered:
+		say "     <reminds him of a friend who had shrapnel in his head, will come and talk>";
+		TraitGain "Bucky - Seen him" for Urik;
+		WaitBreakReactions;
+	if Xerxes is booked or Xerxes is bunkered:
+		say "     <sniffs crotch, interested in humping>";
+		WaitBreakReactions;
+		TraitGain "Bucky - Seen him" for Xerxes;
+	now IntroReactionCounter is 0; [reset]
+
+to say Bucky_Toy:
+	say "     Taking hold of the slender buck's hand, you guide him through the crowd of mannequins, making sure he doesn't bump against any of them on the way out. Stepping through the side door you came in through, back into the silent and empty streets of this part of the warehouse district, you then start along the route back to the Grey Abbey Library. This time of night, there's thankfully somewhat less creatures around, even in the more fully inhabited parts of the city, so you have little issue to bring your new fucktoy all the way home. When you eventually arrive, the question poses itself of where you want to place the anthro deer.";
+	say "     ([link]Y[as]y[end link]) - Your bedroom, down in the bunker, for private use."; [TODO: add a potential 'reserved' sticker if he's moved out later]
+	say "     ([link]N[as]n[end link]) - Why not put him in the back of the library, available for everyone.";
+	if Player consents: [private use]
+		LineBreak;
+		say "     Deciding that this is [bold type]your[roman type] cuntboy buck sex toy, you guide him down the stairs and into the bunker, placing Bucky in a corner next to your bed.";
+		move Bucky to Maintenance Storeroom;
+		move Player to Maintenance Storeroom;
+	else:
+		LineBreak;
+		move Bucky to Back of the Library;
+		move Player to Back of the Library;
+		say "     Deciding that a publicly available cuntboy sex doll might be a good idea, you guide Bucky towards the back of the library, placing him next to the sofa there. ";
+	if (number of bunkered people + number of booked people > 2):
+		say "After that, you announce publicly that Bucky is not actually a person, but just a really realistic cuntboy doll.";
+	LineBreak;
+	if Alexandra is booked or Alexandra is bunkered:
+		say "     Alexandra saunters closer, letting her gaze drift up and down over Bucky. 'Sure this isn't some poor twink that hit his head? Seems pretty fucking life-like to me.' With a snort, she then comments, 'You really are one kinky fucker, boss!' After that, the doberwoman walks away.";
+		TraitGain "Bucky - Seen him" for Alexandra;
+		WaitBreakReactions;
+	if Amy is booked or Amy is bunkered:
+		say "     Amy shily approaches the buck, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Bucky really isn't a person, and she can make use of him sexually if she wants, but the husky is already stepping back from him, looking skittish. 'I - I don't think I want to. It's so eerie, that he just stares like that.' With that said, she retreats from the sex doll, glancing back at it a few times before moving out of sight.";
+		TraitGain "Bucky - Seen him" for Amy;
+		WaitBreakReactions;
+	if Brutus is booked or Brutus is bunkered:
+		if DBCaptureQuestVar is 5: [controlled]
+			[
+			if "Master's Bite" is listed in Traits of demon brute:
+				say "     <ask Luneth>";
+			else
+			]
+			if Resolution of Demonic Redemption is 7: [somewhat pacified]
+				say "     Brutus steps up to Bucky, a broad grin filled with dangerous teeth on his face. 'Just a toy, eh master?' he grunts. Then the demon's hand suddenly shoots forward, grabbing the deer by the neck and lifting him off the ground. He seems a little disappointed that there is no sign of struggle from Bucky, even as Brutus shakes him a bit. Grabbing Bucky's crotch, he seems ready to rip away the jeans right away, his cock throbbing in anticipation. 'I'm going to rape the shit out of this thing!' he says in an amused tone. You hastily add that the cuntboy is supposed to stay in one piece, so while he can be used sexually, Brutus can't unleash his bloodlust on top of that. 'Mh - fine,' Brutus grunts and sets him back down, then walks off.";
+			else: [standard hateful captive]
+				say "     Brutus steps up to Bucky, a broad grin filled with dangerous teeth on his face. 'Just a toy, eh... master?' he grunts. Then the demon's hand suddenly shoots forward, grabbing the deer by the neck and lifting him off the ground. He seems disappointed that there is no sign of struggle from Bucky, even as claws start drawing some blood. Grabbing Bucky's crotch, he seems ready to rip away the jeans right away, his cock throbbing in anticipation. 'I'm going to rape the shit out of this thing!' he says in an amused tone. You hastily add that the cuntboy is supposed to stay in one piece, so while he can be used sexually, Brutus can't unleash his bloodlust on top of that. 'Mh - fine,' Brutus grunts and sets him back down, then walks off.";
+			TraitGain "Bucky - Seen him" for Brutus;
+		else if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [cleansed]
+			say "     Brutus steps up to Bucky, eyeing him up and down, then reaching out to wrap a clawed hand around his upper arm and giving it a testing squeeze. 'I might break him by accident,' the purple demon says warily, but you pat his hand comfortingly. As one of the affected by the nanites, the little deer will surely be more resilient than Brutus thinks. And even if he gets a little stretched, that'll surely be back to normal in no time. Relieved from getting your okay to try Bucky, there is a visible throb of Brutus's dick. The enormous demon has a libido to match his size, after all. [if Libido of David > 56 and Libido of David < 99]'Could share him with David...' you hear Brutus say almost dreamily as he walks off afterwards. [end if][line break]";
+			TraitGain "Bucky - Seen him" for Brutus;
+		WaitBreakReactions;
+	if Candy is booked or Candy is bunkered:
+		say "     Candy saunters up to Bucky and looks the anthro deer up and down, then proclaims, 'Aww, what a cutie! Hmm... you said every one can use him, and he's effectively a big doll. Can I dress him up a bit? He'd look amazing with some hoof-polish, and...' Chuckling, you nod to the raccoon, who walks off with an eager smirk on his muzzle.";
+		TraitGain "Bucky - Seen him" for Candy;
+		WaitBreakReactions;
+	if Pink Raccoon is booked or Pink Raccoon is bunkered: [mindless Candy]
+		say "     The pink raccoon comes up to Bucky and straight away starts to paw and touch his body. Seems like he took your invitation of free use literally and is ready to have a go, right now. Chuckling, you shoo him away, saying that he'll have plenty of time later.";
+		TraitGain "Bucky - Seen him" for Candy;
+		WaitBreakReactions;
+	if Carl is booked or Carl is bunkered:
+		if HP of Carl is 30: [beta carl]
+			say "     Carl comes up to you, glancing aside at Bucky with interest but keeping most of his attention on yourself. 'Thank you for this fun toy, Alpha!' the husky soldier says happily, tail wagging behind his back. He brushes a hand over the deer's chest, feeling him through the tank top. You can almost see the thoughts of what he wants to do with the sex doll in the broadness of his smile as he wanders off afterwards.";
+		else:
+			say "     Carl comes up to you, mostly staring straight ahead, but not quite managing his eyes from flicking aside at Bucky several times. 'A sex doll? I, uhm... I don't think I could, you know. Always thought just sexual deviants get something like th- err, oh, sorry - no offense meant!' You wave his worried expression away casually, then shrug and say he shouldn't discount something he hasn't tried so quickly. Carl raises his eyebrows, hesitates, then finally says, 'Uhm... I should get back to the observation post.' With that said, he walks off.";
+		TraitGain "Bucky - Seen him" for Carl;
+		WaitBreakReactions;
+	if Chris is booked or Chris is bunkered: [TODO: add special stuff if they're brothers]
+		if Libido of Chris is 0: [half-orc]
+			say "     Chris strolls right up to Bucky, checking him out openly. 'Looks like a fun toy, neat!' the young orc says, then hooks a finger over the rim of the buck's pants and pulling them forward over his crotch a bit, peeking down the gap between Bucky's fur and the jeans. 'And you say he's got an extra hole to fuck? I wanna try that too!' Grinning eagerly, he gives you a fist-bump, then wanders off.";
+			TraitGain "Bucky - Seen him" for Chris;
+		else if Libido of Chris is 1: [orc breeder]
+			if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
+				say "     Chris saunters up to Bucky, checking him out with interest. Then he asks shily, 'So, uhm... with this being a toy, could I - could I be on top?' Chuckling and nodding, you make the young orc's day, who walks off with a big smile on his face.";
+				TraitGain "Bucky - Seen him" for Chris;
+			else: [happy breeder]
+				say "     Chris saunters up to Bucky, checking him out with interest and even touching the deer a little. 'He looks like he should be fun. And with him being a toy, I could be on top too, right?!' Chuckling and nodding, you make the young orc's day, who walks off with a big smile on his face.";
+				TraitGain "Bucky - Seen him" for Chris;
+		else if Libido of Chris is 2: [orc warrior]
+			if "Bro" is listed in Traits of Chris or "Bro with Benefits" is listed in Traits of Chris or "Dad with Benefits" is listed in Traits of Chris:
+				say "     Chris struts up to the anthro deer, immediately sliding an arm around Bucky to feel his rear end. 'Oh yeah, this'll be fun! Nice toy you brought us here!' Grinning eagerly, he gives you a fist-bump, then wanders off.";
+				TraitGain "Bucky - Seen him" for Chris;
+			else: [dominant warrior Chris]
+				say "     Chris struts up to the anthro deer, looking Bucky up and down, then giving him a shove in the chest, causing the anthro to make a step back. 'Hm, I don't know. There's no fight in this thing, that's pretty boring. I'd rather grab a nice dude from the streets.' With a shrug, the orc warrior then wanders off.";
+				TraitGain "Bucky - Seen him" for Chris;
+		WaitBreakReactions;
+	if Colleen is booked or Colleen is bunkered:
+		if SarahSlut < 2: [not transformed, or only a little]
+			say "     Keeping her distance as she stares at Bucky and shakes her head, Colleen then looks over to you. 'What the fuck? What's wrong with your priorities?! Everyone is fighting for their lives and you take the time to drag [italic type]that[bold type] through the city? Should have kept things in your pants and done pretty much anything else that would have been more useful!' Shaking her head in frustration, the soldier then turns around and walks away.";
+			TraitGain "Bucky - Seen him" for Colleen;
+		else if ColleenAlpha is 0:
+			say "     Walking right up, Colleen looks at Bucky with her tail wagging behind her back. 'You brought us something new, boss? Awesome, looks like a neat toy!' True to the sexy dog she's become, the transformed soldier seems pretty eager to make use of the anthro deer.";
+		[
+		else if ColleenAlpha > 0:
+			say "..."; [TODO: write this]
+		]
+		WaitBreakReactions;
+	if David is booked or David is bunkered:
+		say "     Coming up, David looks Bucky up and down, then blushes when you smile at his interest. 'I - uhm, he looks to lifelike!' the young man says, reaching out to feel the fur on Bucky's arm. 'But I don't know if I should, uhm... you know.' Smiling a little, you give an understanding nod, then add that there's no rush, Bucky will stay right here and be available. David takes a deep breath, letting his eyes wander a bit more again, then shakes himself out of it. 'Uh, I should go,' he says somewhat embarrassedly[if Libido of David > 56 and Libido of David < 99]. As he walks away afterwards, you hear him mumble to himself, 'Maybe together with Brutus...' [else]and walks away. [end if][line break]";
+		TraitGain "Bucky - Seen him" for David;
+		WaitBreakReactions;
+	if Denise is booked or Denise is bunkered:
+		say "     In a flutter of wings, Denise lands a little distance away, then approaches shily. 'He's cute!' she says with a smile, then looks at you somewhat hesitantly. 'And it's really no problem if I... try some things out with him?' You smile and nod to her, which the gryphoness accepts happily. She lets her gaze drop to his crotch, then giggles, before walking away.";
+		TraitGain "Bucky - Seen him" for Denise;
+		WaitBreakReactions;
+	if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
+		if HP of Elijah is 99: [evil] [TODO: add manipulation?]
+			say "     Elijah saunters up to Bucky, feeling his fur, then reaches up to open the anthro's mouth to slide two fingers inside. 'Not bad, I guess, for when I don't feel like hunting down someone out in the streets.' He then goes on to slide his hand down the front of Bucky's jeans, no doubt dipping a finger into his pussy. A moment later, the dark angel demonstratively licks his finger, then wanders off with a smirk on his face.";
+			TraitGain "Bucky - Seen him" for Elijah;
+		else: [good]
+			say "     Elijah comes up to you, looking at Bucky only for a short moment then shaking his head. 'I don't think I could ever, uhm - you know what I want to say. Being intimate with someone is a special gift from our creator. Doing that with nothing but a puppet almost seems like throwing that back in his face.";
+			TraitGain "Bucky - Seen him" for Elijah;
+		WaitBreakReactions;
+	if Eric is booked or Eric is bunkered:
+		if HP of Eric > 0 and HP of Eric < 21:
+			say "     Eric comes up to you and looks with interest at Bucky. 'So, is he really... like me, down there?' Chuckling, you nod to him, which prompts the young man to say, 'I - I think, uhm... would it be alright if I experimented a little with him?' As you tell him he's fine to do whatever, Eric beams at you in relief and anticipation, then makes his goodbyes and walks away.";
+			TraitGain "Bucky - Seen him" for Eric;
+		else if HP of Eric > 20 and HP of Eric < 30: [horsecock]
+			say "     Eric comes up to you and looks with interest at Bucky. 'Wow, you really went all out in getting him, eh? Do you think he can take a full-on horsecock?' Chuckling, you tell him that the nanites should make the cuntboy buck quite stretchy, and able to bounce back from being hard-used. 'Guess I know what I'm looking forward to then!' the young athlete tells you, then wanders off after a friendly wave.";
+		else if HP of Eric > 30 and HP of Eric < 40: [satyrcock]
+			say "     Eric comes up to you and looks with interest at Bucky. 'Oh yeah! Got us an awesome party treat here! I can just imagine showing up at a place, guiding this sexpot by the hand. That should really get everyone going!' He's clearly enthusiastic about getting it on with the cuntboy. Slapping the side of your arm in a friendly way, the student then wanders off.";
+		else if HP of Eric > 40 and HP of Eric < 50: [orccock]
+			say "     Eric comes up to you and looks with interest at Bucky. 'Oh yeah! You know, the balls that I got together with this cock are kinda churning out cum all the time. It'll be nice to have your toy here available to drain some loads in every day!' He's clearly enthusiastic about getting it on with the cuntboy. Slapping the side of your arm in a friendly way, the student then wanders off.";
+		else if HP of Eric is 99:
+			say "     Eric keeps his distance, throwing looks with scrunched-together eyebrows at you and Bucky. There is disapproval in his gaze, but at the same time, you think you can make almost grudging interest as he studies the anthro deer. Noticing your attention to him watching, the abused young man then steps out of sight to hide from you.";
+		TraitGain "Bucky - Seen him" for Eric;
+		WaitBreakReactions;
+	if Fang is booked or Fang is bunkered:
+		say "     Fang pads closer, then sticks his muzzle between Bucky's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the dickhead already emerging from his sheath. Still,  it seems like the wolf doesn't feel like mounting him right now, so he trots off soon after, tail wagging behind his back.";
+		TraitGain "Bucky - Seen him" for Fang;
+		WaitBreakReactions;
+	if HP of Fiona > 4:
+		say "     Sitting on the ground nearby, Fiona glances over at Bucky, then licks her paw and rubs it behind her ear. She seems fairly oblivious to the sex doll, as if he isn't worth looking at even.";
+		TraitGain "Bucky - Seen him" for Fiona;
+		WaitBreakReactions;
+	if Gabriel is booked or Gabriel is bunkered:
+		say "     Gabriel comes up to you and Bucky, looking the anthro deer up and down. 'I can train with this to serve you better, [master]!' the sexy angel you've tamed for yourself says in an eager tone. He's fully focused on being the best sex slave he can be, prompting you to give his ass a playful slap as you send him back to where he came from.";
+		TraitGain "Bucky - Seen him" for Gabriel;
+		WaitBreakReactions;
+	if Hayato is booked or Hayato is bunkered:
+		say "     Hayato walks up and comes to tower over Bucky, looking down at him with interest. He half raises a large red hand to touch the buck, then hesitates, 'Looks so very real. I - er, can he feel pain? I'm pretty big, and don't want to break him, you know.' Chuckling, you pat the oni's arm and tell him that the nanites should make the cuntboy buck quite stretchy, and able to bounce back from being hard-used. Hayato looks at you with raised eyebrows, then says thoughtfully, 'I'd be nice to... let loose fully once in a while.' Then he makes his goodbyes and wanders off, stopping to glance back at Bucky before moving out of sight.";
+		TraitGain "Bucky - Seen him" for Hayato;
+		WaitBreakReactions;
+	if Helen is booked or Helen is bunkered:
+		say "     Helen rushes up to Bucky on all fours, barking and smiling at him. She seems confused when there is no reaction, even as she barks again and uses a hand to pat the anthro's leg. Finally, she wanders off and lies down on the ground a little distance away.";
+		TraitGain "Bucky - Seen him" for Helen;
+		WaitBreakReactions;
+	if Hobo is booked or Hobo is bunkered:
+		say "     Hobo pads up to Bucky, sniffing him and looking up at the anthro deer. He gives a quiet whine that almost sounds like a question, then sits down on the ground right next to the buck, having decided that he needs someone to keep him company. You let the devoted dog stay there for a little while before shooing him away gently.";
+		TraitGain "Bucky - Seen him" for Hobo;
+		WaitBreakReactions;
+	if Honey is booked or Honey is bunkered:
+		say "     With the hum of her wings, Honey flies up and circles Bucky once before coming to a hover besides the anthro deer. 'Ooh, his fur looks so soft! Can I pet it?' Chuckling, you nod to her, and the small bee girl gleefully rubs her hands through Bucky's fur. 'I'll be back for more of that! Such lovely fur!' she says somewhat giggly and flies away.";
+		TraitGain "Bucky - Seen him" for Honey;
+		WaitBreakReactions;
+	if Korvin is booked or Korvin is bunkered:
+		if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
+			say "     Walking up, Korvin looks Bucky up and down with interest, grabbing his hip and giving it a little squeeze. 'It'll be awesome to pound something again!' the German shepherd says, seeming eager to feel a bit of his old, wild self again with the sex doll.";
+			TraitGain "Bucky - Seen him" for Korvin;
+		else:
+			say "     Walking up with a swagger in his step, Korvin looks Bucky up and down. 'Nice toy you got us there,' he says with an eager grin, then grabs the anthro deer's chest and gives his flat pecs a squeeze. Too bad you didn't get one that's a bit more top-heavy, but as long as he's got a juicy pussy, I'll not complain too loudly, hah!' Grabbing his crotch and adjusting himself, the horny dog then walks off. Before he's fully out of earshot, you can hear him muse to himself, 'I wonder if these things can be knocked up...'";
+			TraitGain "Bucky - Seen him" for Korvin;
+		WaitBreakReactions;
+	if Klauz is booked or Klauz is bunkered:
+		say "     Klauz prowls closer and closer, circling Bucky two full times at a distance before finally making his move. He rubs his side against the anthro deer's legs and then waits, purring like an idling motor. When Bucky isn't drawn in to pet him, the felinoid tries again on the sex doll's other side, looking up expectantly. Something like confusion crosses his face, followed by the feline stalking away, tail making jerking movements as he is in a bit of a sulk.";
+		TraitGain "Bucky - Seen him" for Klauz;
+		WaitBreakReactions;
+	if Malik is booked or Malik is bunkered:
+		say "     Malik comes up to the anthro deer with swaggering steps, then looks Bucky up and down. 'Not much action to be had with this thing, eh? Any dude I drag in from the street is more fun, so I'll pass.' With that said, the orc warrior then wanders off.";
+		TraitGain "Bucky - Seen him" for Malik;
+		WaitBreakReactions;
+	if Nadia is booked or Nadia is bunkered:
+		say "     Nadia comes up and looks at Bucky, more out of curiosity than any actual interest. 'It's good of you to provide this relief, for those who need it. That'll allow people to take the edge off.' With a smile, she then walks away.";
+		TraitGain "Bucky - Seen him" for Nadia;
+		WaitBreakReactions;
+	if Rane is booked or Rane is bunkered:
+		say "     Rane smirks as he strolls up and looks Bucky up and down. Then he reaches out and gives your shoulder a light punch. 'Kinky, kinky, bringing something like that here. Hope you have fun with... er, him.' Nodding to the deer, he shrugs. 'Can't say I'd go for it myself - I for one like the chase that real people provide, you know?'";
+		TraitGain "Bucky - Seen him" for Rane;
+		WaitBreakReactions;
+	if Ryousei is booked or Ryousei is bunkered:
+		say "     Ryousei walks up to Bucky, looking at the deer with a curious expression. Then he reaches out to grasp the buck's hand and pulls it up before letting go, watching it be held just where he moved it. With a slightly amused snort, the tiger pushes Bucky's arm back down. 'Your world does have odd customs. I would have preferred a simple geisha, but as the saying goes: [']When visiting a cyclops, drink the blood wine, or add to its flavor.['] You certainly provided a handsome poll for companionship.' With a little bow, the anthro feline then walks away.";
+		TraitGain "Bucky - Seen him" for Ryousei;
+		WaitBreakReactions;
+	if Tehuantl is booked or Tehuantl is bunkered:
+		if Tehuantl is male:
+			say "     Tehuantl comes up to you, laying a hand on his chest and giving a deep nod to you. 'Thank you [master] for this gift. With an outlet for my libido, I will be able to focus more on tasks for you.' He gives Bucky a very interested look, letting out a purr before he walks off again.";
+			TraitGain "Bucky - Seen him" for Tehuantl;
+		else:
+			say "     Tehuantl comes up to you, laying a hand on her chest and giving a deep nod to you. 'Thank you [master] for this gift. With an outlet for my libido, I will be able to focus more on tasks for you.' She gives Bucky a very interested look, letting out a purr before she walks off again.";
+			TraitGain "Bucky - Seen him" for Tehuantl;
+		WaitBreakReactions;
+	if (Sarah is booked or Sarah is bunkered) and SarahCured > 3:
+		say "     Sarah walks up to Bucky with a grim expression on her face, then takes the anthro's arm to feel for a pulse. After a moment, she nods to herself and takes out a little pen-light to shine in his eyes. 'This makes absolutely no sense! He isn't breathing, but has a pulse, and is standing despite having no response at all to my light! You can tell yourself what you want, but this must have been a person at some point! He needs help, not abuse as a sex toy!' Throwing her hands in the air as you give a noncommittal shrug, the husky doctor then storms off.";
+		TraitGain "Bucky - Seen him" for Sarah;
+		WaitBreakReactions;
+	if Sven is booked or Sven is bunkered:
+		if HP of Sven >= 30 and HP of Sven < 50:	[self-confident Sven]
+			say "     Sven walks up to Bucky, looking him up and down, then reaches out and touches the anthro deer's arm. 'Wow, he even feels real! Always thought a sex doll would be... you know, fake. This is neat! Thank you for putting him here.' The exchange student feels Bucky up for another moment or two, then pulls himself back and makes his goodbyes.";
+		else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
+			say "     Sven shyly approaches Bucky, looking him up and down, then over to you as if to ask permission. As you smile and nod, he reaches out and touches the anthro deer's arm. 'Wow, he even feels real! Always thought a sex doll would be... you know, fake. And I'd never have dared to get one. Thank you for putting him here.' The exchange student feels Bucky up for another moment or two, then pulls himself back and makes his goodbyes.";
+		else:
+			say "     Sven shyly approaches Bucky, looking him up and down, then reaches out and touches the anthro deer's arm. 'Wow, he even feels real! Always thought a sex doll would be... you know, fake. Thank you for putting him here, but I don't know if I - if I'd dare use him.' The exchange student pulls his hand back, then makes his goodbyes and wanders off. As he goes, you see him stop once or twice to throw the buck another glance or two.";
+		TraitGain "Bucky - Seen him" for Sven;
+		WaitBreakReactions;
+	if Urik is booked or Urik is bunkered:
+		say "     Urik walks up to Bucky, crossing his arms as he towers over the anthro deer and looks down at him. 'He's pretty, I can give you that. Not really my thing, though. I prefer guys to have a bit more fire in them. Ones that fight back, until they're nice and broken in.' With a shrug, he wanders off afterwards.";
+		TraitGain "Bucky - Seen him" for Urik;
+		WaitBreakReactions;
+	if Xerxes is booked or Xerxes is bunkered:
+		say "     Xerxes rushes up to Bucky on all fours, barking and smiling at him. He seems confused when there is no reaction, even as he barks again and uses a hand to pat the anthro's leg. Finally, he wanders off and lies down on the ground a little distance away.";
+		TraitGain "Bucky - Seen him" for Xerxes;
+		WaitBreakReactions;
+	now IntroReactionCounter is 0; [reset]
+
+
+to say Hercules_Person:
+	say "...";
+
+to say Hercules_Toy:
+	say "...";
+	if Alexandra is booked or Alexandra is bunkered:
+		say "     <interest>";
+		TraitGain "Bucky - Seen him" for Alexandra;
+		WaitBreakReactions;
+	if Amy is booked or Amy is bunkered:
+		say "     <scared, massive and muscular, not a person>";
+		TraitGain "Bucky - Seen him" for Amy;
+		WaitBreakReactions;
+	[--------------]
+	if Brutus is booked or Brutus is bunkered:
+		if DBCaptureQuestVar is 5: [controlled]
+			[
+			if "Master's Bite" is listed in Traits of demon brute:
+				say "     <ask Luneth>";
+			else
+			]
+			if Resolution of Demonic Redemption is 7: [somewhat pacified]
+				say "     <not a person? rules don't apply? player says not to break him completely>";
+			else: [standard hateful captive]
+				say "     <not a person? rules don't apply? player says not to break him completely>";
+			TraitGain "Bucky - Seen him" for Brutus;
+		else if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [cleansed]
+			say "     <relief without having to worry? if in relationship with David: alright to share?>";
+			TraitGain "Bucky - Seen him" for Brutus;
+		WaitBreakReactions;
+	if Candy is booked or Candy is bunkered:
+		say "     <ride him! can I play dressup too?>";
+		TraitGain "Bucky - Seen him" for Candy;
+		WaitBreakReactions;
+	if Pink Raccoon is booked or Pink Raccoon is bunkered: [mindless Candy]
+		say "     <paws at Bucky, seems ready to use him>";
+		TraitGain "Bucky - Seen him" for Candy;
+		WaitBreakReactions;
+	if Carl is booked or Carl is bunkered:
+		if HP of Carl is 30: [beta carl]
+			say "     <fun toy, gift from the Alpha!>";
+		else:
+			say "     <I would never! secretly uses (fucks)>";
+		TraitGain "Bucky - Seen him" for Carl;
+		WaitBreakReactions;
+	if Chris is booked or Chris is bunkered: [TODO: add special stuff if they're brothers]
+		if Libido of Chris is 0: [half-orc]
+			say "     <fun toy>";
+			TraitGain "Bucky - Seen him" for Chris;
+		else if Libido of Chris is 1: [orc breeder]
+			if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
+				say "     <fun toy - I can be on top with such a big guy?!>";
+				TraitGain "Bucky - Seen him" for Chris;
+			else: [happy breeder]
+				say "     <fun toy - I can be on top with such a big guy?!>";
+				TraitGain "Bucky - Seen him" for Chris;
+		else if Libido of Chris is 2: [orc warrior]
+			if "Bro" is listed in Traits of Chris or "Bro with Benefits" is listed in Traits of Chris or "Dad with Benefits" is listed in Traits of Chris:
+				say "     <fun toy>";
+				TraitGain "Bucky - Seen him" for Chris;
+			else: [dominant warrior Chris]
+				say "     <boring, doesn't struggle (at least he's big)>";
+				TraitGain "Bucky - Seen him" for Chris;
+		WaitBreakReactions;
+	if Colleen is booked or Colleen is bunkered:
+		if SarahSlut < 2: [not transformed, or only a little]
+			say "     <wtf is wrong with you?! creepy!>";
+			TraitGain "Bucky - Seen him" for Colleen;
+		else if ColleenAlpha is 0:
+			say "     <fun male toy!>";
+		[
+		else if ColleenAlpha > 0:
+			say "..."; [TODO: write this]
+		]
+		WaitBreakReactions;
+	if David is booked or David is bunkered:
+		say "     <embarrassed, secretly uses - might think of using with Brutus>";
+		TraitGain "Bucky - Seen him" for David;
+		WaitBreakReactions;
+	if Denise is booked or Denise is bunkered:
+		say "     <too big and dangerous for her to want to use>";
+		TraitGain "Bucky - Seen him" for Denise;
+		WaitBreakReactions;
+	if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
+		if HP of Elijah is 99: [evil] [TODO: add manipulation?]
+			say "     <pound it all day, casually, when he doesn't want to hunt, fun to bend a big guy without a fight>";
+			TraitGain "Bucky - Seen him" for Elijah;
+		else: [good]
+			say "     <not interested, having sex must be special>";
+			TraitGain "Bucky - Seen him" for Elijah;
+		WaitBreakReactions;
+	if Eric is booked or Eric is bunkered:
+		if HP of Eric > 0 and HP of Eric < 21:
+			say "     <loves big guys, shy about using him>";
+			TraitGain "Bucky - Seen him" for Eric;
+		else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]
+			say "     <horse: yeah, horse toy fun! satyr: party on! orc: get some relief, love the bigness>";
+			TraitGain "Bucky - Seen him" for Eric;
+		else if HP of Eric is 99:
+			say "     <scared, might use it secretly, stretch himself to be prepared for others>";
+			TraitGain "Bucky - Seen him" for Eric;
+		WaitBreakReactions;
+	if Fang is booked or Fang is bunkered:
+		say "     <stick nose between the legs, licks balls, dickhead sticking out of sheath, tail wags>";
+		TraitGain "Bucky - Seen him" for Fang;
+		WaitBreakReactions;
+	if HP of Fiona > 4:
+		say "     <tries to get reaction, claws, still no reaction, pissed>";
+		TraitGain "Bucky - Seen him" for Fiona;
+		WaitBreakReactions;
+	if Gabriel is booked or Gabriel is bunkered:
+		say "     <train with it>";
+		TraitGain "Bucky - Seen him" for Gabriel;
+		WaitBreakReactions;
+	if Hayato is booked or Hayato is bunkered:
+		say "     <confident he doesn't break it - happy to let loose>";
+		TraitGain "Bucky - Seen him" for Hayato;
+		WaitBreakReactions;
+	if Helen is booked or Helen is bunkered:
+		say "     <comes up, sniffs crotch, licks, wags butt, barks, disappointed in no reaction>";
+		TraitGain "Bucky - Seen him" for Helen;
+		WaitBreakReactions;
+	if Hobo is booked or Hobo is bunkered:
+		say "     <comes up, sniffs, sits down as if to keep company>";
+		TraitGain "Bucky - Seen him" for Hobo;
+		WaitBreakReactions;
+	if Honey is booked or Honey is bunkered:
+		say "     <likes the fur - can I pet it? and oooh, that dick is so big! feels balls and comments about shooting a lot>";
+		TraitGain "Bucky - Seen him" for Honey;
+		WaitBreakReactions;
+	if Korvin is booked or Korvin is bunkered:
+		if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
+			say "     <yay, I can pound something! can be on top of a big guy, like in the old times, or powerbottom>";
+			TraitGain "Bucky - Seen him" for Korvin;
+		else:
+			say "     <nice toy>";
+			TraitGain "Bucky - Seen him" for Korvin;
+		WaitBreakReactions;
+	if Klauz is booked or Klauz is bunkered:
+		say "     <rubs up, no reaction? confused>";
+		TraitGain "Bucky - Seen him" for Klauz;
+		WaitBreakReactions;
+	if Malik is booked or Malik is bunkered:
+		say "     <wants to hunt instead, at least the player got a proper orc sized one, gets the sluts used to that>";
+		TraitGain "Bucky - Seen him" for Malik;
+		WaitBreakReactions;
+	if Nadia is booked or Nadia is bunkered:
+		say "     <likes a sex toy for everyone, wouldn't personally want to use>";
+		TraitGain "Bucky - Seen him" for Nadia;
+		WaitBreakReactions;
+	if Rane is booked or Rane is bunkered:
+		say "     <you kinky guy - I for one like the chase, you know?>";
+		TraitGain "Bucky - Seen him" for Rane;
+		WaitBreakReactions;
+	if Ryousei is booked or Ryousei is bunkered:
+		say "     <weird customs you have. but when in Rome, I guess...>";
+		TraitGain "Bucky - Seen him" for Ryousei;
+		WaitBreakReactions;
+	if Tehuantl is booked or Tehuantl is bunkered:
+		if Tehuantl is male:
+			say "     <thank you master for this gift, this will allow me to focus more>";
+			TraitGain "Bucky - Seen him" for Tehuantl;
+		else:
+			say "     <wants cock! yeah!>";
+			TraitGain "Bucky - Seen him" for Tehuantl;
+		WaitBreakReactions;
+	if (Sarah is booked or Sarah is bunkered) and SarahCured > 3:
+		say "     <horrified - this must have been a person!>";
+		TraitGain "Bucky - Seen him" for Sarah;
+		WaitBreakReactions;
+	if Sven is booked or Sven is bunkered:
+		if HP of Sven >= 30 and HP of Sven < 50:	[self-confident Sven]
+			say "     <neat toy, cool!>";
+			TraitGain "Bucky - Seen him" for Sven;
+		else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
+			say "     <soo big! shyly open to use it>";
+			TraitGain "Bucky - Seen him" for Sven;
+		else:
+			say "     <I wouldn't do that, later secretly plays around>";
+			TraitGain "Bucky - Seen him" for Sven;
+		WaitBreakReactions;
+	if Urik is booked or Urik is bunkered:
+		say "     <how boring, no hunt - excited if he can breed it>";
+		TraitGain "Bucky - Seen him" for Urik;
+		WaitBreakReactions;
+	if Xerxes is booked or Xerxes is bunkered:
+		say "     <sniffs crotch, interested in humping>";
+		WaitBreakReactions;
+		TraitGain "Bucky - Seen him" for Xerxes;
+	now IntroReactionCounter is 0; [reset]
+
+to say Leaving Limbo:
+	say "...";
+
+
+]
 
 Mannequin ends here.

@@ -118,7 +118,13 @@ to say ResolveEvent Lone Survivor:
 			ItemGain water bottle by 4;
 			WaitLineBreak;
 			say "     Packing away your loot, you get going at checking the next car, and the next, but sadly they're less well stocked than your awesome find. Maybe the bus will be a better opportunity? Walking around a tangled mess of metal in which you can't even see where one car begins and the other ends, you approach the bus - and are shocked to see someone come out of it! Seems like you're not the only one who wanted to check out this scavenging spot. From what you can see, the guy stepping off the stairs of the bus is surprisingly fully human. He is fairly tall and broad-shouldered, dressed in sturdy boots, cargo pants with many pockets, and a sleeveless shirt that clings tightly to a muscular upper body, a bulging backpack slung over one shoulder. He notices you in turn and a wary expression spreads over his fairly attractive bearded face.";
-			say "     Silence stretches out between the two of you, two survivors of the chaos in the city eyeing each other, and you can't help but notice his hand tightening on the grip of the baseball bat he carries, in addition to the well-filled appearance of his backpack...";
+			say "     Silence stretches out between the two of you, two survivors of the chaos in the city eyeing each other, and you can't help but notice his hand tightening on the grip of the baseball bat he carries, in addition to the well-filled appearance of his backpack. ";
+			[
+			if orc supersized breeder is listed in companionList of Player and PlayerFriended of Urik is true and (Loyalty of Urik < 9 or "Everything Goes" is listed in Traits of Urik or "Stud" is listed in Traits of Urik): [Urik]
+				say "Urik looming by your side doesn't exactly help the tension either, as the large orc throws the human a hungry look and comments, 'A brawler, eh? Just my sort of stud! Got a good grip on that bat too!' Clearly, he is more than a little attracted by the stranger's muscular body, and casually rubs his bulge as he gives you a tusk-baring grin. Then he straightens himself again, shaking his arms to loosen them up for a possible fight. A moment later, the orc glances back at the man and gives a respectful nod. 'If he stayed human this long, I bet he knows how to use it too. A throw-down with this dude would be interesting, hah!'";
+			else:
+				LineBreak;
+			]
 			project the figure of Brennan_clothed_icon;
 			LineBreak;
 			say "     [bold type]What now?[roman type][line break]";
