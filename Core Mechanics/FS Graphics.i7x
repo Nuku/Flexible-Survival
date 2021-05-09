@@ -154,6 +154,8 @@ Figure of Ram_naked_icon is the file "Ram_naked.jpg".
 Figure of Saber_Kitty_icon is the file "Saber Kitty.jpg".
 Figure of Sabretooth_soft_icon is the file "Sabretooth_soft.jpg".
 Figure of Sabretooth_hard_icon is the file "Sabretooth_hard.jpg".
+Figure of SeaDragoness_NSFW_icon is the file "Sea Dragoness_NSFW.jpg".
+Figure of SeaDragoness_SFW_icon is the file "Sea Dragoness_SFW.jpg".
 Figure of SeaDragon_hard_icon is the file "Sea Dragon hard.jpg".
 Figure of SeaDragon_soft_icon is the file "Sea Dragon soft.jpg".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
@@ -274,6 +276,8 @@ Figure of Carl_Eric_sofa_fuck_2_icon is the file "Carl_Eric_sofa_fuck_2.jpg".
 Figure of Carl_Eric_sofa_fuck_3_icon is the file "Carl_Eric_sofa_fuck_3.jpg".
 Figure of Carl_Eric_sofa_fuck_4_icon is the file "Carl_Eric_sofa_fuck_4.jpg".
 Figure of Chase_face_icon is the file "Chase_face.jpg".
+Figure of Chris_breeder_clothed_icon is the file "Chris_breeder_clothed.jpg".
+Figure of Chris_breeder_naked_icon is the file "Chris_breeder_naked.jpg".
 Figure of Chris_clothed_icon is the file "Chris_clothed.jpg".
 Figure of Chris_naked_icon is the file "Chris_naked.jpg".
 Figure of Chris_face_icon is the file "Chris_face.jpg".
@@ -839,6 +843,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Chase_face"	Figure of Chase_face_icon	"SineAlas"	g-black	"normal"
 "Cheetah Woman"	Figure of CheetahWoman_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Chocolate Lab"	Figure of ChocoLab_icon	"SparklePens"	g-white	"normal"
+"Chris_breeder_clothed"	Figure of Chris_breeder_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Chris_breeder_naked"	Figure of Chris_breeder_naked_icon	"SteppeCrow"	g-white	"normal"
 "Chris_clothed"	Figure of Chris_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Chris_naked"	Figure of Chris_naked_icon	"Kupo Klein"	g-white	"normal"
 "Chris_face_icon"	Figure of Chris_face_icon	"Kupo Klein"	g-black	"normal"
@@ -1134,6 +1140,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Stallionboi hard"	Figure of Stallionboi_hard_icon	"Vashaa"	g-White	"normal"
 "Stallionboi clothed"	Figure of Stallionboi_clothed_icon	"Vashaa"	g-White	"normal"
 "Satyress_naked"	Figure of Satyress_naked_icon	"Vashaa"	g-White	"normal"
+"Sea Dragoness NSFW"	Figure of SeaDragoness_NSFW_icon	"Vashaa"	g-white	"normal"
+"Sea Dragoness SFW"	Figure of SeaDragoness_SFW_icon	"Vashaa"	g-white	"normal"
 "Sea Dragon Hard"	Figure of SeaDragon_hard_icon	"Vashaa"	g-white	"normal"
 "Sea Dragon Soft"	Figure of SeaDragon_soft_icon	"Vashaa"	g-white	"normal"
 "Septus"	Figure of Septus_icon	"Feralise"	g-black	"normal"
@@ -1447,6 +1455,7 @@ carry out artistcredits:
 	say "     Sabretooth by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Sand Man by Rastear @ y-gallery.net[line break]";
 	say "     Satyress by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Sea Dragoness by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Sea Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Shadow Beast by Hioshiru @ https://www.furaffinity.net/user/hioshiru/[line break]";
 	say "     Smooth Collie Shemale by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
@@ -1507,6 +1516,7 @@ carry out artistcredits:
 	say "     Carl + Eric by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Chase by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Chris by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Chris (breeder) by SteppeCrow @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Christy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Christy (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Colleen (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";

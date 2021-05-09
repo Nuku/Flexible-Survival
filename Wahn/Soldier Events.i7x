@@ -597,7 +597,6 @@ to say ResolveEvent Soldier Squad:
 		now SquadEncounters is 6;
 		now battleground is "void";
 		now Soldier Squad is resolved;  [for now]
-]
 
 Table of GameEventIDs (continued)
 Object	Name

@@ -14,6 +14,7 @@ FFSDUBM is a truth state that varies. FFSDUBM is usually false.
 FSDOPEN is a number that varies. FSDOPEN is usually 0.
 
 to say fsdf attack:
+	project Figure of SeaDragoness_NSFW_icon;
 	if MaleList is not banned: [change target to male for infection if valid]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
@@ -230,6 +231,7 @@ to say fsdfeeding:
 
 
 To say fsdf loss:
+	project Figure of SeaDragoness_NSFW_icon;
 	if Player is not submissive and ( Libido of Player - humanity of Player > 45 or ( Libido of Player - humanity of Player > 60 and "Dominant" is listed in feats of Player ) ) and ( BodyName of Player is "Feral Sea Dragon" or BodyName of Player is "Feral Sea Dragoness" ) and player is male:
 		say "     Just as you drive the dragoness back, the creature lets out a powerful cry that compels your twisted psyche to yield. Turning away from you, you hear her softly sing, coaxing you into overtaking her. Driven by your increasingly feral mind you slowly pull yourself on top of dragoness, much to the beast's cooing approval. You thrust impotently against her scaled haunch before you're sufficiently hard, carefully moving to guide[if Player is male] one of[end if] your [cock size desc of Player] cock[smn] into her hungry cunt.";
 		say "     [one of]You're initially gentle in forcing it in, the dragoness cooing softly as your rod slowly descends[or]Flared by a tinge of feral-charged aggression, you show your dominion by thrusting into her with sudden and reckless abandon, she wails softly in such abrasive pleasure as your drill your rod deep[at random] into the folds of her flesh. Your pace rapidly ascends as you fuck the dragoness, each thrust forcing and ecstatic wail out from the beast's lips, eager hole squeezing tightly around your[if Cock Length of Player > 15] substantial,[end if] throbbing organ.";
@@ -250,6 +252,7 @@ To say fsdf loss:
 				say "     You choose to leave the dragoness with her need unsated, going about your business once more.";
 
 to say fsdf desc:
+	project Figure of SeaDragoness_SFW_icon;
 	setmongender 4; [creature is female]
 	psycheeval;
 	libidoeval;
