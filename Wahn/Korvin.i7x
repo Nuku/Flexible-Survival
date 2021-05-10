@@ -65,10 +65,10 @@ to say gsd_recruited:
 	now HP of gshep is 1;
 	now GShepLastScene is turns;
 	say "     Looking around, you find some heavy rope and use that to make a temporary leash for the muzzle-scarred German shepherd. He tugs at it a few times, but leaves it alone when you tell him to stop pawing at it. You ask him if he's got a name he can remember, which throws him for a loop. 'What a stupid question? Of course I remember... my... name...' He ends up bemused for a time, scratching his ear with one paw as he tries to think. 'K-... Ka-? Ko-? Korvin? I think it was, I mean, it is Korvin.' He seems a little more self-assured again now that he's got a name. With a soft pull on the leash, you guide Korvin back to the library with you, explaining that it is his new home. Thinking about it for a moment, you decide to quarter him in one of the side rooms on the ground floor, the former Kidz Zone now turned into a Makeshift Rec Room. ";
-	if (number of bunkered people + number of booked people > 1): [anyone there besides just Korvin]
-		if (number of bunkered people + number of booked people > 2):
+	if (number of bunkered people + number of booked people > 2): [anyone there besides just Korvin]
+		if (number of bunkered people + number of booked people > 3):
 			say "Seeing some of the other people in the library as you walk around with your new companion following, you decide it might be best to call everyone in the building together and explain what's going on with Korvin now moving in. [bold type]Within a few minutes, everyone is gathered and you lay things out, to the following reactions:[roman type][line break]";
-		else if (number of bunkered people + number of booked people is 2):
+		else if (number of bunkered people + number of booked people is 3):
 			say "Seeing some movement of the other inhabitant of the library, you decide it might be best to explain what's going on with Korvin now moving in. [bold type]Calling everyone together, you lay things out, to the following reactions:[roman type][line break]";
 		LineBreak;
 		if Alexandra is booked or Alexandra is bunkered:

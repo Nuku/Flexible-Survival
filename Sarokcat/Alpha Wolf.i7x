@@ -220,7 +220,7 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 10;
-	now sex entry is "Female";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 55;
 	now lev entry is 7;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12;  [ Amount of Damage monster Does when attacking. ]
@@ -247,7 +247,7 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is "Feral Wolf Bitch"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;  [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -378,7 +378,7 @@ name	desc	weight	object
 alpha wolf cum is a grab object.
 alpha wolf cum is cum.
 alpha wolf cum is infectious.
-Strain of alpha wolf cum is "Alpha Wolf".
+Strain of alpha wolf cum is "Feral Wolf Bitch".
 Usedesc of alpha wolf cum is "[alpha wolf cum use]";
 
 to say alpha wolf cum use:

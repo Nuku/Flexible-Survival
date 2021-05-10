@@ -51,6 +51,9 @@ Equipment has a number called damagebonus. The damagebonus of equipment is usual
 Equipment has a number called fleebonus. The fleebonus of equipment is usually 0.		[Usually a penalty]
 Equipment has a text called skillcheck bonus. The skillcheck bonus of equipment is usually "".
 Equipment has a number called skillcheck value. The skillcheck value of equipment is usually 0.
+Equipment has a text called EquipFunction. EquipFunction is usually "".
+Equipment has a text called UnequipFunction. UnequipFunction is usually "".
+
 
 Part 2 - Definitions and Functions
 
@@ -168,6 +171,7 @@ To process (x - a grab object):
 			if x is not cursed: [explanation why the item can't be taken off is to be done in the item description]
 				say "     [bold type]You take off the [x].[roman type][line break]";
 				now x is not equipped;
+				say "[UnequipFunction of x]";
 		else:
 			if slot of x is empty:
 				increase score by 0;
@@ -186,18 +190,22 @@ To process (x - a grab object):
 				else if (scalevalue of Player - size of x is 1): [clothing one size category smaller]
 					say "     [bold type]You start wearing the [x]. [if plural of x is true]They are quite small for your body size, but still barely fit[else]It is quite small for your body size, but still barely fits[end if].[roman type][line break]";
 					now x is equipped;
+					say "[EquipFunction of x]";
 				else if (scalevalue of Player - size of x is 0): [clothing same size category]
 					say "     [bold type]You start wearing the [x]. [if plural of x is true]They fit fairly well[else]It fits fairly well[end if].[roman type][line break]";
 					now x is equipped;
+					say "[EquipFunction of x]";
 				else if (scalevalue of Player - size of x is -1): [clothing one size category bigger]
 					say "     [bold type]You start wearing the [x]. [if plural of x is true]They are quite big for your body size, but fit more or less with some adjustments[else]It is quite big for your body size, but fits more or less with some adjustments[end if].[roman type][line break]";
 					now x is equipped;
+					say "[EquipFunction of x]";
 				else if (scalevalue of Player - size of x < -1): [clothing two size categories bigger]
 					say "     [bold type]The [x] [if plural of x is true]are simply too big! They are meant for much larger beings than yourself[else]is simply too big! It is meant for much larger beings than yourself[end if].[roman type][line break]";
 					continue the action;
 			else:
 				say "     [bold type]You start wearing the [x].[roman type][line break]";
 				now x is equipped;
+				say "[EquipFunction of x]";
 	else if x is a pepperspray:
 		if inafight is 1:
 			say "[line break][usepepperspray]";

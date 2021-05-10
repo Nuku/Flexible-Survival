@@ -1130,7 +1130,7 @@ to say badAlexandraBetaFang1: [Stopping Beta Fang]
 		FeatGain "Top Dog";
 		add "Player's Bitch" to Traits of Alexandra;
 		now AlexandraPlayersBitch is active;
-		StatChange "Perception" by 1;
+		StatChange "Charisma" by 1;
 		decrease HP of Player by 10;
 		now level of Alexandra is 1; [unshared bitch]
 		now A_Fang is false; [new dialog for new status]

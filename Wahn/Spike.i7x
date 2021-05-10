@@ -383,10 +383,10 @@ instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Libra
 
 to say SpikeAccepted:
 	say "As you agree to take Spike along as your companion, his tail starts wagging up a storm and the young man says excitedly, 'Right on! We'll make this city ours! Let's have some fun!' With his hand lowering to rub the crotch of his jeans, you have little doubt what sort of 'fun' he expects to soon have. Taking another drag from his smoke, the anthro canine then flicks it aside and takes position by your side, steeling his expression to be properly tough and just a bit overbearing, as he expects the right-hand man of 'The Boss' would need to be. ";
-	if (number of bunkered people + number of booked people > 1): [anyone there besides just Spike?]
-		if (number of bunkered people + number of booked people > 2):
+	if (number of bunkered people + number of booked people > 2): [anyone there besides just Spike?]
+		if (number of bunkered people + number of booked people > 3):
 			say "Seeing some of the other people in the library as you walk around with your new companion following, you decide it might be best to call everyone in the building together and explain what's going on between [if MaxHP of Spike is 1]your son [end if]Spike and you. [bold type]Within a few minutes, everyone is gathered and you introduce Spike to them, to the following reactions:[roman type][line break]";
-		else if (number of bunkered people + number of booked people is 2):
+		else if (number of bunkered people + number of booked people is 3):
 			say "Seeing some movement of the other inhabitant of the library, you decide it might be best to explain what's going on between [if MaxHP of Spike is 1]your son [end if]Spike and you. Calling everyone together, you introduce Spike to them, to the following reactions:";
 		else:
 			say "The two of you talk a little more about what's going on around the library, then Spike goes upstairs to hang out in a corner he claimed as his own.";

@@ -808,7 +808,7 @@ to say UrikTalk_Companion: [companion Urik]
 	now orc supersized breeder is tamed;
 
 to say UrikTalk_Looting:
-	if Player is not booked:
+	if Urik is not booked and Urik is not bunkered:
 		if Perception of Urik < 3:
 			say "     You think about taking Urik up for a looting excursion, but then remember that the place he wants to go to is fairly close to the library. Also, he doesn't have his bag with him right now. Maybe take it up again when you're actually in the Grey Abbey Library.";
 		else if Perception of Urik is 4:
@@ -1948,10 +1948,10 @@ instead of navigating Grey Abbey Library while ("Library Move Underway" is liste
 		say "     DEBUG: Urik Arrival[line break]";
 	project the Figure of Urik_clothed_icon;
 	say "     As you arrive at the library, you immediately notice Urik, who's sitting on the edge of the front desk, casually flicking through an old magazine for motorcycle enthusiasts he must have found somewhere in the stacks. 'Hey boss,' he says upon noticing you, standing up and taking a few steps forward. 'Found the place alright, following your description. Claimed a couch on the upper floor, in that sitting area, if that's alright by you.' He nods towards the stairs leading up and you tell him it's fine. 'Gotta say, I was surprised just how different this area is than back at the lair. I mean, just walking a number of miles to get here, I saw critters that I had never seen before. Oh yeah, and some little hyena sluts on souped-up bikes trying to act like dudes, and as if they were the big cheese around here. There were three of them together, and still they didn't dare to try me, hah! Man, back in my day we'd have curb-stomped such a sorry excuse for a gang and sent [']em running back to mommy with a baggie of their teeth.'";
-	if (number of bunkered people + number of booked people > 1): [anyone there besides just Urik?]
-		if (number of bunkered people + number of booked people > 2):
+	if (number of bunkered people + number of booked people > 2): [anyone there besides just Urik?]
+		if (number of bunkered people + number of booked people > 3):
 			say "     While you talk with the orc, you notice some movement in out of the way spots of the library, like between the shelves. Realizing that you kind of just set up an orc invasion of the library without warning anyone about it, you're prompted to clear your throat and call everyone in the building together, to explain what Urik is doing here. [bold type]Within a few minutes, everyone is gathered and you lay things out, to the following reactions:[roman type][line break]";
-		else if (number of bunkered people + number of booked people is 2):
+		else if (number of bunkered people + number of booked people is 3):
 			say "     While you talk with the orc, you notice some movement in out of the way spots of the library, like between the shelves. Realizing that you kind of just set up an orc invasion of the library without warning anyone about it, you're prompted to clear your throat and call the other inhabitant of the building to join you, explaining what Urik is doing here. [bold type]Soon, you have laid out how things will go, getting the following reaction:[roman type][line break]";
 		else:
 			say "     The two of you talk a little more about what's going on around the library, then Urik goes upstairs to hang out in his new place.";
