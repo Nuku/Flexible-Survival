@@ -128,7 +128,7 @@ SexuallyExperienced of Cherry is true.
 TwistedCapacity of Cherry is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Cherry is false. [steriles can't knock people up]
 MainInfection of Cherry is "Pink Fox".
-Description of Cherry is "[Cherrydesc]".
+Description of Cherry is "[CherryDesc]".
 Conversation of Cherry is { "<This is nothing but a placeholder!>" }.
 The scent of Cherry is "     She smells nice, like actual cherry flowers.".
 

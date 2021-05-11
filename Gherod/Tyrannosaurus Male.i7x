@@ -98,11 +98,10 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Tyrannosaurus";
-	add "Tyrannosaurus Male" to infections of FelineList;
+	add "Tyrannosaurus Male" to infections of ReptileList;
 	add "Tyrannosaurus Male" to infections of FurryList;
 	add "Tyrannosaurus Male" to infections of NatureList;
 	add "Tyrannosaurus Male" to infections of MaleList;
-	add "Tyrannosaurus Male" to infections of SheathedCockList;
 	add "Tyrannosaurus Male" to infections of BipedalList;
 	add "Tyrannosaurus Male" to infections of TailList;
 	now Name entry is "Tyrannosaurus Male";

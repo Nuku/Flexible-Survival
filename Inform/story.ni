@@ -43,7 +43,7 @@ Include Glulx Entry Points by Emily Short.
 Include Glulx Text Effects by Emily Short.
 Include Simple Graphical Window by Emily Short.
 [New Graphics Handler]
-Include Graphics Director by Executaball.
+Include Graphics Director by Core Mechanics.
 
 The file of flexiblestory is called "flexible1".
 
@@ -247,7 +247,7 @@ Include Additional Tome Scenes by Dys.
 Include Apartment 319 by Kaleem Mcintyre.
 Include Assorted Events by Stripes.
 Include Beach Events by Sarokcat.
-Include Black Pearl by Lone Wanderer.
+Include Black Pearl by Guest Writers.
 Include Bouncy Castle by Stripes.
 Include Broken Husky Bad-End by Luneth.
 Include Brookstone Books by Guest Writers.
@@ -269,17 +269,17 @@ Include Control Pills by Hellerhound.
 Include Diego Events by Vinickus.
 Include Dmitri the Peacock by Aureas Gigas.
 Include Dry Plains Events by Stripes.
-Include Endings by Darthan.
+Include Endings by Guest Writers.
 Include E-shocker by Stripes.
 Include Eva by Kurainyx.
-Include Event Rewrites by Draegon.
+Include Event Rewrites by Guest Writers.
 Include Exploration Events by Kurainyx.
 Include Extra Added Scenes by Kaleem mcintyre.
 Include Extra College Events by Speedlover.
 Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
-Include Feral Events by MGEddie.
+Include Feral Events by Guest Writers.
 Include Fire House by Kaleem Mcintyre.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
@@ -294,9 +294,9 @@ Include High Rise Events by Wahn.
 Include Horus by Rikaeus.
 Include How High by Kaleem mcintyre.
 Include Hyena Bikers by Stripes.
-Include Hyena Shoppers by Doots.
+Include Hyena Shoppers by Guest Writers.
 Include Hyena Situations by Hellerhound.
-Include Hyper Serum by Vrael.
+Include Hyper Serum by Prometheus.
 [Include Important Research Quests by Kaleem Mcintyre.]
 Include Infected Pool by Hellerhound.
 Include Inner Mall Events by Wahn.
@@ -338,8 +338,8 @@ Include Patreon Menu by Stripes.
 Include Pepperspray by Stripes.
 Include Pet Shop by Wahn.
 Include Qytat Shifters by Hellerhound.
-Include Random Events by Hiccup.
-Include Rane Events by KorekaBii.
+Include Random Events by Guest Writers.
+Include Rane Events by Wahn.
 Include Recordings by Wahn.
 Include Red Events by Stripes.
 Include Reservoir by Kaleem Mcintyre.
@@ -362,7 +362,7 @@ Include Stable Related Quests by Sarokcat.
 Include Storage Locker by Core Mechanics.
 Include Sugar Feud by AGentlemanCalledB.
 Include TFTG Feats by Luneth.
-Include Tidepool Event by FwuffyMouse.
+Include Tidepool Event by Guest Writers.
 Include Toy Store by Song.
 Include Underground Events by Wahn.
 Include Walkinmall by Ssely.
@@ -371,7 +371,7 @@ Include Warehouse Events by StripeGuy.
 Include Wereraptor by Stripes.
 Include Werewolf by CrimsonAsh.
 Include Xeno Nest by Kernog.
-Include Zephyr Phone by Executaball.
+Include Zephyr Phone by Guest Writers.
 Include Zoo Events by Sarokcat.
 Include Zoo Events by Wahn.
 
@@ -388,7 +388,7 @@ Include Anthro Shaft Beast by Guest Writers.
 Include Anthro Cow Infections by Luneth.
 Include Anthro Rabbit by Rikaeus.
 Include Arctic Fox by Sarokcat.
-Include Army Ant by Glitch.
+Include Army Ant by Guest Writers.
 Include Avalon Kobold by Taelyn.
 Include Ember Breeder by Stripes.
 Include Automaton by Stripes.
@@ -412,10 +412,10 @@ Include Brown Rat by Wahn.
 Include Bunny Jock by Rikaeus.
 Include Butterfly by Guest Writers.
 Include Candy Striper by Stripes.
-Include Cannon by Hiccup.
+Include Cannon by Guest Writers.
 Include Cat Ninjas by Stripes.
 Include Catgirl by Wahn.
-Include Caveman by TheRecipe.
+Include Caveman by Guest Writers.
 Include Centaur Mare by Stripes.
 Include Centaur Stallion by Stripes.
 Include Cerberus by Stripes.
@@ -427,7 +427,7 @@ Include Corota by Stripes.
 Include Corrupted Spawner by Stripes.
 Include Cougar by Stripes.
 Include Cowboy Cuntboy by Wahn.
-Include Coyote by Darthan.
+Include Coyote by Wahn.
 Include Cum Girl by AGentlemanCalledB.
 Include Cute Chinchilla Girl by Guest Writers.
 Include Dalmatian by Wahn.
@@ -486,12 +486,12 @@ Include Gargoyle Sentry by Gherod.
 Include Gargoyle by Kaleem mcintyre.
 Include Gator by Nuku Valente.
 Include Gazelle by Sarokcat.
-Include Gels by Darthan.
+Include Gels by Guest Writers.
 Include German shepherd by Stripes.[replaces 'Random German shepherd']
 Include German Shepherd Bitch by Kirov.
 Include Giant by Gherod.
 Include Giraffe by Stripes.
-Include Goat Janitor by McRabid.
+Include Goat Janitor by Luneth.
 Include Goblin by Blue Bishop.
 Include Golden Retriever Male Infection by Luneth.
 Include Goo Girl by Nuku Valente.
@@ -500,7 +500,7 @@ Include Great Dane by Kaleem Mcintyre.
 Include Greek Nymph by Sarokcat.
 Include Gray Squirrel by Stripes.
 Include Grizzly Bear by UrsaOmega.
-Include Gryphons Plot by Shay.
+Include Gryphons Plot by Guest Writers.
 Include Gunbunny by Stripes.
 Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
@@ -569,7 +569,7 @@ Include Minotaur by Kaleem mcintyre.
 Include Mismatched Chimera by Stripes.
 Include Monkey King by Kernog.
 Include MothGirl by Guest Writers.
-Include Mpreg Platypus by Sapphire.
+Include Mpreg Platypus by Guest Writers.
 Include Mul by Wahn.
 Include Mushroom Men by AGentlemanCalledB.
 Include Mutant Centaur by Hellerhound.
@@ -578,7 +578,7 @@ Include Naga by Nuku Valente.
 Include Naiad by Wahn.
 Include Naughty Nurse by Stripes.
 Include Nekomimi Boy by Prometheus.
-Include Nerdy Mouse by McRabid.
+Include Nerdy Mouse by Guest Writers.
 Include Nightmare by Sarokcat.
 Include Ocelot by Stripes.
 Include Ogres by Lyall.
@@ -660,7 +660,7 @@ Include Tenrec by StripeGuy.
 Include Thought Eater by Wahn.
 Include Tiger by Sarokcat.
 Include Tiger Cop by Stripes.
-Include Tiger Shark by Lone Wanderer.
+Include Tiger Shark by Guest Writers.
 Include Tigertaur by Sarokcat.
 Include Tigress Hooker by Stripes.
 Include Toven by Wahn.
@@ -675,8 +675,9 @@ Include Viking Woman by Wahn.
 Include Vixentaur by Stripes.
 Include Voodoo Gecko by Stripes.
 Include Vulpogryph by Stripes.
+Include Werewolf Brute by Gherod.
 Include Werewolf Costume by Stripes.
-Include Whiptail by Vervaine.
+Include Whiptail by Guest Writers.
 Include Wildcat by Stripes.
 Include Wolfman by Wahn.
 Include Wolftaur by Sarokcat.
@@ -689,7 +690,7 @@ Include Yamato Dragoness by Blue Bishop.
 Include Yatur by Wahn.
 Include Yinglet by KazeSequeris.
 Include Yuppie Mink by StripeGuy.
-Include Zebra by Vervaine.
+Include Zebra by Luneth.
 
 Part 4 - NPCs
 
@@ -697,6 +698,7 @@ Include Absinthe by Bigfish15079.
 Include Ace by Aureas Gigas.
 Include Adam by Wahn.
 Include Aeca by Wahn.
+Include Aerana by Gherod.
 Include Alex by Stripes.
 Include Alpha by Wahn.
 Include Arcanologist by Taelyn.
@@ -708,8 +710,9 @@ Include Alpha Fang Scenes by Prometheus.
 Include Amaryllis by Song.
 Include Amy by Wahn.
 Include Andrew by Gherod.
-Include Angie by Sarokcat.
+Include Angie by Luneth.
 Include Anthony by Wahn.
+Include Anton by Wahn.
 Include Araqiel by Gherod.
 Include Ares by Wahn.
 Include Arthur by Luneth.
@@ -766,6 +769,7 @@ Include Elijah by Wahn.
 Include Eric by Wahn.
 Include Eric Loyalty by Luneth.
 Include Erica by Wahn.
+Include Fallen King by Gherod.
 Include Fancy by Sarokcat n Verath.
 Include Fang by Prometheus.
 Include Farmhands by Wahn.
@@ -793,12 +797,12 @@ Include Hayato by Gherod.
 Include Hellfire Workers by Gherod.
 Include Help Book by Prometheus.
 Include Henry by Wahn.
-Include HornyHorsey by femtoAmpere.
+Include HornyHorsey by Guest Writers.
 [Include Horus by Rikaeus.]
 Include Hungry Boar Man by Gherod.
 Include Hyper Squirrel by Nuku Valente.
 Include HypnoGeeks by Luneth.
-Include Icarus by Stripes.
+Include Icarus by Luneth.
 Include Ice Fox by Wahn.
 Include Inflatable Orca by Song.
 Include Inflatable Otter Suit by Song.
@@ -815,7 +819,7 @@ Include Joshiro by Wahn.
 Include J'Reth by Prometheus.
 Include Juergen by Wahn.
 Include Julian by Prometheus.
-Include Kai by WhiteRabbit.
+Include Kai by Luneth.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Katherine by Kirov.
@@ -844,7 +848,7 @@ Include Master-of-Hell-Quest by Luneth.
 Include Matriarch NPC by Stripes.
 Include Meredith by Stripes.
 Include Micaela by Stripes.
-Include Midnight by Sarokcat.
+Include Midnight by Luneth.
 Include Milo by CrimsonAsh.
 Include Mogdraz by Gherod.
 Include Monty by Wahn.

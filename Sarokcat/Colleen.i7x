@@ -73,7 +73,7 @@ Strike From the Deep is a situation.
 The level of Strike From the Deep is 10.
 The sarea of Strike From the Deep is "Nowhere".
 
-instead of going down from Grey Abbey Library while ColleenAlpha is 0 and ColleenSlut is 0 and ColleenCollared is 0 and SarahCured > 3 and Strike From the Deep is not resolved and a random chance of 1 in 2 succeeds:
+instead of going down from Grey Abbey Library while Colleen is in Bunker and ColleenAlpha is 0 and ColleenSlut is 0 and ColleenCollared is 0 and SarahCured > 3 and Strike From the Deep is not resolved and a random chance of 1 in 2 succeeds:
 	StrikeFromtheDeepEvent;
 
 to StrikeFromtheDeepEvent: [Colleen is attacked by a creature that has burrowed through the wall]

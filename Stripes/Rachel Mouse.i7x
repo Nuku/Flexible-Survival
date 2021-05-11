@@ -264,7 +264,7 @@ to say sexwithmousegirl:
 				say "[rachelsexfemale1]";
 			if T is 8 or T is 9:
 				say "[rachelsexfemale2]";
-		if Player is male:
+		else if Player is male:
 			let T be a random number between 1 and 5;
 			if T is 1 or T is 2:
 				say "[rachelsexmale1]";

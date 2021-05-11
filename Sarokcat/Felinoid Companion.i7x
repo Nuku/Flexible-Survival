@@ -269,9 +269,10 @@ to say KlauzTalk1:
 
 Section 3 - Felinoid companion sex
 
+[TODO: Add choice point for if the player wants to submit to Klauz or not]
 An everyturn rule:
 	if felinoid companion is listed in companionList of Player and skipturnblocker is 0:
-		if a random number between one and 20 < 6 and lastfuck of felinoid companion - turns >= 4:
+		if a random number between one and 20 < 6 and lastfuck of felinoid companion - turns >= 8:
 			say "[sexwithfelinoidpet]";
 
 

@@ -39,6 +39,7 @@ carry out supersponsor:
 		say "[link](12) Claim all the pets![as]12[end link][line break]";
 		say "[link](13) Revel in being awesome[as]13[end link][line break]";
 		say "[link](14) Return to humanity[as]14[end link][line break]";
+		say "[link](15) Forbid the Military(ending)[as]15[end link][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-14)> ";
@@ -187,6 +188,9 @@ carry out supersponsor:
 		else if calcnumber is 14:
 			turn the Player into a "Human";
 			Now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
+		else if calcnumber is 15:
+			extend game by 240;
+			say "You send the oncoming military forces back, for now.";
 		else:
 			now Trixieexit is 1;
 		LineBreak;

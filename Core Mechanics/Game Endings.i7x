@@ -1,5 +1,8 @@
 Version 1 of Game Endings by Core Mechanics begins here.
 
+[TODO: Rebuild the game endings as a menu, where you can choose one option of endings you qualify]
+[ Allowing for multiple endings to be watched: "This is one way your life could have continued. Do you want to see another?"]
+
 EndingID is a number that varies.[@Tag:NotSaved] EndingID is usually 1.
 
 a Game Ending is a kind of object.
@@ -137,7 +140,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "fireworks" as supersponsor.
+understand "flowers" as supersponsor.
 
 when play ends:
 	clear the screen;

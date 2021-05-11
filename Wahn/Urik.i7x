@@ -808,7 +808,7 @@ to say UrikTalk_Companion: [companion Urik]
 	now orc supersized breeder is tamed;
 
 to say UrikTalk_Looting:
-	if Player is not booked:
+	if Urik is not booked and Urik is not bunkered:
 		if Perception of Urik < 3:
 			say "     You think about taking Urik up for a looting excursion, but then remember that the place he wants to go to is fairly close to the library. Also, he doesn't have his bag with him right now. Maybe take it up again when you're actually in the Grey Abbey Library.";
 		else if Perception of Urik is 4:
@@ -1948,10 +1948,10 @@ instead of navigating Grey Abbey Library while ("Library Move Underway" is liste
 		say "     DEBUG: Urik Arrival[line break]";
 	project the Figure of Urik_clothed_icon;
 	say "     As you arrive at the library, you immediately notice Urik, who's sitting on the edge of the front desk, casually flicking through an old magazine for motorcycle enthusiasts he must have found somewhere in the stacks. 'Hey boss,' he says upon noticing you, standing up and taking a few steps forward. 'Found the place alright, following your description. Claimed a couch on the upper floor, in that sitting area, if that's alright by you.' He nods towards the stairs leading up and you tell him it's fine. 'Gotta say, I was surprised just how different this area is than back at the lair. I mean, just walking a number of miles to get here, I saw critters that I had never seen before. Oh yeah, and some little hyena sluts on souped-up bikes trying to act like dudes, and as if they were the big cheese around here. There were three of them together, and still they didn't dare to try me, hah! Man, back in my day we'd have curb-stomped such a sorry excuse for a gang and sent [']em running back to mommy with a baggie of their teeth.'";
-	if (number of bunkered people + number of booked people > 1): [anyone there besides just Urik?]
-		if (number of bunkered people + number of booked people > 2):
+	if (number of bunkered people + number of booked people > 2): [anyone there besides just Urik?]
+		if (number of bunkered people + number of booked people > 3):
 			say "     While you talk with the orc, you notice some movement in out of the way spots of the library, like between the shelves. Realizing that you kind of just set up an orc invasion of the library without warning anyone about it, you're prompted to clear your throat and call everyone in the building together, to explain what Urik is doing here. [bold type]Within a few minutes, everyone is gathered and you lay things out, to the following reactions:[roman type][line break]";
-		else if (number of bunkered people + number of booked people is 2):
+		else if (number of bunkered people + number of booked people is 3):
 			say "     While you talk with the orc, you notice some movement in out of the way spots of the library, like between the shelves. Realizing that you kind of just set up an orc invasion of the library without warning anyone about it, you're prompted to clear your throat and call the other inhabitant of the building to join you, explaining what Urik is doing here. [bold type]Soon, you have laid out how things will go, getting the following reaction:[roman type][line break]";
 		else:
 			say "     The two of you talk a little more about what's going on around the library, then Urik goes upstairs to hang out in his new place.";
@@ -1982,19 +1982,29 @@ instead of navigating Grey Abbey Library while ("Library Move Underway" is liste
 		if Carl is booked or Carl is bunkered:
 			say "     Carl stiffens warily as he looks at Urik, then addresses you with the question, 'Sure it's wise to bring someone like him here? Imagine him going berserk suddenly if his lust overwh-' Urik scoffs and interrupts, 'Speak for yourself, you overgrown sled dog! Seen a fuckton more mutts in animal fuck-piles than rampaging orcs. Also, hell of a way to talk about a veteran. Served my time too, you know!' Carl opens his mouth, then closes it suddenly, staring at the orc in surprise. 'I - uhm... sorry,' he starts to stumble over his words, until Urik adds, 'It's fine, don't get your tail in a twist! More of a twist than it already is, hah!' and offers a large hand for the husky to shake, burying the hatchet between them.";
 			WaitBreakReactions;
-		if Chris is booked or Chris is bunkered:
+		if Chris is booked or Chris is bunkered: [TODO: include Player-Dad status]
 			if Libido of Chris is 0: [half-orc]
-				say "     Chris strolls right up to Urik, looking up at the larger male and offering him a hand to shake. 'Hey there and welcome to the library! We gotta talk sometime, orc to orc!' Despite the brave words, you can sense some tension in him as he stands before Urik, most likely a result of Val's warnings about other orcs. Chris relaxes a little after Urik takes his hand and squeezes it. As he leaves after saying hello, Urik comments, 'Friendly kid. Don't think I've ever seen an orc that was so... human.'";
+				say "     Chris strolls right up to Urik, looking up at the larger male and offering him a hand to shake. 'Hey there and welcome to the library! I'm Chris!' Despite the his welcoming words, it is immediately apparent to both yourself as well as Urik that he's fairly tense as he stands before the taller man, most likely a result of Val's warnings about other orcs. 'Relax, I'm not gonna eat ya, kid!' the much bigger orc snorts and grabs Chris's hand, squeezing it firmly. The half-orc relaxes at least a little, but still seems quite aware of their comparative sizes as he exchanges more words with Urik. 'We can hang out sometime, and have a talk, orc to orc!' Chris says at the end, then makes his exit. After watching Chris walk away Urik comments, 'Friendly kid. Don't think I've ever seen an orc that was so... human. Is he some kind of half-breed or so?'";
+				TraitGain "Chris - Knows Half-Orc" for Urik;
+				TraitGain "Urik - Knows Neutral" for Chris;
 			else if Libido of Chris is 1: [orc breeder]
 				if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
-					say "     Chris walks up to Urik, then shily raises a hand, stretches it forward a little and pulling it back before touching the orc's crotch. Chuckling, Urik tells him, 'My eyes are up here, you know!' Prompted like that, Chris finally pulls his gaze away from Urik's bulge and glances up at him, saying 'Hello big boy!' As he leaves soon after, Urik snorts and says, 'Breeders...'";
+					say "     Chris walks up to Urik, then shily raises a hand, stretches it forward a little and pulling it back before touching the orc's crotch. Chuckling, Urik tells him, 'My eyes are up here, you know!' Prompted like that, Chris finally pulls his gaze away from Urik's bulge and glances up at him, saying 'Hello... uhm, Urik. I'm Chris. Are you a breeder too? I didn't think a warrior would talk to me.' The larger orc snorts somewhat nervously, brushing away his question and instead saying, 'Don't you worry your pretty little head about that! I know you must be itching to worship all this!' With that, he waves a hand in front of the rippling muscles of his chest, then reaches out to run his big fingers through the long hair on Chris's head. Grabbing hold of the smooth strands in his fist, you can see the corners of Urik mouth rise into a lusty smirk as he remembers the good times he had making use of breeder boys just like this. Yet then he pauses, glancing over to you as a reminder of just what brought him here to this place. Letting go immediately, Urik instead just pats Chris on the head gently and says, 'Run along now, little breeder. I'm sure we'll see each other plenty.' Nodding eagerly, the orc breeder does as he was told.";
+					TraitGain "Chris - Knows Slut Breeder" for Urik;
+					TraitGain "Urik - Knows Neutral" for Chris;
 				else: [happy breeder]
-					say "     Chris walks up to Urik, then shily raises a hand, waiting for the orc to take it, while his eyes at the same time flick down to linger on the orc's crotch for a moment or two several times. Chuckling, Urik tells him, 'My eyes are up here, you know!' Letting out an embarrassed laugh, Chris quickly pulls his gaze away from Urik's bulge and meets his gaze fully, saying 'Hey there! It's nice to meet you. Maybe we can hang out some time?' They exchange some more words, and after Chris leaves, Urik looks after him with a thoughtful expression on his face. 'You know, I think that's the most words I ever exchanged with a breeder. It's odd, but kinda nice.'";
+					say "     Chris walks up to Urik, then shily raises a hand, waiting for the orc to take it, while his eyes at the same time flick down to linger on the orc's crotch for a moment or two several times. Chuckling, Urik tells him, 'My eyes are up here, you know!' Letting out an embarrassed laugh, Chris quickly pulls his gaze away from Urik's bulge and meets his gaze fully, saying 'Hey there! It's nice to meet you. I'm Chris!' The bigger orc's widen a little in surprise at the talkativeness of this breeder, and Chris quickly shoots another sentence afterwards, 'Maybe we can hang out sometime?' Urik catches himself before long and replies, 'Yeah, sure. Why not. We can... talk, and stuff.' Chris smiles at him, 'Awesome! See you then, big guy!' With that, the orc breeder gives a little wave and walks away, leaving Urik to look after him with a thoughtful expression on his face. 'You know, I think that's the most words I ever exchanged with a breeder. Don't know how to feel about that. It's odd, but kinda nice too.'";
+					TraitGain "Chris - Knows Happy Breeder" for Urik;
+					TraitGain "Urik - Knows Neutral" for Chris;
 			else if Libido of Chris is 2: [orc warrior]
-				if "Subby Bro" is listed in Traits of Chris or "Subby Dad" is listed in Traits: [player's subbing for Chris, orc got rougher]
+				if "Subby Bro" is listed in Traits of Chris or "Subby Dad" is listed in Traits: [player's subbing for Chris, orc got rougher] [TODO: split out subby dad?]
 					say "     Chris strides up to Urik, coming fairly close before the two of them size each other up. The older orc is a fair bit bigger than Chris, which is saying a lot, given that Chris out-masses most bodybuilders. Grunting in recognition of each other's strength, Chris still tries a sudden chest-bump against the other orc, as if trying to push him over. Urik pushes right back, grunting into Chris's face with his tusks bared. No matter what his role to you, the orc is far from ready to just give in to others.";
-				else: [Bro/Bro with Benefits/Dad with Benefits - more chill dude]
+					TraitGain "Chris - Knows Dom" for Urik;
+					TraitGain "Urik - Knows Neutral" for Chris;
+				else: [Bro/Bro with Benefits/Dad with Benefits - more chill warrior] [TODO: Expand on this]
 					say "     Chris strides up to Urik, coming fairly close before the two of them size each other up. The older orc is a fair bit bigger than Chris, which is saying a lot, given that Chris out-masses most bodybuilders. 'Nice bod, dude!' Chris acknowledges Urik's muscular physique, then raises a hand to exchange a fist-bump and a nod.";
+					TraitGain "Chris - Knows Bro" for Urik;
+					TraitGain "Urik - Knows Neutral" for Chris;
 			WaitBreakReactions;
 		if Colleen is booked or Colleen is bunkered:
 			if SarahSlut < 2: [not transformed, or only a little]

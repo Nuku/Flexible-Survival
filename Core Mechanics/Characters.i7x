@@ -34,6 +34,11 @@ A person has a number called Lust. [ currently unused for the player; stash vari
 A person has a number called Libido.
 A person has a number called Loyalty.
 A person has a number called Humanity.
+[
+A person has a number called Affection. [TODO: remember to include these in export/import when turning them on]
+A person has a number called Corruption.
+A person has a number called Dom/Sub.
+]
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a number called Armor.
 A person has a number called Capacity.
@@ -50,6 +55,9 @@ A person has a number called Tongue Length. Tongue Length is usually 3.
 A person has a number called Breast Size. Breast Size is usually 0.
 A person has a number called Nipple Count. Nipple Count is usually 2.
 A person has a number called PlayerLastSize. PlayerLastSize is usually 3. [size of the player during the last meeting]
+[
+A person has a number called lastDrug. lastDrug is usually 2500.[@Tag:NotSaved][last drug use of the character - combined variable for all drugs (alcohol, nicotine, bliss, ...)]
+]
 A person has a number called SleepRhythm. [day/night bias]
 
 [ genital variables for all persons ]
@@ -80,8 +88,8 @@ A person has a text called Originalgender. Originalgender is usually "Undefined"
 [player interaction variables]
 A person has a truth state called PlayerMet. PlayerMet is usually false.
 A person has a truth state called PlayerRomanced. PlayerRomanced is usually false.
-A person has a truth state called PlayerFriended. PlayerFriended is usually false. [not saved till new infection system update]
-A person has a truth state called PlayerControlled. PlayerControlled is usually false. [not saved till new infection system update]
+A person has a truth state called PlayerFriended. PlayerFriended is usually false.
+A person has a truth state called PlayerControlled. PlayerControlled is usually false.
 A person has a truth state called PlayerFucked. PlayerFucked is usually false.
 A person has a text called PlayerOriginalgender. PlayerOriginalGender is usually "Undefined". [first meeting gender with the player]
 A person has a text called PlayerLastGender. PlayerLastGender is usually "Undefined". [gender of the player during the last meeting]
@@ -348,7 +356,6 @@ Chapter 2 - Location Based
 A person can be booked. A person is usually not booked.
 
 Definition: A person (Called x) is booked:
-	if x is Player, no;
 	If x is Trixie, no;
 	if x is Velos, no;
 	if the location of x is Grey Abbey Library, yes;
@@ -373,7 +380,6 @@ Definition: A person (Called x) is booked:
 A person can be bunkered. A person is usually not bunkered.
 
 Definition: A person (Called x) is bunkered:
-	if x is Player, no;
 	if x is Velos, no;
 	if the location of x is Bunker, yes;
 	if the location of x is Communal Shower, yes;

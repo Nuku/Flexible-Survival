@@ -86,15 +86,24 @@ An everyturn rule:
 		increase LilithKidCounter by 1;
 		increase score by a random number between 5 and 10;
 		if Player is in Sacristy:
-			say "     Lilith suddenly says, 'It's time', her water breaking a second later. She gets into a comfortable position on the bed, legs spread and then... puts her hand between her legs and starts masturbating. Seems like everything is about sex with these demons. The birth of your child is a surprisingly easy and arousing affair, accompanied by Lilith's lustful moans and pants, with the baby demon rapidly crowning, then slipping out of his mother as she orgasms. He looks like a perfect and beautiful human baby, squeaky clean like a newborn on television. Looking closer, you can see the tiny wings on his back and the tail with its spaded tip.";
-			WaitLineBreak;
-			say "     A satisfied grin on her face, Lilith takes the child and sets him against her breast, feeding him. Before your eyes, the little incubus grows in leaps and bounds, rapidly passing the stages of toddler and little child, soon sitting on Lilith's lap instead of being held by her. Getting to his early teens moments later, your son starts putting both hands on his demon mother's breasts, caressing them as he switches off between them, licking over her nipples and drinking more milk.";
-			say "     The boy goes through puberty rapidly, his body continuing to grow until he becomes a stunningly handsome eighteen year old, which is where the progress stabilizes and ebbs out. Now no longer drinking from her, he just nuzzles and strokes Lilith's breasts, his cock rock-hard. Then the succubus reaches down and puts a hand on his manhood, taking hold of it and starts jerking him off. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
-			now LilithPregnancy is 0;
-			if LilithKidCounter is 1:
-				project the Figure of Atticus_soft_neutral_arms_lowered_icon;
+			if "Succubus Daughter Wanted" is listed in Traits of Lilith: [Alternate scene for Aerana's birth]
+				say "     Lilith suddenly says, 'It's time', her water breaking a second later. She gets into a comfortable position on the bed, legs spread and then... puts her hand between her legs and starts masturbating. Seems like everything is about sex with these demons. The birth of your child is a surprisingly easy and arousing affair, accompanied by Lilith's lustful moans and pants, with the baby demoness rapidly crowning, then slipping out of her mother as the latter orgasms. She looks like a perfect and beautiful human baby, squeaky clean like a newborn on television. Looking closer, you can see the tiny wings on her back and the tail with its spaded tip.";
+				WaitLineBreak;
+				say "     With a satisfied grin on her face, Lilith takes the child and sets her against her breast, feeding her. Before your eyes, the little succubus grows in leaps and bounds, rapidly passing the stages of toddler and little child, soon sitting on Lilith's lap instead of being held by her. Getting to her early teens moments later, your daughter starts putting both hands on her demon mother's breasts, caressing them as she switches off between them, licking over her nipples and drinking more milk.";
+				WaitLineBreak;
+				say "     The girl goes through puberty rapidly, her body continuing to grow until she becomes a stunningly gorgeous eighteen year old, which is where the progress stabilizes and ebbs out. Now no longer drinking from her, she just nuzzles and strokes Lilith's breasts. Then the powerful succubus reaches down and puts a hand on her child's womanhood, slipping some fingers in and begin to fondle her. Your daughter gives you an enticing smile as Lilith continues to stimulate her, and soon her sex quivers in a climax that lasts for several moments. Scooping up a bit of her feminine juices with her fingers, the demonic sorceress licks it off them and tells her 'Leave us, for now.' Your beautiful and completely naked offspring saunters out of the room, not without giving you a suggestive glance.";
+				remove "Succubus Daughter Wanted" from Traits of Lilith;
+				TraitGain "Succubus Daughter Born" for Lilith;
 			else:
-				project the Figure of Incubus_naked_icon;
+				say "     Lilith suddenly says, 'It's time', her water breaking a second later. She gets into a comfortable position on the bed, legs spread and then... puts her hand between her legs and starts masturbating. Seems like everything is about sex with these demons. The birth of your child is a surprisingly easy and arousing affair, accompanied by Lilith's lustful moans and pants, with the baby demon rapidly crowning, then slipping out of his mother as she orgasms. He looks like a perfect and beautiful human baby, squeaky clean like a newborn on television. Looking closer, you can see the tiny wings on his back and the tail with its spaded tip.";
+				WaitLineBreak;
+				say "     A satisfied grin on her face, Lilith takes the child and sets him against her breast, feeding him. Before your eyes, the little incubus grows in leaps and bounds, rapidly passing the stages of toddler and little child, soon sitting on Lilith's lap instead of being held by her. Getting to his early teens moments later, your son starts putting both hands on his demon mother's breasts, caressing them as he switches off between them, licking over her nipples and drinking more milk.";
+				say "     The boy goes through puberty rapidly, his body continuing to grow until he becomes a stunningly handsome eighteen year old, which is where the progress stabilizes and ebbs out. Now no longer drinking from her, he just nuzzles and strokes Lilith's breasts, his cock rock-hard. Then the succubus reaches down and puts a hand on his manhood, taking hold of it and starts jerking him off. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
+				if LilithKidCounter is 1:
+					project the Figure of Atticus_soft_neutral_arms_lowered_icon;
+				else:
+					project the Figure of Incubus_naked_icon;
+			now LilithPregnancy is 0;
 		else:
 			say "You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should back to the Burned-Out Chapel and check with Lilith.";
 			now LilithPregnancy is 4;     [so she can tell the player about their kid in the next meeting]
@@ -169,6 +178,12 @@ to say LilithTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Ask Lilith about what's been going on with Brutus";
 	[]
+	if "Succubus Daughter Born" is not listed in Traits of Lilith and "Succubus Daughter Wanted" is not listed in Traits of Lilith and LilithKidCounter > 0 and LilithPregnancy is 0: [She cannot be pregnant already]
+		choose a blank row in table of fucking options;
+		now title entry is "Ask Lilith for a daughter";
+		now sortorder entry is 98;
+		now description entry is "Would it be possible to have a succubus child";
+	[]
 	if Resolution of YokLairLilith is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask her for help in finding the onis";
@@ -201,6 +216,8 @@ to say LilithTalkMenu:
 					say "[LilithTalk4]";
 				if (nam is "Brutus and David"):
 					say "[LilithTalk5]";
+				if (nam is "Ask Lilith for a daughter"):
+					say "[LilithTalkAerana]"; [on Aerana file]
 				if (nam is "Ask her for help in finding the onis"):
 					say "[LilithTalkYokLair]"; [on Hayato file]
 				wait for any key;
@@ -225,7 +242,7 @@ to say LilithTalk2:
 	else if HP of Elijah is 99:
 		say "     'Good work in making something out of the kid... he's come visiting a few times now. Not bad at all between the sheets, and black really is his color.'";
 	else if HP of Elijah is 100:
-		say "     'That little winged cutie? He's down below now... and I hear he's made quite a splash with Lucifer. His angel ass is out infernal master's new favorite toy. He won't even stop fucking him when meeting the demon princes - just has their meetings in his quarters as he rams his ass, or carries his angel pet around impaled on his shaft.'";
+		say "     'That little winged cutie? He's down below now... and I hear he's made quite a splash with Lucifer. His angel ass is our infernal master's new favorite toy. He won't even stop fucking him when meeting the demon princes - just has their meetings in his quarters as he rams his ass, or carries his angel pet around impaled on his shaft.'";
 	wait for any key;
 
 to say LilithTalk3:
@@ -419,8 +436,13 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith is 0: [firs
 instead of going northeast from Burned-Out Chapel while HP of Lilith > 0: [not the first meeting]
 	if LilithPregnancy is 4:
 		move player to Sacristy;
-		project the Figure of Incubus_naked_icon;
-		say "     As you enter the sacristy, you find Lilith there, with a young incubus nuzzling her breasts and her hand on his hard cock. The male demon, looking about eighteen years old in human terms, looks up to you and with a small shock you recognize his features as very similar to your own. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
+		if "Succubus Daughter Wanted" is listed in Traits of Lilith: [Alternate scene for Aerana's birth]
+			say "     As you enter the sacristy, you find Lilith there, with a young succubus nuzzling her breasts while she fondles her offspring's womanhood. The female demoness, looking about eighteen years old in human terms, looks up to you, her features quite similar to her own mother's while sharing another few with you, clearly resembling both. Your daughter gives you an enticing smile as Lilith continues to stimulate her, and soon her sex quivers in a climax that lasts for several moments. Scooping up a bit of her feminine juices with her fingers, the demonic sorceress licks it off them and tells her 'Leave us, for now.' Your beautiful and completely naked offspring saunters out of the room, not without giving you a suggestive glance.";
+			remove "Succubus Daughter Wanted" from Traits of Lilith;
+			TraitGain "Succubus Daughter Born" for Lilith;
+		else:
+			project the Figure of Incubus_naked_icon;
+			say "     As you enter the sacristy, you find Lilith there, with a young incubus nuzzling her breasts and her hand on his hard cock. The male demon, looking about eighteen years old in human terms, looks up to you and with a small shock you recognize his features as very similar to your own. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
 		now LilithPregnancy is 0;
 	else if HP of Lilith is 1 and demon brute is listed in companionList of Player: [first time the player takes the demon brute pet where she can see him]
 		move player to Sacristy;

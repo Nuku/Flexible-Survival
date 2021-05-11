@@ -51,14 +51,15 @@ To say MoreauDesc:
 
 Instead of conversing the Moreau:
 	project the figure of Moreau_face_icon;
-	if HP of Moreau is 0:
+	if PlayerMet of Moreau is false:
 		say "     'Welcome to my store,' the naga tells you with a gracious bow, snaking his way closer to you before coiling up right in front of where you stand. 'Did something in the shop windows catch your eye? The offered wares are subject to change, and I do circle through the newer parts for people to have a look at.' You look around at the collection of mannequins, then ask what he actually sells. 'Why, bodies of course. Everything about them. The signage is quite clear, is it not? Come, let me show you.' Miming you to walk over to the next bunch of mannequins, the ophidian storekeeper keeps up with your steps in a smooth glide of his scales on the tiled floor, stopping before the display models.";
-		say "     'We live in times of change - that is obvious - but many, oh so very many of people are dissatisfied with their adopted shapes. Maybe they were forced to shift, or couldn't help but succumb into it, and now they feel like they deserve... better. I offer this service, for a price.' Smiling at you, he then turns to stare directly at a mannequin shaped like an anthro gryphon, its body detailing everything exactly, from the tips of the clawed digitigrade feet, up over a hermaphrodite's set of cock, balls and pussy to the pair of wings behind its back. Only the showpiece's head is still that of an almost featureless doll, as well as the skin which has a white plastic-y sheen.";
+		say "     'We live in times of change - that is obvious - but many, oh so very many of people are dissatisfied with their adopted shapes. Maybe they were forced to shift, or couldn't help but succumb into it, and now they feel like they deserve... better. I offer this service, for a price.' Smiling at you, he then turns to stare directly at a mannequin displaying some characteristics of anthro gryphon. It appears somewhat eerie, as if one had switched body parts to make a hybrid creature, part alive and part plastic. While the showpiece's head is that of an almost featureless doll, with a plastic-y sheen and not even a mouth and nostrils, the rest of it is a perfect depiction a real anthro gryphon, its body detailing everything exactly, from the tips of the clawed digitigrade feet, up over a hermaphrodite's set of cock, balls and even the slit of a moist pussy. The pair of wings behind its back have individual feathers. It does not move, even a little, or breathe.";
 		WaitLineBreak;
 		say "     Giving you a sidelong glance that tells you he loves showing off, Moreau crooks his finger a little at the mannequin - and the human-sized doll instantly reacts, walking over to come stand before you with startling suddenness. As it comes to stand in front of you in an 'at rest' position, you can't help but gulp and glance around. Ten, fifteen, twenty, twenty-six, -seven, -eight... there are about thirty of those things in here, which makes you feel less like on a shopping trip and more like standing in the midst of a pride of lions. 'Do not be concerned, my assistants are perfectly well behaved. Watch this one for example,' Moreau says, amusement underlying his voice as he puts the gryphon doll through its paces, spinning around slowly, stretching and showing off the details of its shape.";
 		say "     Once he is satisfied with the mannequin, Moreau sends it back to the original position and turns back to you. 'I can offer the service of giving people what they want. And even more than that - I give a warranty. No more losing what you so dearly desired, you understand,' the snake tells you in a quite smooth-talking voice, guiding you in a tour through the store, past numerous of the motionless living dolls. While you walk, your gaze falls upon a treasure-trove of supplies stacked up in the back. He must have weeks forth of food and water there! Curiosity drives you to check it out from up close, but after a few steps, the naga's hand slides under your arm and gently but firmly tugs you back to his tour. Then you notice that every last one of the mannequins in the whole store turned their head towards you when you came close to the supplies. They quickly take their positions again, but you can't help but shiver a little from so many featureless faces staring at you.";
 		WaitLineBreak;
 		say "     Finally arriving back where you started after having shown off all sorts of creature parts you never even knew existed, Moreau smiles and shows his forked tongue for a second. 'As you can see, I do have much to offer. It depends a bit on what people sell to me, so be sure to get anything you desire immediately, so it is not sold out by the time you return. You will find the prices very reasonable for this unique service...'";
+		now PlayerMet of Moreau is true;
 		increase HP of Moreau by 1; [got his initial spiel]
 	else:
 		say "[MoreauTalkMenu]";
@@ -96,6 +97,18 @@ to say MoreauTalkMenu:
 	now sortorder entry is 5;
 	now description entry is "Ask to buy some feature to change on your body";
 	[]
+	if Resolution of Anton's Intro is 1 or Resolution of Anton's Intro is 2: [player was hypno'd and fucked, but forgot about it]
+		choose a blank row in table of fucking options;
+		now title entry is "Ask about hypnosis and memories";
+		now sortorder entry is 6;
+		now description entry is "Get the naga's opinion on the topic";
+	[]
+	if Resolution of Anton's Intro is 3: [Moreau has offered to hypnotize the player]
+		choose a blank row in table of fucking options;
+		now title entry is "Let him hypnotize you to retrieve some memories";
+		now sortorder entry is 7;
+		now description entry is "Trust Moreau to help you remember";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -128,6 +141,10 @@ to say MoreauTalkMenu:
 					say "[MoreauPartSale]";
 				-- "Buy something":
 					say "[MoreauPartBuy]";
+				-- "Ask about hypnosis and memories":
+					say "[MoreauHypnoMemoryTalk]";
+				-- "Let him hypnotize you to retrieve some memories":
+					say "[MoreauHypnoMemoryRetrieval]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
@@ -138,14 +155,14 @@ to say MoreauTalkMenu:
 
 to say MoreauTalk1: [mannequins not seen]
 	say "     Deciding you'd like to know a bit more about Moreau's store and how it came to be, you gesture to some of the mannequins nearby, asking the shopkeeper about their origins.";
-	say "     His grin seems to indicate to you that he's been asked this question many times before, and the smooth and practiced way he starts to talk tells you you're probably right. 'Ah, yes. They are quite interesting, are they not? When this all started, seeing all the changes happening around this city had started to give me some vague ideas along the lines of this shop, but it wasn't until I stumbled on a discarded mannequin on the side of the road that those ideas really clicked together. And so I came here, as I knew there'd be plenty of mannequins to work with, and with a bit of my own magical talent was able to convert the mannequins you see here from their inert state to something more suitable for my purposes. The process took some refining, but I think the result has been well worth it all.'";
+	say "     His grin seems to indicate to you that he's been asked this question many times before, and the smooth and practiced way he starts to talk tells you you're probably right. 'Ah, yes. They are quite interesting, are they not? When this all started, seeing all the changes happening around this city had started to give me some vague ideas along the lines of this shop, but it wasn't until I stumbled on a discarded mannequin on the side of the road that those ideas really clicked together. And so I came here, as I knew there'd be plenty of mannequins to work with, and with a bit of my own [italic type]magical[roman type] talent was able to convert the mannequins you see here from their inert state to something more suitable for my purposes. The process took some refining, but I think the result has been well worth it all.'";
 	say "     Satisfied, you nod and smile to him in thanks for the explanation, returning to looking around the store. Some part of you can't help but feel there might be more to the story, though...";
 	now FirstMannequinTalk is 1;
 
 to say MoreauTalk2: [mannequins seen, asked about them once]
 	say "     Recognizing the mannequins around the store from your travels around the city and feeling you know what the snake might be leaving out of his story, you choose to press Moreau to tell you where exactly they came from.";
 	say "     With your confrontational posture and the skeptical look on your face, the shopkeeper seems to recognize that you've seen the roaming mannequins and he lets out a sigh, gesturing you to follow him toward the back of the store before answering in a hushed voice. 'I can tell what you're really asking, and thinking. And no, I did not lie to you before, I simply left some of the finer details out as I always do when people ask me about them. I do not wish to frighten away my customers after all.' He gives you a smile at that, which was probably meant to be reassuring, but ends up a little more sinister. You nod to him, gesturing for him to continue talking.";
-	say "     After a quick glance around the store to make sure no one is approaching, he continues. 'As you probably guessed, the mannequin I found was one of the animate ones this event has created. I fought and defeated it, and nearly left it there, until the idea of this shop occurred to me. This form has given me certain... powers of persuasion, which I used to bring the mannequin under my control. Having seen what they do to those they defeat, and not wishing to have to fight and collect them one by one, I had the idea to transform an ordinary mannequin. I tested the idea on an inert mannequin from a nearby store, and finding that it had worked, led my two new mannequins here to collect more from the abandoned stores. So yes, one of my mannequins is from out in the city. Perhaps it was once a person, but there was no way for me or anyone else to tell. The rest were all created from inert mannequins. I've harmed no one, and they're all completely under my control. Does that satisfy you?'";
+	say "     After a quick glance around the store to make sure no one is approaching, he continues. 'As you probably guessed, the mannequin I found was one of the animate ones this event has created. I fought and defeated it, and nearly left it there, until the idea of this shop occurred to me. This form has given me certain... powers of persuasion, which I used to bring the mannequin under my control. Having seen what they do to those they defeat, I saw it as a public service to collect a number and take them out of roaming the streets. After the first two or three, it became easier, with the previous ones to hold down the next. So yes, my mannequins are from out in the city. Perhaps they were once people, but there was no way for me or anyone else to tell. I've harmed no one, and they're all completely under my control. Does that satisfy you?'";
 	WaitLineBreak;
 	say "     Considering what else has been happening in this warped city and how this seems to be one of the more benign and overall harmless, if still unsettling, things you've seen, you nod to him with a sigh. He nods with a smile, visibly relaxing as his tongue flicks out at the air. 'Good. Now that your curiosity is satisfied, perhaps you'd like to look around the shop and see if anything catches your eye?' Telling him that you will, you step away, returning to looking around the store.";
 
@@ -1350,5 +1367,156 @@ to BodyPopularityEvent:
 	say "     Needless to say, I offered to remove her penis like I had promised, but surprisingly, she refused. Apparently her husband grew very fond of it. I didn't ask for details. Thank you once again for your help in this matter. Everything turned out great, it seems,' he concludes with a satisfied grin.";
 	now lastBodyShopEvent is turns;
 	now Body Popularity is resolved;
+
+[ Hypno Event Stuff ]
+
+Table of GameEventIDs (continued)
+Object	Name
+Anton's Intro	"Anton's Intro"
+
+Anton's Intro is a situation.
+ResolveFunction of Anton's Intro is "[ResolveEvent Anton's Intro]".
+Sarea of Anton's Intro is "Nowhere".
+
+after going to Smith Haven Mall Lot South while (Anton's Intro is not resolved and Daytimer is day and PlayerMet of Anton is false and PlayerMet of Moreau is true and "Moreau Hypno Base Talk" is listed in Traits of Moreau and LastFuck of Anton - turns > 8):
+	say "[ResolveEvent Anton's Intro]";
+
+to say ResolveEvent Anton's Intro:
+	if Player is male:
+		say "     As you direct your steps towards the southern parking lot of the mall, you have to follow a sometimes lengthy route past countless abandoned cars, many of them clumped together in pileups from when people were fleeing - or arriving - in total panic during the first hours of the nanite apocalypse. Shopping carts are scattered all over the place too, often thrown on their sides, which isn't a big surprise now that there is no one left to collect them. Just as you step past a massive, crusty patch of dried cum and the associated scraps of clothing from maybe half a dozen people, you notice a really bright spot of color from the corner of your eyes. Looking over that way, you see someone standing near the roadside entrance of the lot, a fairly tall and colorful anthro bird that looks surprisingly muscular for an avian. His broad-shouldered chest is covered in a tight, lime-green muscle shirt, with arm-holes large enough to allow his feathered forearms through. Deep blue plumage covers the visible bits of his chest and his neck and head.";
+		say "     Keeping your attention on the guy for a moment as you continue walking, you see that he's also wearing a pair of black jeans, as well as a really long tail of iridescent green feathers, gleaming bright in the sunlight. The guy's an anthro peacock! He waves with a feathered arm to flag you down, showing a friendly smile with the somewhat flexible beak that the nanite infection is giving bird-morphs. ";
+		if "Peacock" is listed in EncounteredEnemies of Player: [already fought one]
+			say "Thinking back to the last peacock you fought, you remember that concentrating on those pretty colors of the tail poses a significant danger to those that are not cautious. Something to keep in mind, for sure. Especially right here, in the open sunlight, which should likely enhance the feather's effect even more as compared to the more shaded areas between high sky-scrapers. Of course, this dude doesn't seem like a run of the mill peacock either, being more muscular and seeming to be relatively friendly. ";
+		else if Peacocked is 1: [met and was open to Dmitri before]
+			say "Thinking back to that other friendly peacock you met in the high rise district, you remember the amazing and pretty displays he did show you with his feathers, and how nice that made you feel. Somehow you can't help but wonder if this guy will be the same. Here in the open, with sunlight playing over the feathers, it'll surely be an amazing show! ";
+		else if Peacocked > 1 and Peacocked < 99: [met and was open to Dmitri before]
+			say "Thinking back to your peacock friend Dmitri, you remember the amazing and pretty displays he could always show you with his feathers, and how nice that made you feel. Somehow you can't help but wonder if this guy will be the same. Here in the open, with sunlight playing over the feathers, it'll surely be an amazing show! ";
+		else if Peacocked is 99: [rejected Dmitri before]
+			say "Thinking back to meeting that one somehow sketchy peacock guy in the high rise district, you remember him flashing his feathers at you, making you feel all funny. Here and now, with the bright sunlight dancing over his plumage, that effect will likely be greatly enhanced! ";
+		say "'Hello there, I'm Anton! Got a moment to talk?' the bird calls out to you in a full, charming voice, tail-feathers twitching a little behind his back as he turns head-on to face you.";
+		LineBreak;
+		say "     [bold type]How do you react?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Walk up to him and chat. He seems nice.";
+		say "     [link](2)[as]2[end link] - Keep your distance and call back to ask what you wants.";
+		say "     [link](3)[as]3[end link] - Turn away and avoid him. Best to be cautious.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to walk up and chat, [link]2[end link] to keep some distance, [link]3[end link] to avoid him.";
+		if calcnumber is 1:
+			LineBreak;
+			say "     Calling back a friendly greeting and introducing yourself, you approach the large avian anthro, who smiles, then offers you a firm handshake. 'Glad to meet you. It's so difficult to have a civil conversation with people these days,' the peacock says cheerfully, then waves a hand to indicate your surroundings. 'Haven't been around this area since all this craziness started, so I wanted to get some info from a local. Could you tell me what's going on hereabouts?' As you start to reply, the bird casually ruffles his tail-feathers, lifting and spreading them. With the light of the sun shining brightly on the impressive fan of plumage, most of your field of view is filled with brilliant rainbow colors. It is a beautiful and awe-inspiring backdrop to the moderately long conversation that follows between the two of you, during which you lay out the important highlights of the mall's surroundings, dangerous creatures roaming about nearby, and so on.";
+			say "     Eventually, Anton has heard enough, with him giving your arm a friendly pat. 'Thanks a lot for being so helpful. It truly was a pleasure to make your acquaintance. Too bad phones are down in our current situation, or I might just ask you for your number, haha! Oh well, I'll stay around for a while, hopefully we'll run into each other again, eh?' You reply with a suitable goodbye, following the peacock with your gaze as he walks away. Standing where you are for some minutes afterwards, your thoughts continue to be filled by just how nice and friendly Anton was, and how much you're looking forward to seeing him again. At some point after that though, you do become vaguely aware of something feeling a bit odd about your person. [if Player is not naked]Patting your clothes and gear, it all seems just slightly off, as if you had dressed in haste. [else]Patting your gear, it all seems just slightly off, as if you had thrown it on in haste. [end if]Beyond that, you do appear a bit winded and tired, without knowing why really.";
+			WaitLineBreak;
+			say "     Trying to make sense of these strange inconsistencies, you think back a little further, to the discussion you had with Anton. You're absolutely certain it was a pleasant chat, but beyond that... the details somehow seem to elude you right now. You couldn't just have forgotten it, could you? How very odd. [bold type]A fleeting thought flickers up in your head for a second, with you remembering people retrieving seemingly forgotten memories through hypnosis - but then, you don't really need to do that, do you? [roman type]You can just ask Anton the next time you meet up!";
+			now LastFuck of Anton is turns;
+			now PlayerMet of Anton is true;
+			now PlayerFucked of Anton is true;
+			if AnalVirgin of Player is true:
+				now AnalVirgin of Player is false;
+				TraitGain "Took Player Cherry" for Anton;
+			now Resolution of Anton's Intro is 1; [open approach - hypno'd]
+		else if calcnumber is 2:
+			LineBreak;
+			say "     You take a few steps towards the large avian anthro, but then stop at a suitable distance. He smiles nonetheless, giving you a wave and understanding nod as you introduce yourself and ask what he wants. 'I can understand why you're cautious. Things have gotten pretty rough out on the streets recently, eh? Well, I'm just glad you wanna talk. It's so difficult to have a civil conversation with people these days.' The peacock says in an open and friendly voice, then waves a hand to indicate your surroundings and taking a step or two forward. 'Haven't been around this area since all this craziness started, so I wanted to get some info from a local. Could you tell me what's going on hereabouts?' As you start to reply, the bird casually ruffles his tail-feathers, lifting and spreading them. With the light of the sun shining brightly on the impressive fan of plumage, most of your field of view is filled with brilliant rainbow colors.";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Wow, that's pretty! Keep talking to the friendly bird.";
+			say "     ([link]N[as]n[end link]) - Something is off about this! Quickly look aside and get away.";
+			if Player consents: [go after them]
+				LineBreak;
+				say "     His tail is a beautiful and awe-inspiring backdrop to the moderately long conversation that follows between the two of you, during which you lay out the important highlights of the mall's surroundings, dangerous creatures roaming about nearby, and so on. Eventually, Anton has heard enough, with him giving you a nod accompanied by a flourish of his feathered arm. 'Thanks a lot for being so helpful. It truly was a pleasure to make your acquaintance. Too bad phones are down in our current situation, or I might just ask you for your number, haha! Oh well, I'll stay around for a while, hopefully we'll run into each other again, eh?' You reply with a suitable goodbye, following the peacock with your gaze as he walks away. Standing where you are for some minutes afterwards, your thoughts continue to be filled by just how nice and friendly Anton was, and how much you're looking forward to seeing him again. At some point after that though, you do become vaguely aware of something feeling a bit odd about your person. [if Player is not naked]Patting your clothes and gear, it all seems just slightly off, as if you had dressed in haste. [else]Patting your gear, it all seems just slightly off, as if you had thrown it on in haste. [end if]Beyond that, you do appear a bit winded and tired, without knowing why really.";
+				WaitLineBreak;
+				say "     Trying to make sense of these strange inconsistencies, you think back a little further, to the discussion you had with Anton. You're absolutely certain it was a pleasant chat, but beyond that... the details somehow seem to elude you right now. You couldn't just have forgotten it, could you? How very odd. [bold type]A fleeting thought flickers up in your head for a second, with you remembering people retrieving seemingly forgotten memories through hypnosis - but then, you don't really need to do that, do you? [roman type]You can just ask Anton the next time you meet up!";
+				now LastFuck of Anton is turns;
+				now PlayerMet of Anton is true;
+				now PlayerFucked of Anton is true;
+				if AnalVirgin of Player is true:
+					now AnalVirgin of Player is false;
+					TraitGain "Took Player Cherry" for Anton;
+				now Resolution of Anton's Intro is 2; [careful approach - hypno'd anyways]
+			else:
+				LineBreak;
+				say "     Turning your head to avoid looking at the colorfully feathered avian, you quickly gain some distance. He calls after you once or twice, saying, 'Where are you going? Hey, I just wanted to talk!' but does seem to give up eventually, leaving you free to continue on your way. While you can't help but wonder what else he wanted, maybe it was for the best that you did avoid this bird.";
+				now Resolution of Anton's Intro is 100; [skipped]
+		else:
+			LineBreak;
+			say "     Turning your head to avoid looking at the colorfully feathered avian, you continue walking the way you were going before. He calls after you once or twice, saying, 'Where are you going? Hey, I just wanted to talk!' but does seem to give up eventually, leaving you free to continue on your way. While you can't help but wonder what he wanted, maybe it was for the best that you did avoid this bird.";
+			now Resolution of Anton's Intro is 100; [skipped]
+		now Anton's Intro is resolved;
+	else: [not interested in those that are not male]
+		say "..."; [TODO: Add this]
+		now LastFuck of Anton is turns; [not actually fucked, just using this variable to save the turn]
+		[Choice point - shrug and think of what he might like, ignore the guy]
+
+[TODO: add talk option about hypnosis with Moreau - make it as a condition of the event chain]
+
+to say MoreauHypnoMemoryTalk: [TODO: Adjust first sentence or three to match the previous hypno talk]
+	say "     Bringing up the topic of hypnosis and what he told you before about unearthing forgotten memories, Moreau moves his snake-like body closer, tilting his head a little as he studies you. His forked tongue flicks out of his mouth for the blink of an eye, as if tasting the air between you, followed by his eyebrow-ridges rising a little. Then he bends his hooded head in a nod and says, 'Yes, that can be indeed be done, although like I said before, it requires a skilled practitioner to tickle out the actual truth. Why are you interested in this, if I may ask?' Opening your mouth to explain your encounter outside of the mall, you find this quite difficult, as the peacock's name almost seems [italic type]slippery[roman type] in your mind, out of reach and unavailable when you try to speak it. Moreau waits patiently, with his green, slitted eyes watching with interest. Finally, you exclaim that you met [']someone['], out in the parking lot, but you cannot recall any exact details of the encounter, or even the person's name, only that you talked with him and it was [']nice['].";
+	if Lastfuck of Anton - turns < 3: [within 2 turns after the encounter]
+		say "     Straightening his upper body, the male naga asks, 'Would this be the same person you had sex with? A man, from what I can tell? Avian, to be specific.' You blink in surprise and bewilderment, answering that you don't recall doing such a thing. 'Someone's scent is all over you,' he adds in a conversational tone, then snakes forward, circling around you and flicking his tongue several times in quick succession. When he arrives back before you, face to face, you're standing in a ring of Moreau's coils. 'It is strongest on the back side, by the way.' Almost unable to believe his words, you reach behind you and feel your rear end, fingers encountering... something as you near your crack. Your mind becomes foggy as you try to think of what it might be, without much success, and as you pull your hand out to look at it, you can't see anything odd on it. 'Ah, let me help you with that. Instructions can be subverted, you know,' Moreau says, then meets your gaze, his large emerald green eyes drawing you in. Then he says in a calm tone, 'You must have sat down on someone's lunch accidentally. There's... blueberry jam all over your rear.'";
+		say "     As the naga breaks the connection, you realize that there is something sticky and clinging on your fingers after all, somewhat pale and almost white, which seems odd for jam, but then... that's just what it is, right?! Returning to explore your rear end, there's a lot more of that goop, and when you brush against your hole, it seems somewhat sore and strained. How could you not have noticed that? ";
+		if "Took Player Cherry" is listed in Traits of Anton:
+			say "Especially since you are a virgin, or aren't you, anymore?! ";
+		say "As shock dominates your features when the realization hits that something sexual did indeed happen to you, the naga gives an understanding nod, then snakes off to the side to give you a moment to compose yourself.";
+		WaitLineBreak;
+		say "     He returns a little while later, flanked by one of the mannequins holding a serving tray. On it is a bottle of whiskey and two glasses, which Moreau fills with a shot of the amber liquid, then offers you one. ";
+	else:
+		say "     ";
+	say "'It does appear you were influenced. Against your wishes, most likely.' Looking at you with his intensely green eyes, he then raises two fingers on his right hand and nods to them. 'Two things are certain about this. The one who did it is fairly strong, as you can barely remember anything, or even say their name.' Then he folds away the first finger, and taps the second, then shakes his head in what almost appears to be offended professionalism. 'But they are also sloppy. If it was done with greater skill, you would never had an inkling of anything happening. None of these inconsistencies that an intelligent person can unravel on their own, far enough to come to me and want to learn more. If you wish, I can do this and do just that.'";
+	now Resolution of Anton's Intro is 3;
+
+to say MoreauHypnoMemoryRetrieval:
+	say "     As you ask Moreau to hypnotize you, the naga straightens his upper body gives you a friendly smile. Vibrantly-colored scales ripple as his already impressive hood spreads a little further, and the large reptile flicks out his tongue to taste the air around you. 'Okay then - I can hypnotize you if that is what you wish. But what exactly is it that you are asking me to do?' He casually brushes his hand along the raised curve of his tail, looking at you with the brow-ridge over his left eye raised.";
+	say "     [bold type]What do you ask of him?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - You want to learn the truth about what happened. Everything!";
+	say "     [link](2)[as]2[end link] - Some de-programming work should be enough. You just don't want to have any hidden triggers waiting to surprise you.";
+	say "     [link](3)[as]3[end link] - You don't want to remember what happened at all. Better to just wipe the whole encounter away completely!";
+	say "     [link](4)[as]4[end link] - You changed your mind, no more of this! One person messing with your head is enough.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to learn everything, [link]2[end link] to get de-programmed, [link]3[end link] to have him wipe Anton from your memory, or [link]4[end link] to change your mind.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     As you tell Moreau that you can't stand not knowing what went on, the naga nods sagely. 'Yes, I recognize your issue with this. It is the mental equivalent of a phantom limb - knowing that there should be something there, but being unable to reach it. The feeling of being incomplete can grind away at the one suffering from it.' Crossing his arms, he shakes his hooded head and scoffs. 'The one who influenced you being so sloppy offends me. No true practitioner would leave someone incomplete, and ready to unravel. Let us fix that!' Having said those words, Moreau begins to coil himself around you, wrapping his serpentine body around yours. His scales feel smooth and flexible as they press against your skin. Soon, you're completely wrapped by him, with the naga bending his upper body over you, one hand reaching out for your chin to raise it. As your eyes meet his slitted, vibrant green gaze, you're drawn under his power almost instantly.";
+		say "     .";
+		say "     .";
+		say "     .";
+		WaitLineBreak;
+		say "     Blinking, you find yourself still gazing deep into the naga's eyes, although they seem not as intense for right now. 'I have to give him that he is very powerful. You literally [italic type]can not[roman type] pass information on to others, verbally or in writing, and apparently do not consciously recall it yourself outside of his presence. Revealing what truly happened will require a workaround.' Moreau loosens his coils, releasing you from his hold and slithering aside, a thoughtful expression on his face. He taps the side of his muzzle a few times while moving side to side, then turns back to you. 'I think I have got a loophole to exploit for this case. You can't recount what happened, but you could... relive it, and then remember that. I propose that you and me could go outside into the parking lot, and I [']turn back the clock['] in your mind, then slip into the role of your [']nice friend['].'";
+		say "     Watching your reaction to his proposal, Moreau raises a hand before you can say anything, then adds, 'I am aware that this might fill you with trepidation, but I am afraid it might be the only way to regain all the details of what you were involved in. Embarking on a path with unknown destination should not be done lightly, though maybe I can take some of the dread from it. I would be with you, guiding every step, and I can assure you that [italic type]I do have morals[roman type], so I will provide a safeword to break off completely whenever you might become uncomfortable. And maybe a second one, to [']skip['] reliving something objectionable. Be aware that this might lead to some lost details though. Whatever you decide, I am willing to see this through until the end.' With that said, the naga looks at one of the mannequins in the back of the shop and snaps his fingers. 'I'll leave you to contemplate this in peace. Here, have a refreshment on me while you do.' The mannequin he called arrives with a soda bottle that it holds out to you, while Moreau slithers away.";
+		ItemGain soda by 1;
+		now Resolution of Anton's Intro is 4; [primed for total recall]
+	else if calcnumber is 2:
+		LineBreak;
+		say "     As you tell Moreau that you don't want to be surprised by hidden commands that might have been left in your mind, the naga nods sagely. 'Yes, that is a possible issue indeed. A somewhat more refined technique, so I do have my doubts if your assailant was capable of it, but... maybe his skills were more advanced in this area. So, starting from the moment that you started talking to... the one you met, how much time passed before you remember other things, in full clarity. An hour? Two? Good.' Having said those words, Moreau begins to coil himself around you, wrapping his serpentine body around yours. His scales feel smooth and flexible as they press against your skin. Soon, you're completely wrapped by him, with the naga bending his upper body over you, one hand reaching out for your chin to raise it. As your eyes meet his slitted, vibrant green gaze, you're drawn under his power almost instantly.";
+		say "     .";
+		say "     .";
+		say "     .";
+		WaitLineBreak;
+		say "     Blinking, you find yourself still gazing deep into the naga's eyes, until he loosens his coils and releases you. 'I gave you commands that you should forget anything that your acquaintance said during your meeting. Given that you could not remember it consciously anyways, this will not cause any additional discomfort from 'lost memories', while at the same ensuring that his triggers will be gone for good. Do keep an eye out for people you do not know acting familiar, or using odd gestures and words. That might just be the culprit then. Use what element of surprise this will give you - either to flee, or to overpower them.'";
+		now Resolution of Anton's Intro is 50; [de-triggered]
+	else if calcnumber is 3:
+		LineBreak;
+		say "     As you tell Moreau that you can't stand the thought that someone messed with you, and you can only guess at what really happened, the naga nods. 'Yes, I recognize your issue with this. It is the mental equivalent of a phantom limb - knowing that there should be something there, but being unable to reach it. The feeling of being incomplete can grind away at the one suffering from it.' Crossing his arms, he shakes his hooded head and scoffs. 'The one who influenced you being so sloppy offends me. No true practitioner would leave someone incomplete, and ready to unravel. Let us fix that!' Having said those words, Moreau begins to coil himself around you, wrapping his serpentine body around yours. His scales feel smooth and flexible as they press against your skin. Soon, you're completely wrapped by him, with the naga bending his upper body over you, one hand reaching out for your chin to raise it. As your eyes meet his slitted, vibrant green gaze, you're drawn under his power almost instantly.";
+		say "     .";
+		say "     .";
+		say "     .";
+		WaitLineBreak;
+		say "     Blinking, you find yourself staring at two mannequins, a succubus and a minotaur. A slight movement to the side draws your gaze to Moreau, who looks expectantly. You open your mouth and admit that you were lost in your thoughts, then ask him to please repeat what he was saying. 'Ah, no worries my friend. I've seen many a customer's eyes go wide as they imagine the possibilities a new shape might bring. In fact, I did just ask if you'd like to see any of my display models in a specific pose or position. Some are quite specific in choosing how they want to present themselves, and seeing firsthand what a given body appears to from the outside perspective can help. Focusing his attention on the mannequins, Moreau gestures for them to move. The succubus spreads her legs a little and uses her fingers to pull apart the folds of her pussy a little, while the minotaur turns around, flexing to make the muscles of his back ripple, followed by bending over forwards and spreading his cheeks to reveal a ring-shaped pucker, its brow skin almost dark enough to seem black.";
+		say "     At this point, there is a little bell from the front door, with a group of people coming in who gape openly at all the shapes on display. Moreau nods to them and calls, 'Just a moment, I'll be right with you!' Then he turns to you and says, 'Feel free to browse more, and simply tell me if you want any demonstrations. For example how big something gets when hard, or the like.' Thanking him, you free the naga up to welcome new potential customers and wonder some more if you should get a new body for yourself, or just the head, or maybe some other part. After all, the possibilities of his transformation services are intriguing, and that's what you came into the store for after all. Moreau is such a nice and helpful person too - he's sure to give you a good deal.";
+		now Resolution of Anton's Intro is 100; [forgot it all]
+	else if calcnumber is 4:
+		LineBreak;
+		say "     'As you wish,' Moreau says calmly in his sibilant voice, spreading both arms in a half-shrugging gesture. After another flick of his forked tongue, the naga straightens his upper body and adds, 'Can I help you in some other way? I do have some attractive new bodies for sale...' He points out some mannequins standing near the walls of his shop and smiles, then leaves you to think about what you want to do.";
+
 
 Body Shop ends here.

@@ -114,11 +114,14 @@ instead of sniffing Gryphoness:
 	else if the remainder after dividing Libido of gryphoness by 4 is 3:
 		say "ERROR-Denise-3S: You should not be able to smell her right now.";
 
+[TODO: add choice point if you want her to initiate sex - for now, commenting this out]
+[
 An everyturn rule:
 	if Gryphoness is listed in companionList of Player and skipturnblocker is 0:
 		now tempnum is the remainder after dividing Libido of gryphoness by 4;
 		if a random number between one and 20 < ( 6 - tempnum ) and lastfuck of gryphoness - turns >= 4:
 			say "[sexwithgryphoness]";
+]
 
 to say PussyFucked by Denise:
 	PussyFucked by Denise;

@@ -18,7 +18,7 @@ peacockcontrol is a number that varies.
 to say peacockdesc:
 	setmongender 3; [creature is male]
 	say "     A tall blue bird emerges from an alley. His body is covered in an iridescent coat of blue and green plumage, and he greets you by fanning his eye-spotted tail. From what you can tell, the avian doesn't appear to be aggressive. Maybe you could just relax... and have a friendly chat. After all, his feathers are so entrancingly beautiful... and you want nothing more than to stare into those slowly swaying spots.";
-	say "     As your hazy thoughts urge you closer, a sudden cry in the distance snaps you back to reality. Wait, what the hell? You feel like you lost control of your body for a moment. His trap flung, the angered peafowl draws closer with malice in his eyes, ready to seduce you by any means necessary. You'd better end this battle quickly.";
+	say "     As your hazy thoughts urge you closer, a sudden cry in the distance snaps you back to reality. Wait, what the hell? You feel like you lost control of your body for a moment. His trap sprung, the angered peafowl draws closer with a manic glint in his eyes, ready to seduce you by any means necessary. You'd better end this battle quickly.";
 	now peacockcontrol is 0;
 
 to say peacockskin:

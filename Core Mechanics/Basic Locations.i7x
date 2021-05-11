@@ -186,6 +186,8 @@ to say GreyAbbeyLibrary_ObserveMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
+	[TODO: Add Alexandra and her puppies]
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "General"; [move these into their own menu]
 	now sortorder entry is 1;
@@ -255,6 +257,7 @@ to say GreyAbbeyLibraryObservation_General:
 			now sextablerun is 1;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 Table of GameRoomIDs (continued)

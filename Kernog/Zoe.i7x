@@ -313,7 +313,6 @@ to say ZoeGoodFuckMenu:
 				now sextablerun is 1;
 				if nam is "Vanilla":
 					say "[ZoeSexZoeChoice]";
-					NPCSexAftermath Zoe receives "PussyFuck" from Player;
 					if Loyalty of Zoe < 11:
 						increase Loyalty of Zoe by 1;
 				else if nam is "Anal":
@@ -367,6 +366,7 @@ to say ZoeSexZoeChoice:
 		else:
 			say "     'I want to be on top, tonight. I mean, on top of you, not that kind of [italic type]top[roman type]. Yet,' Zoe says. It seems that the more she spends some time with you, the less embarrassed she sounds about it. You hold hands the rest of the way, and you finally arrive at Zoe's old apartment. The door is not even close that you throw yourselves into each other's arms and kiss passionately. At some point, you must have stripped from your clothes. You only realize it when Zoe's pawed fingers pass on your bare chest. You do the same. Your hands grope the rabbit's small breasts and knead them slowly, adding tactile pleasure to your French kiss. Your hands go lower, and lower, until you find each other's butt, then each other's crotch. You pull Zoe into a tight hug while the bunny reaches between your legs and rubs your touching intimate parts.";
 			say "     The preliminaries seem to pass in a flash as the two of you find yourselves on the cot, with you lying on your back and Zoe sitting on your belly, her butt grinding at your [CockName of Player] penis. She takes her time teasing you, and lining the tip of your cock with her pussy, before she lowers herself slowly on it. Once your cock is bottoming out in this exquisitely tight hole, Zoe begins to rock her hips, and move up and down. She starts out slow, but quickly picks up the pace. Your hands try to find purchase on your partner below. One of your hands find Zoe's thigh, the other one of her hands. You hold her tight as you raise your hips to meet her pelvis. Your two bodies collide with loud slaps which eventually cover the rare remaining noises of the city. Eventually. You achieve a thunderous orgasm, which Zoe follows by a climax of her own. Her pussy spasms around you while you fill her womb with your [Cum Load Size of Player] load. You stay like this, one slumped over the other, for what feels like hours. Zoe eventually pulls your penis out [if Player is knotted]when its knot has deflated[else]when it has softened[end if], and roll to the side along the young bunny.";
+		NPCSexAftermath Zoe receives "PussyFuck" from Player;
 	WaitLineBreak;
 	say "     You look at each other while you catch your breath. It is Zoe's time to search your embrace and hug you with her lean, white furred arms. 'We should do this more often,' she says. You find no argument to oppose her. You make the trip back to the library, smiling and holding each other hand, this time all the way. Zoe parts with you on the doorstep of the Library. 'You know where to find me if you want to chat. I'll be resting until morning.'";
 

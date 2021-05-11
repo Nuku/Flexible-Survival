@@ -114,7 +114,7 @@ to say BeatFeralWolfBitch:
 				now Ball Count of Fang is 0;
 				now Ball Size of Fang is 0;
 				now Cunt Count of Fang is 1;
-				now Cunt Depth of Fang is 10;
+				now Cunt Depth of Fang is 12;
 				now Cunt Tightness of Fang is 2;
 				now Clit Size of Fang is 3;
 				now Virgin of Fang is false;
@@ -167,7 +167,7 @@ to say FeralWolfBitchVictorySex:
 				say "     . (Y=Ride, N=Fuck)";
 				if Player consents:
 					say "     Moving your hand to her back, you roll her over, the wolf accepting her fate readily enough. Having allowed herself to be moved into the position best suited for the ride you have in mind, you scritch her ears to reassure her that she will walk away from this, as you move overtop her and line up her muzzle with your wet slit. This both in order to calm her and convince her to join in on the effort of getting you to your climax. You sink your cunt slowly onto her, moaning slightly as she holds herself still, letting you go down on her muzzle without any fuss. As you begin to piston your hips in order to get this done as fast as possible, she angles her muzzle as she licks the walls of your passage, her lupine muzzle getting slathered in pre-cum as you whisper huskily what a good girl she is. She growls softly in response, muffled by your muff as you continue mating her, as her tail starts to wag in response.";
-					say "     She moans inconherently, a muffled sound coming from the animalistic wolf as you see her orgasm, the sound and shudders from her body rippling through you. Pleased by this, you press yourself down onto her firmly as you orgasm, being sure to move your body and pussy off of her muzzle, letting her breathe as you position yourself to sit down next to her. You lean in to kiss her fem-cum drenched lupine muzzle directly on the tip of her nose, as you cum a second time from the memory of the sensation. Lifting your head after the suprisingly chaste kiss on top of the not-so-chaste ride, she pants as she inhales fresh air, softly growling out something she probably wants you to hear, being as tired as you both are, you look back at her to see if she would repeat that, however is seems that she passed out from the exertion.";
+					say "     She moans incoherently, a muffled sound coming from the animalistic wolf as you see her orgasm, the sound and shudders from her body rippling through you. Pleased by this, you press yourself down onto her firmly as you orgasm, being sure to move your body and pussy off of her muzzle, letting her breathe as you position yourself to sit down next to her. You lean in to kiss her fem-cum drenched lupine muzzle directly on the tip of her nose, as you cum a second time from the memory of the sensation. Lifting your head after the surprisingly chaste kiss on top of the not-so-chaste ride, she pants as she inhales fresh air, softly growling out something she probably wants you to hear, being as tired as you both are, you look back at her to see if she would repeat that, however is seems that she passed out from the exertion.";
 					say "     Having gotten off and shown the wolfess who is boss, you get up once your legs recover from the ride you just went on, picking up your things and getting on your way.";
 					CreatureSexAftermath "Feral Wolf Bitch" receives "OralPussy" from "Player";
 				else:
@@ -183,7 +183,7 @@ to say FeralWolfBitchVictorySex:
 			if Player is female:
 				LineBreak;
 				say "     Moving your hand to her back, you roll her over, the wolf accepting her fate readily enough. Having allowed herself to be moved into the position best suited for the ride you have in mind, you scritch her ears to reassure her that she will walk away from this, as you move overtop her and line up her muzzle with your wet slit. This both in order to calm her and convince her to join in on the effort of getting you to your climax. You sink your cunt slowly onto her, moaning slightly as she holds herself still, letting you go down on her muzzle without any fuss. As you begin to piston your hips in order to get this done as fast as possible, she angles her muzzle as she licks the walls of your passage, her lupine muzzle getting slathered in pre-cum as you whisper huskily what a good girl she is. She growls softly in response, muffled by your muff as you continue mating her, as her tail starts to wag in response.";
-				say "     She moans inconherently, a muffled sound coming from the animalistic wolf as you see her orgasm, the sound and shudders from her body rippling through you. Pleased by this, you press yourself down onto her firmly as you orgasm, being sure to move your body and pussy off of her muzzle, letting her breathe as you position yourself to sit down next to her. You lean in to kiss her fem-cum drenched lupine muzzle directly on the tip of her nose, as you cum a second time from the memory of the sensation. Lifting your head after the suprisingly chaste kiss on top of the not-so-chaste ride, she pants as she inhales fresh air, softly growling out something she probably wants you to hear, being as tired as you both are, you look back at her to see if she would repeat that, however is seems that she passed out from the exertion.";
+				say "     She moans incoherently, a muffled sound coming from the animalistic wolf as you see her orgasm, the sound and shudders from her body rippling through you. Pleased by this, you press yourself down onto her firmly as you orgasm, being sure to move your body and pussy off of her muzzle, letting her breathe as you position yourself to sit down next to her. You lean in to kiss her fem-cum drenched lupine muzzle directly on the tip of her nose, as you cum a second time from the memory of the sensation. Lifting your head after the surprisingly chaste kiss on top of the not-so-chaste ride, she pants as she inhales fresh air, softly growling out something she probably wants you to hear, being as tired as you both are, you look back at her to see if she would repeat that, however is seems that she passed out from the exertion.";
 				say "     Having gotten off and shown the wolfess who is boss, you get up once your legs recover from the ride you just went on, picking up your things and getting on your way.";
 				CreatureSexAftermath "Feral Wolf Bitch" receives "OralPussy" from "Player";
 			else:
@@ -263,11 +263,11 @@ When Play begins:
 	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 0; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	now Nipple Count entry is 8; [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 9; [Size of breasts infection will try to attain ]
+	now Breast Size entry is 1; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12;
-	now Cunt Tightness entry is 6;
+	now Cunt Tightness entry is 2;
 	now SeductionImmune entry is false;
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "wolf fem-cum";

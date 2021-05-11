@@ -1258,6 +1258,7 @@ to say tlranaway:
 	now Orthas is nowhere;
 	if Susan is visible:
 		move susan to Hidden Lab;
+		now HP of Susan is 50;
 	now the door west of Outside Trevor Labs is locked; [not sure how to do this]
 	now hospquest is 12;
 	now the player is in Hidden Lab;
@@ -1276,6 +1277,7 @@ to say tlloss:
 	now Orthas is nowhere;
 	if Susan is visible:
 		move susan to Hidden Lab;
+		now HP of Susan is 50;
 	now the door west of Outside Trevor Labs is locked; [not sure how to do this]
 	now hospquest is 12;
 	now the player is in Hidden Lab;

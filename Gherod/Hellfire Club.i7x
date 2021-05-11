@@ -291,6 +291,8 @@ Description of Hellfire VIP Floor is "[HellfireVIPFloorDesc]".
 
 to say HellfireVIPFloorDesc:
 	say "     The upper floor, reserved for the VIPs, is the place where Mogdraz spends most of his time watching over the club and trading messages with his imp messengers, among other special patrons who occasionally come up to see him. Right at the center, you can see his red velvet sofa, looking very comfortable and offering a broad vision over the entire lounge. Looking down, you can see everything that happens across every corner, and there is an especially direct line of sight towards Toron and Jyneth. Towards east, there is a closed door that would lead to Mogdraz's chambers, and for obvious reasons, it does not seem like you can go in there.";
+	if Resolution of MogdrazRomance is 5:
+		say "     It seems Mogdraz has not yet returned from his quest to the Dry Plains.";
 
 instead of smelling Hellfire VIP Floor:
 	say "     Curiously, the VIP floor does not smell like the rest of the place. It is, instead, perfumed with a kind of an incense that softly tingles your nostrils, its scent similar to some sort of plant you cannot quite identify. It actually feels very pleasant...";
@@ -334,6 +336,8 @@ Description of Hellfire Unknown is "[HellfireUnknownDesc]".
 
 to say HellfireUnknownDesc:
 	say "     This is a place of the unknown, where emptyness meets reality. It is no longer the Club, but it is the only safe spot before you dive into uncertainty. You better [bold type]proceed with caution[roman type] before you end up losing yourself. To the [bold type]North lies the Void Realm[roman type], where not even the most experienced travelers dare to venture within without a destination.";
+	if Fallen King is visible:
+		say "     [bold type]You sense a terrible presence nearby...[roman type][line break]";
 
 instead of smelling Hellfire Unknown:
 	say "     It smells of nothing.";
