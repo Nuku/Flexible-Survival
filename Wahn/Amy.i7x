@@ -475,7 +475,7 @@ to say AmyNPCSexTable:
 			else:
 				say "[AmyNPCSexTable]";
 		-- 3: [Fang]
-			if Fang is in Grey Abbey Library:
+			if Fang is in Grey Abbey Library and Fang is Male:
 				if XP of Amy is 0 and HP of Fang > 1:[first interest of Fang in her]
 					if HP of Fang < 5:
 						say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Her head is leaned back, eyes closed, and she moans silently to herself. Looks like she's pretty horny, aching for a fuck. A fact that hasn't gone unnoticed by someone else... close to her, slowly stalking forward is Fang, his canine shaft hanging erect under his black-furred body. Then suddenly, he pounces the young husky, making her give a surprised yip that leads over to a lust-filled gasp as the wolf sinks his cock deep into her pussy with the first thrust. As deep in the grip of her own libido as she is, Amy just accepts the virile male on top of her, moaning as he starts rutting her with urgent movements.";
@@ -1468,7 +1468,7 @@ to say AmySex7: [Felinoid+Amy+Player Threesome]
 		WaitLineBreak;
 		say "     After a moment of just holding on to the large feline and catching your breath, you pull out and watch Klauz's pink pucker snap shut before any of your seed can leak out. Satisfied but exhausted after this session, you sink down on Amy's mattress. The big cat and husky girl separate from each other too, then lie down next to you, with Amy cuddling up to the felinoid's soft and warm belly fur. Purring as loud as an idling motor, the big cat starts licking her fur. Looks as if he wants to spread his scent over all of the husky's body.";
 		NPCSexAftermath Klauz receives "AssFuck" from Player;
-	if Fang is in the Grey Abbey Library:
+	if Fang is in the Grey Abbey Library and Fang is Male:
 		LineBreak;
 		if HP of Fang is 1 or HP of Fang is 2: [Vanilla or Omega Fang]
 			if XP of Amy is 0:

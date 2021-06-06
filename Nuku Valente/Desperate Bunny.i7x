@@ -685,7 +685,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 
 This is the Sandra's Epilogue rule:
 	if Sandra is in the Bunker:
-		if Fang is in the Grey Abbey Library and HP of Fang is 3 and ColleenAlpha is 0 and humanity of Player < 10:
+		if Fang is in the Grey Abbey Library and HP of Fang is 3 and Fang is Male and ColleenAlpha is 0 and humanity of Player < 10:
 			[succumb: alpha Fang takes uncontested Sandra ]
 			make no decision; [skip this rule]
 		if HP of Player > 0:

@@ -165,13 +165,13 @@ to say abbey desc:
 		if HP of Fang < 3:
 			say ". The wolf is tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random]";
 		else:
-			say ". The powerful male wolf watches in stoic silence";
+			say ". The powerful [if Fang is Male]male [else]female [end if]wolf watches in stoic silence";
 		say ". The doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 	else if Fang is booked:
 		if HP of Fang < 3:
-			say "     Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
+			say "     Fang is on guard here by the door on [PosPro of Fang] rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
 		else:
-			say "     Fang is on guard here by the door, the powerful male wolf watching in stoic silence.";
+			say "     Fang is on guard here by the door, the powerful [if Fang is Male]male [else]female [end if]wolf watching in stoic silence.";
 	else if Alexandra is booked:
 		say "     Alexandra is on guard here, watching by the door for trouble. The doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 
