@@ -1,6 +1,7 @@
 Version 2 of Hyena Bikers by Stripes begins here.
 [Completed w/selection menu thanks to mirumu.]
 [version 2.5 - Biker leader sex]
+[version 3 - Grant expansion]
 
 "Adds a situation with a pack of hyenas on motorcycles in the High Rise District."
 
@@ -457,7 +458,7 @@ instead of fucking the grant:
 		now bikedest is 1;
 		enable the High Rise District;
 		disable the Stay option;
-	if lastfuck of grant - turns < 8:
+	if lastfuck of grant - turns < 6:
 		if matriarchdefeated is 2:
 			say "     The biker leader hops off the crate and push you against it roughly. He leans overtop you and nibbles your ear. As you start to hope he'll mount you, he swats you hard on the rear. 'You're overeager, little bitch. Come back later and I'll be in the mood to show you what a real male's like.' He gives you another swat on the ass before shoving you back into the room. Many of the others around chuckle as the impressive male sends you off firmly. You blush and slink away, but long for [']later['] to come.";
 		else:
@@ -650,6 +651,15 @@ to say grantbitchsex5:
 	if Player is female:
 		say "[grantstretch]";
 	say "     When at last his hot load fills you, you cry out again for all to hear, cumming hard yourself. When he's done seeding you like his little bitch, he French kisses you before pulling out. With you on the floor and pressed back against his crate, he wipes his cock clean on your face, covering you in his scent. He retakes his seat, one leg on either side of you and scritches your ears. When you recover enough to get up, he gives you spank and a grin to send you off.[impregchance]";
+
+to say grantbitchsex6:
+	say "     A";
+
+to say grantbitchsex7:
+	say "     A";
+
+to say grantbitchsex8:
+	say "     A";
 
 
 to say grantfsex:
