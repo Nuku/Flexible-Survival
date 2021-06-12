@@ -1,15 +1,16 @@
-Fallen King by Gherod begins here.
+Version 2 of Fallen King by Gherod begins here.
 
 "Expands on a Void Realm encounter, the Dark Tyrant, with additional content"
 
 [Version 1 - File Created]
+[Version 2 - Added Symbiosis scene and next Intelligence stage]
 
 [Stats]
 [Intelligence - Dark Tyrant learns with further interactions with the player]
 [ 0 - Nothing yet ]
 [ 1 - Had first sexual contact, nothing special yet ]
-[ 2 and 3 - First stage, nothing different]
-[ 4 to 5 - His language improves slightly, more scenes unlocked (Future addition)]
+[ 2 and 3 - First stage, nothing different ]
+[ 4 - He now fully comprehends mortal language ]
 
 Section 1 - Event
 
@@ -25,8 +26,8 @@ Sarea of Friend Of The Darkness is "Nowhere".
 
 [RESOLUTION STAGES]
 [0: Dark Tyrant remains natively hostile, nothing happened]
-[1: He will not immediately attack the player, instead asking for more essence. Will attack if request is not obliged]
-[2, 3 and 4: Same as above]
+[1 to 2: He will not immediately attack the player, instead asking for more essence. Will attack if request is not obliged]
+[3: Prompts friendship]
 [-1: Dark Tyrant will be hostile forever.]
 
 Table of GameEventIDs (continued)
@@ -179,26 +180,41 @@ to say FallenKingTalkMenu:
 	clear the screen and hyperlink list;
 
 to say FallenKingTalkWho:
-	say "     Carefully, you try asking who he is, as everyone mentions him as some sort of apocalyptic entity that could bring the world to a terrible end and all that jazz. Maybe you do not tell him exactly that, but you think he gets the idea. He seems to crouch in order to get to the same eye level as you, that endless darkness in your eyes almost taking you in by themselves, leaving you with a chill running down your spine. He does not answer that question, though the way he locks his eyes with you is terrifying. You find yourself trembling and shaking as you try to patiently wait for any verbal answer, but it seems he has none. Only that bottomless, hopeless and disgraceful gaze...";
-	if "Strong Psyche" is listed in feats of Player:
-		WaitLineBreak;
-		say "     [italic type]But amidst your observation, you perceived someone lurking in that darkness. A person whose essence is shockingly familiar, but you cannot say why. Sometimes, it felt like you were looking at a mirror of your own self, yet without recognizing your reflection. The words [']terrible truth['] linger in your mind...[roman type][line break]";
-		WaitLineBreak;
-	say "     He breaks it just before you are thrown into a panic attack, which was steadily building up. Your heart is still beating really fast and you do not know why. He has not answered your question in a way you could easily comprehend, but something about this is clearly off.";
-	SanLoss 5;
+	if Intelligence of Fallen King < 4:
+		say "     Carefully, you try asking who he is, as everyone mentions him as some sort of apocalyptic entity that could bring the world to a terrible end and all that jazz. Maybe you do not tell him exactly that, but you think he gets the idea. He seems to crouch in order to get to the same eye level as you, that endless darkness in your eyes almost taking you in by themselves, leaving you with a chill running down your spine. He does not answer that question, though the way he locks his eyes with you is terrifying. You find yourself trembling and shaking as you try to patiently wait for any verbal answer, but it seems he has none. Only that bottomless, hopeless and disgraceful gaze...";
+		if "Strong Psyche" is listed in feats of Player:
+			WaitLineBreak;
+			say "     [italic type]But amidst your observation, you perceived someone lurking in that darkness. A person whose essence is shockingly familiar, but you cannot say why. Sometimes, it felt like you were looking at a mirror of your own self, yet without recognizing your reflection. The words [']terrible truth['] linger in your mind...[roman type][line break]";
+			WaitLineBreak;
+		say "     He breaks it just before you are thrown into a panic attack, which was steadily building up. Your heart is still beating really fast and you do not know why. He has not answered your question in a way you could easily comprehend, but something about this is clearly off.";
+		SanLoss 5;
+	else if Intelligence of Fallen King >= 4:
+		say "     Now that you have strengthened the Dark Tyrant's ability to communicate, you decide to try asking him again about who he truly is. He, once more, kneels before you in order to speak. 'I apologize, for the first time I attempted to explain to you, I must have damaged your mind. Fear not, for now I know better.' He extends his hand towards you, beckoning you to join him in a touch. As you place your hand over his, you feel a warmth that you would not foresee coming from such a terrible presence. Somehow, you feel drawn towards him, as if he completed you, in some way. It is difficult to explain, but it makes all sense in your mind as you gaze deeply into his bottomless eyes.";
+		say "     'I embody the existence of all those who, in your place, have succumbed to darkness. Within the universe, they are pieces of you who have lost their ways. You, however, are special. You endure... And it makes me stronger every second we remain close to one another...' - He then makes a pause, his gooey form engulfing your hand and forearm as streams of it crawl over your skin - 'This is the terrible truth you face... the fact that I embody your failure. Someone, somewhere, within the realm of existence, has fallen in your place. Not you, though. You remain strong, and you are my hope. Perhaps one day, we can rule once more.'";
+		say "     With that, he retracts his dark goo from you and returns to his former standing position. 'I hope I have sated your curiosity.'";
 
 to say FallenKingTalkHelp:
-	say "     He mentioned that he needed your help before you became... friends. So, now that he has found you, as he said he would, you decide to ask him about it. He looks at you, attentively listening to your question, and then seems to be thinking about how to answer it. 'I... need... Learn... help. You can.' says the black giant, and you encourage him to continue, as that has not said much. He seems a bit frustrated to not be able to find better words, but he tries. 'Need... essence. Not... the same. Different. Yours.' His deep and eerie voice gets unsettling the more you hear, and the way he says that makes you feel very, very uncomfortable. He notices this, and beckons you to wait as he tries this again.";
-	say "     'I... No... Want to... eat you.' he hurries to say, and that kind of relieves you, but you are still finding it difficult to understand him. 'Only feel... Is safe.' he says, gesturing a sort of an embrace motion as his huge goo rod twitches.";
-	WaitLineBreak;
-	say "     So, all this time, the freakingly horrible and terrible Dark Tyrant was just trying to hit on you? Well, maybe the way his dick keeps throbbing when he sees you was already a sign, though that sort of relieves you even more. Not completely, though, as he still looks terrifying. You nod, declaring that you understood what he meant, and you would be happy(?) to sate him in that way, as well. 'With help, I... No longer... Just... Fallen. I... claim... ... my place.'";
-	say "     He claims to be a Fallen King... Hopefully this deal is as safe as he says!";
-	if Libido of Fallen King is 0:
-		now Libido of Fallen King is 1;
+	if Intelligence of Fallen King < 4:
+		say "     He mentioned that he needed your help before you became... friends. So, now that he has found you, as he said he would, you decide to ask him about it. He looks at you, attentively listening to your question, and then seems to be thinking about how to answer it. 'I... need... Learn... help. You can.' says the black giant, and you encourage him to continue, as that has not said much. He seems a bit frustrated to not be able to find better words, but he tries. 'Need... essence. Not... the same. Different. Yours.' His deep and eerie voice gets unsettling the more you hear, and the way he says that makes you feel very, very uncomfortable. He notices this, and beckons you to wait as he tries this again.";
+		say "     'I... No... Want to... eat you.' he hurries to say, and that kind of relieves you, but you are still finding it difficult to understand him. 'Only feel... Is safe.' he says, gesturing a sort of an embrace motion as his huge goo rod twitches.";
+		WaitLineBreak;
+		say "     So, all this time, the freakingly horrible and terrible Dark Tyrant was just trying to hit on you? Well, maybe the way his dick keeps throbbing when he sees you was already a sign, though that sort of relieves you even more. Not completely, though, as he still looks terrifying. You nod, declaring that you understood what he meant, and you would be happy(?) to sate him in that way, as well. 'With help, I... No longer... Just... Fallen. I... claim... ... my place.'";
+		say "     He claims to be a Fallen King... Hopefully this deal is as safe as he says!";
+		if Libido of Fallen King is 0:
+			now Libido of Fallen King is 1;
+	else if Intelligence of Fallen King >= 4:
+		say "     Given how much progress you have made, you ask the dark goo giant how you can still be helpful to him. 'I have learned that this intercourse we go through is, in fact, called sex. I suggest we continue doing it, as sex helps me learn more. Besides, it... does feel good. I have not experienced this with anyone else, so perhaps, you could introduce me to practices you mortals have with each others. Hopefully, this exchange will help you trust me more, as well.' He replies, his huge and perpetually erect manhood twitching before your eyes as he speaks.";
 
 to say FallenKingTalkEmbrace:
-	say "     Following your interaction with the Dark Tyrant, you mention that whatever he did to you in that embrace was really intense, and just feel curious about it all. He tries to mutter a few words to explain himself. 'You... in me... help... my strength. And... I learn.' He gives it a pause before continuing, as if thinking of more words. 'I... hope- no... try...! To make you... enjoy.' You figured that this is a process he needs to evolve and develop himself in the way he needs, and all the crazy stuff that happens is just a way to try make you enjoy yourself while he does it. You have been in less pleasant conditions, right? 'I... want... thank you... For... Everything. Hope... I... talk better... soon. In future. Now... Is... hard.'";
-	say "     You feel the giant really struggles to speak, most of the times. Perhaps continuing to interact with him will help, in the future.";
+	if Intelligence of Fallen King < 4:
+		say "     Following your interaction with the Dark Tyrant, you mention that whatever he did to you in that embrace was really intense, and just feel curious about it all. He tries to mutter a few words to explain himself. 'You... in me... help... my strength. And... I learn.' He gives it a pause before continuing, as if thinking of more words. 'I... hope- no... try...! To make you... enjoy.' You figured that this is a process he needs to evolve and develop himself in the way he needs, and all the crazy stuff that happens is just a way to try make you enjoy yourself while he does it. You have been in less pleasant conditions, right? 'I... want... thank you... For... Everything. Hope... I... talk better... soon. In future. Now... Is... hard.'";
+		say "     You feel the giant really struggles to speak, most of the times";
+		if Intelligence of Fallen King < 3:
+			say ". Perhaps if you continue to interact with him the way you have, he will become smarter over time? You can only try a few couples of times more and then ask him about it again, afterwards.";
+		else if Intelligence of Fallen King is 3:
+			say ". What you have done so far seems insufficient... So, if letting him take you within him bolsters his ability to communicate, perhaps you could suggest a [bold type]deeper connection[roman type]? There has to be more options to perform this sort of dark embrace...";
+	else if Intelligence of Fallen King >= 4:
+		say "     After having gone through such an experience, you decide to check if this version of his dark embrace helped him, in any way. He shows you a smile and kneels before you. 'It has. I have finally comprehended your language, but I must keep on learning. If you were to offer yourself to me more... I would be very grateful and, of course, repay you in every way I can.' The dark goo giant speaks, with a ghastly deep voice still.";
 
 Section 2-2 - Fallen King Sex Menu
 
@@ -227,6 +243,12 @@ to say DarkTyrantSexMenu:
 	now sortorder entry is 2;
 	now description entry is "He's totally been asking for it, right";
 	[]
+	if Intelligence of Fallen King >= 3 and "Given Dark Embrace" is listed in traits of Fallen King:
+		choose a blank row in table of fucking options;
+		now title entry is "Let him get inside you";
+		now sortorder entry is 3;
+		now description entry is "Have him temporarily inside your body";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -246,6 +268,8 @@ to say DarkTyrantSexMenu:
 					say "[DarkTyrantSexEmbrace]";
 				else if (nam is "Grab and worship that massive cock"):
 					say "[DarkTyrantSexCockWorship]";
+				else if (nam is "Let him get inside you"):
+					say "[DarkTyrantSexSymbiosis]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -291,7 +315,10 @@ to say DarkTyrantSexEmbrace:
 		SanLoss 15;
 	TraitGain "Given Dark Embrace" for Fallen King;
 	if Intelligence of Fallen King < 3:
+		say "     [bold type]The Dark Tyrant grows stronger...[roman type][line break]";
 		increase Intelligence of Fallen King by 1;
+	else if Intelligence of Fallen King is 3:
+		say "     [bold type]The Dark Tyrant is unable to gain any more strength from this...[roman type][line break]";
 	now Fallen King is nowhere;
 
 to say DarkTyrantSexCockWorship:
@@ -323,7 +350,65 @@ to say DarkTyrantSexCockWorship:
 	else:
 		SanLoss 15;
 	if Intelligence of Fallen King < 3:
+		say "     [bold type]The Dark Tyrant grows stronger...[roman type][line break]";
 		increase Intelligence of Fallen King by 1;
+	else if Intelligence of Fallen King is 3:
+		say "     [bold type]The Dark Tyrant is unable to gain any more strength from this...[roman type][line break]";
 	now Fallen King is nowhere;
+
+to say DarkTyrantSexSymbiosis:
+	if Intelligence of Fallen King < 4: [first time]
+		say "     Given how his process of learning does, you ask the dark giant if there is a way for him to touch you in an even deeper level. He nods and crouches down in front of you, his erection almost bumping on you, though he carefully makes space for himself by beckoning you to step back. He then stretches his hand towards you, suggesting that you should lay yours above his, all in a silent language. You think you understand what he is saying and do it, placing your palm on his before dark goo begins to engulf your arm.";
+	else:
+		say "     Now that you are acquainted with this technique and found it rather pleasurable, you ask the dark giant if he would like to perform a dark symbiosis once more. 'It is my pleasure to take on your offer, mortal' he replies, crouching down in front of you, his erection almost bumping on you, though he carefully makes space for himself by beckoning you to step back. He then stretches his hand towards you and you give him yours, placing your palm on his before dark goo begins to engulf your arm.";
+	WaitLineBreak;
+	say "     Rather than pushing you into him, the goo goes to you, swirling around your skin like a consuming aura that was about to hurl you into darkness, but the process delivers plenty of tiny warm stings throughout your pores as you feel like it is taking over you, somehow. Pleasure is undeniable as it surrounds you, the giant now turned into a mass of flowing blackness around you, and within a minute, you feel it sort of merging with your body. You can feel it as your own skin, the goo around you following your movements, every motion you make, as if you were the Dark Tyrant himself, except... you are still you. His voice whispers in your mind like a second consciousness, tempting you to explore your new body.";
+	say "     'This is rather enjoyable, mortal [if Intelligence of Fallen King is 4]. I knew you were special...' He says, with newfound intelligence[else]. I hope we can continue to do this.' He says, after completely settling in within you, once more[end if]. It is as if your relationship with one another had deepened in such a way that you feel like you were one and one only. Looking over yourself, you appear to be a tall, musclebound black goo monster, much like the Tyrant himself, except not as gigantic and with a big cock that dandles softly, yet heavily, between your thighs. 'We are perfect together, you and I. You complement me, and I grant you mighty greatness. Let us enjoy each other.'";
+	WaitLineBreak;
+	say "     A mix of lust and curiosity takes over you as your hands, almost with a mind of their own, begin to rub all over your new body, caressing your bulging muscles and feeling up your slick gooey skin. The cock between your legs is quick to harden as you fondle your chest, run your fingers down your abs and, finally, join your hands around that soon to be throbbing shaft. You can feel it, yearning for your attention as it only grows, bigger and meaner, a dick you would need at least four hands the size of yours to fully cover its length. The pair of hanging nuts underneath your dark member weighs heavily, as your orbs fill with the antecipation of a powerful release. You feel powerful, durable, virile... And invincible.";
+	say "     Keeping one hand over your chest, you stroke that impressive member of yours with the other, giving in to the lust that begs for your full focus. Each time you rub at that wet tip, a glob of goo precum drops at your feet, and you can feel the pleasure of your companion doubling your own, truly as if you were the same individual. The form he bestowed you fits better and better as you thoroughly enjoy the blissfulness it provides, and the more you embrace it, the better it all feels. 'Enjoying my form, mortal? Think of the things we could do together... We would be... Unstoppable.' The Tyrant speaks still in your mind, your erection growing bigger and harder as you jerk off, even your muscles seem to grow slightly larger as he lingers within you.";
+	WaitLineBreak;
+	say "     Each time your rub the palm of your hand against that sensitive tip, down to the long and girthy shaft which pulsates with desire, and back again towards your cock's drooling head, you approach the so awaited climax that promises to be intense. 'Let it come. It is the pinnacle of our joining which you crave, deep within you. Feel it... Release yourself...' His words continue to whisper in your mind with a much more enticing voice than previously, all of it encouraging you to pick up the pace and jerk faster. 'Yes...! Do it... Don't stop...' You feel the edge closer and closer to break, until eventually, a surge of intense pleasure bursts through every single one of your senses and your cock explodes in an avalanche of dark goo.";
+	say "     Your cum is this dark gooey liquid that comes out of you as you feel it abandon your body, which slowly returns to its former shape, leaving you through the manhood that was shaped between your legs as you jerk it off until the very last drop. Each spurt shakes you with such an overwhelming joy that by the end of it, all your limbs are shaking and you can barely stand on your feet. You collapse as strength leaves you, that intoxicating feeling of invulnerability no longer with you, neither is the Dark Tyrant. No trace of your deed is ever found as all the dark goo has vanished, but it definitely left a mark in your memory of how amazing that felt.";
+	NPCSexAftermath Player receives "Other" from Fallen King;
+	if "Strong Psyche" is listed in feats of Player:
+		SanLoss 10;
+	else if "Weak Psyche" is listed in feats of Player:
+		SanLoss 30;
+	else:
+		SanLoss 15;
+	if Intelligence of Fallen King < 4:
+		say "     [bold type]The Dark Tyrant grows stronger, once more.[roman type][line break]";
+		now Intelligence of Fallen King is 4;
+	now Fallen King is nowhere;
+
+[***********************************************************]
+[***********************************************************]
+[***********************************************************]
+Section X - Dev Cheats
+[***********************************************************]
+[***********************************************************]
+[***********************************************************]
+
+SkipToFallenKing is an action applying to nothing.
+Understand "GetFallenKing" as SkipToFallenKing.
+
+Check SkipToFallenKing:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+Carry out SkipToFallenKing:
+	connect Hellfire Corridor;
+	say "     Connected Hellfire Corridor.";
+	now Resolution of Gift From Abyss is 2;
+	if carried of abyssal remnant is 0:
+		ItemGain abyssal remnant by 1;
+	say "     Solved Gift From Abyss the necessary way.";
+	now Resolution of Friend Of The Darkness is 3;
+	now Resolution of DarkTyrantQuest is 2;
+	now VRDarkTyrantTracker is -1; [safety measure]
+	say "     Dark Tyrant has been befriended, his everyturn rules are now active.";
+	say "     Done.";
 
 Fallen King ends here.

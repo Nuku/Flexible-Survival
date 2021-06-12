@@ -1,8 +1,9 @@
-Version 1 of Hellfire Workers by Gherod begins here.
+Version 2 of Hellfire Workers by Gherod begins here.
 
 "Adds NPCs to the Hellfire Club."
 
 [Version 1 - File created - Gherod]
+[Version 2 - Exotic Patrons who the player can hire for personal enjoyment were added]
 
 [***********************************************************]
 Section 1 - Arad & Egran
@@ -1018,7 +1019,7 @@ Scent of black silk thong is "Smells like sweet musk... It was worn before, but 
 [ DUNGEON PRISONERS ]
 
 [***********************************************************]
-Section P - Eranyd
+Section 4 - Eranyd
 [***********************************************************]
 
 Table of GameCharacterIDs (continued)
@@ -1169,5 +1170,395 @@ Instead of fucking Eranyd:
 
 to say SexWithEranyd:
 	say "[bold type]<< Author's Note: This is not possible at the moment. There are no sex scenes for this character, yet. >>[roman type][line break]";
+
+
+[***********************************************************]
+Section 5 - Exotic Escorts
+[***********************************************************]
+
+to say ToronTalkExoticEscortsMenu:
+	say "     [bold type]'Very well, have a look at the catalog.'[roman type][line break]";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Agranoth";
+	now sortorder entry is 1;
+	now description entry is "Ask about Agranoth, the void demon of many limbs";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Dirkanor";
+	now sortorder entry is 2;
+	now description entry is "Ask about Dirkanor, the hellfire demon with a hyper sized cock";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ynisless";
+	now sortorder entry is 3;
+	now description entry is "Ask about Ynisless, the psychic and sophisticated demoness";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Agranoth"):
+					say "[ToronTalkExoticEscortsAgranoth]";
+				if (nam is "Dirkanor"):
+					say "[ToronTalkExoticEscortsDirkanor]";
+				if (nam is "Ynisless"):
+					say "[ToronTalkExoticEscortsYnisless]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You excuse yourself as you have changed your mind.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+[***********************************************************]
+Section 5-1 - Agranoth
+[***********************************************************]
+
+Table of GameCharacterIDs (continued)
+object	name
+Agranoth	"Agranoth"
+
+Agranoth is a man.
+ScaleValue of Agranoth is 5. [Huge]
+Body Weight of Agranoth is 9. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Agranoth is 9. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Agranoth is 1. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Agranoth is 14. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Agranoth is 4.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Agranoth is 15. [length in inches]
+Breast Size of Agranoth is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Agranoth is 4. [count of nipples]
+Asshole Depth of Agranoth is 15. [inches deep for anal fucking]
+Asshole Tightness of Agranoth is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Agranoth is 2. [number of cocks]
+Cock Girth of Agranoth is 5. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Agranoth is 24. [length in inches]
+Ball Count of Agranoth is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Agranoth is 5. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Agranoth is 0. [number of cunts]
+Cunt Depth of Agranoth is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Agranoth is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Agranoth is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Agranoth is false.
+PlayerRomanced of Agranoth is false.
+PlayerFriended of Agranoth is false.
+PlayerControlled of Agranoth is false.
+PlayerFucked of Agranoth is false.
+OralVirgin of Agranoth is false.
+Virgin of Agranoth is true.
+AnalVirgin of Agranoth is false.
+PenileVirgin of Agranoth is false.
+SexuallyExperienced of Agranoth is true.
+TwistedCapacity of Agranoth is true. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Agranoth is true. [steriles can't knock people up]
+MainInfection of Agranoth is "".
+Description of Agranoth is "[Agranothdesc]".
+Conversation of Agranoth is { "<This is nothing but a placeholder!>" }.
+The scent of Agranoth is "     ".
+
+to say AgranothDesc:
+	say "     ";
+
+to say ToronTalkExoticEscortsAgranoth:
+	say "     'You wish to meet Agranoth? A charming fellow, if I must say. Most of our submissive patrons ask for him every once in a while, others are quite loyal and only ask for him, actually. Mister Agranoth was recruited by Mogdraz, from one of the pocket dimensions within the Void Realm, and is a former wanderer. Such bravery rewarded him with unyielding will and several body modifications, including [bold type]increased body size, multiple limbs and an extremely dominant personality[roman type]. He was, uhm... quite hard to tame, as we're, in fact, speaking of an actual hellspawn, but there are very few things the hellfire seed cannot overcome. Now, he is actually one of the most profitable escorts! Not among our demonic patrons, however. Those prefer pure humans, still.'";
+	LineBreak;
+	say "     'With that said, do you wish to schedule a session with Mister Agranoth?' That will be [bold type]10 Obsidian Coins[roman type] for a full hour.";
+	say "     ([link]Y[as]y[end link]) - Yes, pay to see Agranoth.";
+	say "     ([link]N[as]n[end link]) - No, you are not interested at the moment.";
+	if player consents:
+		LineBreak;
+		if carried of obsidian coin > 9:
+			ItemLoss obsidian coin by 10;
+			if Libido of Mogdraz > 0 and Libido of Mogdraz < 99:
+				increase Lust of Mogdraz by 1; [Mogdraz approves when the player spends money on his club's services]
+			say "     With a nod, you grab a handful of Obsidian Coins and place them over the counter, so that Toron can collect them. 'Everything appears to be in order, I shall take you to Mister Agranoth's room. Through here.' he says, gesturing towards the Staff door, to where you follow him. The more you visit this side of the club, the more amazed you are at its many pathways and doors, looking bigger at each passing moment. Perhaps you do not truly know the dimensions of this building, but it never ceases to amaze you. Most doors are closed, some silent, some with questionable bump and thud sounds, rarely ever a voice, and you cannot hear anything until you are mere inches away from each entrance.";
+			say "     Agranoth's room seems to be located in a deeper level, which you think you could only find if guided by Toron. This particular level seems like a labyrinth...";
+			WaitLineBreak;
+			say "[ExoticEscortsAgranothSession]";
+		else:
+			say "     You are interested in paying for a session with Agranoth, but unfortunately, you do not seem to have enough obsidian coins. 'That's a shame, indeed! I'm sorry, but I cannot provide you any of these services for free[if Resolution of MogdrazRomance >= 8], no matter your current relationship with Lord Mogdraz[end if]. Once you have the necessary payment, we may talk about this, again.'";
+			WaitLineBreak;
+			say "[ToronTalkExoticEscortsMenu]";
+	else:
+		LineBreak;
+		say "     'Very well, then.' he replies, awaiting further instructions from you.";
+		WaitLineBreak;
+		say "[ToronTalkExoticEscortsMenu]";
+
+to say ExoticEscortsAgranothSession:
+	say "     As Toron bows in your direction, he leaves you in front of your hired escort's door.";
+	say "     ([link]Y[as]y[end link]) - Go in.";
+	say "     ([link]N[as]n[end link]) - Chicken out. No refunds, though.";
+	if player consents:
+		LineBreak;
+		say "     Now that you are here and have paid, it would be a shame to just go without checking what is on the other side of this door. You approach it and knock, hearing a grunt and a very deep demonic voice speaking 'Come right in.' After this, you push it open, as it slides inwards, and step inside the room. The first thing you notice is how hot it is, as an almost suffocating heat scatters across your face, with the scent of an alluring masculinity filling your nostrils like a mind-altering drug. In front of you stands an impossibly tall demon overshadowing you, at around a height of nine feet and ten inches, very large obsidian bull horns, two pairs of huge muscular arms stacked one above the other, a complete four-pack of pectorals for the quad-arms, and with a seemingly normal, yet extremely powerful legs. As he is proudly naked, you can see dandling between his thighs an actual pair of monstrous cocks, currently soft, with a duo of ostrich-egg sized balls hanging underneath.";
+		if PlayerMet of Agranoth is true:
+			say "     He grins at your arrival, your eyes immediately drawn to the visible twitch his dual manhoods make. 'Look who's back for more...! You like me, huh...?' - he says, then looks over to his pair of rods, and finally back at you - 'Well, they like you too.' You think he is genuinely smiling at you, but demons always have that scary grin that bites off your bones like a freezing chill, despite how hot the air around you is.";
+		else: [first time]
+			say "     He shows an intrigued grin once he sees you for the first time, eyeing you up and down from head to feet. 'Hm... A first timer.' he says, his cocks twitching slightly as he examines you. 'I'm sure Toron filled you in with my details. I hope you know what you're coming for, [boygirl]... There's no way back, now.'";
+		WaitLineBreak;
+		say "     He then beckons you to approach him. By simply placing his hand forward closed as a fist and moving his index finger one time from your direction to his, a compulsion forms in your will to follow his command.";
+		if player is dominant:
+			say "     Normally, given your dominant personality, this would not affect you in the slightest, but there is something very unique about this demon that you cannot resist. While you reluctantly follow his order, your ego is shattered and you feel helpless. The heat is excruciating, weakening your movements and thoughts as you remain at his mercy. This demon owns you, either you like it or not.";
+		else if player is submissive:
+			say "     As you easily obey due to your submissive tendencies, a sort of tingling pleasure hits you by surprise as your lust is prompted, like a positive reinforcement. Your eagerness cause the demon's grin to widen, and the unbearable heat around you shifts into a more pleasant warmth, leaving you in a hazy bliss.";
+		else:
+			say "     Strangely, you feel no will to disobey. In fact, you carry on his order without giving it much thought, and as you do this, a sort of tingling pleasure hits you by surprise as your lust is prompted, like a positive reinforcement. The demon enjoys seeing you not attempting to resist it and shifts the air around you into a much more tolerable warmth.";
+		WaitLineBreak;
+		say "     'Now... what shall we do...?' he wonders to himself as he pulls your head closer to the pair of two feet long cocks, raising to attention as your distance from them grows narrower. Clearly, he is not giving it much thought, as he only stops pulling you once your lips come in contact with one of his shafts, but his hand remains on the back of your skull, keeping you from getting away. Both his cocks harden as you kiss and lick them almost mindlessly. By caressing one dick, then the other, as you bring your hands into play to stroke them, you end up giving the huge demon a combination of blowjob and handjob to both his growing erections. They throb in your grasp and affection while Agranoth merely rubs the back of your head.";
+		say "     'Aren't you a dedicated [boygirl]? Hm... I think I know what we could do, but carry on sucking me off.' he says, and you oblige him. Your head is now between both his rods, hands on each, and your mouth goes from one to the other. The more you rub and stroke them, the harder they throb as the veiny and absolutely monstrous cocks they are. Agranoth grins down at you as he observes you work to please him, watching you kissing, licking and sucking at his members, one at a time. It is not soon after that they begin to leak precum, drops slowly making their way over to your mouth and greeting you in a blissfully sweet taste that makes you yearn for more. Once your tongue slips between the glans of one of his dicks, you get rewarded with a mouthful of the stuff...";
+		WaitLineBreak;
+		say "     ... But unfortunately, his other cock's precum is wasted onto the floor as it hastily oozes out. Nevertheless, the demon does not seem to mind it as he finds himself rock hard and in need of additional stimulation. 'Alright... now that you've got to know the goods... let's do something better.' he says, and as his words barely leave his mouth, you find all his four hands on you, covering your mouth and face, bending you over for him and forcing you on all fours. Agranoth then positions himself behind you and, seconds after, you feel one of his giant dicks slip between your legs as the other climbs over your back, laying heavily on top of you.";
+		say "     He keeps you effectively immobilized with his overwhelming strength, helpless to anything he decides to do to you... 'I'm going in you... And you can't say no.' he informs you in such an ominous tone, and indeed, you cannot resist. Soon enough, you feel one of his large endowments poking at your back entrance, and despite his size, you find yourself capable of taking his meat in you without any pain nor trouble whatsoever, as your body remains relaxed under his care. Such a feat is not without the work of demonic magic, perhaps, as you take the huge demon's dick in its fullest, even feeling it make your belly bulge as he thrusts in deep [if player is female]. 'I only do anal, hope you don't mind that, cute stuff[end if].";
+		WaitLineBreak;
+		say "     With one of his hands covering your mouth, another keeping your head in place, and his last pair grabbing you by the hips, you are thoroughly fucked by a two foot-long of a cock so hard that you feel your insides getting a whole new arrangement. While this would defy all laws of biology (and any science, really) he finds a way to impale you in his manhood and keep you in pure lusty bliss, and the dick left outside simply drools all over your helpless body, coating you in demonic precum until you are drenched and dripping it. His nuts swing with each of his thrusts, filled to the brim and awaiting their sweet release, which takes a long, long time to arrive...";
+		say "     'That's it, little bitch, you're mine now.' Agranoth utterly dominates you, even finding time to swap cocks as the whim strikes him, flipping you around in a myriad of positions that he deems adequate for the occasion. Once you are being fucked in doggy style, then he positions you to take it in missionary, and eventually, you end up riding him while embracing his other dick, all while he keeps that happy grin on his face. One would think he is the one enjoying himself playing with you like a sex toy, going through so many different positions that he effortlessly puts you in that you inevitably lose count, from a certain point onwards... Your hole is stretched beyond what you could imagine possible, and he even takes time to switch dicks, using both and one at a time at various occasions.";
+		WaitLineBreak;
+		say "     For an entire hour, your ass is fucked without mercy, and he only lets you go when he shouts in a demonic moan that makes the whole room tremble, accompanied by his climax. 'Fuck yeah, here's come the special...!' An avalanche of hellish seed finds its way inside you, filling your guts until you look pregnant with all the babies that could fit in your body. But of course, only one of his members is actually inside you when that happens. The other simply coats your skin in several generous blasts of demon cum for what seems like a whole minute.";
+		say "     Whether you hit your orgasm or not, nor how many times, he does not care. His job is done, so he gives your ass a tap as he escorts you outside his room. 'Come back anytime, cute little bitch. Always eager to use your holes some more.' he says, showing you his biggest grin as he closes the door behind you.";
+		WaitLineBreak;
+		say "     When Toron comes to take you, you see he was already prepared for that messy finish... Like the good and caring bartender he is, he helps you clean up before you return to the Lounge...";
+		NPCSexAftermath Player receives "OralCock" from Agranoth;
+		NPCSexAftermath Player receives "AssFuck" from Agranoth;
+		now PlayerMet of Agranoth is true;
+	else:
+		LineBreak;
+		say "     You were just about to go in, but on second thought, despite the money you have already paid, you decided to return with Toron before he disappeared into the darkness. He eyes you with a frowned eyebrow, but you explain you went back with your decision and simply wish to leave. 'Well, no refunds.' he says, and then you are escorted back to the Lounge.";
+
+[***********************************************************]
+Section 5-2 - Dirkanor
+[***********************************************************]
+
+Table of GameCharacterIDs (continued)
+object	name
+Dirkanor	"Dirkanor"
+
+Dirkanor is a man.
+ScaleValue of Dirkanor is 4. [DB sized]
+Body Weight of Dirkanor is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Dirkanor is 9. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Dirkanor is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Dirkanor is 9. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Dirkanor is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Dirkanor is 8. [length in inches]
+Breast Size of Dirkanor is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Dirkanor is 2. [count of nipples]
+Asshole Depth of Dirkanor is 15. [inches deep for anal fucking]
+Asshole Tightness of Dirkanor is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Dirkanor is 1. [number of cocks]
+Cock Girth of Dirkanor is 5. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Dirkanor is 72. [length in inches]
+Ball Count of Dirkanor is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Dirkanor is 7. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Dirkanor is 0. [number of cunts]
+Cunt Depth of Dirkanor is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Dirkanor is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Dirkanor is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Dirkanor is false.
+PlayerRomanced of Dirkanor is false.
+PlayerFriended of Dirkanor is false.
+PlayerControlled of Dirkanor is false.
+PlayerFucked of Dirkanor is false.
+OralVirgin of Dirkanor is false.
+Virgin of Dirkanor is true.
+AnalVirgin of Dirkanor is false.
+PenileVirgin of Dirkanor is false.
+SexuallyExperienced of Dirkanor is true.
+TwistedCapacity of Dirkanor is true. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Dirkanor is true. [steriles can't knock people up]
+MainInfection of Dirkanor is "".
+Description of Dirkanor is "[Dirkanordesc]".
+Conversation of Dirkanor is { "<This is nothing but a placeholder!>" }.
+The scent of Dirkanor is "     ".
+
+to say DirkanorDesc:
+	say "     ";
+
+to say ToronTalkExoticEscortsDirkanor:
+	say "     'Ah, Dirkanor, is it? What is there to say about such a [bold type]well-endowed fellow[roman type]... A niche pick, not exactly for everyone. Dirkanor is of the common hellfire demon kind, but has received several commendations by Mogdraz himself during his time serving in field operations. Currently, he serves as one of our escorts in the [bold type][']Hyper['][roman type] category. He has, indeed, an obscenely massive dong. It really isn't for everyone, but those who pick him generally have no complaints. I suppose it really depends if you are looking for a giant manhood and everything that comes with it. Oh, and [bold type]if you see something moving inside his balls, that might be a patron who paid extra[roman type]. Do not mind them.'";
+	LineBreak;
+	say "     'With that said, do you wish to schedule a session with Dirkanor?' That will be [bold type]10 Obsidian Coins[roman type] for a full hour.";
+	say "     [link](1)[as]1[end link] - Yes, pay to see Dirkanor.";
+	say "     [link](2)[as]2[end link] - No, you are not interested at the moment.";
+	say "     [link](3)[as]3[end link] - Ask about this [']extra['] payment thing.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to say yes, [link]2[end link] to say no or [link]3[end link] to ask about the extra payment.";
+	if calcnumber is 1:
+		LineBreak;
+		if carried of obsidian coin > 9:
+			ItemLoss obsidian coin by 10;
+			if Libido of Mogdraz > 0 and Libido of Mogdraz < 99:
+				increase Lust of Mogdraz by 1; [Mogdraz approves when the player spends money on his club's services]
+			say "     With a nod, you grab a handful of Obsidian Coins and place them over the counter, so that Toron can collect them. 'Everything appears to be in order, I shall take you to Mister Agranoth's room. Through here.' he says, gesturing towards the Staff door, to where you follow him. The more you visit this side of the club, the more amazed you are at its many pathways and doors, looking bigger at each passing moment. Perhaps you do not truly know the dimensions of this building, but it never ceases to amaze you. Most doors are closed, some silent, some with questionable bump and thud sounds, rarely ever a voice, and you cannot hear anything until you are mere inches away from each entrance.";
+			say "     Dirkanor's room is not too far below, though its exact location is considerably difficult to tell. It is likely that you would need Toron to lead you through all these corridors...";
+			WaitLineBreak;
+			say "[ExoticEscortsDirkanorSession]";
+		else:
+			say "     You are interested in paying for a session with Dirkanor, but unfortunately, you do not seem to have enough obsidian coins. 'That's a shame, indeed! I'm sorry, but I cannot provide you any of these services for free[if Resolution of MogdrazRomance >= 8], no matter your current relationship with Lord Mogdraz[end if]. Once you have the necessary payment, we may talk about this, again.'";
+			WaitLineBreak;
+			say "[ToronTalkExoticEscortsMenu]";
+	else if calcnumber is 2:
+		LineBreak;
+		say "     'Very well, then.' he replies, awaiting further instructions from you.";
+		WaitLineBreak;
+		say "[ToronTalkExoticEscortsMenu]";
+	else if calcnumber is 3:
+		Linebreak;
+		say "     Intrigued about this option, you decide to ask Toron about it, regarding what he mentioned about clients who paid extra. 'Given Dirkanor's immense size, he also happpened to have acquired vore capabilities. Clients pay an extra to be vored and kept inside his balls for a specified amount of time until they are finally released.' says Toron, in quite a stoic tone.";
+		if PlayerMet of Dirkanor is false:
+			say "     'However, I do not advise you to procure this service without first meeting him. Schedule a session with Dirkanor, first, and then we can... discuss this possibility.'";
+		else:
+			say "     'Hm... This is odd. I will have to check the regulations with Lord Mogdraz for this one. Well, it appears Dirkanor offered you, specifically, permanently full and free access to said [']extra[']. If boss is not opposed to this, then I do not see why I should. Proceed as normal, this is a decision between you and him.'";
+		WaitLineBreak;
+		say "[ToronTalkExoticEscortsDirkanor]";
+
+to say ExoticEscortsDirkanorSession:
+	say "     As Toron bows in your direction, he leaves you in front of your hired escort's door.";
+	say "     ([link]Y[as]y[end link]) - Go in.";
+	say "     ([link]N[as]n[end link]) - Chicken out. No refunds, though.";
+	if player consents:
+		if PlayerMet of Dirkanor is false: [first session]
+			LineBreak;
+			say "     Now that you are here and have paid, it would be a shame to just go without checking what is on the other side of this door. You approach it and knock, before a deep and masculine voice speaks 'Door's open!' After this, you give it a gentle push, as it slides inwards, and step inside the room. Your eyes are greeted with the hungest hellfire demon you have ever seen, sat down on a red couch made to his measure, already throbbing hard, and that is not an exaggeration. It looks like Toron was not lying about how massive his member actually is, and you doubt there would be any sort of clothing capable of fully concealing his gigantic manhood. 'See somethin['] y'like?' he asks, leaning his torso to the side so he can see you. In fact, his cock is so big that its tip stands taller than his head! With such a monstrous girth, you doubt you could fully circle it around with your arms alone.";
+			say "     In his ridiculously massive balls, planted on the floor, you also see movement coming from one of his testicles, as if someone was stuck inside and pushing against the walls. 'Close the door, will ya? Y're the only one allowed to be in here, anyway.' he says, gesturing over to where you came from. After closing it behind you, he gives you a grin as he beckons you to come closer. 'Don't be shy! Ya wanted a big dick, ye got it right here, for the whole next hour. Ah... Have ya paid the [']extra['], by any chance? There's a vacant space, y'see...' he asks you, his leg and foot pressing against his left ball, the one which has no suspicious movement from within.";
+			WaitLineBreak;
+			say "     It appears the demon has not been informed of this, and you could potentially lie, but... something keeps you from saying anything but the truth. Inevitably, you end up telling him that you have not. 'Aw, such a shame...! Love feeling my balls full! Give it some thought, someday, I only offer the most pleasurable stays...' - he tells you, rubbing the left side of his sack with his heel - 'Anyway, since y've just paid for the standard, ya'd better get started with worshippin['] me. Maybe the next client will face a hungrier cock once y're done...' the demon continues to tease you and globs of precum come descending through his shaft. 'Hmmm... [if player is naked]and y'took ya clothes off, already[else]And y'should get naked, it feels so much better that way[end if]...'";
+			say "     As your bare body comes in contact with his enormous manhood, you can definitely feel it throb harder and harder, growing a few extra inches upwards as veins pop all around. 'Ohh... fuck... my cock [bold type]loves[roman type] ya!' he lustily comments between blissful moans as your hands, arms and chest hug the lower half of his dick. Soon enough, a thick stream of precum comes raining down on you, quickly getting your whole body all wet and slippery, which helps you rub his delightfully gigantic member at an even better pace. 'Ooh... Yeah! Ya make me so... [bold type]huge[roman type]! I need more!' You did not think it could get any bigger, but here it is, Dirkanor's cock growing bigger, heavier and fatter before your eyes.";
+			WaitLineBreak;
+			say "     'Ngh... it's gettin['] so heavy... W-watch out, I gotta...' Such weight forces the demon to stand up and let his massive dong fall onto the floor, which would be capable of nearly crushing you if he did not warn you. As this happens, you back away in order to give it all the space it needs, and find yourself looking at the glistening tip of his cock, loads of precum still oozing from the slit between his glans. His massive rod is only being supported by his equally gigantic balls, which keeps it hovering slightly above the floor. 'Ahh... y'made me really horny... I wasn't expectin['] it... There's... somethin['] bout ya-... o-oooh fuck!' Another thick spurt of precum follows and hits you right on the chest, splattering you with the stuff as the hellfire demon lets out a loud moan. 'I... Fuck... I don't think I can last long with ya...'";
+			say "     The entire room is becoming a mess with sticky man fluids all over the place and Dirkanor's dick drooling like a ravenous beast. 'Could ya... Keep rubbin['] it? N-not too close to the slit, or I might accidentally slurp ya in... Which I really, really want t-... er... a-avoid! T-that's the word...' he asks you, and you do not see why you should not oblige him. Returning to your former task, you give his dick another hug and, this time, you decide to include your mouth, lips and tongue, focusing your attention on the sensitive cockhead. The red devil almost squirms in pleasure with each movement you make, and though you are careful to keep it slow and steady, you soon feel the giant manhood pulsate...";
+			WaitLineBreak;
+			say "     'Fuuuckk...!' With only a warning shot, his entire load follows like a geyser, or rather, a massive volcano of cum, exploding all over the room! 'I'm... gonna cum!' he now warns you, and you are quick to conclude that what just coated the entrance to the bedroom entirely with spunk was, in fact, just the first spurt. The true orgasm is happening right now as this absolute monster of a dick shoots a huge and thick glob of cum right towards the room's door, pushing it open, and you think the former inhabitant in his balls was part of that, though you really cannot see them due to how thick this white avalanche of hellfire demon cum is. 'I-it's gonna flood the room... Ohh...!'";
+			say "     His moans continue for how long his climax persists, but the devil is quick to hold you before you drown in this mess, pulling you to his body as you stretch your hand to grab his. You do not want him to keep cumming without some caress, however, so you keep your free one over his muscular body and hop on the couch to make out with him. This... really sets his orgasm to a whole another level as he holds you tight, putting his tongue all over yours as your lips kiss one another. When you reopen your eyes after such a passionate kiss, you really cannot see the door anymore, only a large wall of sticky cum and a little movement within its layers. Dirkanor takes a moment to catch his breath as he admires you from up close.";
+			WaitLineBreak;
+			say "     'Ye're amazin[']... I can barely hold my legs together... P-phew...' he tells you as he takes a seat, all his energy spent. 'Think I emptied my balls way after time... Toron's gonna have my head... D'ya see the [one of]girl[or]gal[or]guy[or]dude[at random]?' the demon asks you, and you think you saw some movement past the curtain of jizz, but you cannot really confirm who it was. 'Hopefully they probably scrammed, already. Can't say stayin['] in my nuts is what everyone expects. Usually they don't return, folks keep sayin['] it's uncomfortably hot and sticky in there and they feel like they're meltin' away due to that. Some nearly drown in there! Guess my balls do fill up lots... Makes me nervous whenever someone comes for the extra, but... feels so good I can't help it... Think it's like anxiety and eagerness mixed! And my cock gets really fuckin['] hard at the thought...'";
+			say "     Dirkanor keeps holding you close to him as he speaks, with his muscular arm around your shoulders. 'Hey, listen... I know this is yer first time with me, but... I really liked ya! Think y'could, maybe... return later? I'd like t'offer ya somethin['] special... But it's okay if ya don't wanna, y'can just rub my dick again... that's fine too. Er... Y'll see what it is when ya return!' After he is finished, he gives your whole face an amorous lick and kiss, probably from the enthusiasm. 'Sorry bout that. Couldn't resist!' he says as he pulls away, letting go of you with a big grin on his face. 'So... See ya! And nice to meet ya, too!'";
+			WaitLineBreak;
+			say "     Carefully, you make your way through the drenched floor and dripping cum by the door, which you find out dettached from the wall. There are footprints of spunk along the corridor leading somewhere, so you are almost sure whoever was in Dirkanor's balls got out intact.";
+			say "     When Toron comes to get you, he brings his hands over his head. 'Not again...! Curses! I have to reinforce that damned door! And look at you...! Nearly took a bath on his cum! I'll have to get you to a high pressured shower!' he complains. There is not much choice other than follow him wherever he says, but you do get clean and fresh before you return to the Lounge.";
+			now PlayerMet of Dirkanor is true;
+		else: [subsequent sessions]
+			LineBreak;
+			say "     Now that you are here and have paid, it would be a shame to just go without checking what is on the other side of this door. You approach it and knock, before a deep and masculine voice speaks 'Door's open!' After this, you give it a gentle push, as it slides inwards, and step inside the room. Your eyes are greeted with a good view of Dirkanor's gigantic manhood once more, the hungest hellfire demon you have ever seen, sat down on a red couch made to his measure and already throbbing hard. 'Who's that?' - he asks, leaning his torso to the side so he can see you - 'Ah[one of]! It's my buddy[or]! Look at ya[or]! I see ya[or]! My cutest friend[or]! my lovely pal[at random]! Here to see me again!' he says with a big smile on his handsome face.";
+			say "     'I'm glad it's yer face! Was wonderin['] when y'd come visit. Sorry y'have to pay... If I was the one callin['] the shots I'd let ya see me everytime y'wanted!' In his ridiculously massive balls, planted on the floor, [one of]you see movement coming from one of his testicles, as if someone was stuck inside and pushing against the walls. 'Got a client inside me durin['] our session, but still got a free spot if y'were to, uh... eheh... Not that I'm suggestin['] anything[or]you see a pair of particularly engorged orbs remaining still, but unusually large, even for Dirkanor's standards. 'Been fuckin['] empty in my nuts! My boys just had plenty of time to fill up in all the lonesomeness... That's why they look so bloated[at random]...' Amidst chuckles, Dirkanor beckons you to come closer. 'Close the door, will ya? Y're the only one allowed to be in here, anyway.'";
+			WaitLineBreak;
+			say "     Knowing how this works, you already came in naked, which puts a smile on the crimson devil's face as he eyes you from head to feet. 'Fuck, come give my dick a hug or somethin[']! It surely missed ya!' As he tells you this, you are already moving towards it to give it to take the gigantic manhood in for an embrace, and as your bare body comes in contact with his enormous manhood, you can definitely feel it throb harder and harder, growing a few extra inches upwards as veins pop all around. 'Ohh... fuck... my cock [bold type]really loves[roman type] ya!' he lustily comments between blissful moans as your hands, arms and chest hug the lower half of his dick. Soon enough, a thick stream of precum comes raining down on you, quickly getting your whole body all wet and slippery, which helps you rub his delightfully gigantic member at an even better pace. 'Ooh... Yeah! Ya make me so... [bold type]huge[roman type]! I need more!' You did not think it could get any bigger, but here it is, Dirkanor's cock growing bigger, heavier and fatter before your eyes.";
+			WaitLineBreak;
+			say "     'Ngh... it's gettin['] so heavy... W-watch out, I gotta...' Such weight forces the demon to stand up and let his massive dong fall onto the floor, which would be capable of nearly crushing you if he did not warn you. As this happens, you back away in order to give it all the space it needs, and find yourself looking at the glistening tip of his cock, loads of precum still oozing from the slit between his glans. His massive rod is only being supported by his equally gigantic balls, which keeps it hovering slightly above the floor. 'Ahh... y'made me really horny... like y'always do... o-oooh fuck!' Another thick spurt of precum follows and hits you right on the chest, splattering you with the stuff as the hellfire demon lets out a loud moan. 'I... Fuck... I'm not gonna last long this time, either...'";
+			say "     The entire room is becoming a mess with sticky man fluids all over the place and Dirkanor's dick drooling like a ravenous beast. 'Just keep rubbin['] it, will ya? It feels so fuckin['] gooood...' he asks you, and you do not see why you should not oblige him. Returning to your former task, you give his dick another hug and, this time, you decide to include your mouth, lips and tongue, focusing your attention on the sensitive cockhead. The red devil almost squirms in pleasure with each movement you make, and though you are careful to keep it slow and steady, you soon feel the giant manhood pulsate...";
+			WaitLineBreak;
+			say "     'Fuuuckk...!' With only a warning shot, his entire load follows like a geyser, or rather, a massive volcano of cum, exploding all over the room! 'I'm... gonna cum!' he now warns you, and you are quick to conclude that what just coated the entrance to the bedroom entirely with spunk was, in fact, just the first spurt. The true orgasm is happening right now as this absolute monster of a dick shoots a huge and thick glob of cum right towards the room's door, pushing it open, and just continues shooting for the next moments. 'Fuuck yeah! Make it fuckin['] rain! Yesss!'";
+			say "     His moans continue for how long his climax persists, but the devil is quick to hold you before you drown in this mess, pulling you to his body as you stretch your hand to grab his. You do not want him to keep cumming without some caress, however, so you keep your free one over his muscular body and hop on the couch to make out with him. This... really sets his orgasm to a whole another level as he holds you tight, putting his tongue all over yours as your lips kiss one another. When you reopen your eyes after such a passionate kiss, you really cannot see the door anymore, only a large wall of sticky cum. Dirkanor takes a moment to catch his breath as he admires you from up close.";
+			WaitLineBreak;
+			say "     'It always feels so good when y'come here... I wish I could keep ya with me for longer...' he tells you, and you see him licking his lips as he seems to be thinking of something...";
+			if "Cock Vored Player" is not listed in traits of Dirkanor:
+				WaitLineBreak;
+				say "     'Say... have y'asked Toron about the extra stuff? Because I left a thing, there... a note, for ya.' he asks.";
+				say "     ([link]Y[as]y[end link]) - You know, you asked.";
+				say "     ([link]N[as]n[end link]) - Tell him you have not.";
+				if player consents:
+					LineBreak;
+					say "     You let him know that you, indeed, asked Toron about it, and you know about this note he left you, which prompted the bartender to look it up regarding its legality. 'I've checked in with boss, he said it's alright since it boosts my morale and contributes to a... Better performance... Whatever he meant. Anyway, yeah, so... heh... D'ya wanna try it? Y'd be the first I'd swallow down my cock for free since I joined the club.'";
+					say "     ([link]Y[as]y[end link]) - Say that you would love to!";
+					say "     ([link]N[as]n[end link]) - Refuse the offer.";
+					if player consents:
+						Linebreak;
+						say "     'Really?!' he asks, incredulous. You could swear that his massive dick just twitched. Actually, it seems to be getting harder, again... and is not stopping. 'Fuck, hearing that turned me on so much that I got myself a boner! I'm... fuckin['] happy y'wanna please me that way! A-as y'can see...' It is not long until the sexy devil's giant penis is erect, again, which sounds really odd given how much he came, just now. One would think he would need more time to refill after such a load... 'All y'gotta do is lie down in front of my cock and slide yer feet in. It feels better for ya, that way. Some have gone head first into it and found themselves stuck upside down in my nut... Wasn't too good for them, with all that cum building up inside... Had to cum them out before they drowned!'";
+						say "     Nodding to the demon, you know what to do and that you should follow his directions. So, given what he just said, you walk over to his dick and position himself just in front of it. As you lie down, another shot of precum comes to greet you. 'That was just my dick sayin['] hi! He's gotta get ya wet and slippery...' he says, and a few more come landing on top of your body as you raise your feet over his sensitive glans. He is right, your soles slip through the pinkish surface really easily, so much that you do not think it would be hard to slip inside through that gaping slit, looking back at you with hunger as it even opens up slightly at your proximity, like a maw.";
+						WaitLineBreak;
+						say "     Eventually, you slide one foot to it, then the other, and push... Dirkanor's cock accepts you eagerly, sucking at them and pulling them in up to your calves. You hear the devil letting out a loud moan as he throws his head back like he was orgasming again, but this time, something is going into his dick, rather than out. Slowly but steadily, your body is brought into his shaft, inch by inch, consumed by the enormous meatlog sucking down at you, up to your waist... then chest... 'Y'feel so good... Get your arms in, c'mon... Let me take ya quick... Can't wait to have ya inside me...' he begs you, in the most lustful of tones. When you give him your arms, that is all he needs to continue to pull you inside... 'Mmmh... Fuuuck yeah!'";
+						say "     The last thing you see before your head is engulfed into wet darkness is his happy grin, and he makes the reminder of the descent quick enough for you. 'Into my balls, now... Y're gonna love them! Or, well, at least one of them!' His voice is now heard faintly as the gurgling sounds from his shaft muffle your ears, squeezing and wiggling at your sides only to pull you deep down into his nutsack. Your body is not just dropped into them, but rather squeezed into its tight confines, relatively empty with merely a few streams of demon seed running down. 'Oh... I feel ya... Fuck... Y're really in there... my cock's so hard...! Wish y'could see it, now...'";
+						WaitLineBreak;
+						say "     During the following hour, you are kept inside Dirkanor's [one of]left[or]right[at random] nut, a tight, squishy and really, really hot space that has you sweaty, made even hotter as his cum begins to build up to normal levels. After a while, another client arrives. Sounds from the outside are barely audible, but the devil's moans manage to reach your ears as he gets worshipped by whoever gets to touch his cock, now. You do not think he moans as much as when it is you, but he clearly enjoys it, nonetheless. In fact, you are the first to know that he is getting closer as his balls begin to fill up more with you inside. They provide a really warm and creamy bath as his manjuice begins to submerge you in it, your head barely remaining above the cum level...";
+						say "     You would think you were about to be shot out of his nuts, but they really seem to be taking some time... Enough for it to raise up to your nose. You lean your head back so you can continue breathing, and put your body above it so that his cum does not fully take you, pushing against his sack. It is quite a difficult thing to do, as all his insides are slippery, and often you find yourself falling down onto the spunk and accidentally swallowing some of it... Whether this turns you on or not, your life is endangered in this moment as you struggle to keep your face above all that cum flowing into his testicles while he just moans in pleasure...";
+						WaitLineBreak;
+						say "     Though, you feel your surroundings trembling, giving you some hope. His balls are beginning to rise, and it definitely does not take him long to shout like a roaring beast and shoot you right through the door, absolutely covered in his cum. The force is so great that you are knocked out unconscious as you hit your head against something solid...";
+						WaitLineBreak;
+						follow the turnpass rule;
+						say "     'Looks like you've had your fun.' a voice wakes you up. It is Toron, who has brought you into a different room after having cleaned you up. 'This is what happens whenever Dirkanor cock vores someone. I have to do the cleanup. Anyway, hope you've enjoyed, at least. Time to return to the Lounge, if you're finally awake.' Well... he sounds annoyed, but you are clean, fresh and safe, perhaps thanks to the club's amazing bartender. No, most definitely thanks to the club's amazing bartender.";
+						say "     You return to the Lounge a few moments later.";
+						TraitGain "Cock Vored Player" for Dirkanor;
+					else:
+						Linebreak;
+						say "     Despite your initial interest for this extra feature, you feel inclined to refuse, for reasons only known to you. Dirkanor does not ask about them, either, and nods. 'Well, anytime y're interested in it, just let me know. Though I'll always ask ya first, though, it is in my protocol to make sure my clients leave satisfied!'";
+						say "     After he is finished, he gives your whole face an amorous lick and kiss, probably from the enthusiasm. 'Sorry bout that. Couldn't resist!' he says as he pulls away, letting go of you with a big grin on his face. 'So... See ya! And nice to have ya, too!'";
+						WaitLineBreak;
+						say "     Carefully, you make your way through the drenched floor and dripping cum by the door, which you find out dettached from the wall. When Toron comes to get you, he brings his hands over his head. 'What in the...! Yet again?! Do I have to go for a vault door, next time?! And look at you...! Nearly took a bath on his cum! I'll have to get you to a high pressured shower!' he complains. There is not much choice other than follow him wherever he says, but you do get clean and fresh before you return to the Lounge.";
+				else:
+					Linebreak;
+					say "     You are not aware of this note he speaks, or perhaps you are, but you know where this is going and you simply do not want to pursue it any further. Regardless, he simply nods in understanding. 'Well, if y're interested, ask him about it, then we can... do some fun stuff when y'come back! I'll always ask ya first, though. I ain't a dick, despite what I look like...!'";
+					say "     After he is finished, he gives your whole face an amorous lick and kiss, probably from the enthusiasm. 'Sorry bout that. Couldn't resist!' he says as he pulls away, letting go of you with a big grin on his face. 'So... See ya! And nice to have ya, too!'";
+					WaitLineBreak;
+					say "     Carefully, you make your way through the drenched floor and dripping cum by the door, which you find out dettached from the wall. When Toron comes to get you, he brings his hands over his head. 'What in the...! Yet again?! Do I have to go for a vault door, next time?! And look at you...! Nearly took a bath on his cum! I'll have to get you to a high pressured shower!' he complains. There is not much choice other than follow him wherever he says, but you do get clean and fresh before you return to the Lounge.";
+			else if "Cock Vored Player" is listed in traits of Dirkanor:
+				WaitLineBreak;
+				say "     'Well... my balls are pretty empty, now. It'd be safe for ya to go in, if... y'wanted... Y'know I do, a lot...' he informs you, hoping that you would accept going in his balls again.";
+				say "     ([link]Y[as]y[end link]) - Let's do it!";
+				say "     ([link]N[as]n[end link]) - You are not in the mood for that, right now.";
+				if player consents:
+					Linebreak;
+					say "     'Yeah?!' he asks, really happy to hear it. You could even swear that his massive dick just twitched. Actually, it seems to be getting harder, again... and is not stopping. 'Fuck, I always get so fuckin['] turned on when y'wanna go in me... A-as y'can see... my dick doesn't lie!' It is not long until the sexy devil's giant penis is erect, again, which sounds really odd given how much he came, just now. One would think he would need more time to refill after such a load... 'Y'know the drill by now, right? Just lie down and stick yer feet in my slit, I'll do the rest... or my cock will! Sometimes he has a mind of his own...'";
+					say "     Nodding to the demon, you know what to do and that you should follow his directions. So, with what he just said, you walk over to his dick and position himself just in front of it. As you lie down, another shot of precum comes to greet you. 'It keeps happenin[']! Looks like he really wants ya to slide in easily!' he says, and a few more come landing on top of your body as you raise your feet over his sensitive glans. Indeed, you are very slippery as you rub your soles against the pinkish surface, so much that you do not think it would be hard to slip inside through that gaping slit, looking back at you with hunger as it even opens up slightly at your proximity, like a maw.";
+					WaitLineBreak;
+					say "     Eventually, you slide one foot to it, then the other, and push... Dirkanor's cock accepts you eagerly, sucking at them and pulling them in up to your calves. You hear the devil letting out a loud moan as he throws his head back like he was orgasming again, but this time, something is going into his dick, rather than out. Slowly but steadily, your body is brought into his shaft, inch by inch, consumed by the enormous meatlog sucking down at you, up to your waist... then chest... 'Y'feel so good... Get your arms in, c'mon... Let me take ya quick... Can't wait to have ya inside me, again...!' he begs you, in the most lustful of tones. When you give him your arms, that is all he needs to continue to pull you inside... 'Mmmh... Fuuuck yeah!'";
+					say "     The last thing you see before your head is engulfed into wet darkness is his happy grin, and he makes the reminder of the descent quick enough for you. 'Into my balls, now... Y're gonna love them! Or, well, at least one of them!' His voice is now heard faintly as the gurgling sounds from his shaft muffle your ears, squeezing and wiggling at your sides only to pull you deep down into his nutsack. Your body is not just dropped into them, but rather squeezed into its tight confines, relatively empty with merely a few streams of demon seed running down. 'Oh... I feel ya... Fuck... Y're really in there... my cock's so hard...! Wish y'could see it, now...'";
+					WaitLineBreak;
+					say "     During the following hour, you are kept inside Dirkanor's [one of]left[or]right[at random] nut, a tight, squishy and really, really hot space that has you sweaty, made even hotter as his cum begins to build up to normal levels. After a while, another client arrives. Sounds from the outside are barely audible, but the devil's moans manage to reach your ears as he gets worshipped by whoever gets to touch his cock, now. You do not think he moans as much as when it is you, but he clearly enjoys it, nonetheless. In fact, you are the first to know that he is getting closer as his balls begin to fill up more with you inside. They provide a really warm and creamy bath as his manjuice begins to submerge you in it, your head barely remaining above the cum level...";
+					say "     You would think you were about to be shot out of his nuts, but they really seem to be taking some time... Enough for it to raise up to your nose. You lean your head back so you can continue breathing, and put your body above it so that his cum does not fully take you, pushing against his sack. It is quite a difficult thing to do, as all his insides are slippery, and often you find yourself falling down onto the spunk and accidentally swallowing some of it... Whether this turns you on or not, your life is endangered in this moment as you struggle to keep your face above all that cum flowing into his testicles while he just moans in pleasure...";
+					WaitLineBreak;
+					say "     Though, you feel your surroundings trembling, giving you some hope. His balls are beginning to rise, and it definitely does not take him long to shout like a roaring beast and shoot you right through the door, absolutely covered in his cum. The force is so great that you are knocked out unconscious as you hit your head against something solid...";
+					WaitLineBreak;
+					follow the turnpass rule;
+					say "     'What a surprise, got dicked in again.' a voice wakes you up. It is Toron, who has brought you into a different room after having cleaned you up. 'Don't you want to have a permanent stay in some giant demon's balls or something and spare me from... this? I'm sure Mogdraz could work something out.' Obviously, he was being sarcastic. 'I swear, if you had to pay full price to do that everytime you come to Dirkanor...!' Well... he definitely sounds annoyed, but you are clean, fresh and safe, perhaps thanks to the club's amazing bartender. No, most definitely thanks to the club's amazing bartender.";
+					say "     You return to the Lounge a few moments later.";
+					increase Strength of Dirkanor by 1; [counting how many times Dirkanor CV'd the player]
+				else:
+					Linebreak;
+					say "     Despite your initial interest for this extra feature, you feel inclined to refuse, for reasons only known to you. Dirkanor does not ask about them, either, and nods. 'Well, anytime y're interested in it, just let me know. Though I'll always ask ya first, though, it is in my protocol to make sure my clients leave satisfied!'";
+					say "     After he is finished, he gives your whole face an amorous lick and kiss, probably from the enthusiasm. 'Sorry bout that. Couldn't resist!' he says as he pulls away, letting go of you with a big grin on his face. 'So... See ya! And nice to have ya, too!'";
+					WaitLineBreak;
+					say "     Carefully, you make your way through the drenched floor and dripping cum by the door, which you find out dettached from the wall. When Toron comes to get you, he brings his hands over his head. 'What in the...! Yet again?! Do I have to go for a vault door, next time?! And look at you...! Nearly took a bath on his cum! I'll have to get you to a high pressured shower!' he complains. There is not much choice other than follow him wherever he says, but you do get clean and fresh before you return to the Lounge.";
+	else:
+		LineBreak;
+		say "     You were just about to go in, but on second thought, despite the money you have already paid, you decided to return with Toron before he disappeared into the darkness. He eyes you with a frowned eyebrow, but you explain you went back with your decision and simply wish to leave. 'Well, no refunds.' he says, and then you are escorted back to the Lounge.";
+
+[***********************************************************]
+Section 5-3 - Ynisless
+[***********************************************************]
+
+to say ToronTalkExoticEscortsYnisless:
+	say "     'Do you want to request Lady Ynisless? She is Lady Ynis, for short, and she's a [bold type]psychic[roman type]. With one glance she can put anyone into a trance and lust frenzy. Highly requested for her hypnotic gifts, indeed. On top of that, she comes with some perks, like a [bold type]increased body size, very large breasts, lactation on demand, ample hips, great womb capacity[roman type]...' - Toron brings the catalog closer to his eyes while frowning his eyebrows - '... Uhm... so, there is also [bold type]shapeshifting abilities for gender preference accomodation, illusionary play, telekinesis for remote sex toy control[roman type]... W-well, she fills quite a lot of roles, [bold type]including those of a male[roman type], if one so desires.'";
+	say "     'Ah, though I'm afraid to inform that she is [bold type]unavailable[roman type], sadly. She seems to be booked with many... Stupid man things, as she wrote here, herself... Uhm... Pardon her, patience is not her virtue, for certain. If you wish to schedule a session with her, you will have to wait until she's free.'";
+	WaitLineBreak;
+	say "     << Author's Note: Currently, she was no content available, but that may change in the future! >>";
+	LineBreak;
+	say "[ToronTalkExoticEscortsMenu]";
 
 Hellfire Workers ends here.

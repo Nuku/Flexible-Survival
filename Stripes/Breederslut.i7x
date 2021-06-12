@@ -228,6 +228,7 @@ to say bsheat:
 		say "     He ruts you like what feels like a long time, having pushed you to several short orgasms. But now a big one is building even as his panting grows heavier. His knot bulges larger, tying the two of you together, ensuring there will be no escape from your deliciously decadent fate. Knowing he's getting close as well turns you on all the more, your overheated womb demanding his gooey load to put out the fiery need burning inside it by this point. And when it does come, it is a powerful blast of cum after another, painting your vagina and leaking into your womb to claim your pups.";
 		say "     As his orgasm wanes, his big knot leaves you tied to him and keeping his hot semen inside you. But rather than stop there, he only pauses briefly before resuming his thrusting, pumping that tightly held cock of his inside the clutching grip of your sloppy cunt. You start to moan and pant, your need and pleasure growing again as he fucks you again. And again. And again. You end up breed several more times before he's finally done and allows himself to stop and let his knot go down enough to pull out of you. A cascade of excess canine cum flows from your stretched and well-used cunny, pooling on the floor as you lay in the warm, sticky mess with an expression of dazed contentment on your face.";
 		impregnate with "Breederslut";
+		NPCSexAftermath Player receives "PussyFuck" from Dominick;
 		now Libido of Player is Libido of Player / 2;
 		now lastfuck of Dominick is turns;
 

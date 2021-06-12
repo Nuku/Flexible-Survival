@@ -124,6 +124,7 @@ to say bluecf_ap_sex:
 		now morale of Player is 0;
 	else:
 		increase morale of Player by 1;
+	CreatureSexAftermath "Blue Chaffinch" receives "AssFuck" from "Player";
 
 to say bluechaffcaught:
 	choose row MonsterID from the Table of Random Critters;
@@ -145,6 +146,7 @@ to say bluechaffcaught:
 	else:
 		say "     Laughing, you give his ass a slap. Why would you want to keep him now that the fun of breaking him is over, you ask. He blushes at this and clutches at your leg, but you push him away, telling him that surely one of the big felines around would love to sink their claws into the songbird, if that's all he wants. His shoulders sag and he struggles to his feet, limping away slowly. You smile to yourself; it seems that's finally over with.";
 	now area entry is "Nowhere";
+	CreatureSexAftermath "Blue Chaffinch" receives "AssFuck" from "Player";
 
 
 Part 3 - Feline Victory
@@ -186,6 +188,7 @@ to say bluecf_fel_sex:
 		now morale of Player is 0;
 	else:
 		increase morale of Player by 1;
+	CreatureSexAftermath "Blue Chaffinch" receives "AssFuck" from "Player";
 
 to say bluechaffpounced:
 	choose row MonsterID from the Table of Random Critters;
@@ -207,6 +210,7 @@ to say bluechaffpounced:
 	else:
 		say "     Laughing, you give his ass a slap. Why would you want to keep him now that the fun of breaking him is over, you ask. He blushes at this and clutches at your leg, but you push him away, telling him that surely one of other the big felines around would love to sink their claws into the songbird, if that's all he wants. His shoulders sag and he struggles to his feet, limping away slowly. You smile to yourself; it seems that's finally over with.";
 	now area entry is "Nowhere";
+	CreatureSexAftermath "Blue Chaffinch" receives "AssFuck" from "Player";
 
 
 Section 2 - Creature Insertion

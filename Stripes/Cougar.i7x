@@ -25,9 +25,11 @@ to say losetocougar:
 
 to say cougarride:
 	say "     Placing her paws on your shoulders to pin you down, she grinds her wet pussy against your cock, getting you hard before mounting it. She mrowls as she rides your shaft, gripping her inner walls around it. This feline wildwoman rides your cock hard and fast until finally you cum, shooting your hot seed into her womb. She leaves you spent and panting as she pads off on all fours, cum dripping out behind her.";
+	CreatureSexAftermath "Cougar" receives "PussyFuck" from "Player";
 
 to say cougartop:
-		say "     Placing her paws on your shoulders to pin you down, she grinds her hard shaft between your thighs, lining it up with your pussy before sinking it into you. She mrowls as she thrusts into you again and again, sliding those feline barbs along your vaginal walls, stimulating you deep inside. This feline wildwoman pounds away at you hard and fast until she finally cums, shooting her hot seed into your womb. She leaves you spent and pads off on all fours.[impregchance]";
+		say "     Placing her paws on your shoulders to pin you down, she grinds her hard shaft between your thighs, lining it up with your pussy before sinking it into you. She mrowls as she thrusts into you again and again, sliding those feline barbs along your vaginal walls, stimulating you deep inside. This feline wildwoman pounds away at you hard and fast until she finally cums, shooting her hot seed into your womb. She leaves you spent and pads off on all fours.";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Cougar";
 
 to say beatthecougar:
 	now cougarfight is 1;
@@ -42,8 +44,13 @@ to say beatthecougar:
 			say "     Feeling in the mood for some feline fun, you grab the exhausted kitty and push her into position. She mewls softly, wary of you hurting her further, yet hopeful for some sexual relief for her lustful urges.";
 			if Player is male:
 				say "     You push her onto her back and line up your cock with her pussy, making her mrowl in delight. You fondle her breasts and pound away at her. You tweak and tease her nipples while watching her hard cock bounce against her tummy with each thrust you make. Her precum soaks the soft, cream fur there as you drive into her. Her horny mewls get louder as she digs her paws into the ground and climaxes. Her hot pussy clamps down firmly, milking your cock for all you'll give as you cum moments later. Her own thick seed sprays across her chest and muzzle, leaving white streaks all across her body and face. When done, you get her to lick your cock clean before leaving her panting on the ground and leaking your cum.";
+				CreatureSexAftermath "Cougar" receives "PussyFuck" from "Player";
 			else:
-				say "     You push her back and take her throbbing shaft in your hand, making her mrowl in delight. You stroke it a few times before climbing atop her and sinking down onto that hard meat. Its soft, feline barbs stimulate your inner walls as they slide in and out. You fondle her breasts and bounce in her lap, tweaking and teasing her nipples. Her cock throbs and pulses inside you as her excitement builds until finally she mrowls lustfully and sprays her hot cum deep inside you, painting your insides with her virile seed. You squeeze down around her, loving the hot flow into your [if Player is female]womb[else]bowels[end if]. Waiting until she's drained her balls into you, you get off her slowly. You guide her muzzle between your legs, getting her to lick your leaking [if Player is female]pussy[else]asshole[end if] clean before leaving her panting on the ground, reeking of sex.[impregchance]";
+				say "     You push her back and take her throbbing shaft in your hand, making her mrowl in delight. You stroke it a few times before climbing atop her and sinking down onto that hard meat. Its soft, feline barbs stimulate your inner walls as they slide in and out. You fondle her breasts and bounce in her lap, tweaking and teasing her nipples. Her cock throbs and pulses inside you as her excitement builds until finally she mrowls lustfully and sprays her hot cum deep inside you, painting your insides with her virile seed. You squeeze down around her, loving the hot flow into your [if Player is female]womb[else]bowels[end if]. Waiting until she's drained her balls into you, you get off her slowly. You guide her muzzle between your legs, getting her to lick your leaking [if Player is female]pussy[else]asshole[end if] clean before leaving her panting on the ground, reeking of sex.";
+				if player is female:
+					CreatureSexAftermath "Player" receives "PussyFuck" from "Cougar";
+				else:
+					CreatureSexAftermath "Player" receives "AssFuck" from "Cougar";
 		else:
 			say "     Deciding to head off while you can, you leave her to her own devices. Which is just what she does, stroking her cock needfully while fingering herself. You can hear her lustful yowls as you walk off.";
 	else:

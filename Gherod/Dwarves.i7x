@@ -572,8 +572,6 @@ to WWKEmbassy:
 			say "     'So we have to watch two random dwarves getting married, now. Yay.' he says, pretty annoyed at your decision, but he kind of respects it. He's just not happy with it one bit, often looking at the hammer instead while your eyes are fixated on the ceremony going.";
 		WaitLineBreak;
 		WWCeremony;
-		WaitLineBreak;
-		WWEnd;
 	else:
 		LineBreak;
 		say "     With your prize so close, you can't really bother yourself with watching the rest of the ceremony. Not now, at least. 'Yeah, let's go get the hammer and piss off. No time to watch two random dudes getting married.' Yogdrak doesn't seem to care, either.";

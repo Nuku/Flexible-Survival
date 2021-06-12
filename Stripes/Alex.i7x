@@ -292,7 +292,7 @@ Instead of fucking the Alex:
 		follow the turnpass rule;
 
 
-to say alexsexytimes1:
+to say alexsexytimes1: [oral sex]
 	say "     With a grin, Alex slides an arm around your waist and leads you off to his bedroom. This room, like the rest of his condo, is tastefully decorated with modern furnishings. There are several candles around the room, as well as a camping lantern to provide light in the evenings. His bed is quite large and covered in [one of]red[or]blue[or]turquoise[or]crimson[or]aqua[or]scarlet[at random] satin sheets today. He kisses you softly as he lowers you onto the soft sheets, intent on repaying you for all your help, as well as dealing with his pent up arousal from being up here all alone. His hands run across your body, helping you out of any remaining clothes. Once you're naked and comfortable on his bed, he slowly strips for you, taking off his suit and baring his body to you. He s[if alexbrunch is 0]eems a little embarrassed by showing his changed body to[else]hows his changing body to you proudly, having grown much more comfortable with it and with[end if] you.";
 	say "     Aside from his ears, nose and muzzle, you can see that he's softly-furred and ferret-like from his [if alexbrunch is 0]thighs[else if alexbrunch is 1]waist[else if alexbrunch is 2]chest[else if alexbrunch is 3]shoulders[end if] down to his feet, which are a little paw-like. His fur has a two-tone tan coloration. His cock, poking from a tan-furred sheath, is slender and has a strangely curved tip. He runs his fingers over it slowly as he climbs onto the bed to join you, stroking himself towards full hardness[alexbodyreset].";
 	[WaitLineBreak]
@@ -303,21 +303,24 @@ to say alexsexytimes1:
 		say "     Having gotten you quite worked up, when he finally plunges his mouth down over your cock and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [Ball Size Adjective of Player] [Balls] to slip a finger into your pussy while the other strokes his animalistic member.";
 		[WaitLineBreak]
 		say "     His nimble fingers and artful muzzle tease your [CockName of Player] shaft and [cunt size desc of Player] pussy until you can hold back no longer and shoot your hot load down the ferrety man's throat. He sucks it all down with soft moans until your balls are drained. His muzzle pulls back and he slides his slinky body up yours to kiss you. As your tongue dives between his lips, you can feel the mustelid's cum spraying across your body.";
+		CreatureSexAftermath "Ferret" receives "OralCock" from "Player";
 	else if Player is male:				[MALE]
 		say "     The ferret runs his fingers over your cock[smn], holding [itthemm] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of Player] cock[smn] slowly, working over every square centimeter of [itthemm] and your balls to pleasure you[if anallevel is 3]. He continues lower, sliding his tongue across your tight pucker in several slow licks. His tongue wriggles against your back entrance and eases its way into your rectum as he eagerly rims you for increased pleasure[end if]. Having gotten you quite worked up, when he finally plunges his mouth down over your [CockName of Player] penis and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [Ball Size Adjective of Player] balls while the other strokes his animalistic member.";
 		[WaitLineBreak]
 		say "     His nimble fingers and artful muzzle tease your [CockName of Player] shaft until you can hold back no longer and shoot your hot load down the ferrety man's throat. He sucks it all down with soft moans until your balls are drained. His muzzle pulls back and he slides his slinky body up yours to kiss you. As your tongue dives between his lips, you can feel the mustelid's cum spraying across your body.";
+		CreatureSexAftermath "Ferret" receives "OralCock" from "Player";
 	else:								[FEMALE]
 		say "     The ferret runs is fingers over your wet lips, the spreads them as he teasingly brushes his tongue across them. He works his tongue across your pussy again and again, nibbling your folds from time to time. Once he's tended to every square centimeter of your lips and gotten you dripping wet, he dives his tongue into you and starts licking and lapping with considerable zeal. After having gotten you all worked up, you moan loudly as that nimble tongue sets to work inside you. He smiles up at you and slips a finger into your snatch alongside his tongue while his other paw strokes his animalistic cock.";
 		[WaitLineBreak]
 		say "     His nimble finger and playful tongue tease your sensitive clit and inner walls until you can hold back no longer. You moan loudly as your orgasm washes over you, pouring your sweet waters across his tongue. He laps them up excitedly, making you moan all the more until your climax finally wanes into a pleasant afterglow. Not overstaying his welcome in your now oversensitive pussy, he slips his tongue and finger out and gives you a long lick to get your dripping juices. His muzzle pulls back and he slides his slinky body up yours to kiss you. As your tongue dives between his lips, you can feel the mustelid's cum spraying across your body.";
+		CreatureSexAftermath "Ferret" receives "OralPussy" from "Player";
 	say "     After kissing and snuggling, he wipes his sticky mess off of you with a towel before it can dry uncomfortably. He snuggles up to you as you both take a quick nap after your romp.";
 	wait for any key;
 
 to say alexsexytimes2:
 	say "     With a grin, Alex slides an arm around your waist and leads you off to his bedroom, pulling clothes off each other as you go. You are quite familiar with this room now and move onto the bed eagerly, spreading yourself out on the [one of]red[or]blue[or]turquoise[or]crimson[or]aqua[or]scarlet[at random] satin sheets. He stretches out his fully ferret body before you, then bounds around excitedly on the bed with you, licking and nibbling you all over, making you alternately giggle and moan[alexbodyreset].";
 	say "     Alex looks over your lovely, ferret body and dooks happily at the sight of his beautiful mate. You both roll around on the large bed, slender, flexible bodies intertwining as you run your paws over each other.";
-	[WaitLineBreak]
+	WaitLineBreak;
 	if Player is herm:		[HERM]
 		say "     Eventually, the smaller ferret moves his paws to your groin, taking your maleness in one and playing with your wet folds with the other. 'My dearest, what to do with you? You have this lovely cock, begging to fill your little ferret love. Does the big, sexy herm want to pin me down and have her way with my tight bottom? But you also have this cute, dripping puss, ready and waiting for your lover's ferret cock. Do you need him to fill you with his hot seed and breed you like an animal?' Both offers sound so delightful to you, but which do you prefer to take?";
 		say "     [bold type]Do you want to mount him or get fucked?[roman type][line break]";
@@ -347,13 +350,14 @@ to say alexmalesexy2:
 	else:
 		say "     Unable to resist such an offer, you get your cock nice and slick, then sink it down into him. His ass spreads open for you slowly as you thrust steadily deeper and deeper. He moans in delight beneath the larger, sexy ferret filling him.";
 	say "     You take your time until you're fully sheathed in him before you start pounding into him harder and faster. He twists his flexible upper body so he can lick and kiss you while holding his ass presented to you. As you stretch out overtop him and he nuzzles and nips at your neck, you take his cock in your paw and stroke him while pounding his rump with an increasingly frantic pace.";
-	[WaitLineBreak]
+	WaitLineBreak;
 	say "     Finally, you are driven over the edge and slam your cock deep inside him, shooting your hot seed into the sexy ferret's rump. He moans and dooks happily, begging for you to give him all you've got. With the tight grip of his asshole around you and his inner walls almost milking at you for more, you are happy to oblige and give him as much as you can while his own seed splatters onto the sheets.";
+	CreatureSexAftermath "Ferret" receives "AssFuck" from "Player";
 
 to say alexfemalesexy2:
 	say "     Unable to resist such a sexy offer, you take a hold of his cock and point it upright, teasing your pussy's wet lips against it. As your juices run down his length, you lower yourself down over his throbbing meat. You both dook in delight and start bouncing on the bed with each thrust he makes into you.";
 	say "     With his slender cock stuffed fully inside you, you lower your flexible body overtop of him, bringing your breasts to the smaller ferret's muzzle. He licks and suckles at your nipples, making you shiver in delight. His paws grip your ass, squeezing it as he pulls your hips down into each thrust he makes.";
-	[WaitLineBreak]
+	WaitLineBreak;
 	say "     Finally, he is driven over the edge and thrusts his cock deep inside you, shooting his hot seed into his sexy mate's vagina and womb. You both moan and dook as he fills you with his thick semen. Driven to orgasm yourself, your inner walls squeeze and pull at his cock, begging it to give you all it can. His throbbing member and heavy balls are happy to oblige, filling you delightfully full.";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Ferret";
 
@@ -372,13 +376,13 @@ to say alexbrunchtime:
 		say "     Waking up in the morning at Alex's again, you can smell and hear the ferret in the kitchen making breakfast for you again. You slip the bathrobe on and slink quietly out to join him. As you step into the kitchen, you are surprised to find the ferret pumping at his stiff cock, shooting his spunk into the white chocolate sauce for the pancakes.";
 		say "     Having been caught, he stops and looks at you nervously. You can't really find it in you to be mad with the sneaky ferret and slide up beside him. With your arm around him, you start stroking his cock, allowing him to finish his waning orgasm with a final, big blast into the creamy sauce.";
 		say "     With his cum to complete today's sauce, you start mixing it in while he continues cooking. You lower yourself to your knees and smear some of the chocolate sauce on his cock before passing the spoon up to him. He slowly licks it clean as you do the same to his cock. He moans and whimpers in pleasure at the attention, trying his best to focus on the cooking while you suck him off. Eventually you get your tasty treat while he only burns the eggs a little.";
-		[WaitLineBreak]
+		WaitLineBreak;
 		if Player is male:			[MALE/HERM]
 			say "     The smaller ferret climbs into your lap when you head to the dining room to eat, sharing one large plate. You snuggle, kiss and tease one another playfully while eating your breakfast, enjoying the ferret's special pancakes all the more for knowing what makes them special. The ferret playfully grinds his ass against your cock as he happily informs you that Lorenda and Lee are getting along well. It seems she's helping [']him['] become more comfortable with being partly a [']her['] as well and they are making a rather cute couple.";
 		else:					[FEMALE]
 			say "     You climb into his lap when you head to the dining room to eat, sharing one large plate. You snuggle, kiss and tease one another playfully while eating your breakfast, enjoying the ferret's special pancakes all the more for knowing what makes them special. The ferret's playful fingers tease your pussy as he happily informs you that Lorenda and Lee are getting along well. It seems she's helping [']him['] become more comfortable with being partly a [']her['] as well and they are making a rather cute couple.";
 		say "     Once your meal is done, you head back to the bedroom to get ready to head back out, but more prominently in your mind, to watch the next wave of changes overcome you.";
-		[WaitLineBreak]
+		WaitLineBreak;
 		say "     You slip off the robe and stretch out your body in front of the mirror, watching the changes in your reflection. Your body grows more lithe and flexible. You test out this flexibility, bending and contorting yourself with ease in front of the full length mirror[if Cock Count of Player > 1]. And speaking of [']full length['], the sight of your changing body excites your cocks to full erection. Like Alex's, they are smooth and slender with an upward curving glans[else if Cock Count of Player is 1]. And speaking of [']full length['], the sight of your changing body excites your cock to full erection. Like Alex's, it is smooth and slender with an upward curving glans[end if][if Cunt Count of Player > 1]. You take a moment to examine your pussies as well, playing with your pink folds, rich with the scent of aroused mustelid[else if Cunt Count of Player is 1]. You take a moment to examine your pussy as well, playing with your pink folds, rich with the scent of aroused mustelid[end if].";
 		say "[brunchtimechange]";
 		WaitLineBreak;

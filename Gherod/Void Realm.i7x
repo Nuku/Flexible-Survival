@@ -2290,8 +2290,8 @@ to say ElkHeadReaperLoses:
 to VRVoidSerpentFightConclusion:
 	if fightoutcome < 20: [player won]
 		say "     It was a tough fight, but you managed to emerge victorious by dealing the final blow to the Void Serpent, who collapses on the dark floor seemingly lifeless before you. With nothing else to do but to admire your prowess, you look around for some spoils.";
-		say "     There is, at least, [bold type]a pair of null essences[roman type] that you manage to gather from the defeated snake.";
-		ItemGain null essence by 2 silently;
+		ItemGain null essence by 2;
+		ItemGain sharp black tusk by 1;
 		now VRVoidSerpentTracker is 0;
 		WaitLineBreak;
 		say "[VRMoveOptions]";
@@ -2360,7 +2360,8 @@ to VRDarkTyrantFightConclusion:
 to VRPeculiarSummonerFightConclusion: [The peculiar summoner is one of the few 'fleeable' monsters, but a fight loss will still guarantee a bad end.]
 	if fightoutcome < 20: [player won]
 		say "     Your might was enough to push the mysterious figure away from you, making them quit their efforts at capturing you. 'Hmph, it seems you are stronger than you look. Perhaps I will succeed next time.' With these words, the peculiar summoner retreats, leaving you to your doings.";
-		say "     This battle rewarded you with at least [bold type]one null essence.[roman type][line break]";
+		ItemGain null essence by 1;
+		ItemGain strange-colored bean by 1;
 		now VRPeculiarSummonerTracker is 0;
 		WaitLineBreak;
 		say "[VRMoveOptions]";
@@ -2397,6 +2398,7 @@ to VRTentacleAbominationFightConclusion:
 		if a random chance of 2 in 3 succeeds:
 			say "     It looks like the Tentacle Abomination dropped a single [bold type]Null Essence[roman type], so you pick it up and stash it in your inventory.";
 			ItemGain null essence by 1 silently;
+		ItemGain loose tentacle by 1;
 		now VRTentacleAbominationTracker is 0;
 		now VRTentacleAbominationLinger is 0;
 		WaitLineBreak;
@@ -3378,12 +3380,21 @@ Section X - Dev Cheats
 [***********************************************************]
 
 CreateNullEssences is an action applying to nothing.
-Understand "GetNE" as CreateNullEssences.
+Understand "GetNullEssence" as CreateNullEssences.
+
+Check CreateNullEssences:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
 
 Carry out CreateNullEssences:
 	ItemGain null essence by 100 silently;
 	ItemGain sharp black tusk by 1 silently;
+	ItemGain strange-colored bean by 1 silently;
+	ItemGain loose tentacle by 1 silently;
 	say "     100 null essences added to your inventory.";
 	say "     Have a tusk, too.";
+	say "     And a strange bean.";
+	say "     And also a loose tentacle. For no reason.";
 
 Void Realm ends here.

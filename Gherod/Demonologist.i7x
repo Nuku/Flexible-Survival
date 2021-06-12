@@ -1841,6 +1841,11 @@ Section X - Dev Cheats
 SkipToXaedihr is an action applying to nothing.
 Understand "GetXaedihr" as SkipToXaedihr.
 
+Check SkipToXaedihr:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
 Carry out SkipToXaedihr:
 	move Xaedihr to Grey Abbey Library;
 	say "     Xaedihr is now in the Grey Abbey Library.";

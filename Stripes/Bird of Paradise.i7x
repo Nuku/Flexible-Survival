@@ -21,6 +21,10 @@ to say losetobirdofparadise:
 	say "     The rather rambunctious mating dance over with, the bird woman takes a deep breath and starts to sing. The very notion sounds silly at first, but as the music begins to flow and ebb around you, you suddenly find your will to fight on rapidly draining. Surrounded by song, you're content to stand motionless with your mouth agape as the bird of paradise steps forward, her talons clicking against the ground in time with her music. Those eyes, that glassy stare, they seem to grow to fill the entire world as your surroundings melt away, leaving nothing but the clear light blue of the avian's gaze and the music - oh god, the music, you're sure that the bird of paradise hasn't so much as touched you and yet against all logic, you feel warm and good all over and there's a dull heat pulsing down below and the song, it's everywhere, EVERYWHERE!";
 	say "     You can't take it anymore; throbbing in time to bird of paradise's mesmerizing singing, you barely feel your [if Player is male]balls empty themselves as she sinks her cunt down over your pulsing shaft and your [end if][if Cunt Count of Player > 1]cunts explode in oozing wetness and[else if Cunt Count of Player is 1]cunt explode in oozing wetness and your [end if]spine tingles as shivers run down its length. Unable and unwilling to fight back, you can only lie exhausted on the ground, squirming with the last of your strength as the unearthly beauty of bird of paradise's music completely overwhelms you, and darkness slowly falls.";
 	now Libido of Player is Libido of Player / 2;
+	if player is male:
+		CreatureSexAftermath "Bird of Paradise" receives "PussyFuck" from "Player";
+	else:
+		CreatureSexAftermath "Bird of Paradise" receives "Other" from "Player";
 
 
 to say beatthebirdofparadise:
@@ -48,6 +52,7 @@ to say bopvictorysex1:
 	say "     With the colorful bird pinned beneath you, it is simply a matter of slipping out your cock with one hand while you hold her down with the other. When you drive your [Cock of Player] cock into her, she sings musically in delight only to be cut off by your hand wrapping around her beak. Not wanting her to captivating song to ensnare you, you keep her keep a firm grip on it while plowing into her. All she can do is moan and whimper in pleasure as you keep driving yourself into the downy ass of hers, stuffing her cunt with your [cock size desc of Player] manhood over and over again.";
 	say "     She stopped resisting long, but you keep that beak of hers shut as a precaution, though your other hand is freed to roam over her luscious body. You grope her feathered breasts, slap her pretty ass and tease her clit, delighting in her muffled moans of pleasure as you have your way with her. The bird, used to being in control and having her way the males she ensnares, is unprepared for being on the receiving end of such rough sex and finds herself cumming repeatedly. After getting to cum several times, you drive your [Cock of Player] shaft [if Cock Length of Player > 12]as deep as it'll go[else]fully[end if] into her and drain your balls into her spasming cunt. When you're done, you pull out, wipe your sticky shaft across her downy ass and leave her then in a sex-addled daze.";
 	now Libido of Player is ( Libido of Player * 2 ) / 5;
+	CreatureSexAftermath "Bird of Paradise" receives "PussyFuck" from "Player";
 
 
 Section 2 - Creature Insertion

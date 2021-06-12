@@ -192,8 +192,8 @@ to say MogdrazIntro:
 	AddNavPoint Hellfire Club;
 	connect Hellfire Club;
 	say "     If you wish to start any job, speak to [bold type]Mogdraz[roman type] in the club. The club's bartender [bold type]Toron[roman type] will be able to provide special drinks for your adventures.";
-	WaitLineBreak;
 	if demonologist is listed in companionList of Player:
+		WaitLineBreak;
 		say "     Just as you're about to leave, a familiar silhouette shows up by the entrance, walking towards you. Judging from the absence of guards, you come to a pretty obvious conclusion of who it is. Your companion Xaedihr has followed you back here, and he made sure to clear his own way...";
 		WaitLineBreak;
 		MogdrazXaedihr;
@@ -260,6 +260,23 @@ to say HellfireLoungeDesc:
 
 instead of smelling Hellfire Lounge:
 	say "     It must be the hellfire demons musk, but everything smells so delightfully devilish in here that just makes you want to stay. The sweet and masculine musk of attractive demonic creatures is enough to send you into a brief lightheaded state, taking you some time to shake it off. There are also other creatures' scents getting mixed together, but you can barely notice them.";
+
+[--------------------------------------------------------------------------]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Hellfire Restroom	"Hellfire Restroom"
+
+Hellfire Restroom is a room.
+Hellfire Restroom is north of Hellfire Lounge. It is sleepsafe.
+The earea of Hellfire Restroom is "Red".
+Description of Hellfire Restroom is "[Hellfire RestroomDesc]".
+
+to say Hellfire RestroomDesc:
+	say "     The restroom of the club exists for those who have some biological business to take care of, or if they simply want to freshen up with one of the mirrors in the walls, before the sinks at one side of the room. On the opposite, there are plenty of private booths large enough to provide anyone their much needed privacy. Isolated from the others, however, there is a special booth, also known around the club as the [link]hellfire restroom booth[as]use hellfire restroom booth[end link], which seems to have several holes on every side, all lined up more or less at crotch level, some at higher height and others at lower. It seems to be locked, but there is a slot that should fit a coin in, as demonstrated by a suggestive symbol above the opening.";
+
+instead of smelling Hellfire Restroom:
+	say "     For a restroom, it smells pretty clean. You can tell this place is looked after very often and meets hygiene standards.";
 
 [--------------------------------------------------------------------------]
 
@@ -401,6 +418,133 @@ instead of smelling Hellfire Cell One:
 	say "     It smells strongly of sex, and especially demonic musk. This is a place only the trusted clientele and staff members are allowed, so that is to be expected.";
 
 [--------------------------------------------------------------------------]
+
+[***********************************************************]
+Section 2-1 - Hellfire Club Rooms Specific Scenes
+[***********************************************************]
+
+[Cock length variables for use in some scene variations]
+HRBCockLength1 is a number that varies. HRBCockLength1 is usually 0.[@Tag:NotSaved]
+HRBCockLength2 is a number that varies. HRBCockLength2 is usually 0.[@Tag:NotSaved]
+HRBCockLength3 is a number that varies. HRBCockLength3 is usually 0.[@Tag:NotSaved]
+HRBCockCount is a number that varies. HRBCockCount is usually 0.[@Tag:NotSaved]
+
+UseHRBooth is an action applying to nothing.
+
+understand "use hellfire restroom booth" as UseHRBooth.
+
+check UseHRBooth:
+	if player is not in Hellfire Restroom, say "You're not in the Hellfire Restroom at the moment." instead;
+
+carry out UseHRBooth:
+	say "     You are currently standing before this particular booth, which is isolated from the others and has several holes on every side, all lined up more or less at crotch level, some at higher height and others at lower. It seems to be locked, but there is a slot that should fit a coin in, as demonstrated by a suggestive symbol above the opening.";
+	if carried of obsidian coin is 0:
+		say "     Unfortunately, you have no obsidian coins with you! Maybe you should get your hands on some and try this out, later.";
+	else:
+		Linebreak;
+		say "     ([link]Y[as]y[end link]) - Insert one coin and enter the booth, if you want to suck some stranger's cocks.";
+		say "     ([link]N[as]n[end link]) - Leave.";
+		if player consents:
+			LineBreak;
+			say "     Taking a single coin from your inventory, you slide it over the slot and let it fall into the opening with a loud clink. Within a few seconds, the door unlocks and you are free to head inside. Once you do, a little light above the entrance shifts to green, possibly indicating its activation.";
+			say "     While inside the booth, you see that it actually has no toilet, or anything at all. It is simple a square shaped room with palm-sized holes all over the walls at different heights, but all of them converging to a, more or less, crotch level. Currently, nothing seems to be happening, but soon, things might change...";
+			say "     Moments later, you hear movement coming from the restroom's entrance as footsteps are heard from all around you. Some just take care of their businesses and whatever needs they have, though others seem to come and stop closer by. From this point on, it does not take too long until the first cock begins to slide through one of the holes in the wall...";
+			WaitLineBreak;
+			let randomnumber be a random number from 1 to 5;
+			if randomnumber is:
+				-- 1: [Hellfire Demon cock, 16"]
+					say "     This one is a pretty familiar red one, of the common hellfire demon kind, throbbing hard at nearly sixteen inches of length. Demonic pheromones reach your nostrils as the whole thing slides into full view, thick and veiny. They are usually quite big ones to work with, and this dick is no exception.";
+					now HRBCockLength1 is 16;
+					CreatureSexAftermath "Player" receives "OralCock" from "Hellfire Demon";
+				-- 2: [Lupine cock, 12"]
+					say "     This one is a knotted and canine dick, throbbing hard at around twelve inches of length, emanating an animalistic scent that sort of entices you to come closer.";
+					now HRBCockLength1 is 12;
+					CreatureSexAftermath "Player" receives "OralCock" from "Football Wolfman";
+				-- 3: [Huge draconic cock, 24"]
+					say "     To really start well, a whole two foot-long of a dragon dick slowly comes into full view, so big that it barely fits the hole with its girth alone. You will have to work really hard for this one, as there is plenty of it to appreciate.";
+					now HRBCockLength1 is 24;
+					CreatureSexAftermath "Player" receives "OralCock" from "Yamato Dragon";
+				-- 4: [Orc cock, 14"]
+					say "     This one is of a green tone, thick and veiny with about fourteen inches of length, its scent reaching your nostrils and really putting you in the mood. You think it might be an orc's manhood, and if so, you are definitely going to have a good time.";
+					now HRBCockLength1 is 14;
+					CreatureSexAftermath "Player" receives "OralCock" from "Orc Warrior";
+				-- 5: [Imp cock, 6"]
+					say "     This one is not particularly big, and you doubt it is from any of the hellfire demons around here. While it is red, it is only about six inches long, reminding you of those little flying imps. Perhaps one of them came to get some release, which you will happily provide.";
+					now HRBCockLength1 is 6;
+					CreatureSexAftermath "Player" receives "OralCock" from "Imp Male";
+			WaitLineBreak;
+			now HRBCockCount is 1;
+			say "     Without any further ado, you lean over to it and begin to kiss and lick it, as that is what it truly wants. At first, you tease its shaft until you feel the dick throb with desire, so eager to be put past your lips and sucked like it yearns to be. Then, you grab it and aim it towards your mouth, letting it slide into you [if HRBCockLength1 < 7]all the way in down to your throat, only stopping once the entire thing disappears into you[else if HRBCockLength1 < 19]as far as you can make it, taking it inch by inch until you cannot possibly push it in any further[else if HRBCockLength1 >= 19], barely fitting in at all due to its colossal size, so you have no alternative but to focus your sucking mostly around its tip and, maybe, a few inches past it[end if]. It pulses in response, pleased with your efforts, and juice starts to come out, giving you a sweet taste of their lusts. You think you even hear them moan as you work on their meat, really showing off your oral skills and putting on a good effort at worshipping this dick.";
+			if a random chance of 1 in 2 succeeds: [a second cock comes in]
+				now HRBCockCount is 2;
+				say "     As you suck, rub and pleasure your first pulsing rod that came to greet you, a second one begins to slide in from your side...";
+				WaitLineBreak;
+				let randomnumber be a random number from 1 to 5;
+				if randomnumber is:
+					-- 1: [Hellfire Demon cock, 16"]
+						say "     Your new visitor must be a hellfire demon, throbbing hard at nearly sixteen inches of length. There are definitely some demonic pheromones flowing from it as the whole thing slides into full view, thick and veiny. The hung demon's cock now remains only waiting for your approach.";
+						now HRBCockLength2 is 15;
+						CreatureSexAftermath "Player" receives "OralCock" from "Hellfire Demon";
+					-- 2: [Lupine cock, 12"]
+						say "     Your new visitor must be a lovely wolf, with a knotted and canine dick, throbbing hard at around twelve inches of length, with its animalistic scent greeting you as it remains only waiting for your approach.";
+						now HRBCockLength2 is 12;
+						CreatureSexAftermath "Player" receives "OralCock" from "Football Wolfman";
+					-- 3: [Huge draconic cock, 25"]
+						say "     Your new visitor has a massive draconic cock, a little above two feet long in length, eagerly awaiting your approach as it practically throbs at every second.";
+						now HRBCockLength2 is 25;
+						CreatureSexAftermath "Player" receives "OralCock" from "Yamato Dragon";
+					-- 4: [Orc cock, 14"]
+						say "     Your new visitor is clearly an orc as his green, thick and veiny cock with about thirteen inches of length, its masculine scent spreading throughout the booth as the whole thing slides into full view, awaiting your approach.";
+						now HRBCockLength2 is 13;
+						CreatureSexAftermath "Player" receives "OralCock" from "Orc Warrior";
+					-- 5: [Imp cock, 6"]
+						say "     Your new visitor is probably an imp, with a red six incher coming into full view and eagerly awaiting your approach as it pulses with need.";
+						now HRBCockLength2 is 6;
+						CreatureSexAftermath "Player" receives "OralCock" from "Imp Male";
+				WaitLineBreak;
+				say "     You definitely should not let it stay lonely for long, and after having provided your first dick its share of kissing and sucking, you move on to the next, keeping your hand there stroking it so that it won't miss you. As this new manhood that comes to see you is [if HRBCockLength2 < 7]of a manageable size, you just go ahead and give it a deepthroat, a gesture that it really appreciates as it immediately delivers a sweet glob of precum into your mouth[else if HRBCockLength2 < 19]of a large size, you first only caress its shaft with your lips before going ahead to take what you can of it down your throat. It definitely appreciates your gesture as it immediately delivers a sweet glob of precum into your mouth[else if HRBCockLength2 >= 19]of a massive size, you can only caress its shaft with your lips and try to suck on its tip, with perhaps a few more inches besides. Nonetheless, it definitely appreciates your effort as it immediately delivers a sweet glob of precum into your mouth[end if]. You find yourself giving one a handjob and a blowjob to the other, keeping them pulsing as hard as they can possibly get, and eventually, you alternate, sucking the first and handling the second as they just keep on throbbing in either your grasp or mouth.";
+				if a random chance of 1 in 2 succeeds: [a third cock comes in]
+					now HRBCockCount is 3;
+					say "     And as you are keeping both strangers on edge with your cock handling and sucking skills, a third manhood slides in right from the door in front of you!";
+					WaitLineBreak;
+					let randomnumber be a random number from 1 to 4;
+					if randomnumber is:
+						-- 1: [Hellfire Demon cock, 16"]
+							say "     It is a really nice crimson one, probably about seventeen inches and giving out an alluring fiery scent. Might be a hellfire demon's log now yearning for your attention.";
+							now HRBCockLength3 is 15;
+							CreatureSexAftermath "Player" receives "OralCock" from "Hellfire Demon";
+						-- 2: [Lupine cock, 12"]
+							say "     It is a nice knotted and canine dick, probably about twelve inches of length. Might be a wolf's or an alpha shepherd's log now yearning for your attention.";
+							now HRBCockLength3 is 12;
+							CreatureSexAftermath "Player" receives "OralCock" from "Football Wolfman";
+						-- 3: [Huge draconic cock, 25"]
+							say "     It is a large draconic cock, probably about twenty three inches in length. Might be a dragonmorph's or lizardman's dick now yearning for your attention.";
+							now HRBCockLength3 is 25;
+							CreatureSexAftermath "Player" receives "OralCock" from "Yamato Dragon";
+						-- 4: [Orc cock, 14"]
+							say "     It is a sizable green cock, probaby about fourteen inches in length. Might be an orc's dick now yearning for your attention.";
+							now HRBCockLength3 is 13;
+							CreatureSexAftermath "Player" receives "OralCock" from "Orc Warrior";
+					WaitLineBreak;
+					say "     And as you face it, given how you have the previous two cocks primed for their release, you prepare to give it your very best as you lean over to give it a suck. Naturally, [if HRBCockLength3 < 19]it takes a good amount of effort to take its every inch[else]its considerable size will not let you take much of it in your mouth[end if], but you manage to properly satisfy it as each one of your hands is kept stroking and caressing the previous manhoods. They leak and throb, with the one where your lips are at soon following the same path after a good moment of worship. Inevitably, all the three strangers grow near their points of no return as you steadily stimulate them, providing them all with their share of love by taking turns on which you suck and jerk.";
+					WaitLineBreak;
+					say "     Now as all the recipients from your affection seem pleased with your efforts, their cocks pulsing at their hardest state, a few additional kisses and licks here and there, coupled with fast jerking motions once you get your hands on them and, one by one, they begin to shoot generously at you. One after the other, they all reach their moments to cum all over you, spurt after spurt of thick jizz coating your face, chest and torso while you stroke at the two at both your sides and lick the one in front of you until their very last drop. Grunting can be heard from the outside all the way until their climaxes begin to subside, and you have earned yourself quite the cum shower from these three horny strangers. You give them a couple of kisses each before they begin to retract from the way they came.";
+					say "     Then, you are given a moment to take a breath as they begin to leave. Having figured that you have had enough, you leave the booth and clean yourself.";
+				else: [cum with 2 cocks]
+					WaitLineBreak;
+					say "     Now as all the recipients from your affection seem pleased with your efforts, their cocks pulsing at their hardest state, a few additional kisses and licks here and there, coupled with fast jerking motions once you get your hands on them and, one by one, they begin to shoot generously at you. One after the other, they all reach their moments to cum all over you, spurt after spurt of thick jizz coating your face, chest and torso while you stroke at the two dicks with one hand each until their very last drop. Grunting can be heard from the outside all the way until their climaxes begin to subside, and you have earned yourself quite the cum coating from these two horny strangers. You give them a couple of kisses each before they begin to retract from the way they came.";
+					say "     Then, you are given a moment to take a breath as they begin to leave. Having figured that you have had enough, you leave the booth and clean yourself.";
+			else: [cum with 1 cock]
+				WaitLineBreak;
+				say "     Now as the lone recipient from your affection seems pleased with your efforts, their cock pulsing at its hardest state, a few additional kisses and licks here and there, coupled with fast jerking motions with both your hands on it, giving it your everything as it pulses and throbs closer and closer to its point of no return... and eventually, it bursts a generous load at you, spurt after spurt of thick jizz coating your face while you stroke and kiss it until its very last drop. Grunting can be heard from the outside all the way until their climax begins to subside, and you have earned yourself a pleasant facial from this horny stranger. You give it a couple of kisses more before it retracts from the way it came.";
+				say "     Then, you are given a moment to take a breath as they begin to leave. Having figured that you have had enough, you leave the booth and clean yourself.";
+			now HRBCockLength1 is 0;
+			now HRBCockLength2 is 0;
+			now HRBCockLength3 is 0;
+			now HRBCockCount is 0;
+		else:
+			LineBreak;
+			say "     You step away from the booth.";
 
 [***********************************************************]
 Section 3 - Escort Services
@@ -2391,5 +2535,17 @@ Section Y - Dev Cheats
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
+
+CreateObsidianCoin is an action applying to nothing.
+Understand "GetObsidianCoin" as CreateObsidianCoin.
+
+Check CreateObsidianCoin:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+Carry out CreateObsidianCoin:
+	ItemGain obsidian coin by 100;
+	say "     Done.";
 
 Hellfire Club ends here.

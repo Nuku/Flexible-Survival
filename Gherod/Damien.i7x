@@ -15,6 +15,16 @@ Version 1 of Damien by Gherod begins here.
 [ - - - ]
 [ 99 - Completed 3rd scavenge run, but refused Damien's advances and he's gone forever | He's gone for good ]
 
+[ DamienTF RESOLUTION STAGES ]
+[ 0 - Default TF path ]
+[ 1 - Talked to Toron about Damien ]
+[ 2 - Gave drink at least once ]
+
+[ Stats ]
+[ Strength ]
+[ 0 - Uncorrupted ]
+[ 1 - Had first drink ]
+
 Section 1 - Intro Sequence
 
 Table of GameEventIDs (continued)
@@ -181,6 +191,13 @@ An everyturn rule:
 		else if TimekeepingVar is 0 or TimekeepingVar is -8: [pre-dawn - leaves]
 			now Damien is nowhere;
 
+Table of GameEventIDs (continued)
+Object	Name
+DamienTF	"DamienTF"
+
+DamienTF is a situation.
+ResolveFunction of DamienTF is "". Sarea of DamienTF is "Nowhere".
+
 Table of GameCharacterIDs (continued)
 object	name
 Damien	"Damien"
@@ -264,6 +281,12 @@ to say DamienTalkMenu:
 		now sortorder entry is 1;
 		now description entry is "Build some trust with Damien by going on some scavenging together";
 	[]
+	if Libido of Damien > 2 and Resolution of DamienTF > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Buy Damien a drink";
+		now sortorder entry is 1;
+		now description entry is "Give him something special";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Himself";
 	now sortorder entry is 2;
@@ -292,6 +315,8 @@ to say DamienTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Go on some scavenging"):
 					say "[DamienTalkScavenging]";
+				else if (nam is "Buy Damien a drink"):
+					say "[DamienTalkDrink]";
 				else if (nam is "Himself"):
 					say "[DamienTalkHimself]";
 				else if (nam is "Sex"):
@@ -333,6 +358,35 @@ to say DamienTalkSex:
 	else if Libido of Damien is 3:
 		say "     Might as well ask about how his sex life is going. 'Pretty damn good. Honestly, it was never this good. Damn, I really gotta thank you for that. Any chance you're free to receive it?' he says with a wink and a mischievous smile, poking you with his leg and inviting you to come closer.";
 		say "     If you wanted to, you could accept his offer...";
+
+to say DamienTalkDrink:
+	if carried of obsidian coin < 3:
+		say "     You think about it, but then realize you might not have enough obsidian coins. Maybe [bold type]three[roman type] would be enough to buy a Hellfire Draconic Special... If you are certain about it.";
+	else if lastfuck of Damien - turns < 5:
+		say "     You have already fooled around with Damien enough for a night. Perhaps some other time?";
+	else:
+		say "     Are you really going to do this? It would be really easy to trick Damien into drinking another Hellfire Draconic Special, and Toron would appreciate the opportunity to study its results, but who knows what that might do to the scavenger. If it is anything similar to what Damien told you, before, you two will end up having sex, most likely.";
+		Linebreak;
+		say "     ([link]Y[as]y[end link]) - Do it.";
+		say "     ([link]N[as]n[end link]) - On second thought... Don't do it.";
+		if Player consents:
+			LineBreak;
+			now DamienDoneTalking is true;
+			say "     As you process this in your mind, you tell Damien that you would like to buy him a special drink. 'Oh? Sure thing, I accept!' He promptly replies, and with that done, you turn to Toron and ask for a Hellfire Draconic Special. The bartender knowingly smiles at you as he says 'Right on' and begins its preparation. Now, you only have to wait until it is ready and offer it to Damien, who is eagerly expecting his gift.";
+			say "     'Hope he enjoys it.' Toron then hands you the drink, which has this sort of fiery orange tone, bubbling from the bottom, and you walk back to Damien in order to give it to him.";
+			if Strength of Damien is 0:
+				say "     As he takes hold of the glass, he seems to be inspecting it with a frowned eyebrow. 'What's this? Looks familiar...' He asks, and before he thinks it might be the same drink he had from before, you tell him that it is a Toron's special he recommended especially for him, as a token of good esteem. 'Oh, really?! Wow, I didn't expect him to feel that way... I'm flattered!' He then takes a sip, and from the way he looks at you afterwards, he seems to really like it. 'Oh, wow... This tastes amazing...!' He praises the drink before chugging it down in mere seconds, then places the glass back on the counter as he savors its aftertaste.";
+				say "     'You know what, I should repay you...' says Damien, who then proceeds to grab your hand and pull you to him, now close enough for him to whisper in your ear. 'Let's head over the restroom... I wanna fuck you so hard!' This burst of confidence has him simply leading you over there with that predatory and lusty look in his gaze.";
+				WaitLineBreak;
+				say "[DamienHRBSex]";
+			else if Strength of Damien is 1:
+				say "     'Oh, it's this again! Are you trying to tell me something?' He asks you with a suggestive grin as he chugs it down, keeping eye contact with you. 'Ahh... Tastes great... Feels great... And you know what else would feel great?' . Damien continues, grabbing your hand and pulling you to him as he whispers in your ear - 'Your [if player is female]pussy[else]ass[end if] on my cock.' With this burst of confidence, the scavenger simply leads you over to the restroom with that predatory and lusty look in his gaze mere seconds after having the drink just you offered him.";
+				WaitLineBreak;
+				say "[DamienHRBSex]";
+			ItemLoss obsidian coin by 3;
+		else:
+			LineBreak;
+			say "     You drop the idea before you verbalize it.";
 
 Section 2-1-1 - Damien Talk Scavenge Events
 
@@ -441,7 +495,7 @@ to say DamienTalkScavenge:
 		say "     He adjusts his legs as he speaks, clearing his throat as you notice his hands covering the area around his crotch. 'So, uhm... Anyway, I... felt really possessive of Iker for a while, and I was a bit controlling, even. I actually think he drank something strange in that night, too, but that's besides the point. He then revealed he was infatuated with this demoness escort at the club, and last thing I know, he sold his soul. I was furious... I felt like they stole him from me, as I said. I somehow felt like he was mine.' That definitely seems like a bit of a toxic thing between two people, but you can tell Damien was not mentally well. You then ask him about that change he mentioned.";
 		WaitLineBreak;
 		say "     'Ah, well... My dick became sort of... a slitted dragon dick. Bigger, too... And it felt fucking weird at first, I realized the more I played with it, the more that strange confidence got hold of me. So I refrained from doing it while I went on a rampaging demon hunt, telling myself that it was for justice and not for... well, grief for the [']loss['] of someone that [']belonged['] to me. I take it he became a full demon, but I never saw him again. I don't think they're letting me, even.' You nod to him, understanding that what he experienced could be something related to the nanites in his system. It would appear to have been his first contact with them, though you ask him more about that drink, as well.";
-		say "     'The drink? It was [bold type]Toron[roman type] who gave it to me, though he warned me that drinking something like that would cause permament changes. It was completely my responsibility, I was the one accepting the terms. Then I gave myself a dragon dick as my sex drive skyrocketed! It felt amazing, but wasn't so great for my mind. Fortunately, you came by... And hanging out with you helped me stabilize. Still, I was trying to finish that machine, but it was more out of craftsman pride than anything else.' You deliver the news, that the transformation he got is what is messing up with his mind, and that it takes a strong willpower to resist its changes. You suppose that interacting with someone else after everything that happened helped him see things differently.";
+		say "     'The drink? It was [bold type]Toron[roman type] who gave it to me, said it was limited edition or something. Though, it was completely my responsibility, I was the one accepting it without knowing for sure what it was. Then I gave myself a dragon dick as my sex drive skyrocketed! It felt amazing, but wasn't so great for my mind. Fortunately, you came by... And hanging out with you helped me stabilize. Still, I was trying to finish that machine, but it was more out of craftsman pride than anything else.' You deliver the news, that the transformation he got is what is messing up with his mind, and that it takes a strong willpower to resist its changes. You suppose that interacting with someone else after everything that happened helped him see things differently.";
 		WaitLineBreak;
 		say "     'You're right, yeah... I feel a lot better ever since you found me, definitely.' he says, as you begin to notice his hand on your leg, rubbing across your thigh tenderly. 'And I've also been thinking that I should get used to this, rather than fight or run away from it...' adds the man, as he gives you a smile while he seems to be making a move on you. 'Would... it be too much if I... asked you for a [bold type]blowjob[roman type]?' he follows his question with his hand brushing against the back of your head, as he then caresses you gently. Now, you are definitely sure he is making a move. How do you feel about this? Would you want to [bold type]oblige his request[roman type] or [bold type]refuse any sexual contact[roman type] with him? You might not be into guys at all, who knows...!";
 		Linebreak;
@@ -635,5 +689,128 @@ to say DamienSexAradEgranFoursome:
 	NPCSexAftermath Player receives "OralCock" from Damien;
 	NPCSexAftermath Player receives "OralCock" from Arad;
 	NPCSexAftermath Player receives "AssFuck" from Egran;
+
+Section 3 - Damien Special Scenes
+
+to say DamienHRBSex:
+	say "     As he takes you to the restroom, you both making out wildly as he feels you up all over with his hands, touching your butt and squeezing your cheeks as his tongue wiggles all over yours, you soon hear a clink sound as he slides a coin down the booth's lock, unlocking its door. Without any further words, he simply pulls you in and [if player is not naked]begins to strip you of all your clothes, as he does the same for himself[else]begins to strip himself of all his clothes[end if], to then rub his athletic physique against yours, skin on skin with no barriers in between. His kissing is deep and passionate, boiling with lust, and his draconic dong is quick to emerge and throb while sandwiched between you both.";
+	say "     Damien then looks into your eyes as he pulls out for a second, his fiery gaze drawing yours in such a powerful way you cannot look away, but why should you? The way he holds you, touches you, his scent, everything is so perfect... Inevitably, you find your mind fading away in a sea of joy as he smiles at you. 'I wanna fuck your brains out, slut' he says, then forces you on your knees, having you face his dick. With his hand on the back of your skull, he pulls you to him. 'Gotta warm up before some more join in!' You simply nod and open your mouth to take in his reptilian penis past your lips, tasting every inch of it as you make your tongue wiggle all over the tip and shaft as Damien pushes into your throat.";
+	WaitLineBreak;
+	say "     'You like that, bitch? Like when a man takes charge and uses you as he pleases?' He pulls out momentarily, gives your cheek a few cockslaps and then shoves it back inside your mouth, having you take his length all the way in. 'Good [boygirl]... Such a good cocksucker, you're definitely in the right place' teases the scavenger as his manhood keeps on throbbing in your mouth. After a while, he pulls out again with a grin on his face as a first guest seems to want to join the action, having shoved his member through one of the holes in the walls...";
+	WaitLineBreak;
+	let randomnumber be a random number from 1 to 5;
+	if randomnumber is:
+		-- 1: [Hellfire Demon cock, 16"]
+			say "     This one is a pretty familiar red one, of the common hellfire demon kind, throbbing hard at nearly sixteen inches of length. Demonic pheromones reach your nostrils as the whole thing slides into full view, thick and veiny. They are usually quite big ones to work with, and this dick is no exception.";
+			now HRBCockLength1 is 16;
+			CreatureSexAftermath "Player" receives "OralCock" from "Hellfire Demon";
+		-- 2: [Lupine cock, 12"]
+			say "     This one is a knotted and canine dick, throbbing hard at around twelve inches of length, emanating an animalistic scent that sort of entices you to come closer.";
+			now HRBCockLength1 is 12;
+			CreatureSexAftermath "Player" receives "OralCock" from "Football Wolfman";
+		-- 3: [Huge draconic cock, 24"]
+			say "     To really start well, a whole two foot-long of a dragon dick slowly comes into full view, so big that it barely fits the hole with its girth alone. You will have to work really hard for this one, as there is plenty of it to appreciate.";
+			now HRBCockLength1 is 24;
+			CreatureSexAftermath "Player" receives "OralCock" from "Yamato Dragon";
+		-- 4: [Orc cock, 14"]
+			say "     This one is of a green tone, thick and veiny with about fourteen inches of length, its scent reaching your nostrils and really putting you in the mood. You think it might be an orc's manhood, and if so, you are definitely going to have a good time.";
+			now HRBCockLength1 is 14;
+			CreatureSexAftermath "Player" receives "OralCock" from "Orc Warrior";
+		-- 5: [Imp cock, 6"]
+			say "     This one is not particularly big, and you doubt it is from any of the hellfire demons around here. While it is red, it is only about six inches long, reminding you of those little flying imps. Perhaps one of them came to get some release, which you will happily provide.";
+			now HRBCockLength1 is 6;
+			CreatureSexAftermath "Player" receives "OralCock" from "Imp Male";
+	WaitLineBreak;
+	say "     'You don't want to leave them waiting, do you?' Damien does not wait for an answer as he moves your head towards this new cock, forcing you to lean over to it and begin to kiss and lick it, as that is what it truly wants. At first, you tease its shaft until you feel the dick throb with desire, so eager to be put past your lips and sucked like it yearns to be. Then, you grab it and aim it towards your mouth, letting it slide into you [if HRBCockLength1 < 7]all the way in down to your throat, only stopping once the entire thing disappears into you[else if HRBCockLength1 < 19]as far as you can make it, taking it inch by inch until you cannot possibly push it in any further[else if HRBCockLength1 >= 19], barely fitting in at all due to its colossal size, so you have no alternative but to focus your sucking mostly around its tip and, maybe, a few inches past it[end if]. It pulses in response, pleased with your efforts, and juice starts to come out, giving you a sweet taste of their lusts. You think you even hear them moan as you work on their meat, really showing off your oral skills and putting on a good effort at worshipping this dick.";
+	say "     As you suck, rub and pleasure the first stranger's pulsing rod that came to greet you, Damien crouches down behind you and lines up his manhood between your buns. Grabbing you by the hips, he leads your [if player is female]labia[else]pucker[end if] over to his cock, making you feel that eager tip poking at your entrance, then slowly pushes against it, stretching your [if player is female]lower lips[else]anal ring[end if] around his girth. 'Yes... Feels fucking good! Suck on that cock, slut...' As he says this, a second one begins to slide in from your side...";
+	WaitLineBreak;
+	let randomnumber be a random number from 1 to 5;
+	if randomnumber is:
+		-- 1: [Hellfire Demon cock, 16"]
+			say "     Your new visitor must be a hellfire demon, throbbing hard at nearly sixteen inches of length. There are definitely some demonic pheromones flowing from it as the whole thing slides into full view, thick and veiny. The hung demon's cock now remains only waiting for your approach.";
+			now HRBCockLength2 is 15;
+			CreatureSexAftermath "Player" receives "OralCock" from "Hellfire Demon";
+		-- 2: [Lupine cock, 12"]
+			say "     Your new visitor must be a lovely wolf, with a knotted and canine dick, throbbing hard at around twelve inches of length, with its animalistic scent greeting you as it remains only waiting for your approach.";
+			now HRBCockLength2 is 12;
+			CreatureSexAftermath "Player" receives "OralCock" from "Football Wolfman";
+		-- 3: [Huge draconic cock, 25"]
+			say "     Your new visitor has a massive draconic cock, a little above two feet long in length, eagerly awaiting your approach as it practically throbs at every second.";
+			now HRBCockLength2 is 25;
+			CreatureSexAftermath "Player" receives "OralCock" from "Yamato Dragon";
+		-- 4: [Orc cock, 14"]
+			say "     Your new visitor is clearly an orc as his green, thick and veiny cock with about thirteen inches of length, its masculine scent spreading throughout the booth as the whole thing slides into full view, awaiting your approach.";
+			now HRBCockLength2 is 13;
+			CreatureSexAftermath "Player" receives "OralCock" from "Orc Warrior";
+		-- 5: [Imp cock, 6"]
+			say "     Your new visitor is probably an imp, with a red six incher coming into full view and eagerly awaiting your approach as it pulses with need.";
+			now HRBCockLength2 is 6;
+			CreatureSexAftermath "Player" receives "OralCock" from "Imp Male";
+	WaitLineBreak;
+	say "     You definitely should not let it stay lonely for long, and after having provided your first dick its share of kissing and sucking, you move on to the next, keeping your hand there stroking it so that it won't miss you. As this new manhood that comes to see you is [if HRBCockLength2 < 7]of a manageable size, you just go ahead and give it a deepthroat, a gesture that it really appreciates as it immediately delivers a sweet glob of precum into your mouth[else if HRBCockLength2 < 19]of a large size, you first only caress its shaft with your lips before going ahead to take what you can of it down your throat. It definitely appreciates your gesture as it immediately delivers a sweet glob of precum into your mouth[else if HRBCockLength2 >= 19]of a massive size, you can only caress its shaft with your lips and try to suck on its tip, with perhaps a few more inches besides. Nonetheless, it definitely appreciates your effort as it immediately delivers a sweet glob of precum into your mouth[end if]. You find yourself giving one a handjob and a blowjob to the other, keeping them pulsing as hard as they can possibly get, and eventually, you alternate, sucking the first and handling the second as they just keep on throbbing in either your grasp or mouth.";
+	say "     This all happens as Damien takes you from behind, fucking your [if player is female]pussy[else]ass[end if] deep and hard by the time you are servicing the duo of cocks yearning for your attention. At times, he is the one leading you around, enjoying your submission to him and the strangers who come looking for some mystery blowjob. 'You're such a good little slut, sucking some strangers['] dicks while taking one up your [if player is female]cunt[else]mancunt[end if]... and you're loving it, aren't you?' he teases you, letting out a pleased moan as he buries his full length in you with each thrust. His meat keeps on sliding in and out of you, hard, fast and deep, and your mouth remains busy with one or the other trying to throatfuck you. Though, as you are keeping both strangers on edge with your cock handling and sucking skills, a third manhood slides in right from the door in front of you.";
+	WaitLineBreak;
+	let randomnumber be a random number from 1 to 4;
+	if randomnumber is:
+		-- 1: [Hellfire Demon cock, 16"]
+			say "     It is a really nice crimson one, probably about seventeen inches and giving out an alluring fiery scent. Might be a hellfire demon's log now yearning for your attention.";
+			now HRBCockLength3 is 15;
+			CreatureSexAftermath "Player" receives "OralCock" from "Hellfire Demon";
+		-- 2: [Lupine cock, 12"]
+			say "     It is a nice knotted and canine dick, probably about twelve inches of length. Might be a wolf's or an alpha shepherd's log now yearning for your attention.";
+			now HRBCockLength3 is 12;
+			CreatureSexAftermath "Player" receives "OralCock" from "Football Wolfman";
+		-- 3: [Huge draconic cock, 25"]
+			say "     It is a large draconic cock, probably about twenty three inches in length. Might be a dragonmorph's or lizardman's dick now yearning for your attention.";
+			now HRBCockLength3 is 25;
+			CreatureSexAftermath "Player" receives "OralCock" from "Yamato Dragon";
+		-- 4: [Orc cock, 14"]
+			say "     It is a sizable green cock, probaby about fourteen inches in length. Might be an orc's dick now yearning for your attention.";
+			now HRBCockLength3 is 13;
+			CreatureSexAftermath "Player" receives "OralCock" from "Orc Warrior";
+	WaitLineBreak;
+	say "     'Suck that one too, little bitch. You gotta please all of them...' Damien orders you as he chuckles, forcing you to face this new visitor, and given how you have the previous two cocks primed for their release, you prepare to give it your very best as you are brought to lean over to give it a suck. Naturally, [if HRBCockLength3 < 19]it takes a good amount of effort to take its every inch[else]its considerable size will not let you take much of it in your mouth[end if], but you manage to properly satisfy it as each one of your hands is kept stroking and caressing the previous manhoods. They leak and throb, with the one where your lips are at soon following the same path after a good moment of worship. Inevitably, all the three strangers grow near their points of no return as you steadily stimulate them, providing them all with their share of love by taking turns on which you suck and jerk.";
+	say "     'Riding one, sucking another, hands full with a dick on each... This is your beach, slut... It's what you're best at!' The scavenger continues to provoke you as he, too, approaches his orgasm. You can feel his meat throbbing and pulsing at how close he is, so much that he has to slow down before he fills you prematurely. 'Fuck yeah... I'm close... Bet you'd like a fill and a cum bath like the naughty bitch you are...' His movements are now steady, but you can feel his whole length rub inside you, on the verge of blowing... Then, the scavenger leans in closer to you, whispering in your ear as his hands run all over your chest and torso 'Come on, make it rain on you... Make them cum... You know you want it... You want it so badly...'";
+	WaitLineBreak;
+	say "     His words feel like an alluring temptation to you as you continue to keep the strangers pleased with your efforts, their cocks pulsing at their hardest state, and with a few additional kisses and licks here and there, coupled with fast jerking motions once you get your hands on them, they begin to shoot generously at you. One after the other, they all reach their moments to cum all over you, spurt after spurt of thick jizz coating your face, chest and torso while you stroke at the two at both your sides and lick the one in front of you until their very last drop. 'Fuck... YES!' Damien shouts as you feel his swollen knot forcing its entry in you, and then he, too, unloads his vast load deep in your [if player is female]womb[else]insides[end if], thrusting into you as hard as each shot comes. Grunting can be heard from everywhere all the way until their climaxes begin to subside, and you have earned yourself quite the cum shower from these three horny strangers. You give them a couple of kisses each before they begin to retract from the way they came, and Damien seems greatly pleased, as well.";
+	say "     Now, his arms circle around you as he kisses your neck lovingly, smearing all that cum around your body and face... 'You did such a good job... That I couldn't resist knotting you' he commends you, chuckling, as his hands head towards your crotch. While he remains stuck inside you, he feels you up and [if player is male]grabs your so far neglected [cock of player] cock[else if player is female]moves down to fondle your pussy[else]moves down to fondle your sensitive groin[end if], caressing you as he moves his lips between your neck and ear, kissing and licking... 'You deserve it... let it go... cum for me...' All that fucking got you pretty worked up, already, so it does not take long for you to hit your orgasm, which feels like a thunder striking you all over as you squirm and quiver[if player is male], adding your cum to all the mess that has been already done[end if]. 'That's it... Good [boygirl]... You've done so well...'";
+	WaitLineBreak;
+	if Strength of Damien is 0: [First time he had that drink]
+		say "     Once you take a moment to breathe and Damien's knot shrinks, he pulls out and helps you up. 'Fuck, that drink really makes me horny... Are you alright? Hope I wasn't too rough on you...' For some reason, your mind felt very hazy during all this, but now that everything is over, your thoughts return in full clarity. 'It made me feel like I owned you... Damn, I hope you're into that, because I really enjoyed it.' You both leave the booth as he helps you get clean. 'We should totally do this again.' he says, giving you a kiss on the lips, a tap on your butt, and leaving the room after winking at you.";
+		say "     Eventually, you also are all set to leave the restroom. Though, [bold type]the way things are going has you thinking if continuing to have Damien drinking that hellfire draconic special is really a good idea[roman type]... He might get increasingly more dominant and possessive, not to mention horny and potentially rough. Besides, there is clearly something mystical about his gaze that even he is not aware of... This could have [bold type]irreversible consequences[roman type] on him and his relationship with you.";
+		now Strength of Damien is 1;
+	else if Strength of Damien is 1:
+		say "     Once you take a moment to breathe and Damien's knot shrinks, he pulls out and helps you up. 'It's fun owning and fucking you. I'm really starting to enjoy it... Honestly, I don't care if you're into it or not, anymore. I'm just gonna do it and make you mine...' he approaches you, once more, locking his eyes on yours as he whispers 'You belong to me, now...' These words echo in your mind, and they feel so right that you cannot refuse them. It is as if you instinctively wanted to follow them through and nod. Though, this trance is broken once he gives out a chuckle. 'Just kidding! I'm only teasing you because you really seemed to like that. Fuck, I admit, it's fun! I could put you on a leash, sometime... Okay, I swear I'm joking now, too. But hey, if you wanna try it sometime, I'm down.'";
+		say "     Damien then gives you a kiss on the lips, a tap on your butt, and leaves the room after winking at you. He is still a goofball, after all, even though he seems to enjoy dominating you. But the way he seems to be able to weaken your will is somewhat worrying, especially because he does not seem aware of it. Though, maybe the [bold type]hellfire draconic special is safe for him to drink, for the time being[roman type]? There was no change since the last time... But things could be different in a near future.";
+	if player is female:
+		NPCSexAftermath Player receives "PussyFuck" from Damien;
+	else:
+		NPCSexAftermath Player receives "AssFuck" from Damien;
+	WaitLineBreak;
+	say "<< Author's Note: This ends here, for now. You may replay the scene as many times as you want until more content is added. >>";
+	now HRBCockLength1 is 0;
+	now HRBCockLength2 is 0;
+	now HRBCockLength3 is 0;
+
+[***********************************************************]
+[***********************************************************]
+[***********************************************************]
+Section X - Dev Cheats
+[***********************************************************]
+[***********************************************************]
+[***********************************************************]
+
+SkipToDamien is an action applying to nothing.
+Understand "GetDamien" as SkipToDamien.
+
+Check SkipToDamien:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+Carry out SkipToDamien:
+	now Resolution of DamienIntro is 5;
+	say "     Resolved Damien's Intro the necessary way, activating his everyturn rules.";
+	say "     Done.";
 
 Damien ends here.

@@ -511,6 +511,7 @@ to say sexwithBradfordOral1: [Fellatio]
 	else:
 		now mooing is 0;
 	if HP of Bradford < 7, increase HP of Bradford by 1;
+	NPCSexAftermath Player receives "OralCock" from Bradford;
 
 		to say sexwithBradfordOral2: [Fellatio number 2]
 			say "     After listening to your suggestion Bradford lets out a soft and gruff chuckle before setting down his binoculars and turning to face you. 'Was gettin['] to wonder when you'd come around again.' He smiled, eyes filled with restrained lust. 'Now why don't you come on over here and give your favorite bull some attention.' As he takes a seat on a nearby chair his hand reaches down to unzip his pants, letting his bovine cock spill out from the newly opened hole in his pants, already hanging semi-erect. Upon getting a look at his almost foot-long shaft you're quick to [if Player is submissive] drop down onto your hands and knees, hips swaying as you crawl over to him, eyes locked on that thick cock in front of you[else]saunter over to him, eager to service his giant shaft[end if].";
@@ -521,6 +522,7 @@ to say sexwithBradfordOral1: [Fellatio]
 			WaitLineBreak;
 			say "     'Thanks, I really needed that.' He grunted, leaning back in his chair with a satisfied smile that only the best of blowjobs could bring out. 'I really was gettin['] blue in the balls before you showed up, now it's good to know I can get some relief now and then.' He takes his time tucking his now flaccid cock back into his pants, before finally turning back to resume his post at the window, leaving you to lick up the cum that had plastered your fingers and prepare to continue your journey. 'Now back to work. Thanks again, swing back around soon y'hear?'";
 			if HP of Bradford < 7, increase HP of Bradford by 1;
+			NPCSexAftermath Player receives "OralCock" from Bradford;
 
 to say sexwithBradfordDesktop:	[desktop fuck]
 	say "     Bradford just smiles and nods at your suggestion of more sex. You can see that bulge in his crotch strain the material a little further as he looks you over. 'Alright[if Breast Size of Player > 3], sexy[end if]. Bend yourself over that desk and let's do this,' he says, rising from his seat.";
@@ -533,13 +535,17 @@ to say sexwithBradfordDesktop:	[desktop fuck]
 	say "     And pound you he does. With a firm grip on your buns, he adds power to his thrusts, driving his shaft with increasing strength into your needy hole. You grip the desk hard and push back into his thrusts, loving the feel of that throbbing cock sawing in and out of you. The heavy bull pants and grunts atop you as he fucks you, those big balls of his slapping [if Player is male and CockName of Player is not listed in infections of InternalCockList]against your own[else if Player is female]your thighs[else]your ass[end if]. In your increasingly lust-addled state, you delight in how that thick rod of his stuffs you [if scalevalue of Player < 4]so full[else]nicely[end if] and how it throbs with virility.";
 	if Breast Size of Player > 3:
 		say "     The stocky bull reaches around you, his strong hands cupping your [short breast size desc of Player] tits. He gropes them, playing with your nipples and caressing the sensitive globes. 'I must say, you've got some [if Breast Size of Player > 6]really [end if]fine tits on you,' he says in your ear. His expert touches add to your delight as he pounds away at you with greater zeal, clearly turned on by having some [if Breast Size of Player > 6]giant[else]big[end if] boobs to play with.";
-	say "     At such a pace, he still manages to prove himself to have endurance as well, pounding you with skill as well as strength until you're both panting hard with your approaching release. The first quivers of your [if Player is female]cunt orgasming[else]asshole spasming in orgasm[end if] around his cock is what pushes him over the edge, sending him into climactic release as well. When he finally blows, he groans a restrained bovine low, trying to not give away his hideout but unable to completely remain quiet. You can feel hot splash after hot splash of bovine seed shooting [if Player is female]into your vagina[else if Player is male]against your prostate[else]into your bowels[end if] as he unloads those pendulous balls.[impregchance]";
+	say "     At such a pace, he still manages to prove himself to have endurance as well, pounding you with skill as well as strength until you're both panting hard with your approaching release. The first quivers of your [if Player is female]cunt orgasming[else]asshole spasming in orgasm[end if] around his cock is what pushes him over the edge, sending him into climactic release as well. When he finally blows, he groans a restrained bovine low, trying to not give away his hideout but unable to completely remain quiet. You can feel hot splash after hot splash of bovine seed shooting [if Player is female]into your vagina[else if Player is male]against your prostate[else]into your bowels[end if] as he unloads those pendulous balls.";
 	say "     After unloading messily into you, he [if Breast Size of Player > 6]remains atop you for a while, playing with your giant knockers before pulling out and getting off of you[else if Breast Size of Player > 3]continues to play with your big knockers for a while before pulling out and getting off of you[end if]pulls out and gets off of you. He can't hide a smug grin as he watches his excess semen leak from your [if Player is female]well-stuffed pussy[else]well-stretched pucker[end if]. 'Thanks, [if Player is female]babe[else]dude[end if]. Guess I really needed that. Hope ya don't mind the mess - you look pretty hot like that,' he adds, fingering your creamy hole before returning to his post. With how good having his hot semen in you feels, you decide to hold that position for a while, content to enjoy having it pooled inside you.";
 	if mooing > 4:
 		now mooing is ( mooing * 3 ) / 5;
 	else:
 		now mooing is 0;
 	if HP of Bradford < 7, increase HP of Bradford by 1;
+	if player is female:
+		NPCSexAftermath Player receives "PussyFuck" from Bradford;
+	else:
+		NPCSexAftermath Player receives "AssFuck" from Bradford;
 
 to say sexwithBradfordWall: [fucked in the ass against a wall]
 	say "     'Ready for another round?' His gruff laugh bounces off the walls of his small hideout as he steps down from his post to look at you. 'Now why don't you get those clothes off so we can have some fun.' A large hand is already at his zipper, the bulge in his pants straining to contain the massive package he has hidden underneath.";
@@ -551,21 +557,21 @@ to say sexwithBradfordWall: [fucked in the ass against a wall]
 	say "     Now sandwiched between two pleasures you can't help but roll your hips, moving in time back and forth, indulging in one sensation, before shifting to spear yourself back onto his cock. Over and over again, you're fucked senseless until the hand against your hip is the only thing holding you up, along with the ten-inch cock still buried inside your ass. Blissful seconds turn to minutes, but under the constant stimulation you can only last for so long. Fireworks go off in your brain and you cum hard, [if Player is purefemale]your cunt clamping down around his exploring digits, your juices drenching his hand[else]your cock painting the wall white, the excess splashing along his hand as well as coating a good portion of your chest[end if]. Still convulsing in climatic orgasm, your spasming hole finally wear the bull down, a loud moan that sounds more like a mooing cow echoes through the encampment before his hot load pours into your ass. The last thing you remember before passing out is being pumped full of bull, and the continuous shuddering of your orgasm-wracked body...";
 	say "     After what must have been hours you wake up to find yourself swaddled in warmth, a fur blanket over your naked body and the cushion of a firm mattress supporting your back. Looking around in confusion you see that Bradford had returned to his post, binoculars at the ready. It's only the rustling of the sheets that attracts his attention, a friendly smile playing across his face as he turns to you. 'Hey there, was wonderin['] when you'd wake up. Hope you don't mind me putting you to bed, but you seemed all tuckered out after our last stress relief session.' As he recounts your wild sexcapade your face turns blush red, the memories of the sweltering moment playing in your head while you start to get dressed. 'Though I didn't mind, it's nice to have someone around here now and then.' Once you're fully clothed you pad over to the bull on duty, leaning in for a warm hug that Bradford wholeheartedly returns, accompanied by a soft pat on your rump. 'Make sure you be careful out there y'hear? I've gotten used to seeing you around, so don't be a stranger!'";
 	if HP of Bradford < 7, increase HP of Bradford by 1;
+	NPCSexAftermath Player receives "AssFuck" from Bradford;
 
 to say sexwithBradfordLapride:		[vaginal - lap ride]
-	setmonster "Bovine";
-	choose row MonsterID from the Table of Random Critters;
 	say "     Bradford looks away from the window to run his eyes up and down you[if Breast Size of Player > 3] appreciatively[end if]. 'Alright. I could use a bit of a break. It don't look like nothin's happenin['] out there. Feel good to let off a bit of steam.' He unzips his fly and pulls out his plump bull-cock. It's a girthy ten-inch length of brick-red flesh that's throbbing and ready to go.";
 	say "     The sight of his bovine shaft gets you all the more excited. You straddle his lap and grind your [cunt size desc of Player] pussy down atop it. You love the warm feel of it and how it pulses and throbs with need at your touch. After this little bit of teasing[if Breast Size of Player > 3], during which he bares your chest and starts fondling your boobs[end if], you lower yourself [if Cunt Depth of Player < 4]slowly down onto the pulsing rod. Given the size of his manhood, you really have to take your time to start, enduring the ache of stuffing yourself until that fades and the pleasure rises to replace it[else if Cunt Depth of Player < 7]gradually down onto the pulsing rod. Given the size of his manhood, you have to take your time to start, but it is deliciously satisfying for the added effort[else if Cunt Depth of Player > 18]with ease down onto the pulsing rod. Given the size of your spacious cunt, you have little difficulty taking the bull's thick shaft, letting you jump right into action[else]down onto the pulsing rod. His enlarged cock stuffs you nice and full for a satisfying fit that has you moan with pleasure as you take it into you[end if].";
 	WaitLineBreak;
 	if Breast Size of Player > 3:
 		say "     The gruff bull can't keep his hands off your [short breast size desc of Player] breasts. His meaty hands grope your bosom and play with your nipples. 'Ain't nothin['] I like more than a big set of tits[if Breast Size of Player > 6] - and yours are great[end if],' he says appreciatively as he lavishes yours with attention. His big, broad tongue slathers across your nipples before his big, bovine lips wrap around it and suck hard. You writhe in pleasure in his lap, riding him all the harder in response. Given how good he's making you feel, you know he's definitely handled his fair share and more of big knockers.";
-	say "     The two of you go at it hot and heavy and the feel of his thick, bovine meat inside you is wonderful. Grabbing the bull by the horns, you moan for more. This drives him to thrust up into you all the harder. You're soon bouncing in the strong bull's lap, riding him like a rodeo bull. You manage to stay on the ride until the two of you finally cum. You feel the first of several blasts of bull semen shoot up into you, sending you into climactic release as well. Losing your grip as orgasmic pleasure courses through you, you're tossed by a particularly hard thrust and accompanying impressive shot of semen. You land on the floor in front of him, laughing in delight and moaning in pleasure even as he pumps a few final streams of white across you. He smiles down at you and offers a hand to help you up, pulling you into a tongue-filled kiss while you run your hands over his muscly body. Only after the long kiss does he release you and tuck himself back into his pants. As soon as that's done, he's back to keeping watch.[impregchance]";
+	say "     The two of you go at it hot and heavy and the feel of his thick, bovine meat inside you is wonderful. Grabbing the bull by the horns, you moan for more. This drives him to thrust up into you all the harder. You're soon bouncing in the strong bull's lap, riding him like a rodeo bull. You manage to stay on the ride until the two of you finally cum. You feel the first of several blasts of bull semen shoot up into you, sending you into climactic release as well. Losing your grip as orgasmic pleasure courses through you, you're tossed by a particularly hard thrust and accompanying impressive shot of semen. You land on the floor in front of him, laughing in delight and moaning in pleasure even as he pumps a few final streams of white across you. He smiles down at you and offers a hand to help you up, pulling you into a tongue-filled kiss while you run your hands over his muscly body. Only after the long kiss does he release you and tuck himself back into his pants. As soon as that's done, he's back to keeping watch.";
 	if mooing > 4:
 		now mooing is ( mooing * 3 ) / 5;
 	else:
 		now mooing is 0;
 	if HP of Bradford < 7, increase HP of Bradford by 1;
+	NPCSexAftermath Player receives "PussyFuck" from Bradford;
 
 to say sexwithBradfordMidnight: [night sex with Bradford]
 	project figure of Bradford_naked_icon;
@@ -583,6 +589,10 @@ to say sexwithBradfordMidnight: [night sex with Bradford]
 	if HP of Bradford < 8, increase HP of Bradford by 1;
 	follow the turnpass rule;
 	follow the turnpass rule;
+	if player is female:
+		NPCSexAftermath Player receives "PussyFuck" from Bradford;
+	else:
+		NPCSexAftermath Player receives "AssFuck" from Bradford;
 
 Section 9 - Endings
 

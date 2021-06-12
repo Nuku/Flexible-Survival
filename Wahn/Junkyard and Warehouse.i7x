@@ -1,11 +1,21 @@
-Version 4 of Junkyard and Warehouse by Wahn begins here.
+Version 5 of Junkyard and Warehouse by Wahn begins here.
 [ Version 3 - Rework by Wahn]
 [ Version 4 - Old Stallion Friendship event added to Steven - Vinickus (code support by Gherod)]
+[ Version 5 - Steven Events on the Library - Vinickus ]
 [- Originally Authored By: Rimme -]
 
 [ StevenSwayed - Soda for Steven              ]
 [  0: no Soda                                 ]
 [  1: gave Steven Soda before                 ]
+
+[ StevenCharisma - To do with his friend]
+[ 1: You used his toy                   ]
+[ 51: You respected his desires         ]
+[ 2/52: Submitted Steven outside Library ]
+[ 3/53: Submitted a second time ]
+
+[ StevenDexterity - Alt Path?]
+[ 1: Turned him down when met outside Library ]
 
 Chapter 1 - Abandoned Lot into Storage Room
 
@@ -356,7 +366,7 @@ to say StevenTalkFeelings:
 		say "     ([link]N[as]n[end link]) - Better back off, for now.";
 		if player consents:
 			Linebreak;
-			say "     'If there was some way I could get back in and talk to them, then—well I might be able 	to convince them I'm the same as before.' You give him the location of the alley you found, and 	the oddly convenient backdoor. 'Alright. Maybe one of these days I'll see about talking to them. But I don't think I'll want to do it alone. Can you come with me when I'm ready?' You give your assurances to him and step aside, content with where things ended up.";
+			say "     'If there was some way I could get back in and talk to them, then—well I might be able to convince them I'm the same as before.' You give him the location of the alley you found, and 	the oddly convenient backdoor. 'Alright. Maybe one of these days I'll see about talking to them. But I don't think I'll want to do it alone. Can you come with me when I'm ready?' You give your assurances to him and step aside, content with where things ended up.";
 			now Resolution of Old Stallion Friendship is 2; [Event now active]
 		else:
 			say "     You think it's better to not push him on this subject, for now.";
@@ -659,7 +669,7 @@ Sarea of Old Stallion Friendship is "Nowhere".
 
 instead of going southeast from Abandoned Lot while (Resolution of Old Stallion Friendship is 0 and Steven is in Steven's Home):
 	say "     Scrounging around you find scratches along the ground nearest a wall, coincidentally it's the wall of the inhabited warehouse. The scratches form a sort of semicircle of chipped granite and whitened pavement. Looking a bit closer you can see a loose bit of aluminum siding, and as you pull at it you can hear the sounds of people on the other side. You even peak around the edge to see the people meandering around inside. [bold type]Maybe this would help Steven get back.[roman type][line break]";
-	now Resolution of Old Stallion Friendship is 1;
+	now Resolution of Old Stallion Friendship is 1; [Found a new way into the warehouse]
 
 instead of going southeast from Abandoned Lot while (Resolution of Old Stallion Friendship is 2 and Steven is in Steven's Home):
 	say "     You see Steven clopping back and forth, a pensive expression draped across his features. When you get his attention his face brightens ever so little. 'Hey, [if Player is not defaultnamed][Name of Player][else]dude[end if]. I still don't know what I'm doing here. They'll never accept me as,' Steven then looks down and waves his arms downwards, 'this!' Looking up and down his form draws your attention to what looks like a somewhat cleaned loincloth with little strings wrapped around it.";
@@ -691,24 +701,103 @@ instead of going southeast from Abandoned Lot while (Resolution of Old Stallion 
 				WaitLineBreak;
 				say "     As you catch your breath, you look over the newly christened equine before you, the male far more lithe, and even feminine, compared to Steven himself. However, before you can look too thoroughly along the new being, you feel a hand yank you up off the ground. 'Since you've had a taste of him, and ruined my own chance to change him, I'm going to use you as my personal little pet from now on. You understand?' Nodding, you look back at the exhausted male on the ground. 'No, look at me!' Steven then forces your head towards his towering figure and wrathful eyes. 'I'm going to brand that sorry body of yours as mine, forever, and his too.' the stallion says as he jabs a thumb to his changed friend. You then feel yourself being carried along before getting tossed through a doorway, landing on all fours on rough pavement. However, before you can get up to check yourself, the door behind you slams shut. Moans and sounds of pure ecstasy come through the walls.";
 				CreatureSexAftermath "Player" receives "OralCock" from "Morgan Horse Stallion";
-				now Resolution of Old Stallion Friendship is 3;
-				now charisma of Steven is 1;
+				now Resolution of Old Stallion Friendship is 3; [The warehouse is now a whorehouse]
+				now charisma of Steven is 1; [You made Steven a tad upset]
 				now Steven is nowhere;
 			else: [No]
 				Linebreak;
 				say "     You simply go back to watching the great stallion defile the guards, each one falling more and more into depravity as the musk from Steven sinks in. The ones tied up the farthest from the action try and scoot closer, doing anything to get closer to their new object of worship. Before long the stallion gives out a loud neigh as he slams his hips forward, the guard before him gulping louder with each second. Steven's ass even clenches as the muscles between his legs pulse. After what feels like several minutes, the stallion pulls his saliva and cum stricken, drippy cock from the guard, continuing onto the next one. He slams his cock down that man's throat as well, seeming to have adopted a style of creating more sluts for himself. As time passes each guard feels that shaft down their throats, their need evident as they pant and moan from just being near him. Soon he would pump a load down each of their throats, the eager guards soon groaning in pain as you look on with concern.";
 				say "     Your worries are soon assuaged as Steven strips them of their clothing and gear, revealing the tan hairs sprouting all over their bodies. The new sounds from the men is that of lust and excitement. The shifting men then run their hands along their changing bodies, the more muscled ones slimming down as the others merely trim up. Each of them turn into quintessential twinks right before your eyes, only they have fine hairs all over their bodies, and cocks to almost rival Steven himself. It also doesn't take long for the new twinks to start running their hands over each other, the ropes and bindings torn off them when they'd been stripped by their stallion. Moans sound out next as they get more vulgar in their explorations. It takes no time at all for once human, presumably straight, males to descend into a pile of writhing equine desire.";
-				now Resolution of Old Stallion Friendship is 3;
-				now charisma of Steven is 51;
+				now Resolution of Old Stallion Friendship is 3; [The warehouse is now a whorehouse]
+				now charisma of Steven is 51; [You honored Steven's wishes]
 				now Steven is nowhere;
 			CreatureSexAftermath "Human" receives "OralCock" from "Steven";
 		else: [Kick them out]
 			say "     You encourage the man to let them be, since no one was killed. Only a couple of guards were nauseant enough to be forced out. The rest decide they'd accept the new normal, at least for now. However, most of the ones who remain give you the side eye as you leave the warehouse with Steven. The stallion slaps you on the back and gives thanks, grinning ear to ear as you part ways. Moments before you're out of sight, you see a man chase after him from the warehouse, the two embracing each other before falling out of sight.";
-			now Resolution of Old Stallion Friendship is 4;
+			now Resolution of Old Stallion Friendship is 4; [Freed the Warehouse from the fear]
 			now strength of Steven is 1;
 	else: [discouraged]
 		say "     Deciding that it may be best to simply wait for another day, you back out of the plan altogether, telling Steven to come back here some other time.";
 		stop the action;
+
+Section 6 - Steven Bunker events
+
+[Gotta move Steven to the bunker for one event, then he'd go back to the junkyard. All of this will be for a male player.]
+
+after going to Main & 7th Street while ((Charisma of Steven is 1 or Charisma of Steven is 51) and Resolution of Old Stallion Friendship is 3 and Dexterity of Steven < 1 and player is male and daytimer is day):
+	say "     As you walk out onto the steps of the old library, you hear a man clear his throat. You then glance to the side, seeing the imposing figure of Steven. He's leaning against a pillar, his eyes drinking you in as he simply remains silent. A loincloth is the only thing blocking your view of his crotch, but even then, several inches of his equine shaft dangle in clear view, well past the edges of the small piece of fabric. Apparently, he's settling for just having your attention. The silence remains for several awkward seconds, forcing you to make the first move.";
+	Linebreak;
+	say "     [bold type]Do you want to question him about his presence, or do you want to simply leave him to come back another time?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
+	if player consents: [Starts Event]
+		LineBreak;
+		say "     You question why he's here and what may have been going down in the warehouse. He hesitates, glares up and down your form, and then clears his throat again. This time, it's followed by his deep voice answering you, 'The warehouse is now the perfect harem for me, and some of the less changed ones make for perfect bait. However, I'm not here to answer all your questions. I'm here to use you[if charisma of Steven is 1]. Your antics from before need to be paid for, and you being a good little toy will set you on that path. However, this once, I will give you the chance to back out. You did do many things that brought me great pleasure. So, I will give you the chance, this once, to avoid me and my business, and in return, I will do the same[else if charisma of Steven is 51]. Your help with getting me my new slaves will earn you a bit of fun as my toy. Then again, maybe that was a one time thing for you. If that's the case, we can both go our separate ways, permanently[end if].'";
+		LineBreak;
+		say "     [bold type]Do you want to be adopted by Steven, taken by him?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
+		if player consents: [Final check to continue event]
+			LineBreak;
+			say "     You give him a nod, and a smile streaks across his muzzle. 'Now that's a good toy.' You aren't quite sure what he has in mind for you, but you can't help but find yourself excited by the coming prospects. After what you saw in the warehouse, there's no doubt in your mind that he will pull out every stop, that he will use you in the most primal manner one can. There's not much else you could ever want, and that thought surprises you. Whether he has some primal effect on your mind, or whether his dominance has filled you with that desire, you're not sure. You're also not sure how long you were simply standing there and taking his form in, eyehumping his muscles, but he soon approaches you, grabbing an arm and hauling you out into the street.";
+			say "     You almost try to jolt away from him, your concern about the inhabitants of the city overwhelming your submission. However, Steven won't have any of it, tightening his grip on you as he feels you jolt. 'I'm going to show everyone around who you belong to. You agreed, so no trying to back out now.' Steven's gruff voice gives you goosebumps, makes you truly feel owned. He is right, however, there is no turning back now. You agreed to the will of a conquerer, and there's nothing to do but follow through. Even if you really wanted to back out, he'd still take you as his. That's exactly why you find yourself facing the cement, his hulking hands shoving you face down onto the ground.";
+			WaitLineBreak;
+			say "     You then let Steven adjust your position, raise your ass and push his crotch against your ass. The loincloth tickles your skin, but soon his smoldering cock pushes up against you. He pulls back, and when he presses into you once more, his cock is smashed flat against you, the loincloth brushing against your left butt cheek. His length dribbles hot fluids on your lower back, and as he hotdogs your ass, Steven's cum smears up and down his shaft. It lubes the equine cock, allowing for him to thrust faster, to move between your cheeks with more fluid motion. There's nothing to do but brace yourself as he vigorously humps your ass.";
+			say "     The sound of slick movement, of groaning pants and of his balls slapping your taint, really insures that everyone and everything in earshot is fully aware of what's happening. However, as a particularly loud snort sounds out from behind you, the equine shaft slips free from between your cheeks. The blunt tip soon returns, though, poking at your anus with ever increasing demand. It's the only part of Steven's cock that you feel against you, but it makes that length feel even larger than before. Your anus quivers in anticipation of what the ex-guard is going to do.";
+			WaitLineBreak;
+			say "     And then it happens; your anus opens up, and that broad tip slips inside. At that moment, your mouth gapes, and you're left in complete bliss. The flared tip brushes right over your prostate, driving you mad with pleasure in mere seconds. There's nothing left to hide, and so you simply let it happen. You brace yourself even more, letting him put all his weight into sliding his cock deep within your ass. There's nothing but bliss, Steven's sensitive flesh sliding right into you. It feels like it has always belonged inside you. As the pleasure spikes, as the median ring pops into you, your body quivers with uncontrollable ecstasy.";
+			say "     You almost feel like you've already cum. The pleasure is so overwhelming that you feel like you're in a constant state of climax, and as his hips finally press firmly against your ass, that climactic feeling only strengthens. Of course, Steven doesn't just rest there and let you ride out the pleasure. Soon he begins to pull out, forcing you to go through the exact same insane pleasure, and yet it feels like it's even more maddening in strength. When the median ring pops out of you, your mind blanks out. Before you know it, you feel his hips slapping against your ass again, and again, and again.";
+			WaitLineBreak;
+			say "     His rhythm picks up, and as your mind continues to fill with static, your cock lurches in the air, firing off shot after shot of cum. The seed splatters against the asphalt, marking it with your utter desire. Steven doesn't slow down at all, however, continuing to pound your ass, slapping his hips against you as he snorts and neighs in unctrollable outbursts. The ex-guard, turned dominant horse, doesn't give you a break, his neighing filling the area as the wet slapping picks up. Somehow he's going even faster, humping you even harder. It's then that you realize that something is pumping straight into your guts.";
+			say "     You don't quite understand what's going on until hot cum begins to spurt out of your ass. The horse is cumming straight into you, and he's not slowing down for a second. You can feel each shot almost bulge out your stomach, his cock pulsing again, and again, constantly throbbing as it fills you to the brim. When there's too much, the cum squirts right back out and all over the both of you. Soon Steven's crotch is coated in seed, your lower body covered with it as well, and as he keeps fucking you, the cum splatters about even more.";
+			WaitLineBreak;
+			say "     It's not until you're kneeling in a puddle of his hot jizz that he slows down, eventually holding himself balls deep inside you. 'Always nice to get a new plaything,' Steven grunts out. He then snorts again, pulling his cock out of you with a wet slurp. 'See you again.' The man then clops off, leaving you stuffed and marked. You take a minute to relax, to gather yourself, and as the cum begins to dry, you get up and gather your things.";
+			if Charisma of Steven is 1:
+				Now Charisma of Steven is 2;
+			else if Charisma of Steven is 51:
+				Now Charisma of Steven is 52;
+			NPCSexAftermath Player receives "AssFuck" from Steven;
+		else: [Blocks out future Steven content for now]
+			say "     You shake your head at the hulking horse, simply turning and heading off. You can feel his eyes digging straight into your back, but he's not yet far enough gone to go against your wishes.";
+			now Dexterity of Steven is 1; [alt path]
+	else: [Delays Event]
+		say "     You decide to simply head on your way, shrugging your shoulders at the confusing appearance.";
+
+[Steven shows up at the bunker for a second time]
+
+after going to Main & 7th Street while ((Charisma of Steven is 2 or Charisma of Steven is 52) and XP of Onyx > 9 and XP of Onyx < 20 and player is male and daytimer is day):
+	say "     'There you are, my little bitch,' you hear a voice declare as you walk out of the library. It's Steven again.";
+	LineBreak;
+	say "     [bold type]Do you pay attention to him?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
+	if player consents: [Starts Event]
+		LineBreak;
+		say "     Turning around, you set your eyes on the hulking horse before you. The ex-guard seems bigger than when you last spoke to him. His height isn't noticeably different, his muscles, while more defined, don't seem to have grown outward, and yet, somehow, you feel as if you're standing before a giant: a predatory giant. 'That's how I like to be looked at. In awe. In worship, and just a touch of fear.' Something has clearly grown within him, and as Steven clops his way towards you, the wind tickling at his short fur, his cock becomes ever more present in your mind. Gone is the loincloth from before, the thing that was always soaked in musk and seed. Now there's nothing to hide his virility.";
+		say "     Steven's musk almost immediately hits you, his ever closer presence wafting the scent up to your nose. Your eyes lock onto the source of the smell, the crotch of the great equine before you. That's when you notice the longer fur around the base of his cock, his thick pubic-fur, and then you notice how sweaty the equine has gotten. 'I just got done with pounding a new recruit. He was a nice military guy, gruff, muscled, and ready to fight. However, all I had to do was whip off my loincloth and toss it in his face. Within seconds, he was begging for my cock. So, sorry if you were wanting a whiff of it. It's still balled up in his mouth.'";
+		WaitLineBreak;
+		say "     You don't really respond, and as you glance back into his smiling face, you hear hooves clopping inside the library, approaching the two of you. 'Oh, got another horseboy?' Steven chuckles. A deep voice replies, 'I ain't no boy, and he's my toy.' You then see Onyx step out of the library. 'Oh, is that so? Up to share him for a bit?' The ex-guard then turns and grabs a duffle bag from behind a pillar. He pulls out a leash, a halter and a bit. When Onyx sees all of this, his eyes light up with utter glee. 'Oh, if we're doing that, and you brought all that lovely gear, then we can work something out.' You feel concern welling up within you.";
+		say "     However, that concern doesn't get a chance to come out. You're quickly shoved to your knees, your mouth inches away from the equine's cock. The thing soon pops straight up, slapping against your chin. You're left with only one option when a hand cups the back of your head: your mouth directed at the tip. As soon as your lips touch the broad end, you're shoved down to the base of the equine shaft. Your nose is then nestled right in a tuft of pubic fur, the sweaty, musky scent blanking your mind of all reason for several seconds.";
+		WaitLineBreak;
+		say "     Somehow, you manage to regain some consciousness and reason. You also manage to avoid a chocking fit on that long rod, your throat easily accommodating it. Within moments, however, you're pulled right off it. Your head is then angled up, your vision filled with the grinning muzzles of two massive equines. 'So let's do this,' Onyx proclaims. Steven then gets to making use of everything he brought. A collar and bridle are quickly snapped around your head and neck, with the bit shoved in seconds later. The leash is then clipped right onto your collar.";
+		say "     'This place seems a bit quiet, but I'm sure a few beasties are watching. Maybe we give them a show?' Steven offers up. 'Oh, sounds perfect,' Onyx replies. You're then pulled by the leash, your hands and feet barely keeping you from falling over and simply being dragged down the stairs. Luckily, Steven doesn't pull you along too fast, giving you at least a chance to stay upright. However, you are quite roughly yanked into the middle of the street. Your neck burns from the grinding of the collar, but after being positioned in the open, there aren't any more efforts to move you along.";
+		WaitLineBreak;
+		say "     You quickly feel hands all over you. The rough, equine appendages stroke up and down your sides, slap and grope at your ass, all while you feel hot breath wafting over you. You're then quickly, and unceremoniously, stripped of your belongings. You're now entirely revealed to the world around you, and as the hot breath wafts over your exposed body, thick fingers jab at your hole. Beyond their hooves and snorting, there is little noise from either. They stay entirely focused on breaking you in. However, things come to a stop almost as quickly as they had started. When you feel one of them step over you, and their ass slam down onto your back, you know what's next. 'Giddy-up,' is all you hear from the horse above you: Steven. He then yanks on your leash and squeezes his thighs around your torso, keeping his ass tight to your back. You're forced to crawl about on the street, taking Steven with you. He jerks and pulls on the leash, directing you this way and that.";
+		say "     No matter how much you might try, the halter and bit keeps you from saying a thing. The only sounds that come out of your maw are grunts, groans and indiscernible gibberish. This keeps going for what feels like half-an-hour, the big horse using you as a mount, quite literally. You're never driven too far away form the Library, but you're still shown off like some prized stallion. 'It feels pretty good up here,' Steven remarks as he slaps your back, his erection strafing back and forth between your shoulder blades. The pre leaking all over your back only makes this an even more humiliating affair, and as you question why you even agreed to this in the first place, you feel a blunt, wet object poke at your ass. It rubs back and forth, coating your rear in fluids, and as it slips between your cheeks, it swipes over your hole. The feeling of it, of the warm rod grazing your hole, reminds you exactly why you do things like this.";
+		WaitLineBreak;
+		say "     Your leash is yanked, hard, forcing you to stop as you let out gagging hacks for air. The cock behind you then slams right in. There's a sheering, almost unimaginable moment of pain, but after that brief second, ecstasy fills you, blinds you, and leaves you drooling over the metal bit in your mouth. You're filled to the brim with Onyx's cock, and as you try to move, Steven jerks on your leash. You aren't allowed to do anything other than take it. Of course, as the cock withdraws, your mind goes blank in fog. Lust infects your every thought, pleasure consuming you from the inside out.";
+		say "     All mercy that they may have had is quickly yanked away. The muscled, equine hips behind you quickly smack into your ass, pull away, and then slam back into you. This repeats, faster and faster, as if Onyx is trying to pound you into a mushy stain on the street. You're not sure if it's anger or lust that drives that cock in and out of you, and the gutteral, rasping grunts don't clear things up. However, as the speed picks up, you feel Steven begin to jack off above you. His cock grazes the back of your head every so often, his furred, yet callused, hands brushing against you as he pleasures himself.";
+		WaitLineBreak;
+		say "     It is then that a telltale slam comes from behind. A warmth fills you to the brim, and a neigh of base emotion sounds out. Another neigh soon follows, and the back of your head is painted with hot cum. Whatever misses your head, splatters to the ground in-front of you. Pure white fluids dribble down over your forehead, dripping past your eyes as you close them. Soon, your entire head is plastered in equine fluids, and as the horse behind you pulls out, the one above you gets up. It takes a bit of effort for Onyx to pop his flared head out, but when he does, his load pours out over your thighs, balls and cock. It even begins to pool around your knees, caking your legs in semen. That's when you notice that you're free of the bridle and bit; even the leash and collar get taken off. All of it is covered in cum, but Steven still takes it back to his bag in front of the library, packing all of it up.";
+		say "     Your cum covered ass gets a quick smack, and then, Onyx heads up to Steven. They then lean into each other, Onyx placing his hands against Steven's chest. As they get closer and closer, you notice their heads tilt, and seconds later they're making out. Deciding you better get back to exploring before they get any other ideas for your body, you gather your things and head off. The cum eventually dries into you, but you're left feeling thoroughly marked.";
+		if Charisma of Steven is 2:
+			Now Charisma of Steven is 3;
+		else if Charisma of Steven is 52:
+			Now Charisma of Steven is 53;
+		NPCSexAftermath Player receives "OralCock" from Steven;
+		NPCSexAftermath Player receives "AssFuck" from Onyx;
+	else:
+		say "     You simply head off on your own, quickly jogging away like you didn't hear him.";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -970,11 +1059,9 @@ Sarea of Junkyard Home is "Junkyard".
 
 to say ResolveEvent Junkyard Home:
 	if Stevenremoved is 0:
-		say "You come across what looks like an abandoned habitation, filled with old nesting material and various shiny objects. Is it some kind of bird's nest? You decide to leave it alone... for now.";
+		say "     You come across what looks like an abandoned habitation, filled with old nesting material and various shiny objects. Is it some kind of bird's nest? You decide to leave it alone... for now.";
 	else:
-		say "You turn around a corner and find a quaint little cove in the stacks of junk. A familiar-looking person is tidying up the floor, and looks up as you approach.";
-		say "'Ah, hello,' Steven says. 'Didn't know if I'd see you again.' He looks down at near-naked equine body, wearing only a belt and a loincloth. 'As you can tell, I was permanently disbarred and exiled. My old clothes don't fit me anymore. This loincloth was part of a curtain. There is a lot of useful stuff out here, but it's not like it was in the shelter. I'm sure we'll make it through, though.'";
-		say "'I want to thank you,' he says. 'I don't know if it was the best decision I've made, but I feel some relief for this body. It feels like, completion, I guess. The grass is tastier on the other side, after all.' He smiles. 'You like the place? I think it's roomy enough. If you want to... you know... move in.' He coughs and goes back to work.";
+		say "     You turn around a corner and find a quaint little cove in the stacks of junk. A familiar-looking person is tidying up the floor, and looks up as you approach. 'Ah, hello,' Steven says. 'Didn't know if I'd see you again.' He looks down at near-naked equine body, wearing only a belt and a loincloth. 'As you can tell, I was permanently disbarred and exiled. My old clothes don't fit me anymore. This loincloth was part of a curtain. There is a lot of useful stuff out here, but it's not like it was in the shelter. I'm sure we'll make it through, though.' 'I want to thank you,' he says. 'I don't know if it was the best decision I've made, but I feel some relief for this body. It feels like, completion, I guess. The grass is tastier on the other side, after all.' He smiles. 'You like the place? I think it's roomy enough. If you want to... you know... move in.' He coughs and goes back to work.";
 		move player to Steven's Home;
 		AddNavPoint Steven's Home;
 		now junkyard home is resolved;

@@ -210,6 +210,7 @@ Figure of Zebra_face_icon is the file "Zebra_face.jpg".
 [NPC icons]
 Figure of Ace_icon is the file "Ace.jpg".
 Figure of Adam_icon is the file "Adam.jpg".
+Figure of Aerana_naked_icon is the file "Aerana_naked.jpg".
 Figure of Alexandra_clothed_icon is the file "Alexandra_clothed.jpg".
 Figure of Alexandra_clothed_preg_icon is the file "Alexandra_clothed_preg.jpg".
 Figure of Alexandra_face_icon is the file "Alexandra_face.jpg".
@@ -752,6 +753,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Abcdefghij"	Figure of pixel	""	g-black	"normal" [blocker for first position]
 "Abcdefghij"	Figure of pixel_icon	""	g-black	"normal" [blocker for first position]
 "Adam"	Figure of Adam_icon	"Kadel"	g-white	"normal"
+"Aerana"	Figure of Aerana_naked_icon	"Gherod"	g-black	"normal"
 "Ace"	Figure of Ace_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Alexandra_clothed"	Figure of Alexandra_clothed_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_clothed_preg"	Figure of Alexandra_clothed_preg_icon	"Lyttathebug"	g-black	"normal"
@@ -1491,6 +1493,7 @@ carry out artistcredits:
 	say "     Andrew by Rukis @ furaffinity.net[line break]";
 	say "     Angie by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Adam by Kadel @ y-gallery.net[line break]";
+	say "     Aerana by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     Alex by canned @ weasyl.com (6cans @ furaffinity.net)[line break]";
 	say "     Andre by Wemd @ furaffinity.net[line break]";
 	say "     Anthony (dressed) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
