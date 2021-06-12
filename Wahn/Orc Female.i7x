@@ -186,10 +186,11 @@ to say KatyaBeatenSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Collect a bottle of femcum from her";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Fuck her mouth";
-	now sortorder entry is 2;
-	now description entry is "Slide your dick between her lips";
+	if Player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck her mouth";
+		now sortorder entry is 2;
+		now description entry is "Slide your dick between her lips";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Go down on her pussy";
@@ -1026,10 +1027,11 @@ to say KatyaSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Collect a bottle of femcum from her";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Fuck her mouth";
-	now sortorder entry is 2;
-	now description entry is "Slide your dick between her lips";
+	if Player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck her mouth";
+		now sortorder entry is 2;
+		now description entry is "Slide your dick between her lips";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Go down on her pussy";

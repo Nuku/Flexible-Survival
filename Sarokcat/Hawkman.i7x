@@ -13,77 +13,80 @@ to say hawkmandesc:
 	setmongender 3;  [creature is male]
 	choose row MonsterID from Table of Random Critters;
 	if inasituation is true:
-		stop the action; [details are taken care of at the event source]
-	say "     As you wander through the city streets, you hear a whistling sound from above and look up to see a powerful avian form swooping down towards you. You jump back as it lands right in front of you and get a closer look at the anthro raptor's body as he stalks towards you on taloned feet. The strange bird-man has large, hawk-like wings stretching out from his back, clearly flight-ready given the creature's aerial approach. He is covered in a rather soft and beautiful looking plumage of brown, layered feathers with ivory-white countershading. The obviously male creature is half-erect as he cocks his avian head to the side appraisingly, and you swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";
+		say ""; [details are taken care of at the event source]
+	else:
+		say "     As you wander through the city streets, you hear a whistling sound from above and look up to see a powerful avian form swooping down towards you. You jump back as it lands right in front of you and get a closer look at the anthro raptor's body as he stalks towards you on taloned feet. The strange bird-man has large, hawk-like wings stretching out from his back, clearly flight-ready given the creature's aerial approach. He is covered in a rather soft and beautiful looking plumage of brown, layered feathers with ivory-white countershading. The obviously male creature is half-erect as he cocks his avian head to the side appraisingly, and you swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";
 
 to say Hawkman wins:
 	if inasituation is true:
-		stop the action; [details are taken care of at the event source]
-	now nohawkmansex is 0;
-	if Player is female or ( anallevel is 3 and a random chance of 2 in 5 succeeds ) or ( player is mpreg_ok and a random chance of 2 in 5 succeeds ):
-		if Player is not female and a random chance of 3 in 5 succeeds:
-			if HP of Player > 0:
-				say "     The hawkman grins wide when you give in to him and he wastes no time in leaping forward, knocking your unresisting form to the ground. He chuckles happily as he rubs his feathered form against your [bodydesc of Player] body while divesting you of your gear. Groping you between the legs as he does, he gives a cawing laugh. 'Well, you're nothing but a big hen, ain't you?' he says teasingly, nipping at your neck while grinding his stiffened member against your rear and fondling your [if Player is male]manhood as it reacts[else]your bare groin[end if].";
-			else:
-				say "     The hawkman grins proudly upon your defeat and he wastes no time in leaping forward, knocking your exhausted form to the ground. He chuckles happily as he rubs his feathered form against your [bodydesc of Player] body while divesting you of your gear. Groping you between the legs as you squirm ineffectually, he gives a cawing laugh. 'Prey, I'm going to make you my hen,' he says teasingly, nipping at your neck while grinding his stiffened member against your rear meaningfully. He reaches around and fondles your [if Player is male]manhood, causing it to react involuntarily[else]bare groin, causing you to moan involuntarily[end if].";
-			say "     You are manhandled onto all fours by the lustful bird even as your own arousal heightens[if HP of Player <= 0] despite yourself[end if]. His wings enfold around you possessively, keeping his prey/plaything safely trapped/enclosed. The true context of the situation becomes increasingly blurred for you as a growing need to allow the hawkman to fuck you overwhelms your reason as his masculine scent and confident, possessive manner affect your nanite-addled mind. He chuckles and pumps his cock eagerly when you reach back and spread your cheeks, baring your waiting pucker to [if HP of Player > 0]your dominant lover[else]the victorious raptor[end if]. From that point, he wastes little time in mounting you, burying his narrow pink cock in your exposed behind and causing you to moan in pleasure.";
-			WaitLineBreak;
-			say "     Having the avian organ inside you feels wonderful, the hawkman thrusting it skillfully and energetically into your hot hole. Your anal passage grows increasingly wet as his precum lubes you up, allowing him to fuck you harder and faster still, much to your mutual delight. You lean your chest forward and stretch your arms out, effectively raising your ass and allowing him to penetrate deeper [if HP of Player > 0]like some lustful he-hen to this studly hawk[else]into his captured man-slut prey[end if]. You pant and moan beneath him as he fucks you, his virile rod pulsing and throbbing inside you[if Player is male]. Your prostate thrums from the stimulation and your balls throb with arousal until finally spilling over in a loud and lustful orgasm. The hawkman chuckles as you climax[else]. Your body quivers with unfocused ecstasy as the stimulation eventually makes you cry out. The hawkman chuckles at your uncontrolled response[end if], nipping firmly at your shoulder and neck, and drives himself deep into you, spraying his hot load into your ass. You can't help but moan and blush a bit at how good it feels to have his semen flowing into your bowels [if HP of Player > 0]as he cums in his horny lover[else]of his misused prey[end if].[movichance]";
-			say "     When he pulls out, you flop over onto your side with a dazed, contented smile on your face and a trickle of hawk seed leaking from your well-used hole. After wiping his spent shaft across your hip, he takes flight, leaving you to gradually recover your wits - though you feel a lingering longing for the confident male to reclaim you again soon.";
-			CreatureSexAftermath "Player" receives "AssFuck" from "Hawkman Male";
-		else:
-			say "     The hawkman's beak spreads open in a wide grin as you finally stop fighting him. He wastes no time in leaping forward and knocking your unresisting form to the ground, chuckling happily as he rubs his surprisingly soft feathers up against your body eagerly. You find yourself moaning softly as his avian form pins you to the ground, his taloned feet gripping your legs and stroking them lightly as he spreads them wide open for him. His wings open wide and enclose the two of you in a small tent smelling strongly of his masculine presence, and your body begins to burn with need even as he positions his narrow pink cock in front of your [if Player is female]already damp female opening[else]exposed behind[end if]. You feel strangely comfortable and protected as he buries himself in your waiting [if Player is female]passage[else]hole[end if], and you moan happily with pleasure as he nuzzles your neck with his hooked raptor beak.";
-			say "     The feel of his avian organ in your body is absolutely wonderful, as it seems to reach deep inside you and stroke you in all the right places. The almost hypnotic building rhythm of his short thrusts into your body makes your mind fill with pleasure as you bury your fingers in his lovely, feathered sides. It isn't long before you are gasping and shuddering in [if Player is not neuter]orgasm[else]ecstasy[end if] underneath him as he fills your [bodydesc of Player] body with his wonderful avian seed. You can feel it flowing into you to pool inside your [if Player is female]womb[else]bowels[end if]. Your [bodytype of Player] body responds eagerly to his seeding with a rush of amazing pleasure even as he cries out his triumph to the empty streets around you. You find yourself smiling happily as he pulls himself off of you. The hawkman rubs his beak over your well-used body a few times before taking to the air again. As you begin to try to gather your wits about you, you find yourself almost idly wondering as you rub your belly whether or not you will see the handsome bird again anytime soon...[ovichance]";
-			CreatureSexAftermath "Player" receives "[if player is female]PussyFuck[else]AssFuck[end if]" from "Hawkman Male";
+		say ""; [details are taken care of at the event source]
 	else:
-		say "     Knocking you to the ground, the hawkman screams his triumph, strutting around you in a particularly avian stride. As you sit up, the birdman pushes you back down with one taloned foot before taking to the sky again. Dizzy and rubbing the bump at the back of your head, you can only stare in surprise as he begins to stroke himself off above you, the hunt and the combat obviously having only increased the strange creature's arousal. Within a minute, he shudders, his cock twitching as he covers your beaten form with his sticky white seed. The seed seems to tingle even as it sinks into your body, and the watching hawkman lets out a sound of satisfaction before flying off into the city in search of more prey, leaving you lying there trying to deal with your new changes.";
+		now nohawkmansex is 0;
+		if Player is female or ( anallevel is 3 and a random chance of 2 in 5 succeeds ) or ( player is mpreg_ok and a random chance of 2 in 5 succeeds ):
+			if Player is not female and a random chance of 3 in 5 succeeds:
+				if HP of Player > 0:
+					say "     The hawkman grins wide when you give in to him and he wastes no time in leaping forward, knocking your unresisting form to the ground. He chuckles happily as he rubs his feathered form against your [bodydesc of Player] body while divesting you of your gear. Groping you between the legs as he does, he gives a cawing laugh. 'Well, you're nothing but a big hen, ain't you?' he says teasingly, nipping at your neck while grinding his stiffened member against your rear and fondling your [if Player is male]manhood as it reacts[else]your bare groin[end if].";
+				else:
+					say "     The hawkman grins proudly upon your defeat and he wastes no time in leaping forward, knocking your exhausted form to the ground. He chuckles happily as he rubs his feathered form against your [bodydesc of Player] body while divesting you of your gear. Groping you between the legs as you squirm ineffectually, he gives a cawing laugh. 'Prey, I'm going to make you my hen,' he says teasingly, nipping at your neck while grinding his stiffened member against your rear meaningfully. He reaches around and fondles your [if Player is male]manhood, causing it to react involuntarily[else]bare groin, causing you to moan involuntarily[end if].";
+				say "     You are manhandled onto all fours by the lustful bird even as your own arousal heightens[if HP of Player <= 0] despite yourself[end if]. His wings enfold around you possessively, keeping his prey/plaything safely trapped/enclosed. The true context of the situation becomes increasingly blurred for you as a growing need to allow the hawkman to fuck you overwhelms your reason as his masculine scent and confident, possessive manner affect your nanite-addled mind. He chuckles and pumps his cock eagerly when you reach back and spread your cheeks, baring your waiting pucker to [if HP of Player > 0]your dominant lover[else]the victorious raptor[end if]. From that point, he wastes little time in mounting you, burying his narrow pink cock in your exposed behind and causing you to moan in pleasure.";
+				WaitLineBreak;
+				say "     Having the avian organ inside you feels wonderful, the hawkman thrusting it skillfully and energetically into your hot hole. Your anal passage grows increasingly wet as his precum lubes you up, allowing him to fuck you harder and faster still, much to your mutual delight. You lean your chest forward and stretch your arms out, effectively raising your ass and allowing him to penetrate deeper [if HP of Player > 0]like some lustful he-hen to this studly hawk[else]into his captured man-slut prey[end if]. You pant and moan beneath him as he fucks you, his virile rod pulsing and throbbing inside you[if Player is male]. Your prostate thrums from the stimulation and your balls throb with arousal until finally spilling over in a loud and lustful orgasm. The hawkman chuckles as you climax[else]. Your body quivers with unfocused ecstasy as the stimulation eventually makes you cry out. The hawkman chuckles at your uncontrolled response[end if], nipping firmly at your shoulder and neck, and drives himself deep into you, spraying his hot load into your ass. You can't help but moan and blush a bit at how good it feels to have his semen flowing into your bowels [if HP of Player > 0]as he cums in his horny lover[else]of his misused prey[end if].[movichance]";
+				say "     When he pulls out, you flop over onto your side with a dazed, contented smile on your face and a trickle of hawk seed leaking from your well-used hole. After wiping his spent shaft across your hip, he takes flight, leaving you to gradually recover your wits - though you feel a lingering longing for the confident male to reclaim you again soon.";
+				CreatureSexAftermath "Player" receives "AssFuck" from "Hawkman Male";
+			else:
+				say "     The hawkman's beak spreads open in a wide grin as you finally stop fighting him. He wastes no time in leaping forward and knocking your unresisting form to the ground, chuckling happily as he rubs his surprisingly soft feathers up against your body eagerly. You find yourself moaning softly as his avian form pins you to the ground, his taloned feet gripping your legs and stroking them lightly as he spreads them wide open for him. His wings open wide and enclose the two of you in a small tent smelling strongly of his masculine presence, and your body begins to burn with need even as he positions his narrow pink cock in front of your [if Player is female]already damp female opening[else]exposed behind[end if]. You feel strangely comfortable and protected as he buries himself in your waiting [if Player is female]passage[else]hole[end if], and you moan happily with pleasure as he nuzzles your neck with his hooked raptor beak.";
+				say "     The feel of his avian organ in your body is absolutely wonderful, as it seems to reach deep inside you and stroke you in all the right places. The almost hypnotic building rhythm of his short thrusts into your body makes your mind fill with pleasure as you bury your fingers in his lovely, feathered sides. It isn't long before you are gasping and shuddering in [if Player is not neuter]orgasm[else]ecstasy[end if] underneath him as he fills your [bodydesc of Player] body with his wonderful avian seed. You can feel it flowing into you to pool inside your [if Player is female]womb[else]bowels[end if]. Your [bodytype of Player] body responds eagerly to his seeding with a rush of amazing pleasure even as he cries out his triumph to the empty streets around you. You find yourself smiling happily as he pulls himself off of you. The hawkman rubs his beak over your well-used body a few times before taking to the air again. As you begin to try to gather your wits about you, you find yourself almost idly wondering as you rub your belly whether or not you will see the handsome bird again anytime soon...[ovichance]";
+				CreatureSexAftermath "Player" receives "[if player is female]PussyFuck[else]AssFuck[end if]" from "Hawkman Male";
+		else:
+			say "     Knocking you to the ground, the hawkman screams his triumph, strutting around you in a particularly avian stride. As you sit up, the birdman pushes you back down with one taloned foot before taking to the sky again. Dizzy and rubbing the bump at the back of your head, you can only stare in surprise as he begins to stroke himself off above you, the hunt and the combat obviously having only increased the strange creature's arousal. Within a minute, he shudders, his cock twitching as he covers your beaten form with his sticky white seed. The seed seems to tingle even as it sinks into your body, and the watching hawkman lets out a sound of satisfaction before flying off into the city in search of more prey, leaving you lying there trying to deal with your new changes.";
 
 To say Hawkman loses:
 	if inasituation is true:
-		stop the action; [details are taken care of at the event source]
-	if hawkmanbeaten < 3:
-		say "     With one last vicious blow, you knock the hawkman back, the creature seemingly surprisingly fragile for all his striking power, and as he hops back and takes to the sky again to flee, you wonder if his bones are just as delicate as most birds... Sighing you turn to continue on your way, though you resolve to keep a better eye on the sky above just in case more of those surprisingly sexy hawkmen are in the area.";
+		say ""; [details are taken care of at the event source]
 	else:
-		say "     With a final, vicious blow, you knock the hawkman back. Prepared for the avian's escape attempt, you reach out and grab him by the ankle as he starts to flap his wings. Too weak, you pull him down, slamming him to the ground, leaving the anthro avian vulnerable to you.";
-		now sextablerun is 0;
-		say "     [bold type]What do you want to do to your captive?[roman type][line break]";
-		blank out the whole of table of fucking options;
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Milk him for cum";
-		now sortorder entry is 1;
-		now description entry is "Fill a bottle with some rich hawkman male cum";
-		[]
-		if Player is male:
+		if hawkmanbeaten < 3:
+			say "     With one last vicious blow, you knock the hawkman back, the creature seemingly surprisingly fragile for all his striking power, and as he hops back and takes to the sky again to flee, you wonder if his bones are just as delicate as most birds... Sighing you turn to continue on your way, though you resolve to keep a better eye on the sky above just in case more of those surprisingly sexy hawkmen are in the area.";
+		else:
+			say "     With a final, vicious blow, you knock the hawkman back. Prepared for the avian's escape attempt, you reach out and grab him by the ankle as he starts to flap his wings. Too weak, you pull him down, slamming him to the ground, leaving the anthro avian vulnerable to you.";
+			now sextablerun is 0;
+			say "     [bold type]What do you want to do to your captive?[roman type][line break]";
+			blank out the whole of table of fucking options;
+			[]
 			choose a blank row in table of fucking options;
-			now title entry is "Fuck him";
-			now sortorder entry is 2;
-			now description entry is "Screw the defeated hawkman";
-		[]
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]0 - Leave him be[as]0[end link][line break]";
-		while sextablerun is 0:
-			say "Pick the corresponding number> [run paragraph on]";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
-				if Player consents:
-					let nam be title entry;
+			now title entry is "Milk him for cum";
+			now sortorder entry is 1;
+			now description entry is "Fill a bottle with some rich hawkman male cum";
+			[]
+			if Player is male:
+				choose a blank row in table of fucking options;
+				now title entry is "Fuck him";
+				now sortorder entry is 2;
+				now description entry is "Screw the defeated hawkman";
+			[]
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Leave him be[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						let nam be title entry;
+						now sextablerun is 1;
+						if nam is "Milk him for cum":
+							say "[HawkmanCumMilking]";
+						else if nam is "Fuck him":
+							say "[HawkmanAssfuck]";
+				else if calcnumber is 0:
+					say "     To reinforce your victory, you pull a few feathers from the bird's tail, making him squawk in pain.";
 					now sextablerun is 1;
-					if nam is "Milk him for cum":
-						say "[HawkmanCumMilking]";
-					else if nam is "Fuck him":
-						say "[HawkmanAssfuck]";
-			else if calcnumber is 0:
-				say "     To reinforce your victory, you pull a few feathers from the bird's tail, making him squawk in pain.";
-				now sextablerun is 1;
-			else:
-				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
-	increase hawkmanbeaten by 1;
+				else:
+					say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
+		increase hawkmanbeaten by 1;
 
 to say HawkmanCumMilking:
 	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you decide to take what you want from the defeated avian instead of letting him force it upon you. Slamming his shoulders down firmly, you tell the weakened bird to stay, then reach for his crotch and start rubbing it. As his tapering shaft starts to fill out under your touch, the hawkman's indignant squawks die down before too much longer, with your former opponent beginning grind against your hand. He still struggles a little bit, wanting to be dominant and on top, but you growl at him until he stops resisting. Only then do you take the hand that was pressing down on his chest away, using it to caress his balls instead. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the rapid beat of his heart.";

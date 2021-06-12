@@ -385,14 +385,14 @@ When Play begins:
 	now wdam entry is 10;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Outside";  [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now Cock Count entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now Cock Length entry is 9;  [ Length infection will make cock grow to if cocks]
-	now Ball Size entry is 1;  [ Size of balls ]
+	now Cock Length entry is 10;  [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 3;  [ Size of balls ]
 	now Nipple Count entry is 2;  [ Number of nipples infection will give you (males have nipples too) ]
 	now Breast Size entry is 0;  [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Depth entry is 9;
-	now Cunt Tightness entry is 4;
+	now Cunt Count entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 0;
+	now Cunt Tightness entry is 0;
 	now SeductionImmune entry is false;
 	now libido entry is 30;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "husky alpha fur";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]

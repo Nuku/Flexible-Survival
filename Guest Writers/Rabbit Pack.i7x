@@ -34,11 +34,19 @@ to say rabpackvictory:
 		say "The rabbit creatures take all of you into a nearby abandoned building. They... no, it has plans for you, and it doesn't want unwanted guests.[line break]After laying you to the ground, they step back, sitting or crouching around you. Instinctively, you group together all of your copies, for how your injures can afford. One of them slowly creeps closer, making a noise, an attempt to tranquilize you. [one of]He[or]She[at random] hugs you, kissing tenderly your forehead until you calm down. The other part soon join in...";
 		WaitLineBreak;
 		say "It's so slow... not lazy or sluggish, but constantly building up your pleasure, a tiny bit at a time. Couples and groups changes constantly, without a pattern, and you weakly realize that a few of your own copies are making out with each other. Even your thoughts are interweaving with... well... them, and you find your consciousness passing from male to female in a pinkish blur... either by you or to you, cocks are [one of]jerked[or]sucked[or]inserted[at random], breasts [one of]massaged[or]milked[at random], asses [one of]groped[or]prodded[at random], cunts [one of]licked[or]fingered[or]filled[at random]... every so often a [one of]sweet[or]warm[or]lovely[at random] kiss...";
-		say "After at least hours, it finally ends. After a little rest, they escort you back to where they ambushed you, worn-out but satisfied.[impregchance]";
+		say "After at least hours, it finally ends. After a little rest, they escort you back to where they ambushed you, worn-out but satisfied.";
 		decrease Libido of Player by 50;
 	else:
 		say "The rabbit creatures lift you in unison and transport you into a nearby abandoned building, before any unwanted guest shows up.[line break]They lay you gently on the ground and admire your body, obviously pleased by what they got; they crawl on you, caressing, licking gently...[line break][rabpacka][rabpackb][rabpackc]";
 		say "Your body can't resist their attentions, and you orgasm, matting a few of them. This doesn't stop them, as they keeps stimulating you, themselves, and each other, indifferently, no matter how spent any of you are...[line break]When it finally ends, those who can still stand guide the others somewhere else. You curl on the ground and fall asleep, trying to recover.";
+	if Player is female:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Rabbit";
+	if Player is male:
+		CreatureSexAftermath "Rabbit" receives "PussyFuck" from "Player";
+		CreatureSexAftermath "Rabbit" receives "OralCock" from "Player";
+		CreatureSexAftermath "Rabbit" receives "AssFuck" from "Player";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Rabbit";
+	CreatureSexAftermath "Player" receives "OralCock" from "Rabbit";
 
 to say rabpacka:
 	if Breast Size of Player > 6:

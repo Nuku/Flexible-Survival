@@ -295,7 +295,7 @@ ResolveFunction of Dog Meets Dog is "[ResolveEvent Dog Meets Dog]".
 Sarea of Dog Meets Dog is "Campus".
 The PrereqCompanion of Dog Meets Dog is gshep.
 
-after going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is listed in companionList of Player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
+after going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and Dog Meets Dog is not resolved and gshep is listed in companionList of Player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
 	DogMeetsDogEvent;
 
 to say ResolveEvent Dog Meets Dog:
@@ -339,6 +339,7 @@ to DogMeetsDogEvent:
 		say "     Raising a hand to your mouth, you give a loud and sharp whistle that has both of the anthro canines whirling around to face you. Ordering the black-collared German shepherd to heel, you make eye-contact with Korvin as his lips start to show a little scowl, holding the stare until he looks down submissively a few moments later. With a sidelong glance at the beagle and a bark of, 'So long, pup!' Korvin then trots back over to you, taking his usual position. You hook a finger under the collar marking him as yours and adjust it a little to remind him of his status. Then you pat his head like a good dog and start moving on. The beagle student is left behind, staring after the dominant dog with a sigh of relief - and a sliver of regret.";
 		now GibsonRelationship is 100; [stopped things cold]
 	now LastCampusWalkin is turns;
+	now Dog Meets Dog is resolved;
 
 Section 3 - Special Events / Mechanisms
 

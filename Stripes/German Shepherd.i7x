@@ -41,62 +41,65 @@ to say gsd_desc:
 	setmongender 3; [male]
 	choose row MonsterID in Table of Random Critters;
 	now gsd_attack is false;
-	[
-	if gsd_male is true:
-		gsd_set_male;
+	if inasituation is true:
+		say "";
 	else:
-		gsd_unset_male;
-	]
-	now gsd_special is false;
-	if gsd_encounters > 2 and gsd_pet < 12 and inasituation is false and a random chance of gsd_encounters in 7 succeeds:
-		now gsd_special is true;
-		if gsd_pet is 0:
-			say "     Approaching you is another of those aggressive German shepherds. This one is somewhat different from the others. Oh, he's physically similar to the others, if buffer than most of the others you've seen. He does bear a crooked [bold type]scar[roman type] across his cheek and muzzle. His coat is the typical brown and black of the breed as well. Like the rest, he's nude and half-hard as he strides towards you.";
-			say "     'I was hoping to find some way to amuse myself. You smell... interesting. I think I'll enjoy breaking you in,' he says with a lustful growl.";
-			say "     It is something in the look in his eyes and the set of his jaw that really distinguishes him in your eyes. While he clearly has the same crazed lust, there is more [']focus['] to him. Unfortunately, that focus is aimed squarely at you at the moment.";
-			now gsd_pet is 1;
-		else if gsd_pet is 4:
-			if KorvinSubmitCounter > 4: [new auto submit + fight]
-				let randomnumber be a random number from 1 to 3;
-				if randomnumber is:
-					-- 1:
-						say "[KorvinOrcFight]";
-					-- 2:
-						say "[KorvinTenrecFight]";
-					-- 3:
-						say "[KorvinCentaurFight]";
-				now combat abort is 1;
-			else: [current auto submit]
-				if a random chance of 2 in 3 succeeds:
-					say "     You once again cross paths with that [bold type]scarred[roman type] German shepherd... no, your Alpha, a corner of your mind quickly corrects. Perhaps he's been looking for you? Or perhaps you've been unconsciously looking for him? Regardless, seeing you, he approaches with a confident swagger.";
-					say "     The sight of the buff male coming closer makes you excited and you start moving towards him as any thoughts to resist or get away fade from your mind. When he gets near, you drop to all fours and press your head to his paw. You receive a head petting and scritch that makes you very happy. 'That's my good [if Player is female]bitch[else]pup[end if],' he says condescendingly as you submit immediately to him, though his acknowledgement of you as belonging to him pleases and excites you.";
-				else:
-					say "     That [bold type]scarred[roman type] German shepherd you met before is back, your paths having crossed once again. Perhaps he's been looking for you? And having found you, he approaches with a confident swagger. The buff male cracks his knuckles and gives a soft growl.";
-					say "     'I thought I smelled you around, pup. How about you come over here and show your alpha what a good [if gsd_slut is true and player is female]bitch[else if gsd_slut is true]slut[else]beta[end if] you are?' Despite how you may normally feel about him and what he's done to you, being in the presence of your alpha dog triggers something inside you. The sound of his voice and his scent in your nose arouses you and makes you submit to him. He is your alpha and you obey, eager to please him.";
-				increase KorvinSubmitCounter by 1;
-				now combat abort is 1;
-				now fightoutcome is 22;
-				WaitLineBreak;
-				say "[losetogsd]";
+		[
+		if gsd_male is true:
+			gsd_set_male;
 		else:
-			say "     That [bold type]scarred[roman type] German shepherd you met before is back, your paths having crossed once again. Perhaps he's been looking for you? And having found you, he approaches [if gsd_pet < 10]confidently[else]cautiously, but[end if] with an aggressive swagger. The buff male cracks his knuckles and gives a soft growl.";
-			if gsd_fled is true:
-				say "     'I was hoping to run into you again, cuz we've got some unfinished business. Are you gonna stick around this time or are you gonna chicken out again?' he taunts as he strides towards you.";
-			else if gsd_pet < 4:
-				say "     'I was hoping to run into you again. Let's continue your training. I'll make a loyal dog out of you yet,' he says as he strides towards you.";
-			else if gsd_pet is 10 or gsd_pet is 11:
-				say "     'If I kept looking, I knew I'd find you. You may've gotten lucky last time, but that's all it was - luck. I'm top dog around here and that's how it's gonna stay,' he barks. He strides towards you, clearly intent on taking you down a peg.";
+			gsd_unset_male;
+		]
+		now gsd_special is false;
+		if gsd_encounters > 2 and gsd_pet < 12 and inasituation is false and a random chance of gsd_encounters in 7 succeeds:
+			now gsd_special is true;
+			if gsd_pet is 0:
+				say "     Approaching you is another of those aggressive German shepherds. This one is somewhat different from the others. Oh, he's physically similar to the others, if buffer than most of the others you've seen. He does bear a crooked [bold type]scar[roman type] across his cheek and muzzle. His coat is the typical brown and black of the breed as well. Like the rest, he's nude and half-hard as he strides towards you.";
+				say "     'I was hoping to find some way to amuse myself. You smell... interesting. I think I'll enjoy breaking you in,' he says with a lustful growl.";
+				say "     It is something in the look in his eyes and the set of his jaw that really distinguishes him in your eyes. While he clearly has the same crazed lust, there is more [']focus['] to him. Unfortunately, that focus is aimed squarely at you at the moment.";
+				now gsd_pet is 1;
+			else if gsd_pet is 4:
+				if KorvinSubmitCounter > 4: [new auto submit + fight]
+					let randomnumber be a random number from 1 to 3;
+					if randomnumber is:
+						-- 1:
+							say "[KorvinOrcFight]";
+						-- 2:
+							say "[KorvinTenrecFight]";
+						-- 3:
+							say "[KorvinCentaurFight]";
+					now combat abort is 1;
+				else: [current auto submit]
+					if a random chance of 2 in 3 succeeds:
+						say "     You once again cross paths with that [bold type]scarred[roman type] German shepherd... no, your Alpha, a corner of your mind quickly corrects. Perhaps he's been looking for you? Or perhaps you've been unconsciously looking for him? Regardless, seeing you, he approaches with a confident swagger.";
+						say "     The sight of the buff male coming closer makes you excited and you start moving towards him as any thoughts to resist or get away fade from your mind. When he gets near, you drop to all fours and press your head to his paw. You receive a head petting and scritch that makes you very happy. 'That's my good [if Player is female]bitch[else]pup[end if],' he says condescendingly as you submit immediately to him, though his acknowledgement of you as belonging to him pleases and excites you.";
+					else:
+						say "     That [bold type]scarred[roman type] German shepherd you met before is back, your paths having crossed once again. Perhaps he's been looking for you? And having found you, he approaches with a confident swagger. The buff male cracks his knuckles and gives a soft growl.";
+						say "     'I thought I smelled you around, pup. How about you come over here and show your alpha what a good [if gsd_slut is true and player is female]bitch[else if gsd_slut is true]slut[else]beta[end if] you are?' Despite how you may normally feel about him and what he's done to you, being in the presence of your alpha dog triggers something inside you. The sound of his voice and his scent in your nose arouses you and makes you submit to him. He is your alpha and you obey, eager to please him.";
+					increase KorvinSubmitCounter by 1;
+					now combat abort is 1;
+					now fightoutcome is 22;
+					WaitLineBreak;
+					say "[losetogsd]";
 			else:
-				say "     'I figured you might be around here. Smelled the stink of you in the air,' he growls at you. 'I ain't gonna take this uppity shit from you no more. You're gonna learn your place this time, pup.'";
-				say "     For all his posturing, he doesn't come at you right away. More psyching himself up to dare having another go at the foe who's beaten him so many times already. It looks like you'll have to face him at least one more time. And so, rather than waiting for him to finally come at you, you take the fight to him.";
-		decrease gsd_encounters by 2;
-		if gsd_encounters < 3, now gsd_encounters is 3;
-		now gsd_fled is true; [marked as having fled, will clear on win/loss]
-	else:
-		project Figure of GermanShepherd_naked_icon;
-		say "     You're faced with a large, bipedal canine creature. Standing on digitigrade legs, the large canine sports the [one of]traditional brown and tan[or]subtle blue and tan[or]striking black and silver[at random] fur patterns. It's completely unclothed, which makes it QUITE clear that this is a [']He[']. He's got a furry canine sheath resting against his belly and a pair of golf ball-sized balls dangling beneath. He looks you over for a moment, tail starting to wag with increasing enthusiasm as he does. His cock also starts to poke free of its sheath as well, a warning as to what's on his doggified mind. The crazed canine [one of]lets out a rough growl. 'Mmmmm... playtime.'[or][if Player is female]swaggers towards you. 'Good. I was hoping to find a cunt to be my bitch[else]growls aggressively. 'I'm top dog around here. And I'll prove it[end if].'[or]pants with his tongue lolling out. 'Play!' he barks repeatedly as he rushes at you, fists raised and teeth bared - clearly willing to play rough.[or]cracks his knuckles before charging at you.[or]barks a few times before leaping at you.[or]growls aggressively as he stalks towards you.[at random]";
-		increase gsd_encounters by 1;
-		if gsd_encounters > 6, now gsd_encounters is 6;
+				say "     That [bold type]scarred[roman type] German shepherd you met before is back, your paths having crossed once again. Perhaps he's been looking for you? And having found you, he approaches [if gsd_pet < 10]confidently[else]cautiously, but[end if] with an aggressive swagger. The buff male cracks his knuckles and gives a soft growl.";
+				if gsd_fled is true:
+					say "     'I was hoping to run into you again, cuz we've got some unfinished business. Are you gonna stick around this time or are you gonna chicken out again?' he taunts as he strides towards you.";
+				else if gsd_pet < 4:
+					say "     'I was hoping to run into you again. Let's continue your training. I'll make a loyal dog out of you yet,' he says as he strides towards you.";
+				else if gsd_pet is 10 or gsd_pet is 11:
+					say "     'If I kept looking, I knew I'd find you. You may've gotten lucky last time, but that's all it was - luck. I'm top dog around here and that's how it's gonna stay,' he barks. He strides towards you, clearly intent on taking you down a peg.";
+				else:
+					say "     'I figured you might be around here. Smelled the stink of you in the air,' he growls at you. 'I ain't gonna take this uppity shit from you no more. You're gonna learn your place this time, pup.'";
+					say "     For all his posturing, he doesn't come at you right away. More psyching himself up to dare having another go at the foe who's beaten him so many times already. It looks like you'll have to face him at least one more time. And so, rather than waiting for him to finally come at you, you take the fight to him.";
+			decrease gsd_encounters by 2;
+			if gsd_encounters < 3, now gsd_encounters is 3;
+			now gsd_fled is true; [marked as having fled, will clear on win/loss]
+		else:
+			project Figure of GermanShepherd_naked_icon;
+			say "     You're faced with a large, bipedal canine creature. Standing on digitigrade legs, the large canine sports the [one of]traditional brown and tan[or]subtle blue and tan[or]striking black and silver[at random] fur patterns. It's completely unclothed, which makes it QUITE clear that this is a [']He[']. He's got a furry canine sheath resting against his belly and a pair of golf ball-sized balls dangling beneath. He looks you over for a moment, tail starting to wag with increasing enthusiasm as he does. His cock also starts to poke free of its sheath as well, a warning as to what's on his doggified mind. The crazed canine [one of]lets out a rough growl. 'Mmmmm... playtime.'[or][if Player is female]swaggers towards you. 'Good. I was hoping to find a cunt to be my bitch[else]growls aggressively. 'I'm top dog around here. And I'll prove it[end if].'[or]pants with his tongue lolling out. 'Play!' he barks repeatedly as he rushes at you, fists raised and teeth bared - clearly willing to play rough.[or]cracks his knuckles before charging at you.[or]barks a few times before leaping at you.[or]growls aggressively as he stalks towards you.[at random]";
+			increase gsd_encounters by 1;
+			if gsd_encounters > 6, now gsd_encounters is 6;
 
 to say KorvinOrcFight:
 	say "     During your exploration you once more run across your Alpha, the [bold type]scarred[roman type] German shepherd. Quite instantly you drop onto all fours, an action that appears to please the male very much so. When he reaches you he places his paw to your head and rubs it, a feeling that you relish very much so. 'My good little [if Player is female]bitch[else]pup[end if] is rather eager to see me, aren't you?' he says, you bobbing your head eagerly. He smiles at you before speaking once more. 'I have something special for you this time. If you do good, then I'll give you a reward,' the dog tells you.";
@@ -236,132 +239,135 @@ to say KorvinCentaurFight:
 Section 2 - Monster Victory
 
 to say losetogsd:
-	choose row MonsterID in Table of Random Critters;
-	if gsd_special is false:
-		project Figure of GermanShepherd_hard_icon;
-		now gsd_var is 0;
-		if a random chance of 1 in 3 succeeds:
-			say "     The German shepherd bears you down with a dominant growl before slapping his cock across your face. You know what he wants and [if HP of Player > 0]are happy to provide. That[else]decide it best to just relent and do it. Besides, that[end if] canine cock is strangely enticing. You open your mouth and let it slide past your lips. The first taste of doggy pre is enough to push away any lingering concerns. You play your tongue over the rod while collecting a flavorful mess to swallow down.";
-			say "     You continue to lick and suck on him while playing with his balls. Feeling his knot swelling up to full size[if scalevalue of Player < 3], you squeeze that bulge with your [Body Size Adjective of Player] hand and soon coax him to orgasm[else if scalevalue of Player > 3], your large size lets you accept it into your mouth as well readily enough and soon coax him to orgasm[else], you struggle a bit before managing to fit his swollen bulb in your mouth. You coax him to orgasm with your face tied to his crotch, at the small price of an aching jaw[end if]. Once he's spent[if scalevalue of Player is 3] and his knot's gone down enough to free you[end if], he slaps his meat across your face again, leaving a final streak of semen across one cheek. He strides away with a confident swagger, tail wagging the entire time.";
-		else:
-			if Player is not female or ( anallevel is 3 and a random chance of 1 in 3 succeeds ):
-				say "     The victorious dog grabs you by the shoulders and manhandles you onto all fours. In this position, you are easily mounted by the horny canine. His dick pokes at your rear a few times before getting lined up and sinking [if Player is female]erroneously [end if]into your asshole. You grunt at the rough penetration, though that soon turns to canine-like panting as you become aroused by the assfucking you're receiving. In your mind's eye, you imagine how that canine dick must look driving into your violated pucker, all while he humps you like the beast he is.";
-				say "     As his peak approaches, you can feel the knotted base of his dick swelling up. He humps you harder, trying to push it into you and [if scalevalue of Player < 4 and player is not twistcapped]eventually [end if]succeeding, locking his hips to yours. He tugs and grinds his pulsing rod inside your stuffed rectum as he pumps shot after shot of dog semen into your bowels[if Player is not neuter], sending you into an orgasm as well[end if]. And once finished, he gives no care for you and just remains atop you, panting drool onto your back while waiting for his knot to go down. When it does, he pulls free, unleashing a gush of excess sperm from your sore and stretched hole.[mimpregchance]";
-			else:
-				say "     The victorious dog grabs you by the shoulders and manhandles you onto all fours. In this position, you are easily mounted by the horny canine. His dick pokes at your rear a few times before getting lined up and sinking into your pussy. Your cunt stretches [if Cunt Depth of Player > 15]easily [end if]to take the doggy dong, and you start panting in a decidedly canine manner. In your mind's eye, you imagine how that canine dick must look sinking into your wet snatch in an effort to breed you like some stray bitch.";
-				say "     As his peak approaches, you can feel the knotted base of his dick swelling up. He humps you harder, trying to push it into you and [if Cunt Depth of Player < 12]eventually [end if]succeeding, locking his hips to yours. He tugs and grinds his pulsing rod inside your stretched cunt, pumping shot after shot of dog semen into your womb. The feeling of all that warm cum sends you into an orgasm as well. Once finished, he gives no care for you and just remains atop you, panting drool onto your back while waiting for his knot to go down. When it does, he pulls free, unleashing a gush of excess sperm from your sore and stretched hole.[impregchance]";
+	if inasituation is true:
+		say "";
 	else:
-		now gsd_fled is false; [player did not flee]
-		now gsd_var is 1;
-		if gsd_pet is 4:					[player is recruited - auto-submits]
+		choose row MonsterID in Table of Random Critters;
+		if gsd_special is false:
+			project Figure of GermanShepherd_hard_icon;
 			now gsd_var is 0;
-			if gsd_male is true:
-				say "     Your alpha has a confident grin on his scarred muzzle as you give in to him. He pounces you with a mock-growl. The two of you play-fight for a few minutes before pinning you beneath him. Throughout the play, there's been nips, licks and gropes from the stronger male, but now he's doing so much more. Your body responds to your alpha's will, becoming more aroused even as tingles of the infection spread through you.";
-				infect;
-				if Player is not male:
-					follow the sex change rule;
-				if Player is not female and a random chance of anallevel in 5 succeeds:
-					say "     The big German shepherd nips at the back of your neck a few times as he moves to mount you. 'Rrrr! Time to show your alpha what a good packmate you are.' You playfully struggle a little to excite him further[run paragraph on]";
-					if tail of Player is not "":
-						say ", though your tail does raise readily for him[run paragraph on]";
-					say ". Giving you another grope, he gets you to hold still long enough to thrust into you. He sinks the first few inches into your yielding asshole, your mind and body accepting your alpha's dominant shaft.";
-					say "     The German shepherd's dick pushes a little deeper with every delightful thrust. His thrusts are strong and firm, providing your butt with a wonderful pounding. He holds back from humping you wildly, treating his loyal and obedient packmate well. Just feeling that strength there, held in check but more than able to take you, is quite erotic. It is another reminder that you belong right there - under him - without the need to punish you to show it.";
-					say "     As the humping goes on, his pace does quicken as your sphincter gets stretched. A few more hard pushes are enough and his knot finally pops into you. Tied, he humps in short, fast motions until blasting his hot load into your clutching bowels. You cum happily as he does, both having greatly enjoyed it and also having enjoyed satisfying your alpha. You remain flopped out beneath him in a happy daze, enjoying the warmth of the afterglow and of his virile seed inside your rear. Once his knot comes free, you keep your ass up, not risking letting his precious semen escape before your anus can recover from the stretching to keep it in.[mimpregchance]";
-				else if Player is female and a random chance of 2 in 3 succeeds:
-					say "     The big German shepherd nips at the back of your neck a few times as he teases a digit across your wet pussy. 'Rrrr! Despite joining my pack as a male, it seems you've picked up a hot cunt for your alpha. All the better for you to please your alpha, I'd say,' he growls playfully in your ear. The sound of his voice in your ear is enough to get you dripping with need and you raise your [run paragraph on]";
-					if tail of Player is not "":
-						say "tail and "[run paragraph on];
-					say "hips, presenting your juicy cunt to him, allowing your alpha to sink his dominant shaft into your needy hole.";
-					say "     The German shepherd's dick pounds into you with strong thrusts that frequently press his knot against your clit and juicy folds. And while you know he'd normally not be so rough on his loyal packmate, you've got a cunt for him to breed and he can't help but make the most of it. Not that you mind this hard fucking; you moan and whimper in delight with every impact, your body craving having your alpha inside you. Feeling his strength as he humps you hard and fast is another delicious reminder of why you belong right where you are - underneath him, getting your cunt fucked by this stud of a male.";
-					say "     As the humping goes on, the repeated pushes of his knot causes your cunny to stretch open until finally your folds [if Cunt Depth of Player < 12]eventually [end if]spread sufficiently. That thick bulb pushes into you, tying to you him and leaving him only able to make short, fast thrusts that leave you quivering in delight by the time he's blasting his hot load into your clutching vagina. You orgasm with him, your body delighting in receiving your alpha's canine seed and also having enjoyed satisfying your alpha. You remain flopped out beneath him in a happy daze, enjoying the warmth of the afterglow and of his virile seed inside your womb. Once his knot comes free, you flop to the ground and start to masturbate, fingering yourself with the gooey excess that leaks from your stretched cunt in a sexual display that brings a smile to the stud's scarred muzzle.[impregchance]";
-				else:
-					say "     The big German shepherd pins you down on your back and nips at your bared throat a few times while humping his erection against your hip. You can feel his hard shaft and the warmth of his pre, the scent of which excites you all the more. 'Rrrr! Open wide, my loyal packmate. Your alpha has a tasty bone for you,' he growls playfully even as he moves to straddle your head. With his dripping shaft pressed to your face now, you nuzzle and lick it a few times before opening your mouth and accepting it past your lips.";
-					say "     The taste of the dominant male's cock is exciting. You lick and suck at it, working your tongue across the hard flesh. Precum drools onto your tongue for you to taste, providing a sample of the virile dog's flavor. He lets you lavish attention like this upon him for a little while before taking your head in his paws and starting to thrust into your wet mouth. You continue to suck and slide your tongue over that thrusting canine rod until your alpha finally cums. Shot after shot of runny canine seed spews across your palate and down your throat. You gulp it down as it comes, moaning softly at the taste of the stud's semen as it floods your senses. Once spent, the German shepherd gets you to lick his cock clean while he pets your head like the good doggy packmate you are.";
-			else if Player is female:
-				say "     The confident canine grins down at you and rubs a paw atop your head let a common pet. 'That's a good girl. It's so much better when bitches know their place,' he says";
-				if inheat is true or ( gestation of Child is 0 and a random chance of 1 in 2 succeeds ) or a random chance of 1 in 2 succeeds:
-					say " while guiding you down onto all fours. You pant eagerly and raise your rear to him, giving him access to your ready and waiting cunt";
-					if a random chance of 1 in 2 succeeds:
-						say ". He takes a moment to sample your hot muff, nosing at your rear and letting his doggy tongue lash across your juicy folds for several long licks";
-					say ". With you ready and eager, he mounts you without further delay.";
-					say "     His hard shaft thrusts into your juicy cunny as he claims you once again. The German shepherd's dick pounds into you with strong thrusts that frequently press his knot against your clit and juicy folds. Not that you mind this hard fucking; you moan and whimper in delight with every impact, your body craving having your alpha inside you. Feeling his strength as he humps you hard and fast is another delicious reminder of why you belong right where you are - underneath him, getting your cunt fucked by this stud of a male. At this moment, you are nothing but his bitch and you desire nothing more than that.";
-					say "     As the humping goes on, the repeated pushes of his knot causes your cunny to stretch open until finally your folds [if Cunt Depth of Player < 12]eventually [end if]spread sufficiently. That thick bulb pushes into you, tying to you him and leaving him only able to make short, fast thrusts that leave you quivering in delight by the time he's blasting his hot load into your clutching vagina. You orgasm with him, your body delighting in receiving the canine's seed and also having enjoyed satisfying your alpha. You remain flopped out beneath him in a happy daze, enjoying the warmth of the afterglow and of his virile seed inside your womb. Once his knot comes free, you flop to the ground and start to masturbate, fingering yourself with the gooey excess that leaks from your stretched cunt in a sexual display that brings a smile to the stud's scarred muzzle.[impregchance]";
-				else:
-					say ", grinding his sheath and rising cock against your face. 'Open up, girl, and get sucking.' The scent of the confident male's manhood right there for the taking only increases your arousal and submissive desires. With his dripping shaft pressed to your face now, you nuzzle and lick it a few times before opening your mouth and accepting it past your lips.";
-					say "     The taste of the dominant male's cock is exciting. You lick and suck at it, working your tongue across the hard flesh. Precum drools onto your tongue for you to taste, providing a sample of the virile dog's flavor. He lets you lavish attention like this upon him for a little while before taking your head in his paws and starting to thrust into your wet mouth. You continue to suck and slide your tongue over that thrusting canine rod until your alpha finally cums. Shot after shot of runny canine seed spews across your palate and down your throat. You gulp it down as it comes, moaning softly at the taste of the stud's semen as it floods your senses. Once spent, the German shepherd gets you to lick his cock clean while he pets your head like the good doggy bitch you are.";
+			if a random chance of 1 in 3 succeeds:
+				say "     The German shepherd bears you down with a dominant growl before slapping his cock across your face. You know what he wants and [if HP of Player > 0]are happy to provide. That[else]decide it best to just relent and do it. Besides, that[end if] canine cock is strangely enticing. You open your mouth and let it slide past your lips. The first taste of doggy pre is enough to push away any lingering concerns. You play your tongue over the rod while collecting a flavorful mess to swallow down.";
+				say "     You continue to lick and suck on him while playing with his balls. Feeling his knot swelling up to full size[if scalevalue of Player < 3], you squeeze that bulge with your [Body Size Adjective of Player] hand and soon coax him to orgasm[else if scalevalue of Player > 3], your large size lets you accept it into your mouth as well readily enough and soon coax him to orgasm[else], you struggle a bit before managing to fit his swollen bulb in your mouth. You coax him to orgasm with your face tied to his crotch, at the small price of an aching jaw[end if]. Once he's spent[if scalevalue of Player is 3] and his knot's gone down enough to free you[end if], he slaps his meat across your face again, leaving a final streak of semen across one cheek. He strides away with a confident swagger, tail wagging the entire time.";
 			else:
-				say "     The confident canine grins down at you and pushes you to the ground beneath him. He pins you beneath him and nips at your neck and shoulders, asserting his dominance over you. You do not resist your alpha and submit to him without resistance. 'That's a good pup,' he growls while groping you, making you more aroused.";
-				if a random chance of anallevel in 4 succeeds:
-					say "     The big German shepherd grabs you by the scruff of the neck and grinds his cock against your rear. 'Rrrr! You may not have a cunt for your alpha, but you'll still be my bitch.' Knowing your place, you keep your ass raised ";
-					if tail of Player is not "":
-						say "and lift your tail ";
-					say "as he grinds his canine cock between your cheeks and dribbles precum across your pucker. He drives the first few inches into your yielding asshole, your mind and body accepting your alpha's dominant shaft with a soft whimper that seems to excite him further.";
-					say "     The German shepherd's dick pushes hard and deep into you with only a few thrusts, giving your butt little chance to adjust to the penetration. Grabbing the scruff of your neck in his teeth, he keeps a firm grip on you as he starts humping you wildly. You can feel the frequent slams of his knot against your pucker and he bangs you hard and fast. You whimper and moan at this rough treatment, but your body loves it anyhow, craving having your alpha inside you. Being used and abused like this is just another delicious reminder that you belong right where you are - underneath him, getting your ass stuffed by this stud of a male. At this moment, you're nothing but his fucktoy bitch and you desire nothing more than that.";
-					say "     As the humping goes on, the repeated pushes of his knot causes your sphincter to stretch open until finally giving out. That thick bulb pushes into you, tying to you him and leaving him only able to make short, fast thrusts that leave you quivering in delight by the time he's blasting his hot load into your clutching bowels. You orgasm with him, your body delighting in receiving the canine's seed and also having enjoyed satisfying your alpha. You remain flopped out beneath him in a happy daze, enjoying the warmth of the afterglow and of his virile seed inside your rear. Once his knot comes free, he pushes you away and you sprawl out on the ground with canine cum leaking from your abused hole and a silly grin on your face.[mimpregchance]";
+				if Player is not female or ( anallevel is 3 and a random chance of 1 in 3 succeeds ):
+					say "     The victorious dog grabs you by the shoulders and manhandles you onto all fours. In this position, you are easily mounted by the horny canine. His dick pokes at your rear a few times before getting lined up and sinking [if Player is female]erroneously [end if]into your asshole. You grunt at the rough penetration, though that soon turns to canine-like panting as you become aroused by the assfucking you're receiving. In your mind's eye, you imagine how that canine dick must look driving into your violated pucker, all while he humps you like the beast he is.";
+					say "     As his peak approaches, you can feel the knotted base of his dick swelling up. He humps you harder, trying to push it into you and [if scalevalue of Player < 4 and player is not twistcapped]eventually [end if]succeeding, locking his hips to yours. He tugs and grinds his pulsing rod inside your stuffed rectum as he pumps shot after shot of dog semen into your bowels[if Player is not neuter], sending you into an orgasm as well[end if]. And once finished, he gives no care for you and just remains atop you, panting drool onto your back while waiting for his knot to go down. When it does, he pulls free, unleashing a gush of excess sperm from your sore and stretched hole.[mimpregchance]";
 				else:
-					say "     Rising up, the big German shepherd pulls you into a kneeling position in front of him. Grabbing your head, he presses his crotch to your face and humps his hard cock against it. Rivulets of precum dribble down your cheek as the strong scent of the alpha dog's manhood excites you all the more. 'Rrrr! Open wide, pup. Your alpha has a tasty bone for you, you cocksucking bitch,' he growls even as he slaps it across your face. Presented with the dog's drooling shaft, you nuzzle and lick it a few times before opening your mouth and accepting it past your lips.";
-					say "     The taste of the dominant male's cock is exciting. You lick and suck at it, working your tongue across the hard flesh. Precum drools onto your tongue for you to taste, providing a sample of the virile dog's flavor. He lets you lavish attention like this upon him for a little while before taking your head in his paws and starting to thrust into your wet mouth. You continue to suck and slide your tongue over that thrusting canine rod until your alpha finally cums. Shot after shot of runny canine seed spews across your palate and down your throat. You gulp it down as it comes, moaning softly at the taste of the stud's semen as it floods your senses. Once spent, the German shepherd pulls out and smears his messy cock across your face to wipe it clean, leaving you marked as his good doggy bitch.";
-		else if HP of Player > 0:		[player submitted]
-			if gsd_male is true:
-				say "     Your alpha just grins as you give in to him and pounces with a mock growl. He play wrestles with you for a few minutes before sitting down and pulling you against himself, nuzzling at the top of your head and licking your ears.";
-				say "     'Good boy, you're learning. Grow strong, always treat me with respect, and you will become a powerful pack member.'";
-				say "     He gives a tight hug and licks you, tongue rasping over your lips and leaving a familiar burning sensation before he stands and walks off once again, leaving you alone to learn and grow stronger.";
-				now gsd_slut is true;
+					say "     The victorious dog grabs you by the shoulders and manhandles you onto all fours. In this position, you are easily mounted by the horny canine. His dick pokes at your rear a few times before getting lined up and sinking into your pussy. Your cunt stretches [if Cunt Depth of Player > 15]easily [end if]to take the doggy dong, and you start panting in a decidedly canine manner. In your mind's eye, you imagine how that canine dick must look sinking into your wet snatch in an effort to breed you like some stray bitch.";
+					say "     As his peak approaches, you can feel the knotted base of his dick swelling up. He humps you harder, trying to push it into you and [if Cunt Depth of Player < 12]eventually [end if]succeeding, locking his hips to yours. He tugs and grinds his pulsing rod inside your stretched cunt, pumping shot after shot of dog semen into your womb. The feeling of all that warm cum sends you into an orgasm as well. Once finished, he gives no care for you and just remains atop you, panting drool onto your back while waiting for his knot to go down. When it does, he pulls free, unleashing a gush of excess sperm from your sore and stretched hole.[impregchance]";
+		else:
+			now gsd_fled is false; [player did not flee]
+			now gsd_var is 1;
+			if gsd_pet is 4:					[player is recruited - auto-submits]
 				now gsd_var is 0;
-				infect;
-			else if gsd_attack is true:	[fought then submitted]
-				say "     The German shepherd growls and pushes you back into a wall as you surrender, bearing his teeth and making sure you know he's in control. Slowly his hackles drop and he stops growling, though he continues to hold you up against the wall.";
-				now gsd_slut is true;
-				if Player is not female: [male/neuter player submits]
-					say "     'Rrrrrf, not stupid at least; you're willing to give in when you can't win. Seems like you might learn your place and accept that I'm the top dog around here.'";
-					say "     He seems to consider you carefully for a moment, then makes a decision. Keeping you pinned against the wall, he begins to firmly lick at your injuries, causing a slight burning sensation to spread from them before fading. The licking is soothing and you relax, letting the dog do as he wishes. After tending to a few of your superficial injuries, he steps back from the wall, a large grin on his scarred muzzle and his tail wagging.";
-					say "     'You'll make a good pack-mate to run with, or will soon at least.'";
-					say "     With that, he turns and simply walks away, leaving you leaning up against the wall while you feel the male shepherd's blessing and infection slowly spreading.";
+				if gsd_male is true:
+					say "     Your alpha has a confident grin on his scarred muzzle as you give in to him. He pounces you with a mock-growl. The two of you play-fight for a few minutes before pinning you beneath him. Throughout the play, there's been nips, licks and gropes from the stronger male, but now he's doing so much more. Your body responds to your alpha's will, becoming more aroused even as tingles of the infection spread through you.";
+					infect;
+					if Player is not male:
+						follow the sex change rule;
+					if Player is not female and a random chance of anallevel in 5 succeeds:
+						say "     The big German shepherd nips at the back of your neck a few times as he moves to mount you. 'Rrrr! Time to show your alpha what a good packmate you are.' You playfully struggle a little to excite him further[run paragraph on]";
+						if tail of Player is not "":
+							say ", though your tail does raise readily for him[run paragraph on]";
+						say ". Giving you another grope, he gets you to hold still long enough to thrust into you. He sinks the first few inches into your yielding asshole, your mind and body accepting your alpha's dominant shaft.";
+						say "     The German shepherd's dick pushes a little deeper with every delightful thrust. His thrusts are strong and firm, providing your butt with a wonderful pounding. He holds back from humping you wildly, treating his loyal and obedient packmate well. Just feeling that strength there, held in check but more than able to take you, is quite erotic. It is another reminder that you belong right there - under him - without the need to punish you to show it.";
+						say "     As the humping goes on, his pace does quicken as your sphincter gets stretched. A few more hard pushes are enough and his knot finally pops into you. Tied, he humps in short, fast motions until blasting his hot load into your clutching bowels. You cum happily as he does, both having greatly enjoyed it and also having enjoyed satisfying your alpha. You remain flopped out beneath him in a happy daze, enjoying the warmth of the afterglow and of his virile seed inside your rear. Once his knot comes free, you keep your ass up, not risking letting his precious semen escape before your anus can recover from the stretching to keep it in.[mimpregchance]";
+					else if Player is female and a random chance of 2 in 3 succeeds:
+						say "     The big German shepherd nips at the back of your neck a few times as he teases a digit across your wet pussy. 'Rrrr! Despite joining my pack as a male, it seems you've picked up a hot cunt for your alpha. All the better for you to please your alpha, I'd say,' he growls playfully in your ear. The sound of his voice in your ear is enough to get you dripping with need and you raise your [run paragraph on]";
+						if tail of Player is not "":
+							say "tail and "[run paragraph on];
+						say "hips, presenting your juicy cunt to him, allowing your alpha to sink his dominant shaft into your needy hole.";
+						say "     The German shepherd's dick pounds into you with strong thrusts that frequently press his knot against your clit and juicy folds. And while you know he'd normally not be so rough on his loyal packmate, you've got a cunt for him to breed and he can't help but make the most of it. Not that you mind this hard fucking; you moan and whimper in delight with every impact, your body craving having your alpha inside you. Feeling his strength as he humps you hard and fast is another delicious reminder of why you belong right where you are - underneath him, getting your cunt fucked by this stud of a male.";
+						say "     As the humping goes on, the repeated pushes of his knot causes your cunny to stretch open until finally your folds [if Cunt Depth of Player < 12]eventually [end if]spread sufficiently. That thick bulb pushes into you, tying to you him and leaving him only able to make short, fast thrusts that leave you quivering in delight by the time he's blasting his hot load into your clutching vagina. You orgasm with him, your body delighting in receiving your alpha's canine seed and also having enjoyed satisfying your alpha. You remain flopped out beneath him in a happy daze, enjoying the warmth of the afterglow and of his virile seed inside your womb. Once his knot comes free, you flop to the ground and start to masturbate, fingering yourself with the gooey excess that leaks from your stretched cunt in a sexual display that brings a smile to the stud's scarred muzzle.[impregchance]";
+					else:
+						say "     The big German shepherd pins you down on your back and nips at your bared throat a few times while humping his erection against your hip. You can feel his hard shaft and the warmth of his pre, the scent of which excites you all the more. 'Rrrr! Open wide, my loyal packmate. Your alpha has a tasty bone for you,' he growls playfully even as he moves to straddle your head. With his dripping shaft pressed to your face now, you nuzzle and lick it a few times before opening your mouth and accepting it past your lips.";
+						say "     The taste of the dominant male's cock is exciting. You lick and suck at it, working your tongue across the hard flesh. Precum drools onto your tongue for you to taste, providing a sample of the virile dog's flavor. He lets you lavish attention like this upon him for a little while before taking your head in his paws and starting to thrust into your wet mouth. You continue to suck and slide your tongue over that thrusting canine rod until your alpha finally cums. Shot after shot of runny canine seed spews across your palate and down your throat. You gulp it down as it comes, moaning softly at the taste of the stud's semen as it floods your senses. Once spent, the German shepherd gets you to lick his cock clean while he pets your head like the good doggy packmate you are.";
+				else if Player is female:
+					say "     The confident canine grins down at you and rubs a paw atop your head let a common pet. 'That's a good girl. It's so much better when bitches know their place,' he says";
+					if inheat is true or ( gestation of Child is 0 and a random chance of 1 in 2 succeeds ) or a random chance of 1 in 2 succeeds:
+						say " while guiding you down onto all fours. You pant eagerly and raise your rear to him, giving him access to your ready and waiting cunt";
+						if a random chance of 1 in 2 succeeds:
+							say ". He takes a moment to sample your hot muff, nosing at your rear and letting his doggy tongue lash across your juicy folds for several long licks";
+						say ". With you ready and eager, he mounts you without further delay.";
+						say "     His hard shaft thrusts into your juicy cunny as he claims you once again. The German shepherd's dick pounds into you with strong thrusts that frequently press his knot against your clit and juicy folds. Not that you mind this hard fucking; you moan and whimper in delight with every impact, your body craving having your alpha inside you. Feeling his strength as he humps you hard and fast is another delicious reminder of why you belong right where you are - underneath him, getting your cunt fucked by this stud of a male. At this moment, you are nothing but his bitch and you desire nothing more than that.";
+						say "     As the humping goes on, the repeated pushes of his knot causes your cunny to stretch open until finally your folds [if Cunt Depth of Player < 12]eventually [end if]spread sufficiently. That thick bulb pushes into you, tying to you him and leaving him only able to make short, fast thrusts that leave you quivering in delight by the time he's blasting his hot load into your clutching vagina. You orgasm with him, your body delighting in receiving the canine's seed and also having enjoyed satisfying your alpha. You remain flopped out beneath him in a happy daze, enjoying the warmth of the afterglow and of his virile seed inside your womb. Once his knot comes free, you flop to the ground and start to masturbate, fingering yourself with the gooey excess that leaks from your stretched cunt in a sexual display that brings a smile to the stud's scarred muzzle.[impregchance]";
+					else:
+						say ", grinding his sheath and rising cock against your face. 'Open up, girl, and get sucking.' The scent of the confident male's manhood right there for the taking only increases your arousal and submissive desires. With his dripping shaft pressed to your face now, you nuzzle and lick it a few times before opening your mouth and accepting it past your lips.";
+						say "     The taste of the dominant male's cock is exciting. You lick and suck at it, working your tongue across the hard flesh. Precum drools onto your tongue for you to taste, providing a sample of the virile dog's flavor. He lets you lavish attention like this upon him for a little while before taking your head in his paws and starting to thrust into your wet mouth. You continue to suck and slide your tongue over that thrusting canine rod until your alpha finally cums. Shot after shot of runny canine seed spews across your palate and down your throat. You gulp it down as it comes, moaning softly at the taste of the stud's semen as it floods your senses. Once spent, the German shepherd gets you to lick his cock clean while he pets your head like the good doggy bitch you are.";
+				else:
+					say "     The confident canine grins down at you and pushes you to the ground beneath him. He pins you beneath him and nips at your neck and shoulders, asserting his dominance over you. You do not resist your alpha and submit to him without resistance. 'That's a good pup,' he growls while groping you, making you more aroused.";
+					if a random chance of anallevel in 4 succeeds:
+						say "     The big German shepherd grabs you by the scruff of the neck and grinds his cock against your rear. 'Rrrr! You may not have a cunt for your alpha, but you'll still be my bitch.' Knowing your place, you keep your ass raised ";
+						if tail of Player is not "":
+							say "and lift your tail ";
+						say "as he grinds his canine cock between your cheeks and dribbles precum across your pucker. He drives the first few inches into your yielding asshole, your mind and body accepting your alpha's dominant shaft with a soft whimper that seems to excite him further.";
+						say "     The German shepherd's dick pushes hard and deep into you with only a few thrusts, giving your butt little chance to adjust to the penetration. Grabbing the scruff of your neck in his teeth, he keeps a firm grip on you as he starts humping you wildly. You can feel the frequent slams of his knot against your pucker and he bangs you hard and fast. You whimper and moan at this rough treatment, but your body loves it anyhow, craving having your alpha inside you. Being used and abused like this is just another delicious reminder that you belong right where you are - underneath him, getting your ass stuffed by this stud of a male. At this moment, you're nothing but his fucktoy bitch and you desire nothing more than that.";
+						say "     As the humping goes on, the repeated pushes of his knot causes your sphincter to stretch open until finally giving out. That thick bulb pushes into you, tying to you him and leaving him only able to make short, fast thrusts that leave you quivering in delight by the time he's blasting his hot load into your clutching bowels. You orgasm with him, your body delighting in receiving the canine's seed and also having enjoyed satisfying your alpha. You remain flopped out beneath him in a happy daze, enjoying the warmth of the afterglow and of his virile seed inside your rear. Once his knot comes free, he pushes you away and you sprawl out on the ground with canine cum leaking from your abused hole and a silly grin on your face.[mimpregchance]";
+					else:
+						say "     Rising up, the big German shepherd pulls you into a kneeling position in front of him. Grabbing your head, he presses his crotch to your face and humps his hard cock against it. Rivulets of precum dribble down your cheek as the strong scent of the alpha dog's manhood excites you all the more. 'Rrrr! Open wide, pup. Your alpha has a tasty bone for you, you cocksucking bitch,' he growls even as he slaps it across your face. Presented with the dog's drooling shaft, you nuzzle and lick it a few times before opening your mouth and accepting it past your lips.";
+						say "     The taste of the dominant male's cock is exciting. You lick and suck at it, working your tongue across the hard flesh. Precum drools onto your tongue for you to taste, providing a sample of the virile dog's flavor. He lets you lavish attention like this upon him for a little while before taking your head in his paws and starting to thrust into your wet mouth. You continue to suck and slide your tongue over that thrusting canine rod until your alpha finally cums. Shot after shot of runny canine seed spews across your palate and down your throat. You gulp it down as it comes, moaning softly at the taste of the stud's semen as it floods your senses. Once spent, the German shepherd pulls out and smears his messy cock across your face to wipe it clean, leaving you marked as his good doggy bitch.";
+			else if HP of Player > 0:		[player submitted]
+				if gsd_male is true:
+					say "     Your alpha just grins as you give in to him and pounces with a mock growl. He play wrestles with you for a few minutes before sitting down and pulling you against himself, nuzzling at the top of your head and licking your ears.";
+					say "     'Good boy, you're learning. Grow strong, always treat me with respect, and you will become a powerful pack member.'";
+					say "     He gives a tight hug and licks you, tongue rasping over your lips and leaving a familiar burning sensation before he stands and walks off once again, leaving you alone to learn and grow stronger.";
+					now gsd_slut is true;
+					now gsd_var is 0;
+					infect;
+				else if gsd_attack is true:	[fought then submitted]
+					say "     The German shepherd growls and pushes you back into a wall as you surrender, bearing his teeth and making sure you know he's in control. Slowly his hackles drop and he stops growling, though he continues to hold you up against the wall.";
+					now gsd_slut is true;
+					if Player is not female: [male/neuter player submits]
+						say "     'Rrrrrf, not stupid at least; you're willing to give in when you can't win. Seems like you might learn your place and accept that I'm the top dog around here.'";
+						say "     He seems to consider you carefully for a moment, then makes a decision. Keeping you pinned against the wall, he begins to firmly lick at your injuries, causing a slight burning sensation to spread from them before fading. The licking is soothing and you relax, letting the dog do as he wishes. After tending to a few of your superficial injuries, he steps back from the wall, a large grin on his scarred muzzle and his tail wagging.";
+						say "     'You'll make a good pack-mate to run with, or will soon at least.'";
+						say "     With that, he turns and simply walks away, leaving you leaning up against the wall while you feel the male shepherd's blessing and infection slowly spreading.";
+						now gsd_var is 0;
+						now gsd_male is true;
+						[
+						gsd_set_male;
+						]
+					else:			[female/herm]
+						say "     'Next time, don't fight me, bitch! Know your place!'[line break]     With a growl, he pulls you away from the wall and pushes you down onto all fours. He mouths at your neck and shoulder, making sure you can feel the threat of his fangs if you try and fight again, his hot breath washing over your skin. But his mood has shifted; having bested you, he now seems eager to enjoy his new toy.";
+				else:							[submitted right away]
+					say "     The German shepherd wuffs and eagerly approaches as you signal your submission. His arms slip around you as he hugs you close, licking at your face, nuzzling at your neck, his paw-like hands sliding down, rubbing and squeezing provocatively.";
+					say "     'Ooooh, such a good little bitch. It's much nicer if you just say yes, isn't it? So much more enjoyable for both of us.'";
+					now gsd_slut is true;
+					if Player is not female and "Male Preferred" is not listed in feats of Player:	[male/neuter and player can become female]
+						say "     He gives an extra little sniff, taking in your [if Player is male]male [end if]scent, then chuckles as he licks your cheek.";
+						say "     'Mmm, bitch in spirit and mind, but not in body, it seems. Don't worry, I can help solve that for you, make you into what you really are.'";
+						say "     He slowly breaks off the hug, turning you around and pushing your shoulders down to make you get on all fours, then moves behind you.";
+						now gsd_var is 2;
+					else if Player is not female and "Male Preferred" is listed in feats of Player: [male/neuter and player can't become female]
+						say "     He gives an extra little sniff, taking in your [if Player is male]male [end if]scent, then chuckles as he licks your cheek.";
+						say "     'No juicy pussy for your alpha, but I think I'll have fun making you my bitch all the same. You'll be begging me to fuck your ass in the end.' That said, he presses his muzzle against your lips, canine tongue pressing in as he forces the kiss, paws slipping around to squeeze your rump. Then, satisfied that the 'foreplay' has been accomplished, he breaks the embrace and turns you around, gently but firmly pushing you down onto all fours.";
+						now gsd_var is 2;
+					else:	[females/herms]
+						say "     He presses his muzzle against your lips, canine tongue pressing in as he forces the kiss, paws slipping around to squeeze your rump. Then, satisfied that the 'foreplay' has been accomplished, he breaks the embrace and turns you around, gently but firmly pushing you down onto all fours.";
+			else:							[player fought and lost]
+				if gsd_male is true:
+					say "     The big male pants and grins down at you as you slump to the ground, defeated.";
+					say "     'And that is why I'm Alpha, pup!'";
+					say "     He then sits down next to you, nuzzling at your neck and hugging you lightly.";
+					say "     'But you're a good boy, learn to be a strong pack member.'";
+					say "     Rumbling softly, he laps at your injuries, stemming any bleeding and once again causing the telltale burning sensation. The licking is soothing and you relax, enjoying receiving such kindness again from the alpha dog. Then, happy he's done his duty to his developing pack mate, he pads off, leaving you alone to learn and grow stronger.";
 					now gsd_var is 0;
 					now gsd_male is true;
 					[
 					gsd_set_male;
 					]
-				else:			[female/herm]
-					say "     'Next time, don't fight me, bitch! Know your place!'[line break]     With a growl, he pulls you away from the wall and pushes you down onto all fours. He mouths at your neck and shoulder, making sure you can feel the threat of his fangs if you try and fight again, his hot breath washing over your skin. But his mood has shifted; having bested you, he now seems eager to enjoy his new toy.";
-			else:							[submitted right away]
-				say "     The German shepherd wuffs and eagerly approaches as you signal your submission. His arms slip around you as he hugs you close, licking at your face, nuzzling at your neck, his paw-like hands sliding down, rubbing and squeezing provocatively.";
-				say "     'Ooooh, such a good little bitch. It's much nicer if you just say yes, isn't it? So much more enjoyable for both of us.'";
-				now gsd_slut is true;
-				if Player is not female and "Male Preferred" is not listed in feats of Player:	[male/neuter and player can become female]
-					say "     He gives an extra little sniff, taking in your [if Player is male]male [end if]scent, then chuckles as he licks your cheek.";
-					say "     'Mmm, bitch in spirit and mind, but not in body, it seems. Don't worry, I can help solve that for you, make you into what you really are.'";
-					say "     He slowly breaks off the hug, turning you around and pushing your shoulders down to make you get on all fours, then moves behind you.";
-					now gsd_var is 2;
-				else if Player is not female and "Male Preferred" is listed in feats of Player: [male/neuter and player can't become female]
-					say "     He gives an extra little sniff, taking in your [if Player is male]male [end if]scent, then chuckles as he licks your cheek.";
-					say "     'No juicy pussy for your alpha, but I think I'll have fun making you my bitch all the same. You'll be begging me to fuck your ass in the end.' That said, he presses his muzzle against your lips, canine tongue pressing in as he forces the kiss, paws slipping around to squeeze your rump. Then, satisfied that the 'foreplay' has been accomplished, he breaks the embrace and turns you around, gently but firmly pushing you down onto all fours.";
-					now gsd_var is 2;
-				else:	[females/herms]
-					say "     He presses his muzzle against your lips, canine tongue pressing in as he forces the kiss, paws slipping around to squeeze your rump. Then, satisfied that the 'foreplay' has been accomplished, he breaks the embrace and turns you around, gently but firmly pushing you down onto all fours.";
-		else:							[player fought and lost]
-			if gsd_male is true:
-				say "     The big male pants and grins down at you as you slump to the ground, defeated.";
-				say "     'And that is why I'm Alpha, pup!'";
-				say "     He then sits down next to you, nuzzling at your neck and hugging you lightly.";
-				say "     'But you're a good boy, learn to be a strong pack member.'";
-				say "     Rumbling softly, he laps at your injuries, stemming any bleeding and once again causing the telltale burning sensation. The licking is soothing and you relax, enjoying receiving such kindness again from the alpha dog. Then, happy he's done his duty to his developing pack mate, he pads off, leaving you alone to learn and grow stronger.";
-				now gsd_var is 0;
-				now gsd_male is true;
-				[
-				gsd_set_male;
-				]
-			else:
-				say "     The German shepherd howls in triumph while standing over your beaten form. Though your vision is blurry, you can see his sheath starting to thicken and the tip of the monster's shaft poking free of the protective furry tube, pre dribbling from it. With an eager growl, he lowers his head and moves to deal with his new victim, rolling you onto your belly, then lifting your hips so your rear is up and presented to him.";
-		if gsd_var > 0:
-			say "[gsd_special_lsex_00]";
-		now gsd_attack is false;
-		if gsd_pet >= 10:
-			now gsd_pet is 2; [now on player-losing cycle]
-		else if gsd_pet < 4:
-			increase gsd_pet by 1;
-			if gsd_pet is 4:
-				say "     Having repeatedly [if HP of Player > 0]accepted your place beneath[else]been put in your place by[end if] this German shepherd, some part of you has come to accept that role. Whenever you meet again, he will be your alpha and you will [bold type]no longer be able to resist him[roman type].";
+				else:
+					say "     The German shepherd howls in triumph while standing over your beaten form. Though your vision is blurry, you can see his sheath starting to thicken and the tip of the monster's shaft poking free of the protective furry tube, pre dribbling from it. With an eager growl, he lowers his head and moves to deal with his new victim, rolling you onto your belly, then lifting your hips so your rear is up and presented to him.";
+			if gsd_var > 0:
+				say "[gsd_special_lsex_00]";
+			now gsd_attack is false;
+			if gsd_pet >= 10:
+				now gsd_pet is 2; [now on player-losing cycle]
+			else if gsd_pet < 4:
+				increase gsd_pet by 1;
+				if gsd_pet is 4:
+					say "     Having repeatedly [if HP of Player > 0]accepted your place beneath[else]been put in your place by[end if] this German shepherd, some part of you has come to accept that role. Whenever you meet again, he will be your alpha and you will [bold type]no longer be able to resist him[roman type].";
 
 
 to say gsd_special_lsex_00:
@@ -407,24 +413,27 @@ To gsd_unset_male:
 Section 3 - Player Victory
 
 to say beatthegsd:
-	if zephyrtask is 2, increase zephyrpests by 1;
-	now gsd_attack is false; [Encounter over, reset for the next time!]
-	choose row MonsterID in Table of Random Critters;
-	if gsd_special is false:
-		if Player is not neuter:
-			say "[gsd_generic_vsex_00]";
-		else:
-			say "     As the German shepherd lets out a pained and injured whine, he sinks to the ground with his ears folding down, beaten. You grab the defeated canine by the scruff of his neck, you slam him to the ground. Already quite worn from the battle, all it takes is a good, solid punch to knock his lights out. He releases a soft groan and passes out, leaving you free to go on your way.";
-	else if gsd_pet is 11:
-		now gsd_fled is false; [player did not flee]
-		say "[gsd_special_final_00]";
+	if inasituation is true:
+		say "";
 	else:
-		now gsd_fled is false; [player did not flee]
-		say "[gsd_special_vsex_00]";
-		if gsd_pet < 10:
-			now gsd_pet is 10; [now on player-winning cycle]
+		if zephyrtask is 2, increase zephyrpests by 1;
+		now gsd_attack is false; [Encounter over, reset for the next time!]
+		choose row MonsterID in Table of Random Critters;
+		if gsd_special is false:
+			if Player is not neuter:
+				say "[gsd_generic_vsex_00]";
+			else:
+				say "     As the German shepherd lets out a pained and injured whine, he sinks to the ground with his ears folding down, beaten. You grab the defeated canine by the scruff of his neck, you slam him to the ground. Already quite worn from the battle, all it takes is a good, solid punch to knock his lights out. He releases a soft groan and passes out, leaving you free to go on your way.";
+		else if gsd_pet is 11:
+			now gsd_fled is false; [player did not flee]
+			say "[gsd_special_final_00]";
 		else:
-			increase gsd_pet by 1;
+			now gsd_fled is false; [player did not flee]
+			say "[gsd_special_vsex_00]";
+			if gsd_pet < 10:
+				now gsd_pet is 10; [now on player-winning cycle]
+			else:
+				increase gsd_pet by 1;
 
 
 [ - Generic Player Victory Scenes - ]

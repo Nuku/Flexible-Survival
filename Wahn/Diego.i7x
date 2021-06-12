@@ -1434,6 +1434,7 @@ to say DiegoMasterSex: [kicked off by the player coming to him for sex]
 	DiegoMasterSex_Intro; [intro and transformation (if needed)]
 	DiegoMasterSex_Choosing; [picking what he wants to do]
 
+[
 instead of resting while (diego's heirloom collar is equipped and Diego is visible and lastFuck of Diego - turns > 3 and a random chance of 1 in 2 succeeds): [kicked off by the player wanting to rest within sight of Diego]
 	say "     As you get ready to lay down and sleep, Diego saunters closer and lets out a wolf whistle, making you turn towards him and look at your canine master. 'Ready to lay down and get comfortable? How about I join you for some fun time first? You'll sleep nice and deep afterwards, I'm sure of that!'";
 	DiegoMasterSex_Intro; [intro and transformation (if needed)]
@@ -1444,6 +1445,7 @@ an everyturn rule: [kicked off by the player waiting within sight of Diego]
 		say "     As you stand around, waiting, Diego saunters closer and lets out a wolf whistle, making you turn towards him and look at your canine master. 'Since you don't have anything to do right now, I know a little something that we can use to while away the time...'";
 		DiegoMasterSex_Intro; [intro and transformation (if needed)]
 		DiegoMasterSex_Choosing; [picking what he wants to do]
+]
 
 to DiegoMasterSex_Intro: [& transform, if needed]
 	say "He steps forward and [if Player is not naked]commands you to strip, enjoying the slow, drawn-out show that he makes you do before he [end if]lets his eyes roam up and down over your body. Reaching out to let his paw-hand slide between your legs, the canine trickster is ";

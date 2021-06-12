@@ -153,26 +153,20 @@ to say randysex:
 		now sortorder entry is 3;
 		now description entry is "Practice your sexual stamina with Randy.";
 		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Leave";
-		now sortorder entry is 4;
-		now description entry is "Forget about fucking Randy for now.";
-		[]
 		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
 		while sextablerun is 0:
-			repeat with y running from 1 to number of filled rows in table of fucking options:
-				choose row y from the table of fucking options;
-				say "[link][y] - [title entry][as][y][end link][line break]";
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry][line break]";
-				say "Is this what you want?";
+				say "[title entry]: [description entry]?";
 				if Player consents:
 					let nam be title entry;
-					clear the screen and hyperlink list;
 					now sextablerun is 1;
 					if nam is "Naked wrestling":
 						say "[wrestlesex]";
@@ -180,8 +174,14 @@ to say randysex:
 						say "[showersex]";
 					else if (nam is "Endurance sex"):
 						say "[endurancesex]";
-					else if (nam is "Leave"):
-						say "You decide not to fuck Randy right now.";
+					wait for any key;
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     You decide not to fuck Randy right now.";
+				wait for any key;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+		clear the screen and hyperlink list;
 
 to say strtraining:
 	say "     You hand over the freecred and Randy leads you over to the weightlifting equipment, directing you to an unused set. He looks you over, formulating your workout in his head. Instructing you on proper form, he gives you a beginner weight to test you out. [if strength of Player > 25]You heft it over your head with one hand as easily as if it were made of feathers. Randy gives an awed whistle. 'Alright, now you're just showin['] off. I doubt you'll get much in the way of trainin['] from this, but for my own curiosity, let me find something more, uh, suited to your abilities.'[else if strength of Player > 18]You heft it over your head with little effort. Randy nods appreciatively. 'Not bad. I doubt I'll be able to bulk you up more than that. Still, never a bad idea to keep yerself in top shape, eh?'[else if strength of Player > 13] It takes quite a bit of exertion from your part, but you're able to lift the weight... Just barely. Randy gives you an amused snort. 'Well, we'll start here, and work our way up. Definitely some room for improvin['].'[else]Try as you might, you can't even begin to lift the weight. Randy gives a heavy sigh. 'I'll go an['] find somethin['] lighter. We've got some work to do...'[end if]";
