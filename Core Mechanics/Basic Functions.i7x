@@ -324,6 +324,33 @@ to TraitLoss (TraitName - a text) for (TraitChar - a person):
 	if TraitName is listed in Traits of TraitChar: [avoids runtime errors for traits that do not exist]
 		remove TraitName from Traits of TraitChar;
 
+to AffectionGain (AffGain - a number) for (AffChar - a person):
+	say "     [bold type][AffChar]'s affection for you increased by [AffGain]![roman type][line break]";
+	if Affection of AffChar < 100:
+		increase Affection of AffChar by AffGain;
+
+to AffectionLoss (AffLoss - a number) for (AffChar - a person):
+	say "     [bold type][AffChar]'s affection for you decreased by [AffLoss]![roman type][line break]";
+	if Affection of AffChar < 0:
+		decrease Affection of AffChar by AffLoss;
+
+to CorruptionGain (CorrGain - a number) for (CorrChar - a person):
+	say "     [bold type][CorrChar]'s Corruption increased by [CorrGain]![roman type][line break]";
+	if Corruption of CorrChar < 100:
+		increase Corruption of CorrChar by CorrGain;
+
+to CorruptionLoss (CorrLoss - a number) for (CorrChar - a person):
+	say "     [bold type][CorrChar]'s Corruption decreased by [CorrLoss]![roman type][line break]";
+	if Corruption of CorrChar < 0:
+		decrease Corruption of CorrChar by CorrLoss;
+
+to SubVsDomChange (SDChange - a number) for (SDChar - a person):
+	increase SubVsDom of SDChar by SDChange;
+	if SDChange > 0:
+		say "     [bold type][SDChar] becomes more dominant ([SubVsDom of SDChar] in a -100 to 100 range)![roman type][line break]";
+	else:
+		say "     [bold type][SDChar] becomes more submissive ([SubVsDom of SDChar] in a -100 to 100 range)![roman type][line break]";
+
 to MoraleLoss (N - number):
 	LineBreak;
 	say "     [bold type]Your morale has decreased by [N]![roman type][line break]";

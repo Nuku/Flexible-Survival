@@ -319,6 +319,7 @@ to PossessionRestore:
 		[wiping out all items from before the import]
 		repeat with x running from 1 to number of filled rows in table of game objects:
 			choose row x from the table of game objects;
+			now object entry is not equipped;
 			now carried of object entry is 0;
 			now stashed of object entry is 0;
 		[applying the imported items]
