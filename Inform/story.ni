@@ -777,7 +777,7 @@ Include Felix by Wahn.
 Include Finn by Wahn.
 Include Flint by Gherod.
 Include Francois by AGentlemanCalledB.
-Include Frank by Stripes.
+Include Frank by Luneth.
 Include Friesian Twin Isaac by Wahn.
 Include Friesian Twin Karel by Wahn.
 Include G-Shep Squad by Rikaeus.
