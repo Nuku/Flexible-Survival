@@ -749,6 +749,7 @@ Include Daisy by Sarokcat n Verath.
 Include Damien by Gherod.
 Include Danny by Wahn.
 Include Darius by Wahn.
+Include Darren by Qazarar.
 Include David by Wahn.
 Include Davies by Wahn.
 Include Deer by Stripes.
