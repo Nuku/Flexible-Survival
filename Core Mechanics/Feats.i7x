@@ -263,7 +263,7 @@ instead of addfeating the basic feats:
 			if "Flash" is listed in feats of Player:
 				addfeat "Dazzle" with "Your flash can now sometimes bedazzle your enemy, making them lose their chance to retaliate";
 	if stamina of Player > 11:
-		addfeat "Hardy" with "Increase your max HP by 8";
+		addfeat "Hardy" with "Increase your max HP by 8 immediately, and gain 1 extra HP every level-up";
 	if featunlock is 1:	[available after hospital quest]
 		addfeat "Rapid Healing" with "Increased healing during recovery time and minor increase to healing items";
 		if stamina of Player > 16 and "Rapid Healing" is listed in feats of Player:

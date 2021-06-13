@@ -223,7 +223,7 @@ Include New Ewe Store by Luneth.
 Include PIG Frat by Stripes.
 Include Pirate Island by Sarokcat.
 Include Power Plant by Hellerhound.
-Include Qytat a'th Lundrues by Hellerhound.
+Include Qytat a'th Lundrues by SgtPepper234.
 Include Red Light District by Wahn.
 Include Shag Shack by Wahn.
 Include Stablemasters by Sarokcat.
@@ -789,6 +789,7 @@ Include Glory by Wahn.
 Include Good Alexandra by Wahn.
 Include Gordon by Rikaeus.
 Include Gregory by Wahn.
+Include Gryphon Characters by SgtPepper234.
 Include Gus by Hyliad.
 Include Gwen by Stripes.
 Include Hadiya by Stripes.

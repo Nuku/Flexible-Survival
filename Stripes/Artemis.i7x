@@ -106,6 +106,7 @@ to say artemislinkaction:
 Table of GameCharacterIDs (continued)
 object	name
 rubber tigress	"Rubber Tigress"
+rubber tigress	"rubber tigress"
 
 rubber tigress is a pet.
 NPCObject of rubber tigress is Artemis.

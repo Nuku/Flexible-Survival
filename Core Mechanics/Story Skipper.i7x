@@ -320,7 +320,8 @@ to PossessionRestore:
 		[wiping out all items from before the import]
 		repeat with x running from 1 to number of filled rows in table of game objects:
 			choose row x from the table of game objects;
-			now object entry is not equipped;
+			if object entry is Equipment:
+				now object entry is not equipped;
 			now carried of object entry is 0;
 			now stashed of object entry is 0;
 		[applying the imported items]
@@ -457,7 +458,7 @@ to CharacterSave:
 					now TraitText entry is entry y of Traits of x;
 		else:
 			say "Error! The character [x] is not listed in the Table of GameCharacterIDs and cannot be saved. Please report this on the FS Discord.";
-	write File of CharacterVariable2Save from the Table of GameCharacterVariable3; [freshly made table gets saved to file]
+	write File of CharacterVariable3Save from the Table of GameCharacterVariable3; [freshly made table gets saved to file]
 	write File of TraitSave from the Table of GameTraits; [freshly made table gets saved to file]
 	blank out the whole of Table of GameCharacters; [empty after saving]
 	blank out the whole of Table of GameCharacterVariables; [empty after saving]
