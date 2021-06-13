@@ -647,7 +647,7 @@ to say pewtercharacterassess:
 			else:
 				if pewtercuntvar1 > 0:
 					say "[if Cunt Count of Player > 1]one of [end if]your cunt[sfn] being tongued by [if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if]";
-				else pewtercuntvar2 > 0:
+				else if pewtercuntvar2 > 0:
 					say "[if Cunt Count of Player > 1]one of [end if]your cunt[sfn] being fucked by [if pewtercuntvar2 is 1]one[else][pewtercuntvar2][end if]";
 			if pewterassocc > 0: [here?]
 				say ", and ";

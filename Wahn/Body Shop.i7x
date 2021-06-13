@@ -1431,7 +1431,7 @@ Anton's Intro is a situation.
 ResolveFunction of Anton's Intro is "[ResolveEvent Anton's Intro]".
 Sarea of Anton's Intro is "Nowhere".
 
-after going to Smith Haven Mall Lot South while (Anton's Intro is not resolved and Daytimer is day and PlayerMet of Anton is false and PlayerMet of Moreau is true and "Moreau Hypno Base Talk" is listed in Traits of Moreau and LastFuck of Anton - turns > 8 and a random chance of 1 in 2 succeeds):
+after going to Smith Haven Mall Lot South while (Anton's Intro is not resolved and Daytimer is day and PlayerMet of Anton is false and PlayerMet of Moreau is true and "Moreau Hypno Base Talk" is listed in Traits of Moreau and LastFuck of Anton - turns > 8 and a random chance of 1 in 2 succeeds and 2 < 1): [TODO enable when the time comes]
 	say "[ResolveEvent Anton's Intro]";
 
 to say ResolveEvent Anton's Intro:
@@ -1593,7 +1593,7 @@ to say MoreauHypnoMemoryRetrieval:
 		LineBreak;
 		say "     'As you wish,' Moreau says calmly in his sibilant voice, spreading both arms in a half-shrugging gesture. After another flick of his forked tongue, the naga straightens his upper body and adds, 'Can I help you in some other way? I do have some attractive new shapes for sale...' He points out some mannequins standing near the walls of his shop and smiles, then leaves you to think about what you want to do.";
 
-to say MroeauDeprogramming:
+to say MoreauDeprogramming:
 	LineBreak;
 	say "     As you tell Moreau that you don't want to be surprised by any hidden commands that might have been left in your mind, the naga nods sagely. 'Yes, that is a possible issue indeed. A somewhat more refined technique, so I do have my doubts if your assailant was capable of it, but... maybe his skills were more advanced in this area. So, starting from the moment that you started talking to... the one you met, how much time passed before you remember other things, in full clarity I mean. An hour? Two? Good.' Having said those words, Moreau begins to coil himself around you, wrapping his serpentine body around yours. His scales feel smooth, flexible and surprisingly warm as they press against your skin. Soon, you're completely wrapped by him, with the naga bending his upper body over you, one hand reaching out for your chin to raise it. As your eyes meet his slitted, vibrant green gaze, you see the slits of the naga's eyes narrow to a razor-sharp slice, while his hood flares outwards dramatically. Moreau's gaze pierces your mind almost effortlessly at its weakest point, like a fencing foil in the hands of a master duelist.";
 	say "     .";

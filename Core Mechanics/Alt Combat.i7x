@@ -1347,7 +1347,14 @@ to win:
 			now ok is 1;
 		else:
 			now ok is 0;
-	if ok is 1, say "[defeated entry]";
+	if ok is 1:
+		say "[defeated entry]";
+		[
+		if fightoutcome is 10:
+			say "[defeated entry]";
+		else if fightoutcome is 11:
+			say "[seduced entry]";
+		]
 	[XP Earnings]
 	increase XP of Player by lev entry times two;
 	if ssxpa is true:

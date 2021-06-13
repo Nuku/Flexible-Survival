@@ -496,7 +496,7 @@ to say ResolveEvent Stolen Lives:
 		now Resolution of Stolen Lives is 99; [fled, not watched]
 	now Stolen Lives is resolved;
 
-
+[
 Table of GameEventIDs (continued)
 Object	Name
 Lost Souls	"Lost Souls"
@@ -1195,7 +1195,6 @@ to say Hercules_Toy:
 
 to say Leaving Limbo:
 	say "...";
-
 
 ]
 

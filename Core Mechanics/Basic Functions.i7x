@@ -334,15 +334,15 @@ to AffectionLoss (AffLoss - a number) for (AffChar - a person):
 	if Affection of AffChar < 0:
 		decrease Affection of AffChar by AffLoss;
 
-to CorruptionGain (CorrGain - a number) for (CorrChar - a person):
-	say "     [bold type][CorrChar]'s Corruption increased by [CorrGain]![roman type][line break]";
-	if Corruption of CorrChar < 100:
-		increase Corruption of CorrChar by CorrGain;
+to DepravityGain (DepGain - a number) for (DepChar - a person):
+	say "     [bold type][DepChar]'s depravity increased by [DepGain]![roman type][line break]";
+	if Depravity of DepChar < 100:
+		increase Depravity of DepChar by DepGain;
 
-to CorruptionLoss (CorrLoss - a number) for (CorrChar - a person):
-	say "     [bold type][CorrChar]'s Corruption decreased by [CorrLoss]![roman type][line break]";
-	if Corruption of CorrChar < 0:
-		decrease Corruption of CorrChar by CorrLoss;
+to DepravityLoss (DepLoss - a number) for (DepChar - a person):
+	say "     [bold type][DepChar]'s depravity decreased by [DepLoss]![roman type][line break]";
+	if Depravity of DepChar < 0:
+		decrease Depravity of DepChar by DepLoss;
 
 to SubVsDomChange (SDChange - a number) for (SDChar - a person):
 	increase SubVsDom of SDChar by SDChange;

@@ -35,7 +35,7 @@ A person has a number called Libido.
 A person has a number called Loyalty.
 A person has a number called Humanity.
 A person has a number called Affection. [TODO: remember to include these in export/import when turning them on]
-A person has a number called Corruption.
+A person has a number called Depravity.
 A person has a number called SubVsDom. [range from -100 (sub) to 0 (vers) to +100 (dom)]
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a number called Armor.

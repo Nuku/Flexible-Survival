@@ -782,7 +782,7 @@ Include Friesian Twin Isaac by Wahn.
 Include Friesian Twin Karel by Wahn.
 Include G-Shep Squad by Rikaeus.
 Include Genevieve by Prometheus.
-Include Garrett by Stripes.
+Include Garrett by SgtPepper234.
 Include Gerty by Qazarar.
 Include Glory by Wahn.
 Include Good Alexandra by Wahn.
