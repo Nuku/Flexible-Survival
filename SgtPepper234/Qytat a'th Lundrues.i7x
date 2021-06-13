@@ -246,6 +246,8 @@ To say staircase entry desc:
 Table of GameRoomIDs (continued)
 Object	Name
 Qytat Stairs	"Qytat Stairs"
+Qytat Stairs	"Stairs"
+Qytat Stairs	"stairs"
 
 Qytat Stairs is a room. Description of Qytat Stairs is "[Qytat Stairs desc]".
 Qytat Plaza is above Qytat Stairs.
@@ -286,17 +288,17 @@ To say Plaza Fountain desc:
 
 Table of GameRoomIDs (continued)
 Object	Name
-Main Informal Settlement	"Main Informal Settlement"
+Informal Settlement	"Informal Settlement"
 
-Main Informal Settlement is a room. Description of Main Informal Settlement is "[Main Informal Settlement desc]".
-Main Informal Settlement is private.
-Main Informal Settlement is sleepsafe.
-Main Informal Settlement is east of Plaza Fountain.
-Main Informal Settlement is southeast of Qytat Church.
-Main Informal Settlement is south of Soup Kitchen.
-Main Informal Settlement is up of Qytat Tent.
+Informal Settlement is a room. Description of Informal Settlement is "[Informal Settlement desc]".
+Informal Settlement is private.
+Informal Settlement is sleepsafe.
+Informal Settlement is east of Plaza Fountain.
+Informal Settlement is southeast of Qytat Church.
+Informal Settlement is south of Soup Kitchen.
+Informal Settlement is up of Qytat Tent.
 
-To say Main Informal Settlement desc:
+To say Informal Settlement desc:
 	say "     A broad oval amphitheater is spread out before you. The pillars are more numerous here, and were likely intended as seating for gryphons in place of the more traditional raised steps. Large oval structures that look like they were woven from vines, rope, wire and other assorted debris are stung up between the pillars set all about the amphitheater. Round openings angled any which way allow entry and exit for their flying inhabitants, through which you see Gryphons flying in or out. Others lounge on the ground nearby with tin cups, shaking them at passers by in a pitiable attempt at begging. Upon closer inspection, you can see that milling all about the Plaza are what appear to be only male and female gryphons, with nary a herm in sight. Set in the center of the amphitheater is a large tent around which the other inhabitants seem have built their ramshackle dwellings. It draws your eye as the focal point of the camp, and you could head [Bold Type]down[roman type] to it if you wished. To the [Bold Type]north[roman type] you see more clearly that a number of the inhabitants of this informal settlement are heading to and from of the busiest of the buildings. To the [Bold Type]northwest[roman type] you can see the large building shaped like a narrow inverted pyramid.";
 
 Table of GameRoomIDs (continued)
@@ -306,7 +308,7 @@ Qytat Tent	"Qytat Tent"
 Qytat Tent is a room. Description of Tent is "[Qytat Tent desc]".
 Qytat Tent is private.
 Qytat Tent is sleepsafe.
-Qytat Tent is down of Main Informal Settlement.
+Qytat Tent is down of Informal Settlement.
 
 To say Qytat Tent desc:
 	if PlayerMet of Quintus is false:
@@ -321,7 +323,7 @@ Soup Kitchen	"Soup Kitchen"
 Soup Kitchen is a room. Description of Soup Kitchen is "[Soup Kitchen desc]".
 Soup Kitchen is private.
 Soup Kitchen is sleepsafe.
-Soup Kitchen is north of Main Informal Settlement.
+Soup Kitchen is north of Informal Settlement.
 Soup Kitchen is northeast of Plaza Fountain.
 Soup Kitchen is east of Qytat Church.
 
@@ -342,7 +344,7 @@ Qytat Church is west of Soup Kitchen.
 Qytat Church is north of Plaza Fountain.
 Qytat Church is east of Market Road.
 Qytat Church is northeast of Qytat Tavern.
-Qytat Church is northwest of Main Informal Settlement.
+Qytat Church is northwest of Informal Settlement.
 ObserveAvailable of Qytat Church is true.
 ObserveString of Qytat Church is "[QytatChurch_ObserveMenu]".
 
@@ -443,6 +445,17 @@ instead of going northwest from Market Road:
 
 Table of GameRoomIDs (continued)
 Object	Name
+Qytat Market	"Qytat Market"
+
+Qytat Market is a room. Description of Qytat Market is "[Qytat Market desc]".
+Qytat Market is private.
+Qytat Market is sleepsafe.
+
+to say Qytat Market desc:
+	say "Placeholder";
+
+Table of GameRoomIDs (continued)
+Object	Name
 Qytat Tavern	"Qytat Tavern"
 
 Qytat Tavern is a room. Description of Qytat Tavern is "[Qytat Tavern desc]".
@@ -461,7 +474,7 @@ Scent of Stairs is "There is a strange scent here that you can only describe as 
 Scent of Qytat Plaza is "This area is strong with the scent of gryphons. It seems you have indeed found their home".
 Scent of Spiral Pattern is "It doesn't smell like anything".
 Scent of Plaza Fountain is "This fountain smells of a bird bath, and is quite dirty. You imagine it has been used by the locals as a bathing spot".
-Scent of Main Informal Settlement is "This area smells dirty and unkept".
+Scent of Informal Settlement is "This area smells dirty and unkept".
 Scent of Qytat Church is "There is a strange scent here that you can only describe as the scent of ozone after lightening strikes".
 Scent of Market Road is "This road doesn't smell like much".
 Scent of Qytat Tent is "This area smells less dirty and unkept than the rest of the settlement".
