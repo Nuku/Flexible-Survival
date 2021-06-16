@@ -51,9 +51,9 @@ Package Keyboard Shortcuts:
 Start by adding the linter plugin. It'll ask you to install some dependencies as well, so go ahead and click yes on all of them that come up. Then install the linter specifically for Flexible Survival. This will help you make sure your code and writing is stylistically correct and it will catch a good number of common coding errors.
 
 ## 6. Install Inform 7
-Install Inform 7! Flexible Survival runs on this game engine.
+Install Inform 7! Flexible Survival runs on this game engine. Grab the newest beta from the following link:
 
-http://inform7.com/downloads/
+https://github.com/DavidKinder/Windows-Inform7/releases/
 
 <!--
 However, Flexible Survival is too big for Inform! We have a custom 64-bit compiler that you will also have to install or else you will not be able to compile the game:
@@ -80,7 +80,7 @@ Here are the manual mapping of files if you do not want to use the script:
 
 | Action                      | File/Folder                        | At  |
 | --------------------------- | ---------------------------------- | --- |
-| Copy the file from the folder `Documents\Github\Inform` | `story.ni` | `Documents\Inform\Projects\Flexible Survival.inform\Source` |
+| Copy the file from the folder `Documents\Github\Flexible-Surival\Inform` | `story.ni` | `Documents\Inform\Projects\Flexible Survival.inform\Source` |
 | Create a new folder called  | `Flexible Survival.materials` | `Documents\Inform\Projects\` |
 | Copy the folder from the folder `Documents\Github` | `Figures` | `Documents\Inform\Projects\Flexible Survival.materials` |
 | Copy the folders from the folder `Documents\Github` | Every folder that is not `Figures` or `Inform` | `Documents\Inform\Extensions` |
