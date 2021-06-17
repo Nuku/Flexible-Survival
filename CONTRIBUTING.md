@@ -77,8 +77,8 @@ https://blog.flexiblesurvival.com/p/links.html
 | --------------------------- | ---------------------------------- | --- |
 | Copy the file from the folder `Documents\Github\Flexible-Surival\Inform` | `story.ni` | `Documents\Inform\Projects\Flexible Survival.inform\Source` |
 | Create a new folder called  | `Flexible Survival.materials` | `Documents\Inform\Projects\` |
-| Copy the folder from the folder `Documents\Github` | `Figures` | `Documents\Inform\Projects\Flexible Survival.materials` |
-| Copy the folders from the folder `Documents\Github` | Every folder that is not `Figures` or `Inform` | `Documents\Inform\Extensions` |
+| Copy the folder from the folder `Documents\Github\Flexible-Surival\` | `Figures` | `Documents\Inform\Projects\Flexible Survival.materials` |
+| Copy the folders from the folder `Documents\Github\Flexible-Surival\` | Every folder that is not `Figures` or `Inform` | `Documents\Inform\Extensions` |
 
 ## 10. Make your changes!
 Now whenever you make changes in Atom, you should be able to then open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go` or to export it to another interpreter with `Release`. Compiling takes a very long time! Expect to wait 5-20 minutes!
