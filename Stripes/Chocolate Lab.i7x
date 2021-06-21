@@ -145,7 +145,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Chocolate Dog"; [name of the overall species of the infection, used for children, ...]
 	add "Chocolate Lab" to infections of CanineList;
 	add "Chocolate Lab" to infections of FoodList;
 	add "Chocolate Lab" to infections of HumorousList;
@@ -166,7 +166,7 @@ When Play begins:
 	now victory entry is "[losetolab]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[choclabdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "dog's head, a smooth, rich brown and somehow made of chocolate. You have a long, slobbery tongue and drool chocolate syrup. Your eyes are a solid, dark black, as if made of dark chocolate, but still able to see. As if being constantly remolded instead of moving flesh and bone, your expression seems to shift the shape of your face"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "that of an anthropomorphic canine, strangely somehow chocolate in color and composition. Your body is covered in a confectionary imitation of [SkinName of Player] flesh. Your body has become like soft chocolate, bending and reshaping itself to move instead of having any actual bones or muscles[if labhost > 0]. Occasionally, an extra chocolaty tail, or the head of another chocolate lab pushes out of your chocolate form, barking or drooling its thick chocolate saliva as it pants happily, making the presence of your unwanted passenger clear[end if]. The scent of cocoa lingers pleasantly around you. When teased, you leak white chocolate syrup from your nipples"; [ Body Description, format as "Your Body is (your text)."]
+	now body entry is "that of an anthropomorphic canine, strangely somehow chocolate in color and composition. Your body is covered in a confectionary imitation of [SkinSpeciesName of Player in lower case] flesh. Your body has become like soft chocolate, bending and reshaping itself to move instead of having any actual bones or muscles[if labhost > 0]. Occasionally, an extra chocolaty tail, or the head of another chocolate lab pushes out of your chocolate form, barking or drooling its thick chocolate saliva as it pants happily, making the presence of your unwanted passenger clear[end if]. The scent of cocoa lingers pleasantly around you. When teased, you leak white chocolate syrup from your nipples"; [ Body Description, format as "Your Body is (your text)."]
 	now skin entry is "a soft layer of milk-chocolate in the place of regular"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
 	now tail entry is "You have a slender, canine tail made of chocolate that wags happily."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "chocolate-brown, canine"; [ Cock Description, format as you have a 'size' (your text) cock]
@@ -453,7 +453,7 @@ This is the Chocolate Lab Infection rule:
 					say "     A few days later, you head back to the kitchen to help your assistants create mates of their own. Meanwhile, your mate is in your office, vigorously screwing your distributor. She had come by to talk to you about wasting time on projects instead of sales. When you left, the canine was well on his way to making her into chocolate Lab like you, giving her a much greater appreciation for the creative vision you would soon share with the world.";
 	else:
 		if labhost > 0:
-			say "     Trapped inside your new [BodyName of Player] form, the chocolate lab[if labhost is 2]s[end if] infesting your body are eventually overwhelmed by your own body, slowly absorbed into your form until one day you realize [if labhost is 2]their[else]its[end if] presence has disappeared entirely. While you show no outward signs of the labs influence, you find you have a powerful craving for chocolate from that day onward.";
+			say "     Trapped inside your new [BodyType of Player] form, the chocolate lab[if labhost is 2]s[end if] infesting your body are eventually overwhelmed by your own body, slowly absorbed into your form until one day you realize [if labhost is 2]their[else]its[end if] presence has disappeared entirely. While you show no outward signs of the labs influence, you find you have a powerful craving for chocolate from that day onward.";
 
 
 Chocolate Lab ends here.

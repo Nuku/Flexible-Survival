@@ -49,7 +49,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Liquidshifter"; [name of the overall species of the infection, used for children, ...]
 	add "Liquidshifter" to infections of ReptileList;
 	add "Liquidshifter" to infections of SlimeList;
 	add "Liquidshifter" to infections of FurryList;

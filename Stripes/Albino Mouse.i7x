@@ -68,7 +68,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Mouse"; [name of the overall species of the infection, used for children, ...]
 	add "Albino Mouse" to infections of RodentList;
 	add "Albino Mouse" to infections of FurryList;
 	add "Albino Mouse" to infections of NatureList;

@@ -288,7 +288,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Dog"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Mutt" to infections of CanineList;
 	add "Feral Mutt" to infections of FurryList;
 	add "Feral Mutt" to infections of NatureList;
@@ -467,7 +467,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Mutt"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Dog"; [name of the overall species of the infection, used for children, ...]
 	add "Mutt Pack" to infections of CanineList;
 	add "Mutt Pack" to infections of FurryList;
 	add "Mutt Pack" to infections of NatureList;

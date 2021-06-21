@@ -1258,29 +1258,29 @@ to say Breast Size Description of ( x - a person ):
 		-- 7:
 			say "DDDD cup";
 		-- 8:
-			say "G cup";
-		-- 9:
 			say "H cup";
-		-- 10:
+		-- 9:
 			say "I cup";
-		-- 11:
+		-- 10:
 			say "J cup";
-		-- 12:
+		-- 11:
 			say "K cup";
-		-- 13:
+		-- 12:
 			say "L cup";
-		-- 14:
+		-- 13:
 			say "M cup";
-		-- 15:
+		-- 14:
 			say "N cup";
-		-- 16:
+		-- 15:
 			say "O cup";
-		-- 17:
+		-- 16:
 			say "P cup";
-		-- 18:
+		-- 17:
 			say "Q cup";
-		-- 19:
+		-- 18:
 			say "R cup";
+		-- 19:
+			say "S cup";
 
 to say Asshole Depth Adjective of ( x - a person ):
 	if Asshole Depth of x < 3: [inches deep]

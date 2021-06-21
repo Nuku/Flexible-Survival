@@ -172,7 +172,7 @@ to say losetosiamesecat:
 		say "     The three of you continue to thrust and grind against one another until you are all satisfied and your orgasms wind down. The male slides himself slowly from you, some cum leaking out of your well-used hole before you can squeeze it shut to keep the rest warm and wet inside you. As the female moves back, you sag to the ground, panting softly and enjoying the afterglow while the pair head off, hand in hand.";
 	else:
 		if Player is male:
-			say "     She pushes you over onto your back and straddles you. She grinds her wet pussy down onto your [CockName of Player] cock. You moan as you feel her wet lips sliding along your stiffening length, getting it nice and slick. After some very pleasant rubbing, she reaches down and guides your hard length into her cunt.";
+			say "     She pushes you over onto your back and straddles you. She grinds her wet pussy down onto your [Cock of Player] cock. You moan as you feel her wet lips sliding along your stiffening length, getting it nice and slick. After some very pleasant rubbing, she reaches down and guides your hard length into her cunt.";
 		else:
 			say "     She pushes you over onto your back and grabs one of your legs. She slides herself between your legs, one dark brown leg under your raised one and the other over on the other side. Scissored with you like this, she grinds her wet folds against yours, making you moan.";
 		if Player is female:

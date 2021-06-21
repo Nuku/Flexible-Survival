@@ -154,7 +154,7 @@ When Play begins:
 	now defeated entry is "[WinOverNaga]";
 	now victory entry is "[LoseToNaga]";
 	now desc entry is "[NagaDesc]";
-	now face entry is "a snake's head, with unblinking eyes and huge venomous fangs. Your [SkinName of Player] hide is sleek across your majestic hood, flaring wide when excited or worked up, and framing your head from behind your face"; [ Face. Format as Your face is [Face of Player]. ]
+	now face entry is "a snake's head, with unblinking eyes and huge venomous fangs. Your [SkinSpeciesName of Player in lower case] hide is sleek across your majestic hood, flaring wide when excited or worked up, and framing your head from behind your face"; [ Face. Format as Your face is [Face of Player]. ]
 	now body entry is "extremely long. You can feel the powerful rings of your muscles drawing you forward quietly across the ground. It almost feels like you're floating along, moving with a sublime confidence in your snake-like body"; [ Body. Format as "Your body is [Body of Player]." ]
 	now skin entry is "[one of]scaly[or]softly-scaled[or]scaled[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]

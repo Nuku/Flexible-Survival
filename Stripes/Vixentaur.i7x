@@ -63,7 +63,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Vixentaur"; [name of the overall species of the infection, used for children, ...]
 	add "Vixentaur" to infections of VulpineList;
 	add "Vixentaur" to infections of FurryList;
 	add "Vixentaur" to infections of FemaleList;

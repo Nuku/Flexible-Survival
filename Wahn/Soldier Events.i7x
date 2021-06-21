@@ -571,7 +571,7 @@ to say ResolveEvent Soldier Squad:
 			say "     Deciding that this is decidedly not your scene, you keep your head down and move along the wall of the building, making sure you're well out of sight from the window before straightening up and getting out of dodge. [if Resolution of Soldier Squad is 95]Yeah sure, you thought it was fun at first, but now that you've seen the depths of depravity Allen is going for... somehow you're less eager to follow the dark plans of this man, at all. [end if]As you travel back the way you came from, you make a mental note to avoid this whole area in the future.";
 			now Resolution of Soldier Squad is 100;
 			now Soldier Squad is resolved;
-	else if Resolution of Soldier Squad is 4:
+	else if Resolution of Soldier Squad is 4 or Resolution of Soldier Squad is 94:
 		say "     [bold type]IMPORTANT NOTE: This stage of the event chain and anything following has NOT been rewritten yet. Therefore it will not be reflecting the new reality of the gritty reboot. The only reason it is currently available is to not cut off Carl as a character.[roman type][line break]";
 		say "     Passing through the neighborhood where you last saw several members of that soldier squad from before and their husky bitch Davies, you decide to check the building out again. Hopefully they'll still be there...";
 		WaitLineBreak;
@@ -825,7 +825,7 @@ to say EvilOption_Amy_2: [Use the German shepherd]
 	WaitLineBreak;
 	say "     With that said, you wrench your male bitch up by his neck-fur, sliding the other arm around his chest to hold him firm as you begin relentlessly jack-hammering into him. You're still out in the open, and this is more to punish the guy and educate your bitch, so you do not pace yourself too much, simply letting your wild impulses run free instead. The slap of your hips against his rear follows a rapid rhythm that speeds up more and more, until you finally thrust as deep as you can go, grinding into him as your seed paints the anthro's inner walls white. Sliding your hand down his front, you find his canine cock hard and erect. With the pounding you gave his prostate, he couldn't really help this, but you use the fact that he's hard as an extra little lash for the street dog, laughing and telling him that he must have enjoyed being used. Hearing himself being called a cock-hungry bitch denying himself what he craves rubs the masculine dog the wrong way, but he can't do anything but whimper in protest right now.";
 	say "     Unceremoniously pulling out of the [']used['] dog, you give a whistle to the husky to bring your gear[if Player is not naked] and clothes[end if], which she hastily obeys. As you put your stuff on again, the male canine uses his chance to make a getaway, paws scraping on the asphalt as he runs off, tail tugged between his legs and with your seed leaking out of his ass to seep into his fur. For a second, you're almost tempted to catch him again, but no, you got your hands full with one dog already right now. Telling the husky to come along, with her dutifully walking a step behind you, you realize at that point that you don't even have anything to call her, so you decide to pick out a name for the bitch. As your thoughts roam through various options, you're drawn back to your time in school and give a little snort as you remember a certain cheerleader. Amusement painted on your lips, you clearing your throat and tell the anthro that you'll call her Amy from now on - after an old schoolmate who also was a slutty little bitch. The back-handed slap at the original Amy goes straight over the husky's head, with her simply looking at you and saying, 'Amy? Amy. A M Y. Amy - sounds good. So I'm Amy?' You nod, then continue on your way, eventually reaching the library.";
-	CreatureSexAftermath "German Shepherd" receives "AssFuck" from "Player";
+	CreatureSexAftermath "German Shepherd Male" receives "AssFuck" from "Player";
 	TraitGain "Street dog assfucked" for Amy;
 	now HP of Amy is 2; [matured]
 	[TODO: maybe fork of a different state for Amy]
@@ -861,7 +861,7 @@ to say EvilOption_Amy_3:  [force her to fuck the German shepherd]
 		say "     You don't want to wait for him to tie, or stay here until he gets soft enough to pull out. As the street dog is just about to reach the point of no return, you grab his neck-fur and wrench the guy backwards, his cock and growing knot pulling out of her with a wet slurp and then smacking against his abs. Just in time, as he begins shooting when falling back onto his ass, covering his own furry chest with spurts of seed. The bitch lets out a needy whine, rocking her body back to get the cock inside her again, but he's outside of her reach. Instead, you lower your hand between her legs and play with her clit a little, then wipe your wet fingers off in her fur.";
 	say "     Unceremoniously telling the [']used['] bitch to get up, you grin as she hastily obeys. You pay the German shepherd little mind, just waving him and telling him he was a good dog, a good tool. He gives you the finger, then scrambles to his feet, running off. For a second, you're almost tempted to catch him again, but no, you got your hands full with one dog already right now. Telling the husky to come along, with her dutifully walking a step behind you, you realize at that point that you don't even have anything to call her, so you decide to pick out a name for the bitch. As your thoughts roam through various options, you're drawn back to your time in school and give a little snort as you remember a certain cheerleader. Amusement painted on your lips, you clearing your throat and tell the anthro that you'll call her Amy from now on - after an old schoolmate who also was a slutty little bitch. The back-handed slap at the original Amy goes straight over the husky's head, with her simply looking at you and saying, 'Amy? Amy. A M Y. Amy - sounds good. So I'm Amy?' You nod, then continue on your way, eventually reaching the library.";
 	now HP of Amy is 11; [has been fucked - TODO: maybe fork off a different state completely]
-	CreatureSexAftermath "Amy" receives "PussyFuck" from "German Shepherd";
+	CreatureSexAftermath "Amy" receives "PussyFuck" from "German Shepherd Male";
 	TraitGain "Street dog fucked her" for Amy;
 
 to say EvilOption_Amy_4: [thrash the German shepherd]
@@ -1119,10 +1119,10 @@ to say ResolveEvent Lone Soldier:
 			say "     [link](3)[as]3[end link] - Pull the plug out of the black hunk.";
 			say "     [link](4)[as]4[end link] - Pretend you never saw anything.";
 			now calcnumber is 0;
-			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+			while calcnumber < 1 or calcnumber > 4:
+				say "Choice? (1-4)>[run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 					break;
 				else:
 					say "Invalid choice. Type [link]1[end link] to ask Monty about it, [link]2[end link] to touch the plug, [link]3[end link] to pull the plug, or [link]4[end link] to ignore it.";

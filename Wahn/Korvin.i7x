@@ -1540,11 +1540,11 @@ instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60
 					say "[Korvin_Relationship_Library04]";
 				else if nam is "You're building a private harem for only you personally to enjoy (and that includes him)":
 					say "[Korvin_Relationship_Library05]";
-				else if nam is "You're building a harem, but as your bro, he's free to use em too":
+				else if nam is "You're building a harem and he's part of it. But as your bro, he's got special privileges":
 					say "[Korvin_Relationship_Library06]";
 				else if nam is "You're building a harem, but wouldn't be cross if your lover had some fun with them":
 					say "[Korvin_Relationship_Library07]";
-				else if nam is "You're building a harem, which you'd be happy to share together with your canine lover":
+				else if nam is "You're building a harem for both of you, yourself and your canine lover":
 					say "[Korvin_Relationship_Library08]";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
@@ -1641,7 +1641,7 @@ Growls wants to go out and fight (if no combat in several rounds)
 ["Library_private lover" - Player wants to be the main partner of Korvin, only threesomes allowed (maybe)    ]
 [   + "Harem Master" player feat - sharing the Harem together                                                ]
 
-instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60 and Resolution of Trucker Bar is 2 or Resolution of Trucker Bar is 3 and Amy is booked and "Relationship_Talk_Done" is listed in Traits of Korvin and (HP of Amy is 11 or HP of Amy is 10 or HP of Amy is 101) and Lust of Amy is 0): [Korvin tamed, confident Korvin (blackcollar), learned about his past and made/let him stay, Amy Present, had relationship talk, Amy either fucked, ready for sex or player not interested in her, not pregnant]
+instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60 and Resolution of Trucker Bar is 2 or Resolution of Trucker Bar is 3 and Amy is booked and "Relationship_Talk_Done" is listed in Traits of Korvin and "Amy_Korvin_FirstInteraction_Done" is not listed in Traits of Korvin and (HP of Amy is 11 or HP of Amy is 10 or HP of Amy is 101) and Lust of Amy is 0): [Korvin tamed, confident Korvin (blackcollar), learned about his past and made/let him stay, Amy Present, had relationship talk, Amy either fucked, ready for sex or player not interested in her, not pregnant]
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1853,22 +1853,22 @@ instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60
 						break;
 					else:
 						say "Invalid choice. Type [link]1[end link] to let Korvin choose, [link]2[end link] to tell him to knot her, [link]3[end link] to let him shoot in her without knotting, or [link]4[end link] to tell Korvin to pull out.";
-					if calcnumber is 1:
-						LineBreak;
-						say "     Sliding a hand over his head and caressing the fur of the German shepherd's neck, you lean in to kiss the side of his muzzle, saying lovingly that you trust him and he's free to do as he wants. If he knocks Amy up, you'll happily welcome their puppies and treat them as your own. 'That means a lot[if Player is not defaultnamed] [name of Player][else] to me[end if]! You're amazing, you know that?!' Amy also is beaming very happily at the words, smiling up from where she's lying underneath the other anthro still sending throbs of cum flooding into her womb. 'So we'd all be a family? Together?' the young woman says somewhat dreamily, reaching out with both arms to hug you and Korvin close.";
-						TraitGain "Korvin Family Breeding (Amy)" for Korvin;
-					else if calcnumber is 2:
-						LineBreak;
-						say "     Sliding a hand over his head and caressing the fur of the German shepherd's neck, you lean in to kiss the side of his muzzle, saying affectionately that you want your man to stud. He should knot her any time they fuck, with him properly breeding the little bitch. You wanna see some puppies, and soon. 'Oh yeah! That means a lot[if Player is not defaultnamed] [name of Player][else] to me[end if]!' Amy also gets excited at your words, smiling up from where she's lying underneath the other anthro still sending throbs of cum flooding into her womb. 'I want to have some cute puppies!' the young woman says somewhat dreamily.";
-						TraitGain "Korvin Breeding (Amy)" for Korvin;
-					else if calcnumber is 3:
-						LineBreak;
-						say "     Tapping the German shepherd's head, you stroke him a few times, then calmly say that you'd prefer for him to not knot Amy. He can shoot in her, no problem, but it'd be best if the knot stayed out, as you don't neccessarily want guaranteed puppies. Korvin is a little bit deflated as he hears this, but he brushes it off and smiles again a moment later, 'If you think that's best, of course.'";
-						TraitGain "Korvin Seeding (Amy)" for Korvin;
-					else if calcnumber is 4:
-						LineBreak;
-						say "     Tapping the German shepherd's head, you stroke him a few times, then calmly say that you'd prefer for him to pull out when fucking Amy. He can fuck her, no problem, but it'd be best if he didn't shoot in her, as you don't want any puppies from him fathered with Amy. Korvin is a little bit deflated as he hears this, but he brushes it off and smiles again a moment later, 'If you think that's best, of course.'";
-						TraitGain "Korvin PullOut (Amy)" for Korvin;
+				if calcnumber is 1:
+					LineBreak;
+					say "     Sliding a hand over his head and caressing the fur of the German shepherd's neck, you lean in to kiss the side of his muzzle, saying lovingly that you trust him and he's free to do as he wants. If he knocks Amy up, you'll happily welcome their puppies and treat them as your own. 'That means a lot[if Player is not defaultnamed] [name of Player][else] to me[end if]! You're amazing, you know that?!' Amy also is beaming very happily at the words, smiling up from where she's lying underneath the other anthro still sending throbs of cum flooding into her womb. 'So we'd all be a family? Together?' the young woman says somewhat dreamily, reaching out with both arms to hug you and Korvin close.";
+					TraitGain "Korvin Family Breeding (Amy)" for Korvin;
+				else if calcnumber is 2:
+					LineBreak;
+					say "     Sliding a hand over his head and caressing the fur of the German shepherd's neck, you lean in to kiss the side of his muzzle, saying affectionately that you want your man to stud. He should knot her any time they fuck, with him properly breeding the little bitch. You wanna see some puppies, and soon. 'Oh yeah! That means a lot[if Player is not defaultnamed] [name of Player][else] to me[end if]!' Amy also gets excited at your words, smiling up from where she's lying underneath the other anthro still sending throbs of cum flooding into her womb. 'I want to have some cute puppies!' the young woman says somewhat dreamily.";
+					TraitGain "Korvin Breeding (Amy)" for Korvin;
+				else if calcnumber is 3:
+					LineBreak;
+					say "     Tapping the German shepherd's head, you stroke him a few times, then calmly say that you'd prefer for him to not knot Amy. He can shoot in her, no problem, but it'd be best if the knot stayed out, as you don't neccessarily want guaranteed puppies. Korvin is a little bit deflated as he hears this, but he brushes it off and smiles again a moment later, 'If you think that's best, of course.'";
+					TraitGain "Korvin Seeding (Amy)" for Korvin;
+				else if calcnumber is 4:
+					LineBreak;
+					say "     Tapping the German shepherd's head, you stroke him a few times, then calmly say that you'd prefer for him to pull out when fucking Amy. He can fuck her, no problem, but it'd be best if he didn't shoot in her, as you don't want any puppies from him fathered with Amy. Korvin is a little bit deflated as he hears this, but he brushes it off and smiles again a moment later, 'If you think that's best, of course.'";
+					TraitGain "Korvin PullOut (Amy)" for Korvin;
 				NPCSexAftermath Korvin receives "OralPussy" from Amy;
 				NPCSexAftermath Amy receives "PussyFuck" from Korvin;
 				now HP of Amy is 11; [was fucked]
@@ -1902,22 +1902,22 @@ instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60
 						break;
 					else:
 						say "Invalid choice. Type [link]1[end link] to let Korvin choose, [link]2[end link] to tell him to knot her, [link]3[end link] to let him shoot in her without knotting, or [link]4[end link] to tell Korvin to pull out.";
-					if calcnumber is 1:
-						LineBreak;
-						say "     Sliding a hand over his head and caressing the fur of the German shepherd's neck, you lean in to kiss the side of his muzzle, saying lovingly that you trust him and he's free to do as he wants. If he knocks Amy up, you'll happily welcome their puppies and treat them as your own. 'That means a lot[if Player is not defaultnamed] [name of Player][else] to me[end if]! You're amazing, you know that?!' Amy also is beaming very happily at the words, smiling up from where she's lying underneath the other anthro still sending throbs of cum flooding into her womb. 'So we'd all be a family? Together?' the young woman says somewhat dreamily, reaching out with both arms to hug you and Korvin close.";
-						TraitGain "Korvin Family Breeding (Amy)" for Korvin;
-					else if calcnumber is 2:
-						LineBreak;
-						say "     Sliding a hand over his head and caressing the fur of the German shepherd's neck, you lean in to kiss the side of his muzzle, saying affectionately that you want your man to stud. He should knot her any time they fuck, with him properly breeding the little bitch. You wanna see some puppies, and soon. 'Oh yeah! That means a lot[if Player is not defaultnamed] [name of Player][else] to me[end if]!' Amy also gets excited at your words, smiling up from where she's lying underneath the other anthro still sending throbs of cum flooding into her womb. 'I want to have some cute puppies!' the young woman says somewhat dreamily.";
-						TraitGain "Korvin Breeding (Amy)" for Korvin;
-					else if calcnumber is 3:
-						LineBreak;
-						say "     Tapping the German shepherd's head, you stroke him a few times, then calmly say that you'd prefer for him to not knot Amy. He can shoot in her, no problem, but it'd be best if the knot stayed out, as you don't neccessarily want guaranteed puppies. Korvin is a little bit deflated as he hears this, but he brushes it off and smiles again a moment later, 'If you think that's best, of course.'";
-						TraitGain "Korvin Seeding (Amy)" for Korvin;
-					else if calcnumber is 4:
-						LineBreak;
-						say "     Tapping the German shepherd's head, you stroke him a few times, then calmly say that you'd prefer for him to pull out when fucking Amy. He can fuck her, no problem, but it'd be best if he didn't shoot in her, as you don't want any puppies from him fathered with Amy. Korvin is a little bit deflated as he hears this, but he brushes it off and smiles again a moment later, 'If you think that's best, of course.'";
-						TraitGain "Korvin PullOut (Amy)" for Korvin;
+				if calcnumber is 1:
+					LineBreak;
+					say "     Sliding a hand over his head and caressing the fur of the German shepherd's neck, you lean in to kiss the side of his muzzle, saying lovingly that you trust him and he's free to do as he wants. If he knocks Amy up, you'll happily welcome their puppies and treat them as your own. 'That means a lot[if Player is not defaultnamed] [name of Player][else] to me[end if]! You're amazing, you know that?!' Amy also is beaming very happily at the words, smiling up from where she's lying underneath the other anthro still sending throbs of cum flooding into her womb. 'So we'd all be a family? Together?' the young woman says somewhat dreamily, reaching out with both arms to hug you and Korvin close.";
+					TraitGain "Korvin Family Breeding (Amy)" for Korvin;
+				else if calcnumber is 2:
+					LineBreak;
+					say "     Sliding a hand over his head and caressing the fur of the German shepherd's neck, you lean in to kiss the side of his muzzle, saying affectionately that you want your man to stud. He should knot her any time they fuck, with him properly breeding the little bitch. You wanna see some puppies, and soon. 'Oh yeah! That means a lot[if Player is not defaultnamed] [name of Player][else] to me[end if]!' Amy also gets excited at your words, smiling up from where she's lying underneath the other anthro still sending throbs of cum flooding into her womb. 'I want to have some cute puppies!' the young woman says somewhat dreamily.";
+					TraitGain "Korvin Breeding (Amy)" for Korvin;
+				else if calcnumber is 3:
+					LineBreak;
+					say "     Tapping the German shepherd's head, you stroke him a few times, then calmly say that you'd prefer for him to not knot Amy. He can shoot in her, no problem, but it'd be best if the knot stayed out, as you don't necessarily want guaranteed puppies. Korvin is a little bit deflated as he hears this, but he brushes it off and smiles again a moment later, 'If you think that's best, of course.'";
+					TraitGain "Korvin Seeding (Amy)" for Korvin;
+				else if calcnumber is 4:
+					LineBreak;
+					say "     Tapping the German shepherd's head, you stroke him a few times, then calmly say that you'd prefer for him to pull out when fucking Amy. He can fuck her, no problem, but it'd be best if he didn't shoot in her, as you don't want any puppies from him fathered with Amy. Korvin is a little bit deflated as he hears this, but he brushes it off and smiles again a moment later, 'If you think that's best, of course.'";
+					TraitGain "Korvin PullOut (Amy)" for Korvin;
 				NPCSexAftermath Korvin receives "OralPussy" from Amy;
 				NPCSexAftermath Amy receives "PussyFuck" from Korvin;
 				now HP of Amy is 11; [was fucked]
@@ -1938,6 +1938,7 @@ instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60
 		else if "Library_no fucks" is listed in Traits of Korvin or "Library_bitched out" is listed in Traits of Korvin or "Library_private lover" is listed in Traits of Korvin: [player isn't okay with Korvin-initiated fuckery]
 			say "     Meanwhile, Amy is completely oblivious to the fact that what she was told is only a fanciful story. She's basically gushing over Korvin's heroics and the 'soo romantic' ending, and you almost expect her to throw herself at him in the next few moments. Glancing over his shoulder to meet your eyes in a knowing glance, which is full of wordless thanks that you let him have his fun, then looks down at Amy again. He runs his finger along the side of her muzzle, raising it to look into her eyes to say, 'Hope you liked the story, little lady. Though I think it's time for us to go now. You coming, [if Player is not defaultnamed][name of Player][else]boss[end if]?' With the last being addressed at you, the German shepherd gives Amy a smile, then gets up. Joining him, the two of you say goodbye to Amy and walk away, leaving her behind to swoon over the heroic dog. When you are well outside of earshot, Korvin turns to you and smiles. 'That was fun! Nice little trip down memory lane, hah!' You snort, replying that both of you know that it didn't happen as he told the tale. 'Eh, close enough,' the German shepherd replies with a grin, then pulls you close to give you a long and loving kiss.";
 			TraitGain "Amy_Interaction_Friendly" for Korvin;
+	TraitGain "Amy_Korvin_FirstInteraction_Done" for Korvin;
 
 [
 to say AmyKorvinThreesomeMenu:

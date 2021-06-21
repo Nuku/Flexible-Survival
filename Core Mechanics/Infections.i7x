@@ -89,7 +89,7 @@ This is the sex change rule:
 		if prevcock < Cock Count of Player:		[did new cock appear?]
 			follow the cock descr rule;
 			say "Your groin throbs with intense sensations as a [descr] [cock entry] [one of]cock[or]penis[or]shaft[or]maleness[at random] erupts from you, spurting a few excited streams of fluid as it settles into place.";
-	if Cock Count of Player is not 0 and ( the sex entry is "Female" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of Player and singlesexadjust is not 2: [player currently male, single sexed]
+	if Cock Count of Player is not 0 and ( the sex entry is "Female" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of Player: [and singlesexadjust is not 2:] [player currently male, single sexed removed as condition for now]
 		[shrinks & removes cocks if the player has one, infection is female/neuter and "One Way" is not listed]
 		let prevcock be Cock Length of Player;
 		let prevcock2 be Ball Size of Player;
@@ -99,7 +99,7 @@ This is the sex change rule:
 		if "Male Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			if Cock Length of Player < 5, now Cock Length of Player is 5;
 			if Ball Size of Player < 3, now Ball Size of Player is 3;
-		if (singlesexadjust is 1 or singlesexadjust is 2) and sex entry is "Female":		[male/herm becomes female if female infection]
+		if singlesexadjust is 1 and sex entry is "Female":		[male/herm becomes female if female infection]
 			remove manhood from Player;
 		if prevcock > Cock Length of Player or prevcock2 > Ball Size of Player:		[did cock actually shrink?]
 			follow the cock descr rule;
@@ -181,8 +181,8 @@ This is the sex change rule:
 		if prevcunt < Cunt Count of Player:		[did new cunt appear?]
 			follow the cunt descr rule;
 			say "Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, leaking along a thigh as you quiver.";
-	if Cunt Count of Player is not 0 and ( the sex entry is "Male" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of Player and singlesexadjust is not 3: [player currently female, single sexed]
-		[removes cunt if player has 1+, no "One Way" and no single sexed females]
+	if Cunt Count of Player is not 0 and ( the sex entry is "Male" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of Player: [ and singlesexadjust is not 3:] [player currently female, single sexed condition removed]
+		[removes cunt if player has 1+, no "One Way"]
 		let prevcunt be Cunt Depth of Player;
 		let prevcunt2 be Cunt Tightness of Player;
 		decrease Cunt Depth of Player by 1;
@@ -192,7 +192,7 @@ This is the sex change rule:
 		if "Female Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always A Pussy" is listed in feats of Player:
 			if Cunt Depth of Player < 5, now Cunt Depth of Player is 5;
 			if Cunt Tightness of Player < 3, now Cunt Tightness of Player is 3;
-		if (singlesexadjust is 1 or singlesexadjust is 3) and sex entry is "Male":	[female/herm becomes male if male infection]
+		if singlesexadjust is 1 and sex entry is "Male":	[female/herm becomes male if male infection]
 			now Cunt Count of Player is 0;
 			now Cunt Depth of Player is 0;
 			now Cunt Tightness of Player is 0;
@@ -273,19 +273,17 @@ This is the breast change rule:
 			if Breast Size of Player < Breast Size entry and ( ( "Male Preferred" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player and singlesexadjust is not 2) or "Breasts" is listed in feats of Player ):
 				follow the breast descr rule;
 				let oldbreast be descr;
-				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts ";
 				increase Breast Size of Player by 1;
 				increase Breast Size of Player by ( Breast Size entry minus Breast Size of Player ) divided by 3;
 				follow the breast descr rule;
-				say "become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
 			else if Breast Size of Player > Breast Size entry and "One Way" is not listed in feats of Player:
 				follow the breast descr rule;
 				let oldbreast be descr;
-				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts ";
 				decrease Breast Size of Player by 1;
 				decrease Breast Size of Player by ( Breast Size of Player minus Breast Size entry ) divided by 3;
 				follow the breast descr rule;
-				say "become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
 		else if the sex entry is "Male":
 			let breasttarget be male breast size entry;
 			if "Breasts" is listed in feats of Player:
@@ -295,19 +293,17 @@ This is the breast change rule:
 			if Breast Size of Player < breasttarget:
 				follow the breast descr rule;
 				let oldbreast be descr;
-				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts ";
 				increase Breast Size of Player by 1;
 				increase Breast Size of Player by ( breasttarget minus Breast Size of Player ) divided by 3;
 				follow the breast descr rule;
-				say "become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
 			else if Breast Size of Player > breasttarget and "One Way" is not listed in feats of Player:
 				follow the breast descr rule;
 				let oldbreast be descr;
-				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts ";
 				decrease Breast Size of Player by 1;
 				decrease Breast Size of Player by ( Breast Size of Player minus breasttarget ) divided by 3;
 				follow the breast descr rule;
-				say "become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
 		if PronounChoice of Player is "Auto", follow the SetPlayerPronouns rule;
 	else: [old style]
 		if Nipple Count of Player is not Nipple Count entry:
@@ -327,20 +323,18 @@ This is the breast change rule:
 				[breast growth if smaller than infection size, and "Breasts" and NOT either "Male Preferred" or "Flat Chested"]
 				follow the breast descr rule;
 				let oldbreast be descr;
-				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts ";
 				increase Breast Size of Player by 1;
 				increase Breast Size of Player by ( Breast Size entry minus Breast Size of Player ) divided by 3;
 				follow the breast descr rule;
-				say "become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
 			else if Breast Size of Player > Breast Size entry and "One Way" is not listed in feats of Player:
 				[breast shrinkage if bigger than infection size, and "One Way" not selected]
 				follow the breast descr rule;
 				let oldbreast be descr;
-				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts ";
 				decrease Breast Size of Player by 1;
 				decrease Breast Size of Player by ( Breast Size of Player minus Breast Size entry ) divided by 3;
 				follow the breast descr rule;
-				say "become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
 		else if the sex entry is "Male":
 			let breasttarget be male breast size entry;
 			if "Breasts" is listed in feats of Player: [pulls the female breast size if this feat is selected]
@@ -350,19 +344,17 @@ This is the breast change rule:
 			if Breast Size of Player < breasttarget:
 				follow the breast descr rule;
 				let oldbreast be descr;
-				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts ";
 				increase Breast Size of Player by 1;
 				increase Breast Size of Player by ( breasttarget minus Breast Size of Player ) divided by 3;
 				follow the breast descr rule;
-				say "become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
 			else if Breast Size of Player > breasttarget and "One Way" is not listed in feats of Player:
 				follow the breast descr rule;
 				let oldbreast be descr;
-				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts ";
 				decrease Breast Size of Player by 1;
 				decrease Breast Size of Player by ( Breast Size of Player minus breasttarget ) divided by 3;
 				follow the breast descr rule;
-				say "become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
 		if PronounChoice of Player is "Auto", follow the SetPlayerPronouns rule;
 
 To grow breasts by (x - a number):
@@ -631,8 +623,10 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 			now CockName of Player is Name entry;
 			if Species Name entry is not "":
 				now CockSpeciesName of Player is Species Name entry;
+				now CuntSpeciesName of Player is Species Name entry;
 			else:
 				now CockSpeciesName of Player is Name entry;
+				now CuntSpeciesName of Player is Name entry;
 			now Cock of Player is cock entry;
 			now Cock Description of Player is ""; [wiping out the new style parts]
 			now Cunt Description of Player is ""; [wiping out the new style parts]

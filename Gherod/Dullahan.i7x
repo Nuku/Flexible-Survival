@@ -34,11 +34,11 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 when play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	add "dullahan" to infections of DemonList;
-	add "dullahan" to infections of MaleList;
-	add "dullahan" to infections of BipedalList;
-	now Name entry is "dullahan";
+	now Species Name entry is "Dullahan"; [name of the overall species of the infection, used for children, ...]
+	add "Dullahan" to infections of DemonList;
+	add "Dullahan" to infections of MaleList;
+	add "Dullahan" to infections of BipedalList;
+	now Name entry is "Dullahan";
 	now enemy title entry is "Dullahan Knight"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
@@ -212,7 +212,7 @@ Usedesc of dullahan dust is "[DullahanDustUse]";
 to say DullahanDustUse:
 	say "You shrug before opening your mouth and throwing the dust into your mouth. It tingles in your tongue and seemingly melts, like pop rocks, making your entire mouth numb for a moment.";
 
-dullahan dust is infectious. Strain of dullahan dust is "dullahan".
+dullahan dust is infectious. Strain of dullahan dust is "Dullahan".
 
 Section 4 - Sex menu
 
