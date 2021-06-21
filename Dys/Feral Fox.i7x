@@ -41,7 +41,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 when play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Fox"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Fox" to infections of VulpineList;
 	add "Feral Fox" to infections of FurryList;
 	add "Feral Fox" to infections of NatureList;

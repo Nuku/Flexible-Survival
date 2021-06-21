@@ -79,11 +79,11 @@ Section 3 - Everyturn rule
 an everyturn rule:
 	if the rubber sneakers are equipped:
 		if SkinName of Player is not "Rubber Puma":
-			say "     The tingles coming from your rubber shoes, which you got used to until now, suddenly peak. You get goosebumps, while the rubber quickly spreads over your entire body, save your face. The goosebumps are then replaced by the comfortable warmth of dark blue rubber clinging to your body, and having you lose your [SkinName of Player] skin.";
+			say "     The tingles coming from your rubber shoes, which you got used to until now, suddenly peak. You get goosebumps, while the rubber quickly spreads over your entire body, save your face. The goosebumps are then replaced by the comfortable warmth of dark blue rubber clinging to your body, and having you lose your [SkinSpeciesName of Player in lower case] skin.";
 			now SkinName of Player is "Rubber Puma";
 			now Skin of Player is "shiny black";
 		else if CockName of Player is not "Rubber Puma":
-			say "     A sudden pang of pain in your genital area makes you double over. The pain recedes as fast as it came and, when you remove your hands from your crotch, you feel changed[if Player is male]. Your [CockName of Player] cock[smn] changed into a single human-sized, feline-shape rubber penis, which quickly retracts, barbs and all, into a smooth and shiny latex sheath[end if][if Player is female]. A quick prodding of your cunt[sfn] indicates you that the rubber slipped inside, covering your entire vagina with very sensitive latex[end if].";
+			say "     A sudden pang of pain in your genital area makes you double over. The pain recedes as fast as it came and, when you remove your hands from your crotch, you feel changed[if Player is male]. your [Cock of Player] cock[smn] changed into a single human-sized, feline-shape rubber penis, which quickly retracts, barbs and all, into a smooth and shiny latex sheath[end if][if Player is female]. A quick prodding of your cunt[sfn] indicates you that the rubber slipped inside, covering your entire vagina with very sensitive latex[end if].";
 			now CockName of Player is "Rubber Puma";
 			now Cock of Player is "feline";
 			if Cock Count of Player > 1:
@@ -161,9 +161,9 @@ When Play begins:
 	now cock entry is "feline";
 	now face change entry is "rubber suddenly creeps up to your head and closes around it. The substance melds with your skin, then your skull, which shapes into a puma head. You palp it, and realize that it is entirely made of rubber, even your teeth. The need for running begins to addle your mind";
 	now body change entry is "your body shifts and changes. You feel your body become a little smaller, and more flexible. Muscles grow all over the place, especially on your thighs, giving you legs made for running. Overall, you take a more feline stance";
-	now skin change entry is "you get goosebumps, while the rubber quickly spreads over your entire body, save your face. The goosebumps are then replaced by the comfortable warmth of dark blue rubber clinging to your body, and having you lose your [SkinName of Player] skin";
+	now skin change entry is "you get goosebumps, while the rubber quickly spreads over your entire body, save your face. The goosebumps are then replaced by the comfortable warmth of dark blue rubber clinging to your body, and having you lose your [SkinSpeciesName of Player in lower case] skin";
 	now ass change entry is "a long blue tail sprouts out. A flexible rubbery tube, which feels like a natural part of your body, as the elecritc tingles running back to your brain tell you, as soon as you grab it";
-	now cock change entry is "a sudden pang of pain in your genital area makes you double over. The pain recedes as fast as it came and, when you remove your hands from your crotch, you feel changed. Your [CockName of Player] cock[smn] changed into a single human-sized, feline-shape rubber penis, which quickly retracts, barbs and all, into a shiny smooth latex sheath";
+	now cock change entry is "a sudden pang of pain in your genital area makes you double over. The pain recedes as fast as it came and, when you remove your hands from your crotch, you feel changed. your [Cock of Player] cock[smn] changed into a single human-sized, feline-shape rubber penis, which quickly retracts, barbs and all, into a shiny smooth latex sheath";
 	now str entry is 16; [ These are now the creature's stats... ]
 	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 16; [ These values may be used as part of alternate combat.]

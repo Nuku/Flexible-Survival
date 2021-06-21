@@ -11,13 +11,13 @@ To level up:
 		say "Current stats:[line break]";
 		say "Strength: [strength of Player], Dexterity: [dexterity of Player], Stamina: [stamina of Player], Charisma: [Charisma of Player], Intelligence: [intelligence of Player], Perception: [perception of Player].";
 		say "Pick a stat to increase.";
-		say "[link]1 - Strength[as]1[end link][line break]: Represents your raw physical might and your ability to deal damage.";
-		say "[link]2 - Dexterity[as]2[end link][line break]: Affects your likelihood to hit and dodge.";
-		say "[link]3 - Stamina[as]3[end link][line break]: Increases your total health pool and your overall endurance.";
-		say "[link]4 - Charisma[as]4[end link][line break]: Deals with social interactions with NPCs and your pets, and affects your morale.";
-		say "[link]5 - Intelligence[as]5[end link][line break]: Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
-		say "[link]6 - Perception[as]6[end link][line break]: Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
-		say "[link]7 - Random[as]7[end link][line break]: Randomize your stat point gain.";
+		say "[link]1 - Strength[as]1[end link] - Represents your raw physical might and your ability to deal damage.";
+		say "[link]2 - Dexterity[as]2[end link] - Affects your likelihood to hit and dodge.";
+		say "[link]3 - Stamina[as]3[end link] - Increases your total health pool and your overall endurance.";
+		say "[link]4 - Charisma[as]4[end link] - Deals with social interactions with NPCs and your pets, and affects your morale.";
+		say "[link]5 - Intelligence[as]5[end link] - Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
+		say "[link]6 - Perception[as]6[end link] - Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
+		say "[link]7 - Random[as]7[end link] - Randomize your stat point gain.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 7:
 			say "Choice? (1-7)>[run paragraph on]";

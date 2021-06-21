@@ -739,7 +739,7 @@ name	desc	weight	object
 rlingfound is a truth state that varies. rlingfound is usually false.
 racy lingerie is a grab object. racy lingerie is equipment. It is not temporary.
 The placement of racy lingerie is "crotch".
-The descmod of racy lingerie is "Over your [BodyName of Player] body, you're wearing a very racy set of red lingerie.".
+The descmod of racy lingerie is "Over your [BodyType of Player] body, you're wearing a very racy set of red lingerie.".
 The slot of racy lingerie is "crotch".
 the scent of racy lingerie is "While always smelling clean and fresh at first, smelling a little longer picks up a faint perfume and the scent of [if Player is herm]male and female [else if Player is female]female [else if Player is male]male [end if]arousal.".
 

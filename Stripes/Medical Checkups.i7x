@@ -430,7 +430,7 @@ to say Medeaadjustments:
 					if animal heat is false:
 						say "     'Currently, you are not being subject to any form of heat cycle due to [if Player is impreg_now]your pregnancy[else if Player is not impreg_able]your inability to become pregnant at the present[else]some change your body's undergone[end if].'";
 					else if inheat is true:
-						say "     'Well, you're currently in a heightened period of estrus. It is marked by increase arousal and a higher fertility rate[if defaultheat is false]. In your particular case, you are going through a [CockName of Player] heat[else]. In your particular case, you are going through a fairly common version of the heat cycle the infected go through[end if]. ";
+						say "     'Well, you're currently in a heightened period of estrus. It is marked by increase arousal and a higher fertility rate[if defaultheat is false]. In your particular case, you are going through a [CuntSpeciesName of Player in lower case] heat[else]. In your particular case, you are going through a fairly common version of the heat cycle the infected go through[end if]. ";
 						if heat cycle entry is heat duration entry:
 							say "This particular heat is ongoing and so will not end until you become pregnant.'";
 						else if turns in heat >= heat cycle entry or turns in heat < (heat cycle entry - heat duration entry) * 8:
@@ -444,7 +444,7 @@ to say Medeaadjustments:
 							guesstimate time at num;
 							say ".'";
 					else:
-						say "     'You are not currently in heat, though you are on an active estrus cycle,' she says with a hint of disappointment. 'When it starts up again, it will be marked by increased arousal and a higher fertility rate.' Saying this does seem to perk her back up a little[if defaultheat is false]. In your particular case, you are on a [CockName of Player] heat cycle[else]. In your particular case, you are on a fairly common version of the heat cycle the infected go through[end if] which should reach estrus ";
+						say "     'You are not currently in heat, though you are on an active estrus cycle,' she says with a hint of disappointment. 'When it starts up again, it will be marked by increased arousal and a higher fertility rate.' Saying this does seem to perk her back up a little[if defaultheat is false]. In your particular case, you are on a [CuntSpeciesName of Player in lower case] heat cycle[else]. In your particular case, you are on a fairly common version of the heat cycle the infected go through[end if] which should reach estrus ";
 						if heat cycle entry is heat duration entry:
 							say "at any moment. It will then be ongoing and so will not end until you become pregnant.'";
 						else if turns in heat >= heat cycle entry:		[cycle to force restart]

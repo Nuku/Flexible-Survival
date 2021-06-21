@@ -81,7 +81,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Rabbit";
 	now Name entry is "Rabbit"; [Name of your new Monster]
 	now enemy title entry is "Rabbit Pack";
 	now enemy Name entry is "";

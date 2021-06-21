@@ -184,7 +184,7 @@ to say enhancedattack:
 			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapon's knowledge, you attack with[or]Like the veteran fighter you are, you strike with[at random] [weapon of Player], hitting [Name entry] for [special-style-2][dam][roman type] damage!";
 		else if weapon object of Player is journal:
 			if z is not 0:	[Natural Armaments used]
-				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [BodyName of Player][or]Drawing strength from your [BodyName of Player], you attack[or]You attack using your [BodyName of Player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [BodyName of Player][']s natural defenses[at random], hitting [Name entry] for [special-style-2][dam][roman type] damage!";
+				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [BodyType of Player] body[or]Drawing strength from your [BodyType of Player] form, you attack[or]You attack using your [BodyType of Player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [BodyType of Player] body[']s natural defenses[at random], hitting [Name entry] for [special-style-2][dam][roman type] damage!";
 			else if "Black Belt" is listed in feats of Player or "Martial Artist" is listed in feats of Player:
 				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa! You know kung-fu! [at random]hitting [Name entry] for [special-style-2][dam][roman type] damage!";
 			else:
@@ -203,7 +203,7 @@ to say enhancedattack:
 				let dammy be 2;
 				if wdam entry > 3:					[nerfed for very high damage critters]
 					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
-				say "[line break]You make an additional attack using your [TailName of Player] tail's natural abilities for [special-style-2][dammy][roman type] damage!";
+				say "[line break]You make an additional attack using your [TailSpeciesName of Player in lower case] tail's natural abilities for [special-style-2][dammy][roman type] damage!";
 				increase dam by dammy;
 				choose row MonsterID from Table of Random Critters;
 		if a random chance of 5 in 20 succeeds and "Cock Slap" is listed in feats of Player and Cock Length of Player >= 12:

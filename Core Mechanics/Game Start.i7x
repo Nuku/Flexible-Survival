@@ -948,13 +948,13 @@ to say gsopt_1:
 	while gsexit is 0:
 		clear the screen;
 		say "[bold type]Select your main stat (+5 bonus):[roman type][line break]";
-		say "(1) [link]Strength[as]1[end link] = [if MainStat is 1][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Represents your raw physical might and your ability to deal damage.";
-		say "(2) [link]Dexterity[as]2[end link] = [if MainStat is 2][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Affects your likelihood to hit and dodge.";
-		say "(3) [link]Stamina[as]3[end link] = [if MainStat is 3][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Increases your total health pool and your overall endurance.";
-		say "(4) [link]Charisma[as]4[end link] = [if MainStat is 4][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Deals with social interactions with NPCs and your pets, and affects your morale.";
-		say "(5) [link]Intelligence[as]5[end link] = [if MainStat is 5][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
-		say "(6) [link]Perception[as]6[end link] = [if MainStat is 6][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
-		say "(7) [link]Random[as]7[end link]: Randomize your stat points upon creation.";
+		say "(1) [link]Strength[as]1[end link] = [if MainStat is 1][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Represents your raw physical might and your ability to deal damage.";
+		say "(2) [link]Dexterity[as]2[end link] = [if MainStat is 2][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Affects your likelihood to hit and dodge.";
+		say "(3) [link]Stamina[as]3[end link] = [if MainStat is 3][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Increases your total health pool and your overall endurance.";
+		say "(4) [link]Charisma[as]4[end link] = [if MainStat is 4][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Deals with social interactions with NPCs and your pets, and affects your morale.";
+		say "(5) [link]Intelligence[as]5[end link] = [if MainStat is 5][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
+		say "(6) [link]Perception[as]6[end link] = [if MainStat is 6][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
+		say "(7) [link]Random[as]7[end link] - Randomize your stat points upon creation.";
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:

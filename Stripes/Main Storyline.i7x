@@ -830,6 +830,8 @@ to monitor:
 			say "Cock status: [CockName of Player]     ";
 		if Player is female:
 			say "Cunt status: [CuntName of Player][line break]";
+		else:
+			say "[line break]";
 		if Player is herm:
 			say "Gender: Herm[line break]";
 		else if Player is male:
@@ -839,15 +841,15 @@ to monitor:
 		else:
 			say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
 	else: [old body parts]
-		say "Head status: [FaceName of Player]     Body status: [BodyName of Player][line break]";
-		say "Skin status: [SkinName of Player]     Tail status: [TailName of Player][line break]";
+		say "Head status: [FaceSpeciesName of Player]     Body status: [BodySpeciesName of Player][line break]";
+		say "Skin status: [SkinSpeciesName of Player]     Tail status: [TailSpeciesName of Player][line break]";
 		if Player is male:
 			if Player is female:
-				say "Cock status: [CockName of Player]     Gender: Herm[line break]";
+				say "Cock status: [CockSpeciesName of Player]     Gender: Herm[line break]";
 			else:
-				say "Cock status: [CockName of Player]     Gender: Male[line break]";
+				say "Cock status: [CockSpeciesName of Player]     Gender: Male[line break]";
 		else if Player is female:
-			say "Groin status: [CockName of Player]     Gender: Female[line break]";
+			say "Groin status: [CockSpeciesName of Player]     Gender: Female[line break]";
 		else:
 			say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
 	if ( HP of Doctor Matt >= 23 and HP of Doctor Matt < 100 ) or hospquest >= 23:

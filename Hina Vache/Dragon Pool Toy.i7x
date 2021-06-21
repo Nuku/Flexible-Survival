@@ -70,7 +70,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Pool Toy"; [name of the overall species of the infection, used for children, ...]
 	add "Dragon Pool Toy" to infections of ReptileList;
 	add "Dragon Pool Toy" to infections of FurryList;
 	add "Dragon Pool Toy" to infections of ToyList;

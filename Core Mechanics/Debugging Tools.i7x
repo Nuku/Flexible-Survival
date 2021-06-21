@@ -144,6 +144,27 @@ to decide if debug is at level ( n - number ): [or higher]
 
 Chapter 2 - Information Readouts
 
+ZReadout is an action applying to one topic.
+understand "ZReadout [text]" as ZReadout.
+
+check ZReadout:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out ZReadout:
+	repeat with x running through persons:
+		if x is a pet:
+			next;
+		if printed name of x exactly matches the text topic understood, case insensitively:
+			say "Default Variables of [printed name of x]:[line break]";
+			say "HP: [HP of x], MaxHP: [MaxHP of x], Energy: [Energy of x], XP: [XP of x], Level: [Level of x][line break]";
+			say "Strength: [Strength of x], Dexterity: [Dexterity of x], Stamina: [Stamina of x], Charisma: [Charisma of x], Intelligence: [Intelligence of x], Perception: [Perception of x][line break]";
+			say "Hunger: [Hunger of x], Thirst: [Thirst of x], Morale: [Morale of x], Lust: [Lust of x], Libido: [Libido of x][line break]";
+			say "Loyalty: [Loyalty of x], Humanity: [Humanity of x], Affection: [Affection of x], Depravity: [Depravity of x], SubVsDom: [SubVsDom of x][line break]";
+			say "Weapon damage: [Weapon damage of x], Armor: [Armor of x], Capacity: [Capacity of x][line break]";
+			say "Traits: [Traits of x][line break]";
+
 turncountdisplay is an action applying to nothing.
 understand "turn count" as turncountdisplay.
 understand "turncount" as turncountdisplay.

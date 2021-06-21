@@ -38,6 +38,20 @@ an everyturn rule:
 		say "     Trixie the fairy flutters into existence right next to you and looks at you with a puzzled expression. 'Now now, you really should be somewhere else. How in the world did you end up here? If you do remember the room where you're supposed to be, please report that on the FS Discord channel as a bug. But for now, let's get you back in the city at least.'";
 		move Player to Bunker;
 
+a postimport rule:
+	if BodySpeciesName of Player is "":
+		now BodySpeciesName of Player is BodyName of Player;
+	if faceSpeciesName of Player is "":
+		now faceSpeciesName of Player is FaceName of Player;
+	if skinSpeciesName of Player is "":
+		now skinSpeciesName of Player is SkinName of Player;
+	if cockSpeciesName of Player is "":
+		now cockSpeciesName of Player is CockName of Player;
+	if CuntSpeciesName of Player is "":
+		now CuntSpeciesName of Player is CockName of Player;
+	if tailSpeciesName of Player is "":
+		now tailSpeciesName of Player is TailName of Player;
+
 [----------------------------------------------------------------------------------]
 [ Testing Commands for partial Saving                                              ]
 [----------------------------------------------------------------------------------]
@@ -533,7 +547,7 @@ to CharacterRestore:
 				now scalevalue of CharacterObject is The scalevalue entry;
 				now PlayerLastSize of CharacterObject is PlayerLastSize entry;
 				[Texts]
-				[now MainInfection of CharacterObject is MainInfection entry;]
+				now MainInfection of CharacterObject is MainInfection entry;
 				now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
 				now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
 				now FirstOralPartner of CharacterObject is FirstOralPartner entry;
@@ -920,93 +934,92 @@ to PlayerSave:
 		say "DEBUG -> File of PlayerListsSave written.[line break]";
 	blank out the whole of Table of PlayerData; [empty after saving]
 	blank out the whole of Table of PlayerLists; [empty after saving]
-	if NewTypeInfectionActive is true: [new parts also active]
-		say "Saving Additional Player Data...";
-		blank out the whole of Table of NewPlayerData; [empty out all old data]
-		choose a blank row in the table of NewPlayerData;
-		now bodySpeciesName entry is BodySpeciesName of Player;
-		now faceSpeciesName entry is FaceSpeciesName of Player;
-		now skinSpeciesName entry is SkinSpeciesName of Player;
-		now HeadName entry is HeadName of Player;
-		now HeadSpeciesName entry is HeadSpeciesName of Player;
-		now Head Description entry is Head Description of Player;
-		now Head Adjective entry is Head Adjective of Player;
-		now Head Skin Adjective entry is Head Skin Adjective of Player;
-		now Head Color entry is Head Color of Player;
-		now Head Adornments entry is Head Adornments of Player;
-		now Hair Length entry is Hair Length of Player;
-		now Body Hair Length entry is Body Hair Length of Player;
-		now Hair Shape entry is Hair Shape of Player;
-		now Hair Color entry is Hair Color of Player;
-		now Hair Style entry is Hair Style of Player;
-		now Beard Style entry is Beard Style of Player;
-		now Eye Color entry is Eye Color of Player;
-		now Eye Adjective entry is Eye Adjective of Player;
-		now Tongue Adjective entry is Tongue Adjective of Player;
-		now Tongue Color entry is Tongue Color of Player;
-		now TorsoName entry is TorsoName of Player;
-		now TorsoSpeciesName entry is TorsoSpeciesName of Player;
-		now Torso Description entry is Torso Description of Player;
-		now Torso Adjective entry is Torso Adjective of Player;
-		now Torso Skin Adjective entry is Torso Skin Adjective of Player;
-		now Torso Color entry is Torso Color of Player;
-		now Torso Pattern entry is Torso Pattern of Player;
-		now Breast Adjective entry is Breast Adjective of Player;
-		now Torso Adornments entry is Torso Adornments of Player;
-		now Nipple Color entry is Nipple Color of Player;
-		now Nipple Shape entry is Nipple Shape of Player;
-		now BackName entry is BackName of Player;
-		now BackSpeciesName entry is BackSpeciesName of Player;
-		now Back Adornments entry is Back Adornments of Player;
-		now Back Skin Adjective entry is Back Skin Adjective of Player;
-		now Back Color entry is Back Color of Player;
-		now ArmsName entry is ArmsName of Player;
-		now ArmsSpeciesName entry is ArmsSpeciesName of Player;
-		now Arms Description entry is Arms Description of Player;
-		now Arms Skin Adjective entry is Arms Skin Adjective of Player;
-		now Arms Color entry is Arms Color of Player;
-		now Locomotion entry is Locomotion of Player;
-		now LegsName entry is LegsName of Player;
-		now LegsSpeciesName entry is LegsSpeciesName of Player;
-		now Legs Description entry is Legs Description of Player;
-		now Legs Skin Adjective entry is Legs Skin Adjective of Player;
-		now Legs Color entry is Legs Color of Player;
-		now AssName entry is AssName of Player;
-		now AssSpeciesName entry is AssSpeciesName of Player;
-		now Ass Description entry is Ass Description of Player;
-		now Ass Skin Adjective entry is Ass Skin Adjective of Player;
-		now Ass Color entry is Ass Color of Player;
-		now Ass Width entry is Ass Width of Player;
-		now TailName entry is TailName of Player;
-		now TailSpeciesName entry is TailSpeciesName of Player;
-		now Tail Description entry is Tail Description of Player;
-		now Tail Skin Adjective entry is Tail Skin Adjective of Player;
-		now Tail Color entry is Tail Color of Player;
-		now Asshole Color entry is Asshole Color of Player;
-		now CockName entry is CockName of Player;
-		now CockSpeciesName entry is CockSpeciesName of Player;
-		now Cock Description entry is Cock Description of Player;
-		now Cock Adjective entry is Cock Adjective of Player;
-		now Cock Color entry is Cock Color of Player;
-		now Ball Description entry is Ball Description of Player;
-		now CuntName entry is CuntName of Player;
-		now CuntSpeciesName entry is CuntSpeciesName of Player;
-		now Cunt Description entry is Cunt Description of Player;
-		now Cunt Adjective entry is Cunt Adjective of Player;
-		now Cunt Color entry is Cunt Color of Player;
-		now MaleInterest entry is MaleInterest of Player;
-		now TransMaleInterest entry is TransMaleInterest of Player;
-		now FemaleInterest entry is FemaleInterest of Player;
-		now TransFemaleInterest entry is TransFemaleInterest of Player;
-		[TODO: Incorporate these into the export when they are actually used]
-		[
-		now MaleHermInterest entry is MaleHermInterest of Player;
-		now FemaleHermInterest entry is FemaleHermInterest of Player;
-		]
-		write File of NewPlayerSave from the Table of NewPlayerData; [freshly made table gets saved to file]
-		blank out the whole of Table of NewPlayerData; [empty after saving]
-		if debug is at level 10:
-			say "DEBUG -> File of NewPlayerSave written.[line break]";
+	say "Saving Additional Player Data...";
+	blank out the whole of Table of NewPlayerData; [empty out all old data]
+	choose a blank row in the table of NewPlayerData;
+	now bodySpeciesName entry is BodySpeciesName of Player;
+	now faceSpeciesName entry is FaceSpeciesName of Player;
+	now skinSpeciesName entry is SkinSpeciesName of Player;
+	now HeadName entry is HeadName of Player;
+	now HeadSpeciesName entry is HeadSpeciesName of Player;
+	now Head Description entry is Head Description of Player;
+	now Head Adjective entry is Head Adjective of Player;
+	now Head Skin Adjective entry is Head Skin Adjective of Player;
+	now Head Color entry is Head Color of Player;
+	now Head Adornments entry is Head Adornments of Player;
+	now Hair Length entry is Hair Length of Player;
+	now Body Hair Length entry is Body Hair Length of Player;
+	now Hair Shape entry is Hair Shape of Player;
+	now Hair Color entry is Hair Color of Player;
+	now Hair Style entry is Hair Style of Player;
+	now Beard Style entry is Beard Style of Player;
+	now Eye Color entry is Eye Color of Player;
+	now Eye Adjective entry is Eye Adjective of Player;
+	now Tongue Adjective entry is Tongue Adjective of Player;
+	now Tongue Color entry is Tongue Color of Player;
+	now TorsoName entry is TorsoName of Player;
+	now TorsoSpeciesName entry is TorsoSpeciesName of Player;
+	now Torso Description entry is Torso Description of Player;
+	now Torso Adjective entry is Torso Adjective of Player;
+	now Torso Skin Adjective entry is Torso Skin Adjective of Player;
+	now Torso Color entry is Torso Color of Player;
+	now Torso Pattern entry is Torso Pattern of Player;
+	now Breast Adjective entry is Breast Adjective of Player;
+	now Torso Adornments entry is Torso Adornments of Player;
+	now Nipple Color entry is Nipple Color of Player;
+	now Nipple Shape entry is Nipple Shape of Player;
+	now BackName entry is BackName of Player;
+	now BackSpeciesName entry is BackSpeciesName of Player;
+	now Back Adornments entry is Back Adornments of Player;
+	now Back Skin Adjective entry is Back Skin Adjective of Player;
+	now Back Color entry is Back Color of Player;
+	now ArmsName entry is ArmsName of Player;
+	now ArmsSpeciesName entry is ArmsSpeciesName of Player;
+	now Arms Description entry is Arms Description of Player;
+	now Arms Skin Adjective entry is Arms Skin Adjective of Player;
+	now Arms Color entry is Arms Color of Player;
+	now Locomotion entry is Locomotion of Player;
+	now LegsName entry is LegsName of Player;
+	now LegsSpeciesName entry is LegsSpeciesName of Player;
+	now Legs Description entry is Legs Description of Player;
+	now Legs Skin Adjective entry is Legs Skin Adjective of Player;
+	now Legs Color entry is Legs Color of Player;
+	now AssName entry is AssName of Player;
+	now AssSpeciesName entry is AssSpeciesName of Player;
+	now Ass Description entry is Ass Description of Player;
+	now Ass Skin Adjective entry is Ass Skin Adjective of Player;
+	now Ass Color entry is Ass Color of Player;
+	now Ass Width entry is Ass Width of Player;
+	now TailName entry is TailName of Player;
+	now TailSpeciesName entry is TailSpeciesName of Player;
+	now Tail Description entry is Tail Description of Player;
+	now Tail Skin Adjective entry is Tail Skin Adjective of Player;
+	now Tail Color entry is Tail Color of Player;
+	now Asshole Color entry is Asshole Color of Player;
+	now CockName entry is CockName of Player;
+	now CockSpeciesName entry is CockSpeciesName of Player;
+	now Cock Description entry is Cock Description of Player;
+	now Cock Adjective entry is Cock Adjective of Player;
+	now Cock Color entry is Cock Color of Player;
+	now Ball Description entry is Ball Description of Player;
+	now CuntName entry is CuntName of Player;
+	now CuntSpeciesName entry is CuntSpeciesName of Player;
+	now Cunt Description entry is Cunt Description of Player;
+	now Cunt Adjective entry is Cunt Adjective of Player;
+	now Cunt Color entry is Cunt Color of Player;
+	now MaleInterest entry is MaleInterest of Player;
+	now TransMaleInterest entry is TransMaleInterest of Player;
+	now FemaleInterest entry is FemaleInterest of Player;
+	now TransFemaleInterest entry is TransFemaleInterest of Player;
+	[TODO: Incorporate these into the export when they are actually used]
+	[
+	now MaleHermInterest entry is MaleHermInterest of Player;
+	now FemaleHermInterest entry is FemaleHermInterest of Player;
+	]
+	write File of NewPlayerSave from the Table of NewPlayerData; [freshly made table gets saved to file]
+	blank out the whole of Table of NewPlayerData; [empty after saving]
+	if debug is at level 10:
+		say "DEBUG -> File of NewPlayerSave written.[line break]";
 	PlayerSexStatsSave;
 
 to PlayerSexStatsSave:
@@ -1318,6 +1331,7 @@ to BeastRestore:
 			let BeastSex be sex entry;
 			let BeastType be enemy type entry;
 			[some small bugfixes due to renamed creatures]
+			if Beastname is "dullahan", now Beastname is "Dullahan";
 			if Beastname is "Ogre", now Beastname is "Ogre Male";
 			if Beastname is "Elven Hunter", now Beastname is "Elven Male";
 			if Beastname is "rubber tigress", now Beastname is "Rubber Tigress";

@@ -18,7 +18,7 @@ to say equine attack:
 		if a random chance of 2 in 3 succeeds: [Will mate with females, otherwise oral]
 			if Player is female:
 				if Cunt Depth of Player < 15 or Cunt Tightness of Player < 10:
-					say "     She flips you over onto your belly and hefts your ass up into the air before yanking your clothes down to your knees. You look over your shoulder just in time to see her grab your [BodyName of Player] ass and pull it back towards a frighteningly erect horse cock. It pushes against your [cunt size desc of Player] petals, then rudely inches in past them. Her grip is like velvet covered iron, not allowing you to escape from the sudden pain of the huge member invading your snatch. She thumps forward, starting to rock despite the resistance, using those hugely muscled hips of hers to stretch you.";
+					say "     She flips you over onto your belly and hefts your ass up into the air before yanking your clothes down to your knees. You look over your shoulder just in time to see her grab your [TailSpeciesName of Player in lower case] ass and pull it back towards a frighteningly erect horse cock. It pushes against your [cunt size desc of Player] petals, then rudely inches in past them. Her grip is like velvet covered iron, not allowing you to escape from the sudden pain of the huge member invading your snatch. She thumps forward, starting to rock despite the resistance, using those hugely muscled hips of hers to stretch you.";
 					say "     As she pistons into you, the pain begins to slowly ebb as pleasure creeps in. You can feel your passage growing damp and hot as she gives your ass a firm swat. 'Dirty outside wench,' she growls in an ear like a curse as she pulls you back against a rough shove, slamming her hips into yours, the shaft feeling like it's pushing into your belly from the inside. You feel the potent tool swell, then explode in terrific waves of heat into your womb, filling you to the brim before overflowing with gallons of seed.[impregchance]";
 					if "Male Preferred" is not listed in feats of Player and ( "Modest Organs" is not listed in feats of Player and Cunt Depth of Player > 7 ), increase Cunt Depth of Player by 1;
 					if "Male Preferred" is not listed in feats of Player and ( "Modest Organs" is not listed in feats of Player and Cunt Tightness of Player > 7 ), increase Cunt Tightness of Player by 2;
@@ -64,7 +64,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Horse"; [name of the overall species of the infection, used for children, ...]
 	add "Black Equinoid" to infections of EquineList;
 	add "Black Equinoid" to infections of FurryList;
 	add "Black Equinoid" to infections of NatureList;

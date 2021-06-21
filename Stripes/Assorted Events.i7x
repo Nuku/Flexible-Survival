@@ -8,25 +8,6 @@ Section 1 - Ninjas?
 
 Table of GameEventIDs (continued)
 Object	Name
-Fallen Kunoichi	"Fallen Kunoichi"
-
-Fallen Kunoichi is a situation.
-ResolveFunction of Fallen Kunoichi is "[ResolveEvent Fallen Kunoichi]".
-Sarea of Fallen Kunoichi is "Museum".
-when play begins:
-	add Fallen Kunoichi to BadSpots of FurryList;
-
-to say ResolveEvent Fallen Kunoichi:
-	say "     Passing through the halls of the museum, you come across the aftermath of what was an epic battle. Many of the displays here are knocked over or shattered by what must have been powerful blows by a great weapon. You can see gouges cut deep into the walls, many stained with blood. Smaller darts and shuriken are embedded in the wall as well. The floor is marked with several blood stains and cum puddles, as well as soot marks from flash powder or smoke bombs. Clearly many battled a great foe here.";
-	say "     Half-buried in the ruins of one display, you find the grisly remains of a feline ninja cleaved in two at the waist. Drawing off its mask, you see her face feminine locked in an expression of great pain and horror. Something about her death gaze disturbs you deep inside and you are unable to bear the sight of it. You brush her eyes shut and pull the mask back down over her feline face. Beside the fallen kunoichi is her weapon, a bo staff with ornate metal tips. Cautious of any infected blood, you quickly check her [italic type]shinobi shozoko[roman type], but find nothing else of use.";
-	ItemGain bo staff by 1;
-	increase score by 5;
-	now Fallen Kunoichi is resolved;
-
-[Bo Staff moved to Core Mechanics/Weapons.i7x]
-
-Table of GameEventIDs (continued)
-Object	Name
 Suddenly Ninjas	"Suddenly Ninjas"
 
 Suddenly Ninjas is a situation.
@@ -888,7 +869,7 @@ to say ResolveEvent Beach Party:
 					increase score by 10;
 					now Resolution of Beach Party is 1;	[Beat Bottlenose Toys and got soda]
 	if dolphinflatablefight is 2:
-		say "     Even as the dolphin who just finished playing with you heads back to the water, several of the others are all on you at once. One has the last of the sodas. But rather than give you a drink, she sprays both cans all over you, wasting their contents while the girls giggle merrily. The dolphins all huddle around you and start licking all over your body to clean the sweet soda from you. Their rubber tongue glide across your skin and seek to tease you all over. Two set to work on your nipples[if Breast Size of Player > 0], squeezing your breasts[end if]. Others kiss and lick at your face and nibble at your ears. Another, the soda girl, nuzzles her snout down between your legs, licking and kissing at your groin. Her tongue plays over your [if Player is male]sticky, throbbing [CockName of Player] cock[smn][else if Player is female]sticky, juicy puss[yfn][else]sticky thighs and barren crotch[end if]. Another enterprising girl, after sucking your fingers clean one by one, guides your hand to her groin, getting you to finger her dripping pussy until you feel her slick juices soak your hand as she cums with delighted trills. All this attention makes you laugh and giggle like a girl, sounding a lot like the inflatable females surrounding you. [if Player is neuter]Once you're finally all cleaned up[else]When you finally cum[end if], the pink dolphins release you, heading back to frolic in the water again.";
+		say "     Even as the dolphin who just finished playing with you heads back to the water, several of the others are all on you at once. One has the last of the sodas. But rather than give you a drink, she sprays both cans all over you, wasting their contents while the girls giggle merrily. The dolphins all huddle around you and start licking all over your body to clean the sweet soda from you. Their rubber tongue glide across your skin and seek to tease you all over. Two set to work on your nipples[if Breast Size of Player > 0], squeezing your breasts[end if]. Others kiss and lick at your face and nibble at your ears. Another, the soda girl, nuzzles her snout down between your legs, licking and kissing at your groin. Her tongue plays over your [if Player is male]sticky, throbbing [Cock of Player] cock[smn][else if Player is female]sticky, juicy puss[yfn][else]sticky thighs and barren crotch[end if]. Another enterprising girl, after sucking your fingers clean one by one, guides your hand to her groin, getting you to finger her dripping pussy until you feel her slick juices soak your hand as she cums with delighted trills. All this attention makes you laugh and giggle like a girl, sounding a lot like the inflatable females surrounding you. [if Player is neuter]Once you're finally all cleaned up[else]When you finally cum[end if], the pink dolphins release you, heading back to frolic in the water again.";
 		say "     Having the air-headed dolphin girls lavish so much attention onto you, you can't help but feel yourself fading away some, as if you're becoming more empty-headed and giggly like them. You rise to your feet easily, feeling as if buoyed by your own happy feelings and look over your body, fully that of an inflatable dolphin like those pretty girls";
 		SanLoss 20;
 		increase morale of Player by 5;

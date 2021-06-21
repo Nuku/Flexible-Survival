@@ -250,7 +250,7 @@ When Play begins:
 	now infect Name entry is "Horsemazon";
 	now heat cycle entry is 7;
 	now heat duration entry is 2;
-	now trigger text entry is "A sudden throb between your legs catches you off guard, startling a whimper from your throat as you feel a rush of heat between your legs. Nested between your thighs, your equine spade begins to puff up and swell, engorging and becoming looser, a slow but constant seepage of lubricating fluids starting to run down your thigh, making a mess of your [SkinName of Player] flesh. You are in heat, and your body is making it easy for any male to find and impregnate you.";
+	now trigger text entry is "A sudden throb between your legs catches you off guard, startling a whimper from your throat as you feel a rush of heat between your legs. Nested between your thighs, your equine spade begins to puff up and swell, engorging and becoming looser, a slow but constant seepage of lubricating fluids starting to run down your thigh, making a mess of your [SkinSpeciesName of Player in lower case] flesh. You are in heat, and your body is making it easy for any male to find and impregnate you.";
 	now description text entry is "swollen and dripping horse twat ";
 	now heat start entry is "[horsemazonheatstart]"; [Events that trigger at the start of the Heat, in the female-GSD case it increases the cunt width]
 	now heat end entry is "[horsemazonheatend]"; [Events that trigger at the end of the Heat, in the female-GSD case it reduces cunt width]

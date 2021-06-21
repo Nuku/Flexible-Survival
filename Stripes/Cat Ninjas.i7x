@@ -1,5 +1,6 @@
 Version 1 of Cat Ninjas by Stripes begins here.
-[Version 1.2 - Added player loss oral]
+[ Version 1 - Originally written by Stripes ]
+[ Version 1.2 - Added player loss oral      ]
 
 "Adds cat ninjas as a creature to Flexible Survival's Wandering Monsters table"
 
@@ -19,7 +20,10 @@ to say ninjadesc:
 		if HP of Hayato is 12:	[in Noh Mask fights]
 			say "     As the ninja feline spins to face you, you catch sight of a glint of metal in his paws moments before they're thrown. Dodging swiftly, you are able to evade the trio of flying shuriken. They embed themselves into the wall behind you. When you turn to face the feline, he's already upon you, having pulled an oriental weapon from his black outfit and swinging to strike.";
 		else:
-			say "     As you move down the halls of the museum, you hear a faint sound from behind you and turn around quickly. You are narrowly missed by a triad of flying shuriken that embed themselves into the floor beside you. There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours. Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you. The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
+			if inasituation is true:
+				say ""; [dealt with at the source of the event]
+			else:
+				say "     As you move down the halls of the museum, you hear a faint sound from behind you and turn around quickly. You are narrowly missed by a triad of flying shuriken that embed themselves into the floor beside you. There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours. Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you. The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
 	else:
 		let dammy be 8;
 		if HardMode is true, increase dammy by ( square root of lev entry );
@@ -29,31 +33,40 @@ to say ninjadesc:
 		if HP of Hayato is 12:	[in Noh Mask fights]
 			say "     When the ninja feline spins to face you, his paw makes a fast motion. Before you can realize what is happening, you are struck by a trio of flying shuriken, taking [dammy] damage. The pain is quickly replaced by a warm rush of lustful excitement. Even as you're pulling the poisoned ninja stars from your chest, the black garbed cat is rushing you. He pulls an oriental weapon from his black outfit and swings to strike.";
 		else:
-			say "     As you move down the halls of the museum, you hear the soft whizz of something flying through the air too late, as a pain fills your back, causing [dammy] damage. This is quickly replaced by a warm rush of lustful excitement. You turn quickly to face your attacker as you reach back to pull the trio of poisoned shuriken from your back. There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours. Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you. The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
+			if inasituation is true:
+				say ""; [dealt with at the source of the event]
+			else:
+				say "     As you move down the halls of the museum, you hear the soft whizz of something flying through the air too late, as a pain fills your back, causing [dammy] damage. This is quickly replaced by a warm rush of lustful excitement. You turn quickly to face your attacker as you reach back to pull the trio of poisoned shuriken from your back. There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours. Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you. The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
 
 
 to say losetoninja:
-	if Player is female and a random chance of 3 in 4 succeeds:
-		say "     The ninja grabs you by the arm as you stop fighting him. With a purring rumble, he presses you against one of the walls with one paw while the other gropes your rear. His paw moves the intervening clothes and grinds his stiff rod against your ass. You moan softly in pleasure as the feline slides his cock into your pussy slowly. As your excitement starts to build and you find yourself growing ever excited by the prospect of having this mysterious feline fuck you, his paws relax their grip and instead move across your body to tease your ass and breasts.";
-		say "     You press your hands to the wall and push your hips back into each thrust the feline makes. It seems he's quite adept at the art of lovemaking as well as the art of ninjutsu. Your pussy quivers around his cock as he moves and thrusts to stimulate you to greater and greater heights while saving your orgasm for the highest point of all. As you come to the point that you're moaning and mewling beneath him for his seed, he pushes his cock deep inside you and unleashes a hot blast of feline cum. It is at this point that he stimulates you far past your peak, sending you into multiple orgasms that finally end with you stretched out on the floor with your thighs soaked in your own juices and feline cum leaking from your overfilled pussy[if Player is male]. In your powerful orgasm, you left a large splatter of cum on the wall. Your balls ache a little, but wonderfully so, from being so thoroughly drained[end if].";
-		say "     As silently as he came, the feline ninja disappears back into the shadows and is gone.";
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Ninja Cat";
-	else if Player is not female and a random chance of anallevel in 5 succeeds and anallevel > 1:
-		say "     The ninja grabs you by the arm as you stop fighting him. With a purring rumble, he presses you against one of the walls with one paw while the other gropes your rear. His paw moves the intervening clothes and grinds his stiff rod against your ass. You groan softly as the feline probes his leaking cock into your tight asshole. As your sphincter relaxes to accommodate the feline's penis thrusting into you, you find yourself growing ever excited by the prospect of having this mysterious feline fuck you. His paws relax their grip and instead move across your body to tease across your body and fondle your maleness.";
-		say "     You press your hands to the wall and push your hips back into each thrust the feline makes. It seems he's quite adept at the art of lovemaking as well as the art of ninjutsu. Your back passage quivers around his cock as he moves and thrusts to stimulate you to greater and greater heights while saving your orgasm for the highest point of all. As you come to the point that you're moaning and mewling beneath him for his seed, he pushes his cock deep inside you and unleashes a hot blast of feline cum. The press of his glans against your prostate as his semen blasts against it is when he chooses to stimulate you far past your peak, sending you into a powerful orgasm that splatters the wall with your seed. It finally ends with you stretched out on the floor with your balls drained and feline cum leaking from your overfilled ass.";
-		say "     As silently as he came, the feline ninja disappears back into the shadows and is gone.";
-		CreatureSexAftermath "Player" receives "AssFuck" from "Ninja Cat";
-	else if a random chance of 1 in 2 succeeds:
-		say "     The ninja grabs you by the arm as you stop fighting him. With a quick motion, he pulls a cord from his robe and binds your wrists behind your back while pressing you against the wall. He gropes your ass with an excited purr before getting you on your knees, facing him. He slips his stiff member from his robes and presses it to your face. With little choice in the matter, you open your mouth and accept the feline's rod past your lips and over your tongue.";
-		say "     You lick and suck at the mysterious cat's throbbing rod. Growing more excited as you pleasure the ninja, you become more enthusiastic in your efforts. Your lover of the moment remains largely silent save for his soft purring. When his climax arrives, he holds your head in place while spraying shot after shot of gooey semen onto your lapping tongue.";
-		say "     Once spent, he slips behind you, releases the cord just as quickly as it went on and disappears back into the shadows as silently as he appeared.";
-		CreatureSexAftermath "Player" receives "OralCock" from "Ninja Cat";
+	if inasituation is true:
+		say ""; [dealt with at the source of the event]
 	else:
-		say "     The ninja grabs you by the arm as you stop fighting him. He pulls you in close and blows across his palm, sending a cloud of dust into your face. Panting from the fight, you cannot help breathing in the dust and collapse to the floor. When you regain consciousness, the feline ninja is gone and your face is covered in a sticky mess of feline cum.";
+		if Player is female and a random chance of 3 in 4 succeeds:
+			say "     The ninja grabs you by the arm as you stop fighting him. With a purring rumble, he presses you against one of the walls with one paw while the other gropes your rear. His paw moves the intervening clothes and grinds his stiff rod against your ass. You moan softly in pleasure as the feline slides his cock into your pussy slowly. As your excitement starts to build and you find yourself growing ever excited by the prospect of having this mysterious feline fuck you, his paws relax their grip and instead move across your body to tease your ass and breasts.";
+			say "     You press your hands to the wall and push your hips back into each thrust the feline makes. It seems he's quite adept at the art of lovemaking as well as the art of ninjutsu. Your pussy quivers around his cock as he moves and thrusts to stimulate you to greater and greater heights while saving your orgasm for the highest point of all. As you come to the point that you're moaning and mewling beneath him for his seed, he pushes his cock deep inside you and unleashes a hot blast of feline cum. It is at this point that he stimulates you far past your peak, sending you into multiple orgasms that finally end with you stretched out on the floor with your thighs soaked in your own juices and feline cum leaking from your overfilled pussy[if Player is male]. In your powerful orgasm, you left a large splatter of cum on the wall. Your balls ache a little, but wonderfully so, from being so thoroughly drained[end if].";
+			say "     As silently as he came, the feline ninja disappears back into the shadows and is gone.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Ninja Cat";
+		else if Player is not female and a random chance of anallevel in 5 succeeds and anallevel > 1:
+			say "     The ninja grabs you by the arm as you stop fighting him. With a purring rumble, he presses you against one of the walls with one paw while the other gropes your rear. His paw moves the intervening clothes and grinds his stiff rod against your ass. You groan softly as the feline probes his leaking cock into your tight asshole. As your sphincter relaxes to accommodate the feline's penis thrusting into you, you find yourself growing ever excited by the prospect of having this mysterious feline fuck you. His paws relax their grip and instead move across your body to tease across your body and fondle your maleness.";
+			say "     You press your hands to the wall and push your hips back into each thrust the feline makes. It seems he's quite adept at the art of lovemaking as well as the art of ninjutsu. Your back passage quivers around his cock as he moves and thrusts to stimulate you to greater and greater heights while saving your orgasm for the highest point of all. As you come to the point that you're moaning and mewling beneath him for his seed, he pushes his cock deep inside you and unleashes a hot blast of feline cum. The press of his glans against your prostate as his semen blasts against it is when he chooses to stimulate you far past your peak, sending you into a powerful orgasm that splatters the wall with your seed. It finally ends with you stretched out on the floor with your balls drained and feline cum leaking from your overfilled ass.";
+			say "     As silently as he came, the feline ninja disappears back into the shadows and is gone.";
+			CreatureSexAftermath "Player" receives "AssFuck" from "Ninja Cat";
+		else if a random chance of 1 in 2 succeeds:
+			say "     The ninja grabs you by the arm as you stop fighting him. With a quick motion, he pulls a cord from his robe and binds your wrists behind your back while pressing you against the wall. He gropes your ass with an excited purr before getting you on your knees, facing him. He slips his stiff member from his robes and presses it to your face. With little choice in the matter, you open your mouth and accept the feline's rod past your lips and over your tongue.";
+			say "     You lick and suck at the mysterious cat's throbbing rod. Growing more excited as you pleasure the ninja, you become more enthusiastic in your efforts. Your lover of the moment remains largely silent save for his soft purring. When his climax arrives, he holds your head in place while spraying shot after shot of gooey semen onto your lapping tongue.";
+			say "     Once spent, he slips behind you, releases the cord just as quickly as it went on and disappears back into the shadows as silently as he appeared.";
+			CreatureSexAftermath "Player" receives "OralCock" from "Ninja Cat";
+		else:
+			say "     The ninja grabs you by the arm as you stop fighting him. He pulls you in close and blows across his palm, sending a cloud of dust into your face. Panting from the fight, you cannot help breathing in the dust and collapse to the floor. When you regain consciousness, the feline ninja is gone and your face is covered in a sticky mess of feline cum.";
 
 
 to say beattheninja:
-	say "     Your blow causes the ninja to stumble back. He hisses angrily at you and pulls something from his robes. When the smoke bomb goes off at his feet, you lunge forward to grab him before he can escape, but you find yourself clutching a wooden log. You toss it aside in frustration and continue on your way.";
+	if inasituation is true:
+		say ""; [dealt with at the source of the event]
+	else:
+		say "     Your blow causes the ninja to stumble back. He hisses angrily at you and pulls something from his robes. When the smoke bomb goes off at his feet, you lunge forward to grab him before he can escape, but you find yourself clutching a wooden log. You toss it aside in frustration and continue on your way.";
 
 
 to say ninjaattack:
@@ -92,7 +105,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Feline"; [name of the overall species of the infection, used for children, ...]
 	add "Ninja Cat" to infections of FelineList;
 	add "Ninja Cat" to infections of FurryList;
 	add "Ninja Cat" to infections of HistoricalList;
