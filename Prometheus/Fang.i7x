@@ -218,13 +218,13 @@ to say FangTalkMenu:
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Discuss Your Day";
-	now sortorder entry is 0;
+	now sortorder entry is 1;
 	now description entry is "Tell Fang about some of your exploits in the city (PLACEHOLDER)";
 	[]
 	if hp of Fang > 1 and Fang is not listed in companionList of Player:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Fang With You";
-		now sortorder entry is 1;
+		now sortorder entry is 2;
 		now description entry is "Discuss taking Fang with you out into the city";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -479,6 +479,7 @@ to say MaleFangOmegaSexMenu:
 					say "[MaleFangOmegaSex6]";
 				else if nam is "Fang and Sandra":
 					say "[MaleFangSandraSex]";
+				now lastfuck of Fang is turns;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
@@ -620,6 +621,7 @@ to say FemaleFangOmegaSexMenu:
 					say "[FemaleFangOmegaSex5]";
 				else if nam is "SBL Fuck":
 					say "[FemaleFangOmegaSex6]";
+				now lastfuck of Fang is turns;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the wolf, shaking your head slightly as she gives a questioning look.";
@@ -690,6 +692,7 @@ to say MaleFangAlphaSex1:
 		say "[MaleFangAlphaFucked]";
 	else if the remainder after dividing lust of Fang by 3 is 2:
 		say "[MaleFangAlphaTrio]";
+	now lastfuck of Fang is turns;
 	increase lust of fang by 1;
 
 to say MaleFangAlphaSex2:
@@ -697,6 +700,7 @@ to say MaleFangAlphaSex2:
 		say "[MaleFangAlphaOral]";
 	else:
 		say "[MaleFangAlphaFucked]";
+	now lastfuck of Fang is turns;
 	increase lust of fang by 1;
 
 to say MaleFangAlphaOral:
@@ -812,6 +816,7 @@ to say FemaleFangAlphaSexMenu:
 		say "[FemaleFangAlphaOral]";
 	else:
 		say "[FemaleFangAlphaFucked]";
+	now lastfuck of Fang is turns;
 	increase lust of fang by 1;
 
 to say FemaleFangAlphaOral:
@@ -929,6 +934,7 @@ to say MaleFangBetaSexMenu:
 					say "[MaleFangBetaSex5]";
 				else if nam is "Fang and Sandra":
 					say "[MaleFangSandraSex]";
+				now lastfuck of Fang is turns;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
@@ -1048,6 +1054,7 @@ to say FemaleFangBetaSexMenu:
 					say "[FemaleFangBetaSex4]";
 				else if nam is "Mount Fang":
 					say "[FemaleFangBetaSex5]";
+				now lastfuck of Fang is turns;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the wolf, shaking your head slightly as she gives a questioning look.";
@@ -1178,6 +1185,7 @@ to say MaleFangSexMenu:
 					say "[MaleFangSex6]";
 				else if nam is "Fang and Sandra":
 					say "[MaleFangSandraSex]";
+				now lastfuck of Fang is turns;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
@@ -1329,6 +1337,7 @@ to say FemaleFangSexMenu:
 					say "[FemaleFangSex5]";
 				else if nam is "SBL Fuck":
 					say "[FemaleFangSex6]";
+				now lastfuck of Fang is turns;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the wolf, shaking your head slightly as she gives a questioning look.";
