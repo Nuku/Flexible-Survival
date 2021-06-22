@@ -328,6 +328,7 @@ Include Museum Events by Sarokcat.
 Include Museum Rounds by Stripes.
 Include Nemean Lion by Prometheus.
 Include New Events by Sarokcat.
+Include Ninja Events by Tanaka.
 Include Odd Weapons by Hellerhound.
 Include Old BoomBox by Kaleem mcintyre.
 Include Orc Events by Wahn.
