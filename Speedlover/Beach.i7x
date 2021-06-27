@@ -97,7 +97,7 @@ Instead of opening Rat Twins Stash:
 Instead of examining the Rat Twins Stash:
 	say "[RatTwinsTapeGet]";
 
-to say RatTwinsTapeGet:
+to say RatTwinsTapeGet: [TODO: Add in options _not_ to steal the tape, maybe just watching it right there and then put it back]
 	say "     You approach from the pile of cots and clothes[if HP of Erin >= 2] belonging to the twins[end if]. A note that reads 'Back shortly. Keep your hands off our stuff' is taped on one of the bags. ";
 	if "Rat Twin Tape" is not listed in tapes of Player:
 		if Lost Camera is unresolved:

@@ -309,7 +309,7 @@ Include Latex Quad Husky by Stripes.
 Include Leonard Events by Stripes.
 Include Little Old Woman by Kaleem mcintyre.
 Include Lizard Parlor by Kaleem Mcintyre.
-Include Main Storyline by Stripes.
+Include Main Storyline by Wahn.
 Include Male Dorm Events by Rikaeus.
 Include Mall Events by Sarokcat.
 Include Mall Expansion by Wahn.
@@ -328,6 +328,7 @@ Include Museum Events by Sarokcat.
 Include Museum Rounds by Stripes.
 Include Nemean Lion by Prometheus.
 Include New Events by Sarokcat.
+Include Ninja Events by Tanaka.
 Include Odd Weapons by Hellerhound.
 Include Old BoomBox by Kaleem mcintyre.
 Include Orc Events by Wahn.
@@ -436,7 +437,7 @@ Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
 Include Dino Pack by Qazarar.
 Include Dire Wolf by Qazarar.
-Include Doberman Cop by Stripes.
+Include Doberman Cop by Wahn.
 Include Doberman Male by Wahn.
 Include Donkeyman by Sarokcat n Verath.
 Include Donkeywoman by Sarokcat n Verath.
@@ -728,6 +729,7 @@ Include Blue by Wahn.
 Include Boghrim by Wahn.
 Include Bradford by Stripes.
 Include Brennan by Wahn.
+Include Brennan's Wolves by Wahn.
 Include Brian by Vinickus.
 Include Brooke by Stripes.
 Include Bryony by Song.

@@ -4,7 +4,7 @@ Version 3 of Coyote by Wahn begins here.
 [ Version 3 - Prepped for use as a special event enemy ]
 [ Version 3.1 - moved to Wahn]
 
-"Adds a Coyote creature to Flexible Survival's Wandering Monsters table for impregchance and infect for Diego."
+"Adds a Coyote creature to Flexible Survival's Monsters table (just for impregnation and infec for Diego, no actual monster)."
 
 Section 1 - Creature Responses
 

@@ -1223,7 +1223,7 @@ after going to Sitting Area while (Chris is in Sitting Area and Urik is in Sitti
 						TraitGain "Chris - Knows Happy Breeder" for Urik;
 	else if Libido of Chris is 2:
 		say "you can hear a somewhat surprised grunt rise in his throat as he takes in the obvious orc warrior physique of Chris. The big green-skinned man angles his steps towards Chris, who becomes aware of someone approaching and turns around, just in time for Urik to arrive and loom over him. Despite both of them being orc warriors, Urik is still markedly bigger than the younger man. Giving Chris an appreciative nod, Urik says, 'Awesome new look on ya! That's real muscles and a nice build you're rocking! Sweet gains!' Chris grins at the compliment and raises a fist to bump it with Urik. 'Totally love the new bod and its muscles, that's for sure!' the young orc says proudly, then adds, ";
-		if "Subby Bro" is listed in Traits of Chris or "Subby Dad" is listed in Traits: [player's subbing for Chris, orc got rougher]
+		if "Subby Bro" is listed in Traits of Chris or "Subby Dad" is listed in Traits of Chris: [player's subbing for Chris, orc got rougher]
 			say "'And everything else about it too. Hah, this big dick really stretches out a dude, and I can now just go and take em on the streets whenever I want! This is great! Life's sweet as an orc warrior!' ";
 			TraitGain "Chris - Knows Dom" for Urik;
 		else:

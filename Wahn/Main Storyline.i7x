@@ -1,4 +1,6 @@
-Version 3 of Main Storyline by Stripes begins here.
+Version 3 of Main Storyline by Wahn begins here.
+[ Version 1 - Originally by ?]
+[ Version 2 - Continued by Stripes]
 [ Version 2.3 - Dr. Medea]
 [ Version 3 - Rewritten by Wahn]
 
