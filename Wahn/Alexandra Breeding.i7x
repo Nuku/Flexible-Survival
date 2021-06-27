@@ -875,7 +875,7 @@ to say AlexandraFarmhandSucking_Leave:
 to say AlexandraFarmhandStandingFuckMenu:
 	project the figure of Alexandra_naked_icon;
 	LineBreak;
-	[farmhands went first, so their impregchance comes before anything the player does]
+	[farmhands went first, so their impregnation comes before anything the player does]
 	impregAlexandraChance with "Farmhand Horseman";
 	impregAlexandraChance with "Farmhand Horseman";
 	impregAlexandraChance with "Farmhand Horseman";

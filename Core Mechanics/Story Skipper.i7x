@@ -484,6 +484,11 @@ to CharacterSave:
 		say "DEBUG -> File of TraitSave written.[line break]";
 
 to CharacterRestore:
+	blank out the whole of Table of GameCharacters; [empty out to have a clean slate]
+	blank out the whole of Table of GameCharacterVariables; [empty out to have a clean slate]
+	blank out the whole of Table of GameCharacterVariable2; [empty out to have a clean slate]
+	blank out the whole of Table of GameCharacterVariable3; [empty out to have a clean slate]
+	blank out the whole of Table of GameTraits; [empty out to have a clean slate]
 	if the File of CharacterVariable3Save exists: [new, expanded character variable file]
 		say "Restoring Characters...";
 		read File of CharacterVariable3Save into the Table of GameCharacterVariable3;
@@ -822,12 +827,14 @@ to CharacterRestore:
 				say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs! Please report this message on the FS Discord!";
 	else:
 		say "No Character Save File Found!";
-	blank out the whole of Table of GameCharacters; [empty out all old data]
-	blank out the whole of Table of GameCharacterVariables; [empty after saving]
-	blank out the whole of Table of GameCharacterVariable2; [empty after saving]
-	blank out the whole of Table of GameTraits; [empty out all old data]
+	blank out the whole of Table of GameCharacters; [empty out to have a clean slate]
+	blank out the whole of Table of GameCharacterVariables; [empty out to have a clean slate]
+	blank out the whole of Table of GameCharacterVariable2; [empty out to have a clean slate]
+	blank out the whole of Table of GameCharacterVariable3; [empty out to have a clean slate]
+	blank out the whole of Table of GameTraits; [empty out to have a clean slate]
 
 to TraitRestore:
+	blank out the whole of Table of GameTraits; [empty out to have a clean slate]
 	if the File of TraitSave exists:
 		say "Restoring Traits...";
 		read File of TraitSave into the Table of GameTraits;
@@ -853,6 +860,7 @@ to TraitRestore:
 					]
 	else:
 		say "No Trait Save File Found!";
+	blank out the whole of Table of GameTraits; [empty out to have a clean slate]
 
 to PlayerSave:
 	say "Saving Player Data...";
@@ -1321,6 +1329,8 @@ to BeastSave:
 		say "DEBUG -> File of BeastVariableSave written.[line break]";
 
 to BeastRestore:
+	blank out the whole of Table of GameBeastVariables; [empty out all old data]
+	blank out the whole of Table of GameBeasts; [empty out all old data]
 	if the File of BeastVariableSave exists:
 		read File of BeastVariableSave into the Table of GameBeastVariables;
 		repeat with x running from 1 to the number of filled rows in the Table of GameBeastVariables:
@@ -1378,6 +1388,7 @@ to BeastRestore:
 				say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters! Please report this message on the FS Discord!";
 	else:
 		say "No Beast Save File Found!";
+	blank out the whole of Table of GameBeastVariables; [empty out all old data]
 	blank out the whole of Table of GameBeasts; [empty out all old data]
 
 to NoteSave:

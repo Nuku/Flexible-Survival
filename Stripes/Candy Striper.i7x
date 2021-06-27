@@ -431,15 +431,6 @@ to say coonpetsex11:		[f paw him off]
 	now Libido of Player is ( Libido of Player + 1 ) / 2;
 	NPCSexAftermath Candy receives "Other" from Player;
 
-to say coonpreg:
-	[puts Raccoon as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Raccoon":
-			now MonsterID is y;
-			break;
-	say "[impregchance]";
-
 Section 4 - Raccoon at Bunker
 
 

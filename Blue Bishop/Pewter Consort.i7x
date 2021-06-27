@@ -144,9 +144,9 @@ to pewterbind:
 			now tempnum is 1;
 			pewterlustsate;
 			if pewtercuntvar2 > 0:
-				say "[impregchance]";
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Pewter Consort";
 			if pewterassvar2 > 0 and player is mpreg_ok:
-				say "[mimpregchance]";
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Pewter Consort";
 			if Libido of Player > 25, decrease Libido of Player by (Libido of Player / 10) + 1;
 			now lustatt is Libido of Player;
 			if enduring is true:

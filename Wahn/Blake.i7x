@@ -1,5 +1,5 @@
 Version 1 of Blake by Wahn begins here.
-[ Version 1 - New Character - Ssely                               ]
+[ Version 1 - New Character - Originally by Ssely                 ]
 [ Version 2 - Rewrite and Expansion - Wahn                        ]
 [ Version 3 - Add vore scenes for Dom Blake - Kurainyx            ]
 
