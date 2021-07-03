@@ -218,13 +218,13 @@ to say FangTalkMenu:
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Discuss Your Day";
-	now sortorder entry is 0;
+	now sortorder entry is 1;
 	now description entry is "Tell Fang about some of your exploits in the city (PLACEHOLDER)";
 	[]
 	if hp of Fang > 1 and Fang is not listed in companionList of Player:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Fang With You";
-		now sortorder entry is 1;
+		now sortorder entry is 2;
 		now description entry is "Discuss taking Fang with you out into the city";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -347,10 +347,13 @@ to say sexwithFang:
 			break;
 	if lastfuck of Fang - turns < ( 9 - HP of Fang ):
 		say "     Fang got off fairly recently, so you'd probably have a better time with [ObjectPro of Fang] if you give [ObjectPro of Fang] a little longer to recover.";
-	if (Fang is not in Grey Abbey Library and Fang is not in Courtyard and Fang is not in Computer Lab):
+	else if (Fang is not in Grey Abbey Library and Fang is not in Courtyard and Fang is not in Computer Lab):
 		say "     Perhaps you should find somewhere safer to do this. You never know who might be waiting for you to be vulnerable... (WIP)";
 	else if Fang is Male: [Male Fang]
-		say "     What kind of fun were you looking to have with your big, bad wolf?";
+		if hp of Fang is 3 or hp of Fang is 4: [Alpha]
+			say "     You wonder how your Alpha will want to use you today...";
+		else: [Not Alpha]
+			say "     What kind of fun were you looking to have with your big, bad wolf?";
 		wait for any key;
 		if HP of Fang is 2:
 			say "[MaleFangOmegaSexMenu]";
@@ -368,7 +371,10 @@ to say sexwithFang:
 		else:
 			say "     Lacking any sexual organs of your own, you content yourself with snuggling the wolf and scritching his ears. He nuzzles you in return and licks your face.";
 	else if Fang is Female: [Female Fang]
-		say "     What kind of fun were you looking to have with your big, bad wolfess?";
+		if hp of Fang is 3 or hp of Fang is 4: [Alpha]
+			say "     You wonder how your Alpha will want to use you today...";
+		else: [Not Alpha]
+			say "     What kind of fun were you looking to have with your big, bad wolfess?";
 		wait for any key;
 		if HP of Fang is 2:
 			say "[FemaleFangOmegaSexMenu]";
@@ -385,8 +391,6 @@ to say sexwithFang:
 			say "[FemaleFangSexMenu]";
 		else:
 			say "     Lacking any sexual organs of your own, you content yourself with snuggling the wolf and scritching her ears. She nuzzles you in return and lick your face.";
-	if HP of Fang is 3 or HP of Fang is 4:
-		FangInfect;
 
 to FangInfect:
 	if FemaleList is warded or FemaleList is banned:
@@ -398,15 +402,12 @@ to FangInfect:
 	else if Fang is female:
 		infect "Feral Wolf Male";
 
-[to say FemaleFangAlphaSexMenu:
-	say "-----This is a placeholder-----";]
 
 Section 2.1.1 - Male Omega Fang Sexxxings [Sort of Placeholders]
 
 to say MaleFangOmegaSexMenu:
 	if debugactive is 1:
 		say "     DEBUG -> Omega Fang Sex Menu";
-	setmonster "Feral Wolf Male";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -555,7 +556,6 @@ Section 2.1.2 - Female Omega Fang Sexxxings [Sort of Placeholders]
 to say FemaleFangOmegaSexMenu:
 	if debugactive is 1:
 		say "     DEBUG -> Omega Female Fang Sex Menu";
-	setmonster "Feral Wolf Bitch";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -840,6 +840,7 @@ to say FemaleFangAlphaFucked:
 		else:
 			say "lick you with soft lupine kisses, however even that comes to an end as Fang gets up to return to her usual spot watching the door as you clean up and return to what you were doing before.";
 		now Libido of Player is ( ( Libido of Player * 4 ) / 5 );
+		NPCSexAftermath Fang receives "PussyFuck" from Player;
 		if player is male:
 			if Perception of Fang is 0:
 				let FangPregchance be a random number from 1 to 20;
@@ -855,6 +856,7 @@ to say FemaleFangAlphaFuckedSBL:
 	say "     The feral wolf fucks you with considerable zeal, enjoying dominating the master of the forest skunks. The thought of the skunk girls seeing you like this, submissive plaything to one of their territorial rivals makes you blush beneath your fur[if skrp is 1]. Your mephit co-inhabitor teases you about it between her lustful moans[end if]. The wolf's lupine pussy ginds against you again and again as she continues to nip and play-bite you, reinforcing her dominance. Your [if Player is female]juicy cunt[else]mesphit cock[end if] throbs and pulses entwined with that lupine cunt every time it's pushed into you. Your Fecund alpha slams her juicy pussy against your sore [if Player is female]pussy[else]mesphit cock[end if] until it finally gets to be too much for you feel your orgasm go off like the top of a shaken carbonated beverage. Fang howls triumphantly when this happens, as you unleash a hot rush of liquid [if Player is female]onto her tummy[else]into her womb from your ample load as she drains your balls[end if]. You [if skrp is 1]and your lower skunk head [end if]release a chirring moan as you feel your lupine master milking you of your fluids.";
 	say "     When her orgasm subsides, she removes herself from you only to shove it back onto you and start fucking you again. She ends up taking you several times, relishing asserting her dominance over you. By the time she's finally done, your belly is soaked with her lupine dew[if Player is male] and you've drained your balls until you are dry[else if Player is female] and your crotchfur is soaked and sticky with her girlcum and your female juices[end if]. When she does dismount, you can barely roll onto your side to recover. You release a sated moan while her glistening girlcum drips off of your outstretched body. Its scent lingers upon you for some time, overpowering even that of your mighty skunkbeast form.";
 	now Libido of Player is ( ( Libido of Player * 2 ) / 3 );
+	NPCSexAftermath Fang receives "PussyFuck" from Player;
 	SanLoss 5;
 	FangInfect;
 
@@ -864,7 +866,6 @@ Section 2.3.1 - Male Beta Fang Sexxxings [Sort of Placeholders]
 to say MaleFangBetaSexMenu:
 	if debugactive is 1:
 		say "     DEBUG -> Beta Fang Sex Menu";
-	setmonster "Feral Wolf Male";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -991,7 +992,6 @@ Section 2.3.2 - Female Beta Fang Sexxxings [Sort of Placeholders]
 to say FemaleFangBetaSexMenu:
 	if debugactive is 1:
 		say "     DEBUG -> Beta Female Fang Sex Menu";
-	setmonster "Feral Wolf Bitch";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1105,7 +1105,6 @@ Section 2.4.1 - Male Vanilla Fang Sexxxings [Sort of Placeholders]
 to say MaleFangSexMenu:
 	if debugactive is 1:
 		say "     DEBUG -> Vanilla Fang Sex Menu";
-	setmonster "Feral Wolf Male";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1264,7 +1263,6 @@ Section 2.4.2 - Female Vanilla Fang Sexxxings [Sort of Placeholders]
 to say FemaleFangSexMenu:
 	if debugactive is 1:
 		say "     DEBUG -> Vanilla Fang Sex Menu";
-	setmonster "Feral Wolf Bitch";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
