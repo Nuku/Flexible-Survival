@@ -52,10 +52,11 @@ to say lostninjahorde:
 	now Resolution of Suddenly Ninjas is 2;		[Lost to ninjas]
 	infect "Ninja Cat";
 	infect "Ninja Cat";
+	[Some extra infection and sex occurrences for the orgy]
 	if player is female:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Ninja Cat";
-	else:
-		CreatureSexAftermath "Player" receives "AssFuck" from "Ninja Cat";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Ninja Cat";
+	CreatureSexAftermath "Player" receives "OralCock" from "Ninja Cat";[The paragraph did say filling every hole]
 
 
 Section 2 - Outside Events
