@@ -13,7 +13,6 @@ debugactive is a number that varies.[@Tag:NotSaved] debugactive is 0.
 debuglevel is a number that varies.[@Tag:NotSaved] debuglevel is 1.
 RandomGenNumber is a number that varies.[@Tag:NotSaved]
 
-
 Showserial is an action applying to nothing.
 understand "Serial" as Showserial.
 
@@ -166,10 +165,10 @@ carry out ZReadout:
 			say "Traits: [Traits of x][line break]";
 
 turncountdisplay is an action applying to nothing.
-understand "turn count" as turncountdisplay.
-understand "turncount" as turncountdisplay.
-understand "current turn" as turncountdisplay.
-understand "currentturn" as turncountdisplay.
+understand "zTurn Count" as turncountdisplay.
+understand "zTurnCount" as turncountdisplay.
+understand "zCurrent turn" as turncountdisplay.
+understand "zCurrentturn" as turncountdisplay.
 
 check turncountdisplay:
 	if debugactive is 0:
@@ -180,8 +179,8 @@ carry out turncountdisplay:
 	say "DEBUG: CURRENT TURN IS [turns]; Current Turn Count is [turn count]";
 
 PregStatus is an action applying to nothing.
-understand "preg status" as PregStatus.
-understand "pregstatus" as PregStatus.
+understand "zPreg Status" as PregStatus.
+understand "zPregStatus" as PregStatus.
 
 check PregStatus:
 	if debugactive is 0:
@@ -280,7 +279,7 @@ to EncounteredEnemiesList:
 
 InfectionOverview is an action applying to nothing.
 
-understand "infectionoverview" as InfectionOverview.
+understand "zInfectionOverview" as InfectionOverview.
 
 check InfectionOverview:
 	if debugactive is 0:
@@ -492,7 +491,7 @@ to PrereqAnalyze (X - situation):
 
 TagListReadout is an action applying to one topic.
 
-understand "TagListReadout" as TagListReadout.
+understand "zTagListReadout" as TagListReadout.
 
 check TagListReadout:
 	if debugactive is 0:
@@ -651,7 +650,7 @@ carry out TagListReadout:
 
 EndingTableReadout is an action applying to nothing.
 
-understand "EndingTableReadout" as EndingTableReadout.
+understand "zEndingTableReadout" as EndingTableReadout.
 
 check EndingTableReadout:
 	if debugactive is 0:
@@ -893,7 +892,7 @@ carry out TestMode:
 
 levelcheat is an action applying to nothing.
 
-understand "givelevel" as levelcheat.
+understand "zGiveLevel" as levelcheat.
 
 check levelcheat:
 	if debugactive is 0:
@@ -910,7 +909,7 @@ carry out levelcheat:
 [Gives the player all pets]
 PetTest is an action applying to nothing.
 
-understand "AllPetTest" as PetTest.
+understand "zAllPetTest" as PetTest.
 
 check PetTest:
 	if debugactive is 0:
@@ -926,9 +925,10 @@ carry out PetTest:
 
 [Allows the player to change their body size without an infection. Useful for testing some scenes.]
 PlayerSizeChange is an action applying to nothing.
-understand "changesize" as PlayerSizeChange.
-understand "change size" as PlayerSizeChange.
-understand "size change" as PlayerSizeChange.
+understand "zChangesize" as PlayerSizeChange.
+understand "zChange Size" as PlayerSizeChange.
+understand "zSize Change" as PlayerSizeChange.
+understand "zSizeChange" as PlayerSizeChange.
 
 check PlayerSizeChange:
 	if debugactive is 0:
@@ -975,7 +975,8 @@ carry out PlayerSizeChange:
 
 [Impregnates the player with specified creature.]
 impregwith is an action applying to one topic.
-understand "impreg with [text]" as impregwith.
+understand "zImpreg with [text]" as impregwith.
+understand "zImpreg [text]" as impregwith.
 
 check impregwith:
 	if debugactive is 0:
@@ -992,7 +993,8 @@ carry out impregwith:
 [Infects player with any creature to test infection.]
 DebugInfect is an action applying to one topic.
 
-understand "infect with [text]" as DebugInfect.
+understand "zInfect with [text]" as DebugInfect.
+understand "zInfect [text]" as DebugInfect.
 understand "DebugInfect [text]" as DebugInfect.
 
 check DebugInfect:
@@ -1071,7 +1073,7 @@ Section 3 - World Manipulation
 
 Spawnmonster is an action applying to one topic.
 
-understand "spawn [text]" as spawnmonster.
+understand "zSpawn [text]" as spawnmonster.
 
 check spawnmonster:
 	if debugactive is 0:
@@ -1090,7 +1092,7 @@ carry out spawnmonster:
 
 unresolvecheat is an action applying to one topic.
 
-understand "unresolve [text]" as unresolvecheat.
+understand "zUnresolve [text]" as unresolvecheat.
 
 check unresolvecheat:
 	if debugactive is 0:
@@ -1107,7 +1109,7 @@ carry out unresolvecheat:
 
 [Allows the spawning of any item in game.]
 itemcheat is an action applying to one topic.
-understand "itemcheat [text]" as itemcheat.
+understand "zItem [text]" as itemcheat.
 
 check itemcheat:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
@@ -1119,7 +1121,7 @@ carry out itemcheat:
 			break;
 
 allitemcheat is an action applying to nothing.
-understand "allitemcheat" as allitemcheat.
+understand "zAllItems" as allitemcheat.
 
 check allitemcheat:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
@@ -1130,7 +1132,7 @@ carry out allitemcheat:
 		ItemGain x by 1 silently;
 
 ListAllItems is an action applying to nothing.
-understand "ListAllItems" as ListAllItems.
+understand "zListAllItems" as ListAllItems.
 
 check ListAllItems:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
@@ -1141,7 +1143,7 @@ carry out ListAllItems:
 		say "[Name entry]: [desc entry][line break]";
 
 RoomEmptying is an action applying to nothing.
-understand "NukeRoomInvents" as RoomEmptying.
+understand "zNukeRoomInvents" as RoomEmptying.
 
 check RoomEmptying:
 	if debugactive is 0, say "You aren't currently debugging!" instead;

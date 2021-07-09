@@ -501,6 +501,82 @@ Definition: A person (called x) is pure:
 										yes;
 		no;
 
+Definition: a person is facially human: [TODO: Update if needed]
+	if FaceName of Player is "Human", yes;
+	if FaceName of Player is "Herm Human", yes;
+	if FaceName of Player is "Pod Person", yes;
+	if FaceName of Player is "Siren", yes;
+	if FaceName of Player is "Greek Nymph", yes;
+	if FaceName of Player is "Spartan Warrior", yes;
+	if FaceName of Player is "Helot Manservant", yes;
+	if FaceName of Player is "Amazonian", yes;
+	if FaceName of Player is "Naiad", yes;
+	if FaceName of Player is "Math Teacher", yes;
+	if FaceName of Player is "Viking Woman", yes;
+	if FaceName of Player is "Knight", yes;
+	if FaceName of Player is "Squire", yes;
+	if HeadName of Player is "Human", yes;
+	if HeadName of Player is "Herm Human", yes;
+	if HeadName of Player is "Pod Person", yes;
+	if HeadName of Player is "Siren", yes;
+	if HeadName of Player is "Greek Nymph", yes;
+	if HeadName of Player is "Spartan Warrior", yes;
+	if HeadName of Player is "Helot Manservant", yes;
+	if HeadName of Player is "Amazonian", yes;
+	if HeadName of Player is "Naiad", yes;
+	if HeadName of Player is "Math Teacher", yes;
+	if HeadName of Player is "Viking Woman", yes;
+	if HeadName of Player is "Knight", yes;
+	if HeadName of Player is "Squire", yes;
+	no;
+
+Definition: a person is skintone human: [TODO: Update if needed]
+	if SkinName of Player is "Human", yes;
+	if SkinName of Player is "Herm Human", yes;
+	if SkinName of Player is "Pod Person", yes;
+	if SkinName of Player is "City Sprite", yes;
+	if SkinName of Player is "Wood Elf", yes;
+	if SkinName of Player is "Elven Hunter", yes;
+	if SkinName of Player is "Harpy", yes;
+	if SkinName of Player is "Siren", yes;
+	if SkinName of Player is "Succubus", yes;
+	if SkinName of Player is "Incubus", yes;
+	if SkinName of Player is "Greek Nymph", yes;
+	if SkinName of Player is "Spartan Warrior", yes;
+	if SkinName of Player is "Helot Manservant", yes;
+	if SkinName of Player is "Amazonian", yes;
+	if SkinName of Player is "Naiad", yes;
+	if SkinName of Player is "Caveman", yes;
+	if SkinName of Player is "Math Teacher", yes;
+	if SkinName of Player is "Viking Woman", yes;
+	if SkinName of Player is "Knight", yes;
+	if SkinName of Player is "Squire", yes;
+	if SkinName of Player is "Gunbunny", yes;
+	no;
+
+Definition: a person is bodily human: [TODO: Update if needed]
+	if BodyName of Player is "Human", yes;
+	if BodyName of Player is "Herm Human", yes;
+	if BodyName of Player is "Wood Elf", yes;
+	if BodyName of Player is "Elven Hunter", yes;
+	if BodyName of Player is "Pod Person", yes;
+	if BodyName of Player is "Greek Nymph", yes;
+	if BodyName of Player is "Spartan Warrior", yes;
+	if BodyName of Player is "Helot Manservant", yes;
+	if BodyName of Player is "Amazonian", yes;
+	if BodyName of Player is "Naiad", yes;
+	if BodyName of Player is "Math Teacher", yes;
+	if BodyName of Player is "Viking Woman", yes;
+	if BodyName of Player is "Knight", yes;
+	if BodyName of Player is "Squire", yes;
+	no;
+
+Definition: a person is fully human:
+	if person is not facially human, no;
+	if person is not skintone human, no;
+	if person is not bodily human, no;
+	yes;
+
 Definition: A person (called x) is purehuman:
 	if Player is not FullyNewTypeInfected: [player doesn't have all new type parts]
 		if BodyName of Player is "Human" or BodyName of Player is "Herm Human":
@@ -522,7 +598,6 @@ Definition: A person (called x) is purehuman:
 										if HeadName of Player is "Human" or CuntName of Player is "Herm Human":
 											yes;
 		no;
-
 
 Definition: A person (called x) is perminfected:
 	if ( JackalManTF > 0 or JackalBoyTF > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
@@ -585,7 +660,7 @@ Definition: A person (called x) is keeneyed: [sharpness of view - distance, etc.
 
 A person can be keenscented. A person is usually not keenscented.
 
-Definition: A person (called x) is keenscented:
+Definition: A person (called x) is keenscented: [can smell special information]
 	if HeadName of x is listed in infections of CanineList, yes;
 	if HeadName of x is listed in infections of FelineList, yes;
 	if HeadName of x is listed in infections of MustelidList, yes;

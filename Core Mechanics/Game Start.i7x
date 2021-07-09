@@ -134,18 +134,20 @@ To regularstart: [normal start method]
 				else:
 					now clearnomore is 0;
 			-- 12:
+				[
 				if NewGraphicsInteger is 1:
 					now graphics is true; [technically not necessary, but nice to have for edge cases]
 					now NewGraphics is true;
 					now NewGraphicsInteger is 2;
-				else if NewGraphicsInteger is 2:
+				]
+				if NewGraphicsInteger is 2:
 					now graphics is false;
 					now NewGraphics is false;
 					now NewGraphicsInteger is 0;
 				else if NewGraphicsInteger is 0:
 					now graphics is true;
-					now NewGraphics is false;
-					now NewGraphicsInteger is 1;
+					now NewGraphics is true;
+					now NewGraphicsInteger is 2; [removed the inline option - it doesn't work with the newer high res pics]
 			-- 13:
 				say "[set_invcolumns]";
 			-- 99:
@@ -530,25 +532,20 @@ to say silent_start:
 	say "[bold type]Graphic Settings[roman type][line break]";
 	say "Before restoring, please specify the graphic settings.[line break]";
 	say "[bold type] No graphics - 1 [roman type][line break]";
-	say "[bold type] Old inline graphics only - 2 [roman type][line break]";
-	say "[bold type] New graphics side-window - 3 [roman type][line break]";
+	say "[bold type] New graphics side-window - 2 [roman type][line break]";
 	while 1 is 1:
-		say "Please enter the number that matches your choice (1-3)>[run paragraph on]";
+		say "Please enter the number that matches your choice (1-2)>[run paragraph on]";
 		get a number;
-		if calcnumber > 0 and calcnumber < 4:
+		if calcnumber > 0 and calcnumber < 3:
 			break;
 		else:
-			say "Invalid Entry. Please enter a number between 1 and 3";
-	now NewGraphicsInteger is calcnumber - 1; [Direct set]
-	if NewGraphicsInteger is 1: [now evaluate]
-		now graphics is true;
-		now NewGraphics is false;
-	else if NewGraphicsInteger is 2:
-		now graphics is true;
-		now NewGraphics is true;
-	else if NewGraphicsInteger is 0:
+			say "Invalid Entry. Please enter a number between 1 and 2.";
+	if calcnumber is 1:
 		now graphics is false;
 		now NewGraphics is false;
+	else if calcnumber is 2:
+		now graphics is true;
+		now NewGraphics is true;
 	if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
 		now the graphics window proportion is NewGraphicsRatio;
 		build graphics window;

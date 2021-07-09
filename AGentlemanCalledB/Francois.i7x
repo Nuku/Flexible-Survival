@@ -225,7 +225,7 @@ Virgin of Francois is true.
 AnalVirgin of Francois is true.
 PenileVirgin of Francois is true.
 SexuallyExperienced of Francois is false.
-MainInfection of Francois is "".
+MainInfection of Francois is "German Shepherd".
 Description of Francois is "[Francoisdesc]".
 Conversation of Francois is { "Numnum!" }.
 The icon of Francois is Figure of Francois_icon.

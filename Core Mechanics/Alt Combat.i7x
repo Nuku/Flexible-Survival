@@ -615,7 +615,7 @@ This is the player seduce rule:
 		say "DEBUG: Seduction Bonus (Player) [seduce bonus][line break]";
 	let the seduction defense bonus be ( 20 - (monsterLibido divided by 3) ) + ( lev entry * 2 ) + monmindbonus - 10;
 	if Debug is at level 10:
-		say "DEBUG: Seduction seduction defense bonus (Enemy) [seduction defense bonus][line break]";
+		say "DEBUG: Seduction defense bonus (Enemy) [seduction defense bonus][line break]";
 	let the combat bonus be seduce bonus - seduction defense bonus;
 	if Debug is at level 10:
 		say "DEBUG: Combat Bonus (Player) [Combat bonus][line break]";

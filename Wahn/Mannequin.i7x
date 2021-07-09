@@ -506,7 +506,7 @@ ResolveFunction of Lost Souls is "[ResolveEvent Lost Souls]".
 Sarea of Lost Souls is "Warehouse".
 Prereq1 of Lost Souls is Stolen Lives.
 PrereqTime of Lost Souls is "Night".
-The Prereq1Resolution of Lost Souls is { 1 }.
+The Prereq1Resolution of Lost Souls is { 50 }. [TODO: Change this to 1 to enable later]
 
 to say ResolveEvent Lost Souls:
 	if Resolution of Lost Souls is not 98: [first encounter]
@@ -610,16 +610,21 @@ to Mannequin_Warehouse_ChoicePoint:
 		now Lost Souls is resolved;
 
 to say Bucky_Person:
-	say "...";
-	if Alexandra is booked or Alexandra is bunkered:
-		say "     <snarky comment about the player having odd projects - beating her down and taking her as their bitch, and having this one coddled>";
+	say "     Reaching out to caress the slender buck's cheek, you talk to him like you would a [']normal['] person, gently explaining that he can be more than just a doll. He's got a whole life to be lived and you want to try to bring him back from this... catatonia he's sunk into. There is no reaction at all, not that you expected any really, but you still keep at it, laying out that you'll bring him somewhere new, and do your best for him. Then you take hold of the slender buck's hand and guide him through the crowd of mannequins, making sure he doesn't bump against any of them on the way out. Stepping through the side door you came in through, back into the silent and empty streets of this part of the warehouse district, you then start along the route back to the Grey Abbey Library. This time of night, there's thankfully somewhat less creatures around, even in the more fully inhabited parts of the city, so you have little issue to bring your charge all the way home.";
+	move Bucky to Back of the Library;
+	move Player to Back of the Library;
+	say "     When you eventually arrive, you guide him into the backwards half of the library, from where he can see out the windows into the garden. On top of that, there's sofa space available to allow him to be made to sit or lay down (thinking that it must be uncomfortable for him to stand all the time), and also lots of books, to maybe read to him. ";
+	if (number of bunkered people + number of booked people > 2):
+		say "After that, you announce publicly that Bucky is not a doll or anything, but a person, and he needs all the support he can get to become normal again.";
+	LineBreak;
+	if Alexandra is booked or Alexandra is bunkered: [70/30]
+		say "     Alexandra saunters closer, letting her gaze drift up and down over Bucky, then raising a hand to snap her fingers right in front of his face. 'Yeah, with a 1000 yard stare like that... good luck with your little project. Hell, this is worse than the girls I was called in to handle in that one human trafficking case we had. At least they were still... in there, you know. Flinched away from men.' Her lips pull back to expose sharp canine teeth, showing the anger the tough bitch feels at those who abuse innocents. 'Where did you get this broken little buck anyways? Did you pull him out of a fuckpile somewhere and clean him up or something?' When you mention the mannequin warehouse, she grimaces and shakes her head. 'Funny place for you finding your altruistic side. You're a moody fucker, anyone ever tell you that? Hell, you beat me into submission one day, the next you're coddling this buck,' the doberwoman says with a shrug, then walks away.";
 		TraitGain "Bucky - Seen him" for Alexandra;
 		WaitBreakReactions;
 	if Amy is booked or Amy is bunkered:
-		say "     <initially scared, player says he'd like having her talk to Bucky>";
+		say "     Amy shily approaches the buck, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Bucky has been through... you don't really know what exactly, but it's left him in this current state. The husky appears skittish and ready to run away, as if afraid she might be next, but you gently take her by the arm and tell her that there shouldn't be any danger. Instead, Bucky just needs help, and people treating him not as a lifeless doll but the real person that he is. Amy looks at you wide-eyed, then over at Bucky, and nods determinedly. 'I can do that! Tell him things, and maybe take him for a walk in the garden, and read to him!' With that said, she steps up to the anthro deer and gently lays a hand on his arm. Looking into his unblinking eyes, she says, 'Sorry for... being afraid of you at first. I'll be the friend you need!' Then she steps back and waves goodbye to him before moving out of sight.";
 		TraitGain "Bucky - Seen him" for Amy;
 		WaitBreakReactions;
-	[--------------]
 	if Brutus is booked or Brutus is bunkered:
 		if DBCaptureQuestVar is 5: [controlled]
 			[
@@ -628,173 +633,240 @@ to say Bucky_Person:
 			else
 			]
 			if Resolution of Demonic Redemption is 7: [somewhat pacified]
-				say "     <should'a just make it rape-bait - let me have a turn, even the quietest ones start screaming at some point>";
+				say "     Brutus steps up to Bucky, a broad grin filled with dangerous teeth on his face. 'So, you brought a new fucktoy, eh master? Bit boring if he doesn't struggle but I guess a hole is a hole,' he grunts, then reaches down to grip the anthro deer between the legs, his clawed thumb resting on Bucky's crotch as he gropes around. As you explain that that isn't why you brought Bucky here, instead wanting him to learn to be [']normal['] again, the demon gives you a puzzled look. 'Eh? I don't get it,' Brutus grunts, by which time you tell him to simply leave Bucky alone. With a shrug, the demon then walks off.";
 			else: [standard hateful captive]
-				say "     <should'a just make it rape-bait - let me have a turn, even the quietest ones start screaming at some point>";
+				say "     Brutus steps up to Bucky, a broad grin filled with dangerous teeth on his face. 'So, you brought a new fucktoy, eh master? Bit boring if he doesn't struggle but I guess a hole is a hole,' he grunts. Then the demon's hand suddenly shoots forward, grabbing the deer by the neck and lifting him off the ground. Grabbing Bucky's crotch, he seems ready to rip away the jeans right away, his cock throbbing in anticipation. You hastily command him to set Bucky down, and not to touch him in the future, with the demon's reply being, 'Ride a lamppost and die, you-' Cutting him off with a sharp gesture, you watch Brutus set Bucky back down, then stomp away in frustration of not getting to violently fuck him.";
 			TraitGain "Bucky - Seen him" for Brutus;
 		else if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [cleansed]
-			say "     <I can talk to him if you want me to? (socializing sessions)>";
+			say "     Brutus steps up to Bucky, eyeing him up and down, then reaching out to take hold of one antler-tip between clawed fingers, using it to tilt the buck's head back a little and look into his eyes. 'Mh, seen something like this in hell. Mind or body, one or the other will snap, with enough use.' The demon grimaces and falls silent after saying that, but his forked tail does unruly, twitching movements, whipping through the air. As you ask what's wrong, he draws his lips back from his countless sharp teeth, then hangs his head in shame. 'It's what we - what I - did next. Just twist off he head. Then wait for the screams as they re-form in one of pits of boiling mud. Then get back to it.' After this reminder of what Brutus was before you cleansed him, you pause for a second, then gently reach out to touch his arm and explain that it might actually be good for both of them to spend some quiet time here. Just no hell-stories anymore, maybe Brutus can read a book with Bucky or so. 'I'll see what I can do, [master].'";
 			TraitGain "Bucky - Seen him" for Brutus;
 		WaitBreakReactions;
 	if Candy is booked or Candy is bunkered:
-		say "     <got some experience from the hospital, would talk to him, maybe dress up>";
+		say "     Candy saunters up to Bucky and looks the anthro deer up and down, then proclaims, 'Mh, he really got it bad, doesn't he? It was always sad when I saw people like him in the psych ward.' Leaning in to you a little, he says quietly, trying to keep the anthro buck from hearing him, 'Just to warn you... it's unlikely that he'll be improving for a long while. This is a gradual thing, if it works at all. But I'm on board all the way!' With that, Candy steps up to Bucky and touches his cheek, smiling as he meets the deer's unblinking eyes. 'I'll keep you company so you don't get bored. We'll have lots of time to read books, and talk, and I can show you some of my dresses, maybe we can even see how they might look on you, and... yeah, don't you worry. We'll get you better! Looking forward to it!' With that, he squeezes Bucky's shoulder, then walks off.";
 		TraitGain "Bucky - Seen him" for Candy;
 		WaitBreakReactions;
 	if Pink Raccoon is booked or Pink Raccoon is bunkered: [mindless Candy]
-		say "     <paws at Bucky, has to be batted away>";
+		say "     The pink raccoon comes up to Bucky and straight away starts to paw and touch his body. Seems like he's got a bit of a one-track mind. Seeing that this isn't ideal for your plans to try to help Bucky, you shoo your sex pet away and tell him to keep his distance.";
 		TraitGain "Bucky - Seen him" for Candy;
 		WaitBreakReactions;
 	if Carl is booked or Carl is bunkered:
 		if HP of Carl is 30: [beta carl]
-			say "     <I'll watch over him for you>";
+			say "     Carl comes up to you, glancing aside at Bucky with interest but keeping most of his attention on yourself. 'So, you want us to talk to and hang out with him, Alpha?' the husky soldier asks, and as you confirm, he gives you a dutiful nod, tail wagging behind his back. 'Sure thing, what you say is best!' Then he steps up to Bucky and gives him a friendly bump of his fist against the shoulder, saying, 'I guess we'll be spending some time together in the future, until you get better.' With that said, Carl gives you a nod, then walks off.";
 		else:
-			say "     <reminds of Davies, would keep safe, come to sit and talk>";
+			say "     Carl comes up to you, then glances aside at Bucky. 'I - uhm, do you really think this has a chance of helping? I mean... there doesn't seem to be anyone... in there?' You reply that you want to try, and would appreciate his help. The husky soldier hesitates for a second, looking down at the ground before raising his head again, 'I'm not sure if I'm the best person for this, but... yeah, I'll do it.' Having made his decision, he then steps up to Bucky and pats him on the shoulder a little helplessly, 'Sorry for... kinda just talking over you, before. I guess we'll be spending some time together in the future, until you get better.' With that said, he gives you a nod, then walks off.";
 		TraitGain "Bucky - Seen him" for Carl;
 		WaitBreakReactions;
 	if Chris is booked or Chris is bunkered: [TODO: add special stuff if they're brothers]
 		if Libido of Chris is 0: [half-orc]
-			say "     <would help chat>";
-			TraitGain "Bucky - Seen him" for Chris;
+			say "     Chris strolls right up to Bucky, addressing him. 'So, you're the newest member of our little group here, eh? Don't you worry, I'll keep you company so you don't get lonely.' As the anthro buck doesn't react at all, the young orc's expression falls a little, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Bucky a pat on the shoulder, then walks off for now.";
 		else if Libido of Chris is 1: [orc breeder]
 			if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
-				say "     <sad, would help out talk to him>";
-				TraitGain "Bucky - Seen him" for Chris;
+				say "     Chris saunters up to Bucky, checking him out while still standing back a little. Then he asks shily, 'So, he needs someone to... sit with him, and talk? I can do that!' As the anthro buck doesn't react at all, the young orc's expression falls, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Bucky a pat on the shoulder, then walks off for now.";
 			else: [happy breeder]
-				say "     <would help out talk to him, make him better, teach life as a big bro!>";
-				TraitGain "Bucky - Seen him" for Chris;
+				say "     Chris strolls right up to Bucky, addressing him. 'So, you're the newest member of our little group here, eh? Don't you worry, I'll keep you company so you don't get lonely. I could be, or big bro or something, eh?' As the anthro buck doesn't react at all, the young orc's expression falls a little, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Bucky a pat on the shoulder, then walks off for now.";
 		else if Libido of Chris is 2: [orc warrior]
 			if "Bro" is listed in Traits of Chris or "Bro with Benefits" is listed in Traits of Chris or "Dad with Benefits" is listed in Traits of Chris:
-				say "     <would help out talk to him, make him better, teach life as a big bro!>";
-				TraitGain "Bucky - Seen him" for Chris;
+				say "     Chris struts up to the anthro deer, immediately sliding an arm around Bucky and patting his chest with a large hand. 'Hey dude! Guess who's your new best friend? Me! Don't you worry, I'll keep you company so you don't get lonely. I could be, or big bro or something, eh?' As the anthro buck doesn't react at all, the young orc's expression falls a little, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Bucky a squeeze, then walks off for now.";
 			else: [dominant warrior Chris]
-				say "     <not interested>";
-				TraitGain "Bucky - Seen him" for Chris;
+				say "     Chris struts up to the anthro deer, looking Bucky up and down, then gives him a shove in the chest, causing the anthro to stumble back before catching himself and keeping an awkward pose. Shaking your head, you pull Bucky straight again. 'Yeah... no. Can't see myself talking to this thing. I mean, it's a sex doll. What do you expect to happen?' You open your mouth to explain your hopes for Bucky, but you can see that you're not gonna get too far with Chris and think better of it. With a grunt, the orc warrior walks off.";
+		TraitGain "Bucky - Seen him" for Chris;
 		WaitBreakReactions;
 	if Colleen is booked or Colleen is bunkered:
 		if SarahSlut < 2: [not transformed, or only a little]
-			say "     <that poor little guy, creepy, but she gets herself to do it (talking)>";
+			say "     Keeping her distance as she stares at Bucky and shakes her head, Colleen then looks over to you. 'Oh god, that's really creepy. He doesn't even blink! Sure he's not dangerous, infective, or something like that?' As you lay address her concerns in a calm tone of voice and stress that Bucky just needs help, the soldier slowly approaches, then gives the anthro a cautious look and waves her hand in front of his face. 'Fine, I guess I can try to assist. And if I'm sitting here reading with him, at least I know where exactly he is. But I'm telling you - if he appears somewhere else in the library, or someone sets him up at the foot of my bed as a practical joke, I'm gonna scream!' That said, the soldier gives you a nod, then turns around and walks away.";
 			TraitGain "Bucky - Seen him" for Colleen;
 		else if ColleenAlpha is 0:
-			say "     <if you fail, can we fuck it?>";
+			say "     Walking right up, Colleen looks at Bucky with her tail wagging behind her back. 'You brought someone new in, boss? Awesome!' Her expression falls a little as she sees that the deer isn't reacting at all to her presence, then patiently listens to your explanation of what you want to be done to help him. True to the dutiful dog she's become, the transformed soldier simply accepts your orders and seems chipper enough to hang out with Bucky. With asmile, you wave her off for now.";
 		[
 		else if ColleenAlpha > 0:
 			say "..."; [TODO: write this]
 		]
 		WaitBreakReactions;
+
+[
+if David is booked or David is bunkered:
+	say "     <ready to help>";
+if Denise is booked or Denise is bunkered:
+	say "     <will sing to him>";
+if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
+	if HP of Elijah is 99: [evil] [TODO: add manipulation?]
+		say "     <let's fuck it instead>";
+	else: [good]
+		say "     <will hang out and talk, god's work>";
+if Eric is booked or Eric is bunkered:
+	if HP of Eric > 0 and HP of Eric < 21:
+		say "     <talk to him, sharing>";
+	else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]
+		say "     <talk to him>";
+	else if HP of Eric is 99:
+		say "     <unburden himself to the doll, crying>";
+if Fang is booked or Fang is bunkered:
+	say "     <stick nose between the legs, dickhead sticking out of sheath, tail wags>";
+if HP of Fiona > 4:
+	say "     <tries to get reaction, claws, still no reaction, pissed>";
+if Gabriel is booked or Gabriel is bunkered:
+	say "     <would care for, talk about obeying the master>";
+if Hayato is booked or Hayato is bunkered:
+	say "     <poor guy, I'll keep him company>";
+if Helen is booked or Helen is bunkered:
+	say "     <comes up, sniffs crotch, licks, wags butt, barks, disappointed in no reaction>";
+if Hobo is booked or Hobo is bunkered:
+	say "     <comes up, sniffs, sits down as if to keep company>";
+if Honey is booked or Honey is bunkered:
+	say "     <likes the fur - can I pet it? would talk to him, hopes he gets better>";
+if Korvin is booked or Korvin is bunkered:
+	if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
+		say "     <would talk, therapy session, would grope>";
+	else:
+		say "     <would talk, would say 'you can pay me back with a fuck if you get fixed through this' (jokingly)>";
+if Klauz is booked or Klauz is bunkered:
+	say "     <rubs up, no reaction? confused>";
+if Malik is booked or Malik is bunkered:
+	say "     <not his scene>";
+if Nadia is booked or Nadia is bunkered:
+	say "     <would care for him, bringing her kids to see him>";
+if Rane is booked or Rane is bunkered:
+	say "     <a bit helpless, not really his scene>";
+if Ryousei is booked or Ryousei is bunkered:
+	say "     <centering the mind can help - recount some mention of victims of a nightmare monster>";
+if Tehuantl is booked or Tehuantl is bunkered:
+	if Tehuantl is male:
+		say "     <must protect, would indoctrinate>";
+	else:
+		say "     <must protect, would indoctrinate>";
+	WaitBreakReactions;
+if (Sarah is booked or Sarah is bunkered) and SarahCured > 3:
+	say "     <she'd try therapy>";
+if Sven is booked or Sven is bunkered:
+	if HP of Sven >= 30 and HP of Sven < 50:	[self-confident Sven]
+		say "     <would talk to him>";
+	else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
+		say "     <would talk, would grope>";
+	else:
+		say "     <would talk>";
+if Urik is booked or Urik is bunkered:
+	say "     <reminds him of a friend who had shrapnel in his head, will come and talk>";
+if Xerxes is booked or Xerxes is bunkered:
+	say "     <sniffs crotch, interested in humping>";
+]
+
+
 	if David is booked or David is bunkered:
-		say "     <ready to help>";
+		say "     Coming up, David looks Bucky up and down, then blushes when you smile at his interest. 'I - uhm, he looks to lifelike!' the young man says, reaching out to feel the fur on Bucky's arm. 'And you say he's got a pussy? Seems like an odd combination. Why wouldn't they have put boobs on there too? But anyways, I don't even know if I should, uhm... you know.' Smiling a little, you give an understanding nod, then add that there's no rush, Bucky will stay right here and be available. David takes a deep breath, letting his eyes wander a bit more again, then shakes himself out of it. 'Uh, I should go,' he says somewhat embarrassedly[if Libido of David > 56 and Libido of David < 99]. As he walks away afterwards, you hear him mumble to himself, 'Maybe together with Brutus...' [else]and walks away. [end if][line break]";
 		TraitGain "Bucky - Seen him" for David;
 		WaitBreakReactions;
 	if Denise is booked or Denise is bunkered:
-		say "     <will sing to him>";
+		say "     In a flutter of wings, Denise lands a little distance away, then approaches shily. 'He's cute!' she says with a smile, then looks at you somewhat hesitantly. 'And it's really no problem if I... try some things out with him?' She half-hides her face behind one of her wings, showing embarrassment clearly even though any blush will be hidden under her feathers. You smile and nod to her, which the gryphoness accepts happily. She lets her gaze drop to his crotch, then giggles, before jumping back in the air, gliding away on outstretched wings.";
 		TraitGain "Bucky - Seen him" for Denise;
 		WaitBreakReactions;
 	if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
 		if HP of Elijah is 99: [evil] [TODO: add manipulation?]
-			say "     <let's fuck it instead>";
+			say "     Elijah saunters up to Bucky, feeling his fur, then reaches up to open the anthro's mouth to slide two fingers inside. 'Not bad, I guess, for when I don't feel like hunting down someone out in the streets.' He then goes on to slide his hand down the front of Bucky's jeans, no doubt dipping a finger into his pussy. A moment later, the dark angel demonstratively licks his finger and raises his eyebrows at you. 'Had better, but it'll do,' he adds in an arrogant tone, then wanders off with a smirk on his face.";
 			TraitGain "Bucky - Seen him" for Elijah;
 		else: [good]
-			say "     <will hang out and talk, god's work>";
+			say "     Elijah comes up to you, looking at Bucky only for a short moment then shaking his head. 'I don't think I could ever, uhm - you know what I want to say. Being intimate with someone is a special gift from our creator. Doing that with nothing but a puppet almost seems like throwing that back in his face.' Shaking his head, the angel wanders off.";
 			TraitGain "Bucky - Seen him" for Elijah;
 		WaitBreakReactions;
 	if Eric is booked or Eric is bunkered:
-		if HP of Eric > 0 and HP of Eric < 21:
-			say "     <talk to him, sharing>";
-			TraitGain "Bucky - Seen him" for Eric;
-		else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]
-			say "     <talk to him>";
-			TraitGain "Bucky - Seen him" for Eric;
+		if HP of Eric > 0 and HP of Eric < 20:
+			say "     Eric comes up to you and looks with interest at Bucky. 'So, is he really... like me, down there?' Chuckling, you nod to him, which prompts the young man to say, 'I - I think, uhm... would it be alright if I experimented a little with him?' As you tell him he's fine to do whatever, Eric beams at you in relief and anticipation, then makes his goodbyes and walks away.";
+		else if HP of Eric is 20: [hoping for a cure]
+			say "     Eric comes up to you and looks with interest at Bucky. 'So, is he really... like me, down there? Maybe we could test a 'cure' on him, or something?' Raising your eyebrows at that suggestion, you say that that'd be an option. At the same time, he could still have some fun with the sex doll until the time comes. Eric perks up a little, hope blossoming in him, then makes his goodbyes and walks away.";
+		else if HP of Eric > 20 and HP of Eric < 30: [horsecock]
+			say "     Eric comes up to you and looks with interest at Bucky. 'Wow, you really went all out in getting him, eh? Do you think he can take a full-on horsecock?' Chuckling, you tell him that the nanites should make the cuntboy buck quite stretchy, and able to bounce back from being hard-used. 'Guess I know what I'm looking forward to then!' the young athlete tells you, then wanders off after a friendly wave.";
+		else if HP of Eric > 30 and HP of Eric < 40: [satyrcock]
+			say "     Eric comes up to you and looks with interest at Bucky. 'Oh yeah! Got us an awesome party treat here! I can just imagine showing up at a place, guiding this sexpot by the hand. That should really get everyone going!' He's clearly enthusiastic about getting it on with the cuntboy. Slapping the side of your arm in a friendly way, the student then wanders off.";
+		else if HP of Eric > 40 and HP of Eric < 50: [orccock]
+			say "     Eric comes up to you and looks with interest at Bucky. 'Oh yeah! You know, the balls that I got together with this cock are kinda churning out cum all the time. It'll be nice to have your toy here available to drain some loads in every day!' He's clearly enthusiastic about getting it on with the cuntboy. Slapping the side of your arm in a friendly way, the student then wanders off.";
 		else if HP of Eric is 99:
-			say "     <unburden himself to the doll, crying>";
-			TraitGain "Bucky - Seen him" for Eric;
+			say "     Eric keeps his distance, throwing looks with scrunched-together eyebrows at you and Bucky. There is disapproval in his gaze, but at the same time, you think you can make out almost grudging interest as he studies the anthro deer. Noticing your attention to him watching, the abused young man then steps out of sight to hide from you. His expression seemed somewhat conflicted, as if at the same time glad to see another here that might be used to keep your lusts sated, but also almost envious of being the one to be taken as he simply can't help himself but remembering the sensations of being fucked.";
+		TraitGain "Bucky - Seen him" for Eric;
 		WaitBreakReactions;
 	if Fang is booked or Fang is bunkered:
-		say "     <stick nose between the legs, dickhead sticking out of sheath, tail wags>";
+		say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4]lowers his chest and [end if]sticks his muzzle between Bucky's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the dickhead already emerging from his sheath. Still,  it seems like the wolf doesn't feel like mounting him right now, so he trots off soon after, tail wagging behind his back.";
 		TraitGain "Bucky - Seen him" for Fang;
 		WaitBreakReactions;
 	if HP of Fiona > 4:
-		say "     <tries to get reaction, claws, still no reaction, pissed>";
+		say "     Sitting on the ground nearby, Fiona glances over at Bucky, then licks her paw and rubs it behind her ear. She seems fairly oblivious to the sex doll, as if he isn't worth looking at even.";
 		TraitGain "Bucky - Seen him" for Fiona;
 		WaitBreakReactions;
 	if Gabriel is booked or Gabriel is bunkered:
-		say "     <would care for, talk about obeying the master>";
+		say "     Gabriel comes up to you and Bucky, looking the anthro deer up and down. 'I can train with this to serve you better, [master]!' the sexy angel you've tamed for yourself says in an eager tone. He's fully focused on being the best sex slave he can be, prompting you to give his ass a playful slap as you send him back to where he came from.";
 		TraitGain "Bucky - Seen him" for Gabriel;
 		WaitBreakReactions;
 	if Hayato is booked or Hayato is bunkered:
-		say "     <poor guy, I'll keep him company>";
+		say "     Hayato walks up and comes to tower over Bucky, looking down at him with interest. He half raises a large red hand to touch the buck, then hesitates, 'Looks so very real. I - er, can he feel pain? I'm pretty big, and don't want to injure him, you know.' Chuckling, you pat the oni's arm and tell him that the nanites should make the cuntboy buck quite stretchy, and able to bounce back from being hard-used. Hayato looks at you with raised eyebrows, then says thoughtfully, 'I'd be nice to... let loose fully once in a while.' Then he makes his goodbyes and wanders off, stopping to glance back at Bucky before moving out of sight.";
 		TraitGain "Bucky - Seen him" for Hayato;
 		WaitBreakReactions;
 	if Helen is booked or Helen is bunkered:
-		say "     <comes up, sniffs crotch, licks, wags butt, barks, disappointed in no reaction>";
+		say "     Helen rushes up to Bucky on all fours, barking and smiling at him. [if Lust of Helen > 3]'New friend?' she suddenly asks, and [else]She [end if]seems confused when there is no reaction, even as she barks again and uses a hand to pat the anthro's leg. Finally, she wanders off and lies down on the ground a little distance away.";
 		TraitGain "Bucky - Seen him" for Helen;
 		WaitBreakReactions;
 	if Hobo is booked or Hobo is bunkered:
-		say "     <comes up, sniffs, sits down as if to keep company>";
+		say "     Hobo pads up to Bucky, sniffing him and looking up at the anthro deer. He gives a quiet whine that almost sounds like a question, then sits down on the ground right next to the buck, having decided that he needs someone to keep him company. You let the devoted dog stay there for a little while before shooing him away gently.";
 		TraitGain "Bucky - Seen him" for Hobo;
 		WaitBreakReactions;
 	if Honey is booked or Honey is bunkered:
-		say "     <likes the fur - can I pet it? would talk to him, hopes he gets better>";
+		say "     With the hum of her wings, Honey flies up and circles Bucky once before coming to a hover besides the anthro deer. 'Ooh, his fur looks so soft! Can I pet it?' Chuckling, you nod to her, and the small bee girl gleefully rubs her hands through Bucky's fur. 'I'll be back for more of that! Such lovely fur!' she says somewhat giggly and flies away.";
 		TraitGain "Bucky - Seen him" for Honey;
 		WaitBreakReactions;
 	if Korvin is booked or Korvin is bunkered:
 		if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
-			say "     <would talk, therapy session, would grope>";
+			say "     Walking up, Korvin looks Bucky up and down with interest, grabbing his hip and giving it a little squeeze. 'It'll be awesome to pound something again!' the German shepherd says, seeming eager to feel a bit of his old, wild self again with the sex doll. He glances over at you, pausing to see what you make of his desire, and seems relieved when you give a generous nod. With his tail wagging behind his back, the anthro then walks off.";
 			TraitGain "Bucky - Seen him" for Korvin;
 		else:
-			say "     <would talk, would say 'you can pay me back with a fuck if you get fixed through this' (jokingly)>";
+			say "     Walking up with a swagger in his step, Korvin looks Bucky up and down. 'Nice toy you got us there,' he says with an eager grin, then grabs the anthro deer's chest and gives his flat pecs a squeeze. Too bad you didn't get one that's a bit more top-heavy, but as long as he's got a juicy pussy, I'm not gonna kick him out of bed, hah!' Grabbing his crotch and adjusting himself, the horny dog then walks off. Before he's fully out of earshot, you can hear him muse to himself, 'I wonder if these things can be knocked up...'";
 			TraitGain "Bucky - Seen him" for Korvin;
 		WaitBreakReactions;
 	if Klauz is booked or Klauz is bunkered:
-		say "     <rubs up, no reaction? confused>";
+		say "     Klauz prowls closer and closer, circling Bucky two full times at a distance before finally making his move. He rubs his side against the anthro deer's legs and then waits, purring like an idling motor. When Bucky isn't drawn in to pet him, the felinoid tries again on the sex doll's other side, looking up expectantly. Something like confusion crosses his face, followed by the feline stalking away, tail making jerking movements as he is in a bit of a sulk.";
 		TraitGain "Bucky - Seen him" for Klauz;
 		WaitBreakReactions;
 	if Malik is booked or Malik is bunkered:
-		say "     <not his scene>";
+		say "     Malik comes up to the anthro deer with swaggering steps, then looks Bucky up and down. 'Not much action to be had with this thing, eh? Any dude I drag in from the street is more fun, so I'll pass. [if Loyalty of Malik > 0]How about we go out and hunt some guy that's more fun, eh dad?' [else]Braindead toys are more your speed, I guess.' [end if] With that said, the orc warrior then wanders off.";
 		TraitGain "Bucky - Seen him" for Malik;
 		WaitBreakReactions;
 	if Nadia is booked or Nadia is bunkered:
-		say "     <would care for him, bringing her kids to see him>";
+		say "     Nadia comes up and looks at Bucky, more out of curiosity than any actual interest. 'It's good of you to provide this relief, for those who need it. That'll allow people to take the edge off[if NadiaChickCounter > 0]. Just please keep it somewhat out of the way, not used just anywhere. I don't want my chicks to see it like that[end if].' With a smile, she then walks away.";
 		TraitGain "Bucky - Seen him" for Nadia;
 		WaitBreakReactions;
 	if Rane is booked or Rane is bunkered:
-		say "     <a bit helpless, not really his scene>";
+		say "     Rane smirks as he strolls up and looks Bucky up and down. Then he reaches out and gives your shoulder a light punch. 'Kinky, kinky, bringing something like that here. Hope you have fun with... er, him.' Nodding to the deer, he shrugs. 'Can't say I'd go for it myself - I for one like the chase that real people provide, you know?'";
 		TraitGain "Bucky - Seen him" for Rane;
 		WaitBreakReactions;
 	if Ryousei is booked or Ryousei is bunkered:
-		say "     <centering the mind can help - recount some mention of victims of a nightmare monster>";
+		say "     Ryousei walks up to Bucky, looking at the deer with a curious expression. Then he reaches out to grasp the buck's hand and pulls it up before letting go, watching it be held just where he moved it. With a slightly amused snort, the tiger pushes Bucky's arm back down. 'Your world does have odd customs. I would have preferred a geisha to this simple thing, but as the saying goes: [']When visiting an uwabami, drink the sake, or add to its flavor.['] You certainly provided a handsome poll for companionship.' With a little bow, the anthro feline then walks away.";
 		TraitGain "Bucky - Seen him" for Ryousei;
 		WaitBreakReactions;
 	if Tehuantl is booked or Tehuantl is bunkered:
 		if Tehuantl is male:
-			say "     <must protect, would indoctrinate>";
+			say "     Tehuantl comes up to you, laying a hand on his chest and giving a deep nod to you. 'Thank you [master] for this gift. With an outlet for my libido, I will be able to focus more on tasks for you.' He gives Bucky a very interested look, letting out a purr before he walks off again.";
 			TraitGain "Bucky - Seen him" for Tehuantl;
 		else:
-			say "     <must protect, would indoctrinate>";
+			say "     Tehuantl comes up to you, laying a hand on her chest and giving a deep nod to you. 'Thank you [master] for this gift. With an outlet for my libido, I will be able to focus more on tasks for you.' She gives Bucky a very interested look, letting out a purr before she walks off again.";
 			TraitGain "Bucky - Seen him" for Tehuantl;
 		WaitBreakReactions;
 	if (Sarah is booked or Sarah is bunkered) and SarahCured > 3:
-		say "     <she'd try therapy>";
+		say "     Sarah walks up to Bucky with a grim expression on her face, then takes the anthro's arm to feel for a pulse. After a moment, she nods to herself and takes out a little pen-light to shine in his eyes. 'This makes absolutely no sense! He isn't breathing, but has a pulse, and is standing despite having no response at all to my light! You can tell yourself what you want, but this must have been a person at some point! He needs help, not to be abused as a sex toy!' Throwing her hands in the air as you give a noncommittal shrug, the husky doctor then storms off.";
 		TraitGain "Bucky - Seen him" for Sarah;
 		WaitBreakReactions;
 	if Sven is booked or Sven is bunkered:
 		if HP of Sven >= 30 and HP of Sven < 50:	[self-confident Sven]
-			say "     <would talk to him>";
-			TraitGain "Bucky - Seen him" for Sven;
+			say "     Sven walks up to Bucky, looking him up and down, then reaches out and touches the anthro deer's arm. 'Wow, he even feels real! Always thought a sex doll would be... hm, how do you say it. Forfalskning, you know. Uhm... ah! Fake, I mean! But this is neat! Thank you for putting him here.' The exchange student feels Bucky up for another moment or two, then pulls himself back and makes his goodbyes.";
 		else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
-			say "     <would talk, would grope>";
-			TraitGain "Bucky - Seen him" for Sven;
+			say "     Sven shyly approaches Bucky, looking him up and down, then over to you as if to ask permission. As you smile and nod, he reaches out and touches the anthro deer's arm. 'Wow, he even feels real! Always thought a sex doll would be... hm, how do you say it. Forfalskning, you know. Uhm... ah! Fake, I mean! And I'd never have dared to get one. Thank you for putting him here.' The exchange student feels Bucky up for another moment or two, then pulls himself back and makes his goodbyes.";
 		else:
-			say "     <would talk>";
-			TraitGain "Bucky - Seen him" for Sven;
+			say "     Sven shyly approaches Bucky, looking him up and down, then reaches out and touches the anthro deer's arm. 'Wow, he even feels real! Always thought a sex doll would be... hm, how do you say it. Forfalskning, you know. Uhm... ah! Fake, I mean! But this is kinda neat. Thank you for putting him here, but still... I don't know if I - if I'd dare use him.' The exchange student pulls his hand back, then makes his goodbyes and wanders off. As he goes, you see him stop once or twice to throw the buck another glance or two.";
+		TraitGain "Bucky - Seen him" for Sven;
 		WaitBreakReactions;
 	if Urik is booked or Urik is bunkered:
-		say "     <reminds him of a friend who had shrapnel in his head, will come and talk>";
+		say "     Urik walks up to Bucky, crossing his arms as he towers over the anthro deer and looks down at him. 'He's pretty, I can give you that. Not really my thing, though. I prefer guys to have a bit more fire in them. Ones that fight back, until they're nice and broken in.' With a shrug, he wanders off afterwards.";
 		TraitGain "Bucky - Seen him" for Urik;
 		WaitBreakReactions;
 	if Xerxes is booked or Xerxes is bunkered:
-		say "     <sniffs crotch, interested in humping>";
-		WaitBreakReactions;
+		say "     Xerxes rushes up to Bucky on all fours, barking and smiling at him. [if Lust of Helen > 3]'New friend?' he suddenly asks, and [else]He [end if]seems confused when there is no reaction, even as he barks again and uses a hand to pat the anthro's leg. Finally, he wanders off and lies down on the ground a little distance away.";
 		TraitGain "Bucky - Seen him" for Xerxes;
+		WaitBreakReactions;
 	now IntroReactionCounter is 0; [reset]
 
 to say Bucky_Toy:
@@ -869,7 +941,7 @@ to say Bucky_Toy:
 				say "     Chris struts up to the anthro deer, immediately sliding an arm around Bucky to feel his rear end and giving it a squeeze. '[if Thirst of Val is 2]Wow, pops! [end if]Oh yeah, this'll be fun! Nice toy you brought us here! Hope he's got a nice tight rear end! Gonna breed that thing so hard, hah! But, you know, I might be down for someone pounding the front hole as I do, eh?' Grinning eagerly, he gives you a [if Thirst of Val is 2]hug[else]fist-bump[end if], then wanders off.";
 				TraitGain "Bucky - Seen him" for Chris;
 			else: [dominant warrior Chris]
-				say "     Chris struts up to the anthro deer, looking Bucky up and down, then giving him a shove in the chest, causing the anthro to stumble back before catching himself and keeping an awkward pose. Shaking your head, you pull Bucky straight again. '[if Thirst of Val is 2]Hmm pops, [else]Hmm,  [end if]I don't know. There's no fight in this thing, that's pretty boring. I'd rather grab a nice dude from the streets. Who needs a thing like this? Only a breeder playing pretend, I guess. [if Thirst of Val is 2 and Stamina of Chris > 0]I got my dad-slut for that[else]I want the real deal[end if]!' With a disinterested shrug, the orc warrior then wanders off.";
+				say "     Chris struts up to the anthro deer, looking Bucky up and down, then gives him a shove in the chest, causing the anthro to stumble back before catching himself and keeping an awkward pose. Shaking your head, you pull Bucky straight again. '[if Thirst of Val is 2]Hmm pops, [else]Hmm,  [end if]I don't know. There's no fight in this thing, that's pretty boring. I'd rather grab a nice dude from the streets. Who needs a thing like this? Only a breeder playing pretend, I guess. [if Thirst of Val is 2 and Stamina of Chris > 0]I got my dad-slut for that[else]I want the real deal[end if]!' With a disinterested shrug, the orc warrior then wanders off.";
 				TraitGain "Bucky - Seen him" for Chris;
 		WaitBreakReactions;
 	if Colleen is booked or Colleen is bunkered:
@@ -1009,11 +1081,11 @@ to say Hercules_Toy:
 	say "...";
 	if Alexandra is booked or Alexandra is bunkered:
 		say "     <interest>";
-		TraitGain "Bucky - Seen him" for Alexandra;
+		TraitGain "Hercules - Seen him" for Alexandra;
 		WaitBreakReactions;
 	if Amy is booked or Amy is bunkered:
 		say "     <scared, massive and muscular, not a person>";
-		TraitGain "Bucky - Seen him" for Amy;
+		TraitGain "Hercules - Seen him" for Amy;
 		WaitBreakReactions;
 	[--------------]
 	if Brutus is booked or Brutus is bunkered:
@@ -1027,49 +1099,49 @@ to say Hercules_Toy:
 				say "     <not a person? rules don't apply? player says not to break him completely>";
 			else: [standard hateful captive]
 				say "     <not a person? rules don't apply? player says not to break him completely>";
-			TraitGain "Bucky - Seen him" for Brutus;
+			TraitGain "Hercules - Seen him" for Brutus;
 		else if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [cleansed]
 			say "     <relief without having to worry? if in relationship with David: alright to share?>";
-			TraitGain "Bucky - Seen him" for Brutus;
+			TraitGain "Hercules - Seen him" for Brutus;
 		WaitBreakReactions;
 	if Candy is booked or Candy is bunkered:
 		say "     <ride him! can I play dressup too?>";
-		TraitGain "Bucky - Seen him" for Candy;
+		TraitGain "Hercules - Seen him" for Candy;
 		WaitBreakReactions;
 	if Pink Raccoon is booked or Pink Raccoon is bunkered: [mindless Candy]
-		say "     <paws at Bucky, seems ready to use him>";
-		TraitGain "Bucky - Seen him" for Candy;
+		say "     <paws at Hercules, seems ready to use him>";
+		TraitGain "Hercules - Seen him" for Candy;
 		WaitBreakReactions;
 	if Carl is booked or Carl is bunkered:
 		if HP of Carl is 30: [beta carl]
 			say "     <fun toy, gift from the Alpha!>";
 		else:
 			say "     <I would never! secretly uses (fucks)>";
-		TraitGain "Bucky - Seen him" for Carl;
+		TraitGain "Hercules - Seen him" for Carl;
 		WaitBreakReactions;
 	if Chris is booked or Chris is bunkered: [TODO: add special stuff if they're brothers]
 		if Libido of Chris is 0: [half-orc]
 			say "     <fun toy>";
-			TraitGain "Bucky - Seen him" for Chris;
+			TraitGain "Hercules - Seen him" for Chris;
 		else if Libido of Chris is 1: [orc breeder]
 			if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
 				say "     <fun toy - I can be on top with such a big guy?!>";
-				TraitGain "Bucky - Seen him" for Chris;
+				TraitGain "Hercules - Seen him" for Chris;
 			else: [happy breeder]
 				say "     <fun toy - I can be on top with such a big guy?!>";
-				TraitGain "Bucky - Seen him" for Chris;
+				TraitGain "Hercules - Seen him" for Chris;
 		else if Libido of Chris is 2: [orc warrior]
 			if "Bro" is listed in Traits of Chris or "Bro with Benefits" is listed in Traits of Chris or "Dad with Benefits" is listed in Traits of Chris:
 				say "     <fun toy>";
-				TraitGain "Bucky - Seen him" for Chris;
+				TraitGain "Hercules - Seen him" for Chris;
 			else: [dominant warrior Chris]
 				say "     <boring, doesn't struggle (at least he's big)>";
-				TraitGain "Bucky - Seen him" for Chris;
+				TraitGain "Hercules - Seen him" for Chris;
 		WaitBreakReactions;
 	if Colleen is booked or Colleen is bunkered:
 		if SarahSlut < 2: [not transformed, or only a little]
 			say "     <wtf is wrong with you?! creepy!>";
-			TraitGain "Bucky - Seen him" for Colleen;
+			TraitGain "Hercules - Seen him" for Colleen;
 		else if ColleenAlpha is 0:
 			say "     <fun male toy!>";
 		[
@@ -1079,118 +1151,118 @@ to say Hercules_Toy:
 		WaitBreakReactions;
 	if David is booked or David is bunkered:
 		say "     <embarrassed, secretly uses - might think of using with Brutus>";
-		TraitGain "Bucky - Seen him" for David;
+		TraitGain "Hercules - Seen him" for David;
 		WaitBreakReactions;
 	if Denise is booked or Denise is bunkered:
 		say "     <too big and dangerous for her to want to use>";
-		TraitGain "Bucky - Seen him" for Denise;
+		TraitGain "Hercules - Seen him" for Denise;
 		WaitBreakReactions;
 	if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
 		if HP of Elijah is 99: [evil] [TODO: add manipulation?]
 			say "     <pound it all day, casually, when he doesn't want to hunt, fun to bend a big guy without a fight>";
-			TraitGain "Bucky - Seen him" for Elijah;
+			TraitGain "Hercules - Seen him" for Elijah;
 		else: [good]
 			say "     <not interested, having sex must be special>";
-			TraitGain "Bucky - Seen him" for Elijah;
+			TraitGain "Hercules - Seen him" for Elijah;
 		WaitBreakReactions;
 	if Eric is booked or Eric is bunkered:
 		if HP of Eric > 0 and HP of Eric < 21:
 			say "     <loves big guys, shy about using him>";
-			TraitGain "Bucky - Seen him" for Eric;
+			TraitGain "Hercules - Seen him" for Eric;
 		else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]
 			say "     <horse: yeah, horse toy fun! satyr: party on! orc: get some relief, love the bigness>";
-			TraitGain "Bucky - Seen him" for Eric;
+			TraitGain "Hercules - Seen him" for Eric;
 		else if HP of Eric is 99:
 			say "     <scared, might use it secretly, stretch himself to be prepared for others>";
-			TraitGain "Bucky - Seen him" for Eric;
+			TraitGain "Hercules - Seen him" for Eric;
 		WaitBreakReactions;
 	if Fang is booked or Fang is bunkered:
 		say "     <stick nose between the legs, licks balls, dickhead sticking out of sheath, tail wags>";
-		TraitGain "Bucky - Seen him" for Fang;
+		TraitGain "Hercules - Seen him" for Fang;
 		WaitBreakReactions;
 	if HP of Fiona > 4:
 		say "     <tries to get reaction, claws, still no reaction, pissed>";
-		TraitGain "Bucky - Seen him" for Fiona;
+		TraitGain "Hercules - Seen him" for Fiona;
 		WaitBreakReactions;
 	if Gabriel is booked or Gabriel is bunkered:
 		say "     <train with it>";
-		TraitGain "Bucky - Seen him" for Gabriel;
+		TraitGain "Hercules - Seen him" for Gabriel;
 		WaitBreakReactions;
 	if Hayato is booked or Hayato is bunkered:
 		say "     <confident he doesn't break it - happy to let loose>";
-		TraitGain "Bucky - Seen him" for Hayato;
+		TraitGain "Hercules - Seen him" for Hayato;
 		WaitBreakReactions;
 	if Helen is booked or Helen is bunkered:
 		say "     <comes up, sniffs crotch, licks, wags butt, barks, disappointed in no reaction>";
-		TraitGain "Bucky - Seen him" for Helen;
+		TraitGain "Hercules - Seen him" for Helen;
 		WaitBreakReactions;
 	if Hobo is booked or Hobo is bunkered:
 		say "     <comes up, sniffs, sits down as if to keep company>";
-		TraitGain "Bucky - Seen him" for Hobo;
+		TraitGain "Hercules - Seen him" for Hobo;
 		WaitBreakReactions;
 	if Honey is booked or Honey is bunkered:
 		say "     <likes the fur - can I pet it? and oooh, that dick is so big! feels balls and comments about shooting a lot>";
-		TraitGain "Bucky - Seen him" for Honey;
+		TraitGain "Hercules - Seen him" for Honey;
 		WaitBreakReactions;
 	if Korvin is booked or Korvin is bunkered:
 		if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
 			say "     <yay, I can pound something! can be on top of a big guy, like in the old times, or powerbottom>";
-			TraitGain "Bucky - Seen him" for Korvin;
+			TraitGain "Hercules - Seen him" for Korvin;
 		else:
 			say "     <nice toy>";
-			TraitGain "Bucky - Seen him" for Korvin;
+			TraitGain "Hercules - Seen him" for Korvin;
 		WaitBreakReactions;
 	if Klauz is booked or Klauz is bunkered:
 		say "     <rubs up, no reaction? confused>";
-		TraitGain "Bucky - Seen him" for Klauz;
+		TraitGain "Hercules - Seen him" for Klauz;
 		WaitBreakReactions;
 	if Malik is booked or Malik is bunkered:
 		say "     <wants to hunt instead, at least the player got a proper orc sized one, gets the sluts used to that>";
-		TraitGain "Bucky - Seen him" for Malik;
+		TraitGain "Hercules - Seen him" for Malik;
 		WaitBreakReactions;
 	if Nadia is booked or Nadia is bunkered:
 		say "     <likes a sex toy for everyone, wouldn't personally want to use>";
-		TraitGain "Bucky - Seen him" for Nadia;
+		TraitGain "Hercules - Seen him" for Nadia;
 		WaitBreakReactions;
 	if Rane is booked or Rane is bunkered:
 		say "     <you kinky guy - I for one like the chase, you know?>";
-		TraitGain "Bucky - Seen him" for Rane;
+		TraitGain "Hercules - Seen him" for Rane;
 		WaitBreakReactions;
 	if Ryousei is booked or Ryousei is bunkered:
 		say "     <weird customs you have. but when in Rome, I guess...>";
-		TraitGain "Bucky - Seen him" for Ryousei;
+		TraitGain "Hercules - Seen him" for Ryousei;
 		WaitBreakReactions;
 	if Tehuantl is booked or Tehuantl is bunkered:
 		if Tehuantl is male:
 			say "     <thank you master for this gift, this will allow me to focus more>";
-			TraitGain "Bucky - Seen him" for Tehuantl;
+			TraitGain "Hercules - Seen him" for Tehuantl;
 		else:
 			say "     <wants cock! yeah!>";
-			TraitGain "Bucky - Seen him" for Tehuantl;
+			TraitGain "Hercules - Seen him" for Tehuantl;
 		WaitBreakReactions;
 	if (Sarah is booked or Sarah is bunkered) and SarahCured > 3:
 		say "     <horrified - this must have been a person!>";
-		TraitGain "Bucky - Seen him" for Sarah;
+		TraitGain "Hercules - Seen him" for Sarah;
 		WaitBreakReactions;
 	if Sven is booked or Sven is bunkered:
 		if HP of Sven >= 30 and HP of Sven < 50:	[self-confident Sven]
 			say "     <neat toy, cool!>";
-			TraitGain "Bucky - Seen him" for Sven;
+			TraitGain "Hercules - Seen him" for Sven;
 		else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
 			say "     <soo big! shyly open to use it>";
-			TraitGain "Bucky - Seen him" for Sven;
+			TraitGain "Hercules - Seen him" for Sven;
 		else:
 			say "     <I wouldn't do that, later secretly plays around>";
-			TraitGain "Bucky - Seen him" for Sven;
+			TraitGain "Hercules - Seen him" for Sven;
 		WaitBreakReactions;
 	if Urik is booked or Urik is bunkered:
 		say "     <how boring, no hunt - excited if he can breed it>";
-		TraitGain "Bucky - Seen him" for Urik;
+		TraitGain "Hercules - Seen him" for Urik;
 		WaitBreakReactions;
 	if Xerxes is booked or Xerxes is bunkered:
 		say "     <sniffs crotch, interested in humping>";
 		WaitBreakReactions;
-		TraitGain "Bucky - Seen him" for Xerxes;
+		TraitGain "Hercules - Seen him" for Xerxes;
 	now IntroReactionCounter is 0; [reset]
 
 to say Leaving Limbo:

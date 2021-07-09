@@ -433,16 +433,17 @@ to DrMattSusanQuestReturn:
 	WaitLineBreak;
 	say "     [bold type]Realizing that the doctor's plan would either involve some rather clinical steps, or alternatively intimate contact between yourself and Susan, it's left to you to decide if and how you want to participate.[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Agree to play his guinea pig and let Dr. Matt experiment on you.";
-	say "     [link](2)[as]2[end link] - Agree to have sex with Susan. For Science!";
-	say "     [link](3)[as]3[end link] - You're not up for that. Just no.";
+	say "     [link](2)[as]2[end link] - [if Resolution of Unusual Creature is 3]Agree to ask Susan to have sex with you. [else if Resolution of Unusual Creature is 4]Agree to have another go at your doe in the lab. [else]Agree to approach her about having sex. [end if]For Science!";
+	say "     [link](3)[as]3[end link] - Actually, this isn't just for you to make a decision on. Ask Susan about her opinion first!";
+	say "     [link](4)[as]4[end link] - You're not up for that. Just no.";
 	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 			break;
 		else:
-			say "Invalid choice. Type [link]1[end link] to go the clinical route, [link]2[end link] to sex Susan up or [link]3[end link] to reject the experiment.";
+			say "Invalid choice. Type [link]1[end link] to go the clinical route, [link]2[end link] to sex Susan up, [link]3[end link] to ask Susan about it, or [link]4[end link] to reject the experiment.";
 	if calcnumber is 1:
 		LineBreak;
 		say "     After thinking about it for a little while, you agree to the proposition of testing the transmission of nanites. Dr. Matt smiles though his faceplate and lightly taps your shoulder. 'Splendid! I knew we could rely on you! Please have a word with our guest and get her consent, meanwhile I'll prepare all of the gear, cameras and so on.' He immediately starts doing just that, leaving you standing alone. [bold type]You should probably go talk to Susan now.[roman type][line break]";
@@ -450,10 +451,15 @@ to DrMattSusanQuestReturn:
 		now Loyalty of Susan is 1; [player intends to go the medical route]
 	else if calcnumber is 2:
 		LineBreak;
-		say "     After thinking about it for a little while, you agree to the proposition of testing the transmission of nanites. Glancing over to the lithe deer herm and letting your gaze wander down over her naked body, you can't help but think that there are worse ways to help save the world than spending some not-so-alone time with Susan. A light tap on your shoulder pulls you out of your thoughts, with Dr. Matt smiling through his faceplate at you. 'Splendid! I knew we could rely on you! Please have a word with our guest and get her consent, meanwhile I'll prepare all of the gear, cameras and so on.' He immediately starts doing just that, leaving you standing alone. [bold type]You should probably go talk to Susan now.[roman type][line break]";
+		say "     After thinking about it for a little while, you agree to the proposition of testing the transmission of nanites. Glancing over to the lithe deer herm and letting your gaze wander down over her body, you can't help but think that there are worse ways to help save the world than spending some not-so-alone time with Susan. A light tap on your shoulder pulls you out of your thoughts, with Dr. Matt smiling through his faceplate at you. 'Splendid! I knew we could rely on you! Please have a word with our guest and get her consent, meanwhile I'll prepare all of the gear, cameras and so on.' He immediately starts doing just that, leaving you standing alone. [bold type]You should probably go talk to Susan now.[roman type][line break]";
 		now HP of Doctor Matt is 7;
 		now Loyalty of Susan is 2; [player wants to lay Susan]
 	else if calcnumber is 3:
+		LineBreak;
+		say "     You start to think about what you'd rather do, then find yourself realizing that it isn't just for you to decide and then talk Susan into it or not. She's got her own opinions for sure. Clearing your throat, you tell Dr. Matt just that, and the man blinks as he stares at you through his faceplate. 'Oh, I - yes, of course! My apologies if I made it sound like she didn't have a stake in this as her own person. Please, convene between you two and decide what it is both of you want to do. In the meantime, I'll prepare all of the gear, cameras and so on.' He immediately starts doing just that, leaving you standing alone. [bold type]You should probably go talk to Susan now.[roman type][line break]";
+		now HP of Doctor Matt is 7;
+		now Loyalty of Susan is 5; [Susan's opinion should be gotten first]
+	else if calcnumber is 4:
 		LineBreak;
 		say "     Making a quick decision, you decline playing the guinea pig for Dr. Matt. Helping him is enough, you don't want to put your body and self on the line too. The man sighs as he takes in your decision, half raising his hand in what you assume would normally be taking off his glasses and polishing them as he thinks, an ingrained mannerism that he hasn't quite shaken off. Clearing his throat, Matt says, 'Well, it's your choice of course. Thank you for your help so far, I do hope we'll find another willing test person soon though. As you know, time is of the essence. I think as a next step, we-' At that moment, he is interrupted by a sobbed wail of 'I knew it! Everyone thinks I'm a freak that they should keep away from[if Resolution of Unusual Creature < 3], even the minion[else if Resolution of Unusual Creature is 3], even those that pretended to like me[else if Resolution of Unusual Creature is 4]! Once was enough for you as a freaky fuck, wasn't it?[end if]!' coming from Susan, who apparently overheard your conversation. She seems crushed by your rejection of any close contact with her.";
 		say "     Before you or Dr. Matt can even begin to say or to anything, the sobbing young woman already has dashed to a side door leading to another part of the building and is through it. You do your best to catch up and bring her back, to no great avail as the deer demonstrates her speed and dexterity, always escaping you no matter what you do. She must have memorized the floorplan of the building you think you remember from a wall in the lab, and leads you for a merry chase before eventually reaching an emergency exit far away from the lobby and Orthas, running off into the city through it. As you return to Dr. Matt alone some time later, he gives you a deflated look, shaking his head and murmuring, 'Such a pity, to lose out on an opportunity like this.'";
@@ -484,9 +490,9 @@ to DrMattSusanQuestResolution:
 	else if Loyalty of Susan is 4: [ready for a fuck]
 		say "     'Judging by your expression, I take it you were successful in wooing the young woman? Good, good. I've got everything prepared for the two of you over here.' With that said, he points to the cot that Orthas set up for Susan, now surrounded by three separate cameras. A whole spread of sampling equipment is laid out on a nearby table. 'You can proceed when ready. No need to be shy, I've seen it all before. Well, humans and other primates only, to be specific, but you know what I mean.' With that said, the doctor shepherds you over to his equipment and takes a series of samples from all over your body, then makes you document your physical state in front of the camera, up to and including [if player is male]getting hard and having your cock measured[else if player is female]spreading your folds and showing them off[else]some closeups of your genderless crotch[end if]. At some point, Susan quietly joins, but is not subjected to a similar scrutiny as Dr. Matt still has recent material from her.";
 		now HP of Susan is 2; [ready to fuck]
-		say "[SusanSexMenu]";
+		SusanSexMenu;
 		WaitLineBreak;
-		if HP of Susan > 2: [some sex happened]
+		if HP of Susan > 2: [some sex happened] [TODO: Rebuild to remove the "mate" stuff]
 			say "     As your afterglow wears off, you become aware of the fact that Dr. Matt is standing close by, holding sample tubes in his gloved hand. He bids you both to sit on the examination table, then proceeds to take  samples of the fluids you exchanged during intercourse. Susan looks to you with a shy expression as she is swabbed by the doctor, and seeing that she feels a little lost, you reach out to take her hand. The simple touch of her chosen mate is enough to calm the deer herm down immensely, with her giving you a loving smile and ignoring Dr. Matt entirely. A few minutes later, he's done with his examination and has a whole rack of sampling tubes in his hands. 'Thank you both. This opportunity will provide invaluable data, I'm sure of that. I need to get analyzing this immediately!' As the doctor hurries off to get to work, Susan gives your hand a little squeeze, then leans over to kiss you gently. 'Thank you for this. Becoming my mate, and being there when I needed you.'";
 			now HP of Doctor Matt is 8; [post-Susan exam]
 		else: [cancelled]

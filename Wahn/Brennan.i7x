@@ -1187,10 +1187,14 @@ Section 6 - Conversation
 [***********************************************************]
 
 instead of conversing the Brennan:
+	say "[BrennanTalkMenu]";
+
+to say BrennanTalkMenu:
 	if (TimekeepingVar is 1 or TimekeepingVar is 0 or TimekeepingVar is -1 or TimekeepingVar is -7 or TimekeepingVar is -8 or TimekeepingVar is 7):
 		say "     He's asleep. Better wait till Brennan has rested up.";
 		stop the action;
 	project the figure of Brennan_face_icon;
+	let TalkDone be false;
 	say "     What do you want to talk to Brennan about?";
 	LineBreak;
 	now sextablerun is 0;
@@ -1305,7 +1309,7 @@ instead of conversing the Brennan:
 				now sextablerun is 1;
 				if (nam is "The Apartment"):
 					say "[BrennanTalk1]";
-				if (nam is "The Mall"):
+				else if (nam is "The Mall"):
 					say "[BrennanTalk2]";
 				if (nam is "The Red Light District"):
 					say "[BrennanTalk3]";
@@ -1321,21 +1325,29 @@ instead of conversing the Brennan:
 					say "[BrennanTinyTalk]";
 				if (nam is "Tracking doctor 'Diego Garcia'"):
 					say "[BrennanDiegoTracking]";
+					now TalkDone is true;
 				if (nam is "Having Sex"):
 					say "[BrennanCultQuest0]";
 				if (nam is "Nermine's Deal"):
 					say "[BrennanCultQuest1]";
 				if (nam is "Infiltrating the Cult"):
 					say "[BrennanCultQuest2]";
+					now TalkDone is true;
 				if (nam is "Trading with Nermine"):
 					say "[BrennanCultQuest3]";
+					now TalkDone is true;
 				if (nam is "His wolf companions"):
 					say "[BrennanWolfTalk]";
 				if (nam is "Going scavenging together"):
 					say "[BrennanScavTrip]";
+					now TalkDone is true;
 				if (nam is "Maybe scavenging together"):
 					say "[BrennanScavTalk]";
-				wait for any key;
+					now TalkDone is true;
+				if TalkDone is false:
+					say "[BrennanTalkMenu]";
+				else:
+					wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the bearded man, shaking your head slightly as he gives a questioning look.";

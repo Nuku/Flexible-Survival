@@ -441,7 +441,7 @@ to say SexP (N - number):
 	else if N < 575:
 		say "[special-style-1]master[roman type]";
 	else:
-		say "[special-style-1][one of]pornstar[or]sex machine[at random][roman type]";
+		say "[special-style-1]legendary [one of]pornstar[or]sex machine[at random][roman type]";
 
 understand "testNPCSexAftermath" as NPCSexAftermathAction.
 

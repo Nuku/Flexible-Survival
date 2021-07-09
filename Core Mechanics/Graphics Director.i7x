@@ -86,7 +86,7 @@ carry out graphicmoding:
 		while Trixieexit is 0:
 			clear the screen;
 			say "[bold type]Graphics Settings:[roman type][line break]";
-			say "Please note that the graphics side window will remain on screen despite any of these settings! If you are bothered by the blank space, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. Selecting 'INLINE ONLY' or 'OFF' will no longer generate a side window.[line break]";
+			say "Please note that the graphics side window will remain on screen despite any of these settings! If you are bothered by the blank space, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. Selecting 'DISABLED' will no longer generate a side window.[line break]";
 			say "We apologize for this inconvenience, this is a technical limitation of Inform.[line break]";
 			say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 2]Side-Window Graphics[else if NewGraphicsInteger is 1]Inline Mode[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
 			say "(2) [link]EXIT[as]2[end link][line break]";
@@ -100,17 +100,13 @@ carry out graphicmoding:
 			if calcnumber is:
 				-- 1:
 					if NewGraphicsInteger is 2:
-						now graphics is true;
-						now NewGraphicsInteger is 1;
-						now NewGraphics is false;
-					else if NewGraphicsInteger is 1:
 						now graphics is false;
-						now NewGraphicsInteger is 0;
 						now NewGraphics is false;
+						now NewGraphicsInteger is 0;
 					else if NewGraphicsInteger is 0:
 						now graphics is true;
-						now NewGraphicsInteger is 2;
 						now NewGraphics is true;
+						now NewGraphicsInteger is 2; [removed the inline option - it doesn't work with the newer high res pics]
 				-- 2:
 					say "Exit graphics menu?";
 					if Player consents:

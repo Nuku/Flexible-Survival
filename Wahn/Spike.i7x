@@ -103,6 +103,8 @@ Version 2 of Spike by Wahn begins here.
 [   9: Urik and Spike did weightlifting                                              ]
 [ 100: Player shut down the workout path                                             ]
 
+[ TODO: add talk option about the cigarettes                                         ]
+
 thirst of Spike is usually 1. [standard setting change]
 MaxHP of Spike is usually 1. [for now the player is always the father as the default]
 SpikeEventCooldown is a number that varies. [@Tag:Notsaved]
@@ -581,6 +583,10 @@ to say SpikeAccepted:
 				TraitGain "Korvin - Challenging Dad" for Spike;
 				TraitGain "Spike - Son" for Korvin;
 			else:
+				if gsd_pet < 20: [not got a collar yet]
+					say "     Walking up to Spike with a confident stride, Korvin puffs out his muscular chest a little and gives the dobie a gruff nod. 'New dog, eh? Even got a collar, like a good little puppy.' Even as he says this, teasing the doberman by deliberately ignoring that Spike picked a black leather, spiked collar for himself, you can see a glimmer of... envy in his eyes. Accepting the ribbing as a friendly challenge, Spike shoots back, 'Look who's talking!' tapping the side of his neck and then pointing at the German shepherd, who reaches up to touch the simple rope leash you placed on him. Ouch, by his scrunched-up expression, Spike landed a solid hit, but Korvin is fast enough to bounce back, shrugging it off. 'Well - we'll see who's the better dog soon!' The two of them spend the next minute or so in a kind of dick-measuring contest, flexing some muscles and giving each other looks. Eventually, Korvin quips, 'I'll leave you to work on your stuff a bit more. At least one of us needs to,' then walks off, tail wagging behind his back.";
+					TraitGain "Korvin - Met Collarless" for Spike;
+					TraitGain "Spike - Young Buck" for Korvin;
 				if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
 					say "     Leaning against the end of a bookshelf and keeping his distance, you see Korvin raising a hand as if to hide his pink collar, his gaze fairly focused on Spike's own studded strap of leather. Clearing your throat and shooting him a look, the canine drops the attempt at hiding his shame, revealing his submissiveness to you fully. Spike notices the girly collar right away and lets out a laughing bark, which drives Korvin to slip out of sight with his tail hanging down limply. Despite this, the German shepherd can't help but sport a raging erection, getting off on the humiliation after you drove home your dominance over him.";
 					TraitGain "Korvin - Shamed Bitch" for Spike;

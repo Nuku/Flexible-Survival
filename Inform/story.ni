@@ -10,19 +10,19 @@ Use slow route-finding.
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
-Use MAX_OBJ_PROP_COUNT of 1280.
+Use MAX_OBJ_PROP_COUNT of 1700.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 370000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 4000.
-use MAX_ACTIONS of 2000.
-use MAX_VERBS of 2000.
+use MAX_ACTIONS of 2500.
+use MAX_VERBS of 2500.
 use MAX_VERBSPACE of 50000.
 use MAX_ARRAYS of 100000.
 [Use MAX_ZCODE_SIZE of 1000000.]
-Use MAX_DICT_ENTRIES OF 5000.
-Use maximum text length of at least 2000.
+Use MAX_DICT_ENTRIES OF 6000.
+Use maximum text length of at least 3000.
 Use Scoring.
 [ End compiler settings. ]
 
@@ -140,6 +140,22 @@ Include Misc Pieces by Core Mechanics.
 Include Help by Core Mechanics. [adjusts the standard help to match FS]
 Include Story Skipper by Core Mechanics. [declares export/import system for version-spanning transfers - standard variables]
 Include Story Skipper Loose Variables by Core Mechanics. [declares export/import system for version-spanning transfers - loose variables]
+Include NewInfectionTest by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest1 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest2 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest3 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest4 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest5 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest6 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest7 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest8 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest9 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest10 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest11 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest12 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest13 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest14 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest15 by Core Mechanics. [50 filled lines of the new infection variable table]
 
 Book 2 - More Core Mechanics
 
@@ -754,7 +770,7 @@ Include Darius by Wahn.
 Include Darren by Qazarar.
 Include David by Wahn.
 Include Davies by Wahn.
-Include Deer by Stripes.
+Include Deer by Wahn.
 Include Denise by Wahn.
 Include Demonologist by Gherod.
 Include Desperate Bunny by Nuku Valente.
@@ -856,6 +872,7 @@ Include Midnight by Luneth.
 Include Milo by CrimsonAsh.
 Include Mogdraz by Gherod.
 Include Monty by Wahn.
+Include Moreau by Wahn.
 Include Mouse Taur by Nuku Valente.
 Include Pet Mutt by CrimsonAsh.
 Include Nadia by Wahn.
@@ -870,7 +887,7 @@ Include Oliver by Rikaeus.
 Include Onyx by Sarokcat n Verath.
 Include Orc Female by Wahn.
 Include Orc Lair by Wahn.
-Include Orthas by Stripes.
+Include Orthas by Wahn.
 Include Otto Fuchs by Prometheus.
 Include Palomino by Verath.
 Include Paula by Stripes.

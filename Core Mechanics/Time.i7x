@@ -289,33 +289,33 @@ To say time of day:
 		-- 7:
 			say "early morning";
 		-- 6:
-			say "mid morning";
+			say "morning";
 		-- 5:
-			say "noon";
+			say "afternoon";
 		-- 4:
-			say "mid afternoon";
-		-- 3:
 			say "evening";
-		-- 2:
+		-- 3:
 			say "early night";
+		-- 2:
+			say "night";
 		-- 1:
-			say "midnight";
+			say "post midnight";
 		-- 0:
 			say "pre dawn";
 		-- -1:
 			say "early morning";
 		-- -2:
-			say "mid morning";
+			say "morning";
 		-- -3:
-			say "noon";
+			say "afternoon";
 		-- -4:
-			say "mid afternoon";
-		-- -5:
 			say "evening";
-		-- -6:
+		-- -5:
 			say "early night";
+		-- -6:
+			say "night";
 		-- -7:
-			say "midnight";
+			say "post midnight";
 		-- -8:
 			say "pre dawn";
 

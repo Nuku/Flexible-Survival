@@ -597,24 +597,81 @@ Table of GameRoomIDs (continued)
 Object	Name
 Park Trail	"Park Trail"
 
-Park Trail is a room. "     Following this [Bold Type]north[roman type]/[Bold Type]south[roman type] trail, you can see the severely overgrown state of the park all around you. All this can't be purely natural - it'd take ages to have gotten this bad. Seems like some of the spreading nanites decided to create a section of untamed wilderness right in the middle of the city. There are dense woods in almost every direction, including to the [Bold Type]north[roman type], where the paved trail ends at a tree that must have literally exploded out of the ground under it. In the [Bold Type]northwest[roman type], there is a small expanse of bamboo forest, with a Torii arch forming the start of a narrow gravel trail leading into it.[line break]     The path [Bold Type]northwest[roman type] looks safe and strangely peaceful, but it'll be easy to become lost in the rest of the thick woods of the park - though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
+Park Trail is a room.
 earea of Park Trail is "Park".
+Description of Park Trail is "[ParkTrailDesc]".
+
+to say ParkTraiLDesc:
+	say "     Following this [Bold Type]north[roman type]/[Bold Type]south[roman type] trail, you can see the severely overgrown state of the park all around you. All this can't be purely natural - it'd take ages to have gotten this bad. Seems like some of the spreading nanites decided to create a section of untamed wilderness right in the middle of the city. There are dense woods in almost every direction, including to the [Bold Type]north[roman type], where the paved trail ends at a truly colossal tree that must have literally exploded out of the ground under it. It is wider than the path was in its intact state. A wooden sign pointing [bold type]east[roman type] indicates the presence of a hiking trail going that way. In the [Bold Type]northwest[roman type], there is an expanse of bamboo forest, with a bright red Torii arch forming the start of a gravel trail leading into it. [if Public Hitching Post is resolved]Besides that, you remember that there actually is a narrow way through the thick and underbrush to the [Bold Type]northwest[roman type], leading to a former picnic area. [end if][line break]";
+	say "     Nature is abuzz and active all around you, with rustling The path [Bold Type]northwest[roman type] looks safe and strangely peaceful, but it'll be easy to become lost in the rest of the thick woods of the park - though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.";
 
 Park Trail is north of Park Entrance.
 Park Exit is a door. Park Exit is dangerous. The marea of Park Exit is "Outside". Park Exit is undescribed. Park Exit is south of Park Entrance. Outside Exploration is south of Park Exit.
-Faint Trail is east of Park Trail.
 
 Table of GameRoomIDs (continued)
 Object	Name
-Lost in the Woods	"Lost in the Woods"
+Hiking Trail Start	"Hiking Trail Start"
 
-Lost in the Woods is a room.
-Lost in the Woods is east of Faint Trail.
+Hiking Trail Start is a room.
+Hiking Trail Start is east of Park Trail.
+earea of Hiking Trail Start is "Park".
+Description of Hiking Trail Start is "[HikingTrailStartDesc]".
 
-Faint Trail is a door.
-Description of a faint trail is "A faint trail that heads eastwards into the deep woods. It looks dangerous - who knows what is lurking out there?".
-Faint Trail is dangerous.
-The marea of Faint Trail is "Park".
+to say HikingTrailStartDesc:
+	say "     You're on a severely overgrown hiking trail through the city park, standing on well-trodden bare earth. Even here, just at the start of the trail, you almost feel like you're in the middle of wilderness, as there is no sight or sound of the city visible anywhere around you. With how lush and vibrant all of the plants are growing, the area has become akin to a centuries-old, undisturbed forest. Sounds of nature surround you, from wind blowing through the trees, rustling in the underbrush, birds singing, all the way to other noises from more human-like throats that sometimes crop up in the mix. Given what's happening everywhere else in the city, you guess that hearing moans and ecstatic shouting in the moderate distance isn't much of a surprise anymore.";
+	say "     To the [Bold Type]west[roman type], the edge of a paved path is visible past the all-encroaching plant life, while the path leads further [Bold Type]east[roman type] deeper into the woods.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Hiking Trail Bend	"Hiking Trail Bend"
+
+Hiking Trail Bend is a room.
+Hiking Trail Bend is east of Hiking Trail Start.
+earea of Hiking Trail Bend is "Park".
+Description of Hiking Trail Bend is "[HikingTrailBendDesc]".
+
+to say HikingTrailBendDesc:
+	say "     You're on a severely overgrown hiking trail through the city park, standing on well-trodden bare earth. It feels like you're in the middle of wilderness, as there is no sight or sound of the city visible anywhere around you. With how lush and vibrant all of the plants are growing, the area has become akin to a centuries-old, undisturbed forest. Sounds of nature surround you, from wind blowing through the trees, rustling in the underbrush, birds singing, all the way to other noises from more human-like throats that sometimes crop up in the mix. Given what's happening everywhere else in the city, you guess that hearing moans and ecstatic shouting in the moderate distance isn't much of a surprise anymore.";
+	say "     The trail makes a bend here, leading further [Bold Type]west[roman type] and also [Bold Type]northeast[roman type], ever deeper into the woods.";
+
+Hiking Trail Split is a room.
+Hiking Trail Split is northeast of Hiking Trail Bend.
+earea of Hiking Trail Split is "Park".
+Description of Hiking Trail Split is "[HikingTrailSplitDesc]".
+
+to say HikingTrailSplitDesc:
+	say "     You're on a severely overgrown hiking trail through the city park, standing on well-trodden bare earth. It feels like you're in the middle of wilderness, as there is no sight or sound of the city visible anywhere around you. With how lush and vibrant all of the plants are growing, the area has become akin to a centuries-old, undisturbed forest. Sounds of nature surround you, from wind blowing through the trees, rustling in the underbrush, birds singing, all the way to other noises from more human-like throats that sometimes crop up in the mix. Given what's happening everywhere else in the city, you guess that hearing moans and ecstatic shouting in the moderate distance isn't much of a surprise anymore.";
+	say "     A broken-off wooden signpost lies on the ground before you, its multiple arrows with directions mangled and mostly unreadable. Looks like something just snapped it off like a twig. This might have been deliberate, or the side effect of some larger beasts fighting with each other. No matter which, it doesn't help you now, and looking around, there doesn't appear to be any visible difference between one bit of forest and the next. Only a hiking trail to the [bold type]southwest[roman type] seems to be a safe bet of moving towards the entrance of the park again. Continuing deeper into the woods pretty much means picking a random direction and hoping for the best from here on out.";
+
+Hiking Direction 1 is a door. Hiking Direction 1 is dangerous. The marea of Hiking Direction 1 is "Park". Hiking Direction 1 is undescribed.
+Hiking Direction 2 is a door. Hiking Direction 2 is dangerous. The marea of Hiking Direction 2 is "Park". Hiking Direction 2 is undescribed.
+Hiking Direction 3 is a door. Hiking Direction 3 is dangerous. The marea of Hiking Direction 3 is "Park". Hiking Direction 3 is undescribed.
+Hiking Direction 4 is a door. Hiking Direction 4 is dangerous. The marea of Hiking Direction 4 is "Park". Hiking Direction 4 is undescribed.
+Hiking Direction 5 is a door. Hiking Direction 5 is dangerous. The marea of Hiking Direction 5 is "Park". Hiking Direction 5 is undescribed.
+Hiking Direction 6 is a door. Hiking Direction 6 is dangerous. The marea of Hiking Direction 6 is "Park". Hiking Direction 6 is undescribed.
+Hiking Direction 7 is a door. Hiking Direction 7 is dangerous. The marea of Hiking Direction 7 is "Park". Hiking Direction 7 is undescribed.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Hiking Exploration	"Hiking Exploration"
+
+Hiking Exploration is a room.
+Hiking Exploration is east of Hiking Direction 1.
+Hiking Exploration is northeast of Hiking Direction 2.
+Hiking Exploration is north of Hiking Direction 3.
+Hiking Exploration is southeast of Hiking Direction 4.
+Hiking Exploration is south of Hiking Direction 5.
+Hiking Exploration is northwest of Hiking Direction 6.
+Hiking Exploration is west of Hiking Direction 7.
+Hiking Direction 1 is east of Hiking Trail Split.
+Hiking Direction 2 is northeast of Hiking Trail Split.
+Hiking Direction 3 is north of Hiking Trail Split.
+Hiking Direction 4 is southeast of Hiking Trail Split.
+Hiking Direction 5 is south of Hiking Trail Split.
+Hiking Direction 6 is northwest of Hiking Trail Split.
+Hiking Direction 7 is west of Hiking Trail Split.
+
+
 
 Table of GameRoomIDs (continued)
 Object	Name

@@ -2,11 +2,31 @@ Version 1 of Anton by Wahn begins here.
 
 "Adds a placeholder peacock NPC to Flexible Survival"
 
-[ Anton, the husky                                                                      ]
+[ Anton, the peacock                                                                     ]
 
+[ History/Psychology                                                                     ]
+[ Sexual Predator (even before the nanite apocalypse)                                    ]
+[ Had a prostitute mother and was later abused by one of her customers                   ]
+[ Dislikes Women in general                                                              ]
+[ Started abusing others to "take the power back"                                        ]
+[ Takes 'trophies' of his conquests                                                      ]
+[ Virgin Hunter                                                                          ]
+[ Kinda scared of fighting, tries to win through intimidation                            ]
+[ Was beaten up after being caught stealing panties as a young boy -> scared of fighting ]
+[ Worked as a delivery driver                                                            ]
+[ Was fought off by a guy he tried to intimidate as a man -> scared of fighting          ]
+[ -> switched delivery routes/company afterwards, delivered to the flower shop then      ]
+[ Did long-Term abuse of a young man working in a flower shop next to the mall           ]
+[ Had a setback after collecting hypno slaves in the high rise district - a friend of    ]
+[    one of the hypnotized people learned about it and attacked him, making him flee     ]
 
-[ History                                                                               ]
-[ Laika - had a bitch as a teen (18) and fucked her                                     ]
+[ Potential Future Paths after taking him down with help of Moreau                       ]
+[ - Disarmed (shop helper for Moreau, under control)                                     ]
+[ - Love slave for the player (will have a mental break if put in submissive position)   ]
+[ - Rerolled History - implant memory that the player adopted him after he was taken     ]
+[                      away from his prostitute mother (good life, happy Anton)          ]
+
+lastFuck of Anton is usually 20000.
 
 Section 1 - Description
 
@@ -49,7 +69,7 @@ PenileVirgin of Anton is false.
 SexuallyExperienced of Anton is true.
 TwistedCapacity of Anton is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Anton is false. [steriles can't knock people up]
-MainInfection of Anton is "Husky Alpha".
+MainInfection of Anton is "Peacock".
 Description of Anton is "[AntonDesc]".
 Conversation of Anton is { "Woof." }.
 
