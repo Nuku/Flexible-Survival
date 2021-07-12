@@ -740,7 +740,7 @@ Include Azari by Dys.
 Include Bastet by Wahn.
 Include Bjorn by Rikaeus.
 Include Blake by Wahn.
-Include Blanche by Stripes.
+Include Blanche by Prometheus.
 Include Blue by Wahn.
 Include Boghrim by Wahn.
 Include Bradford by Stripes.
@@ -760,7 +760,7 @@ Include Cherry by Gherod.
 Include Chris by Wahn.
 Include Cindy by Stripes.
 Include College Guards by Rikaeus.
-Include Colleen by Sarokcat.
+Include Colleen by Prometheus.
 Include Corbin by Wahn.
 Include Coura by Wahn.
 Include Daisy by Sarokcat n Verath.
