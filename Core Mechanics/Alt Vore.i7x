@@ -192,25 +192,20 @@ to vorebyplayer:
 				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your muscles swelling with [Name entry] [one of]strength[or]physique[or]power[at random].";
 				StatChange "Strength" by 1;
 		if vv is vint:
-			if Intelligence of Player < int entry and int entry >= ( 12 + level of Player ):
-				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your mind swelling with [Name entry] [one of]intelligence[or]wit[or]complexity[at random].";
-				StatChange "Intelligence" by 1;
+			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your mind swelling with [Name entry] [one of]intelligence[or]wit[or]complexity[at random].";
+			StatChange "Intelligence" by 1;
 		if vv is vdex:
-			if dexterity of Player < dex entry and dex entry >= ( 12 + level of Player ):
-				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your hand-eye coordination improving with [Name entry] [one of]dexterity[or]physique[or]accuracy[at random].";
-				StatChange "Dexterity" by 1;
+			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your hand-eye coordination improving with [Name entry] [one of]dexterity[or]physique[or]accuracy[at random].";
+			StatChange "Dexterity" by 1;
 		if vv is vsta:
-			if stamina of Player < sta entry and sta entry >= ( 12 + level of Player ):
-				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your body toughening with [Name entry] [one of]stamina[or]physique[or]power[at random].";
-				StatChange "Stamina" by 1;
+			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your body toughening with [Name entry] [one of]stamina[or]physique[or]power[at random].";
+			StatChange "Stamina" by 1;
 		if vv is vper:
-			if perception of Player < per entry and per entry >= ( 12 + level of Player ):
-				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your senses being heightened with [Name entry] [one of]perception[or]aptitude[or]feral attention[at random].";
-				StatChange "Perception" by 1;
+			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your senses being heightened with [Name entry] [one of]perception[or]aptitude[or]feral attention[at random].";
+			StatChange "Perception" by 1;
 		if vv is vcha:
-			if charisma of Player < cha entry and cha entry >= ( 12 + level of Player ):
-				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your social sense improving with [Name entry] [one of]charisma[or]natural charm[or]pheromones[at random].";
-				StatChange "Charisma" by 1;
+			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your social sense improving with [Name entry] [one of]charisma[or]natural charm[or]pheromones[at random].";
+			StatChange "Charisma" by 1;
 	if "Safe Appetite" is not listed in feats of Player:
 		say "     Indulging in this monstrous act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system as your belly quickly seeks to consume them. Your hunger, satisfied for now, is decreased dramatically.";
 		now researchbypass is 1;
