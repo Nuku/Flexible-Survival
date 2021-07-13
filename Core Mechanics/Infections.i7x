@@ -389,10 +389,35 @@ To Infect:
 		OldInfectionRoll;
 	if "Mutable" is listed in feats of Player and a random chance of 1 in 2 succeeds:		[** Repeat of above code for physical change]
 		OldInfectionRoll;
-	let x be a random number from 1 to 6;
-	if "Mighty Mutation" is not listed in feats of Player:
-		now x is 0;
-	if x is 1:
+	let xc be 0;
+	let xstr be -1;
+	if strength of Player is not str entry:
+		increase xc by 1;
+		now xstr is xc;
+	let xint be -1;
+	if Intelligence of Player is not Int entry:
+		increase xc by 1;
+		now xint is xc;
+	let xdex be -1;
+	if Dexterity of Player is not Dex entry:
+		increase xc by 1;
+		now xdex is xc;
+	let xsta be -1;
+	if Stamina of Player is not Sta entry:
+		increase xc by 1;
+		now xsta is xc;
+	let xper be -1;
+	if Perception of Player is not Per entry:
+		increase xc by 1;
+		now xper is xc;
+	let xcha be -1;
+	if Charisma of Player is not Cha entry:
+		increase xc by 1;
+		now xcha is xc;
+	let x be 0;
+	if "Mighty Mutation" is listed in feats of Player and xc is not 0:
+		now x is a random number from 1 to xc;
+	if x is xstr:
 		if strength of Player is not str entry:
 			if strength of Player > str entry and a random chance of 1 in 10 succeeds:
 				if "Bestial Power" is not listed in feats of Player:
@@ -406,7 +431,7 @@ To Infect:
 				say "You feel your muscles swelling with [Name entry] [one of]strength[or]physique[or]power[at random].";
 				increase strength of Player by 1;
 				increase capacity of Player by 5;
-	if x is 2:
+	if x is xint:
 		if Intelligence of Player is not Int entry:
 			if Intelligence of Player > Int entry and a random chance of 1 in 10 succeeds:
 				if "Bestial Power" is not listed in feats of Player:
@@ -418,7 +443,7 @@ To Infect:
 			if Intelligence of Player < Int entry:
 				say "You feel your mind swelling with [Name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
 				increase Intelligence of Player by 1;
-	if x is 3:
+	if x is xdex:
 		if Dexterity of Player is not Dex entry:
 			if Dexterity of Player > Dex entry and a random chance of 1 in 10 succeeds:
 				if "Bestial Power" is not listed in feats of Player:
@@ -430,7 +455,7 @@ To Infect:
 			if Dexterity of Player < Dex entry:
 				say "You feel your hand eye coordination swelling with [Name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
 				increase Dexterity of Player by 1;
-	if x is 4:
+	if x is xsta:
 		if Stamina of Player is not Sta entry:
 			if Stamina of Player > Sta entry and a random chance of 1 in 10 succeeds:
 				if "Bestial Power" is not listed in feats of Player:
@@ -446,7 +471,7 @@ To Infect:
 				increase Stamina of Player by 1;
 				if remainder after dividing stamina of Player by 2 is 0:
 					increase maxHP of Player by level of Player plus 1;
-	if x is 5:
+	if x is xper:
 		if Perception of Player is not Per entry:
 			if Perception of Player > Per entry and a random chance of 1 in 10 succeeds:
 				if "Bestial Power" is not listed in feats of Player:
@@ -458,7 +483,7 @@ To Infect:
 			if Perception of Player < Per entry:
 				say "You feel your senses swelling with [Name entry] [one of]Perception[or]aptitude[or]feral attention[at random].";
 				increase Perception of Player by 1;
-	if x is 6:
+	if x is xcha:
 		if Charisma of Player is not Cha entry:
 			if Charisma of Player > Cha entry and a random chance of 1 in 10 succeeds:
 				if "Bestial Power" is not listed in feats of Player:
