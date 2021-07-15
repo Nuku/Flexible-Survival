@@ -6,6 +6,13 @@ Smith Haven Mall by Wahn begins here.
 
 Section 1 - Mall Area
 
+[The south room has been moved to the top to avoid errors being thrown if 'AddNavPoint Smith Haven Mall Lot' is used instead of 'AddNavPoint Smith Haven Mall Lot South' inform looks at the order in which the rooms are declared and chooses the first one if there's ambiguity]
+Table of GameRoomIDs (continued)
+Object	Name
+Smith Haven Mall Lot South	"Smith Haven Mall Lot South"
+
+Smith Haven Mall Lot South is a room. It is fasttravel.
+
 Table of GameRoomIDs (continued)
 Object	Name
 Smith Haven Mall Lot North	"Smith Haven Mall Lot North"
@@ -17,12 +24,6 @@ Object	Name
 Smith Haven Mall Lot East	"Smith Haven Mall Lot East"
 
 Smith Haven Mall Lot East is a room.
-
-Table of GameRoomIDs (continued)
-Object	Name
-Smith Haven Mall Lot South	"Smith Haven Mall Lot South"
-
-Smith Haven Mall Lot South is a room. It is fasttravel.
 
 Table of GameRoomIDs (continued)
 Object	Name
