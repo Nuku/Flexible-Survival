@@ -122,7 +122,7 @@ When Play begins:
 	add "Homo Sapiens" to infections of MaleList;
 	add "Homo Sapiens" to infections of BipedalList;
 	now Name entry is "Homo Sapiens";
-	now enemy title entry is "Caveman";
+	now enemy title entry is "Homo Sapiens";
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The primitive tribesman feints with his spear, then kicks you as you dodge.[or]He whirls the spear around, using its end to whack you in the side.[or]Closing up with you, the man throws a punch that has you seeing stars for a moment.[at random]";

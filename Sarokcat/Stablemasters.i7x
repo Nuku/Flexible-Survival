@@ -132,7 +132,7 @@ Carry out Slavelearning:
 		let Tc be 0;
 		let Tstr be -1;
 		if strength of Player < str entry:
-			incease Tc by 1;
+			increase Tc by 1;
 			now Tstr is Tc;
 		let Tdex be -1;
 		if dexterity of Player < dex entry:
@@ -141,7 +141,7 @@ Carry out Slavelearning:
 		let Tsta be -1;
 		if stamina of Player < sta entry:
 			increase Tc by 1;
-			now Tsta is Tx;
+			now Tsta is Tc;
 		let Tper be -1;
 		if perception of Player < per entry:
 			increase Tc by 1;
