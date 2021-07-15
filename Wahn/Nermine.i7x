@@ -773,7 +773,7 @@ to NermineRequestHelp:
 			say "     'How wonderful!' Nermine says as you proudly hold out the small vial of dark liquid to her. 'And Nermine's eager visitor got it so nice and fast too! Just the best helper ever!' the jackal-woman exclaims as she reaches over and runs her clawed hand through your fur several times. You find yourself groaning in pleasure under her soft touch, both at the feel of her hand on your fur, but also from the sheer joy of making your lovely jackal mistress so very happy. Before you can examine that thought more closely, Nermine stops petting you and carefully begins to stow the heady wine safely away. 'Nermine has a customer seeking the best party wine ever, who asked her for help. She is sure that with a few drops of this wine in his drink, her customer and his guests will enjoy their best party ever. She just knows he will love being happy drunk Nymph-chasing Satyr,' the jackal-woman says with a grin on her face as she turns back to you, pulling an item out from under the counter as she does so. 'And Nermine has a lovely reward for her wonderful helper as well!' she says happily as she hands you another of those strangely carved jackal totems. 'Just use that to become more like a jackal, and then maybe Nermine and her friend can celebrate helping customers - together in the back room sometime...";
 			ItemGain jackal totem by 1;
 			say "[bold type]You gain 30 Xp![roman type][line break]";
-			increase XP of Player by 20;
+			increase XP of Player by 30;
 			now Nerminehelpstatus is 4;
 			stop the action;
 		else:
