@@ -235,7 +235,7 @@ to say roopubsex2:
 	else:
 		say "     Grabbing the little guy, you grin as you grab his tail and fondle his bottom. [if HP of Gillian < 4]The serving girl[else]Gillian[end if] winks to you as she clears a spot on the table, making room for you to bend the girly young boomer over it. You spread his cheeks and look at his tight, pink pucker, ready and waiting for you. Lining up your [Cock of Player] cock with his tailhole, you dribble pre onto it as he moans in anticipation. After a little teasing, you press forward, slipping into his bottom rather easily, clearly a well-practiced roo at bending over for the big boomers. With a few thrusts, you sink your shaft into him and start fucking him while the others around the table watch the show. Reaching around, you take the roo's throbbing cock in hand and pump it firmly. You go for a nice, slow ride to get him good and worked up before finishing with a few hard thrusts that make him blast his load into an empty stein someone holds out. Watching the girly young male beneath you guzzle down his own cum when the mug's handed to him, you push hard into him one last time and paint his bowels with your seed. Giving him a little swat on the ass, you withdraw and take your seat again, laughing as he's pulled into the lap of another for sloppy seconds.";
 		CreatureSexAftermath "Red Kangaroo" receives "AssFuck" from "Player";
-[Bookmark]
+
 to say roopubsex3:
 	say "     The big-breasted jill in your arms giggles sweetly and takes your cock in her paws. Rubbing at your stiff meat, she presses her ample bosom to your chest.";
 	say "     [bold type]Her breasts, you feel, would give a fine titty-fuck, though a ride in your lap may be more what you're in the mood for this time.[roman type][line break]";
