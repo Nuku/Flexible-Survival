@@ -320,7 +320,7 @@ to say EresDesc:
 	say "     Eres is a bipedal lioness girl standing around six feet tall with orange and yellow fur and a gorgeous face that closely resembles her sisters. Unlike her older sister however Eres has a much thinner and lithe from frame. Eres sports a fairly chaste knee long white skirt and matching blouse, a hole poking out of her skirt lets her tail swish freely around.";
 
 instead of conversing the Eres:
-	say "     You walk up and say hello to the lovely lioness. Eres pokes her head up from a small journal she was writing in and gives you a shy smile. [first time]'Oh, hello there I don't think we've actually formally met. I'm Eres.' [only]She lays a paw out to shake which you do. After some casual talk you ask her about herself. She flashes you a coy smile. 'I uses to study economics here, you know before everything happened. I suppose now I just take it day by day, usually in the library reading about out past.' She gazes back down to her journal smiling fondly.";
+	say "     You walk up and say hello to the lovely lioness. Eres pokes her head up from a small journal she was writing in and gives you a shy smile. [first time]'Oh, hello there I don't think we've actually formally met. I'm Eres.' [only]She lays a paw out to shake which you do. After some casual talk you ask her about herself. She flashes you a coy smile. 'I uses to study economics here, you know before everything happened. I suppose now I just take it day by day, usually in the library reading about the past.' She gazes back down to her journal smiling fondly.";
 
 instead of fucking Eres:
 	say "     What exactly do you plan on doing with the young lioness?";

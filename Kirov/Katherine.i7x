@@ -231,7 +231,7 @@ to say KatherineQuest1:
 	say "     Katherine's eyes brighten, and she nearly shouts 'Fantastic!' before catching herself with an embarrassed smile. 'I mean... I'm glad you're willing help.' She takes you by the hand and eagerly guides you out of the library, explaining along the way. 'There's one item in particular that I think you might be able to help with.' You follow the canine out the door and into the perils of the nanite-infested city, happy to embark on a journey to aid your loyal friend.";
 	WaitLineBreak;
 	say "     You and the German shepherd navigate the ruined streets, careful to avoid any confrontations where you can. A handful of creatures here and there prove unavoidable, but your own presence, complimented by the tough-looking bitch at your side, is more than enough to make them think twice before starting anything. The rest of your journey is uneventful, and Katherine eventually leads you to a small apartment building before turning to you.";
-	say "     'This is where I was holed up before I found you,' she says. 'At least I think it was.' You see her frown as she struggles to remember if she's in the right place. While she's concentrating on her thoughts, you step inside to take a look around. Relative to some of the other builidngs you've seen, this one looks much more worn down, with smashed furniture strewn about and gaping holes in the walls revealing the skeletal piping, mangled beyond repair. You doubt any sane survivors are still holed up here, and you breifly wonder how Katherine could tolerate the place before you remember that she had nearly lost her mind to the infection.";
+	say "     'This is where I was holed up before I found you,' she says. 'At least I think it was.' You see her frown as she struggles to remember if she's in the right place. While she's concentrating on her thoughts, you step inside to take a look around. Relative to some of the other buildings you've seen, this one looks much more worn down, with smashed furniture strewn about and gaping holes in the walls revealing the skeletal piping, mangled beyond repair. You doubt any sane survivors are still holed up here, and you briefly wonder how Katherine could tolerate the place before you remember that she had nearly lost her mind to the infection.";
 	say "     Just as your thoughts turn back to the shepherd, she pokes her head in after you. She glances around and says, 'Ya, this is the place. Just under the stairwell is where I hid my stash.' She points towards the stairs, and you see a small cupboard tucked away underneath. The both of you approach the door, but before you can reach out to open it, it's slammed open seemingly of its own accord, causing you both to jump back.";
 	now inasituation is true;
 	challenge "Latex Fox";
@@ -398,7 +398,7 @@ to say KatherineSexMenu:
 				increase XP of Katherine by 1;
 				wait for any key;
 		else if calcnumber is 0:
-			say "     Deciding you're not in the mood afterall, you wave the German shepherd off, leaving her to her own devices.";
+			say "     Deciding you're not in the mood after all, you wave the German shepherd off, leaving her to her own devices.";
 			now sextablerun is 1;
 	clear the screen and hyperlink list;
 

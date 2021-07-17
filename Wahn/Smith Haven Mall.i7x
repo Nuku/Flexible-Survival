@@ -6,6 +6,13 @@ Smith Haven Mall by Wahn begins here.
 
 Section 1 - Mall Area
 
+[The south room has been moved to the top to avoid errors being thrown if 'AddNavPoint Smith Haven Mall Lot' is used instead of 'AddNavPoint Smith Haven Mall Lot South' inform looks at the order in which the rooms are declared and chooses the first one if there's ambiguity]
+Table of GameRoomIDs (continued)
+Object	Name
+Smith Haven Mall Lot South	"Smith Haven Mall Lot South"
+
+Smith Haven Mall Lot South is a room. It is fasttravel.
+
 Table of GameRoomIDs (continued)
 Object	Name
 Smith Haven Mall Lot North	"Smith Haven Mall Lot North"
@@ -17,12 +24,6 @@ Object	Name
 Smith Haven Mall Lot East	"Smith Haven Mall Lot East"
 
 Smith Haven Mall Lot East is a room.
-
-Table of GameRoomIDs (continued)
-Object	Name
-Smith Haven Mall Lot South	"Smith Haven Mall Lot South"
-
-Smith Haven Mall Lot South is a room. It is fasttravel.
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -272,7 +273,7 @@ To say mallrestroom:
 	If findwires is 2 and fixedgens > 2: [power on]
 		say "     It's still fairly dark in the restroom, the few working lights left randomly flickering off and on. Not particularly feeling the urge for some electric shock therapy, you make sure to avoid any puddles of standing water in case they are electrified. While there are a number of working stalls in the front, a portion in the back of the room has been destroyed. What were once walls there are now just piles of rubble now, surrounding a large hole in the floor. From some of the broken faucets, water dribbles down the pipes and drips to the floor, forming small puddles. You occasionally hear [one of]soft growls[or]the scraping of something hard on concrete[or]what sounds like passionate squeaking[or]loud growling and several splashes[or]the squeaking of rusty hinges[at random] coming from the depths of the hole. Who knows what's [Bold Type]down[roman type] there...";
 	else:
-		say "     With just the light of you lantern, it's hard to see very far around you, and it's hard to shake the feeling that you are not alone in the dark. While there are a number of working stalls in the front, a portion in the back of the room has been destroyed. What were once walls there are now just piles of rubble now, surrounding a large hole in the floor. You occasionally hear [one of]soft growls[or]the scraping of something hard on concrete[or]what sounds like passionate squeaking[or]loud growling and several splashes[or]the squeaking of rusty hinges[at random] coming from the depths of the hole. Who knows what's [Bold Type]down[roman type] there...";
+		say "     With just the light of your lantern, it's hard to see very far around you, and it's hard to shake the feeling that you are not alone in the dark. While there are a number of working stalls in the front, a portion in the back of the room has been destroyed. What were once walls there are now just piles of rubble now, surrounding a large hole in the floor. You occasionally hear [one of]soft growls[or]the scraping of something hard on concrete[or]what sounds like passionate squeaking[or]loud growling and several splashes[or]the squeaking of rusty hinges[at random] coming from the depths of the hole. Who knows what's [Bold Type]down[roman type] there...";
 
 
 the scent of Mall Restroom is "It smells kind of bad in here with the open hole to the sewers.".
