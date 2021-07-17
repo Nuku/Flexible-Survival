@@ -1,8 +1,9 @@
-Version 1 of Damien by Gherod begins here.
+Version 2 of Damien by Gherod begins here.
 
 "Adds Damien to the game, a young demon hunter and scavenger who first begins as a human."
 
 [Version 1 - File Created, with Intro event and NPC consolidation]
+[Version 2 - Introducing demonic dragonmorph Damien]
 
 [ DamienIntro RESOLUTION STAGES ]
 [ 0 - Event Unresolved ]
@@ -18,12 +19,15 @@ Version 1 of Damien by Gherod begins here.
 [ DamienTF RESOLUTION STAGES ]
 [ 0 - Default TF path ]
 [ 1 - Talked to Toron about Damien ]
-[ 2 - Gave drink at least once ]
+[ 2 - Gave drink a couple of times and spoke to Toron about diminishing effects]
+[ 3 - Gave changed drink, Damien transformed physically - GOES AWAY TEMPORARILY]
 
 [ Stats ]
 [ Strength ]
 [ 0 - Uncorrupted ]
 [ 1 - Had first drink ]
+[ 2 - Talked to Toron again ]
+[ 3 - Had altered version once ]
 
 Section 1 - Intro Sequence
 
@@ -180,7 +184,9 @@ to DamienIntroEnding:
 Section 2 - Damien NPC
 
 An everyturn rule:
-	if Resolution of DamienIntro > 1 and Resolution of DamienIntro < 5:
+	if Resolution of DamienTF >= 3: [TF stage on 3, takes priority. Damien is not freely accessible]
+		now Damien is nowhere;
+	else if Resolution of DamienIntro > 1 and Resolution of DamienIntro < 5:
 		if daytimer is night and DamienScavengingCooldown - turns > 5:
 			now Damien is in Dark Alley;
 		else:
@@ -358,35 +364,6 @@ to say DamienTalkSex:
 	else if Libido of Damien is 3:
 		say "     Might as well ask about how his sex life is going. 'Pretty damn good. Honestly, it was never this good. Damn, I really gotta thank you for that. Any chance you're free to receive it?' he says with a wink and a mischievous smile, poking you with his leg and inviting you to come closer.";
 		say "     If you wanted to, you could accept his offer...";
-
-to say DamienTalkDrink:
-	if carried of obsidian coin < 3:
-		say "     You think about it, but then realize you might not have enough obsidian coins. Maybe [bold type]three[roman type] would be enough to buy a Hellfire Draconic Special... If you are certain about it.";
-	else if lastfuck of Damien - turns < 5:
-		say "     You have already fooled around with Damien enough for a night. Perhaps some other time?";
-	else:
-		say "     Are you really going to do this? It would be really easy to trick Damien into drinking another Hellfire Draconic Special, and Toron would appreciate the opportunity to study its results, but who knows what that might do to the scavenger. If it is anything similar to what Damien told you, before, you two will end up having sex, most likely.";
-		Linebreak;
-		say "     ([link]Y[as]y[end link]) - Do it.";
-		say "     ([link]N[as]n[end link]) - On second thought... Don't do it.";
-		if Player consents:
-			LineBreak;
-			now DamienDoneTalking is true;
-			say "     As you process this in your mind, you tell Damien that you would like to buy him a special drink. 'Oh? Sure thing, I accept!' He promptly replies, and with that done, you turn to Toron and ask for a Hellfire Draconic Special. The bartender knowingly smiles at you as he says 'Right on' and begins its preparation. Now, you only have to wait until it is ready and offer it to Damien, who is eagerly expecting his gift.";
-			say "     'Hope he enjoys it.' Toron then hands you the drink, which has this sort of fiery orange tone, bubbling from the bottom, and you walk back to Damien in order to give it to him.";
-			if Strength of Damien is 0:
-				say "     As he takes hold of the glass, he seems to be inspecting it with a frowned eyebrow. 'What's this? Looks familiar...' He asks, and before he thinks it might be the same drink he had from before, you tell him that it is a Toron's special he recommended especially for him, as a token of good esteem. 'Oh, really?! Wow, I didn't expect him to feel that way... I'm flattered!' He then takes a sip, and from the way he looks at you afterwards, he seems to really like it. 'Oh, wow... This tastes amazing...!' He praises the drink before chugging it down in mere seconds, then places the glass back on the counter as he savors its aftertaste.";
-				say "     'You know what, I should repay you...' says Damien, who then proceeds to grab your hand and pull you to him, now close enough for him to whisper in your ear. 'Let's head over the restroom... I wanna fuck you so hard!' This burst of confidence has him simply leading you over there with that predatory and lusty look in his gaze.";
-				WaitLineBreak;
-				say "[DamienHRBSex]";
-			else if Strength of Damien is 1:
-				say "     'Oh, it's this again! Are you trying to tell me something?' He asks you with a suggestive grin as he chugs it down, keeping eye contact with you. 'Ahh... Tastes great... Feels great... And you know what else would feel great?' . Damien continues, grabbing your hand and pulling you to him as he whispers in your ear - 'Your [if player is female]pussy[else]ass[end if] on my cock.' With this burst of confidence, the scavenger simply leads you over to the restroom with that predatory and lusty look in his gaze mere seconds after having the drink just you offered him.";
-				WaitLineBreak;
-				say "[DamienHRBSex]";
-			ItemLoss obsidian coin by 3;
-		else:
-			LineBreak;
-			say "     You drop the idea before you verbalize it.";
 
 Section 2-1-1 - Damien Talk Scavenge Events
 
@@ -690,7 +667,75 @@ to say DamienSexAradEgranFoursome:
 	NPCSexAftermath Player receives "OralCock" from Arad;
 	NPCSexAftermath Player receives "AssFuck" from Egran;
 
-Section 3 - Damien Special Scenes
+Section 3 - Damien TF Quest
+
+to say ToronTalkDamien:
+	if Strength of Damien < 1:
+		say "     After having met Damien, you eventually realized he had ties with the Hellfire Club, and Toron could have known something about him, so you decide to forward some questions to the bartender. 'Ah... that one peculiar human... Yes, I know who he is. How could I've not...' - he replies, sounding a bit ironic - 'Ever since he had a Hellfire Draconic Special, he became somewhat famous around the club. That is, until he went crazy and began trying to set traps to catch demons. Poor thing, he never realized we could see him coming from miles away, and we do have scouts to detect dangers in the vicinity... Either way, he had a quite unique reaction to that drink which was unknown to me, and then I realized it had adverse effects when drank by someone vulnerable to the nanites.'";
+		say "     You ask him more about that drink, just in case. 'The Hellfire Draconic Special is like a stronger variant of the Hellfire Swizzle, and it's a limited edition, mostly. It would be interesting to further test its effects on that human, but Mogdraz wouldn't let me do it on my own initiative... Perhaps someone else can, if the drink is ordered... Who knows.'";
+		if Resolution of DamienIntro is 99:
+			say "     It seems Toron would be interested in having Damien drink that special a few additional times, though as he will never be back, the bartender will not have that [']test subject['] he so much wants. Perhaps that is for the best.";
+		else:
+			say "     Is he actually suggesting...? 'No, I'm not suggesting anything. How preposterous.' Oh, right, he can read your thoughts. But you would never trick Damien into gulping down a transformative drink... Would you?";
+			now Resolution of DamienTF is 1;
+	else if Strength of Damien is 1:
+		if Resolution of DamienTF is 1:
+			say "     After having offered Damien his special drink and noticing its diminishing effects, you decide to ask Toron more about it, explaining what you have observed since he started taking the Hellfire Draconic Special. The black demon clears his throat as he thinks of a few possibilities. 'Hm... seems like an acquired immunity to me. Perhaps the drink is not strong enough to push through the nanites in his system. Or maybe it has reached its transformative potential, which in that case it's quite disappointing... But I haven't made the drink with the purpose of transforming those who have it. I could, however, try to enhance its effects... See how far we can push his body...'";
+			say "     A smirk forms across the corner of his mouth as he ponders some ideas. 'Leave it to me. The next time you want to pay him another round, I'll have something new for you to try out. It's entirely your responsibility, though. Remember.'";
+			now Resolution of DamienTF is 2;
+		else:
+			say "     After having offered Damien his special drink and noticing its diminishing effects, you decide to ask Toron more about it. 'The drink is ready, all you have to do is ask, give and see what happens.'";
+	else if Resolution of DamienTF is 3:
+		say "     You ask Toron about Damien, who seems to have gone away after your last, but memorable, encounter, hoping that he knows something about his whereabouts. The dark demon draws a grin on the corner of his mouth as he gives one glass a good polish. 'He's around. Said he needed some time to himself after the... new changes in his form, which are totally your fault. Nevertheless, he made himself clear of one thing... He'd come back for you.' These last words send a chill down your spine as Toron glares intensely at your eyes. 'I'm not certain his corrup-... uhm, generous improvement is complete, though. He seemed to still retain some guilt after your deed. Nothing a few additional tonics won't fix... That is, if you want an obsessed, overly-dominant brute of a hellfire draconic demon using you as a cock-sleeve for the rest of your life.'";
+		say "     A nervous laugh escapes your mouth, and you are not even sure why. 'Oh, I don't judge. The thought does seem appealing. What was his name... Iker, I believe, found it so, as well. Guess where that took him...' You remember Iker being Damien's friend, who sold his soul to Mogdraz, but for reasons that are yet unclear, since you have heard so many from Damien himself. 'Iker was not tricked into it. That goes against Lord Mogdraz's code of honor. It was a completely willing contract... It does make one wonder what would cause such a person to want to submit to a demon so badly, doesn't it?' Giving it some thought, you are able to draw conclusions from these facts, but Toron saves you the trouble.";
+		WaitLineBreak;
+		say "     'Who corrupted who... Guess you're about to find out... Once he comes back, that is. And he will, oh I'm sure.'";
+
+to say DamienTalkDrink:
+	if player is dominant:
+		say "     Note that if you intend to pursue this path, Damien will shift towards a much more dominant personality, and given your [bold type]Dominant[roman type] trait, that might be something you do not want. There will be no way to offer any resistance against his efforts to subdue you. Are you sure you wish to proceed with this?";
+		Linebreak;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
+		if Player consents:
+			Linebreak;
+		else:
+			stop the action;
+	if carried of obsidian coin < 3:
+		say "     You think about it, but then realize you might not have enough obsidian coins. Maybe [bold type]three[roman type] would be enough to buy a Hellfire Draconic Special... If you are certain about it.";
+	else if lastfuck of Damien - turns < 5:
+		say "     You have already fooled around with Damien enough for a night. Perhaps some other time?";
+	else:
+		say "     Are you really going to do this? It would be really easy to trick Damien into drinking another Hellfire Draconic Special, and Toron would appreciate the opportunity to study its results, but who knows what that might do to the scavenger. If it is anything similar to what Damien told you, before, you two will end up having sex, most likely.";
+		Linebreak;
+		say "     ([link]Y[as]y[end link]) - Do it.";
+		say "     ([link]N[as]n[end link]) - On second thought... Don't do it.";
+		if Player consents:
+			LineBreak;
+			now DamienDoneTalking is true;
+			ItemLoss obsidian coin by 3;
+			if Resolution of DamienTF < 2:
+				say "     As you process this in your mind, you tell Damien that you would like to buy him a special drink. 'Oh? Sure thing, I accept!' He promptly replies, and with that done, you turn to Toron and ask for a Hellfire Draconic Special. The bartender knowingly smiles at you as he says 'Right on' and begins its preparation. Now, you only have to wait until it is ready and offer it to Damien, who is eagerly expecting his gift.";
+				say "     'Hope he enjoys it.' Toron then hands you the drink, which has this sort of fiery orange tone, bubbling from the bottom, and you walk back to Damien in order to give it to him.";
+				if Strength of Damien is 0:
+					say "     As he takes hold of the glass, he seems to be inspecting it with a frowned eyebrow. 'What's this? Looks familiar...' He asks, and before he thinks it might be the same drink he had from before, you tell him that it is a Toron's special he recommended especially for him, as a token of good esteem. 'Oh, really?! Wow, I didn't expect him to feel that way... I'm flattered!' He then takes a sip, and from the way he looks at you afterwards, he seems to really like it. 'Oh, wow... This tastes amazing...!' He praises the drink before chugging it down in mere seconds, then places the glass back on the counter as he savors its aftertaste.";
+					say "     'You know what, I should repay you...' says Damien, who then proceeds to grab your hand and pull you to him, now close enough for him to whisper in your ear. 'Let's head over the restroom... I wanna fuck you so hard!' This burst of confidence has him simply leading you over there with that predatory and lusty look in his gaze.";
+					WaitLineBreak;
+					say "[DamienHRBSex]";
+				else if Strength of Damien is 1:
+					say "     'Oh, it's this again! Are you trying to tell me something?' He asks you with a suggestive grin as he chugs it down, keeping eye contact with you. 'Ahh... Tastes great... Feels great... And you know what else would feel great?' . Damien continues, grabbing your hand and pulling you to him as he whispers in your ear - 'Your [if player is female]pussy[else]ass[end if] on my cock.' With this burst of confidence, the scavenger simply leads you over to the restroom with that predatory and lusty look in his gaze mere seconds after having the drink just you offered him.";
+					WaitLineBreak;
+					say "[DamienHRBSex]";
+			else if Resolution of DamienTF is 2:
+				say "     As he takes hold of the glass, he seems to be inspecting it with a frowned eyebrow. 'Oh, it's this again, but... It looks a tad different, doesn't it?' This makes you slightly nervous as you consider that he might have noticed something suspicious... 'I think it's the smell, feels stronger. More intense, even. Toron's really putting an effort on these, huh? That or he really wants me drunk quickly!' Relief begins settling in as you feel that he does not mind this change and is not associating it with anything he should not, which is great. But then, he looks at you, right in your eyes, very intensely. 'You know how I get after I have one of these... But you keep buying them for me.'";
+				WaitLineBreak;
+				say "     Damien takes a single sip, barely a taste of it, before he continues to speak. 'I'm not completely unaware of your intentions, friend... I've seen the way you and Toron look at each other, as if you had something going on between the both of you. Then you come with my favorite drink, which triggers a very familiar reaction on me...' He takes yet another sip, still with his gaze frozen stiff on you. 'You remind me of Iker... You know he was the one always treating me at the bar? Hm... Don't think I've told you that way, last time I mentioned it... But I'm starting to remember things more clearly, now.' He gets comfortable sitting on his stool, spreading his legs and giving you a clear view of his bulge. You know that the only way he can have one is if he is already getting hard.";
+				say "     He then chugs his drink all the way, that bump between his legs growing considerably while he finishes gulping all the liquid down his throat. Just then, you feel this sort of impending aura surging through the scavenger. He begins to look bigger in your eyes, powerful and domineering, as he confidently eyes you up. 'We should go to my room. I think we need talk... In private.' He says, winking at you as he gets up, shameless of his boner which is highly noticeable by anyone who looks at him, brings his hand over your back and leads you towards the privacy of his rented bedroom.";
+				WaitLineBreak;
+				say "[DamienTFRoom1]";
+		else:
+			LineBreak;
+			say "     You drop the idea before you verbalize it.";
 
 to say DamienHRBSex:
 	say "     As he takes you to the restroom, you both making out wildly as he feels you up all over with his hands, touching your butt and squeezing your cheeks as his tongue wiggles all over yours, you soon hear a clink sound as he slides a coin down the booth's lock, unlocking its door. Without any further words, he simply pulls you in and [if player is not naked]begins to strip you of all your clothes, as he does the same for himself[else]begins to strip himself of all his clothes[end if], to then rub his athletic physique against yours, skin on skin with no barriers in between. His kissing is deep and passionate, boiling with lust, and his draconic dong is quick to emerge and throb while sandwiched between you both.";
@@ -782,15 +827,77 @@ to say DamienHRBSex:
 	else if Strength of Damien is 1:
 		say "     Once you take a moment to breathe and Damien's knot shrinks, he pulls out and helps you up. 'It's fun owning and fucking you. I'm really starting to enjoy it... Honestly, I don't care if you're into it or not, anymore. I'm just gonna do it and make you mine...' he approaches you, once more, locking his eyes on yours as he whispers 'You belong to me, now...' These words echo in your mind, and they feel so right that you cannot refuse them. It is as if you instinctively wanted to follow them through and nod. Though, this trance is broken once he gives out a chuckle. 'Just kidding! I'm only teasing you because you really seemed to like that. Fuck, I admit, it's fun! I could put you on a leash, sometime... Okay, I swear I'm joking now, too. But hey, if you wanna try it sometime, I'm down.'";
 		say "     Damien then gives you a kiss on the lips, a tap on your butt, and leaves the room after winking at you. He is still a goofball, after all, even though he seems to enjoy dominating you. But the way he seems to be able to weaken your will is somewhat worrying, especially because he does not seem aware of it. Though, maybe the [bold type]hellfire draconic special is safe for him to drink, for the time being[roman type]? There was no change since the last time... But things could be different in a near future.";
+		say "     [bold type]Perhaps Toron would have something to say about this?[roman type][line break]";
 	if player is female:
 		NPCSexAftermath Player receives "PussyFuck" from Damien;
 	else:
 		NPCSexAftermath Player receives "AssFuck" from Damien;
 	WaitLineBreak;
-	say "<< Author's Note: This ends here, for now. You may replay the scene as many times as you want until more content is added. >>";
 	now HRBCockLength1 is 0;
 	now HRBCockLength2 is 0;
 	now HRBCockLength3 is 0;
+
+to say DamienTFRoom1:
+	say "     As you are brought here, you notice a strong scent intruding your nostrils, almost pheromonal, filling you with an odd excitement. You look into Damien's eyes, not even thinking about resisting those fiery orange orbs gazing upon you, his slitted pupils growing into you as you dive into them... It makes his touch give you a hot tingle all over your body, those strong hands of his running over your cheek like they own you, bringing you over to the bed with little effort. The air feels much hotter, just as if you were in the presence of some living fire at mere inches in proximity. He holds you close, his breath tickling your face as your bodies come in close contact.";
+	say "     Then, he begins to speak, his voice low but firm. 'After the second, I began to get suspicious of you. But it appears you've enjoyed the results...' A grin draws across his face as, with newfound strength, he pushes you onto the bed, making you fall onto the bouncy mattress on your back as he looks at you from above, beginning to remove his top clothes. 'That's how it started with Iker, as well. I remember now... The way he looked at me when I made sweet love to him, his eyes begging me for more... I couldn't even look away...' He takes off his shoes and pants as well, always keeping eye contact with you[if player is not naked], and an urge strikes you to remove your own gear while you hear Damien speaking[end if]. Though, once you have a good look at the scavenger's naked body, you realize there are bits of red scales here and there, not to mention his significant muscle growth, which explains his surprising strength.";
+	WaitLineBreak;
+	say "     What most draws your eyes, however, is his draconic cock, even bigger and thicker than before. Those former nine inches must have become at least ten with additional girth, a raging erection that does not suggest it will be satisfied with little. 'Oh, you like this?' He asks you, grabbing his dong and touching slightly to the side, letting it come back to place with the force of its hardness alone. 'The reason that little slut sold his soul was because I turned him into a needy bitch. Once I realized what I had done, I ran away and put the blame on the demons for trying to corrupt me... and him through me.' Damien then climbs onto the bed, his knees and hands on each side of your body as he leans his head down, on all fours just above you.";
+	say "     'But you helped me find my true self. Why should I refuse what my body wants me to become? And you seem to enjoy it a lot... So... Why fight it?' The now more powerful Damien has no problem keeping you pinned down below him as he straightens his torso, moving his crotch area closer to your face, and his dragon penis comes down to hit you hard on the cheek as he chuckles. 'And if I have to blame someone, that would be you. This is entirely your fault, indeed. You brought this on yourself, friend...' You think he is mostly entertaining himself cockslapping you like that, then rubbing his cock across your face anywhere away from your lips. 'Now, you have to compensate me, because... How else am I suppose to sate these overbearing lusts you're making me go through? I need someone to dump my loads in... And since you've volunteered...'";
+	WaitLineBreak;
+	say "     No more words come from his mouth as he brings the tip of his meat to your lips, now able to part in order to wrap around that girthy red log as he slowly pushes it in. Damien lets you taste his cock at your own pace, feeling your tongue wiggling around his shaft as it keeps on throbbing with increasing desire. All he does is just ever so slightly push it in and out, very gently as his hand slides under the back of your head, stroking you seemingly in an affectionate manner. Such self-control on his behalf creates a need in you to really put on a good effort at sucking his dick, so you push your neck muscles to their limit as you attempt to swallow more inches of his draconic cock. Noticing your dedication, he lets out a pleased hum as his finger caresses your skull.";
+	say "     'You're so eager to please me, aren't you? I bet I wouldn't have to move a muscle and you'd still milk every load out of me...' His grasp around your head tightens progressively harder, to the point he has got hold of your skull, but his moves are still gentle. You find yourself taking more of his cock as he pulls you, then he begins to thrust into your throat at a slow pace the first few times. After a bit, however, he goes deep, with a grin on his face, and holds his dick inside. That sizable length of his throbs like mad while you do your best at swallowing it, holding your breath for several seconds until the scavenger steadily pulls it out, then past your lips, and finally lets go of you.";
+	WaitLineBreak;
+	say "     'Mmph... Fuck, that throat feels good. I know what I wanna do with you, now...' He says as he stands on his feet above you, then moves to the other side of the bed. You do not see him for brief moments, until his hands come grab you by under your arms and pull you across the sheets towards him. You remain lying down on your back as your head arrives past the edge of the bed and between Damien's legs, who stands with a cock harder than ever in hand, contemplating what he is about to do. 'C'mon, open wide for me... I'll facefuck you properly, this time.' Such confidence has you helpless against his orders, and you find yourself mindlessly obeying the command, dropping your chin to give him what he wants. He puts his hand on your cheek in a painless slap, but a less gentle movement, nonetheless, as he aims his red meat at your open mouth. 'Good slut. Take it.'";
+	say "     Damien pushes his cock all the way into your mouth, even down your throat. This position makes it easy for him to simply go as deep as he pleases, stretching your esophagus to accomodate the girth of his lizard manhood. As his hands quickly move to hold your head in place, you feel oddly safe under his care... and properly owned, as he proceeds to throatfuck you. Slowly and steadily, at first, the young man lets his primal desires take charge, progressively getting harder on you as his thrusts get more powerful, forcing you to swallow his entire length as he drills you deep. Grunts fill the room as he takes great pleasure in feeling the insides of your neck clinging around his penis, which only throbs as it goes in and out of your throat.";
+	WaitLineBreak;
+	say "     Though, after several more thrusts, you begin to hear something in his voice changing. His tone becomes deeper, wilder and... Somewhat demonic, even. You know this since you are familiar with demons, but you cannot see anything else other than Damien's taint in front of your face as he continues to relentlessly fuck your face. 'Fuck... What's this feeling...?' You hear him acknowledging something different going on with him, but he does not stop. Your throat is still his, and whatever is happening only seems to further excite him. 'Feels so fucking good...! So... powerful...! I might even... hnng!' Suddenly, you feel that thick piece of meat throb angrily as a very hot and creamy liquid beings to pour down your throat!";
+	say "     'Ahh... Fuck yeaaah! Have my load, slut! Drink it all up...!' Damien's deep grunts almost make the whole room tremble as his nearly boiling cum makes its descent through your body, filling up your belly with such a generous deposit that you cannot help but feel stuffed. A human could definitely not cum this much! But your eyes remain in the dark as he buries his length deep down in you, his orgasm persisting. As you are close to run out of breath, he pulls out, and a massive gush still comes raining down on your face, covering your features with a couple additional thick shots. Droplets of cum slowly slide down your face as he grabs you by the back of your skull and shoves your face between his buttocks, musclebound and larger than you remember.";
+	NPCSexAftermath Player receives "OralCock" from Damien;
+	WaitLineBreak;
+	say "     'I'm so fucking horny... Hnng... Lick that hole, little bitch!' It seems he is not done with you as he craves for your tongue in his anal cavity. You dare not to keep him waiting and stick it as deep as you can inside the scavenger's ass, wiggling as enthusiastically as you are able. His insides feel extremely warm, even more than what you would expect from a person, almost at a flame's temperature. It does not burn your tongue, but it does feel really hot as his anus quivers around that slick organ of yours. 'Mmh... How's that? Tastes as good as my dick?' He asks without expecting an answer as he keeps your face firmly planted between his round glutes, holding you still. Strangely, though, you feel something poking at you, above your forehead. Something heavy and seemingly long, a bit scaly...";
+	say "     As he lets go off your head, you find yourself free to look at what it is. A tail! And not just an ordinary one... It is long and covered in dark red scales, ending with a pointy tip, much like a demon's. But when you look up at your friend, your eyes widen. He is standing up straight, looking at you over his shoulder, as a pair of large wings stretch from his wide back. You suppose they are a mix of demon and dragon in terms of looks, with pointy sharp limbs connecting the vast dark red membranes. This visage is quite unbelievable to your senses, as Damien was a plain looking human before... Sure, he had a lizard penis and some strange looking eyes, but what you see before you is something else, entirely.";
+	WaitLineBreak;
+	say "     He takes a step back, only to suddenly push you onto the bed, your ass turned towards him. His force is tremendous, and the bed definitely felt it too as it got shoved a few inches to the side, the mattress aggressively bouncing against you. When you look behind, you can finally see Damien's changed looks, and your heart sinks at the revelation. 'Like my new face? The one you gave me, bitch. You tricked me into becoming this...' There is no trace of apparent human traces left on him besides his antropomorphic shape. He is now a pretty much demonic looking dragonmorph, way taller and stronger than his formerly human form. His dark crimson scales shape a herculean physique, covered in harder bits of obsidian scales protruding from the sides of his silhouette.";
+	say "     These solid and darker scales grew all the way from his shoulders to his waist, covering almost the entirety of his legs, leaving only the inner side of his thighs revealed in red. That draconic dong of his looks massive, like about a foot and a half in length and girthy enough to demand respect, coming out of a visibly scarlet slit. What is truly intimidating about him, however, is his face. While draconic in shape, most of it is covered in an obsidian scale mask, ending in a pair of terrifying horns sticking out to each side. You can still recognize some of Damien's features, especially his eyes, but everything else remains permanently changed by this new configuration. A handsome, demonic dragonmorph, nonetheless, even though his grin could scare anyone away with so many sharp teeth.";
+	WaitLineBreak;
+	say "     His eyes bring out the fear in you as he pierces yours through with his gaze, reminding you of who is in charge. He does not seem angry, at all, but something in him seems to want to punish you for what you have done. 'You brought this on yourself, remember? Now you have to take every last inch of me until you draw you last breath... I'm sure it'll be less dramatic than I make it seem, however. What I mean is...' He interrupts his speech to take hold of your ass, then he spreads your cheeks and lets his cock fall on top of your backdoor. You immediately feel its warmth pulsating against that sensitive area. 'I'm gonna own your ass forever, bitch. You'll never be rid of me... Ever.' With this, he throws an ominous chuckle as his hands take hold of your hips. You know what will come next, as Damien definitely is not done with you.";
+	WaitLineBreak;
+	say "     You are brought towards him as his large erection threatens to drill into your hole, and with no mercy, he begins to shove it in as he maintains hold of your hips. That big cock of his stretches your anal entrance around its girth as it travels deeper inside you, moving in relentlessly without care for what you feel. Either pain or pleasure, as both are so mixed up, take hold of your entire focus as you are invaded by this draconic meat, which Damien simply continues to push all the way in. 'You're feeling really tight there, pal. Something wrong?' He asks, with irony, followed by a chuckle as he gives your buttocks a hard slap. This is when things start to get rough, as the demon dragonmorph thrusts deep into you.";
+	say "     Now, your ass is being properly owned and used by a towering draconic demon you have helped create, being pounded with each thrust harder and deeper than the last. Damien was merely holding your hips and fucking you from the edge of the bed, but he really gets into it and brings one leg over the sheets, in order to lift his weight onto the top of you. His torso descends towards to your back, then his scaly body comes in full contact with yours, and you feel him circling your neck with his thick forearm, taking an effortless hold of your entire skull. You feel a very long tongue licking at the side of your cheek and ear as he lifts you just enough to slide his other hand over your body, fondling your [if Breast Size of player > 0]boobs[else]chest[end if], [if Nipple Count of player > 0]pinching your nipples, [end if]then moving it lower and lower...";
+	WaitLineBreak;
+	say "     'I'd love to see how many times I can make you cum before my needs are sated... I'm wondering if you're even gonna be able to walk out of here.' He almost whispers this to your ear as he [if player is male]takes hold of your cock, with a very tight grasp that makes you moan and squirm[else if player is female]brings his fingers over your drooling cunt, causing you to moan and squirm[else]holds you by your sensitive crotch, making you moan and squirm[end if]. Eventually, Damien lifts your body completely, keeping you kind of sitting on him as he keeps his throbbing dong buried deep inside your ass. This way, he has a lot of freedom to touch your parts in any ways he sees fit, teasing you until you are crying out for release. All you earn is is free hand covering your mouth and forcing you to suck on his fingers. 'Oh no, not yet... I'm not even close. We're just getting started...!'";
+	say "     Each pounding sends your whole body back and forth as he continues to drill you, using his full length to stretch up your insides, and Damien keeps licking at your face in proper domination. He truly enjoys playing with you, and as he senses that you get close to your climax due to his persistent caressing, he stops it altogether, only keeping his warm hand over your crotch, not moving it at all... You can only cry in frustration, which makes him laugh. 'Aw... You wanted to cum already? Thought I'd test how long I can keep you on edge, first... I'm sure you wouldn't mind me doing that, right?' His tone is of pure mockery, each word said amidst deep and slow thrusts... You swear you can feel him throbbing harder each time he fully buries his lizard manhood in your guts.";
+	WaitLineBreak;
+	say "     Suddenly, you find yourself falling on your back and on top of Damien, who leans back to lie down on the bed. He is still grabbing you, his arms around your body as he so slowly caresses your sensitive spots, but once he gets comfortable, he starts pounding you like a battering ram, so hard and so fast you feel like your bowels are going to come off through your mouth. Now, his hands are entirely off your [if player is male]bouncing cock[else if player is female]labia[else]crotch[end if], but such a powerful fucking causes your orgasm to slowly build up, from a point it is only threatening to come... to its inevitable release. He does not slow down nor stop at any moment, keeping up the pace until you are squirming and moaning out loud in spiking pleasure. You hear and feel Damien laughing at you, almost with condescendence.";
+	say "     'Shit... You're cumming from being fucked in the ass alone? What a little bitch you are...!' He throws this comment in as you are still [if player is male]shooting your load all over yourself in utter shame[else]quivering and squirming[end if], with a big dragon dick up your ass. It was so intense that you are left out of breath... but not your partner. He does not yield, not even for a second, and right about you are done with your first climax, he brings his hand back to your [if player is male]cock and strokes it[else]crotch and rubs it[end if] intensely. 'C'mon, how many more can you give me? I'm sure you've still got some [if player is male]cum to shoot[else]to go through[end if], don't you?' Not only he is still fucking you like a beast in heat, you are also being given a crazy amount of overstimulation. Damien rushes to cover your mouth before you can mutter a single word as tears escape your eyes.";
+	WaitLineBreak;
+	say "     'I'm gonna break you, bitch. You'll even forget your own name by the time I'm done fucking you dumb.' He says as, with a swift movement, he pushes your face down on a pillow, all the way back down onto the bed's sheets, and throws himself against you with brute force. You thought he could not go any harder, but here he is, proving you wrong. No human could fuck as hard and fast as he proceeds to once he is, once more, on top of you, almost crushing your body with all that strength of his. He nearly suffocates you on the pillow as he pushes your head against it, and by lifting his body just enough, he uses all the momentum he can create to perform several attempts at rearranging your guts.";
+	say "     At this moment, you begin to feel light-headed. His scent, the ordeal he is making you go through, how he pushes your body over your limits... Your stamina runs short for all the pent-up lust contained in this demonic animal. Though, something at the base of his shaft begins to swell, and that is a good indicative of how close Damien is getting. He starts grunting lowly, of pleasure, as his orgasm threatens to have him release his load for a second time. 'Looks like someone's gonna get bred";
+	if "MPreg" is listed in feats of Player and player is not female:
+		say "... Well, maybe you'd like carrying my babies, too? I bet if I cum in your ass, there's a chance that could happen... Am I right? Maybe I should just try that and see...'";
+	else if player is female:
+		say "... Well, maybe you'd like carrying my babies, as well? Too bad I'm not using the right hole for that... But if you ask nicely, that can be arranged. You'd make a nice mommy.'";
+	else if player is male:
+		say "... How do you like it, carrying a stronger man's cum in your bowels, bitch? Maybe I should do just that, to remind you of your place among the alpha males... as my special cum dump.'";
+	WaitLineBreak;
+	say "     You think he enjoys saying this, as only a few seconds are needed before he lets out a longer grunt. His swollen knot enters your ass and the compulsive throbbing happens then, his load beginning to leave him and entering you. His first orgasm was already considerable, but this one is just ridiculous, as your entire bowels become flooded with hot demonic semen, so much that you even feel your belly bulging out slightly, just as if you got stuffed at a banquet. It is even hard to believe that he would have so much cum stored in him, despite his much bigger size, but most demons have incredibly sized loads... He is definitely no exception, even for a former human. 'Fuuuck! You feel so fucking good...! I...'";
+	NPCSexAftermath Player receives "AssFuck" from Damien;
+	WaitLineBreak;
+	say "     After his climax subsides, Damien goes quiet as he rests half on top of you, leaning more to your side, waiting for his knot to shrink back. You still feel his cock pulsating inside you as its last drops ooze. But things become... strange. Your mind's focus returns, and your transformed friend does not move an inch. A sense of dread falls upon you as you realize the consequences of your actions, with this sudden cease.";
+	Linebreak;
+	say "     ([link]Y[as]y[end link]) - Ask if he is okay.";
+	say "     ([link]N[as]n[end link]) - Remain silent.";
+	if Player consents:
+		LineBreak;
+		say "     Your conscience gets the better of you and you end up asking Damien if he is alright, with quite some difficulty in choosing the right word. He says nothing. Not a single word. An excruciating silence follows as he pulls out of your ass, now able to, and turns his back on you as he stands up from the bed. You feel very sore from all this, almost uncapable of walking, even. Even sitting is quite a challenge, so you decide to remain lying down on the sheets as you glance over the draconic man. His voice is then heard, unnaturally deep, as he gives you a look over his shoulder, managing to pierce your soul in such a dreadful way. 'Look at what you've done. You'll have your answer.' This really is everything you need to know, though those are not his final words. 'I trusted you. But I also didn't care, anymore.'";
+	else:
+		LineBreak;
+		say "     Perhaps it is for the best to remain quiet. He does, anyway, not say a single word during this excruciating silence. At some point, he pulls out of your ass, now able to, and turns his back on you as he stands up from the bed. You feel very sore from all this, almost uncapable of walking, even. Even sitting is quite a challenge, so you decide to remain lying down on the sheets as you glance over the draconic man. Damien then only gives you a look over his shoulder, managing to pierce your soul in such a dreadful way, and speaks with an unnaturally deep voice. 'Is this what you've wanted all along? Congratulations... I guess. Hope you can sleep well at night knowing what you've done... To someone who trusted you.'";
+	WaitLineBreak;
+	say "     Then, he walks away, not even bothering to put his clothes on. They would not fit, either way. You are left alone... In this bedroom, growing colder by the second with the absence of your former friend.";
+	say "     But that is nothing that cannot be fixed with a few more drinks... Right?";
+	now Resolution of DamienTF is 3;
+	now Damien is nowhere;
 
 [***********************************************************]
 [***********************************************************]

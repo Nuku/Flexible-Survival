@@ -191,7 +191,7 @@ to say ToronTalkMenu:
 				else if (nam is "About Xaedihr"):
 					say "[ToronTalkXaedihr]";
 				else if (nam is "About Damien"):
-					say "[ToronTalkDamien]";
+					say "[ToronTalkDamien]"; [on Damien file]
 				else if (nam is "About that odd Angel..."):
 					say "[ToronTalkPurifier]"; [on Araqiel file]
 				else if (nam is "Mogdraz and Araqiel"):
@@ -289,15 +289,6 @@ to say ToronTalkMogdraz:
 to say ToronTalkXaedihr:
 	say "     Now that Xaedihr is known around the club, you figure you could ask Toron if he knows him, too. 'Xaedihr... Yes, I know him well. Too well. I'm not sure if he's told you that, but he is the heir of the Demon Lord in our world. His only son, who saw his father falling into a deeper greed for power, and actually becoming powerful enough to defy Hell itself. Poor kid has seen things... He's not even fully demon, his mother was a human who died giving him birth, as his father is quite an unimaginably strong entity. Never shed a tear for his lover, he was more interested in training Xaedihr to become his successor, and even fused him with an aspect of darkness, leaving him with permanent marks. The tattoo on his shoulder and arm... That's it. And this aspect can be summoned at will, as he has mastered it. Otherwise, the aspect would have taken control of his mind, and possibly to become the Lord's underling. Quite sad if that were to happen.'";
 	say "     Seems like Toron knows a lot more about Xaedihr than even the half-demon himself. 'You saw how he brought down two of Mogdraz's best hellfire demons so easily? You've got a powerful companion on your side... and with a very delicate heart. His tough shell is merely for self-protection. Gain his trust, and you'll have a friend for life, but hurt him, and you'll... be having a bad time.' You thank Toron for sharing this information with you, to which he nods. 'Just keep it discrete. Secrets are not cheap.'";
-
-to say ToronTalkDamien:
-	say "     After having met Damien, you eventually realized he had ties with the Hellfire Club, and Toron could have known something about him, so you decide to forward some questions to the bartender. 'Ah... that one peculiar human... Yes, I know who he is. How could I've not...' - he replies, sounding a bit ironic - 'Ever since he had a Hellfire Draconic Special, he became somewhat famous around the club. That is, until he went crazy and began trying to set traps to catch demons. Poor thing, he never realized we could see him coming from miles away, and we do have scouts to detect dangers in the vicinity... Either way, he had a quite unique reaction to that drink which was unknown to me, and then I realized it had adverse effects when drank by someone vulnerable to the nanites.'";
-	say "     You ask him more about that drink, just in case. 'The Hellfire Draconic Special is like a stronger variant of the Hellfire Swizzle, and it's a limited edition, mostly. It would be interesting to further test its effects on that human, but Mogdraz wouldn't let me do it on my own initiative... Perhaps someone else can, if the drink is ordered... Who knows.'";
-	if Resolution of DamienIntro is 99:
-		say "     It seems Toron would be interested in having Damien drink that special a few additional times, though as he will never be back, the bartender will not have that [']test subject['] he so much wants. Perhaps that is for the best.";
-	else:
-		say "     Is he actually suggesting...? 'No, I'm not suggesting anything. How preposterous.' Oh, right, he can read your thoughts. But you would never trick Damien into gulping down a transformative drink... Would you?";
-		now Resolution of DamienTF is 1;
 
 to say ToronTalkAE:
 	say "     Given the extremely poor condition of the sword you pulled back in the Void Realm, you ask Toron if he knows what it is and if he can do something about it. 'Yes, I could restore the [']what you shouldn't have pulled from a completely and utterly isolated part of the Void Realm['] to its former glory. Not that I should, but whatever, what's done is done. Do you have null essences?' You suppose you've seen some already, but you have to ask how many he would need.";
