@@ -149,6 +149,7 @@ to say DrMattNaniteTalk1:
 
 to say DrMattTalkMenu:
 	LineBreak;
+	let TalkDone be false;
 	project the figure of DrMatt_face_icon;
 	say "     What do you want to talk about with Dr. Matt?";
 	now sextablerun is 0;
@@ -208,20 +209,26 @@ to say DrMattTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Helping him"):
 					say "[DrMattQuestTalk]";
+					now TalkDone is true;
 				else if (nam is "Delivering the samples he needs"):
 					DrMattSampleDelivery;
+					now TalkDone is true;
 				else if (nam is "The results of his examination"):
 					DrMattSusanQuestReturn;
+					now TalkDone is true;
 				else if (nam is "Beginning the experiment with Susan"):
 					say "[DrMattQuestTalk]";
+					now TalkDone is true;
 				else if (nam is "The Nanite Infection"):
 					say "[DrMattTalk1]";
 				else if (nam is "How he ended up here"):
 					say "[DrMattTalk2]";
 				else if (nam is "Communicating with the outside world"):
 					say "[DrMattTalk3]";
-				wait for any key;
-				say "[DrMattTalkMenu]";
+				if TalkDone is false:
+					say "[DrMattTalkMenu]";
+				else:
+					wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You say goodbye to the suited man for now and he turns back to his research instruments with a nod.";
@@ -506,13 +513,16 @@ to DrMattSusanQuestResolution:
 		now Loyalty of Susan is 6; [experiment completed (either way)]
 	else if Loyalty of Susan is 4: [ready for a fuck]
 		say "     'Judging by your expression, I take it you were successful in wooing the young woman? Good, good. I've got everything prepared for the two of you over here.' With that said, he points to the cot that Orthas set up for Susan, now surrounded by three separate cameras. A whole spread of sampling equipment is laid out on a nearby table. 'You can proceed when ready. No need to be shy, I've seen it all before. Well, humans and other primates only, to be specific, but you know what I mean.' With that said, the doctor shepherds you over to his equipment and takes a series of samples from all over your body, then makes you document your physical state in front of the camera, up to and including [if player is male]getting hard and having your cock measured[else if player is female]spreading your folds and showing them off[else]some closeups of your genderless crotch[end if]. At some point, Susan quietly joins, but is not subjected to a similar scrutiny as Dr. Matt still has recent material from her.";
-		now HP of Susan is 2; [ready to fuck]
 		SusanSexMenu;
 		WaitLineBreak;
 		if PlayerFucked of Susan is true: [some sex happened]
 			say "     As your afterglow wears off, you become aware of the fact that Dr. Matt is standing close by, holding sample tubes in his gloved hand. He bids you both to sit on the examination table, then proceeds to take  samples of the fluids you exchanged during intercourse. Susan looks to you with a shy expression as she is swabbed by the doctor, and seeing that she feels a little lost, you reach out to take her hand. The simple touch of her chosen mate is enough to calm the deer herm down immensely, with her giving you a loving smile and ignoring Dr. Matt entirely. A few minutes later, he's done with his examination and has a whole rack of sampling tubes in his hands. 'Thank you both. This opportunity will provide invaluable data, I'm sure of that. I need to get analyzing this immediately!' As the doctor hurries off to get to work, Susan gives your hand a little squeeze, then leans over to kiss you gently. 'Thank you for this. Becoming my mate, and being there when I needed you.'";
 			now HP of Doctor Matt is 8; [post-Susan exam]
 			now Loyalty of Susan is 6; [experiment completed (either way)]
+			if Cock Length of Susan > 10: [m-herm]
+				now HP of Susan is 3; [fucked, m-herm]
+			else:
+				now HP of Susan is 4; [fucked, f-herm]
 		else: [cancelled]
 			say "     As you pull away from Susan, Dr. Matt gives you a questioning look. 'Do you... need anything more to proceed? Please, remember that the results of this experiment might save many lives. I do hope you don't have issues with performance anxiety.' He looks over to Susan, who clearly is ready for spending some intimate time with you, then back at yourself and continues to wait somewhat impatiently.";
 
@@ -531,7 +541,7 @@ to say DrMattQuestTalk:
 		DrMattSusanQuestReminder;
 	else if HP of Doctor Matt is 6:
 		DrMattSusanQuestReturn;
-	else if HP of Doctor Matt is 7 and Loyalty of Susan < 3: [she hasn't agreed to do it yet]
+	else if HP of Doctor Matt is 7 and (Loyalty of Susan < 3 or Loyalty of Susan is 5): [she hasn't agreed to do it yet]
 		DrMattSusanQuestConsent;
 	else if HP of Doctor Matt is 7:
 		DrMattSusanQuestResolution; [end of the rewrite, so far]

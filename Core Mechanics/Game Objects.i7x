@@ -89,7 +89,7 @@ before examining the grab object (called x):
 instead of examining a grab object (called x):
 	say "[the desc corresponding to a object of x in the table of game objects][line break]";
 	repeat through the table of game art:
-		if printed name of x matches the text title entry, case insensitively:
+		if printed name of x exactly matches the text title entry, case insensitively:
 			project icon entry;
 			break;
 	if "Weaponsmaster" is listed in feats of Player and x is an armament:
@@ -145,7 +145,7 @@ Carry out using a grab object (called x):
 
 To process (x - a grab object):
 	repeat through the table of game art:
-		if printed name of x matches the text title entry, case insensitively:
+		if printed name of x exactly matches the text title entry, case insensitively:
 			project icon entry;
 			break;
 	let tempHungerValue be Hunger of Player;

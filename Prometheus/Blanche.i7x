@@ -85,6 +85,7 @@ Blanche's Brood	"Blanche's Brood"
 Blanche's Brood is a situation.
 ResolveFunction of Blanche's Brood is "[ResolveEvent Blanche's Brood]".
 Sarea of Blanche's Brood is "Nowhere".
+
 when play begins:
 	add Blanche's Brood to badspots of MaleList;
 
@@ -92,6 +93,9 @@ instead of navigating Office Den while (hp of Blanche > 7 and Blanche's Brood is
 	say "[NavCheck Office Den]";
 	if NavCheckReturn is false, stop the action;
 	move player to Office Den;
+	say "[ResolveEvent Blanche's Brood]";
+
+to say ResolveEvent Blanche's Brood:
 	if debugactive is 1:
 		say "     DEBUG: Blanche organizes scavenging trips[line break]";
 	say "     As you enter Blanche's den you are met once again by the Sturm's appraising gaze, the large white wolf giving you little more than a nod in greeting before returning his full attention to watching over the scorched city surrounding the nondescript building. Given that this is one of the harshest areas in the city, you can imagine the strain that he puts himself under to ensure that his mother and the rest of his family remain safe, though you are sure that the others occasionally take their turn at guard duty to allow him some time to rest or relax. The door opens before your hand can reach it and the naked frame of Blanche appears in the doorway, your proximity causing her to let out a pleased gasp. '[if player is male]My two favorite men side by side[else if player is female]My favorite woman come to see me[else]My rescuer come to see me[end if]!' the wolfess MILF exclaims, giving you a warm hug. 'Come inside. Yes, you too Sturm, we were just about to organize an excursion into the city for food, water, and building materials, and your joint expertise would come in handy.'";
