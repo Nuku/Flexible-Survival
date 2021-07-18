@@ -70,9 +70,12 @@ To say MoreauDesc:
 	say "     In a sharp contrast to his fiery-colored body, the storekeeper's large eyes are startlingly green, making you freeze where you stand as he notices your attention and focuses his gaze on you in turn. The emerald, slit-pupiled orbs seem like bottomless pools you could stare at forever and lose yourself in... and you almost do, before he turns his head and breaks the stare. Opening his mouth a fraction, the naga tastes the air with his split tongue and then smiles at you, waving you closer with an inviting gesture.";
 
 Instead of fucking Moreau:
-	if Affection of Moreau < 3:
-		say "     As you approach the naga and offer sex, Moreau raises the scaled ridges above his eyes and gives you an unimpressed look. 'We barely know each other! No thank you, I for one am not on par with the wild beasts roaming the streets.' That said, he makes a cutting gesture in the air with his hand, signifying that the topic is over. Maybe you should try talking to him and getting to know Moreau first...";
-	else if Affection of Moreau > 2:
+	if Affection of Moreau < 2:
+		if "Knotted the Player" is listed in Traits of Moreau or "Anton-HypnoFucked Player" is listed in Traits of Moreau or "Anton-HypnoFaceFucked Player" is listed in Traits of Moreau:
+			say "     As you approach the naga and offer sex, he puts on a serious expression and shakes his head. 'Despite what happened during our recent... excursion, I do not think this will be a good idea. I am sorry, that would be unprofessional.'";
+		else:
+			say "     As you approach the naga and offer sex, Moreau raises the scaled ridges above his eyes and gives you an unimpressed look. 'Do you usually offer yourself to people you only recently met? No thank you, I for one am not on par with the wild beasts roaming the streets.' That said, he makes a cutting gesture in the air with his hand, signifying that the topic is over. Maybe you should try talking to him about what interests him and getting to know Moreau first...";
+	else if Affection of Moreau >= 2:
 		say "     As you approach the naga and offer sex, Moreau raises the scaled ridges above his eyes and a slight smile crosses his face. He lets his gaze roam over your body while his forked tongue flicks out and tastes the air between you. 'While you're certainly a very becoming person,' he says with a smile at you, half-raising a hand to reach out, then pulling it back. 'Right now isn't a good time I'm afraid. I do have the store open, and customers are coming in. It'd be... unprofessional.' With an apologetic sway of his head, the naga slithers to the side a little at this point, actually calling out to welcome someone wandering in through the door, which does prove his point.";
 
 
@@ -90,9 +93,10 @@ Instead of conversing the Moreau:
 		increase HP of Moreau by 1; [got his initial spiel]
 		increase Affection of Moreau by 1;
 	else:
-		say "[MoreauTalkMenu]";
+		MoreauTalkMenu;
 
-to say MoreauTalkMenu:
+to MoreauTalkMenu:
+	let DoneTalking be false;
 	LineBreak;
 	say "What do you want to talk with Moreau about?";
 	now sextablerun is 0;
@@ -166,28 +170,31 @@ to say MoreauTalkMenu:
 				if nam is:
 				-- "Ask about the mannequins":
 					say "[MoreauTalk1]";
-					WaitLineBreak;
-					say "[MoreauTalkMenu]";
 				-- "Ask for the truth about the mannequins":
 					say "[MoreauTalk2]";
-					WaitLineBreak;
-					say "[MoreauTalkMenu]";
 				-- "Ask if buying body parts is really worth it":
 					say "[MoreauTalk3]";
-					WaitLineBreak;
-					say "[MoreauTalkMenu]";
 				-- "Sell something":
 					say "[MoreauPartSale]";
+					now DoneTalking is true;
 				-- "Buy something":
 					say "[MoreauPartBuy]";
+					now DoneTalking is true;
 				-- "Ask about hypnosis":
 					say "[MoreauHypnoBaseTalk]";
+					now DoneTalking is true;
 				-- "Ask about retrieving memories":
 					say "[MoreauHypnoMemoryTalk]";
 				-- "Let him hypnotize you to retrieve some memories":
 					say "[MoreauHypnoMemoryRetrieval]";
+					now DoneTalking is true;
 				-- "Talk to him about his offer of reliving what happened":
 					say "[MoreauHypnoTrip]";
+					now DoneTalking is true;
+				if DoneTalking is false:
+					MoreauTalkMenu; [looping back to continue talking]
+				else:
+					wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
@@ -230,7 +237,7 @@ to say MoreauHypnoBaseTalk: [intro talk option to kick off the chain]
 	say "     The two of you continue talking for a while longer after that, but eventually, Moreau has to go excuse himself to go deal with a customer.";
 	if "Moreau Hypno Base Talk" is not listed in Traits of Moreau:
 		TraitGain "Moreau Hypno Base Talk" for Moreau;
-		increase Affection of Moreau by 1;
+		AffectionGain 1 for Moreau;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -258,6 +265,7 @@ to say ResolveEvent Anton's Intro:
 		say "'Hello there, nice to meet you. I'm Anton. Got a moment to talk?' the bird calls out to you in a full, charming voice, tail-feathers twitching a little behind his back as he turns head-on to face you.";
 		LineBreak;
 		say "     [bold type]How do you react?[roman type][line break]";
+		LineBreak;
 		say "     [link](1)[as]1[end link] - Walk up to him and chat. He seems nice.";
 		say "     [link](2)[as]2[end link] - Keep your distance and call back to ask what you wants.";
 		say "     [link](3)[as]3[end link] - Turn away and avoid him. Best to be cautious.";
@@ -320,7 +328,9 @@ to say ResolveEvent Anton's Intro:
 	else: [not interested in those that are not male]
 		say "     As you direct your steps towards the southern parking lot of the mall, you have to follow a sometimes lengthy route past countless abandoned cars, many of them clumped together in pileups from when people were fleeing - or arriving - in total panic during the first hours of the nanite apocalypse. Shopping carts are scattered all over the place too, often thrown on their sides, which isn't a big surprise now that there is no one left to collect them. Just as you step past a massive, crusty patch of dried cum and the associated scraps of clothing from maybe half a dozen people, you notice a really bright spot of color from the corner of your eyes. Looking over that way, you see someone standing near the roadside entrance of the lot, a fairly tall and colorful anthro bird that looks surprisingly muscular for an avian. His broad-shouldered chest is covered in a tight, lime-green muscle shirt, with arm-holes large enough to allow his feathered forearms through. Deep blue plumage covers the visible bits of his chest and his neck and head.";
 		say "     Keeping your attention on the guy for a moment as you continue walking, you see that he's also wearing a pair of black jeans, as well as a really long tail of iridescent green feathers, gleaming bright in the sunlight. The guy's an anthro peacock! He seems to be studying you from where he's standing, then gives a visible shrug and steps back, turning around and walking off. Almost seems like he was disappointed or something when he got a better look at you.";
+		LineBreak;
 		say "     [bold type]How do you react?[roman type][line break]";
+		LineBreak;
 		say "     [link](1)[as]1[end link] - Wonder what it might have put him off. Maybe you'll see him again in the future.";
 		say "     [link](2)[as]2[end link] - Shrug and forget about him. You bet he's some sort of creep anyways!";
 		now calcnumber is 0;
@@ -334,6 +344,7 @@ to say ResolveEvent Anton's Intro:
 		if calcnumber is 1:
 			LineBreak;
 			say "     Watching the brightly colored avian leave, too far away to call after him or catch up, you start wondering what it was that made him leave. He was standing there in the sunshine, looking out across the parking lot, and was following you with his gaze at first. Then a moment later, when you were about... here ...he seems to have decided otherwise and made the choice to leave. Looking over to your relative positions, you realize that it was the first time there weren't any cars between the two of you, allowing for a full view of your form. Somehow, remembering the almost rainbow colors of the muscular bird, you can't help but wonder if that might have been because you've got a distinct lack of male parts down below. Could it be that the peacock is gay?";
+			LineBreak;
 			say "     [link](1)[as]1[end link] - Maybe he'll be back tomorrow or so, and you could see if he's more open to a male perhaps?";
 			say "     [link](2)[as]2[end link] - That's his problem. You're not gonna change, and if he's that shallow...";
 			now calcnumber is 0;
@@ -363,6 +374,7 @@ to say MoreauHypnoMemoryTalk:
 	say "     Bringing up the topic of hypnosis and what he told you before about unearthing forgotten memories, Moreau moves his snake-like body closer, tilting his head a little as he studies you. His forked tongue flicks out of his mouth for the blink of an eye, as if tasting the air between you, followed by his eyebrow-ridges rising a little. Then he bends his hooded head in a nod and says, 'Yes, that can be indeed be done, although like I said before, it requires a skilled practitioner to tickle out the actual truth. Why are you interested in this, if I may ask?' Opening your mouth to explain your encounter outside of the mall, you find this quite difficult, as the peacock's name almost seems [italic type]slippery[roman type] in your mind, out of reach and unavailable when you try to speak it. Moreau waits patiently, with his green, slitted eyes watching with interest. Finally, you exclaim that you met [']someone['], out in the parking lot, but you cannot recall any exact details of the encounter, or even the person's name, only that you talked with him and it was [']nice['].";
 	if Lastfuck of Anton - turns < 3: [within 2 turns after the encounter]
 		say "     Straightening his upper body, the male naga asks, 'Would this be the same person you had sex with? A man, from what I can tell? Avian, to be specific.' You blink in surprise and bewilderment, answering that you don't recall doing such a thing. 'Someone's scent is all over you,' he adds in a conversational tone, then snakes forward, circling around you and flicking his tongue several times in quick succession. When he arrives back before you, face to face, you're standing in a ring of Moreau's coils. 'It is strongest on the back side, by the way.' Almost unable to believe his words, you reach behind you and feel your rear end, fingers encountering... something as you near your crack. Your mind becomes foggy as you try to think of what it might be, without much success, and as you pull your hand out to look at it, you can't see anything odd on it. 'Ah, let me help you with that. Instructions can be subverted, you know,' Moreau says, then meets your gaze, his large emerald green eyes drawing you in. Then he says in a calm tone, 'You must have sat down on someone's lunch accidentally. There's... blueberry jam all over your rear.'";
+		WaitLineBreak;
 		say "     As the naga breaks the connection, you realize that there is something sticky and clinging on your fingers after all, somewhat pale and almost white, which seems odd for jam, but then... that's just what it is, right?! Returning to explore your rear end, there's a lot more of that goop, and when you brush against your hole, it seems somewhat sore and strained. How could you not have noticed that? ";
 		if "Took Player Cherry" is listed in Traits of Anton:
 			say "Especially since you are an anal virgin, or aren't you, anymore?! ";
@@ -376,7 +388,9 @@ to say MoreauHypnoMemoryTalk:
 
 to say MoreauHypnoMemoryRetrieval:
 	say "     As you ask Moreau to hypnotize you, the naga straightens his upper body and gives you a friendly smile. Vibrantly-colored scales ripple as his already impressive hood spreads a little further, and the large reptile flicks out his tongue to taste the air around you. While you're being studied by him, your mind flashes back to the event that kicked off this train of discussion with the naga, meeting that... whoever he was out in the parking lot, and not being able to clearly remember most of it. You mentally flail against the block in your thoughts, a futile effort that frustrates you more than it does anything to help. Getting a professional to intervene really is the best choice here. Moreau nods as he sees your expression, then says, 'Okay - I can hypnotize you if that is what you wish. But what exactly is it that you are asking me to do?' He casually brushes his hand along the raised curve of his tail, looking at you with the brow-ridge over his left eye raised.";
+	LineBreak;
 	say "     [bold type]What do you ask of him?[roman type][line break]";
+	LineBreak;
 	say "     [link](1)[as]1[end link] - You want to learn the truth about what happened. Everything!";
 	say "     [link](2)[as]2[end link] - Some de-programming work should be enough. You just don't want to have any hidden triggers waiting to surprise you.";
 	say "     [link](3)[as]3[end link] - You don't want to remember what happened at all. Better to just wipe the whole encounter away completely!";
@@ -433,7 +447,9 @@ to say MoreauMemoryCleanup:
 
 to say MoreauHypnoTrip: [total recall]
 	say "     Stepping up to Moreau, you clear your throat and tell him that you've made a decision. The naga looks at you with obvious interest, his tongue flicking out twice in quick succession to taste the air, and his coils sliding against each other as he leans forward. You can tell that he's gotten invested in this matter, and is eager to get to the bottom of the mystery. There is a glint of pride in his slitted eyes as he looks forward to proving his mental skills superior to your shadowy acquaintance, and you think you can make out a level of interest in your own person as he lets his gaze sweep over you before returning to watch for you to speak.";
+	LineBreak;
 	say "     [bold type]What do you tell him?[roman type][line break]";
+	LineBreak;
 	say "     [link](1)[as]1[end link] - You're ready to go through with it. Let him help you relive what happened, in all details!";
 	say "     [link](2)[as]2[end link] - Some de-programming work should be enough. You just don't want to have any hidden triggers waiting to surprise you.";
 	say "     [link](3)[as]3[end link] - You don't want to remember what happened at all. Better to just wipe the whole encounter away completely!";
@@ -469,7 +485,9 @@ to say MoreauMemoryReplay: [go through with the trip]
 	say "Wouldn't do to have any party crashers coming to find you, just as we're getting to know each other a little better, eh?' You guide Moreau/Anton's hand to your face after that, placing his fingers to lift your chin and lifting it a little.";
 	WaitLineBreak;
 	say "     'What a nice little surprise you are, walking right past and then falling under my sway. Let's see what you can do, eh?' you repeat after Anton, then reach up to slide Moreau's fingers over your lips, followed by pushing them between your lips. The naga's eyes widen as you do so, then push up against his smooth, scaly digits with your tongue. The slits of his eyes narrow and his tongue flicks out several times in rapid succession, with him soon starting to feel around on his own, fingers pressing down your tongue while his thumb lightly brushes against the side of your jaw. Slurping on his invading digits, you nod in confirmation that this is how things went, then blindly grope for the naga's other hand and place it behind your neck, holding you tight while you suck on his fingers. The naga tenses a little as you go full out, but plays along, committed to his role. You re-play what happened with Moreau/Anton, until at some point running into a bit of a quandary, as what you repeat for him isn't understandable at all because you're mumbling it around Moreau's fingers resting on your tongue.";
+	LineBreak;
 	say "     [bold type]Noticing your problem, Moreau's digits immediately stop moving, then withdraw. As you try to keep going, he commands you to stop, then asks, 'You were saying?'[roman type][line break]";
+	LineBreak;
 	say "     [link](1)[as]1[end link] - Just continue with reliving the scene.";
 	say "     [link](2)[as]2[end link] - Giraffe! (the safeword - You got enough of being inspected like this. Jump ahead and hope for some more info!)[line break]";
 	say "     [link](3)[as]3[end link] - Blueberry! (the safeword - You got the name and species of your encounter, and you don't want to go through anything further!)[line break]";
@@ -485,10 +503,13 @@ to say MoreauMemoryReplay: [go through with the trip]
 		LineBreak;
 		say "     Licking your lips and swallowing, you repeat, 'That's a good boy. I'll enjoy using your mouth, that's for sure! Now... how about the rest of you? Can your booty hold pace with your mouth? Go on, you can tell me all about it!' Echoing a laugh from the peacock, you take Moreau/Anton's hand from behind your neck and slide it down along your back, finally landing on your buttocks [if Player is not barecrotch]and slipping under your clothes[end if]. The naga knows what to expect, and he acts his part by squeezing your ass. You take a breath, as if someone had just now withdrawn from finger-fucking you, then reply truthfully, without hesitation or possibility to resist revealing that ";
 		if "Took Player Cherry" is listed in Traits of Anton:
-			say "you're actually a virgin. The words are barely out of your mouth before you repeat a very satisfied 'Jackpot! Oh, that's so sweet! You saved yourself just for me!' for Moreau/Anton, then push his fingers towards your crack, exploring it. The naga's eyebrows draw together in a flash of irritation, perhaps being offended by the perverted enjoyment that Anton showed in taking something special from you. He hisses under his breath, opening his snout for just a second and revealing a pair of sharp fangs. Then he gets himself under control again, suppressing the feeling and reluctantly slipping back into character. You can feel the smooth-scaled digits of Moreau/Anton feel around and the thought flashes through your head that he wasn't as gentle 'last time'. As you try to force his fingers in, he resists, with his fingertips instead just lightly brush over your pucker, mostly creating a mildly pleasant tingle.";
+			say "you're actually a virgin. The words are barely out of your mouth before you repeat a very satisfied 'Jackpot! Oh, that's so sweet! You saved yourself just for me!' for Moreau/Anton, then push his fingers towards your crack, exploring it.";
+			say "     The naga's eyebrows draw together in a flash of irritation, perhaps being offended by the perverted enjoyment that Anton showed in taking something special from you. He hisses under his breath, opening his snout for just a second and revealing a pair of sharp fangs. Then he gets himself under control again, suppressing the feeling and reluctantly slipping back into character. You can feel the smooth-scaled digits of Moreau/Anton feel around and the thought flashes through your head that he wasn't as gentle 'last time'. As you try to force his fingers in, he resists, with his fingertips instead just lightly brush over your pucker, mostly creating a mildly pleasant tingle.";
 			TraitGain "Anton Virgin Thief Hostility" for Moreau;
 		else:
-			say "you've been fucked, and by how many partners. Repeating an acknowledging grunt, you give your voice an amused tone as you repeat, 'Hah, looking forward to add to that number, boy! You'll forget about all those assholes once you've felt my cock!' The naga's eyebrows draw together in a flash of irritation, perhaps being offended by the perverted enjoyment that Anton showed. He hisses under his breath, showing a grim expression for a second, then gets himself under control again, suppressing the feeling and reluctantly slipping back into character. With that said, you push Moreau/Anton's fingers towards your crack, exploring it. You can feel the smooth-scaled digits of Moreau/Anton feel around and the thought flashes through your head that he wasn't as gentle 'last time'. As you try to force his fingers in, he resists, with his fingertips instead just lightly brush over your pucker, mostly creating a mildly pleasant tingle.";
+			say "you've been fucked, and by how many partners. Repeating an acknowledging grunt, you give your voice an amused tone as you repeat, 'Hah, looking forward to add to that number, boy! You'll forget about all those assholes once you've felt my cock!'";
+			say "     The naga's eyebrows draw together in a flash of irritation, perhaps being offended by the perverted enjoyment that Anton showed. He hisses under his breath, showing a grim expression for a second, then gets himself under control again, suppressing the feeling and reluctantly slipping back into character. With that said, you push Moreau/Anton's fingers towards your crack, exploring it. You can feel the smooth-scaled digits of Moreau/Anton feel around and the thought flashes through your head that he wasn't as gentle 'last time'. As you try to force his fingers in, he resists, with his fingertips instead just lightly brush over your pucker, mostly creating a mildly pleasant tingle.";
+		WaitLineBreak;
 		say "     Accompanied with a satisfied click of the tongue, you tug on Moreau's arm, with him smoothly withdrawing it from feeling you up after a very brief moment of hesitation. [MoreauReplayStage2]";
 		TraitGain "Anton-HypnoFingered Player" for Moreau;
 	else if calcnumber is 2:
@@ -510,7 +531,9 @@ to say MoreauReplayStage2:
 	WaitLineBreak;
 	say "     After the door behind you falls shut again, you make Moreau/Anton casually wave towards the cooling room, then repeat, 'My flower-boy was kinky the first time and played a little hard to get. But I knew he didn't want to get away - why would he run into a room with only one exit otherwise, hah! Fun times!' There is a pause, as if Anton was reveling in his memories, before you guide Moreau/Anton's hand to stroke along your side. 'But don't feel jealous about him. You're my new special boy, after all! Let's see you put that mouth of yours to good use now! Being here really puts me in the mood!' With that said, you push against Moreau/Anton a little, moving him into position where he is leaning against the edge of one of the tables, upper body leaned back with his hands casually bracing on the worktop.";
 	say "     As you step up to his front, then begin to sink down, a hissing sound draws your attention upwards, leaning your head back to look at Moreau. The naga comes to the forefront of the superimposed double-person before you, pulling you out from the full immersion for a short moment. He has his tongue flicking in and out of his mouth, slitted pupils narrowed and his hood flared outwards visibly. Then Moreau asks, 'Did you want to... say anything to me?'";
+	LineBreak;
 	say "     [bold type]You're stumped for a second, with nothing coming to mind from before, leaving you free to pick your reply despite the entranced state.[roman type][line break]";
+	LineBreak;
 	say "     [link](1)[as]1[end link] - Quietly shake your head with a thankful little smile and go down on him.[line break]";
 	say "     [link](2)[as]2[end link] - Giraffe! (the safeword - This is getting a bit much. Jump ahead and hope for some more info!)[line break]";
 	say "     [link](3)[as]3[end link] - Blueberry! (the safeword - You got the name and species of your encounter, and you don't want to go through anything further!)[line break]";
@@ -553,7 +576,9 @@ to say MoreauReplayStage3:
 	else:
 		say "Gonna feel your master's cock inside you!' ";
 	say "You can feel Moreau's gaze linger on you as you reveal Anton's intent, with his eyes flicking to his own very much hard and erect shaft for a second, forked tongue flashing into view multiple times in quick succession. Raising the scaly ridges above his eyes, he tilts his head with a slight nod, asking a question without words.";
+	LineBreak;
 	say "     [bold type]Will you say something?[roman type][line break]";
+	LineBreak;
 	say "     [link](1)[as]1[end link] - No, just obey and get into position.";
 	say "     [link](2)[as]2[end link] - Giraffe! (the safeword - Jump ahead and hope for some pillow-talk.)[line break]";
 	say "     [link](3)[as]3[end link] - Blueberry! (the safeword - Stop this, now!)[line break]";
@@ -571,7 +596,9 @@ to say MoreauReplayStage3:
 		say "     The click of a plastic snap-lid opening is followed by the sensation of cool liquid squirting onto your pucker, then being massaged in by Moreau's warm fingertips. You're surprised for a second, as this wasn't what happened, with your memory being much faster, and rougher. Trying to re-create the sensation from before, you reach back to grasp his shaft, lightly tugging on it to indicate he should be ramming it in right away, but in this point, the naga does not follow the guidance. Instead, one of his fingers slides into you almost gently, going in and out as it works more lube into your hole. Soon, it is joined by another, with the two digits moving apart to stretch your opening in preparation. You can sense that even though he is looking out for you, the whole process of going through this memory recall has wound up the naga more than a little bit, as he proceeds to withdraw his fingers before much longer. Then something different, thicker and pointily shaped, brushes against your back door, pressing in against it.";
 		WaitLineBreak;
 		say "     As Moreau's cock starts to push into you, the ring of your pucker being opened up around its spongy head, the naga slides his upper body against your back, his arms wrapping around your chest in a warm, dry embrace. At the same time, you feel his scaly lower body brush against the sides of your legs, wrapping around and around, his form encircling you in tight coils. Somehow, despite living through sensations of being helplessly in the grasp of this man-like creature, you never feel uncomfortable in the slightest way, with his warmth instead being quite nice instead. A tingling feeling against your neck tells you that Moreau's flicking tongue is now literally tasting your skin, no longer just the air. Then a ripple of pleasure dances up and down your spine as the first of the small ridges on his shaft pops past your pucker, rubbing your inner walls as the next follows a second later, and the next after that. While penetrating you inch by inch in a slow, inescapable fashion, Moreau is silent except for aroused hisses, until the bulge of his knot finally comes to rest against your skin, and the naga stops pushing.";
+		LineBreak;
 		say "     [bold type]Again, this is gentler than you remember... how do you react to this inconsistency?[roman type][line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Just give in to the sensations and roll with it. He'll fuck you as he pleases.";
 		say "     ([link]N[as]n[end link]) - Ram yourself back against his crotch, forcing his whole length in.";
 		if Player consents:
@@ -594,7 +621,6 @@ to say MoreauReplayStage3:
 		TraitGain "Anton-HypnoFucked Player" for Moreau;
 		if "Took Player Cherry" is listed in Traits of Anton:
 			TraitGain "Anton Virgin Thief Hostility" for Moreau;
-		WaitLineBreak;
 		say "[MoreauReplayStage4]";
 	else if calcnumber is 2:
 		LineBreak;
@@ -627,6 +653,9 @@ to say MoreauReplayStage4:
 		MoreauStage4_ChoicePoint;
 	else if "Anton-HypnoFaceFucked Player" is listed in Traits of Moreau:
 		MoreauStage4_ChoicePoint;
+	else:
+		say "Remembering all that Anton did (at least vaguely and by guessing about the parts you skipped) and said is a lot to digest all at once, so it takes a little while before you nod to Moreau and tell him you're okay. 'Shall we leave this place behind then?' Nodding, you accompany the naga in moving away from the spot where Anton had sprung his trap of mental and physical violation.";
+		MoreauStage4_Analysis;
 
 to MoreauStage4_KnotChoicePoint:
 	say "'Are you okay? Physically, I mean. Not in any sort of pain?' Moreau asks at that point, blinking his eyes as he focuses on every detail of your expression. 'I honestly didn't expect Anton to be this rough, and with you replaying it [italic type]fully[roman type], you did take me by surprise. Not that it is any fault of yours - Anton is to blame! My apologies for what it put your body through, ";
@@ -635,10 +664,12 @@ to MoreauStage4_KnotChoicePoint:
 	else:
 		say "especially since I know that my anatomy is... challenging. Usually I have more control of myself, and avoid knotting anyone.' ";
 	say "Falling silent after saying this, Moreau's upper body is almost unnaturally still as he watches you with unblinking eyes, but you can see from the fact that the coils of his snake half are twisting and churning beneath that he's wound up quite intensely as he waits for your reaction.";
+	LineBreak;
 	say "     [bold type]What do you say to Moreau?[roman type][line break]";
+	LineBreak;
 	say "     [link](1)[as]1[end link] - What happened... happened. It's alright."; [kinda neutral]
 	say "     [link](2)[as]2[end link] - You don't blame him. You chose to go through with all this, and you're grateful he helped you."; [more thankful for his help]
-	say "     [link](3)[as]3[end link] - You don't blame him [italic type]at all[roman type]. It was actually pretty... interesting to be with him."; [hinting at the possibility something more]
+	say "     [link](3)[as]3[end link] - You don't blame him [italic type]at all[roman type]. You enjoyed things because it was [italic type]with him[roman type]."; [hinting at the possibility something more]
 	say "     [link](4)[as]4[end link] - Curtly say that you do not want to talk about this."; [cuts off any physical relationship in the future]
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
@@ -650,15 +681,16 @@ to MoreauStage4_KnotChoicePoint:
 			say "Invalid choice. Type [link]1[end link] to stay fairly neutral and accept things, [link]2[end link] to accept things and thank Moreau, [link]3[end link] to thank Moreau and add that you didn't mind going through it [italic type]with him[roman type], or [link]4[end link] to curtly deflect any further discussion about the topic.";
 	if calcnumber is 1:
 		LineBreak;
-		say "     Keeping your calm about everything that just happened, you shrug and tell the naga that things are alright between the two of you. Finally learning what exactly went down between Anton and yourself had its costs, but the peacock is the one to blame, not Moreau. It isn't like he did not try to help you any other way beforehand, always being blocked by Anton's left-behind commands, and gave you chances to stop in between. This was just the only way to get to the bottom of things. As he hears your words, Moreau bends his neck in acknowledgement of what you're saying, relief visible in his expression as his forked tongue flicks out into the open for the blink of an eye. 'Shall we leave this place behind then?' Nodding, you accompany the naga in moving away from the spot where Anton had sprung his trap of mental and physical violation.";
+		say "     Keeping your calm about everything that just happened, you shrug and tell the naga that things are alright between the two of you. Finally learning what exactly went down between Anton and yourself had its costs, but the peacock is the one to blame, not Moreau. It isn't like he didn't try to help you any other way beforehand, always being blocked by Anton's left-behind commands, and gave you chances to stop in between. This was just the only way to get to the bottom of things. As he hears your words, Moreau bends his neck in acknowledgement of what you're saying, relief visible in his expression as his forked tongue flicks out into the open for the blink of an eye. 'Shall we leave this place behind then?' Nodding, you accompany the naga in moving away from the spot where Anton had sprung his trap of mental and physical violation.";
 	else if calcnumber is 2:
 		LineBreak;
-		say "     Keeping your calm about everything that just happened, you shrug and give the naga a friendly nod. There really is nothing to blame him for, and things are good between the two of you. It isn't like he did not try to help you any other way beforehand, always being blocked by Anton's left-behind commands, explaining the process to you and giving chances to stop in between. He really did go out of his way to help you through it all. Anton is the guilty party here, and he made it so this was the only way to get to the bottom of things. As he hears your words, relief washes over Moreau's expression, with his forked tongue flicking into view as he lets out a breath. 'I am glad you see things this way, given the... scope of the acts that were revealed.' Glancing around at the chaotic, abandoned parking lot, then throwing a dark glare at the flower shop, Moreau adds, 'Shall we leave this place behind then?' Nodding, you accompany the naga in moving away from the spot where Anton had sprung his trap of mental and physical violation.";
+		say "     Keeping your calm about everything that just happened, you shrug and give the naga a friendly nod. There really is nothing to blame him for, and things are good between the two of you. It isn't like he didn't try to help you any other way beforehand, always being blocked by Anton's left-behind commands, explaining the process to you and giving chances to stop in between. He really did go out of his way to help you through it all. Anton is the guilty party here, and he made it so this was the only way to get to the bottom of things. As he hears your words, relief washes over Moreau's expression, with his forked tongue flicking into view as he lets out a breath. 'I am glad you see things this way, given the... scope of the acts that were revealed.' Glancing around at the chaotic, abandoned parking lot, then throwing a dark glare at the flower shop, Moreau adds, 'Shall we leave this place behind then?' Nodding, you accompany the naga in moving away from the spot where Anton had sprung his trap of mental and physical violation.";
 	else if calcnumber is 3:
 		LineBreak;
-		say "     Keeping your calm about everything that just happened, you shrug and give the naga a friendly nod. There really is nothing at all he would be to blame for, and from your perspective, things are good between the two of you. It isn't like he did not try to help you any other way beforehand, always being blocked by Anton's left-behind commands, explaining the process to you and giving chances to stop in between. He really did go out of his way to help you through it all. Anton is the guilty party here, and he made it so this was the only way to get to the bottom of things. As he hears your words, relief washes over Moreau's expression, with his forked tongue flicking into view as he lets out a breath, only to show a surprised expression as you step up close to him afterwards.";
-		say "     Reaching out to lightly touch the side of his forearm with your fingers, you add that you've actually got an extra thing to be cross with Anton now - as the recall of what he did interfered with an otherwise quite... interesting time with Moreau himself. You're clearly remembering all the moments of mismatch and light confusion, always when Moreau was gentle and generous in what he did. You can't help but wonder how much better it, and especially the end, would have been without Anton's remembered presence throwing a shadow over things. That said, you trace your fingertips along the scales up his arm for a second, then withdraw your hand. Moreau stares at you, motionless except for the slits of his eyes widening and his tongue flicking out several times in quick succession. 'This is... unexpected. It might merit exploring at another time. For now, let us not linger at this place. Will you accompany me back to the store?' As you nod, he smiles slightly, then leads the you away from the spot where Anton had sprung his trap of mental and physical violation.";
+		say "     Keeping your calm about everything that just happened, you shrug and give the naga a friendly nod. There really is nothing at all he would be to blame for, and from your perspective, things are good between the two of you. It isn't like he didn't try to help you any other way beforehand, always being blocked by Anton's left-behind commands, explaining the process to you and giving chances to stop in between. He really did go out of his way to help you through it all. Anton is the guilty party here, and he made it so this was the only way to get to the bottom of things. As he hears your words, relief washes over Moreau's expression, with his forked tongue flicking into view as he lets out a breath, only to show a surprised expression as you step up close to him afterwards.";
+		say "     Reaching out to lightly touch the side of his forearm with your fingers, you add that you've actually got an extra thing about which to be cross with Anton now - as the recall of what he did interfered with an otherwise quite... interesting time with Moreau himself. You're clearly remembering all the moments of mismatch and light confusion, always when Moreau was gentle and generous in what he did. You can't help but wonder how much better it, and especially the end, would have been without Anton's remembered presence throwing a shadow over things. That said, you trace your fingertips along the scales up his arm for a second, then withdraw your hand. Moreau stares at you, motionless except for the slits of his eyes widening and his tongue flicking out several times in quick succession. 'This is... unexpected. I haven't actually gone all the way with anyone in a while. Knotting someone goes further into true intimacy than I share with just casual partners. What this means for you and me might merit exploring at another time. For now, let us not linger at this place. Will you accompany me back to the store?' As you nod, he smiles slightly, then leads the you away from the spot where Anton had sprung his trap of mental and physical violation.";
 		TraitGain "Recall Aftermath - Naga Interest" for Moreau;
+		AffectionGain 1 for Moreau;
 	else if calcnumber is 4:
 		LineBreak;
 		say "     Curtly saying in a sharp tone that you do not want to talk about this, you give the naga a firm stare, which he acknowledges by bending his neck in a minimalistic nod. 'Let us leave this place,' are his next words, still said in a fairly stiff manner. With nothing more to be added, you follow him in moving away from the spot where Anton had sprung his trap of mental and physical violation on you.";
@@ -667,36 +699,44 @@ to MoreauStage4_KnotChoicePoint:
 
 to MoreauStage4_ChoicePoint:
 	say "'Are you okay? Physically, I mean.' Moreau asks at that point, blinking his eyes as he focuses on every detail of your expression. 'I honestly didn't expect Anton to be this rough. My apologies for what it put your body through. Falling silent after saying this, Moreau's watches you with unblinking eyes.";
+	LineBreak;
 	say "     [bold type]What do you say to Moreau?[roman type][line break]";
+	LineBreak;
 	say "     [link](1)[as]1[end link] - What happened... happened. It's alright."; [kinda neutral]
-	say "     [link](3)[as]3[end link] - It's fine. Being with him was actually pretty... interesting."; [hinting at the possibility something more]
+	say "     [link](2)[as]2[end link] - You don't blame him. You chose to go through with all this, and you're grateful he helped you."; [more thankful for his help]
+	say "     [link](3)[as]3[end link] - It's fine. You enjoyed things because it was [italic type]with him[roman type]."; [hinting at the possibility something more]
 	say "     [link](4)[as]4[end link] - Curtly say that you do not want to talk about this."; [cuts off any physical relationship in the future]
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-4)>[run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 			break;
 		else:
-			say "Invalid choice. Type [link]1[end link] to stay fairly neutral and accept things, [link]2[end link] to thank Moreau and add that you didn't mind going through it [italic type]with him[roman type], or [link]3[end link] to curtly deflect any further discussion about the topic.";
+			say "Invalid choice. Type [link]1[end link] to stay fairly neutral and accept things, [link]2[end link] to accept things and thank Moreau, [link]3[end link] to thank Moreau and add that you didn't mind going through it [italic type]with him[roman type], or [link]4[end link] to curtly deflect any further discussion about the topic.";
 	if calcnumber is 1:
 		LineBreak;
-		say "     Keeping your calm about everything that just happened, you shrug and tell the naga that things are alright between the two of you. Finally learning what exactly went down between Anton and yourself had its costs, but the peacock is the one to blame, not Moreau. It isn't like he did not try to help you any other way beforehand, always being blocked by Anton's left-behind commands, and gave you chances to stop in between. This was just the only way to get to the bottom of things. As he hears your words, Moreau bends his neck in acknowledgement of what you're saying, relief visible in his expression as his forked tongue flicks out into the open for the blink of an eye. 'Shall we leave this place behind then?' Nodding, you accompany the naga in moving away from the spot where Anton had sprung his trap of mental and physical violation.";
+		say "     Keeping your calm about everything that just happened, you shrug and tell the naga that things are alright between the two of you. Finally learning what exactly went down between Anton and yourself had its costs, but the peacock is the one to blame, not Moreau. It isn't like he didn't try to help you any other way beforehand, always being blocked by Anton's left-behind commands, and gave you chances to stop in between. This was just the only way to get to the bottom of things. As he hears your words, Moreau bends his neck in acknowledgement of what you're saying, relief visible in his expression as his forked tongue flicks out into the open for the blink of an eye. 'Shall we leave this place behind then?' Nodding, you accompany the naga in moving away from the spot where Anton had sprung his trap of mental and physical violation.";
 	else if calcnumber is 2:
 		LineBreak;
-		say "     Keeping your calm about everything that just happened, you shrug and give the naga a friendly nod. There really is nothing at all he would be to blame for, and from your perspective, things are good between the two of you. It isn't like he did not try to help you any other way beforehand, always being blocked by Anton's left-behind commands, explaining the process to you and giving chances to stop in between. He really did go out of his way to help you through it all. Anton is the guilty party here, and he made it so this was the only way to get to the bottom of things. As he hears your words, relief washes over Moreau's expression, with his forked tongue flicking into view as he lets out a breath, only to show a surprised expression as you step up close to him afterwards.";
-		say "     Reaching out to lightly touch the side of his forearm with your fingers, you add that you've actually got an extra thing to be cross with Anton now - as the recall of what he did interfered with an otherwise quite... interesting time with Moreau himself. You're clearly remembering all the moments of mismatch and light confusion, always when Moreau was gentle and generous in what he did. You can't help but wonder how much better it would have been without Anton's remembered presence throwing a shadow over things. That said, you trace your fingertips along the scales up his arm for a second, then withdraw your hand. Moreau stares at you, motionless except for the slits of his eyes widening and his tongue flicking out several times in quick succession. 'This is... unexpected. It might merit exploring at another time. For now, let us not linger at this place. Will you accompany me back to the store?' As you nod, he smiles slightly, then leads the you away from the spot where Anton had sprung his trap of mental and physical violation.";
-		TraitGain "Recall Aftermath - Naga Interest" for Moreau;
+		say "     Keeping your calm about everything that just happened, you shrug and give the naga a friendly nod. There really is nothing to blame him for, and things are good between the two of you. It isn't like he didn't try to help you any other way beforehand, always being blocked by Anton's left-behind commands, explaining the process to you and giving chances to stop in between. He really did go out of his way to help you through it all. Anton is the guilty party here, and he made it so this was the only way to get to the bottom of things. As he hears your words, relief washes over Moreau's expression, with his forked tongue flicking into view as he lets out a breath. 'I am glad you see things this way, given the... scope of the acts that were revealed.' Glancing around at the chaotic, abandoned parking lot, then throwing a dark glare at the flower shop, Moreau adds, 'Shall we leave this place behind then?' Nodding, you accompany the naga in moving away from the spot where Anton had sprung his trap of mental and physical violation.";
 	else if calcnumber is 3:
+		LineBreak;
+		say "     Keeping your calm about everything that just happened, you shrug and give the naga a friendly nod. There really is nothing at all he would be to blame for, and from your perspective, things are good between the two of you. It isn't like he didn't try to help you any other way beforehand, always being blocked by Anton's left-behind commands, explaining the process to you and giving chances to stop in between. He really did go out of his way to help you through it all. Anton is the guilty party here, and he made it so this was the only way to get to the bottom of things. As he hears your words, relief washes over Moreau's expression, with his forked tongue flicking into view as he lets out a breath, only to show a surprised expression as you step up close to him afterwards.";
+		say "     Reaching out to lightly touch the side of his forearm with your fingers, you add that you've actually got an extra thing about which to be cross with Anton now - as the recall of what he did interfered with an otherwise quite... interesting time with Moreau himself. You're clearly remembering all the moments of mismatch and light confusion, always when Moreau was gentle and generous in what he did. You can't help but wonder how much better it would have been without Anton's remembered presence throwing a shadow over things. That said, you trace your fingertips along the scales up his arm for a second, then withdraw your hand. Moreau stares at you, motionless except for the slits of his eyes widening and his tongue flicking out several times in quick succession. 'This is... unexpected. It might merit exploring at another time. For now, let us not linger at this place. Will you accompany me back to the store?' As you nod, he smiles slightly, then leads the you away from the spot where Anton had sprung his trap of mental and physical violation.";
+		TraitGain "Recall Aftermath - Naga Interest" for Moreau;
+		AffectionGain 1 for Moreau;
+	else if calcnumber is 4:
 		LineBreak;
 		say "     Curtly saying in a sharp tone that you do not want to talk about this, you give the naga a firm stare, which he acknowledges by bending his neck in a minimalistic nod. 'Let us leave this place,' are his next words, still said in a fairly stiff manner. With nothing more to be added, you follow him in moving away from the spot where Anton had sprung his trap of mental and physical violation.";
 		TraitGain "Recall Aftermath - Curt Rejection" for Moreau;
 	MoreauStage4_Analysis;
 
 to MoreauStage4_Analysis: [back to the store for analysis]
-	say "     No more words are spoken between you all the way back into the mall, or while passing through the crowds to get back to Moreau's store. As he leads the way with swift, slithering movements, torso bent lower than usual, the passersby seem to register that the naga is not in a talkative mood, stepping aside to let you pass. Unlocking the door and allowing you to enter, Moreau locks it behind the two of you, then snakes his way into the center the store area. Being in his own domain allows Moreau to regain his usual professional composure, and he lets his gaze sweep over the mannequins that are either displaying, or standing ready to serve. Then moves a hand to indicate the back room of the store, waiting patiently for you to walk over to it with him, then step through the door as he holds it open.";
 	WaitLineBreak;
+	say "     No more words are spoken between you all the way back into the mall, or while passing through the crowds to get back to Moreau's store. As he leads the way with swift, slithering movements, torso bent lower than usual, the passersby seem to register that the naga is not in a talkative mood, stepping aside to let you pass. Unlocking the door and allowing you to enter, Moreau locks it behind the two of you, then snakes his way into the center the store area. Being in his own domain allows Moreau to regain his usual professional composure, and he lets his gaze sweep over the mannequins that are either displaying, or standing ready to serve. Then moves a hand to indicate the back room of the store, waiting patiently for you to walk over to it with him, then step through the door as he holds it open.";
 	say "     You find yourself in what appears to be a mostly private area, not open to the naga's usual clientele. The room seems quite well-appointed for what must have formerly been an utilitarian storeroom, with a large and well-filled bookshelf as well as multiple wooden... art pieces maybe, looking like a some sort of cross between a tree and a jungle gym. A floor-length curtain in rich carmine-red partitions off one of the back corners, keeping it a mystery what else Moreau keeps back here. As the naga snakes forward and begins to drape and curl his long body over one of the wooden structures, you realize that it is a piece of furniture, with him soon sighing contently as he comes to rest. 'Please, sit,' he invites you, just as a mannequin places a suitable chair for yourself behind you, then leaves the room, shutting the door behind it.";
+	WaitLineBreak;
 	say "     Moreau waits for you to get comfortable, then clears his throat. 'Let us go through what we learned then. Some valuable details about your culprit, Anton, were revealed. By the behavior, and what played out, I have little doubt he was a peacock. I've encountered their kind before. They're capable of entrancing others with their feathers, and it seems your acquaintance learned to greatly enhance this ability by making good use of the sun. Be wary, if you do encounter one of his species again, and watch out for one that is basking in the sun, wanting to draw in victims. Especially if you decide to follow his [']invitation['] and intend to track him down over at the coastline. That seems a prime location to use the tactics he demonstrated already.' Taking his words to heart, you thank Moreau for his assistance in getting to the bottom of the missing memory. Then the two of you make your way back into the mall.";
 	now Resolution of Anton's Intro is 5; [player did total recall]
 	TraitGain "Name Revealed" for Anton;

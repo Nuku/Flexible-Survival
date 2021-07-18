@@ -165,19 +165,31 @@ to say DrMattTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Tell him you got some samples for him";
 	[]
+	if HP of Doctor Matt is 6:
+		choose a blank row in table of fucking options;
+		now title entry is "The results of his examination";
+		now sortorder entry is 3;
+		now description entry is "Ask if he found anything interesting through examining Susan";
+	[]
+	if HP of Doctor Matt is 7 and (Loyalty of Susan is 3 or Loyalty of Susan is 4):
+		choose a blank row in table of fucking options;
+		now title entry is "Beginning the experiment with Susan";
+		now sortorder entry is 4;
+		now description entry is "Tell him you're both ready for the experiment";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "The Nanite Infection";
-	now sortorder entry is 3;
+	now sortorder entry is 98;
 	now description entry is "Ask him what he knows about the outbreak";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "How he ended up here";
-	now sortorder entry is 4;
+	now sortorder entry is 99;
 	now description entry is "Find out how he got here";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Communicating with the outside world";
-	now sortorder entry is 4;
+	now sortorder entry is 100;
 	now description entry is "Ask about his connection to the military";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -198,6 +210,10 @@ to say DrMattTalkMenu:
 					say "[DrMattQuestTalk]";
 				else if (nam is "Delivering the samples he needs"):
 					DrMattSampleDelivery;
+				else if (nam is "The results of his examination"):
+					DrMattSusanQuestReturn;
+				else if (nam is "Beginning the experiment with Susan"):
+					say "[DrMattQuestTalk]";
 				else if (nam is "The Nanite Infection"):
 					say "[DrMattTalk1]";
 				else if (nam is "How he ended up here"):
@@ -422,7 +438,7 @@ to DrMattSusanLabArrival:
 	move player to Trevor Labs Lobby;
 
 to DrMattSusanQuestReturn:
-	say "     As you bring up helping Dr. Matt again, he smiles and looks at you over the rims of his glasses. 'You've been an invaluable assistant already. The young woman you brought here has helped me gain deeper understanding of the nanite contagion. She is an interesting creature, is she not? Fascinating, that the nanites mix and match like this, creating gender configurations not usually seen in vertebrates.' Picking up a tablet, he taps its screen and angles it so you can see what must be a microscopic closeup of a sample from Susan, with countless numbers of identical nanomachines. 'Contrary to my original hypothesis, the hermaphroditism wasn't caused by competing strains working side by side either. The patient carries only a single type, which has the dual gender as an inherent characteristic. I'm still trying to find an explanation how this might have been set in the programming. Is it pure chance, caused by a copying error during replication of the nanites, or maybe by design? Hopefully time will tell.'";
+	say "     As you ask Dr. Matt about the results of his examination, he smiles and looks at you over the rims of his glasses. 'You've been an invaluable assistant already. The young woman you brought here has helped me gain deeper understanding of the nanite contagion. She is an interesting creature, is she not? Fascinating, that the nanites mix and match like this, creating gender configurations not usually seen in vertebrates.' Picking up a tablet, he taps its screen and angles it so you can see what must be a microscopic closeup of a sample from Susan, with countless numbers of identical nanomachines. 'Contrary to my original hypothesis, the hermaphroditism wasn't caused by competing strains working side by side either. The patient carries only a single type, which has the dual gender as an inherent characteristic. I'm still trying to find an explanation how this might have been set in the programming. Is it pure chance, caused by a copying error during replication of the nanites, or maybe by design? Hopefully time will tell.'";
 	say "     Glancing over to where the slender deer is sitting on the edge of an examination table in the back of the room, her legs dangling down and swinging a little as she pages through a magazine, Dr. Matt gives you a ";
 	if Resolution of Unusual Creature is 3: [consoled]
 		say "little nod and a smile. 'During my examination, it became quite obvious that you've left a positive impression with the way you brought her in. It is good that you showed empathy, as she is still very anxious about her transformation and, in her words, 'being a freak'.' Frowning and raising his gloved hands to do air quotes to accompany the last words, the doctor's gaze sways over towards Susan again and he clears his throat. 'Since you two do have somewhat of a connection, I was hoping you'd be willing to participate in a further experiment. Having two subjects that I've been able to examine in detail, this would be a perfect opportunity to study the transmission of nanites. A controlled situation, you understand?'";
@@ -485,16 +501,18 @@ to DrMattSusanQuestResolution:
 		say "     The results of the last test have the good doctor visibly excited, and he rapidly speaks to his recorder, 'Fascinating! There appears to be a large concentration of nanites in test subjects reproduction system. This might be intended to capitalize on natural fluid exchange behavior of hosts to facilitate nanite spread! It is too perfect, too tailor-made for maximum transmission capability while hard to detect to be a random mutation of the nanite code! I believe this must be part of the original design!' Raising his gaze after staring into nothingness for a few seconds, Dr. Matt beams at both Susan and yourself and adds, 'Thank you both! This is a puzzle piece that I was missing! Whoever thought these device up was clever, quite clever. It can't be denied that the nanites do have an effect on the libido of the infected, and I was wondering why they all do this.' As he says this, he nods to Susan, who has been casually stroking her cock a little out of boredom while he worked on his tests, with her quickly pulling her hand away, now that she's been put on the spot.";
 		say "     'It's the second half of this system!' Dr. Matt says triumphantly, pointing at the swab. 'You see, the nanites gravitate towards the genitals, to ride along with semen or other fluids exchanged! This is so much more elegant than wasting energy to allow the nanites their own movement. Imagine the panic that globs of nanite goo crawling up to people to infect them, or - god forbid - nanite injector moskitos would have caused in a regular city. No, this method stealthily, quietly transmits the nanites. And upping the host's lust speeds up the process! Simply genius!' Then his expression falls, with a frown showing the many wrinkles in Dr. Matt's face. 'Though the designer's pride at their work must have been followed by a harsh fall. What's going on out there in the streets is far from what these nanites seem to be designed to do. Or maybe they are - I'd guess it's either malicious intent, a horrific oversight, or sabotage in this nanite infection system that is the root of our current catastrophe. The intended nudge to the libido seems to have been maxed out, to surpass almost all ability of control by the host.'";
 		WaitLineBreak;
-		say "     Dr. Matt's rapid-fire insights ebb off a little, and he quickly moves to a computer to take more detailed notes. This leaves Susan and yourself alone, with her waiting as you put your gear back on, then saying, 'At least one person got what they wanted today I guess. Seems like the doctor actually does know what he's talking about. As for myself, I think I'll go see if Orthas wants to chat for a bit. I've got my fill of the lab, that's for sure!' Without giving you any chance to talk, the deer herm walks out the door right after that.";
+		say "     Dr. Matt's rapid-fire insights ebb off a little, and he quickly moves to a computer to take more detailed notes. This leaves Susan and yourself alone, with her waiting as you put your gear back on, then saying, 'At least one person got what they wanted today I guess. Seems like the doctor actually does know what he's talking about. As for myself, I think I'll go see if Orthas wants to chat for a bit. I've got my fill of the lab for now, that's for sure!' Without giving you any chance to talk, the deer herm walks out the door right after that.";
 		now HP of Doctor Matt is 8; [post-Susan exam]
+		now Loyalty of Susan is 6; [experiment completed (either way)]
 	else if Loyalty of Susan is 4: [ready for a fuck]
 		say "     'Judging by your expression, I take it you were successful in wooing the young woman? Good, good. I've got everything prepared for the two of you over here.' With that said, he points to the cot that Orthas set up for Susan, now surrounded by three separate cameras. A whole spread of sampling equipment is laid out on a nearby table. 'You can proceed when ready. No need to be shy, I've seen it all before. Well, humans and other primates only, to be specific, but you know what I mean.' With that said, the doctor shepherds you over to his equipment and takes a series of samples from all over your body, then makes you document your physical state in front of the camera, up to and including [if player is male]getting hard and having your cock measured[else if player is female]spreading your folds and showing them off[else]some closeups of your genderless crotch[end if]. At some point, Susan quietly joins, but is not subjected to a similar scrutiny as Dr. Matt still has recent material from her.";
 		now HP of Susan is 2; [ready to fuck]
 		SusanSexMenu;
 		WaitLineBreak;
-		if HP of Susan > 2: [some sex happened] [TODO: Rebuild to remove the "mate" stuff]
+		if PlayerFucked of Susan is true: [some sex happened]
 			say "     As your afterglow wears off, you become aware of the fact that Dr. Matt is standing close by, holding sample tubes in his gloved hand. He bids you both to sit on the examination table, then proceeds to take  samples of the fluids you exchanged during intercourse. Susan looks to you with a shy expression as she is swabbed by the doctor, and seeing that she feels a little lost, you reach out to take her hand. The simple touch of her chosen mate is enough to calm the deer herm down immensely, with her giving you a loving smile and ignoring Dr. Matt entirely. A few minutes later, he's done with his examination and has a whole rack of sampling tubes in his hands. 'Thank you both. This opportunity will provide invaluable data, I'm sure of that. I need to get analyzing this immediately!' As the doctor hurries off to get to work, Susan gives your hand a little squeeze, then leans over to kiss you gently. 'Thank you for this. Becoming my mate, and being there when I needed you.'";
 			now HP of Doctor Matt is 8; [post-Susan exam]
+			now Loyalty of Susan is 6; [experiment completed (either way)]
 		else: [cancelled]
 			say "     As you pull away from Susan, Dr. Matt gives you a questioning look. 'Do you... need anything more to proceed? Please, remember that the results of this experiment might save many lives. I do hope you don't have issues with performance anxiety.' He looks over to Susan, who clearly is ready for spending some intimate time with you, then back at yourself and continues to wait somewhat impatiently.";
 

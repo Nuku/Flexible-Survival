@@ -261,7 +261,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"glob of goo"	"A small bottle of strange, neon colored, goop"	1	glob of goo
+"glob of goo"	"A small container of strange, neon green colored, goop."	1	glob of goo
 
 glob of goo is a grab object.
 It is temporary.

@@ -88,6 +88,10 @@ before examining the grab object (called x):
 
 instead of examining a grab object (called x):
 	say "[the desc corresponding to a object of x in the table of game objects][line break]";
+	repeat through the table of game art:
+		if printed name of x matches the text title entry, case insensitively:
+			project icon entry;
+			break;
 	if "Weaponsmaster" is listed in feats of Player and x is an armament:
 		say "     Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
 	if x is an armament:
@@ -140,6 +144,10 @@ Carry out using a grab object (called x):
 		say "You don't see any [x] in your backpack.";
 
 To process (x - a grab object):
+	repeat through the table of game art:
+		if printed name of x matches the text title entry, case insensitively:
+			project icon entry;
+			break;
 	let tempHungerValue be Hunger of Player;
 	if x is temporary and x is owned:
 		say "You eagerly use the [x]!";

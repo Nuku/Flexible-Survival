@@ -528,6 +528,36 @@ Figure of Zoe_face_icon is the file "Zoe_face.jpg".
 Figure of Zoe_clothed_icon is the file "Zoe_clothed.jpg".
 Figure of Zoe_naked_icon is the file "Zoe_naked.jpg".
 
+[objects]
+Figure of Item_Bottle_Cum is the file "Item_Bottle_Cum.jpg".
+Figure of Item_Bottle_Demon_Seed is the file "Item_Bottle_Demon Seed.jpg".
+Figure of Item_Bottle_Dirty_Water is the file "Item_Bottle_Dirty Water.jpg".
+Figure of Item_Bottle_Empty_Bottle is the file "Item_Bottle_Empty Bottle.jpg".
+Figure of Item_Bottle_Femcum is the file "Item_Bottle_Femcum.jpg".
+Figure of Item_Bottle_Silver_Cum is the file "Item_Bottle_Silver Cum.jpg".
+Figure of Item_Fur_black is the file "Item_Fur_black.jpg".
+Figure of Item_Fur_blonde is the file "Item_Fur_blonde.jpg".
+Figure of Item_Fur_brown is the file "Item_Fur_brown.jpg".
+Figure of Item_Fur_dappled is the file "Item_Fur_dappled.jpg".
+Figure of Item_Fur_dark_brown is the file "Item_Fur_dark brown.jpg".
+Figure of Item_Fur_dark_grey is the file "Item_Fur_dark grey.jpg".
+Figure of Item_Fur_gold is the file "Item_Fur_gold.jpg".
+Figure of Item_Fur_grey_and_white is the file "Item_Fur_grey and white.jpg".
+Figure of Item_Fur_grey is the file "Item_Fur_grey.jpg".
+Figure of Item_Fur_orange is the file "Item_Fur_orange.jpg".
+Figure of Item_Fur_pink is the file "Item_Fur_pink.jpg".
+Figure of Item_Fur_tan is the file "Item_Fur_tan.jpg".
+Figure of Item_Fur_white is the file "Item_Fur_white.jpg".
+Figure of Item_Gel_Bitch_Breaker is the file "Item_Gel_Bitch Breaker.jpg".
+Figure of Item_Gel_blue is the file "Item_Gel_blue.jpg".
+Figure of Item_Gel_green is the file "Item_Gel_green.jpg".
+Figure of Item_Gel_pink is the file "Item_Gel_pink.jpg".
+Figure of Item_Gel_purple is the file "Item_Gel_purple.jpg".
+Figure of Item_Gel_Pussy_Spreader is the file "Item_Gel_Pussy Spreader.jpg".
+Figure of Item_Gel_RightnTight is the file "Item_Gel_RightnTight.jpg".
+Figure of Item_Gel_Sissifier is the file "Item_Gel_Sissifier.jpg".
+Figure of Item_Wyvern_Goop is the file "Item_Wyvern Goop.jpg".
+
 [scene icons]
 Figure of BrutusFuckingDavid_icon is the file "Brutus&David1.jpg". [Brutus fucking David]
 Figure of BT_Trapped_icon is the file "Bottlenose_Trapped_ig.jpg". [Encased by Bottlenose Toy]
@@ -1278,6 +1308,105 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Zoe_face"	Figure of Zoe_face_icon	"SineAlas"	g-black	"normal"
 "Zoe_clothed"	Figure of Zoe_clothed_icon	"Vashaa"	g-White	"normal"
 "Zoe_naked"	Figure of Zoe_naked_icon	"Vashaa"	g-White	"normal"
+[objects]
+"alpha wolf cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"black wolf cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"brown rat cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"centaur cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"dalmatian cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"diavoborg cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"doberman male cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"dryad cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"earthen seed"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"elven male cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"ferret cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"fox cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"gecko cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"german shepherd male cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"gryphon cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"jackal alpha cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"hawkman male cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"horseman cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"husky alpha cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"hyena herm cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"nerdy mouse cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"orc cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"piggy cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"pink fox cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"red panda cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"rhino cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"sea dragon cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"smilodon cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"smilodon male cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"tyrannosaurus cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"werewolf brute cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"wolf cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"zebra cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+"dire-wolf cum"	Figure of Item_Bottle_Cum	"Gherod"	g-white	"normal"
+[femcum]
+"husky bitch cum"	Figure of Item_Bottle_Femcum	"Gherod"	g-white	"normal"
+"orc fem cum"	Figure of Item_Bottle_Femcum	"Gherod"	g-white	"normal"
+"wolf fem-cum"	Figure of Item_Bottle_Femcum	"Gherod"	g-white	"normal"
+[demonic cum]
+"demon seed"	Figure of Item_Bottle_Demon_Seed	"Gherod"	g-white	"normal"
+"hellfire seed"	Figure of Item_Bottle_Demon_Seed	"Gherod"	g-white	"normal"
+[silver cum]
+"pewter seed"	Figure of Item_Bottle_Silver_Cum	"Gherod"	g-white	"normal"
+[bottles]
+"dirty water"	Figure of Item_Bottle_Dirty_Water	"Gherod"	g-white	"normal"
+"empty bottle"	Figure of Item_Bottle_Empty_Bottle	"Gherod"	g-white	"normal"
+[fur - black]
+"alpha wolf fur"	Figure of Item_Fur_black	"Gherod"	g-white	"normal"
+"black wolf fur"	Figure of Item_Fur_black	"Gherod"	g-white	"normal"
+"demon fox fur"	Figure of Item_Fur_black	"Gherod"	g-white	"normal"
+"jackal alpha fur"	Figure of Item_Fur_black	"Gherod"	g-white	"normal"
+"zebra fur"	Figure of Item_Fur_black	"Gherod"	g-white	"normal"
+[fur - blonde]
+"spotted fur"	Figure of Item_Fur_blonde	"Gherod"	g-white	"normal"
+[fur - brown]
+"horsemazon fur"	Figure of Item_Fur_brown	"Gherod"	g-white	"normal"
+[fur - dappled]
+"horse fur"	Figure of Item_Fur_dappled	"Gherod"	g-white	"normal"
+[fur - dark brown]
+"smooth collie shemale fur"	Figure of Item_Fur_dark_brown	"Gherod"	g-white	"normal"
+"doberman bitch fur"	Figure of Item_Fur_dark_brown	"Gherod"	g-white	"normal"
+"doberman male fur"	Figure of Item_Fur_dark_brown	"Gherod"	g-white	"normal"
+"elk bull fur"	Figure of Item_Fur_dark_brown	"Gherod"	g-white	"normal"
+"elk cow fur"	Figure of Item_Fur_dark_brown	"Gherod"	g-white	"normal"
+"elk herm fur"	Figure of Item_Fur_dark_brown	"Gherod"	g-white	"normal"
+"elk trans bull fur"	Figure of Item_Fur_dark_brown	"Gherod"	g-white	"normal"
+"elk trans cow fur"	Figure of Item_Fur_dark_brown	"Gherod"	g-white	"normal"
+[fur - dark grey]
+"werewolf brute fur"	Figure of Item_Fur_dark_grey	"Gherod"	g-white	"normal"
+[fur - gold]
+"smilodon male fur"	Figure of Item_Fur_gold	"Gherod"	g-white	"normal"
+[fur - grey & white]
+"nerdy mouse fur"	Figure of Item_Fur_grey_and_white	"Gherod"	g-white	"normal"
+"husky bitch fur"	Figure of Item_Fur_grey_and_white	"Gherod"	g-white	"normal"
+"husky alpha fur"	Figure of Item_Fur_grey_and_white	"Gherod"	g-white	"normal"
+[fur - grey]
+"tuft of chin fur"	Figure of Item_Fur_grey	"Gherod"	g-white	"normal"
+[fur - orange]
+"red fur"	Figure of Item_Fur_orange	"Gherod"	g-white	"normal"
+[fur - pink]
+"piggy fur"	Figure of Item_Fur_pink	"Gherod"	g-white	"normal"
+"pink fox fur"	Figure of Item_Fur_pink	"Gherod"	g-white	"normal"
+[fur - tan]
+"hyena herm fur"	Figure of Item_Fur_tan	"Gherod"	g-white	"normal"
+"german shepherd bitch fur"	Figure of Item_Fur_tan	"Gherod"	g-white	"normal"
+"german shepherd male fur"	Figure of Item_Fur_tan	"Gherod"	g-white	"normal"
+[fur - white]
+"dalmatian fur"	Figure of Item_Fur_white	"Gherod"	g-white	"normal"
+[goo]
+"glob of goo"	Figure of Item_Gel_green	"Gherod"	g-white	"normal"
+"blue gel"	Figure of Item_Gel_blue	"Gherod"	g-white	"normal"
+"pink gel"	Figure of Item_Gel_pink	"Gherod"	g-white	"normal"
+"purple gel"	Figure of Item_Gel_purple	"Gherod"	g-white	"normal"
+"bitch breaker gel"	Figure of Item_Gel_Bitch_Breaker	"Gherod"	g-white	"normal"
+"pussy spreader cream"	Figure of Item_Gel_Pussy_Spreader	"Gherod"	g-white	"normal"
+"rightntight cream"	Figure of Item_Gel_RightnTight	"Gherod"	g-white	"normal"
+"sissifier gel"	Figure of Item_Gel_Sissifier	"Gherod"	g-white	"normal"
+"wyvern goop"	Figure of Item_Wyvern_Goop	"Gherod"	g-white	"normal"
 [emap - special]
 "Navigation - Signal Lost Screen"	Figure of emap_special_signalnotfound_icon	"executaball"	g-black	"normal"
 "Navigation - Shutdown Screen"	Figure of emap_special_shutdown_icon	"executaball"	g-black	"normal"

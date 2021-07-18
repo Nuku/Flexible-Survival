@@ -183,7 +183,6 @@ to ItemLoss all (ItemObj - object) silently:
 		ItemLoss ItemObj by carried of ItemObj silently;
 
 to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence - a number):
-	decrease carried of ItemObj by N;
 	if Silence is 0:
 		LineBreak;
 		if N is 1:
@@ -196,6 +195,7 @@ to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence 
 				say "     [bold type]You lose all your [printed name of ItemObj in lower case]![roman type][line break]";
 			else:
 				say "     [bold type]You lose [N] [printed name of ItemObj in lower case]![roman type][line break]";
+	decrease carried of ItemObj by N;
 
 to PlayerMaxHeal:
 	LineBreak;

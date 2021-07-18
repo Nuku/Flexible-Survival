@@ -24,8 +24,18 @@ Version 4 of Deer by Wahn begins here.
 [ 0 = regular form                        ]
 [ 1 = doe-buck form                       ]
 
+[ Loyalty of Susan                                                          ]
+[  0 = Default Value                                                        ]
+[  1 = Player wants to go medical route for the experiment                  ]
+[  2 = Player wants to fuck her for the experiment                          ]
+[  3 = Ready for medical                                                    ]
+[  4 = Ready for fuck                                                       ]
+[  5 = Player told Matt that Susan should decide (will go medical)          ]
+[  6 = Post-Experiment (either way)                                         ]
+
+
 [ IMPORTANT NOTE: Do not give Fem-Herm Susan A cock larger than 9 inches!   ]
-[ -> Cock length is used to differentiate Fem/Masc Herm variants            ]
+[ -> Cock length is used to differentiate F/M-Herm variants                 ]
 
 [ Affection Overview                                                        ]
 [  +1 - consoled her in original encounter                                  ]
@@ -37,7 +47,8 @@ Version 4 of Deer by Wahn begins here.
 
 [TODO: Add event for high affection Susan bandaging the player if they're hurt]
 
-"Adds a deer to Flexible Survival's Wandering Monsters table, with impreg chance"
+SusanDom is a truth state that varies.[@Tag:NotSaved]SusanDom is usually false.
+SusanSub is a truth state that varies.[@Tag:NotSaved]SusanSub is usually false.
 
 Section 1 - Event
 
@@ -63,18 +74,18 @@ to say ResolveEvent Unusual Creature:
 	choose a blank row in table of fucking options;
 	now title entry is "Grab her before she runs off";
 	now sortorder entry is 1;
-	now description entry is "You were asked to bring her in by Dr. Matt and she's freaking out right now. Sometimes one has to be a little forceful with people.";
+	now description entry is "Sometimes one has to be a little forceful with people";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Try to calm her down and console her";
 	now sortorder entry is 2;
-	now description entry is "A calm voice and a smile sometimes can work wonders with desperate and distraught people. You can take her to Dr. Matt once she's more relaxed.";
+	now description entry is "A calm voice and a smile sometimes can work wonders. Then take her to Dr. Matt once she's more relaxed";
 	[]
 	if Libido of Player > 50 and player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Jump the woman and fuck her";
 		now sortorder entry is 3;
-		now description entry is "Dominate the doe and then take her to Doctor Matt. Having a little fun with before he examines her should be no problem, right?";
+		now description entry is "Dominate the doe before taking her to Doctor Matt. Having a little fun first will be no problem, right";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -143,9 +154,43 @@ object	name
 Susan	"Susan"
 Susan	"Samson"
 
-Susan is a person. "Susan, a bipedal deer.". Description of Susan is "[Susandesc]".
-
+Susan is a person.
+ScaleValue of Susan is 3. [human sized]
+Body Weight of Susan is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Susan is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Susan is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Susan is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Susan is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Susan is 5. [length in inches]
+Breast Size of Susan is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Susan is 2. [count of nipples]
+Asshole Depth of Susan is 8. [inches deep for anal fucking]
+Asshole Tightness of Susan is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Susan is 1. [number of cocks]
+Cock Girth of Susan is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Susan is 9. [length in inches]
+Ball Count of Susan is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Susan is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Susan is 1. [number of cunts]
+Cunt Depth of Susan is 9. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Susan is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Susan is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Susan is false.
+PlayerRomanced of Susan is false.
+PlayerFriended of Susan is false.
+PlayerControlled of Susan is false.
+PlayerFucked of Susan is false.
+OralVirgin of Susan is false.
+Virgin of Susan is false.
+AnalVirgin of Susan is true.
+PenileVirgin of Susan is true.
+SexuallyExperienced of Susan is true.
+TwistedCapacity of Susan is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Susan is false. [steriles can't knock people up]
 MainInfection of Susan is "Deer".
+Description of Susan is "[Susandesc]".
 understand "Samson" as Susan.
 Conversation of Susan is { "Bleat!" }.
 The fuckscene of Susan is "[sexwithSusan]".
@@ -157,7 +202,13 @@ a postimport rule:
 	if "Samson Active" is listed in Traits of Susan:
 		SetMalePronouns for Susan;
 
-to say Susandesc:
+an everyturn rule:
+	if (TimeKeepingVar is 1 or TimeKeepingVar is -7) and Affection of Susan < 0: [post midnight]
+		increase Affection of Susan by 1;
+		if Affection of Susan is 0:
+			say "     [bold type]You get the feeling that [Susan]'s anger might have lessened by now. [roman type][line break]";
+
+to say SusanDesc:
 	project the Figure of Susan_face_icon;
 	if debugactive is 1:
 		say "DEBUG ->  HP: [HP of Susan], Loyalty of Susan: [Loyalty of Susan], Susanoversize: [if Susanoversize is true]True[else]False[end if]  <- DEBUG[line break]";
@@ -166,15 +217,15 @@ to say Susandesc:
 	else if Resolution of Unusual Creature is 1 or Resolution of Unusual Creature is 2: [grumpy femherm mode]
 		say "     Susan is an anthro doe standing a little over five feet tall. She has soft brown fur, a creamy off-white belly and undertail, while her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She has delicate, beautiful features, with the quite mobile ears working to add to any expressions that cross her face. Despite her animalistic appearances, she has hair like a human, a little darker than the brown fur of the majority of her form and freely falling down to just a little past her shoulders. As Susan notices your attention, she gives you a sullen, distrustful look. Seems she's still cross with you for bringing her here without her consent.";
 		say "     Ignoring the stare, you let your gaze roam over Susan's body, following the curves of her cream-colored breasts barely hidden by a fairly ripped tank top. The protruding nipples of the anthro are clearly visible through the thin fabric. Further down on the level of her crotch, you can see a noticeable bulge in her short-shorts, leaving little doubt that this young woman is packing something extra down there. An audible huff draws your attention back up to her face, looking annoyed and unimpressed at having been inspected by you like a piece of meat.";
+	else if HP of Susan is 0 or HP of Susan is 4: [femherm mode in trevor labs]
+		SusanFemHerm_Base; [Used both for Dr. Matt & Dr. Mouse form - moved below as a callout so the text isn't duplicated]
+		say "     You let your gaze roam over Susan's body, following the curves of her cream-colored breasts barely hidden by a fairly ripped tank top. The protruding nipples of the anthro are clearly visible through the thin fabric. Further down on the level of her crotch, you can see a noticeable bulge in her short-shorts, leaving little doubt that this young woman is packing something extra down there. Casually observing her, you notice that from time to time, she lets a hand stray down to the bulge of her short shorts, lightly rubbing and adjusting it.";
 	else if HP of Susan is 3: [buck mode in Trevor Labs]
 		SusanMaleHerm_Base; [Used both for Dr. Matt & Dr. Mouse form - moved below as a callout so the text isn't duplicated]
 		if "Samson Active" is listed in Traits of Susan: [Samson description, male pronouns]
 			say "     Having physically grown in size since you first found him, Samson's body is now conforming to much more of a masculine shape that includes broadened shoulders and chest, as well as more muscle tone of the arms and legs. His bosom appears to have shrunk a bit - or maybe it's just that the anthro's pectoral muscles have filled in, catching up to stick out above a flat belly and well-defined abs. That's not to say that he's turned completely male though, as you can still see some rounded curves of Samson's breasts at the lower edge of his pecs, with nicely large areolas and protruding nipples. He's still a herm, but a decidedly masculine one now. Glancing down at the crotch of your deer friend, you can see that the bulge in the short-shorts is larger than it was before too, and you know full well that an 11-inch cock is just waiting for you within.";
 		else: [Susan description, female pronouns]
 			say "     Having physically grown in size since you first found her, Susan's body is now conforming to much more of a masculine shape that includes broadened shoulders and chest, as well as more muscle tone of the arms and legs. Her bosom appears to have shrunk a bit - or maybe it's just that the anthro's pectoral muscles have filled in, catching up to stick out above a flat belly and well-defined abs. That's not to say that she's turned completely male though, as you can still see some rounded curves of Susan's breasts at the lower edge of her pecs, with nicely large areolas and protruding nipples visible through the thin fabric of her ripped tank top. She's still a herm, but a decidedly masculine one now. Glancing down at the crotch of your deer friend, you can see that the bulge in the short-shorts is larger than it was before too, and you know full well that an 11-inch cock is just waiting for you within.";
-	else if HP of Susan is 4: [femherm mode in trevor labs]
-		SusanFemHerm_Base; [Used both for Dr. Matt & Dr. Mouse form - moved below as a callout so the text isn't duplicated]
-		say "     You let your gaze roam over Susan's body, following the curves of her cream-colored breasts barely hidden by a fairly ripped tank top. The protruding nipples of the anthro are clearly visible through the thin fabric. Further down on the level of her crotch, you can see a noticeable bulge in her short-shorts, leaving little doubt that this young woman is packing something extra down there. Casually observing her, you notice that from time to time, she lets a hand stray down to the bulge of her short shorts, lightly rubbing and adjusting it.";
 	else if HP of Susan > 50 and HP of Susan < 73: [doe mode with labcoat in the hospital]
 		SusanFemHerm_Base; [Used both for Dr. Matt & Dr. Mouse form - moved below as a callout so the text isn't duplicated]
 		say "     Being somewhat of a hospital lab assistant now, she's been provided a lab coat while working with Dr. Mouse. Susan has hemmed it slightly so it better shows her effeminate body. It covers her well-rounded breasts and hangs down over her body and crotch, not quite hiding a bulge there. Casually observing her, you notice that she frequently slips a hoofed hand into her coat to absentmindedly fondle it.";
@@ -188,7 +239,7 @@ to say Susandesc:
 to SusanFemHerm_Base:
 	say "     Susan is an anthro doe standing a little over five feet tall. She has soft brown fur, a creamy off-white belly and undertail, while her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She has delicate, beautiful features, with the quite mobile ears working to add to any expressions that cross her face. Despite her animalistic appearances, she has hair like a human, a little darker than the brown fur of the majority of her form and freely falling down to just a little past her shoulders. As Susan notices your attention, ";
 	if "Submissive" is listed in Traits of Susan: [Player's the man]
-		say "she gives you a submissive, almost demure look, happy to be noticed by her mate. Then she changes her pose a little, subconsciously seeking to present herself from her best side and entice you. She's clearly come far from being a frightened and lost being hiding out alone in the overgrown park.";
+		say "she gives you a submissive, almost demure look, happy to be noticed. Then she changes her pose a little, subconsciously seeking to present herself from her best side and entice you. She's clearly come far from being a frightened and lost being hiding out alone in the overgrown park.";
 	else if "Equal" is listed in Traits of Susan: [equal partners]
 		say "she smiles happily and gives you a wink, then even poses a little to show off her body to you. The anthro has come far from being a frightened and lost being hiding out alone in the overgrown city park. She usually has a confident, lustful look in her eyes, and watching her, you can frequently see that she lets one hand stray down to her crotch to casually rub or adjust herself.";
 	else: [not talked her about being mates yet]
@@ -204,7 +255,7 @@ to SusanMaleHerm_Base:
 	else: [Susan description, female pronouns]
 		say "     Susan is an anthro doe-buck standing a little over six feet tall. She has soft brown fur, a creamy off-white belly and undertail, while her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. The deer herm's head is crowned by an impressive rack of antlers and she has masculine features, with just a hint of the delicate doe you originally found in the park. Despite her animalistic appearances, she has hair like a human, a little darker than the brown fur of the majority of her form and freely falling down to just a little past her shoulders. As Susan notices your attention, ";
 		if "Submissive" is listed in Traits of Susan: [Player's the man]
-			say "she gives you a submissive, almost demure look, happy to be noticed by her mate. Then she changes her pose a little, subconsciously seeking to present herself from her best side and entice you. She's clearly come far from being a frightened little doe hiding out alone in the overgrown park.";
+			say "she gives you a submissive, almost demure look, happy to be noticed. Then she changes her pose a little, subconsciously seeking to present herself from her best side and entice you. She's clearly come far from being a frightened little doe hiding out alone in the overgrown park.";
 		else if "Equal" is listed in Traits of Susan: [equal partners]
 			say "she smiles happily and gives you a wink, then even poses a little to show off her body to you. The anthro has come far from being a frightened little doe hiding out alone in the overgrown city park. She usually has a confident, lustful look in her eyes, and watching her, you can frequently see that she lets one hand stray down to her crotch to casually rub or adjust herself.";
 
@@ -220,8 +271,9 @@ to FeralizeSusan:
 			break;
 	now area entry is "Park";
 
-to SusanTalkMenu:
+to SusanTalkMenu: [TODO: Add talk option about sexual orientation]
 	let DoneTalking be false;
+	LineBreak;
 	say "     [bold type]What do you want to talk to her about?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;
@@ -229,12 +281,12 @@ to SusanTalkMenu:
 	[]
 	if "Samson Active" is listed in Traits of Susan:
 		choose a blank row in table of fucking options;
-		now title entry is "Her life";
+		now title entry is "His life";
 		now sortorder entry is 1;
 		now description entry is "Get to know Samson a bit more";
 	else:
 		choose a blank row in table of fucking options;
-		now title entry is "His life";
+		now title entry is "Her life";
 		now sortorder entry is 1;
 		now description entry is "Get to know Susan a bit more";
 	[]
@@ -272,7 +324,7 @@ to SusanTalkMenu:
 			now sortorder entry is 5;
 			now description entry is "Ask Susan how she ended up a deer";
 	[]
-	if Affection of Susan > 1 and "Herm Life Talk Done" is listed in Traits of Susan and PlayerControlled of Susan is false and Resolution of Unusual Creature is 4: [no control, fucked]
+	if Affection of Susan > 1 and "Herm Life Talk Done" is listed in Traits of Susan and PlayerControlled of Susan is false and Resolution of Unusual Creature is 4 and (HP of Susan is 0 or HP of Susan is 4): [no control, fucked, f-herm]
 		choose a blank row in table of fucking options;
 		now title entry is "Tell her she's yours";
 		now sortorder entry is 89;
@@ -319,13 +371,13 @@ to SusanTalkMenu:
 				else if (nam is "Tell her she's yours"):
 					say "[SusanClaimTalk]";
 					now DoneTalking is true;
-				else if (nam is "Approach her about finding physical comfort with each other"):
+				else if (nam is "Approach her about finding comfort with each other"):
 					say "[SusanRelationshipTalk]";
 					now DoneTalking is true;
 				else if (nam is "Starting Dr. Matt's Experiment"):
 					say "[SusanExperimentTalk]";
 					now DoneTalking is true;
-				if DoneTalking is false:
+				if DoneTalking is false and Affection of Susan >= 0:
 					SusanTalkMenu; [looping back to continue talking]
 				else:
 					wait for any key;
@@ -346,7 +398,7 @@ to say SusanBackgroundTalk:
 		TraitGain "Background Talk Done" for Susan;
 		AffectionGain 1 for Susan;
 	else: [repeat talk, with Samson variant]
-		if HP of Susan is 3 or HP of Susan > 72: [mherm mode in Trevor Labs/Hospital]
+		if HP of Susan is 3 or HP of Susan > 72: [m-herm mode in Trevor Labs/Hospital]
 			say "     Bringing up [Susan]'s life before the nanite outbreak again, [SubjectPro of Susan] gives a somewhat amused snort. 'Is my life that interesting? Never thought there was anything special about me. But fine, if you wanna hear it all again. When I was a human, my name was Susan Gideon. God, that name feels a million miles away now, after everything that's happened, and keeps happening.' As [SubjectPro of Susan] says this, the anthro reaches up and taps the side of one of [PosAdj of Susan] antlers, then looks down over [PosAdj of Susan] fairly masculinized form. 'Anyways, I'm 24. Moved to the city last year when I was starting my new job, at Etheric Vibes. You know, the music company? I became one of the event organizers in the main office, downtown. Arranging things with venues, getting our bands scheduled, all that. I like doing the work, it's interesting and challenging.'";
 			say "     Letting out a sigh, [SubjectPro of Susan] shakes [PosAdj of Susan] head at that point. 'I don't even know if I still have a job. After missing all of my appointments the day that I transformed, and not coming to work since. They wouldn't recognize me either, now even less than before. But also, who knows if the company even exists anymore, or if everyone just turned... into all sorts of shapes. And they might be following their new instincts to do other stuff now. Mostly fucking, I guess.' Pulling [PosAdj of Susan] ponytail to hang over the other shoulder, [SubjectPro of Susan] adds, 'It was hard making new friends, after moving. Never seemed the right moment, and so I only really know a few coworkers a little bit, outside of work. I'm kinda glad about that now. The thought that someone you're close to is lost in all of this would be terrifying! ";
 			if "Dominant" is listed in Traits of Susan: [Samson's the man]
@@ -355,7 +407,7 @@ to say SusanBackgroundTalk:
 				say "So, I know you can handle yourself, but... please be careful out there, alright?'";
 			WaitLineBreak;
 			say "     The two of you continue chatting for a while longer, sharing more details about both of your lives. Being able to talk about things seems to dispel the periodic bouts of [Susan] going silent and quietly mulling over everything. Eventually, when you run out of easy topics to discuss, [SubjectPro of Susan] looks at you and a smile appears on [PosAdj of Susan] muzzle. 'Thank you. I didn't realize just how good it'd feel to let some of the things out and just talk about things with someone. I mean - it's hard enough to do even outside a difficult time like this... so I appreciate what you're doing!'";
-		else:	[fherm mode]
+		else:	[f-herm mode]
 			say "     Bringing up Susan's life before the nanite outbreak again, she puts on a little smile and looks at you. 'Is my life that interesting? Never thought there was anything special about me. But fine, if you wanna hear it all again... I'm - uhm, I mean... when I was a human, my name was Susan Gideon. Not sure if that's even me anymore though. I'm 24. Moved to the city last year when I was starting my new job, at Etheric Vibes. You know, the music company? I became one of the event organizers in the main office, downtown. Arranging things with venues, getting our bands scheduled, all that. I like doing the work, it's interesting and challenging.' Letting out a sigh, she shakes her head at that point. 'I don't even know if I still have a job. After missing all of my appointments the day that... things happened, and not coming to work since. They wouldn't recognize me either. But also, who knows if the company even exists anymore, or if everyone just turned... into all sorts of shapes. And they might be following their new instincts to do other stuff now. Mostly... you know.' Brushing a stand of hair out of her face, she adds, 'It was hard making new friends, after moving. Never seemed the right moment, and so I only really know a few coworkers a little bit, outside of work. I - I'm kinda glad about that now. Knowing that someone you're close to is lost in all of this would be terrifying! ";
 			if "Submissive" is listed in Traits of Susan: [Player's the man]
 				say "I am glad that I don't have to worry about this with you, and can find protection with you.'";
@@ -370,7 +422,7 @@ to say SusanTransformationTalk:
 	else: [repeat talk, with Samson variant - note: stuttering and pauses for Susan variant, which has a shorter cock]
 		say "     Showing interest in the anthro deer, you ask [Susan] to please repeat the story of how [SubjectPro of Susan] got transformed. [SubjectProCap of Susan] replies, 'Am I really that interesting that you want to hear it again? Alright, fine... ";
 	say "It [if Cock Length of Susan < 10]- it [end if]kinda just happened, out of the blue! Everything was normal at first that day. I had appointments with some people in various parts of the city, so I didn't have to come into the office right away. After going to a really nice outdoor venue in the west of the city and clearing up the schedule for one of our bands, I went down the block to the next StarBull's, got one of their amazing Furppuchino's and was nipping on that mocha goodness while walking to my bus stop. I remember getting there and waiting for my bus to arrive, nice warm sunlight on my skin, thinking about - well, the guy I had my morning meeting with earlier, Roberto. He'd kinda been really nice and charming, even gave me a free ticket for the place so I could watch the band perform too.'";
-	say "     [Susan]'s eyes have a bit of a faraway look for a second, as [SubjectPro of Susan] dwells on [ObjectPro of Susan] last memories of being human. Then [SubjectPro of Susan] clears [PosAdj of Susan] throat and adds, 'The next thing I know, there's this little kid. Just a small boy, not even up to my hip. And he was holding the hand of his mom, waiting for the bus just like me. Then suddenly, I hear 'Mommy, mommy! That woman has funny ears!' His mother looked down at the boy, smiled and told him to please not bother anyone. Then she glanced up at me and[if Cock Length of Susan < 10]...[end if] screamed! It was painfully loud! I just had to raise my hands to cover my ears, and[if Cock Length of Susan < 10]...[end if] felt these instead. They're very sensitive, you know.' With that said, Susan bends one of her long deer ears forward with her hand, looking at the soft, fur-covered part of her head.";
+	say "     [Susan]'s eyes have a bit of a faraway look for a second, as [SubjectPro of Susan] dwells on [ObjectPro of Susan] last memories of being human. Then [SubjectPro of Susan] clears [PosAdj of Susan] throat and adds, 'The next thing I know, there's this little kid. Just a small boy, not even up to my hip. And he was holding the hand of his mom, waiting for the bus just like me. Then suddenly, I hear 'Mommy, mommy! That woman has funny ears!' His mother looked down at the boy, smiled and told him to please not bother anyone. Then she glanced up at me and[if Cock Length of Susan < 10]... [else] [end if]screamed! It was painfully loud! I just had to raise my hands to cover my ears, and[if Cock Length of Susan < 10]... [else] [end if]felt these instead. They're very sensitive, you know.' With that said, Susan bends one of her long deer ears forward with her hand, looking at the soft, fur-covered part of her head.";
 	WaitLineBreak;
 	say "     'It wasn't just that either, there was fur sprouting out of my arm, and hand, [if Cock Length of Susan < 10]and...[end if] people all around me were shouting, and backing away. ";
 	if "Samson Active" is listed in Traits of Susan: [Samson's the man]
@@ -389,12 +441,14 @@ to say SusanTransformationTalk:
 		AffectionGain 1 for Susan;
 
 to say SusanParkLifeTalk:
-	say "     Out of curiosity, you ask [Susan] how [SubjectPro of Susan] survived in the park for so long. When you found [ObjectPro of Susan] there, it didn't look like [SubjectPro of Susan] knew all that much about the city surrounding, or went scavenging. [SubjectProCap of Susan] nods in confirmation, then says, 'Yeah, [if Cock Length of Susan < 10]I... [end if]I kinda just lived on what I could find in the park. There's a stream with fresh water flowing through the woods thankfully, and as for food...' [Susan ] draws a shame-faced expression, then quietly adds, '[if Cock Length of Susan < 10]Grass. And plants. Some leaves.' [else]I actually grazed. All greens. Grass and so on.' [end if]After pausing for effect, [SubjectPro of Susan] explains, 'At first, after I fled into the park, I didn't eat anything. Got really [if Cock Length of Susan < 10]really[end if] hungry after a day or two, and when I was debating with myself if I should leave and try to find some food, another hunger-pang hit. I don't know what drove me to it, but I kinda found myself ripping off a handful of grass and stuffed it in my mouth! Started chewing and it actually kinda tasted good, so I kept going. Anyways, as it turns out, this body can digest most vegetation. Which is[if Cock Length of Susan < 10]...[end if] fine, I guess. But it made me feel even less human. [if Cock Length of Susan < 10]Even though I was already vegetarian before then.' [else]And with my new bulk, I don't know if that'd be enough for me now.' [end if][line break]";
+	say "     Out of curiosity, you ask [Susan] how [SubjectPro of Susan] survived in the park for so long. When you found [ObjectPro of Susan] there, it didn't look like [SubjectPro of Susan] knew all that much about the city surrounding, or went scavenging. [SubjectProCap of Susan] nods in confirmation, then says, 'Yeah, [if Cock Length of Susan < 10]I... [end if]I kinda just lived on what I could find in the park. There's a stream with fresh water flowing through the woods thankfully, and as for food...' [Susan ] draws a shame-faced expression, then quietly adds, '[if Cock Length of Susan < 10]Grass. And plants. Some leaves.' [else]I actually grazed. All greens. Grass and so on.' [end if]After pausing for effect, [SubjectPro of Susan] explains, 'At first, after I fled into the park, I didn't eat anything. Got really [if Cock Length of Susan < 10]really[end if] hungry after a day or two, and when I was debating with myself if I should leave and try to find some food, another hunger-pang hit. I don't know what drove me to it, but I kinda found myself ripping off a handful of grass and stuffed it in my mouth! Started chewing and it actually kinda tasted good, so I kept going. Anyways, as it turns out, this body can digest most vegetation. Which is[if Cock Length of Susan < 10]... [else] [end if]fine, I guess. But it made me feel even less human. [if Cock Length of Susan < 10]Even though I was already vegetarian before then.' [else]And with my new bulk, I don't know if that'd be enough for me now.' [end if][line break]";
 	TraitGain "Park Life Talk Done" for Susan;
 
 to say SusanHermLifeTalk:
-	say "     Stepping up to Susan, you ask her how she's dealing with [if Resolution of Unusual Creature is 3]her gender situation[else]having a cock and a pussy[end if]. The anthro deer opens her mouth, then pauses, no words actually coming out. 'I - I don't really know, actually. It may sound crazy, but this one thing I'm actually not [italic type]that[roman type] freaked out over.' Shaking her head as if in disbelief over her own words, she brushes a hand over her hair, then brushes her fingers along the side of her muzzle, feeling its shape and the short fur on her face. 'I mean, maybe it's just something of an overload because I'm so focused on not actually being human anymore, but... hmm. It's not like I suddenly lost what I'm used to completely, down there. There's just something... new. And I've been surprised a few times by its... reactions. Seems like it's got a mind of its own sometimes. I mean, it's been popping up at the drop of a hat, in the weirdest moments.' As she says this, Susan lightly pats the bulge at the front of her shorts, seeming a bit embarrassed. Yet then, her ears give a flick and she looks at you, eyebrows rising. 'Not so long ago, I didn't think I'd be leaving the forest again, and be among people. But now that you're actually asking me about it, I'm starting to worry. What will other people think? What do [italic type]you[roman type] think of me, like this? Am I a woman, or a man?'";
+	say "     Stepping up to Susan, you ask her how she's dealing with [if Resolution of Unusual Creature is 3]her gender situation[else]having a cock and a pussy[end if]. The anthro deer opens her mouth, then pauses, no words actually coming out. 'I - I don't really know, actually. It may sound crazy, but this one thing I'm actually not [italic type]that[roman type] freaked out over. I've been feeling pretty... nice, even somewhat... randy. And when I got excited, thoughts of both men and even sometimes women flashed through my mind. I mean, I did, uhm... experiment a little before, but I've only had boyfriends, ever.' Shaking her head as if in disbelief over her own words, she brushes a hand over her hair, then brushes her fingers along the side of her muzzle, feeling its shape and the short fur on her face. 'I mean, maybe it's just something of an overload because I'm so focused on not actually being human anymore, but... hmm. It's not like I suddenly lost what I'm used to completely, down there. There's just something... new. And I've been surprised a few times by its... reactions. Seems like it's got a mind of its own sometimes. I mean, it's been popping up at the drop of a hat, in the weirdest moments.' As she says this, Susan lightly pats the bulge at the front of her shorts, seeming a bit embarrassed. Yet then, her ears give a flick and she looks at you, eyebrows rising. 'Not so long ago, I didn't think I'd be leaving the forest again, and be among people. But now that you're actually asking me about it, I'm starting to worry. What will other people think? What do [italic type]you[roman type] think of me, like this? Am I a woman, or a man?'";
+	LineBreak;
 	say "     [bold type]What do you reply to her?[roman type][line break]";
+	LineBreak;
 	say "     [link](1)[as]1[end link] - She's perfect the way she is. There is beauty in her dual form, and she shouldn't need to feel that she should be one thing or another.";
 	say "     [link](2)[as]2[end link] - She's still a woman in your eyes. Just... with a little extra, and that's not a bad thing.";
 	say "     [link](3)[as]3[end link] - Her having a masculine side is actually quite nice in your eyes. You'd love to see her take on that role too, and be more confident in herself.";
@@ -415,6 +469,7 @@ to say SusanHermLifeTalk:
 	else if calcnumber is 3:
 		LineBreak;
 		say "     With a smile, you tell Susan that she shouldn't worry. From your perspective, she's actually got an almost enviable state now. The mind and more sensual outlook of a woman, in charge of her new equipment added down below. Asking if she's felt the virile urges and burning desires yet that being part male brings, Susan presses her lips together, not quite suppressing a mischievous smile, then nods quickly. Chuckling, you tell her she should embrace it. Try experiencing being more masculine and assertive, live that to the fullest. She's been a woman her whole life, so let her experience this new side. At the same time, she can be comforted by knowing that what she's used to is still a part of her, there when she wants it. 'Do - do you really think so?' comes a shy question, carrying with it an air of wonder and relief. Nodding with a smile, you confirm what you said, then add that she can have the best of both worlds. 'I do like it, if you say it like that.' After saying those words, it appears to you that her eyes are filled with a bit more energy and inner fire than before, and the smile showing on her muzzle has a bit of a cocky twist to it.";
+		say "     [bold type]Some inner voice tells you that it might be a good idea to give Susan some time alone to think about what you just said.[roman type][line break]";
 		now M-Herm Susan Transformation Start is active; [walk-in event with the horns starting to come in activated]
 	TraitGain "Herm Life Talk Done" for Susan;
 
@@ -433,7 +488,7 @@ instead of going to Primary Lab while (M-Herm Susan Transformation Start is acti
 
 to say ResolveEvent M-Herm Susan Transformation Start:
 	say "     As you step into the laboratory room once more, you see Susan just getting up from one of the examination tables at the other end, with Doctor Matt standing next to her. He says a few quiet words to her, too low for you to hear over the hum of the air con. Then he walks over to his workstation and begins entering notes, seemingly eager to put down something new he has learned. Curious about what's going on, you approach the anthro deer and are welcomed with a somewhat tired smile. Asking if she's alright, Susan answers, 'Well, kind of. Been having some light headaches and aches, so I asked the doctor to do a check-up. Turns out that I'm not done changing yet. Gained half an inch in height, and some more muscle tone, apparently.' Your gaze follows the movements as she pats some parts of her body, making you realize that the anthro has become a little more masculine in her appearance with added muscle definition. 'And as for the headaches... look at this!' Bending her neck, she parts her hair, then points to two tiny little bulges on top of her head.";
-	say "     'Doctor Matt said he wasn't sure if it'll really happen, but... there's a possibility I'll be growing actual antlers! That's crazy, isn't it?! The doctor is happy because he gets to study it happening, but I'm not exactly thrilled that I'm changing [italic type]again[roman type]. And they're pretty itchy too!' Rubbing at her head, then snatching her hands away, Susan blows out her breath in exasperation. Finally, she starts looking for some busy-work in the lab, to distract herself from these new developments of her body. As you watch her go and start to lift and re-stack some supplies, subconsciously picking a job that matches her now greater strength, you can't help but wonder to yourself if this might have something to do with the discussion about her gender you had with the anthro deer just a little while ago. She wouldn't literally change physically just because you suggested she should try out her masculine side more, or would she? [bold type]The possibility of her becoming even more of a masculine herm flashes through your thoughts. Maybe it bears thinking about some more. [roman type][line break]";
+	say "     'Doctor Matt said he wasn't sure if it'll really happen, but... there's a possibility I'll be growing actual antlers! That's crazy, isn't it?! The doctor is happy because he gets to study it happening, but I'm not exactly thrilled that I'm changing [italic type]again[roman type]. And they're pretty itchy too!' Rubbing at her head, then snatching her hands away, Susan blows out her breath in exasperation. Finally, she starts looking for some busy-work in the lab, to distract herself from these new developments of her body. As you watch her go and start to lift and re-stack some supplies, subconsciously picking a job that matches her now greater strength, you can't help but wonder to yourself if this might have something to do with the discussion about her gender you had with the anthro deer just a little while ago. She wouldn't literally change physically just because you suggested she should try out her masculine side more, or would she? [bold type]The possibility of her becoming even more of a masculine herm flashes through your thoughts. Maybe this could be made to happen for someone she really likes. [roman type][line break]";
 	now Resolution of M-Herm Susan Transformation Start is 1;
 	now M-Herm Susan Transformation Start is resolved;
 
@@ -480,33 +535,40 @@ to say ResolveEvent M-Herm Susan Transformation End:
 		now Resolution of M-Herm Susan Transformation End is 2; [supported name change -> Samson]
 	else if calcnumber is 3:
 		LineBreak;
-		say "     Walking forward a little further, you raise an arm and give Susan a little wave, drawing attention to yourself. Her eyes focus on you, then the serious expression and shake of the head you're giving her. With a slightly surprised expression, she gives you a nod, then says out loud. 'No. I don't think a new name is something for me after all. My parents choose this name for me, and I've been happy with it all my life, so just abandoning it doesn't seem right. But thank you for your suggestion anyways, Doctor Matt.' 'Of course, as you prefer.' With that said, the suited man smiles at the anthro deer, then walks over to his workstation afterwards, giving you a friendly nod as he notices you in passing. Left behind on the examination table, Susan swings her legs over its side and stands up. Moving closer to join her, you notice that she's at least a foot taller than before, giving her quite an imposing stature at roughly six and a half feet tall.";
+		say "     Walking forward a little further, you raise an arm and give Susan a little wave, drawing attention to yourself. Her eyes focus on you, then the serious expression and shake of the head you're giving her. With a slightly surprised expression, she gives you a nod, then says out loud. 'No. I don't think a new name is something for me after all. My parents chose this name for me, and I've been happy with it all my life, so just abandoning it doesn't seem right. But thank you for your suggestion anyways, Doctor Matt.' 'Of course, as you prefer.' With that said, the suited man smiles at the anthro deer, then walks over to his workstation afterwards, giving you a friendly nod as he notices you in passing. Left behind on the examination table, Susan swings her legs over its side and stands up. Moving closer to join her, you notice that she's at least a foot taller than before, giving her quite an imposing stature at roughly six and a half feet tall.";
 		say "     'So, this is who I am now,' the anthro deer says, waving a hand to indicate her naked body with markedly less shyness than she exhibited previously. As your gaze follows the movement, it inevitable passes over her crotch, allowing you to take in the herm's cock, which looks to have gained an inch or two and some girth, at least from what you can tell with her being soft right now. Chuckling, Susan wraps her fingers around the soft member and wags it towards you in a playful gesture, then takes a step to the side to pick up his clothes. Stepping into the shorts and pulling them up works without too much issue, although they are almost obscenely tight and show the outline of her member, but when Susan tries to slip the top over her head and raised arms, the garment catches on one of the sharp spikes of her antlers and rips to shreds. It is comical to see the muscled buck-herm stand there with her arms and antlers entangled in the garment, but you help her get free, mostly suppressing your chuckles about the situation.";
 		WaitLineBreak;
-		say "     'Guess you prefer looking at my naked chest anyways, eh?' Susan comments, joining you in laughing before glancing down at her pecs/breasts. She places a hand on the firm flesh and kneads it under her fingers, then lightly flicks a finger over her left nipple. As she looks up and notices your eyes staring intently at her chest, a smirk crosses her features. The herm buck leans in to bring her muzzle close to your ear, then says, 'Kinda feeling like a total stallion now, hah. Looking forward to trying things out with you later. ";
+		say "     'Guess you prefer looking at my naked chest anyways, eh?' Susan comments, joining you in laughing before glancing down at her pecs/breasts. She places a hand on the firm flesh and kneads it under her fingers, then lightly flicks a finger over her left nipple. As she looks up and notices your eyes staring intently at her chest, a smirk crosses her features. The herm buck leans in to bring her muzzle close to your ear, then says, 'Kinda feeling like a total stud now, hah. Looking forward to trying things out with you later. ";
 		if "Dominant" is listed in Traits of Susan:
-			say "Be sure you're ready for your new buck.' ";
+			say "Be sure you're ready for your new buck.' [if Player is submissive]A little pleasant shiver goes through you about the tone of voice that Susan said those words in. The buck runs a hand down your body, lightly groping you before letting go. [else if Player is dominant]You meet her eyes with a little bit of challenge, waggling your eyebrows to show you're not just going to completely submit to her. The buck grunts and gives you a friendly bump to the shoulder. [end if]";
 		else:
-			say "It'll be fun!' ";
+			say "It'll be fun!' [if Player is submissive]A smile crosses your features as you think about what she can do to you when you have some play-time. [else if Player is dominant]A smile crosses your features as you think about what you can do to her when you have some play-time. You run a hand down her body, lightly groping her before letting go. [end if]";
 		say "With a smirk, she winks at you, then proceeds to put her body through its paces, lifting this or that heavy thing and experimentally sprinting up and down the hallway leading to the lab.";
 		now Resolution of M-Herm Susan Transformation End is 3; [rejected name change -> Susan]
+	now Body Definition of Susan is 7;
+	now Androginity of Susan is 2;
+	now Cock Length of Susan is 11;
+	now Ball Size of Susan is 4;
 	now M-Herm Susan Transformation End is resolved;
 
 to SamsonRenaming:
 	say "     'So, this is who I am now,' the anthro deer says, waving a hand to indicate his naked body with markedly less shyness than Susan showed before. As your gaze follows the movement, it inevitable passes over his crotch, allowing you to take in the herm's cock, which looks to have gained an inch or two and some girth, at least from what you can tell with him being soft right now. Chuckling, Samson wraps his fingers around the soft member and wags it towards you in a playful gesture, then takes a step to the side to pick up his clothes. Stepping into the shorts and pulling them up works without too much issue, although they are almost obscenely tight and show the outline of his member, but when Samson tries to slip the top over his head and raised arms, the garment catches on one of the sharp spikes of his antlers and rips to shreds. It is comical to see the muscled buck stand there with his arms and antlers entangled in the garment, but you help him get free, mostly suppressing your chuckles about the situation.";
 	WaitLineBreak;
-	say "     'Guess you prefer looking at my naked chest anyways, eh?' Samson comments, joining you in laughing before glancing down at his pecs/breasts. He places a hand on the firm flesh and kneads it under his fingers, then lightly flicks a finger over his left nipple. As he looks up and notices your eyes staring intently at his chest, a smirk crosses his features. The herm buck leans in to bring his muzzle close to your ear, then says, 'Kinda feeling like a total stallion now, hah. Looking forward to trying things out with you later. ";
+	say "     'Guess you prefer looking at my naked chest anyways, eh?' Samson comments, joining you in laughing before glancing down at his pecs/breasts. He places a hand on the firm flesh and kneads it under his fingers, then lightly flicks a finger over his left nipple. As he looks up and notices your eyes staring intently at his chest, a smirk crosses his features. The herm buck leans in to bring his muzzle close to your ear, then says, 'Kinda feeling like a total stud now, hah. Looking forward to trying things out with you later. ";
 	if "Dominant" is listed in Traits of Susan:
-		say "Be sure you're ready for your new buck.' ";
+		say "Be sure you're ready for your new buck.' [if Player is submissive]A little pleasant shiver goes through you about the tone of voice that Samson said those words in. The buck runs a hand down your body, lightly groping you before letting go. [else if Player is dominant]You meet his eyes with a little bit of challenge, waggling your eyebrows to show you're not just going to completely submit to him. The buck grunts and gives you a friendly bump to the shoulder. [end if]";
 	else:
-		say "It'll be fun!' ";
+		say "It'll be fun!' [if Player is submissive]A smile crosses your features as you think about what he can do to you when you have some play-time. [else if Player is dominant]A smile crosses your features as you think about what you can do to him when you have some play-time. You run a hand down his body, lightly groping him before letting go. [end if]";
 	say "With a smirk, he winks at you, then proceeds to put his body through its paces, lifting this or that heavy thing and experimentally sprinting up and down the hallway leading to the lab.";
 	now printed name of Susan is "Samson";
+	TraitGain "Samson Active" for Susan;
 	SetMalePronouns for Susan;
 
 to say SusanDeerLifeTalk:
-	say "     Clearing your throat, you tell [Susan] that you'd like to talk about [PosAdj of Susan] views on being an anthro. The hermaphrodite's expression falls as you bring up the topic, with [ObjectPro of Susan] letting out a deep sigh. [SubjectProCap of Susan] waves a hand in front of [PosAdj of Susan] chest, then says, 'Turning into this isn't how I imagined my life going after moving to the big city, you know. I mean, we've talked about me getting the new job here last year, and for my transformation went. It's[if Cock Length of Susan < 10]...[end if] pretty much guaranteed I'm out of a job, and I'm not even human anymore! People have stared, pointed and shouted at me from the moment this whole thing started[if Cock Length of Susan < 10]!' [SubjectProCap of Susan] sniffs as [SubjectPro of Susan] says this, getting a bit worked up about things. [else]! That's not cool at all, is it?!' [SubjectProCap of Susan] draws a grimace to underline [PosAdj of Susan] sentiment. [end if]'So yeah, between all of that, and being treated like a monster the rest of my life - I wish I still was human! Maybe your Doctor Matt will find a way to turn me back?'";
+	say "     Clearing your throat, you tell [Susan] that you'd like to talk about [PosAdj of Susan] views on being an anthro. The hermaphrodite's expression falls as you bring up the topic, with [ObjectPro of Susan] letting out a deep sigh. [SubjectProCap of Susan] waves a hand in front of [PosAdj of Susan] chest, then says, 'Turning into this isn't how I imagined my life going after moving to the big city, you know. I mean, we've talked about me getting the new job here last year, and for my transformation went. It's[if Cock Length of Susan < 10]... [else] [end if]pretty much guaranteed I'm out of a job, and I'm not even human anymore! People have stared, pointed and shouted at me from the moment this whole thing started[if Cock Length of Susan < 10]!' [SubjectProCap of Susan] sniffs as [SubjectPro of Susan] says this, getting a bit worked up about things. [else]! That's not cool at all, is it?!' [SubjectProCap of Susan] draws a grimace to underline [PosAdj of Susan] sentiment. [end if]'So yeah, between all of that, and being treated like a monster the rest of my life - I wish I still was human! Maybe your Doctor Matt will find a way to turn me back?'";
+	LineBreak;
 	say "     [bold type]Sounds like a pretty 'doom and gloom' outlook for being transformed. It feels like you should reply and give your own opinion. (Choose wisely, this might have marked consequences)[roman type][line break]";
+	LineBreak;
 	say "     [link](1)[as]1[end link] - There are a number of upsides that [SubjectPro of Susan] maybe hasn't thought about."; [platonic consoling]
 	say "     [link](2)[as]2[end link] - Say that some people actually see someone like [ObjectPro of Susan] as pretty desirable, then touch [Susan]'s arm in a light caress."; [amorous consoling]
 	say "     [link](3)[as]3[end link] - Agree with [ObjectPro of Susan]. It'd be best if a cure was found. That's why you're helping Dr. Matt."; [platonic consoling]
@@ -581,14 +643,19 @@ to say SusanExperimentTalk: [note: no varying texts needed in this, as Samson ca
 			now Loyalty of Susan is 3; [Susan ready for medical]
 
 to say SusanClaimTalk: [player claims her to fuck with]
-	say "     Reaching out to Susan, you take her arm and pull her to your chest, tightly embracing the anthro deer. In a firm, dominant voice, you tell her she's yours now. She looks in your face and opens her mouth to say something, only to have you press your own lips to hers, invading her mouth with your tongue. Just like the last time when you claimed her in the park, she falls into submitting to you easily enough. You spend a little while making out with the little herm and feeling her up, then nod over to the door of the side room where Orthas set up a mattress for Susan. She obediently lets you lead her over to it.";
+	say "     Reaching out to Susan, you take her arm and pull her to your chest, tightly embracing the anthro deer. In a firm, dominant voice, you tell her she's yours now. She looks in your face and opens her mouth to say something, only to have you press your own lips to hers, invading her mouth with your tongue. Just like the last time when you claimed her in the park, she doesn't really pose much resistance to your desires. As you tell her that she'll submit to you now, and serve for your pleasure, Susan goes wide-eyed, and puts up a token try to pull away, futile against your firm grip. Shaking your head, you tell her that she shouldn't anger you and just obey like a good little doe. She needs you, because where would she be without you right now? Hiding in a forest, just waiting for the next horny creature to jump and violently rape her while she sleeps.";
+	say "     As you paint a fairly gruesome picture, a look of fear rises in her eyes, with you being able to pat and stroke the doe in response, telling her she'll be safe with you, [italic type]if[roman type] she's a good girl. 'I - I... I'll be good! Anything you want!' she replies, trembling a little in your grasp. You spend a little while making out with the little herm and feeling her up, then nod over to the door of the side room where Orthas set up a cot for Susan. She obediently lets you lead her over to it.";
 	TraitGain "Submissive" for Susan;
 	now PlayerControlled of Susan is true;
+	now M-Herm Susan Transformation Start is resolved; [killing the option for her to go m-herm]
+	now M-Herm Susan Transformation End is resolved; [killing the option for her to go m-herm]
 	SusanSexMenu;
 
 to say SusanRelationshipTalk:
 	say "     Reaching out and touching Susan's arm gently, you give it a light stroke with your fingers. Her eyes widen as she looks at your face, seeing the amorous expression on your face. In your most charming voice, you tell the anthro deer that you'd love to take your relationship to a new physical level. [if PlayerFucked of Susan is true]More than just doing it as an experiment for Dr. Matt, you quickly add, thinking back to the last time. [end if]You like her, a lot, and the two of you could find some comfort with each other. Susan, in a mixture of shock and pleasant surprise, takes a moment to find her words again, then finally says, 'Oh - I... that's just... wow! I know we talked about some things, but I still didn't think anyone would really want to... be with me, being like this. No longer human.' Not wanting to let her doubts get out of hand, you take Susan's hand and give it a squeeze, then say that you do not have any problems at all with her. You'd really like to be with her. She relaxes as she hears your words, squeezing you back and giving you a smile.";
+	LineBreak;
 	say "     [bold type]Looks like you're well received. But what sort of relationship do you intend to pursue with Susan?[roman type][line break]";
+	LineBreak;
 	say "     [link](1)[as]1[end link] - The little feminine herm clearly needs someone to protect her and take a dominant role."; [Susan Sub]
 	say "     [link](2)[as]2[end link] - Invite the little feminine herm to try out being equal partners."; [Susan Switch]
 	say "     [link](3)[as]3[end link] - Ask her to be your buck, hoping that she might become more dominant for you."; [Samson Dom]
@@ -603,24 +670,27 @@ to say SusanRelationshipTalk:
 			say "Invalid choice. Type [link]1[end link] to offer being her dom, [link]2[end link] to become her equal partner, [link]3[end link] to ask her to become your dominant buck, or [link]4[end link] to offer that she could be the buck, and both of you equal partners.";
 	if calcnumber is 1:
 		LineBreak;
-		say "     Leaning in to kiss Susan, you embrace her tightly, arms wrapping around the little herm's body and pulling her into yours. You can feel her breasts pressing against your front while pushing your tongue forward into her mouth, sliding against hers. Somehow, it seems like she was just waiting for someone to take her and hold her tight. Continuing to kiss her, again and again, for a while, you eventually pull back a little, a beaming smile on your face as you watch her breathless, happy expression. Then you ask her to be your little doe, and she happily replies, 'Yes, of course! I feel so safe in your arms!' The two of you keep kissing and touching for a little while longer, before you nod over to the door of the side room where Orthas set up a mattress for Susan. She happily lets you lead her to it, eager for what will come next.";
+		say "     Leaning in to kiss Susan, you embrace her tightly, arms wrapping around the little herm's body and pulling her into yours. You can feel her breasts pressing against your front while pushing your tongue forward into her mouth, sliding against hers. Somehow, it seems like she was just waiting for someone to take her and hold her tight. Continuing to kiss her, again and again, for a while, you eventually pull back a little, a beaming smile on your face as you watch her breathless, happy expression. Stroking over her head, you say that you're glad you found her when you did - after all, anything could have happened with her alone in the woods. Everyone has to sleep sometime, and is completely helpless during that time. As you lay these facts out, you can see Susan's eyes widening and her bite her lip, as she seems to imagine horrible fates for herself if she stayed where she was. 'I don't think I actually thanked you for finding me, before now. I'm really glad you brought me here, so thank you!' come her next words, with Susan giving you an admiring, almost worshipful glance.";
+		say "     When you then ask her to be your your woman, sweet little doe, she happily replies, 'Yes, of course! I feel so safe in your arms!' The two of you keep kissing and touching for a little while longer, before you nod over to the door of the side room where Orthas set up a cot for Susan. She happily lets you lead her to it, eager for what will come next.";
 		TraitGain "Submissive" for Susan;
 		SusanSexMenu;
 	else if calcnumber is 2:
 		LineBreak;
-		say "     Leaning in to kiss Susan, you embrace her tightly, arms wrapping around the little herm's body and pulling her into yours. You can feel her breasts pressing against your front while pushing your tongue forward into her mouth, sliding against hers. Somehow, it seems like she was just waiting for someone to take her and hold her tight. Continuing to kiss her, again and again, for a while, you eventually pull back a little, a beaming smile on your face as you watch her breathless, happy expression. Then you ask her to be your doe, and promise to be there for her as well, as equals. Susan happily replies, 'Yes, of course!' The two of you keep kissing and touching for a little while longer, before you nod over to the door of the side room where Orthas set up a mattress for Susan. Hand in hand, you walk over to it, eager for what will come next.";
+		say "     Leaning in to kiss Susan, you embrace her tightly, arms wrapping around the little herm's body and pulling her into yours. You can feel her breasts pressing against your front while pushing your tongue forward into her mouth, sliding against hers. Somehow, it seems like she was just waiting for someone to take her and hold her tight. Continuing to kiss her, again and again, for a while, you eventually pull back a little, a beaming smile on your face as you watch her breathless, happy expression. Then you ask her to be your doe, and promise to be there for her as well, as equals. Susan happily replies, 'Yes, of course!' The two of you keep kissing and touching for a little while longer, before you nod over to the door of the side room where Orthas set up a cot for Susan. Hand in hand, you walk over to it, eager for what will come next.";
 		TraitGain "Equal" for Susan;
 		SusanSexMenu;
 	else if calcnumber is 3:
 		LineBreak;
 		say "     Seemingly registering some unspoken hints you must have been giving with your body language and expression, the deer suddenly lays her arms around you, pulling you close in a tight embrace. You can feel her chest pressing against your front and look up to meet her eyes, leading to her planting a kiss on your mouth. You let your tongue flick into her mouth, teasing and enticing her to do the same to you. Somehow, it seems that she gets more forward in your play the longer you do it, with her soon wrestling down your own tongue in your mouth. Continuing to kiss her in hungry abandon for a while, you eventually pull back a little, a beaming smile on your face as you watch her breathless, happy expression. Then you ask her to be your buck, to be strong and someone you can cuddle yourself against. Susan runs a hand up your back, cradling your head with it as she gives you another deep kiss, followed by her reply of, 'Yes, of course!'";
 		say "     The two of you keep kissing and touching for a little while longer, before she eventually pulls back a little. You can see in her eyes that she's got something on her mind, so you just wait patiently, letting her come to terms and find the right words. 'This is... a big step, you know. Me being [']the man['], so to say. I might need a little time to think about what that means. Hope you'll be alright with that.' Giving her a soft smile full of understanding and leaning in your head to rest against Susan's chest, you say that you'll wait for her to tell you when she's ready.";
+		say "     [bold type]Some inner voice tells you that it'd be a really good idea to give Susan some time alone, so she can think things through.[roman type][line break]";
 		TraitGain "Dominant" for Susan;
 		now M-Herm Susan Transformation End is active;
 	else if calcnumber is 4:
 		LineBreak;
 		say "     Taking hold of her arms and laying them around your chest, the deer soon catches what you want and begins embracing you tightly. You can feel her chest pressing against your front and look up to meet her eyes, leading to her planting a kiss on your mouth. You let your tongue flick into her mouth, teasing and enticing her to do the same to you. Somehow, it seems that she gets more forward in your play the longer you do it, with her soon wrestling down your own tongue in your mouth. Continuing to kiss her in hungry abandon for a while, you eventually pull back a little, a beaming smile on your face as you watch her breathless, happy expression. Then you ask her to be your buck, and promise to be there for her as well, as equals. Susan runs a hand up your back, cradling your head with it as she gives you another deep kiss, followed by her reply of, 'Yes, of course!'";
 		say "     The two of you keep kissing and touching for a little while longer, before she eventually pulls back a little. You can see in her eyes that she's got something on her mind, so you just wait patiently, letting her come to terms and find the right words. 'This is... a big step, you know. Me being [']the man['], so to say. I - er, might need a little time to think about what that means. Would you be alright with that?' Giving her a smile full of understanding, you look right into her eyes and plant a peck on her lips, then say that you'll wait for her to be ready.";
+		say "     [bold type]Some inner voice tells you that it'd be a really good idea to give Susan some time alone, so she can think things through.[roman type][line break]";
 		TraitGain "Equal" for Susan;
 		now M-Herm Susan Transformation End is active;
 	now PlayerFriended of Susan is true;
@@ -640,6 +710,8 @@ instead of conversing the Susan:
 			SusanTalkMenu;
 	else if HP of Susan is 2:
 		say "     Susan smiles and lightly touches your arm, then nods to the bed. Taking a deep breath, she adds, 'So. Do you - do we... uhm. Lie down now?' She seems a bit jittery, looking around nervously and even lightly trembling. At the same time though, she appears eager to feel that someone doesn't see her as some sort of weird creature and still wants to be with her intimately.";
+	else if Affection of Susan < 0:
+		say "     As you approach, [Susan] shoots you a hostile glare and says, 'Go away, I don't want to talk to you!' Looks like [SubjectPro of Susan] hates your guts at the moment. [bold type]Maybe give her a day - or week - or so to cool down.[roman type][line break]";
 	else if Susan is in Primary Lab: [Trevor Labs]
 		SusanTalkMenu;
 	else: [talk stuff in the Hospital]
@@ -724,64 +796,126 @@ to say sexwithSusan:
 		say "     As you bring up sex with her, Susan bites her lip and looks a little insecure. 'I'm still... thinking about what you said. Coming to terms with it. Could you... give me some more time please?'";
 	else if PlayerControlled of Susan is false and PlayerFriended of Susan is false:
 		if Affection of Susan < 0:
-			say "     Given that Susan actively dislikes you now, this seems quite unlikely to happen. [if Resolution of Unusual Creature is 4]With both Doctor Matt and Orthas close by, just taking her despite this also doesn't seem to be a good idea. [end if][line break]";
+			say "     Given that [Susan] actively dislikes you now, this seems quite unlikely to happen. [if Resolution of Unusual Creature is 4]With both Doctor Matt and Orthas close by, just taking [ObjectPro of Susan] despite this also doesn't seem to be a good idea. [end if][bold type]Maybe give her a day - or week - or so to cool down.[roman type][line break]";
 		else if Affection of Susan < 2 and Resolution of Unusual Creature is 4:
 			say "     You should get to know Susan at least a tiny bit, and then make it clear to the anthro deer that you lay claim to her before you do this.";
+		else if Affection of Susan > 1 and Resolution of Unusual Creature is 4:
+			say "     Maybe you should approach her and claim her as yours first.";
 		else if Affection of Susan < 3 and Resolution of Unusual Creature is 3:
 			say "     You should get to know Susan a bit better, then talk to her about the possibility of a physical relationship between the two of you.";
+		else if Affection of Susan > 2 and Resolution of Unusual Creature is 3:
+			say "     Maybe talk to her about being in a physical relationship first.";
 	else if HP of Susan is 52 and hospcountdown - turns >= 16 and hospquest >= 18:
 		say "[Susanlabcoatscene]"; [TODO: Rewrite/Rebuild]
 	else:
 		SusanSexMenu;
 
 to SusanSexMenu:
+	if "Dominant" is listed in Traits of Susan:
+		now SusanDom is true;
+		now SusanSub is false;
+	else if "Submissive" is listed in Traits of Susan:
+		now SusanDom is false;
+		now SusanSub is true;
 	project the Figure of Susan_face_icon;
-	setmonster "Deer";
-	choose row MonsterID from the Table of Random Critters;
+	LineBreak;
+	say "     [bold type]What do you want to do with Susan?[roman type][line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if Player is male and Cock Length of Player > 6 and Cock Length of Player < 15:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck Susan";
-		now sortorder entry is 1;
-		now description entry is "Fill your little doe's pussy with your cock";
-	[]
-	if Player is male and Cock Length of Player < 6:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck Susan with your small penis";
-		now sortorder entry is 2;
-		now description entry is "Fuck the little doe with your little cock";
-	[]
-	if Cock Length of Player >= 15 and Susanoversize is false:
-		choose a blank row in table of fucking options;
-		now title entry is "Hyper fuck";
-		now sortorder entry is 3;
-		now description entry is "Try to fit your giant cock on the little doe";
-	[]
-	if Cock Length of Player >= 15 and Susanoversize is true:
-		choose a blank row in table of fucking options;
-		now title entry is "Hyper fun";
-		now sortorder entry is 4;
-		now description entry is "Now you know you can fit your giant cock on her, why not do it again?";
-	[]
 	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Make Susan Suck your cock";
-		now sortorder entry is 5;
-		now description entry is "Make the deer suck the cock she loves so very much";
+		if "Samson Active" is listed in Traits of Susan:
+			choose a blank row in table of fucking options;
+			now title entry is "Ask Samson for a blowjob";
+			now sortorder entry is 0;
+			now description entry is "Have your muscular buck go down on you";
+		else:
+			choose a blank row in table of fucking options;
+			now title entry is "Ask Susan for a blowjob";
+			now sortorder entry is 0;
+			now description entry is "Fill your sweet doe go down on you";
 	[]
-	if HP of Susan >= 2 and player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Let Susan fuck your pussy";
-		now sortorder entry is 6;
-		now description entry is "Let Susan be the stag and fuck your Pussy";
+	if Player is female:
+		if "Samson Active" is listed in Traits of Susan:
+			choose a blank row in table of fucking options;
+			now title entry is "Ask Samson to go down on your pussy";
+			now sortorder entry is 1;
+			now description entry is "Have your muscular buck go down on you";
+		else:
+			choose a blank row in table of fucking options;
+			now title entry is "Ask Susan to go down on your pussy";
+			now sortorder entry is 1;
+			now description entry is "Fill your sweet doe go down on you";
 	[
-	if HP of Susan >= 2:
+	if Player is male and SusanDom is true:
+		if "Samson Active" is listed in Traits of Susan:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck Samson's pussy";
+			now sortorder entry is 2;
+			now description entry is "Fill your muscular buck's pussy with your cock";
+		else:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck Susan's pussy";
+			now sortorder entry is 2;
+			now description entry is "Fill your sweet doe's pussy with your cock";
+	[]
+	if Player is male and SusanDom is true:
+		if "Samson Active" is listed in Traits of Susan:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck Samson's ass";
+			now sortorder entry is 3;
+			now description entry is "Fill your muscular buck's ass with your cock";
+		else:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck Susan's ass";
+			now sortorder entry is 3;
+			now description entry is "Fill your sweet doe's ass with your cock";
+	]
+	if "Samson Active" is listed in Traits of Susan:
 		choose a blank row in table of fucking options;
-		now title entry is "Let Susan fuck your ass";
+		now title entry is "Go down on Samson's cock";
+		now sortorder entry is 4;
+		now description entry is "Give the sexy buck pleasure with your mouth";
+	else:
+		choose a blank row in table of fucking options;
+		now title entry is "Go down on Susan's cock";
+		now sortorder entry is 4;
+		now description entry is "Give the sweet doe pleasure with your mouth";
+	[
+	if "Samson Active" is listed in Traits of Susan:
+		choose a blank row in table of fucking options;
+		now title entry is "Go down on Samson's pussy";
+		now sortorder entry is 5;
+		now description entry is "Give the sexy buck pleasure with your mouth";
+	else:
+		choose a blank row in table of fucking options;
+		now title entry is "Go down on Susan's pussy";
+		now sortorder entry is 5;
+		now description entry is "Give the sweet doe pleasure with your mouth";
+	[]
+	if Player is female:
+		if "Samson Active" is listed in Traits of Susan:
+			choose a blank row in table of fucking options;
+			now title entry is "Offer your pussy to Samson";
+			now sortorder entry is 6;
+			now description entry is "Let the sexy buck fuck you";
+		else:
+			choose a blank row in table of fucking options;
+			now title entry is "Offer your pussy to Susan";
+			now sortorder entry is 6;
+			now description entry is "Let the sweet doe fuck you";
+	[]
+	if "Samson Active" is listed in Traits of Susan:
+		choose a blank row in table of fucking options;
+		now title entry is "Offer your ass to Samson";
 		now sortorder entry is 7;
-		now description entry is "Take the not so little cock of your doe in your ass";
+		now description entry is "Let the sexy buck fuck you";
+	else:
+		choose a blank row in table of fucking options;
+		now title entry is "Offer your ass to Susan";
+		now sortorder entry is 7;
+		now description entry is "Let the sweet doe fuck you";
 	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -798,29 +932,243 @@ to SusanSexMenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Fuck Susan":
-					say "[SusanSex1]";
-				else if nam is "Fuck Susan with your small penis":
-					say "[SusanSex2]";
-				else if nam is "Hyper fuck":
-					say "[SusanSex3]";
-				else if nam is "Hyper fun":
-					say "[SusanSex4]";
-				else if nam is "Make Susan Suck your cock":
-					say "[SusanSex5]";
-				else if nam is "Let Susan fuck your pussy":
-					say "[SusanSex6]";
-				else if nam is "Let Susan fuck your ass":
-					say "[SusanSex7]";
-				now lastfuck of Susan is turns;
+				if (nam is "Ask Samson for a blowjob" or nam is "Ask Susan for a blowjob"):
+					say "[Susan gives BJ]";
+				else if (nam is "Ask Samson to go down on your pussy" or nam is "Ask Susan to go down on your pussy"):
+					say "[Susan gives Cunni]";
+				else if (nam is "Fuck Samson's pussy" or nam is "Fuck Susan's pussy"):
+					say "[Susan receives PussyFuck]";
+				else if (nam is "Fuck Samson's ass" or nam is "Fuck Susan's ass"):
+					say "[Susan receives AssFuck]";
+				else if (nam is "Go down on Samson's cock" or nam is "Go down on Susan's cock"):
+					say "[Susan receives BJ]";
+				else if (nam is "Go down on Samson's cock" or nam is "Go down on Susan's cock"):
+					say "[Susan receives Cunni]";
+				else if (nam is "Offer your pussy to Samson" or nam is "Offer your pussy to Susan"):
+					say "[Susan gives PussyFuck]";
+				else if (nam is "Offer your ass to Samson" or nam is "Offer your ass to Susan"):
+					say "[Susan gives AssFuck]";
+				infect "Deer";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You step back from the deer making her sigh with neediness.";
+			say "     You step back from the anthro deer, shaking your head slightly as [SubjectPro of Susan] gives you a questioning look.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
+
+to say Susan gives BJ:
+	if Cock Length of Susan > 10: [M-Herm]
+		if SusanDom is true: [dom scene]
+			say "     Stepping up to [Susan] with an eager expression on your face, you place a hand on the bulge of [PosAdj of Susan] left pec, giving the firm muscle a squeeze. In reaction, the dominant anthro slides a hand around your midriff and pulls you close, then kisses you right on the lips. 'Like that, don't you,' [Susan] mumbles while making out with you, flexing his pecs a little to make them dance under your touch. Smooching with the anthro is playful and fun, especially as [SubjectPro of Susan] starts to push [PosAdj of Susan] tongue into your mouth, trying to push yours down playfully. Soon, you're tongue-wrestling back and forth, with [Susan] giving as good as you are. The breathless, stormy bout of kissing eventually culminates with you pulling back, or at least trying to, as [Susan] keeps a hand on the back of your head to give you one last kiss on the lips. Chuckling, [SubjectPro of Susan] lets you go after that, with both of you grinning at each other.";
+			say "     As your eyes meet, you let your eyebrows wiggle up and down, then plead for [ObjectPro of Susan] to suck your cock. [SubjectProCap of Susan] grins and gives your chest a playful slap, then says, 'Fine. On the bed with you!' [if Player is not barecrotch]Eager to get it on with [Susan], your hands quickly fly to bare your crotch, [else]Stroking a hand over your naked crotch, you [end if] quickly move over to [PosAdj of Susan] cot and lie down, waiting for [ObjectPro of Susan] to come to you. Bending over your stretched-out form, one hand firmly planted on the middle of your chest, both to feel you up and keep you held down, [Susan] takes hold of your erection with the other. You grunt in lustful anticipation as [SubjectPro of Susan] leans in to give its head a lick, followed by [PosAdj of Susan] lips sliding over it. Soon, your erection is inside [PosAdj of Susan] muzzle, with [PosAdj of Susan] long and agile tongue dancing over its shaft, wrapping around and teasing you to keep your arousal growing.";
+			WaitLineBreak;
+			say "     [SubjectProCap of Susan] is quite good at this, making it hard to keep yourself from cumming right then and there, with only some strength of mind and sometimes fairly urgent squeezes of [PosAdj of Susan] hand on your chest keeping things in check. [Susan] wants to make this last for a while, so [SubjectPro of Susan] switches over to going slow at times, tasting your [Cock of Player] cock and all the pre you're leaking. Yet despite those moments of reprieve, [SubjectPro of Susan] always returns to bobbing on your erection before long, inevitably driving you closer and closer to orgasm. As you finally throw your head back and let out a breathless pant, telling [ObjectPro of Susan] you're about to unload soon, you feel some vibrations around your cock as [Susan] chuckles, never letting up from the sucking even as [SubjectPro of Susan] does so. [Susan] continues to bob on your shaft for a little while longer, listening intently to the urgency of your moans.";
+			say "     As you then are just about to explode, [SubjectPro of Susan] then pulls off with a loud pop, [PosAdj of Susan] fingers wrapping tightly around your hard and throbbing shaft and jerking you at a furious pace. 'Why don't you show your buck how much you need [ObjectPro of Susan] to take care of you! Cum for me, baby!' Given how wound up you already are, [PosAdj of Susan] handjob pushes you over the edge in short notice, with [Susan] aiming your erection right at your own chest, then watching gleefully as you hump up against [PosAdj of Susan] hand, then begin to blast out creamy strings of cum to splat down all over your front. [if Player is female]At the same time, pussy gets wet and dripping, clenching reflexively as if wishing it was filled with a cock. [end if]Making you to paint yourself in white streaks, the anthro buck continues to stroke and tease you all throughout your orgasm, until your cock eventually becomes sensitive and you try to brush [ObjectPro of Player] off. [Susan] glances over to you, shaking [PosAdj of Susan] head and saying, 'Getting a bit unruly, aren't you? I know just what to do, haha!'";
+			WaitLineBreak;
+			say "     The anthro deer lets [PosAdj of Susan] hands slide over your chest, scooping up cum with [PosAdj of Susan] fingers and then feeding it to you. 'A tasty treat for you!' you hear the anthro buck say with a wink, smiling as [SubjectPro of Susan] sinks another two cummy digits into your mouth. [SubjectProCap of Susan] continues to feed you your own cum until there is nothing left but a somewhat sticky feeling on your chest, then meets your eyes with a raised eyebrow. 'What did you think of that?', [SubjectPro of Susan] asks, inviting you to happily tell [ObjectPro of Susan] that you loved how [SubjectPro of Susan] took charge. [SubjectProCap of Susan] laughs and gives your shoulder a friendly slap, then leans in and kisses you right on the lips before standing back up.";
+		else: [regular scene]
+			say "     Stepping up to [Susan], you place a hand on the bulge of [PosAdj of Susan] left pec, giving the firm muscle a squeeze, then brushing your fingers down a little, feeling the lightly rounded curve that serves as a reminder that [Susan] still has some female characteristics. Like very sensitive nipples for example, which you gleefully exploit, giving them a light pinch while planting a hungry kiss on your sexy buck's lips. 'That feels nice,' [Susan] mumbles while making out with you, flexing [PosAdj of Susan] pecs a little to make them dance under your touch. Smooching with the anthro is playful and fun, with you starting off by pushing your tongue into [PosAdj of Susan] mouth, only to have [ObjectPro of Susan] take you up on that. Soon, you're tongue-wrestling back and forth, with [Susan] giving as good as you are. The breathless, stormy bout of kissing eventually culminates with you pulling back, with both of you grinning at each other, then laughing happily. As your eyes meet, you let your eyebrows wiggle up and down, then ask [ObjectPro of Susan] to suck your cock. [SubjectProCap of Susan] chuckles and gives your chest a playful slap, then readily sinks down onto [PosAdj of Susan] knees, looking up with a smile on [PosAdj of Susan] face. [if Player is not barecrotch]Eager to get it on with [Susan], your hands quickly fly to bare your crotch, [else]Stroking a hand over your naked crotch, you [end if]then wrap your fingers around your hard [Cock of Player] shaft.";
+			say "     Holding it out for [Susan], you grunt in lustful anticipation as [SubjectPro of Susan] leans in to give its head a lick, followed by [PosAdj of Susan] lips sliding over it. Soon, your erection is inside [PosAdj of Susan] muzzle, with [PosAdj of Susan] long and agile tongue dancing over its shaft, wrapping around and teasing you to keep your arousal growing. [SubjectProCap of Susan] is quite good at it, making it hard to keep yourself from cumming right then and there, with only some strength of mind and sometimes fairly urgent squeezes of [PosAdj of Susan] shoulder keeping things in check. [Susan] is happy enough to switch over to going slow at times, tasting your [Cock of Player] cock and all the pre you keep feeding [ObjectPro of Susan] while jerking [PosAdj of Susan] own cock right along with blowing you. Yet despite those moments of reprieve, [SubjectPro of Susan] always returns to bobbing on your erection before long, inevitably driving you closer and closer to orgasm. As you finally throw your head back and let out a breathless pant, telling [ObjectPro of Susan] you're about to unload soon, you feel some vibrations around your cock as [Susan] chuckles, never letting up from the sucking even as [SubjectPro of Susan] does so.";
+			WaitLineBreak;
+			say "     [Susan] then decides to go all out, sucking hard on your cock and pushing [ObjectPro of Susan]self to take every last inch, [PosAdj of Susan] nose pressed into your crotch as [SubjectPro of Susan] sucks hard on your erection. Then [SubjectPro of Susan]... hums, making [PosAdj of Susan] tongue vibrate against the underside and top of your dick, given that it's wrapped around it. Wound up as you are, this is the last little push to drive you over the edge, and you groan in satisfaction as your cock begins to erupt[if Player is female] and your pussy gets wet and dripping[end if]. Spurt after rich spurt, you blast down [Susan]'s throat, with [ObjectPro of Susan] hungrily gulping it down. You ride our your orgasm like that, filling [PosAdj of Susan] stomach with gusto. Then, when you eventually wind down and your member is getting sensitive to being touched, you have to pat [Susan] on [PosAdj of Susan] shoulder before [SubjectPro of Susan] lets up sucking on you. As [SubjectPro of Susan] pulls back with a string of semen still connecting your penis to [PosAdj of Susan] lips, the anthro quickly catches it with [PosAdj of Susan] outstretched tongue, then swallows even this little bit down.";
+			say "     'Tasty!' you hear the anthro buck say with a wink, then stands up with a smile on [PosAdj of Susan] face. The next thing coming from [PosAdj of Susan] mouth is a lustful pant as [SubjectPro of Susan] goes full out with jerking [PosAdj of Susan] own cock. It only takes mere moments before he erupts, with heavy spurts of seed painting your front in white streaks. [PosAdjCap of Susan] legs tremble as he experiences [PosAdj of Susan] orgasm, and [SubjectPro of Susan] has to reach out to steady [ObjectPro of Susan]self on your shoulder. With a firm grip of the anthro's strong hand of your shoulder, you feel even closer and more connected than [']just['] being cum upon, and you put your hand on [ObjectPro of Susan] as you watch [Susan] ride out [PosAdj of Susan] climax. When the anthro finally winds down, [SubjectPro of Susan] smiles at you, then holds out a fist between you, which you bump with your own, thanking [Susan] for the great blowjob. [SubjectProCap of Susan] laughs and gives your shoulder a friendly slap, then leans in and kisses you right on the lips, sharing a little of your own taste with you.";
+	else: [F-Herm]
+		if SusanSub is true: [sub scene]
+			say "     Stepping up to Susan, you place a hand on the curve of her left breast, giving it a little squeeze while you lean in to plant a hungry kiss on your sweet doe's lips. She melts into your touch as you slide an arm around her midriff, pulling Susan closer. Making out with the submissive anthro, you invade her mouth with your tongue, wrestling her own appendage down. The breathless, stormy bout of kissing eventually culminates with you pulling back, with her stretching her neck a little to follow for a second, eager to receive more attention from you. Instead, you meet her blue-hazel eyes with a lusty smirk on your face and tell the doe to suck your cock. As soon as you lay one hand on her shoulder, she readily sinks down onto her knees, looking up happily to serve you. [if Player is not barecrotch]Eager to get it on with Susan, your hands quickly fly to bare your crotch, [else]Stroking a hand over your naked crotch, you [end if]then wrap your fingers around your hard [Cock of Player] shaft.";
+			say "     Holding it out for Susan, you grunt in lustful anticipation as she leans in to give its head a shy lick, soon followed by her lips sliding over it. With your erection sliding into her muzzle, you run a hand through Susan's hair and cup the back of her head, then press her down further towards your crotch. Soon, your whole erection is inside her muzzle, with her starting to use her long and agile tongue to wrap around it and tease you, keeping your arousal growing. She isn't bad at all at this, but still keeps waiting for you to take control, which you do, by pumping your length in and out of her mouth. Feeling her lips, her muzzle, her tongue on your shaft, is amazing, as is the feeling of dominating the doe, and you have got to hold back at times, to keep yourself from cumming right then and there. Susan is happy enough no matter if you go fast or slow, with her eagerly tasting your [Cock of Player] cock and all the pre you keep feeding her while enjoying her mouth.";
+			WaitLineBreak;
+			say "     Yet despite the moments of reprieve in between, your libido demands that you go back to hard face-fucking before long every time, inevitably driving you closer and closer to orgasm. As you finally throw your head back and let out a breathless pant, calling out that you're about to unload soon, you feel some vibrations around your cock as Susan tries to say something or other. As she never lets up from sucking, this just gives you another little bit of stimulation. Just enough for the last push that catapults you over the edge, making you thrust all the way in and grind against her muzzle while your cock erupts[if Player is female] and your pussy gets wet and dripping[end if]. Spurt after rich spurt, you blast down Susan's throat, with her hungrily gulping it down. You ride our your orgasm like that, filling her tummy with gusto. Then, when you finally release her head, she pulls back with a string of semen still connecting your penis to her lips, which she quickly catches with her outstretched tongue, swallowing even this little bit down.";
+			say "     'That was tasty! Thank you for the meal,' you hear the anthro doe say with a wink, looking up at you with a smile on her face. You stroke over her hair, telling Susan what a good little doe she's been for you. She leans her head into your touch and stays right there until you stop stroking, happy to have you as her dom. Only when you finally pull your hand away does the anthro stand back up.";
+		else: [regular scene]
+			say "     Stepping up to Susan, you place a hand on the curve of her left breast, giving it a little squeeze while you lean in to plant a hungry kiss on your sweet doe's lips. She leans into your touch as you slide an arm around her midriff, pulling Susan closer. Making out with the anthro is playful and fun, with you starting off by pushing your tongue into her mouth, only to have her take you up on that. Soon, you're tongue-wrestling back and forth, with Susan not exactly winning, but still giving back with more of a dancer's moves than forceful ones. The breathless, stormy bout of kissing eventually culminates with you pulling back, with both of you grinning at each other, then laughing happily. As your eyes meet, you let your eyebrows wiggle up and down, then ask her to suck your cock. She giggles and gives your chest a playful slap, then readily sinks down onto her knees, looking up with a smile on her face. [if Player is not barecrotch]Eager to get it on with Susan, your hands quickly fly to bare your crotch, [else]Stroking a hand over your naked crotch, you [end if]then wrap your fingers around your hard [Cock of Player] shaft.";
+			say "     Holding it out for Susan, you grunt in lustful anticipation as she leans in to give its head a lick, followed by her lips sliding over it. Soon, your erection is inside her muzzle, with her long and agile tongue dancing over its shaft, wrapping around and teasing you to keep your arousal growing. She is quite good at it, making it hard to keep yourself from cumming right then and there, with only some strength of mind and sometimes fairly urgent squeezes of her shoulder keeping things in check. Susan is happy enough to switch over to going slow at times, tasting your [Cock of Player] cock and all the pre you keep feeding her. At the same time, she alternates between stroking her own cock and sinking her fingers between the sensitive folds of her female sex. Yet despite those moments of reprieve, she always returns to bobbing on your erection before long, inevitably driving you closer and closer to orgasm. As you finally throw your head back and let out a breathless pant, telling her you're about to unload soon, you feel some vibrations around your cock as Susan chuckles, never letting up from the sucking even as she does so.";
+			WaitLineBreak;
+			say "     Susan then decides to go all out, sucking hard on your cock and pushing herself to take every last inch, her nose pressed into your crotch as she sucks hard on your erection. Then she... hums, making her tongue vibrate against the underside and top of your dick, given that it's wrapped around it. Wound up as you are, this is the last little push to drive you over the edge, and you groan in satisfaction as your cock begins to erupt[if Player is female] and your pussy gets wet and dripping[end if]. Spurt after rich spurt, you blast down Susan's throat, with her hungrily gulping it down. You ride our your orgasm like that, filling her tummy with gusto. Then, when you eventually wind down and your member is getting sensitive to being touched, you have to pat Susan on her shoulder before she lets up sucking on you. As she pulls back with a string of semen still connecting your penis to her lips, the anthro quickly catches it with her outstretched tongue, then swallows even this little bit down.";
+			say "     'That was tasty! Thank you for the meal,' you hear the anthro doe say with a wink, looking up at you with a smile on her face even as she digs two fingers into her pussy, frigging it hard. The next thing coming from her mouth is a lustful pant as she pushes herself to join you in orgasm, leaking femcum all over her own fingers and having her cock blast streaks of cum over the floor between your feet. You stroke over her hair, telling Susan that you enjoyed doing this with her. She leans her head into your touch for a second, smiling, then stands up and kisses you right on the lips, sharing a little of your own taste with you.";
+	NPCSexAftermath Susan receives "OralCock" from Player;
+
+to say Susan gives Cunni:
+	if Cock Length of Player > 10: [M-Herm]
+		if SusanDom is true: [dom scene]
+			say "     Stepping up to [Susan] with an eager expression on your face, you place a hand on the bulge of [PosAdj of Susan] left pec, giving the firm muscle a squeeze. In reaction, the dominant anthro slides a hand around your midriff and pulls you close, then kisses you right on the lips. 'Like that, don't you,' [Susan] mumbles while making out with you, flexing his pecs a little to make them dance under your touch. Smooching with the anthro is playful and fun, especially as [SubjectPro of Susan] starts to push [PosAdj of Susan] tongue into your mouth, trying to push yours down playfully. Soon, you're tongue-wrestling back and forth, with [Susan] giving as good as you are. The breathless, stormy bout of kissing eventually culminates with you pulling back, or at least trying to, as [Susan] keeps a hand on the back of your head to give you one last kiss on the lips. Chuckling, [SubjectPro of Susan] lets you go after that, with both of you grinning at each other.";
+			say "     As your eyes meet, you let your eyebrows wiggle up and down, then plead for [ObjectPro of Susan] to eat out your pussy. [SubjectProCap of Susan] grins and gives your chest a playful slap, then says, 'Fine. On the bed with you!' [if Player is not barecrotch]Eager to get it on with [Susan], your hands quickly fly to bare your crotch, [else]Stroking a hand over your naked crotch, you [end if] quickly move over to [PosAdj of Susan] cot and lie down, waiting for [ObjectPro of Susan] to come to you. [if Player is male]At the same time, you cup your dick and balls, holding them up so that Susan can freely reach your female parts. [end if]Bending over your stretched-out form, one hand firmly planted on the middle of your chest, both to feel you up and keep you held down, [Susan] spreads your nether lips with [PosAdj of Susan] fingers. You grunt in lustful anticipation as [SubjectPro of Susan] leans in with outstretched tongue, brushing its tip over your folds. [Susan] follows the outline of your nether lips, creating a trail of tingly, pleasurable sensations, slowly moving upwards along the left side, then the right, before finally tracing further up, towards your clit. [SubjectProCap of Susan] doesn't just jump to sucking on it either, instead brushing [PosAdj of Susan] tongue over your crotch in a small spiral that becomes tighter and tighter, then finally ends at the very sensitive bump of your pleasure-button.";
+			WaitLineBreak;
+			say "     [PosAdjCap of Susan] tongue licks over it, once, twice, then three times before [Susan] looks up, meeting your gaze and giving you a satisfied smile, then just sticking out [PosAdj of Susan] tongue again, rapidly flicking its tip over your clit, left and right this time. As you gasp for breath from the change in sensations, [Susan] lets out a satisfied chuckle, then intensifies [PosAdj of Susan] efforts even more. Then, before you can get too used to this, [SubjectPro of Susan] switches again, licking over it from the bottom in longer passes. 'God, if I think back to what my idiot ex thought was the best way to treat a pussy... so clueless! You better appreciate this, hear me?' the anthro deer quips amusedly, meeting your eyes and wiggling [PosAdj of Susan] eyebrows. Cocky and nicely dominant, just like you like [ObjectPro of Susan]. And [SubjectPro of Susan] really is amazing at giving you head, knowing very well how to treat a woman. [PosAdjCap of Susan] teasing and licking somehow just hits the very best rhythm to make your legs tremble and knees go weak at the feelings it wakes inside you. Side by side, up and down, spirals going clockwise, or counter-clockwise, [SubjectPro of Susan] really has a lot of surprises for you ready to go, one after another.";
+			say "     The anthro deer takes special note of what especially winds you up, and soon [SubjectPro of Susan] gives those an encore, hitting you with the best, the most pleasurable, and in an all-new order too so you never know exactly what's coming next. 'Like that, don't you? Being a sweet little doe for me?!' [SubjectPro of Susan] asks in a teasing tone, and just as you're about to reply, [Susan] decides to go all out, placing [PosAdj of Susan] lips over the nub of your clit and sucking on it while also flicking [PosAdj of Susan] tongue-tip back and forth. At the same time, [PosAdj of Susan] fingers slide between the lips of your pussy, not too deep, just an inch or two - but when [SubjectPro of Susan] curls them there, this brushes against something that makes you feel amazing. It's as if [SubjectPro of Susan]'s working on your clitoris from two angles now, doubling the pleasure and sensations that brings with it. The buck works your body to perfection, relentlessly stoking the flames of your arousal.";
+			WaitLineBreak;
+			say "     Wound up as [PosAdj of Susan] tireless tongue-work has already made you, it doesn't take long for [PosAdj of Susan] efforts to push the wave of pleasure building in you as high as it can possibly be, then past that point. As a lustful gasp escapes your lips, [Susan] raises [PosAdj of Susan] head and grins at you. Your body tries to follow [ObjectPro of Susan] reflexively, thrusting up your hips upwards, which the anthro takes as a prompt to dig [PosAdj of Susan] fingers deeper into your pussy. The climax leaves you panting and trembling, weak as a kitten as you lie on the bed. [if Player is male]At the same time, your erect cock blasts out long strings of creamy cum, directed right at your own chest, as [Susan] keeps a good hold of your erection and angles it that way with a chuckle. Gleefully watching, [SubjectPro of Susan] fingers and jerks you, prolonging your orgasm to really paint your front white. [else][Susan] keeps [PosAdj of Susan] hand between your legs, pressed against your nether lips as [PosAdj of Susan] fingers are buried deep and wiggling to keep your orgasm going. [end if]The anthro buck continues to stroke and tease you all throughout your orgasm, until your genitals eventually become sensitive and you try to brush [ObjectPro of Player] off. [Susan] glances over to you, shaking [PosAdj of Susan] head and saying, 'Too much for you? Poor baby, haha!'";
+			say "     Thankfully, [Susan] does relent after a few more moments, pulling [PosAdj of Susan] hands away and letting [PosAdj of Susan] wander over your body to take in [PosAdj of Susan] handiwork. 'What did you think of that?', [SubjectPro of Susan] asks, inviting you to happily tell [ObjectPro of Susan] that you loved how [SubjectPro of Susan] took charge. [SubjectProCap of Susan] laughs and pats your chest in a friendly yet lustful way, then leans in and kisses you right on the lips before standing back up.";
+		else: [regular scene]
+			say "     Stepping up to [Susan], you place a hand on the bulge of [PosAdj of Susan] left pec, giving the firm muscle a squeeze, then brushing your fingers down a little, feeling the lightly rounded curve that serves as a reminder that [Susan] still has some female characteristics. Like very sensitive nipples for example, which you gleefully exploit, giving them a light pinch while planting a hungry kiss on your sexy buck's lips. 'That feels nice,' [Susan] mumbles while making out with you, flexing [PosAdj of Susan] pecs a little to make them dance under your touch. Smooching with the anthro is playful and fun, with you starting off by pushing your tongue into [PosAdj of Susan] mouth, only to have [ObjectPro of Susan] take you up on that. Soon, you're tongue-wrestling back and forth, with [Susan] giving as good as you are. The breathless, stormy bout of kissing eventually culminates with you pulling back, with both of you grinning at each other, then laughing happily. As your eyes meet, you let your eyebrows wiggle up and down, then say that you'd love to have your pussy eaten out, if [SubjectPro of Susan] is in the mood that is. [SubjectProCap of Susan] chuckles and gives your chest a playful slap, then says, 'Why don't you sit on the edge of the cot, okay?'";
+			say "     [if Player is not barecrotch]Eager to get it on with [Susan], your hands quickly fly to bare your crotch, [else]Stroking a hand over your naked crotch, you [end if]then step up to where [Susan] sleeps and sit down. The anthro buck follows right away, then readily sinks down onto [PosAdj of Susan] knees between your legs, looking up with a smile on [PosAdj of Susan] face. [if Player is male]At the same time, you cup your dick and balls, holding them up so that Susan can freely reach your female parts. [end if]Pushing your hips forward a little, you grunt in lustful anticipation as [SubjectPro of Susan] leans in and sticks out [PosAdj of Susan] tongue, brushing its tip over your folds. [Susan] follows the outline of your nether lips, creating a trail of tingly, pleasurable sensations, slowly moving upwards along the left side, then the right, before finally tracing further up, towards your clit. [SubjectProCap of Susan] doesn't just jump to sucking on it either, instead brushing [PosAdj of Susan] tongue over your crotch in a small spiral that becomes tighter and tighter, then finally ends at the very sensitive bump of your pleasure-button.";
+			WaitLineBreak;
+			say "     [PosAdjCap of Susan] tongue licks over it, once, twice, then three times before [Susan] looks up, meeting your gaze and giving you an eager smile, then just sticking out [PosAdj of Susan] tongue again, rapidly flicking its tip over your clit, left and right this time. As you gasp for breath from the change in sensations, [Susan] lets out a satisfied chuckle, then intensifies [PosAdj of Susan] efforts even more. Then, before you can get too used to this, [SubjectPro of Susan] switches again, licking over it from the bottom in longer passes. 'Good thing I'm not a guy with no clue what he's doing, eh?' the anthro deer quips amusedly, meeting your eyes and wiggling [PosAdj of Susan] eyebrows. Something tells you that [SubjectPro of Susan]'s talking from experience, and what must have been several underwhelming experiences. [Susan] [ReflexPro of Susan] thankfully is amazing at giving you head, knowing very well how to treat a woman. [PosAdjCap of Susan] teasing and licking somehow just hits the very best rhythm to make your legs tremble and knees go weak at the feelings it wakes inside you. Side by side, up and down, spirals going clockwise, or counter-clockwise, [SubjectPro of Susan] really has a lot of surprises for you ready to go, one after another.";
+			say "     The anthro deer takes special note of what especially winds you up, and soon [SubjectPro of Susan] gives those an encore, hitting you with the best, the most pleasurable, and in an all-new order too so you never know exactly what's coming next. 'Like that, don't you?' [SubjectPro of Susan] asks in a teasing tone, and just as you're about to reply, [Susan] decides to go all out, placing [PosAdj of Susan] lips over the nub of your clit and lightly sucking on it while also flicking [PosAdj of Susan] tongue-tip back and forth. At the same time, [PosAdj of Susan] fingers slide between the lips of your pussy, not too deep, just an inch or two - but when [SubjectPro of Susan] curls them there, this brushes against something that makes you feel amazing. It's as if [SubjectPro of Susan]'s working on your clitoris from two angles now, doubling the pleasure and sensations that brings with it. The buck works your body to perfection, relentlessly stoking the flames of your arousal.";
+			WaitLineBreak;
+			say "     Wound up as [PosAdj of Susan] tireless tongue-work has already made you, it doesn't take long for [PosAdj of Susan] efforts to push the wave of pleasure building in you as high as it can possibly be, then past that point. As you reach climax, femcum starts to gush out of your pussy, washing over [Susan]'s muzzle, with the deer quickly closing [PosAdj of Susan] eyes. A lustful gasp escapes your lips as you climax panting and trembling, even having to catch yourself on [Susan]'s shoulders to brace and not collapse as your knees go weak. [if Player is male]At the same time, your erect cock blasts out long strings of creamy cum, going right over the handsome buck's head to land who knows where. [end if]The eager herm doesn't let this distract [ObjectPro of Susan], keeping those lips firmly planted over your clit and still teasing and fingering you, prolonging your high of pleasure as long as [SubjectPro of Susan] can. Then, when you eventually wind down and are getting sensitive to being touched, down there, you have to pat [Susan] on [PosAdj of Susan] shoulder before [SubjectPro of Susan] lets up, almost as if reluctant to let go from being in control over you.";
+			say "     As [SubjectPro of Susan] pulls back with a string of saliva still connecting your crotch to [PosAdj of Susan] lips, the anthro quickly swipes it away with [PosAdj of Susan] outstretched tongue, then smiles up at you. 'I know you enjoyed [italic type]that[roman type]! Maybe you wanna return the favor sometime,' you hear the anthro doe say with a wink, followed by [ObjectPro of Susan] standing up, hard cock in hand. The anthro goes full out with jerking [PosAdj of Susan] own cock, and so it's only a matter of moments [SubjectPro of Susan] erupts, with heavy spurts of seed painting your front in white streaks. [PosAdjCap of Susan] legs tremble as [SubjectPro of Susan] experiences [PosAdj of Susan] orgasm, and [Susan] has to brace [PosAdj of Susan] legs against the side of the bed to keep standing. Reaching out to touch the soft-furred side of [PosAdj of Susan] legs, you feel even closer and more connected than [']just['] being cum upon, and you smile up at the deer. When [Susan] finally winds down, [SubjectPro of Susan] smiles at you, then holds out a fist between you, which you bump with your own, thanking [Susan] for the pleasure [ObjectPro of Susan] gave you. [SubjectProCap of Susan] laughs and gives your shoulder a friendly slap, then leans in and kisses you right on the lips.";
+	else: [F-Herm]
+		if SusanSub is true: [sub scene]
+			say "     Stepping up to Susan, you place a hand on the curve of her left breast, giving it a little squeeze while you lean in to plant a hungry kiss on your sweet doe's lips. She melts into your touch as you slide an arm around her midriff, pulling Susan closer. Making out with the submissive anthro, you invade her mouth with your tongue, wrestling her own appendage down. The breathless, stormy bout of kissing eventually culminates with you pulling back, with her stretching her neck a little to follow for a second, eager to receive more attention from you. Instead, you meet her blue-hazel eyes with a lusty smirk on your face and tell the doe to eat your pussy. As soon as you lay one hand on her shoulder, she readily sinks down onto her knees, looking up happily to serve you. [if Player is not barecrotch]Eager to get it on with Susan, your hands quickly fly to bare your crotch, [else]Stroking a hand over your naked crotch, you [end if]then pull your nether lips apart a little, stroking over the sensitive nub of your clit. [if Player is male]At the same time, you cup your dick and balls, holding them up so that Susan can freely reach your female parts. [end if][line break]";
+			say "     Putting a hand on the top of her head, you guide Susan forwards, with her sticking out her tongue to begin tracing it over your folds. Susan follows the outline of your nether lips, creating a trail of tingly, pleasurable sensations, slowly moving upwards along the left side, then the right, before finally moving on towards your clit. She doesn't just jump to sucking on it either, instead brushing her tongue over your crotch in a small spiral that becomes tighter and tighter, then finally ends at the very sensitive bump of your pleasure-button. Her tongue licks over it, once, twice, then three times before Susan looks up, meeting your gaze and giving you an eager smile, then just sticking out her tongue again, rapidly flicking its tip over your clit, left and right this time. As you gasp for breath from the change in sensations, Susan lets out a pleased giggle. Wanting more, you put both hands on her head and hold her tight against your crotch.";
+			WaitLineBreak;
+			say "     Knowing very well how to treat a pussy, from having had one all her life, Susan is amazing at eating you out. Her teasing and licking somehow just hits the very best rhythm to make your legs tremble and knees go weak at the feelings it wakes inside you. Side by side, up and down, spirals going clockwise, or counter-clockwise, she really has a lot of surprises for you ready to go, one after another. The anthro deer listens well as you tell her which things you especially liked, so she is ready when you soon demand an encore of the best and most pleasurable. Serving you eagerly, the deer follows all commands right away, then eventually has an idea to give you even more pleasure and asks, 'Should I suck you, and also use my fingers?' Grunting in lust, you nod to her, pushing against the back of her head impatiently.";
+			say "     At this point the young woman goes all out, placing her lips over the nub of your clit and lightly sucking on it while also flicking her tongue-tip back and forth. At the same time, her fingers slide between the lips of your pussy, not too deep, just two or three inces - but when she curls them there, this brushes against something that makes you feel amazing. It's as if she's working on your clitoris from two angles now, doubling the pleasure and sensations that brings with it. Wound up as her tireless tongue-work has already made you, it doesn't take long for her efforts to push the wave of arousal building in you as high as it can possibly be, then past that point. As you reach climax, femcum starts to gush out of your pussy, washing over Susan's muzzle, with the deer quickly closing her eyes, long lashes resting on her upper cheeks. A lustful gasp escapes your lips as you climax panting and trembling, even having to catch yourself on Susan's shoulders to brace and not collapse as your knees go weak. [if Player is male]At the same time, your erect cock blasts out long strings of creamy cum, going right over the young woman's head to land who knows where. [end if]The dutiful herm doesn't let this distract her, keeping those lips firmly planted over your clit and still teasing and fingering you, prolonging your high of pleasure as long as she can.";
+			WaitLineBreak;
+			say "     Then, when you eventually wind down and are getting sensitive to being touched, down there, you tell Susan to stop and she pulls back, a happy smile at having been of service on her face. 'Hope you liked it,' you hear the anthro doe say shily, looking relieved when you say you did and stroke over her head. She leans her head into your touch for a second, smiling, then stands up and kisses your cheek.";
+		else: [regular scene]
+			say "     Stepping up to Susan, you place a hand on the curve of her left breast, giving it a little squeeze while you lean in to plant a hungry kiss on your sweet doe's lips. She leans into your touch as you slide an arm around her midriff, pulling Susan closer. Making out with the anthro is playful and fun, with you starting off by pushing your tongue into her mouth, only to have her take you up on that. Soon, you're tongue-wrestling back and forth, with Susan not exactly winning, but still giving back with more of a dancer's moves than forceful ones. The breathless, stormy bout of kissing eventually culminates with you pulling back, with both of you grinning at each other, then laughing happily. As your eyes meet, you let your eyebrows wiggle up and down, then say that you'd love to have your pussy eaten out, if she's in the mood that is. Susan giggles and gives your chest a playful slap, then readily sinks down onto her knees, looking up with a smile on her face. [if Player is not barecrotch]Eager to get it on with Susan, your hands quickly fly to bare your crotch, [else]Stroking a hand over your naked crotch, you [end if]then pull your nether lips apart a little, stroking over the sensitive nub of your clit. [if Player is male]At the same time, you cup your dick and balls, holding them up so that Susan can freely reach your female parts. [end if][line break]";
+			say "     Pushing your hips forward a little, you grunt in lustful anticipation as she leans in and sticks out her tongue, Tracing its tip over your folds. Susan follows the outline of your nether lips, creating a trail of tingly, pleasurable sensations, slowly moving upwards along the left side, then the right, before finally tracing upwards, towards your clit. She doesn't just jump to sucking on it either, instead brushing her tongue over your crotch in a small spiral that becomes tighter and tighter, then finally ends at the very sensitive bump of your pleasure-button. Her tongue licks over it, once, twice, then three times before Susan looks up, meeting your gaze and giving you an eager smile. Then she asks, 'Like it?' and when you nod eagerly, she sticks out her tongue again, rapidly flicking its tip over your clit, left and right this time. As you gasp for breath from the change in sensations, Susan lets out a pleased giggle, then intensifies her efforts even more. Then, before you can get too used to this, she switches again, licking over it from the bottom in longer passes.";
+			WaitLineBreak;
+			say "     Knowing very well how to treat a pussy, from having had one all her life, Susan is amazing at eating you out. Her teasing and licking somehow just hits the very best rhythm to make your legs tremble and knees go weak at the feelings awakening inside of you. Side by side, up and down, spirals going clockwise, or counter-clockwise, she has a lot of surprises ready for you, one after another. The anthro deer takes special note of what especially winds you up, and soon she gives those an encore, hitting you with the best, the most pleasurable, and in an all-new order too so that you never know exactly what's coming next. 'I know just the thing to do next - really liked this myself when... you know.' With that said, she places her lips over the nub of your clit and lightly sucking on it while also flicking her tongue-tip back and forth. At the same time, her fingers slide between the lips of your pussy, not too deep, just two or three inches - but when she curls them there, this brushes against something that makes you feel amazing. It's as if she's working on your clitoris from two angles now, doubling the pleasure and sensations that brings with it.";
+			say "     Wound up as her tireless tongue-work has already made you, it doesn't take long for her efforts to push the wave of arousal building in you as high as it can possibly be, then past that point. As you reach climax, femcum starts to gush out of your pussy, washing over Susan's muzzle, with the deer quickly closing her eyes, long lashes resting on her upper cheeks. A lustful gasp escapes your lips as you pant and tremble, even having to catch yourself on Susan's shoulders to brace and not collapse as your knees go weak. [if Player is male]At the same time, your erect cock blasts out long strings of creamy cum, going right over the young woman's head to land who knows where. [end if]The eager herm doesn't let this distract her, keeping those lips firmly planted over your clit and still teasing and fingering you, prolonging your high of pleasure as long as she can. Then, when you eventually wind down and are getting sensitive to being touched, down there, you have to pat Susan on her shoulder before she lets up. As she pulls back with a string of saliva still connecting your crotch to her lips, the anthro quickly swipes it away with her outstretched tongue, then smiles up at you.";
+			WaitLineBreak;
+			say "     'Hope you liked it,' you hear the anthro doe say with a bashful smile, even as she digs two fingers into her own pussy, frigging it hard. The next thing coming from her mouth is a lustful pant as she pushes herself to join you in orgasm, leaking femcum all over her own fingers and having her cock blast streaks of cum over the floor between your feet. You stroke over her hair, telling Susan that you enjoyed doing this with her. She leans her head into your touch for a second, smiling, then stands up and kisses you right on the lips, sharing a little of your own taste with you.";
+	NPCSexAftermath Susan receives "OralPussy" from Player;
+
+to say Susan receives PussyFuck:
+	if Cock Length of Susan > 10: [M-Herm]
+		if SusanDom is true and Affection of Susan < 10: [high bar for dom Samson/Susan]
+			say "Yeah, not happening!";
+		else if Affection of Susan < 5: [moderate high bar for Samson/Susan]
+			say "Yeah, not happening!";
+		else:
+			say "     ";
+			NPCSexAftermath Susan receives "PussyFuck" from Player;
+	else: [F-Herm]
+		if SusanSub is true: [sub scene]
+			say "     ";
+		else: [regular scene]
+			say "     ";
+		NPCSexAftermath Susan receives "PussyFuck" from Player;
+
+to say Susan receives AssFuck:
+	if Cock Length of Susan > 10: [M-Herm]
+		if SusanDom is true and Affection of Susan < 10: [high bar for dom Samson/Susan]
+			say "Yeah, not happening!";
+		else if Affection of Susan < 5: [moderate high bar for Samson/Susan]
+			say "Yeah, not happening!";
+		else:
+			if AnalVirgin of Susan is true: [first time fucking]
+				say "     ";
+				TraitGain "Fucked a pussy" for Susan;
+			else: [repeat]
+				say "     ";
+			NPCSexAftermath Susan receives "AssFuck" from Player;
+	else: [F-Herm]
+		if AnalVirgin of Susan is true: [first time fucking]
+			say "     ";
+		else: [repeat]
+			say "     ";
+	NPCSexAftermath Susan receives "AssFuck" from Player;
+
+
+to say Susan receives BJ:
+	if Cock Length of Susan > 10: [M-Herm]
+		if SusanDom is true: [dom scene]
+			say "     Stepping up to [Susan] with an eager expression on your face, you place a hand on the bulge of [PosAdj of Susan] left pec, giving the firm muscle a squeeze. In reaction, the dominant anthro slides a hand around your midriff and pulls you close, then kisses you right on the lips. 'Like that, don't you,' [Susan] mumbles while making out with you, flexing his pecs a little to make them dance under your touch. Smooching with the anthro is playful and fun, especially as [SubjectPro of Susan] starts to push [PosAdj of Susan] tongue into your mouth, trying to push yours down playfully. Soon, you're tongue-wrestling back and forth, with [Susan] giving as good as you are. The breathless, stormy bout of kissing eventually culminates with you pulling back, or at least trying to, as [Susan] keeps a hand on the back of your head to give you one last kiss on the lips. Chuckling, [SubjectPro of Susan] lets you go after that, with both of you grinning at each other.";
+			say "     As your eyes meet, you let your eyebrows wiggle up and down, then plead for [ObjectPro of Susan] to let you suck [PosAdj of Susan] cock. [SubjectProCap of Susan] grins and gives your chest a playful slap, then says, 'Fine. On the bed with you!' Eager to get it on with [Susan], you quickly move over to [PosAdj of Susan] cot and lie down, waiting for [ObjectPro of Susan] to kick off [PosAdj of Susan] clothes and come to you. Bending over your stretched-out form, one hand firmly planted on the middle of your chest, both to keep you held down and brace a little, [Susan] then swings a leg over you, climbing on top. [PosAdjCap of Susan] erection is already hard and swings through the air just above your face. Licking your lips, you open up and stick out your tongue, lightly flicking it over the dickhead of your deer companion before pulling back again. 'Better watch out who you tease like that,' [SubjectPro of Susan] says with an amused grunt, almost immediately followed by a droplet of pre-cum welling up from the cum-slit.";
+			WaitLineBreak;
+			say "     The dominant herm buck takes hold of your head at that point, pushing [PosAdj of Susan] erection into your mouth and giving you taste of [PosAdj of Susan] essence as [PosAdj of Susan] dickhead slides over your tongue. Eager to service [PosAdj of Susan], you tighten your lips around the girth of [PosAdj of Susan] manhood while letting your tongue play over [PosAdj of Susan] glans and shaft. 'Yeah, that's it!' [Susan] says breathily, tightening [PosAdj of Susan] grip and giving some shallow thrusts with [PosAdj of Susan] hips that become deeper and deeper as he goes on face-fucking you. Before too much longer, your nose is buried in the soft fuzz of [PosAdj of Susan] pubic fur, with the anthro's whole shaft being engulfed and its end down your throat. Glancing upwards, you meet the wide eyes of your dominant deer friend, then intentionally make the swallowing motion, watching [ObjectPro of Susan] gasp as your inner muscles squeeze in around [PosAdj of Susan] erection.";
+			say "     This seems to be just the signal that [Susan]'s more animalistic urges need, and [SubjectPro of Susan] goes into what might be called a mini-rut, bellowing lustily as [PosAdj of Susan] other hand shoots forward to join in gripping your head even tighter. [PosAdjCap of Susan] fingers keep you in an iron grip as the deer thrusts [PosAdj of Susan] hips forward, rabbit-fucking your throat with urgent haste. You do your best to relax your throat, allowing for the rapid in and out of [PosAdj of Susan] cock, interspersed with moments in which [SubjectPro of Susan] just grinds [PosAdj of Susan] crotch against your face, dick as far in as it can go. In those times, you swallow again, or wiggle your tongue a little, wanting to make it as good as possible for the herm. You even attempt to cheer [ObjectPro of Susan] on a little, and though the cock in your mouth makes sure that none of it is intelligible, the movement and vibration around [PosAdj of Susan] shaft gives [Susan] more pleasure.";
+			WaitLineBreak;
+			say "     Thoroughly enjoying being able to face-fuck you, the anthro keeps going at it for quite a while, thrusting into your throat or just resting in it. This makes it necessary for you to take several breaks in between to catch your breath, which sometimes takes some urgent patting of [Susan]'s thighs before [SubjectPro of Susan] lets you up from choking on [PosAdj of Susan] erection. Even then, [SubjectPro of Susan] doesn't fully let go, keeping a hand on your head to continue with one of [PosAdj of Susan] favorite things to do with a cock as soon as possible. As [SubjectPro of Susan] gets [PosAdj of Susan] full oral experience, [Susan] gets closer and closer to orgasm, easily recognizable by [PosAdj of Susan] more and more urgent pants. When you can tell [SubjectPro of Susan]'s pretty close, you take out all the stops and suck all the harder on [PosAdj of Susan] cock, at the same time as cupping [PosAdj of Susan] furry cum-factories with your hands, lightly squeezing [PosAdj of Susan] balls. The effect is fairly immediate, with you being able to feel them throb [italic type]hard[roman type] under your fingers, at the same time as [PosAdj of Susan] cock pulses against your tongue, delivering a first heavy spurt of creamy cum right down your throat.";
+			say "     You take the next two or three shots like this too, before [Susan] pulls back and lets [PosAdj of Susan] cum land in streaks across your tongue. The anthro keeps this position until [PosAdj of Susan] orgasm has run its course, then pulls out and says, 'Stick out your tongue for me!' A broad grin spreads over [PosAdj of Susan] muzzle as you show your cum-covered tongue, followed by brushing his index finger over it and painting a line across one of your cheeks, as if you mark you as [PosAdj of Susan]. Then [SubjectPro of Susan] commands, 'Now swallow it all!' You do so without question, gulping the rest of [Susan]'s load down, then showing your clean tongue. Nodding proudly, the buck then bends down and brings his antler-crowned head to yours, giving you a deep and demanding kiss that escalates into another long, pleasant bout of making out with each other.";
+		else: [regular scene]
+			say "     Stepping up to [Susan], you put your hands on [PosAdj of Susan] hips, then slide them up along the handsome buck's sides, pulling [ObjectPro of Susan] closer to plant a kiss on [PosAdj of Susan] lips. [SubjectProCap of Susan] leans into your touch as you wrap your arms around [PosAdj of Susan] chest, then start making out with the anthro. Smooching with [Susan] is playful and fun, with you starting off by pushing your tongue into [PosAdj of Susan] mouth, only to have [ObjectPro of Susan] take you up on that. Soon, you're tongue-wrestling back and forth, with [Susan] giving as good as you are. The breathless, stormy bout of kissing eventually culminates with you pulling back, with both of you grinning at each other, then laughing happily. As your eyes meet, you let your eyebrows wiggle up and down, then tell [ObjectPro of Susan] you want to suck [PosAdj of Susan] cock. ";
+			if "Received BJ" is not listed in Traits of Susan: [first time BJ]
+				say "[Susan]'s eyes widen as [SubjectPro of Susan] takes in your words, gaze flicking down between the two of you, then up at your face again. 'You know, I'd been thinking about doing that ever since... well, I became more of a guy, you know. And here you are, wanting to suck [italic type]my cock[roman type]! Guess there are [italic type]some[roman type] upsides to being a herm at least.'";
+				say "     Chuckling and saying [SubjectPro of Susan]'s in for a treat, you lower your hands down to [Susan]'s crotch, undoing the button and zipper of [PosAdj of Susan] ripped shorts. With an urgent push, you make them fall down [PosAdj of Susan] legs, followed by the anthro stepping out of the entangling fabric, grunting excitedly as you put your hand on [PosAdj of Susan] growing erection. As you suggest [SubjectPro of Susan] get on the bed, the anthro herm smiles and nods, then moves to sit down on the edge of the cot. As [SubjectPro of Susan] spreads [PosAdj of Susan] legs wide, you can see that [PosAdj of Susan] cock is rapidly hardening to full mast, dangling invitingly over the edge of the bed. You're quick to follow [ObjectPro of Susan], kneeling down and bringing you face to crotch with [Susan]. Reaching out and wrapping your hand around [PosAdj of Susan] cock, you can feel its pleasant warmth under your fingers, as well as the deer's heartbeat in the rhythmic throb of the shaft. [SubjectProCap of Susan] pants quietly as you touch [ObjectPro of Susan], shifting [PosAdj of Susan] hips forward reflexively.";
+				WaitLineBreak;
+				say "     Licking your lips, you open up and stick out your tongue, flicking it over the dickhead of your deer companion. 'God yeah,' [SubjectPro of Susan] pants under [PosAdj of Susan] breath, almost immediately followed by a droplet of pre-cum welling up from the cum-slit. Another swipe gives you a first little taste of the herm buck, followed by going in for more as you brush your lips over [PosAdj of Susan] mushroom head and take it into your mouth. 'This feels amazing,' [Susan] says breathily, stroking a hand over your head. You just continue servicing [ObjectPro of Susan], at first exploring [PosAdj of Susan] cum-slit and the sensitive rim of [PosAdj of Susan] dickhead with your tongue, then moving on to bobbing down on [PosAdj of Susan] shaft, taking more of it into your mouth every time. Before too much longer, your nose brushes against the soft fuzz of [PosAdj of Susan] pubic fur, with the anthro's whole shaft being engulfed and its end down your throat. Glancing upwards, you meet the wide eyes of your deer friend, then intentionally make the swallowing motion, watching [ObjectPro of Susan] gasp as your inner muscles squeeze in around [PosAdj of Susan] erection.";
+				say "     Feeling [PosAdj of Susan] cock be in such a tight, warm and pleasurable place seems to be something that [Susan] simply wasn't prepared for, not fully at least. You can see [PosAdj of Susan] nostrils flare as [SubjectPro of Susan] breathes in deeply, then lets out almost a bellow, as if [SubjectPro of Susan] was in rut or something. Instincts take over as [PosAdj of Susan] hands shoot forward, both gripping your head tightly as the deer thrusts [PosAdj of Susan] hips forward, rabbit-fucking your throat with urgent haste. You do your best to relax your throat, allowing for the rapid in and out of [PosAdj of Susan] cock, interspersed with moments in which [SubjectPro of Susan] just grinds [PosAdj of Susan] crotch against your face, dick as far in as it can go. In those times, you swallow again, or wiggle your tongue a little, wanting to make it as good as possible for the herm having [PosAdj of Susan] first experience with getting a blowjob.";
+				WaitLineBreak;
+				say "     Being as new as [SubjectPro of Susan] is to getting the full oral experience with a cock, it isn't that surprising that [Susan] gets closer and closer to orgasm before much longer, at least judging from [PosAdj of Susan] more and more urgent pants. At this point, you take out all the stops and suck all the harder on [PosAdj of Susan] cock, at the same time as cupping [PosAdj of Susan] furry cum-factories with your hands, lightly squeezing [PosAdj of Susan] balls. The effect is fairly immediate, with you being able to feel them throb [italic type]hard[roman type] under your fingers, at the same time as [PosAdj of Susan] cock pulses against your tongue, delivering a first heavy spurt of creamy cum right down your throat. You take the next two or three shots like this too, then pull back a little, catching the rest of [Susan]'s load on your tongue and keeping it in your mouth.";
+				say "     As the anthro rides out [PosAdj of Susan] orgasm and it eventually ebbs off, a look of alarm crosses [PosAdj of Susan] face. 'Man, that was amazing! Kinda lost control for a little while there. I - uhm, was I too rough?' [SubjectPro of Susan] asks, somewhat wary of what you might reply. Slowly pulling off [PosAdj of Susan] shaft and keeping your lips pressed together, you half-rise from where you were kneeling and meet [Susan]'s eyes, then shake your head with the edges of your mouth pulling up. Then lean in to kiss the anthro, your cum-slick tongue pushing right into [PosAdj of Susan] mouth and sharing [PosAdj of Susan] own load with [Susan]. This escalates into another long, pleasant bout of making out with each other, which works wonders for quelling any doubts in [PosAdj of Susan] mind that you didn't do exactly what you wanted with [ObjectPro of Susan].";
+			else:
+				say "A smile spreads over [Susan]'s face as [SubjectPro of Susan] takes in your words, gaze flicking down between the two of you, then up at your face again. 'You know, when I was [']just['] a woman before, I didn't quite understand why my boyfriend back in school kept pestering me so much oral. I mean, yeah, I know it feels nice but wanting to do it all the time... well, now I know! God, the rush of male orgasm, and cumming in someone's tight, squeezing throat! I won't say no to that!'";
+				say "     Right after saying those words, [Susan] hastily undoes the button and zipper of [PosAdj of Susan] ripped shorts, shoving them down over [PosAdj of Susan] furry rear. As the entangling fabric falls down [PosAdj of Susan] legs, [SubjectPro of Susan] steps out of it and kicks the shorts aside. Meanwhile, your own hand is already reaching for [PosAdj of Susan] crotch, fingers sliding over a growing erection. 'Can't wait to feel your mouth on it again!' the anthro herm says in a lust-filled tone, then pulls you with [ObjectPro of Susan] to the cot, places [PosAdj of Susan] hands on your shoulders and pushes down on them. As you sink to your knees readily, [SubjectPro of Susan] lets herself drop down on it in a sitting position too, spreading [PosAdj of Susan] legs and scooching right to the edge of the cot. Rapidly hardening to full mast, [PosAdj of Susan] cock dangles invitingly right in front of your face. Wrapping [PosAdj of Susan] fingers around the base of the shaft, [Susan] swings it up and down a little, seeming eager and almost a little impatient for you to get going. [PosAdjCap of Susan] hand reaching out to lightly rest on top of your head is another sign of this, pushing it a little towards [PosAdj of Susan] crotch.";
+				WaitLineBreak;
+				say "     Licking your lips, you open up and stick out your tongue, lightly flicking it over the dickhead of your deer companion before pulling back again. 'God, don't just tease me like that,' [SubjectPro of Susan] pants under [PosAdj of Susan] breath, almost immediately followed by a droplet of pre-cum welling up from the cum-slit. Another swipe gives you a nice little taste of the herm buck, followed by going in for more as you brush your lips over [PosAdj of Susan] mushroom head and take it into your mouth. 'Yeah, that's it!' [Susan] says breathily, stroking your head and again pushing a little on it, encouraging you to do more. You playfully service [ObjectPro of Susan], sometimes just following the back and forth movements [PosAdj of Susan] hand directs you into, sometimes surprising [ObjectPro of Susan], for example by exploring [PosAdj of Susan] cum-slit and the sensitive rim of [PosAdj of Susan] dickhead with your tongue, then working up to inhaling all of [PosAdj of Susan] shaft. Before too much longer, your nose is buried in the soft fuzz of [PosAdj of Susan] pubic fur, with the anthro's whole shaft being engulfed and its end down your throat.";
+				say "     Glancing upwards, you meet the wide eyes of your deer friend, then intentionally make the swallowing motion, watching [ObjectPro of Susan] gasp as your inner muscles squeeze in around [PosAdj of Susan] erection. This seems to be just the signal that [Susan]'s more animalistic urges need, and as expected, [SubjectPro of Susan] goes into what might be called a mini-rut, bellowing lustily as [PosAdj of Susan] hands shoot forward to grip your head tightly. [PosAdjCap of Susan] fingers keep you in an iron grip as the deer thrusts [PosAdj of Susan] hips forward, rabbit-fucking your throat with urgent haste. You do your best to relax your throat, allowing for the rapid in and out of [PosAdj of Susan] cock, interspersed with moments in which [SubjectPro of Susan] just grinds [PosAdj of Susan] crotch against your face, dick as far in as it can go. In those times, you swallow again, or wiggle your tongue a little, wanting to make it as good as possible for the herm. You even attempt to cheer [ObjectPro of Susan] on a little, and though the cock in your mouth makes sure that none of it is intelligible, the movement and vibration around [PosAdj of Susan] shaft gives [Susan] more pleasure.";
+				WaitLineBreak;
+				say "     Thoroughly enjoying being able to face-fuck you, the anthro keeps going at it for quite a while, thrusting into your throat or just resting in it. This makes it necessary for you to take several breaks in between to catch your breath, which sometimes takes some urgent patting of [Susan]'s thighs before [SubjectPro of Susan] lets you up from choking on [PosAdj of Susan] erection. Even then, [SubjectPro of Susan] doesn't fully let go, keeping a hand on your head to continue with one of [PosAdj of Susan] favorite things to do with a cock as soon as possible. As [SubjectPro of Susan] gets [PosAdj of Susan] full oral experience, [Susan] gets closer and closer to orgasm, easily recognizable by [PosAdj of Susan] more and more urgent pants. When you can tell [SubjectPro of Susan]'s pretty close, you take out all the stops and suck all the harder on [PosAdj of Susan] cock, at the same time as cupping [PosAdj of Susan] furry cum-factories with your hands, lightly squeezing [PosAdj of Susan] balls. The effect is fairly immediate, with you being able to feel them throb [italic type]hard[roman type] under your fingers, at the same time as [PosAdj of Susan] cock pulses against your tongue, delivering a first heavy spurt of creamy cum right down your throat.";
+				say "     You take the next two or three shots like this too, then pull back a little, catching the rest of [Susan]'s load on your tongue and keeping it in your mouth. [SubjectProCap of Susan] knows full well what you're doing, and the next thing that happens is that the anthro's hands slide under your arms, hooking you at the armpits and pulling you up and on top of her. With both of you laughing, you a bit muffled due to your full mouth, you kiss [ObjectPro of Susan] deeply, pushing your cum-covered tongue into [PosAdj of Susan] mouth as you do. This escalates into another long, pleasant bout of making out with each other.";
+	else: [F-Herm]
+		if SusanSub is true: [sub scene]
+			say "     Stepping up to Susan, you put your hands on her hips, then slide them up along the sweet doe's sides, pulling her closer to plant a kiss on her lips. She melts into your touch as you wrap your arms around her chest, then start making out with the submissive anthro. It is playful and fun, with you invading her mouth with your tongue, wrestling her own appendage down. The breathless, stormy bout of kissing eventually culminates with you pulling back, with her stretching her neck a little to follow for a second, eager to receive more attention from you. Instead, you meet her blue-hazel eyes with a lusty smirk on your face and tell the doe you want to suck her cock. Susan's eyes widen as she takes in your words, gaze flicking down between the two of you, then up at your face again. 'I - um, I know I've had this thing for a while, but it's still somewhat unbelievable to me. You know, hearing someone they want to suck [italic type]my cock[roman type]! Being on the receiving end and all that.'";
+			say "     Chuckling and saying she's in for a treat, you lower your hands down to Susan's crotch, undoing the button and zipper of her ripped shorts. With an urgent push, you make them fall down her legs, followed by the anthro stepping out of the entangling fabric, panting excitedly as you put your hand on her growing erection. As you suggest she get on the bed, the anthro herm smiles and nods, then moves to lie down on her back. Her erection stands up like a flagpole and Susan spreads her legs almost reflexively, preparing herself to be yours. You're quick to follow her, climbing on the bed and bending over to bring your face over Susan's crotch. Reaching out and wrapping your hand around her cock, you can feel its pleasant warmth under your fingers, as well as the deer's heartbeat in the rhythmic throb of the shaft. She pants quietly as you touch her, shifting her hips up to push against your hand.";
+			WaitLineBreak;
+			say "     Licking your lips, you open up and stick out your tongue, flicking it over the dickhead of your deer companion. 'God,' she pants under her breath, almost immediately followed by a droplet of pre-cum welling up from the cum-slit. Another swipe gives you a first little taste of the herm doe, followed by going in for more as you brush your lips over her mushroom head and take it into your mouth. 'This feels amazing,' Susan says breathily, stroking a hand over your head. You just continue servicing her, at first exploring her cum-slit and the sensitive rim of her dickhead with your tongue, then moving on to bobbing down on her shaft, taking more of it into your mouth every time. Before too much longer, your nose brushes against the soft fuzz of her pubic fur, with the anthro's whole shaft being engulfed and its end down your throat. Glancing upwards, you meet the wide eyes of your deer friend, then intentionally make the swallowing motion, watching her gasp as your inner muscles squeeze in around her erection.";
+			say "     Feeling her cock be in such a tight, warm and pleasurable place seems to awaken something in Susan, as her nostrils flare and she breathes in deeply, then lets out a lustful grunt. She somewhat hesitantly puts her hands on your head, pushing lightly against it to encourage you for more. You push back a little, just to tell her that you're still the one in control here, then do proceed to go down on her. Sliding down on her shaft, you relax your throat to take it all, then pull back slowly once more before starting up a faster rhythm of bobbing up and down. In between, you spend some moments to just go as far down as you can and rest like that, squeezing your inner muscles around the anthro's shaft. It is fun to see her eager reactions when you swallow again, or wiggle your tongue a little, making you want to give her a really good time.";
+			WaitLineBreak;
+			say "     Being as new as she is to getting the full oral experience with a cock, it isn't that surprising that Susan gets closer and closer to orgasm before much longer, at least judging from her more and more urgent pants. At this point, you take out all the stops and suck all the harder on her cock, at the same time as cupping her furry cum-factories with your hands, lightly squeezing her balls. The effect is fairly immediate, with you being able to feel them throb [italic type]hard[roman type] under your fingers, at the same time as her cock pulses against your tongue, delivering a first heavy spurt of creamy cum right down your throat. You take the next two or three shots like this too, then pull back a little, catching the rest of Susan's load on your tongue and keeping it in your mouth.";
+			say "     As the anthro rides out her orgasm and it eventually ebbs off, a look of alarm crosses her face. 'I - I'm sorry! Don't know what came over me there. Was I too rough?' she asks, somewhat afraid of your reply. Slowly pulling off her shaft and keeping your lips pressed together, you half-rise from where you were kneeling and meet Susan's eyes, then shake your head with the edges of your mouth pulling up. And then you surprise her for the second time in a row, as you lean in to kiss the anthro, your cum-slick tongue pushing right into her mouth and sharing her own load with Susan. This escalates into another long, pleasant bout of making out with each other.";
+		else: [regular scene]
+			say "     Stepping up to Susan, you put your hands on her hips, then slide them up along the sweet doe's sides, pulling her closer to plant a kiss on her lips. She leans into your touch as you wrap your arms around her chest, then start making out with the anthro. It is playful and fun, with you starting off by pushing your tongue into her mouth, only to have her take you up on that. Soon, you're tongue-wrestling back and forth, with Susan not exactly winning, but still giving back with more of a dancer's moves than forceful ones. The breathless, stormy bout of kissing eventually culminates with you pulling back, with both of you grinning at each other, then laughing happily. As your eyes meet, you let your eyebrows wiggle up and down, then tell her you want to suck her cock. ";
+			if "Received BJ" is not listed in Traits of Susan: [first time BJ]
+				say "Susan's eyes widen as she takes in your words, gaze flicking down between the two of you, then up at your face again. 'I - um, I know I've had this thing for a while, but it's still somewhat unbelievable to me. You know, hearing someone they want to suck [italic type]my cock[roman type]! Being on the receiving end and all that.'";
+				say "     Chuckling and saying she's in for a treat, you lower your hands down to Susan's crotch, undoing the button and zipper of her ripped shorts. With an urgent push, you make them fall down her legs, followed by the anthro stepping out of the entangling fabric, panting excitedly as you put your hand on her growing erection. As you suggest she get on the bed, the anthro herm smiles and nods, then moves to sit down on the edge of the cot. As she spreads her legs wide, you can see that her cock is rapidly hardening to full mast, dangling invitingly over the edge of the bed. You're quick to follow her, kneeling down and bringing you face to crotch with Susan. Reaching out and wrapping your hand around her cock, you can feel its pleasant warmth under your fingers, as well as the deer's heartbeat in the rhythmic throb of the shaft. She pants quietly as you touch her, shifting her hips forward reflexively.";
+				WaitLineBreak;
+				say "     Licking your lips, you open up and stick out your tongue, flicking it over the dickhead of your deer companion. 'God,' she pants under her breath, almost immediately followed by a droplet of pre-cum welling up from the cum-slit. Another swipe gives you a first little taste of the herm doe, followed by going in for more as you brush your lips over her mushroom head and take it into your mouth. 'This feels amazing,' Susan says breathily, stroking a hand over your head. You just continue servicing her, at first exploring her cum-slit and the sensitive rim of her dickhead with your tongue, then moving on to bobbing down on her shaft, taking more of it into your mouth every time. Before too much longer, your nose brushes against the soft fuzz of her pubic fur, with the anthro's whole shaft being engulfed and its end down your throat. Glancing upwards, you meet the wide eyes of your deer friend, then intentionally make the swallowing motion, watching her gasp as your inner muscles squeeze in around her erection.";
+				say "     Feeling her cock be in such a tight, warm and pleasurable place seems to be something that Susan simply wasn't prepared for, not fully at least. You can see her nostrils flare as she breathes in deeply, then lets out almost a bellow, as if she was in rut or something. Instincts take over as her hands shoot forward, both gripping your head tightly as the deer thrusts her hips forward, rabbit-fucking your throat with urgent haste. You do your best to relax your throat, allowing for the rapid in and out of her cock, interspersed with moments in which she just grinds her crotch against your face, dick as far in as it can go. In those times, you swallow again, or wiggle your tongue a little, wanting to make it as good as possible for the herm having her first experience with getting a blowjob.";
+				WaitLineBreak;
+				say "     Being as new as she is to getting the full oral experience with a cock, it isn't that surprising that Susan gets closer and closer to orgasm before much longer, at least judging from her more and more urgent pants. At this point, you take out all the stops and suck all the harder on her cock, at the same time as cupping her furry cum-factories with your hands, lightly squeezing her balls. The effect is fairly immediate, with you being able to feel them throb [italic type]hard[roman type] under your fingers, at the same time as her cock pulses against your tongue, delivering a first heavy spurt of creamy cum right down your throat. You take the next two or three shots like this too, then pull back a little, catching the rest of Susan's load on your tongue and keeping it in your mouth.";
+				say "     As the anthro rides out her orgasm and it eventually ebbs off, a look of alarm crosses her face. 'I - I'm sorry! Don't know what came over me there. Was I too rough?' she asks, somewhat afraid of your reply. Slowly pulling off her shaft and keeping your lips pressed together, you half-rise from where you were kneeling and meet Susan's eyes, then shake your head with the edges of your mouth pulling up. And then you surprise her for the second time in a row, as you lean in to kiss the anthro, your cum-slick tongue pushing right into her mouth and sharing her own load with Susan. This escalates into another long, pleasant bout of making out with each other, which works wonders for quelling any doubts in her mind that you didn't do exactly what you wanted with her.";
+			else:
+				say "A smile spreads over Susan's face as she takes in your words, gaze flicking down between the two of you, then up at your face again. 'You know, when I was [']just['] a woman before, I didn't quite understand why my boyfriend back in school kept pestering me so much oral. I mean, yeah, I know it feels nice but wanting to do it all the time... well, now I know! God, the rush of male orgasm, and cumming in someone's tight, squeezing throat! I won't say no to that!'";
+				say "     Right after saying those words, Susan hastily undoes the button and zipper of her ripped shorts, shoving them down over her furry rear. As the entangling fabric falls down her legs, she steps out of it and kicks the shorts aside. Meanwhile, your own hand is already reaching for her crotch, fingers sliding over a growing erection. 'Can't wait to feel your mouth on it again!' the anthro herm says in a lust-filled tone, then pulls you with her to the cot, places her hands on your shoulders and pushes down on them. As you sink to your knees readily, she lets herself drop down on it in a sitting position too, spreading her legs and scooching right to the edge of the cot. Rapidly hardening to full mast, her cock dangles invitingly right in front of your face. Wrapping her fingers around the base of the shaft, Susan swings it up and down a little, seeming eager and almost a little impatient for you to get going. Her hand reaching out to lightly rest on top of your head is another sign of this, pushing it a little towards her crotch.";
+				WaitLineBreak;
+				say "     Licking your lips, you open up and stick out your tongue, lightly flicking it over the dickhead of your deer companion before pulling back again. 'God, don't just tease me like that,' she pants under her breath, almost immediately followed by a droplet of pre-cum welling up from the cum-slit. Another swipe gives you a nice little taste of the herm doe, followed by going in for more as you brush your lips over her mushroom head and take it into your mouth. 'Yeah, that's it!' Susan says breathily, stroking your head and again pushing a little on it, encouraging you to do more. You playfully service her, sometimes just following the back and forth movements her hand directs you into, sometimes surprising her, for example by exploring her cum-slit and the sensitive rim of her dickhead with your tongue, then working up to inhaling all of her shaft. Before too much longer, your nose is buried in the soft fuzz of her pubic fur, with the anthro's whole shaft being engulfed and its end down your throat.";
+				say "     Glancing upwards, you meet the wide eyes of your deer friend, then intentionally make the swallowing motion, watching her gasp as your inner muscles squeeze in around her erection. This seems to be just the signal that Susan's more animalistic urges need, and as expected, she goes into what might be called a mini-rut, bellowing lustily as her hands shoot forward to grip your head tightly. Her fingers keep you in an iron grip as the deer thrusts her hips forward, rabbit-fucking your throat with urgent haste. You do your best to relax your throat, allowing for the rapid in and out of her cock, interspersed with moments in which she just grinds her crotch against your face, dick as far in as it can go. In those times, you swallow again, or wiggle your tongue a little, wanting to make it as good as possible for the herm. You even attempt to cheer her on a little, and though the cock in your mouth makes sure that none of it is intelligible, the movement and vibration around her shaft gives Susan more pleasure.";
+				WaitLineBreak;
+				say "     Thoroughly enjoying being able to face-fuck you, the anthro keeps going at it for quite a while, thrusting into your throat or just resting in it. This makes it necessary for you to take several breaks in between to catch your breath, which sometimes takes some urgent patting of Susan's thighs before she lets you up from choking on her erection. Even then, she doesn't fully let go, keeping a hand on your head to continue with one of her favorite things to do with a cock as soon as possible. As she gets her full oral experience, Susan gets closer and closer to orgasm, easily recognizable by her more and more urgent pants. When you can tell she's pretty close, you take out all the stops and suck all the harder on her cock, at the same time as cupping her furry cum-factories with your hands, lightly squeezing her balls. The effect is fairly immediate, with you being able to feel them throb [italic type]hard[roman type] under your fingers, at the same time as her cock pulses against your tongue, delivering a first heavy spurt of creamy cum right down your throat.";
+				say "     You take the next two or three shots like this too, then pull back a little, catching the rest of Susan's load on your tongue and keeping it in your mouth. She knows full well what you're doing, and the next thing that happens is that the anthro's hands slide under your arms, hooking you at the armpits and pulling you up and on top of her. With both of you laughing, you a bit muffled due to your full mouth, you kiss her deeply, pushing your cum-covered tongue into her mouth as you do. This escalates into another long, pleasant bout of making out with each other.";
+	TraitGain "Received BJ" for Susan;
+	NPCSexAftermath Player receives "OralCock" from Susan;
+
+to say Susan receives Cunni:
+	if Cock Length of Susan > 10: [M-Herm]
+		if "Received BJ" is not listed in Traits of Susan: [first time BJ]
+			say "     ";
+		else: [repeat]
+			say "     ";
+	else: [F-Herm]
+		if "Received BJ" is not listed in Traits of Susan: [first time BJ]
+			say "     ";
+		else: [repeat]
+			say "     ";
+	NPCSexAftermath Player receives "OralPussy" from Susan;
+
+to say Susan gives PussyFuck:
+	if Cock Length of Susan > 10: [M-Herm]
+		if "Fucked a pussy" is not listed in Traits of Susan: [first time fucking]
+			say "     ";
+			TraitGain "Fucked a pussy" for Susan;
+		else: [repeat]
+			say "     ";
+	else: [F-Herm]
+		if "Fucked a pussy" is not listed in Traits of Susan: [first time fucking]
+			say "     Sliding an arm around Susan, you tell her that you want to take her cock in your pussy. The young woman's eyes go wide as she looks at you, then down to her crotch, and from there to her own, just as you put your hand on the front of her pants. 'Are you sure? I - I've never done it, in this position. You know, as the [']man['].' Simply smiling at this hesitancy, you proceed to stroke her through the fabric of her shorts, soon feeling something stir within. As the doe herm's breath starts to quicken, betraying the arousal building in her body, you pop the button of the garment, freeing her rapidly hardening cock from its cloth prison. With just a little push by your hands, the shorts fall down, simply sliding off her slender hooves as she lifts them up. Cupping her soft-furred balls, you give them a playful squeeze, then move your hand up a little, wrapping your fingers around the hard member she's packing. Nine inches long and with a nice girth, it lays well in your hand, getting her even more excited as you stroke it up and down.";
+			say "     With a chuckle, you tell her that you don't think she'll have any problems, from what you're seeing. Susan laughs musically, beaming at you and then leaning in to nuzzle you. With your hand still on her erection, you lead the doe to her cot, then pull the top off her body and caress her breasts. Bending your head, you seek out her nipples, gently suckling on them one by one. ";
+			if SusanSub is true: [powerbottom - ride Susan's cock]
+				say "You continue playing with Susan's breasts a little while longer, then nod at the cot, telling her to lie down and get ready for you. While the submissive doe does so, you [if Player is not naked]quickly strip off your own clothes and gear, just dropping them wherever in your eagerness and step up to the foot of the cot. [else]hastily put down your gear and step up to the foot of the cot. [end if]Lying on her back, her erection standing fully upright like a flagpole, Susan watches you with a lusty yet shy expression. She is panting rapidly, as if she can't believe this is happening, and pants out loud as you climb onto the cot with her, moving forward until you're right on top of the anthro.";
+				WaitLineBreak;
+				say "     Reaching down to take hold of her erection, you've got your finger on Susan's dickhead as your nether lips brush against her shaft the very first time, with results in a feeling of slight wetness against your fingertips. With a smile, you wipe off the trickle of pre-cum welling up from her cum-slit, then hold your hand out in front of Susan's face, spreading your fingers to show off the strings of pre stretching between them. ";
+			else: [missionary fuck]
+				say "You continue playing with Susan's breasts a little while longer, then glance up to meet her eyes, telling her that you'll be ready in just a second. [if Player is not naked]After stripping off your own clothes and gear, just dropping them wherever in your eagerness, you lie down on the cot. [else]Hastily putting down your gear, you then lie down on the cot. [end if]";
+			AffectionGain 1 for Susan;
+			TraitGain "Fucked a pussy" for Susan;
+		else: [repeat]
+			say "     ";
+	NPCSexAftermath Player receives "PussyFuck" from Susan;
+
+
+to say Susan gives AssFuck:
+	say "...";
+	NPCSexAftermath Player receives "AssFuck" from Susan;
 
 to say SusanSex1: [fuck Susan]
 	say "     She grabs directly for your [cock size desc of Player] [Cock of Player] cock and grins up at you as she strokes it, 'It is just right,' she declares as she pushes you back to the ground, guiding you to lay down and slipping up on top of you. Her warm frame presses softly as it goes and she lines herself up, one hand holding the thick tip of your member, the other parting her nethers. She sinks down along your member, shuddering as it fills her grasping tunnel perfectly. Her wet labia sink down to your groin as she settles on you, breathing hard and just enjoying the feelings for the moment as she gazes into your eyes with a burning affection.";
@@ -829,7 +1177,6 @@ to say SusanSex1: [fuck Susan]
 	WaitLineBreak;
 	say "     She leans back away from your hands, her hands settling on the ground as she bends almost backwards, rutting in a bent position. Your hands find her belly and sides, rubbing and caressing her, hungry eyes taking in the bulge that your own cock creates along her belly, stretched taut in her new position. She moans softly as her shaft tenses and begins to fire, splattering herself with her seed as it arcs through the air in powerful streams. A small part of yourself wonders what it would feel like to be filled with that same seed, but that part is quieted for the moment as your own shaft tenses and lurches, filling the willing doe with your fertile offering.";
 	say "     She straightens, then flops on top of you, squirming as you round her with your cum. Her messy front presses stickily to your [bodydesc of Player] body as she hugs tightly to you, heedless of the sticky warmth she shares with you. When your shaft has calmed and lays half firm within her, she leans up to kiss you on either cheek. 'I love you,' she whispers. You smile, grabbing her at the bottom and squeezing her close to snuggle for a moment, enjoying the peace before you are forced to return to other tasks.";
-	deerfy;
 	if HP of Susan is 2:
 		now HP of Susan is 4;
 
@@ -838,7 +1185,6 @@ to say SusanSex2: [small penis fuck]
 	NPCSexAftermath Player receives "OralCock" from Susan;
 	say "     The pleasure haze ebbs just slightly as she pulls free of you and returns to slow stroking, 'Still not quite large enough to sate me, my virile buck. We will just wait a little longer.' Her tail wags behind her excitedly as she leans in to lap over the head of your shaft, insufficiently sized or not, and her strokes become firm and fast. Your groans mix with her own as if she could feel your pleasure as if it were within her own body. She squeezes at your entire member with her softly furred paws and your balls clench. Your seed sprays in great milky shots across her long snout, drawing a soft bleat of approval from her. Her long tongue darts to collect the treasure as she raises to her feet, 'Come back later, we can try again.'";
 	NPCSexAftermath Player receives "Stroking" from Susan;
-	deerfy;
 	if HP of Susan is 2:
 		now HP of Susan is 4;
 
@@ -847,7 +1193,6 @@ to say SusanSex3: [Hyper Fuck]
 	say "     The two of you kiss and snuggle for a while after sex. You run your hands over her [if Ball Size of Player > 6]cum-swollen belly[else if Ball Size of Player > 5]visibly rounded tummy[else]soft tummy[end if] while she caresses your sides. 'Ooo! That was... wow! It's hard to believe I managed to fit that huge cock of yours. Guess it's another crazy thing about that crazy world. Ohhh... though I think I'm going to need a bit of a break before going again after that,' she says, brushing her fingertips across her stretched, swollen and leaking pussy.";
 	NPCSexAftermath Susan receives "PussyFuck" from Player;
 	now Susanoversize is true;
-	deerfy;
 	if HP of Susan is 2:
 		now HP of Susan is 4;
 
@@ -858,7 +1203,6 @@ to say SusanSex4: [Hyper Fun]
 	WaitLineBreak;
 	say "     As you break the kiss and lean up, you're treated to the lovely sight of your cervine lover panting in pleasure as you fuck her. Her cream-furred breasts jiggle and nicely with every large thrust of your pulsing rod into her[if Cock Length of Player >= 36]. Her chest is stretched visibly by your titanic member's phallic shape[else if Cock Length of Player >= 24]. Her tummy is stretched by your mighty member to raise a phallic bulge that moves with every thrust[else]. Her tummy shows a notable bulge from having your large member stuffed inside her[end if]. She rubs a paw over her plumped tummy in blissful awe.";
 	say "     'Do it. Do it, my big buck. Give it to me and fill your needy doe-oh-oh-oooooh!' she calls out in orgasmic delight. The feeling of having her hot tunnel squeeze and quiver around you as her femcum soaks your crotch is wonderful. It's so good, you can't hold back for long before you two are crying out in climactic release. You pump your [Cum Load Size of Player] load into the moaning doe, painting her uterus with your semen.";
-	deerfy;
 	if HP of Susan is 2:
 		now HP of Susan is 4;
 
@@ -867,8 +1211,7 @@ to say SusanSex5: [Susan Sucks the player]
 	say "     When she is satisfied with your face, she goes back to sucking you. The feeling of both her mouth and the slick press of her breasts around your [Cock of Player] length get you so close to cumming that you close your eyes for a moment. Feeling some vibrations running in your cock, you know that she is amused with this	occurrence. You feel her saliva pooling between her breasts and your cock, exciting you to a point of only pleasure. The doe hungers more and more for your seed, and you intend to give it her.";
 	WaitLineBreak;
 	say "     You push her head against your groin, penetrating her throat fully. She struggles with the sudden push and invasion but is quick to get used to it. You wait no time and feed her a huge dose of your semen. Rope after long, thick rope of seed you fill her tummy with gusto. When you finally release her head she pulls back with a string of semen still connected to your penis which she cleans quickly. 'Thanks for the meal,' you hear her say with a wink before you get ready for your adventures.";
-	NPCSexAftermath Player receives "OralCock" from Susan;
-	deerfy;
+	NPCSexAftermath Susan receives "OralCock" from Player;
 	if HP of Susan is 2:
 		now HP of Susan is 4;
 
@@ -879,7 +1222,6 @@ to say SusanSex6: [Susan fucks Pussy]
 	say "     The horny deer keeps trusting into your needy pussy. You can feel her whole cock, all her veins pulsating and sending her heartbeat to your body. You feel yourself orgasming first, your mind goes blank and your body holds her closer. Her balls move and compact as her climax comes to her - your own orgasm grips the black rod that is inside you, begging to be bred by that delicious cock. Your pussy's calls are answered as she finally penetrates your womb, filling it with her potent seed and painting everything inside your womb her color, doing her best to make you pregnant.";
 	NPCSexAftermath Player receives "PussyFuck" from Susan;
 	say "     When both of you come back from ecstasy you two find each other hugging and heavily breathing. She kisses you and lets you go back to your adventures.";
-	deerfy;
 	if Susanfirsttime is 0:
 		now Susanfirsttime is 1;
 	if HP of Susan is 2:
@@ -929,7 +1271,6 @@ to say Susanlabcoatscene:
 		WaitLineBreak;
 		say "     Susan flops back onto her bunk, panting heavily and seeming thoroughly satisfied as she smiles up at you. 'Oh, you are such a wonderful buck, my deer. Thanks for helping me get that out of my system. I love being your doe and I don't want to ever change that.' You smile down at her and lean in, giving her a tender kiss before pulling out, leaving her to rest and recover from the rutting romp that's left her exhausted and sated.";
 		now HP of Susan is 53;
-	deerfy;
 	now hospcountdown is turns;
 	WaitLineBreak;
 	if HP of Susan is 53:
@@ -942,7 +1283,6 @@ to say Susanlabcoatscene:
 		if intelligence of Player >= 15:
 			say "     Asking if she might have come into contact with something, he scratches his ear. 'There was a minor mishap with a bit of testing solution recently. This is the reason why I've been insisting she follow proper safety and wear a lab coat, I might add. But that was nothing but a mundane solution and would not have affected her in such a manner. I'd even examined her at the time and found nothing amiss. Perhaps she'd later come into contact with another material or otherwise sampled something without my knowledge or permission. You must admit that she's not the brightest creature out there. I shall have to keep a closer eye on her,' he adds.";
 			say "     'Regardless, let me assure you that I'll give her a thorough examination to make certain she is healthy and that there are no deleterious effects or unexpected surprises arising from this transition. Though you certainly seemed pleased enough with the results of her change,' he adds with a teasing grin.";
-
 
 Section 4 - Monster Table Data
 
@@ -961,7 +1301,7 @@ When Play begins:
 	add "Deer" to infections of BipedalList;
 	add "Deer" to infections of TailList;
 	now Name entry is "Deer"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Deer Herm"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Susan";
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[if level of Player > 5][one of]One of her helpers grabs you from behind as she lands a solid punch in your gut.[or]Just as you dodge past one of her strikes, you feel soft hands pawing at your groin, one of her helpers manhandling you with eager roughness.[or]To the cheer of her herd, she headbutts you, sharp antlers stinging powerfully where they strike.[at random][else][one of]She mashes you against the ground, heavy breasts pressed to you.[or]Her thick cock slaps against you as she roughly shoves at you.[or]Thick horns prove to be quite sharp as they poke you.[or]A sudden kick lands in your midsection as she lands a hoof on you.[at random][end if]";
@@ -1168,35 +1508,6 @@ to say deer attack:
 			WaitLineBreak;
 			say "     She pulls you back suddenly, body rigid as heat begins to spread inside of you from her twitching member. [if Player is male]Your [Ball Size Adjective of Player] balls lurch and you spray into the air, coaxed on by gentle squeezes of her hand, milking you even as she fills you with her thick seed. [end if]Her tongue licks over an ear. 'Good doe. You will be welcome in the herd when you learn your place,' she whispers as she draws free and leaves you, bruised but sated. As she goes, you see her scratching lightly at her heavy balls, scheming lustfully of her next conquest.[mimpregchance]";
 			CreatureSexAftermath "Player" receives "AssFuck" from "Deer";
-
-Section 6 - Additional Mechanics
-
-to deerfy:
-	if hospquest < 19:
-		infect "Deer";
-		if "Microwaved" is listed in feats of Player:
-			say "WARNING: Sex shifting nanites detected! Allow?";
-			if Player consents:
-				say "OK.";
-				follow the sex change rule;
-			else:
-				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
-	else if BodyName of Player is "Enhanced Chimera":
-		if Player is pure:
-			increase score by 0; [do nothing]
-		else:
-			say "Contact with Susan has stimulated your latent chimeric infection, causing it to activate.";
-			infect "Enhanced Chimera";
-	else:
-		infect "Deer";
-		if "Microwaved" is listed in feats of Player:
-			say "WARNING: Sex altering nanites detected! Allow?";
-			if Player consents:
-				say "OK.";
-				follow the sex change rule;
-			else:
-				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
-
 
 Section 7 - Endings
 
