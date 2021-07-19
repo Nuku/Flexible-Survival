@@ -110,7 +110,7 @@ to say HellDemon loses:
 			now description entry is "Make him blow you and take it down his throat";
 		[]
 			choose a blank row in table of fucking options;
-			now title entry is "Fuck his muscley ass";
+			now title entry is "Fuck his muscly ass";
 			now sortorder entry is 3;
 			now description entry is "Prepare his hole and give him a hard pounding";
 		[]
@@ -155,7 +155,7 @@ to say HellDemon loses:
 						say "[HellDemonBJ]";
 					if (nam is "Facefuck the demon"):
 						say "[HellDemonFacefuck]";
-					if (nam is "Fuck his muscley ass"):
+					if (nam is "Fuck his muscly ass"):
 						say "[HellDemonFuck]";
 					if (nam is "Offer your ass for his pleasure"):
 						say "[HellDemonAnal]";
