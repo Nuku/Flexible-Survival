@@ -26,9 +26,9 @@ to say Werewolf Brute Wins:
 		say ""; [dealt with at the source of the event]
 	else:
 		if HP of Player > 0: [player submitted]
-			say "     Seeing how large this werewolf is has you consider your actions, so you choose to submit to him by dropping to your knees and raising your hands. He takes a like to this as a grin forms across his muzzle, and the sizable beastman approaches you unchallenged. 'So, playtoy it is? Good choice.' he comments as he grabs you by the chin, forces you to look at him and, locking his gaze on your eyes, he orders you to do as he says. 'You better make me feel good, then. I like my pups tame.'";
+			say "     Seeing how large this werewolf is has you consider your actions, so you choose to submit to him by dropping to your knees and raising your hands. He takes a liking to this as a grin forms across his muzzle, and the sizable beastman approaches you unchallenged. 'So, playtoy it is? Good choice.' he comments as he grabs you by the chin, forces you to look at him and, locking his gaze on your eyes, he orders you to do as he says. 'You better make me feel good, then. I like my pups tame.'";
 		else:
-			say "     You do not really stand a chance against such a huge beast, who manages to take you down without much of an effort. As you fall to your knees, sore and defeated, he approaches you with a grin on his muzzle, taking a like to the sight. 'You were not even a challenge! Looks like you need to learn what your place is, little pup.' he comments as he grabs you by the chin, forces you to look at him and, locking his gaze on your eyes, he orders you to do as he says. 'Don't worry, you're gonna like it... They all do.'";
+			say "     You do not really stand a chance against such a huge beast, who manages to take you down without much of an effort. As you fall to your knees, sore and defeated, he approaches you with a grin on his muzzle, taking a liking to the sight. 'You were not even a challenge! Looks like you need to learn what your place is, little pup.' he comments as he grabs you by the chin, forces you to look at him and, locking his gaze on your eyes, he orders you to do as he says. 'Don't worry, you're gonna like it... They all do.'";
 		WaitLineBreak;
 		if WerewolfBruteSubmitCount >= 3 and player is not dominant and a random chance of 1 in 2 succeeds:
 			say "[WerewolfBruteLair]";

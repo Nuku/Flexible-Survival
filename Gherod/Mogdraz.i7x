@@ -915,7 +915,7 @@ to say MogdrazRomanceStroll3:
 	say "     ([link]N[as]n[end link]) - A visual demonstration on how demons piss and poop? Whatever that is, you think it's probably nasty.";
 	if player consents:
 		Linebreak;
-		say "     Mogdraz just laughs at your response. 'It was a joke, I didn't mean to offer! But as I've probably said before, I've done way worse things in the past. I suppose you don't have any related kinks, by any chance? In which case, I apologize for having laughed. There is no shame in taking a like in those.'";
+		say "     Mogdraz just laughs at your response. 'It was a joke, I didn't mean to offer! But as I've probably said before, I've done way worse things in the past. I suppose you don't have any related kinks, by any chance? In which case, I apologize for having laughed. There is no shame in taking a liking in those.'";
 	else:
 		Linebreak;
 		say "     Mogdraz chuckles as you make that comment. 'Just joking, I wouldn't wound you by forcing you to watch that.'";
