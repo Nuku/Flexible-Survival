@@ -352,7 +352,7 @@ The earea of Hellfire Unknown is "Red".
 Description of Hellfire Unknown is "[HellfireUnknownDesc]".
 
 to say HellfireUnknownDesc:
-	say "     This is a place of the unknown, where emptyness meets reality. It is no longer the Club, but it is the only safe spot before you dive into uncertainty. You better [bold type]proceed with caution[roman type] before you end up losing yourself. To the [bold type]North lies the Void Realm[roman type], where not even the most experienced travelers dare to venture within without a destination.";
+	say "     This is a place of the unknown, where emptiness meets reality. It is no longer the Club, but it is the only safe spot before you dive into uncertainty. You better [bold type]proceed with caution[roman type] before you end up losing yourself. To the [bold type]North lies the Void Realm[roman type], where not even the most experienced travelers dare to venture within without a destination.";
 	if Fallen King is visible:
 		say "     [bold type]You sense a terrible presence nearby...[roman type][line break]";
 
@@ -1435,7 +1435,7 @@ to HellfireClubEscortNormal1cAssFuck:
 			increase HCEClientSatisfaction by 1;
 			say "(+1)[line break]";
 		WaitLineBreak;
-	say "     With the deed done, the red devil leaves you on the bed, his demonic seed leaking out of your ass as he takes just one more time to appreciate the view. 'Make sure you keep thinking of me entering your ass like that again, yeah?' he says in a tease, as he proceeds to leave the room, as naked as he arrived. Now, you should clean yourself off before Mogdraz arrives, as it would be very embarassing to meet him while you make a trail of cum with all that is leaking out of it.";
+	say "     With the deed done, the red devil leaves you on the bed, his demonic seed leaking out of your ass as he takes just one more time to appreciate the view. 'Make sure you keep thinking of me entering your ass like that again, yeah?' he says in a tease, as he proceeds to leave the room, as naked as he arrived. Now, you should clean yourself off before Mogdraz arrives, as it would be very embarrassing to meet him while you make a trail of cum with all that is leaking out of it.";
 	HCEFinalSatisfactionBonus;
 
 [ NORMAL 1 D - DOM FEMALE HELLDEMON ---------------------------------------------------- ]
@@ -1915,7 +1915,7 @@ to HellfireClubEscortNormal3aMassage:
 	WaitLineBreak;
 	say "     'I... normally don't allow anyone to touch me down there, but... It does feel relaxing...' he says, as you grab each glute and squeeze them underneath your palms, giving them a generous grabbing and rubbing all over. But you dare to venture in deeper, as you slide your fingers between his buttocks, not all at once, but slowly, only rubbing at the inner side of his asscheeks. Then, your finger happens to brush against his pucker, then again... and again... and each time making the stallion raise his ass up just a little more... 'That feels so good...' he says, as now you find your fingers rubbing at his dark hole, tentatively at first, but more deeply later on, the tip of your thumb circling around his pucker tenderly.";
 	say "     It does look very tight, and you feel it clenched as you rub at it. It shows that the stallion never had anyone fuck him from behind, but he does not seem to mind you touching and caressing it. In fact, he seems particularly aroused at this. 'A... Ahh... Uhh... I...' You dismiss these as simply moans, but for some reason, it feels like he is trying to tell you something. Nevertheless, you continue your anal massage, providing him with a very good moment that sends him moaning loudly for the next minute... Wait a second. Why is he moaning so much and jerking his hips like... Oh, you see. You made the stallion cum all over the sheets as you continued to pleasure his backdoor. It goes on and on for a good long minute!";
-	say "     'O-oh, no... I... I'm so embarassed. I'm not used to sensations focused on my... rear. T-that was most unexpected!' he says, as he turns around and away from the messy puddle of spunk and drenched sheets. 'You are really good at that. I... I may have to... request your services more often. This one will, most certainly, keep me... thinking.'";
+	say "     'O-oh, no... I... I'm so embarrassed. I'm not used to sensations focused on my... rear. T-that was most unexpected!' he says, as he turns around and away from the messy puddle of spunk and drenched sheets. 'You are really good at that. I... I may have to... request your services more often. This one will, most certainly, keep me... thinking.'";
 	increase HCEClientSatisfaction by 2;
 	say "(+2)[line break]";
 	WaitLineBreak;
@@ -2160,7 +2160,7 @@ to HellfireClubEscortNormal3bMassage:
 	say "     'I... normally don't allow anyone to touch me there, but... It does feel relaxing...' she says, as you grab each boob and squeeze them underneath your palms, giving them a generous grabbing and rubbing all over. In the meantime, you grind your rear against her cock, throbbing underneath you with desire. Your fingers happen to brush against her nipples, tentatively at first, but then circling around them... again... and again... each time harder than the last, going for a good nipple rubbing. 'That feels so good...' she exclaims, the more you rub her tits and grind against her cock, harder and with increasingly more enthusiasm. She seems to be wild in lust and ecstasy...";
 	say "     'Oh... sweet... yes...! I'm... I'm so close...! She tries to warn you as she jerks her hips against you, but it is too late. She makes a huge mess all over her chest and your hands as she begins to cum all over, nearly drowning herself in her own load as you simply watch, feeling the throbbing meat underneath you going wild with each spurt of demonic seed leaving through. The creamy hot liquid simply coats every angle of her torso and down onto the sheets, even your hands as you continue to feel up her boobs. It takes her a long minute to finally begin to calm down, as her orgasm subsides...";
 	WaitLineBreak;
-	say "     'O-oh, no... I... I'm so embarassed. I'm not used to... do it like this. T-that was most unexpected!' she says, as she turns her face around and away from you, shying away. You get up to let her get off the messy puddle of spunk and drenched sheets. 'You are really good at that. I... I may have to... request your services more often. This one will, most certainly, keep me... thinking.'";
+	say "     'O-oh, no... I... I'm so embarrassed. I'm not used to... do it like this. T-that was most unexpected!' she says, as she turns her face around and away from you, shying away. You get up to let her get off the messy puddle of spunk and drenched sheets. 'You are really good at that. I... I may have to... request your services more often. This one will, most certainly, keep me... thinking.'";
 	increase HCEClientSatisfaction by 2;
 	say "(+2)[line break]";
 	WaitLineBreak;
