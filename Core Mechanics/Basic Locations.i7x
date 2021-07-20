@@ -581,7 +581,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Second Floor Lab Hallway	"Second Floor Lab Hallway"
 
-Second Floor Lab Hallway is a room. "     You're standing in a hallway on the second floor of the Trevor Labs. The lighting is dim, and beyond the two doors left and right along the walls, you can find abandoned offices and similar rooms. Only at the end of the corridor in the [link]north[end link] do you see a brilliant light shining from beneath a closed door at the end of the hallway, casting a cone of brightness into the gloom. The area is silent and smells of disinfectant. Towards the [bold type]south[roman type] you can step back onto the balcony wrapping around the building's atrium.".
+Second Floor Lab Hallway is a room. "     You're standing in a hallway on the second floor of the Trevor Labs. The lighting is dim, and beyond the two doors left and right along the walls, you can find abandoned offices and similar rooms. Only at the end of the corridor in the [link]north[end link] do you see a brilliant light shining from beneath a closed door at the end of the hallway, casting a cone of brightness into the gloom. The area is silent and smells of disinfectant. Towards the [link]south[end link] you can step back onto the balcony wrapping around the building's atrium.".
 Second Floor Lab Hallway is north of 2F Trevor Labs.
 Second Floor Lab Hallway is sleepsafe.
 
