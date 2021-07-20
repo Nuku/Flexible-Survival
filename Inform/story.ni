@@ -1014,6 +1014,15 @@ When play begins:
 When play begins (this is the graphics window construction rule):
 	if NewGraphics is true: [Build window regardless in case player decides to turn it on later]
 		now the graphics window proportion is NewGraphicsRatio;
+		if NewGraphicsPosition is:
+			-- 0:
+				now graphics window position is g-right;
+			-- 1:
+				now graphics window position is g-left;
+			-- 2:
+				now graphics window position is g-above;
+			-- 3:
+				now graphics window position is g-below;
 		build graphics window;
 		[now the graphics window pixel count is 1;]
 		follow the ngraphics_blank rule;

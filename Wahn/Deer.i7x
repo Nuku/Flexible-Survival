@@ -708,21 +708,22 @@ instead of conversing the Susan:
 	project the Figure of Susan_face_icon;
 	if HP of Doctor Matt < 7:
 		say "     Maybe you should talk to Dr. Matt first and learn about the results of his examination.";
-	else if Loyalty of Susan < 3 or Loyalty of Susan is 5: [not talked into medical/fucking yet]
-		if Resolution of Unusual Creature < 3: [not consoled/fucked]
-			say "     As you approach, Susan gives you an annoyed look, 'What, you drag me over here to be prodded and poked, then want to chat like nothing has happened? Hope your boss got all he needed, because I've had my fill of this place!' With that, she starts a light-footed dash to a side door leading to another part of the building. You do your best to catch up and bring her back, to no great avail as the deer demonstrates her speed and dexterity, always escaping you no matter what you do. She must have memorized the floorplan of the building that's hanging near one of the doors in the lab, and leads you for a merry chase before eventually reaching an emergency exit far away from the lobby and Orthas, running off into the city through it. As you return to Dr. Matt alone some time later, he gives you a deflated look, shaking his head and murmuring, 'Such a pity, to lose out on an opportunity like this.'";
-			now Susan is nowhere;
-			now Loyalty of Susan is 99; [she ran off]
-			FeralizeSusan; [making her an enemy in the park]
-			now HP of Doctor Matt is 8; [post-Susan]
-		else if Resolution of Unusual Creature is 3 or Resolution of Unusual Creature is 4: [player consoled her or fucked her]
-			SusanTalkMenu;
-	else if Loyalty of Susan is 3: [ready for medical]
-		say "     As you approach, [Susan] nods to you. 'I'm ready when you are. You can tell the doctor that.'";
-		say "     [bold type]You should tell Doctor Matt that you're ready to start with the experiment now. [roman type][line break]";
-	else if Loyalty of Susan is 4: [ready for fuck]
-		say "     [Susan] smiles and lightly touches your arm, then nods to the bed. Taking a deep breath, [SubjectPro of Susan] adds, [if Cock Length of Susan < 10]'So. Do you - do we... uhm. Lie down now?' She seems a bit jittery, looking around nervously and even lightly trembling. [else]'So, guess it's time to do it then, hm?' [SubjectProCap of Susan] seems a bit nervous, looking around distractedly. [end if]At the same time though, [SubjectPro of Susan] appears eager to feel that someone doesn't see [ObjectPro of Susan] as some sort of weird creature and still wants to be with [ObjectPro of Susan] intimately.";
-		say "     [bold type]You should tell Doctor Matt that you're ready to start with the experiment now. [roman type][line break]";
+	else if HP of Doctor Matt is 7: [ready for experiment]
+		if Loyalty of Susan < 3 or Loyalty of Susan is 5: [not talked into medical/fucking yet]
+			if Resolution of Unusual Creature < 3: [not consoled/fucked]
+				say "     As you approach, Susan gives you an annoyed look, 'What, you drag me over here to be prodded and poked, then want to chat like nothing has happened? Hope your boss got all he needed, because I've had my fill of this place!' With that, she starts a light-footed dash to a side door leading to another part of the building. You do your best to catch up and bring her back, to no great avail as the deer demonstrates her speed and dexterity, always escaping you no matter what you do. She must have memorized the floorplan of the building that's hanging near one of the doors in the lab, and leads you for a merry chase before eventually reaching an emergency exit far away from the lobby and Orthas, running off into the city through it. As you return to Dr. Matt alone some time later, he gives you a deflated look, shaking his head and murmuring, 'Such a pity, to lose out on an opportunity like this.'";
+				now Susan is nowhere;
+				now Loyalty of Susan is 99; [she ran off]
+				FeralizeSusan; [making her an enemy in the park]
+				now HP of Doctor Matt is 8; [post-Susan]
+			else if Resolution of Unusual Creature is 3 or Resolution of Unusual Creature is 4: [player consoled her or fucked her]
+				SusanTalkMenu;
+		else if Loyalty of Susan is 3: [ready for medical]
+			say "     As you approach, [Susan] nods to you. 'I'm ready when you are. You can tell the doctor that.'";
+			say "     [bold type]You should tell Doctor Matt that you're ready to start with the experiment now. [roman type][line break]";
+		else if Loyalty of Susan is 4: [ready for fuck]
+			say "     [Susan] smiles and lightly touches your arm, then nods to the bed. Taking a deep breath, [SubjectPro of Susan] adds, [if Cock Length of Susan < 10]'So. Do you - do we... uhm. Lie down now?' She seems a bit jittery, looking around nervously and even lightly trembling. [else]'So, guess it's time to do it then, hm?' [SubjectProCap of Susan] seems a bit nervous, looking around distractedly. [end if]At the same time though, [SubjectPro of Susan] appears eager to feel that someone doesn't see [ObjectPro of Susan] as some sort of weird creature and still wants to be with [ObjectPro of Susan] intimately.";
+			say "     [bold type]You should tell Doctor Matt that you're ready to start with the experiment now. [roman type][line break]";
 	else if Affection of Susan < 0: [disliked]
 		say "     As you approach, [Susan] shoots you a hostile glare and says, 'Go away, I don't want to talk to you!' Looks like [SubjectPro of Susan] hates your guts at the moment. [bold type]Maybe give her a day - or week - or so to cool down.[roman type][line break]";
 	else if Susan is in Primary Lab: [Trevor Labs]

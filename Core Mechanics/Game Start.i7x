@@ -134,20 +134,18 @@ To regularstart: [normal start method]
 				else:
 					now clearnomore is 0;
 			-- 12:
-				[
-				if NewGraphicsInteger is 1:
-					now graphics is true; [technically not necessary, but nice to have for edge cases]
-					now NewGraphics is true;
-					now NewGraphicsInteger is 2;
-				]
-				if NewGraphicsInteger is 2:
+				if NewGraphicsInteger is 2: [side window]
 					now graphics is false;
 					now NewGraphics is false;
-					now NewGraphicsInteger is 0;
-				else if NewGraphicsInteger is 0:
+					now NewGraphicsInteger is 0; [off]
+				else if NewGraphicsInteger is 0: [off]
 					now graphics is true;
 					now NewGraphics is true;
-					now NewGraphicsInteger is 2; [removed the inline option - it doesn't work with the newer high res pics]
+					now NewGraphicsInteger is 1; [inline]
+				else if NewGraphicsInteger is 1: [inline]
+					now graphics is true; [technically not necessary, but nice to have for edge cases]
+					now NewGraphics is true;
+					now NewGraphicsInteger is 2; [side window]
 			-- 13:
 				say "[set_invcolumns]";
 			-- 99:
@@ -210,16 +208,37 @@ to say gsopt_start:
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	[Code for letting player select graphics window size]
 	if NewGraphics is true:
-		say "You have enabled the graphics side window. This will be on the right side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose this proportion now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side window will take up. We recommend somewhere around 30.[line break]";
+		say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
+		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
+		say "Please choose the position value now. (0 = right side, 1 = left side, 2 = above, 3 = below)[line break]";
+		while 1 is 1:
+			say "(0-3)>[run paragraph on]";
+			get a number;
+			if calcnumber > -1 and calcnumber < 4:
+				break;
+			else:
+				say "Invalid Entry. Please enter a number between 0 and 3.";
+		now NewGraphicsPosition is calcnumber;
+		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
 		while 1 is 1:
 			say "(5-90)>[run paragraph on]";
 			get a number;
 			if calcnumber > 4 and calcnumber < 91:
 				break;
 			else:
-				say "Invalid Entry. Please enter a number between 5 and 90";
+				say "Invalid Entry. Please enter a number between 5 and 90.";
 		now NewGraphicsRatio is calcnumber;
+		now the graphics window proportion is NewGraphicsRatio;
+		if NewGraphicsPosition is:
+			-- 0:
+				now graphics window position is g-right;
+			-- 1:
+				now graphics window position is g-left;
+			-- 2:
+				now graphics window position is g-above;
+			-- 3:
+				now graphics window position is g-below;
+		reconstruct graphics window;
 		clear the screen;
 	say "Want more details on the game and updates? ----- [bold type]https://blog.flexiblesurvival.com/[roman type]  ------[line break][line break]";
 	WaitLineBreak;
@@ -532,41 +551,63 @@ to say silent_start:
 	say "[bold type]Graphic Settings[roman type][line break]";
 	say "Before restoring, please specify the graphic settings.[line break]";
 	say "[bold type] No graphics - 1 [roman type][line break]";
-	say "[bold type] New graphics side-window - 2 [roman type][line break]";
+	say "[bold type] Old inline graphics only - 2 [roman type][line break]";
+	say "[bold type] New graphics side-window - 3 [roman type][line break]";
 	while 1 is 1:
-		say "Please enter the number that matches your choice (1-2)>[run paragraph on]";
+		say "Please enter the number that matches your choice (1-3)>[run paragraph on]";
 		get a number;
-		if calcnumber > 0 and calcnumber < 3:
+		if calcnumber > 0 and calcnumber < 4:
 			break;
 		else:
-			say "Invalid Entry. Please enter a number between 1 and 2.";
-	if calcnumber is 1:
-		now graphics is false;
+			say "Invalid Entry. Please enter a number between 1 and 3";
+	now NewGraphicsInteger is calcnumber - 1; [Direct set]
+	if NewGraphicsInteger is 1: [now evaluate]
+		now graphics is true;
 		now NewGraphics is false;
-	else if calcnumber is 2:
+	else if NewGraphicsInteger is 2:
 		now graphics is true;
 		now NewGraphics is true;
+	else if NewGraphicsInteger is 0:
+		now graphics is false;
+		now NewGraphics is false;
 	if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
-		now the graphics window proportion is NewGraphicsRatio;
-		build graphics window;
-		[now the graphics window pixel count is 1;]
-		follow the ngraphics_blank rule;
-		follow the current graphics drawing rule;
-		now NewGraphicsOpened is true;
-	clear the screen;
-	if NewGraphics is true:
-		say "[bold type]Graphic Window Proportion[roman type][line break]";
-		say "You have enabled the new graphics window. This will be on the right side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose this value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+		say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
+		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
+		say "Please choose the position value now. (0 = right side, 1 = left side, 2 = above, 3 = below)[line break]";
+		while 1 is 1:
+			say "(0-3)>[run paragraph on]";
+			get a number;
+			if calcnumber > -1 and calcnumber < 4:
+				break;
+			else:
+				say "Invalid Entry. Please enter a number between 0 and 3.";
+		now NewGraphicsPosition is calcnumber;
+		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
 		while 1 is 1:
 			say "(5-90)>[run paragraph on]";
 			get a number;
 			if calcnumber > 4 and calcnumber < 91:
 				break;
 			else:
-				say "Invalid Entry. Please enter a number between 5 and 90";
+				say "Invalid Entry. Please enter a number between 5 and 90.";
 		now NewGraphicsRatio is calcnumber;
 		clear the screen;
+		now the graphics window proportion is NewGraphicsRatio;
+		if NewGraphicsPosition is:
+			-- 0:
+				now graphics window position is g-right;
+			-- 1:
+				now graphics window position is g-left;
+			-- 2:
+				now graphics window position is g-above;
+			-- 3:
+				now graphics window position is g-below;
+		reconstruct graphics window;
+		[now the graphics window pixel count is 1;]
+		follow the ngraphics_blank rule;
+		follow the current graphics drawing rule;
+		now NewGraphicsOpened is true;
+	clear the screen;
 	say "Just a moment. There are a few more things to prepare...";
 	WaitLineBreak;
 	if scenario is "Bunker":

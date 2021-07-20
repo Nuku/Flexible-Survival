@@ -4,6 +4,20 @@ Version 2 of Graphics Director by Core Mechanics begins here.
 
 "Provides functions that link the new window based graphics."
 
+
+Section - Special commands (for use with Simple Graphical Window by Emily Short)
+
+To close the/-- graphics window:
+	(- if (gg_picwin) glk_window_close(gg_picwin, 0); gg_picwin = 0; -)
+
+To open the/-- graphics window:
+	build graphics window.
+
+To reconstruct the/-- graphics window:
+	close the graphics window;
+	build graphics window.
+
+
 Section 1 - Declarations and variables
 
 [New Graphics modifier]
@@ -78,69 +92,78 @@ Section 4 - User Commands
 
 graphicmoding is an action applying to nothing.
 understand "graphics" as graphicmoding.
+
 carry out graphicmoding:
-	if NewGraphicsOpened is true:
-		follow the ngraphics_blank rule;
-		now calcnumber is -1;
-		let Trixieexit be 0;
-		while Trixieexit is 0:
-			clear the screen;
-			say "[bold type]Graphics Settings:[roman type][line break]";
-			say "Please note that the graphics side window will remain on screen despite any of these settings! If you are bothered by the blank space, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. Selecting 'DISABLED' will no longer generate a side window.[line break]";
-			say "We apologize for this inconvenience, this is a technical limitation of Inform.[line break]";
-			say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 2]Side-Window Graphics[else if NewGraphicsInteger is 1]Inline Mode[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
-			say "(2) [link]EXIT[as]2[end link][line break]";
-			while 1 is 1:
-				say "(1-2)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2:
-					break;
+	follow the ngraphics_blank rule;
+	now calcnumber is -1;
+	let Trixieexit be 0;
+	while Trixieexit is 0:
+		clear the screen;
+		say "[bold type]Graphics Settings:[roman type][line break]";
+		say "Please note that the graphics side window will remain on screen despite any of these settings! If you are bothered by the blank space, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. Selecting 'DISABLED' will no longer generate a side window.[line break]";
+		say "We apologize for this inconvenience, this is a technical limitation of Inform.[line break]";
+		say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 2]Side-Window Graphics[else if NewGraphicsInteger is 1]Inline Mode[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
+		say "(2) [link]Graphics Window Settings[as]2[end link] - [bold type]Position: [if NewGraphicsPosition is 0]Right[else if NewGraphicsPosition is 1]Left[else if NewGraphicsPosition is 2]Above[else if NewGraphicsPosition is 3]Below[end if]; Proportion: [NewGraphicsRatio][roman type][line break]";
+		say "(0) [link]EXIT[as]0[end link][line break]";
+		while 1 is 1:
+			say "(0-2)>[run paragraph on]";
+			get a number;
+			if calcnumber is 0 or calcnumber is 1 or calcnumber is 2:
+				break;
+			else:
+				say "Invalid Entry";
+		if calcnumber is:
+			-- 0:
+				say "Exit graphics menu?";
+				if Player consents:
+					now Trixieexit is 1;
+				if NewGraphicsInteger is 2:
+					reconstruct graphics window;
 				else:
-					say "Invalid Entry";
-			if calcnumber is:
-				-- 1:
-					if NewGraphicsInteger is 2:
-						now graphics is false;
-						now NewGraphics is false;
-						now NewGraphicsInteger is 0;
-					else if NewGraphicsInteger is 0:
-						now graphics is true;
-						now NewGraphics is true;
-						now NewGraphicsInteger is 2; [removed the inline option - it doesn't work with the newer high res pics]
-				-- 2:
-					say "Exit graphics menu?";
-					if Player consents:
-						now Trixieexit is 1;
-	else:
-		now calcnumber is -1;
-		let Trixieexit be 0;
-		while Trixieexit is 0:
-			clear the screen;
-			say "[bold type]Graphic Settings:[roman type][line break]";
-			say "NOTE: The graphics window has not been opened yet. To enable the new side-window graphics, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. You will then be prompted for graphic modifications.[line break]";
-			say "We apologize for this inconvenience, this is a technical limitation of Inform.[line break]";
-			say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 1]Inline Mode[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
-			say "(2) [link]EXIT[as]2[end link][line break]";
-			while 1 is 1:
-				say "(1-2)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2:
-					break;
-				else:
-					say "Invalid Entry";
-			if calcnumber is:
-				-- 1:
-					if NewGraphicsInteger is 1:
-						now graphics is false;
-						now NewGraphicsInteger is 0;
-					else if NewGraphicsInteger is 0:
-						now graphics is true;
-						now NewGraphics is false;
-						now NewGraphicsInteger is 1;
-				-- 2:
-					say "Exit graphics menu?";
-					if Player consents:
-						now Trixieexit is 1;
+					close graphics window;
+			-- 1:
+				if NewGraphicsInteger is 2: [side window]
+					now graphics is false;
+					now NewGraphics is false;
+					now NewGraphicsInteger is 0; [off]
+				else if NewGraphicsInteger is 0: [off]
+					now graphics is true;
+					now NewGraphics is false;
+					now NewGraphicsInteger is 1; [inline]
+				else if NewGraphicsInteger is 1: [inline]
+					now graphics is true; [technically not necessary, but nice to have for edge cases]
+					now NewGraphics is true;
+					now NewGraphicsInteger is 2; [side window]
+			-- 2:
+				say "Please choose the position value. (0 = right side, 1 = left side, 2 = above, 3 = below)[line break]";
+				while 1 is 1:
+					say "(0-3)>[run paragraph on]";
+					get a number;
+					if calcnumber > -1 and calcnumber < 4:
+						break;
+					else:
+						say "Invalid Entry. Please enter a number between 0 and 3.";
+				now NewGraphicsPosition is calcnumber;
+				say "Please choose the proportion value. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+				while 1 is 1:
+					say "(5-90)>[run paragraph on]";
+					get a number;
+					if calcnumber > 4 and calcnumber < 91:
+						break;
+					else:
+						say "Invalid Entry. Please enter a number between 5 and 90.";
+				now NewGraphicsRatio is calcnumber;
+				now the graphics window proportion is NewGraphicsRatio;
+				if NewGraphicsPosition is:
+					-- 0:
+						now graphics window position is g-right;
+					-- 1:
+						now graphics window position is g-left;
+					-- 2:
+						now graphics window position is g-above;
+					-- 3:
+						now graphics window position is g-below;
+
 
 Section 5 - Debug Commands
 

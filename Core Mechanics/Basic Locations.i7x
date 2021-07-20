@@ -551,7 +551,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Outside Trevor Labs	"Outside Trevor Labs"
 
-Outside Trevor Labs is a room. "     Like almost everyone else in this city, you've heard of Trevor Labs. They are - or were - a biopharm setup. Kind of new on the block, and the local news made a big stink a little while ago over accusations of skirting the edge of numerous laws in the name of science. The company's headquarters rise as a sleek and tall glass building to your [Bold Type]west[roman type]. You're not certain, but you think you can see some light in one of the windows, visible in the [time of day] light. Curious. Definitively something to investigate...".
+Outside Trevor Labs is a room. "     Like almost everyone else in this city, you've heard of Trevor Labs. They are - or were - a biopharm setup. Kind of new on the block, and the local news made a big stink a little while ago over accusations of skirting the edge of numerous laws in the name of science. The company's headquarters rise as a sleek and tall glass building to your [link]west[end link], surrounded by prettily arranged shrubbery and some small trees. You're not certain, but you think you can see some light in one of the windows on the first floor, in the northern half of the building. Curious. Definitively something to investigate...".
 understand "lab" or "labs" as Outside Trevor Labs.
 Outside Trevor Labs is fasttravel.
 earea of Outside Trevor Labs is "Outside".
@@ -562,7 +562,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Trevor Labs Lobby	"Trevor Labs Lobby"
 
-Trevor Labs Lobby is a room. "     You're standing in the ground floor lobby of Trevor Labs. New age furniture has been ripped to shreds and thrown around, while the walls and floor are splattered in unknown liquids. Most of the gunk is creamy white, with some reddish-brown and even green streaks mixed in... all of it well dried by now thankfully. It is somewhat dark in here, but some emergency lights draw your attention to the stairs leading up and down.".
+Trevor Labs Lobby is a room. "     You're standing in the ground floor lobby of Trevor Labs, which is fairly roomy, with open space above you, all the way to the glass roof six stories above. You can see two stairways leading [link]up[end link], to a balcony wrapping all the way around the atrium. As for the ground floor - much of the new age, blocky furniture has been ripped to shreds and thrown around, while the walls and floor are splattered in unknown liquids. Most of the gunk is creamy white, with some reddish-brown and even green streaks mixed in... all of it well dried by now thankfully. A hallway leading north seems to have been blocked by the unknown vandals, with all sorts of stuff piled up in it. On the other side in the [bold type]south[roman type] you see a small bistro that seems to have catered to the workers here, fairly thoroughly looted. In the [bold type]west[roman type], you can see the start of a cubicle farm of offices. Towards the [link]east[end link], you can leave the building again.".
 The earea of Trevor Labs Lobby is "Sealed".
 Trevor Labs Lobby is sleepsafe.
 
@@ -572,16 +572,25 @@ Table of GameRoomIDs (continued)
 Object	Name
 2F Trevor Labs	"2F Trevor Labs"
 
-2F Trevor Labs is a room. "     You're standing in a hallway on the second floor of the Trevor Labs. The lighting is dim, except for brilliant light shining from beneath a closed door at the end of the hallway. It casts a cone of brightness into the gloom. The area is silent and smells of disinfectant. There does not seem to be much here to look at besides a broken water cooler and a motivational poster with a kitten, encouraging you to hang in there.".
+2F Trevor Labs is a room. "     You're standing on a balcony wrapping all the way around the open lobby/atrium of the Trevor Labs building. Through a glass wall in the east, you can look out into the city, while a sign next to the hallway to the [link]north[end link] shows the words 'Primary Lab', with light shining through under a closed door at the very end of it. The hallway to the south reads 'Accounting', which seems much less interesting. To the west, you can see offices behind a glass divider that bears the word 'Marketing'. You could also use one of the two stairways to go [link]down[end link] into the lobby again.".
 2F Trevor Labs is above Trevor Labs Lobby.
 2F Trevor Labs is sleepsafe.
+
+
+Table of GameRoomIDs (continued)
+Object	Name
+Second Floor Lab Hallway	"Second Floor Lab Hallway"
+
+Second Floor Lab Hallway is a room. "     You're standing in a hallway on the second floor of the Trevor Labs. The lighting is dim, and beyond the two doors left and right along the walls, you can find abandoned offices and similar rooms. Only at the end of the corridor in the [link]north[end link] do you see a brilliant light shining from beneath a closed door at the end of the hallway, casting a cone of brightness into the gloom. The area is silent and smells of disinfectant. Towards the [bold type]south[roman type] you can step back onto the balcony wrapping around the building's atrium.".
+Second Floor Lab Hallway is north of 2F Trevor Labs.
+Second Floor Lab Hallway is sleepsafe.
 
 Table of GameRoomIDs (continued)
 Object	Name
 Primary Lab	"Primary Lab"
 
-Primary Lab is a room. "     One of the few places in the city with working power, this lab is brilliantly lit, showing off banks of busy computer terminals displaying dizzying amounts of information, largely obscure and technical. Overhead, soft humming of air conditioning is the likely reason that the room feels just a bit chilly. There is an especially comfy chair resting before the largest computer. There is only one window here, and it is mostly blocked by filing cabinets. Perhaps it is the light you saw outside.".
-Primary Lab is north of 2F Trevor Labs.
+Primary Lab is a room. "     One of the few places in the city with working power, this lab is brilliantly lit, showing off just about all the medical and technological gear you can imagine. Trevor Labs really didn't spare any cost equipping their scientists, which isn't too surprising, as their work is what made the company money. A whole bank of computer terminals is arrayed towards the left side of the room, with monitors displaying dizzying amounts of information, largely obscure and technical. Overhead, soft humming of air conditioning is the likely reason that the room feels just a bit chilly. Towards the back of the room, you can see what appears to be some kind of multi-stage airlock, leading into a separated off smaller room behind a large, thick and reinforced window. The large warning sign reading 'Biosafety Level 3' on the window might have something to do with it. Within, what looks to be a comfortable camp has been set up, with a bed, supplies and everything. You can leave the lab by going [link]south[end link], back into the hallway that brought you here.".
+Primary Lab is north of Second Floor Lab Hallway.
 There is an Infection Terminal in Primary Lab. "A glowing infection terminal quietly lists all the infections in the corner.".
 
 Table of GameRoomIDs (continued)

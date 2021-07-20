@@ -1498,13 +1498,14 @@ to TrophyLootFunction: [generates either a trophy prompt or loot for the player]
 	else: [Defaulting back to the old Loot System]
 		if Debug is at level 10:
 			say "Debug: Loot Fork activated.";
-		let randomdropchance be lootchance entry;
-		let z be 0;
-		if randomdropchance is 100: [always drops = no need to run all the maths]
-			ItemGain loot entry by 1;
-		else if randomdropchance > 0:
-			if a random chance of (randomdropchance + LootBonus) in 100 succeeds:
+		if loot entry is not "": [no empty loot entries]
+			let randomdropchance be lootchance entry;
+			let z be 0;
+			if randomdropchance is 100: [always drops = no need to run all the maths]
 				ItemGain loot entry by 1;
+			else if randomdropchance > 0:
+				if a random chance of (randomdropchance + LootBonus) in 100 succeeds:
+					ItemGain loot entry by 1;
 
 to SpecialTrophyCheck (TrophyName - text):
 	if TrophyName is:
