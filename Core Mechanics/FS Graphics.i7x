@@ -8,6 +8,7 @@ NewGraphics is a truth state that varies. NewGraphics is usually true.
 NewGraphicsInteger is a number that varies. NewGraphicsInteger is usually 2.
 NewGraphicsDebugMode is a truth state that varies. NewGraphicsDebugMode is usually false.
 NewGraphicsRatio is a number that varies. NewGraphicsRatio is usually 30.
+NewGraphicsPosition is a number that varies. [0 = right, 1 = left, 2 = above, 3 = below]
 NewGraphicsOpened is a truth state that varies. NewGraphicsOpened is usually false. [set to true for entire playthrough if graphics window opened - unless inline/disabled specified at start]
 
 [Please Note!]

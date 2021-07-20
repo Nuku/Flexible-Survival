@@ -276,7 +276,7 @@ to RoomRestore:
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] found and set to: [Reachability entry]; [ExplorationStatus entry]; [RestSafety entry]";
 				]
 			else:
-				if RoomIdName is not "Lost in the Woods":
+				if RoomIdName is not "Lost in the Woods" and RoomIdName is not "Museum interior":
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
 	if the File of RoomInventorySave exists:
 		repeat with x running through rooms:
@@ -291,7 +291,7 @@ to RoomRestore:
 				if there is a name of ItemName entry in the Table of Game Objects: [item exists]
 					add ItemName entry to Invent of RoomObject;
 			else:
-				if RoomIdName is not "Lost in the Woods":
+				if RoomIdName is not "Lost in the Woods" and RoomIdName is not "Museum interior":
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
 	else:
 		say "No Room Save File Found!";

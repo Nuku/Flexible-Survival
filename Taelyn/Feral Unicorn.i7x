@@ -214,7 +214,7 @@ When Play begins:
 	now SeductionImmune entry is false;
 	now libido entry is 70; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
 	now TrophyFunction entry is "-";
