@@ -150,7 +150,7 @@ to say J'RethTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Make general small talk";
 	[]
-	if HP of J'Reth is 3:
+	if HP of J'Reth is 3 and (FemaleList is banned or FemaleList is Warded):
 		choose a blank row in table of fucking options;
 		now title entry is "Discuss His Form";
 		now sortorder entry is 4;
@@ -204,13 +204,13 @@ to say J'RethTalkMenu:
 		now sortorder entry is 12;
 		now description entry is "Give J'Reth some Gryphon Milk to gender-shift them towards being a hermaphrodite";
 	[]
-	if hp of J'Reth is 1 and Charisma of J'Reth < 1:
+	if Charisma of J'Reth < 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer Help";
 		now sortorder entry is 13;
 		now description entry is "Ask J'Reth if there is anything that you can do to help him";
 	[]
-	if hp of J'Reth is 1 and Charisma of J'Reth is 1 and Backpack Lost & Found Stage Four is resolved:
+	if and Charisma of J'Reth is 1 and Backpack Lost & Found Stage Four is resolved:
 		choose a blank row in table of fucking options;
 		now title entry is "Return Backpack";
 		now sortorder entry is 14;
