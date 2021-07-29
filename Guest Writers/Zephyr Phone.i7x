@@ -283,6 +283,7 @@ Shallow Bay	Figure of emap_Shallow_Bay_icon
 Sunny Snacks	Figure of emap_Sunny_Snacks_icon
 Wild Fringe	Figure of emap_Wild_Fringe_icon
 [Note: add sunken emap_Sunken_Ship]
+
 [Bouncy Castle]
 Table of Zpc Location Reference (continued)
 location(room)	icon(figure name)
