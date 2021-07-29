@@ -262,7 +262,7 @@ Slave Cell 2	Figure of emap_Slave_Cell_2_icon
 Table of Zpc Location Reference (continued)
 location(room)	icon(figure name)
 Beach Plaza	Figure of emap_Beach_Plaza_icon
-Boardwalk	Figure of emap_Boardwalk_icon
+Boardwalk2	Figure of emap_Boardwalk_icon
 Church Hall	Figure of emap_church_hall_icon
 City Center	Figure of emap_City_Center_icon
 City Entrance	Figure of emap_City_Entrance_icon
@@ -280,9 +280,9 @@ Royal Bed Chambers	Figure of emap_Royal_Bed_Chambers_icon
 Royal Palace Entrance	Figure of emap_Royal_Palace_Entrance_icon
 Royal Throne Room	Figure of emap_Royal_Throne_Room_icon
 Shallow Bay	Figure of emap_Shallow_Bay_icon
-Sunken Ship	Figure of emap_Sunny_Snacks_icon
+Sunny Snacks	Figure of emap_Sunny_Snacks_icon
 Wild Fringe	Figure of emap_Wild_Fringe_icon
-
+[Note: add sunken emap_Sunken_Ship]
 [Bouncy Castle]
 Table of Zpc Location Reference (continued)
 location(room)	icon(figure name)
