@@ -31,6 +31,7 @@ Doctor's Office is north of Pediatrics Lobby.
 Table of GameRoomIDs (continued)
 Object	Name
 Doctor's Office	"Doctor's Office"
+Doctor's Office	"Doctors Office"
 
 Doctor's Office is a room. "A doctor's office, this one is a wreck. There are stains everywhere and food and water stockpiled in the cabinets. The clock is no longer running, and an oil lamp stands on the blue marble counter, on and burning. It fills the air with smoke. You idly wonder what happened to the smoke detectors.".
 
