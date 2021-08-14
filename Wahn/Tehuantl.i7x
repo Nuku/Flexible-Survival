@@ -59,7 +59,7 @@ to say TehuantlDesc:
 		project the Figure of Tehuantl_Female_Face_icon;
 		say "     Tehuantl is an exotic-looking female jaguar, with wide hips, long legs and an alluring figure. Her long dark hair, which matches the black rosettes in her golden yellow fur, is tied up in a long ponytail which reaches down to the middle of her back. Noticing your eyes upon her, she saunters over to you, showing off her naked body to full effect. There is a deep purr in her voice as she greets her [if Player is female]mistress[else]master[end if] and leans in to rub her furred cheek against your shoulder.";
 	else: [male Tehuantl]
-		project the Figure of Tehuantl_Male_Face_icon;
+		project the Figure of Tehuantl_Male_clothed_icon;
 		say "     Tehuantl is an exotic-looking male jaguar, with a lean physique and impressive muscles. His bearing and fluid movements make it instantly clear that he knows how to fight - not as good as you though, as you forced him to submit to you in the museum and took the proud feline as your pet. Having accepted his new role under you, the jaguar keeps his feathered shield and obsidian-toothed Aztec sword stashed next to his bedroll these days, spending his time with trying to please you instead of martial training.";
 		say "     Noticing your eyes upon him, Tehuantl saunters over to you, showing off his naked body to full effect. There is a deep purr in his voice as he greets his [if Player is female]mistress[else]master[end if] and leans in to rub his furred cheek against your shoulder.";
 
@@ -77,6 +77,7 @@ Instead of conversing the Tehuantl:
 	else if TehuantlStatus is 2: [in heat]
 		say "     [one of]Tehuantl mewls at you plaintively as she stares up from her spot on the floor, furiously working [if HP of Tehuantl > 14]a large dildo[else]several fingers[end if] into her needy cunt.[or]'Oh master, I need you...'[or]Too busy licking and sucking at her own groin as she mewls in pleasure, Tehuantl doesn't even notice you approach.[or]'Please, fill me master.'[at random]";
 	else if HP of Tehuantl > 49 and HP of Tehuantl < 100: [male Tehuantl]
+		project the Figure of Tehuantl_Male_face_icon;
 		say "     [one of]Tehuantl runs his paws down your chest as he nuzzles up against you, purring softly as his hands slide down towards you groin.[or]'My big strong warrior, I hope you're here to use your servant again.'[or]'I look forward to being beneath you again soon, [master].'[or]'How can I serve - or service - you, my [master]?'[or]Tehuantl rumbles softly as he grooms himself on one of the padded chairs, licking his fur while one hand slowly strokes his erect cock.[at random]";
 	else:
 		say "     [one of]Tehuantl runs her paws down your chest as she nuzzles up against you, purring softly as her hands slide down towards you groin[or]'My big strong warrior, I hope you're here to use your pussycat again.'[or]'I look forward to being beneath you again soon, master.'[or]'How can I serve - or service - you, my master?'[or]Tehuantl rumbles softly as she grooms herself on one of the padded chairs, slowly working towards her moist cunt.[at random]";
@@ -88,11 +89,13 @@ to say TehuantlSex:
 		say "     As eager as you are to have some fun with your feline pet, you find yourself ill-equipped to have any fun with her at the moment.";
 	else if lastfuck of Tehuantl - turns < 6:
 		if HP of Tehuantl > 49: [male]
+			project the Figure of Tehuantl_Male_clothed_icon;
 			say "     Tehuantl rubs himself against you and purrs, but then pulls back a little and says, 'Mmm, as much as I would love my big warrior to make use of [if Player is female]her[else]his[end if] servant again, I need some time to recuperate please.'";
 		else: [female]
 			say "     Tehuantl rubs herself against you and purrs, but then pulls back a little and says, 'Mmm, as much as I would love my big warrior to make use of [if Player is female]her[else]his[end if] pussycat again, I think it would be nicer for both of us if we took a break.'";
 	else:
 		if HP of Tehuantl < 50:
+			project the Figure of Tehuantl_Male_hard_icon;
 			say "     Spotting your feline pet [one of]stretching suggestively[or]bathing herself, paying particular attention to her groin[or]lounging around the library[at random], you consider having some fun with her.";
 			say "[TehuantlSexMenu]";
 		else:

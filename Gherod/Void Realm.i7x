@@ -234,7 +234,7 @@ VRTentacleAbominationLinger is a number that varies. VRTentacleAbominationLinger
 VRDarkTyrantTracker is a number that varies. VRDarkTyrantTracker is usually -1. [@Tag:NotSaved]
 
 to say ToTheVoid:
-	say "     Taking a deep breath, you decide that you will be crossing the gate. Walking down the stairs, you feel its heavy atmosphere pulling you in, like a vaccuum attempting to fill itself with your presence. Once you touch the entrance, all your reality becomes darkness, and you find yourself in its emptyness. The core line of the Void Realm welcomes you in its endless paths, enveloped in a veil of many mysteries and dangers.";
+	say "     Taking a deep breath, you decide that you will be crossing the gate. Walking down the stairs, you feel its heavy atmosphere pulling you in, like a vaccuum attempting to fill itself with your presence. Once you touch the entrance, all your reality becomes darkness, and you find yourself in its emptiness. The core line of the Void Realm welcomes you in its endless paths, enveloped in a veil of many mysteries and dangers.";
 	WaitLineBreak;
 	say "[VRMoveOptions]";
 
@@ -443,7 +443,7 @@ to VRMindConditionCheck:
 		if player is kinky:
 			say "     [one of]Your legs refuse to move...[or]You're absentmindedly caressing yourself...[or]Sudden ecstacy is becoming a problem...[or]Your body wants to betray you...[or]You're starting to feel an urge to offer yourself to this place...[or]There is only dark lust in your thoughts...[at random][line break]";
 		else:
-			say "     [one of]Panic assaults you...[or]You're shaking uncontrollably...[or]Your eyes are dry and your throat gasps for air...[or]Breathing feels pointless to you...[or]There is only emptyness in your mind...[or]Your hope is gone...[at random][line break]";
+			say "     [one of]Panic assaults you...[or]You're shaking uncontrollably...[or]Your eyes are dry and your throat gasps for air...[or]Breathing feels pointless to you...[or]There is only emptiness in your mind...[or]Your hope is gone...[at random][line break]";
 
 to VREncounterTrackerCheck:
 	if VRDarkTyrantTracker < 3: [Trackers freeze if Dark Tyrant is an imminent threat, < 3 means he's not]
@@ -723,7 +723,7 @@ to say VRGatewayToFreedom:
 		WaitLineBreak;
 		say "     Now as you open your eyes, you find yourself in one of the streets of Red Light District, disoriented for a brief moment before all your senses return. It seems that you're safely back to your homeworld, which despite having been severely punished by the apocalypse, it isn't as desperate and dark as the Void... In fact, this is so relieving that you feel your mental state completely reinvigorated. Could it be the light that bathed you?";
 		if a random chance of 1 in 2 succeeds:
-			say "     And also, it looks like you've got a single [bold type]null essence[roman type] from it. That doesn't seem to happen everytime.";
+			say "     And also, it looks like you've got a single [bold type]null essence[roman type] from it. That doesn't seem to happen every time.";
 			ItemGain null essence by 1 silently;
 		SanBoost 100;
 		WaitLineBreak;
@@ -806,7 +806,7 @@ to say VRMomentOfRespite:
 	say "[VRMoveOptions]";
 
 to say VRUnfortunatePrey:
-	say "     ... Though you hear a hissing. No, it is not behind you, nor around you. It is a sound in the distance, way ahead of you. It seems angry, as if attacking something, what you could describe as a sound of war. Well, now you cannot go back into the core line just like that, so you are forced to proceed. Your heart beats with the antecipation of finding a foe too powerful for you to face, but it is no time to think of that. You must press on and see what lies beyond...";
+	say "     ... Though you hear a hissing. No, it is not behind you, nor around you. It is a sound in the distance, way ahead of you. It seems angry, as if attacking something, what you could describe as a sound of war. Well, now you cannot go back into the core line just like that, so you are forced to proceed. Your heart beats with the anticipation of finding a foe too powerful for you to face, but it is no time to think of that. You must press on and see what lies beyond...";
 	WaitLineBreak;
 	say "     [bold type]Unfortunate Prey[roman type][line break]";
 	say "     The hissing intensifies, the primal sound of a wrathful serpent ringing in your ears as you walk closer, and then, so suddenly... A massively long shape just makes it across from your right to your left right above you, moving at such an incredible speed that you barely see it coming! But it ignores you, to your relief. Actually, you don't even think it noticed you walking by, and as furious as the creature seemed, you can't help but be glad. Nothing pleasant could come out of that. Although... what is it attacking, exactly? You cannot help but wonder what else could have entered this realm enough to piss off an enormous and dangerous creature such as a Void Serpent. You do carefully make haste to move out of the danger zone, but your eyes lay on something inevitable.";
@@ -842,7 +842,7 @@ to say VRUnfortunatePrey:
 		say "[VRMoveOptions]";
 
 to say VRCreepyVisage: [Oh no.]
-	say "     ... Though as you make your way beyond the veil, you find only darkness. It is worse than finding nothing at all, since the way behind you blocks everytime you manage to make it across. With no other option but to continue, you thread carefully in hopes of this being just tough luck and nothing special, or just a tiny little drawback. Have to remain positive in one if to make it through this place safely, but the atmosphere is so dense... There is only lifeless silence, nothing else at all. It is as if you went somewhere you should not be walking into... Your mind is immediately thrown into disarray.";
+	say "     ... Though as you make your way beyond the veil, you find only darkness. It is worse than finding nothing at all, since the way behind you blocks every time you manage to make it across. With no other option but to continue, you thread carefully in hopes of this being just tough luck and nothing special, or just a tiny little drawback. Have to remain positive in one if to make it through this place safely, but the atmosphere is so dense... There is only lifeless silence, nothing else at all. It is as if you went somewhere you should not be walking into... Your mind is immediately thrown into disarray.";
 	if demonologist is listed in companionList of Player:
 		say "     [italic type]Then you look back, looking for your companion. He's gone. Between you and your surroundings, there is nothing but darkness.[roman type][line break]";
 	WaitLineBreak;
@@ -2175,8 +2175,8 @@ to say VRDarkTyrantWins:
 			WaitLineBreak;
 			say "     As you are brought closer and closer to his gooey throat, pushed in by his tongue, you feel your whole body shaking when a deep grunt bursts from his insides, as if he reached his climax, all the while he decides to finally swallow you. His slimey esophagus slowly pulls you deeper into a black gooey mess, in which you lose yourself, only darkness claiming your body, completely enveloped and stuck in black solid liquid, and deprived of air. You as you know yourself, your body as you controlled it and your mind all start to become irrelevant as you feel all that belongs to you being taken away, absorbed into the goo that you are now part of.";
 		-- 2: [Cock Vore]
-			say "     With your body now fully coated in slime and sluggish because of this arousal taking over you, the massive brute of black goo brings you close to his gigantic, throbbing cock that is always so happy to see you. From here, you can already feel a warmth emanated by his penis, leaking more dark slime the closer you are brought to it. The Tyrant's dick is bigger than you, thicker than you, and very, very solid, despite it still being made of goo. He puts you underneath it, pressing your body against the underline of his shaft, bringing you down and up through it as his massive erection rubs across you entirely, only to make you feel his entire appendage throbbing on top of you. He lets out a grunt of pleasure everytime he brings you closer to the tip, and eventually, he focuses his gestures around the gooey glans.";
-			say "     The Tyrant gives a little thrust everytime your body rubs against the sensitive surface around his slit, expelling thick globs of what would be precum if it wasn't black slime. The texture and consistency is unspeakably thick, the same as honey though tasteless like the Void, and it becomes a problem when a drop of that hits you right on the face. Although what happens next is much, much worse, as you find yourself sinking in that stuff when he pushes your head past the slit. This enormous hulk of black goo seems to be pushing you down his cock, and loving the sensations you are giving him when you wiggle your body out of surprise, judging by how much his shaft pulses and hardens once he begins to take you in.";
+			say "     With your body now fully coated in slime and sluggish because of this arousal taking over you, the massive brute of black goo brings you close to his gigantic, throbbing cock that is always so happy to see you. From here, you can already feel a warmth emanated by his penis, leaking more dark slime the closer you are brought to it. The Tyrant's dick is bigger than you, thicker than you, and very, very solid, despite it still being made of goo. He puts you underneath it, pressing your body against the underline of his shaft, bringing you down and up through it as his massive erection rubs across you entirely, only to make you feel his entire appendage throbbing on top of you. He lets out a grunt of pleasure every time he brings you closer to the tip, and eventually, he focuses his gestures around the gooey glans.";
+			say "     The Tyrant gives a little thrust every time your body rubs against the sensitive surface around his slit, expelling thick globs of what would be precum if it wasn't black slime. The texture and consistency is unspeakably thick, the same as honey though tasteless like the Void, and it becomes a problem when a drop of that hits you right on the face. Although what happens next is much, much worse, as you find yourself sinking in that stuff when he pushes your head past the slit. This enormous hulk of black goo seems to be pushing you down his cock, and loving the sensations you are giving him when you wiggle your body out of surprise, judging by how much his shaft pulses and hardens once he begins to take you in.";
 			WaitLineBreak;
 			say "     After your head, your shoulders follow as he slowly continues to push, moaning and grunting as he feels more and more of you being sucked in by his gooey manhood, down to your waist, and with each throb, a little more of your legs... until your feet are the only thing poking out of his dong. With a finger, he presses against your soles, and completely shoves you inside his rod, having achieved so much hardness that you thought it would be impossible to reach for something made of slime as he is. Inside, however, it feels like wobbly flesh, constricting and pulsing all around you like a living heartbeat, warm goo throbbing all over your body as you keep sinking, deeper and deeper, until you are finally dropped in what seems to be his balls, or rather, a huge sack of more goo.";
 			say "     There is some liquid inside, which is that very thick slime he keeps leaking, except this one is much hotter, almost burning through you, yet you get used to it. It envelops you and stimulates your body, providing you with a lot of pleasurable sensations as you are invited to lay down and close your eyes... You feel the Tyrant caress his sack with you inside, everything rumbling and bouncing around you as you are kept sealed tightly inside his nuts. There is no longer a need in you to breathe, as you as you know yourself, your body as you controlled it and your mind all start to become irrelevant. All that belongs to you is taken away, melting away in his slime and becoming part of a much greater being.";
@@ -2290,8 +2290,8 @@ to say ElkHeadReaperLoses:
 to VRVoidSerpentFightConclusion:
 	if fightoutcome < 20: [player won]
 		say "     It was a tough fight, but you managed to emerge victorious by dealing the final blow to the Void Serpent, who collapses on the dark floor seemingly lifeless before you. With nothing else to do but to admire your prowess, you look around for some spoils.";
-		say "     There is, at least, [bold type]a pair of null essences[roman type] that you manage to gather from the defeated snake.";
-		ItemGain null essence by 2 silently;
+		ItemGain null essence by 2;
+		ItemGain sharp black tusk by 1;
 		now VRVoidSerpentTracker is 0;
 		WaitLineBreak;
 		say "[VRMoveOptions]";
@@ -2360,7 +2360,8 @@ to VRDarkTyrantFightConclusion:
 to VRPeculiarSummonerFightConclusion: [The peculiar summoner is one of the few 'fleeable' monsters, but a fight loss will still guarantee a bad end.]
 	if fightoutcome < 20: [player won]
 		say "     Your might was enough to push the mysterious figure away from you, making them quit their efforts at capturing you. 'Hmph, it seems you are stronger than you look. Perhaps I will succeed next time.' With these words, the peculiar summoner retreats, leaving you to your doings.";
-		say "     This battle rewarded you with at least [bold type]one null essence.[roman type][line break]";
+		ItemGain null essence by 1;
+		ItemGain strange-colored bean by 1;
 		now VRPeculiarSummonerTracker is 0;
 		WaitLineBreak;
 		say "[VRMoveOptions]";
@@ -2397,6 +2398,7 @@ to VRTentacleAbominationFightConclusion:
 		if a random chance of 2 in 3 succeeds:
 			say "     It looks like the Tentacle Abomination dropped a single [bold type]Null Essence[roman type], so you pick it up and stash it in your inventory.";
 			ItemGain null essence by 1 silently;
+		ItemGain loose tentacle by 1;
 		now VRTentacleAbominationTracker is 0;
 		now VRTentacleAbominationLinger is 0;
 		WaitLineBreak;
@@ -3378,12 +3380,21 @@ Section X - Dev Cheats
 [***********************************************************]
 
 CreateNullEssences is an action applying to nothing.
-Understand "GetNE" as CreateNullEssences.
+Understand "GetNullEssence" as CreateNullEssences.
+
+Check CreateNullEssences:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
 
 Carry out CreateNullEssences:
 	ItemGain null essence by 100 silently;
 	ItemGain sharp black tusk by 1 silently;
+	ItemGain strange-colored bean by 1 silently;
+	ItemGain loose tentacle by 1 silently;
 	say "     100 null essences added to your inventory.";
 	say "     Have a tusk, too.";
+	say "     And a strange bean.";
+	say "     And also a loose tentacle. For no reason.";
 
 Void Realm ends here.

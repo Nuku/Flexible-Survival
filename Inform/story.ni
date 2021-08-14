@@ -10,19 +10,19 @@ Use slow route-finding.
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
-Use MAX_OBJ_PROP_COUNT of 1280.
+Use MAX_OBJ_PROP_COUNT of 1700.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 370000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 4000.
-use MAX_ACTIONS of 2000.
-use MAX_VERBS of 2000.
+use MAX_ACTIONS of 2500.
+use MAX_VERBS of 2500.
 use MAX_VERBSPACE of 50000.
 use MAX_ARRAYS of 100000.
 [Use MAX_ZCODE_SIZE of 1000000.]
-Use MAX_DICT_ENTRIES OF 5000.
-Use maximum text length of at least 2000.
+Use MAX_DICT_ENTRIES OF 6000.
+Use maximum text length of at least 3000.
 Use Scoring.
 [ End compiler settings. ]
 
@@ -140,6 +140,22 @@ Include Misc Pieces by Core Mechanics.
 Include Help by Core Mechanics. [adjusts the standard help to match FS]
 Include Story Skipper by Core Mechanics. [declares export/import system for version-spanning transfers - standard variables]
 Include Story Skipper Loose Variables by Core Mechanics. [declares export/import system for version-spanning transfers - loose variables]
+Include NewInfectionTest by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest1 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest2 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest3 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest4 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest5 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest6 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest7 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest8 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest9 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest10 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest11 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest12 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest13 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest14 by Core Mechanics. [50 filled lines of the new infection variable table]
+Include NewInfectionTest15 by Core Mechanics. [50 filled lines of the new infection variable table]
 
 Book 2 - More Core Mechanics
 
@@ -223,7 +239,7 @@ Include New Ewe Store by Luneth.
 Include PIG Frat by Stripes.
 Include Pirate Island by Sarokcat.
 Include Power Plant by Hellerhound.
-Include Qytat a'th Lundrues by Hellerhound.
+Include Qytat a'th Lundrues by SgtPepper234.
 Include Red Light District by Wahn.
 Include Shag Shack by Wahn.
 Include Stablemasters by Sarokcat.
@@ -309,7 +325,7 @@ Include Latex Quad Husky by Stripes.
 Include Leonard Events by Stripes.
 Include Little Old Woman by Kaleem mcintyre.
 Include Lizard Parlor by Kaleem Mcintyre.
-Include Main Storyline by Stripes.
+Include Main Storyline by Wahn.
 Include Male Dorm Events by Rikaeus.
 Include Mall Events by Sarokcat.
 Include Mall Expansion by Wahn.
@@ -328,6 +344,7 @@ Include Museum Events by Sarokcat.
 Include Museum Rounds by Stripes.
 Include Nemean Lion by Prometheus.
 Include New Events by Sarokcat.
+Include Ninja Events by Tanaka.
 Include Odd Weapons by Hellerhound.
 Include Old BoomBox by Kaleem mcintyre.
 Include Orc Events by Wahn.
@@ -436,7 +453,7 @@ Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
 Include Dino Pack by Qazarar.
 Include Dire Wolf by Qazarar.
-Include Doberman Cop by Stripes.
+Include Doberman Cop by Wahn.
 Include Doberman Male by Wahn.
 Include Donkeyman by Sarokcat n Verath.
 Include Donkeywoman by Sarokcat n Verath.
@@ -723,11 +740,12 @@ Include Azari by Dys.
 Include Bastet by Wahn.
 Include Bjorn by Rikaeus.
 Include Blake by Wahn.
-Include Blanche by Stripes.
+Include Blanche by Prometheus.
 Include Blue by Wahn.
 Include Boghrim by Wahn.
 Include Bradford by Stripes.
 Include Brennan by Wahn.
+Include Brennan's Wolves by Wahn.
 Include Brian by Vinickus.
 Include Brooke by Stripes.
 Include Bryony by Song.
@@ -742,7 +760,7 @@ Include Cherry by Gherod.
 Include Chris by Wahn.
 Include Cindy by Stripes.
 Include College Guards by Rikaeus.
-Include Colleen by Sarokcat.
+Include Colleen by Prometheus.
 Include Corbin by Wahn.
 Include Coura by Wahn.
 Include Daisy by Sarokcat n Verath.
@@ -752,7 +770,7 @@ Include Darius by Wahn.
 Include Darren by Qazarar.
 Include David by Wahn.
 Include Davies by Wahn.
-Include Deer by Stripes.
+Include Deer by Wahn.
 Include Denise by Wahn.
 Include Demonologist by Gherod.
 Include Desperate Bunny by Nuku Valente.
@@ -778,17 +796,18 @@ Include Felix by Wahn.
 Include Finn by Wahn.
 Include Flint by Gherod.
 Include Francois by AGentlemanCalledB.
-Include Frank by Stripes.
+Include Frank by Luneth.
 Include Friesian Twin Isaac by Wahn.
 Include Friesian Twin Karel by Wahn.
 Include G-Shep Squad by Rikaeus.
 Include Genevieve by Prometheus.
-Include Garrett by Stripes.
+Include Garrett by SgtPepper234.
 Include Gerty by Qazarar.
 Include Glory by Wahn.
 Include Good Alexandra by Wahn.
 Include Gordon by Rikaeus.
 Include Gregory by Wahn.
+Include Gryphon Characters by SgtPepper234.
 Include Gus by Hyliad.
 Include Gwen by Stripes.
 Include Hadiya by Stripes.
@@ -853,6 +872,7 @@ Include Midnight by Luneth.
 Include Milo by CrimsonAsh.
 Include Mogdraz by Gherod.
 Include Monty by Wahn.
+Include Moreau by Wahn.
 Include Mouse Taur by Nuku Valente.
 Include Pet Mutt by CrimsonAsh.
 Include Nadia by Wahn.
@@ -867,7 +887,7 @@ Include Oliver by Rikaeus.
 Include Onyx by Sarokcat n Verath.
 Include Orc Female by Wahn.
 Include Orc Lair by Wahn.
-Include Orthas by Stripes.
+Include Orthas by Wahn.
 Include Otto Fuchs by Prometheus.
 Include Palomino by Verath.
 Include Paula by Stripes.
@@ -994,6 +1014,15 @@ When play begins:
 When play begins (this is the graphics window construction rule):
 	if NewGraphics is true: [Build window regardless in case player decides to turn it on later]
 		now the graphics window proportion is NewGraphicsRatio;
+		if NewGraphicsPosition is:
+			-- 0:
+				now graphics window position is g-right;
+			-- 1:
+				now graphics window position is g-left;
+			-- 2:
+				now graphics window position is g-above;
+			-- 3:
+				now graphics window position is g-below;
 		build graphics window;
 		[now the graphics window pixel count is 1;]
 		follow the ngraphics_blank rule;

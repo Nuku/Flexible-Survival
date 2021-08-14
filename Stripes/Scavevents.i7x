@@ -410,7 +410,8 @@ ResolveFunction of Manna from Heaven is "[ResolveEvent Manna from Heaven]".
 Sarea of Manna from Heaven is "Outside".
 
 to say ResolveEvent Manna from Heaven:
-	say "Moving through the city, you suddenly hear cawing and shouting from somewhere above. It's a harpy flying in your direction, clutching something in her claws - closely followed by another who keeps insulting her. Sounds like they're having a disagreement of the ownership of the can of peaches the first one has in her talons. Before long, that dissolves into a furious mid-flight clawing match during which the fought-over can is knocked out of the claw holding it - and literally falls into your hands. You quickly dash off with it before the harpies team up and attack you.";
+	project Figure of Harpy_icon;
+	say "     Moving through the city, you suddenly hear cawing and shouting from somewhere above. It's a harpy flying in your direction, clutching something in her claws - closely followed by another who keeps insulting her. Sounds like they're having a disagreement of the ownership of the can of peaches the first one has in her talons. Before long, that dissolves into a furious mid-flight clawing match during which the fought-over can is knocked out of the claw holding it - and literally falls into your hands. You quickly dash off with it before the harpies team up and attack you.";
 	ItemGain food by 1;
 	now Manna from Heaven is resolved;
 

@@ -34,7 +34,7 @@ to say ResolveEvent Old Record Store:
 	say "     Walking along and scouting for danger around every other turn, you find your steps taking you to someplace that you aren't particularly familiar with. Surprised by the fact that your body has suddenly gained an awareness all its own, you don't think to stop yourself as you follow an unseen path to an old music store that looks as though it has seen much, much better days. Even before the so-called apocalypse, you don't actually remember having seen a music shop in the neighborhood where you lived, not even in the big city really.";
 	say "     After iPods, cell phones and the likes started to come out and the internet became a hospice for people pirating bootleg music via unsecure web links, music stores like this one had become a relic of a past no one remembered or cared about.";
 	WaitLineBreak;
-	say "     A queer smile slips across your [FaceName of Player] face as you make your way over to the window of the shop. Trying to peek to the best of your ability, you can't really get a good look of what's inside of the building, despite having restored power to the city. Grunting and then shrugging, you prepare to turn away from the music store when you hear the telltale -click- of the front door being opened. Hastily, you crouch down to get on your guard and wonder if this is about to turn into some kind of devious mutant trick.";
+	say "     A queer smile slips across your [FaceSpeciesName of Player in lower case] face as you make your way over to the window of the shop. Trying to peek to the best of your ability, you can't really get a good look of what's inside of the building, despite having restored power to the city. Grunting and then shrugging, you prepare to turn away from the music store when you hear the telltale -click- of the front door being opened. Hastily, you crouch down to get on your guard and wonder if this is about to turn into some kind of devious mutant trick.";
 	say "     When nothing happens after several seconds, you feel your nerves start to calm and your muscles unclench as a sense of safety washes over you. Not knowing what's going on here, you find yourself wondering if you should take a chance and go into the darkened storefront.";
 	say "     [bold type]Should you go in?[roman type][line break]";
 	LineBreak;
@@ -63,7 +63,7 @@ to say ResolveEvent Old Record Store:
 			say "     Again, you find yourself confused as you wonder what the hell is going on here. First the spooky shop with the self opening door, the whispers, the music and now the news. Had you not known any better you could almost swear that someone is trying to get your attention. Laughter bubbles up out of your throat as you find the hilarity of the situation too much to stand. The slight crackle of fear and insanity coloring your hilarity must be in your head, you reason, as you are NOT afraid right now. Nope. No sir. Calming your laughs down into giggles and then into quiet chuckles, you pull yourself over the table to have a look-see at what's making all the ruckus.";
 			WaitLineBreak;
 			say "     What you find is an old boombox staring up at you, almost as if in longing for your presence. The old fashioned machine is big and clunky, though nothing compared to your bedroll, with switches and knobs and the likes which signal its age. However, you do happen to note that the thing has a CD player attached to the top of it, so the machine can't be all that old. You shake your head as you turn away from the music maker, but soon you have to look back as you could have just sworn that you heard your name coming from the thing.";
-			say "     Listening very hard, you almost have to strain to hear anything as the volume on the old boombox quickly silences itself. Pulling back to tilt your head in befuddlement, a scowl soon covers your [FaceName of Player] face as you promise that you're going to make whoever is pulling this joke off on you pay when you find them. Whirling away from the jam machine, you head back over to the other side of the room to replace the cassettes that you have in hand. Just as you are about to set the twin tapes back, the boombox suddenly pumps up the volume loud enough that you nearly jump up onto the ceiling.";
+			say "     Listening very hard, you almost have to strain to hear anything as the volume on the old boombox quickly silences itself. Pulling back to tilt your head in befuddlement, a scowl soon covers your [FaceSpeciesName of Player in lower case] face as you promise that you're going to make whoever is pulling this joke off on you pay when you find them. Whirling away from the jam machine, you head back over to the other side of the room to replace the cassettes that you have in hand. Just as you are about to set the twin tapes back, the boombox suddenly pumps up the volume loud enough that you nearly jump up onto the ceiling.";
 			WaitLineBreak;
 			say "     Gritting your teeth, once you come back down to earth, you figure that enough is enough! Walking over to the old boombox and then snatching the machine up, you switch it off and stomp your way out into the front and then shout for someone... ANYONE... to come out and get this little joke over with. Silence answers you. Not even the whispers from before can be heard as you look around desperately for a store clerk, manager or somebody to come and tell you what's going on.";
 			say "     No one ever does.";
@@ -176,7 +176,7 @@ To say jazzfriends:
 				say "     Sarah's pups all come around to bark and yip before making a circle to surround you and Sarah, almost as if they are trying to contain the feelings that both you and her are sharing right now.";
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
-			say "     Fang seems quite interested in the music as he comes over to lay by your leg while listening to it. Grumbling softly into the back of his throat, the wolf nuzzles close to you while curling up into a large ball of fur and muscle. You do happen to notice, however, that the wolf's ears are ever tuned towards the door of the bunker. The lupine, no matter how relaxed, is ever vigilant towards his duty to protect his new home.";
+			say "     Fang seems quite interested in the music as [SubjectPro of Fang] comes over to lay by your leg while listening to it. Grumbling softly into the back of [PosPro of Fang] throat, the wolf nuzzles close to you while curling up into a large ball of fur and muscle. You do happen to notice, however, that the wolf's ears are ever tuned towards the door of the bunker. The lupine, no matter how relaxed, is ever vigilant towards [PosPro of Fang] duty to protect [PosPro of Fang] new home.";
 		else:
 			say "     Fang, not use to hearing music too often, seems a little intrigued by the noise coming from the boombox. Slowly, the feral wolf comes over and then lays down beside your cot to listen to the soft sounds coming from the unfamiliar machine.";
 	if skunk kit is tamed:
@@ -217,9 +217,9 @@ to say tangofriends:
 to say R&Bfriends:
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
-			say "     Fang pads over to you and then lays his head down onto your lap. The music seems to have gotten to the other in a strange way as you could almost swear that tears are in his eyes. Maybe this canine has more soul than you think as you lay a hand down to stroke him across his rugged mane of fur. Neither of you speak as you just listen to the tunes. You find that words have no place here now.";
+			say "     Fang pads over to you and then lays [PosPro of Fang] head down onto your lap. The music seems to have gotten to the other in a strange way as you could almost swear that tears are in [PosPro of Fang] eyes. Maybe this canine has more soul than you think as you lay a hand down to stroke [ObjectPro of Fang] across [PosPro of Fang] rugged mane of fur. Neither of you speak as you just listen to the tunes. You find that words have no place here now.";
 		else:
-			say "     Fang moves over towards you before plopping himself down to listen to the R&B melody wafting from out of the speakers of the boombox. By the slow wag of his tail, you can see that the feral creature likes the music very much.";
+			say "     Fang moves over towards you before plopping [ReflexPro of Fang] down to listen to the R&B melody wafting from out of the speakers of the boombox. By the slow wag of [PosPro of Fang] tail, you can see that the feral creature likes the music very much.";
 	If Colleen is in the bunker:
 		say "     The rhythm of the melody playing on the boombox puts Colleen to sleep.";
 	if Sarah is in the bunker:
@@ -245,7 +245,7 @@ to say R&Bfriends:
 		say "     The small crustacean you found on the beach seems to like the music as he comes over to you and then settles himself under your feet. You'll have to be careful not to step on the other, but a quick pinch of claws will stop you anyway from doing that by accident.";
 	if Elijah is in the Bunker:
 		If HP of Elijah is 3 or HP of Elijah is 4:
-			say "     Your white winged angel seems to find mild amusement in the soft croons playing on the boombox as he comes over to sit beside you while encircling one of his wings around your [BodyName of Player] form.";
+			say "     Your white winged angel seems to find mild amusement in the soft croons playing on the boombox as he comes over to sit beside you while encircling one of his wings around your [BodyType of Player] form.";
 	if Alexandra is booked:
 		say "     Coming in to investigate the noise, Alexandra pokes her head inside and stands at the door, keeping an eye on the library in case of trouble while she listens. She sticks around, listening to the music for a time. When one song takes on a more mournful tone, she seems to get sad, and then - having gotten sad - she gets angry and storms out.";
 		now lastfuck of Alexandra is turns + 8;
@@ -261,9 +261,9 @@ to say RockandRollfriends:
 		say "     At hearing the music playing on the boombox, Colleen proceeds to rock the house as she howls and swivels her body while dancing with the beat of the drumset and electric guitars being played.";
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
-			say "     Fang seems to have woken up from his inopportune nap as the wolf rises onto his feet and then pads over into your direction. Seeing that he's not quite happy about being so rudely interrupted by the annoying sounds, you have to block the other off from the boom box as you can clearly see the other wanting to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this. After all, a win is a win in your book by any accounts.";
+			say "     Fang seems to have woken up from [PosPro of Fang] inopportune nap as the wolf rises onto [PosPro of Fang] feet and then pads over into your direction. Seeing that [SubjectPro of Fang] is not quite happy about being so rudely interrupted by the annoying sounds, you have to block the [ObjectPro of Fang] off from the boom box as you can clearly see that [SubjectPro of Fang] wants to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this. After all, a win is a win in your book by any accounts.";
 		else:
-			say "     Fang doesn't seem to care for this particular type of music as he pops his head into the Bunker and then pops himself back out to return to his post.";
+			say "     Fang doesn't seem to care for this particular type of music as [SubjectPro of Fang] pops [PosPro of Fang] head into the Bunker and then pops [ReflexPro of Fang] back out to return to [PosPro of Fang] post.";
 	if Alexandra is booked:
 		say "     Coming in to investigate the noise[if fang is booked] when Fang exists the bunker angrily[end if], Alexandra pokes her head inside. Hearing the energetic, frenetic rock and roll music, she throws herself into dancing. Clearly not much of a dancer, she makes up for it with energy and wild abandon, throwing herself most of all into the songs about wild youth, sex and rebellion. It seems to get her quite worked up and she's got a hungry look in her eyes by the end of it.";
 		now lastfuck of Alexandra is turns + 8;
@@ -291,9 +291,9 @@ to say Oceanfriends:
 				say "     Sarah's pups encircle both you and their mother as they sleepily start to drift off together, one after another.";
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
-			say "     Fang slowly comes over to where you are and then curls himself up at your head. Panting softly, the big male has no problem whimpering at the sounds of the music and then drifting off to sleep as he listens to the music with you.";
+			say "     Fang slowly comes over to where you are and then curls [ReflexPro of Fang] up at your head. Panting softly, the big [if thirst of player is 0]male [else]female [end if]has no problem whimpering at the sounds of the music and then drifting off to sleep as [SubjectPro of Fang] listens to the music with you.";
 		else:
-			say "     Fang sleepy pads himself over to you and then curls up to go to sleep. No muss, no fuss. Just a large bundle of sleepy wolf curling himself up next to your head.";
+			say "     Fang sleepy pads [ReflexPro of Fang] over to you and then curls up to go to sleep. No muss, no fuss. Just a large bundle of sleepy wolf curling [ReflexPro of Fang] up next to your head.";
 	If Colleen is in the bunker:
 		say "     Colleen makes her way over to [if sarah is bunkered]where Sarah is and then proceeds to snuggle up with the other husky woman[else]the bunk and sits on the floor beside you, leaning back against the cot[end if].";
 	if house cat is tamed:
@@ -312,7 +312,7 @@ to say Oceanfriends:
 [		else:
 			say "     ***confident Sven.";]
 	if little fox is tamed:
-		say "     The cute little vulpine swiftly bounds over to you and then curls himself up at the underside of your chin[if Fang is in the Grey Abbey Library]. Fang moves the fox over to lay it next to him however, the other growling somewhat fatherly at the little kit when the vulpine tries to move away[end if].";
+		say "     The cute little vulpine swiftly bounds over to you and then curls himself up at the underside of your chin[if Fang is in the Grey Abbey Library]. Fang moves the fox over to lay it next to [ObjectPro of Fang] however, the wolf firmly curling around the fox kit when the vulpine tries to move away[end if].";
 	if skunk kit is tamed:
 		say "     Peppy goes to rest on top of your stomach and you can only laugh as you reach up to scratch at the other's black and white furred body.";
 	if helper dog is tamed:

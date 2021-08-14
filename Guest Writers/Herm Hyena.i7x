@@ -27,96 +27,102 @@ to say GenerateTrophyList_Hyena_Herm:
 
 Section 1 - Creature Responses
 
-to say herm hyena attack:
-	project the Figure of Herm_Hyena_naked_icon;
-	if wslevel is not 1 and ( a random chance of ( wslevel * wslevel ) in 25 succeeds ):
-		say "     [if HP of Player > 0]Having given up[else]Unable to continue[end if] the fight, you are thrown to the ground by the victorious hyena as she gives a barking laugh. Grabbing your head, she pulls your face to her crotch and shoves her manhood into your mouth. The dark penis has a strong taste to it that is soon overwhelmed by the acrid flow of her piss into your mouth. You try to pull back in surprise, but she's got too firm a grip on your head. In the end, you're forced to swallow down her salty, bitter urine while she laughs mockingly. When she's done, she makes it a point to smear her wet cock across your cheeks, further marking you with her scent. It is quite some time before you're able to clear the taste of her from your mouth.";
-		CreatureSexAftermath "Player" receives "OralCock" from "Hyena Herm";
-	else if Player is female:
-		say "     She lets out a victorious laugh and quickly throws you to the ground, stripping you as you fall. You can only stare wide-eyed as she slowly strips, enjoying the anticipation (and the look on your face) as much as possible. When her black, knotted spear finally pops free she gasps with pleasure and grabs your legs, pulling you cunt-first toward her waiting shaft. She begins pumping torturously slowly, ponderously drawing her cock out before slamming it back in while her paws roam over your [bodytype of Player] form. Eventually, you can't take it anymore and begin whimpering for release. Taking that as the sign of your complete submission, she begins fucking you with wild abandon. Very soon you are both howling with pleasure as she is pounding your [cunt size desc of Player] snatch like a jackhammer, knot pressing urgently against your entrance with each thrust. With one final thrust she slips her knot inside you, bringing you both to a screaming orgasm as she paints your womb white with her seed. 'You're pretty good, come and see me again some time if you wanna fool around some more,' she says as she slips her clothes back on and walks off, leaving you panting in a puddle of fluids.";
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Hyena Herm";
+to say Herm Hyena wins:
+	if inasituation is true:
+		say ""; [dealt with in the event]
 	else:
-		say "     She laughs loudly, stripping you stark naked in the blink of an eye. As she eyes your nude form she seems a bit disappointed at what she sees, or rather, what she doesn't see. But, you've got two other perfectly good holes and she intends to make use of one of them. You've just got a brief moment while she's tossing aside her clothes to free her large, knotted cock. Will you move in to use your mouth (Y) or offer up your ass (N)?";
-		if Player consents:
-			say "     Opting to use your mouth over risking ending up with that knotted shaft in your anus, you take a hold of her cock. Putting a paw on your head, she presses it against your lips. You obey her and open your mouth, letting her shaft in as you begin to softly suck her head. Her eyes glaze over and her tongue lolls out of her mouth as you begin to bob up and down on her shaft, licking and sucking as you go. Soon you find your lips bumping against her rapidly growing knot, and when you decide to engulf it you are rewarded with a sharp cry of pleasure from your [']rapist[']. She begins to rapidly pant and moan as her knot swells far larger than you anticipated, locking it in your mouth. Suddenly, she howls loudly and orgasms, flooding your throat with her seed as her knot forces you to swallow it all. 'Not bad, I haven't had head that good in a long time. If we run into each other again we can pick up from here,' she says, dressing herself and walking away. At the moment all you can do in response is gurgle, your belly feeling bloated from her ample load.";
+		project the Figure of Herm_Hyena_naked_icon;
+		if wslevel is not 1 and ( a random chance of ( wslevel * wslevel ) in 25 succeeds ):
+			say "     [if HP of Player > 0]Having given up[else]Unable to continue[end if] the fight, you are thrown to the ground by the victorious hyena as she gives a barking laugh. Grabbing your head, she pulls your face to her crotch and shoves her manhood into your mouth. The dark penis has a strong taste to it that is soon overwhelmed by the acrid flow of her piss into your mouth. You try to pull back in surprise, but she's got too firm a grip on your head. In the end, you're forced to swallow down her salty, bitter urine while she laughs mockingly. When she's done, she makes it a point to smear her wet cock across your cheeks, further marking you with her scent. It is quite some time before you're able to clear the taste of her from your mouth.";
 			CreatureSexAftermath "Player" receives "OralCock" from "Hyena Herm";
+		else if Player is female:
+			say "     She lets out a victorious laugh and quickly throws you to the ground, stripping you as you fall. You can only stare wide-eyed as she slowly strips, enjoying the anticipation (and the look on your face) as much as possible. When her black, knotted spear finally pops free she gasps with pleasure and grabs your legs, pulling you cunt-first toward her waiting shaft. She begins pumping torturously slowly, ponderously drawing her cock out before slamming it back in while her paws roam over your [bodytype of Player] form. Eventually, you can't take it anymore and begin whimpering for release. Taking that as the sign of your complete submission, she begins fucking you with wild abandon. Very soon you are both howling with pleasure as she is pounding your [cunt size desc of Player] snatch like a jackhammer, knot pressing urgently against your entrance with each thrust. With one final thrust she slips her knot inside you, bringing you both to a screaming orgasm as she paints your womb white with her seed. 'You're pretty good, come and see me again some time if you wanna fool around some more,' she says as she slips her clothes back on and walks off, leaving you panting in a puddle of fluids.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Hyena Herm";
 		else:
-			say "     Deciding you'd prefer to let the sexy hyena mount you, you move onto all fours and offer your ass to the victorious creature. She grins and gives your ass a slap before moving into position atop you. Her cock leaks pre against your tight hole, which she smears around before pushing a few inches into you. You moan in a mix of pain and pleasure as she starts pounding into you with increasing zeal, working her large shaft further and further into your [bodydesc of Player] body. [if scalevalue of Player <= 3]Wrapping her arms around you, she pulls you to sit in her lap and bucks hard and fast into you, letting gravity force you down onto her big knot until she ties with you and fills your bowels with her seed. Once her knot goes[else]Gripping the sides of your large body, she pounds hard and fast into you until she can stretch you out enough to take her big knot. Once tied with you, you can feel her hot semen rushing into your bowels. When the knot's gone[end if] down enough, she pulls free, leaving you still feeling quite bloated from her ample load even after the removal of her cock and the large amount of cum that's leaked out of your spread asshole. She gives your ass another spank as she leans over to pick up her clothes. 'Mmm... not bad. You've got a fine piece of ass there. I hope to run into you again sometime soon.' After dressing herself, she heads on her way. All you can do in response is moan softly, your backside feeling quite tender, but pleasantly warm and stuffed as well.";
-			CreatureSexAftermath "Player" receives "AssFuck" from "Hyena Herm";
-
-to say beatthehyena:
-	project the Figure of Herm_Hyena_naked_icon;
-	say "     With a bit of delirious sounding laughter the Herm Hyena hits the ground, momentarily passing out. This leaves you free to leave... or to have some fun with the horny herm.";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck the hyena";
-		now sortorder entry is 1;
-		now description entry is "screw the horny herm";
-	[
-	choose a blank row in table of fucking options;
-	now title entry is "Get a blow job";
-	now sortorder entry is 4;
-	now description entry is "make the horny herm blow you";
-	]
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Ride the herm's cock - vaginal";
-		now sortorder entry is 2;
-		now description entry is "get that knotted cock in your pussy";
-	[
-		choose a blank row in table of fucking options;
-		now title entry is "Get eaten out";
-		now sortorder entry is 5;
-		now description entry is "get the hyena to lick your snatch";
-	]
-	choose a blank row in table of fucking options;
-	now title entry is "Ride the herm's cock - anal";
-	now sortorder entry is 3;
-	now description entry is "stuff that knotted cock up your ass";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Suck hyena cock";
-	now sortorder entry is 6;
-	now description entry is "suck a load from that sexy black cock of hers";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
+			say "     She laughs loudly, stripping you stark naked in the blink of an eye. As she eyes your nude form she seems a bit disappointed at what she sees, or rather, what she doesn't see. But, you've got two other perfectly good holes and she intends to make use of one of them. You've just got a brief moment while she's tossing aside her clothes to free her large, knotted cock. Will you move in to use your mouth (Y) or offer up your ass (N)?";
 			if Player consents:
+				say "     Opting to use your mouth over risking ending up with that knotted shaft in your anus, you take a hold of her cock. Putting a paw on your head, she presses it against your lips. You obey her and open your mouth, letting her shaft in as you begin to softly suck her head. Her eyes glaze over and her tongue lolls out of her mouth as you begin to bob up and down on her shaft, licking and sucking as you go. Soon you find your lips bumping against her rapidly growing knot, and when you decide to engulf it you are rewarded with a sharp cry of pleasure from your [']rapist[']. She begins to rapidly pant and moan as her knot swells far larger than you anticipated, locking it in your mouth. Suddenly, she howls loudly and orgasms, flooding your throat with her seed as her knot forces you to swallow it all. 'Not bad, I haven't had head that good in a long time. If we run into each other again we can pick up from here,' she says, dressing herself and walking away. At the moment all you can do in response is gurgle, your belly feeling bloated from her ample load.";
+				CreatureSexAftermath "Player" receives "OralCock" from "Hyena Herm";
+			else:
+				say "     Deciding you'd prefer to let the sexy hyena mount you, you move onto all fours and offer your ass to the victorious creature. She grins and gives your ass a slap before moving into position atop you. Her cock leaks pre against your tight hole, which she smears around before pushing a few inches into you. You moan in a mix of pain and pleasure as she starts pounding into you with increasing zeal, working her large shaft further and further into your [bodydesc of Player] body. [if scalevalue of Player <= 3]Wrapping her arms around you, she pulls you to sit in her lap and bucks hard and fast into you, letting gravity force you down onto her big knot until she ties with you and fills your bowels with her seed. Once her knot goes[else]Gripping the sides of your large body, she pounds hard and fast into you until she can stretch you out enough to take her big knot. Once tied with you, you can feel her hot semen rushing into your bowels. When the knot's gone[end if] down enough, she pulls free, leaving you still feeling quite bloated from her ample load even after the removal of her cock and the large amount of cum that's leaked out of your spread asshole. She gives your ass another spank as she leans over to pick up her clothes. 'Mmm... not bad. You've got a fine piece of ass there. I hope to run into you again sometime soon.' After dressing herself, she heads on her way. All you can do in response is moan softly, your backside feeling quite tender, but pleasantly warm and stuffed as well.";
+				CreatureSexAftermath "Player" receives "AssFuck" from "Hyena Herm";
+
+to say Herm Hyena loses:
+	if inasituation is true:
+		say ""; [dealt with in the event]
+	else:
+		project the Figure of Herm_Hyena_naked_icon;
+		say "     With a bit of delirious sounding laughter the Herm Hyena hits the ground, momentarily passing out. This leaves you free to leave... or to have some fun with the horny herm.";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if Player is male:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck the hyena";
+			now sortorder entry is 1;
+			now description entry is "screw the horny herm";
+		[
+		choose a blank row in table of fucking options;
+		now title entry is "Get a blow job";
+		now sortorder entry is 4;
+		now description entry is "make the horny herm blow you";
+		]
+		if Player is female:
+			choose a blank row in table of fucking options;
+			now title entry is "Ride the herm's cock - vaginal";
+			now sortorder entry is 2;
+			now description entry is "get that knotted cock in your pussy";
+		[
+			choose a blank row in table of fucking options;
+			now title entry is "Get eaten out";
+			now sortorder entry is 5;
+			now description entry is "get the hyena to lick your snatch";
+		]
+		choose a blank row in table of fucking options;
+		now title entry is "Ride the herm's cock - anal";
+		now sortorder entry is 3;
+		now description entry is "stuff that knotted cock up your ass";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Suck hyena cock";
+		now sortorder entry is 6;
+		now description entry is "suck a load from that sexy black cock of hers";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					now sextablerun is 1;
+					if title entry is:
+					-- "Fuck the hyena":
+						say "[beatthehyena01]";
+					-- "Ride the herm's cock - vaginal":
+						say "[beatthehyena02]";
+					-- "Ride the herm's cock - anal":
+						say "[beatthehyena03]";
+					-- "Get a blow job":
+						say "[beatthehyena04]";
+					-- "Get eaten out":
+						say "[beatthehyena05]";
+					-- "Suck hyena cock":
+						say "[beatthehyena06]";
+					wait for any key;
+			else if calcnumber is 0:
 				now sextablerun is 1;
-				if title entry is:
-				-- "Fuck the hyena":
-					say "[beatthehyena01]";
-				-- "Ride the herm's cock - vaginal":
-					say "[beatthehyena02]";
-				-- "Ride the herm's cock - anal":
-					say "[beatthehyena03]";
-				-- "Get a blow job":
-					say "[beatthehyena04]";
-				-- "Get eaten out":
-					say "[beatthehyena05]";
-				-- "Suck hyena cock":
-					say "[beatthehyena06]";
+				say "     You resist the urge to indulge your base urges and leave the hyena passed out.";
 				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You resist the urge to indulge your base urges and leave the hyena passed out.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+		clear the screen and hyperlink list;
 
 to say beatthehyena01:	[player tops]
 	say "     Allowing the temptation of your arousal to decide, you approach the incapacitated herm cautiously. You open her jeans and expose her crotch, taking in the sight of her hard cock, hefty balls and more to the point, her wet pussy under those furry balls. Your [cock size desc of Player] cock aches for relief and the hyena will do fine for sating those needs. You stroke your stiff erection as you kneel atop her, raising her balls and fully exposing her pussy before thrusting into her.";
@@ -157,6 +163,12 @@ to say beatthehyena06:	[give blow job]
 	say "     Rubbing and squeezing the now hard knot at its base, you lick and suck all the harder on the unconscious herm's cock. She releases soft moans of pleasure, especially when you fondle her hefty balls and tweak her clit underneath her sac. This drives her over the edge and she gives a little growl as she cums hard. Gooey shots of hyena cum blast into your mouth and down your throat, though some overflows as well to dribble down your chin. You swallow the semen down hungrily, its taste strong and virile. Once she's spent, you release her floppy dick and leave her passed out with her cock hanging out.";
 	CreatureSexAftermath "Player" receives "OralCock" from "Hyena Herm";
 
+to say HyenaHermDesc:
+	if inasituation is true:
+		say ""; [dealt with in the event]
+	else:
+		say "     You encounter an anthropomorphic hyena. She has bright [one of]brown[or]amber[or]green[at random] eyes and a grinning mouth full of saber-like teeth. Dressed in jeans and an open leather jacket with no shirt whatsoever beneath, her full breasts are left exposed for the world to see. When she spots you, a low chuckling begins to emanate from the woman's throat and her mouth opens into a toothy smile. She begins to run toward you, and as she approaches, it becomes very clear that 'she' is also a he, with a noticeably large bulge shifting in her pants with every step.";
+
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
@@ -181,9 +193,9 @@ When Play begins:
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The hyena [one of]rakes her claws across your midsection, leaving bloody gashes in their wake[or]suddenly clocks you with one hell of a haymaker. You kind of want to sit down for a moment now[or]leaps at you, bringing her knee to your face with alarming speed[or]sweepkicks your legs out from under you, then swiftly and painfully drops herself elbow first directly onto your sternum[at random]."; [Text used when the monster makes an Attack]
-	now defeated entry is "[beatthehyena]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is "[Herm Hyena attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 5]     You encounter an anthropomorphic hyena. She has bright [one of]brown[or]amber[or]green[at random] eyes and a grinning mouth full of saber-like teeth. Dressed in jeans and an open leather jacket with no shirt whatsoever beneath, her full breasts are left exposed for the world to see. When she spots you, a low chuckling begins to emanate from the woman's throat and her mouth opens into a toothy smile. She begins to run toward you, and as she approaches, it becomes very clear that 'she' is also a he, with a noticeably large bulge shifting in her pants with every step.";
+	now defeated entry is "[Herm Hyena loses]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is "[Herm Hyena wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[HyenaHermDesc]";
 	now face entry is "[if matriarchowned is 1]that of a strong hyena, with a scruffy streak of dark fur atop your head[else]brown-furred, hyena-like[end if]";
 	now body entry is "[if matriarchowned is 1]that of a toughened hyena with an impressive build[else]lean and tightly muscled[end if]";
 	now skin entry is "[if matriarchowned is 1]hyena-spotted[else]brown[end if] furred";

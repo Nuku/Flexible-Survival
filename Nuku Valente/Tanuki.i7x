@@ -658,7 +658,7 @@ To say TanukiSurvivalTalk:
 		If humanity of Player < 40:
 			say "His wet nose twitches softly. 'Looks like you're letting things get to you. I know how to relax you. Go on, play a few notes.' He gestures broadly to his expansive, if clothed, belly. 'Beat a few bars and you'll be right as rain.'";
 			if the player consents:
-				say "You reach your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodyName of Player] hands out and pat lightly at his belly. He reaches with his furry paws and pats at your hands in return. 'Go on, harder, and faster. Think of a song!' You play all the harder, thinking up a [one of]lively[or]rhythmic[or]random[at random] song to play with his belly serving as the drum. He manages to somehow hum along with the song in your head despite you not sharing it. Time passes without you noticing. By the time the drum session is over, you feel more grounded and together.";
+				say "You reach your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodySpeciesName of Player in lower case] hands out and pat lightly at his belly. He reaches with his furry paws and pats at your hands in return. 'Go on, harder, and faster. Think of a song!' You play all the harder, thinking up a [one of]lively[or]rhythmic[or]random[at random] song to play with his belly serving as the drum. He manages to somehow hum along with the song in your head despite you not sharing it. Time passes without you noticing. By the time the drum session is over, you feel more grounded and together.";
 				increase Humanity of Player by 50;
 				follow turnpass rule;
 			else:
@@ -673,7 +673,7 @@ To say TanukiSurvivalTalk:
 		If humanity of Player < 40:
 			say "His wet nose twitches softly. 'Looks like you're letting things get to you. I know how to relax you. Go on, play a few notes.' He gestures broadly to his expansive, if clothed, belly. 'Beat a few bars and you'll be right as rain.'";
 			if the player consents:
-				say "You reach your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodyName of Player] hands out and pat lightly at his belly. He reaches with his furry paws and pats at your hands in return. 'Go on, harder, and faster. Think of a song!' You play all the harder, thinking up a [one of]lively[or]rhythmic[or]random[at random] song to play with his belly serving as the drum. He manages to somehow hum along with the song in your head despite you not sharing it. Time passes without you noticing. By the time the drum session is over, you feel more grounded and together.";
+				say "You reach your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodySpeciesName of Player in lower case] hands out and pat lightly at his belly. He reaches with his furry paws and pats at your hands in return. 'Go on, harder, and faster. Think of a song!' You play all the harder, thinking up a [one of]lively[or]rhythmic[or]random[at random] song to play with his belly serving as the drum. He manages to somehow hum along with the song in your head despite you not sharing it. Time passes without you noticing. By the time the drum session is over, you feel more grounded and together.";
 				increase Humanity of Player by 50;
 				follow turnpass rule;
 			else:

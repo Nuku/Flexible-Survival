@@ -96,7 +96,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Goo"; [name of the overall species of the infection, used for children, ...]
 	add "Goo Girl" to infections of FurryList;
 	add "Goo Girl" to infections of SlimeList;
 	add "Goo Girl" to infections of FemaleList;
@@ -261,7 +261,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"glob of goo"	"A small bottle of strange, neon colored, goop"	1	glob of goo
+"glob of goo"	"A small container of strange, neon green colored, goop."	1	glob of goo
 
 glob of goo is a grab object.
 It is temporary.

@@ -20,6 +20,7 @@ to say LoseToFeralUnicorn:
 		if HP of Player > 0: [submit hotdogging]
 			say "     Raising your hands, you do your best to try to tell the fantastical beast that you no longer mean to fight. The unicorn stops his charge and pauses as it gives you a thoughtful expression. He looks over your [BodyName of Player in lower case] body, seeming to be disappointed by how you aren't big enough for him to properly mount, but still pleased that you submitted to him. As if only to do you a favor, he gently prods at you with his nose, ushering you towards the stone table. Once standing in front of the stone slab, the unicorn pushes you down against it, leaving your ass up towards him. As if by magic, any clothing and gear on you is removed and appears in a heap nearby, giving the large equine full access to you.";
 			say "     He begins to push against you, forcing his almost two foot long shaft between your cheeks, sliding against them as he starts to thrust. Grabbing hold of the shackles on either side of the table, you brace yourself as the stallion uses you, pre leaking over your back and ass until he pushes hard against you and whinnies in pleasure. Pearlescent cum gushes from his flaring equine dick, splattering over you and making your body tingle. Satisfied, he slips down off of you and starts to walk away back into the dense forest while leaving you with the mess.";
+			CreatureSexAftermath "Player" receives "Stroking" from "Feral Unicorn";
 		else: [player lost]
 			say "     You collapse in defeat as the unicorn stands proudly over you, looking over your [BodyName of Player in lower case] body. He presses his face between your legs, taking a look and getting a good sniff at your genitals before pulling away. The look he gives you is one of disapproval, possibly because you are too small for him to use properly. Without a second glance, he turns away and gallops into the forest.";
 	else:
@@ -30,26 +31,26 @@ to say LoseToFeralUnicorn:
 		say "Once standing in front of the stone slab, the unicorn pushes you down against it, leaving you ass up towards him. He slowly mounts you, his body pressing against you while his virile musk invades your senses. As if by magic, any clothing and gear on you is removed and appears in a heap nearby, giving the large equine full access to you. The blunt tip of his massive, drooling erection presses against your ";
 		if Player is herm: 			  [Yes = HERM Identified!]
 			say "sex as he adjusts his aim but doesn't enter just yet. The unicorn's horn starts to glow, and you suddenly feel a tingle as your asshole, cunt and cock[smn] as your rear entrance suddenly tightens up and your hymen regrows. [bold type]You're a virgin again![roman type] But not for long.";
+			now Virgin of Player is true;
 			say "     Without giving you a chance to react, the feral male thrusts forwards, making you gasp when his equine shaft sinks deep into you. The magical beast begins in earnest, thrusting relentlessly into you time and time again without pause. His breath feels hot and heavy against you, and each thrust is so powerful that it pushes you hard against the table. You can't help but moan as you are bred like his mare, your virgin cunt begging for more, which he is more than happy to give you. With a few more powerful, thrusts, the unicorn's cock tip flares, sealing you up as best as he can before unleashing rope after rope of pearlescent cum deep into your awaiting womb until you feel almost bloated with his virile seed. The pleasure is too much, and you cum soon after; [if Cock Count of Player > 1]all of your own cocks erupt[else]your own cock erupts[end if] as well, spilling your own fluids against the stone, which it strangely seems to absorb into, leaving the surface clean.";
 			WaitLineBreak;
 			say "     Slowly, the unicorn pulls out of you, leaving your freshly used hole quivering in the afterglow while some of the unicorn jizz leaks out of you, only to be absorbed into the table. You take a moment to catch your breath before turning just in time to see the unicorn proudly trotting away into the forest, leaving you to clean yourself up and collect your gear.";
-			if FaceName of Player is listed in infections of Equinelist or "They Have Your Eyes" is listed in feats of Player or "Breeding True" is listed in feats of Player:
-				fimpregchance;
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Unicorn";
 		else if Player is female: 	  [Yes = FEMALE Identified!]
 			say "sex as he adjusts his aim but doesn't enter just yet. The unicorn's horn starts to glow, and you suddenly feel a tingle as your asshole and cunt suddenly start to tighten up and your hymen regrows. [bold type]You're a virgin again![roman type] But not for long.";
+			now Virgin of Player is true;
 			say "     Without giving you a chance to react, the feral male thrusts forwards, making you gasp when his equine shaft sinks deep into you. The magical beast begins in earnest, thrusting relentlessly into you time and time again without pause. His breath feels hot and heavy against you, and each thrust is so powerful that it pushes you hard against the table. You can't help but moan as you are bred like his mare, your virgin cunt begging for more, which he is more than happy to give you. With a few more powerful, thrusts, the unicorn's cock tip flares, sealing you up as best as he can before unleashing rope after rope of pearlescent cum deep into your awaiting womb until you feel almost bloated with his virile seed.";
 			WaitLineBreak;
 			say "     Slowly, the unicorn pulls out of you, leaving your freshly used hole quivering in the afterglow while some of the unicorn jizz leaks out of you, only to be absorbed into the table. You take a moment to catch your breath before turning just in time to see the unicorn proudly trotting away into the forest, leaving you to clean yourself up and collect your gear.";
-			if FaceName of Player is listed in infections of Equinelist or "They Have Your Eyes" is listed in feats of Player or "Breeding True" is listed in feats of Player:
-				fimpregchance;
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Unicorn";
 		else if Player is male: [Yes = MALE Identified!]
 			say "asshole as he adjusts his aim but doesn't enter just yet. The unicorn's horn starts to glow, and you suddenly feel a tingle in your asshole and cock[smn] as your rear entrance suddenly starts to tighten up. [bold type]You're a virgin again![roman type] But not for long.";
+			now AnalVirgin of Player is true;
 			say "     Without giving you a chance to react, the feral male thrusts forwards, making you gasp when his equine shaft sinks deep into you. The magical beast begins in earnest, thrusting relentlessly into you time and time again without pause. His breath feels hot and heavy against you, and each thrust is so powerful that it pushes you hard against the table.";
 			say "     You can't help but moan as you are bred like his mare, your virgin tailhole begging for more, which he is more than happy to give you. With a few more powerful thrusts, the unicorn's cock tip flares, sealing you up as best as he can before unleashing rope after rope of pearlescent cum deep into your ass until you feel almost bloated with his virile seed. The pleasure is too much, and you cum soon after; [if Cock Count of Player > 1]all of your own cocks erupt[else]your own cock erupts[end if] as well, spilling your own fluids against the stone, which it strangely seems to absorb into, leaving the surface clean.";
 			WaitLineBreak;
 			say "     Slowly, the unicorn pulls out of you, leaving your freshly used hole quivering in the afterglow while some of the unicorn jizz leaks out of you, only to be absorbed into the table. You take a moment to catch your breath before turning just in time to see the unicorn proudly trotting away into the forest, leaving you to clean yourself up and collect your gear.";
-			if FaceName of Player is listed in infections of Equinelist or "They Have Your Eyes" is listed in feats of Player or "Breeding True" is listed in feats of Player:
-				mimpregchance;
+			CreatureSexAftermath "Player" receives "AssFuck" from "Feral Unicorn";
 
 Part 2 - Defeat
 
@@ -62,30 +63,26 @@ to say FeralUnicornFuck:
 		say "     ..."; to added later]
 	else if Player is herm: 			  [Yes = HERM Identified!]
 		say "     You collapse in defeat as the unicorn stands proudly over you, looking over your [BodyName of Player in lower case] body. With a huff of satisfaction, he forces you towards the stone table against the cliff face, using the prodding of his horn as [']encouragement['] to make you move. Once standing in front of the stone slab, the unicorn pushes you down against it, leaving you ass up towards him. He slowly mounts you, his body pressing against you while his virile musk invades your senses. The blunt tip of his massive, dripping erection presses against your sex as he adjusts his aim but doesn't enter just yet. The unicorn's horn starts to glow, and you suddenly feel a tingle as your asshole, cunt and cock[smn] as your rear entrance suddenly tightens up and your hymen regrows. [bold type]You're a virgin again![roman type] But not for long.";
+		now Virgin of Player is true;
 		say "     Without giving you a chance to react, the feral male thrusts forwards, making you gasp when his equine shaft sinks deep into you. The magical beast begins in earnest, thrusting relentlessly into you time and time again without pause. His breath feels hot and heavy against you, and each thrust is so powerful that it pushes you hard against the table. You can't help but moan as you are bred like his mare, your virgin cunt begging for more, which he is more than happy to give you. With a few more powerful, thrusts, the unicorn's cock tip flares, sealing you up as best as he can before unleashing rope after rope of pearlescent cum deep into your awaiting womb until you feel almost bloated with his virile seed. The pleasure is too much, and you cum soon after; [if Cock Count of Player > 1]all of your own cocks erupt[else]your own cock erupts[end if] as well, spilling your own fluids against the stone, which it strangely seems to absorb into, leaving the surface clean.";
 		WaitLineBreak;
 		say "     Slowly, the unicorn pulls out of you, leaving your freshly used hole quivering in the afterglow while some of the unicorn jizz leaks out of you, only to be absorbed into the table. You take a moment to catch your breath before turning just in time to see the unicorn proudly trotting away into the forest, leaving you to clean yourself up and collect your gear.";
-		if FaceName of Player is listed in infections of Equinelist or "They Have Your Eyes" is listed in feats of Player or "Breeding True" is listed in feats of Player:
-			fimpregchance;
-			[]
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Unicorn";
 	else if Player is female: 	  [Yes = FEMALE Identified!]
 		say "     You collapse in defeat as the unicorn stands proudly over you, looking over your [BodyName of Player in lower case] body. With a huff of satisfaction, he forces you towards the stone table against the cliff face, using the prodding of his horn as [']encouragement['] to make you move. Once standing in front of the stone slab, the unicorn pushes you down against it, leaving you ass up towards him. He slowly mounts you, his body pressing against you while his virile musk invades your senses. The blunt tip of his massive, dripping erection presses against your sex as he adjusts his aim but doesn't enter just yet. The unicorn's horn starts to glow, and you suddenly feel a tingle as your asshole and cunt suddenly start to tighten up and your hymen regrows. [bold type]You're a virgin again![roman type] But not for long.";
+		now Virgin of Player is true;
 		say "     Without giving you a chance to react, the feral male thrusts forwards, making you gasp when his equine shaft sinks deep into you. The magical beast begins in earnest, thrusting relentlessly into you time and time again without pause. His breath feels hot and heavy against you, and each thrust is so powerful that it pushes you hard against the table. You can't help but moan as you are bred like his mare, your virgin cunt begging for more, which he is more than happy to give you. With a few more powerful, thrusts, the unicorn's cock tip flares, sealing you up as best as he can before unleashing rope after rope of pearlescent cum deep into your awaiting womb until you feel almost bloated with his virile seed.";
 		WaitLineBreak;
 		say "     Slowly, the unicorn pulls out of you, leaving your freshly used hole quivering in the afterglow while some of the unicorn jizz leaks out of you, only to be absorbed into the table. You take a moment to catch your breath before turning just in time to see the unicorn proudly trotting away into the forest, leaving you to clean yourself up and collect your gear.";
-		if FaceName of Player is listed in infections of Equinelist or "They Have Your Eyes" is listed in feats of Player or "Breeding True" is listed in feats of Player:
-			fimpregchance;
-			[]
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Unicorn";
 	else if Player is male: [Yes = MALE Identified!]
 		say "     You collapse in defeat as the unicorn stands proudly over you, looking over your [BodyName of Player in lower case] body. With a huff of satisfaction, he forces you towards the stone table against the cliff face, using the prodding of his horn as [']encouragement['] to make you move. Once standing in front of the stone slab, the unicorn pushes you down against it, leaving your ass up towards him. He slowly mounts you, his body pressing against you while his virile musk invades your senses. As if by magic, any clothing and gear on you is removed and appears in a heap nearby, giving the large equine full access to you. The blunt tip of his massive, dripping erection presses against your asshole as he adjusts his aim but doesn't enter just yet. The unicorn's horn starts to glow, and you suddenly feel a tingle in your asshole and cock[smn] as your rear entrance suddenly starts to tighten up. [bold type]You're a virgin again![roman type] But not for long.";
+		now AnalVirgin of Player is true;
 		say "     Without giving you a chance to react, the feral male thrusts forwards, making you gasp when his equine shaft sinks deep into you. The magical beast begins in earnest, thrusting relentlessly into you time and time again without pause. His breath feels hot and heavy against you, and each thrust is so powerful that it pushes you hard against the table.";
 		say "     You can't help but moan as you are bred like his mare, your virgin tailhole begging for more, which he is more than happy to give you. With a few more powerful thrusts, the unicorn's cock tip flares, sealing you up as best as he can before unleashing rope after rope of pearlescent cum deep into your ass until you feel almost bloated with his virile seed. The pleasure is too much, and you cum soon after; [if Cock Count of Player > 1]all of your own cocks erupt[else]your own cock erupts[end if] as well, spilling your own fluids against the stone, which it strangely seems to absorb into, leaving the surface clean.";
 		WaitLineBreak;
 		say "     Slowly, the unicorn pulls out of you, leaving your freshly used hole quivering in the afterglow while some of the unicorn jizz leaks out of you, only to be absorbed into the table. You take a moment to catch your breath before turning just in time to see the unicorn proudly trotting away into the forest, leaving you to clean yourself up and collect your gear.";
-		if FaceName of Player is listed in infections of Equinelist or "They Have Your Eyes" is listed in feats of Player or "Breeding True" is listed in feats of Player:
-			mimpregchance;
-		[now virgin of Player is true;] [this is how it would be coded, but we don't have code in the rest of the game for virgin players anyways...]
-
+		CreatureSexAftermath "Player" receives "AssFuck" from "Feral Unicorn";
 
 Part 3 - Victory
 
@@ -150,11 +147,12 @@ to say FeralUnicornSexMenu:
 
 to say SuckFeralUnicorn:
 	say "     The unicorn falls to the ground, exhausted and beaten from the fight. You are the victor, and his pre-dripping cock looks so inviting. The unicorn watches you as you approach, fully submissive as you place your hands on the massive, almost two foot long, horse cock. You can smell his equine musk as your fingers wrap around the thick shaft, stroking it gently and slowly coating it in his own pearlescent fluids. Tentatively licking at the male's blunt tip, you are pleasantly surprised that his pre has an earthy and sweet taste to it, and before long, your lips are wrapping around him, taking him as far into your mouth as you can while your hands continue to work the rest of the shaft. The unicorn huffs and groans at your attentions, rewarding you with more precum for you to taste as you suck and stroke the magic horse off. It takes only a few minutes before his balls twitches and the unicorn whinnies; his cockhead flares inside of your mouth as cum gushes into you like a firehose, forcing some of his hot seed down your throat before it pops free, emptying the rest onto you face and chest. You feel tingly as you catch your breath and clean yourself up, leaving the unicorn to its own devices.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Feral Unicorn";
 
 To say FuckFeralUnicorn:
 	say "     The unicorn falls to the ground, exhausted and beaten from the fight, leaving you to do what you desire with it. Its equine tailhole looks particularly fun to you at the moment. With a few pushes, you manage to get the now submissive unicorn into a kneeling position so that you can position your [CockName of Player in lower case] cock against his puckered ass. Using his tail to hold yourself steady, you sink yourself into him, reveling in the feeling of his hot flesh engulfing your length. This feral creature would have treated you rough, so you see no reason to not return the favor. You pull out almost all the way, leaving just the tip inside of him, before you spear deep into the unicorn once again, making him huff in pleasure as his cock dribbles pre onto the ground.";
 	say "     Pulling his tail, you thrust into him again and again, fucking his ass while the familiar pressure within your cock[smn] slowly builds. Feeling more desperate to get off, you put everything you have into pounding the pony, drawing groans of pleasure from you both before the pleasure becomes too great. With one final deep thrust, you both achieve sweet release as your cum gushes into his body, coating his insides. At the same time, his own seed splatters onto the earth below him, leaving the unicorn exhausted. After putting on your gear, you head out once more, leaving the cum-leaking beast.";
-
+	CreatureSexAftermath "Feral Unicorn" receives "AssFuck" from "Player";
 
 Section 2 - Infection, Loot and Stats
 
@@ -216,7 +214,7 @@ When Play begins:
 	now SeductionImmune entry is false;
 	now libido entry is 70; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "";
 	now TrophyFunction entry is "-";

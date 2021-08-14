@@ -16,6 +16,7 @@ The File of PossessionSave (owned by another project) is called "FSPossessionSav
 The File of CharacterSave (owned by another project) is called "FSCharacterSave".
 The File of CharacterVariableSave (owned by another project) is called "FSCharacterVariableSave".
 The File of CharacterVariable2Save (owned by another project) is called "FSCharacterVariable2Save".
+The File of CharacterVariable3Save (owned by another project) is called "FSCharacterVariable3Save".
 The File of SexStats (owned by another project) is called "SexStats".
 The File of UnbornChildSave (owned by another project) is called "FSUnbornChildSave".
 The File of ChildrenSave (owned by another project) is called "FSChildrenSave".
@@ -36,6 +37,20 @@ an everyturn rule:
 	if Player is in NPC Nexus:
 		say "     Trixie the fairy flutters into existence right next to you and looks at you with a puzzled expression. 'Now now, you really should be somewhere else. How in the world did you end up here? If you do remember the room where you're supposed to be, please report that on the FS Discord channel as a bug. But for now, let's get you back in the city at least.'";
 		move Player to Bunker;
+
+a postimport rule:
+	if BodySpeciesName of Player is "":
+		now BodySpeciesName of Player is BodyName of Player;
+	if faceSpeciesName of Player is "":
+		now faceSpeciesName of Player is FaceName of Player;
+	if skinSpeciesName of Player is "":
+		now skinSpeciesName of Player is SkinName of Player;
+	if cockSpeciesName of Player is "":
+		now cockSpeciesName of Player is CockName of Player;
+	if CuntSpeciesName of Player is "":
+		now CuntSpeciesName of Player is CockName of Player;
+	if tailSpeciesName of Player is "":
+		now tailSpeciesName of Player is TailName of Player;
 
 [----------------------------------------------------------------------------------]
 [ Testing Commands for partial Saving                                              ]
@@ -261,7 +276,8 @@ to RoomRestore:
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] found and set to: [Reachability entry]; [ExplorationStatus entry]; [RestSafety entry]";
 				]
 			else:
-				say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
+				if RoomIdName is not "Lost in the Woods" and RoomIdName is not "Museum interior":
+					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
 	if the File of RoomInventorySave exists:
 		repeat with x running through rooms:
 			truncate Invent of x to 0 entries; [cleaning out the old data]
@@ -275,7 +291,8 @@ to RoomRestore:
 				if there is a name of ItemName entry in the Table of Game Objects: [item exists]
 					add ItemName entry to Invent of RoomObject;
 			else:
-				say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
+				if RoomIdName is not "Lost in the Woods" and RoomIdName is not "Museum interior":
+					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
 	else:
 		say "No Room Save File Found!";
 	blank out the whole of Table of GameRooms; [empty out all old data]
@@ -319,6 +336,8 @@ to PossessionRestore:
 		[wiping out all items from before the import]
 		repeat with x running from 1 to number of filled rows in table of game objects:
 			choose row x from the table of game objects;
+			if object entry is Equipment:
+				now object entry is not equipped;
 			now carried of object entry is 0;
 			now stashed of object entry is 0;
 		[applying the imported items]
@@ -355,12 +374,14 @@ to PossessionRestore:
 to CharacterSave:
 	say "Saving Characters...";
 	blank out the whole of Table of GameCharacters; [empty out all old data]
+	blank out the whole of Table of GameCharacterVariables; [empty out all old data]
 	blank out the whole of Table of GameCharacterVariable2; [empty out all old data]
+	blank out the whole of Table of GameCharacterVariable3; [empty out all old data]
 	blank out the whole of Table of GameTraits; [empty out all old data]
-	if number of persons > number of rows in the table of GameCharacterVariable2: [making sure we got enough room for all situations]
-		say "Error! Not enough rows to save all Characters in the table of GameCharacterVariable2. Please report this on the FS Discord.";
-	repeat with x running through persons: [rebuilds the table of GameCharacterVariable2 with current data]
-		choose a blank row in the Table of GameCharacterVariable2;
+	if number of persons > number of rows in the table of GameCharacterVariable3: [making sure we got enough room for all situations]
+		say "Error! Not enough rows to save all Characters in the table of GameCharacterVariable3. Please report this on the FS Discord.";
+	repeat with x running through persons: [rebuilds the table of GameCharacterVariable3 with current data]
+		choose a blank row in the Table of GameCharacterVariable3;
 		if there is a object of X in the Table of GameCharacterIDs:
 			let CharacterName be the name corresponding to a object of X in the Table of GameCharacterIDs;
 			now Name entry is CharacterName;
@@ -393,6 +414,9 @@ to CharacterSave:
 			now libido entry is Libido of x;
 			now Loyalty entry is Loyalty of x;
 			now Humanity entry is Humanity of x;
+			now Affection entry is Affection of x;
+			now Depravity entry is Depravity of x;
+			now SubVsDom entry is SubVsDom of x;
 			now Body Weight entry is Body Weight of x;
 			now Body Definition entry is Body Definition of x;
 			now Androginity entry is Androginity of x;
@@ -450,18 +474,119 @@ to CharacterSave:
 					now TraitText entry is entry y of Traits of x;
 		else:
 			say "Error! The character [x] is not listed in the Table of GameCharacterIDs and cannot be saved. Please report this on the FS Discord.";
-	write File of CharacterVariable2Save from the Table of GameCharacterVariable2; [freshly made table gets saved to file]
+	write File of CharacterVariable3Save from the Table of GameCharacterVariable3; [freshly made table gets saved to file]
 	write File of TraitSave from the Table of GameTraits; [freshly made table gets saved to file]
 	blank out the whole of Table of GameCharacters; [empty after saving]
 	blank out the whole of Table of GameCharacterVariables; [empty after saving]
 	blank out the whole of Table of GameCharacterVariable2; [empty after saving]
+	blank out the whole of Table of GameCharacterVariable3; [empty after saving]
 	blank out the whole of Table of GameTraits; [empty after saving]
 	if debug is at level 10:
-		say "DEBUG -> File of CharacterVariable2Save written.[line break]";
+		say "DEBUG -> File of CharacterVariable3Save written.[line break]";
 		say "DEBUG -> File of TraitSave written.[line break]";
 
 to CharacterRestore:
-	if the File of CharacterVariable2Save exists: [new, expanded character variable file]
+	blank out the whole of Table of GameCharacters; [empty out to have a clean slate]
+	blank out the whole of Table of GameCharacterVariables; [empty out to have a clean slate]
+	blank out the whole of Table of GameCharacterVariable2; [empty out to have a clean slate]
+	blank out the whole of Table of GameCharacterVariable3; [empty out to have a clean slate]
+	blank out the whole of Table of GameTraits; [empty out to have a clean slate]
+	if the File of CharacterVariable3Save exists: [new, expanded character variable file]
+		say "Restoring Characters...";
+		read File of CharacterVariable3Save into the Table of GameCharacterVariable3;
+		repeat with x running from 1 to the number of filled rows in the Table of GameCharacterVariable3:
+			choose row x in the Table of GameCharacterVariable3;
+			let CharacterIdName be Name entry;
+			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
+				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
+				if there is a name of LocationName entry in the Table of GameRoomIDs:
+					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
+					move CharacterObject to TargetRoom, without printing a room description;
+				else:
+					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
+					move CharacterObject to NPC Nexus;
+				[Numbers]
+				now Energy of CharacterObject is Energy entry;
+				now HP of CharacterObject is HP entry;
+				now MaxHP of CharacterObject is MaxHP entry;
+				now XP of CharacterObject is XP entry;
+				now Level of CharacterObject is Level entry;
+				now Armor of CharacterObject is Armor entry;
+				now Weapon Damage of CharacterObject is Weapon Damage entry;
+				now Strength of CharacterObject is Strength entry;
+				now Dexterity of CharacterObject is Dexterity entry;
+				now Stamina of CharacterObject is Stamina entry;
+				now Charisma of CharacterObject is Charisma entry;
+				now Intelligence of CharacterObject is Intelligence entry;
+				now Perception of CharacterObject is Perception entry;
+				now Hunger of CharacterObject is Hunger entry;
+				now Thirst of CharacterObject is Thirst entry;
+				now Morale of CharacterObject is Morale entry;
+				now Lust of CharacterObject is Lust entry;
+				now Libido of CharacterObject is Libido entry;
+				now Loyalty of CharacterObject is Loyalty entry;
+				now Humanity of CharacterObject is Humanity entry;
+				now Affection of CharacterObject is Affection entry;
+				now Depravity of CharacterObject is Depravity entry;
+				now SubVsDom of CharacterObject is SubVsDom entry;
+				now Body Weight of CharacterObject is Body Weight entry;
+				now Body Definition of CharacterObject is Body Definition entry;
+				now Androginity of CharacterObject is Androginity entry;
+				now Mouth Length of CharacterObject is Mouth Length entry;
+				now Mouth Circumference of CharacterObject is Mouth Circumference entry;
+				now Tongue Length of CharacterObject is Tongue Length entry;
+				now Breast Size of CharacterObject is Breast Size entry;
+				now Nipple Count of CharacterObject is Nipple Count entry;
+				now Asshole Depth of CharacterObject is Asshole Depth entry;
+				now Asshole Tightness of CharacterObject is Asshole Tightness entry;
+				now Cock Count of CharacterObject is Cock Count entry;
+				now Cock Girth of CharacterObject is Cock Girth entry;
+				now Cock Length of CharacterObject is Cock Length entry;
+				now Ball Count of CharacterObject is Ball Count entry;
+				now Ball Size of CharacterObject is Ball Size entry;
+				now Cunt Count of CharacterObject is Cunt Count entry;
+				now Cunt Depth of CharacterObject is Cunt Depth entry;
+				now Cunt Tightness of CharacterObject is Cunt Tightness entry;
+				now Clit Size of CharacterObject is Clit Size entry;
+				now Armor of CharacterObject is Armor entry;
+				now Capacity of CharacterObject is Capacity entry;
+				now SleepRhythm of CharacterObject is SleepRhythm entry;
+				now scalevalue of CharacterObject is The scalevalue entry;
+				now PlayerLastSize of CharacterObject is PlayerLastSize entry;
+				[Texts]
+				now MainInfection of CharacterObject is MainInfection entry;
+				now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
+				now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
+				now FirstOralPartner of CharacterObject is FirstOralPartner entry;
+				now FirstPenilePartner of CharacterObject is FirstPenilePartner entry;
+				now Cock Size Desc of CharacterObject is Cock Size Desc entry;
+				now Cunt Size Desc of CharacterObject is Cunt Size Desc entry;
+				now Breast Size Desc of CharacterObject is Breast Size Desc entry;
+				now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
+				now Originalgender of CharacterObject is Originalgender entry;
+				now PlayerOriginalGender of CharacterObject is PlayerOriginalGender entry;
+				now PlayerLastGender of CharacterObject is PlayerLastGender entry;
+				now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
+				[Truth States]
+				now PlayerMet of CharacterObject is PlayerMet entry;
+				now PlayerRomanced of CharacterObject is PlayerRomanced entry;
+				now PlayerFriended of CharacterObject is PlayerFriended entry;
+				now PlayerControlled of CharacterObject is PlayerControlled entry;
+				now PlayerFucked of CharacterObject is PlayerFucked entry;
+				now OralVirgin of CharacterObject is OralVirgin entry;
+				now Virgin of CharacterObject is Virgin entry;
+				now AnalVirgin of CharacterObject is AnalVirgin entry;
+				now PenileVirgin of CharacterObject is PenileVirgin entry;
+				now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
+				now TwistedCapacity of CharacterObject is TwistedCapacity entry;
+				now Sterile of CharacterObject is Sterile entry;
+				[
+				if debug is at level 10:
+					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
+				]
+			else:
+				say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs! Please report this message on the FS Discord!";
+	else if the File of CharacterVariable2Save exists: [new, expanded character variable file]
 		say "Restoring Characters...";
 		read File of CharacterVariable2Save into the Table of GameCharacterVariable2;
 		repeat with x running from 1 to the number of filled rows in the Table of GameCharacterVariable2:
@@ -704,12 +829,14 @@ to CharacterRestore:
 				say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs! Please report this message on the FS Discord!";
 	else:
 		say "No Character Save File Found!";
-	blank out the whole of Table of GameCharacters; [empty out all old data]
-	blank out the whole of Table of GameCharacterVariables; [empty after saving]
-	blank out the whole of Table of GameCharacterVariable2; [empty after saving]
-	blank out the whole of Table of GameTraits; [empty out all old data]
+	blank out the whole of Table of GameCharacters; [empty out to have a clean slate]
+	blank out the whole of Table of GameCharacterVariables; [empty out to have a clean slate]
+	blank out the whole of Table of GameCharacterVariable2; [empty out to have a clean slate]
+	blank out the whole of Table of GameCharacterVariable3; [empty out to have a clean slate]
+	blank out the whole of Table of GameTraits; [empty out to have a clean slate]
 
 to TraitRestore:
+	blank out the whole of Table of GameTraits; [empty out to have a clean slate]
 	if the File of TraitSave exists:
 		say "Restoring Traits...";
 		read File of TraitSave into the Table of GameTraits;
@@ -735,6 +862,7 @@ to TraitRestore:
 					]
 	else:
 		say "No Trait Save File Found!";
+	blank out the whole of Table of GameTraits; [empty out to have a clean slate]
 
 to PlayerSave:
 	say "Saving Player Data...";
@@ -816,93 +944,92 @@ to PlayerSave:
 		say "DEBUG -> File of PlayerListsSave written.[line break]";
 	blank out the whole of Table of PlayerData; [empty after saving]
 	blank out the whole of Table of PlayerLists; [empty after saving]
-	if NewTypeInfectionActive is true: [new parts also active]
-		say "Saving Additional Player Data...";
-		blank out the whole of Table of NewPlayerData; [empty out all old data]
-		choose a blank row in the table of NewPlayerData;
-		now bodySpeciesName entry is BodySpeciesName of Player;
-		now faceSpeciesName entry is FaceSpeciesName of Player;
-		now skinSpeciesName entry is SkinSpeciesName of Player;
-		now HeadName entry is HeadName of Player;
-		now HeadSpeciesName entry is HeadSpeciesName of Player;
-		now Head Description entry is Head Description of Player;
-		now Head Adjective entry is Head Adjective of Player;
-		now Head Skin Adjective entry is Head Skin Adjective of Player;
-		now Head Color entry is Head Color of Player;
-		now Head Adornments entry is Head Adornments of Player;
-		now Hair Length entry is Hair Length of Player;
-		now Body Hair Length entry is Body Hair Length of Player;
-		now Hair Shape entry is Hair Shape of Player;
-		now Hair Color entry is Hair Color of Player;
-		now Hair Style entry is Hair Style of Player;
-		now Beard Style entry is Beard Style of Player;
-		now Eye Color entry is Eye Color of Player;
-		now Eye Adjective entry is Eye Adjective of Player;
-		now Tongue Adjective entry is Tongue Adjective of Player;
-		now Tongue Color entry is Tongue Color of Player;
-		now TorsoName entry is TorsoName of Player;
-		now TorsoSpeciesName entry is TorsoSpeciesName of Player;
-		now Torso Description entry is Torso Description of Player;
-		now Torso Adjective entry is Torso Adjective of Player;
-		now Torso Skin Adjective entry is Torso Skin Adjective of Player;
-		now Torso Color entry is Torso Color of Player;
-		now Torso Pattern entry is Torso Pattern of Player;
-		now Breast Adjective entry is Breast Adjective of Player;
-		now Torso Adornments entry is Torso Adornments of Player;
-		now Nipple Color entry is Nipple Color of Player;
-		now Nipple Shape entry is Nipple Shape of Player;
-		now BackName entry is BackName of Player;
-		now BackSpeciesName entry is BackSpeciesName of Player;
-		now Back Adornments entry is Back Adornments of Player;
-		now Back Skin Adjective entry is Back Skin Adjective of Player;
-		now Back Color entry is Back Color of Player;
-		now ArmsName entry is ArmsName of Player;
-		now ArmsSpeciesName entry is ArmsSpeciesName of Player;
-		now Arms Description entry is Arms Description of Player;
-		now Arms Skin Adjective entry is Arms Skin Adjective of Player;
-		now Arms Color entry is Arms Color of Player;
-		now Locomotion entry is Locomotion of Player;
-		now LegsName entry is LegsName of Player;
-		now LegsSpeciesName entry is LegsSpeciesName of Player;
-		now Legs Description entry is Legs Description of Player;
-		now Legs Skin Adjective entry is Legs Skin Adjective of Player;
-		now Legs Color entry is Legs Color of Player;
-		now AssName entry is AssName of Player;
-		now AssSpeciesName entry is AssSpeciesName of Player;
-		now Ass Description entry is Ass Description of Player;
-		now Ass Skin Adjective entry is Ass Skin Adjective of Player;
-		now Ass Color entry is Ass Color of Player;
-		now Ass Width entry is Ass Width of Player;
-		now TailName entry is TailName of Player;
-		now TailSpeciesName entry is TailSpeciesName of Player;
-		now Tail Description entry is Tail Description of Player;
-		now Tail Skin Adjective entry is Tail Skin Adjective of Player;
-		now Tail Color entry is Tail Color of Player;
-		now Asshole Color entry is Asshole Color of Player;
-		now CockName entry is CockName of Player;
-		now CockSpeciesName entry is CockSpeciesName of Player;
-		now Cock Description entry is Cock Description of Player;
-		now Cock Adjective entry is Cock Adjective of Player;
-		now Cock Color entry is Cock Color of Player;
-		now Ball Description entry is Ball Description of Player;
-		now CuntName entry is CuntName of Player;
-		now CuntSpeciesName entry is CuntSpeciesName of Player;
-		now Cunt Description entry is Cunt Description of Player;
-		now Cunt Adjective entry is Cunt Adjective of Player;
-		now Cunt Color entry is Cunt Color of Player;
-		now MaleInterest entry is MaleInterest of Player;
-		now TransMaleInterest entry is TransMaleInterest of Player;
-		now FemaleInterest entry is FemaleInterest of Player;
-		now TransFemaleInterest entry is TransFemaleInterest of Player;
-		[TODO: Incorporate these into the export when they are actually used]
-		[
-		now MaleHermInterest entry is MaleHermInterest of Player;
-		now FemaleHermInterest entry is FemaleHermInterest of Player;
-		]
-		write File of NewPlayerSave from the Table of NewPlayerData; [freshly made table gets saved to file]
-		blank out the whole of Table of NewPlayerData; [empty after saving]
-		if debug is at level 10:
-			say "DEBUG -> File of NewPlayerSave written.[line break]";
+	say "Saving Additional Player Data...";
+	blank out the whole of Table of NewPlayerData; [empty out all old data]
+	choose a blank row in the table of NewPlayerData;
+	now bodySpeciesName entry is BodySpeciesName of Player;
+	now faceSpeciesName entry is FaceSpeciesName of Player;
+	now skinSpeciesName entry is SkinSpeciesName of Player;
+	now HeadName entry is HeadName of Player;
+	now HeadSpeciesName entry is HeadSpeciesName of Player;
+	now Head Description entry is Head Description of Player;
+	now Head Adjective entry is Head Adjective of Player;
+	now Head Skin Adjective entry is Head Skin Adjective of Player;
+	now Head Color entry is Head Color of Player;
+	now Head Adornments entry is Head Adornments of Player;
+	now Hair Length entry is Hair Length of Player;
+	now Body Hair Length entry is Body Hair Length of Player;
+	now Hair Shape entry is Hair Shape of Player;
+	now Hair Color entry is Hair Color of Player;
+	now Hair Style entry is Hair Style of Player;
+	now Beard Style entry is Beard Style of Player;
+	now Eye Color entry is Eye Color of Player;
+	now Eye Adjective entry is Eye Adjective of Player;
+	now Tongue Adjective entry is Tongue Adjective of Player;
+	now Tongue Color entry is Tongue Color of Player;
+	now TorsoName entry is TorsoName of Player;
+	now TorsoSpeciesName entry is TorsoSpeciesName of Player;
+	now Torso Description entry is Torso Description of Player;
+	now Torso Adjective entry is Torso Adjective of Player;
+	now Torso Skin Adjective entry is Torso Skin Adjective of Player;
+	now Torso Color entry is Torso Color of Player;
+	now Torso Pattern entry is Torso Pattern of Player;
+	now Breast Adjective entry is Breast Adjective of Player;
+	now Torso Adornments entry is Torso Adornments of Player;
+	now Nipple Color entry is Nipple Color of Player;
+	now Nipple Shape entry is Nipple Shape of Player;
+	now BackName entry is BackName of Player;
+	now BackSpeciesName entry is BackSpeciesName of Player;
+	now Back Adornments entry is Back Adornments of Player;
+	now Back Skin Adjective entry is Back Skin Adjective of Player;
+	now Back Color entry is Back Color of Player;
+	now ArmsName entry is ArmsName of Player;
+	now ArmsSpeciesName entry is ArmsSpeciesName of Player;
+	now Arms Description entry is Arms Description of Player;
+	now Arms Skin Adjective entry is Arms Skin Adjective of Player;
+	now Arms Color entry is Arms Color of Player;
+	now Locomotion entry is Locomotion of Player;
+	now LegsName entry is LegsName of Player;
+	now LegsSpeciesName entry is LegsSpeciesName of Player;
+	now Legs Description entry is Legs Description of Player;
+	now Legs Skin Adjective entry is Legs Skin Adjective of Player;
+	now Legs Color entry is Legs Color of Player;
+	now AssName entry is AssName of Player;
+	now AssSpeciesName entry is AssSpeciesName of Player;
+	now Ass Description entry is Ass Description of Player;
+	now Ass Skin Adjective entry is Ass Skin Adjective of Player;
+	now Ass Color entry is Ass Color of Player;
+	now Ass Width entry is Ass Width of Player;
+	now TailName entry is TailName of Player;
+	now TailSpeciesName entry is TailSpeciesName of Player;
+	now Tail Description entry is Tail Description of Player;
+	now Tail Skin Adjective entry is Tail Skin Adjective of Player;
+	now Tail Color entry is Tail Color of Player;
+	now Asshole Color entry is Asshole Color of Player;
+	now CockName entry is CockName of Player;
+	now CockSpeciesName entry is CockSpeciesName of Player;
+	now Cock Description entry is Cock Description of Player;
+	now Cock Adjective entry is Cock Adjective of Player;
+	now Cock Color entry is Cock Color of Player;
+	now Ball Description entry is Ball Description of Player;
+	now CuntName entry is CuntName of Player;
+	now CuntSpeciesName entry is CuntSpeciesName of Player;
+	now Cunt Description entry is Cunt Description of Player;
+	now Cunt Adjective entry is Cunt Adjective of Player;
+	now Cunt Color entry is Cunt Color of Player;
+	now MaleInterest entry is MaleInterest of Player;
+	now TransMaleInterest entry is TransMaleInterest of Player;
+	now FemaleInterest entry is FemaleInterest of Player;
+	now TransFemaleInterest entry is TransFemaleInterest of Player;
+	[TODO: Incorporate these into the export when they are actually used]
+	[
+	now MaleHermInterest entry is MaleHermInterest of Player;
+	now FemaleHermInterest entry is FemaleHermInterest of Player;
+	]
+	write File of NewPlayerSave from the Table of NewPlayerData; [freshly made table gets saved to file]
+	blank out the whole of Table of NewPlayerData; [empty after saving]
+	if debug is at level 10:
+		say "DEBUG -> File of NewPlayerSave written.[line break]";
 	PlayerSexStatsSave;
 
 to PlayerSexStatsSave:
@@ -1204,6 +1331,8 @@ to BeastSave:
 		say "DEBUG -> File of BeastVariableSave written.[line break]";
 
 to BeastRestore:
+	blank out the whole of Table of GameBeastVariables; [empty out all old data]
+	blank out the whole of Table of GameBeasts; [empty out all old data]
 	if the File of BeastVariableSave exists:
 		read File of BeastVariableSave into the Table of GameBeastVariables;
 		repeat with x running from 1 to the number of filled rows in the Table of GameBeastVariables:
@@ -1214,6 +1343,7 @@ to BeastRestore:
 			let BeastSex be sex entry;
 			let BeastType be enemy type entry;
 			[some small bugfixes due to renamed creatures]
+			if Beastname is "dullahan", now Beastname is "Dullahan";
 			if Beastname is "Ogre", now Beastname is "Ogre Male";
 			if Beastname is "Elven Hunter", now Beastname is "Elven Male";
 			if Beastname is "rubber tigress", now Beastname is "Rubber Tigress";
@@ -1260,6 +1390,7 @@ to BeastRestore:
 				say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters! Please report this message on the FS Discord!";
 	else:
 		say "No Beast Save File Found!";
+	blank out the whole of Table of GameBeastVariables; [empty out all old data]
 	blank out the whole of Table of GameBeasts; [empty out all old data]
 
 to NoteSave:

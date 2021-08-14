@@ -737,8 +737,8 @@ When Play begins:
 	add "Malayan Tiger Male" to infections of TailList;
 	now Name entry is "Malayan Tiger Male"; [Name of your new Monster]
 	now enemy title entry is "Malayan Tiger Male"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy Name entry is "Sgt Marks"; [specific name of unique enemy]
+	now enemy type entry is 2; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The feline cop jabs the nightstick into your gut, causing you to double over. This sets you up for a big knee to the face![or]He cracks the nightstick hard against your upper arm, forcing you to stagger back![or]As the tiger readies another swing of his nightstick, you start to dodge, only to step into a punch from his left paw instead![or]He sends a heavy kick to your chest, sending you to the ground![or]The large tiger grabs at your arm, sinking his sharp claws into it before you manage to pull free![at random]";
 	now defeated entry is "[beattigercop]";
 	now victory entry is "[losetotigercop]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]

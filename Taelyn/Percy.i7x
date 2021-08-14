@@ -269,9 +269,11 @@ to say PercySexMenu:
 
 to say PercySex1: [vaginal on the player]
 	say "     A";
+	NPCSexAftermath Player receives "PussyFuck" from Percy;
 
 to say PercySex2: [anal on Percy]
 	say "     A";
+	NPCSexAftermath Player receives "AssFuck" from Percy;
 
 Section 5 - Percy Quests And Events
 

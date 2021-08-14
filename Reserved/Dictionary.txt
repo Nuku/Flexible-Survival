@@ -1050,7 +1050,7 @@
 |Hellerhound|Medical Checkups|20140908213124/9050:Mon 8 September 2014 21:31|indexing|
 |Hellerhound|Medical Checkups|Pediatrics door|door|
 |Hellerhound|Medical Checkups|Pediatrics Lobby|room|
-|Hellerhound|Medical Checkups|Doctors Office|room|
+|Hellerhound|Medical Checkups|Doctor's Office|room|
 |Hellerhound|Medical Checkups|Doctor Medea|person|
 |Hellerhound|Medical Checkups|Abandoned truck|situation|
 |Hellerhound|Medical Checkups|Obstetrics Department|situation|

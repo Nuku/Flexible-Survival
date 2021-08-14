@@ -871,7 +871,7 @@ Instead of fucking Xerxes:
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Klauz fucking Xerxes.";
 		[]
-		if (player is male and Fang is in the Grey Abbey Library and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
+		if (player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Fang";
 			now sortorder entry is 8;
@@ -883,7 +883,7 @@ Instead of fucking Xerxes:
 			now sortorder entry is 9;
 			now description entry is "Hot sex with Klauz fucking Xerxes.";
 		[]
-		if (player is female and Fang is in the Grey Abbey Library and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
+		if (player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Fang";
 			now sortorder entry is 10;
@@ -1043,7 +1043,7 @@ to say XerxesSex6: [male player and felinoid + Xerxes]
 		NPCSexAftermath Xerxes receives "AssFuck" from Klauz;
 		NPCSexAftermath Klauz receives "AssFuck" from Player;
 		say "     After a moment of just holding on to the large feline and catching your breath, you pull out and watch Klauz's pink pucker snap shut before any of your seed can leak out. Satisfied but exhausted after this session, you sink down on Xerxes['] cot. The big cat and human dog separate from each other too, then lie down next to the cot on the floor, with Xerxes cuddling up to the felinoid's soft and warm belly fur. Purring as loud as an idling motor, the big cat starts licking his sweaty human skin. Looks as if he's actively trying to infect him, or at least spread his scent over all of your human pet's body.";
-	if Fang is in the Grey Abbey Library: [rivalry messages]
+	if Fang is in the Grey Abbey Library and Fang is Male: [rivalry messages]
 		LineBreak;
 		if HP of Fang is 1 or HP of Fang is 2: [Omega Fang]
 			if HP of Xerxes is 11:
@@ -1215,7 +1215,7 @@ to say XerxesSex8: [female player and felinoid + Xerxes]
 		NPCSexAftermath Xerxes receives "AssFuck" from Klauz;
 		NPCSexAftermath Player receives "PussyFuck" from Xerxes;
 		say "     After a moment of just resting his cock inside Xerxes as he finishes shooting, the large feline then throws himself over to lounge on his side, taking the human dog still impaled on his spined cock with him. Looking over, you see them lying together, the human dog spooned against the warm belly fur of the larger cat. Purring as loud as an idling motor, Klauz starts licking his sweaty human skin. Looks as if he's actively trying to infect Xerxes, or at least spread his scent over all of your human pet's body.";
-	if Fang is in the Grey Abbey Library: [rivalry messages]
+	if Fang is in the Grey Abbey Library and Fang is Male: [rivalry messages]
 		LineBreak;
 		if HP of Fang is 1 or HP of Fang is 2: [Omega Fang]
 			if HP of Xerxes is 11:
@@ -1380,7 +1380,7 @@ instead of going up from Bunker while (Xerxes is in the Grey Abbey Library and l
 		now HP of Xerxes is 11;
 	now lastfuck of Xerxes is turns;
 
-instead of going up from Bunker while (Xerxes is in the Grey Abbey Library and lastfuck of Xerxes - turns > 5 and (HP of Xerxes is 1 or HP of Xerxes is 11) and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 ):
+instead of going up from Bunker while (Xerxes is in the Grey Abbey Library and lastfuck of Xerxes - turns > 5 and (HP of Xerxes is 1 or HP of Xerxes is 11) and Fang is in the Grey Abbey Library and Fang is Male and lastfuck of Fang - turns > 7 ):
 	move player to Grey Abbey Library;
 	if ( HP of Fang is 1 or HP of Fang is 2 ): [Omega Fang]
 		say "     As you emerge from the underground bunker and step back into the library, you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication of what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling.";
@@ -1658,7 +1658,7 @@ Instead of fucking Helen:
 			now sortorder entry is 5;
 			now description entry is "Hot sex with Klauz fucking Helen.";
 		[]
-		if (player is male and Fang is in the Grey Abbey Library and (HP of Helen is 10 or HP of Helen is 12) ):
+		if (player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Helen & Fang";
 			now sortorder entry is 6;
@@ -1670,7 +1670,7 @@ Instead of fucking Helen:
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Klauz fucking Helen.";
 		[]
-		if (player is female and Fang is in the Grey Abbey Library and (HP of Helen is 10 or HP of Helen is 12) ):
+		if (player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Helen & Fang";
 			now sortorder entry is 8;
@@ -1821,7 +1821,7 @@ to say HelenSex4: [Player fucks the felinoid as he shafts Helen]
 		say "     Even though you'd wish your threesome could last forever, everyone's stamina has its limits. When Helen suddenly gives a pleased yip and orgasms, her female juices literally dripping on the library floor and creating a small puddle, that gives the large cat the last nudge over the edge. Klauz gives a deep rumble of satisfaction vibrating in his throat as he fills Helen up with his seed. The big cat's insides in turn grip your penis tightly with each shot of cum shooting through his shaft, making you follow them to an amazing orgasm. You gasp as you grind your hips against the felinoid's furry behind and blast after blast of your sperm shoot into his tight chute. After a moment of just holding on to the large feline and catching your breath, you pull out and watch Klauz's pink pucker snap shut before any of your seed can leak out. Satisfied but exhausted after this session, you sink down on Helen's cot. The big cat and human dog separate from each other too, then lie down next to the cot on the floor, with Helen cuddling up to the felinoid's soft and warm belly fur. Purring as loud as an idling motor, the big cat starts licking her sweaty human skin. Looks as if he's actively trying to infect her, or at least wants to spread his scent over all of your human pet's body.";
 		NPCSexAftermath Helen receives "PussyFuck" from Klauz;
 		NPCSexAftermath Klauz receives "AssFuck" from Player;
-	if Fang is in the Grey Abbey Library:
+	if Fang is in the Grey Abbey Library and Fang is Male:
 		LineBreak;
 		if HP of Fang is 1 or HP of Fang is 2: [Omega Fang]
 			if HP of Helen is 11:
@@ -1988,7 +1988,7 @@ to say HelenSex6: [female player and felinoid + Helen]
 		WaitLineBreak;
 		say "     Even though the felinoid is a quite virile male, everyone's stamina has its limits. When Helen suddenly gives a pleased yip and orgasms, her twitching vaginal muscles give the large cat fucking her the last nudge towards his climax too. A deep rumble of satisfaction vibrates in Klauz's throat as he pushes his member as deep as it will go and fills Helen insides with his seed. Still balls-deep inside the human dog, the big cat then throws himself on the ground to lounge on his side, taking Helen with him. Stretched out comfortably on the floor, the felinoid holds Helen against his warm belly fur with his front paws around her, and starts licking her sweaty back. Looks as if he's actively trying to infect her, or at least wants to spread his scent over all of your human pet's body.";
 		NPCSexAftermath Helen receives "PussyFuck" from Klauz;
-	if Fang is in the Grey Abbey Library: [rivalry messages]
+	if Fang is in the Grey Abbey Library and Fang is Male: [rivalry messages]
 		LineBreak;
 		if HP of Fang is 1 or HP of Fang is 2: [Omega Fang]
 			if HP of Helen is 11:
@@ -2214,7 +2214,7 @@ instead of going up from Bunker while (Helen is in the Grey Abbey Library and la
 		now Libido of Helen is 3;           [...by the Felinoid]
 		now HelenPregnant is 1;             [pregnancy timer]
 
-instead of going up from Bunker while (Helen is in the Grey Abbey Library and lastfuck of Helen - turns > 5 and (HP of Helen is 1 or HP of Helen is 11) and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7):
+instead of going up from Bunker while (Helen is in the Grey Abbey Library and lastfuck of Helen - turns > 5 and (HP of Helen is 1 or HP of Helen is 11) and Fang is in the Grey Abbey Library and Fang is Male and lastfuck of Fang - turns > 7):
 	move player to Grey Abbey Library;
 	if (HP of Fang is 1 or HP of Fang is 2): [Omega Fang]
 		say "     As you emerge from the underground bunker and step back into the library, you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication of what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling.";

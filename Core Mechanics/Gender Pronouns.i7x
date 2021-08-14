@@ -596,7 +596,7 @@ This is the SetPlayerPronouns rule:
 		-- "Auto":
 			if Player is herm:
 				if Breast Size of Player > 0: [herm]
-					SetHermPronouns for player;
+					SetFemalePronouns for player;
 				else: [male herm]
 					SetMalePronouns for player;
 			else:

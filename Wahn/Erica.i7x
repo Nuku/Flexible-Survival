@@ -712,7 +712,7 @@ instead of going down from Grey Abbey Library while (Level of Erica > 0 and Leve
 		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining to her that you're not angry or anything. After all, it's partly your fault for bringing Klauz here with you (and letting him fuck Erica, but she doesn't need to know that). Telling Erica just not to fall for the felinoid's charms and arousing musk again, you give the visibly relieved athlete a kiss on the cheek and leave her to get back to her bunk.";
 		now Level of Erica is 99;
 
-instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
+instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and Fang is Male and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

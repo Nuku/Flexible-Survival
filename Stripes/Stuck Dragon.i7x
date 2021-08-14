@@ -241,7 +241,7 @@ to say dragonesssex:
 			now dragonessfuck is 2;
 			say ". 'Oh, no! You ARE one of those mindless beasts and you ARE going to violate me! Please don't put your big... throbbing... manhood in my defenseless... and wet... pussy!' she moans as you keep grinding against her wet, sensitive pussy lips. You part those folds and sink your cock into her, licking and kissing at her gigantic ass as you do, listening to her lustful cries over her half-hearted protests. Her cries and her body's reaction clearly tells you she wants and needs this and you shove your [cock size desc of Player] [Cock of Player] shaft into her huge pussy with a loud, lustful groan.";
 		else:
-			say ". 'Oh, no! Don't violate me again!' the dragoness shrieks. 'Laying those eggs was an unbelievably pleasurable... I mean uncomfortable experience!' she cries out even as her body grinds back against you. You part those folds and sink your cock into her, licking and kissing at her gigantic ass as you do, listening to her lustful cries and ignoring her clearly false protests. As before, you know what her body wants and you'll make sure to give it to her. You shove your [CockName of Player] [Cock of Player] shaft into her huge pussy with a loud, lustful groan as you start fucking her again.";
+			say ". 'Oh, no! Don't violate me again!' the dragoness shrieks. 'Laying those eggs was an unbelievably pleasurable... I mean uncomfortable experience!' she cries out even as her body grinds back against you. You part those folds and sink your cock into her, licking and kissing at her gigantic ass as you do, listening to her lustful cries and ignoring her clearly false protests. As before, you know what her body wants and you'll make sure to give it to her. You shove your [Cock of Player] shaft into her huge pussy with a loud, lustful groan as you start fucking her again.";
 		if Cock Length of Player < 20:
 			say "     'You evil monster! How could you? Oh yeah, that feels great... er... horrible! I said it feels horrible!' she cries out before catching herself. 'Mmm, now pound me harder... I mean, stop you vile creature!' the dragoness roars. She's obviously having trouble controlling the urges of her body as you pump your cock into her again and again. Her wide pussy squeezes around your cock, throbbing around you with the pulse of her blood through her huge body. As you fuck her, you lick and kiss at her huge rear, rubbing your body against her to stimulate your trapped lover further. Her body responds on its own, her large cunt overflowing with juices and her inner walls rippling and tugging at your cock, pulling hard on you to keep fucking her.";
 		else:
@@ -974,6 +974,7 @@ instead of trading the super spicy sausage when the current action involves the 
 		WaitLineBreak;
 		say "     With the still lingering scent of [Christy]'s final female orgasm and the fresh, virile scent of her new masculinity, you're unable to restrain yourself any longer. Witnessing the startling transition has made your nanite-ridden body powerfully aroused and so you decide to introduce the ex-dragoness to her - or his now - new gender by taking hold of that throbbing cock and lavishing attention upon it with hands and mouth. Having expanded to something almost two and a half feet in length, there's plenty of that fiery red pole to enjoy. Feeling this strange new pleasure, [Christy] leans his neck down to check under himself to discover what's become of him. 'Oh my! Is that mine? Guess I'm more of a [bold type]Christopher[roman type] now, eh? Anyways, it looks delicious! I mean, vicious. But, oh damn does that feel good,' he moans as you give it a long lick across its leaking cumslit. 'Don't stop.' At this point, you're too far gone in your lustful desires to stop even if he wanted you to and you throw yourself into masturbating him in earnest.";
 		now printed name of Christy is "Christopher";
+		SetMalePronouns for Christy;
 		say "     Rubbing along the length of his shaft allows you to feel those firm ridges, your mind imagining how they might feel inside you. The thought of them sliding along your [if Player is female]vaginal[else]anal[end if] walls becomes increasingly desirable with every gooey gob of precum you lick from his leaking cumslit. You drink down the strong, zesty and (most of all) virile fluid with unrestrained desire. [Christy], lavished with all this attention on his brand new cock, cannot hold out long. You can feel a warmth build in the meaty orbs pressed against you. And when he roars with his first male orgasm, those big balls throb and pulse, blasting their load on its way, ejecting moments later onto your face and down your throat. You do your best to swallow as much as you can get, but his outflow is too fast and too great to keep up with. You're left sticky and bloated with musky dragon cum.";
 		WaitLineBreak;
 		say "     Licking at the yawning cumslit, you feel it squeeze and pull lightly on your tongue. Already being slick with the dragon stud's cum, you feel an urge to try delving deeper into that massive organ.[line break]";
@@ -1370,7 +1371,6 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Dragon"; [name of the overall species of the infection, used for children, ...]
-	now Name entry is "Horny Dragon"; [Name of your new Monster]
 	add "Horny Dragon" to infections of ReptileList;
 	add "Horny Dragon" to infections of FurryList;
 	add "Horny Dragon" to infections of MagicalList;
@@ -1380,6 +1380,7 @@ When Play begins:
 	add "Horny Dragon" to infections of QuadrupedalList;
 	add "Horny Dragon" to infections of TailList;
 	add "Horny Dragon" to infections of OviImpregnatorList;
+	now Name entry is "Horny Dragon"; [Name of your new Monster]
 	now enemy title entry is "Horny Dragon";
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]

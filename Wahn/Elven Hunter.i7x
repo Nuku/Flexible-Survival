@@ -12,7 +12,7 @@ Version 2 of Elven Hunter by Wahn begins here.
 "Adds an Elven Hunter to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 a postimport rule:
-	if BodyName of Player is "Elven Hunter", now Bodyname of Player is "Elven Male";
+	if BodyName of Player is "Elven Hunter", now BodyName of Player is "Elven Male";
 	if SkinName of Player is "Elven Hunter", now SkinName of Player is "Elven Male";
 	if FaceName of Player is "Elven Hunter", now FaceName of Player is "Elven Male";
 	if TailName of Player is "Elven Hunter", now TailName of Player is "Elven Male";
@@ -58,12 +58,12 @@ to say Hunter wins:
 			say "     [bold type]The so far neutral opinion the elf had of you just swung significantly towards the negative.[roman type][line break]";
 		decrease Charisma of Castien by 2;
 	else: [player was beaten in a fight]
-		if BodyName of Player is "Woof Elf" or BodyName of Player is "Elven Hunter":
+		if BodyName of Player is "Wood Elf" or BodyName of Player is "Elven Hunter":
 			say "     'And you want to call yourself an elf? Any novice hunter would have lasted longer in his first summer,' he scoffs at you. Pulling off your clothes, the hunter looks you over and touches your naked body, then remarks 'The tiny machines of this realm made you look the part, enough to fool pixies and lower fey. But believe me - you'll never be a true elf unless you get accepted for The Hunt.' ";
 		else if ( BodyName of Player is listed in infections of Reptilelist and SkinName of Player is listed in infections of Reptilelist ):
 			say "     The elf looks over your [bodytype of Player] form with disdain. 'You're already beaten? How disappointing. I had remembered those big lizards this world had a while ago with more cunning and strength. Oh well, maybe you're just an especially frail and sickly specimen. But you're certainly waking the hope for the existence of worthy prey in this realm.' ";
 		[add other demons below as they are added to the game - left out the slutrat on purpose, as it's not a full demon the elf recognizes]
-		else if BodyName of Player is "Incubus" or BodyName of Player is "Succubus" or BodyName of Player is "Demon Brute" or BodyName of Player is "Hellhound":
+		else if BodyName of Player is listed in infections of DemonList:
 			say "     The elf looks over your [bodytype of Player] form with disdain. 'A demon? Here? This is not your realm, creature. Go back where you belong - without the infernal energies of your home plane infusing you, you're pathetic. No challenge at all.' ";
 		else: [generic text for creatures he doesn't specifically recognize]
 			say "     The elf looks over your [bodytype of Player] form with disdain. 'You're already beaten? How disappointing. But finding a creature fit at least for the junior hunters gives hope that this world now has other, worthy prey again. A pity how quickly mortal races die off - those big lizards you had here a while ago had a certain reptilian cunning and made good hunting.' ";
@@ -92,7 +92,7 @@ To say Hunter loses:
 		stop the action; [text taken care of at the source]
 	else:
 		project the Figure of ElvenHunter_icon;
-		if BodyName of Player is "Incubus" or BodyName of Player is "Succubus" or BodyName of Player is "Demon Brute" or BodyName of Player is "Hellhound":
+		if BodyName of Player is listed in infections of DemonList:
 			say "     Stepping back, the elf gives you a hateful stare. Even after all your blows, he still looks more than ready to continue the fight, although there is a sheen of sweat on his brow. 'You're stronger than expected, demon. Did you find some way to taint this world's essence with your infernal power?' Wrinkling his nose, he spits at your feet and continues, 'But I'm not here to vanquish vile beasts, just to survey a new and hopefully interesting hunting ground. But know this, creature - once our king is informed of your presence, I've no doubt all hunting parties will have orders to exterminate your filthy stain from existence wherever it is encountered here.' With that said, the elf murmurs a tongue-twister of arcane syllables under is breath and suddenly vanishes from sight. Faint, almost imperceptible sounds of footfalls tell you that he became invisible to extricate himself from your fight.";
 		else:
 			say "     'Well done,' the elf says with a smile on his lips. Even after all your blows, he still looks more than ready to continue the fight, although there is a sheen of sweat on his brow. He casually wipes that away, as if to show that he's got enough of toying with you, and clears his throat. ";

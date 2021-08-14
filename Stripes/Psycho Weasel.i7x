@@ -50,7 +50,7 @@ to say losetopsychoweasel:
 
 
 to say beatthepsychoweasel:
-	say "     Having knocked down the weasel with your final blow, he curls up in a ball and starts rocking in place, mumbling about the bad [BodyName of Player]. He wraps one cloth-covered paw around his throbbing cock and gnaws intermittently at the other.";
+	say "     Having knocked down the weasel with your final blow, he curls up in a ball and starts rocking in place, mumbling about the bad [BodySpeciesName of Player in lower case]. He wraps one cloth-covered paw around his throbbing cock and gnaws intermittently at the other.";
 	if Libido of Player > 29 or "Dominant" is listed in feats of Player:
 		say "     You prepare to continue on your way, but your arousal stops you long enough to wonder if you might take advantage of the weasel to satisfy your needs.";
 		say "     [bold type]Shall you sate your lusts?[roman type][line break]";
@@ -93,7 +93,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Weasel"; [name of the overall species of the infection, used for children, ...]
 	add "Psycho Weasel" to infections of MustelidList;
 	add "Psycho Weasel" to infections of FurryList;
 	add "Psycho Weasel" to infections of NatureList;

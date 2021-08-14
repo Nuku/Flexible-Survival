@@ -26,15 +26,16 @@ Wandering the City	"Wandering the City"
 Wandering the City is a room.
 Wandering the City is south of Pediatrics door.
 The marea of pediatrics door is "Outside".
-Doctors Office is north of Pediatrics Lobby.
+Doctor's Office is north of Pediatrics Lobby.
 
 Table of GameRoomIDs (continued)
 Object	Name
-Doctors Office	"Doctors Office"
+Doctor's Office	"Doctor's Office"
+Doctor's Office	"Doctors Office"
 
-Doctors Office is a room. "A doctor's office, this one is a wreck. There are stains everywhere and food and water stockpiled in the cabinets. The clock is no longer running, and an oil lamp stands on the blue marble counter, on and burning. It fills the air with smoke. You idly wonder what happened to the smoke detectors.".
+Doctor's Office is a room. "A doctor's office, this one is a wreck. There are stains everywhere and food and water stockpiled in the cabinets. The clock is no longer running, and an oil lamp stands on the blue marble counter, on and burning. It fills the air with smoke. You idly wonder what happened to the smoke detectors.".
 
-the scent of the Doctors Office is "The doctor's office smells of antiseptic and aroused lizard scents.".
+the scent of the Doctor's Office is "The doctor's office smells of antiseptic and aroused lizard scents.".
 
 the scent of Pediatrics Lobby is "With the numerous cum stains here, it hard to smell anything but that.".
 
@@ -49,7 +50,7 @@ object	name
 Doctor Medea	"Doctor Medea"
 
 Doctor Medea is a person. "A doctor, by the name on the door label, [']Doctor Medea['], is busily mixing vials here.".
-Doctor Medea is in Doctors Office.
+Doctor Medea is in Doctor's Office.
 
 the scent of Doctor Medea is "The doctor smells of female lizard, though there's a hint of male musk in there as well.".
 
@@ -430,7 +431,7 @@ to say Medeaadjustments:
 					if animal heat is false:
 						say "     'Currently, you are not being subject to any form of heat cycle due to [if Player is impreg_now]your pregnancy[else if Player is not impreg_able]your inability to become pregnant at the present[else]some change your body's undergone[end if].'";
 					else if inheat is true:
-						say "     'Well, you're currently in a heightened period of estrus. It is marked by increase arousal and a higher fertility rate[if defaultheat is false]. In your particular case, you are going through a [CockName of Player] heat[else]. In your particular case, you are going through a fairly common version of the heat cycle the infected go through[end if]. ";
+						say "     'Well, you're currently in a heightened period of estrus. It is marked by increase arousal and a higher fertility rate[if defaultheat is false]. In your particular case, you are going through a [CuntSpeciesName of Player in lower case] heat[else]. In your particular case, you are going through a fairly common version of the heat cycle the infected go through[end if]. ";
 						if heat cycle entry is heat duration entry:
 							say "This particular heat is ongoing and so will not end until you become pregnant.'";
 						else if turns in heat >= heat cycle entry or turns in heat < (heat cycle entry - heat duration entry) * 8:
@@ -444,7 +445,7 @@ to say Medeaadjustments:
 							guesstimate time at num;
 							say ".'";
 					else:
-						say "     'You are not currently in heat, though you are on an active estrus cycle,' she says with a hint of disappointment. 'When it starts up again, it will be marked by increased arousal and a higher fertility rate.' Saying this does seem to perk her back up a little[if defaultheat is false]. In your particular case, you are on a [CockName of Player] heat cycle[else]. In your particular case, you are on a fairly common version of the heat cycle the infected go through[end if] which should reach estrus ";
+						say "     'You are not currently in heat, though you are on an active estrus cycle,' she says with a hint of disappointment. 'When it starts up again, it will be marked by increased arousal and a higher fertility rate.' Saying this does seem to perk her back up a little[if defaultheat is false]. In your particular case, you are on a [CuntSpeciesName of Player in lower case] heat cycle[else]. In your particular case, you are on a fairly common version of the heat cycle the infected go through[end if] which should reach estrus ";
 						if heat cycle entry is heat duration entry:
 							say "at any moment. It will then be ongoing and so will not end until you become pregnant.'";
 						else if turns in heat >= heat cycle entry:		[cycle to force restart]

@@ -288,7 +288,6 @@ to say PlayerWinsVsGryphonPlot1: [player beat up the 3 gryphons]
 	SanBoost 15;
 
 to say PlayerLosesVsGryphonPlot1: [player lost to the 3 gryphons]
-	setmonster "Blue Gryphon Herm";
 	say "     Breathing heavily, you fall to the ground, too exhausted to continue the fight. As you do so, the gryphons no longer see you as a threat and renew the aerial assault on the soldiers. While your own intervention was enough to allow the soldiers to somewhat regain their bearings, you watch helplessly as the gryphons show it to not be enough. As they corner the desperate men, their shafts harden in anticipation. You struggle to get back on your feet as you watch the gryphons fuck the soldiers, the formerly uninfected men becoming increasingly less human. Smiling in satisfaction as their goal is accomplished, they turn to you, smirking. 'Your turn,' one gryphon screeches out just as you finally get back onto your feet. You attempt to escape their grasp, but between the three of them, it isn't long before they have you held down, taking turns at shoving their cocks inside of your [if Player is female]pussy[else]ass[end if]. The by now fully transformed soldiers join in, and you soon lose consciousness in the midst of a gang-bang by horny gryphons. You wake a couple hours later, cum covering every surface of your body.";
 	if carried of food > 1:
 		say "     Picking up your pack, you notice that you are two cans of food short, but that's not the only thing on your mind. Having lost the brave soldiers to their fate, despite everything you could do, makes you feel a bit less sure of yourself, thinking that maybe the situation in the city is hopeless after all.";
@@ -299,10 +298,13 @@ to say PlayerLosesVsGryphonPlot1: [player lost to the 3 gryphons]
 	else:
 		say "     Having lost the brave soldiers to their fate, despite everything you could do, makes you feel a bit less sure of yourself, thinking that maybe the situation in the city is hopeless after all.";
 	SanLoss 15;
-	fimpregchance; [4 chances - it was a really long gangbang after all]
-	fimpregchance;
-	mimpregchance;
-	mimpregchance;
+	CreatureSexAftermath "Player" receives "OralCock" from "Blue Gryphon Herm";
+	if Player is female:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Blue Gryphon Herm";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Blue Gryphon Herm";
+	else:
+		CreatureSexAftermath "Player" receives "AssFuck" from "Blue Gryphon Herm";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Blue Gryphon Herm";
 
 
 to say PlayerFleesVsGryphonPlot1: [player fled the 3 gryphons]
@@ -430,24 +432,25 @@ to say GryphonPussy:
 	LineBreak;
 	say "[bold type]Your morale increases by 10![roman type][line break]";
 	increase morale of Player by 10;
+	CreatureSexAftermath "Blue Gryphon Herm" receives "PussyFuck" from "Player";
 
 to say GryphonAss:
 	say "     Lining your cock up with the hermaphrodite gryphon's soaking wet cunt, you hear the newly transformed man let out a wanton moan. Taking the soldier's sound of need as a good of an invitation as any, you proceed to bury yourself balls-deep inside of the newly formed cunt of your temporary fuck toy, to his obvious and verbal enjoyment. Painfully erect inside of the gryphon's softly clenching vaginal walls, your cock lets out copious amounts of precum, lubricating the soldier's snatch for the pounding that is to come. The man, succumbing to the lustful needs of his new form, begins rocking his hips into you in time with your thrusts as you start to earnestly fuck him.";
-	LineBreak;
 	say "     Despite trying to look upon the scene with feigned disgust, you notice the other gryphon soldiers looking at your fully erect cock with an aroused interest. Smirking, you wave one over, directing him towards your increasingly full balls. Falling to his knees, the soldier expertly uses his tongue to fulfill his task. The last gryphon, not to be left out, proceeds to bury himself deep into the ass of his pussy pleasing kin.";
 	LineBreak;
 	say "     Being attended to from all angles, you feel your pleasure start to rise as it shows itself in the form of a pleasant knot, which sits within your stomach. Speeding up your fucking of the soldier whose ass constricts around your cock, you feel yourself nearing a crushing orgasm. The one attending to your heavy cum filled sacks seems to notice your ever rising pleasure and attacks your balls with renewed vigor. Between the two gryphons pleasing you, it isn't long before you find yourself passing over a pleasurable edge, depositing a studly amount of cum inside of your temporary gryphon fuck toy which leaves no nook and cranny of his previously virgin pussy untouched. Bathing in the feeling of your post-orgasmic haze, you vaguely notice as your gryphon fuck buddies reach orgasm themselves. Thoroughly exhausted from the enjoyable fuck, you feel yourself slowly drift into unconsciousness. Waking two hours later, you find the soldiers out cold around you. Making sure everything is in order, you begin to distance yourself from the scene, the recent fuck fest leaving you in a much better mood than before.";
 	LineBreak;
 	say "[bold type]Your morale increases by 10![roman type][line break]";
 	increase morale of Player by 10;
+	CreatureSexAftermath "Blue Gryphon Herm" receives "AssFuck" from "Player";
 
 to say GryphonRide:
 	say "     Nearing the newly transformed soldiers with a lustful intent, you eye the cock of the gryphon nearest you. Already having decided to ride the soldier, you position the entrance to your wet snatch above his undeniable hardness, before slowly sliding his cock balls-deep into your thoroughly lubricated pussy. Your temporary fuck toy moans with wanton need as your pussy touches the place his balls and shaft meet. In his pleasure, he produces copious amounts of precum which fill your snatch with a pleasant, gooey warmth.";
-	LineBreak;
 	say "     Encouraged by your partner's obvious enjoyment in the coupling, you confidently slide your pussy up and down his thick member, making sure to angle his cock in a way that brings you the maximum amount of pleasure. Losing yourself in the sensation, a pit of pleasure begins to grow inside of your stomach, only helped by the fact that the gryphon beneath you has begun using his hips in time with your movements, sweat going down his face as he too loses himself to all of the pleasures his new flesh can bring. Letting go of all restraint, you ride the soldier with wild abandon, the pleasure lodged inside of you growing till it reaches its peak. Lost in a state of ecstasy, your snatch insistently massages the cock inside of it, coaxing it to deposit its load into your deepest depths. The gryphon, having already been close to orgasm himself, doesn't hold out for much longer. Grabbing your hips and holding you firm in a position balls-deep on his shaft, he lets out an animalistic moan, burying every last drop of his seed into your fertile cervix. The soldier, having been thoroughly pent up, cums enough to make your stomach extend with a visible pudge before falling into a state of sexually sated unconsciousness. Although exhausted yourself, you clean up as best you can before heading out, in a visibly better mood than before.";
 	LineBreak;
 	say "[bold type]Your morale increases by 10![roman type][line break]";
 	increase morale of Player by 10;
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Blue Gryphon Herm";
 
 to say PlayerWatchesGryphonPlot1: [player observes the gryphons]
 	project Figure of BlueGryphon_hard_icon;
@@ -469,10 +472,13 @@ to say PlayerWatchesGryphonPlot1: [player observes the gryphons]
 		LineBreak;
 		say "[bold type]Your morale increases by 10![roman type][line break]";
 		increase morale of Player by 10;
-		fimpregchance; [4 chances - it was a really long gangbang after all]
-		fimpregchance;
-		mimpregchance;
-		mimpregchance;
+		CreatureSexAftermath "Player" receives "OralCock" from "Blue Gryphon Herm";
+		if Player is female:
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Blue Gryphon Herm";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Blue Gryphon Herm";
+		else:
+			CreatureSexAftermath "Player" receives "AssFuck" from "Blue Gryphon Herm";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Blue Gryphon Herm";
 		now Resolution of Gryphon's Plot is 40; [player watched the gryphons do their thing and joined in for the submission]
 	else:
 		say "     Deciding not to risk it, you silently get up from your hiding place and start to make your way to a safe distance from the scene. You can still hear the sounds of the gryphons['] orgy, as you continue along your way through the ruins of the infested city...";

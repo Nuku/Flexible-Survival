@@ -2027,10 +2027,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is NESProgress;
 		-- "nesteddino":
 			now NumberVarValue entry is nesteddino;
-		-- "NewGraphicsInteger":
-			now NumberVarValue entry is NewGraphicsInteger;
-		-- "NewGraphicsRatio":
-			now NumberVarValue entry is NewGraphicsRatio;
 		-- "NGRP":
 			now NumberVarValue entry is NGRP;
 		-- "nightcheck":
@@ -3232,8 +3228,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is garrettinfo1;
 		-- "gobdem":
 			now TruthVarValue entry is gobdem;
-		-- "graphics":
-			now TruthVarValue entry is graphics;
 		-- "grhouse":
 			now TruthVarValue entry is grhouse;
 		-- "gsd_attack":
@@ -3402,12 +3396,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is NavCheckReturn;
 		-- "ndmLisa":
 			now TruthVarValue entry is ndmLisa;
-		-- "NewGraphics":
-			now TruthVarValue entry is NewGraphics;
-		-- "NewGraphicsDebugMode":
-			now TruthVarValue entry is NewGraphicsDebugMode;
-		-- "NewGraphicsOpened":
-			now TruthVarValue entry is NewGraphicsOpened;
 		-- "nmformswitch":
 			now TruthVarValue entry is nmformswitch;
 		-- "NoHealMode":
@@ -5682,10 +5670,6 @@ to VariableNumberLoad:
 					now NESProgress is numberVarValue entry;
 				-- "nesteddino":
 					now nesteddino is numberVarValue entry;
-				-- "NewGraphicsInteger":
-					now NewGraphicsInteger is numberVarValue entry;
-				-- "NewGraphicsRatio":
-					now NewGraphicsRatio is numberVarValue entry;
 				-- "NGRP":
 					now NGRP is numberVarValue entry;
 				-- "nightcheck":
@@ -6900,8 +6884,6 @@ to VariableTruthLoad:
 					now garrettinfo1 is TruthVarValue entry;
 				-- "gobdem":
 					now gobdem is TruthVarValue entry;
-				-- "graphics":
-					now graphics is TruthVarValue entry;
 				-- "grhouse":
 					now grhouse is TruthVarValue entry;
 				-- "gsd_attack":
@@ -7072,12 +7054,6 @@ to VariableTruthLoad:
 					now NavCheckReturn is TruthVarValue entry;
 				-- "ndmLisa":
 					now ndmLisa is TruthVarValue entry;
-				-- "NewGraphics":
-					now NewGraphics is TruthVarValue entry;
-				-- "NewGraphicsDebugMode":
-					now NewGraphicsDebugMode is TruthVarValue entry;
-				-- "NewGraphicsOpened":
-					now NewGraphicsOpened is TruthVarValue entry;
 				-- "nmformswitch":
 					now nmformswitch is TruthVarValue entry;
 				-- "NoHealMode":

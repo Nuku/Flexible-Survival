@@ -189,7 +189,7 @@ to say ResolveEvent Lone Survivor:
 			let bonus be (( dexterity of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Dexterity Check):[line break]";
-			if diceroll + bonus >= 10:
+			if diceroll + bonus >= 16:
 				say "     Seeing the creature sprinting towards you at top speed, you are quick enough to react and simply step out of its way. With squeaks of its latex paws on the ground, the beast dashes past you, never stopping for even the hint of a second to pay you any mind. Man, that fox just wanted to get out of there!";
 			else:
 				say "     Seeing the creature sprinting towards you at top speed, you're sadly not quick enough to get out of its way, leading to the fox running you down and giving a frightened squeal as it and you fall to the ground, earning you some scrapes. But even then, the beast simply proceeds to run, not even stopping to acknowledge your presence in any way. Man, that fox just wanted to get out of there!";
@@ -1087,15 +1087,26 @@ Brennan	"Brennan"
 
 Brennan is a man.
 ScaleValue of Brennan is 3. [human sized]
-Cock Count of Brennan is 0.
-Cock Length of Brennan is 9.
-Ball Size of Brennan is 2.
-Ball Count of Brennan is 0.
-Cunt Count of Brennan is 1.
-Cunt Depth of Brennan is 9.
-Cunt Tightness of Brennan is 2.
-Nipple Count of Brennan is 2. [2 nipples]
-Breast Size of Brennan is 0.
+Body Weight of Brennan is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Brennan is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Brennan is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Brennan is 3. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Brennan is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Brennan is 2. [length in inches]
+Breast Size of Brennan is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Brennan is 2. [count of nipples]
+Asshole Depth of Brennan is 10. [inches deep for anal fucking]
+Asshole Tightness of Brennan is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Brennan is 0. [number of cocks]
+Cock Girth of Brennan is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Brennan is 0. [10 Inches]
+Ball Count of Brennan is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Brennan is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
+Cunt Count of Brennan is 1. [number of cunts]
+Cunt Depth of Brennan is 9. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Brennan is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Brennan is 4. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Brennan is false.
 PlayerRomanced of Brennan is false.
@@ -1107,6 +1118,7 @@ Virgin of Brennan is false.
 AnalVirgin of Brennan is false.
 PenileVirgin of Brennan is true.
 SexuallyExperienced of Brennan is true.
+MainInfection of Brennan is "Jackalman". [if he becomes able to impregnate people it is through Nermine's magical cock - and the kids won't be human]
 Description of Brennan is "[BrennanDesc]".
 Conversation of Brennan is { "<This is nothing but a placeholder!>" }.
 The scent of Brennan is "     Brennan smells nicely masculine, with a little hint of sweat on his muscular chest, as well as... something else, rather hard to place your finger on.".
@@ -1175,10 +1187,14 @@ Section 6 - Conversation
 [***********************************************************]
 
 instead of conversing the Brennan:
+	say "[BrennanTalkMenu]";
+
+to say BrennanTalkMenu:
 	if (TimekeepingVar is 1 or TimekeepingVar is 0 or TimekeepingVar is -1 or TimekeepingVar is -7 or TimekeepingVar is -8 or TimekeepingVar is 7):
 		say "     He's asleep. Better wait till Brennan has rested up.";
 		stop the action;
 	project the figure of Brennan_face_icon;
+	let TalkDone be false;
 	say "     What do you want to talk to Brennan about?";
 	LineBreak;
 	now sextablerun is 0;
@@ -1293,7 +1309,7 @@ instead of conversing the Brennan:
 				now sextablerun is 1;
 				if (nam is "The Apartment"):
 					say "[BrennanTalk1]";
-				if (nam is "The Mall"):
+				else if (nam is "The Mall"):
 					say "[BrennanTalk2]";
 				if (nam is "The Red Light District"):
 					say "[BrennanTalk3]";
@@ -1309,21 +1325,29 @@ instead of conversing the Brennan:
 					say "[BrennanTinyTalk]";
 				if (nam is "Tracking doctor 'Diego Garcia'"):
 					say "[BrennanDiegoTracking]";
+					now TalkDone is true;
 				if (nam is "Having Sex"):
 					say "[BrennanCultQuest0]";
 				if (nam is "Nermine's Deal"):
 					say "[BrennanCultQuest1]";
 				if (nam is "Infiltrating the Cult"):
 					say "[BrennanCultQuest2]";
+					now TalkDone is true;
 				if (nam is "Trading with Nermine"):
 					say "[BrennanCultQuest3]";
+					now TalkDone is true;
 				if (nam is "His wolf companions"):
 					say "[BrennanWolfTalk]";
 				if (nam is "Going scavenging together"):
 					say "[BrennanScavTrip]";
+					now TalkDone is true;
 				if (nam is "Maybe scavenging together"):
 					say "[BrennanScavTalk]";
-				wait for any key;
+					now TalkDone is true;
+				if TalkDone is false:
+					say "[BrennanTalkMenu]";
+				else:
+					wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the bearded man, shaking your head slightly as he gives a questioning look.";
@@ -1557,9 +1581,10 @@ to say BrennanCultQuest2:
 			say "     While the fish-man starts to thrust in and out of you, the other cultists all around start to occupy themselves with similar pursuits. Oftentimes opening or even removing their robes reveals bodies that are at least partially transformed to match the creature you're getting fucked by. They cultists pair up in twos or threes, touching and stroking one another, with some vanishing upstairs, others just starting to go at each other right in the altar room. Brennan is approached too, but the man gives an excuse of 'I want to watch the Deep One' and rubs his crotch through the robe, which the others accept without complaint. Moans and the squelching sounds of sex begin to fill the beach house all around you.";
 			WaitLineBreak;
 			say "     Gasping and moaning due to the hard thrusts of the aquatic hunk as he has his way with your body, you do your best to get him off fast, including squeezing your inner muscles tight around his shaft as he fucks you. He enjoys this quite a bit, if you're interpreting the chattering noise from the depth of his chest the right way, as well as his repeated comments of 'Gtha Sh'lagh!' Feeling him moving inside you is actually pretty nice, his nonhuman cock seeming to hit all the right spots, again and again. After being ravaged by fish-monster for a good, long while, the aquatic hunt grunts a pleasured 'Ie ko'met glugh!' His clawed hands wrap tightly around your raised legs, leaving shallow cuts on them as he thrusts roughly into your yearning body, then drives his bestial cock as deep as it can reach, his genital slit grinding up against your crotch. He comes, hard, releasing surge after surge of creamy cum into your sordid, clenching depths, its virile heat spreading through your body and claiming your [if Player is female]cunt[else]rear[end if] as his.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Deep One";
 			if Player is impreg_able:
 				impregnate with "Deep One"; [cult sex always makes pregnant, no chance thing about it!]
-			[Song: Consider splitting this path for players with low sanity. Say, 20-30 as a threshold for a unique bad end. See line 1068 as well]
+			[TODO: Song: Consider splitting this path for players with low sanity. Say, 20-30 as a threshold for a unique bad end. See line 1068 as well]
 			say "     With the fish-creature's shaft pulsing inside you as more and more cum is poured into your body, you take his load readily and suckle on his tongue. As you do so, you begin to feel a bit funny, as if you could get used to this treatment every single day. Then finally his orgasm ebbs off and the aquatic male pulls out, leaving your hole wet and dripping with his seed. You're left half-sitting, half-lying on the altar - and hungry for more - but your deep-sea lover has already stepped aside to go for one of the threesomes in progress, sliding his shaft into an available ass. Standing up and about to join the fun too, you suddenly find yourself held back by a robed figure that grabs you tightly by the arm. 'Snap out of it!' Brennan hisses, shaking you a little. For a second, you just look at him dumb-founded and reach out to stroke his crotch. Only when you touch that area and realize that your friend is pretty... flat there do you remember the real reason why you're actually here.";
 			WaitLineBreak;
 			say "     Coming back to your senses, you nod to Brennan and glance around casually, seeing all the remaining cultists and the sea creature busy having sex. Doesn't look like anyone is too observant right now, so you quickly get dressed again and quietly grab the idol (which is heavier than it looks) to hide it under your robe. Just like that, Brennan and you slip out of the beach house a second later, leaving behind the ongoing cult orgy. Thankfully, the streets are fairly quiet and it'll likely be a while till the fanatics realize you made away with their idol, so you make a smooth getaway. When you have a quiet moment, the two of you stop to take the robes off, then wrap the idol in one of them, making it a far less conspicuous bundle to carry. A little while later, you arrive back at Brennan's place and stash the idol for the time being. After that, Brennan pulls you into a close hug and says, 'Thank you! It means a lot to me that you were willing to go through all that to help out.'";
@@ -1572,7 +1597,8 @@ to say BrennanCultQuest2:
 			say "     Doing your best to get the fish-man off fast, you suck hard on his erection while also wrapping your hand around its base, squeezing and stroking the cock. He enjoys this, if you're interpreting the chattering noise from the depth of his chest the right way, as well as his comment of 'Ia! Gtha Sh'lagh!' Blowing the sea-monster off is actually pretty nice, as the flavor of his pre covers your tongue, and you can't help but want more and more, so you slurp all the way up and down on his hard member. After a good, long while of orally pleasuring the mutant, the aquatic hunk grunts, 'Ie ko'met glugh!' His clawed hands wrap around your head together, pulling it down on his cock until your nose is pressed against the opening of his genital slit. Claw-tipped fingers dig into your scalp as he comes, hard, releasing surge after surge of creamy cum directly into your gullet.";
 			say "     With the fish-creature's shaft pulsing between your lips as more and more cum is poured into you, you take his load readily and gulp it down eagerly. As you do, you begin to feel a bit funny, as if you could get used to this treatment every single day. Then finally his orgasm ebbs off and the aquatic male pulls back. You're left gasping for breath and hungry for more, but your deep-sea lover has already stepped aside to go for one of the threesomes in progress, sliding his shaft into an available ass. Standing up and about to join the fun too, you suddenly find yourself held back by a robed figure that grabs you tightly by the arm. 'Snap out of it!' Brennan hisses, shaking you a little. For a second, you just look at him dumb-founded and reach out to stroke his crotch. Only when you touch that area and realize that your friend is pretty... flat there do you remember the real reason why you're actually here.";
 			WaitLineBreak;
-			[Song: Consider splitting this path for players with low sanity. Say, 20-30 as a threshold for a unique bad end. See line 1055 as well]
+			CreatureSexAftermath "Player" receives "OralCock" from "Deep One";
+			[TODO: Song: Consider splitting this path for players with low sanity. Say, 20-30 as a threshold for a unique bad end. See line 1055 as well]
 			say "     Coming back to your senses, you nod to Brennan and glance around casually, seeing all the remaining cultists and the sea creature busy having sex. Doesn't look like anyone is too observant right now, so you quietly grab the idol (which is heavier than it looks) and hide it under your robe. Just like that, Brennan and you slip out of the beach house a second later, leaving behind the ongoing cult orgy. Thankfully, the streets are fairly quiet and it'll likely be a while till the fanatics realize you made away with their idol, so you make a smooth getaway. When you have a quiet moment, the two of you stop to take the robes off, then wrap the idol in one of them, making it a far less conspicuous bundle to carry. A little while later, you arrive back at Brennan's place and stash the idol for the time being. After that, Brennan pulls you into a close hug and says, 'Thank you! It means a lot to me that you were willing to go through all that to help out.'";
 			now Libido of Brennan is 5; [idol obtained]
 		else:
@@ -1942,6 +1968,7 @@ to say BrennanSex1: [oral on the player]
 	say "     You groan out that you are about to cum, to which Brennan reacts by going all out - swallowing your cock all the way and really pressing his nose into your crotch to take the last quarter-inch or so down his throat. At the same time, he rolls your family jewels around between his strong fingers, groping and lightly squeezing them. Close to orgasm as you are, all it takes is that little extra push to drive you past the point of no return, and with a deep grunt, you hump Brennan's face and start unloading your seed down his throat. The first splash of cum shoots straight into his stomach, then the man pulls back and takes any further cum-shots on his tongue. You can feel him swallow several times as he gulps down your [Cum Load Size of Player] load, his lips stretched around your shaft in a snug, squeezing seal.";
 	WaitLineBreak;
 	say "     Eventually, your orgasm runs its course and the last ebbing-off spurts paint Brennan's tongue white. He pulls off your cock with an intentional loud pop and stands up, then plants a deep kiss on your lips, sharing the taste of your own cum with you. The muscular man moans into your mouth while running his hand down the back of your head, letting it come to rest on your neck. 'Hope you liked it,' he says, chuckling at the fact that he's got a stomachful of proof that you did. [one of]Then Brennan adds, 'I've had a boyfriend or three, so I do know my way around a dick fairly well. And well... the taste of cum is nice, once you get used to it.' [or]Then Brennan adds, 'I like the taste of cum, to be honest...' [stopping]Having said that, he licks his lips with suggestive slowness and winks at you.";
+	NPCSexAftermath Brennan receives "OralCock" from Player;
 
 to say BrennanSex2: [BJ on Brennan]
 	say "     Stepping up to the muscular man, you slide an arm around his upper body, drawing it close to you and then meeting his open mouth for a kiss. The hairs of his beard tickle your face as you make out, tongues wrestling with one another. Brennan's strong arms feel [italic type]very[roman type] good around you as they hold you tight, and the human survivor's hands also give you appreciative little squeezes and strokes. Meanwhile, you busy yourself with sliding your fingers down the front of his trousers, feeling around for his bulge. It is clear that your human friend is wearing his magic cock, the furred flesh of his canine sheath bristling to the touch. You slide your hand farther down until your palm rests beneath his full, heavy balls, fingers curling to cradle their heft in your grasp. As you start to fondle and squeeze them, Brennan pulls back from your lips to let out a moan. He then gives a provocative smile and remarks, 'Someone's eager today!' Nodding and moving your hand to rub the shaft of his cock as it starts to harden and push out into the open, you plant another deep kiss on his lips.";
@@ -1954,6 +1981,7 @@ to say BrennanSex2: [BJ on Brennan]
 	say "     'Fffuckkk! Take it!' Brennan calls out just as his erection throbs [italic type]hard[roman type], spurting a first heavy blast of cum right down your throat. He humps his hips against you instinctively, adding the sensation of his hairy balls slapping your chin to the pulse of more and more cum pouring into you. You do your best to take his whole load, but Brennan is pretty damn virile, forcing you to pat out at some point, urgently drumming your hand against his naked thigh. The aroused man reacts after a second or two, letting go of your head to allow you to pull off and gasp for breath - while he catches the following spurts in the hollow of his hand. Raising it to his face after further spurts eventually ebb off, Brennan then licks up his own cum, smiling down at you as he swallows.";
 	WaitLineBreak;
 	say "     Leaning down a little to hook his hands under your shoulders and pull you to your feet, the bearded man plants a deep kiss on your lips, actually sharing the first real taste of his cum with you (everything else having gone straight down your throat). It is kinda nutty and full of flavor, providing a pleasant treat for servicing your hunky friend. The muscular man moans into your mouth while your tongues slide against each other, then runs his hand down the back of your head and lets it come to rest on your neck. 'Hope you liked it,' he says with a chuckle at your happy expression. [one of]Then Brennan adds, 'I've had a boyfriend or three, so I do know my way around a dick fairly well. So [or]Then Brennan adds, 'So [stopping]glad that this magic dick even comes with cum too. I kinda love the taste, to be honest.' Having said that, he licks his lips with suggestive slowness and winks at you.";
+	NPCSexAftermath Player receives "OralCock" from Brennan;
 
 to say BrennanSex3: [pussy licking on Brennan]
 	if Libido of Brennan > 5 and Libido of Brennan < 100: [he has the magic dick]
@@ -1973,6 +2001,7 @@ to say BrennanSex3: [pussy licking on Brennan]
 		say "     Crouched before your human friend with your face pressed against his crotch, you huff the heady scent of his sex and sweep your tongue deep inside, savoring the sweet nectar of his sexual fluids. Going down on his pussy, you drive the hunky man to ever higher peaks of arousal and soon have him moaning loudly, gasping under his breath, 'Yes, yes! Just like that! A little deeper. Deeper. Oh fuuuckk!' His hands reach out grasp for your head and shoulders, both to brace himself due to his legs getting a bit shaky as well as to push you tighter against himself. You can feel him getting quite close now, leaking more femcum and constantly letting out breathless moans, so you decide to switch things up a little. Pulling away from Brennan's pussy, you replace your tongue with two fingers, sliding them right into the sweltering depths of his pussy, and at the same time start suckling hard on his clit.";
 		WaitLineBreak;
 		say "     'Holy fuck!' Brennan almost shouts and bucks against you, the sudden reversal surprising his lust-fogged mind and pushing him straight over the edge. He wavers a little, his whole body trembling as his climax hits, so you brace him by the hips with your free hand. Moaning loudly and openly, Brennan leaks copious amounts of femcum all over your thrusting hand - and you do your best to extend his orgasm as long as possible, stroking his insides and tenderly nibbling on his clit. After a good long while of keeping him in this highly aroused state, you eventually relent and slow your efforts, allowing the exhausted man to eventually wind down. Brennan looks down upon you and wipes his sweaty brow, then pants, 'Wow, that was great! Thank you.'";
+	NPCSexAftermath Player receives "OralPussy" from Brennan;
 
 to say BrennanSex4: [pussy-fucking Brennan]
 	if Libido of Brennan > 5 and Libido of Brennan < 100: [he has the magic dick]
@@ -2004,6 +2033,8 @@ to say BrennanSex4: [pussy-fucking Brennan]
 		say "     Grunting in urgent need, you bottom out inside Brennan once more, then start to unload the contents of your full balls into him. Spurt after heavy spurt, your cum paints his insides white. While seeding his sodden pussy, you make out with the bearded man, lips pressed together and tongues sliding against each other. After a good long while of just standing there like that, entwined and with your lover pressed against the wall, you eventually relent and loosen your tight grip on him, as does Brennan with his arms and legs wrapped around your naked body. As you gently pull out of the exhausted man, your dickhead draws a stretchy line of cum from his opening, to snap after a second or two and add another droplet of your combined sexual fluids to the little bit of a mess on the floor. Meanwhile, Brennan lowers his leg and stays leaned against the wall for a moment longer, still collecting his energies to stand.";
 		[end of identical scene]
 		say "     After a few deep breaths, the man wipes his sweaty brow and pants, 'Wow, that was great! Man, you really creamed me!' The last words are added as Brennan reaches between his legs and wipes up your cum leaking out of him and sticking to the inside of his thighs, holding up his sticky hand to show it to you. Then he licks up a broad swath of it with his tongue, swallowing with a grin. Afterwards, he pushes himself off from the wall, giving you a last peck on the lips before he quickly snatches up his clothes, then vanishes in the direction of the bathroom with the words, 'Gonna go clean up now.'";
+	NPCSexAftermath Player receives "OralPussy" from Brennan;
+	NPCSexAftermath Brennan receives "PussyFuck" from Player;
 
 to say BrennanSex5: [ass-fucking Brennan]
 	if Libido of Brennan > 5 and Libido of Brennan < 100: [he has the magic dick]
@@ -2030,6 +2061,8 @@ to say BrennanSex5: [ass-fucking Brennan]
 		WaitLineBreak;
 		say "     The rhythmic contractions of his anal muscles that coincide with each further trickle of his female juices are enough to drive you over the edge yourself in short notice. With a grunt, you drive your erection home one last time, enjoying the tight confines of Brennan's ass and starting to fill them with your load! Your cock pulses hard, erupting in a creamy deluge to plaster the human survivor's insides white. Both of you are momentarily lost in the haze of lust, bodies entwined and tense as further and further spurts shoot out, breeding Brennan's ass quite well and making a real mess of the inside of his thighs, as well as the ground below too. It takes a little while until the intensity of your shared orgasms wanes and the volume of cum ebbs off, leaving you exhausted and panting for breath.";
 		say "     'Damn, you really pounded my ass good!' Brennan grunts out happily, intentionally squeezing your slowly softening dick with his muscles and very gently stroking his now sensitive sex with one hand. 'That was a nice bit of relief. Thank you,' he says over his shoulder, with a smirk and reaches back to stroke your side. You reply by hugging him from behind, kissing and nuzzling the side of his neck for a little while until you go fully soft and slip out of his ass. As that happens, the trans-man turns around and plants a peck on your lips, then quickly goes to snatch up his clothes and vanishes into the bathroom to clean himself up.";
+	NPCSexAftermath Player receives "OralPussy" from Brennan;
+	NPCSexAftermath Brennan receives "AssFuck" from Player;
 
 to say BrennanSex6: [taking Brennan's dick (pussy)]
 	say "     Stepping up to the muscular man, you slide an arm around his upper body, drawing it close to you and then meeting his open mouth for a kiss. The hairs of his beard tickle your face as you make out, tongues wrestling with one another. Brennan's strong arms feel [italic type]very[roman type] good around you as they hold you tight, and the human survivor's hands also give you appreciative little squeezes and strokes. Meanwhile, you busy yourself with sliding your fingers down the front of his trousers, feeling around for his bulge. It is clear that your human friend is wearing his magic cock, the furred flesh of his canine sheath bristling to the touch. You slide your hand farther down until your palm rests beneath his full, heavy balls, fingers curling to cradle their heft in your grasp. As you start to fondle and squeeze them, Brennan pulls back from your lips to let out a moan. He then gives a provocative smile and remarks, 'Someone's eager today!' Nodding, you plant another quick kiss on his lips and tell him that you want him to fuck you.";
@@ -2043,6 +2076,7 @@ to say BrennanSex6: [taking Brennan's dick (pussy)]
 	WaitLineBreak;
 	say "     With a grin, you nod at him, enjoying the happy smile spreading on the bearded man's face as he thrusts deep into you several more times. Then the moment is there: his knot throbs and expands inside you, tying your bodies together a second before Brennan starts to come, his seed shooting into you in thick blasts that paint your insides white. The muscular male on top of you trembles and gasps with every new spurt, clearly overwhelmed by the yet new sensations of a male orgasm. His throbbing organ inside you, the very nice 'full' feeling that his knot gives you and just lying where you are together with this man - all of these together give you the last little push that you needed for your own climax and you gasp out loud as you start to come[if Player is male]. Your own shaft spurts out long strings of cum that splatter your chest in white streaks[end if].";
 	say "     Ecstasy runs through your veins as you writhe under the human survivor, clinging to his strong body with your arms wrapped around his chest. The canine knot plugging your sex keeps most of your female juices from leaking out, making them mix with Brennan's seed inside and only increasing the pleasurable feelings of being well-bred by your partner. The two of you lie on the bed like this for a long while, simply basking in your closeness as you ride out your respective orgasms. Then eventually, a panting but happy Brennan manages to focus back on you and says, 'That was amazing. I've got to say, wow. You're a great lay.' You'll still be tied to him by the knot for some time even through your orgasms have run their course, so the two of you settle in for a while of cuddling and light conversation. Always the gentleman, Brennan even rolls you over so you're on top without being weighted down by his muscular bulk.";
+	NPCSexAftermath Player receives "PussyFuck" from Brennan;
 
 to say BrennanSex7: [taking Brennan's dick (ass)]
 	say "     Stepping up to the muscular man, you slide an arm around his upper body, drawing it close to you and then meeting his open mouth for a kiss. The hairs of his beard tickle your face as you make out, tongues wrestling with one another. Brennan's strong arms feel [italic type]very[roman type] good around you as they hold you tight, and the human survivor's hands also give you appreciative little squeezes and strokes. Meanwhile, you busy yourself with sliding your fingers down the front of his trousers, feeling around for his bulge. It is clear that your human friend is wearing his magic cock, the furred flesh of his canine sheath bristling to the touch. You slide your hand farther down until your palm rests beneath his full, heavy balls, fingers curling to cradle their heft in your grasp. As you start to fondle and squeeze them, Brennan pulls back from your lips to let out a moan. He then gives a provocative smile and remarks, 'Someone's eager today!' Nodding, you plant another quick kiss on his lips and tell him that you want him to fuck you.";
@@ -2056,6 +2090,7 @@ to say BrennanSex7: [taking Brennan's dick (ass)]
 	WaitLineBreak;
 	say "     With a grin, you nod at him, enjoying the happy smile spreading on the bearded man's face as he thrusts deep into you several more times. Then the moment is there: his knot throbs and expands inside you, tying your bodies together a second before Brennan starts to come, his seed shooting into you in thick blasts that paint your insides white. The muscular male on top of you trembles and gasps with every new spurt, clearly overwhelmed by the yet new sensations of a male orgasm. His throbbing organ inside you, the very nice 'full' feeling that his knot gives you and just lying where you are together with this man - all of these together give you the last little push that you needed for your own climax and you gasp out loud as you start to come[if Player is male]. Your own shaft spurts out long strings of cum that splatter your chest in white streaks[end if].";
 	say "     Ecstasy runs through your veins as you writhe under the human survivor, clinging to his strong body with your arms wrapped around his chest. The canine knot plugging your ass keeps most of his cum from leaking out, only increasing the pleasurable feelings of being well-bred by your partner. The two of you lie on the bed like this for a long while, simply basking in your closeness as you ride out your respective orgasms. Then eventually, a panting but happy Brennan manages to focus back on you and says, 'That was amazing. I've got to say, wow. You're a great lay.' You'll still be tied to him by the knot for some time even through your orgasms have run their course, so the two of you settle in for a while of cuddling and light conversation. Always the gentleman, Brennan even rolls you over so you're on top without being weighted down by his muscular bulk.";
+	NPCSexAftermath Player receives "AssFuck" from Brennan;
 
 to say BrennanSex8: [pussy-fucking Brennan + wolves]
 	if Libido of Brennan > 5 and Libido of Brennan < 100: [he has the magic dick]
@@ -2082,7 +2117,9 @@ to say BrennanSex8: [pussy-fucking Brennan + wolves]
 	say "     Some little while later, you're pulled out of your content state by a needy whine from Romulus, the only member of your little party that still hasn't gotten off yet. Brennan quickly picks up on that too, and he says, 'Oh, sorry Romulus. Didn't mean to exclude you.' With that said, he reaches out to grab hold of the wolf's erection and jerks him with his hand, making the wolf pant in pleasure. Getting private attenion from his master is more than thrilling for the feral canine, and it doesn't take long before the wolf shows clear signs of getting close to orgasming. Brennan quickly reacts and stretches his neck aims his canine companion's erection at his open mouth, catching the soon to come spurts of his creamy cum on his tongue. This continues until Romulus spasms slowly ebb off, at which point the wolf turns around to bring his muzzle to Brennan's face. The two of them share a sloppy kiss, during which the trans-man shares his mouthful of cum with the ecstatic wolf.";
 	WaitLineBreak;
 	say "     'Okay, that's enough,' Brennan tells his companion with a chuckle a little while later, then commands him to lay down, which the canine readily does. The second wolf on his back is another matter, knotted to his ass as Remus is, so the human survivor has little chance but to gently pull off your own manhood and then lie down on his side with the wolf still stuck inside of him. Not that he minds of course, happily stroking the side of the feral beast as he does so.' Lying on his side in the animal's embrace, your friend smiles at you and pants, 'Wow, that was great! I - I'm a lucky guy to have my three favorite people here with me, all together and enjoying each other. Thank you, for everything.' He reaches out to squeeze your shoulder happily, then lowers his head to rest on the mattress, the exhaustion of all the sex catching up with him and making him doze off.";
-
+	NPCSexAftermath Brennan receives "PussyFuck" from Player;
+	NPCSexAftermath Brennan receives "AssFuck" from Remus;
+	NPCSexAftermath Brennan receives "OralCock" from Romulus;
 
 [***********************************************************]
 [***********************************************************]
@@ -2316,6 +2353,8 @@ to BrennanRomulusFirstOral:
 		WaitLineBreak;
 		say "     There is something else rubbing Brennan at the same time though - a rock-hard canine shaft, leaving a trail of pre-cum against his abs. Catching the wound-up Romulus's head in both hands, the human holds him still and plants a kiss on his muzzle, which devolves into a little bit of a tongue-wrestle as the wolf pushes his tongue into Brennan's mouth. By the time things calm down again, the two of them are looking at each other, both grinning and happy in their own ways, and Brennan's hands are on his companion's hard cock. Stroking the canine's shaft, he feels its length and shape, gently squeezing the knot at its base and Romulus's furry balls before he begins to jerk him off with eager movements. As horny as the wolf already is, it doesn't take long before he starts to come, painting Brennan's front white with long spurts of canine seed.";
 		say "     The two of them make out a little bit more while Romulus's cock still throbs out more cum, until the feral eventually dismounts from his alpha and starts to clean him up with his tongue, much to the enjoyment of the naked human. Eventually, the two of them curl up together on the bed, with Brennan spooning his now intimately close companion, arms wrapped around the furry shape as they doze off.";
+		NPCSexAftermath Romulus receives "OralPussy" from Brennan;
+		NPCSexAftermath Romulus receives "Stroking" from Brennan;
 	else:
 		LineBreak;
 		say "     You stay where you are and busy yourself with other matters. After a while, a loud gasp is audible from the other room, followed by a satisfied bark.";
@@ -2351,6 +2390,11 @@ to BrennanRomulusRemusThreesome:
 		say "     Growls, grunts and moans fill the bedroom as Romulus thrusts in and out of Brennan, both of them being licked by Remus at the same time. The interspecies threesome barrels forward at full speed, furred bodies and doggy tongues rubbing against naked skin while Romulus's dickhead lightly bumps Brennan's cervix on the deepest of thrusts. It doesn't take much of this double-wolf stimulation to drive Brennan's arousal to new heights, really getting him going with loud cries of pleasure that build to a swiftly-reached climax, the man bucking up against the thrusting wolf as he comes. Tightly clenching muscles seize around his erection, a pulsing, squeezing warm that sends Romulus over the edge just moments later. The large canine thrusts deep, burying his cock all the way and tying with Brennan as he starts to unload a deluge of cum into his womb.";
 		WaitLineBreak;
 		say "     Brennan and his lupine lover ride out their orgasms together, prolonged by the second wolf who licks and slurps at their conjoined sticky crotches. Slowly, the immediate high of their shared lust abates, its sizzling intensity replaced by a comfortable togetherness at lying chest to chest, their bodies still connected for some time to come. 'I love both of you guys,' Brennan says with a satisfied groan, sending both of his companions['] tails beating rapidly and earning him a happy lick by Romulus. The man's arms wrap around his canine lover, just holding and gently petting him now, soon to be joined by Remus, who throws himself onto the bed right next to them, eager to get some pats too. With the main action over by now and all of them starting to mellow out and relax, you quietly step back from the bedroom door, taking care not to be seen.";
+		NPCSexAftermath Romulus receives "OralPussy" from Brennan;
+		NPCSexAftermath Brennan receives "OralCock" from Remus;
+		NPCSexAftermath Brennan receives "PussyFuck" from Romulus;
+		NPCSexAftermath Remus receives "OralPussy" from Brennan;
+		NPCSexAftermath Remus receives "OralCock" from Romulus;
 	else:
 		LineBreak;
 		say "     You decide to step away and busy yourself with other matters. After a while, a loud gasp is audible from the other room, followed by satisfied barking in two voices.";
@@ -2438,6 +2482,10 @@ to BrennanWolfRepeatThreesome:
 			LineBreak;
 			say "     Clearing your throat and looking at Brennan with a serious expression, you tell him that he's put himself on a slippery slope. He might think he's completely protected, but those injectors surely are an experimental thing - who knows if they keep working long-term if he's filled to the brim with wolf cum all the time. And getting used to wolves fucking and knotting him isn't exactly normal either. The naked trans-man gulps as you lay out these things, looking at him with a raised eyebrow, then say that you recommend he stop while he still can. 'I'll keep that in mind,' Brennan replies, clearly embarrassed. When he starts to fidget under Romulus, trying to get the wolf off him - and failing, as they are still connected by a knotted cock - you quietly bow out of the room and leave him to clean himself up.";
 			now lust of Brennan is 99; [player played buzz-kill after Brennan and the wolves fucked]
+	NPCSexAftermath Brennan receives "PussyFuck" from Romulus;
+	NPCSexAftermath Remus receives "OralPussy" from Brennan;
+	NPCSexAftermath Remus receives "OralCock" from Romulus;
+	NPCSexAftermath Romulus receives "AssFuck" from Remus;
 	now lastBrennanWolfScene is turns;
 
 to say WolfRepeatThreesomeSexMenu:
@@ -2508,6 +2556,7 @@ to say RemusThreesomeSex1: [muzzle fuck]
 	say "     Thrusting in and out of the wolf's mouth, you enjoy making use of this feral, yet at the same time completely docile beast. Even as you enjoy the surge of lust building up with every moment, you can't help but think how amazing it is that Brennan took these two canines from what they were before, attacking him and you in an alley, to the well-behaved beasts they are now. Then Remus closes his muzzle around your dick suddenly, careful to keep his teeth off its length and suckles on your shaft, pushing everything but the need to come out of your mind. The wolf sucks your dick even as you hammer in and out of his muzzle again and again, until you simply can't contain yourself anymore. With a deep grunt, you pound forward one last time, then pump your load right down his throat in splash after creamy splash of seed.";
 	WaitLineBreak;
 	say "     Letting go of the wolf and pulling from his muzzle after you feel your orgasm ebb off, you stumble a step or two to the side and let yourself sink down on the bed, coming to lie next to Brennan and panting. 'Quite something, aren't they?' the bearded man says as he gives you a smile and pats your arm in welcome, before going back to make out with Romulus, sharing sloppy kisses with the wolf still knotted to his pussy. Meanwhile, Remus bends his muzzle over your crotch and keeps licking you, while at the same time humping his shaft against the side of your leg. It doesn't take long before the feral beast lets out a satisfied growl and you feel his seed splash against your leg, to be licked up by himself soon after. After that, the four of you stay in a pile of post-coital contentment on the bed until it eventually is time to get back up and worry about survival in the city.";
+	NPCSexAftermath Remus receives "OralCock" from Player;
 
 to say RemusThreesomeSex2: [ass fuck]
 	say "     Quickly pushing off your clothes, you reveal the hard shaft of your [Cock of Player] cock and hold it out for the wolf, who readily starts to lick over it. Remus's tongue is long and sloppily warm, feeling pretty nice as it laps your hard length, balls and all. You leave the wolf to service you for a little while at his own pace, then eventually grab a handful of fur behind his head and pull him back, now motionless in your grasp and under control. With a broad grin on your face, you tell him that you're gonna fuck his ass, which the wolf replies to with an eager little bark. Letting go of the scruff of his neck, you watch the beast happily turn around on the bed, then lower his front to present raised hindquarters, tail pulled aside to reveal his pucker.";
@@ -2515,14 +2564,16 @@ to say RemusThreesomeSex2: [ass fuck]
 	WaitLineBreak;
 	say "     Something about taking a canine in his natural doggy style position just lends itself to make you fuck him harder and much more wild as might have done normally. Maybe it is the happy barks and growls he lets out as you hit his prostate, or the way he squeezes your dick. No matter which, you're having a blast fucking Brennan's canine companion hard and fast. The feral clearly enjoys such treatment, literally pushing back against each and every thrust you give him, and he actually is the first of the two of you that comes, pushed over the edge by your cock hammering into his asshole. As the wolf howls in lust and starts to blast his load over the sheets below, his insides clench tight around your cock, pushing you right over the edge just moments later. Grabbing handfuls of fur to hold on to his warm body, you hammer yourself in all the way and start spurting cum deep into the wolf.";
 	say "     By the time you feel your orgasm ebb off, you pull out of Remus's ass with a sigh and stumble a step or two to the side. Letting yourself sink down on the bed, you come to lie next to Brennan and panting for breath. 'Quite something, aren't they?' the bearded man says as he gives you a smile and pats your arm in welcome, before going back to make out with Romulus, sharing sloppy kisses with the wolf still knotted to his pussy. Meanwhile, Remus bends his muzzle to lap up his own cum from the sheets, then licks his softening dick before padding up to you. He licks over your mouth, clearly eager to share some of his taste with you, so you relent and open your lips. Feeling the sloppy wolf tongue rub against yours, you start to suck on it, taking in the flavor of the feral's cum and making out with him. The four of you stay like that for a while, a pile of post-coital contentment on the bed, until it eventually is time to get back up and worry about survival in the city.";
+	NPCSexAftermath Remus receives "AssFuck" from Player;
 
 to say RemusThreesomeSex3: [wolf pussy fuck]
 	setmonster "Feral Wolf Male";
 	say "     Quickly pushing off your clothes, you reveal the wet and ready opening of your pussy and shove it into the wolf's face, who readily starts to lick over it. Remus's tongue is long and sloppily warm, feeling pretty nice as it laps your nether lips and clit. You leave the wolf to service you for a little while at his own pace, then eventually grab a handful of fur behind his head and pull him back, now motionless in your grasp and under control. With a broad grin on your face, you tell him that you're spread your pussy for his cock, which the wolf replies to with an eager bark. Letting go of the scruff of his neck, you watch the beast happily turn around on the bed and make room for you to lie next to Brennan, then come to stand over you just like Romulus did with his master. As the feral gives you a wet doggy kiss, you reach between the two of you and take hold of his shaft, aiming it for your waiting sex.";
 	say "     With a lusty growl, the wolf thrusts his hips down against you, burying his bone into your pussy and spreading your folds around his already slightly bulging knot. The feral canine you've chosen to mate with is rock hard and horny, wound up more than a little bit from being on the sidelines of Romulus mating with Brennan. As such, he mounts you like a wild beast, hammering into your sex and popping the bulge of his knot past your opening again and again, making you tremble in pleasure from the sensations. While humping against you, the wolf's muzzle moves against your neck and cheek, him giving mostly aimless licks of your sweaty skin - until you grab his head with both hands and pull him into a kiss, suckling on his tongue as it flops around in your mouth.";
 	WaitLineBreak;
-	say "     Almost in a delirium from being fucked by a feral and wildly making out with him, you barely register the touch of a strong hand on your arm, or Brennan's voice saying, 'Wait till he knots you for real. That is just amazing.' His comment is almost like a prophecy, as seconds later, Remus hammers into you one last time with all of his power, then howls out in lust and knots your pussy. You feel quite stuffed, yet at the same time really, really good, as the base of his dick balloons even further, far too wide to ever pass your nether lips in this state. Then the first pulse of wolf cum plashes into your depths, accompanied by a tremble of the powerful animal on top of you and a hard throb of his dick. Second by second, he floods you with more of his fertile seed, giving you the amazing feeling of being bred. It only takes a few more pulses of cum into your depths before the sensations finally push you over the edge, moaning helplessly as you weakly hold on to his heaving sides[if Player is male]. Your own shaft throbs in rhythm with the wolf flooding your insides, sending pluses of cum to soak the fur of your canine mate's chest[end if].[fimpregchance]";
+	say "     Almost in a delirium from being fucked by a feral and wildly making out with him, you barely register the touch of a strong hand on your arm, or Brennan's voice saying, 'Wait till he knots you for real. That is just amazing.' His comment is almost like a prophecy, as seconds later, Remus hammers into you one last time with all of his power, then howls out in lust and knots your pussy. You feel quite stuffed, yet at the same time really, really good, as the base of his dick balloons even further, far too wide to ever pass your nether lips in this state. Then the first pulse of wolf cum plashes into your depths, accompanied by a tremble of the powerful animal on top of you and a hard throb of his dick. Second by second, he floods you with more of his fertile seed, giving you the amazing feeling of being bred. It only takes a few more pulses of cum into your depths before the sensations finally push you over the edge, moaning helplessly as you weakly hold on to his heaving sides[if Player is male]. Your own shaft throbs in rhythm with the wolf flooding your insides, sending pluses of cum to soak the fur of your canine mate's chest[end if].";
 	say "     By the time you feel your orgasm ebb off and rational consciousness return, Remus has calmed down too and now is just contently lying on top of you, still tied balls-deep to your pussy. Absent-mindedly stroking his fur, you pant for breath and look to the side, where Brennan is looking at you from exactly the same position. 'Quite something, aren't they?' the bearded man says as he gives you a smile and pats your arm, welcoming you the 'pack', before going back to make out with Romulus, sharing sloppy kisses with the wolf. Meanwhile, Remus lowers his head to rest against the crook of your neck, nuzzling against your side and dozing off contently. Looks like your own wolfy partner is more of a cuddle-bug than Romulus, but you don't really mind, as you're content with the feeling of his hard cock still gently pulsing inside you. The four of you stay like that for a while, a pile of post-coital contentment on the bed, until it eventually is time to get back up and worry about survival in the city.";
+	NPCSexAftermath Player receives "PussyFuck" from Remus;
 
 to say RemusThreesomeSex4: [wolf ass fuck]
 	setmonster "Feral Wolf Male";
@@ -2535,8 +2586,9 @@ to say RemusThreesomeSex4: [wolf ass fuck]
 	say "You leave the wolf to service you for a little while at his own pace, then eventually grab a handful of fur behind his head and pull him back, now motionless in your grasp and under control. With a broad grin on your face, you tell him that you'll let him pound your ass, which the wolf replies to with an eager bark. Letting go of the scruff of his neck, you watch the beast happily move back on the bed, making room for you to get on all fours next to Brennan.";
 	say "     With a lusty growl, the wolf jumps on top of you, thrusting his bone against your ass a few times till he hits his mark and sinks it into your ass. He slides right in, from the tapering point to the start of his growing knot, then gives an extra thrust to force that past your pucker too. The feral canine you've chosen to mate with is rock hard and horny, wound up more than a little bit from being on the sidelines of Romulus mating with Brennan. As such, he mounts you like a wild beast, hammering into your sex and popping the bulge of his knot past your opening again and again, making you tremble in pleasure from the sensations. While humping against you, the wolf's muzzle moves against your upper back and neck, with him giving mostly aimless licks of your sweaty skin - until instinct makes him put the back of your neck between his teeth, lightly holding firm you with only a little pressure.";
 	WaitLineBreak;
-	say "     Almost in a delirium from being power-fucked by a feral, you barely register the touch of a strong hand on your arm, or Brennan's voice saying, 'Wait till he knots you for real. That is just amazing.' His comment is almost like a prophecy, as seconds later, Remus hammers into you one last time with all of his power, then howls out in lust and knots your ass. You feel quite stuffed, yet at the same time really, really good, as the base of his dick balloons even further, far too wide to ever pass your pucker in this state. Then the first pulse of wolf cum plashes into your depths, accompanied by a tremble of the powerful animal on top of you and a hard throb of his dick. Second by second, he floods you with more of his fertile seed, giving you the amazing feeling of being bred. It only takes a few more pulses of cum into your depths before the sensations finally push you over the edge, moaning helplessly as your hands dig into the bedsheets and [if Player is male]your cock splashes seed onto Brennan's bed[else if Player is female]your pussy drips femcum onto Brennan's bed[else]your whole body trembles in orgasm[end if].[mimpregchance]";
+	say "     Almost in a delirium from being power-fucked by a feral, you barely register the touch of a strong hand on your arm, or Brennan's voice saying, 'Wait till he knots you for real. That is just amazing.' His comment is almost like a prophecy, as seconds later, Remus hammers into you one last time with all of his power, then howls out in lust and knots your ass. You feel quite stuffed, yet at the same time really, really good, as the base of his dick balloons even further, far too wide to ever pass your pucker in this state. Then the first pulse of wolf cum plashes into your depths, accompanied by a tremble of the powerful animal on top of you and a hard throb of his dick. Second by second, he floods you with more of his fertile seed, giving you the amazing feeling of being bred. It only takes a few more pulses of cum into your depths before the sensations finally push you over the edge, moaning helplessly as your hands dig into the bedsheets and [if Player is male]your cock splashes seed onto Brennan's bed[else if Player is female]your pussy drips femcum onto Brennan's bed[else]your whole body trembles in orgasm[end if].";
 	say "     By the time you feel your orgasm ebb off and rational consciousness return, Remus has calmed down too and now is just contently resting against your back, still tied balls-deep to your ass. Absent-mindedly reaching back and stroking his fur, you pant for breath and look to the side, where Brennan is looking at you from his similar position. 'Quite something, aren't they?' the bearded man says as he gives you a smile and pats your arm, welcoming you the 'pack', before going back to make out with Romulus, sharing sloppy kisses with the wolf. Meanwhile, Remus lucks you a few times, then rests his head against your back to doze a little. Looks like your own wolfy partner is more of a cuddle-bug than Romulus, but you don't really mind, as you're content with the feeling of his hard cock still gently pulsing inside you. The four of you stay like that for a while, a pile of post-coital contentment on the bed, until it eventually is time to get back up and worry about survival in the city.";
+	NPCSexAftermath Player receives "AssFuck" from Remus;
 
 [ Idea Collection
 

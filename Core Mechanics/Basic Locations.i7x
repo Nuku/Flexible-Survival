@@ -64,7 +64,7 @@ to say bunker desc:
 	say "     Sparsely appointed, this bunker was built as a fallout shelter back during the Cold War, then abandoned to become a forgotten curiosity at best. You are standing in the main bunker room, a rectangular chamber measuring about sixty feet in length and thirty feet in width. Its walls are solid concrete, and long rows of shelves are built into the back wall. There are several large storage lockers in the bunker as well. They look like a good place to store all your extra stuff. Several long rows of simple metal beds are bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
 	if "cot" is listed in invent of Bunker:
 		say ". One of the cots apparently was poorly installed, and the bolts attaching it to the floor have come loose. You could take it along if you'd like";
-	say ". The small sink taking up a corner of the room seems to be broken, producing no water no matter how much the knob is turned. Two doorways to the north and northeast lead to adjoining rooms - showers and a small restroom - while a thicker, secure-looking door opens to the stairwell used to go [bold type]outside[roman type]. Your own personal room is to the south. It's technically just a maintenance storeroom, but at least it's private.";
+	say ". The small sink taking up a corner of the room seems to be broken, producing no water no matter how much the knob is turned. Two doorways to the [link]north[as]north[end link] and [link]northeast[as]northeast[end link] lead to adjoining rooms - showers and a small restroom - while a thicker, secure-looking door opens to the stairwell used to go [link]outside[as]up[end link]. Your own personal room is to the [link]south[as]south[end link]. It's technically just a maintenance storeroom, but at least it's private.";
 	if "old boombox" is listed in invent of Bunker:
 		say "     You have set up the old boombox in one corner, where it continues to play despite not being plugged into anything. Maybe it has really amazing batteries - or draws energy some other way. Regardless of the source of its power, the boombox provides a mix of tunes and the occasional weather report on the continuing heat wave. Fiddling with the dials results in different songs and genres of music, but no actual news or broadcast radio. The radio broadcaster you hear seems the same across the stations, though his tone and delivery suits the format of the current [']station[']. Its dials and settings change on their own from time to time as if to provide music to suit the situation or dropping its volume when you're taking a nap.";
 	if debugactive is 1:
@@ -159,19 +159,19 @@ after looking while player is in Grey Abbey Library:
 
 to say abbey desc:
 	say "     This former abbey has been rebuilt to become a mid-sized library. The architecture and design shows its origins despite the renovations made. A number of simple yet elegant columns, wall sconces, and several other of the original features have been left untouched to give the library some [']character[']. The central room has a reception desk at the front, with long rows of bookshelves stretching out behind it and to the sides. [if library computer is powered]Now that the building has power, the overhead lights glow, although they sometimes flicker and dim when whatever is going on in the rest of the city causes fluctuations. The computer on the front desk has power now as well and might be of some use[else]A computer sits on the front desk, although without power, it isn't of any help right now[end if]. Small seating groups of chairs and sofas make the library quite a nice place to hang out in and read.";
-	say "     There is an upper story to the library overhanging the ground floor, accessible through two stairways to the left and right, not too far from where you are standing. A third of the space has been left open in the middle, allowing people to look down into the main stacks over the wooden railings. High above, thick wooden beams form the rafters of the building's roof. To the north is a room with some white sheets covering assorted furniture. To the south is a glass window through which you are able to make out a dilapidated computer lab. Heading east will lead further into the library.";
+	say "     There is an upper story to the library overhanging the ground floor, accessible through two stairways to the left and right, not too far from where you are standing. A third of the space has been left open in the middle, allowing people to look down into the main stacks over the wooden railings. High above, thick wooden beams form the rafters of the building's roof. To the [link]north[end link] is a room with some white sheets covering assorted furniture. To the [link]south[end link] is a glass window through which you are able to make out a dilapidated computer lab. Heading [link]east[end link] will lead further into the library.";
 	if Fang is booked and Alexandra is booked:
 		say "     Fang and Alexandra are on guard here, taking shifts watching by the door";
 		if HP of Fang < 3:
 			say ". The wolf is tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random]";
 		else:
-			say ". The powerful male wolf watches in stoic silence";
+			say ". The powerful [if Fang is Male]male [else]female [end if]wolf watches in stoic silence";
 		say ". The doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 	else if Fang is booked:
 		if HP of Fang < 3:
-			say "     Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
+			say "     Fang is on guard here by the door on [PosPro of Fang] rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
 		else:
-			say "     Fang is on guard here by the door, the powerful male wolf watching in stoic silence.";
+			say "     Fang is on guard here by the door, the powerful [if Fang is Male]male [else]female [end if]wolf watching in stoic silence.";
 	else if Alexandra is booked:
 		say "     Alexandra is on guard here, watching by the door for trouble. The doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
 
@@ -271,7 +271,7 @@ after looking while player is in Main & 7th Street:
 	project the Figure of Map_Library_Street_icon;
 
 to say 7thMainDesc:
-	say "     You're at the corner of 7th Street and Main, the latter of which extends further towards the north and south, while 7th Street starts right in front of the entrance of the Grey Abbey Library and runs into the distance westwards. Glancing at the historic structure of the library, you remember hearing somewhere that the old city center was actually fairly close by in the past. But then modern developments shifted the focus on the downtown area, where enough free room was available to put up high rises and new construction. As a historical section of the city, the area encompasses both residential buildings, a few shops and public buildings, having been built long before the introduction of zoning laws.";
+	say "     You're at the corner of 7th Street and Main, the latter of which extends further towards the north and south, while 7th Street starts right in front of the entrance of the Grey Abbey Library and runs into the distance [link]westwards[as]west[end link]. Glancing at the historic structure of the library, you remember hearing somewhere that the old city center was actually fairly close by in the past. But then modern developments shifted the focus on the downtown area, where enough free room was available to put up high rises and new construction. As a historical section of the city, the area encompasses both residential buildings, a few shops and public buildings, having been built long before the introduction of zoning laws.";
 	say "     The outbreak of the nanite apocalypse has had a noticeable impact on the area. You can see trash and abandoned remains of clothing scattered here or there, and a burned-out car wreck is standing in the middle of the T crossing. Thankfully, the library seems not to be holding too much interest for wandering beasts, but that may change quickly as you move farther away from it and explore.";
 
 instead of sniffing Main & 7th Street:
@@ -286,9 +286,9 @@ The earea of Looted Shops is "Outside".
 Description of Looted Shops is "[LootedShopsDesc]".
 
 to say LootedShopsDesc:
-	say "     You wander down the center of the empty 7th Street to stay away from the piles of trash and shards from shattered shop windows that dominate the sidewalk on both sides. There are barely any windows that haven't been vandalized, and many of the doors were torn out of their frames or clawed to pieces. You can't say if the destruction stemmed from pure malice or just some overly large creature making an entrance; it doesn't matter which really, as the result is the same. In the southwest, a thin path has been cleared through the trash and debris, leading to a shop that seems to have been of continuing interest of someone - or alternatively the target of some scavengers. The sign above the door declares it to be [']George's Animal Emporium['].";
+	say "     You wander down the center of the empty 7th Street to stay away from the piles of trash and shards from shattered shop windows that dominate the sidewalk on both sides. There are barely any windows that haven't been vandalized, and many of the doors were torn out of their frames or clawed to pieces. You can't say if the destruction stemmed from pure malice or just some overly large creature making an entrance; it doesn't matter which really, as the result is the same. In the [link]southwest[end link], a thin path has been cleared through the trash and debris, leading to a shop that seems to have been of continuing interest of someone - or alternatively the target of some scavengers. The sign above the door declares it to be [']George's Animal Emporium['].";
 	if "Henry Recruited" is listed in Traits of Urik:
-		say "     Someone appears to have cleared away a patch of trash and rubble recently, making the entrance of a store to the north accessible. While the sign above the door declares it to be some sort of flower shop, the plywood board used to cover a broken window next to a newly hung door bears the words 'Henry's Brewery', above a spray-painted depiction of a muscular black man with a large hammer. The stylized image of a snarling orc face in the lower left corner lets you guess that Urik put this here.";
+		say "     Someone appears to have cleared away a patch of trash and rubble recently, making the entrance of a store to the [link]nort[end link] accessible. While the sign above the door declares it to be some sort of flower shop, the plywood board used to cover a broken window next to a newly hung door bears the words 'Henry's Brewery', above a spray-painted depiction of a muscular black man with a large hammer. The stylized image of a snarling orc face in the lower left corner lets you guess that Urik put this here.";
 
 instead of sniffing Looted Shops:
 	say "     The cans and sacks of trash that have been rotting out on the curb for more than two weeks fill your nose with many scents, none of them particularly pleasant.";
@@ -341,7 +341,7 @@ after looking while player is in Breakroom:
 	project the Figure of Map_Library_North2_icon;
 
 to say gbreakroom desc:
-	say "     The library staff breakroom is nothing more than a remodeled version of the abbey's old kitchen. The walls are still made with the original stone blocks, while the two windows in the room have thankfully been updated. Both are simple horizontal sliders, bathing the room in a simple glow from the natural lighting outside. [if Sidney is booked]Sidney apparently decided that the breakroom needed to be put into proper order. She's pushed the furniture around in an effort to organize the space[else]The tables have been pushed around, leaving no semblance of order to them, while the countertops at least are reasonably clean[end if]. [if Macadamia is booked]On one of the counters are a ton of Mack's jars, each filled with his own special blend of salted nuts. Just looking at the cartoonish labels with Mack on the cover makes you wonder if he's thinking of starting his own side business. [end if]To the west is the old kitchen's walk-in pantry.";
+	say "     The library staff breakroom is nothing more than a remodeled version of the abbey's old kitchen. The walls are still made with the original stone blocks, while the two windows in the room have thankfully been updated. Both are simple horizontal sliders, bathing the room in a simple glow from the natural lighting outside. [if Sidney is booked]Sidney apparently decided that the breakroom needed to be put into proper order. She's pushed the furniture around in an effort to organize the space[else]The tables have been pushed around, leaving no semblance of order to them, while the countertops at least are reasonably clean[end if]. [if Macadamia is booked]On one of the counters are a ton of Mack's jars, each filled with his own special blend of salted nuts. Just looking at the cartoonish labels with Mack on the cover makes you wonder if he's thinking of starting his own side business. [end if]To the [link]west[end link] is the old kitchen's walk-in pantry.";
 	if library computer is powered:
 		say "     The only modern day conveniences in the breakroom are a microwave and a small fridge, both of which are ready to be used now that you have restored power to the library.";
 	else:
@@ -360,7 +360,7 @@ after looking while player is in Half-Renovated Room:
 	project the Figure of Map_Library_North3_icon;
 
 to say LibrarySideRoomDesc:
-	say "     This large room seems to be where most of the furniture of the old abbey ended up when the building was converted to its new purpose. With its high ceiling, ample floor-space, and even a big fireplace, it may have served as a dining hall in the past. Now it is mostly filled with numerous pieces of furniture, some stacked quite high and partially covered in white sheets. The two still accessible walls are covered in scaffolding and show signs of recent work on them, as if renovations were in progress when the nanite outbreak began. Due west you can make out a room with tables strewn about and plenty of counter space. Back south is the main area of the library.";
+	say "     This large room seems to be where most of the furniture of the old abbey ended up when the building was converted to its new purpose. With its high ceiling, ample floor-space, and even a big fireplace, it may have served as a dining hall in the past. Now it is mostly filled with numerous pieces of furniture, some stacked quite high and partially covered in white sheets. The two still accessible walls are covered in scaffolding and show signs of recent work on them, as if renovations were in progress when the nanite outbreak began. Due [link]west[end link] you can make out a room with tables strewn about and plenty of counter space. Back [link]south[end link] is the main area of the library.";
 	if Skarnoth is in Half-Renovated Room:
 		say "     Since you brought the demon prince Skarnoth here and securely attached the long chain on his collar to the scaffolding, the imprisoned predator has done his best to improve the comfort of his prison. A soft (if somewhat threadbare and stained) couch has been dragged to stand against the back wall and shows signs of being used as a bed. He even found a high-backed armchair somewhere, which is now set up next to the fireplace. Sitting in it, the demon awaits you, wearing an arrogant expression as if he was a king awaiting supplicants.";
 
@@ -376,7 +376,7 @@ after looking while player is in Pantry:
 	project the Figure of Map_Library_North1_icon;
 
 to say gpantry desc:
-	say "     The pantry is about the size of a walk-in closet. Inspecting the shelves on all three walls, hoping to find some extra food perhaps, you sadly only find a few leftover folders. After the building became a library, this pantry apparently ended up being turned into a simple storage room. Heading east from here will lead you back into the breakroom.";
+	say "     The pantry is about the size of a walk-in closet. Inspecting the shelves on all three walls, hoping to find some extra food perhaps, you sadly only find a few leftover folders. After the building became a library, this pantry apparently ended up being turned into a simple storage room. Heading [link]east[end link] from here will lead you back into the breakroom.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -392,7 +392,7 @@ after looking while player is in Computer Lab:
 
 to say gcomputerlab desc:
 	project the Figure of Map_Library_South2_icon;
-	say "     Stepping into the old computer lab, it appears that someone had some anger management issues judging by all of the smashed monitors and towers. Every computer used to have its own cubicle, each one about four feet wide by three feet long. While not a room you would particularly enjoy staying in, you're sure you can find some use for it. To the west is a locked door. Heading north will take you back to the library entrance.";
+	say "     Stepping into the old computer lab, it appears that someone had some anger management issues judging by all of the smashed monitors and towers. Every computer used to have its own cubicle, each one about four feet wide by three feet long. While not a room you would particularly enjoy staying in, you're sure you can find some use for it. To the west is a locked door. Heading [link]north[end link] will take you back to the library entrance.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -407,7 +407,7 @@ after looking while player is in Back Of The Library:
 	project the Figure of Map_Library_Back_icon;
 
 to say gbackofthelibrary desc:
-	say "     The back of the library has less bookshelves, with tables taking up the majority of the space. Glancing around the area, you can make out three tables that haven't been destroyed yet and a single sofa. The walls have the same tacky pictures that most libraries have, one of them featuring an ice skating polar bear with the caption 'Chill Out And Read'. There are also copies of famous paintings littering the walls. To the south is a locked door. Heading north you can see a sign that reads 'Kidz Zone' hanging over the open doorway. Due east is a double glass door leading out into the back courtyard. Heading west will take you back to the entrance to the library.";
+	say "     The back of the library has less bookshelves, with tables taking up the majority of the space. Glancing around the area, you can make out three tables that haven't been destroyed yet and a single sofa. The walls have the same tacky pictures that most libraries have, one of them featuring an ice skating polar bear with the caption 'Chill Out And Read'. There are also copies of famous paintings littering the walls. To the [link]south[end link] is a locked door. Heading [link]north[end link] you can see a sign that reads 'Kidz Zone' hanging over the open doorway. Due [link]east[end link] is a double glass door leading out into the back courtyard. Heading [link]west[end link] will take you back to the entrance to the library.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -421,7 +421,7 @@ after looking while player is in Makeshift Rec Room:
 	project the Figure of Map_Library_North4_icon;
 
 to say grecroom desc:
-	say "     The Kidz Zone was at one point the place where parents would dump their kids when they needed a break. Most of the brightly colored decorations have been torn down, leaving the area with a twisted, festive feel to it. A single table is set up in the back corner of the room, while the bookshelves have all been destroyed. [if Korvin is booked or Alexandra is booked]Recently, someone found an old pool table and dragged it all the way into the rec-room, and a deck of cards has been placed on a side table. While some may prefer reading to pass the time, others apparently find that far too dull for their tastes. The idea of hustling someone at pool or poker does have its appeal. [end if][if Nala is booked]Having set up a balcony-like seat out of a broken air vent, Nala can now watch and heckle to her heart's content. [end if][if Zoe is booked]Zoe reorganized one side of the room as her workshop. The entire wall has been painted into a large fresque depicting the city and many of the creatures who dwell in it. Carboxes worth of spray cans supply sits neatly in a corner. Zoe arranged a private space, hidden behind a screen, which she took the opportunity to spray-paint as well. [end if]Heading south leads back to the library.";
+	say "     The Kidz Zone was at one point the place where parents would dump their kids when they needed a break. Most of the brightly colored decorations have been torn down, leaving the area with a twisted, festive feel to it. A single table is set up in the back corner of the room, while the bookshelves have all been destroyed. [if Korvin is booked or Alexandra is booked]Recently, someone found an old pool table and dragged it all the way into the rec-room, and a deck of cards has been placed on a side table. While some may prefer reading to pass the time, others apparently find that far too dull for their tastes. The idea of hustling someone at pool or poker does have its appeal. [end if][if Nala is booked]Having set up a balcony-like seat out of a broken air vent, Nala can now watch and heckle to her heart's content. [end if][if Zoe is booked]Zoe reorganized one side of the room as her workshop. The entire wall has been painted into a large fresque depicting the city and many of the creatures who dwell in it. Carboxes worth of spray cans supply sits neatly in a corner. Zoe arranged a private space, hidden behind a screen, which she took the opportunity to spray-paint as well. [end if]Heading [link]south[end link] leads back to the library.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -435,7 +435,7 @@ after looking while player is in Courtyard:
 	project the Figure of Map_Library_Fountain_icon;
 
 to say gcourtyard desc:
-	say "     The courtyard has an almost peaceful aura about it, which is shocking considering the state of the rest of the city. A few trees have been sporadically planted around a large fountain in the center of the courtyard. While there is no water coming out of the fountain, it is still a nice area to sit and relax. To the north is a large shed, more than likely filled with gardening tools used for the courtyard. To the south is the remnants of what was once a garden. Heading west will take you back into the library.";
+	say "     The courtyard has an almost peaceful aura about it, which is shocking considering the state of the rest of the city. A few trees have been sporadically planted around a large fountain in the center of the courtyard. While there is no water coming out of the fountain, it is still a nice area to sit and relax. To the [link]north[end link] is a large shed, more than likely filled with gardening tools used for the courtyard. To the [link]south[end link] is the remnants of what was once a garden. Heading [link]west[end link] will take you back into the library.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -452,7 +452,7 @@ after looking while player is in Large Shed:
 	project the Figure of Map_Library_Shack_icon;
 
 to say glargeshed desc:
-	say "     Stepping into the shed, it's a little disconcerting how much bigger it is compared to its outward appearance. Inspecting the interior, the walls are made from basic cement, no drywall or anything, which makes sense since given that this was just a place to stow gardening equipment. Most of the floor is smooth cement as well[if Philip is booked]. Philip has turned the ruined back corner into a muddy wrestling ring to roll around in, the pig prepared for any challengers[else], except for a back corner where the cement has been broken up into jagged balls of rock[end if]. Counters and cabinets line the wall on the right hand side of the shed. To the south is the door leading back out to the courtyard.";
+	say "     Stepping into the shed, it's a little disconcerting how much bigger it is compared to its outward appearance. Inspecting the interior, the walls are made from basic cement, no drywall or anything, which makes sense since given that this was just a place to stow gardening equipment. Most of the floor is smooth cement as well[if Philip is booked]. Philip has turned the ruined back corner into a muddy wrestling ring to roll around in, the pig prepared for any challengers[else], except for a back corner where the cement has been broken up into jagged balls of rock[end if]. Counters and cabinets line the wall on the right hand side of the shed. To the [link]south[end link] is the door leading back out to the courtyard.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -465,7 +465,7 @@ after looking while player is in Grey Abbey Garden:
 	project the Figure of Map_Library_Garden_icon;
 
 to say ggarden desc:
-	say "     Walking into the garden [if Honey is booked]shocks you at first. While most of the plant life around this part of the city is dead, the library's garden is thriving. Flowers of many different colors have begun to sprout up quickly, their speed of growth most likely linked to the nanites. Honey is buzzing back and forth between her plants, humming a cheery little melody as she works. She seems totally in her element, which shouldn't be all that surprising seeing that she is a bee now. The loving way the tiny insect girl cares for each individual plant shows that this is about more than instinct; she truly loves working with the flowers, and the small garden has grown into a sea of colors under her careful watch. You can't help but notice that the most prominent color is yellow, making honey almost appear to fade away at times[else]is slightly disheartening. Any flowers or vegetables that once grew here are long dead. When this was just an abbey, the garden must have served as the place where they would grow their food. Looking up, you are able to see the huge open window on the second floor. Who knows, maybe if it had someone to take care of it, perhaps the garden could return to its past glory? Going to the north will take you back to the courtyard[end if].";
+	say "     Walking into the garden [if Honey is booked]shocks you at first. While most of the plant life around this part of the city is dead, the library's garden is thriving. Flowers of many different colors have begun to sprout up quickly, their speed of growth most likely linked to the nanites. Honey is buzzing back and forth between her plants, humming a cheery little melody as she works. She seems totally in her element, which shouldn't be all that surprising seeing that she is a bee now. The loving way the tiny insect girl cares for each individual plant shows that this is about more than instinct; she truly loves working with the flowers, and the small garden has grown into a sea of colors under her careful watch. You can't help but notice that the most prominent color is yellow, making honey almost appear to fade away at times[else]is slightly disheartening. Any flowers or vegetables that once grew here are long dead. When this was just an abbey, the garden must have served as the place where they would grow their food. Looking up, you are able to see the huge open window on the second floor. Who knows, maybe if it had someone to take care of it, perhaps the garden could return to its past glory? Going to the [link]north[end link] will take you back to the courtyard[end if].";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -481,7 +481,7 @@ after looking while player is in Grey Abbey 2F:
 	project the figure of Map_Library_2F_West_icon;
 
 to say abbey 2F desc:
-	say "     The spacious second story of the library opens up in the middle, with the floor of about a third of the width of the building missing and surrounded by well-crafted wooden railings. They clearly are a part of the old abbey's features that were kept in the renovation, giving the place quite a nice atmosphere. From what therefore is basically a huge balcony, you can overlook the main stacks below. As in the rest of the building, rows of bookshelves take up most of the space, though small seating groups with sofas and cushioned chairs promise comfortable places to rest, too. There are a few secluded desks here and there, serving as quiet study places. To the northeast is a shabby sitting area, while to the southeast you can make out a darker spot that does not receive much light.";
+	say "     The spacious second story of the library opens up in the middle, with the floor of about a third of the width of the building missing and surrounded by well-crafted wooden railings. They clearly are a part of the old abbey's features that were kept in the renovation, giving the place quite a nice atmosphere. From what therefore is basically a huge balcony, you can overlook the main stacks below. As in the rest of the building, rows of bookshelves take up most of the space, though small seating groups with sofas and cushioned chairs promise comfortable places to rest, too. There are a few secluded desks here and there, serving as quiet study places. To the [link]northeast[end link] is a shabby sitting area, while to the [link]southeast[end link] you can make out a darker spot that does not receive much light.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -497,7 +497,7 @@ after looking while player is in Sitting Area:
 	project the figure of Map_Library_2F_North_icon;
 
 to say usittingarea desc:
-	say "     Obviously meant for small study groups, the area around you has only a few tables and couches spread about. Most of the nearby shelves have been knocked down, leaving their books strewn across the floor. Although disorganized, the area also has a very lived-in feel to it, helping you relax your nerves and reflect on your next move. Heading southwest will take you back to the second floor landing, and a huge window overlooks the back of the library to the southeast.";
+	say "     Obviously meant for small study groups, the area around you has only a few tables and couches spread about. Most of the nearby shelves have been knocked down, leaving their books strewn across the floor. Although disorganized, the area also has a very lived-in feel to it, helping you relax your nerves and reflect on your next move. Heading [link]southwest[end link] will take you back to the second floor landing, and a huge window overlooks the back of the library to the [link]southeast[end link].";
 	if doberman companion is tamed:
 		say "     At the edge of the open floor area, Spike has made a little man-cave for himself, dragging a mattress up from the bunker and setting a desk on its side to block the passage between two bookshelves. The little nook that created contains a number of posters of scantily dressed women";
 		if Spike is visible:
@@ -516,7 +516,7 @@ after looking while player is in Garden View:
 	project the figure of Map_Library_2F_East_icon;
 
 to say ugardenview desc:
-	say "     The huge windows at the back of the second floor allow sunlight to flood the area. Unfortunately, one of the large windows has been completely shattered. On the bright side, this allows a light breeze to flow through the rest of the library, airing out its musty scent. Looking out the window, you can see the garden and courtyard below. The sprawling city beyond it would make for a fantastic view if it wasn't in a state of ruin. There's a sitting area to the northwest, whereas going southwest will lead you towards a dark alcove.";
+	say "     The huge windows at the back of the second floor allow sunlight to flood the area. Unfortunately, one of the large windows has been completely shattered. On the bright side, this allows a light breeze to flow through the rest of the library, airing out its musty scent. Looking out the window, you can see the garden and courtyard below. The sprawling city beyond it would make for a fantastic view if it wasn't in a state of ruin. There's a sitting area to the [link]northwest[end link], whereas going [link]southwest[end link] will lead you towards a dark alcove.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -531,7 +531,7 @@ after looking while player is in Darkened Alcove:
 	project the figure of Map_Library_2F_South_icon;
 
 to say udarkenedalcove desc:
-	say "     This area goes a bit further away from the railing than the rest of the second floor. Under closer inspection, you find the reason why. What was at one point a separate room had its flimsy walls collapse, but there's no hint as to what caused it. Must have been a special collection there or so. Now it's a total shambles, with debris and fallen bookshelves everywhere. The light from the windows in the back of library don't reach this room due to the walled-off features that were part of the original design. While still light enough to see your surroundings, it does feel gloomier and slightly creepy. From here, you can head northeast towards the garden view windows or northwest to return to the second floor landing. There is also a hatch in the ceiling leading up into the attic.";
+	say "     This area goes a bit further away from the railing than the rest of the second floor. Under closer inspection, you find the reason why. What was at one point a separate room had its flimsy walls collapse, but there's no hint as to what caused it. Must have been a special collection there or so. Now it's a total shambles, with debris and fallen bookshelves everywhere. The light from the windows in the back of library don't reach this room due to the walled-off features that were part of the original design. While still light enough to see your surroundings, it does feel gloomier and slightly creepy. From here, you can head [link]northeast[end link] towards the garden view windows or [link]northwest[end link] to return to the second floor landing. There is also a hatch in the ceiling leading up into the attic.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -551,18 +551,18 @@ Table of GameRoomIDs (continued)
 Object	Name
 Outside Trevor Labs	"Outside Trevor Labs"
 
-Outside Trevor Labs is a room. "     Like almost everyone else in this city, you've heard of Trevor Labs. They are - or were - a biopharm setup. Kind of new on the block, and the local news made a big stink a little while ago over accusations of skirting the edge of numerous laws in the name of science. The company's headquarters rise as a sleek and tall glass building to your west. You're not certain, but you think you can see some light in one of the windows, visible in the [time of day] light. Curious. Definitively something to investigate...".
+Outside Trevor Labs is a room. "     Like almost everyone else in this city, you've heard of Trevor Labs. They are - or were - a biopharm setup. Kind of new on the block, and the local news made a big stink a little while ago over accusations of skirting the edge of numerous laws in the name of science. The company's headquarters rise as a sleek and tall glass building to your [link]west[end link], surrounded by prettily arranged shrubbery and some small trees. You're not certain, but you think you can see some light in one of the windows on the first floor, in the northern half of the building. Curious. Definitively something to investigate...".
 understand "lab" or "labs" as Outside Trevor Labs.
 Outside Trevor Labs is fasttravel.
 earea of Outside Trevor Labs is "Outside".
 
-Away from Labs is a door. "East of here lays the rest of the city." It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
+Away from Labs is a door. "[link]east[end link] of here lays the rest of the city." It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
 
 Table of GameRoomIDs (continued)
 Object	Name
 Trevor Labs Lobby	"Trevor Labs Lobby"
 
-Trevor Labs Lobby is a room. "     You're standing in the ground floor lobby of Trevor Labs. New age furniture has been ripped to shreds and thrown around, while the walls and floor are splattered in unknown liquids. Most of the gunk is creamy white, with some reddish-brown and even green streaks mixed in... all of it well dried by now thankfully. It is somewhat dark in here, but some emergency lights draw your attention to the stairs leading up and down.".
+Trevor Labs Lobby is a room. "     You're standing in the ground floor lobby of Trevor Labs, which is fairly roomy, with open space above you, all the way to the glass roof six stories above. You can see two stairways leading [link]up[end link], to a balcony wrapping all the way around the atrium. As for the ground floor - much of the new age, blocky furniture has been ripped to shreds and thrown around, while the walls and floor are splattered in unknown liquids. Most of the gunk is creamy white, with some reddish-brown and even green streaks mixed in... all of it well dried by now thankfully. A hallway leading north seems to have been blocked by the unknown vandals, with all sorts of stuff piled up in it. On the other side in the south you see a small bistro that seems to have catered to the workers here, fairly thoroughly looted. In the [link]west[end link], you can see the start of a cubicle farm of offices. Towards the [link]east[end link], you can leave the building again.".
 The earea of Trevor Labs Lobby is "Sealed".
 Trevor Labs Lobby is sleepsafe.
 
@@ -572,23 +572,32 @@ Table of GameRoomIDs (continued)
 Object	Name
 2F Trevor Labs	"2F Trevor Labs"
 
-2F Trevor Labs is a room. "     You're standing in a hallway on the second floor of the Trevor Labs. The lighting is dim, except for brilliant light shining from beneath a closed door at the end of the hallway. It casts a cone of brightness into the gloom. The area is silent and smells of disinfectant. There does not seem to be much here to look at besides a broken water cooler and a motivational poster with a kitten, encouraging you to hang in there.".
+2F Trevor Labs is a room. "     You're standing on a balcony wrapping all the way around the open lobby/atrium of the Trevor Labs building. Through a glass wall in the east, you can look out into the city, while a sign next to the hallway to the [link]north[end link] shows the words 'Primary Lab', with light shining through under a closed door at the very end of it. The hallway to the south reads 'Accounting', which seems much less interesting. To the west, you can see offices behind a glass divider that bears the word 'Marketing'. You could also use one of the two stairways to go [link]down[end link] into the lobby again.".
 2F Trevor Labs is above Trevor Labs Lobby.
 2F Trevor Labs is sleepsafe.
+
+
+Table of GameRoomIDs (continued)
+Object	Name
+Second Floor Lab Hallway	"Second Floor Lab Hallway"
+
+Second Floor Lab Hallway is a room. "     You're standing in a hallway on the second floor of the Trevor Labs. The lighting is dim, and beyond the two doors left and right along the walls, you can find abandoned offices and similar rooms. Only at the end of the corridor in the [link]north[end link] do you see a brilliant light shining from beneath a closed door at the end of the hallway, casting a cone of brightness into the gloom. The area is silent and smells of disinfectant. Towards the [link]south[end link] you can step back onto the balcony wrapping around the building's atrium.".
+Second Floor Lab Hallway is north of 2F Trevor Labs.
+Second Floor Lab Hallway is sleepsafe.
 
 Table of GameRoomIDs (continued)
 Object	Name
 Primary Lab	"Primary Lab"
 
-Primary Lab is a room. "     One of the few places in the city with working power, this lab is brilliantly lit, showing off banks of busy computer terminals displaying dizzying amounts of information, largely obscure and technical. Overhead, soft humming of air conditioning is the likely reason that the room feels just a bit chilly. There is an especially comfy chair resting before the largest computer. There is only one window here, and it is mostly blocked by filing cabinets. Perhaps it is the light you saw outside.".
-Primary Lab is north of 2F Trevor Labs.
+Primary Lab is a room. "     One of the few places in the city with working power, this lab is brilliantly lit, showing off just about all the medical and technological gear you can imagine. Trevor Labs really didn't spare any cost equipping their scientists, which isn't too surprising, as their work is what made the company money. A whole bank of computer terminals is arrayed towards the left side of the room, with monitors displaying dizzying amounts of information, largely obscure and technical. Overhead, soft humming of air conditioning is the likely reason that the room feels just a bit chilly. Towards the back of the room, you can see what appears to be some kind of multi-stage airlock, leading into a separated off smaller room behind a large, thick and reinforced window. The large warning sign reading 'Biosafety Level 3' on the window might have something to do with it. Within, what looks to be a comfortable camp has been set up, with a bed, supplies and everything. You can leave the lab by going [link]south[end link], back into the hallway that brought you here.".
+Primary Lab is north of Second Floor Lab Hallway.
 There is an Infection Terminal in Primary Lab. "A glowing infection terminal quietly lists all the infections in the corner.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Park Entrance	"Park Entrance"
 
-Park Entrance is a room. "     Ah, the city park. Smell that fresh pine air, and the scent of - wait no, that grass has not been mowed for quite a while. Just how long ago did all this trouble start anyway? Time seems fluid these days, making it hard for you to remember. No matter what, the grass has started to creep up onto the pavement that leads further into the park (north) and all the other plants seem pretty overgrown and untamed too. The park's boundary wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
+Park Entrance is a room. "     Ah, the city park. Smell that fresh pine air, and the scent of - wait no, that grass has not been mowed for quite a while. Just how long ago did all this trouble start anyway? Time seems fluid these days, making it hard for you to remember. No matter what, the grass has started to creep up onto the pavement that leads further into the park ([link]north[end link]) and all the other plants seem pretty overgrown and untamed too. The park's boundary wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
 Park Entrance is fasttravel.
 The earea of Park Entrance is "Outside".
 Park Entrance is sleepsafe.
@@ -597,24 +606,81 @@ Table of GameRoomIDs (continued)
 Object	Name
 Park Trail	"Park Trail"
 
-Park Trail is a room. "     Following this North/South trail, you can see the severely overgrown state of the park all around you. All this can't be purely natural - it'd take ages to have gotten this bad. Seems like some of the spreading nanites decided to create a section of untamed wilderness right in the middle of the city. There are dense woods in almost every direction, including to the North, where the paved trail ends at a tree that must have literally exploded out of the ground under it. In the Northwest, there is a small expanse of bamboo forest, with a Torii arch forming the start of a narrow gravel trail leading into it.[line break]     The path northwest looks safe and strangely peaceful, but it'll be easy to become lost in the rest of the thick woods of the park - though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
+Park Trail is a room.
 earea of Park Trail is "Park".
+Description of Park Trail is "[ParkTrailDesc]".
+
+to say ParkTraiLDesc:
+	say "     Following this north/south trail, you can see the severely overgrown state of the park all around you. All this can't be purely natural - it'd take ages to have gotten this bad. Seems like some of the spreading nanites decided to create a section of untamed wilderness right in the middle of the city. There are dense woods in almost every direction, including to the [link]north[end link], where the paved trail ends at a truly colossal tree that must have literally exploded out of the ground under it. It is wider than the path was in its intact state. A wooden sign pointing [link]east[end link] indicates the presence of a hiking trail going that way. In the [link]northwest[end link], there is an expanse of bamboo forest, with a bright red Torii arch forming the start of a gravel trail leading into it. [if Public Hitching Post is resolved]Besides that, you remember that there actually is a narrow way through the thick and underbrush to the [link]northwest[end link], leading to a former picnic area. [end if][line break]";
+	say "     Nature is abuzz and active all around you, with rustling The path [link]northwest[end link] looks safe and strangely peaceful, but it'll be easy to become lost in the rest of the thick woods of the park - though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.";
 
 Park Trail is north of Park Entrance.
 Park Exit is a door. Park Exit is dangerous. The marea of Park Exit is "Outside". Park Exit is undescribed. Park Exit is south of Park Entrance. Outside Exploration is south of Park Exit.
-Faint Trail is east of Park Trail.
 
 Table of GameRoomIDs (continued)
 Object	Name
-Lost in the Woods	"Lost in the Woods"
+Hiking Trail Start	"Hiking Trail Start"
 
-Lost in the Woods is a room.
-Lost in the Woods is east of Faint Trail.
+Hiking Trail Start is a room.
+Hiking Trail Start is east of Park Trail.
+earea of Hiking Trail Start is "Park".
+Description of Hiking Trail Start is "[HikingTrailStartDesc]".
 
-Faint Trail is a door.
-Description of a faint trail is "A faint trail that heads eastwards into the deep woods. It looks dangerous - who knows what is lurking out there?".
-Faint Trail is dangerous.
-The marea of Faint Trail is "Park".
+to say HikingTrailStartDesc:
+	say "     You're on a severely overgrown hiking trail through the city park, standing on well-trodden bare earth. Even here, just at the start of the trail, you almost feel like you're in the middle of wilderness, as there is no sight or sound of the city visible anywhere around you. With how lush and vibrant all of the plants are growing, the area has become akin to a centuries-old, undisturbed forest. Sounds of nature surround you, from wind blowing through the trees, rustling in the underbrush, birds singing, all the way to other noises from more human-like throats that sometimes crop up in the mix. Given what's happening everywhere else in the city, you guess that hearing moans and ecstatic shouting in the moderate distance isn't much of a surprise anymore.";
+	say "     To the [link]west[end link], the edge of a paved path is visible past the all-encroaching plant life, while the path leads further [link]east[end link] deeper into the woods.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Hiking Trail Bend	"Hiking Trail Bend"
+
+Hiking Trail Bend is a room.
+Hiking Trail Bend is east of Hiking Trail Start.
+earea of Hiking Trail Bend is "Park".
+Description of Hiking Trail Bend is "[HikingTrailBendDesc]".
+
+to say HikingTrailBendDesc:
+	say "     You're on a severely overgrown hiking trail through the city park, standing on well-trodden bare earth. It feels like you're in the middle of wilderness, as there is no sight or sound of the city visible anywhere around you. With how lush and vibrant all of the plants are growing, the area has become akin to a centuries-old, undisturbed forest. Sounds of nature surround you, from wind blowing through the trees, rustling in the underbrush, birds singing, all the way to other noises from more human-like throats that sometimes crop up in the mix. Given what's happening everywhere else in the city, you guess that hearing moans and ecstatic shouting in the moderate distance isn't much of a surprise anymore.";
+	say "     The trail makes a bend here, leading further [link]west[end link] and also [link]northeast[end link], ever deeper into the woods.";
+
+Hiking Trail Split is a room.
+Hiking Trail Split is northeast of Hiking Trail Bend.
+earea of Hiking Trail Split is "Park".
+Description of Hiking Trail Split is "[HikingTrailSplitDesc]".
+
+to say HikingTrailSplitDesc:
+	say "     You're on a severely overgrown hiking trail through the city park, standing on well-trodden bare earth. It feels like you're in the middle of wilderness, as there is no sight or sound of the city visible anywhere around you. With how lush and vibrant all of the plants are growing, the area has become akin to a centuries-old, undisturbed forest. Sounds of nature surround you, from wind blowing through the trees, rustling in the underbrush, birds singing, all the way to other noises from more human-like throats that sometimes crop up in the mix. Given what's happening everywhere else in the city, you guess that hearing moans and ecstatic shouting in the moderate distance isn't much of a surprise anymore.";
+	say "     A broken-off wooden signpost lies on the ground before you, its multiple arrows with directions mangled and mostly unreadable. Looks like something just snapped it off like a twig. This might have been deliberate, or the side effect of some larger beasts fighting with each other. No matter which, it doesn't help you now, and looking around, there doesn't appear to be any visible difference between one bit of forest and the next. Only a hiking trail to the [link]southwest[end link] seems to be a safe bet of moving towards the entrance of the park again. Continuing deeper into the woods pretty much means picking a random direction and hoping for the best from here on out.";
+
+Hiking Direction 1 is a door. Hiking Direction 1 is dangerous. The marea of Hiking Direction 1 is "Park". Hiking Direction 1 is undescribed.
+Hiking Direction 2 is a door. Hiking Direction 2 is dangerous. The marea of Hiking Direction 2 is "Park". Hiking Direction 2 is undescribed.
+Hiking Direction 3 is a door. Hiking Direction 3 is dangerous. The marea of Hiking Direction 3 is "Park". Hiking Direction 3 is undescribed.
+Hiking Direction 4 is a door. Hiking Direction 4 is dangerous. The marea of Hiking Direction 4 is "Park". Hiking Direction 4 is undescribed.
+Hiking Direction 5 is a door. Hiking Direction 5 is dangerous. The marea of Hiking Direction 5 is "Park". Hiking Direction 5 is undescribed.
+Hiking Direction 6 is a door. Hiking Direction 6 is dangerous. The marea of Hiking Direction 6 is "Park". Hiking Direction 6 is undescribed.
+Hiking Direction 7 is a door. Hiking Direction 7 is dangerous. The marea of Hiking Direction 7 is "Park". Hiking Direction 7 is undescribed.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Hiking Exploration	"Hiking Exploration"
+
+Hiking Exploration is a room.
+Hiking Exploration is east of Hiking Direction 1.
+Hiking Exploration is northeast of Hiking Direction 2.
+Hiking Exploration is north of Hiking Direction 3.
+Hiking Exploration is southeast of Hiking Direction 4.
+Hiking Exploration is south of Hiking Direction 5.
+Hiking Exploration is northwest of Hiking Direction 6.
+Hiking Exploration is west of Hiking Direction 7.
+Hiking Direction 1 is east of Hiking Trail Split.
+Hiking Direction 2 is northeast of Hiking Trail Split.
+Hiking Direction 3 is north of Hiking Trail Split.
+Hiking Direction 4 is southeast of Hiking Trail Split.
+Hiking Direction 5 is south of Hiking Trail Split.
+Hiking Direction 6 is northwest of Hiking Trail Split.
+Hiking Direction 7 is west of Hiking Trail Split.
+
+
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -674,28 +740,28 @@ Red Apartment 1st Floor is inside from Red Apartment Building.
 Description of Red Apartment 1st Floor is "[RedApt1stDesc]".
 
 to say RedApt1stDesc:
-	say "     The interior lobby of the red apartment building is marked by the typical sights of the nanite apocalypse: Scattered clothes and possessions of people who were overtaken by feral infected, combined with crusty patches of dried cum on the floor, walls and sometimes even ceiling. The fact that the building has fairly large glass doors on two sides seems to have worked against the inhabitants, making them easily visible for passing predators. Several of the doors are marked with claw-slashes and half-torn out of their frames, while others show more calculated destruction. There must have been a crowbar at work for those, likely from looters going for a quick smash and grab. A stairway allows access to the next floor up.";
+	say "     The interior lobby of the red apartment building is marked by the typical sights of the nanite apocalypse: Scattered clothes and possessions of people who were overtaken by feral infected, combined with crusty patches of dried cum on the floor, walls and sometimes even ceiling. The fact that the building has fairly large glass doors on two sides seems to have worked against the inhabitants, making them easily visible for passing predators. Several of the doors are marked with claw-slashes and half-torn out of their frames, while others show more calculated destruction. There must have been a crowbar at work for those, likely from looters going for a quick smash and grab. A stairway allows access to the next floor [Bold Type]up[roman type].";
 
 Red Apartment 2nd Floor is a room.
 Red Apartment 2nd Floor is above Red Apartment 1st Floor.
 Description of Red Apartment 2nd Floor is "[RedApt2ndDesc]".
 
 to say RedApt2ndDesc:
-	say "     The middle section of the red apartment building seems to have been a sort of communal area, with a seating area of several sofas, as well as a vending machine. Of course, the latter has been broken into and cleaned out down to the last chocolate bar, and one sofa has been pushed to block the end of the stairway coming up from below. Two other pieces of furniture seem to be missing entirely, with scratchmarks on the linoleum floor allowing a guess that they were dragged into one apartment in the northeast. Glancing around, you see less damage than on the floor below, with only one or two doors having experienced a looter's touch. A stairway on the other side of the room leads further up in the building.";
+	say "     The middle section of the red apartment building seems to have been a sort of communal area, with a seating area of several sofas, as well as a vending machine. Of course, the latter has been broken into and cleaned out down to the last chocolate bar, and one sofa has been pushed to block the end of the stairway coming up from below. Two other pieces of furniture seem to be missing entirely, with scratchmarks on the linoleum floor allowing a guess that they were dragged into one apartment in the [link]northeast[end link]. Glancing around, you see less damage than on the floor below, with only one or two doors having experienced a looter's touch. A stairway on the other side of the room leads further [Bold Type]up[roman type] in the building.";
 
 Red Apartment 3rd Floor is a room.
 Red Apartment 3rd Floor is above Red Apartment 2nd Floor.
 Description of Red Apartment 3rd Floor is "[RedApt3rdDesc]".
 
 to say RedApt3rdDesc:
-	say "     The middle section of the red apartment building seems to have been a sort of communal area, with formerly neat rows of chairs lined up before a small podium and whiteboard. The typical chaos of the city shows in the fact that several chairs are knocked over or pushed together in untidy clumps, and someone has scrawled lewd, but surprisingly artistic scenes of varied interspecies sex on the whole board. The doors of apartments all around you appear untouched. A stairway on the other side of the room leads further up in the building.";
+	say "     The middle section of the red apartment building seems to have been a sort of communal area, with formerly neat rows of chairs lined up before a small podium and whiteboard. The typical chaos of the city shows in the fact that several chairs are knocked over or pushed together in untidy clumps, and someone has scrawled lewd, but surprisingly artistic scenes of varied interspecies sex on the whole board. The doors of apartments all around you appear untouched. A stairway on the other side of the room leads further [Bold Type]up[roman type] in the building.";
 
 Red Apartment 4th Floor is a room.
 Red Apartment 4th Floor is above Red Apartment 3rd Floor.
 Description of Red Apartment 4th Floor is "[RedApt4thDesc]".
 
 to say RedApt4thDesc:
-	say "     The middle section of the red apartment building seems to have been a sort of communal area, which meant a community garden under large skylights. The front section appears to be mostly decorative, while further back, there are a number of fruit-bearing plants, surprisingly still with their rich bounty attached. Yet the temptation to go help yourself to some is quickly suppressed as you notice that at least one large, spindly plant is actually a monstrously large stick insect, standing perfectly motionless among the greenery with raised striking claws. It doesn't react in any way to your presence, or being spoken to. The doors of apartments all around you appear untouched, and a stairway leads down to the next lower floor. Finally, there is a fairly inconspicuous 'roof access' door on the opposite side of the room.";
+	say "     The middle section of the red apartment building seems to have been a sort of communal area, which meant a community garden under large skylights. The front section appears to be mostly decorative, while further back, there are a number of fruit-bearing plants, surprisingly still with their rich bounty attached. Yet the temptation to go help yourself to some is quickly suppressed as you notice that at least one large, spindly plant is actually a monstrously large stick insect, standing perfectly motionless among the greenery with raised striking claws. It doesn't react in any way to your presence, or being spoken to. The doors of apartments all around you appear untouched, and a stairway leads [Bold Type]down[roman type] to the next lower floor. Finally, there is a fairly inconspicuous 'roof access' door on the opposite side of the room.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -718,7 +784,7 @@ understand "plains" as Dry Plains.
 
 LastTrashSearchTurn is a number that varies. [@Tag:NotSaved]
 
-Dry Plains is a room. It is fasttravel. "     At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you, all the way to the harsh and insurmountable cliff-faces of Mount Shirley, the northern barrier of the wide river valley the city was originally founded in. You don't see any kind of military cordon here, making you suspect those already infected have spread out here before the military was mobilized to close it off. Smoke rising far in the northwest makes you guess that their lines are probably there, at the chokepoint between the mountain and the expansive Pacifica Nature Preserve. Some hoof prints you spot in a sandy patch nearby furthers the assumption that it is no longer human civilization that rules here. As for the open grasslands, it looks like the something leveled just about all of the scattered buildings further out. Now all that is left of them among the dirt and grassland are mounds of rubble. The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.".
+Dry Plains is a room. It is fasttravel. "     At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you, all the way to the harsh and insurmountable cliff-faces of Mount Shirley, the [link]northern[as]north[end link] barrier of the wide river valley the city was originally founded in. You don't see any kind of military cordon here, making you suspect those already infected have spread out here before the military was mobilized to close it off. Smoke rising far in the northwest makes you guess that their lines are probably there, at the chokepoint between the mountain and the expansive Pacifica Nature Preserve. Some hoof prints you spot in a sandy patch nearby furthers the assumption that it is no longer human civilization that rules here. As for the open grasslands, it looks like the something leveled just about all of the scattered buildings further out. Now all that is left of them among the dirt and grassland are mounds of rubble. The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.".
 The earea of Dry Plains is "Plains".
 Plains Door is a door. The marea of plains door is "Plains". "The plains stretch out before you, with slight rolls in the landscape and dotted with fallen buildings and other rare features.". Plains Door is dangerous. Plains door is east of dry plains.
 Plains door is west of Wandering the Plains.

@@ -837,7 +837,7 @@ Part 3 - Tactical Gloves
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"tactical gloves"	"A set of black fingerless gloves, with built-in knuckle guards. Looks to be police issue gear. Judging by the gloves appearance, it's [']unisex['] and looks pretty [']autorotative[']."	1	tactical gloves
+"tactical gloves"	"A set of black fingerless gloves, with built-in knuckle guards. Looks to be police issue gear. Judging by the gloves appearance, it's [']unisex['] and looks pretty [']authoritative[']."	1	tactical gloves
 
 tactical gloves is a grab object.
 tactical gloves is equipment.

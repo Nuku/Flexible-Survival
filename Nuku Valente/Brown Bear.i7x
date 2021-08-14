@@ -46,15 +46,22 @@ to say UrsineWins:
 			say "     The insistent stimulation becomes too much for your needy lover, and she clenches her thighs tightly around your head as she cums, roaring her pleasure into the [if daytimer is day]sky[else]night[end if] with a body-wide shudder. You dig your hands into her thighs to hold her still, catching as much of her spurting femcum in your mouth as you can manage, basking in the heat and taste of her orgasm";
 			if Player is herm:
 				say ". Eager to return the favor, the ursine reaches over to take hold of [if Cock Count of Player > 1]one of [end if]your cock[smn] and plunge her digits into your hot, damp folds. She pumps and jills you vigorously until you reach the precipice of orgasm, then lowers her head to suck you off until you cum, hips bucking against her muzzle as your spray your [Cum Load Size of Player] load across her tongue [if Cock Count of Player > 1]and face [end if]while your nectar squirts all over the ground below.";
+				CreatureSexAftermath "Brown Bear Female" receives "OralCock" from "Player";
+				CreatureSexAftermath "Player" receives "Stroking" from "Brown Bear Female";
 			else if Player is female:
 				say ". Eager to return the favor, the ursine reaches over to plunge her digits into your hot, damp folds. She rubs a thumb against your clit and jills you vigorously until you reach the precipice of orgasm, then lowers her head to eat you out until you cum, hips bucking against her muzzle as you drench her fur in your nectar";
+				CreatureSexAftermath "Player" receives "Stroking" from "Brown Bear Female";
 			else:
 				say ". Eager to return the favor, the ursine reaches over to take hold of [if Cock Count of Player > 1]one of [end if]your cock[smn]. She pumps your length vigorously until you reach the precipice of orgasm, then lowers her head to suck you off until you cum, hips bucking against her muzzle as you spray your [Cum Load Size of Player] load across her tongue [if Cock Count of Player > 1]and face [end if]in powerful blasts.";
+				CreatureSexAftermath "Brown Bear Female" receives "OralCock" from "Player";
+				CreatureSexAftermath "Player" receives "Stroking" from "Brown Bear Female";
 			say ".";
 			say "     By the time [if Player is neuter]she comes[else]you come[end if] to, your mind is awash in a haze of sticky bliss. The bear rises on unsteady footing and pulls you up into her arms, grinding her sopping wet snatch against your thigh while her tongue lavishes your face in affection. The treatment nearly readies you for another round with the extra-sized ursine, but she pulls away before you succumb to those urges, grinning broadly and rubbing your head with a furry paw. Sharing one last affectionate hug, the bear saunters off with a spring to her step, and you stumble away feeling very much drained.";
+			CreatureSexAftermath "Player" receives "OralPussy" from "Brown Bear Female";
 		else:
 			say "     The bear towers over your fallen form. Her shaggy thighs are already damp with arousal, and her long, hard nipples peek through her fur. 'I feel naughty. Help me.' She hesitates for a moment before kneeling over your head. Her warm juices drip over your face before your whole world grows dark and your vision is filled with slavering bear snatch. With surprising delicacy, she begins to grind your face into her pussy, filling your breath with her nectar's potent aroma.";
 			say "     Unable to break free, you drive your tongue deep into her sweet, inviting cleft in the hope you can make her cum and let you go. After a few desperate, breathless minutes of orally worshiping your ursine captor, you feel her shudder in orgasm atop you, her thick honeys drenching your face in her delicious, sticky essence. After her climax, she rests atop you for several long minutes, her breathing somewhat troubled as aftershocks of pleasure ripple through her form. The moment she rolls off, you scramble to your feet and run away, fleeing before she can catch you again. You continue to lick your lips long after her abuse, her lingering flavor as distracting as it is enjoyable.";
+			CreatureSexAftermath "Player" receives "OralPussy" from "Brown Bear Female";
 		if "Microwaved" is not listed in feats of Player and "Male Preferred" is not listed in feats of Player:
 			if Player is not female:
 				now Cunt Count of Player is 1;
@@ -79,8 +86,12 @@ to say UrsineWins:
 	else if a random chance of 2 in 3 succeeds and player is not neuter:
 		if Player is male and ( Cunt Count of Player is 0 or a random chance of 2 in 5 succeeds ):
 			say "     She licks her lips as her favorite survivor is once again at her mercy. 'Oh why did you came back?' The smell of her arouses you, and she spots your hardening maleness. 'Oh. I guess we all have needs, now. Let me help you with that.' With that, she kneels down and wraps her huge mouth around your almost painfully swollen cock. You stay motionless as you see her lethal teeth not inches from your straining member, but the fear is soon forgotten as her skillful lips and tongue work you to an orgasm that has you [one of]spurting until your balls ache[or]moaning in pleasure[or]fighting unsuccessfully to avoid cumming over and over[at random]. After an age of being pleasured until your straining cock relaxes, you lay back and begin to doze. While you rest, the honey-scented bear departs, saying in a voice thick with lust, 'I've got to attend to myself now, [one of]Hotshot[or]Honey[at random]. Come back when you're ready for more fun.' Hearing the moaning of the bear as she pleasures herself, you realize it's time to move.";
+			CreatureSexAftermath "Brown Bear Female" receives "OralCock" from "Player";
 		else:
 			say "     She licks her lips as her favorite survivor is once again at her mercy. 'Oh why did you came back?' The smell of her arouses you, and she licks her lips at scent of your wet pussy. 'Oh. I guess you just miss me and need some more attention. Mmm... let me help you with that, [one of]sweetie[or]honey[at random].' With that, she pushes you down onto the grass and brings her bruin muzzle to your juicy slit, wet and dripping with arousal. Her big, broad tongue slathers attention on your pussy, lapping up your juices before diving in to you to make you moan loudly through a series of increasingly powerful female orgasms[if Player is male]. One of her large bear paws strokes and pumps at your cock throughout this, getting you to blast your load onto yourself repeatedly as well[end if]. The bear licks it all up lustfully, clearly enjoying the taste of your drenched folds. After an age of being pleasured until you're about to pass out, you lay back and begin to doze. While you rest, the honey-scented bear departs, saying in a voice thick with lust, 'I've got to attend to myself now, [one of]Sweetie[or]Honey[at random]. Come back when you're ready for more fun.' Hearing the moaning of the bear as she pleasures herself, you realize it's time to move.";
+			if Player is male:
+				CreatureSexAftermath "Player" receives "Stroking" from "Brown Bear Female";
+			CreatureSexAftermath "Player" receives "OralPussy" from "Brown Bear Female";
 		now UrsineDefeatCount is 3;
 		increase morale of Player by 2;
 		decrease Libido of Player by 6;
@@ -89,6 +100,7 @@ to say UrsineWins:
 		if Libido of Player < 0, now Libido of Player is 0;
 	else:
 		say "     [if fightoutcome is 21]Falling prey to your lusts, the[else if fightoutcome is 22]Seeing you submit, the[else]The[end if] bear hugs you against her honey-scented body and presses you deep into her warm, dark fur. Through her hide you hear her say, 'Why must we always fight so?' You feel her nipples leaking honeyed milk, and you are compelled to suck on them in your daze. Incredibly sweet milk flows into your mouth and into your body, each delicious spurt leaving you more and more aroused. After coating your palate in her intoxicating flavor, you move from one dark nipple to the next, squeezing and suckling on it for more. You can hear the bear purring deeply as you indulge yourself, her claw-tipped fingers roaming over your back to show her appreciation. Your hand snakes down between the bear's huge thighs, and you rub across her drenched and dripping pussy to increase the flow of her milk. You can feel and taste her orgasm approaching, and with one last generous spurt, you both orgasm hard. Refreshed and satisfied after your meal, you give the bear a grateful hug before heading on your way again.";
+		CreatureSexAftermath "Brown Bear Female" receives "Stroking" from "Player";
 		PlayerDrink 3;
 		PlayerEat 2;
 		increase morale of Player by 2;

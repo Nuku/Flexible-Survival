@@ -134,18 +134,18 @@ To regularstart: [normal start method]
 				else:
 					now clearnomore is 0;
 			-- 12:
-				if NewGraphicsInteger is 1:
-					now graphics is true; [technically not necessary, but nice to have for edge cases]
-					now NewGraphics is true;
-					now NewGraphicsInteger is 2;
-				else if NewGraphicsInteger is 2:
+				if NewGraphicsInteger is 2: [side window]
 					now graphics is false;
 					now NewGraphics is false;
-					now NewGraphicsInteger is 0;
-				else if NewGraphicsInteger is 0:
+					now NewGraphicsInteger is 0; [off]
+				else if NewGraphicsInteger is 0: [off]
 					now graphics is true;
-					now NewGraphics is false;
-					now NewGraphicsInteger is 1;
+					now NewGraphics is true;
+					now NewGraphicsInteger is 1; [inline]
+				else if NewGraphicsInteger is 1: [inline]
+					now graphics is true; [technically not necessary, but nice to have for edge cases]
+					now NewGraphics is true;
+					now NewGraphicsInteger is 2; [side window]
 			-- 13:
 				say "[set_invcolumns]";
 			-- 99:
@@ -208,16 +208,37 @@ to say gsopt_start:
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	[Code for letting player select graphics window size]
 	if NewGraphics is true:
-		say "You have enabled the graphics side window. This will be on the right side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose this proportion now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side window will take up. We recommend somewhere around 30.[line break]";
+		say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
+		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
+		say "Please choose the position value now. (0 = right side, 1 = left side, 2 = above, 3 = below)[line break]";
+		while 1 is 1:
+			say "(0-3)>[run paragraph on]";
+			get a number;
+			if calcnumber > -1 and calcnumber < 4:
+				break;
+			else:
+				say "Invalid Entry. Please enter a number between 0 and 3.";
+		now NewGraphicsPosition is calcnumber;
+		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
 		while 1 is 1:
 			say "(5-90)>[run paragraph on]";
 			get a number;
 			if calcnumber > 4 and calcnumber < 91:
 				break;
 			else:
-				say "Invalid Entry. Please enter a number between 5 and 90";
+				say "Invalid Entry. Please enter a number between 5 and 90.";
 		now NewGraphicsRatio is calcnumber;
+		now the graphics window proportion is NewGraphicsRatio;
+		if NewGraphicsPosition is:
+			-- 0:
+				now graphics window position is g-right;
+			-- 1:
+				now graphics window position is g-left;
+			-- 2:
+				now graphics window position is g-above;
+			-- 3:
+				now graphics window position is g-below;
+		reconstruct graphics window;
 		clear the screen;
 	say "Want more details on the game and updates? ----- [bold type]https://blog.flexiblesurvival.com/[roman type]  ------[line break][line break]";
 	WaitLineBreak;
@@ -230,11 +251,13 @@ to say gsopt_start:
 		now white briefs is equipped;
 		ItemGain brown loafers by 1 silently;
 		now brown loafers is equipped;
+		ItemGain Broken Smartphone by 1 silently;
 	else if scenario is "Caught Outside":
 		ItemGain white t-shirt by 1 silently;
 		now white t-shirt is equipped;
 		ItemGain black jeans by 1 silently;
 		now black jeans are equipped;
+		ItemGain Broken Smartphone by 1 silently;
 	else if scenario is "Rescuer Stranded":
 		ItemGain camo shirt by 1 silently;
 		now camo shirt is equipped;
@@ -244,6 +267,7 @@ to say gsopt_start:
 		now black boxer briefs are equipped;
 		ItemGain black combat boots by 1 silently;
 		now black combat boots is equipped;
+		ItemGain Broken Smartphone by 1 silently;
 	else if scenario is "Forgotten":
 		ItemGain blue sleeveless shirt by 1 silently;
 		now blue sleeveless shirt is equipped;
@@ -253,6 +277,7 @@ to say gsopt_start:
 		now white briefs is equipped;
 		ItemGain brown loafers by 1 silently;
 		now brown loafers is equipped;
+		ItemGain Broken Smartphone by 1 silently;
 	else if scenario is "Researcher":
 		ItemGain white t-shirt by 1 silently;
 		now white t-shirt is equipped;
@@ -294,6 +319,7 @@ to say gsopt_start:
 		increase score by 100;
 		now BlindMode is true;
 	if scenario is "Bunker":
+		ItemGain Broken Smartphone by 1 silently;
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. You managed to escape to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		say "     You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";
 	else if scenario is "Caught Outside":
@@ -550,26 +576,43 @@ to say silent_start:
 		now graphics is false;
 		now NewGraphics is false;
 	if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
-		now the graphics window proportion is NewGraphicsRatio;
-		build graphics window;
-		[now the graphics window pixel count is 1;]
-		follow the ngraphics_blank rule;
-		follow the current graphics drawing rule;
-		now NewGraphicsOpened is true;
-	clear the screen;
-	if NewGraphics is true:
-		say "[bold type]Graphic Window Proportion[roman type][line break]";
-		say "You have enabled the new graphics window. This will be on the right side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose this value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+		say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
+		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
+		say "Please choose the position value now. (0 = right side, 1 = left side, 2 = above, 3 = below)[line break]";
+		while 1 is 1:
+			say "(0-3)>[run paragraph on]";
+			get a number;
+			if calcnumber > -1 and calcnumber < 4:
+				break;
+			else:
+				say "Invalid Entry. Please enter a number between 0 and 3.";
+		now NewGraphicsPosition is calcnumber;
+		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
 		while 1 is 1:
 			say "(5-90)>[run paragraph on]";
 			get a number;
 			if calcnumber > 4 and calcnumber < 91:
 				break;
 			else:
-				say "Invalid Entry. Please enter a number between 5 and 90";
+				say "Invalid Entry. Please enter a number between 5 and 90.";
 		now NewGraphicsRatio is calcnumber;
 		clear the screen;
+		now the graphics window proportion is NewGraphicsRatio;
+		if NewGraphicsPosition is:
+			-- 0:
+				now graphics window position is g-right;
+			-- 1:
+				now graphics window position is g-left;
+			-- 2:
+				now graphics window position is g-above;
+			-- 3:
+				now graphics window position is g-below;
+		reconstruct graphics window;
+		[now the graphics window pixel count is 1;]
+		follow the ngraphics_blank rule;
+		follow the current graphics drawing rule;
+		now NewGraphicsOpened is true;
+	clear the screen;
 	say "Just a moment. There are a few more things to prepare...";
 	WaitLineBreak;
 	if scenario is "Bunker":
@@ -948,13 +991,13 @@ to say gsopt_1:
 	while gsexit is 0:
 		clear the screen;
 		say "[bold type]Select your main stat (+5 bonus):[roman type][line break]";
-		say "(1) [link]Strength[as]1[end link] = [if MainStat is 1][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Represents your raw physical might and your ability to deal damage.";
-		say "(2) [link]Dexterity[as]2[end link] = [if MainStat is 2][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Affects your likelihood to hit and dodge.";
-		say "(3) [link]Stamina[as]3[end link] = [if MainStat is 3][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Increases your total health pool and your overall endurance.";
-		say "(4) [link]Charisma[as]4[end link] = [if MainStat is 4][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Deals with social interactions with NPCs and your pets, and affects your morale.";
-		say "(5) [link]Intelligence[as]5[end link] = [if MainStat is 5][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
-		say "(6) [link]Perception[as]6[end link] = [if MainStat is 6][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
-		say "(7) [link]Random[as]7[end link]: Randomize your stat points upon creation.";
+		say "(1) [link]Strength[as]1[end link] = [if MainStat is 1][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Represents your raw physical might and your ability to deal damage.";
+		say "(2) [link]Dexterity[as]2[end link] = [if MainStat is 2][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Affects your likelihood to hit and dodge.";
+		say "(3) [link]Stamina[as]3[end link] = [if MainStat is 3][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Increases your total health pool and your overall endurance.";
+		say "(4) [link]Charisma[as]4[end link] = [if MainStat is 4][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Deals with social interactions with NPCs and your pets, and affects your morale.";
+		say "(5) [link]Intelligence[as]5[end link] = [if MainStat is 5][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
+		say "(6) [link]Perception[as]6[end link] = [if MainStat is 6][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
+		say "(7) [link]Random[as]7[end link] - Randomize your stat points upon creation.";
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
@@ -1237,7 +1280,7 @@ to say gsopt_4:
 		say "[bold type]Difficulty Modes:[roman type][line break]";
 		say "(1) [link]Hard Mode[as]1[end link]: [bold type][if HardMode is true]On[else]Off[end if][roman type][line break]     Hard Mode causes the powerful monsters to be randomly roaming, levels the monsters up alongside you, limits your use of the journal and adds other difficulties to further challenge you.";
 		say "(2) [link]No-Heal Mode[as]2[end link]: [bold type][if NoHealMode is true]On[else]Off[end if][roman type][line break]     No-Heal Mode turns off the accelerated healing at the end of the turn. Medkits and healing boosters heal more though.";
-		say "(3) [link]Blind Mode[as]3[end link]: [bold type][if BlindMode is true]On[else]Off[end if][roman type][line break]     Blind Mode prevents hunting and scavenging for specific supplies. You have a significantly increased chance of encountering something of interest while exploring though.";
+		say "(3) [link]Blind Mode[as]3[end link]: [bold type][if BlindMode is true]On[else]Off[end if][roman type][line break]     Blind Mode prevents hunting and scavenging for supplies. You have a significantly increased chance of encountering something of interest while exploring though.";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-3)>[run paragraph on]";

@@ -6,6 +6,12 @@ Version 3 of Toron by Gherod begins here.
 [Version 2 - Added Tentacular Slushie as a drink. Buffed some drink effects, adjusting negatives accordingly.]
 [Version 3 . Added the Tonics.]
 
+postimport rule:
+	if "Connected Hellfire Corridor" is listed in traits of Toron:
+		connect Hellfire Corridor;
+	if player is in Hellfire Corridor or player is in Hellfire Unknown or player is in Hellfire Dungeon or player is in Hellfire Cell One:
+		connect Hellfire Corridor;
+
 [***********************************************************]
 Section 1 - Toron NPC
 [***********************************************************]
@@ -74,6 +80,11 @@ to say ToronTalkMenu:
 	now description entry is "Have Toron craft a special tonic for you";
 	[]
 	choose a blank row in table of fucking options;
+	now title entry is "Request an exotic escort";
+	now sortorder entry is 1;
+	now description entry is "Browse the exotic escorts catalog";
+	[]
+	choose a blank row in table of fucking options;
 	now title entry is "Recent events";
 	now sortorder entry is 2;
 	now description entry is "Request an update on what's going on";
@@ -110,6 +121,12 @@ to say ToronTalkMenu:
 		now title entry is "About Xaedihr";
 		now sortorder entry is 8;
 		now description entry is "Ask if he knows Xaedihr";
+	[]
+	if Resolution of DamienIntro >= 5:
+		choose a blank row in table of fucking options;
+		now title entry is "About Damien";
+		now sortorder entry is 8;
+		now description entry is "Ask Toron about some details regarding the scavenger you met";
 	[]
 	if resolution of Ambush The Purifier < 99 and HP of Araqiel is 1 or HP of Araqiel is 2:
 		choose a blank row in table of fucking options;
@@ -155,6 +172,9 @@ to say ToronTalkMenu:
 				else if (nam is "Order a tonic"):
 					say "[ToronTalkTonic]";
 					now ToronDoneTalking is true;
+				else if (nam is "Request an exotic escort"):
+					say "[ToronTalkExoticEscortsMenu]"; [on Hellfire Workers file]
+					now ToronDoneTalking is true;
 				else if (nam is "Recent events"):
 					say "[ToronTalkNews]";
 					now ToronDoneTalking is true;
@@ -170,6 +190,8 @@ to say ToronTalkMenu:
 					say "[ToronTalkMogdraz]";
 				else if (nam is "About Xaedihr"):
 					say "[ToronTalkXaedihr]";
+				else if (nam is "About Damien"):
+					say "[ToronTalkDamien]"; [on Damien file]
 				else if (nam is "About that odd Angel..."):
 					say "[ToronTalkPurifier]"; [on Araqiel file]
 				else if (nam is "Mogdraz and Araqiel"):
@@ -249,6 +271,7 @@ to say ToronTalkWork:
 to say ToronTalkVR:
 	say "     Given the fact this Club ends up being the destination of many void travelers in the dimensional vicinity (or whatever they come from), you ask Toron a bit more about that. He does not seem too eager to inform you of anything specific, but he does start to speak. 'They come from the void, indeed. It was our point of arrival when we traveled from our former dimension. If you are curious about it, however...' - he makes a pause and eyes you with a very serious look - 'While I don't recommend it... You may find the entrance to the Void Realm past the door behind me. If anyone asks, say Toron let you in. But do be careful out there, that place is not for the faint of mind. Bring me any secrets you find.'";
 	say "     It is a good thing you asked about the Void, or you would not have gained access to the Staff area of the Hellfire Club... Just head [bold type]west of the Hellfire Lounge[roman type] then proceed [bold type]north[roman type] to find the entrance to this mysterious realm.";
+	TraitGain "Connected Hellfire Corridor" for Toron;
 	connect Hellfire Corridor;
 
 to say ToronTalkSex:

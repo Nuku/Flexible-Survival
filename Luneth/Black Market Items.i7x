@@ -83,7 +83,7 @@ Part 4 - Sissifier Gel
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"sissifier gel"	"A small bottle of slimy pink goo. The label says that it will shrink your cock but will not remove it. External use only."	0	sissifier gel
+"sissifier gel"	"A small tub of slimy pink goo. The label says that it will shrink your cock but will not remove it. External use only."	0	sissifier gel
 
 sissifier gel is a grab object. It is temporary.
 

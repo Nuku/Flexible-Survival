@@ -92,7 +92,7 @@ To say Mutant Centaur Loses:
 				say "     The tentacles wrap around your cock, and then enter your ass with a slight poke of pain, driving you over the edge. The combined scream of rage from the centaur, along with the one of pleasure from you, mixes horribly and seems to shatter the air. The tentacles retract, and the centaur curls up, pulling your [Cock of Player] cock out of its dripping ass.";
 				CreatureSexAftermath "Player" receives "AssDildoFuck" from "Mutant Centaur";
 			say "     Dazed by the sex, you wander off.";
-			CreatureSexAftermath "Mutant centaur" receives "AssFuck" from "Player";
+			CreatureSexAftermath "Mutant Centaur" receives "AssFuck" from "Player";
 			now Libido of Player is 0;
 			SanLoss 4;
 	if Libido of Player > 50 and Cock Count of Player is 0 and player is female:

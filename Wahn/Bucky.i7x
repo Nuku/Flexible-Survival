@@ -44,7 +44,7 @@ PenileVirgin of Bucky is false.
 SexuallyExperienced of Bucky is true.
 TwistedCapacity of Bucky is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Bucky is false. [steriles can't knock people up]
-MainInfection of Bucky is "Husky Alpha".
+MainInfection of Bucky is "Deer".
 Description of Bucky is "[BuckyDesc]".
 Conversation of Bucky is { "Woof." }.
 

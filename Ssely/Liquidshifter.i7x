@@ -11,16 +11,20 @@ to say losetoLiquidshifter:
 		say "     With time, the goo begins to coat your hard member, the twitching arousal being sent into overdrive as the creature teases its cold liquid over your length. It pushes against your tip, the liquid seeming to push into your urethra, the feeling of being filled in such a way so foreign to you. Of course, the pleasure is building up, the impromptu sound having blocked any cum from coming out, to your torture. The slime slides further over your member, seeming to endlessly tease you, before it grips your length tight, squeezing in a pulse, only enough to get you writhing in need for orgasm. 'This is mine, now. Not yours,' the dominant creature somehow whispers directly into your mind.";
 		WaitLineBreak;
 		say "     Suddenly, a phallic form shoves its way forcefully into your ass, the dildo-shaped, gluey protrusion plugging you completely, turning your face into that of complete bliss. The wide grin on the face of the draconic-looking liquidshifter in front of you, eyes watching over your squirming form - the sight of having a new submissive toy to play with getting his own member to harden in front of you - his enjoyment of the situation obvious to you, even as your eyes roll to the back of your head in extreme pleasure. And so, you lay there, in a trap of complete bliss, the stickiness of the slime that covers you keeping you in place, unable to move an inch as the liquidshifter does as he wants to your helpless body.";
-		WaitLineBreak;
 		say "     With such an advantageous position, the towering form of the dominant, grinning liquidshifter begins to push against you, encasing you in its form - the gelatinous form seeming to mold around your body, its member moving to your mouth, completely stuffing you with that musky, hard cock. The creature's balls droop over your chin, the scent overwhelming to you, forced to enjoy the masculine musk. 'Mmm, how's that for a real man...' he mutters with a lustful smile, before pulsing both the plug in your rear and the goo around your cock powerfully. Over time, the lustful moans that escape your lips get louder, before you violently hump into the milking stimulation of the creature's encasement, spurting your seed against the sound in your cock. 'Thaaat's a good boy... You're so delicious,' he teasingly chuckles out, the strange sensation of having your cum soaked up through the sound making you whimper in need.";
 		WaitLineBreak;
 		say "     Slowly, the liquidshifter begins to slide off your form, the sound seeming to pop out, plug disappearing into a mass of goo before you. Before long, you find that the creature simply forms back into its original state, walking away with a large grin.";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Liquidshifter";
+		CreatureSexAftermath "Player" receives "OralCock" from "Liquidshifter";
+		CreatureSexAftermath "Liquidshifter" receives "OralCock" from "Player";
 	else:
 		say "     With time, the goo begins to slide against your cunt, the twitching feeling of arousal being sent into overdrive as it teases its cold liquid over your pussy. It pushes into your sex, sliding in and around, making sure to fill your pussy completely. 'This is mine, now. Not yours,' he mysteriously whispers directly into your mind. Suddenly, a phallic form shoves its way forcefully into your ass, the dildo-shaped, gluey protrusion plugging you completely, turning your face into that of complete bliss. The liquidshifter's muzzle lies above you, grinning, watching over your squirming form - the sight of having a new submissive toy to play with getting his own member to harden in front of you - the creature's enjoyment of the situation obvious to you, even as your eyes roll to the back of your head in ultimate pleasure. And so you lay there, trapped in complete bliss, the stickiness of the slime that covers you keeping you in your place, unable to move an inch as the liquidshifter does as he wants to your helpless body.";
 		WaitLineBreak;
 		say "     With such an advantageous position, the towering form of the dominant, grinning liquidshifter begins to push against you, encasing you in its form, the gelatinous substance seeming to mold around your body. His member pries open your mouth, completely stuffing you with that hard, musky cock. The gargantuan balls droop over your chin, the scent overwhelming to you, forced to enjoy its musk. 'Mmm, how's that for a man...' the towering dominant mutters with a lustful smile, before pulsing both the plug in your rear and the goo inside your cunt powerfully. Over time, the lustful moans that escape your lips get louder, before you violently hump into the milking stimulation of the creature's encasement, leaking your femcum against the awaiting plug.";
-		WaitLineBreak;
 		say "     'Thaaat's a good girl... You're so delicious,' he teasingly chuckles out, the strange sensation of having your fluids soaked up through the goo that covers you making you whimper in need. Slowly though, the liquidshifter begins to slide off your form, the sound seeming to pop out, plug disappearing into a mass of goo before you. Before long, you find that the creature simply forms back into its original state, walking away with a large grin.";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Liquidshifter";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Liquidshifter";
+		CreatureSexAftermath "Player" receives "OralCock" from "Liquidshifter";
 
 to say beattheLiquidshifter:
 	say "     The strange goo creature lies back on the floor, basically melted. Having been defeated, it looks up at you with a whimper.";
@@ -31,8 +35,10 @@ to say beattheLiquidshifter:
 		say "     With a grin, you move forward to the liquidshifter, licking your lips as your feet stick yet again in his mass. You trip up, enjoying the feeling of its gluey-form sticking you to the floor, the adhesion forcing you to stay there, wallowing in enjoyment of the blissful creature's secretions.";
 		if Player is female:
 			say "     As you fall, some goo sticks itself to your cunt, teasing over it - continuing for several minutes. It pulses and pumps, slowly pushing into your pussy, filling you out, much like earlier. Its intense vibrations get you off, forcing writhes of pleasure to rupture through your body, before you spurt your femcum into the pile of goo - combining fluids with the liquidshifter.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Liquidshifter";
 		else:
 			say "     You enjoy the feeling of the defeated creature's gluey-form sticking you to the floor, your cock twitching against the substance, before you eagerly begin humping against its slime. It was almost as if you were slowly sinking into it - your cock being consumed by the creature, like a hole that kept on sucking. Oh gods, did it keep sucking - it was like a warm maw, keeping you stuck in with its loving grasp. You can't help it. Before long, you spurt your seed into the goo, combining the fluids.";
+			CreatureSexAftermath "Liquidshifter" receives "OralCock" from "Player";
 	else:
 		say "     You walk away from the whimpering creature.";
 
@@ -49,7 +55,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Liquidshifter"; [name of the overall species of the infection, used for children, ...]
 	add "Liquidshifter" to infections of ReptileList;
 	add "Liquidshifter" to infections of SlimeList;
 	add "Liquidshifter" to infections of FurryList;

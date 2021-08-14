@@ -34,11 +34,11 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 when play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	add "dullahan" to infections of DemonList;
-	add "dullahan" to infections of MaleList;
-	add "dullahan" to infections of BipedalList;
-	now Name entry is "dullahan";
+	now Species Name entry is "Dullahan"; [name of the overall species of the infection, used for children, ...]
+	add "Dullahan" to infections of DemonList;
+	add "Dullahan" to infections of MaleList;
+	add "Dullahan" to infections of BipedalList;
+	now Name entry is "Dullahan";
 	now enemy title entry is "Dullahan Knight"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
@@ -212,7 +212,7 @@ Usedesc of dullahan dust is "[DullahanDustUse]";
 to say DullahanDustUse:
 	say "You shrug before opening your mouth and throwing the dust into your mouth. It tingles in your tongue and seemingly melts, like pop rocks, making your entire mouth numb for a moment.";
 
-dullahan dust is infectious. Strain of dullahan dust is "dullahan".
+dullahan dust is infectious. Strain of dullahan dust is "Dullahan".
 
 Section 4 - Sex menu
 
@@ -309,7 +309,7 @@ to say DullahanSummon:
 	else if resolution of Corruption of Dreams is 2 or resolution of Corruption of Dreams is 4 or resolution of Corruption of Dreams is 6:
 		say "     You attempt to put your focus on this, but your mind is just too tired right now. Maybe you should get some rest first.";
 	else if demonologist is not listed in companionList of Player and resolution of Dullahan Knight is 1: [warning if going the first time without Xaedihr]
-		say "     You chose to proceed with summoning a dangerous demonic creature without Xaedihr, who is an expert demonologist able to protect you significantly during your confrontations with the dark knight. The events that will follow can be punishing and unrelentless without proper guidance, and you know what will happen if you lose to the Dullahan in battle. [bold type]Are you sure you wish to dwelve into demonic affairs all by yourself?[roman type][line break]";
+		say "     You chose to proceed with summoning a dangerous demonic creature without Xaedihr, who is an expert demonologist able to protect you significantly during your confrontations with the dark knight. The events that will follow can be punishing and unrelentless without proper guidance, and you know what will happen if you lose to the Dullahan in battle. [bold type]Are you sure you wish to delve into demonic affairs all by yourself?[roman type][line break]";
 		say "     [link](Y)[as]y[end link] - Danger? What danger? Just continue with the ritual.";
 		say "     [link](N)[as]n[end link] - Let's be cautious about this.";
 		if player consents:

@@ -765,7 +765,7 @@ to say hospquestpt7:
 			say "     If you are not able to obtain a usable sample from this dinosaur creature, be sure to go to its nest and search there. There may be eggs or something else with enough nanites to act as a proper sample. They were very clear that it was female.";
 		if lava lamp is owned:
 			ItemLoss lava lamp by 1;
-			say "     The mouse dubiously looks at the lava lamp you've pulled out, but goes to take it. As you explain what you suspect it's been used for, he pulls his hands back quickly and puts on a pair of ill-fitting gloves over his mouse-paw hands. Only then does he handle it, setting it on the lab table. 'I... this is a rather ingenious way to obtain a sample. I... uhh... commend you. Please continue,' he says.";
+			say "     The mouse dubiously looks at the lava lamp you've pulled out, but goes to take it. As you explain what you suspect it's been used for, he pulls his hands back quickly and puts on a pair of ill-fitting gloves over his mouse-paw hands. Only then does he handle it, setting it on the lab table. 'I... this is a rather ingenius way to obtain a sample. I... uhh... commend you. Please continue,' he says.";
 			now triclamped is 1;
 	if sabtoothed is 0:
 		if Chipped tooth is not owned:
@@ -1081,7 +1081,7 @@ to say hosploss:
 			say "     You groan, still in some pain from the rough handling as you try to get up. After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling. The pink raccoon, who had been waiting fretfully on the steps for you, rushes over to you. Finding you radically transformed and succumbing, he helps take you to a nearby, unoccupied building. There, he beds down with you, having sex with you again and again, turning you into another cute, girly raccoon like him, as it is the only thing he can do for you.";
 			say "[totalcoonification]";
 		else:
-			say "     You groan, still in some pain from the rough handling as you try to get up. After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling. The random medley of infections your body has been subject to all vie for control. Eventually the most prominent, that of your [BodyName of Player] body, asserts its dominance over the new you.";
+			say "     You groan, still in some pain from the rough handling as you try to get up. After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling. The random medley of infections your body has been subject to all vie for control. Eventually the most prominent, that of your [BodyType of Player] body, asserts its dominance over the new you.";
 	else if hospquest is 10:		[Refused upon offer]
 		say "     You groan, still in some pain from the rough handling as you try to get up. The pink raccoon, who had been waiting fretfully on the steps for you, rushes over to you. He wraps his arm around you and helps you stand, leading you away from this blighted place.";
 		if pink raccoon is tamed:

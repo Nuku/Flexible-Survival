@@ -14,10 +14,10 @@ to say losetoMushroomMen:
 	WaitLineBreak;
 	say "     You can't help but moan as the two large mushrooms begin working their phallic brother like a bizarre living dildo, driving him into your body over and over again while he teases your inner walls with his ungentle hands. As the fucking continues the rest of the group begins to drift to the rest of your body teasing any erogenous spots they can find as you fall deeper and deeper in your lust-filled haze. [if Player is female]When one of the mushrooms finally begins pinching and tweaking your clit, it all becomes too much and you scream in ecstasy as you cum hard, soaking the two large mushrooms at your crotch in your feminine juices as your spasming tunnel clamps tightly around the fungal intruder, attempting to milk his soft body as if it were a real cock. You feel him squirming inside you, either trying to escape your tight grip or further pleasure you, drawing your orgasm out as each movement sends shivers of pleasure through you[else if Player is male]As the fungal fucking builds to a rapid pace, you find your hands drawn to your unattended cock, stroking your erect length in time with the movement of the phallic mushroom. You groan loudly as you finally climax, blowing your load onto the ground beneath you as the mushrooms make a few final thrusts[end if].";
 	say "     When the mushroom man is finally pulled from your body[if Player is female] with a wet slurp and rush of fluids[end if], he takes a moment to shake himself off before giving each of his larger companions a high five. [one of]'Catch ya later, hun,'[or]'Can't wait to do this again, babe,'[or]'Let's do this again some time, honey,'[at random] your unusual lover shouts over his shoulder as he waves the rest of the group over, leading them back into the forest and leaving you in a well-fucked heap on the ground.[if Player is mushroombodied] As you lay there, recovering, you feel a warm tingling welling up inside you as the mushroom man's fungal spores settle within, exciting your mushroom body.[end if]";
-	CreatureSexAftermath "Player" receives "[if female]PussyDildoFuck[else]AssDildoFuck[end if]" from "Mushroom Men";
 	if Player is mushroombodied:
-		setmonster "Mushroom Man";
-		fimpregchance;
+		CreatureSexAftermath "Player" receives "[if female]PussyFuck[else]AssFuck[end if]" from "Mushroom Man";
+	else:
+		CreatureSexAftermath "Player" receives "[if female]PussyDildoFuck[else]AssDildoFuck[end if]" from "Mushroom Man";
 
 to say beattheMushroomMen:
 	say "     With their numbers dwindling, the few mushroom men who remain standing begin to lose their brazen confidence. Seeing them falter, you move forwards aggressively, chasing the last of them off into the surrounding forest.";
@@ -43,7 +43,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Mushroom"; [name of the overall species of the infection, used for children, ...]
 	add "Mushroom Man" to infections of PlantList;
 	add "Mushroom Man" to infections of FurryList;
 	add "Mushroom Man" to infections of HumorousList;

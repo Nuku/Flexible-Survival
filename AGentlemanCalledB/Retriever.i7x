@@ -491,6 +491,9 @@ This is the Rex' and Karen's Epilogue rule:
 			else:
 				say "     When the military finally arrives and begins evacuating people from the city Karen happily comes with you, following you wherever your life takes you. She spends most of her time at your home, cooking, cleaning and generally being a good companion. You frequently take the time to show her how thankful you are for all her help, both with innocent play, trips to the [one of]park[or]beach[or]city[at random], as well as more lustful playtime.";
 				if Player is male:
-					say "     Eventually one of these romps results in Karen's belly swelling round with life, and her litter of retriever/[BodyName of Player] hybrid pups prove to be wonderful companions, just like their mother.";
+					if CockSpeciesName of Player is "Retriever":
+						say "     Eventually one of these romps results in Karen's belly swelling round with life, and her litter of retriever pups prove to be wonderful companions, just like their mother.";
+					else:
+						say "     Eventually one of these romps results in Karen's belly swelling round with life, and her litter of retriever/[BodySpeciesName of Player] hybrid pups prove to be wonderful companions, just like their mother.";
 
 Retriever ends here.

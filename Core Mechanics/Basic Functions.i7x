@@ -183,7 +183,6 @@ to ItemLoss all (ItemObj - object) silently:
 		ItemLoss ItemObj by carried of ItemObj silently;
 
 to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence - a number):
-	decrease carried of ItemObj by N;
 	if Silence is 0:
 		LineBreak;
 		if N is 1:
@@ -196,6 +195,7 @@ to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence 
 				say "     [bold type]You lose all your [printed name of ItemObj in lower case]![roman type][line break]";
 			else:
 				say "     [bold type]You lose [N] [printed name of ItemObj in lower case]![roman type][line break]";
+	decrease carried of ItemObj by N;
 
 to PlayerMaxHeal:
 	LineBreak;
@@ -324,6 +324,33 @@ to TraitLoss (TraitName - a text) for (TraitChar - a person):
 	if TraitName is listed in Traits of TraitChar: [avoids runtime errors for traits that do not exist]
 		remove TraitName from Traits of TraitChar;
 
+to AffectionGain (AffGain - a number) for (AffChar - a person):
+	say "     [bold type][AffChar]'s affection for you increased by [AffGain]![roman type][line break]";
+	if Affection of AffChar < 100:
+		increase Affection of AffChar by AffGain;
+
+to AffectionLoss (AffLoss - a number) for (AffChar - a person):
+	say "     [bold type][AffChar]'s affection for you decreased by [AffLoss]![roman type][line break]";
+	if Affection of AffChar < 0:
+		decrease Affection of AffChar by AffLoss;
+
+to DepravityGain (DepGain - a number) for (DepChar - a person):
+	say "     [bold type][DepChar]'s depravity increased by [DepGain]![roman type][line break]";
+	if Depravity of DepChar < 100:
+		increase Depravity of DepChar by DepGain;
+
+to DepravityLoss (DepLoss - a number) for (DepChar - a person):
+	say "     [bold type][DepChar]'s depravity decreased by [DepLoss]![roman type][line break]";
+	if Depravity of DepChar < 0:
+		decrease Depravity of DepChar by DepLoss;
+
+to SubVsDomChange (SDChange - a number) for (SDChar - a person):
+	increase SubVsDom of SDChar by SDChange;
+	if SDChange > 0:
+		say "     [bold type][SDChar] becomes more dominant ([SubVsDom of SDChar] in a -100 to 100 range)![roman type][line break]";
+	else:
+		say "     [bold type][SDChar] becomes more submissive ([SubVsDom of SDChar] in a -100 to 100 range)![roman type][line break]";
+
 to MoraleLoss (N - number):
 	LineBreak;
 	say "     [bold type]Your morale has decreased by [N]![roman type][line break]";
@@ -414,7 +441,7 @@ to say SexP (N - number):
 	else if N < 575:
 		say "[special-style-1]master[roman type]";
 	else:
-		say "[special-style-1][one of]pornstar[or]sex machine[at random][roman type]";
+		say "[special-style-1]legendary [one of]pornstar[or]sex machine[at random][roman type]";
 
 understand "testNPCSexAftermath" as NPCSexAftermathAction.
 

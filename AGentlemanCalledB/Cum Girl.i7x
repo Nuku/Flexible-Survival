@@ -94,7 +94,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Cum Goo"; [name of the overall species of the infection, used for children, ...]
 	add "Cum Girl" to infections of SlimeList;
 	add "Cum Girl" to infections of FemaleList;
 	add "Cum Girl" to infections of SlidingList;

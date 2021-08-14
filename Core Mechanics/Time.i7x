@@ -11,6 +11,7 @@ Lastjournaluse is a number that varies. Lastjournaluse is usually 248.
 skipturnblocker is a number that varies.
 balloversize is a number that varies.
 restoration is a number that varies. [part of the "Physical Booster" feat]
+TurnsCount is a number that varies. TurnsCount is usually 0.[Represents the number of turns that have passed]
 
 [Default starting date is 2008-04-11]
 DateDay is a number that varies. DateDay is usually 11.
@@ -289,33 +290,33 @@ To say time of day:
 		-- 7:
 			say "early morning";
 		-- 6:
-			say "mid morning";
+			say "morning";
 		-- 5:
-			say "noon";
+			say "afternoon";
 		-- 4:
-			say "mid afternoon";
-		-- 3:
 			say "evening";
-		-- 2:
+		-- 3:
 			say "early night";
+		-- 2:
+			say "night";
 		-- 1:
-			say "midnight";
+			say "post midnight";
 		-- 0:
 			say "pre dawn";
 		-- -1:
 			say "early morning";
 		-- -2:
-			say "mid morning";
+			say "morning";
 		-- -3:
-			say "noon";
+			say "afternoon";
 		-- -4:
-			say "mid afternoon";
-		-- -5:
 			say "evening";
-		-- -6:
+		-- -5:
 			say "early night";
+		-- -6:
+			say "night";
 		-- -7:
-			say "midnight";
+			say "post midnight";
 		-- -8:
 			say "pre dawn";
 
@@ -414,7 +415,7 @@ an everyturn rule:
 
 Chapter 5 - Date
 
-[Passage of Days, Months and Years]
+[Passage of Days, Months and Years. keeps track of date directly]
 an everyturn rule:
 	if TimekeepingVar is 0 or TimekeepingVar is -8: [early dawn, 0:00-3:00]
 		increase DateDay by 1;
@@ -472,6 +473,140 @@ an everyturn rule:
 				now DateDay is 1;
 				now DateMonth is 1;
 				increase DateYear by 1;
+
+[This is a function that converts the number of turns that have passed into a date]
+to decide what number is (trncount - a number) converted to (ReturnType - a text):
+	let Tleap be true;[According to the calendar above the only leap year that exists is 2008]
+	let tempDayCount be trncount + 102;[ adjusts days gone by to current date. This is  Redundant because of DayCount but allows the function to be independent of global variables.]
+	let tempYearCount be 0;[for calculating the years gone by]
+	let tempMonthCount be 0;[For calculating the months gone by]
+	if tempDayCount > 366:[If at least one year has passed]
+		while tempDayCount > 366: [subtract the years until a number of turns equalling less than one year is reached]
+			if Tleap is true:[2008 has not been counted]
+				decrease tempDayCount by 366;[Subtract 2008]
+				now Tleap is false;
+				increase tempYearCount by 1;
+			else:[2008 has been counted]
+				decrease tempDayCount by 365;[subtract one year]
+				increase tempYearCount by 1;
+	if ReturnType is "years":[Now that years have been counted we can return it if the user of the function wants to return years]
+		decide on tempYearCount + 2008;
+	if tempDayCount <= 31:[The month is January]
+		decide on 1;
+	else if Tleap is true:[It is a leap year or 2008]
+		if tempDayCount <= 60:[The month is February]
+			if ReturnType is "months":
+				decide on 2;
+			else if ReturnType is "days":[The user of the function wants to return days]
+				decide on tempDayCount - 31;
+		if tempDayCount <= 91:[The month is march]
+			if ReturnType is "months":
+				decide on 3;
+			else if ReturnType is "days":
+				decide on tempDayCount - 60;
+		if tempDayCount <= 121:[The month is April]
+			if ReturnType is "months":
+				decide on 4;
+			else if ReturnType is "days":
+				decide on tempDayCount - 91;
+		if tempDayCount <= 152:[The month is may]
+			if ReturnType is "months":
+				decide on 5;
+			else if ReturnType is "days":
+				decide on tempDayCount - 121;
+		if tempDayCount <= 182:[The month is June]
+			if ReturnType is "months":
+				decide on 6;
+			else if ReturnType is "days":
+				decide on tempDayCount - 152;
+		if tempDayCount <= 213:[The month is July]
+			if ReturnType is "months":
+				decide on 7;
+			else if ReturnType is "days":
+				decide on tempDayCount - 182;
+		if tempDayCount <= 244:[The month is August]
+			if ReturnType is "months":
+				decide on 8;
+			else if ReturnType is "days":
+				decide on tempDayCount - 213;
+		if tempDayCount <= 274:[The month is September]
+			if ReturnType is "months":
+				decide on 9;
+			else if ReturnType is "days":
+				decide on tempDayCount - 244;
+		if tempDayCount <= 305:[The month is October]
+			if ReturnType is "months":
+				decide on 10;
+			else if ReturnType is "days":
+				decide on tempDayCount - 274;
+		if tempDayCount <= 335:[The month is November]
+			if ReturnType is "months":
+				decide on 11;
+			else if ReturnType is "days":
+				decide on tempDayCount - 305;
+		if tempDayCount <= 366:[The month is December]
+			if ReturnType is "months":
+				decide on 12;
+			else if ReturnType is "days":
+				decide on tempDayCount - 335;
+	else:[-----                    -----                         It is not a leap year]
+		if tempDayCount < 60:[The month is February]
+			if ReturnType is "months":
+				decide on 2;
+			else if ReturnType is "days":[The user of the function wants to return days]
+				decide on tempDayCount - 31;
+		if tempDayCount < 91:[The month is march]
+			if ReturnType is "months":
+				decide on 3;
+			else if ReturnType is "days":
+				decide on tempDayCount - 60;
+		if tempDayCount < 121:[The month is April]
+			if ReturnType is "months":
+				decide on 4;
+			else if ReturnType is "days":
+				decide on tempDayCount - 91;
+		if tempDayCount < 152:[The month is may]
+			if ReturnType is "months":
+				decide on 5;
+			else if ReturnType is "days":
+				decide on tempDayCount - 121;
+		if tempDayCount < 182:[The month is June]
+			if ReturnType is "months":
+				decide on 6;
+			else if ReturnType is "days":
+				decide on tempDayCount - 152;
+		if tempDayCount < 213:[The month is July]
+			if ReturnType is "months":
+				decide on 7;
+			else if ReturnType is "days":
+				decide on tempDayCount - 182;
+		if tempDayCount < 244:[The month is August]
+			if ReturnType is "months":
+				decide on 8;
+			else if ReturnType is "days":
+				decide on tempDayCount - 213;
+		if tempDayCount < 274:[The month is September]
+			if ReturnType is "months":
+				decide on 9;
+			else if ReturnType is "days":
+				decide on tempDayCount - 244;
+		if tempDayCount < 305:[The month is October]
+			if ReturnType is "months":
+				decide on 10;
+			else if ReturnType is "days":
+				decide on tempDayCount - 274;
+		if tempDayCount < 335:[The month is November]
+			if ReturnType is "months":
+				decide on 11;
+			else if ReturnType is "days":
+				decide on tempDayCount - 305;
+		if tempDayCount < 366:[The month is December]
+			if ReturnType is "months":
+				decide on 12;
+			else if ReturnType is "days":
+				decide on tempDayCount - 335;
+	say "Error: something went wrong when calculating the date";
+	decide on 999;
 
 Chapter 6 - Guessing Periods
 
