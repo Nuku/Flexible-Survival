@@ -252,11 +252,10 @@ Hellfire Lounge	"Hellfire Lounge"
 
 Hellfire Lounge is a room.
 Hellfire Lounge is inside of Hellfire Club. It is sleepsafe.
-The earea of Hellfire Lounge is "Red".
 Description of Hellfire Lounge is "[HellfireLoungeDesc]".
 
 to say HellfireLoungeDesc:
-	say "     The lounge of the Hellfire Club is a spacious environment, with a bar counter on one side and many chairs and seats scattered around, screaming lush and delight wherever you look. Here, [if daytimer is night]the noise isn't unbearable, you're even able to have a normal conversation with anyone without having to raise your voice too much, and the bartender is serving drinks as usual[else]some demon lackeys are cleaning up the seats, tables and corners from the previous night, while the bartender is polishing the drinking glasses[end if]. At the upper floor, the VIP spot, with a complete vision towards the entire lounge is a large and luxurious red velvet sofa, where the owner of the club, the Demon Lord Mogdraz, usually takes his seat, simply observing. Behind the bar counter, to the west, there's a door to the back rooms with a signal prominently saying [']STAFF ONLY[']. To the south is the entrance, where you will be able to find the twin guards.";
+	say "     The lounge of the Hellfire Club is a spatious environment, with a bar counter on one side and many chairs and seats scattered around, screaming lush and delight wherever you look. Here, [if daytimer is night]the noise isn't unbearable, you're even able to have a normal conversation with anyone without having to raise your voice too much, and the bartender is serving drinks as usual[else]some demon lackeys are cleaning up the seats, tables and corners from the previous night, while the bartender is polishing the drinking glasses[end if]. At the upper floor, the VIP spot, with a complete vision towards the entire lounge is a large and luxurious red velvet sofa, where the owner of the club, the Demon Lord Mogdraz, usually takes his seat, simply observing. Behind the bar counter, to the west, there's a door to the back rooms with a signal prominently saying [']STAFF ONLY[']. To the south is the entrance, where you will be able to find the twin guards.";
 
 instead of smelling Hellfire Lounge:
 	say "     It must be the hellfire demons musk, but everything smells so delightfully devilish in here that just makes you want to stay. The sweet and masculine musk of attractive demonic creatures is enough to send you into a brief lightheaded state, taking you some time to shake it off. There are also other creatures' scents getting mixed together, but you can barely notice them.";
@@ -269,7 +268,6 @@ Hellfire Restroom	"Hellfire Restroom"
 
 Hellfire Restroom is a room.
 Hellfire Restroom is north of Hellfire Lounge. It is sleepsafe.
-The earea of Hellfire Restroom is "Red".
 Description of Hellfire Restroom is "[Hellfire RestroomDesc]".
 
 to say Hellfire RestroomDesc:
@@ -286,7 +284,6 @@ Hellfire Storage	"Hellfire Storage"
 
 Hellfire Storage is a room.
 Hellfire Storage is east of Hellfire Lounge. It is sleepsafe.
-The earea of Hellfire Storage is "Red".
 Description of Hellfire Storage is "[HellfireStorageDesc]".
 
 to say HellfireStorageDesc:
@@ -303,7 +300,6 @@ Hellfire VIP Floor	"Hellfire VIP Floor"
 
 Hellfire VIP Floor is a room.
 Hellfire VIP Floor is above Hellfire Lounge. It is sleepsafe.
-The earea of Hellfire VIP Floor is "Red".
 Description of Hellfire VIP Floor is "[HellfireVIPFloorDesc]".
 
 to say HellfireVIPFloorDesc:
@@ -323,7 +319,6 @@ Object	Name
 Hellfire Corridor	"Hellfire Corridor"
 
 Hellfire Corridor is a room. Hellfire Corridor is private. It is sleepsafe.
-The earea of Hellfire Corridor is "Red".
 Description of Hellfire Corridor is "[HellfireCorridorDesc]".
 
 to say HellfireCorridorDesc:
@@ -348,7 +343,6 @@ Hellfire Unknown	"Hellfire Unknown"
 
 Hellfire Unknown is a room.
 Hellfire Unknown is north of Hellfire Corridor. It is sleepsafe.
-The earea of Hellfire Unknown is "Red".
 Description of Hellfire Unknown is "[HellfireUnknownDesc]".
 
 to say HellfireUnknownDesc:
@@ -367,7 +361,6 @@ Hellfire VR	"Hellfire VR"
 
 Hellfire VR is a room.
 Hellfire VR is north of Hellfire Unknown.
-The earea of Hellfire VR is "Red".
 Description of Hellfire VR is "[HellfireVRDesc]".
 
 to say HellfireVRDesc:
@@ -384,7 +377,6 @@ Hellfire Dungeon	"Hellfire Dungeon"
 
 Hellfire Dungeon is a room.
 Hellfire Dungeon is below Hellfire Corridor. It is sleepsafe.
-The earea of Hellfire Dungeon is "Red".
 Description of Hellfire Dungeon is "[HellfireDungeonDesc]".
 
 to say HellfireDungeonDesc:
@@ -404,7 +396,6 @@ Object	Name
 Hellfire Cell One	"Hellfire Cell One"
 
 Hellfire Cell One is a room. It is sleepsafe.
-The earea of Hellfire Cell One is "Red".
 Description of Hellfire Cell One is "[HellfireCellOneDesc]".
 
 to connect Hellfire Cell One:

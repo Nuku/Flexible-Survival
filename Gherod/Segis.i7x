@@ -63,7 +63,7 @@ to say ResolveEvent Strange Android Seeker:
 		say "     With the matter of the unknown assaulter in Red Light District still pending, you occasionally find yourself looking back and glancing over your shoulder. This is starting to affect you, keeping you more on guard and deviating your attention from things you could be doing better. This is not just a roaming creature you can either fight your way out or lose your dignity to, but someone who knows what they are doing and with only one goal in mind that you have yet to determine. While you have only seen males victims, you cannot yet conclude that [if player is not male and player is female]you would be safe[else]females would be safe[end if] from this perverted assaulter, who seems to know a great deal about how to get in places, fight and incapacitate someone. Definitely, it is no ordinary creature.";
 		say "     You could resume this investigation, but say... What if you actually find and fail to stop them? What could happen to you if you were to be another victim of this assaulter? And will you have wasted your only chance at capturing them, to stop this madness once and for all? But more importantly... Can you do it, if it comes to that? From the information you have gathered so far, this is a strong and intelligent individual.";
 		LineBreak;
-		say "     [bold type]Do you wish to proceed any further with your investigation? You better make sure that you are prepared for an eventual conflict, and you might need to use your aptitudes.[roman type][line break]";
+		say "     [bold type]Do you wish to proceed any further with your investigation? You better make sure that you are prepared for an eventual conflict, and you might need to use your aptitudes. [roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Resume your investigation.";
 		say "     ([link]N[as]n[end link]) - Drop it, for now.";
 		if player consents:
@@ -222,7 +222,7 @@ to say StrangeAndroidSeekerSuccess:
 		ItemGain alpha wolf cum by 1;
 		ItemGain centaur cum by 1;
 		ItemGain distilled cum by 4;
-		say "     [bold type]You have earned a destroyed dragon android body, but you do not know yet what to do with it... You shall be able to access it if the opportunity arises[roman type][line break]";
+		say "     [bold type]You have earned a destroyed dragon android body, but you do not know yet what to do with it... You shall be able to access it if the opportunity arises. [roman type][line break]";
 		now Resolution of Strange Android Seeker is 3;
 	else:
 		LineBreak;
@@ -244,7 +244,7 @@ to say StrangeAndroidSeekerFail:
 	say "     You remain at its mercy, and the android surely likes this. With a quite uncharismatic approach, the machine extends its hand towards your crotch and begins to feel up you...";
 	if player is not male:
 		say "     It does not seem to like what it sees, as it retracts and backs away as soon as it realizes you are not properly equipped. It then turns tails and leaves, no longer interested in you. So... that was it, the assaulter is, in fact, not into dickless people, or... whatever.";
-		say "     You suppose you should just forget this embarassing moment and leave this matter behind your back, forever. Hopefully. At least it will not chase you, anymore.";
+		say "     You suppose you should just forget this embarrassing moment and leave this matter behind your back, forever. Hopefully. At least it will not chase you, anymore.";
 		now Resolution of Strange Android Seeker is 99; [just leaves]
 	else: [is male]
 		say "     To prevent you struggling any further, it calls a needle from its wrist, grabs you by the forearm and swiftly presses it below your shoulder, on the side. It is a quite painless experience, and then it becomes much, much better, as your senses begin to trick you into overwhelming pleasure. Your own brain seems to feed you images of all your hottest fantasies combined, and it feels like they are happening for real, filling you with ecstasy. Your [cock of player] raises to attention at its fullest, almost too fast for comfort, and it desperately needs attention. Though, you are too weak to move, your arms do not respond, and you fall hostage to your own stupor, only moaning and mumbling words you are not even sure they exist.";
