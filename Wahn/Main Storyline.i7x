@@ -349,9 +349,9 @@ to DrMattSampleDelivery:
 				say "gives a thoughtful nod, then puts some of the samples into a little box and stashes it in a laboratory fridge. 'Sadly, you do not have enough samples of fluidic creatures for a full analysis. Please gather some more and bring them to me.'";
 				ItemLoss gryphon milk by 2;
 				now Strength of Doctor Matt is 1; [milk delivered]
-		else if carried of gryphon milk is 1 and (carried of glob of goo < 2 and carried of blue gel < 2 and carried of pink gel < 2 and carried of purple gel < 2): [not enough milk nor goo]
+		else if (carried of gryphon milk is 0 or carried of gryphon milk is 1) and (carried of glob of goo < 2 and carried of blue gel < 2 and carried of pink gel < 2 and carried of purple gel < 2): [not enough milk nor goo]
 			if BodyName of Player is "Blue Gryphon Herm":
-				say "gives a thoughtful nod, then looks you up and down. 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
+				say "gives a thoughtful nod, then looks you up and down. 'Sadly, you do not have [if carried of gryphon milk is 1]enough of the gryphon milk for a full analysis[else]any of the gryhpon milk I requested[end if]. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 1; [milk delivered]
 			else:

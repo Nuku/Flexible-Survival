@@ -67,9 +67,9 @@ PlayerFriended of Lilith is false.
 PlayerControlled of Lilith is false.
 PlayerFucked of Lilith is false.
 OralVirgin of Lilith is false.
-Virgin of Lilith is true.
+Virgin of Lilith is false.
 AnalVirgin of Lilith is false.
-PenileVirgin of Lilith is true.
+PenileVirgin of Lilith is false.
 SexuallyExperienced of Lilith is true.
 TwistedCapacity of Lilith is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Lilith is false. [steriles can't knock people up]

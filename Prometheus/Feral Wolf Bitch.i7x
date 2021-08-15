@@ -432,7 +432,7 @@ name	desc	weight	object
 "wolf fem-cum"	"A vial of thick, musky, clear liquid. [']Infection sample - species: wolf['] is written on the side."	1	wolf fem-cum
 
 wolf fem-cum is a grab object. wolf fem-cum is cum.
-Wolf Fem-cum is infectious. Strain of Wolf Fem-cum is "Feral Wolf Bitch".
+Wolf Fem-cum is infectious. Strain of Wolf Fem-cum is "Feral Wolf Male".
 
 instead of sniffing wolf fem-cum:
 	say "The wolf fem-cum smells of wolves and pussy, naturally.";
