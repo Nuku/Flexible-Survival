@@ -31,17 +31,12 @@ to say losetoGryphon:
 		else:
 			say "He grinds it against you with each thrust, and you can feel your entrance slowly give way to its incessant pressure. On one harsh thrust, the knot reaches its widest point, spreading your [if Player is female]nether-lips[else]asshole[end if] uncomfortably; on the next, it pops into you fully. After the initial shock of penetration wears off, you relish the feeling of warm fullness as the gryphon finishes himself with quick, rutting thrusts.";
 		say "     He screeches in victory as you feel his cock twitch and the first hot rope of gryphon-cum splash inside you[if Player is male]. You reach your own climax, your [cock size desc of Player] cock[smn] shooting your own cum over the ground[end if]. The gryphon comes for what feels like minutes; by the time he's finished, his seed is drooling from you, squelching around his cock. He dismounts you, his softening maleness slipping from you with a soft plopping sound. You feel his cum drip from your rear as he spreads his wings and leaves you to clean yourself up.";
-		if Player is female:
-			CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Gryphon";
-		else:
-			CreatureSexAftermath "Player" receives "AssFuck" from "Feral Gryphon";
 	else: [oral]
 		say "     The gryphon moves his bulk over you until his cock moves in front of your [FaceSpeciesName of Player in lower case] face. You can see it has fully extended from his sheath now; it has a thick base that tapers dramatically to a pointy tip; the glans of his cock seems to be covered in rough barbs, betraying his leonine heritage. The gryphon presses his back half against your upper body, pinning you while his erection rubs against your cheeks, searching for your mouth.";
 		WaitLineBreak;
 		say "     Realizing there is only one way out of this situation, you reach up and grab the probing gryphon-hood, guiding it to your puckered lips. You slip your mouth over his length, but you can only fit the upper part of his length in your mouth; however, this seems to be satisfactory for the gryphon, who starts thrusting his cock in and out of you. It's obvious he wants to slip down your throat, but from this angle it's impossible. You settle for suckling on his length as he tries to face-fuck you, your mouth quickly filling with his precum. You swallow as much as you can, but some of it drips messily down your chin.";
 		WaitLineBreak;
 		say "     The gryphon is taking his sweet time in reaching his climax - perhaps he's not getting enough stimulation? Your eyes fix on the now-bulging knot at the base of his penis; eager to end this, you reach up and clamp your hand behind it. This simulated tie sends the gryphon over the edge almost immediately; you feel his cock twitch in your mouth as he unloads the first spurt of thick gryphon cum into your mouth. You try to swallow as much of his load as possible, but the copious volume causes you to choke at pull back off his maleness; this in turn causes his last few ropes of seed to paint your face white.";
-		CreatureSexAftermath "Player" receives "OralCock" from "Feral Gryphon";
 		LineBreak;
 		say "     Pleased with your performance, the gryphon spreads his wings and takes off, leaving you to clean yourself up.";
 

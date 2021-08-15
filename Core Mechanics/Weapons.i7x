@@ -196,6 +196,18 @@ instead of purifying an infected sword:
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"ancient gladius"	"A somewhat old-looking sword, only about 25 inches long, with a double edge on its blade and a cutting tip. It is, however, very sturdy and easy to wield, good to stab and slash any foe in close range."	4	ancient gladius
+
+ancient gladius is an armament. It is not temporary.
+It has a weapon "[one of]your roman blade[or]your ancient gladius[or]your steel blade[at random]".
+Weapon Damage of ancient gladius is 14.
+Weapon Type of ancient gladius is "Melee".
+Objsize of ancient gladius is 3.
+Hitbonus of ancient gladius is 1. [mastercraft]
+Scent of the ancient gladius is "The blade smells of metal polish. It is an antique, after all.".
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "viking sword"	"A beautifully crafted sword, about 30 inches long, with a keen edge to its blade. The favorite weapon of your Viking wife, Sonya, it became yours as you married. Better take good care of it - it's a pretty good weapon, well-balanced... and there might be some marital problems ahead if you let it rust or lose it."	5	viking sword
 
 viking sword is an armament. It is not temporary.

@@ -1266,7 +1266,7 @@ to say XaedihrSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Ask Xaedihr for permission to fuck his ass";
 	[]
-	if loyalty of Xaedihr > -1 and libido of Xaedihr > 2 and libido of Xaedihr < 99:
+	if loyalty of Xaedihr > -1 and libido of Xaedihr > 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Have the sorcerer dominate you";
 		now sortorder entry is 6;
@@ -1503,7 +1503,7 @@ to say XaedihrSubmit:
 				say "     That seems to have taken a little toll on his loyalty.";
 				decrease loyalty of Xaedihr by 3;
 			now libido of Xaedihr is 99; [nothing will even happen anymore regarding his libido]
-	else if libido of Xaedihr >= 3 and libido of Xaedihr < 6: [a sure response in the sex talk + repeatable scene]
+	else if libido of Xaedihr >= 3 or libido of Xaedihr < 6: [a sure response in the sex talk + repeatable scene]
 		XSubmitTentacleEdging;
 	else if libido of Xaedihr >= 6: [Dom Xaedihr route unlocked]
 		say "     You decide to let your intentions be clear to the sorcerer, that you desire to submit to him, once more. 'Is that so? Who would know you'd be such a willing servant of mine. Very well, then... Since it was your initiative, I'll let you pick how you shall serve me.'";

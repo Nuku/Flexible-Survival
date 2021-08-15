@@ -42,12 +42,12 @@ carry out supersponsor:
 		say "[link](15) Forbid the Military(ending)[as]15[end link][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-15)> ";
+			say "Choice? (0-14)> ";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 15:
+			if calcnumber >= 0 and calcnumber <= 14:
 				break;
 			else:
-				say "Invalid choice. Pick from 0 to 15.";
+				say "Invalid choice. Pick from 0 to 14.";
 		if calcnumber is 1:
 			sslvl12;
 		else if calcnumber is 2:
