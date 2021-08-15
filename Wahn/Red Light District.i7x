@@ -12,6 +12,20 @@ Entrance to the Red Light District is a room. It is fasttravel.
 The earea of Entrance to the Red Light District is "Red".
 Description of Entrance to the Red Light District is "[RedLightDesc]".
 
+
+Red Light Street is a door. "To the south is the rest of the city." It is dangerous.
+
+Red Light Street is south of Entrance to the Red Light District.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Exploring the City Dummy Room	"Exploring the City Dummy Room"
+
+Exploring the City Dummy Room is a room.
+Exploring the City Dummy Room is south of Red Light Street.
+
+The marea of Red Light Street is "Outside".
+
 after looking while player is in Entrance to the Red Light District:
 	if findwires < 2 and fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_6_icon;

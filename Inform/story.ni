@@ -15,14 +15,14 @@ use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 370000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
-use MAX_OBJECTS of 4000.
-use MAX_ACTIONS of 2500.
-use MAX_VERBS of 2500.
+use MAX_OBJECTS of 5000.
+use MAX_ACTIONS of 3000.
+use MAX_VERBS of 3000.
 use MAX_VERBSPACE of 50000.
 use MAX_ARRAYS of 100000.
 [Use MAX_ZCODE_SIZE of 1000000.]
 Use MAX_DICT_ENTRIES OF 6000.
-Use maximum text length of at least 3000.
+Use maximum text length of at least 4000.
 Use Scoring.
 [ End compiler settings. ]
 
@@ -41,6 +41,7 @@ Include Basic Help Menu by Emily Short.
 Include Basic Screen Effects by Emily Short.
 Include Glulx Entry Points by Emily Short.
 Include Glulx Text Effects by Emily Short.
+[Include Glulx Status Window Control by Erik Temple.]
 Include Simple Graphical Window by Emily Short.
 [New Graphics Handler]
 Include Graphics Director by Core Mechanics.
@@ -140,22 +141,6 @@ Include Misc Pieces by Core Mechanics.
 Include Help by Core Mechanics. [adjusts the standard help to match FS]
 Include Story Skipper by Core Mechanics. [declares export/import system for version-spanning transfers - standard variables]
 Include Story Skipper Loose Variables by Core Mechanics. [declares export/import system for version-spanning transfers - loose variables]
-Include NewInfectionTest by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest1 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest2 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest3 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest4 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest5 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest6 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest7 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest8 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest9 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest10 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest11 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest12 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest13 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest14 by Core Mechanics. [50 filled lines of the new infection variable table]
-Include NewInfectionTest15 by Core Mechanics. [50 filled lines of the new infection variable table]
 
 Book 2 - More Core Mechanics
 
@@ -234,6 +219,7 @@ Include Mall Community Center by Wahn.
 Include Mall Residents by Rikaeus.
 Include Medical Checkups by Stripes.
 Include Milking Facility by Kernog.
+Include Museum Roman Wing by Gherod.
 Include Museum by Sarokcat.
 Include New Ewe Store by Luneth.
 Include PIG Frat by Stripes.
@@ -911,6 +897,7 @@ Include Sam by Stripes.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
 Include Savina by Kurainyx.
+Include Segis by Gherod.
 Include Serafino by Rikaeus.
 Include Seraphis by Vinickus.
 Include Serenity by Kurainyx.
@@ -1023,7 +1010,7 @@ When play begins (this is the graphics window construction rule):
 				now graphics window position is g-above;
 			-- 3:
 				now graphics window position is g-below;
-		build graphics window;
+		reconstruct graphics window;
 		[now the graphics window pixel count is 1;]
 		follow the ngraphics_blank rule;
 		follow the current graphics drawing rule;

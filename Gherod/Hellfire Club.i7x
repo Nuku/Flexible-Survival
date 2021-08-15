@@ -252,7 +252,6 @@ Hellfire Lounge	"Hellfire Lounge"
 
 Hellfire Lounge is a room.
 Hellfire Lounge is inside of Hellfire Club. It is sleepsafe.
-The earea of Hellfire Lounge is "Red".
 Description of Hellfire Lounge is "[HellfireLoungeDesc]".
 
 to say HellfireLoungeDesc:
@@ -269,7 +268,6 @@ Hellfire Restroom	"Hellfire Restroom"
 
 Hellfire Restroom is a room.
 Hellfire Restroom is north of Hellfire Lounge. It is sleepsafe.
-The earea of Hellfire Restroom is "Red".
 Description of Hellfire Restroom is "[Hellfire RestroomDesc]".
 
 to say Hellfire RestroomDesc:
@@ -286,7 +284,6 @@ Hellfire Storage	"Hellfire Storage"
 
 Hellfire Storage is a room.
 Hellfire Storage is east of Hellfire Lounge. It is sleepsafe.
-The earea of Hellfire Storage is "Red".
 Description of Hellfire Storage is "[HellfireStorageDesc]".
 
 to say HellfireStorageDesc:
@@ -303,7 +300,6 @@ Hellfire VIP Floor	"Hellfire VIP Floor"
 
 Hellfire VIP Floor is a room.
 Hellfire VIP Floor is above Hellfire Lounge. It is sleepsafe.
-The earea of Hellfire VIP Floor is "Red".
 Description of Hellfire VIP Floor is "[HellfireVIPFloorDesc]".
 
 to say HellfireVIPFloorDesc:
@@ -323,7 +319,6 @@ Object	Name
 Hellfire Corridor	"Hellfire Corridor"
 
 Hellfire Corridor is a room. Hellfire Corridor is private. It is sleepsafe.
-The earea of Hellfire Corridor is "Red".
 Description of Hellfire Corridor is "[HellfireCorridorDesc]".
 
 to say HellfireCorridorDesc:
@@ -348,11 +343,10 @@ Hellfire Unknown	"Hellfire Unknown"
 
 Hellfire Unknown is a room.
 Hellfire Unknown is north of Hellfire Corridor. It is sleepsafe.
-The earea of Hellfire Unknown is "Red".
 Description of Hellfire Unknown is "[HellfireUnknownDesc]".
 
 to say HellfireUnknownDesc:
-	say "     This is a place of the unknown, where emptiness meets reality. It is no longer the Club, but it is the only safe spot before you dive into uncertainty. You better [bold type]proceed with caution[roman type] before you end up losing yourself. To the [bold type]North lies the Void Realm[roman type], where not even the most experienced travelers dare to venture within without a destination.";
+	say "     This is a place of the unknown, where emptyness meets reality. It is no longer the Club, but it is the only safe spot before you dive into uncertainty. You better [bold type]proceed with caution[roman type] before you end up losing yourself. To the [bold type]North lies the Void Realm[roman type], where not even the most experienced travelers dare to venture within without a destination.";
 	if Fallen King is visible:
 		say "     [bold type]You sense a terrible presence nearby...[roman type][line break]";
 
@@ -367,7 +361,6 @@ Hellfire VR	"Hellfire VR"
 
 Hellfire VR is a room.
 Hellfire VR is north of Hellfire Unknown.
-The earea of Hellfire VR is "Red".
 Description of Hellfire VR is "[HellfireVRDesc]".
 
 to say HellfireVRDesc:
@@ -384,7 +377,6 @@ Hellfire Dungeon	"Hellfire Dungeon"
 
 Hellfire Dungeon is a room.
 Hellfire Dungeon is below Hellfire Corridor. It is sleepsafe.
-The earea of Hellfire Dungeon is "Red".
 Description of Hellfire Dungeon is "[HellfireDungeonDesc]".
 
 to say HellfireDungeonDesc:
@@ -404,7 +396,6 @@ Object	Name
 Hellfire Cell One	"Hellfire Cell One"
 
 Hellfire Cell One is a room. It is sleepsafe.
-The earea of Hellfire Cell One is "Red".
 Description of Hellfire Cell One is "[HellfireCellOneDesc]".
 
 to connect Hellfire Cell One:

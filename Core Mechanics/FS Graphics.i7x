@@ -1278,7 +1278,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Hellfire Demon Soft No Harness"	Figure of HellfireDemon_softnoharness_icon	"Gherod"	g-white	"normal"
 "Hellfire Demon Hard No Harness"	Figure of HellfireDemon_hardnoharness_icon	"Gherod"	g-white	"normal"
 "Hobo"	Figure of Hobo_icon	"Conchi"	g-white	"normal"
-"Blue Gryphon Herm"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
+"Blue Gryphon Herm_old"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
 "Blue Gryphon hard"	Figure of BlueGryphon_hard_icon	"Vashaa"	g-white	"normal"
 "Blue Gryphon soft"	Figure of BlueGryphon_soft_icon	"Vashaa"	g-white	"normal"
 "Feral Gryphon hard"	Figure of FeralGryphon_hard_icon	"Vashaa"	g-white	"normal"
@@ -2385,7 +2385,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Wahn", "Watsup", "Wemd", "Xenotropos, Yora"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;
