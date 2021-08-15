@@ -1,11 +1,10 @@
-Version 4 of Smilodon Male by Gherod begins here.
+Version 3 of Smilodon Male by Gherod begins here.
 
 "Adds a male Smilodon encounter to the Urban Forest"
 
 [ Version 1 - Created File ]
 [ Version 2 - Made it an unique infection. Added More scenes]
 [ Version 3 - Ranfer is now a recruitable companion]
-[ Version 4 - Ranfer gets a shrinking shroom scene]
 
 [Stats]
 
@@ -457,12 +456,6 @@ to say RanferSexMenu:
 	now sortorder entry is 5;
 	now description entry is "Have him dominate you with his paw-like feet";
 	[]
-	if glowing mushroom is owned:
-		choose a blank row in table of fucking options;
-		now title entry is "Have some shrinking shroom fun";
-		now sortorder entry is 6;
-		now description entry is "Shrink for Ranfer";
-	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -488,8 +481,6 @@ to say RanferSexMenu:
 					say "[RanferSexWorshipTorso]";
 				else if (nam is "Give him a paw worship"):
 					say "[RanferSexWorshipPaws]";
-				else if (nam is "Have some shrinking shroom fun"):
-					say "[RanferSexShrinkingShroom]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -589,34 +580,6 @@ to say RanferSexWorshipPaws:
 		NPCSexAftermath Ranfer receives "Other" from Player;
 	else:
 		CreatureSexAftermath "Smilodon Male" receives "Other" from "Player";
-
-to say RanferSexShrinkingShroom:
-	if "Giant Cat" is not listed in traits of Ranfer: [first time]
-		say "     You happen to ask Ranfer something else about his preferences, regarding sizes. He raises a furred eyebrow at your question, intrigued at its nature. 'Did you have something in mind?' he asks you, and you pull a glowing mushroom from your inventory. There is a shine in his eyes as he sees what you have in your hands, and you can see him visibly blush. 'U-uh... That's a shrinking mushroom...! Eating it makes you shrink temporarily... W-where did you get it?!' he questions you, stuttering and quite excited. To sate his curiosity, you explain how to get to the cave where they grow, and he seems to pay very close attention to every word you say. He shifts his gaze up and to the side, as if trying to visualize your directions and taking mental notes of its whereabouts.";
-		say "     'I've used one of those on a, uh... plaything I had. A wolfie dude. He was carrying one of those with him, and I didn't know what it did, thought it was a treat of some sort. The guy wanted to put his dick in me, and was quite forceful, so... I had to teach him a lesson. Made him my pet and gave him that as a reward for doing what he's told. Then he... got really small. It was... really hot...' he admits to you, blushing again as he clears his throat, but unable to hide the bump in his loincloth as he recalls that memory. 'So, uhm... Did you want to... Do something with that one? I'd... love to have a tiny little kitten to play with, for sure...' Knowing that the big cat seems to really like the idea, you nod and prepare to eat the mushroom.";
-		TraitGain "Giant Cat" for Ranfer;
-	else: [subsequent times]
-		say "     You happen to ask Ranfer if he would be down for some size play, and show him a glowing mushroom you have gathered. His eyes widen with eagerness as he nods. 'Of course, kitten. I'm always ready to play with a shrunken tiny cute thing like yourself' he says, his loincloth wavering slightly as he gets aroused at the idea. Knowing that the big cat seems to really be looking forward to this, you nod and prepare to eat the mushroom.";
-	WaitLineBreak;
-	say "     Once the glowing mushroom goes in your mouth and you chew it down, you begin to feel the vertigo that comes with it. Your body dims in size and shape as you look at Ranfer in the eyes, the antecipation clearly causing an effect on the smilodon as he patiently awaits what comes next. His cock begins to grow out of his furred sheath from underneath the loincloth, which he flips aside and lets you have a clear look at it, shamelessly stroking it while you begin to shrink. Just like that, the male feline starts looking massive in comparison, and even more as moments pass, your vision getting closer to the ground until Ranfer's footpaws alone are enough to surpass you in height. When you look up, you see a giant catman with a rock solid erection in his hands, so turned on by the situation itself.";
-	say "     As the shrinking process reaches its end, Ranfer comes down to get and grab you, bringing you over to the front of his face. You are naked and exposed before his big eyes as he examines your body, appreciating just how small you are. 'Love how tiny you look, little kitten... I might just get used to holding you like this...' he says, almost in a whispering tone, as he brings one finger to rub at your form. His paw-like hands are larger than you are tall, so his touch is enough to overwhelm you as he rubs you in all the sensitive spots, able to reach them all simultaneously with little effort due to how big he is in comparison. 'You're so cute... Makes me wanna keep you safe, even more...'";
-	WaitLineBreak;
-	say "     The smilodon then pulls his finger away and leans his face onto you, giving your whole front a tentative lick, then another from a different angle, your left side, followed by the next on the right, that slick organ of his coating you in feline saliva, feeling wet and soft against your skin. 'Mmh... you taste good, too. Don't worry, I won't eat you... I just wanna kiss you a lot...' he tells you, and within seconds, you find yourself shoved between his lips, tongue flowing and wiggling all around you as he makes out with your body, much like when he kisses you in the mouth, having you experience his passionate affection in a size-augmented fashion. Some of his whiskers tickle you as he uses every angle he has at his disposal to kiss, lick... and even suck on you.";
-	say "     As he presses your tiny body against his mouth, Ranfer lets out a few pleased hums amidst some toned down kisses, to give you some breathing room. Ocasionally, you see him focusing more on your crotch, noticing how well you respond when [if player is male]his tongue rubs across your cock[else if player is female]his tongue rubs across your moist pussy[else]his tongue rubs across your butt[end if] and happily obliging your apparent lust. 'You like it, kitten? Hope I'm doing this well...' he asks, smiling at you for an instance, before resuming his kissing. The large cat presses you against his lips once more, growing bolder with his approach as you find yourself sometimes slipping inside his mouth, only to be pulled back right after with a long sucking motion.";
-	WaitLineBreak;
-	say "     'Don't suppose you'd mind if I shoved you in my mouth? It's gonna feel so good... I promise...' says Ranfer, the last words kind of mumbled on their way as his mouth rests on top of you, opening slowly once more as, this time, the feline man does not stop pushing you in. First, your head fits in his mouth, and soon follows your torso and waist, leaving only your legs outside and safely tucked between his fingers. You see only darkness as his tongue feels up your body from every angle, at its every inch, but you hear - and feel - the smilodon give out a questioning grunt as he realizes he shoved you in head-first. You are then pulled out with another sucking motion, fresh air feeling cold against you, now.";
-	say "     The giant smilodon then turns you around so that your feet go into his mouth, first. 'Oops, you weren't supposed to go in like that, it ain't safe for you... Better keep your head out so you can breathe!' he explains, and once more, you go in his mouth, although he leaves your body partly outside, from your chest up. His moans collide against you as quite powerful vibrations, and your erogenous areas are all covered by his restless tongue that keeps on wiggling without cease. A glance over his shoulder suggests some movement being made with his arm, and you are able to catch a glimpse of Ranfer stroking his thick cock, clearly turned on by all this. He says nothing else as he fully focuses on stimulating your body, worried more about your pleasure than his, applying more pressure on just the right spots, including your [if player is male]penis, which keeps on throbbing[else if player is female]vulva, which keeps on quivering[else]rear, which keeps on tingling[end if] in pure bliss and pleasure.";
-	WaitLineBreak;
-	say "     Eventually, your ability to endure such overwhelming sensations ends, and you begin to uncontrollably moan and wiggle around while stuck between his lips. He takes this as a sign to intensify his movements, and also begins to jerk faster. His increasing want for your joy is evident, almost seeming hungrier for you, growing more desperate to feel you under and over his tongue as he puts additional effort on it, that slick organ of his rubbing against you with enough force to drive you insane with pleasure. Then, Ranfer's breathing quickens, he begins to let out low grunts as he does his very best to keep up the pace, and the large cat successfully manages to throw you beyond your edging point. As a wave of intense pleasure strikes you, your [if player is male]load is delivered[else if player is female]pussy keeps on quivering as your entire body tingles[else]whole body tingling[end if] inside his mouth.";
-	say "     He also lets a longer grunt as he shoots his [if player is male]own[end if] load all over the ground beneath you, powerful shots originated from how turned on he was, gushing out like a small geyser of pure lust. You are, finally, pulled out of his mouth, the coldness of the outside now washing your body as you begin to miss the warmth of his maw. 'You're the best kitten ever. And [if player is male]your cum tastes[else]you taste[end if] really good...' he says, giving you a few additional licks, tender and loving ones. 'If you ever get some more of those, be sure to come to me. I'd love to play with a little sized you, again.' Ranfer then holds you close to his soft and fuzzy chest until your body gives signs of wanting to grow back to its original height.";
-	WaitLineBreak;
-	say "     When you are finally back to normal, you grab your things and kiss Ranfer goodbye. He responds by tapping your butt and smiling back at you.";
-	if player is male:
-		NPCSexAftermath Ranfer receives "OralCock" from Player;
-	else if player is female:
-		NPCSexAftermath Ranfer receives "OralPussy" from Player;
-	else:
-		NPCSexAftermath Ranfer receives "Other" from Player;
 
 Section 5 - Ranfer Library Interactions
 

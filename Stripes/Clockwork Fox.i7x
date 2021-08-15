@@ -13,7 +13,7 @@ to say cfgdesc:
 	choose row MonsterID from the Table of Random Critters;
 	now cfgmode is a random number between 1 and 2;
 	if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
-		say "     You come across a strange, mechanical fox. It whirrs and clicks as it looks you over, eyes scanning you in a disjointed, strange manner. As if sensing something about you, it turns and heads off, somehow knowing you don't want to play with it.";
+		say "     You come across a strange, mechanical fox. The mechanical fox whirrs and clicks as it looks you over, eyes scanning you in some strange manner. As if sensing something about you, it turns and heads off, somehow knowing you don't want to play with it.";
 		now BannedStatus entry is true;
 		now fightoutcome is 19;
 		now combat abort is 1;
@@ -36,13 +36,13 @@ to say cfgdesc:
 			now cfgmode is 2;
 	if cfgmode is 1:	[female]
 		setmongender 4; [creature is female]
-		say "     Before you is one of the most unusual forms the infection has taken, a wholly mechanical fox-creature. Looking over this clockwork fox girl, her body is made from metal segments and brass wire fur, which covers the internal mechanics of tiny metal gears. She whirrs and clicks as she moves in a jerking, hesitant manner, occasionally twitching as something catches in her gears for a few seconds. Her head is drawn forward into a muzzle, and the pointed, brass ears at the top give it a very foxy look. The anthro's body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but it's also covered in plated sections and protrusions of gears. Her chestplate has two small breasts formed onto it, her arms and legs are thin and vulpine, leading down to small, clawed paws, and she has a long plumed tail that seems to be made from extremely soft wire. The tail moves with the faint clicks of cogs and gears. A private peek reveals that she has a thick-lipped cunt nestled between her legs, made of shimmering, coppery flesh. It drips a clear lubricant, that glistens like oil, as the female mechanism moves forward to attack you.";
+		say "     Before you is one of the most unusual forms the infection has taken, creating a wholly mechanical fox-creature. Looking over this clockwork fox girl, her body is made from metal segments and brass wire fur, covering internal mechanics of tiny metal gears. She whirrs and clicks as she moves in a slightly odd manner, occasionally twitching as something internal catches before releasing a moment later. Her head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look. The anthro's body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears. Her chestplate has two small breasts formed onto it. Her arms and legs are thin and vulpine, leading down to small-clawed paws. She has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within. A private peek reveals that she has a thick-lipped cunt nestled between her legs, made of shimmering, coppery flesh, but dripping a clear lubricant that glistens like oil as the female mechanism moves forward to attack you.";
 		now sex entry is "Male";
 		if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
 		if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
 	if cfgmode is 2:	[male]
 		setmongender 3; [creature is male]
-		say "     Before you is one of the most unusual forms the infection has taken, creating a wholly mechanical fox-creature. Looking over this clockwork fox guy, his body is made from metal segments and brass wire fur, covering internal mechanics of tiny metal gears. He whirrs and clicks as he moves in a slightly odd manner, occasionally twitching as something internal catches before releasing a moment later. His head is drawn forward into a muzzle, and the pointed, brass ears at the top give it a very foxy look. The anthro's body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but it's also covered in plated sections and protrusions of gears. His segmented chestplate gleams brightly, as if polished brass. His arms and legs are thin and vulpine, leading down to small, clawed paws, and he has a long plumed tail that seems to be made from extremely soft wire. The tail moves with the faint clicks of cogs and gears. A private peek reveals that he has a long, knotted cock made of coppery flesh, and it appears to be driven by a clockwork mechanism. It leaks a clear lubricant, that glistens like oil, as the male mechanism moves forward to attack you.";
+		say "     Before you is one of the most unusual forms the infection has taken, creating a wholly mechanical fox-creature. Looking over this clockwork fox guy, his body is made from metal segments and brass wire fur, covering internal mechanics of tiny metal gears. He whirrs and clicks as he moves in a slightly odd manner, occasionally twitching as something internal catches before releasing a moment later. His head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look. The anthro's body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears. His segmented chestplate gleams brightly, as if polished brass. His arms and legs are thin and vulpine, leading down to small-clawed paws. He has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within. A private peek reveals that he has a long, knotted cock made of coppery flesh and driven by a clockwork mechanism. It leaks a clear lubricant that glistens like oil as the male mechanism moves forward to attack you.";
 		now sex entry is "Female";
 		if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
 		if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
@@ -87,84 +87,28 @@ to say losetocfguy:
 		CreatureSexAftermath "Player" receives "AssFuck" from "Clockwork Fox";
 
 to say beatthecfg:
-	if cfgmode is 1: [female cf]
-		say "     The defeated clockwork fox girl winds down further and collapses to the floor. She moans weakly with a few clicks and whirrs as she tries to get back up, but she is too run down to do so.";
-		WaitLineBreak;
-		if CockName of Player is "Clockwork Fox" and player is male:
-			say "[beatthecfgirl1]";
-		else if libido of Player >= 50 and player is male:
-			say "     You are way too turned on to do anything else but try to sate your lust...";
-			say "[beatthecfgirl2]";
-		else if player is female:
-			say "     You don't think you're properly equipped for this, and so you get on with your other escapades.";
-		else:
-			say "     You suppose you could make your escape, if you wanted to. The other option would be to let yourself be drawn to her lure as her body tempts you to come closer...";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Go to her.";
-			say "     ([link]N[as]n[end link]) - Get away.";
-			if player consents:
-				LineBreak;
-				say "[beatthecfgirl2]";
-			else:
-				LineBreak;
-				say "     Thinking twice about it, you decide to take this opportunity to make your escape, leaving her to be enjoyed by the mechanical tods (or any of the other creatures) you've seen around the museum.";
-	else: [male cf]
-		say "     The defeated clockwork fox guy winds down further and collapses to the floor. He moans weakly with a few clicks and whirrs as he tries to get back up, but he is too run down to do so.";
-		WaitLineBreak;
-		if CockName of Player is "Clockwork Fox" and player is female:
-			say "[beatthecfguy1]";
-		else if libido of Player >= 50 and player is male: [currently only males can take advantage of cf guy]
-			say "     You are way too turned on to do anything else but try to sate your lust...";
-			say "[beatthecfguy2]";
-		else if player is female: [plays this until a female scene is added]
-			say "     You decide to take this opportunity to make your escape, leaving him to be enjoyed by the mechanical vixens (or any of the other creatures) you've seen around the museum.";
-		else:
-			say "     You suppose you could make your escape, if you wanted to. The other option would be to let yourself be drawn to his lure as his body tempts you to come closer...";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Go to him.";
-			say "     ([link]N[as]n[end link]) - Get away.";
-			if player consents:
-				LineBreak;
-				say "[beatthecfgirl2]";
-			else:
-				LineBreak;
-				say "     Thinking twice about it, you decide to take this opportunity to make your escape, leaving him to be enjoyed by the mechanical tods (or any of the other creatures) you've seen around the museum.";
+	if cfgmode is 1:
+		say "[beatthecfgirl]";
+	else:
+		say "[beatthecfguy]";
 
-to say beatthecfgirl1:
-	say "     Your mechanically driven cock responds to the poor creature's need and grows hard. You climb atop her and sink your metallic member into her pussy, enjoying the soft, music box chimes she releases. You rock your hips and pump your cock into her well-lubricated mechanism, feeling it grow warmer as you fuck her. Her internal mechanism meshes with yours and your cock pumps into her at an increasing pace. As you wind the weakened vixen back up, she smiles up at you and runs her paws over your body, caressing you in thanks. Once she's fully wound back up and your mainspring is taut, you and she mesh fully and you reach your peak together. Her wet lubricant flows out, coating your semi-mechanical groin as you pump your oily seed deep inside her to fill. You both release chiming, music box tones intermixed with your moans and groans of lustful pleasure, then separate. Fully wound once more, the mechanical vixen gives you a peck on the cheek and heads down the halls, moving with a smooth, mechanical grace that she lacked when you first encountered her.";
-	CreatureSexAftermath "Clockwork Fox" receives "PussyFuck" from "Player";
-	increase morale of Player by 2;
-	decrease humanity of Player by 2;
+to say beatthecfgirl:
+	say "     The defeated clockwork fox girl winds down further and collapses to the floor. She moans weakly with a few clicks and whirrs as she tries to get back up, but is too run down to do so";
+	if CockName of Player is "Clockwork Fox" and player is male:
+		say ". Your mechanically driven cock responds to the poor creature's need and grows hard. You climb atop her and sink your metallic member into her pussy, enjoying the soft, music box chimes she releases. You rock your hips and pump your cock into her well-lubricated mechanism, feeling it grow warmer as you fuck her. Her internal mechanism meshes with yours and your cock pumps into her at an increasing pace. As you wind the weakened vixen back up, she smiles up at you and runs her paws over your body, caressing you in thanks. Once she's fully wound back up and your mainspring is taut, you and she mesh fully and you reach your peak together. Her wet lubricant flows out, coating your semi-mechanical groin as you pump your oily seed deep inside her to fill. You both release chiming, music box tones intermixed with your moans and groans of lustful pleasure, then separate. Fully wound once more, the mechanical vixen gives you a peck on the cheek and heads down the halls, moving with a smooth, mechanical grace that she lacked when you first encountered her.";
+		CreatureSexAftermath "Clockwork Fox" receives "PussyFuck" from "Player";
+	else:
+		say ". You decide to take this opportunity to make your escape, leaving her to be enjoyed by the mechanical tods (or any of the other creatures) you've seen around the museum.";
 
-to say beatthecfgirl2:
-	say "     With the sight of the defeated female before you, a metallic one at that, you lose all sense of control. Your body suddenly lights up with pure lust, your mind fogs over and your cock jerks to full attention. There's no way you can resist such a tempting specimen. As your dick dribbles, [if player is not naked]you rip off the clothes that block your cock from that dripping pussy[else]you give your length a few strokes, prepping it for what's to come[end if]. Your body then seems to go on autopilot, your hands gripping and flipping the clicking fox onto her belly. Your cock's dribbling excitement drinches her lower back, and as you hold your hands against her shoulders, you angle your crotch towards hers.";
-	say "     Her resistance is nonexistant, and so you move your hands to grab at her hips, the angled metal plating is cool, and yet hot, to the touch. There's something about them, something that drives you to even further levels of depravity, but it's far too late to care. Her legs are spread, your hands have gotten their grip, and as you angle her towards you cock, your hips slam forward. You miss the first time, but your heated lust is too out of control to feel an ounce of embarrassment. There's only a single microsecond of hesitance as you pull back, and then you're slamming forward once more, and this time, you find your mark.";
-	WaitLineBreak;
-	say "     As your cock slips into her metallic body, you gasp at the warmth. The clockwork pussy is soft, wet and hot. It almost drives you to cum immediately, but you retain just enough control to avoid being a one-pump-chump. However, the slick feeling as you start fucking her, the mix of hot and cold as you push in and pull out, really drives you to a new high. It's almost as if this robotic entity was made for sex, and as you pick up your speed, you grin down at her, pounding her pussy with all of the power your hips can provide. The sounds of your hips slapping into her, and the feeling of folds wrapping around your cock, drive you over the edge.";
-	say "     With a powerful, gutteral moan, you slam forward as hard as you can, bottoming out in her pussy. As soon as your balls slap into her, your cock fires off like a cannon. Your cum shoots into her depths, filling her up as the heat of your seed begins to surround the tip of your length. It's a feeling you'll never grow tired of. Your cock continues to pulse for a few minutes, but as you hear cries of something nearby, you quickly pull out and wipe your cock on her ass. Grabbing your things, you then head off on your own.";
-	CreatureSexAftermath "Clockwork Fox" receives "PussyFuck" from "Player";
-	increase morale of Player by 2;
-	decrease humanity of Player by 2;
-
-to say beatthecfguy1:
-	say "     Your mechanically driven pussy responds to the poor creature's need and grows wet with oily lubricant. You climb atop him and guide his metallic member into your pussy, enjoying the soft, music box chimes he releases. You ride your hips up and down over his metallic flesh, sliding your well-lubricated mechanism over it. You can feel his member growing warmer as you fuck him. His internal mechanism meshes with yours and your motions and his come into synch and move with a gradually increasing pace. As you wind the weakened fox back up, he smiles up at you and runs his paws over your body, caressing you in thanks. Once his mainspring is taut and your mechanism is wound back up, you and he mesh fully and you reach your peak together. Your wet lubricant flows out, coating his semi-mechanical groin as he pumps his oily seed deep inside to fill you. You both release chiming, music box tones intermixed with your moans and groans of lustful pleasure, then separate. Fully wound once more, the mechanical fox guy gives you a peck on the cheek and heads down the halls, moving with smooth, mechanical grace that he lacked when you first encountered him.";
-	CreatureSexAftermath "Player" receives "PussyFuck" from "Clockwork Fox";
-	increase morale of Player by 2;
-	decrease humanity of Player by 2;
-
-to say beatthecfguy2:
-	say "     With the sight of the defeated male before you, a metallic one at that, you lose all sense of control. Your body goes into autopilot, directing you to [if player is not naked]toss aside all things blocking your cock from your prize, and then you rush right over to the fox and lift his metal legs[else]rush right over to the fox and lift his metal legs[end if]. With his legs over you shoulders, and your cock angled just right, you slam forward. His anus seems to be self-lubricating, which makes the entire situation far easier on you, since you can immediately start pounding him with all your might.";
-	say "     The lubricant feels like oil, and as you glance down, you realize that's exactly what it is. Your movements don't slow even the slightest bit, however, as you don't have the mind to care about why it's easy to fuck this tempting toy. All you care about is taking back an ounce of control over this crazy world. It may be fleeting, but you know this clockwork being is at your mercy. Your hips fly into a flury after you fully realize that, your balls pulling up into your crotch as you keep fucking the male with utter abandon.";
-	WaitLineBreak;
-	say "     It's only shortly thereafter that you release a gutteral moan, your cock surges and your seed spills into the mechanical innards of the beast before you. You find yourself still thinking about pounding the fox, plowing more seed deep into his innards, and there's no reason to resist, right? So you keep fucking, keep pounding at that ass, bits of cum pulling out with you before you pound right back in. You're spreading cum all over his hole the entire time, and as you reach your second peak, you grin in satisfaction.";
-	say "     Not only did you beat this Clockwork fox, but you took it, twice, and spread your seed all over its hole. For the next while, everything that fucks this fox will be using your cum to help them along. That's the last thought you have before your give the fox a gutteral grunt, releasing your seed deep within it. You hold your hips to his ass, your balls and cock pulsing as you unload everything you've got. It feels like ages before everything finally shoots out of your cock, but when it does, you yank free and stand over your conquered toy.";
-	WaitLineBreak;
-	say "     With an arrogant grin, you grab you stuff and head for your next target.";
-	CreatureSexAftermath "Clockwork Fox" receives "AssFuck" from "Player";
-	increase morale of Player by 2;
-	decrease humanity of Player by 2;
-
-
+to say beatthecfguy:
+	say "     The defeated clockwork fox guy winds down further and collapses to the floor. He moans weakly with a few clicks and whirrs as he tries to get back up, but is too run down to do so.";
+	if CockName of Player is "Clockwork Fox" and player is female:
+		say "     Your mechanically driven pussy responds to the poor creature's need and grows wet with oily lubricant. You climb atop him and guide his metallic member into your pussy, enjoying the soft, music box chimes he releases. You ride your hips up and down over his metallic flesh, sliding your well-lubricated mechanism over it. You can feel his member growing warmer as you fuck him. His internal mechanism meshes with yours and your motions and his come into synch and move with a gradually increasing pace. As you wind the weakened fox back up, he smiles up at you and runs his paws over your body, caressing you in thanks. Once his mainspring is taut and your mechanism is wound back up, you and he mesh fully and you reach your peak together. Your wet lubricant flows out, coating his semi-mechanical groin as he pumps his oily seed deep inside to fill you. You both release chiming, music box tones intermixed with your moans and groans of lustful pleasure, then separate. Fully wound once more, the mechanical fox guy gives you a peck on the cheek and heads down the halls, moving with smooth, mechanical grace that he lacked when you first encountered him.";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Clockwork Fox";
+		increase morale of Player by 2;
+		decrease humanity of Player by 2;
+	else:
+		say "     You decide to take this opportunity to make your escape, leaving him to be enjoyed by the mechanical vixens (or any of the other creatures) you've seen around the museum.";
 
 
 Section 2 - Creature Insertion

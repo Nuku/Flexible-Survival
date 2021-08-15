@@ -100,6 +100,8 @@ carry out graphicmoding:
 	while Trixieexit is 0:
 		clear the screen;
 		say "[bold type]Graphics Settings:[roman type][line break]";
+		say "Please note that the graphics side window will remain on screen despite any of these settings! If you are bothered by the blank space, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. Selecting 'DISABLED' will no longer generate a side window.[line break]";
+		say "We apologize for this inconvenience, this is a technical limitation of Inform.[line break]";
 		say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 2]Side-Window Graphics[else if NewGraphicsInteger is 1]Inline Mode[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
 		say "(2) [link]Graphics Window Settings[as]2[end link] - [bold type]Position: [if NewGraphicsPosition is 0]Right[else if NewGraphicsPosition is 1]Left[else if NewGraphicsPosition is 2]Above[else if NewGraphicsPosition is 3]Below[end if]; Proportion: [NewGraphicsRatio][roman type][line break]";
 		say "(0) [link]EXIT[as]0[end link][line break]";

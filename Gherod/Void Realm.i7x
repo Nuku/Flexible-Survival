@@ -234,7 +234,7 @@ VRTentacleAbominationLinger is a number that varies. VRTentacleAbominationLinger
 VRDarkTyrantTracker is a number that varies. VRDarkTyrantTracker is usually -1. [@Tag:NotSaved]
 
 to say ToTheVoid:
-	say "     Taking a deep breath, you decide that you will be crossing the gate. Walking down the stairs, you feel its heavy atmosphere pulling you in, like a vaccuum attempting to fill itself with your presence. Once you touch the entrance, all your reality becomes darkness, and you find yourself in its emptyness. The core line of the Void Realm welcomes you in its endless paths, enveloped in a veil of many mysteries and dangers.";
+	say "     Taking a deep breath, you decide that you will be crossing the gate. Walking down the stairs, you feel its heavy atmosphere pulling you in, like a vaccuum attempting to fill itself with your presence. Once you touch the entrance, all your reality becomes darkness, and you find yourself in its emptiness. The core line of the Void Realm welcomes you in its endless paths, enveloped in a veil of many mysteries and dangers.";
 	WaitLineBreak;
 	say "[VRMoveOptions]";
 
@@ -443,7 +443,7 @@ to VRMindConditionCheck:
 		if player is kinky:
 			say "     [one of]Your legs refuse to move...[or]You're absentmindedly caressing yourself...[or]Sudden ecstacy is becoming a problem...[or]Your body wants to betray you...[or]You're starting to feel an urge to offer yourself to this place...[or]There is only dark lust in your thoughts...[at random][line break]";
 		else:
-			say "     [one of]Panic assaults you...[or]You're shaking uncontrollably...[or]Your eyes are dry and your throat gasps for air...[or]Breathing feels pointless to you...[or]There is only emptyness in your mind...[or]Your hope is gone...[at random][line break]";
+			say "     [one of]Panic assaults you...[or]You're shaking uncontrollably...[or]Your eyes are dry and your throat gasps for air...[or]Breathing feels pointless to you...[or]There is only emptiness in your mind...[or]Your hope is gone...[at random][line break]";
 
 to VREncounterTrackerCheck:
 	if VRDarkTyrantTracker < 3: [Trackers freeze if Dark Tyrant is an imminent threat, < 3 means he's not]
@@ -806,7 +806,7 @@ to say VRMomentOfRespite:
 	say "[VRMoveOptions]";
 
 to say VRUnfortunatePrey:
-	say "     ... Though you hear a hissing. No, it is not behind you, nor around you. It is a sound in the distance, way ahead of you. It seems angry, as if attacking something, what you could describe as a sound of war. Well, now you cannot go back into the core line just like that, so you are forced to proceed. Your heart beats with the antecipation of finding a foe too powerful for you to face, but it is no time to think of that. You must press on and see what lies beyond...";
+	say "     ... Though you hear a hissing. No, it is not behind you, nor around you. It is a sound in the distance, way ahead of you. It seems angry, as if attacking something, what you could describe as a sound of war. Well, now you cannot go back into the core line just like that, so you are forced to proceed. Your heart beats with the anticipation of finding a foe too powerful for you to face, but it is no time to think of that. You must press on and see what lies beyond...";
 	WaitLineBreak;
 	say "     [bold type]Unfortunate Prey[roman type][line break]";
 	say "     The hissing intensifies, the primal sound of a wrathful serpent ringing in your ears as you walk closer, and then, so suddenly... A massively long shape just makes it across from your right to your left right above you, moving at such an incredible speed that you barely see it coming! But it ignores you, to your relief. Actually, you don't even think it noticed you walking by, and as furious as the creature seemed, you can't help but be glad. Nothing pleasant could come out of that. Although... what is it attacking, exactly? You cannot help but wonder what else could have entered this realm enough to piss off an enormous and dangerous creature such as a Void Serpent. You do carefully make haste to move out of the danger zone, but your eyes lay on something inevitable.";

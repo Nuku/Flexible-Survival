@@ -643,11 +643,6 @@ to say HikingTrailBendDesc:
 	say "     You're on a severely overgrown hiking trail through the city park, standing on well-trodden bare earth. It feels like you're in the middle of wilderness, as there is no sight or sound of the city visible anywhere around you. With how lush and vibrant all of the plants are growing, the area has become akin to a centuries-old, undisturbed forest. Sounds of nature surround you, from wind blowing through the trees, rustling in the underbrush, birds singing, all the way to other noises from more human-like throats that sometimes crop up in the mix. Given what's happening everywhere else in the city, you guess that hearing moans and ecstatic shouting in the moderate distance isn't much of a surprise anymore.";
 	say "     The trail makes a bend here, leading further [link]west[end link] and also [link]northeast[end link], ever deeper into the woods.";
 
-
-Table of GameRoomIDs (continued)
-Object	Name
-Hiking Trail Split	"Hiking Trail Split"
-
 Hiking Trail Split is a room.
 Hiking Trail Split is northeast of Hiking Trail Bend.
 earea of Hiking Trail Split is "Park".

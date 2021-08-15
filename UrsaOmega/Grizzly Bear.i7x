@@ -1,14 +1,11 @@
-Version 3 of Grizzly Bear by UrsaOmega begins here.
+Version 2 of Grizzly Bear by UrsaOmega begins here.
 [Version 1.1 - Added player loss anal and oral endings w/being cum on - Stripes]
 [Version 2 - Added CV loss scene - Gherod]
-[Versoin 3 - Extended CV Loss scene for players who are consistently complying, resulting in a Bad End - Gherod]
 
 "Adds a Grizzly Bear creature to Flexible Survival's Wandering Monsters table"
 
 
 Section 1 - Creature Responses
-
-GrizzlyLoseCVComply is a number that varies. GrizzlyLoseCVComply is usually 0. [@Tag:NotSaved]
 
 to say grizzlydesc:
 	setmongender 3; [creature is male]
@@ -45,7 +42,7 @@ to say losetogrizzly:
 			CreatureSexAftermath "Player" receives "OralCock" from "Grizzly Bear";
 
 to say GrizzlyLoseCV:
-	say "     You collapse to your knees in front of the grizzly bear, submitting to his superior strength. The ursine beast walks behind your kneeling form, firmly pushing your face into the dirt while stroking his hardening bearcock. 'Looks like I'll have to teach ya your place, cub...' he says, but then he stops with a 'Hm...' followed by him leaning over your stuff. 'Is that what I think it is?' He asks, as he grabs something that you seem to have dropped, nothing more nothing less than one of the magic shrinking shrooms that you have gathered in the past. 'Ya've been carrying these around, eh? Cub likes being a lil'one... Now that'd be fun.' He then crouches down, keeping your body pinned underneath his whole furred weight, his thick bear cock already hard and throbbing.";
+	say "     You collapse to your knees in front of the grizzly bear, submitting to his superior strength. The grizzly bear walks behind your kneeling form, firmly pushing your face into the dirt while stroking his hardening bearcock. 'Looks like I'll have to teach ya your place, cub...' he says, but then he stops with a 'Hm...' followed by him leaning over your stuff. 'Is that what I think it is?' He asks, as he grabs something that you seem to have dropped, nothing more nothing less than one of the magic shrinking shrooms that you have gathered in the past. 'Ya've been carrying these around, eh? Cub likes being a lil'one... Now that'd be fun.' He then crouches down, keeping your body pinned underneath his whole furred weight, his thick bear cock already hard and throbbing.";
 	say "     'Open up, cub.' - he demands, pushing the shroom gently against your lips - 'Don't make me force it in ya.' You are trapped under the bear, after having been beaten into submission. Things don't look favorable in your end...";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Comply.";
@@ -55,7 +52,6 @@ to say GrizzlyLoseCV:
 		say "     Right now, you really don't stand a chance, nor are willing to try to resist him.";
 		SanLoss 10;
 		say "     Inevitably, you have to part your lips open, allowing the grizzly bear to effortlessly slide the shroom inside your mouth. He gives you a gentle pat on your cheek with one of his large paws and gives you a smile. 'That's a good little cub...'";
-		increase GrizzlyLoseCVComply by 1;
 		GrizzlyLoseCV2;
 	else:
 		Linebreak;
@@ -64,8 +60,8 @@ to say GrizzlyLoseCV:
 		let bonus be (strength of player);
 		say "[bold type]Strength Check[roman type]: [special-style-1][bonus][roman type] vs [special-style-2]20[roman type]";
 		if bonus >= 20: [Automatic Success]
-			say "     Fortunately, you are in possession of enough physical force to break free from the bear's grasp, able to push him away from you and start running. He does not have enough time window to catch you, nor catch up to you. He disappears in the distance, and you are free.";
-			say "     Although, it appears you are one shroom shorter, after all that...";
+			say "     Fortunately, you are in possession of enough physical force to break free from the bear's grasp, able to push him away from you and start running. He doesn't have enough time window to catch you, nor catch up to you. He disappears in the distance, and you're free.";
+			say "     Although, it appears you're one shroom shorter, after all that...";
 			ItemLoss glowing mushroom by 1;
 		else: [Not a failure yet, but the player is struggling...]
 			say "     But... it's not quite enough to outright push the bear away. He takes note of your resistance, and reinforces his position above you. 'I said open! Be a good cub, now, or I'll have to get rough...!'";
@@ -76,35 +72,34 @@ to say GrizzlyLoseCV:
 			if diceroll + bonus >= 22: [Player succeeds, barely...]
 				Linebreak;
 				say "     And by some miracle, or perhaps you really are stronger than you think, you manage to make the bear lose balance and are able to push him away from you. Then, you immediately get up and start running as fast as you can, not givin him enough time window to catch you, nor catch up to you. He disappears in the distance, and you're free.";
-				say "     Although, it appears you are one shroom shorter, after all that...";
+				say "     Although, it appears you're one shroom shorter, after all that...";
 				ItemLoss glowing mushroom by 1;
 			else:
 				Linebreak;
-				say "     Your resistance is futile. The bear has got you pinned down good, and it is only a matter of time until he gets what he wants.";
+				say "     Your resistance is futile. The bear has got you pinned down good, and it's only a matter of time until he gets what he wants.";
 				say "     Inevitably, you have to part your lips open, allowing the grizzly bear to efforlessly slide the shroom inside your mouth. He gives you a gentle pat on your cheek with one of his large paws and gives you a smile. 'Now that's a good little cub... Why did y'think ya could fight me?'";
 				GrizzlyLoseCV2;
 
 to GrizzlyLoseCV2:
 	WaitLineBreak;
-	say "     With enough given time, your body begins to shrink [if player is not naked]out of your clothes[end if]. In your perspective, the grizzly bear just becomes much, much larger than before compared to you. Several seconds pass, and you are nothing but a tiny little creature in front of an enormous giant bear, who looks very excited to be looking at you in such state. He then reaches for you with his big paws, picking you up and bringing you to his eye level. 'Ya look so cute, so small... Love having such a tiny little cub to play with...' You notice him grabbing his thick nine-inch bearhood, which at your current size manages to be longer, wider and heavier than your whole body, and give it some strokes as he eyes you from top to bottom.";
+	say "     With enough given time, your body begins to shrink [if player is not naked]out of your clothes[end if]. In your perspective, the grizzly bear just becomes much, much larger than before compared to you. Several seconds pass, and you're nothing but a tiny little creature in front of an enormous giant bear, who looks very excited to be looking at you in such state. He then reaches for you with his big paws, picking you up and bringing you to his eye level. 'Ya look so cute, so small... Love having such a tiny little cub to play with...' You notice him grabbing his thick nine-inch bearhood, which at your current size manages to be longer, wider and heavier than your whole body, and give it some strokes as he eyes you from top to bottom.";
 	say "     'Looks like y'saw something ya like...' he teases you, letting you watch him stroke his cock playfully by rubbing it all over with his paw, slowly and gently, moving a finger over the tip and showing you a long strain of precum as he pulls away, spreading it all across his shaft. It glistens in its full erection, wet and slick, already throbbing with excitement. 'Wanna see it up close?' he asks, but instead of waiting for an answer, he simply brings you directly towards his cock, leaning your tiny body on top of it with your head turned towards the tip, then begins to jerk off slowly as he pushes your body across his shaft back and forth. During all the process, you feel his enormous organ throbbing against you, as if fond of your close presence.";
 	WaitLineBreak;
-	say "     Amidst all that rubbing between your body and the bear's warm cock, hard as a rock and pulsing an intoxicating warmth that leaves you dizzy, and you notice that he begins to focus most movement closer to the tip. 'Mmmh... I got ya a little surprise too, cub.' he says, as you feel yourself being pushed all the way to the tip of his bearhood, before he flips you around and has your feet facing his rod instead. It all seems like he is just wanting you to feel his throbbing dong from every angle, as that thick bear cock keeps oozing a glob of precum every so often, even when your feet are close enough to poke at the gleaming glans, coated in slippery juice. The bear lets out a huff, his meat hardening to its peak as he feels your smallness touching the head of his prick...";
-	say "     ... And that is when you see the gaping slit, which occasionally nibbles around your toes when they pass through. At first, it looks just like a consequence of your size difference, but you feel them sinking in a bit deeper as the furred beast begins to push you in just slightly. He lets out a soft moan, looking a bit overwhelmed by all the lust that is taking over him. His thick fingers envelop you, pressing your arms and legs against your body, then pushing both your feet into his slit up to your ankles, another moan escaping the bear's mouth. 'I've got the perfect way to turn ya into a cute little cub for real... One way or another...' You do not quite get the meaning of his latter words, but it does feel like he intends to keep pushing you down his meat...!";
+	say "     Amidst all that rubbing between your body and the bear's warm cock, hard as a rock and pulsing an intoxicating warmth that leaves you dizzy, and you notice that he begins to focus most movement closer to the tip. 'Mmmh... I got ya a little surprise too, cub.' he says, as you feel yourself being pushed all the way to the tip of his bearhood, before he flips you around and has your feet facing his rod instead. It all seems like he's just wanting you to feel his throbbing dong from every angle, as that thick bear cock keeps oozing a glob of precum every so often, even when your feet are close enough to poke at the gleaming glans, coated in slippery juice. The bear lets out a huff, his meat hardening to its peak as he feels your smallness touching the head of his prick...";
+	say "     ... And that's when you see the gaping slit, which occasionally nibbles around your toes when they pass through. At first, it looks just like a consequence of your size difference, but you feel them sinking in a bit deeper as the furred beast begins to push you in just slightly. He lets out a soft moan, looking a bit overwhelmed by all the lust that is taking over him. His thick fingers envelop you, pressing your arms and legs against your body, then pushing both your feet into his slit up to your ankles, another moan escaping the bear's mouth. 'I've got the perfect way to turn ya into a cute little cub for real... One way or another...' You don't quite get the meaning of his latter words, but it does feel like he intends to keep pushing you down his meat...!";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sounds pretty hot...";
 	say "     ([link]N[as]n[end link]) - What?! No! Try to break free!";
 	if player consents:
 		Linebreak;
 		SanLoss 10;
-		increase GrizzlyLoseCVComply by 1;
-		say "     You cannot help but think that is actually very arousing, feeling that massive bear cock slurp you in, inch by inch, until it has fully consumed you and ready to send you down to those heavy, cum-filled balls. From what you gather, this is exactly what the bear is thinking about, as he continues to push you in. As you have decided before, you offer no resistance, allowing his massive member to take you up to your waist at a glance. He grins, and seems pleased at your submission. 'Ye're taking it well, cub... That's how I like it...' says the beast, as he now lets his thick log do all the work.";
+		say "     You can't help but think that's actually very arousing, feeling that massive bear cock slurp you in, inch by inch, until it has fully consumed you and ready to send you down to those heavy, cum-filled balls. From what you gather, this is exactly what the bear is thinking about, as he continues to push you in. As you have decided before, you offer no resistance, allowing his massive member to take you up to your waist at a glance. He grins, and seems pleased at your submission. 'Ye're taking it well, cub... That's how I like it...' says the beast, as he now lets his thick log do all the work.";
 	else:
 		Linebreak;
-		say "     It is too late for that. It seems the bear's cock has got a good grasp on your feet, and the more you move, the more powerful its sucking motions are. It is quickly slurping you in, inch by inch, and your captor does not make it any easier for you. He continues to push you in, and within the blink of an eye, you are down on his meat log all the way to your waist, squirming and wiggling fiercely. He grins, and seems pleased at the situation, despite your resistance. 'Aw cub, don't ya know? The more ya fight, the deeper ya go, and the better it feels for me...' says the beast, as he now lets his thick log do all the work.";
+		say "     It's too late for that. It seems the bear's cock has got a good grasp on your feet, and the more you move, the more powerful its sucking motions are. It is quickly slurping you in, inch by inch, and your captor does not make it any easier for you. He continues to push you in, and within the blink of an eye, you're down on his meat log all the way to your waist, squirming and wiggling fiercely. He grins, and seems pleased at the situation, despite your resistance. 'Aw cub, don't ya know? The more ya fight, the deeper ya go, and the better it feels for me...' says the beast, as he now lets his thick log do all the work.";
 	WaitLineBreak;
-	say "     With each throb, more of your being sinks inside his cock, pulsing as it swallows you bit by bit, as you look at the happy bear staring down at you as you disappear into his meat. No matter how much you would squirm, kick or attempt to squeeze yourself out, nothing would work in getting you out. You would simply continue to go down without a break. As that happens, you feel a thick finger rubbing against your head, before it positions itself above, then it starts pushing you downwards. 'C'mon now, time to go in, cub. My balls are aching...' he says, as you're sure he's fondling and rubbing them all over while trying to accelerate the process. You are left helpless, your only following consequence being simply falling down deeper, until only your head pokes out of his shaft.";
-	say "     A final push makes you completely slide inside, as his grin widens with increasing pleasure. Your world is replaced with darkness and squeezing slick walls as his slit shuts before your eyes, and you have got nothing else to do but accept your fate. The bear strokes his dick ever so gently, trying to feel your shape inside the thick shaft, and even then, he [']helps['] go sink lower. All you perceive with your touch is the throbbing flesh bumping on you, pushing and pulling you down until the base of his bearhood. While in there, it is only a matter of time until a passage opens for your body, depositing your whole existence into some wobbly surroundings, already half-filled with lots of bear cum. You feel like you are stuck, bouncing inside his hanging balls, which is exactly what is happening.";
+	say "     With each throb, more of your being sinks inside his cock, pulsing as it swallows you bit by bit, as you look at the happy bear staring down at you as you disappear into his meat. No matter how much you'd squirm, kick or attempt to squeeze yourself out, nothing would work in getting you out. You would simply continue to go down without a break. As that happens, you feel a thick finger rubbing against your head, before it positions itself above, then it starts pushing you downwards. 'C'mon now, time to go in, cub. My balls are aching...' he says, as you're sure he's fondling and rubbing them all over while trying to accelerate the process. You are left helpless, your only following consequence being simply falling down deeper, until only your head pokes out of his shaft.";
+	say "     A final push makes you completely slide inside, as his grin widens with increasing pleasure. Your world is replaced with darkness and squeezing slick walls as his slit shuts before your eyes, and you've got nothing else to do but accept your fate. The bear strokes his dick ever so gently, trying to feel your shape inside the thick shaft, and even then, he [']helps['] go sink lower. All you perceive with your touch is the throbbing flesh bumping on you, pushing and pulling you down until the base of his bearhood. While in there, it is only a matter of time until a passage opens for your body, depositing your whole existence into some wobbly surroundings, already half-filled with lots of bear cum. You feel like you're stuck, bouncing inside his hanging balls, which is exactly what is happening.";
 	WaitLineBreak;
 	say "     'In no time, you'll be the perfect cub... Just relax and enjoy yourself...' he teases you, his voice booming out of every side into your ears like a thunder, even with the gentle tone he used. The humid air and the thick liquid surrounding you makes you feel funny and dizzy, not to mention that it is also warming your crotch [if player is male]as your cock stands solidly erect[else]your pussy moistens with engorged labia[end if], making it difficult to think. This is not looking too bright for you...";
 	SanLoss 20;
@@ -114,57 +109,44 @@ to GrizzlyLoseCV2:
 		say "[bold type]Intelligence Check[roman type]: [special-style-1][bonus][roman type] vs [special-style-2]15[roman type]";
 		if bonus >= 15: [Player manages to think of a solution and may pursue it]
 			Linebreak;
-			say "     But amidst all this, you still retained the ability to think. Things do not look good for you, with all the hot cum enveloping you, your bouncing surroundings, the smell of sex and beast alike... You would quickly be overwhelmed by all the elements that are threatening your sanity, except you can still do something to gain your escape a bit earlier. While your position seems to be unfortunate, you are fairly close to the bear's sensitive areas that could cause a spontaneous orgasm, effectively earning a shot out of his junk. Pressing the right pressure points would do the trick, but you need a firm touch...";
+			say "     But amidst all this, you still retained the ability to think. Things don't look good for you, with all the hot cum enveloping you, your bouncing surroundings, the smell of sex and beast alike... You would quickly be overwhelmed by all the elements that are threatening your sanity, except you can still do something to gain your escape a bit earlier. While your position seems to be unfortunate, you are fairly close to the bear's sensitive areas that could cause a spontaneous orgasm, effectively earning a shot out of his junk. Pressing the right pressure points would do the trick, but you need a firm touch...";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You've literally gone too deep, might as well end this now.";
 			say "     ([link]N[as]n[end link]) - Why bother? This actually feels great...";
 			if player consents:
 				Linebreak;
-				say "     Enough anatomy knowledge allows you to move around within the constraining space of the bear's balls, adjusting your position for the intended effect, that is, providing enough internal stimulation in order to provoke his climax. With your strategy in mind, you direct your applied strength towards a pressure point that connects with the base of his bearhood through a nerve, and having detected his weak point, you proceed to pound it generously. Given the tremble you feel all around you as the beast moans in ecstasy, and as the space inside the orbs shrinks due to him holding them with his big paw, you know you are getting the desired result. He grunts and squirms in uncontrollable pleasure the more effort you put into your plan...";
+				say "     Enough anatomy knowledge allows you to move around within the constraining space of the bear's balls, adjusting your position for the intended effect, that is, providing enough internal stimulation in order to provoke his climax. With your strategy in mind, you direct your applied strength towards a pressure point that connects with the base of his bearhood through a nerve, and having detected his weak point, you proceed to pound it generously. Given the tremble you feel all around you as the beast moans in ecstasy, and as the space inside the orbs shrinks due to him holding them with his big paw, you know you're getting the desired result. He grunts and squirms in uncontrollable pleasure the more effort you put into your plan...";
 				WaitLineBreak;
-				say "     An animalistic groan is the cue to the early orgasm you are forcing the beast to have, and before you know it, you are being pumped through his cock and shot away from all the mess. The force is enough to take you away from the bear into safety, but you are still pretty much covered in his cum, unable to escape without some of the infection taking shape in your body. You feel sore and woozy from the temporary gravity shift and the ordeal you went through, but you are good to go as soon as you return to your normal size, recovering your stuff in the process.";
+				say "     An animalistic groan is the cue to the early orgasm you're forcing the beast to have, and before you know it, you're being pumped through his cock and shot away from all the mess. The force is enough to take you away from the bear into safety, but you're still pretty much covered in his cum, unable to escape without some of the infection taking shape in your body. You feel sore and woozy from the temporary gravity shift and the ordeal you went through, but you're good to go as soon as you return to your normal size, recovering your stuff in the process.";
 				infect;
 			else:
 				Linebreak;
-				say "     It feels so good that you cannot think about anything too complicated right now. Debilitated as you are, with all the hot cum enveloping you, your bouncing surroundings, the smell of sex and beast alike... It is too much for you to handle at your current state. Even if you attempted to escape, the walls are just too slippery, the passage above is shut, and you are effectively stuck inside one of the bear's orbs that keeps constantly squeezing you with its wobbly flesh. It starts getting worse once you feel it all flooding, as your body is about to sink completely into the beast's seed. You try to avoid the inevitable by raising your head as high as you can, but it is useless... Within a matter of seconds, you are fully submerged in bear cum...";
-				increase GrizzlyLoseCVComply by 1;
+				say "     It feels so good that you can't think about anything too complicated right now. Debilitated as you are, with all the hot cum enveloping you, your bouncing surroundings, the smell of sex and beast alike... It is too much for you to handle at your current state. Even if you attempted to escape, the walls are just too slippery, the passage above is shut, and you're effectively stuck inside one of the bear's orbs that keeps constantly squeezing you with its wobbly flesh. It starts getting worse once you feel it all flooding, as your body is about to sink completely into the beast's seed. You try to avoid the inevitable by raising your head as high as you can, but it is useless... Within a matter of seconds, you are fully submerged in bear cum...";
 				SanLoss 10;
 				GrizzlyLoseCV3;
 		else: [Player's low cognitive values makes them sink deeper into depravity...]
 			Linebreak;
-			say "     Unfortunately, there is not much you can do. Debilitated as you are, with all the hot cum enveloping you, your bouncing surroundings, the smell of sex and beast alike... It is too much for you to handle at your current state. Even if you attempted to escape, the walls are just too slippery, the passage above is shut, and you are effectively stuck inside one of the bear's orbs that keeps constantly squeezing you with its wobbly flesh. It starts getting worse once you feel it all flooding, as your body is about to sink completely into the beast's seed. You try to avoid the inevitable by raising your head as high as you can, but it is useless... Within a matter of seconds, you are fully submerged in bear cum...";
+			say "     Unfortunately, there's not much you can do. Debilitated as you are, with all the hot cum enveloping you, your bouncing surroundings, the smell of sex and beast alike... It is too much for you to handle at your current state. Even if you attempted to escape, the walls are just too slippery, the passage above is shut, and you're effectively stuck inside one of the bear's orbs that keeps constantly squeezing you with its wobbly flesh. It starts getting worse once you feel it all flooding, as your body is about to sink completely into the beast's seed. You try to avoid the inevitable by raising your head as high as you can, but it is useless... Within a matter of seconds, you are fully submerged in bear cum...";
 			SanLoss 10;
 			GrizzlyLoseCV3;
 	else: [player doesn't manage to think clearly, which makes them sink deeper into depravity...]
 		Linebreak;
-		say "     Unfortunately, there is not much you can do. Debilitated as you are, with all the hot cum enveloping you, your bouncing surroundings, the smell of sex and beast alike... It is too much for you to handle at your current state. Even if you attempted to escape, the walls are just too slippery, the passage above is shut, and you are effectively stuck inside one of the bear's orbs that keeps constantly squeezing you with its wobbly flesh. It starts getting worse once you feel it all flooding, as your body is about to sink completely into the beast's seed. You try to avoid the inevitable by raising your head as high as you can, but it is useless... Within a matter of seconds, you are fully submerged in bear cum...";
+		say "     Unfortunately, there's not much you can do. Debilitated as you are, with all the hot cum enveloping you, your bouncing surroundings, the smell of sex and beast alike... It is too much for you to handle at your current state. Even if you attempted to escape, the walls are just too slippery, the passage above is shut, and you're effectively stuck inside one of the bear's orbs that keeps constantly squeezing you with its wobbly flesh. It starts getting worse once you feel it all flooding, as your body is about to sink completely into the beast's seed. You try to avoid the inevitable by raising your head as high as you can, but it is useless... Within a matter of seconds, you are fully submerged in bear cum...";
 		SanLoss 10;
 		GrizzlyLoseCV3;
 
 to GrizzlyLoseCV3: [Instant loss, heavy sanity decreases, total infection (5x)]
-	if GrizzlyLoseCVComply >= 3: [cum absorption bad end]
-		say "[GrizzlyLoseCVBadEnd]";
-	else:
-		WaitLineBreak;
-		say "     It is about time that he begins to pick up the pace, jerking faster and faster by the second, your surroundings bouncing up and down frantically as his thick cum envelops you... Physically, you feel sluggish, as if you were about to melt, a consequence of being inside someone's balls with all that massive quantity of nearly scorching hot seed, which tingles around your skin so [italic type]good[roman type] that you actually forget about it. It starts taking over your mind, and inevitably, you begin to give in...";
-		SanLoss 20;
-		say "     But before the situation takes itself into a point of no return, you feel the liquid around you getting pumped upwards, and soon, your body is pushed through the opening separating the bear's cock from the sack. Traversing its length once more, you are then shot with immense force, as a massive quantity of beast juice follows, to soak you completely on the outside. The force is enough to take you away from the bear into safety, but you are still pretty much covered in his cum, unable to escape without a lot of the infection taking shape in your body. You feel sore and woozy from the temporary gravity shift and the ordeal you went through, needing some time before you are good to go, when you finally return to your normal size, and recover your stuff in the process.";
-		infect;
-		infect;
-		infect;
-		infect;
-		infect;
+	WaitLineBreak;
+	say "     It's about time that he begins to pick up the pace, jerking faster and faster by the second, your surroundings bouncing up and down frantically as his thick cum envelops you... Physically, you feel sluggish, as if you were about to melt, a consequence of being inside someone's balls with all that massive quantity of nearly scorching hot seed, which tingles around your skin so [italic type]good[roman type] that you actually forget about it. It starts taking over your mind, and inevitably, you begin to give in...";
+	SanLoss 20;
+	say "     But before the situation takes itself into a point of no return, you feel the liquid around you getting pumped upwards, and soon, your body is pushed through the opening separating the bear's cock from the sack. Traversing its length once more, you are then shot with immense force, as a massive quantity of beast juice follows, to soak you completely on the outside. The force is enough to take you away from the bear into safety, but you're still pretty much covered in his cum, unable to escape without a lot of the infection taking shape in your body. You feel sore and woozy from the temporary gravity shift and the ordeal you went through, but you're good to go as soon as you return to your normal size, recovering your stuff in the process.";
+	infect;
+	infect;
+	infect;
+	infect;
+	infect;
 
-to say GrizzlyLoseCVBadEnd:
-	say "     It is about time that he begins to pick up the pace, jerking faster and faster by the second, your surroundings bouncing up and down frantically as his thick cum envelops you... Physically, you feel sluggish, as if you were about to melt, a consequence of being inside someone's balls with all that massive quantity of nearly scorching hot seed, which tingles around your skin so [italic type]good[roman type] that you actually forget about it. It starts taking over your mind, and inevitably, you begin to give in. Any thoughts end up vanishing as you begin to feel safer in this fleshy encasement, welcoming you deeper into a state of lustful stupor, one that you no longer can break through.";
-	say "     'Y're such a good cub. Took that shroom like a good boy, willingly walked into my cock and doesn't even resist all that cum churning y'up...' says the bear, his deep voice echoing around you as he cups his own balls, rubbing them all over with you inside, only further shaking you inside his load. 'Maybe ya don't deserve to become a cub. Heh... How about we turn you into more bear? Hehe...' The low chuckles, followed by moans, of the grizzly bear whose cock just devoured you are the last things you hear before your entire body begins to dissipate. In the end, the last thing you felt was unending pleasure as you ran out of air, an intense orgasm that took you over intensely as this big bear claimed you, adding your body to his in form of a pleasant load and added mass.";
-	WaitLineBreak;
-	say "     You became more bear, which means you are now part of one, in addition of also becoming his next load. It is what happens to prey eager and willing to become food.";
-	WaitLineBreak;
-	now battleground is "Void";
-	the Player was ended by "Grizzly Bear";
-	trigger ending "Player has died";
-	end the story saying "You were swallowed alive and digested inside a Grizzly Bear's balls.";
+
 
 to say beatthegrizzly:
 	say "     The grizzly collapses before you, breathing heavily from your fight. You can see the grizzly's ursine cock peeking out of his furry sheath - it looks like he's up for some more fun. Do you take advantage of the big bear?";

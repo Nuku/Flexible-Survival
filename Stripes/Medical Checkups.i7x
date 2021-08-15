@@ -26,15 +26,16 @@ Wandering the City	"Wandering the City"
 Wandering the City is a room.
 Wandering the City is south of Pediatrics door.
 The marea of pediatrics door is "Outside".
-Doctors Office is north of Pediatrics Lobby.
+Doctor's Office is north of Pediatrics Lobby.
 
 Table of GameRoomIDs (continued)
 Object	Name
-Doctors Office	"Doctors Office"
+Doctor's Office	"Doctor's Office"
+Doctor's Office	"Doctors Office"
 
-Doctors Office is a room. "A doctor's office, this one is a wreck. There are stains everywhere and food and water stockpiled in the cabinets. The clock is no longer running, and an oil lamp stands on the blue marble counter, on and burning. It fills the air with smoke. You idly wonder what happened to the smoke detectors.".
+Doctor's Office is a room. "A doctor's office, this one is a wreck. There are stains everywhere and food and water stockpiled in the cabinets. The clock is no longer running, and an oil lamp stands on the blue marble counter, on and burning. It fills the air with smoke. You idly wonder what happened to the smoke detectors.".
 
-the scent of the Doctors Office is "The doctor's office smells of antiseptic and aroused lizard scents.".
+the scent of the Doctor's Office is "The doctor's office smells of antiseptic and aroused lizard scents.".
 
 the scent of Pediatrics Lobby is "With the numerous cum stains here, it hard to smell anything but that.".
 
@@ -49,7 +50,7 @@ object	name
 Doctor Medea	"Doctor Medea"
 
 Doctor Medea is a person. "A doctor, by the name on the door label, [']Doctor Medea['], is busily mixing vials here.".
-Doctor Medea is in Doctors Office.
+Doctor Medea is in Doctor's Office.
 
 the scent of Doctor Medea is "The doctor smells of female lizard, though there's a hint of male musk in there as well.".
 

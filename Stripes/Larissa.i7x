@@ -77,7 +77,6 @@ zephyrpests is a number that varies.
 
 instead of conversing Larissa:
 	let vialsnagging be false;
-=======
 	if "recieved ZPC" is listed in traits of Player:
 		TraitGain "received ZPC" for Player;
 		TraitLoss "recieved ZPC" for Player;

@@ -184,6 +184,7 @@ definition: A person is overburdened:
 			if object entry is owned:
 				let num be carried of object entry;
 				increase weight by weight entry times num;
+	if "Remove Carry Limits" is listed in Traits of Player, no;
 	if weight > capacity of Player, yes;
 	no;
 

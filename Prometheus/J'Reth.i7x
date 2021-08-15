@@ -150,7 +150,7 @@ to say J'RethTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Make general small talk";
 	[]
-	if HP of J'Reth is 3:
+	if HP of J'Reth is 3 and (FemaleList is banned or FemaleList is Warded):
 		choose a blank row in table of fucking options;
 		now title entry is "Discuss His Form";
 		now sortorder entry is 4;
@@ -204,13 +204,12 @@ to say J'RethTalkMenu:
 		now sortorder entry is 12;
 		now description entry is "Give J'Reth some Gryphon Milk to gender-shift them towards being a hermaphrodite";
 	[]
-	if hp of J'Reth is 1 and Charisma of J'Reth < 1:
+	if Charisma of J'Reth < 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer Help";
 		now sortorder entry is 13;
 		now description entry is "Ask J'Reth if there is anything that you can do to help him";
 	[]
-	if hp of J'Reth is 1 and Charisma of J'Reth is 1 and Backpack Lost & Found Stage Four is resolved:
 	if Charisma of J'Reth is 1 and Backpack Lost & Found Stage Four is resolved:
 		choose a blank row in table of fucking options;
 		now title entry is "Return Backpack";
@@ -240,39 +239,39 @@ to say J'RethTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Hobbies"):
 					say "[J'RethTalk1]";
-				else if (nam is "Before the Outbreak"):
+				if (nam is "Before the Outbreak"):
 					say "[J'RethTalk2]";
-				else if (nam is "Small Talk"):
+				if (nam is "Small Talk"):
 					say "[J'RethTalk3]";
-				else if (nam is "Discuss His Form"):
+				if (nam is "Discuss His Form"):
 					say "[J'RethTalk4]";
-				else if (nam is "Prepare for Gender Shifting"):
+				if (nam is "Prepare for Gender Shifting"):
 					say "[J'RethTalk5]";
-				else if (nam is "Extract Vial of Draco-mantis Nanites"):
+				if (nam is "Extract Vial of Draco-mantis Nanites"):
 					say "[J'RethTalk6]";
-				else if (nam is "Give Estrogen Pill"):
+				if (nam is "Give Estrogen Pill"):
 					say "[J'RethTalk7]";
-				else if (nam is "Give Glob of Goo"):
+				if (nam is "Give Glob of Goo"):
 					say "[J'RethTalk8]";
-				else if (nam is "Give Testosterone Pill"):
+				if (nam is "Give Testosterone Pill"):
 					say "[J'RethTalk9]";
-				else if (nam is "Give Fennec Semen"):
+				if (nam is "Give Fennec Semen"):
 					say "[J'RethTalk10]";
-				else if (nam is "Give Estosterogen Pill"):
+				if (nam is "Give Estosterogen Pill"):
 					say "[J'RethTalk11]";
-				else if (nam is "Give Gryphon Milk"):
+				if (nam is "Give Gryphon Milk"):
 					say "[J'RethTalk12]";
-				else if (nam is "Offer Help"):
+				if (nam is "Offer Help"):
 					say "[J'RethTalk13]";
-				else if (nam is "Return Backpack"):
+				if (nam is "Return Backpack"):
 					say "[J'RethTalk14]";
-				[else if (nam is "Try to convince J'Reth to use transformatives"):
+				[if (nam is "Try to convince J'Reth to use transformatives"):
 					say "[J'RethTalk15]";]
-				wait for any key;
+				WaitLineBreak;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You shake your head, stating that you simply wanted to make sure that [SubjectPro of J'Reth] was alright. [SubjectProCap of J'Reth] gives you a brief smile of appreciation before returning to what [SubjectPro of J'Reth] was doing.";
-			wait for any key;
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -421,11 +420,11 @@ to say J'RethTalk8: [Use Glob of Goo]
 					now sextablerun is 1;
 					if (nam is "Male"):
 						remove "Draco-Mantis Male" from vials of player;
-					else if (nam is "Herm"):
+					if (nam is "Herm"):
 						remove "Draco-Mantis Herm" from vials of player;
-					else if (nam is "Female"):
+					if (nam is "Female"):
 						remove "Draco-Mantis Female" from vials of player;
-					wait for any key;
+					WaitLineBreak;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -516,15 +515,15 @@ to say J'RethTalk10: [Use Fennec Semen]
 					now sextablerun is 1;
 					if (nam is "Male"):
 						remove "Draco-Mantis Male" from vials of player;
-					else if (nam is "Herm"):
+					if (nam is "Herm"):
 						remove "Draco-Mantis Herm" from vials of player;
-					else if (nam is "Female"):
+					if (nam is "Female"):
 						remove "Draco-Mantis Female" from vials of player;
-					wait for any key;
+					WaitLineBreak;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
-		say "     Complying, you watch the fennec ears recede until his head is a smooth as before. 'Thanks. I'm glad that we planned ahead and that I was able to deal with the side effects.' You decide to leave him for the moment as he returns to being entirely engrossed by his changed form. Maybe you can return later.";
+		say "     Complying, you watch the feenec ears recede until his head is a smooth as before. 'Thanks. I'm glad that we planned ahead and that I was able to deal with the side effects.' You decide to leave him for the moment as he returns to being entirely engrossed by his changed form. Maybe you can return later.";
 	now thirst of J'Reth is 1;
 	now Cock Count of J'Reth is 1;
 	now Cock Girth of J'Reth is 2;
@@ -621,11 +620,11 @@ to say J'RethTalk12: [Use Gryphon Milk]
 					now sextablerun is 1;
 					if (nam is "Male"):
 						remove "Draco-Mantis Male" from vials of player;
-					else if (nam is "Herm"):
+					if (nam is "Herm"):
 						remove "Draco-Mantis Herm" from vials of player;
-					else if (nam is "Female"):
+					if (nam is "Female"):
 						remove "Draco-Mantis Female" from vials of player;
-					wait for any key;
+					WaitLineBreak;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;

@@ -559,7 +559,7 @@ To say QuintusNeutralTalkMenu:
 
 To say QuintusIntroduction:
 	if PlayerMet of Quintus is false:
-		say "     After first introducing yourself, you wait for him to return the courtesy. He stares you down for a moment perhaps evaluating what level of threat you may pose. Deciding no harm harm can come of it, he simply states, 'I am Quintus.'";
+		say "     After first introducing yourself, you wait for him to return the courtesy. He stares you down for a moment perhaps evaluating what level of threat you may pose. Deciding no harm can come of it, he simply states, 'I am Quintus.'";
 		now PlayerMet of Quintus is true;
 	else:
 		say "     The fierce male looks appraisingly at you for enough time that you feel uncomfortable, before stating, 'I have told you that already, I am Quintus.'";

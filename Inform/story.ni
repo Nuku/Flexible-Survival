@@ -41,7 +41,6 @@ Include Basic Help Menu by Emily Short.
 Include Basic Screen Effects by Emily Short.
 Include Glulx Entry Points by Emily Short.
 Include Glulx Text Effects by Emily Short.
-[Include Glulx Status Window Control by Erik Temple.]
 Include Simple Graphical Window by Emily Short.
 [New Graphics Handler]
 Include Graphics Director by Core Mechanics.
@@ -235,7 +234,6 @@ Include Mall Community Center by Wahn.
 Include Mall Residents by Rikaeus.
 Include Medical Checkups by Stripes.
 Include Milking Facility by Kernog.
-Include Museum Roman Wing by Gherod.
 Include Museum by Sarokcat.
 Include New Ewe Store by Luneth.
 Include PIG Frat by Stripes.
@@ -913,7 +911,6 @@ Include Sam by Stripes.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
 Include Savina by Kurainyx.
-[Include Segis by Gherod.]
 Include Serafino by Rikaeus.
 Include Seraphis by Vinickus.
 Include Serenity by Kurainyx.
@@ -1026,7 +1023,7 @@ When play begins (this is the graphics window construction rule):
 				now graphics window position is g-above;
 			-- 3:
 				now graphics window position is g-below;
-		reconstruct graphics window;
+		build graphics window;
 		[now the graphics window pixel count is 1;]
 		follow the ngraphics_blank rule;
 		follow the current graphics drawing rule;

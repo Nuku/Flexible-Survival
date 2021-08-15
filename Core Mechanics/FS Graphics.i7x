@@ -680,6 +680,289 @@ Figure of emap_mall_restrooms_icon is the file "emap_mall_restrooms.png".
 Figure of emap_mall_shagshack_icon is the file "emap_mall_shagshack.png".
 Figure of emap_mall_westwing_icon is the file "emap_mall_westwing.png".
 
+[emap - Capitol building]
+Figure of emap_A_Volcanic_Crater_icon  is the file "emap_A_Volcanic_Crater.png".
+Figure of emap_Approaching_Capitol_Building_icon is the file "emap_Approaching_Capitol_Building.png".
+Figure of emap_Charred_Streets_icon is the file "emap_Charred_Streets.png".
+Figure of emap_Path_of_Ashes_icon is the file "emap_Path_of_Ashes.png".
+Figure of emap_Rusty_Walkways_icon is the file "emap_Rusty_Walkways.png".
+Figure of emap_Salamander_Hideaway_icon is the file "emap_Salamander_Hideaway.png".
+
+[emap - Fire station 86]
+Figure of emap_Fire_Station_86_icon is the file "emap_Fire_Station_86.png".
+Figure of emap_Firehouse_icon is the file "emap_Firehouse.png".
+Figure of emap_Sleeping_Quarters_icon is the file "emap_Sleeping_Quarters.png".
+
+[emap - Green apartment building]
+Figure of emap_Brennans_Bathroom_icon is the file "emap_Brennans_Bathroom.png".
+Figure of emap_Brennans_Bedroom_icon is the file "emap_Brennans_Bedroom.png".
+Figure of emap_Green_Apartment_Building_icon is the file "emap_Green_Apartment_Building.png".
+Figure of emap_Green_Lobby_icon is the file "emap_Green_Lobby.png".
+Figure of emap_Overgrown_Rooftop_icon is the file "emap_Overgrown_Rooftop.png".
+Figure of emap_Survivor_Refuge_icon is the file "emap_Survivor_Refuge.png".
+
+[emap - Milking Facility Entrance]
+Figure of emap_Milking_Facility_Entrance_icon is the file "emap_Milking_Facility_Entrance.png".
+Figure of emap_Milking_Facility_Factory_icon is the file "emap_Milking_Facility_Factory.png".
+Figure of emap_Milking_Facility_Operations_Room_icon is the file "emap_Milking_Facility_Operations_Room.png".
+
+[emap - Pediatrics Lobby]
+Figure of emap_Doctors_office_icon is the file "emap_Doctors_office.png".
+Figure of emap_Pediatrics_Lobby_icon is the file "emap_Pediatrics_Lobby.png".
+
+[emap - Red Apartment Building]
+Figure of emap_Raven_Nest_icon is the file "emap_Raven_Nest.png".
+Figure of emap_Red_Apartment_1st_Floor_icon is the file "emap_Red_Apartment_1st_Floor.png".
+Figure of emap_Red_Apartment_2nd_Floor_icon is the file "emap_Red_Apartment_2nd_Floor.png".
+Figure of emap_Red_Apartment_3rd_Floor_icon is the file "emap_Red_Apartment_3rd_Floor.png".
+Figure of emap_Red_Apartment_4th_Floor_icon is the file "emap_Red_Apartment_4th_Floor.png".
+Figure of emap_Red_Apartment_Building_icon is the file "emap_Red_Apartment_Building.png".
+Figure of emap_Red_Apartment_Rooftop_icon is the file "emap_Red_Apartment_Rooftop.png".
+
+[emap - Park Entrance]
+Figure of emap_Hiking_Trail_Bend_icon is the file "emap_Hiking_Trail_Bend.png".
+Figure of emap_Hiking_Trail_Split_icon is the file "emap_Hiking_Trail_Split.png".
+Figure of emap_Hiking_Trail_Start_icon is the file "emap_Hiking_Trail_Start.png".
+Figure of emap_Park_Entrance_icon is the file "emap_Park_Entrance.png".
+Figure of emap_Park_Trail_icon is the file "emap_Park_Trail.png".
+Figure of emap_Park_Trail_Secret_icon is the file "emap_Park_Trail_Secret.png".
+Figure of emap_Shinto_Shrine_icon is the file "emap_Shinto_Shrine.png".
+Figure of emap_Stocks_icon is the file "emap_Stocks.png".
+
+[emap - The Palomino]
+Figure of emap_Ammys_Flatlet_icon is the file "emap_Ammys_Flatlet.png".
+Figure of emap_Palomino_icon is the file " emap_Palomino.png".
+Figure of emap_Private_Booths_icon is the file "emap_Private_Booths.png".
+Figure of emap_Private_Club_Room_icon is the file "emap_Private_Club_Room.png".
+Figure of emap_Topless_Lounge_icon is the file "emap_Topless_Lounge.png".
+
+[emap - Dry Planes]
+Figure of emap_Dry_Plains_icon is the file "emap_Dry_Plains.png".
+Figure of emap_Hidden_Camp_icon is the file "emap_Hidden_Camp.png".
+Figure of emap_Inconspicuous_Trail_icon is the file "emap_Inconspicuous_Trail.png".
+
+[emap - State Fair]
+Figure of emap_State_Fair_icon is the file "emap_State_Fair.png".
+
+[emap - Entrance to high rise District]
+Figure of emap_Entrance_to_the_High_Rise_District_icon is the file "emap_Entrance_to_the_High_Rise_District.png".
+Figure of emap_Overgrown_Street_icon is the file "emap_Overgrown_Street.png".
+
+[emap - Zaphyr]
+Figure of emap_Zephyr_Lobby_icon is the file "emap_Zephyr_Lobby.png".
+Figure of emap_Zephyr_Storeroom_icon is the file "emap_Zephyr_Storeroom.png".
+
+[emap - Hospital]
+Figure of emap_City_Hospital_icon is the file "emap_City_Hospital.png".
+Figure of emap_Hospital_Halls_icon is the file "emap_Hospital_Halls.png".
+Figure of emap_Hospital_Interior_icon is the file "emap_Hospital_Interior.png".
+Figure of emap_Locked_Starwell_icon is the file "emap_Locked_Starwell.png".
+
+[emap - Plant Overview]
+Figure of emap_Administration_Offices_icon is the file "emap_Administration_Offices.png".
+Figure of emap_Catwalk_icon is the file "emap_Catwalk.png".
+Figure of emap_Control_Room_icon is the file "emap_Control_Room.png".
+Figure of emap_Plant_Lobby_icon is the file "emap_Plant_Lobby.png".
+Figure of emap_Plant_Overview_icon is the file "emap_Plant_Overview.png".
+
+[emap - Power Lines]
+Figure of emap_Power_Lines_icon is the file "emap_Power_Lines.png".
+
+[emap - Abandoned Lot]
+Figure of emap_Abandoned_Lot_icon is the file "emap_Abandoned_Lot.png".
+Figure of emap_Junkyard_Alley_icon is the file "emap_Junkyard_Alley.png".
+Figure of emap_Junkyard_Entrance_icon is the file "emap_Junkyard_Entrance.png".
+Figure of emap_Storage_Room_icon is the file "emap_Storage_Room.png".
+
+[emap - Museum Foyer]
+Figure of emap_Museum_Foyer_icon is the file "emap_Museum_Foyer.png".
+
+[emap - Grey Abbey Library]
+Figure of emap_Grey_Abbey_Library_icon is the file "emap_Grey_Abbey_Library.png".
+Figure of emap_Attic_icon is the file "emap_Attic.png".
+Figure of emap_Back_Library_icon is the file "emap_Back_Library.png".
+Figure of emap_Breakroom_icon is the file "emap_Breakroom.png".
+Figure of emap_Bunker_icon is the file "emap_Bunker.png".
+Figure of emap_Communal_Shower_icon is the file "emap_Communal_Shower.png".
+Figure of emap_Computer_Lab_icon is the file "emap_Computer_Lab.png".
+Figure of emap_Courtyard_icon is the file "emap_Courtyard.png".
+Figure of emap_Darkened_Alcove_icon is the file "emap_Darkened_Alcove.png".
+Figure of emap_Garden_View_icon is the file "emap_Garden_View.png".
+Figure of emap_Georges_Animal_Emporium_icon is the file "emap_Georges_Animal_Emporium.png".
+Figure of emap_Grey_Abbey_2F_icon is the file "emap_Grey_Abbey_2F.png".
+Figure of emap_Grey_Abbey_Garden_icon is the file "emap_Grey_Abbey_Garden.png".
+Figure of emap_Half_Renovated_Room_icon is the file "emap_Half_Renovated_Room.png".
+Figure of emap_Large_Shed_icon is the file "emap_Large_Shed.png".
+Figure of emap_Looted_Shops_icon is the file "emap_Looted_Shops.png".
+Figure of emap_Main_&_7th_Street_icon is the file "emap_Main_&_7th_Street.png".
+Figure of emap_Maintainance_Storeroom_icon is the file "emap_Maintainance_Storeroom.png".
+Figure of emap_Makeshift_Rec_Room_icon is the file "emap_Makeshift_Rec_Room.png".
+Figure of emap_Pantry_icon is the file "emap_Pantry.png".
+Figure of emap_Sitting_Area_icon is the file "emap_Sitting_Area.png".
+Figure of emap_Underground_Restroom_icon is the file "emap_Underground_Restroom.png".
+
+[emap - Trevor Lab]
+Figure of emap_2F_Trevor_Labs_icon is the file "emap_2F_Trevor_Labs.png".
+Figure of emap_Outside_Trevor_Labs_icon is the file "emap_Outside_Trevor_Labs.png".
+Figure of emap_Primary_Lab_icon is the file "emap_Primary_Lab.png".
+Figure of emap_Trevor_Labs_Lobby_icon is the file "emap_Trevor_Labs_Lobby.png".
+
+[emap - Bright Alley]
+Figure of emap_Bright_Alley_icon is the file "emap_Bright_Alley.png".
+
+[emap - Entrance to the Red Light District]
+Figure of emap_Atticuss_Bedroom_icon is the file "emap_Atticuss_Bedroom.png".
+Figure of emap_Boundary_Street_East_icon is the file "emap_Boundary_Street_East.png".
+Figure of emap_Boundary_Street_West_icon is the file "emap_Boundary_Street_West.png".
+Figure of emap_BurnedOut_Chapel_icon is the file "emap_BurnedOut_Chapel.png".
+Figure of emap_Crimson_Street_icon is the file "emap_Crimson_Street.png".
+Figure of emap_Dariuss_Crib_icon is the file "emap_Dariuss_Crib.png".
+Figure of emap_Dark_Alley_icon is the file "emap_Dark_Alley.png".
+Figure of emap_Dingy_Alley_icon is the file "emap_Dingy_Alley.png".
+Figure of emap_Entrance_to_the_Red_Light_District_icon is the file "emap_Entrance_to_the_Red_Light_District.png".
+Figure of emap_Hellfire_Cell_icon is the file "emap_Hellfire_Cell.png".
+Figure of emap_Hellfire_Club_icon is the file "emap_Hellfire_Club.png".
+Figure of emap_Hellfire_Corridor_icon is the file "emap_Hellfire_Corridor.png".
+Figure of emap_Hellfire_Dungeon_icon is the file "emap_Hellfire_Dungeon.png".
+Figure of emap_Hellfire_Lounge_icon is the file "emap_Hellfire_Lounge.png".
+Figure of emap_Hellfire_Restroom_icon is the file "emap_Hellfire_Restroom.png".
+Figure of emap_Hellfire_Storage_icon is the file "emap_Hellfire_Storage.png".
+Figure of emap_Hellfire_Unknown_icon is the file "emap_Hellfire_Unknown.png".
+Figure of emap_Narrow_Alley_icon is the file "emap_Narrow_Alley.png".
+Figure of emap_Northern_Street_1_icon is the file "emap_Northern_Street_1.png".
+Figure of emap_Northern_Street_2_icon is the file "emap_Northern_Street_2.png".
+Figure of emap_Restrained_Desire_icon is the file "emap_Restrained_Desire.png".
+Figure of emap_Sacristy_icon is the file "emap_Sacristy.png".
+Figure of emap_VIP_Floor_icon is the file "emap_VIP_Floor.png".
+
+[emap - Orc Lair]
+Figure of emap_Breeder_Lockup_A_icon is the file "emap_Breeder_Lockup_A.png".
+Figure of emap_Bright_Hallway_1_icon is the file "emap_Bright_Hallway_1.png".
+Figure of emap_Bright_Hallway_2_icon is the file "emap_Bright_Hallway_2.png".
+Figure of emap_Dark_Hallway_1_icon is the file "emap_Dark_Hallway_1.png".
+Figure of emap_Dark_Hallway_2_icon is the file "emap_Dark_Hallway_2.png".
+Figure of emap_Main_Hall_icon is the file "emap_Main_Hall.png".
+Figure of emap_Observation_Room_icon is the file "emap_Observation_Room.png".
+Figure of emap_Orc_Lair_Side_Entrance_icon is the file "emap_Orc_Lair_Side_Entrance.png".
+Figure of emap_Police_Station_Locker_Room_icon is the file "emap_Police_Station_Locker_Room.png".
+Figure of emap_Slave_Cell_1_icon is the file "emap_Slave_Cell_1.png".
+Figure of emap_Slave_Cell_2_icon is the file "emap_Slave_Cell_2.png".
+
+[emap - Beach]
+Figure of emap_Beach_Plaza_icon is the file "emap_Beach_Plaza.png".
+Figure of emap_Boardwalk_icon is the file "emap_Boardwalk.png".
+Figure of emap_church_hall_icon is the file "emap_church_hall.png".
+Figure of emap_City_Center_icon is the file "emap_City_Center.png".
+Figure of emap_City_Entrance_icon is the file "emap_City_Entrance.png".
+Figure of emap_City_Market_icon is the file "emap_City_Market.png".
+Figure of emap_City_Residential_icon is the file "emap_City_Residential.png".
+Figure of emap_Dirty_Sheds_icon is the file "emap_Dirty_Sheds.png".
+Figure of emap_End_of_Beach_icon is the file "emap_End_of_Beach.png".
+Figure of emap_Open_Ocean_icon is the file "emap_Open_Ocean.png".
+Figure of emap_Overgrown_Area_icon is the file "emap_Overgrown_Area.png".
+Figure of emap_Public_Beach_icon is the file "emap_Public_Beach.png".
+Figure of emap_Resteraunt_icon is the file "emap_Resteraunt.png".
+Figure of emap_Rock_Arch_icon is the file "emap_Rock_Arch.png".
+Figure of emap_Rocky_Cliff_icon is the file "emap_Rocky_Cliff.png".
+Figure of emap_Royal_Bed_Chambers_icon is the file "emap_Royal_Bed_Chambers.png".
+Figure of emap_Royal_Palace_Entrance_icon is the file "emap_Royal_Palace_Entrance.png".
+Figure of emap_Royal_Throne_Room_icon is the file "emap_Royal_Throne_Room.png".
+Figure of emap_Shallow_Bay_icon is the file "emap_Shallow_Bay.png".
+Figure of emap_Sunken_Ship_icon is the file "emap_Sunken_Ship.png".
+Figure of emap_Sunny_Snacks_icon is the file "emap_Sunny_Snacks.png".
+Figure of emap_Wild_Fringe_icon is the file "emap_Wild_Fringe.png".
+
+[emap - Bouncy Castle]
+Figure of emap_Ball_Pit_Room_icon is the file "emap_Ball_Pit_Room.png".
+Figure of emap_Bouncy_Castle_icon is the file "emap_Bouncy_Castle.png".
+Figure of emap_Bouncy_Play_Room_icon is the file "emap_Bouncy_Play_Room.png".
+Figure of emap_Castle_Throne_Room_icon is the file "emap_Castle_Throne_Room.png".
+Figure of emap_Eastern_Parapets_icon is the file "emap_Eastern_Parapets.png".
+Figure of emap_Fencing_Room_icon is the file "emap_Fencing_Room.png".
+Figure of emap_Great_Hall_icon is the file "emap_Great_Hall.png".
+Figure of emap_Kings_Chambers_icon is the file "emap_Kings_Chambers.png".
+Figure of emap_Knights_Chambers_icon is the file "emap_Knights_Chambers.png".
+Figure of emap_Lower_Tower_icon is the file "emap_Lower_Tower.png".
+Figure of emap_Punching_Pillars_icon is the file "emap_Punching_Pillars.png".
+Figure of emap_Tower_Turret_icon is the file "emap_Tower_Turret.png".
+Figure of emap_Toy_Room_icon is the file "emap_Toy_Room.png".
+Figure of emap_Upper_Hall_icon is the file "emap_Upper_Hall.png".
+Figure of emap_Upper_Tower_icon is the file "emap_Upper_Tower.png".
+Figure of emap_Western_Parapets_icon is the file "emap_Western_Parapets.png".
+
+[emap - College Campus]
+Figure of emap_Astroslide_Field_Locker_Room_icon is the file "emap_Astroslide_Field_Locker_Room.png".
+Figure of emap_Astroslide_Football_Field_icon is the file "emap_Astroslide_Football_Field.png".
+Figure of emap_Athletic_Street_icon is the file "emap_Athletic_Street.png".
+Figure of emap_College_Administration_Building_icon is the file "emap_College_Administration_Building.png".
+Figure of emap_College_Belltower_icon is the file "emap_College_Belltower.png".
+Figure of emap_College_Campus_Entrance_icon is the file "emap_College_Campus_Entrance.png".
+Figure of emap_College_Fountain_icon is the file "emap_College_Fountain.png".
+Figure of emap_College_Walkway_East_icon is the file "emap_College_Walkway_East.png".
+Figure of emap_College_Walkway_Northeast_icon is the file "emap_College_Walkway_Northeast.png".
+Figure of emap_College_Walkway_Northwest_icon is the file "emap_College_Walkway_Northwest.png".
+Figure of emap_College_Walkway_West_icon is the file "emap_College_Walkway_West.png".
+Figure of emap_Deans_Office_icon is the file "emap_Deans_Office.png".
+Figure of emap_Dorm_Street_icon is the file "emap_Dorm_Street.png".
+Figure of emap_Greek_Street_icon is the file "emap_Greek_Street.png".
+Figure of emap_Jadakos_Room_icon is the file "emap_Jadakos_Room.png".
+Figure of emap_Jakes_Room_icon is the file "emap_Jakes_Room.png".
+Figure of emap_Julians_Room_icon is the file "emap_Julians_Room.png".
+Figure of emap_Lecture_Street_icon is the file "emap_Lecture_Street.png".
+Figure of emap_Pericles_Room_icon is the file "emap_Pericles_Room.png".
+Figure of emap_Randalls_Room_icon is the file "emap_Randalls_Room.png".
+Figure of emap_Richards_Room_icon is the file "emap_Richards_Room.png".
+Figure of emap_Second_Floor_Male_Dorms_icon is the file "emap_Second_Floor_Male_Dorms.png".
+Figure of emap_Showers_icon is the file "emap_Showers.png".
+Figure of emap_Sports_Arena_Lockerroom_icon is the file "emap_Sports_Arena_Lockerroom.png".
+Figure of emap_Stewarts_Room_icon is the file "emap_Stewarts_Room.png".
+Figure of emap_Sylvias_Room_icon is the file "emap_Sylvias_Room.png".
+Figure of emap_Tenvale_College_Female_Dorms_icon is the file "emap_Tenvale_College_Female_Dorms.png".
+Figure of emap_Tenvale_College_Library_icon is the file "emap_Tenvale_College_Library.png".
+Figure of emap_Tenvale_College_Male_Dorms_icon is the file "emap_Tenvale_College_Male_Dorms.png".
+Figure of emap_The_Clouds_icon is the file "emap_The_Clouds.png".
+Figure of emap_Thunderbolts_Stable_icon is the file "emap_Thunderbolts_Stable.png".
+Figure of emap_Wallys_Room_icon is the file "emap_Wallys_Room.png".
+Figure of emap_Your_Dorm_Room_icon is the file "emap_Your_Dorm_Room.png".
+
+[emap - Urban Forest]
+Figure of emap_Avalon_Crossroads_icon is the file "emap_Avalon_Crossroads.png".
+Figure of emap_Forest_Borrow_Entrance_icon is the file "emap_Forest_Borrow_Entrance.png".
+Figure of emap_Forest_Cave_Entrance_icon is the file "emap_Forest_Cave_Entrance.png".
+Figure of emap_Frozen_Cave_Tunnel_icon is the file "emap_Frozen_Cave_Tunnel.png".
+Figure of emap_Ice_Foxes_Den_icon is the file "emap_Ice_Foxes_Den.png".
+Figure of emap_Ironscale_Hollow_icon is the file "emap_Ironscale_Hollow.png".
+Figure of emap_Kobolds_icon is the file "emap_Kobolds.png".
+Figure of emap_Mysterious_Glade_icon is the file "emap_Mysterious_Glade.png".
+Figure of emap_Snowy_Forest_Trail_icon is the file "emap_Snowy_Forest_Trail.png".
+Figure of emap_Urban_Forest_icon is the file "emap_Urban_Forest.png".
+Figure of emap_Virgins_Pass_icon is the file "emap_Virgins_Pass.png".
+
+[emap - Warehouse District]
+Figure of emap_Gloomy_Warehouse_icon is the file "emap_Gloomy_Warehouse.png".
+Figure of emap_Northern_Docks_icon is the file "emap_Northern_Docks.png".
+Figure of emap_Packaging_Warehouse_icon is the file "emap_Packaging_Warehouse.png".
+Figure of emap_South_Harbor_icon is the file "emap_South_Harbor.png".
+Figure of emap_Warehouse_District_icon is the file "emap_Warehouse_District.png".
+
+[emap - Zoo]
+Figure of emap_Bird_Enclosure_icon is the file "emap_Bird_Enclosure.png".
+Figure of emap_Bird_House_icon is the file "emap_Bird_House.png".
+Figure of emap_Border_Wall_icon is the file "emap_Border_Wall.png".
+Figure of emap_Cheetah_Habitat_icon is the file "emap_Cheetah_Habitat.png".
+Figure of emap_Fence_Path_icon is the file "emap_Fence_Path.png".
+Figure of emap_Gator_Pit_icon is the file "emap_Gator_Pit.png".
+Figure of emap_Main_Path_1_icon is the file "emap_Main_Path_1.png".
+Figure of emap_Main_Path_2_icon is the file "emap_Main_Path_2.png".
+Figure of emap_Monkey_House_icon is the file "emap_Monkey_House.png".
+Figure of emap_Snake_House_icon is the file "emap_Snake_House.png".
+Figure of emap_Zoo_Entrance_icon is the file "emap_Zoo_Entrance.png".
+Figure of emap_Zoo_Entryway_icon is the file "emap_Zoo_Entryway.png".
+Figure of emap_Zoo_Giftshop_icon is the file "emap_Zoo_Giftshop.png".
+Figure of emap_Zoo_Parking_icon is the file "emap_Zoo_Parking.png".
+Figure of emap_Zoo_Rest_Area_icon is the file "emap_Zoo_Rest_Area.png".
+Figure of emap_Zoo_Restrooms_icon is the file "emap_Zoo_Restrooms.png".
+
 before examining a thing (called t):
 	if the icon of t is figure of pixel:
 		continue the action;
@@ -708,6 +991,10 @@ to inline_project (x - a figure name):
 [New Hybrid Project (Reverts to inline if NewGraphics disabled)]
 to project (x - a figure name):
 	if graphics is true and NewGraphics is true:
+		[repeat with z running from 1 to number of filled rows in table of game art:
+			choose row z in Table of Zpc Location Reference;
+			if debugactive is 1 and x is icon entry in Table of Zpc Location Reference:
+				say "Found zpc Figure! attempting projection...";]
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
 			if icon entry is x and artist entry is not listed in BlockList of Player:
@@ -991,7 +1278,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Hellfire Demon Soft No Harness"	Figure of HellfireDemon_softnoharness_icon	"Gherod"	g-white	"normal"
 "Hellfire Demon Hard No Harness"	Figure of HellfireDemon_hardnoharness_icon	"Gherod"	g-white	"normal"
 "Hobo"	Figure of Hobo_icon	"Conchi"	g-white	"normal"
-"Blue Gryphon Herm_old"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
+"Blue Gryphon Herm"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
 "Blue Gryphon hard"	Figure of BlueGryphon_hard_icon	"Vashaa"	g-white	"normal"
 "Blue Gryphon soft"	Figure of BlueGryphon_soft_icon	"Vashaa"	g-white	"normal"
 "Feral Gryphon hard"	Figure of FeralGryphon_hard_icon	"Vashaa"	g-white	"normal"
@@ -1491,6 +1778,259 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Map Farm 10"	Figure of Map_Farm_10_icon	"Goncalo"	g-black	"normal"
 "Map Farm 11"	Figure of Map_Farm_11_icon	"Goncalo"	g-black	"normal"
 "Map Farm 12"	Figure of Map_Farm_12_icon	"Goncalo"	g-black	"normal"
+[emap - Capitol building]
+"emap - A Volcanic Crater"	Figure of emap_A_Volcanic_Crater_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Approaching the Capitol Building"	Figure of emap_Approaching_Capitol_Building_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Charred Streets"	Figure of emap_Charred_Streets_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Path of Ashes"	Figure of emap_Path_of_Ashes_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Rusty Walkways"	Figure of emap_Rusty_Walkways_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Salamander Hideaway"	Figure of emap_Salamander_Hideaway_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Fire station 86]
+"emap - Fire Station 86"	Figure of emap_Fire_Station_86_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Firehouse"	Figure of emap_Firehouse_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Sleeping Quarters"	Figure of emap_Sleeping_Quarters_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Green apartment building]
+"emap - Brennan's Bathroom"	Figure of emap_Brennans_Bathroom_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Brennan's Bedroom"	Figure of emap_Brennans_Bedroom_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Green Apartment Building"	Figure of emap_Green_Apartment_Building_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Green Lobby"	Figure of emap_Green_Lobby_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Overgrown Rooftop"	Figure of emap_Overgrown_Rooftop_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Survivor Refuge"	Figure of emap_Survivor_Refuge_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Milking Facility Entrance]
+"emap - Milking Facility Entrance"	Figure of emap_Milking_Facility_Entrance_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Milking Facility Factory"	Figure of emap_Milking_Facility_Factory_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Milking Facility Operations Room"	Figure of emap_Milking_Facility_Operations_Room_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Pediatrics Lobby]
+"emap - Doctor's Office"	Figure of emap_Doctors_office_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Pediatrics Lobby"	Figure of emap_Pediatrics_Lobby_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Red Apartment Building]
+"emap - Raven Nest"	Figure of emap_Raven_Nest_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Red Apartment 1st Floor"	Figure of emap_Red_Apartment_1st_Floor_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Red Apartment 2nd Floor"	Figure of emap_Red_Apartment_2nd_Floor_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Red Apartment 3rd Floor"	Figure of emap_Red_Apartment_3rd_Floor_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Red Apartment 4th Floor"	Figure of emap_Red_Apartment_4th_Floor_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Red Apartment Building"	Figure of emap_Red_Apartment_Building_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Red Apartment Rooftop"	Figure of emap_Red_Apartment_Rooftop_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Park Entrance]
+"emap - Hiking Trail Bend"	Figure of emap_Hiking_Trail_Bend_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hiking Trail Split"	Figure of emap_Hiking_Trail_Split_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hiking Trail Start"	Figure of emap_Hiking_Trail_Start_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Park Entrance"	Figure of emap_Park_Entrance_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Park Trail"	Figure of emap_Park_Trail_Secret_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Shinto Shrine"	Figure of emap_Shinto_Shrine_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Stocks"	Figure of emap_Stocks_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - The Palomino]
+"emap - Ammy's Flatlet"	Figure of emap_Ammys_Flatlet_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Palomino"	Figure of emap_Palomino_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Private Booths"	Figure of emap_Private_Booths_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Private Club Room"	Figure of emap_Private_Club_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Topless Lounge"	Figure of emap_Topless_Lounge_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Dry Planes]
+"emap - Dry Plains"	Figure of emap_Dry_Plains_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hidden Camp"	Figure of emap_Hidden_Camp_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Inconspicuous Trail"	Figure of emap_Inconspicuous_Trail_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - State Fair]
+"emap - State Fair"	Figure of emap_State_Fair_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Entrance to high rise District]
+"emap - Entrance to the High Rise District"	Figure of emap_Entrance_to_the_High_Rise_District_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Overgrown Street"	Figure of emap_Overgrown_Street_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - ZaphyrBut mark]
+"emap - Zephyr Lobby"	Figure of emap_Zephyr_Lobby_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Zephyr Storeroom"	Figure of emap_Zephyr_Storeroom_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Hospital]
+"emap - City Hospital"	Figure of emap_City_Hospital_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hospital Halls"	Figure of emap_Hospital_Halls_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hospital Interior"	Figure of emap_Hospital_Interior_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Locked Stairwell"	Figure of emap_Locked_Starwell_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Plant Overview]
+"emap - Administration Offices"	Figure of emap_Administration_Offices_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Catwalk"	Figure of emap_Catwalk_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Control Room"	Figure of emap_Control_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Plant Lobby"	Figure of emap_Plant_Lobby_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Plant Overview"	Figure of emap_Plant_Overview_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Power Lines]
+"emap - Power Lines"	Figure of emap_Power_Lines_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Abandoned Lot]
+"emap - Abandoned Lot"	Figure of emap_Abandoned_Lot_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Junkyard Alley"	Figure of emap_Junkyard_Alley_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Junkyard Entrance"	Figure of emap_Junkyard_Entrance_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Storage Room"	Figure of emap_Storage_Room_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Museum Foyer]
+"emap - Museum Foyer"	Figure of emap_Museum_Foyer_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Grey Abbey Library]
+"emap - Grey Abbey Library"	Figure of emap_Grey_Abbey_Library_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Attic"	Figure of emap_Attic_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Back Library"	Figure of emap_Back_Library_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Breakroom"	Figure of emap_Breakroom_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Bunker"	Figure of emap_Bunker_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Communal Shower"	Figure of emap_Communal_Shower_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Computer Lab"	Figure of emap_Computer_Lab_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Courtyard"	Figure of emap_Courtyard_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Darkened Alcove"	Figure of emap_Darkened_Alcove_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Garden View"	Figure of emap_Garden_View_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - George's Animal Emporium"	Figure of emap_Georges_Animal_Emporium_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Grey Abbey 2F"	Figure of emap_Grey_Abbey_2F_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Grey Abbey Garden"	Figure of emap_Grey_Abbey_Garden_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Half-Renovated Room"	Figure of emap_Half_Renovated_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Large Shed"	Figure of emap_Large_Shed_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Looted Shops"	Figure of emap_Looted_Shops_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Main & 7th Street"	Figure of emap_Main_&_7th_Street_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Maintenance Storeroom"	Figure of emap_Maintainance_Storeroom_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Makeshift Rec Room"	Figure of emap_Makeshift_Rec_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Pantry"	Figure of emap_Pantry_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Sitting Area"	Figure of emap_Sitting_Area_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Underground Restroom"	Figure of emap_Underground_Restroom_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Trevor Lab]
+"emap - 2F Trevor Labs"	Figure of emap_2F_Trevor_Labs_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Outside Trevor Labs"	Figure of emap_Outside_Trevor_Labs_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Primary Lab"	Figure of emap_Primary_Lab_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Trevor Labs Lobby"	Figure of emap_Trevor_Labs_Lobby_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Bright Alley]
+"emap - Bright Alley"	Figure of emap_Bright_Alley_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Entrance to the Red Light District]
+"emap - Atticus's Bedroom"	Figure of emap_Atticuss_Bedroom_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Boundary Street East"	Figure of emap_Boundary_Street_East_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Boundary Street West"	Figure of emap_Boundary_Street_West_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Burned-Out Chapel"	Figure of emap_BurnedOut_Chapel_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Crimson Street"	Figure of emap_Crimson_Street_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Darius's Crib"	Figure of emap_Dariuss_Crib_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Dark Alley"	Figure of emap_Dark_Alley_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Dingy Alley"	Figure of emap_Dingy_Alley_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Entrance to the Red Light District"	Figure of emap_Entrance_to_the_Red_Light_District_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hellfire Cell"	Figure of emap_Hellfire_Cell_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hellfire Club"	Figure of emap_Hellfire_Club_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hellfire Corridor"	Figure of emap_Hellfire_Corridor_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hellfire Dungeon"	Figure of emap_Hellfire_Dungeon_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hellfire Lounge"	Figure of emap_Hellfire_Lounge_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hellfire Restroom"	Figure of emap_Hellfire_Restroom_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hellfire Storage"	Figure of emap_Hellfire_Storage_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hellfire Unknown"	Figure of emap_Hellfire_Unknown_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Narrow Alley"	Figure of emap_Narrow_Alley_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Northern Street 1"	Figure of emap_Northern_Street_1_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Northern Street 2"	Figure of emap_Northern_Street_2_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Restrained Desire"	Figure of emap_Restrained_Desire_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Sacristy"	Figure of emap_Sacristy_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Hellfire VIP Floor"	Figure of emap_VIP_Floor_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Orc Lair]
+"emap - Breeder Lockup A"	Figure of emap_Breeder_Lockup_A_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Bright Hallway 1"	Figure of emap_Bright_Hallway_1_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Bright Hallway 2"	Figure of emap_Bright_Hallway_2_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Dark Hallway 1"	Figure of emap_Dark_Hallway_1_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Dark Hallway 2"	Figure of emap_Dark_Hallway_2_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Main Hall"	Figure of emap_Main_Hall_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Observation Room"	Figure of emap_Observation_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Orc Lair Side Entrance"	Figure of emap_Orc_Lair_Side_Entrance_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Police Station Lockerroom"	Figure of emap_Police_Station_Locker_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Slave Cell 1"	Figure of emap_Slave_Cell_1_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Slave Cell 2"	Figure of emap_Slave_Cell_2_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Beach]
+"emap - Beach Plaza"	Figure of emap_Beach_Plaza_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Boardwalk"	Figure of emap_Boardwalk_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Church Hall"	Figure of emap_church_hall_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - City Center"	Figure of emap_City_Center_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - City Entrance"	Figure of emap_City_Entrance_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - City Market"	Figure of emap_City_Market_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - City Residential"	Figure of emap_City_Residential_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Dirty Sheds"	Figure of emap_Dirty_Sheds_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - BeachEnd"	Figure of emap_End_of_Beach_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Open Ocean"	Figure of emap_Open_Ocean_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Overgrown Area"	Figure of emap_Overgrown_Area_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Public Beach"	Figure of emap_Public_Beach_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Restaurant"	Figure of emap_Resteraunt_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Rock Arch"	Figure of emap_Rock_Arch_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Rocky Cliff"	Figure of emap_Rocky_Cliff_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Royal Bed Chambers"	Figure of emap_Royal_Bed_Chambers_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Royal Palace Entrance"	Figure of emap_Royal_Palace_Entrance_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Royal Throne Room"	Figure of emap_Royal_Throne_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Shallow Bay"	Figure of emap_Shallow_Bay_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Sunken Ship"	Figure of emap_Sunny_Snacks_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Wild Fringe"	Figure of emap_Wild_Fringe_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Bouncy Castle]
+"emap - Ball Pit Room"	Figure of emap_Ball_Pit_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Bouncy Castle"	Figure of emap_Bouncy_Castle_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Bouncing Play Room"	Figure of emap_Bouncy_Play_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Castle Throne Room"	Figure of emap_Castle_Throne_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Eastern Parapets"	Figure of emap_Eastern_Parapets_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Fencing Room"	Figure of emap_Fencing_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Great Hall"	Figure of emap_Great_Hall_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - King's Chambers"	Figure of emap_Kings_Chambers_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Knight's Chambers"	Figure of emap_Knights_Chambers_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Lower Tower"	Figure of emap_Lower_Tower_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Punching Pillars"	Figure of emap_Punching_Pillars_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Tower Turret"	Figure of emap_Tower_Turret_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Toy Room"	Figure of emap_Toy_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Upper Hall"	Figure of emap_Upper_Hall_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Upper Tower"	Figure of emap_Upper_Tower_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Western Parapets"	Figure of emap_Western_Parapets_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - College Campus]
+"emap - Astroslide Field Locker-Room"	Figure of emap_Astroslide_Field_Locker_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Astroslide Football Field"	Figure of emap_Astroslide_Football_Field_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Athletic Street"	Figure of emap_Athletic_Street_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - College Administration Building"	Figure of emap_College_Administration_Building_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - College Belltower"	Figure of emap_College_Belltower_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - College Campus Entrance"	Figure of emap_College_Campus_Entrance_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - College Fountain"	Figure of emap_College_Fountain_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - College Walkway East"	Figure of emap_College_Walkway_East_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - College Walkway Northeast"	Figure of emap_College_Walkway_Northeast_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - College Walkway Northwest"	Figure of emap_College_Walkway_Northwest_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - College Walkway West"	Figure of emap_College_Walkway_West_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Dean's Office"	Figure of emap_Deans_Office_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Dorm Street"	Figure of emap_Dorm_Street_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Greek Street"	Figure of emap_Greek_Street_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Jadako's Room"	Figure of emap_Jadakos_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Jake's Room"	Figure of emap_Jakes_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Julian's Room"	Figure of emap_Julians_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Lecture Street"	Figure of emap_Lecture_Street_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Pericles' Room"	Figure of emap_Pericles_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Randall's Room"	Figure of emap_Randalls_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Richard's Room"	Figure of emap_Richards_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Second Floor Male Dorms"	Figure of emap_Second_Floor_Male_Dorms_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Showers"	Figure of emap_Showers_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Sports Arena Lockerroom"	Figure of emap_Sports_Arena_Lockerroom_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Stewart's Room"	Figure of emap_Stewarts_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Sylvia's Room"	Figure of emap_Sylvias_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Tenvale College Female Dorms"	Figure of emap_Tenvale_College_Female_Dorms_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Tenvale College Library"	Figure of emap_Tenvale_College_Library_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Tenvale College Male Dorms"	Figure of emap_Tenvale_College_Male_Dorms_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - The Clouds"	Figure of emap_The_Clouds_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Thunderbolt's Stable"	Figure of emap_Thunderbolts_Stable_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Wally's Room"	Figure of emap_Wallys_Room_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Your Dorm Room"	Figure of emap_Your_Dorm_Room_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Urban Forest]
+"emap - Avalon-Crossroads"	Figure of emap_Avalon_Crossroads_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Forest Burrow Entrance"	Figure of emap_Forest_Borrow_Entrance_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Forest Cave Entrance"	Figure of emap_Forest_Cave_Entrance_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Frozen Cave Tunnel"	Figure of emap_Frozen_Cave_Tunnel_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Ice Fox's Den"	Figure of emap_Ice_Foxes_Den_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Ironscale Hollow"	Figure of emap_Ironscale_Hollow_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Kobold Caves Gates"	Figure of emap_Kobolds_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Mysterious Glade"	Figure of emap_Mysterious_Glade_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Snowy Forest Trail"	Figure of emap_Snowy_Forest_Trail_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Urban Forest"	Figure of emap_Urban_Forest_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Virgin's Pass"	Figure of emap_Virgins_Pass_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Warehouse District]
+"emap - Gloomy Warehouse"	Figure of emap_Gloomy_Warehouse_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Northern Docks"	Figure of emap_Northern_Docks_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Packaging Warehouse"	Figure of emap_Packaging_Warehouse_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - S Harbor"	Figure of emap_South_Harbor_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Warehouse District"	Figure of emap_Warehouse_District_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - Zoo]
+"emap - Bird Enclosure"	Figure of emap_Bird_Enclosure_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Bird House"	Figure of emap_Bird_House_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Border Wall"	Figure of emap_Border_Wall_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Cheetah Habitat"	Figure of emap_Cheetah_Habitat_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Fence Path"	Figure of emap_Fence_Path_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Gator Pit"	Figure of emap_Gator_Pit_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Main Path 1"	Figure of emap_Main_Path_1_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Main Path 2"	Figure of emap_Main_Path_2_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Monkey House"	Figure of emap_Monkey_House_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Snake House"	Figure of emap_Snake_House_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Zoo Entrance"	Figure of emap_Zoo_Entrance_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Zoo Entryway"	Figure of emap_Zoo_Entryway_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Zoo Giftshop"	Figure of emap_Zoo_Giftshop_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Zoo Parking"	Figure of emap_Zoo_Parking_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Zoo Rest Area"	Figure of emap_Zoo_Rest_Area_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Zoo Restrooms"	Figure of emap_Zoo_Restrooms_icon	"Wolfram Rolf"	g-black	"normal"
 
 artistcredits is an action applying to nothing.
 
