@@ -211,6 +211,7 @@ to say J'RethTalkMenu:
 		now description entry is "Ask J'Reth if there is anything that you can do to help him";
 	[]
 	if hp of J'Reth is 1 and Charisma of J'Reth is 1 and Backpack Lost & Found Stage Four is resolved:
+	if Charisma of J'Reth is 1 and Backpack Lost & Found Stage Four is resolved:
 		choose a blank row in table of fucking options;
 		now title entry is "Return Backpack";
 		now sortorder entry is 14;
