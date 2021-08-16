@@ -605,6 +605,7 @@ object	name
 Wukong	"Wukong"
 
 Wukong is a person. Wukong is in Nowhere. Description of Wukong is "[wukongDesc]".
+Conversation of Wukong is { "<Placeholder>" }.
 
 to say wukongDesc:
 	if Resolution of Monkey Duel is 1:
