@@ -175,7 +175,7 @@ carry out UseRWDisplayCases:
 		say "     You do have a key to open these display cases, but there is no point in doing so, for now. At least, you know you can fetch any of these if the need presents itself.";
 	else if Resolution of RWDisplayCasesKey is 1 and Resolution of LarsGladiusAndShield is 2:
 		WaitLineBreak;
-		say "     You happen to have a key to open these display cases, and according to the painting you have seen, there is indeed a gladius and a scutum shield that would serve the purpose you are looking to achieve. They are here, within reach, in case you need to bring them over somewhere.";
+		say "     You happen to have a key to open these display cases, and according to the painting you have seen, there is indeed a [bold type]gladius and a scutum shield[roman type] that would serve the purpose you are looking to achieve. They are here, within reach, in case you need to bring them over somewhere.";
 		now Resolution of LarsGladiusAndShield is 3;
 
 carry out UseRWPaintings:
@@ -190,7 +190,7 @@ carry out UseRWPaintings:
 		now Resolution of LarsGladiusAndShield is 2;
 
 instead of going north from Museum_Roman_Wing while (Resolution of LarsGladiusAndShield >= 2 and Resolution of LarsCenturionHelmet < 1):
-	say "     As you walk out of the Roman Wing, you pass by a centurion helmet that seems quite like the one you have seen in that painting. Figuring that this would probably be useful, you take it off the display stand without much trouble and bring it over inside, just in case you need it.";
+	say "     As you walk out of the Roman Wing, you pass by a [bold type]centurion helmet[roman type] that seems quite like the one you have seen in that painting. Figuring that this would probably be useful, you take it off the display stand without much trouble and bring it over inside, just in case you need it.";
 	now Resolution of LarsCenturionHelmet is 1;
 
 carry out UseRWRomanSoldierStatue:
@@ -269,7 +269,7 @@ to say RWRomanSoldierStatueAwakening:
 		else:
 			LineBreak;
 			say "     No, you will not take any further moment in this cursed room, so you will just slide down its grasp, grab your things and walk straight out through the entrance's door as fast as you can. You do not look at the statue anymore, no, you are directly headed to the exit.";
-			say "     But then, the door shuts in a loud blam. The world around you crumbles as a sense of dread descends upon you. This place really is cursed, and now you are locked inside of it. No, this cannot be! You move to the door and immediately attempt to open it, but it is locked up tight, refusing to budge. You look back, and the statue of the roman soldier is no longer in the corner... He disappeared. You look around and do not see him anywhere. There is no trace of the cape, nor the weapons, neither the helmet is anywhere to be found. The room is silent and quiet, not a single sound nor movement... And just then, you hear a tick on the door. You try to open it, now, and it easily gives way.";
+			say "     But then, the door shuts in a loud blam. The world around you crumbles as a sense of dread descends upon you. This place really is cursed, and now you are locked inside of it. No, this cannot be! You move to the door and immediately attempt to open it, but it is locked up tight, refusing to budge. You look back, and the statue of the roman soldier is no longer in the corner... It disappeared. You look around and do not see it anywhere. There is no trace of the cape, nor the weapons, neither the helmet is anywhere to be found. The room is silent and quiet, not a single sound nor movement... And just then, you hear a tick on the door. You try to open it, now, and it easily gives way.";
 			WaitLineBreak;
 			say "     This was... one of the strangest experiences you have ever had, but you are now free to go... You think.";
 			say "     And as you take a step forward, you realize that you have bumped your foot onto something. It is a sword, but one that looks actually usable! Perhaps you should just collect it, so that you do not leave without anything worth your trouble, at all.";
@@ -279,7 +279,7 @@ to say RWRomanSoldierStatueAwakening:
 	else:
 		LineBreak;
 		say "     Yes, your heart is beating out of fear, chills run down your spine and you are definitely losing whatever sanity is still left in your feeble, vulnerable mind. The silence is not helping, the stillness in the air, everything in this museum, in fact! You turn tail and begin to walk towards the entrance of the Roman Wing, having decided that you shall not spend any further moment in this cursed place, so your steps are quick and decisive.";
-		say "     But then, the door shuts in a loud blam. The world around you crumbles as a sense of dread descends upon you. This place really is cursed, and now you are locked inside of it. No, this cannot be! You move to the door and immediately attempt to open it, but it is locked up tight, refusing to budge. You look back, and the statue of the roman soldier is no longer in the corner... He disappeared. You look around and do not see him anywhere. There is no trace of the cape, nor the weapons, neither the helmet is anywhere to be found. The room is silent and quiet, not a single sound nor movement... And just then, you hear a tick on the door. You try to open it, now, and it easily gives way.";
+		say "     But then, the door shuts in a loud blam. The world around you crumbles as a sense of dread descends upon you. This place really is cursed, and now you are locked inside of it. No, this cannot be! You move to the door and immediately attempt to open it, but it is locked up tight, refusing to budge. You look back, and the statue of the roman soldier is no longer in the corner... It disappeared. You look around and do not see it anywhere. There is no trace of the cape, nor the weapons, neither the helmet is anywhere to be found. The room is silent and quiet, not a single sound nor movement... And just then, you hear a tick on the door. You try to open it, now, and it easily gives way.";
 		WaitLineBreak;
 		say "     This was... one of the strangest experiences you have ever had, but you are now free to go... You think.";
 		say "     And as you take a step forward, you realize that you have bumped your foot onto something. It is a sword, but one that looks actually usable! Perhaps you should just collect it, so that you do not leave without anything worth your trouble, at all.";
@@ -333,7 +333,7 @@ Sterile of Lars is true. [steriles can't knock people up]
 MainInfection of Lars is "".
 Description of Lars is "[Larsdesc]".
 Conversation of Lars is { "<This is nothing but a placeholder!>" }.
-The scent of Lars is "     The roman centurion has a very masculine smell, quite distinguishable from the surrounding scents.".
+The scent of Lars is "     The roman soldier has a very masculine smell, quite distinguishable from the surrounding scents.".
 
 to say LarsDesc:
 	say "     Once merely a statue, Lars somehow came to life as a full human, albeit quite odd in posture and attitude, as if he belonged to another era. He is a tall and muscled man with quite strong roman features on his face, such as the wide jawline, the straight nose, a peachy skintone, dark eyes and short brown hair. He has only a stubble across his chin and jaw, and stands up straight in a quite military fashion. Speaking of his attire, it is reminescent of a roman centurion. His helmet is made of steel with red feathers, shaped like a fan, sitting on top of it, matching the steel plate protecting his torso. His outfit then ends in a sort of a red skirt that leaves his sculptural legs open, much like his arms. He also wears a long red cape tied around his neck and covering his back.";

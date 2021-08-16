@@ -1370,6 +1370,7 @@ to say mchristy_cv1:
 	follow the turnpass rule;
 
 to say mchristy_cv2:
+	increase MChristyVore by 1; [Each time this event is done, it adds 1 to the variable of MChristyVore]
 	say "     With your idea spelled out to [Christy], your body begins to tingle. His eyes look up and down your body, drinking you in. He then gives you a grin as his baritone reply sounds out, 'Of course. I can do that.' It's then just moments of waiting before he shoves his cock your way. The constantly dribbling urethra is then quickly met by your tongue. You lap and suck at every inch of his leaking tip, and you wrap your arms around the big cockhead as you dig in. To you, it's a gourmet meal. To him, it's an unholy pleasure that draws out moan after moan. There's nothing quite like it for either of you, and as your head sinks a bit into his tip, you gorge on his precum even more than before. You lap and suckle on each new inch of internal cockflesh you get access to.";
 	say "     It's then that the first undulation occurs. The pulsing draws you in, yanks you in up to your shoulders. You can't smell or taste anything other than [Christy]'s fluids, and as you go deeper, you can't imagine anything other than his essence. Your shoulders are soon yanked in, too. Then your upper arms slip inside, all while your mouth is constantly sucking and licking at the internal walls of his urethra. Your lower arms go next, then your hands, and finally the cock pulls in your hips. As you descend deeper into him, your hands wiggle and rub at his insides, causing ever more undulations. Your legs get slurped up, and finally, your feet are pulled inside.";
 	WaitLineBreak;
@@ -1391,7 +1392,6 @@ to say mchristy_cv2:
 		the Player was ended by "Christy";
 		trigger ending "Cum Waste";
 		end the story saying "You were turned into cum while inside Christopher's balls.";
-	increase MChristyVore by 1; [Each time this event is done, it adds 1 to the variable of MChristyVore]
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
