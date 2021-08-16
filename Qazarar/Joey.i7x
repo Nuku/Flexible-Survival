@@ -84,11 +84,11 @@ to say JoeyTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Take him out into the city for training";
 	[]
-	if Libido of Joey > 0:
+	[if Libido of Joey > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Attitude";
 		now sortorder entry is 2;
-		now description entry is "Discuss his changed attitude";
+		now description entry is "Discuss his changed attitude";]
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -155,13 +155,13 @@ to say JoeySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if Player is male: [only males and herms can get a blowjob]
+	if Player is male and Libido of Joey is 1: [only males and herms can get a blowjob, libido req is temporary until other scene complete]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
 		now description entry is "Let Joey suck you off";
 	[]
-	choose a blank row in table of fucking options;
+	[choose a blank row in table of fucking options;
 	now title entry is "Suck Joey off"; [anyone can blow him]
 	now sortorder entry is 2;
 	now description entry is "Taste his feline shaft";
@@ -186,7 +186,7 @@ to say JoeySexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Tease Joey";
 		now sortorder entry is 6;
-		now description entry is "Touch the cute catboy until he can't take it";
+		now description entry is "Touch the cute catboy until he can't take it";]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
