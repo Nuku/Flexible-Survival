@@ -913,7 +913,7 @@ to SusanSexMenu:
 		now title entry is "Go down on Susan's pussy";
 		now sortorder entry is 5;
 		now description entry is "Give the sweet doe pleasure with your mouth";
-	[]
+	]
 	if Player is female:
 		if "Samson Active" is listed in Traits of Susan:
 			choose a blank row in table of fucking options;
@@ -925,7 +925,7 @@ to SusanSexMenu:
 			now title entry is "Offer your pussy to Susan";
 			now sortorder entry is 6;
 			now description entry is "Let the sweet doe fuck you";
-	[]
+	[
 	if "Samson Active" is listed in Traits of Susan:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer your ass to Samson";
