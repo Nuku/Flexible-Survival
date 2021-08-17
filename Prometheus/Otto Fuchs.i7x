@@ -21,6 +21,11 @@ to OttoQuestLog:
 		-- 3:
 			say "[bold type]Otto Quest: [roman type]I helped Otto move to the Green Apartments. I may be able to visit him there in future.";
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if HP of Otto > 3:
+		change the northeast exit of Green Lobby to Otto's Apartment; [connecting the location to the travel room]
+		change the southeast exit of Otto's Apartment to Green Lobby; [connecting the location to the travel room]
+
 An everyturn rule:
 	if HP of Otto > 3:
 		if OttoMedkitCounter > 0:
