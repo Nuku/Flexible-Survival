@@ -293,7 +293,7 @@ Best Wolf	"Best Wolf"
 Best Wolf is a pet.
 NPCObject of Best Wolf is Fang.
 understand "Fang" as Best Wolf.
-IDList of Best Wolf is { "Fang", "fang", "feral wolf" }.
+IDList of Best Wolf is { "Fang", "fang", "Feral Wolf", "feral wolf", "Best Wolf", "best wolf" }.
 printed name of Best Wolf is "Fang".
 Description of Best Wolf is "[FangDesc]".
 Weapon Damage of Best Wolf is 15.
