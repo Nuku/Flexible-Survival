@@ -1,5 +1,9 @@
 Bound State Universals by Core Mechanics begins here.
 
+boundsegment is a number that varies.
+boundmod is a number that varies.
+boundcounter is a number that varies.
+
 Section 1 - Routines
 
 to cleanboundmemory: [Zeroes out all variables used in bound states]

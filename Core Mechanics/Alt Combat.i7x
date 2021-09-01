@@ -6,6 +6,7 @@ Version 2 of Alt Combat by Core Mechanics begins here.
 
 Part 0 - Basic variables
 
+Dam is a number that varies.
 monstercom is a number that varies.		[ This represents the row on the table of Critter Combat to be used in this fight. ]
 altattackmade is a number that varies.	[ This tracks whether an alternate attack what chosen. ]
 combat abort is a number that varies.	[ 0 = combat continues / 1 = combat will be aborted. ]

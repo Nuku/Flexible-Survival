@@ -162,24 +162,33 @@ Include Fighting by Core Mechanics.
 Include Fucking by Core Mechanics.
 Include Game Endings by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
+Include giving in by Core Mechanics.
+Include Inventory by Core Mechanics.
 Include Masturbate by Core Mechanics.
 Include Microwave by Core Mechanics.
+Include Microwaveable Objects by Core Mechanics.
 Include Milking by Core Mechanics.
 Include Misc Items by Core Mechanics.
 Include Navigation by Core Mechanics.
 Include Notes by Core Mechanics.
 Include Needy Heat by Core Mechanics.
+Include Patreon Menu by Core Mechanics.
 Include Patron Credits by Nuku Valente.
+Include Pepperspray by Core Mechanics.
 Include Pets by Core Mechanics.
 Include Quest Log by Core Mechanics.
+Include Settings Menus by Core Mechanics.
 Include Sex and Infection Functions by Core Mechanics.
+Include Smell by Core Mechanics.
 Include Status View by Core Mechanics.
+Include Storage Locker by Core Mechanics.
 Include Store Mechanics by Core Mechanics.
 Include Special Merchandize by Core Mechanics.
 Include Tape Inventory by Core Mechanics.
 Include Text Capture by Eric Eve.
 Include Vending Machine by Core Mechanics.
 Include Weapons by Core Mechanics.
+Include Zephyr Phone by Core Mechanics.
 
 Book 3 - Loading the Main Game Content
 
@@ -288,7 +297,6 @@ Include Forest Events by Aureas Gigas.
 Include Forest Events by Defth.
 Include Forest Gang Bang by Defth.
 Include Gildwing Kobold Events by Taelyn.
-Include giving in by Core Mechanics.
 Include Greek Mythos by Prometheus.
 Include HellHound by Speedlover.
 Include High Rise Events by Stripes.
@@ -302,7 +310,6 @@ Include Hyper Serum by Prometheus.
 [Include Important Research Quests by Kaleem Mcintyre.]
 Include Infected Pool by Hellerhound.
 Include Inner Mall Events by Wahn.
-Include Inventory by Core Mechanics.
 Include Ironscale Items by Taelyn.
 Include Junkyard Events by Stripes.
 Include Kitsune by Shadowwolf94.
@@ -337,8 +344,6 @@ Include Orc Events by Wahn.
 Include Orc Researcher by Luneth.
 Include Origins by Luneth.
 Include Park Events by Sarokcat.
-Include Patreon Menu by Stripes.
-Include Pepperspray by Stripes.
 Include Pet Shop by Wahn.
 Include Qytat Shifters by Hellerhound.
 Include Random Events by Guest Writers.
@@ -352,17 +357,14 @@ Include Save the Dame by Kaleem Mcintyre.
 Include Scavevents by Stripes.
 Include Sea Lion and Orca by Stripes.
 Include Sex Ed by Prometheus.
-Include Settings Menus by Core Mechanics.
 Include Shifting by Hellerhound.
 Include Shrinking Shrooms by Defth.
-Include Smell by Core Mechanics.
 Include Smith Haven Mall by Wahn.
 Include Soldier Events by Wahn.
 Include SpartanVikingCouple by Rikaeus.
 Include Special Forces Events by Vinickus.
 Include Stable Related Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
-Include Storage Locker by Core Mechanics.
 Include Sugar Feud by AGentlemanCalledB.
 Include TFTG Feats by Luneth.
 Include Tidepool Event by Guest Writers.
@@ -374,7 +376,6 @@ Include Warehouse Events by StripeGuy.
 Include Wereraptor by Stripes.
 Include Werewolf by CrimsonAsh.
 Include Xeno Nest by Kernog.
-Include Zephyr Phone by Guest Writers.
 Include Zoo Events by Sarokcat.
 Include Zoo Events by Wahn.
 
@@ -409,7 +410,6 @@ Include Blob by Kaleem Mcintyre.
 Include Blue Chaffinch by Stripes.
 Include Latex Bobcat by Stripes.
 Include Bottlenose Toy by Stripes.
-Include Bouncy Succubus by Qazarar.
 Include Bovine by Damaged.
 Include Breederslut by Stripes.
 Include Brown Rat by Wahn.

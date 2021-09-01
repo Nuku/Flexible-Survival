@@ -439,7 +439,7 @@ This is the Retriever Female Infection rule:
 			else if Retriever Girl is Tamed:
 				say "     As the last of your resistance fades and the bestial needs of the retriever bitch take full control you bound off happily into the city and Karen quickly follows suite. The two of you eventually catch a familiar male scent, and your bodies, eager for an alpha's touch, soon lead you to him. With your minds gone none of you are ever entirely aware of your previous relationships, but somehow you know you belong together. And so your small retriever pack sets off into the city, eager to bolster your numbers and enjoy your carefree lives as lusty canines.";
 			else if HP of Rex > 5:
-				say "     As your mental resistance begins to slip away you find yourself becoming more and more the retriever bitch your body is urging you to be. Soon you end up back at Rex's home and noting your failing struggle to maintain control he takes advantage of your weakened state of mind, offering you the collar and a place in his home once again";
+				say "     As your mental resistance begins to slip away you find yourself becoming more and more the retriever bitch your body is urging you to be. Soon you end up back at Rex's home and noting your failing struggle to maintain control he takes advantage of your weakened state of mind, offering you the collar and a place in his home once again.";
 				say "     This turns out to be the final push your mind needed, and as you reach to accept the collar the last of your resistance fades away, finally surrendering yourself t a simple life as one of Rex's happy pets.";
 				if Player is female:
 					if "Sterile" is not listed in feats of Player:

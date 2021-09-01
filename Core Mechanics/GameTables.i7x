@@ -2,6 +2,8 @@ Version 1 of GameTables by Core Mechanics begins here.
 
 Part 0 - Variables
 
+tempnum is a number that varies.[@Tag:NotSaved]
+tempnum2 is a number that varies.[@Tag:NotSaved]
 MonsterID is a number that varies.[@Tag:NotSaved] [line number chosen in the table of random critters]
 JournalNotes is a list of text that varies. [player-made journal notes]
 Allobjs is a list of text that varies.[@NotSaved] [list of all objects in the game]

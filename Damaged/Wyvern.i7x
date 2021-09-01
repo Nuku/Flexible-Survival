@@ -1014,10 +1014,6 @@ to wyvore:
 				next;
 			say "Invalid action.";
 
-boundsegment is a number that varies.
-boundmod is a number that varies.
-boundcounter is a number that varies.
-
 to say wyvstrugglebar:
 	if boundsegment is 1:
 		say "< [bracket]-[if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket] [italic type][bracket]---[close bracket][roman type]";
@@ -1878,8 +1874,6 @@ to wyverndisengage:
 				decrease wyvkinatt by 1;
 				decrease pewtergenitalcap by 1;
 				now tempnum is 0;
-
-tempnum2 is a number that varies.
 
 to wyvernmatron:
 	if a random chance of tempnum2 in 14 succeeds:
