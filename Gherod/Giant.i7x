@@ -1,10 +1,11 @@
-Version 2 of Giant by Gherod begins here.
+Version 4 of Giant by Gherod begins here.
 
 "Adds Giant to Flexible Survival."
 
 [ Original by Stripes ]
 [ Version 2 - Reworked Giant, added and polished scenes - Gherod ]
 [ Version 3 - Giant stats nerfed. Expanded with Victory scenes - Gherod]
+[ Version 4 - Started a personal quest for the Giant]
 
 Section 1 - Creature Responses
 
@@ -24,6 +25,8 @@ to say giantdesc:
 	else:
 		say "     You find yourself faced with a giant of a man standing well over forty feet tall. This makes him nearly as tall as the biggest trees decorating the area, though most only come up to his waist. The towering man has a burly, muscled body to help support his massive height, but not unhandsomely so. He still looks completely human, just grown to a dizzying height. Worn loosely over his chest is huge tan jacket indicating that he may have once been part of the zoo staff. Somehow enlarged or transformed to be a part of him, it is rather worse for wear and hangs loose over his chest, but is still wearable and is the only clothes he has on. He has a gruff expression on his face and has dirty blond hair atop his distant. He carries [one of]a broken telephone pole[or]a metal girder[or]a streetlight[or]an uprooted tree[at random] like a massive club. Between his legs he has another large club, this one of meaty flesh to more than match his enormous size.";
 		say "     He hasn't spotted you yet, giving you time to consider your options in the face of such a situation. It seems you could always just [bold type]ignore the giant man and get out of there[roman type] before he has the chance to see you. However, if you're interested in [bold type]observing him[roman type], there are a few areas with tall vegetation where you can conceal yourself in to watch what he's doing from a safe distance. Alternatively, if you're brave enough, you can just [bold type]go talk to him[roman type], but if you think words won't work with him, you can always attempt to [bold type]fight[roman type] the towering, forty feet tall of a burly muscular man that could probably stomp you flat with one strike... Ill-advised, unless you're into being crushed and instigating aggression.";
+		if carried of zookeeper ring > 0:
+			say "     [bold type]You seem to be carrying the giant zookeeper's ring with you, making it possibly safe to approach him as long as you show it.[roman type][line break]";
 		LineBreak;
 		say "     [link](1)[as]1[end link] - Walk away.";
 		say "     [link](2)[as]2[end link] - Hide and watch.";
@@ -46,11 +49,28 @@ to say giantdesc:
 			now combat abort is 1;
 			say "[WatchTheGiant]";
 		else if calcnumber is 3:
-			say "     He's still a human, alright? Even though he grew several feet tall, he must be capable of communication and the sort... Or so you think. Half-confident of your chances, you proceed to walk up to him, trying to call his attention by waving around. He's not hearing you so well, though, so you have to get more creative, maybe by running around him and trying to get within his eyesight. Having finally gotten a reaction out of the giant man, who spots you after your incessant attempts to make your presence noticeable, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists!";
-			say "     It seems your attempt to communicate with the human giant ended up with you being snatched away by him. Maybe you should have thought this through...";
-			WaitLineBreak;
-			now combat abort is 1;
-			say "[WalkToGiant]";
+			if carried of zookeeper ring > 0:
+				say "     He is still a human, and you happen to have something he might like. Would you want to show the giant the ring you found?";
+				Linebreak;
+				say "     ([link]Y[as]y[end link]) - Yes, show him the ring.";
+				say "     ([link]N[as]n[end link]) - No need for that.";
+				if player consents:
+					Linebreak;
+					now combat abort is 1;
+					say "[ApproachTheGiant]";
+				else:
+					LineBreak;
+					say "     You have decided to not show him the ring and just continue to approach him like you usually would. Half-confident of your chances, you proceed to walk up to him, trying to call his attention by waving around. He's not hearing you so well, though, so you have to get more creative, maybe by running around him and trying to get within his eyesight. Having finally gotten a reaction out of the giant man, who spots you after your incessant attempts to make your presence noticeable, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists!";
+					say "     It seems your attempt to communicate with the human giant ended up with you being snatched away by him. Maybe you should have thought this through...";
+					WaitLineBreak;
+					now combat abort is 1;
+					say "[WalkToGiant]";
+			else:
+				say "     He is still a human. Even though he grew several feet tall, he must be capable of communication and the sort... Or so you think. Half-confident of your chances, you proceed to walk up to him, trying to call his attention by waving around. He's not hearing you so well, though, so you have to get more creative, maybe by running around him and trying to get within his eyesight. Having finally gotten a reaction out of the giant man, who spots you after your incessant attempts to make your presence noticeable, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists!";
+				say "     It seems your attempt to communicate with the human giant ended up with you being snatched away by him. Maybe you should have thought this through...";
+				WaitLineBreak;
+				now combat abort is 1;
+				say "[WalkToGiant]";
 		else if calcnumber is 4:
 			say "     He will never be expecting you to come out of nowhere and attack, as you have the element of surprise! Bolstering up all your courage, bravado and enormous will to fight, you leap out of hiding and rush straight into the giant, delivering a totally unpredictable strike to his heel! You keep your flurry of attacks steady, in hopes to bring your enemy down swiftly. But as the giant looks over you while frowning his eyebrows, you realize this isn't being very effective. Having finally detected your presence, the giant [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks loudly, saying that you're being bad and will regret trying to smack him -[at random] and attempts to grab you with one of his meaty fists! Luckily you're able to dodge him, but he doesn't sound very happy...";
 
@@ -326,7 +346,168 @@ to say WalkToGiant:
 				say "the nearby roundabout. He muses over where to put you, looking between the lion pit and the snake house before finally settling on the latter. Opening the door, he roughly shoves you inside before heading off in search of other wayward animals with a smile on his face. You moan wetly, but cannot get up, too overfull with the giant's cum, forcing you to wait there until your body's drained and absorbed his heavy load. Thankfully this place seems unoccupied, at least for the moment.";
 				move player to Snake House;
 
-Section 2 - Creature Insertion
+Section 2 - Events
+
+MissingGiantRingCooldown is a number that varies. MissingGiantRingCooldown is usually 20000. [@Tag:NotSaved]
+
+Table of GameEventIDs (continued)
+Object	Name
+Missing Giant Ring	"Missing Giant Ring"
+
+Missing Giant Ring is a situation.
+ResolveFunction of Missing Giant Ring is "[ResolveEvent Missing Giant Ring]".
+Sarea of Missing Giant Ring is "Zoo".
+
+to say ResolveEvent Missing Giant Ring:
+	if Resolution of Missing Giant Ring is 0:
+		say "     As you look around the zoo for interesting things, you notice a rather gigantic human, not so far from your position, bending over some small trees and moving whole trunks and leaves around, as if looking for something. This giant man seems so focused on his current task that he really does not see you approaching, out of curiosity. Although, you must be careful to not alert him of your position, as that could be quite a problem. It is likely to be the zookeeper, unless there is some other giant human you do not know about, and he seems to be mumbling something about a [']shiny ring thing[']. He does not seem to be having any luck in finding it, though, and judging by the way he grunts and looks around, it is also annoying him.";
+		say "     Perhaps you should stay clear from this area, in general, at least while the giant is roaming about. Though, say, if you ever found this object he is looking for so desperately, would there be any chance for you to befriend him? It might be worth a try, if you intend to get in better terms with the massive zookeeper. You doubt he would recognize you immediately, but if he truly cares about this object, he will think twice before just attacking you... Hopefully.";
+		LineBreak;
+		say "     [bold type]Do you care about befriending the giant, at all? You could just ignore and forget this[roman type]. Whatever object he lost, it will probably be very difficult to find, anyway.";
+		say "     ([link]Y[as]y[end link]) - You will try to look for it, later.";
+		say "     ([link]N[as]n[end link]) - Just forget this, it is not worth your time.";
+		if Player consents: [event proceeds when found again]
+			Linebreak;
+			say "     Maybe it could be good to have a giant friend in this place, even though there is an almost impossible task between you and it. But you have decided to give it a try after the giant retreats.";
+			now Resolution of Missing Giant Ring is 1;
+		else: [event solves here]
+			LineBreak;
+			say "     Yes, it does seem like just a waste of time. You have got more important things to do, and you do not care about making friends with this particular giant person.";
+			now Resolution of Missing Giant Ring is 99;
+			now Missing Giant Ring is resolved;
+	else if Resolution of Missing Giant Ring is 1:
+		say "     While you walk around this particular area of the zoo, you begin to notice several small tilted trees and bushes that look half-plucked from the ground, suggesting that this might not be natural. As you think a little more about it, you remember that time when you spotted the giant zookeeper looking for something. It seems that you could put some effort in searching for that [']shiny ring thing['] he was mumbling about, though there is a wide area to cover... With so many plants, bushes and trees, he could have dropped it absolutely anywhere! This will definitely be a difficult task, if you decide to go with it.";
+		if MissingGiantRingCooldown - turns < 7:
+			say "     But due to your most recent attempt, you are pretty tired and cannot be bothered to go for another search. If you still want to continue, it would be probably for the best to try again on the next day or later, when your energy is back.";
+		else: [continue]
+			say "     There are quite a few possibilities. You could look for it on your own, even though you do not really know how such a ring would look like, or perhaps ask for a companion's help. If perceiving things is something you are good at, luck might strike you well enough to lead your eyes straight into the giant's valuable object, but if not, someone with magic would probably be able to assist you the best. After all, magic usually offers so many ways to cheat! The question is... Did you bring anyone who could do that for you?";
+			LineBreak;
+			MissingGiantRingQuestion;
+
+to MissingGiantRingQuestion:
+	say "     [bold type]What shall be your plan of action?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Look for it by yourself (Perception Roll).";
+	say "     [link](2)[as]2[end link] - Ask a companion for help, if you have one.";
+	say "     [link](3)[as]3[end link] - Do nothing, for now.";
+	say "     [link](4)[as]4[end link] - Desist. This will get you nowhere.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to attempt looking for the ring by yourself, [link]2[end link] to ask a companion for help, [link]3[end link] to not do anything, for now, or [link]4[end link] to quit this quest for good.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Maybe you will be in luck! Who knows? Trying never hurt anyone... Right, that might not be entirely true, but this task should be safe enough, as long as you are not approached by anyone or anything undesirable. With that in mind, you proceed to keep your eyes open for a shiny thing that could look like a ring...";
+		WaitLineBreak;
+		let bonus be (( perception of player minus 10 ) divided by 2);
+		let diceroll be a random number from 1 to 20;
+		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]19[roman type] (Perception Check):[line break]";
+		if diceroll + bonus >= 19:
+			say "     You spend a long time looking in every bush, even climbing whatever trees you manage, just to catch a gimple of a gleaming thing here and there that looked nothing like a ring. Frustration begins to build up as you fail again and again, but before all hope is gone, you notice another shiny object lying in the middle of some outgrown bush. At first, you almost think about not even bothering looking there, but you decide to give it a go before you call it quits. But, to your surprise, this is not just a shiny rock nor a piece of shattered glass, not even an empty bottle nor a lost coin. This is actually a [bold type]ring[roman type]! You almost cannot believe it! You found it!";
+			say "     Or, at least, you hope you did. You hope this is the actual ring the giant zookeeper was looking for. Looking closer at it, you see it has an inscription in it, perhaps someone's name. Unfortunately, it is a little dirty and worn out, so you cannot spell it out properly. Maybe he was engaged to someone? Either way, speculation will not do you any good. Thanks to this, you might have a way to befriend him, or at least have a token to show him so he does not mistake you for a random critter.";
+			now Resolution of Missing Giant Ring is 2;
+			ItemGain zookeeper ring by 1;
+			now Missing Giant Ring is resolved;
+		else:
+			say "     Despite your very, very best efforts at trying to find anything remotely resembling a shiny ring, you fail miserably. The zoo is such a large area with so many things a tiny little object could go into that this seems nearly impossible for anyone with only basic senses. Maybe you should give up, for now, and return later, once you have cleared your head. This was quite exhausting and frustrating...";
+			now MissingGiantRingCooldown is turns;
+	else if calcnumber is 2:
+		LineBreak;
+		if demonologist is listed in companionList of Player: [Xaedihr]
+			say "     Looking at your companion and how lost you seem regarding this situation, you ask them for help. And with you happens to be Xaedihr, who does not seem amused by any of this. 'Oh. No. Really? No, you're not going to ask me to use magic to locate a... You are just doing that, aren't you?' he asks, incredulous, and you nod, with the best pleading look and eyelash fluttering you can do. 'I can't believe this... If this wasn't such a menial and effortless task for me, I would've refused, but I'd rather see you with the damn thing in your hands rather than having to come back here every day to look for it. In any case... This will only take a minute.'";
+			say "     With several gestures and words in a language you do not know, Xaedihr focuses on his own incantations until gleaming red spots begin to appear all around you. Then, some begin to disappear, leaving only a couple of glowing dots in the near vicinity. 'Anything that has the shape of a ring and gives out some shine is marked with a spell. That should make it easier for you to find it.' Indeed, knowing exactly where to go is a great advantage over having to look for things by yourself. The first dot you go for happens to not be what you are looking for, as it is not an actual ring. You continue towards the other one and, indeed, you find it. An actual [bold type]ring[roman type] and THE ring!";
+			WaitLineBreak;
+			say "     Or, at least, you hope you did. You hope this is the actual ring the giant zookeeper was looking for. Looking closer at it, you see it has an inscription in it, perhaps someone's name. Unfortunately, it is a little dirty and worn out, so you cannot spell it out properly. Maybe he was engaged to someone? Either way, speculation will not do you any good. Thanks to this, you might have a way to befriend him, or at least have a token to show him so he does not mistake you for a random critter.";
+			say "     Oh, and you make sure to thank Xaedihr for his assistance. 'No need to mention it. In fact, I'd prefer if you didn't mention it, at all. Anything you do with that ring is not my responsibility,' he says, dismissing your appreciation in his own usual fashion";
+			now Resolution of Missing Giant Ring is 2;
+			ItemGain zookeeper ring by 1;
+			now Missing Giant Ring is resolved;
+		else:
+			say "     Looking at your companion and how lost you seem regarding this situation, you ask them for help. Unfortunately, they seem as clueless as you. Maybe someone who could cast magic would be of better help.";
+			WaitLineBreak;
+			MissingGiantRingQuestion;
+	else if calcnumber is 3:
+		say "     You cannot really bother yourself with this, today, so you decide to simply leave it for another time.";
+	else if calcnumber is 4:
+		say "     You stopped caring about this ring. Perhaps there is no ring, even, and you have just been looking for it in vain. Whatever the case may be, you quit this quest and will never look back.";
+		now Resolution of Missing Giant Ring is 99;
+		now Missing Giant Ring is resolved;
+
+to say ApproachTheGiant:
+	say "     Half-confident of your chances, you proceed to walk up to him, trying to call his attention by waving around. He is not hearing you so well, though, so you have to get more creative, maybe by running around him and trying to get within his eyesight. Having finally gotten a reaction out of the giant man, who spots you after your incessant attempts to make your presence noticeable, he seems to stop for a second. The ring you are holding in your hands has caught the giant's attention.";
+	if Resolution of Missing Giant Ring is 2:
+		say "     'Is that...?' his voice booms towards you as he crouches down to take a closer look. 'You're not just some mindless critter... Have you been here for long?' You wonder how long you have been roaming the zoo while having to be wary of the giant, but you just tell him enough to sate his curiosity. 'Ah, you are exploring this place. I see... And you happened to find my ring!' You nod, and explain that you have seen him looking for an object that seemed important. Additionally, you also thought it could be a way for him to not mistake you for a random creature if you offered him a gift he would like. 'Ooh... I have mistaken you in the past for something else? I'm so sorry... It is really difficult to tell you all little things apart while being of this size...'";
+		WaitLineBreak;
+		say "     Indeed, you are amazed that he can even hear you, at all, although he seems to be struggling with it, despite your loud and clear tone. 'It's really good to see someone who cares, though. It surely gets lonely in here...' he admits, and it is not so surprising, given the limitations due to his titanic size. 'Don't suppose you'd mind if I held you in my hands? Just for some time? I'd like to... thank you properly, little person!' Thank you properly, he said, and that could mean something more than just holding you close to him. In fact, you could really just let him pick you up, but you can also tell him you would only like to give him the ring and be on your way. Certainly, the giant man, as lonely as he is, could want something more intimate with the first friendly stranger he found.";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Let him pick you up.";
+		say "     ([link]N[as]n[end link]) - Just give him the ring and leave.";
+		if Player consents: [Giant picks up the player and they have some fun cuddling]
+			Linebreak;
+			say "[ApproachTheGiantPickUp]";
+		else:
+			LineBreak;
+			say "     Actually, you are just here to give him the ring that belongs to him, so you politely tell him that. 'Oh... I'm sorry if I offended you, little [guygal], that wasn't my intention. But... I have to still thank you for the gesture!' He then gives you a little more distance. 'You can keep it. I would end up losing it, anyway, and if you keep visiting, showing that could help me telling you apart from the other critters. My memory's bad and it's hard to see tiny things such as you... Anyway, I'll let you be on your way! Hope we meet again...' the giant says, before standing up and beginning to walk the other way, each step making the ground shake beneath you.";
+			say "     Well, if anything, you now have a way to tell the giant that you mean no harm and avoid an unfortunate confrontation, as you get to keep his ring with his consent. That could be useful.";
+		now Resolution of Missing Giant Ring is 3;
+	else:
+		say "     'Ah, friend! It is you! I'm glad you kept the ring, or I would have mistaken you again for something else!' he cheerfully says, his voice nearly blowing your feet off the ground. 'Did you need anything? Or just came to spend some time with big ol' me? I surely appreciate some company!' It seems the giant's cock is slowly raising to an erection as his eyes continue to follow you. You get the idea he is offering to pick you up for more than just a chat.";
+		LineBreak;
+		say "     [bold type]Do you let him?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Let him pick you up.";
+		say "     ([link]N[as]n[end link]) - You came just to say hi.";
+		if Player consents: [Giant picks up the player and they have some fun cuddling]
+			LineBreak;
+			say "[ApproachTheGiantPickUp]";
+		else:
+			LineBreak;
+			say "     Actually, you were just passing by and wanted to say hi, so you tell him that, and he smiles. 'Oh, you're nice! Alright, I'll leave you be, then! Just be careful out there, with all the crazy little creatures being mischievous and all...' And then, there he goes, taking giant steps away from you while making the ground beneath you shake with each.";
+
+to say ApproachTheGiantPickUp:
+	say "     But of course you would let him get his giant hands on you, and he gladly does so. With a big smile on his face, thanks to you allowing him to pick you up, he carefully wraps his thick fingers around your body and lifts you off the ground. You find yourself being brought closer to the massive man, who seems very glad to have you here.";
+	if Resolution of Missing Giant Ring is 2:
+		say "     'So, where are you from? Around? From outside? You got caught in all this craziness just like I did, right?' he asks, and you do tell him a bit about yourself, which seems to please the giant. 'Yeah I don't know what really happened, I was a worker here just leading a normal life when suddenly people started to turn into animals. And then the animals escaped, leaving only the people who became the animals, and always horny all the time. Then I touched something weird and began to grow! And it wouldn't stop! And for some reason, the jacket I had on grew, too...' The giant man begins to speak and never ends, each word faster than the last. You can clearly see he does not get to talk to anyone, at all...";
+		say "     'And I've also been fucking horny, like, crazy horny! I know this is horrible, but sometimes I just pick some random animal person and end up using them as sex toys, I just can't help it... It turns me on using someone so much smaller than me. Do you know why this happened?!' You tell him what you know, with only the details he is capable to process. 'Nanites? What's that? Some sort of disease? That sounds so weird, I don't think I wanna know more! Besides, I'm used to being big, now, and feeling good...' It does take a great effort at getting used to being so massive, but you commend him for that. The zookeeper smiles and rubs against your chest with his large finger. 'Thanks for talking to me. You're really cute, too...'";
+		WaitLineBreak;
+		say "     Following this, you notice the big man looking at you a little lustfully, his large pupils dilated and licking his lips as his breathing grows a little deeper. The giant also seems to blush, at some point. 'Well, as I told you, I... Am really horny all the time. Do you... Think I could play with you? I-I'd prefer that, instead of having to use someone against their will... I always feel really guilty afterwards...'";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Let the Giant relieve himself with you.";
+		say "     ([link]N[as]n[end link]) - You would rather not have that happen.";
+		if player consents:
+			LineBreak;
+			say "     That would be alright, for you, so you nod and let the giant man have his fun with you. 'I'm really, really turned on by you, little thing...'";
+			ApproachTheGiantPickUpSex;
+		else:
+			LineBreak;
+			say "     Unfortunately, you would rather be on your way, now. You are understanding about his loneliness, but you do have places to be and things to do, so you let him know that. 'Aw... Okay... That's fine, little person, I won't insist. But if you change your mind, I'll be here...' he replies, with disappointment in his voice, as he puts you back down. You only now noticed that he had a massive boner while he was chatting with you, which he proceeds to hide in embarassment. 'I'll... attend to stuff, I suppose. See you around! Oh, and... keep the ring with you, so I can tell you apart from other critters more easily.' You think the giant then leaves to masturbate on his own while you get to retreat without having to get involved.";
+	else:
+		say "     'You're such a cute tiny thing... It really turns me on knowing you enjoy this, too...'";
+		ApproachTheGiantPickUpSex;
+
+to ApproachTheGiantPickUpSex:
+	say "     The zookeeper is already tugging on his enormous manhood by the time you allow him to [']use['] you for a fun time. You cannot help but look at it once he gives you free sight of it, that huge member just throbbing and leaking before your eyes, leaving anyone amazed at its truly titanic proportions. 'Do you like it? Maybe I could let you play with it... See what you can do with a cock this big!' He then brings you over to his penis, that warm and rock solid skin quickly overwhelming you along an intoxicating musky scent. His enormous shaft is, of course, accompanied by a massive, heavy sack with two full orbs contained within, and their sheer weight would be enough to easily crush you underneath. His transformation clearly gave him a fair share of growth on his junk, too.";
+	say "     It seems that any movement you make excites the man further, and it reaches a point where it is so hard that it feels like warm pulsating rock in your hands. 'O-oh... T-that feels really good... Y-you're so tiny...' That shaft alone is thicker than your body and taller than you, forcing you to hug it tight as you attempt to climb towards the tip. It seems the giant man loves watching you struggle with his size, but he does lean back enough to help shift gravity slightly, making it easier for you to get on top of his throbbing dick. Additionally, it appears that your weight is enough to tilt his erection a little towards his abs, making it easier for you to attain a comfortable balance.";
+	say "     Having finally succeeded in your climb, you manage to make it to the gleaming tip, which is oozing a thick droplet of precum by the time you arrive. 'You're making me leak... T-that's gonna cause a flood... O-oh...' he moans, and even more with just a few rubs, some kisses and the friction between your body and that enormous cock of his, everything just further exciting him and making him harder. The more his gigantic log throbs, the more it drools all over you, slicky fluid simply coating your head and descending over the rest of your body as you provide all the lavish good sensations. 'Y-you're gonna get drenched, too... That's so much precum... A-are you gonna be oka-...? A-ah...!'";
+	WaitLineBreak;
+	say "     You reach a point that you are merely bouncing your body up and down and humping against his shaft, stimulating the massive dick in as much ways, inches and corners as you can. The momentum is emphasized by the pace that you keep increasing, excitement and lust taking over your mind for a while, causing you to run your tongue over the precum covered glans that assault your buds with a taste of salt. 'Fuck, yes, d-don't stop... You're... Fuck...' The giant cannot even bring himself to speak, moans instead replacing any word he could mutter, as you feel his entire member beginning to tremble and throb at an increasing rate. 'I-if you keep that up, I'll... I'll...' The zookeeper fails to finish his sentence as a sudden explosion of cum is shot upwards like a powerful geyser, making it rain all around you. Each spurt thicker than the last until it reaches a peak, during what seems like a minute!";
+	say "     'C-cum a lot...! Fuck, I'm cumming a lot! I-it doesn't... stop...!' He goes on and grabs his cock, helplessly jerking it off as he forgets about you, for moments, which is quite... not a very good thing. Lost in his lusts, his load gets all over you, quickly covering you as he just points the rest of his extensive orgasm to you and sinks you in a thick puddle of jizz. Almost indiscernible from the rest of your surroundings, which is just creamy cum, the giant panics for moments, after his orgasm begins to subside. 'Oh no! Fuck! Little thing, are you okay?!' he rushes to pick you up and wipe most of that stubborn cum out of your body. 'I covered you in it! Let me help you!'";
+	WaitLineBreak;
+	say "     He is, actually, really eager to help, and by help, he really means licking you clean with his large tongue, rubbing that slick organ of his all across your body, including your [if player is male]cock[else if player is female]pussy[else]chest and sensitive areas[end if] with surprisingly accuracy. He keeps doing so, over and over again, each lick slower, more sensual, skillful and precise... He truly wants to lick you until there is no hint of his cum left on your skin, but the way he does it is so arousing that you are brought closer and closer to your climax. 'Don't worry, little [guygal], I'll clean up the mess I made on you, I won't stop until you're pristine clean!' He does not really hear any of your warnings as you approach your orgasm...";
+	say "     'You dirty [guygal]... You really got a lot of cum on you... I need to lick you good...' he says, almost whispering, as he presses his tongue down on you even harder, over all that brings pleasure to you, so persistently, almost as if he knew what he was doing to turn you on so much... You cannot hold it, anymore. Within just a few moments, you";
+	if player is male:
+		say "cum right in his mouth, and he does not even flinch at it, only receiving your load with a pleasant hum as his huge lips wrap around your cock. 'Mmmh... What was that? Did you just... cum? From my licking? That's... cute, little thing... It tasted really good...'";
+	else:
+		say "being to quiver and moan as this surge of intense pleasure strikes you like a truck rolling over you. 'O-oh! D-did I... Did I just do something wrong? A-are you hurt? Oh... I see what... I didn't know this would excite you so much... That's really... cute, little thing!'";
+	WaitLineBreak;
+	say "     Once his task is done, he puts you down besides the small lake of cum he made. 'I gotta get this clean before an accident happens! Or before I have a swarm of critters coming to lick and bathe on it, like it already happened, once... And I just ended up covering them on the stuff, again... I-it's a really hard cycle to break, uh... Yeah, see you around, friend!'";
+	if Resolution of Missing Giant Ring is 2:
+		say "     'Oh, and... keep the ring with you, so I can tell you apart from other critters more easily,' the giant adds, before you can go grab your things and get ready to leave.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Human Giant";
+
+Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -498,7 +679,20 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-Section 3 - Items
+Section 4 - Items
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"zookeeper ring"	"A small ring that no longer fits the zookeeper's hands, as he has grown into a giant. Perhaps you could use this to help him tell you apart from other critters."	0	zookeeper ring
+
+zookeeper ring is a grab object. It is not temporary.
+Usedesc of zookeeper ring is "[zookeeper ring use]";
+
+to say zookeeper ring use:
+	say "     You see no point in putting the ring on. It would be better to just keep it safely stocked in your inventory.";
+
+instead of sniffing zookeeper ring:
+		say "The ring has a metallic smell to it.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -513,13 +707,10 @@ to say giant essence use:
 	if "Iron Stomach" is not listed in Feats of Player:
 		infect "Human Giant";
 
+instead of sniffing giant essence:
+	say "It smells pretty much like cum, and more strongly than most.";
 
-instead of sniffing hellfire seed:
-	say "The demonic semen smells sweet, a little like burnt cream.";
-
-
-
-Section 4 - Endings
+Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

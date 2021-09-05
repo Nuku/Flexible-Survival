@@ -1,9 +1,10 @@
-Version 2 of Werewolf Brute by Gherod begins here.
+Version 3 of Werewolf Brute by Gherod begins here.
 
 "Adds the Werewolf Brute species and encounters to Avalon."
 
 [ Version 1 - Created File ]
 [ Version 2 - Added cum inflation variants to existing scenes. New victory scene: Body Worship]
+[ Version 3 - Added victory scene with Xaedihr]
 
 WerewolfBruteSubmitCount is a number that varies. [@Tag:NotSaved]
 WerewolfBruteSubmitCount is usually 0.
@@ -82,68 +83,73 @@ to say Werewolf Brute Wins:
 					CreatureSexAftermath "Player" receives "AssFuck" from "Werewolf Brute";
 		increase WerewolfBruteSubmitCount by 1;
 
-
 to say Werewolf Brute Loses:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
 		if fightoutcome is 11: [werewolf brute submitted by libido victory]
 			say "     After pulling your best efforts at seducing and teasing this hulking werewolf, his movements become more sluggish as that massive erection swinging around between his legs really gets in his way. After so much throbbing, he finally seems to give up on trying to catch and subdue you, falling on the ground while trying to catch his breath. 'Fuck...! D-don't do this to me...! J-just come sit on this dick and we'll call it even!' he says, putting an end to the fight as he looks at you with pleading eyes.";
-			Linebreak;
-			say "     [bold type]Do you want to do anything with the werewolf brute?[roman type][line break]";
-			say "     [link](1)[as]1[end link] - Worship that strong body of his.";
-			say "     [link](2)[as]2[end link] - Have some fun with his cock.";
-			say "     [link](3)[as]3[end link] - Leave him there, rock hard alone.";
-			now calcnumber is 0;
-			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
-					say "Invalid choice. Type [link]1[end link] to worship his body, [link]2[end link] to give him a handjob or [link]3[end link] to take your leave.";
-			if calcnumber is 1:
-				LineBreak;
-				say "     Having downed such a huge werewolf beast all by yourself, in your own way, you figured that you also deserved a reward for your efforts. So, you start walking towards him, and the beastman only continues to look at you, his begging gaze as obvious as the erection he built. But you are not going to sit on his big dick, as he requested, no. You want to feel those fur-covered muscles, instead, so you begin to slide your hands over that thick coat of fur, feeling up his bulging arms and broad chest. 'Fuck... That feels good... B-but what about my cock?' He asks you, whimpering, and while you see such a beautiful and satisfactory erection down between his legs, your mind is, instead, focused on other things. Like feeling up this amazing and powerful body.";
-				WerewolfBruteLosesBodyWorship;
-			else if calcnumber is 2:
-				LineBreak;
-				say "     Having downed such a huge werewolf beast all by yourself, in your own way, you figured that you also deserved a reward for your efforts. So, you start walking towards him, and the beastman only continues to look at you, his begging gaze as obvious as the erection he built. But you are not going to sit on his big dick, as he requested, no. First, you crouch down next to him, give his leg and nice and gentle pat, then move your hand towards his crotch as you signal your first intentions. 'Yeah, touch it... Give it a good rub...' the beastman tells you, but you have to show him who is in charge, here. You do as you please, only touching as much as you want, whenever you want and wherever you want.";
-				say "     'I'd fuck your brains out if you let me... It'd feel so good...' he keeps on teasing you, too, as his meat only keeps on throbbing and leaking with every touch you give it, or when you are feeling up his large nuts hanging underneath his cock. With both your hands now at work, you slip yourself in between his thick lupine legs for better reach as you position yourself to provide him with a proper handjob. His dick is absolutely enormous, fitting his general size, reaching a foot and half of length while being thicker than a can of soda, all this without accounting for the knot at its base, which you imagine would be extremely effective at locking its receiver in place after an intense fuck.";
-				WerewolfBruteLosesHandjob;
-			else if calcnumber is 3:
-				LineBreak;
-				say "     You decide to leave him there as you take your leave, turning your attention to more important matters. He begs you to not leave him like that, but you pay no further mind to the werewolf brute.";
 		else:
 			say "     After a strenuous fight, you manage to subdue the big werewolf with the best of your abilities, bringing the beast down with your last efforts. He growls at you, unable to stand up and remaining helplessly defeated. 'Grr! There's no way you could've won!' says the lupine brute, trying his very best to find strength in himself to resist you, but he really looks exhausted. Looking at him, you are left to think if you want to do anything with the tired werewolf, now that you have got him under your thumb.";
-			Linebreak;
-			say "     [bold type]Do you want to do anything with the werewolf brute?[roman type][line break]";
-			say "     [link](1)[as]1[end link] - Worship that strong body of his.";
-			say "     [link](2)[as]2[end link] - Have some fun with his cock.";
-			say "     [link](3)[as]3[end link] - Leave him there, sore and defeated.";
-			now calcnumber is 0;
-			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
-					say "Invalid choice. Type [link]1[end link] to worship his body, [link]2[end link] to give him a handjob or [link]3[end link] to take your leave.";
-			if calcnumber is 1:
-				LineBreak;
-				say "     Having downed such a huge werewolf beast all by yourself, you figured that you deserved a reward for your efforts. So, you start walking towards him, and the beastman stops moving a bone, looking at you coming cautiously. 'What do you want?! Having... Ugh...! B-Beating me up wasn't enough for you?!' he asks, and the werewolf seems really angry at you! However, as you crouch down next to him, you just go on ahead and move your hands all over those fur-covered muscles, feeling up his bulging arms and broad chest. 'W-what do you think you're doing?! You can't touch me like that...! I...' He tries to stop you, but to no avail. In his weak state, he cannot resist your loving touch, and his lust is quick to betray him as his erection builds up faster than he would like to admit. 'Fuck... T-that feels... good...''";
-				WerewolfBruteLosesBodyWorship;
-			else if calcnumber is 2:
-				LineBreak;
-				say "     Having downed such a huge werewolf beast all by yourself, you figured that you deserved a reward for your efforts. So, you start walking towards him, and the beastman stops moving a bone, looking at you coming cautiously. 'What do you want?! Having... Ugh...! B-Beating me up wasn't enough for you?!' he asks, and the werewolf seems really angry at you! However, as you crouch down next to him, you give his leg a nice and gentle pat, moving your hand towards his crotch as you signal your intentions. 'Fucking little perv... Couldn't just leave me without having funny ideas?' he exclaims, but as your hand slips onto his thick furred sheath, a red tip begins to emerge immediately after, betraying the beastman's discontent.";
-				say "     'You're lucky I'm sore, or I'd flip you over and fuck your brains out, right now...' he keeps on taunting you as his meat grows to a full erection pretty fast, then only harder and harder as you rub and caress it, then feeling up his large nuts hanging underneath and back to his shaft, now both your hands at work as you slip yourself in between his thick lupine legs for better reach. His dick is absolutely enormous, fitting his general size, reaching a foot and half of length while being thicker than a can of soda, all this without accounting for the knot at its base, which you imagine would be extremely effective at locking its receiver in place after an intense fuck.";
-				WerewolfBruteLosesHandjob;
-			else if calcnumber is 3:
-				LineBreak;
-				say "     You decide to leave him there as you take your leave, turning your attention to more important matters.";
-		now WerewolfBruteSubmitCount is 0; [resetting]
+		Linebreak;
+		say "[WerewolfBruteLosesSexMenu]";
 
-to WerewolfBruteLosesBodyWorship:
+to say WerewolfBruteLosesSexMenu:
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Worship that strong body of his";
+	now sortorder entry is 1;
+	now description entry is "Feel up the werewolf brute's muscles";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Have some fun with his cock";
+	now sortorder entry is 2;
+	now description entry is "Touch the werewolf brute's dick";
+	[]
+	if demonologist is listed in companionList of Player and libido of Xaedihr > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Dominate the brute with Xaedihr";
+		now sortorder entry is 99;
+		now description entry is "The demonologist is with you, how about you both use the werewolf (You'll end up riding the beast while Xaedihr fucks his face)";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Worship that strong body of his"):
+					say "[WerewolfBruteLosesBodyWorship]";
+				else if (nam is "Have some fun with his cock"):
+					say "[WerewolfBruteLosesHandjob]";
+				else if (nam is "Dominate the brute with Xaedihr"):
+					say "[WerewolfBruteLosesXaedihr]";
+				now WerewolfBruteSubmitCount is 0; [resetting Submit Count]
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You decide to leave him there and start walking away, turning your attention to more important matters. He begs you to not leave him like that, but you pay no further mind to the werewolf brute.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say WerewolfBruteLosesBodyWorship:
+	if fightoutcome is 11:
+		say "     Having downed such a huge werewolf beast all by yourself, in your own way, you figured that you also deserved a reward for your efforts. So, you start walking towards him, and the beastman only continues to look at you, his begging gaze as obvious as the erection he built. But you are not going to sit on his big dick, as he requested, no. You want to feel those fur-covered muscles, instead, so you begin to slide your hands over that thick coat of fur, feeling up his bulging arms and broad chest. 'Fuck... That feels good... B-but what about my cock?' He asks you, whimpering, and while you see such a beautiful and satisfactory erection down between his legs, your mind is, instead, focused on other things. Like feeling up this amazing and powerful body.";
+	else:
+		say "     Having downed such a huge werewolf beast all by yourself, you figured that you deserved a reward for your efforts. So, you start walking towards him, and the beastman stops moving a bone, looking at you coming cautiously. 'What do you want?! Having... Ugh...! B-Beating me up wasn't enough for you?!' he asks, and the werewolf seems really angry at you! However, as you crouch down next to him, you just go on ahead and move your hands all over those fur-covered muscles, feeling up his bulging arms and broad chest. 'W-what do you think you're doing?! You can't touch me like that...! I...' He tries to stop you, but to no avail. In his weak state, he cannot resist your loving touch, and his lust is quick to betray him as his erection builds up faster than he would like to admit. 'Fuck... T-that feels... good...''";
 	say "     As you quickly get the werewolf under your spell, you are now free to rub your hands on him some more. He does not try to stop you as you feel up his pecs, leaning down closer on him, appreciating his physique as he pants in lust. 'This makes me wanna fuck your brains out...' Making the beastman moan with every touch, you then figure that just touching him with your hands is not enough. You want to kiss him, as well, truly give that body the appreciation it deserves. As soon as your lips come in contact with his chest, he takes a deep breath and his cock throbs in response, sliding one of his over the top of your head to, perhaps, encourage you to continue. 'You're sure you don't wanna ride me, now...? I'm in position and everything, you just needed to take a seat...";
 	WaitLineBreak;
 	say "     You know he wants it, but you really are here for his body, to kiss each muscle and worship all that strength. Soon, you feel him bouncing a little, and for moments, you are unsure why, but a look over to his crotch reveals why. The werewolf brute got so turned on that he could not help himself but stroke his cock as you continued to kiss and rub him all over. 'Fuck yeah... Massage my body... Feel these muscles... Feels so fucking good!' At some point, your mouth has moved to one of his arms, which he flexes as your lips run over his biceps and triceps, and a little over his armpits, as well. They send you this musky animalistic scent, as expected, but the werewolf seems to really like having you kissing him there.";
@@ -155,7 +161,14 @@ to WerewolfBruteLosesBodyWorship:
 	say "     The werewolf brute says nothing more, simply lying down on the ground for a moment, paying no mind to you as you take your leave.";
 	CreatureSexAftermath "Werewolf Brute" receives "Other" from "Player";
 
-to WerewolfBruteLosesHandjob:
+to say WerewolfBruteLosesHandjob:
+	WaitLineBreak;
+	if fightoutcome is 11:
+		say "     Having downed such a huge werewolf beast all by yourself, in your own way, you figured that you also deserved a reward for your efforts. So, you start walking towards him, and the beastman only continues to look at you, his begging gaze as obvious as the erection he built. But you are not going to sit on his big dick, as he requested, no. First, you crouch down next to him, give his leg and nice and gentle pat, then move your hand towards his crotch as you signal your first intentions. 'Yeah, touch it... Give it a good rub...' the beastman tells you, but you have to show him who is in charge, here. You do as you please, only touching as much as you want, whenever you want and wherever you want.";
+		say "     'I'd fuck your brains out if you let me... It'd feel so good...' he keeps on teasing you, too, as his meat only keeps on throbbing and leaking with every touch you give it, or when you are feeling up his large nuts hanging underneath his cock. With both your hands now at work, you slip yourself in between his thick lupine legs for better reach as you position yourself to provide him with a proper handjob. His dick is absolutely enormous, fitting his general size, reaching a foot and half of length while being thicker than a can of soda, all this without accounting for the knot at its base, which you imagine would be extremely effective at locking its receiver in place after an intense fuck.";
+	else:
+		say "     Having downed such a huge werewolf beast all by yourself, you figured that you deserved a reward for your efforts. So, you start walking towards him, and the beastman stops moving a bone, looking at you coming cautiously. 'What do you want?! Having... Ugh...! B-Beating me up wasn't enough for you?!' he asks, and the werewolf seems really angry at you! However, as you crouch down next to him, you give his leg a nice and gentle pat, moving your hand towards his crotch as you signal your intentions. 'Fucking little perv... Couldn't just leave me without having funny ideas?' he exclaims, but as your hand slips onto his thick furred sheath, a red tip begins to emerge immediately after, betraying the beastman's discontent.";
+		say "     'You're lucky I'm sore, or I'd flip you over and fuck your brains out, right now...' he keeps on taunting you as his meat grows to a full erection pretty fast, then only harder and harder as you rub and caress it, then feeling up his large nuts hanging underneath and back to his shaft, now both your hands at work as you slip yourself in between his thick lupine legs for better reach. His dick is absolutely enormous, fitting his general size, reaching a foot and half of length while being thicker than a can of soda, all this without accounting for the knot at its base, which you imagine would be extremely effective at locking its receiver in place after an intense fuck.";
 	WaitLineBreak;
 	say "     For now, you are the one doing so to the werewolf (keeping him in place, that is) as you continue to feel his sizable rod as much as you want, stroking and rubbing it as you deem appropriate. With how much you got him hard, he simply concedes, letting you do anything you want with his pulsing erection. Having a dick this big in your hands fills you with ideas, but for now, you merely want to give it a really nice stroking as you move your hands up and down along his thick red shaft. He lets out several long moans as you take your sweet time rubbing his meaty dick all over, only jerking him faster once you are satisfied with your touching. As you pick up the pace, sliding your hands up and down at a quicker rate, the werewolf begins to grit his teeth at the anticipation of an explosive orgasm...";
 	say "     But you want to keep him on the edge for a little longer, and so, you alternate between quick strokes to slow and steady caresses around his manhood and nuts. The first thing you notice as he comes close to erupting is his knot wanting to swell, which gives you a clear sign of how close his point of no return gets. With a little more time, you get the beastman taking deep breaths as he begins to get impatient, trying to take things into his own matters... And you shove his hands away the second they come too close to you. 'Fuck...! Just make me cum, already...! Don't you wanna see how much I've got in me?' he asks, in almost an attempt at persuading you, but perhaps you should allow him the release, since you have spent enough time here, already.";
@@ -163,6 +176,40 @@ to WerewolfBruteLosesHandjob:
 	say "     To his joy, you resume your fast stroking, jerking his cock at a good pacing. The effect is almost immediate as his knot begins to swell and a full geyser of cum erupts from his member, shooting all over his own body, leaving a thick trail of spunk along his fur-covered chest and abs. Softly rubbing his shaft, now, you let him have his last moments of pleasure until the last drop oozes out. He nearly howls once his climax subsides, and this means it is time for you to get your hands off him, stand up and begin to leave.";
 	say "     The werewolf brute says nothing more, simply lying down on the ground for a moment, paying no mind to you.";
 	CreatureSexAftermath "Werewolf Brute" receives "Other" from "Player";
+
+to say WerewolfBruteLosesXaedihr:
+	say "     You look over to Xaedihr, who seems quite unimpressed with the whole display, and have this idea of asking if he would like to join you in subduing the brute in more fun ways. He has his arms crossed, looking down on the werewolf beast with an expression of contempt. 'I mean, is he even worth it? Such a pushover... Acting all powerful and dominant, then ends up losing a confrontation like this so easily, with so little effort. The question really is if he deserves our attention...' he replies as he begins walking towards the beast. The sight is somewhat spectacular, as despite the werewolf's much bigger size, the half-demon does not even flinch as he puts his boot over the brute's junk. 'What do you say, puppy? Are you worthy?' asks Xaedihr with a sarcastic tone, pressing his foot harder against the large wolfman's furred sheath and causing him to whimper. You see, however, that the creature's eyes are filling with rage...";
+	say "     But before the werewolf has a chance to react, Xaedihr raises his hand and makes dark tendrils appear from the ground, quickly wrapping themselves around the brute's arms and legs and pulling them down, effectively immobilizing him, belly up and with his back on the dirt, leaving his privates fully exposed and in plain view. 'Don't you even think about putting those claws on me, beast. I have other plans for you that involve you staying still.' The sorcerer then makes another gesture and causes a sort of glowing red orb to appear, which then you see floating in his direction. As the tendrils continue to travel through the werewolf's body, he is forced to spread his legs and raise his butt, but the brute continues to struggle against his bindings. It is then that you see this orb nearing the wolfman's ass and disappearing right inside it, which causes him to moan and grunt uncontrollably as he squirms around.";
+	WaitLineBreak;
+	say "     What you see next is almost incredulous, if you did not know Xaedihr to be a magician so full of surprises. The werewolf brute remains still after a while, with the hardest raging boner you ever saw on one like him, panting and lost in bliss, and that is only judging by his expression. 'That's a lot better. A magic orb of pulsing energy attached to his prostate is all that's required to turn an enraged wolf into a harmless pup[if player is male]. Though I'm afraid that means you'll have to bottom, lest you want that orb to affect your dick on your way there and leave you in a lusty stupor, which I'd prefer to not have to deal with, please[else]. And luckily enough, you don't have a dick, so that means you could only ride him, anyway. If you were to fuck that hole, you'd probably fall into a lusty stupor, which I won't have to deal with, thankfully[end if]. With this said, I'm taking his mouth for personal relief.' As the sorcerer just informed you, he begins to move over the brute's head, leaving his crotch entirely available for you.";
+	say "     Now that the tendrils have pulled the beast back onto the ground, you find it a lot easier to just climb over him, if you wanted to do so. Given how ready he looks, you do not even give it much thought. Looking at your own [if player is naked]naked body, you ready for action[else]body, you unclothe yourself to get ready for action[end if] and proceed to walk up to the immobilized brute. His red cock, thick and throbbing, even leaks as you approach, all while your mage companion sits on the werewolf's face with his round bubblebutt turned towards you. As you take hold of that large lupine cock and lean it towards your [if player is female]wet curls[else]hole[end if], you get to look at Xaedihr's strong back and ass, even catching a glimpse of his footlong being shoved down the brute's muzzle, who offers absolutely no resistance. As the sorcerer has to keep his legs spread and lean forward, you even get to see his butthole, though you think he knows he is also putting on a show for you. With that long black jacket he is always wearing, you barely get to see how thick and muscular his body actually is, normally!";
+	WaitLineBreak;
+	say "     With an added visual entertainment, this just got a lot more enjoyable as you begin to sit on the werewolf's cock. That thick shaft of his is somewhat of an issue, at first, but you manage to relax your [if player is female]your lower lips[else]butthole[end if] enough to let it press into you and enter. You notice him trying to thrust into you, but Xaedihr's magic tendrils are keeping his hips still, denying him any movement, which you imagine would feel very frustrating. But as you feel the brute's prick continuously throbbing inside you, he must enjoy this sensation of helplessness way more than he would like to admit under other less unfavorable circumstances. As your [if player is female]folds[else]hole[end if] stretch around his girthy meat, the sorcerer shoves his whole cock down the brute's throat, grabbing his head and holding it in place as he thrusts into him.";
+	say "     'Even the most brutish of the beasts can be a nice and tame puppy. Just sprinkle some fun magic and you got yourself a willing servant, right pup? Who's a good boy?' you hear Xaedihr tease the brute, even slapping him lightly on the cheek, and surprised to feel his cock throb so much inside [if player is female]your pussy[else]ass[end if] upon hearing this and whimpering. It only makes it feel better as you carry on riding the wolfman and squatting down on his big cock, feeling it push through your insides progressively deeper. This turns out to be quite a workout for your legs, but the pleasure you are getting from it is all worth the trouble, especially with a view like this";
+	if player is submissive:
+		say ". Watching the sorcerer throatfuck the brute in such a dominant way turns you on in unexplainable ways, imagining what he could do to you if he were to turn around and use your mouth like he is using the werewolf's, all while you ride the beast's large cock all the way until he is knotted inside you.";
+		WaitLineBreak;
+		say "     Your drooling face is soon noticed by the half-demon, who happens to glance over his shoulder and back at you. 'Oh, my... You must be having a blast with such a view, huh... How about you lean over here?' he asks, placing a hand over one of his buttocks and pushing it to the side, giving you a clear shot at his hole. 'Eating this ass while taking that big dick in you... I'm sure you can also be a good [boygirl]...' he says, with a smirk on his face that further triggers your submissive tendencies into taking hold of your decisions. You just do as he says... which ends up turning you on even more.";
+	else:
+		say ". That butt keeps on looking juicier by the second, his buttcheeks clenching and bouncing as he throatfucks the brute in such mesmerizing ways.";
+		WaitLineBreak;
+		say "     Then, the half-demon happens to glance over his shoulder and back at you, noticing where you eyes are [if player is male]. 'Don't get any ideas, big [boygirl]. If you want this ass, it's only your tongue that may go in, if you're that desperate for it[else]. 'You like my ass that much? Damn, should've sat on your face, instead. But you can still put it right between my buns and give my hole a good licking, if you want[end if],' he says, with a smirk on his face that just further turns you on. Maybe you shall just do that, given how tasty it looks and how easy it would be for you to reach it, and you do not get an offer like this everytime...";
+	say "     With that cock still in your [if player is female]pussy[else]ass[end if], you lean forward to place your head right between Xaedihr's asscheeks, leading your lips to his soft and smooth butthole as he pushes his rear against you, to make sure your mouth rubs against that pucker hard enough for his liking. To give yourself some additional support, you place both your hands on his buttocks, plump and filled with beefy muscle, even feeling your fingers sinking into his silky skin a little, and begin to eat that tasty and sweet ass like it was your daily meal. Your efforts cause you to wiggle your lower areas with the werewolf's cock throbbing in you, and eventually, you resume your squatting as you push your tongue into the sorcerer's ass. 'Fuck... This feels better than I... anticipated...'";
+	WaitLineBreak;
+	say "     You do not think a lot of time has passed until you hear your companion lose his control, moaning as a great wave of pleasure surges through him. You can feel the ring of his butthole surrounding your tongue quiver as he begins to shoot his abundant load right down the werewolf's throat, who had been sucking on Xaedihr's cock all this time. Followed by him, your [if player is female]cunt[else]ass[end if] also earns its share of cum fill as the beast, without even having knotted inside you, just openly bursts inside you, its force enough to slowly push your rear away from his wild shooting prick, then getting cum to rain everywhere around you in a shower of lupine manjuice, coating both you and the sorcerer in multiple areas. You, too, end up [if player is male]busting your nut with such force that you nearly fall to the side as your legs get weak[else]quivering in a climax of pleasure that nearly makes you fall to the side as your legs get weak[end if].";
+	say "     'Fuck...!' Xaedihr exclaims, as he sees that the werewolf still managed to cover you both with his cum. 'These guys cum a lot, don't they?! I can see why you keep coming back to them...' You do not think he meant that in any bad way, perhaps because he could actually enjoy this particular trait from the werewolf brutes. Your furred partner has, however, fell asleep after that, probably due to all the ordeals you both just made him go through. With this over, you slowly walk out from the top of the brute and meet your partner to your right, who is beckoning you to approach him. And ,as you do, he grabs you, pulls you close to him and kisses you on the mouth. Both your cum soaked bodies rub against one another as your tongues intertwine and wrestle together for like half a minute, and you even feel his cock twitch.";
+	WaitLineBreak;
+	say "     He then pulls out, realizing your current conditions. 'Shit, I'm still horny. Must be all this fucking cum and the musk... We gotta get going before we end up fucking each other, again... Yeah, I know that doesn't sound too bad, right now, but I might not be able to get a whole group of these beasts under control if his pack finds us, so...' he then steps back, letting go of you, and proceeds to cast another spell, this one being some sort of quick magic that flows through the both of you and cleans you all up, from head to toe. 'There, ready to put our clothes on and start walking away. This was fun, though... We're ought to do this more often, I suggest.'";
+	say "     You are happy, your companion seems happy, but he is right, you should go. With this in mind, you grab your stuff, Xaedihr grabs his, and you both get ready to leave.";
+	if loyalty of Xaedihr < 30:
+		say "     [bold type]You've bonded with Xaedihr a little more.[roman type][line break]";
+		increase loyalty of Xaedihr by 1;
+	if player is female:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Werewolf Brute";
+	else:
+		CreatureSexAftermath "Player" receives "AssFuck" from "Werewolf Brute";
+	CreatureSexAftermath "Werewolf Brute" receives "OralCock" from "Xaedihr";
+	CreatureSexAftermath "Player" receives "Other" from "Xaedihr";
 
 to say Werewolf Brute Desc:
 	if inasituation is true:

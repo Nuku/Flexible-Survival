@@ -2516,7 +2516,7 @@ to say obsidian coin use:
 	else:
 		say "     [bold type]Glyph![roman type][line break]";
 
-instead of sniffing gryphon coin:
+instead of sniffing obsidian coin:
 		say "The coin has a faint smell of volcanic sulfur to it. Definitely not the most pleasant scent.";
 
 [***********************************************************]

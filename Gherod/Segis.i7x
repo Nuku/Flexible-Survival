@@ -170,7 +170,7 @@ to say ResolveEvent Strange Android Seeker:
 					WaitLineBreak;
 					let bonus be (( strength of player minus 10 ) divided by 2);
 					let diceroll be a random number from 1 to 20;
-					say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Strength Check):[line break]";
+					say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Strength Check):[line break]";
 					if diceroll + bonus >= 14:
 						say "     And within the right timing, you hit them so damn hard they get knocked back and hit the wall, damaging... their plate? This thing really cannot be natural, as they also move in such an erratic way while trying to stand up, again, with sluggish yet so mechanical movements. The noises they make are not resembling any living creature, either. You are probably fighting a robot of some sort. Speaking of which, you are still not done with them, as they advance to attack you once more. But this time, you actually stand a chance to overpower them.";
 						say "[StrangeAndroidSeekerFight]";
@@ -183,7 +183,7 @@ to say ResolveEvent Strange Android Seeker:
 				WaitLineBreak;
 				let bonus be (( perception of player minus 10 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
+				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Perception Check):[line break]";
 				if diceroll + bonus >= 12:
 					say "     Examining the area, you notice a puddle of fluids, and you could even have tried to draw your enemy's attention to it, but you have a better idea. You find an empty can and decide to throw it towards the puddle, but not quite in there, just enough so that the dragon individual turns their focus towards that general direction. It worked, as they proceed to examine the source of the noise. Great, now you can just bring down this rotten ladder on top of them and bring them down with the power of your massive wrinkled brain. Naturally, it brings the dragon person down onto the puddle and finishes them in one go, as they do not seem to move. Sparks come out of them, as well as... metallic components. Indeed, this thing was not natural, you just brought down some sort of robot.";
 					say "[StrangeAndroidSeekerSuccess]";
