@@ -26,6 +26,7 @@ to say Werewolf Brute Wins:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
+		project Figure of Werewolf_hard_icon;
 		if HP of Player > 0: [player submitted]
 			say "     Seeing how large this werewolf is has you consider your actions, so you choose to submit to him by dropping to your knees and raising your hands. He takes a liking to this as a grin forms across his muzzle, and the sizable beastman approaches you unchallenged. 'So, playtoy it is? Good choice.' he comments as he grabs you by the chin, forces you to look at him and, locking his gaze on your eyes, he orders you to do as he says. 'You better make me feel good, then. I like my pups tame.'";
 		else:
@@ -87,6 +88,7 @@ to say Werewolf Brute Loses:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
+		project Figure of Werewolf_hard_icon;
 		if fightoutcome is 11: [werewolf brute submitted by libido victory]
 			say "     After pulling your best efforts at seducing and teasing this hulking werewolf, his movements become more sluggish as that massive erection swinging around between his legs really gets in his way. After so much throbbing, he finally seems to give up on trying to catch and subdue you, falling on the ground while trying to catch his breath. 'Fuck...! D-don't do this to me...! J-just come sit on this dick and we'll call it even!' he says, putting an end to the fight as he looks at you with pleading eyes.";
 		else:
@@ -215,6 +217,7 @@ to say Werewolf Brute Desc:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
+		project Figure of Werewolf_clothed_icon;
 		say "     In front of you stands a really, really big and burly lupine beast, which resembles an actual werewolf from one or more fantasy stories. You can clearly tell it is a [']he['] given the sizable sheath hanging between his legs. The beastly brute is also abnormally large, being about twice as tall as an average person, and has a hulking frame capable of smothering a smaller prey into submission if caught in his grasp, covered in a coat of gray fur. His fangs are sharp, as well as his claws, a very dangerous sight to have. As his tail twitches, he looks over to you with an inquisitive look, cautiously approaching you with his intimidating presence.";
 		if scalevalue of player < 4:
 			say "     'Now, who's this puny thing? Another playtoy?' he asks, chuckling to himself. 'You better know your place, or you're gonna get thrashed pretty badly.' With this, the werewolf brute readies his claws to attack you.";

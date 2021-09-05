@@ -245,6 +245,7 @@ to say FangTalkMenu:
 					say "[FangTalk1]";
 				else if (nam is "Take Fang With You"):
 					say "[FangTalk2]";
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the feral wolf, shaking your head slightly as he gives a questioning look.";

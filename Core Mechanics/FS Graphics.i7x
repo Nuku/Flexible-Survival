@@ -188,6 +188,8 @@ Figure of Wereraptor_female_icon is the file "Wereraptor_female.jpg".
 Figure of Wereraptor_male_hard_icon is the file "Wereraptor_male_hard.jpg".
 Figure of Wereraptor_male_soft_icon is the file "Wereraptor_male_soft.jpg".
 Figure of Werewolf_female_icon is the file "Werewolf.jpg".
+Figure of Werewolf_hard_icon is the file "Werewolf_hard.jpg".
+Figure of Werewolf_clothed_icon is the file "Werewolf_clothed.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
 Figure of Wood_Elf_icon is the file "Wood Elf.jpg".
 Figure of WrestlingWolf_hard_icon is the file "Wrestling Wolf_hard.jpg".
@@ -1558,6 +1560,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Chris_warrior_clothed"	Figure of Chris_warrior_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Chris_warrior_naked"	Figure of Chris_warrior_naked_icon	"Kupo Klein"	g-white	"normal"
 "Werewolf (female)"	Figure of Werewolf_female_icon	"Watsup"	g-white	"normal"
+"Werewolf clothed"	Figure of Werewolf_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Werewolf naked"	Figure of Werewolf_hard_icon	"SteppeCrow"	g-white	"normal"
 "Wereraptor female"	Figure of Wereraptor_female_icon	"Vashaa"	g-white	"normal"
 "Wereraptor male hard"	Figure of Wereraptor_male_hard_icon	"Vashaa"	g-white	"normal"
 "Wereraptor male soft"	Figure of Wereraptor_male_soft_icon	"Vashaa"	g-white	"normal"
