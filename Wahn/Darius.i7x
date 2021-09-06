@@ -156,7 +156,7 @@ after going to Darius's Crib while (Darius is not in Darius's Crib):
 		else if carried of Bliss Tablet is 1:
 			say "     For a moment, the thought of dosing Darius with some of his own drugs comes to mind. Remembering that you just have the one Bliss Tablet though, aren't sure if one would really affect Darius or not. There's a chance that he has tried the drug before, so most likely, you'll need at least two for them to give him a kick. With that in mind, you put the lid back and wander to the middle of the room.";
 		else: [no bliss owned]
-			say "     As you put the lid back on the cooler, an idle thought comes to your mind and you begin wondering if you could spike the beers with something fun instead of taking them. Maybe some of Darius's own lust drugs could be a poetic thing to use on the Dalmatian. With that in mind, you wander back to the middle of the room.";
+			say "     As you put the lid back on the cooler, an idle thought comes to your mind and you begin wondering if you could spike the beers with something fun instead of taking them. [bold type]Maybe some of Darius's own lust drugs could be a poetic thing to use on the Dalmatian. [roman type]With that in mind, you wander back to the middle of the room.";
 	else:
 		LineBreak;
 		say "     You keep your hands to yourself, not touching anything in your surroundings.";

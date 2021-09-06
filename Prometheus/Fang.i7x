@@ -245,6 +245,7 @@ to say FangTalkMenu:
 					say "[FangTalk1]";
 				else if (nam is "Take Fang With You"):
 					say "[FangTalk2]";
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the feral wolf, shaking your head slightly as he gives a questioning look.";
@@ -293,7 +294,7 @@ Best Wolf	"Best Wolf"
 Best Wolf is a pet.
 NPCObject of Best Wolf is Fang.
 understand "Fang" as Best Wolf.
-IDList of Best Wolf is { "Fang", "fang", "feral wolf" }.
+IDList of Best Wolf is { "Fang", "fang", "Feral Wolf", "feral wolf", "Best Wolf", "best wolf" }.
 printed name of Best Wolf is "Fang".
 Description of Best Wolf is "[FangDesc]".
 Weapon Damage of Best Wolf is 15.

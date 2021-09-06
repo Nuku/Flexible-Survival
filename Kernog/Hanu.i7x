@@ -38,7 +38,8 @@ AnalVirgin of Hanu is true.
 PenileVirgin of Hanu is true.
 SexuallyExperienced of Hanu is false.
 MainInfection of Hanu is "".
-Description of Hanu is "[hanuDesc]";
+Description of Hanu is "[hanuDesc]".
+Conversation of Hanu is { "<Placeholder>" }.
 
 to say hanuDesc:
 	if Monkey Duel is unresolved:
@@ -612,7 +613,8 @@ Table of GameRoomIDs (continued)
 Object	Name
 Monkey House	"Monkey House"
 
-Monkey house is south of Main Path 2.
+Monkey house is northwest of Main Path 1.
+Monkey house is east of Border Wall.
 The earea of Main Path 2 is "Zoo".
 Description of Monkey House is "[monkeyHouseDesc]".
 

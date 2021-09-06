@@ -64,8 +64,9 @@ Virgin of Erin is true.
 AnalVirgin of Erin is true.
 PenileVirgin of Erin is false.
 SexuallyExperienced of Erin is true.
-MainInfection of Erin is "Slut Rat".
+MainInfection of Erin is "Mall Rat".
 Description of Erin is "[ErinDesc]".
+Conversation of Erin is { "<Placeholder>" }.
 
 to say ErinDesc:
 	project the figure of Erin_face_icon;
@@ -273,8 +274,9 @@ Virgin of Violet is false.
 AnalVirgin of Violet is true.
 PenileVirgin of Violet is true.
 SexuallyExperienced of Violet is true.
-MainInfection of Violet is "Slut Rat".
+MainInfection of Violet is "Mall Rat".
 Description of Violet is "[VioletDesc]".
+Conversation of Violet is { "<Placeholder>" }.
 
 to say VioletDesc:
 	project the figure of Violet_face_icon;

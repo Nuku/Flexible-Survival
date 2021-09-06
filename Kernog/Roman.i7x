@@ -267,7 +267,7 @@ to say FootballTryoutsResults:
 to say RomanConfront:
 	say "     You ask Roman to talk with him in private. 'Okay. One moment, boys!' he tells the other players, while you guide him to an isolated area of the football field. 'What's the problem? Some of the boys making trouble?' he asks.";
 	say "     Sheepishly, you admit that you saw Roman naked, and his private bits. The team captain looks at you for a moment, looking like he was hit by a freight train. 'Y-You what?' he asks. 'You... Why are you telling me this? Are you trying to mock me? To blackmail me?' You try to reassure him, that you would tell no one, but that his attitude about it was strange, considering all the manner of beings roaming the city nowadays. 'You know nothing,' he replies, giving you a stern look. 'It's a personal issue, and I don't want to talk about it. Not now, at least.'";
-	say "     It seems that you will need to convince Roman to trust you. Maybe being a member of the team and/or a trans-man yourself may help with this";
+	say "     It seems that you will need to convince Roman to trust you. Maybe being a member of the team and/or a trans-man yourself may help with this.";
 	now HP of Roman is 2;
 
 to say RomanConvince:

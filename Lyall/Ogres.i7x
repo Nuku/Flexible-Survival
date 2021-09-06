@@ -289,7 +289,7 @@ to say OgreTalkMenu:
 					say "[OgreHuntStories]";
 				else if (nam is "Fuck around with the ogres"):
 					say "[OgreCampFuck]";
-				else if (nam is "Talk about their mission"):
+				else if (nam is "Ask about their mission"):
 					say "[OgreMissionTalk]";
 				else if (nam is "Ask about their leader"):
 					say "[OgreLeaderTalk]";

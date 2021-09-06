@@ -115,10 +115,6 @@ instead of examining a grab object (called x):
 		-- -4: [4 size categories difference - tiny player (1), size 5 weapon]
 			say "     Don't even think about using this in combat! Well, you might hide under its bulk, but that's about it.";
 
-instead of wearing something:
-	try using it;
-	stop the action;
-
 Using is an action applying to one thing.
 
 understand "dequip [owned grab object]" as using.
@@ -128,6 +124,7 @@ understand "eat [owned grab object]" as using.
 understand "drink [owned grab object]" as using.
 understand "equip [owned grab object]" as using.
 understand "hold [owned grab object]" as using.
+understand "wear [owned grab object]" as using.
 understand "wield [owned grab object]" as using.
 understand "write in [owned grab object]" as using.
 
@@ -142,6 +139,12 @@ Carry out using a grab object (called x):
 		process x;
 	else:
 		say "You don't see any [x] in your backpack.";
+
+[
+instead of wearing something:
+	try using it;
+	stop the action;
+]
 
 To process (x - a grab object):
 	repeat through the table of game art:

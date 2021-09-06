@@ -173,7 +173,6 @@ carry out delaymilitary:
 
 Section 4 - Homaru Search
 
-Dam is a number that varies.
 Homarusearching is a number that varies.
 Findfirefighter is a number that varies.
 Homarusearch is a number that varies.

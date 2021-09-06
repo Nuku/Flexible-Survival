@@ -5,7 +5,6 @@ Version 2 of Tigress Hooker by Stripes begins here.
 
 Section 1 - Creature Responses
 
-tempnum is a number that varies.
 tigresswinner is a number that varies.	[marked as having won last time - used later]
 tigressfucked is a number that varies.	[marked as having lost last time - used later]
 tigressclient is a number that varies.	[marked as having submitted last time - used later]

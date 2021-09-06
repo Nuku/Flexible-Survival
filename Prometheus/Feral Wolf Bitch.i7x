@@ -4,6 +4,18 @@ Feral Wolf Bitch by Prometheus begins here.
 
 "Adds a Feral Wolf Bitch to Flexible Survival's Wandering Monsters table"
 
+to say GenerateTrophyList_Feral_Wolf_Bitch:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "wolf bitch fur" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "dirty water" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "food" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "tennis ball" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
 
 Section 1 - Creature Responses
 
@@ -270,11 +282,11 @@ When Play begins:
 	now Cunt Tightness entry is 2;
 	now SeductionImmune entry is false;
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "wolf fem-cum";
+	now loot entry is "wolf bitch fur";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
+	now MilkItem entry is "wolf bitch milk";
 	now CumItem entry is "wolf fem-cum";
-	now TrophyFunction entry is "-";
+	now TrophyFunction entry is "[GenerateTrophyList_Feral_Wolf_Bitch]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]powerful[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -283,7 +295,7 @@ When Play begins:
 	now non-infectious entry is false;
 	now Cross-Infection entry is "Feral Wolf Male"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
-	now altcombat entry is "hump"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is ""; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
 [
@@ -425,14 +437,30 @@ This is the FemaleFang's Beta rule:
 
 
 
-Section 4 - Wolf Fem-cum
+Section 4 - Items
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"wolf bitch fur"	"A tuft of black, gray, and brown fur that looks like it has been pulled out of the coat of a wolf. It's nicely soft."	0	wolf bitch fur
+
+wolf bitch fur is a grab object.
+It is temporary.
+wolf bitch fur is infectious.
+Strain of wolf bitch fur is "Feral Wolf Bitch".
+Usedesc of wolf bitch fur is "[WolfBitchFurUse]";
+
+to say WolfBitchFurUse:
+	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+
+instead of sniffing wolf bitch fur:
+	say "The fur has a pleasing, not too strong, animal-like scent.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "wolf fem-cum"	"A vial of thick, musky, clear liquid. [']Infection sample - species: wolf['] is written on the side."	1	wolf fem-cum
 
 wolf fem-cum is a grab object. wolf fem-cum is cum.
-Wolf Fem-cum is infectious. Strain of Wolf Fem-cum is "Feral Wolf Bitch".
+Wolf Fem-cum is infectious. Strain of Wolf Fem-cum is "Feral Wolf Male".
 
 instead of sniffing wolf fem-cum:
 	say "The wolf fem-cum smells of wolves and pussy, naturally.";
@@ -444,6 +472,22 @@ to say Wolf Fem-cum use:
 	if Libido of Player < 75:
 		now Libido of Player is 75;
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"wolf bitch milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Wolf Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	wolf bitch milk
 
+wolf bitch milk is a grab object.
+wolf bitch milk is milky.
+Purified of wolf bitch milk is "distilled milk".
+wolf bitch milk is infectious.
+Strain of wolf bitch milk is "Feral Wolf Bitch".
+Usedesc of wolf bitch milk is "[wolf bitch milk use]";
+
+to say wolf bitch milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the wolf milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing wolf bitch milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Feral Wolf Bitch ends here.

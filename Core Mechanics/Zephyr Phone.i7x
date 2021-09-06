@@ -1,4 +1,4 @@
-Version 1 of Zephyr Phone by Guest Writers begins here.
+Version 1 of Zephyr Phone by Core Mechanics begins here.
 [Original by Executaball]
 [v1 - 11/28/2017]
 [Version 1.1 - Moved to Guest Writers]

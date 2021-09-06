@@ -5,6 +5,18 @@ Version 1 of Feral Wolf Male by Prometheus begins here.
 
 "Adds a Feral Wolf Male to Flexible Survival's Wandering Monsters table, with impreg chance"
 
+to say GenerateTrophyList_Feral_Wolf_Male:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "male wolf fur" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "dirty water" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "food" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "tennis ball" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
 
 Section 1 - Creature Responses
 
@@ -288,18 +300,18 @@ When Play begins:
 	now Cunt Tightness entry is 0;
 	now SeductionImmune entry is false;
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "wolf cum";
+	now loot entry is "male wolf fur";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "";
 	now CumItem entry is "wolf cum";
-	now TrophyFunction entry is "-";
+	now TrophyFunction entry is "[GenerateTrophyList_Feral_Wolf_Male]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]powerful[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is "Feral Wolf Bitch"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hump"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
@@ -445,14 +457,30 @@ This is the Fang's Beta rule:
 			say "     Sandra, lustful for the big wolf, comes over to visit often. Fang fucks her like a wild animal, stuffing his throbbing cock into her and keeping her coming back for more. The kinky bunny also enjoys watching the wolf ravage you as well, finding the sight of it very arousing between her own turns beneath the alpha wolf. The bunny's tummy grows large after one of these visits and Fang has her move in, adding her to his harem of lovers. She eventually gives birth to a pair of wolf cubs with bunny ears and a tail. These quiet, taciturn boys are never lacking in companionship, always having numerous lovers drawn in by the strong bodies and brooding nature, eager to bend over for them.";
 
 
-Section 4 - Wolf Cum
+Section 4 - Items
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"male wolf fur"	"A tuft of black, gray, and brown fur that looks like it has been pulled out of the coat of a wolf. It's nicely soft."	0	male wolf fur
+
+male wolf fur is a grab object.
+It is temporary.
+male wolf fur is infectious.
+Strain of male wolf fur is "Feral Wolf Male".
+Usedesc of male wolf fur is "[MaleWolfFurUse]";
+
+to say MaleWolfFurUse:
+	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+
+instead of sniffing male wolf fur:
+	say "The fur has a pleasing, not too strong, animal-like scent.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "wolf cum"	"A vial of thick, creamy, white liquid. [']Infection sample - species: wolf['] is written on the side."	1	wolf cum
 
 wolf cum is a grab object. wolf cum is cum.
-Wolf Cum is infectious. Strain of Wolf Cum is "Feral Wolf Male".
+Wolf Cum is infectious. Strain of Wolf Cum is "Feral Wolf Bitch".
 
 instead of sniffing wolf cum:
 	say "The wolf semen smells of wolves and cum, naturally.";
