@@ -103,7 +103,7 @@ to inflatedsnakevore:
 		if lustatt > 99: [lustatt is short for 'lust attribute'. When reaching 100, the player orgasms. This check uses > 99 to force orgasm even if lustatt is somehow above 100]
 			inflatedSnakeVoreOrgasm; [Calls the function defined later on]
 			increaseSnakeDrugCap;
-			now lustatt is 10 * bodyPartCounter;
+			now libido of player is 10 * bodyPartCounter;
 			if bodyname of player is "Inflated Snake" and player is pure:
 				say "Already an inflated snake.";
 				SanLoss(12 + psycheadjust); [an orgasm when pure snake is catastrophic on your psyche]
