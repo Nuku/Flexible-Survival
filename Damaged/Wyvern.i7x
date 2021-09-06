@@ -330,22 +330,6 @@ to say WYVVIC:
 			else if WYVSF is 0:
 				now WYVSF is 1;
 
-to libidoeval:
-	if "Horny Bastard" is listed in feats of Player: [lust adjust check]
-		now lustadjust is 1;
-	else if "Cold Fish" is listed in feats of Player:
-		now lustadjust is -1;
-	else:
-		now lustadjust is 0;
-
-to psycheeval:
-	if "Weak Psyche" is listed in feats of Player: [psyche adjust check]
-		now psycheadjust is 1;
-	else if "Strong Psyche" is listed in feats of Player:
-		now psycheadjust is -1;
-	else:
-		now psycheadjust is 0;
-
 
 Section 1-2 - Victory Sex Trees
 
