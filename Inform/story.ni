@@ -531,6 +531,7 @@ Include Hyperskunk by Stripes.
 Include Imp by Wahn.
 Include Impala by UrsaOmega.
 Include Incubus by Stripes.
+Include Inflatable Snake by Kernog.
 Include Inflatable Vulpine by Stripes.
 Include Jackal Alpha by Gherod.
 Include Jackal Femboy by Gherod.
