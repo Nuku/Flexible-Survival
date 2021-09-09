@@ -41,8 +41,8 @@ to say losetoinflatablesnake:
 		say "     The inflatable snake pushes forward relentlessly, adapting its size to your [cunt size desc of player] vagina to avoid hurting you, while still making you feel as if it was stretching you wide. Its skin produces a tanning oil-like substance, but you are already so wet that this 'attention' is unnecessary. You can feel its blunt head hit your cervix again and again, and its powerful neck wiggle inside you. The snake brings you at a steady rythmn to the edge of orgasm, then beyond. Your vaginal muscles squeeze on the feral pool toy which wiggles and pushes even harder as a response[if player is male], while your [ball size] throb and release a [cum load size of player] load, quickly gulped down into the synthetic creature's stomach (or what passes as one)[end if].";
 	WaitLineBreak;
 	if vorelevel > 1:
-		say "     As you bask in the afterglow of your orgasm, you let your guard down for a moment. This is more than the snake needs to open its toothless jaws wide and clamp them on your head. You start struggling in a panic, but the plastic coils of the pool toy squeeze tight on you, cutting your breath and your strength. The inflatable snake swallows your [body size of player] body [if scalevalue of player <= 2]without any difficulty[else]stretching its skin effortlessly to accomodate your size[end if]. Your exhausted body slowly travels down towards the inflatable's articial stomach. It is hot, damp, and cramped. The only thing you can see and feel are the smooth blue and semi-transparent walls of the reptile's inner body.";
-		say "     Your descent stops eventually. You are squeezed from all directions by the snake's body. There is no doubt that your [bodyname of player] shape, including [if breast size of player > 0]your [breast size desc of player] breasts[else if player is male] your [cock size desc of player] cock[smn][else]gasping face[end if], are plainly visible from the outside. You feel the snake's stomach fluids coat you head to toe and, while they do not burn, you cannot shake a bad feeling about your predicament. It is at this moment that you start feeling shivers, and that your brain begins to fog. You only need a couple of encouragements from the snake's contractions and rumbling to make your [if player is hermaphrodite]cock[smn] rock hard, and your cunt[sfn] moist[else if player is male]cock[smn] rock hard[else if player is female]your cunt[sfn] moist[else]body suffer through the woes of arousal[end if]. The danger of your situation quickly becomes clear to you.";
+		say "     As you bask in the afterglow of your orgasm, you let your guard down for a moment. This is more than the snake needs to open its toothless jaws wide and clamp them on your head. You start struggling in a panic, but the plastic coils of the pool toy squeeze tight on you, cutting your breath and your strength. The inflatable snake swallows your [Body Size Adjective of Player] body [if scalevalue of player <= 2]without any difficulty[else]stretching its skin effortlessly to accomodate your size[end if]. Your exhausted body slowly travels down towards the inflatable's articial stomach. It is hot, damp, and cramped. The only thing you can see and feel are the smooth blue and semi-transparent walls of the reptile's inner body.";
+		say "     Your descent stops eventually. You are squeezed from all directions by the snake's body. There is no doubt that your [bodyname of player] shape, including [if breast size of player > 0]your [breast size desc of player] breasts[else if player is male] your [cock size desc of player] cock[smn][else]gasping face[end if], are plainly visible from the outside. You feel the snake's stomach fluids coat you head to toe and, while they do not burn, you cannot shake a bad feeling about your predicament. It is at this moment that you start feeling shivers, and that your brain begins to fog. You only need a couple of encouragements from the snake's contractions and rumbling to make your [if player is herm]cock[smn] rock hard, and your cunt[sfn] moist[else if player is male]cock[smn] rock hard[else if player is female]your cunt[sfn] moist[else]body suffer through the woes of arousal[end if]. The danger of your situation quickly becomes clear to you.";
 		WaitLineBreak;
 		inflatedsnakevore;
 	else:
@@ -146,7 +146,7 @@ to inflatedsnakevore:
 					inflatedSnakeVoreStruggleFail;
 					LineBreak;
 					inflatableSnakeLust;
-					inflatableSnakeSanityPassive
+					inflatableSnakeSanityPassive;
 				inflatableSnakeLust;
 				inflatableSnakeSanityPassive;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2": [player picked oblige/abide]
@@ -175,7 +175,7 @@ to inflatedsnakevore:
 					inflatableSnakeLust;
 					now boundrecover is false;
 				else: [endure]
-					"      You attempt to steer your mind and resist the inflatable snake's corruption.";
+					say "     You attempt to steer your mind and resist the inflatable snake's corruption.";
 					LineBreak;
 					inflatableSnakeLust;
 					inflatableSnakeSanityPassive;
@@ -187,8 +187,8 @@ to increaseSnakeDrugCap:
 		say "[one of]Your mental state worsens as your body absorb more of the inflatable snake's toxin[or]More of the inflatable snake's stomach fluids enter your body, eating at your mental resistance[or]You feel yourself grow weaker in both body and mind as you macerate in the inflatable snake's fluids[at random].";
 
 to recoverSnakeDrugCap:
-	let x be a number that varies;
-	let adj be a text that varies;
+	let x be 0;
+	let adj be "";
 	if intelligence of player <= 10:
 		now x is 1;
 		now adj is "a little";
@@ -206,7 +206,7 @@ to recoverSnakeDrugCap:
 every turn when snakeDrugCounter > 0:
 	decrease snakeDrugCounter by 1;
 
-to setBodyPartCouter:
+to setBodyPartCounter:
 	now inflatableSnakeBodyParts is 0;
 	if bodyname of player is "Inflated Snake":
 		increase inflatableSnakeBodyParts by 1;
@@ -218,10 +218,10 @@ to setBodyPartCouter:
 		increase inflatableSnakeBodyParts by 1;
 
 to say inflatableSnakeVoreDesc:
-	say "The inflatable snake has swallowed you whole. You are now stuck inside the plastic monster's stomach, a dark [body size of player] bulge slightly visible through the serpent's transparent 'skin'. Your [bodyname of player] body is soaked in the snake's artificial stomach juices seeping from the inner walls. While they are fortunately harmless on your skin, they make your skin extra sensitive, and erode your will to escape your predicament. The snake's body gurgles and squeezes against you, slowly stimulating your body with an arousing massage. You need to dig your way out of this rubber snake before you lose either the will or the stamina to do so!";
+	say "The inflatable snake has swallowed you whole. You are now stuck inside the plastic monster's stomach, a dark [Body Size Adjective of Player] bulge slightly visible through the serpent's transparent 'skin'. Your [bodyname of player] body is soaked in the snake's artificial stomach juices seeping from the inner walls. While they are fortunately harmless on your skin, they make your skin extra sensitive, and erode your will to escape your predicament. The snake's body gurgles and squeezes against you, slowly stimulating your body with an arousing massage. You need to dig your way out of this rubber snake before you lose either the will or the stamina to do so!";
 
 to inflatedSnakeVoreOrgasm: [Orgasm description and damage calculation.]
-	say "The near constant squeezing and massaging of the inflatable snake gets to you and pushes you over the edge[one of].[or] once more.[stopping] Your mind blanks while your confined body shudders and erupts, [if player is hermaphrodite]squirting a [cum load size of player] mix of vaginal fluid and cum[else if player is male]ejecting a [cum load size of player] load of cum[else]squirting a [cum load size of player] volume of fem-cum[end if], which ends up mixing with the snake's fluid in which you are slowly macerating.";
+	say "The near constant squeezing and massaging of the inflatable snake gets to you and pushes you over the edge[one of].[or] once more.[stopping] Your mind blanks while your confined body shudders and erupts, [if player is herm]squirting a [cum load size of player] mix of vaginal fluid and cum[else if player is male]ejecting a [cum load size of player] load of cum[else]squirting a [cum load size of player] volume of fem-cum[end if], which ends up mixing with the snake's fluid in which you are slowly macerating.";
 
 to inflatedSnakeVoreStruggle: [Orgasm description and damage calculation.]
 	say "[one of]You stretch your arms and your legs against the snake's elastic skin... And make some progress! You stretch the synthetic reptile's stomach in all directions, and feel the material creak under your efforts.[or]You try to muster your will and struggle again... And focus the efforts of all your limbs into a single spot. Whether by making it gag or by ripping your way out, you [italic type]are[roman type] getting out of this stomach![or]You fight against the squeezing embrace and the unbearable heat of the rubber snake's stomach... You fight staunchly against the fake digestive organ's contractions, until it is unable to squeeze around you. You feel its inner walls weaken.[at random].";
