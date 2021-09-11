@@ -476,7 +476,7 @@ to say bcballpitroom:
 			say "The 'wave' made by the inflatable snake travels in your general direction, but misses you completely. The snake's snout bumps on the edge of the ball pit in a somewhat comical manner. You take the opportunity of the creature's confusion to be on your way.";
 		else:
 			say "The 'wave' made by the inflatable snake makes a beeline towards you. You prepare yourself for the fight.";
-			challenge "Inflated Snake";
+			challenge "Inflatable Snake";
 			if fightoutcome >= 30: [Only for fleeing. For other outcomes, see Inflatable Snake.]
 				say "     Deciding that you would have none of that sneaky squeaky snake, you make your way towards the nearest exit as fast as you can. As you step out of the ball pit, you hear the plastic head of the inflatable reptile bump against the edge.";
 				WaitLineBreak;
@@ -490,7 +490,7 @@ to say bcballpitroom:
 				else:
 					move player to Punching Pillars;
 	else:
-		say "Snake is sleeping :-3";
+		say "Now wary of the inflatable snake's presence, you stay on your guard. However, you do not spot any movement. It seems that the plastic reptile is still recovering.";
 
 Chapter 5 - Toy Room
 
