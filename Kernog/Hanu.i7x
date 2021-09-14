@@ -629,4 +629,7 @@ to say monkeyHouseDesc:
 	else:
 		say "     The zoo's monkey house seems to have been repurposed. The glass panels have been removed, and one of the exhibits have been repurposed into a makeshift dojo. A suspended tire is the only artifact of the original place; judging by the cot installed in it, it is Hanu's resting place.";
 
+after looking while player is in Monkey house:
+	project the Figure of Map_Zoo_7_icon;
+
 Hanu ends here.
