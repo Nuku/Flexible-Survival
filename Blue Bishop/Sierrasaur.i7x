@@ -9,13 +9,6 @@ sierrapure is a truth state that varies. sierrapure is usually false. [Used as s
 sierramem is a number that varies. sierramem is usually 0. [Used to ward repetition of expository prose]
 sierramale is a truth state that varies. sierramale is usually false. [A trigger used as shorthand to determine if the player banned herms]
 
-lustatt is a number that varies. lustatt is usually 0.
-struggleatt is a number that varies. struggleatt is usually 0.
-bsextimer is a number that varies. bsextimer is usually 0.
-boundstate is a truth state that varies. boundstate is usually false.
-psycheadjust is a number that varies. psycheadjust is usually 0.
-lustadjust is a number that varies. lustadjust is usually 0.
-
 to say sierradesc:
 	choose row MonsterID from Table of Random Critters;
 	if "Male Preferred" is listed in feats of Player:

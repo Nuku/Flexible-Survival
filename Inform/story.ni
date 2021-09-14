@@ -410,6 +410,7 @@ Include Blob by Kaleem Mcintyre.
 Include Blue Chaffinch by Stripes.
 Include Latex Bobcat by Stripes.
 Include Bottlenose Toy by Stripes.
+Include Bouncy Succubus by Qazarar.
 Include Bovine by Damaged.
 Include Breederslut by Stripes.
 Include Brown Rat by Wahn.
