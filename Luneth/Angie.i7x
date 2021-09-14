@@ -133,6 +133,8 @@ to say shopappearance:
 	else: [ base state without Angie ]
 		say "     The zoo's own little gift shop, this place is decorated in safari paraphernalia and merchandise bearing the images of various animals. Unfortunately, it seems several of the animals have decided to pay the shop a visit themselves, and much of the merchandise has been clawed or strewn around the floor. Special attention seemed to have been paid to the soda and snack machines, which have been smashed open and their contents mostly emptied around the room, though you think there might be a few items left if you look hard enough. Looking around, you spot a section that at one time was full of books detailing the habits and practices of many of the zoo animals. These could have at one point been very useful to you in your current situation, if they weren't already clawed near to bits. There is a locked door behind the cashier's counter marked [']Employees Only['].";
 
+after looking while player is in Zoo Giftshop:
+	project the Figure of Map_Zoo_3_icon;
 
 Table of Game Objects (continued)
 name	desc	weight	object
