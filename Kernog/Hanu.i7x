@@ -41,9 +41,10 @@ MainInfection of Hanu is "".
 Description of Hanu is "[hanuDesc]".
 Conversation of Hanu is { "<Placeholder>" }.
 
-Monkey King Service is resolved
-if "Monkey" is not listed in EncounteredEnemies of Player:
 
+[if "Monkey" is not listed in EncounteredEnemies of Player:
+	Monkey King Service is resolved.]
+	
 to say hanuDesc:
 	if Monkey Duel is unresolved:
 		say "[one of]Hanu stands in the middle of the repurposed Training Hall, performing katas. His graceful moves and calm expression make him look like a ballet dancer[or]Hanu is sitting in the middle of the Monkey House, meditating in a succession of poses showcasing the simian's remarkable flexibility[at random].";
@@ -96,7 +97,7 @@ instead of conversing Hanu:
 		if Monkey King Service is resolved or "Monkey" is listed in EncounteredEnemies of Player:
 			monkeyDuel;
 		else:
-				say "     You tell Hanu that [one of]while you do not promise anything, you will keep an eye out for the monkey, the next time you explore the museum.[or]you have not found anything yet.[stopping]";
+			say "     You tell Hanu that [one of]while you do not promise anything, you will keep an eye out for the monkey, the next time you explore the museum.[or]you have not found anything yet.[stopping]";
 	else if the resolution of Monkey Duel is not 1:
 		say "[one of]     'P-Please, help me,' the monkey whispers, before Wukong pulls on his leash.[line break]     'What was that?' the younger simian asks as Hanu gasps, then looks at the ground once more. 'That's what I thought. You're my pet, so I expect of you to talk like one.'[line break]     'E-Eeek. Eek,' Hanu makes in a resigned tone.[line break]     'Better.'[or]     'Ook,' Hanu replies plaintively.[line break]     'My pet is well-behaved, is he not?' Wukong asks mockingly.[stopping]";
 	else:
@@ -189,7 +190,7 @@ Step 3 - Duel]
 Monkey Duel has a number called step. The step of monkey duel is 0.
 
 to MonkeyDuel:
-	if Take My Royal Word For Granite is resolved or Hunt Of Mammoth Proportions is resolved::
+	if Take My Royal Word For Granite is resolved or Hunt Of Mammoth Proportions is resolved:
 		say "     This 'young monkey' unmistakenly refers to Wukong. You tell your zen interlocutor about your adventures with the self-proclaimed 'Monkey King'.";
 	else:
 		say "     This 'young monkey' unmistakenly refers to Wukong. You tell your zen interlocutor about your unfortunate encounters with the arrogant simian.";
