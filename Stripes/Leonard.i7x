@@ -730,6 +730,7 @@ to say Leonardmaidsex2:
 
 
 to say Leonardcarawaysex1:
+	let T be 0;
 	say "     The lingering scent of Caraway's cooking in the air momentarily draws your attention as you look over at the cute chef tidying up her kitchen. The sight of her in her cute apron and nothing else gets you turned on and you decide that you and Leonard should have some fun with her. You turn back to your mate and make the suggestion to him. '[one of]Certainly, my dear. I'm sure she'd appreciate some special attention[or]That is a wonderful idea, my dear. She's been such a diligent worker - she deserves a good fucking[or]She makes such a tempting sight in that apron of hers, doesn't she, my dear? Let's do that then[or]Of course, my dear. You brought her to me, so it is only fair that you might enjoy her company as well[or]Mmmm... she's such a sweet little treat, isn't she? Very well, let's go kiss the cook[at random].' Keeping his paw on your ass, you both head towards the kitchen, eyes locked on that sweet tush of hers.";
 	if Player is male and a random chance of 2 in 5 succeeds:
 		say "     Coming up behind her with padded paws, Leonard places his free hand on her exposed bottom, drawing a moan from her. She initially moves to bend over the counter, clearly having done so before for him. Seeing you there as well, she hesitates momentarily, only to be gently guided to lean over anyhow while the lion grinds his cock against her rear. 'We shall simply share in this lovely meal,' he purrs with a grin, slipping his cock into her juicy pussy. She gives a mrowl of pleasure in response and pushes backwards onto his impaling rod. His impressive shaft spreads her wet petals and fills that cute cunny of hers nice and full.";
@@ -738,10 +739,10 @@ to say Leonardcarawaysex1:
 		say "     As your mate's arousal grows towards his peak, he remains mounted in her. Pounding her hard and fast, he presses her down onto the counter as he takes the nape of her neck in his jaws. He growls softly and buries his spurting rod deep inside her, filling the mrowling chef with his creamy load while you watch on. After draining his load into her, he pulls out and makes room for you again";
 		if anallevel > 1 and a random chance of anallevel in 9 succeeds:
 			say ". Deciding you're not in the mood for Leonard's sloppy seconds, you press your glans to the kitty's other entrance. She gives a little mewl, but pushes back, allowing you entrance to her back door. Already quite worked up, it is not long before fucking that tight asshole of hers has you cumming in her bottom while you finger her creamy cunt to another orgasm. She's left in a happy daze when you pull out, leaking cum from both well-used holes and clearly loving it.";
-			let T be 1;
+			now T is 1;
 		else:
 			say ". Getting lined up once again, you slide your pulsing rod into her cum-slick cunt and take your turn finishing in her. After the long session of taking turns, having her all to yourself lets you ride her to orgasm. You pump a fresh load of hot semen into her already overflowing cunny, mixing your load with your mate's and stuffing her even more full. She's left in a happy daze when you pull out, leaking copious amounts of cum from her thoroughly fucked hole and clearly loving it.";
-			let T be 2;
+			now T is 2;
 	else if Player is male:
 		say "     Coming up behind her with padded paws, Leonard places his free hand on her exposed bottom, drawing a moan from her. She initially moves to bend over the counter, clearly having done so before for him, but moves onto all fours when she sees you there as well. Leonard, still at her rear, gets his cock lined up with her wet pussy and, after a little teasing grinding, sinks his manhood into her. Meanwhile, you've taken her mouth, the cute kitty cook taking your [Cock of Player] rod into her muzzle and sucking it lustfully.";
 		WaitLineBreak;
