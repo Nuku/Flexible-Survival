@@ -917,6 +917,7 @@ Include Stag by Wahn.
 Include Stella by Stripes.
 Include Stewart by Rikaeus.
 Include Stuck Dragon by Stripes.
+Include Sturm by Prometheus.
 Include Sven by Stripes.
 Include Sylvia by Prometheus.
 Include Tanuki by Nuku Valente.
