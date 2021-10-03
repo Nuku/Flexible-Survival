@@ -173,7 +173,7 @@ to say Tyrannosaurus Male Desc:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
-		say "     In front of you stands a tall anthropomorphic dinosaur man, with the head of a tyrannosaurus, to be precise. His musclebound figure is covered by a black tank top, green camo pants below and combat boots, but as he seems to be missing his tags, you cannot know for sure if he used to be a soldier or simply scavenged some unfortunate human's equipment. He seems to have found an iron pipe, which he is arming himself with, walking towards you ready to strike. With a cocky, toothy grin, which actually looks quite scary given the fact his mouth features many sharp teeth, he eyes you from head to feet as he throws a taunt. 'Looking to get beaten up and fucked like the rest of them? You should just be on your knees now, bitch.'";
+		say "     In front of you stands a tall anthropomorphic dinosaur man, with the head of a tyrannosaurus, to be precise. His musclebound figure is covered by a black tank top, green camo pants below and combat boots, and as he seems to be carrying his tags, he could have been a soldier or someone who simply scavenged some unfortunate human's equipment. He seems to have found an iron pipe, which he is arming himself with, walking towards you ready to strike. With a cocky, toothy grin, which actually looks quite scary given the fact his mouth features many sharp teeth, he eyes you from head to feet as he throws a taunt. 'Looking to get beaten up and fucked like the rest of them? You should just be on your knees now, bitch.'";
 		say "     The dino man does not waste any time and rushes to attack you!";
 
 Section 2 - Creature Insertion
@@ -207,7 +207,7 @@ When Play begins:
 	now cock entry is "[one of]thick[or]uncut[or]mostly human-looking[at random]";
 	now face change entry is "it flows into a reptilian shape, a long snout with a big mouth covered by many sharp teeth. It gives you a very angry and intimidating look";
 	now body change entry is "your bones creak and crack as they morph into a very powerful and muscular reptilian body";
-	now skin change entry is "very small scales of a dark gree color flow over your body";
+	now skin change entry is "very small scales of a dark green color flow over your body";
 	now ass change entry is "a long reptilian tail emerges from above your ass, twitching about lightly";
 	now cock change entry is "your shaft swells and thickens with sudden arousal, attaining a lighter green tone along its foreskin";
 	now str entry is 29;
