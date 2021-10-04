@@ -116,7 +116,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Latex Ermine"; [name of the overall species of the infection, used for children, ...]
-	add "Latex Ermine" to infections of LatexList;
+	add "Latex Ermine" to infections of MustelidList;
 	add "Latex Ermine" to infections of FurryList;
 	add "Latex Ermine" to infections of LatexList;
 	add "Latex Ermine" to infections of FemaleList;
