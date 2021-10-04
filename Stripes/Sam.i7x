@@ -1220,7 +1220,7 @@ to say SamShroomCock:	[Cock Vore Shrinking Shroom scene]
 		wait for any key;
 		SamCockBind;
 	else:	[Cock vore scene ends with bound state: subsequent times]
-		say "     When you come to, you're greeted by the sounds of squelching flesh and the feel of supple walls kneading your body, telling you that you're still within Sam's womb. 'Oh, you're awake,' Sam's voice echoes around you when the taur feels your stirring. 'So, uh, just like before, it feels so good having you inside of me. Just do some struggling if you want me to let you out. Otherwise, I'll release you myself after a while.'";
+		say "     When you come to, you're greeted by the viscous, heated goo that most of your body is submerged in, telling you that you're still within one of Sam's balls. 'Oh, you're awake,' Sam's voice echoes around you when the taur feels your stirring. 'So, uh, just like before, it feels so good having you inside of me. Just do some struggling if you want me to let you out. Otherwise, I'll release you myself after a while.'";
 		wait for any key;
 		SamCockBind;
 
