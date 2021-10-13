@@ -2,41 +2,70 @@ Version 1 of Dino Pack by Qazarar begins here.
 
 Section 1 - Monster Responses
 
-DinoPackOral is a number that varies.[@Tag:NotSaved]
+DinoPackEvolution is a number that varies.[@Tag:NotSaved]
+DinoPackPrey is a number that varies. DinoPackPrey is usually 0.[@Tag:NotSaved]
+
+[ DinoPackEvolution                                          ]
+[   0: base state                                            ]
+[   1-2: tracking                                            ]
+[   3-4: alternate dino form and scenes                      ]
+[   5+: bad end becomes possible if enabled                  ]
+
+[ DinoPackPrey                                               ]
+[   0: Choice not reached                                    ]
+[   1: playable Bad End enabled                              ]
+[   2: playable Bad End blocked off                          ]
+
 
 to say DinoPackLoss:
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
 	else: [regular scene]
-		if (mdasslevel > 5 and a random chance of 1 in 3 succeeds): [anal focused gangbang]
-			say "     The pack finally wears you out, and you crumple to your knees. For a moment, they circle around you, laughing their strange reptilian laugh. Before you have any time to rest, however, a pair of them stalk forward. Together they grab you, and force your head and upper body down towards the ground, leaving your huge ass sticking out and completely vulnerable. You are completely at their mercy, but they do not take advantage of your defenseless state, instead continuining their prowling dance around you. You know instinctively that they won't let you get away unfucked, and they are merely toying with their prey, as is their right as the victors.";
-			say "     Knowing there's no point in resisting, you instead submit to their plans, fully embracing whatever they do to you. The dinos seem to be pleased by how quickly you give in, and the tight circle around you draws in even closer. Before, they made you beg and plead before they would give you even the slightest taste of pleasure, and this time they do the opposite to you. They press in all around you, and with no time wasted whatsoever, they start tussling to see who gets the first go at you, masturbating furiously above you, and more besides. Though you can't clearly see the ones behind you, you can feel the occasional massive cock slapping against your titanic ass, leaving it jiggling each time. The clamor quiets down when one finally claims the honor of pounding you first - by virtue of slamming his huge dino dick home, directly into your waiting passage.";
-			WaitLineBreak;
-			say "     You jolt unconsciously in reaction to the sudden pleasure, the minor discomforts of the rapid assault all being overwhelmed by the feeling of fullness deep within you, and the sensations emenating outward from the penetration. For a moment, that initial thrust is the only thing you can think of, your entire world comprised of his cock and your ass. Then it comes crashing down, beautifully, as he begins thrusting into your huge rear. Once more you become aware of the other dinosaurs, all watching you get fucked, eagerly awaiting their turn, each one showing off their delicious looking dicks to you. Some teasing their shafts with their claws, others being toyed with by your hands, something you didn't even realize you were doing. Your vision is as full of oversized reptilian members as you are.";
-			say "     The constant pounding in and out drives you forward, wildly indulging in all the pleasures offered by the dinosaurs around you. Each thrust reminds you of why you gave in so easily to the dinos, the cavalcade of cocks encouraging you to be the slut you already were within. Eventually, the almost meditative bliss you had reached from being fucked is made even more incredible by the first of many cocks reaching its peak, and spilling its reptilian seed deep into your rear. Several of the others immediately start to match it, unleashing torrents of cream across your face and hands, with several other jets covering your massive jiggling ass. As the little dinos who have finished start to pull away from you, leaving you empty, you beg to be filled again and again by them.";
-			WaitLineBreak;
-			say "     Fortunately for you, the pack of dinosaurs is ready to save you from the discomfort of leaving your ass unfilled. The mass around you shifts, several new members jockeying for space around you, once more surrounding you in fresh dicks. Even faster than before, they resolve into new positions, leaving you once more taking care of several with your hands and mouth, and a new lining up the tip of his massive shaft with your back entryway. However, right as he began to thrust into you, another dino decides not to wait, and presses his member up against your opening as well. Your eyes widen, but you're unable to do anything more than wiggle your ass slightly, something that doesn't deter them in the least. The newest dino behind you starts to apply pressure, and after a moment, his cock manages to stretch you enough to start sliding in alongside the other shaft, the two incredibly large members teaming up to spread you open more than ever before.";
-			say "     So much is going on that you can't focus on any one source of pleasure, instead being overwhelmed from every angle. Your attention drifts back and forth to the various ways you're being used by the dinos. Several members of the pack start to erupt onto you even as you're being railed by two at once, and yet another one starts to shoot more of their enchanted jizz down your throat. The pair behind you lose their previous rythm, and start to thrust in and out at different times from the other, leaving you completely overpowered by the sensation. Being fucked in so many ways by the reptiles leaves you completely out of it, becoming nothing more than a receptacle for their lusts.";
-			say "     Finally, they reach the end of their use of you, every last one still toying with you slamming completely in, before unleashing a flood of seed into both ends. You can still feel your rear rippling from that final thrust, as their massive balls work overtime to stuff as much into you as possible. Just when you muster the concentration to wonder if you can even take any more, their overpowering orgasms come to an end, and they pull their oversized shafts slowly out of you. You're left dazed in the middle of a pool of cum almost as wide as your ass, with your hole still gaped open from your rough treatment. In contrast, the pack around you seems somewhat worn out, but their smug aura is unchanged. 'Well, that was a good time, little slut. I know you'll be coming back for more sooner or later, and we'll be happy to treat you right again.' Once more they let out their mocking laughter as they leave you to recover from their victory, and the only thing you wonder is what they'll do next time.";
-			infect "Magic Drake";
-		else if (mdasslevel > 5 and a random chance of 1 in 2 succeeds):
-			say DinoBargain;
-		else: [teasing, blowjobs, and bukkake]
-			say "     The pack finally wears you out, and you crumple to your knees. They start to circle around you, and make sounds that seem to be laughter. '[if mdasslevel > 2]It seems you're just as much of a little weakling as the mistress said, practically asking to get defeated by us. I think[else]Oh, you barely put up a fight. I guess you were just asking for this, hmm? Well,[end if] it's about time for us to show you why we're the real hunters around here.' You can't help but nod along, already giving up control to the superior dinosaurs. In moments, their circle draws closer, and their massive shafts seem to grow even harder and more enticing, clearly preparing to show you your proper place. Finally the one that spoke stops moving when he is directly in front of you, his huge member pointing directly at your face. He makes no motion to bring it closer to you, [if player is submissive]but you still find yourself licking your lips in anticipation before stopping[else]clearly taunting you[end if].";
-			if mdasslevel > 2: [slutty scene]
-				say "     The others give you no time to reflect on your instinctual act, instead pressing in closer, trapping you fully between the myriad of wonderfully oversized cocks. They remain just out of reach, each bobbing up and down as they pleasure themselves, leaving you completely torn on what to do. Yet again you are left without time to think, as they immediately launch into a tirade of taunts. 'Oh, you really are a slut, aren't you? Can't take your eyes off our cocks for even a minute.' You wish you could deny them, but they're completely right. Despite your best efforts you remain entranced by all of their massive members, but not quite able to take that first step. You hear another chuckle from one of the dinos behind you, as they continue mocking you. 'Don't worry, you can have what you want. You just need to admit that you want it.'";
+		if(DinoPackEvolution < 3):
+			if (mdasslevel > 5 and a random chance of 1 in 3 succeeds): [anal focused gangbang]
+				say "     The pack finally wears you out, and you crumple to your knees. For a moment, they circle around you, laughing their strange reptilian laugh. Before you have any time to rest, however, a pair of them stalk forward. Together they grab you, and force your head and upper body down towards the ground, leaving your huge ass sticking out and completely vulnerable. You are completely at their mercy, but they do not take advantage of your defenseless state, instead continuining their prowling dance around you. You know instinctively that they won't let you get away unfucked, and they are merely toying with their prey, as is their right as the victors.";
+				say "     Knowing there's no point in resisting, you instead submit to their plans, fully embracing whatever they do to you. The dinos seem to be pleased by how quickly you give in, and the tight circle around you draws in even closer. Before, they made you beg and plead before they would give you even the slightest taste of pleasure, and this time they do the opposite to you. They press in all around you, and with no time wasted whatsoever, they start tussling to see who gets the first go at you, masturbating furiously above you, and more besides. Though you can't clearly see the ones behind you, you can feel the occasional massive cock slapping against your titanic ass, leaving it jiggling each time. The clamor quiets down when one finally claims the honor of pounding you first - by virtue of slamming his huge dino dick home, directly into your waiting passage.";
 				WaitLineBreak;
-				say "     Even in the face of their taunting ultimatum, you know deep down what you're going to choose. You're already craving the sensation of those oversized cocks in your mouth, filling you with everything they can give. You hold out as long as you can, staying completely still as the reptiles slowly stroke their shafts, until finally you can stand it no longer. You lean forward and start licking at the head of the massive cock before you, desperate to service it as fully as you can. The sight of you giving in to your own weakness acts as a signal, and the as yet untouched lizards all close the final distance as well, rubbing their huge dicks all over you, even as their mocking words wash over you. Their taunts can't affect you any more, as the only thing in your focus are the huge cocks all around.";
-				say "     After several moments of diving down on the first cock, you finally gather enough clarity of thought to engage further, lifting your hands from your sides in order to grab two of the shafts prodding at you. As you glide up and down the saurian member, you begin to slide your hands back and forth across the others, bringing as much pleasure to the pack as you can. In no time at all you're treated with the first reward for your efforts, as one of the cocks you're jerking starts spasming in your hand, releasing blast after blast of cum onto your face and front. With that splash of semen comes a familiar tingling sensation, much like what you experience when the Magic Drake works her wiles on you. The feeling only drives you to work harder, and you waste no time in moving your hand to another waiting dino, ready to repeat the job.";
-				say "     From there you descend into a veritable sea of cocks and cum, slowly working your way through the pack three dicks at a time. A splurt of enchanted jizz from one side is followed by a flood of the very same down your throat, and all you can do is move on to the next pair. Despite yourself, you revel in the action, the knowledge of your slutty choices only amplifying the entire sensation you're experiencing. Finally, however, it comes to an end, with even the large reservoirs of fluids held by each dino emptied onto your skin. They pull back from you, before hurling one final taunt. 'Oh, look at you just kneeling in a pool of cum, like the slut you are. But you're our slut, and a slut for the mistress, and I think that will be far better than anything else you would have been doing.' After those words, the circle breaks, and the crowd of dinos trek off, completely satisfied. On the other hand, you're left glazed and humiliated, eventually lifting yourself back onto your feet, staggering back off into the museum, already dreaming of the next time you run into them.";
-				infect "Magic Drake";
-				infect "Magic Drake";
-			else: [normal loss]
-				say "     The others give you no time to reflect on the taunts, instead pressing in closer, entrapping you in a cage of oversized cocks. They remain just out of your reach, each bobbing up and down as they pleasure themselves, leaving you helpless before them. Clearly taking great joy in your growing awareness of your situation, they immediately launch into a tirade of taunts. 'Oh, you really are a slut, aren't you? Can't take your eyes off our cocks for even a minute.' You try to argue otherwise, but your pleas fall on deaf ears. 'Oh, you may not know it yet, but you're a slut deep down, and we'll teach you eventually'.";
+				say "     You jolt unconsciously in reaction to the sudden pleasure, the minor discomforts of the rapid assault all being overwhelmed by the feeling of fullness deep within you, and the sensations emenating outward from the penetration. For a moment, that initial thrust is the only thing you can think of, your entire world comprised of his cock and your ass. Then it comes crashing down, beautifully, as he begins thrusting into your huge rear. Once more you become aware of the other dinosaurs, all watching you get fucked, eagerly awaiting their turn, each one showing off their delicious looking dicks to you. Some teasing their shafts with their claws, others being toyed with by your hands, something you didn't even realize you were doing. Your vision is as full of oversized reptilian members as you are.";
+				say "     The constant pounding in and out drives you forward, wildly indulging in all the pleasures offered by the dinosaurs around you. Each thrust reminds you of why you gave in so easily to the dinos, the cavalcade of cocks encouraging you to be the slut you already were within. Eventually, the almost meditative bliss you had reached from being fucked is made even more incredible by the first of many cocks reaching its peak, and spilling its reptilian seed deep into your rear. Several of the others immediately start to match it, unleashing torrents of cream across your face and hands, with several other jets covering your massive jiggling ass. As the little dinos who have finished start to pull away from you, leaving you empty, you beg to be filled again and again by them.";
 				WaitLineBreak;
-				say "     Even in the face of their mockery, you're unable to muster up any resistance. Perhaps there's more truth to their barbs than you would like to admit? You quickly shake your head as if attempting to dislodge the unexpected thoughts, but it doesn't quite clear your mind completely. Even as you try and focus on inconsequential, unarousing details, you keep noticing exactly the opposite. Attempts to focus on a nearby display case lead to watching the shimmering traces of pre on their members, thoughts of ancient artifacts drifting into thoughts about overfilled balls. It seems that the dino pack somehow notices this shift in your thoughts, your growing weakness acting as a signal. The lizards all close in further around you, their work pleasuring themselves on increasing in speed, the scent of their oncoming release growing heavy in the air.";
-				say "     You try not to react to their actions, but can't quite keep yourself from opening your mouth and leaning forward just in time for the first of the massive shafts to start spasming, releasing blast after blast of cum onto your face and front. From there you briefly enter a world consisting only of cocks and cum, the pack slowly releasing its combined bounty onto you. A splurt of enchanted jizz from one side is followed by a flood of the very same onto your face and mouth, and all you can do is passively take everything they offer you. After what seems like an eternity, it comes to an end, with even the large reservoirs of fluids held by each dino emptied onto your skin. They pull back from you, before hurling one final taunt. 'Oh, look at you just kneeling in a pool of cum, like the slut you are. You may not have given in completely yet, but you will soon enough.' After those words, the circle breaks, and the crowd of dinos trek off, completely satisfied. On the other hand, you're left glazed and humiliated, eventually lifting yourself back onto your feet, staggering back off into the museum, already dreaming of the next time you run into them.";
+				say "     Fortunately for you, the pack of dinosaurs is ready to save you from the discomfort of leaving your ass unfilled. The mass around you shifts, several new members jockeying for space around you, once more surrounding you in fresh dicks. Even faster than before, they resolve into new positions, leaving you once more taking care of several with your hands and mouth, and a new lining up the tip of his massive shaft with your back entryway. However, right as he began to thrust into you, another dino decides not to wait, and presses his member up against your opening as well. Your eyes widen, but you're unable to do anything more than wiggle your ass slightly, something that doesn't deter them in the least. The newest dino behind you starts to apply pressure, and after a moment, his cock manages to stretch you enough to start sliding in alongside the other shaft, the two incredibly large members teaming up to spread you open more than ever before.";
+				say "     So much is going on that you can't focus on any one source of pleasure, instead being overwhelmed from every angle. Your attention drifts back and forth to the various ways you're being used by the dinos. Several members of the pack start to erupt onto you even as you're being railed by two at once, and yet another one starts to shoot more of their enchanted jizz down your throat. The pair behind you lose their previous rythm, and start to thrust in and out at different times from the other, leaving you completely overpowered by the sensation. Being fucked in so many ways by the reptiles leaves you completely out of it, becoming nothing more than a receptacle for their lusts.";
+				say "     Finally, they reach the end of their use of you, every last one still toying with you slamming completely in, before unleashing a flood of seed into both ends. You can still feel your rear rippling from that final thrust, as their massive balls work overtime to stuff as much into you as possible. Just when you muster the concentration to wonder if you can even take any more, their overpowering orgasms come to an end, and they pull their oversized shafts slowly out of you. You're left dazed in the middle of a pool of cum almost as wide as your ass, with your hole still gaped open from your rough treatment. In contrast, the pack around you seems somewhat worn out, but their smug aura is unchanged. 'Well, that was a good time, little slut. I know you'll be coming back for more sooner or later, and we'll be happy to treat you right again.' Once more they let out their mocking laughter as they leave you to recover from their victory, and the only thing you wonder is what they'll do next time.";
 				infect "Magic Drake";
+			else if (mdasslevel > 5 and a random chance of 1 in 2 succeeds):
+				say DinoBargain;[magic drake combo scene]
+			else: [teasing, blowjobs, and bukkake]
+				say "     The pack finally wears you out, and you crumple to your knees. They start to circle around you, and make sounds that seem to be laughter. '[if mdasslevel > 2]It seems you're just as much of a little weakling as the mistress said, practically asking to get defeated by us. I think[else]Oh, you barely put up a fight. I guess you were just asking for this, hmm? Well,[end if] it's about time for us to show you why we're the real hunters around here.' You can't help but nod along, already giving up control to the superior dinosaurs. In moments, their circle draws closer, and their massive shafts seem to grow even harder and more enticing, clearly preparing to show you your proper place. Finally the one that spoke stops moving when he is directly in front of you, his huge member pointing directly at your face. He makes no motion to bring it closer to you, [if player is submissive]but you still find yourself licking your lips in anticipation before stopping[else]clearly taunting you[end if].";
+				if mdasslevel > 2: [slutty scene]
+					say "     The others give you no time to reflect on your instinctual act, instead pressing in closer, trapping you fully between the myriad of wonderfully oversized cocks. They remain just out of reach, each bobbing up and down as they pleasure themselves, leaving you completely torn on what to do. Yet again you are left without time to think, as they immediately launch into a tirade of taunts. 'Oh, you really are a slut, aren't you? Can't take your eyes off our cocks for even a minute.' You wish you could deny them, but they're completely right. Despite your best efforts you remain entranced by all of their massive members, but not quite able to take that first step. You hear another chuckle from one of the dinos behind you, as they continue mocking you. 'Don't worry, you can have what you want. You just need to admit that you want it.'";
+					WaitLineBreak;
+					say "     Even in the face of their taunting ultimatum, you know deep down what you're going to choose. You're already craving the sensation of those oversized cocks in your mouth, filling you with everything they can give. You hold out as long as you can, staying completely still as the reptiles slowly stroke their shafts, until finally you can stand it no longer. You lean forward and start licking at the head of the massive cock before you, desperate to service it as fully as you can. The sight of you giving in to your own weakness acts as a signal, and the as yet untouched lizards all close the final distance as well, rubbing their huge dicks all over you, even as their mocking words wash over you. Their taunts can't affect you any more, as the only thing in your focus are the huge cocks all around.";
+					say "     After several moments of diving down on the first cock, you finally gather enough clarity of thought to engage further, lifting your hands from your sides in order to grab two of the shafts prodding at you. As you glide up and down the saurian member, you begin to slide your hands back and forth across the others, bringing as much pleasure to the pack as you can. In no time at all you're treated with the first reward for your efforts, as one of the cocks you're jerking starts spasming in your hand, releasing blast after blast of cum onto your face and front. With that splash of semen comes a familiar tingling sensation, much like what you experience when the Magic Drake works her wiles on you. The feeling only drives you to work harder, and you waste no time in moving your hand to another waiting dino, ready to repeat the job.";
+					say "     From there you descend into a veritable sea of cocks and cum, slowly working your way through the pack three dicks at a time. A splurt of enchanted jizz from one side is followed by a flood of the very same down your throat, and all you can do is move on to the next pair. Despite yourself, you revel in the action, the knowledge of your slutty choices only amplifying the entire sensation you're experiencing. Finally, however, it comes to an end, with even the large reservoirs of fluids held by each dino emptied onto your skin. They pull back from you, before hurling one final taunt. 'Oh, look at you just kneeling in a pool of cum, like the slut you are. But you're our slut, and a slut for the mistress, and I think that will be far better than anything else you would have been doing.' After those words, the circle breaks, and the crowd of dinos trek off, completely satisfied. On the other hand, you're left glazed and humiliated, eventually lifting yourself back onto your feet, staggering back off into the museum, already dreaming of the next time you run into them.";
+					infect "Magic Drake";
+					infect "Magic Drake";
+				else: [normal loss]
+					say "     The others give you no time to reflect on the taunts, instead pressing in closer, entrapping you in a cage of oversized cocks. They remain just out of your reach, each bobbing up and down as they pleasure themselves, leaving you helpless before them. Clearly taking great joy in your growing awareness of your situation, they immediately launch into a tirade of taunts. 'Oh, you really are a slut, aren't you? Can't take your eyes off our cocks for even a minute.' You try to argue otherwise, but your pleas fall on deaf ears. 'Oh, you may not know it yet, but you're a slut deep down, and we'll teach you eventually'.";
+					WaitLineBreak;
+					say "     Even in the face of their mockery, you're unable to muster up any resistance. Perhaps there's more truth to their barbs than you would like to admit? You quickly shake your head as if attempting to dislodge the unexpected thoughts, but it doesn't quite clear your mind completely. Even as you try and focus on inconsequential, unarousing details, you keep noticing exactly the opposite. Attempts to focus on a nearby display case lead to watching the shimmering traces of pre on their members, thoughts of ancient artifacts drifting into thoughts about overfilled balls. It seems that the dino pack somehow notices this shift in your thoughts, your growing weakness acting as a signal. The lizards all close in further around you, their work pleasuring themselves on increasing in speed, the scent of their oncoming release growing heavy in the air.";
+					say "     You try not to react to their actions, but can't quite keep yourself from opening your mouth and leaning forward just in time for the first of the massive shafts to start spasming, releasing blast after blast of cum onto your face and front. From there you briefly enter a world consisting only of cocks and cum, the pack slowly releasing its combined bounty onto you. A splurt of enchanted jizz from one side is followed by a flood of the very same onto your face and mouth, and all you can do is passively take everything they offer you. After what seems like an eternity, it comes to an end, with even the large reservoirs of fluids held by each dino emptied onto your skin. They pull back from you, before hurling one final taunt. 'Oh, look at you just kneeling in a pool of cum, like the slut you are. You may not have given in completely yet, but you will soon enough.' After those words, the circle breaks, and the crowd of dinos trek off, completely satisfied. On the other hand, you're left glazed and humiliated, eventually lifting yourself back onto your feet, staggering back off into the museum, already dreaming of the next time you run into them.";
+					infect "Magic Drake";
+					if DinoPackEvolution < 3:
+						increase DinoPackEvolution by 1;
+		else: ['evolved' dino scenes]
+			if DinoPackEvolution < 4: [intro and oral]
+				say "     A";
+			else if (DinoPackEvolution is 4 and DinoPackPrey is 0): [some anal, choice point]
+				say "     A";
+			else if (DinoPackPrey > 0 and a random chance of 1 in 2 succeeds): [hyper oral]
+				say "     A";
+			else: [hyper pounding w/ bad end option]
+				say "     A";
+				if DinoPackPrey is 2: [moves to playable bad-end location]
+					say "     A";
+					move player to Abandoned Shore; [add zone]
+
 
 
 to say DinoPackVictory:
@@ -106,7 +135,10 @@ to say DinoBargain:
 to say DinoPackDesc:
 	setmongender 3;
 	if inasituation is false: [regular text]
-		say "     A whole pack of small reptiles, covered in bright scales of various colors and with wickedly sharp teeth and claws, much like those of a velociraptor. The most clearly visible feature is that they have incredibly disproportionate endowments, each dinosaur toting a turbo sized cock, almost the size of their bodies, complete with a matching external sack quite unlike your average lizard. Despite their size, you can see from the gleam in their eyes that they are clearly intelligent. Before you can think further, they suddenly dart forward and swarm you!";
+		if DinoPackEvolution > 2: [evolved desc]
+			say "     A";
+		else: [normal desc]
+			say "     A whole pack of small reptiles, covered in bright scales of various colors and with wickedly sharp teeth and claws, much like those of a velociraptor. The most clearly visible feature is that they have incredibly disproportionate endowments, each dinosaur toting a turbo sized cock, almost the size of their bodies, complete with a matching external sack quite unlike your average lizard. Despite their size, you can see from the gleam in their eyes that they are clearly intelligent. Before you can think further, they suddenly dart forward and swarm you!";
 	else:
 		say ""; [dealt with at the source]
 
@@ -302,5 +334,53 @@ This is the Tiny Dino Infection rule:
 		else:
 			say "     ...";
 ]
+
+
+Section 4 - Abandoned Island
+[Adds a playable bad-end state, trapped on an island with the evolved pack]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Abandoned Shore	"Abandoned Shore"
+
+Abandoned Shore is a room.
+Description of Abandoned Shore is "     X.".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Lost Jungle "Lost Jungle"
+
+Lost Jungle is a room.
+Description of Lost Jungle is "     X.".
+Abandoned Shore is west of Lost Jungle.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Forgotten Temple	"Forgotten Temple"
+
+Forgotten Temple is a room.
+Description of Forgotten Temple is "     X.".
+Lost Jungle is south of Forgotten Temple.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Empty Fields	"Empty Fields"
+
+Empty Fields is a room.
+Description of Empty Fields is "     X.".
+Abandoned Shore is south of Empty Fields.
+Forgotten Temple is east of Empty Fields.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Mysterious Altar	"Mysterious Altar"
+
+Mysterious Altar is a room.
+Description of Mysterious Altar is "     X.".
+Forgotten Temple is southwest of Mysterious Altar.
+
+after going to Lost Jungle while (a random chance of 1 in 3 succeeds): [use these to call events, Altar is safe - until you succumb completely]
+	say "     A";
+
 
 Dino Pack ends here.
