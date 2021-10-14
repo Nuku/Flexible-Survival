@@ -531,6 +531,7 @@ Include Hyperskunk by Stripes.
 Include Imp by Wahn.
 Include Impala by UrsaOmega.
 Include Incubus by Stripes.
+Include Inflatable Snake by Kernog.
 Include Inflatable Vulpine by Stripes.
 Include Jackal Alpha by Gherod.
 Include Jackal Femboy by Gherod.
@@ -916,6 +917,7 @@ Include Stag by Wahn.
 Include Stella by Stripes.
 Include Stewart by Rikaeus.
 Include Stuck Dragon by Stripes.
+Include Sturm by Prometheus.
 Include Sven by Stripes.
 Include Sylvia by Prometheus.
 Include Tanuki by Nuku Valente.

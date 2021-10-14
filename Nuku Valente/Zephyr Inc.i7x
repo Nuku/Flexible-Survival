@@ -143,7 +143,7 @@ name	desc	weight	object
 "nanite collector"	"[nanitecolldesc]"	25	nanite collector
 "pistol"	"A small, but serviceable, hand gun. It has a stylized Z on the grip. It never seems to run out of bullets, and gets oddly warm when you fire it."	2	pistol
 
-pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[or]your pistol[at random]". It is ranged. It is not temporary. Weapon Damage of pistol is 7. Objsize of pistol is 2.
+pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[or]your pistol[at random]". It is ranged. It is not temporary. Weapon Damage of pistol is 7. Objsize of pistol is 3.
 
 
 nanite collector is equipment. It is not temporary.

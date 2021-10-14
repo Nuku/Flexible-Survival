@@ -140,7 +140,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "mayday" as supersponsor.
+understand "spooktember" as supersponsor.
 
 when play ends:
 	clear the screen;

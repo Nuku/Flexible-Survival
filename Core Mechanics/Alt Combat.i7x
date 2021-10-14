@@ -1628,7 +1628,7 @@ Part 2 - Alternate Attack Example - Bearhug
 
 this is the bearhug rule:
 	choose row MonsterID from Table of Random Critters;
-	if Name entry is "Snake" or Name entry is "Naga":		[crushing coils]
+	if Name entry is "Snake" or Name entry is "Naga" or Name entry is "Inflatable Snake":		[crushing coils]
 		say "The [one of][EnemyNameOrTitle][or]large serpent[purely at random] manages to wrap its powerful tail around you, holding you in its vice-like constriction! You will need to break free before squeezes the fight right out of you.";
 	else:									[crushing arms]
 		say "The [EnemyNameOrTitle] manages to grab you in its powerful arms and holds you in a vice-like bear hug! You will need to break free before it squeezes the fight right out of you.";
@@ -1646,7 +1646,7 @@ this is the bearhug rule:
 			WaitLineBreak;
 			let num1 be a random number between 0 and ( Strength of Player + level of Player );
 			let num2 be a random number between 1 and ( str entry + lev entry );
-			if Name entry is "Snake" or Name entry is "Naga":
+			if Name entry is "Snake" or Name entry is "Naga" or Name entry is "Inflatable Snake":
 				say "As your opponent continues to crush you with its powerful coils, you struggle to break free: ";
 			else:
 				say "As your opponent continues to crush you with its powerful arms, you struggle to break free: ";

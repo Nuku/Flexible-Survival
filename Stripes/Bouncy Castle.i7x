@@ -16,6 +16,7 @@ Version 6 of Bouncy Castle by Stripes begins here.
 [ Version 5.4 - Minor maintenance and character relocation - Luneth     ]
 [ Version 6.0 - Player can now choose whether or not to cut the tether after rescuing or losing the vixen. Added additional documentation and fixed several bugs - Song ]
 [ Version 6.1 - Added an Inflatable Otter Suit that binds male/herm players and offers sex options for female/neuter players - Song ]
+[ Version 7.0 - Added an Inflatable Snake to the ball pit - Kernog ]
 
 "Save the vixen 'princess' from the 'castle'."
 
@@ -159,11 +160,13 @@ bcplayroomlast is a truth state that varies. bcplayroomlast is usually true.
 bcseenkingchair is a truth state that varies. bcseenkingchair is usually false.
 bcseenkingknight is a truth state that varies. bcseenkingknight is usually false.
 bcseenhugeorca is a truth state that varies. bcseenhugeorca is usually false.
+bcseensnake is a truth state that varies. bcseensnake is usually false.
 bcfinalchairform is a text that varies. bcfinalchairform is usually "".
 lastsealfight is a number that varies. lastsealfight is usually 255.
 lastoctofight is a number that varies. lastoctofight is usually 255.
 lastbcchair is a number that varies. lastbcchair is usually 255.
 lastbcduobeaten is a number that varies. lastbcduobeaten is usually 255.
+lastsnakefight is a number that varies. lastsnakefight is usually 255.
 bcduofightlost is a truth state that varies. bcduofightlost is usually false.
 bcduofightfled is a truth state that varies. bcduofightfled is usually false.
 bcseenthroneroom is a truth state that varies. bcseenthroneroom is usually false.
@@ -463,7 +466,31 @@ Chapter 4 - Ball Pit Room
 
 to say bcballpitroom:
 	say "     The ball pit room has a rounded, raised edge and seems sunk further into the floor, making it somewhat less springy under all those balls. You are able to wade your way through them slowly to move around. The room itself is fairly large, bigger than the entrance room, but having the same overall design. There's two arch-shaped windows in the [Bold Type]south[roman type] wall[if daytimer is day], letting in some light[else]. Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if]. In the [link]southeast[end link] corner of the room, the wall is rounded with a much larger tower there with an arched entrance into it. There are also three other doorways out of here, one to the [link]north[end link] leading to the smaller room with all the beach toys the dolphin girls have collected, another to the [link]east[end link] and a play room as large as this one and the final to the [link]west[end link] heading to a hall filled with padded pillars made for punching.";
-
+	if lastsnakebeat - turns >= 4: [FLOT - DONE]
+		if bcseensnake is true:
+			say "Now wary of the inflatable snake's presence, you stay on your guard. Just as you suspected, you spot the sea of plastic ball bulge slightly, as the creature patrols its territory.";
+		else:
+			say "As you make your way through the ball pit, an unnatural brush against your leg startles you. You look down, and notices a large green tube slide among the plastic balls. The cartoonish head of an inflatable snake pops out of the pit. It looks at you with its soulless eyes, and you could swear the smile painted on its face elongated.";
+			now bcseensnake is true;
+		if flotmarked is true and a random chance of 1 in 2 succeeds:
+			say "The 'wave' made by the inflatable snake travels in your general direction, but misses you completely. The snake's snout bumps on the edge of the ball pit in a somewhat comical manner. You take the opportunity of the creature's confusion to be on your way.";
+		else:
+			say "The 'wave' made by the inflatable snake makes a beeline towards you. You prepare yourself for the fight.";
+			challenge "Inflatable Snake";
+			if fightoutcome >= 30: [Only for fleeing. For other outcomes, see Inflatable Snake.]
+				say "     Deciding that you would have none of that sneaky squeaky snake, you make your way towards the nearest exit as fast as you can. As you step out of the ball pit, you hear the plastic head of the inflatable reptile bump against the edge.";
+				WaitLineBreak;
+				let randomExit be a random number between 1 and 4;
+				if randomExit is 1:
+					move player to Bouncing Play Room;
+				else if randomExit is 2:
+					move player to Lower Tower;
+				else if randomExit is 3:
+					move player to Toy Room;
+				else:
+					move player to Punching Pillars;
+	else:
+		say "Now wary of the inflatable snake's presence, you stay on your guard. However, you do not spot any movement. It seems that the plastic reptile is still recovering.";
 
 Chapter 5 - Toy Room
 

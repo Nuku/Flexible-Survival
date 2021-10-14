@@ -653,6 +653,21 @@ Figure of Map_Farm_9_icon is the file "Map_Farm_9.jpg".
 Figure of Map_Farm_10_icon is the file "Map_Farm_10.jpg".
 Figure of Map_Farm_11_icon is the file "Map_Farm_11.jpg".
 Figure of Map_Farm_12_icon is the file "Map_Farm_12.jpg".
+Figure of Map_Zoo_1_icon is the file "Zoo1.jpg".
+Figure of Map_Zoo_2_icon is the file "Zoo2.jpg".
+Figure of Map_Zoo_3_icon is the file "Zoo3.jpg".
+Figure of Map_Zoo_4_icon is the file "Zoo4.jpg".
+Figure of Map_Zoo_5_icon is the file "Zoo5.jpg".
+Figure of Map_Zoo_6_icon is the file "Zoo6.jpg".
+Figure of Map_Zoo_7_icon is the file "Zoo7.jpg".
+Figure of Map_Zoo_8_icon is the file "Zoo8.jpg".
+Figure of Map_Zoo_9_icon is the file "Zoo9.jpg".
+Figure of Map_Zoo_10_icon is the file "Zoo10.jpg".
+Figure of Map_Zoo_11_icon is the file "Zoo11.jpg".
+Figure of Map_Zoo_12_icon is the file "Zoo12.jpg".
+Figure of Map_Zoo_13_icon is the file "Zoo13.jpg".
+Figure of Map_Zoo_14_icon is the file "Zoo14.jpg".
+Figure of Map_Zoo_15_icon is the file "Zoo15.jpg".
 
 [emap - special]
 Figure of emap_special_signalnotfound_icon is the file "emap_special_signalnotfound.png".
@@ -1782,6 +1797,21 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Map Farm 10"	Figure of Map_Farm_10_icon	"Goncalo"	g-black	"normal"
 "Map Farm 11"	Figure of Map_Farm_11_icon	"Goncalo"	g-black	"normal"
 "Map Farm 12"	Figure of Map_Farm_12_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 1"	Figure of Map_Zoo_1_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 2"	Figure of Map_Zoo_2_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 3"	Figure of Map_Zoo_3_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 4"	Figure of Map_Zoo_4_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 5"	Figure of Map_Zoo_5_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 6"	Figure of Map_Zoo_6_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 7"	Figure of Map_Zoo_7_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 8"	Figure of Map_Zoo_8_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 9"	Figure of Map_Zoo_9_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 10"	Figure of Map_Zoo_10_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 11"	Figure of Map_Zoo_11_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 12"	Figure of Map_Zoo_12_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 13"	Figure of Map_Zoo_13_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 14"	Figure of Map_Zoo_14_icon	"Goncalo"	g-black	"normal"
+"Map Zoo 15"	Figure of Map_Zoo_15_icon	"Goncalo"	g-black	"normal"
 [emap - Capitol building]
 "emap - A Volcanic Crater"	Figure of emap_A_Volcanic_Crater_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Approaching the Capitol Building"	Figure of emap_Approaching_Capitol_Building_icon	"Wolfram Rolf"	g-black	"normal"
