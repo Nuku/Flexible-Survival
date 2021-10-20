@@ -85,6 +85,8 @@ to say ResolveEvent Shipping Container:
 					follow the sex change rule;
 			say "     But that is not all that has changed. Rolling onto your side, your latex tongue hangs from your muzzle as you look between your hind legs, examining your altered groin[if Cock Count of Player > 1]. Your cocks are delicious looking rods of canine meat formed from latex-like flesh. It makes your mouth water just to look at them as thick pre dribbles from them[else if Cock Count of Player is 1]. Your cock is a delicious looking rod of canine meat formed from latex-like flesh. It makes your mouth water just to look at it as pre dribbles from it[end if][if Cunt Count of Player > 1]. Your pussies are puffy, rubbery mounds made for fucking, leaking an arousing lubricant that tempts you to dive your canine tongue in them[else if Cunt Count of Player is 1]. Your pussy is a puffy, rubbery mound made for fucking, leaking an arousing lubricant that tempts you to dive your canine tongue into it[end if]. You can feel that the latex has bonded to you deep inside, ensuring you'll stay a sexy latex husky trotting around on all fours if you are any kind of husky at all. Deeply aroused by the changes and the new instincts trying to take hold, you can't but be pleased by this new development.";
 			add { "Husky Bitch", "Husky Alpha" } to infections of LatexList;
+			remove { "Husky Bitch", "Husky Alpha" } from infections of BipedalList;
+			add { "Husky Bitch", "Husky Alpha" } to infections of QuadrupedalList;
 			now Resolution of Shipping Container is 1; [latex huskies freed]
 	else:
 		now Resolution of Shipping Container is 99; [disinterest]

@@ -376,7 +376,7 @@ to blotbindorgasm:
 		if Player is male:
 			say "cock[smn] pump[smv] your [Cum Load Size of Player] load into your prison, vinyl material milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]";
 			if Ball Size of Player > 5:
-				say ". Body awash in your hot release, you very quickly, you feel it flood your maw through the rubbery tube, pumping its occupant with the excess";
+				say ". Body awash in your hot release, you very quickly feel it flood your maw through the rubbery tube, pumping its occupant with the excess";
 			else:
 				say ". Warmth of your hot release awash against you, you feel it gradually flow into your maw through the rubbery tube, pumping its occupant with the slight excess";
 		else:
