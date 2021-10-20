@@ -220,7 +220,7 @@ to say CherryTalkMenu:
 					say "[CherryTalkWealth]";
 				else if (nam is "Sex"):
 					say "[CherryTalkSex]";
-				else if (nam is "Breeding"):
+				else if (nam is "Breeding Fetish"):
 					say "[CherryTalkBreeding]";
 				else if (nam is "You as her sub"):
 					say "[CherryTalkDomination]";
