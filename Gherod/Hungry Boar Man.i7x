@@ -818,21 +818,21 @@ Object	Name
 Sweets For The Piggy	"Sweets For The Piggy"
 
 Sweets For The Piggy is a situation.
-ResolveFunction of Sweets For The Piggy is "".
+ResolveFunction of Sweets For The Piggy is "". Sarea of Sweets For The Piggy is "Nowhere".
 
 Table of GameEventIDs (continued)
 Object	Name
 RanferPhilip	"RanferPhilip"
 
 RanferPhilip is a situation.
-ResolveFunction of RanferPhilip is "".
+ResolveFunction of RanferPhilip is "". Sarea of RanferPhilip is "Nowhere".
 
 Table of GameEventIDs (continued)
 Object	Name
 HayatoPhilip	"HayatoPhilip"
 
 HayatoPhilip is a situation.
-ResolveFunction of HayatoPhilip is "".
+ResolveFunction of HayatoPhilip is "". Sarea of HayatoPhilip is "Nowhere".
 
 Instead of going to large shed while (Resolution of Sweets For The Piggy is 0 and Philip is in large shed and PlayerFucked of Philip is true and a random chance of 1 in 3 succeeds):
 	say "     As you walk into Philip, you see that the pigman seems to be munching on something while turned towards a wall, as if doing it on secret. In fact, you would not have even noticed him if you did not happen to look over there, where he is, but the sound of his chomping would probably give away his position. Regardless, you approach him as you normally would. Upon hearing your footsteps, Philip gets startled and chokes, coughing frantically as he sees you. Fortunately, he seems to be able to recover quickly enough from it, but turns to you with his eyes wide open. 'Oh! It's... You! I... this isn't what it looks like...' he says, mouth still full and dirty with what seems to be... chocolate?";

@@ -7,7 +7,7 @@ Object	Name
 Discover The Werewolves Den	"Discover The Werewolves Den"
 
 Discover The Werewolves Den is a situation.
-ResolveFunction of Discover The Werewolves Den is "".
+ResolveFunction of Discover The Werewolves Den is "". Sarea of The Werewolves Den is "Nowhere".
 
 [---]
 
