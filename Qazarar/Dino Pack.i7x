@@ -20,6 +20,8 @@ DinoPackPrey is a number that varies. DinoPackPrey is usually 0.[@Tag:NotSaved]
 to say DinoPackLoss:
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
+		if DinPackPrey is 1:
+			say "[EvolveDinoPack]";
 	else: [regular scene]
 		if(DinoPackEvolution < 3):
 			if (mdasslevel > 5 and a random chance of 1 in 3 succeeds): [anal focused gangbang]
@@ -55,11 +57,31 @@ to say DinoPackLoss:
 						increase DinoPackEvolution by 1;
 		else: ['evolved' dino scenes]
 			if DinoPackEvolution < 4: [intro and oral]
-				say "     A";
+				say "     These changed reptiles seem to be far more fearsome than they have been before, and you're easily worn out until you collapse. In a familiar fashion, they quickly encircle you, leaving no path to escape even if you could muster the strength to stand again. They press in closer, and you can tell that some fundamental thing has changed in these dinosaurs from what they were before, something about them is almost more pure than ever. Unfortunately, you aren't able to properly consider what this might mean, as rather than let you consider the changes, they instead start to drown you in them almost literally. The crowd presses in towards you, and their far more titanic endowments coming at you from every angle, forcing their new forms into your face as well as everywhere else.";
+				say "     The sheer presence of their weighty shafts is enough to dizzy you, a sensation further amplified by the primal scent of the predators currently showing you your place. That is far from enough to satisfy them, however, and soon they launch into an all-too familiar scene reminiscent of your first meeting with the then much-smaller creatures. Every surface of your body is being pressed and rubbed by their monstrous members, a steady flow of preseed already starting to drip onto you as they work. Too exhausted to respond, you remain kneeling in place as they put you in yours, exerting their primal dominance over you.";
+				WaitLineBreak;
+				say "     Soon their actions start to shift from an almost leisurely display of power into a more frenetic act of passion, their own pleasure starting to overwhelm their restraint. Their reptilian hips rock back and forth, your slicked skin providing ample pleasure to the oversized cocks even as a matching pleasure blooms in you. Finally, they can take no more, a moment signified by the sudden twitching and jerking of the myriad shafts surrounding you, until they at last erupt. Multiple waves of creamy saurian spunk are unleashed onto every inch of you, liquid proof of your loss – and their gain.";
+				say "     With the act itself at an end and their pleasure worked through, for the moment, the hint of mischief has returned to their actions. Their familiar snickering almost-laughter surrounds you from each side as they enjoy the sight of you prostrate before them, plastered with their essence. Several moments of that amusement is enough for them, at least for now, and they finally turn and leave you where you lie, to recover on your own time. Something strange is going on with these creatures, now, and one way or another you'll find out what – if it doesn't find you first.";
 			else if (DinoPackEvolution is 4 and DinoPackPrey is 0): [some anal, choice point]
-				say "     A";
+				say "     Once more you find yourself succumbing to the predations of the freshly empowered dinosaurs, their pack tactics more than a match for you. It doesn't take long before you find yourself being surrounded by the pacing reptiles, their new size looming over you menacingly. You know them well enough to understand just how much they would love to pounce on you, stuffing and humiliating you – and you know equally well that they're waiting for you to admit how much you'd love it as well, to make it all the sweeter for them. You shiver, not from any cold in the air, but simply from the knowledge that they're likely not going to be disappointed for long.";
+				say "     Time seems to lose all meaning as their familiar mocking calls ring out, enough to bewilder your sense of reality alongside your burgeoning lusts, until finally the weight of the combined factors puts a crack in your resolve. While your physical strength has somewhat returned, it's to no particular benefit of yours, only used to turn over and put yourself in a new submissive position for them. Seeing that you've decided to give in to them, the pack edges in even closer, endowments twitching in anticipation. They're getting exactly what they want, and you're starting to think that it's just as much what you want.";
+				WaitLineBreak;
+				say "     The moment of contemplation is broken as one of the reptiles decides to take initiative, dashing ahead of his fellows and earning himself a premier position at your posterior. In no time at all you go from simply presenting yourself for their amusement to being pressed under their scaled hide, with even more colorful predators approaching. For a split second, he's preparing his move and lining himself up for his attack – and only a second. He takes the plunge, in more ways than one, and you gasp loudly from the sheer force of penetration, his dick spearing you wide open.";
+				say "     Fortunately for them, and less fortunately for your throat, one of the other dinos takes the gasp as an open invitation, leaping forward to stuff you from the opposite end as well. Before you've even had time to fully process the reaming in your rear, you find yourself pinned between the pair, the additional cock more than enough to bring you to a stupefied state. You passively take what they offer you, a receptacle for their primal lusts and little else. The massive shaft in your ass thrusts energetically, pounding deeper into you and hitting every sensitive spot you didn't know you had along the way, and at the same time managing to force you even deeper down the length in your mouth. A moment later, the other dino returns the favor, fucking you right back again. It quickly becomes a vicious cycle as you're bounced back and forth between the two, with no reprieve in sight from the pleasurable onslaught.";
+				WaitLineBreak;
+				say "     While most of your world has been reduced to your holes and those monstrous shafts that are filling them so deeply, you can still hear the rest of the pack all around you, eagerly chittering as they await their own turns with your helpless body. The knowledge that they're all so desperate to use you sends a shudder through your form, the very idea supplementing the furious rush of burning desire already threatening to overwhelm you. Quickly it moves beyond simply threatening, as you unconsciously cry out in orgasm from the sheer sensations driven into you. The creatures who have driven you to this are continuing without even noticing your climax, your wail of submission muffled by the dick currently keeping you airtight.";
+				say "     You start to lose track of time entirely, the relentless fucking you're taking from every side more than enough to keep any coherent thought from forming in your mind, instead leaving you with half formed ideas and vague feelings of wanting more. Eventually each dino is replaced by another of their fellows, but you can hardly tell the difference, as your defilement continues on just the same even with new actors. You are forced to orgasm several more times throughout the events, enough that your limbs are shaky and your mind in a haze, at least until something changes enough to break through your lust-fogged brain.";
+				say "     For the first time in who knows how long, your mouth is left completely empty for more than just the seconds used to swap partners. You look up, and see that for the moment at least, most of the saurians are apparently satisfied, and the whole ordeal has been reduced to a single one lazily finishing up in your ass. You're given just enough peace to realize that things are coming to a close, and to feel a faint longing at the thought of that same ending. As they finally start to leave, abandoning you as an exhausted mess on the ground, you can't help but wonder, do you want them to leave?";
+				[add choice point]
 			else if (DinoPackPrey > 0 and a random chance of 1 in 2 succeeds): [hyper oral]
-				say "     A";
+				say "     You almost find yourself smiling already as you're defeated again by the cunning dinosaur pack. Through might or through guile, it seems they continue to get the best of you, and you're starting to find it difficult to hate it. Regardless of how the conflicting thoughts resolve, you know they've bested you, and don't they deserve to be rewarded for that? You have enough presence of mind still to make them a tempting offer of their own, and from your defeated position you open your mouth wide and beg with your eyes, clearly offering them all the oral attention they could desire.";
+				say "     While several of the dinos seem slightly conflicted about your actions, one instead has no hesitation, immediately rushing ahead to take advantage of your open invitation, perhaps fearing you'll change your mind if given even a brief moment to reconsider. Regardless of why, you find the tip of a massive reptilian shaft being pressed against your lips in no time at all, the taste already having you eager to take things further. You take a moment to lick around the head, almost thankful that he's decided to use the powerful shaft on you, and for a brief time at least he allows you to continue with your teasing.";
+				WaitLineBreak;
+				say "     Eventually he tires of the simple action you're giving him, and he starts to thrust his hips impatiently. Understanding what he wants, you pull back just enough to line his tip up with your mouth once more, and wait. It takes mere seconds before he starts to thrust forward, slowly sinking his colossal member into your maw. You can feel yourself stretching wider to accommodate his sheer size, and can't help but be impressed – by both him and you. Not letting the extreme girth stop you from doing your best, you use what leverage you can to give additional pleasure to the reptile, moving your tongue and lips to enhance the experience even more for him. Not deterred by your single minded focus, the remaining have started closing in as well, their own shafts throbbing and dripping in anticipation.";
+				say "     Unwilling to simply leave all the other dinosaurs to their own devices, you use a free hand to beckon them inward. As they advance, you prepare yourself to help them with whatever you can, rather than leave them pent up, ready to use your hands and more besides to offer them some measure of relief. They seem to take this well, pressing in closely to use not just your hands, but much of your exposed flesh as a prime surface to frot on – or in the case of a few pent up specimens, as target practice with their well endowed weaponry.";
+				WaitLineBreak;
+				say "     Of course, your priority is still taking care of the virile shaft directly in front of you, and you haven't let this minor distraction stop you from giving it the care it deserves. Soon your worshipful attentions start to bear fruit, ever suck and bob building more pressure inside, until you can feel the powerful throbbing of an encroaching climax. Deep in your throat you can feel a telltale tremor that marks the coming flood, and you lean into it with gusto, pushing yourself as far down the lengthy cock as you can. He gratefully responds, delivering you a bountiful gift directly into your stomach.";
+				say "     The other dinos do their best to match the output of the faucet you're tapped directly into, adding several more waves to the total pressure coming at you. Finally the tide starts to subside, and with a loud pop you're able to dislodge yourself from the ever so slightly diminished shaft. Several of the pack seem to have left already, while the others are still processing their own climaxes, or simply admiring the fresh coat of paint you've been so generously given. Eventually they all gather together once again and leave you alone, but you're more than certain you'll see them again.";
 			else: [hyper pounding w/ bad end option]
 				say "     A";
 				if DinoPackPrey is 2: [moves to playable bad-end location]
@@ -136,7 +158,7 @@ to say DinoPackDesc:
 	setmongender 3;
 	if inasituation is false: [regular text]
 		if DinoPackEvolution > 2: [evolved desc]
-			say "     A";
+			say "     You see a large pack of reptilian creatures swarming in front of you. They bear a heavy resemblance to the tiny raptors you've fought before, but the difference in size is undeniable. Not only are the critters themselves larger, so too are their stiff members, each one wielding a truly menacing weapon clearly meant for battering holes into submission. The gleam of cunning is impossible to miss, leaving you wary of their plans.";
 		else: [normal desc]
 			say "     A whole pack of small reptiles, covered in bright scales of various colors and with wickedly sharp teeth and claws, much like those of a velociraptor. The most clearly visible feature is that they have incredibly disproportionate endowments, each dinosaur toting a turbo sized cock, almost the size of their bodies, complete with a matching external sack quite unlike your average lizard. Despite their size, you can see from the gleam in their eyes that they are clearly intelligent. Before you can think further, they suddenly dart forward and swarm you!";
 	else:
@@ -381,6 +403,24 @@ Forgotten Temple is southwest of Mysterious Altar.
 
 after going to Lost Jungle while (a random chance of 1 in 3 succeeds): [use these to call events, Altar is safe - until you succumb completely]
 	say "     A";
+	say "[DinoPackHunt]";
+
+to say DinoPackHunt: [being hunted by the evolved dinos]
+	say "[EvolveDinoPack]";
+	say "     A";
+	challenge "Dino Pack";
+
+to say EvolveDinoPack: [increases all stats for dino pack]
+	[add a line to make sure the table is set to dinos]
+	increase DinoPackEvoltution by 1;
+	now str entry is 15+DinoPackEvolution;
+	now dex entry is 18+DinoPackEvolution;
+	now sta entry is 15+DinoPackEvolution;
+	now per entry is 18+DinoPackEvolution;
+	now int entry is 15+DinoPackEvolution;
+	now cha entry is 12+DinoPackEvolution;
+	now HP entry is 75+(DinoPackEvolution*5);
+	now wdam entry is 12+(DinoPackEvolution/2);
 
 
 Dino Pack ends here.
