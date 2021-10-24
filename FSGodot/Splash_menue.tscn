@@ -1,0 +1,117 @@
+[gd_scene format=2]
+
+[node name="Splash Root" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -8.0
+margin_right = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_left = 8.0
+margin_right = 1288.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 72.0
+margin_top = 120.0
+margin_right = 288.0
+margin_bottom = 344.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 280.0
+margin_top = 528.0
+margin_right = 1012.0
+margin_bottom = 568.0
+custom_constants/separation = 57
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGameButton" type="Button" parent="HBoxContainer"]
+margin_right = 100.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadButton" type="Button" parent="HBoxContainer"]
+margin_left = 157.0
+margin_right = 258.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Load "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsButton" type="Button" parent="HBoxContainer"]
+margin_left = 315.0
+margin_right = 416.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WikiButton" type="Button" parent="HBoxContainer"]
+margin_left = 473.0
+margin_right = 574.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Wiki"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsButton" type="Button" parent="HBoxContainer"]
+margin_left = 631.0
+margin_right = 732.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Credits"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 360.0
+margin_top = 336.0
+margin_right = 928.0
+margin_bottom = 544.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
