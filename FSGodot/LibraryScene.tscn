@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Fonts/plex_mono_14.tres" type="DynamicFont" id=1]
 [ext_resource path="res://LibraryScene.gd" type="Script" id=2]
+[ext_resource path="res://Bunker.gd" type="Script" id=3]
 
-[node name="ButtonResponse" type="VBoxContainer"]
+[node name="LibraryScene" type="VBoxContainer"]
 margin_right = 611.0
 margin_bottom = 177.0
 size_flags_horizontal = 3
@@ -28,3 +29,4 @@ The small sink taking up a corner of the room seems to be broken, producing no w
 
 =================================================================="
 autowrap = true
+script = ExtResource( 3 )
