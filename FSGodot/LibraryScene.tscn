@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/plex_mono_14.tres" type="DynamicFont" id=1]
+[ext_resource path="res://LibraryScene.gd" type="Script" id=2]
+[ext_resource path="res://Bunker.gd" type="Script" id=3]
+
+[node name="LibraryScene" type="VBoxContainer"]
+margin_right = 611.0
+margin_bottom = 177.0
+size_flags_horizontal = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bunker" type="Label" parent="."]
+margin_right = 611.0
+margin_bottom = 593.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_constants/line_spacing = 5
+text = "sparsely appointed, this bunker was built as a fallout shelter back during the Cold War, then abandoned to become a forgotten curiosity at best. You are standing in the main bunker room, a rectangular chamber measuring about sixty feet in length and thirty feet in width. Its walls are solid concrete, and long rows of shelves are built into the back wall. There are several large storage lockers in the bunker as well. They look like a good place to store all your extra stuff. Several long rows of simple metal beds are bolted to the floor and walls for those taking shelter here to rest upon.
+
+One of the cots apparently was poorly installed, and the bolts attaching it to the floor have come loose. You could take it along if you'd like
+
+The small sink taking up a corner of the room seems to be broken, producing no water no matter how much the knob is turned. Two doorways to the north and northeast lead to adjoining rooms - showers and a small restroom - while a thicker, secure-looking door opens to the stairwell used to go outside. Your own personal room is to the south. It's technically just a maintenance storeroom, but at least it's private.
+
+=================================================================="
+autowrap = true
+script = ExtResource( 3 )

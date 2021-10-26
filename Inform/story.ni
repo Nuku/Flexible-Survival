@@ -224,12 +224,13 @@ Include Hospital by Stripes.
 Include Hyena Hideout by Stripes.
 Include Junkyard and Warehouse by Wahn.
 Include Kitsune Hideaway by Shadowwolf94.
+Include Lair Of The Lupines by Gherod.
 Include Mall Community Center by Wahn.
 Include Mall Residents by Rikaeus.
 Include Medical Checkups by Stripes.
 Include Milking Facility by Kernog.
-Include Museum Roman Wing by Gherod.
 Include Museum by Sarokcat.
+Include Museum Roman Wing by Gherod.
 Include New Ewe Store by Luneth.
 Include PIG Frat by Stripes.
 Include Pirate Island by Sarokcat.
@@ -340,6 +341,7 @@ Include New Events by Sarokcat.
 Include Ninja Events by Tanaka.
 Include Odd Weapons by Hellerhound.
 Include Old BoomBox by Kaleem mcintyre.
+Include Orcs And Ogres by Gherod.
 Include Orc Events by Wahn.
 Include Orc Researcher by Luneth.
 Include Origins by Luneth.
@@ -672,6 +674,7 @@ Include Tigress Hooker by Stripes.
 Include Toven by Wahn.
 Include Trash Coon by Stripes.
 Include Triceratops by Stripes.
+Include Triceratops Male by Gherod.
 Include Twisted Pimp by Sarokcat.
 Include Tyrannosaurus Male by Gherod.
 Include Unicorn by Sarokcat.
