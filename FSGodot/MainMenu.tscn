@@ -1,0 +1,125 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://FS Banner.jpg" type="Texture" id=1]
+[ext_resource path="res://tempfont.tres" type="DynamicFont" id=2]
+
+[node name="Menu Baseplate" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_right = -1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 1282.0
+margin_bottom = 718.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+margin_right = 1282.0
+margin_bottom = 405.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+texture = ExtResource( 1 )
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 409.0
+margin_right = 1282.0
+margin_bottom = 612.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 407.0
+margin_bottom = 203.0
+size_flags_horizontal = 3
+
+[node name="New Game Button" type="Button" parent="VBoxContainer/HBoxContainer/CenterContainer"]
+margin_left = 126.0
+margin_top = 81.0
+margin_right = 281.0
+margin_bottom = 122.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.827451, 0.537255, 0.129412, 1 )
+text = " New Game "
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 437.0
+margin_right = 844.0
+margin_bottom = 203.0
+size_flags_horizontal = 3
+
+[node name="Load Button" type="Button" parent="VBoxContainer/HBoxContainer/CenterContainer2"]
+margin_left = 124.0
+margin_top = 81.0
+margin_right = 283.0
+margin_bottom = 122.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.827451, 0.537255, 0.129412, 1 )
+text = " Load Game "
+
+[node name="CenterContainer3" type="CenterContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 874.0
+margin_right = 1282.0
+margin_bottom = 203.0
+size_flags_horizontal = 3
+
+[node name="Settings Button" type="Button" parent="VBoxContainer/HBoxContainer/CenterContainer3"]
+margin_left = 144.0
+margin_top = 81.0
+margin_right = 264.0
+margin_bottom = 122.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.827451, 0.537255, 0.129412, 1 )
+text = " Settings "
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 616.0
+margin_right = 1282.0
+margin_bottom = 718.0
+size_flags_vertical = 3
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 626.0
+margin_bottom = 102.0
+size_flags_horizontal = 3
+
+[node name="Wiki Button" type="Button" parent="VBoxContainer/HBoxContainer2/CenterContainer"]
+margin_left = 257.0
+margin_top = 30.0
+margin_right = 368.0
+margin_bottom = 71.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.827451, 0.537255, 0.129412, 1 )
+text = "    Wiki    "
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 656.0
+margin_right = 1282.0
+margin_bottom = 102.0
+size_flags_horizontal = 3
+
+[node name="Patreon Button" type="Button" parent="VBoxContainer/HBoxContainer2/CenterContainer2"]
+margin_left = 255.0
+margin_top = 30.0
+margin_right = 371.0
+margin_bottom = 71.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.827451, 0.537255, 0.129412, 1 )
+text = " Patreon "
