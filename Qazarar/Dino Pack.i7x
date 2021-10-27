@@ -2,7 +2,7 @@ Version 1 of Dino Pack by Qazarar begins here.
 
 Section 1 - Monster Responses
 
-DinoPackEvolution is a number that varies.[@Tag:NotSaved]
+DinoPackEvolution is a number that varies. DinoPackEvolution is usually 0.[@Tag:NotSaved]
 DinoPackPrey is a number that varies. DinoPackPrey is usually 0.[@Tag:NotSaved]
 
 [ DinoPackEvolution                                          ]
@@ -20,7 +20,7 @@ DinoPackPrey is a number that varies. DinoPackPrey is usually 0.[@Tag:NotSaved]
 to say DinoPackLoss:
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
-		if DinPackPrey is 1:
+		if DinoPackPrey is 1:
 			say "[EvolveDinoPack]";
 	else: [regular scene]
 		if(DinoPackEvolution < 3):
@@ -73,7 +73,8 @@ to say DinoPackLoss:
 				say "     You start to lose track of time entirely, the relentless fucking you're taking from every side more than enough to keep any coherent thought from forming in your mind, instead leaving you with half formed ideas and vague feelings of wanting more. Eventually each dino is replaced by another of their fellows, but you can hardly tell the difference, as your defilement continues on just the same even with new actors. You are forced to orgasm several more times throughout the events, enough that your limbs are shaky and your mind in a haze, at least until something changes enough to break through your lust-fogged brain.";
 				say "     For the first time in who knows how long, your mouth is left completely empty for more than just the seconds used to swap partners. You look up, and see that for the moment at least, most of the saurians are apparently satisfied, and the whole ordeal has been reduced to a single one lazily finishing up in your ass. You're given just enough peace to realize that things are coming to a close, and to feel a faint longing at the thought of that same ending. As they finally start to leave, abandoning you as an exhausted mess on the ground, you can't help but wonder, do you want them to leave?";
 				[add choice point]
-			else if (DinoPackPrey > 0 and a random chance of 1 in 2 succeeds): [hyper oral]
+			else: [hyper oral]
+			[else if (DinoPackPrey > 0 and a random chance of 1 in 2 succeeds):]
 				say "     You almost find yourself smiling already as you're defeated again by the cunning dinosaur pack. Through might or through guile, it seems they continue to get the best of you, and you're starting to find it difficult to hate it. Regardless of how the conflicting thoughts resolve, you know they've bested you, and don't they deserve to be rewarded for that? You have enough presence of mind still to make them a tempting offer of their own, and from your defeated position you open your mouth wide and beg with your eyes, clearly offering them all the oral attention they could desire.";
 				say "     While several of the dinos seem slightly conflicted about your actions, one instead has no hesitation, immediately rushing ahead to take advantage of your open invitation, perhaps fearing you'll change your mind if given even a brief moment to reconsider. Regardless of why, you find the tip of a massive reptilian shaft being pressed against your lips in no time at all, the taste already having you eager to take things further. You take a moment to lick around the head, almost thankful that he's decided to use the powerful shaft on you, and for a brief time at least he allows you to continue with your teasing.";
 				WaitLineBreak;
@@ -82,11 +83,11 @@ to say DinoPackLoss:
 				WaitLineBreak;
 				say "     Of course, your priority is still taking care of the virile shaft directly in front of you, and you haven't let this minor distraction stop you from giving it the care it deserves. Soon your worshipful attentions start to bear fruit, ever suck and bob building more pressure inside, until you can feel the powerful throbbing of an encroaching climax. Deep in your throat you can feel a telltale tremor that marks the coming flood, and you lean into it with gusto, pushing yourself as far down the lengthy cock as you can. He gratefully responds, delivering you a bountiful gift directly into your stomach.";
 				say "     The other dinos do their best to match the output of the faucet you're tapped directly into, adding several more waves to the total pressure coming at you. Finally the tide starts to subside, and with a loud pop you're able to dislodge yourself from the ever so slightly diminished shaft. Several of the pack seem to have left already, while the others are still processing their own climaxes, or simply admiring the fresh coat of paint you've been so generously given. Eventually they all gather together once again and leave you alone, but you're more than certain you'll see them again.";
-			else: [hyper pounding w/ bad end option]
+			[else: [hyper pounding w/ bad end option]
 				say "     A";
 				if DinoPackPrey is 2: [moves to playable bad-end location]
 					say "     A";
-					move player to Abandoned Shore; [add zone]
+					move player to Abandoned Shore; [add zone]]
 
 
 
@@ -370,7 +371,7 @@ Description of Abandoned Shore is "     X.".
 
 Table of GameRoomIDs (continued)
 Object	Name
-Lost Jungle "Lost Jungle"
+Lost Jungle	"Lost Jungle"
 
 Lost Jungle is a room.
 Description of Lost Jungle is "     X.".
@@ -412,15 +413,16 @@ to say DinoPackHunt: [being hunted by the evolved dinos]
 
 to say EvolveDinoPack: [increases all stats for dino pack]
 	[add a line to make sure the table is set to dinos]
-	increase DinoPackEvoltution by 1;
-	now str entry is 15+DinoPackEvolution;
-	now dex entry is 18+DinoPackEvolution;
-	now sta entry is 15+DinoPackEvolution;
-	now per entry is 18+DinoPackEvolution;
-	now int entry is 15+DinoPackEvolution;
-	now cha entry is 12+DinoPackEvolution;
-	now HP entry is 75+(DinoPackEvolution*5);
-	now wdam entry is 12+(DinoPackEvolution/2);
+	increase DinoPackEvolution by 1;
+	choose row MonsterID from the Table of Random Critters;
+	now str entry is 15 + DinoPackEvolution;
+	now dex entry is 18 + DinoPackEvolution;
+	now sta entry is 15 + DinoPackEvolution;
+	now per entry is 18 + DinoPackEvolution;
+	now int entry is 15 + DinoPackEvolution;
+	now cha entry is 12 + DinoPackEvolution;
+	now HP entry is 75 + (DinoPackEvolution * 5);
+	now wdam entry is 12 + (DinoPackEvolution / 2);
 
 
 Dino Pack ends here.

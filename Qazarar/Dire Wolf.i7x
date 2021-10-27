@@ -8,7 +8,7 @@ to say DireWolfLoss:
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
 	else if Charisma of Direwolf Dom > 15: [temporary variable control]
-		say "     A"; ['tame' the direwolf pet here]
+		say "[DireWolfNormalLoss]"; ['tame' the direwolf pet here, link to normal loss until implemented]
 	else if Direwolf Dom is tamed:
 		say "[DirewolfSuperLoss]";
 	else: [regular scene]
@@ -284,14 +284,14 @@ object	name
 Direwolf Dom	"Direwolf Dom"
 
 Direwolf Dom is a pet.
-Description of Direwolf Dom is "";
-Weapon Damage of Direwolf Dom is 18;
-The level of Direwolf Dom is 3;
-Dexterity of Direwolf Dom is 14;
-Charisma of Direwolf Dom is 10;
-The summondesc of Direwolf Dom is "[SummonKlauz]".
-The dismissdesc of Direwolf Dom is "[DismissKlauz]".
-The assault of Direwolf Dom is "[one of]Your felinoid companion rakes your attacker with his claws![or]Klauz rubs up against your opponent, distracting them greatly![or]Klauz's musk distracts your target, allowing you to get in another strike![or]Taking advantage of your foe's distraction, your companion strikes out with his claws.[or]Your ally manages to grab onto your opponent, providing you with an opening![or]Klauz charges into the melee to protect you, and your opponent seems so startled at the ferocious appearance of this new combat, they leave themselves open to attack.[or]Bracing himself against the pain, your injured companion leaps forward into the combat, knocking your opponent flat.[or]The felinoid you helped returns the favor by running in and tripping your opponent up![or]Klauz pounces on your opponent, trying to wrestle them to the ground.[at random]". [replace these]
+Description of Direwolf Dom is "".
+Weapon Damage of Direwolf Dom is 18.
+The level of Direwolf Dom is 3.
+Dexterity of Direwolf Dom is 14.
+Charisma of Direwolf Dom is 10.
+The summondesc of Direwolf Dom is "     A".
+The dismissdesc of Direwolf Dom is "     A".
+The assault of Direwolf Dom is "[one of]The powerful canine savages your foe with his claws![or]The direwolf stalks a circle around the target, dividing their attention.[or]Your ally grabs onto your opponent firmly with their jaws, providing you with an opening.[or]Your direwolf uses his sheer mass to crash into your opponent![or]A mighty howl from the wolf demoralizes your foe![at random]".
 the fuckscene of Direwolf Dom is "[DommedByDirewolf]".
 
 
