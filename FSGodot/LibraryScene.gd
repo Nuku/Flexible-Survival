@@ -1,19 +1,24 @@
 extends VBoxContainer
-
-#The purpose of this script is to decide which text is going to be visible, keep track
-#of the player's position among the rooms, decide what buttons are available based on that and then
-#send the nessessary information to the buttonpanel so that it can generate the buttons.
-#This script also is responsible for keeping track of progress and sending the nessessary 
-#information to the save script for writing it to the disk. 
-
+"""
+The purpose of this script is to communicate to the textpanel about which buttons the rooms have,
+generating a 2darray of coordinates that make up the rooms, and sending the array to the text 
+panel so it can keep track of the player. It also recieves the players position and based on that 
+information controles which text is visible when the instance is created. 
+"""
 # Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
 
 
+"""
+This process happens every time the scene is added to the tree text panel. keep in mind it will 
+need a way to tell if it has been called for the first time or if it is simply a new instance. 
+"""
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
+	#player will start on the starting room.
 
 
+"""
+These are functions every scene needs to have in order for it to function correctly. 
+"""
 

@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "Location",
+"language": "GDScript",
+"path": "res://Location.gd"
+}, {
+"base": "Control",
+"class": "Room",
+"language": "GDScript",
+"path": "res://Room.gd"
+} ]
+_global_script_class_icons={
+"Location": "",
+"Room": ""
+}
+
 [application]
 
 config/name="FSGodot"
@@ -25,7 +41,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 environment/default_environment="res://default_env.tres"
