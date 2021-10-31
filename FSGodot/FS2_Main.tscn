@@ -1,9 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://TextPanel.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/plex_mono_15.tres" type="DynamicFont" id=1]
 [ext_resource path="res://NextButton.gd" type="Script" id=2]
-[ext_resource path="res://ButtonPanel.gd" type="Script" id=3]
-[ext_resource path="res://GraphicsPanel.gd" type="Script" id=4]
+[ext_resource path="res://Examine.gd" type="Script" id=3]
+[ext_resource path="res://InputProcessor.gd" type="Script" id=4]
+[ext_resource path="res://FS2_Main.gd" type="Script" id=5]
+[ext_resource path="res://LocationProcessor.gd" type="Script" id=6]
+[ext_resource path="res://Location.gd" type="Script" id=7]
+[ext_resource path="res://Room.gd" type="Script" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.054902, 0.054902, 0.054902, 1 )
@@ -22,12 +26,76 @@ bg_color = Color( 0.168627, 0.164706, 0.172549, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=6]
 
-[node name="Control" type="Control"]
+[node name="FS2" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="GraphicsProcessor" type="Node" parent="."]
+
+[node name="RoomCard" type="PanelContainer" parent="GraphicsProcessor"]
+margin_left = 7.0
+margin_top = -198.0
+margin_right = 321.0
+margin_bottom = -89.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="GraphicsProcessor/RoomCard"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 307.0
+margin_bottom = 102.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VRoomContainer" type="VBoxContainer" parent="GraphicsProcessor/RoomCard/MarginContainer"]
+margin_right = 300.0
+margin_bottom = 95.0
+
+[node name="RoomNameLabel" type="Label" parent="GraphicsProcessor/RoomCard/MarginContainer/VRoomContainer"]
+margin_right = 300.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "room label name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RoomBodyLabel" type="Label" parent="GraphicsProcessor/RoomCard/MarginContainer/VRoomContainer"]
+margin_top = 25.0
+margin_right = 300.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 300, 0 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Room Body"
+autowrap = true
+
+[node name="InputProcessor" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="LocationProcessor" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="Location" type="Node" parent="LocationProcessor"]
+script = ExtResource( 7 )
+
+[node name="Room" type="Control" parent="LocationProcessor/Location"]
+margin_left = 239.789
+margin_top = -330.304
+margin_right = 553.789
+margin_bottom = -87.304
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+north_exit = true
 
 [node name="MainPanel" type="PanelContainer" parent="."]
 margin_left = 2.0
@@ -223,7 +291,6 @@ margin_bottom = 531.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/panel = SubResource( 4 )
-script = ExtResource( 1 )
 
 [node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/WindowHBoxContainer/TextPanel"]
 margin_right = 617.0
@@ -253,7 +320,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.84
 custom_styles/panel = SubResource( 4 )
-script = ExtResource( 4 )
 
 [node name="ButtonPanel" type="PanelContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer"]
 margin_top = 535.0
@@ -263,7 +329,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.31
 custom_styles/panel = SubResource( 5 )
-script = ExtResource( 3 )
 
 [node name="ButtonPanelOrganizer" type="HBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel"]
 margin_right = 1140.0
@@ -332,6 +397,7 @@ custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
 text = "Examine"
+script = ExtResource( 3 )
 
 [node name="Button4" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow1"]
 margin_left = 264.0
@@ -518,7 +584,7 @@ size_flags_vertical = 3
 custom_constants/separation = 5
 alignment = 1
 
-[node name="Button" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1"]
+[node name="NorthwestButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1"]
 margin_right = 170.0
 margin_bottom = 51.0
 size_flags_horizontal = 3
@@ -535,7 +601,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button2" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1"]
+[node name="WestButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1"]
 margin_top = 56.0
 margin_right = 170.0
 margin_bottom = 108.0
@@ -554,7 +620,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button3" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1"]
+[node name="SouthwestButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1"]
 margin_top = 113.0
 margin_right = 170.0
 margin_bottom = 165.0
@@ -581,7 +647,7 @@ size_flags_vertical = 3
 custom_constants/separation = 5
 alignment = 1
 
-[node name="Button" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2"]
+[node name="NorthButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2"]
 margin_right = 170.0
 margin_bottom = 37.0
 size_flags_horizontal = 3
@@ -597,7 +663,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button2" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2"]
+[node name="UpButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2"]
 margin_top = 42.0
 margin_right = 170.0
 margin_bottom = 80.0
@@ -615,7 +681,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button3" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2"]
+[node name="DownButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2"]
 margin_top = 85.0
 margin_right = 170.0
 margin_bottom = 122.0
@@ -632,7 +698,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button4" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2"]
+[node name="SouthButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2"]
 margin_top = 127.0
 margin_right = 170.0
 margin_bottom = 165.0
@@ -658,7 +724,7 @@ size_flags_vertical = 3
 custom_constants/separation = 5
 alignment = 1
 
-[node name="Button" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3"]
+[node name="NortheastButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3"]
 margin_right = 171.0
 margin_bottom = 51.0
 size_flags_horizontal = 3
@@ -674,7 +740,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button2" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3"]
+[node name="EastButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3"]
 margin_top = 56.0
 margin_right = 171.0
 margin_bottom = 108.0
@@ -692,7 +758,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button3" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3"]
+[node name="SoutheastButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3"]
 margin_top = 113.0
 margin_right = 171.0
 margin_bottom = 165.0
@@ -709,4 +775,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow1/NextButton" to="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/WindowHBoxContainer/TextPanel" method="_on_NextButton_pressed"]
+[connection signal="next_button_pressed" from="InputProcessor" to="." method="_on_InputProcessor_next_button_pressed"]
+[connection signal="room_information_sent" from="LocationProcessor/Location/Room" to="LocationProcessor/Location" method="_on_Room_room_information_sent"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow1/NextButton" to="InputProcessor" method="_on_NextButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow1/Examine" to="InputProcessor" method="_on_Examine_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1/NorthwestButton" to="InputProcessor" method="_on_NorthwestButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1/WestButton" to="InputProcessor" method="_on_WestButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1/SouthwestButton" to="InputProcessor" method="_on_SouthwestButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2/NorthButton" to="InputProcessor" method="_on_NorthButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2/UpButton" to="InputProcessor" method="_on_UpButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2/DownButton" to="InputProcessor" method="_on_DownButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2/SouthButton" to="InputProcessor" method="_on_SouthButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3/NortheastButton" to="InputProcessor" method="_on_NortheastButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3/EastButton" to="InputProcessor" method="_on_EastButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3/SoutheastButton" to="InputProcessor" method="_on_SoutheastButton_pressed"]
