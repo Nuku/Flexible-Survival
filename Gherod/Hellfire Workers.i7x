@@ -1197,6 +1197,12 @@ to say ToronTalkExoticEscortsMenu:
 	now sortorder entry is 3;
 	now description entry is "Ask about Ynisless, the psychic and sophisticated demoness";
 	[]
+	if Resolution of DamienTF >= 5:
+		choose a blank row in table of fucking options;
+		now title entry is "Damien";
+		now sortorder entry is 99;
+		now description entry is "Ask about Damien, the draconic hellfire demon charmer";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -1214,10 +1220,12 @@ to say ToronTalkExoticEscortsMenu:
 				now sextablerun is 1;
 				if (nam is "Agranoth"):
 					say "[ToronTalkExoticEscortsAgranoth]";
-				if (nam is "Dirkanor"):
+				else if (nam is "Dirkanor"):
 					say "[ToronTalkExoticEscortsDirkanor]";
-				if (nam is "Ynisless"):
+				else if (nam is "Ynisless"):
 					say "[ToronTalkExoticEscortsYnisless]";
+				else if (nam is "Damien"):
+					say "[ToronTalkExoticEscortsDamien]"; [On Damien's file. Special case.]
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -1557,7 +1565,7 @@ to say ToronTalkExoticEscortsYnisless:
 	say "     'Do you want to request Lady Ynisless? She is Lady Ynis, for short, and she's a [bold type]psychic[roman type]. With one glance she can put anyone into a trance and lust frenzy. Highly requested for her hypnotic gifts, indeed. On top of that, she comes with some perks, like a [bold type]increased body size, very large breasts, lactation on demand, ample hips, great womb capacity[roman type]...' - Toron brings the catalog closer to his eyes while frowning his eyebrows - '... Uhm... so, there is also [bold type]shapeshifting abilities for gender preference accomodation, illusionary play, telekinesis for remote sex toy control[roman type]... W-well, she fills quite a lot of roles, [bold type]including those of a male[roman type], if one so desires.'";
 	say "     'Ah, though I'm afraid to inform that she is [bold type]unavailable[roman type], sadly. She seems to be booked with many... Stupid man things, as she wrote here, herself... Uhm... Pardon her, patience is not her virtue, for certain. If you wish to schedule a session with her, you will have to wait until she's free.'";
 	WaitLineBreak;
-	say "     << Author's Note: Currently, she was no content available, but that may change in the future! >>";
+	say "     << Author's Note: Currently, she has no content available, but that may change in the future! >>";
 	LineBreak;
 	say "[ToronTalkExoticEscortsMenu]";
 

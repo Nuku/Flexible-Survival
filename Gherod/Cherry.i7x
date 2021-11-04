@@ -1,4 +1,9 @@
-Version 1 of Cherry by Gherod begins here.
+Version 2 of Cherry by Gherod begins here.
+
+"Adds a Pink Fox lady named Cherry to the game."
+
+[Version 1 - File Created]
+[Version 2 - Added Dominant Fox and Transformative Sex traits for Cherry. Dom Cherry added with one sex scene.]
 
 Section 1 - Intro
 
@@ -84,7 +89,7 @@ a postimport rule: [bugfixing rules for players that import savegames]
 		AddNavPoint Cherry's Apartment;
 
 instead of smelling Cherry's Apartment:
-	say "     It somehow smells very sweet. Cherry must have been lucky enough to get her hands on some air fresheners or essence oils. Or perhaps it is some tea she's making...?";
+	say "     It somehow smells very sweet. Cherry must have been lucky enough to get her hands on some air fresheners or essence oils. Or perhaps it is some tea she is making...?";
 
 Section 3 - Cherry NPC
 
@@ -126,7 +131,7 @@ AnalVirgin of Cherry is false.
 PenileVirgin of Cherry is false.
 SexuallyExperienced of Cherry is true.
 TwistedCapacity of Cherry is false. [Twisted Characters can take any penetration, no matter the size]
-Sterile of Cherry is false. [steriles can't knock people up]
+Sterile of Cherry is true. [steriles can't knock people up. This is temporary for Cherry, until the player accepts being bred by her.]
 MainInfection of Cherry is "Pink Fox".
 Description of Cherry is "[CherryDesc]".
 Conversation of Cherry is { "<This is nothing but a placeholder!>" }.
@@ -140,7 +145,7 @@ Section 3-1 - Cherry Talk Menu
 [***********************************************************]
 
 CherryDoneTalking is a truth state that varies.[@Tag:NotSaved]
-CherryTea is a number that varies. CherryTea is usually 0.
+CherryTea is a number that varies. CherryTea is usually 0.[@Tag:NotSaved]
 
 instead of conversing Cherry:
 	if CherryTea - turns < 7:
@@ -180,6 +185,18 @@ to say CherryTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Talk about getting more intimate with the pink fox";
 	[]
+	if PlayerFucked of Cherry is true:
+		choose a blank row in table of fucking options;
+		now title entry is "Breeding Fetish";
+		now sortorder entry is 4;
+		now description entry is "She seems to be particularly into it. Ask her about that";
+	[]
+	if Energy of Cherry is 3 and player is not dominant:
+		choose a blank row in table of fucking options;
+		now title entry is "You as her sub";
+		now sortorder entry is 5;
+		now description entry is "Talk about the conditions of you as her submissive";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -203,6 +220,10 @@ to say CherryTalkMenu:
 					say "[CherryTalkWealth]";
 				else if (nam is "Sex"):
 					say "[CherryTalkSex]";
+				else if (nam is "Breeding Fetish"):
+					say "[CherryTalkBreeding]";
+				else if (nam is "You as her sub"):
+					say "[CherryTalkDomination]";
 				wait for any key;
 				if CherryDoneTalking is false:
 					say "[CherryTalkMenu]"; [looping back to keep talking with him]
@@ -232,15 +253,139 @@ to say CherryTalkWealth:
 	say "     Someone like her must have had a lot of money and influence back in the days. You cannot help but wonder how someone with such wealth still failed to leave the area before things went down south. 'You don't get to keep your hard-earned money when an apocalypse rains down on you.' - she quickly answers - 'And it's not like money is worth much, anyway. In the end, I was looking like an animal and had to be quarantined. No amount of money, power or influence can get you out once you become just another one left to rot. All I can do is survive until rescue arrives... If it ever will. I'm getting used to the idea of having to live the rest of my life like this... But, as I said, some had it worse.'";
 
 to say CherryTalkSex:
-	say "     You are left wondering if you could ever get intimate with the nice and elegant fox lady, so you get bold enough to ask the question. She smiles and delivers a direct response. 'Well, since we've already spoken a lot and I got to know you a little better... I suppose we could do something more fun. But only if you bottom. Given that fact , it would certainly be my pleasure to share some intimate moments with you. As I said, my favorite thing to do is breeding, with everything that comes with it, if you understand what I mean... I'd be down for it under those conditions.' Now, that was a quite blunt answer.";
+	say "     You are left wondering if you could ever get intimate with the nice and elegant fox lady, so you get bold enough to ask the question. She smiles and delivers a direct response. 'Well, since we've already spoken a lot and I got to know you a little better... I suppose we could do something more fun. But only if you bottom. Given that fact, it would certainly be my pleasure to share some intimate moments with you. As I said, my favorite thing to do is breeding, with everything that comes with it, if you understand what I mean... I'd be down for it under those conditions.' Now, that was a quite blunt answer.";
 	say "     It seems you can have sex with Cherry, but you must always submit to her and accept that she will always be the top... Unless there is some way to convince her to switch the cards around once in a while?";
 	if Libido of Cherry is 0:
 		now Libido of Cherry is 1;
 
+to say CherryTalkBreeding:
+	say "     You are aware that she mentioned it before, but experiencing it filled you with quite a lot of questions about the extent of this kink. With this in mind, you decide to ask her a little more about it, and she seems happy to explain. 'I like everything about it. The aspect of domination, the feeling of power over someone and the pleasure that comes from it... I've always been used to lead others and really enjoy being in positions of power, so I suppose this is an extension of that lifestyle. But regarding its extent...' she trails off, crossing her legs as she looks for words, 'I think I've said this before, but I do like everything that comes with it. The sex, the knotting, the breeding... I'd even like to have some offspring, at some point. I just didn't find the right receiver... yet.'";
+	if player is submissive:
+		say "     Cherry looks directly in your eyes as she finishes that sentence, and you feel her gaze piercing through you in a way that makes your heart race. She really does have that look about her, and you cannot deny that. It is as if she could command you with that alone, kicking off your submissive instincts in the most efficient of manners.";
+		if Energy of Cherry is 2:
+			now Energy of Cherry is 3;
+	else if player is dominant:
+		say "     Cherry looks directly in your eyes as she finishes that sentence, but it only leaves you sort of uncomfortable. 'I suppose I should keep looking, right? Maybe I'll find someone... submissive enough, one day. Not just anyone who doesn't mind bending over for a refined lady once in a while.' That surely reminded of you someone.";
+	else:
+		say "     Cherry looks directly in your eyes as she finishes that sentence, as if suggesting something. 'I suppose I could take applications. Especially eager people who love getting knocked up are preferred, but not just anyone. I do have standards...'";
+		if Energy of Cherry is 2:
+			now Energy of Cherry is 3;
+
+to say CherryTalkDomination:
+	if Energy of Cherry is 3:
+		say "     Given your last conversation about the subject, you ask Cherry if she would take you as her submissive, before anything else. She smiles and joyfully replies 'Well, I would, of course!' but then changes her tone to a slightly more serious one. 'I would, however, expect you to follow certain rules and accept a few terms. Like I said, I don't take just about anyone who asks... Only those who behave and agree to my conditions, after showing the required eagerness. This does not mean that I'd take advantage of such people in this situation, no. This is a deal between us both, and whenever something makes either of us unhappy or uncomfortable, it should be spoken. I like to keep a clear and transparent relationship with my subs.'";
+		WaitLineBreak;
+		say "     As she ensures that everything has been said, you nod and pay attention to every word. 'Good, so, with that having been explained, I ask... Would you be willing to allow your body to be transformed into something more... Well, like me?' Cherry asks, her fluffy tail swinging around slightly behind her as she awaits your answer.";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yes, you would allow her to transform you.";
+		say "     ([link]N[as]n[end link]) - No, you are not into that.";
+		if Player consents:
+			Linebreak;
+			say "     You say that you are definitely into it and that she could feel free to do so. She nods with a smile and a hint of blush appears on her cheeks, but she tries hard to not show it. 'That is most delightful, my dear... I do appreciate your permission on that. Although, this is not a requirement. If you, for some reason, wish to not keep getting transformative effects from our encounters, just let me know.'";
+			TraitGain "Transformative Sex" for Cherry;
+		else:
+			LineBreak;
+			say "     You apologize, but that is something you would not like. She gives you an understanding nod. 'That's fine. Thank you for being honest. This wasn't a requirement, but I appreciate you for being truthful with me.'";
+			TraitLoss "Transformative Sex" for Cherry;
+		WaitLineBreak;
+		say "     She then resumes her inquiry. 'This one is a requirement, however. Would you be willing to bear my children, at some point?'";
+		if player is male and player is not female and "MPreg" is not listed in feats of player:
+			say "     You raise an eyebrow at that question, given your sex, and ask her how would that be possible given the circumstances. She immediately responds 'Dear, [']at some point['], I said. Don't think too much about it.'";
+		else if player is male and player is not female and "MPreg" is listed in feats of player:
+			say "     You know that, despite being a male, you can bear childrens of others who knock you up, and you ask her if she knew about that, already. She immediately responds 'You do have that look about yourself, my dear... I'm rarely wrong.'";
+		else if player is female:
+			say "     You know this to be possible due to your sex, so the answer is entirely up to you.";
+		else:
+			say "     You raise an eyebrow at that question, given your lack of sex, and ask her how would that be possible given the circumstances. She immediately responds 'Dear, [']at some point['], I said. Don't think too much about it.'";
+		say "     What say you? Would you be willing to carry Cherry's children inside you?";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yes, you would allow her to impregnate you, at some point.";
+		say "     ([link]N[as]n[end link]) - No, you are definitely not into that.";
+		if Player consents:
+			LineBreak;
+			say "     This is something you agree on, and she seems delightful to hear it. 'Good! That is... very pleasant to know. Very well, then. I shall no longer take any contraceptives measures with you. I can't wait to see you swollen with my kits... That'll be a delicious sight.'";
+			now Sterile of Cherry is false;
+			WaitLineBreak;
+			say "     'Anyway, last question... This one should be easy for you. Do you agree on becoming my submissive and allow me to take you from any entrance I desire?'";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Nod and say you accept ([bold type]This is irreversible and Cherry will always regard you as Submissive, even if you become Dominant at a later point[roman type]).";
+			say "     ([link]N[as]n[end link]) - You actually do not like to bottom that much.";
+			if Player consents:
+				LineBreak;
+				say "     With this being the last requirement Cherry makes, you accepting these terms officially makes you Cherry's submissive. 'Beautiful, my dear. I'm so happy to have found someone who is compatible with my tastes. I shall take very good care of you, I promise.' By the time you are done with the conversation, you can see that the fox already got slightly excited, probably thinking of all the things you could be doing now, that you have agreed on all her conditions. 'Now, with that finally out of the way, I am certain we shall have a lot of fun together.'";
+				TraitGain "Dominant Fox" for Cherry;
+				now Energy of Cherry is 4;
+			else:
+				LineBreak;
+				say "     To be honest, you really do not like to always be the bottom, so you let her know that. 'Oh, that is... curious, given your eagerness from before. But I don't judge. We can still have other kinds of fun, I suppose. If you ever change your mind, however, you can come talk to me, again.' The conversation is over as you deny her last requirement, but she does not take it in any bad way, still willing to converse with you if you wish so.";
+		else:
+			LineBreak;
+			say "     You have to draw the line here, as you are not looking to have anyone's kids anytime soon, or at least with her. 'I see. A shame, but that is a deal breaker for me, then. We can still have some harmless sex with just infertile sperm going inside you, I suppose. That is nowhere near as fun, though... But alright. If you change your mind, you can come talk to me, again.' The conversation is over as you deny her first requirement, but she does not take it in any bad way, still willing to converse with you if you wish so.";
+			now Sterile of Cherry is true;
+	else if Energy of Cherry > 3:
+		say "     You would like to talk to Cherry about your conditions as her submissive. She listens to what you have to say with all the attention. 'Yes, my dear? What is it that you want to discuss?'";
+		LineBreak;
+		say "     [link](1)[as]1[end link] - Transformation during sex.";
+		say "     [link](2)[as]2[end link] - Pregnancy matters.";
+		say "     [link](3)[as]3[end link] - Nothing, actually.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to talk about transformation, [link]2[end link] to talk about fertility or [link]3[end link] to quit the conversation.";
+		if calcnumber is 1:
+			LineBreak;
+			if "Transformative Sex" is listed in traits of Cherry:
+				say "     'Certainly! I hope you like the prospective of becoming a lovely pink fox like me? Or do you wish to change your mind?' Currently, sex with Cherry [bold type]will cause you to get the Pink Fox transformation[roman type] effect.";
+			else:
+				say "     'Of course! Do you wish to allow yourself to become a lovely pink fox like me?' Currently, sex with Cherry [bold type]is not causing any transformative effects[roman type] on you.";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Allow transformation.";
+			say "     ([link]N[as]n[end link]) - No transformation.";
+			if player consents:
+				say "     You say that you are definitely into it and that she could feel free to do so. She nods with a smile and a hint of blush appears on her cheeks, but she tries hard to not show it. 'That is most delightful, my dear... I do appreciate your agreement on that. Although, if you, for some reason, wish to not keep getting transformative effects from our encounters, just let me know.'";
+				say "     Cherry is [bold type]now allowing her infection into you[roman type] and will transform you during sex.";
+				TraitGain "Transformative Sex" for Cherry;
+			else:
+				say "     You apologize, but that is something you would not like to have happening. She gives you an understanding nod. 'That's fine. Thank you for being honest, I truly appreciate you for being truthful with me. If you do change your mind, however, I'll be glad to hear it from you.'";
+				say "     Cherry is [bold type]no longer transforming[roman type] you during sex.";
+				TraitLoss "Transformative Sex" for Cherry;
+		else if calcnumber is 2:
+			LineBreak;
+			if Sterile of Cherry is false:
+				say "     'Oh, of course... What is it, my dear? Is something troubling you?' Currently, Cherry [bold type]is fertile[roman type].";
+			else if Sterile of Cherry is true:
+				say "     'Ah, yes! Shall I stop taking the contraceptives, finally? I don't wish to impose too much, but... I did allow this breach in our deal in your consideration.' Currently, Cherry [bold type]is taking contraceptives[roman type].";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Ask her to keep taking contraceptives, for now.";
+			say "     ([link]N[as]n[end link]) - You are okay with getting impregnated by her.";
+			if player consents:
+				LineBreak;
+				if Sterile of Cherry is false:
+					say "     Unfortunately, due to some personal circumstances, you have to ask her to take contraceptives in order to prevent pregnancies, as you cannot allow that to happen, right now. 'Oh? But, my dear, that is part of my deal with you. Is something the matter?' she asks, and you explain that, for now, that would be for the best of both. 'I see... I really can't deny such a request from you, although I'm sad to hear. Very well, I shall begin to take contraceptives. Hopefully this isn't forever... but I'll do this for you.'";
+				else:
+					say "     Unfortunately, things have not changed for you, so you must ask Cherry to continue taking her contraceptives. She looks disappointed, but does not fight it. 'Ah... I was getting my hopes up. Surely, my dear, I'll keep doing so... For you. I just hope it isn't forever...'";
+				say "     Cherry is [bold type]no longer fertile[roman type] and will not impregnate you during sex.";
+				now Sterile of Cherry is true;
+			else:
+				LineBreak;
+				say "     You tell her that you are more than happy to bear her kits, and she seems delightful to hear it. 'Good! That is... very pleasant to know. Very well, then. I like to hear I don't need to take any contraceptives measures with you. I can't wait to see you swollen with my kits... That'll be a delicious sight.'";
+				say "     Cherry is [bold type]now fertile[roman type] and will impregnate you during sex.";
+				now Sterile of Cherry is false;
+		else if calcnumber is 3:
+			LineBreak;
+			say "     You tell her that it is nothing, actually. She gives you a questioning look, but drops the subject when you do.";
+
 Section 3-2 - Cherry Sex menu
 
 Instead of fucking Cherry:
-	say "[CherrySexMenu]";
+	if "Dominant Fox" is listed in traits of Cherry:
+		say "[CherryDomSex]";
+	else:
+		say "[CherrySexMenu]";
 
 to say CherrySexMenu:
 	if Libido of Cherry is 0:
@@ -304,5 +449,35 @@ to say CherryFuck:
 		NPCSexAftermath Player receives "PussyFuck" from Cherry;
 	else:
 		NPCSexAftermath Player receives "AssFuck" from Cherry;
+	if "Transformative Sex" is listed in traits of Cherry:
+		infect "Pink Fox";
+
+to say CherryDomSex:
+	if lastfuck of Cherry - turns < 6:
+		say "     You move towards Cherry with a suggestive look, but she quickly dismisses you. 'So quickly after our last round? Give it some time, now... You can't get everything at once...!' she says, in a kind of a playful way. Maybe you should wait some time before asking her again.";
+	else:
+		say "     You move towards Cherry with a suggestive look, and she seems receptive to your advances. 'Oh? Is my pet in the mood for some play?' She eyes you from above while she is still sitting on her couch, having you kneel before her as you await her decision regarding what to do with you.";
+		WaitLineBreak;
+		let randomnumber be a random number from 1 to 2; [adjust the latter number for the number of options]
+		if randomnumber is:
+			-- 1: [Cherry Dom Fuck]
+				say "     'How about we put your mouth to work while I consider breeding you? That sounds like a lovely idea, actually...' she asks, but to you, that sounds like an order. As she shifts her position slightly to allow you to approach her, the one thing that jumps to the eye is her cock raising to attention when you just get closer. You nod respectfully before your mistress, who smiles at your obedience, as you begin to wrap your lips around her girthy shaft, slowly hardening even further. With your hands, you jerk it at its base while your tongue circles around the tip, then bury several inches deep in your mouth. 'You like it? It's a treat for being such a good [boygirl]...'";
+				say "     With as much enthusiasm as you can gather, you suck on her cock, but more than that, you worship it. You want her to be satisfied with your efforts when she sees you have made her hard and ready to put it in your [if player is female]pussy[else]ass, to fuck you until she delivers her babies inside you. Rubbing it, pushing your lips up and down against her member, licking it all over and even tilting your head around to give her everything, Cherry notes your eagerness. The pink fox seems quite pleased with you when you look at her in the eyes, a sweet smile forming across her face like the caring mistress she is, as she forward her hand and strokes your cheek affectionately. 'Good job, pet. I'm ready, now.'";
+				WaitLineBreak;
+				say "     As you hear this, she pulls her cock away from your mouth, with this popping sound as your lips slide across its head. She stands up, with her nine inch cock throbbing and ready to bend you over. But you know what she wants before she says it, and you get on all fours in front of her, arching your back and exposing your rear side to her. 'What a lovely sight...' she says as she squeezes one of your buttcheeks, getting behind you to align her cock with [if player is female]one of your entrances[else]your anal entrance[end if]. At first, she teases you with it, only rubbing her wet tip against [if player is female]your wet curls[else]your sensitive pucker[end if], and that makes you want it very badly. You end up mindlessly seeking for it, pushing your rear side backwards, but she stops you, holding you still.";
+				say "     'You're so impatient, my dear... But I'm pleased to see you really want this...' She then begins to press her erection against you, slowly pushing it in as you feel that cock of hers entering you, a delightful sensation of pleasure suddenly striking your entire self. Cherry keeps hold of your hips as she carries on burying her length inside you, pushing inch after inch into your [if player is female]sex[else]ass[end if]. This causes you to let out a moan as your insides are taken by your mistress, who proceeds to thrust back and forth when her tool finally finds itself fully inserted into you, besides the knot. You feel that pretuberancy bumping against your [if player is female]vulva[else]hole[end if] as she fucks you, slowly at first, taking her time to feel you up from the inside.";
+				WaitLineBreak;
+				say "     But Cherry is only sweet and slow for a while, until you feel her practically climbing on top of you and picking up the pace. You begin to feel her weight on top of you, her sheer power keeping you pinned down underneath her as she fucks you deep, then harder, making your insides bounce with the forceful impact of her thrusts. 'Relax, my pet... Let me take care of you.' She continues this rhythm, going at it faster and faster without letting go as you are only left there, on all fours, taking it doggy style from the dominant pink fox. For a rather refined lady, she does some really mean thrusts, going at it so hard that the momentum sends you back and forth along the motion.";
+				say "     Her knot begins to want to go inside you, as well, and as you feel her getting close, the pink fox finally pushes in completely, locking herself into you. 'Take it, pet... Take it all...!' she moans out loud, her cock throbbing intensely as her balls begin to send the cum out of her and into your [if player is female]womb[else]bowels[end if]. You take every single drop from beginning to end, all part of a very generous load Cherry deposits in you, filling you up with warm and creamy jizz that you can already feel sloshing within you. The thrill of getting bred by your mistress also made you climax just right after she did, [if player is male]your cock releasing your own load on the floor[else]an intense wave of pleasure overtaking you as your bottom half quivers in ecstasy[end if]. She takes a moment to catch her breath, seeing that she is locked into you.";
+				WaitLineBreak;
+				say "     'I'm pleased that you enjoyed yourself as well, pet. We might continue later on. For now...' she trails off in her words as she grabs you from behind, her hands over your torso as you lie down on the groun with her on top of you. 'Let us enjoy each other's embrace until I'm able to pull out. Then, I'll make some tea for us, if you want.' You and Cherry remain there, lying down on the floor and hugging each other as you wait for her cock to soften down while still inside you. Her fur feels really soft against your body, which does cause you to close your eyes, feeling a little drowsy. You both decide to take a little nap together before thinking of getting up.";
+				if player is female:
+					NPCSexAftermath Player receives "PussyFuck" from Cherry;
+				else:
+					NPCSexAftermath Player receives "AssFuck" from Cherry;
+				if "Transformative Sex" is listed in traits of Cherry:
+					infect "Pink Fox";
+			-- 2: [Cherry Normal Fuck]
+				say "[CherryFuck]";
 
 Cherry ends here.
