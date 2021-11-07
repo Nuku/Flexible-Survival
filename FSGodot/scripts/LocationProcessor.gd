@@ -6,7 +6,7 @@ The job of the location processor is to keep track of the player and manage the 
 
 signal response_generated(text_response, is_text)
 
-var input_processor = preload("res://InputProcessor.gd")
+var input_processor = preload("res://scripts/InputProcessor.gd")
 
 var location_exits: Dictionary = {}
 var current_room
@@ -16,7 +16,7 @@ func _ready() -> void:
 	#connect to room class
 	self.add_to_group("room trackers")
 	get_tree().call_group("rooms", "compile_dictionaries")
-	input_processor.connect("room_switch_intended", self, "handle_room_switch")
+	#input_processor.connect("room_switch_intended", self, "handle_room_switch")
 
 """
 FUNCTION:
@@ -31,7 +31,7 @@ func initialize_player_start_location(start_room: Node):
 FUNCTION:
 """
 
-func update_current_room(new_room):
+func update_current_room():
 	current_room = self.get_child(0).get_child(0)
 
 """
@@ -77,10 +77,12 @@ FUNCTION:
 func handle_room_switch(target_room):
 	var number_of_children = self.get_child(0).get_children()
 	print(number_of_children)
+	var debug_counter = 0
 	for i in self.get_child(0).get_children():
-		print("this is an iteration")
+		#print("this is an iteration")
+		#debug_counter  += 1
 		if target_room == i.room_name:
-			#print("found it")
+			print("found room")
 			#moves i, the current child in the itteration, to the top of the index
 			self.get_child(0).move_child(i, 0)
 			#make sure to update location_processor first otherwise who knows which order they will be updated in. some may be left behind. 
@@ -90,6 +92,8 @@ func handle_room_switch(target_room):
 			get_tree().call_group("room trackers", "update_current_room")
 			var new_room_string = _compile_roomcard_string(i)
 			emit_signal("response_generated", new_room_string, false)
+		#elif debug_counter ==  :
+			#print("Room not found")
 		#child_index = child_index + 1
 """			
 FUNCTION:
@@ -97,7 +101,7 @@ FUNCTION:
 """
 
 func _on_room_information_sent(sending_room, room_exits) -> void:
-	print("location_processor_recieved signal")
+	print("location_processor_recieved signal from: " + sending_room)
 	location_exits[sending_room] = room_exits
 	print(location_exits)
 

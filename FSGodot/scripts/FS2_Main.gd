@@ -62,7 +62,7 @@ func _ready() -> void:
 FUNCTIONS=============================================================================================================
 """
 
-func update_current_room(new_room):
+func update_current_room():
 	current_room = location_processor.current_room_requested()
 """
 FUNCTION:

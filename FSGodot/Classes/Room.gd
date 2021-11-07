@@ -53,6 +53,7 @@ func prepare_information():
 	#executes each block of code if the value is true
 	match true:
 		north_exit:
+			print("north exit found, writing to dictionary----------------------")
 			room_exits["north"] = north_room_name
 			#this is needed or the match statement will end on the first match
 			fixing_stupid_bug = true
@@ -68,21 +69,28 @@ func prepare_information():
 		west_exit:
 			room_exits["west"] = west_room_name
 			fixing_stupid_bug = true
+			continue
 		northeast_exit:
 			room_exits["northeast"] = northeast_room_name
 			fixing_stupid_bug = true
+			continue
 		northwest_exit:
 			room_exits["northwest"] = northwest_room_name
 			fixing_stupid_bug = true
+			continue
 		southeast_exit:
 			room_exits["southeast"] = southeast_room_name
 			fixing_stupid_bug = true
+			continue
 		southwest_exit:
 			room_exits["southwest"] = southwest_room_name 
 			fixing_stupid_bug = true
+			continue
 		up_exit:
+			print("Up exit found, writing to dictionary------------------------")
 			room_exits["up"] = up_room_name
 			fixing_stupid_bug = true
+			continue
 		down_exit:
 			room_exits["down"] = down_room_name
 			fixing_stupid_bug = true
