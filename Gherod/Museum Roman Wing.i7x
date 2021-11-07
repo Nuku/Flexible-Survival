@@ -287,8 +287,100 @@ to say RWRomanSoldierStatueAwakening:
 		ItemGain ancient gladius by 1;
 		now Resolution of LarsAwakened is 99;
 
+instead of going to Museum North Hub while (Resolution of LarsGenitals is 1 or Resolution of LarsGenitals is 2):
+	say "     As you explore the northern hub of the museum, you recall a mental note on your quest to help Lars with gaining some form of manhood. Do you wish to do that right now?";
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
+	if player consents:
+		LineBreak;
+		say "     After giving it some thought, you have decided to go look for this mythological wing the roman soldier spoke about. Soon, you find out that this hub has plenty of them, and that the difficulty will be in finding one that would actually help you in this matter. Perhaps you do not need an entire division full of greek, roman or norse gods, or from some other era, even though they could contain something of interest. But looking inside is still somewhat entertaining, as all gods have some form of statues that are quite devoid of any clothing, true works of art. One of these rooms must at least have something, but none of them, so far, seem to hold anything out of the ordinary. Only quite a few handsome statues and trinkets associated with them.";
+		say "     So, you keep looking, going from one wing to the other, until there is something that catches your eye. It is quite a curious wing that you seriously doubt has anything [']mythological['] about it, but seems to be quite what you need. A wing full of [bold type]phallic[roman type] sculptures and objects. It somehow feels very odd that you found some place like this when you specifically needed something related, of all the things you could have found, instead. Now, your curiosity has truly been instigated, and you cannot leave without at the very least examining its contents up close. Taking your time to slide the grand door open, you finally step inside and glance around the... phalli-filled wing.";
+		WaitLineBreak;
+		say "     Despite the actual state of the world outside, you do not think you have seen this many cock-shaped objects together in one single place. They do not look like sex toys, just simply trinkets or artifacts that, you think, would serve some ritualistic purpose. You also see paintings hanging on the walls of, you guessed it, prime examples of penises of various shapes and sizes, drawn to their very last detail in a plethora of different angles. Just being in this wing makes you feel slightly bothered, as the amount of dicks scattered around is almost overwhelming. But you have got a quest to focus on, and you shall do so without letting all these bold masterworks distract you from your goal.";
+		say "     With that said, your eyes do catch a certain... different phallus, standing atop an old-looking cabinet. This one looks pretty much like a stone-crafted sculpture of a realistic human-looking dong, complete with a sack and everything, fully erect and measuring at 8 inches in length. Right beside it, however, is another quaint-looking one, shaped like a sort of tentacle. Perhaps one of these could work? You have absolutely no idea, but these are objects you can bring with you and offer Lars quite easily. The question now is... which one do you want to bring with you and try out first? You suppose you could just leave and ask Lars which one of these he would like better before picking one. After all, he is in the same building and a little walk away from here...";
+		LineBreak;
+		say "     [link](1)[as]1[end link] - Grab the human one.";
+		say "     [link](2)[as]2[end link] - Get the tentacle one.";
+		say "     [link](3)[as]3[end link] - Leave, for now.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-4)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to grab the human-looking phallus, [link]2[end link] to grab the odd tentacle phallus or [link]3[end link] to leave without grabbing anything.";
+		if calcnumber is 1:
+			LineBreak;
+			say "     Figuring that this would be the safest option, you get your hands on the eight inch-long penis and take it with you. Strangely, the stone feels warm and smooth to the touch, pretty much like how you felt when you laid your fingers on Lars['] skin. This could only mean something good, right?";
+			now Resolution of LarsGenitals is 3;
+		else if calcnumber is 2:
+			LineBreak;
+			say "     You cannot help but be very intrigued by this peculiar tentacle-shaped penis. It is pointy and seems like it would belong to a creature of the deep sea. As to why, you cannot really tell, it is just the feeling you get. Nonetheless, equipping a roman soldier statue with a tentacle between his legs could be quite fun. Hopefully, this one will work.";
+			now Resolution of LarsGenitals is 99;
+		else if calcnumber is 3:
+			LineBreak;
+			say "     ";
+			now Resolution of LarsGenitals is 2;
+	else:
+		LineBreak;
+		say "     You have decided to leave this for another time.";
+
 [**************************************************]
-Section 2 - NPC
+Section 2 - Completing Lars
+[**************************************************]
+
+Table of GameEventIDs (continued)
+Object	Name
+LarsGenitals	"LarsGenitals"
+
+LarsGenitals is a situation.
+ResolveFunction of LarsGenitals is "". Sarea of LarsGenitals is "Nowhere".
+
+[RESOLUTION STAGES]
+[0 - Nothing yet]
+[1 - Have talked to him and is set to explore the Museum's Mythological Section]
+[2 - Has found a room full of naked statues and phallic sculptures, but has done nothing yet.]
+[3 - Took a nicely big human 8-inch cock for Lars and it comes with instructions]
+[4 - Dick is in. It can be changed by talking to Lars about it. It's a magic cock, its size and shape can be modified with certain items]
+[99 - Took a strange long tentacle pointy cock for Lars - NOT A GOOD THING, it will corrupt Lars, make him tentacle rape the player and cause him to leave forever.]
+[100 - Gave the tentacle cock to Lars and got greeted by a manifestation of a Great Old One. The interaction has tainted the player in unknown ways.]
+
+to say LarsCompleted:
+	say "     A few moments later, you hear the roman soldier moan from behind you. 'O-oh... T-this feels... interesting...' he states as you are only left to wonder what is happening, right now, but you must remain looking the other way until he tells you to turn back around. 'I... think it worked, I can feel it as my own... I believe you can look, now.' Once he declares that you are now free to observe him, you turn to him and finally are able to witness Lars['] true completion. The cock is now part of him, exactly as it should, standing there throbbing, also like one normally would. His vestments remain laying on the floor, having freed his glorious muscular body, as the man removed them before going through the process of attaching the dick on him.";
+	say "     'So this is how it feels to have one... It's quite distracting. Feels really good to touch it and keep playing with it... How can [if player is male]you go by your day with this on you all the time? Do you[else]someone go by their days with this on them all the time? Do they[end if] eventually get used to having one, is that it?' You nod, and explain that most people do not really have to deal with that, as they are either born with it or are already used to have sexual desire through their entire life, mentioning, of course, that there could be rare exceptions. Lars cannot stop rubbing it with his hands as he just stares at it, dumbfounded. After a while, he even stops paying attention to you.";
+	WaitLineBreak;
+	say "     Do you think you should help him get acquainted with his new acquisition? Or should you just leave him be, to explore on his own?";
+	say "     ([link]Y[as]y[end link]) - Give him a handjob.";
+	say "     ([link]N[as]n[end link]) - Leave him alone for a while.";
+	if player consents:
+		LineBreak;
+		say "     Seeing that the roman soldier is having some trouble processing the newly added sensations, you decide to ask him if he would let you give him a hand. 'Uh... you want to? I'm... not going to refuse that...' he shyly states as he stops touching himself, letting go of his dick and waits for you, instead.";
+		WaitLineBreak;
+		say "[LarsSexHandjobFirst]";
+	else:
+		LineBreak;
+		say "     Maybe you should just leave him alone, it is not everyday someone gains a dick of his own to play with. Too many things at once could be overwhelming for the poor man.";
+	now Resolution of LarsGenitals is 4;
+	now LarsGenitals is resolved;
+
+to say LarsCorrupted:
+	say "     A few moments later, you hear an inhuman groan coming from behind you, followed by a sinister laugh. You cannot help but be worried at this, however, you wait, still. These sounds continue and the air around you begins to get chilly, but Lars has not still said anything. The roman soldier continues to moan in an increasingly deeper voice, and your heart begins to race. A sense of dread overtakes you as you feel movement coming from just a few steps on your back... 'You can look, now...' he says, but it is not him. His voice is too different, and as his hand appears on your shoulder, you notice a clear mismatch on the tone of his skin compared to what you remember of him, and somehow, that image seems to blur away in your mind.";
+	say "     Once your eyes meet Lars, you see what was once a roman soldier... Now something else, entirely. 'Don't you like this better?' he speaks, a mutating human-shaped creature with tentacles sprouting from its body, its skin and features becoming increasingly less familiar. Between his legs, you see the tentacle-shaped cock you brought him now alive, moving on its own and stretching outwards, thickening and dripping to lubricate itself. The monster grins as you look at him from head to toe, giving you the time to examine his body until you realize you have done something very wrong. 'A formidable host you have given me. A living statue who can last forever... This beats any body I could have taken, even yours...' The monster then laughs as his transformation reaches its completion.";
+	WaitLineBreak;
+	say "     'Have you ever heard of the Great Old Ones...? Know that you have made us stronger... Thus, perhaps I should personally thank you. Since you wanted your [']friend['] to have one of these so badly...' - his tentacle-shaped cock moves slowly towards you, along with multiple other tentacles just sprouting from his groin, - 'I'll let you have a taste of what they can do.' By the time he finishes his last sentence, the tentacle-dicks are creeping up your legs and crawling all over your body, the slick masses delivering a sticky liquid everywhere they go[if player is not naked], getting inside your clothes[end if] and squeeze themselves in most of your sensitive spots. The monster approaches you, taking you in for an embrace, letting you feel his scales as his cocks pry deeper into you...";
+	say "     Your ass becomes filled with a fat tentacle that keeps on pushing inwards[if player is female], as well as your pussy, who stretches to accomodate a second one[else if player is male], as a second one wraps itself around your cock, its wet body jerking it slowly[end if]. The other many, many tentacles simply overtake the rest of your body, going for any area that makes you squirm as the creature holds you close to him. Even the lower half of his face is now filled with tentacles, and they are quick to wrap around your head, forcing you to give him a kiss. You feel your face sinking in this mass of tendrils as a tongue, equally long and nimble, fills your mouth, covered in thick and salty saliva.";
+	WaitLineBreak;
+	say "     As the creature continues to pump his organs into you, wiggling and crawling deeper inside your body, you feel extraordinary pleasure, albeit couple with the feeling of great peril. But that, soon, ceases to matter, as your strength begins to leave you. This bliss is the only thing that lasts as everything you once held control of begins to shut down into numbness, your head falling heavy and only held by the creature's powerful grasp. You feel yourself diving into a deep slumber as your body is violated repeatedly by this odd monster, eventually getting a fill of his warm juices as they are deposited in you, a great number of times during your dormant state, until finally, you black out completely.";
+	WaitLineBreak;
+	clear the screen;
+	say "     At some point, you open your eyes as you find yourself lying down on the floor. You are still in the museum and in the roman wing, but you are so dizzy it takes you a long time to get up. Somehow, you feel like your body has been drained of its energy, unable to use its full strength. You feel weaker, even... And as you glance around, there is no sign of Lars. You struggle to remember that exactly happened, but there were... a lot of tentacles. Perhaps you should have given him that normal-looking cock, instead... Anyway, it is too late now. You must try to get up and leave this place, you have wasted enough time here.";
+	statchange "Stamina" by -2;
+	now Resolution of LarsGenitals is 100;
+	now Lars is nowhere;
+
+[**************************************************]
+Section 3 - NPC
 [**************************************************]
 
 Table of GameCharacterIDs (continued)
@@ -310,7 +402,7 @@ Asshole Depth of Lars is 8. [inches deep for anal fucking]
 Asshole Tightness of Lars is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 Cock Count of Lars is 1. [number of cocks]
 Cock Girth of Lars is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
-Cock Length of Lars is 9. [length in inches]
+Cock Length of Lars is 8. [length in inches]
 Ball Count of Lars is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Lars is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Lars is 0. [number of cunts]
@@ -344,10 +436,22 @@ instead of conversing Lars:
 	say "[TalkToLars]";
 
 to say TalkToLars:
-	say "     As your intention is to only speak with the roman soldier, you approach him as you consider what subject you wish to discuss with him. He eyes you back as you get closer with a warm smile on his face. 'Oh, hello there. Is there anything you need?' he asks, and lets you follow with whatever you wish to talk about.";
-	say "[LarsTalkMenu]";
+	if Resolution of LarsGenitals is 3:
+		say "     As you approach Lars with the intent to talk with him, you immediately pull the stone dong you found in the northern area of the museum and show it to him. His eyes seem to widen as he looks at the perfectly crafted penis. 'That is one amazing sculpture. Look at the level of detail... It is so realistic! And you just came across this?' he asks, and you nod, confirming his question and explaining everything to the last detail, in case there is a chance you missed anything important. 'There is only one way to find out if this works, then. If the stone used has the same characteristics as the one that made me... Close your eyes and turn around, I'm going to need some space. Then, I'll let you know when you can look back.'";
+		say "     You do as he says and await the results...";
+		WaitLineBreak;
+		say "[LarsCompleted]";
+	else if Resolution of LarsGenitals is 99:
+		say "     As you approach Lars with the intent to talk with him, you immediately pull the tentacle dong you found in the northern area of the museum and show it to him. His eyes seem to widen with worry as he looks at the oddly crafted penis. 'That... that's a really strange one. Why is it shaped like this? Feels like it belongs to an aquatic creature... Well, it could be, at least, interesting to experiment and see if this would work.' You nod, expectantly waiting for him to begin the test. 'There is only one way to find out if this works, then. If the stone used has the same characteristics as the one that made me... Close your eyes and turn around, I'm going to need some space. Then, I'll let you know when you can look back.'";
+		say "     You do as he says and await the results...";
+		WaitLineBreak;
+		say "[LarsCorrupted]";
+	else:
+		say "     As your intention is to only speak with the roman soldier, you approach him as you consider what subject you wish to discuss with him. He eyes you back as you get closer with a warm smile on his face. 'Oh, hello there. Is there anything you need?' he asks, and lets you follow with whatever you wish to talk about.";
+		say "[LarsTalkMenu]";
 
 to say LarsTalkMenu:
+	now LarsDoneTalking is false;
 	say "     [bold type]What do you want to talk to Lars about?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;
@@ -357,6 +461,18 @@ to say LarsTalkMenu:
 	now title entry is "Himself";
 	now sortorder entry is 1;
 	now description entry is "Ask him how he is doing";
+	[]
+	if Resolution of LarsGenitals <= 2:
+		choose a blank row in table of fucking options;
+		now title entry is "His lack of genitalia";
+		now sortorder entry is 2;
+		now description entry is "Ask him if anything can be done about it";
+	[]
+	if Resolution of LarsGenitals is 4:
+		choose a blank row in table of fucking options;
+		now title entry is "Changing his cock";
+		now sortorder entry is 2;
+		now description entry is "Talk to him about the possibility of changing his privates";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -375,6 +491,10 @@ to say LarsTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Himself"):
 					say "[LarsTalkHimself]";
+				else if (nam is "His lack of genitalia"):
+					say "[LarsTalkCockQuest]";
+				else if (nam is "Changing his cock"):
+					say "[LarsTalkCockChange]";
 				wait for any key;
 				if LarsDoneTalking is false:
 					say "[LarsTalkMenu]"; [looping back to keep talking with him]
@@ -390,10 +510,51 @@ to say LarsTalkHimself:
 	say "     You ask the former statue what he has been doing with his freedom, now that he is an actual living man, and if he has been faring well. He smiles and gives you a polite bow as he speaks, 'All is well, thanks to you. I am enjoying my freedom a lot and learning new things every day. It would definitely not have been possible if you hadn't freed me. Feels good to breathe and feel alive, for once.' There seems to be a genuine feeling of joy coming from the roman soldier, and he makes sure to let you know that he is very happy with the outcome of your actions. 'I need only to learn more about this... thing of being a person. I feel like the world is a tad strange outside... Every creature seems to want to rub themselves on me.'";
 	say "     Yes, perhaps it is best that he sticks to this room, for now. Not that he is not a capable fighter, but it is utter chaos, out there. Too many things would be too difficult to explain. 'But I'm fine, of course. And I manage to survive. Turns out I'm a very good scavenger! Anyway, I enjoy your visits. Perhaps you should come by more often... I'd like that.' You then leave the warrior to his doings. Perhaps in the future you may be able to help him more.";
 
+to say LarsTalkCockQuest:
+	if Resolution of LarsGenitals is 0:
+		say "     As you recall Lars having this peculiarity about him, you decide to ask him if anything can be done to help him regarding his lack of genitalia. 'I'm not certain it's a problem... You don't have to go out of your way to do anything like that for me, but if you really want to...' - he pauses as he thinks to himself - 'I suppose there's a way. This is a museum, after all... Is there any sort of [bold type]mythological[roman type] room with things related to gods and myths? Who knows, you might be able to find something magical in there that I could use? I'm pretty sure I can interact with magic objects, so... It'd be worth a try if you really want to do this.'";
+		say "     You could [bold type]walk around the Museum[roman type] and see if you can find anything useful to help Lars. Perhaps the [bold type]North Hub[roman type] has a higher chance of containing something of value for this quest?";
+		now Resolution of LarsGenitals is 1;
+	else if Resolution of LarsGenitals is 1:
+		say "     You bring the subject of Lars['] lack of genitalia to the roman soldier himself, still with empty hands. 'Have you tried the [bold type]North Hub[roman type]? I think it connects to several mythological-themed wings... Maybe you could find a god of fertility artifact or something. I just want to avoid touching things I shouldn't, since I'm basically part of the museum and I don't know what would happen...'";
+	else if Resolution of LarsGenitals is 2:
+		say "     You bring the subject of Lars['] lack of genitalia to the roman soldier himself, still with empty hands, but you tell him that you found this room. 'You found it? And there was nothing you could bring?' he asks, and you make a brief description of what was in there, all the phallic-shaped sculptures and whatnot, including the strange tentacle, and he seems pleased to know. 'So there's something in there. Good! Maybe you can bring that plain looking one. I... have a bad feeling about the other. Tentacles are... a bad omen.' You nod as you hear his words.";
+
+to say LarsTalkCockChange:
+	say "     You happen to mention Lars['] dick to him, shifting his focus to the subject immediately, and ask if it would be possible to change it, somehow. 'Change it? Like shape and size? I suppose it's possible, but I'd like to... get used to its normal state for a while longer, if you don't mind.'";
+	say "     It seems that currently, you are unable to propose any changes to his manhood. Perhaps in the future (once the content gets added)?";
+
 instead of fucking Lars:
 	say "[SexWithLars]";
 
 to say SexWithLars:
 	say "<<Author's Note: Currently unavailable, to be updated in the future!>>";
+
+to say LarsSexHandjobFirst:
+	say "     You walk up to him, hands free and ready, as the roman soldier's manhood is already throbbing for attention. With a simple touch, you make him moan as your fingers lay on his shaft, so hard that it feels like rock once you start stroking it. He only observes you, barely able to contain himself, until he really does not, as several moans continuously escape his lips. 'Feels... really good... You've got nice hands...' he tells you, as your stroking motions steadily progress into something a little faster, but not too much. You still want him to last, which will not happen if you stroke him too hastily. Lars already has a hard time enduring all the pleasure you are giving him, but the man holds well enough for a while.";
+	say "     Figuring that he might enjoy some additional stimulation, you move your hand through his abs and muscular torso as your other hand keeps his meat hard. Naturally, with more good things happening to him, his breathing deepens, and you occasionally feel him touching you back, whether on your shoulder, or lower backside, sometimes butt... Albeit, all too shyly. For a few seconds, you look at each other and lock gazes, and that allows you to notice the soldier blushing. 'This is incredible... The way you touch it is... Hnng... So good...!' These sensations are new to him, so everything feels more intense than it would normally be. Perhaps a handjob is really all he can take, for now, at least without blowing his load right away.";
+	WaitLineBreak;
+	say "     But touching such an athletic, handsome and statuesque man does not leave you indifferent. Lars is the prime example of masculinity, now with all the extra bits added, having started with a really good size, girth and shape, along with a pair of nuts hanging underneath of satisfactory volume. A temptation surges in your mind when looking at his lips, soft-looking, plump, yet fitting his beautifully manly face just right, and so close to yours. The move is not made by you, though, as both your lips collide. The roman man leans in to kiss you and does not stop, even gives you some tongue in a surprising display of skill. In fact, he does it so well it makes your [if player is male]own dick harden[else if player is female]pussy moist[else]libido spike[end if].";
+	say "     Then, even more surprisingly, you find his hand on your body, running down through it towards your crotch. Lars pulls his mouth back briefly, only to say 'It is only fair that I repay you in the same way...' before slowly returning those so smooth lips of his to yours. Kissing him feels delightful, and so does his touch once his fingers [if player is male]are wrapped around your meat[else if player is female]are pressing against your vulva[else]are rubbing around your genderless, but still sensitive, groin[end if]. The excitement causes you to stroke him faster, and he quickly picks up the pace, both of you approaching the edge of your climaxes at a very fast pace.";
+	WaitLineBreak;
+	if player is male:
+		say "     With the way both your cocks point forward, frotting is inevitable, and a little bit too arousing. Lars['] perfect meat is so incredibly smooth, warm and hard that, when it presses against yours, it makes you so rock solid it leaves you only a few strokes away from cumming. He then softly pushes your hand away and takes both your organs, rubbing them together in fervid passion, in a way that even your balls touch. All this full contact eventually causes you both to get past the point of no return, once your gonads begin to rise and pump all the load out through your shafts. You both cum at the same time, coating each others['] manhoods in plenty of thick semen.";
+	else if player is female:
+		say "     With the way his cock points forward, and given how you are standing right in front of him, it inevitable ends up brushing against your vagina. Lars['] perfect meat is so incredibly smooth, warm and hard that, when he makes it press against your womanhood, it leaves you so very close to bursting in ecstasy right there. Everything you can think of is jumping right on him and let him penetrate you deep, taking that hot cock of his in fervid passion, but the soldier already enjoys himself a little too much feeling your juices on the tip of his penis. You do feel it almost going in, brushing against your lower lips, but with that, comes an intense throbbing, and then, a hot gush of cum against your privates. This sudden splash gets you too, as this wave of pleasure hits you thorough.";
+	else:
+		say "     It only takes several more strokes to cause the soldier to moan, even while kissing you, your hands moving as fast as they can, and soon, your efforts bring Lars past his point of no return, gushing out cum all over your midriff and below as his orgasm hits him right there. You, too, are taken by all the excitement and made to feel a spike of pleasure that makes every area of your body twitch and squirm.";
+	WaitLineBreak;
+	say "     With the deed done, the soldier lets go of you, realizing the mess he[if player is male] and you[end if] made. 'Wow... So this is what it feels like? I... really want to try out more of this!' He then looks around for something that would help you clean the cum, but the roman wing does not really have anything of use. The soldier's abs are still left covered in his own jizz...";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Lick the cum off his abs.";
+	say "     ([link]N[as]n[end link]) - Do nothing. You are sure he will find a way to clean this mess.";
+	if player consents:
+		LineBreak;
+		say "     You let the soldier know that you can take care of at least some part of the mess as you kneel before him. His eyes widen, clueless regarding what you are about to do, and then, he sees your tongue sliding across every single abdominal muscle, outlining every bump, every ripple, precisely and steadily, taking in all the remains of your... practically lovemaking session, into your mouth. His hard abs feel just like what you would expect, rigid, against your tongue, and his cum, creamy, tasty, a little salty, even, delightfully coating your taste buds. Once you are done, you look up at him, licking your lips, having left him cleaned up and a little bit shiny from your saliva. His jaw has dropped.";
+		say "     'I...' he tries to speak, but words fail him. You can tell he was not expecting it, but he did not seem to dislike it, either. In fact, he is blushing and absolutely dumbfounded. Perhaps you should just leave him, for the time being. Once you stand up, his eyes follow you, and he finally talks. 'T-thank you. I... Still have to... Uhm, find a way to... clean the rest. I-I wouldn't ask you to do the same on the floor, of course... That'd be... Inappropriate...' He stutters through all his words, but you nod and smile to him. You cannot tell it just from this alone, but judging by his half-hard cock still not accepting that it has to go down, the roman soldier might actually be into what you just did...";
+	else:
+		LineBreak;
+		say "     'Well, thank you for this. I've now got to find something I can use to clean this mess...' It seems you were right, so, without anything else to do, for now, you let him know it was nothing and that you were happy you could help him. 'You really did! I didn't know what I was losing before I got this! Now, hopefully, I'll still have the drive to care for myself and this space instead of playing with my dick all day... Maybe you could, you know... pass by and help me out more times? Only if you want, of course.' He is a little shy about it, but you nod and tell him you will consider, before stepping away.";
+	NPCSexAftermath Lars receives "Other" from Player;
 
 Museum Roman Wing ends here.

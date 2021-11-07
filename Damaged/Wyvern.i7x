@@ -75,9 +75,16 @@ to say WYVDESC:
 			now sex entry is "Female";
 		if WYVGEN is 1:
 			setmongender 4; [creature is female]
-			project the figure of Wyvern_female_icon;
+			if Daytimer is day:
+				project the figure of Wyvern_female_day_icon;
+			else:
+				project the figure of Wyvern_female_night_icon;
 		else:
 			setmongender 3; [creature is male]
+			if Daytimer is day:
+				project the figure of Wyvern_male_day_icon;
+			else:
+				project the figure of Wyvern_male_night_icon;
 		say "     [if showlocale is true]As you explore the city, you suddenly[else]Suddenly, you[end if] [if ishunting is true]run into a wyvern[else]find yourself ambushed by a wyvern[end if], swooping down to confront you, the earth trembling as it lands. Looking at the beast proper, it appears to be slightly larger than a pickup truck, wings doubling as its foretalons, thick legs supporting its massive weight. From what you can tell it appears to be [bold type][if WYVGEN is 0]male[else]female[end if][roman type].";
 		if level of Player < 20:
 			say "     With a low growl it opens its great maw, hailing you with a barrage of strange, yellowish-white ooze, the strong adhesive fusing you to the ground. You manage to pry some of the viscous fluid free of you, but if feels as though contact with it has drained you slightly. This monster is simply too much for you to handle right now, and your best bet is simply to pull yourself free and make a run for it.";
@@ -118,6 +125,7 @@ to say WYVDEF:
 				if WYVGEN is 0:
 					wyvmalevic;
 				else:
+					project the figure of Wyvern_female_icon;
 					wyvfemvic;
 			else:
 				say "     You choose to leave the creature as-is, turning to depart.";
@@ -233,6 +241,7 @@ to say WYVVIC:
 			else:
 				say "     With little ceremony or care, you watch as the beast's dick retreats back from whence it hid before he pulls away, taking to the sky once more. It takes you several moments to figure out up from down after the whole ordeal before you start pulling yourself free of your primitive bondage. Once free, it takes quite a while to clean yourself off and just as long to not feel completely sore all over.";
 	else: [female]
+		project the figure of Wyvern_female_icon;
 		if "Touched by Madness" is listed in feats of Player and ((scalevalue of Player is 3 and player is twistcapped) or scalevalue of Player > 3) and ((player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 4 succeeds)) and boundstate is false:
 			say ". The monster circles around your for a moment, intent on asserting her dominance by screeching at you as she eyes you over, sizing you up with a rather peculiar expression...";
 			say "     Her eventual approach reveals she is already heavy with eggs, making you wonder [if scalevalue of Player is 3]how she'd exactly intends to fit you in there[else]why she'd bother dealing with you in the first place[end if]. [if scalevalue of Player is 3]Moving over[else]Climbing on top of[end if] you, Bestial vent poised against [if Cunt Count of Player > 1 and Cunt Depth of Player > 14 and anallevel < 3]one of your exposed cunts[else if Player is female and Cunt Depth of Player > 14 and anallevel < 3]your exposed cunt[else]anal ring[end if], her pained low grunts elucidate on her twisted intent.";
@@ -392,6 +401,7 @@ to wyvmalevic:
 			now Trixieexit is 1;
 
 to wyvfemvic:
+	project the figure of Wyvern_female_icon;
 	now calcnumber is -1;
 	say "     What will you do?";
 	let Trixieexit be 0;

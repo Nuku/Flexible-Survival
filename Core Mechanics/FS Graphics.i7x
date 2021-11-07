@@ -194,7 +194,11 @@ Figure of Wildcat_icon is the file "wildcat_ig.jpg".
 Figure of Wood_Elf_icon is the file "Wood Elf.jpg".
 Figure of WrestlingWolf_hard_icon is the file "Wrestling Wolf_hard.jpg".
 Figure of WrestlingWolf_clothed_icon is the file "Wrestling Wolf_clothed.jpg".
+Figure of Wyvern_female_day_icon is the file "Wyvern_female_day.jpg".
+Figure of Wyvern_female_night_icon is the file "Wyvern_female_night.jpg".
 Figure of Wyvern_female_icon is the file "Wyvern_female.jpg".
+Figure of Wyvern_male_day_icon is the file "Wyvern_male_day.jpg".
+Figure of Wyvern_male_night_icon is the file "Wyvern_male_night.jpg".
 Figure of YamatoDragon_red_hard_icon is the file "YamatoDragon_red_hard.jpg".
 Figure of YamatoDragon_red_soft_icon is the file "YamatoDragon_red_soft.jpg".
 Figure of YamatoDragon_green_hard_icon is the file "YamatoDragon_green_hard.jpg".
@@ -668,6 +672,22 @@ Figure of Map_Zoo_12_icon is the file "Zoo12.jpg".
 Figure of Map_Zoo_13_icon is the file "Zoo13.jpg".
 Figure of Map_Zoo_14_icon is the file "Zoo14.jpg".
 Figure of Map_Zoo_15_icon is the file "Zoo15.jpg".
+Figure of Map_Beach_Full_icon is the file "Map_Beach_Full.jpg".
+Figure of Map_Beach_1_icon is the file "Map_Beach_1.jpg".
+Figure of Map_Beach_2_icon is the file "Map_Beach_2.jpg".
+Figure of Map_Beach_3_icon is the file "Map_Beach_3.jpg".
+Figure of Map_Beach_4_icon is the file "Map_Beach_4.jpg".
+Figure of Map_Beach_5_icon is the file "Map_Beach_5.jpg".
+Figure of Map_Beach_6_icon is the file "Map_Beach_6.jpg".
+Figure of Map_Beach_7_icon is the file "Map_Beach_7.jpg".
+Figure of Map_Beach_8_icon is the file "Map_Beach_8.jpg".
+Figure of Map_Beach_9_icon is the file "Map_Beach_9.jpg".
+Figure of Map_Beach_10_icon is the file "Map_Beach_10.jpg".
+Figure of Map_Beach_11_icon is the file "Map_Beach_11.jpg".
+Figure of Map_Beach_12_icon is the file "Map_Beach_12.jpg".
+Figure of Map_Beach_13_icon is the file "Map_Beach_13.jpg".
+Figure of Map_Beach_14_icon is the file "Map_Beach_14.jpg".
+Figure of Map_Beach_15_icon is the file "Map_Beach_15.jpg".
 
 [emap - special]
 Figure of emap_special_signalnotfound_icon is the file "emap_special_signalnotfound.png".
@@ -1586,7 +1606,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Wood Elf"	Figure of Wood_Elf_icon	"Vashaa"	g-White	"normal"
 "Wrestling Wolf hard"	Figure of WrestlingWolf_hard_icon	"Vashaa"	g-White	"normal"
 "Wrestling Wolf clothed"	Figure of WrestlingWolf_clothed_icon	"Vashaa"	g-White	"normal"
-"Wyvern_female"	Figure of Wyvern_female_icon	"Anonymous"	g-white	"normal"
+"Wyvern_male_day"	Figure of Wyvern_male_day_icon	"Corbee"	g-white	"normal"
+"Wyvern_male_night"	Figure of Wyvern_male_night_icon	"Corbee"	g-white	"normal"
+"Wyvern_female_day"	Figure of Wyvern_female_day_icon	"Corbee"	g-white	"normal"
+"Wyvern_female_night"	Figure of Wyvern_female_night_icon	"Corbee"	g-white	"normal"
 "Xaedihr_Full"	Figure of Xaedihr_Full_icon	"Gherod"	g-black	"normal"
 "Xaedihr_FullMagic"	Figure of Xaedihr_FullMagic_icon	"Gherod"	g-black	"normal"
 "Xaedihr_FullNoRuby"	Figure of Xaedihr_FullNoRuby_icon	"Gherod"	g-black	"normal"
@@ -1812,6 +1835,22 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Map Zoo 13"	Figure of Map_Zoo_13_icon	"Goncalo"	g-black	"normal"
 "Map Zoo 14"	Figure of Map_Zoo_14_icon	"Goncalo"	g-black	"normal"
 "Map Zoo 15"	Figure of Map_Zoo_15_icon	"Goncalo"	g-black	"normal"
+"Map Beach Full"	Figure of Map_Beach_Full_icon	"Goncalo"	g-black	"normal"
+"Map Beach 1"	Figure of Map_Beach_1_icon	"Goncalo"	g-black	"normal"
+"Map Beach 2"	Figure of Map_Beach_2_icon	"Goncalo"	g-black	"normal"
+"Map Beach 3"	Figure of Map_Beach_3_icon	"Goncalo"	g-black	"normal"
+"Map Beach 4"	Figure of Map_Beach_4_icon	"Goncalo"	g-black	"normal"
+"Map Beach 5"	Figure of Map_Beach_5_icon	"Goncalo"	g-black	"normal"
+"Map Beach 6"	Figure of Map_Beach_6_icon	"Goncalo"	g-black	"normal"
+"Map Beach 7"	Figure of Map_Beach_7_icon	"Goncalo"	g-black	"normal"
+"Map Beach 8"	Figure of Map_Beach_8_icon	"Goncalo"	g-black	"normal"
+"Map Beach 9"	Figure of Map_Beach_9_icon	"Goncalo"	g-black	"normal"
+"Map Beach 10"	Figure of Map_Beach_10_icon	"Goncalo"	g-black	"normal"
+"Map Beach 11"	Figure of Map_Beach_11_icon	"Goncalo"	g-black	"normal"
+"Map Beach 12"	Figure of Map_Beach_12_icon	"Goncalo"	g-black	"normal"
+"Map Beach 13"	Figure of Map_Beach_13_icon	"Goncalo"	g-black	"normal"
+"Map Beach 14"	Figure of Map_Beach_14_icon	"Goncalo"	g-black	"normal"
+"Map Beach 15"	Figure of Map_Beach_15_icon	"Goncalo"	g-black	"normal"
 [emap - Capitol building]
 "emap - A Volcanic Crater"	Figure of emap_A_Volcanic_Crater_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Approaching the Capitol Building"	Figure of emap_Approaching_Capitol_Building_icon	"Wolfram Rolf"	g-black	"normal"
@@ -2196,6 +2235,8 @@ carry out artistcredits:
 	say "     Wolftaur by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Wood Elf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Wrestling Wolf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Wyvern Male by Corbee @ https://www.furaffinity.net/user/corneliablanka/[line break]";
+	say "     Wyvern Female by Corbee @ https://www.furaffinity.net/user/corneliablanka/[line break]";
 	say "     Wyvern Female by Anonymous[line break]";
 	say "     Yamato Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Yamato Dragoness by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
@@ -2395,6 +2436,7 @@ carry out artistcredits:
 	say "     Talov & Kerr by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "Maps:[line break]";
 	say "     Mall Map by Anonymous @ -[line break]";
+	say "     Beach Map by Goncalo @ https://www.artstation.com/beepe/[line break]";
 	say "     City Map by Goncalo @ https://www.artstation.com/beepe/[line break]";
 	say "     Library Maps by Goncalo @ https://www.artstation.com/beepe/[line break]";
 	say "     Red Light District Maps by Goncalo @ https://www.artstation.com/beepe/[line break]";
@@ -2419,7 +2461,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;
