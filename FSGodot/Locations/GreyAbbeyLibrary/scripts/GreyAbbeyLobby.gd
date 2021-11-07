@@ -43,7 +43,7 @@ func _ready() -> void:
 func compile_dictionaries():
 	grey_abbey_lobby_exits = grey_abbey_lobby.prepare_information()
 	emit_signal("room_information_sent", room_name, grey_abbey_lobby_exits)
-	print("")
+	print("Sending Grey_Abby_Lobby info")
 
 
 """

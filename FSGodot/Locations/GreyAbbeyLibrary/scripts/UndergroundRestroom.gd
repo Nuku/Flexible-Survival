@@ -1,7 +1,7 @@
 extends Node
 
-#create the bunker
-var bunker = FSRoom.new()
+#create the underground_restroom
+var underground_restroom = FSRoom.new()
 """
 SIGNALS/OUTPUTS================================================================
 """
@@ -32,7 +32,7 @@ export (String) var up_room_name
 export (bool) var down_exit
 export (String) var down_room_name
 #used to store a list of exit directions and the rooms they lead to
-var bunker_exits:  Dictionary = {}
+var underground_restroom_exits:  Dictionary = {}
 
 func _ready() -> void:
 	update_room_object()
@@ -46,9 +46,9 @@ func _ready() -> void:
 	#package all room information so it can be sent.
 
 func compile_dictionaries():
-	bunker_exits = bunker.prepare_information()
-	emit_signal("room_information_sent", room_name, bunker_exits)
-	print("aaa")
+	underground_restroom_exits = underground_restroom.prepare_information()
+	emit_signal("room_information_sent", room_name, underground_restroom_exits)
+	print("Sending underground_restroom info")
 
 
 """
@@ -56,28 +56,28 @@ FUNCTION:
 	updates the game's room object with the values selected by the writer in the editor.
 """
 func update_room_object():
-	bunker.room_name 			= room_name
-	bunker.room_description 	= room_description
-	bunker.north_exit 			= north_exit
-	bunker.north_room_name 		= north_room_name
-	bunker.south_exit 			= south_exit
-	bunker.south_room_name 		= south_room_name
-	bunker.east_exit 			= east_exit
-	bunker.east_room_name 		= east_room_name
-	bunker.west_exit			= west_exit
-	bunker.west_room_name		= west_room_name
-	bunker.northeast_exit		= northeast_exit
-	bunker.northeast_room_name	= northeast_room_name
-	bunker.northwest_exit		= northwest_exit 
-	bunker.northwest_room_name	= northwest_room_name
-	bunker.southeast_exit 		= southeast_exit
-	bunker.southeast_room_name	= southeast_room_name
-	bunker.southwest_exit		= southwest_exit
-	bunker.southwest_room_name	= southwest_room_name
-	bunker.up_exit				= up_exit
-	bunker.up_room_name			= up_room_name
-	bunker.down_exit			= down_exit
-	bunker.down_room_name		= down_room_name
+	underground_restroom.room_name 				= room_name
+	underground_restroom.room_description 		= room_description
+	underground_restroom.north_exit 			= north_exit
+	underground_restroom.north_room_name 		= north_room_name
+	underground_restroom.south_exit 			= south_exit
+	underground_restroom.south_room_name 		= south_room_name
+	underground_restroom.east_exit 				= east_exit
+	underground_restroom.east_room_name 		= east_room_name
+	underground_restroom.west_exit				= west_exit
+	underground_restroom.west_room_name			= west_room_name
+	underground_restroom.northeast_exit			= northeast_exit
+	underground_restroom.northeast_room_name	= northeast_room_name
+	underground_restroom.northwest_exit			= northwest_exit 
+	underground_restroom.northwest_room_name	= northwest_room_name
+	underground_restroom.southeast_exit 		= southeast_exit
+	underground_restroom.southeast_room_name	= southeast_room_name
+	underground_restroom.southwest_exit			= southwest_exit
+	underground_restroom.southwest_room_name	= southwest_room_name
+	underground_restroom.up_exit				= up_exit
+	underground_restroom.up_room_name			= up_room_name
+	underground_restroom.down_exit				= down_exit
+	underground_restroom.down_room_name			= down_room_name
 
 
 

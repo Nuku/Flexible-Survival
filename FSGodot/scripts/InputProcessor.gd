@@ -7,7 +7,6 @@ These are all the signals/outputs of this script to other scripts.
 """
 signal next_button_pressed              
 signal response_generated(text_response, is_text)                                        #tells the game that something triggered a text prompt that needs to be drawn on the screen.  
-signal current_room_requested(node_name)
 signal room_switch_intended(target_room)
 
 var current_room = null
@@ -63,6 +62,8 @@ func _on_NorthwestButton_pressed() -> void:
 		#emit signal to FS2_Main
 		emit_signal("response_generated", "You move Northwest.", true)
 		emit_signal("room_switch_intended", room_exits["northwest"])
+	else:
+		print("Exit not listed on button")
 
 
 func _on_WestButton_pressed() -> void:
@@ -71,6 +72,9 @@ func _on_WestButton_pressed() -> void:
 		#emit signal to FS2_Main
 		emit_signal("response_generated", "You move West.", true)
 		emit_signal("room_switch_intended", room_exits["west"])
+	else:
+		print("Exit not listed on button")
+
 
 func _on_SouthwestButton_pressed() -> void:
 	var room_exits = location_processor.location_exits[current_room.room_name]
@@ -78,13 +82,19 @@ func _on_SouthwestButton_pressed() -> void:
 		#emit signal to FS2_Main
 		emit_signal("response_generated", "You move Southwest.", true)
 		emit_signal("room_switch_intended", room_exits["southwest"])
+	else:
+		print("Exit not listed on button")
+
 
 func _on_NorthButton_pressed() -> void:
 	var room_exits = location_processor.location_exits[current_room.room_name]
 	if room_exits.keys().has("north"):
+		print("Exit listed on button")
 		#emit signal to FS2_Main
 		emit_signal("response_generated", "You move North.", true)
 		emit_signal("room_switch_intended", room_exits["north"])
+	else:
+		print("Exit not listed on button")
 
 func _on_UpButton_pressed() -> void:
 	var room_exits = location_processor.location_exits[current_room.room_name]
@@ -94,6 +104,9 @@ func _on_UpButton_pressed() -> void:
 		#emit signal to FS2_Main
 		emit_signal("response_generated", "You go up.", true)
 		emit_signal("room_switch_intended", room_exits["up"])
+	else:
+		print("Exit not listed on button")
+
 
 func _on_DownButton_pressed() -> void:
 	var room_exits = location_processor.location_exits[current_room.room_name]
@@ -101,6 +114,8 @@ func _on_DownButton_pressed() -> void:
 		#emit signal to FS2_Main
 		emit_signal("response_generated", "You go down.", true)
 		emit_signal("room_switch_intended", room_exits["down"])
+	else:
+		print("Exit not listed on button")
 
 func _on_SouthButton_pressed() -> void:
 	var room_exits = location_processor.location_exits[current_room.room_name]
@@ -108,6 +123,9 @@ func _on_SouthButton_pressed() -> void:
 		#emit signal to FS2_Main
 		emit_signal("response_generated", "You move South.", true)
 		emit_signal("room_switch_intended", room_exits["south"])
+	else:
+		print("Exit not listed on button")
+
 
 func _on_NortheastButton_pressed() -> void:
 	var room_exits = location_processor.location_exits[current_room.room_name]
@@ -115,6 +133,9 @@ func _on_NortheastButton_pressed() -> void:
 		#emit signal to FS2_Main
 		emit_signal("response_generated", "You move Northeast.", true)
 		emit_signal("room_switch_intended", room_exits["northeast"])
+	else:
+		print("Exit not listed on button")
+
 
 func _on_EastButton_pressed() -> void:
 	var room_exits = location_processor.location_exits[current_room.room_name]
@@ -122,6 +143,9 @@ func _on_EastButton_pressed() -> void:
 		#emit signal to FS2_Main
 		emit_signal("response_generated", "You move East.", true)
 		emit_signal("room_switch_intended", room_exits["east"])
+	else:
+		print("Exit not listed on button")
+
 
 func _on_SoutheastButton_pressed() -> void:
 	var room_exits = location_processor.location_exits[current_room.room_name]
@@ -129,3 +153,5 @@ func _on_SoutheastButton_pressed() -> void:
 		#emit signal to FS2_Main
 		emit_signal("response_generated", "You move Southeast.", true)
 		emit_signal("room_switch_intended", room_exits["southeast"])
+	else:
+		print("Exit not listed on button")
