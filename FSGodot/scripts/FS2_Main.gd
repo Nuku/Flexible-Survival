@@ -4,7 +4,7 @@
 SIGNALS:
 	These are all the signals/outputs of this script to other scripts. 
 """
-
+signal input_processors_node_references_sent
 """
 Scene references
 	Scenes not in the tree yet can be preloaded so they can be referenced. 
@@ -15,7 +15,7 @@ const RoomCard                  =   preload("res://RoomCard.tscn")
 export (int) var max_lines_remembered := 30
 
 var max_scroll_length       :=   0                                  #used to store and keep track of changes to the maximum scroll value   
-
+var current_room = null
 """
 ONREADY VARIABLES:
 	These variables are created as soon as the nodes enter the tree.
@@ -34,23 +34,36 @@ ON STARTUP, READY . ============================================================
 """
 #called when the node enters the tree for the first time.
 func _ready() -> void:
+	self.add_to_group("room trackers")
 	scrollbar.connect("changed", self, "autoscroll")
+	#location_processor.connect("response_generated", self, "process_generated_response")
 	input_processor.connect("response_generated", self, "process_generated_response")
+	
 	"""
-	NOTE:
+	WARNING:
 		The room and location nodes need to be added before any references to room information
 		or children of location processor can occur. 
 	"""
-	#fetches the first child node of the location(the current room) and passes it to the location processor for tracking
-	input_processor.initialize(location_processor.get_child(0).get_child(0)) 
-
-
+	#fetches the first child node of the location(the current room) and sends it to
+	#the initialize function in location processor. 
+	"""
+	NOTE:
+		this passes the current child node as a perameter. location processor doesn't need this since
+		it keeps track of it's own children. however, this perameter is meant to be replaced by 
+		a stored value representing wherever the player last left off. 
+	"""
+	input_processor.initialize_player_start_location(location_processor.get_child(0).get_child(0)) 
+	location_processor.initialize_player_start_location(location_processor.get_child(0).get_child(0))
+	#Send references to nodes
+	emit_signal("input_processors_node_references_sent", location_processor)
+	
 
 """
 FUNCTIONS=============================================================================================================
 """
 
-
+func update_current_room():
+	current_room = location_processor.current_room_requested()
 """
 FUNCTION:
 	The scroll step needs to be adjusted every time something is added to the scrollbar. This requires 
@@ -89,6 +102,7 @@ INPUT:
 	room panel or flat text. 
 """
 func process_generated_response(response_text, is_text: bool):                  #creates a new instance of a text object or room, customizes the text, then draws it.
+	print("preocess generated response was called with is text = " + str(is_text))
 	var response
 	if is_text:
 		response = Prompt.instance()
@@ -98,10 +112,10 @@ func process_generated_response(response_text, is_text: bool):                  
 		response = RoomCard.instance()
 		var RoomNameLabel = response.get_node("MarginContainer/VRoomContainer/RoomNameLabel")
 		var RoomBodyLabel = response.get_node("MarginContainer/VRoomContainer/RoomBodyLabel")
-		RoomNameLabel.text = response_text#[0]                                   #this currently overides custom text with current room info"""
-		#print("response text 0:") #debug code
-		#print(response_text[0])
-		RoomBodyLabel.text = response_text#[1]
+		RoomNameLabel.text = response_text[0]                                
+		#print("response text:") #debug code
+		#print(response_text)
+		RoomBodyLabel.text = response_text[1]
 	draw_prompt(response)
 
 
@@ -119,5 +133,16 @@ func draw_prompt(prompt: Control):                                              
 func _on_InputProcessor_next_button_pressed() -> void:
 	_create_room_card()
 	
+
+
+func on_current_room_requested(node_name):
+	node_name.current_room = current_room
+"""
+FUNCTION:
+	whenever the Location changes and enters the tree for the first time, it emits
+	a signal and calls for the game to update the location. 
+"""
+
+
 
 
