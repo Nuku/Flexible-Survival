@@ -1,13 +1,13 @@
-extends Node
 
-class_name Location
+
+signal
 
 export (String) var Location_name = "Room Name"
 export (String, MULTILINE) var Location_description = "Room Description"
 
 
 #this dictionary lists all the rooms by the cardinal direction they are grouped to
-var exits_map: Dictionary = {}
+
 
 
 """
@@ -15,20 +15,14 @@ FUNCTION:
 	All children are in the tree now and ready so we need to start the process
 	of collecting their information
 """
+func _enter_tree():
+	
+	
+
 func _ready() -> void:
 	#fetch all room information
-	get_tree().call_group("rooms", "fetch_room_info")
-
-
-
-"""
-FUNCTION:
-	This function runs through all it's children nodes, calling their initialize functions
-	and retreiving all room information. This is it's own function in case a situation 
-	pops up where we need the total room information after setup has already been
-	completed 
-"""
-
+	#get_tree().call_group("rooms", "fetch_room_info")
+	pass
 
 
 """
@@ -40,8 +34,8 @@ FUNCTION:
 	recieved into a new dictionary that lists all of them by the room that sent 
 	it. 
 """
-func _on_Room_room_information_sent(sender_room_name, r_exits: Dictionary) -> void:
-	exits_map[sender_room_name] = r_exits
+#func _on_Room_room_information_sent(sender_room_name, r_exits: Dictionary) -> void:
+#	exits_map[sender_room_name] = r_exits
 
 
 

@@ -10,23 +10,18 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
-"class": "Location",
+"class": "FSRoom",
 "language": "GDScript",
-"path": "res://Location.gd"
-}, {
-"base": "Control",
-"class": "Room",
-"language": "GDScript",
-"path": "res://Room.gd"
+"path": "res://Classes/Room.gd"
 } ]
 _global_script_class_icons={
-"Location": "",
-"Room": ""
+"FSRoom": ""
 }
 
 [application]
 
 config/name="FSGodot"
+run/main_scene="res://FS2_Main.tscn"
 config/icon="res://icon.png"
 
 [display]
