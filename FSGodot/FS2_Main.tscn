@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Fonts/plex_mono_15.tres" type="DynamicFont" id=1]
 [ext_resource path="res://NextButton.gd" type="Script" id=2]
@@ -6,8 +6,9 @@
 [ext_resource path="res://InputProcessor.gd" type="Script" id=4]
 [ext_resource path="res://FS2_Main.gd" type="Script" id=5]
 [ext_resource path="res://LocationProcessor.gd" type="Script" id=6]
-[ext_resource path="res://Location.gd" type="Script" id=7]
-[ext_resource path="res://Room.gd" type="Script" id=8]
+[ext_resource path="res://Locations/GreyAbbeyLibrary/Bunker.gd" type="Script" id=7]
+[ext_resource path="res://GreyAbbeyLibrary.gd" type="Script" id=8]
+[ext_resource path="res://GreyAbbeyLobby.gd" type="Script" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.054902, 0.054902, 0.054902, 1 )
@@ -61,8 +62,8 @@ margin_bottom = 95.0
 [node name="RoomNameLabel" type="Label" parent="GraphicsProcessor/RoomCard/MarginContainer/VRoomContainer"]
 margin_right = 300.0
 margin_bottom = 21.0
-custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "room label name"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -83,19 +84,22 @@ script = ExtResource( 4 )
 [node name="LocationProcessor" type="Node" parent="."]
 script = ExtResource( 6 )
 
-[node name="Location" type="Node" parent="LocationProcessor"]
-script = ExtResource( 7 )
-
-[node name="Room" type="Control" parent="LocationProcessor/Location"]
-margin_left = 239.789
-margin_top = -330.304
-margin_right = 553.789
-margin_bottom = -87.304
+[node name="GreyAbbeyLibrary" type="Node" parent="LocationProcessor"]
 script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-north_exit = true
+
+[node name="Bunker" type="Node" parent="LocationProcessor/GreyAbbeyLibrary"]
+script = ExtResource( 7 )
+room_name = "Bunker"
+room_description = "Sparsely appointed, this bunker was built as a fallout shelter back during the Cold War, then abandoned to become a forgotten curiosity at best. You are standing in the main bunker room, a rectangular chamber measuring about sixty feet in length and thirty feet in width. Its walls are solid concrete, and long rows of shelves are built into the back wall. There are several large storage lockers in the bunker as well. They look like a good place to store all your extra stuff. Several long rows of simple metal beds are bolted to the floor and walls for those taking shelter here to rest upon
+One of the cots apparently was poorly installed, and the bolts attaching it to the floor have come loose. You could take it along if you'd like. The small sink taking up a corner of the room seems to be broken, producing no water no matter how much the knob is turned. Two doorways to the north and northeast lead to adjoining rooms - showers and a small restroom - while a thicker, secure-looking door opens to the stairwell used to go outside. Your own personal room is to the south. It's technically just a maintenance storeroom, but at least it's private."
+up_exit = true
+up_room_name = "Grey Abbey Lobby"
+
+[node name="GreyAbbeyLobby" type="Node" parent="LocationProcessor/GreyAbbeyLibrary"]
+script = ExtResource( 9 )
+room_name = "Grey Abbey Lobby"
+down_exit = true
+down_room_name = "Bunker"
 
 [node name="MainPanel" type="PanelContainer" parent="."]
 margin_left = 2.0
@@ -145,11 +149,11 @@ margin_bottom = 697.0
 [node name="MenuButton" type="MenuButton" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/VBoxContainer"]
 margin_right = 108.0
 margin_bottom = 14.0
-custom_styles/normal = SubResource( 3 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/normal = SubResource( 3 )
 text = "Menu"
 
 [node name="StatHBoxContainer" type="HBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer"]
@@ -359,11 +363,12 @@ margin_bottom = 52.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.65
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "Next"
 script = ExtResource( 2 )
 __meta__ = {
@@ -377,11 +382,11 @@ margin_bottom = 52.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.65
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "Smell"
 
 [node name="Examine" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow1"]
@@ -391,11 +396,11 @@ margin_bottom = 52.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.65
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "Examine"
 script = ExtResource( 3 )
 
@@ -406,11 +411,11 @@ margin_bottom = 52.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.65
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "AAAAAAAA"
 align = 0
 __meta__ = {
@@ -429,11 +434,12 @@ margin_bottom = 52.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.65
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 keep_pressed_outside = true
 text = "AAAAAAAA"
 align = 0
@@ -449,11 +455,12 @@ margin_bottom = 52.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.65
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "AAAAAAAA"
 align = 0
 
@@ -464,11 +471,12 @@ margin_bottom = 52.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.65
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "AAAAAAAA"
 align = 0
 __meta__ = {
@@ -482,11 +490,12 @@ margin_bottom = 52.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.65
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "AAAAAAAA"
 align = 0
 __meta__ = {
@@ -505,11 +514,11 @@ margin_bottom = 53.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.65
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "AAAAAAAA"
 align = 0
 
@@ -520,11 +529,11 @@ margin_bottom = 53.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.65
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "AAAAAAAA"
 align = 0
 __meta__ = {
@@ -538,11 +547,11 @@ margin_bottom = 53.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.65
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "AAAAAAAA"
 align = 0
 __meta__ = {
@@ -556,11 +565,11 @@ margin_bottom = 53.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.65
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "AAAAAAAA"
 align = 0
 __meta__ = {
@@ -589,12 +598,13 @@ margin_right = 170.0
 margin_bottom = 51.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_constants/hseparation = 13
+custom_styles/focus = SubResource( 6 )
 text = "Northwest"
 expand_icon = true
 __meta__ = {
@@ -607,12 +617,13 @@ margin_right = 170.0
 margin_bottom = 108.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_constants/hseparation = 13
+custom_styles/focus = SubResource( 6 )
 keep_pressed_outside = true
 text = "West"
 expand_icon = true
@@ -626,12 +637,13 @@ margin_right = 170.0
 margin_bottom = 165.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_constants/hseparation = 13
+custom_styles/focus = SubResource( 6 )
 text = "Southwest"
 expand_icon = true
 __meta__ = {
@@ -652,11 +664,12 @@ margin_right = 170.0
 margin_bottom = 37.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "North"
 expand_icon = true
 __meta__ = {
@@ -669,11 +682,12 @@ margin_right = 170.0
 margin_bottom = 80.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 keep_pressed_outside = true
 text = "Up"
 expand_icon = true
@@ -687,11 +701,12 @@ margin_right = 170.0
 margin_bottom = 122.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "Down"
 expand_icon = true
 __meta__ = {
@@ -704,11 +719,12 @@ margin_right = 170.0
 margin_bottom = 165.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "South"
 expand_icon = true
 __meta__ = {
@@ -729,11 +745,12 @@ margin_right = 171.0
 margin_bottom = 51.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "Northeast"
 expand_icon = true
 __meta__ = {
@@ -746,11 +763,12 @@ margin_right = 171.0
 margin_bottom = 108.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 keep_pressed_outside = true
 text = "East"
 expand_icon = true
@@ -764,19 +782,24 @@ margin_right = 171.0
 margin_bottom = 165.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/focus = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_focus = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
 custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
 text = "Southeast"
 expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="input_processors_node_references_sent" from="." to="InputProcessor" method="_on_FS2_input_processors_node_references_sent"]
 [connection signal="next_button_pressed" from="InputProcessor" to="." method="_on_InputProcessor_next_button_pressed"]
-[connection signal="room_information_sent" from="LocationProcessor/Location/Room" to="LocationProcessor/Location" method="_on_Room_room_information_sent"]
+[connection signal="room_switch_intended" from="InputProcessor" to="LocationProcessor" method="handle_room_switch"]
+[connection signal="response_generated" from="LocationProcessor" to="." method="process_generated_response"]
+[connection signal="room_information_sent" from="LocationProcessor/GreyAbbeyLibrary/Bunker" to="LocationProcessor" method="_on_room_information_sent"]
+[connection signal="room_information_sent" from="LocationProcessor/GreyAbbeyLibrary/GreyAbbeyLobby" to="LocationProcessor" method="_on_room_information_sent"]
 [connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow1/NextButton" to="InputProcessor" method="_on_NextButton_pressed"]
 [connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow1/Examine" to="InputProcessor" method="_on_Examine_pressed"]
 [connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1/NorthwestButton" to="InputProcessor" method="_on_NorthwestButton_pressed"]
