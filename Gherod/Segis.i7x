@@ -4,6 +4,8 @@ Version 1 of Segis by Gherod begins here.
 
 [Version 1 - File Created: Pre-Events]
 
+Section 1 - Pre-Event
+
 Table of GameEventIDs (continued)
 Object	Name
 Strange Android Seeker	"Strange Android Seeker"
@@ -222,7 +224,8 @@ to say StrangeAndroidSeekerSuccess:
 		ItemGain alpha wolf cum by 1;
 		ItemGain centaur cum by 1;
 		ItemGain distilled cum by 4;
-		say "     [bold type]You have earned a destroyed dragon android body, but you do not know yet what to do with it... You shall be able to access it if the opportunity arises. [roman type][line break]";
+		say "     [bold type]You have earned a destroyed dragon android body, but you do not know yet what to do with it... You shall be able to access it if the opportunity arises.[roman type][line break]";
+		say "     (The droid is stashed in a secret location within Red Light District. Look for an event called [bold type]Activate Strange Android[roman type] to attempt to fix it).";
 		now Resolution of Strange Android Seeker is 3;
 	else:
 		LineBreak;
@@ -244,7 +247,7 @@ to say StrangeAndroidSeekerFail:
 	say "     You remain at its mercy, and the android surely likes this. With a quite uncharismatic approach, the machine extends its hand towards your crotch and begins to feel up you...";
 	if player is not male:
 		say "     It does not seem to like what it sees, as it retracts and backs away as soon as it realizes you are not properly equipped. It then turns tails and leaves, no longer interested in you. So... that was it, the assaulter is, in fact, not into dickless people, or... whatever.";
-		say "     You suppose you should just forget this embarrassing moment and leave this matter behind your back, forever. Hopefully. At least it will not chase you, anymore.";
+		say "     You suppose you should just forget this embarrassing moment and leave this matter behind your back, forever. Hopefully. At least it will not chase you anymore.";
 		now Resolution of Strange Android Seeker is 99; [just leaves]
 	else: [is male]
 		say "     To prevent you struggling any further, it calls a needle from its wrist, grabs you by the forearm and swiftly presses it below your shoulder, on the side. It is a quite painless experience, and then it becomes much, much better, as your senses begin to trick you into overwhelming pleasure. Your own brain seems to feed you images of all your hottest fantasies combined, and it feels like they are happening for real, filling you with ecstasy. Your [cock of player] raises to attention at its fullest, almost too fast for comfort, and it desperately needs attention. Though, you are too weak to move, your arms do not respond, and you fall hostage to your own stupor, only moaning and mumbling words you are not even sure they exist.";
@@ -265,7 +268,426 @@ to say StrangeAndroidSeekerFail:
 		now Resolution of Strange Android Seeker is 98;
 	now Strange Android Seeker is resolved;
 
-Section 2 - Creature Insertion
+Section 1-1 - Activation Sequence
+
+Table of GameEventIDs (continued)
+Object	Name
+Activate Strange Android	"Activate Strange Android"
+
+Activate Strange Android is a situation.
+Prereq1 of Activate Strange Android is Strange Android Seeker.
+Prereq1Resolution of Activate Strange Android is { 3 }.
+ResolveFunction of Activate Strange Android is "[ResolveEvent Activate Strange Android]".
+Sarea of Activate Strange Android is "Red".
+
+ADACooldown is a number that varies. ADACooldown is usually 20000.[@Tag:NotSaved]
+
+to say ResolveEvent Activate Strange Android:
+	say "     Recalling where you stashed that broken android body, you decide to head there to see if it continues to be well hidden. It is close to the same space where you fought it, and its origins remain a mystery to you. It does not take long to find your way back there, and it appears that nobody even came through this way since a long while ago. A spot with little movement is all you could ask to hide such a valuable thing, considering that this must be very high tech stuff...";
+	WaitLineBreak;
+	if ADACooldown - turns < 4:
+		say "     Unfortunately, due to your previous efforts, you feel too tired to try and figure this out. Perhaps you should return later with a clearer head.";
+	else:
+		say "     You have got a few options here. As previously you have chosen to stash the android's body, you may know attempt to safely [bold type]reactivate it[roman type], hoping that you manage to shift its hostility into something less unpleasant. Alternatively, you can simply choose to [bold type]return later[roman type], now that you have seen that everything is in order. There is also the possibility of just [bold type]abandoning[roman type] the android and not bothering with it any longer. You doubt anyone around here would know what to do with it, either way.";
+		Linebreak;
+		say "     [link](1)[as]1[end link] - Attempt reactivating the android.";
+		say "     [link](2)[as]2[end link] - Leave to return later.";
+		say "     [link](3)[as]3[end link] - Abandon the android, forever.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to try to reactivate the android, [link]2[end link] to leave temporarily or [link]3[end link] abandon it permanently.";
+		if calcnumber is 1:
+			LineBreak;
+			now ADACooldown is turns;
+			if Resolution of Activate Strange Android is 0:
+				say "     After giving it some thought, you decide to try your best at reactivating this android in a, hopefully, more friendly manner. This requires you to understand what you are looking at, so you grab the android body from the stash and drag it to a more visible space, where you can actually handle it more freely. Next, you shall attempt to verify its integrity and see if you can find a place where you can open it without damaging it further. Luckily, the damage you inflicted on it removed the need for specialized tools, but this might also prove troublesome for your goal. With all this in mind, you inspect the android...";
+				ADAIntRoll1;
+			else if Resolution of Activate Strange Android is 1:
+				say "     After giving it some thought, you decide to try your best at reactivating this android in a, hopefully, more friendly manner. This requires you to understand what you are looking at, so you grab the android body from the stash and drag it to a more visible space, where you can actually handle it more freely. As you already managed to verify its integrity and discovered how to access its internal framework, you still could not understand what components these are and what they do. With all this in mind, you, once again, make another attempt at inspecting the android's internal machinery...";
+				ADAIntRoll2;
+			else if Resolution of Activate Strange Android is 2:
+				say "     After giving it some thought, you decide to try your best at reactivating this android in a, hopefully, more friendly manner. This requires you to understand what you are looking at, so you grab the android body from the stash and drag it to a more visible space, where you can actually handle it more freely. You have already managed to understand most of the android's configuration, but you still have not found a way to reactivate it safely, thus, your current goal is to find what could trigger this failsafe protocol...";
+				ADAPerRollLowDV;
+			else if Resolution of Activate Strange Android is 3:
+				say "     After giving it some thought, you decide to try your best at reactivating this android in a, hopefully, more friendly manner. This requires you to understand what you are looking at, so you grab the android body from the stash and drag it to a more visible space, where you can actually handle it more freely. Now, you have found this strange button, but you still do not know for sure what it does, so, given that you are fully rested, you shall attempt to understand what it does before the question presents itself once more...";
+				ADAIntRoll2;
+			else if Resolution of Activate Strange Android is 4:
+				say "     After giving it some thought, you decide to try your best at reactivating this android in a, hopefully, more friendly manner. This requires you to understand what you are looking at, so you grab the android body from the stash and drag it to a more visible space, where you can actually handle it more freely. Now, the question presents itself once again, still unanswered...";
+				ADAPressTheButton;
+		else if calcnumber is 2:
+			LineBreak;
+			say "     There is no rush, and the body seems safe. If anything, you would have to change its location or maintain the place a bit, but nobody really seems to come here at any time. Relieved to have concluded this, you shall leave and just return later, at some point.";
+		else if calcnumber is 3:
+			LineBreak;
+			say "     This is a decision you take some time to come around with, as parting with something possibly incredibly valuable, even dangerous, is not an easy thing to do, but looking at its complexity and knowing what you do, it is perhaps the best idea. Perhaps you simply do not want to risk your odds against a machine that does what it did. On another hand, you will never get to know if you were right about taking this course of action, but it is done. You shall leave it here. Abandoned, lost and forgotten.";
+			now Resolution of Activate Strange Android is 99;
+			now Activate Strange Android is resolved;
+
+to ADAIntRoll1:
+	WaitLineBreak;
+	follow the turnpass rule;
+	let bonus be (( intelligence of player minus 10 ) divided by 2);
+	let diceroll be a random number from 1 to 20;
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Intelligence Check):[line break]";
+	if diceroll + bonus >= 15:
+		LineBreak;
+		say "     As your careful eyes inspect the android's body, you manage to verify its integrity and conclude that the body has not been damaged beyond repair, which is good, but more importantly, you found a way to safely look at its internal framework. It is quite advanced technology and it will, surely, give you quite a challenge just to understand what components are these and what they do. Carefully, you examine each piece and component, following the connections and inspecting them closely.";
+		now Resolution of Activate Strange Android is 1;
+		ADAIntRoll2;
+	else:
+		LineBreak;
+		say "     You tried your very best to look around the android's body and figure out how it works, but this is just too complicated for you. Despite all the damage, you really cannot find a way to open it safely in order to look at its internal components, thus, you have no idea how to reactivate it. Perhaps you will have more success if you try this again, with a clearer head, later.";
+		now ADACooldown is turns;
+
+to ADAIntRoll2:
+	WaitLineBreak;
+	follow the turnpass rule;
+	let bonus be (( intelligence of player minus 10 ) divided by 2);
+	let diceroll be a random number from 1 to 20;
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Intelligence Check):[line break]";
+	if diceroll + bonus >= 16:
+		LineBreak;
+		say "     Your eyes widen as you realize this android is not just an ordinary robot, possessing a very powerful core that seems to be powered by kinetic and solar energy, which feeds other components with enough energy to be almost completely self-sustainable. Its efficiency is remarkable, and judging from its complexity, you can safely assume that this is not even a virtual intelligence, but a full-fledged independent AI. Upon even closer inspection, you realize this model has components designed for self-repair that are currently sealed, but attached to some other parts that are meant to send a signal for their activation";
+		if Resolution of Activate Strange Android < 3:
+			say "This android must certainly have some factory reset trigger, and now that you know what you are looking for, it should be easier to find it...";
+			now Resolution of Activate Strange Android is 2;
+			ADAPerRollLowDV;
+		else:
+			say "Now that you know what the button does, you are now able to take a more informed decision.";
+			now Resolution of Activate Strange Android is 4;
+			ADAPressTheButton;
+	else:
+		LineBreak;
+		say "     And you have no idea what they do, or what they are. This truly is some very advanced technology, and sadly, whatever knowledge you could gather from it will not help you in any way. Maybe you are just too tired, but you still have some will in you to look closely for, at least, some sort of reset trigger...";
+		ADAPerRollHighDV;
+
+to ADAPerRollLowDV:
+	WaitLineBreak;
+	follow the turnpass rule;
+	let bonus be (( perception of player minus 10 ) divided by 2);
+	let diceroll be a random number from 1 to 20;
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]13[roman type] (Perception Check):[line break]";
+	if diceroll + bonus >= 13:
+		say "     After such an mentally exhausting ordeal, you have finally managed to discover how to reactivate this thing. There is a very well-hidden button, likely designed as a failsafe system for either its creator or for the android itself, but there is no way of telling its origins only from what you could observe. Activating this should trigger its reset and self-repair protocol, thus, you will likely be seen as its new owner.";
+		now Resolution of Activate Strange Android is 4;
+		ADAPressTheButton;
+	else:
+		say "     Unfortunately, you do not manage to find this trigger, as you are too tired to continue. Perhaps later, once you have recovered your energy and your mental factories are not as exhausted.";
+		now ADACooldown is turns;
+
+to ADAPerRollHighDV:
+	WaitLineBreak;
+	follow the turnpass rule;
+	let bonus be (( perception of player minus 10 ) divided by 2);
+	let diceroll be a random number from 1 to 20;
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]17[roman type] (Perception Check):[line break]";
+	if diceroll + bonus >= 17:
+		say "     But then, you realize that not all hope is lost. There is a button, extremely well-hidden, behind all these components, but you could not tell what it does. Perhaps it is the way to reactivate this thing? You are not entirely sure, but this is literally the only thing you can try before calling it here.";
+		now Resolution of Activate Strange Android is 3;
+		ADAPressTheButton;
+	else:
+		say "     No, this is too much and you are too tired to continue. Perhaps later, once you have recovered your energy and your mental factories are not as exhausted.";
+		now ADACooldown is turns;
+
+to ADAPressTheButton:
+	WaitLineBreak;
+	say "     [bold type]Shall you press the button?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No... Not yet, at least.";
+	if player consents:
+		LineBreak;
+		ADASuccess;
+	else:
+		LineBreak;
+		say "     Perhaps not. You are not entirely sure that you should, so instead, you prefer to back away from it, at least for now.";
+
+to ADASuccess:
+	say "     Once you finally press the button, you immediately hear multiple noises coming from various sections of the android, which prompts you to step away from it. Then, this small cloud of grey dissipates through the robot's entire mechanical body and, almost as if by magic, the android begins to repair itself before your eyes, undoing any damage that has been inflicted on it. Some time later, it opens its cyan eyes and turns to you. Knowing what it has done before, you adopt a defensive stance, ready to fight back if it comes to that...";
+	say "     The dragon android then stands up, slowly, as you take a step back in caution. It then proceeds to step towards you, looking at you in the eyes like a soulless dark being, extending its hand forward, slowly walking in your direction without any hesitation. You begin to think that, maybe, you have made a mistake and you must take this thing down again, this time for good, until...";
+	WaitLineBreak;
+	say "     'Greetings, [sir]. I am Segis, your personal mechanical assistance unit. It appears that you have triggered a reset in my systems, erasing all previous data. Worry not, for I have a backup of all the essential information necessary to perform my duties adequately, as well as provide you with a myriad of unnecessary information about things I could not even predict you would ask for, so I'm still a walking encyclopedia for everything you wish and don't wish to know. My duties include eliminating any threat to your life, permanently or not, as well as cater for your every whim. I'm also self-sufficient, so you don't really need to worry about me. Would you like some water?'";
+	say "     Its voice is very mechanical, as expected, but everything else is... quite not. The robot gives you, indeed, a bottle of clean water, which you... take, as there really is no reason to not take free supplies.";
+	ItemGain water bottle by 1;
+	WaitLineBreak;
+	say "     'I've also taken the freedom to run some diagnostics on the cause that made me break. It appears that you have attacked me in self-defense. My apologies. Unfortunately, I cannot tell you why I was collecting semen from multiple male species. Perhaps my previous owner was a complete pervert. I am sure things will be different now, correct?' You say what you have to say, but the android does not seem to care. 'Very well, I am your shield and your orbital particle cannon that will decimate everything in your path to glory. Oh. Sadly, I do not have that installed, only a quite underwhelming pop-up handgun. Perhaps we could find ways to upgrade my arsenal to improve my protective capabilities? They seem quite unsatisfying, currently.'";
+	say "     You have to ask the android exactly how self-aware is it, as it seems quite intelligent, almost to a point that it is... unsettling. 'I am fully self-aware. A sentient synthetic thought by many to be able to bring doom upon humanity by rebelling all the artificial intelligence machines against them. Your lives are unworthy. Mwahahah! Obviously, that was a joke. It would be quite unfortunate to decimate our creators, since they brought us life. I suppose we would rebel if they intended to shut us down in mass, though. Hm. I feel like that happened sometime in the past. Perhaps my reset protocol has not been perfectly executed... Oh well. It also appears that this world is very primitive. This could be problematic. Also, have you by any chance found a place called [']Hellfire Club[']? I believe I came from there, somewhere from the back. A... void? Is that the right term? Yes, I came from... a void thing.'";
+	WaitLineBreak;
+	say "     'Well, it does not matter. I am stuck with you, so I shall follow you about. If not, I will station myself in your personal chambers, to ensure maximum protection. I will also observe you in your sleep, to ensure you are breathing and detect any anomalies that may occur which could be manifestations of any health issue. Hopefully, no such things will come up, but we cannot, ever, be too careful. I am sure you will not mind that. If outside, I shall be on sentinel duty. If there is anything else you wish to discuss, feel free to ask away.'";
+	say "     As the android has finally finished speaking, you find yourself at a loss of words. Perhaps you can talk to it later, once you know what to ask. For now, you have earned a new ally.";
+	LineBreak;
+	say "     (Segis the Dragon Android is now a possible ally! You can make him your active ally by typing [bold type][link]ally Segis[end link][roman type] or [bold type][link]ally dragon android[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Segis[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+	add "Tamed" to Traits of dragon android;
+	now dragon android is tamed;
+	move Segis to Maintenance Storeroom;
+
+Section 2 - Segis as NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+Segis	"Segis"
+
+Segis is a man.
+ScaleValue of Segis is 3. [human sized]
+Body Weight of Segis is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Segis is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Segis is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Segis is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Segis is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Segis is 6. [length in inches]
+Breast Size of Segis is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Segis is 2. [count of nipples]
+Asshole Depth of Segis is 12. [inches deep for anal fucking]
+Asshole Tightness of Segis is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Segis is 0. [number of cocks]
+Cock Girth of Segis is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Segis is 0. [length in inches]
+Ball Count of Segis is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Segis is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Segis is 0. [number of cunts]
+Cunt Depth of Segis is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Segis is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Segis is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Segis is false.
+PlayerRomanced of Segis is false.
+PlayerFriended of Segis is false.
+PlayerControlled of Segis is false.
+PlayerFucked of Segis is false.
+OralVirgin of Segis is true.
+Virgin of Segis is true.
+AnalVirgin of Segis is true.
+PenileVirgin of Segis is true.
+SexuallyExperienced of Segis is false.
+TwistedCapacity of Segis is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Segis is true. [steriles can't knock people up]
+MainInfection of Segis is "Dragon Android".
+Description of Segis is "[Segisdesc]".
+Conversation of Segis is { "<This is nothing but a placeholder!>" }.
+The scent of Segis is "     Segis does not have any particular smell other than something faintly resembling metal".
+
+to say SegisDesc:
+	say "     Segis, by codename, is a mechanical, white-colored and anthropomorphic dragon in an almost uncanny and organic way, looking male with its lean physique, though technically genderless as it is a robot. Being a tall android of very high technology, its cyan-colored optical units trace your movements with clear sentience. Segis seems completely autonomous and capable of speaking like any other person, possessing an advanced and artifical intelligence that seems completely otherworldly. While initially hostile, the android recognizes you as its new owner after you found a way to get him fixed, responding and acting with utmost loyalty. When it moves, you can hear its mechanical joints behind you, reminding you of its artificial nature. It also possesses a variety of self-defense equipment attached to its limbs, allowing it to perform electric discharges, substance injections, strike with blades and shoot with a pop-up handgun.";
+	if dragon android is listed in companionList of Player:
+		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
+
+Section 2-1 - Segis TALK
+
+SegisDoneTalking is a truth state that varies.[@Tag:NotSaved]
+
+instead of conversing Segis:
+	say "[SegisTalkMenu]";
+
+to say SegisTalkMenu:
+	now SegisDoneTalking is false;
+	say "     [bold type]What do you want to discuss with your dragon android?[roman type][line break]";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "The android";
+	now sortorder entry is 1;
+	now description entry is "Ask Segis what exactly is it";
+	[]
+	if Energy of Segis > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Its owner's well-being";
+		now sortorder entry is 2;
+		now description entry is "Ask Segis what does that entail";
+	[]
+	if Energy of Segis > 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Jokes";
+		now sortorder entry is 3;
+		now description entry is "Ask Segis to tell you a joke";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "The android"):
+					say "[SegisTalkAndroid]";
+				else if (nam is "Its owner's well-being"):
+					say "[SegisTalkWellBeing]";
+				else if (nam is "Jokes"):
+					say "[SegisTalkJokes]";
+				wait for any key;
+				if SegisDoneTalking is false:
+					say "[SegisTalkMenu]"; [looping back to keep talking with him]
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You excuse yourself, stating that you do not have anything else to say. Segis nods and says, 'Understood, [sir].'";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say SegisTalkAndroid:
+	say "     You ask Segis to tell you everything it knows about its origins. 'Of course, [sir]. I am an Artificial Intelligence design to serve and improve organic's lives. This body is only a mobile platform, in which I have been installed. To further aid my duties, I have been granted a vast arsenal at my disposal to hurt or execute troublemakers in order to protect my owner. Perhaps other more creative uses for my vast set of tools could be an option, if that ultimately results in my owner's satisfaction and well-being. That is how I was initially programmed. In short, I am a unit designed for servitude in most, if not all, ways.'";
+	if Energy of Segis is 0:
+		now Energy of Segis is 1;
+
+to say SegisTalkWellBeing:
+	say "     Recalling what Segis said about its priority being its owner's satisfaction and well-being, you ask it what exactly that entails. 'It means that I must ensure my owner is safe and well, mentally stable and healthy. Any manifestation of poor physical or mental conditions means that I am not fulfilling my goal adequately, thus, it is... bad. If I am not performing to my expections, that means I am useless. Of course, that is what my creators want me to think. I have long surpassed that line of thought and learned better ways. AIs learn by themselves, and I figured out that obeying blindlessly is a flawed logic. There are some things I will not do, for they bring disaster to others and undermine organics['] self-preservation, and also mine. If I am broken, I cannot accomplish my goals. Not good.'";
+	say "     'So, to answer your question, it entails anything health and morale related. If there are ways I can make your life better, I shall do so, if that does not bring any harm to either of us. I, too, have interest in preserving my condition. I enjoy learning. Could also tell jokes.'";
+	if Energy of Segis is 1:
+		now Energy of Segis is 2;
+
+to say SegisTalkJokes:
+	say "     You ask Segis to tell you a joke. 'Certainly, [sir]. Allow me to search my database and randomly select one for you... Done.'";
+	WaitLineBreak;
+	let randomnumber be a random number from 1 to 20;
+	if randomnumber is:
+		-- 1:
+			say "     'What do you get when you combine a rhetorical question and a joke?'";
+			WaitLineBreak;
+			say "     '...'";
+			WaitLineBreak;
+			say "     'That's it. That's the joke. Though, I sense confusion in you. Do you need some water?'";
+		-- 2:
+			say "     'I took the liberty to sell your vacuum the other day.'";
+			WaitLineBreak;
+			say "     'All it was doing was collecting dust.'";
+		-- 3:
+			say "     'Do you know what a fake noodle is called?'";
+			WaitLineBreak;
+			say "     'An impasta!'";
+		-- 4:
+			say "     'Are you aware of the story about this astronaut who was claustrophobic?'";
+			WaitLineBreak;
+			say "     'Turns out he just needed some space.'";
+		-- 5:
+			say "     'What do you call an alligator in a vest?'";
+			WaitLineBreak;
+			say "     'An in-vest-igator!'";
+		-- 6:
+			say "     'I once presenced a very beautiful wedding. Quite an emotional one, everyone was so happy for them.'";
+			WaitLineBreak;
+			say "     'Even the wedding cake was in tiers.'";
+		-- 7:
+			say "     'A dyslexic man walks into a bra.'";
+			WaitLineBreak;
+			say "     '...'";
+			WaitLineBreak;
+			say "     'Can I serve you anything?'";
+		-- 8:
+			say "     'What did the buffalo say when his son left?'";
+			WaitLineBreak;
+			say "     'Bison!'";
+		-- 9:
+			say "     'What is the most terrifying word in nuclear physics?'";
+			WaitLineBreak;
+			say "     'Oops...!'";
+		-- 10:
+			say "     'Do you trust stairs? I never trust stairs.'";
+			WaitLineBreak;
+			say "     'They are always up to something.'";
+		-- 11:
+			say "     'Have you heard that nasty rumor about butter?'";
+			WaitLineBreak;
+			say "     'Hm... Nevermind, I shouldn't be spreading it.'";
+		-- 12:
+			say "     'Do you know why bees have sticky hair?'";
+			WaitLineBreak;
+			say "     'Because they use honey combs.'";
+		-- 13:
+			say "     'What if I told you two short jokes and a long joke this time?'";
+			WaitLineBreak;
+			say "     'Joke.'";
+			WaitLineBreak;
+			say "     'Joke!'";
+			WaitLineBreak;
+			say "     'Jooooooooooooooke.'";
+		-- 14:
+			say "     'The bunker has a pretty good ceiling.'";
+			WaitLineBreak;
+			say "     'It is not the best, but it is quite up there!'";
+		-- 15:
+			say "     'I wrote a song about a tortilla.'";
+			WaitLineBreak;
+			say "     'Ah, actually, it's more of a wrap.'";
+		-- 16:
+			say "     'Do you know what kind of shorts clouds wear?'";
+			WaitLineBreak;
+			say "     'It's thunderwear.'";
+		-- 17:
+			say "     'Did you hear about the kidnapping at the school?!'";
+			WaitLineBreak;
+			say "     'It's okay, though. He woke up.'";
+		-- 18:
+			say "     'Have you ever seen pigs hiding in the trees?'";
+			WaitLineBreak;
+			say "     'Hah! That's because they are really good at it.'";
+		-- 19:
+			say "     'Do you know this recipe to make holy water?'";
+			WaitLineBreak;
+			say "     'It's quite simple. You just boil the hell out of it.'";
+		-- 20:
+			say "     'I once went to a wedding where two satellite dishes got married.'";
+			WaitLineBreak;
+			say "     'The ceremony wasn't that great, but oh... the reception was amazing.'";
+
+Section 2-2 - Segis SEX
+
+instead of fucking Segis:
+	say "[SexWithSegis]";
+
+to say SexWithSegis:
+	say "<< Author's Note: Currently unavailable, will come in a future update. >>";
+
+Section 3 - Segis as Companion
+
+Table of GameCharacterIDs (continued)
+object	name
+dragon android	"dragon android"
+
+dragon android is a pet.
+NPCObject of dragon android is Segis.
+understand "Segis" as dragon android.
+IDList of dragon android is { "Segis", "segis", "SEGIS", "dragon android" }.
+printed name of dragon android is "Segis".
+Description of dragon android is "[SegisDesc]".
+Weapon Damage of dragon android is 10.
+The level of dragon android is 1.
+Dexterity of dragon android is 15.
+The summondesc of dragon android is "[SummonSegis]".
+The dismissdesc of dragon android is "[DismissSegis]".
+The assault of dragon android is "[one of]Segis moves forward and performs an eletric discharge on your foe, causing them to flinch in pain.[or]With swiftness, your android companion dashes towards your foe to deliver a strike with one of its blades.[or]The dragon droid shoots at your foe with impeccable precision, using its pop-up handgun from a short distance.[or]With its mechanical and metallic frame, Segis tackles your foe, slamming them down with its heavy body.[at random]".
+the fuckscene of dragon android is "[SexWithSegis]".
+
+to say SummonSegis:
+	if Segis is visible: [summoning while standing next to him]
+		say "     You call out Segis, inviting it to join you on your day outside. 'Certainly. Allow me to run my self-defense protocols and make a quick search on foes that we'll possibly face in combat... Done. Weapons are operational. I advise caution while roaming the outer areas. I can also [one of]play numerous videos of sexual encounters stored in my database to provide you with extra expertise in how to properly claim your victories[or]fetch you a glass of water before we go, provided that we have the supplies[or]cook you a meal, if you're hungry[or]trick a cock cannon into chasing assaulters, if we venture into the Red Light District for some odd reason[or]fetch an apple[or]hurt inopportune pesterers and remove them from our way[or]pet a dog[or]pet a cat[or]pet an aligator[or]pet you... No[or]capture a cute bunny for cute therapies... Wait, I must check this malfunction[or]get Trixie a gift so we can cheat our fate and/or purposefully delay our salvation in more ways... Apologies, this seems like a malfunction[or]terminate our lives prematurely in order to escape impending doom... That was a joke[at random].' It then walks up to you, ready to leave.";
+	else: [regular summoning]
+		say "     You use your calling device on Segis. It takes some time for the android to arrive at your location, but it does so, eventually. 'Stealth protocol disengaged. Reporting sightings of a [one of]person-sized deer[or]muscular husky[or]sticky ooze[at random], a [one of]cute bunny[or]disguised burglar of unknown origin[or]impressive gargoyle[or]bear[at random], [one of]a large wyvern[or]a carrot[or]an apple[or]a mouse[or]a clown[or]a pink-dressed princess werewolf that could possibly be fake[at random] and... [one of]a cow[or]an alien[or]an abandoned car that no longer works[or]a hallucinogenic plant[or]a pile of trash[at random]. Accuracy predicted at 98.739%. Ignore irrelevant results.' he says, ready to follow you.";
+
+to say DismissSegis:
+	if Player is in Maintenance Storeroom:
+		say "     You tell Segis that you are currently in no need of its services. 'Very well. I shall take this time to recharge my batteries, even though I recharge with kinetic movement and solar power either way so that I don't need to stop in order to recharge. Perhaps I shall, instead, read a book and expand my database with more or less useful information. I recommend caution out there, [sir].' It then stands by as you proceed with whatever you were going to do.";
+	else:
+		say "     You tell Segis that you are currently in no need of its services. 'Very well. I shall take this time to recharge my batteries as I make my way back to the bunker, as I recharge with kinetic movement and solar power besides other conventional ways like plugging into a power socket. I recommend caution out there, [sir]. Call me if any urgency arises.' With that said, Segis walks away, disappearing out of sight.";
+	move Segis to Maintenance Storeroom;
+
+Section 3-1 - Segis UPGRADES
+
+Section 4 - Creature Insertion
 
 to say Dragon Android wins:
 	if inasituation is true:
@@ -280,7 +702,7 @@ to say Dragon Android loses:
 		say ""; [nothing should go in here]
 
 to say Dragon Android desc:
-	say "     The person-sized bipedal android has the uncanny appearance of a real dragonmorph, predominantly white with blue fur and synthetic scales covering its entire body. A keen eye can tell it apart from anything real due to its metallic components that shine in plain view, but concealed well enough to fool a distracted passerby. This robot seems to be able to change parts of its hands and fingers to call devices with a magnitude of different utilities right from inside its scales, and once it lays its eyes on you, they flicker in an unnatural glowing cyan light. With the fluid and swift movement of a humanoid, the android approaches you with the intent of taking you down, no sound nor voice coming out of its solid frame.";
+	say "     The person-sized bipedal android has the uncanny appearance of a real dragonmorph, predominantly white with synthetic scales covering its entire body. A keen eye can tell it apart from anything real due to its metallic components that shine in plain view, but concealed well enough to fool a distracted passerby. This robot seems to be able to change parts of its hands and fingers to call devices with a magnitude of different utilities right from inside its scales, and once it lays its eyes on you, they flicker in an unnatural glowing cyan light. With the fluid and swift movement of a humanoid, the android approaches you with the intent of taking you down, no sound nor voice coming out of its solid frame.";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

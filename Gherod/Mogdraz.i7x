@@ -1025,12 +1025,80 @@ Section 3-4-1 - Mogdraz Stroll Loop
 [***********************************************************]
 
 to say MogdrazRomanceStrollChoice:
-	say "     << Currently, the only option is to go to the Dry Plains, but more destinations will be added in the future >>";
+	say "     Once you both are midway towards the Red Light District's exit, there comes the time to decide where you will actually be taking the Demon Lord for the day. He also turns to you and asks 'So, where shall we be going? Hopefully you have some ideas? If not, there are a few places I'd like to go to with you, so I'd happily pick one... But, of course, you invited me, so you get to decide. It is only fair.' He expectantly awaits your answer regarding the destination of your stroll.";
 	WaitLineBreak;
-	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "To the Dry Plains";
+	now sortorder entry is 1;
+	now description entry is "Suggest the Dry Plains as your destination";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "To the Museum";
+	now sortorder entry is 2;
+	now description entry is "Suggest the Museum as your destination";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "To the Dry Plains"):
+					say "[MogdrazRomanceStrollDryPlainsPick]";
+				else if (nam is "To the Museum"):
+					say "[MogdrazRomanceStrollMuseumPick]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "[MogdrazRomanceStrollRandomPick]";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say MogdrazRomanceStrollRandomPick:
+	say "     You cannot really come to any decision, so you let Mogdraz pick one for you.";
+	let randomnumber be a random number from 1 to 2;
+	if randomnumber is:
+		-- 1:
+			say "     'Then, how about we head to the Dry Plains, for today? While it's an open field with seemingly not much to do, but you and I both know there are some interesting activities we could partake on. Sounds good?' You nod, as Mogdraz has made his choice.";
+			say "[MogdrazRomanceStrollDryPlains]";
+		-- 2:
+			if "Visited Museum" is not listed in traits of Mogdraz:
+				say "     'Oh, in that case I'd love to try going to the Museum! I haven't actually been there myself, only sent some imp scouts to tell me what that's all about, and it seems to be quite a magical place. Sounds interesting to me... Would you like to go there?' You nod, as Mogdraz seems to have decided.";
+			else:
+				say "     'Then, how about we head to the Museum, once more? I really like that place, it's sort of spooky and magical besides being a completely normal museum. Hm... What a paradox. Maybe that's what makes it spooky? Whatever, it's a really interesting place! We should go there, again. What do you think?' You nod, as Mogdraz has made his choice.";
+			say "[MogdrazRomanceStrollMuseum]";
+
+to say MogdrazRomanceStrollDryPlainsPick:
 	say "     With your destination still up for debate, you suggest heading to the Dry Plains to spend your day hunting, to which Mogdraz nods in agreement. 'I think that's a great idea to relieve some stress! Given the things happening in there, the creatures who inhabit that area... I can definitely see us having a good time there.' The Demon Lord has a bright smile on his face as he looks forward to this time spent with you, but you can tell he is quite enthusiasmed by the prospective of hunting down some roamers along the way. As you have already decided, you then begin to head for the road and make your ways towards the Dry Plains, where your today's date shall be.";
-	say "     Your walk to the Plains takes some time, so you use this opportunity to chat with Mogdraz about your last adventures. Naturally, it is quite an engaging conversation which the devil is happy to have, though all he can share about his days is the same old business duties he takes on everyday. It is fine, though, as he is more than glad to direct his attention to you. All this makes it easier for you to pass the time during the trip, but you still have to watch out for the odd undesirable encounter that you would prefer to avoid while in wild land. It all goes smoothly, however, as Mogdraz's natural demonic presence is enough to keep any threats away, so the entirety of your traveling time is done without any issues.";
 	WaitLineBreak;
+	say "[MogdrazRomanceStrollDryPlains]";
+
+to say MogdrazRomanceStrollMuseumPick:
+	say "     With your destination still up for debate, you suggest heading to the Museum to spend your day with culture, learning, appreciating art and... getting spooked at nearly every dark corner of those seemingly endless halls";
+	if "Visited Museum" is not listed in traits of Mogdraz:
+		say ". 'Sounds perfect. I'd love to see what that place really looks like. I haven't actually been there myself, only sent some imp scouts to tell me what that's all about, and it seems to be quite a magical place.' The";
+	else:
+		say ". 'Sounds perfect. A spooky, yet intellectually-stimulating place for us to enjoy in the company of each other. I can't think of a more perfect way to spend the day.' The";
+	say " Demon Lord has a bright smile on his face as he looks forward to this time spent with you. He really seems to like the idea of going to such a place, maybe due to all the endless possibilities that could present themselves before you. The Museum really is a mystical place, despite its ordinary appearance, and this seems to intrigue Mogdraz the most. You are look forward to explore it alongside great and powerful company.";
+	WaitLineBreak;
+	say "[MogdrazRomanceStrollMuseum]";
+
+to say MogdrazRomanceStrollDryPlains:
+	say "     Your walk to the Plains takes some time, so you use this opportunity to chat with Mogdraz about your last adventures. Naturally, it is quite an engaging conversation which the devil is happy to have, though all he can share about his days is the same old business duties he takes on everyday. It is fine, though, as he is more than glad to direct his attention to you. All this makes it easier for you to pass the time during the trip, but you still have to watch out for the odd undesirable encounter that you would prefer to avoid while in wild land. It all goes smoothly, however, as Mogdraz's natural demonic presence is enough to keep any threats away, so the entirety of your traveling time is done without any issues.";
 	say "     Once you arrive at the Dry Plains, the Demon Lord takes the chance to do some stretching with his arms and legs, as if he was preparing for a myriad of physical ordeals. 'So, what shall we do? Any fun activities in mind?' Mogdraz asks, looking at you with a smile as he awaits an answer.";
 	LineBreak;
 	say "     [link](1)[as]1[end link] - Hunt for a Centaur Stallion.";
@@ -1319,6 +1387,213 @@ to say MogdrazRomanceStrollDryPlainsCorruptedApple:
 		WaitLineBreak;
 		say "     'But we should definitely try the apple, sometime. It'll be fun... I promise,' he tells you with a mischievous grin when he pulls away from you, and you cannot help but start to wonder about it. Maybe you should follow his suggestion the next time you find yourselves in here. As for the rest, you do as he advised and watch the sunset together before you decide to return to Red Light District, still enjoying the warmth of each other's embrace.";
 
+to say MogdrazRomanceStrollMuseum:
+	[They can only choose to explore the museum, so far, as it is quite hard to aim for a particular activity at first. In the future, it will be possible to narrow it down as Mogdraz familiarizes himself with the place.]
+	[Explore can result in:]
+	[   - Finding a roaming Cerberus (random, may end the date):]
+	[      - Player can serve as bait to distract the Cerberus as Mogdraz tames it. Leads to cerberus fucking the player while the Demon Lord gains its affection.]
+	[      - Choosing to avoid it leads to a dexterity roll. On success, the cerberus will be avoided and another explore outcome will play. Failing it with alert the cerberus and the above scene will play.]
+	[]
+	[   - IF LARS IS AWAKENED AND INSIDE: Finding the Museum Roman Wing:]
+	[      - Mogdraz is first introduced to Lars, if he is there.]
+	[      - On subsequent encounters, you three merely have a good chat. Mogdraz seems to like the Roman Soldier.]
+	[]
+	[   - Find one of many rooms:]
+	[      - Demonic Myths;]
+	[      - Astronomy;]
+	say "     Your walk to the Museum takes a while, as it is located across the High Rise District from where you are coming from. Still, you use this opportunity to chat with Mogdraz about your last adventures. Naturally, it is quite an engaging conversation which the devil is happy to have, though all he can share about his days is the same old business duties he takes on everyday. It is fine, though, as he is more than glad to direct his attention to you. All this makes it easier for you to pass the time during the trip, but you still have to watch out for the odd undesirable encounter that you would prefer to avoid while in wild land. It all goes smoothly, however, as Mogdraz's natural demonic presence is enough to keep any threats away, so the entirety of your traveling time is done without any issues.";
+	say "     Eventually, the grand building which is the Museum becomes visible in the horizon. You both accelerate your pace as eagerness begins to show. 'There it is! That took a while to find... It's in such a remote location!' Once you arrive at the entrance, Mogdraz inspects the surroundings with interest evident in his expression.";
+	if "Visited Museum" is not listed in traits of Mogdraz:
+		say "     [italic type]'Hm... this is quite an unique building. I don't detect anything out of the ordinary, at first glance, but it seems to possess some sort of aura. Magical, indeed. It must have been affected by all these dimensional breaches caused by your apocalyptic event. This could explain all its peculiarities.'[roman type][line break]";
+	say "     'Shall we go inside? At your discretion, of course.' Mogdraz then waits for you to walk in alongside him.";
+	WaitLineBreak;
+	say "     As you walk up the stairs and enter through the grand doors, you finally find yourselves inside. The whole atmosphere changes into a complete silence where every sound you make causes an echo in the long, dark corridors. Even during the day, the windows block most of the light, but Mogdraz's hovering flame between his horns gives out a dim light that helps you see your immediate surroundings. The Demon Lord keeps his voice low, almost to a whisper, as he speaks to you. 'Not the most vibrant of places, I must admit, but there is a lot to discover, I'm sure. Perhaps a glorious beast? Or something else that wants to rob us of our possessions and perhaps dignity? Obviously none would match my might, but it's fun when they try. Unfortunately, my own aura does not seem to be working in here, so they won't get spooked by my sheer presence, thus, we remain vulnerable to everything I just said.'";
+	say "     'Though, I'm also certain we can turn this into a learning experience, provided that we find something... else, other than danger. Only one way to find out, eh?' As the devil speaks only the truth, you nod as you both proceed further into the hall. There is nothing out of the ordinary during the time you are traversing the first, only some general pictures, paintings or sculptures that are mere suggestions of themes that you could find by walking in this direction. Your adventure begins when you start randomly taking turns without any significant indication of where you are going, but your companion seems to be fine with that. In fact, he is smiling all the time. You are only left to wonder what will come next...";
+	WaitLineBreak;
+	if a random chance of 4 in 10 succeeds: [Random Encounter]
+		say "[MogdrazRomanceStrollMuseumCerberus]";
+	else:
+		say "[MogdrazRomanceStrollMuseumExplore]";
+	WaitLineBreak;
+	say "     Eventually, you make it back to the Club safely. During the trip back, you two simply make additional conversation about the time you just spent together and discuss things you would like to do in the future. Mogdraz seems quite enthusiastic when faced with the prospective of catching some thrills with you, but other than that, he seems quite affectionate. You truly feel like he cares for you and enjoys your company, and he has been definitely smiling more, lately.";
+	say "     The time you spent with Mogdraz pleased him greatly, and you feel like you have gotten closer to the Demon Lord.";
+	if Resolution of MogdrazRomance < 10:
+		increase Resolution of MogdrazRomance by 1; [goes up to 10]
+	if "Visited Museum" is not listed in traits of Mogdraz:
+		TraitGain "Visited Museum" for Mogdraz;
+
+[RANDOM ENCOUNTER SECTION]
+
+to say MogdrazRomanceStrollMuseumCerberus:
+	say "     ... Something happens during the time you travel through the main halls of the Museum.";
+	say "     You and Mogdraz hear heavy footsteps echoing through the halls, then a low roar as a large beast approaches your position. The devil turns to you, whispering, 'Oh, my... Looks like something big is heading our way. We can hide or fight it, your choice. I'm good with either.'";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Hide.";
+	say "     ([link]N[as]n[end link]) - Wait for it and attack.";
+	if player consents:
+		LineBreak;
+		say "     Deciding that hiding would best suit your preferences, you make the best use of your stealth capabilities and go hide in a room nearby. Then, you try to stay as still as possible...";
+		let bonus be (( dexterity of player minus 10 ) divided by 2);
+		let diceroll be a random number from 1 to 20;
+		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Dexterity Check):[line break]";
+		if diceroll + bonus >= 13:
+			say "     You wait... the footsteps get louder for brief moments, then you hear them fading away in the distance until completely silence reigns your surroundings, once again. 'Looks like we've done it! Our path is clear again.' Now, you are free to continue your exploration without any additional interruptions, hopefully.";
+			WaitLineBreak;
+			say "[MogdrazRomanceStrollMuseumExplore]";
+		else:
+			say "     You wait... the footsteps get louder, and louder... You hear the creature sniffing around the door, and suddenly, it is kicked open. Both you and Mogdraz immediately stand up as you are now facing a large three-headed beast.";
+			say "     'Would you look at that! Such a grand beast! Oh, this really gets me going, can't wait to tame it! C'mon, be the bait! I'll have something ready for it by the time it kicks your ass!' he tells you, laughing in the end. Then, Mogdraz begins to cast some sort of spell as you are thrown into the fight against a Cerberus.";
+			WaitLineBreak;
+			MogdrazRomanceStrollMuseumCerberusFight;
+	else:
+		LineBreak;
+		say "     You decide against hiding and, instead, face the beast head on as you begin to walk directly towards it. The devil looks pumped up to face this creature, and even more once the large three-headed beast reveals itself.";
+		say "     'Would you look at that! Such a grand beast! Oh, this really gets me going, can't wait to tame it! C'mon, be the bait! I'll have something ready for it by the time it kicks your ass!' he tells you, laughing in the end. Then, Mogdraz begins to cast some sort of spell as you are thrown into the fight against a Cerberus.";
+		WaitLineBreak;
+		MogdrazRomanceStrollMuseumCerberusFight;
+
+to MogdrazRomanceStrollMuseumCerberusFight:
+	now inasituation is true;
+	challenge "Cerberus";
+	now inasituation is false;
+	if fightoutcome < 20: [won]
+		say "     With your expertise in combat, you manage to defeat the creature, forcing Mogdraz interrupts his cast. The cerberus lies down, too weak to fight, and eventually crashes down, fast asleep. 'Aw, look at what you've done! Now it's too tired to do anything! What a shame...' says the Demon Lord, clearly disappointed by this. You try telling him that you merely defended yourself, arguing that he should actually be happy that you managed to do that all by yourself while he only started chanting a few odd words. He frowns his eyebrows and looks directly in your eyes, making your soul shake. 'It wasn't a chant! It was an enchantment! Different things! And now I can't use it on the beast because you wore it down like that! Oh well...'";
+		say "     As nothing remains to be done here, you both turns your backs on the collapsed beast and start walking the other way together. It looks like Mogdraz had a plan for the cerberus, but you were too competent at fighting it off. He is not unhappy about that, and eventually shrugs it off. 'I guess we'll have another chance at it, eventually. Consider letting the beast do what it wants to you, on the next time, and trust me. It'll be fun, I promise!' You hear his words and nod, telling him that at least, you will consider.";
+		WaitLineBreak;
+		say "[MogdrazRomanceStrollMuseumExplore]";
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "     During the confrontation with the three-headed beast, you begin to feel weary and too exhausted to continue, finally collapsing on the ground. But before the beast can properly pin you down under them, Mogdraz unleashes his spell on the creature, which causes the cerberus to stop moving and lock a distant gaze onto the Demon Lord's eyes. 'Perfect, just the right amount of time for me to be able to do this. Now... Give me your paw!' he commands the beast, and they obey, extending one of their front paws towards Mogdraz. The devil grabs it, and it is a very large one, with both his hands and praises the creature. 'Good girl! Or... Boy? Do you even have a gender? Well, it doesn't matter. I accept you the way you are! Whatever that is...'";
+		say "     The cerberus beings to wag their tail excitedly as they hear this, having now walked almost entirely above you as you remain under the creature's powerful and huge body. 'Seeing how you're such a good er... herm? Hm, I'll have to find a better word for this. But, yes, as I was saying, I think you deserve a treat! How about a [if player is female]tight little pussy[else]supple butt with a tight little hole[end if] for your impressive tailcock? Does that sound like something you'd like?' The three heads eagerly bark as Mogdraz just offered them your [if player is female]womanhood[else]ass[end if]. Before you even have a chance to protest, if you wanted to, the fat tip of the cerberus tail is already slipping between your [if player is not naked]asscheeks, against your clothing[else]bare asscheeks[end if]. This entire situation forces you to be on all fours under the cerberus and in front of the Demon Lord.";
+		WaitLineBreak;
+		say "     Your eyes widen at this sudden intrusion as you look at Mogdraz, who looks back at you with quite a devilish grin. 'Why are you looking at me like that? You lost, so you get your loser's punishment! This game won't have different rules just because you're with me!' He then proceeds to laugh, though you notice he is also quite aroused at the prospective of making this cerberus take you, judging by the prominent and large bulge in his pants. Eventually, [if player is not naked]you are made to free your butt from any clothing and,[end if] as the creature's tailcock grinds against you, Mogdraz unzips his pants and lets his red cock out, heavily hanging above two very full orbs contained in that sack of his. He is still looking back at you while he does this before he sits down in front of you.";
+		say "     'Now that we're all properly set up, I guess you can have some from this end, as well...' says the devil, pointing his girthy rod at your lips while the cerberus finally decides to bury his tailcock past your [if player is female]wet curls[else]anal ring[end if], causing you a sudden shiver of pleasure with every inch being shoved inside you. Mogdraz goes on and pushes his cock into your mouth as you let it open for a second, the hot taste of a devil's wet manhood presenting itself atop your tongue, filling your oral space with all that veiny meat that keeps heading towards your throat. With a thrust, then another, the beast carries on fucking you with their tail while you nearly gurgle on Mogdraz's large cock, leaking madly into your mouth.";
+		WaitLineBreak;
+		say "     Then, the demon takes hold of your head and keeps you sucking on his meat while the beast pounds your [if player is female]pussy[else]ass[end if] like the wild animal they are. By then, the demon's balls are swollen and filling up even more with each time your mouth hits the base of his shaft, somehow not triggering any gag reflex on you despite the fact you are feeling it bulge from within your neck. For the next moments, you are properly double-tagged by two horny, yet very different, beasts, the three-headed canine panting without cease as they continue to fuck you, and Mogdraz moaning in bliss as you suck on his shaft. None of them give you any room for free movement as you feel both their cocks throbbing inside you.";
+		say "     Eventually, the cerberus gives sign that they are about to reach past the edging point, as you see Mogdraz immediately understanding this. 'You're close? Go on, fill [ObjectPro] up! You have my full permission.' The beast seems glad to hear this and proceeds to fuck you even harder, so enthusiastically that you even feel your own orgasm threatening to burst through you. This is no exception for Mogdraz himself, who is already struggling to not make you swallow his entire load right away, but... That is what is going to happen as he forces it all in you. 'Swallow it all up, now... Don't waste a drop, I've made it just for you...! Oh, fuck yes...!'";
+		WaitLineBreak;
+		say "     For what seems to be almost a minute, you are given a filling of cum from both sides as every drop of their loads is deposited in you. This mixture of sensations is enough to also get you there, [if player is male]cumming on spot[else]hitting your climax[end if] as your entire body quivers in ecstasy. Then, suddenly, you feel yourself being pulled from underneath the beast and into Mogdraz's arms as the cerberus falls on the floor, fast asleep. This, unfortunately, happens during the demon's orgasm, so as he makes this quick move, his cock pops out of your mouth and paints your face with several strands of cum that were still being shot into your stomach. 'Fuck...! Phew... It's not pleasant to do a quick reaction while I'm still in the middle of cumming...!'";
+		say "     You hold his penis as the last drops leave through, just as you realize you have earned yourself a swollen belly. 'My plan was getting you under the beast, not smothered by it. But I guess we get to cuddle, now! Are you alright?' he asks, swiping your face clean with his fingers and feeding the cum back into your mouth. You barely had any time to realize how sweet and creamy it is, almost at an intoxicating level. 'Ah, at least you seem to be enjoying my treat. Feel free to carry on savoring it while we take a moment to catch our breaths. I seem to have missed a lot of it! What a mess...!' These several minutes you spend on each other's arms pass by while Mogdraz helps you clean up, licking up his load's leftovers.";
+		if player is female:
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Cerberus";
+		else:
+			CreatureSexAftermath "Player" receives "AssFuck" from "Cerberus";
+		NPCSexAftermath Player receives "OralCock" from Mogdraz;
+		WaitLineBreak;
+		say "     Once you are finally ready to go, Mogdraz helps you up and he, too, stands up besides you. 'That was fun. I should probably get a pet like this for myself... It's quite a wonderful creature! Anyway, even after this diversion, we still have time. I'd like to walk around a little longer, if that's fine by you?' With the cerberus still asleep and no more threats in the immediate vicinity, you are now free to continue your exploration, hopefully without too much trouble. Nodding at the Demon Lord, you then proceed into the halls of the Museum, once more...";
+		WaitLineBreak;
+		say "[MogdrazRomanceStrollMuseumExplore]";
+	else if fightoutcome is 30: [fled]
+		say "     You did manage to evade the cerberus, but Mogdraz stops you from getting away. 'What are you doing?! Get back on the fight, you wimp!' His voice sounds very commanding[if player is submissive][italic type], and it even sort of turns you on hearing him talk to you like that[roman type][end if]...";
+		WaitLineBreak;
+		MogdrazRomanceStrollMuseumCerberusFight;
+
+[EXPLORE SECTION]
+
+Table of GameEventIDs (continued)
+Object	Name
+MogdrazxLars	"MogdrazxLars"
+
+MogdrazxLars is a situation.
+ResolveFunction of MogdrazxLars is "".
+Sarea of MogdrazxLars is "Nowhere".
+
+[---]
+
+Table of GameEventIDs (continued)
+Object	Name
+MogdrazxDemonicMyths	"MogdrazxDemonicMyths"
+
+MogdrazxDemonicMyths is a situation.
+ResolveFunction of MogdrazxDemonicMyths is "".
+Sarea of MogdrazxDemonicMyths is "Nowhere".
+
+[---]
+
+Table of GameEventIDs (continued)
+Object	Name
+MogdrazxAstronomy	"MogdrazxAstronomy"
+
+MogdrazxAstronomy is a situation.
+ResolveFunction of MogdrazxAstronomy is "".
+Sarea of MogdrazxAstronomy is "Nowhere".
+
+[---]
+
+to say MogdrazRomanceStrollMuseumExplore:
+	let randomnumber be a random number from 1 to 3;
+	if randomnumber is:
+		-- 1:
+			if Lars is in Museum_Roman_Wing:
+				say "     Due to your subsequent visits, you happen to remember how to get to a specific destination from here, namely, the Roman Wing, where a friendly acquaintance, Lars, the roman soldier, should be in. Given that you get the chance to do so, would you like to lead Mogdraz there?";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Yes, lead him to the Roman Wing.";
+				say "     ([link]N[as]n[end link]) - No, explore elsewhere.";
+				if player consents:
+					LineBreak;
+					say "[MogdrazRomanceStrollMuseumExploreRomanWing]";
+				else:
+					LineBreak;
+					say "[MogdrazRomanceStrollMuseumExploreReroll]";
+			else:
+				say "[MogdrazRomanceStrollMuseumExploreReroll]";
+		-- 2:
+			say "[MogdrazRomanceStrollMuseumExploreDemonicMyths]";
+		-- 3:
+			say "[MogdrazRomanceStrollMuseumExploreAstronomy]";
+
+to say MogdrazRomanceStrollMuseumExploreReroll:
+	let randomnumber be a random number from 1 to 2;
+	if randomnumber is:
+		-- 1:
+			say "[MogdrazRomanceStrollMuseumExploreDemonicMyths]";
+		-- 2:
+			say "[MogdrazRomanceStrollMuseumExploreAstronomy]";
+
+to say MogdrazRomanceStrollMuseumExploreRomanWing:
+	say "     As you begin to take a notion of where you are within the museum's halls, you let Mogdraz know that there is a place nearby you could go to, more specifically, the roman wing";
+	if Resolution of MogdrazXLars is 0:
+		say ". His eyes widen and shine with interest as he hears your words. 'A roman wing? That's an interesting word! What is that?' he asks. You recall that Mogdraz is not from your world, so he would not know about the roman empire. You just give him a brief explanation of its history as far as common knowledge goes, and it seems to pick his interest even more. 'One of the greatest empires in the history of your world, you say? That sounds really interesting... I'd like to see this room. Where is it, again?' With your next destination obviously assigned, you then begin to lead the Demon Lord towards the Roman Wing.";
+		say "     As you make your way through the western hub, you finally arrive at the Roman Wing, and make sure you have your presence known to Lars, who is inside. This way, the young man is not startled by your arrival with such a large, mighty and powerful infernal lover who happens to be on the lead of an entire horde of demons while also possessing all sorts of magical powers, some of which you yet do not know of. It would be quite intimidating for the poor lone soldier to see this without warning, and thanks to your consideration, he simply smiles at the both of you, treating Mogdraz with the respect and politeness he deserves once you two approach him. The Demon Lord is quite fascinated at all the decoration, though, and takes some time to greet Lars back.";
+		WaitLineBreak;
+		say "     'Oh, greetings uh... I apologize, I was quite distracted by all this! Were your soldier really dressed like that? Their legs are so exposed...! It's quite distrac-... Ooooh, is that the strategy?' says the devil as he points to one of the paintings depicting soldiers in their typical roman armors. 'The armor protects our upper bodies while allowing us to move freely. We didn't intend to distract our enemies with our legs, though,' the soldier replies. 'Bah, lost opportunity. I have my grunts fight as naked as possible, and make sure their bulges are as prominent as they can be! An irresistible opponent will only weaken its adversary, thus, granting them an advantage. Of course this often leads to them fucking each other in the end, and we have potentially turned the enemy into an ally in this way.'";
+		say "     Lars looks slightly confused at this statement for a while, but after giving it some thinking, he starts to see wisdom in Mogdraz's words. 'Well, it's true... Even just looking at some of these paintings is quite distracting. I can see that work in a battlefield, though I doubt there would be any fighting if that actually worked.' 'Of course you wouldn't see any fighting! That'd be a waste of time if this really sexy soldier began hitting ON you, instead! I think humans create too many wars and fail to realize love conquers all. A shame, if you ask me!' As the conversation between the two continues, you only stand there, listening and intervening here and there whenever you catch an opportunity to participate, but overall, they seem to get along fairly well.";
+		WaitLineBreak;
+		say "     Time flies, and eventually, you have to take your leave. Mogdraz seems happy to have expanded his intellect, as well as his contact network with an additional handsome roman soldier, thanks to this. You both say your goodbyes to Lars as you walk out of the Roman Wing. 'What a splendid friend you've made! And you had to solve some sort of puzzle to awaken him from his statue state? This place really is mysterious... And interesting! I'd love to come back any time! Though... sadly for now, we have to return to the Club. I've had quite a pleasant time, thanks to you.' As this smile endures in the devil's face, you make your way out of the museum and proceed to travel back to the Red Light District.";
+		now Resolution of MogdrazxLars is 1;
+	else if Resolution of MogdrazxLars > 0:
+		say ". As he has already been there and met your roman soldier friend, Lars, he immediately knows what you are talking about and nods. 'A chance to visit our formerly statuesque friend? I wouldn't miss it! He's quite a nice guy and knows so many things about this roman empire... I'd love to have a chance to chat with him again, if you'd also like to.' With your next destination obviously assigned, you then begin to lead the Demon Lord towards the Roman Wing.";
+		say "     As you make your way through the western hub, you finally arrive at the Roman Wing, and make sure you have your presence known to Lars, who is inside. The soldier immediately recognizes you and Mogdraz, as you then proceed to walk inside and approach him. Lars seems to be minding his business by the time you get there, having collected a few more supplies for himself. 'Been keeping busy, haven't we?' The devil and you are now standing close to the young man as he smiles, happy to see you again. 'Indeed, someone has to keep this little shelter of mine in order, since I don't really have anywhere else to go...' Lars replies as he steps away from his stash and turns his full attention to you two.";
+		WaitLineBreak;
+		say "     'How come? I thought the Library was large enough to accomodate one more?' Mogdraz looks at you, but Lars immediately intervenes, 'The problem resides elsewhere, in the fact that I really don't know what would happen if I left this museum for too long. In fact, I only roam the vicinity for supplies and begin to feel strange after a while. It makes me afraid of leaving...' The Demon Lord remains silent for a while, thinking to himself, seemingly intrigued by this. 'That would make sense if you were still somehow part of it. It could be like a ward to keep you from leaving this place. There's a chance I could help you, if you'd be interested in seeing the world past these walls.'";
+		say "     The young man does not refuse this immediately, but he does not seem inclined to accept just yet, judging by his hesitance. 'While I appreciate your offer, I'm actually not staying at a bad place at all. This area is relatively calm, the wing is safe and I can find plenty of supplies on my own quickly enough. Perhaps in the future, once I grow weary of this space... Who knows.' Mogdraz nods respectfully to him, and you three spend the rest of your meeting chatting about places you have visited previously. In general, it is a good time, and Lars certainly seems to have been left curious about the world. You can also tell he is growing more fond of Mogdraz over time.";
+		say "     [bold type]This conversation will keep looping until more content is added to this quest.[roman type][line break]";
+		WaitLineBreak;
+		say "     Time flies, and eventually, you have to take your leave. Mogdraz seems happy to have, once again, met the handsome roman soldier and chatted together. You both say your goodbyes to Lars as you walk out of the Roman Wing. 'What a splendid day. I'm always glad to go see Lars with you. Perhaps one day we can convince him to let me help him find some freedom. I'd love to give him that... Although, sadly for now, we have to return to the Club. I've had quite a pleasant time, thanks to you.' As this smile persists in the devil's face, you make your way out of the museum and proceed to travel back to the Red Light District.";
+		now Resolution of MogdrazxLars is 2;
+
+to say MogdrazRomanceStrollMuseumExploreDemonicMyths:
+	say "     This time, you end up walking towards the northern area, and you take a turn into one of the adjacent halls that are exceptionally dark. 'Hm... That's an oddly familiar atmosphere. I think I know what we could be approaching... Very exciting! I wonder if it's through here... And if it's what I think.' Mogdraz takes the lead as you follow through more rooms and halls, eventually finding yourselves in a space that creeps through you like a chilling wind. This sensation is, somehow, dispelled by a gesture the Demon Lord makes with one of his hands. 'That explains a lot. Would you say that perhaps this museum is cursed by a dark influence? Well, there is a high chance it is. But, I say, we should proceed anyway and see what's in this room, since we're already here!'";
+	say "     You begin to not feel so sure about this, but the devil presses on and opens the door that leads to a wing. It is hard to tell where this is within the grand building that the museum is, but you seem to be safe under the demon's protection. As you step inside, you glance around and see a quite different scenario from every other room, this one filled with paintings, sculptures and what seems to be tomes atop pedestrals. Besides that, there are deteriorated drawings of pentagrams in certain strategic spots, which indicates that some sort of ritual was performed here long ago. 'Fascinating! It seems they preserved a space used for demonic rituals! I could spend days here! I'm actually curious regarding the demons in your world...'";
+	WaitLineBreak;
+	say "     Thinking about all the demonic stories you know of, you inform Mogdraz that most of them were not believed to be true, but he stops you there. 'I am aware most of you thought so. I'm also aware they were thought to be mere religious fantasies or associated with psychological diseases, and the biggest monstrosities were commited to people who suffered from such. But you should know better by now... Everything has a degree of truth behind, and regarding demons, most of everything is, indeed, true. They've always existed, and you now see them appear through dimensional tears in your perceived reality. Heaven and Hell are real...' Mogdraz then heads over some tomes and inspects the writings, and upon looking closer, you also see there are actual books in here. Plenty of them, in fact.";
+	say "     'It really feels like we're all the same, no matter where we're from. Celestials will always be demons that just look different, except they're lying to mortals and pretending they're more righteous. It's quite pathetic, but alas, people fear the demons, instead. What surprises me is that the orderly beings had things under control for a long time in your history... Sure, many continue to fall into temptation ever since ancient times, but the vast majority tend to wish to follow the righteous path, and your societal constructs support this. I wonder what would happen if, suddenly, the whole humanity shifted their ways of thinking... Giving into sin and hedonism more than their virtues. That'd probably result in a terrible distopia, but it'd be entertaining to observe.'";
+	WaitLineBreak;
+	say "     'We offer the truth to the mortals while they offer a lie to mask your flaws. If one is too weak to figure out their own righteous path, then they have what they deserve from either side's influence. What I most hate about the celestials is how they avoid the problem, instead of solving it. We, at least, give mortals a chance to prove themselves. But, I suppose, in the end... we're not so different.' Mogdraz then looks at you, as you were listening to him speak all this time. 'Apologies, I've rambled on for a long time. If you don't mind, I'd like to spend some time, here. Would you care to keep me company while I investigate this room? I'd be... grateful.' You nod, as the entire goal was to spend time with him, so that is exactly what you shall do.";
+	say "     [bold type]This conversation will keep looping until more content is added to this quest.[roman type][line break]";
+	WaitLineBreak;
+	say "     Time flies, and eventually, you have to take your leave. Mogdraz seems content to have found and spent time in this room, but you see that he seems contemplative during most of the time you spend together. 'It was quite a good day, definitely different than usual. We should return to this place in the future, there is so much to learn from here... Although, sadly for now, we have to return to the Club. I've had quite a pleasant time, thanks to you.' As this smile persists in the devil's face, you make your way out of the museum and proceed to travel back to the Red Light District.";
+	now Resolution of MogdrazxDemonicMyths is 1;
+
+to say MogdrazRomanceStrollMuseumExploreAstronomy:
+	say "     This time, you end up walking towards the eastern area, taking several turns through halls and rooms filled with science. 'Oh, so this is where the scientifically curious go. There's a lot of information on your world, here... But nothing books don't already have. Still, a wonderful place if one wants to spend their time learning in less boring ways, since there is so much visual stimulation going on. I suppose that's why museums are popular? Or people don't really do it for learning purposes?' You are about to give your opinion on the matter when the devil spots something that throws your attention off, as well. 'Oh, this I like! Astronomy! Have you ever been to space? I don't suppose your people casually go to space, do they? There's not much to see, anyway. It's all dark and empty, for the most part.'";
+	say "     The room he speaks about is just across two double doors, opening up to a space with planet miniatures of the solar system spinning around a small sun, all hanging by the ceiling. Upon closer inspection, you notice several other sculptures of planets and even asteroids and comets atop shelves with their corresponding information. The main feature about this wing is mostly artistic and informational, as there is not much regarding real samples of real things. Fortunately, Mogdraz appreciates art in all its forms, and this is no exception. 'It's quite interesting how similar, yet different, worlds can be. Every realm, every dimension... There is none like the other. Truly fascinating... Just like people, isn't it? Even clones differ in some way or another...'";
+	WaitLineBreak;
+	say "     As you both take your time to observe each element of the room, your companion goes on talking about his own world. 'Mine is similar to yours in structure, albeit it differs in many other aspects. We have these dimensions we can travel through easily, but yours seem to be sealed and unnaccessible unless you have some sort of powerful focus to amplify your magic. I know that it wasn't always like this in my world, the dimensional barriers broke due to some global-scale event, then we had angels and demons take over the entire thing, war surged and all that jazz. Yours seems to be threatened by improper usage of technology, which is quite curious. Different events, but it seems mortals have this tendency to self-destruct, at some point...'";
+	say "     He seems to have stopped in front of a replica of your planet, Earth, silently contemplating its shape for a brief amount of time. 'I miss my homeworld... But I know I can't go back there. Not like this. I'm not powerful enough... and I don't want to be the same as that tyrant who currently rules it. So I probably will never grow as powerful as him, since my ways hold back my progress, thus, I probably won't be returning. But that's fine, I've got many other places to go and enjoy my eternal life! Not everyone can say the same...' The Demon Lord is looking melancholic as he trails off in thought, so you reach for him and wrap your arm around his large back, and you both stay like that for a while. For moments, you feel his frustration, but at least he does not feel guilty for how he gets things done.";
+	say "     [bold type]This conversation will keep looping until more content is added to this quest.[roman type][line break]";
+	WaitLineBreak;
+	say "     Time flies, and eventually, you have to take your leave. Mogdraz seems content to have found and spent time in this room, but you see that he seems contemplative during most of the time you spend together. 'It was quite a good day, definitely different than usual. We should return to this place in the future, there is so much to learn from here... Although, sadly for now, we have to return to the Club. I've had quite a pleasant time, thanks to you.' As this smile persists in the devil's face, you make your way out of the museum and proceed to travel back to the Red Light District.";
+	now Resolution of MogdrazxAstronomy is 1;
 
 [***********************************************************]
 Section 4 - Mogdraz Sex Menu
