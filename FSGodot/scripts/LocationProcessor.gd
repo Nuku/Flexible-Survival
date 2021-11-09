@@ -5,6 +5,7 @@ The job of the location processor is to keep track of the player and manage the 
 """
 
 signal response_generated(text_response, is_text)
+signal directional_button_draw_needed
 
 var input_processor = preload("res://scripts/InputProcessor.gd")
 
@@ -15,7 +16,8 @@ var current_room
 func _ready() -> void:
 	#connect to room class
 	self.add_to_group("room trackers")
-	get_tree().call_group("rooms", "compile_dictionaries")
+	
+	printerr("location processor ready")
 	#input_processor.connect("room_switch_intended", self, "handle_room_switch")
 
 """
@@ -50,10 +52,14 @@ func start_room(new_room: Node) -> void:
 	#update the room. only redundant if called by initialize player start location
 	current_room = new_room
 	room_strings = _compile_roomcard_string(new_room)
+	get_tree().call_group_flags(2, "room trackers", "update_current_room")
 	#sends signal to FS2_main
 	#print(room_strings)
 	#send signal to FS2 to create roomcard and ad it to history
 	emit_signal("response_generated", room_strings, false)
+	#send signal to input processor
+	emit_signal("directional_button_draw_needed")
+	printerr("start room called")
 
 
 """
@@ -89,9 +95,10 @@ func handle_room_switch(target_room):
 			current_room = self.get_child(0).get_child(0)
 			print("current room: " +current_room.room_name)
 			#call the update room function for all scripts needing to tack the current room
-			get_tree().call_group("room trackers", "update_current_room")
+			get_tree().call_group_flags(2, "room trackers", "update_current_room")
 			var new_room_string = _compile_roomcard_string(i)
 			emit_signal("response_generated", new_room_string, false)
+			emit_signal("directional_button_draw_needed")
 		#elif debug_counter ==  :
 			#print("Room not found")
 		#child_index = child_index + 1

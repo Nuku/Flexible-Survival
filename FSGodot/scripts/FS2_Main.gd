@@ -52,10 +52,12 @@ func _ready() -> void:
 		it keeps track of it's own children. however, this perameter is meant to be replaced by 
 		a stored value representing wherever the player last left off. 
 	"""
-	input_processor.initialize_player_start_location(location_processor.get_child(0).get_child(0)) 
-	location_processor.initialize_player_start_location(location_processor.get_child(0).get_child(0))
-	#Send references to nodes
 	emit_signal("input_processors_node_references_sent", location_processor)
+	
+	location_processor.initialize_player_start_location(location_processor.get_child(0).get_child(0))
+	input_processor.initialize_player_start_location(location_processor.get_child(0).get_child(0)) 
+	#Send references to nodes
+	printerr("FS main ready")
 	
 
 """
