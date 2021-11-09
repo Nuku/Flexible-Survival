@@ -32,7 +32,7 @@ to say Werewolf Brute Wins:
 		else:
 			say "     You do not really stand a chance against such a huge beast, who manages to take you down without much of an effort. As you fall to your knees, sore and defeated, he approaches you with a grin on his muzzle, taking a liking to the sight. 'You were not even a challenge! Looks like you need to learn what your place is, little pup.' he comments as he grabs you by the chin, forces you to look at him and, locking his gaze on your eyes, he orders you to do as he says. 'Don't worry, you're gonna like it... They all do.'";
 		WaitLineBreak;
-		if WerewolfBruteSubmitCount >= 3 and player is not dominant and a random chance of 1 in 2 succeeds:
+		if WerewolfBruteSubmitCount >= 3 and player is not dominant and Resolution of Discover The Werewolves Den is 0 and a random chance of 1 in 2 succeeds: [One time event for Werewolf's lair]
 			say "[WerewolfBruteLair]";
 		else:
 			let randomnumber be a random number from 1 to 2; [adjust the latter number for the number of options]
@@ -116,6 +116,12 @@ to say WerewolfBruteLosesSexMenu:
 		now sortorder entry is 99;
 		now description entry is "The demonologist is with you, how about you both use the werewolf (You'll end up riding the beast while Xaedihr fucks his face)";
 	[]
+	if symbiotic darkness is listed in companionList of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Unleash the darkness upon the werewolf brute";
+		now sortorder entry is 99;
+		now description entry is "Let its wicked perversion loose on the brute";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -137,6 +143,8 @@ to say WerewolfBruteLosesSexMenu:
 					say "[WerewolfBruteLosesHandjob]";
 				else if (nam is "Dominate the brute with Xaedihr"):
 					say "[WerewolfBruteLosesXaedihr]";
+				else if (nam is "Unleash the darkness upon the werewolf brute"):
+					say "[WerewolfBruteLosesDarkTyrant]";
 				now WerewolfBruteSubmitCount is 0; [resetting Submit Count]
 				wait for any key;
 		else if calcnumber is 0:
@@ -213,6 +221,28 @@ to say WerewolfBruteLosesXaedihr:
 	CreatureSexAftermath "Werewolf Brute" receives "OralCock" from "Xaedihr";
 	CreatureSexAftermath "Player" receives "Other" from "Xaedihr";
 
+to say WerewolfBruteLosesDarkTyrant:
+	say "     As you look at the brute, the darkness within you speaks in your mind, filling your body with a slowly erupting but lingering bliss as it tempts you to let your true desires become a reality. 'This werewolf brute wishes to be even bigger, even stronger, more virile... a true alpha of his species. He hates the fact that he lost against you, feeling weak and powerless. His darkest desires allow me to possess his body and grant him his wish, but more importantly... we can enjoy our captured prey together as I sip on some of his essence. We won't hurt him... it shall only be very pleasurable for us all...' Not even thinking twice, you allow this to happen as your symbiotic partner begins to emerge from you in the shape of dark goo, flowing towards the brute.";
+	say "     'What... What's happening?! What are you doing?!' The brute seems to be startled, but you tell him to not resist, as it is something that will make him feel [italic type]very[roman type] good. Once the darkness has touched him, the brute relaxes, except for his cock, which springs to attention at the mere touch of the dark goo. 'Wait... This feels... so good... W-what is it...?' he asks, as the bound between you is set. You then begin to feel as if the goo was enveloping your body, the same way it is wrapping itself around the brute, both of you tethered to one another by a shadow link. You feel the brute's pleasure as he feels yours, and suddenly, a smirk draws itself across the werewolf's muzzle. 'Yess... I want it... Please, give it to me...' he begs, and the symbiosis provides...";
+	WaitLineBreak;
+	say "     Before you, the werewolf begins to grow even larger, even stronger, his muscles trembling and slowly swelling up as he continuously grunts. His cock, throbbing and leaking copious amount of precum, only throbs harder, then thicker, then longer... He cannot even move as the pleasure overwhelms him - and you, in consequence, - only growing bigger, stronger, harder... He becomes an even larger brute, the equivalent of a bodybuilder in werewolf brute standards. 'More... More!' he shouts, and you know he seeks more of this intoxicating power, so the darkness provides. He continues to grow even bigger, especially his cock and balls, reaching a point of absurdity. The brute's nuts are so big and full they begin to drop low and swelling, approaching his knees with their size alone, looking more like massive beachballs hanging underneath the trunk of a tree...";
+	say "     'So big... so powerful... Yes...! Everyone will bow to me... Everyone will serve me... I'm the biggest...!' The tyrant yet continues to grant his wishes, the evergoing growth, to seemingly no end. It comes to a point where the weight of his endowment is so great the brute falls on his knees, balls and cock continuing to grow, with so much cum contained within only two testicles that have grown to ridiculous dimensions. 'I've granted his wish, so now... we must claim our payment,' says your symbiotic partner as you perceive your body moving on its own towards the brute, who is panting happily while looking at you approaching him, having fallen on his back as his huge cock throbs, pointing upwards and leaking like a broken faucet.";
+	WaitLineBreak;
+	say "     'I want to fill you up... breed you... impregnate you... make you mine...!' the werewolf grunts, and you almost cannot believe you are doing this, walking up to the brute and bending over to him, showing him your [if player is female]pussy[else]ass[end if], rubbing it for him, tempting him to come for it and fuck you. In fact, you find yourself wanting it, badly, as your body remains oversensitive and yearning for sexual pleasure. The brute is immediately seduced by the opportunity and, with a surge of power, he manages to get behind you, ready to take you on a doggy style. The size difference is very significant, but you feel like you can take it without a problem thanks to the Dark Tyrant's power.'";
+	say "     In fact, your whole body seems quite more elastic and malleable, a feeling that you are not really used to, but as soon as the brute presses his giant cock against your [if player is female]wet curls[else]anus[end if], you feel at ease, as your [if player is female]pussy[else]ass[end if] swallows the brute's cock to however deep he wants to go. This excites him, and soon, he proceeds to pound into you with the horniness of a beast in heat, his dick so huge that you can see its tip protruding in your belly. This shocks you for a moment, but you know this to be your shadowy companion's doing, even as the otherworldly pleasure feels as real as everything looks.";
+	WaitLineBreak;
+	say "     'You'll carry all my pups... We'll make tons of them! An entire pack of my own...' He is so big you can feel his balls collide against your legs, heavy and so full of cum you have a hard time imagining how you will fit all of that inside you, but everything is prepared for that event. As the massive girth of his cock stretches your entrance, you bounce your rear against the brute along his thrusts, showing him that you are oh so very into this. He then grabs you by the hips and really starts fucking you with the force and power of a battering ram, lost in his desire and lustful thoughts of breeding you over and over again... It is then that your symbiotic companion decides to ramp it up, his dark gooey form appearing behind the werewolf with growing tendrils spreading all over the brute.";
+	say "     These extensions of the Dark Tyrant head for all his erogenous zones, further stimulating him with rhythmical pulses and thrusts, and you can already feel the brute's cock throb intensely as he reaches his climax. Once he gets really close, he pushes his entire manhood inside you, the swollen knot squeezing past your [if player is female]labia[else]anal ring[end if] as he grunts, deeply and loudly, almost like a roar. 'Ooh yeah, here it comes...! Hnng...! Hope I don't make you pop just yet...!' You feel it all coming, spurt after spurt, all that warm beastly cum pouring into you and quickly filling you up in a matter of few seconds, and it just goes on and on... Your body makes space for it, swelling up to catch all his jizz, inflating like a balloon as you feel your entire insides becoming almost only wolf cum.";
+	WaitLineBreak;
+	say "     You quickly realize that, though, your body has not really changed at all. Your symbiotic partner has simply used you as a vessel and soaked up all the brute's essence on his own, leaving your mortal form safe and intact. He only made you feel the pleasure from this encounter in impossible, even magical, ways, which inevitably brought you to your own orgasm, drained by his gooey form that tethered the both of you. As the shadow retracts, you see the werewolf in his normal form and size, though he still remains knotted into you. The whole ordeal exhausted him, and he now fell asleep as his knot slowly deflates, only allowing you to walk away several moments later.";
+	say "     'This was exceptional. Delightful. I look forward to twist your encounters into utter bliss and pervertion even more times in the future, my friend. Together we'll grow even stronger... And have a lot of good fun.' The now enormous goo giant then returns to his dark and misty form, enjoying the boost he just got from this in the safety of your form's shadow. Or, at least, you think that is where he goes. You are actually not sure where, in the physical world, he stays when attached to you, even though his presence is made well-known.";
+	if player is female:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Werewolf Brute";
+	else:
+		CreatureSexAftermath "Player" receives "AssFuck" from "Werewolf Brute";
+	CreatureSexAftermath "Werewolf Brute" receives "Other" from "Fallen King";
+	NPCSexAftermath Player receives "Other" from Fallen King;
+
 to say Werewolf Brute Desc:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
@@ -262,7 +292,7 @@ to say WerewolfBruteLair:
 	say "     You quickly lose track of time as they toss you around, fuck your face, your [if player is female]holes[else]hole[end if], and even rubbing their meats on other parts of your body while they wait, all eager to put you on for a ride or mount you for hours and hours... They do not even address you as anything in particular, just using you as a fucktoy and filling you up with more loads until you cannot even walk. Your entire body feels so swollen that you can only roll around at some point, spread your legs for the next werewolf to fuck you silly while you choke on some other's cock, all while being utterly covered in lupine jizz, smelling like beast fluids and sweat. This mess drags on for what feels like the whole night...";
 	follow the turnpass rule;
 	follow the turnpass rule;
-	say "     Eventually, the brutes fall asleep and you manage to escape, leaving a trail of their cum wherever you go, as it is still leaking out of you. It takes a while until you can, somehow, process everything well enough to allow you to walk around, but you are going to feel like you have just arrived from a banquet for a good while... With the soreness of an all-out orgy you will not soon forget.";
+	say "     Eventually, the brutes fall asleep and you manage to escape, leaving a trail of their cum wherever you go, as it is still leaking out of you. It takes a while until you can, somehow, process everything well enough to allow yourself to walk around, but you are going to feel like you have just arrived from a banquet for a good while... With the soreness of an all-out orgy you will not soon forget.";
 	CreatureSexAftermath "Player" receives "OralCock" from "Werewolf Brute";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Werewolf Brute";
 	if player is female:

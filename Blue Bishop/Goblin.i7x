@@ -551,7 +551,7 @@ to say goblindesc:
 			now gobgender is 1;
 		else if FemaleList is warded:
 			now gobgender is 2;
-	if a random chance of 1 in 4 succeeds:
+	if a random chance of 1 in 4 succeeds and inasituation is false:
 		now gobdem is true;
 	else:
 		now gobdem is false;

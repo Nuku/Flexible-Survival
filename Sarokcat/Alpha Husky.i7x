@@ -1,9 +1,10 @@
-Version 3 of Alpha Husky by Sarokcat begins here.
+Version 4 of Alpha Husky by Sarokcat begins here.
 [ Version 1.0 - Original content - Sarokcat                          ]
 [ Version 1.1 - Alpha Husky male dom scene + ending - Nuku           ]
 [ Version 2.0 - Alpha Husky packs - Nuku                             ]
 [ Version 3.0 - Latex Husky mode - Stripes                           ]
 [ Version 3.1 - Minor scene tweak and humanity loss curbed - Stripes ]
+[ Version 4 - Added a MtF Husky Alpha variant happening on chance for full males - Gherod]
 
 "Adds an Alpha Husky to Flexible Survival's Wandering Monsters table, with impreg chance"
 
@@ -28,18 +29,33 @@ Section 1 - Creature Responses
 
 Alphahuskypet is a number that varies.
 losttoalphahusky is a number that varies.
+MtFHuskyAlphaActive is a truth state that varies.[@Tag:NotSaved]
 
 to say Alpha Husky Desc:
 	setmongender 3;
 	project the Figure of HuskyAlpha_soft_icon;
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
+	else if player is male and player is not female and Resolution of MtFHuskyAlpha is 0 and a random chance of 4 in 10 succeeds: [fully male, not herm, 1st time]
+		now MtFHuskyAlphaActive is true;
+		say "[HuskyAlphaMtFdesc1]";
+	else if Resolution of MtFHuskyAlpha > 0 and Resolution of MtFHuskyAlpha < 99 and a random chance of 4 in 10 succeeds: [fully male, not herm, subsequent times]
+		now MtFHuskyAlphaActive is true;
+		say "[HuskyAlphaMtFdesc2]";
 	else:
 		say "     You blink in surprise as a large, handsome anthro husky male appears in front of you, his slim canine muzzle drawn back in an amused grin as he looks you over. Returning the examination, you see that he has a handsome coat of lovely fur and a nice, perky tail wagging behind him, as he obviously enjoys what he is looking at. The beast is obviously one of the rare male alphas that take care of and probably made the many slutty husky bitches around the city. [one of]'You look like you will make a fine bitch for me...' [or]'Let's see if you know how to submit to an alpha,' [or]'Another soon-to-be husky bitch for me, I see!' [or]'Hello, my lovely little bitch. Time to get fucked!' [or]'You look like you need a pack to belong to. Let me help you with that...' [or]'It doesn't look like you have embraced your inner slut yet. Here, let me help you with that...' [or]'C'mere, Bitch!' [or]'Let's see now, do you want to do it the hard way, or the doggy style way...' [or]'I can't wait to get my paws on you!' [or]'Time to show you what an alpha can do!' [at random]the horny husky says as he rubs his paws together. His thick, erect canine cock bobs with excitement, and the knot at the base is already starting to swell with anticipation as he strides forward eagerly!";
 
 to say Alpha Husky attack:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
+	else if Resolution of MtFHuskyAlpha is 0 and MtFHuskyAlphaActive is true:
+		now MtFHuskyAlphaActive is false;
+		project the Figure of HuskyAlpha_hard_icon;
+		say "[HuskyAlphaMtF1]";
+	else if Resolution of MtFHuskyAlpha > 0 and Resolution of MtFHuskyAlpha < 99 and MtFHuskyAlphaActive is true:
+		now MtFHuskyAlphaActive is false;
+		project the Figure of HuskyAlpha_hard_icon;
+		say "[HuskyAlphaMtF2]";
 	else:
 		project the Figure of HuskyAlpha_hard_icon;
 		increase losttoalphahusky by 1;
@@ -335,6 +351,113 @@ to say AlphaHuskyBeating:
 to say AlphaHuskyRelease:
 	say "     You growl down at the alpha husky angrily, making him whimper a little, which brings a smile to your face. With a huff, you push yourself off of him, releasing your captive. The anthro canine scrambles to his feet and turns tail. He darts off down the city streets with his tail hanging low as he runs off to hide and lick his wounds. Somehow though, you don't think that this will be the last you will see of him and huskies in general.";
 
+Section 1-1 - MtF-Focused Husky Alpha variant
+
+Table of GameEventIDs (continued)
+Object	Name
+MtFHuskyAlpha	"MtFHuskyAlpha"
+
+MtFHuskyAlpha is a situation.
+ResolveFunction of MtFHuskyAlpha is "".
+Sarea of MtFHuskyAlpha is "Nowhere".
+
+to say HuskyAlphaMtFdesc1:
+	say "     You are caught by surprise as a large, handsome anthro husky male appears in front of you, his slim canine muzzle drawn back in an amused grin as he looks you over. Returning the examination, you see that he has a handsome coat of lovely fur and a nice, perky tail wagging behind him, as he obviously enjoys what he is looking at. The beast is obviously one of the rare male alphas that take care of and probably made the many slutty husky bitches around the city. This one, though... Does not seem to charge at you right away. He, instead, inspects you from a distance, eyeing you from head to toe.";
+	say "     'Look what we've got here... A [italic type]male[roman type], of all things. I'm surprised you're still so, after running into so many of us.' He grins as he then decides to take a step closer to you. 'You're in luck, though. I like my subs masculine... at first.' The horny husky then rubs his paws together as his thick, erect canine cock bobs with excitement. The knot at the base is already starting to swell with anticipation as he strides forward eagerly!";
+	say "     [bold type]Looks like this is not the typical alpha husky...[roman type][line break]";
+
+to say HuskyAlphaMtFdesc2:
+	say "     You are caught by surprise as a large, handsome anthro husky male appears in front of you, his slim canine muzzle drawn back in an amused grin as he looks you over. Returning the examination, you see that he has a handsome coat of lovely fur and a nice, perky tail wagging behind him, as he obviously enjoys what he is looking at. The beast is obviously one of the rare male alphas that take care of and probably made the many slutty husky bitches around the city. This one, though... You think you recognize him";
+	if player is female and player is not male:
+		say ". 'I like what I'm looking at. It seems you've finally embraced it... And you look a lot better as a feminine and pretty bitch. Shall we make sure you... stay that way? I promise I'll make it enjoyable for the two of us...' The horny husky then rubs his paws together as his thick, erect canine cock bobs with excitement. The knot at the base is already starting to swell with anticipation as he strides forward eagerly!";
+	else:
+		say ". 'Aww... [one of]What a shame. You still look too... manly, for the times we've been together. I guess I just have to fuck you again... Maybe that'll be enough to turn you into a proper girly bitch[or]Look at you, still resisting your fate... Come here, let me show how good it feels to be a female slut[or]You're still looking like that? Guess I have to keep fucking you until we soften those edges... make you look nice, pretty and girly as you should[at random]...' The horny husky then rubs his paws together as his thick, erect canine cock bobs with excitement. The knot at the base is already starting to swell with anticipation as he strides forward eagerly!";
+	say "     [bold type]Looks like this is that one alpha husky...[roman type][line break]";
+
+to say HuskyAlphaMtF1: [first scene, only chance to kill off the event if undesired]
+	if HP of Player > 1: [player submitted]
+		say "     You have submitted to the alpha male husky, giving him a clear indication that you want him to do whatever he wants to you, and there is no way back on that.";
+		HuskyAlphaMtF1Continued;
+	else:
+		say "     Despite your resistance, the alpha male husky manages to overpower you with his might and strength, leaving you unable to continue fighting. 'Well, aren't you something... Though, resisting is futile in this case. You should accept what you're destined to be. The receiver of my future pups... with a womb to carry them all... And for that, we've gotta turn you into a [bold type]good girl[roman type]. So, just stop fighting and embrace it, we'll both feel much better that way...!' Hearing this husky's words gives you a clear idea of what he intends to do to you, however, he seems to take more pleasure in having an eager submissive rather than a rebellious one. Maybe [bold type]the right attitude[roman type] would discourage him from subduing you...";
+		say "     Or, you can [bold type]do the opposite[roman type] and become his slut. You will probably lose your masculinity, and all of it, if you keep submitting to him, but if you do not mind that, then you could just focus on the fun part of it, if that is your thing.";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Do as he says, stop resisting.";
+		say "     ([link]N[as]n[end link]) - No, you do not like this, and you will have none of it.";
+		if Player consents:
+			LineBreak;
+			say "     What he says begins to make sense in your head, like an appealing deal you cannot refuse, and now, you drop all resistance for what is about to come...";
+			HuskyAlphaMtF1Continued;
+		else:
+			LineBreak;
+			say "     Enough is enough, and you let him know that much is clear. He may have bested you in a fight, but your mind remains solid... somewhat, at least. You tell him that you will never obey him and will not accept any offers he gives, that he should just stop wasting time with you and seek someone else who would gladly bend over for him to be his so yearned [']good girl[']. He looks back at you, eyes wide, clearly surprised by your sudden outburst. 'Well, that's no fun, is it? What's the point of dominating someone who doesn't want to be dominated? Usually we break their will until they have no other choice but to comply, but honestly... I really can't be bothered. So, have it your way. Maybe you aren't all that suited to be a subservient bitch.'";
+			say "     He then turns around and starts walking the other way, paying no further attention to you. That should take care of it. You do not think you will ever see this particular alpha husky ever again.";
+			now Resolution of MtFHuskyAlpha is 99;
+
+to HuskyAlphaMtF1Continued:
+	say "     'Convinced already? This should be fun...' he says, the handsome alpha slowly approaching you as you fall on your knees, locking his gaze onto yours until he is in your reach. You chin is then grabbed by his paw in a strong manner, tightly grasping you as you are forced to look at his grinning face. 'It's gonna take a while... But give it a few times and you'll become a very pretty girl, I'm sure.' Once the alpha husky has got you in his dominant trance, he takes hold of his throbbing meat and, with his other paw, lowers your head towards him, causing your lips to collide with the pointy tip of his cock. 'Contrary to my other rivals, I always like a bit of foreplay... To make sure I'm ready to take you properly like the slut you are.'";
+	say "     He forces his cock down your throat several times, holding you by the back of your skull and roughly facefucking you for a while. His knot bashes against your lips continuously as his furry sack bounces back and forth, the husky clearly getting more and more excited. 'You're such a little bitch... I'm starting to like you.' At some point, he pulls you off his dick, giving you a brief time to catch your breath, but holds your face still. 'Bend over. I want to fuck you.' You are then released, but you must follow his command, so you turn around, get on all fours and expose your butt to him, which quite pleases the canine. 'We've got a good starting point, here... Very nice ass,' he says, giving one of your cheeks a slap before he squeezes it, to then fondle your hole.";
+	WaitLineBreak;
+	say "     'Not what I'd call a pussy, but it shall serve the same purpose, for now... Until we get you one.' Once the husky repositions himself to align his sex with your entrance, he then teases you by rubbing his meat against it, only grinding between your cheeks. Your hole feels warm as it instinctively throbs at the mere presence of the alpha canine's cock, then beginning to relax and yearn to be filled. 'Can't wait to get fucked, eh? Such a good slut... You make an amazing bitch.' Then, he finally begins to press his manhood into you, pushing it past your anal ring and shoving it deeper... 'This is your place, right here... My bitch,' he says, slapping your butt and leaning over on top of you.";
+	say "     'This is what a real male is like... Owning bitches like you and fucking their brains out...' The alpha male then surprises you as he takes hold of your [cock of player] cock, dandling hard under you and between your legs, squeezing it tight and making you flinch in reflex [if cock length of player >= 7 and cock length of player <= 10]. 'And look at this... not a bad one, if you knew how to use it. But you're just not made to be like me. Might as well have a clit in its place, right? You have no need for a cock unless it's inside you... hehe[else if cock length of player > 10]. 'And have a look at this! Quite an impressive meat... Almost makes me feel bad for getting rid of it, but then again... it's such a waste on a bitch like you. You could never hope to know how to use it... It's just not in you, right? You'd rather actually have it [italic type]in[roman type] you... hehe[else if cock length of player < 7]. 'And what's this? Guess you were already half-way there to go full female with a cock this tiny. More like a clit, by now. It's adorable, even... Look at how hard it throbbed when I called it a clit... It really wants to be one, eh? Don't worry, it's doing a good job, so far[end if]...' As the husky taunts you, he continues to thrust into you, fucking you deep, but slowly, at first.";
+	WaitLineBreak;
+	say "     The husky picks up the pace, eventually, as he puts his muscular furred arm around your neck, rendering any movement of yours helplessly blocked. You remain fully at his mercy, taking his cock deep inside your ass, each thrust going harder and harder, tempting you to moan at the increasing pleasure you are getting from this. 'You seem to like your role a lot, slut... Can't wait to give you some curves... A nice pair of tits... A soaking wet pussy always begging for my cock... a womb for all the pups we're gonna be having together... Might make you my bitch wife!' It is clear that the husky is fantasizing with how you will look after he is done with you, imagining you as his female cum dumpster, his cock throbbing every second while inside you, ramming against your prostate, which begins to shy away as these thoughts cloud your mind.";
+	say "     He gropes your chest, squeezes it and rubs his paw all over it, exciting you even more as he carries on fucking you. 'Hng... I'm close... You wanna take a real alpha male's load inside you? See how it feels to be bred, with all my warm seed deep in you...' he whispers into your ear before pushing his knot into you, locking himself inside your ass as he cums. 'Fuck yeah, bitch, take it all!' The husky goes on grunting as he delivers his sperm inside you, coating your bowels generously as he scoops you into his arms. This whole thing makes you cum as well, spurt after spurt of eager jizz leaving through your cock, but not as vigorously as you are used to... just short squirts of it as your whole body and hole quiver in an intense surge of pleasure.";
+	WaitLineBreak;
+	say "     'That's my good girl... Enjoying her male's love. We're going to get along very well...' he commends you, licking your face and still groping your chest. 'I can already feel my load working your body, softening you... You're gonna feel so much better as a pretty female. Much more yourself.' You are then forced to cuddle with the husky, as he is still knotted to you, all while he feels you up and continues to taunt you. 'Next time you see me... just drop to your knees, service your male and let me continue my work. A few more fucks and you're gonna be looking beautiful... Give it a few more and you'll have a dripping pussy yearning for this cock all the time... I promise I'll give it to you.'";
+	say "     Moments later, the husky pulls off from you and stands up, grinning, leaving you lying down on the ground. 'See you around, slut. Just steer clear from that [italic type]other[roman type] [']alpha['], please,' he says, with quote gestures, 'I want to have the pleasure of claiming you for myself only.' Then, with his final message delivered, he walks away. You, on the other hand, have to recover from this, but not without losing a significant amount of both your masculinity and dignity.";
+	infect "Husky Bitch";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Husky Alpha";
+	now Resolution of MtFHuskyAlpha is 1;
+
+to say HuskyAlphaMtF2: [subsequent times]
+	if HP of player > 1:
+		say "     Seeing this alpha male in front of you, there is no way you can resist him. You immediately drop to your knees as he approaches you...";
+	else:
+		say "     You attempted to resist him this time, but he is just too powerful. He takes you down without breaking a sweat, unfazed by your futile attempt at fighting back...";
+	say "     'Hey there, slut. Missed me?' he asks, with the biggest grin on his muzzle, standing on front of you with a raging hard-on that keeps on throbbing every other second. 'Hope you haven't been fooling around with that other husky dude. You belong to this alpha only. Now... show me how that body's going,' he commands, and you have no other choice but to obey him...";
+	WaitLineBreak;
+	if player is male:
+		say "     Exposing your body to the husky alpha, you show him that you still have a cock between your legs. He looks at you, very sad and disappointed. 'Seems there's something there that wasn't supposed to be... That's quite a shame, isn't it? Can't quite take you as my bitch wife that way... Maybe we just need to fuck a couple more times, dump a few more loads into you... Don't worry, we'll shape you up into a fine female in no time.'";
+		HuskyAlphaMtF2Male;
+	else if player is female:
+		say "     Exposing your body to the husky alpha, you show him that your front has only this wet vulva, engorged and moist, very happy to see him. His eyes even shine with joy, and you can swear his meat grew even harder, as he eyes your feminine form. 'What a good girl. No more of that unsightly cock. Bet you don't even miss having one... Why even have it, in the first place? When you've got this one here that can go in a way better place... inside you.'";
+		HuskyAlphaMtF2Female;
+	else:
+		say "     Exposing your body to the husky alpha, you show him that... you lack any sort of genitalia. He shrugs, confused at this. 'Uh... I don't really know what to do with that, honestly. Maybe it's some sort of phase between the sex change? Well... you still have an ass, right?' You nod, aware of your butthole still between your asscheeks.";
+		HuskyAlphaMtF2Male;
+
+to HuskyAlphaMtF2Male:
+	WaitLineBreak;
+	say "     As he is done examining you, the handsome alpha slowly approaches, locking his gaze onto yours until he is in your reach. You chin is then grabbed by his paw in a strong manner, tightly grasping you as you are forced to look at his grinning face. 'I'm sure you'll become a very pretty girl quickly, now. Just give it a couple more times...' Once the alpha husky has got you in his dominant trance, he takes hold of his throbbing meat and, with his other paw, lowers your head towards him, causing your lips to collide with the pointy tip of his cock. 'You know the deal. Suck my cock, get me nice and hard... and then you're getting fucked deep like only a proper slut deserves.'";
+	say "     He forces his cock down your throat several times, holding you by the back of your skull and roughly facefucking you for a while. His knot bashes against your lips continuously as his furry sack bounces back and forth, the husky clearly getting more and more excited. 'That's it, my bitch... Swallow it... savor it... This cock owns you.' At some point, after thrusting into your throat for some more time, he pulls you off his dick, giving you a brief time to catch your breath, but holds your face still. 'That's good enough. Get on all fours, time for your fuck.' You are then released, but you must follow his command, so you turn around, get on all fours and expose your butt to him, which quite pleases the canine. 'You've still got a really nice ass,' he says, giving one of your cheeks a slap before he squeezes it, to then fondle your hole.";
+	WaitLineBreak;
+	say "     'Can't wait to be fingering a pussy in place of that [if player is male]unsightly clit pretending to be a cock[else]void between your legs[end if]. Believe me, you're just gonna feel a lot more like yourself...' Once the husky repositions himself to align his sex with your entrance, he then teases you by rubbing his meat against it, only grinding between your cheeks. Your hole feels warm as it instinctively throbs at the mere presence of the alpha canine's cock, then beginning to relax and yearn to be filled. 'Can't wait to get fucked, eh? Such a good slut... You make an amazing bitch.' Then, he finally begins to press his manhood into you, pushing it past your anal ring and shoving it deeper... 'This is your place, right here... My bitch,' he says, slapping your butt and leaning over on top of you.";
+	say "     'This is what a real male is like... Owning bitches like you and fucking their brains out... Bet you can't wait to become a permanent addition to my pack... as my bitch wife, eh?' As the husky taunts you, he continues to thrust into you, fucking you deep, but slowly, at first. He does take his time to really get you in the mood, arching your back and pressing your butt against his pelvis, though keeping his knot outside, which continues to swell... 'Is that eagerness I see in you to take my load? That's right... you need it, right? You also can't wait to have a pussy and take my pups in you like a proper slut... Oh yeah, I'll give them to you... All you could ever want...'";
+	WaitLineBreak;
+	say "     The husky picks up the pace, eventually, as he puts his muscular furred arm around your neck, rendering any movement of yours helplessly blocked. You remain fully at his mercy, taking his cock deep inside your ass, each thrust going harder and harder, tempting you to moan at the increasing pleasure you are getting from this. 'I'm picturing you with these really nice curves... A nice pair of tits, or well, several, hehe... A soaking wet pussy always begging for my cock... a womb full of my pups... We're gonna have so many...' It is clear that the husky is fantasizing with how you will look after he is done with you, imagining you as his female cum dumpster, his cock throbbing every second while inside you, [if player is male]ramming against your prostate, which begins to shy away as these thoughts cloud your mind[else]drilling your asshole with the virility only an alpha male can have[end if].";
+	say "     He gropes your chest, squeezes it and rubs his paw all over it, exciting you even more as he carries on fucking you. 'Hng... I'm close... You're ready, slut? Maybe we'll get you that pussy, this time... And we won't need to keep using your rear hole any longer...' he whispers into your ear before pushing his knot into you, locking himself inside your ass as he cums. 'Fuck yeah, bitch... take it all!' The husky goes on grunting as he delivers his sperm inside you, coating your bowels generously as he scoops you into his arms. This whole thing makes[if player is male] you cum as well, spurt after spurt of eager jizz leaving through your cock, but not as vigorously as you are used to... just short squirts of it as[end if] your whole body and hole quiver in an intense surge of pleasure, your climax hitting you so intensely that you think it even excites your alpha even more during his last few shots.";
+	WaitLineBreak;
+	say "     'That's my good girl... Enjoying her male's love. You've done well... Accepting your fate... Embracing your femininity...' he commends you, licking your face and still groping your chest. 'I can already feel my load working your body, softening you... You're gonna feel so much better as a pretty female. Much more yourself.' You are then forced to cuddle with the husky, as he is still knotted to you, all while he feels you up and continues to taunt you. 'Next time you see me... just drop to your knees, service your male and let me continue my work. I promise I'll fuck you until you have a dripping pussy yearning for this cock all the time... Hopefully it's gonna happen soon.'";
+	say "     Moments later, the husky pulls off from you and stands up, grinning, leaving you lying down on the ground. 'See you around, slut. Just make sure to steer clear from that [italic type]other[roman type] [']alpha['], please,' he says, with quote gestures, 'You're mine only. Whatever that dude tells you... he's just delusional. I'm your real alpha.' Then, with his final message delivered, he walks away. You, on the other hand, have to recover from this, but not without losing a significant amount of both your masculinity and dignity.";
+	infect "Husky Bitch";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Husky Alpha";
+
+to HuskyAlphaMtF2Female:
+	WaitLineBreak;
+	say "     As he is done examining you, the handsome alpha slowly approaches, locking his gaze onto yours until he is in your reach. You chin is then grabbed by his paw in a strong manner, tightly grasping you as you are forced to look at his grinning face. 'I really enjoy this new... true you. Let's make sure you keep looking that way.' Once the alpha husky has got you in his dominant trance, he takes hold of his throbbing meat and, with his other paw, lowers your head towards him, causing your lips to collide with the pointy tip of his cock. 'You know the deal. Suck my cock, get me nice and hard... and then you're getting fucked deep like only a proper slut deserves.'";
+	say "     He forces his cock down your throat several times, holding you by the back of your skull and roughly facefucking you for a while. His knot bashes against your lips continuously as his furry sack bounces back and forth, the husky clearly getting more and more excited. 'That's it, my bitch... Swallow it... savor it... This cock owns you.' At some point, after thrusting into your throat for some more time, he pulls you off his dick, giving you a brief time to catch your breath, but holds your face still. 'That's good enough. Get on all fours, time for your fuck... And my treat.' You are then released, but you must follow his command, so you turn around, get on all fours and expose your butt to him, which quite pleases the canine. 'What a beautiful ass... But I'm so glad I'll be taking your pussy, this time,' he says, giving one of your cheeks a slap before he squeezes it, to then fondle your wet curls.";
+	WaitLineBreak;
+	say "     'Soaking wet... Warm... Soft... Fuck, I can't wait to breed it... How does it feel, having the right sex on you? Bet you feel way more like yourself, now...' Once the husky repositions himself to align his member with your womanhood, he then teases you by rubbing his meat against it, only grinding it between your engorged labia. It even quivers at the mere presence of the alpha canine's cock, steadily dripping, yearning to be filled. You remember the alpha's words in your mind and realize that he is so right about you, as you are indeed craving for his cock, really badly. 'Can't wait to get fucked, eh? Such a good slut... You make an amazing bitch, just like I told you.' Then, he finally begins to press his manhood into you, pushing it past your wet entrance and shoving it deeper... 'This is your place, right here... My bitch,' he says, slapping your butt and leaning over on top of you.";
+	say "     'I'm tempted to claim you already as my bitch wife... Call you officially mine... Well, even though you already belong to me. I'm talking something more... permanent. The breeder of my pack... Always full of my pups...' As the husky taunts you, he continues to thrust into you, fucking you deep, but slowly, at first. He does take his time to really get you in the mood, arching your back and pressing your butt against his pelvis, though keeping his knot outside, which continues to swell... 'Is that eagerness I see in you to take my load? That's right... you need it, right? You wanna carry my pups really badly, don't you? Oh yeah, I'll give them to you... All you could ever want... Now that you really deserve it.'";
+	WaitLineBreak;
+	say "     The husky picks up the pace, eventually, as he puts his muscular furred arm around your neck, rendering any movement of yours helplessly blocked. You remain fully at his mercy, taking his cock deep inside your greedy cunt, each thrust going harder and harder, tempting you to moan at the increasing pleasure you are getting from this. 'Fuck, babe... your pussy feels so fucking good around my cock... We're the perfect match now... You're gonna make me a proud alpha male dad, aren't you? I'm gonna breed you so full... Oooh, fuck...' It is clear that the feeling of your sex around his is quickly driving him closer and closer to the point of no return, added to the fact that you just accomplished his fantasy...";
+	say "     He gropes your breasts, squeezes them and rubs his paw all over them, exciting you even more as he carries on fucking you. 'Hng... I'm close... You're ready, slut? Make space for this load, oh it's gonna be big... Oooh...' he whispers into your ear before pushing his knot into you, locking himself inside your ass as he cums. 'Fuck yeah, bitch... take it all!' The husky goes on grunting as he delivers his sperm inside you, and he definitely fills your womb as generously as he promised, all while he scoops you into his arms. You can really tell this is a [bold type]definitely a big load[roman type]... And the whole thing makes your whole body and hole quiver in an intense surge of pleasure, your climax hitting you so intensely that you think it even excites your alpha even more during his last few shots.";
+	WaitLineBreak;
+	say "     'That's my good girl... Enjoying her male's love. You've done well... Accepting your fate... Embracing your femininity...' he commends you, licking your face and still groping your breasts. 'I can't wait to put more in you. Maybe I should just take you and fuck that pussy forever, now that you're a proper female...' You are then forced to cuddle with the husky, as he is still knotted to you, all while he feels you up and continues to taunt you. 'Next time you see me, you know what happens... Don't fight it, just let me take that pussy over and over again... Embrace your fate as my very special female.'";
+	say "     Moments later, the husky pulls off from you and stands up, grinning, leaving you lying down on the ground. 'See you around, slut. Just make sure to steer clear from that [italic type]other[roman type] [']alpha['], please,' he says, with quote gestures, 'You're mine only. Whatever that dude tells you... he's just delusional. I'm your real alpha.' Then, with his final message delivered, he walks away. You, on the other hand, have to recover from this, with your femininity reinforced.";
+	infect "Husky Bitch";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Husky Alpha";
 
 Section 2 - Creature Insertion
 
