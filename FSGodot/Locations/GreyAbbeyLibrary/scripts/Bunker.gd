@@ -45,8 +45,11 @@ func _ready() -> void:
 	"""
 	self.add_to_group("rooms", false)
 	#package all room information so it can be sent.
+	printerr("bunker ready")
+
 
 func compile_dictionaries():
+	printerr("Compiling dictionaries")
 	update_room_object()
 	bunker_exits = bunker.prepare_information()
 	emit_signal("room_information_sent", room_name, bunker_exits)
