@@ -118,3 +118,22 @@ FUNCTION:
 """
 func current_room_requested():
 	return current_room
+
+"""
+FUNCTION:
+	Used to save and load location data. 
+"""
+	
+func save(save_data):
+	var location_dictionary = {}
+	location_dictionary["current_room"] = current_room
+	save_data["location_data"] = location_dictionary
+	return
+
+func load_save(save_data):
+	if(!save_data.has("<nyobject>_data")):
+		return
+	var location_dictionary = save_data["location_data"]
+	current_room = location_dictionary['current_room']
+	initialize_player_start_location(current_room)
+	return

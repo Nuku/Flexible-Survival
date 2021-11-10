@@ -50,6 +50,14 @@ func _on_NextButton_pressed() -> void:
 func _on_Examine_pressed() -> void:
 	pass
 
+#for testing save and load
+func _on_Button3_pressed():
+	SaveEngine.save_all()
+
+func _on_Button4_pressed():
+	SaveEngine.load_all()
+
+
 
 #Directional Buttons
 """
@@ -230,3 +238,5 @@ func _on_LocationProcessor_directional_button_draw_needed() -> void:
 	elif !room_exits.keys().has("down") and down_button.get("disabled") == false:
 		down_button.set("disabled", true) 
 	
+
+
