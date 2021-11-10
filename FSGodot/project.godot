@@ -21,8 +21,12 @@ _global_script_class_icons={
 [application]
 
 config/name="FSGodot"
-run/main_scene="res://FS2_Main.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://MainMenu.tscn"
+config/icon="res://FSIcon.png"
+
+[autoload]
+
+SaveEngine="*res://scripts/SaveEngine.gd"
 
 [display]
 
