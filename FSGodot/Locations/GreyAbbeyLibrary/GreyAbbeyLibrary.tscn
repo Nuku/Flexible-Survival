@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Locations/GreyAbbeyLibrary/scripts/Bunker.gd" type="Script" id=1]
+[ext_resource path="res://Locations/GreyAbbeyLibrary/Rooms/Bunker.gd" type="Script" id=1]
 
 [node name="GreyAbbeyLibrary" type="Node"]
 
