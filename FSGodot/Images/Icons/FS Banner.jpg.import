@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FS Banner.jpg-0bbce768125305764eda844ec0b86975.stex"
+path="res://.import/FS Banner.jpg-3481a0864c18fd967d07b3914d81b141.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://FS Banner.jpg"
-dest_files=[ "res://.import/FS Banner.jpg-0bbce768125305764eda844ec0b86975.stex" ]
+source_file="res://Images/Icons/FS Banner.jpg"
+dest_files=[ "res://.import/FS Banner.jpg-3481a0864c18fd967d07b3914d81b141.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

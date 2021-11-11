@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://FS Banner.jpg" type="Texture" id=1]
+[ext_resource path="res://Images/Icons/FS Banner.jpg" type="Texture" id=1]
 [ext_resource path="res://tempfont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scripts/MainMenu.gd" type="Script" id=4]
 
