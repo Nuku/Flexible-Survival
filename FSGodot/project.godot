@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="FSGodot"
 run/main_scene="res://MainMenu.tscn"
-config/icon="res://FSIcon.png"
+config/icon="res://Images/Icons/FSIcon.png"
 
 [autoload]
 
