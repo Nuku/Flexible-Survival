@@ -13,6 +13,9 @@ Overgrown Area	"Overgrown Area"
 Overgrown Area is a Room.
 Description of Overgrown Area is "[OvergrownBlockDesc]";
 
+after looking while player is in Overgrown Area:
+	project the Figure of Map_Beach_11_icon;
+
 to say OvergrownBlockDesc:
 	if daytimer is night:	[night]
 		say "     At this time of night it's far too dark to make out much of the unlit, overgrown area.";
