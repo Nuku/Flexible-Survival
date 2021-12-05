@@ -26,8 +26,8 @@ margin_bottom = 109.0
 [node name="RoomNameLabel" type="Label" parent="MarginContainer/VRoomContainer"]
 margin_right = 300.0
 margin_bottom = 21.0
-custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "room label name"
 __meta__ = {
 "_edit_use_anchors_": false

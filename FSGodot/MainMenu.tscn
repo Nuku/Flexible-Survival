@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://FS Banner.jpg" type="Texture" id=1]
+[ext_resource path="res://Images/Icons/FS Banner.jpg" type="Texture" id=1]
 [ext_resource path="res://tempfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scripts/MainMenu.gd" type="Script" id=4]
 
-[node name="Menu Baseplate" type="Panel"]
+[node name="Menu" type="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -1.0
 margin_right = -1.0
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -50,8 +52,9 @@ margin_left = 126.0
 margin_top = 81.0
 margin_right = 281.0
 margin_bottom = 122.0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.827451, 0.537255, 0.129412, 1 )
+custom_fonts/font = ExtResource( 2 )
+action_mode = 0
 text = " New Game "
 
 [node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/HBoxContainer"]
@@ -65,8 +68,8 @@ margin_left = 124.0
 margin_top = 81.0
 margin_right = 283.0
 margin_bottom = 122.0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.827451, 0.537255, 0.129412, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = " Load Game "
 
 [node name="CenterContainer3" type="CenterContainer" parent="VBoxContainer/HBoxContainer"]
@@ -80,8 +83,8 @@ margin_left = 144.0
 margin_top = 81.0
 margin_right = 264.0
 margin_bottom = 122.0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.827451, 0.537255, 0.129412, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = " Settings "
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
@@ -105,8 +108,8 @@ margin_left = 257.0
 margin_top = 30.0
 margin_right = 368.0
 margin_bottom = 71.0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.827451, 0.537255, 0.129412, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "    Wiki    "
 
 [node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/HBoxContainer2"]
@@ -120,6 +123,12 @@ margin_left = 255.0
 margin_top = 30.0
 margin_right = 371.0
 margin_bottom = 71.0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.827451, 0.537255, 0.129412, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = " Patreon "
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/CenterContainer/New Game Button" to="." method="_on_New_Game_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/CenterContainer2/Load Button" to="." method="_on_Load_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/CenterContainer3/Settings Button" to="." method="_on_Settings_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/CenterContainer/Wiki Button" to="." method="_on_Wiki_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/CenterContainer2/Patreon Button" to="." method="_on_Patreon_Button_pressed"]
