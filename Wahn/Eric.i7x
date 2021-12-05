@@ -167,7 +167,9 @@ to say ResolveEvent Barricaded Lockerroom:
 	project the Figure of Eric_FirstMeeting_hostile_icon;
 	say "     While exploring the sports arena on the campus, you come upon the closed door to the men's locker room, looking rather battered with lots of claw scratches on it. When you try the door-handle, it opens only a crack before bumping into something heavy - accompanied by a loud clanking noise. A man's voice can be heard from inside a moment later: 'Stay away you crazy critters! I'm warning you - I've got a baseball bat and am willing to use it. You're not getting another piece out of me!'";
 	LineBreak;
-	say "     Do you want to try to talk the guy into letting you in? (Y/N)";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Try to talk the guy into letting you in?";
+	say "     ([link]N[as]n[end link]) - Shrug and leave, you're clearly not wanted here.";
 	if Player consents:
 		let bonus be (( charisma of Player minus 10 ) divided by 2);
 		let dice be a random number from 1 to 20;
@@ -179,12 +181,12 @@ to say ResolveEvent Barricaded Lockerroom:
 				say "     Hm, sounds like he really doesn't like your current looks. Maybe you should try this again in a different shape...";
 				now Resolution of Barricaded Lockerroom is 2; [frightened Eric as a furling]
 			else:
-				project the Figure of Eric_FirstMeeting_neutral_icon;
 				say "     After some quick talking, you manage to convince the person inside the locker-room that you're another survivor and not just a feral infectee. You hear some scraping noises from the other side of the door, then it opens and a young man hurriedly waves you inside. He pushes one of the heavy 3-locker units in front of the door to make sure you're not followed.";
 				say "     'Hi, I'm Eric,' the man says, shaking your hand. 'Nice to see not everyone has gone totally bonkers in this city. I couldn't believe the stuff going on out there at first... saw my roommate transform into a big furry thing right in front of my eyes. There wasn't anything human left in him - he even bit me!' He shows you his bandaged arm.";
 				move player to Sports Arena Lockerroom;
 				change southeast exit of Athletic Street to Sports Arena Lockerroom;
 				change northwest exit of Sports Arena Lockerroom to Athletic Street;
+				project the Figure of Eric_FirstMeeting_neutral_icon;
 				now Barricaded Lockerroom is resolved;
 				now Resolution of Barricaded Lockerroom is 1; [befriended Eric]
 		else:
