@@ -221,7 +221,7 @@ When Play begins:
 	now attack entry is "She [one of]leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had[or]strikes at you with her clawed hands[or]lashes out with a powerful set of sharp claws[or]rushes right at you, forcing you to back against a wall[at random].";
 	now defeated entry is "[defeated_panthertaur]";
 	now victory entry is "[panthertaur rape]";
-	now desc entry is "[mongendernum 5]";
+	now desc entry is "[PantherTaurDesc]";
 	now face entry is "feline, with a blunt snout, wet black nose and pointed ears above your head"; [ Face. Format as Your face is [Face of Player]. ]
 	now body entry is "bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws[if Nipple Count of Player > 2]. All your breasts except the first two rest on the chest of that lower torso, swaying with each step[end if]"; [ Body. Format as "Your body is [Body of Player]." ]
 	now skin entry is "[one of]furry[or]black furred[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]

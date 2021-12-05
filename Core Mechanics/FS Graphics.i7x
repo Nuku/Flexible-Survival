@@ -338,6 +338,32 @@ Figure of Elijah_good_icon is the file "Elijah_good.jpg".
 Figure of Elijah_good_face_icon is the file "Elijah_good_face.jpg".
 Figure of Elijah_good_naked_icon is the file "Elijah_good_naked.jpg".
 Figure of Elijah_virgin_icon is the file "Elijah_good.jpg".
+Figure of Eric_BriefsM_neutral_icon is the file "Eric_BriefsM_neutral.jpg".
+Figure of Eric_FirstMeeting_hostile_icon is the file "Eric_FirstMeeting_hostile.jpg".
+Figure of Eric_FirstMeeting_neutral_icon is the file "Eric_FirstMeeting_neutral.jpg".
+Figure of Eric_FirstMeeting_shocked_icon is the file "Eric_FirstMeeting_shocked.jpg".
+Figure of Eric_Naked_happy_icon is the file "Eric_Naked_happy.jpg".
+Figure of Eric_Naked_hostile_icon is the file "Eric_Naked_hostile.jpg".
+Figure of Eric_Naked_neutral_icon is the file "Eric_Naked_neutral.jpg".
+Figure of Eric_Naked_shocked_icon is the file "Eric_Naked_shocked.jpg".
+Figure of Eric_Naked_tongue_icon is the file "Eric_Naked_tongue.jpg".
+Figure of Eric_NakedHorseHard_happy_icon is the file "Eric_NakedHorseHard_happy.jpg".
+Figure of Eric_NakedHorseSoft_neutral_icon is the file "Eric_NakedHorseSoft_neutral.jpg".
+Figure of Eric_NakedOrcHard_happy_icon is the file "Eric_NakedOrcHard_happy.jpg".
+Figure of Eric_NakedOrcSoft_neutral_icon is the file "Eric_NakedOrcSoft_neutral.jpg".
+Figure of Eric_NakedSatyrHard_happy_icon is the file "Eric_NakedSatyrHard_happy.jpg".
+Figure of Eric_NakedSatyrSoft_neutral_icon is the file "Eric_NakedSatyrSoft_neutral.jpg".
+Figure of Eric_Panties_neutral_icon is the file "Eric_Panties_neutral.jpg".
+Figure of Eric_Soldier_happy_icon is the file "Eric_Soldier_happy.jpg".
+Figure of Eric_Soldier_neutral_icon is the file "Eric_Soldier_neutral.jpg".
+Figure of Eric_Speedo_happy_icon is the file "Eric_Speedo_happy.jpg".
+Figure of Eric_SpeedoM_happy_icon is the file "Eric_SpeedoM_happy.jpg".
+Figure of Eric_Student_happy_icon is the file "Eric_Student_happy.jpg".
+Figure of Eric_TShirt_happy_icon is the file "Eric_TShirt_happy.jpg".
+Figure of Eric_TShirt_hostile_icon is the file "Eric_TShirt_hostile.jpg".
+Figure of Eric_TShirt_neutral_icon is the file "Eric_TShirt_neutral.jpg".
+Figure of Eric_TShirt_shocked_icon is the file "Eric_TShirt_shocked.jpg".
+Figure of Eric_TShirt_tongue_icon is the file "Eric_TShirt_tongue.jpg".
 Figure of Eric_clothed_icon is the file "Eric_clothed.jpg".
 Figure of Eric_down_icon is the file "Eric_down.jpg".
 Figure of Eric_face_icon is the file "Eric_face.jpg".
@@ -1273,6 +1299,32 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Elven Hunter"	Figure of ElvenHunter_icon	"Vashaa"	g-white	"normal"
 "Elven Hunter hard"	Figure of ElvenHunter_hard_icon	"Vashaa"	g-white	"normal"
 "Eric_down"	Figure of Eric_down_icon	"Lytta"	g-black	"normal"
+"Eric_BriefsM_neutral"	Figure of Eric_BriefsM_neutral_icon	"Lytta"	g-white	"normal"
+"Eric_FirstMeeting_hostile"	Figure of Eric_FirstMeeting_hostile_icon	"Lytta"	g-white	"normal"
+"Eric_FirstMeeting_neutral"	Figure of Eric_FirstMeeting_neutral_icon	"Lytta"	g-white	"normal"
+"Eric_FirstMeeting_shocked"	Figure of Eric_FirstMeeting_shocked_icon	"Lytta"	g-white	"normal"
+"Eric_Naked_happy"	Figure of Eric_Naked_happy_icon	"Lytta"	g-white	"normal"
+"Eric_Naked_hostile"	Figure of Eric_Naked_hostile_icon	"Lytta"	g-white	"normal"
+"Eric_Naked_neutral"	Figure of Eric_Naked_neutral_icon	"Lytta"	g-white	"normal"
+"Eric_Naked_shocked"	Figure of Eric_Naked_shocked_icon	"Lytta"	g-white	"normal"
+"Eric_Naked_tongue"	Figure of Eric_Naked_tongue_icon	"Lytta"	g-white	"normal"
+"Eric_NakedHorseHard_happy"	Figure of Eric_NakedHorseHard_happy_icon	"Lytta"	g-white	"normal"
+"Eric_NakedHorseSoft_neutral"	Figure of Eric_NakedHorseSoft_neutral_icon	"Lytta"	g-white	"normal"
+"Eric_NakedOrcHard_happy"	Figure of Eric_NakedOrcHard_happy_icon	"Lytta"	g-white	"normal"
+"Eric_NakedOrcSoft_neutral"	Figure of Eric_NakedOrcSoft_neutral_icon	"Lytta"	g-white	"normal"
+"Eric_NakedSatyrHard_happy"	Figure of Eric_NakedSatyrHard_happy_icon	"Lytta"	g-white	"normal"
+"Eric_NakedSatyrSoft_neutral"	Figure of Eric_NakedSatyrSoft_neutral_icon	"Lytta"	g-white	"normal"
+"Eric_Panties_neutral"	Figure of Eric_Panties_neutral_icon	"Lytta"	g-white	"normal"
+"Eric_Soldier_happy"	Figure of Eric_Soldier_happy_icon	"Lytta"	g-white	"normal"
+"Eric_Soldier_neutral"	Figure of Eric_Soldier_neutral_icon	"Lytta"	g-white	"normal"
+"Eric_Speedo_happy"	Figure of Eric_Speedo_happy_icon	"Lytta"	g-white	"normal"
+"Eric_SpeedoM_happy"	Figure of Eric_SpeedoM_happy_icon	"Lytta"	g-white	"normal"
+"Eric_Student_happy"	Figure of Eric_Student_happy_icon	"Lytta"	g-white	"normal"
+"Eric_TShirt_happy"	Figure of Eric_TShirt_happy_icon	"Lytta"	g-white	"normal"
+"Eric_TShirt_hostile"	Figure of Eric_TShirt_hostile_icon	"Lytta"	g-white	"normal"
+"Eric_TShirt_neutral"	Figure of Eric_TShirt_neutral_icon	"Lytta"	g-white	"normal"
+"Eric_TShirt_shocked"	Figure of Eric_TShirt_shocked_icon	"Lytta"	g-white	"normal"
+"Eric_TShirt_tongue"	Figure of Eric_TShirt_tongue_icon	"Lytta"	g-white	"normal"
 "Eric_clothed"	Figure of Eric_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Eric_face"	Figure of Eric_face_icon	"SineAlas"	g-black	"normal"
 "Eric_naked"	Figure of Eric_naked_icon	"Kupo Klein"	g-white	"normal"
@@ -2318,7 +2370,7 @@ carry out artistcredits:
 	say "     Eric (depressed) Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Eric Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Eric (on sofa) by Bludwing @ http://bludwingart.tumblr.com[line break]";
-	say "     Eric by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Eric by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Erin Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Fancy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Fang by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
