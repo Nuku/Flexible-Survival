@@ -619,7 +619,7 @@ to say SkarnothThirdEvent_Spar01:
 	WaitLineBreak;
 	say "     The look of arrogance on his face is short lived as you begin to laugh, 'Hey what's so funny?! I could have just destroyed you!' With a wink you explain to him that he's right, funny how evolution can make all the difference. 'Wait... you mean you weren't just making fun of me? Goddammit!' The look of complete defeat on his features doesn't really fit with what you planned for this little sparring match. 'So I guess I was meant to be a slave huh? Weak, pathetic... a joke.' Wanting to shut down this trail of thought right away, you tell him that yeah you would have won, but by learning new ways to fight he was able to give you a run for your money and those are skills he will be able to use in the future to defend himself. Proof that sometimes it's best to think outside the box after all. 'Money? Wait we were betting on that match? Uhhh, you know I don't have money right?' Rolling your eyes, you explain it's just a figure of speech.";
 	say "     Over the next hour the sparring continues with you mentioning pointers on how Skarnoth can become a more effective fighter. Surprising the demon takes the rest of your comments to heart, even going so far as attempting to throw you off balance with his own fighting creations. Eventually Skarnoth drops his fighting stance for a moment and looks you dead in the eyes, '[Master], I will become stronger... and when I do, I will beat you and earn my freedom.' The words aren't a threat, they are simply a fact as far as the hellspawn is concerned. Your own reply is in the same tone and you tell him if he's able to beat you one day he will have earned his freedom, but you don't plan on making it easy. Without skipping a beat, the two of you get back into your fighting stances to resume your sparring.";
-	increase SkarnothMasterSlave by 1
+	increase SkarnothMasterSlave by 1;
 	WaitLineBreak;
 	say "     [ThirdEventFinale]";
 
@@ -636,7 +636,7 @@ to say SkarnothThirdEvent_Massage: [TODO: create a non sexy version in the futur
 	WaitLineBreak;
 	say "     Grabbing both of your wrists in a firm grip, Skarnoth looks you dead in the eyes, 'Since you decided to do something without my permission you have to be punished, now you can continue [']without['] the use of your hands!' While not exactly what you had thought might happen, you do your best to do as instructed. Stretching downward, you slowly attempt to rub the demon's pectoral muscles with the side of your face. The feeling of the warm slippery oil filling your senses with a spicy scent that you can't seem to place, but it's intoxicating nonetheless. The feeling of the demon's surprisingly soft skin excites you even further, that mixed with the reactions that the nykrata is forming within your mind is too much to bear and without a second thought you stretch out your tongue to taste the fallen prince. The flavor of the demon tastes spicy and that mixed with the intense heat radiating off of his body causes a whimper of desire to escape your lips.";
 	say "     A snicker of laughter can be heard from above your head as Skarnoth seamlessly moves each of your wrists into a single clawed hand. While at first you expect this to simply be a further extension of his decision to punish you, you are caught off guard when he gently cradles the side of your head, 'See now isn't this better? Once you learn to properly give into your instincts that's when you can finally find paradise.' The two of you finally begin to relax, while you're still alternating from rubbing against the hellspawn's body and licking him, a moment of realization passes over the both of you and the feeling of change that has surrounded the dynamic that you share...";
-	decrease SkarnothMasterSlave by 1
+	decrease SkarnothMasterSlave by 1;
 	say "     [ThirdEventFinale]";
 
 to say SkarnothThirdEvent_Sleep:
@@ -655,7 +655,7 @@ to say SkarnothThirdEvent_SexySpar01:
 	WaitLineBreak;
 	say "     His grin spreads even wider, 'Actually, I never really got into the idea of viewing my ass as a sexy part of my body, but I see the way you look at it and to be honest, I like the hunger in your eyes.' With that he turns around quickly and spreads his cheeks before letting them go and dual slapping his buttocks causing them rhythmically jiggle. Rolling your eyes at his antics, you comment on the fact that you've seen better. The fire that erupts in his eyes is exactly what you'd expected and almost on instinct the demon whirls around using his thick and massive tail to finally land his first real hit. The impact is enough to send you flying across the room and colliding with one of the walls, while you know you should be writhing in pain... for some reason you don't feel any. 'How's that for some big booty power!' Getting up from the floor, you joke that it could be useful having an ass that can bite back. 'Don't worry [master], if your good I'll always let you have a taste.' The two of you burst into laughter at your lame jokes, the effects of nykrata and the adrenaline from the fight still flooding both of your systems.";
 	say "     Without warning the behemoth of a man rushes you and slams your body into the air, however with one well placed landing step you flip your positions. Landing on top of Skarnoth, you look down seeing that due to the force of the rush he knocked the wind out of himself and with a smirk on your lips you explain to him how helpless he looks now. While his pained face is looking up at you with rage you continue to mock him, about how if this were out in the city he would already be being used as a cocksleeve or dildo, something to be used and then thrown away. If looks could kill you would definitely be history at this point, the demon raises a single clawed fist to swipe at you, but you easily restrain him. You can see that Skarnoth's fury is starting to fade and a sense of acceptance for his fate is washing over him... that just won't do.";
-	increase SkarnothMasterSlave by 1
+	increase SkarnothMasterSlave by 1;
 	WaitLineBreak;
 	say "[SparringThirdNoPillSkarnothScene]";
 
@@ -672,7 +672,7 @@ to say SkarnothThirdEvent_SexyMassage:
 	WaitLineBreak;
 	say "     Grabbing both of your wrists in a firm grip, Skarnoth looks you dead in the eyes, 'Since you decided to do something without my permission you have to be punished, now you can continue [']without['] the use of your hands!' While not exactly what you had thought might happen, you do your best to do as instructed. Stretching downward, you slowly attempt to rub the demon's pectoral muscles with the side of your face. The feeling of the warm slippery oil filling your senses with a spicy scent that you can't seem to place, but it's intoxicating nonetheless. The feeling of the demon's surprisingly soft skin excites you even further, that mixed with the reactions that the nykrata is forming within your mind is too much to bear and without a second thought you stretch out your tongue to taste the fallen prince. The flavor of the demon tastes spicy and that mixed with the intense heat radiating off of his body causes a whimper of desire to escape your lips.";
 	say "     A snicker of laughter can be heard from above your head as Skarnoth seamlessly moves each of your wrists into a single clawed hand. While at first you expect this to simply be a further extension of his decision to punish you, you are caught off guard when he gently cradles the side of your head, 'See now isn't this better? Once you learn to properly give into your instincts that's when you can finally find paradise.' The two of you finally begin to relax, while you're still alternating from rubbing against the hellspawn's body and licking him, a moment of realization passes over the both of you and the feeling of change that has surrounded the dynamic that you share...";
-	decrease SkarnothMasterSlave by 1
+	decrease SkarnothMasterSlave by 1;
 	say "     [ThirdEventFinale]";
 
 to say SkarnothThirdEvent_SexySleep:
@@ -766,31 +766,31 @@ after going to Half-Renovated Room while (Skarnoth is booked and Loyalty of Skar
 	now sortorder entry is 2;
 	now description entry is "Be a gracious [master] and give him what he wants";
 	[]
-		sort the table of fucking options in sortorder order;
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		while sextablerun is 0:
-			say "Pick the corresponding number> [run paragraph on]";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
-				if Player consents:
-					let nam be title entry;
-					now sextablerun is 1;
-					[if (nam is "Slip him a little treat"):
-						say "[SkarnothFourthEvent_FinalDrug01]";]
-					if (nam is "Let the dance continue"):
-						say "[SkarnothFourthEvent_FinalDance01]";
-					wait for any key;
-			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-		clear the screen and hyperlink list;
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				[if (nam is "Slip him a little treat"):
+					say "[SkarnothFourthEvent_FinalDrug01]";]
+				if (nam is "Let the dance continue"):
+					say "[SkarnothFourthEvent_FinalDance01]";
+				wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 [to say SkarnothFourthEvent_FinalDrug01:
-[Alright this should involve feeding skarnoth some bliss and go from a simple sexual lapdance to a more "extreme" version. this should also be the first introduction to the triplets getting horny while they watch you and their former master]
+[Alright this should involve feeding Skarnoth some bliss and go from a simple sexual lapdance to a more "extreme" version. this should also be the first introduction to the triplets getting horny while they watch you and their former master]
 	say "     ";]
 
 to say SkarnothFourthEvent_FinalDance01:
@@ -811,8 +811,8 @@ to say SkarnothFourthEvent_FinalDance01:
 Section 5 - Companion
 
 Table of GameCharacterIDs (continued)
-object    name
-submissive demonic prince    "submissive demonic prince"
+object	name
+submissive demonic prince	"submissive demonic prince"
 
 submissive demonic prince is a pet.
 NPCObject of submissive demonic prince is Skarnoth.
@@ -832,36 +832,32 @@ to say SexwithSkarnothCompanion:
 	say "     WIP to be added later.";
 
 to say SummonSkarnoth:
-		if Skarnoth is visible: [summoning while standing next to him]
-			if SkarnothThongStatus is 1:
-				project the figure of Skarnoth_naked_icon;
-			else:
-				project the figure of Skarnoth_undies_icon;
-				say "     Calling out for Skarnoth, you tell him that it's time to head out, 'Alright [master], let's go have some fun!'";
-		else: [regular summoning]
-				say "     And how do you want to do that? Cell phone reception kinda went downhill with the start of the nanite apocalypse and it's not like you can just magic up Skarnoth to appear next to you. Go pick him up yourself.";
-					now SummonFailure is true;
+	if Skarnoth is visible: [summoning while standing next to him]
+		if SkarnothThongStatus is 1:
+			project the figure of Skarnoth_naked_icon;
+		else:
+			project the figure of Skarnoth_undies_icon;
+			say "     Calling out for Skarnoth, you tell him that it's time to head out, 'Alright [master], let's go have some fun!'";
+	else: [regular summoning]
+		say "     And how do you want to do that? Cell phone reception kinda went downhill with the start of the nanite apocalypse and it's not like you can just magic up Skarnoth to appear next to you. Go pick him up yourself.";
+		now SummonFailure is true;
 
 to say DismissSkarnoth:
 	if SkarnothThongStatus is 1:
 		project the figure of Skarnoth_naked_icon;
 	else:
 		project the figure of Skarnoth_undies_icon;
-		else if Player is booked or player is bunkered: [dismissing him in the abbey]
-				say "     You tell Skarnoth that you're gonna head out on your own and that he should take a break on his throne, 'Alright that actually sounds like a good idea, all this walking is a great workout, but jeez it's tiring.'";
+		if Player is booked or player is bunkered: [dismissing him in the abbey]
+			say "     You tell Skarnoth that you're gonna head out on your own and that he should take a break on his throne, 'Alright that actually sounds like a good idea, all this walking is a great workout, but jeez it's tiring.'";
 		else:
-				say "     You tell Skarnoth to get back to the Library, 'Alright master, well you know where to find me when you need me!' With that the demon seems to simply fade away, more than likely just giving in to the pull of his throne.";
+			say "     You tell Skarnoth to get back to the Library, 'Alright master, well you know where to find me when you need me!' With that the demon seems to simply fade away, more than likely just giving in to the pull of his throne.";
 		move Skarnoth to Half-Renovated Room;
-
-
 
 [Section 4 - Final Event
 [Conclusion for the players choices]
 [dom Skarnoth - strip show scene]
 [sub Skarnoth - confession of darkest fantasies]
 [slut Skarnoth - livestock scene]
-
-
 
 Part 1 - Dom Skarnoth
 

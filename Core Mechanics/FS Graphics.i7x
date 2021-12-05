@@ -70,6 +70,8 @@ Figure of BlueGryphon_hard_icon is the file "Blue Gryphon hard.jpg".
 Figure of BlueGryphon_soft_icon is the file "Blue Gryphon soft.jpg".
 Figure of FeralGryphon_hard_icon is the file "Feral_Gryphon_hard.jpg".
 Figure of FeralGryphon_soft_icon is the file "Feral_Gryphon_soft.jpg".
+Figure of Gargoyle_hard_icon is the file "Gargoyle_hard.jpg".
+Figure of Gargoyle_soft_icon is the file "Gargoyle_soft.jpg".
 Figure of Gazelle_hard_icon is the file "Gazelle_hard.jpg".
 Figure of Gazelle_soft_icon is the file "Gazelle_soft.jpg".
 Figure of GermanShepherd_hard_icon is the file "GermanShepherd_hard.jpg".
@@ -142,6 +144,8 @@ Figure of Orca_hard_icon is the file "Orca_hard.jpg".
 Figure of Orca_clothed_icon is the file "Orca_clothed.jpg".
 Figure of OrcBreeder_random_icon is the file "OrcBreeder.jpg".
 Figure of OrcWarrior_random_icon is the file "OrcWarrior.jpg".
+Figure of PantherTaur_clothed_icon is the file "Panther Taur_clothed.jpg".
+Figure of PantherTaur_hard_icon is the file "Panther Taur_hard.jpg".
 Figure of PinkGel_icon is the file "PinkGel.jpg".
 Figure of PinkPoodle_icon is the file "fs_poodle.jpg".
 Figure of PlushLion_icon is the file "FS_PlushLion.jpg".
@@ -180,6 +184,9 @@ Figure of Tigertaur_hard_icon is the file "Tigertaur_hard.jpg".
 Figure of Tigertaur_soft_icon is the file "Tigertaur_soft.jpg".
 Figure of TigressHooker_icon is the file "tigresshooker_ig.jpg".
 Figure of Triceratops_icon is the file "triceratops_ig.jpg".
+Figure of TyrannosaurusMale_hard_icon is the file "TyrannosaurusMale_hard.jpg".
+Figure of TyrannosaurusMale_soft_icon is the file "TyrannosaurusMale_soft.jpg".
+Figure of TyrannosaurusMale_clothed_icon is the file "TyrannosaurusMale_clothed.jpg".
 Figure of VixenNurse_icon is the file "VixenNurse_ig.jpg".
 Figure of Vixentaur_icon is the file "vixentaur_ig.jpg".
 Figure of Wolftaur_hard_icon is the file "Wolftaur_hard.jpg".
@@ -489,6 +496,8 @@ Figure of Spike_naked_hard_icon is the file "Spike_naked_hard.jpg".
 Figure of Spike_naked_soft_icon is the file "Spike_naked_soft.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of Susan_face_icon is the file "Susan_face.jpg".
+Figure of Susan_FHerm_clothed_icon is the file "Susan_FHerm_clothed.jpg".
+Figure of Susan_FHerm_hard_icon is the file "Susan_FHerm_hard.jpg".
 Figure of Sven_naked_icon is the file "Sven_naked.jpg".
 Figure of Sven_tail_icon is the file "Sven_tail.jpg".
 Figure of Tehuantl_Male_Face_icon is the file "Tehuantl_Male_Face.jpg".
@@ -1282,6 +1291,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Fiona"	Figure of Fiona_icon	"Valen"	g-white	"normal"
 "Fluffy Owl"	Figure of FluffyOwl_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Gabriel"	Figure of Gabriel_icon	"Darian821"	g-black	"normal"
+"Gargoyle_soft"	Figure of Gargoyle_soft_icon	"SteppeCrow"	g-white	"normal"
+"Gargoyle_hard"	Figure of Gargoyle_hard_icon	"SteppeCrow"	g-white	"normal"
 "Garrett"	Figure of Garrett_icon	"Catmonkshiro"	g-black	"normal"
 "Garth_face"	Figure of Garth_face_icon	"SineAlas"	g-white	"normal"
 "Gazelle hard"	Figure of Gazelle_hard_icon	"Vashaa"	g-White	"normal"
@@ -1469,6 +1480,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Orc Female"	Figure of Katya_clothed_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Orc Warrior"	Figure of OrcWarrior_random_icon	"Gene Lightfoot"	g-white	"normal"
 "Orthas_face"	Figure of Orthas_face_icon	"SineAlas"	g-white	"normal"
+"PantherTaur_clothed"	Figure of PantherTaur_clothed_icon	"SteppeCrow"	g-white	"normal"
+"PantherTaur_hard"	Figure of PantherTaur_hard_icon	"SteppeCrow"	g-white	"normal"
 "Parasol_Nap"	Figure of Parasol_Nap_icon	"Watsup"	g-black	"normal"
 "Paula"	Figure of Paula_icon	"Kikeri-arts"	g-white	"normal"
 "Penny"	Figure of Penny_icon	"Waxraven/WXRVN"	g-white	"normal"
@@ -1553,6 +1566,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Sugar Glider"	Figure of SugarGlider_icon	"Xilrayne"	g-black	"normal"
 "Susan_face"	Figure of Susan_face_icon	"SineAlas"	g-black	"normal"
+"Susan_FHerm_clothed"	Figure of Susan_FHerm_clothed_icon	"Vashaa"	g-white	"normal"
+"Susan_FHerm_hard"	Figure of Susan_FHerm_hard_icon	"Vashaa"	g-white	"normal"
 "Sven_naked"	Figure of Sven_naked_icon	"Brun69"	g-black	"normal"
 "Sven_tail"	Figure of Sven_tail_icon	"Brun69"	g-black	"normal"
 "Talov_Kerr_Barrel"	Figure of Talov_Kerr_Barrel_icon	"Kupo Klein"	g-black	"normal"
@@ -1573,6 +1588,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "TSW_headshot"	Figure of TSW_headshot_icon	"Zealot"	g-black	"normal"
 "TSW_naked"	Figure of TSW_naked_icon	"Zealot"	g-white	"normal"
 "TSW_sansNecklace"	Figure of TSW_sansNecklace_icon	"Zealot"	g-white	"normal"
+"TyrannosaurusMale_clothed"	Figure of TyrannosaurusMale_clothed_icon	"SteppeCrow"	g-white	"normal"
+"TyrannosaurusMale_soft"	Figure of TyrannosaurusMale_soft_icon	"SteppeCrow"	g-white	"normal"
+"TyrannosaurusMale_hard"	Figure of TyrannosaurusMale_hard_icon	"SteppeCrow"	g-white	"normal"
 "Malayan Tiger Herm"	Figure of TigressHooker_icon	"Sharei"	g-black	"normal"
 "TinyTim"	Figure of TinyTim_icon	"Obieblu"	g-black	"normal"
 "TinyTim_face"	Figure of TinyTim_face_icon	"SineAlas"	g-black	"normal"

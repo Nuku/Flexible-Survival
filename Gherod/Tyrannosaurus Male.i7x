@@ -24,6 +24,7 @@ to say Tyrannosaurus Male Wins:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
+		project the Figure of TyrannosaurusMale_hard_icon;
 		if scalevalue of player < 2:
 			say "     As you drop to your knees in front of the t-rex man, he immediately stops as he observes you, looking at him from a lower perspective, declaring your surrender intent, as you are left with no choice. 'That's where you should be, bitch. A much more fitting position for someone like you.' he says with a mocking tone, 'You're even too tiny to be of any use to me... But I still have something for you.' He then brings his hand over his crotch and unzips his pants before your eyes, releasing his thick and veiny cock which pops out heavily from its confines, hardening by each passing second. You are then pinned down helpless under his boot, an impressive weight that you cannot outmatch, no matter how much you struggle...";
 			WaitLineBreak;
@@ -75,6 +76,7 @@ to say Tyrannosaurus Male Loses:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
+		project the Figure of TyrannosaurusMale_hard_icon;
 		if fightoutcome is 11: [submitted by libido victory]
 			say "     With how sexy and tantalizingly seductive your moves were, you managed with your last few to put an end to this fight, having turned on the dino man so much that he had just sank to his knees, unzipped his pants and took his throbbing rod in hand. You made him become debilitatingly aroused, so much in fact that he dropped all the will to attack you, as shown by his lusty gaze over your body. 'Fuck... How the... How are you so fucking sexy?!' he asks, while giving that thick foot-long of a dick some mindless strokes, admiring every inch of your figure as if you were some [if player is female]goddess[else]god[end if] of love. 'My dick's so hard it gets hard to fucking think... Because of a little sexy bitch like you...! Fuck! Why don't you come here and finish the job?!'";
 			say "     You could do as he says, but it is you who is in total control of the situation...";
@@ -173,6 +175,7 @@ to say Tyrannosaurus Male Desc:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
+		project the Figure of TyrannosaurusMale_clothed_icon;
 		say "     In front of you stands a tall anthropomorphic dinosaur man, with the head of a tyrannosaurus, to be precise. His musclebound figure is covered by a black tank top, green camo pants below and combat boots, and as he seems to be carrying his tags, he could have been a soldier or someone who simply scavenged some unfortunate human's equipment. He seems to have found an iron pipe, which he is arming himself with, walking towards you ready to strike. With a cocky, toothy grin, which actually looks quite scary given the fact his mouth features many sharp teeth, he eyes you from head to feet as he throws a taunt. 'Looking to get beaten up and fucked like the rest of them? You should just be on your knees now, bitch.'";
 		say "     The dino man does not waste any time and rushes to attack you!";
 

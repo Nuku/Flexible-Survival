@@ -58,7 +58,7 @@ Version 3 of Korvin by Wahn begins here.
 		say "";
 	else if "Relationship_Bro" is listed in Traits of Korvin: [bro with benefits]
 		say "";
-	els if "Relationship_Lover" is listed in Traits of Korvin: [lover]
+	else if "Relationship_Lover" is listed in Traits of Korvin: [lover]
 		say "";
 	else: [didn't have the serious relationship talk yet]
 		say "";
@@ -395,7 +395,7 @@ to say Korvindesc:
 			say "he accepts you as his master and will follow your orders fairly loyally.";
 		else if "Relationship_Bro" is listed in Traits of Korvin: [bro with benefits]
 			say "he's come to see you has his best bud and sex-friend, being ready to follow your orders loyally.";
-		els if "Relationship_Lover" is listed in Traits of Korvin: [lover]
+		else if "Relationship_Lover" is listed in Traits of Korvin: [lover]
 			say "given that you've expressed the desire to have a loving relationship with him, he's now utterly devoted to you.";
 		else: [didn't have the serious relationship talk yet]
 			say "he accepts you as his friend and master and will follow your orders fairly loyally.";
@@ -406,7 +406,7 @@ to say gshep_attack:
 	choose row MonsterID from the Table of Random Critters;
 	say "[one of]Your dog[or]Korvin[or]Your German shepherd[at random] [one of]growls and swipes at your enemy with an open paw-like hand, leaving scratching with his dull claws[or]clamps down with his teeth on your foe with a growl[or]charges at your foe, bashing into [ghim][or]lands a fast punch on the [Name entry][or]barks and growls at your opponent while taking swings at them[at random].";
 
-Section 1 - Dialoge
+Section 1 - Dialogue
 
 to say KorvinTalk:
 	if gsd_pet < 16:
@@ -475,7 +475,7 @@ to say conf_Korvin_talkmenu:
 	[]
 	if gsd_pet >= 60 and Resolution of Trucker Bar is 2 or Resolution of Trucker Bar is 3 and ("Relationship_Bro" is not listed in Traits of Korvin and "Relationship_Lover" is not listed in Traits of Korvin and "Relationship_Tool" is not listed in traits of Korvin): [confident Korvin (blackcollar), learned about his past and made/let him stay, neither individual relationship defined yet]
 		choose a blank row in table of fucking options;
-		now title entry is "Have a [bold type]serious[roman talk] talk about the future of your relationship";
+		now title entry is "Have a [bold type]serious[roman type] talk about the future of your relationship";
 		now sortorder entry is 5;
 		now description entry is "Talk about how things stand, between him and you";
 	[]
@@ -535,10 +535,10 @@ to say conf_Korvin_talkmenu:
 					say "[conf_Korvin_Talk03]";
 				else if nam is "Bring up your relationship":
 					say "[conf_Korvin_Talk04]";
-				else if nam is "Have a [bold type]serious[roman talk] talk about the future of your relationship";
+				else if nam is "Have a [bold type]serious[roman type] talk about the future of your relationship":
 					say "[conf_Korvin_Relationship_Choices]";
-				else if nam is "Bring up having a family";
-					say "[conf_Korvin_Mpreg_Choices]";
+				else if nam is "Bring up having a family":
+					say "[conf_Korvin_Family]";
 				else if nam is "Bring up his sexual preferences":
 					say "[conf_Korvin_Talk05]";
 				else if nam is "Bring up the situation in the city as a whole":
@@ -664,7 +664,7 @@ to say conf_Korvin_Family:
 	TraitGain "Dislikes Fast Growup" for Korvin;
 	say "     Korvin seems glum and falls silent after saying that, which you take as your queue to lay an arm around him and pull your canine lover close. You console him and say that it'll surely be possible for the two of you to have the family he dreams of at some point. ";
 	if HP of Santa Claws > 0: [player was at the Christmas village before, so has seen the inside of the mall on the way]
-	say "Maybe it's just a question of not having kids in areas quite as dangerous and chaotic as most of the city. You've seen small-ish children inside the mall after all, so not [italic type]everyone[roman type] instantly grows up. ";
+		say "Maybe it's just a question of not having kids in areas quite as dangerous and chaotic as most of the city. You've seen small-ish children inside the mall after all, so not [italic type]everyone[roman type] instantly grows up. ";
 	else:
 		say "There must be a way, somehow. ";
 	say "Taking comfort from you holding him, the anthro nods and gives you an affectionate lick in the face. 'Thank you for saying that. Gives me hope for our future.' ";
@@ -1139,7 +1139,7 @@ to say conf_Korvin_sexmenu:
 				else if nam is "Let him give you a Paw-Job":
 					say "[conf_Korvin_sex09]";
 				else if nam is "Give im a Paw-Fuck":
-					say "[conf_Korvin_sex010]";
+					say "[conf_Korvin_sex10]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the German shepherd, shaking your head slightly as he gives a questioning look.";
@@ -1251,7 +1251,7 @@ to say conf_Korvin_sex06: [be fucked by Korvin (anal)]
 			say "Nodding and giving his shoulder a squeeze, you then allow him to help you put everything back on.";
 		else if "Relationship_Bro" is listed in Traits of Korvin:
 			say "With a grin, you give his shoulder a squeeze, adding that you're glad to have found such a good buddy and sex-friend in the chaos of the city. 'Absolutely, bro! We're gonna rock the hell out of this place.' With that said, he helps you put everything back on, tail wagging while he does so.";
-		els if "Relationship_Lover" is listed in Traits of Korvin:
+		else if "Relationship_Lover" is listed in Traits of Korvin:
 			say "As you step up next to him, the German shepherd gives you a deep kiss, complete with his doggy tongue exploring your mouth. 'God, I love when you get kinky with me! I don't know what I did to deserve you.' Winking at your canine lover, you reply that you just love bad boys, and he fits that bill very well. The two of you fall back into another long bout of making out, before eventually remembering that he was helping you put on your gear again.";
 		else: [didn't have the relationship talk yet]
 			if Player is female or Player is mpreg_ok: [sees a future for himself and a player who can have his kids]
@@ -1324,7 +1324,7 @@ to say conf_Korvin_sex10: [paw-fuck Korvin]
 		say "sliming you up with your combined loads. With a somewhat annoyed expression, you push up from him, then command the dog clean you up afterwards.";
 	else if "Relationship_Bro" is listed in Traits of Korvin:
 		say "sliming you up with your combined loads. He got one over on you there, which you take take it with good enough humor and chuckle right along with him - then turn the tables and start tickling his sides and under his armpits. Like the good bros with benefits that you are, you roll around on the ground a little as you do so, having some good fun together. It almost, but not quite, escalates into a second round of fucking before you eventually clean up together.";
-	els if "Relationship_Lover" is listed in Traits of Korvin:
+	else if "Relationship_Lover" is listed in Traits of Korvin:
 		say "planting a hungry kiss on your mouth. 'God, I love when you get kinky with me, [K_Boss]!' comes his verdict after a bout of making out. With a beaming smile, you pull your canine lover in for another kiss. As your tongues intertwine, the muscular dog presses up against you with his whole body and you spend a long while just making out before eventually getting up again.";
 	else: [didn't have the relationship talk yet]
 		say "planting a hungry kiss on your mouth. ";

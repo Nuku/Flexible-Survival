@@ -362,8 +362,10 @@ to say alexandratalk_gg_menu:
 					say "[alexandra_gshep]";
 				else if nam is "Next Step":
 					say "[alexandra_nextstep]";
+				[
 				else if nam is "Fight the Overmind":
 					say "[alexandra_fight_overmind]";
+				]
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -665,13 +667,13 @@ to say goodAlexandrasex:
 		now title entry is "Sitting";
 		now sortorder entry is 5;
 		now description entry is "Take a seat and pull her into your lap for some loving";
-	[]
+	[
 	if player is Male and hunger of Alexandra is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Missionary?";
 		now sortorder entry is 6;
 		now description entry is "Gaze into her eyes as you make love";
-	[]
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -697,8 +699,10 @@ to say goodAlexandrasex:
 					say "[goodAlexandrasex4]";
 				else if nam is "Sitting":
 					say "[goodAlexandrasex5]";
+				[
 				else if nam is "Missionary?":
 					say "[goodAlexandrasex6]";
+				]
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;

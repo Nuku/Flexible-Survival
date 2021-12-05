@@ -61,6 +61,7 @@ ResolveFunction of Unusual Creature is "[ResolveEvent Unusual Creature]". It is 
 Sarea of Unusual Creature is "Park".
 
 to say ResolveEvent Unusual Creature:
+	project the Figure of Susan_FHerm_clothed_icon;
 	say "     Wandering through the wildly overgrown park, your ears pick up a faint sound and you decide to check it out. Carefully bending aside a branch, you peer into the bushes and see a bipedal deer woman not too far away in the underbrush. She's wearing nothing but a fairly ripped pair of short shorts and a tank top, likely the clothes she had on when originally transforming. Besides those, only the fur on her body protects her from the elements. As you let your eyes wander down over her once more, you spot that she doesn't appear to be completely female, if the bulge at the front of her pants is any indication. The anthro is crying quietly, face buried in her palms and her body curled against a tree. She doesn't react as you slip in closer, not even noticing you until you're almost on top of her. She gasps loudly when she does notice you, throwing herself back against the tree with wide eyes.";
 	if Player is Fully Human:
 		say "     'Don't look at me! I'm a monster,' she cries out, trying futilely to cover her nonhuman form with arms and hands. Clearly, she's retained a much more human self-image than most infected in the city. Tension and stress is visible in everything from her stance to the somewhat shrill tone of her voice. You can see the muscles in her legs tremble, possibly preparing for all out flight from you.";
@@ -136,7 +137,7 @@ to say Unusualconsole:
 	now Resolution of Unusual Creature is 3; [Consoled Susan]
 
 to say Unusualfuck:
-	project the Figure of Susan_face_icon;
+	project the Figure of Susan_FHerm_hard_icon;
 	say "     Just going ahead and pulling your [Cock of Player] cock out, you lunge forward and grab hold of the long-limbed doe. She doesn't have time to do much more than let out a frightened squeal before she is pushed down to the ground, falling onto the leaves with her belly up. It doesn't look like there is any aggressive bone at all in her body, as she doesn't try to defend herself even in this situation, allowing you to pull down her shorts and spread her legs wide with ease. 'No, wait! I- oooohhhhHH!' she starts to say, then gasps out loud as you hammer into her wet, receptive pussy. The hermaphrodite doe feels amazing around your cock, both her nether lips as well as her furry balls stroking the sides of your shaft as it slides in and out. The shocked squeals of your first entry into her soon give way to sounds of pleasure as she adapts, raising her hips to meet your powerful thrusts before much longer. Your bodies dance together, her own cock grinding against your belly each time you plunge deep into her.";
 	say "     As the climax of a quick, wild romp on the forest floor, the doe's cunt suddenly tightens like a vice around you. With a bleat of delight, she writhes under you, hands digging grooves into the ground left and right as her cock fountains thick spurts of cum to splatter all over her chest and breasts. You can feel your balls clenching in response, with the muscle contractions of her twitching pussy driving you over the edge right along with the anthro herm. Grunting out loud, you fill her belly with hot gushes of seed while grinding against her crotch. As the pleasure of your shared orgasms eventually ebbs off, you smile down at the sexy woman you've claimed for yourself by right of breeding. 'I guess I'm your woman now. I'm Susan, by the way,' she says in a somewhat star-struck tone. Postponing any reply about that, you clear your throat and explain that you didn't originally come here just to fuck her and say that someone important wants to meet her. 'Oh, okay then. I'll come, just lead the way,' she says with a nod, and indeed does so after you pull out and guide her from the park.";
 	DrMattSusanLabArrival; [this is found in the file Main Storyline.i7x]
@@ -209,12 +210,12 @@ an everyturn rule:
 			say "     [bold type]You get the feeling that [Susan]'s anger might have lessened by now. [roman type][line break]";
 
 to say SusanDesc:
-	project the Figure of Susan_face_icon;
 	if debugactive is 1:
 		say "DEBUG ->  HP: [HP of Susan], Loyalty of Susan: [Loyalty of Susan], Susanoversize: [if Susanoversize is true]True[else]False[end if]  <- DEBUG[line break]";
 	if HP of Susan is 52 and hospcountdown - turns >= 16 and hospquest >= 18 and lastfuck of Susan - turns < 4:
 		say "[Susanlabcoatscene]";
 	else if Resolution of Unusual Creature is 1 or Resolution of Unusual Creature is 2: [grumpy femherm mode]
+		project the Figure of Susan_FHerm_clothed_icon;
 		say "     Susan is an anthro doe standing a little over five feet tall. She has soft brown fur, a creamy off-white belly and undertail, while her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She has delicate, beautiful features, with the quite mobile ears working to add to any expressions that cross her face. Despite her animalistic appearances, she has hair like a human, a little darker than the brown fur of the majority of her form and freely falling down to just a little past her shoulders. As Susan notices your attention, she gives you a sullen, distrustful look. Seems she's still cross with you for bringing her here without her consent.";
 		say "     Ignoring the stare, you let your gaze roam over Susan's body, following the curves of her cream-colored breasts barely hidden by a fairly ripped tank top. The protruding nipples of the anthro are clearly visible through the thin fabric. Further down on the level of her crotch, you can see a noticeable bulge in her short-shorts, leaving little doubt that this young woman is packing something extra down there. An audible huff draws your attention back up to her face, looking annoyed and unimpressed at having been inspected by you like a piece of meat.";
 	else if Cock Length of Susan < 10 and Susan is in Primary Lab: [femherm mode in trevor labs]
@@ -237,6 +238,7 @@ to say SusanDesc:
 			say "     Having physically grown in size since you first found her, Susan's body is now conforming to much more of a masculine shape that includes broadened shoulders and chest, as well as more muscle tone of the arms and legs. Being somewhat of a hospital lab assistant now, she's been provided a lab coat while working with Dr. Mouse. Under the white coat, you can see that her bosom seems to be flatter and less pointy than it appeared before - maybe it's shrunk a bit, it could just be that the anthro's pectoral muscles have filled in, catching up to stick out above a flat belly and well-defined abs. That's not to say that she's turned completely male though, as you can still see some rounded curves of Susan's breasts at the lower edge of her pecs, with nicely large areolas and protruding nipples visible through the thin fabric of her ripped tank top. She's still a herm, but a decidedly masculine one now. Glancing down at the crotch of your deer friend, you can see that the bulge in the short-shorts is larger than it was before too, and you know full well that an 11-inch cock is just waiting for you within.";
 
 to SusanFemHerm_Base:
+	project the Figure of Susan_FHerm_clothed_icon;
 	say "     Susan is an anthro doe standing a little over five feet tall. She has soft brown fur, a creamy off-white belly and undertail, while her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She has delicate, beautiful features, with the quite mobile ears working to add to any expressions that cross her face. Despite her animalistic appearances, she has hair like a human, a little darker than the brown fur of the majority of her form and freely falling down to just a little past her shoulders. As Susan notices your attention, ";
 	if "Submissive" is listed in Traits of Susan: [Player's the man]
 		say "she gives you a submissive, almost demure look, happy to be noticed. Then she changes her pose a little, subconsciously seeking to present herself from her best side and entice you. She's clearly come far from being a frightened and lost being hiding out alone in the overgrown park.";
@@ -273,8 +275,10 @@ to FeralizeSusan:
 
 to SusanTalkMenu: [TODO: Add talk option about sexual orientation]
 	let DoneTalking be false;
+	if Cock Length of Susan < 11: [FHerm mode]
+		project the Figure of Susan_face_icon;
 	LineBreak;
-	say "     [bold type]What do you want to talk to her about?[roman type][line break]";
+	say "     [bold type]What do you want to talk to [PosAdj of Susan] about?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
