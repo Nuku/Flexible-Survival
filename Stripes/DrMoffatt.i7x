@@ -136,6 +136,7 @@ Doctor Moffatt	"Doctor Moffatt"
 
 Doctor Moffatt is a person. Doctor Moffatt is in Psych Department.
 Description of Doctor Moffatt is "[drmoffattdesc]".
+MainInfection of Doctor Moffatt is "Hyperskunk".
 Conversation of Doctor Moffatt is { "..." }.
 The icon of Doctor Moffatt is figure of DrMoffatt2_icon.
 wrcurseMoffatt is a number that varies.

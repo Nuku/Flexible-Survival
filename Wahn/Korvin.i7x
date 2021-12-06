@@ -475,7 +475,7 @@ to say conf_Korvin_talkmenu:
 	[]
 	if gsd_pet >= 60 and Resolution of Trucker Bar is 2 or Resolution of Trucker Bar is 3 and ("Relationship_Bro" is not listed in Traits of Korvin and "Relationship_Lover" is not listed in Traits of Korvin and "Relationship_Tool" is not listed in traits of Korvin): [confident Korvin (blackcollar), learned about his past and made/let him stay, neither individual relationship defined yet]
 		choose a blank row in table of fucking options;
-		now title entry is "Have a [bold type]serious[roman type] talk about the future of your relationship";
+		now title entry is "Have a serious talk about the future of your relationship";
 		now sortorder entry is 5;
 		now description entry is "Talk about how things stand, between him and you";
 	[]
@@ -535,7 +535,7 @@ to say conf_Korvin_talkmenu:
 					say "[conf_Korvin_Talk03]";
 				else if nam is "Bring up your relationship":
 					say "[conf_Korvin_Talk04]";
-				else if nam is "Have a [bold type]serious[roman type] talk about the future of your relationship":
+				else if nam is "Have a serious talk about the future of your relationship":
 					say "[conf_Korvin_Relationship_Choices]";
 				else if nam is "Bring up having a family":
 					say "[conf_Korvin_Family]";
@@ -2192,7 +2192,7 @@ instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60
 			TraitGain "Amy_Interaction_Friendly" for Korvin;
 	TraitGain "Amy_Korvin_FirstInteraction_Done" for Korvin;
 
-instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60 and Spike is booked and "Korvin - Met Collarless" is listed in Traits of Spike and "Korvin - Challenging Dude" is not listed in Traits of Korvin): [Korvin tamed, confident Korvin (blackcollar), Spike Present, Spike met Korvin without a collar]
+instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60 and Spike is booked and "Korvin - Met Collarless" is listed in Traits of Spike and "Korvin - Challenging Dude" is not listed in Traits of Spike): [Korvin tamed, confident Korvin (blackcollar), Spike Present, Spike met Korvin without a collar]
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

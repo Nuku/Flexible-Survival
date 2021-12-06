@@ -406,7 +406,7 @@ instead of fucking Elstan:
 
 Table of GameCharacterIDs (continued)
 object	name
-Elstan	"Elstan"
+Kirnon	"Kirnon"
 
 Kirnon is a man.
 ScaleValue of Kirnon is 4. [normal sized]
