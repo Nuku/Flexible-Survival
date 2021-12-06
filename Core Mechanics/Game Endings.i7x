@@ -117,6 +117,7 @@ to decide if all of the/-- endings in ( Endings - a list of texts ) are triggere
 
 vetcheat is an action applying to nothing.
 understand "i am a pro" as vetcheat.
+understand "I Am A Pro" as vetcheat.
 
 vetcheater is a number that varies.
 carry out vetcheat:
