@@ -141,7 +141,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "spooktember" as supersponsor.
+understand "hooray" as supersponsor.
 
 when play ends:
 	clear the screen;
@@ -229,7 +229,7 @@ to ratetheplayer:
 		say ".";
 	LineBreak;
 
-Table of GameEndings (continued)
+Table of GameEndings[ (continued)]
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Player Starvation"	"Death"	"Starvation"	Player Starvation rule	10	false
 "Player has died"	"Death"	""	Player has died rule	10	false
