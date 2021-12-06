@@ -1092,16 +1092,16 @@ to say conf_Korvin_sexmenu:
 	now title entry is "Blow job (giving)";
 	now sortorder entry is 8;
 	now description entry is "Reward your loyal dog by allowing him to face-fuck you";
-	[]
+	[
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him give you a Paw-Job";
 		now sortorder entry is 9;
 		now description entry is "Let the buff dog kneel before you and stroke your cock";
-	[]
+	]
 	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Give im a Paw-Fuck";
+		now title entry is "Give him a Paw-Fuck";
 		now sortorder entry is 10;
 		now description entry is "Have some pet-play and fuck his foot-paws with your dick";
 	[]
@@ -1138,7 +1138,7 @@ to say conf_Korvin_sexmenu:
 					say "[conf_Korvin_sex08]";
 				else if nam is "Let him give you a Paw-Job":
 					say "[conf_Korvin_sex09]";
-				else if nam is "Give im a Paw-Fuck":
+				else if nam is "Give him a Paw-Fuck":
 					say "[conf_Korvin_sex10]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
