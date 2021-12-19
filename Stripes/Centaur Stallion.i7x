@@ -41,22 +41,40 @@ to say losetocentaurstallion:
 				say "     You awaken sometime later to feel contractions around your body before you spill out onto the dry grounds of the Plains, the mare you had become child to giving birth to you. The nanites in your head scream as you fight the urge to give in to the infection, and with shaky newborn legs, you gallop away.";
 			else:	[Goes into womb loop scene in Centaur Mare file]
 				say "[CentaurMareWomb]";
-		else if Player is female:
-			say "     You feel a sudden weight atop you, pinning you to the ground on your hands and knees. Next comes a sudden pressure between your legs as you realize this hugely hung stallion fully intends to mount you[if Cunt Tightness of Player < 6]. You can feel his enlarged, flared glans pressing at your pussy, trying to spread open your hole for him until it finally gives and allows him entry, making you moan loudly as it pushes in[end if][if Cunt Depth of Player < 28]. With one thrust that sends shivers of lustful delight, he drives as much of his huge cock inside you as he can[else]. With a single thrust, he buries his huge cock completely inside your enormous pussy, sending shivers of lustful delight through you and making him whinny excitedly at finding a mare big enough to take him[end if]. He thrusts in and out of you, grunting in a near bestial manner as that gigantic rod pounds into you over and over. With a sound almost like a neigh, he drives deep inside you and cums powerfully, filling you with copious amounts of centaur spunk. His huge balls throb and expel cup after cup of virile, equine seed into you until finally you are left bloated and panting on the ground when he finally withdraws and trots off proudly.";
-			CreatureSexAftermath "Player" receives "PussyFuck" from "Centaur Stallion";
-		else if Player is submissive and anallevel > 1:
-			say "     The centaur stallion snorts in frustration at your lack of a pussy for him to fill and presses you to the ground. He steps overtop you and stomps his hoofs on the hard ground around you. As you cringe to avoid them, your submissive instincts cause you to raise your rear, inadvertently putting it beneath the centaur's slapping cock.";
-			say "     As his equine meat slaps against your rear a few times, he shifts his stance and starts grinding it against your backside, then thrusts it into you with a whinny of pleasure. You groan as the centaur's horse cock is driven into you, its flat glans spreading you wide as he starts plowing into you. You moan beneath him as his huge cock as he uses you as his mare. He thrusts in and out of you, grunting in a near bestial manner as that gigantic rod pounds into you over and over. With a sound almost like a neigh, he drives deep inside you and cums powerfully, filling you with copious amounts of centaur spunk. His huge balls throb and expel cup after cup of virile, equine seed into you until finally you are left bloated and panting on the ground when he finally withdraws and trots off proudly.";
-			CreatureSexAftermath "Player" receives "AssFuck" from "Centaur Stallion";
-		else:
-			say "     The centaur stallion snorts in frustration at your lack of a pussy for him to fill and presses you to the ground. He steps overtop you and pounds his hoofs on the hard ground again and again. As you cringe to avoid them, his huge cock slaps against his equine belly again and again, growing fully and harder. His pre dribbles down onto you as a warning of what comes soon after. With a loud whinny, his glans flares and blast after blast of centaur cum splatters onto you, leaving you soaked in his semen. He snorts again and trots off, frustrated and only a little satisfied.";
-			decrease HP of Player by 10;
-		if "Female Preferred" is listed in feats of Player and FemaleList is not banned:		[change target to Mare for infection]
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Centaur Mare":
-					now MonsterID is y;
-					break;
+		else: [normal scenes]
+			if HP of Player > 1: [submitted]
+				say "     Seeing this manly centaur, all mighty and powerful, moving in your direction makes you feel quite helpless, as you fall to your knees and allow him to have his way with you. He seems to find raise his eyebrows at first, cautiously approaching you, but when he notices you are not actually tricking him, his expression shifts to a wide smile as he laughs at you. 'What a little bitch, not even putting up a fight! Either you know your place or you're just a slut!' He continues to taunt and mock you for an action he considers weakness while straddling around you, ordering you to stand while he examines your body.";
+			else: [Just lost or threw fight]
+				say "     After fighting the centaur stallion for a while, you realize you cannot beat him. He still stands strong while you have taken quite some damage, until your body finally gives in and you collapse on the ground. The centaur then approaches you, laughing and mocking you for losing the combat. 'I almost pity you. Maybe you're meant to be just a bitch...' he trails off in thought as he straddles around you, ordering you to stand, which you do so with quite some difficulty, while he examines your body.";
+			if Player is female:
+				say "     Noticing your feminine bits, he gives out a pleased grunt. 'Looks like you've got something I can use,' he says, before making a sudden move on you. The centaur stallion pins you to the ground, forcing you on your hands and knees. Next comes a sudden pressure between your legs as you realize his intentions. The wild stallion man fully intends to mount you, his huge equine cock now simply laying on top of your back, feeling heavy, throbbing and already leaking at the mere anticipation of penetrating you. 'Lucky you. Seem like you get to be my mare this time.' Brief moments later, you feel that huge meat of his sliding all the way towards your rear, passing it, then it is slowly pressed against your pussy.";
+				if Cunt Tightness of Player < 6:
+					say "     You can feel his enlarged, flared glans pressing at your labia, trying to spread open your entrance for him until they finally give in and allow him entry, giving you a mix of pain and pleasure as it continues to push in deeper.";
+				else:
+					say "     Due to your size, he finds no problem pressing his flared glans against your labia to spread open your entrance for him. They easily give in and allow him entry, giving you delightful pleasure as he continues to push in deeper.";
+				say "[if Cunt Depth of Player < 28]With one thrust, he drives as much of his huge cock inside you as he can, your pussy being too small to accomodate his entire length, but the centaur is keen on making it work, at least for him[else]. With a single thrust, he buries his huge cock completely inside your enormous pussy, sending a surge of bliss through you as he makes an excited grunt, having found a mare big enough to take his entire length[end if]. He then continues to pound you, pushing in and out of you, grunting in a near bestial manner he fucks you with that gigantic rod, thrusting over and over. With a sound almost like a neigh, he drives deep inside you and cums powerfully, filling you with copious amounts of centaur spunk. His huge balls throb and expel cup after cup of virile, equine seed into you until finally you are left bloated and panting on the ground.";
+				WaitLineBreak;
+				say "     'That's a good mare. Best you know your place when you meet one of us again!' As he is done taunting you, he finally withdraws and trots off proudly.";
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Centaur Stallion";
+			else if Player is submissive and anallevel > 1 and a random chance of 1 in 2 succeeds:
+				say "     The centaur stallion snorts in frustration at your lack of a pussy for him to fill and presses you to the ground. 'Not even a pussy for me to fuck?!' he asks in a rhetoric manner, stepping overtop you and stomping his hooves on the hard ground around you. As you attempt to avoid them, your submissive instincts cause you to raise your rear, inadvertently putting it beneath the centaur's swinging cock. 'Oh, I see what you want... You're not a mare, but you crave to be one, huh?' As his equine meat slaps against your rear a few times, he shifts his stance and starts grinding it against your backside, right between your asscheeks. It truly makes you want to beg for it, feeling that warm and massive equine dong poking and rubbing at your needy hole over and over...";
+				say "     By the time your rear is covered in precum, the centaur thrusts into you with a grunt of pleasure. He slides his horse cock deeper and deeper, driving into you, its flat glans spreading your insides wide before he truly starts plowing into you. You cannot help but moan beneath him, with his huge cock now deep inside you, as he treats you like the mare you wished to become for him. 'This is what you truly wanted, yeah? All you gotta do is ask...' He thrusts in and out of you, grunting in a near bestial manner as that gigantic rod pounds into you over and over. With a sound almost like a neigh, he drives deep inside you and cums powerfully, filling you with copious amounts of centaur spunk. His huge balls throb and expel cup after cup of virile, equine seed into you until finally you are left bloated and panting on the ground.";
+				WaitLineBreak;
+				say "     'You make a great mare. You should just embrace it, although I ain't gonna lie, I loved drilling your ass too.' As he is done taunting you, he finally withdraws and trots off proudly.";
+				CreatureSexAftermath "Player" receives "AssFuck" from "Centaur Stallion";
+			else:
+				say "     The centaur stallion snorts in frustration at your lack of a pussy for him to fill and presses you to the ground. 'Not even a pussy for me to fuck?!' he asks in a rhetoric manner, stepping overtop you and stomping his hooves on the hard ground around you. As you attempt to avoid them, his huge cock slaps against his equine belly, again and again, growing bigger, thicker and harder. His pre dribbles down onto you, which prompts the centaur to stop messing with you, as he realizes how horny he is. He stops and looks down at you, seeing how powerless you are against a large beast such as himself, and that seems to throw his cock into a fully erect state.";
+				say "     You almost cannot believe it as the centaur descends his lower body over you, pinning you down even harder against the ground as his massive cock remains pointed at your face. 'Please me however you can, then. I'm not leaving until you've drained my balls,' he states, ramming his horsecock against your face a couple more times, making demands of you, 'Work it!' You are left with no choice but to give him what he wants, so you press your lips against those flared glans of his while rubbing his shaft with both your hands. Its taste is strong, animalistic, but also very masculine, which causes your mind to think that you actually enjoy this.";
+				WaitLineBreak;
+				say "     With a lot of licking and rubbing, the centaur's climax finally gives signs as his precum flow becomes more steady. With a loud grunt, blast after blast of centaur cum splatters onto you, leaving you soaked in his semen as he pulls back. He snorts again and trots off, giving you no further words, frustrated and only a little satisfied.";
+				CreatureSexAftermath "Player" receives "OralCock" from "Centaur Stallion";
+				decrease HP of Player by 10;
+			if "Female Preferred" is listed in feats of Player and FemaleList is not banned:		[change target to Mare for infection]
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
+					if Name entry is "Centaur Mare":
+						now MonsterID is y;
+						break;
 	else:
 		say "";
 
@@ -78,12 +96,13 @@ to say beatthecentaurstallion:
 		now title entry is "Get fucked";
 		now sortorder entry is 2;
 		now description entry is "Have the centaur take your ass";
-		[][
+		[]
 		if player is female:
 			choose a blank row from table of fucking options;
 			now title entry is "Get your pussy pounded";
 			now sortorder entry is 3;
-			now description entry is "Have the centaur take your pussy";]
+			now description entry is "Have the centaur take your pussy";
+		[]
 		choose a blank row from table of fucking options;
 		now title entry is "Get rimmed by the centaur";
 		now sortorder entry is 4;
@@ -93,12 +112,13 @@ to say beatthecentaurstallion:
 		now title entry is "Suck the centaur's cock";
 		now sortorder entry is 5;
 		now description entry is "Take that equine cock into your mouth";
-		[
-		choose a blank row from table of fucking options;
-		now title entry is "Get the centaur to suck your dick";
-		now sortorder entry is 6;
-		now description entry is "Force that cocky man between your legs.";
-		[]]
+		[]
+		if player is male:
+			choose a blank row from table of fucking options;
+			now title entry is "Get the centaur to suck your dick";
+			now sortorder entry is 6;
+			now description entry is "Force that cocky man between your legs";
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -118,12 +138,14 @@ to say beatthecentaurstallion:
 						say "[FuckCentaurAss]";
 					else if (nam is "Get fucked"):
 						say "[CentaurFucksPlayer]";
+					else if (nam is "Get your pussy pounded"):
+						say "[CentaurFucksFemalePlayer]";
 					else if (nam is "Get rimmed by the centaur"):
 						say "[CentaurRimsPlayer]";
 					else if (nam is "Suck the centaur's cock"):
 						say "[SuckCentaurCock]";
-					[else if (nam is "Get the centaur to suck your dick"):
-						say "[CentaurSucksPlayerCock]";]
+					else if (nam is "Get the centaur to suck your dick"):
+						say "[CentaurSucksPlayerCock]";
 					wait for any key;
 			else if calcnumber is 0:
 				now sextablerun is 1;
@@ -144,7 +166,7 @@ to say FuckCentaurAss:
 	CreatureSexAftermath "Centaur Stallion" receives "AssFuck" from "Player";
 
 to say CentaurFucksPlayer:
-	say "     You know this cocky bastard will take this the wrong way, as some kind of proof of his superiority, but that cock is just... too tempting to resist. In either case, you stead fastly walk up to him, stroking a hand along his side. Your fingers making contact with his coat, draws a flinch, and various twitches throughout the centaur's body, but that's no doubt because of what he thinks you are going to do. He has no idea what you really want, and while it's tempting to tease him a bit longer, his musky scent drives you towards something more direct. So, you reach under his belly and grab his mottled shaft, stroking it, milking it as the centaur rolls onto his side. It's hard to tell how intentional his repositioning is, and how much he's now driven by pure instinct. 'I should've known you were just an aggressive bitch.' Well, that answers that.";
+	say "     You know this cocky bastard will take this the wrong way, as some kind of proof of his superiority, but that cock is just... too tempting to resist. In either case, you walk up to him, stroking a hand along his side. Your fingers making contact with his coat, draws a flinch, and various twitches throughout the centaur's body, but that's no doubt because of what he thinks you are going to do. He has no idea what you really want, and while it's tempting to tease him a bit longer, his musky scent drives you towards something more direct. So, you reach under his belly and grab his mottled shaft, stroking it, milking it as the centaur rolls onto his side. It's hard to tell how intentional his repositioning is, and how much he's now driven by pure instinct. 'I should've known you were just an aggressive bitch.' Well, that answers that.";
 	say "     The centaur knows now, so what's the point in teasing him any longer? With him on his side, it takes only a bit more encouragement to roll him onto his back. His upper, human half grips the ground beneath you both, keeping his stallion cock pointing to the sky. 'This should make it easier for you to ride my massive cock. It's all you bitches ever want anyway.' His remarks almost make you want to change approach, but the scent that wafts off his length draws your eyes to roll up into your head, [if player is male]your length throb between your legs[else if player is female]your pussy twitch in excitement[else]your body shudder[end if], and your mind flood with all sorts of images. There's nothing quite like horse cock.";
 	WaitLineBreak;
 	say "     As tempting as it would be to just lean in and huff all that musk straight to your brain, there's a far more demanding thought shooting through your skull. The centuar's equine half is beyond broad, so as you try to straddle him, [if scalevalue of player > 3]your feet barely hold firm on each side of it[else]you find that neither foot touches the ground, both simply hanging over it[end if]. This gives an interesting image to the world as you lean forward and grab that equine dick, angling it towards your ass. Centaurs are quite productive, thankfully, and so when that slick tip pokes against your hole, little spurts of seed paint your anus. You could even swear some of it dribbles straight into your ass, breaking through the dam of muscles already. In either case, it takes only a bit of effort to pop the blunt tip inside.";
@@ -156,6 +178,20 @@ to say CentaurFucksPlayer:
 	say "     The first shot almost hurts in its brutal velocity, in its vicious heat. However, the shots after that only send waves of ecstasy through you, forcing your [if player is male]length to throb as it fires out its own load all over the horse half of the centaur[else if player is female]pussy to throb and squirt out gobs of your juices all over the horse half of the centaur[else]body to go into convulsions as you are filled with pure pleasure[end if]. Glob after glob of cum fills you, stretches your stomach, and drives you ever more over the edge to pleasure driven insanity. However, after what feels like the hundredth pound of cum, the centaur's orgasm abates, leaving his cock to dribble out much smaller quantities of fluid.";
 	say "     While it still feels heavenly to have him slowly fill you with more cum, you should get moving. So you rest against his horse body for only long enough to get your legs to stop shaking, but even then, you find it hard to pull yourself off that orgasmic length. Eventually, you manage to separate from that man, gather your things and hobble off to somewhere new.";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Centaur Stallion";
+
+to say CentaurFucksFemalePlayer:
+	say "     You know this cocky bastard will take this the wrong way, as some kind of proof of his superiority, but that cock is just... too tempting to resist. In either case, you walk up to him, stroking a hand along his side. Your fingers making contact with his coat, draws a flinch, and various twitches throughout the centaur's body, but that's no doubt because of what he thinks you are going to do. He has no idea what you really want, and while it's tempting to tease him a bit longer, his musky scent drives you towards something more direct. So, you reach under his belly and grab his mottled shaft, stroking it, milking it as the centaur rolls onto his side. It's hard to tell how intentional his repositioning is, and how much he's now driven by pure instinct. 'I should've known you were just an aggressive bitch.' Well, that answers that.";
+	say "     The centaur knows now, so what's the point in teasing him any longer? With him on his side, it takes only a bit more encouragement to roll him onto his back. His upper, human half grips the ground beneath you both, keeping his stallion cock pointing to the sky. 'This should make it easier for you to ride my massive cock. It's all you bitches ever want anyway.' His remarks almost make you want to change approach, but the scent that wafts off his length draws your eyes to roll up into your head, [if player is male]your length throb between your legs[else if player is female]your pussy twitch in excitement[else]your body shudder[end if], and your mind flood with all sorts of images. There's nothing quite like horse cock.";
+	WaitLineBreak;
+	say "     As tempting as it would be to just lean in and huff all that musk straight to your brain, there's a far more demanding thought shooting through your skull. The centuar's equine half is beyond broad, so as you try to straddle him, [if scalevalue of player > 3]your feet barely hold firm on each side of it[else]you find that neither foot touches the ground, both simply hanging over it[end if]. This gives an interesting image to the world as you lean forward and grab that equine dick, angling it towards your already moist pussy. Judging by how wet you are, you would have enough lubrication as it is, but as centaurs are so productive, little spurts of seed are added to the mix of fluids coating your lower lips when that slick tip pokes against your womanhood. You could even swear some of it dribbles straight inside, as you feel its warmth crawling up in you. In either case, it takes only a bit of effort to pop the blunt tip inside.";
+	say "     Thank god for nanites, as your pussy stretches like a dream around that rod, all of that slick pre and your own juices doing wonders. You start to think that maybe there's something more to that fluid, but before you can muster much focus on that path, the centaur bucks his hips. Just the tip becomes the entire first half of the cock, the thing spearing straight towards your womb as he thrusts in deep, his median ring bumping against your lower lips. 'You looked too busy with your mind, when you should've been busy with that pussy.' You would've growled in annoyance, if a moan hadn't escaped your lips instead. 'Thought so,' is all he gets out before your body instinctively pushes against that ring, forcing it to pop right in. From there, it's but a scant few seconds before your rear rests against those grapefruit sized balls.";
+	WaitLineBreak;
+	say "     After a few moments, you pull yourself back up the length, feeling the flared tip pull at your cunt as you leave just that bit within your body. This draws a grunt from the centaur, who forces his hips upwards, pushing a few inches back in you. Getting the hint, you slide down once more, but faster, and you then slide back up, and then down, and up once more. You build up a rhythm until you're bouncing up and down fast enough to fill the area with wet slaps. It feels so good, that hard pole driving into your womanly depths, then sliding almost all the way back out. There's nothing like a big dick, and this is among the biggest, the size only further cemented by the light belly bulge that's visible every time you push yourself against those balls.";
+	say "     All things must eventually end, however, and you know this will end with a brilliant explosion, so you go even faster. The centaur is speechless, panting, but speechless. A grin dusts your features as you work yourself even more, drawing this male closer and closer to his brilliant finish. You soon feel the balls begin to throb every time you push back against them, as his cock pulses inside you, and so you squirm around his length just a bit more. This forces a particularly loud neigh from the centaur as he shoves his equine hips into you, holding himself balls deep as you rest your butt against those pillowy, throbbing spheres.";
+	WaitLineBreak;
+	say "     The first shot almost hurts in its brutal velocity and vicious heat. However, the shots after that only send waves of ecstasy through you, forcing your pussy to throb and squirt out gobs of your juices all over the horse half of the centaur[if player is male], and your cock to pulsate as it fires out its own load all over[end if]. Glob after glob of cum fills you, stretches your womb, and drives you ever more over the edge to pleasure driven insanity. However, after what feels like the hundredth pound of cum, the centaur's orgasm abates, leaving his cock to dribble out much smaller quantities of fluid.";
+	say "     While it still feels heavenly to have him slowly fill you with more cum, you should get moving. So you rest against his horse body for only long enough to get your legs to stop shaking, but even then, you find it hard to pull yourself off that orgasmic length. Eventually, you manage to separate from that man, gather your things and hobble off to somewhere new.";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Centaur Stallion";
 
 to say CentaurRimsPlayer:
 	say "     Having beat the centaur into submission, you wonder if he'd still like a chance at your ass. You know it may not be exactly what he was going for, but what does his opinion matter anyway? The strongest survive out here, and the strongest get their satisfaction. He knows this, and he knows that he'll enjoy it too. That's just how this works. You walk up to the centaur, dropping anything that might get in the way of your plans. Once before him, you know that his darting eyes are simply trying to avoid drinking you in. If he drinks too much, he might just get even more submissive to your whims. It doesn't exactly matter, but you know just how to get him that much more needy. You grab the back of the centuar's human head, forcing him to stare directly at your groin, and then, you shove him right between your legs [if player is male]holding his nose against your testicles[else if player is female]holding his nose against your pussy[else]holding his nose right at the muskiest part of your body[end if].";
@@ -183,6 +219,21 @@ to say SuckCentaurCock:
 	WaitLineBreak;
 	say "     There's a startled moment for you as you wake up. You expect to be surrounded, tied up, or taken to some far off camp, but you realize you're still reasting against the warm body of the centaur from before. His cock is still half hard, but his human half seems to have dozed off. You quickly move to gather your things, ignoring the dried cum across most of your body, and then you head off towards a new adventure.";
 	CreatureSexAftermath "Player" receives "OralCock" from "Centaur Stallion";
+
+to say CentaurSucksPlayerCock:
+	say "     Looking at the defeated centaur, now so vulnerable and helpless, an idea comes to mind. You could very easily reach for his head and make him do anything you like, and judging by the boner you are getting from this fantasy alone, this might very possibly be what you will be doing. When you stare directly into the stallion man's eyes and make a move toward him, he frowns inquisitively. 'What are you-' he tries to ask, before you [if player is naked]make that evident by grabbing your exposed cock[else]pull out your cock and grab it[end if], then stroke it until it becomes fully erect. You then force the centaur to roll to the side, so that his human half gets closer to the ground, and slide your hand across the back of his head. He eyes you back almost in disbelief, but you reassure him it is what he thinks.";
+	say "     Despite his protests, you start slapping his face with your cock before pointing it towards his mouth, then press against his lips to make entry. Reluctant, he lets you have your way, but you really do not give him a choice. Grabbing him by the hair, you guide him towards every spot you want his tongue on and order him to put on an effort, which makes the centaur groan. With this, you lead him over the side of your shaft, have him lick all the way across your dick, towards your gonads, then back up to the tip, before pushing against his lips once more. His tongue welcomes you, feeling nice as it wiggles around your manhood, especially underneath the tip, where the stallion focuses his licking. It looks like he actually knows what he is doing, as this makes you throb immensely...";
+	WaitLineBreak;
+	say "     Having finally, or at least seemingly, accepted his fate, the centaur cooperates as you pull his head in and out, combining this movement with well-placed thrusts as your excitement grows. With your lust, comes the need for more, intensity rising until you find yourself straight-up facefucking him";
+	if player is dominant:
+		say ". You make the centaur look at you as you drill his throat, showing him who is in charge, and his whimpering expression sends you a rush of power that makes your cock throb harder than ever. His teary eyes only makes you further want to dominate him, make sure he knows his place and continue to fuck his face harder and harder. You show him no mercy, and he complies like the good horse boy he is, keeping up with you as eagerly as only one of his mares would.";
+	else:
+		say ". You look back at the centaur's face, noticing his teary eyes, and realize he must really not be used to have his throat fucked. Seeing that you really do not want to go too hard on him, you slow down whenever he needs to catch a breath, but the stallion seems keen on keeping up the pace, perhaps to be done with this ordeal once and for all.";
+	say "     When you happen to look at the lower side of his horse body, however, you notice something interesting. The centaur has gotten an erection from this, and not only that. He is grinding his massive horsecock against the ground in an attempt to bring himself some relief while you use his throat for your own pleasure. Who would say he likes sucking dick? You can, now, as he seems more than happy to take yours in his mouth over and over, your rhythm increasing even more. Naturally, this entire experience leads you closer and closer to your point of no return, your climax right about to happen, but you do not want this to be over yet. You slow down, keeping yourself on edge, enjoying the centaur's mouth for just a while longer as he, too, starts to feel it coming on his end.";
+	WaitLineBreak;
+	say "     With both of you so aroused, it does not take long until you simply explode in his mouth. But you are not content with just blowing it in his face, so you lock your cock in his mouth, shove it several inches in, and make the stallion swallow every drop of spunk you are set on giving him. His own load is also shot right beneath your feet, powerful spurts that nearly soak them due to how far they reach, and quite a great amount of it too. Once it ends, you squeeze the very last remainings for all the cum you had to offer into his mouth, then pull away, smiling at the centaur. He looks at himself, completely petrified at what just happened, humiliated... but his half-hard cock does not lie.";
+	say "     Now satisfied and feeling empowered, you decide to gather your things and turn around to walk away, leaving the embarassed centaur behind, to head off towards somewhere new.";
+	CreatureSexAftermath "Centaur Stallion" receives "OralCock" from "Player";
 
 Section 2 - Creature Insertion
 

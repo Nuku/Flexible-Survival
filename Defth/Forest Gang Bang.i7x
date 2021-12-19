@@ -79,7 +79,6 @@ to say ResolveEvent Pack Bang:
 							say "     As you beat the pack leader, the rest of the bedraggled pack breaks, fleeing into the forest. A moment later, you are left behind, standing over the dazed wolf.";
 							say "[FeralWolfVictorySex]"; [No need for a prompt, as there's already a prompt where this is defined]
 							now Resolution of Pack Bang is 4; [won against the whole pack]
-		move player to bunker;
 		wait for any key;
 	now Pack bang is resolved;
 	now inasituation is false; [re-enables standard scenes]
