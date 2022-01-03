@@ -824,7 +824,7 @@ Include Janice by Sarokcat.
 Include Jake by Rikaeus.
 Include Jay by Wahn.
 Include Jenna by Rikaeus.
-Include Jimmy by Stripes.
+Include Jimmy by Prometheus.
 Include Joanna by Stripes.
 Include Joey by Qazarar.
 Include Joshiro by Wahn.
@@ -882,7 +882,7 @@ Include Orc Lair by Wahn.
 Include Orthas by Wahn.
 Include Otto Fuchs by Prometheus.
 Include Palomino by Verath.
-Include Paula by Stripes.
+Include Paula by Prometheus.
 Include Percy by Taelyn.
 Include Pericles by Rikaeus.
 Include Phantom Dolphin by Blue Bishop.

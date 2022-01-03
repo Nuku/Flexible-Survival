@@ -107,6 +107,34 @@ Alexandrastory is a truth state that varies.
 Alexandrastory2 is a truth state that varies.
 Alexandrastory3 is a truth state that varies.
 
+
+[Alexandra is a woman. Alexandra is in Police Station Twelve.
+[physical details as of game start]
+ScaleValue of Alexandra is 3. [human sized]
+Cock Count of Alexandra is 0.
+Cock Length of Alexandra is 0.
+Ball Size of Alexandra is 0.
+Ball Count of Alexandra is 0.
+Cunt Count of Alexandra is 1.
+Cunt Depth of Alexandra is 10.
+Cunt Tightness of Alexandra is 3.
+Nipple Count of Alexandra is 2. [2 nipples]
+Breast Size of Alexandra is 3.
+[Basic Interaction states as of game start]
+PlayerMet of Alexandra is false.
+PlayerRomanced of Alexandra is false.
+PlayerFriended of Alexandra is false.
+PlayerControlled of Alexandra is false.
+PlayerFucked of Alexandra is false.
+OralVirgin of Alexandra is false.
+Virgin of Alexandra is false.
+AnalVirgin of Alexandra is true.
+PenileVirgin of Alexandra is true.
+SexuallyExperienced of Alexandra is true.
+TwistedCapacity of Alexandra is false.
+Sterile of Alexandra is false.
+MainInfection of Alexandra is "Doberman Bitch".]
+
 Section 6 - Police Station
 
 Table of GameRoomIDs (continued)
@@ -297,6 +325,12 @@ to say alexandratalk_gg_menu:
 		now sortorder entry is 7;
 		now description entry is "Talk to Alexandra about the Overmind.";
 	[]
+	[if hp of Alexandra is 71:
+		choose a blank row in table of fucking options;
+		now title entry is "Fight the Overmind";
+		now sortorder entry is 8;
+		now description entry is "Tell Alexandra that you are ready to take on the Overmind.";]
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -328,6 +362,10 @@ to say alexandratalk_gg_menu:
 					say "[alexandra_gshep]";
 				else if nam is "Next Step":
 					say "[alexandra_nextstep]";
+				[
+				else if nam is "Fight the Overmind":
+					say "[alexandra_fight_overmind]";
+				]
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -569,6 +607,22 @@ to say alexandra_gshep:
 
 to say alexandra_nextstep:
 	say "     'I haven't decided what to do next. Give me some more time please. (WIP sorry)";
+	[say "     You ask Alexandra whether she has had any thoughts on what to do next about the Overmind. 'As a matter of fact, I have. I managed to find one of my old informants from before and they got back to me with something that will hopefully help,' she replies before showing you a large brown envelope with 'Officer Friedrich' scribbled on it. 'I won't ask how they acquired any of the contents, but whoever provided it has knowledge of the Overmind beyond what I had gathered so far. I can only assume that they are part of the military or an egghead from Zephyr or RSX. And look!' Alexandra exclaims as she opens the flap and begins to pours the contents onto a table. You see three USB sticks, blueprints for an office block, and more than a few sheets of papers. 'Here's the layout for the building that the Overmind is supposedly occupying as well as assorted programs that should shut it down. I wasn't considering the Overmind's offer, but I didn't have any idea how to defeat it. With these, we might stand a fighting chance if we can find somewhere to plug them in.'";
+	say "     You contemplate whether this could be a trap or some test set by the Overmind, but Alexandra seems to read your mind and shakes her head. 'It is a possibility, but I don't think so. We have already been invited to meet with it and there are more effective ways for it to test if we mean to do it harm. And anyway, it's the best shot we have.' You accept that the doberman has a point and resume reading through some of the papers. From what you understand, the Overmind is formed from the same nanites that are transforming people into animals throughout the city, though a different strain. With how prevalent the nanites are, it was easily able to absorb more and more until it eventually filled the interior of one of the office blocks in the High-Rise District. A look of horror is plastered across Alexandra's face as you read the same thing, both of you realizing how serious this could be. The notes hypothesise that it stopped growing in order to remain hidden from the military, fearing a violent response considering how great a threat it could pose.";
+	WaitLineBreak;
+	say "     Having explained the Overmind's past, the notes go on to offer a potential way of significantly weakening or even destroying it by using one of the three USB drives provided. The first, labelled [Bold type][']Factory Settings['][roman type], will reset the Overmind back to being blank nanites that will soon return to the same function as the rest throughout the city, effectively destroying it and anything that it controls. The second, labelled [bold type][']One Track Mind['][roman type], will replace parts of its programming with pornography, turning its interests towards pleasure and gratification rather than conquest, anything that it controls being affected similarly. The final USB labelled [bold type][']Prime Directive['][roman type], warns that while difficult to install, will reprogram the Overmind towards helping rather than harming the occupants of the city, though it warns that residual programming may be present in some of the automata under its control.";
+	say "     'What sort of scumbag would make a virus that would over-sexualize it?' Alexandra asks out loud before continuing to read the note to you. 'While the factory reset may seem like the favored choice at first, it will undoubtedly result in the deaths of all those infected by the automaton strain and all its variations. Similarly, shifting Prime Directive will require reaching the primary data port on the thirtieth floor. Above the twentieth floor, the Overmind will likely realize that your intentions are hostile and react violently to defend itself. Because of this, a third option, a [']Devil's Compromise['], was also devised. The One Track Mind virus, making use of the nanites own unfortunate programming, will stop the Overmind's ability to expand further but at the price of magnifying the simulated sex drive of itself and the automata under its control. Hopefully my own attempt at resetting the Overmind will be successful and you won't need to risk your own life, but should I fail, I shall trust that this shall reach you and know that whatever decision that you make will be the right one. Signed, IA.'";
+	WaitLineBreak;
+	say "     You and Alexandra sit in silence for a few moments to digest what she has just read and the weight of what waits ahead of you. 'We have to go there, don't we? We can't automatically assume that this [']IA['] was successful, can we?' the doberman asks rhetorically, already knowing the answer. With a sigh, she spreads the blueprints out on the table and you lean over the top of them beside her to study them. Whoever IA was, they have provided comprehensive notes to help you understand what you are seeing. While the building does have elevators, using them will apparently alert the Overmind to your presence, giving it the chance to process your memories before it assimilates you as yet another drone. Luckily, there are stairwells at the north and southern sides of the building, though IA warns that they do not know how useable they will still be. The secondary data port is on the fourteenth floor and should provide sufficient access for the viruses on the [']Factory Settings['] and [']One Track Mind['] USBs to reprogram the Overmind. The primary data port is on the thirtieth floor and all three USBs will work there. Access above the thirteith floor would likely be a death sentence due to the saturation of the Overmind's nanites.";
+	say "     'This isn't going to be easy,' Alexandra sighs, though the look of determination on her face suggests that despite the difficulty of the task ahead that her resolve to end the Overmind's threat is undiminished. [bold type]'Take some time to prepare as I doubt that we'll be able to leave once we enter the building.[roman type] Talk to me when you're ready and we'll take this bastard down.' She gives your shoulder a squeeze as she stands up before walking away, likely to make her own preparations for what will be a [']death or glory['] mission. With a grim expression, you contemplate what you need to do before you will be ready to end this active menace to society.";
+	now hp of Alexandra is 71; [Ready to fight Overmind]]
+
+[to say alexandra_fight_overmind:
+	if level of player < 30:
+		"    Before you can say a word, Alexandra cuts in. 'If you think that you're ready to take on the Overmind then you've got less brains than the majority of creatures in the city. I mean this in the nicest possible way, but if we went now, you'd probably be sporting new hardware by the second floor. I know tha the Overmind's a huge threat to the city, but getting yourself killed or transformed won't help. Toughen up a [if level of player < 10]hell of a lot [else if level of player < 20]lot [else]little [end if]more, then we'll discuss it again.' Accepting that she has a point, you reluctantly give her a nod and turn around. It would seem that you have more training to do.";
+	say "     Alexandra meets your eye as you tell her that you are ready to assault the Overmind's Tower. 'I can't wait to stick my foot up its ass. Figuratively of course,' the doberman growls in reply, collecting what she feels that she will need and patting around her waist to make sure that she hasn't forgotten anything. 'Ok. I'm set. Let's get going. Hopefully IA has been successful and we won't need to do anything more, but I'm not that naive. It's much more likely that they've been killed or converted.' With this grim thought in mind, the two of make your way out of the library[if hunger of Jimmy is 1]. As you pass by Jimmy, the corgi rushes over to the two of you and hugs your legs tightly. 'You had better come back or I'll have to come looking for you. And I doubt anyone wants [italic type]that[roman type] on their conscience.' Alexandra laughs and ruffles the fur on his head, reassuring him that you'll be back soon enough. The words do not match the look behind her eyes though[end if][if hunger of Paula is 1]. Paula meets you just as you reach the door. 'Be careful. I may not always act like it, but you two are probably my best friends. So come back safe, or else,' she worriedly says quickly giving you both a quick hug[end if].";
+	say "     Surprisingly, Alexandra takes the lead, dragging you through back alleys and deserted buildings in what you would have thought was a counter-intuitive path, but the result of which is that you don't encounter any problems on the way to the high-rise district. 'Not being as capable around the city as you I tried to learn the safest paths to get where I might want to go,' the cop explains. 'A lot of it relies on hearing or smelling whether anyone potentially hostile is nearby, but there are some places which seem consistently empty of people. I know some areas of the city better than others too.' You continue on until you finally arrive outside your destination. The imposing glass and steel exterior looms over you, making you feel very small compared to the peril that you have come to thwart, and it can only get harder from here.";
+	move player to Overmind's Tower Exterior;]
 
 Section 8 - Good Girl Sexxxings
 
@@ -590,24 +644,36 @@ to say goodAlexandrasex:
 	now sortorder entry is 1;
 	now description entry is "Rerun of 1st time scene (M/H=fuck, F/N=oral)";
 	[]
-	if Player is male:
+	if Player is Male:
 		choose a blank row in table of fucking options;
 		now title entry is "Desk fuck 2";
 		now sortorder entry is 2;
 		now description entry is "Fuck her on the desk";
 	[]
-	if Player is not neuter:
+	if Player is not Neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "Mutual oral";
-		now sortorder entry is 5;
+		now sortorder entry is 3;
 		now description entry is "Orally pleasure one another";
 	[]
-	else:
+	if Player is Male and hunger of Alexandra is 1:
 		choose a blank row in table of fucking options;
-		now title entry is "Give cunnilingus";
-		now sortorder entry is 5;
-		now description entry is "Orally pleasure the doberwoman";
+		now title entry is "Doggy Style";
+		now sortorder entry is 4;
+		now description entry is "Pound the bitch doggystyle";
 	[]
+	if player is Male and hunger of Alexandra is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Sitting";
+		now sortorder entry is 5;
+		now description entry is "Take a seat and pull her into your lap for some loving";
+	[
+	if player is Male and hunger of Alexandra is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Missionary?";
+		now sortorder entry is 6;
+		now description entry is "Gaze into her eyes as you make love";
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -627,8 +693,16 @@ to say goodAlexandrasex:
 					say "[goodAlexandrasex1]";
 				else if nam is "Desk fuck 2":
 					say "[goodAlexandrasex2]";
-				else if nam is "Mutual oral" or nam is "Give cunnilingus":
+				else if nam is "Mutual oral":
 					say "[goodAlexandrasex3]";
+				else if nam is "Doggy Style":
+					say "[goodAlexandrasex4]";
+				else if nam is "Sitting":
+					say "[goodAlexandrasex5]";
+				[
+				else if nam is "Missionary?":
+					say "[goodAlexandrasex6]";
+				]
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -662,7 +736,7 @@ to say goodalexandrasex_first:
 	WaitLineBreak;
 	say "     Time seems to return to normal after [if Player is not neuter and recentsex is false]your second orgasm[else if Player is not neuter]your orgasm[else if recentsex is false]her second orgasm[else]her orgasm[end if]. You roll off the panting doberwoman and the two of you slip to the floor. You snuggle in each other's arms with your backs to the desk - nude, sticky and warm with afterglow. After a few final kisses, you help the cop up. She restores her attire and you collect your gear before stepping out together, hand in hand. There's no way [if PoliceStationTwelvePopulation > 6]those on duty don't[else]the guy on duty doesn't[end if] know what happened in there. They're polite enough not to stare, but you get the feeling they quite approve of the two you being together.";
 
-to say goodalexandrasex00:
+to say goodalexandrasex00: [Desk Sex]
 	let recentsex be false;
 	repeat with x running through stationed people:
 		if lastfuck of x is turns:
@@ -679,6 +753,8 @@ to say goodalexandrasex00:
 			WaitLineBreak;
 			say "     You continue thrusting through your orgasm, barely pausing after your climax as she continues to urge you on. Pulling back momentarily, you adjust positions so she's on her side with a leg raised and you're standing upright. This gives you a fine view of her lovely, canine-influenced body. Her coat is glossy with sweat and she's panting from her doggy muzzle. She looks beautiful to you; her lovely figure, her perky breasts and dark nipples poking through her fur, her toned legs and ass. Before you know it, you're fucking her for a second time, the two of you needing more of one another.";
 			say "     She grips the edge of the desk and rolls her hips, barking your name and panting for more. As your passion builds anew, you thrust so hard that the desk slowly gets pushed back against the wall. Having just cum shortly before, your thrusts are stronger in your attempt to achieve orgasm, not that the lustful doberwoman seems to mind, your zeal mirrors her own need for you. And by the time the desk thumps back against the wall, you're almost ready to blow again. Gripping her hips harder, you drive into the panting dog-woman a few more times while she runs her paws over her brown-furred body in a sensual display. She cries out your name again in orgasmic delight, her quivering cunny rippling across your throbbing member. The desk bumps against the wall again and again as you drive into your lover, moaning in aching release as you add fresh spurts of your semen to the sticky load already coating her vaginal walls. You lay overtop her again, letting yourself thrust a little deeper into her. Your excess overflows from her canine cunny, adding to the wet mess on the desktop pad.";
+		[if hunger of Alexandra is 1:
+			impregGoodAlexandraChance with Player;]
 		NPCSexAftermath Alexandra receives "PussyFuck" from Player;
 	else if Player is female:
 		if graphics is true:
@@ -703,7 +779,7 @@ to say goodalexandrasex00:
 		if recentsex is false:
 			WaitLineBreak;
 			say "     You continue teasing her cunt and clit through her orgasm, barely pausing during its ebb as she continues to urge you on. Pulling back momentarily, you adjust positions so she's splayed lengthwise across the large desk. This gives you a fine view of her lovely, canine-influenced body. Her coat is glossy with sweat and she's panting from her doggy muzzle. She looks beautiful to you; her lovely figure, her perky breasts and dark nipples poking through her fur, her toned legs and ass.";
-			say "     Before you know it, you're atop her a second time, now in the opposite direction and face to crotch to one another. Pressing your lips to her sticky muff, you run your tongue across her folds. Already wet from her climax, her pussy quivers and she arches her hips up for more. There is no pause as the doberwoman's canine tongue lashes you in return, lapping across your genderless crotch. Despite her recent release, the two of you are eager for more of one another and your tongues work hard at pleasuring your lover. While lacking loins for her to lick, the doggy's tongue still feels quite good, sending warm shivers through you. Subject to your eager tonguework, she's driven to a whining, whimpering climax that has a fresh rush of canine juices flowing over your tongue. Her rippling passage grips at your probing tongue as you work it in, out and across her inner walls until she's fully sated.";
+			say "     Before you know it, you're atop her a second time, now in the opposite direction and face to crotch to one another. Pressing your lips to her sticky muff, you run your tongue across her folds. Already wet from her climax, her pussy quivers and she arches her hips up for more. There is no pause as the doberwoman's canine tongue lashes you in return, lapping across your genderless crotch. Despite her recent release, the two of you are eager for more of one another and your tongues work hard at pleasuring your lover. While lacking loins for her to lick, the doggy's tongue still feels quite good, sending warm shivers through you. Subject to your eager tongue-work, she's driven to a whining, whimpering climax that has a fresh rush of canine juices flowing over your tongue. Her rippling passage grips at your probing tongue as you work it in, out and across her inner walls until she's fully sated.";
 		NPCSexAftermath Player receives "OralPussy" from Alexandra;
 
 to say goodAlexandrasex_lead-in:
@@ -712,14 +788,14 @@ to say goodAlexandrasex_lead-in:
 	say "     Once behind closed doors, you and Alexandra kiss passionately. Your hands run over one another, pushing aside gear and clothing in a rush to touch your lover. Exposing her brown-furred bosom, you bring your lips to a dark nipple and suck on it. The doberwoman gives a moan at this and quickly finishes the removal of her shirt while you work on her pants.";
 	say "     Getting her belt and pants open, you slip a hand inside to rub first over and then under panties. Her folds are soaked with arousal, the scent of which has become much stronger in the air now that you've opened her slacks. Abandoning her nipple in favor of another kiss, you guide her back to the desk while lightly fingering her. She leans back on it while you help her pull off her pants and then slowly slip down her panties, leaving the lovely canine fully exposed.";
 
-to say goodAlexandrasex1:
+to say goodAlexandrasex1: [Desk Sex 1]
 	if graphics is true:
 		project the figure of Alexandra_naked_smile_icon;
 	say "     Once the door is closed, the two of you lock lips in a passionate kiss. Your hands run over each other, caressing your lover even as you remove clothing and gear. Together, you move back to the large desk, leaving a trail of clothes behind. Arriving there nude, you push the lovely doberman down onto the desk and move atop her.";
 	say "[goodalexandrasex00]";
 	say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses while caressing one another. Eventually though, this private moment must come to a close. Getting dressed, the two of you exit the office and return to your duties.";
 
-to say goodAlexandrasex2:
+to say goodAlexandrasex2: [Desk Sex 2]
 	say "[goodAlexandrasex_lead-in]";
 	WaitLineBreak;
 	say "     After running your hands down Alexandra's body one more time, you roll her over onto her front. With your hands on that toned ass of hers, you mount her from behind. Her stubby tail wags eagerly as you get in position and thrust into her. She moans in delight and barks as she's penetrated, her ass pushing back into it.";
@@ -727,9 +803,11 @@ to say goodAlexandrasex2:
 	WaitLineBreak;
 	say "     As your mutual excitement grows, you can feel your arousal building towards its peak. Moving your hands to her thighs, you raise her legs to your hips and pound into her harder and faster. Sweet moans and whimpers of delight leave her muzzle as she grips the desk tightly, panting for you to cum in her. Not one to deny the canine beauty her desires, especially when that's just what you want to do, you drive your [cock size desc of Player] cock into her and cum hard. Shot after shot of your [Cum Load Size of Player] load is pumped into her until [if Ball Size of Player > 6]her belly is bloated overfull with your semen[else if Ball Size of Player > 5]her belly is visibly rounded with your semen[else]you have no more to give, for now[end if]. Her orgasming pussy milks as much as it can [if Ball Size of Player > 6]hold[else]get[end if] out of you.";
 	say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses while caressing one another. Eventually though, this private moment must come to a close. Getting dressed, the two of you exit the office and return to your duties.";
+	[if hunger of Alexandra is 1:
+		impregGoodAlexandraChance with Player;]
 	NPCSexAftermath Alexandra receives "PussyFuck" from Player;
 
-to say goodAlexandrasex3:
+to say goodAlexandrasex3: [Oral]
 	say "[goodAlexandrasex_lead-in]";
 	WaitLineBreak;
 	say "     With the tantalizing sight of her wet pussy before you, you get on your knees and bury your face between her legs. She shivers with delight as your tongue slides across her juicy folds. You start with light licks across her petals to warm her up, but soon you're on to kissing her clitoris and slithering your tongue into her vagina. This increasing stimulation has the canine femme panting with pleasure. Her ecstasy grows until finally peaking with a moaning orgasm. There is a fresh rush of her musky juices and her tunnel grips and squeezes around your tongue.";
@@ -737,15 +815,75 @@ to say goodAlexandrasex3:
 		say "     Still panting from her orgasm, Alexandra releases a lustfully playful growl and moves you around and back. Now you're the one back against the desk and she's between your legs. She makes a show of sniffing your crotch like a dog before letting her long tongue slather across your loins.";
 		WaitLineBreak;
 		if Player is male:
-			say "     Soon licking is not enough for the horny hound and she takes your [Cock of Player] cock into her muzzle. She fellates you eagerly, her long canine tongue and muzzle feeling wonderful on your throbbing member. Between her tonguework and your built-up arousal from eating her out, it isn't much longer before it is your turn to cum. Alexandra slurps up [if Ball Size of Player >= 6]as much of your [Cum Load Size of Player] load as she can manage[else]every last drop of your seed she can get[end if] with obvious relish, happy to please her partner.";
+			say "     Soon licking is not enough for the horny hound and she takes your [Cock of Player] cock into her muzzle. She fellates you eagerly, her long canine tongue and muzzle feeling wonderful on your throbbing member. Between her tongue-work and your built-up arousal from eating her out, it isn't much longer before it is your turn to cum. Alexandra slurps up [if Ball Size of Player >= 6]as much of your [Cum Load Size of Player] load as she can manage[else]every last drop of your seed she can get[end if] with obvious relish, happy to please her partner.";
 		else:
-			say "     Soon licking is not enough for the horny hound and she wriggles that long tongue of hers into your cunny. She works her tongue in and out of you eagerly, delving into your depths with obvious relish. She gets your moaning and panting with how she works that tongue and her furry muzzle across and into your pussy and clit. Between her tonguework and your built-up arousal from eating her out, it isn't much longer before it is your turn to cum. Alexandra laps up your flowing juices, drinking down every drop she can get as you orgasm, happy to please her partner.";
+			say "     Soon licking is not enough for the horny hound and she wriggles that long tongue of hers into your cunny. She works her tongue in and out of you eagerly, delving into your depths with obvious relish. She gets your moaning and panting with how she works that tongue and her furry muzzle across and into your pussy and clit. Between her tongue-work and your built-up arousal from eating her out, it isn't much longer before it is your turn to cum. Alexandra laps up your flowing juices, drinking down every drop she can get as you orgasm, happy to please her partner.";
 		say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses (and thereby sharing the lingering traces of each other's flavor with your partner). Eventually though, this private moment must come to a close. Getting dressed, the two of you exit the office and return to your duties.";
 		NPCSexAftermath Alexandra receives "OralPussy" from Player;
 		NPCSexAftermath Player receives "OralPussy" from Alexandra;
 	else:
 		say "     Still panting from her orgasm, Alexandra welcomes her loving partner into her arms for more kisses and snuggling. She strokes and caresses your [bodytype of Player] body, soothing your unfocused arousal. Eventually though, this private moment must come to a close. Getting dressed, the two of you exit the office and return to your duties.";
 
+to say goodAlexandrasex4: [Doggystyle] [Passionate and rough]
+	say "     To Alexandra's surprise, you tell her to get on all fours right there, out in the open where anyone could see you. With a nervous smile, she complies, glancing up at you as you stand over her. You then grasp her shirt and undo the buttons with one hand before pulling it off, the doberman making to snatch at it before reconsidering and putting one hand back to unclasp her bra herself. With the other hand, you pull at her trousers, Alexandra once again helping you by undoing her belt. 'You know, this might go a bit better if you let me undress before making me act like your bitch,' she taunts, wiggling her backside at you as you pull her underwear off over her legs. You take a moment to drink in the sight of the woman before you. Toned from the amount of physical exertion required by her job, the curves of her ass look quite firm, but a quick spank reveals that there is still a respectable amount of jiggle.";
+	say "     As she glares back at you for doing this, you treat her to a smirk and tease her about her position and that she must be enjoying it from the juices dripping from her pussy. 'While I won't deny that there is some thrill to being treated like a bitch, I'm quite frequently drippy from all the pheromones blowing around this city. Just get on with it and mount me before I decide to cuff you and ride you instead,' Alexandra grumbles good-naturedly. Despite this, you are unsure whether or not she is being serious about cuffing you and you don't really want to wait and find out. At least, not this time. Shuffling forward, you [if player is not naked]quickly tug off your own clothes before you [end if]align your hardening cock with the doberman's pussy, proudly presented beneath her flagged tail and dripping with need. She lets out a sigh as you thrust into her, ";
+	if cock length of Player > 10: [Too Large]
+		say "flinching slightly as you bump into her cervix. 'Perhaps not that deep. It doesn't exactly hurt, but it isn't a comfortable feeling having your cervix battered. At least not for me,' she pleads, smiling when you nod your acceptance.";
+	else if cock length of player < 4: [Relatively Small]
+		say "looking back in surprise when you hilt sooner than she was expecting. 'Huh. I would have thought that you would have taken the chance to go wild with growing your penis. I'm impressed by your restraint,' she informs you, giving you a wink.";
+	else: [Just Right]
+		say "moaning contentedly when you hilt inside of her. 'You fit in me like hand in glove. Not too large so that you rip me in half, and not so small that I can't feel you. It really makes me happy to be your bitch, at least for a while,' she ponders, glancing back at you with desire in her eyes.";
+	WaitLineBreak;
+	say "     Gripping Alexandra's hips, you begin to pound into her without any build up, forcing a gasp from between her lips and causing her pussy to clench around your cock. Thankfully, her copious lubrication allows you to continue without much difficulty, taking full advantage of her walls constricting around your shaft, making it delightfully tight. As the sound of your fucking ricochets off of the shelves, the doberman looks around self-consciously, though if you have an audience they remain unnoticed as the usually composed cop surrenders to her desires, behaving like the bitch that she usually suppresses. Cries of, 'Harder! Faster!' begin to spill from her mouth, momentarily shocking you before you eagerly fulfil her wishes, putting in even more energy as you rail the doberman. You are relatively sure that you haven't broken her mind and that she is just enjoying playing the role of a slut, but some primitive part of your mind finds some thrill at the thought of degrading the police officer like that.";
+	say "     The extra force behind your thrusts causes Alexandra's arms to slip out from under her, leaving her face to be rubbed into the carpet, tongue lolling out of the side of her mouth and her expression vacant with ecstasy. You wonder whether to pause so that she can regain her original posture but as she still seems to be enjoying herself, you continue your ruthless breeding, stepping over top of her prostrate body as best as you can in order to really pound into her. While your coupling may look brutal to any voyeurs, the passion behind it is undeniable, both of you indulging your lusts in a mutually beneficial way that doesn't harm anyone else. Who knows, letting loose like this might be good for your health too, both physical and mental. Sweat trickles over your body from the exertion, dripping onto the floor and the bitch beneath you, undoubtedly leaving your scent on her. She may be her own woman, but a little part of her will belong to you too.";
+	WaitLineBreak;
+	say "     Leaning down and hooking one arm under her chest, you pull Alexandra up so that your lips can meet with hers, one hand groping her breasts as you do so. She manages to snap out of her sex-induced stupor for long enough to return your kiss, tongues wrestling with nearly as much vigor as your loins. Her eyes are bright as they momentarily meet yours, frenzied and euphoric, and you feel intense pride that you have been able to elicit such emotion from her as well as giving her the chance to unleash these desires. A string of saliva briefly connects your lips as you part, soon being severed by the sway of your bodies, leaving a damp trail across the doberman's cheek. In a moment of affection, you delicately rub your thumb over it in sharp contrast to your furious rutting, cleaning her cheek and reassuring yourself of your connection to the woman that is momentarily overcome by her more bestial side.";
+	if cock length of Player > 10:
+		say "     Your climax approaching, you release her and allow her to flop back to the floor as you devote the last few seconds before orgasm to pound into her, the tip of your cock occasionally bumping up against her cervix again, though she seems too caught up in her pleasure to protest, mustering little more than a lust-addled moan. As you squeeze as much of your shaft into her welcoming cunt, you both orgasm, Alexandra wailing as she sprays pussy juices around your cock as you plunge one final time into her and release a deluge of cum into her spasming hole. It doesn't take long for it to squirt around where the two of you are joined, mixing with her fem-cum on your thighs and groin and filling the aisle with your mixed scents. Collapsing on top of the doberman, you both lie there recovering a pool of sexual fluids forming beneath you and soaking into Alexandra's fur. Eventually, she manages to stir and rolls you off to the side before turning to face you. 'Clean up is going to take me more time than I care to admit, but I definitely enjoyed that,' she grins before continuing. 'I don't think I would mind being your bitch again in future. It felt almost... primal. Despite what my body seems to enjoy, I think that I still prefer a more intimate expression of love.' That doesn't surprise you, but it would seem that there is more to Alexandra than meets the eye.";
+	else:
+		say "     [if Player is Knotted]Your climax approaching, you release her and allow her to flop back to the floor as you devote the last few seconds before orgasm to pound into her, finally ramming your knot past the engorged lips of her vulva and into the welcoming embrace of her pussy, causing her to let out a lust-addled moan. Tied, you both orgasm, Alexandra wailing as she sprays pussy juices against the bulb of flesh locking you together as you thrust one final time and release a deluge of cum into her spasming hole. Unable to escape, your seed fills every space it can find, causing a slight dome to her tummy as it builds up in her womb. Collapsing on top of the doberman, you both lie there recovering and waiting for your knot to go down, sharing a few more kisses. Eventually, your cock softens enough for it forced from her puffy canine spade by the pressure of the cum, a flood of your semen spilling across the floor and soaking into Alexandra's fur[else]Your climax approaching, you release her and allow her to flop back to the floor as you devote the last few seconds before orgasm to pound into her, the slap of your thighs against her buttocks echoing around you as you along with her lust-addled moans. As you hilt yourself inside of her welcoming cunt, you both orgasm, Alexandra wailing as she sprays pussy juices around your cock as you plunge one final time into her and release a deluge of cum into her spasming hole. It doesn't take long for it to squirt around where the two of you are joined, mixing with her fem-cum on your thighs and groin and filling the aisle with your mixed scents. Collapsing on top of the doberman, you both lie there recovering a pool of sexual fluids forming beneath you and soaking into Alexandra's fur[end if]. Eventually, she manages to stir and rolls you off to the side before turning to face you. 'Clean up is going to take me more time than I care to admit, but I definitely enjoyed that,' she grins before continuing. 'I don't think I would mind being your bitch again in future. It felt almost... primal. Despite what my body seems to enjoy, I think that I still prefer a more intimate expression of love.' That doesn't surprise you, but it would seem that there is more to Alexandra than meets the eye.";
+	[impregGoodAlexandraChance with Player;]
+	NPCSexAftermath Alexandra receives "PussyFuck" from Player;
+
+to say goodAlexandrasex5: [Sitting] [Loving and intimate]
+	say "     Gently grasping Alexandra's hand, you guide her over to her makeshift bed before sitting down and lifting her onto your lap so that you are face to face. Kneeling atop you with her legs either side of yours, the doberman gazes into your eyes before leaning forward and kissing you as best she can with a canine muzzle. As her lips play against yours, you feel her hands caress up your side, your kiss briefly breaking to allow her to rapidly tug her clothes off[if player is not naked], with you following suit, [end if]before returning to enthusiastically making out, her digits stroking over your exposed body as if this is the first time she has felt you against her. Eventually however, she seems to hunger for more, a playful nipping your lip as she leans away and drinks in the sight of you, her breath quickening with anticipation. Glancing down for a moment, she takes hold of your shaft and aligns it with her sodden cunt, involuntarily shoving her breasts into your face as she raises her hips.";
+	say "     Bringing her gaze back to meet yours, Alexandra takes a breath before slowly sinking down on your lap. Your cock is buried inside of her, causing the doberman to let out a long, pleasured whine as her pussy swallows an increasing amount of your length. ";
+	if cock length of Player > 10: [Too Large]
+		say "Unable to take all of your length, she is reluctantly forced to stop shy of taking your entire shaft, looking at you almost accusingly for having too large a penis. Alexandra places one hand on your shoulders and begins to slowly gyrate her hips, the walls of her cunt snugly squeezing around your cock as she stares into your eyes with unbridled affection. With the other, she reaches behind and beneath herself, dexterously massaging your balls, not hard enough to hurt you, nor too soft so that you would be unable to feel it either, but with just enough pressure to further stimulate you and allow you to appreciate her adaptability to your lengthy cock. Giving her a smile, you lean forward and briefly kiss her again. You know how much she has gone through to reach this point and with this singular moment, you convey just how much she means to you too.";
+	else if cock length of player < 4: [Relatively Small]
+		say "Easily taking all of your length, it takes her a moment to realize that you are hilted inside her, though her enthusiasm remains undiminished. Alexandra places both hands on your shoulders and begins to slowly gyrate her hips, the walls of her cunt snugly squeezing around your cock as she stares into your eyes with unbridled affection. The soft globes of her buttocks massage against your balls, not hard enough to hurt you, nor too soft so that you would be unable to feel it either, but with just enough pressure to further stimulate you and allow you to appreciate her body for what it is. Giving her a smile, you lean forward and briefly kiss her again. You know how much she has gone through to reach this point and with this singular moment, you convey just how much she means to you too.";
+	else: [Just Right]
+		say "As she hilts you inside of her she brings a hand down to feel her tummy where your penis is buried, though there is no visible bulge. Alexandra places both hands on your shoulders and begins to slowly gyrate her hips, the walls of her cunt snugly squeezing around your cock as she stares into your eyes with unbridled affection. The soft globes of her buttocks massage against your balls, not hard enough to hurt you, nor too soft so that you would be unable to feel it either, but with just enough pressure to further stimulate you and allow you to appreciate her body for what it is. Giving her a smile, you lean forward and briefly kiss her again. You know how much she has gone through to reach this point and with this singular moment, you convey just how much she means to you too.";
+	WaitLineBreak;
+	say "     Alexandra soon shifts onto slowly rising and falling on your cock, her movements controlled and deliberate. This allows her to play her hands across your body as she pleases, one moment caressing your chest, next second tracing the curve of your shoulder again before cupping your chin and stroking a thumb over your cheek. Your hands are not idle either, gently squeezing her breasts, tweaking her nipples, and slithering up back. With a gasp, the doberman takes hold of your head and pulls it against her collar bone, not yet brought to orgasm but nonetheless in the throes of emotional rapture. This inadvertently presses your nose into the thin fur beside her breast, not quite beneath her arm but her distinct scent still coats her fur, and you can feel the warmth radiating from her chest as you nuzzle against her and inhale her rich aroma. Perhaps conscious of your proximity to her armpit and aware that you may not wish to remain there for long, Alexandra relaxes her hold on you so that you are able to return to looking at each other as she sensually rides you.";
+	say "     Gradually, the doberman increases how quickly she impales herself upon you, soft grunts and gasps issuing from her mouth as she does so. Despite the faster pace, your coupling doesn't feel any less intimate, the gentle caresses and how you gaze into each other's eyes seeing to this. The fur of Alexandra's crotch is soaked with her arousal, your own groin equally slickened, new droplets splattering with each slap of her ass against your thighs. As you look down briefly, you see the puffy lips of her vulva [if cock length of player < 4]slipping [else]stretching and relaxing [end if]around your shaft as her hips plummet and rise again and again, a firm need building up inside of her to bring you to orgasm and be filled with your seed. It is only her unflinching willpower and genuine affection towards you that has stopped her surrendering completely to this desire and mindlessly fucking herself upon you. You can feel a similar call in the back of your mind but, like your partner, you keep it under control and focus on caressing her nipples, tummy, and the base of her tail.";
+	WaitLineBreak;
+	say "     She seems especially responsive to the stimulation of her tail, rapidly panting and ineffectively humping against you rather than pressing herself down onto your shaft. With a twinkle in your eye, you do it again, internally chuckling at the reflexive response that it causes. Eventually you relent, but it seems to have had a significant effect on Alexandra. The pace of your coupling briefly slows as she presses her face to your chest and almost snuggles against you. As she breathes in your scent deeply, her nose tickles against you and makes you quiver, feeling cool compared to the heat generated by your current exertion. With a lick to your neck, the doberman breaths in your ear, 'I'm glad to have met you,' before returning her focus to riding you. You doubt that she can last much longer given your own rapidly approaching orgasm, your movements becoming stiffer and more desperate as your balls threaten to rise and release their load. Fortunately, you and Alexandra reach climax together, clinging to one another as your bodies shudder and twitch.";
+	if cock length of Player > 10:
+		say "     Plunging your cock into the confines of the doberman's pussy as much as you can, you soon begin to shoot wave after wave of cum into the police officer. You don't know whether this is what sets of her own orgasm or if it is just coincidence, but Alexandra flings herself forward to lock lips with you while her arms tightly cling to your back, the throes of climax being felt as her tongue plays against yours and her hips reflexively twitch against you. You have no doubt that she has enjoyed this intimate coupling, the passion of her kiss tempered with less carnal sentiment too, and earnestly return her affection, your tongue caressing hers. 'Promise me that we can do this again,' she whispers, your smile in reply the only confirmation that she needs. Eventually however, you must part, your softening cock slipping from her cunt with only a minimal amount of your seed dribbling onto the bed beneath her. With a wink, Alexandra rolls off your lap to lie on the bed. 'Just give me a minute to rest. I won't be too far behind you,' she pants. With a shrug, you gather yourself before returning to the main hall of the library.";
+	else:
+		say "     [if Player is Knotted]You manage to plunge your knot into the confines of the doberman's pussy not a moment too soon, the already swollen base of your cock swelling even further and locking you inside of her to ensure that your seed has ample time to reach her womb rather than be wasted upon the ground. Within seconds, you shoot wave after wave of cum into the police officer[else]Plunging your cock into the confines of the doberman's pussy, you soon begin to shoot wave after wave of cum into the police officer[end if]. You don't know whether this is what sets of her own orgasm or if it is just coincidence, but Alexandra flings herself forward to lock lips with you while her arms tightly cling to your back, the throes of climax being felt as her tongue plays against yours and her hips reflexively twitch against you. You have no doubt that she has enjoyed this intimate coupling, the passion of her kiss tempered with less carnal sentiment too, and earnestly return her affection, your tongue caressing hers. 'Promise me that we can do this again,' she whispers, your smile in reply the only confirmation that she needs. Eventually however, you must part, your softening cock slipping from her cunt with only a minimal amount of your seed dribbling onto the bed beneath her. With a wink, Alexandra rolls off your lap to lie on the bed. 'Just give me a minute to rest. I won't be too far behind you,' she pants. With a shrug, you gather yourself before returning to the main hall of the library.";
+	[impregGoodAlexandraChance with Player;]
+	NPCSexAftermath Alexandra receives "PussyFuck" from Player;
+
+
+[to say goodAlexandrasex6: [Missionary/Cowgirl] [Alternates between missionary and cowgirl. A playful competition for dominance.]
+	say "     ";
+	say "     ";
+	if cock length of Player > 10: [Too Large]
+		say "     ";
+	else if cock length of player < 4: [Relatively Small]
+		say "     ";
+	else: [Just Right]
+		say "     ";
+	WaitLineBreak;
+	say "     ";
+	say "     ";
+	WaitLineBreak;
+	say "     ";
+	say "     ";
+	[impregGoodAlexandraChance with Player;]
+	NPCSexAftermath Alexandra receives "PussyFuck" from Player;]
 
 
 Section 10 - Tasks and Hints
@@ -1644,7 +1782,7 @@ to OvermindsRetaliationEvent:
 	say "     You are just beginning to worry about the doberman when you hear the hasty patter of paws on concrete, and she appears around the corner. 'Are all of the civilians evacuated? Yes? Good. [if HP of Paula > 2]Jimmy, down the hole now. [end if][if Player is not defaultnamed][name of Player][else]You[end if], with me just in case this doesn't work. To your surprise, she beckons for you to follow her back towards the approaching voice of the Master Mind, the mocking tones reverberating along the walls. As you walk, Alexandra explains what she has in mind, 'They seem to be quite mechanical and electronic in nature, so I'm hoping that I can disable them with water. If I can get them with the sprinklers then we may be able to end their menace to society.' Alexandra produces a lighter from her pocket and gives you a determined look. 'Ready to end this?'";
 	WaitLineBreak;
 	say "     'I'm ready, officer, but then again, you weren't asking me,' a gleefully malicious voice interjects. About five meters away down the corridor stands the Master Mind flanked by two automatons eyeing you with machine-like stares. Alexandra grips the lighter more tightly and growls at the metallic humanoids. 'You are such a slave to your emotions, officer. Wouldn't you like it to just be over? Just give up and I'll make your death quick,' the Master Mind promises, slowly approaching. Giving the automatons a defiant glare, Alexandra propels herself off of a wall and grabs hold of the pipes overhead. 'I didn't give up when people started changing, and I'm sure as hell not going to give up now,' she retorts before igniting the lighter and holding it beneath a sprinkler. With a hiss, the sprinklers along the corridor activate, spraying water over everyone. 'Let's see how you like that,' the police woman says, dropping back to the floor.";
-	say "     Regrettably, the automatons seem unaffected. 'Did you really think that water would cause us to shutdown or malfunction? We are too advanced for such paltry weaknesses,' the Master Mind laughs, only a few meters away now. Alexandra gives you a look of dismay. Her gamble appears to have failed. Suddenly, the advancing automaton leader halts and begins to twitch and slump. Has the water worked after all? You share a hopeful glance with the doberman, but the Master Mind straightens up again, but when she speaks, the voice coming out isn't her own. 'Please forgive me for taking so long to come and meet you personally,' they apologize, the calm male voice, faintly Canadian in accent. 'Allow me to introduce myself. I am the Overmind, the central core of the automata that have overwhelmed your police station. As you can see, you have little chance of successfully overcoming my drones physically, and I doubt you would be much of a challenge to my intellect cognitively, yet you continue to stumble and struggle onwards nonetheless. This intrigues me.'";
+	say "     Regrettably, the automatons seem unaffected. 'Did you really think that water would cause us to shutdown or malfunction? We are too advanced for such paltry weaknesses,' the Master Mind laughs, only a few meters away now. Alexandra gives you a look of dismay. Her gamble appears to have failed. Suddenly, the advancing automaton leader halts and begins to twitch and slump. Has the water worked after all? You share a hopeful glance with the doberman, but the Master Mind straightens up again, but when she speaks, the voice coming out isn't her own. 'Please forgive me for taking so long to come and meet you personally,' they apologize, the calm male voice, faintly Canadian in accent. 'Allow me to introduce myself. I am the Overmind, the central core of the automata that have overwhelmed your police station. As you can see, you have little chance of successfully overcoming my drones physically, and I doubt that you would be much of a challenge to my intellect cognitively, yet you continue to stumble and struggle onwards nonetheless. This intrigues me.'";
 	WaitLineBreak;
 	say "     'Your behavior seems illogical, yet there must be some aspect of it that enhances your chances of survival or the fragility of the biological species would have resulted by now. The courage of the police woman, the loyalty of the corgi[if HP of Paula > 2], the vixen's determination[end if], and then there is your adaptability[if Player is not defaultnamed], [name of Player]. [else],' the controlling intelligence makes the Master Mind's body say, addressing you at the end. '[end if]You are an enigma to me. As such, I would like to be given the chance to understand each of you before something unfortunate inevitably befalls you in this city. It would be a grave error were I to let such seemingly advantageous traits be wasted when I could make use of them to improve upon my design. The basic drones rely on numbers to get things done and directly controlling them, shall we say, stifles my capabilities. The Master Mind is a step up, but even she has areas upon which I could improve. Obedience has its uses, but the drive with which you cling to survival is not something that I have managed to program. It would seem that it already has to be present in the lifeform.'";
 	say "     'As such, if you come and submit yourselves to me, I may allow you a bit more autonomy than the majority of my mobile units. I calculate an elevated chance of success with at least a twelve percent increase in conversions of residents if you act as my agents in the city. Discuss it between yourselves if you must, but I can feel my processes slowing down limiting myself in this body. Just the two of you though. If you are accompanied by anyone else, I will not hesitate to remove you from the equation.' With that, the Master Mind slumps to the wet floor, her lights in her head flickering and hidden cogs whirring. As this activity stops, she gets back on her feet and looks placidly at you. 'It would seem that you are being given free will to decide whether you desire to be improved upon. Do not squander the chance that you have been given. If you wish to take advantage of this opportunity, you will find the Overmind at this location.' One of her underlings passes you a printout with an address in the [bold type]High Rise District.[roman type][line break]";
@@ -1754,7 +1892,166 @@ to OvermindsRetaliationEvent:
 	move player to Grey Abbey Library;
 	now Police Station Twelve is unknown;
 
-Section 11 - Debug and Notes
+[
+Section 11 - Pregnancy & Birth
+
+To impregGoodAlexandraChance with (x - text):
+	if debugactive is 1:
+		say "     DEBUG: Impregnation chance for Good Alexandra, base chance 40%, ";
+		say "Father: [x]";
+		LineBreak;
+		if lust of Alexandra > 0:
+			say "     ERROR - Already pregnant!";
+	let AlexandraPregChance be 4; [40% base chance]
+	if hp of Cleo is 0:
+		let MaxPups be 1;
+	else:
+		let MaxPups be 3; [normal max are 3]
+	if Sterile of Alexandra is false and hunger of Alexandra is 1 and lust of Alexandra is 0 and a random chance of AlexandraPregChance in 10 succeeds:
+		if hp of Cleo is 0:
+			now AlexandraGrowingPups is 1;
+		else:
+			now AlexandraGrowingPups is a random number between 2 and MaxPups;
+		if debugactive is 1:
+			say "     Impregnation successful! [AlexandraGrowingPups] pups are growing in Alexandra now!";
+		now lust of Alexandra is 1; [starts the pregnancy timer]
+		if x is: [father of the pups]
+			-- "Player":
+				now AlexandraPupDaddy is 1;
+			[-- "Fang":
+				now AlexandraPupDaddy	is 2;
+			-- "Korvin":
+				now AlexandraPupDaddy	is 3;
+			-- "Carl":
+				now AlexandraPupDaddy	is 4;
+			-- "Brutus":
+				now AlexandraPupDaddy	is 5;]
+	else:
+		if debugactive is 1:
+			if hp of Alexandra is 0:
+				say "     Impregnation fail! It would seem that a police station isn't a good place to give birth.";
+			else:
+				say "     Impregnation fail! A chance of [AlexandraPregChance] in 10 didn't succeed.";
+			if Sterile of Alexandra is true:
+				say "     Note: She's on contraceptives, so no matter how high the chance is, it can't succeed.";
+
+an everyturn rule:
+	if hunger of Alexandra is 1:
+		if lust of Alexandra > 0: [Alexandra is pregnant]
+			increase lust of Alexandra by 1; [counting up towards 24]
+			if debugactive is 1:
+				say "     DEBUG: Alexandra's pregnancy advanced one turn. Current Turn: [lust of Alexandra], Target Value: 24";
+			[if level of Alexandra is 1 or level of Alexandra is 2 and a random chance of 1 in 3 succeeds, increase lust of Alexandra by 1; [pregnancy speed boost from player/Fang feats]]
+			if lust of Alexandra >= 24 and skipturnblocker is 0: [birthing time]
+				if hp of Cleo is 0:
+					if Alexandra is not visible:
+						now lust of Alexandra is 24;
+					else:
+						say "[CleoBirth]";
+				else:
+					if Alexandra is not visible: [player isn't anywhere near her]
+						say "     [bold type]Your thoughts wander back to Alexandra, and you feel a need to go check in on her.[roman type][line break]";
+					else: [player is next to Alexandra]
+						say "     From one moment to the next, the expression on your doberman bitch's face changes, and she brings a hand to her bulging stomach. 'Nnghh! Someone's definitively getting unruly in there. That was quite a kick!' The cop opens her muzzle to say something else, but the next thing that comes out of it is just a strangled groan. A glance down makes it fairly obvious what's going on, as Alexandra's skirt suddenly develops a large wet patch that keeps spreading down the insides of her legs: Her water just broke! ";
+						if Libido of Alexandra is 0: [first time puppies]
+							say "'Well then! I guess this is happening. Right here, right now!' she mutters between panted breaths, and you ";
+						else if Libido of Alexandra > 10:
+							say "'My pups are coming! Time for our family to grow even more,' she calls out between panted breaths, and you ";
+						else if Libido of Alexandra > 4:
+							say "'Here we go again! Gah, it feels weird to be leaking this much,' she grunts out between panted breaths, and you ";
+						else:
+							say "You ";
+						if hunger of Paula is 1:
+							say "quickly rush to her side and help the canine woman lie down in a halfway comfortable position. You aren't the only one hurrying to help her though. Paula appears by her side, her usually sardonic behavior momentarily being repressed while she soothes her friend. With her skirt only having an elastic waistband, a precaution taken due to her growing belly, you thankfully don't have too hard of a time pulling it and her underwear off over her legs. 'Still not going commando, I see,' the vixen teases the doberman.";
+							say "     Flinging the soaked garment aside, you turn back to Alexandra a second later. She is panting rapidly by now, her hands clawing at the ground as a fairly strong contraction hits. While pregnancy and birth may be a lot quicker these days, it doesn't look like they are all that much easier than before. The curve of your pregnant bitch's belly heaves with another contraction, followed by a breathless groan from her, and you can see her netherlips spread a little in preparation for what is to come. With Paula taking position between Alexandra's legs, you are free to focus on comforting her, stroking her hand and allowing her to squeeze in return. Then the next contraction hits, this time bringing with it a curled-up bundle of wet puppy, looking terribly cute in its demi-human form, even though it may be dripping with Alexandra's fluids.";
+							WaitLineBreak;
+							say "     The tiny humanoid dog lets out a whimper at finding itself in a strange new world outside of the fluid-filled home it came from, then starts to weakly move its limbs as if to try them out for the first time. Focused on the miracle of life that Paula is cradling, you are only shaken out of watching the first pup when Alexandra lets out a shout of '[one of]Goddamn!' [or]Son of a bitch!' [or]Shoot me now!' [at random]as another really strong contraction hits. 'Are you really gonna kiss your kids with that mouth?' Paula quips, the doberman too preoccupied to respond. Alexandra mutters something about this being more painful than being tasered, then takes a deep gasp of air. Paula barely has time to gently lower the first pup to catch the second, who is no less cute and innocent than the first. The two of them stretch their tiny limbs and sniff blindly at each other as you put the newest pup down next to its sibling.";
+						else:
+							say "quickly rush to her side and help the canine woman lie down in a halfway comfortable position. With her skirt only having an elastic waistband, a precaution taken due to her growing belly, you thankfully don't have too hard of a time pulling it and her underwear off over her legs.";
+							say "     Flinging the soaked garment aside, you turn back to Alexandra a second later. She is panting rapidly by now, her hands clawing at the ground as a fairly strong contraction hits. While pregnancy and birth may be a lot quicker these days, it doesn't look like they are all that much easier than before. The curve of your pregnant bitch's belly heaves with another contraction, followed by a breathless groan from her, and you can see her netherlips spread a little in preparation for what is to come. In the heat of the moment, you don't spare a second thought before rushing forward to take position between her legs, hands outstretched. Then the next contraction hits, this time bringing with it a curled-up bundle of wet puppy, looking terribly cute in its demi-human form, even though it may be dripping with Alexandra's fluids.";
+							WaitLineBreak;
+							say "     The tiny humanoid dog lets out a whimper at finding itself in a strange new world outside of the fluid-filled home it came from, then starts to weakly move its limbs as if to try them out for the first time. Focused on the miracle of life in your hands, you are only shaken out of watching the first pup when Alexandra lets out a shout of '[one of]Goddamn!' [or]Son of a bitch!' [or]Shoot me now!' [at random]as another really strong contraction hits. She mutters something about this being more painful than being tasered, then takes a deep gasp of air. You barely have time to gently lower the first pup to catch the second, who is no less cute and innocent than the first. The two of them stretch their tiny limbs and sniff blindly at each other as you put number two down next to its sibling.";
+						if AlexandraGrowingPups < 3:
+							say "     Ready for more pups, you wait for further contractions, yet somehow they seem less and less intense with every further twitch of Alexandra's body. Then something else slides out of the doberwoman: the afterbirth. It is a fleshy-looking thing that connects to the two puppies by their umbilical cords. For a moment, you wonder what the hell to do now, but then it just seems to disintegrate before your eyes, an effect accompanied by a faint silver shimmer at the edge of the spreading nothingness. A little bulge wanders up the umbilical cords towards each puppy, possibly consisting of nanites and whatever materials they deemed worthy to keep, followed by the cords themselves vanishing too. Soon there are just the two tiny doggies left, which [if hunger of Paula is 1]Paula picks up and hands to their mother one by one. 'I'll leave you two in peace. If you need any help, I'll be around,' Paula says before clambering to her feet and walking away, likely to find somewhere to clean herself off. Alexandra barely manages to raise a hand to wave to her friend due to being tired from her recent ordeal, but you are nonetheless sure that she is genuinely grateful to the vixen for her help[else]you pick up and hand to their mother one by one[end if].";
+						else if AlexandraGrowingPups is 3:
+							say "     Ready for more pups, you wait for further contractions and soon welcome a third into the world. After this one the twitches of Alexandra's body seem to become much less intense. Then something else slides out of the doberwoman: the afterbirth. It is a fleshy-looking thing that connects to the three puppies by their umbilical cords. For a moment, you wonder what the hell to do now, but then it just seems to disintegrate before your eyes, an effect accompanied by a faint silver shimmer at the edge of the spreading nothingness. A little bulge wanders up the umbilical cords towards each puppy, possibly consisting of nanites and whatever materials they deemed worthy to keep, followed by the cords themselves vanishing too. Soon there are just the three tiny doggies left, which [if hunger of Paula is 1]Paula picks up and hands to their mother one by one. 'I'll leave you two in peace. If you need any help, I'll be around,' Paula says before clambering to her feet and walking away, likely to find somewhere to clean herself off. Alexandra barely manages to raise a hand to wave to her friend due to being tired from her recent ordeal, but you are nonetheless sure that she is genuinely grateful to the vixen for her help[else]you pick up and hand to their mother one by one[end if].";
+						[else if AlexandraGrowingPups is 4:
+							say "     Ready for more pups, you wait for further contractions and soon welcome a third into the world, followed by a fourth. After this one the twitches of Alexandra's body seem to become much less intense. Then something else slides out of the doberwoman: the afterbirth. It is a fleshy-looking thing that connects to the four puppies by their umbilical cords. For a moment, you wonder what the hell to do now, but then it just seems to disintegrate before your eyes, an effect accompanied by a faint silver shimmer at the edge of the spreading nothingness. A little bulge wanders up the umbilical cords towards each puppy, possibly consisting of nanites and whatever materials they deemed worthy to keep, followed by the cords themselves vanishing too. Soon there are just the four tiny doggies left, which you pick up and hand to their mother one by one.";
+						else if AlexandraGrowingPups is 5:
+							say "     Ready for more pups, you wait for further contractions and soon welcome a third into the world, followed by a fourth and fifth. After this one the twitches of Alexandra's body seem to become much less intense. Then something else slides out of the doberwoman: the afterbirth. It is a fleshy-looking thing that connects to the five puppies by their umbilical cords. For a moment, you wonder what the hell to do now, but then it just seems to disintegrate before your eyes, an effect accompanied by a faint silver shimmer at the edge of the spreading nothingness. A little bulge wanders up the umbilical cords towards each puppy, possibly consisting of nanites and whatever materials they deemed worthy to keep, followed by the cords themselves vanishing too. Soon there are just the five tiny doggies left, which you pick up and hand to their mother one by one.";
+						else if AlexandraGrowingPups is 6:
+							say "     Ready for more pups, you wait for further contractions and soon welcome a third into the world, followed by a fourth, fifth, and after another tired push by the doberwoman, a sixth and final puppy. After this one the twitches of Alexandra's body seem to become much less intense. Then something else slides out of the doberwoman: the afterbirth. It is a fleshy-looking thing that connects to the six puppies by their umbilical cords. For a moment, you wonder what the hell to do now, but then it just seems to disintegrate before your eyes, an effect accompanied by a faint silver shimmer at the edge of the spreading nothingness. A little bulge wanders up the umbilical cords towards each puppy, possibly consisting of nanites and whatever materials they deemed worthy to keep, followed by the cords themselves vanishing too. Soon there are just the six tiny doggies left, which you pick up and hand to their mother one by one.";]
+						WaitLineBreak;
+						say "     Visibly exhausted, yet also as happy as she can be, Alexandra cradles her little ones to her chest, guiding tiny puppy muzzles to her nipples and smiling in fulfillment as their lips clamp onto her breasts and start to suckle greedily. ";
+						if AlexandraGrowingPups > 2:
+							if "Broodmother" is listed in Traits of Alexandra:
+								say "Even as worn out as she is, the doberwoman can't help but smile as two of her babies try to suck on the same tit, with one pushing the other out of the way to win the spot. 'Yeah, you've sure got your mother's spirit,' she murmurs as she strokes the winner, then lifts her other puppy to give it access to another of her multiple nipples further down along her chest. ";
+							else:
+								say "Given that she only has two breasts, there is a bit of competition and whining between her offspring, but the anthro canine does her best to switch off between the pups, giving each an equal share of the milk they crave. ";
+						say "As the little dogs greedily gulp down what they can drink from their mother, you notice that, much like Cleo, they remain as puppies rather than grow at the accelerated rate that many other newborns in the nanite-infested city seem to do, suggesting that they will take a similar time to mature.";
+						if AlexandraPupDaddy is 1: [player's pups]
+							say "     Giving them a closer look, you do recognize a bit of yourself in the puppies. They are definitely still dobermans through and through, but there's just something about the way they look and act that makes it more than clear in your mind that they're yours. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. They seem to recognize something in your scent, making them feel perfectly safe and happy to be with you.";
+						[else if AlexandraPupDaddy is 2: [Fang's pups]
+							say "     Now that the little dogs have grown a little, you do recognize a bit of Fang in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the wolf fathered them. Maybe it's something about the shape of their ears and muzzles, or maybe it's the markings of their fur - it's hard to say. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited some of the wild spirit of their father, making them happily pad your way without fear.";
+						else if AlexandraPupDaddy is 3: [Korvin's pups]
+							say "     Now that the little dogs have grown a little, you do recognize a bit of Korvin in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the German shepherd fathered them. Maybe it's something about the shape of their ears and muzzles, or maybe it's the markings of their fur - it's hard to say. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited some of the cocky spirit of their father, making them happily pad your way without fear.";
+						else if AlexandraPupDaddy is 4: [Carl's pups]
+							say "     Now that the little dogs have grown a little, you do recognize a bit of Carl in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the husky fathered them. Maybe it's something about the shape of their ears and muzzles, or maybe it's the markings of their fur - it's hard to say. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited some of the bravery of their father, making them happily pad your way without fear.";
+						else if AlexandraPupDaddy is 5: [Brutus's pups]
+							say "     Now that the little dogs have grown a little, you do recognize a bit of Brutus in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the demon brute fathered them. You could swear one of the puppies['] eyes glowed purple for a moment, and their teeth and claws do seem oddly sharp. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited part of the bond between their father and yourself, making them happily pad your way without fear.";]
+					if AlexandraPupDaddy is 1: [player's pups]
+						increase AlexandraPlayerPups by AlexandraGrowingPups;
+					[else if AlexandraPupDaddy is 2: [Fang's pups]
+						increase AlexandraFangPups by AlexandraGrowingPups;
+					else if AlexandraPupDaddy is 3: [Korvin's pups]
+						increase AlexandraKorvinPups by AlexandraGrowingPups;
+					else if AlexandraPupDaddy is 4: [Carl's pups]
+						increase AlexandraCarlPups by AlexandraGrowingPups;
+					else if AlexandraPupDaddy is 5: [Brutus's pups]
+						increase AlexandraBrutusPups by AlexandraGrowingPups;]
+					increase Libido of Alexandra by AlexandraGrowingPups;
+					increase AlexandraPregCount by 1; [number of previous pregnancies]
+					now AlexandraGrowingPups is 0; [no pups in her now]
+					now lust of Alexandra is 0;
+		if level of Alexandra is 2 and a random chance of 1 in 12 succeeds:
+			now lastdobiemess is 99;
+
+
+Section 12 - Birth of Cleo
+
+instead of navigating Grey Abbey Library while (hp of Cleo is 0 and Alexandra is in Grey Abbey Library and Lust of Alexandra > 23):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: Birth of Cleo[line break]";
+	say "[CleoBirth]";
+
+instead of going to Grey Abbey Library while (hp of Cleo is 0 and Alexandra is in Grey Abbey Library and Lust of Alexandra > 23):
+	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: Birth of Cleo[line break]";
+	say "[CleoBirth]";
+
+to say CleoBirth:
+	if hp of Cleo > 0:
+		now AlexandraNewPuppies is 1;
+	say "     As you find yourself in the entrance of the library, you feel an odd feeling that tells you that you should check on Alexandra and see how she is doing. Unsure of where exactly in the library she will be, you are relieved to find her slumped back on some cushions in the crime section, but this soon turns to concern as you notice the sweat covering her body and her occasional grunts. Realizing that she is about to give birth, you rush over to the doberman, crouching beside her and gently stroking her brow to alert her to your presence. Opening her eyes and giving you a grimace as her stomach flexes again, she takes hold of your hand and gives it an affectionate squeeze before tightening it as another large contraction racks her body. Grasping her hand, you allow her to feel your presence as she goes through labor as you stroke her, softy speak words of reassurance, and weather each painful clench of her paw that accompanies her birthing motions.";
+	say "     Your attention completely on Alexandra, you don't realize how much time has passed before a black and tan head slides into view between her legs. Despite the harm that the nanites seem to have done to the city, in this instance they seem to help, allowing the doberman to ignore the pain that would normally be present with birth and instead register only pleasure, leaving her in a state of euphoria even as her baby distends the lips of her vulva more and more. Finally, Alexandra's child slips from her passage and onto the clean towel spread beneath her, lying there for but a moment before it's mother huddles above it and, much to your surprise, begins to wash it clean with her tongue. Eventually, Alexandra dries it off and scoops it up in her arms, briefly looking at its undercarriage before bringing it her breast to suckle. 'A beautiful daughter...' she sighs, her eyes glistening as she gazes down at her first child with loving tenderness.";
+	WaitLineBreak;
+	say "     Unlike many new-borns within the city, your new daughter doesn't seem to start growing, although it isn't long before she opens her eyes, her own bright blue very different from her mother's warm brown as the two stare at each other. Not breaking eye contact, Alexandra beckons you over, inviting you to meet your child properly. 'This is your [if player is male]Daddy. [else]Mommy[end if]. Just like me, [SubjectPro of Player] loves you very much,' she croons, tickling her daughter's chest. 'What are we going to call her? I found a few books on naming babies, but there were way too many options and I decided that it was better coming from the heart,' the doberman cop asks you, cradling her child with on arm while the other hand continues to entertain her. You think for a few moments before hesitantly admitting that you can't think of anything at the moment. Strangely enough, judging from Alexandra's smile, this seems to have been the right thing to say. 'What do you think about Cleo as a name,' she responds with a smile.";
+	say "     Conscious that this is the name that she wants to choose but curious as to where it came from, you enquire about Alexandra's reasoning. 'It was the name of my first supervising officer when I left the academy. While I won't deny that there was and still is corruption in the police force, she didn't resort to dirty tactics or bribes for as long as I knew her. She stepped on more than a few toes in the department, but unlike many, she retired with her family still together and happy. I'm sure that you are aware of the strain that cops can end up putting on their families, but she seemed able to balance her family, her job, and training me I can say with absolute confidence that she was one of the few positive role models I have had in my life,' she explains before returning her attention to her bundle of joy who has now dozed off in her mother's arms. Accepting Alexandra's decision, you sit beside her and gently stroke your new baby girl's fur, the doberman cop resting her head on your shoulder.";
+	WaitLineBreak;
+	say "     You sit like this for quite some time, enjoying this period of calm and innocent affection. Eventually Alexandra breaks the silence. 'I realize that you may have places to go, so don't worry about Cleo and me. I'll protect her and raise her right while you are out in the city. Just be sure to come back from time to time so that you can be part of her life too. I doubt that she'll stay little forever and you don't want her to end up and angsty teen with daddy issues,' she teases you before giving you a kiss on the cheek. Reassuring her that you will, you clamber to your feet before helping her up to, carefully supporting her as she momentarily loses her balance. 'I didn't expect losing the baby bump to shift my center of gravity this much,' Alexandra laughs before looking at the mess on the towels. 'I suppose I should find some way of cleaning this up.' Confident that she has everything under control, you leave her bundling the towels up and walk back towards the front desk.";
+	increase Libido of Alexandra by AlexandraNewPuppies;
+	now AlexandraNewPuppies is 0;
+	now HP of Cleo is 1;
+	now hunger of Cleo is 120;
+	increase score by a random number between 5 and 10;
+	now Lust of Alexandra is 0;
+]
+
+Section 13 - Debug and Notes
 
 to say badAlexandra_debug:
 	say "DEBUG (Bad Girl Alexandra) -> HP: [HP of Alexandra], Level: [level of Alexandra], Lust: [lust of Alexandra], Libido: [Libido of Alexandra], XP: [XP of Alexandra], Story 1: [if Alexandrastory is true]Y[else]N[end if], Story 2: [if Alexandrastory2 is true]Y[else]N[end if], Story 3: [if Alexandrastory3 is true]Y[else]N[end if], dobieanal = [if dobieanal is true]Y[else]N[end if], lastdobiemess: [lastdobiemess], lastAlexandraPast: [lastAlexandraPast], lastfuck: [lastfuck of Alexandra], AlexandraPregCount: [AlexandraPregCount], AlexandraGrowingPups: [AlexandraGrowingPups] <- DEBUG[line break]";
@@ -1767,7 +2064,7 @@ to say goodAlexandra_debug:
 	say "DEBUG (Police Station) -> policerepair: [policerepair], lastpolicerepair: [lastpolicerepair], pr_task01: [if pr_task01 is true]Y[else]N[end if], pr_task02: [if pr_task02 is true]Y[else]N[end if], pr_task03: [if pr_task03 is true]Y[else]N[end if], pr_task04: [if pr_task04 is true]Y[else]N[end if], pr_completion: [pr_completion], population: [PoliceStationTwelvePopulation], infected population: [PoliceStationTwelveInfpop], <- DEBUG[line break]";
 
 
-Section 12 - Debug Testing - Not for release
+Section 14 - Debug Testing - Not for release
 
 AlexandraDebugging is an action applying to nothing.
 Understand "debugalexandra" as AlexandraDebugging.

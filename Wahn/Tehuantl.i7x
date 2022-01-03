@@ -639,7 +639,7 @@ instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - tur
 		say "     With a roar, the jaguar jumps up from where he was sitting, unfolding his digitigrade limbs from their cross-legged position in a remarkably fluid and graceful movement. Fangs bared, he whirls around to face the anthro dog, paw-hands raised to attack - right until the moment he sees you standing to the side, watching. Freezing in mid-pounce, the jaguar warrior easily ducks the balled fist Korvin sent his way in anticipation of his reaction. Then he gains two steps distance to the attack dog and turns his attention to you. '[Master]?' Tehuantl asks and nods towards Korvin, who looks like he is about to advance on him with balled fists.";
 		say "     From where you're standing, the end result of this scuffle should be fairly clear. Thinking back, you did whup Korvin's ass fairly easily, compared to the trained and experienced Aztec warrior from the museum. The German shepherd definitively bit off more than he can chew this time.";
 		say "     [bold type]How do you want to handle this situation? They're both your pets after all...[roman type][line break]";
-		LineBreak; [TODO: Expand on this with more choices]
+		LineBreak; [TODO: Expand on this with more choices, possibly include level comparisons]
 		say "     ([link]Y[as]y[end link]) - Nod to Tehuantl. Korvin has it coming...";
 		say "     ([link]N[as]n[end link]) - Call Korvin to heel.";
 		if Player consents:
@@ -650,6 +650,7 @@ instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - tur
 			say "     Tehuantl capitalizes on his opponent lying flat on his nose, and gets instantly on top of Korvin. The experienced fighter twists the dog's arms behind his back, and pulls them up, pinning them in an almost inescapable double-armlock. 'Let me go, monkey fucker!' Korvin growls out, his muzzle, pressed to the ground, muffling his voice. While the German shepherd struggles without much avail against Tehuantl, the jaguarman looks at you, a questioning expression on his face. A glance to his crotch, which is right above Korvin's naked body and almost touches his buttocks with a well-sized erection, makes what the jaguar warrior is asking of you clear.";
 			say "     [bold type]Let Tehuantl have Korvin's ass?[roman type][line break]";
 			LineBreak;
+			[TODO: Add 3rd option to have fun with both of them]
 			say "     ([link]Y[as]y[end link]) - To the victor go the spoils...";
 			say "     ([link]N[as]n[end link]) - Nah, the embarrassment of being beaten is enough for Korvin.";
 			if Player consents:
