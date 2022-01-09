@@ -238,6 +238,7 @@ Include Power Plant by Hellerhound.
 Include Qytat a'th Lundrues by SgtPepper234.
 Include Red Light District by Wahn.
 Include Shag Shack by Wahn.
+Include SlutStorage by Wahn.
 Include Stablemasters by Sarokcat.
 Include Stables Hotel by Sarokcat.
 Include State Fair by Sarokcat.
