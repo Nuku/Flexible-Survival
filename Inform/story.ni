@@ -694,6 +694,7 @@ Include Wolftaur by Sarokcat.
 Include Wolverine Guard by Stripes.
 Include Wrestling Wolf by Guest Writers.
 Include Wyvern by Damaged.
+Include Wyvern Patriarch by Gherod.
 Include Xeno by Stripes.
 Include Yamato Dragon by Blue Bishop.
 Include Yamato Dragoness by Blue Bishop.
