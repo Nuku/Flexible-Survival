@@ -66,7 +66,7 @@ Table of GamePossessions
 Name(text)	CarriedNumber(number)	StoredNumber(number)	EquippedStatus(truth state)	CurseStatus(truth state)
 with 1000 blank rows
 
-Table of GameEndings
+Table of GameEndings[ (continued)]
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 --	--	--	--	0	false
 
