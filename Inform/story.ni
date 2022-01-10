@@ -238,6 +238,7 @@ Include Power Plant by Hellerhound.
 Include Qytat a'th Lundrues by SgtPepper234.
 Include Red Light District by Wahn.
 Include Shag Shack by Wahn.
+Include SlutStorage by Wahn.
 Include Stablemasters by Sarokcat.
 Include Stables Hotel by Sarokcat.
 Include State Fair by Sarokcat.
@@ -693,6 +694,7 @@ Include Wolftaur by Sarokcat.
 Include Wolverine Guard by Stripes.
 Include Wrestling Wolf by Guest Writers.
 Include Wyvern by Damaged.
+Include Wyvern Patriarch by Gherod.
 Include Xeno by Stripes.
 Include Yamato Dragon by Blue Bishop.
 Include Yamato Dragoness by Blue Bishop.

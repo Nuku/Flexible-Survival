@@ -91,7 +91,9 @@ instead of conversing the Blue Speaker:
 	BlueSpeakerTalkMenu;
 
 to BlueSpeakerTalkMenu:
-	say "     Do you want to talk to Blue about something?";
+	if PlayerMet of Blue Speaker is false:
+		now PlayerMet of Blue Speaker is true;
+	say "     [bold type]Do you want to talk to Blue about something?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
