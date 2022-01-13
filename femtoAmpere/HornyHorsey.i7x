@@ -260,6 +260,7 @@ Instead of fucking Ammy:
 to say ammy_sexengine:
 	say "[one of]     She guides you to her favorite couch and just pushes you onto it. You don't have long to gaze at her curvy body and wonderful breasts until she gets down onto you, sitting in your lap.[line break][ammy_sex_lap][or][ammy_sex_fellatio_giving][or][ammy_sex_fellatio_receiving][or][if Player is male][ammy_sex_frombehind][else][ammy_sexengine][end if][at random]";
 	if lastfuck of Ammy is not turns, now lastfuck of Ammy is turns;
+	now 'Employees Only' Door is openable;
 	now player is in Ammy's Flatlet;
 
 
