@@ -15,7 +15,14 @@ to connect LupinesPit:
 
 a postimport rule:
 	if Resolution of Discover The Werewolves Den is 1:
+		now Find The Werewolves Den is resolved;
+		AddNavPoint Hidden Rock Cavern Entrance;
 		connect LupinesPit;
+		move Jett to Lair Of The Lupines Main Hub;
+		move Elstan to Lair Of The Lupines Pit;
+		move Kirnon to Lair Of The Lupines Pit;
+		move Rodion to Lair Of The Lupines Kitchen;
+		move Wyatt to Lair Of The Lupines Common Room;
 
 [---]
 
@@ -23,7 +30,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Hidden Rock Cavern Entrance	"Hidden Rock Cavern Entrance"
 
-Hidden Rock Cavern Entrance is a room. It is a fasttravel.
+Hidden Rock Cavern Entrance is a room. It is a fasttravel. Hidden Rock Cavern Entrance is private.
 The earea of Hidden Rock Cavern Entrance is "Avalon".
 Description of Hidden Rock Cavern Entrance is "[Hidden Rock Cavern Entrance Desc]".
 
@@ -34,6 +41,20 @@ to say Hidden Rock Cavern Entrance Desc:
 
 instead of smelling Hidden Rock Cavern Entrance:
 	say "     This place smells like greenery and nature.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Find The Werewolves Den	"Find The Werewolves Den"
+
+Find The Werewolves Den is a situation.
+ResolveFunction of Find The Werewolves Den is "[ResolveEvent Find The Werewolves Den]". Sarea of Find The Werewolves Den is "Avalon".
+
+to say ResolveEvent Find The Werewolves Den:
+	say "     As you walk through a few unknown paths in hopes of finding something interesting within the region of Avalon, you are led into an area almost completely covered by tall grass and bushes. Normally, this would not mean much, but there is a distinct smell flowing in the air that resembles wolves, yet you hear no movement nor any sort of howling. Moreover, when you inspect the dirty ground near this section of the woods, you notice large lupine footprints here and there. With your curiosity duly incited, you press on through the vegetation and find your way to some rocky cliffs. The path is not the easiest to traverse, but it eventually reveals that all this greenery seems almost purposefully meant to conceal an entrance to a cavern.";
+	say "     Having stumbled upon this finding, you take note of its location immediately and wonder if it would be worth investigating.";
+	move player to Hidden Rock Cavern Entrance;
+	AddNavPoint Hidden Rock Cavern Entrance;
+	now Find The Werewolves Den is resolved;
 
 [---]
 
@@ -1026,21 +1047,13 @@ instead of going up from Lair Of The Lupines Pit while Resolution of Discover Th
 	move player to Lair Of The Lupines Main Hub;
 	AddNavPoint Hidden Rock Cavern Entrance;
 	now Resolution of Discover The Werewolves Den is 1;
+	now Find The Werewolves Den is resolved;
 	connect LupinesPit;
 	move Jett to Lair Of The Lupines Main Hub;
 	move Elstan to Lair Of The Lupines Pit;
 	move Kirnon to Lair Of The Lupines Pit;
 	move Rodion to Lair Of The Lupines Kitchen;
 	move Wyatt to Lair Of The Lupines Common Room;
-
-a postimport rule:
-	if Resolution of Discover The Werewolves Den is 1:
-		AddNavPoint Hidden Rock Cavern Entrance;
-		move Jett to Lair Of The Lupines Main Hub;
-		move Elstan to Lair Of The Lupines Pit;
-		move Kirnon to Lair Of The Lupines Pit;
-		move Rodion to Lair Of The Lupines Kitchen;
-		move Wyatt to Lair Of The Lupines Common Room;
 
 Section 3-1 - Oubliette Scenes
 
