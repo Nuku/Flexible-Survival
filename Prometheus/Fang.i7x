@@ -2097,20 +2097,11 @@ Section 4.3.1 - Male Beta Fang
 instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 and HP of Fang is 1 and Fang is Male) and (FangBetaCounter > 5) and (player is not neuter)):	[ignored for 2+ days]
 	project the Figure of Fang_face_icon;
 	say "     As you enter the library, you feel the familiar warmth of Fang up against your thigh. With a smile, you ruffle the fur on his back in a show of affection before attempting to continue on your way. To your surprise, the wolf continues to impede you before lightly grasping your hand in his mouth and guiding you to a secluded corner. Expecting to have to reprimand him for overstepping his place, you clear your throat only to be shocked when he does the same. 'I am sorry. I wanted to talk. Away from others,' Fang apologizes, his voice soft, raspy, and a little stilted from disuse. You decide to let him continue, especially when you consider how seldom he speaks. 'You have shown concern for me. I am grateful. You treat me as person. Not mindless beast. When we met, you called me your beta but I have not earned this place. Allow me to do so now. As long as you treat me as a person, I will be your beta. Protect you. Love you. Please you. But I will be your beta, not your bitch. I have own desires too. I may not always agree with you, but I will still respect you as Alpha.'";
-	say "     [bold type]Do you wish to allow him to properly assume his position as your [']Beta['], your second in command, and mate even though it will grant him a little more freedom? Or do you want more time to decide? Or perhaps you would prefer for him to take the role of Alpha now that he has learnt more compassion?[roman type][line break]";
+	say "     [bold type]Do you wish to allow him to properly assume his position as your [']Beta['], your second in command, and mate even though it will grant him a little more freedom?[roman type][line break]";
 	LineBreak;
-	say "     ([link](1)[as]1[end link]) - Have Fang become your Beta.";
-	say "     ([link](2)[as]2[end link]) - Keep Fang in his current position while you come to a decision.";
-	say "     ([link](3)[as]3[end link]) - Ask Fang to be your Alpha.";
-	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
-		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
-			say "Invalid choice. Type [link]1[end link], [link]2[end link], or [link]3[end link].";
-	if calcnumber is 1:
+	say "     ([link]Y[as]y[end link]) - Yes. You trust him enough for that.";
+	say "     ([link]N[as]n[end link]) - No. That is not the position that you had in mind for him.";
+	if Player consents:
 		LineBreak;
 		say "     You look Fang in the eye before [one of]solemnly [or]enthusiastically [or]cheerfully [at random]accepting his proposition. He wags his tail and bumps against your leg, saying, 'Thank you. Through this, bonds of the pack are strengthened.' You stifle a snort at this, considering Fang hasn't exactly got many members of his pack[if HP of Lux > 0] other than Lux and Umbra[end if], but you don't wish to insult the wolf so soon after he has reaffirmed his loyalty to you (or insult him at all for that matter). Despite noticing this he doesn't seem to take offence. 'The pack will grow. All creatures have advantages. Diversity will be beneficial.' You take this to mean that he will accept non-canines too[if bodyname of player is listed in infections of CanineList], in interesting idea that you are curious to see how it turns out[else], an idea that doesn't particularly surprise you considering that you aren't canine yourself[end if].";
 		say "     Considering the conversation over for now, you scratch the wolf behind the ears and begin to turn to leave, but once again Fang softly grasps your hand between his teeth. When you face him again, he looks mildly embarrassed, his ears lowered slightly and his eyes cast down, before he takes a deep breath and looks you in the eye. 'I wish for us to mate. To further seal this bond. I will still respect you either way, but I desire to feel you against me,' your Beta requests, the start of an erection peeking from beneath his undercarriage. You think for a moment, looking into Fang's warm amber eyes as you decide whether you want to have sex with him now or not.";
@@ -2358,16 +2349,10 @@ instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 a
 			say "     While you are happy for Fang to be your Beta, you don't feel that having sex with him is necessary to cement his position, nor do you have any interest in fornicating with him at the moment. Therefore, you gently refuse his request, the wolf disappointed but accepting of your decision. 'As my Alpha wishes,' Fang replies before loping off, likely to resume guarding the front door. Overall, you are pleased with the outcome of this exchange and return to the entrance hall too so as to continue what you were doing before Fang took you aside.";
 		now HP of Fang is 5; [Beta Fang]
 		now vmusedone of Fang is false; [Open for fresh musings]
-	else if calcnumber is 2:
+	else:
 		LineBreak;
 		say "     You begin to shake your head, earning a quizzical look from the wolf before you begin to explain that while you may have called him your beta then, it was more of a spur of the moment offer in order to convince him to go with you than a proper understanding of roles within a wolf pack. Considering how many people you meet in the city, who would be to say that you wouldn't find someone that you thought would fulfil the role better? 'I understand. You wish for strong pack. Focused on physical strength, not pack bonds. We shall await the result,' he rumbles, taking the refusal surprisingly well. You let out a sigh and thank him, relieved that the situation didn't turn ugly. Even if he can't be your beta, he is still a valuable resident of the library guarding the door. After giving him a pat, he lopes off again, leaving you to decide what to do next.";
 		now FangBetaCounter is 0;
-	else if calcnumber is 3:
-		LineBreak;
-		say "     Unsure how he is going to receive it, you ask Fang whether he would be willing to be your Alpha instead. He cocks his head for a moment, looking into your eyes while he considers. 'Interesting. I did not expect this. I would be leader instead?' he ponders before bumping up against you. 'I accept. I will be Alpha. Learned much while here. Will benefit me. Through this, bonds of the pack are strengthened.' You stifle a snort at this, considering Fang hasn't exactly got many members of his pack[if HP of Lux > 0] other than Lux and Umbra[end if], but you don't wish to insult your new Alpha so soon after he has gained his position (or insult him at all for that matter). Despite this, he seems to notice, but takes it in good humor. 'Behave,' he gently growls. 'The pack will grow. All creatures have advantages. Diversity will be beneficial.' You take this to mean that he will accept non-canines too[if bodyname of player is listed in infections of CanineList], in interesting idea that you are curious to see how it turns out[else], an idea that doesn't particularly surprise you considering that you aren't canine yourself[end if].";
-		say "     Before you have a chance to leave, Fang fixes his amber eyes upon you, communicating that your conversation is not yet over. When you look at him, he stares back with a newfound confidence, ears upright and unflinching with his gaze. 'To seal pact. We will mate. Mark you as mine and me as yours,' he says, the statement leaving no room for disagreement now that you have surrendered authority to him. You spy the beginning of an erection beneath his undercarriage and come to the conclusion that even if you had the choice that you wouldn't wish to avoid this chance at being the first to be mounted by the wolf now that he has reached the top of the hierarchy.";
-		WaitLineBreak;
-		say "     ";
 
 
 Section 4.3.2 - Female Beta Fang
@@ -2375,20 +2360,11 @@ Section 4.3.2 - Female Beta Fang
 instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 and HP of Fang is 1 and Fang is Female) and (FangBetaCounter > 5) and (player is not neuter)):	[ignored for 2+ days]
 	project the Figure of Fang_face_icon;
 	say "     As you enter the library, you feel the familiar warmth of Fang up against your thigh. With a smile, you ruffle the fur on her back in a show of affection before attempting to continue on your way. To your surprise, the wolf continues to impede you before lightly grasping your hand in her mouth and guiding you to a secluded corner. Expecting to have to reprimand her for overstepping her place, you clear your throat only to be shocked when she does the same. 'I am sorry. I wanted to talk. Away from others,' Fang apologizes, her voice soft, raspy, and a little stilted from disuse. You decide to let her continue, especially when you consider how seldom she speaks. 'You have shown concern for me. I am grateful. You treat me as person. Not mindless beast. When we met, you called me your beta but I have not earned this place. Allow me to do so now. As long as you treat me as a person, I will be your beta. Support you. Love you. Please you. I wish be your beta and mate, not an onahole to dump your lust into. I have own desires too. I may not always agree with you, but I will still respect you as Alpha.'";
-	say "     [bold type]Do you wish to allow her to properly assume her position as your [']Beta['], your second in command, and mate even though it will grant her a little more freedom? Or do you want more time to decide? Or perhaps you would prefer for her to take the role of Alpha now that she has learnt more compassion?[roman type][line break]";
+	say "     [bold type]Do you wish to allow her to properly assume her position as your [']Beta['], your second in command, and mate even though it will grant her a little more freedom?[roman type][line break]";
 	LineBreak;
-	say "     ([link](1)[as]1[end link]) - Have Fang become your Beta.";
-	say "     ([link](2)[as]2[end link]) - Keep Fang in her current position while you come to a decision.";
-	say "     ([link](3)[as]3[end link]) - Ask Fang to be your Alpha.";
-	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
-		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-			break;
-		else:
-			say "Invalid choice. Type [link]1[end link], [link]2[end link], or [link]3[end link].";
-	if calcnumber is 1:
+	say "     ([link]Y[as]y[end link]) - Yes. You trust her enough for that.";
+	say "     ([link]N[as]n[end link]) - No. That is not the position that you had in mind for her.";
+	if Player consents:
 		LineBreak;
 		say "     You look Fang in the eye before [one of]solemnly [or]enthusiastically [or]cheerfully [at random]accepting her proposition. She wags her tail and bumps against your leg, saying, 'Thank you. Through this, bonds of the pack are strengthened.' You stifle a snort at this, considering Fang hasn't exactly got many members of her pack[if HP of Lux > 0] other than Lux and Umbra[end if], but you don't wish to insult the wolf so soon after she has reaffirmed her loyalty to you (or insult her at all for that matter). Despite noticing this she doesn't seem to take offence. 'The pack will grow. All creatures have advantages. Diversity will be beneficial.' You take this to mean that she will accept non-canines too[if bodyname of player is listed in infections of CanineList], in interesting idea that you are curious to see how it turns out[else], an idea that doesn't particularly surprise you considering that you aren't canine yourself[end if].";
 		say "     Considering the conversation over for now, you scratch the wolf behind the ears and begin to turn to leave, but once again Fang softly grasps your hand between her teeth. When you face her again, she looks mildly embarrassed, her ears lowered slightly and her eyes cast down, before she takes a deep breath and looks you in the eye. 'I wish for us to mate. To further seal this bond. I will still respect you either way, but I desire to feel you inside me,' your Beta requests, the sounds of lubricant slightly dripping from beneath her undercarriage further signaling her desire. You think for a moment, looking into Fang's warm amber eyes as you decide whether you want to have sex with her now or not.";
@@ -2636,13 +2612,10 @@ instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 a
 			say "     While you are happy for Fang to be your Beta, you don't feel that having sex with her is necessary to cement her position, nor do you have any interest in fornicating with her at the moment. Therefore, you gently refuse her request, the wolf disappointed but accepting of your decision. 'As my Alpha wishes,' Fang replies before loping off, likely to resume guarding the front door. Overall, you are pleased with the outcome of this exchange and return to the entrance hall too so as to continue what you were doing before Fang took you aside.";
 		now HP of Fang is 5; [Beta Female Fang]
 		[now vmusedone of Fang is false; [Open for fresh musings]]
-	else if calcnumber is 2:
+	else:
 		LineBreak;
 		say "     You begin to shake your head, earning a quizzical look from the wolf before you begin to explain that while you may have called her your beta then, it was more of a spur of the moment offer in order to convince her to go with you than a proper understanding of roles within a wolf pack. Considering how many people you meet in the city, who would be to say that you wouldn't find someone that you thought would fulfil the role better? 'I understand. You wish for strong pack. Focused on physical strength, not pack bonds. We shall await the result,' she rumbles, taking the refusal surprisingly well. You let out a sigh and thank her, relieved that the situation didn't turn ugly. Even if she can't be your beta, she is still a valuable resident of the library guarding the door. After giving her a pat, she lopes off again, leaving you to decide what to do next.";
 		now FangBetaCounter is 0;
-	else if calcnumber is 3:
-		LineBreak;
-		say "     ";
 
 
 Section 5 - Alpha, Beta, and Omega Events
