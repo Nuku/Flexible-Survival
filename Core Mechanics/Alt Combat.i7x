@@ -1592,6 +1592,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "hump"	retaliation rule	--	--	humping rule	100	--	--	--	--	--
 "ftaurpounce"	retaliation rule	--	--	ftaurpounce rule	20	--	--	--	--	--
 "firebreath"	firebreath rule	--	--	--	--	--	--	--	--	--
+"latexhug"	retaliation rule	--	--	latexhug rule	20	--	--	--	--	--
 
 Chapter 2 - Sample/Basic Rules
 
@@ -1886,5 +1887,34 @@ this is the firebreath rule:
 			increase firebreathcount by a random number between 2 and 6;
 			if firebreathcount > 40, now firebreathcount is 40;
 		retaliate;
+
+Part 9 - Alternate Attack Example - Latex Smother
+[ Basically the same as bearhug but uses dex check to slip out instead of strength check to break free]
+
+this is the latexhug rule:
+	choose row MonsterID from Table of Random Critters;
+	if Name entry is "Latex Frog":
+		say "The latex frog leaps onto you, wrapping its legs around you with its sticky feet gripping tight!";
+	else:
+		say "The [EnemyNameOrTitle] rushes forward and wraps itself tight around you.";
+	say "As you struggle to escape, the latex [one of]flows and expands around[or]oozes across and squeezes at[at random] your body. You will need to slip free before you're smothered!";
+	WaitLineBreak;
+	let freedom be 0;
+	while HP of Player > 0 and freedom is 0:
+		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg / round]
+		now damagein is dam;
+		say "[noarmorabsorbancy]"; [ignores armor]
+		decrease HP of Player by ( dam - absorb );
+		say "Despite your struggle, [one of]the latex continues to spread over your body[or]the latex squeezes tigher around you[at random], further immobilizing you. [special-style-2][dam][roman type] damage! ([HP of Player]/[maxHP of Player] HP)[line break]";
+		if HP of Player > 0:
+			WaitLineBreak;
+			let num1 be a random number between 0 and ( Dexterity of Player + level of Player );
+			let num2 be a random number between 1 and ( dex entry + lev entry );
+			say "You struggle to slip free as the latex [one of]continues to expand over your body[or]envelopes your body[at random]: ";
+			if num1 > num2:
+				say "You manage to find a hole in the latex and squeeze out before it closes completely around you.";
+				now freedom is 1;
+			else:
+				say "You struggle to find a way out of the latex, but feel weaker as it continues to surround and engulf you.";
 
 Alt Combat ends here.

@@ -544,6 +544,7 @@ Include Koghh by Wahn.
 Include Komodo Dragon by Stripes.
 Include Latex Ermine by Stripes.
 Include Latex Fox by Nuku Valente.
+Include Latex Frog by Soggi.
 Include Latex Mistress by Stripes.
 Include Latex Wolf by Stripes.
 Include Leopardman by Vinickus.
