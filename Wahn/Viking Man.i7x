@@ -231,7 +231,7 @@ When Play begins:
 	now Male Breast Size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0;             [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0;         [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
+	now Cunt Tightness entry is 0;         [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 60;                [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "dried cod";         [ Dropped item, blank for none. Case sensitive. ]
@@ -250,5 +250,56 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Section 3 - Items
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"dried cod"	"A broad strip of dried and salted cod, just the right snack for an active viking on the prowl. Looks like someone has already taken a bite or two out of it."	1	dried cod
+
+instead of sniffing dried cod:
+	say "Raising the piece of meat to your nose, you can definitively confirm that it is indeed fish.";
+
+dried cod is a grab object.
+Usedesc of dried cod is "[dried cod use]";
+
+to say dried cod use:
+	say "You stick a corner of the dried fish in your mouth and tear a piece off, chewing it thoroughly. A bit tough at first, but it tastes well enough. A thought comes up in the back of your head, and you wonder if it's such a good idea to share food that someone else has already nibbled on... but then, becoming more like a Viking wouldn't be so bad, would it?";
+	PlayerEat 15;
+	if "Iron Stomach" is not listed in Feats of Player:
+		VikingManInfect;
+
+to VikingManInfect:
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
+		if Name entry is "Viking Man":
+			now MonsterID is y;
+			break;
+	now non-infectious entry is false;
+	infect "Viking Man";
+	now non-infectious entry is true;
+
+
+Section 4 - NPC
+
+[
+Section 5 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Viking Man Infection"	"Infection"	""	Viking Man Infection rule	1000	false
+
+This is the Viking Man Infection rule:
+	if Player has a body of "Viking Man":
+		trigger ending "Viking Man Infection"; [Here it states, that the ending has been played.]
+		if humanity of Player < 10:
+			if Player is male:
+				say "...";
+			else if Player is female and "Sterile" is not listed in feats of Player:
+				say "...";
+			else:
+				say "...";
+		else:
+			say "...";
+]
 
 Viking Man ends here.
