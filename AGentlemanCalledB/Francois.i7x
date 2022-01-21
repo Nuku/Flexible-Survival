@@ -1015,7 +1015,7 @@ to say muffin muffin Use:
 	else if Player is not female:
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 5;
-		now Cunt Tightness of Player is 4;
+		now Cunt Tightness of Player is 4; [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 		follow the cunt descr rule;
 		say ". As you swallow the last bite, a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms.";
 	else:

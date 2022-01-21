@@ -167,7 +167,7 @@ Ball Size of Klauz is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "c
 Ball Count of Klauz is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Cunt Count of Klauz is 0. [number of cunts]
 Cunt Depth of Klauz is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Klauz is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Cunt Tightness of Klauz is 0. [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 Clit Size of Klauz is 0. [size 1-5, very small/small/average/large/very large]
 Asshole Depth of Klauz is 10. [inches deep for anal fucking]
 Asshole Tightness of Klauz is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]

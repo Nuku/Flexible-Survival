@@ -431,7 +431,7 @@ Ball Count of Araqiel is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Araqiel is 4. [5 if corrupted] [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Araqiel is 0. [number of cunts]
 Cunt Depth of Araqiel is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Araqiel is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Cunt Tightness of Araqiel is 0. [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 Clit Size of Araqiel is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Araqiel is false.

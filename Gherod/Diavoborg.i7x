@@ -446,7 +446,7 @@ Ball Count of Diavoborg is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Diavoborg is 6. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Diavoborg is 0. [number of cunts]
 Cunt Depth of Diavoborg is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Diavoborg is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Cunt Tightness of Diavoborg is 0. [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 Clit Size of Diavoborg is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Diavoborg is false.
