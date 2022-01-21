@@ -388,7 +388,76 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of Random Critters (continued)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now NewTypeInfection entry is false;
+	now Species Name entry is "Mustang";
+	add "Feral Mustang Mare" to infections of EquineList;
+	add "Feral Mustang Mare" to infections of FurryList;
+	add "Feral Mustang Mare" to infections of NatureList;
+	add "Feral Mustang Mare" to infections of FemaleList;
+	add "Feral Mustang Mare" to infections of BluntCockList;
+	add "Feral Mustang Mare" to infections of QuadrupedalList;
+	add "Feral Mustang Mare" to infections of TailList;
+	now Name entry is "Feral Mustang Mare";
+	now enemy title entry is "Wild Mustang";
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]";
+	now desc entry is "[NonCombatError]";
+	now face entry is "equine in appearance, with large brown eyes and rather expressive horse-like ears"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "tall and muscular, shaped like an anthro equine. It has powerful digitigrade legs ending in large hooves with fluffy fetlocks. Your hands seem to be slightly hoof-like as well, bearing little hooflet-like nails at the end of each finger"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]brown-furred[or]softly furred[or]short fur covered[at random]"; [ format as "Your body is covered in (your text) skin"]
+	now tail entry is "You have a long, thick, horse-like tail swaying behind you, almost reaching to the ground. Its long strands of coarse hair cover your ass completely as it flicks this way and that seemingly on its own."; [ write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]equine[or]horse-like[or]blunt[or]powerful[at random]"; [ format as "You have a 'size' (your text) cock ]
+	now face change entry is "its mouth stretches forward, merging with a rapidly flattening nose to form an equine muzzle. A groan escapes your widening lips as your forehead flattens and both eyes shift their position to the sides of your head, creating a strange new perspective to see the world in. Meanwhile, your ears lengthen into larger and pointed horse-like ears, which come to rest atop your now extremely equine face"; [ format as "Your face feels funny as (your text)." ]
+	now body change entry is "muscles seem to shift around underneath the skin. Cramps cause you to stumble slightly as your heels move up both legs, forcing you to assume a more digitigrade stance, while your toes flatten and merge together to form broad hooves. By the time you catch your balance again and can stand straight on now digitigrade legs, the rest of your body has finished changing as well - leaving you with hands bearing rather hoof-like nails and pretty broad shoulders"; [ format as "Your body feels funny as (your text)." ]
+	now skin change entry is "coarse horse-like fur spreads all over your body, covering it in short dark brown fur"; [ format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it assumes a broad, well-rounded shape. Then long strands of thick hair begin to sprout from the base of your spine, quickly growing out to form a long and handsome equine tail. It hangs down past your knees and seems to flick from side to side as if it had a mind of its own"; [ format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it grows erect and aroused before beginning to shift and change. The point of your cock broadens and flattens slightly into a rather blunt equine shape, while a proper sheath forms around its base, with a ribbed ring about halfway up your member"; [ format as "Your cock feels funny as (your text)." ]
+	now str entry is 20;
+	now dex entry is 16;
+	now sta entry is 20;
+	now per entry is 12;
+	now int entry is 8;
+	now cha entry is 8;
+	now sex entry is "Female";         [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 100;               [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 14;               [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 18;              [ Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Nowhere";       [ Case sensitive. If you go down to the woods today, you're in for a big surprise]
+	now Cock Count entry is 0;              [ number of cocks if sex is 'Male' or 'Both' ]
+	now Cock Length entry is 0;
+	now Ball Size entry is 0;        [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now Nipple Count entry is 2;            [ Number of nipples. ]
+	now Breast Size entry is 0;        [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1;              [ number of pussies if sex is 'Female' or 'Both' ]
+	now Cunt Depth entry is 20;
+	now Cunt Tightness entry is 4;
+	now SeductionImmune entry is false;
+	now libido entry is 90;            [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
+	now loot entry is "food";          [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
+	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
+	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]muscular[or]equine[at random]";
+	now type entry is "equine";        [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	now Cross-Infection entry is "Feral Mustang Stallion"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - NPC
 
@@ -437,7 +506,7 @@ Ball Count of Lucifer is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Lucifer is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Lucifer is 0. [number of cunts]
 Cunt Depth of Lucifer is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Lucifer is 0. [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
+Cunt Tightness of Lucifer is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Lucifer is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Lucifer is false.
